@@ -1,0 +1,769 @@
+REVISTA CIENCIAS MATEMÁTICAS Vol. 23 único, Nos. 2005-2006
+UN ENFOQUE UNIFICADO PARA TÉCNICAS
+DE REPRESENTACIÓN EUCLIDIANA
+Elina Miret Barroso1, Gladys Linares Fleites y María V. Mederos Brú
+Facultad de Matemática y Computación, Universidad de La Habana
+RESUMEN
+En este trabajo se estudian algunos métodos del Escalamiento Multidimensional (EM) buscando nexos
+con las técnicas exploratorias que están incluidas en la teoría general de las Coordenadas Canónicas
+de R. Rao [1995] y se encuentra un enfoque unificado para todas las técnicas de representación
+euclidiana que facilita, desde el punto de vista metodológico, la enseñanza del EM como método
+exploratorio. A partir de una estrategia computacional programada en MATLAB, que incluye dos
+métodos de Escalamiento Multidimensional, se reconstruye el mapa de Cuba.
+ABSTRACT
+In this paper several methods of Multidimensional Scaling (MDS) are studied to find nexuses with the
+exploratory techniques included in the general theory of canonical coordinates given by R. Rao in 1995 and
+.an unified focus for all techniques with Euclidean representation approach to facilitate methodologically the
+MDS teaching as an exploratory method. Using a computational strategy programmed in MATLAB
+language, including two MDS methods, the Cuban map is reconstructed.
+INTRODUCCIÓN
+Algunos fenómenos de la realidad no pueden reflejarse directamente como observaciones por lo que es
+necesario observar algunas relaciones entre los objetos para poder estudiarlos. Los coeficientes de
+similitudes y disimilitudes así como las distancias entre los objetos son algunas medidas de semejanza para
+expresar estas relaciones en un fenómeno en estudio.
+Los procedimientos estadísticos que trabajan con medidas de semejanzas en el Análisis de Datos se
+agrupan bajo el nombre de Escalamiento Multidimensional (EM), conocido en inglés con este mismo nombre:
+Multidimensional Scaling (MDS).
+El problema del EM consiste en representar disimilitudes entre objetos o individuos como distancias entre
+puntos en un espacio de dimensión reducida. El punto de partida es un conjunto  de n objetos y una matriz
+ = () de disimilitudes entre los objetos. El resultado final es una configuración de puntos que se identifican
+ij n
+con los n objetos en un espacio euclidiano de baja dimensión, de forma que las distancias d entre los puntos
+ij
+representan lo "mejor posible" las disimilitudes ij iniciales.
+Cuadras [1981, 1989] define una disimilitud  sobre un conjunto  como una aplicación de  x  en R tal
+que a cada par (i, j) asigna el número real (i, j) =  que satisface:
+ij
+  0
+ij
+ = 0
+ii
+ =  , i,j .
+ij ji
+Un procedimiento sencillo para obtener similitudes puede ser el siguiente:
+Cada individuo u objeto de una población está caracterizado por las presencias y ausencias de ciertas
+cualidades que le fueron medidas. Suponiendo que se midieron n cualidades, una información útil con
+respecto a los individuos u objetos que se analizan es el número de cualidades presentes en cada individuo
+u objeto con respecto a las n cualidades medidas a todos. Llamemos “a” al número de cualidades presentes
+comunes a dos individuos, “b” al número de cualidades ausentes comunes a los dos individuos, “c” al
+número de cualidades presentes en el primer individuo y ausentes en el segundo y “d” al número de
+cualidades presentes en el segundo individuo y ausentes en el primero. Entonces n = a + b + c + d.
+E-mail: 1elina@matcom.uh.cu
+65
+Existen diferentes expresiones para calcular similitudes a partir de a, b, c y d. Algunas de las citadas por
+Cuadras [1981, 1989], Cox & Cox [1994] y Borg & Groenen [1997] son el coeficiente de similitud de Rao y
+Russell [a/n] y el que propone Jaccard [a/(a + b + c)].
+Existen coeficientes de similitud que cumplen con las propiedades de una disimilitud, entre estos, los de
+Sokal y Michener y de Rao y Russell, analizados por Zhang y Srihary [2003].
+En el epígrafe 1 se esboza la teoría general de coordenadas canónicas de Rao [1995], se presentan los
+métodos del EM, en el epígrafe 2, luego en el tercer epígrafe se ofrece un enfoque unificado de la perdida de
+información para todos los métodos de representación euclidiana. En el epígrafe 4 se dan los gráficos de la
+aplicación de una estrategia combinada de dos métodos de EM para reconstruir el mapa de Cuba.
+1. TEORÍA GENERAL DE LAS COORDENADAS CANÓNICAS (R. Rao, 1995)
+Sea X = (X :...:X ) una matriz de datos.
+1 n
+X (Perfil de la población i-ésima) representa la medida de p variables a la i-ésima población o individuo.
+i
+Cada X puede representarse como un punto del espacio vectorial Rp con el producto interno <x,y> = xtMy,
+i
+x,y  Rp, siendo M una matriz definida positiva y la norma asociada:  x  = <x,x>1/2 = (xtMx)1/2, x  Rp.
+Sea W = (w) , donde cada w es un peso asociado a la población o individuo i-ésimo.
+i n i
+El espacio (Rp, M, W) se llama MW-espacio o espacio básico métrico.
+Problema a resolver:
+Encontrar una matriz de tamaño kxn Y = (Y :...:Y ) con k < p cuyas columnas Y representen a los
+(k) 1 n i
+correspondientes perfiles iniciales X en un espacio euclidiano k-dimensional Rk con el producto interno usual
+i
+y las distancias
+66
+ˆd ij  d ( Y ,i Y )j sean tales que “preserven en lo posible“ las correspondientes relaciones de
+distancia iniciales d ij  d ( X ,i X )j entre los perfiles del espacio básico métrico.
+Para este propósito se necesita una función de pérdida que mida la información que se pierde al reducir la
+dimensión.
+Rao define cierta transformación de X en el espacio básico inicial que contiene la información
+correspondiente a las distancias entre las poblaciones o individuos en estudio en dicho espacio, llamada
+matriz de configuración inicial, con el propósito de construir su función de pérdida.
+La matriz de configuración inicial en el espacio básico Rp viene dada por la expresión:
+C i  ( X   t1 ) tM ( X   t1 ), siendo  cierto vector de referencia y 1 un vector formado por unos.
+Análogamente, la matriz de configuración final en el espacio Rk (k < p) tiene la expresión: C = YtY.
+f
+Entonces, la búsqueda de Y en Rk se plantea en términos de las matrices de configuración de la siguiente
+forma:
+Encontrar Y(k) = (Y :...:Y ) en Rk que resuelva el problema de optimización:
+1 n
+min C C
+i f
+Y Rk
+(k)
+Teorema 1: (Rao [1995])
+Sea la s.v.d. de la matriz: M12(X 1 t)W12  1 U 1 V 1 t ... p U p V p t, con valores singulares  1   2 …  p ,
+donde M1/2 y W1/2 son las raíces cuadradas simétricas de M y W respectivamente. Entonces, la solución
+óptima al problema de optimización: min C C , es:
+i f
+Y Rk
+(k)
+Y =
+67
+ 
+
+1
+k
+V
+V
+tW
+1
+
+t W
+k
+
+
+1
+1
+/ 2
+/ 2
+
+A las componentes del i-ésimo n-vector W-1/2V se les llama coordenadas canónicas en la i-ésima
+i i
+dimensión para los diferentes individuos o poblaciones.
+La elección del espacio básico y su correspondiente función de distancias d, así como de la función de
+pérdida, dependen del problema concreto que se investiga y deben construirse atendiendo a consideraciones
+prácticas.
+2. TIPOS DE ESCALAMIENTO MULTIDIMENSIONAL
+En la literatura, existen dos criterios bien diferenciados en cuanto a la clasificación de los métodos del EM:
+En uno, se considera que el escalamiento es métrico cuando las disimilitudes permanecen fijas en la
+función objetivo y no métrico cuando las mismas son variables (Trosset [1993]).
+El otro criterio, más difundido que el primero, es el relativo al tipo de transformación que se haga a las
+disimilitudes en la función objetivo Borg & Groenen [1997]. Se tiene escalamiento métrico cuando se trabaja
+con una función paramétrica de las disimilitudes y escalamiento no métrico cuando se emplea una función
+monótona. En este trabajo se sigue la segunda clasificación.
+Escalamiento Métrico
+El caso más simple de los métodos de Escalamiento Multidimensional es el Escalamiento Clásico (EC) o
+Análisis de Coordenadas Principales. Escalamiento Clásico.
+El caso más simple de los métodos de EM es el Escalamiento Clásico (EC) también conocido por Análisis
+de Coordenadas Principales (Ver Mardia et al. [1979]). Se hace EC Euclídeo si la matriz de disimilitudes
+inicial  es de distancias y EC No Euclídeo si no lo es. Miret [2005] incluye el EC Euclídeo en la teoría de
+Rao y propone la inclusión del EC No Euclídeo utilizando elementos de la teoría de espacios vectoriales con
+métrica indefinida.
+El procedimiento del EC para encontrar la solución Y consiste en:
+(k)
+1. A partir de  = () , construir A = (a ) , siendo a = (1/2)2.
+ij n ij n ij ij
+2. Obtener B de A. (B = HAH, donde H = I -(1/n)1 1t, siendo 1 el vector columna formado por n unos.
+n n n n
+3. Extraer los k valores propios (si se hace EC Euclídeo) o singulares (si se hace EC No Euclídeo)
+estrictamente positivos y más grandes  ,..., de la descomposición espectral de B = VVt y sus
+1 k
+correspondientes vectores propios normalizados. Si se denota por V(k) =(V ,...,V ) a la matriz de las k
+1 k
+primeras columnas de V y 1/2diag(1/2,...,1/2).
+(k) 1 1
+Entonces: Y B1/2 1/2Vt .
+(k) (k) (k) (k)
+Para averiguar si  = () es euclídea basta analizar si la matriz B = (b) del algoritmo anterior, es semi-
+ij n ij n
+definida positiva de rango p  k (donde k es la dimensión del subespacio de Rp en el cual se quiere
+representar a los individuos u objetos).
+La construcción del vector Y con las nuevas coordenadas se puede plantear en términos de la búsqueda
+(k)
+de la solución de un problema de optimización donde la función objetivo depende de la diferencia de las d
+ij
+iniciales transformadas (B) y las d finales transformadas (B ). El óptimo de esta función coincide con la
+ij(k) (k)
+solución algebraica ofrecida en el algoritmo anterior (Borg & Groenen [1997]). Carroll & Chang, en 1972,
+dieron a conocer esta función objetivo que recibe el nombre de STRAIN. Luego, el problema de búsqueda
+del mejor subespacio de representación puede expresarse en términos del problema de optimización del
+STRAIN puede expresarse de la forma siguiente:
+68
+Y
+m
+(k
+inR
+) k
+B  B ( k )
+2
+(1)
+donde B y B(k) se calculan según el algoritmo antes descrito.
+Tarasaga & Trosset [1998] presentan el problema de optimización del EC como sigue:
+Sean los siguientes conjuntos en el espacio S (R) de las matrices simétricas reales de orden n:
+n
+ (p): el conjunto de todas las matrices de disimilitudes de orden n.
+n
+ (p): el conjunto de todas las matrices de disimilitudes que son euclidianas o de distancias, es decir,
+n
+aquellas para las cuales existen X ,..,X  Rp tales que:
+1 n
+d =
+ij
+X
+i
+ X
+j
+2
+F
+ (p): el conjunto de todas las matrices semi-definidas positivas de rango k  p.
+n
+Es obvio que,  (p)   (p), pues toda matriz de distancias es de disimilitudes.
+n n
+Entre los conjuntos  (p) y  (p) se tiene la siguiente equivalencia que establece una generalización del
+n n
+criterio anterior de Mardia [1979] y que determina cuando una matriz de disimilitudes es euclídea o de
+distancias.
+Teorema 2.
+D = (d)   (p) si y sólo si existen B  n(p) y una función lineal : (p)   (p) tales que: (B) = D.
+ij n n n n
+La demostración de este resultado aparece en el trabajo de Tarazaga & Trosset [1998].
+Si X = (X ,...,X ) es la matriz de configuración inicial, entonces B = XtX, donde D = (d) cumple que
+1 n ij n
+d =
+ij
+X
+i
+ X
+j
+2
+F
+.
+El problema de optimización a resolver por el EC Euclídeo tiene la forma:
+2
+*D*D (2)
+F
+donde:
+. denota la norma de Frobenius o norma inducida por el producto escalar matricial <A, B> = tr(BtA),
+F F
+DD y  son las matrices de orden n formadas por las distancias al cuadrado y las disimilitudes al
+cuadrado, respectivamente; es decir, DD = (d2) y  = (d2) y la operación  se llama producto de
+ij n ij n
+Hadamard de la matriz consigo misma,
+: Rnxn  Rnxn es el operador de doble centrado, definido para cada matriz A = (a) como (A) = B, es decir
+ij n
+a cada a de A le hace corresponder b = - ½ (a - ā – ā. +ā..), siendo los a resultado del producto de
+ij ij ij i. j ij
+Hadamard de una matriz P consigo misma, es decir, en A, cada a = p2. Si P = D, entonces (D*D) = B.
+ij ij
+La expresión (2) es otra forma de expresar la función STRAIN de Carroll & Chang.
+Escalamiento Mínimo Cuadrático
+Los métodos de Escalamiento Mínimo Cuadrático construyen ciertas funciones f(ij) de las disimilitudes
+y como criterio de ajuste emplean una transformación L de la suma de cuadrados de los errores
+e = f() -g(d(X)) dada, de forma general, por:
+ij ij ij
+L(e) =
+ij
+69
+
+i,j
+w f
+ij
+(  )
+ij
+ g ( d (
+ij
+X ) )  2 (3)
+Emplean procesos de optimización numérica que requieren de una matriz de configuración inicial X0.
+Usualmente toman la solución del EC como dicho punto de partida.
+Si en la expresión (3) se sustituye la función g por la identidad y todos los pesos por 1, la función resultante
+se llama raw-Stress y se denota por:
+ =  (X) = (d (X)f( ))2
+r r ij ij
+(i,j)
+Borg & Groenen [1997] plantean que la función raw-Stress no es muy informativa en la práctica debido a
+su variabilidad por cambios de escala en las disimilitudes. Para evitar esta dependencia de escala, sugieren
+normalizar el raw-Stress como sigue:
+ 21   21 ( X )  (i,j) f (  )
+ij
+ d (
+ij
+X )  2 / 
+i,j
+d 2ij ( X )  
+r
+( X ) / d 2ij ( X )
+Como  21 casi siempre toma valores muy pequeños, suele trabajarse con su raíz cuadrada. Entonces, 
+1
+se identifica con la función Stress-1 de Kruskal, que queda explícitamente:
+Stress-1 = 
+
+(i,j) f (  )
+iij
+ d (
+ij
+X )  2 / 
+i,j
+d 2ij ( X )
+
+1 / 2
+Si en la fórmula de  se considera que f() =  (es decir, la función identidad) y se tienen en cuenta
+r ij ij
+ciertos pesos w, entonces se obtiene una de las funciones de ajuste más utilizadas en el EM Mínimo
+ij
+Cuadrático: el STRESS, cuya expresión es:
+STRESS = 2 i
+j
+w 
+ij
+d (
+ij
+X )  
+ij
+ 2
+Sustituyendo la expresión de la distancia euclidiana para el caso p-dimensional en la expresión anterior,
+queda:
+2
+ 1/2
+ p 
+STRESS = 2w   (x x )2 2    (4)
+ij ik jk ij
+ij
+
+
+
+k1
+ 
+
+La fórmula anterior es la empleada en la implementación numérica de los métodos que utilizan esta
+función.
+Otra función frecuentemente utilizada en el EM Mínimo Cuadrático es el SSTRESS, que es resultado de
+emplear en (3) las funciones f() = d2 y g(d(X)) = d2(X). Se expresa como sigue:
+ij ij ij ij
+SSTRESS = 2w
+
+d2(X)2
+2
+ij ij ij
+ij
+Análogamente a como se obtuvo (4), se tiene la expresión empleada en la implementación numérica de los
+métodos que utilizan esta función, dada por:
+SSTRESS =
+70
+2 i
+j
+w
+ij
+
+k
+p
+ 1
+( x
+ik
+ x
+jk
+) 2   2ij
+
+2
+(5)
+Método Lineal o Escalamiento de Intervalo
+Entre los métodos de Escalamiento Métrico Mínimo Cuadrático, caracterizados por hacer transformaciones
+paramétricas a las disimilitudes, se encuentra el EM Lineal (en inglés, Interval MDS, Borg & Groenen [1997])
+que trabaja en la función (3) con f() = a + b, donde a y b son los estimadores mínimo cuadráticos
+ij ij
+ordinarios de la regresión. Un caso particular del EM Lineal es el EM de Razón, método en el que la función
+de las disimilitudes es de la forma f() = b. El caso más simple se tiene cuando f() =  y se conoce como
+ij ij ij ij
+EM Absoluto.
+Borg & Groenen [1997] analizan otros métodos métricos que emplean la función (3) como son el EM
+Logarítmico, donde f() = a + b log() y el Exponencial, donde f() = a + b exp(). Un caso particular
+ij ij ij ij
+del primero es el MULTISCALE debido a Ramsay, en 1977 (Ver Cox & Cox [1994]), que trabaja con
+f() = log().
+ij ij
+En Química Molecular se emplea el EM Polinómico o Spline, que generaliza al EM Lineal, donde
+f() = a + a  +...+ a
+ij 0 1 ij r
+ 6ij , particularmente se usa la función f() = 6.
+ij ij
+El Método Lineal (Interval MDS, Borg & Groenen, [1997]) construye f() = a + b donde a y b son los
+ij ij
+estimadores mínimo cuadráticos ordinarios de la regresión. Nótese que en el caso del Método Lineal la
+función (3) tiene la expresión particular:
+S = i
+j
+(     )
+ij
+ d (
+ij
+X )  2 / i
+j
+d 2ij ( X )
+Escalamiento no métrico
+Los métodos no métricos construyen ciertos valores d *ij  f (  )
+ij
+preservando el orden inicial. También se
+conocen en la literatura con el nombre de EM Ordinal (del inglés, Ordinal MDS, Borg & Groenen [1997]). Dos
+técnicas muy conocidas son los métodos de Kruskal y Guttman.
+Método de Kruskal
+En el método de Kruskal, para construir las disparidades se construye una configuración inicial y se calcula
+la matriz de distancias derivadas de dicha configuración. A continuación, se ordena monótonamente la matriz
+de disimilitudes inicial  = () en forma de vector y a éste se asocia el vector de las distancias derivadas
+ij n
+correspondientes. Al analizar la relación de orden en el vector de las distancias derivadas, se construye un
+nuevo vector, el de las disparidades d *ij = f(), que consiste en que, si las distancias conservan el orden de
+ij
+las disimilitudes, en las posiciones correspondientes a esas distancias aparecerán las mismas y en caso
+contrario, se sustituyen ambos valores de las distancias derivadas por su valor promedio. Seguidamente se
+procede a optimizar la función Stress-1. Aunque, se suele llamar método de Kruskal a esta metodología aún
+cuando se utilice cualquiera de las variantes de Stress, muchos autores al aplicar el método emplean como
+función de pérdida el Stress-1 dado por:
+1/2
+Stress-1 = L(d*,d )      d* d (X) 2 /d2(X)   
+ij ij ij ij ij
+ij
+ij
+
+Método de Guttman
+En el método de Guttman para encontrar las
+71
+d *ij = f(), llamadas imágenes de rango, se procede
+ij
+análogamente al de Kruskal. Estas transformaciones d *ij se construyen ordenando las disimilitudes en un
+vector con valores crecientes y formando posteriormente, el vector de distancias derivadas correspondiente,
+las imágenes de rango d *ij resultan las distancias ordenadas en forma creciente. También Guttman construyó
+su propia medida de ajuste, el coeficiente de alienación:
+G = (l – u2) 1/2 siendo u  i
+j
+ d *ij  d (
+ij
+X )  2 /  i
+j
+d * 2
+ij
+( X )   i
+j
+d 2ij ( X ) 
+3. UN ENFOQUE UNIFICADO DE LA PÉRDIDA DE INFORMACIÓN
+Empleando la norma de Frobenius, pueden expresarse el STRESS y el SSTRESS de la siguiente forma:
+STRESS= 2 i
+j
+w
+ij
+ d (
+ij
+X )   (
+ij
+X )  2  D   2F
+STRESS = 2 i
+j
+w
+ij
+
+
+k
+p
+ 1
+( x
+ik
+ x
+jk
+) 2
+
+1 / 2
+ (  2ij ) 1 / 2
+
+2
+ D * D   *  2
+F
+Igualmente, el Raw-Stress, el Raw-Stress Normalizado, el Stress-1 y en general, la función L(e) pueden
+ij
+expresarse en términos de la norma de Frobenius, pues:
+    =  (X) =
+r r
+(i,j) w
+
+ij
+d (
+ij
+X )   (
+ij
+X )
+2
+ D  f (  ) 2F (Raw-Stress)
+ 21 
+(i,j)
+
+d
+r
+2ij ( X )
+
+(i,j)
+d
+( X
+ij
+(i,j) d
+) 
+2 (
+ij
+f
+X
+( 
+)
+ij
+)
+2
+
+D 
+D
+f ( 
+2
+) 2F
+(Raw-Stress Normalizado)
+
+1
+
+(i,j)
+d
+( X
+ij
+(i,j) d
+) 
+2 (
+ij
+f
+X
+( 
+)
+ij
+)
+2
+
+D 
+D
+f ( 
+F
+)
+F (Stress-1)
+Y en general,
+L(e) =w
+
+f( )g(d (X)
+2
+ f()g(D) 2
+ij ij ij ij F
+ij
+(Función de ajuste del Escalamiento Mínimo Cuadrático).
+Por lo que todas las funciones de ajuste del Escalamiento Métrico Mínimo Cuadrático que en su mayoría
+son empleadas también en el Escalamiento No Métrico Mínimo Cuadrático pueden expresarse en términos
+de la norma de la diferencia entre una transformación de las disimilitudes [f()] y una transformación de las
+distancias derivadas del EC [g(D)].
+Para la función de ajuste del método de Guttman: G =
+72
+(1  u 2 )
+(d d*)
+ij ij
+ij siendo u = , se tiene
+ 
+d2 (d*)
+ ij  ij
+ ij  ij
+también una expresión en términos de la de la diferencia de una función g(D) y una función f():
+El numerador de u no es más que el Raw-Stress () tomando g(D) = D* = (d*) , siendo las d* ˆ las
+r ij n1 ij ij
+imágenes de rango que construye el método.
+Luego: 1 – u =
+
+
+r
+2F
+
+D 
+
+D *
+2F
+2F
+.
+Por lo tanto: G = 1  u 
+D 
+
+D *
+2F
+2F
+
+D 
+
+D *
+F
+F .
+Otra forma de plantear el problema a resolver por Rao en el epígrafe 1 consiste en:
+Buscar una matriz T de tamaño kxp que transforme las coordenadas dadas por las columnas de la matriz
+X inicial en las coordenadas Y(k) finales con respecto a un espacio de Rk con el producto escalar
+inducido por la matriz TM-1Tt y de modo que haga mínima la diferencia D(2) - D 2(k ,) donde: D(2) = ( d 2ij )
+n
+y
+D(2) = D (2(k ))  ( d 2ij(k
+)
+)
+n
+, siendo d 2ij  ( X
+i
+ X )j tM ( X
+i
+ X )j la distancia cuadrada entre X y X en el espacio básico
+i j
+inicial y d 2ij(k
+)
+ ( X
+i
+ X )j t T t ) T M  1 T t )  1 T ( X
+i
+ X
+j
+) la distancia cuadrada entre X y X en el espacio Rk de
+i j
+dimensión reducida (k < p).
+El problema anterior lleva a la misma solución del que resuelve el teorema de Rao y se cumple que:
+mT in
+k n
+W 1 / 2 ( D 2  D 2(k
+)
+) W 1 2 
+Y
+m
+(k
+inR
+) k
+W 1 / 2 ( C
+i
+ C
+f
+) W 1 2 
+Y
+m
+(k
+inR
+) k
+ n
+i
+1
+n
+j
+1
+w wi (j d 2ij  d 2ij(k
+)
+)
+
+Según lo anterior,
+La función de pérdida de Rao puede expresarse como la norma de la diferencia ponderada entre los
+cuadrados de las distancias iniciales y finales, es decir:
+mT in
+k n
+W 1 / 2 ( D 2  D 2(k
+)
+) W 1 2
+Esto permite buscar analogías con las expresiones de las funciones de pérdida de los métodos del EM.
+Nótese que D(2) es la transformación g de D llamada producto de Hadamard, o sea, aquella que transforma
+a toda matriz en la de sus coeficientes al cuadrado, g(D) = D*D =(d2) .
+ij n
+D coincide con  ya que toda matriz de distancias es de disimilitudes.
+f es la composición de g con la aplicación proyección sobre todos los subespacios Rk del espacio
+euclidiano Rp.
+La norma empleada por Rao es la de Frobenius, es decir, la norma matricial inducida por el producto
+escalar:<A, B> = trBtA
+Como se ha visto, la función de pérdida que sirve para abarcar todas las posibles expresiones empleadas
+en los métodos del EM tiene en la función de pérdida de Rao, un caso particular.
+Por tanto, el problema que plantean resolver las técnicas del EM puede considerarse como el problema
+general de una teoría que involucra a todos los métodos de representación de datos pues en todos se trata
+de minimizar una función de la forma:
+73
+f (  )  g ( D )
+p
+F
+, sujeto a restricciones que define cada método y
+asumiendo que el subíndice F en la norma es relativo a la norma de Frobenius.
+Si se trata de técnicas cuyo óptimo se obtiene por métodos algebraicos, adopta la forma:
+mY
+(k
+inR
+) k
+f (  )  g ( D )
+p
+F
+ mY
+(k
+inR
+) k
+f ( D )  f ( D
+(k )
+)
+p
+F
+, donde f es el producto de Hadamard y la solución se construye
+algebraicamente según se vio en el teorema anterior.
+Si, por el contrario, se trata con técnicas cuya solución se obtiene por métodos numéricos (procedimientos
+del EM), deben diferenciarse dos casos:
+(I) Técnicas métricas
+En la función f (  )  g ( D )
+p
+F
+, f es una función paramétrica de .
+Si se escribe D en función de la matriz de configuración X, se minimiza la función de ajuste con respecto a
+sus componentes x.
+ij
+El problema dependiente sólo de X es irrestricto.
+(II) Técnicas no métricas
+En la función f (  )  g ( D )
+p
+F
+, f es una función monótona de .
+Se minimiza la función de ajuste con respecto a los coeficientes de  y a las componentes de la matriz de
+configuración X = (x).
+ij
+Luego, la función de pérdida f (  )  g ( D )
+p
+F
+, que sirve para abarcar a todas las funciones de ajuste del EM,
+tiene en la función de pérdida de Rao, un caso particular. Por tanto, del estudio de los métodos del EM como
+técnicas de representación de datos se han encontrado comunalidades con los restantes métodos incluidos
+en la teoría de Rao y aún cuando sus procedimientos de trabajo para obtener la solución son diferentes,
+todos tienen un mismo propósito: representar datos en un espacio euclidiano de baja dimensión que haga
+p
+mínima la función f()g(D) . Esta invariante de todos los métodos analizados permite enfocarlos
+F
+unificadamente y contribuye desde el punto de vista metodológico a conocer las bondades del EM en su
+función exploratoria. En la literatura actual, son muy variadas las esferas de aplicación del EM que con
+mucha frecuencia rebasan los límites del Análisis Exploratorio de Datos Multivariados y dada la naturaleza
+numérica de sus algoritmos, no se suelen relacionar con las otras técnicas bien conocidas de representación
+euclidiana como las incluidas por Rao en su formulación del epígrafe 1.
+4. RECONSTRUCCIÓN DEL MAPA DE LAS CAPITALES DE PROVINCIA DE CUBA
+Una de las aplicaciones más conocidas del EM es la reconstrucción de mapas de ciudades, conocidas sus
+distancias por carretera. (Mardia et al. [1979], Borg & Groenen [1997])
+Empleando dos de los programas confeccionados por Borrego para preparar la ponencia presentada en el
+CLAPEM (Borrego & Miret [2001]), se aplicó EC a la matriz de distancias de las capitales de 15 provincias de
+Cuba (14 provincias y el municipio especial Isla de la Juventud). En el gráfico obtenido, como puede
+apreciarse (Figura 1), el ajuste no es bueno con respecto a la distribución de puntos esperada, aunque cabe
+destacar que, la matriz de distancias por carretera (y por mar, en el caso del municipio especial Isla de la
+Juventud) entre las 15 capitales de las provincias de nuestro país, es en realidad una matriz de disimilitudes
+no euclídea porque las distancias por carretera no se deben a mediciones en línea recta.
+Considerando la configuración final debida al EC se aplicó el método métrico EM Absoluto empleando en
+la optimización del STRESS el método de Newton globalizado (Kearsley, Tapia & Trosset [1998]), que varía
+del de Newton en que realiza una búsqueda por regiones de confianza (trust region) en lugar de la búsqueda
+lineal usual.
+Los resultados finales obtenidos son muy parecidos a los relativos a la ubicación real de las capitales de
+provincias de Cuba en un mapa plano. El valor del STRESS en esta estrategia es considerablemente
+pequeño lo que confirma la pérdida de información mínima. (Figura 2)
+Figura 2. Solución Clásico-EM Absoluto empleando
+Figura 1. Solución Clásico. Newton Globalizado.
+Construcción del mapa de Cuba. Construcción del mapa de Cuba.
+REFERENCIAS
+BORREGO, J.A. & MIRET, E. [2001]. “Algunos algoritmos de optimización en el Escalamiento
+Multidimensional”. Ponencia presentada en CLAPEM’2001. Cuba. Noviembre.
+BORG, I. and P. GROENEN [1997]: Modern multidimensional scaling. Springer-Verlag New
+York, Inc.
+COX, T.F. and M.A.A. COX [1994]: Multidimensional Scaling. CHAPMAN & HALL. London.
+CUADRAS, C.M. [1981]: Métodos de Análisis Multivariante. EUNIBAR, Barcelona.
+CUADRAS, C.M. [1989]: “Distancias estadísticas”. Estadística Española 30(119), 295-378.
+KEARSLEY, A.; R.A. TAPIA and N.W. TROSSET [1998]: “The solution of the metric SSTRESS and
+STRESS problems in Multidimensional Scaling using Newton’s method”. Computational
+Statistic 13, 369-396.
+MARDIA, K.V.; J.T. KENT and J.M. BIBBY [1979]: Multivariate Analysis. Academic Press, Inc.,
+London.
+MATLAB (1994): “The Matrix Laboratory”. The Math. Works, Inc. Version 4.2c.
+MIRET, E. [2005]. “Un enfoque unificado para técnicas de representación euclidiana”. Tesis
+Presentada para optar por el grado de doctor. Universidad de La Habana, Cuba.
+RAO, C. R. [1995]: “A review of canonical coordinates and an alternative to correspondence
+analysis using Hellinger distance”. Qüestiió, Barcelona. 19(1,2,3). 23-63.
+74
+TARAZAGA, P. & TROSSET, M. W. [1998]. “An approximate Solution to the Metric SSTRESS
+Problem in Multidimensional Scaling”. http:\\www.researchindex.com
+TROSSET, M.W. [1993]. “Numerical Algorithms for Multidimensional Scaling” En: Information and
+Classification. R. Klar & O. Opitz (Eds). Springer, Heidelgerg, pp 81-92.
+ZHANG, B. & SRIHARY, S. N. [2003]. “Properties of Binary Dissimilarity Measures.” Cedar.
+Publications. http://www.cedar.buffalo.edu/papers/pubs2000.html.
+75

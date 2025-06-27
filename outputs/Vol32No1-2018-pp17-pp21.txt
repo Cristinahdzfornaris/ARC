@@ -1,0 +1,356 @@
+CienciasMatemáticas,Vol.32,No.1,Pag.17-21, 2018
+Recibido11-2017
+Varianza del coeficiente de confusión y no-linealidad
+de S-cajas dentro de las clases Hamming Weight
+Confusion coefficient variance and non-linearity of
+S-boxes inside Hamming Weight classes
+Ismel Martínez Díaz1*, Dianne Miyares Moreno2, C.M. Legón1
+Resumen ExistenvariasmétricasteóricasparamedirlaresistenciadeunaS-cajaanteataquesdiferencialde
+potencia,entrelascualesdestacalavarianzadelcoeficientedeconfusión.Recientementesehadefinidouna
+relacióndeequivalenciaquepermitedividirelespaciodeS-cajasenclasesdesegúnelmodelodefugapesode
+Hamming.Enestetrabajosedemuestrateóricayexperimentalmentequeelvalordelavarianzadelcoeficiente
+de confusión se mantiene constante para las S-cajas que pertenecen a una misma clase de equivalencia.
+Tambiénseestudiaexperimentalmenteelcomportamientodelapropiedaddeno-linealidaddentrodelasclases
+observándosequeposeeuncomportamientoasimétrico,locualaportanuevoselementosalacomprensiónde
+larelaciónentrelavarianzadelcoeficientedeconfusiónylano-linealidad.
+Abstract TherearedifferenttheoreticmetricstomeasurethedifferentialpowerattacksresistanceofS-boxes.
+Oneofthemostimportantistheconfusioncoefficientvariance. Recentlywasdefinedanewequivalencerelation
+suchthatallS-boxesinsideoneclasshavethesamepowerleakageundertheHammingWeightmodel. Inthis
+paperwehavebeenprovedthattheconfusioncoefficientvarianceisconstantinsideeachclassand,attheother
+hand,non-linearityisasymmetricinsideeachclass,gettingamorecompressionabouttheirrelationship.
+PalabrasClave
+S-caja—HW—CCV
+1InstitutodeCriptografía,FacultaddeMatemáticayComputación,UniversidaddelaHabana,Habana,Cuba,ismel@matcom.uh.cu,
+clegon58@gmail.com
+2DireccióndeCalidad,UniversidadTecnológicadelaHabana,Habana,Cuba,dmiyares93@gmail.com
+*AutorparaCorrespondencia
+Introducción constantedenuevasS-cajasresistentesanteDPA[4],enesta
+búsquedadeS-cajaselespacioesdegrandesdimensiones.En
+Enlaactualidadexistenunavariedaddedispositivosde
+[5]sedefineunanuevarelacióndeequivalenciaquepermite
+cómputoqueseinterconectanparacrear,consumireintercam-
+particionar el espacio de búsqueda en clases de equivalen-
+biardatos.Enesteintercambioesmuyimportanteelusodela
+cias.LasS-cajasquepertenecenaunamismaclaseposeenla
+criptografíasimétricayenparticulardecifradoresdebloques
+mismafugahipotéticadepotenciasegúnelmodelodefuga
+quepermitanlaseguridadeintegridaddelosdatos[1,2].
+pesodeHamming.Estasclasessonnombradascomoclases
+Elcomponentenolinealmásimportantedeloscifradores HammingWeight.
+debloquessonlasS-cajasocajasdesustitución,funciones
+Existenvariasmétricasteóricasparamedirlaresistencia
+vectorialesbooleanasquegarantizanlaconfusiónenelcifra-
+DPAdeunaS-caja[6],entrelascualesdestacalavarianza
+do.Loscifradoresdebloques,comoporejemploelcifrador
+delcoeficientedeconfusión[7],lacualdenotaremoscomo
+AES(AdvancedEncryptionStandard),seencuentranantela
+CCV (Confusion Coefficient Variance). En la Sección 2.1
+amenazadeataquesdiferencialdepotenciaDPA(Differential
+de este trabajo se demuestra que está métrica se mantiene
+PowerAttacks),loscualestienencomoobjetivoobtenerlas
+constantedentrodelasclasesHammingWeight.EnlaSección
+clavesapartirdelasfugasdepotenciaobservadasporelata-
+2.2sepresentatambiénelestudiodelcomportamientodela
+canteenelprocesodeevaluacióndelaS-caja[3].Eléxitode
+propiedadno-linealidad,seconcluyequenoesconstantey
+estosataquessedebealaexistenciadecorrelaciónestadística
+queposeeuncomportamientoasimétrico.
+entrelafugadepotenciarealylafugadepotenciahipotética
+simuladamediantediversosmodeloscomoelmodelopesode
+Hamming[1],elcualcalculaelpesodelasalidadelaS-caja.
+Paracontrarrestarestosataquesesnecesariounabúsqueda
+18 Varianzadelcoeficientedeconfusiónyno-linealidaddeS-cajasdentrodelasclasesHammingWeight
+1. Preliminares 8C,93,94,95,97,98,A6,A7,
+A9,AA,B1,B2,B4,B6,B9,BD,
+Enestasecciónsepresentanloselementosnecesariospara
+C6,CA,D0,D6,DD,E3,E7,E8,
+lacomprensióndeltrabajo.
+EB,EC,EF,F4,F7,FB}
+1.1 S-cajasyclasesHammingWeight
+C(F ) ={10,13,14,17,18,19,1E,25,
+Una S-caja es una función vectorial booleana biyectiva AES 5
+26,2A,32,35,37,3A,3B,3E,
+F :{0,1}n→{0,1}m.
+43,47,48,49,4B,4C,4E,61,
+LafuncióndepesodeHammingHW(x),x∈{0,1}m,cal-
+62,65,66,69,6A,6E,83,87,
+culalacantidaddeunosenelvectorbooleanoxdemcompo-
+8F,9F,A0,A1,A2,A5,AD,AE,
+nentes1.
+B5,BA,C1,CD,D2,D3,D4,D5,
+Uno de los modelos comúnmente utilizados para repre-
+D7,D8,D9,F5,F9,FA,FD,FE}
+sentarlafugadepotenciaenloscifradoresdebloqueesel
+modelodefugapesodeHamming[1].Enestemodeloseinter-
+C(F ) ={12,15,16,1D,30,33,38,39,
+pretacomofugahipotéticadelconsumodepotenciacuando AES 6
+3C,3F,40,44,4F,6D,82,85,
+secifra,alresultadodelafunciónHW(F(in⊕k)),dondeF
+89,8A,8E,A3,A4,AB,AC,DC,
+eslaS-caja,inrepresentaeltextoclaroyklasubclaveconla
+DF,F1,F2,F6}
+cualserealizaelcifrado.
+En [5] se definen las S-cajas HW-equivalentes a partir
+C(F ) ={11,1A,34,81,86,A8,AF,DB}
+delosconjuntosC(F) deentradasxcuyassalidasF(x)po- AES 7
+w
+seenpesow,C(F) ={x|HW(F(x))=w,∀x∈{0,1,...,2n−
+w C(F ) ={8D}
+1}}. Siendo F y F dos S-cajas definidas en los mismos AES 8
+A B
+dominio {0,1}n e imagen {0,1}m, estas S-cajas son HW-
+equivalentessíysolosíC(F ) =C(F ) ,∀w∈{0,1,...,m}.
+A w B w
+Apartirdelarepresentacióndelaclase<F >mediante
+La clase de equivalencia asociada a la S-caja F se deno- A
+A
+losconjuntosC(F(x)) en[5]seproponeunalgoritmoquese
+tacomo<F >={F |C(F ) =C(F ) ,∀w∈{0,1,...,m}}. w
+A B B w A w
+denotaráporHwSboxGenerator,elcualpartiendodeunaS-
+Unaclase<F >estádeterminadaporlos(m+1)conjuntos
+A
+cajaF generaotrasquepertenecenasumismaclase<F >.
+C(F ) ,∀w∈{0,1,...,m}.Estasclasesrecibenelnombrede A A
+A w
+EnesenciaestealgoritmoconstruyelosconjuntosC(F (x))
+clasesHammingWeight. A w
+apartirdelaS-cajaF yparacadaconjuntopermutaaleato-
+Ejemplo,laclase<F >alacualpertenecelaS-caja A
+AES
+riamentelassalidascorrespondientesaloselementosdeese
+delcifradorAES,estádeterminadaporlossiguientesconjun-
+conjunto.
+tosdeentradasconrepresentaciónhexadecimal:
+EstealgoritmoHwSboxGenerator,esfinitoenelnúmero
+C(F ) ={75}
+AES 0
+de conjuntos a permutar, y asegura que la S-caja obtenida
+pertenecealamismaclase<F >.
+C(F ) ={53,57,76,9A,C8,CC,E9,EA} A
+AES 1
+C(F ) ={05,06,09,24,50,54,5C,5F, 1.2 Resistenciaprácticadentrodelasclasesdeequi-
+AES 2
+71,72,7A,7D,7E,7F,91,9D, valencia ante el ataque por correlación de po-
+B3,B8,C0,C3,C4,CB,CF,E2, tencia
+E6,ED,F3,FF} ElataqueporcorrelacióndepotenciaCPA(Correlation
+PowerAnalysis)[1]utilizaelcoeficientedecorrelaciónlineal
+C(F ) ={01,02,0A,0B,0E,20,23,27, comodistinguidorDparacuantificarladependenciaestadísti-
+AES 3
+2B,2C,2F,45,51,52,58,5B, caentrelafugadepotenciarealgeneradaapartirdelaclave
+5E,64,68,6B,6F,70,73,77, Kylafugahipotéticacalculadaconelmodeloapartirdela
+79,7B,7C,90,92,96,99,9B, clavesupuestaJ,comoseilustraenlaFig.1.
+9C,9E,B0,B7,BB,BC,BE,BF, ParacomprobarenlaprácticaquelasS-cajasdeunamis-
+C2,C5,C7,C9,CE,D1,DA,DE, maclaseposeenlamismaresistenciaanteelataqueCPA,en
+E0,E1,E4,E5,EE,F0,F8,FC} [5]segeneranconelalgoritmoHwSboxGeneratorS-cajas
+pertenecientesalaclase<F >.AlrealizarunataqueCPA
+AES
+C(F AES ) 4 ={00,03,04,07,08,0C,0D,0F, a estas S-cajas usando para cada una sus propias fugas hi-
+1B,1C,1F,21,22,28,29,2D, potéticasperoconlasmismasfugasrealesgeneradasporel
+2E,31,36,3D,41,42,46,4A, cifradorAES,seobtienenlosmismosresultadosparatodas
+4D,55,56,59,5A,5D,60,63, lasS-cajas.Esteresultadoprácticosugierequecualquiermé-
+67,6C,74,78,80,84,88,8B, trica teórica que pretenda medir la resistencia DPA en este
+escenariodeberíatenerunavalorconstantedentrodelaclase.
+1xpuedeserrepresentadocomounnúmeroenterononegativo,enparti-
+cularcomounbytesim=8
+Varianzadelcoeficientedeconfusiónyno-linealidaddeS-cajasdentrodelasclasesHammingWeight 19
+entreCCVyNLhasidodiscutidaen[11,4];noexistenrepor-
+tessobrelaformafuncionalexplícitadeestarelación,locual
+esuntemaabiertodeinvestigación.
+En la sección 2 se investiga esta relación en un nuevo
+escenario:elinteriordelasclasesdeequivalencia.Comose
+esperabaelvalordeCCVsemantieneconstantedentrodela
+clase,sinembargoelvalordeNLestálejosdeserconstantey
+sudistribuciónnoesnisiquierasimétrica.
+2. Resultados y discusión
+Figura1.RepresentacióndelataqueCPA
+Enestasecciónsepresentanlosresultadosdeestetrabajo
+yserealizaunadiscusióndelosmismos.
+1.3 Varianzadelcoeficientedeconfusión
+En[8]sepresentaelcoeficientedeconfusióncomouna
+2.1 Comportamiento constante del CCV dentro de
+métricaparamedirlaresistenciateóricadeunaS-cajaante
+laclaseHammingWeight
+ataquesDPA.Estamétricasecalculaparadossubclavesk y
+i Comoresultadoprincipaldeestetrabajosedemuestraque
+k ,ysedefinecomo:
+j CCVesconstantedentrodelasclasesHammingWeightyse
+realizaunexperimentoconlaS-cajasquepertencenalaclase
+κ(k,k )=E[(V|k −V|k )2] (1)
+i j i j delAESqueconfirmaesteresultadoteórico.
+Dondeen(1),V|krepresentalafuncióndefugaalcifrar
+Proposición1. Sean F y F dos S-cajas definidas en los
+conunasubclavek. A B
+mismosdominio{0,1}n eimagen{0,1}m.SiF yF
+Posteriormente,paraeliminarladependenciadelassub- A B
+sonHW-equivalentesentoncesCCV(F )=CCV(F )
+claves,en[7]seproponelamétricaCCVutilizandoelcoefi- A B
+cientedeconfusión(1)yelmodelodefugapesodeHamming
+Demostración.En(2)sepuedenotarquedosS-cajasHW-
+parasimularlafugaV|k,sindependerdelassubclaves.Su
+equivalentesposeenelmismovalordeCCVdebidoaquelos
+cálculo,teniendoencuentatodopardesubclavesk,k ,k (cid:54)=k
+i j i j
+pesos de hamming de sus salidas coinciden para la misma
+ytodotextoclaroin,es:
+entradaHW(F (x))=HW(F (x)),dondex=in⊕k.
+A B
+Paraverificarexperimentalmenteelcomportamientodel
+CCV(F)=Var(E[(HW(F(in⊕k))−HW(F(in⊕k )))2]) CCVdentrodeunaclase,segeneraron10000S-cajasHW-
+i j
+(2) equivalentesalaS-cajadelcifradorAESutilizandoelalgo-
+ritmoHwSboxGenerator.PosteriormentesecalculóelCCV
+EnlaSección2.1sedemuestraqueestamétricaesconstan-
+paracadaunadedichasS-cajas,utilizandolaherramientaSET
+tedentrodelaclase,locualsecorrespondeconlosresultados
+(S-boxEvaluationTool)presentadaen[12].Paralas10000
+prácticosdelaSecciónanterioryconstituyeunodelosaportes
+S-cajasseobtieneexactamenteelmismovalorconstantede
+deestetrabajo.
+CCVdentrodelaclase,verlaFig.2.
+1.4 No-linealidad
+Lano-linealidadNL(Non-Linearity)esunapropiedadaso-
+ciadaaunaS-cajaquedeterminasuresistenciaanteataques 0.118
+lineales.En[9]seformulaelcálculodelaNLcomo:
+0.116
+0.114
+1
+NL(F)=2n−1− ma´x | ∑ (−1)v·F(x)+w·x|
+2v∈{0,1}m−{0}m;w∈{0,1}n
+x∈{0,1}n 0.112
+(3)
+Dondeu·v=∑
+i
+u
+i
+v
+i
+eselusualproductointernoentreu 0.110
+yv.
+0.108
+En[10]sedefinenclasesdeequivalenciasafinesapartir
+delaspropiedadesalgebráicasdelasS-cajas,entreellasla 0.106
+no-linealidad.
+EsdeinteresencontrarS-cajasconaltovalordeCCVbus- 0.104
+0 2000 4000 6000 8000 10000
+candoresistenciaantelosataquesDPAyaltovalordeNLpara
+garantizarresistenciaantelosataqueslineales,sinembargo
+Figura2.ValordeCCVpara10000S-cajasHW-equivalentes
+alaS-cajadelcifradorAES
+haypocosresultadosdeestetipo.Larelacióncontradictoria
+20 Varianzadelcoeficientedeconfusiónyno-linealidaddeS-cajasdentrodelasclasesHammingWeight
+AunquelasS-cajasHW-equivalentesposeenelmismova-
+lordeCCV,estonoocurreasíenelsentidocontrario;existen 4000
+S-cajasqueposenelmismovalordeCCVysinembargono 3500
+pertencen a la misma clase Hamming Weight. Para demos-
+3000
+trarloanteriorsedefinióyevaluóelsiguienteconjuntoAde
+S-cajasafines: 2500
+2000
+A={F |F (x)=F (x⊕a)⊕b} (4)
+C C AES 1500
+Donde a∈{0,1}8\{0}8, b∈{0}8∪{1}8 y F AES es la 1000
+S-cajadelcifradorAES.
+500
+Sepuedecomprobar,mediantelaconstrucióndeestasS-
+0
+cajasycálculodesuCCV,quetodaslasS-cajasdelconjuntoA 80 82 84 86 88 90 92 94 96 98
+(4)poseenvalorCCVigualaldelaS-cajaF ,sinembargo
+AES
+Figura3.HistogramadelosvaloresNLpara10000S-cajas
+pertenecenaclasesHammingWeight distintasalaclase<
+HW-equivalentesalaS-cajaAESCCconCCV=0.149
+F >presentadaenlaSección1.1.
+AES
+2.2 Comportamiento asimétrico de NL dentro las
+4000
+clasesHammingWeight
+ParaestudiarelcomportamientodelaNLdentrodelas 3500
+clasesHammingWeightsegeneraronentotal40000S-cajas,
+3000
+10000 S-cajas HW-equivalentes a cada una de las S-cajas:
+2500
+AESCC,SCREAM,AESySTRIBOB,presentadasen[13]y
+seevaluólapropiedadNLutilizandolaherramientaSET. 2000
+ComosepuedenotarenlasFig.3,4,5,6,ladistribución 1500
+delosvaloresdeNLdentrodelasrespectivasclasesHamming
+1000
+Weightnoesconstanteynoessimétrica.Apesardequela
+CCVesconstantedentrodelaclase,lanolinealidadnoloes. 500
+Esteresultadoaportanuevoselementosalacomprensiónde 0
+70 75 80 85 90 95 100
+larelaciónentreCCVyNL.
+Noteademásque:Alcompararentresíloscuatrocasos, Figura4.HistogramadelosvaloresNLpara10000S-cajas
+elvalordeCCVvadescendiendo0.149,0.122,0.111,0.111, HW-equivalentesalaS-cajaSCREAMconCCV=0.122
+sinembargoseobservanpocoscambiosenelhistogramade
+frecuencias, solo hay una ligera diferencia en la altura de
+algunoshistogramas.Entodosloscasoslacolaizquierdaes Referencias
+más amplia que la derecha, lo cual significa que dentro de
+[1] VanTilborgHC.Encyclopediaofcryptographyandsecu-
+las clases la cantidad de S-cajas con no-linealidad baja es
+rity;Springer;2005.
+mayorquelasdeS-cajasconno-linealidadalta.Sedejacomo
+problemaabiertoladeterminacióndeladistribuciónexacta [2] SehrawatD,GillNS.LightweightBlockCiphersforIoT
+delaNLdentrodelasclases. basedapplications:AReview;InternationalJournalofAp-
+pliedEngineeringResearch;2018.
+Conclusiones
+[3] ProuffE.DPAattacksandS-boxes;InternationalWorks-
+SedemostróquedentrodelasclasesHammingWeight,el hoponFastSoftwareEncryption;Springer;2005.
+CCVsecomportademaneraconstantemientrasqueelNLno
+[4] PicekS.Applicationsofevolutionarycomputationtocry-
+esconstanteysigueunadistribuciónasimétricaconlacola
+ptology;RadboudUniversity;2015.
+izquierdamásampliaqueladerecha.Esteresultadoaporta
+nuevoselementosalacomprensióndelarelaciónentreCCV
+[5] SánchezR.GeneracióndeS-cajasequivalentes,segúnsu
+yNL.Sedejacomoproblemaabiertoladeterminacióndela
+resistenciaalosataquesdiferencialesdepotencia;Univer-
+distribuciónexactadelaNLdentrodelasclases.
+sidadTecnológicadelaHabana;2016.
+Paratrabajosfuturossepretendeconstruirunnuevoesce-
+narioenelcualelvalordeNLseaconstanteparaestudiarla [6] StoffelenK.IntrinsicSide-ChannelAnalysisResistance
+distribucióndeCCVytambiénestudiarelcomportamiento andEfficientMasking;RadboudUniversity;2015.
+dentrodelasclasesHammingWeightdelapropiedadcono-
+cidacomoordendetransparenciaredefinidoMTO(Modified [7] PicekS,PapagiannopoulosK,EgeB,BatinaL,Jakobovic
+TransparencyOrder)[14]. D.Confusedbyconfusion:SystematicevaluationofDPA
+Varianzadelcoeficientedeconfusiónyno-linealidaddeS-cajasdentrodelasclasesHammingWeight 21
+resistanceofvariouss-boxes;InternationalConferencein
+4000 CryptologyinIndia;Springer;2014.
+3500
+[8] FeiY,DingAA,LaoJ,ZhangL.AStatistics-basedFun-
+3000
+damentalModelforSide-channelAttackAnalysis;IACR
+2500 CryptologyePrintArchive;2014.
+2000
+[9] CarletC,DingC.NonlinearitiesofS-boxes;Finitefields
+1500
+andtheirapplications;2007.
+1000
+500 [10] LeanderG,PoschmannA.Ontheclassificationof4bit
+s-boxes;ArithmeticofFiniteFields;2007
+0
+80 82 84 86 88 90 92 94 96 98
+[11] Heuser A, Rioul O, Guilley S. A theoretical study of
+Figura5.HistogramadelosvaloresNLpara10000S-cajas
+Kolmogorov-Smirnovdistinguishers;InternationalWorks-
+HW-equivalentesalaS-cajaAESconCCV=0.111
+hop on Constructive Side-Channel Analysis and Secure
+Design;Springer;2014.
+4000
+[12] PicekS,BatinaL,JakobovicD,EgeB,GolubM.S-box,
+3500 SET,match:atoolboxforS-boxanalysis;IFIPInternational
+3000 WorkshoponInformationSecurityTheoryandPractice;
+Springer;2014.
+2500
+2000
+[13] LermanL,MarkowitchO,VeshchikovN.Comparing
+1500 Sboxes of ciphers from the perspective of side-channel
+attacks; Hardware-Oriented Security and Trust (Asian-
+1000
+HOST),IEEEAsian;IEEE;2016.
+500
+0 [14] ChakrabortyK,SarkarS,MaitraS,MazumdarB,Muk-
+80 82 84 86 88 90 92 94 96 98
+hopadhyayD,ProuffE.Redefiningthetransparencyorder;
+Figura6.HistogramadelosvaloresNLpara10000S-cajas Designs,CodesandCryptography;2016.
+HW-equivalentesalaS-cajaSTRIBOBconCCV=0.098

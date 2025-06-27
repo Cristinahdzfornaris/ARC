@@ -1,0 +1,643 @@
+Sociedad Cubana de Matemática y Computación
+Inmersión de un campo de Galois GF(pn)
+en otro de mayor cardinalidad
+Oristela Cuellar Justiz, Guillermo Sosa Gómez (oristela@uclv.edu.cu)
+Departamento de Matemáticas, Universidad Central Marta Abreu, Las Villas
+Resumen homomorphism in certain particular case. We will see the dif-
+ferent ways of embedding a fi eld in another one, taking, as an
+Es bien conocido [1], que para todo campo de Galois GF(pm),
+example, the case of the fi elds GF(8) into GF(64).
+siendo p un número primo y m un número natural, y todo nú-
+mero natural n que es divisor de m, existe un único subcampo
+del campo de Galois GF(pm), que es isomorfo a GF(pn). De aquí
+resulta que, para campos de Galois GF(pn) y GF(pm), siendo n 1. Introducción
+un divisor de m, existe al menos un homomorfi smo inyectivo
+h: GF(pn)→GF(pm). Dicho homomorfi smo sumerge a GF(pn) en La teoría de los campos fi nitos es una rama del Álgebra moder-
+GF(pm), lo cual signifi ca que el subcampo de GF(pm), imagen de na que se ha convertido en muy actual desde la última mitad
+h, es el que es isomorfo a GF(pn). En el presente trabajo, vere- del siglo pasado teniendo en cuenta sus múltiples aplicaciones.
+mos las diferentes maneras de defi nir un homomorfi smo de in- Los campos fi nitos, también llamados campos de Galois, tie-
+mersión, en ciertos casos particulares. Veremos las diferentes nen aplicación en la Combinatoria, en la Teoría de Números,
+maneras de sumergir un campo en otro tomando como ejemplo la Geometría Algebraica, la Biología Matemática, la Teoría de
+el caso de los campos GF(8) en GF(64). Galois y en la Criptografía. En Criptografía los campos fi nitos
+se utilizan en la construcción de la mayoría de los códigos co-
+Abstract
+nocidos y en su decodifi cación.
+It is well known [1], that for every Galois Field GF(pm), where p Es bien sabido que todo campo fi nito K tiene cardinalidad
+is a prime number and m a natural number , and every natural pn, donde p es un número primo y n un número natural. En este
+number n which is a divisor of m, there is a unique subfi eld of caso el número primo p es la característica del campo, esto es,
+the Galois Field GF(pm), which is isomorphic to the fi eld GF(pn). el menor entero positivo tal que
+From these follows that, for Galois fi elds GF(pn) and GF(pm),
+being n a divisor of m, there’re is, at least, an injective homo- pa = a + a + p veces a = 0, para todo a elemento de K.
+morphism h: GF(pn)→GF(pm). Such an homomorphism em-
+beds GF(pn) into GF(pm), It means that the subfi eld of GF(pm) , Por otra parte, para cada número primo p y cada número na-
+image of h, is that which is isomorphic to GF(pn). In the pres- tural n existe un campo fi nito con pn elementos, único salvo
+ent work we will see different ways of defi ning an embedding isomorfi smos. (Teorema de existencia y unicidad de campos
+— 70 —
+Revista Ciencias Matemáticas
+fi nitos [1]). En el presente trabajo nos proponemos examinar polinomial, entonces los elementos de GF(pn) quedarán repre-
+las diferentes maneras de sumergir un campo de Galois de pn sentados como combinaciones lineales
+elementos en uno de pm elementos, cuando n es un divisor de m. n/-1
+cai,conc !Zp
+i i
+i=0
+Es bien sabido que el grupo multiplicativo de un campo GF(q),
+con q = pn, denotado (GF(q))*, es cíclico. Un generador del gru-
+2. Desarrollo del trabajo
+po (GF(q))* se llama elemento primitivo del campo GF(q). [1, 2, 3]
+Teniendo en cuenta esta propiedad obtenemos que, otra for-
+Los campo GF(pm) y GF(pn), son extensiones algebraicas del
+ma muy común de representar un campo GF(q), es representan-
+campo primo Zp = GF(p), de grados m y n ,respectivamente ,
+do sus elementos no nulos como potencias de un elemento fi jo α.
+(y cada uno se obtiene al adjuntarle a GF(p) una raíz, primiti-
+Sea GF(pn) una extensión algebraica de Zp = GF(p), cuyo
+va, de un polinomio irreducible, de grado m, o grado n, según
+elemento defi nitorio α es raíz de un polinomio irreducible f de
+el caso.
+grado n. Si todo elemento de se puede expresar como una po-
+Aquí recordamos al lector que se llama campo primo a un
+tencia de α (equivalentemente, α es un elemento primitivo de se
+campo que no contiene subcampos propios. En el caso de los
+dice entonces que GF(pn) es un polinomio primitivo.
+campos fi nitos, o campos de Galois, los campos primos son
+Esto nos permite plantear GF(pm) = {αk|0  k  pm - 1} siem-
+los anillos Zp, de restos módulo p, para p primo. Los campos
+pre que α sea raíz de un polinomio primitivo de grado m, sobre
+GF(pn), de pn elementos, se construyen todos de manera simi-
+GF(p).
+lar. Tomemos, para ilustrar, un campo GF(pn), de pn elementos.
+Si α es un elemento primitivo de GF(pn), es decir un elemen-
+Veamos brevemente algunas formas de representar los elemen-
+to de orden pn - 1 en el grupo multiplicativo GF(pn) y β es un
+tos del mismo.
+elemento primitivo en GF(pm), esto es, un elemento de orden
+Sea α una raíz de un polinomio f, irreducible sobre Zp =
+pm - 1 en el grupo multiplicativo (GF(pn))* entonces un ho-
+GF(p), llamado polinomio característico de la extensión. El
+momorfi smo de inmersión h: GF(pn)→GF(pm) debe conver-
+campo GF(pn) se puede representar como el conjunto de los po-
+tir α en un elemento βk de su mismo orden, es decir, de orden
+linomios en α de grado ≤ n - 1, incluido el polinomio nulo, que
+pm-1
+pn - 1. Para ello es necesario que sea múltiplo del entero .
+no tiene grado, todos con coefi cientes en Zp = GF(p). En este pn-1
+(Este número es entero, ya que por ser n divisor de m, pm - 1 es
+caso, α se llama elemento defi nitorio de GF(pn). Es decir
+/ divisible por pn - 1). La cantidad de valores que puede tomar k
+GF(pn)=# n-1cai c !Zp-
+i=0 i i es igual a φ(pn - 1), siendo φ la llamada función tótem de Euler,
+La representación que se obtiene de esta manera no es única
+que asigna a cada número natural la cantidad de naturales me-
+para GF(pm).
+nores que, y primos relativos con él.
+Basta notar que, de existir dos polinomios distintos f y g,
+Como un homomorfi smo de campos necesariamente con-
+irreducibles sobre GF(p), de un mismo grado n y con raíces α y
+vierte el cero en cero y el uno en uno, es decir, cada elemento
+Zp[x]
+β respectivamente. Entonces los anillos cocientes
+f(x)Zp[x] neutro, el aditivo y el multiplicativo, en el neutro correspon-
+Zp[x]
+y son isomorfos entre sí, e isomorfos al campo diente, convierte también cada constante, es decir, cada ele-
+g(x)Zp[x]
+mento del campo primo GF(p) siendo p la característica de
+GF(pn). Pero αm y βm no se representan como un mismo polino-
+ambos campos, en sí misma. Por consiguiente, el homomor-
+mio, evaluado en α o en β, según el caso.
+fi smo de inmersión h es también una aplicación lineal, esto
+Otra forma de ver la extensión GF(pn) es como espacio vec-
+es, un homomorfi smo de espacios vectoriales, vistos ambos
+torial de dimensión n sobre su subcampo primo Zp = GF(p). Si
+campos como espacios vectoriales sobre su subcampo primo
+tomamos al conjunto {1,α,α2, ... , αn-1 } (donde α es el elemento
+Zp = GF(p). De acuerdo con ello el homomorfi smo puede ser
+defi nitorio de GF(pn)), como una base de GF(pn), llamada base
+representado matricialmente, tomando como bases los siste-
+— 71 —
+Sociedad Cubana de Matemática y Computación
+mas {1,α,α2, ... , αn-1 } y {1,β,β2, ... , βm-1 } de potencias, li- cia de α, siendo las correspondientes matrices columnas los
+nealmente independientes, de los elementos primitivos α y β, componentes vectoriales de una sucesión recurrente lineal
+de los campos GF(p) y GF(pm), respectivamente. Estas bases, cuyo período es un divisor del número pn - 1. Si el polino-
+que pueden considerarse como las bases canónicas de ambos mio es, además de irreducible, un polinomio primitivo, en-
+GF(p)) - espacios vectoriales, dan lugar a matrices mxn, esto tonces, el período de la sucesión es exactamente pn - 1, que
+es, de m fi las y n columnas, representantes de los diferentes ho- es el máximo posible. Esto es necesario para que el elemen-
+momorfi smos de inmersión de GF(p) y GF(pm). to α, raíz de p(x), sea un generador del grupo multiplicativo
+pm-1 (GF(pn))*.
+Denotando al entero como k y k como a cada ente-
+pn-1 1 t
+A continuación veremos un teorema que nos da una condición
+ro tk para cada y primo relativo con el mismo, resulta que los
+1
+necesaria y sufi ciente para que las funciones sean la misma función.
+elementos βkt son los de orden pn - 1 n el campo GF(pm). Esto
+signifi ca que las funciones h de GF(pn) en GF(pm), defi nidas
+t
+Teorema 1:
+como h(0) = 0 y h(αi) = βikt para cada son homomorfi smos mul-
+t t
+Para campos de Galois GF(pn) y GF(pm), siendo n un
+tiplicativos entre los monoides (GF(pn))* y (GF(pm))*.
+divisor de m, y los elementos primitivos α ! GF(pn) y
+Por el llamado teorema de existencia de las aplicaciones li-
+β ! GF(pn)consideremos la función hr: GF(pn)→GF(pm)
+neales sabemos que para cada función ht existe una única apli-
+defi nida por: h(0) = 0,h(αi) = βkti donde k = t k siendo
+cación lineal f: GF(pn)→GF(pm) tal que f(αi) = h(αi) para todo t t t 1
+t t t pm-1
+i ! {0,1,2,...,n - 1}, ya que {1,α, α2,..., αn - 1} es una base del k 1 = pn-1 y t primo relativo con pn - 1. Denotemos f t
+espacio de partida GF(pn) [4,5]. Entonces, los homomorfi smos por a la aplicación lineal, única
+de inserción son las funciones que coinciden con su aplicación f: GF(pn)→GF(pm)
+t
+lineal asociada en todo su dominio GF(pn), es decir, son las que tal que, h(αi) = f(αi) para todo i ! {0,1,2,...n - 1}, esto
+t t
+son multiplicativas y, al mismo tiempo aditivas y Zp-lineales. es, para el cero y para los elementos de la base (1,α, αn-1)
+de GF(pn). Entonces, para que h y f sean la misma fun-
+t t
+ción es sufi ciente, y necesario, que se verifi que la igual-
+3. Obtención de los elementos del cam- dad h(αn) = f(αn).
+t t
+po como los componentes de una suce-
+Demostración:
+sión recurrente lineal
+La condición es, obviamente, necesaria. Probemos que es
+/n-1 sufi ciente:
+Al polinomio irreducible p(x)=xn-
+i=0
+c i xi asociamos la ma- El elemento βkt es del mismo orden que α, que es igual a
+triz cuadrada
+J N pn - 1. La función h, así defi nida, es obviamente un homo-
+K K K K K K 1 0 0 0 . . . . 0 0 c c 1 0 O O O O O O morfi smo de monoid t es, entre los monoides multiplicativos
+M p(x) =K K K 0 0 .. 0 c 2 O O O (GF(pn))* y (GF(pm))* y, restringida, es un homomorfi smo de
+K K.. .. .. .. h O O grupos entre los grupos multiplicativos, (cíclicos), (GF(pn))*
+KK OO
+0 0 0 1 c
+L n-1P y (GF(pm))*.
+a la que llamamos matriz acompañante del polinomio p(x). No
+Siendo α raíz del polinomio primitivo
+es difícil probar que el polinomio característico Det(M - zI) /n-1
+p(x) n p(x)=xn- cxi ,
+es precisamente p(x) y que representando como matrices co- i
+i=0
+/n-1
+lumnas a los elementos se tiene la igualdad an= cai . Los elementos del campo
+i
+n/-1 i=0
+0,1,a,a2,a3,f,an-1,an= (-c)ai,an+1,f,apn-2 GF(pn) son, además del cero, los términos de la sucesión re-
+i
+i=0 currente lineal [1] ^ajh3 , donde los primeros n términos son
+j=0
+GF(pn), siendo α un elemento primitivo, dicha matriz con-
+1,α, α2,..., αn - 1 y para r ≥ 0 se cumple la relación de recurrencia
+vierte cada elemento no nulo en su siguiente como poten-
+— 72 —
+Revista Ciencias Matemáticas
+lineal: para exponentes menores que n + r,
+n/-1
+an+r= c i aj+r =fd /n-1 ci(a)in.h(a)=f(an).h(a)=
+i=0 t t t t
+esto es, para j ≥ n, i=0
+/n-1 =h(an).h(a)=h(an.a)=h(an+1)
+aj= cai+j-n t t t t
+i
+i=0 de nuevo por la coincidencia y por ser h multiplicativa
+Esta es la S.R.L. cuyo polinomio generador es el polinomio t
+Queda así probado que f(αn+r) = h(αn+r), para todo r natural.
+primitivo /n-1 t t
+p(x)=xn- c i xi Por consiguiente, ambas funciones coinciden en todo su do-
+i=0
+siendo su período igual a pn - 1, que es el orden del elemento minio. El teorema queda demostrado.
+primitivo α, generador del grupo multiplicativo (GF(pn))*. Nota: El teorema 1 signifi ca que, siendo las sucesiones recurren-
+Necesitamos probar que, para todo natural se verifi ca la tes lineales
+^f
+t
+^ajhh3
+j=0
+y^h
+t
+^ajhh3
+j=0 , del mismos grado n, con la
+igualdad h(αn + r) + f(αn + r). Lo probaremos usando el método misma relación de recurrencia y con los primeros n componentes
+t t
+de inducción completa, aplicado a la variable natural r. iguales, ambas son necesariamente iguales, en todos sus términos.
+Para r = 1.
+f(an+1)=f(an.a)=fdd n/=1 cain.a1n=fd n/=1 cai+1n ,por ley Homomorfi smos entre los campos GF(8) y GF(64)
+t t t i t i
+i=0 i=0 El campo GF(8) se obtiene como extensión de GF(2) = {0,1}
+distributiva,
+/n-1 mediante la adjunción de una raíz de un polinomio irreducible
+= cif(ai+1) , por ser f una aplicación lineal,
+i=0 t t de grado 3.
+/n-1
+= cih(ai+1) , por ser f y h coincidentes para todos los expo- El polinomio x3 + x + 1 es irreducible sobre el campo bina-
+t t t
+i=0
+nentes menores o iguales que n, rio Z = GF(2). Es además primitivo, ya que cualquiera de sus
+2
+/n-1 raíces es de orden 7 = 23 - 1, Sea α una raíz de este polinomio.
+= cih(a)i.h(a) , por ser h multiplicativa,
+t t t
+i=0 Por ser primitivo el polinomio cualquiera de sus raíces genera
+/n-1
+=d cih t (a)in.h t (a), de nuevo por ley distributiva, al grupo multiplicativo (GF(8))* del campo GF(8). El campo se
+i=0
+/n-1 describe como GF(8) = {1,α, α2,1 + α,α + α2,1 + α+ α2,1 + α2}
+=d cif(a)in.h(a)
+i=0 t t , de nuevo por la coincidencia de ambas El campo GF(64) = GF(2)(α) donde α es una raíz del polino-
+para exponentes menores que n, mio irreducible de grado 6 x6 + x + 1 ! GF(2)[x].
+n/-1
+=d cif(a)in.h(a)=f(an).h(a).h(an).h(an.a)=h(an+1) Un homomorfi smo h:GF(8)→GF(64) inyectivo convierte al
+t t t t t t t
+i=0 grupo cíclico (GF(8))* en un subgrupo del grupo cíclico (GF(64))*.
+de nuevo por la coincidencia y por ser h multiplicativa.
+t Luego, h convierte al generador α en un elemento que es también
+Queda pues probado que f(αn+1) = h(αn+1)
+t t de orden 7, que es el orden del grupo multiplicativo (GF(8))*, den-
+Suponiendo ahora cierta la igualdad para todo exponente
+tro del grupo (GF(64))*, que es de orden 26 - 1 = 63. En el campo
+menor a n + r, para r ≥ 2, obtenemos:
+GF(64) el elemento β9 es de orden 7 y , en general, elementos de
+,
+orden 7 son los de la forma β9t donde cada t es un entero positivo
+por ley distributiva, que es primo relativo con 7. Es decir, t ! {1,2,3,4,5,6}.
+/n-1
+= cif(ai+r) Por tanto β9, β18, β27, β37, β45, β54 son los elementos de orden 7.
+t
+i=0 , por ser f una aplicación lineal,
+/n-1 t Por consiguiente, hay 6 posibilidades para defi nir h:
+= cih(ai+r)
+t
+i=0 , por ser f y h coincidentes para todos los expo-
+t t
+nentes i menores que h: α→β9 = β3 + β4 = (0,0,0,1,1,0)
+1
+/n-1
+= cih t (a)i.h t (ar), por ser h multiplicativa, h 2 : α→β18 = 1 + β + β2 + β3 = (1,1,1,1,0,0)
+t
+i=0 h; α→β27 = β + β2 + β3 = (0,1,1,1,0,0)
+=d /n-1 cih(a)in.h(ar),
+de nuevo por ley distributiva,
+3
+t t h ; α→β36 = β + β2 + β4 = (0,1,1,0,1,0)
+i=0 4
+/n-1 h; α→β45 = 1 + β3 + β4 = (1,0,0,1,1,0)
+=d cif t (a)in.h t (ar), de nuevo por la coincidencia de ambas 5
+i=0 h ; α→β54 = 1 + β + β2 + β4 = (1,1,1,0,1,0)
+6
+— 73 —
+Sociedad Cubana de Matemática y Computación
+Aquí, representamos cada expresión polinómica en β, de grado Caso 1: h: α→β9
+1 R V R V R V
+menor igual a 6, como el sexteto de ceros y unos asociado a la S S0 W W S S1 W W S S0 W W
+S W S W S W
+S W S W S W
+misma. S S 0W W S S 0W W S S 0W W
+S W S W S W
+S0W S0W S0W
+Cada función h tiene una aplicación lineal asociada f. h (0)=0=S S W W,h (a0)=h (1)=1=S S W W,h (a)=b9=S S W W,
+t t 1 S0W 1 1 S0W 1 S1W
+S W S W S W
+Sean {1,α}{1,β,β2,β3,β4,β5}las bases de los campos GF(8) y S W S W S W
+S0W S0W S1W
+S W S W S W
+GF(64) respectivamente. Las matrices asociadas a dichas apli- SS0 WW SS0 WW SS0 WW
+T XR V R V T X T X
+S W S W
+caciones lineales con respecto a estas bases son S1W S0W
+S W S W
+R V R V R V S W S W
+S S1 0 1 W W S S1 1 0 W W S S1 0 1 W W S S 1W W S S 1W W
+S W S W S W S W S W
+S W S W S W S1W S1W
+S S 0 0 1W W S S 0 1 1W W S S 0 1 1W W h (a2)=b18=S S W W,h (a3)=b27=S S W W
+S W S W S W 1 S1W 1 S1W
+S0 0 1W S0 1 1W S0 1 1W S W S W
+M(f 1 )=S S S0 1 1 W W W ,M(f 2 )=S S S0 1 0 W W W ,M(f 3 )=S S S0 1 0 W W W , S S S 0 W W W S S S 0 W W W
+S
+S
+W
+W
+S
+S
+W
+W
+S
+S
+W
+W
+SS0 WW SS0 WW
+S S 0 1 0W W S S 0 0 1W W S S 0 0 1W W T X T X
+SS0 0 0 WW SS0 0 0 WW SS0 0 0 WW R S S1 0 1 V W W
+T X T X T X S W
+R S S1 0 0 V W W R S S1 1 0 V W W R S S1 1 1 V W W S S S 0 0 1 W W W
+S W S W S W S W
+M(f 4 )= S S S S S S S S S S
+S
+S
+0 0 0
+0
+1 1
+1
+0 1
+1
+0 0 W W W W W W W W W W
+W
+W
+,M(f 5 )= S S S S S S S S S S
+S
+S
+0 0 0
+0
+1
+1
+0 0 1 1 1
+0
+W W W W W W W W W W
+W
+W
+,M(f 6 )= S S S S S S S S S S
+S
+S
+0 0 0
+0
+1 1
+1
+0 1
+1
+0 0 W W W W W W W W W W
+W
+W
+La matriz, M(f 1 )=
+T
+S S S S S S S S SS 0 0 0
+0
+1 1
+1
+0 1 1 0
+0
+X
+W W W W W W W W WW actúa sobre los elementos de la
+SS0
+0 0
+WW SS0
+0 0
+WW SS0
+0 0
+WW
+manera siguiente
+T X T X T X
+R V R V R V R V R V
+S W S W S W S W S W
+Representando como matrices columnas a los elementos de S S 0 W W S S 1W W S S 0W W S S 1W W S S 1W W
+S W S W S W S W S W
+ambos ca Z] ] ] ] ] ] ] m 0 p = os R S S S S S S , 0 0 t V W W W W W W e , n 1 d = ría R S S S S S S 1 m 0 V W W W W W W o ,a s: = R S S S S S S 1 0 V W W W W W W ,a2= R S S S S S S 0 0 V W W W W W W , _b b b b b b b R T S S S S S S SS 0 0 0 V X W W W W W W WW " S S S S S S S S S S S 0 0 0 0 W W W W W W W W W W W ; R T S S S S S S SS 1 0 0 V X W W W W W W WW " S S S S S S S S S S S 0 0 0 0 W W W W W W W W W W W , R T S S S S S S SS 1 0 0 V X W W W W W W WW " S S S S S S S S S S S 1 1 0 0 W W W W W W W W W W W R T S S S S S S SS1 0 0 V X W W W W W W WW " S S S S S S S S S S S 1 1 1 0 W W W W W W W W W W W , R T S S S S S S SS 1 1 0 V X W W W W W W WW " S S S S S S S S S S S 1 1 0 0 W W W W W W W W W W W
+] ]
+]
+SS0 WW SS0 WW SS0 WW SS1 WW b b
+b
+SS0 WW SS0 WW SS0 WW SS0 WW SS0 WW
+] ] T X R S TV W X T X R S T V W X b b T X T X T X T X T X
+] S1W S0W b
+]] S W S W bb Se aprecia que el elemento imagen, obtenido por el producto
+GF(8)=[]a3=1+a S S1 W W,a4=a+a2= S S1 W W, `b
+] S W S W b
+]
+]
+]
+SS0 WW SS1 WW b
+b
+b
+matricial es el que corresponde, como potencia de β, según la
+] ] ] ] T X R S S S 1 V W W W T X R S S S 1 V W W W b b b b sustitución h 1 : α→β9 excepto en el caso de
+] ] ] ] ]] a5=1+a+a2= S S S SS 1 1 W W W WW ,a6=1+a2= S S S SS1 0 W W W WW b b b b bb R S S S S S1 0 V W W W W W R S S S S S 1 0 V W W W W W
+\ T X T Xa S W S W
+S W S W
+S1W S0W
+mientras los de GF(64) se representan según la tabla (Anexo 1) h (a3)=b27=S S W W !S S W W
+1 S1W S1W
+S W S W
+tomando la transpuesta de la matriz fi la correspondiente a cada S W S W
+S0W S1W
+S W S W
+potencia obtenida.
+SS0 WW SS0 WW
+T X T X
+Analicemos ahora cada uno de los casos por separado y re-
+Es decir, ambas funciones, la aditiva f y la multiplicativa h, no
+1 1
+cordemos que según el teorema 1, f y h para que sean la misma
+t t son la misma. De aquí resulta que la sustitución no defi ne un
+función es sufi ciente, y necesario, que se verifi que la igualdad
+homomorfi smo de campos.
+f(α3) = h(α3).
+t t
+Caso 2. h : α→β19
+2 R V
+S W
+S1W
+S W
+S W
+S1W
+S W
+S W
+S1W
+h (a3)=b54=1+b+b2+b4S S W W
+2 S0W
+S W
+S W
+S1W
+S W
+SS0 WW
+T X
+— 74 —
+Revista Ciencias Matemáticas
+R V R V R V
+Si hacemos lo mismo con la matriz M(f ), vemos que la S S1 0 0 W W S S1 W W S S1 W W
+2 S W S W S W
+S W S W S W
+G m F is ( m 64 a ) t d r i a f n R S S S S S S S S S S S S S e 1 0 0 0 s r f e o n 1 1 1 1 r t m e 1 1 1 0 d a V W W W W W W W W W W W W W e R S S S S S S SS e 1 1 0 l β V W W W W W W WW 5 e = 4 le R S S S S S S S S S S S S S m 1 1 1 0 V W W W W W W W W W W W W W en ! to R S S S S S S S S S S S S S 1 1 1 0 α V W W W W W W W W W W W W W 3 de f 2 G ^ F a ( 3 8 h ) ! en h 2 u ^a n 3 e h lemento de En este cas T S S S S S S S S S S S SS o 0 0 0 0 0 a 1 1 1 0 0 mb 1 1 0 0 0 a X W W W W W W W W W W W WW s R T S S S S S S SS 1 1 0 f V X W W W W W W WW u = nc T S S S S S S S S S S S SS i 1 1 1 0 0 o X W W W W W W W W W W W WW ne ! s T S S S S S S S S S S S SS f 1 1 0 0 0 4 X W W W W W W W W W W W WW y la m f 4 ^ u a lt 3 i h p ! lic h a 4 ti ^ v a a 3 h h 4 no son la
+S0 0 1WT X S0W S1W misma función. De aquí resulta que la sustitución h : α→β36 no
+S W S W S W
+SS0
+0 0
+WW SS0 WW SS0 WW 4
+T X T X T X defi ne un homomorfi smo de campos.
+Al igual que en el caso 1 las funciones, la aditiva f y la multi-
+2
+Caso 5: h : α→β45
+plicativa h 2 no son la misma. De aquí resulta que la sustitución 5 R S V W
+S0W
+h : α→β18 tampoco defi ne un homomorfi smo de campos. S W
+2 S S0 W W
+S W
+S W
+S0W
+Caso 3 : h : α→β27 h 5 (a3)=b135=b9=b3+b4=S S S1 W W W
+3 S W
+R S S S S S 1 1 V W W W W W S S S SS 1 0 W W W WW
+S W T X
+S W
+h (a3)=b81=b18=1+b+b2+b3= S S S 1W W W Si hacemos lo mismo con la matriz, M(f 5 ) vemos que la misma
+3 S1W
+S W transforma el elemento α3 de GF(8) en un elemento de GF(64)
+S W
+S0W
+S W
+SS0 WW igual a β36
+R
+S
+V
+W
+R
+S
+V
+W
+R
+S
+V
+W
+T X S1 1 0W S0W S1W
+S W S W S W
+S W S W S W
+S i t g r i a u h n a a s l c f a o e r m β m 1 o 8. a s e lo l e m le i m sm e o n t c o o α n 3 l a d e m G at F r ( i 8 z ) , M en ( f u 3 n ) v e e le m m o e s n q to u e d l e a G m F is (6 m 4 a ) S S S S S S S S S 0 0 0 1 0 0 1 1 1 W W W W W W W W W R S S S S S S SS 1 1 0 V W W W W W W WW = S S S S S S S S S 1 0 0 W W W W W W W W W = S S S S S S S S S 1 0 0 W W W W W W W W W f 5 ^a3h=h 5 ^a3h
+R S S
+S
+1 0 1 V W W
+W
+R S S
+S
+1 V W W
+W
+R S S
+S
+1 V W W
+W
+S S SS 0
+0
+1
+0
+0
+0
+W W WW T X S S SS 1
+0
+W W WW S S SS 1
+0
+W W WW
+S W S W S W T X T X T X
+S S S S S S S S S 0 0 0 1 1 1 1 1 0 W W W W W W W W W R S S S S S S SS 1 1 0 V W W W W W W WW = S S S S S S S S S 1 1 1 W W W W W W W W W = S S S S S S S S S 1 1 1 W W W W W W W W W f 3 ^a3h=h 3 ^a3h E aq n u e í s r t e e s c u a lt s a o q a u m e b l a a s s f u u s n t c it i u o c n i e ó s n f 5 h y 5 : h α 5 → so β n 4 5 l a d m efi i s n m e a u f n u n h c o i m ón o . m D o e r-
+S0 0 1WT X S0W S0W
+S W S W S W fi smo de campos que inserta GF(8) en GF(64).
+SS0
+0 0
+WW SS0 WW SS0 WW
+T X T X T X
+En este caso ambas funciones la aditiva f y la multiplicati- Caso 6: h : α→β54
+3 6 R V
+va h son la misma función De aquí resulta que la sustitución S S0 W W
+3 S W
+S W
+h : α→β27 defi ne un homomorfi smo de campos que inserta S S 1W W
+3 S W
+S0W
+GF(8) en GF(64) h (a3)=b162=b36=b+b3+b4=S S W W
+6 S1W
+S W
+S W
+S1W
+S W
+Caso 4: h : α→β36
+SS0 WW
+4 R V T X
+S W
+S1W
+S W Si hacemos lo mismo con la matriz, M(f6) vemos que la misma
+S W
+S0W
+S W
+S W transforma el elemento α3 de GF(8) en un elemento de GF(64)
+S0W
+h (a3)=b108=b45=1+b3+b3=S S W W
+4 S1W igual a β36
+S tr i a h n a s c fo e r m m o a s e lo l e m le i m sm e o n t c o o α n 3 l a d e m G at F r ( i 8 z ) , T S S S S SS 1 0 M e X W W W W WW n ( f u 4 ) n v e e le m m o e s n q t u o e d l e a G m F is (6 m 4 a ) R S S S S S S S S S S S S S 1 0 0 0 1 1 1 0 1 1 0 0 V W W W W W W W W W W W W W R S S S S S S SS 1 1 0 V W W W W W W WW = R S S S S S S S S S S S S S 1 1 0 0 V W W W W W W W W W W W W W = R S S S S S S S S S S S S S 1 1 0 0 V W W W W W W W W W W W W W f 6 ^a3h=h 6 ^a3h
+S0 1 1WT X S1W S1W
+S W S W S W
+desigual de β45
+SS0
+0 0
+WW SS0 WW SS0 WW
+T X T X T X
+— 75 —
+Sociedad Cubana de Matemática y Computación
+En este caso ambas funciones f y h son la misma función. De
+6 6 Polinomio de grado menor o igual que 5
+Potencia de β
+aquí resulta que la sustitución h : α→β54 defi ne un homomorfi s-
+6 y secuencia binaria correspondiente
+mo de campos que inserta GF(8) en GF(64).
+β21 1 + β + β3 + β4 + β5 = (1,1,0,1,1,1)
+β22 1 + β2 + β4 + β5 = (1,0,1,0,1,1)
+β23 1 + β3 + β5 = (1,0,0,1,0,1)
+4. Conclusión
+β24 1 + β4 = (1,0,0,0,1,0)
+β25 β + β5 = (0,1,0,0,0,1)
+Hemos visto que el campo de Galois GF(8), se sumerge de tres β26 1 + β + β2 = (1,1,1,0,0,0)
+maneras diferentes en el campo GF(64). h : α→β27, h : α→β45, h : β27 β + β2 + β3 = (0,1,1,1,0,0)
+3 5 6
+α→β54 aunque en los tres casos el subcampo isomorfo a GF(8) β28 β2 + β3 + β4 = (0,0,1,1,1,0)
+es el mismo, pues está formado por los mismos elementos: 0,1, β29 β3 + β4 + β5 = (0,0,0,1,1,1)
+β9, β18, β27, β36, β45, β54. β30 1 + β + β4 + β5 = (1,1,0,0,1,1)
+β31 1 + β2 + β5 = (1,0,1,0,0,1)
+β32 1 + β3 = (1,0,0,1,0,0)
+Anexo 1 β33 β + β4 = (0,1,0,0,1,0)
+β34 β2 + β5 = (0,0,1,0,0,1)
+β35 1 + β + β3 = (1,1,0,1,0,0)
+Polinomio de grado menor o igual que 5
+Potencia de β
+y secuencia binaria correspondiente β36 β + β2 + β4 = (0,1,1,0,1,0)
+β0 1 = (1,0,0,0,0,0) β37 β2 + β3 + β5 = (0,0,1,1,0,1)
+β1 β = (0,1,0,0,0,0) β38 1 + β + β3 + β4 = (1,1,0,1,1,0)
+β2 β2 = (0,0,1,0,0,0) β39 β + β2 + β4 + β5 = (0,1,1,0,1,1)
+β3 β3 = (0,0,0,1,0,0) β40 1 + β + β2 + β3 + β5 = (1,1,1,1,0,1)
+β4 β4 = (0,0,0,0,1,0) β41 1 + β2 + β3 + β4 = (1,0,1,1,1,0)
+β5 β5 = (0,0,0,0,0,1) β42 β + β3 + β4 + β5 = (0,1,0,1,1,1)
+β6 1 + β = (1,1,0,0,0,0) β43 1 + β + β2 + β4 + β5 = (1,1,1,0,1,1)
+β7 β + β2 = (0,1,1,0,0,0) β44 1 + β2 + β3 + β5 = (1,0,1,1,0,1)
+β8 β2 + β3 = (0,0,1,1,0,0) β45 1 + β3 + β4 = (1,0,0,1,1,0)
+β9 β3 + β4 = (0,0,0,1,1,0) β46 β + β4 + β5 = (0,1,0,0,1,1)
+β10 β4 + β5 = (0,0,0,0,1,1) β47 1 + β + β2 + β5 = (1,1,1,0,0,1)
+β11 1 + β + β5 = (1,1,0,0,0,1) β48 1 + β2 + β3 = (1,0,0,1,0,0)
+β12 1 + β2 = (1,0,1,0,0,0) β49 β + β3 + β4 = (0,1,0,1,1,0)
+β13 β + β3 = (0,1,0,0,1,0) β50 β2 + β4 + β5 = (0,0,1,0,1,1)
+β14 β2 + β4 = (0,0,1,0,1,0) β51 1 + β + β3 + β5 = (1,1,0,1,0,1)
+β15 β3 + β5 = (0,0,0,1,0,1) β52 1 + β2 + β4 = (1,0,1,0,1,0)
+β16 1 + β + β4 = (1,1,0,0,1,0) β53 β + β3 + β5 = (0,1,0,1,1,0)
+β17 β + β2 + β5 = (0,1,1,0,0,1) β54 1 + β + β2 + β4 = (1,1,1,0,1,0)
+β18 1 + β + β2 + β3 = (1,1,1,1,0,0) β55 β + β2 + β3 + β5 = (0,1,1,1,0,1)
+β19 β + β2 + β3 + β5 = (0,1,1,1,1,0) β56 1 + β + β2 + β3 + β4 = (1,1,1,1,1,0)
+β20 β2 + β3 + β4 + β5 = (0,0,1,1,1,1) β57 β + β2 + β3 + β4 + β5 = (0,1,1,1,1,1)
+— 76 —
+Revista Ciencias Matemáticas
+Polinomio de grado menor o igual que 5
+Potencia de β
+y secuencia binaria correspondiente
+β58 1 + β + β2 + β3 + β4 + β5 = (1,1,1,1,1,1)
+β59 1 + β2 + β3 + β4 + β5 = (1,0,1,1,1,1)
+β60 1 + β3 + β4 + β5 = (1,0,0,1,1,1)
+β61 1 + β4 + β5 = (1,0,0,0,1,1)
+β62 1 + β5 = (1,0,0,0,0,1)
+β63 1
+Referencias bibliográfi cas
+[1] LIDL RUDOLF, HARALD NIEDERRAITER. Campos
+fi nitos. Moscú. Mir 1998. Tomo 1 y 2.
+[2] JOHN F. FRALEIGH, A fi rst course in abstract Álgebra.
+.Addison Wesley publishing company, 1967.Fourth prin-
+ting, 1972.
+[3] MINIEIEV N.P., CHUBARIKOV V.N. Conferencias so-
+bre cuestiones aritméticas de la Criptografía. Moscú. Edi-
+torial de la Universidad de Moscú 2010.
+[4] JOSEFA MARÍN MOLINA, ÁNGEL BALAGUER BE-
+SER, ELENA ALEMANY MARTINEZ. Un Curso de
+Álgebra con ejercicios (I).Universidad Politécnica de Va-
+lencia. 2004.
+[5] FRED IZABO, Linear Álgebra: An Introduction Using
+Maple. Harcourt. Academic Press. Año 2002.
+— 77 —

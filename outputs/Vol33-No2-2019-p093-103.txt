@@ -1,0 +1,1071 @@
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.93-103
+Recibido07-2019,Aceptado09-2019
+Un modelo de triple porosidad, triple permeabilidad
+y derivadas fraccionarias para la presión transiente
+en yacimientos fracturados con geometría fractal
+A triple porosity, triple permeability model with
+fractional derivatives for transient pressure in
+naturally fractured reservoirs with fractal geometry
+Mario A. Vera-Villamar1, José A. Mesejo-Chiong2*
+Resumen Losmodelosdeflujodepetróleoenunpozoconstituyenunelementofundamentaldelasllamadas
+pruebas de pozo. Estas son empleadas en la ingeniería del petróleo para pronosticar la producción en un
+yacimiento.Paramodelaryacimientosnaturalmentefracturadosserequierenmodelosdeflujoavanzados.En
+este trabajo se presenta un modelo que considera la existencia de tres porosidades y tres permeabilidades
+primarias en un yacimiento con geometría fractal. La evolución temporal se modela mediante derivadas
+fraccionariasquepermitenincorporarlahistoriaproductivadelpozo.Sepresentanlassolucionessemianalíticas
+delmodeloycurvastipoparadiferentescondicionesdefrontera.
+Abstract Oilflowmodelsinawellareafundamentalelementoftheso-calledwelltests. Theseareusedin
+petroleumengineeringtoforecastproductioninareservoir. Tomodelnaturallyfracturedreservoirs,advanced
+flowmodelsarerequired. Thispaperpresentsonethatconsiderstheexistenceofthreeporositiesandthree
+primary permeabilities in a reservoir with fractal geometry. The temporal evolution is modeled by fractional
+derivativesthatallowincorporatingtheproductivehistoryofthewell. Semi-analyticalsolutionsofthemodeland
+typecurvesfordifferentboundaryconditionsarepresented.
+PalabrasClave
+Modelodeflujo,Mediosfractales,Derivadafraccionaria,Tripleporosidad.
+Keywords
+Flowmodel,Fractalmedia,Fractionalderivative,Tripleporosity.
+1EscuelaSuperiorPolitécnicadelLitoral,Guayaquil,Ecuador,maverav@espol.edu.ec
+2FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba,mesejo@matcom.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción quepuedenestarinterconectados.EnYNFVsehanpodido
+obtenercurvasdepresiónquenocoincidenconlasteóricas
+Laestimacióndeparámetrosdeunyacimientodehidro- queseoriginanmediantemodelosdeflujousuales.Larazón
+carburos mediante pruebas de pozo es una práctica común de este comportamiento no está completamente explicada,
+enlaingenieríadelpetróleoquepermitepronosticarlapro- peroseatribuyealadistribucióndefracturasyvúgulosen
+ducciónenelyacimiento.Laspruebasserealizanmidiendo tales yacimientos. Los modelos de flujo usuales son eucli-
+lapresióndelpetróleoenelpozoycomparandolacurvade dianos e implícitamente asumen una distribución uniforme
+presiónmedidaconunateóricaqueproporcionaunmodelode defracturasyvúgulosasícomoquelasfracturasestáninter-
+flujoenelpozo.Losmodelosdeflujo,queporlogeneralestán conectadas.Estocontradiceevidenciasobtenidasapartirde
+basadosenlaecuacióndeladifusión,incluyenlosparámetros estudiosgeológicosdelosYNFV.Unasoluciónaestepro-
+delyacimientorelevantesyestossepuedenestimarmediante blemaseencuentraenlateoríafractalquepermiteconsiderar
+unajustedelacurvateóricacontralademediciones. unadistribuciónnouniformedefracturasylaexistenciade
+estasadiferentesescalas.Porestarazónvariosautores([7],
+Un tipo común de yacimiento de hidrocarburos son los
+[2],[1],[8],[5])hanestablecidomodelosdeflujobasadosen
+naturalmentefracturadosyvugulares(YNFV).Estospresen-
+asumirdifusiónfractal(vea[12])enelYNFV.
+tanjuntoalamatriz(laroca)sistemasdefracturasyvúgulos
+94 Modelofractalyfraccionarioparapresióntransienteenyacimientosfracturados
+En el trabajo [11] se estableció un modelo de difusión yenlaseccióncuatroseaportanlasconclusionesadecuadas
+anómalaconderivadatemporalfraccionariaconunordende- alosresultadosobtenidos.
+terminadoporladimensiónfractaldeHausdorffqueseasume
+paraelmediodondeocurreestadifusión.Estopermitiógene-
+1. El modelo TPTPFF
+ralizarlaecuacióndeladifusiónfractal.Enlostrabajos[16],
+ElmodeloTPTPFFestádadoporunsistemadeecuacio-
+[17],[15]y[14]sepresentanmodelosfractalesyfracciona-
+nesenderivadasparciales(EDPs)quedescribenlaevolución
+riosparaestudiarlapresiónenyacimientosfracturadosyse
+temporaldelapresióndepetróleoencadaunodelosmedios
+señalaqueelusodederivadasfraccionariaspermiteincorpo-
+queformanelyacimiento.Elyacimientoseconsideracomo
+rarlahistoriadelflujoenelcomportamientodelascurvasde
+uncilindroconpropiedadesaxialmentesimétricas,veafigura
+presión.
+1. Por ello se asume que la presión solo depende espacial-
+Laexistenciadelostresmediosmatriz,fracturasyvúgu-
+mente de la distancia hacia el pozo dada por la variable r.
+losenunYNFVrequieredelempleodeunmodelodondese
+Plantearemoselmodeloenvariablessindimensionesr yt .
+reflejenlascaracterísticasesencialesdelosmismos.Estasson D D
+Paraunafuncióncualquiera p(r ,t ),1<β ≤2y0≤θ ≤1
+porosidadypermeabilidadyporelloelmodeloquesepresen- D D
+definamoseloperadordiferencialconrespectoar
+taenestetrabajoesdetripleporosidadytriplepermeabilidad D
+(TPTP).Losmodelosconmásdeunaporosidadypermeabili- (cid:18) (cid:19)
+1 ∂ ∂p(r ,t )
+d d a e d n s u e e r s e tr m o o m nt o a d n e a lo lo s s e t e ra n b c a u j e o n s t [ r 4 a ] e y n [ e 1 l 8 t ] r . a L b a aj b o as [ e 6] f , u u n n d o am d e e n l t o a s l D ( r β D ,θ) (p(r D ,t D ))= r D β−1∂r D r D β−θ−1 ∂r D D D . (1)
+primerosenconsiderarelmediovugularcomoinfluyenteen
+EmplearemostambiénladerivadafracccionaldeCaputocon
+elcomportamientodelapresión.Teniendoencuentalascon-
+respectoat
+D
+sideracionesenlospárrafosprecedenteselmodeloconsidera
+g
+le
+e
+s
+o
+(
+m
+F
+e
+F
+t
+)
+r
+.
+ía
+N
+f
+u
+r
+e
+a
+s
+c
+t
+t
+r
+a
+o
+l
+m
+de
+o
+l
+d
+o
+e
+s
+lo
+m
+e
+e
+x
+d
+t
+i
+i
+o
+en
+s
+d
+y
+e
+e
+o
+m
+tr
+p
+o
+l
+s
+ea
+co
+d
+m
+er
+o
+iv
+l
+a
+o
+d
+s
+a
+p
+s
+r
+f
+e
+r
+s
+a
+e
+c
+n
+c
+t
+i
+a
+o
+d
+n
+o
+a
+s
+-
+D
+t
+α
+D
+(p(r
+D
+,t
+D
+))=
+Γ(1
+1
+−α)
+(cid:90)
+0
+tD
+(t D −
+1
+τ)α
+∂p
+∂
+(r
+t
+D
+D
+,τ)
+dτ
+en[19],[6]y[10].Dadaslascaracterísticasdenuestromodelo (2)
+lonombraremosmodeloTPTPFF. con0<α ≤1.
+Enlasiguientesecciónsepresentaelmodeloenvariables Sesuponequeencadapuntodelyacimientoexistenpre-
+sindimensionesjuntoconsuscondicionesinicialesyvarias siones p (r ,t ), p (r ,t )y p (r ,t )encadaunode
+Dm D D Df D D Dv D D
+condicionesdefrontera.Enlaseccióndosseexponeelmétodo losmediosmatriz,fracturasyvúgulosquesepuedeninterpre-
+desoluciónquellamaremossemianalíticoyaquerequierela tarcomounpromediodelasexistententesenunavecindad
+inversióndelatransformadadeLaplacemediantemétodos der eneltiempot (veaWarren).Conlaconvenciónm=1,
+D D
+numéricos. En la sección tres se muestran curvas solución f =2,v=3elmodeloTPTPFFestáformadoporelsistema
+obtenidascondiferentesvaloresdelosparámetrosdelmodelo deEDPs
+κ D (β,θ) (p )−λ (p −p )−λ (p −p )=ω Dα1(p ), (3)
+1 rD D1 12 D1 D2 13 D1 D3 1 tD D1
+κ D (β,θ) (p )+λ (p −p )−λ (p −p )=ω Dα2(p ), (4)
+2 rD D2 12 D1 D2 23 D2 D3 2 tD D2
+κ D (β,θ) (p )+λ (p −p )+λ (p −p )=ω Dα3(p ), (5)
+3 rD D3 13 D1 D3 23 D2 D3 3 tD D3
+donde,para1≤i,j≤3, detransferenciaenlasinterfacesentrecadamedio.Elsistema
+euclidianodetripleporosidadtriplepermeabilidadseobtiene
+0<α ≤1, (6)
+i cuandoα =1,β =2yθ =0.
+i
+0≤κ i ,ω i ≤1, (7) Paradenotarladependenciadelassoluciones p D1 , p D2 y
+10−9≤λ ≤10−6, (8) p D3 delosparámetrosintroducimoselvector
+ij
+ 
+κ 1 +κ 2 +κ 3 =ω 1 +ω 2 +ω 3 =1. (9) α 1 ,α 2 ,α 3 ,β,θ,
+x= κ
+1
+,κ
+2
+,κ
+3
+,ω
+1
+,ω
+2
+,ω
+3
+, ∈R17 (10)
+Losparámetrosα seempleanparalasderivadasdeCapu-
+i λ ,λ ,λ ,s,C ,r
+12 13 23 D eD
+toencadaunodelosmedios.Losparámetrossindimensiones
+ω yκ estánrelacionadosconlaporosidadylapermeabili- ydenotamos p = p (r ,t ,x).LosparámetrossyC se
+i i Di Di D D D
+dadencadaunodelosmediosrespectivamente.Losλ son llamanpiel(skin)ycoeficientedealmacenamientorespecti-
+ij
+tambiénparametrossindimensionesrelativosalostérminos vamente.Ellosaligualquer apareceránenlascondiciones
+eD
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.1-11
+Modelofractalyfraccionarioparapresióntransienteenyacimientosfracturados 95
+defrontera. locualsignificaremplazar p
+D
+en(15)y(16)por∑3
+i=1
+κ
+i
+p
+Di
+.
+LatriplepermeabilidadqueconsideraelmodeloTPTPFF Tenemosentonces
+estádadaporlapresenciadelostresparámetrosκ ,κ yκ .
+Ellosnosonindependientesyaqueestánrelacionado 1 sm 2 edian 3 - ∑ 3 κ i (cid:32) C D dp wD − ∂p Di (cid:12) (cid:12) (cid:12) (cid:33) =∑ 3 κ i , (17)
+telaigualdad(9).Latriplepermeabilidadocurrecuandose i=1 dt D ∂r D (cid:12) rD=1 i=1
+m c lo u s e m a d b p e i l l e d i n d o a b 0 d le < s p e κ e o i rm b < t e ie 1 a n , b e i il n = id c a 1 u d , a 2 s n , e d 3 o c y o u n ( n s 9 i κ ) d . i e M = ra o n 1 d c e m u lo a ie s n n d d t o e ra e u s x n q a a u c s t e a o m m la e o p n d e t e r e - - i ∑ = 3 1 κ i (cid:32) p Di | rD=1 −s ∂ ∂ p r D D i (cid:12) (cid:12) (cid:12) (cid:12) rD=1 (cid:33) = i ∑ = 3 1 κ i p wD , (18)
+unúnicoκ =0.Latripleporosidadestáconsideradaporla
+i
+presencia de ω , ω y ω . Para los ω, i=1,2,3 se tienen queequivalena(15)y(16)respectivamentedadoquesecum-
+1 2 3 i
+consideracionessimilaresalasexplicadasanteriormentepara ple(9).
+losκ.Comoejemploseñalamosqueelmodelopresentado De (17) y (18) se obtienen las condiciones de frontera
+i
+en[6]seobtienedel(3)-(5)cuandoα =1,i=1,2,3,β =2, interiorqueemplearemos,estasson
+i
+θ =0yκ =0.
+2 (cid:12)
+dp wD ∂p Di(cid:12)
+C D − (cid:12) =1, (19)
+1.1 Condicionesinicialesydefrontera dt D ∂r D (cid:12) rD=1
+Lascondicionesinicialesson,parai=1,2,3, ∂p Di (cid:12) (cid:12)
+p
+Di
+(r
+D
+,0,x)=0. (11) p Di | rD=1 −s ∂r D (cid:12) (cid:12) rD=1 =p wD , (20)
+parai=1,2,3.Adiferenciade(12)-(14),quesiestablecen
+Las de frontera se imponen para r en las que se llaman
+D
+trescondicionesdefronteraexteriordiferenciadas,(19)y(20)
+fronterainterioryfronteraexterior.Consideraremostrescon-
+constituyenunaúnicacondicióndefronteraexteriordadapor
+dicionesdefronteraexterior
+suacoplamientomediante p .
+wD
+l´ım p (r ,t ,x)=0, (12) Enresumen,elmodeloTPTPFFseestudiaráconlascon-
+Di D D
+rD→∞ dicionesiniciales(11),lasdefronteraexterior(12)-(14)yla
+p Di (r eD ,t D ,x)=0, (13) defronterainteriordadapor(19)y(20).Sedebenencontrar
+∂p (r ,t ,x) tres soluciones que, de acuerdo a la condición de frontera
+r e β D −θ−1 Di ∂ e r D D =0. (14) exterior,llamaremosdeyacimientoinfinito(YINF),frontera
+D
+exteriorapresiónconstante(FEPC)yfronteraexterioracero
+Comoseaprecialafronteraexteriorpuedeserinfinitaoestá flujo(FECF).
+dada por el radio exterior r . La condición (12) se llama
+eD
+deyacimientoinfinito,la(13)defronteraexteriorapresión
+2. Soluciones semianalíticas del modelo
+constanteyla(14)defronteraexterioraceroflujo.
+TPTPFF
+Paraestablecerlascondicionesdefronterainteriortoma-
+mosenconsideracióneltrabajo[3]donde,cuandounasola Elsistema(3)-(5)puedeserresueltopordiferentesvías.
+presión p D contribuye al flujo en el pozo, se plantean las Unadeellaseslanuméricamediantediferenciasfinitasuotro
+condiciones métodoapropiado.Sinembargoexistedificultadparaencon-
+(cid:12) trarmétodosnuméricoscapacesdetrabajarconcondicones
+C D dp wD − ∂p D(cid:12) (cid:12) =1, (15) de frontera infinitas como la (12). Por ello es conveniente
+dt D ∂r D(cid:12) rD=1 emplearotravíadesolución.Unadeellasesaplicarlatrans-
+(cid:12)
+p D | rD=1 −s ∂ ∂ p r D D(cid:12) (cid:12) (cid:12) rD=1 =p wD , (16) f i o = rm 1 a ,2 d , a 3 d .D e e L e a s p t l a ac fo e rm co a n el re s s is p t e e c m to ad a e t D ED a P l s as se fu tr n a c n i s o f n or e m s a p e D n i ,
+unodeecuacionesdiferencialesordinariasquepuederesol-
+donde p wD eslapresiónquesepuedemedirenelpozo.En versedeformaanalíticaparalacombinacióndelacondición
+[6]paraelmodeloeuclidianodetripleporosidaddobleper- defronterainterior(19)-(20)conlasdiferentescondiciones
+meabilidadsepropone defronteraexterna(12)-(14).Elúnicoinconvenientedeeste
+métododesoluciónradicaenlanecesidaddeinvertirlatrans-
+(cid:12)
+∂(κ
+2
+p
+D2
++(1−κ
+2
+)p
+D3
+)(cid:12)
+(cid:12) =−1 formadadeLaplaceparalocual,enelpresentecaso,solose
+∂r D (cid:12) rD=1 puedenemplearmétodosnuméricos.
+Tenemosentoncesqueelmetododesoluciónsemianalíti-
+que equivale al caso dado por (15) cuandoC =0. Exten-
+D copararesolverelsistema(3)-(5)emplealatransformadade
+derestacondición,bajoC =0,alcasodetripleporosidad
+D Laplacedelasfunciones p ,i=1,2,3,conrespectoat .La
+Di D
+equivalea
+transformadadeLaplacedelasfunciones p estádadapor
+Di
+(cid:12)
+∂(κ 1 p D1 +κ 2 p D2 +κ 3 p D3 )(cid:12) (cid:12) =−1, L {p (r ,t ,x)}= (cid:90) ∞ e−utDp (r ,t ,x)dt . (21)
+∂r D (cid:12) rD=1 Di D D 0 Di D D D
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.1-11
+96 Modelofractalyfraccionarioparapresióntransienteenyacimientosfracturados
+Emplearemoslanotación Dadaslascondicionesiniciales(11)obtenemos
+pˆ (r ,u,x)=L {p (r ,t ,x)} L (cid:8) Dαi(p ) (cid:9) =uαipˆ (r ,u,x). (22)
+Di D Di D D tD Di Di D
+ydenominaremosaucomotiempodeLaplace.Unapropiedad AplicandolatransformadadeLaplace(21)acadaunade
+deladerivadafraccionariadeCaputo(vea[13]),cuando0< lasecuacionesdelsistema(3)-(5)yconsiderando(22)obte-
+α i ≤1,es nemospara pˆ Di (r D ,u,x),i=1,2,3,elsistemadeecuaciones
+diferencialesordinarias
+L (cid:8) Dαi(p ) (cid:9) =uαipˆ (r ,u,x)−p (r ,0,x).
+tD Di Di D Di D
+κ D
+(β,θ)
+(pˆ )−a (u,x)pˆ +λ pˆ +λ pˆ =0, (23)
+1 rD D1 11 D1 12 D2 13 D3
+κ D
+(β,θ)
+(pˆ )+λ pˆ −a (u,x)pˆ +λ pˆ =0, (24)
+2 rD D2 12 D1 22 D2 23 D3
+κ D
+(β,θ)
+(pˆ )+λ pˆ +λ pˆ −a (u,x)pˆ =0, (25)
+3 rD D3 13 D1 23 D2 33 D3
+donde paraun1≤i≤3talqueκ (cid:54)=0.ObservesequesiC (cid:54)=0
+i D
+a 11 (u,x)=ω 1 uα1+λ 12 +λ 13 , (26) 1 (cid:32) 1 ∂pˆ Di (cid:12) (cid:12) (cid:33)
+a 22 (u,x)=ω 2 uα2+λ 12 +λ 23 , (27) upˆ wD = C D u + ∂r D (cid:12) (cid:12) rD=1 ,
+a (u,x)=ω uα3+λ +λ . (28)
+33 3 13 23 porlocualladerivadalogarítmicadeBourdetdefinidapor
+Lascondicionesdefronteraexterior(12)-(14),para1≤
+dp dp
+wD wD
+i≤3,setransformanen =t D
+dln(t ) dt
+D D
+l´ım pˆ Di (r D ,u,x)=0, (29) es,paraelimismotomadoen(35),
+rD→∞
+r
+e
+β
+D
+−θ−1 ∂p p ˆ ˆ D D i i (
+∂
+( r r
+r
+e e D D , , u u , , x x ) )= =0 0, . ( ( 3 3 0 1 ) ) t D d d p t w D D = C t D D (cid:32) 1+L−1 (cid:40) ∂ ∂ p r ˆ D D i (cid:12) (cid:12) (cid:12) (cid:12) rD=1 (cid:41)(cid:33) . (36)
+D
+ElgráficodeladerivadalogarítmicadeBourdetesunodelos
+Lasdefronterainterior,para1≤i≤3,dadoque p (0,x)=
+wD fundamentalesqueseempleanenlageneracióndecurvastipo
+0,son
+yporellolopresentaremosennuestrosresultados.
+(cid:12)
+∂pˆ Di(cid:12) 1
+C D upˆ wD − (cid:12) = , (32) 2.1 Solucióngeneraldelsistema(23)-(25)
+∂r D (cid:12)
+(cid:12)
+rD=1 u Dadas(7)y(9)tenemosparalosκ
+i
+,i=1,2,3,lassiguien-
+∂pˆ Di(cid:12) tesposibilidades:
+pˆ Di | rD=1 −s ∂r D (cid:12) (cid:12) rD=1 =pˆ wD . (33) 1. Setieneunκ =1ylosrestantesigualesacero,osea
+i
+Combinandoambasecuacionestenemos,para1≤i≤3,las
+(κ ,κ ,κ )=(1,0,0),
+condicionesdefronterainterior(tipoNeumann) 1 2 3
+(κ ,κ ,κ )=(0,1,0),
+(cid:12) 1 2 3
+∂pˆ Di(cid:12) 1
+C D u pˆ Di | rD=1 −(sC D u+1) ∂r D (cid:12) (cid:12) rD=1 = u . (34) (κ 1 ,κ 2 ,κ 3 )=(0,0,1).
+2. Setieneκ =0ylosrestantesdistintosdecero,osea
+Lapresión pˆ (u,x),quenoesmásquelapresiónenel i
+wD
+pozoeneltiempodeLaplace,secalculamediantecualquie- κ =0, 0<κ <1, κ =1−κ ,
+1 2 3 2
+ra de las ecuaciones (33). La presión p (t ,x) en tiempo
+wD D κ =0, 0<κ <1, κ =1−κ ,
+sindimensioneseslafundamentalquesedeseaobtenerya 2 3 1 3
+quepermitecompararlassolucióndelmodelocondatosde κ 3 =0, 0<κ 2 <1, κ 1 =1−κ 2 .
+mediconesreales.Dadaslasecuaciones(33)tenemosque
+3. Setieneque
+p wD =L−1 (cid:110) pˆ Di | rD=1 (cid:111) −sL−1 (cid:40) ∂ ∂ p r ˆ D D i (cid:12) (cid:12) (cid:12) (cid:12) rD=1 (cid:41) , (35) juntoalacondició 0 n < (9) κ . 1 ,κ 2 ,κ 3 <1
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.1-11
+Modelofractalyfraccionarioparapresióntransienteenyacimientosfracturados 97
+Loscasos1y2constituyencasosextremosdelmásge- 2.1.2 Solucióngeneralcuandounúnicoκi =0
+neraldadopor3.Observequeenloscasos1y2desaparece Supongamosκ =0,enestecaso0<κ <1yelsistema
+1 2
+eloperadordiferencialenalgunasoalgunadelasecuaciones (23)-(25)quedadelaforma
+(23)-(25)convirtiéndolasdediferencialesenalgebraicas.Ilus-
+−a pˆ +λ pˆ +λ pˆ =0, (44)
+traremos lavía desolución en loscasos 1 y2 medianteun 11 D1 12 D2 13 D3
+únicoejemplodelostresposibles. κ D (β,θ) (pˆ )+λ pˆ −a pˆ +λ pˆ =0, (45)
+2 rD D2 12 D1 22 D2 23 D3
+2.1.1 Solucióngeneralcuandounκi =1 κ
+3
+D (
+r
+β
+D
+,θ) (pˆ
+D3
+)+λ
+13
+pˆ
+D1
++λ
+23
+pˆ
+D2
+−a
+33
+pˆ
+D3
+=0, (46)
+Supongamosκ =1locualsignificaqueelflujoprimario
+1
+soloocurreenlamatriz.Dadoqueκ 2 =κ 3 =0desaparecen conκ 3 =1−κ 2 .De(44)seobtiene
+los términos D ( r β D ,θ) (pˆ D2 ) y D ( r β D ,θ) (pˆ D3 ) en las ecuaciones pˆ = λ 12 pˆ D2 +λ 13 pˆ D3.
+(24)y(25).Porelloelsistema(23)-(25)quedareducidoala D1 a
+11
+ecuacióndiferencial
+Sustituyendoen(45)y(46)tenemoselsistemadeEDOs
+D
+(β,θ)
+(pˆ )−a (u,x)pˆ
+rD D1 11 D1
+κ D
+(β,θ)
+(pˆ )−b pˆ +b pˆ =0, (47)
++λ pˆ +λ pˆ =0, (37)
+2 rD D2 11 D2 12 D3
+12 D2 13 D3
+(1−κ )D
+(β,θ)
+(pˆ )+b pˆ −b pˆ =0, (48)
+yalasecuaciones
+2 rD D3 12 D2 22 D3
+donde
+λ pˆ −a (u,x)pˆ +λ pˆ =0, (38)
+12 D1 22 D2 23 D3
+λ 13 pˆ D1 +λ 23 pˆ D2 −a 33 (u,x)pˆ D3 =0. (39) b =b (u,x)=a − λ 1 2 2, (49)
+11 11 22
+a
+11
+Delasecuaciones(38)y(39)seobtiene
+λ λ
+b =b (u,x)= 12 13 +λ , (50)
+pˆ = a 33 λ 12 +λ 13 λ 23pˆ , 12 12 a 11 23
+D2 a 22 a 33 −λ 2 2 3 D1 λ2
+b =b (u,x)=a − 13. (51)
+pˆ = a 22 λ 13 +λ 12 λ 23pˆ . 22 22 33 a 11
+D3 a a −λ2 D1
+22 33 23 Podemosescribir(47)-(48)como
+y sustituyendo en (37) obtenemos la ecuación diferencial (cid:18) (cid:19) (cid:18) (cid:19) (cid:18) (cid:19)
+ordinaria(EDO) D (β,θ) pˆ D2 −B(u,x) pˆ D2 = 0 (52)
+rD pˆ pˆ 0
+D3 D3
+1 ∂2pˆ β−1−θ ∂pˆ
+r D θ ∂r D 2 D1 + r D (θ+1) ∂r D D 1 −j 1 (u,x)pˆ D1 =0 (40) donde (cid:32) b11 −b12 (cid:33)
+B(u,x)= κ2 κ2 .
+donde − b12 b22
+(cid:18) a λ2 +a λ2+ (cid:19)
+1−κ2 1−κ2
+a a a − 11 23 22 13 ObservemosquesiBfuesediagonalelsistemadadopor(52)
+j (u,x)= 11 22 33 a 33 λ 1 2 2 +2λ 12 λ 13 λ 23 . estaríadesacoplado.TenemosquesecumpleB=QJQ−1con
+1 a a −λ2
+22 33 23 (cid:18) 1 1 (cid:19)
+Q(u,x)= ,
+Lasolucióngeneralde(40)es q (u,x) q (u,x)
+21 22
+pˆ D1 (r D ,u,x)=r D ζ (cid:16) c 11 I ν (cid:16) γ (cid:112) j 1 r D 1/γ (cid:17) + J(u,x)= (cid:18) j 11 ( 0 u,x) j ( 0 u,x) (cid:19) ,
+22
+c K
+(cid:16)
+γ
+(cid:112)
+j r
+1/γ (cid:17)(cid:17)
+(41)
+12 ν 1 D ydonde
+donde 1 (cid:0) (cid:1)
+2 1 β q (u,x)= b −d ,
+γ = , ζ = − , ν =−γζ, (42) 21 2κ b (−)
+3 12
+θ+2 γ 2
+1 (cid:0) (cid:1)
+y c 1j =c 1j (u,x) para j=1,2 son constantes arbitrarias de q 22 (u,x)= 2κ b b (−) +d ,
+3 12
+integración.Considerando(41)y(33)obtenemos
+1 (cid:0) (cid:1)
+j (u,x)= b +d ,
+(cid:16) (cid:16) (cid:112) (cid:17) (cid:112) (cid:16) (cid:112) (cid:17)(cid:17) 11 2κ κ (+)
+pˆ (u,x)=c I γ j −s j I γ j 2 3
+wD 11 ν 1 1 ν+1 1
+1 (cid:0) (cid:1)
++c 12 (cid:16) K ν (cid:16) γ (cid:112) j 1 (cid:17) +s (cid:112) j 1 K ν+1 (cid:16) γ (cid:112) j 1 (cid:17)(cid:17) . (43) j 22 (u,x)= 2κ 2 κ 3 b (+) −d ,
+b =κ b −κ b ,
+Enloscasosκ =1quesignificaflujoprimariosoloen (−) 3 11 2 22
+2
+fracturas o κ 3 =1 para flujo primario solo en vúgulos se b (+) =κ 3 b 11 +κ 2 b 22 ,
+obtienensolucionesanálogasa41y43cambiandoelvalorde (cid:113)
+d(u,x)= b2 +4κ κ b2 .
+j (u,x)deformaapropiada. (−) 2 3 12
+1
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.1-11
+98 Modelofractalyfraccionarioparapresióntransienteenyacimientosfracturados
+Sidenotamos Sean
+(cid:18) (cid:19) (cid:18) (cid:19)
+yˆ
+D2 =Q−1
+pˆ
+D2 (53) 3c−b2
+yˆ
+D3
+pˆ
+D3
+p
+0
+=
+9
+,
+podemostransformar(52)en 27d−9bc+2b3
+q =− ,
+(cid:32)
+D
+(β,θ)
+(yˆ )
+(cid:33) (cid:18)
+yˆ
+(cid:19) (cid:18)
+0
+(cid:19) 0 54
+rD D2 −J(u,x) D2 = ,
+D ( r β D ,θ) (yˆ D3 ) yˆ D3 0 dadoquesecumple
+queequivalea p3(u,x)+q2(u,x)≤0
+0 0
+D
+(β,θ)
+(yˆ )−j (u,x)yˆ =0, (54)
+rD D2 11 D2 hay tres raices reales y positivas de p (λ) para todo (u,x).
+c
+D (β,θ) (yˆ )−j (u,x)yˆ =0. (55) Paracalcularlassean
+rD D3 22 D3
+Lassolucionesyˆ D2 (r D ,u,x)yyˆ D2 (r D ,u,x)de(54)y(55) θ (u,x)= 1 arcsin (cid:18) √ q 0 (cid:19) ,
+estándadaspor 1 3 p −p
+0 0
+yˆ D2 =r D ζ (cid:16) c 21 I ν (cid:16) γ (cid:112) j 11 r D 1/γ (cid:17) +c 22 K ν (cid:16) γ (cid:112) j 11 r D 1/γ (cid:17)(cid:17) , θ 2 (u,x)= 1 (π−θ 1 ),
+3
+yˆ =rζ (cid:16) c I (cid:16) γ (cid:112) j r 1/γ (cid:17) +c K (cid:16) γ (cid:112) j r 1/γ (cid:17)(cid:17) . 1
+D3 D 31 ν 22 D 32 ν 22 D θ 3 (u,x)=− (π+θ 1 ),
+3
+Apartirde(53)yloscoeficientesdeQ(u,x)obtenemos
+entonces,parai=1,2,3,lasraicesλ de p (λ)estándadas
+i c
+pˆ (r ,u,x)=yˆ +yˆ , (56)
+D2 D D2 D3 por
+(yi) (yi) √ b
+pˆ D3 (r D ,u,x)=q 21 yˆ D2 +q 22 yˆ D3 . (57) λ i (u,x)=2 −p 0 sin(θ i )− . (60)
+3
+LatransformadadeLaplacedelapresiónenelpozopˆ (u,x)
+wD SeaQ(u,x)lamatrizdadapor
+seobtienesustituyendoen(33)unadelaspresionesdadaspor
+(56)y(57).  
+q (λ ) q (λ ) q (λ )
+11 1 12 2 13 3
+Elmismométododesoluciónpresentadoanteriormente
+Q= q 21 (λ 1 ) q 22 (λ 2 ) q 23 (λ 3 )  (61)
+puedeemplearseparaloscasoscuandosoloκ osoloκ se
+2 3 1 1 1
+anulan.
+donde,parai=1,2,3,
+2.1.3 Solucióngeneralcuando0<κ1 ,κ2 ,κ3 <1
+Enestecasoelsistema(23)-(25)puedeescribirsedela
+q (λ)=a −λκ ,
+forma 0 i 22 i 2
+    q 1 (λ i )=λ 12 λ 23 +λ 13 q 0 (λ i ),
+pˆ pˆ
+D1 D1
+D ( r β D ,θ)  pˆ D2 −B¯(u,x) pˆ D2 =0 (58) q 1i (λ i )= a 22 a 33 −λ 2 2 3 −λ i (κ 3 q 0 (λ i )+κ 2 a 33 ) ,
+pˆ D3 pˆ D3 q 1 (λ i )
+λ λ +λ (a −λκ )
+donde q (λ)= 13 23 12 33 i 3 .
+2i i
+q (λ)
+ a11 −λ12 −λ13  1 i
+κ1 κ1 κ1
+B¯(u,x)= −λ12 a22 −λ23 . (59) Denotando
+ −λ κ 1 2 3 − κ λ 2 23 a3 κ 3 2  j ii (u,x)=λ i (u,x) (62)
+κ3 κ3 κ3
+y
+ElpolinomiocaracterísticodeB¯(u,x)es
+ 
+j (u,x) 0 0
+11
+p c (λ)=λ3+b(u,x)λ2+c(u,x)λ+d(u,x) J(u,x)= 0 j 22 (u,x) 0 
+0 0 j (u,x)
+donde 33
+1
+(cid:18)
+κ κ a +
+(cid:19) tenemosquelamatrizB¯(u,x)en(59)tieneladescomposición
+b=− 2 3 11 ,
+κ 1 κ 2 κ 3 κ 1 κ 3 a 22 +κ 1 κ 2 a 33 B¯(u,x)=Q(u,x)J(u,x)Q−1(u,x).
+
+κ
+(cid:0)
+a a
+−λ2(cid:1)
++
+
+c= κ 1 κ 1 2 κ 3  κ κ 1 2 3 (cid:0) (cid:0) a a 2 1 2 1 1 a 1 a 3 3 3 3 22 − − λ λ 2 1 2 3 3 1 2 (cid:1) 2 (cid:1) + , A tra l n i s g f u o a rm l q a u rs e e e e n n la sección anterior el sistema (58) puede
+1  a 11 a 22 a 33 −a 33 λ 1 2 2 −   yˆ   yˆ 
+d=− κ 1 κ 2 κ 3  a 22 2 λ λ 1 2 3 − λ a 1 λ 1 λ 2 2 3 − . D ( r β D ,θ)  yˆ D D 1 2 −J(u,x) yˆ D D 1 2 =0
+12 13 23 yˆ yˆ
+D3 D3
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.1-11
+Modelofractalyfraccionarioparapresióntransienteenyacimientosfracturados 99
+donde Empleando(43)obtenemosque
+   
+yˆ pˆ
+D1 D1
+ yˆ D2 =Q−1  pˆ D2 . pˆ wD (u,x)= (cid:112) K 1 (u, (cid:16) x) (cid:112) (cid:17) . (67)
+yˆ D3 pˆ D3 u j 1 (u,x)K ν+1 γ j 1 (u,x)
+Setienequelasyˆ Di (r D ,u,x),parai=1,2,3,estándadas +C D u2K 1 (u,x)
+por
+Enloscasosκ =1yκ =1lapresión pˆ (u,x)seob-
+2 3 wD
+yˆ =rζ (cid:16) c I (cid:16) γ (cid:112) j r 1/γ (cid:17) +c K (cid:16) γ (cid:112) j r 1/γ (cid:17)(cid:17) (63) tieneremplazandoen(67) j 1 (u,x)por j 2 (u,x)y j 3 (u,x)res-
+Di D i1 ν ii D i2 ν ii D pectivamente.Losvaloresde j (u,x)y j (u,x)estándados
+2 3
+por
+yseobtiene
+(cid:18) a λ2 +a λ2+ (cid:19)
+a a a − 11 23 22 13
+pˆ D1 =q 11 yˆ D1 +q 12 yˆ D2 +q 13 yˆ D3 , (64) j (u,x)= 11 22 33 a 33 λ 1 2 2 +2λ 12 λ 13 λ 23 ,
+pˆ D2 =q 21 yˆ D1 +q 22 yˆ D2 +q 23 yˆ D3 , (65) 2 a 11 a 33 −λ 1 2 3
+pˆ D3 =yˆ D1 +yˆ D2 +yˆ D3 . (66) a a a − (cid:18) a 11 λ 2 2 3 +a 22 λ 1 2 3 + (cid:19)
+11 22 33 a λ2 +λ λ λ
+Al igual que en la sección anterior la presión p (u,x) se j (u,x)= 33 12 12 13 23 .
+wD 3 a a −λ2
+obtieneempleandounadelaspresiones pˆ Di en(33). 11 22 12
+2.2.2 YINFcuandounúnicoκi =0
+2.2 Solucionesparticulares
+Tomaremoscomoejemploκ =0.Enestecasolassolu-
+1
+LassolucionesparticularesparaYINF,FEPCyFECFse
+cionesgenerales pˆ y pˆ estándadaspor(56)y(57).Se
+D2 D3
+hallandeterminandolasconstantesarbitrariasdeintegración
+deben encontrar las constantes c , c , c y c . De (29)
+21 22 31 32
+que aparecen en las soluciones calculadas en las secciones
+sededucequec =c =0yaque,aligualqueenelcaso
+21 31
+precedentes.Recordemosquetenemosuntotaldesietecasos
+precedente,
+posiblesdeterminadosporlosvaloresdeκ,i=1,2,3además
+de las tres posibles condiciones de fronte i ra YINF, FEPC y l´ım rζ I (cid:16) γ (cid:112) j r 1/γ (cid:17) =+∞
+D ν ii D
+FECFlocualgeneraunconjuntode21posiblessoluciones.
+rD→∞
+Paranoextenderdemasiadoestetrabajopresentaremossolo parai=1,2.Setieneque pˆ y pˆ en(56)y(57)sereducen
+D2 D3
+las soluciones para yacimiento infinito en cada uno de los a
+sietecasosposibles.  (cid:16) √ (cid:17) 
+c K γ j r
+1/γ
++
+2.2.1 YINFcuandounκi =1 pˆ D2 =r D ζ  2
+c
+2
+K
+ν (cid:16)
+γ
+√ 1
+j
+1 D
+r
+1/γ (cid:17) ,
+Debemossatisfacerlacondicióndefronteraexterior(29) 32 ν 22 D
+ (cid:16) √ (cid:17) 
+yenelcasoκ
+1
+=1tenemoslasolución(41).Dadoque
+q c K γ j r
+1/γ
++
+l´ım I ν (cid:16) γ (cid:112) j 1 (u,x)r D 1/γ (cid:17) =+∞, pˆ D3 =r D ζ  q 21 22 2 c 2 32 K ν ν (cid:16) γ √ 1 j 1 22 D r D 1/γ (cid:17) ,
+rD→∞
+conlasderivadasparciales
+sedebecumplirque
+ √ (cid:16) √ (cid:17) 
+c 11 (u,x)=0. ∂ ∂ pˆ r D D 2 =−r D 1/γ+ζ−1  c 2 c 2 32 √ j 1 j 1 22 K K ν ν + + 1 1 (cid:16) γ γ √ j 1 j 1 2 r 2 D 1 r / D 1 γ /γ (cid:17) + ,
+Seobtiene
+ √ (cid:16) √ (cid:17) 
+pˆ D1 =c 12 r D ζ K ν (cid:16) γ (cid:112) j 1 r D 1/γ (cid:17) , ∂ ∂ pˆ r D D 3 =−r D 1/γ+ζ−1  c 2 c 2 3 q 2 q 21 22 √ j 1 j 1 22 K K ν ν + + 1 1 (cid:16) γ γ √ j 1 j 1 2 r 2 D 1 r / D 1 γ /γ (cid:17) + .
+yporello
+Lasconstantesc ,c seobtienende(34).Seconstruyeel
+22 32
+sistema
+∂pˆ D1
+=−c r
+1/γ+ζ−1(cid:112)
+j K
+(cid:16)
+γ
+(cid:112)
+j r
+1/γ (cid:17)
+.
+∂r
+D
+12 D 1 ν+1 1 D
+c g +c g =
+1
+22 11 32 12
+u
+Elvalordec 12 (u,x)seobtienede(34)yresultaen 1
+c q g +c q g =
+22 21 11 32 22 12
+u
+1
+c = √ √ ,
+12 u j K (γ j )+C u2K donde
+1 ν+1 1 D 1
+(cid:112) (cid:16) (cid:112) (cid:17)
+g =C uK + j K γ j ,
+donde 11 D 1ν 11 ν+1 11
+(cid:16) (cid:112) (cid:17) (cid:112) (cid:16) (cid:112) (cid:17) g =C uK + (cid:112) j K (cid:16) γ (cid:112) j (cid:17) ,
+K =K γ j +s j K γ j . 12 D 2ν 22 ν+1 22
+1 ν 1 1 ν+1 1
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.1-11
+100 Modelofractalyfraccionarioparapresióntransienteenyacimientosfracturados
+con Sustituyendoc ,c yc en(63)seobtienenlasfunciones
+12 22 32
+(cid:16) (cid:112) (cid:17) (cid:112) (cid:16) (cid:112) (cid:17) yˆ Di ,i=1,2,3.Sustituyendolasyˆ Di en(64)-(66)seobtienen
+K =K γ j +s j K γ j ,
+1ν ν 11 11 ν+1 11 pˆ , pˆ y pˆ .Finalmenteempleando pˆ en(33)secalcula
+D1 D2 D3 D3
+(cid:16) (cid:112) (cid:17) (cid:112) (cid:16) (cid:112) (cid:17)
+K 2ν =K ν γ j 22 +s j 22 K ν+1 γ j 22 . 1 (cid:18) q K q K q K (cid:19)
+pˆ =
+c12 1ν
++
+c22 2ν
++
+c32 3ν
+. (69)
+wD
+Seobtiene uq s g 11 g 12 g 13
+1 (q −1)
+c 22 = 22 , 2.3 Solucionesentiemposindimensiones
+u(q −q ) g
+22 21 11
+Una vez obtenidas las soluciones pˆ (u,x) se necesita
+1 (1−q ) wD
+c = 21 . aplicarlatransformadainversadeLaplaceparaobtenerlas
+32
+u(q −q ) g
+22 21 12 correspondientessoluciones p (t ,x)entiemposindimen-
+wD D
+Unavezdeterminadoslosvaloredec 22 yc 32 calculamos pˆ D2 siones.Dadalacomplejidaddelasecuacionespara pˆ wD (u,x)
+quesustituidaen(33)nospermiteobtener es imposible aplicar métodos analíticos de inversión de la
+transformadadeLaplace.Debidoaelloseemplearánmétodos
+1 (cid:32) (q √22−1)K1ν √ + (cid:33) numéricosparacalcular p (t ,x)enunciertoconjuntode
+pˆ = CDuK1ν+ j11Kν+1(γ j11) . (68) wD iD
+wD u(q 22 −q 21 ) CDuK2ν+ (1 √ − j q 2 2 2 1 K )K ν+ 2ν 1(γ √ j22) e p l u i n n t t o e s rv t i a D l , o i (cid:2) = 10 1 − , 2 . , . 1 ., 0 N 8(cid:3) , . distribuidosdeformalogarítmicaen
+2.2.3 YINFcuando0<κ1 ,κ2 ,κ3 <1 El método numérico más empleado en la industria del
+Considerando las condiciones (29), al igual que en las petróleo para la inversión numérica de la transformada de
+situacionesanteriores,obtenemos LaplaceeselmétododeStehfest(vea[9]).Sea fˆ(u)latrans-
+formadadeLaplacedelafunción f(t ),elmétododeStehfest
+c =c =c =0. D
+11 21 31 estádadoporlafórmula
+Paraencontrarlasc ,i=1,2,3,seemplea(34)yseplantea
+elsistema i2 f(t )≈ ln(2) ∑ n α fˆ (cid:18) ln(2) i (cid:19) .
+D i
+t t
+1 D i=1 D
+c g +c g +c g = ,
+12 11 22 12 32 13
+u
+Losvaloresdeα sepuedenconsultaren[9]yusualmentese
+1 i
+c
+12
+q
+21
+g
+11
++c
+22
+q
+22
+g
+12
++c
+32
+q
+23
+g
+13
+= , toman∈Npar.
+u
+LaventajafundamentaldelmétododeStehfestradicaen
+1
+c 12 q 11 g 11 +c 22 q 12 g 12 +c 32 q 13 g 13 = . quesolorequiereevaluarlatransformadadeLaplaceenun
+u
+conjuntodetiemposdeLaplacereales.Muchosotrosmétodos,
+donde comoeldeZakian(vea[9]),requierenlaevaluaciónde fˆ(u)
+(cid:112) (cid:16) (cid:112) (cid:17) parau∈C.Laeleccióndelnúmerodeevaluacionesnesde-
+g =C uK + j K γ j ,
+11 D 1ν 11 ν+1 11 pendientedelacomplejidadde fˆ(u).Sibienteoricamenteel
+g =C uK + (cid:112) j K (cid:16) γ (cid:112) j (cid:17) , aumentodenconduceamayorprecisiónexisteunvalorapar-
+12 D 2ν 22 ν+1 22
+tirdelcualloserroresdeaproximaciónenaritméticadepunto
+(cid:112) (cid:16) (cid:112) (cid:17)
+g
+13
+=C
+D
+uK
+3ν
++ j
+33
+K
+ν+1
+γ j
+33
+, flotantedelosα
+i
+producenundeteriorodelaaproximación.
+(cid:16) (cid:112) (cid:17) (cid:112) (cid:16) (cid:112) (cid:17)
+K =K γ j +s j K γ j .
+iν ν ii ii ν+1 ii
+3. Curvas tipo obtenidas con el modelo
+Lasoluciónestádadapor TPTPFF
+1 q 1 q 1 q
+c =
+c12
+,c =
+c22
+,c =
+c32 Lassolucionesobtenidasenlasecciónanteriorpermiten
+12 22 32
+ug 11 q s ug 12 q s ug 13 q s la generación de curvas tipo para el comportamiento de la
+presiónsindimensionesyentiemposindimensionesenelpo-
+donde
+zo p (t )asícomodeladerivadalogaritmicadelamisma
+wD D
+q c12 =q 13 q 22 −q 12 q 23 +q 23 dp wD /dln(t D ). Las curvas tipo se generan con escala loga-
+−q 13 +q 12 −q 22 , rítmica en ambos ejes, se grafica p wD (t D ) y dp wD /dln(t D )
+contrat .Ilustraremossolamentelascurvastipoparaelcaso
+q =q q −q q +q D
+c22 11 23 13 21 21
+YINF, por ello el parámetro r no se toma en cuenta y se
+eD
+−q +q −q ,
+11 13 23 trabaja con la condición de frontera exterior (12). Para ge-
+q c32 =q 12 q 21 −q 11 q 22 + nerar las curvas se emplearon los siguientes valores de los
+q 11 −q 12 +q 22 −q 21 , parámetrosω i yλ ij
+q =q q −q q +
+s 13 22 12 23 ω =1−ω −ω , ω =10−3, ω =10−2,
+1 2 3 2 3
+q q −q q +q q −q q .
+11 23 13 21 12 21 11 22 λ =10−8, λ =10−8, λ =10−6.
+12 13 23
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.1-11
+Modelofractalyfraccionarioparapresióntransienteenyacimientosfracturados 101
+104
+103
+102
+101
+100
+10-1
+10-2
+10-3
+10-
+1
+4
+0-2 10-1 100 101 102 103 104 105 106 107 108
+Figura1.Curvastipogeneradasparaκ
+i
+=0ydiferentesvaloresdelosparámetrosfractalesβ yθ.
+Losparámetrospielycoeficientedealmacenamientosindi- Entodosloscasospresentadosseempleóelalgoritmode
+mensionessetomaronconlosvalores Stehfestconunn=16.
+s=1,9, C =50,0.
+D
+4. Conclusiones
+Lafigura1segeneróparaelcasocuandounodelosκ =0,
+i
+enespecíficoparaκ =0.Enestecasoelflujoprimarioocurre Enelpresentetrabajosehapresentadounmodelodetriple
+1
+enfracturasyvúgulosyseaprecialainfluenciadelospará- porosidadytriplepermeabilidadconderivadasfraccionarias
+metrosfractalesβ yθ enlascurvastipo.Elcomportamiento ygeometríafractalparaanalizarelcomportamientotransiente
+deunyacimientocongeometriaeuclidianaocurreenelcaso delapresiónenunpozodepetróleo.Elmodelodenominado
+cuandoβ =2yθ =0reflejadoporlascurvasenrojoenla TPTPFFesunageneralizacióndemodelosanteriores.Solu-
+figura1.Seobservaquecambiosdelosparámetrosfractales cionessemianalíticasdelmodeloparadiferentescondiciones
+producenunincrementoconsiderabledelapresiónenelpozo defronteraexteriorhansidocalculadasaunquesolosepresen-
+asícomounperíodotransientemáslargo. tanlascorrespondientesalcasoconocidocomoyacimiento
+Enlafigura2setomaκ =1locualimplicaqueelflujo infinito.
+2
+primariosoloocurreenfracturas.Enlafiguraseexploralain- Sepresentaporprimeravezelcálculodelassolucionesen
+fluenciadelosparámetrosfraccionariosenelcomportamiento elespaciodeLaplacecuandosetieneque0<κ 1 ,κ 2 ,κ 3 <1
+de la presión sin dimensiones y su derivada logarítmica en quecorrespondealaverdaderaexistenciadetrespermeabi-
+elpozo.Seobservaquecuandolosparámetrosfraccionarios lidades en el sistema. Los resultados obtenidos reproducen
+α (cid:54)=1,α (cid:54)=1yα (cid:54)=1lapresióndisminuyeparatiempos losquesepresentaronen[6]loquemuestralaexactituddel
+1 2 3
+sindimensioneslargos.Comoesdeesperarladerivadalogarít- procedimientoempleado.
+micatambiénlohaceyalavezseobservaunsuavizado.Las Sedebeseñalarqueserequieredeunamayorexperimen-
+curvasenrojodepresiónyderivadacorrespondenalmodelo taciónparaanalizarlainfluenciadelosparámetrosfractalesy
+presentadoen[6].Losdospronunciadosvallesqueaparecen fraccionarios.Resultadospreliminaresindicanquelospará-
+enlacurvadederivadaenrojosonmuchomenospronuncia- metrosfractalesβ yθ provocanunincrementodelapresión
+dosenlascurvasderivadaenverdeyazulapesardelapoca enelpozoasícomounperiodotransientedemayorduración.
+variaciónqueexisteenlascorrespondientespresiones. Los parámetros fraccionarios α , α y α por el contrario
+1 2 3
+Paracomprobarlacalidaddelassolucionesencontradas provocanunadisminucióndelapresiónyuncomportamiento
+enelcaso0<κ ,κ ,κ <1enlafigura3setrataderepro- más suave de la derivada logarítmica. Para analizar la in-
+1 2 3
+ducirlascurvaspresentadasenlafigura1.Paraellosetomó fluenciacombinadadedichosparámetrosserequieredeun
+κ =0,6 y κ =0,3999 por lo cual se obtiene un valor pe- diseñoexperimentalapropiado.Elmodeloquemásaproxima
+2 3
+queñoparaκ =0,0001.Sepuedeobservarenestecasoun elpresentadoaquíeselde[10]quesoloempleaparámetros
+1
+comportamientobiencercanoalpresentadoenlafigura1. fraccionarios. Por ello comparaciones definitivas no están
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.1-11
+102 Modelofractalyfraccionarioparapresióntransienteenyacimientosfracturados
+102
+101
+100
+10-1
+10-2
+10-3
+10-
+1
+4
+0-2 10-1 100 101 102 103 104 105 106 107 108
+Figura2.Curvastipogeneradasparaκ
+2
+=1ydiferentesvaloresdelosparámetrosfraccionariosα
+1
+,α
+2
+yα
+3
+.
+disponiblesactualmente. [7] Chang, Jincai y Yanis C. Yortsos: Pressure Transient
+AnalysisofFractalReservoirs. SPEFormationEvalua-
+Referencias tion,5(01):31–38,1990.
+[1] Acuna,JA,IrajErshaghiyYCYortsos:PracticalAp- [8] Flamenco-Lopez, F. y R. Camacho-VelÃ¡zquez: De-
+plicationofFractalPressure-TransientAnalysisinNatu- terminationoffractalparametersoffracturenetworks
+rallyFracturedReservoirs. SPEFormationEvaluation, usingpressure-transientdata.SPEReservoirEvaluation
+páginas173–179,1995. &Engineering,6(1):39–47,2003.
+[2] Acuna,JorgeA.yYanisC.Yortsos:ApplicationofFrac-
+[9] Machado, M.V.B.: Numerical Laplace Inversion Met-
+talGeometrytotheStudyofNetworksofFracturesand
+hods:ApplicationtotheCalculationoftheWaterInflux
+Their Pressure Transient. Water Resources Research,
+fromAquifersConnectedtoPetroleumReservoirs. Pe-
+31(3):527–540,1995.
+troleumScienceandTechnology,30(1):74–88,2012.
+[3] Agarwal, Ram G, Rafi Al-Hussainy, HJ Ramey Jr y
+[10] Martínez-Salgado, B.F., F. Brambila-Paz, R. Rosas-
+others: An investigation of wellbore storage and skin
+Sampayo y C. Fuentes: A model of pressure deficit in
+effect in unsteady liquid flow: I. Analytical treatment.
+an oil well using fractional order Caputo derivatives.
+Society of Petroleum Engineers Journal, 10(03):279–
+CienciasMatemáticas,32(2):89–95,2018.
+290,1970.
+[4] Barenblatt,G.I.,I.P.ZheltovyI.N.Kochina:Basiccon- [11] Metzler,Ralf,WalterG.GlöckleyTheoF.Nonnenma-
+ceptsinthetheoryofseepageofhomogeneousliquids cher:Fractionalmodelequationforanomalousdiffusion.
+in fissured rocks. Journal of Applied Mathematics, PhysicaA:StatisticalMechanicsanditsApplications,
+24(5):1286–1303,1960. 211(1):13–24,1994.
+[5] Camacho-Velazquez,Rodolfo,GorgonioFuentes-Cruz [12] O’Shaughnessy,BenyItamarProcaccia:Diffusionon
+y Mario A. Vasquez-Cruz: Decline-Curve Analysis of fractals. PhysicalReviewA,32(5):3073–3083,1985.
+FracturedReservoirsWithFractalGeometry.SPEReser-
+voirEvaluation&Engineering,11(03):606–619,2008. [13] Podlubny, Igor: Fractional differential equations: an
+introductiontofractionalderivatives,fractionaldifferen-
+[6] Camacho-Velazquez,Rodolfo,MarioVasquez-Cruz,Ra- tialequations,tomethodsoftheirsolutionandsomeof
+fael Castrejon-Aivar y Victor Arana-Ortiz: Pressure theirapplications,volumen198. Academicpress,1998.
+transientanddeclinecurvebehaviorsinnaturallyfrac-
+turedvuggycarbonatereservoirs. SPEReservoirEva- [14] Razminia, Kambiz, Abolhassan Razminia y Dumitru
+luation&Engineering,8(02):95–111,2005. Baleanu:Fractal-fractionalmodellingofpartiallypene-
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.1-11
+Modelofractalyfraccionarioparapresióntransienteenyacimientosfracturados 103
+104
+103
+102
+101
+100
+10-1
+10-2
+10-3
+10-
+1
+4
+0-2 10-1 100 101 102 103 104 105 106 107 108
+Figura3.Curvastipogeneradaspara0<κ
+1
+,κ
+2
+,κ
+3
+<1ydiferentesvaloresdelosparámetrosfractalesβ yθ.
+tratingwells. Chaos,Solitons&Fractals,119:135–142, [17] Razminia,Kambiz,AbolhassanRazminiayJuanJ.Tru-
+2019. jilo:Analysisofradialcompositesystemsbasedonfrac-
+tal theory and fractional calculus. Signal Processing,
+[15] Razminia,Kambiz,AbolhassanRazminiayJATenrei-
+107:378–388,2015.
+ro Machado: Analytical Solution of Fractional Order
+Diffusivity Equation With Wellbore Storage and Skin [18] Warren,J.E.yP.J.Root:TheBehaviorofNaturallyFrac-
+Effects. JournalofComputationalandNonlinearDyna- turedReservoirs. SocietyofPetroleumEngineersJour-
+mics,11(1):011006–1–011006–8,2016. nal,3(03):245–255,1963.
+[16] Razminia, Kambiz, Abolhassan Razminia y J.A. [19] Wu, Yu Shu, H.H. Liu y G.S. Bodvarsson: A triple-
+Tenreiro-Machado:Analysisofdiffusionprocessinfrac- continuum approach for modeling flow and transport
+tured reservoirs using fractional derivative approach. processes in fractured rock. Journal of Contaminant
+CommunicationsinNonlinearScienceandNumerical Hydrology,73:145–179,2004.
+Simulation,19:3161–3170,2014.
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.1-11

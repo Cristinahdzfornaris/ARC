@@ -1,0 +1,507 @@
+22 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Aprendizaje relacional de la matemÆtica
+en el preuniversitario
+Maricela Rodr(cid:237)guez Ortiz1 / Elsa GutiØrrez BÆez2
+/ Isabel Santiesteban PØrez3 / Eduardo `lvarez Rojas4
+RESUMEN. El perfeccionamiento del sistema educacional, particularmente de la asignatura MatemÆ-
+tica, debe garantizar que el nivel de conocimientos, la formaci(cid:243)n de hÆbitos y habilidades en los
+estudiantes se correspondan con las exigencias de los objetivos declarados para cada nivel edu-
+cativo. El trabajo aborda el perfeccionamiento de la formaci(cid:243)n de profesores de MatemÆtica en las
+Universidades de Ciencias Pedag(cid:243)gicas para el nivel preuniversitario a travØs de las relaciones entre
+los conocimientos matemÆticos para contribuir a resolver las limitaciones que en el aprendizaje
+presentan los estudiantes. El aporte fundamental radica en el modelo didÆctico para el aprendizaje
+de la MatemÆtica a travØs de un proceso que revela las relaciones l(cid:243)gicas de signi(cid:222) cado entre los
+conceptos, proposiciones y procedimientos, que transitan por los niveles de los conocimientos bÆ-
+sicos, generales y espec(cid:237)(cid:222) cos y propicia la transferencia relacional, sobre la base de los nexos entre
+lo conocido y lo nuevo por conocer, as(cid:237) como la bœsqueda activa de los conocimientos matemÆticos.
+Se fundamenta el establecimiento de las relaciones como una v(cid:237)a para que, los futuros docentes se
+apropien del proceder didÆctico con el que deben dirigir el proceso de enseæanza-aprendizaje. Las
+transformaciones que se obtuvieron con la introducci(cid:243)n en la prÆctica escolar, permitieron corro-
+borar sus potencialidades y factibilidad.
+INTRODUCCI(cid:211)N los objetivos de la Educaci(cid:243)n y en particular en
+el proceso de enseæanza-aprendizaje.
+La enseæanza de la MatemÆtica en la escuela
+Para alcanzar tales prop(cid:243)sitos y en corres-
+cubana tiene la tarea de contribuir a la pre-
+pondencia a las exigencias de la sociedad, el
+paraci(cid:243)n de los educandos para la vida laboral,
+Ministerio de Educaci(cid:243)n de Cuba (MINED) es-
+econ(cid:243)mica y social, de manera que dispongan
+tableci(cid:243) el Fin de la Educaci(cid:243)n Preuniversitaria:
+de s(cid:243)lidos conocimientos matemÆticos que les
+(cid:147)Lograr la formaci(cid:243)n integral del joven en su for-
+permitan interpretar los avances de la ciencia y
+ma de sentir, pensar y actuar responsablemente
+la tØcnica, que sean capaces de operar con ellos
+[...]que garantice la participaci(cid:243)n protag(cid:243)nica e
+con rapidez, rigor y exactitud, de modo cons-
+incondicional en la construcci(cid:243)n y defensa del
+ciente para aplicarlos de manera creadora a la
+proyecto socialista cubano y en la elecci(cid:243)n cons-
+soluci(cid:243)n de los problemas en las diferentes es-
+ciente de la continuidad de estudios superiores
+feras de la vida.
+en carreras priorizadas territorialmente.(cid:148) MI-
+Las tres revoluciones educacionales desarro-
+NED (2006, p.1)
+lladas por el estado cubano representan etapas
+En diferentes escenarios se re(cid:223) exiona sobre
+de transformaci(cid:243)n, en las que cada vez se en-
+los problemas que afectan la calidad del apren-
+frentaron nuevos retos, pero todas tienen como
+dizaje de la MatemÆtica, haciØndose alusi(cid:243)n a
+idea esencial lograr el crecimiento personal y la
+un conjunto de: (cid:147)[...] insu(cid:222) ciencias que se incre-
+formaci(cid:243)n integral de la sociedad. Es en la es-
+mentan de grado en grado y que se mani(cid:222) estan
+cuela donde se concretan estas ideas a travØs de
+en el limitado desempeæo de los estudiantes en
+la asimilaci(cid:243)n y uso de los conocimientos, que
+1 maricela@ucp.lt.rimed.cu
+2 egutierrez@ucp.lt.rimed.cu en general no rebasan el plano reproductivo(cid:148)
+3 isasp@ult.edu.cu Rodr(cid:237)guez, M.(2004, p.4).
+4 ealvarez@dpe.lt.rimed.cu
+REVISTA CIENCIAS MATEM`TICAS 23
+Lo anterior se re(cid:223) eja en los resultados de los que desempeæan los conceptos en el proceso de
+estudiantes del preuniversitario en los exÆme- enseæanza-aprendizaje de la MatemÆtica para
+nes de ingreso a la Educaci(cid:243)n Superior, en las la comprensi(cid:243)n de relaciones que se dan entre
+comprobaciones provinciales, en los operativos ellos y las proposiciones y los procedimientos,
+de calidad, as(cid:237) como en las evaluaciones valo- ya que constituyen una condici(cid:243)n previa para la
+radas correspondientes al sistema que diseæ(cid:243) el capacidad de aplicar lo aprendido, en la forma
+profesor, los que alcanzan niveles inferiores a mÆs segura y creadora.
+las aspiraciones y el (cid:222) n de la Educaci(cid:243)n Preuni- Para lograr el aprendizaje de estos objetos es
+versitaria. preciso conocer las caracter(cid:237)sticas y el signi(cid:222) -
+cado de los elementos que lo componen y luego
+DESARROLLO poder aplicarlos a otros contextos de manera re-
+productiva y/o productiva. Por ello, en los tipos
+Para contribuir a mejorar los resultados en el de relaciones de(cid:222) nidos a continuaci(cid:243)n estÆn in-
+proceso de enseæanza-aprendizaje de la Mate- cluidos los conceptos, los que se vinculan con
+mÆtica en el preuniversitario, se introduce el los otros objetos del conocimiento matemÆtico.
+aprendizaje relacional, que los autores carac-
+Las relaciones l(cid:243)gicas de signi(cid:222) cado que es-
+terizan como la transformaci(cid:243)n procedimental
+tÆn presentes en las situaciones de aprendizaje
+didÆctica y gnoseol(cid:243)gica que se opera en el es-
+pueden ser de tres tipos, dados por los elemen-
+tudiante a partir de determinar los tipos de re-
+tos del conocimiento que se involucran en ellas,
+laciones l(cid:243)gicas entre conceptos, proposiciones
+estas son:
+y procedimientos, dinamizarlas de manera que
+● Relaci(cid:243)n conceptos-procedimientos: que se
+permita el trÆnsito de lo conocido a lo desconoci-
+mani(cid:222) esta en la relaci(cid:243)n entre conceptos
+do, de lo conocido parcialmente al conocimiento
+y procedimientos presentes en el objeto de
+que se corresponde con el nivel de enseæanza,
+aprendizaje potencialmente signi(cid:222) cativo
+as(cid:237) como de la dependencia a la independencia
+para el sujeto. Signi(cid:222) ca que el estudiante
+cognoscitiva y que pueda aplicar dicho conoci-
+solo requiere de estos para darle soluci(cid:243)n a
+miento a situaciones nuevas.
+la situaci(cid:243)n que se le presenta en el proce-
+La modelaci(cid:243)n del aprendizaje relacional se
+so de enseæanza aprendizaje. En este tipo
+hace a partir de la representaci(cid:243)n te(cid:243)rica de su
+se excluyen las proposiciones, pues basta
+estructura en dos componentes y su funciona-
+la interpretaci(cid:243)n del concepto y la deter-
+miento como sistema. El primer componente de
+minaci(cid:243)n del procedimiento relativo que se
+la estructura lo constituyen las relaciones l(cid:243)gi-
+debe aplicar en la soluci(cid:243)n de la situaci(cid:243)n
+cas en los conocimientos y el segundo los nive-
+planteada.
+les de las relaciones en los conocimientos mate-
+● Relaci(cid:243)n conceptos-proposiciones es la que
+mÆticos del preuniversitario.
+se mani(cid:222) esta en la relaci(cid:243)n que se da en-
+La funci(cid:243)n del primer componente es deter-
+tre conceptos y proposiciones presentes
+minar las relaciones l(cid:243)gicas entre los elemen-
+en el objeto de aprendizaje potencialmen-
+tos de los conocimientos que estÆn presentes en
+te signi(cid:222) cativo para el sujeto, porque se
+la asignatura MatemÆtica. Las relaciones l(cid:243)gi-
+trata en este caso de situaciones donde
+cas de signi(cid:222) cado, segœn fueron referidas en el
+la acci(cid:243)n generalmente es fundamentar,
+cap(cid:237)tulo uno, son interconexiones entre las re-
+argumentar acciones adoptadas a travØs
+presentaciones y palabras involucradas en una
+de proposiciones involucradas en el o los
+situaci(cid:243)n de aprendizaje, que permiten revelar
+conceptos dados en la situaci(cid:243)n que se le
+las relaciones entre conceptos, proposiciones y
+presenta al estudiante, las cuales incorpo-
+procedimientos.
+ra a su estructura cognoscitiva y permiten
+Los conceptos, constituyen la base de las que se desempeæe aplicando signi(cid:222) cativa-
+teor(cid:237)as MatemÆticas y se sustentan en signos mente las relaciones l(cid:243)gicas.
+y s(cid:237)mbolos matemÆticos que se estudian desde
+● Relaci(cid:243)n conceptos proposiciones proce-
+los primeros grados, a travØs de las diferentes
+dimientos es la que se mani(cid:222) esta en la
+l(cid:237)neas directrices que caracterizan la enseæanza
+relaci(cid:243)n entre los conceptos, las propo-
+de la MatemÆtica. Se tiene en cuenta el papel
+24 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+siciones y los procedimientos relativos a dimientos que se aprenden existen estructuras
+la situaci(cid:243)n de aprendizaje presente en el que se ampl(cid:237)an y enriquecen a lo largo de toda
+objeto potencialmente signi(cid:222) cativo para el la vida. En otras palabras, los conocimientos
+sujeto, es decir, en este tipo de relaci(cid:243)n bÆsicos son conocimientos previos que sirven de
+para darle soluci(cid:243)n a la situaci(cid:243)n que se base para el proceso de aprendizaje relacional.
+presenta se deben identi(cid:222) car componen- En el primer nivel se revelan las tres formas
+tes y relaciones, establecer las estrategias de manifestarse las relaciones l(cid:243)gicas de signi(cid:222) -
+de soluci(cid:243)n a partir de seleccionar el pro- cado que se dan entre los conceptos, proposicio-
+cedimiento que corresponde con los con- nes y procedimientos bÆsicos y que son necesa-
+ceptos y las proposiciones involucradas, rios para la temÆtica que se aborda, de modo que
+que puede incluir fundamentar y/o justi- se convierten en conocimientos previos para el
+(cid:222) car lo realizado. aprendizaje, en temas o ramas de la MatemÆtica
+En el segundo componente se tuvo en cuenta para el nivel, como resultado de la interacci(cid:243)n
+que en la MatemÆtica los conocimientos tienen entre ellos. Sin embargo, es preciso valorar las
+un carÆcter sistØmico. La funci(cid:243)n de los niveles relaciones internas en cada uno, que como obje-
+de relaciones en los conocimientos matemÆticos tos matemÆticos poseen un signi(cid:222) cado y sentido
+del preuniversitario es establecer una estructura en cada estructura donde se involucran.
+sistØmica para el aprendizaje, sobre la base de Los conceptos bÆsicos que se implican en este
+las relaciones l(cid:243)gicas determinadas en el primer nivel fueron asimilados con anterioridad, pero
+componente. Estos niveles estÆn dados por las serÆn ampliados y enriquecidos para incorpo-
+relaciones que se expresan en los conocimientos rarlos a otras estructuras conceptuales.
+bÆsicos, los conocimientos generales y los cono-
+Las proposiciones bÆsicas, como objetos ma-
+cimientos espec(cid:237)(cid:222) cos.
+temÆticos, que poseen estructuras de mayor
+Para determinar los tres niveles de relaciones complejidad y son consecuencias de las relacio-
+en los conocimientos matemÆticos del preuni- nes que se establecen entre conceptos matemÆ-
+versitario se hizo necesario analizar la estructu- ticos bÆsicos, que requieren del conocimiento de
+ra del conocimiento matemÆtico, debido a que la Østos, siendo imposible la extrapolaci(cid:243)n y apli-
+comprensi(cid:243)n y el aprendizaje de este dependen caci(cid:243)n sin una interpretaci(cid:243)n adecuada. Por ello
+en gran medida de los nexos que existen entre la determinaci(cid:243)n de las relaciones de signi(cid:222) ca-
+los conocimientos, las acciones y operaciones y do de los componentes que forman parte de las
+la experiencia ya asimilados, con el nuevo con- proposiciones es esencial para su aplicaci(cid:243)n, de
+tenido. igual modo, para poder aplicar una proposici(cid:243)n
+Los fen(cid:243)menos del mundo real se hallan rela- de manera adecuada es necesario determinar
+cionados entre s(cid:237) y sujetos a rec(cid:237)procas in(cid:223) uen- las relaciones de signi(cid:222) cado y el sentido con que
+cias, lo que en MatemÆtica de manera especial son presentadas en Østa.
+se mani(cid:222) esta por el carÆcter sistØmico del con- La MatemÆtica desde su carÆcter instru-
+tenido y la necesidad de una secuencia tempo- mental, como herramienta para la soluci(cid:243)n de
+ral en el aprendizaje que obliga, en ocasiones, diversas situaciones de la vida y de las cien-
+a abordar algunos conocimientos con la œnica cias, se mani(cid:222) esta a travØs de procedimientos
+(cid:222) nalidad de poder integrarlos a otros, que son que aparecen en diversos contextos cient(cid:237)(cid:222) cos
+los que se consideran esenciales desde el punto y didÆcticos dentro del proceso de enseæanza-
+de vista didÆctico y por tanto responden a las aprendizaje. Los procedimientos se sustentan
+exigencias de los objetivos. en conceptos y proposiciones cuyos signi(cid:222) cados
+Se denominan conocimientos bÆsicos a aque- deben guardar alguna relaci(cid:243)n que conduzca a
+llos que se estudian en grados anteriores para la soluci(cid:243)n de la situaci(cid:243)n que se presenta. Por
+luego ampliarlos y generalizarlos en otros con- tanto, es importante la determinaci(cid:243)n de esas
+textos donde se presenten nuevos contenidos, relaciones para su aplicaci(cid:243)n consecuente.
+teniendo en cuenta que el conocimiento no es En este nivel el profesor presenta situaciones
+algo totalmente acabado sino en plena creaci(cid:243)n, conocidas y empleando fundamentalmente el
+que mÆs que conceptos, proposiciones y proce- mØtodo de elaboraci(cid:243)n conjunta, re(cid:223) exiona con
+REVISTA CIENCIAS MATEM`TICAS 25
+los estudiantes los tipos de relaciones l(cid:243)gicas de cente y en colaboraci(cid:243)n con los otros, trans(cid:222) eren
+signi(cid:222) cado que caracterizan las situaciones co- signi(cid:222) cativamente las relaciones l(cid:243)gicas entre
+nocidas que se presentan, de manera que el es- conceptos, proposiciones y procedimientos. Pri-
+tudiante asimila el proceder para el aprendizaje mero entre los conceptos bÆsicos y los nuevos,
+de nuevos contenidos que posteriormente serÆn mediante la inducci(cid:243)n (cid:150) deducci(cid:243)n y luego entre
+objeto de estudio, por tanto este nivel constitu- las proposiciones y/o los procedimientos bÆsi-
+ye el de relaciones de los conocimientos bÆsicos, cos y los nuevos, de forma que aprende el nuevo
+pues a partir de Øl se asciende en el aprendizaje, contenido a partir de revelar las relaciones l(cid:243)gi-
+trans(cid:222) riendo lo aprendido a un estadio superior. cas de signi(cid:222) cado. En este proceso se emplean
+La esencia estÆ en utilizar los conocimientos procedimientos heur(cid:237)sticos, particularmente el
+del estudiante para aplicarlos en las situaciones de analog(cid:237)a y ocurre un trÆnsito progresivo de la
+de aprendizaje nuevas, de manera que se apro- dependencia a la independencia, fortaleciØndo-
+pie del conocimiento y lo encuentre signi(cid:222) cativo se la comunicaci(cid:243)n alumno-alumno.
+o sea importante y relevante en su vida diaria, En este nivel se produce la transferencia sig-
+de modo que pueda integrarlo en su sistema de ni(cid:222) cativa por cuanto, a partir de revelar los tipos
+relaciones. de relaciones que se mani(cid:222) estan en los conoci-
+En el tratamiento didÆctico a estos objetos mientos bÆsicos se pasa a una generalizaci(cid:243)n,
+matemÆticos en primer lugar se debe garantizar donde los conceptos, las proposiciones y los
+las condiciones previas, las relaciones internas procedimientos son nuevos para el estudiante.
+entre cada uno, es decir, entre los conceptos, La signi(cid:222) catividad del aprendizaje en este ni-
+que son necesarios para estudiar un nuevo con- vel alcanza un estadio superior al abarcar las
+cepto. De igual forma entre las proposiciones y tres esferas o direcciones en que este se realiza,
+procedimientos que tienen nexos con el nuevo es decir: la signi(cid:222) catividad conceptual, que es
+contenido que se va a estudiar. denominada a las relaciones entre los conoci-
+Los conocimientos generales son los que en- mientos asimilados y el nuevo contenido, signi-
+globan a los del nivel bÆsico y se estudian por (cid:222) catividad experencial, al establecer relaciones
+primera vez en el grado, por las caracter(cid:237)sticas entre los nuevos contenidos y la experiencia y la
+del contenido en que estÆn inmersos, por su signi(cid:222) catividad afectiva, al establecer relaciones
+aplicaci(cid:243)n y v(cid:237)nculo con otros contenidos tienen entre el contenido y el mundo personal, afecti-
+un mayor grado de generalidad y responden a vo-motivacional del estudiante, potenciando su
+objetivos de la asignatura en el grado. O sea que relevancia personal y social.
+aqu(cid:237) se tiene una direcci(cid:243)n precisa hacia don- La dinÆmica que se produce en la determi-
+de orientar la actividad a realizar, pues se hace naci(cid:243)n de las relaciones de signi(cid:222) cado que se
+imprescindible generalizar correctamente sobre revelan en conceptos, proposiciones y procedi-
+los rasgos esenciales y los nexos internos de los mientos de este nivel, permiten una profundi-
+fen(cid:243)menos que se estudian. zaci(cid:243)n en los conocimientos, favoreciendo su
+En el segundo nivel se revelan las relaciones aplicaci(cid:243)n a la soluci(cid:243)n de situaciones nuevas,
+entre los conceptos, proposiciones y procedi- produciØndose una transferencia signi(cid:222) cativa
+mientos en los conocimientos matemÆticos ge- de relaciones l(cid:243)gicas.
+nerales, los que posibilitan la extrapolaci(cid:243)n y Los conocimientos espec(cid:237)(cid:222) cos son los que es-
+aplicaci(cid:243)n a nuevas situaciones en las que se tÆn presentes en situaciones singulares, es decir
+mani(cid:222) estan dichas relaciones. El propio proceso son los que constituyen variantes de los conoci-
+de aplicaci(cid:243)n favorece la determinaci(cid:243)n de nue- mientos generales, en los que se aplican estos a
+vas relaciones signi(cid:222) cativas, que contribuyen al casos concretos. El tercer nivel debe concretar
+desarrollo de tareas de manera independiente, la transferencia de los casos particular y gene-
+propiciando el aprendizaje signi(cid:222) cativo, como ral a situaciones singulares, denotando dominio
+base del aprendizaje desarrollador. en el proceso de extrapolaci(cid:243)n te(cid:243)rica y procedi-
+En el planteamiento de situaciones portado- mental de conocimientos matemÆticos.
+ras de diferentes tipos de relaciones l(cid:243)gicas de En este nivel para el proceso de enseæan-
+signi(cid:222) cado los estudiantes, guiados por el do- za-aprendizaje de la MatemÆtica, se trata de la
+26 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+transferencia en el estudio de conceptos, propo- En la interacci(cid:243)n con los demÆs sujetos que
+siciones y procedimientos generales de la Ma- intervienen en el proceso del aprendizaje rela-
+temÆtica a casos concretos, que se comportan cional, al establecer determinadas pautas de
+como elementos singulares en el proceso de comportamiento y relaciones sociales, que junto
+aprendizaje. Se realiza la transferencia del tipo al contenido curricular potencian la formaci(cid:243)n
+de relaci(cid:243)n implicada en una situaci(cid:243)n apren- de valores morales, estØticos e ideol(cid:243)gicos que
+dizaje concreta y aplicarla para resolverla, te- se corresponden con los objetivos del preuniver-
+niendo como premisas lo aprendido en los nive- sitario, se contribuye que el estudiante regule
+les precedentes, dando cuenta de la asimilaci(cid:243)n su comportamiento.
+productiva de los mismos.
+Con el aprendizaje relacional se produce un
+Los niveles de las relaciones guardan una es- salto cualitativo que se mani(cid:222) esta en la transfe-
+trecha conexi(cid:243)n, en tanto responden a la l(cid:243)gica rencia relacional, como una nueva cualidad en
+dialØctica, atendiendo a que los conceptos, pro- el proceso de enseæanza-aprendizaje de la Ma-
+posiciones y procedimientos que se involucran, temÆtica, que potencia las relaciones l(cid:243)gicas y
+aœn cuando responden a la complejidad te(cid:243)rica se expresa en el trÆnsito por los niveles de las
+del contenido, se relacionan para el tratamiento relaciones en los conocimientos matemÆticos.
+didÆctico que permita que el estudiante asimile Es decir, las relaciones l(cid:243)gicas aprendidas en
+dando cuenta de la dinÆmica que se produce en los conocimientos bÆsicos se trans(cid:222) eren a los
+el proceso aprendizaje. conocimientos generales y (cid:222) nalmente a casos
+Puede suceder que en una unidad los prime- particulares, permitiendo el paso de la depen-
+ros conceptos, propiedades y/o procedimien- dencia a la independencia en el aprendizaje y la
+tos posean una estructura tan compleja que se bœsqueda activa de los conocimientos.
+involucren varios conceptos y relaciones tanto En la transferencia de relaciones l(cid:243)gicas de
+expl(cid:237)citas como impl(cid:237)citas y sin embargo, su signi(cid:222) cado, se contribuye a la (cid:222) jaci(cid:243)n de los co-
+tratamiento didÆctico, transitar por los niveles nocimientos, lo que revela las potencialidades
+descritos, primero, respondiendo al asegura- para favorecer el aprendizaje de la MatemÆtica,
+miento de las condiciones previas, el segundo, en un proceso que inicia con el aprendizaje de los
+ya con una profundidad mayor, garantiza la tipos de relaciones en los conocimientos bÆsicos,
+transferencia y el tercero, la aplicaci(cid:243)n a situa- luego lo trans(cid:222) ere a situaciones nuevas genera-
+ciones concretas. El hecho de no ser consecuen- les y (cid:222) nalmente logra aplicar, de forma indepen-
+te con esta l(cid:243)gica, puede causar una entrop(cid:237)a en
+diente y creativa, las transferencias de signi(cid:222) ca-
+el proceso de aprendizaje de la MatemÆtica.
+dos a casos singulares, produciØndose con ello,
+El hacer del aprendizaje relacional un modo la manifestaci(cid:243)n de los principios dialØcticos de
+de actuaci(cid:243)n en el proceso de enseæanza apren- lo particular a lo general y de ah(cid:237) a lo singular.
+dizaje de la MatemÆtica, favorece la autoeva-
+Esta dinÆmica genera una transformaci(cid:243)n en
+luaci(cid:243)n y autocontrol del aprendizaje por parte
+los demÆs componentes del modelo, de tal for-
+del estudiante, en tanto permite de que Øste se
+ma que conduce que el objetivo no solo vaya a
+percate de los conocimientos que necesita, los
+lo instructivo y lo educativo sino a lo desarro-
+relacione e incorpore a su estructura cognosciti-
+llador y que el estudiante logre metas con un
+va para hacer las transferencias necesarias que
+mayor nivel de profundidad. Los contenidos de
+favorecen su implicaci(cid:243)n conciente en ese pro-
+la asignatura MatemÆtica se organizan y selec-
+ceso. Con ello es capaz de comprobar la calidad
+cionan en funci(cid:243)n del logro de la transferencia
+de sus resultados al resolver las situaciones que
+relacional, sobre la base de mØtodos desarrolla-
+se le presentan.
+dores y problematizadores que propician en los
+El aprendizaje relacional permite ademÆs estudiantes la bœsqueda activa, la elaboraci(cid:243)n
+que el estudiante pueda adquirir no solo co- personal y el intercambio con sus compaæeros y
+nocimientos, sino que desarrolle habilidades y profesores, desde la movilizaci(cid:243)n de los conoci-
+re(cid:223) exione conscientemente sobre las diversas mientos previos, que facilitan la selecci(cid:243)n de los
+acciones que realiza en el proceso de soluci(cid:243)n elementos, tanto cognitivos como procedimen-
+de las situaciones en el proceso de enseæanza- tales, para encausar la soluci(cid:243)n de las tareas de
+aprendizaje. aprendizaje que se proponen.
+REVISTA CIENCIAS MATEM`TICAS 27
+En este proceso ocurre el desarrollo de la eva- mite determinar el grado de apropiaci(cid:243)n de los
+luaci(cid:243)n durante los momentos de aprendizaje, contenidos y de la l(cid:243)gica para el aprendizaje de
+la coevaluaci(cid:243)n y la autoevaluci(cid:243)n, lo que per- la MatemÆtica.
+Fig. 1 Esquema del modelo didÆctico del aprendizaje relacional de la MatemÆtica
+del preuniversitario.
+28 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Para aplicar el modelo a la prÆctica escolar Acciones correspondientes a la etapa:
+se elabora una estrategia estÆ sustentada en el ● Determinaci(cid:243)n de las v(cid:237)as que serÆn uti-
+modelo didÆctico para el aprendizaje relacional lizadas por el profesor para la realizaci(cid:243)n
+por lo que sus etapas responden a la l(cid:243)gica de del diagn(cid:243)stico a los estudiantes.
+este. As(cid:237), el diagn(cid:243)stico permite conocer el esta-
+● Precisi(cid:243)n de los objetivos y contenidos
+do real del aprendizaje y las potencialidades que
+matemÆticos antecedentes a la unidad o
+el estudiante posee para apropiarse de manera
+al grado en que se instrumenta.
+diferente de los nuevos conocimientos, sobre la
+● Elaboraci(cid:243)n de los instrumentos evalua-
+base de los ya conocidos, que en el modelo cons-
+tivos para diagnosticar el dominio que
+tituyen los bÆsicos.
+poseen los estudiantes de conocimientos
+La etapa de orientaci(cid:243)n propicia que el estu-
+matemÆticos antecedentes.
+diante, ademÆs de que se motive, conozca los
+● Aplicaci(cid:243)n de los instrumentos elaborados.
+elementos del conocimiento y pueda reconocer-
+● Interpretaci(cid:243)n de los datos obtenidos y
+los segœn se le planteen situaciones portadoras
+elaboraci(cid:243)n del resultado del proceso.
+de los tipos de relaciones que se declaran en el
+primer componente del modelo.
+Etapa de orientaci(cid:243)n
+Es en la etapa de ejecuci(cid:243)n donde se produce
+la dinÆmica entre los niveles de relaciones en los
+Objetivo: Ofrecer las ideas esenciales de la es-
+conocimientos matemÆticos, es decir, el segun-
+trategia y los elementos que caracterizan los
+do componente del modelo didÆctico, de manera
+conocimientos matemÆticos para lograr la par-
+que a travØs de las acciones contenidas en ella
+ticipaci(cid:243)n consciente de los estudiantes en las
+se alcanza el ascenso en el aprendizaje relacio-
+acciones.
+nal. Las relaciones aprendidas en el primer nivel,
+concebidas en la estrategia en las clases intro-
+Acciones correspondientes
+ductorias, son generalizadas en el segundo nivel
+en clases en las que predomina el intercambio y ● Explicaci(cid:243)n de la importancia que tienen
+la re(cid:223) exi(cid:243)n, pues los conocimientos son nuevos las acciones que se proponen en la estra-
+y los estudiantes requieren de ayudas de otros, tegia.
+incluyendo al profesor.
+● Motivaci(cid:243)n de los estudiantes a partir de
+En las clases de (cid:222) jaci(cid:243)n se tiene en cuenta el la importancia y trascendencia de los con-
+tercer nivel de relaciones de(cid:222) nido en el modelo, tenidos que serÆn objeto de estudio en ge-
+por cuanto el estudiante aplica lo aprendido en neral y en cada unidad.
+las clases anteriores a los casos concretos, dando
+● Orientaci(cid:243)n acerca de la necesidad que
+cuenta de la transferencia relacional. Segœn fue tiene la ayuda mutua y la colaboraci(cid:243)n
+explicado en el modelo didÆctico, este proceso
+● Explicaci(cid:243)n de las de(cid:222) niciones de con-
+se repite en forma c(cid:237)clica de forma ascendente,
+ceptos, proposiciones y procedimientos,
+de manera que los conocimientos aprendidos en
+ejempli(cid:222) cÆndolas con algunas de las estu-
+la unidad estudiada, pasan a ser conocimientos
+diadas en grados anteriores.
+bÆsicos de otra unidad.
+Etapa de ejecuci(cid:243)n de la estrategia
+DESCRIPCI(cid:211)N DE LAS ETAPAS
+didÆctica
+Etapa de diagn(cid:243)stico Objetivo: Potenciar el aprendizaje a travØs de
+las relaciones l(cid:243)gicas en los conocimientos ma-
+Objetivo: Determinar las principales limitacio- temÆticos, transitando desde los bÆsicos a los
+nes y potencialidades que presentan los estu- generales, para aplicarlos a los espec(cid:237)(cid:222) cos.
+diantes en el aprendizaje de los conocimientos
+Acciones correspondientes al sistema de
+precedentes relacionados con la unidad que se
+clases:
+va a estudiar.
+● Presentaci(cid:243)n en clases de introducci(cid:243)n de
+la unidad de situaciones donde el profesor
+REVISTA CIENCIAS MATEM`TICAS 29
+le de tratamiento a los tipos de relaciones el resultado logrado en el estudiante, pero s(cid:243)lo
+l(cid:243)gicas entre conceptos, proposiciones y como un elemento mÆs.
+procedimientos en los conocimientos bÆ-
+sicos.
+CONCLUSIONES
+● Proposici(cid:243)n en las clases siguientes, te-
+niendo en cuenta el diagn(cid:243)stico, de situa- El modelo didÆctico, que se fundamenta en el
+ciones de aprendizaje que son portadoras aprendizaje relacional estimula el desarrollo del
+de los diferentes tipos de relaciones l(cid:243)gi- pensamiento y la independencia cognoscitiva.
+cas en los conocimientos generales. El mismo es pertinente porque revela una l(cid:243)gica
+propia del conocimiento matemÆtico, que poten-
+● Fijaci(cid:243)n a travØs de clases de ejercicios y
+cia desde la DidÆctica el aprendizaje y sobre su
+la orientaci(cid:243)n del estudio independiente,
+base, la estrategia didÆctica contribuye a la bœs-
+de la transferencia a situaciones concre-
+queda activa del conocimiento en el estudiante
+tas de las relaciones l(cid:243)gicas.
+a travØs de la transferencia relacional,
+● Conclusi(cid:243)n del sistema de clases.
+La implementaci(cid:243)n parcial de la estrategia
+en la prÆctica favorece el proceso de enseæan-
+Etapa evaluaci(cid:243)n de la estrategia
+za-aprendizaje de la asignatura MatemÆtica del
+didÆctica dØcimo grado en el preuniversitario, lo que que-
+d(cid:243) demostrado con la consecuente valoraci(cid:243)n, a
+Objetivo: Valorar la efectividad de la estrategia.
+partir de los mØtodos aplicados.
+Acciones correspondientes:
+● Valoraci(cid:243)n de los productos de la activi-
+BIBLIOGRAF˝A
+dad de los estudiantes.
+● Aplicaci(cid:243)n de pruebas pedag(cid:243)gicas. 1. `lvarez de Zayas, Carlos. Epistemolog(cid:237)a de la Pe-
+dagog(cid:237)a, La Habana (soporte electr(cid:243)nico), 1994.
+● Obtenci(cid:243)n de informaci(cid:243)n relacionada
+2. _______. La escuela en la vida, La Habana, Ed.
+con la opini(cid:243)n de estudiantes y profesores
+Pueblo y Educaci(cid:243)n, 1999
+acerca de la marcha y resultados de la es-
+3. Ballester, Sergio y otros. Metodolog(cid:237)a de la ense-
+trategia a travØs de entrevistas.
+æanza de la matemÆtica, Tomos I, II. Ciudad de
+● AnÆlisis colectivo acerca de la actividad La Habana, Ed. Pueblo y Educaci(cid:243)n, 1992.
+realizada, aciertos, desaciertos, recti(cid:222) ca- 4. Bruner, J. Actos de signi(cid:222) cado. MÆs allÆ de la
+ciones. revoluci(cid:243)n cognitiva, Madrid, Alianza. Col. Psico-
+log(cid:237)a Minor, 1991.
+● Observaci(cid:243)n y comprobaci(cid:243)n por parte del
+5. Campistrous, Luis. L(cid:243)gica y procedimientos l(cid:243)gi-
+docente de las transformaciones ocurridas
+cos del aprendizaje, La Habana, Centro de Infor-
+en el grupo.
+maci(cid:243)n y Documentaci(cid:243)n del ICCP (soporte elec-
+tr(cid:243)nico), 1993.
+PRINCIPALES SUGERENCIAS 6. Castellanos, Doris y otros. Aprender y enseæar
+en la escuela. Una concepci(cid:243)n desarrolladora,
+En esta etapa se veri(cid:222) can los resultados de la Ciudad de la Habana, Ed. Pueblo y Educaci(cid:243)n,
+implementaci(cid:243)n de la propuesta. Es obvio que 2002.
+la evaluaci(cid:243)n no se realiza solo en un momento 7. Coll, CØsar. Signi(cid:222) cado y sentido en el aprendi-
+sino mediante todo el proceso. Es muy impor- zaje escolar. Re(cid:223) exiones en torno al concepto de
+tante que se introduzcan paulatinamente for- aprendizaje signi(cid:222) cativo, En. Infancia y Aprendi-
+mas y medios de evaluaci(cid:243)n que requieran pro- zaje, No. 41, Universidad de Barcelona, 1988.
+8. Cuba. Ministerio de Educaci(cid:243)n. Seminario Nacio-
+cesos de interpretaci(cid:243)n y de aplicaci(cid:243)n.
+nal a dirigentes, metod(cid:243)logos e inspectores de las
+La evaluaci(cid:243)n debe ser detallada durante
+direcciones provinciales y municipales de Educa-
+toda la aplicaci(cid:243)n de la estrategia; por lo que
+ci(cid:243)n, 1980.
+se prestarÆ especial atenci(cid:243)n al comportamien- 9. _______.Documento de Trabajo del director de
+to de cada uno de sus etapas, de sus acciones. preuniversitario. Versi(cid:243)n julio 2007. Curso es-
+Para esta valoraci(cid:243)n se aplica una retroalimen- colar 2006-2007, Direcci(cid:243)n de Preuniversitario,
+taci(cid:243)n constante, aunque tambiØn se determina Ciudad de la Habana, 2007.
+30 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+10. Godino, Juan. D y otros. Signi(cid:222) cado y compren- ci(cid:243)n del aprendizaje de la MatemÆtica en la pro-
+si(cid:243)n de los conceptos matemÆticos, Valencia, Es- vincia Las Tunas. Informe (cid:222) nal. Instituto Supe-
+paæa, En. Proceedings of the 20th PME. Confe- rior Pedag(cid:243)gico (cid:147)Pepito Tey(cid:148), .Las Tunas, 2004.
+rence, 1996. 15. Rojas VelÆzquez, Osvaldo. Modelo didÆctico para
+11. GuzmÆn, M. de y D, Gil l. Enseæanza de las Cien- favorecer la enseæanza aprendizaje de la Geome-
+cias y la MatemÆtica. Tendencias e innovaciones, tr(cid:237)a del espacio con un enfoque desarrollador,
+Madrid, Ed. Popular S.A, 1993. Tesis en opci(cid:243)n al Grado Cient(cid:237)(cid:222) co de Doctor
+12. Montenegro MoracØn, Elsa I. Modelo para la es- en Ciencias Pedag(cid:243)gicas, Instituto Superior Pe-
+tructuraci(cid:243)n y formaci(cid:243)n de habilidades l(cid:243)gicas dag(cid:243)gico (cid:147)JosØ de la luz y Caballero(cid:148). Holgu(cid:237)n,
+a travØs del AnÆlisis MatemÆtico, Tesis en opci(cid:243)n 2009.
+al grado cient(cid:237)(cid:222) co de doctor en Ciencias Pedag(cid:243)- 16. Silvestre Oramas, Margarita y JosØ, Zilberstein
+gicas, Instituto Superior Pedag(cid:243)gico (cid:147)Frank Pa(cid:237)s, Toruncha. ¿C(cid:243)mo hacer mÆs e(cid:222) ciente el apren-
+Santiago de Cuba, 2004. dizaje?, ICCP, Libro en formato electr(cid:243)nico, La
+13. Pozo, J. I. El aprendizaje y la enseæanza de hechos Habana, 2000.
+y conceptos. En. Los contenidos en la Reforma. 17. Torres, FernÆndez, Paœl. Tendencias Iberoameri-
+Enseæanza y aprendizaje de conceptos, proce- canas en la Educaci(cid:243)n MatemÆtica, Ciudad de la
+dimientos y actitudes, Espaæa, Ed. Santillana, Habana, Libro en soporte digital, 1998.
+1998. 18. Vigotsky, Lev S. Interacci(cid:243)n entre enseæanza y
+14. Rodr(cid:237)guez Ortiz, Maricela y otros. Rendici(cid:243)n de desarrollo, La Habana, Ed. Pueblo y Educaci(cid:243)n,
+cuentas del Proyecto: Estrategia para la activa- 1985.
+ABSTRACT. Perfection of the educational system, particularly concerning the subject of Mathematics,
+should warrant that the level of knowledge, the formation of habits and abilities in the students
+correspond with the demands of the objectives declared for each educative level. This work is about
+the formation of professors of Math in the universities of pedagogical sciences for preuniversity
+through the relationship among the Mathematical knowledge to contribute solving the student(cid:146)s
+limitations. The fundamental approach consists of the didactic model for learning Math throughout
+a process that reveals the logic relation and meaning between concepts, proposals and procedures
+that deal with the basic, general, and speci(cid:222) c levels of knowledge and it provides the rational trans-
+ference over the base of the links between the known and the new about to be known, and also the
+active research for Mathematical knowledge. It is based on the establishment of the relations as a
+via so that the future teachers can acquire the didactic procedure with which they should direct the
+teaching learning process. The riches transformations with the introduction in the scholar practice
+corroborated its potentiality and feasibility.

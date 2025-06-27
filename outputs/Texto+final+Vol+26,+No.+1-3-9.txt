@@ -1,0 +1,347 @@
+REVISTA CIENCIAS MATEM`TICAS 3
+Aprendizaje de Redes Neuronales
+Recurrentes con instancias de longitud
+variable. Aplicaciones a la resistencia
+antiviral del VIH
+Isel Grau1, Isis Bonet2*
+RESUMEN. La predicci(cid:243)n de la resistencia del Virus de Inmunode(cid:222) ciencia Humana es un problema
+de clasi(cid:222) caci(cid:243)n de secuencias que intenta predecir la susceptibilidad de una mutaci(cid:243)n a un fÆrma-
+co determinado partiendo de la informaci(cid:243)n del c(cid:243)digo genØtico de la prote(cid:237)na que Øste inhibe. Las
+redes neuronales recurrentes ofrecen buenos resultados en la predicci(cid:243)n de la resistencia del virus
+ante los inhibidores de la proteasa. La transcriptasa reversa tiene como caracter(cid:237)stica distintiva la
+variabilidad de la longitud de sus secuencias, por lo que se propone una modi(cid:222) caci(cid:243)n de las redes
+neuronales recurrentes para adaptar los tiempos de la red de forma dinÆmica en funci(cid:243)n del tamaæo
+de cada caso, y de esta forma s(cid:243)lo aprender de la informaci(cid:243)n relevante de cada secuencia, ignoran-
+do los fragmentos no codi(cid:222) cados. En el siguiente trabajo se utiliza un modelo de redes neuronales
+recurrentes que permite obtener mejores resultados en el problema de clasi(cid:222) caci(cid:243)n de resistencia a
+11 inhibidores de la prote(cid:237)na transcriptasa reversa del Virus de Inmunode(cid:222) ciencia Humana.
+INTRODUCCI(cid:211)N propicia la creaci(cid:243)n de nuevas copias del virus.
+No es extraæo entonces que muchos fÆrmacos
+El Virus de Inmunode(cid:222) ciencia Humana (VIH)
+antirretrovirales estØn diseæados para inhibir la
+es un retrovirus con alta capacidad de mu-
+funci(cid:243)n de esta prote(cid:237)na.
+taci(cid:243)n que afecta considerablemente a la huma-
+Existen dos formas experimentales de esti-
+nidad causando mÆs de 3 millones de muertes
+mar la susceptibilidad de una cepa del VIH ante
+al aæo, a pesar de los avances en el desarrollo de
+un fÆrmaco: las pruebas fenot(cid:237)picas y las prue-
+terapias para combatirlo. Por estas razones se
+bas genot(cid:237)picas. Los resultados de la uni(cid:243)n de
+hace necesario el estudio de la resistencia anti-
+estos dos experimentos, en pares genotipo-feno-
+viral de los fÆrmacos ya existentes, con el obje-
+tipo suman una gran cantidad de informaci(cid:243)n
+tivo de utilizar de manera adecuada cada uno,
+disponible en bases de datos reconocidas como
+o combinaciones de ellos, ante la aparici(cid:243)n de
+Stanford HIV Resistance Database lo que ha
+nuevas mutaciones del virus.
+generado la aplicaci(cid:243)n de una gran variedad de
+Desde el punto de vista molecular el VIH es
+mØtodos estad(cid:237)sticos y de inteligencia arti(cid:222) cial
+una poliprote(cid:237)na que estÆ conformada entre
+para intentar predecir la susceptibilidad del vi-
+otras por la proteasa y la transcriptasa reversa,
+rus a determinado fÆrmaco a partir de su c(cid:243)digo
+dos enzimas que intervienen en el proceso de re-
+genØtico.
+plicaci(cid:243)n del virus. Particularmente la transcrip-
+Como una caracter(cid:237)stica interesante del VIH
+tasa reversa es la encargada de copiar el c(cid:243)digo
+estÆ la variabilidad en sus secuencias, por la
+genØtico del virus en el ADN de la cØlula, lo que
+cantidad de mutaciones que presenta. En el
+caso particular de la proteasa la cantidad de in-
+1 Centro de Estudios de InformÆtica, Universidad Central (cid:147)Marta serciones y eliminaciones no es signi(cid:222) cativa. Sin
+Abreu(cid:148) de Las Villas, Cuba *isisb@uclv.edu.cu
+embargo, las secuencias de las mutaciones de la
+Disponible en el sitio web: http://hivdb.stanford.edu/
+4 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+transcriptasa reversa s(cid:237) presentan muchas in- do para adaptar su funci(cid:243)n de c(cid:243)mputo a las
+serciones y eliminaciones en su c(cid:243)digo genØtico, necesidades del problema particular.
+lo que provoca que las secuencias tengan lon- En los œltimos aæos se han producido una
+gitudes muy variables y complejiza la selecci(cid:243)n amplia variedad de arquitecturas de redes neu-
+de un clasi(cid:222) cador apropiado para el problema ronales, sin embargo, la mayor(cid:237)a de ellas se en-
+a tratar. Teniendo en cuenta esta caracter(cid:237)sti- cuentran ubicadas en dos grandes grupos: las
+ca de las secuencias del VIH, en (Bonet, 2008, redes multicapa de alimentaci(cid:243)n hacia adelante
+Salazar, 2005) se obtuvieron buenos resultados (Feed-Forward Neuronal Networks, FFN) y las
+en la aplicaci(cid:243)n de un modelo de Red Neuronal redes recurrentes (Recurrent Neuronal Networ-
+Recurrente (RNR) para el pron(cid:243)stico de la resis- ks, RNR) (Hilera and Mart(cid:237)nez, 1995).
+tencia del VIH ante inhibidores de la proteasa
+como un problema de clasi(cid:222) caci(cid:243)n.
+Redes Neuronales Recurrentes
+Respecto a la transcriptasa reversa en la li-
+teratura revisada se utilizan clasi(cid:222) cadores co- Las RNRs se diferencian de las redes FFN en
+munes con entradas de secuencias de longitud que Østas admiten conexiones hacia atrÆs, o
+(cid:222) ja pero aprendiendo con s(cid:243)lo una parte de la sea, pueden formar ciclos en el grafo que des-
+transcriptasa reversa o describiendo la secuen- cribe sus conexiones, lo que permite que la red
+cias con descriptores qu(cid:237)mico biol(cid:243)gicos (Rhee sea capaz de guardar una memoria de los esta-
+et al., 2006, Vermeiren et al., 2004, Kierczak et dos anteriores para su uso en el cÆlculo de las
+al., 2009). salidas del estado actual. (cid:201)sta es la caracter(cid:237)s-
+La variante de tratar solamente una parte de la tica esencial que convierte a este tipo de redes
+secuencia de la transcriptasa reversa puede ob- en una herramienta de amplio uso en tareas de
+viar informaci(cid:243)n importante, incluso puede de- reproducci(cid:243)n de seæales y anÆlisis de secuen-
+jarse de analizar algunas posibles mutaciones. cias, donde se re(cid:223) ejan relaciones causales en el
+Precisamente el sentido de este trabajo es di- tiempo y el espacio respectivamente (Pearlmut-
+seæar y entrenar un modelo de RNR con bases de ter, 1990, Baldi, 2002).
+inhibidores de la transcriptasa reversa en la cual En la Figura 1 se muestra un ejemplo sim-
+se mantengan las secuencias con su tamaæo ori- ple de una RNR de dos capas con conexiones
+ginal, conservando la informaci(cid:243)n de todas sus recurrentes en el tiempo. Esta topolog(cid:237)a puede
+posiciones y que permita la predicci(cid:243)n de resis- emplearse para el anÆlisis de secuencias donde
+tencia del VIH ante inhibidores de esta prote(cid:237)na. existe in(cid:223) uencia entre las posiciones iniciales,
+medias y (cid:222) nales de la prote(cid:237)na.
+M(cid:201)TODOS
+Redes Neuronales Arti(cid:222) ciales
+Las redes neuronales arti(cid:222) ciales se agrupan
+dentro de las tØcnicas conexionistas de la Inte-
+ligencia Arti(cid:222) cial y constituyen una de las espe-
+cialidades mÆs ampliamente difundidas. Estas
+herramientas matemÆticas para la modelaci(cid:243)n
+de problemas, permiten obtener las relaciones
+funcionales subyacentes entre los datos involu-
+crados en problemas de clasi(cid:222) caci(cid:243)n, reconoci-
+Fig. 1 Red Neuronal Recurrente de dos capas
+miento de patrones, regresiones, etc. (Hammer
+con conexiones hacia atrÆs y hacia adelante
+and Villmann, 2003).
+en el tiempo.
+Una red neuronal puede ser caracterizada
+De otra manera, el estado computado con la
+por el modelo de la neurona, el esquema de co-
+entrada provista a la red en el tiempo t, es usado
+nexi(cid:243)n que presentan sus neuronas, o sea su
+junto a la entrada provista en el tiempo t+1 para
+topolog(cid:237)a, y el algoritmo de aprendizaje emplea-
+calcular el nuevo estado y la salida en t+1. Los
+REVISTA CIENCIAS MATEM`TICAS 5
+operadores de desplazamiento (shift operators) Luego, en el proceso de retropropagaci(cid:243)n del
+d+1 representados en las conexiones recurren- error cada neurona j es caracterizada por una
+tes seæalan la sincronizaci(cid:243)n de las dependen- magnitud de error δ. Para las neuronas de la
+j
+cias entre tiempos. Un exponente positivo ad- capa de salida esta magnitud se calcula tenien-
+vierte que la red requiere el estado computado do en cuenta la diferencia entre el valor obteni-
+en etapas anteriores y un exponente negativo, do y el valor esperado (3) mientras que para las
+que se requiere el estado de etapas posteriores. neuronas ocultas se calcula teniendo en cuenta
+el error de las neuronas sucesoras a la neurona
+en cuesti(cid:243)n (4):
+Algoritmo de aprendizaje
+Backpropagation Through Time
+δj(t) = (d - y) y (1 − y) (3)
+j j j j
+El algoritmo de entrenamiento Backpropaga-
+tion Through Time (BPTT) para una RNR es una
+δ(t) = y (1 − y) ∑ w δ (4)
+adaptaci(cid:243)n del algoritmo Backpropagation para j j j j∈Suc(j) ij i
+redes FFN. (cid:201)ste es uno de los algoritmos mÆs
+utilizados en la literatura y justamente es el que Por su parte la actualizaci(cid:243)n de los pesos se
+se implementa para el modelo propuesto. Este realiza de acuerdo a la formula (5) donde se cal-
+algoritmo realiza la actualizaci(cid:243)n del estado de cula el cambio necesario en los pesos teniendo
+activaci(cid:243)n de cada neurona en los momentos en cuenta la tasa de convergencia α.
+puntuales de tiempo t , t ,(cid:133)t .
+1 2 n
+El primer paso de BPTT consiste en el proceso Δw e+1 = αδ y (5)
+ij j j
+de desdoblamiento (unfolding) donde la red neu-
+ronal que se obtiene no es mÆs que el resultado
+En la f(cid:243)rmula, e se re(cid:222) ere al ordenamiento
+de la replicaci(cid:243)n de la red recurrente original t
+sucesivo con el que se realiza las actualizaciones
+veces (t es la cantidad de tiempos). En este pro-
+de los pesos en el proceso de entrenamiento.
+ceso cada conexi(cid:243)n replicada comparte su valor
+Una vez aplicado el algoritmo Backpropaga-
+w en todas las etapas. La red desplegada no es
+ij tion en la red FFN obtenida corresponde la apli-
+mÆs que una red feed-forward, y es susceptible
+caci(cid:243)n de la segunda etapa del algoritmo BPTT:
+de la aplicaci(cid:243)n del algoritmo Backpropagation
+el plegamiento de la red (folding). En esta etapa
+para su entrenamiento. Precisamente Østa es la
+la red se contrae para obtener la red recurrente
+idea subyacente del algoritmo BPTT (Figura 2).
+original, donde los pesos de las conexiones son
+Para la aplicaci(cid:243)n de la primera etapa de
+resultado del promedio de las conexiones equi-
+Backpropagation (proceso forward) el cÆlculo de la
+valentes en cada tiempo de la red FFN anterior.
+salida y en el tiempo t de cada neurona se pue-
+i Como resultado del proceso de entrenamien-
+de de(cid:222) nir como:
+to con BPTT se obtiene una RNR con el conoci-
+miento de las base de casos que se utiliz(cid:243) para
+y(t) = f(x(t)) (1)
+i i el aprendizaje, representado en los pesos de las
+conexiones, que son los parÆmetros libres que
+permiten adaptar cierta topolog(cid:237)a a un proble-
+x(t) = ∑ y(t)w + ∑ xinw + ∑ y(t −τ )w
+i j∈H j ij j∈I j ij j∈M j ij ij ma de aplicaci(cid:243)n particular.
+(2)
+Donde f se re(cid:222) ere a la funci(cid:243)n de activaci(cid:243)n Modi(cid:222) caciones a BPTT para trabajar
+del modelo de la neurona, H denota los (cid:237)ndices con instancias de longitud variable
+de las neuronas ocultas, I los (cid:237)ndices de las neu-
+El problema de clasi(cid:222) caci(cid:243)n de secuencias de la
+ronas de entrada, xj es la j-Øsima neurona de
+in transcriptasa reversa del VIH se distingue por la
+entrada, M denota los (cid:237)ndices de las neuronas
+caracter(cid:237)stica de que las instancias de las bases
+que almacenan la informaci(cid:243)n de estados ante-
+de casos tienen longitudes variables. Al alinear
+riores de la red (memoria de estado), τ ≥ 0 es una
+ij estas secuencias de longitudes variables y re-
+magnitud entera que re(cid:222) ere el desplazamiento
+llenar con valores nulos los segmentos que no
+de las conexiones recurrentes en el tiempo.
+6 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+contienen informaci(cid:243)n, el algoritmo BPTT tra- res de los atributos asociados a ella son cero.
+dicional antes propuesto no ofrece buenos re- Las neuronas de las capas ocultas que estÆn co-
+sultados, ya que los valores perdidos se tradu- nectadas directamente a las entradas invÆlidas
+cen como ceros y este valor no constituye un tambiØn se afectan propiciando que la salida
+neutro ni para el modelo ni para el contexto del del tiempo t = 1 no se tome en cuenta para pro-
+problema de aplicaci(cid:243)n. Por lo que es necesaria cesar la salida general del modelo. El algoritmo
+la adaptaci(cid:243)n de la RNR para que sea capaz de termina cuando el error medio de entrenamiento
+ignorar los segmentos nulos de cada secuencia es menor que un umbral especi(cid:222) cado o cuando
+y adaptar la cantidad de tiempos de la red al alcanza el mÆximo nœmero de iteraciones.
+tamaæo real de la instancia de forma dinÆmica
+dentro del proceso de entrenamiento. Funciones de agregaci(cid:243)n de salidas
+El primer paso del BPTT para tiempos dinÆ- Luego de de(cid:222) nir la serie de pasos del algoritmo
+micos consiste en caracterizar cada neurona para procesar una instancia, resta de(cid:222) nir cuÆl
+como vÆlida o invÆlida de la siguiente forma: es la salida (cid:222) nal de la red. Como se muestra
+● Una neurona de entrada es invÆlida si el en la Figura 3 la salida es un vector de varios
+valor del rasgo (posici(cid:243)n de la secuencia componentes que contiene las probabilidades
+para el problema de aplicaci(cid:243)n) es nulo. de pertenencia a cada clase por cada uno de los
+tiempos de la red. Pueden existir diferentes va-
+● Una neurona oculta es invÆlida si todas
+riantes para agregar estos valores para obtener
+las conexiones que entran a ella provienen
+una œnica salida. En este trabajo se tienen en
+de neuronas invÆlidas.
+cuenta cuatro de ellas:
+● Las neuronas de salida siempre son vÆ-
+1. Average: calcula un promedio de las proba-
+lidas.
+bilidades de pertenencia a cada clase de to-
+Posteriormente, en el proceso de actualizaci(cid:243)n
+das las salidas.
+de los pesos s(cid:243)lo se tendrÆn en cuenta aquellas
+2. Weighted Average: calcula el promedio an-
+conexiones cuyas neuronas son vÆlidas, de esta
+terior pero ponderando las salidas de cada
+forma se conserva el conocimiento que las ins-
+tiempo en funci(cid:243)n de la cantidad de neuro-
+tancias anteriores aportaron a la red y la instan-
+nas vÆlidas que posee su entrada, es decir,
+cia actual s(cid:243)lo aporta la informaci(cid:243)n consistente.
+mientras mÆs neuronas validas tenga un
+AdemÆs si todas las neuronas de la capa de en-
+tiempo mÆs peso se le da a su salida en el
+trada de un tiempo determinado son invÆlidas la
+cÆlculo del promedio.
+salida de este tiempo se ignora, adaptando as(cid:237) la
+cantidad de tiempos al tamaæo de la instancia de 3. Mode: calcula la moda de las salidas de to-
+forma dinÆmica dentro del proceso de entrena- dos los tiempos, de esta manera se oferta el
+miento. De esta manera en cada iteraci(cid:243)n del al- valor que fue mÆs frecuente.
+goritmo (cada vez que entra una nueva instancia 4. Middle: devuelve el criterio de la salida del
+a la red para ser procesada) se va a activar la par- tiempo que se encuentra en el medio de la
+te de la red que propaga informaci(cid:243)n relevante. red si este es vÆlido, para topolog(cid:237)as com-
+En la Figura 2 se muestra el ejemplo de una puestas por pocos tiempos (aproximadamen-
+RNR desplegada con una topolog(cid:237)a de tres tiem- te entre 3 y 7) puede ofrecer buenos resul-
+pos con dos bloques de contexto: uno con re- tados porque precisamente en esta zona de
+currencia al pasado y otro con recurrencia la red es donde mayor informaci(cid:243)n se acu-
+al futuro, para una secuencia de entrada divi- mula proveniente de todas las partes de la
+dida en tres partes, una para cada tiempo. La secuencia.
+instancia posee 12 rasgos donde las primeras Es importante seæalar que al igual que en el
+4 posiciones de la secuencia no estÆn codi(cid:222) ca- proceso de entrenamiento s(cid:243)lo se tendrÆn en
+das (tienen valores nulos). Siguiendo los crite- cuenta los criterios de salida de aquellos tiem-
+rios anteriores todas las neuronas de la primera pos que sean vÆlidos, independientemente de la
+capa de entrada son invÆlidas porque los valo- funci(cid:243)n de agregaci(cid:243)n que se utilice.
+REVISTA CIENCIAS MATEM`TICAS 7
+Secuencia de una mutaci(cid:243)n de la transcriptasa reversa
+Salida (cid:222) nal = FAS (Salida 2, Salida 3)
+FAS: funci(cid:243)n de agregaci(cid:243)n de salidas
+Fig. 2 RNR desplegada que ajusta los tiempos dinÆmicamente de acuerdo al tamaæo de la instancia.
+Fig. 3 Funci(cid:243)n de agregaci(cid:243)n de salida Average.
+RESULTADOS OBTENIDOS (FTC), nevirapina (NPV) y tenofovir (TDF). Pre-
+viamente se alinearon todas las secuencias de
+Se realiz(cid:243) un experimento donde se utilizaron 11 las bases para hacer corresponder las posicio-
+bases de casos obtenidas en Stanford HIV Re- nes del c(cid:243)digo genØtico de cada cepa del virus,
+sistance Database que representan la resisten- cada posici(cid:243)n de los fragmentos no secuencia-
+cia de mutaciones de la transcriptasa reversa a dos se denotan por el nœmero cero.
+los siguientes fÆrmacos inhibidores: lamivudina
+En el experimento se analizaron los resulta-
+(3TC), abacavir (ABC), zidovudina (AZT), estavu-
+dos del aprendizaje de la variante original del
+dina (d4T), zalcitabina (ddC), didanosina (ddI),
+algoritmo BPTT utilizando la funci(cid:243)n de agrega-
+delavirdina (DLV), efavirenz (EFV), emtricibina
+8 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+ci(cid:243)n de salidas average contra los resultados de
+la aplicaci(cid:243)n del BPTT con tiempos dinÆmicos
+utilizando las cuatro funciones de agregaci(cid:243)n
+de salidas implementadas: average, weighted
+average, mode y middle. Con este prop(cid:243)sito se
+aplicaron 20 procesos de cross-validation de 10
+folds para cada una de las bases ofreciendo los
+siguientes resultados (Figura 4).
+Como se puede observar en la Figura 4, para
+la mayor(cid:237)a de las bases las variantes de BPTT
+para tiempos dinÆmicos ofrecen mejores resul-
+tados. Particularmente la modi(cid:222) caci(cid:243)n que uti-
+liza la funci(cid:243)n de agregaci(cid:243)n de salidas average
+alcanza los mejores porcientos de clasi(cid:222) caci(cid:243)n,
+en algunas bases supera en 10 puntos porcen-
+tuales al promedio alcanzado por la variante ori-
+ginal de BPTT.
+Fig. 5 Promedios de los porcientos de casos bien
+En la Figura 5 se observa un promedio de los
+clasi(cid:222) cados para la variante tradicional de BPTT
+porcientos de clasi(cid:222) caci(cid:243)n alcanzados por cada
+y las cuatro modi(cid:222) caciones propuestas para trabajar
+algoritmo en todas las bases, lo cual refuerza con instancias de longitud variable.
+las diferencias entre los resultados alcanzados,
+los cuales, como promedio, refuerzan el plan-
+teamiento anterior de que los resultados con
+tiempos dinÆmicos son mejores.
+Fig. 4 Promedios de los porcientos de casos bien clasi(cid:222) cados para la variante tradicional de BPTT y las cua-
+tro modi(cid:222) caciones propuestas para trabajar con instancias de longitud variable.
+REVISTA CIENCIAS MATEM`TICAS 9
+CONCLUSIONES Hilera, J. R. & Mart(cid:237)nez, V. J. 1995. Redes Neurona-
+les Arti(cid:222) ciales. Fundamentos, Modelos y Aplica-
+En este trabajo se implement(cid:243) una RNR utili- ciones, Madrid / Mexico, RA-MA / Addison Wes-
+zando el algoritmo de entrenamiento BPTT y se ley Iberoamericana.
+incorpor(cid:243) a la plataforma Weka como un nuevo Kierczak, M., Ginalski, K., Dramiński, M., Korona-
+clasi(cid:222) cador. AdemÆs se adapt(cid:243) el algoritmo de cki, J., Rudnicki, W. & Komorowski, J. 2009. A
+Rough Set-Based Model of HIV-1 Reverse Trans-
+entrenamiento para que permita ajustar dinÆ-
+criptase Resistome. Bioinformatics and Biology
+micamente los tiempos de la red y de esta mane-
+Insights.
+ra ser capaz de trabajar con instancias de lon-
+Pearlmutter, B. 1990. Dynamic Recurrent Neural
+gitud variable.
+Networks. DARPA Research.
+La modi(cid:222) caci(cid:243)n propuesta se utiliz(cid:243) en el en- Rhee, S., Taylor, J., Wadhera, G., Ben-hur, A., Bru-
+trenamiento de RNRs para predecir la resistencia tlag, D. & Shafer, R. 2006. Genotypic predictors
+de secuencias de la transcriptasa reversa ante 11 of human immunode(cid:222) ciency virus type 1 drug
+fÆrmacos antirretrovirales del VIH. Los resulta- resistance. Proceedings of the National Academic
+of Sciences of the United States of America.
+dos obtenidos se compararon con los de la va-
+Ronald, J. W. & David, Z. 1995. Gradient-based lear-
+riante inicial del BPTT, resultando los de la modi-
+ning algorithms for recurrent networks and their
+(cid:222) caci(cid:243)n propuesta signi(cid:222) cativamente mejores.
+computational complexity. In: Chauvin, Y. & Ru-
+melhart, D. E. (eds.) Backpropagation: theory, ar-
+Referencias BibliogrÆ(cid:222) cas chitectures, and applications. Lawrence Erlbaum
+Associates, Inc.
+Baldi, P. 2002. New Machine Learning Methods for Salazar, S. 2005. NEngine v 1.0: Una Herramienta
+the Prediction of Protein Topologies, In: P. Fras- Software para Redes Neuronales Recurrentes.
+coni and R. Shamir (eds.) Arti(cid:222) cial Intelligence Lic, Universidad Central (cid:147)Marta Abreu(cid:148) de Las
+and Heuristic Methods for Bioinformatics, IOS Villas.
+Press. Vermeiren, H., Van Den Bulcke, T., Van Marck, H.,
+Bonet, I. 2008. Modelo para la clasi(cid:222) caci(cid:243)n de se- Lecocq, P., Van Houtte, M. & Bacheler, L. 2004.
+cuencias, en problemas de la bioinformÆtica, Application of multiple linear regression mode-
+usando tØcnicas de inteligencia arti(cid:222) cial. PhD, lling to the quantitative prediction of HIV-1 drug
+Universidad Central (cid:147)Marta Abreu(cid:148) de Las Vi- susceptibility phenotype from viral genotype. XIII
+llas. International HIV Drug Resistance Workshop.

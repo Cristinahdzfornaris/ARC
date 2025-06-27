@@ -1,0 +1,312 @@
+REVISTA CIENCIAS MATEM`TICAS 47
+CÆlculo de descriptores morfomØtricos
+y geomØtricos en la identificaci(cid:243)n
+de variaciones morfol(cid:243)gicas en el eritrocito
+Romina Robert PØrez1 / Mayel(cid:237)n Mac(cid:237)as Norat2
+RESUMEN. En el presente trabajo se expone una metodolog(cid:237)a que haciendo uso de tØcnicas de visi(cid:243)n
+computacional y mediante el cÆlculo de un conjunto de descriptores morfomØtricos y geomØtricos,
+permite la descripci(cid:243)n de la morfolog(cid:237)a de los gl(cid:243)bulos rojos. Se presentan ademÆs los resultados
+obtenidos en la segmentaci(cid:243)n de los gl(cid:243)bulos rojos, mediante la Transformada de Watershed con-
+trolada por marcas. Finalmente se muestran las comparaciones realizadas a los descriptores pro-
+puestos a (cid:222) n de encontrar diferencias entre gl(cid:243)bulos normales y anormales.
+1. INTRODUCCI(cid:211)N
+ma varia desde oval a el(cid:237)ptica, y los falciformes
+Los anÆlisis cl(cid:237)nicos de muestras sangu(cid:237)neas
+o drepanocitos que (cid:222) guran forma de hoz, entre
+permiten determinar el estado de salud de
+otros. Ejemplos, tanto de gl(cid:243)bulos en estado de
+una persona con respecto a ciertas enfermeda-
+anormalidad como normalidad pueden obser-
+des. Esto es posible a partir de un conjunto de
+varse en la (cid:222) gura 1.
+indicadores entre los que se encuentran, desde
+el nœmero de cØlulas presentes en las tres series
+celulares sangu(cid:237)neas3, hasta el tipo de sangre
+y/o concentraci(cid:243)n de ciertos elementos en Østa.
+Dentro de estos anÆlisis cl(cid:237)nicos, se lleva a
+cabo el anÆlisis de la serie eritroc(cid:237)tica, compues-
+ta por los gl(cid:243)bulos rojos o eritrocitos [5]. Los gl(cid:243)-
+bulos rojos en estado normal o sano, se carac-
+terizan por un tamaæo promedio y por su forma
+discoidal bic(cid:243)ncava. De existir alguna alteraci(cid:243)n
+en la morfolog(cid:237)a de estos, dicha funcionalidad
+se verÆ modi(cid:222) cada, provocÆndose as(cid:237) una deter-
+minada patolog(cid:237)a. Fig. 1 Eritrocitos en estado normal
+(izquierda-superior). Algunas de las formas
+Entre las principales alteraciones morfol(cid:243)gi-
+eritroc(cid:237)ticas anormales descritas en la literatura
+cas dentro de la serie eritroc(cid:237)tica; se referencian
+(izquierda-inferior y derecha).
+en la literatura los eritrocitos dentados, que po-
+seen una periferia en forma de sierra, los es- Para la detecci(cid:243)n de estas alteraciones, tra-
+piculares y acantocitos, que presentan cambios dicionalmente se realiza un examen cualitativo
+notables en su forma, los ovalocitos, cuya for- o examen morfol(cid:243)gico. Este examen cualitativo
+es realizado mediante la tinci(cid:243)n de lÆminas de
+1 Dpto. de Ing. BiomØdica, Facultad de Ingenier(cid:237)a ElØctrica, Univer- extendidos sangu(cid:237)neos en sangre perifØrica4, y
+sidad de Oriente, Santiago de Cuba, Cuba, romina@(cid:222) e.uo.edu. su posterior interpretaci(cid:243)n al microscopio por
+cu, Ave. de las AmØricas y Casero s/n, CP: 90900
+un laboratorista cl(cid:237)nico.
+2 Dpto. de Ing. InformÆtica, Facultad de Ingenier(cid:237)a ElØctrica, Uni-
+versidad de Oriente, Cuba.
+3 Series eritroc(cid:237)tica, leucoc(cid:237)tica y plaquetaria. 4 Sangre que circula por todo el cuerpo.
+48 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Existen actualmente sistemas automatizados gl(cid:243)bulos rojos, pero ademÆs de estos suelen
+de diagn(cid:243)stico de alteraciones en la serie eritroc(cid:237)- aparecer en las imÆgenes, estructuras de me-
+tica, pero debido a sus grandes costos, en nues- nor tamaæo (puede observarse en la (cid:222) gura 2),
+tro pa(cid:237)s, una gran parte de este proceso es reali- esto debido funda-mentalmente a las condicio-
+zado de manera tradicional. Este procedimiento nes del preparado en las lÆminas de extendido
+manual puede acarrear errores debido al factor sangu(cid:237)-neo. Estas estructuras que constituyen
+subjetivo que involucra, aæadiendo ademÆs una informaci(cid:243)n no relevante, ralentizan y entorpe-
+demora en la obtenci(cid:243)n de los resultados. cen las posteriores etapas de procesamiento.
+De lo anterior se destaca la necesidad de la
+existencia de sistemas automatizados de apo-
+yo con este (cid:222) n. Como paso inicial al desarro-
+llo de un sistema similar, en el presente trabajo
+se propone, haciendo uso de tØcnicas de visi(cid:243)n
+computacional en imÆgenes de extendidos san-
+gu(cid:237)neos, un metodolog(cid:237)a para la extracci(cid:243)n de
+un conjunto de descriptores morfomØtricas y
+geomØtricos que permitan la descripci(cid:243)n de la
+morfolog(cid:237)a de los gl(cid:243)bulos rojos. Se presentan
+ademÆs, los resultados obtenidos a partir de
+la segmentaci(cid:243)n realizada mediante La Trans-
+formada de Watershed controlada por marcas,
+Fig. 2 Imagen de gl(cid:243)bulos normales tomada a 80x.
+as(cid:237) como los resultados de las comparaciones
+realizadas entre los descriptores determi-nados,
+Para disminuir esta situaci(cid:243)n se descompone
+a (cid:222) n de encontrar diferencias entre eritrocitos
+la imagen mediante (cid:222) ltros morfol(cid:243)-gicos, em-
+normales y anormales.
+pleÆndose el operador morfol(cid:243)gico de apertura
+[2] [3]. Este operador de apertura elimina aque-
+2. METODOLOG˝A
+llas estructuras que, despuØs de erosionadas
+por el elemento estructurante al dilatarlas no se
+Preprocesado y Segmentaci(cid:243)n
+pueden recuperar.
+Se emplean imÆgenes de lÆminas de extendidos Se aplica ademÆs una operaci(cid:243)n de recons-
+de sangre perifØrica, tratadas con colorante de trucci(cid:243)n morfol(cid:243)gica, con el objetivo de pre-
+Giemsa. La adquisici(cid:243)n de estas imÆgenes se servar la forma y tamaæo de los gl(cid:243)bulos rojos
+realiz(cid:243) a travØs de una cÆmara digital (Canon despuØs de las operaciones anteriores [2]. En la
+Power Shot A630) adaptada a un microscopio (cid:222) gura 3 se puede observar la eliminaci(cid:243)n de las
+(cid:243)ptico (Novel-N200), y observadas a un aumento estructuras despuØs de aplicados los operado-
+de 100X y 80X. Estas imÆgenes son tomadas a res morfol(cid:243)gicos.
+color, con resoluciones espaciales variables de
+3264x2448 y 640x480 p(cid:237)xeles, y con una pro-
+fundidad de 8 bits por canal de color.
+Inicialmente las imÆgenes son convertidas a
+escala de grises. Teniendo en cuenta las propie-
+dades que presenta este, se aplica un (cid:222) ltro gaus-
+siano para la atenuaci(cid:243)n del ruido [1]. Debido
+a que las condiciones de iluminaci(cid:243)n durante
+la captura de las imÆgenes fueron variables, se
+realiza un ajuste del brillo y ecualizaci(cid:243)n del
+histo-grama a (cid:222) n de homogeneizar los parÆme-
+tros de brillo y contraste.
+La informaci(cid:243)n de interØs para el procesado
+Fig. 3 Binarizaci(cid:243)n + Operador de apertura +
+en las imÆgenes tomadas, la consti-tuyen los
+Reconstrucci(cid:243)n morfol(cid:243)gica.
+REVISTA CIENCIAS MATEM`TICAS 49
+Dadas las caracter(cid:237)sticas de cantidad y loca-
+lizaci(cid:243)n de los gl(cid:243)bulos rojos en las imÆgenes,
+como tØcnica de segmentaci(cid:243)n, se implementa
+la Transformada de Watershed (TW). Esta tØcni-
+ca es usualmente aplicada en situaciones donde
+los objetos a segmentar se tocan [4], caso parti-
+cular de las imÆgenes en estudio.
+La segmentaci(cid:243)n mediante la TW, separa la
+imagen en regiones asociadas a los m(cid:237)nimos lo-
+cales, y es aplicada generalmente haciendo uso
+de una mÆscara que gu(cid:237)a el proceso. La cons-
+trucci(cid:243)n de estas mÆscaras es variada, ejemplos
+de mÆscaras descritas en la literatura, estÆn, la
+transformada de la distancia [4], las que utilizan
+operadores morfol(cid:243)gicos [2] y las de marcas en
+el mapa del gradiente [2].
+En este trabajo se utiliza la segmentaci(cid:243)n
+Watershed controlada por marcas externas
+(fondo) e internas (objetos de interØs), ya con
+Østa se elimina notablemente la sobre segmen-
+taci(cid:243)n causada al emplear otros mØtodos mÆs
+sencillos.
+Para determinar las marcas externas, se uti-
+liza la TW de La Transformada de la distancia
+Fig. 4 Superposici(cid:243)n en la imagen binaria
+negada [2]. A partir de Østa, se determina el es-
+del resultado de aplicar la TW a La Transformada
+queleto de la TW, que resulta en los l(cid:237)mites ex- de la distancia negada de la imagen umbralizada
+ternos entre los gl(cid:243)bulos rojos. El cÆlculo de la (arriba). Superposici(cid:243)n en la imagen binaria
+transformada de la distancia se realiza sobre la del resultado de aplicar la TW a La Transformada
+imagen anteriormente procesada, y umbraliza- de la distancia negada despuØs de erosionar
+da mediante el mØtodo de elecci(cid:243)n de umbral de la imagen umbrali-zada (abajo).
+Otsu [1].
+Debido a que, cuando los objetos estÆn muy
+unidos, como se presentan casos en las imÆge-
+nes en particular, La Transformada de la dis-
+tancia negada no delimita los bordes entre ellos,
+se hace necesario aplicar algœn operador que
+adelgace estas conexiones. Con este (cid:222) n se utili-
+za el operador morfol(cid:243)gico de erosi(cid:243)n; el tamaæo
+del elemento estructurante se eligi(cid:243) de manera
+emp(cid:237)rica, atendiendo a los resultados obtenidos.
+Se puede observar en la siguiente (cid:222) gura (aba-
+jo), c(cid:243)mo son delimitados nuevos gl(cid:243)bulos rojos
+despuØs de erosionar la imagen umbralizada.
+Para establecer las marcas internas, se elige
+el resultado de la umbralizaci(cid:243)n, al cual se le
+Fig. 5 Marcas interna y externas (color negro)
+aplica igualmente el operador de erosi(cid:243)n. El ele-
+superpuestas sobre la imagen original.
+mento estructurante aplicado en la operaci(cid:243)n es
+el mismo que en el paso anterior. Esto es nece- Como paso (cid:222) nal en la segmentaci(cid:243)n, se cal-
+sario debido a que no es deseable que se toquen cula la TW del mapa de la magnitud del gra-
+las marcas internas y externas al aplicar la tØc- diente modi(cid:222) cado, tal que, s(cid:243)lo existan zonas
+nica de la TW [2]. de m(cid:237)nimos en las localizaciones marcadas por
+50 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+marcas internas y externas. El procedimiento de ● `rea, correspondiente a la regi(cid:243)n interna
+marcado del mapa de la magnitud del gradiente de los eritrocitos y es calculada mediante
+se realiza mediante el mØtodo de imposici(cid:243)n m(cid:237)- la ecuaci(cid:243)n:
+nima [2]. La segmentaci(cid:243)n (cid:222) nal de los gl(cid:243)bulos
+rojos se puede observar en la (cid:222) gura 6. (2)
+● Factor de forma calculado por la relaci(cid:243)n,
+P
+FF = (3)
+4ΠA
+Si bien los descriptores anteriores son capa-
+ces de brindar una descripci(cid:243)n global de la for-
+ma de los objetos, en el caso espec(cid:237)(cid:222) co de los
+gl(cid:243)bulos aœn queda mucha informaci(cid:243)n discri-
+minante de su morfolog(cid:237)a sin capturar.
+Parte de esta informaci(cid:243)n se encuentra en
+la propia irregularidad existente en los bordes
+de los gl(cid:243)bulos. Mediante la geometr(cid:237)a fractal
+es posible medir y caracterizar la irregularidad
+Fig. 6 Resultado de la segmentaci(cid:243)n (bordes en color
+de los objetos con la dimensi(cid:243)n fractal [6]. Los
+negro) mediante el uso de TW controlada por marcas.
+cÆlculos fractales han sido ampliamente em-
+pleados en las estructuras del cuerpo humano
+Esta segmentaci(cid:243)n, es depurada, eliminÆn-
+y en cuanti(cid:222) caciones en (cid:222) siolog(cid:237)a. Partiendo de
+dose del conjunto de gl(cid:243)bulos rojos segmenta-
+lo seæalado anteriormente se proponen calcular
+dos, aquellos que no se encuentren en un rango
+dos descriptores basados en esta geometr(cid:237)a.
+de tamaæo (cid:222) jado. Este tamaæo se determin(cid:243) te-
+● Super(cid:222) cie en p(cid:237)xeles del objeto, dado como
+niendo en cuenta los valores de las Æreas m(cid:237)-
+el nœmero de p(cid:237)xeles que tocan el interior
+nimas y mÆxi-mas de los gl(cid:243)bulos rojos tanto
+o el borde de la imagen medida.
+sanos como enfermos. Realizar esta depuraci(cid:243)n
+es importante pues el procedimiento de segmen- ● Nœmero de espacios en el espacio del box
+taci(cid:243)n empleado puede realizar segmentaciones counting, la medici(cid:243)n de la dimensi(cid:243)n
+que no completen la forma del gl(cid:243)bulo rojo, o no fractal de box counting, requiere la super-
+separen correctamente aquellos gl(cid:243)bulos rojos posici(cid:243)n de dos rejillas, como m(cid:237)nimo, a
+que se tocan, segmentado conglomerados de es- la imagen medida. Las rejillas utilizadas
+tos en vez de gl(cid:243)bulos individuales. fueron de 5 y 50 p(cid:237)xeles, estas medidas
+fuero seleccionadas a partir de lo expues-
+to en [7]. El nœmero de espacios pequeæos
+C`LCULO DE LOS DESCRIPTORES
+corresponde al nœmero de espacios que
+tocan el borde de la imagen medida al su-
+A (cid:222) n de describir los gl(cid:243)bulos morfomØtricamen-
+perponer la rejilla de 5x5 p(cid:237)xeles.
+te, se determinan como descriptores:
+AdemÆs de los descriptores antes mencio-
+● Per(cid:237)metro de la regi(cid:243)n interna de los labios,
+nados se calcula la cantidad de gl(cid:243)bulos rojos
+de(cid:222) nido como la suma de las dis-tancias
+segmentados por imagen, y el Ærea promedio de
+de los segmentos determinados por pun-
+estos.
+tos subsecuentes.
+● Relaci(cid:243)n de aspecto (RA) de(cid:222) nida como la
+3. RESULTADOS Y DISCUSI(cid:211)N
+relaci(cid:243)n entre las longitudes de las axisas
+mayor y menor.
+Los mØtodos que se describen fueron implemen-
+tados en MatLab 7.7. Con el obje-tivo de realizar
+LMa
+RA = (1) la evaluaci(cid:243)n de la metodolog(cid:237)a propuesta, se to-
+LMe
+maron 25 ImÆgenes de extendidos sangu(cid:237)neos.
+REVISTA CIENCIAS MATEM`TICAS 51
+Las imÆgenes tomadas fueron clasi(cid:222) cadas los descriptores seleccionados por normalidad y
+siguiendo criterio de especialistas en 4 grupos, alteraci(cid:243)n del gl(cid:243)bulo rojo en 8 imÆgenes de es-
+segœn el estado de normalidad o de enfermedad tudio. Para el cÆlculo de este indicador de acier-
+que presentaban la mayor(cid:237)a de los gl(cid:243)bulos ro- tos se tomaron solamente la efectividad de los
+jos contenidos en ellas. Los grupos se de(cid:222) nie- descriptores en los gl(cid:243)bulos rojos correctamen-
+ron como I, II, III, y IV, y estÆn constituidos por te segmentados segœn criterio cualitativo del
+imÆgenes de gl(cid:243)bulos rojos sanos, eliptocitos, observador. En la tabla, se muestra tam-biØn
+eritrocitos dentados, y cØlulas falciformes, res- la cantidad de gl(cid:243)bulos rojos presentes en las
+pectivamente. El promedio de imÆgenes por gru- imÆgenes segœn conteo visual y segœn el proce-
+po fue de 6, en cada imagen con gl(cid:243)bulos rojos so automatizado. El conteo visual se realiz(cid:243) ob-
+normales aparecen como promedio 45 gl(cid:243)bulos viando aquellos gl(cid:243)bulos que exceden los l(cid:237)mites
+segœn conteo visual y en las imÆgenes de gl(cid:243)bu- de las imÆgenes.
+los rojos anormales un promedio de 18.
+Se (cid:222) jaron los rangos de normalidad en los 4. CONCLUSIONES
+gl(cid:243)bulos rojos y a partir de estos se clasi(cid:222) can
+estados de normalidad y anormalidad. Estos El presente trabajo, evidencia la posibilidad de
+rangos se tomaron teniendo en cuenta los pro- determinar un pequeæo conjunto de descripto-
+medios de los valores en los gl(cid:243)bulos rojos sa- res, representativos de la morfolog(cid:237)a de los gl(cid:243)-
+nos. Para medir la efectividad de estos, se deter- bulos rojos de manera automÆtica.
+min(cid:243) el porcentaje de aciertos en la clasi(cid:222) caci(cid:243)n Es de resaltar que las tØcnicas propuestas
+de normalidad o anormalidad que prove(cid:237)an in- tanto del procesamiento como descripci(cid:243)n con-
+dividualmente. templan un moderado costo computacional.
+Los resultados arrojaron; como eran de es- Finalmente se valora conveniente efectuar las
+perar, que el Ærea no constituya un buen des- evaluaciones en un conjunto de imÆgenes mÆs
+criptor de anormalidad, comportÆndose el resto grande, con el objetivo de poder medir con ma-
+de los descriptores como buenos discriminantes yor precisi(cid:243)n la efectividad de los descriptores
+para detectar las anormalidades de los falcifor- as(cid:237) como el estudio e inclusi(cid:243)n de otros.
+mes y ovalocitos. Los mejores (cid:237)ndices de discri-
+Si bien se evidencia la efectividad de la Trans-
+minaci(cid:243)n para este caso, se obtuvieron median-
+formada de Watershed controlada por marcas
+te el descriptor de relaci(cid:243)n de aspecto.
+sobre otras implementaciones, todav(cid:237)a se pre-
+En el caso de los eritrocitos dentados los me- sentan problemas de seg-mentaci(cid:243)n, por tanto
+jores comportamientos identi(cid:222) cativos los tuvie- se recomienda explorar otros modelos de seg-
+ron los descriptores geomØtricos. mentaci(cid:243)n que incorporen un mayor a conoci-
+En la siguiente tabla se muestra, el porcien- miento a Østa.
+to promedio de aciertos en la clasi(cid:222) ca-ci(cid:243)n de
+Tabla 1 Resultados de la clasi(cid:222) caci(cid:243)n de eritrocitos normales y anormales en 8 imÆgenes de estudio.
+Cant. de Cant. de GR Cant. de
+% de aciertos
+Grupos ImÆgenes GR conteo conteo GR bien
+en la clasificaci(cid:243)n
+visual automatizado segmentados
+IMG_1 48 47 44 100 %
+IMG_2 53 47 46 99 %
+Sanos
+IMG_3 46 39 35 100 %
+IMG_4 41 34 32 97 %
+IMG_1 16 14 12 95 %
+Falciformes
++Ovalocitos IMG_2 15 13 11 93 %
++Dentados
+IMG_3 20 16 12 95 %
+IMG_4 21 18 16 98 %
+52 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+5. REFERENCIAS BIBLIOGR`FICAS [5]. Platt W. Atlas de Hematolog(cid:237)a en color. Barce-
+lona, Editorial JIMS, 1972. pp 111-114, 185-
+[1]. Pajares G., De la Cruz J. M. Visi(cid:243)n por Com- 190.
+putador. MØxico, Editorial AlfaOmega, 2002. pp. [6]. Mandelbrot B. ¿CuÆnto mide 1. la costa de
+291-294 Bretaæa? En: Mandelbrot B. Los objetos Frac-
+[2]. GonzÆlez C., Woods R. Digital Image Processing. tales. Barcelona:Tusquets Eds. S.A., 2000, p.
+New Jersey, Prentice Hall-2002. pp 626. 27-50.
+[3]. Russ J. The image processing handbook. Was- [7]. J Rodr(cid:237)guez, C Correa. Caracterizaci(cid:243)n geomØtri-
+hington, CRC. Chapter 7 pp. 28, 47. ca de los gl(cid:243)bulos rojos. Diferenciaci(cid:243)n de mues-
+[4]. Ruberto, Dempster, Khan. Analysis of infected tras normales y patol(cid:243)gicas Rev. Cienc. Salud.
+blood cell images using morphological operators, BogotÆ (Colombia) 6 (3): 47-56, septiembre-di-
+2002, Image and Vision Computing, Volume 20, ciembre de 2008.
+no. 2, pp. 133-146.
+ABSTRACT. The present paper contains an investigation, resulting in a methodology that through
+the use of computational vision techniques, and the extraction of morfometrics and geometrics
+descriptors allows the morphological description the red blood cells we show the results obtained
+in segmentation to the blood cells using marker-controlled watershed segmentation. (cid:222) nally the ob-
+tained shape(cid:145)s descriptors were compared, looking for differences between normal and abnormal
+red blood cells.
+Key Words: red blood cells, morfometrics descriptors, geometrics descriptors, Watershed.

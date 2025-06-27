@@ -1,0 +1,501 @@
+CienciasMatemáticas,Vol.33,No.2,Pag.153-160, 2019
+Recibido05-2019, Aceptado 09-2019
+Modelo para el proceso de desarrollo del
+pensamiento lo´gico-matema´tico avanzado
+Model for the process of development of the logical-
+mathematics advanced thought
+Serdaniel Nieves Pupo1, Rita A. Rolda´n Inguanzo2*
+Resumen El pensamiento lo´gico-matema´tico avanzado es el proceso ps´ıquico cognoscitivo que permite al
+hombre penetrar en la esencia de los objetos matema´ticos y descubrir lo lo´gico y esencial dentro de la com-
+plejidad. Ensen˜ar a pensar con lo´gica constituye un reto para la educacio´n cubana y l´ınea de investigacio´n
+priorizada en la Dida´ctica de la Matema´tica. El objetivo de este art´ıculo es socializar un modelo para el pro-
+ceso de desarrollo del pensamiento lo´gico - matema´tico avanzado a partir de novedosas formas de integrar
+la descomposicio´n gene´tica de conceptos, la coordinacio´n de registros semio´ticos y los mapas conceptuales.
+Se introducen nuevos enfoques de aprendizaje a partir de visualizaciones gra´ficas que actu´an como medios
+auxiliares de razonamiento al operar con conceptos matema´ticos. Un elemento novedoso es la implementa-
+cio´n pra´ctica del me´todo gene´tico-constructivo como un conjunto de acciones dida´cticas para la estimulacio´n
+deunpensamientoflexibleydivergente,esteaccionarfavoreceenlosestudianteslavisualizacio´ngeneraliza-
+da de su estructura cognitiva, la racionalizacio´n del trabajo mental y el control de la ejecucio´n. La propuesta
+establece una relacio´n biun´ıvoca entre el proceso de asimilacio´n y la implementacio´n creativa del sistema de
+conocimientosalaresolucio´ndeejerciciosyproblemasdelaMatema´tica.
+Abstract Advanced logical-mathematical thinking is the cognitive psychic process that allows man to pene-
+trateintotheessenceofmathematicalobjectsanddiscoverthelogicalandessentialwithincomplexity. Teaching
+thinking with logic is a challenge for Cuban education and research line prioritized in the Mathematics Didac-
+tics. The objective of this article is to socialize a model for the process of development of advanced logical -
+mathematicalthinkingfromnovelwaysofintegratingthegeneticdecompositionofconcepts,thecoordinationof
+semiotic registers and conceptual maps. New learning approaches are introduced from graphic visualizations
+that act as auxiliary means of reasoning when operating with mathematical concepts. A novel element is the
+practicalimplementationofthegenetic-constructivemethodasasetofdidacticactionsforthestimulationofa
+flexible and divergent thinking, this action favors in the students the generalized visualization of their cognitive
+structure, the rationalization of mental work and the control of the execution. The proposal establishes a one-
+to-onerelationshipbetweentheassimilationprocessandthecreativeimplementationoftheknowledgesystem
+totheresolutionofMathematicsexercisesandproblems.
+PalabrasClave
+pensamientolo´gico-matema´ticoavanzado—representacionessemio´ticas—descomposicio´ngene´ticadecon-
+ceptos—me´todogene´tico-constructivo
+1UniversidaddePinardelR´ıo“HermanosSa´ızMontesdeOc”,Cuba,serdaniel.nieves@upr.edu.cu
+2UniversidaddeLaHabana,Cuba,rroldan@matcom.uh.cu
+*AutorparaCorrespondencia
+Introduction dio por excelencia para el desarrollo del pensamiento racio-
+nalentantoexigeunelevadoesfuerzointelectualparareali-
+Elpensamientolo´gico-matema´ticoavanzadoeselproce- zar,deformac´ıclica,ana´lisis,s´ıntesis,abstraccio´n,compara-
+sops´ıquicocognoscitivoquepermitealhombrepenetraren cio´n,analog´ıasytransferenciasdurantelaasimilacio´nyapli-
+la esencia de los objetos matema´ticos y descubrir lo lo´gi- cacio´ndeconocimientosalasolucio´ndeejerciciosyproble-
+co y esencial dentro de la complejidad. Ensen˜ar a pensar mas.
+constituyeundesaf´ıoparalaeducacio´ncubanayunretopa-
+ra la Dida´ctica de la Matema´tica. El proceso de ensen˜anza- Esreconocidalarelacio´nexistenteentreelpensamiento
+aprendizajedeloscontenidosmatema´ticosconstituyeunme- lo´gico y el proceso de resolucio´n de problemas; diferentes
+154 Modeloparaelprocesodedesarrollodelpensamientolo´gico-matema´ticoavanzado
+investigadores y especialistas (Artigue, 2003) y (Asuncio´n, elestudianteparadescubrirloesencialdentrodelocomplejo,
+2012), consideran que el pensamiento tiene lugar en la acti- yasuvezlocomplejoesta´ dadoporlacantidadconocimien-
+vidad de resolucio´n de problemas y son del criterio comu´n tos entrelazados, por situaciones problema´ticas que exigen
+que esta es la v´ıa ma´s eficaz para la formacio´n y desarrollo un alto grado de visualizacio´n, por la forma de controlar y
+delpensamientolo´gico.Porotraparte(Delgado,1999,p.22) dirigirlabu´squedadeunasolucio´n,etc.
+afirmaque“...generacio´ntrasgeneracio´nreconocenlasdifi-
+cultadesquepresentanmuchaspersonasenelaprendizajede
+1. Algunas consideraciones teo´ricas
+lasmatema´ticas,locualpareceaprimeravistacontradictorio
+sobre el proceso de desarrollo del
+debido a su cara´cter lo´gico y estructurado...”. Dando a en-
+tenderdeestamaneraqueelproblemaprincipalseencuentra pensamiento lo´gico-matema´tico
+en el proceso de ensen˜anza-aprendizaje de los saberes ma- avanzado
+tema´ticos.
+ElpensamientoracionalesobjetodeestudiodelaPsico-
+Esdenotableintere´sparamuchosinvestigadoresenDida´cti- log´ıaydelaLo´gica,estesemanifiestacomoprocesops´ıqui-
+ca de la Matema´tica, comprender do´nde radican las causas cocognoscitivoycomoresultado.Enlaliteraturapsicolo´gica
+queprovocanlasdificultadesdelaprendizajeenlosestudian- especializada,algunosautorescomo(Rubinstein,1966);(Pe-
+tesyparticularmentedelasmatema´ticassuperiores.Median- trovski,1985);(Vigotsky,1987)y(Gonza´lez,1995)abordan
+teinvestigacionesrealizadasenestetema,laexperimentacio´n cuatro tipos de pensamiento: pensamiento figurativo, pensa-
+durante la pra´ctica docente y las experiencias del colectivo miento pra´ctico, pensamiento lo´gico y pensamiento cient´ıfi-
+de profesores se ha podido identificar con regularidad que co.Elpensamientoeslo´gicoporquesiguelasleyesdelalo´gi-
+los estudiantes presentan insuficiencias en la estructuracio´n ca, y segu´n el contenido es matema´tico, de aqu´ı el termino
+lo´gicadesusconocimientos,as´ıcomoenlacoordinacio´nde pensamientolo´gico-matema´tico.
+informacio´nconceptualyteo´ricaqueposeen,durantelareso-
+En (Herlina, 2015, p.2) se hace un ana´lisis de varias de-
+lucio´ndeejerciciosyproblemasdelaMatema´tica.
+finiciones dadas por expertos e investigadores en el tema y
+De las insuficiencias anteriores se ha podido determinar asume la siguiente definicio´n “[...] pensamiento matema´ti-
+que las principales causas son: Insuficientes niveles de abs- co avanzado es el proceso del pensar matema´tico que com-
+traccio´n en la representacio´n mental de conceptos, dificulta- prendeprocesosderepresentacio´n,abstraccio´n,pensamiento
+des al hacer analog´ıas y transferencias, razonamiento sobre matema´ticocreativo,ylapruebamatema´tica”1.Enestadefi-
+generalizaciones, as´ı como en la estructuracio´n y organiza- nicio´nseexpresaelpensamientomatema´ticoavanzadocomo
+cio´nlo´gicadeloscontenidosdurantelaresolucio´ndeejerci- unconjuntodeprocesoscognitivos,queintervienenenelpro-
+ciosyproblemas.Estascausastienenunafuertecomponente cesodeensen˜anza-aprendizajedelaMatema´tica.
+psicolo´gicapuestienenqueverconprocesoscognitivosdere- Segu´n (Cantoral, 2006) el pensamiento matema´tico se
+presentacio´n,niveldeabstraccio´nyestructuracioneslo´gicas desarrolla entre los estudiantes en la medida en que ellos
+aunnivelavanzadoporelpropiocontenidodelaMatema´ti- este´n en condiciones de tomar el control de sus propias ac-
+ca.Deesteana´lisispreliminarsepuededecirqueestasinsu- tividades matema´ticas organizadas por su profesor. Adema´s
+ficienciasesta´nmuyvinculadasconelprocesodedesarrollo (Campistrous,1993)entiendeporlo´gicounpensamientoque
+delpensamientolo´gico-matema´ticoavanzado,queintegraen es correcto, es decir, un pensamiento que garantiza que el
+s´ıdichosprocesoscognitivos. conocimiento mediato que proporciona se ajusta a lo real.
+Porinsuficienciassimilaresalasantesdescritas(Azca´ra- Luego el mismo autor citado, en consideracio´n a las inves-
+te, 2003, p.135) afirma que [...] es en el seno del congreso tigaciones de Jean Piaget, determina que, el desarrollo del
+del PME (Psychology of Mathematics Education) en 1985, pensamientoesta´ asociadoaldominiodelosprocedimientos
+cuando se forma un grupo de trabajo cuyo objetivo era es- lo´gicos los cuales se clasifican en correspondencia con las
+tudiar la naturaleza del llamado “pensamiento matema´tico formaslo´gicasdelpensamientoen:conceptos,juiciosyrazo-
+avanzado”. Este se crea con el objetivo de profundizar en namientos.
+las teor´ıas y modelos cognitivos acerca de los procesos de Sobre la importancia de la atencio´n a dichos procesos
+ensen˜anzayaprendizajedelaMatema´tica. cognitivos(Parada,2014)afirmaqueelprofesornecesitate-
+Existenmuchosinvestigadoreseneltemaquenodefinen nerclaridadensupensamientomatema´ticoescolarconelob-
+el te´rmino “pensamiento lo´gico-matema´tico avanzado”, co- jetivodeguiarasusestudiantesaencontrarformasma´su´tiles
+mojustificacio´n planteanque elproblema radica enestable- derepresentarloscontenidosmedianteanalog´ıas,ilustracio-
+cerlosl´ımitesentreelementalyavanzado.Elcalificativode nes,ejemplos,explicacionesydemostraciones.Enestetema
+elemental o avanzado es relativo y no depende de una edad tambie´ninvestiga(DeArmas,2016)sobrelosconocimientos
+determinada, aunque a medida que el estudiante avance en dida´ctico-matema´ticos de los profesores en la ensen˜anza de
+losnivelesdeensen˜anzasehacema´sevidenteelcalificativo lasfuncionesyresaltalanecesidaddeconectardiferentesre-
+deavanzadoentantoquelaMatema´ticasetornama´sformali-
+1“...thusdefinitionofAdvancedMathematicalThinking(AMT)ismat-
+zadaygeneralizada.Luegoloavanzadoesta´determinadopor
+hematical thinking processes which comprise processes of representation,
+laprofundidaddeoperacionesdelintelectoquedeberealizar abstraction,mathematicalcreativethinking,andmathematicalproving.”
+Modeloparaelprocesodedesarrollodelpensamientolo´gico-matema´ticoavanzado 155
+presentacionesdeunconceptomatema´ticoparasuconstruc- elcualseincidesobreelprimero.
+cio´n. Por tanto desde la dida´ctica se entiende el proceso de
+En(D’Amore,2015)sedestacaqueunodelosmayores desarrollo del pensamiento lo´gico-matema´tico avanzado co-
+obsta´culosenelaprendizajedelaMatema´ticaesta´ relaciona- mo la actividad que desarrolla el profesor de Matema´tica
+do con las caracter´ısticas espec´ıficas del u´nico instrumento orientadaalograrelavanceprogresivodelosestudiantesen
+posible de su denotacio´n: los sistemas semio´ticos, y afirma laejecucio´ndeaccionesmentalesquepropicienelnecesario
+queenlaactualidade´steesunodelostemasdemayordifu- niveldeabstraccio´n,elprocesodeformalizacio´ndelconoci-
+sio´nenelmundo, enel a´mbitoinvestigativo.En muchasin- miento, definicio´n de conceptos, representaciones y demos-
+vestigacioneseldesarrollodelpensamientolo´gico-matema´ti- traciones durante la produccio´n de nuevos conocimientos y
+coavanzadoessustentadoteo´ricamentedesdelasrepresenta- laresolucio´ndeejerciciosyproblemas.
+cionessemio´ticas,estesefundamentaenloquesepodr´ıalla- Esdereconocidaimportancialosmodeloselaboradospa-
+marlaparadojacognitivadelpensamientomatema´tico,“[...] raexplicaryapoyarelprocesodeensen˜anza-aprendizajede
+por un lado, la aprehensio´n de los objetos matema´ticos no laMatema´tica.Algunosdeestosintentandescribirelproceso
+puede ser otra cosa que una aprehensio´n conceptual y, por deasimilacio´ncomoelmodelocognitivoAPOE,otroscomo
+otro lado, solamente por medio de las representaciones se- elmodelodePolyadescribenelaccionarprocedimentalpara
+mio´ticasesposibleunaactividadsobrelosobjetosmatema´ti- la resolucio´n de ejercicios y problemas. De hecho, siempre
+cos”(Duval,1998,p.175). que se adopta un patro´n de ensen˜anza, o se sigue sistema´ti-
+camenteunprocedimientoaplicableadeterminadassituacio-
+En este sentido (Duval, 2006) afirma que lo importante
+nes,seesta´ haciendousodeunmodelo.
+para la ensen˜anza de las matema´ticas no es la eleccio´n del
+mejorsistemaderepresentacio´n,sinolograrquelosestudian- Los modelos se disen˜an siguiendo una lo´gica de pensa-
+tesseancapacesderelacionarmuchasmanerasderepresentar miento para describir un proceso y son aplicables a un con-
+loscontenidosmatema´ticos,porquedeestaformasurgira´ la textodeterminado.Cuandoseelaboraunmodelodecara´cter
+comprensio´nconceptual.Otrosustentoteo´ricoloconstituye dida´ctico, por ejemplo para ensen˜ar a resolver ciertos tipos
+elmodelocognitivoAPOE(Accio´n,Proceso,Objeto,Esque- deproblemas,sedisen˜asobrelabasedeciertascondiciones
+ma) que surge como un intento de entender el mecanismo inicialesyprincipiosquerigentodasuestructurainterna.Su-
+de la abstraccio´n reflexiva introducida por Piaget para des- cedemuchasvecesqueelprofesorintentaintroducir,durante
+cribir el pensamiento lo´gico de los nin˜os (Villabona, 2016). la pra´ctica docente, un modelo sin tener presente su adap-
+Estateor´ıaposibilitalaconstruccio´ndeconceptosmatema´ti- tabilidad lo´gica, o sea, la lo´gica del accionar que induce la
+cos siempre que el individuo posea las estructuras previas estrategia o el procedimiento, contrasta con la lo´gica que el
+necesarias.Dichomodelodescribelasaccionesquesedeben estudianteutilizo´ paraasimilarlosconocimientosqueahora
+realizar para la descomposicio´n gene´tica de conceptos, que esta´ intentando poner en pra´ctica por medio de un procedi-
+segu´n (Ange´lica, 2014) se define como, el ana´lisis teo´rico mientoimpuesto,quepuedeserfactibleperonodebeprovo-
+del conceptoen funcio´nde las construccionesmentales que carcontradiccionesconlasformasdeaprendizajepropiasdel
+unestudiantedeber´ıarealizarparadesarrollarlacomprensio´n estudiante.Estoatentacontraelprocesodesignificacio´nyen
+dee´ste. consecuenciaafectalosprocesosderazonamientolo´gico.
+Ladescomposicio´ngene´ticadeconceptosseusayextien-
+deparadescribirco´mounindividuolograciertasconstruccio- 2. Un modelo para el proceso de
+nes mentales sobre un determinado concepto o nocio´n ma-
+desarrollo del pensamiento
+tema´ticaennivelesma´savanzados.Alrespecto(Vega,2014)
+lo´gico-matema´tico avanzado
+afirma que para obtener una descripcio´n de la construccio´n
+del conocimiento matema´tico, solo se puede inferir de las Sobre el concepto de modelo (Valle, 2012, p.138), afir-
+observacionesaunindividuoalenfrentarproblemasositua- maquedesdeelpuntodevistaepistemolo´gicoelmodeloes
+ciones en las que este´ buscando una solucio´n o tratando de “[...] toda construccio´n teo´rica que sirve para interpretar o
+comprender un feno´meno, ya que no es posible observar di- representarlarealidadounapartedelarealidad[...]Enes-
+rectamente los esquemas del conocimiento o sus objetos y tecaso,elmodeloesunamaneradeexplicarlateor´ıaouna
+procesos. parte de la teor´ıa cient´ıfica, acercando lo abstracto a lo con-
+De la bibliograf´ıa sistematizada se puede decir que las creto”.Portantoseconcibeelmodeloparaeltratamientome-
+principalescaracter´ısticasdelpensamientolo´gico-matema´ti- todolo´gico al proceso de desarrollo del pensamiento lo´gico-
+coavanzadoson:elniveldeabstraccio´n,laformalizacio´ndel matema´ticoavanzadocomo:laconcrecio´nteo´rico-formalde
+conocimiento,larepresentacio´n,ladefinicio´ndeconceptosy las caracter´ısticas esenciales del proceso de desarrollo del
+la demostracio´n (Azca´rate, 2003). Luego no es lo mismo el pensamiento lo´gico-matema´tico avanzado. Sustentado en la
+“pensamientolo´gico-matema´ticoavanzado”queel“proceso teor´ıadelasrepresentacionessemio´ticas,losmapasconcep-
+dedesarrollodelpensamientolo´gico-matema´ticoavanzado” tualesyladescomposicio´ngene´ticadeconceptos,quepermi-
+elprimeroesunprocesops´ıquicoquetambie´npuedeenten- ta desde la reflexio´n y la creatividad, una eficiente estructu-
+dersecomoresultado;elsegundoeselmecanismomediante racio´nlo´gicadelconocimientomatema´ticodurantelaresolu-
+156 Modeloparaelprocesodedesarrollodelpensamientolo´gico-matema´ticoavanzado
+cio´ndeejerciciosyproblemasMatema´ticos. 4. Laformacio´nsiste´micadeestructurasconceptuales.El
+Con la implementacio´n pra´ctica del modelo se aspira a aprendizaje y formacio´n sistema´tica de conceptos re-
+quelosestudiantesdesarrollenunrazonamientolo´gico,crea- lacionados entre s´ı constituyen estructuras de conoci-
+tivoycoherentequelepermitalavisualizacio´ngeneralizada miento integradas y potencia el desarrollo del pensa-
+delsistemaconceptualenlabu´squedaeficientedev´ıasdeso- mientolo´gico-matema´ticoavanzado.Estasestructuras
+lucio´nyenelcontroldelprocesodesolucio´ndeejerciciosy cognitivasalmacenaneintegranelconocimientosema´nti-
+problemas.Enlamedidaenquesehagasistema´ticoestemo- codelquedisponeelsujetoas´ıcomoformasintr´ınse-
+dodeactuacio´nseira´alcanzandopaulatinamenteundesarro- casderazonamientosqueseoriginanduranteelproce-
+llo adecuado del pensamiento lo´gico-matema´tico avanzado. sodeasimilacio´n.
+Laideacentraldelmodeloesbuscarunniveldeequilibrioen- 5. La visualizacio´n en la formalizacio´n del conocimien-
+treelprocesodeasimilacio´ndeconocimientosylasformas to. Se manifiesta en el uso de la informacio´n visual
+de razonamiento que el estudiante utiliza durante la utiliza- como un medio para desarrollar el pensamiento ma-
+cio´ndeestosconocimientos,tantoalasolucio´ndeejercicios tema´tico, a trave´s del conocimiento y significado de
+yproblemascomoalaasimilacio´ndenuevosconocimientos. diferentes formas de representacio´n y modelacio´n de
+Paraestemodelosehandeterminadolossiguientesprin- objetosmatema´ticosmediantelasrepresentacionesex-
+cipios: ternasointernas.Enestasaparecendosfacetasba´sicas
+complementarias,unaexternaalossujetos(consopor-
+1. Elcara´cterlo´gico-comunicativo-interpersonal:caracte-
+tematerial)yotrainternaalosmismossujetos(imagen
+rizalaactuacio´ndelprofesordeMatema´ticaylosmo-
+mental).Losestudiantesquehancreadopors´ımismos
+dos de pensar lo´gicos generalizados que le propician:
+undiagrama,dibujos,gra´ficos,etc.,paralaformacio´n
+organizar la lo´gica interna del contenido; comunicar
+deunconcepto,loaprendenmejorylorecuerdanma´s
+y facilitar la comunicacio´n en colectivo, la reflexio´n
+significativamente que aquellos que so´lo conocen su
+ycomprensio´nconscientedelconocimiento;lavalora-
+formalizacio´n.
+cio´ndelcontenidoydesupropioaprendizaje;estimu-
+larlabu´squedadecausasyargumentosyeldesarrollo
+2.1 Relaciones y componentes esenciales del mo-
+delpensamientohipote´tico.Esteprincipiosemanifies-
+delo
+ta en la interaccio´n profesor - estudiante y estudian-
+te-estudiante.Expresalacapacidaddeentenderalos Sepuedeafirmarqueunestudiantehaalcanzadounade-
+dema´seinteractuareficazmenteconellos,lasensibili- cuado desarrollo del pensamiento lo´gico-matema´tico avan-
+dadaexpresionesfaciales,lavoz,losgestosyposturas zado cuando logra visualizar una coherente estructuracio´n
+ylahabilidadpararesponderyusarlaspalabrasdema- siste´mico-lo´gica de sus conocimientos, tiene una visio´n ge-
+neraefectiva. neralizada de su sistema de conocimientos, tiene control en
+2. El cara´cter sistema´tico de la coordinacio´n entre regis- ladireccio´ndesusrazonamientos,racionalizaeltrabajomen-
+trosderepresentacionessemio´ticas:elpensamientolo´gi- talyaplicaconeficienciaprocedimientoslo´gicosalaresolu-
+co - matema´tico avanzado se caracteriza por su natu- cio´ndeejerciciosyproblemasdeMatema´tica.Estoimplica
+ralezasemio´ticamentemediatizada.Enestesentidola queelprocesodeensen˜anza-aprendizajedebetenderaldesa-
+comprensio´ndeuncontenidoconceptualreposasobre rrollo de estructuras cognoscitivas que permitan acceder al
+lacoordinacio´ndealmenosdosregistrosderepresen- conocimiento con menor desgaste y mayor racionalizacio´n
+tacio´n,yesacoordinacio´nsemanifiestaporlarapidez deltrabajomentalposible.
+y espontaneidad de las actividadesde conversio´n. Por En este sentido el pensamiento lo´gico-matema´tico avan-
+tanto las transformaciones semio´ticas y la coordina- zado,juegaunpapelfundamentaldurantedeasimilacio´nnue-
+cio´n entre los registros de representacio´n son impres- vosconocimientosysemanifiestacomoelprocesops´ıquico
+cindiblesparasudesarrollo. cognoscitivo responsable de todas las relaciones y configu-
+3. Lasignificatividaddelcontenidocomobasedelapren- raciones complejas entre nu´cleos conceptuales. Es el crea-
+dizaje: el aprendizaje significativo es un mecanismo dor de nuevas conexiones lo´gicas que emergen de nu´cleos
+humano por excelencia para el desarrollo del pensa- conceptualesprevios,estasconstituyenelnuevoconocimien-
+miento lo´gico-matema´tico avanzado. El nuevo conte- to. Los nu´cleos conceptuales son el pivote cognitivo que se
+nido debe relacionarse de modo intencionado dentro han ido construyendo y enriquecie´ndose durante an˜os, for-
+deldominiodelacapacidadintelectualdeasimilacio´n, manunaunidadcognoscitivaalrededordelacualseformay
+osea,debetenersignificatividadlo´gicarespectoalos acumulainformacio´n,sonma´sconsistentesmientrasma´sin-
+contenidos.Unamaneraeficientedeemplearlasideas terrelacio´n siste´mica tenga entre sus componentes. Las nue-
+previamenteaprendidasenelprocesamiento(internali- vas formas de razonamiento se originan cuando se realizan
+zacio´n)deideasnuevasconsisteenrelacionarlasinten- nuevasconfiguracioneslo´gicasysiste´micasentrelosnu´cleos
+cionadamenteconlasprimeras.Lasideasnuevas,que de conceptuales, cada nueva configuracio´n, origina objetos
+seconviertenensignificativas,expandentambie´nasu matema´ticosyaseaconceptos,definiciones,operaciones,for-
+vez,labasedelamatrizdeaprendizaje. masderazonamiento,teoremasyjuicios.
+Modeloparaelprocesodedesarrollodelpensamientolo´gico-matema´ticoavanzado 157
+Las esencias de todo nuevo conocimiento que se apren- aporta las formalizaciones sucesivas acompan˜adas de
+dera´ esta´n “distribuidas” en los conocimientos precedentes. lascualidadesesencialesquesevanaportandoalafor-
+Enestecasosedecidio´ agruparestoscontenidosennu´cleos macio´ndelnuevoentematema´tico.Sucedequeaveces
+conceptuales,loscualesser´ıanentoncesunaunidadcognos- se usa la definicio´n sin tener presente las cualidades
+citiva que proporciona material gene´tico y alrededor de la esencialesdelconcepto(procedimientomecanicista)y
+cual se crea y acumula informacio´n. A diferencia de los no- viceversaavecessetienelaideaesencialointuitivay
+doscognitivos,lafuncio´ndelosnu´cleosconceptualesespro- el estudiante no sabe formalizarla (expresar en te´rmi-
+porcionar conocimiento y propiedades para la formacio´n de nosmatema´ticos).
+nuevos conocimientos. Estos nu´cleos esta´n compuestos por 2. Operaciones y relaciones: Este nu´cleo proporciona
+varios conceptos. Luego que un nuevo concepto es aprendi- lasarticulaciones,elengranajelo´gicoqueledacuerpo
+do,entoncesdebeformarpartedealgu´nnu´cleoconceptual. yestructuraalnuevoobjetomatema´ticoqueseconstru-
+Acontinuacio´nsepresentaunesquemadondesehanre- ye.Aqu´ıentranajugarunpapelimportantelosconcep-
+presentadolasrelacionesqueexistenentreloscomponentes tos de las operaciones aritme´ticas, algebraicas y tras-
+delprocesodeldesarrollodelpensamientolo´gico-matema´ti- cendentes, igualdades, desigualdades, relaciones fun-
+coavanzado. cionalesqueseusanenlaelaboracio´ndelanuevade-
+finicio´n, o sea, en la formalizacio´n del nuevo conoci-
+miento.
+3. Relacionesme´tricas:Estenu´cleoproporcionalasideas
+gra´ficas de cantidad nume´rica, nociones de distancia,
+proximidad,optimizacio´n.Aportaelementosgeome´tri-
+cosqueayudanacomprenderelsignificadodeciertos
+procesosdel´ımiteyconvergencia.Enmuchasocasio-
+nes este nu´cleo conceptual es el responsable de que
+existaconversio´nentrelosregistrosderepresentacio´n
+semio´tica:algebraicoygeome´trico,yaqueapartirde
+unmodelointuitivogra´ficoogeome´trico,seformaliza
+laideaente´rminosalgebraicos.
+Figura1.Relacionesesencialesdelprocesodedesarrollo Este modelo tiene dos nodos principales: el de la base
+delpensamientolo´gico-matema´ticoavanzado.Fuente: generadora y el de las configuraciones. Es entre la interac-
+elaboracio´npropia. cio´ndeestosdossistemasqueocurreelimportanteproceso
+derepresentacio´nsiste´mico-lo´gicadeestructurasconceptua-
+En este esquema la base generadora del conocimiento lesmediatizadaporelniveldeabstraccio´nysedefinecomo
+contienetresnu´cleosconceptuales:conceptosydefiniciones, lavisualizacio´ngeneralizadadelascualidadesesencialesde
+relaciones-operacionesyrelacionesme´tricas.Sobreestos,los unsistemadeconceptosordenadosjera´rquicamente,median-
+procesoslo´gicosdelpensamientolo´gico-matema´ticoavanza- te la cual el estudiante orienta su razonamiento durante la
+doerigentodalaestructuradecontenidosdelaMatema´tica. resolucio´n de ejercicios y problemas. Luego el tratamiento
+Dichosnu´cleosagrupanlasl´ıneasdirectricesdelamatema´ti- metodolo´gicoalarepresentacio´nsiste´micolo´gicadeestruc-
+ca, que han sido desarrolladas desde la matema´tica escolar. turas conceptuales son las acciones de visualizacio´n gra´fica
+Es complejo el estudio de cada nu´cleo por separado porque querealizaeldocenteparailustrarlascualidadesyrelaciones
+esta´ncompenetradoseinterrelacionados,peroenelactodel esenciales de un sistema jera´rquico de conceptos o proceso
+proceso de ensen˜anza - aprendizaje de un nuevo objeto ma- derazonamiento,apoya´ndoseenlasfuncionesdetratamien-
+tema´tico podemos diferenciar los aportes que realiza cada toyconversio´nregistrosderepresentacionessemio´ticas.
+nu´cleoalaconstruccio´ndelnuevoobjeto.Esimportantesa- Elmodelotransitaportresfasesquesedescribenaconti-
+berdentrodeque´ nu´cleoseincluira´ elnuevoobjeto,yaque nuacio´n.
+este pasar´ıa a ser un nuevo elemento de alguno de ellos. A Fase de activacio´n: Con esta fase comienza el ciclo de
+veces no se usa completamente el objeto sino la forma de desarrollodelpensamientolo´gico-matema´ticoavanzadoyse
+razonamientoqueseuso´ parasucreacio´nyasimilacio´n. caracterizapordosmomentosesenciales:
+1. Conceptos y definiciones: Este nu´cleo agrupa mu´lti- 1. Activacio´nyexcitacio´ndelosnu´cleosconceptualesa
+ples conceptos y definiciones, proporciona las cuali- partirdelamotivacio´nynecesidaddeaprendizaje.Se
+dades esenciales y la formalizacio´n del conocimiento poneadisposicio´nelmaterialgene´ticodelconocimien-
+matema´tico. Cuando se usa un concepto para la cons- toparaformarnuevosobjetosmatema´ticos.
+truccio´noadquisicio´ndenuevosconocimientos,nece- Elprofesordebegenerarunanecesidadcognitivaenel
+sariamente se debe usar cierta formalizacio´n de este, estudiante,yestedebereconocerlafaltaeimportancia
+que vendr´ıa siendo una definicio´n. Luego este nu´cleo delosnuevosconocimientosensussaberespararesol-
+158 Modeloparaelprocesodedesarrollodelpensamientolo´gico-matema´ticoavanzado
+ver problemas. El profesor a trave´s de impulsos bien Fase de aplicacio´n: Esta fase se desarrolla durante la
+intencionadosdebelograrlaactivacio´nyexcitacio´nde aplicacio´n de los nuevos conocimientos a la resolucio´n de
+losnu´cleosconceptualesportadoresdelconocimiento ejerciciosyproblemas,esta´ constituidapordos
+necesarios.Estoselementosdebenseresquematizados
+1. Desintegracio´ndeobjetosmatema´ticosdelconocimien-
+enunmapaconceptualdemaneraqueelestudiantevi-
+to relacionados con la posible solucio´n a ejercicios y
+sualicelasrelacionesconceptuales,utilizandodistintas
+problemas. En este momento el estudiante activa sus
+representacionessemio´ticasparaunmismoconcepto.
+conocimientosparaaplicarlostantoalaasimilacio´nde
+2. Primera abstraccio´n reflexiva a partir de la prioriza-
+nuevos conocimientos como a la resolucio´n de ejerci-
+cio´n mental de las cualidades esenciales que aportan
+ciosyproblemas.Apartirdeestadesintegracio´ncogni-
+losnu´cleosconceptuales,mediatizadapordistintasre-
+tivaemergenlosrazonamientosyprocedimientosque
+presentacionessemio´ticas.
+dieronorigenadichosconocimientos,estospropician
+Este es un proceso que debe ocurrir despue´s que se
+distintos enfoques para la bu´squeda de posibles solu-
+activenlosnu´cleosyelestudiantevisualiceunarepre-
+ciones.Enestesemanifiestanlosprocesosdeana´lisis,
+sentacio´nesquema´tica,conelobjetivodelograraliviar
+abstraccio´n,comparacio´n,s´ıntesiscualitativamentesu-
+el nivel de abstraccio´n. En este se priorizan las cuali-
+perior,analog´ıasytransferencias.
+dades esenciales que aportan los conceptos preceden-
+2. Aplicacio´ndeestrategiasyprocedimientosparalaso-
+tes al nuevo objeto, teorema o propiedad matema´tica.
+lucio´ndeejerciciosyproblemas.Elprimerpasoestra-
+Es una primera abstraccio´n reflexiva porque se reali-
+tar de configurar el espacio cognitivo-cao´tico genera-
+zara´ con las partes constituyentes previo a integrarlas
+do por el tipo de ejercicio o problema, en este caso
+enuntodoparadarorigenanuevosconocimientos.
+elestudianteensayaposiblesorganizaciones.Luegoel
+pensamientosecentraenesazona,tratandodebuscar
+Fasedeconfiguracio´n:Enestaseestablecenlasnuevas
+posibles ordenaciones que lo aproximen a una v´ıa de
+relaciones entre las partes constituyentes del nuevo objeto
+solucio´n.
+matema´tico. Tiene lugar durante el proceso de asimilacio´n
+del nuevo contenido. Esta fase se desarrolla en tres momen- Sielestudiantelogravisualizarunaposibleorde-
+tosfundamentales: nacio´n, esta ser´ıa la solucio´n y entonces esta´ en
+presencia de un ejercicio para el cual se conoce
+1. Configuracio´nentreelementosdelosnu´cleosconcep- un procedimiento. Los obsta´culos ser´ıan enton-
+tuales. Emergen relaciones entre los nu´cleos concep- ces,insuficienciaenelsistemadeconocimientos
+tualesqueoriginannuevosconceptosyformasderazo- olaformaenformaalgor´ıtmicaometodolo´gica
+namientos.Estascualidadesensuestadoinicialseen- queutilizaparaorganizarysolucionar.
+cuentrancomoideasintuitivasnoformalizadasqueal Sielestudiantenolograverunaposibleorganiza-
+integrarse originan nuevos objetos matema´ticos y for- cio´nosolucio´n,esta´enpresenciadeunproblema.
+mas de razonamiento. En este caso se necesita de un Entalcasodebe,comenzaradarpasos,ensayan-
+altogradodevisualizacio´ngra´ficaparareducirelnivel do posibles ordenaciones lo´gicas de contenidos,
+deabstraccio´n. procedimientos heur´ısticos y me´todos. Hasta lo-
+2. Formalizacio´n,enestecasolasnuevasideasemergen- grar visualizar una posible solucio´n, en tal caso,
+tesensuestadoinicialsonintuitivasnoformalizadas, elproblemadejo´ deserproblema.Apartirdeun
+por tanto es necesario que se le asignen nuevos refe- punto inicial en cierta sucesio´n de pasos, el pro-
+rentesendistintostiposderepresentacio´nsemio´ticay blemadejadeserproblemayseconvierteenun
+sefinalizaconladefinicio´nformal.Posteriormentese ejercicio.Poresoavecessecomienzaaresolver
+demuestranlasnuevaspropiedadesinherentesalnuevo cierto problema con la certeza de que en algu´n
+objetomatema´tico. momentoseconvertira´ enunejercicio.
+3. Segundaabstraccio´nreflexiva:semanifiestaenlaprio- En el problema no se conoce la v´ıa de solucio´n
+rizacio´n mental del las caracter´ısticas esenciales del porqueelestudianteau´nnoescapazdevisualizar
+nuevo objeto que ya ha sido construido. En este caso unaorganizacio´ncognitivaqueloacerquealob-
+elestudiantedebevisualizarlaspropiedadesgenerales jetivo.Entalcasoelestudianteeneltrascursode
+del nuevo objeto aprendido, establecer las relaciones las operaciones ira´ percibiendo lo pro´ximo que
+conotroscocimientos,comprenderlosrazonamientos hay que hacer, si mantiene cierto orden de ope-
+quedieronlugaralnuevoconocimientoyconocerlos raciones. La complejidad de la actividad esta´ en
+procedimientosasociadosalasformasdeaplicacio´n. la cantidad de interacciones a organizar y en las
+4. Integracio´ndelnuevoobjetomatema´ticoalabasege- exigencias.Enestecasoelpensamientoesavan-
+neradora del conocimiento a partir de la sistematiza- zado porque tiene que buscar recursos para opti-
+cio´ndesuspropiedadesconlosnu´cleosconceptuales. mizarunagrancantidaddeinteracciones.Luego
+Debe existir consistencia lo´gica entre las propiedades ensen˜ar a pensar es buscar linealidad, organiza-
+delnuevoobjetoylosmapasconceptualesexistentes. cio´nyprecisio´nenlasaccionesquerealizaeles-
+Modeloparaelprocesodedesarrollodelpensamientolo´gico-matema´ticoavanzado 159
+tudiante.Esdotaralestudiantedesen˜alizaciones nuevo concepto, se deben proponer definiciones equi-
+lo´gicas que lo orienten durante el proceso de ra- valentes.
+zonamiento. 7. Ejemplificarconrepresentantesdelnuevoconceptoen
+El estudiante logra visualizar una posible solu- distintosregistrosderepresentacionessemio´ticasreali-
+cio´nalproblemapuedeverununiversodecono- zando funciones de tratamiento y conversio´n entre es-
+cimientosordenadooco´moquedar´ıaorganizada tos.
+la respuesta. Este tipo de estudiante, en su pen- 8. Visualizar mediante un mapa conceptual la posicio´n,
+samiento retorna al principio y comienza a dar funcio´n y relacio´n del nuevo concepto aprendido con
+pasosdeavance,conlaventajadeircomparando losconceptosdelosnu´cleosconceptualesqueledieron
+el universo cognitivo-cao´tico y el ideal, en cada origen.
+pasoprocedimentalcomparasilareorganizacio´n 9. Resolverejerciciosyproblemasquerelacionenelnue-
+leacercama´saluniversoideal. voconceptoconlosconceptosinmediatosdelosnu´cleos
+conceptuales que le dieron origen. Luego profundizar
+Paralaintroduccio´npra´cticadeestemodeloenlasclases elniveldecomplejidaddelconcepto,estosedebeha-
+deMatema´ticaseproponelautilizacio´ndelme´todogene´tico- cervariandolasformasdeaplicacio´ndesuspropieda-
+constructivoquesedefinecomolasaccionessecuencialesy des y cualidades en distintos registros de representa-
+siste´micasquerealizaeldocenteparaqueelestudianteasimi- cio´nsemio´tica.
+lelasnuevasconfiguracionesentrelosnu´cleosconceptuales
+delconocimiento,apoyadoenladescomposicio´ngene´ticade
+3. Conclusiones
+conceptos, los mapas conceptuales y las funciones de trata-
+miento y conversio´n entre registros de representaciones se- Elpensamientolo´gico-matema´ticoavanzadoesunproce-
+mio´ticas.Lasaccionesparalaimplementacio´ndeesteme´to- so ps´ıquico cognoscitivo que se manifiesta durante la inter-
+dosedetallanacontinuacio´n: accio´n del hombre con objetos matema´ticos, ya sea para la
+asimilacio´n de estos o para su aplicacio´n. Este proceso per-
+1. Identificar los posibles nu´cleos conceptuales del co- miteaccederaloesencialdentrodelocomplejo,direcciona
+nocimiento sobre los cuales se realizara´n las nuevas los razonamientos de forma que se tenga una visio´n genera-
+configuracionesquedara´npasoalnuevoconceptoma- lizadadelosprocesosdeasimilacio´nydelcontrolalasolu-
+tema´tico,propiciandodeestaformaunaprendizajesig- cio´ndeejerciciosyproblemas.Paraelestudiodeestetipode
+nificativo. pensamientosehanelaboradomodeloscognitivosydida´cti-
+2. Identificar los componentes y propiedades que apor- cosquepermiten potenciar,desdelas clasesde Matema´tica,
+tacadanu´cleoconceptualalnuevoobjetomatema´tico. formasderazonamientoslo´gicos.
+Estosepuedeobteneratrave´sdeunadescomposicio´n Elmodeloqueseproponetiendeabuscarunalinealidad
+gene´ticadelnuevoconceptoquedebeaprenderelestu- entrelasformasderazonamientoqueseoriginanduranteel
+diante. procesodeasimilacio´nylasformasderazonamientoquese
+3. Visualizar aisladamente los componentes y propieda- utilizan durante la resolucio´n de ejercicios y problemas ma-
+desqueaportacadanu´cleoconceptual.Estosepuede tema´ticos. Para ello se establece una fase de activacio´n que
+realizarconlaayudadelasfuncionesdetratamientoy se realiza sobre la base generadora, constituida por nu´cleos
+conversio´nentredistintosregistrosderepresentaciones conceptuales, posteriormente se trabaja el proceso de asimi-
+semio´ticas. lacio´ncomonuevasconfiguracionesentrenu´cleosconceptua-
+4. Apoyar las nuevas conexiones lo´gicas, entre los com- les, es en este proceso donde emergen nuevas formas de ra-
+ponentes de los nu´cleos conceptuales, con representa- zonamientos y finalmente una fase de aplicacio´n donde el
+ciones gra´ficas. Esto potencia el nivel de abstraccio´n estudiante debe poner en accio´n el nuevo conocimiento in-
+paralascualidadesesencialesquetendra´elnuevocon- tegra´ndolosistema´ticamentealamayorcantidaddeestructu-
+ceptomatema´ticoaprendido.Adema´spropiciaunavi- rascognitivasprecedentes.
+sualizacio´n generalizada de la estructura lo´gica en el Una de las formas de implementar en la pra´ctica el mo-
+edificioteo´ricoconceptualqueseconstruye. delo para el desarrollo del pensamiento lo´gico-matema´tico
+5. Formalizarsucesivamentecadaresultadodelasnuevas avanzado es la utilizacio´n del me´todo gene´tico-constructivo
+configuracionesentrelosnu´cleosconceptuales.Prime- desdelaclasedeMatema´tica.Conlaaplicacio´nsistema´tica
+ro en un lenguaje intuitivo y luego en la terminolog´ıa de dicho me´todo es posible potenciar la racionalizacio´n del
+convencional.Estodeberealizarseapartirdelrazona- trabajomental,elniveldeabstraccio´nas´ıcomolavisualiza-
+miento gra´fico realizado y la mediacio´n semio´tica en- cio´ngeneralizadaycoherentedelaestructurasiste´mico-lo´gi-
+trefuncionesdetratamientoyconversio´n. ca de conocimientos durante los procesos de ejecucio´n en
+6. Definir formalmente en la terminolog´ıa convencional ejerciciosyproblemas.Estasformasderazonamientotienen
+las nuevas conexiones lo´gicas entre los componentes su ge´nesis durante el proceso de asimilacio´n y se sustentan
+de los nu´cleos conceptuales. A partir de las propieda- en la descomposicio´n gene´tica de conceptos, el trabajo con
+des y cualidades de los componentes que integran el la coordinacio´n de registros semio´ticos y los mapas concep-
+160 Modeloparaelprocesodedesarrollodelpensamientolo´gico-matema´ticoavanzado
+tuales. [10] Duval, R. (2006). Un tema crucial en la educacio´n
+Matema´tica: La habilidad para cambiar el registro
+Referencias de representacio´n. LA GACETA DE LA RSME, 9(1),
+143 -168. Instituto Peruano de Evaluacio´n, Acredita-
+[1] Ange´lica, M. (2014). Ana´lisis segu´n el Modelo Cog-
+cio´nyCertificacio´ndelaCalidaddelaEducacio´nBa´si-
+nitivo APOS del Aprendizaje Construido del Concep-
+ca - IPEBA. Disponible en http: //www.ipeba.gob.pe/
+to de la Derivada. Bolema, Rio Claro (SP), v. 28, n.
+estandares/MapasProgresoMatematicaNu´merosOpera-
+48, p. 403-429, abr. ISSN 1980-4415 Disponible en:
+ciones.pdf.
+http://dx.doi.org/10.1590/1980-4415v28n48a20.
+[11] Gonza´lez,V.(1995).Psicolog´ıaparaeducadores.Edi-
+[2] Artigue,M.(2003).¿Que´sepuedeaprenderdelainves-
+torial Pueblo y Educacio´n Ciudad de La Habana.
+tigacio´neducativaenelnivelUniversitario?Bolet´ınde
+Pa´g.187-188.Pa´g.47.
+laAsociacio´nMatema´ticaVenezolana,Vol.X,No.2pp.
+117-131. [12] Herlina, E. (2015). Advanced Mathematical Thinking
+and the Way to Enhance IT, Journal of Education
+[3] Asuncio´n,M.(2012).Apuntesteo´ricossobreelpensa-
+and Practice, ISSN 2222-1735 (Paper) ISSN 2222-
+mientomatema´ticoymultiplicativoenlosprimerosni-
+288X(Online),Vol.6,No.5,2015,Pa´g.2,Disponibleen:
+veles,ISSN:2254-8351SN:2254-8351.Universidadde
+www.iiste.org
+Almer´ıa,pa´g.2.Disponiblepor:mabosch@ual.es.
+[13] (2016). Modelo del profesional, Plan de estudio E.
+[4] Azca´rate,C.(2003).SobrelaInvestigacio´nenDida´cti- CarreraEducacio´nMatema´tica,Comisio´nNacionalde
+ca del Ana´lisis Matema´tico. Bolet´ın de la Asociacio´n Carrera,Cuba,Pa´g.8.
+Matema´ticaVenezolana,Vol.X,No.2135-146.
+[14] Parada, S. (2014). Reflexiones de profesores de
+[5] Campistrous. (1993). Lo´gica y procedimientos lo´gicos Matema´tica sobre aspectos relacionados con
+del aprendizaje. Ciudad de La Habana: Repu´blica de su pensamiento dida´ctico. Revista Latinoame-
+Cuba.MINED.InstitutoCentraldeCienciasPedago´gi- ricana de Investigacio´n en Matema´tica Educa-
+cas,pa´g.18.Materialimpreso. tiva, vol. 17, nu´m. 1, marzo, pp. 83-113, p.88.
+Disponible en:http://www.redalyc.org/ articu-
+[6] D’Amore, B. (2015). Ana´lisis de los antecedentes
+lo.oa?id=33530083005.
+histo´ricos-filoso´ficos de la “paradoja cognitiva de Du-
+val”.RevistaLatinoamericanadeInvestigacio´nenMa- [15] Petrovski,A.(1985).Psicolog´ıaGeneral.Ed.Progreso.
+tema´ticaEducativa,vol.18,nu´m.2,2015,pp.177-212. Moscu´.Pa´g.311.
+Pa´g. 178. Disponible en: http://www.redalyc.org / ar-
+[16] Rubinstein, S.L. (1966). El proceso del pensamiento.
+ticulo.oa?id=33540064003.
+EditorialUniversitaria,LaHabana,Cuba.
+[7] De Armas, A.; Tulio R.; Pino-Fan; Luis R.; Medina,
+[17] Valle,A.(2012).Lainvestigacio´npedago´gica.Otrami-
+A.(2016).Evaluacio´ndelconocimientodefuturospro-
+rada.EdPuebloyEducacio´n,LaHabana,Cubap.135-
+fesores de matema´ticas sobre las transformaciones de
+140.
+las representaciones de una funcio´n Educacio´n Ma-
+tema´tica, vol. 28, nu´m. 3, diciembre, 2016, pp. 111- [18] Vega, M.; Carrillo, J.; Soto, J. (2014). Ana´lisis segu´n
+144. Grupo Santillana Me´xico. Distrito Federal, Me´xi-
+el Modelo Cognitivo APOS del Aprendizaje Construi-
+co. Disponible en: http: //www.redalyc.org / articulo dodelConceptodelaDerivada.ISSN1980-4415.Bo-
+.oa?id=40548562005.
+lema, Rio Claro (SP), v. 28, n. 48, p. 403-429, abril.
+Pa´g.406.Disponibleenhttp://dx.doi.org/10.1590/1980-
+[8] Delgado,J.(1999).Tesisdoctoral:Laensen˜anzadela
+4415v28n48a20.
+resolucio´n de problemas matema´ticos. Dos elementos
+fundamentales para lograr su eficacia: la estructura- [19] Vigotsky, L. S. (1987). Historia del desarrollo de
+cio´nsiste´micadelcontenidodeestudioyeldesarrollo lasfuncionesps´ıquicassuperiores.EditorialCient´ıfico
+de las habilidades generales matema´ticas. Base de da- Te´cnica,LaHabana.P.161.
+tosAGIC-CREA.
+[20] Villabona, M. (2016). Procesos iterativos infini-
+[9] Duval,R.(1998).Registrosderepresentacio´nsemio´tica tos y objetos trascendentes: un modelo de cons-
+yfuncionamientocognitivodelpensamiento.EnInves- truccio´n del infinito matema´tico desde la teor´ıa
+tigaciones en Matema´tica Educativa II (Editor F. Hitt). APOE. Educacio´n Matema´tica, vol. 28, nu´m.
+GrupoEditorialIberoame´rica.Traduccio´nde:Registres 2, agosto, 2016, pp. 119-150. Grupo Santillana
+derepre´sentationsse´miotiqueetfunctionnementcognitif Me´xico. Distrito Federal, Me´xico. Disponible en:
+delapense´e.AnnalesdeDidactiqueetdeSciencesCog- http://www.redalyc.org/articulo.oa?id=40546500005
+nitives,Vol.5,p.175.

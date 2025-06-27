@@ -1,0 +1,622 @@
+CienciasMatemáticas,Vol.33,No.1,Pag.28-35,2019
+Cálculo de bases de Gröbner completas asociadas a
+códigos lineales
+Computing complete Gröbner bases associated with
+linear codes
+Mijail Borges Quintana1*, José A. Ornella Rodriguez1
+Resumen LaTeoríadeCódigos(TC)surgepararesolverlacorreccióndeerroresdurantelatransmisiónde
+datos,congranaplicaciónenlasTelecomunicaciones,laCriptografíayotrasramasvinculadasalaemisión
+yrecepcióndeinformación.DentrodelaTCloscódigoslinealesconstituyenunaestructuramuyimportante.
+Por otra parte, las bases de Gröbner (BG) constituyen una potente herramienta de trabajo en el caso de
+investigaciones asociadas a un álgebra polinomial. Las BG han sido conectadas con los códigos lineales a
+través de la asociación de ciertos ideales con los códigos. En este trabajo se define una nueva variante de
+BG, denominadas BG completas y se modifica el modelo GBLA (Gröbner Bases by Linear Algebra) para el
+cálculodeestaBG,desarrollándoseunaimplementacióndeestenuevoalgoritmo.Sedemuestraqueciertos
+tiposdistintivosdeéstasBGcompletasconstituyenuninvariantequepuedeserutilizadoparadeterminarla
+equivalenciadecódigoslineales.Además,serealizancomparacionesexperimentalesencuantoaltiempode
+cómputodelnuevoalgoritmoimplementadoconrespectoaotrasimplementacionesrealizadasanteriormente
+quecalculanBG.ElalgoritmoimplementadosebasaenlaasociaciónentrelastécnicasdeconstruccióndeBG
+yloscódigoslineales.Porotraparte,seextiendeelcálculodeBGasociadasacualquiercódigolineal,utilizando
+elmodeloGBLA,locualsoloestabadisponibleparacódigosbinarios.
+Abstract CodingTheoryarisestosolvetheerrorcorrectionduringdatatransmission,withgreatapplication
+in the telecommunications, Cryptography and other tied branches related to the emission and reception of
+information. Insidecodingtheory,thelinearcodesconstitutesaveryimportantstructure. Ontheotherhand,
+theGröbnerbases(GB)constituteapowerfulworkingtoolinthecaseofresearchassociatedtoapolynomial
+algebra. TheGBhasbeenconnectedwiththelinearcodesthroughtheassociationofcertainidealswiththe
+codes. InthisworkanewvariantofGBisdefined,calledcompleteGBandtheGBLAmodel(GröbnerBasesby
+LinearAlgebra)ismodifiedforthecomputationofthisGB,developinganimplementationofthisnewalgorithm.
+It is proved that certain kinds of complete GB constitutes an invariant which can be used to determine the
+equivalenceoflinearcodes. Also,experimentalcomparisonsaremadeintermsofthecomputationtimeofthe
+newalgorithmimplementedwithrespecttootherimplementationscarriedoutpreviouslyforcomputingGB.The
+algorithmimplementedisbasedontheassociationbetweenGBconstructiontechniquesandlinearcodes. On
+theotherhand,theGBcomputationassociatedwithanylinearcodeisextended,usingtheGBLAmodel,which
+wasonlyavailableforbinarycodes.
+PalabrasClave
+BasesdeGröbner,AlgoritmodeMöller,Códigoslineales,Equivalenciadecódigos
+Keywords
+Gröbnerbases,Mölleralgorithms,Linearcodes,Equivalenceoflinearcodes
+1DepartamentodeMatemática,UniversidaddeOriente,SantiagodeCuba,Cuba,mijail@uo.edu.cu,jornella@uo.edu.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción tosmatemáticosjueganunpapelrelevanteelálgebralineal
+yabstractayladefinicióndelaestructuradecódigoslinea-
+les que constituyen los códigos correctores de errores más
+LaTCformahoyunextensoyfructíferocampodeinterac-
+utilizadosydemayoraplicación.
+ciónentrelasMatemáticasylasTecnologíasdelaInforma-
+ción,enelqueconceptosyresultadosmatemáticosabstractos El concepto de BG se introduce en la tesis doctoral de
+permitendarelegantessolucionesalproblemadetransmitir BrunoBuchbergeren1965conelobjetivoderesolverelpro-
+informacióndeformaeficienteysegura.Entreestosconcep- blemadelapertenenciadeunpolinomioaunideal.Comoel
+CálculodebasesdeGröbnercompletasasociadasacódigoslineales 29
+aportefundamentaldeBuchbergerseconsideralaformula- AsociadaatodaaplicaciónlinealLexisteunamatrizG
+ciónyfundamentacióndeunalgoritmoparaelcálculodelas llamadamatrizgeneratriz,queeslamatrizdelaaplicación
+BG(AlgoritmodeBuchberger). lineal L, la cual genera todas las palabras del código (C=
+En[?]seintroduceelmodeloGBLA(GröbnerBasisby {xGt : x∈Fk}),sinembargo,unsubespaciovectorialdeFn
+q q
+Linear Algebra) en el cual se formaliza un contexto y al- puededescribirsenosólomedianteunsistemadegeneradores
+goritmopatróngeneraldealgoritmostipoMöller,comose (lo que da lugar al concepto de generatriz), sino también
+reconocemayoritariamenteporlacomunidadcientíficainter- mediante unas ecuaciones implícitas, entonces, existe una
+nacional, para la utilización de técnicas de Álgebra Lineal matrizH 2talqueunvectorcdeFnesunapalabradel
+n×(n−k) q
+paraelcálculodeBGyotrasestructurassimilares.Elideal códigosi,ysólosi,satisfaceelsistema
+asociadoconelmodeloGBLAparaelcasodecódigoslinea-
+lessedenominaelidealasociadoalcódigolineal.Enel2013,
+cH = 0. (1)
+en[?]seintroduceotraformadeconstruirelidealasociado
+alcódigo(idealgeneralizadodelcódigo).
+ComoconsecuenciaelconjuntoCsepuedecaracterizar
+Conelidealgeneralizado,aunqueseintroducenmásinde- comoelconjuntodetodosloselementosenFnquesatisfacen
+q
+terminadas,sepuederesolverladecodificacióndecualquier
+elsistemaanterior.H sedenominamatrizdecontrol(parity
+código lineal mediante el cálculo de una BG reducida de
+checkmatrix)paraelcódigo.
+manera análoga a como se hace en el caso binario para la
+representaciónestándar. Definición2(DistanciadeHamming) Sedenominadistan-
+En [?] se trata lo referido a la equivalencia de códigos ciadeHammingentredosvectoresalacantidaddecompo-
+binarios,queplanteaquedadouncódigoyunaBGreducida nentesdiferentesentreellos.Osea,dadosx,y∈Fn
+q
+asociadaaeste,sepuedeverque,permutandoestabase,ob-
+tendremosunabasereducidaasociadaauncódigoqueesel
+d (x,y)=#{i|1≤i≤n,x (cid:54)=y}. (2)
+resultadodeaplicarlamismapermutaciónalcódigodado,es H i i
+decir,obtenemosunaBGreducidadeuncódigoequivalente.
+Definición3(Peso) El peso de un vector v se define como
+Noobstante,sisedeseahallarunapermutaciónbajolacual
+sudistanciadeHammingdesdeelvectornulo.Elpesodel
+doscódigossonequivalentes,teniendodosBGdeestoscódi-
+vectoryserepresentaráporw (y).
+H
+gos,engeneralnoesposible,puestoqueestasbasesnoson
+necesariamenteequivalentes,esdecirunanoesnecesariamen- Luegow H (w)=d(w,0).Además,d H (x,y)=w H (x−y).
+telaimagenporunapermutacióndelaotra.Porello,surge
+Definición4(Soporte) Sea v∈Fn, el soporte del vector v,
+lanecesidaddepotenciarlascualidadesinvestigadasdelas q
+denotadoporsupp(v),sedefinecomo
+BGdecódigosbinarios,deformaqueseobtenganverdaderas
+estructurasinvariantesparacódigosequivalentesyademásno
+solamentebinarios.Deestamanerasurgelaestructuraalge- supp(v)={i:v (cid:54)=0}. (3)
+i
+braicaprincipaldeestetrabajo,lasBGcompletasasociadasa
+uncódigolineal. Definición5(DistanciaMínima) Elmenorpesodelaspa-
+labrasdelcódigononulasseconocecomodistanciamínima
+delcódigo.
+1. Preliminares
+Definición6(CapacidadCorrectora) Si d es la distancia
+1.1 Códigoslineales
+mínimadelcódigoC,seconocequepuedencorregirsehasta
+Enestasecciónseestudiaránalgunasnocionessobrela
+t errores,donded=2t+1od=2t+2,esteparámetrot se
+teoría de los códigos lineales. Un estudio más detallado se
+conocecomolacapacidaddecorreccióndeerroresdeun
+puedeencontraren[?].
+SeaF elcampodeGaloisdeqelementos(q=pm,donde código.
+q
+pesunnúmeroprimo)1.
+Sedicequeuncódigoes[n,k,t]sitienelongitudn,dimen-
+Definición1(CódigoLineal) SeaL:Fk→Fn (k<n)una siónkycapacidadcorrectorat (tambiénseutilizalanotación
+q q
+[n,k,d]donded esladistanciamínimadelcódigo),osimple-
+aplicaciónlineal.
+C=L(Fk)⊂Fn eselcódigolinealdefinidoporL.Losele- mentesepondrá[n,k]sinoseprecisadisponerdet.
+q q
+Delasexpresionesobtenidasenladefiniciónanteriorse
+mentosenCsedenominanpalabrasdelcódigo.Sediceen-
+deduceque
+toncesqueCtienedimensiónkylongitudn.
+(cid:20) (cid:21)
+d−1
+Los códigos utilizados en la práctica (excepto algunos t = , (4)
+2
+de pequeño tamaño) son siempre lineales. A partir de este
+momento al hablar de códigos nos estaremos refiriendo a donde[·]representalafunciónparteentera.
+códigoslineales.
+2lasdimensionespuedenvariardeunaliteraturaaotrasegúnelordende
+1elnúmeropsedenominacaracterísticadelcampo. multiplicaciónqueseutilice.
+CienciasMatemáticas,Vol.33,No.1,Pag.28-35,2019
+30 CálculodebasesdeGröbnercompletasasociadasacódigoslineales
+Definición7(VectorError) Dadaunapalabrarecibiday∈ [X]asociadoalcódigo,porxasedenotaelmonomioasociado
+Fn, el vector error e es la diferencia entre la palabra del conelvectora∈Fn(ver[?],[?]).
+q q
+códigotransmitidacey,esdecir,e=y−c.Cuandoycontiene EntoncessedenominaIdealasociadoalcódigoC alsi-
+cuantomásterrores,eeslaúnicasolución,conpesoacotado guienteideal:
+port,delsistema:
+(cid:68) (cid:69)
+I(C)= {xa−xb|(a,b)∈R } ⊆K[X]. (9)
+C
+eH = yH. (5)
+Esdecir,elidealbinomialgeneradoporlasdiferenciasde
+Definición8(Síndrome) El síndrome de un vector y∈Fn elementosen[X]cuyosexponentesestánrelacionadosporR
+q C
+eselvalor definidaen[?].
+Existendosmanerasdistintasdeintroducirelconjuntode
+ξ(y)=yH∈Fn−k. (6)
+q lasindeterminadasX.En[?]seintroduceX considerandoel
+campoF comounaextensiónsimpledelcampoF siendo
+UncódigoCdefineunarelacióndeequivalenciaR enFn q p
+C q placaracterísticadeF .Paralaotrarepresentaciónseparte
+dadapor q
+de que el grupo (F∗,·) es cíclico, por lo que los elementos
+q
+(y ,y )∈R ⇔y −y ∈C (7) diferentes de cero son de la forma αj con j =1,...,q−1,
+1 2 C 1 2
+⇔ξ(y )=ξ(y );y ,y ∈Fn. dondeα sedenominaelementoprimitivo.
+1 2 1 2 q Serepresentaporw ,...,w lasfilasdelamatrizgeneratriz
+1 k
+Luego,R defineqn−k clasesdeequivalencias(dadoque Gdelcódigoysedefineelsiguienteideal:
+C
+elespaciodelossíndromesesFn
+q
+−k)detalformaqueenla
+∆I=
+(cid:68)(cid:110)
+x(αjwi)−1
+(cid:111)(cid:91)
+{R (T )}
+(cid:69)
+; (10)
+clasey+C seencuentranlosvectoresquetienenelmismo xi +
+síndromequey.
+dondeestáformadoportodoslosbinomiosenlavariable
+asociadosalasrelacionesdedependenciaentrelosvectores
+Definición9(Líderdecoseto) Losvectoresdemenorpeso
+asociadosaesasvariablesdadasporlatablaaditivadelcampo
+enunaclasedeequivalenciaocosetoselesdenominalíderes
+F =(cid:104)α(cid:105)∪{0}.
+delcoseto.Engeneraluncosetoy+Cpuedetenermásdeun q
+líder.ElconjuntoqueestosformansedenotaporCL(y).
+ {x x −x :αu+αv=αw}
+Elconjuntoformadoportodosloslíderesdecosetosde  iu iv iw
+R (T )= ∪ (11)
+uncódigosedenotaporCL(C)ycumplequeCL(y)⊂CL(C).
+xi +
+ {x x −1:αu+αv=0}
+iu iv
+Un código t corrector de errores puede decodificar co-
+rrectamente cualquier vector recibido y que se encuentre a coni={1,...,n}.
+distanciaalosumot deunapalabradelcódigo.Elproceso El ideal ∆I es el Ideal generalizado asociado al código
+dedecodificaciónconsistiríaenhallarelvectorerrorecorres- C. Con esta representación del ideal todo ideal del código
+pondienteay,queseríaelúnicovectordepesoalosumot,
+se comporta como en el caso binario. Los ordenamientos
+que se encuentra en la clase de equivalencia (o coseto) del compatiblesconelgradototalsoncompatiblesconelpeso
+vectory.Luegocomoresultadodeesteprocesoseobtendría
+delosvectoresasociadosalosmonomios.Deestaforma,los
+lapalabradelcódigoy−e.
+monomiosdemenorgradoestánasociadosconlosvectores
+demenorpeso.
+Lema10([?],Teorema1.12.6.v) Sea y un líder de coseto
+deC.Siy(cid:48)∈Fn yy(cid:48)=y paratodoi∈supp(y(cid:48)),entoncesy(cid:48)
+q i i 1.2 BasesdeGröbner
+tambiénesunlíderdecosetodeC.
+Definición12(Ordenamientodetérminos) Porordenamien-
+todetérminosen[X]sedefineaunordentotal≺en[X]que
+Definición11(Códigosequivalentes) SisedefineScomoel
+satisfacelassiguientescondiciones:
+conjuntodelaspermutacionesdeordennyseaσ ∈S ,tal
+n
+que 1. 1≺xbparatodoxb∈[X],xb(cid:54)=1;
+σ(C)={(y σ−1(i) )n i=1 |(y i )n i=1 ∈C}. (8) 2. sixa≺xb,entoncesxaxc≺xbxc,∀xc∈[X].
+SedicequeC yσ(C)soncódigosequivalentesysedenota Además, dado un ordenamiento de términos auxiliar <, se
+porC∼σ(C). dicequeunordenamiento≺ esdegradototalsi
+T
+En[?]seasociaunciertomonoideconF q nyporlotanto xa≺ xb⇔ (cid:26) deg(xa)<deg(xb) o
+conelcódigo,demaneraquecadamonomioestáasociado T deg(xa)=deg(xb) yxa<xb
+conunvectordeFnyacadavectordeFnlecorrespondeun
+q q
+conjuntodemonomiosdeloscualesexisteunosoloestanda- donde deg(xa) denota el grado de xa. Un ordenamien-
+rizado.SiendoX elconjuntodeindeterminadasdelmonoide todetérminosdegradototaleselordenamientoGraduado
+CienciasMatemáticas,Vol.33,No.1,Pag.28-35,2019
+CálculodebasesdeGröbnercompletasasociadasacódigoslineales 31
+Lexicográfico (denotado por < ) el cual emplea como Definición15(BasedeGröbner) G⊂I\{0}recibeelnom-
+deglex
+ordenamientoauxiliarelordenamientoLexicográfico.Otro bredebasedeGröbnerdeI siT{G}generaT(I),esdecir,
+ordenamiento de grado total muy utilizado es el Graduado sitodot∈T(I)esunmúltiplodealgúns∈T{G}.
+ReversoLexicográfico([?]).
+Definición16(BasedeGröbnerreducida) UnaBGGdeI
+Definición13 Para f =∑m i=1 c i s i , donde c i ∈K\{0}, s i ∈ sedenominareducidasiparatodog∈G
+[X],ys ≺s ≺...≺s :
+m m−1 1
+i. T(g)noesmúltiplodeningúns∈T(G)\{T(g)},
+Eltérminomáximode f conrespectoa≺esT (f)=s
+≺ 1
+(sereferirátambiénaestetérminocomolacabezade ii. LC(g)=1,
+f).
+iii. g=T(g)−Can(T(g),I).
+Elcoeficienteprincipalde f conrespectoa≺es:
+LC (f)=c . LasBGreducidasconstituyenunenteúnicoparaunideal
+≺ 1
+yunordenamientodados,noasícualquierotraBG.Además,
+Elrestode f conrespectoa≺es: sonmínimasrespectoalacantidaddepolinomiosrequeridos
+Rest ≺ (f)= f−LC ≺ (f)T ≺ (f). para que un conjunto de polinomios sea una BG para un
+ordenamiento. Por estas razones, es de interés en algunos
+ElconjuntodetérminosmáximosdeF conrespectoa
+casostrabajarconunaBGreducidaynoconunaarbitraria.
+≺es:
+DiversosautorescoincidenenquelateoríadelasBGseha
+T {F}={T (f)| f ∈F\{0}}.
+≺ ≺
+convertidoenunadelasprincipalesáreasdeinvestigacióndel
+Elconjuntodetodoslostérminosmáximosdeunideal ÁlgebraComputacional(AC).Losmayoresresultadosdela
+IserádenotadoporT(I). teoríadelasBGestánasociadosconlosanillosconmutativos
+depolinomios.Verdaderamente,estateoríaestágenerandoun
+Elconjuntodelosmúltiplosdelosterminosmáximos interéscreciente,alsuministrarherramientascomputacionales
+deF conrespectoa≺es: que son aplicables a un amplio rango de problemas en la
+Matemática,laCienciadelaComputaciónyotrasramasdel
+T (F)=T(<F >).
+≺ conocimiento.
+Paraeltrabajoespecíficamenteconloscódigosresultan
+Cuandonoexistariesgodeconfusión,elsímbolo≺seomitirá
+departicularimportancialosordenamientosdetérminoscom-
+delasnotaciones.Estaconvenciónserátambiénutilizadaen patiblesconelgrado,debidoaquelasformascanónicascon
+lasrestantesnotacionesydefinicionesdeestetrabajo. respectoaestetipodeordenestándirectamenteasociadasa
+losvectoresdemenor peso,esdecir,a losvectores errores
+Teorema14 SeaSpan (N(I))elK-espaciovectorialcuya
+K (líderesdeloscosetoscorrespondientes)[?].
+baseesN(I)=[X]\T(I).Entonces:
+SeanCuncódigobinariodelongitudn,
+i. K[X]=I⊕Span (N(I)).
+K
+σ ∈S ,C∗=σ(C).; (12)
+n
+ii. Paracada f ∈K[X]existeunúnicopolinomiode
+Span K (N(I)),denotadoporCan(f,I),talque Teorema17(Teorema6de[?]) SeaGunaBGdeuncódigo
+f−Can(f,I)∈I;másaún: binario C, x ≺ ...,≺ x donde ≺ es un ordenamiento de
+1 n
+términoscompatibleconelgradototalyσ ∈S .Entonces
+• Can(f,I)=Can(g,I)si,ysólosi, f−g∈I. n
+G∗=σ(G)esunaBGreducidaparaC∗yelorden≺parael
+• Can(f,I)=0si,ysólosi, f ∈I. ordendelasindeterminadasdadoporx ≺...≺x .
+σ(1) σ(n)
+iii. Paracada f ∈K[X],T(Can(f,I))(cid:22)T(f).
+Esdecir,silasBGG∗yGsonequivalentes(G∗=σ(G)),
+iv. ExisteunisomorfismodeK-espaciosvectorialesentre
+entoncesloscódigosC∗yCsonequivalentes.
+Span (N(I))yK[X]/I(elisomorfismoasociaCan(f,I) Sepuedenotarquecuandoσ noesconocido,G∗tampoco
+K
+conlaclasede f móduloI).
+loes,peropuedecalcularselaBGreducidaparaC∗(G(cid:48))con-
+siderandounordenparalasvariables.Larelaciónexistente
+Can(f,I)sedenominalaformanormaloformacanónica entreestasdosbasesesqueambassonBGreducidasdeC∗,
+delelemento f conrespectoaunordenamientodado.Noteque peroconrespectoadiferenteordendelasvariables;ytodo
+esteelementoeselrepresentantede f enelespaciovectorial binomiodeG∗sereduceaceromóduloG(cid:48)yviceversa.
+Span (N(I))delasclasesresidualesdeK[X]móduloelideal Notarademásquesiseconocenlasbasesysedeseahallar
+K
+I.Esdecir,elconjuntoN(I)eselconjuntoderepresentantes una permutación que satisface (12), no siempre es posible,
+delasdistintasclasesresiduales,demaneraque,cadaunode pueslasBGdecódigosequivalentesnosonnecesariamente
+elloseselmenorpolinomiorespectoalordenamientoquese equivalentes.Esnecesarioentoncesencontraralgúninvariante
+encuentraensuclase. quepermitaresolveresteproblema.
+CienciasMatemáticas,Vol.33,No.1,Pag.28-35,2019
+32 CálculodebasesdeGröbnercompletasasociadasacódigoslineales
+Enestainvestigaciónsehadesarrolladounaimplementa- Comoconsecuenciadirectadeladefinición19sepuede
+cióndelmodeloGBLA,paraelcálculodeBGreducidasen observarlaunicidaddeestaBGyelcumplimientodelsiguinte
+códigosnobinarios,siguiendo[?]paraeltrabajoconelideal lema.
+generalizado. Se ha podido comprobar experimentalmente
+convarioscódigosquelaimplementaciónrealizadaparael Lema20 Un binomio está en GrC si y solo si pertenece a
+cálculodeBGdecódigosresultamáseficiente,comparando unaBGreducidaparaalgúnordendelasindeterminadas.
+lostiemposdecómputo,quelasfuncionesqueestánimple-
+Se cumple que al permutar la GrC de un código C se
+mentadasenlossistemascomputacionalesGAPyMAPLE.
+obtienelaGrCdelcódigoequivalenteaCcorrespondientea
+la misma permutación, debido a la unicidad de la misma y
+1.3 ElmodeloGBLA
+estoconstituyeunageneralizacióndelteorema17.
+En[?]sepresentaelmodeloGBLA(GröbnerBasesby
+UnaBGcompletareducidaestácompuestaportodoslos
+LinearAlgebra)paraelcálculodeBGyestructurassimilares
+binomiosdelaformaw−w(cid:48)talesquew(cid:48)sealaformacanóni-
+deidealescero-dimensionales,elcualseapoyaenlastécni-
+cadew,perolograrestaconstruccióncomputacionalmentees
+casdelálgebralinealcomosuprincipalherramienta.Enel
+difícilporquedentrodeloslíderesdecosetosnotodostienen
+últimocapítulodeestatesisdoctoralseasocianlasBGcon
+queconstituirformacanónicaparaunordendelasindetermi-
+los códigos de manera que el problema de la decodicación
+nadas.PortantomostraremosotraBGcompleta,quetendrá
+encódigossetransformaenelproblemadelareducciónasu
+característicassimilaresalaGrC,enlacualsesustituyeel
+formacanónica,medianteciertasBGoestructurassimilares
+papeldelasformascanónicasenGrCporeldeloslíderesde
+([?]).
+cosetos.
+Precisamenteestarelaciónentrelapertenenciaaunidealy
+ladependencialinealenelespaciovectorialcocientepermite
+Definición21 Seaw=xa∈[X],decimosqueestapalabraes
+lautilizacióndelÁlgebraLinealparaelcálculodeBGyotras
+untérminoirredundantesiparatodoi∈supp(a)quecumple
+estructurasrelacionadas.Comoelementocomúnentodoses-
+quew=xbx entoncesb∈CL(C).Alconjuntoformadopor
+toscasosresultaesenciallaconstruccióndelespaciovectorial i
+todosestostérminosirredundanteslodenotaremosporTI(C).
+delasformascanónicasisomorfoalespaciovectorialcociente
+que determina el ideal. A los objetos requeridos junto con
+Ladefinición14sepuedeexpresardelasiguientemanera:
+elalgoritmodecálculomedianteálgebralinealsedenomina
+modeloGBLA.Estemodelopuedeserespecificadoamuchas (cid:26) xa=xbx ⇒b∈CL(C)
+xa∈TI(C)⇔ i . (13)
+situacionesconcretasdondeselogrerealizarlaconexiónentre ∀x ∈supp(xa)
+i
+susobjetosyestructurasconunálgebraespecíficaencues-
+Note que cada elemento de este conjunto de términos
+tión,dondelanaturalezadelcálculodependedeestaálgebra
+irreduntes,obienesuntérminocorrespondienteauncoseto
+concreta.
+conunúnicolíderoresultarásertérminomáximoconrespecto
+Estealgoritmosebasaenlageneracióndelosmonomios
+a≺paraórdenesespecíficosdelasindeterminadas.
+conrespectoalordenydecidirmediantedependencialineal
+losmonomiosquecorrespondenatérminosmáximosdela
+Definición22 Llamamos BG completa reducida extendida
+BG.Porotraparte,aquelloselementosqueseanlinealmente
+(GC )aunaBGcompletadefinidadelasiguienteforma:
+independientes irán construyendo una base del espacio co- e
+GC ={xa−xb:xa∈TI(C),b∈CL(a),a(cid:54)=b}.
+cientedelasclasesdeequivalenciaquedeterminaelideal(en e
+estecasosecorrespondeconlasclasesdeequivalenciaque
+Definición23 SeaQunconjuntodeelementosde[X].Lla-
+determinaelcódigo).
+maremosniveldegradokalconjuntoQ talque:
+k
+2. Base de Gröbner completa Q ={v∈Q|deg(v)=k} (14)
+k
+EnestasecciónsemostraráuntipodeBGqueconstituye El subconjunto de elementos de Q hasta el nivel k se
+uninvarianteparacualquiercódigo. denotaráporQ [k] .
+Definición18 LlamamosBGcompleta(GC)conrespectoal Acontinuaciónveremoselalgoritmoquepermitecalular
+orden≺,aunaBGasociadaalcódigoC,dondealcambiar unaGC e .
+elordendelasindeterminadas,continuasiendounaBGpara Nosreferiremosprimeroaalgunassubrutinasdelalgorit-
+dichocódigoconrespectoalorden≺. mo.
+InsertNext[w,List]insertaapropiadamentelosproductos
+UnaBGcompletadistintivaeslasiguiente: xw(parax∈X)enList,quesemantieneordenadaenorden
+crecienteconrespectoalordenamientodetérminos≺.
+Definición19 LlamamosBGcompletareducidaalaunión Member[v(cid:48),{v ,...,v }] devuelve una primera compo-
+1 r
+detodaslasBGreducidasconrespectoatodoslosposibles nentebinariaquetomavalorTRUEsiv(cid:48)estáenlalistadelos
+órdenesdelasindeterminadasyladenotaremoscomoGrC. síndromes({v ,...,v })oFALSE,encasocontrario.Ycomo
+1 r
+CienciasMatemáticas,Vol.33,No.1,Pag.28-35,2019
+CálculodebasesdeGröbnercompletasasociadasacódigoslineales 33
+segundacomponentedevuelvelaposicióndelsíndromede Seaxa∈[X]talquea∈CL(C).Demostraremosquexa∈
+eseelementoencasodequeestéenesalista. List yxa∈N,medianteelfuncionamientodelalgoritmo.
+ElobjetoNesunalistadondesevaconstuyendoelcon- Asumiremoscomohipótesisdeinducciónqueparatodas
+juntodeloslíderesdecosetosdelcódigo,cadacomponente las palabras xa ∈[X] hasta grado k, a∈CL(C) si y solo si
+deNcorrespondeauncoseto. xa∈List yxa∈N.
+El objeto List es una lista donde se van insertando en Demostraremosquesielgradodexa esdeg(xa)=k+1
+orden creciente según el ordenamiento de términos ≺ los entoncessecumplequexa∈List yxa∈N.
+múltiplos de líderes de cosetos del código. Es decir, este Primeramentepodemosexpresarxacomoxa=xxb,con
+i
+objetoquesevagenerandocontienealconjuntodetérminos x ∈X,dondedeg(xb)=k.
+i
+irredudantes. Altenerquea∈CL(C)entoncesb∈CL(C)porLema10
+y xb ∈List por hipótesis de inducción, pues se cumple que
+Algoritmo24(AlgoritmoGBLAparaelcálculodeGC
+e
+) deg(xb)=k.
+Portanto,elalgoritmoinsertaráenList alosmultiplosde
+Entrada: p,n,m,H losparámetrosquedefinenuncódigo
+xbenelpaso10oenelpaso24,enparticularaxa=xxbcon
+lineal. i
+x ∈X demostrandoqueefectivamentexa∈List.
+i
+Salida: GC (I,≺). Cumpliendosequexa∈List elalgoritmogarantizaráenel
+e
+paso3tomareseelementoycomoa∈CL(C),porelLema10,
+1: G:=0/;List:={1};N:=0/;r:=0; xa∈TI(C),yporendeseañadiráxaalalistaN enlospasos
+2: whileList(cid:54)=0/ do 11ó23.
+3: w:=NextTerm[List]; Ahorapasaremosalasegundapartedelademostración.
+4: ifw∈TI(C)then Demostraremos que una palabra xa de grado k+1 que se
+5: c:=False; añadaaList yaN cumplequea∈CL(C).
+6: v(cid:48):=ξ(w); Sea la palabra xa, tal que deg(xa)=k+1. Si xa ∈List
+7: (Λ,j):=Member[v(cid:48),{v 1 ,...,v r }]; significa que su forma canónica también pertenece a List,
+8: ifΛ=Truethen es decir, Can(xa)∈List pues deg(Can(xa))≤k+1 y por
+9: if(deg(w ji )(cid:54)=0)and(deg(w)=deg(w ji )) then hipótesisesteelementoestaráenList yporendeestaráenN.
+10: List:=InsertNext[w,List]; Note queCan(xa) es el menor elemento, según el orden ≺
+11: N j :=N j ∪{w}; queutilizaelalgoritmo,cuyocosetoeselmismodexa,por
+12: c:=True; tanto,Can(xa)∈N porelpaso23.NoteademásqueCan(xa)
+13: endif esunapalabraquecorrespondeaunlíderdecoseto,debido
+14: fori=1toLength[N j ]do alacompatibilidadentreelorden≺paralosmonomiosyel
+15: G:=G∪{w−w ji }; pesodelosvectorescorrespondientesalosmonomios.Como
+16: ifc=Truethen xa∈N yCan(xa)∈N puedenocurrirdoscosas:
+17: G:=G∪{w ji −w};
+18: endif 1. xa=Can(xa)loquesignificaríaquexaentróenelpaso
+19: endfor 23yportantoa∈CL(C);ó
+20: else
+21: r:=r+1; 2. xa(cid:54)=Can(xa),enestecasosesatisfacecondicióndel
+22: v r :=v(cid:48); paso9,añadiéndoseaN enelpaso11,loquequiere
+23: w r1 :=w;N:=N∪{w r1 }; decirquea∈CL(C).
+24: List:=InsertNext[w r1 ,List];
+25: endif Deestaformaquedademostradoquebajocualquiercir-
+26: endif
+cunstanciaa∈CL(C),loquedaporconcluidalapruebadel
+27: endwhile teorema.
+28: returnG;
+Teorema26 El Algoritmo 24 calcula la GC del códigoC
+e
+Parademostrarelfuncionamientodelalgoritmonosapo- conrespectoalorden≺,esdecir,G=GC e .
+yaremosdelossiguientesteoremas.
+Demostración.
+Teorema25 Sea xa ∈[X]. Entonces a∈CL(C) si y solo si Seguiremoslamismaideaquelademostracióndelteore-
+xa∈List yxa∈N. ma25.
+AsumiremoscomohipótesisdeinducciónqueGyGC
+e
+Demostración. sonigualesrestringiendolosconjuntosaaquellosbinomios
+Paralasiguientedemostraciónseguiremoselprincipiode quetienentérminosmáximoshastagradok,esdecirG =
+[k]
+inducciónsobre[X]conrespectoalosgradosdelosmono- GC .Demostraremosqueocurrelomismositomamoslos
+e[k]
+mios. términosmáximoshastagradok+1(G =GC ).
+[k+1] e[k+1]
+CienciasMatemáticas,Vol.33,No.1,Pag.28-35,2019
+34 CálculodebasesdeGröbnercompletasasociadasacódigoslineales
+Si no existe ningún término máximo en GC de grado el nivel deseado. Este elemento puede ser importante en la
+e
+k+1, significa que todos los elementos de TI(C) de grado determinacióndelaequivalenciadecódigos,elhechoesque
+k+1correspondenalíderesdecosetosqueconstituyenúnicos silaGC esuninvariante,tambiénloeséstabasehastaun
+e
+líderesensuscosetos.Porende,esclaroporelfuncionamien- niveldado,lacualconstituyeunaestructuramáspequeña.
+to del algoritmo que Λ=False para todos los términos de
+gradok+1.Viceversa,sinohaytérminosmáximosenGde 3. Experimentación
+grado k+1 y haberse incluido en List todos los elementos
+queconstituyentérminosirredundantesdegradok+1(por La Tabla 1 muestra una comparación de códigos sobre
+Teorema 25) entonces se obtiene la misma conclusión con F 3 y F 4 en cuanto al tiempo que demoran estos códigos al
+respectoaloselementosdeTI(C)degradok+1.Portanto, calcularsuBGreducidapormediodelaimplementacióndel
+noexistiríaningúntérminomáximoenGC degradok+1. algoritmo GBLA realizada en GAP [8], con el tiempo que
+e
+EnestecasoentoncesG =G yGC =GC ,por demora en calcular la misma base mediante el Sistema de
+[k] [k+1] e[k+1] e[k]
+loqueporhipótesisdeinducciónG =GC . CálculoSimbólicoMaplequetieneincorporadoalgoritmos
+[k+1] e[k+1]
+Analicemosahoraelcasodondesiexistantérminosmáxi- eficienteparaelcálculodeBG.
+mosdegradok+1.Seaxa−xb∈GC ,condeg(xa)=k+1. Comosepuedeobservareltiempoquedemoraencalcular
+ek+1
+EntoncespordefinicióndeGC secumple: unaBGporlaimplementaciónrealizadaesmuchomenorque
+e
+sisecalculalamismabaseenelMAPLE.Estacomparación
+xa∈TI(C),b∈CL(a),a(cid:54)=b.
+sepuedeapreciardeformagráficaenlaFigura1.Enlacelda
+dondeseobserva“ERROR",significaelmensajequedevuelve
+Si xa ∈TI(C), xa ∈List por el Teorema 25 y xa satisface
+elMAPLEalnopodercalcularlaBGdedichocódigo.
+paso4.Igualmente,porelTeorema25,b∈CL(a)implicaque
+xb∈List yxb∈N.Portanto,xa−xb∈Gporlospasos15o
+t(Segundos) t(Segundos)
+17delalgoritmo.Porloque,GC ⊂G .
+ek+1 k+1 Cód n k Cosetos GAP/GBLA MAPLE
+Veamosahoralaotrainclusión.Seaxa−xb∈G ,con
+k+1 CF4-1 5 2 64 0.4 1.8
+deg(xa)=k+1.Entonces,teniendoencuentalospasos4,15
+CF3-2 7 3 81 0.7 1.0
+y17delalgoritmosetienequexa∈TI(C),xb∈TI(C),y
+CF3-3 7 2 243 1.7 0.7
+silainclusiónenGserealizaenpaso15,xb∈N yb∈CL(a)
+CF4-4 8 4 256 4.4 338.3
+(porelTeorema25),dedondexa−xb∈GC .
+ek+1
+SilainclusiónenGserealizaenpaso17,xa∈N yxb∈N,y CF3-5 10 4 729 11.4 39.1
+b∈CL(a),portanto,xa−xb∈GC . CF3-6 11 5 729 13.4 586
+ek+1
+CF4-7 8 3 1024 53.2 ERROR
+ConestoquedademostradoqueG ⊂GC ,porlo
+k+1 ek+1
+queG =GC yutilizandolahipótesisdeinducciónse Tabla1.TiempodeejecucióndeBGenGAP/GBLAy
+k+1 ek+1
+obtienequeG =GC . MAPLE.
+[k+1] e[k+1]
+Note que la finitud del algoritmo es clara debido a la Estascomparacionessepuedenobservargráficamenteen
+cantidadfinitadecosetosquetieneelcódigoC,ylaacotación laFigura1.
+delacantidaddeelementosdeList enfuncióndeello. Loscódigosseorganizansegúneltamañodelacantidad
+decosetosquedeterminaelcódigoqn−k,locualconstituye
+Teorema27 SeaGunaGC e deuncódigoC,conrespectoa unodelosfactoresquemásinfluyeenlacomplejidadconel
+unordenamientodetérminos≺compatibleconelgradototal cálculoalgorítmicosobreéstos,enparticularincidedirecta-
+yσ ∈S n .EntoncesG∗=σ(G)eslaGC e paraC∗=σ(C)y menteeneltiempodeejecucióndelAlgoritmoGBLA.
+elorden≺. Estosexperimentosfueronrealizadosenunacomputadora
+conmicroprocesadorIntel(R)Core(TM)i3-3120MCPUcon
+Demostración.
+núcleos a 2.50GHz cada uno, memoria RAM de 6 GB y
+Teniendo en cuenta el cálculo de la GC para elC∗ en
+e sistemaoperativode64bits.
+elAlgoritmo24,paraelorden≺,tomandox ≺x ≺
+σ(1) σ(2)
+...≺x . Es claro que List∗=σ(List). Como una conse-
+σ(n)
+cuencia,N∗=σ(N),dondeList yNseobtendríanparaCpor
+elAlgoritmo24,paraelorden≺,conx ≺x ≺...≺x .Por
+1 2 n
+ende,larelaciónqueseobtieneentrelasGC calculadaspor
+e
+elalgoritmoparaCyC∗seráG∗=σ(G).
+Note que si tenemos las GC G∗ para C∗ y G para C
+e
+respectivamente,demaneraqueG∗=σ(G);entonces,puede
+demostrarsequeC∗=σ(C)siguiendounaideamuysimilara
+ladesmostracióndelasuficienciadelTeorema3de[?].
+ElAlgoritmo24calculalaGC porniveles,porloquees
+Figura1.GráficoconlostiemposdeejecucióndeBGen
+e
+GAPyMAPLE.
+posibledetenerelmismounavezcalculadaestabasehasta
+CienciasMatemáticas,Vol.33,No.1,Pag.28-35,2019
+CálculodebasesdeGröbnercompletasasociadasacódigoslineales 35
+LaTabla2recogeeltiempoquedemoraencalcularlaBG Lasfluctuacionesqueseobservanenlatablayenlagráfi-
+completahastaelnivel2yunaBGespecíficahastaelfinal ca,sedebeprecisamentealarelaciónentrekyn−k,esdecir,
+paralosdistintoscódigosanalizados,paraelordennaturalde dimensiónycantidaddecosetosdelcódigo.Ahorabien,en
+lasindeterminadas. loscódigosmásinteresantesycomplejosexisteuncompro-
+Sepuedeobservarqueenlosprimeroscódigoselcálculo miso entre estos dos valores, ocasionando que ambos sean
+de la GC hasta el segundo nivel demora más que la BG altosyenestoscasosunaimplementacióntipoGBLAtiene
+e
+específica,puesladiferenciadeestostiemposesproporcional mayoresposibilidadesdesermásrápida.
+a la diferencia entre la cantidad total de líderes de cosetos
+hastaelniveldadoparalaGC ylacantidaddecosetosque
+e 4. Conclusiones
+tengaelcódigoparaelcálculodelaBGespecífica,locual
+noesunacantidadconstante.Seobservaclaramentequeal En este trabajo se brinda un nuevo tipo de BG llamada
+aumentarlalongituddeloscódigosestadiferenciacambiay completayseimplementócomputacionalmenteteniendoen
+correenmenostiempolaGC hastaelnivelfijado.Porloque cuentadosformas:calcularlaBGcompletahastaelfinaly
+e
+engenerallaGC hastaelsegundonivelseríaunaestructura calcularlasolohastaunniveldado.Estasegundaimplementa-
+e
+invariantequeselogracalcularenmenostiempoqueunaBG ción(hastaelsegundonivel)secomparóencuantoaltiempo
+específica. decómputoconunaimplementaciónrealizadaeneltrabajo
+dediplomaqueantecedióestainvestigaciónquecalculauna
+Cód n k GrC(tenseg) G(tenseg) BGreducida,resultandoqueeltiempodecómputoesmenor
+CF4-1 5 2 1.1 0.5 amedidaqueloscódigosaumentansucomplejidad.
+CF3-2 7 3 1.4 0.5 SehademostradoquelasBGcompletareducidaextendida
+CF3-3 7 2 1.6 1.8 constituyenuninvarianteparauncódigo,yqueéstasBGse
+CF3-4 10 4 7.9 11 pueden obtener por medio de un algoritmo. Esto permitirá
+CF4-5 8 3 95 30 que en trabajos futuros se disponga de este invariante para
+CF2-6 12 4 0.8 1.2 determinarlaequivalenciadecódigos.
+CF2-7 15 5 11 11.8 Además,semuestracomolasimplementacionesrealiza-
+CF2-8 18 6 52 60 das para el cálculo de BG específicas de cualquier código,
+sonmáseficientesquelafuncióndecálculodeBGdelSiste-
+CF2-9 19 6 9 540
+madeCálculoSimbólicoMAPLE,enlacualseencuentran
+CF2-10 21 6 2023 2138
+incorporadosalgoritmoseficientesparasucálculo.
+Tabla2.TiempodeejecucióndeBGcompletasyespecíficas.
+Estascomparacionessepuedenobservargráficamenteen Referencias
+laFigura2.
+[1] BorgesQuintana,M.,M.A.BorgesTrenard,P.Fitz-Patric
+yE.MartinezMoro:OnaGröbnerbasesandcombinato-
+ricsforbinarycodes. ApplicableAlgebrainEngineering,
+CommunicationandComputing,19:393–411,2008.
+[2] BorgesQuintana,M.,M.A.BorgesTrenardyE.Marti-
+nezMoro:OnaGröbnerbasesstructureassociatedto
+linearcodes. JournalofDiscreteMathematicalSciences
+andCryptography,10:151–191,2007.
+Figura2.GráficoconlostiemposdeejecucióndeBG [3] Corbella,I.Marquez:ACombinatorialCommutativeAl-
+completasyespecíficas. gebraApproachtoCompleteDecoding. TesisdeDocto-
+rado,UniversidaddeValladolid,2013.
+La similitud de tiempo de la última línea en la tabla se
+[4] Mora,T.:SolvingPolynomialEquationSystemsII:Ma-
+debe a que es un código de pocos elementos con respecto
+caulay’sParadigmandGröbnerTechnology. Cambridge
+asulongitud,locuallodeterminaladimensióndelcódigo
+UniversityPress,2005.
+sobrelalongitud(k/n).Enestecaso,unalgoritmodecálculo
+deBGalestilodelAlgoritmodeBuchbergeranalizamenos
+[5] Pless,V.yC.Huffman:Fundamentalsoferror-correcting
+binomiosquepertenecenalidealypuedecorrermásrápido
+codes. CambridgeUniversityPress,2003.
+quecuandoladimensiónesmayor.Sinembargo,lacantidad
+decosetosaumentaenlamedidaquekesmáspequeñoyhace [6] Quintana,M.Borges:SobreAlgunasTécnicasdeBases
+queunalgoritmoGBLAsedemoremástiempo.Aunasí,la deGröbnerysusAplicaciones. TesisdeDoctorado,Uni-
+implementaciónenGAPestuvoligeramentepordebajodela versidaddeOriente,2002.
+funcióndelMAPLE.
+CienciasMatemáticas,Vol.33,No.1,Pag.28-35,2019

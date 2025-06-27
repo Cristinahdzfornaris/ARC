@@ -1,0 +1,352 @@
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.137-143
+Recibido03-2019,Aceptado09-2019
+Estimación del porcentaje de carbono orgánico en
+suelos utilizando Imágenes Satelitales y Modelos
+Mixtos.
+Estimation of the percentage of organic carbon in
+soils using Satellite Images and Mixed Models.
+Ana A. Oroza Hernández 1*, Gladys Linares Fleites 2, Hortensia J. Reyes Cervantes 1, Bulmaro
+Juárez Hernández3
+Resumen La estimación del porcentaje de carbono orgánico en suelos es uno de los problemas actuales
+quesepresentanenlosestudiosdesecuestrodecarbono,queesconsideradounimportanteaspectoenla
+mitigacióndelcambioclimático.Lautilizacióndemodelaciónestadísticadondelavariabledependientedeuna
+regresiónestáexpresadacomounaproporciónenelintervalocontinuo(0,1)eselfococentralenestosestudios,
+por lo que la utilización de los Modelos Lineales Generalizados Mixtos es imprescindible. Estos modelos
+puedenconsiderarseunamodernaherramientaparaintegrarinformacióndecampoconlaobtenidaatravésde
+imágenessatelitales.Enesteartículosepersigueelobjetivodemodelarelporcentajedecarbonoorgánicoen
+suelosenlaRegiónTerrestrePrioritaria(RTP)105,Cuetzalan,México.Segúnlaprácticatradicional,inicialmente
+se consideraron modelos mixtos bajo el supuesto de normalidad de los errores del modelo; posteriormente,
+bajoelsupuestodedistribucióngammadeloserroresdelmodelo,seobtuvieronmodelosderegresióngamma
+deefectosmixtosqueestimanelporcentajedecarbonoorgánicoenfuncióndepropiedadesfísicoquímicas
+delsuelo(efectosfijos)ydelÍndicedeVegetaciónNormalizadoNDVI(efectoaleatorio),considerándoseestos
+últimosmodelosmásadecuadosquelosiniciales.SeutilizóparalamodelaciónelentornoRconlapaquetería
+lme4.
+Abstract Theestimationofthepercentageoforganiccarboninsoilsisoneofthecurrentproblemsthatarise
+instudiesofcarbonsequestration,whichisconsideredanimportantaspectinthemitigationofclimatechange.
+Theuseofstatisticalmodelingwherethevariabledependentonaregressionisexpressedasaproportioninthe
+continuousinterval(0.1)isthecentralfocusinthesestudies,sotheuseofMixedGeneralizedLinearModelsare
+essential. Thesemodelscanbeconsideredamoderntooltointegrateinformationoffieldwiththatobtained
+through satellite images. This article pursues the objective of modeling the percentage of organic carbon in
+soils in the Priority Land Region (RTP) 105, Cuetzalan, Mexico. According to the traditional practice, mixed
+models were initially considered under the assumption of normality of the errors of the model; subsequently,
+undertheassumptionofgammadistributionoftheerrorsofthemodel,mixed-effectgammaregressionmodels
+wereobtainedthatestimatethepercentageoforganiccarbonbasedonphysical-chemicalpropertiesofthesoil
+(fixedeffects)andtheNormalizedVegetationIndexNDVI(randomeffect);theselattermodelsbeingconsidered
+moreappropriatethantheinitialones. TheRenvironmentwiththelme4packagewasusedformodeling.
+PalabrasClave
+SecuestrodeCarbono,ModelosLinealesGeneralizadosMixtos,Regresióngamma
+Keywords
+CarbonSequestration,GeneralizedLinearMixedModels,Gammaregression
+1FacultaddeCienciasFísicoMatemáticas,BeneméritaUniversidadAutónomadePuebla,aleyda.oroza@alumno.buap.mx,
+hreyes@fcfm.buap.mx,bjuarez@fcfm.buap.mx
+2DepartamentodeInvestigaciónenCienciasAgrícolas,InstitutodeCiencias,BeneméritaUniversidadAutónomadePuebla,Puebla,México,
+gladys.linares@correo.buap.mx
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción Cuetzalan,México.Finalmente,sebrindanlasconclusionesy
+lasreferencias.
+Losmodelosderegresiónsonampliamenteutilizadosen
+unadiversidaddeáreasdeaplicaciónparadescribirlasasocia-
+1. Modelos Lineales Mixtos y
+cionesentrelasvariablesexplicativasylarespuestaovariable
+Generalizaciones
+dependiente.Lapresenciaenestosmodelosdeunavariable
+dependientequeestáexpresadacomounaproporciónenel LosModelosLinealesMixtos(MLM),permitentenercoe-
+intervalocontinuo(0,1)escadavezmáscomúnenestudiosy ficientes fijos y aleatorios (cuyos niveles son sólo una rea-
+aplicacionesdedistintasdisciplinas[2].Enlaproblemática lización de todos los posibles niveles procedentes de una
+ambientaldelcambioclimático,queseconsideraelproblema población)yvariostérminosdeerror.
+ambientalmásimportantealqueseestáenfrentadolahuma-
+nidadenlaactualidad,sepresentanestudiosdeestaíndole, Laespecificacióndeestemodelopuedeplantearsecomo
+ya que en mucho de ellos es de interés tratar de estimar el sigue:
+porcentajedecarbonoorgánicoensuelosatravésdemodelos SeaY unavariabledependientecontinuaconrealizaciones
+ki
+estadísticos,paraevaluarelsecuestrodecarbonoenunade- y ,coniobservacionesenelgrupok,dondei=1,...,n y
+ki k
+terminadaregión. k=1,...,K,con
+La práctica de la modelación estadística ha estado en Componenteestocástico:Y ki sedistribuyenormalcon
+constantecambiocomoresultadodeldesarrollodediferentes mediaµ ki yvarianzaσ2.
+enfoquesmetodológicosdelaEstadísticayelprogresodelas
+Componentesistemático:µ =X β+Z b .
+Ciencias Computacionales. En los últimos decenios se han ki ki ki k
+alcanzado enormes desarrollos en los resultados analíticos donde
+delModeloLineal(ML)ydelModeloLinealGeneralizado X eselarreglo(n ×p×K)devariablesexplicatoriascono-
+ki k
+(MLG)queesunaextensiónnaturaldelML[12]y[13].El cidas(noaleatorias)deefectosfijos,
+MLG ha llegado a suponer “una auténtica revolución esta- β eselvector p−dimensionaldecoeficientesdeefectosfijos,
+dística”[11],convirtiéndoseenunasoluciónespecialmente Z es el arreglo (n ×q×K) de variables explicatorias de
+ki k
+adecuadaparamodelosdedependenciacondatosnométricos. efectosaleatoriosconocidos,y
+También,bajoelsupuestodenormalidaddeloserrores,pero b eselvectorq−dimensionaldeefectosaleatorios,quecum-
+k
+permitiendo la heteroscedasticidad de la varianza, ha habi- ple:
+doconsiderabletrabajosobrelosModelosLinealesMixtos b
+k
+∼(0,∑),donde∑eslamatrizdevarianzasycovarianzas
+(MLM),dondelaestructuradelavarianzaestábasadasobre simétricaysemi−definidapositiva.
+efectosaleatorios[6].Másrecientemente,sehanintroducido
+losModelosLinealesGeneralizadosMixtos(MLGM),que Despuésdeespecificarunmodeloconciertapartesistemá-
+constituyenunafusiónentreelMLMyelMLG,yrepresentan ticayestructuraparalapartealeatoria,elpróximopasoenel
+unaherramientaanalíticapoderosa,yaquepermitenconside- procesodemodelaciónesestimarlosparámetrosdelmodelo.
+rardiferentesdistribucionesdeerrores,derivadasdelajustede EnlaliteraturasobreMLMserecomiendandosvariantesdel
+losmodelosalavariableaseranalizada,alavezquepermiten método de estimación de máxima verosimilitud: el criterio
+lainclusiónymodelacióndeobservacionesnoindependientes máximoverosímilyelcriteriomáximoverosímilrestringido,
+[4]. alosquenosreferiremosporsussiglaseningléscomoML
+y REML respectivamente [3]. El método ML puede usarse
+Enelesteartículosepersigueelobjetivodemodelarel paraestimartantoloscoeficientesβ comolosparámetrosque
+porcentajedecarbonoorgánicoensueloenunaciertaregión especifican la estructura de varianza y covarianza residual,
+delestadodePuebla,México,integrandoinformaciónobteni- sinembargo,losestimadoresdelaestructuradevarianzay
+daencampoconlaobtenidaatravésdeimágenessatelitales. covarianzaresidualsonsesgados.ElmétodoREMLbrinda
+SeutilizaparalamodelaciónelentornoRdeprogramación estimadores sólo para los parámetros que especifican la es-
+yanálisisestadísticoygráfico,quesehaconvertidoenuna tructuradevarianzaycovarianzaresidual;estosestimadores
+necesidadenlostiemposactuales[15]. soninsesgadosenciertoscasosespecialesy,generalmente,
+sonmenossesgadosquelosestimadoresML.
+Eltrabajotienelasiguienteestructura:enlasección1se
+tratanaspectosdelosmodelosestadísticosutilizados.Enla LageneralizacióndelosMLMaModelosLinealesGene-
+sección2serefierealempleoactualdelasimágenessatelitales ralizadosMixtos(MLGM),requiereelestablecimientodeuna
+enestudiossobrelasuperficieterrestreeintroduceelíndice funcióndeenlaceconocidag(·),comoseestableceenelMLG
+de vegetación NDVI utilizado para la modelación del caso [7].LosMLGpermitenespecificardistintostiposdedistribu-
+bajoestudio.Enlasección3sedesarrollaelprocedimiento cióndeerroresysonunaherramientamuyútilparamodelar
+utilizadoparalaestimacióndelporcentajedecarbonoorgá- una proporción continua. Varias propuestas metodológicas
+nicoensuelosdelaRegiónTerrestrePrioritaria(RTP)105, [9],sehanelaboradoparaanalizarvariablesdependientesen
+EstimacióndelporcentajedecarbonoorgánicoensuelosutilizandoImágenesSatelitalesyModelosMixtos. 139
+elrangocontinuo(0,1). sanamuestraunfuertecontrasteentrelabajareflectividaden
+elrojoylaaltareflectividadenelinfrarrojo.Estadiferencia
+Laprácticamáscomúnparamodelarproporcionescon- estantomayorcuantomayoresladensidaddelavegetación
+tinuas ha sido la aplicación del método de estimación de ymejorsuestadofitosanitario.
+regresión por mínimos cuadrados ordinarios. Sea o no que Entrelosdiversosíndicesdevegetacióndefinidos[1]sedesta-
+seutiliceasumiendolossupuestosdistribucionales,seaduce caelllamadoÍndiceNormalizadodeVegetación(NDVI,por
+conregularidadunargumentoasintóticoparasuaplicación, sussiglaseninglés).SeobtieneutilizandolaBanda3dela
+en el sentido de que tamaños de muestra grandes permiten imagendeLandsatTM(reflectividadenelrojo)ylaBanda
+generarcuantificacionesválidasyconfiables.Sinembargo, 4delaimagendeLandsatTM(reflectividadenelinfrarrojo
+cuandoseanalizanlapruebat olapruebaF correspondientes cercano).ElNDVIeselcocientedeladiferenciaentreesas
+se asume una distribución normal sin importar cuál sea el bandasylasumadelasmismas.Esteíndicevaríaentre-1y1,
+tamañodemuestra,lomismoquealemplearalgunaspruebas loquefacilitasuinterpretación.Puedeseñalarsecomoumbral
+deheteroscedasticidad.Ademásdelsupuestodistribucional, críticoparacubiertasvegetalesunvalordeNDVIde0.1ypara
+el modelo de regresión lineal requiere los supuestos de ho- lavegetacióndensade0.5.Cualquiervalornegativoimplica
+mocedasticidadylinealidad.Entérminosconceptuales,este ausencia de vegetación por lo que debieran reclasificarse a
+enfoque no es el más adecuado al tratar modelos de regre- cero.
+sióndondelavariabledependienteesunaproporción.Como
+se ha expresado antes, existen otras alternativas ya que los 3. Estimación del porcentaje de carbono
+MLGMpermitenespecificardistintostiposdedistribuciónde orgánico en suelos de la Región
+loserroresdelmodelo.
+Terrestre Prioritaria (RTP) 105, Cuetzalan,
+México
+2. Imágenes satelitales
+3.1 Localización
+Lasimágenessatelitalessonobjetodeestudiodelaper- Lazonaestudiada,denominadaRegiónTerrestrePriorita-
+cepción remota o teledetección, ciencia interdisciplinaria y ria(RTP)105,seencuentraubicadaenlaporciónnor−oriental
+multidisciplinariaqueobservadesdeelespacioobjetosfísicos delestadodePuebla,entrelosparalelos19043(cid:48)30(cid:48)(cid:48)y20014(cid:48)54(cid:48)(cid:48)
+agrandesdistancias. delatitudnorteylosmeridianos97007(cid:48)42(cid:48)(cid:48) y97043(cid:48)30(cid:48)(cid:48) de
+Lasimágenesprocesadasnospermitendetectarcambiosenla longitudoccidental.Estossueloscubrenunasuperficieapro-
+coberturaterrestreyrealizaranálisisdeusosdesuelo,entre ximadade846Km2.
+otrasmúltiplesaplicaciones[14].Unadefiniciónmásformal
+deestaciencialadescribecomolatécnicadeadquisicióny 3.2 Variablesconsideradasenelestudio
+posteriortratamientodedatosdelasuperficieterrestredesde Conelpropósitodehacerestudiosdesecuestrodecarbono
+sensores instalados en plataformas espaciales, en virtud de ensuelo,especialistasdelDepartamentodeInvestigaciónen
+lainteracciónelectromagnéticaexistenteentrelaTierrayel CienciasAgrícolas(DICA)delaBeneméritaUniversidadAu-
+sensor.Lostérminosplataformas,sensoresycanalesdeben tónomadePuebla(BUAP)vienenrealizandoinvestigaciones
+serbiencomprendidos.Unsensoreselaparatoquereúnela desdehaceaños.Enladécadadelosnoventaobtuvieron51
+tecnologíanecesariaparacaptarimágenesadistanciayque muestrasdesuelo.Estasmuestras,fueronprocesadasenel
+estransportadoenunaplataforma.Puedecaptarinformación laboratorioparaobtenerdiferentespropiedadesfísicoyquími-
+paradiferentesregionesdelespectroycadaunadeestasre- cas,entrelasquesetienenelporcentajedeCarbonoorgánico
+gionessedenominacanalobanda. (Corg),elporcentajedeNitrógenototal(Ntot)ylaDensidad
+LasimágenesqueprocedendelsatéliteLansat-5sensorTM Aparente(DA).
+(ThematicMapper)sonimágenesde8bitsen7bandasespec-
+trales;tresdelasbandassonvisiblesysereconocencomo Por otra parte, se obtuvieron imágenes satelitales de la
+Banda1,Banda2yBanda3ycuatrobandassoninfrarrojo, zona,loquepermitió,atravésdelíndicedevegetaciónND-
+conocidascomoBanda4,Banda5,Banda6yBanda7. VI,estimarladensidadenlacoberturavegetaldelaño1994
+(Figura1).Atravésdeesteíndicefueposibleidentificarla
+2.1 Índicesdevegetación presenciadevegetaciónverdeenlasuperficieycaracterizar
+Losíndicesdevegetaciónsonmedidascuantitativasque sudistribuciónespacial.Laactividadfotosintéticapermitió
+indicanelvigordelavegetación.Suutilidadconsisteenque clasificarladensidaddevegetacióndelazonaentresclases:
+ayudanalainterpretacióndelaimagensatelitalpermitiendo baja,mediayalta.Estasclasesconcuerdanconlacobertura
+ladeteccióndecambiosenelusodelsuelo,laevaluaciónde vegetalobservadaencampo.
+lacubiertavegetalyladensidaddelavegetación.Elempleo
+deíndices,calculadosapartirdelareflectividadendiferentes 3.3 Modelaciónbajoelsupuestodenormalidadde
+bandas,queindicanlaabundanciayestadodelavegetación, loserrores
+sebasanenelcomportamientoreflectivopeculiardelavege- Para la estimación del secuestro de carbono en la zona
+tación.Lasignaturaespectralcaracterísticadelavegetación bajoestudio,seespecificaronvariosmodeloslinealesmixtos.
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-7
+140 EstimacióndelporcentajedecarbonoorgánicoensuelosutilizandoImágenesSatelitalesyModelosMixtos.
+Figura1.ImágenesconelcálculodeNDVIparaelaño1994.
+Tabla1.Métodosdeestimaciónbajoelsupuestodedistribuciónnormaldeloserrores(Modelo1).
+MétodoREML MétodoML
+Modelo1:Corg∼DA+(1|NDVI) Modelo1:Corg∼DA+(1|NDVI)
+Efectosaleatorios: Efectosaleatorios:
+Grupos Nombre Varianza Grupos Nombre Varianza
+NDVI (Intercepto) 3.695e-05 NDVI (Intercepto) 1.067e-05
+Residuo 8.182e-04 Residuo 8.000e-04
+Númerodeobservaciones:51,Grupos:NDVI,3 Númerodeobservaciones:51,Grupos:NDVI,3
+Efectosfijos: Efectosfijos:
+Estimador Estimador
+(Intercepto) 0.13556 (Intercepto) 0.13465
+DA -0.12389 DA -0.12316
+Correlacióndeefectosfijos: Correlacióndeefectosfijos:
+(Intercepto) (Intercepto)
+DA -0.974 DA -0.982
+Comoseñalamosanteriormente,losmodelosmixtossonusa- posteriormente,utilizarestimadoresmínimoscuadradosge-
+doscuandolosdatostienenalgúntipodeagrupación,como neralizadosparalosparámetrosdelapartesistemática.Debe
+eselcasoquenosocupa,dondesetienentresnivelesdeden- destacarsequeelmétodoMLpuroesfavorableensituaciones
+sidadesdevegetación(baja,mediayalta),determinadospor dondeserequieranpruebasdehipótesisparacompararmode-
+elíndicedevegetaciónNDVI.Losmodelosmixtospermiten los,comoenesteestudio.
+tener coeficientes fijos y aleatorios (cuyos niveles son sólo Seestablecierondosmodelosdiferentesbajoelsupuestode
+unarealizacióndetodoslosposiblesnivelesprocedentesde normalidaddeloserroresysusparámetrosseestimaroncon
+una población) y varios términos de error. Para los efectos losmétodosREMLyML,haciendousodelapaqueteríalme4
+fijosseutilizaron,segúnelmodeloespecificado,lasvariables [8].LosresultadossemuestranenlasTablas1y2.También
+DAyNtot,elegidassegúncriteriosdeespecialistaseneda- seutilizaronloscriteriosdeinformaciónparalacomparación
+fologíayestudioexploratoriosprevios[10].Seutilizócomo demodelosquebrindaelpaqueteestadísticolme4.Losmás
+variabledependienteorespuestaparalosmodeloselCorg.El comúnmenteutilizadossonelcriteriodeInformacióndeAkai-
+procesamiento estadístico se realizó en lenguaje R [15]. El ke(AIC)yelcriteriodeinformaciónbayesiano(BIC).Enla
+métododeestimaciónquebrindaelpaqueteestadísticolme4 literaturaconsultadaparaestosyotroscriteriosdeselección
+en el lenguaje R, y que se ha usado aquí, es: primero esti- demodelosqueaparecenenlassalidasdelprogramalme4,se
+marlosparámetrosdevarianzaycovarianzausandoREMLy, eligecomomejormodeloaquelconlosvaloresmáspeque-
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-7
+EstimacióndelporcentajedecarbonoorgánicoensuelosutilizandoImágenesSatelitalesyModelosMixtos. 141
+Tabla2.Métodosdeestimaciónbajoelsupuestodedistribuciónnormaldeloserrores(Modelo2).
+MétodoREML MétodoML
+Modelo1:COrg∼DA+Ntot+(1|NDVI) Modelo1:COrg∼DA+Ntot+(1|NDVI)
+Efectosaleatorios: Efectosaleatorios:
+Grupos Nombre Varianza Grupos <Nombre Varianza
+NDVI (Intercepto) 5.683e-05 NDVI (Intercepto) 2.579e-05
+Residual 7.531e-04 Residuo 7.210e-04
+Númerodeobservaciones:51,Grupos:NDVI,3 Númerodeobservaciones:51,Grupos:NDVI,3
+Efectosfijos: Efectosfijos:
+Estimador Estimador
+(Intercepto) 0.128136 (Intercepto) 0.12762
+DA -0.120814 DA -0.12038
+Ntot 0.014284 Ntot 0.01404
+Correlacióndeefectosfijos: Correlacióndeefectosfijos:
+(Intercepto) DA (Intercepto) DA
+DA -0.963 DA -0.982
+Ntot -0.155 0.054 Ntot -0.156 0.053
+Tabla3.:Seleccióndemodelos.
+gl AIC BIC logLik Chi2 gl−Chi2 Pr(>Chi2)
+Modelo1 4 -210.3 -202.6 109.1
+Modelo2 5 -212.8 -203.1 111.4 4.5 1 0.03
+ñosdelcriterio.EnlaTabla3,semuestranlosresultadosdel lidadenlaetapadeajustedelmodelo,serequieredelacom-
+procedimientodeAnálisisdeVarianzaparalacomparación probacióndelassuposicionesdeestemodelo.EnlaFigura2
+deambosmodelos,reajustándolosconMLenvezdeREML. semuestranlosgráficosderesiduosypruebadenormalidad.
+ElresultadodelapruebaChi2essignificativoal45%,loque Puede apreciarse que los datos muestran una estructura no
+apuntaaconsiderarqueelmodelo2esmejor.Loscriterios normalypresenciadeheteroscedasticidad.Comoesconocido,
+AICyBICtambiénseñalanqueestemodeloesligeramente enelpasado,lasúnicasherramientasdisponiblesparatratarla
+mejor.Elmodelo2fueajustadousandoelestimadorREML, ausenciadenormalidaderanlatransformacióndelavariable
+que es recomendado por tener un algoritmo más eficiente, respuesta o la adopción de métodos no paramétricos. Hoy
+puedeserexpresadocomo endía,existenotrasalternativas,quesonlosMLGM.Estos
+modelospermitenespecificardistintostiposdedistribución
+y ij =β 0 +β 1 X 1 +β 2 X 2 +b 0i +ε ij . (1) de los errores como puede ser la distribución gamma. Esta
+distribuciónesútilcondatosquemuestranuncoeficientede
+dondey eselporcentajedecarbonoorgánicodelai−ésima
+ij variación constante, esto es, en donde la varianza aumenta
+muestraenelj−ésimoniveldelíndicedevegetaciónNDVI.
+segúnaumentalamediadelamuestrademaneraconstante,
+Lasvariablesindependientesdeefectosfijosson:X quere-
+1 loquesecumpleenestecaso[5].
+presenta DA, y X Ntot. La variable de efecto aleatorio es
+2
+NDVIagrupadaentresniveles.Elresiduoε sesuponeque
+ij 3.4 Modelación bajo el supuesto de distribución
+sedistribuyenormalconvarianzaσ2.
+gammadeloserrores
+Losestimadoresdelosparámetrossonβ =0.1281364,β =
+0 1 Bajo el supuesto de distribución gamma de los errores
+-0.120814,β =0.014284yσ2=7.531e-04.Estosvaloresdes-
+2 delmodeloy,considerandolosenlaces“log”y“probit”que
+tacan,comoeradeesperarse,laimportanciadeladensidad
+brindalafunciónglmerdelpaquetelme4delsoftwareR,se
+aparenteparalaexplicacióndelporcentajedecarbonoorgáni-
+obtuvieronotrosmodelosparaexplicarCorgenfuncióndela
+coenestossuelos,loquesemanifiestatambiénalobservarla
+DAydelNtotcomoefectosfijosyladensidaddevegetación
+altacorrelaciónnegativaconelintercepto.Porotraparte,los
+comoefectoaleatorio(NDVIA,NDVIB,NDVIM).Utilizando
+residuosestandarizadosapuntanaquesudistribuciónnoes
+lanotacióndelpaquetelme4estemodelopuedeexpresarse
+simétricayaqueelmínimoesaproximadamente−2mientras
+comoelmodelo2antesconsiderado:
+queelmáximoesaproximadamente4.
+DadoqueenelmétododeestimaciónMLseasumelanorma- Corg∼1+DA+Ntot+(1|NDVI). (2)
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-7
+142 EstimacióndelporcentajedecarbonoorgánicoensuelosutilizandoImágenesSatelitalesyModelosMixtos.
+Figura2.Gráficosderesiduosbajoelsupuestodedistribuciónnormal.
+Tabla4.Métodosdeestimaciónbajoelsupuestodedistribucióngammadeloserrores.
+Familia=Gamma("log") Familia=Gamma("probit")
+MODELODEMEDIA MODELODEMEDIA
+Estimadoresdeefectosfijos: Estimadoresdeefectosfijos:
+Estimador Pr(>|t|) Estimador Pr(>|t|)
+Interc -1.4442 0.031017* Interc -1.3805 1.75e-05***
+DA -2.7823 0.001657** DA -1.0156 0.00491**
+Ntot 0.6766 0.000645*** Ntot 1.1379 2.41e-05***
+Estimadoresdeefectosaleatorios: Estimadoresdeefectosaleatorios:
+Estimador ErrorEstándar Estimador ErrorEstándar
+NDVIA 0.0254 0.1110 NDVIA .0003 0.0437
+NDVIB 0.0455 0.1090 NDVIB 0.0222 0.0428
+NDVIM -0.0709 0.1078 NDVIM -0.0224 0.0424
+MODELODEDISPERSIÓN MODELODEDISPERSIÓN
+Parámetrodedispersiónparaelmodelodemedia: Parámetrodedispersiónparaelmodelodemedia:
+0.6057283 0.5107561
+Efectos: Efectos:
+Estimador ErrorEstándar Estimador ErrorEstándar
+-0.5013 0.2053 -0.6719 0.2052
+Parámetrodedispersiónparaelefectoaleatorio: Parámetrodedispersiónparaelefectoaleatorio:
+0.01408 0.002061
+Efectos: Efectos:
+.|Aleatorio1 .|Aleatorio1
+Estimador ErrorEstándar Estimador ErrorEstándar
+-4.2631 1.9066 -6.1846 2.0375
+EnlaTabla4semuestranlosresultadosobtenidos.Conel Conclusiones
+enlace“log”seobtuvolaconvergenciaen7iteracionesylas
+pruebastsebasaronen47gradosdelibertad(gl),mientras LosModelosLinealesGeneralizadosMixtos(MLGM),
+queelenlace“probit”convergióen8iteracionesylaspruebas puedenconsiderarseunamodernaherramientaparaintegrar
+sebasaronen48gl.Todoslosestimadoresdelosefectosfijos informaciónobtenidaencampoyprocesadaenlaboratorios
+fueronsignificativosadiferentesnivelesdesignificaciónen conlainformaciónobtenidaatravésdeimágenessatelitales,
+ambosenlaces,loquecorroboralaimportanciadelaDAydel en estudios de secuestro de carbono en suelos. El análisis
+NtotenlaexplicacióndelCorg.Estosmodelospuedenconsi- de índices de vegetación en la Región Terrestre Prioritaria
+derarsemásadecuadosquelosobtenidosbajoelsupuestode 105:Cuetzalan,Puebla,México,medianteelusodesensores
+normalidaddeloserroresdelmodelo,yaquenosepresentan remotos,permitióvisualizarelcontrasteentretresclasesde
+incumplimientosdelassuposiciones. densidad de vegetación, baja, media y alta, mostrando que
+lasobservacionestienenuncomportamientodeagrupacióny,
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-7
+EstimacióndelporcentajedecarbonoorgánicoensuelosutilizandoImágenesSatelitalesyModelosMixtos. 143
+dadoquelavariablerespuestaesunaproporción,losMLGM [8] B. Douglas, Martin Mächler, Ben Bolker, and Steve
+permitieron una modelación más adecuada que la práctica Walker. Fittinglinearmixed-effectsmodelsusinglme4.
+tradicionaldeconsiderarnormalidadenloserrores.Seobtu- JournalofStatisticalSoftware,67(1):1–48,2015.
+vieronmodelosderegresióngammadeefectosmixtosque
+estimanelporcentajedecarbonoorgánicoenfuncióndepro-
+[9] R.KieschnickandBDMcCullough. Regressionanaly-
+piedadesfisicoquímicasdelsuelo(efectosfijos)ydelÍndice
+sisofvariatesobservedon(0,1):percentages,propor-
+deVegetaciónNormalizado(NDVI)consideradocomoefecto
+tionsandfractions. StatisticalModelling,2003.
+aleatorio,conlosenlaces“log”y“probit”.
+Referencias [10] G.F.Linares,M.G.A.Tenorio,E.T.Trejo,andA.A.
+H.Oroza . Estimacióndelcarbonoorgánicoensuelos
+[1] A. Bannari, D. Morin, F. Bonn, and A. R. Huete. A
+porteledetecciónymodelosderegresión. RevistaLati-
+reviewofvegetationindices. RemoteSensingReviews,
+noamericanaelAmbienteylasCiencias,8(18):26–40,
+13(1-2):95–120,1995.
+2017.
+[2] W. Bonat, Ribeiro Jr. Paulo, and Zeviani Walmes.
+Regressio models with responses on the unity inter-
+[11] J.M.Losilla,J.B.Navarro,A.Palmer,M.F.Rodrigo,
+val:specification, estimation and comparison. Revista
+and M. Ato . Modelo Lineal Generalizado. Girona:
+BrasileiradeBiometria,30,012012.
+DocumentaUniversitaria,2005.
+[3] T.BurzykowskiandA.Galecki. LinearMixedEffects
+ModelsUsingR.AStepbyApproach. Springer,2013.
+[12] P.McCcullaghandJ.A.NelderFRS. GeneralizedLi-
+nearModels. ChapmanandHall,1989.
+[4] L.Cayuela. Modeloslinealesmixtos(LMM)ymodelos
+linealesgeneralizadosmixtos(GLMM)enR. Universi-
+dadReyJuanCarlos,Madrid,España,2012. [13] P.McCullaghandJ.Nelder. GeneralizedLinearModels.
+ChapmanandHall,2001.
+[5] L. Cayuela. Modelos lineales generalizados (GLM).
+[14] A.RamosandA.Domínguez. UniversidadTecnológica
+UniversidadReyJuanCarlos,Madrid,España,2014.
+dePuebla,México. ElmundodelosSátelites:Funda-
+[6] E.Demidenko. MixedModels.TheoryandApplications mentosyAplicaciones,2002.
+withR. JohnWiley&Sons,2013.
+[7] A.J.DobsonandA.Barnett . AnIntroductiontoGe- [15] R Core Team. R: A Language and Environment for
+neralizedLinearModels. hapmanandHallandCRC, StatisticalComputing.RFoundationforStatisticalCom-
+2008. puting,Vienna,Austria,2016.
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-7

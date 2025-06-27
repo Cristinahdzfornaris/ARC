@@ -1,0 +1,281 @@
+REVISTA CIENCIAS MATEM`TICAS 53
+Un modelo de los procesos moleculares
+de la polimerizaci(cid:243)n y cristalizaci(cid:243)n
+de la hemoglobina s
+Sandy SÆnchez Dom(cid:237)nguez1 / Adolfo FernÆndez Garc(cid:237)a2
+Departamento de MatemÆtica, Universidad de Oriente.
+IvÆn Ruiz Chaveco3
+Universidad del estado de Amazonas, Brasil.
+RESUMEN. En este trabajo se presenta un modelo que simula el proceso de formaci(cid:243)n de pol(cid:237)meros
+a partir de un mecanismo molecular de deoxigenaci(cid:243)n de la hemoglobina S. Se estudian casos es-
+peciales, como la polimerizaci(cid:243)n en ausencia de cristalizaci(cid:243)n y la cristalizaci(cid:243)n avanzada. Se hace
+ademÆs un estudio cualitativo del sistema en su forma mÆs general haciendo uso de la teor(cid:237)a cua-
+litativa de ecuaciones diferenciales.
+INTRODUCCI(cid:211)N tiempo eso introduce determinadas variaciones en
+el modelo, las que indicaremos en ese contexto.
+La Anemia Drepanoc(cid:237)tica es una enfermedad
+Una primera aproximaci(cid:243)n [14] en el anÆlisis
+de origen molecular, la que constituye uno
+de casos particulares del sistema de ecuaciones
+de los grandes problemas de salud a escala mun-
+diferenciales del modelo en el estudio del com-
+dial [1]. Su origen genØtico es reportado como una
+portamiento cualitativo de las trayectorias en
+alteraci(cid:243)n de las cadenas de aminoÆcidos de la
+una vecindad de las posiciones de equilibrio y
+hemoglobina S (Hb S). El proceso mediante el cual
+en especial de los casos cr(cid:237)ticos, se vincula con
+se forman pol(cid:237)meros a partir de mon(cid:243)meros reci-
+el desarrollote la enfermedad.
+be el nombre de polimerizaci(cid:243)n, originado por un
+En [15], [16] y [17] se presenta las curvas
+proceso de desoxigenaci(cid:243)n de la Hemoglobina.
+cinØticas t(cid:237)picas del proceso de polimerizaci(cid:243)n
+El mecanismo molecular de la formaci(cid:243)n de
+en soluci(cid:243)n de Hemoglobina S provenientes de
+pol(cid:237)meros juega el rol mÆs importante de la (cid:222) -
+pacientes drepanociticos, donde se expone cla-
+siolog(cid:237)a de la enfermedad y la estrategia tera-
+ramente las tres etapas del proceso, siendo la
+pØutica [1,2]. Han sido propuestos diferentes
+etapa de polimerizaci(cid:243)n la que representamos
+mecanismos y modelos de formaci(cid:243)n de pol(cid:237)me-
+en estos modelos. Por lo que la soluciones de las
+ros y dominios moleculares de la hemoglobina
+ecuaciones diferenciales ordinarias y su com-
+S, permitiendo la descripci(cid:243)n de diferentes fe-
+portamiento pueden ser evaluados en primera
+n(cid:243)menos [2,11] y en [13]. En [3] es presentado
+estancia cualitativamente con el comportamien-
+un modelo que describe la in(cid:223) uencia de la con-
+to experimental del proceso de polimerizaci(cid:243)n
+centraci(cid:243)n de la hemoglobina S en el proceso de
+en condiciones de desoxigenaci(cid:243)n espontÆnea.
+polimerizaci(cid:243)n en ausencia de cristalizaci(cid:243)n.
+En [3] y [4] se considera un caso particular del DESARROLLO
+modelo aqu(cid:237) presentado, donde R(y)=by, y la va-
+riaci(cid:243)n de w s(cid:243)lo depende de la presi(cid:243)n p y no del Presentaci(cid:243)n del modelo
+1 sandys@csd.uo.edu.cu
+Los estudios realizados nos han permitido obte-
+2 adolfo@csd.uo.edu.cu
+3 iruiz2005@yahoo.es. ner el siguiente modelo:
+54 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+r: Coe(cid:222) ciente de reacci(cid:243)n de oxigenaci(cid:243)n, a par-
+tir de mon(cid:243)meros de desoxi Hb S.
+s: Coe(cid:222) ciente de reacci(cid:243)n de oxigenaci(cid:243)n a par-
+tir de pol(cid:237)meros defectuosos.
+n: Nœmero de molØculas de Hb S que forman la
+unidad estructural de los microtœbulos segœn
+(1) datos de microescop(cid:237)a electr(cid:243)nica.
+N: Concentraci(cid:243)n total de Hb S.
+mÆs la ecuaci(cid:243)n de conservaci(cid:243)n de masa El sistema (1) no puede ser integrado, por lo
+que para llegar a determinadas conclusiones con
+N = x(t) + n y(t) + n z(t) + w(t, p) (2) relaci(cid:243)n a sus trayectorias haremos un estudio
+cualitativo de estas haciendo uso de la teor(cid:237)a
+donde:
+anal(cid:237)tica de ecuaciones diferenciales.
+Es evidente que este sistema tiene al menos
+: Funci(cid:243)n de polimerizaci(cid:243)n.
+un valor propio nulo, por lo que existe, segœn
+[13], una transformaci(cid:243)n no degenerada que re-
+duce el sistema (1) a la forma:
+: Funci(cid:243)n de despolimerizaci(cid:243)n.
+x(t): Concentraci(cid:243)n de desoxi Hb S en estado de
+mon(cid:243)meros o formando parte de unidades es-
+(2)
+tructurales defectuosas.
+ny(t): Concentraci(cid:243)n de desoxi Hb S en micro-
+tœbulos.
+nz(t): Concentraci(cid:243)n de desoxi Hb S en domi-
+donde λ , λ , λ , son valores propios de la matriz
+nios. 1 2 3
+del sistema (1), y Z, X, Y, W son series de poten-
+w(p, t): Concentraci(cid:243)n oxi Hb S, depende de la cias de x, y, z, w.
+presi(cid:243)n parcial de ox(cid:237)geno (p) en la sangre y el
+Teorema 1: Existe el cambio de variables
+tiempo.
+a, i = 1,2,...,m: Coe(cid:222) ciente de la reacci(cid:243)n de po-
+i
+limerizaci(cid:243)n.
+α, i =1,2,...,m: Coe(cid:222) ciente de la reacci(cid:243)n de des-
+(3)
+i
+polimerizaci(cid:243)n en microtœbulos.
+k: Coe(cid:222) ciente de reacci(cid:243)n de oxi Hb S en micro-
+tœbulos.
+c: Coe(cid:222) ciente de la reacci(cid:243)n de cristalizaci(cid:243)n por que reduce el sistema (2) a la forma cuasinor-
+adici(cid:243)n de mon(cid:243)meros de desoxi Hb S. mal:
+d: Coe(cid:222) ciente de la reacci(cid:243)n de decristalizaci(cid:243)n
+por separaci(cid:243)n de mon(cid:243)meros de desoxi Hb S.
+e: Coe(cid:222) ciente de la reacci(cid:243)n de cristalizaci(cid:243)n por
+adici(cid:243)n de microtœbulos. (4)
+f: Coe(cid:222) ciente de la reacci(cid:243)n de decristalizaci(cid:243)n
+por separaci(cid:243)n de microtœbulos.
+n: Nœmero de molØculas de Hb S que forman la
+unidad estructural de los microtœbulos segœn tal que
+datos de microescop(cid:237)a electr(cid:243)nica.
+U (u ,0,0,0) = 0, i = 2, 3, 4; U (u ) = zs + (cid:133), y
+i 1 1 1
+l: Coe(cid:222) ciente de reacci(cid:243)n de oxi Hb S en estado
+h0 (u ,0,0,0) = 0
+de mon(cid:243)meros. 1
+REVISTA CIENCIAS MATEM`TICAS 55
+Demostraci(cid:243)n: Derivando la transformaci(cid:243)n POLIMERIZACI(cid:211)N EN AUSENCIA
+a lo largo de las trayectorias de los sistemas (2) DE CRISTALIZACI(cid:211)N.
+y (4) se obtiene un sistema de ecuaciones que
+permite determinar los coe(cid:222) cientes de las series Considerando ademÆs que w s(cid:243)lo depende de la
+que intervienen en los sistemas indicado y en la presi(cid:243)n p, el sistema (1) adoptarÆ la forma:
+transformaci(cid:243)n, lo que prueba la existencia del
+cambio de variables (3) (Ver [13]).
+Teorema 2: Los sistemas (2) y (4) son anal(cid:237)ti- (5)
+camente equivalentes.
+Demostraci(cid:243)n: En este caso el estudio cuali-
+este es un proceso molecular mÆs lento, y es
+tativo de los sistemas s(cid:243)lo depende de un nœme-
+similar a la fase inicial de la cristalizaci(cid:243)n. Para
+ro (cid:222) nito de los tØrminos, pues se llega a las con-
+el sistema (5), pude existir entre una posici(cid:243)n de
+clusiones usando para ellos s(cid:243)lo las potencias
+equilibrio hasta un nœmero in(cid:222) nito de estas en
+hasta el grado s, por tal motivo se puede hacer
+funci(cid:243)n de las caracter(cid:237)sticas de las funciones P
+un truncamiento en las series de la transforma-
+y R, pero siempre el origen serÆ un punto esta-
+ci(cid:243)n (3) convirtiendo esta en un polinomio, lo
+cionario del sistema.
+que prueba la equivalencia anal(cid:237)tica. (Ver [13]).
+La integral de este sistema se puede dar en
+De esta forma las conclusiones con relaci(cid:243)n
+forma impl(cid:237)cita por medio de la de la expresi(cid:243)n
+al comportamiento de las trayectorias del siste-
+x + ny = C, la cual representa una familia de
+ma (4) pueden ser inferidas al comportamiento
+de las correspondientes del sistema (2).
+rectas de pendiente −1/n, sustituyendo esta
+expresi(cid:243)n y z(t) = 0 en la ecuaci(cid:243)n de conserva-
+Teorema 3: Si α < 0, s es impar (s = 2k−1), y
+ci(cid:243)n de masa se obtiene w = N−C, lo que lo que
+los valores propios λ , λ y λ son negativos, en-
+1 2 3 indica que la oxi Hb S es constante cuando no
+tonces a posici(cid:243)n de equilibrio (0,0,0,0) del sis-
+existe cristalizaci(cid:243)n.
+tema (2) es asint(cid:243)ticamente estable.
+Cabal y Ru(cid:237)z (2008, p 13-22) estudiaron el
+Demostraci(cid:243)n: Basta considerar la funci(cid:243)n
+proceso de polimerizaci(cid:243)n en ausencia de crista-
+de Liapunov:
+lizaci(cid:243)n para un caso particular del sistema (1),
+donde R(y) = by y ademÆs w es solamente fun-
+1
+V(x, y, z, w) = (x2 + y2 + z2 + w2) ci(cid:243)n de p, llegando a conclusiones similares.
+2
+cuya derivada a lo largo de las trayectorias del FASE AVANZADA DE LA CRISTALIZACI(cid:211)N
+sistema (2) es:
+Considerando ademÆs que w no depende del
+tiempo t, el sistema (1) adopta la forma:
+V(cid:146)(x(t), y(t), z(t), w(t))= z2k + λ x2 + λ y2 + λ w2 +
+1 2 3
++ R(x, y, z, w)
+Donde en R aparecen las potencias de grado (6)
+superior en las diferentes variables.
+De la estabilidad asint(cid:243)tica de este sistema se
+deduce que para cualquier tiempo posterior a ese
+momento inicial las soluciones de ese sistema se El sistema (6) puede ser integrado fÆcilmente,
+mantendrÆn en una vecindad de las condiciones obteniØndose:
+iniciales, lo que quiere decir que la enfermedad
+(7)
+se mantendrÆ en un estado estacionario.
+Dentro del proceso general son interesantes
+y
+(8)
+determinados casos particulares para los que se
+puede llegar a conclusiones mÆs claras del es-
+tado de la enfermedad. donde D = z + x /n+ y .
+0 0 0
+56 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+De las expresiones (7) y (8) se deduce que c>d tegraci(cid:243)n. Universidad Industrial de Santander.
+y e > f, pues de lo contrario existir(cid:237)a un T, tal Colombia. Vol. 26, N”2, 2008, Pag. 1-9.
+que para todos los t > T se tend(cid:237)a que z(t) < 0, lo 6. T.E. Wellems, and R. Josephs, Crystallization of
+cual no es posible. Deoxyhemoglobin S by Fiber Alignment and Fu-
+sion, J. Mol. Biol. 135(1979) 651-674.
+De la expresi(cid:243)n (8) se deduce que para la cris-
+7. McPherson, Current approaches to macromole-
+talizaci(cid:243)n bien avanzada la concentraci(cid:243)n de
+cular crystallization, Eur. J. Biochem. 189 (1990)
+desoxi Hb S en forma de mon(cid:243)mero y en micro-
+1-23.
+tœbulos disminuye. 8. Agarwal, J.C. Wang, S. Kwong , S.M. Cohen, F.A.
+A resultados similares se lleg(cid:243) en [4] para un Ferrone, R. Josephs, R.W. Briehl, Sickle hemog-
+caso particular de este sistema cuando los auto- lobin Fibers: Mechanisms of Depolymerization, J.
+Mol. Biol. 322 (2002) 395-412.
+res estudiaron este mismo problema.
+9. F.A. Ferrone, J. Hofrichter, and W.A. Eaton, Ki-
+netics of Sickle Hemoglobin Polymerization. II A
+CONCLUSIONES double nucleation mechanism, J. Mol. Biol. 183
+(1985) 611-631.
+DespuØs de haber modelado la cinØtica de la
+10. M. Ivanova, R. Jasuja, S. Kwong, R.W. Briehl, F.A.
+polimerizaci(cid:243)n de la Hb S teniendo presente la
+Ferrone, Nonideality and the nucleation of sickle
+participaci(cid:243)n de sus estados oxigenado y des- hemoglobin, Biophys. J. 79 (2000) 1016-1022.
+oxigenado y el proceso de despolimerizaci(cid:243)n lle- 11. V.B Makhijani., G.R. Coketet, and A. Clark, Dy-
+gamos a las conclusiones: manics of oxygen unloading from sickle erythro-
+cytes, Biophys. J. 58 (1990) 1025-1050.
+● Se presenta un modelo que describe con
+12. F.A. Ferrone, M. Ivanova, R. Jasuja, Heteroge-
+mayor exactitud y generalidad el proceso
+neous Nucleation Crowding in Sickle Hemoglo-
+estudiado, que introduce la totalidad de
+bin. An Analytic Approach, Biophys. J. 82 (2002)
+los estados de la Hb S.
+399- 406.
+● Se obtienen condiciones concretas de es- 13. Ivanova, R. Jasuja, S. Kwong, R.W Briehl, F.A.
+tabilidad asint(cid:243)tica para la soluci(cid:243)n tri- Ferrone, Nonideality and the nucleation of Sickle
+vial del sistema que modela el proceso Hemoglobin, Biophys. J. 79 (2000) 1012- 1022.
+de formaci(cid:243)n de pol(cid:237)meros, por lo que en 14. 12. L Elsgoltz. Differential Equations and Varia-
+cualquier tiempo posterior al inicial las tional Calculus. Second Edition. Editorial Mir.
+concentraciones no variarÆn de forma sig- Moscow. 1977.
+15. 13. A.I, Ruiz (cid:147)Sobre la aplicaci(cid:243)n de la teor(cid:237)a
+ni(cid:222) cativa.
+de las formas normales al estudio de la estabili-
+● Se concluye que en ausencia de cristali-
+dad del movimiento de algunos casos cr(cid:237)ticos.(cid:148)
+zaci(cid:243)n la concentraci(cid:243)n de la oxi Hb S es
+Revista Ciencias MatemÆticas. Universidad de La
+constante. Habana. Aæo 1989.
+● Se determin(cid:243) que en la etapa avanzada de 16. 14. SÆnchez, S. FernÆndez, A. Ruiz A. I, Cabal.
+la cristalizaci(cid:243)n la concentraci(cid:243)n de des- C Comportamiento de las trayectorias de un sis-
+tema de ecuaciones diferenciales que modela la
+oxi Hb S decrece rÆpidamente.
+Anemia Drepanoc(cid:237)tica. Revista Integraci(cid:243)n Vol
+22 No1 y 2. 2004. pag 43-57.
+BIBLIOGRAF˝A 17. 15. A. FernÆndez, C. Cabal, J. Losada, E. Alva-
+rez, J. Otero, (cid:147)In Vivo Action of Vainillin on Delay
+1. G.R. Serjeant, Sickle Cell Disease, Oxford Uni-
+Time Determined by Magnetic Relaxation(cid:148) Hae-
+versity Press, UK, 1994.
+moglobin, 2005, Vol. 29, N3, 181-187.
+2. W.A. Eaton, J. Hofrichther, Sickle Cell Hemoglo-
+18. M.A. Lores-Guevara, C. A. Cabal (cid:147)Proton Magne-
+bin Polymerization, Advances in Protein Chemis-
+tic Relaxation Process during the Polymerization
+try. 40 (1990) 63-279.
+of Hemoglobin S(cid:148). Applied Magnetic Resonance.
+3. C.Cabal and A. I. Ruiz (cid:147)A model of the Molecular
+2005; 28(1) p 1 - 6. (Science Citation Index
+Aggregate Processes of Hemoglobin S. Absence of
+19. Adolfo A. Fernandez; Carlos A. Cabal; Manuel A.
+Cristallization(cid:148) Revista Integraci(cid:243)n. Universidad
+Lores; Jorge Losada; Enrique R. Perez (cid:147)Sickle Cell
+Industrial de Santander. Colombia.
+Disease Painful Crisis and Steady State Differen-
+4. Vol. 26, N”1, 2008, pag. 13-22.
+tiation by Proton Magnetic Resonance(cid:148) Hemoglo-
+5. C.Cabal and A. I. Ruiz (cid:147)A Mechanism of crista-
+bin, 2009, Vol 33, N 3-4 June, pag 206 - 213
+lization processes of hemoglobin S(cid:148) Revista In-
+REVISTA CIENCIAS MATEM`TICAS 57
+Abstract. This work presents a model that simulate a process of polymers formation from a molecu-
+lar mechanism of deoxigenation of hemoglobin S. It·s studied in special cases, like the polymeza-
+tion in the absences of crystalization and advanced crystalization. In addition a qualitative study of
+the system in it·s general form is realized using the qualitative theory of differential equations.

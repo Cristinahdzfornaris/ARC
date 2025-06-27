@@ -1,0 +1,777 @@
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.101-110
+Recibido03-2021,Aceptado07-2021
+Cohomología de Hochschild del Álgebra de Matrices
+Triangulares
+Hochschild Cohomology of Triangular Matrix
+Algebras
+Beatriz de Rancell Montero Deus1*, José Fidel Hernández Advíncula 1
+Resumen El objetivo de este trabajo es estudiar la cohomología de Hochschild del álgebra de matrices
+triangulares.SedefinelacohomologíadeHochschilddeunaK−álgebraAdedimensiónfinitaconcoeficientes
+enelA−bimóduloM paraelcasoenelqueK esuncuerpo.Sedemuestralaexistenciadeunasucesiónexacta
+(cid:18) (cid:19)
+A M
+largaparaelcasodelaextensiónporunpuntoB= A querelacionalascohomologíasdeHochschildde
+0 K
+AyBysusaplicacionesparaálgebrasdetiporepresentacióndirigida.Segeneralizaestasucesiónparaelcaso
+(cid:18) (cid:19)
+A M
+B= A B .
+0 R
+Abstract TheaimofthispaperistostudytheHochschildcohomologyofthetriangularmatrixalgebra. We
+definetheHochschildcohomologyofafinite-dimensionalK−algebraAwithcoefficientsintheA−bimoduleM,
+whereK denoteafield. Wedemonstratetheexistenceofalongexactsequencefortheone-pointextension
+(cid:18) (cid:19)
+A M
+B= A , which relate the Hochschild cohomologies of A and B and its applications to representation-
+0 K
+(cid:18) (cid:19)
+A M
+directedalgebras. ThislongexactsequenceisgeneralizedtothecaseB= A B .
+0 R
+PalabrasClave
+CohomologíadeHochschild,Extensiónporunpunto,ÁlgebradeMatricesTriangulares
+Keywords
+HochschildCohomology,Onepointextension,TriangularMatrixAlgebras
+1DepartamentodeMatemática,UniversidaddeLaHabana,Cuba,betty@matcom.uh.cu,fidel@matcom.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción vasdelálgebraAydegruposdecohomologíaconvaloresen
+unA−bimóduloarbitrario.EnestemismotrabajoHochschild
+Lastécnicahomológicastienensuorigenentopologíaa
+daunainterpretacióndelsegundogrupodecohomologíaen
+finalesdelsiglo19.Nofuehastaladécadade1940quese
+términosdelasextensionesdelálgebraA.
+manifiestanenelálgebracuandoGerhardHochschildintrodu-
+cela(co)homologíadeálgebras(1945)ySamuelEilenbergy LacohomologíadeHochschild,alguardarunasignificati-
+MacLaneintroducenla(co)homologíadegrupos(1947).Esta vainformaciónsobreanillosyálgebras,esusadaparaestudiar
+herramientasehavueltoindispensableenálgebraabstracta, sus estructuras y deformaciones, así como para identificar
+topologíaalgebraica,teoríaderepresentaciones,entreotros elementosesencialessobresusrepresentaciones.Nuestroin-
+campos. teréssecentraenlasálgebrasAfinito-dimensionalessobreun
+LacohomologíadeHochschild,enparticular,esunahe-
+cuerpoK,dondetenemoscomoresultadolainvarianzabajo
+rramientahomológicaparaálgebrasasociativassobreanillos. equivalenciasMorita.
+Fueintroducidaporprimeravezen1945porGerhardHochs- Elobjetivofundamentaldeestainvestigacióneselestudio
+child en su artículo On the cohomology groups of an asso- delacohomologíadeHochschilddelálgebradematricestrian-
+(cid:18) (cid:19)
+ciative algebra para el caso de álgebras sobre un cuerpo y A M
+gularesB= A R ,dondeAyRsondosK−álgebras
+posteriormentegeneralizadoalcasodeálgebrassobreunani- 0 R
+lloporHenriCartanySamuelEilenbergen1956ensulibro y M esun(A−R)−bimódulo.Específicamente,encontrar
+A R
+Homological algebra. En su artículo, Hochschild define la unaformageneraldedescribirlacohomologíadeHochschild
+cohomologíadeHochschildapartirderesolucionesproyecti- delálgebraB,apartirdelasdeAyR.
+102 CohomologíadeHochschilddelÁlgebradeMatricesTriangulares
+1. Cohomología de Hochschild de un Sepuedechequearque(1)defineuncomplejodecadena,es
+álgebra decir,d n−1 d n =0.Ademásexisteunahomotopíacontractante
+dadapor:
+Enestaseccióndesarrollaremoslasnocionesbásicasacer-
+s (a ⊗···⊗a )=1⊗a ⊗···⊗a (3)
+ca de la cohomología de Hochschild de una K−álgebra A n 0 n+1 0 n+1
+dondeK esuncuerpoyconcoeficientesenunbimóduloM.
+conlocuallasucesiónanterioresexacta.
+Engeneral,lacohomologíadeHochschildsepuededefiniren ProductodelosisomorfismosdeAe−bimódulos:
+elcasoenqueK seaunanilloconmutativoyunitario.
+A⊗(n+2)∼ =Ae⊗A⊗n∼ = (cid:77) Ae(1⊗1⊗a), (4)
+i
+Definición1 SeanAyBdosK−álgebras.Un(A−B)−bi- i∈I
+móduloesunaterna M =(M,∗,·)donde M=(M,∗)esun
+A B A donde{a} esunabasedeA⊗ncomoK−espaciovectorial
+i i∈I
+A−móduloizquierdoyM =(M,·)esunB−móduloderecho
+B yelprimerisomorfismoestádadopor
+y:
+a ⊗a ⊗···⊗a ⊗a (cid:55)→(a ⊗a )⊗(a ⊗···⊗a )
+0 1 n n+1 0 n+1 1 n
+(a∗m)·b=a∗(m·b) ∀m∈M, a∈A, b∈B
+elcomplejoanterioresunaresoluciónlibredeAcomoAe−
+Paratodo(A−B)bimódulo M ytodoB−móduloX ,elK− módulo,llamadaresolucióndeHochschilddeA.
+A B B
+espaciovectorialHom
+B
+(
+A
+M
+B
+,X
+B
+)detodoslosB−módulos SiaplicamoselfuntorHom Ae( ,M)alcomplejo(1),don-
+homomorfismosdeM aX esunA−móduloderechocon de M es un A - bimódulo, obtenemos el complejo de K−
+B B
+respectoalamultiplicaciónporA−escalares: módulos:
+(f,a)(cid:32) f·a dadapor(fa)(m)= f(am)
+0 (cid:47)(cid:47) Hom Ae(A,M) b∗ 0 (cid:47)(cid:47) Hom Ae(A⊗2,M b ) ∗ 1 (cid:47)(cid:47)
+SiMyXsondeK−dimensiónfinita,entoncesHom ( M ,X )
+B A B B
+tambiénloes.
+Definición2 LlamamosálgebraenvolventedeAalK−espacio Hom Ae(A⊗3,M)
+b∗
+2 (cid:47)(cid:47) ···
+vectorialAe=A⊗Aop,dondeAopdenotaelálgebraopuesta (5)
+deA,conlamultiplicacióndefinidacomosigue: con diferenciales definidos por b∗ n (f)= fd n para toda
+aplicación f ∈Hom Ae(A⊗(n+1),M).Podemosusarparan(cid:62)0
+(a ⊗b )·(a ⊗b )=a a ⊗b b elisomorfismodeK−módulos
+1 1 2 2 1 2 2 1
+ConestadefinicióntodoA−bimóduloMpuedeconside-
+Hom Ae(A⊗(n+2),M)∼ =Hom
+K
+(A⊗n,M) (6)
+rarse como un Ae−módulo izquierdo, donde la acción está
+dadopor
+dadapor
+n=0: g(cid:55)→(1(cid:55)→g(1⊗1))
+(a⊗b)·m=amb, ∀a,b∈Aandm∈M. n(cid:62)1: g(cid:55)→(a ⊗···⊗a (cid:55)→g(1⊗a ⊗···⊗a ⊗1))
+1 n 1 n
+Cabeaclarar,quedeformaanáloga,lacategoríadeA− Luegopodemosreescribirelcomplejo(5)como
+bimódulostambiénesnaturalmenteisomorfaalacategoríade
+Ae−módulosderechos,definiendolaaccióncomom·(a⊗ C∗(A,M): 0 (cid:47)(cid:47) M d 1 ∗ (cid:47)(cid:47) Hom (A,M) d 2 ∗ (cid:47)(cid:47)
+K
+b)=bma.
+NotemosqueAesellamismaunAe−módulo.Engeneral
+A⊗n=A⊗···⊗A(nfactores)esunAe−módulodefiniendo Hom (A⊗A,M) d 3 ∗ (cid:47)(cid:47) ···
+K
+(a⊗b)·(c ⊗c ⊗···⊗c ⊗c )=ac ⊗c ⊗···⊗c ⊗c b. (7)
+1 2 n−1 n 1 2 n−1 n
+Identificando las funciones que se corresponden por el
+1.1 ComplejodeHochschild isomorfismo(6)podemosreescribir
+ConsideremoslasucesióndeA−bimódulos d∗(f)(a ⊗···⊗a )=a f(a ⊗···a ))+
+n 1 n 1 2 n
+··· d3 (cid:47)(cid:47) A⊗4 d2 (cid:47)(cid:47) A⊗3 d1 (cid:47)(cid:47) A⊗A π (cid:47)(cid:47) A (cid:47)(cid:47) 0 + n ∑ −1 (−1)if(a ⊗···⊗aa ⊗···⊗a )
+1 i i+1 n
+(1) i=1
+dondeπ eslamultiplicaciónenAyparan(cid:62)1definimos +(−1)nf(a ⊗···⊗a )a
+1 n−1 n
+(8)
+n
+d (a ⊗a ⊗···⊗a )=∑(−1)ia ⊗···⊗aa ⊗···⊗a
+n 0 1 n+1 0 i i+1 n+1 paratodaaplicación f ∈Hom (A⊗(n−1),M),dondeunpro-
+i=0 K
+(2) ductotensorialvacíoseidentificacon1∈K.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.101-110
+CohomologíadeHochschilddelÁlgebradeMatricesTriangulares 103
+(cid:18) (cid:19) (cid:18) (cid:19)
+Definición3 Llamamos complejo de cocadenas de Hochs- 1 0 0 0
+Identidad:1=e +e = +
+childalcomplejo(7)condiferencialesd∗dadospor(8)para A R 0 0 0 1
+n
+n(cid:62)1yd∗eslaaplicaciónnula.
+0 ElanilloBpuedeserdotadodeunaestructuradeK−álgebra,
+Definición4 LaCohomologíadeHochschildHH∗(A,M)de mediantelaacciónevidentedelcuerpoK ynosreferiremosa
+A con coeficientes en M, es la cohomología del complejo ellacomoÁlgebraTriangular.
+C∗(A,M)(7):
+Si X es un B− módulo, los idempotentes e y e nos
+HHn(A,M)=Hn(Hom (A⊗∗,M)) A R
+K permiten obtener una descomposición del mismo en suma
+Kerd∗ degruposabelianosdelaformaX =Xe A ⊕Xe R ,dondeXe A
+estoes,HHn(A,M)= n+1 conn(cid:62)0. esunA−móduloyXe esunR−módulo.Denotemospor
+Imgd∗ R
+n X(cid:48) =Xe yporX(cid:48)(cid:48) =Xe .Seam∈ M ,tenemosque
+A A R R A B
+LoselementosenKerd∗ sellamann−cociclosdeHochs-
+n+1
+childylosdeImgd∗ sellamann−colímitesdeHochschild. (cid:18) 0 m (cid:19) (cid:18) 0 m (cid:19) (cid:18) 0 m (cid:19) (cid:18) 0 m (cid:19)
+En lo adelante cons n ideremos HH∗(A,M)= (cid:76)HHn(A,M) 0 0 e R =e A 0 0 y 0 0 e A =e R 0 0 =0.
+n(cid:62)0
+comoK−móduloZ −graduado.
++ Luego multiplicando X con un elemento de la forma m˜ =
+(cid:18) (cid:19)
+0 m
+ParticularmentesiM=A,esusualabreviarlanotaciónpa- tenemosXe m˜ ⊂Xe .Deaquíobtenemosunaapli-
+ralacohomologíadeHochschildcomoHH∗(A)=HH∗(A,A). 0 0 A R
+caciónϕ :X(cid:48) ×M−→X(cid:48)(cid:48) dadaporψ(xe ,m)=xm˜e la
+ParaelcasoencuestióndondeK esuncuerpo,setiene A R A R
+que(1)esunaresoluciónproyectivadeAcomoAe−módulo, cualesbilineal.Estaaplicacióndalugaraunúnicohomomor-
+fismodeR−módulosϕ :X(cid:48)⊗ M −→X(cid:48)(cid:48) .
+luegopodemosdefinirlacohomologíadeHochschilddeA A R R
+concoeficientesenMcomo
+El análisis anterior nos brinda una forma bastante simple
+HHn(A,M)∼ =Extn (A,M), ([18], corolario9.1.5p.303) dedescribirlosmódulossobreelálgebratriangularB.Para
+Ae
+precisarestepuntodevistadefinamoslacategoríarep( M )
+A R
+lo que trae como ventaja que podamos escoger cualquier derepresentacionesdelbimódulo M ,lacualdemostraremos
+A R
+resoluciónproyectivadeAcomoAe-móduloparacalcularla
+esequivalenteaModB.
+cohomologíadeHochschild.
+Otraspropiedadesatenerencuentason: Losobjetosderep( M )sonlasternas(X(cid:48) ,X(cid:48)(cid:48) ,ϕ)don-
+A B A B
+i) SiAyBsonK−álgebras,M unA−bimóduloyN un de
+B−bimódulo,entoncesparacadai(cid:62)0setiene
+X(cid:48) ∈A,
+A
+HHi(A×B,M×N)=HHi(A,M)⊕HHi(B,N).
+X(cid:48)(cid:48) ∈R,
+R
+([18], teorema9.1.8p.305)
+ϕ:X(cid:48)⊗ M −→X(cid:48)(cid:48) esunhomomorfismodeR−módulos.
+A R R
+ii) LacohomologíadeHochschildesinvariantebajoequi-
+valenciaMorita:dadasdosK−álgebrasAyBtalque
+Unmorfismoenrep( M )esunpardemorfismos
+A R
+ModAesequivalenteaModB,entonces
+HHi(A)∼ =HHi(B)paracadai(cid:62)0([18],teorema9.5.6 (f(cid:48),f(cid:48)(cid:48)):(X(cid:48) ,X(cid:48)(cid:48) ,ϕ)−→(Y(cid:48) ,Y(cid:48)(cid:48) ,ψ)
+A R A R
+p.328).Luegobastaconsiderarálgebrasbásicas.
+donde
+2. El álgebra de matrices triangulares
+f(cid:48):X(cid:48) −→Y(cid:48) esunA−homomorfismo
+A A
+Consideremoselanillodematricestriangulares f(cid:48)(cid:48):X(cid:48)(cid:48) −→Y(cid:48)(cid:48) esunR−homomorfismo
+(cid:18) (cid:19) R R
+A M
+B= A R ,dondeAyRsondosK−álgebrasy M es
+0 R A R talqueelsiguientediagramaconmuta:
+un(A−R)−bimódulo.LoselementosdeBsonlasmatrices
+(cid:18) (cid:19)
+a m X(cid:48)⊗ M e,tϕs,lf(cid:48)⊗MX(cid:48)(cid:48) s,rf(cid:48)(cid:48)Y(cid:48)⊗ M e,bψY(cid:48)(cid:48)
+con b∈R, a∈A, m∈M y las operaciones están A R R A R R
+0 b
+dadasporlasordinariasentrematrices: Lacomposicióndemorfismosylasumadirectaenrep( M )
+A R
+(cid:18) (cid:19) (cid:18) (cid:19) (cid:18) (cid:19) estándefinidascomponenteacomponente.
+a m e v a+e m+v
+Adición: + =
+0 b 0 f 0 b+f
+El siguiente teorema establece la equivalencia entre la ca-
+(cid:18) a m (cid:19)(cid:18) e v (cid:19) (cid:18) ae av+mf (cid:19) tegoríademódulossobreBylacategoríarep( A M R )derepre-
+Multiplicación: =
+0 b 0 f 0 bf sentacionesdelbimódulo A M R .
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.101-110
+104 CohomologíadeHochschilddelÁlgebradeMatricesTriangulares
+Teorema5 SeanAyRdosK−álgebrasdedimensiónfinita Las demostraciones de las proposiciones 6 y 7 pueden ser
+y M un(A−R)bimódulodedimensiónfinita.SeaBlaK− consultadasen[2].
+A R
+álgebradematricestriangularesdedimensiónfinita,entonces
+setienenlassiguientesequivalenciasdecategorías:
+(cid:18) (cid:19) (cid:18) (cid:19) 3. Extensión por un punto
+R 0 A M
+(cid:39)rep( M )(cid:39)Mod A R .
+M A A R 0 R
+A R Definición8 Sea A una K− álgebra de dimensión finita y
+M∈ModA.LaextensiónporunpuntodeAporelmóduloM
+Lademostracióndedichoresultadopuedeserconsultada
+eslaK−álgebra
+en[15].
+(cid:18) (cid:19)
+A M
+Apartirdeesteresultado,daremosunadescripcióndelos A[M]=
+0 K
+objetosproyectivoseinyectivosenrep( M ).
+A R
+La razón para esta terminología sigue de lo siguiente. Sea
+Decimosqueunasucesiónenrep(
+A
+M
+R
+)
+Λ=K(Γ,ρ)unaK−álgebradecaminodelcarcajconrela-
+ciones(Γ,ρ).SeaiunafuenteenΓye¯ elcorrespondiente
+0−→(X(cid:48),X(cid:48)(cid:48),φ) ( − α → ,β) (Y(cid:48),Y(cid:48)(cid:48),ψ) (α − (cid:48) → ,β(cid:48)) (Z(cid:48),Z(cid:48)(cid:48),ϕ)−→0 idempotente en Λ. Como no hay camin i os no triviales que
+terminenenitenemose¯Λe¯ (cid:39)K ye¯Λ(1−e¯)=0.Sideno-
+es exacta si las sucesiones 0−→X(cid:48) − α →Y(cid:48) − α → (cid:48) Z(cid:48) −→0 y tamospor(Γ(cid:48),ρ(cid:48))elcar i caj i conrelac i ionesqu i eseobtieneal
+0−→X(cid:48)(cid:48)− β →Y(cid:48)(cid:48)− β → (cid:48) Z(cid:48)(cid:48)−→0sonexactas. removerelvérticeiylasrelacionesquecomienzaneni,en-
+tonces(1−e¯)Λ(1−e¯)(cid:39)K(Γ(cid:48),ρ(cid:48)).AsíK(Γ,ρ)esobtenido
+i i
+Unobjetoenrep( M )essimplesinotienesubobjetos
+apartirdeΛ(cid:48)=K(Γ(cid:48),ρ(cid:48))añadiendounvérticei,juntocon
+A R
+propiosnonulos.Decimosque(X(cid:48),X(cid:48)(cid:48),φ)esunsubobjetode flechasyrelacionesquecomienceneni.Entoncestenemos
+(Y(cid:48),Y(cid:48)(cid:48),ψ)siX(cid:48)⊂Y(cid:48),X(cid:48)(cid:48)⊂Y(cid:48)(cid:48)yφ =ψ| X(cid:48)⊗M . Λ= (cid:18) Λ(cid:48) (1−e¯ i )Λe¯ i (cid:19) , luego Λ es una extensión por un
+0 K
+puntodeΛ(cid:48).
+Entoncestenemoslosiguiente:
+(cid:18) (cid:19)
+Proposición6 SeaBelálgebratriangular A A M R y Delapropiadefiniciónpodemosconcluirqueunacondi-
+0 R ción necesaria para que un álgebra B sea de la forma A[M]
+F :ModB−→rep( A M R )laequivalenciadecategoríasque paraalgúnálgebraAyunA−móduloMesqueexistaunB−
+defineelteorema(5),entonces módulosimpleinyectivo.Estapropiedadtambiénessuficien-
+te:supongamosBtieneunmódulosimpleinyectivoS,sean
+a) XesproyectivoenModBsiysolosiF(X)esproyectivo
+P(S)sucubiertaproyectivaye∈Bunidempotentetalque
+enrep( M ).
+A R B
+P(S)=Be,tomandoA= (donde(cid:104)e(cid:105)denotaelidealbiláte-
+b) X esinyectivoenModBsiysolosiF(X)esinyectivo (cid:104)e(cid:105)
+enrep( M ). roenBgeneradoporelidempotentee)yM=P(S),entonces
+A R
+MesunA−móduloyB∼ =A[M].
+c) 0→X →Y →Z→0esunasucesiónexactaenModB
+siysolosi Dualmente podemos hablar de coextensión por un pun-
+0→F(X)→F(Y)→F(Z)→0esunasucesiónexacta (cid:18) A 0 (cid:19)
+tocuando[M]A= .Enestecasoseconsideraiun
+enrep( A M R ). M K
+vérticepozo,esdecir,nohaycaminosnotrivialesquecomien-
+d) X es simple en ModB si y solo si F(X) es simple en
+ceneni.AsíK(Γ,ρ)esobtenidoapartirdeΛ(cid:48)=K(Γ(cid:48),ρ(cid:48))
+rep( M ).
+A R añadiendo un vértice i, junto con flechas y relaciones que
+Proposición7 termineneni.
+a) Losproyectivosinescindiblesenrep( M )sonlosob-
+A R
+jetos isomorfos a los de la forma (M⊗ P,P,1 )
+R M⊗RP
+4. Álgebras de representación dirigida
+dondePesunR−móduloproyectivoinescindibleylos
+delaforma(Q,0,0)conQunA−móduloproyectivo Enestasecciónexpondremosalgunosdelasdefiniciones
+inescindible. yresultadosdelcapítuloIXde[1]quenospermitiráncom-
+prenderlapróximasección.
+b) Losinyectivosinescindiblesenrep( M )sondelafor-
+A R
+ma(0,I,0)conI unR−móduloinyectivoinescindible
+SeaAunálgebra.UncaminoenAesunasucesión
+ylosobjetosisomorfosa(J, (M,J),φ)conJ unA−
+A
+móduloinyectivoinescindibley
+φ:M⊗ Hom (M,J)−→Jdadoporφ(m⊗f)= f(m). M
+f1 (cid:47)(cid:47)
+M
+f2 (cid:47)(cid:47)
+M ··· M
+ft (cid:47)(cid:47)
+M
+R A 0 1 2 t−1 t
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.101-110
+CohomologíadeHochschilddelÁlgebradeMatricesTriangulares 105
+denoisomorfismosnonulos f 1 ,f 2 ,···,f t entreA−mó- 5. Cohomología de Hochschild de la
+dulosindescomponiblesM 0 ,M 1 ,···,M t cont(cid:62)1.Decimos extensión por un punto
+queM esunantecesordeM oqueM esunsucesordeM .
+0 t t 0
+UncaminoenAesunciclosisufuenteM esisomorfocon Dedicaremosestasecciónaanalizarydemostrarlosresul-
+0
+sufinalM. tadosdelasección5de[13].
+t
+Definición9 Decimos que un módulo indescomponible es Continuandoconlasnotacionesdelasección(3),conside-
+dirigidosinoestácontenidoenunciclo. remosB=A[M]yseae∈Belprimitivoidempotentetalque
+B
+M=radBe,A= ,dondeI=(cid:104)e(cid:105)=BeBeselidealbilátero
+I
+Definición10 LlamamossoportedeunmóduloM,ylodeno-
+generadopore.
+tamospor(M),alsubcarcajdeQ A generadoporlosvértices ConlasnotacionesanterioresysiendoAeyBelasrespec-
+i∈(Q A ) 0 talque(dimM) i (cid:54)=0oloqueesequivalentetalque tivasálgebrasenvolventesdeAyB.DenotemosporP(e,e(cid:48))
+Hom A (P(i),M)(cid:54)=0. al Be− módulo proyectivo indescomponible Be(e⊗e(cid:48)), se
+cumpleque:
+Definición11 Un módulo se dice sincero si Sop(M)=Q .
+A
+Seae= ∑ e j ,dondee j denotaelprimitivoidempotente (i) BeI∼ =P(e,e(cid:48))∼ =Hom K (S(e),P(e))
+j∈/((M))0
+correspondientealvértice j∈(Q A ) 0 ,entoncesMessincero (ii) Extj (A,A)∼ =Extj (A,A)
+A
+Ae Be
+visto como módulo sobre el álgebra , llamada álgebra
+AeA (iii) Exti+1(S(e),P(e))∼ =Exti(M,M)parai(cid:62)1
+soportedeM. B A
+Hom (M,M)
+(iV) Ext1(S(e),P(e))∼ = A
+DecimosqueSop(M)esunsubcarcajconvexodeQ A sito- B K
+docaminoenQ convérticesdepartidayfinalen(Sop(M))
+A 0
+(V) Hom (S(e),P(e))=0
+estácontenidocompletamenteenSop(M). B
+Demostración.
+KQ
+A
+Proposición12 SeaA= yMunA−móduloindescom-
+I
+ponibledirigido,entoncesSop(M)esunsubcarcajconvexo
+deQ
+A
+. (ii)SaledirectamentedelhechodequeAeesunasub-
+categoría convexa de Be y por tanto, Exti (X,Y) ∼ =
+Be
+Proposición13 SeaAunálgebrayMunA−móduloindes- Exti (X,Y)paraX,Y ∈Ae.
+componibledirigido,entoncesEnd(M)∼ =K yExtj(M,M)=
+Ae
+A
+0paratodo j(cid:62)1. Sealasucesiónexactacorta
+0→M=radP(e)→P(e)→S(e)→0
+Definición14 Unálgebraesdetiporepresentacióndirigida
+sitodoA−móduloindescomponibleesdirigido.
+ApliquemosHom (M, ):
+B
+Proposición15 Todaálgebradetiporepresentacióndirigida
+0→Hom (M,M)→Hom (M,P(e))→Hom (M,S(e))
+B B B
+esderepresentaciónfinita.
+→Ext1(M,M)→Ext1(M,P(e))
+B B
+Definición16 SeaAunálgebraconcarcajQ A sinciclos.Un →Ext B 1(M,S(e))→Ext B 2(M,M)→···
+A−móduloproyectivoindescomponibleP(a),cona∈(Q ) ,
+A 0
+sedicequetieneradicalseparadosiparacualesquierados Como Hom (M,S(e))=0 y Exti(M,S(e))=0 para
+B B
+sumandosindescomponiblesdistintosderadP(a)lossoportes i(cid:62)1 por ser S(e) un B−módulo inyectivo, entonces
+Sop(M)ySop(N)estáncontenidosencomponentesconexas Exti(M,M)∼ =Exti(M,P(e))parai(cid:62)0.
+B B
+distintaselsubcarcajplenoQ ((cid:126)a)deQ generadoporlosno
+A A AplicandoHom ( ,P(e)):
+B
+antecesoresdea,esdecir,convértices j talquenohayun
+caminodesde jhastaa.ElálgebraAsatisfacelacondición
+0→Hom (S(e),P(e))→Hom (P(e),P(e))→
+B B
+de separación (S-condición) si cada A−módulo proyectivo
+Hom (M,P(e))→Ext1(S(e),P(e))→Ext1(P(e),P(e))
+indescomponibletieneradicalseparado. B B B
+→Ext1(M,P(e))→Ext2(S(e),P(e))→Ext2(P(e),P(e))→···
+B B B
+Comoconsecuenciadirectadeladefinición,tenemosque
+siunA−móduloproyectivoindescomponiblePtieneradical Exti(P(e),P(e))=0parai(cid:62)1porserP(e)unB−mó-
+B
+indescomponible,entoncestieneradicalseparado.Trivialmen- duloproyectivo,dedondeExti+1(S(e),P(e))∼ =Exti(M,P(e))∼ =
+B B
+te,todosimpleproyectivotieneradicalseparado. Exti(M,M)parai(cid:62)1yseobtiene(iii).
+B
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.101-110
+106 CohomologíadeHochschilddelÁlgebradeMatricesTriangulares
+Para(iv)y(v)tenemos Exti(S(e),P(e))∼ =Exti−1(M,M)parai(cid:62)2por(5)(v),(iv)y
+B A
+(iii)respectivamente.Dedondeseobtienelasucesióndeseada.
+0→Hom (S(e),P(e))→ f1 Hom (P(e),P(e))→ f2 KQ
+B B EnlosiguienteconsideremosB= yteniendoencuen-
+I
+Hom (M,P(e))→ f3 Ext1(S(e),P(e))→0 talasdefinicionesdelasección(4)enunciemoslossiguientes
+B B
+resultados.
+Primeramente observemos que Hom (P(e),P(e)) =
+B
+eBe∼ =K([6],lema1.2.6p.7).Luego f 2 esunmonomor- Proposición18 SiBesderepresentacióndirigida,entonces
+fismoyKerf
+3
+=Imgf
+2
+=K,dedondeExt
+B
+1(S(e),P(e))∼ = HHi(B)=0parai(cid:62)2.
+Hom (M,P(e)) Hom (M,M)
+B ∼ = B yobtenemos(iv).Ade-
+Kerf K Demostración.ComoBesderepresentacióndirigida,enton-
+3
+más f 1 esunmonomorfismo,porloque cesporlaproposición(15)esderepresentaciónfinita,luego
+Hom B (S(e),P(e))∼ =Imgf 1 = f 2 =0yobtenemos(v). sucarcajdeAuslander-ReitenΓ(ModB)notieneciclosyB
+tieneunnúmerofinitodemódulosindescomponiblessalvo
+isomorfismo.Enparticular,altenerunnúmerofinitodemó-
+dulos proyectivos indescomponibles, existe un B− módulo
+Teorema17 Sea B = A[M], entonces existe una sucesión
+proyectivoindescomponibleP(a)quenotieneotroproyectivo
+exacta larga de K−espacios vectoriales que conecta a las
+indescomponiblecomosucesor,estogarantizaqueaesuna
+cohomologíasdeHochschilddeAydeB,dadapor
+fuenteenQ .SeaAelálgebra(nonecesariamenteconexa)
+B
+Hom (M,M) cuyocarcajeselsubcarcajplenodeQ generadoportodos
+0→HH0(B)→HH0(A)→ A B
+K lospuntosexceptoa,conlasrelacionesheredadas(I ∩Q A ).
+→HH1(B)→HH1(A)→Ext A 1(M,M)→··· (9) Pongamos A=A 1 × r ···×A r , donde las A i son álgebras co-
+→Exti(M,M)→HHi+1(B)→HHi+1(A) nexasyradP(a)=(cid:76)M i ,conM i ∈ModA i indescomponible
+A
+i=1
+→Exti+1(M,M)→··· para1(cid:54)i(cid:54)r.
+A
+Procedamosporinducciónsobreelnúmeron=|(Q ) |
+B 0
+Demostración. Consideremos la sucesión exacta corta de deB−módulossimplesdistintos.Paran=1,Q eselcarcaj
+B
+Be−módulos formadoporsolounpuntoyB∼ =K.Enestecasosetieneque
+HHi(K)=0parai(cid:62)1.
+B
+0−→I−→B−→A= −→0 Para una cantidad n>1 de B− módulos simples, por
+I
+elanálisisanteriorsetienequeexisteunvérticefuentea∈
+AplicandoHom Be( ,A),obtenemos (Q B ) 0 ,porloqueB=A[M],dondeA=A 1 ×···×A r ,cada
+r
+A esderepresentacióndirigidayM=radP(a)=(cid:76)M,con
+0→Hom Be(A,A)→Hom Be(B,A) i
+i=1
+i
+M ∈ModA indescomponible.Porconstrucciónlacantidad
+→Hom Be(I,A)→Ext
+B
+1
+e
+(A,A)
+de
+i
+A− mód
+i
+ulos simples es n−1. La proposición (13) nos
+→Ext B 1 e (B,A)→Ext B 1 e (I,A) dice que A j i (M i ,M i )=0 para todo j(cid:62)1 e 1(cid:54)i(cid:54)r, luego
+→Ext2 (A,A)→··· Extj(M,M)=0paratodo j(cid:62)1.Además,porhipótesisde
+Be A
+induccióntenemosHHj(A)=0para j(cid:62)2e1(cid:54)i(cid:54)r,lue-
+i
+Por(5)(i)tenemosqueI esproyectivosobreBe porloque goHHj(A)=0para j(cid:62)2.Sustituyendoenlasucesión(9),
+Ext
+B
+i
+e
+(I,A)=0parai>0yporconstrucciónHom Be(I,A)=0. obtenemosHHi(B)=0para j(cid:62)2.
+Luego, Exti (B,A)∼ =Exti (A,A)∼ =Exti (A,A)∼ =HHi(A)
+Be Be Ae
+parai(cid:62)0,dondeelsegundoisomorfismoestádadopor(5)
+Proposición19 SiBestiporepresentacióndirigida.Enton-
+(ii).Luego,aplicandoHom Be(B, )obtenemos cesBsatisfacelaS-condiciónsiysolosiHH1(B)=0.
+0→Hom Be(B,I)→HH0(B)→HH0(A)
+Demostración.Comoenlademostraciónanteriorproceda-
+→Ext B 1 e (B,I)→HH1(B)→HH1(A) mosporinducciónsobreelnúmeron=|(Q B ) 0 |deB−mó-
+→Ext2 (B,I)→··· dulossimplesdistintos.Paran=1,Q B eselcarcajformado
+Be porsolounpuntoyB∼ =K.Enestecaso,HHi(K)=0para
+AdemásExti (B,I)=HHi(B,I)= i(cid:62)1, luego se tiene lo planteado. Para n>1 supongamos
+Be
+=HHi(B,Hom K (S(e),P(e)))=Ext B i(S(e),P(e)), donde la B=A[M],dondeA=A 1 ×···A r dond r eA i sonderepresenta-
+segundaigualdadvienedadaporelsegundoisomorfismode cióndirigidapara1(cid:54)i(cid:54)r yM= (cid:76)M,conM ∈ModA
+i i i
+(5)(i)ylaterceraigualdadesconsecuenciade([5],corolario i=1
+indescomponible.
+4.4 p. 170). Además Hom Be(B,I)=Hom
+B
+(S(e),P(e))=0,
+SiBsatisfacelaS-condición,tambiénlasatisfacenA=
+Hom (M,M)
+Ext B 1 e (B,I)=Ext B 1(S(e),P(e))∼ = A K yExt B i e (B,I)= A 1 ×···A r para1(cid:54)i(cid:54)r.Porhipótesisdeinduccióntenemos
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.101-110
+CohomologíadeHochschilddelÁlgebradeMatricesTriangulares 107
+HH1(A i )=0,dedondeHH1(A)=0.ComoM i esindescom- A∼ = KQ(cid:48) dondeQ(cid:48):
+ponibleyA esderepresentacióndirigida,entoncespor(13) I(cid:48)
+i
+End M =K,asíEnd M=Kr.TenemosqueHH0(B)=K,
+Ai i A
+HH0(A)=Kr ydim Hom A (M,M) =r−1,portanto,alsus- (cid:64)(cid:64)3
+K β γ
+tituiren(9)ytenerencuentalaexactitudencadapuntose
+(cid:30)(cid:30)
+obtieneHH1(B)=0.
+2 (cid:64)(cid:64)5 eI(cid:48)=(cid:104)γβ−εδ(cid:105)
+Recíprocamente,siHH1(B)=0,BesdirigidayB=A[M],
+entoncesExt1(M,M)=0comoarriba.Comoaesunafuente,
+cada A satis A face la S-condición y por inducción inferimos δ (cid:30)(cid:30) ε
+i
+4
+queAsatisfacelaS-condición.Faltaporanalizarquésuce-
+r
+deconradP(a)=M=(cid:76)M.ComoHH1(B)=0,entonces
+i
+i=1 (cid:64)(cid:64)0
+Hom (M,M)
+A
+dim =r−1, luego dimEndM i =1 y en par- 0 0
+K
+ticular M es indescomponible. De aquí que B satisface la (cid:30)(cid:30)
+i 1 (cid:47)(cid:47)
+S-condición. P(S(1))=P(1)=Be 1 : K K (cid:64)(cid:64)0
+Proposición20 Sea A es una K−álgebra conexa finito di- 1 (cid:31)(cid:31) 0
+mensionalconHH0(A)=K yHHi(A)=0parai>0.Sea
+K
+M∈ModAyB=A[M]lacorrespondienteextensiónporun
+Hom (M,M)
+punto. Entonces HH0(B)=K, HH1(B)∼ = A
+K
+y (cid:64)(cid:64)0
+HHi(B)∼ =Ext A i−1(M,M)parai>1. 0 0
+(cid:30)(cid:30)
+Demostración.DelashipótesisHHi(A)=0parai>0yla
+B
+M=P(1): 0
+0 (cid:47)(cid:47)
+K (cid:64)(cid:64)0
+existenciadelasucesión(9)obtenemosdirectamenteHHi(B)∼
+=
+Exti−1(M,M)parai>1.Comolaaplicación
+A 1 (cid:31)(cid:31) 0
+K
+0→HH0(B)→ f HH0(A)=K
+(cid:63)(cid:63)0
+esinyectiva,entoncesHH0(B)∼ =Imgf =K (porserK sim-
+0 0
+ple).Analicemosahoralaaplicaciónh:
+(cid:30)(cid:30)
+HH nolimits0(A)=K→ g Hom A (M,M) → h HH1(B)→0. ∼ = A M: K (cid:64)(cid:64)0
+K
+1 (cid:31)(cid:31) 0
+Del análisis anterior y como la sucesión (9) es exacta po- K
+demos inferir que g≡0, de donde Kerh=0, y al ser so-
+breyectivaconstituyeunisomorfismo,portanto,HH1(B)∼
+=
+DemosunalistadelosA−módulosproyectivosindescom-
+poniblesysusradicales:
+Hom (M,M)
+A
+.
+K
+(cid:63)(cid:63)K
+KQ
+Ejemplo21 ConsideremoselálgebraB= dondeQes 1 1
+I (cid:31)(cid:31)
+elcarcaj
+P(2): K (cid:63)(cid:63)K
+(cid:64)(cid:64)3
+1 (cid:31)(cid:31) 1
+β γ
+K
+(cid:30)(cid:30)
+α (cid:47)(cid:47)
+1 2 (cid:64)(cid:64)5
+(cid:64)(cid:64)K
+δ (cid:30)(cid:30) ε 0 1
+4 (cid:31)(cid:31)
+radP(2): 0 (cid:63)(cid:63)K
+eI=(cid:104)γβ−εδ,βα(cid:105).PodemosobservarqueS(1)=I(1),lue-
+B
+goB=A[M],dondeA= yM=P(1). 0 (cid:30)(cid:30) 1
+(cid:104)e (cid:105)
+1
+K
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.101-110
+108 CohomologíadeHochschilddelÁlgebradeMatricesTriangulares
+(cid:64)(cid:64)K
+P(3) S(4)
+(cid:62)(cid:62) (cid:59)(cid:59)
+0 1
+(cid:31)(cid:31)
+(cid:35)(cid:35) (cid:32)(cid:32)
+P(3): 0 (cid:64)(cid:64)K
+P(3)⊕P(4) (cid:47)(cid:47) (cid:47)(cid:47) I(5)
+S(5) P(2)
+(cid:59)(cid:59) S(5) (cid:62)(cid:62) S(5)
+0 (cid:30)(cid:30) 0
+0
+(cid:32)(cid:32) (cid:35)(cid:35)
+P(4) S(3)
+(cid:64)(cid:64)0
+I(3)
+(cid:62)(cid:62)
+0 0
+(cid:30)(cid:30)
+radP(3)(=S(5)): 0 (cid:64)(cid:64)K (cid:31)(cid:31)
+I(5)
+S(2)
+(cid:63)(cid:63)
+S(5)
+0 (cid:30)(cid:30) 0
+0
+(cid:32)(cid:32)
+I(4)
+(cid:64)(cid:64)0 Como no hay ciclos, entonces A es de representación
+0 0 dirigida. Utilizando las proposiciones (18) y (19), tenemos
+(cid:31)(cid:31) queHHi(A)=0paratodoi(cid:62)1.
+P(4): 0 (cid:63)(cid:63)K AesderepresentacióndirigidayM∈ModAindescom-
+ponible, entonces Hom (M,M)=K y Exti(M,M)=0 pa-
+A A
+0 (cid:30)(cid:30) 1 ra i (cid:62) 1. Sustituyendo toda esta información en la suce-
+K
+sión(9),obtenemosHH0(B)∼ =HH0(A)yHHi(B)=0para
+i(cid:62)1.SepuedecomprobarqueHH0(A)=Z(A)=K,luego
+HH0(B)=K yquedacompletamentecalculadalacohomolo-
+gíadeHochschilddelálgebraB.
+(cid:64)(cid:64)0
+0 0 6. Cohomología de Hochschild del
+(cid:30)(cid:30)
+álgebra de matrices triangulares
+radP(4)(=S(5)): 0 (cid:64)(cid:64)K
+(cid:18) (cid:19)
+A M
+ConsideremoselálgebratriangularB= A R .Co-
+0 (cid:30)(cid:30) 0 0 R
+0 moobjetivofundamental,nosproponemosgeneralizarlasu-
+cesiónobtenidaenlasección(5)pararelacionarlascohomo-
+logíasdeHochschilddelasK−álgebrasAyRconladetoda
+elálgebraB.
+(cid:64)(cid:64)0
+(cid:18) (cid:19)
+A M
+0 0 Teorema22 SeaB= A R .Entoncesexisteunasuce-
+(cid:30)(cid:30) 0 R
+P(5): 0 (cid:64)(cid:64)K radP(5)=0 siónexactalargadeK−espaciosvectorialesqueconectaa
+lascohomologíasdeHochschilddeA,RyBdadapor:
+0 (cid:30)(cid:30) 0
+0→HH0(B)→HH0(A)⊕HH0(R)→
+0
+Hom A⊗KRop(M,M)→HH1(B)
+Comotodoslosradicalesdeproyectivossonindescompo- →HH1(A)⊕HH1(R)→Ext A 1 ⊗KRop (M,M) (10)
+niblesocero,entoncesAsatisfacelaS-condición.Veamosque →···→HHi(B)→HHi(A)⊕HHi(R)
+ademásesderepresentacióndirigidayparaellosanalicemos
+→Exti (M,M)→···
+sucarcajdeAuslander-ReitenΓ(A): A⊗KRop
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.101-110
+CohomologíadeHochschilddelÁlgebradeMatricesTriangulares 109
+Demostración.SealasucesiónexactacortadeBe−módulos [3] BelmansP.,Advancedtopicsinalgebra(V5A5).Hochs-
+child(co)homology,andtheHochschildKostantRosen-
+0→M→B→A⊕R→0
+bergdecomposition.Lecturenotes,UniversityofBonn,
+Versióndel9dejuliode2018.
+AplicandoHom Be(B, )obtenemos
+[4] Bendiffalah B., Guin D., Cohomologie des morphis-
+0→Hom Be(B,M)→HH0(B)→Hom Be(B,A⊕R)
+mes.CommunicationsinALgebra,26:12,p.3939-3951,
+→Ext B 1 e (B,M)→HH1(B)→Ext B 1 e (B,A⊕R) 1998.
+(11)
+→···→HHi(B)→Exti (B,A⊕R)
+Be [5] CartanH.,EilenbergS.,HomologicalAlgebra.Princeton
+→Exti+1(B,M)→··· UniversityPress,NewJersey,1956.
+Be
+Elrestopasaportrespuntos: [6] CibilsC.,LarriónF.,SalmerónL.,MétodosDiagramá-
+ticosenTeoríadeRepresentaciones.Monografíasdel
+Elrestopasaportrespuntos: InstitutodeMatemáticas11,1982.UniversidadNacio-
+nalAutónomadeMéxico.
+Be(B,M)=0 [7] Cibils C., Tensor Hochschild homology and cohomo-
+logy,Proceedings:LectureNotesinPureandApplied
+Be(B,M)∼ = B⊗KRop (R,M)∼ =i Be (R,M)∼ = Mathematics,210,Dekker,NewYork,2000.
+i−1(M,M)∼ =i−1 (M,M)parai(cid:62)1
+Be A⊗KRop
+[8] Cibils C., María Julia Redondo and Andrea Solo-
+tar, Han’s conjecture and Hochschild homology for
+i (B,A⊕R)∼ =i (B,A)⊕i (B,R)∼ =i (A,A)⊕i (R,R)∼ =i null-square projective algebras, arXiv:1703.02131v1
+Be Be Be Be Be Ae
+(A,A)⊕i (R,R)∼ =i(A)⊕i(R) [math.RT],6Mar2017.
+Re
+deloscualespodemosencontrardemostraciónen[5],[7] [9] DourlensS.,OntheHochschildCohomologyofTriangu-
+y[16]. larAlgebras,CommunicationsinAlgebra,Vol.31,No.
+Una consecuencia clara del teorema anterior, es que si 10,p.48714897,2003.
+M=0,entonces
+[10] GerstenhaberM.,TheCohomologyStructureofanAs-
+HH∗(B)∼ =HH∗(A)⊕HH∗(R) sociativeRing,AnnalsofMathematics,SecondSeries,
+Vol.78,No.2,p.267-288,1963.
+Másaun,siMesunA⊗ Rop−móduloproyectivo,setiene
+K
+[11] GreenE.L.,SnashallN.,andSolberg0/,TheHochschild
+HHi(B)∼ =HHi(A)⊕HHi(R) cohomologyringofaselfinjectivealgebraoffinitere-
+presentationtype,Proceedings:AmericanMathematical
+paratodoi(cid:62)2.
+Society131,2003.
+Otro caso particular que queremos destacar por su mi- [12] GreenE.L.,MarcosE.andSnashallN.,TheHochschild
+nimalidad en diversas teorías es el de las álgebras T (A)= CohomologyRingofaOnePointExtension,Communi-
+2
+(cid:18) (cid:19)
+A A cationsinAlgebra,Vol.31,No.1,p.357-379,2003.
+.En[4]sellegaalsiguienteresultado.
+0 A
+[13] HappelD.,Hochschildcohomologyoffinite-dimensional
+Proposición23 algebras,Séminaired’AlgèbrePaulDubreiletMarie-
+PaulMalliavin,39èmeAnnée(Paris,1987/1988),Lec-
+(cid:18) (cid:19)
+A A
+HH∗ ∼ =HH∗(A) ture Notes in Math., vol. 1404, Springer, p. 108-126,
+0 A
+1989.
+[14] Lluis-PueblaE.,ÁlgebraHomológica,Cohomologíade
+Referencias
+GruposyK-TeoríaAlgebraicaClásica.SociedadMate-
+[1] AssemI.,SimsonD.,SkowronskiA.,Elementsofthe
+máticaMexicana,2005.
+RepresentationTheoryofAssociativeAlgebras.Vol.1:
+Techniques of Representation Theory, 2006. London [15] MonteroB.,Descripcióndelacategoríadelosmódulos
+MathematicalSociety.StudentsTexts65. prinyectivossobreelálgebradematicestriangulares,
+TesisdeLicenciatura,UniversidaddeLaHabana,2016.
+[2] Auslander M., Reiten I., Smal0/ S., Representation
+TheoryofArtinAlgebras,Cambridgestudiesinadvan- [16] MichelenaS.andPlatzeckM.I.,HochschildCohomo-
+cedmathematics36,CambridgeUniversityPress,New logyofTriangularMatrixAlgebras,JournalofAlgebra
+York,1995. 233,p.502-525,2000.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.101-110
+110 CohomologíadeHochschilddelÁlgebradeMatricesTriangulares
+[17] RedondoM.J.,Hochschildcohomology:somemethods [19] WitherspoonS.,AnIntroductiontoHochschildCoho-
+forcomputations,ResenhasdoInstitutodeMatemática mology. A publicar. Versión del 19 de diciem-
+eEstadísticadaUniversidadedeSa˜oPaulo,vol.5,No. bre de 2018. URL: http://www.math.tamu.edu/ sa-
+2,2001. rah.witherspoon/bib.html.
+[18] WeibelC.A.,Anintroductiontohomologicalalgebra.
+CambridgeUniversityPress,1994.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.101-110

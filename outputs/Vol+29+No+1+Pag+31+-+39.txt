@@ -1,0 +1,530 @@
+CienciasMatema´ticas,Vol.29,No.1,Pag.31-39,2015
+Recibido05-2015
+Utilizar un tele´fono Android como dispositivo de
+cifrado versa´til
+Using an Android phone as versatile encryption
+device
+Anna Ferna´ndez Girone´s1, Alejandro Tamayo Castillo1, Miguel Katrib Mora1*
+Resumen Los tele´fonos inteligentes son ya omnipresentes en las comunicaciones modernas. Al ser los
+dispositivosmo´vilesma´sutilizados,resultainteresanteconsiderarco´moaprovecharlacapacidaddelosmismos,
+enparticularaquellosconSistemaOperativoAndroid,paraaplicarmecanismosdecifradodeformaversa´til.Este
+art´ıculotienecomoobjetivoscomprobarlafactibilidad,analizarlaseguridadyversatilidaddeusaruntele´fono
+Androidcomoopcio´nalosllamadosTPD*,as´ıcomoilustrarco´mopudierasersuutilizacio´nenlapra´ctica.Para
+ellosehaceusodelatecnolog´ıaTrustZoneincorporadaenelhardwaredelosu´ltimostele´fonosAndroid,lacual
+proporcionaconfianzadirectamentedesdeelhardwarealigualquelosTPM**
+Abstract Smartphones are now ubiquitous in modern communications. As most used mobile devices, it is
+interesting to consider the potential thereof, particularly those with Android Operating System, to implement
+encryptionmechanismsinaversatileway. Thisarticleaimstotestthefeasibility,analyzesecurityandversatility
+ofanAndroidphoneasoptiontocalledTPDandillustratehowitcouldbeuseinpractice. Forthispurposeitis
+usedTheTrustZonetechnologybuiltintothehardwareofthelatestAndroidphones,whichprovidesconfidence
+directlyfromthehardwareliketheTPM.
+PalabrasClave
+Android,Cifrado,Codificacio´n,CertificadosDigitales,DispositivoMo´vil,LlaveSegura,PlataformadeConfianza,
+Privacidad,Seguridad,Tele´fonoInteligente,ZonaSegura
+1FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba,annafgirones@gmail.com,tamayo@matcom.uh.cu,
+mkm@matcom.uh.cu
+*AutorparaCorrespondencia
+1. Introduccio´n delainformacio´nalmacenadaenlosdispositivosdelusuario
+final.Algunasdeesasamenazasesta´nbasadasenlaspropias
+Hoyend´ıa,graciasalosdispositivosmo´vilessehahecho
+Aplicaciones,laWebylaRedutilizada.Tambie´nesta´nlas
+popularaccederadatoseinformacio´nencualquiermomento
+amenazasf´ısicascomoelroboope´rdidadeldispositivoper-
+ylugar.Unfactorimportanteaconsiderarentonces,eslase-
+mitiendo a ajenos disponer de la informacio´n que contiene
+guridadyconfiabilidaddelosdatosconsultados,generados
+[3],[4].
+y almacenados (ya sea en el propio dispositivo o en lo que
+Los Proveedores de Servicios en la Nube (CSP)2 insis-
+seconocecomoNubeMo´vil(MCC)1 [1]).LaNubeMo´vil
+ten en que sus servidores y los datos almacenados en ellos
+esunnuevomodelocomputacionalquecombinalanube,la
+esta´nlosuficientementeprotegidoscontracualquiertipodero-
+infraestructuradecomunicacio´ninala´mbrica,losdispositivos
+bo,argumentandoquelosdatoscontenidosensusservidores
+deco´mputoportables,losserviciosdegeolocalizacio´nyotras
+esta´nma´ssegurosquelosdatosresidentesenlosdispositivos
+caracter´ısticas. La diferencia con el paradigma de Compu-
+personalesdelusuario.Sinembargo,enlarealidadlosCSP
+tacio´n en la Nube (Cloud Computing) es sutil, en la Nube
+tambie´nsonv´ıctimasdeataquescomoelincidenteocurrido
+Mo´villosactoresprotago´nicossonlosdispositivosmo´viles,y
+coniCloudenel2014[5],sincontarquesepartedelacon-
+lasaplicacionesyserviciosseajustanasuscaracter´ısticases-
+fiabilidad y honestidad de dichos CSP ya que informacio´n
+pec´ıficascomolaresolucio´ndepantalla,elanchodebanda,la
+sensible queda a merced de estos. Por otra parte las nubes
+capacidaddealmacenamientoyprocesamiento,lossensores,
+nosoninfaliblesylosdatosalmacenadosenellasnoesta´n
+etc.[2].
+exentosdeextraviarseomodificarse,lomismoaconsecuencia
+Existenmuchasamenazasalaconfiabilidadeintegridad
+deunfalloenlaseguridadqueporalgu´nerrorhumano[6].
+1MobileCloudComputing 2CloudServiceProviders
+32 Utilizaruntele´fonoAndroidcomodispositivodecifradoversa´til
+Adema´sdeestosproblemas,lasRedesdeComunicacio´n positivosmo´vilesas´ıcomolaspeculiaridadesdelosmismos
+(d´ıgaseporejemploInternet),puedenllegaraserhostilesen enesteentorno.Enlaseccio´n3sepresentalajustificacio´n
+cuantoalaseguridadeintegridaddelosdatos. de este trabajo y en la seccio´n 4 la propuesta de solucio´n.
+Por estas y otras razones puede ser conveniente aplicar Laseccio´n5presentaalgunaspruebasexperimentalesyse
+medidasadicionalesdeseguridadparaprotegerlainformacio´n. discuten estos datos obtenidos experimentalmente para dar
+Los primeros pasos para alcanzar mayor seguridad son la lasconclusionesenlaseccio´n6.Posteriormenteenlaseccio´n
+autentificacio´n(queelqueaccedeseaverdaderamentequien VIIsepresentaunposibletrabajofuturo.
+diceser)yelcifradodelainformacio´n(quelainformacio´n
+sololapuedaverquientengaelsecretodecifrado)[4].
+2. Estado del Arte
+Estonosignificaquesedebanrechazarlasbondadesdel
+almacenamientoenlanubequebrindanlosCSPcomoelbajo 2.1 MediosdeCifradoExistentes.
+costodeunservicioquegarantizaaltacalidadydisponibilidad. Actualmenteexisteenelmercadounagranvariedadde
+Portanto,hayqueencontrarunavariantequealavezpermita softwaredecifrado(DekartKeeper4,CryptoForge5,etc.).Es-
+seguir utilizando estas facilidades y garantice la seguridad tosfuncionanhospedadosenundispositivodealmacenamien-
+delosdatosalmacenados.Unasolucio´npuedesercodificar to,comounamemoriaUSB,ycifranunapartedee´l.Laforma
+los datos, utilizando un algoritmo de cifrado fuerte, antes deaccederalosdatosalmacenadosendichodispositivoesa
+de subirlos a la nube. De esta forma, ni el CSP ni alguien trave´sdeunacontrasen˜aqueproveeelusuario.Sudebilidad
+que logre obtener el dato almacenado podr´ıan conocer su esqueserequieredeunsoftwareyundispositivohospede-
+contenido. ro para acceder a dichos datos por lo que esta´ expuesto a
+Elproblemaentoncesestar´ıaendo´ndealmacenarelsecre- tampering,esdecir,unatacantepuedemodificarelsoftware
+toparadescifrarlosdatosyco´morealizaresteprocesopara oeldispositivohospederoparaobtenerlacontrasen˜aypor
+queseaversa´tilyseguro.Sisealmacenaelsecreto(unallave consiguientehacersedelosdatosdescifrados.
+decifrado)enlanube,setendr´ıaelmismoproblema.Existen Existentambie´ndispositivosUSBma´ssofisticados,llama-
+soluciones empresariales para esto que consisten en que la dosdispositivosUSBdeconfianzaoSPD,SecurePocketDri-
+empresainstalaunservidordellavespropio,ylosdatosviajan vecomolosdelacompan˜´ıaSPYRUS6quecarganunsistema
+constantementedesdeelCSPhaciaesteservidoratrave´sde operativopropioparaejecutardirectamenteenlacomputado-
+laredpararealizareldescifrado[7],[8].Deestamanerael raanfitrionadetalmodoquesepuedenhacerlasoperaciones
+secreto(lallaveprivadaenunaPKI3)necesariaparadesci- necesariasconlaseguridaddenodejarrastrosalconcluir.
+frarlainformacio´n,nuncatienequesalirdelaempresanise Ladesventajaesquesenecesitasiempredeundispositivo
+transmiteporInternet. anfitrio´n para procesar la informacio´n por lo que entonces
+Existennumerososdispositivospersonales,enparticular, secorreelriesgodequesehackeeeldriverosoftwareque
+aquellos que cumplen con fuertes demandas de seguridad, ejecutaeneldispositivohospederopermitiendoaccederala
+privacidadyconfiabilidadloscualessondenominadosDispo- informacio´nsegura.
+sitivosPersonalesdeConfianza(TPDdesunombreeningle´s).
+ParagarantizarestosaspectoslosTPDtienenhardwarededi- 2.2 CifrandolaInformacio´nenlosdispositivosmo´vi-
+cadoate´cnicasdecifrado[9]. les.SeguridaddelaLlave.
+Algunosdelostele´fonosinteligentesma´srecientescon Hoyend´ıatenemosnumerosaste´cnicasdecifradopara
+sistemaAndroidincorporanyacomopartedesuhardware protegerlainformacio´nylosdatoscomoporejemplo:Cifrado
+laposibilidaddealmacenarestesecretodecifradodeforma dediscoduro(FDE)7,utilizadaporiOSyBlackBerry,Cifrado
+segura, as´ı como la posibilidad de realizar las operaciones dediscovirtual(VDE)8yCifradodeficherosocarpeta(FE)9
+decifradoenloquesedenominaunentornoprotegidoque usadaporWindowsPhoneyAndroid[4].
+esta´separadodelentornodeejecucio´nnormaldeldispositivo. Elcifradodedisco(FDE)tradicionalmentetrabajabajo
+Esta caracter´ıstica permitir´ıa convertir a estos dispositivos elsistemadeficherosparaproveercodificacio´nydescodifi-
+mo´viles en dispositivos de cifrado personal, realizando la cacio´ninstanta´neaparatodaslastareasdelectura/escritura
+codificacio´ndelosdatosentreelCSPyelusuario. eneldispositivo.Porestarazo´n,lallavedecifradodebede
+Notequelosdatos,unavezcifrados,puedenalmacenarse estaraccesibleparaelsistemadeficherosyenconsecuencia
+lomismoremotamenteenelCSPquelocalmenteenlame- sieldispositivoesta´ enelestadodesbloqueado,entoncesla
+moriadeldispositivomo´vil;loimportanteesco´morealizar llaveylosdatossonvulnerables.Adema´s,comoFDEcifra
+elcifradodeformatalqueelsecretoseprotejayqueelpro- tantolosficherosdelusuariocomolosficherosdelsistema
+cesodecifradonoserealicefueradelentornodeejecucio´n operativo,existeunamayorprobabilidaddehackearlallave,
+seguro.Enelpresenteart´ıculoseexplorara´ laversatilidady
+4http://www.dekart.com.
+factibilidaddeutilizarestosdispositivoscontalpropo´sito.
+5http://www.cryptoforge.com.
+En la seccio´n II, se brinda una breve explicacio´n sobre 6http://www.spyrus.com.
+elcifradodedatosyenparticularsobreelcifradoenlosdis- 7FullDiskEncryption.
+8VirtualDiskEncryption
+3PublicKeyInfrastructure. 9File/FolderEncryption
+Utilizaruntele´fonoAndroidcomodispositivodecifradoversa´til 33
+yaqueelhackerconocetantoeltextoplano(bloquedonde yaccedecomoun“discoduro”ma´sconectadoaldispositivo
+se encuentran datos siempre iguales del Sistema Operativo [13].
+loscualesnovar´ıanpordispositivo)comoeltextocifrado(de EstasherramientasutilizanAES15condiferentesmodali-
+estosbloquesdelSistemaOperativo)ypuedeutilizarte´cnicas dades(CBC16,CFB17,XTS18)paracifrarlosdatos,yalgunas
+conocidas y documentadas en la literatura para obtener la deellas,an˜adenunniveldeseguridadadicional,generando
+llave. unallaveAESaleatoriaparacadaficheroyestasecifraasu
+Sisetrabajaenunambienteconcomputadorasestasse vezconRSA19.UtilizandoRSA+AESsemejoralaseguridad,
+puedenponerensuspensio´noapagarseparaprotegerlallave. yaquesiunhackersehaceconlallaveAESqueseutilizo´ pa-
+Conlostele´fonosinteligentessinembargo,estoesimposible racifrarelfichero,solohabra´obtenidoaccesoadichofichero
+pues es necesario mantener las funcionalidades ba´sicas de ynoalosrestantes.Peroestamejoraconllevaprotegerfuerte-
+comunicacio´n. menteelbloquecifradoconRSA,utilizandounallavede4096
+En[10]proponenunasolucio´nparaprotegerlallaveen bitsm´ınimo(antesdeAndroid4.3solosepod´ıautilizarhasta
+FDE.Elcifradodeficheroocarpeta(FE)disminuyelasvul- 2048)yunalgoritmoderellenocriptogra´ficamentefuerte,ya
+nerabilidadesdeFDEhastaqueelusuarioseautentificasa- quee´steentoncesser´ıaelobjetivofundamentaldelhacker(si
+tisfactoriamenteylosdatossondescodificados.Perounavez seobtienedealgunaformalallaveprivada,setendr´ıaacceso
+queestoocurrecualquierprocesoqueseeste´ejecutandoenel atodoslosdatoscifrados).Perocomosepuedelograrqueel
+dispositivo(comopuedeserunvirus)conaccesoalosdatos bloqueRSAsiemprecontengainformacio´naleatoriaentonces
+delusuariopuedetambie´ntenerentoncesaccesoalainfor- le ser´ıa muy dif´ıcil a un hacker realizar ataques conocidos.
+macio´n. Esto sin contar la pe´rdida o robo de la contrasen˜a UtilizarelalgoritmoRSAparacifrartodounficheronoser´ıa
+de autentificacio´n [4] con un keylogger o un malware que convenienteyaqueelprocesodedescifradodeRSAeslento
+adquieraunacopiadelallavedelamemoriadeldispositivo [14]yseexpondr´ıalallaveprivadaamayoresataques.
+(ensolucionesenqueelalmacenamientodelallaveespor Todasestasherramientastienenunacaracter´ısticaencomu´n:
+software). la aplicacio´n encargada de cifrar o descifrar ejecuta donde
+mismoelusuariovaaaccederalosdatos.Sisequisieraque
+2.3 Herramientas que utilizan a Android para codi- undispositivoAndroidyunaPCdeescritoriocompartanlos
+ficarydecodificardatos. datoscifradosalmacenadosenlanube,habr´ıaquecompartirla
+Existenyaalgunasherramientasparacifradoentele´fonos llaveprivadaentreambosdispositivoseinstalarlaherramien-
+consistemaAndroid.Estaspuedendividirseendosgrupos: tatambie´nenlaPCdeescritorio.Peroindependientementede
+quelallaveprivadasepuedaprotegerporcontrasen˜a,altener
+Herramientasdecifradolocal,do´ndelaaplicacio´nde
+queestaralmacenadaentodoslosdispositivosqueaccedena
+cifradoejecutaeneltele´fonoylosdatossealmacenan
+losdatoscifrados(hablamosdediferentessistemasoperativos,
+enelmismo(ejemploBoxcryptor10,Cryptonite11).
+diferentesoftwareydistintascaracter´ısticasdeseguridady
+Herramientasdecifradoremoto,do´ndelaaplicacio´n proteccio´n)seampl´ıanentonceslasposibilidadesdehacking.
+de cifrado ejecuta en el tele´fono pero los datos se al- La solucio´n podr´ıa ser entonces que cada uno de estos
+macenanenlanube.Estegrupopuedesubdividirsea dispositivos (incluyendo la PC de escritorio) brindase por
+suvezendos:aquellasherramientasdo´ndeelalmace- hardwareunmecanismoparaelalmacenamientosegurode
+namiento remoto es un servicio nativo especializado lallaveprivadaylaejecucio´nseguradelasoperacionesde
+(ejemploSpiderOak12yWuala13)oaquellasquereuti- cifrado,similaralTrustZonedeAndroid.Peroenlapra´ctica,
+lizanserviciosdealmacenamientoexistentes(ejemplo actualmenteso´lounconjuntopequen˜odedispositivosbrindan
+Boxcryptor,Cryptonite)comoGoogleDrive,Dropbox, estacaracter´ıstica,porloquelasherramientasanterioresesta´n
+SkyDrive,etc[11]. expuestaspordisen˜oamu´ltiplestiposdeataquesdocumenta-
+dosenlaliteratura.
+Lamayor´ıadeestasherramientasutilizanelsistemade Unaherramientainteresantequeutilizanlosdispositivos
+archivosEncFS14,disen˜adoparacrearunacapadeabstrac- AndroidparacifrarydescifrarlosdatosesDroidVault[15].
+cio´n entre un sistema de archivos virtual, do´nde el usuario DroidVaultgarantizaalosduen˜osdedatossensibleslaprotec-
+almacena sus datos y el sistema de archivos real do´nde se cio´ndelosmismosendispositivosAndroidpotencialmente
+almacenanlosficherosyaencriptados[12].EncFSpermite inseguros.Estaherramientaenfocaaservidoresdedatosremo-
+utilizar como sistema de archivos real, tanto el disco duro tos(empresas)comolosduen˜osdelosdatossensibles.Estos
+localdeldispositivocomolosserviciosenlanube(Google datossensiblessoncompartidosenlosdispositivosmo´vilesde
+Drive,Dropbox,SkyDrive,etc).Paraelusuariofinal,elsis- losusuariosfinales(empleadosdelaempresa)quesedefinen
+temadearchivosvirtualestransparente,yaquesevisualiza como los usuarios de los datos. Esta herramienta hace uso
+10https://www.boxcryptor.com 15AdvancedEncryptionStandard.
+11http://code.google.com/p/cryptonite. 16CipherBlockChaining.
+12https://spideroak.com 17CipherFeedback.
+13https://www.wuala.com. 18Xorencryptxorbasedtweakedcodebookmodewithciphertextstealing.
+14FUSE-basedcryptographicfilesystem. 19RivestShamirAdleman.
+34 Utilizaruntele´fonoAndroidcomodispositivodecifradoversa´til
+delanuevatecnolog´ıaincorporadaenlostele´fonosinteligen- 4.1 Cifrar los datos y guardar la llave de forma se-
+tesquesepresentaenlaSeccio´nIVAaligualquenuestra gura.
+propuestaquesera´ presentadaenlamismaseccio´n. Algunosdelostele´fonosinteligentesAndroidma´srecien-
+DroidVaultesunsistemadisen˜adoporpartesqueesta´ se- tes tienen en su hardware una caracter´ıstica llamada Zona
+parado del sistema operativo y presenta tres componentes Segura (ARM TrustZone(cid:13)R), la cual tiene la tarea de crear
+fundamentales:Elmo´dulodeprocesamientodelainforma- unentornoseguroseparadodelSistemaOperativoalcuallos
+cio´n,unmo´dulopuenteyunmo´duloeldeentradaysalida atacantesnotienenacceso.SellamaEntornodeEjecucio´n
+delosdatoshacialapantalladeldispositivo.Elmo´dulode Confiable(TEE)20 yestatecnolog´ıaseutilizaparaproveer
+procesamientodelainformacio´neselencargadodemantener confianzaenelalmacenamientodelallaveas´ıcomoopera-
+un canal de comunicacio´n seguro con el servidor de datos cionesdeco´mputoseguras[16],[17].
+con el fin de intercambiar informacio´n y de procesarla. El Lazonaseguraesta´ basadaendosambientescompleta-
+mo´dulopuentefacilitalascomunicacionesentreelsistema mentedistintosllamadosworlds,cuyoaspectofundamental
+operativoyelmo´dulodeprocesamientoyelu´ltimomo´dulo esqueusanrecursosdesoftwareyhardwareseparados.El
+eselencargadodemostrarlosdatosenlapantallaalusuario primero normal world es el conocido hasta ahora y es en
+yderecogercualquierdatoproducidoporelmismo. elquefuncionanelsistemaoperativoylasaplicaciones.El
+segundomundoesnuevoysehadenominadosecureworld.
+Ene´l,correunsistemaoperativollamadosecureworldOSy
+3. Objetivos de este trabajo lasaplicacionesdebencumplirciertosrequisitosconelfinde
+proveerserviciosdeseguridadespecialestalescomoelalma-
+Integrar funcionalidades bajo un mismo dispositivo ha cenamientosegurodelallave.Unejemplodeestosrequisitos
+sidoelgrane´xitodelostele´fonosinteligentes.Lostele´fonos esqueelTEEdebepermitirquelasaplicacionesejecutense-
+mo´vilesdehoy,adema´sdesufuncionalidadba´sica(lascomu- paradasloqueaseguraqueaplicacionesmaliciosasnopuedan
+nicacionesporvoz)juegantambie´nlospapelesdeagendas accederomodificarelco´digoolosdatosdeotraaplicacio´n.
+personales,ca´marasdigitales,dispositivosdejuego,dispositi- Otrorequerimientofundamentaleselalmacenamientoseguro
+vosdealmacenamientoyGPSentreotrasmuchasaplicacio- de los datos para proteger el secreto y la integridad de los
+nes.Lostele´fonosmo´vilessondispositivosdeusopermanente datosbinariosquerepresentanlasaplicacionesas´ıcomolos
+quesehanconvertidopra´cticamenteenuna“extensio´n”desu datosquee´stasusanmientrasnoesta´nenejecucio´n[16].El
+propietariohumano.Sipudie´ramosutilizarlosadema´scomo sistemaoperativoAndroidyaimplementaelalmacenamiento
+TPDselesagregar´ıaunanuevafuncionalidad,cumpliendo porhardwaredelallavedecifradoenlosdispositivosmo´viles
+coneldeseodeutilizarunsolodispositivoparavariasfuncio- queyatienenZonaSegura(porejemplo,lal´ıneadetele´fo-
+nes,paraquenuestrainformacio´neneltele´fonosemantenga nosNexusdeGoogle)ybrindaunaAPIparaquepuedaser
+segura. utilizadoporlasaplicaciones.
+Utilizaruntele´fonocomoTPDtienemuchosusosypo- Enlostele´fonosactualesquedisponendeZonaSegura,
+siblesescenarios.Enunescenarioempresarialporejemplo, todalamemoriadelsistemaesta´separada,incluyendolaRAM
+unejecutivopuedeutilizarsumo´vilcomoTPDparacodificar ylosregistrosdelosCPUs.Unapartededicadaal“mundo
+lainformacio´nantesdesubirlaalanube,obienguardardi- normal”yotraparael“mundoseguro”.Locualsignificaque
+rectamentedichainformacio´n(yacodificada)eneltele´fono. elmundonormalnopuedeaccederalamemoriadelmundo
+Otro posible escenario es el personal, donde no queremos seguro.LaZonaSeguratambie´ntieneunprocesadordedicado
+almacenarenlanubeinformacio´nprivadao´ıntimasincifrar alcifradoyalmacenamientodelasllavesquesolopuedeser
+anteslamismaparaquenoeste´ expuestaafalloste´cnicoso accedidaporelmundoseguro[16].
+ataquesenlosCSP. Estas caracter´ısticas sera´n utilizadas en nuestro trabajo
+para el almacenamiento seguro de la llave privada que se
+Elobjetivodelpresentetrabajoesdemostrarlafactibilidad
+utilizara´ paracodificarlainformacio´n.
+de utilizar un tele´fono Android como Dispositivo Personal
+Unlimitantequepresentalautilizacio´ndelaZonaSegura
+deConfianzacomprobandosuviabilidadyversatilidadenel
+es que la llave nunca podra´ extraerse de la misma. Por lo
+cifradodelainformacio´n.
+quesilallavesegenero´ tambie´nenlazonaseguraentonces
+Estetrabajoesta´enfocadoalostele´fonosinteligentescon
+en caso de pe´rdida o dan˜o f´ısico del dispositivo mo´vil, los
+Androidporserelsistemaoperativopredominanteenelmerca-
+datoscifradosnopodra´nvolverseadescifrar.Unasolucio´n
+doyporpresentarlasAPIsnecesariasparalaimplementacio´n
+paraestopudierasergenerarlallavefueradelentornoseguro
+de aplicaciones que utilicen el cifrado por hardware y por
+parapoderresguardarlatambie´nporotrav´ıa(porejemplo,un
+consiguientelaZonaSegura.
+dispositivoUSBguardadoenunacajatanfuerte,blindaday
+ultrasecretacomosequiera)yluegointroducirlaenelmundo
+seguro,dedo´ndenosepodra´ extraer.
+4. Propuesta de co´mo usar un tele´fono
+android como TPD.
+20TrustedExecutionEnvironment.
+Utilizaruntele´fonoAndroidcomodispositivodecifradoversa´til 35
+4.2 Trasmisio´ndelosdatosdeformasegura.Segu- conlallavepu´blicarealantesdereenviarlaalreceptor.Esto
+ridaddelCanal. seresuelvemedianteunmecanismodeverificacio´ndellave
+Los tele´fonos son utilizados para almacenar y generar pu´blicado´ndeelemisorsolamenteaceptara´ llavespu´blicas
+datos.Estosdatospuedentransmitirsehaciaafuerayhacia confiables.Paraello,sehanestablecidoAutoridadesCertifica-
+adentrodelosmismosatrave´sdelaWifi,Bluetooth,dela dorascomoVeriSing26,porejemplo,quesonlasencargadas
+Red de Datos o un cable USB. Nuestra propuesta se basa degenerarparespu´blicosyprivados,firmadosdigitalmente,
+en que la transmisio´n entonces se efectuara´ a trave´s de la deformatalqueposteriormentesepuedaverificarlavalidez
+Wifiyutilizarprotocolosdecomunicacio´nesta´ndaresdonde delallave[18].
+al extremo conectado al dispositivo utilizado para cifrar se Elproblemaquenosocupaennuestrocasoesqueenun
+le an˜ada solamente el requisito de tener un navegador web mundocadavezma´sdina´mico,comoeselcasodelosesce-
+esta´ndarpararealizarlacomunicacio´n.Esdecir,descartamos nariosenqueparticipanlostele´fonosinteligentes,do´ndelas
+elusodelcableUSBoelBluetoothyaqueparasuutilizacio´n, direccionesIPcambianconstantemente,esmuchoma´sdif´ıcil
+serequiereinstalarsoftwareadicionaleneldispositivoye´ste utilizaruncertificadodigitalva´lidogeneradoporunaAutori-
+noesnuestroobjetivo.Sedescartatambie´nlaReddeDatos dadCertificadoradeconfianza,yaquehabr´ıaqueasociartam-
+pues es inexistente en nuestro pa´ıs, por tanto es imposible bie´ndina´micamentedichoIPconunnombrededominiova´li-
+hacerpruebassobreella. do.ExistenvariosservicioscomoDynDNS27,FreeDNS28 y
+Comoesconocido,existenvariaste´cnicasdecifradopara NoIP29 quepretendenresolveresteproblema,perorequieren
+elintercambiodeinformacio´n.Enuncifradosime´trico21,se queeldispositivoeste´conectadoaInternetyciertosmecanis-
+utilizaunamismallaveparacodificarydecodificarlainfor- mosdeautenticacio´n.Estosserviciosnecesitanlainstalacio´n
+macio´n.Estoimplicaqueantesdeenviarlosdatos,lallave de una aplicacio´n extra en nuestro dispositivo mo´vil como
+debesercompartidaentreelemisoryelreceptor.Elemisor DynDNSclient30.Unavezinstalada,elIPdelmo´vilserelacio-
+luegodehabercifradolainformacio´nusandolallaveprevia- nar´ıa,porejemplo,conelnombregalaxys4.dyndns.org,por
+menteadquirida,laenv´ıayelreceptordescifralainformacio´n loquesepodr´ıaaccederae´lv´ıahttp://galaxys4.dundns.org.
+haciendousodelamismallavequecomparteconelemisor. En caso de que la IP cambie, DynDNS client se encargar´ıa
+Estoimplicaponerdeacuerdoacadaparemisor-receptorlo deactualizarelregistroDNS,loquepermitir´ıaelaccesoa
+quenoesmuyviableprecisamenteenelescenariomo´vil.Y nuestrodispositivodeformapermanente.Estoresuelveso´lo
+nosiempreelquecodificaparaenviartienequetenerelpoder poderdescubrireldispositivoenlaredperonolaseguridad
+dedecodificarparaver. delcanalconSSL.Paraasegurarelcanal,utilizandoHTTPS,
+En un cifrado asime´trico22 por otra parte, existen dos serequiereuncertificadodigitalva´lido(CertificateAuthority-
+llavesconocidascomollavepu´blicayllaveprivada.Lallave signedcertificates)queponga“enverde”labarradenuestro
+pu´blicaseutilizaparacodificarlainformacio´nylallavepri- navegador.Nobastaconteneruncertificadodigital(porejem-
+vada,queessecreta,paradecodificarla[6].Laventajadela plo, uno auto-firmado), ya que si el navegador no es capaz
+InfraestructuradelallavePu´blicaPKIsobreelcifradosime´tri- deverificarlaautenticidaddedichocertificadomedianteuna
+co es que la llave pu´blica puede viajar por redes inseguras entidadcertificadora,unhackerpodr´ıacambiarelcertificado
+permitiendoquediferentesemisoresdispongandedichallave ysimularHTTPS.Elproblemaesquelasautoridadescertifi-
+paracomunicarseconelreceptordeformaseguraporquepara cadoras,so´logenerancertificadosparadominiosregistrados.
+descifrarlainformacio´nqueenv´ıane´stetambie´nnecesitade Portanto,siqueremosHTTPSconuna“barraverde”,habr´ıa
+lallaveprivada.Enelcasodelcifradosime´trico,lallavetiene quecomprarundominiogalaxys4.comysacaruncertificado
+queconocerseporambaspartesynopuedetransmitirsepor parae´l.DynDNStambie´nbrindaesteservicio31perorequiere
+redespu´blicas,porloqueespocou´tilsuusoenlanube. costoadicional.
+Para proteger las comunicaciones del ataque conocido Siquisie´ramosutilizaruncertificadodigitalauto-firmado
+comoataquedehombreintermedio(MITM)23 existenproto- (Self-signed)paraasegurarelcanalconnuestrodispositivo
+coloscomoTLS24 ySSL25 queutilizanunaPKIparacifrar mo´vil(yas´ınoincurrirengastosadicionales)tendemosque
+lascomunicaciones.Peroparagarantizarlaseguridadadecua- considerarquenossaldra´ unaadvertenciadeseguridadenel
+damente,nobastaconenviarlallavepu´blicayesperarpor navegadorytendremosquevalidaronoelcertificadodigital
+lainformacio´ncifrada,yaqueunhackerpudierainterceptar manualmenteyproseguirconlanavegacio´n.
+lacomunicacio´nconelpotencialemisor,enviarleaesteuna Paradeterminarqueelcertificadodigitaleselcorrecto,
+llavepu´blicafalsaparaas´ıleerelcontenidocifradoquees- habr´ıa que mostrar el thumbprint (lista de nu´meros o hash
+teenv´ıeyparaqueelemisoryelreceptornoseenterende queidentificanalcertificadodeformau´nica)enlapantalla
+lainterferencia,serecodificar´ıadichainformacio´nyale´ıda deldispositivoAndroidparaqueelusuariopuedacomparar
+21DES,DataEncryptionStandard,TripleDES,AES,RC2,RC4Rivest 26https://www.verisign.es
+Cipher,etc. 27http://es.dyn.com/dns/
+22RSA,DSADigitalSignatureAlgorithm,PGPPrettyGoodPrivacy,etc. 28http://freedns.afraid.org/
+23ManInTheMiddleAttacks. 29http://www.noip.com/managed-dns
+24TransportLayerSecurity 30https://play.google.com/store/apps/details?id=com.dyndns&hl=es...This
+25SecureSocketsLayer 31http://es.dyn.com/standard-dns/
+36 Utilizaruntele´fonoAndroidcomodispositivodecifradoversa´til
+e´steconelquemuestraelnavegadoryencasodecoincidir 4.4 ArquitecturaPropuestaysuFuncionamiento.
+saberqueeselcertificadocorrecto.Unavezquesevalideel
+Nuestrapropuestafuncionar´ıadelasiguientemanera.El
+certificado, la navegacio´n sera´ tan segura como con “barra
+dispositivoAndroidestara´ cumpliendolafuncio´ndeservidor
+verde”.
+e intercambiando informacio´n con un cliente, es decir, se
+Noobstante,esunpasomanualqueatentacontralaver- conectar´ıaelmo´vilalaPCusandolaWificomomuestrala1.
+satilidaddelusodeestapropuesta.Claro,elusuariosiempre
+puedeinstalarelcertificadodigital(sinlallaveprivada)ma-
+nualmenteeneldispositivofinal,yconestoseobtendr´ıala
+“barraverde”,peroinstalaruncertificadodigital,esunaope-
+racio´nqueusualmenterequierepermisosdeadministracio´ny
+nopodra´ realizarsefa´cilmenteencualquierordenador.
+4.3 Garantizarlaautentificacio´ndelUsuario.
+Comosesabelaautentificacio´nporcontrasen˜anoesdel
+todo segura debido a que a veces estas pueden ser fa´ciles
+de adivinar, los usuarios las suelen escribir en algu´n papel,
+las env´ıan por email o las comparten de alguna forma con
+un tercero. Un mecanismo de autentificacio´n de dos pasos
+disminuyeestosproblemas.
+Elprimerodeestospasosser´ıalageneracio´ndeunsecreto
+vola´til(co´digoautogeneradoyaleatorio)queseconfirmar´ıa
+a trave´s de un mecanismo alternativo a la conexio´n de red,
+Figura1.UsodelaredWifiparaconexio´ndedispositivo
+para as´ı autenticar el canal de comunicacio´n, pudiendo ser
+Android.
+este un QRCode que pueda validarse a trave´s de la ca´mara
+deltele´fonouotrosensor.Elsegundopasoser´ıaunsecreto
+esta´tico(PIN,contrasen˜a)quesoloelusuarioconoce,quele
+Existenunconjuntodefasesquesedebensatisfacerpara
+permitasoloae´laccederasuinformacio´n.
+establecerunacomunicacio´nexitosaysecumplaelobjetivo
+Conelprimerpasosegarantizaquelapersonaqueeste´sen-
+perseguido. En la primera fase se levanta un Servicio Web
+tadaenlaPCyqueintentaaccederalainformacio´nprivada
+enelmo´vilconlaAplicacio´ndeCifradoysedespliegaun
+searealmenteelportadordeltele´fono(ynootrapersonaco-
+mecanismodedescubrimiento.Elservidorwebbrindauna
+nectadaalaRed)yconelsegundopasoseautenticaalduen˜o
+IPyunpuertoporloscualesseestablecelacomunicacio´n,
+de la informacio´n privada (por si alguien se robo´ o se en-
+siempreutilizandoSSL.Elclientedelserviciowebpodr´ıaser
+contro´ eltele´fonoperdido).Esta´claroqueestonoayudasila
+entoncesunaaplicacio´npersonalizadaosimplementeunode
+contrasen˜ayelmo´vilfueronrobadosalavez(porejemplo
+losnavegadoreswebma´sutilizadoshoyend´ıa.Unnavegador
+sielusuarioesta´ bajounaamenazaf´ısica),peroencualquier
+esunapropuestama´sversa´tilyaqueestosesta´npreviamente
+casoqueesosucedaesmenosprobableyyanodependedela
+instaladosenlageneralidaddelosdispositivosposiblemente
+tecnolog´ıa.
+utilizadosynonecesitar´ıamosdeunapreinstalacio´npersona-
+Una vez superada satisfactoriamente la autentificacio´n
+liza.
+vienelafasedelanavegacio´ndondesetrabajaconlosficheros
+Lasiguientefaseeselmecanismodeautentificacio´nde
+guardados en el tele´fono. Para ello se utiliza el protocolo
+dospasosdondeelprimerodeestospasosser´ıaunacontrasen˜a
+(WebDAV)32elcualconsisteenunaextensio´ndelProtocolo
+que se le enviar´ıa a la aplicacio´n de cifrado residente en el
+HTTPconelobjetivodeadministrarrecursosremotamente.
+dispositivomo´vil.ElsegundopasoesunQRCodegenerado
+En el caso de una PC Windows, con WebDAV se podra´n
+entiemporealenelmomentodelavalidacio´nyunavezle´ıdo
+visualizarlosdatosdeltele´fonocomosifueseunacarpetama´s
+sehabilitara´ lanavegacio´n.As´ısegarantizaqueelduen˜odel
+delsistemaoperativoyelusuariofinal(elduen˜odeltele´fono
+tele´fonoseaelqueesta´ tratandodeaccederalmismoyaque
+Android) se abstraera´ de los mecanismos de transmisio´n y
+tienelacontrasen˜adelaprimerafaseyqueelmismonoha
+codificacio´nqueexistenpordetra´s.(Otrosdispositivoscon
+sidorobadoportenerlanecesidaddeleerelQRCodeusando
+otrossistemasoperativosacceder´ıantambie´nalosdatos,pero
+eltele´fono.
+atrave´sdelnavegadorwebutilizandolainterfazdeusuario
+web).Esentoncescuandoserealizaelintercambioentreel Una vez superada satisfactoriamente la autentificacio´n
+navegadorylaaplicacio´ndecifradoyeltele´fonocumplecon vienelafasedelanavegacio´ndondesetrabajaconlosficheros
+sufuncio´ndeTPD. guardados en el tele´fono. Para ello se utiliza el protocolo
+WebDAV.
+32WebDistributedAuthoringandVersioning
+Utilizaruntele´fonoAndroidcomodispositivodecifradoversa´til 37
+5. Resultados de las Pruebas es la pe´rdida de la llave si se pierde o se le es sustra´ıdo el
+Experimentales. dispositivo,peroestalimitantetambie´nexistecuandoseusa
+unTPD.Unaventajaencomparacio´nconunTPD,esquese
+Algunosinvestigadoreshanhechoexperimentoscondis- puederesguardarlallaveprivadamedianteotromecanismo
+positivosmo´vilescomprobandolaeficienciadelosmismos y restaurarla en caso de pe´rdida o extrav´ıo, as´ı como tener
+condiferentesalgoritmosdecifrado.En[20],porejemplo,se respaldodelainformacio´ncifradaenlanube.Otralimitante
+muestraelcostocomputacionalygastodeenerg´ıadedisposi- eslaseguridaddelcanaldecomunicacio´n(con“barraverde”)
+tivosmo´viles,enparticular,PDAs33.
+quenoestanfa´cildelograr,yaquehabr´ıaquepagarservicios
+Nuestroobjetivoesdeterminarlafactibilidaddelusode adicionales o realizar la verificacio´n del certificado digital
+losdispositivosAndroidcomoTPDyparaelloshemosrealiza- manualmente.Lau´ltimadelaslimitanteseslavelocidadde
+dopruebasexperimentalesysehaimplementadounprototipo trasmisio´n de los datos desde y hacia el dispositivo mo´vil,
+deaplicacio´nquecifreficherosdediferentestaman˜osdo´nde pues la velocidad de la Wifi que aunque en los nuevos dis-
+semideeltiempodetrasmisio´ndeestosatrave´sdelaWifi, positivosescadavezmayorau´nnosepuedecompararcon
+as´ıcomolostiemposdecifradoydescifrado.Paraenviarlos ladeundispositivoUSB3.0.Sinembargo,nousarelUSB
+datosatrave´sdelaWifisehandivididolosficherosenpeda- nosindependizadellevarelcableUSBdeltele´fonojuntocon
+zosde512y1024Kb.Enestaspruebassehautilizadocomo e´lydenecesitareldriverparaquefuncioneenlaPCquese
+dispositivodeexperimentacio´nunLGNexus4. este´ utilizandoparaaccederalmo´vil.
+En un primer experimento se han obtenidos los datos
+reflejadosenlatabla1dondetodoslosprocesos(trasmisio´n, 7. Trabajo Futuro.
+cifradoydescifrado)sehacensecuencialmente.
+Enunsegundomomentohacemosusodelaparalelizacio´n Elpresenteprototipoau´nnotieneimplementadoelmeca-
+conelfindeexplotarlacapacidadmulti-nu´cleoquebrinda nismodesalvayrestauradelallaveprivada.
+estetele´fono.Estosresultadossemuestranenlatabla2. Enunescenariodo´ndeeltele´fonomo´vilseextrav´ıa,es
+robadooserompe,seperder´ıajuntocone´llallaveprivada
+Deestaspruebasexperimentalespodemosdeducirqueel
+queseutilizaparadescifrarlosdatoscodificadosypor
+procesodecifradonoafectaelrendimiento.
+endetodalainformacio´nsensibledelusuarioqueeste´
+Elcuellodebotellaesta´ enlatrasmisio´ndelosdatosya
+cifrada.Conelfindequesetengaalgunaformadeevitar
+quelavelocidadpromedioesdeaproximadamente2.5Mb/s
+estape´rdida,entrabajosfuturoshayqueconcebirun
+quedependedelavelocidaddelaWifiqueesde56Mbit/s
+mecanismoderespaldoparalallaveprivadaperodetal
+(aunque ya existen dispositivos modernos con una mayor
+formatalquelaexposicio´naataquesseam´ınima.
+velocidadde150Mbit/s).
+Dadoqueelprocesodecifradotardaaproximadamente
+lomismoqueelprocesodetrasmisio´ndelainformacio´nen Referencias
+loquellegaunpedazodelficheroaldispositivoAndroidse [1] S.a.Z.J.a.L.D.a.J.J.Nepal,(cid:40)(cid:40)Amobileandportable
+puedeircifrandootrodemodoqueeltiempodecifradono trustedcomputingplatform,(cid:41)(cid:41)EURASIPJournalonWire-
+perjudiqueelrendimiento. lessCommunicationsandNetworking,vol.2011,no1,p.
+75,2011.
+6. Conclusiones. [2] Y.C.a.R.K.DejanKovachev,(cid:40)(cid:40)MobileCloudCompu-
+Ennuestrosd´ıasesunanecesidadlaproteccio´ndeinfor-
+ting:AComparisonofApplicationModels,(cid:41)(cid:41)Information
+macio´nsensiblecomomedidadeseguridadobligatoriadebido Systems&DatabaseTechnologiesRWTHAachenUni-
+alagrancantidaddeataquesexistentes.Disponerentoncesde versity,Ahornstr.55,52056AachenGermany,2011.
+unmecanismofa´cildeutilizar,peroalavezseguroyqueno
+[3] P. G. Sujithra M, (cid:40)(cid:40)Mobile Device Security : A Survey
+impliquegastosadicionales,ser´ıadegranutilidad.Estapro-
+onMobileDeviceThreats,VulnerabilitiesandtheirDe-
+puestapodr´ıaserunaherramientaseguraparalaproteccio´n
+fensiveMechanism,(cid:41)(cid:41)InternationalJournalofComputer
+delosdatossensiblesenlosdispositivosAndroid.Uncasode
+Applications(0975-8887),vol.56,no14,pp.24-29,2012.
+uso,ser´ıaalmacenarlascontrasen˜as,losdatosbancarios,los
+estadosdecuentasolosregistrosme´dicosdelusuarioenel [4] M. S. M. S. Karen Scarfone, (cid:40)(cid:40)Guide to Storage Encry-
+tele´fonodeformasegurayportable,yaqueviajar´ıanjuntoae´l ptionTechnologiesforEndUserDevicesRecommenda-
+porestareneltele´fonoypodr´ıanaccederseentodomomento. tionsoftheNationalInstituteofStandardsandTechno-
+Alestarcifradosutilizandolau´ltimatecnolog´ıa(zonasegura), logy,(cid:41)(cid:41)2007
+seproteger´ıancontrarobouotrostiposdeataques.
+[5] L.O´Connor,(cid:40)(cid:40)CelebrityNudePhotoLeak:JustOneMo-
+Este trabajo muestra que el reemplazo de los TPD por
+re Reminder That Privacy Does Not Exist Online and
+tele´fonos Android es posible siempre y cuando el usuario
+Legally,There’sNotMuchWeCanDoAboutIt,(cid:41)(cid:41)2014.
+aceptelaslimitacionesqueestoimplica.Laprimeradeellas
+[Enl´ınea].Available:digitalcommons.law.ggu.edu.[U´lti-
+33PersonalDigitalAssistants moacceso:28012015].
+38 Utilizaruntele´fonoAndroidcomodispositivodecifradoversa´til
+Tabla1.Procesossecuenciales(Tiempoensegundos).
+FicheroMb Segmentacio´nKb T.Transmisio´n T.Cifrado T.Descifrado
+10 512 11,666721 21,0093156 21,9659112
+1024 11,9876396 18,9945899 19,0844895
+32 512 19,0078923 38,3375016 38,9494236
+1024 16,7244139 31,7556396 31,8323425
+64 512 62,2480659 116,7900762 117,3967133
+1024 60,5736679 96,5910032 99,1307446
+128 512 165,3892591 286,2189747 297,6159404
+1024 154,122489 242,3879867 246,630425
+256 512 126,4520881 295,3489466 305,2861638
+1024 117,4942528 227,6566316 229,1970667
+512 512 351,3607036 750,1806037 849,919064
+1024 274,9837976 534,0583291 568,1994485
+1024 512 604,638345 1444,949788 1906,783323
+1024 451,7867903 939,2094609 1021,723576
+Tabla2.Procesosparalelizados(Tiempoensegundos).
+FicheroMb Segmentacio´nKb T.Transmisio´n T.Cifrado T.Descifrado
+10 512 4,0228048 3,841980 4,0693318
+1024 4,2270722 4,215069 4,3412256
+32 512 12,286913 12,06821 12,272882
+1024 12,3267226 12,04925 13,0174481
+64 512 23,5903803 23,58947 26,0900268
+1024 23,9045025 23,89781 25,0175025
+128 512 47,3620253 47,27447 48,0567149
+1024 47,6968507 47,54943 48,7462562
+256 512 94,7632723 95,11444 94,8198077
+1024 94,8572613 95,54894 95,9584601
+512 512 188,857015 195,3625 190,0780195
+1024 189,7798195 188,6458 190,028967
+1024 512 375,4802342 373,1416 373,433388
+1024 374,8283404 373,1119 374,4629174
+[6] R.a.C.R.Bhadauria,(cid:40)(cid:40)ASurveyonSecurityIssuesin [11] K.a.S.S.Raju,(cid:40)(cid:40)OverviewofDropboxEncryptionin
+CloudComputing(cid:41)(cid:41). CloudComputing,(cid:41)(cid:41)DepartmentofIT,MahendraEngi-
+neeringCollege,Namakkal,India,2014.
+[7] C. W. K. R. a. W. L. Shucheng Yu, Achieving Secure,
+Scalable,andFine-grainedDataAccessControlinCloud
+[12] V.Gough,(cid:40)(cid:40)EncFs,(cid:41)(cid:41)2011.
+Computing,IEEEINFOCOM:Dept.ofECE,Worcester
+PolytechnicInstitute,Dept.ofECE,IllinoisInstituteof
+[13] R. M. A. S. Zhaohui Wang,
+Technology,2010.
+(cid:40)(cid:40)ImplementingandOptimizinganEncryptionFilesystemonAndroid,(cid:41)(cid:41)
+[8] Q.L.a.J.W.GuojunWang,HierarchicalAttribute-Based DepartmentofComputerScienceGeorgeMasonUniver-
+Encryption for Fine-Grained Access Control in Cloud sityFairfax,USA,2011.
+StorageServices,Changsha,HunanProvince,P.R.China:
+SchoolofInformationScienceandEngineering,Central [14] M.a.V.J.Shand,(cid:40)(cid:40)FastimplementationsofRSAcrypto-
+SouthUniversity,2010. graphy,(cid:41)(cid:41)ComputerArithmetic,1993.
+[9] L.M.A.L.J.C.P.J.v.D.FrankC.Bormann,Concept
+[15] H. H. G. B. Y. J. Z. L. P. S. Xiaolei Li, (cid:40)(cid:40)DroidVault:
+forTrustedPersonalDevicesinaMobileandNetworked
+ATrustedDataVaultforAndroidDevices,(cid:41)(cid:41)Department
+Environment.
+of Computer Science and Graduate School for Integra-
+[10] A. a. O. P. C. V. Skillen, (cid:40)(cid:40)Deadbolt : Locking Down tive Sciences and Engineering, National University of
+AndroidDiskEncryption,(cid:41)(cid:41)2013. Singapore,Singapore,2014.
+Utilizaruntele´fonoAndroidcomodispositivodecifradoversa´til 39
+[16] T.Cooijmans,SecureKeyStorageandSecureCompu- [19] (cid:40)(cid:40)Dyn.com,(cid:41)(cid:41) Dynamic Network Services, [En l´ınea].
+tationinAndroid,2014. Available:http://dyn.com/blog/never-lose-your-android-
+phone-with-dyns-new-update-client/.[U´ltimoacceso:22
+[17] J. d. R. a. E. P. Tim Cooijmans, (cid:40)(cid:40)Analysis of Secure
+febrero2015].
+KeyStorageSolutionsonAndroid,(cid:41)(cid:41)RadboudUniversity
+Nijmegen,2014. [20] H. a. H.-J. J. Rif a-Pous, (cid:40)(cid:40)Computational and Energy
+CostsofCryptographicAlgorithmsonHandheldDevi-
+[18] D.B.a.A.Lioy,(cid:40)(cid:40)TowardsSimplifyingPKIImplemen- ces,(cid:41)(cid:41)FutureInternet,vol.3,2011.
+tation:Client-ServerbasedValidationofPublicKeyCer-
+ti[FB01?]cates,(cid:41)(cid:41)Dip.AutomaticaeInformaticaPolitec-
+nicodiTorino,Torino,Italy,2002.

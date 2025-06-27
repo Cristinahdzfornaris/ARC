@@ -1,0 +1,995 @@
+54 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Extracci(cid:243)n de conocimientos l(cid:243)gicos
+y estad(cid:237)sticos, a partir de tablas
+de datos binarios: un estudio con alumnos
+de la enseæanza media superior
+de Santiago de Cuba
+Larisa Zamora Matamoros / Pilar Orœs BaguenaIsabel Alonso Berenguer
+/ Alexander Gorina SÆnchez / Mailyn `lvarez Caneda
+(Departamento de MatemÆtica.
+Facultad de MatemÆtica y Computaci(cid:243)n.
+Universidad de Oriente, Cuba
+Departamento de MatemÆticas.
+Escuela de Tecnolog(cid:237)a y Ciencias Experimentales.
+Universidad Jaume I, Espaæa).
+RESUMEN: en el trabajo se realiza un estudio sobre las habilidades que poseen alumnos de 10mo.
+y 11no. grado de la enseæanza media superior del municipio de Santiago de Cuba, para el trabajo
+simultÆneo de la L(cid:243)gica, la Estad(cid:237)stica Elemental y el Tratamiento de Datos, en la interpretaci(cid:243)n
+de la informaci(cid:243)n obtenida en una encuesta y presentada en una tabla de datos binarios, tomando
+como referente los trabajos de Pitarch (2002) y de Orœs (1992), realizados con alumnos de la ESO en
+Espaæa y de primaria en Francia respectivamente. A partir de la aplicaci(cid:243)n de las tØcnicas del AnÆ-
+lisis Estad(cid:237)stico Implicativo (ASI) se muestra c(cid:243)mo se relacionan el trabajo l(cid:243)gico y el estad(cid:237)stico a
+travØs del tratamiento de datos, se detectan diferencias signi(cid:222) cativas en las habilidades adquiridas
+por alumnos de dos centros de enseæanza media superior, tomados como muestra para la experi-
+mentaci(cid:243)n. Por œltimo se presentan, con ayuda del ASI, un conjunto de meta reglas que evidencian
+las relaciones entre las operaciones l(cid:243)gicas, estad(cid:237)sticas y de tratamiento de datos.
+1. INTRODUCCI(cid:211)N Numerosos investigadores se han referido a
+la importancia de formar una cultura estad(cid:237)s-
+La estad(cid:237)stica es una rama de la matemÆtica
+tica en la sociedad para potenciar su desarro-
+que provee a los ciudadanos de una cultura
+llo, tal es el caso de Batanero (2003), quien ha
+espec(cid:237)(cid:222) ca muy œtil a la hora de leer e interpretar,
+planteado que la estad(cid:237)stica es una parte de
+entre otras cosas, tablas y grÆ(cid:222) cos que cada vez
+la educaci(cid:243)n general deseable para los futuros
+con mayor frecuencia aparecen en los medios de
+ciudadanos adultos, quienes precisan adquirir
+difusi(cid:243)n masiva, contribuyendo a lograr una me-
+la capacidad de lectura e interpretaci(cid:243)n de ta-
+jor comprensi(cid:243)n del mundo que les rodea.
+blas y grÆ(cid:222) cos estad(cid:237)sticos, que con frecuencia
+TambiØn resulta valiosa para la vida profe- aparecen en los medios informativos. TambiØn
+sional, ya que en muchas profesiones se requie- es œtil para la vida posterior, ya que en muchas
+ren conocimientos bÆsicos del tema y su estu- profesiones se precisan conocimientos bÆsicos
+dio contribuye a desarrollar un razonamiento del tema y su estudio ayuda al desarrollo perso-
+cr(cid:237)tico, basado en la valoraci(cid:243)n de la evidencia nal, fomentando un razonamiento cr(cid:237)tico, basa-
+objetiva. do en la valoraci(cid:243)n de la evidencia objetiva.
+REVISTA CIENCIAS MATEM`TICAS 55
+Todo lo anterior pone de mani(cid:222) esto el interØs esta cultura, en este caso, segœn Delgado en las
+de realizar investigaciones encaminadas a per- condiciones de Cuba.
+feccionar el proceso de enseæanza-aprendizaje En esta misma l(cid:237)nea Gorina et al. (2007a)
+de la Estad(cid:237)stica, en la formaci(cid:243)n bÆsica de los analizan la importancia de la educaci(cid:243)n estad(cid:237)s-
+ciudadanos. Al respecto se han realizado varios tica en la formaci(cid:243)n integral de los estudiantes
+estudios y planteado numerosas direcciones de de doctorado en Ciencias Pedag(cid:243)gicas en Cuba y
+trabajo, como la de Batanero (1999), quien ex- en Gorina et al. (2007b) los autores proponen un
+puso en la Conferencia Internacional Experien- sistema de habilidades que se deben desarrollar
+cias y Expectativas de la Enseæanza de la Es- en los doctorantes con el prop(cid:243)sito de facilitar el
+tad(cid:237)stica-Desaf(cid:237)os para el Siglo XXI, el interØs y trabajo de formaci(cid:243)n de la competencia estad(cid:237)s-
+viabilidad de introducir el Tratamiento de Datos tica. En Veiga (2007) se presenta una re(cid:223) exi(cid:243)n
+en la enseæanza actual de la Estad(cid:237)stica. acerca de algunos de los obstÆculos y di(cid:222) culta-
+Orœs (1992) se encamina en esta l(cid:237)nea de in- des conceptuales con los que se enfrentan los
+vestigaci(cid:243)n en DidÆctica de la Estad(cid:237)stica, con estudiantes de secundaria en el aprendizaje de
+su tesis doctoral, al introducir el trabajo l(cid:243)gico la Estad(cid:237)stica en Brasil.
+sobre tablas de datos en la enseæanza primaria. En el citado trabajo de Zamora y Alonso
+Una investigaci(cid:243)n mÆs reciente, que conti- (2006) y segœn el anÆlisis valorativo hecho so-
+nœa esta direcci(cid:243)n e integra las dos propuestas bre el actual plan de estudio de MatemÆtica de
+anteriores, es la realizada por Pitarch (2002) y la enseæanza preuniversitaria cubana y los re-
+dirigida por Orœs, la que analiza el razonamien- sultados del diagn(cid:243)stico realizado por las auto-
+to de los alumnos en la Enseæanza Secundaria ras, se pudo constatar que a partir de los cursos
+Obligatoria (ESO) en Espaæa, utilizando simul- 2004-2005 y 2005-2006 se incorporan conteni-
+dos de Estad(cid:237)stica a los programas de 10mo. y
+tÆneamente el Tratamiento de Datos, la L(cid:243)gica y
+11no. grado respectivamente. A partir de este
+la Estad(cid:237)stica Elemental.
+mismo diagn(cid:243)stico, se pudo con(cid:222) rmar que di-
+En Cuba recientemente se han comenzado a
+chos programas no contemplan expl(cid:237)citamente
+dar los primeros pasos para la incorporaci(cid:243)n de
+el Tratamiento de Datos y que los contenidos de
+la enseæanza de la Estad(cid:237)stica en el curr(cid:237)culo de
+la Estad(cid:237)stica Descriptiva se imparten emplean-
+las escuela media (secundaria bÆsica) y media
+do mØtodos tradicionales, concluyØndose que
+superior (preuniversitaria). Esto, aparejado al
+la enseæanza de la Estad(cid:237)stica presenta, desde
+creciente interØs internacional en el desarrollo
+el punto de vista de su diseæo curricular, di(cid:222) -
+de la enseæanza y aprendizaje de la Estad(cid:237)stica
+cultades similares a las planteadas por Pitarch
+en los niveles secundarios e incluso en la en-
+(2002), lo cual sirvi(cid:243) de motivaci(cid:243)n para desarro-
+seæanza primaria, ha motivado a que un grupo
+llar un estudio similar al realizado en Espaæa
+de profesores de la Universidad de Oriente en
+con la ESO, pero con alumnos de la enseæan-
+Santiago de Cuba, comenzaran a investigar so-
+za preuniversitaria, con el objetivo de analizar
+bre las principales de(cid:222) ciencias que existen en la
+las habilidades que poseen alumnos de 10mo. y
+enseæanza de esta ciencia en el nivel preuniver-
+11no. grado, para el trabajo simultÆneo con as-
+sitario. Un primer trabajo encaminado en esta
+pectos esenciales de Tratamiento de Datos, L(cid:243)-
+direcci(cid:243)n es el de Zamora y Alonso (2006), en el
+gica y Estad(cid:237)stica Elemental, y poder comparar
+que se presenta una metodolog(cid:237)a encaminada a
+los resultados con los obtenidos en la ESO.
+orientar a los profesores de la enseæanza media
+superior en lo referente a la organizaci(cid:243)n y de-
+2. METODOLOG˝A
+sarrollo del proceso de enseæanza-aprendizaje
+de la Estad(cid:237)stica y las Probabilidades.
+Dado el interØs de comparar los resultados de
+Por otro lado, Delgado (1999) aborda una la presente investigaci(cid:243)n con los obtenidos en la
+propuesta metodol(cid:243)gica-organizativa dirigida a ESO, se decidi(cid:243) emplear la misma metodolog(cid:237)a
+lograr una mayor difusi(cid:243)n de la cultura estad(cid:237)s- seguida por Pitarch, con ligeras modi(cid:222) caciones.
+tica en aquellos que la utilizan o la requieren, en
+Se parte de considerar un cuestionario inicial
+dependencia de las condiciones y caracter(cid:237)sticas
+con el objetivo de obtener informaci(cid:243)n primaria que
+propias del entorno en el que se desea alcanzar
+permitiese modelar el trabajo l(cid:243)gico y estad(cid:237)stico,
+56 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+as(cid:237) como el tratamiento de datos sobre un ins- forma rÆpida, gran cantidad de cÆlculos estad(cid:237)s-
+trumento comœn, la tabla de datos. Se confec- ticos y grÆ(cid:222) cos: Ærboles y grafo de clasi(cid:222) caci(cid:243)n
+ciona el cuestionario de la experimentaci(cid:243)n, si- e implicaci(cid:243)n.
+milar a los de Orœs (1992) y al de Pitarch (2002),
+cuyo diseæo se realiz(cid:243) en el marco de la Teor(cid:237)a
+2.1 El sistema informÆtico C.H.I.C.
+de Situaciones de Brousseau, concebido como
+una situaci(cid:243)n fundamental∗ que modeliza el fun- El sistema informÆtico C.H.I.C. permite realizar
+cionamiento del contenido matemÆtico, en este el anÆlisis de los datos a partir de la de(cid:222) nici(cid:243)n
+caso, la l(cid:243)gica y la clasi(cid:222) caci(cid:243)n en situaci(cid:243)n es- de variables, que pueden ser principales (bina-
+colar, mediante variables de la situaci(cid:243)n. rias, modales, frecuenciales o de intervalo) o su-
+Respecto al anÆlisis de los datos de la experi- plementarias. Las primeras son las que se tienen
+mentaci(cid:243)n, queremos destacar la aplicaci(cid:243)n del en cuenta normalmente por C.H.I.C., y las se-
+AnÆlisis Estad(cid:237)stico Implicativo (ASI), el cual es gundas, son variables binarias o modales que no
+un mØtodo de anÆlisis no simØtrico de datos que intervienen en el cÆlculo de las contribuciones
+permite la extracci(cid:243)n y la estructuraci(cid:243)n del co- de las categor(cid:237)as, solo se tienen en cuenta en la
+nocimiento en forma de normas y reglas genera- bœsqueda de la contribuci(cid:243)n o la tipicalidad.
+lizadas, a partir de un conjunto de datos que in- Este sistema informÆtico muestra las impli-
+terrelaciona una poblaci(cid:243)n de sujetos (u objetos) caciones mÆs relevantes entre los valores de las
+con un conjunto de variables. Su origen es la diversas variables, y entre sus funciones (opcio-
+modelizaci(cid:243)n estad(cid:237)stica de la cuasi-implicaci(cid:243)n: nes del programa) estÆ construir:
+cuando la variable o la conjunci(cid:243)n de variables
+(cid:150) El `rbol de Similaridad, el cual utiliza el
+(cid:147)a(cid:148) es observada en la poblaci(cid:243)n, entonces gene-
+(cid:237)ndice de proximidad de I. C. Lerman, para
+ralmente la variable (cid:147)b(cid:148) lo es tambiØn. Las varia-
+el cÆlculo de los niveles de agregaci(cid:243)n de
+bles en cuesti(cid:243)n pueden ser de distintos tipos:
+las variables y su clasi(cid:222) caci(cid:243)n.
+binario, modal, frecuencial o de intervalo. Con-
+(cid:150) El `rbol Cohesitivo, efectuando los cÆlcu-
+trariamente a los mØtodos de anÆlisis simØtricos
+los de los (cid:237)ndices de cohesi(cid:243)n implicativa
+basados, por ejemplo, en una distancia o en una
+entre las variables y las clases de varia-
+correlaci(cid:243)n, los conjuntos de reglas obtenidas
+bles.
+pueden conducir a hip(cid:243)tesis de causalidad. Es-
+(cid:150) El Grafo Implicativo, calculando las im-
+tos conjuntos se estructuran segœn diferentes
+plicaciones directas entre variables, es-
+caracter(cid:237)sticas comunes complementarias (grafo
+tructurando originalmente las variables
+implicativo, jerarqu(cid:237)a orientada). La determina-
+mediante cadenas de implicaciones en el
+ci(cid:243)n cuantitativa de los sujetos o descriptores
+sentido del AnÆlisis Estad(cid:237)stico Implicati-
+responsables de estas estructuras viene dada
+vo, referenciado en el apartado anterior.
+por su contribuci(cid:243)n o su tipicalidad.
+En los tres casos muestra una ventana de
+Como soporte computacional de las tØcnicas
+resultados numØricos ((cid:237)ndices y niveles de es-
+de este tipo de anÆlisis multivariante de datos,
+tructuraci(cid:243)n) y otra que presenta el gra(cid:222) co corres-
+el ASI, se utiliza el sistema informÆtico C.H.I.C.
+pondiente.
+(Classi(cid:222) cation HiØrarchique Implicative et CohØ-
+sitive) en su versi(cid:243)n 4.1, el cual es un programa La medida de la relaci(cid:243)n implicativa se evalœa
+informÆtico estad(cid:237)stico adaptado por Regis Gras a partir de la inverosimilitud de la aparici(cid:243)n, en
+a partir de los (cid:237)ndices de proximidad o distan- los datos, del nœmero de casos que la invalidan,
+cia de Lerman, I. (1981) y se caracteriza por su es decir, cuanti(cid:222) ca (cid:147)el asombro(cid:148) del experto ante
+sencillez de manejo, ser innovador en el trata- el nœmero inveros(cid:237)milmente pequeæo de con-
+miento de la informaci(cid:243)n y proporcionar, de una traejemplos. Una implicaci(cid:243)n entre clases de
+variables solo toma verdaderamente su sentido
+* Situaci(cid:243)n fundamental: una situaci(cid:243)n fundamental correspon- bajo la condici(cid:243)n de que dentro de cada clase de
+diente al conocimiento C es un conjunto m(cid:237)nimo de situaciones
+variables, cuya relaci(cid:243)n se examina con otras,
+a-didÆcticas que son espec(cid:237)(cid:222) cas de C, que dan lugar a un campo
+de problemas su(cid:222) cientemente extenso como para proporcionar exista una cierta (cid:147)cohesi(cid:243)n(cid:148) entre las variables
+una buena representaci(cid:243)n de C, teniendo en cuenta el manejo
+que la constituyen. (Gras R., Kuntz P. et Briand
+de los valores de las variables didÆcticas y la reconstrucci(cid:243)n de
+C en la situaci(cid:243)n didÆctica en cuesti(cid:243)n. H., 2001).
+REVISTA CIENCIAS MATEM`TICAS 57
+C.H.I.C. permite conocer la contribuci(cid:243)n en cuantitativos, en particular de la Estad(cid:237)stica
+cada una de las clases, de cada uno de los su- Descriptiva e Inferencial.
+jetos y tambiØn de las variables suplementarias
+que se de(cid:222) nan para caracterizar a los indivi-
+2.2 Cuestionarios
+duos. Cada una de estas œltimas contribuye
+mÆs o menos a la formaci(cid:243)n de la clase, lo cual Se parte de considerar el cuestionario inicial
+signi(cid:222) ca que los valores que ellos dan a las va- presentado por Pitarch (2002)*, el cual indagaba
+riables, se da en el sentido de su similaridad. acerca de los gustos de los alumnos de la ense-
+R. Gras y H. Ratsimba-Rajohn han elaborado æanza secundaria obligatoria (ESO) en Espaæa
+un criterio que permite evaluar esta contribu- por diferentes tipos de mœsicas, y su objetivo
+ci(cid:243)n relativa en cada clase. era obtener informaci(cid:243)n primaria que permitiese
+Ciertos sujetos son (cid:147)t(cid:237)picos(cid:148) en el comporta- modelar el trabajo l(cid:243)gico, estad(cid:237)stico, as(cid:237) como el
+miento de un conjunto de la poblaci(cid:243)n en el sen- tratamiento de datos en este tipo de enseæanza.
+tido siguiente: en el estudio de la similaridad, Nuestro cuestionario persigue este mismo obje-
+ellos atribuyen al conjunto de variables, valores tivo, empleando como excusa y motivaci(cid:243)n del
+compatibles con las similaridades constituidas cuestionario el gusto de los alumnos, de la ense-
+sobre estas variables por la poblaci(cid:243)n. Si algu- æanza preuniversitaria del municipio de Santia-
+nas variables suplementarias han sido de(cid:222) nidas go de Cuba, por diferentes asignaturas y profe-
+por el usuario, se obtendrÆ as(cid:237) la tipi(cid:222) caci(cid:243)n de siones (carreras universitarias). Cada pregunta
+estas variables a partir de aquellas que los indi- del mismo puede ser respondida de forma a(cid:222) r-
+viduos las satisfacen. mativa (1) o negativa (0), generÆndose as(cid:237) una
+matriz booleana o tabla de datos binarios.
+La utilizaci(cid:243)n de C.H.I.C. en nuestra investi-
+gaci(cid:243)n se realiza en tres momentos: La elaboraci(cid:243)n del cuestionario de la experi-
+mentaci(cid:243)n se realiza a partir de las respuestas
+● En primer lugar sobre la tabla de datos bi-
+que hab(cid:237)an manifestado los alumnos en este
+narios T, la cual se obtiene a partir de las
+cuestionario inicial. Los resultados obtenidos al
+respuestas dadas por los alumnos al cues-
+aplicar las tØcnicas del ASI a la tabla de datos
+tionario inicial. Los resultados obtenidos
+binarios, con el objetivo de obtener informaci(cid:243)n
+no se presentan en este art(cid:237)culo, se pue-
+den consultar en Zamora et al. (2007). acerca de semejanzas o proximidades entre los
+alumnos y entre las preguntas del cuestionario,
+● En segundo lugar sobre la matriz a priori
+permitieron realizar algunas modi(cid:222) caciones y
+MAP, construida a partir de la operaciona-
+obtener as(cid:237) el cuestionario de la experimentaci(cid:243)n
+lizaci(cid:243)n de cada una de las preguntas del
+libre de posibles preguntas ambiguas o equiva-
+cuestionario de la experimentaci(cid:243)n, con
+lentes, el cual se muestra en el anexo 1. El traba-
+el objetivo de obtener una clasi(cid:222) caci(cid:243)n de
+jo de elaboraci(cid:243)n y modi(cid:222) caci(cid:243)n del cuestionario
+las preguntas del mismo, atendiendo a las
+puede consultarse en Zamora et al. (2007).
+operaciones matemÆticas que los alumnos
+deben realizar para responderlas.
+2.3 AnÆlisis a priori del cuestionario
+● Por œltimo, se aplica el C.H.I.C. sobre la
+matriz de datos a posteriori MP. Esta ma- de la experimentaci(cid:243)n
+triz se conforma a partir de las respuestas
+Para el anÆlisis a priori del cuestionario de la
+correctas (1) o incorrectas (0) dadas por los
+experimentaci(cid:243)n se procedi(cid:243), al igual que en la
+alumnos al cuestionario de la experimenta-
+investigaci(cid:243)n de Pitarch, a realizar una caracte-
+ci(cid:243)n. De esta forma se realiza el estudio a
+rizaci(cid:243)n de las operaciones l(cid:243)gico-matemÆticas
+posteriori del cuestionario. El grafo y los Ær-
+que deb(cid:237)an realizar los alumnos al responder
+boles que se obtienen permiten analizar los
+las preguntas del mismo, las cuales se distribu-
+resultados de los alumnos con respecto a
+yen en los siguientes bloques y se muestran en
+su trabajo matemÆtico, al utilizar una tabla
+la tabla 1.
+de valores para contestar al cuestionario.
+AdemÆs del ASI, como mØtodo cualitativo de
+anÆlisis de los datos, se emplearon mØtodos
+* pp. 52-53.
+58 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+● Manejo bÆsico sobre la tabla (TABL, TFIL, las columnas a las preguntas. El valor 1 en una
+TCOL). casilla signi(cid:222) ca que el estudiante debe realizar
+● Recuentos obligatorios o alternativos (RRO- la operaci(cid:243)n asociada a la (cid:222) la para responder
+BL, RALT). la pregunta correspondiente a la columna de la
+● Comparaci(cid:243)n entre (cid:222) las y/o columnas casilla, y un valor cero en el caso contrario. La
+(CFIL, CCOL). matriz as(cid:237) obtenida se muestra en el anexo 2 y
+se denomina matriz a priori (MAP).
+● Proximidad /distancia (FDIF, FCOI, FAUS).
+● Relaci(cid:243)n semÆntica (CSEM). Esta matriz permite analizar a priori cuÆl
+puede ser el comportamiento esperado en las
+● Operaciones l(cid:243)gicas (LIMP, LEXI, LUNI,
+respuestas dadas por los alumnos, si se tiene en
+LCON, LDIS, LNEG).
+cuenta la proximidad entre las preguntas segœn
+● Operaciones bÆsicas de estad(cid:237)stica (EFIM,
+su caracterizaci(cid:243)n, lo que a priori sugiere una
+EFEX, Efre, EPER, EMIM).
+proximidad entre las respuestas de los alumnos
+● Razonamiento o argumentaci(cid:243)n de la res-
+a las preguntas. De la aplicaci(cid:243)n del C.H.I.C a la
+puesta (AEGU).
+matriz a priori MAP se obtuvo el Ærbol de simila-
+A partir de esta caracterizaci(cid:243)n se elabor(cid:243) una
+ridad que se muestra en la (cid:222) gura 1, marcÆndose
+nueva matriz booleana, en la cual las (cid:222) las res-
+los nodos signi(cid:222) cativos (en trazos mÆs gruesos),
+ponden a las operaciones l(cid:243)gico-matemÆticas y
+siendo el nivel 1 el mÆs signi(cid:222) cativo.
+Tabla 1. Caracterizaci(cid:243)n de las preguntas del cuestionario de la experimentaci(cid:243)n
+TABL: utilizar un elemento concreto de la tabla, para responder a la pregunta.
+TFIL: utilizar una o varias (cid:222) las para responder a la pregunta.
+TCOL: utilizar una o varias columnas para responder a la pregunta.
+ROBL: enumerar de forma obligatoria una cantidad concreta (presencia: 1, ausencia de carÆcter: 0).
+RALT: enumerar de forma alternativa una cantidad concreta (presencia: 1, ausencia de carÆcter: 0).
+CFIL: comparar (cid:222) las.
+CCOL: comparar columnas.
+FDIF: tener en cuenta las diferencias entre (cid:222) las/columnas.
+FCOI: (cid:222) jarse en las coincidencias (tanto las co-presencias: 1-1, como en las co-ausencias: 0-0).
+FPRE: (cid:222) jarse œnicamente en las co-presencias.
+FAUS: (cid:222) jarse œnicamente en las co-ausencias.
+CSEM: comparar entre los criterios de la tabla ((cid:222) las), a partir de la posible relaci(cid:243)n semÆntica
+que existe entre las asignaturas y entre las carreras.
+LIMP: implicaci(cid:243)n l(cid:243)gica.
+LEXI: cuanti(cid:222) cador existencial.
+LUNI: cuanti(cid:222) cador universal.
+LCON: conector l(cid:243)gico conjunci(cid:243)n.
+LDIS: conector l(cid:243)gico disyunci(cid:243)n.
+LNEG: conector l(cid:243)gico negaci(cid:243)n.
+EFIM: aplicar impl(cid:237)citamente la frecuencia absoluta.
+EFEX: aplicar expl(cid:237)citamente la frecuencia absoluta.
+Efre: aplicar expl(cid:237)citamente la frecuencia relativa.
+EPER: aplicar expl(cid:237)citamente el porcentaje.
+EMIM: utilizaci(cid:243)n impl(cid:237)cita de la medida de centralizaci(cid:243)n: la moda.
+ARGU: razonar en la respuesta.
+REVISTA CIENCIAS MATEM`TICAS 59
+De dicho Ærbol se aprecia que se forman las se caracteriza por las actividades l(cid:243)gicas: con-
+siguientes clases de cuasi equivalencia: junci(cid:243)n e implicaci(cid:243)n.
+La clase C3 presenta dos nodos signi(cid:222) cativos,
+C1 ={P1, P2, P9, P10, P3, P8},
+el primero al nivel 5 y agrupa a las preguntas P4,
+C2 ={P5, P21, P14, P19, P17, P18},
+P4.1 y P6, las que se caracterizan por realizar
+C3 ={P4, P4.1, P6, P7, P7.1}, recuentos alternativos y operaciones l(cid:243)gicas em-
+C4 ={P11, P12, P15, P16, P20, P13}. pleando los cuanti(cid:222) cadores existencial y univer-
+sal, y el segundo al nivel 13, que agrupa a todas
+La clase C1 contiene tres nodos signi(cid:222) cativos
+las preguntas de la clase, es decir, a las anteriores
+a los niveles 1, que es el mÆs signi(cid:222) cativo, y a
+y a las P7 y P7.1 que se caracterizan por realizar
+los niveles 3 y 8. Dicha clase agrupa preguntas
+operaciones l(cid:243)gicas empleando el cuanti(cid:222) cador
+que se caracterizan por un recuento obligatorio
+existencial, por lo que se puede concluir que esta
+por (cid:222) las y columnas, contenidos elementales de
+clase comprende cuestiones abiertas que requie-
+Estad(cid:237)stica (P9 y P10), y operaciones l(cid:243)gicas de
+ren del trabajo con toda la tabla y el empleo de di-
+conjunci(cid:243)n (P8), por lo que se puede concluir
+versas estrategias de bœsqueda sobre la misma.
+que la clase C1 agrupa preguntas que involu-
+En la clase C4 aparece un nodo signi(cid:222) cativo
+cran actividades enumerativas, de manejo de
+al nivel 15, que involucra a todas las preguntas
+datos y estad(cid:237)sticas.
+de la clase, exceptuando a la pregunta 13, las
+La clase C2 posee un nodo signi(cid:222) cativo al ni-
+que se caracterizan por trabajar las coinciden-
+vel 19, que involucra a todas las preguntas de
+cias y diferencias por columnas, de manera que
+la clase, las que se caracterizan por la operaci(cid:243)n
+dicha clase queda caracterizada en cuanto al
+l(cid:243)gica de conjunci(cid:243)n, conjunci(cid:243)n con negaci(cid:243)n e
+trabajo sobre la proximidad entre los sujetos.
+implicaci(cid:243)n, con excepci(cid:243)n de las preguntas P5
+La clasi(cid:222) caci(cid:243)n en clases obtenidas de acuer-
+y P21 que se caracterizan por exigir un recuento
+do a la caracterizaci(cid:243)n de las preguntas, serÆ
+obligatorio por columnas, por lo que dicha clase
+empleada en al anÆlisis a posteriori.
+Fig. 1. `rbol de similaridad de la matriz a priori MAP.
+60 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+3. EXPERIMENTACI(cid:211)N DEL CUESTIONARIO Tabla 3. Tamaæo de muestra para la aplicaci(cid:243)n del
+Y TRATAMIENTO DE DATOS cuestionario de la experimentaci(cid:243)n
+Centro de enseæanza preuniversitaria
+3.1 Condiciones de la experimentaci(cid:243)n
+Rafael Mar(cid:237)a Cuqui
+Total
+de Mendive Bosch
+Para desarrollar la investigaci(cid:243)n se selecciona-
+DØcimo grado 26 25 51
+ron dos centros de enseæanza preuniversitaria:
+Rafael Mar(cid:237)a de Mendive y Cuqui Bosch, por no DØcimo primero 25 26 51
+presentar caracter(cid:237)sticas educativas especiales, Total 51 51 102
+considerÆndose como una muestra represen-
+3.2 AnÆlisis de los datos
+tativa de los preuniversitarios del municipio de
+Santiago de Cuba. Para el anÆlisis de los datos se emplearon mØ-
+Fueron seleccionados, en una primera etapa, todos cuantitativos y cualitativos, dentro de los
+108 alumnos de 11no. grado de ambos centros, cuantitativos fueron aplicados los mØtodos clÆsi-
+mediante el muestreo aleatorio estrati(cid:222) cado con cos de la Estad(cid:237)stica Descriptiva e Inferencial: el
+a(cid:222) jaci(cid:243)n proporcional al tamaæo de la poblaci(cid:243)n cÆlculo de porcentajes, los diagramas de barras y
+(ver tabla 2), cuyas edades oscilan entre 15 y 17 las pruebas de hip(cid:243)tesis para proporciones. Como
+aæos, a los cuales se les aplic(cid:243) el cuestionario mØtodo cualitativo de anÆlisis se emple(cid:243) el ASI.
+inicial que indagaba acerca de sus gustos por
+determinadas asignaturas y carreras. 3.2.1 MØtodos cuantitativos de anÆlisis
+Se determin(cid:243) el porcentaje de respuestas correc-
+Tabla 2. Tamaæo de muestra para la aplicaci(cid:243)n del
+tas por centro y por grado, para lo cual se emple(cid:243)
+cuestionario inicial
+la hoja de cÆlculo electr(cid:243)nica Excel. Con el objetivo
+Centro de enseæanza preuniversitaria de investigar si las diferencias que se observaban
+Rafael Mar(cid:237)a de Mendive Cuqui Bosch Total entre los centros y entre los grados eran signi(cid:222) ca-
+tivas (para un nivel de con(cid:222) abilidad del 95 %) se
+55 53 1082
+procedi(cid:243) a aplicar el software estad(cid:237)stico SPSS.
+En la (cid:222) gura 2 se muestran los porcentajes de
+Del anÆlisis de los resultados del cuestionario
+respuestas correctas por centro, de la cual se
+se obtuvo la tabla de datos binarios T (ver anexo
+puede observar que las preguntas con mayores
+1) de dimensi(cid:243)n 20 x 21, en la cual las (cid:222) las re-
+di(cid:222) cultades fueron P8, P9, P10, P21, relaciona-
+presentan las preguntas y las columnas a los
+das con actividades enumerativas y dentro de
+alumnos, los que fueron codi(cid:222) cados por Ei, con
+estas las relacionadas con las estad(cid:237)sticas, las
+i = 1,(cid:133),21.
+P12, P15, P20, que abordan la proximidad entre
+Para determinar las dimensiones de la tabla
+sujetos y las P18 y P19 que se vinculan a ope-
+se tuvo en cuenta la experiencia de la investi-
+raciones l(cid:243)gicas. Justamente es en las citadas
+gaci(cid:243)n desarrollada por Pitarch*, en la cual se
+preguntas donde se localizan las mayores dife-
+obtuvo un 97 % de Øxito en la lectura y manipu-
+rencias entre los centros. Al observar la (cid:222) gura 2
+laci(cid:243)n elemental de la misma, con una dimen-
+puede comprobarse que en todas estas pregun-
+si(cid:243)n de 15 x 20. TambiØn se consider(cid:243) el hecho
+tas los porcentajes mÆs bajos se obtuvieron en
+de que la presente experimentaci(cid:243)n se aplicar(cid:237)a
+el centro (cid:147)Rafael Mar(cid:237)a de Mendive(cid:148), exceptuan-
+solamente a alumnos de niveles equivalentes al
+do la pregunta P18.
+2do. ciclo de la ESO. Por todo lo anterior se au-
+Al analizar los porcentajes de respuestas
+ment(cid:243) la dimensi(cid:243)n de dicha tabla a 20 x 21.
+correctas por grado, se obtuvo el diagrama de
+Para la aplicaci(cid:243)n del cuestionario de la expe- barras que se muestra en la (cid:222) gura 3.
+rimentaci(cid:243)n fueron seleccionados 102 alumnos
+Las diferencias mÆs signi(cid:222) cativas (de mÆs del
+de los centros Rafael Mar(cid:237)a de Mendive y Cu-
+10 %) se presentan en las preguntas antes citadas,
+qui Bosch, de 10mo. y 11no. grados, mediante el a las que se adicionan la P5 y P13, que abordan
+muestreo aleatorio estrati(cid:222) cado con a(cid:222) jaci(cid:243)n pro- operaciones l(cid:243)gicas y de proximidad, respectiva-
+porcional al tamaæo de la poblaci(cid:243)n (ver tabla 3). mente. En todas estas preguntas los porcentajes
+mÆs bajos se obtuvieron en 10mo. grado.
+* pp. 52-53, 81.
+REVISTA CIENCIAS MATEM`TICAS 61
+Al aplicar el software estad(cid:237)stico SPSS se ob- existente en las operaciones que deben realizar
+tuvo que las diferencias observadas entre los los alumnos para responder a las preguntas del
+centros son signi(cid:222) cativas para las preguntas cuestionario.
+P03 y P09 de la clase C1 (actividades enumera- Por otro lado, en las preguntas P09 y P10 de
+tivas y estad(cid:237)sticas); P19 de la clase C2 (activi- la clase C1; P05 y P19 de C2 y P11, P12, P13
+dades l(cid:243)gicas); P6 y P7.1 de la clase C3 (trabajo y P15 de C4, se obtuvo que existen diferencias
+con toda la tabla y varias estrategias de bœs- signi(cid:222) cativas entre los grados. Como se obser-
+queda en la misma); P12, P15 y P20 de la clase va, no existen diferencias signi(cid:222) cativas entre los
+C4 (proximidad entre sujetos), concluyØndose grados con respecto a las preguntas que requie-
+que existen diferencias signi(cid:222) cativas entre los ren del trabajo con toda la tabla y el empleo de
+dos centros investigados en las cuatro clases diversas estrategias de bœsqueda sobre la mis-
+que se han formado a partir de la proximidad ma (clase C3).
+Fig. 2. Porcentajes de respuestas correctas por centros.
+Fig. 3. Porcentajes de respuestas correctas por grados.
+62 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+3.2.2 MØtodo cualitativo de anÆlisis (cid:147)Bueno(cid:148) si respond(cid:237)a correctamente entre el 75 %
+y el 89 %, (cid:147)Regular(cid:148) si respond(cid:237)a correctamente
+El anÆlisis cualitativo se bas(cid:243) en la interpreta-
+entre el 60 y el 74 % y (cid:147)Malo(cid:148) si respond(cid:237)a correc-
+ci(cid:243)n del Ærbol de similaridad, el Ærbol cohesiti-
+tamente menos del 60 % de las preguntas del
+vo y el grafo implicativo, obtenidos mediante el
+cuestionario. Para esta codi(cid:222) caci(cid:243)n se utiliz(cid:243) el
+programa informÆtico C.H.I.C. Las implicacio-
+sistema de evaluaci(cid:243)n que actualmente se aplica
+nes fueron evaluadas segœn el MØtodo ClÆsico,
+en la enseæanza preuniversitaria en Cuba.
+y se emple(cid:243) la Ley Binomial* para la simulaci(cid:243)n
+del nœmero aleatorio de contraejemplos a la im-
+`rbol de similaridad
+plicaci(cid:243)n o a la regla**.
+El Ærbol de similaridad sobre la matriz MP se
+Tras la experimentaci(cid:243)n se conform(cid:243) una
+muestra en la (cid:222) gura 4. En Øl se observa que se
+nueva matriz, la matriz a posteriori (MP), que
+forman cuatro clases de cuasi equivalencias,
+consta de 102 (cid:222) las, asociadas a los alumnos
+que denotaremos por: D1, D2, D3 y D4.
+encuestados y 23 columnas, correspondientes
+a la clasi(cid:222) caci(cid:243)n en 1 (respuesta correcta) o 0 Las clases D1 y D2 que se forman, a pesar de
+(respuesta incorrecta) realizadas a las respues- no ser signi(cid:222) cativas debido a la alta frecuencia
+tas dadas por los alumnos al cuestionario de la de Øxito en las respuestas de los alumnos a las
+experimentaci(cid:243)n. Con el objetivo de poder deter- preguntas que la conforman, agrupan cuestio-
+minar el centro, el grado y la calidad del alum- nes vinculadas a operaciones de bœsqueda en
+no que eran mÆs t(cid:237)picos y que contribu(cid:237)an mÆs toda la tabla, as(cid:237) como de actividad enumera-
+a la formaci(cid:243)n de las clases y de los caminos, tiva. La formaci(cid:243)n de estas dos clases muestra
+se le adicionaron 8 columnas a la matriz, dos que existen diferencias entre las preguntas que
+para identi(cid:222) car el centro de procedencia, dos la integran, en la primera la bœsqueda se rea-
+para identi(cid:222) car el grado y las 4 restantes para liza (cid:222) jando las (cid:222) las (representan las pregun-
+clasi(cid:222) car al alumno en (cid:147)Excelente(cid:148), si respond(cid:237)a tas) y realizando el recuento por columnas (re-
+correctamente mÆs del 90 % de las preguntas, presentan a los individuos) y en la segunda al
+Fig. 4. `rbol de similaridad de la matriz a posteriori MP.
+* Para modelar la inclusi(cid:243)n de conjuntos segœn la teor(cid:237)a de la implicaci(cid:243)n estad(cid:237)stica, el C.H.I.C. brinda dos opciones: el MØtodo ClÆsico
+y el MØtodo Entr(cid:243)pico. As(cid:237) mismo, para la modelizaci(cid:243)n del nœmero aleatorio de contraejemplos a la implicaci(cid:243)n o a la regla, se debe
+elegir entre la ley Binomial y la de Poisson.
+**Versi(cid:243)n 4.1 del C.H.I.C. (Ayuda online).
+REVISTA CIENCIAS MATEM`TICAS 63
+contrario, aspectos estos que son comparables Øxito de los alumnos en sus respuestas, existen
+matemÆticamente. El porcentaje de Øxitos de las individuos semejantes en su comportamiento.
+preguntas muestra que los alumnos poseen me- En la tabla 4 se muestra, a modo de ejemplo,
+nos habilidades en el recuento por (cid:222) las. los (cid:237)ndices de similaridad obtenidos para cada
+La clase D3 contiene dos nodos signi(cid:222) cativos uno de los nodos mÆs signi(cid:222) cativos, as(cid:237) como
+a los niveles 11 y 15, este œltimo agrupando a las preguntas que conforman cada clase.
+todas las preguntas de la clase, las cuales se
+caracterizan por exigir a los alumnos activida- Tabla 4. ˝ndices de similaridad de los nodos signi(cid:222) -
+des l(cid:243)gicas y de proximidad para sus respues- cativos de la matriz a posteriori
+tas. En particular las operaciones de proximi-
+˝ndice de
+dad que aparecen en esta clase son aquellas que Nivel Preguntas que agrupa
+similaridad
+exigen la bœsqueda de las co-presencias (1,1) y
+co-ausencias (0,0), que a pesar de que ambas 1 P9 y P10 0.999813
+representan las coincidencias, no tienen el mis-
+3 P8, P15, P9 y P10 0.948941
+mo sentido.
+P8, P15, P9, P10, P12
+La clase D4 contiene al nodo mÆs signi(cid:222) ca- 6 0.781703
+y P19
+tivo, nivel 6 de la clasi(cid:222) caci(cid:243)n, que agrupa a
+11 P11 y P13 0.576379
+aquellas preguntas que suponen operaciones
+enumerativas para responderlas, en particular P8, P15, P9, P10, P12,
+14 0.412933
+las asociadas a las operaciones estad(cid:237)sticas, y P19, P16 y P18
+de proximidad. Del Ærbol se aprecia como los 16 P5, P21, P11y P13 0.271671
+nodos signi(cid:222) cativos marcan el nivel de agrega-
+P8, P15, P9, P10, P12,
+ci(cid:243)n con clases no signi(cid:222) cativas. En esta clase
+19 P19, P16, P18, P14, 0.0561027
+las actividades que suponen un trabajo l(cid:243)gico
+P20 y P17
+aparecen como diluidas en el trabajo de proxi-
+midad o comparaci(cid:243)n de datos, es decir, no apa-
+En las tablas 5 y 6 se muestran los porcen-
+recen agrupadas en una misma clase tal y como
+tajes de alumnos que han contribuido a formar
+ocurre en la matriz a priori MAP. Su signi(cid:222) caci(cid:243)n
+las clases del Ærbol de similaridad y que son t(cid:237)-
+se debe a que, a pesar de la baja frecuencia de
+picos de las mismas.
+Tabla 5*. Porcentaje de alumnos que contribuyen a la formaci(cid:243)n de las clases, por grados
+y centro
+Contribuci(cid:243)n de los individuos
+Clase 1 Clase 3 Clase 6 Clase 11 Clase 14 Clase 16 Clase 19
+10mo. C 0,00 0,00 0,00 40,00 12,00 24,00 12,00
+11no. C 34,62 15,38 15,38 92,31 53,85 88,46 57,69
+10mo. M 0,00 0,00 0,00 61,54 0,00 30,77 3,85
+11no. M 20,00 0,00 0,00 92,00 4,00 44,00 8,00
+Tabla 6. Porcentaje de alumnos que son t(cid:237)picos de las clases, por grados y centro
+Tipicalidad de los individuos
+Clase 1 Clase 3 Clase 6 Clase 11 Clase 14 Clase 16 Clase 19
+10mo. C 0,00 0,00 0,00 40,00 0,00 24,00 0,00
+11no. C 34,62 34,62 34,62 92,31 34,62 88,46 34,62
+10mo. M 0,00 0,00 0,00 61,54 0,00 38,46 0,00
+11no. M 20,00 20,00 20,00 92,00 20,00 44,00 20,00
+* 10mo. C, M: 10mo. grado del centro Cuqui Bosch (C) y Rafael Mar(cid:237)a de Mendive (M).
+11no. C, M: 11no. grado del centro Cuqui Bosch (C) y Rafael Mar(cid:237)a de Mendive (M).
+64 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Se observa que a la formaci(cid:243)n de las clases `rbol cohesitivo
+1, 3 y 6, que agrupan las operaciones estad(cid:237)sti-
+La (cid:222) gura 5 del Ærbol cohesitivo de la matriz a
+cas y de proximidad, no contribuyen los alum-
+posteriori MP muestra que solo se ha conforma-
+nos de dØcimo grado y tampoco existen alumnos
+do una sola clase de preguntas, la cual resulta
+t(cid:237)picos de este grado. Los alumnos del centro
+signi(cid:222) cativa con un (cid:237)ndice de cohesi(cid:243)n de 0.80.
+Rafael Mar(cid:237)a de Mendive s(cid:243)lo contribuyen a la
+Esta clase contiene al nodo mÆs signi(cid:222) cativo, al
+formaci(cid:243)n de la clase 1, que agrupa operaciones
+nivel 11, que es precisamente el nivel al cual se
+estad(cid:237)sticas. Con respecto a la tipicalidad de los
+agrupan todas las preguntas de la clase.
+individuos, nuevamente los alumnos de Mendi-
+A partir de la estructuraci(cid:243)n que se ha obte-
+ve solo son t(cid:237)picos de la clase 1.
+nido del Ærbol cohesitivo, se desprende la forma-
+Comparando la raz(cid:243)n entre alumnos del Cu-
+ci(cid:243)n de la metaregla* C: C ⇒C , donde a su vez
+qui Bosch y Rafael Mar(cid:237)a de Mendive, que son 1 2
+C : A ⇒ B y C : P ⇒ Q son metas reglas de(cid:222) nidas
+t(cid:237)picos y contribuyen a la formaci(cid:243)n de las cla- 1 2
+a partir de reglas o meta reglas, las cuales se
+ses, es de aproximadamente 2/1 para las cla-
+detallan a continuaci(cid:243)n:
+ses 1, 3 y 6, es decir, por cada 2 alumnos del
+A: (cid:147)si el estudiante es capaz de calcular la fre-
+Cuqui Bosch que son t(cid:237)picos o que contribuyen
+cuencia relativa (P10) entonces es capaz de
+a la formaci(cid:243)n de las clases, solo hay uno que lo
+calcular la frecuencia absoluta (P09)(cid:148),
+hace de Rafael Mar(cid:237)a de Mendive.
+B: (cid:147)si el estudiante es capaz de hallar las dife-
+De todo lo anterior se desprende que el centro
+rencias entre columnas (P12), serÆ capaz de
+Cuqui Bosch es el que mÆs contribuye a la es-
+hallar las coincidencias (co-presencias y co-
+tructuraci(cid:243)n del conjunto de datos (con un ma-
+ausencias) (P13) entre columnas(cid:148).
+yor (cid:237)ndice de Øxito entre sus alumnos).
+Fig. 5. `rbol cohesitivo de la matriz MP.
+* Meta regla: reglas de reglas.
+Regla: signi(cid:222) cado semÆntico de una cuasi-implicaci(cid:243)n del tipo: (cid:147)si a entonces b(cid:148). Es una especie de (cid:147)teorema(cid:148)
+vinculando una premisa y una conclusi(cid:243)n. (Ayuda online del C.H.I.C).
+REVISTA CIENCIAS MATEM`TICAS 65
+P: (cid:147)si el estudiante es capaz de calcular el por- mas en el Ærbol de similaridad con un nivel sig-
+centaje de alumnos que cumplen una cierta ni(cid:222) cativo.
+condici(cid:243)n (P08), serÆ capaz de realizar activi- El centro, grado y tipo de estudiante que con-
+dades enumerativas (P05)(cid:148). tribuyen y son t(cid:237)picos a los niveles signi(cid:222) cativos
+Q: (cid:147)si el estudiante es capaz de buscar las co- en que se han formado las reglas con un riesgo
+incidencias (co-presencias y co-ausencias) menor a 0.261, vuelven a ser los alumnos del
+entre columnas (P15), serÆ capaz de realizar Cuqui Bosch, del 11no. grado y los que fueron
+actividades que involucren la operaci(cid:243)n l(cid:243)gi- evaluados de excelente, respectivamente.
+ca de conjunci(cid:243)n de negaciones (P19) y si es En la tabla 7 se muestra, a modo de ejemplo
+capaz de realizar esta œltima, serÆ capaz de de salida del C.H.I.C, los valores de riesgos de
+utilizar las coincidencias (co-presencias y co- la contribuci(cid:243)n y tipicalidad de cada una de las
+ausencias) para identi(cid:222) car comportamientos variables suplementarias de(cid:222) nidas, al nodo mÆs
+similares entre columnas (P11)(cid:148). signi(cid:222) cativo del Ærbol cohesitivo.
+Las operaciones que aparecen involucradas en
+la meta regla antes enunciada, estaban pr(cid:243)xi-
+Tabla 7. Riesgos* en la contribuci(cid:243)n y tipicalidad de las variables suplementarias al nodo
+mÆs signi(cid:222) cativo del Ærbol cohesitivo
+Tipicalidad de las var. Supl. Contribuci(cid:243)n de las var. Supl.
+card GO 28 p 0.275 1-p 0.725 card GO 17 p 0.167 1-p 0.833
+La variable PreC es t(cid:237)pica a esta clase con La variable PreC contribuye a esta clase
+un riesgo de: 0.00603 con un riesgo de: 0.00709
+intersection avec le groupe optimal 22 intersection avec le groupe optimal 16
+La variable PreM es t(cid:237)pica a esta clase con La variable PreM contribuye a esta clase
+un riesgo de: 0.994 con un riesgo de: 0.998
+intersection avec le groupe optimal 6 intersection avec le groupe optimal 1
+La variable Grado10 es t(cid:237)pica a esta clase La variable Grado10 contribuye a esta
+con un riesgo de: 1 clase con un riesgo de: 0.994
+intersection avec le groupe optimal 3 intersection avec le groupe optimal 3
+La variable Grado11 es t(cid:237)pica a esta clase La variable Grado11 contribuye a esta
+con un riesgo de: 0.000279 clase con un riesgo de: 0.036
+intersection avec le groupe optimal 25 intersection avec le groupe optimal 14
+La variable EstExce es t(cid:237)pica a esta clase La variable EstExce contribuye a esta clase
+con un riesgo de: 1.27e-006 con un riesgo de: 2.84e-007
+intersection avec le groupe optimal 15 intersection avec le groupe optimal 13
+La variable EstBue es t(cid:237)pica a esta clase La variable EstBue contribuye a esta clase
+con un riesgo de: 0.157 con un riesgo de: 0.671
+intersection avec le groupe optimal 8 intersection avec le groupe optimal 3
+La variable EstReg es t(cid:237)pica a esta clase La variable EstReg contribuye a esta clase
+con un riesgo de: 0.999 con un riesgo de: 1
+intersection avec le groupe optimal 5 intersection avec le groupe optimal 1
+La variable EsrMalo es t(cid:237)pica a esta clase La variable EsrMalo contribuye a esta clase
+con un riesgo de: 1 con un riesgo de: 1
+intersection avec le groupe optimal 0 intersection avec le groupe optimal 0
+La variable t(cid:237)pica a esta clase es EstExce La variable que contribuye mÆs a esta clase
+con un riesgo de: 1.27e-006 es EstExce con un riesgo de: 2.84e-007
+* Un riesgo bajo de error, indica un alto grado de con(cid:222) anza en la contribuci(cid:243)n o tipicalidad de los alumnos del
+grupo optimal.
+66 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Grafo implicativo tas del cuestionario (ver (cid:222) gura 6a). En ella se
+evidencia que si los alumnos dominan las ope-
+El grafo implicativo de la matriz a posteriori MP
+raciones de proximidad: co-presencias y co-au-
+en la (cid:222) gura 6, muestra las relaciones de impli-
+sencias (P15), son capaces de realizar correc-
+caci(cid:243)n entre las preguntas del cuestionario de
+tamente operaciones l(cid:243)gicas de conjunci(cid:243)n de
+la experimentaci(cid:243)n, en el sentido de que el nœ-
+negaciones (P19) o enumerativas que impliquen
+mero de contraejemplos en los que cumpliØn-
+el cÆlculo de porcentajes (P08), y si dominan al
+dose el antecedente se veri(cid:222) ca el consecuente es
+menos una de estas œltimas operaciones, serÆn
+signi(cid:222) cativamente bajo. En el grafo aparecen las
+capaces de realizar actividades que impliquen
+implicaciones con un (cid:237)ndice de cuasi implicaci(cid:243)n,
+operaciones de proximidad que tengan un signi-
+segœn la teor(cid:237)a del AnÆlisis Estad(cid:237)stico Implica-
+(cid:222) cado coloquial, o de bœsqueda en una sub-ta-
+tivo, de 0.99 con trazos gruesos y de 0.95 con
+bla cuya soluci(cid:243)n resulte evidente visualmente.
+trazos mÆs (cid:222) nos.
+Por lo que podemos decir que el lenguaje colo-
+quial es condici(cid:243)n su(cid:222) ciente para el trabajo de
+proximidad.
+Fig. 6. Grafo implicativo de la matriz a posteriori MP.
+Fig. 6a. Subgrafo del grafo implicativo marcado
+Los or(cid:237)genes y nodos del grafo, que confor- por P15.
+man la estructuraci(cid:243)n de las cadenas de impli-
+Lo explicado anteriormente pone de mani(cid:222) es-
+caciones, estÆn marcados por preguntas con un
+to la existencia de dos clases de alumnos, una
+porcentaje bajo de respuestas correctas.
+que agrupa a los que priorizan el trabajo l(cid:243)gico,
+Las preguntas que marcan las consecuentes determinada por el camino P15 → P19 → ..., y la
+son aquellas que exigen en sus respuestas la otra a los que priorizan el trabajo enumerativo,
+realizaci(cid:243)n de operaciones de proximidad, pero caracterizada por el camino P15 → P08 → ... .
+todas ellas con un signi(cid:222) cado coloquial, o exi-
+Del grafo se observa ademÆs que la cadena
+gen de operaciones de bœsqueda en una sub-
+de implicaciones con nodo en P19 posee tam-
+tabla de la tabla binaria cuya respuesta resulta
+biØn como antecedente la operaci(cid:243)n l(cid:243)gica de
+evidente visualmente.
+diferencia (P12), con un nivel de con(cid:222) abilidad
+La implicaci(cid:243)n evidencia que si los alumnos menor (Ver (cid:222) gura 6b). La diferencia de con(cid:222) a-
+saben realizar operaciones de bœsqueda abierta bilidad entre las implicaciones de antecedentes
+en toda la tabla, sabrÆn realizar operaciones de P15 y P12, con consecuente comœn P19, podr(cid:237)a
+proximidad que tengan un signi(cid:222) cado coloquial. interpretarse por la complejidad matemÆtico-es-
+La cadena marcada por la pregunta P15 estÆ tad(cid:237)stica de la pregunta P15 (sobre coinciden-
+estructurando a una gran parte de las pregun- cias: co-presencias y co-ausencias) respecto de
+REVISTA CIENCIAS MATEM`TICAS 67
+la pregunta P12 (sobre diferencias) que no exige Por œltimo, la cadena P10 → P09 → P13 (ver
+de un conocimiento matemÆtico espec(cid:237)(cid:222) co para (cid:222) gura 6d) estÆ marcando que los alumnos que
+poder responderse acertadamente. dominan el cÆlculo de la frecuencia relativa
+(P10), tendrÆn Øxitos en el cÆlculo de la frecuen-
+cia absoluta (P09) y si tiene Øxito en esta œltima,
+tambiØn lo tendrÆn con operaciones que exijan
+de la bœsqueda en toda la tabla, cuya soluci(cid:243)n
+sea evidente visualmente (P13). Observar que el
+nodo caracterizado por la pregunta P08 posee
+tambiØn como antecedente a la pregunta P10, es
+decir, los alumnos con habilidades en el cÆlculo
+de la frecuencia relativa, muestran, aunque con
+un nivel de con(cid:222) abilidad menor, habilidades en
+el cÆlculo de porcentajes.
+Fig. 6b. Subgrafo del grafo implicativo marcado
+por P12.
+El camino P15 → P08 → P18 → P16 (ver (cid:222) -
+gura 6c), marca que los alumnos que controlan
+muy bien las operaciones de proximidad: co-
+presencia y co-ausencia (P15), dominan opera-
+ciones de este tipo provistas de un signi(cid:222) cado
+coloquial (P16), si son capaces de transitar con Fig. 6d. Subgrafo del grafo implicativo marcado
+Øxito por las operaciones que implican el cÆlculo por P10.
+de porcentaje (P08) y de implicaci(cid:243)n l(cid:243)gica (P18),
+Las preguntas P01, P02 y P03, que implican
+respectivamente.
+operaciones elementales de manejo de tabla, no
+aparecen como consecuentes en el grafo, ya que
+al tener un alto porcentaje de Øxitos en sus res-
+puestas, no resultan signi(cid:222) cativas para confor-
+mar implicaciones a los niveles (cid:222) jados, 0.99 y
+0.95.
+Todas las preguntas cuyas implicaciones
+aparecen en el grafo, ya aparecieron relaciona-
+das en el Ærbol de similaridad o en el cohesitivo
+o en ambos.
+Al analizar la contribuci(cid:243)n y la tipicalidad de
+las variables suplementarias a los caminos del
+grafo implicativo, nuevamente se ha obtenido
+que el centro, grado y tipo de alumno que con-
+tribuyen y son t(cid:237)picos a los niveles signi(cid:222) cativos
+en que se han formado los caminos, con un ries-
+go menor a 0.261, vuelven a ser los alumnos del
+Cuqui Bosch, del 11no. grado y los que fueron
+evaluados de excelente, respectivamente.
+Fig. 6c. Subgrafo del grafo implicativomarcado
+por P15.
+68 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+4. CONCLUSIONES da por columnas son condici(cid:243)n necesaria para
+la bœsqueda por (cid:222) las y estas su(cid:222) cientes para la
+El estudio realizado sobre las habilidades que
+bœsqueda por columna.
+poseen alumnos de 10mo. y 11no. grado de la
+Las cuestiones de mayor di(cid:222) cultad, sean es-
+enseæanza preuniversitaria del municipio de
+tad(cid:237)sticas, l(cid:243)gicas o de proximidad, con un por-
+Santiago de Cuba, para el trabajo simultÆneo
+centaje de Øxito en sus respuestas menor al 60 %
+con aspectos esenciales de Tratamiento de Da-
+y que no tienen gran complejidad de resoluci(cid:243)n,
+tos, la L(cid:243)gica y la Estad(cid:237)stica Elemental, arroj(cid:243)
+son preguntas de extracci(cid:243)n de conocimientos a
+que las preguntas con mayores di(cid:222) cultades fue-
+partir de toda la tabla, y no solamente de sub-
+ron las relacionadas con actividades estad(cid:237)sticas
+matrices o parejas de variables, lo cual muestra
+(P09 y P10), las que abordan la proximidad entre
+que la tabla de datos binarios se podr(cid:237)a utilizar
+sujetos (P12, P15 y P20) y entre variables (P21) y
+para mejorar las habilidades que los alumnos
+las que se vinculan a operaciones l(cid:243)gicas (P18 y
+poseen en estas operaciones, proponiØndose ac-
+P19). Resultados muy pr(cid:243)ximos a los obtenidos
+tividades de complejidad creciente de bœsqueda
+por Pitarch con alumnos de la ESO, en cuanto a
+y de operaciones a realizar.
+la lectura y manipulaci(cid:243)n elemental de la tabla.
+De los anÆlisis realizados se ha podido ob-
+En todas estas preguntas, los porcentajes
+servar que las preguntas que suponen un tra-
+mÆs bajos de respuestas al cuestionario se ob-
+bajo l(cid:243)gico no aparecen como determinantes
+tuvieron en el centro Rafael Mar(cid:237)a de Mendive y
+en el dominio de las tØcnicas estad(cid:237)sticas y de
+dentro de Øste en el 10mo grado y las diferencias,
+tratamiento de datos, sino que mÆs bien apare-
+en cuanto al porcentaje de respuestas correctas,
+cen como diluidas en el trabajo de proximidad o
+resultaron ser signi(cid:222) cativas con un nivel de con-
+comparaci(cid:243)n de datos. Como determinante apa-
+(cid:222) abilidad del 95 %, por centro y/o por grados,
+recen las preguntas que exigen la bœsqueda de
+para aquellas preguntas vinculadas a las acti-
+diferencias y el mayor dominio de los conceptos
+vidades estad(cid:237)sticas (P09 y P10), de proximidad
+estad(cid:237)sticos, no s(cid:243)lo numØricos y de porcentaje,
+entre sujetos (P11, P12, P13, P15 y P20) y l(cid:243)gi-
+sino tambiØn de coincidencias, ya que las co-
+cas de conjunci(cid:243)n de negaciones (P19).
+presencias y co-ausencias son necesarias para
+Con la experimentaci(cid:243)n realizada se ha evi-
+la clasi(cid:222) caci(cid:243)n.
+denciado que los alumnos poseen destrezas en
+A partir de la aplicaci(cid:243)n de las tØcnicas del
+el manejo bÆsico de la tabla binaria, con un por-
+AnÆlisis Estad(cid:237)stico Implicativo hemos mostra-
+centaje de Øxito mayor al 96 %, lo cual muestra
+do como se relacionan el trabajo l(cid:243)gico y el es-
+que es un instrumento didÆctico de trabajo ma-
+tad(cid:237)stico a travØs del tratamiento de datos, lo
+temÆtico (cid:147)econ(cid:243)mico(cid:148) para el profesor, ya que
+cual se evidencia en las siguientes reglas y meta
+los alumnos saben trabajar con ella, a pesar de
+reglas obtenidas:
+que las habilidades de manejo de la tabla no son
+● (cid:147)si el estudiante es capaz de calcular la
+homogØneas.
+frecuencia relativa, entonces es capaz de
+Analizando mÆs (cid:222) namente las habilidades y
+calcular la frecuencia absoluta(cid:148). (R)
+conocimientos mostrados por los alumnos se
+● (cid:147)si el estudiante es capaz de hallar las di-
+pudo comprobar que Østos poseen menos ha-
+ferencias entre columnas, serÆ capaz de
+bilidades en el trabajo por (cid:222) las que por colum-
+hallar las coincidencias (co-presencias y
+nas en la tabla binaria, ya que, pese a que los
+co-ausencias) entre columnas(cid:148). (R)
+elementos (cid:222) la-columna son comparables mate-
+mÆticamente en una matriz o tabla, poseen di- ● (cid:147)si el estudiante es capaz de calcular el
+ferente sentido para los alumnos: las columnas porcentaje de alumnos que cumplen una
+representan los sujetos (con sus respuestas) y cierta condici(cid:243)n, serÆ capaz de realizar ac-
+las (cid:222) las las preguntas del cuestionario (varia- tividades enumerativas(cid:148). (R)
+bles). A esta conclusi(cid:243)n se puede llegar a tra- ● (cid:147)si el estudiante es capaz de buscar las co-
+vØs de la interpretaci(cid:243)n de las agrupaciones incidencias (co-presencias y co-ausencias)
+(clases D1 y D2) obtenidas en el Ærbol de si- entre columnas, serÆ capaz de realizar acti-
+milaridad y de las implicaciones del Ærbol co- vidades que involucren la operaci(cid:243)n l(cid:243)gica
+hesitivo, donde las habilidades en la bœsque- de conjunci(cid:243)n de negaciones y si es ca-
+REVISTA CIENCIAS MATEM`TICAS 69
+paz de realizar esta œltima, serÆ capaz de Gorina, A., Alonso, I. y Zamora, L. (2007a): (cid:147)La for-
+utilizar las coincidencias (co-presencias y maci(cid:243)n integral de los doctores en Ciencias Pedag(cid:243)-
+co-ausencias) para identi(cid:222) car comporta- gicas. Una mirada desde la educaci(cid:243)n estad(cid:237)stica(cid:148), V
+mientos similares entre columnas (P11)(cid:148). Taller Internacional Innovaci(cid:243)n Educativa. Siglo XXI,
+InnoEd·2007. Primer Simposio de la red de investi-
+(MR)
+gaciones en ciencias de la educaci(cid:243)n para IberoamØ-
+● (cid:147)si el estudiante domina las operaciones
+rica. ISBN: 978-959-16-0551-1.
+estad(cid:237)sticas, entonces es capaz de realizar
+Gorina, A., Alonso, I. y Zamora, L. (2007b): (cid:147)Un Sis-
+las actividades que involucran operacio-
+tema de Habilidades para la formaci(cid:243)n de una com-
+nes de proximidad(cid:148). (R)
+petencia estad(cid:237)stica en los doctores en Ciencias Pe-
+Para la obtenci(cid:243)n de los resultados de esta dag(cid:243)gicas(cid:148), V Congreso Virtual de Enseæanza de las
+investigaci(cid:243)n, el empleo del sistema informÆtico MatemÆticas, CVEM 2007.
+CHIC, de implementaci(cid:243)n del AnÆlisis Estad(cid:237)s- Gras R., Kuntz P. et Briand H. (2001) : (cid:147)Les fonde-
+tico Implicativo, result(cid:243) ser un instrumento de ments de l(cid:146)analyse statistique implicative, MathØma-
+gran valor, pues facilit(cid:243) el perfeccionamiento del tiques et Sciences Humaines(cid:148), N(cid:176) 154-155.
+cuestionario, la caracterizaci(cid:243)n de las preguntas Guerrero, C. (1999): (cid:147)La importancia de la informa-
+segœn el tipo de operaciones a realizar y de las ci(cid:243)n a priori(cid:148), Uno. Revista de DidÆctica de las Mate-
+respuestas dadas por los alumnos, permitiendo mÆticas, N” 20, pp. 57-62.
+ademÆs identi(cid:222) car asociaciones y estructuracio- Guerrero, S. (1999): (cid:147)Tratamiento de la informaci(cid:243)n(cid:148),
+nes de los datos (las preguntas, los sujetos, las Uno. Revista de DidÆctica de las MatemÆticas, N” 20,
+variables suplementarias,(cid:133)), que posibilitaron pp. 5-8.
+profundizar en la interpretaci(cid:243)n de los resulta- Lerman, I., Gras, R., Rostam, H., (1981): (cid:147)Elabora-
+dos y extraer mÆs conocimientos de los datos. tion et Øvaluation d(cid:146)un indice d(cid:146)implication pour des
+donnØes binaires(cid:148), I et II, MathØmatiques et Sciences
+Humaines N” 74, pp. 5-35 et N” 75, pp. 5-47.
+5. BIBLIOGRAF˝A
+Orœs, P. (1992) : (cid:147)Le raisonnement des ØlŁves dans la
+Batanero, C. (1999): (cid:147)Taller sobre anÆlisis explorato- relation didactique; effets d(cid:146)une iniciation (cid:224) l(cid:146)analyse
+rio de datos en la enseæanza secundaria(cid:148). Actas de la classi(cid:222) catoire dans la scolaritØ obligatoire(cid:148), ThŁse
+Conferencia InternacionalExperiencias e Expectati- presentØe (cid:224) l(cid:146)UniversitØ de Bordeaux-I. (Ed: IREM de
+vas do Ensino de Estat(cid:237)stica- Desa(cid:222) os para o SØculo Bordeaux).
+XXI. Florian(cid:243)polos, Santa Catarina, Brasil.
+Orœs, P., Pitarch, I. (2000): (cid:147)Utilisation didactique
+Batanero, C. (2003): (cid:147)Los retos de la cultura estad(cid:237)s- des tableaux des donnØes et du logiciel CHIC (cid:224) l(cid:146)Øcole
+tica(cid:148). Universidad de Granada, Espaæa. http://www. ØlØmentaireV, Acctes des JournØes sur La fouille
+ugr.es/local/batanero. dans les donnØes par la mØthode d(cid:146)analyse statisti-
+BelØn, M. y M(cid:243)nica, L. (2006): (cid:147)MatemÆtica y com- que implicative. Caen, pp.85-98.
+putaci(cid:243)n: desde un marco te(cid:243)rico-epistemol(cid:243)gico a Pitarch, I. (2002): (cid:147)Estudio sobre la viabilidad y el
+la prÆctica. Consideraciones bÆsicas del entorno clic interØs didÆctico del tratamiento de la informaci(cid:243)n
+para docentes no informatizados(cid:148). Edutec. Revista
+en la ESO(cid:148), Trabajo de investigaci(cid:243)n del tercer ciclo
+Electr(cid:243)nica de Tecnolog(cid:237)a Educativa, N(cid:176). 21.
+presentado en la Universitat Jaume I y dirigido por
+Couturier, R., Bodin, A. y Gras, R. (2006): (cid:147)Clasi(cid:222) ca- Pilar Orœs BÆguena. (Ed: UJI, Castell(cid:243)n).
+ci(cid:243)n jerÆrquica, implicativa y cohesitiva. Manual de
+Zamora, L. y Alonso, I. (2006): (cid:147)Metodolog(cid:237)a para la
+usuario del sistema informÆtico CHIC(cid:148).
+impartici(cid:243)n de t(cid:243)picos de Estad(cid:237)stica y Probabilida-
+Couturier, R., Bodin, A. y Gras, R. (2007): Classi(cid:222) ca- des en la enseæanza preuniversitaria en Cuba(cid:148), Ac-
+tion HiØrarchique Implicative et CohØsitive, C.H.I.C. tas del RELME XX. Camag(cid:252)ey, Cuba, pp. 263-269.
+Software, versi(cid:243)n 4.1.
+Zamora, L., Alonso, I., Gorina, A., `lvarez, M. Orœs,
+Delgado, F. M., (1999): (cid:147)Contribuci(cid:243)n a la Difusi(cid:243)n
+P. (2007): (cid:147)Tratamiento de datos, l(cid:243)gica y estad(cid:237)stica
+de la Cultura Estad(cid:237)stica en Cuba(cid:148), Atas da Confe-
+elemental en la enseæanza preuniversitaria(cid:148). Actas
+rencia Internacional Experiencias e Expectativas do
+del 4to. Encuentro Internacional de AnÆlisis Estad(cid:237)s-
+Ensino de Estat(cid:237)stica-Desaf(cid:237)os para o SØculo XXI,
+tico Implicativo. Castell(cid:243)n, Espaæa, pp. 371-381.
+Florian(cid:243)polis, Santa Catarina, Brasil.
+70 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+ANEXO 1. CUESTIONARIO DE LA EXPERIMENTACI(cid:211)N
+1.1 La consigna
+Estimado alumno, le solicitamos que observe con detenimiento la Tabla T que se le ha entregado
+y a partir de la informaci(cid:243)n que ella le brinda, conteste, cuidadosamente, el cuestionario que se le
+presenta.
+1.2 Tabla T
+1.3 Las preguntas P6. ¿Hay algœn estudiante a quien le gusten
+todas las asignaturas? En caso a(cid:222) rmativo,
+P1. ¿Al estudiante E‹2 le gusta la asignatura
+indique su c(cid:243)digo.
+MatemÆtica?
+P7. ¿Existe alguna asignatura de mayor prefe-
+P2. ¿A cuÆntos estudiantes les gusta la asigna-
+rencia que la MatemÆtica?
+tura de MatemÆtica?
+P7.1 Si hay alguna, ind(cid:237)quela y razone su res-
+P3. ¿CuÆntas asignaturas le gustan al estu-
+puesta.
+diante E10?
+P8. ¿A quØ porcentaje de los estudiantes que
+P4. ¿Hay alguna asignatura que haya sido ele-
+les gusta la asignatura de Biolog(cid:237)a, le gus-
+gida por todos los estudiantes? ¿En caso
+tar(cid:237)a estudiar la carrera de Medicina?
+a(cid:222) rmativo, indique cuÆl?
+P4.1 ¿Hay otras? ¿En caso a(cid:222) rmativo, indique P9. Si consideramos la asignatura de F(cid:237)sica
+cuÆles? como una variable estad(cid:237)stica, ¿quØ fre-
+cuencia absoluta dir(cid:237)a usted que tiene en
+P5. Los estudiantes entrevistados ¿pre(cid:222) eren la
+esta distribuci(cid:243)n estad(cid:237)stica?
+asignatura de MatemÆtica o la de Qu(cid:237)mica?
+REVISTA CIENCIAS MATEM`TICAS 71
+P10. ¿Y quØ frecuencia relativa tendr(cid:237)a la varia- P17. A todos los estudiantes que les gusta la
+ble estad(cid:237)stica de la pregunta anterior? asignatura de Educaci(cid:243)n F(cid:237)sica ¿tambiØn
+P11. Los estudiantes E4 y E6, ¿tienen el mismo les gusta la asignatura de Preparaci(cid:243)n Mili-
+gusto por las carreras? ¿Por quØ? tar? ¿Por quØ?
+P12. ¿CuÆntas diferencias hay entre las res- P18. A todos los estudiantes que les gusta la
+puestas de los estudiantes E10 y E15? ¿Por asignatura de Preparaci(cid:243)n Militar ¿tambiØn
+quØ? les gusta la asignatura de Educaci(cid:243)n F(cid:237)si-
+ca? ¿Por quØ?
+P13. Encuentre, si puede, tres estudiantes a
+quienes les guste el mismo tipo de carrera. P19. ¿A cuÆntos estudiantes no les gusta ni la
+asignatura de F(cid:237)sica ni la de Qu(cid:237)mica? ¿Por
+P14. ¿A cuÆntos estudiantes les gustan, a la vez,
+quØ?
+las asignaturas de MatemÆtica y Computa-
+ci(cid:243)n? ¿Por quØ? P20. ¿A quiØn se aproxima mÆs en su gusto pro-
+fesional el estudiante E4, al estudiante E17
+P15. ¿En cuÆntas respuestas de la encuesta es-
+o al E21? ¿Por quØ?
+tÆn de acuerdo los estudiantes E19 y E21?
+¿Por quØ? P21. Si usted tuviera que formar tres sociedades
+cient(cid:237)(cid:222) cas a partir de los gustos profesiona-
+P16. La semejanza en los gustos de los estudian-
+les (carreras) que los estudiantes han ma-
+tes E1 y E18, se puede clasi(cid:222) car como: alta,
+nifestado. ¿En que profesiones las forma-
+baja o media. ¿Por quØ?
+r(cid:237)a? Escr(cid:237)balas en orden de prioridad.
+ANEXO 2. MATRIZ A PRIORI MAP
+72 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+ABSTRACT: In this work there is a study on the skills of students from 10th and 11th grades of pre-
+university for the simultaneous work with essential aspects of Data Treatment, Logics and Ele-
+mentary Statistics, in the interpretation of the information obtained in a survey and presented in
+a table of binary data, taking as reference the works of Pitarch (2002) and Orœs (1992), carried out
+with students from the ESO in Spain and primary school in France respectively. By applying the
+techniques of Implicative Statistical Analysis, this article shows the relationship between the logical
+and statistical work through the treatment of data, detecting signi(cid:222) cant differences in the acquired
+skills for students of two pre-universitary schools taken as sample for the experimentation. Finally
+it is presented, with help of the ISA, a set of rules that show the relations between the logical and
+statistical operations and the treatment of data.

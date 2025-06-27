@@ -1,0 +1,742 @@
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.55-64
+Recibido10-2020,Aceptado07-2021
+Ana´lisis de sensibilidad del Modelo de Bahill
+Aplicado a movimientos saca´dicos en pacientes
+ata´xicos
+Sensitivity analysis of the Bahill model applied to
+saccadic movements in ataxic patients
+Camilo Mora Batista1*, Rafael M. A´vila A´vila1, Rosa Isabel Urquiza Salgado2, E´fren Va´zquez
+Silva3
+Resumen Elana´lisisdelosmovimientosocularesesdeutilidadparaestudiarvariasenfermedadesneurolo´gi-
+cas,entreellaslaataxiahereditariadetipo2(SCA2).A.T.Bahillestudio´ talesmovimientosenpersonassanasy
+propusounmodelodeseisecuacionesdiferencialesparadescribirlos.Enesteart´ıculo,teniendoencuentadicho
+modelo,sesimulanlosmovimientossaca´dicosconsiderandocomoentradasdatosprocedentesdepersonas
+sanas y pacientes que padecen la enfermedad antes mencionada. Los objetivos principales consisten en
+contrastarelcomportamientodelasmagnitudessaca´dicassegu´nelmodelo,conelcomportamientoobservado
+deacuerdoadatosexperimentalesextra´ıdosdelosregistroselectrooculogra´ficosyenconsecuencia,realizar
+unana´lisisdesensibilidaddelasolucio´nobtenida.Labu´squedadelamismarequirio´ delaaplicacio´nSIMULINK
+incorporadaalasistentematema´ticoMATLAB.Seconcluyequelasentradasenformadepulso-escalo´npermiten
+obtener resultados similares alos reportados por Bahill aunque no hay correspondencia entre e´stos y otros
+decara´cterexperimentalqueexcluyenlaformareferidadelasentradas.Elsistemaexhibesensibilidadante
+para´metrostalescomoelanchoylaalturadelpulso.
+Abstract Theanalysisofocularmovementsisusefulinordertostudyseveralneurologicaldiseases,including
+hereditaryataxiatype2(SCA2).A.T.Bahillstudiedsuchmovementsinhealthypersonsandproposedamodel
+ofsixdifferentialequationstodescribethese. Inthispaperandtakingintoaccountthatmodel, thesaccadic
+movementsaresimulatedconsideringasinputs,dataofhealthypersonsandsickpatientswiththementioned
+disease. Theprincipalobjectivesconsistoftocontrastthebehaviourofsaccadicmagnitudesaccordingtothe
+modelwiththeobservedbehaviourinaccordancewithexperimentaldataextractedfromtheelectrooculographic
+recordsandconsequently,toperformasensitivityanalysisoftheobtainedsolution. Thesearchofthisrequired
+ofSIMULINKapplicationincorporatedtothemathematicalassistantMATLAB.Fromtheresearchisconcluded
+thattheinputsofpulse-stepshapeallowtoobtainsimilarresultstothoseobtainedbyBahill,althoughthereis
+notacorrespondencebetweentheseandothersofexperimentalcharacterexcludingtheshapesofinputsabove
+referred. Thesystemshowssensitivityinfrontofparameterslikepulsewidthandpulseheight.
+PalabrasClave
+ModeloMatema´tico,AtaxiaHereditaria,Simulacio´n,SistemadeEcuacionesDiferenciales,Ana´lisisdeSensibili-
+dad
+Keywords
+MathematicalModel,HereditaryAtaxia,Simulation,SystemofDifferentialEquations,SensitivityAnalysis
+1DepartamentodeLicenciaturaenMatema´tica,UniversidaddeHolgu´ın,Holgu´ın,Cuba,cmorab@uho.edu.cu,ravilaa@uho.edu.cu
+2DepartamentodeMatema´tica,UniversidaddeHolgu´ın,Holgu´ın,Cuba,rurquiza@uho.edu.cu
+3UniversidadPolite´cnicaSalesiana,SedeCuenca.CarreradeIngenier´ıaMeca´nica.CampusElVecino.CalleVieja,12-30yEliaLiut,Cuenca,
+Ecuador.evazquez@ups.edu.ec
+*AutorparaCorrespondencia
+Introduccio´n trastorno de la marcha que se manifiesta por inestabilidad,
+incoordinacio´nyaumentodelabasedesustentacio´n.Dicho
+El te´rmino ataxia refiere a un estado patolo´gico de la
+trastornoresultadeunadisfuncio´naniveldelcerebeloy/osus
+coordinacio´ndelosmovimientos;seutilizaparadescribirun
+56 Ana´lisisdesensibilidaddelModelodeBahillAplicadoamovimientossaca´dicosenpacientesata´xicos
+v´ıas,as´ıcomodealteracionesenlame´dulaespinal,nervios denaturalezasaca´dica.Enpacientescubanossepresentanen
+perife´ricosounacombinacio´ndeestastrescondiciones[12]. ma´sdel60%mientrasquelaexploracio´nelectrofisiolo´gica
+En la actualidad se conocen ma´s de cincuenta tipos de demostro´ supresenciaenun98%.Lasma´sfrecuentesson:la
+ataxias hereditarias; las autoso´micas dominantes han sido disminucio´ndelavelocidadma´ximadesa´cada,laprolonga-
+las ma´s estudiadas, identifica´ndose 30 formas moleculares. cio´ndelalatenciaylareduccio´ndeladesviacio´nsaca´dica.
+Dentro de e´stas, la ataxia espinocerebelosa tipo 2 (SCA2 Estasanormalidadessedetectaronparatodoslosgradosde
+porsussiglaseningle´s)eslasegundama´sfrecuenteanivel estimulacio´nexplorados(10,20,30y60grados)[16].
+internacionalyenCubarepresentalademayorprevalencia. Losmecanismospatolo´gicosquepudieranexplicarelde-
+Las tasas de tal enfermedad en la provincia de Holgu´ın no crecimientodelpicodevelocidadsaca´dicaesta´ndadospor
+han sido superadas por ninguna otra regio´n o pa´ıs [12]. Se unalesio´ndirectaenlasredesneuralesdeltallocerebralque
+caracterizamolecularmenteporunaexpansio´ndelnu´merode generanlospulsossaca´dicos,yaseaportrastornosintr´ınsecos
+repeticionesdeltrinucleo´tidoCAGporencimade32unidades, delosimpulsosneuronalesodebidoaunfalloparareclutar
+en el gen respectivo que se localiza en el brazo largo del unaporcio´ndeestosimpulsos.
+cromosoma12[14]. Laslesionesdelvermissuperiorcausanhipermetr´ıahacia
+Unadelasv´ıasparadiagnosticarlaenfermedadconsiste el mismo lado de la lesio´n, mientras que las lesiones del
+enlaobservacio´ndelosmovimientosocularesdelosposibles nu´cleofastigioproduceunahipermetr´ıasaca´dicaipsilateral.
+enfermos[14].Laelaboracio´ndelosmodelosquedescriben En los pacientes cubanos con SCA2 la lesio´n degenerativa
+dichosmovimientosestareacomplicadadebidoaladina´mica ma´sseverayresponsabledelasprincipalesmanifestaciones
+inherenteasociadaaladistribucio´ndefuerzasejercidaspor cl´ınicasesta´ enlasneuronasdePurkinjedelcerebelo[12].
+los mu´sculos y a la variedad de movimientos tales como Unacercamientoenelenfoquebiomeca´nicodelaataxia
+las sa´cadas, los de fijacio´n y los de tipo persecucio´n suave. SCA2consisteendisponerdemodelosmatema´ticosconel
+La intervencio´n de determinadas componentes musculares findesimularlosmovimientossaca´dicosenenfermos.Tales
+implicaquesobrecadamu´sculoseejerzainervacio´nyello modelospuedenservirdeorientacio´npredictivaas´ıcomopara
+constituyeunhechorelevanteenelplanteamientodemodelos ladeteccio´ndelaenfermedadensusprimerosestadiosycon
+para describir la posicio´n de los ojos mediante funciones ello evaluar el estado neurodegenerativo del paciente. Ello
+dependientesdeltiempo. contribuyealdesarrollotempranodeaccionesderehabilita-
+Noobstante,losmodelosma´sconocidossobremovimien- cio´nyregulacio´ndelostratamientosyporendecontribuira
+tos oculares han sido elaborados para personas sanas. Los lacalidaddevidaelpaciente.
+objetivosprincipalesdelainvestigacio´nconsistenencontras-
+tarelcomportamientodelasmagnitudessaca´dicassegu´nel 2. Modelo para los movimientos oculares
+modelodeBahill[4],conelcomportamientoobservadode
+acuerdoadatosexperimentalesextra´ıdosdelosregistroselec- Variosmodeloshansidodesarrolladosparaladescripcio´n
+trooculogra´ficos y en consecuencia, realizar un ana´lisis de delosmovimientosocularesenunplanohorizontal[4,3,9].
+sensibilidaddelasolucio´nobtenida. Las ideas pioneras datan del siglo XVII y son atribuidas a
+Rene´Descartes,sibienG.Westheimerpropusoelprimermo-
+deloen1954.Elmismoesana´logoaldeuncuerpoqueoscila
+Materiales y Me´todos
+enunmedioviscosoqueleejerceunafuerzaproporcionala
+laprimerapotenciadelavelocidad,adema´sdeestarsometido
+1. Movimientos oculares saca´dicos en
+alaaccio´ndeunafuerzaela´stica.LasegundaleydeNewton
+pacientes ata´xicos posibilitaelplanteamientodelasiguienteecuacio´ndiferencial
+desegundoorden:
+Las sa´cadas constituyen movimientos oculares ra´pidos
+ybal´ısticos,quepermitenalserhumanotenerinformacio´n Iθ(¨t)+Bθ(˙t)+Kθ(t)=τ(t) (1)
+sobrelosobjetosdelentorno.Dichosmovimientossemodifi-
+canpordeterminadospara´metrosfisiolo´gicostalescomola donde:I:momentodeinerciadelgloboocular;B:coeficien-
+edad,elgradodedesplazamientodelosobjetosenelmedio, tedeviscosidaddelacavidadocular;K:constanteela´stica
+laatencio´nvisualyelestadodeconciencia,entreotros.Sin asociadaalafuerzamuscular.
+embargo, la localizacio´n de los sitios generadores de estos Estemodelodescribecorrectamentelassa´cadasde10gra-
+movimientosnosemodificaporfactoresexternos,compresi- dosomenores,peronoesu´tilparamovimientosconvalores
+vosotrauma´ticoscomoocurreconlasestructurasnerviosas deamplitudesdesa´cadasporencimadelosreferidos.Unse-
+perife´ricas.Estosmovimientosocularespuedenalterarseen gundohitoenlamodelacio´nbiomeca´nicadelosmovimietos
+unnu´meroconsiderabledepatolog´ıasdelsistemanervioso delojosedebeaD.A.Robinson[8].
+comolasenfermedadesdeParkinsonoAlzheimer[16]. Otros investigadores, como G. Cook, L. Stark y M.L.
+Lasalteracionesdelosmovimientosocularesengeneral Clark [6, 7], basaron sus estudios en el modelo de Robin-
+constituyenuns´ıntomafrecuenteenlospacientesconSCA2; son.Estoshicieronvariascontribucionesenloreferidoalas
+varios estudios cl´ınicos reportan dichas alteraciones en los magnitudesvelocidadyaceleracio´nsaca´dicas,apartirdela
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.55-64
+Ana´lisisdesensibilidaddelModelodeBahillAplicadoamovimientossaca´dicosenpacientesata´xicos 57
+aplicacio´ndedichomodelo,incorporandodatosobtenidosde 3. Entorno de programacio´n visual
+medicionescl´ınicasyobservacionesdemovimientosoculares. Simulink
+Un nuevo modelo ma´s completo, representado por un
+MATLAB constituye un programa de gran aceptacio´n
+sistemadeseisecuacionesdiferenciales,fuepropuestopor
+en ingenier´ıa. En e´l se integran operaciones de ca´lculo, vi-
+A.T.Bahillen1980.Laformadelmismoeslasiguiente:
+sualizacio´nyprogramacio´nquepropicianlainteraccio´ncon
+elusuariomedianteelempleodeunanotacio´nmatema´tica
+cla´sica.Lagestio´ndecomplementosdelMATLABserealiza
+mediantepaquetesdeherramientasoconjuntosdefunciones
+x˙ =x (2)
+1 4
+yalgoritmosdeca´lculoespecializadosenuna´readeconoci-
+x˙ = K S 2 E x − K SE x + K SE x mientocomoeltratamientodesen˜alesylateor´ıadesistemas,
+2 (K LT +K SE )B AG 1 B AG 2 (K LT +K SE )B AG 5 entreotros.
+(3) Simulink,unadelasaplicacionesdelMATLAB,permite
+K2 K K construirysimularmodelosdesistemasf´ısicosydecontrol.
+x˙ 3 = (K +K SE )B x 1 − B SE x 3 − (K +K SE )B x 6 Elestudiodelcomportamientodedichossistemasserealiza
+LT SE ANT ANT LT SE ANT
+mediantefuncionesdetransferencia,operacionesmatema´ti-
+(4)
+cas,elementospropiosdelprogramaysen˜alespredefinidas.
+−2K −K K K B
+x˙ = SE p x + SE x + SE x − p x (5) Dichaaplicacio´ndisponedeunaseriedeutilidadesquefacili-
+4 1 2 3 4
+I I I I
+tanlavisualizacio´n,ana´lisisypreservacio´ndelosresultados
+cN −x
+x˙ = AG 5 (6) desimulacio´n;esta´creadapararesolverecuacionesysistemas
+5
+τ AG deecuacionesdiferencialespordiferentesme´todosnume´ricos
+cN −x
+x˙ = ANT 6 (7) ypermiterepresentarelprocesodesuintegracio´nmediante
+6
+τ ANT diagramas.
+LapropuestadeempleodeSimulinkparaelana´lisisdel
+dondex :posicio´ndelosojos;x ,x :nodosasociadosalos comportamientodelosmovimientosocularesdescritosporel
+1 2 3
+mu´sculos que funcionan como agonista y antagonista res- modelodadoporlasecuaciones(2-7),sesustentaenladificul-
+pectivamente;x :velocidadangular;x ,x :tensionesdelos tadpararesolverdichosistemaempleandounav´ıaanal´ıtica.
+4 5 6
+estadosactivos;K :coeficientedeelasticidadasociadoala Laaplicacio´nreferidaposibilitalaobtencio´ndesoluciones
+SE
+fuerzaela´sticaenserie;K :coeficientedeelasticidadinhe- nume´ricasconmuybuenasaproximacionesmedianteeluso
+LT
+rentealafuerzaela´sticadebidaalarelacio´nexistenteentrela delasfuncionesocomandosode15i,ode23,ode45,ode113,
+tensio´nylalongitud;B yB :coeficientesdeviscosidad; ode15s,ode23s,ode23t,ode23tbybloquesquedescribenla
+AG ANT
+K y B : coeficientes de elasticidad pasiva y de viscosidad ecuacio´n o el sistema. En el comando ecuacio´n diferencial
+p p
+de la planta oculomotora; I: momento de inercia del globo ordinaria(ode),elvalorquesiguesimplementeespecificael
+ocular;c:factordeconversio´nconunvalorde0.004N-spor me´todonume´ricoutilizado.
+pico; N y N : entradas al modelo en forma de sen˜ales Enlabu´squedadelasolucio´ndelsistemaqueseinvestiga
+AG ANT
+decontrolneuronal;τ yτ :tiempodeactivacio´nydes- seutilizo´elode45,correspondientealme´tododeRungeKutta
+AG ANT
+activacio´n del movimiento saca´dico. Los sub´ındices AG y conerroresdecuartoyquintoorden.Dichoordenpresenta
+ANT, de ahora en adelante, denotan el cara´cter agonista o unadependenciadelpasoh,ajustandodeformaautoma´tica
+antagonistaenelfuncionamientodelosmu´sculos. tal orden en el error, lo cual favorece encontrar una mejor
+solucio´ndelsistemaimplementado.
+La adopcio´n de este modelo lineal y homeomo´rfico de
+Bahillenlosmarcosdeestainvestigacio´n,respondealhecho
+deque:seconsideraelma´scompletoyadecuadotantoporsus
+caracter´ısticascomoporlospara´metrosquetieneencuenta
+en la dina´mica saca´dica; se adecua ma´s a las condiciones
+realesdelmovimientodelojoypermitemodelarsa´cadascon
+valoresangularesdehasta65gradosdeamplitud.Elmismo
+seajustamuybienalfuncionamientobiomeca´nicodelaparato
+ocular, pues tiene en cuenta la inervacio´n de los mu´sculos
+Figura1.Diagramarepresentativodelaecuacio´n7
+en la que intervienen sen˜ales ele´ctricas como parte de un
+mecanismoderegulacio´nycontroldelmovimiento.Porotra
+LaFigura1constituyeunarepresentacio´nesquema´tica,
+parte,nosehapodidoencontrar,hastadondelohanpermitido
+realizadaconayudadelSimulink,delaecuacio´n(7).Delmis-
+lasindagacionesrealizadas,unmodeloparaladescripcio´nde
+momodoseimplementaundiagramaparalaecuacio´n(6).La
+losmovimientosocularesenpacientesenfermosdeSCA2.
+opcio´ndepermitirinteractuarmodelosconsub-modelos,se
+reflejaenlafigura2.Lamismarepresentaelmodelocomple-
+tocon3sub-modelos.Alaizquierdasetienenrepresentadas
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.55-64
+58 Ana´lisisdesensibilidaddelModelodeBahillAplicadoamovimientossaca´dicosenpacientesata´xicos
+lasecuaciones(6)y(7),queasuvezsonsub-modelosysu
+contenidocorrespondealafigura1.
+10
+8
+6
+4
+2
+0
+20 30 40 50 60 70 80 90 100 110
+Tiempo (ms)
+Figura2.ModelodeBahillimplementadoenSimulink
+Eltercersub-modelosituadoenlapartecentral,representa
+lasecuaciones(2-5).Suestructurainteriorcorrespondeala
+mostradaenlaFigura3.
+Figura3.Diagramaenbloquequerepresentanlasecuaciones
+(2-5)
+Talycomoseestablecio´ enlaseccio´nanterior,elmodelo
+contienevariasmagnitudesocoeficientesasociadosalospro-
+cesosdeamortiguamientoyfriccio´nviscosadelosmu´sculos.
+Losvaloresdelosmismosprocedendeestudiosanato´micosy
+fisiolo´gicosusadosenlostrabajosdeA.T.Bahill,D.McDo-
+nald,M.B.Friedman,A.B.Scott,D.A.Robinson,D.O’meara
+yJ.D.Enderle[3,4,9,8].
+Las entradas al modelo son los estados de tensio´n acti-
+va F y F que se modifican por las sen˜ales de control AG ANT
+neuronalN yN queinervanelmu´sculo.Estassonbien AG ANT
+detalladasenformadepulsoyescalo´nparalosmu´sculosago-
+nistayantagonista,conlosrespectivostiemposdeactivacio´n
+ydesactivacio´ndelasa´cada.Lasecuaciones6y7filtranlas
+sen˜alesN yN paraintroducirlasenelmodeloycono- AG ANT
+cerco´moseesta´ncomportandolaposicio´n,lavelocidadyla
+aceleracio´nrespectoaltiempo.Estasentradassedenotanen
+elsistemadeecuacionesdiferencialesporx ,x . 5 6
+Enlafigura4semuestranelpulsoyescalo´nobtenidos
+usandoalgoritmosimplementadosenMATLAB.
+)º(
+dutilpmA
+Escalón
+Pulso
+Figura4.Pulsoyescalo´nparagenerarelmovimiento
+saca´dico
+Laobtencio´ndelassen˜alesmostradasrequirio´ delaapli-
+cacio´n del Ana´lisis de Componentes Independientes (ICA)
+[verSeccio´n4]alosregistroselectro-oculogra´ficos.Dicho
+ana´lisiscontemplo´ laimplementacio´ndeciertoco´digofuente
+paraextraerlasapartirdeunaseriedelosreferidosregistros.
+Constadeestructurasdedatosenformadearreglos(arrays)
+enellenguajedeprogramacio´ndelsoftwareMATLAB.Sin
+embargo,elmodelodesarrolladoenSimulinkaceptasololas
+sen˜ales ele´ctricas, lo cual exigio´ el desarrollo de un archi-
+vodeprocesamientoporlotes(script)enarasdecalcularel
+anchodelpulsoPW(pulsewidht),altodelpulsoPH(pulse
+height)yeltaman˜odelescalo´n.E´stosconstituyenlosvalores
+principalesparaconstruirlassen˜alesdeentrada.
+Laobtencio´ndelosresultadosapartirdelosdatosincor-
+pordos,requierecargarlosficherospuntomat(files.mat)de
+pulso-escalo´n,ejecutarelscriptyluegocompilarelmodelo
+desarrollado.
+4. Ana´lisis de Componentes
+Independientes
+ElAna´lisisdeComponentesIndependientes(ICA)esuna
+te´cnicaestad´ısticaquerevelafactoresocultosquesubyacen
+en un grupo de variables aleatorias, mediciones o sen˜ales.
+ICAdefineunmodelogenerativoparalosdatosobservados,
+que t´ıpicamente se encuentran como un registro con varias
+muestras[17].
+Entalmodelo,lasvariablesrepresentadasporlosdatos
+sonasumidascomolinealesomezclasnolineales(sistemas
+h´ıbridos)dealgunasvariableslatentesdesconocidas;elsis-
+tema de mezclado tambie´n es desconocido. Las variables
+latentessonasumidascomonogaussianasyestad´ısticamente
+independientes;sedenominancomponentesindependientes
+delosdatosobservadosofactores.
+El ICA puede ser interpretado como una extensio´n del
+Ana´lisisdeComponentesPrincipales(PCA)ydelAna´lisis
+deFactores(FA).Esunate´cnicamuchoma´spoderosa,capaz
+deencontrarlosfactoressubyacentescuandoalgunosdelos
+me´todosusualesempleadosparatalespropo´sitos,fallan.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.55-64
+Ana´lisisdesensibilidaddelModelodeBahillAplicadoamovimientossaca´dicosenpacientesata´xicos 59
+Elana´lisisICA,enlosmarcosdelainvestigacio´nquese Elsistemadenecuacionesconmpara´metrosseresuelve
+presenta,ofrecesololacapturadelassen˜alesqueprocesael junto al que esta´ constituido por las n ecuaciones adiciona-
+modelodeBahill.Unavezutilizadaslassen˜alesdeentrada lesoecuacionesdesensibilidad,obtenidasparacadaunode
+pulso-escalo´n, capturadas de los pacientes enfermos y pro- los para´metros y que describen la sensibilidad del sistema
+cesadasconelmodelomatema´ticoenSimulink,seobtienen original.Lasolucio´nsimulta´nealaintegranloscoeficientes
+entrelassalidas,lasrepresentacionesgra´ficasdelassa´cadas, desensibilidadcomofuncionesdelpara´metro[15].Eltrata-
+susvelocidadessaca´dicasylasaceleracionesenfuncio´ndel miento cuantitativo que contempla el me´todo se sintetiza a
+tiempo. continuacio´n.
+Seaelsiguientesistemadeecuacionesdiferencialesordi-
+narias(EDO)quetienensolucionesquedependendecierto
+5. Ecuaciones de sensibilidad
+para´metroβ ydelascondicionesinicialesx(0):
+i
+5.1 Ana´lisisdesensibilidad
+El ana´lisis de sensibilidad constituye una herramienta x˙ = f(x ,x ,...,x ,t,c) i=1,...,n (8)
+i i 1 2 n
+de utilidad para examinar cua´n sensible es la respuesta de
+En aras de simplificar la notacio´n, el miembro derecho
+unmodelomatema´ticoanteloscambiosqueexperimentan
+delaecuacio´n(8)sepuededescribircomo f(x,t,c),donde
+las variables de entrada. Dicho ana´lisis se emplea, con el i
+xpuedeconsiderarsecomounvectordencomponentes(x).
+fin de: ofrecer informacio´n local acerca del impacto de las i
+Lassolucionesde(8)puedenconsiderarsecomofuncionesde
+variacionesinfinitesimalesdeunpara´metrosobrelaconducta
+dosvariablest,c,esdecir,x(c,t).Lascondicionesiniciales,
+deunsistema,incluyendolasfuncionesqueconstituyenlas i
+x(0),tambie´nsetratara´nenlosucesivocomopara´metrosal
+salidasdelmodeloquelodescribe[1]as´ıcomodeterminar i
+igualquec,enx(c,t).
+sistema´ticamenteelefectodelospara´metrosinciertosenlas i
+Unpara´metroesllamadosensiblesipequen˜oscambiosen
+solucionesdelsistema.
+suvalorproducengrandescambiosenlasolucio´ndelproble-
+La necesidad de un ana´lisis de sensibilidad sistema´tico
+ma.SeanS,nnuevasvariablesocoeficientesdesensibilidad,
+de los grandes modelos computacionales es cada vez ma´s i
+quecuantificanlamedidaenqueelsistema(8)essensiblea
+evidente.Ellaemergeenlamedidaenqueseaplicanmode-
+loscambiosdelpara´metroβ ydadaspor:
+losnume´ricoscomplejosparalaresolucio´ndeproblemasen
+diversasa´reas.
+∂x
+i
+Enelana´lisisdesensibilidadsedistinguendosenfoques: S i = i=1,...,n (9)
+∂β
+ellocalyelglobal.Elprimeropermiteinvestigarlarespuesta
+delmodelocuandoso´lounpara´metroesvariadomientraslos Lasnuevasvariablessedeterminancomolassoluciones
+restantespermanecenconstantesparaciertovalor.Enelcaso para el nuevo conjunto de n ecuaciones diferenciales, que
+delana´lisisglobal,seinvestigalarespuestaantelavariacio´n sededuceacontinuacio´n.Dichosistemaplanteadoparalas
+detodoslospara´metrosyporende,secuantificantodoslos variablesS i seresuelvesimulta´neamenteconlasecuaciones
+efectosenlospara´metrosdesalidaantelaperturbacio´ndelos (8).Enconsecuencia,seobtiene:
+queconstituyenlasentradasdelmodelo[13].
+Enelana´lisislocal,lasensibilidaddelassalidasdelmo- S˙ = ∂ (S)= ∂ (cid:0)∂x i(cid:1) = ∂ (cid:0)∂x i(cid:1) (10)
+i i
+∂t ∂t ∂β ∂β ∂t
+deloescuantificadamedianteloscoeficientesdesensibilidad.
+Losmismosesta´ndadosporlasprimerasderivadasparciales Sustituyendo(8),enlaexpresio´nanterior,seobtiene:
+delasfuncionesqueconstituyendichassalidas,respectoal
+para´metroconsiderado. S˙ =
+∂f
+i +∑
+n ∂f
+i
+∂x
+i (11)
+i
+Existenvariasv´ıasparaefectuarelca´lculodelasderivadas. ∂β i=1 ∂x i ∂β
+Unadeellaseslaaproximacio´npordiferenciasfinitas.Aqu´ı
+Yfinalmente:
+laesenciadelana´lisisconsisteencomenzarconunapequen˜a
+perturbacio´n del para´metro de entrada respecto a un valor ∂f n ∂f
+nominal y luego cambiar el paso de la misma en aras de S˙ i = i +∑ i S i (12)
+∂β ∂x
+compararlosresultadosdesensibilidad.Siestosnocambian i=1 i
+significativamente,elana´lisisesrobustoyconfiable[18]. ∂f i
+Elte´rmino delaecuacio´n(12)constituyeunelemento
+Otrav´ıaparacalcularloscoeficientesdesensibilidadla ∂x
+i
+constituyeelme´tododirectoalcualesta´dedicadalasiguiente delJacobianoJcorrespondientealsistemadeEDOoriginal
+subseccio´n. dadoporecuaciones(8).PortantoJ esunamatriz(nxn)en
+la cual el s´ımbolo (i,j) denota el elemento J y esta´ dado
+i,j
+5.1.1 Me´tododiferencialdirecto ∂f
+i
+por .Ennotacio´nvectoriallasecuaciones(12)adoptanla
+Elme´tododirectoparacalcularloscoeficientesdesensi- ∂x
+i
+bilidadconsisteenresolverunsistemadeecuacionesdiferen- siguienteformacompacta:
+ciales.Estasconstituyenlassalidasdiferencialesconrespecto
+alospara´metrosdeentradadelmodelo. S˙ = f +JS (13)
+i β
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.55-64
+60 Ana´lisisdesensibilidaddelModelodeBahillAplicadoamovimientossaca´dicosenpacientesata´xicos
+donde f esunvectordelongitudncuyascomponentesson son causas tambie´n de alteraciones saca´dicas. El cerebelo
+β
+∂f env´ıa al punto de inervacio´n del mu´sculo, una descarga de
+i
+.
+∂β impulsosneuronalesquesepuededescribircomounasen˜al
+Sielpara´metroβ noapareceexpl´ıcitamenteenelsistema dedeterminadafrecuencia.Talsen˜alconstituyelasentradas
+deecuaciones(8),laexpresio´n(13)sereduceaS˙
+i
+=JS. delmodelodeBahillysetraduceenlosvaloresdeN
+ANT
+y
+Laresolucio´ndesistemasdeecuacionesdesensibilidades N AG ,quevar´ıanentrepacientessanosyenfermos[11].
+posiblemediantelaampliacio´ndelosalgoritmosdesolucio´n Lasecuaciones(6,7)contienenaN ANT yN AG as´ıcomoa
+disponiblesparalasecuaciones(8).Deesamanera(8)y(13) τ AG yτ ANT quesonlostiemposdeactivacio´nydesactivacio´n
+constituyenunsistemade2necuacionesdadopor: delosmu´sculosagonistasyantagonistasrespectivamente.Los
+valoresqueseutilizanparaestospara´metrosfueronobtenidos
+experimentalmente a partir de mediciones de movimientos
+x˙ i = f i (x,t,β) (14) oculares tal y como reporta la literatura al respecto [4, 9].
+S˙ = f +JS (15) Tambie´nesconocidoquelasvariabilidadesobservadasenlas
+i β
+trayectoriassaca´dicastienenunor´ıgenneuralynomuscular
+Dichasecuacionespuedenresolversesimulta´neamentey [5].
+viabilizanelana´lisisdesensibilidad. Enelcasodelamagnitudτ ,sisesuponequesuvalor
+AG
+esdistintoparapacientessanosyenfermos,sepuedeselec-
+6. Ecuaciones de sensibilidad para el cionar como uno de los para´metros de entrada al modelo.
+modelo y empleo del simulink De esta forma, la aplicacio´n del me´todo facilita el ana´lisis
+de la sensibilidad de la solucio´n del sistema respecto a tal
+Unana´lisisdesensibilidadparamodelosdemovimientos para´metro.
+oculares,incluidoslossaca´dicos,fuerealizadoporF.K.Hsu, Apartirdelospresupuestosteo´ricosdelaseccio´n5yen
+A.T.BahillyL.Stark[10]yA.T.Bahill[4,2]enlade´cada particulardelaexpresio´n12,elsistemadeecuacionespara
+delochentadelsiglopasado.Losdatosempleadofueronob- realizarelana´lisisdesensibilidadadoptalasiguienteforma:
+tenidosdepacientessanos.Endichoana´lisisseempleo´ un
+me´todoemp´ıricoqueincluyo´ perturbacionesdelospara´me-
+tros de entrada entre 20 y 200%. Sin embargo, advirtieron S˙ 1 =S 4 (16)
+tempranamentelasdificultadesdeemplearelme´todoanal´ıtico K2 K K
+directoparaanalizarlasensibilidaddelmodelonolineal. S˙ 2 = (K +K se )B S 1 + B se S 2 + (K +K se )B S 5 (17)
+lt se AG AG lt se AG
+Elmodelohomeomo´rficolineal,delquesehaceusoen
+K2 K K
+el presente art´ıculo, contiene once para´metros. Puesto que S˙ = se S − se S − se S
+3 (K +K )B 1 B 3 (K +K )B 6
+porcadaunodeellosseduplicaelnu´merodeecuaciones,el lt se ANT ANT lt se ANT
+(18)
+sistemaaresolveryqueposibilitaobtenerloscoeficientesde
+sensibilidad,constade72ecuaciones.Lasolucio´ndelmodelo S˙ = −2K se −K p S + K se S + K se S − B p S (19)
+resultaunatareaanal´ıticaycomputacionalmentecompleja. 4 I 1 I 2 I 3 I 4
+Noobstantelaseleccio´ndelospara´metrosdeentradama´sre- cN −x 1
+S˙ =− AG 5 − S (20)
+levantes,reduceelnu´merodeecuacionesyfacilitaelproceso 5 τ A 2 G τ AG 5
+deca´lculo.
+1
+S˙ = S (21)
+6 6
+τ
+6.1 Para´metros a considerar en el ana´lisis de sen- ANT
+sibilidad Lasolucio´nsimulta´neadelsistemaobtenidoapartirdel
+La evaluacio´n de la posibilidad de aplicar el modelo li- correspondientemodelooriginaldeA.T.Bahillyempleando
+nealdeA.T.Bahillparaladescripcio´ndelosmovimientos Matlab,requiereunamodificacio´nalusarSimulink.Ellose
+ocularessaca´dicosdepacientesaquejadosdeataxiaSCA2, refleja en el diagrama representativo de las ecuaciones de
+requieretambie´ndelarealizacio´ndelana´lisisdesensibilidad. sensibilidadqueapareceenlafigura5.
+Seconocequepara´metrostalescomoelmomentodeinercia Elbloquecorrespondientealasreferidasecuacionesde
+delgloboocular,loscoeficientesdeviscosidad(exceptoB sensibilida,debeserconfiguradoconelalgoritmoadaptativo
+AG
+asociadoalmu´sculoagonista)ylasconstantesela´sticas(con paraelme´todoresolutoryactivarlaopcio´ndecruceporcero.
+excepcio´ndeK ,vinculadaalafuerzadeelasticidadpasiva Esto u´ltimo evita que el compilador de Simulink pare por
+p
+delaplantaoculomotora)nocausanvariacionesapreciables discontinuidades que puedan aparecer en las soluciones de
+enlassalidasdedichomodelo,asaber,eneldesplazamiento, sensibilidad.EnlaFigura6semuestralaconfiguracio´ndelos
+lavelocidadylaaceleracio´nsaca´dicas[4]. diagramasenbloquesparalasecuacionesdesensibilidad.
+LaataxiaSCA2seasociaadisfuncionesdelcerebelo,que Losrestantespara´metrostenidosencuentaparaelana´lisis
+juegaunpapelimportanteenelcontroldelosmovimientos desensibilidadsonelaltoyelanchodelpulso,considerando
+saca´dicos.Demanerama´sespec´ıfica,laslesionesdelvermiso queestosfuerontambie´nempleadosporF.K.Hsu,L.Starky
+delnu´cleofastigioyenlasredesneuronalesdeltallocerebral, A.T.Bahill[10],[4,2]
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.55-64
+Ana´lisisdesensibilidaddelModelodeBahillAplicadoamovimientossaca´dicosenpacientesata´xicos 61
+delosrestantespacientesenfermos.
+10
+9
+8
+7
+6
+5
+4
+Figura5.Nuevodiagramaconelbloquequeincluyelas 3
+ecuacionesdesensibilidad 2
+1
+0
+100 110 120 130 140 150 160 170 180 190
+Tiempo (ms)
+Figura6.Bloquecorrespondientealasecuacionesde
+sensibilidaddelmodelo
+7. Resultados
+Los gra´ficos de las figuras 7, 8, 9 representan la depen-
+dencia funcional de la posicio´n angular, la velocidad y la
+aceleracio´nsaca´dicasenelcasodepacientessanosysa´cadas
+de10gradosconentradasdetipopulso-escalo´n.Elcompor-
+tamientodelasvariablesreferidas,coneltiempo,essimilar
+alreportadoen[10],[4,2].Setuvoencuentaelvalorde10
+gradosdeamplitudenarasdetenerunniveldereferenciapara
+compararlosresultadosydebidoaque,talycomoconsideran
+losautoresreferidos,esunvalornormaldeacuerdoalafi-
+siolog´ıadeunapersonasanaysedisponedeabudantesdatos
+queviabilizanelana´lisis.Lacorridadelmodeloconlasen-
+tradasdelosrestantespacientesofrecio´ resultadossimilares,
+incluyendosa´cadasde20y30grados.
+Lasfiguras10y11permitencompararlosperfilesdelas
+magnitudessaca´dicasantesreferidas,paraunaamplitudde30
+grados,segu´nlacorridadelmodelodeA.T.Bahillcondatos
+depacientesenfermosysen˜alesdecontrolneuronaldetipo
+pulso-escalo´n.Elcriteriodeseleccio´ndelaamplitudresponde
+a argumentos semejantes a los expuestos, con la salvedad
+quesetratadepacientesaquejadosdelaenfermedad,cuyos
+movimientosoculareshancontempladoestudiosfrecuentes
+paravaloresdelaposicio´nangularde30grados.
+Lacomparacio´ndelosperfilessugiereque,sibienelmo-
+delodescribecorrectamenteelmovimientosaca´dicocuando
+las entradas son de tipo pulso-escalo´n, el comportamiento
+experimental tanto de la posicio´n como de la velocidad se
+apartadelresultadosimulado.Comportamientossimilaresse
+obtienenteniendoencuentalosdatosregistradosenelcaso
+)º(
+dutilpmA
+Figura7.Dependenciaconeltiempodelaposicio´nangular
+paraunasa´cadade10grados(pacientesano).
+180
+160
+140
+120
+100
+80
+60
+40
+20
+0
+110 120 130 140 150 160 170
+Tiempo (ms)
+)s/º(
+dadicoleV
+Figura8.Dependenciaconeltiempodelavelocidadpara
+unasa´cadade10grados(pacientesano)
+18000
+16000
+14000
+12000
+10000
+8000
+6000
+4000
+2000
+0
+-2000
+0.9 0.95 1 1.05 1.1 1.15 1.2
+Tiempo (ms)
+)²s/º(
+nóicarelecA
+Figura9.Variacio´nconeltiempodelaaceleracio´nparauna
+sa´cadade10grados(pacientesano)
+7.1 Ana´lisisdesensibilidad
+Lasfiguras12y13muestranlarepresentacio´ngra´ficade
+loscoeficientesdesensibilidadparalaposicio´nyvelocidad
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.55-64
+62 Ana´lisisdesensibilidaddelModelodeBahillAplicadoamovimientossaca´dicosenpacientesata´xicos
+30
+25
+20
+15
+10
+5
+0
+120 130 140 150 160 170
+Tiempo (ms)
+)º(
+dutilpmA
+Dato Experimental
+Simulación
+Figura10.Perfilesdelaposicio´nangularparaunasa´cadade
+30grados(pacienteenfermo)
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+120 130 140 150 160 170 180 190
+Tiempo (ms)
+)s/º(
+dadicoleV
+∂x
+Figura12.CoeficientedesensibilidadS
+1
+= 1
+∂t
+AG
+Dato Experimental
+Simulación
+Figura11.Perfilesdevelocidadparaunasa´cadade30 ∂x
+grados(pacienteenfermo)
+Figura13.CoeficientedesensibilidadS
+4
+=
+∂t
+4
+AG
+saca´dicas,obtenidosmedianteelempleodelme´tododirecto.
+10
+En las las figuras 14, 15 se observan los resultados del
+9
+ana´lisisemp´ıricosegu´nA.T.BahillyF.K.Hsu.Losgra´ficos
+8
+sugierenquelassalidasantesmencionadasdelmodelonoson
+7
+sensiblesaloscambiosenelpara´metrotiempodeactivacio´n
+6
+τ .
+AG 5
+Losresultadosdelana´lisisdesensibilidadconrespecto
+4
+al ancho del pulso, se presentan en las figuras 16 y 17. Se
+3
+puedeapreciarcomolasvariacionesdeestepara´metroafectan
+2 fuertementelosperfilesdeposicio´nyvelocidad.Noesextran˜o
+1
+esa gran sensibilidad para ancho del pulso pues el mismo
+0
+constituyeinformacio´nenlasentradasalmodelo,enforma
+120 125 130 135 140 145 150 155 160
+deN ,N . Tiempo (ms)
+AG ANT
+8. Conclusiones
+Elempleodelme´tododirectoconstituyeunaherramienta
+deutilidadparaelana´lisisdesensibilidadenelcasodemo-
+deloslinealesempleadosenladescripcio´ndemovimientos
+oculares.Consuayudasededujoelsistemadeecuaciones
+diferencialesparaelana´lisisconrespectoalpara´metro(τ ).
+AG
+Seimplemento´ lasolucio´nmedianteelempleodeSimulink,
+aplicacio´nincorporadaalasistentematema´ticoMatlab,que
+)º(
+dutilpmA
+Análisis de Sensibilidad
+variando Tau(AG)
+del 20 al 200%
+Figura14.Posicio´ndelojoparaunsa´cadade10ovariandoel
+τ
+AG
+posibilito´ tambie´nlaintegracio´nnume´ricadelsistemaenlos
+casosconsiderados.
+Elmodelodiferenciallinealhomeomo´rficoaplicadoenla
+descripcio´ndelosmovimientosocularessaca´dicosdepacien-
+tessanos,permiteobtenerresultadosdesimulacio´nparalas
+magnitudessaca´dicas,queesta´nencorrespondenciaconlos
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.55-64
+Ana´lisisdesensibilidaddelModelodeBahillAplicadoamovimientossaca´dicosenpacientesata´xicos 63
+1000
+800
+600
+400
+200
+0
+120 125 130 135 140 145
+Tiempo (ms)
+)s/º(
+dadicoleV
+Análisis de Sensibilidad
+variando Tau(AG)
+del 20 al 200%
+Figura15.Perfildevelocidaddeunasa´cadade10ovariando
+elτ
+AG
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+120 125 130 135 140 145 150
+Tiempo (ms)
+)º(
+dutilpmA
+Análisis de Sensibilidad
+variando PW
+de 20 al 200%
+Figura16.Posicio´ndelojoparaunasa´cadade10ovariando
+elPW
+1000
+800
+600
+400
+200
+0
+120 125 130 135 140 145 150
+Tiempo (ms)
+)s/º(
+dadicoleV
+se aparta de los simulados, cuando los datos proceden de
+pacientesenfermosdelaataxiaSCA2.
+Larealizacio´ndelana´lisisdesensibilidaddelasolucio´n
+delsistemadeecuacionesdiferencialesempleado,sugiereque
+lassalidasrepresentadasporlaposicio´nyvelocidadnosealte-
+ranapreciablementeantelasvariacionesdelpara´metrotiempo
+deactivacio´n(τ ).Noobstante,estassonma´ssensiblesante
+AG
+elanchodelpulso.
+Referencias
+[1] J.WhiteP.I.Barton.A.Katharina,B.Tidor. Sensiti-
+vityAnalysisforOscilatingDynamicalSystems. SIAM
+J.SCI.COMP.,31(4):2706–2732,2009.
+[2] B. Tood Trost A. T. Bahill, J. R. Latimer. Sensitivity
+AnalysisforLinearHomeomorphicModelforHuman
+Movements. IEEE Transaction on Systems, Man and
+Cybenetics,10(12):924–929,1980.
+[3] IEEEA.TerryBahillSeniormemberIEEEACKD.Mc-
+donald,memeberandMarkB.Friedman. AnAdaptive
+ControlModelForHumanHeadandEyeMovements
+While Walking. 1983. VOL. SMC-13, NO. 3, MAR-
+CH/APRIL1983.
+[4] A.T.Bahill. Development,Validation,andSensitivity
+AnalysisofHumanEyeMovementModels.1980. CRC
+PRESS,1980.
+[5] A.T.Bahill. LinearHomeomorphicModelforHuman
+Movement.1980. CRCPRESS,1980.
+[6] M.R.ClarkandL.Stark. Controlofhumaneyemove-
+ments:I.Modellingofextraocularmuscles;II.Amodel
+fortheextraocularplantmechanism;III.Dynamiccha-
+racteristicsoftheeyetrackingmechanism. Mathemati- Análisis de Sensibilidad
+variando PW calBiosciences,Vol.20:pp.91–265,1974.
+de 20 al 200%
+[7] G.CookandL.Stark. DerivationofaModelfortheHu-
+manEye-positioningMechanism. Bull.Math.Biophys,
+Vol.29:pp.153–174,1967.
+[8] A.B.ScottD.A.Robinson,D.O’meara. Mechanical
+Components of Human Eye Movements. 1096. CRC
+PRESS,1969.
+[9] JohnD.Enderle. ModelsofHorizontalEyeMovements,
+PartI:EarlyModelsofSaccadesandSmoothPursuit.
+Figura17.Perfildevelocidaddeunasa´cadade10ovariando
+Copyright(cid:13)c 2010byMorgan&Claypool,2010.
+elPW
+[10] L. Stark F. K. Hsu, A. T. Bahill. Parametric Sensiti-
+vity Analysis of Homeomorphic Model For Saccadic
+reportadosporlaliteratura.
+andVergenceEyeMovements. ComputerProgramsin
+La respuesta del modelo corrido con datos de pacien-
+Biomedicine,(6):108–116,1976.
+tes enfermos se corresponde con el resultado obtenido por
+A.T.Bahill,altenerencuentalasentradasenlaformapulso- [11] C. Mora, C. Vela´zquez, R. Urquiza, R. Becerra, and
+escalo´n.Sinembargo,laposicio´n,lavelocidadylaacelera- E.Va´zquez. AModelBasedonOrdinaryDifferential
+cio´nsaca´dicastienenuncomportamientoexperimentalque EquationsforStudiesofSaccadicMovementsinPatients
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.55-64
+64 Ana´lisisdesensibilidaddelModelodeBahillAplicadoamovimientossaca´dicosenpacientesata´xicos
+With Spinocerebelar Ataxy Type 2 (SCA2). Revista Method.JournalofComputationalPhysics,21:123–143,
+CubanadeF´ısica,35(1E):38–39,2018. 1976.
+[12] LuisC.Vela´zquezPe´rez. Ataxiaspinocerebelosatipo2,
+[16] C.Vela´zquezRodr´ıguez. Modelacio´nderegistrosocula-
+Diagno´stico,PronosticoyEvolucio´n2012.
+ressaca´dicosbasadaenelmodelopulso-escalo´n.Tesis
+[13] S. Bregaglio M. Donatelli M. Acutis. R. Confalonie- deIngenieroenInforma´tica. 2014.
+ri, G. Bellocchi. Comparison of Sensitivity Analysis
+Techniques:acasestudywiththericemodelWARM. [17] C.Vela´zquezRodr´ıguez. Perfeccionamientodelproce-
+EcollogicalModelling,221(16):1897–1906,2010. so de investigacio´n sobre movimientos oculares en el
+GPDB a trave´s de la simulacio´n de sen˜ales saca´dicas.
+[14] MarileydisVerdeciaRam´ırez. AtaxiaEspinocerebelosa
+TesisdeMaestr´ıa.UniversidaddeHolgu´ın. 2016.
+Tipo2.Estudiolongitudinaldelosmovimientosoculares
+saca´dicos.2010.
+[18] Z.Zi. SensitivityAnalisisApproachesAppliedtoSys-
+[15] RobertJ.GelinasRobertP.Dickinson.SensitivityAnaly- tems Biology Models. IET Syst. Biol., 5(6):336–346,
+sisofOrdinaryDifferentialEquationSystemsADirect 2011.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.55-64

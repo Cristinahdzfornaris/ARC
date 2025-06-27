@@ -1,0 +1,744 @@
+CienciasMatema´ticas,Vol.29,No.1,Pag.61-67,2015
+Recibido06-2015
+Toro algebraico de tipo Norma sobre una extensio´n
+abeliana de Galois
+Algebraic norm type tori defined over abelian Galois
+extension
+Huber Mart´ınez Rodr´ıguez1*, Pedro Luis Del Angel Rodr´ıguez2, Jorge Estrada Sarlabous3
+Resumen Eltoroalgebraicodetiponormaintroducidoparaaplicacionescriptogra´ficasporKarlRubinyAlice
+Silverberg, ha sido estudiado sobre una extensio´n c´ıclica finita L/k y ma´s espec´ıficamente cuando k=F
+q
+y L=F qn. El presente art´ıculo brinda una descripcio´n algebraica del toro de tipo norma cuando es definido
+sobre L y L/k es una extensio´n finita, abeliana y no c´ıclica con grupo de Galois G isomorfo aC pr×C ps. Por
+otro lado, describe el grupo de puntos L-racionales y los k-racionales para diferentes primos p cuando G es
+isomorfoaC ×C .Adema´s,sedemuestraqueelgrupodepuntosL-racionalesesunsubespaciovectorialenel
+p p
+espaciovectorialF sobreF yma´sau´nsemuestraqueelgrupodepuntosk-racionalesesisomorfoa(F ,+).
+pp2 p p
+Finalmenteseconstruyeunejemplodondesemuestraco´moobtenersobreloscampos p-a´dicosunaextensio´n
+deGaloiscongrupoC ×C .
+p p
+Abstract The algebraic norm type torus introduced for cryptographic applications by Karl Rubin and Alice
+Silverberghasbeenstudiedoverafinitecyclicextension L/k andmorespecificallywhenk=F
+q
+andL=F qn.
+ThispaperprovidesanalgebraicnormtypetorusdescriptionwhenitisdefinedoverLandL/kisfinite,abelian
+andnon-cyclicextensionwithGaloisgroupGisomorphictoC pr×C ps. Ontheotherhand,describetheL-rational
+pointsgroupandthek-rationalpointsgroupfordifferentprime pwhenGisisomorphictoC ×C . Besides,itis
+p p
+shownthattheL-rationalpointsgroupisasubspaceinthevectorspaceF overF andmoreoverthek-rational
+pp2 p
+pointsgroupisisomorphicto(F ,+). Finally,isshowedthroughanexample,howtoconstructoverthe p-adic
+p
+fieldsaGaloisextensionwithgroupC ×C .
+p p
+PalabrasClave
+GroupScheme,AlgebraicTori,Torus-basedCryptography,Localfields
+1DepartamentodeMatema´tica,UniversidadMa´ximoGo´mezBa´ez,Cuba,huber@informatica.unica.cu
+2CentrodeInvestigacio´nenMatema´ticasA.C,Gto.Me´xico,luis@cimat.mx
+3Inst.deCibern.Matema´ticayF´ısica,LaHabana,Cuba,jestrada@icimaf.cu
+*AutorparaCorrespondencia
+1. Introduction Intheworks[7]and[8]theauthorsstudiedthetorus
+ 
+⊕N
+L/k,k
+Thestudyofmathematicalobjectsforcryptographicap- T L/k :=T L =kerR L/k G m −→ (cid:76) R L/M G m
+plicationsandcodestheoryisapreponderantthematicinthe
+k⊆M(cid:40)L
+actualresearches. Startingfromthesecondhalfofthetwenty
+when L/k is a cyclic extension and proposed this for cryp-
+century, thenumericgroups played anessentialroleinits
+tographic applications. They say that the k-rational points
+applicationstothecryptographyandcodestheory. Attheend
+are infinity when k has characteristic zero and finity when
+of the same century, began to appear geometric objects for
+k has characteristic p i.e the field F with q a power of p.
+cryptographicapplications. Themostclearexamplesarethe q
+ellipticcurvesandhyperellipticcurves.Theellipticcurvesare Whenk=F q andL=F qn thenL/kisacyclicextensionand
+thetorusk-rationalpointscanbeappliedtothecryptography.
+essentialinthecurrentstandardapplicationsnamedElliptic
+Thek-rationalpointsaregivenby
+CurveCryptography[2][6][3]. Atthebeginningofthiscen-
+turyothergeometricobjectsareintroducedforcryptographic T (k)∼ ={α ∈L×:N (α)=1 whenever k⊆M(cid:40)L}.
+L L/M
+applicationslikealgebraicnormtypetori[10],thistopicwas
+namedTorus-BasedCryptographyintroducedin[7][8]. The The present paper describes the torus T when L/k is a
+L/k
+algebraicnormtypetoriwillbethestudyobjectinthispaper. finite,abelianandnon-cyclicextensionwithGaloisgroupG
+62 ToroalgebraicodetipoNormasobreunaextensio´nabelianadeGalois
+isomorphictoC pr×C ps.Todoso,thestructureofthearticleis III. H acts on R
+L/k
+V in fact there is a homomorphism
+asfollows.Inthefirstsectionaregiventhepreliminaryresults H −→Aut (R V)compatiblewiththeisomorphism
+k L/k
+forthiswork. Section2offersacompletetorusdescriptions of(i)and(ii),wherein(i),H actsonthesecondfactor
+forthisextensionsandisprovedthatthetorushasdimension ofF⊗ L,
+k
+zero(i.eafinitenumberofrationalpoints). Asaparticular
+case, section 3 discloses the L-rational points for the torus IV. ifV isanalgebraicgroup,thensoisR L/k V,andallthe
+T whenL/khasGaloisgroupisomorphictoC ×C . Also abovemapspreservethegroupstructureaswell.
+L/k p p
+it is shown trough of examples for a lot of primes p, that
+IfV =G , then R V =R G and by (i) we have that
+the L-rational points form a subspace in the vector space m L/k L/k m
+L=F overF .Toconstructtheexampleswasprogrammed (R L/k G m )(k)=G m (L)=L∗.
+pp2 p
+inSAGE1twofunctions. Thefirstfunctionreturnsthetorus Definition3 Analgebraictorusoverkisanalgebraicgroup
+matrixdefinitionnamedAandthesecondfunctionreturnsfor definedoverksuchthatoverk itisisomorphictoGd,where
+s m
+aprime p,therankofAandthedimensionofitsnullspace. d isthedimension.
+The final section contains the k-rational points description
+for the torus T L/k when L/k has Galois group isomorphic EachtorusT hasassociatedacharactergroupT(cid:98)=Hom ks (T,G m ).
+toC pr×C ps and is demonstrated that the k-rational points The group G = Gal(k s /k) acts continuously over T(cid:98) also
+groupisisomorphictothegroup(F ,+). Thedifficultyhere Gal(L/k)doesthesameforanyfieldLwhereT issplit.LetT
+p
+istofindextensionswithGaloisgroupisomorphictoC
+p
+×C
+p
+, andT(cid:48) betorioverk,thenHom
+k
+(T,T(cid:48))∼ =HomG(T(cid:98),T(cid:98) (cid:48))fur-
+an example over the p-adic fields is given to show how to thermoreT ∼ =T(cid:48)overkifandonlyifT(cid:98) ∼ =T(cid:98) (cid:48)asaG-module.
+constructtheseextensions. ByProp. 2. (ii),thereisanisomorphismoverLbetween
+thetorusT andthetorus
+L
+2. Preliminary
+ 
+⊕N
+H
+Fixafieldkandletk s beaseparableextension. LetAd T G :=Ker GG m −→ (cid:76) G m G/H , (1)
+denoted-dimensionalaffinespace,ontheotherhandletV be 1(cid:54)=H⊆G
+avarietyandDaset,then
+withN
+:GG−→GG/H
+sending
+H m m
+VD:=⊗ V ∼ =V|D|.
+δ∈D
+(α ) (cid:55)−→( ∏ α ) .
+g g∈G γ gH∈G/H
+If D is a group, then D acts by permutations over the sum-
+γ∈gH
+mands of VD. G denotes the multiplicative k-group, the
+m
+readercansee[10][1]forfurtherinformation. Thus,itissimilartostudythetorusT G overLthanT L over
+L.
+Definition1 L/kbeaGaloisextensionandletV beavariety
+definedoverLthentheWeilrestrictionofV overkisdefines
+3. The algebraic torus T over L
+asR V. R V isavarietyoverk suchthatitsk-rational G
+L/k L/k
+pointsareisomorphictotheL-rationalpointsofV,formore AllelementsinGcanbewrittenasσiτjfor0≤i≤pr−1
+detailssee[10]p. 37. and0≤ j≤ps−1. ThecyclicsubgroupsinGhavetheform
+Z=(cid:104)σhτk(cid:105)forsome0≤h≤ pr−1and0≤k≤ ps−1. In
+In [7] is given the following proposition that describes
+thiscasethegrouporderis
+somepropertiesaboutWeilrestrictionthatisgivenherewith-
+outproof.
+(cid:110) (cid:111)
+l=|(cid:104)σhτk(cid:105)|=max ord(σh),ord(τk) =
+Proposition2 Let L/k be a Galois extension, V a variety
+(cid:26) pr ps (cid:27)
+definedoverLandH=Gal(L/k). Then
+max , ,
+gcd(h,pr) gcd(k,ps)
+I. for every field F containing k, there is a functorial
+bijection wherelisapowerof p.
+(R L/k V)(F)∼ =V(F⊗ k L). Now,thetorusT G overLwillbestudied(i.eT L overL),
+whenGisanabeliannoncyclic p-primarygroupC pr×C ps.
+II. therearefunctorialmorphismsπ γ :R L/k V −→V forall To prove that the torus T L over L has dimension zero and
+γ ∈H,definedoverL,suchthatthedirectsum additionallythatT isasubsetinµ |G| withµ thekernelof
+G p p
+r:G →G assigning β (cid:55)→βp, the following theorem is
+⊕π :R V ∼ =VH m m
+γ L/k given.
+isanisomorphismoverL,
+Theorem4 LetG∼ =C pr×C ps beafinitenoncyclicabelian
+1OpenSourceMathematicsSoftware.www.sagemath.org group, whose generators are σ, τ such that
+σpr =1=τps
+,
+ToroalgebraicodetipoNormasobreunaextensio´nabelianadeGalois 63
+thenthetorusT isfinitei.ewithdimensionzeroandcanbe If(cid:104)σhτk(cid:105)isacardinality pcyclicsubgroupofG,then
+G
+writtenintheform:
+(cid:110) (cid:111)
+|(cid:104)σhτk(cid:105)|=max ord(σh),ord(τk) =p.
+ β =(β ) ∈GG: 
+T G =
+
+∏ p j= − 0 1 β g(σhτk)
+g
+j =
+g∈G
+1 ∀g∈
+m
+G and
+
+. (2) Now, let us suppose that ord(σh)= p then ord(τk)=0 or
+ ∀H=(cid:104)σhτk(cid:105)<G with |H|=p  ord(τk)= p. It is known that the subgroup (cid:104)σ0τps−1(cid:105) has
+cardinality p in G and hence it is the only one with h=0,
+Also,ifβ =(β g ) g∈G ∈T G ,thenβ g p=1forallg∈G. consequentlyintheaboveproductthereisoneiwhereh i =0
+and k = ps−1. Without loss of generality suppose that i=
+i
+Proof. ThetorusT G definedin(1)canbewrittenas p+1andsotheproducttakestheform
+T = (cid:92) KerN = (cid:32) p−1 (cid:33) p p−1
+G H βp+1∏β ∏∏β =1.
+1(cid:54)=H≤G g g (cid:16) τps−1(cid:17)j g(σhiτki)j
+(cid:8) β ∈GG:N (β)=1∀nontrivialH≤G (cid:9) . j=1 i=1j=1
+m H
+Note that all σhiτki have ord(σhi)= p, otherwise it would
+On the other hand, if H 1 and H 2 are subgroups of G and bezeroandthiswasextractedfromtheproduct. Theabove
+H 1 ⊂H 2 ,thenKerN H1 ⊂KerN H2 ,sotheintersectionofthe impliesthatord(τki)=0orord(τki)=p,forthisreasonk i =
+N H ’skernelsforallnontrivialsubgroupsH isthesameasthe lps−1 withl takingvalues0,1,...,p−1. Inthiswayk i runs
+intersectionforallminimalsubgroupsH,i.ethesubgroups through the cardinality p subgroups generators except one
+H with|H|= p. Accordingtothenormfunctiondefinition i.e. theextractedsubgroups,hencethereare p+1subgroups.
+in (1) and using the quotient between the group G and the Undertheaboveconsiderationsandinterchangetheproduct
+minimalssubgroupsH with|H|=pisobtainedthedefining theequation
+torusequationsin(2). Inthedefinition(2)allelementsinG
+(cid:32) (cid:33)
+areusedasrepresentatives,thusthereareredundantequations, p−1 p−1 p
+βp+1∏β ∏∏β =1
+butthisnoaffectthetorusdefinition. g
+g
+(cid:16) τps−1(cid:17)j (cid:16) gσjpr−1(cid:17)(cid:16) τjps−1(cid:17)i−1
+Now,theaffirmationβ p=1isproven. Letustakeg∈G j=1 j=1i=1
+g
+arbitrary and let H , H , ..., H be the subgroups of G isobtained.
+1 2 p+1
+withorder p. Itisknownby[9]thatthereare p+1order p
+Inthelastequalityτjps−1
+hasorder p,andsotakingH=
+subgroupsinG,thengcanbechosenascosetrepresentative (cid:104)τjps−1(cid:105)<G and gσjpr−1 as representative in the quotient
+inthequotientG/H i foreachi=1,...,p+1.Now,thecosets G/H foreachfixed jtheequation
+ofgforeachquotientare
+p−1 p
+(cid:104) (cid:105) ∏∏β =1
+g(σh1τk1)0,g(σh1τk1)1,...,g(σh1τk1)p−1 (cid:16) gσjpr−1(cid:17)(cid:16) τjps−1(cid:17)i−1
+j=1i=1
+(cid:104) (cid:105) isachieved. Now,theequality
+g(σh2τk2)0,g(σh2τk2)1,...,g(σh2τk2)p−1
+p−1
+. . . . . . . . . . . . β g p+1∏β g (cid:16) τps−1(cid:17)j =1
+j=1
+(cid:104) (cid:105)
+g(σhp+1τkp+1)0,g(σhp+1τkp+1)1,...,g(σhp+1τkp+1)p−1 .
+canbewrittenas
+Bytherepresentation4issatisfiedthat p−1
+βp∏β =1.
+(cid:32) p−1 (cid:33) g j=0 g (cid:16) τps−1(cid:17)j
+∏β =1
+j=0
+g(σhiτki)j
+i=1,...,p+1 Itisknownby(2)thattheproduct∏ p j= − 0 1 β
+g
+(cid:16) τps−1(cid:17)j =1,hence
+andconsequently,multiplyingforeveryitheequation β
+g
+p=1.
+p+1p−1 Proposition5 LetL/kbeanextensionthatcontainsthe p-th
+∏∏β
+g(σhiτki)j
+=1 rootsofunitywithgeneratorwandletn∈N,thenthemap
+i=1 j=0
+ψ :µn(L)−→F [x]/(cid:104)f(x)(cid:105)∼ =F (γ)
+p p p
+isobtained. For j=0,β isincludedineachtermandtaking
+g
+itasacommonfactorthefollowingequationisachieved that sends (wij)
+j=0,...,n−1
+(cid:55)−→∑ n
+j=
+−
+0
+1i
+j
+γj is a group isomor-
+phismbetween(µn(L),·)and(F [x]/(cid:104)f(x)(cid:105),+). Thepolyno-
+βp+1 p ∏ +1p ∏ −1 β =1. mial f(x)withnd p egreeinF p [x], p isirreducibleoverF p andγ
+g g(σhiτki)j
+isaprimitiveelementthatsatisfies f(γ)=0.
+i=1 j=1
+64 ToroalgebraicodetipoNormasobreunaextensio´nabelianadeGalois
+Proof. First,itisproventhatψ :µn(L)−→F (γ)iscompat- oforder pinG,andsecondlytoknowwhicharetheformsof
+p p
+iblewiththeoperationsofeachgroup,indeed thecosetsinthequotientsG/H foreachH. LetG=(cid:104)σ,τ(cid:105)
+where σ and τ are the generators of G with σp =τp =1.
+ψ((wij·wkj) )=ψ((wij+kj) )= The order p subgroups in G have the form (cid:104)στk(cid:105) for k =
+j=0,...,n−1 j=0,...,n−1
+0,...,p−1includingthesubgroup(cid:104)τ(cid:105). KeepinmindthatG
+n−1 n−1 n−1
+∑(i +k )γj= ∑i αj+∑k αj= has p+1order psubgroups.
+j j j j
+j=0 j=0 j=0 LetusdenoteH 0 =(cid:104)τ(cid:105)andH k =(cid:104)στk(cid:105)fork=1,2,...,p−
+ψ((wij) )+ψ((wkj) ), 1,forthesesubgroupsthecardinalitylisequalto p,thusthe
+j=0,...,n−1 j=0,...,n−1
+elementsg∈Ggivenby
+thusthemorphismtransformtheproductoftwoelementsin
+thesumofitstransformed. Also,
+g=σ0,...,σp−1
+n−1 canbetakenascosetrepresentativesofthequotientsG/H 0
+ψ((1) j=1,...,n )=ψ((w0) j=1,...,n )= ∑0γj=0, andG/H k respectively. Similarly,whenk=0wehaveH p =
+j=0 (cid:104)σ(cid:105),l=pandg=τ0,...,τp−1ascosetrepresentatives. Us-
+soψ sendsneutralelementinthegroup(µn(L),·)toneutral ing the fact that g and g(cid:48) ∈G are in the same coset in the
+elementinthegroup(F [x]/(cid:104)f(x)(cid:105),+). Let p y=0,y∈F (γ) quotient G/H k (i.e gH k =g(cid:48)H k ) if and only if g−1.g(cid:48) ∈H k ,
+p p
+it is easy to prove that the coset representatives proposed
+inthiswayy=∑ n
+j=
+−
+0
+10γj,ifwetakex=(w0)
+j=0,...,n−1
+,then
+previouslyareinducingdifferentcosets.
+it is satisfies that ψ((w0)
+j=1,...,n
+)=∑ n
+j=
+−
+0
+10γj =y, beside if
+Now,letG/H 0 bethequotientdefinedinmatrixformas:
+t
+th
+h
+e
+e
+n
+reisx(cid:48)=(wij)
+j=0,...,n−1
+suchthatψ(x(cid:48))=∑ n
+j=
+−
+0
+10γj =y,
+ σ0(τ)0 σ0(τ)1 ... σ0(τ)p−1 
+ σ1(τ)0 σ1(τ)1 ... σ1(τ)p−1 
+ψ(x(cid:48))=ψ((wij) j=0,...,n−1 )= n ∑ −1 i j γj= n ∑ −1 0γj=y. (h ( i 0 j ) )=   . . . . . . ... . . .    ,
+j=0 j=0 σp−1(τ)0 σp−1(τ)1 ... σp−1(τ)p−1
+As i ≥0 for all j then the last equality is possible if and
+j therowsaredenotingthequotientcosetsofG/H . Itiseasy
+onlyifalli =0,hencex=x(cid:48) andψ isinjective. Toprove 0
+j tonotethat
+the surjectivity let y∈F p (γ) be arbitrary and write this as h (k) =h (0)
+y=∑ n
+j=
+−
+0
+1i
+j
+γj thenψ((wij)
+j=0,...,n−1
+)=y. Notethati
+j
+∈F
+p
+ij i+j mod p,kj mod p
+forall j,i.e0≤i j ≤p−1andsowij ∈µ p (L)thatprovesthe wheretherowsofthematrix(h (k) )representthecosetsofthe
+ij
+surjectivity.
+quotientG/H fork=1,...,p−1.
+Finally,h(p)=h(0)T
+i.e.
+Let g ,g ,...,g be the elements of G, then by the k
+0 1 |G|−1 thetransposeofh(0),wheretherowsdenotethecosetsofthe
+Proposition 5 is concluded that T (L)⊂F (γ) and T (L)
+G p G quotientG/H .Eachrowintheabovematricesinduceatorus
+canbewrittenas p
+definingequationoverF by3.
+p
+T G (L)=
+ |G
+∑
+|−1
+α gi γi∈F p (γ):
+f
+∑
+or
+p j= −
+i
+0 1
+=
+α g
+0
+i
+a
+(
+,
+n
+σ
+..
+d
+h
+.
+τ
+,
+k
+|
+)
+G
+j =
+|−
+0
+1
+ 
+.
+b
+L
+y
+-ra
+d E
+t
+e
+i
+a
+o
+fi c
+n
+n h
+a
+it
+l
+m i
+p
+o a
+o
+n t
+i
+r
+n
+a i
+t
+x l
+s
+l t
+f
+e h
+o
+l a
+r
+e t m
+T
+r
+G
+e e n p
+a
+t r s
+c
+e
+c
+s o
+o
+e f
+r
+n
+d
+t G
+in
+th
+g
+d e i
+t
+s
+o
+q tr u
+3
+ib o
+a
+u t
+r
+i t e
+e
+e n d
+t
+t
+h
+i
+e
+G n
+e
+/
+l
+c H
+e
+o
+m
+k se
+e
+c t
+n
+o s
+t
+. n
+s
+ta T i h n e s
+ i=0 ∀H
+w
+=
+ith
+(cid:104)σ
+|
+h
+H
+τ
+|
+k
+=
+(cid:105)<
+p
+G  |G
+∑
+|−1
+α γi∈F (γ)
+gi p
+(3) i=0
+Observeintheprevioustorusdefinitionthateachg∈Gwas
+thatsatisfiedthefollowingequationssystemrelatingthecoef-
+takenasarepresentativeinthequotientG/HwithH<Gsuch
+ficientsα forallg∈G. Theequations
+that|H|=p,thisinducesredundantequationsbecauseseveral g
+g ∈GcorrespondwiththesamecosetinthequotientG/H.
+i p−1 p−1
+Also the defining torus equations is transformed from the ∑α =0,∑α =0,...,
+productformtoadditiveform,whichisbetterforcalculation.
+j=0
+gi(στ)j
+j=0
+gi
+(στ2)j
+In the present paper a particular case is studied, i.e the
+p−1 p−1
+torusT G definedbyG∼ =C p ×C p with pprime.
+j
+∑
+=0
+α
+gi
+(στp−1)j =0,
+j
+∑
+=0
+α gi(τ)j =0
+4. The torus T defined by G ∼ =C ×C
+G p p withg =σi forivaryingfrom0,...,p−1thatcorrespond
+i
+with p prime
+tothequotientsG/H ,G/H ,...,G/H andG/H respec-
+1 2 p−1 0
+Inthefirsttime,tostudythetorusT G forthegroupG∼ = tively. Besides,theequations∑ p j= − 0 1 α gi(σ)j =0withg i =τi
+C ×C itisnecessarytoseethestructureofallsubgroupsH for i varying from 0,...,p−1 that correspond with G/H .
+p p p
+ToroalgebraicodetipoNormasobreunaextensio´nabelianadeGalois 65
+Hence the torus T can be described in details from these ... ... ... ...
+G
+equations. Notethat,asweareusingarepresentativeofeach (0) (0) (0)
+g =h ,g =h ,...,g =h ,
+cosetwithoutrepetitions,theninthetorusdefinition3,there- (p−1)p+1 0,p−1 (p−1)p+2 1,p−1 p2 p−1,p−1
+dundantequationsdisappearandwehave p(p+1)equations foreachα ,α ,...,α overthefinitefieldF . Thematrix
+g1 g1 g p2 p
+intotal. Aiscreatedintheorderofthematricesh(k)fork=0,...,p;
+Now,letustakeAasthematrixthatproducestheequa-
+thefirst prowscorrespondtotheequationsdefinedbyeach
+tionssystemAα =0definingthetorusT G with cosetinh(0),thesecond prowstotheequationsdefinedby
+α =(α ,α ,...,α )∈F h(1) andsoon. ThematrixAcontainsasconsequenceonly
+g1 g2 g p2 pp2 zeros and one in each row, it are placed depending of the
+thevariablesvector. EachcolumninthematrixAcorresponds variablesthatappearineachequation.
+withthevariablesα ,andthesametimetheseareorganized The function TorusMatrix(p) was programmed by the
+gi
+using the column disposition in h(0) (it is known that h(0) authorsinSAGEtoconstructthematrixAcorrespondingwith
+containsallelementsofGorganizedincosets)i.e. the above descriptions. This function returns the matrix A
+associatedwiththetorusT giventheprime pthatdefines
+G
+(0) (0) (0)
+g 1 =h 0,0 ,g 2 =h 1,0 ,...,g p =h p−1,0 thegroupC p ×C p asargument.
+(0) (0) (0)
+g =h ,g =h ,...,g =h
+p+1 0,1 p+2 1,1 2p p−1,1
+def TorusMatrix(p):
+lis=[[[i,j] for j in range(0,p)] for i in range(0,p)]
+lis_aux=[[lis[i][j] for j in range(0,p)] for i in range(0,p)]
+m=[ ]
+for k in range(0,p):
+for i in range(0,p):
+aux=[0 for j in range(0,pˆ2)]
+for j in range(0,p):
+aux[lis_aux[i][j][1]*p+lis_aux[i][j][0]]=1
+m.append(aux)
+for i in range(0,p):
+for j in range(0,p):
+lis_aux[i][j]=lis[(i+j) % p][((k+1)*j) % p]
+lis_aux=[[lis[j][i] for j in range(0,p)] for i in range(0,p)]
+for i in range(0,p):
+aux=[0 for j in range(0,pˆ2)]
+for j in range(0,p):
+aux[lis_aux[i][j][1]*p+lis_aux[i][j][0]]=1
+m.append(aux)
+return m
+Otherauxiliaryfunctionisdefinedtoreturntheparameters matrixAandthedimensionofthetorusrespectively.
+list[p,r,d]. Theparametersrandd representtherankofthe
+def TorusParameters(p):
+m1=matrix(GF(p),p*(p+1),pˆ2,TorusMatrix(p));
+r=m1.rank();
+Torus=m1.right_kernel();
+d=Torus.dimension();
+return [p,r,d]
+66 ToroalgebraicodetipoNormasobreunaextensio´nabelianadeGalois
+Now,itisshownhowtousetheabovefunctionsinSAGE. 5. The k-rational points for T with L/k a
+L
+∼
+TorusParameters(2) Galois extension with group G=C pr ×C ps
+Output:
+Itisknownaftertheworks[7]and[8]thatthek-rational
+[2, 3, 1]
+pointsforT areinfinitewhenkhascharacteristiczeroand
+L
+TorusParameters(7) L/k iscyclic. Specifically, whenk=F q andL=F qn thek-
+Output: rationalpointsareusedincryptography. Now,weconsideran
+[7, 28, 21] extensionL/kwithGaloisgroupsG∼ =C pr×C ps andwewant
+tofindthek-rationalpointsforthiscase.
+TorusParameters(11)
+Output: Lemma6 Letkbeafieldcontainingthe p-throotsofunity
+[11, 66, 55] andL/kanextensionwithGaloisgroupG∼ =C p ×C p ,then
+T (k)isequaltoµ (k).
+L p
+Thetablebellowcontainsseveralcalculationsfordiffer-
+ent primes p using the function TorusParameters(p). It is Proof. Thek-rationalpointsinthetorusT L are
+important to remark that the torus T has pd elements for
+eachprime p,thisfactprovesthenon-
+G
+trivialityofthetorus.
+T
+L
+(k)∼ ={α ∈L×:N
+L/M
+(α)=1 whenever k⊆M(cid:40)L}.
+LetGbegeneratedbyσ andτ withσp=τp=1,itisknown
+Primes ARank Torusdimension L-Rat. P.Q.
+thateverystrictsubgroupofGhastheformH =(cid:104)στj(cid:105)when
+j
+2 3 1 21
+jvariesintherange0,...,p−1andH =(cid:104)τ(cid:105). Now,consider
+p
+3 6 3 33 thesubextensionsM ⊂LfixedbyH when, jtakesthevalues
+j j
+5 15 10 510 j=0,...,p,weneedtofindallα∈L∗suchthatN (α)=1
+7 28 21 721 wheneverk⊆M (cid:40)L. Theaboveconsiderations L i / m M p j liesthe
+j
+11 66 55 1155 followingequationsforeachH ,
+j
+13 91 78 1378
+17 153 136 17136
+19 190 171 19171 N (α)=αστj(α)(στj)2(α)...(στj)p−1(α)=1
+L/Mj
+23 276 253 23253
+29 435 406 29406 for j=0,...,p−1,for j=ptheequation
+31 496 465 31465 ατ(α)(τ)2(α)...(τ)p−1(α)=1
+Table1. Torusparametersfordifferentprime p. Column
+headerL-Rat. P.Q.meansL-Rationalpointsquantity andtheequation
+ασ(α)...σp−1στ(α)...
+From the above table we can to establish as conjecture N (α)= =1
+L/k σp−1τ(α)στp−1(α)...σp−1τp−1(α)
+that the rank of A satisfied the relation p(p+1)/2 and as
+consequencethetorusdimensionis p2−p(p+1)/2=(p2− (4)
+bytheinclusionoffieldkfixedbyG.
+p)/2.
+ItisshownintheTable1thatthesetT (L)⊂F isa RecallingthatallH j aredifferentandtheunionofH j are
+G pp2
+theelementsofGwithoutrepetitionsexcepttheidentity,then
+subspaceoverF withdimension(p2−p)/2forG∼ =C ×C .
+p p p multiplyingthefirst p+1equationsitfollowsthat
+The T (L) subspace is defined by the right kernel of the
+G
+matrixA,i.e. αpασ(α)...σp−1στ(α)...
+T
+G
+(L)=F
+p
+[v
+1
+]⊕F
+p
+[v
+2
+]⊕...⊕F
+p
+[v
+(p2−p)/2
+] σp−1τ(α)στp−1(α)...σp−1τp−1(α)=1.
+where {v i } is a subspace basis and so the group T G (L) is From the last equation and using 4 we have αp =1 being
+isomorphicto(F p((p2−p)/2) ,+). anecessarycondition. Ifthefieldk containsthe p-throots
+Using the above facts, for the prime p=2 the torus L- of unity, then αp =1 turns out to be a sufficient condition,
+rationalpointsgroupT G (L)takestheform consequentlyT L (k)isequaltoµ p (k).
+T
+G
+(L)=F
+2
+[v
+1
+] Theorem7 UnderthehypothesisofLemma6withG∼ =C pr×
+with 21 elements. When p=3 the torus L-rational points C ps andr,s≥1,thenT L (k)isequaltoµ p (k).
+groupiswrittenas Proof. ToprovethetheoremconsiderGgeneratedbyσ and
+T (L)=F [v ]⊕F [v ]⊕F [v ] τ withσpr =τps =1. ThegroupG∼ =C pr×C ps containsthe
+G 3 1 3 2 3 3
+subgroupC ×C generated by
+σpr−1
+and
+τps−1
+and so the
+p p
+with33elementsandsoonfordifferentprime p. equationαp=1appearsagainusingsimilarargumentthatthe
+ToroalgebraicodetipoNormasobreunaextensio´nabelianadeGalois 67
+Lemma6. Thisequationshowsthatthesolutionsmustbethe [2] A.MenezesD.HankersonandS.Vanstone. GuidetoEl-
+p-throotsofunity,butweneedtoprovethatthesesatisfiesthe lipticCurveCryptography.Springer-Verlag,firstedition,
+equationsN (α)=1forM fixedbytheothersubgroups (2004).
+L/Mi i
+inGthatarenotcontainedinC ×C . Askcontainsthe p-th
+p p
+rootsofunityandGfixesanyelementink,thenthesubgroups [3] G.Freyetal.H.Cohen.HandbookokEllipticandHyper-
+inGthatarenotcontainedinC ×C induceequationsinthe ellipticCurveCryptography. ChatmanandHall/CRC,
+p p
+formαpki
+=1for2≤k ≤r+s. Thelastequationscontain
+firstedition,(2006).
+i
+initssolutionsthe p-throotsofunityhencethesearetheonly
+[4] H. Hasse. Number Theory. Springer-Verlag, tercera
+solutionsthatsatisfyalltheequations.
+edition,(1969).
+Theexamplebelowillustratesthesecases,besidesshow
+howtoconstructa p-adicfieldextensionwithGaloisgroup
+G∼ =C ×C : [5] K. Iwasawa. On galois groups of local fields. Trans.
+p p Amer.Math.Soc.,80:448–469,1965.
+Example8 This example is constructing an extension L/k
+beingGalois,abelianandsplittingwithgroupG∼ =C ×C . [6] A.MenezesandS.Vanstone. Theimplementationof
+3 3
+Considerk/Q anextensionnon-ramifiedofQ ofdegree2, ellipticcurvecryptosystems. InAdvancesinCryptology-
+5 5
+infactk=Q (w)withwaprimitive(52−1)-throotofunity, AUSCRYPT’90,pages2–13,(1990).
+5
+thusitisensuredthatkcontainsthe3-throotsofunity. Now,
+considerL/k atamelyramifiedextensionwithramification [7] K.RubinandA.Silverberg. Torus-basedcryptography.
+index e=3 and residual degree f =3 constructed as L= incrypto2003.LectureNotesinComput.Sci.,2729:349–
+√
+k(w, 35). Using the theorem in ([4], p.251) with r =0 it 365,2003.
+is easy to prove that this extension is Galois and abelian. [8] K.RubinandA.Silverberg. Algebraictoriincryptog-
+Ontheotherhand[5]provedthatL/ksplitifandonlyifL raphy. InHighPrimesandMisdemeanours: lecturesin
+containsaprimeπsuchthatπe=πwithπaprimeinkwhich honour of the 60th birthday of Hugh Cowie Williams,
+yieldsG ∼ =J×HwithHtheGaloisgroupassociatedwiththe number 41 in Field institute Communications, pages
+√
+extensionL/k(eπ)thatisnon-ramifiedandthencyclic,i.e. 317–326.AmericanMathematicalSociety,Providence,
+bothH andJarecyclicgroups(Jisthegroupassociatedto RI,(2004).
+theKummerextensionK/K ).InthiscaseH∼ =C andJ∼ =C
+0 3 3
+thereforeG∼ =C ×C . Now,thek-rationalpointsofT are [9] M.Tarnauceanu. Anarithmeticmethodofcountingthe
+3 3 L
+equaltothek-rationalpointsofµ ,thenbyProposition5 subgroupsofafiniteabeliangroup. Bull.Math.Soc.Sci.
+p
+Math.Roumanie,53(4):373–386,2010.
+T (k)=(µ (k),·)∼ =(F ,+).
+L p p
+[10] V.E.Voskresenskii. AlgebraicGroupsandTheirBira-
+References tionalInvariants. Number179inTransl.Math.Monogr.
+[1] A.Borel.LinearAlgebraicGroups.Grad.TextsinMath. AmericanMathematicalSociety,(1998).
+Springer-Verlag,segundaedition,(1991).

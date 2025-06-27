@@ -1,0 +1,831 @@
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+Recibido06-2020,Aceptado10-2020
+Modelos SIR para el seguimiento de la COVID-19 en
+Cuba
+SIR models for monitoring COVID-19 in Cuba
+Raúl Guinovart Díaz1*, Isidro A. Abelló Ugalde2, Wilfredo Morales Lezca1, Julian Bravo
+Castillero3, Reinaldo Rodríguez Ramos1, David Guinovart Sanjuán4
+Resumen ElprocesodepredecirelcomportamientodelapandemiaenCubayelpeligrodelaocurrenciade
+endemiasdelaCOVID-19esunapreocupacióndelgobiernoydelosepidemiólogoscubanos.Poseermodelos
+matemáticos que ayuden a la toma de decisiones y conocer alguna métrica que influya en el surgimiento
+de la endemia ha sido de gran utilidad para organizar las medidas de control de la pandemia y del proceso
+dedesescalamiento.Elobjetivodeestetrabajoespresentarlosmodelosdinámicosqueayudaronasimular
+diferentes escenarios probables de casos activos, en concordancia con los datos reportados y además con
+el apoyo de la teoría cualitaiva de ecuaciones diferenciales, indicar cómo el número reproductivo básico R
+0
+constituyeunamétricaqueincideenlaocurrenciadelaendemia.Losresultadosdemuestranquebajociertas
+condicionespuedenaparecerrebrotesporloqueesnecesariomanteneractivadasmedidasepidemiológicas
+queayudenaevitarlos.
+Abstract
+TheprocessofpredictingthebehaviorofthepandemicinCubaandthedangerofitsoccurrenceofCOVID-19
+endemicsisaconcernoftheCubangovernmentandepidemiologists,owningmodelsmathematiciansthathelp
+decision-makingandknowsomemetricthatinfluencestheemergenceoftheendemichasbeenveryuseful
+toorganizethecontrolmeasuresofthepandemicandreturntonormalization. Theobjectiveofthisworkisto
+presentthedynamicmodelsthathelpedtosimulatedifferentprobablescenariosofactivecases,inaccordance
+with the reported data and also with the support of the qualitative theory of differential equations indicate as
+thebasicreproductivenumberR itconstitutesametricthataffectstheoccurrenceoftheendemic. Theresults
+0
+showthatundercertainconditionsmayappearoutbreakssoitisnecessarytokeepactivatedepidemiological
+measures
+PalabrasClave
+Endemia,COVID-19,modelosSIR,númeroreproductivobásico,rebrote
+Keywords
+Endemic,COVID-19,SIRmodels,basicreproductivenumber,regrowth
+1DepartamentodeMatemática,UniversidaddeLaHabana,LaHabana,Cuba,guino@matcom.uh.cu,
+wilfre@matcom.uh.cu,reinaldo@matcom.uh.cu
+2CentrodeEstudiosparaelPerfeccionamientodelaEducaciónSuperior,UniversidaddeLaHabana,LaHabana,Cuba,isidro@cepes.uh.cu
+3UnidadAcadémicadelInstitutodeInvestigacionesenMatemáticasAplicadasyenSistemasenYucatán.UniversidadNacionalAutónomade
+México,julian@mym.iimas.unam.mx
+4DepartmentofMathematics,UniversityofCentralFlorida,4393AndromedaLoopN,Orlando,FL32816,USA,Guinovart@ucf.edu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción EnelpresentetrabajosepresentandosmodelosSIR,conlos
+queestásiendomodeladalaepidemiaenCuba.
+LaapariciónelcoronavirusSARS-CoV-2enlaprovincia LosmodelosSIR(Susceptibles-Infectados-Recuperados)
+deWuhan,Chinaendiciembrede2019ylarápidaconversión sonmodelosdinámicosepidémicosdondelapoblaciónbajo
+enpandemiadelaenfermedadqueprovoca,laCOVID-19,ha estudiosedivideenclasesepidemiológicasdisjuntasysedes-
+puestoalacomunidadcientífica,médica,gobiernos,pueblosy cribeunflujoentreellas,comosemuestraenlafigura1.El
+organismosinternacionalesenfuncióndesuerradicación.En primermodeloqueseabordaestábasadoenelmodelobásico
+estepanorama,lamodelaciónmatemáticadesudiseminación deKermackyMcKendrick[9]ysedetallaráenlasección1.
+enlasdiferentesregioneshasidounadelasáreasenestudio. ElsegundoesunmodeloSIR,quecontemplalademografía
+2 ModelosSIRparaelseguimientodelaCOVID-19enCuba
+y además incorpora la efectividad de los tratamientos ([3], porunidaddetiempodejaesaclaseparaconvertirseenrecu-
+[11]y[14]).Esteseabordaráenlasección3.Lasdiferencias peradosconinmunidadpermanente.Estoconducealsistema
+entrelosmodelosSIRbásicoySIRcondemografía,sonde deecuacionesdiferencialesdelmodeloSIR(1)-(3).
+naturalezacualitativa.Mientrasenelprimerolosequilibros Estesistemadeecuacionesadmitesoluciónexactaparamé-
+conducen a estados libres de la enfermedad, en el segundo tricayaproximacionesexplícitas[8],contrarioalodivulgado
+ademásdeestaposibilidadpuedenconduciraestadosendé- en populares artículos [15]. Son variadas las metodologías
+micos,locualsignificaqueunaciertacantidaddeinfectados ensayadaspararesolverlo[2],peroquizáslosmétodosnumé-
+convivenenlacomunidad. ricosseanlavíamáspopular.
+ElmodelobásicodeKermackyMcKendrickfueunode Laecuación(2)identificaadosconceptosepidemiológi-
+losprimerosmodelosdinánicosepidémicos.Asusmásde90 cosderelevancia:
+años mantiene vigencia e utilidad, a pesar de considerar el
+mássimpledelosescenarios.Estáregidoportresecuaciones 1. LaPrevalencia:Númerodecasosdeunaenfermedad
+diferencialesnolineales enunapoblaciónenuntiempodado(I(t)).
+2. LaIncidencia:Númerodecasosnuevosenunapobla-
+dS ciónporunidaddetiempo(dI(t)).
+= −βSI (1) dt
+dt
+Porotrapartelosparámetrostambiéntienenunainterpre-
+dI
+= βSI−αI (2) taciónepidemiológica.Yamencionamosqueβ estavinculado
+dt
+a la tasa de contagio que define la ley de acción de masas,
+dR
+= αI (3) mientras que α está relacionado con el período infeccioso.
+dt
+Másprecisamente,sidenotamosporu(s)alnúmerodeindi-
+concondicionesinicialesS(0)=S˜ ; I(0)=I˜; R(0)=0. viduosquesiguensiendoinfecciosossunidadesdetiempo
+0 0
+después de que fueron infectados y una fracción α deja la
+claseinfecciosaporunidaddetiempotenemos:
+Enestemodelolapoblaciónseconsideraconstanteeigual
+aN.Esdecir,noseconsideranlosnacimientosnilasmuertes
+u(cid:48)=−αu⇒u(s)=u(0)exp(−αs)
+porningunacausa,porlotanto,lapoblaciónentodoinstante
+detiempoeslasumadelascantidadesdelastresclases Lo que conduce a que el período infeccioso se distribuya
+exponencialmenteconmedia
+N=S(t)+I(t)+R(t) (4)
+(cid:90) +∞ 1
+exp(−αs)ds= (5)
+La clase Susceptibles es el grupo de personas que está
+0 α
+sana, pero que puede contraer la enfermedad. La clase de
+losindividuosquehancontraidolaenfermedadyqueahora queparalaCOVID-19teóricamenteesde14días.Esdecir,si
+estánenfermosesI(t).Estosindividuosinfectadosseasume medimoseltiempoendías,14= 1.
+α
+que son todos infecciosos, es decir, todos son capaces de
+trasmitirlaenfermedadalosindividuossusceptibles.Laclase Ladinámicadeestemodeloesmuycaracterísticayres-
+delosindividuosrecuperadossonaquellosqueyapasaronla pondemuybienaunaobservacióndemuchasdelasepidemias
+enfermedad,sehansanadoynopuedenvolveracontraerla. queasolaronalahumanidad.Variasdeellasaparecíanrepen-
+Es decir, en este modelo el flujo entre las clases va de los tinamente creciendo en intensidad, para luego desaparecer
+individuos que son susceptibles a contraer la enfermedad, dejandopartedelapoblaciónsininfectar(verfigura2).Este
+una fracción de ellos se enferma, cambiando a la clase de comportamientoseobservaenenfermedadesquesonfatales
+infectados,losquepasadounperíododetiempo,serecuperan oenaquellascuyasvíctimasadquiereninmunidadcontrala
+coninmunidadpermanente. reinfección.
+Latransmisiónesporcontactodirecto.Paratransmitirla LascantidadesS,IyRsonmayoresoigualesqueceroy
+infección, un infeccioso hace contacto con βN individuos mantienenestacondiciónsilascondicionesinicialespartende
+porunidaddetiempo.Laprobabilidaddecontactoentreun estaregión.Delsistema(1)-(3)seobservaqueS(t)positivoy
+infecciosoyunsusceptibleesS/N,luegoelnúmerodenuevas decrecienteyaqueS(cid:48)<0.DeigualmaneraR(t)espositivay
+infeccionesporunidaddetiempoes(βN)(S/N)=βSI.Es creciente.Luego
+decir,uninfecciosotransmitelaenfermedadconunatasade
+contagioβ,segúnlaleydeaccióndemasas,queestipulaque l´ımS(t)=S
+∞
+“latasaalacualunaenfermedadsepropagaesproporcio- t→∞
+nal al número de individuos susceptibles por el número de l´ımR(t)=R
+∞
+individuosinfecciosos”.Estosignificaqueloscambiosenla t→∞
+poblaciónsusceptibletambiénsecomportansegúnlaleyde Dadalaecuación(4)elsistema(1)-(3)sepuedereducira
+accióndemasas.Porotraparte,unafracciónα deinfectados lasdosprimerasecuaciones
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+ModelosSIRparaelseguimientodelaCOVID-19enCuba 3
+Susceptibles Infectados Recuperados
+S(t) I(t) R(t)
+Figura1. CompartimentosdelflujoSIRBásico
+12
+10
+8
+6
+4
+2
+0
+0 20 40 60 80 100 120
+tiempo (en días)
+sanosrep
+ed
+senollim
+ne
+sedaditnaC
+Solución del modelo SIR deinfeccionessecundariasproducidasporunindividuoen
+su período infeccioso, en una población donde todos son
+SUSCEPTIBLES
+susceptibles.EstevaloresdenotadoporR yparaestemodelo
+INFESTADOS 0
+RECUPERADOS es:
+β
+R = N (8) 0
+α
+Entoncessepuededecirque:
+R S˜0 (cid:54)R <1nohayepidemia
+0N 0
+R S˜0 (cid:54)R >1hayepidemia
+0N 0
+Paraunestudiodetalladodelaspropiedadescualitativasdel
+sistema (1)-(3) tales como el retrato de fase, los puntos de
+equilibrio o valores de relevancia epidemiológica, como la
+Figura2. Ejemplodelaevolucióndinámicaeneltiempode
+máximaprevalenciayeltiempoenquesealcanza,lainmuni-
+unmodeloSIRBásico.Lacurvaazulrepresentaala
+dadderebaño,asícomolacantidadmáximadeinfectadosy
+poblaciónsusceptible,larojalapoblacióninfectadayla
+cómoestimarlosparámetrosβ,α yS ,sepuedenconsultar
+verdelapoblaciónrecuperada. ∞
+[3],[11],[7]o[15].
+El punto esencial para predecir el comportamiento del
+brote,eslaestimacióndelosparámetros,principalmenteel
+parámetroβ.Sinembargo,β nosemantieneconstanteenun
+dS
+= −βSI (6) broteepidémicoyaqueunavezdesatadaslasalarmasante
+dt
+uncrecimientoinusualdeunaenfermedad,lasinstituciones
+dI
+= βSI−αI (7) desaludpública,lapoblaciónylosgobiernoscomienzana
+dt
+tomarmedidasanti-epidémicasparaintentarfrenarloscon-
+Ω={0(cid:54)S(cid:54)N,0(cid:54)I(cid:54)N,0(cid:54)S+I(cid:54)N} tagios. Para el caso de la COVID-19 en Cuba, las medidas
+gubernamentalesylasestrategiassocialesadoptadas,pueden
+yseobservaqueI=0esunpuntodeequilibrio.
+consultarseen[1].Estoconducealamodificacióndelmodelo
+Esfácilcomprobarquesi
+SIRbásico(1)-(3)autónomoaunonoautónomo.
+α
+S˜0< ⇒I˜ >I(t)
+0
+β 1. Modelo SIR no autónomo
+loindicaqueI(t)esdecrecienteporloquenoexistiráunbrote
+epidémico.Porelcontrariosi Elsistemareducido(6)-(7)quedaríaahoradelasiguiente
+forma:
+α
+S >
+0
+β
+dS
+habráunbroteepidémico.Porlotanto,lapoblaciónumbral
+= −β(t)SI (9)
+dt
+desusceptiblesparaquehayaunbroteepidémicoes dI
+= β(t)SI−αI (10)
+α dt
+S =
+u
+β
+dondeβ(t)esunsplinedeorden1,osea,unafunciónescalo-
+. nada
+n
+Es más frecuente expresar estos resultados en términos
+β(t)=∑βB(t)
+delnúmeroreproductivobásicoqueeselnúmeropromedio i i
+i=1
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+4 ModelosSIRparaelseguimientodelaCOVID-19enCuba
+dondecadaβ esunaconstantenonegativaydadaunaparti- medidaquesefueronconstruyendonuevoslaboratoriosde
+i
+ciónt <···<t <t ···<t estrictamentecrecienteB(t) biologíamolecularcapacesderealizarlaspruebasPCR,se
+0 i i+1 np i
+esdefinidacomo comenzaronarealizarestudiospoblacionalesespecialmente
+(cid:26) 1 si t (cid:54)t<t en las zonas más afectadas [1]. Debido a este esfuerzo y a
+B(t)= i i+1
+i 0 otrocaso las fuertes campañas de divulgación se puede concluir con
+bastantecerteza,queprácticamentelatotalidaddelossero-
+Este punto de vista ha sido recientemente tratado para
+positivosconsíntomasyunporcientodelosasintomáticos
+abordaresteproblemaen[4]y[5].
+fuerondetectadosporelsistemadesaludcubano.Podemos
+Observaciones:
+concluirquelacalidadprimariadelosdatosessatisfactoria.
+1. Esteenfoqueconviertealproblemanoautónomo(9)-
+(10)enunacolecciónden p problemasautónomospara LasvariablesdeestadoobservablessonlaprevalenciaI(t)
+cadaintervalodetiempo[t i ;t i+1 ],coni=0,···,n p −1. ylosrecuperadosR(t).Atravésdelaecuación(4)sepuede
+observaralossusceptiblesS(t).
+dS i Laestimacióndelosβ i serealizaapartirdeobservaciones
+dt (t) = −β i S i (t)I i (t) (11) delasvariablesdeestadoparacadaintervalo[t i ;t i+1 ]enlos
+queserealizólaparticióntemporal.Sisetienen
+dI
+i
+(t) = β S(t)I(t)−αI(t), (12)
+i i i i
+dt
+{t =τ <···<τ =t }
+t∈ [t;t ], i=0···n −1 i i,1 i,m i+1
+i i+1 p
+tiemposdentrodelintervalo[t;t ],sedenotaránlasmob-
+2. Lascondicionesinicialesparaesteproblemadetermi- i i+1
+servacionesdelasvariablesdeestado,como:
+naránsilasoluciónescontinuaocontinuaapedazos.
+3. Lasolucióncontinuasealcanzasi Sˆ(τ i,1 )≡Sˆ i,1 ,···,Sˆ(τ i,m )≡Sˆ i,m ,
+S 0 =S˜ 0 , I 0 =I˜ 0 , S i (t i )=S i−1 (t i ); I i (t i )=I i−1 (t i ), Iˆ(τ )≡Iˆ ,···,Iˆ(τ )≡Iˆ ,
+i,1 i,1 i,m i,m
+i=1,···,n −1,
+p Sea
+esdecir,silacondicióninicialdelsiguientetramoesel S(t;β,α)
+i i
+valorfinaldeltramoanterior.
+I(t;β,α)
+i i
+4. Silascondicionesinicialesson
+lasolucióndelsistema(11)-(12)paraunβ yunα dados.Po-
+S =S˜, I =I˜; i=0,···,n −1, i
+i i i i p demosdefinirelfuncionaldeoptimizacióndeltramo[t;t ]
+i i+1
+lasoluciónsolamenteescontinuaapedazos.Esteca- como:
+so puede ser de interés cuando se dispone de datos,
+períodicamente recolectados, de susceptibles e infec- F(β)= 1 ∑ m (cid:104)(cid:0) Iˆ −I(τ ,β,α) (cid:1)2 +...
+i i,k i i,k i
+tados.1 En tal caso, el sistema de ecuaciones de ca- 2 k=1
+datramoutilizacomocondicionesinicialeslosdatos
+“reales”disponibles. (cid:0) Sˆ i,k −S i (τ i,k ,β i ,α) (cid:1)2 (cid:105) (13)
+5. Enamboscasoslasoluciónessuaveapedazos. Obsérvesequeestefuncionalesunafunciónreal:F:R→
+R ya que se asume que α es conocido. Este problema de
+1.1 Estimacióndelosβ yα
+i optimizaciónessencillo,yaquesepuedeacotarelóptimo,
+conrelativafacilidadapartirdedosvaloresdeβ apropiados.
+Laestimacióndeloscoeficientesβ serealizaapartirde i
+i
+Para otros métodos de optimización que dependan de una
+losdatosproporcionadosporelsistemadesalud.Lacalidad
+aproximacióninicial,laopciónnaturalesβ lacualesuna
+estos datos es muy importante para lograr una estimación i−1
+buenaelección.Enelprimertramo,laalternativaescalcular
+certera en cada período. Cuba cuenta con un sistema cen-
+la fuerza de la infección, que pasa por la estimación de R .
+tralizadoyúnicodeSaludPública,queabarcatodoelpaís. 0
+Esteesunprocedimientoestándarquesepuedeconsultaren
+RespectoalaepidemiadeCOVID-19,semovilizaronmiles
+[3],[11]o[7].
+devoluntariospesquisandoatodalapoblaciónenbuscade
+Estefuncionalpuedeserflexibilizado,porejemplo,sise
+laspersonasconsintomatología,ademásdeunarápidayefec-
+deseaunajusteponderadoalacurvadeinfectados,entalcaso
+tivabúsquedadeloscontactosdecasosconfirmadosparasu
+sepuedeestablecerunacombinaciónconvexaentrelosdos
+aislamientoeninstitucionesbajoladireccióndelasautorida-
+dessanitarias,dondeselesrealizaronpruebasPCR2.Enla sumandosdelasumatoria.Siesafueralaintenciónelmayor
+pesoestaríaenelprimersumando.
+1Enlaprácticasedisponendedatosdeinfectadosyrecuperados,pero
+despejandolaecuación(4)seestimanlossusceptibles.
+2Polymerasechainreaction,pruebadebiologíamolecularparadetectar Laestimacióndeα puedehacerseutilizandovarioscri-
+lacargaviralmedianteunamuestranasofaringea teriosepidemiológicos.Enteoríaestavinculadoalperíodo
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+ModelosSIRparaelseguimientodelaCOVID-19enCuba 5
+infeccioso(verecuación(5)),sinembargo,enlaprácticaestá
+900
+relacionadoconeltiempoqueelpacientepasóenloscentros
+hospitalarios.Estoesrelevanteenelcasocubano,enelque 800
+todoslospacientesconCOVID-19detectadossoningresados
+700
+enhospitalesyaislados.Sehademostradoquepacientespue-
+600
+dentenerunaestadíahospitalariamayoralos14días,esdecir,
+yapasadoeseperíodo,lapruebaPCRsiguesiendopositiva, 500
+aúncuandoelpacienteestéasintomático.Estopuededeberse 400
+a complicaciones propias de la enfermedad o a causas aún
+300
+noesclarecidasporlascienciasmédicas.Elaltahospitalaria
+(quesignificaqueelsujetopasóalcompartimentoderecu- 200
+perados)seotorgaluegodequelapruebaPCRfuenegativa. 100
+Enelreversodelamoneda,existenpacientes,esencialmente
+0
+jóvenes con sistemas inmunológicos robustos que negativi- 0 5 10 15 20 25 30 35 40 45
+tiempo t
+zanelPCRantesde10días.Paracomplicarestefenómeno
+tambiénocurrequeexistendostiposdealtas,elaltaclínica,
+que se otorga cuando el paciente es negativo al PCR y no
+tienecomplicacionesdealgúntipoyelaltaepidemiológica,
+queseotorga14díasdespuésdelaltaclínica.Elpacientede
+alta clínica, debe aislarse en su residencia hasta el alta epi-
+demiológica.Sinembargo,enCubalosdatosmostraronque
+enocasioneslospacientesdealtaclínicafueronmantenidos
+eninstitucioneshospitalarias.Principalmenteenlassemanas
+iniciales de la epidemia, donde había mayor incertidumbre
+ydesconocientodesuscaracterísticas,unidoaquenuncaen
+Cuba,losservicioshospitalarios,incluidoslosdecuidados
+intensivossevieronrebasados.
+Porestacausa,losvaloresdeα puedendiferirparacada
+intervalo[t;t ].Sisedisponedeunabuenabasededatos
+i i+1
+conlainformacióndetodosloscasos,sepuedecalcularel
+tiempo promedio de las altas dentro cada período [t;t ].
+i i+1
+En caso contrario se puede probar con varios valores de α
+yseleccionarcuálproduceelmejorajustealfuncional(13).
+Enlafigura3semuestraelajustedemodeloconperiodici-
+dadsemanal.Enelgráficodearribaseutilizóα =1/14.Se
+observaqueaunquelacurvarojadelaprevalenciaestárazona-
+blementeajustada,losrecuperados(curvaverde)presentaun
+alejamientodelosdatosqueacrecientaladiscontinuidadcon
+elsiguientetramo.Lagráficadeabajosemuestraelajustedel
+modeloconα =1/28,eldobledeltiempo,quedamejores
+resultados.Estoindicaquelasaltasenloshospitalesenlos
+primerosdíassedieronmáscercadelos28díasquedelos
+14.
+2. Pronósticos a futuro en el caso cubano
+Laspolíticasdesaludpúblicacoherentesylasmedidas
+anti-epidémicasconducenaladisminucióndelatasadecon-
+tagio. Para monitorear los progresos regularmente se suele
+usarelnúmeroreproductivoefectivo
+β
+R = S(t) (14)
+t
+α
+quecomienzaareducirseluegodeuncrecimientoinicial[1].
+ObsérvesequesudefinicióndifieredeR (ecuación(8))enla
+0
+sodarepucer
+y sodatsefnI
+Solucion del modelo SIR con ODE45
+I=infestados
+R=recuperados
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+0 5 10 15 20 25 30 35 40 45
+tiempo t
+sodarepucer
+y
+sodatsefnI
+Solucion del modelo SIR con ODE45
+I=infestados
+R=recuperados
+Figura3. Arriba:Ajustedelmodelosemanalcondatosde
+44díasyα =1/14.Seobservaladiscontinuidadenlacurva
+verdelosrecuperados.Abajo:elmismoajusteconα =1/28,
+seobservaunmejorajuste.
+sustitucióndeNporlaestimacióndelapoblaciónsusceptible.
+Al igual que para R los valores menores que 1 indican el
+0
+controldelaepidemia.
+Porlotanto,esnaturalesperar,luegodelasmedidasde
+distanciamientofísico,ladisminucióndelnúmeropromedio
+de infeccionessecundarias producidas porun individuose-
+ropositivo, durante su período infeccioso, en la población
+susceptible.Sepuedenusardistintasalternativasparamodelar
+estedecrecimiento.Nosotrosutilizamosundecrecimientoex-
+ponecialparaestimareldecrecimientoafuturo.Estemismo
+enfoque ha sido utilizado con resultados razonables en [4].
+Másprecisamente,asumimosque
+β ≈Kexp(−γt) (15)
+ydadoslosβ calculadosencadaintervalo[t;t ]ytomando
+i i i+1
+comotiempolamediaomedianadelintervalo,seajustapor
+mínimoscuadradoslaregresiónquepermitepredecirlosβ
+i
+futuros(verfigura4:Lacurvacolormagentaeslaexponecial
+de mejor ajuste. Los puntos azules son los datos de β los
+i
+círculosrojossobrelacurva,lospronósticos).
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+6 ModelosSIRparaelseguimientodelaCOVID-19enCuba
+10-8
+3 1400
+1200
+2.5
+1000
+2
+800
+1.5 600
+400
+1
+200
+0.5
+0
+0 20 40 60 80 100 120
+tiempo
+0 20 40 60 80 100 120 140
+Figura4. Ajustedelosdatosdeβ i segúnlaecuación(15)
+parapronósticos.Lacurvacolormagentaeslaexponecialde
+mejorajuste.Lospuntosazulessonlosβ estimadoslos i
+círculosrojossobrelacurvalospronósticos
+Enlafigura5arribaseobservalaestimacióndelacurva
+deinfectadosconperiodicidadsemanalydatosde37días.Se
+realizaunpronósticodemáximaprevalenciade1247casos
+para el día 63. Abajo se ve la curva estimada con datos de
+69días.Paraesafechayaelpicohabíasidosuperadoylas
+medidas anti-contagio redujeron la estimación del día 37 a
+unamáximaprevalenciarealde849casosalcanzadoseldía
+45,un32%menosquelovaticinado.Tambiénseestrechóla
+campana,señalquelosinfectadosestuvieronmenostiempo
+hospitalizadosquelopredicho.Cabeseñalarqueelsistema
+desaludcubano,sepreparópararecibirensusinstalacionesa
+latotalidaddelosinfectadosysuscontactos,potencialmente
+portadorestambiéndelSARS-CoV-2.Tambiénreforzósus
+salasdecuidadesintensivos,paraatendersuspacientesgraves
+ycríticos.Lascapacidadesdestinadasestosfinesnuncafueron
+superadas.
+3. Modelo SIR con demografía y
+tratamiento
+Diferentes modelos han sido utilizados para estimar el
+comportamientodelapandemia,enestetrabajosehautiliza-
+dounmodelodinámicocondemografíaquecontieneademás
+unparámetroquemidelaeficienciadeltratamientoquere-
+ciben los pacientes [14]. Como es usual en estos modelos
+la población se divide en tres comparimentos los llamados
+susceptibles(S),losinfectados(I)ylosrecuperados(R)(ver
+figura1).Alincorporarlademogradiaenelmodeloepidemio-
+lógicoSIRestamosasumiendoquetodoslosindividuosque
+nacensonsusceptiblesacontraerlaenfermedad.Seconsidera
+quelosindividuosdelapoblaciónmuerendecausasnoasocia-
+dasalaenfermedadconuníndicedemortalidadµ,entonces
+aicnelaverP
+Pronóstico a partir de datos de 37 días
+Pronóstico
+Datos reales
+Pico de 1247 Casos
+día 63
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+0 20 40 60 80 100 120
+tiempo
+aicnelaverP
+Modelo ajustado con datos de 69 días
+Modelo
+Datos reales
+Figura5. AjustesdelacurvadeInfectados.Arriba:ajuste
+condatosde37días,sepronosticaunamáximaprevalencia
+de1247casosactivoseneldía63.Abajo:ajustecondatosde
+69días,elpicorealfuede849casosyseadelantóaldía45.
+larapidezdelasmuertesenlaclasedelossusceptiblesestá
+dadaporµS,mientrasqueparalaclasedelosinfectadosesµI
+yparalaclasesdelosrecuperadosesµR.EnelmodeloSIR
+secombinanademáslafuerzadeinfección−βSI/N,donde
+β eselcoeficientedetransmisióndelaenfermedad.
+Cuandolosindividuossusceptiblesadquierenlaenfermedad,
+se mueven a la clase I de los infectados con una velocidad
+βSI/N yaquellosqueserecuperanomuerenabandonanla
+clase de los infectados con una probabilidad percápita por
+unidad de tiempo α, llamada la velocidad de recuperación.
+Otrosestadosqueinfluyenenladisminucióndelaincidencia
+I, es la proporción de enfermos que fallecen por causas no
+asociadasalapandemia(µI)yaquellosquemuerendebidoa
+laCOVID-19(εI).
+Eltratamientomédicoesunimportantemétodoparahacer
+decrecerladiseminacióndelaenfermedadyparasalvaralos
+ciudadanos.Hemosconsideradosunparámetoquedismunuye
+el número de los pacientes enfermos y estimula la capaci-
+dad de recuperación, denotado por T(I)=rI donde r es la
+probabilidaddequeeltratamientoquerecibenlosenfermos
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+ModelosSIRparaelseguimientodelaCOVID-19enCuba 7
+seaefectivo.Esteparámetrosevinculaademásaltratamiento Elsistemaposeedospuntosdeequilibrios,elpunto(1,0)
+preventivoquerecibelapoblaciónvulnerable.Entoncesse queesunaposiciónlibredeepidemiayquesiempreexiste.
+puedeescribirelmodeloSIRcondemografíaytratamiento Enelcasoqueennúmerodeinfectadosseapositivo,y>0,
+delaformasiguiente: seobtieneunpuntodeequilibriollamadoendémicodadopor
+1 1
+( ;ρ(1− )) (23)
+dS βSI R R
+= A− −µS (16) 0 0
+dt N
+El número reproductivo proporciona un criterio impor-
+dI βSI
+= −(α+µ+ε+r)I (17) tante para identificar cuándo la epidemia va a permanecer
+dt N
+eneltiempo,permitiendopronósticarlaaparicióndeetapas
+dR
+= (α+r)I−µR (18) derebrotes.SisecumplequeR <1,elsistemaposeesolo
+dt 0
+elúnicopuntodeequilibrio(1,0)queesasintóticamentey
+Adicionandolastresecuaciones(16)-(18)seobtieneuna globalmente estable. En caso R >1, el sistema posee dos
+0
+ecuacióndiferencialparalapoblacióntotal posicionesdeequilibrio,elpunto(1,0)esinestablemientras
+queelpunto(23),esasintóticamenteyglobalmenteestable
+dN
+=A−µN−εI (19) ([11],pág.50).
+dt
+De la ecuación 19 se observa que la población es variable 4. Algunas predicciones con el modelo
+perotienecomolímiteA/µ cuandoeltiempotiendeainfini- SIR con demografía
+to.ComoenelmodeloSIRbásico(1)-(3),lasdosprimeras
+ecuaciones en el sistema anterior son independientes de la
+terceraysepuedetratarestesistemacomounsistemabidi- Paralaobtencióndesimulacionesnuméricasutilizando
+mensional,queesreescaladoytransformadoenunsistemasin elmodeloSIRcondemografíasefijaronalgunosparámetros
+dimensionesrealizandolossiguientescambiosdevariables frutodelintercambioconlosepidemiólogosdelMINSAPyel
+convenientes, comportamientoqueestabateniendolapandemiaennuestro
+τ =(α+µ+ε+r)t, país,α =1/5,3,A=µ =8/1000yε =0,035,estimándose
+losparámetrosβ yrapoyadoenlosdatosdeconfirmados,re-
+observequeτ esunamagnitudadimensional,entonces
+cuperadosyfallecidosenlasprimerassemanas.Lasiguiente
+tablamuestralosresultadosobtenidosyelnúmeroreproducti-
+N(t)=N(τ/(α+µ+ε+r))
+vobásicocorrespondiente.
+ysimilarmenteseprocedeconlasvariablesdeestadoSeI.
+Definiendolasvariablesadimensionadas
+sem 1 2 3 4 5 6 7
+µ
+x(t)= , β 0.32 0.58 0.72 0.95 0.93 0.90 0.88
+AS
+r 0.00 0.11 0.23 0.45 0.42 0.40 0.38
+µ β/r - 5.27 3.13 2.11 2.21 2.25 2.32
+y(t)= ,
+AI R 1.40 1.47 1.49 1.42 1.43 1.43 1.44
+0
+resultaelsiguientesistemadeecuacionesadimensional, Tabla1. Comportamientodelosparámetrosβ,r,elcociente
+entreambosyR segúnelmodeloSIRcondemografía
+0
+(16)-(18)enlasprimeras7semanasdeepidemiaenCuba.
+dx
+= ρ(1−x)−R xy (20)
+0
+dt
+dy
+= (R 0 x−1)y (21) Enlatabla1podemosobservarelcomportamientodelos
+dt
+parámetros β, r, el cociente β/r y el valor de R según el
+0
+donde modeloSIRcondemografía(16)-(18)enlasprimerassiete
+µ
+ρ = semanas. Durante este período, a pesar de que la diferecia
+α+µ+ε+r
+entrelosparámetrosβ yrsemantuvocasiconstante,conun
+y valorpróximoa0,5;elcocienteentreellosalcanzasumayor
+valorlasegundasemanayvadecreciendohastaestabilizarse
+Aβ
+R = (22) a partir de la semana 4 en un valor promedio de 2.22. Ob-
+0
+µ(α+µ+ε+r)
+sérvesequeelcocienteβ/rexpresalarelaciónentrelatasa
+El parámetro R es el número reproductivo básico que decontagiopoblacionaldebidoalaleydeaccióndemasas
+0
+tieneelmismosignificadoqueparaelmodeloanterior,pero ylaefectividaddeltratamientomédico.Silaefectividaddel
+queparaestemodelotieneunaexpresióndiferentealR (8), tratamiento aumenta, el cociente disminuye. Esta relación
+0
+delmodelobásico. fuemejorandoconformeavanzaronlassemanasenelinicio
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+8 ModelosSIRparaelseguimientodelaCOVID-19enCuba
+delaepidemia.ElnúmeroreproductivoR semantuvocasi proximidaddelB-splineconlasolucióncalculada.Enelpre-
+0
+constantetodoelperíodoconunvalormediode1.44. sentetrabajo,lassolucionescalculadas,fueroninterpoladas
+El modelo reprodujo con muy buena exactitud el com- porunB-splinecúbicoenlospuntos{t i ,I(t i )}y{t i ,R(t i )}.
+portamientodelosdatos.Pudopreverelpicomáximoyla Lacapitalcubana,LaHabana,centroeconómico,cultural
+duracióndelprimerperíodoepidémico(unos120días).Ayudó ypolíticodelpaís,seconvirtióenelcentrodelapandemiaen
+alasautoridadesenlatomadedecisionesyenlapreparación nuestraisla.Losmodelospresentados,rápidamenteadvirtie-
+delosrecursosnecesariosparaelposiblesurgimientodeuna ronestecomportamiento(verfigura7).
+situaciónpandémicamáscomplejaymodelódiferentesesce- Lafigura8muestralasolucióndelmodeloparaLaHabana
+narios.Unagráficamuypublicitadaenlosmediosdeprensa conperiodicidadde4días.Sevenlosdiversosrebrotesque
+se reproduce en la figura 6. Muestra estos escenarios obte- afectaronalacapitalycómoelmodelolosajustaypronostica
+nidosdelmodeloqueayudaronavisualizarenlapoblación suduración.Lacurvacalculadaporelsistemadeecuaciones
+elpeligrodelasituaciónepidemiológicaquecomenzóel11 (11)-(12)fueaproximadaporunB-splinecúbico.
+demarzode2020enCuba.Elescenariomáscrítico,enrojo, Elsurgimientoderebrotesdelapandemiatambiénpudo
+pronosticabaunpicoenlaprimeraquincenadelmesdemayo, seravisoradodesdetempranoporelmodeloSIRcondemo-
+con una cantidad de 4200 casos activos. Este escenario se grafía.EnlaTabla1seobservaqueelnúmeroreproductivo
+alcanzaconlosparámetrosdelasegundasemana,cuandoel durantecasitodoelperíodoinicialsemantuvoporencima
+cocienteentreβ/r=5,27eselmayor.Elescenariomedio, de 1, creando las condiciones para que la pandemia se re-
+enverde,pronosticaelpicoenlaprimerasemanademayo. organizara una vez que las medidas de desescalamiento se
+Sealcanzaconlarelaciónβ/r=3,13delatercerasemana. implementaran.Debidoalaaltacapacidaddeinfectaciónque
+Apartirdelacuartasemanaelcocienteβ/rsemantieneapro- posee el virus y a la ausencia de una vacuna en los próxi-
+ximadamenteconstanteycorrespondealescenariofavorable, mosmeses,unidoalaincapacidaddelaeconomíadepoder
+enazul,quepronosticóelpicoparael1demayo.Larealidad mantenerelconfinamientoporunlargoperíododetiempo,
+evidencióquelasmedidasdeaislamientotempranofunciona- losepidemiólogosempiezanacontemplarlaposibilidadde
+ronconefectividadyelpicoocurrióel25deabrilcon847 endemiaporalgúntiempo.Hayqueañadirqueotroscorona-
+casosactivos,estacifra,incluidoslosrebrotesposteriores,no virusquecirculanenelpaíssonendémicos,condeterminadas
+sehavueltoaalcanzarenmásde200díasdepandemia. temporadasalañoderepunte.Estotambiénocurreconotros
+virusdeinfluenza.
+Elsistemadeecuacionesdiferenciales(20)-(21)tienedos
+5. Rebrotes
+posiciones de equilibrio debido a que el número reproduc-
+tivoR =1,4>1,Elpuntodeequilibrio(1,0)esinestable,
+0
+pero el punto de endemia es asintóticamente estable. Esto
+Laofensivaanti-epidémicadelasautoridadesmantiene
+hacequetodaslastrayectoriasespiralesgiranalrededordeél,
+unagranmasadesusceptiblescandidatosacontraerlaenfer-
+convergiendocomoseobservaenlafigura9.
+medad.Siunfocodecontagiadosnodetectadosinteractúa
+Por su parte la población susceptible oscila sobre una
+conellosenlacomunidad,esmuyposiblequeseproduzcaun
+rectaparalelaalejetemporal,(verfigura10)yseestabiliza
+rebrote[1].Ladisminucióndelapercepciónderiesgo,que
+cuandoeltiempotiendeainfinito.Algosimilarsurgeparalos
+inducealresquebrajamientodeladisciplinaanti-epidémica
+casosconfirmados,quesemantienenoscilanteseneltiempo
+einclusohechosfortuitossonalgunasdelascausasmásfre-
+hastaqueseestabilizanenunvalorendémico.Lametadelas
+cuentesdelosmismos.Tambiéncontribuyenalosrebrotes
+autoridadessanitariasesqueestevalornodesbordeelsistema
+la eliminación de las medidas de restricción física en pos
+hospitalario.
+delareactivacióneconómicasinuncontroldelaepidemia.
+En la figura 11 muestra una modelación de la endemia
+UnacaracterísticadelaCOVID-19eselelevadoporcientode
+(gráficaenazul).Enellaseobservaqueelnúmerodecasos
+poblaciónseropositivaalSARS-CoV-2quesemantieneasin-
+activososcilaenperíodosdetiempohastaqueseestabiliza
+tomática,peroquepropagaelvirusdificultandoladetección
+enunaposiciónendémica.Lasoscilacionespuedenserinter-
+delcasoquedaorigenaunfoco.
+pretadascomorebrotes,porlotantosepredicesuocurrencia.
+La estimación periódica de los parámetros del modelo
+Lagráficanegrasonlosdatosrealeshastalos200díasepi-
+SIRpermiteajustarlosrebrotesypredecirsumagnitud.Sin
+démicos. Se observan los rebrotes reales. A los efectos del
+embargo, si la epidemia lleva un tiempo relativamente lar-
+control de la pandemia en Cuba, se necesita que esta línea
+go,elpronósticoapartirdeldecrecimientoexponencial(15)
+endémicaseencuentrepordebajodelos500casos,paratener
+comienzaaserexcesivamenteoptimista.Entalcasoescon-
+conholguralacoberturadecamasyequiposhospitariosen
+veniente recomenzar el proceso a partir de un tiempo más
+casodesernecesarios.
+avanzado,porejemplo,previoaunrebroteimportante.
+Elsistema(11)-(12)seintegraconlosβ estimadosylos Otrosmodelosdinámicossehanutilizadoenestetrabajo
+i
+pronosticados.Confinalidadescosméticaslasoluciónpuede paralasprediccionesdelcomportamientodelapandemiaen
+aproximarseporunafunciónsuave,porejemplounB-spline. Cuba.ParticularmentelostrabajosdePengetal.[13],Feng
+LapropiedaddevariaciónacotadadelosB-splinegarantizala et.al[6]yLipsitchet.al.[10]hansidoadaptadosparatomar
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+ModelosSIRparaelseguimientodelaCOVID-19enCuba 9
+Figura6. Escenarioscrítico,medioyfavorablesimuladosconelmodeloSIRcondemografíaenlasprimerassemanasde
+pandemiafuerondeutilidadenlapeparacióndelgobiernoyelpuebloparaenfrentarlacontingencia.Ennegrolosdatosreales,
+queabarcanelperíododesdeel11demarzohastael22demayode2020.Muyajustadosobrelosdatosrealesseobservael
+pronósticodelmodeloSIRcondemografía
+enconsideraciónlosmúltiplesrebrotescomolosobservados agosto.Estosresultadospermitieronalertaralasautoridadesy
+enlafigura12.EnesostrabajosseutilizaunmodeloSEIQRP, lapoblaciónylasmedidasdedesescalamientoquesehabían
+queesunageneralizacióndelosmodelosSIRabordadosan- adoptado tuvieron que ser revocadas en algunos territorios.
+teriormente (ver figura 1), en el cual el compartimento de Esterebrotetuvounaduraciónmásextensa,fuefrenado,sin
+losinfectadossesubdivideentressubclases:expuestos(E), embargo,tardómesymedioenlograrsucontrol(verfigura
+infectados(I)ycuarentena(Q).Losexpuestossonlossero- 14)
+positivos asintomáticos que no han sido detectados por las
+autoridadessanitarias.Losinfectadossonlosseropositivos
+6. Consideraciones finales
+consíntomas,peroquetampocohansidodeclaradosenfer-
+mos de COVID-19 y por lo tanto no están hospitalizados Losmodelosdinámicosfueronlabasedelospronósticos
+comotales.Finalmenteelcompartimentodecuarentena,que de la epidemia de COVID-19 en Cuba. Estos junto a otros
+agrupaaloshospitalizadosconlaCOVID-19,esdecir,los modelosytécnicasmatemáticasformaronpartedelarsenal
+casosactivos.Elmodeloincluyeademásuncompartimento deherramientascientíficiasutilizadasparacorroborarycon-
+dondeseubicanlaspersonasdisciplinadasqueseprotegen, trastarresultados.Ladivulgacióndelosmodelosdinámicos
+cumpliendolasmedidasanti-contagio,denotadoporP.Este contribuyóalacampañadeconcientizacióndelapoblación
+modeloesmáscomplejo,perofueusadodesdefinalesdejulio, acerca de la necesidadde las medidas anti-epidémicas yal
+juntoaotroscomolosfenomenológicos[12]comopartedel personalmédico,especialmentelosepidemiólogos,aapode-
+arsenal de herramientas para la comprensión de resultados, rarsedeelloseneltrabajocotidianoparalaerradicacióndela
+especialmenteenlaspredicciones. epidemia.
+Enlafigura13semuestranvariosmodeloscondatosdes- LosmodelosSIRconcoeficientestemporalesySIRcon
+deeliniciodelaepidemiahastael29dejulioyelpronóstico demografía descritos en las secciones 1 y 3 pronosticaron
+paralassiguientes2semanasdeloscasosactivosdeLaHa- certeramenteuncontroldelapandemiaen120días.Losre-
+bana. También se incluye el escenario favorable, mostrado brotes modificaron el fin de la epidemia, sin embargo, los
+en la gráfica 6. Los modelos concordaron en el control de modelosrespondieronalosmismos,loqueayudóalasauto-
+laepidemiapara120días,apesardelosrebrotesocurridos ridadessanitariasatrazarlapolíticadeenfrentamientoala
+(recordarycompararconlagráfica8).Sinembargo,unasi- contingencia.
+tuaciónnuevayanormalcomenzóagestarseenlosprimeros Lamayorpartedelosanálisisylasgráficaspresentadas
+diasdeagostoylosmodelosrapidamentedieronlaalarma. enestetrabajo,fueronexpuestasalasautoridadessanitarias
+Finalmenteesterebrotetuvounamagnitudimportante(obser- ygubernamentales,loquesindudascontribuyóalatomade
+varnuevamentelafigura12)durantelaprimeraquincenade decisionesyelestablecimientodelaspolíticasdeenfrenta-
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+10 ModelosSIRparaelseguimientodelaCOVID-19enCuba
+Figura7. UnacomparaciónentreLaHabanayelrestodelpaísilustracomoelcentrodelapandemiasedesplazódesdelos
+iniciosalacapital,obteniéndoselosvaloresmásaltosdecasosactivosydemorandoelperíododedesescalamiento.
+450
+400
+350
+300
+250
+200
+150
+100
+50
+0
+0 50 100 150
+Tiempo (días)
+aicnelaverP
+Modelo SIR con estimación periódica de parámetros. Ejemplo de prevalencia en La Habana COVID-19
+Modelo SIR
+Datos reales
+Figura8. AjustedelmodeloparaLaHabanacon
+periodicidadde4díasydatosquereflejanrebrotes
+epidémicos.Sevecomoelmodelorespondealosrebrotes.
+LacurvafueaproximadaporunB-splinecúbicode
+Figura9. Elpunto(1,0)esinestable,todaslastrayectorias
+interpolación
+sealejandeestepuntoacercándosealpuntoendémico
+(0.6943,0.0041)queesasintóticamenteestable.
+mientoalapandemia.
+[3] Brauer F, Castillo-Chavez C, Feng Z. Mathematical
+Referencias
+ModelsinEpidemiology.Luxemburgo:Springer;2019.
+[1] Abelló U., I.; Guinovart D., R.; Morales L., W. El Disponibleen:
+modelo SIR básico con parámetros variables y las https://www.math.purdue.edu/˜fengz/pub/book_contents
+políticasanti-epidémicasdesaludpública.RevistaCu- .pdf
+banadeSaludPública.2020(Enprensa)Disponibleen
+http://www.revsaludpublica.sld.cu/index.php/spu/editor [4] Cabo, N.; Cabo, A. Modelos SIR modifi-
+/submissionEditing/2597 cados para la evolución del COVID19. ar-
+Xiv:2004.11352v1 [q-bio.PE], 2020. Disponible
+[2] Batiha,Abdul-Monim;Batiha,Belal.ANewMethod
+enhttps://arxiv.org/pdf/2004.11352.pdf
+ForSolvingEpidemicModel.AustralianJournalofBasic
+andAppliedSciences,5(12):3122-3126,2011. [5] Chen,Y.;Lu,P.;Chang,C.;Liu,T.ATime-dependent
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+ModelosSIRparaelseguimientodelaCOVID-19enCuba 11
+Figura10. Duranteelperíododeendemialapoblación Figura11. Lagráficaazulesunamodelacióndelaendemia.
+susceptibleoscilahastaquepermaneceenequilibrioconla Seobservaqueelnúmerodecasosactivososcilaenperíodos
+poblaciónenferma. detiempohastaqueseestabilizaenunaposiciónendémica.
+Lagráficanegrasonlosdatosrealeshastalos200días
+epidémicos
+SIRmodelforCOVID-19withUndetectableInfectedPer-
+sons.arXiv:2003.00122v6[q-bio.PE],2020.Disponible
+enhttps://arxiv.org/pdf/2003.00122.pdf en Cuba. Ciencias Matemáticas, Vol. 34, No. 1, Pag.
+19-32,2020
+[6] Feng,Z.;Thieme,H.R.Recurrentoutbreaksofchild-
+hooddiseasesrevisited:theimpactofisolation.Mathe- [13] Peng,L.;Yang,W.;Zhang,D.;Zhuge,C.;Hong,L.
+maticalBiosciences,128(1-2),93-130,1995. EpidemicanalysisofCOVID-19inChinabydynamical
+modeling [Internet] arXiv preprint arXiv:2002.06563.
+[7] Esteva L.; Gómez G.; Hernández J.; Zepeda M. El
+2020Disponibleen:https://arxiv.org/abs/2002.06563
+estudiodelosbrotesepidémicosysusposiblescausas.
+Matemáticasyepidemiología.Ciencias(24),pp.57-63, [14] Wang, W. Backward bifurcation of an epidemic mo-
+1991.Disponibleen: delwithtreatment.MathematicalBiosciences201,pp.
+https://www.revistacienciasunam.com/en/busqueda/titulo 58?71,2006.DOI:10.1016/j.mbs.2005.12.022
+/172-revistas/revista-ciencias-24/1576-
+[15] H.Weiss.TheSIRmodelandtheFoundationsofPublic
+matem%C3%A1ticas-y-epidemiolog%C3%ADa.html
+Health. MATerialMATemàtics. Publicació electrònica
+[8] Harko, T.; Lobo, F. S. N.; Mak, M. K. Exact analy- dedivulgaciódelDepartamentdeMatemàtiquesdela
+tical solutions of the Susceptible-Infected-Recovered UniversitatAutònomadeBarcelona;Volumtreball,(17),
+(SIR)epidemicmodelandoftheSIRmodelwithequal
+death and birth rates. Appl. Math. Comput. 2014
+DOI:10.1016/j.amc.2014.03.030
+[9] Kermack,W.;McKendrick,A.Acontributiontomat-
+hematicaltheoryofepidemics,Proc.Roy.Soc.Lond.A,
+115,pp.700-721,1927.
+[10] Lipsitch, M.; Cohen, T.; Cooper, B.; Robins, J. M.;
+Ma,S.,James,L.;Fisman,D.Transmissiondynamics
+andcontrolofsevereacuterespiratorysyndrome.Scien-
+ce,300(5627),1966-1970,2003.
+[11] Martcheva M. An Introduction to Mathematical
+Figura12. Pronósticossobredatosconrebrotes.El
+Epidemiology.Springer;2015.Disponibleen:
+pronósticoI(encolorrojo)fuecalculadoconelmodelo
+http://zums.ac.ir/files/socialfactors/files/An_Introduction
+SEIQRPde[13],elpronósticoII(colorverde)conel
+_to_Mathematical_Epidemiology-2015.pdf
+modelosSIRcondemografía(16)-(18)yelpronósticoIII
+[12] Mesejo-Chiong, J. A.; León-Mecías, A. M. Modelos (colorazul)conelmodeloSIR(11)-(12)
+fenomenológicosaplicadosalestudiodelaCOVID-19
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12
+12 ModelosSIRparaelseguimientodelaCOVID-19enCuba
+Figura13. Enlafigurasemuestraqueelpronósticodecasosactivosajustómuybienconloscasosreportados,ysepuede
+notarelseguimientodelrebroteocurridoenlosfinalesdejulio.Elvirussemantuvomuybiencontroladoporlasautoridadesen
+todoelperíododelosprimeros120díasdepandemia.
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+Aug Sep Oct Nov
+Fecha 2020
+sodarepucer
+y sodatsefnI
+Predicción Cuba 08-Oct-2020
+Predicción de Activos
+Predicción de Altas
+Activos Reportados
+Altas Reportadas
+Figura14. ModelaciónypronósticodelaCOVID-19enCubacondatosdefinalesdejuliohastaprincipiosdeoctubreconel
+modeloSIR(11)-(12)conperíodode6días
+2013.Disponibleen: http://mat.uab.cat/matmat_antiga/PDFv2013/v2013n03.pdf
+CienciasMatemáticas,Vol.34,No.1,2020Pag.1-12

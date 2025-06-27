@@ -1,0 +1,350 @@
+LOS ROLES Y EL APRENDIZAJE DE LA PROGRAMACIÓN ORIENTADA A
+OBJETOS MEDIANTE LA COLABORACIÓN EN LÍNEA PARA LA
+SOLUCIÓNDE PROBLEMAS.
+JorgeFardales Pérez 1
+Miguel Salvat Quesada 2
+Ernesto Roberto Fuentes Garí3
+1Departamento deIngeniería Informática, Universidad JoséMartí Pérez deSancti –
+Spíritus,Cuba, jorgefardales@suss.co.cu
+1Departamento deIngeniería Informática, Universidad JoséMartí Pérez deSancti –
+Spíritus,Cuba,
+salvat@suss.co.cu
+3Departamento de EducaciónaDistancia, Universidad deCienfuegos Carlos Rafael
+Rodríguez,Cuba,
+gari@ucf.edu.cu
+Resumen
+Se presenta la colaboración en línea mediante el uso de roles, para la solución de
+problemas, durante el aprendizaje de la asignatura Diseño y Programación Orientada a
+Objetos (DPOO). Como soporte tecnológico se utiliza AVA – POO, un Ambiente
+Virtual de Aprendizaje (AVA). AVA – POO se utiliza dentro del proceso de enseñanza
+– aprendizaje de dicha asignatura que se imparte en primer año segundo semestre de la
+carrera de Ingeniería Informática en la Universidad de Sancti - Spíritus(UNISS). AVA –
+POO proporciona los recursos tecnológicos necesarios (Mapas conceptuales,
+simuladores – Relaciones parte – todo, polimorfismo, etc. - , tutorial, diccionario
+electrónico, biblioteca virtual, ejercitador, chat, foro de discusión, email) para la
+manipulación de información por computadora y su uso ha mejorado los resultados de
+los estudiantes en su aprendizaje: a) Los profesores manifiestan que la independencia
+con que los estudiantes toman decisiones y resuelven problemas ha mejorado
+significativamente desde un50 %hasta un70 %yque cometen mucho menos errores, b)
+El 80 % de los alumnos y todos los profesores manifiestan satisfacción con los servicios
+quebrindaAVA –POOycon losprocedimientospara su utilización.
+Palabras clave: Ambiente de solución colaborativa en línea de problemas, aprendizaje
+colaborativo asistido porcomputadora, Web2.0
+Abstract
+In this work a description is made about the experiences achieved during the
+development of COPS experiences by means of AVA – POO, which make it possible to
+develop skills to manipulate the information by computer while the teaching - learning
+process of the subject Object Oriented Design and Programming that plays in the first
+year, second semester of the Informatics Engineering career at the Sancti – Spiritus
+University (UNISS) is being strengthened. For this, AVA – POO, a Virtual Learning
+Environment (VLE) for POO, has been developed and used. AVA – POO provides the
+technological resources needed (Conceptual maps, simulators – Part – whole relations,
+polimorphism, etc. - , tutorial, electronic dictionary, virtual library, electronic trainer,
+chat, online discussions, email) to manipulate the information by computer and its use
+has lead students to better results in their learning: a) Professors claim that students
+independence in decision making and problem solution have significativelly increased
+from 50 % to 70 % and that they make much less errors, b) 80 % of the students and all
+professors are satisfied with the services of AVA – POO and with the procedures for its
+use.
+Keywords: Collaborative Online Problem Solving (COPS), Computer Supported
+CollaborativeLearning (CSCL), Web 2.0
+Introducción
+Hace alrededor de 30 años, Bruner (1973) expreso que las personas aprenden con más
+efectividad mediante la indagación activa, la experimentación y la colaboración que
+mediante la aceptación pasiva del contenido. Aunque ese trabajo continúa siendo
+corroborado por evidencias empíricas más recientes (REFS), irónicamente, existe un
+vacío tecnológico en los tipos de recursos de aprendizaje electrónico que mejor apoyen
+dicho enfoque. Ese vacío, por tanto, necesita la aplicación de recursos innovativos tanto
+pedagógicos como técnicos, dentro de un ambiente en línea, capaz de fortalecer el
+aprendizajecolaborativo delos estudiantes [Edwards 2007].
+Actualmente, con el auge de Internet, existe una tendencia hacia el aprendizaje
+electrónico basado en la interacción de las personas (Estudiantes, profesores, etc.) entre
+si y con el contenido a través de sistemas basados en sitios web. En este sentido, como
+plantean varios autores:
+Los ambientes actuales de aprendizaje en línea se han fortalecido en términos de
+almacenamiento masivo de información, aunque están pobres cuando se trata de
+optimizar el compromiso de los estudiantes [Edwards 2007]. La investigación
+confirma que el aprendizaje significativo de los estudiantes requiere ambientes
+de aprendizaje y experiencias de aprendizaje que sean relevantes para la vida de
+los estudiantes y para el medio en que ellos se desarrollan. Se plantea que las
+experiencias de aprendizaje deben ser co-construidas, dirigidas hacia metas,
+autenticas, y con posibilidades reales para la solución colaborativa de problemas
+[Jonassen 2003].
+Algunos de los beneficios particulares de la solución colaborativa de problemas
+incluyen alentar a los estudiantes para que: Expresen sus pensamientos de forma oral
+y/o escrita, trabajen juntos, hagan preguntas, expliquen y justifiquen sus opiniones,
+elaboren y reflexionen sobre su conocimiento ([Soller 2001], [Webb 1995]). De este
+modo se incrementa la responsibilidad de los estudiantes por su propio aprendizaje y se
+incrementa la posibilidad de los estudiantes de resolver o examinar problemas en una
+variedad deformas [Baghaei 2007].
+En este sentido, una solución a lo planteado anteriormente es el trabajo alrededor de los
+ambientes de solución colaborativa en línea de problemas (Collaborative Online
+Problem Solving, COPS en ingles) que están efectuando diferentes autores ([Edwards
+2007]). En este trabajo se presenta la colaboración en línea mediante el uso de roles,
+para la solución de problemas, durante el aprendizaje de la asignatura Diseño y
+Programación Orientada a Objetos (DPOO). Como soporte tecnológico se utiliza AVA
+– POO, un Ambiente Virtual de Aprendizaje (AVA). AVA – POO se utiliza dentro del
+proceso de enseñanza – aprendizaje de dicha asignatura, que se imparte en primer año
+segundo semestre de la carrera de Ingeniería Informática en la Universidad de Sancti -
+Spíritus(UNISS), situada enlaregióncentral de Cuba.
+Elresto del trabajo sedivideen tres secciones principales:
+ Sección 2: Se realiza un resumen sobre las teorías asociadas a la COPS y su
+contribuciónpara mejorar el aprendizaje.
+ Sección 3: Se describen los resultados fundamentales que se alcanzaron durante
+el desarrollo de experiencias COPS a través de AVA - POO dentro del proceso
+deenseñanza –aprendizaje delaPOO.
+ Sección4: Serealizaunanálisisde losresultados.
+2Elaprendizajecolaborativo ysusoporte tecnológico
+El aprendizaje a través de la interacción social ha sido objeto de estudio desde muchas
+perspectivas. En la literatura, los mecanismos mediante los cuales los estudiantes
+aprenden mientras trabajan en una situación social de aprendizaje se explican utilizando
+la idea del conflicto socio - cognitivo de Piaget (Piaget, 1978), y la zona de desarrollo
+próximo (ZDP) de Vygotsky (1978). El conflicto socio – cognitivo se refiere a una
+situación en la cual los individuos tienen diferentes respuestas al mismo problema y
+tratan de lograr una solución conjunta, lo que conduce a un desequilibrio en cada
+individuo [Piaget 1978]. La zona de desarrollo próximo se refiere al nivel de
+aprendizaje al cual un individuo es capaz de aprender a través de la interacción con un
+compañero más capaz o un adulto [Vygostky 1978]. Trabajos mas recientes hacen
+referenciaaestas mismasideas, porejemplo: [Hurme2010]y[O’Neil 2003].
+En este sentido, se deben tener en cuenta el significado del aprendizaje colaborativo, así
+como el apoyo que recibe a través de las Tecnologías de la Informática y las
+Comunicaciones (En particular a través de la Web 2.0 o web social) y su impacto en la
+soluciónde problemas.
+2.1Aprendizajecooperativo vs aprendizajecolaborativo
+Actualmente los términos aprendizaje cooperativo, aprendizaje colaborativo, y trabajo
+en grupo se usan como sinónimos en la investigación y la practica educativa, sin
+embargo no es así. El trabajo en grupos para la solución de problemas se refiere a
+actividades de solución de problemas que involucran las interacciones entre un grupo de
+personas [Zhang 1998].Para organizar el trabajo en grupos han sidoutilizados:
+- Los métodos de aprendizaje cooperativo: En el aprendizaje cooperativo (En
+[Slavin 1980] aparece una descripción resumida de cuatro técnicas bien
+conocidas), el trabajo sedivide entre losmiembros del grupo, ylas subtareas que
+seresuelven individualmentesemezclan para obtener unobjetivo final.
+- Los métodos de aprendizaje colaborativo: En el aprendizaje colaborativo, los
+miembrosdel grupo trabajan juntos([Dillenbourg 1999], [Webb 1982]).
+Además, tomando como base el trabajo de Piaget [Piaget 1985], se plantea que un
+beneficio cognitivo importante del aprendizaje colaborativo es que cuando los
+estudiantes se enfrentan a perspectivas que difieren con respecto a la solución de un
+problema, la interacción hace que los participantes consideren cuestiones que no se les
+hubieran ocurrido de otra manera. Ese estimulo puede hacer que ellos identifiquen
+vacíos en su comprensión, que a partir de ese momento estarán en condiciones de
+enfrentar. Además, se debe tener en cuenta que en la sociedad actual del conocimiento
+(O era de la información), el trabajo es cada vez más basado en el conocimiento,
+interdisciplinario y complicado, por lo que es difícil para una persona completar una
+tarea sofisticadasin laayuda deotros ([Barron 2000], [Wang 2010]).
+2.2LaWeb 2.0yel aprendizaje colaborativo asistidoporcomputadora
+Según [Wang 2010], el aprendizaje colaborativo asistido por computadora (En ingles,
+CSCL: Computer-Supported Collaborative Learning) es una estrategia instructiva
+emergente la cual esta sustentada mediante las teorías de aprendizajeconstructivistas. El
+campo de investigación CSCL incluye un rango de situaciones en el cual las
+interacciones tienen lugar entre los estudiantes utilizando redes de computadoras para
+fortalecer el ambiente de aprendizaje. Incluye el uso de la tecnología para apoyar las
+comunicaciones asincrónicas y sincrónicas entre los estudiantes dentro del campus, así
+como a los estudiantes que están geográficamente distribuidos [Resta 2007]. La meta
+principal del CSCL es proporcionar un ambiente que le de soporte a la colaboración
+entre los estudiantes para fortalecer su proceso de aprendizaje [Kreijns 2003], facilitar el
+aprendizajecolectivo [Pea1994], olacognicióndel grupo [Stahl2006].
+En este sentido, se han desarrollado varios sistemas para el aprendizaje colaborativo,
+pero el apoyo de la interacción entre pares (Peer-to-peer, en ingles) en los sistemas
+CSCL estaaun ensu infancia. Diferentes estrategias para apoyar computacionalmente el
+aprendizaje colaborativo en línea hansido propuestas y utilizadas, pero senecesitan mas
+estudios para examinar la utilidad de estas técnicas ([Jerman 2001], [Baghaei 2007]).
+Sin embargo, esos beneficios solo se logran mediante equipos de aprendizaje que
+funcionen correctamente ([Jarboe1996],[Baghaei 2007]).
+Actualmente, con el auge de Internet, existe una tendencia hacia el aprendizaje
+electrónico basado en la interacción de las personas (Estudiantes, profesores, etc.) entre
+si y con el contenido a través de sistemas basados en sitios web. A tal efecto, se
+comienzaahablar delaweb 2.0confrecuencia.
+Según[Wang 2010]:
+Web 2.0 es la segunda generación de herramientas basadas en web, y se
+caracteriza por fortalecer el intercambio, la interacción y la colaboración entre
+sus usuarios. La primera generación de tecnologías web (Llamadas web 1.0)
+básicamente entregaba información desde el servidor web a los usuarios. Es
+decir, principalmente da soporte solo a la entrega unidireccional de información.
+Sin embargo, la tecnología web 2.0 hace posible la comunicación bidireccional.
+Los usuarios no son solo consumidores de información, sino que también
+contribuyen con información. Ellos pueden crear y subir (upload, en ingles)
+nueva información hacia el servidor web. Además, ellos pueden modificar la
+información publicada. Las paginas web sobre Web 2.0 (Por ejemplo, iGoogle)
+con frecuencia son programas multimedia, en los cuales los usuarios pueden
+crear nuevas pestañas (tabs, en ingles), adicionar nuevos objetos, o arrastrar y
+soltar (drag-and-drop, en ingles) objetos hacia cualquier posición de una pagina
+web. El advenimiento de la tecnología web 2.0 ha hecho que muchas
+aplicaciones basadas en web sean mas interactivas que antes. Weblog, Wiki,
+Google Docs, Yahoo groups, y Facebook son ejemplos representativos de
+herramientas Web 2.0.
+3.Solución.Colaboración en línea dentro deAVA –POO mediante el usoderoles
+Con base en las ideas expuestas en las secciones anteriores, en las universidades en
+general, y en los cursos de postgrado e iniciativas de aprendizaje para toda la vida en
+particular, el aprendizaje colaborativo cada vez es más y más frecuente. Cuando las
+dimensiones del grupo crecen – En términos del numero de participantes – hay una
+necesidad mas evidente de soporte tecnológico para el grupo que interacciona
+colaborativamente (Por ejemplo, se debe estimular el compromiso del grupo con las
+actividades basadas en problemas y basadas en proyectos, con varios niveles de
+acciones colaborativas: Uso compartido de recursos, así como la colaboración mas
+estructurada en el sentidoestricto del termino)[Calvani 2004].
+El desarrollo y uso de AVAs y la asignación de roles a los usuarios (Estudiantes,
+profesores, tutores, etc.) brinda el soporte tecnológico mencionado. Tal es el caso de
+AVA – POO y el conjunto de herramientas que lo componen. AVA – POO proporciona
+los recursos tecnológicos necesarios (Mapas conceptuales, simuladores – Relaciones
+parte – todo, polimorfismo, etc. - , tutorial, diccionario electrónico, biblioteca virtual,
+ejercitador, chat, foro de discusión, email) para el manejo de información por
+computadora.
+La estrategia general de trabajo de AVA –POOseresume através delaFigura 1.Como
+sepuedeobservar:
+a) El centro de dicha estrategia es el logro de la actividad educativa personalizada
+en la asignatura guiado por el objetivo como categoría rectora del proceso de
+enseñanza -aprendizaje.
+b) Los problemas integradores forman parte del núcleo de AVA – POO. Esto se
+debe a que se toma como sustento metodológico el Aprendizaje Basado en
+Problemas (ABP)([Campistrous 96],[Duch 2001],entre otros).
+La Tabla 1 muestra la contribución de algunas de las herramienta presentes en AVA -
+POO al aprendizaje de la Programación Orientada a Objetos mediante la colaboración
+en línea, según el rol especifico, durante la solución de problemas. Como se puede
+apreciar, a través de cada rol se realizan varias tareas que se complementan unas a otras
+y en su totalidad permiten fortalecer las habilidades para el manejo de la información
+porcomputadora.
+Un ejemplo de lo anterior consiste en utilizar la biblioteca virtual para el manejo de
+documentos. En ese caso, es necesario que una vez que el usuario active AVA-POO y
+se autentifique, si tiene asignado el rol de publicación (Generalmente un profesor, un
+estudiante de alto aprovechamiento docente, o un alumno ayudante), publique los
+documentos correspondientes mediante la herramienta de publicación de la biblioteca
+virtual (Figura 2) y si tiene asignado el rol de acceso (Generalmente, cualquier
+estudiante)activen el buscador para acceder al documento correspondiente (Figura 3).
+Figura 1.Interacciónen laactividad educativapersonalizada en laasignatura
+Tabla1.Contribucióndealgunas delas herramientas presentes en AVA -
+POOal aprendizaje delaProgramaciónOrientada aObjetos mediantela
+colaboraciónen línea, segúnel rol especifico, durante lasoluciónde
+problemas.
+Rol Tarea Herramienta
+Administración Asignaciónderoles a los Herramienta de
+usuarios administración
+Publicación Publicaciónde Biblioteca virtual
+documentos (Herramienta de
+publicación)
+Publicacióndeactividades Aulavirtual (Herramienta
+docentes depublicación)
+Publicacióndeejercicios Ejercitador (Herramienta
+depublicación)
+Acceso Acceso a documentos Biblioteca virtual
+(Buscador)
+Acceso a actividades Aulavirtual (Herramienta
+docentes deacceso adocumentos)
+Solucióndeejercicios Ejercitador (Herramienta
+desoluciónde ejercicios)
+Figura 2. El usuario publica los documentos correspondientes mediante la herramienta
+depublicacióndelabiblioteca virtual.
+Figura 3.Elusuario activa el buscador para acceder al documento correspondiente.
+4.Discusión
+Apartirde lautilizacióndeAVA -POOse hanobtenido resultados interesantes:
+- Se constata una mejora en las habilidades de los alumnos en cuanto al uso de la
+computadora para la búsqueda independiente de la información, para la formación de
+conceptos y para su aplicación practica en la resolución de problemas. Esto se pone de
+manifiesto en lamejora delos resultados académicos:
+a) El% deaprobados ha mejorado significativamente desdeun50% hastaun70%.
+b) Una encuesta aplicada para medir la satisfacción de los alumnos arroja que el
+80%delos alumnos estasatisfecho con losservicios quebrindaAVA -POO.
+5.Conclusiones
+Amodo deconclusiónse puedeexpresar lo siguiente:
+1. La COPS les proporciona a los estudiantes oportunidades de aprendizaje en línea
+donde ellos exploran escenarios de problemas, experimentan, practican y
+reflexionan. Al hacerlo, se incorpora un sistema de ramas dinámicas donde las
+decisiones del estudiante son centrales para su aprendizaje, por lo que se
+incrementa la propiedad del estudiante sobre su aprendizaje. La COPS también
+les permite a los profesores universitarios el desarrollo de una comprensiónclara
+sobre el trabajo en equipo de los estudiantes y sobre la solución de problemas y
+las estrategias de enseñanza - aprendizaje que son más efectivas para apoyar a
+losestudiantes en lamejora desus habilidades.
+2. La COPS mejora más el aprendizaje de los estudiantes mediante la integración
+demétodos deenseñanzacara-a-cara con ambientes deaprendizajeen línea.
+3. Siempre que sea posible, la nueva funcionalidad se debe construir como
+componentes reusables. Por lo tanto, los componentes que le dan soporte a las
+nuevas características (En este caso, el soporte de roles o responsabilidades)
+estaránabiertos para el reuso.
+6.Bibliografía
+[Edwards 2007] Sylvia L. Edwards, Jason A.Watson, Ann M. Farrell, Robyn E. Nash,
+“Delivering on the e-learning promise: a case for a learning environment that enables
+Collaborative Online Problem Solving (COPS)”, Journal of Learning Design 2(1):pp.
+25-36, 2007, [on line], Disponible en http://eprints.qut.edu.au/14764/01/14764.pdf,
+Consultado 20/05/2011
+[Jonassen 2003] D.H . Jonassen, J. Howland, J. Moore, R.M. Marra, “Learning to Solve
+Problems with Technology”, Upper Saddle River, New Jersey: Merrill Prentice Hall,
+2003
+[Wood 2003] D. F. Wood, “Problem based learning”, British Medical Journal,
+326(7384), 328-330,2003
+[Calvani 2004] Antonio Calvani, Antonio Fini, Maria Chiara Pettenati, Luigi Sarti,
+Maurizio Masseti, “Design of collaborative learning environments: Bridging the gap
+between CSCL theories and Open Source Platforms”, [on line], Disponible en
+http://moodle.org/pluginfile.php/112/mod_forum/attachment/239546/FIRB_project_for
+_Moodle.pdf, Consultado20/5/2011
+[Hurme 2010] Tarja-Riitta Hurme, "Metacognition in group problem solving—a quest
+for socially shared metacognition", Faculty of education, Department of educational
+sciences and teacher education, University of Oulu, Finland, 2010, ISBN 978-951-42-
+6270-8, [on line], Disponible en
+http://herkules.oulu.fi/isbn9789514262708/isbn9789514262708.pdf, Consultado
+20/5/2011
+[Dillenbourg 1999] P. Dillenbourg, “Introduction: What do you mean by "collaborative
+learning"?”, P. Dillenbourg (Ed.), Collaborative learning: Cognitive and computational
+approaches (pp. 1–19), Amsterdam: Pergamon, 1999
+[Webb 1982] N.M. Webb, “Student interaction and learning in small groups”, Review
+ofEducational Research, 52,421–445,1982
+[Slavin 1980] R.E. Slavin, “Cooperative learning”,Review of Educational Research, 50,
+315–342, 1980
+[Vygostky 1978] L. S. Vygotsky, “Mind in society”, Cambridge, MA: Harvard
+University Press, 1978
+[Piaget 1978] J. Piaget, “The development of thought: equilibration of cognitive
+structures”,Oxford: Blackwell, 1978
+[O’Neil 2003] H. F. O’Neil, S. Chuang, G. K. W. K. Chung, “Issues in the computer-
+based assessment of collaborative problem solving”, Assessment in Education, 10, 361-
+373, 2003, [on line], Disponible en http://www.cse.ucla.edu/products/reports/r620.pdf.,
+Consultado 20/05/2011
+[Zhang 1998] J. Zhang, “A distributed representation approach to group problem
+solving”,Journal of theAmerican Society forInformation Science, 49,801-809, 1998
+[Piaget 1985] J. Piaget, “The equilibrium of cognitive structures: the central problem of
+intellectual development”,Chicago University Press, 1985
+[Baghaei 2007] Nilufar Baghaei, Antonija Mitrovic, Warwick Irwin, “Supporting
+collaborative learning and problem-solving in a constraint-based CSCL environment for
+UML class diagrams”, Computer-Supported Collaborative Learning, 2:159–190, 2007,
+[on line], Disponible en http://www.ictg.canterbury.ac.nz/uploads/ictg-
+papers/supporting-collaborative-learning-and-problem-solving.pdf, Consultado
+20/05/2011
+[Soller 2001] A. Soller, “Supporting social interaction in an intelligent collaborative
+learning system”, Internacional Journal of Artificial Intelligence in Education, 12, 40–
+62,2001
+[Webb 1995] N. M. Webb, J. D. Troper, R. Fall, “Constructive activity and learning in
+collaborativesmall groups”,Journal ofEducational Psychology, 87,406–423,1995
+[Jerman 2001] P. Jerman, A. Soller, M. Muhlenbrock, “From mirroring to guiding: A
+review of state of the art technology for supporting collaborative learning”, P.
+Dillenbourg, A. Eurelings & K. Hakkarainen (Eds.) European Perspectives on CSCL
+(CSCL2001)(pp. 324–331), 2001
+[Jarboe 1996] S. Jarboe, “Procedures for enhancing group decision making”, B.
+Hirokawa & M. Poole (Eds.), Communication and Group Decision Making (pp. 345–
+383). Thousand Oaks, CA:Sage Publications,1996
+[Wang 2010] Qiyun Wang, Huay Lit Woo, “Supporting collaborative learning by using
+web 2.0 tools”, Collaborative Learning: Methodology, Types…, Editor: Edda Luzzatto
+and Giordano DiMarco, Nova Science Publishers, Inc., pp. 301-316, 2010, ISBN: 978-
+1-60876-076-3, [on line], Disponible en http://qywang.home.nie.edu.sg/10-Wang-p.pdf,
+Consultado 30/05/2011
+[Barron 2000] B. Barron, “Achieving coordination in collaborative problem-solving
+groups”.TheJournal oftheLearning Sciences, 9(4), 403-436, 2000
+[Haythornthwaite 2006] C. Haythornthwaite, “Facilitating collaboration in online
+learning”,JALN, 10(1), 7-24, 2006
+[Chatti 2010] Mohamed Amine Chatti, Matthias Jarke, Marcus Specht1, “The 3P
+Learning Model”, Educational Technology & Society, 13 (4), 74–85, 2010, [on line],
+Disponibleen http://www.ifets.info/journals/13_4/8.pdf, Consultado 30/05/2011
+[Resta 2007] Paul Resta, Thérèse Laferrière, “Technology in Support of Collaborative
+Learning”, Educ Psychol Rev, Springer Science,19:65–83, 2007, [on line], Disponible
+en http://ncie.educ.ubc.ca/KMb/share/TechnologyinSupportofCollaborative.pdf,
+Consultado 30/05/2011
+[Kreijns 2003] K. Kreijns, P. A. Kirschner, W. Jochems, “Identifying the pitfalls for
+social interaction in computersupported collaborative learning environments: A review
+oftheresearch”,Computers inHuman Behaviour, 19(3), 335–353,2003
+[Pea 1994] R. D. Pea, “Seeing what we build together: Distributed multimedia learning
+environments for transformative communications”, The Journal of the Learning
+Sciences, 3(3), 219–225,1994
+[Stahl 2006] G. Stahl, “Group cognition: Computer support for building collaborative
+knowledge”,Cambridge, MA: MIT Press, 2006
+[Campistrous 96] L. Campistrous, C. Rizo, “Aprende a resolver problemas aritmeticos”,
+Editorialpueblo yeducación,La Habana, 1996
+[Duch 2001] Barbara Duch, Susan Groh, Deborah Allen, “The Power of Problem-
+Based Learning”,Stylus Publishing, 2001,ISBN: 1579220363

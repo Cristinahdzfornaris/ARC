@@ -1,0 +1,1120 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29
+Recibido(Received):21-06-2024,Revisado(Reviewed):17-07-2024
+Aceptado(Accepted):18-10-2024,Enlínea(Online):09-12-2024
+Grafo para la evaluación automática de soluciones
+vecinas en problemas de enrutamiento de vehículos
+Graph for the automatic evaluation of neighbor
+solutions in vehicle routing problems
+Fernando Raul Rodriguez Flores 1 , José Jorge Rodríguez Salgado2*
+Resumen EnestetrabajosepresentaelconceptodegrafodeevaluaciónparaunasolucióndeunProblema
+deEnrutamientodeVehículos.Apartirdeestegrafoesposibleobtenerelcostodeunasoluciónvecinadeuna
+maneraeficienteyautomática.Queelcostoseobtengademaneraeficientesignificaqueparacalcularlose
+realizanlamenorcantidaddeoperacionesposible.Queseaautomáticosignificaquenoesnecesarioprogramar
+uncódigoparacalcularlo,soloesnecesarioprogramarcómoseevalúaunasolucióncualquiera.Paraevaluarla
+factibilidaddeusarestapropuesta,secomparanlostiemposdeejecucióndedosvariantesdeunalgoritmopara
+resolverelproblemadeEnrutamientodeVehículosconRestriccionesdeCapacidad.Enlaprimeravariante,el
+costodelosvecinossecalculausandolapropuestapresentadaenestetrabajo,mientrasqueenlasegunda
+varianteestecostosecalculausandounmétodoenelqueseusantodaslasoptimizacionesposiblesparaese
+problemaespecífico.Lostiemposdeejecucióndelapropuestarealizadaestánentre1,72y4,17veceseltiempo
+delalgoritmooptimizadoparaeseproblemaespecífico,ytienelaventajadequenoesnecesarioprogramarun
+métodoquecalculeelcostodelosvecinos,yaqueesteseobtieneapartirdelgrafodeevaluación.
+PalabrasClave:grafodeevaluación,evaluaciónautomáticadesolucionesvecinas,problemadeenrutamiento
+devehículos.
+Abstract In this work we present the concept of evaluation graph for a Vehicle Routing Problem solution.
+Usingthisgraphitispossibletocomputethecostofanyneighborsolutioninanefficientandautomaticway.
+By efficient we mean that the neighbor’s cost is computed using the smallest number of operations and it is
+automatic because it is not necessary to implement the code to compute this cost: the only requirement is
+thesourcecodetoevaluateasolution. Totestthefeasibilityofthisproposalwecomparetheruntimeoftwo
+algorithmstosolvetheCapacitatedVehicleRoutingProblem. Inthefirstalgorithmthecostoftheneighborsis
+computedusingtheevaluationgraphand,inthesecondonethecostiscomputedusinganalgorithmoptimized
+forthisspecificproblem. Whentheevaluationgraphisused,theruntimeis1.72to4.17timesslowerthatthe
+optimizedversion. However,ithastheadvantagethattheuserdoesnotneedtowritethecodetoevaluatethe
+neighbor’scostbecauseitcanbecomputedfromthegraph.
+Keywords: evaluationgraph,automaticevaluationofneighborsolutions,vehicleroutingproblem.
+MathematicsSubjectClassification: 90B06,90C59,68T20,90C27.
+1DepartamentoMatemáticaAplicada,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+fernan@matcom.uh.cu.
+2ScalianConsultingSpainSL.España.Email:jose.rodriguez@scalian.com.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Citarcomo: RodriguezFlores,F.R.,&RodriguezSalgado,J.J.(2024).Grafoparalaevaluaciónautomática
+desolucionesvecinasenproblemasdeenrutamientodevehículos.CienciasMatemáticas,37(1),15–29.DOI:
+https://doi.org/10.5281/zenodo.14333111.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9737.
+Introducción comúnelobjetivodesatisfacerlasdemandasdeclientesgeo-
+gráficamentedispersosalmismotiempoqueseoptimizael
+BajoelnombreProblemadeEnrutamientodeVehículos usodealgúnrecurso(tiempo,combustible,etc.),ysecumplen
+(VRP) se engloba una familia de problemas que tienen en determinadasrestriccionesquedependendelproblemaespecí-
+16 Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos
+ficoquesequieraresolver.Estosproblemassepresentancon menteseimplementanparaunavarianteespecíficadeVRP
+frecuenciaenlapráctica[23]ysonobjetodeinvestigación [16,15,10,25]ynosiempreresultasencillooevidentecómo
+actual[2,7,18,25,17,4,5,20,16,1]. adaptarlasaotrasvariantesdelproblema,entreotrosfactores,
+Los VRP son NP-Duros [23], por lo que los métodos porqueelcálculodelcostodelassolucionesvecinaspuede
+exactosparasolucionarlossonmuycostososysolopermiten sermuydiferente.Conlapropuestaquesepresentaeneste
+resolverinstanciaspequeñas[13].Parasolucionarlosproble- trabajo,siloúnicoqueesdiferentedeunproblemaaotroes
+masquesepresentanenlaprácticasesuelenutilizarmétodos laevaluacióndelcostodelassolucionesvecinas,sepodrían
+aproximados,comoheurísticas[23]ometaheurísticas[6].De resolverlasnuevasvariantesdelVRPdemanerainmediataa
+estos,losmétodosdebúsquedalocalresultanatractivospor partirdelosalgoritmosyaexistentes.
+lacalidaddelosresultadosqueofrecenenpocotiempode Hastadondelosautoresconocen,enlaliteraturanoseha
+ejecución[15,21]. reportadounaestrategiasimilaralapropuestaenestetrabajo
+Para solucionarun VRPmediante un algoritmo de bús- para calcular el costo de cualquier solución vecina de un
+quedalocalsepartedeunasolucióninicialS alaquesele problemadeoptimizacióncombinatoriaapartir,únicamente,
+0
+realizanciertastransformaciones(comocambiarclientesde delaevaluacióndelasolucióninicial.Estaideaestáinspirada
+posiciónocambiarlosvehículosquevisitanalosclientesde enlastécnicasdeladiferenciaciónautomática[9].
+unaruta)yapartirdeestoscambiosseobtieneunconjuntode La estructura de este documento es la siguiente. En la
+nuevassolucionesquesedenominavecindaddeS .Deesta sección1sepresentanloselementosbásicosdeltrabajo:el
+0
+vecindad,seseleccionaunasoluciónS deacuerdoaalgún problema de enrutamiento de vehículos, los algoritmos de
+1
+criterio,quedependedelalgoritmoencuestión[6],yapartir búsquedalocal,cómosepuederepresentarunasoluciónpara
+deestaúltimaserepiteelprocesohastaquesecumplaalgún esteproblemayalgunoselementossobreelcálculodelcosto
+criteriodeparada. de una solución dada. En la sección 2 se presenta el grafo
+deevaluaciónquerepresentatodaslasoperacionesrealizadas
+Lastransformacionesqueselerealizanalasoluciónini-
+duranteelcálculodelcostodelasoluciónysurelaciónconlos
+cialparaobtenerlasvecinasrecibendelnombredeoperacio-
+distintoselementosdelamisma.Enlasección3sedescribe
+nes elementales y una solución S que sea vecina de S se
+1 0
+cómoseconstruyeelgrafoapartirdelaevaluacióndeuna
+puededescribirunívocamenteapartirdeellas.
+solución.Lasección4describecómoobtenerelcostodeuna
+Elobjetivodeestetrabajoesdiseñareimplementaruna
+soluciónvecinaapartirdelasoperacioneselementalesque
+estrategiaquepermitacalcular,eficientementeydemanera
+la definen, y en la sección 5 se muestran los resultados de
+automática,elcostodecualquiersoluciónvecinadeunaso-
+compararlostiemposdeejecucióndeunalgoritmoenelque
+lucióndadaenunVRP.Estapropuestaeseficientepordos
+seusaelgrafodeevaluaciónyelmismoalgoritmooptimizado
+motivos. El primero está relacionado con el hecho de que
+para calcular el costo de los vecinos de un problema VRP
+paraobtenerelcostodelasoluciónvecinaserealizalamenor
+específico. Finalmente, se presentan las limitaciones de la
+cantidaddeoperacionesposibles.Elsegundomotivoestáre-
+propuestarealizadaylosescenariosenlosquepuederesultar
+lacionadoconelesfuerzohumanonecesarioparaobtenereste
+útil, así como las conclusiones, recomendaciones y trabajo
+costo,yaqueparacalcularlosoloesnecesarioprogramarcó-
+futuro.
+moseevalúalasolucióninicial,ynoesnecesarioprogramar
+cómosecalculaelcostodelosvecinos.
+Paralograrestoseproponerepresentartodaslasoperacio- Relevancia del estudio
+nesnecesariasparacalcularelcostodelasoluciónmediante
+Programarcómocalcularelcostodeunasoluciónvecina
+un grafo de evaluación. Para obtener el costo de una solu-
+enunproblemadeenrutamientodevehículosespecífico,es
+ciónvecinasemodificaestegrafoapartirdelasoperaciones
+unadelastareasquemástiempoconsumeenlasoluciónde
+elementalesquedebenrealizarseparaobtenerla.Unavezrea-
+un VRP. Por otro lado, programar cómo evaluar una única
+lizadasestasmodificacionesseobtieneelgrafoquerepresenta
+soluciónesunatareasencillaquesepuedehacerenmuypoco
+laevaluacióndelasoluciónvecinayelcostodelamisma.
+tiempo.Lapropuestarealizadaenestetrabajopermitecalcular
+El grafo de evaluación se construye cuando se evalúa
+elcostode cualquiervecinode múltiplesVRP,programan-
+la solución inicial. En el cálculo del costo de la solución
+do únicamente cómo evaluar una solución. Esto permitiría
+vecinaserealizalamenorcantidaddeoperacionesposible,
+reducireltiemporequeridopararesolverproblemasrealesde
+que dependen únicamente de las operaciones elementales
+enrutamientodevehículos.
+necesarias para obtenerla, y por otra parte, lo único que el
+usuariodebeprogramarescómoseevalúalasolucióninicial,
+1. Preliminares
+yaqueelcostodelvecinoserealizaautomáticamenteapartir
+delasmodificacionesalgrafo. EnestasecciónsepresentanloselementosdelVRPque
+Disponerdeunaestrategiacomolapropuestapermitiría permiten calcular automáticamente el costo de soluciones
+ampliar el rango de problemas de enrutamiento de vehícu- vecinas de una dada: las componentes del VRP, la forma
+los que se pudieran resolver usando estrategias ya existen- delassoluciones,losalgoritmosdebúsquedalocalycómo
+tes de búsqueda de vecindad local. Estas estrategias usual- evaluarlasolucióninicial.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29 RodriguezFlores,F.R.,&RodriguezSalgado,J.J.
+https://revistas.uh.cu/rcm/article/view/9737 https://doi.org/10.5281/zenodo.14333111
+Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos 17
+1.1 ComponentesdelVRP regresaaldepósito;mientrasqueenlasegundarutaseparte
+ElobjetivodelosProblemasdeEnrutamientodeVehícu- del depósito, se visita al cliente 3 y se regresa al depósito.
+los (VRP) es satisfacer las demandas de clientes dispersos Enestecasonoesnecesarioespecificarquévehículorecorre
+geográficamente.Paraellosedisponedeunaflotadevehícu- cada ruta ni de qué depósito parten los vehículos, porque
+los, se desea optimizar algún recurso como el tiempo, o el en el CVRP se asume que todos los vehículos son iguales
+costototaldelaoperación,ysedebensatisfacerlasrestriccio- y que existe un único depósito. En un problema con flota
+nesdecadasituaciónespecífica.Enlaliteraturasepueden heterogénea[22]síseríanecesariodefinirencadarutacuáles
+encontrarmúltiplesvariantesdeesteproblema,cómomode- elvehículoquerealizaelrecorrido.
+larlasmatemáticamenteycomoresolverlas[23]. Apartirdeestarepresentacióndelassolucionessepuede
+LascomponentesfundamentalesdeunVRPsonlosclien- definirelconceptodecoordenadasoposicionesdentrodeuna
+tes,losvehículos,losdepósitos,lasrutasquedeberecorrer solución.UnacoordenadaenunasolucióndelVRPesunpar
+cadavehículo,lafunciónobjetivoylasrestriccionesespecí- ordenado(r,p)dondeelprimernúmerorepresentaunaruta,
+ficasdecadavariante.Cadaunadeestascomponentestiene yelsegundo,unaposicióndentrodeesaruta.Tantolasrutas
+asociadounconjuntodepropiedadesquedependendecada comolasposicionesdentrodelasrutassenumeranapartir
+problema. de 1. En el caso de la solución S∗, en la coordenada (1,1)
+Algunosejemplosdeestaspropiedadessonlademandade estáelcliente1,yenlacoordenada(2,1),elcliente3.Por
+cadaclienteylacapacidadmáximadecargadelosvehículos. convenio,seasumequeenlaposición(r,0)estáeldepósito
+Entrelasposiblesfuncionesobjetivoparalosproblemasse de la ruta r, y si en una ruta hay l clientes, entonces en la
+puedenconsiderarminimizarelcostototaldeltransporte,la posición(r,l+1)seencuentraeldepósitodelarutaalque
+distanciarecorridaporlosvehículos,elnúmerodevehículos, retornanlosvehículosalterminarelrecorrido.
+eltiempodedistribución,entreotros[8,23].Algunasdelas Apartirdelaideadecoordenadasesposiblehacerrefe-
+restriccionesusualesenestetipodeproblemasonquecada renciaalelementoqueestáenlaposiciónanteriorosiguiente
+clientesevisiteunasolavez,oquedeterminadosvehículos aladeunclientedado.El“elemento”anterioraldelaposi-
+solopuedenatenderaclientesespecíficos[23]. ción(r,p)eselelementoqueestéenlaposición(r,p−1),y
+ElVRPmássencilloeselProblemadeEnrutamientode elsiguienteeseldelaposición(r,p+1).Pordefinición,el
+Vehículos con Restricciones de Capacidad (CVRP, por sus depósitoqueestáalcomienzodelarutanotieneelemento
+siglas en inglés) y fue estudiado por primera vez en 1959 anterior,yalqueregresanlosvehículosalfinaldelarutano
+[3].EnelCVRPsetieneunúnicodepósitocentral,unaflota tieneelementosiguiente.
+infinitadevehículosidénticosycadaclientesedebevisitar Estetipoderepresentaciónsesueleusarenalgoritmosde
+exactamente una vez. En este caso, las propiedades de las BúsquedaLocal.
+componentesson:losclientestienenunademandaquedebe
+sersatisfechaylosvehículostienenunacapacidaddecarga 1.3 AlgoritmosdeBúsquedaLocal
+que no debe excederse en ningún momento de la ruta. No Dentrodelosmétodosaproximadospararesolverproble-
+existeotrotipoderestricciónysedeseaminimizarladistancia masdeenrutamientodevehículos,losAlgoritmosdeBúsque-
+total recorrida por todos los vehículos. En [23] se pueden daLocalresultanatractivosporlacalidaddelassoluciones
+encontrarvariosmodelosdeprogramaciónmatemáticapara queobtienenenpocotiempoyporquesuelensersencillosde
+esteproblema. implementar[21,21,19,15].
+Los Problemas de Enrutamiento de Vehículos son NP- Para solucionarun VRPmediante un algoritmode bús-
+duros[23],porloquelosmétodosexactosresultanmuycos- quedalocalsepartedeunasolucióninicialS alaquesele
+0
+tosos. En la práctica se suelen emplear heurísticas y meta- realizanciertastransformaciones(comocambiarclientesde
+heurísticas para resolverlos [13, 21, 15, 2]. En este tipo de rutasocambiarlosvehículosdelasrutas)yapartirdeestos
+algoritmoselconceptodesoluciónjuegaunpapelimportante. cambiosseobtieneunconjuntodenuevassolucionesquese
+denomina vecindad de S y se representa por N . De esta
+0 S0
+1.2 SolucióndeunVRP vecindad,seseleccionaunanuevasoluciónS yapartirde
+1
+UnasolucióndeunVRPespecificacómovisitarlosclien- ella se repite el proceso hasta que se cumpla algún criterio
+tes usando la flota disponible. Por lo general, se suelen re- deparada.LaseleccióndeS 1 serealizadeacuerdoaalgún
+presentarmedianteunconjuntoderutas,dondeencadaruta criterio,quedependedelalgoritmoencuestión[6].
+seespecificanlosclientesquedebenservisitadosyenqué Alasreglasqueseaplicanparamodificarunasolucióny
+orden,asícomootrosaspectosquepuedanserrelevantespara obtenerlassolucionesvecinasselesconoceconelnombrede
+larutayquedependadelproblemaespecíficocomovehículos, estructuradeentornoocriteriodevecindadyalprocesoque
+odepósitosqueseusarán[21,15]. serealizaparaseleccionarlasoluciónS entrelasdemásque
+1
+Por ejemplo, una solución que tenga dos rutas para un componenlavecindadN S0 seconocecomoexploracióndela
+CVRPcontresclientessepuederepresentarmedianteS∗= vecindad.
+[[1,2][3]]. En esta solución, en la primera ruta se parte del Lamayoríadeloscriteriosdevecindadreportadosenla
+depósitocentral,sevisitaelcliente1,luegoelcliente2yse literaturapararesolvervariantesdelVRPrealizanmodifica-
+RodriguezFlores,F.R.,&RodriguezSalgado,J.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29
+https://doi.org/10.5281/zenodo.14333111 https://revistas.uh.cu/rcm/article/view/9737
+18 Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos
+cionesalaposicióndelosclientesenlasrutascomocambiar unVRP.
+unclientedeposicióneintercambiardossecuenciasdeclien-
+tesmanteniendoelordenentrelosclientesdecadasecuencia 1.4 Evaluacióndeunasolución
+[15,21],aunquetambiénsepuedendefiniroperacionesque
+Paradiseñarunalgoritmoqueevalúeunasolucióndeun
+actúensobreotrascomponentesdelasolucióncomocambiar
+VRPesnecesariorealizarvariasoperacionescomocrearva-
+elvehículodeunaruta.
+riables, modificar el valor de esas variables, acceder a las
+Loscriteriosdevecindadsepuedendescribirentérminos propiedades de las componentes del problema, o penalizar
+deoperacioneselementalescomoseleccionarunclientede determinadosvalores.Estasoperacionessecombinanapro-
+una posición dada, insertar un cliente en una posición da- piadamentedeacuerdoalproblemaquesequieraresolver.
+da, quitar el vehículo de una ruta y poner un vehículo en Porejemplo,paracalcularelcostodeunasoluciónpara
+unaruta.Porejemplo,elcriteriocambiarunclientedeposi- unCVRPsepuedencreardosvariables:unaparaalmacenar
+ciónestácompuestoporlasoperacionesextraerunclientede ladistanciatotalrecorridaDyotraparaalmacenareltotalde
+unaposicióndadaeinsertarelclienteseleccionadoenotra penalizacionesrealizadasP.
+posición.
+Seguidamente se puede iterar por cada una de las rutas
+Parapoderaplicarleestasoperacionesaunasoluciónespe- calculando la distancia que recorre el vehículo, y determi-
+cíficaesnecesariodefinircuálescomponentesdelasolución nandoparacadarutalacargaqueelvehículodebetransportar.
+se deben modificar. Una forma de lograr esto es mediante Estacarga(odemanda)sepuedeacumularenunavariable
+elusodecoordenadasenlasolución.Porejemplo,eliminar diferenteparacadaruta(dRuta).Despuésdevisitaratodoslos
+elprimerclientedelaprimerarutasedescribemediantela clientesyhabercalculadolacargatotalqueelvehículodebe
+operaciónseleccionarelclientequeestáenlacoordenada transportarenesaruta,sedebepenalizarsiestaesmayorque
+(1,1).Deestaforma,uncriteriodevecindadestádefinidome- lacapacidaddelvehículo.Elresultadodeestapenalización
+diantelasoperacionesqueseledebenrealizaralasolución, sealmacenaenunavariableP,quealterminardeprocesar
+ylavecindadoconjuntodesolucionesvecinas,seobtieneal todaslasrutasselesumaalavariableD,queeselvalorque
+aplicarlealasolucióniniciallasoperacionesdelcriteriode sedevuelve.
+vecindadcontodoslosposiblesvaloresdelascoordenadas. Esta idea se puede apreciar en el pseudocódigo que se
+ApartirdeunasoluciónS 0 ,cualquiervecinoS 1 sepuede presenta en la Figura 1, donde incDist es una función que
+definirunívocamenteentérminosdelasoperacioneselemen- incrementaelvalordeunavariableconladistanciaentrelos
+talesylascoordenadasenqueseledebenaplicaraS 0 para doselementosquerecibecomoargumento,incDemandalo
+obtenerS 1 .Estehechopermiteobtenerelcostodeunvecino aumenta con el valor de la demanda del cliente y penaliza
+dado,apartirdelcostodelasoluciónS 0 ylasoperacionesy recibeunavariableylaaumentaconelresultadodepenalizar
+coordenadasnecesariasparaobtenerS 1 . susegundoargumentoconrespectovalordeltercerargumento
+Para obtener el costo de un vecino de S , a partir de su querecibe.
+0
+costoylasoperacionesnecesariasparaobtenerS ,bastacon
+1
+modificarelcostodeS apartirdelcostoderealizarcadauna
+0 evaluar(S):
+delasoperacionesquepermitenobtenerS .Lavariaciónen
+1 1. creaVariable D = 0
+elcostoqueseproducealaplicarleunaoperaciónelementala
+2. creaVariable P = 0
+unasolución,dependedequéinfluenciatienelacomponente
+3. por cada ruta r de S:
+quemodificaestaoperaciónenelcostototal.
+4. creaVariable dRuta = 0
+Porejemplo,enelCVRP,unclientetributadedosformas
+5. prev = depósito(S)
+alcostototal.Porunaparte,contribuyeconladistanciareco-
+6. por cada cliente c de r:
+rridadesdeelelementoanteriorhastaél,ydesdeélhastael
+7. incDist(D, prev , c)
+elementosiguiente;yporlaotra,sudemandainfluyenenla
+8. incDemanda(dRuta , c)
+cargaquedebetransportarelvehículo,loquepudieraprovo-
+9. clientePrevio = c
+carqueésteexcedasucapacidad.Aleliminarunclientedela
+10. incDist(D, prev , depósito(S))
+solución,soloesnecesariorecalcularladistanciaquerecorre
+11. penaliza(P, dRuta , capacidad(r ))
+elvehículo,ymodificarlacargaqueestedebetransportar.Al
+12. incVar(D, P)
+modificarlacargaquedebetransportarelvehículo,también
+13. devolver D
+pudierasernecesariomodificarlaspenalizacionesquesele
+realizanalacargadelvehículoenesaruta. Figura1.PseudocódigoparaevaluarlasolucióndeunCVRP
+[PseudocodetoevaluatethesolutionofaCVRP].
+Lainfluenciaquetienecadacomponenteenelcostode
+lasolucióndependedecómoseevalúalasoluciónoriginal.
+Enestetrabajoseproponeunaformadeobtenerelcostode Para evaluar el costo de una solución de otra variante
+losvecinosapartir,únicamente,delaformaenqueseevalúa delVRP,bastaconutilizaresasoperacionesdeformaquese
+lasolucióninicial.Enlasiguientesecciónsepresentanlos calculenlosvaloresdeseadosparaeseproblemaysepenalicen
+elementosfundamentalesdelaevaluacióndeunasoluciónde losincumplimientosdelasrestricciones.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29 RodriguezFlores,F.R.,&RodriguezSalgado,J.J.
+https://revistas.uh.cu/rcm/article/view/9737 https://doi.org/10.5281/zenodo.14333111
+Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos 19
+En este trabajo se propone un método para calcular el representaelnodoo.Lasaristas(o,a)∈N ×N quesalen
+O A
+costodeunasoluciónvecinadecualquiersolucióndeunVRP, queunnodooperacionaleincidenenunnodoacumulador
+usandolamenorcantidaddeoperacionesposibleysinque indicanqueelresultadodelaoperaciónomodificalavariable
+elusuariotengaqueprogramarelcódigopararealizareste representada por a. Finalmente, las aristas entre dos nodos
+cálculo.Estoselograapartirdeungrafodeevaluaciónen operacionales(o ,o )indicanelordenenqueserealizaron
+1 2
+el que se reflejan todas las operaciones realizadas durante lasoperacionesdurantelaevaluacióndelasolución.
+laevaluacióndelasolución.Enlassiguientesseccionesse Porejemplo,enunnodooperacionalo querepresentela
+1
+presentaestegrafoycómoconstruirloapartirdelcódigoque operaciónincrementarlavariableDconladistanciaentre
+permiteevaluarunasolución. losnodosc yc (yqueserepresentaporincDist(D,c ,c )en
+1 2 1 2
+elpseudocódigodelaFigura2)incidiríaunaaristaconorigen
+2. Grafo de evaluación de una solución en enelnodoestructuralc ,yotraquesaledelnodoestructural
+1
+un VRP c 2 .Almismotiempo,deo 1 saleunaaristaqueincideenel
+nodoacumuladorquerepresentaalavariableD.
+Cuando se calcula el costo de una solución de un VRP
+De manera similar se puede considerar el nodo o , que
+esposibleconstruirungrafodirigidoquecontienetodaslas 2
+representalaoperaciónincrementarelvalordelavariable
+operacionesrealizadasdurantelaevaluación,asícomosurela-
+DconelvalordelavariableP(yqueserepresentaporinc-
+ciónconcadaunodesuscomponentes.Estopermitecalcular,
+Var(D,P)enelpseudocódigodelaFigura2).Estaoperación
+conlamenorcantidaddeoperacionesposibles,elcostode
+incrementaelvalordelavariableD(distanciatotal)conel
+solucionesvecinasdelasoluciónapartirdelacualseobtuvo
+valordelavariableP(penalizaciones).Enestecaso,eno
+elgrafo.Enestasecciónsepresentanlascaracterísticasde 2
+incideunaaristaquesaledelnodoacumuladorP,ydeélsale
+estegrafo.
+unaaristaqueincideenelnodoacumuladorD.
+UngrafodirigidoG=(N,A)esunparordenadodondeN
+Ademásdelasaristasmencionadasenlosejemplos,que
+esunconjuntocuyoelementosrecibenelnombredenodos,y
+dependendeltipodeoperaciónquerepresentecadanodo,to-
+loselementosdeA⊆N×N recibenelnombredearistas.Si
+donodooperacionalo formapartededosaristas.Unadeellas
+existeunaaristaentredosnodosn yn ,osea,si(n ,n )∈A, i
+1 2 1 2
+incideeno ysaledelnodoo querepresentalaoperación
+sedicequehayunaaristaquesaleden yqueincideenn . i i−1
+1 2
+queserealizójustoantesdeo.Laotra,saledeo eincideen
+EnelgrafodeevaluacióndeunasoluciónparaunVRP i i
+o ,querepresentalaoperaciónqueserealizóinmediatamen-
+existentrestiposdenodos:nodosestructurales,nodosope- i+1
+tedespuésdeo.Losúnicosdosnodosoperacionalesenlos
+racionales y nodos acumuladores. Los nodos estructurales i
+queestonosecumple,sonelnodoquerepresentalaprimera
+representancomponentesdelasoluciónqueintervienenen
+operación de la evaluación, y en el nodo que representa la
+elcostodelamisma,comoclientes,depósitosovehículos.
+últimaoperaciónqueserealiza.
+Losnodosoperacionalesrepresentanlasoperacionesquese
+realizan durante la evaluación, como aumentar el valor de Apartirdelasaristasqueincidenenunnodooperacional
+unavariableconladistanciaentredoselementos,openalizar n o ,ylasquesalendeél,esposiblecalcularelresultadode
+unavariabledeacuerdoaalgunapropiedaddeunacompo- laoperaciónrepresentadaporesenodo.Aesteprocesosele
+nentedelproblema.Losnodosacumuladoresrepresentanlas
+llamaevaluar(oreevaluar)elnodo.Otroprocesorelacionado
+variablesqueseusandurantelaevaluacióndelasolución.
+conunnodooperacionaleseldedesevaluarlaoperación,que
+ElconjuntodenodosestructuralessedenotaporN ,elde consisteendeshacerelcálculorepresentadoporlaoperación.
+E
+losnodosoperacionalesporN ,yeldelosacumuladorespor Estasoperacionesdereevaluar ydesevaluar modificanlos
+O
+N .Porconvenio,cadavezquesehagareferenciaal“nodo valoresalmacenadosenlosnodosacumuladoresenlosque
+A
+estructuralC”,dondeCesunacomponentedelasolución,se sealmacenanlosresultadosdelasoperaciones,ypermiten
+refiere al nodo estructural que representa la componenteC. modificar el grafo para obtener el costo de las soluciones
+Delmismomodo,sienlaevaluacióndelasoluciónseusó vecinas,comosedescribeenlasección4.
+una variable V, el “nodo acumulador V” se refiere al nodo EnlaFigura3semuestraelgrafodeevaluaciónquese
+acumuladorquerepresentaalavariableV.
+obtienealevaluarlasoluciónS∗=[[1,2][3]]enunproblema
+Enelgrafodeevaluaciónexisten4tiposdearistas:aris- simplificado,enelquesolointeresadeterminarladistancia
+tas entre nodos estructurales y nodos operacionales, entre recorridaportodoslosvehículos.Estosepuedeobtenercon
+nodosacumuladoresynodosoperacionales,entrenodosope- uncódigosimilaralpresentadoenlaFigura2.
+racionalesyacumuladores,yentredosnodosoperacionales. Enestecasolosnodosoperacionalesestánrepresentados
+Matemáticamente esto se puede escribir como: A⊂(N × porrectángulosyconelindicadord ,yrepresentanelcálculo
+E ij
+N )∪(N ×N )∪(N ×N )∪(N ×N ). deladistanciaentreloselementosiy j,dondetantoicomo j
+O A O O A O O
+Unaarista(e,o)∈N ×N indicaquelacomponentedela puedensercualquieradelostresclientesoeldepósito.Los
+E O
+soluciónrepresentadaporelnodoestructuraleesargumento nodosestructuralesestánrepresentadosporcírculosytienen
+delaoperaciónrepresentadaporelnodoo.Lasaristasdela lasetiquetasdep,c1,c2yc3.Deprepresentaaldepósitoy
+forma(a,o)∈N ×N indicanquelavariablerepresentada cadanodoc,alclientec.Finalmente,elúniconodoacumu-
+A O i i
+porelnodoacumuladoraesargumentodelaoperaciónque ladoreseldenotadoporD,dentrodeunrombo,enelquese
+RodriguezFlores,F.R.,&RodriguezSalgado,J.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29
+https://doi.org/10.5281/zenodo.14333111 https://revistas.uh.cu/rcm/article/view/9737
+20 Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos
+Porejemplo,enelcódigomostradoenlaFigura2lains-
+evaluar(S):
+trucciónincDist(D, prev, c),ademásdeincrementar
+creaVariable D = 0
+elvalordelavariableDconladistanciaentreelclienteac-
+por cada ruta r de S:
+tual (c) y el anterior (prev), agrega al grafo un nodo que
+prev = depósito(S)
+representa esa operación, y también agrega las aristas que
+para cada cliente c de r:
+permitenconocercuálessonlosargumentosdelaoperación,
+incDist(D, prev , c)
+dóndesealmacenaelresultadoycuálessonloselementosde
+clientePrevio = c
+lasolucióninvolucradasenesecálculo.
+incDist(D, prev , depósito(S))
+Acontinuaciónsedescribenlosdistintostiposdeopera-
+devolver D
+cionesquesepuedenagregaralgrafoylascaracterísticasde
+Figura2.PseudocódigoparaevaluarunasolucióndeVRP cadaunadeellas.
+simplificado[Pseudocodetoevaluateasolutionfora
+En un algoritmo que permita evaluar la solución de un
+simplifiedVRP].
+VRPsepuedenidentificardostiposdeoperaciones:lasque
+tributan directamente al cálculo del costo de la solución y
+el resto de las instrucciones. Las que tributan directamente
+dep c 1 c 2 c 3 D
+alcostosonaquellasquemodificanvariablesapartirdelos
+resultadosdelasoperacionesyaquellaquedevuelveelvalor
+calculado.Elrestodelasoperacionessonlasdecontrolde
+inicio d d1 d 12 d d2 d 3d cicloyenlasqueseasignanavariablespropiedadesdelos
+Figura3.GrafodeevaluaciónparaS∗[Evaluationgraphfor componentesdelasolución.Enelgrafodeevaluaciónsolose
+S∗]. almacenanaquellasoperacionesquetributanalcosto.
+Las operaciones que tributan al costo de la solución se
+puedenclasificarentresgrandestipos:operacionesquecrean
+acumulaladistanciatotalyrepresentaalavariableD.Elnodo variables,operacionesquemodificanelvalordeunavariabley
+d estáseñaladocomolaprimeraoperaciónqueserealiza, lainstrucciónqueindicacuáleselvalorquesedebedevolver.
+d1
+yelnodoD,encerradoentredosrombos,comoelresultado Lasoperacionesquemodificanelvalordeunavariable
+finalquedevuelveelalgoritmo. lo pueden hacer de tres formas: incrementando el valor de
+Enelgrafoaparecenseñaladoselnodod comolaprime- lavariableconalgunapropiedaddelproblema,incrementán-
+d1
+raoperaciónyelnodoDcomoelresultadofinalquedevuelve doloapartirdelvalordeotravariable,ocomoresultadode
+elalgoritmo.Queexistaunaaristaentreelnodoestructuralc penalizarunvalorpreviamentecalculado.Cadaunadeestas
+1
+yelnodooperacionald significaqueelnodoc contribuye operacionesrecibeunacantidaddiferentedeargumentos.
+12 1
+a la operación d 12 . La arista entre el nodo d d1 y el nodo D La cantidad de argumentos de las operaciones de tipo
+significa que el resultado de la operación d d1 se almacena incrementar variable con el valor de una propiedad puede
+enlavariablerepresentadaporelnodoD.Laaristaentreel recibirdosotresargumentosendependenciadelapropiedad.
+nodo d d1 y el nodo d 12 significa que después de realizar la Porejemplo,laoperaciónincrementarvariableconladistan-
+operaciónd d1 ,serealizóladenotadapord 12 . cia entre dos elementos recibe tres argumentos: la variable
+Como el algoritmo descrito en 2 devuelve la distancia quesedebeincrementarylosdoselementos;mientrasquela
+total,quesecalculaenlavariableD,unavezconstruidoel operaciónincrementarvariablecondemandadeuncliente
+grafoenelnodoDsetieneelcostodelasolución. recibedosargumentos:lavariablequesedebeincrementary
+Enlasiguientesecciónsedescribecómoesposiblecons- elclientecuyademandaseledebesumaralavariable.
+truirelgrafodeevaluaciónparaunasoluciónapartirdesu Otraoperaciónquerecibetresargumentosesincrementar
+evaluación. variableconelresultadodealgunapenalización,querecibe
+lavariablequesedebeincrementar,lavariablequetieneel
+valorquesedeseapenalizar,ylapropiedaddelproblemacon
+3. Construcción del grafo
+respecto a la que se penalizará. La operación incrementar
+Enestasecciónsepresentanlasideasfundamentalespara variableconvalordeotravariablerecibedosargumentos:las
+construirelgrafodeevaluaciónalmismotiempoquesecalcu- dosvariables.Finalmente,laoperaciónqueindicaquévalor
+laelcostodelasolucióninicial.Lapropuestaestáinspirada sedebedevolver,recibeeseúnicoargumento.
+enlasobrecargadeoperadoresqueseusaenladiferenciación Tomando en cuenta la cantidad de argumentos de cada
+automáticaparaconstruirelgrafodeevaluación[9]yesla operaciónqueintervieneenlaevaluacióndelasoluciónini-
+siguiente:paraimplementarlaevaluacióndeunasoluciónel cial,esposibleconstruirelgrafo,yestosehaceendospartes.
+usuariodebeusarfuncionesespecíficamentediseñadaspara Enlaprimera,secreantodoslosnodosestructuralesapartir
+ello.Cadaunadeesasoperacionesrealizadosacciones:reali- delasolucióny,enlasegundaseagreganlosnodosacumula-
+zarloscálculoscorrespondientes,yademás,agregaralgrafo doresyoperacionalesapartirdelaevaluacióndelasolución.
+losnodosyaristasnecesariosparaalmacenarlaoperación. Paraello,seusanfuncionesespecialmentediseñadasque,ade-
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29 RodriguezFlores,F.R.,&RodriguezSalgado,J.J.
+https://revistas.uh.cu/rcm/article/view/9737 https://doi.org/10.5281/zenodo.14333111
+Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos 21
+másde calcular elvalor delaoperación, agreguenalgrafo operacionesqueinsertanclientesenlasolución,y
+losnodosylasaristascorrespondientes.Laformaenquese
+debenagregarestosnodosyaristassemuestraacontinuación. operaciones que modifican otros elementos de la ru-
+ta,comoelvehículo,losdepósitos,oalgunaotraque
+Crearvariable: Alevaluarunaoperaciónenlaquesecrea pudieradependerdelproblemaespecífico.
+unanuevavariableseagregaunnuevonodoacumulador
+algrafo. Cadavezqueserealizaunaoperaciónenlaqueseelimina
+unclientedelgrafo,esnecesarioeliminarlasoperacionesen
+Incrementarvariableconpropiedaddelproblema: Enes- lasqueeseclienteestáinvolucrado.Almismotiempoquese
+tecaso,secreaelnodooperacionalcorrespondiente,se eliminanesasoperacionessedeterminanquénuevasopera-
+conectaconlosnodosestructuralesqueseusancomo cionesdebeninsertarseenellugardelasoperacionesquese
+argumentos, y se crea una arista entre el nuevo nodo eliminan,yquéoperacionesdebenagregarsealgrafocuando
+creadoyelnodoacumuladorquerepresentaalavaria- elclientequeestásiendoeliminadoseinsertenuevamente.
+blequesedebeincrementar.
+Cuandoseinsertaunclienteenunaposicióndadahayque
+eliminaralgunasoperacionesdelgrafoeinsertarotras.Estas
+Incrementarvariableconvalordeotravariable: Alevaluar
+últimassecalculanenelmomentoqueseeliminaelcliente
+unaoperacióndeestetiposecreaelnodooperacional
+quesedeseainsertar.
+correspondienteyseagreganlasaristasqueloconectan
+Almodificarotroselementosdelasolucióncomovehícu-
+conlosnodosacumuladoresinvolucrados.
+los o depósitos, se determinan cuáles son las operaciones
+Incrementarvariableconpenalización: Estaoperaciónre- relacionadasconelelementoycuandosecambiaelelemento,
+cibe tres argumentos: la variable que se debe incre- secalculaelnuevovalor.
+mentar,lavariablequesedebepenalizarylapropiedad A continuación se describen detalladamente los pasos
+conrespectoalacualsedeseapenalizar.Enestecasose que deben realizarse cada vez que se aplica una operación
+creaunnodooperacionalenelqueincidenlavariable elementaldecadatipoaungrafodeoperaciones,paraobtener
+quesedeseapenalizaryelnodoestructuralquetienela elgrafocorrespondientealasoluciónvecina.
+propiedadconrespectoalaquesedeseapenalizar.Del Enlasección4.1sedescribenendetallelospasosquese
+nodo creado sale una arista que incide en la variable debenrealizarparaextraerunclientedeunaposicióndada.
+cuyovalorseincrementa. Enlasección4.2sedescribenlospasosnecesariosparain-
+sertar un cliente y, finalmente, en la sección 4.3 aparece el
+Devolverelvalor: Estaoperaciónmarcaalnodoacumulador
+procedimientonecesariosalmodificarotroselementosdela
+correspondientecomoelnodofinaldelgrafo.
+solución.Enlasección4.4semuestraunejemploenelque
+seseleccionaunclientedeunaposiciónyseinsertaenotra.
+Cadavezquesecreaunnodooperacional(salvocuando
+secreaelprimero),ademásdetodaslasoperacionesindicadas,
+4.1 Operaciones que eliminan clientes de la solu-
+tambiénsecreaunaaristaqueconectaalúltimonodoopera-
+ción
+cionalconelqueseestácreando.Estopermitealmacenarel
+Cadavezquesedeseaeliminarunclientedeunaposición,
+ordenenelqueserealizaronlasoperaciones.
+serealizanlossiguientespasos:
+Deestaforma,alterminarlaevaluacióndelasoluciónse
+tieneelgrafoquerepresentaesaevaluación.
+1. Apartirdelacoordenadadelaquesedeseaeliminarel
+Apartirdeunaoperaciónelemental(porejemplo,extraer
+cliente,sedeterminaelnodoestructuralasociadocon
+elprimerclientedelaruta1),sepuedemodificarungrafo
+este.Sean dichonodo.
+existenteparaobtenerelcorrespondientealasoluciónresul- e
+tantedeaplicarlaoperación,yalmismotiempoobtenerel
+2. Apartirden ,sedeterminaelconjuntodenodosope-
+e
+nuevocosto.Esteprocesosedescribeenlasiguientesección.
+racionalesquedependendeél.SeaO elconjuntode
+ne
+estasoperaciones.
+4. Evaluación de un vecino en un VRP
+3. Paracadanodooperacionaln enO serealizanlos
+Enestasecciónsemuestracómosepuedeobtenerelcosto
+o ne
+siguientespasos
+deunasoluciónvecinaS apartirdelgrafodeevaluaciónde
+1
+S ydelconjuntodeoperacioneselementalesquepermiten
+0 3.1. Desevaluarelnodon ytodoslosquedependan
+o
+obtenerS apartirdeS .Paraelloseindicaquémodificacio-
+1 0 deél,modificandocorrespondientementelosva-
+nesseledebenrealizaralgrafoapartirdelasoperaciones
+loresdelosnodoacumuladoresconlosqueestán
+queseleaplicanalasolución.
+conectados.
+Existentrestiposdeoperacionesquepermitenmodificar
+3.2. DeterminarelconjuntodenodosoperacionalesI
+unasolución: no
+quedebenagregarsealgrafocuandoelclienteque
+operacionesqueeliminanclientesdelasolución, estásiendoeliminadoseainsertadonuevamente.
+RodriguezFlores,F.R.,&RodriguezSalgado,J.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29
+https://doi.org/10.5281/zenodo.14333111 https://revistas.uh.cu/rcm/article/view/9737
+22 Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos
+Porejemplo,sielnodoc queseráeliminadoestá Unavezrealizadasestasoperaciones,lanuevaestructura
+1
+conectadoconunnodooperacionalquerepresen- delgraforeflejalasoluciónvecinay,productodelasreeva-
+talaoperaciónincrementarVariableConDemanda, luaciones realizadas, en el nodo final del grafo se tiene la
+cuandoseinsertec enotraposicióndelasolu- evaluacióndelanuevasolución.
+1
+ciónesnecesarioagregarunaoperaciónincremen- Enlasección4.4seilustralaaplicacióndeestospasosen
+tarVariableConDemandaenlaposiciónadecuada unejemploconcreto.
+enelgrafo.Enesecaso,laoperaciónincremen-
+tarVariableConDemanda estaría en el conjunto 4.2 Operaciones que insertan clientes en la solu-
+I . ción
+no
+Cuandosedeseainsertaruncliente(previamenteseleccio-
+3.3. Agregar el conjunto I a la lista de nodos ope-
+no
+nado)enunaposicióndada,serealizanlossiguientespasos,
+racionales que deben ser insertados cuando se
+enlosqueseasumequen eselnodoestructuralquerepre-
+inserteelclienterepresentadoporelnodon .Sea e
+e
+sentaalclientequeseráinsertado.
+I eseconjunto.Esteconjuntoseráusadoenel
+ne
+momentodeinsertarelcliente.
+1. A partir de la posición en la que se desea insertar el
+3.4. Determinar el conjunto de operaciones J no que cliente,sedeterminanelnodoestructuralqueestáen
+debenserinsertadosenlamismaposicióndela lacoordenadaanterioryelqueestaráenlasiguiente,
+quen o estásiendoeliminado. denotadosporn e−1 yn e+1 ,respectivamente.
+Por ejemplo, si se desea eliminar el cliente que
+2. Determinar el conjunto de nodos operacionales que
+estáenlacoordenada(1,2),aleliminarelnodoin-
+dependensimultáneamenteden yn .SeaO
+crementarVariableConDistanciaquetienecomo e−1 e+1 ne±1
+elconjuntodeestasoperaciones.
+argumentoselclientequeestáenlacoordenada
+(1,1) y el que está en la (1,2), se debe insertar
+3. Paracadanodooperacionaln quepertenezcaaO
+un nodo incrementarVariableConDistancia que
+o ne±1
+serealizanlassiguientesoperaciones:
+recibecomoargumentoslosclientesdelascoor-
+denadas(1,1)y(1,3). 3.1. desevaluarn ,
+o
+Enesemismocaso,aleliminarlaoperaciónque
+3.2. eliminarn delgrafo.
+o
+incrementa la distancia entre los clientes en las
+coordenadas (1,2) y (1,3) también es necesario 4. Insertarelnodon entrelosnodosn yn .
+e e−1 e+1
+agregar una operación de incrementar distancia
+entre los nodos (1,1) y (1,3). Sin embargo, esta 5. InsertarenelgrafolasoperacionesdelconjuntoI ne ,que
+operaciónsoloseagregaríaunasolavezporque fuecalculadoenelmomentodeseleccionarelcliente.
+I esunconjunto,.
+no
+6. Reevaluarlasoperacionesinsertadas,ytodaslasque
+Endeterminadoscasos,elconjuntoJ puedeser
+no dependandeellas.
+vacío. Por ejemplo, cuando el nodo n es de ti-
+o
+poincrementarVariableConDemandanohayque Unavezrealizadasestasoperaciones,elnuevografore-
+agregarningunaoperaciónaJ no ,yaquealelimi- flejalaestructuradelasoluciónvecina,yenelnodofinaldel
+narlanoesnecesarioagregarningunaotraenesa grafosetienelaevaluacióndelamisma.Enlasección4.4se
+mismaposición. ilustralaaplicacióndeestospasosenunejemploconcreto.
+3.5. AgregarelconjuntoJ alconjuntodenodosope-
+no
+racionalesquedebenserinsertadosenlamisma 4.3 Operacionesquemodificanotroselementosde
+posiciónqueenlaqueseeliminan .SeaJ este lasolución
+e ne
+conjunto. Eltercertipodeoperaciónrepresentaaaquellasquemodi-
+ficanalgúnelementodelasoluciónquenoseanclientes,como
+3.6. Eliminarelnodooperacionaln delgrafo.
+o
+losvehículosolosdepósitos.Ejemplosdeestasoperaciones
+4. Unavezeliminadostodoslosnodosoperacionalesque son:cambiarelvehículooeldepósitodeunaruta.
+dependan del nodo operacional n , se deben insertar Cuandosemodificaunodeestoselementos,serealizan
+e
+todaslasoperacionesenelconjuntoJ enlamismapo- lassiguientesoperaciones:
+ne
+sicióndelgrafoenqueseencontrabanlasoperaciones
+1. Determinarelnodoestructuraln quecorrespondeal
+relacionadasconn . e
+e
+elementoquesedeseamodificar.Enestecasoelnodo
+5. Eliminarelnodon e . n e representaaalgunacomponentedelasolucióncomo
+unvehículooundepósito.
+6. ReevaluartodaslasoperacionesdeJ quefueroninser-
+ne
+tadas,ytodaslasdemásoperacionesquedependende 2. Determinarelconjuntodeoperacionesquedependen
+ellas. den .SeaO esteconjunto.
+e ne
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29 RodriguezFlores,F.R.,&RodriguezSalgado,J.J.
+https://revistas.uh.cu/rcm/article/view/9737 https://doi.org/10.5281/zenodo.14333111
+Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos 23
+3. Paracadanodooperacionaln delconjuntoO : lasoperacionesenelconjuntoJ .Unavezterminadoelpro-
+o ne c1
+cesoseobtieneelgrafoquesemuestraenlaFigura5,quees
+3.1. Desevaluarn ,ytodoslosnodosquedependan
+o elqueseobtienedespuésderealizarlaoperaciónextraerel
+deél.
+clientedelaposición(1,1),querepresentalaevaluacióndela
+′
+3.2. Marcarelnodon
+o
+ytodoslosquedependandeél soluciónS =[[2],[3]],yqueenelvalordelnodoDtieneel
+comopendientedereevaluación. costodelamisma.
+4. Cambiarelelementodelnodon .
+e
+dep c 2 c 3 D
+Estosignificamodificarlacomponentedelasolución
+queestabaasociadaconn .Porejemplo,sin represen-
+e e
+tabaunvehículo,enestepasosecambiaesevehículo
+porotro.
+inicio d d2 d 23 d 3d
+5. Reevaluar cada uno de los nodos operacionales que Figura5.Grafodespuésdeextraerc
+1
+[Graphafterthe
+estánenelconjuntoO ne ,ytodoslosquedependande extractionofc 1 )].
+ellos.
+Alrealizarestospasosseobtieneelgrafocorrespondiente Pararealizarlaoperacióninsertarelclienteseleccionado
+alasoluciónvecina,yenelnodofinaldelmismo,elcosto enlaposición(2,1)serealizanlossiguientespasos.
+de la nuevasolución. Enla siguiente sección se muestrael Determinarlosnodosestructuralesquecorrespondenalos
+resultadodeaplicarestospasos. clientesenlasposiciones(2,0)y(2,1),quesonlosclientes
+queestaránantesydespuésdelclienteinsertado.Enestecaso
+4.4 Ejemplodemodificacióndelgrafo son los nodos dep y c 3 que corresponden al depósito y al
+A continuación se ilustra el método propuesto a partir cliente3,respectivamente.
+deaplicarlasoperacioneseliminarelclientedelaposición Una vez identificados estos clientes, se determinan los
+(1,1)einsertarloenlaposición(2,1)algrafocomputacional nodosoperacionalesquedependansimultáneamentedelos
+mostradoenlaFigura3,querepresentalaevaluacióndela dos,sedesevalúanyseeliminan.Enestecaso,essoloelnodo
+soluciónS∗=[[1,2],[3]]usandoelpseudocódigo2. d
+d3
+,quealdesevaluarsedisminuyeelvalordelnodoDenla
+Elprimerpasoconsisteendeterminarelnodoestructural distanciadesdeeldepósitohastaelcliente3.
+quecorrespondealelementoqueseencuentraenlaposición Seguidamente,seinsertaelclientec 1 enlaposición(2,1)
+(1,1).Enestecaso,eselnodoc .Elsegundopasoesdeter- (entre el depósito y el cliente 3) y se agregan al grafo los
+1
+minarelconjuntodeoperacionesquedependendec 1 .Eneste nodosenelconjuntoI c1 ,queenestecasosondos:unopara
+casosonlosnodosd d1 yd 12 yenlaFigura4semuestranen calcular la distancia desde el depósito hasta c 1 y otro para
+rojo. calcularladistanciadesdec 1 hastac 3 ,porqueeldepósitoes
+elclienteanterioralaposicióndondeseinsertarác ,yc está
+1 3
+enlasiguiente.Unavezinsertados,estosnodossereevalúan,
+dep c 1 c 2 c 3 D
+asícomotodoslosdemásnodosoperacionalesquedependan
+delosvaloresqueellosmodifican.
+Elgraforesultantederealizarestasoperacionessepuede
+ver en la Figura 6, donde se resaltan en rojo los elementos
+inicio d d1 d 12 d 23 d 3d
+insertados.
+Figura4.Operacionesquedependendec
+1
+[Operations
+dependingonc ].
+1
+dep c 2 c 1 c 3 D
+Cadaunodeestosnodossedesevalúa,conloquedisminu-
+yeelvaloralmacenadoenDenladistanciadesdeeldepósito
+hastaelcliente1,ydesdeelcliente1hastaelcliente2.
+Seguidamente,seagregandosoperacionesalconjuntoI : inicio d d2 d 21 d 13 d 3d
+unnodoparacalcularladistanciadesdeelclienteanterior
+c1
+a
+Figura6.Grafodespuésdeinsertarc
+1
+,conlasoperaciones
+enJ resaltadasenrojo[Graphafterinsertingc withthe
+laposicióndondeseinsertehastac
+1
+yotrodesdec
+1
+hastael c1 1
+operationsinJ highlightedinred].
+clientequeestéenlaposiciónsiguiente.Tambiénseagrega c1
+alconjuntoJ unaoperacióndecalculardistanciadesdeel
+c1
+depósitohastaelclientec ,porqueeldepósitoeselcliente Finalmente,sereevalúanlosnuevosnodosinsertadosy
+2
+queestáenlaposiciónanteriorac yc eselqueestáenla todaslasdemásoperacionesquedependandeellos.Deesa
+1 2
+posiciónsiguiente. formasetieneelcostodelanuevasoluciónenelnodoD.
+LossiguientespasossoneliminarlosnodosenO ,elimi- Esimportanteresaltarqueelcálculodelcostodelasolu-
+c1
+narelnodoestructuralc y,porúltimo,insertaryreevaluar ciónvecinadependeúnicamentedelasoperacionesrealizadas
+1
+RodriguezFlores,F.R.,&RodriguezSalgado,J.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29
+https://doi.org/10.5281/zenodo.14333111 https://revistas.uh.cu/rcm/article/view/9737
+24 Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos
+durantelaevaluacióndelasolucióninicial,queparahacerlo Tabla1.Tiempodeconstruccióndelgrafopara5000
+serealizalamenorcantidaddeoperacionesposibles,yqueel soluciones[Graphconstructiontimefor5000solutions].
+únicocódigocomputacionalquedebeescribirelusuarioes Problema Grafo NoGrafo Factor Avg Avgnografo
+cómoseevalúalasolucióninicial. A-N33-K5 0,71 0,014 50,71 0.0001 28×10−7
+A-N33-K6 0,45 0,013 34,85 0,0001 26×10−7
+Enlasiguientesecciónsecomparanlostiemposdeejecu-
+A-N32-K5 0,43 0,013 32,85 0,0001 26×10−7
+cióndeestapropuestacuandoseusapararesolverelCVRP, A-N37-K5 0,54 0,016 33,81 0,0001 32×10−7
+con los tiempos de ejecución de un algoritmo diseñado y A-N65-K9 1,25 0,027 46,11 0,0002 54×10−7
+optimizadopararesolverúnicamenteeseproblema. A-N80-K10 1,77 0,032 55,25 0,0004 64×10−7
+F-N135-K7 5,09 0,058 87,72 0,001 1,16×10−5
+5. Análisis de los tiempos de ejecución
+Apartirdeestosresultadospreliminares,pareceserque
+Enestasecciónsecomparaeltiempodeejecucióndela laconstruccióndelgrafopuedeserentre30y90vecesmás
+propuestarealizadaenestetrabajoalresolverelCVRPconel lentaquelaevaluacióntradicional.Sinembargo,estonoesun
+tiempodeejecucióndeunalgoritmodiseñadoyoptimizado problemapordosmotivos.Elprimeroesquecuandoseusa
+específicamenteparaeseproblema. unalgoritmodebúsquedalocalcomoBúsquedadeVecindad
+Elobjetivofundamentalesmedirdosfactores:eltiempo Variable,BúsquedaLocalIteradaoBúsquedaenVecindades
+deconstruccióndelgrafoinicialycuántomáslentoresulta Grandes[6,21],laevaluacióndeunasoluciónconlacorres-
+usarestaestrategiaenunalgoritmodeBúsquedaLocalparala pondienteconstruccióndelgrafoserealizaunaúnicavezen
+solucióndelCVRP.ElalgoritmoseleccionadofueBúsqueda todoelproceso.Yjustamentelaideadecalcularelcostode
+deDescensoporVecindad[11]. lassolucionesvecinasusandoelgrafodeevaluaciónresulta
+Los experimentos se ejecutaron en una laptop con dos útilenestetipodealgoritmos.Elsegundomotivoporelque
+núcleosIntel(R)Core(TM)i7-4700MQa2.4GHzy8GBde esonoesunproblemaesquelostiempospromediodecons-
+memoriaRAM. truccióndelgrafodeevaluación,quesepuedenapreciarenla
+Enlosepígrafessiguientessedescribenlosexperimentos columna5delatabla1,estánenelordendelasmilésimasde
+realizadosylosresultadosobtenidos. segundo.
+En la siguiente sección se compara el tiempo de ejecu-
+5.1 Tiempodeconstruccióndelgrafo cióndeunalgoritmodeBúsquedadeDescensoporVecindad
+Elobjetivodelprimerexperimentoesanalizareltiempo pararesolverelCVRP,usandodosvariantesparacalcularel
+quetomacalcularelcostodeunasoluciónyconstruirelgrafo costodelassolucionesvecinas.Enlaprimeraseusaelgrafo
+deevaluación,ycompararloconeltiempoquetomaríaevaluar de evaluación y en la segunda se usa una implementación
+una solución sin construirlo. Para ello, se seleccionaron 7 especialmenteoptimizadaparaeseproblema.
+problemasde[14],segeneraron5000solucionesaleatorias
+5.2 Tiempodeejecucióndeunalgoritmo
+para cada uno de ellos y se evaluaron dos veces, en una se
+Paraanalizarelcomportamientodelapropuestarealizada
+construyóelgrafoyenlaotrano.
+durantelacorridadeunalgoritmocompleto,seimplementó
+LosproblemasescogidosfueronA-N33-K5,A-N33-K6,
+unaBúsquedadeDescensoporVecindades[11]conunaes-
+A-N32-K5,A-N37-K5,A-N65-K9,A-N80-K10yF-N135-
+trategiadebúsquedaexhaustivayseleccióndelmejorvecino.
+K7.Enesanotaciónelnúmeroqueaparecealaderechadela
+LaBúsquedadeDescensoporVecindadesrecibeuncrite-
+Nindicalacantidaddeclientesenelproblema,yelnúmero
+riodevecindad,unasoluciónactualyrealizalossiguientes
+queaparecealaderechadelaKindicalacantidadderutas
+pasos:seanalizaelcostodetodoslosvecinosdelasolución
+quedebetenerlasoluciónóptima.
+(poresoesbúsquedaexhaustiva)ysielmejordeellostiene
+Latabla1muestralosresultadosdeesteexperimento.En
+un costo menor que la solución actual, ese se convierte en
+la primera columna se muestra el problema en el que fue-
+lasoluciónactual.Elalgoritmosedetienecuandoelmejor
+ronevaluadaslassoluciones.Lasegundacolumnamuestrael
+vecino tiene un costo mayor o igual que la solución actual,
+tiempoquetomóevaluarlas5000solucionesusandolaestra-
+y se considera que esa es la mejor solución posible. Como
+tegiapropuestaenestetrabajo.Laterceracolumnamuestra
+seusabúsquedaexhaustivaylasoluciónactualsiemprese
+eltiempoquetomólaevaluación“tradicional”enlaquesolo
+cambiaporlamejordelavecindad,estealgoritmoesdeter-
+secalculaelvalordelasoluciónsinconstruirelgrafo.Enla
+minista.Encasodequehayavariassolucionesvecinasconel
+columna4aparececuántasvecesmáslentaeslaconstrucción
+mismomejorcosto,sedevuelvelaprimeraqueencuentrael
+delgrafoquelaevaluacióntradicional.Estevalorseobtiene
+algoritmo.
+dividiendoeltiempoquetomóconstruirelgrafoentreeltiem-
+Paraestosexperimentossuusaronlosmismosproblemas
+poquetomaevaluarlasoluciónsinconstruirlo.Enlaquinta
+presentadosenlasecciónanteriory6criteriosdevecindad,
+columnaapareceeltiempopromediodeevaluarunasolución
+queson:
+mientrasseconstruyeelgrafo,yenlasextacolumnaeltiempo
+promedio de la evaluación de una solución sin construir el RAB: seleccionarunclienteyubicarloenotraposiciónden-
+grafo.Todoslostiempossonensegundos. trodesumismaruta,
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29 RodriguezFlores,F.R.,&RodriguezSalgado,J.J.
+https://revistas.uh.cu/rcm/article/view/9737 https://doi.org/10.5281/zenodo.14333111
+Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos 25
+RARB: seleccionarunclienteyubicarloenotraposiciónde Tabla2.Cuántomáslentoesusarelgrafo[Howmuchslower
+cualquierruta, isittousethegraph].
+Propiedad valor
+RARAC: seleccionardosclienteseintercambiarlos, Total 2427
+Media 2,259434
+REF: seleccionar una subruta y ubicarla en otra posición Desviaciónestándar 0,718694
+dentrodesumismaruta, Mínimo 0,500000
+25% 1,730769
+50% 2,156309
+RERF: seleccionarunasubrutayubicarlaenotraposición
+75% 2,713047
+encualquierruta,y Máximo 12,000000
+REREG: seleccionardossubrutaseintercambiarlas.
+elgrafofuesolode0.012segundos.Tambiénesnotableque
+Paracadapar(problema,criteriodevecindad)segenera-
+conlaexcepcióndedoscasos(el10yel14),lasvecindades
+ron60solucionesaleatorias,conlasexcepcionesdelospares
+son“pequeñas”enelsentidodequetienenpocoselementos.
+(A-N80-K10,RERF),(F-N135-K7,RERF)y(F-N135-K7,RE-
+REG)paralasquesolosegeneraron30.
+Tabla3.Valorextremossuperioresdelcociente(outliers)
+Paracadacombinacióndeproblema,criteriodevecindad
+[Upperextremevaluesoftheratio(outliers)].
+y solución inicial, se corrió el algoritmo dos veces. En la
+Problema Criterio SinGrafo ConGrafo Cociente
+primera,elcálculodelcostodecadasoluciónvecinaserealizó
+1 A-N33-K5 RAB 0,012 0,051 4,250
+siguiendoelalgoritmopropuestoen[24],quegarantizaquese 2 A-N33-K5 RAB 0,012 0,051 4,250
+realicenlamenorcantidaddeoperacionesposibles,tomando 3 A-N33-K6 RAB 0,002 0,014 7,000
+4 A-N33-K6 RAB 0,001 0,005 5,000
+encuentalaimplementaciónrealizada.
+5 A-N33-K6 RAB 0,011 0,047 4,273
+Enlasegundacorrida,elcostodelassolucionesvecinasse
+6 A-N33-K6 RAB 0,024 0,170 7,083
+calculausandoelgrafodeevaluación.Conesosdostiempos 7 A-N33-K6 RAB 0,009 0,053 5,889
+secalculóelcocientetiempodelaversiónqueusaelgrafo 8 A-N32-K5 RAB 0,001 0,012 12,00
+9 A-N32-K5 RAB 0,001 0,006 6,000
+sobretiempodelaversiónoptimizada.Cuandoesecocientees
+10 A-N32-K5 RERF 0,843 3,550 4,211
+1significaquelosdostiemposfueroniguales.Sielcociente 11 A-N37-K5 RAB 0,016 0,080 5,000
+es mayor que 1 significa que la propuesta fue más lenta, y 12 A-N37-K5 RAB 0,019 0,095 5,000
+cuandoesmenorqueuno,significaquelapropuestafuemás 13 A-N37-K5 RARB 0,172 0,752 4,372
+14 A-N37-K5 RERF 1,695 7,654 4,516
+rápida.Elobjetivodelexperimentoestenerunaideainicial
+15 A-N80-K10 RAB 0,093 0,416 4,473
+decuántomáslentoresultautilizarelgrafodeevaluación.
+Hubotrescombinacionesdeproblema,criterioysolución
+Lostresoutliersqueestabanpordebajodelmínimoes-
+enlasqueeltiempodecorridaparalavarianteoptimizadafue
+peradoparalosdatossemuestranenlaTabla4ysepuede
+inferiora10−4,yesetiemposereportócomo0.0segundos.
+apreciarqueenestoscasoslostiemposdeejecuciónusando
+Enesoscasosnofueposiblecalcularelcociente,yportanto
+elgrafodeevaluaciónparacalcularelcostodelosvecinoses
+fueronexcluidosdelanálisis.Esoocurrióenproblemascon
+inferiora0,1segundos.
+32,33y37clientes,yenlostrescasos,eltiemporeportado
+porelalgoritmocompletoconelcálculoautomáticodelcosto
+Tabla4.Valorextremosinferioresdelcociente(outliers)
+delosvecinosfuede0.001segundos.Alnopodercalcular
+[Lowerextremevaluesoftheratio(outliers)].
+elcociente,estostrescasosfueroneliminadosyelanálisis
+Problema Criterio Optimizado Congrafo Cociente
+serealizócon2427combinacionesdeproblema,criteriode
+A-N33-K5 REF 0,002 0,001 0,500
+vecindad,solucióninicial. A-N33-K6 RAB 0,061 0,034 0,557
+Unanálisisdescriptivodeesecocientearrojólainforma- A-N65-K9 RAB 0,011 0,008 0,727
+ciónquesemuestraenlaTabla2.Delos2427casosanaliza-
+dos,elvalormínimofue0,5yelmáximo12,0,conunamedia Cuandoseeliminanestosoutliers,seobtienelainforma-
+de2,25.Sinembargo,enestecasoseidentificaron18outliers: ciónquesemuestraenlaTabla5.Enestecasoseanalizaron
+15valoresdemasiadograndesy3demasiadopequeños. 2409combinacionesconuncocientemínimode0,8,unco-
+Losvaloresqueestuvieronporencimadelmáximoespera- ciente máximo de 4,17, y una media de 2,24. Además, se
+dosemuestranenlaTabla3quetieneenlaprimeracolumna pudoapreciar,aunquenoapareceenlatabla,queen37delas
+elproblemayenlasegundaelcriteriodevecindad,además corridasrealizadas,seobtuvouncocienteinferioroiguala
+delostiemposdeejecuciónsingrafo,congrafo,yelcociente. 1,loquesignificaqueenesascorridasfuemásrápidousarel
+Ahísepuedeapreciarqueaunqueelcocientedelostiempos grafodeevaluaciónparacalcularelcostodelosvecinosque
+deejecuciónseagrande,enlamayoríadeloscasos(conla usarelalgoritmooptimizadoparaeseproblema.
+excepciónde2)lostiemposdeejecuciónestánpordebajodel Con respecto al análisis de los datos preliminares obte-
+segundo. En el caso del mayor cociente reportado, que fue nidossobrelostiemposdecorrida,alanalizarloscocientes
+12.0,eltiempoquedemorólaejecucióndelalgoritmousando menoresqueuno(quesonaquelloscasosenlosqueelalgorit-
+RodriguezFlores,F.R.,&RodriguezSalgado,J.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29
+https://doi.org/10.5281/zenodo.14333111 https://revistas.uh.cu/rcm/article/view/9737
+26 Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos
+Tabla5.Resumendelanálisisdelcociente(sinoutliers) despuésdevisitaratodoslosclientesdeesaruta.
+[Summaryoftheratioanalysis(withoutoutliers]. Unejemplodeproblemaquecumpleconestacondición
+Propiedad Valor eselCVRP,enelqueunavezquesevisitantodoslosclientes,
+Total 2409 sepenalizalacargadelvehículo.Otrassituacionesenlasque
+Media 2,240990
+sepenalicealgúnvalor“despuésdevisitartodoslosclientes”
+Desviaciónestándar 0,651907
+Mínimo 0,800000 pueden ser que la distancia total recorrida por un vehículo
+25% 1,730748 debasermenorqueunacantidadprefijada,oqueeltiempo
+50% 2,152284 quetomevisitaratodoslosclientesdelarutaseamenorque
+75% 2,707593
+unvalorconocido.
+Máximo 4,176471
+Ejemplosdeproblemasenlasqueestacondiciónnose
+cumplesonelproblemaconventanasdetiempo[23]opro-
+mousandoelgrafofuemásrápidoquelaversiónoptimizada blemasconentregayrecogidasimultánea[12]enelque,al
+manualmenteparaeseproblemaespecífico),sepuedeapreciar visitaracadaclientesepenalicelacargadelvehículopara
+queenlosproblemaspequeños(con32,33y37clientes)el garantizarquelasoluciónobtenidaseafactible.Enestoscasos
+menor cociente que se obtiene es 1. Esto significa que con cadavezquesevisitaunclientesedebeverificarelcumpli-
+esosproblemas,elmejordesempeñodelalgoritmocongrafo mientodedeterminadaspropiedadescomoestardentrodela
+eselmismodelalgoritmosingrafo.Sinembargo,enproble- ventanadetiempoonosobrepasarlacapacidaddelvehículo.
+masmásgrandesenlosqueseusaroncriteriosdevecindad Elmotivoporelquesolosepuedecalcularelcostodelos
+que requieren explorar más vecinos (problemas con 65, 80 vecinosenproblemasenlosquesepenalicealfinaldelaruta
+y135clientes,ycriterioscomointercambiardossubrutas), esquecuandoseconstruyeelgrafo,enlosnodosacumula-
+algunoscocientessonmenoresque1.Estopudierasugerirque doresquerepresentanlasvariables,solamenteseguardael
+mientrasmásgrandesealavecindadquesedeseaexplorar últimovalorqueestastuvieronalfinalizarlaevaluación.Si
+másconvenienteseausarestapropuesta.Sinembargo,para noexistenpenalizacionesdurantelaevaluacióndeunaruta,
+confirmarorefutaresaafirmaciónseríanecesariaunamayor el último valor de la variable depende directamente de las
+experimentación. propiedadesdelosclientes(demandaotiempodeservicio,
+Deesteanálisispreliminarpudieraesperarsequeusarla porejemplo)ydeesaforma,cuandosemodificanlasrutas,
+propuestapresentadaenestetrabajopararesolverunavariante esposibleobtenerelnuevovalordelavariable.
+específicadelVRPsea4o5vecesmáslentoqueusaruna Sinembargo,sidurantelaevaluacióndelarutaserealizan
+varianteenlaquesehayaprogramado(yoptimizado)cómo penalizaciones,estasrecibencomoargumentoelvalorque
+calcularelcostodecadavecinoeneseproblemaespecífico. teníalavariableenelmomentoquesepenalizan.Cuandose
+Yaunqueeltiempodecorridapuedaser4o5vecesmayor, modifiquelarutaextrayendooinsertandouncliente,paraac-
+setendríalaventajadequenohabríaquededicarletiempo tualizarelcostodelapenalizaciónenlasoluciónvecinaharía
+a programar cómo calcular el costo de cada vecino, que es faltateneraccesoalvalordelavariableenelmomentoquese
+unaactividadquetomamuchomástiempoque4o5vecesel realizalapenalización,ycomoenelgrafodeevaluaciónsolo
+tiempodeejecucióndelaversiónoptimizada.Estopudiera seguardaelúltimovalordelavariable,estonoesposible.
+sugerirqueconrespectoaltiempototaldedicadoalasolución Sinembargo,encualquierVRPenelquelaspenalizacio-
+delproblema,estapropuestapuederesultarventajosa. nesserealicendespuésdevisitartodoslosclientesdelaruta
+esposibleaplicarestapropuesta.
+6. Limitaciones de la propuesta y
+escenarios donde se puede usar 7. Conclusiones, recomendaciones y
+trabajo futuro
+En este trabajo se ha propuesto un mecanismo que per-
+mitecalcular,enunproblemadeenrutamientodevehículos Enestetrabajosehapropuestounavíaparaevaluar,de
+cualquiera,elcostodeunasoluciónvecinadeotracuyaeva- maneraautomáticayeficiente,solucionesvecinasdeunadada
+luaciónseconoce,deformaqueseestecostoseobtengacon enunproblemadeenrutamientodevehículos.Quelaevalua-
+la menor cantidad de operaciones posibles y sin tener que ciónseaeficientesignificaqueserealizanlamenorcantidad
+escribirelcódigoparacalcularlo.Estoselograconstruyendo deoperacionesposiblesparaobtenerelcosto,yqueseaau-
+ungrafoquerepresentaelcálculodelcostodelasoluciónal tomáticasignificaqueelusuariosolodebeprogramarcómo
+que,paraobtenerelcostodelvecino,selerealizanlamenor seevalúaunasoluciónypuededesentendersedelcálculodel
+cantidad de operaciones posibles para obtener el grafo que costodelosvecinos.
+correspondealasoluciónvecina.Enestasecciónsepresentan Estoselogramedianteelusodeungrafodeevaluación
+laslimitacionesdeestapropuesta. quereflejatodaslasoperacionesrealizadasduranteelcálculo
+La alternativa que se presenta en este trabajo se puede delcostodeunasolución,yenelqueexistentrestiposdeno-
+aplicarencualquierVRPenelquealevaluarunasolución dos:operacionales,estructuralesyacumuladores.Losnodos
+todaslaspenalizacionesrelacionadasconunarutaserealicen operacionalesrepresentanlasoperacionesrealizadasdurante
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29 RodriguezFlores,F.R.,&RodriguezSalgado,J.J.
+https://revistas.uh.cu/rcm/article/view/9737 https://doi.org/10.5281/zenodo.14333111
+Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos 27
+laevaluación;losestructurales,lascomponentesdelasolu- Suplementos
+ciónevaluada;ylosacumuladoresrepresentanlasvariables
+Elcódigodeprogramaciónutilizadoenesteartículoestará
+queseusanenloscálculos.
+disponible para los autores que lo requieran al autor para
+Elgrafoseconstruyecuandoseevalúalasoluciónusando
+correspondencia.
+funciones especialmente diseñadas para eso, de forma que
+cuando se ejecutan, además de calcular los valores corres-
+pondientes,agreganalgrafolosnodosrelacionadosconesa Agradecimientos
+operación. Las soluciones vecinas se definen mediante las
+Losautoresagradecenalosrevisoresporsussugerencias
+operacioneselementalesnecesariasparaobtenerlasapartir
+yrecomendaciones.
+de la solución actual, y para el evaluar el costo de una de
+ellas,elgrafosemodificaapropiadamentedeformaqueal
+terminarlasmodificacionesseobtieneelgrafoquerepresenta Conflictos de interés
+alasoluciónvecinaysucosto.
+Sedeclaraquenoexistenconflictosdeinterés.
+Enlosexperimentospreliminaresrealizadosparaanalizar
+lostiemposdeejecuciónalusarestapropuesta,seobtuvoque
+Contribución de autoría
+laevaluacióninicialdelasoluciónpuedeserentre30y90
+vecesmáslentaqueunaevaluaciónenlaquenoseconstruya Conceptualización F.R.R.F.,J.J.R.S.
+elgrafodeevaluación,peroestonoesunproblemaporque
+Análisisformal F.R.R.F.
+enlosalgoritmosdebúsquedalocalestegrafoseconstruye
+una única vez al comienzo del mismo y además, el tiempo Investigación F.R.R.F.,J.J.R.S.
+promediodelaconstruccióndelgrafoestáenelordendelas Metodología F.R.R.F.,J.J.R.S.
+milésimasdesegundo.
+Administracióndeproyecto F.R.R.F.
+Porotraparte,tambiénseevaluócuántomáslentoresulta
+Software J.J.R.S.
+usar esta propuesta en una Búsqueda de Descenso por Ve-
+cindadysecompararonlosdostiemposdecorrida:cuando Supervisión F.R.R.F.
+se usa el grafo de evaluación y cuando no se usa. De estos
+Validación F.R.R.F.,J.J.R.S.
+experimentosseobtuvoquealusarelgrafosepuedeesperar
+queeltiempodeejecuciónseahasta5vecesmáslentoque Visualización F.R.R.F.
+unalgoritmooptimizadoparaelproblemaespecífico,aunque
+Redacción:preparacióndelborradororiginal F.R.R.F.
+tambiénhubocasos(muypocos)enqueelalgoritmoquecal-
+Redacción:revisiónyedición F.R.R.F.,J.J.R.S.
+culaelcostodelosvecinosusandoelgrafodeevaluaciónfue
+másrápido(hasta0.8veces)quelaversiónoptimizada.Estos
+resultadossugierenquepuedeserconvenienteusarestapro- Referencias
+puestapararesolverdiversosproblemasdeenrutamientode
+[1] Arnold, F. y K. Sorensen: Knowledge-guided local
+vehículos,yaquenoseríanecesarioprogramarcómocalcular
+search for the vehicle routing problem. Computers
+eficientementeelcostodeunasoluciónvecina,yprogramar
+& Operations Research, 105:32–46, 2019. https:
+esosueletomarmuchomásde5veceseltiempodecorrida
+//www.sciencedirect.com/science/arti
+delalgoritmo.
+cle/pii/S0305054819300024.
+Lapropuestarealizadatieneunalimitaciónimportante,y
+esquesolopuedeusarseenaquellosproblemasenlosque [2] Asghari,M.,S.MirzapourAl-ehashemyJ.Mohammad:
+laspenalizacionesserealicenúnicamentedespuésdeanalizar Greenvehicleroutingproblem:Astate-of-the-artreview.
+todoslosclientesdelaruta.Estosedebealaformaenquese InternationalJournalofProductionEconomics,231,jan
+almacenalainformaciónylosvaloresdelasvariablesenel 2021. https://www.sciencedirect.com/sc
+grafodeevaluación. ience/article/pii/S0925527320302607.
+Paratrabajosfuturosserecomiendamodificarlaconstruc-
+[3] Dantzig, G.B. y J.H. Ramser: The Truck Dispatching
+cióndelgrafoparapoderconsiderarproblemasenlosquesea
+Problem. ManagementScience,6,Octubre1959. ht
+necesariopenalizardeterminadosvaloresantesdeterminar
+tps://pubsonline.informs.org/doi/abs
+deprocesarlaruta.Ejemplodeestosproblemassonelpro-
+/10.1287/mnsc.6.1.80.
+blema con Ventanas de Tiempo y el problema con Entrega
+y Recogida Simultáneas. También se propone realizar una
+[4] Derbel,H.,B.JarbouiyP.Siarry:GreenTransportation
+experimentaciónmásexhaustivaparaestudiarlostiemposde
+andNewAdvancesinVehicleRoutingProblems. Sprin-
+corridadelapropuesta.
+ger,2020,ISBN9783030453114.https://link.s
+pringer.com/book/10.1007/978-3-030-4
+5312-1.
+RodriguezFlores,F.R.,&RodriguezSalgado,J.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29
+https://doi.org/10.5281/zenodo.14333111 https://revistas.uh.cu/rcm/article/view/9737
+28 Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos
+[5] Erdelic,T.yT.Caric:ASurveyontheElectricVehicle [15] Marwa,A.,T.Said,J.BassemyE.Mansour:Avaria-
+Routing Problem: Variants and Solution Approaches. bleneighborhoodsearchalgorithmforthecapacitated
+JournalofAdvancedTransportation,2019,may2019. vehicleroutingproblem. ElectronicNotesinDiscrete
+https://onlinelibrary.wiley.com/doi/ Mathematics,58,Abril2017. https://www.scie
+abs/10.1155/2019/5075671. ncedirect.com/science/article/pii/S1
+571065317300665.
+[6] Gendreau, M. y J. Y. Potvin: Handbook of Metaheu-
+ristics. InternationalSeriesinOperationsResearch& [16] Mohamed,N.H.,S.Salhi,G.NagyyN.A.Mohamed:
+Management Science 272. Springer International Pu- A matheuristic approach for the split delivery vehicle
+blishing,3rdedición,2019. https://link.sprin routingproblem:anefficientsetcovering-basedmodel
+ger.com/book/10.1007/978-3-319-91086 with guided route generation schemes. International
+-4. JournalofMathematicsinOperationalResearch,2019.
+https://www.inderscienceonline.com/d
+[7] Ghorbani, E., M. Alinaghian, G.B. Gharehpetian, S. oi/abs/10.1504/IJMOR.2019.101613.
+MohammadiyG.Perboli:ASurveyonEnvironmentally
+FriendlyVehicleRoutingProblemandaProposalofIts [17] Montagné,R.,D.TorresSanchezyH.O.Storbugt:VRPy:
+Classification. Sustainability, 12, oct 2020. https: APythonpackageforsolvingarangeofvehiclerouting
+//www.mdpi.com/2071-1050/12/21/9079. problemswithacolumngenerationapproach. Journal
+ofOpenSourceSoftware,5(55):2408,2020. https:
+[8] Goel, R. y R. Maini: Vehicle routing problem and its
+//joss.theoj.org/papers/10.21105/jos
+solutionmethodologies:asurvey. InternationalJournal
+s.02408.pdf.
+ofLogisticsSystemsandManagementvol.28iss.4,28,
+2017. https://www.inderscienceonline.c
+[18] Mor,A.yM.G.Speranza:Vehicleroutingproblemsover
+om/doi/abs/10.1504/IJLSM.2017.087786.
+time:asurvey. 4OR:AQuarterlyJournalofOperations
+Research,mar2020. https://link.springer.
+[9] Griewank,A.yA.Walther:Evaluatingderivatives:prin-
+com/article/10.1007/s10479-021-04488
+ciplesandtechniquesofalgorithmicdifferentiation. So-
+-0.
+cietyforIndustrialandAppliedMathematic,secondedi-
+ción,2008. https://epubs.siam.org/doi/p
+[19] Pop, P.C. y A. Horvat-Marc: Local search heuristics
+df/10.1137/1.9780898717761.bm.
+forthegeneralizedvehicleroutingproblem. En2012
+InternationalConferenceonSystemModelingandOpti-
+[10] Groer,C.,B.GoldenyE.Wasil:Alibraryoflocalsearch
+mization(ICSMO2012),IPCSIT,volumen23,páginas
+heuristicsforthevehicleroutingproblem. Mathematical
+84–87, 2012. https://www.academia.edu/d
+ProgrammingComputation,2,apr2010. https://
+ownload/41333655/Local_search_heuris
+link.springer.com/article/10.1007/s1
+tics_for_the_generali20160119-18577
+2532-010-0013-5.
+-l8g8ng.pdf.
+[11] Hansen,P.,N.MladenovicyJ.A.MorenoPerez:Varia-
+[20] Praveen, V., P. Keerthika, A. Sarankumar y G. Siva-
+ble neighbourhood search: methods and applications.
+priya: A Survey on Various Optimization Algorithms
+4OR: A Quarterly Journal of Operations Research, 6,
+toSolveVehicleRoutingProblem. EnIEEE20195th
+nov 2008. https://link.springer.com/ar
+International Conference on Advanced Computing &
+ticle/10.1007/s10288-008-0089-1.
+Communication Systems (ICACCS). IEEE, mar 2019.
+[12] Hof,J.yM.Schneider:Anadaptivelargeneighborhood https://ieeexplore.ieee.org/abstract
+searchwithpathrelinkingforaclassofvehiclerouting /document/8728417/.
+problemswithsimultaneouspickupanddelivery. Net-
+works,74,apr2019. https://onlinelibrary. [21] Prodhon,C.yC.Prins:MetaheuristicsforVehicleRou-
+wiley.com/doi/abs/10.1002/net.21879. tingProblems,páginas407–437. SpringerInternational
+Publishing,2016. https://link.springer.co
+[13] Laporte,G.:FiftyYearsofVehicleRouting. Transporta- m/chapter/10.1007/978-3-319-45403-0
+tionScience,43,nov2009. https://pubsonline _15.
+.informs.org/doi/abs/10.1287/trsc.10
+90.0301. [22] Tolga,K.C.,J.OlayL.Gilbert:Thirtyyearsofhetero-
+geneous vehicle routing. European Journal of Opera-
+[14] Lima,I.ycolaboradores:CVRPLIB:CapacitatedVehi- tionalResearch2016-febvol.249iss.1,249,feb2016.
+cleRoutingProblemLibrary. http://vrp.atd-l https://www.sciencedirect.com/scienc
+ab.inf.puc-rio.br. e/article/pii/S0377221715006530.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29 RodriguezFlores,F.R.,&RodriguezSalgado,J.J.
+https://revistas.uh.cu/rcm/article/view/9737 https://doi.org/10.5281/zenodo.14333111
+Grafoparalaevaluaciónautomáticadesolucionesvecinasenproblemasdeenrutamientodevehículos 29
+[23] Toth,P.yD.Vigo:TheVehicleRoutingProblemPro- Transactions on Systems, Man, and Cybernetics: Sys-
+blems,Methods,andApplications. MonographsonDis- tems,50(12):4948–4958,2020. https://ieeexp
+creteMathematicsandApplications.SIAM,2aedición, lore.ieee.org/abstract/document/8844
+2014, ISBN1611973589. https://epubs.siam 993/.
+.org/doi/abs/10.1137/1.9781611973594
+.fm.
+[24] Villavicencio Sánchez, E.D. Nuñez de: Propuesta de
+exploraciónágildecualquiervecindadenunVRP.Tesis
+de Diploma, Facultad de Matemática y Computación,
+UniversidaddeLaHabana,2018.
+[25] Wang,X.,TsanMingChoi,ZhiyingLiyShuaiShao:
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+AnEffectiveLocalSearchAlgorithmfortheMultidepot
+SinDerivadas 4.0 Internacional”.
+CumulativeCapacitatedVehicleRoutingProblem.IEEE
+RodriguezFlores,F.R.,&RodriguezSalgado,J.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.15-29
+https://doi.org/10.5281/zenodo.14333111 https://revistas.uh.cu/rcm/article/view/9737
+1

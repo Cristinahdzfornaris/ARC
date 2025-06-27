@@ -1,0 +1,746 @@
+CienciasMatemáticas,Vol.32,No.2,Pag.107-114, 2018
+Recibido02-2018
+Modelo de Programacio´n Lineal Difusa Multiobjetivo
+para la evacuacio´n o´ptima de personas bajo
+amenaza de desastres naturales
+Fuzzy Multiobjective Linear Programming Model for
+the optimal evacuation of people under threat of
+natural disasters
+Ernesto Parra Inza1*, Carlos Segura Vidal1, Jose´ Mar´ıa Sigarreta Almira2, Juan Carlos
+Herna´ndez Go´mez2
+Resumen Laevacuacio´ndepersonasesunprocesosustantivodentrodelagestio´noperativadedesastres.
+EnCuba,yenespecialenlaprovinciadeHolgu´ın,dichoprocesoincluyeelcontrolsistema´ticodelosdatos
+poblacionales de cada municipio, y la confeccio´n de un plan de respuesta de acuerdo a diversos criterios.
+Esto u´ltimo se realiza tradicionalmente de forma manual, con las correspondientes limitaciones en la toma
+dedecisionesinvolucradas.Enesesentido,lapresenteinvestigacio´ntieneporobjetivomodelarmedianteun
+enfoque de programacio´n lineal difusa multiobjetivo, el problema de transporte asociado a la evacuacio´n de
+personasantedesastresnaturalesenlaprovinciadeHolgu´ın.Elenfoquepropuestopermiteobtenerdemanera
+ra´pidayeficienteunapropuestadeevacuacio´nquefacilitara´ latomadedecisionesteniendoencuentamu´ltiples
+criteriosylapresenciadeincertidumbreenlosdatos.Sehanconsideradocuatrocasosdeestudiosrelacionados
+conposiblesescenariosdeevacuacio´ndepersonasenlaprovinciadeHolgu´ın.Losresultadosmuestranqueel
+enfoquepropuestoresultaeficazylosuficientementepertinenteparaseraplicadoenescenariosreales.
+Abstract Theevacuationofpeopleisasubstantiveprocesswithintheoperationalmanagementofdisasters.
+InCuba,andespeciallyintheprovinceofHolgu´ın,thisprocessincludesthesystematiccontrolofthepopulation
+data of each municipality, and the preparation of a response plan according to various criteria. The latter is
+traditionallydonemanually,withthecorrespondinglimitationsinthedecision-makinginvolved. Inthissense,the
+presentresearchaimstomodeltheproblemoftransportassociatedwiththeevacuationofpeopletonatural
+disastersintheprovinceofHolguinusingafuzzymultiobjectivelinearapproach. Theproposedapproachmakes
+it possible to obtain a fast and efficient evacuation proposal that would facilitate the decision making taking
+into account multiple criteria and the presence of uncertainty in the data. We have considered four cases of
+studiesrelatedtopossiblescenariosofevacuationofpeopleintheprovinceofHolguin. Theresultsshowthat
+theproposedapproachiseffectiveandrelevantenoughtobeappliedinrealscenarios.
+PalabrasClave
+Programacio´nlinealdifusamultiobjetivo—gestio´noperativadedesastres
+1DepartamentodeLicenciaturaenMatema´tica,UniversidaddeHolgu´ın,Holgu´ın,Cuba,eparrainza@gmail.com,csegurav@uho.edu.cu
+2UnidadAcade´micadeMatema´ticas,UniversidadAuto´nomadeGuerrero,Guerrero,Me´xico,josemariasigarretaalmira@hotmail.com,
+jcarloshguagro@gmail.com
+*AutorparaCorrespondencia
+1. Introduccio´n alto(donantes,mediosdecomunicacio´n,gobierno,militares,
+organizacioneshumanitarias,entreotros);adema´sdelafalta
+Responder ante los desastres de manera eficiente no es
+derecursossuficientesparaproveerunarespuestaadecuada
+unatareafa´cil,pueslosfactoresqueintervienenenestospro-
+antelasituacio´n.
+cesossonnumerosos.Porejemplo,elambientepost-ayuda
+Unaayudahumanitariaeficienteperoflexibleesuntemaclave
+en caso de desastre es cao´tico, existe el pa´nico pu´blico, el
+encasodedesastres,delcualseesta´hablandoconmayorauge
+transporte se pierde as´ı como la infraestructura de comuni-
+enelmundoacade´micoactual[9]comounaextensio´ndeesta,
+cacio´n; el nu´mero y la variedad de actores involucrados es
+ModelodeProgramacio´nLinealDifusaMultiobjetivoparalaevacuacio´no´ptimadepersonasbajoamenazade
+108 desastresnaturales
+la log´ıstica humanitaria es una de las disciplinas de mayor han sido clasificados, atendiendo a su origen en: naturales,
+importanciadentrodelmanejodedesastres[14].Unodelos tecnolo´gicosysanitarios.
+grandesobsta´culosparasuperarencadenasdesuministrode Enlosu´ltimos20an˜osunanuevadisciplinahaemergidoen
+ayudahumanitaria,eslaenormeincertidumbreylosmu´ltiples elcontextodelaInvestigacio´ndeOperacionesylasCiencias
+objetivos en la demanda, los suministros y la siempre exis- delaAdministracio´naplicadasenlagestio´ndedesastresnat-
+tentepresio´nqueejerceeltiempo.Lalog´ısticahumanitaria urales.Altayyotros(2006)[1]lallamaronGestio´noperativa
+esunprocesoconsideradodealtoniveldecomplejidad,pues dedesastres(DOM),adema´sladefinencomoelconjuntode
+constituyelapartema´scostosadelamitigacio´ndedesastres actividadesrealizadaspreviamente,duranteydespue´saunde-
+[24];estaseencargaenlaetapaderecuperacio´ndeminimizar sastreconelobjetivodeprevenirlape´rdidadevidashumanas,
+losefectosdeldesastre,realizandolabu´squedayrescatede reduciendosuimpactoenlaeconom´ıa,yretornaraunestado
+v´ıctimas,ylaprovisio´ndev´ıveresyserviciosdeemergencias. denormalidad.
+LaDefensaCivilmantieneunestrictocontroldelasv´ıasde
+acceso terrestre a una gran cantidad de puntos estrate´gicos
+delterritoriodeHolgu´ın,quelepermiterealizarlaslabores 3. Programacio´n lineal difusa
+log´ısticashumanitarias.Comoconsecuencia,duranteoluego multiobjetivo
+de la crisis, toda esta informacio´n var´ıa de manera vertigi-
+Laextensio´ndifusadelaprogramacio´nlinealtratalain-
+nosa,porloquesehacepra´cticamenteimposiblemantener
+certidumbrededeterminadoselementosdelmodelomediante
+demaneramanuallainformacio´ndelestadorealdelasv´ıas
+lateor´ıadelalo´gicadifusa[25].Convieneportantodefinir
+deacceso,as´ıcomoproponerrutaso´ptimasqueminimicen
+primeroqueesunconjuntodifuso.
+los gastos de recursos y maximicen la ayuda brindada. De
+Conjunto difuso[3]: SeaY ⊆R un conjunto no vac´ıo. Un
+esta forma, el procedimiento antes mencionado incurre en
+subconjuntodifusodeY esunafuncio´nµ :Y →[0,1].
+gastosexcesivosderecursosyrequieredemuchotiempopara
+El valor de y en la funcio´n µ expresa una medida o grado
+consolidarlainformacio´n.Portantoseapreciaqueesmuy
+paraelcualyesta´ enY.Siµ(y)=1entoncesy∈Y.Porotro
+dif´ıcil detectar posibles errores, lo que dificulta la toma de
+lado, si µ(y)=0 se puede decir que y∈/Y. En el caso de
+decisiones.
+µ(y)∈(0,1),dichovalorproporcionaelgradodepertenencia
+En el caso de desastres, uno de los trabajos de la Defensa
+deyenY.Lafuncio´n µ(x)recibeelnombredefuncio´nde
+Civileseltransportedelapoblacio´nazonasdemenosries-
+pertenencia.
+go,as´ıcomominimizareltiempodeestetrabajoyelcosto
+Cuandolafuncio´nobjetivoz=cTxesdifusa,sesuponeque
+queincurreenelmismo.Teniendoencuentalosanteriores
+existeunvalordeaspiracio´nparalafuncio´nobjetivo.Dicho
+objetivos, el escenario para dar respuesta a tal situacio´n se
+valorsedenotara´ d ∈R.
+muestraplagadodeincertidumbres.Loanteriormentedescrito 0
+Es decir, se espera encontrar un x∗ ∈X tal que z(x∗)≤d .
+introduceelsiguienteproblema:¿co´moplanificardemanera 0
+Enmuchoscasosnoesposibleencontrarunasolucio´nque
+o´ptimalaevacuacio´ndepersonasbajoamenazadedesastres
+satisfagaestacondicio´n,porlocualsepermitequelafuncio´n
+naturalesenlaprovinciadeHolgu´ın,demaneraquesetenga
+objetivopuedaalcanzarvaloresmayoresad .
+encuentalaincertidumbredelosdatos,as´ıcomoelcumpli- 0
+Para esto, se fija un valor p que define el grado m´ınimo
+mientodelosobjetivoshumanitariosyecono´micos? 0
+de cumplimiento o pertenencia al nivel de aspiracio´n. De
+Dadalaposibilidaddemodelarestosescenariosdedecisio´n
+esta forma, si z(x)≥d +p se dice que tiene un grado de
+comoproblemasdeprogramacio´nlinealdifusaylanecesidad 0 0
+cumplimientode0.Siz(x)≤d ,elgradodecumplimiento
+delcumplimientodemu´ltiplesobjetivos,lapresenteinvesti- 0
+opertenenciaes1.Adema´s,sid ≤z(x)≤d +p entonces
+gacio´nsepropusocomoobjetivo:resolvermedianteunen- 0 0 0
+foquedeprogramacio´nlinealdifusamultiobjetivo(PLDM)el elgradooporcentajedecumplimientoesta´
+dadopor1−z(x)
+.
+p0
+problemadetransporteasociadoalaevacuacio´ndepersonas Lodescritoanteriormentesepuedeexpresarpormediodela
+durantelaamenazadehuracanesenlaprovinciadeHolgu´ın. siguientefuncio´ndepertenenciatrapezoidalparalafuncio´n
+Conestetrabajoseesperamejorarlatomadedecisionesen objetivo[15].
+casosdedesastres,quepermitasalvarvidasyeconomizarlos
+gastosalosqueseenfrentalaprovinciaenestassituaciones.
+
+2. Gestio´n operativa de desastres  1, si z(x)≤d 0
+µ (z(x))= 1−z(x)−d0, si d ≤z(x)≤d +p (1)
+dest
+S
+ru
+e
+y
+e
+e
+n
+l
+t
+a
+ie
+s
+n
+e
+d
+s
+e
+tru
+co
+ct
+m
+ur
+o
+a
+d
+s
+e
+b
+s
+a´
+a
+s
+s
+i
+t
+c
+r
+a
+e
+s
+e
+y
+la
+e
+c
+l
+o
+fu
+n
+n
+te
+c
+c
+io
+im
+na
+ie
+m
+n
+i
+t
+e
+o
+n
+o
+to
+s
+n
+u
+o
+ce
+rm
+so
+a
+q
+ld
+u
+e
+e z
+0,
+p0
+si z(
+0
+x)≥d 0 +p 0
+0 0
+unasociedadocomunidad.Ocasionape´rdidasyafectaciones
+humanas,alaeconom´ıa,lainfraestructura,losserviciosesen- Luego introduciendo una variable auxiliar , el modelo
+cialesomediosdesustento,ma´salla´ delacapacidadnormal de programacio´n lineal del problema de minimizacio´n con
+delascomunidadesafectadasparadarunarespuesta.Lospeli- funcio´nobjetivodifusaseexpresadelasiguienteforma:
+grosdedesastres,quepotencialmentepuedenafectaralpa´ıs,
+ModelodeProgramacio´nLinealDifusaMultiobjetivoparalaevacuacio´no´ptimadepersonasbajoamenazade
+desastresnaturales 109
+ma´x λ decisio´ndifusapor[2],elmodelopuedeinterpretarsecomo:
+n
+s.a: µ z (∑c i x i )≥λ (2) ma´x m´ın i=1,...,k µiL(z i (x))
+s.a: Ax≤b,x≥0
+i=1
+x∈X, λ ∈[0,1] Te´ngaseencuentaquelasrestriccionesseconsideranr´ıgi-
+das.Esteproblemapuedeserreducidoalsiguienteproblema
+Comopuedeverseen[15],elproblemaanterioresequi- deprogramacio´nlinealconvencional:
+valentealsiguienteproblemadeoptimizacio´nparame´trica:
+ma´x λ
+ma´x λ s.a: λ ≤µL(z(x))
+i i
+Ax≤b,x≥0
+n
+s.a: ∑c i x i ≥d 0 −p 0 (1−λ) (3) Asumiendolaexistenciadelasolucio´no´ptimaxi0 delproble-
+i=0
+mademinimizacio´ndelasfuncionesobjetivosindividuales
+x∈X,λ ∈[0,1] bajolasrestriccionessedefinepor:m´ın x∈X z i (x), i=1,...,k
+dondeX ={x∈Rn|Ax≤b,x≥0},en[27]elautorsugiere
+cuyasolucio´no´ptimaλ∗,x∗seconsideralasolucio´ndelpro-
+unaformaparadeterminarlafuncio´nlinealdepertenencia
+blemaoriginalconfuncio´nobjetivoz=c i xdifusa. µL(z(x)).Paraserespec´ıficos,usandoelm´ınimoindividual
+i i
+Siseesta´ analizandounproblemadondenosololafuncio´n
+∀i=1,..,k
+objetivo, sino que adema´s las restricciones son difusas, en- zmin=z(xi0)=m´ınz(x)
+i i i
+toncessepuedetomarladecisio´ndifusa[2]considerandoque x∈X
+noexistediferenciaentrefuncio´nobjetivodifusac i x≤d 0 y juntocon
+restriccionesdifusasAx∼≤d ,estemodelosepuedeexpresar
+0
+delaformasiguiente[26]:Bx∼≤b (cid:48) ,donde zm i =ma´x{z i (x10),...,z i (xi−1,0,z i (xi+1,0),...,z i (xk,0))}
+(cid:20) c (cid:21) (cid:20) d (cid:21) determino´ la funcio´n lineal de pertenencia como (5) pero
+B= A y b (cid:48) = b 0 escogiendoz1 i =zm i inyz0 i =zm i .
+Enelcasodondenosololasfuncionesobjetivosseandifusas
+Aplicando (1) a Bx, el modelo (3) quedar´ıa de la siguiente sinotambie´nlasrestriccioneslosean,utilizandoigualfuncio´n
+forma depertenenciaunana´lisissimilarpuedeserempleado[17].
+Aunqueexistenotrosme´todos,esteeselqueseempleaenel
+desarrollodelainvestigacio´n.
+ma´x λ
+n 4. Modelos de evacuacio´n en desastres
+s.a: ∑Bx ≥b (cid:48) −p (1−λ) (4)
+i 0 0 naturales
+i=0
+La mayor´ıa de los modelos de evacuacio´n disponibles
+x∈X,λ ∈[0,1]
+definensuobjetivocomominimizarelflujodeltra´ficooel
+En1987,Zimmermann,extendio´ suenfoquesobrelapro- tiempo total de transportacio´n [20],[23],[13]. En [5], [21],
+gramacio´nlinealdifusaalproblemadeprogramacio´nlineal [18]consideraronseguridadensusmodelos,perohacenesto
+multiobjetivoconKfuncionesobjetivoz =c x,i∈{1,...,K}. penalizandooprohibiendosolucionesquedejenevacuadosde-
+i j
+Paracadaunadelasfuncionesobjetivoz =c xdeestepro- tra´s,alfinaldelaevacuacio´n.Demanerasimilar,enlocalizar
+i j
+blema,seasumequeaquellapersonaespecialistaocapacitada refugios,[10]minimizanelpesopromediodelasdemandas
+para llevar a cabo la toma de decisiones, tenga un objetivo nologradasporlosrefugiosyeltiempodetransportacio´n.
+difusotalcomoz(x)debesermenorqueoigualaciertovalor La funcio´n objetivo en [21] minimizauna vez ma´s eltiem-
+i
+d .Entonceslacorrespondientefuncio´ndepertenenciadeun pototaldeevacuacio´n,peroincluyenrestriccionessobrede-
+i
+problemademinimizacio´npuedeserescritacomo[17]: mostracionesycostosoperativosparaocuparsedeesosobje-
+tivosadicionales.
+
+µL(z(x))=
+ 0
+zi
+,
+(x)−z0 i ,
+s
+s
+i
+i
+z
+z
+i
+0
+(
+≥
+x)
+z
+≤
+(x
+z0 i
+)≥z1 (5)
+V
+ad
+a
+a
+ri
+s
+as
+en
+es
+l
+t
+a
+ra
+l
+t
+i
+e
+te
+g
+r
+i
+a
+a
+t
+s
+u
+m
+ra
+e
+,
+j
+i
+o
+n
+r
+c
+a
+l
+d
+u
+a
+y
+s
+e
+d
+n
+e
+do
+ev
+:
+a
+d
+c
+e
+u
+te
+a
+r
+c
+m
+io´
+i
+n
+na
+h
+r
+an
+la
+s
+r
+id
+u
+o
+ta
+c
+d
+o
+e
+ns
+e
+i
+v
+d
+a
+e
+c
+r
+-
+-
+i i z1−z0 i i i uacio´no´ptimay/odestinoasignado(ej.[5],[21],[13]);plani-
+1, i i
+si z i (x)≤z1 i ficarenetapas(tambie´nconocidocomoescenificar)laevac-
+uacio´n(ej.[19],[5],[4],[11]);yotrasestrategiasdecontrolde
+dondez0yz1denotanlosvaloresdelafuncio´nobjetivoz(x) tra´fico[6],[22],[12].Haymuchosaspectosdeunaevacuacio´n:
+i i i
+talesquelosgradosdelafuncio´ndepertenenciasean0y1, quie´nsequeda,quie´nseva,cua´ndoseva,dondeva,queruta
+respectivamente. tomara´ parallegarah´ı,yquecaminoymododetransporte
+Usandoestafuncio´ndepertenenciaysiguiendolasreglasde esta´ disponibleycua´ndo.Cadamodelodeevacuacio´nasume
+ModelodeProgramacio´nLinealDifusaMultiobjetivoparalaevacuacio´no´ptimadepersonasbajoamenazade
+110 desastresnaturales
+cadaunodeestosaspectosdelproblemacomounaportein- lascapacidadesdeloscentrosdeevacuacio´nesta´ndefinidos
+controlableoalgoquepotencialmentepuedecontrolarseafin demaneradifusa,estoes,sinseguirunadistribucio´nestad´ısti-
+demejorarlaevacuacio´n.Muchosdelosprimerosmodelos caconocida.
+sonmeramentedescriptivos,asumiendoquecadadimensio´n Unavezlaspersonashansidollevadasaloscentrosdeevacua-
+brindaunaporte.MASSVAC[7],[8],OREMS[16],yNET- cio´n,e´stassedebenatenderdesdeelpuntodevistalog´ıstico
+VAC[20]sonejemplosdeestostiposdemodelos.Estostipos y de salud. Para realizar dichas atenciones, existen centros
+demodelospuedenserusadosdedosformas: derecursos(almacenes)ycentrosdesalud(hospitales,poli-
+a)paraestimarlostiemposderealizacio´nqueayudenadecidir cl´ınicos,etc.).Porlotanto,ser´ıaimportantetenerencuentalas
+cuandodeber´ıanseremitidaslaso´rdenesdeevacuacio´nafin capacidadesdeatencio´ndeestoscentros,yqueeltiempode
+deasegurareltiempoadecuadoparalaejecucio´no transportacio´ntotal,desdeloscentrosdeevacuacio´naestos,
+b) desarrollar planes de evacuacio´n a trave´s de un proceso seam´ınima.Esdecir,apartirdelasolucio´nencontradaparael
+portanteoenelcuallassuposicionesdiferentes(losplanes problemadeevacuacio´n,ser´ıaconvenientedeterminarco´mo
+propuestos)deaportessonmanejadasyelmodeloseusapara atenderdemaneraefectivaaestaspersonasevacuadas,tenien-
+evaluarlas. doencuentaqueeltiempototaldetransportacio´n,as´ıcomo
+Otrosmodelossonpreceptivos,asumiendoqueunooma´sas- lacapacidaddeestoscentrossonigualmentedifusos.
+pectosdelproblemasonpotencialmentecontrolablesytenien- Notacio´ndelosdatosdeentrada
+dolaintencio´ndedeterminarlaformao´ptimaparacontrolarla.
+M :capacidaddeatencio´ndelcentrolog´ısticok,
+Estosmodelosvar´ıanenquelosaspectosesta´npredetermina- k
+k∈{1,...,K}siendoK elnu´merodecentroslog´ısticos.
+dosporelcomportamientodelsistemadetransporteexistente
+odelevacuado,yquesonconsideradoscontrolables,as´ıse N:capacidaddeatencio´ndelcentrodesaludl,
+l
+someten a la mejora a trave´s de la implementacio´n de una l∈{1,...,L}siendoLelnu´merodecentrosdesalud.
+estrategiadeevacuacio´n.
+Enrealidad,muchosaspectosdeunaevacuacio´nsonparcial- P i :parteenteradeladivisio´ndelnu´merodepersonas
+mente controlables. Por ejemplo, no se puede asumir real- quedebenserevacuadosenlalocalidadi,porlacapaci-
+mentequelaspersonascumplanconelmomentoexactoen dadpromediodeloso´mnibusaemplear;i∈{1,...,I}
+queselesdicedebenpartir;decualquierforma,atrave´sdelas siendoIelnu´merodelocalidadesaevacuar.
+o´rdenesdeevacuacio´nobligatorias,lasautoridadespueden
+t :tiempodetransportacio´ndeunmediodetransporte
+ij
+ejercerciertocontrolsobrequie´nsevaycua´ndo.Favorece,in-
+desdelalocalidadihaciaelcentro j.
+clusosielprocesoo´ptimodescritoporunmodelopreceptivo
+noesenteramentefactibleenrealidad,estepuedeserusado t1:tiempodetransportacio´ndeunmediodetransporte
+kj
+paraprevercua´nbienpuedeirunprocesodeevacuacio´n.El desdeelcentrolog´ısticokhaciaelcentrodeevacuacio´n
+componenteunodelaevacuacio´nque,paraelconocimiento j.
+delosautores,hasidosiempreconsideradoaporteesquie´nse
+t2:tiempodetransportacio´ndeunmediodetransporte
+va.Losmodelosdisponiblesporconsiguientenopermitenla jl
+desdeelcentrodeevacuacio´n jhaciaelcentrodesalud
+posibilidadquelamejorestrategiaparalaspersonaspodr´ıa
+l.
+ser quedarse donde ellos esta´n. Esta suposicio´n esta´ proba-
+blementerelacionadaconladeclaracio´ndelobjetivo,como
+c :costodeutilizacio´ndelcentrojen$.
+j
+minimizartiempodedespejedeltra´fico,puestoqueunmode-
+loquedejaalaspersonasquedarsecuandoelu´nicoobjetivo Conelfindedarsolucio´nalproblemaantesdescritosepro-
+es minimizar el despeje del tra´nsito, esta´ aconsejando que poneemplearelenfoquedeprogramacio´nlinealdifusamulti-
+todoelmundosequededo´ndeesta´. objetivo analizado con anterioridad; para esto se crea el si-
+guientemodelodeprogramacio´nlineal,delcualsedescriben
+lasvariablesdedecisio´nas´ıcomolasfuncionesobjetivosylas
+5. Descripcio´n del problema restriccionesasociadas.Te´ngaseencuentaqueestemodelo
+seencuentraensufaseinicialdedesarrollo.
+Antesdeexponerlosdetallesdelenfoquepropuestocon-
+viene describir el escenario de decisio´n que se pretende re- 5.1 Variablesdedecisio´n
+solver.Elmismosepuededefinirinformalmentedelaforma x :nu´merodeviajesarealizardesdelalocalidadihasta
+ij
+siguiente: elcentrodeevacuacio´n j.
+Dadounconjuntodecentrosdeevacuacio´n,concapacidadesy
+y :siseutiliza(1)ono(0)elcentrodeevacuacio´n j.
+costosdeutilizacio´nconocidos,ydelocalidadesconpersonas j
+aevacuar,determinarelesquemadetransportequecumpla z1 :nu´merodeviajesarealizardesdeelcentrolog´ıstico
+kj
+conlasdemandasdelaslocalidadesyminimicesimulta´nea- khastaelcentrodeevacuacio´n j.
+menteeltiempototaldeevacuacio´nyelcostodeutilizacio´n
+deloscentros. z2 jl :nu´merodeviajesarealizardesdeelcentrodeeva-
+Te´ngaseencuentaquelostiemposdetransportacio´n,as´ıcomo cuacio´n jhastaelcentrodesaludl.
+ModelodeProgramacio´nLinealDifusaMultiobjetivoparalaevacuacio´no´ptimadepersonasbajoamenazade
+desastresnaturales 111
+5.2 Funcionesobjetivos x ,z1 ,z2 ≥0; x ,z1 ,z2 ∈Z+; y ∈{0,1}
+ij kj jl ij kj jl j
+Lasfuncionesobjetivoquesepresentansondifusaspues
+t ,t1,t2 yc sonvaloresdifusosquedependendelcriterio
+ij kj jl j 6. Solucio´n mediante MATLAB
+delosexpertosenlatomadedecisio´nqueintervienenenel
+problemaanalizado. Para la solucio´n de este problema se utilizo´ el enfoque
+- Minimizareltiempodetransportacio´ndelaevacuacio´n: sugerido por Zimmermann, descrito con anterioridad, apli-
+cado a la funcio´n de pertenencia (5). Siguiendo el enfoque
+I J
+de (Bellman et al.,) para decisio´n difusa, se considera que
+m´ın Z =∑∑t x
+te ij ij noexistediferenciaentrefuncionesobjetivodifusascx≤d
+i=1j=1 i 0
+y restricciones difusas Ax(cid:22)b , se aplica entonces de igual
+- Minimizarelcostodeutilizacio´ndeloscentrosdeevac- forma la funcio´n de pertenencia tanto a las funciones obje-
+uacio´n: tivosdifusoscomoalasrestriccionesdifusas.Detalmanera
+J
+m´ın Z = ∑c y elmodelopropuestoser´ıatransformadoenunmodelodetipo
+costo j j
+(4),an˜adiendolasrestriccionesnodifusas.
+j=1
+Alaplicarlafuncio´ndepertenencia(5)alasfuncionesobjeti-
+- Minimizar el tiempo de transportacio´n de los recursos
+vodifusasestastomanlasiguienteforma:
+log´ısticos:
+K J
+m´ın Z tl = ∑ ∑t k 1 j z1 kj ∑ I ∑ J t ij x ij −(z t 1 e −z t 0 e )λ ≤ z t 0 e
+k=1j=1
+i=1j=1
+- Minimizar el tiempo de transportacio´n a los centros de
+J
+salud: ∑c y −(z1 −z0 )λ ≤ z0
+j j costo costo costo
+J L
+j=1
+m´ın Z = ∑ ∑t2z2
+ts jl jl K J
+j=1l=1 ∑ ∑t1z1 −(z1−z0)λ ≤ z0
+kj kj tl tl tl
+k=1j=1
+5.3 Restricciones
+J L
+Restriccionesdecapacidaddeloscentrosdeevacuacio´n, ∑ ∑t2z2 −(z1 −z0)λ ≤ z0
+log´ısticosysaludenesteorden.Conside´resequeE ,M yN jl jl ts ts ts
+j k l j=1l=1
+sonelementosdifusosquetambie´ndependendelascircun-
+stanciasylassituacionesexistenteenloscentros. Dondez0yz1expresanlosma´ximosym´ınimosquealcanzan
+dichas funciones de forma independiente y asociadas a las
+restriccionesnodifusas.
+I
+∑x (cid:22) E y , ∀j={1,...,J}
+ij j j
+i=1
+1 for i=1:cantfundif
+J
+∑z1 (cid:22) M , ∀k={1,...,K} 2 [˜,fvalmin(i)=linprog(zdif(i ,:) ,[] ,[] ,Aeq,beq,
+kj k lb ,up,[] ,options)];
+j=1 3 [˜,fval(i)=linprog(−zdif(i ,:) ,[] ,[] ,Aeq,beq,lb
+J ,up,[] ,options)];
+∑z2 jl (cid:22) N l , ∀l={1,...,L} 4 z0d(i)=−fvalm(i);
+j=1 5 zrestd(i ,:)=[zdif(i ,:)−(fvalmin(i)+fvalm(i))];
+6 end
+Restriccionessobreelnu´merodeviajesarealizarteniendoen
+Enelcasodelasrestriccionesdedesigualdadsesiguelade-
+cuentaelnu´merodepersonasaevacuarenlaslocalidades,su
+cisio´ndifusa[2]considerandoquenoexistediferenciaentre
+atencio´nlog´ısticayme´dica.
+funcio´n objetivo difusa y restriccio´n difusa, por lo que se
+-Evacuacio´n:
+aplicadeigualformalafuncio´ndepertenencia;considerando
+J
+quebmybminsonlosvaloresma´ximosym´ınimospermiti-
+∑x j=P, ∀i={1,...,I}
+i i
+dosatalesrestricciones,estasquedar´ıandelasiguienteforma:
+j=1
+-Atencio´nlog´ıstica:
+I
+∑x −E y −(b1 −b1)λ ≤ b1
+ij j j min m m
+K I
+i=1
+∑z1 =∑x , ∀j={1,...,J}
+kj ij J
+k=1 i=1 ∑z1 −M −(b2 −b2)λ ≤ b2
+kj k min m m
+-Atencio´nme´dica: j=1
+J
+L I ∑z2 jl −N l −(b3 min −b3 m )λ ≤ b3 m
+∑z2 jl =∑x ij , ∀j={1,...,J} j=1
+l=1 i=1
+ModelodeProgramacio´nLinealDifusaMultiobjetivoparalaevacuacio´no´ptimadepersonasbajoamenazade
+112 desastresnaturales
+Enfoquedifuso
+(Zimmermann,1976) Tiempo(s)
+1 for i=1:cantfundif CE1 (7701,218,5851,7401) 4.489904
+2 bdifa(i)=bm(i);
+CE2 (8234,218,4184,5703) 4.496354
+3 Adifa(i ,:)=[Adif(i ,:)−(bmin(i)−bm(i))];
+4 end CE3 (7701,218,5851) 3.330397
+CE4 (8240,218,4179) 3.011402
+Soloquedaplantearelmodelo(4),uniendolasfuncionesob-
+Enfoquenodifuso
+jetivosconlasrestriccionesdedesigualdad,ycrearlanueva
+Minimaxponderado
+funcio´nobjetivo.Luegoesteesresueltomediantelinprog,al-
+(Bowman,1976) Tiempo(s)
+goritmodeoptimizacio´nparaprogramacio´nlinealqueutiliza
+CE1 (7218,218,4149,5615) 21.411992
+elme´todoSimplexoPuntoInterior.
+CE2 (7662,218,4149,5615) 22.149234
+CE3 (7218,218,5439) 7.964351
+CE4 (7662,218,4145) 7.907791
+1 fun=[zeros(1,cantvar)−1];
+2Bx=[Adifa;zrestd];
+3 bpri=[bdifa ,z0d];
+4 Bxeq=[Aeq,zeos(cantrestndifeq ,1)]; Centrandoelana´lisissoloenlapartecuantitativadelos
+5 bprieq=beq;
+6 [x, solucion]=linprog(fun,Bx,bpri ,Bxeq,bprieq ,[lb resultadosobtenidosenloscasosdeestudiopresentados,se
+,−inf],[up,inf],[],options); puede plantear que el modelo difuso arroja resultados ma´s
+desfavorablesqueelmodelonodifuso.Deestosresultados
+nopodemoslimitaralme´tododifuso,niabsolutizarlasuperi-
+6.1 Casodeestudio
+oridaddelenfoquenodifuso,puesenelaspectocualitativo,
+Debidoalaseguridadconlaquesemanejanestosdatos,
+elmodelodifusoseconsiderasuperior,alnodifuso,yaque
+no esta´n disponibles al pu´blico, por lo que no fue posible
+lograincorporaryaglutinarelcriteriodemu´ltiplesexpertos;
+obtenerlosdatosrealesquesemanejanenelprocesodeevac-
+queenlavidarealsinelana´lisisdifuso,cadaopinio´ndeunex-
+uacio´ndepersonasbajoamenazadedesastresenlaprovincia
+pertorepresentar´ıaunmodelodiferente,debidoaqueespoco
+deHolgu´ın.Noobstante,seutilizo´ paraloscasosdeestudio
+probablequetodostenganlamismaopinio´nopensamiento
+(CE),datosdisen˜ados,queesta´ncercadelarealidad.
+lo´gico.Porotrapartesiseanalizaeltiempodeejecucio´nde
+losalgoritmosimplementados,aquelquebrindasolucio´nal
+enfoquenodifusopuedetardarhastacuatroveceseltiempo
+Conatencio´nme´dica Sinatencio´nme´dica
+deejecucio´ndelotro.Paralaimplementacio´ndelosalgorit-
+DatosI CE1 CE3
+mosseutilizo´ elMATLAB,unlenguajedeprogramacio´nde
+DatosII CE2 CE4
+altonivel,conunenfoquepredominantementematema´tico;
+quepermiteobtenerresultadosra´pidosyconfiables.
+Paralaelaboracio´ndeloscasosdeestudioseconsideraron
+doscasos,unoenelcualseanalizaelenfoquepropuesto,en
+elqueseincluyeatencio´nme´dicayenelotronoseincluye 7. Conclusiones
+atencio´n me´dica, cada uno evaluado en dos instancias del
+En este art´ıculo se hace un breve ana´lisis de los funda-
+problema.
+mentosteo´ricosquesustentanlaprogramacio´nlinealdifusa
+Estasinstanciaspresentanlassiguientescaracter´ısticas:
+multi-objetivo,as´ıcomolagestio´noperativadedesastresy
+Considere que se desea evacuar 14 municipios con pobla-
+algunos modelos que tratan el tema de la evacuacio´n ante
+cionesP ysecuentacon47centrosdeevacuacio´nconcapaci-
+i
+desastres.
+dadK .Estos,asuvez,recibenatencio´nlog´ısticadesde33
+j
+El modelo de programacio´n lineal difuso y multi-objetivo
+centrosconcapacidadesM yatencio´nme´dicadesde33cen-
+k
+propuestocontribuyealagestio´noperativadedesastres,ya
+trosconcapacidadesN.Elcostodeutilizacio´ndeloscentros
+l
+quefacilitalatomadedecisiones,adema´sdetenerencuen-
+deevacuacio´nesdec .Losfactoresquesevariaronfueron
+i
+tamu´ltiplescriteriosylapresenciadeincertidumbreenlos
+lostiemposdetransportacio´ndesdelosmunicipioshastalos
+datos.
+centrosdeevacuacio´n,ydeestoshastaloscentrosdeatencio´n
+SeimplementaronlosalgoritmosenMATLABylosresulta-
+log´ısticayme´dica.
+dosarrojadospermitieronelana´lisiscomparativodeloscasos
+Enlasiguientetablasepresentanlosresultadosdeloscasos
+deestudioydemostraronlafuncionalidaddelmodelo.
+deestudio,enlaquesemuestranlostiempostotalesdetrans-
+portacio´n y el costo de utilizacio´n de los centros. Tambie´n
+se propone la solucio´n de estos casos de estudio, resueltos
+Referencias
+comoproblemassinunenfoquedifusoatrave´sdelme´todo
+minimaxponderado.Adema´sdelostiemposdeejecucio´nde [1] Nezih Altay and Walter G Green. Or/ms research in
+losalgoritmosencadainstancia. disasteroperationsmanagement. Europeanjournalof
+operationalresearch,175(1):475–493,2006.
+ModelodeProgramacio´nLinealDifusaMultiobjetivoparalaevacuacio´no´ptimadepersonasbajoamenazade
+desastresnaturales 113
+[2] RichardEBellmanandLotfiAskerZadeh. Decision- [14] EhsanNikbakhshandRezaZanjiraniFarahani. Human-
+makinginafuzzyenvironment. Managementscience, itarian logistics planning in disaster relief operations.
+17(4):B–141,1970. LogisticsOperationsandManagement:Conceptsand
+Models,291,2011.
+[3] James J Buckley and Esfandiar Eslami. An introduc-
+tiontofuzzylogicandfuzzysets,volume13. Springer [15] JaroslavRam´ık. Softcomputing:overviewandrecent
+Science&BusinessMedia,2002. developmentsinfuzzyoptimization. Ostravska´ univerzi-
+ta,Listopad,pages33–42,2001.
+[4] XChenandFBZhan. Agent-basedmodelingandsim-
+ulation of urban evacuation: relative effectiveness of [16] AjayKRathiandRajendraSSolanki.Simulationoftraf-
+simultaneousandstagedevacuationstrategies. InAgent- ficflowduringemergencyevacuations:amicrocomputer
+BasedModelingandSimulation,pages78–96.Springer, basedmodelingsystem. InSimulationConferencePro-
+2014. ceedings,1993.Winter,pages1250–1258.IEEE,1993.
+[5] Yi-Chang Chiu, Hong Zheng, Jorge Villalobos, and [17] MasatoshiSakawa,HitoshiYano,IchiroNishizaki,and
+BikashGautam. Modelingno-noticemassevacuation Ichiro Nishizaki. Linear and multiobjective program-
+using a dynamic traffic flow optimization model. IIE mingwithfuzzystochasticextensions. Springer,2013.
+Transactions,39(1):83–94,2007.
+[18] Fatemeh Sayyady and Sandra D Eksioglu. Optimiz-
+[6] ThomasJCovaandJustinPJohnson. Anetworkflow ing the use of public transit system during no-notice
+modelforlane-basedevacuationrouting.Transportation evacuationofurbanareas. Computers&IndustrialEn-
+research part A: Policy and Practice, 37(7):579–604, gineering,59(4):488–495,2010.
+2003.
+[19] Hayssam Sbayti and Hani Mahmassani. Optimal
+schedulingofevacuationoperations. TransportationRe-
+[7] Antoine G Hobeika and Bahram Jamei. Massvac: A
+searchRecord:JournaloftheTransportationResearch
+model for calculating evacuation times under natural
+Board,(1964):238–246,2006.
+disasters. EmergencyPlanning,pages23–28,1985.
+[20] YosefSheffi,HaniMahmassani,andWarrenBPowell.
+[8] AntoineGHobeikaandChangkyunKim. Comparison
+Atransportationnetworkevacuationmodel. Transporta-
+of traffic assignments in evacuation modeling. IEEE
+tionresearchpartA:general,16(3):209–218,1982.
+transactions on engineering management, 45(2):192–
+198,1998.
+[21] QianTan,GuoHHuang,ChaozhongWu,YanpengCai,
+and Xinping Yan. Development of an inexact fuzzy
+[9] Gyo¨ngyi Kova´cs and Karen M Spens. Humanitarian
+robust programming model for integrated evacuation
+logisticsindisasterreliefoperations. InternationalJour-
+managementunderuncertainty. JournalofUrbanPlan-
+nalofPhysicalDistribution&LogisticsManagement,
+ningandDevelopment,135(1):39–49,2009.
+37(2):99–114,2007.
+[22] Gregoris Theodoulou and Brian Wolshon. Alterna-
+[10] AnnaCYLi,NingxiongXu,LindaNozick,andRachel
+tive methods to increase the effectiveness of free-
+Davidson. Bileveloptimizationforintegratedshelterlo-
+way contraflow evacuation. Transportation Research
+cationanalysisandtransportationplanningforhurricane
+Record:JournaloftheTransportationResearchBoard,
+events. Journal of Infrastructure Systems, 17(4):184–
+(1865):48–56,2004.
+192,2011.
+[23] SuleymanTufekciandThomasMKisko. Regionalevac-
+[11] YueLiu,Gang-LenChang,YingLiu,andXiaorongLai.
+uationmodelingsystem(rems):Adecisionsupportsys-
+Corridor-basedemergencyevacuationsystemforwash-
+temforemergencyareaevacuations. Computers&in-
+ington,dc:systemdevelopmentandcasestudy. Trans-
+dustrialengineering,21(1-4):89–93,1991.
+portationResearchRecord:JournaloftheTransporta-
+tionResearchBoard,(2041):58–67,2008. [24] Luk N Van Wassenhove. Humanitarian aid logistics:
+supplychainmanagementinhighgear. Journalofthe
+[12] Qiang Meng and Hooi Ling Khoo. Optimizing con-
+OperationalresearchSociety,57(5):475–489,2006.
+traflowschedulingproblem:modelandalgorithm. Jour-
+nal of Intelligent Transportation Systems, 12(3):126– [25] LoftiZadeh. Optimalityandnon-scalar-valuedperfor-
+138,2008. mancecriteria. IEEEtransactionsonAutomaticControl,
+8(1):59–60,1963.
+[13] ManWo Ng, Junsik Park, and S Travis Waller. A hy-
+brid bilevel model for the optimal shelter assignment [26] Hans-JZimmermann. Descriptionandoptimizationof
+inemergencyevacuations. Computer-AidedCiviland fuzzysystems. InternationalJournalofGeneralSystem,
+InfrastructureEngineering,25(8):547–556,2010. 2(1):209–215,1975.
+ModelodeProgramacio´nLinealDifusaMultiobjetivoparalaevacuacio´no´ptimadepersonasbajoamenazade
+114 desastresnaturales
+[27] Hans-Ju¨rgenZimmermann. Fuzzysets,decisionmaking, BusinessMedia,2012.
+and expert systems, volume 10. Springer Science &

@@ -1,0 +1,671 @@
+REVISTA CIENCIAS MATEMÁTICAS Vol. 23 único, Nos. 2005-2006
+ON THE MODULAR REPRESENTATIONS OF GROUP
+WITH p-COMPLEMENT
+Pedro Domínguez Wade1, Universidad de Matanzas, Cuba
+Jesús Barreto Molina2, Universidad Pedagógica de Villa Clara, Cuba
+ABSTRACT
+Let G be a finite group containing a p-complement and Let R a complete discrete valuation ring with
+ideal maximal (P) and residue field k = R/(P) of characteristic p. In this paper we show that the
+regular representation can be decomposed as direct sum of tensor product of modules. Moreover, we
+prove that G satisfies the Alperin’s weight conjecture in characteristic p.
+RESUMEN
+Sea el grupo finito G, con p complemento, y sea el anillo R una discreta valuación completa, con campo
+residual k de característica p. En este trabajo se demuestra que la representación regular RG se
+descompone como una suma directa de productos tensoriales de módulos. Además se verifica que G
+satisface la Conjetura de Alperin en característica p.
+1. INTRODUCTION
+A Hall divisor of an integer n is a divisor d of n such that d and n/d are coprime. For example, the Hall
+divisors of 24 are 1, 3, 8, and 24.
+A Hall subgroup of a finite group G is a subgroup whose order is a Hall divisor of the order of G. If is a set
+of primes, then a Hal -subgroup is a subgroup whose order is a product of primes in , and whose index is
+not divisible by any primes in .
+If p is a prime number, we write p´ for the set of all primes not equal to p. A Hall p-subgroup of a finite group
+G is called a p-complement.
+Let G be a finite group containing a p-complement and (F, R, k) ap-modular sys-tem. In the present paper
+are given descriptions of the blocks of finite groups with p-complement. We show that G satisfies the Alperin’s
+weight conjecture. The paper is structured as follows. Section 2 contains some results in modular
+representation theory of finite groups. In the section 3 we show that the indecomposable projective modules
+can be expressed as a tensor product of modules. In section 4 we verify the Alperin’s weight conjecture. In
+section 5 we verify the Alperin’s weight conjecture in block form.
+1.1 Notations and Definitions
+Let G be a finite group, p be a prime divisor of G  and R be a complete discrete valuation ring with
+quotient field F of characteristic 0. We assume that the residue field k = R/() has characteristic p, where ()
+denotes the unique maximal ideal of R. With this assumption we refer to the triple (F; R; k) as a splitting
+p-modular system, and J(G) denotes the Jacobson radical of this ring of RG. We denote the largest normal
+p-subgroup of G by O (G), and denote the´p-core of G by O (G). We denote a p-complement of G by H
+p p´ p´
+(G). The factor group G = G/O (G) is called reduced group modulo O (G). We denote the subgroup
+p p
+O (G)  H (G) of G by
+p p´
+16
+~G
+. If H is any subgroup of G then [G/H] denotes the set of representatives of left
+cosets gH.
+2. PRELIMINARY
+~
+We consider the surjection RG kG. We denote the kernel of the surjection by I (G)  J(G).
+p
+E-mail: 1pedro.dominguez@umcc.cu
+2barreto@ispvc.rimed.cu
+RG/I (G) 
+p
+17
+k
+~G
+(2.0.1)
+Lemma 2.0.1. Let G be a finite group. Then the simple RG-modules are precisely the simple k
+~G
+-modules
+made in to RG-modules via the surjection RG  k
+~G
+.
+Proof. If S is a simple k
+~G
+-module, then also S is a simple k
+~G
+-module, since RG/Ip = (G)  k
+~G
+and Ip(G)
+annihilates the simple RG-modules.
+Recall that if p is a prime, then an element in a finite group is said to be p-regulari fith as order prime top.
+Proposition 2.0.2. Let G be a finite group. Then the number of non-isomorphic simple RG-modules equals
+the number of conjugacy classes of p-regular elements of the reduced group G .
+Proof. It well known that the number of non-isomorphic simple k
+~G
+-modules equals the number of conjugacy
+classes of p-regular elements of G(See 3 theorem 9.11).There sult follows by (2.0.1). 
+Proposition 2.0.3. Let G be a finite group.
+1. For each simple RG-module S there is an indecomposable projective kG-module P = kGe. Here e is a
+S
+
+primitive idempotent in kG such thate S 0.
+2. For each simple RG-module S there is an indecomposable projective RG-module P
+S
+ R G ˆe with the
+property that ˆP
+S
+/(  ˆ )P
+S
+ P
+S
+is the projective cover of S as a kG-module. Here eˆ is a primitive
+idempotentin RG Duch that ˆe  0.
+Proof.
+1. As k is Artinian ring and kG is a k-algebra finitely generated as k-vector space, it is Artinian. Therefore kG
+can be expressed as the direct sum of indecomposable projective kG-modules. Then we can write
+1 = e +…+ e in kG, where the e are primitive orthogonal idempotents. Hence for each simple RG-module
+1 n i
+S there is a unique summand e such that eS  0. We define P = kGe. Since e is a primitive idempotent
+i i S i i
+the result follows.
+2. We omit the proof (See (3( proposition (9.15)).
+Proposition 2.0.4. Let G be a finite group
+1. Every finitely-generated indecomposable projective kG-module M is isomorphic to P for some simple
+S
+module S.
+2. Every finitely-generated indecomposable projective RG-module Mˆ is isomorphic to ˆP
+S
+for some simple
+module S.
+Proof.
+1. As kG is Artinian ring and M is finitely-generated indecomposable projective, it is Artinian. Hence the
+radical quotient M/Rad(M)  S is a simple kG-module. By last proposition we have
+M/Rad(M)  PS/Rad(PS)  S
+By Nakayama’s lemma (See (3 (theorem 7.6) the modules M and PS are projective covers of the irradical
+quotients, so M  PS by uniqueness of projective covers (See (3 (proposition 7.8).
+2. We omit the proof (See 3 proposition 9.15 part 1).
+3. QUASI-SIMPLE AND PROJECTIVE MODULES
+Let G be a finite group with p-complement H (G). Observe that the reduced group
+p´
+18
+G also has a
+p-complement H
+p´
+( G ) which is isomorphic to H (G). A minimal p-subgroup H of G relative to which the
+p´
+indecomposable module U is projective is called a vertex of U, and it is defined up to conjugacy in G.
+Theorem 3.0.5. Let G be a finite group with p-complement H (G). Set P  Syl (G) and
+p´ p
+P = P/O (G) 
+p
+Syl
+p
+( G ) . Assume that S
+1
+,..., S
+n
+is a complete list of non-isomorphic simple RH
+p´
+( G ) -modules.
+1. If S t a b
+( G )
+( S
+i
+)  G then S = S
+i
+is simple RG-module with vertex P.
+2. If S t a b
+( G )
+( S
+i
+)  H
+p ´
+G then U  S
+i
+ GH
+(
+p´
+G )
+is semisimple and each direct summand S is a simple projective
+R G -module with vertex O (G).
+p
+Observe that k  GP  k H
+p ´
+( G )  as kG-modules. The kG-module k H
+p ´
+( G )  can be decomposed as a direct
+sum of simple kG-modules, since Rad(kH (G)) = 0. From
+p´
+k  GP  GH
+(G
+p´
+)
+ k G it follows that any simple kG-
+module is the direct sum of simple k H
+p ´
+( G )   modules. Further more these t of this direct sum m and s
+contains a complete list of simple RG-modules. In fact, if the set x ,...,x (x  P) is a set of representatives of
+1 |P| i
+the left cosets G/H (G) then any element g  G can be expressed in the form g = xy where x  P and y 
+p´
+H (G). Thus we make use of the following general isomorphism
+p´
+kG  kP  kH (G) (3.0.2)
+k p´
+which arises because kG has as a basis the elements xy where x  P and y  H (G), and kP 
+p´ k
+k(Hp´(G)( has as a basis the corresponding elements x ( y.
+Prof.
+1. By assumption S = S
+i
+is simple. Since k  GP  k[H (G)] the result follows.
+p´
+2. In this case we have Rad ( S )i = Rad(kG) S
+i
+=
+g  [G
+/H
+p
+(G
+´
+)]
+Rad(g  S
+i
+), where the g  S
+i
+are simple
+k[gH
+p´
+( G ) ]-modules, so Rad(U) = 0. Since S
+i
+is projective k H p ´ ( G ) -module U is projective k G -module.
+Hence each direct summand S is also direct summand of k  GO
+P
+(G )
+ k G . Thus there sult follows. 
+Let R be a complete discrete valuation ring with maximal ideal () and residue field k = R/(). Let G be a
+finite group with p-complement and splitting field k. Assume that S is a simple RG-module. Then the finitely-
+generated RG-module Q is called quasi-simple RG-module if it is free as R-module and Q/()Q  S for some
+simple RG-module S.
+Theorem 3.0.6. Let G be a finite group with p-complement H (G). Every simple RG-module S has a quasi-
+p´
+simple RG-module.
+ˆ ˆ
+Proof. Let k[H (G)] = S ...S be the decomposition of k[H (G)] as direct sum of simple k[H (G)]-
+p´ 1 m p´ p´
+ˆ ˆ
+modules. Then we may write R  k [H (G)]  R[H (G)] = R  S ...R S P ...P where P
+R p´ p´ R 1 R m S S S
+m m i
+is the projective cover of S. If Stab (S) = G then Q = P is a quasi-simple RG-module.
+i G i S S
+i i
+Let U = S  S be a decomposition of U as direct sum of simple RG-modules. Then R  U = RU = R
+1 t R
+ R S 1  … (R(R Sn = QSi Q S 1 … Q S t = where each RG-module QSi is indecomposable R[Hp´(G)]-
+module and free as R-module. Hence QSi /() Q  k  S which complete the proof. (
+Si i
+The quasi-simple RG-module Q is called quasi-simple RG-module corresponding to S. Let R be a discrete
+S
+valuation ring with maximal ideal ( ) and residue field k = R/(P) of characteristic p. Let GGL(n, R) be a
+representation of G. Then the homomorphism
+19
+ : G GL(n, k) induced by the natural projection GL(n, R) 
+GL(n, k) is called reduction of modulo p.
+Lemma 3.0.7. Let G be a finite group and let Q be a quasi-simple RG-module. Assume that GGL (Q)
+n
+is a representation of G and  : G GL (Q/)Q) the reduction of  modulo p. Set L =   g  G and
+n g
+L =  
+g
+ g  G. Then rank L  rank L.
+R
+Proof. Set m = rak L. Let d ,…,d be a R-basis of L. Consider the surjection : L 
+R 1 m
+L given by (d) = d
+i i
+(i = 1,…,m). Thus g
+1
+,..., g
+m
+is spanning set for L . Hence the result follows. 
+Theorem 3.0.8. Let G be a finite group. Let  : G  GL (Q): be an R-representation of G. Then Q is a
+n
+quasi-simple RG-module if and only if   g  G = End (Q)  M (R), where M (R) denotes the ring of the n
+g R n n
+ n-matrices over R.
+Proof. If Q is quasi-simple then  : G  GL (Q/)Q) is absolutely simple, since k is a splitting field of G.
+n
+Therefore    g  G = End (Q/)Q) by the classical Burnside theorem. According to the last lemma it
+g R
+follows that rank   g  G = n2. Conversely, if   g  G = = End (Q) then 
+R g g R
+  g  G = End (Q/()Q).
+g R
+Hence End (Q()Q)G = (End (Q/()Q) = Z(End (Q/()Q))  k, so Q()Q is absolutely simple. This
+k kG k
+completes the proof of this implication. 
+Theorem 3.0.9. Let G be a finite group. Then the RG-module Q is a quasi-simple RG-module if and only if
+End (Q)  R, with the endomorphisms acting as scalar multiplication.
+RG
+Proof. Let  be an R-representation of G corresponding to Q. According to the last theorem we have
+  g  G = End (Q). Since End (Q)G = End (Q) it follows that Z(End (Q)) = End (Q). Conversely if
+g R R RG R RG
+End (Q)  R then End (Q/()Q)  k. Hence Q/()Q is absolutely simple RG-module, which complete the
+RG kG
+proof of this of this implication. 
+Lemma 3.0.10. Let G = K  H where K is a p-group and H has order prime to p. If S is any simple RG-module
+then Pˆ = RK  Q .
+S R S
+Proof. Since kH is semisimple we may write kH = k  U for some kH-module U. Thus Pˆ = R is a projective
+R
+RH-module and we may write RH = R  ˆU for some projective RH-module ˆU , and now RG = RH G UG .
+H H
+Here RGRK as RG-modules, and so RK is projective, being a summand of RG. Therefore RK  R Q is
+H R S
+projective (See [3] proposition 8.4). Now
+RK  Q /()(RK  Q )  kK  S.
+R S R S R
+We have
+Rad(kK  S)  (Rad(kK)kK)  S.
+R R
+since K is a normal p-subgroup and so acts trivially on S. As Rad(kK)kK)  S has codimension in kK  S
+k R
+equal to dim S we have that kK  S/Rad(kK  S)  S. Since kK  S is projective we obtain that
+k k k
+RK  Q /Rad(RK  Q )  S.
+R S R S
+By proposition (2.0.3) we conclude that Pˆ = RK  Q .
+S R S
+~
+Theorem 3.0.11. Let G be a finite group containing a subgroup G. Fixed P  Syl (G). Then
+p
+20
+ˆP
+S
+
+
+R O
+R P
+(
+p
+
+G
+Q
+R
+) 
+R
+S
+Q
+S
+o t h e
+if
+r w is e
+p d im S
+Proof. Let
+~S
+1
+,...,
+~S
+n
+be a complete list of non-isomorphic simple R
+~S
+ modules. According to the last lemma
+we may write
+R
+~G
+= RO (G)  p R Q ~S
+1
+… RO (G)  p R Q ~S
+n
+.
+Now
+RG = R
+~G
+ G~G  ( R O p ( G )  R Q ~S
+i
+)  G~G  . . .  ( R O p ( G )  R Q ~S
+n
+)  G~G .
+Notice that
+(RO (G)  Q )
+p R R
+ G~G = (RO (G)  R)
+p R
+ G~G
+ (RO p (G)G ~
+G
+ RP.
+Thus RP is projective, being a direct summand of RG. The set x ,…,x with x  P is a set of representatives
+1 P i
+of the left cosets G / H (G). Thus any element g  G can be expressed in the form g = xy where x  P and
+p´
+y  Hp(G). We make use of the following general isomorphism
+´
+RG  RP  R[H (G)]
+R p´
+which arises because kG has as a basis the elements xy where x  P and y  H (G), and RP  R [H (G)]
+p´ R p´
+has as a basis the corresponding elements x  y. Let R[H (G)] = p´ Q ~S
+1
+ ...  Q ~S
+n
+be the decomposition of
+R[H (G)] as direct sum of quasisimple R[H (G)]-modules. Then
+p´ p´
+RG  RP  Q … RP  Q ,
+R S1 R Sn
+We have to check two cases.
+ Stab
+G
+(
+~S
+)i = G. In this case S =
+~S
+i
+is a simple RG-module and p dim S. Now
+Rad(RP  Q )  Rad(RP)  Rad(Q ).
+R S R S
+Therefore
+RP  Q / Rad(RP)  Rad(Q ) = RP / Rad(RP)  Q / Rad(Q )
+R S R S R S S
+ k  S
+k
+ S
+Since R is a complete discrete valuation ring, RP  Q / Rad(RP  Q ) is semisimple kG-module it
+R S R S
+follows that
+RP  Q / Rad(RP  Q )  S.
+R S R S
+This shows that RP  Q is projective cover of S.
+R S
+ Stab
+G
+21
+(
+~S
+)i 
+~G
+. In this case we have
+(RP  R Q ~S
+i
+)  G~G = RO (G) p  G~G  Q R Si
+ RO (G)  p R Q ~S
+i
+ G~G
+ RO (G)  (S … S)
+p R 1 t
+ RO (G)  S … ROp(G)  S)
+p R 1 R t
+Thus RO (G)  Q is projective. We may now proceed as in the previous case. 
+p R Sj
+4. ALPERIN'S WEIGHT CONJECTURE
+Let G be a finite group and k an algebraically closed field of characteristic p. Alperin defines a weight to be
+a pair (P, V ) where P  G is a p-subgroup and V is a p-block of defect zero of N (P) / P. We take P up to
+G
+conjugacy and V up to isomorphism. Alperin Weight Conjeture. The number of weights of G equals the
+number of conjugacy classes of elements of G of order prime to p (AWC). The conjecture connects two sets
+which otherwise are seemingly unrelated. The simple modules are enumerated by Brauer's theorem and this
+is easy. The blocks of defect zero are notoriously dificult to pin down in generality. The conjecture is known to
+be true for
+1. p-solvable groups (Okuyama)
+2. Groups of Lie type in defining characteristic.
+3. Symmetric groups
+4. Many sporadic simple groups
+Lemma 4.0.12. Let G be a finite group with p-complement H (G). The Green correspondence induces a
+p´
+bijection between the simple kG-modules with vertex P  Syl (G) and the non-isomorphic simple k[N (P)]-
+p G
+modules.
+Proof. Let S be a simple kG-module with vertex P. Then SG = f(S)  X where f(S) is the unique
+N (P)
+G
+indecomposable summand with vertex P in any decomposition of SG as direct sum of indecomposable
+N (P)
+G
+modules and each summand of X is projective relative to a subgroup of the form N (P) g P with
+G
+g  G - N (P) by Green correspondence theorem part 1(See [3] theorem 11:26). Since P is a Sylow p-
+G
+subgroup P = O (N (P)), i.e., P is a p-radical subgroup. Hence we can write N (P) = P  H, where  N (P) :
+p G G G
+H =  P , by the classical Shur-Zassenhaus theorem. For any element g  G can be expressed as a
+product xy with x  P and y  H (G), so N (P) contains a p-complement H (N (P))  H (G). Since S is a
+p´ G p´ G p´
+simple k[H (G)]-module and H (NG(P)) has order prime to p we can write SG = V … V ,where
+p´ p´ H (N (P)) 1 m
+p´ G
+the V are simple k[H (NG(P))]-modules whit vertex P. Since the simple k[N (P)]-modules are precisely the
+i p´ G
+simple k[H (NG(P))]-modules we deduce that f(S) is a simple k[N (P)]-module and X = 0. If V is a simple
+p´ G
+k[N (P)]-module then VG = g(V)  Y , where g(V ) is an indecomposable kG-module with vertex P and
+G N (P)
+G
+each summand of Y is an indecomposable projective relative to a subgroup of the form gP  P where
+g  G - N (P) by Green Correspondence part 2. Now kP  V is an indecomposable projective k[N (P)]-
+G G
+module by theorem (3:0:11). Therefore kP  VG is a projective kG-module, so kP  g(V ) is also
+N (P)
+G
+projective kG-module and we have kP  g(V ) = P … P for various indecomposable projective
+S1 Sn
+modules P . Thus it follows that kP  g(V) / Rad(kP  g(V ))  k g(V )  g(V )  S … S by uniqueness
+Si 1 n
+of projective covers. Since g(V ) is indecomposable kG-module we obtain n = 1 and g(V )  S . By Green
+1
+correspondence theorem par 3 it follows that gf(S)  S and fg(V)  V . So we are done. 
+Theorem 4.0.13. Let G be a finite group with p-complement H (G) and let k be a field of characteristic p.
+p´
+Then G satisfy (AWC).
+Proof. Let S ,…,S a complete list of simple kG-modules with vertex P  Syl (G). According to the last lemma
+1 n p
+there is a complete list V ,…,V of simple k[N (P)]-modules. Since P is p-radical subgroup we have
+1 n G
+N (P) = P  H (N (P)). Hence the simple k[N (P)]-modules are precisely the simple k[H (N (P))]-modules.
+G p´ G G p´ G
+Therefore the pairs (P, V) are weights for G. Let U ,…,U be a complete list of simple kG-modules with vertex
+i 1 m
+O (G). Applying again the lemma (4:0:12) we obtain that the pairs (O (G); U) are weights for G. Suppose that the
+p p i
+pair (D; M) is a weight for G. Assume that O (G) < D < P. Since g = xy with x  P and  2 H (G) for all
+p p´
+g  G we deduce that N (D) contains a p-complement H (N (D)) · H (G). By Green correspondence theorem we
+G p´ G p´
+have M
+22
+ HN
+G
+(D )
+= g(M)  Y where g(M) is an indecomposable kG-module with vertex D. Since kD  M is an
+indecomposable projective N (D)-module (kD  M)
+G
+ HN
+G
+(D )
+is projective kG-module, so (kD  g(M)) is also
+projective kG-module. Thus kP  g(M) = P … P for various indecomposable projective modules P . Since
+S1 Sn Si
+g(M) is indecomposable we deduce that g(M)  S , a contradiction. So we finish the proof. 
+1
+5. BLOCKS OF FINITE GROUPS WITH P-COMPLEMENT
+Lemma 5.0.14. Let G be a finite group with p-complement Hp´(G), and let (F; R; k) be a p-modular system.
+1. FP and FO (G) can be expressed as direct sum of simple FG-module.
+p
+2. F  Q is a simple FG-module.
+R S
+Proof.
+1. Since FG  FP as FG-module and FO (G) is an FG-module with the action of G given by conjugation the
+H p
+result follows.
+2. By theorem 3:0:9 we have End (Q ) = R, so End (F  Q ) = F. The result follows by the classical
+RG S RG R S
+Schur's lemma. 
+Assume that D = P  Syl (G) or D = O (G).
+p p
+Theorem 5.0.15. Let G be a finite group with p-complement H (G), and let (F; R; k) be a p-modular system.
+p´
+Then every simple kG-module is the reduction module () of an RG-lattice.
+Proof. We have Pˆ RD  Q .Therefore
+S R S
+F 
+R
+ˆP
+S
+= F  (RD(G)  Q )
+R R S
+= (F  RD(G))  Q .
+R R S
+According to the last lemma we have
+F  RD(G)  FD  F  U
+R
+for some FG-module U. Hence
+(F  RD(G))  Q  (F  Q )  (U  Q ).
+R R S R S R S
+We may now apply again the last lemma. (
+Theorem 5.0.16. Let G be a finite group with p-complement Hp´(G). Each block of Kg can be
+induced from Hp´(G) to G.
+Proof. Observe that if 1 = e +…+ e is the sum of blocks k[O ´(G)] then for each i and g  G the conjugate
+1 m p
+geg-1 is also a block of k[O (G)]. For this we verify that this element is idempotent, and also that it is central in
+i p
+k[O (G)], which is so some if x  O ´0(G) then x(geg-1) = g(g-1xg)eg-1 = (geg-1)x. Furthermore geg-1 is
+p´ p i i i i
+primitive in Z(kO ) since if it were the sum of two orthogonal central idempotents, on conjugating back by g-1
+p´
+we wold be able to deduce that ei is not primitive either. Since the blocks of k[O (G)] are uniquely
+p´
+determined, and it follows that geg-1 = e for some j. Thus G permutes the blocks of k[O (G)]. We denote the
+i j p´
+G-orbit of e by Orb (e). We define f =
+i G i
+23
+O rb
+G
+j
+(e
+1
+)i
+(e), where e ( Orb (e). Clearly f is idempotent. It is in fact
+i j G i
+Orb (e)
+G i
+central in k [O (G)] since if g  G then gfg-1 =  geg-1 = f, the sum again being over the elements in
+p´ j
+j1
+Orb (e). We now show that f is primitive in Z(kG). Suppose instead that f = f + f is a sum of orthogonal
+G i 1 2
+idempotents in Z(kG). Then gfg-1 = f for any g  G. Since f is the sum of the elements of the G-obit
+i i
+of e we deduce that f = f , a contradiction. This shows that f is primitive in Z(kG). Thus we can write
+j 1 2
+k[O (G)] = A …(A where the A are 2-sided ideals of kG. Since k[O (G)]
+p´ 1 m i p´
+GO
+.p
+ kG we obtain the sum
+1 = d +…+ d (5.0.3)
+1 n
+where each summand di is a block of kG. So we are done.
+Lemma 5.0.17. Let G be a finite group with p-complement H (G). Then C (O (G)) contains a p-complement.
+p´ G p´
+Proof. Obvious.
+Theorem 5.0.18. Let G be a finite group with p-complement H (G). If O (G) is the p-complement of
+p´ p´
+C (O (G)) then each block of kG lies in k[O (G)], and is the sum of a G-conjugacy class of blocks of
+G p p´
+k[O (G)].
+p´
+Proof. Since O (G) is a normal p-subgroup every block of kG lies in k[CG(O (G))] and is the sum of a G-orbit
+p p´
+of blocks of C (O (G))(See [3] proposition 15:9). Furthermore each block of k[C (O (G))] is the sum of a
+G p G p
+C (O (G))-conjugacy class of blocks of k[O (G)] (See [3] proposition 12:7). Since each block of kG is stable
+G p p´
+under conjugation by G the result follows.
+We denote the fixed point set of O .(G) under conjugation in G by J (G). We may check that J (G) is a
+p p´ p´
+normal p-subgroup of G, which is immediate.
+Theorem 5.0.19. Let G be a finite group with p-complement H (G) and P  Syl (G). Then O (N (P)) = J (G).
+p´ p p´ G p´
+Proof. Since P is radical subgroup we may write N (P) = P  H (N (P)) by the classical Schur-Zassenhaus
+G p´ G
+theorem, where H (N (P)) is a p-complement of N (P). As J (G)  C (P) is the p-complement of C (P) and
+p´ G G p´ G G
+O (N (P)) · C (P) the assertion follows. 
+p´ G G
+Definition 5.0.20. If (P, V ) is a weight for G, then V belongs to a block b of N (P) and this block corresponds
+G
+with a block Bl of G via the Brauer correspondence, hence we can say that the weight (P, V ) belongs to the
+block Bl of G so the weights are partitioned into blocks.
+(Alperin's Conjeture Block Form) The number of weights in a block of G equals the number of simple
+modules in the block(ACBF).
+Lemma 5.0.21. Let G be a finite group with p-complement H .(G) and S and T two simple modules with vertex
+p
+P  Syl (G). Assume that Bl is a block of G and this block corresponds with a block b of N (P) via the Brauer
+p G
+correspondence. If S and T lie in the block Bl with defect group P then S G and TG lie in the block b
+N (P) N (P)
+G G
+with defect group P.
+Proof. If S and T lie in the same block then there is a list of simple kG-modules S = S ,…,S = T with vertex P
+1 n
+such that S and S are both composition factors of the some indecomposable projective module kP  S for
+i i+1 i
+each i = 1,…,n - 1. By lemma (4.0.12) we have a list of simple k[N (P)]-modules SG = V ,…,V = TG .
+G N (P) 1 n N (P)
+G G
+Suppose that 0  P …P is a composition series of the regular representation of P. Since P is a p-group,
+1 n
+all the composition factors are trivial representation, k. Because -  S preserves exact sequences we have
+k i
+0  P  Si  ... P  S = P . Therefore V and V are both composition factors of the some
+1 k n k i Si i i+1
+indecomposable projective module kP  V for each i = 1,…,n - 1. Thus the result follows. 
+k i
+Theorem 5.0.22. Let G be a finite group with p-complement H ´(G) and let k be a field of characteristic p.
+p
+Then G satisfy (ACBF).
+Proof. If (P, V ) and (P, U) belongs to the block Bl then g(V) and g(U) belongs to the block Bl by last lemma. If
+(O (G); S) belongs to the same block Bl then S lie in the block Bl, since N (O (G)) = G. So we are done. 
+p G p
+REFERENCES
+[1] ALPERIN, J. (1976): “Projective Modules and Tensor Products”. J. Pure and Appl. Álgebra 8,
+235-241.
+[2] GORENSTEIN, D.; R. LYONS and R. SOLOMON (2000): The Classification of the Finite
+Simple Groups Mathematical Surveys and Monographs Volume 40.1, American
+Mathematical Society Providence.
+[3] WEBB, P. (2004): Finite Group Representations for Pure Mathematician www.math.umn.edu/
+webb/.74-108.
+24

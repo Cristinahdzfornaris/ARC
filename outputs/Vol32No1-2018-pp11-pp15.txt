@@ -1,0 +1,1108 @@
+CienciasMatemáticas,Vol.32,No.1,Pag.11-15, 2018
+Recibido09-2017
+La ponderacio´n de para´metros en un modelo de Zika
+The weighting of Parameters in a Zika Model
+Erick Manuel Delgado Moya 1 Ayme´e Marrero severo 2
+Resumen En este art´ıculo se presentan modelos matema´ticos para el Zika definidos por un sistema de
+ecuaciones diferenciales ordinarias con el objetivo de estudiar el comportamiento de la epidemia al paso
+del tiempo y proponer una estrategia de control eficaz. Se realiza simulaciones para El Salvador con datos
+estimados,ysecomparadosvariantesdeestrategiadecontrol.
+Abstract Inthispaper,wepresentmathematicalmodelsforZikadefinedbyanordinarydifferentialequations
+systemwiththeaimofstudyingthebehavioroftheepidemicovertimeandproposeaneffectivecontrolstrategy.
+Simulations were performed for El Salvador with estimated data, and two variants of control strategy were
+compared.
+PalabrasClave
+Control—Modelo—Ponderacio´n—Zika
+1DepartamentodeMatema´tica,PontificiaUniversidadeCato´licadoRiodeJaneiro,Brasil,erickdelgadomoya@gmail.com
+2DepartamentodeMatema´tica,UniversidaddeLaHabana,Cuba,aymee@matcom.uh.cu
+1. Introduccio´n menosunos10a12an˜oseltenerunavacunaefectivacontra
+elvirusdelZikadisponibleparasuuso.
+ElvirusdeZikaesunanuevainfeccio´ntropicalenelhemis- Laproteccio´ncontralaspicadurasdemosquitosesfundamen-
+ferio occidental y esta´ relacionado con el dengue, la fiebre talparaprevenirlainfeccio´nporelvirusdeZika(Dicketal.,
+amarilla y el virus del Nilo Occidental pues se transmite a 1952).
+trave´s de picaduras de mosquitos. Aunque se descubrio´ en
+1947,enelbosquedeZika,Uganda,yescomu´nenA´frica,no LaOMScolaboraconlospa´ısesparacontrolarlaenfermedad
+fuesinohastamayopasadocuandocomenzo´ adiseminarse por el virus de Zika mediante la adopcio´n de las medidas
+ampliamente,debidoaunbroteenBrasil(Dicketal.,1952). definidasenelmarcoderespuestaestrate´gicaalZika(Dick,
+Pocostenemosdefensasanteestevirus,razo´nporlacualse 1952):
+transmiteconrapidez.Millonesdepersonasenregionestropi-
+Definirlasinvestigacionessobrelaenfermedadporel
+calesdeAme´ricapodr´ıanestarinfectada(Dick,1952).
+virusdeZikaydarlesprioridadconvocandoaexpertos
+ElvirusdeZikasepropagaatrave´sdelosmosquitosdela
+yasociados.
+especieAedes,quepuedenreproducirseenuncharcodeagua
+tanpequen˜ocomounatapadebotellay,porlogeneral,pican
+PotenciarlavigilanciadelvirusdeZikaysuscompli-
+duranteeld´ıa.Estaclasedemosquitoocasiono´ lamayor´ıa
+caciones.
+de los casosde Zika y su habitat esta´ esparcido enFlorida,
+Estados Unidos, los pa´ıses del Caribe y Hawai entre otros Reforzarlacapacidaddecomunicacio´nsobrelosries-
+(Dicketal.,1952). gos a fin de involucrar a las comunidades para que
+Tambie´n se sabe que el mosquito tigre asia´tico, Aedes al- comprendanmejorlosriesgosasociadosalvirus.
+bopictus, transmite el virus, pero no esta´ claro con cua´nta
+Fortalecerlacapacidaddeloslaboratoriosparadetectar
+eficacia. Ese mosquito llega al extremo norte, hasta Nueva
+elvirus.
+YorkyChicago,duranteelverano.
+Sibienlosmosquitossonlosqueporlogeneraltransmiten
+Ayudaralasautoridadessanitariasaaplicarlasestrate-
+estevirus,seidentifico´ unposiblecasodecontagioatrave´s
+giasdecontroldelosvectoresdestinadasareducirlas
+deunatransfusio´nsangu´ıneayportransmisio´nsexual(Dick,
+poblacionesdemosquitosdelge´neroAedes.
+1952).
+Eltiemponecesarioparadesarrollarunavacunaefectiva,cer- Elaborarrecomendacionesacercadelaatencio´ncl´ınica
+tificarla y ponerla en produccio´n es largo y complejo. Los yelseguimientodelaspersonasconcomplicaciones
+primerospasossellevanacaboenellaboratorioeincluyen relacionadasconlainfeccio´nporelvirusdeelZika,en
+pruebasenanimales,ensayoscl´ınicosylaslicenciasdeapli- colaboracio´nconexpertosyotrosorganismossanita-
+cacio´nyaprobacio´nrequeridas.Seestimaquepodr´ıallevaral rios.
+12 Laponderacio´ndepara´metrosenunmodelodeZika
+En este trabajo se presenta un modelo matema´tico para la Nosetieneencuentalareinfeccio´n,nilatransmisio´n
+transmisio´ndelZika,ene´lapareceninvolucradaslasestrate- vertical,nienhumanosnienmosquitos.
+giasdecontrolqueseaplicanahumanosyvectoresypermite
+Solosetieneencuentaelcontagiosexualdehombrea
+observarelcomportamientodelaepidemiaalpasodeltiempo
+hombreydehombreamujerpuessegu´nespecialistas,
+ycontribuyecomoherramientaparalaluchaporlareduccio´n
+enelsemenmasculinopermaneceelvirusloqueotorga
+delimpactodelaepidemiaenlasociedad.Laexperimentacio´n
+grantrascendenciaaestaviaenladina´micadecontagio
+computacionalserealizo´ enunescenarioreal,ElSalvador,
+sexual.
+conelobjetivodeadaptarelmodeloacondicionesreales.
+Unapersonasusceptiblepasaalestadoinfeccioso,alser
+2. Marco Teo´rico picadaporunmosquitomaduroportador,yportener
+contactosexualconunhombreinfectado,mientrasque
+EstrategiadeControl
+unmosquitonoportadorpasaasermosquitoportador
+Laestrategiadecontrolestara´basadaenunafuncio´ng(t)que
+alpicaraunapersonainfectada.
+tienelasiguienteestructura:
+ Lamuerteporcausasnaturaleseslamismaencualquier
+s|f(t)| si f(t)(cid:54)=0
+ estado.
+g(t)=
+ s(1+f(t)) si f(t)=0 Lapoblacio´nPdehumanosnoesconstanteyesta´ repartida
+en tres clases: Susceptible (S), Infectado (I) y Recuperado
+Siendoselcoeficientedeponderacio´n(control)determinado
+(R),tal queP(t)=S(t)+I(t)+R(t),para untiempot >0,
+medianteunana´lisisestad´ıstico.Sirestringimoslasposibilida- teniendoencuentaladiferenciacio´nporsexo,Heslacantidad
+desdelafuncio´n f(t),aunafuncio´nquenospermitaobservar de hombres que involucra susceptibles e infectados y M la
+losper´ıodosdondeseaplicaelcontroldeformama´seficaz
+cantidaddemujeresquetienenigualdiferenciacio´nquelos
+queenotros, f(t)adema´sdesercontinua,tendra´lapropiedad
+hombres.
+deserc´ıclica.
+Laecuacio´nquerepresentaelcomportamientodeloshombres
+Enelcasodeloshumanosutilizaremosestaestrategiadecon- susceptibles(H ),es:
+s
+troldebidoaquepermitetenerencuentafactoresexternos,en
+elcasodelvectorutilizaremoscontrolconstante. dH s V I H I
+=N −β H −β H −µH ,
+dt
+1 y1V s y2
+H
+s s
+V
+I
+3. Metodolog´ıa dondeN 1 eslaconstantedenatalidaddehombres,β y1V H s
+loshombresqueseinfectanporcontactoconmosquitosin-
+Lametodolog´ıadelestudio,esta´basadaenlaconstruccio´nde
+H
+I
+unmodelomatema´ticodefinidoporsistemasdeecuaciones fectados,β y2
+H
+H s loshombresqueseinfectanporcontacto
+diferenciales,enelcualseconsideranlasestrategiasdecontrol conhombresinfectados, µH lamortalidaddeloshombres
+s
+ahumanosyvectores,paraelcasodehumanosseutilizauna susceptibles.
+funcio´ndecontrolc´ıclica,porsuscaracter´ısticasyparalos
+vectores,seusacontrolconstante.,porsuscaracter´ısticasyen La ecuacio´n que representa el comportamiento de las mu-
+elcasodelvectoresconstante. jeressusceptibles(M ),es:
+s
+La experimentacio´n computacional se realizaron con datos
+de El Salvador (Trips and Haussermamm, 1986; Poletti et dM s V I H I
+=N −β M −β M −µM ,
+al.,2011;Manoreetal.,2014;Shutetal.,2017),queesun dt
+2 y1V s y3
+H
+s s
+escenariopropensoaldesarrollodelaepidemiaylosvalores
+V
+I
+asumidosfueronavaladosporlosespecialistas. dondeN 2 eslaconstantedenatalidaddemujeres,β y1V M S
+las mujeres que se infectan por contacto con mosquitos in-
+H
+4. Modelo I
+fectados,β M lasmujeresqueseinfectanporcontacto
+y3
+H
+S
+Para la construccio´n del modelo se tienen en cuenta las si- con hombres infectados, µM la mortalidad de las mujeres
+s
+guientesobservaciones: susceptibles.
+Enlapoblacio´nhumana,unapersonapuedepasarpor Laecuacio´nquerepresentalavariacio´ndeloshombresinfec-
+tados(H )eneltiempoes:
+todosoalgunosdelossiguientesestados:Susceptible I
+(
+(S
+I)
+)
+(
+(
+p
+p
+e
+e
+r
+r
+s
+s
+o
+o
+n
+n
+a
+a
+q
+sa
+u
+n
+e
+a
+t
+,
+i
+n
+en
+o
+e
+p
+l
+o
+a
+se
+e
+e
+nf
+la
+er
+e
+m
+n
+e
+fe
+d
+r
+a
+m
+d
+e
+y
+da
+p
+d
+u
+)
+e
+,
+d
+I
+e
+nf
+t
+e
+r
+c
+a
+t
+s
+a
+m
+do
+i-
+d
+d
+H
+t
+I =(1−s 1)f(t)βy1 V
+V
+IHs+(1−s 2)f(t)βy2 H
+H
+IHs−σHI−(µ+ε)HI,
+(
+ti
+p
+r
+er
+e
+s
+l
+o
+v
+n
+i
+a
+ru
+q
+s
+ue
+a
+s
+m
+e
+o
+h
+s
+a
+q
+r
+u
+e
+i
+c
+t
+u
+o
+p
+s
+e
+n
+ra
+o
+d
+p
+o
+o
+d
+r
+e
+ta
+l
+d
+a
+o
+e
+r
+n
+e
+f
+s
+e
+)
+rm
+e
+e
+In
+d
+m
+ad
+u
+y
+ne
+tie
+(R
+ne
+) dondeβy1 V
+V
+IHs,βy2 H
+H
+IHssonloshombresquepasanalestadodeinfectado
+portenercontactoconmosquitosinfectadosoportenersexoconhombres
+inmunidad),sediferenciacadasexo. infectados,σHI losinfectadosqueserecuperanyalcanzanlainmunidad,
+Laponderacio´ndepara´metrosenunmodelodeZika 13
+Para´metros Descripcio´n
+µHIlamortalidaddeloshombresinfectadosyεHIlamuertedeloshombres
+porlaenfermedad(letalidad). βy1 Probabilidaddetransmisio´ndevectorahumanos
+Laecuacio´nquerepresentalavariacio´ndelasmujeresinfectadas(MI)enel βy2 Probabilidaddetransmisio´ndehombreahombre
+tiempoes: βy3 Probabilidaddetransmisio´ndehombreahombre
+βx Probabilidaddetransmisio´ndehumanoalvector
+d
+d
+M
+t
+I =(1−s 1)βy1 V
+P
+IMs+(1−s 2)βy2 H
+H
+IMs−σMI−(µ+ε)MI, σ
+µ
+T
+T
+a
+a
+s
+s
+a
+a
+d
+d
+e
+e
+h
+m
+u
+o
+m
+rt
+a
+a
+n
+li
+o
+d
+s
+ad
+qu
+h
+e
+u
+a
+m
+lc
+a
+a
+n
+n
+a
+zaninmunidad
+dondeβy1 V
+V
+IMs,βy2 H
+H
+IMssonlasmujeresquepasanalestadodeinfectado η
+ω
+T
+T
+a
+a
+s
+s
+a
+a
+d
+d
+e
+e
+m
+de
+o
+s
+r
+a
+t
+r
+a
+r
+l
+o
+id
+ll
+a
+o
+d
+d
+p
+e
+o
+l
+r
+ar
+fa
+v
+c
+a
+t
+s
+o
+p
+re
+a
+s
+ra
+am
+af
+b
+a
+i
+s
+e
+e
+nt
+a
+a
+d
+le
+u
+s
+lta
+mosquitos
+portenercontactoconmosquitosinfectadosoportenersexoconhombres u Tasademortalidaddelarvasporfactoresambientales
+infectados,σMI lasinfectadasqueserecuperanyalcanzanlainmunidad, ε Tasademortalidademsereshumanosporenfermedad
+µMIlamortalidaddelasmujeresinfectadasyεMIlamuertedelasmujeres
+Cuadro1.Para´metrosdelmodelodeZika
+porlaenfermedad(letalidad).
+Laecuacio´nquerepresentaelcomportamientodeloshombresrecupera-
+dos(HR)eneltiempoes:
+d
+d
+H
+t
+R =σHI−µHR, d
+d
+H
+t
+s = N 1−βy1 V
+V
+IHs−βy2 H
+H
+IHs−µHs,
+d
+µ
+o
+H
+n
+R
+de
+es
+σ
+l
+H
+a
+I
+m
+s
+o
+o
+r
+n
+ta
+l
+l
+o
+id
+s
+a
+i
+d
+nf
+e
+e
+n
+ct
+lo
+ad
+s
+o
+h
+s
+om
+qu
+b
+e
+re
+s
+s
+e
+i
+r
+n
+e
+m
+cu
+u
+p
+n
+e
+e
+r
+s
+a
+.
+nyalcanzanlainmunidady d
+d
+M
+t
+s = N 2−βy1 V
+V
+IMs−βy3 H
+H
+IMs−µMs,
+Laecuacio´nquerepresentaelcomportamientodelosmujeresrecuperadas
+d
+d
+H
+t
+I = (1−s 1)f(t)βy1 V
+V
+IHs+(1−s 2)f(t)βy2 H
+P
+IHs−σHI−(µ+ε)HI,
+(MR)eneltiempoes: d
+d
+M
+t
+R =σMI−µMR, d d M t I = (1−s 1)f(t)βy1 V V IMs+(1−s 2)f(t)βy2 H H IMs−σMI−(µ+ε)MI,
+dondeσMIsonlasinfectadasqueserecuperanyalcanzanlainmunidady d
+d
+H
+t
+R = σHI−µHR,
+µMReslamortalidadenlosmujeresinmunes.
+Comoserefirio´ enelmarcoteo´rico,s 1 representaelcontrolalcontacto
+d
+d
+M
+t
+R = σMI−µMR,
+s
+e
+o
+n
+b
+tr
+r
+e
+e
+h
+e
+u
+l
+m
+co
+a
+n
+n
+t
+o
+a
+s
+ct
+s
+o
+us
+e
+c
+n
+e
+tr
+p
+e
+ti
+h
+b
+u
+le
+m
+s
+a
+y
+n
+m
+os
+o
+,
+s
+(
+q
+1
+u
+−
+ito
+s
+s
+1)
+p
+,
+o
+(
+r
+1
+ta
+−
+do
+s
+r
+2
+e
+)
+s
+r
+,
+e
+s
+p
+2
+re
+re
+s
+p
+e
+r
+n
+e
+t
+s
+a
+e
+l
+n
+a
+ta
+ef
+e
+e
+l
+c
+c
+ti
+o
+v
+n
+id
+tr
+a
+o
+d
+l d
+d
+N
+t
+L = B−ωNL−uNL,
+c
+lo
+o
+g
+m
+ra
+p
+d
+a
+a
+rti
+e
+m
+n
+e
+e
+n
+l
+t
+c
+o
+o
+d
+n
+e
+tr
+h
+o
+u
+l
+m
+y
+a
+f
+n
+(
+o
+t)
+s
+l
+i
+a
+nf
+f
+e
+u
+c
+n
+t
+c
+ad
+io´
+o
+n
+s.
+c´ıclicadecontrolqueseaplicaenel d
+d
+V
+t
+S = ωNL−βx H
+H
+IVS−βx M
+M
+IVS−ηVS,
+Lapoblacio´ndemosquitosconstademosquitosadultosylarvas,porlo d d V t I = (1−s 3)βx H H IVS+(1−s 3)βx M M IVS−ηVI.
+que:V(t)=VS(t)+VI(t),parat>0ynoesconstante,representalapobla-
+cio´ndemosquitosadultos,NL(t)laslarvas(mosquitosnoadultos). CondicionesIniciales
+t∈[0,n],
+Laecuacio´nquerepresentalaevolucio´neneltiempodelaslarvasdemosqui- HS(0)=hs 0,HI(0)=hi 0,MS(0)=ms 0,MI(0)=mi 0,
+tos(NL)eneltiempoes: HR(0)=hr 0,MR(0)=mr 0,Vs(0)=vs 0,Vi(0)=vi 0,
+d
+d
+N
+t
+L =B−ωNL−uNL,
+NL(0)=nl 0.
+dondeB(constante)eslacantidaddehuevosquellegaronalarva,ωNLlas
+5. Resultados
+larvasquellegaronalestadoadultoyasumimosquesonnoinfectadasyuNL
+laslarvasquemuerendefactoresambientales,incluidosdepredadores.
+Lapoblacio´ndevectoressetomo´deformaaproximadaporladificultadde
+Laecuacio´nquerepresentalaevolucio´neneltiempodelosmosquitosno
+obtenerdatosreales.ElCuadro2muestralosvaloresylaprocedenciade
+portadores(VS)eneltiempoes:
+losdatosparalassimulaciones,lascondicionesinicialesosealosvaloresde
+d
+d
+V
+t
+S =ωNL−βx H
+H
+IVS−βx M
+M
+IVS−ηVS,
+r
+la
+ea
+p
+l
+o
+id
+b
+a
+l
+d
+a
+.
+ci
+L
+o´
+a
+n
+F
+in
+ig
+ic
+u
+i
+r
+a
+a
+le
+1
+ss
+m
+e
+u
+t
+e
+o
+s
+m
+tr
+a
+a
+ro
+el
+n
+c
+d
+o
+e
+m
+f
+p
+o
+o
+rm
+rta
+a
+m
+h
+i
+i
+e
+p
+n
+o
+t
+t
+o
+e´t
+d
+ic
+e
+a
+la
+pe
+p
+r
+o
+o
+b
+a
+la
+p
+c
+r
+i
+o
+o´
+x
+n
+im
+in
+a
+fe
+d
+c
+a
+ta
+a
+d
+l
+a
+a
+,
+dondeωNLrepresentalaslarvasquelleganamosquitoadultonoportador, divididaenhombresymujeresalpasode5d´ıasdebrote.Seobservaqueel
+βx H
+H
+IVS,βx M
+M
+IVSlosmosquitosquequedaninfectadosportenercontacto m
+ten
+ay
+em
+or
+o
+i
+s
+m
+u
+p
+n
+ac
+c
+t
+r
+o
+ec
+d
+i
+e
+m
+l
+i
+a
+en
+ep
+to
+id
+e
+e
+n
+m
+l
+i
+a
+a
+p
+e
+o
+s
+b
+ta´
+la
+e
+c
+n
+io´
+lo
+n
+s
+d
+h
+e
+o
+m
+m
+u
+b
+j
+r
+e
+e
+r
+s
+e
+i
+s
+n
+i
+f
+n
+e
+f
+c
+e
+t
+c
+a
+t
+d
+a
+o
+d
+s
+a
+a
+s,
+u
+e
+n
+n
+qu
+g
+e
+en
+ta
+e
+m
+ra
+b
+l
+i
+u
+e´
+n
+n
+conhumanosinfectadosyηVSlosmosquitosadultosnoportadoresquemue- crecimientodelaepidemiaenuncortoper´ıododetiempo,enestecasonose
+rendefactoresambientales. aplicaestrategiadecontrol.
+Laecuacio´nquerepresentaelcomportamientodelosmosquitosportadores
+(VI)eneltiempoes:
+d
+d
+V
+t
+I =(1−s 3)βx H
+H
+IVS+(1−s 3)βx M
+M
+IVS−ηVI,
+dondeβx H
+H
+IVS,βx M
+M
+IVSrepresentalosmosquitosnoportadoresqueseinfec-
+tanaltenercontactoconhumanosinfectadosyηVIlosmosquitosinfectados
+quemuerenporfactoresambientales.
+Elcontrols 3esaplicadoamosquitosadultosencompartimentodeinfectados
+enelcontactoconhumanosinfectados,(1−s 3)laefectividadlogradaenel
+control.
+Portanto,ladina´micadetransmisio´ndelZikasemodelamedianteelsiguiente
+sistemadeecuacionesdiferencialesordinarias:
+14 Laponderacio´ndepara´metrosenunmodelodeZika
+Para´metros Valor Referencia
+βy1 0.2808 (Shutetal.,2017)
+βx 0.3053 (Shutetal.,2017)
+βy2 0.03 Asumido
+βy3 0.04 Asumido
+ω 0,16667 (Polettietal.,2011),(Manoreetal.,2014)
+µ 0.0057 www.indexmundi.com/es/elsalvador
+σ 0.45 Asumido
+ε 0.004 Asumido
+η 0,05556 (TripsandHaussermamm,1986)
+u 0,06 Asumido
+N 1 0.65 Asumido
+N 2 0.75 Asumido
+B 0.40 Asumido
+Cuadro2.ElSalvador
+Lacantidaddehombresrecuperadossuperaalacantidaddemujeresrecupe-
+radasapesarquelatasaderecuperacio´nsetomo´igual,loquemuestraquea
+mayornu´merodeinfectadosmayornu´meroderecuperados,verFigura2.
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+00 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5
+Time
+detcefnI
+El Salvador
+IInnffeecctteedd( (MWeonm)en)
+Figura1.HumanosInfectados,SinControl
+120
+100
+80
+60
+40
+20
+00 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5
+Time
+derevoceR
+Figura3.Mosquitos,SinControl,meses
+Alaplicarestrategiadecontrolsobrelosmosquitosadultosdel45%paras 3,
+vinculadoconun50%y35%enloshumanosparas 1ys 2respectivamente,
+selograreducirlacantidaddemosquitosportadores,verFigura4.Enelcaso
+deloshombresseconsidero´lafuncio´nsenoparasimularuncomportamiento
+c´ıclicoysecomparo´ conelcasodecontrolconstanteyenamboscasos
+selograreducirelimpactodelaepidemia,peroelc´ıclicopermiteteneren
+cuentafactoresexternosquehacenquehayamomentosdondeselograuna
+mayorefectividadloquegarantizaunmejoracercamientoalfeno´menoreal,
+verFigura5.
+Figura4.MosquitosconControl
+El Salvador
+Recovered(Men)
+Recovered (Women)
+Figura2.HumanosRecuperados,SinControl,meses
+Figura5.HombresConySinControl
+Lacantidaddemosquitosportadorescrecenencomparacio´nalosnoporta-
+dores,enestecasolaunidaddetiempoesd´ıasparatenerencuentaeltiempo
+devidadelosmosquitos,loqueevidencialanecesidaddeunaestrategiade
+control,verFigura3.
+Laponderacio´ndepara´metrosenunmodelodeZika 15
+6. Conclusiones [4] Butcher,J.C.(2003)NumericalMethodforOrdinaryDifferentialEqua-
+tions,J.Wiley.
+Estetrabajoproponeunmodeloparalaprediccio´ndelcomportamientodela
+epidemiadelZikaconsiderandoestrategiasdecontrolymuestrasimulaciones [5] Chicone,Carmen.(1999)OrdinaryDifferentialEquationwithApplica-
+basadasendatosparaElSalvador,estopermiteobservarlasevolucionesde tion,Springer-Verlag,NewYork.
+brotesepide´micosalpasodeltiempo.
+[6] Driessche,P.vandenandWatmouggh,James.(2002)Reproductionnum-
+bersandsub-thresholdendemicequilibriaforcompartmentalmodelsof
+Laopcio´ndeconsiderarcontrolesnoconstantes,seacercama´salarealidady
+diseasetransmission,J.RSoc.Interface,7,2010.
+permiteanalizardiferentesmomentosenelcomportamientodelaepidemia.
+[7] O.Diekmann,J.A.P.HeesterbeekandM.GRoberts.(2009)Theconstruc-
+Segu´nlosresultadosobtenidos,quesonau´npreliminares,loshombresjuegan tionofnext-generationmetricesforcompartmentalepidemicmodels,
+unpapelactivoenlatransmisio´nportenerdoblev´ıadecontagiorespectoa MathematicalBiosciences,180,pp:29-48.
+lasmujeres.
+[8] Manore,C.,Hickmann,J.,Xu,S.,Wearing,H.,andHyman,J.(2014)
+ComparingDengueandCikungunyaemergenceandendemictransmis-
+Sinembargoencualquierestrategiadedisminuireldesarrolloeimpacto
+sionina.aegyptianda.Albopictus,JournalofTheoreticalBiology,
+delaepidemiaesfundamentalcentrarseenlapoblacio´ndevectorespuesse
+356(7),174-191.
+evidencio´laimportanciadeestasubpoblacio´nenladina´micadetransmisio´n.
+[9] Mattheij,Robert.,Molenaar,Jaap.(2002)OrdinaryDifferentialequa-
+Seproponeparaposteriorestrabajos,simularenotrosescenariosycom- tionsinTheoryandPractice,Springer-Verlag,NewYork.
+parardiferenteste´cnicasdecontrol.
+[10] Poletti,P.,Messeri,G.,Ajelli,M.,Vallorani,R.,Rizzo,L.andMer-
+ler,S.(2011)TrasmissionPotentialofChikungunyaVirusandControl
+Referencias
+Measures:ThecaseofItaly,PlosOne,6(5),e18860.
+[1] Bewick,S.,Fagen,W.Calabrese,J.andAugusto,F.(2016) Zikavirus [11] D.P.Shutt,C.AManore,S.Pankavich,A.T.PorterandS.YdelValle.
+endemicversusepidemicsandimplicationfordiseasespreadinthe Estimatingthereproductivenumber,totaloutbreaksize,andreporting
+Americas. ratesforZIKAepidemicsinSouthandCentralAmerica,Epidemics,21,
+[2] DickGW(1952)ZikaVirus.II.Pathogenicityproperties.TransRSoc 63-79,2017,DOI:10.1016/j.epidem.2017.06.005.
+TropMedHyg46:521-534.PMID:12995441. [12] Trps,M.,andHaussermammW.(1986) Dispersalandotherpopulation
+[3] DickGW,KitchenSF,HaddowAJ(1952)ZikaVirus.I.Isolationsand parametersofAedesaegyptiinanafricanvillageandtheirpossible
+serogicalspecifity.TransRSocTropMedHyg46:509-520.PMID: significanceinepidemiologyofvector-bornediseases,AmericanJournal
+12995440. ofTropicalMedicineandHygiene,35,1263-1279.

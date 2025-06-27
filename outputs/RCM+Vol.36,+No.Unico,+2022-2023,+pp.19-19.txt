@@ -1,0 +1,700 @@
+OriginalResearch/ArtículoOriginal CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.13-19
+Received(Recibido):27-04-2024,Revised(Revisado):21-06-2024
+Accepted(Aceptado):28-06-2024,Online(Enlínea):18-07-2024
+Matrix-free computation of linear combinations of
+phi-functions times vectors in exponential integrators
+Cálculo sin matrix de combinación lineal de función
+phi por vector en integradores exponenciales
+Frank Sadan Naranjo-Noda1* , Juan Carlos Jiménez Sobrino 2
+Abstract Numerical computation of linear combinations of phi-functions times vectors arises as a major
+issueinanumberofexponential-typeintegratorsforlargesystemsofinitialvalueproblems(IVPs). Thisshort
+communication deals with such a computation in the case that evaluating and storing the involved Jacobian
+matrices is unfeasible. To this end, a matrix-free Krylov-Padé approximation is introduced, and its error
+determined. NumericalsimulationsareprovidedwithJacobianmatricesandvectorfieldsofIVPsresultingfrom
+thespatialdiscretizationofknownpartialdifferentialequations.
+Keywords: phi-functions,iterativenumericalmethod,matrix-freemethod,exponentialintegrator,highdimen-
+sionalinitialvalueproblem.
+Resumen Elcálculonuméricodecombinacioneslinealesdeproductosdefuncionesphiporvectoressurge
+comounproblemaimportanteenlaimplementacióndeintegradoresexponencialesparaProblemasdeValor
+Inicial(PVI)degrandesdimensiones.Estacomunicacióncortatratacondichocálculocuandoesinviableevaluar
+yalmacenarlasmatricesJacobianasinvolucradas.Paraello,seintroduceunaaproximacióndeKrylov-Padé
+apropiada y se determina su error. Se realizan simulaciones numéricas con matrices Jacobianas y campos
+vectorialesdePVIresultantesdeladiscretizaciónespacialdeecuacionesdederivadasparcialesconocidas.
+PalabrasClave:funcionesphi,métodonuméricoiterativo,métodosinevaluacióndematriz,integradorexpo-
+nencial,problemasdevalorinicialdegrandesdimensiones.
+MathematicsSubjectClassification:65F60,65F10,65L05.
+1DepartamentoMatemáticaInterdisciplinaria,InstitutodeCibernética,MatemáticayFísica.LaHabana,Cuba.Email:fsadannn@gmail.com,
+fsadannn@icimaf.cu
+2DepartamentoMatemáticaInterdisciplinaria,InstitutodeCibernética,MatemáticayFísica.LaHabana,Cuba.Email:
+juan_carlos_js@yahoo.com,jcarlos@icimaf.cu
+*CorrespondingAuthor(AutorparaCorrespondencia)
+Editedby(Editadopor):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.
+Citation(Citarcomo): Naranjo-Noda,F.S.,&JiménezSobrino,J.C.(2024).Matrix-freecomputationoflinear
+combinationsofphi-functionstimesvectorsinexponentialintegrators.CienciasMatemáticas,36(Único),13–19.
+Availableinhttps://revistas.uh.cu/rcm/article/view/9070
+Introduction multipleintegralstimesvectorsoftheform:
+Inthecontextofexponential-typeintegratorsforInitial l (cid:90) h
+∑φ(A,h)a, with φ(A,h)= eA(h−s)si−1ds, (1)
+ValueProblems(IVPs): i i i
+i=1 0
+being A an square matrix representing the Jacobian matrix
+dx = f(x), x(t 0 )=x 0 ∈Rd, t∈[t 0 ,T], f x (y)ofthevectorfield f evaluatedaty∈Rd,a i d-dimensional
+dt columnvectors,h>0theintegratorstepsize,andl=2,3,···.
+The case l =1 is excluded in (1) to avoid focusing on the
+thereexistsanumberofnumericalschemes(see,e.g.,[14,4, computation of single products φ (A,h)a , which has been
+1 1
+5])thatinvolvethecomputationofthelinearcombinationof thesubjectofanumberofpapers[13,12,9,11]).
+14 Matrix-freecomputationoflinearcombinationsofphi-functionstimesvectorsinexponentialintegrators
+ForsmalldimensionalmatrixA,thereisanumberofmeth- partitionedcolumnvectoru=[u ⊺ ,···,u ] ⊺∈Rd+l isgiven
+1 l+1
+odsforcomputingthelinearcombinationofphi-functions(1) by,
+(see, [6] for a recent review). Analogously, for large ma-
+  
+A a a ··· a u
+trixA,variousmethodshavealsobeenconsidered(see,e.g., l l−1 1 1
+[13,12,10]). Inallofthem,theevaluationandsavingofthe  0 0 1 ··· 0  u 2 
+matrixAisrequired.  
+ 0 0 0
+...
+0
+ 
+
+ 
+
+. .
+.
+ 
+
+case
+T
+t
+h
+h
+i
+a
+s
+t
+s
+e
+h
+v
+o
+al
+r
+u
+t
+a
+n
+t
+o
+in
+te
+g
+f
+a
+o
+n
+c
+d
+u
+s
+s
+t
+e
+o
+s
+ri
+o
+n
+n
+g
+t
+t
+h
+h
+e
+e
+c
+m
+o
+a
+m
+tr
+p
+ix
+ut
+A
+at
+i
+i
+s
+on
+un
+o
+f
+f
+ea
+(
+s
+1
+i
+)
+b
+i
+l
+n
+e.
+t
+T
+h
+o
+e  
+
+. .
+.
+. .
+.
+. .
+.
+...
+1
+ 
+
+ 
+
+. .
+.
+ 
+
+0 0 0 ··· 0 u
+thisend,inthenextsection,(1)isrewrittenastheactionof l+1
+theoperatorφ 1 overavectortousethematrix-freeKrylov-  Au 1 +a l u 2 +···+a 1 u l+1 
+Padéapproximationof[11]tosingleproductsφ 1 (A,h)a 1 .The  u 3 
+proposedmethodcanbeseemedasamatrix-freeextension =    . . .    ∈Rd+l,
+oftheKrylov-Padémethodconsideredinsection3.1of[10]  
+forcomputing(1)and,forthisreason,inthelastsectionthe  u l+1 
+0
+performanceofbothmethodsiscomparedinsimulations.
+we can replace the classical Arnoldi algorithm [1] by the
+Highlights followingextensionoftheclassicalmatrix-freeArnoldialgo-
+rithmof[2].
+Thisworkdealswiththenumericalcomputationoflin-
+earcombinationsofphi-functionstimesvectorsinthecase
+Algorithm1:Matrix-freeArnoldialgorithmtocom-
+that evaluating and storing the involved Jacobian matrices pose the orthonormal basis {v ,v ,···,v } of the
+(cid:98)1 (cid:98)2 (cid:98)m
+is unfeasible. For this purpose, a matrix-free Krylov-Padé m-thKrylovsubspaceK (cid:99)m(τM(x),b;δ),withparti-
+approximationisintroduced,anditserrordetermined. There-
+tionedmatrixMdefinedasin(2).
+sultisrelevantforefficientimplementationsofJacobian-free
+Input: functiong:Rd×Rd×R→Rd definedasin
+exponential-typeintegratorsforlargesystemsofinitialvalue
+(3),b∈Rd+l,x, a ,a ,···,a ∈Rd,τ,δ >0,
+problems. 1 2 l
+andKrylovdimensionm.
+Output:V(cid:98)m=[v
+(cid:98)1
+,v
+(cid:98)2
+,···,v (cid:98)m]∈R(d+l)×m,upper
+1. Main result HessenbergmatrixH(cid:98)m ∗ =((cid:98)h∗
+ij
+)∈Rm×m,
+ByusingTheorem1in[3],thelinearcombination(1)can v
+(cid:98)m+1
+∈Rd+l,(cid:98)h∗
+m+1,m
+.
+bestraightforwardrewrittenas[7,4,3]: 1 v (cid:98)1 =b/∥b∥ 2
+2 for j=1,2,···,mdo
+i
+∑
+=
+l
+1
+φ
+i
+(A,h)a
+i
+=LehMr, (2) 3 q
+
+j =
+g(x,τ[v (cid:98) [ j 1],...,v (cid:98) [ j d] ] ⊺ ;δ)+τa l v (cid:98) [ j d+1] +···+τa 1 v (cid:98) [ j d+l] 
+withL=[I d×d 0 d×l ],r=[0 1×(d+(l−1)) 1] ⊺ ,and,    τv (cid:98) [ j d . +2]   
+ . 
+ . 
+ A a l a l−1 ··· a 1    τv (cid:98) [ j d+l]  
+ 0 0 1 ··· 0  0
+ 
+M=   0 0 0 ... 0  , 4 w (cid:98)j =q j
+ 
+
+. .
+.
+. .
+.
+. .
+.
+...
+1
+ 
+
+5
+6
+for
+(cid:98)h
+i
+∗ i
+=
+j =
+1,
+⟨
+2
+q
+,
+j
+·
+,
+·
+v (cid:98)
+·
+i ⟩
+,jdo
+0 0 0 ··· 0 7 w (cid:98)j =w (cid:98)j −(cid:98)h∗ ij v (cid:98)i
+8 end
+wherea =a(i−1)!,foralli=1,···,l.
+i i
+Letussupposethatthereexistη+1-thcontinuouslydif- 9 (cid:98)h∗ j+1,j =∥w (cid:98)j ∥ 2
+ferentiablefunctionsg:Rd×Rd×R + →Rdthatapproximate 10 v (cid:98)j+1 =w (cid:98)j /(cid:98)h∗ j+1,j
+theproduct f x (x)bwithorderη,suchthat: 11 end
+||g(x,b;δ)−f (x)b||≤c||b||η+1δη, (3) 12 v (cid:98) [ j k]denotesthek−thelementofthevectorv (cid:98)j ,and
+x ⟨·,·⟩thescalarproductoftwovectors.
+whereb∈Rd isacolumnvector,andcisapositiveconstant
+dependingonlyonthenormofderivativesof f
+x
+. Usingthis LetthematricesV(cid:98)m ∈R(d+l)×mandH(cid:98)m ∗ ∈Rm×m,thevec-
+approximationforthematrixtimesvectorAu
+1
+andtakinginto torv
+(cid:98)m+1
+∈Rd+l,andthepositivenumber(cid:98)h∗
+m+1,m
+beoutputs
+accountthattheproductofthepartitionedmatrixMtimesa ofthematrix-freeArnoldiAlgorithm1forthem−thKrylov
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.13-19 Naranjo-Noda,F.S.,&JiménezSobrino,J.C.
+https://revistas.uh.cu/rcm/article/view/9070
+Matrix-freecomputationoflinearcombinationsofphi-functionstimesvectorsinexponentialintegrators 15
+subspace K (cid:99)m(hβM(x),b;δ), where M(x) is the partitioned integratorscomputing(2)withl=1).Furthermore,ateachin-
+matrixdefinedin(2)withA= f (x)theJacobianmatrixof tegrationstepofthenumericalscheme,theKrylovdimension
+x
+the vectorial function f(x), x∈Rd, b∈Rd+l, h,δ >0 and m,theorder(p,q)andscalingkofthePadéapproximationin
+β ≥0. Thematrix-free(m,p,q,k)-Krylov-Padéapproxima- (6)canbesuitableestimatedasinsection4.1of[11].
+tionofφ (M,h)bisthendefinedby[11]: As mentioned in the introduction, the new approxima-
+1
+tion(4)canbeconsideredasamatrix-freeextensionofthe
+K(cid:98) m p, , q k (h,M,b;η,δ,β) = ||b|| 2 V(cid:98)m[P h ] 11 e 1 (4) Krylov-Padé approximation K m p, , q k (h,M,Mr) defined in [9]
++ ||b|| 2 (cid:98)h m+1,m e ⊺ m [P h ] 12 v (cid:98)m+1 , for φ 1 (M,h)Mr in the case that the matrix M can be evalu-
+atedandstoredinmemory. Insuchacase,whencomputing
+whereP denotesthe(p,q)-Padéapproximationwithscaling φ (M,h)Mrin(5),Theorem3.1in[9]yields:
+h 1
+andsquaringkforthematrixexponentialehH,
+(cid:13) (cid:13)
+(cid:13) l (cid:13)
+
+H(cid:98)m e 1 0 m×1 0 m×1
+ (cid:13)
+(cid:13)
+∑φ
+i
+(A,h)a
+i
+−LK
+m
+p,
+,
+q
+k
+(h,M,Mr)(cid:13)
+(cid:13)
+≤c
+0
+hmin{m+2,p+q+1},
+H=   0 1×m 0 1 0  ,
+(cid:13)i=1 (cid:13)
+2 (7)
+ 0 1×m 0 0 1  bound that coincides with the first term of the bound (6).
+0 1×m 0 0 0 Intheaboveinequality,theapproximationKp,q (h,M,Mr)–
+m,k
+used in [10] to compute (5) – has the two terms of (4) but,
+n
+H(cid:98)
+u
+m
+m
+=
+be
+H(cid:98)
+r
+m ∗
+su
+/
+c
+h
+h
+β,
+th
+(cid:98)h
+a
+m
+t
++
+(cid:13) (cid:13)
+1
+2
+,m
+−k
+=
+hH
+(cid:98)h∗ m
+(cid:13) (cid:13) ∞
++1
+≤
+,m /
+1 2
+h
+,
+β
+a
+,
+n
+k
+d
+i
+e
+s
+i
+th
+th
+e
+e
+sm
+i-t
+a
+h
+lle
+c
+s
+a
+t
+n
+n
+o
+a
+n
+tu
+ic
+r
+a
+a
+l
+l w
+(cid:98)h∗
+ithmat
+o
+r
+u
+ic
+tp
+es
+ut
+V(cid:98)
+s m of
+a
+t
+n
+h
+d
+e
+H(cid:98)
+cl m
+∗
+as
+,
+s
+v
+i
+e
+c
+c
+a
+t
+l
+o
+A
+r
+r
+v
+(cid:98) n m o + ld 1 i
+,
+a
+a
+l
+n
+g
+d
+or
+p
+i
+o
+th
+s
+m
+itiv
+[
+e
+1]
+n
+.
+umber
+vectorofRm. m+1,m
+Thus,forevaluatingthelinearcombinationsofphi-functions
+timesvectors(1),weintroducethefollowingmainresult. 2. Numerical simulations
+Theorem1 LetAbeand×d matrixrepresentingtheJaco- Inthissection,weconsiderthecomputationofthelinear
+bianmatrix f x (x)ofthevectorfield f evaluatedatx∈Rd,a i combination(2)withJacobianmatrix f x andvectorfield f
+isd-dimensionalvectors,andh>0. Then, of the IVPs resulting from the spatial discretization of two
+knownpartialdifferentialequations. ThefollowingJacobian
+l matricesanddiscretizedequationsaretakenfrom[14].
+∑φ(A,h)a =Lφ (M,h)Mr, (5)
+i i 1
+i=1
+Example1 2N×2N Jacobianmatrix:
+wherethematricesL,Mandthevectorraredefinedasin(2).
+(cid:20) (cid:21) (cid:20) (cid:21)
+Moreover, diag(2u·v−4) diag(u·u) α K 0
+f (x)= + ,
+x diag(3−2u·v) −diag(u·u) (∆z)2 0 K
+(cid:13) (cid:13)
+(cid:13) l (cid:13)
+(cid:13)
+(cid:13)
+∑φ
+i
+(A,h)a
+i
+−LK(cid:98)
+m
+p,
+,
+q
+k
+(h,M,Mr;η,δ,β)(cid:13)
+(cid:13) with
+(cid:13)i=1 (cid:13)
+2
+ 
+≤c hmin{m+2,p+q+1}+c hβη+2δη, (6) −2 1
+0 1
+ 1 −2 1 
+whereK(cid:98) m p, , q k (h,M,Mr;η,δ,β)istheMatrix-free(m,p,q,k)- x= (cid:20) u v (cid:21) ∈R2N, K=    ... ... ...    ,
+K an r d yl c ov- a P r a e d p é o a si p ti p v r e ox c i o m n a st t a io n n ts o , f an φ d 1 ( M M r ,h = )M [ r a ⊺ defi 0 nedin ] ⊺ ( . 4),c 0   1 −2 1  
+1 1 1×l 1 −2
+N×N
+ProofTakingintoaccountthatLr=0,thefirststatement
+resultsfromthefactthateMtr andr+φ (M,t)Mr represent corresponding to the vector field f of the 2N-dimensional
+1
+discretizedBrusselatorequation:
+theuniquesolutionxofthelinearinitialvalueproblem:
+du α
+dx/dt=Mx, x(0)=r, for t≥0. i = 1+u2v −4u + (u −2u +u )
+dt i i i (∆z)2 i−1 i i+1
+SinceK(cid:98) m p, , q k (h,M,Mr;η,δ,β)approximatesφ 1 (M,h)Mr,the dv i = 3u −u2v + α (v −2v +v )
+inequality (6)straightforward arisesfrom the statement(5) dt i i i (∆z)2 i−1 i i+1
+andTheorem4.2in[11]fortheerrorofsuchapproximation.
+■ withα =1/50,u(0)=1+sin(2πz),v(0)=3,z =i/(N+
+i i i i
+Whenthematrix-freeKrylov-Padéapproximationin(6) 1), ∆z=1/(N+1), i=1,2,···,N, and N =800. In the
+isusedtocomputethelinearcombination(2)inanexponen- expressionfor f (x),diag(·)istheoperationofconstructing
+x
+tialintegrator,theaboveresultsisessentialtodeterminethe adiagonalmatrixfromavector,and
+convergencerateoftheresultingnumericalschemeasthestep
+⊺
+sizehgoestozero(see,e.g.,Theorems4.2and5.1in[11]for u·v=[u v ,···,u v ] .
+1 1 N N
+Naranjo-Noda,F.S.,&JiménezSobrino,J.C. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.13-19
+https://revistas.uh.cu/rcm/article/view/9070
+16 Matrix-freecomputationoflinearcombinationsofphi-functionstimesvectorsinexponentialintegrators
+Example2 TridiagonalN×N Jacobianmatrix: mversusthelog(rtol)correspondingtotheapproximations
+inthetoprowofthefigures.
+ 
+0 −x 2 Observethat,amajordifferenceamongthesematrix-free
+ x 1 0 −x 3  andthematrix-exactapproximationsisthethresholdforthe
+ 
+1  x 2 0 −x 4  errorsofthefirstonesasthetolerancedecreases. Asexpected,
+f x (x) = 2∆z  
+
+... ... ...  
+
+whenthetolerancertoldecreases,theKrylovdimensionmfor
+  thethreeapproximationsincreasesand,consequently,their
+ x N−2 0 −x N 
+errorsalsodecreases.However,forincreasingvaluesofm,the
+x 0
+N−1
+fixedvalueofthesecondrighthandtermin(6)dominatesthe
+νK
++ , decreasingvaluesoffirstterm,whichexplainsthethresholds
+(∆z)2
+fortheerrorsofthematrix-freeapproximationsJF1-Phiand
+JF2-Phi in Figures 1-2. Contrary, as predicted by (7), the
+correspondingtothevectorfield f oftheN-dimensionaldis-
+errorofthematrix-exactapproximationPhiinthesefigures
+cretizedBurgersequation
+alwaysdecreaseswhenmincreases.
+dx x2 −x2 ν Ingeneral,forthesametolerancertol,thematrix-freeap-
+dt i =− i+1 4∆z i−1 + (∆z)2 (x i−1 −2x i +x i+1 ), proximationsJF1-PhiandJF2-Phiworkwithlowervalueof
+m,whichexplainstheirhighererrors. Notealsothat,incorre-
+withK asinExample1,ν =0.0003,x(0)=sin2(3πz)(1− spondencewiththesecondtermofthebound(6),theaccuracy
+i i
+z)3/2, z =i/(N+1), ∆z=1/(N+1), i=1,2,···,N, and oftheapproximationwithsecondorderfinitedifferenceJF2-
+i i
+N=2000. Phiisslightlyhigherthanthatoftheapproximationwithfirst
+orderfinitedifferenceJF1-Phionlyforthegreatervaluesofh
+MatlabcodesJF1-PhiandJF2-Phiimplementthematrix- (topleftplotinthefigures). Finally,fromlefttoright,thetop
+FreeKylov-Padéapproximationof(6)withβ =0and,respec- plotsofFigures1-2showsanincreasingoftheaccuracyof
+tively,withthefinitedifferencesoffirstandsecondorder: thethreeapproximationsashdecreases,whichcorrespondsto
+errorestimates(6)and(7)fortheseapproximations.Naturally,
+f(x+δb)−f(x)
+g(x,b;δ) = ,and theaccuracyofthetwomatrix-freeapproximationsislower
+δ thanthatoftheapproximationevaluatingtheexactJacobian
+f(x+δb)−f(x−δb) matrix.
+g(x,b;δ) = ,
+2δ
+(cid:112) Conclusions
+(1+||x|| )ε
+2 mach
+insideofAlgorithm1,whereδ = assug-
+ε +||b|| Amatrix-freeKrylov-Padéapproximationwasintroduced
+mach 2
+gested in [8], being ε the spacing of the floating point for computing linear combinations of phi-functions times
+mach
+number1. MatlabcodePhiimplementstheKylov-Padéap- vectors in the case that evaluating and storing the involved
+proximationKp,q (h,M,Mr)of[9]forφ (M,h)Mr(thesame matrixisunfeasible. Thenumericalsimulationscorroborated
+m,k 1
+codeusedinsection3.1of[10]forcomputing(2)withevalu- themainimplicationsoftheerroranalysisforsuchmatrix-
+ationofthematrixA). freeapproximation,thatis,thresholdfortheerrorswhenthe
+Forthetwoexamples,thematrixandvectorsdefiningM Krylov-subspacedimensionincreases,lowererroroftheap-
+in (2) are set as A= f (x(0)), a =a = f(x(0)), a =2a proximation with second order finite difference, and lower
+x 1 2 3 1
+anda =6a inconcordancewiththenumberoftermsl of accuracythantheKrylov-Padéapproximationwithexactma-
+4 1
+thelinearcombination(2)usedineachexample. trix.
+Withtheaimofcomparison,the’exact’matrixehM in(2)
+foreachexampleandthematriceseτH inthecodesJF1-Phi, Conflict of interest
+PhiandJF2-PhiarecomputedwiththesameMatlabfunction
+Theauthorsdeclarethattheyhavenoknowncompeting
+expm. Inthethreecodes,thevalueoftheKrylovdimension
+financial interests or personal relationships that could have
+m is determined automatically depending on the specified
+appearedtoinfluencetheworkreportedinthispaper.
+relativertolandabsoluteatoltolerances,asindicatedin[10]
+and[9]forthesetwoapproximations. Euclideannormquan-
+tifiesthedifferencebetweenthe’exact’vectorLehMrandits Supplementary information
+approximations.
+TheMatlabcodeusedinthispapercouldbeconsultedin
+ToprowofFigures1-2presents,foreachexample,thelog-
+https://github.com/fsadannn/PhiXv.
+logplotsoftheerror(error)versusrelativetolerance(rtol)in
+thecomputationof(2)viatheapproximationsJF1-Phi,JF2-
+References
+PhiandPhiwithrelativeandabsolutetolerancesrtol=10−j
+andatol=0.1rtol,with j=1,2,···,6. Bottomrowofthese [1] Arnoldi, W.E.: The principle of minimized iterations
+figurespresentstheplotsoftheestimatedKrylovdimension in the solution of the matrix eigenvalue problem.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.13-19 Naranjo-Noda,F.S.,&JiménezSobrino,J.C.
+https://revistas.uh.cu/rcm/article/view/9070
+Matrix-freecomputationoflinearcombinationsofphi-functionstimesvectorsinexponentialintegrators 17
+Figure1. Top: Log-logplotsoferror(error)versusrelativetolerance(rtol)inthecomputationofφ 1 (f x ,h)a 1 +φ 2 (f x ,h)a 2 +
+φ (f ,h)a +φ (f ,h)a fortheequationofExample1viatheapproximationsJF1-Phi,JF2-PhiandPhiwithrtol=10−j and
+3 x 3 4 x 4
+j=1,2,···,6. Fromlefttoright,withh=0.01, 0.001, 0.0001. Bottom: plotsofKrylovdimensionmversuslog(rtol)
+correspondingtotheapproximationsinthetopofthefigure[Arriba: Gráficoslogarítmicosdelerror(error)versusla
+toleranciarelativa(rtol)enelcálculodeφ (f ,h)a +φ (f ,h)a +φ (f ,h)a +φ (f ,h)a paralaecuacióndelEjemplo1
+1 x 1 2 x 2 3 x 3 4 x 4
+mediantelasaproximacionesJF1-Phi,JF2-PhiyPhiconrtol=10−j y j=1,2,···,6. Deizquierdaaderecha,conh=0,01,
+0,001, 0,0001. Abajo: gráficosdeladimensióndeKrylovmversusellog(rtol)correspondientesalasaproximacionesdela
+partesuperiordelafigura].
+Quarterly of Applied Mathematics, 9:17–29, 1951. linearization method for solving ordinary dif-
+https://www.ams.org/journals/qam/ ferential equations. Applied Mathematics and
+1951-09-01/S0033-569X-1951-42792-9/ Computation, 185:197–212, 2007. https:
+S0033-569X-1951-42792-9.pdf. //www.sciencedirect.com/science/
+article/abs/pii/S0096300306008514.
+[2] Brown, P.N.: A local convergence theory for com-
+binedinexact-newton/finite-differenceprojectionmeth-
+ods. SIAM Journal on Numerical Analysis, 24:407– [5] Hochbruck, M. and A. Ostermann: Exponen-
+434, 1987. https://epubs.siam.org/doi/ tial multistep methods of Adams-type. BIT
+abs/10.1137/0724031. Numerical Mathematics, 51:889–908, 2011.
+https://link.springer.com/article/
+[3] Carbonell, F., J.C. Jimenez, and L. Pedroso: 10.1007/s10543-011-0332-6.
+Computing multiple integrals involving matrix
+exponentials. Journal of Computational and Ap-
+plied Mathematics, 213:300–305, 2008. https: [6] Jimenez, J.C., H. de la Cruz, and P. De Maio: Ef-
+//www.sciencedirect.com/science/ ficient computation of phi-functions in exponential
+article/pii/S0377042707000283. integrators. Journal of Computational and Ap-
+plied Mathematics, 374:112758, 2020. https:
+[4] Cruz, H. de la, R.J. Biscay, F. Carbonell, T. //www.sciencedirect.com/science/
+Ozaki, and J.C. Jimenez: A higher order local article/abs/pii/S0377042720300492.
+Naranjo-Noda,F.S.,&JiménezSobrino,J.C. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.13-19
+https://revistas.uh.cu/rcm/article/view/9070
+18 Matrix-freecomputationoflinearcombinationsofphi-functionstimesvectorsinexponentialintegrators
+Figure2. Top: Log-logplotsoferror(error)versusrelativetolerance(rtol)inthecomputationofφ 1 (f x ,h)a 1 +φ 2 (f x ,h)a 3 +
+φ (f ,h)a fortheequationofExample2viatheapproximationsJF1-Phi,JF2-PhiandPhiwithrtol=10−j and
+3 x 3
+j=1,2,···,6. Fromlefttoright,withh=0.01, 0.001, 0.0001. Bottom: plotsofKrylovdimensionmversuslog(rtol)
+correspondingtotheapproximationsinthetopofthefigure[Arriba: Gráficaslogarítmicasdelerror(error)versustolerancia
+relativa(rtol)enelcálculodeφ (f ,h)a +φ (f ,h)a +φ (f ,h)a paralaecuacióndelEjemplo2mediantelas
+1 x 1 2 x 3 3 x 3
+aproximacionesJF1-Phi,JF2-PhiyPhiconrtol=10−j y j=1,2,···,6. Deizquierdaaderecha,con
+h=0,01, 0,001, 0,0001. Abajo: gráficasdeladimensióndeKrylovmversusellog(rtol)correspondientesalas
+aproximacionesdelapartesuperiordelafigura].
+[7] Jimenez,J.C.,L.Pedroso,F.Carbonell,andV.Hernadez: [10] Naranjo-Noda, F.S. and J.C. Jimenez: Computing
+Locallinearizationmethodfornumericalintegrationof high dimensional multiple integrals involving matrix
+delaydifferentialequations. SIAMJournalofNumeri- exponentials. Journal of Computational and Ap-
+calAnalysis,44:2584–2609,2006. https://epubs. plied Mathematics, 421:114844, 2023. https:
+siam.org/doi/abs/10.1137/040607356. //www.sciencedirect.com/science/
+article/abs/pii/S0377042722004423.
+[8] Knoll, D.A. and Keyes D.E.: Jacobian-free
+[11] Naranjo-Noda, F.S. and J.C. Jimenez: Jacobian-free
+Newton-Krylov methods: a survey of ap-
+high order local linearization methods for large
+proaches and applications. Journal of Compu-
+systems of initial value problems. Applied Numer-
+tational Physics, 193:357–397, 2004. https:
+ical Mathematics, 187:158–175, 2023. https:
+//www.sciencedirect.com/science/
+//www.sciencedirect.com/science/
+article/abs/pii/S0021999103004340.
+article/abs/pii/S0168927423000405.
+[9] Naranjo-Noda,F.S.andJ.C.Jimenez:Locallylinearized [12] Niesen,J.andWrightWM.Algorithm919:Algorithm
+runge-kutta method of dormand and prince for large 919: A Krylov subspace algorithm for evaluating the
+systems of initial value problems. Journal of Com- ϕ-functionsappearinginexponentialintegrators. ACM
+putational Physics, 426:109946, 2021. https: TransactionsonMathematicalSoftware(TOMS),38:1–
+//www.sciencedirect.com/science/ 9, 2012. https://dl.acm.org/doi/abs/10.
+article/abs/pii/S0021999120307208. 1145/2168773.2168781.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.13-19 Naranjo-Noda,F.S.,&JiménezSobrino,J.C.
+https://revistas.uh.cu/rcm/article/view/9070
+Matrix-freecomputationoflinearcombinationsofphi-functionstimesvectorsinexponentialintegrators 19
+[13] Sidje, R.B.: Expokit: A software package for
+computing matrix exponentials. ACM Transac-
+tions on Mathematical Software (TOMS), 24:130–
+156,1998. https://dl.acm.org/doi/abs/10.
+1145/285861.285868.
+[14] Tokman, M.: Efficient integration of large stiff
+systems of ODEs with exponential propagation
+iterative (EPI) methods. Journal of Computa-
+tional Physics, 213(2):748–776, 2006. https:
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+//www.sciencedirect.com/science/
+SinDerivadas 4.0 Internacional”.
+article/abs/pii/S0021999105004158.
+Naranjo-Noda,F.S.,&JiménezSobrino,J.C. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.13-19
+https://revistas.uh.cu/rcm/article/view/9070
+1

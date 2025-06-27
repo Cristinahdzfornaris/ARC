@@ -1,0 +1,262 @@
+CienciasMatemáticas,Vol.32,No.2,Pag.125-129, 2018
+Recibido02-2018
+Tabla de Evaluacio´n de Stress para Escalamiento
+Multidimensional
+Stress Evaluation Table for Metric Multidimensional
+Scaling
+Lic. Javier Alejandro Quintero Roba 1, Lic. Mar´ıa Esther Reyes Calzado 2*, Dra. Elina Miret
+Barroso 3, Alejandro Javier Quintero Roba 4
+Resumen ElEscalamientoMultidimensionalesunate´cnicadeexploracio´nmultivariadaquepermite,mediante
+laminimizacio´ndeunafuncio´ndepe´rdidaSTRESS,lareduccio´ndeladimensio´ndelosdatosparalabu´squeda
+depatronesenlaestructuradelosmismos.Paramedirlabondaddeajustedelarepresentacio´napartirdesu
+valordeSTRESSsehanplanteadonumerososcriteriosemp´ıricos,teniendoencuentaque,cuandoseestudia
+unnu´merograndedeobjetos,losvaloresdeSTRESStiendenacrecerjuntoaladimensio´ndelproblema.En
+estainvestigacio´nsepresentaunatablaprobabil´ısticadeevaluacio´ndeSTRESSconlaintencio´ndecontar
+enlapra´cticadecotassuperioresparadichamagnitud.Estatablaseobtuvoapartirgeneracio´naleatoriade
+matricesdedisimilitudysuprocesamientoporvariosme´todosdeEscalamientoMultidimensional.
+Abstract MultidimensionalScalingisamultivariateexplorationtechniquethatallowstoreducedimensionon
+databyminimizingalossfunctioncalledSTRESSsothatwecanfindpatternsonthedatastructure. Tomeasure
+thegoodnessoftheadjustedrepresentationfromitsSTRESSvalueithasbeenstudiedanumberofempirical
+criteria,knowingthatSTRESStendstoincreasealongwiththedimensionoftheproblemwhenthenumberof
+objectsislarge. ThisinvestigationpresentsaprobabilistictableforSTRESSevaluation,obtainedfromstudyof
+randomdissimilaritymatrices,intendedtofindheightsforthatmagnitude.
+PalabrasClave
+EscalamientoMultidimensional—STRESS—TabladeEvaluacio´ndeStress
+1DepartamentodeMatema´tica,FacultaddeMatema´ticayComputacio´n,UniversidaddelaHabana,Cuba,jjquinte5693@gmail.com
+3DepartamentodeMatema´tica,FacultaddeMatema´ticayComputacio´n,UniversidaddelaHabana,Cuba,m.reyes@matcom.uh.cu
+2DepartamentodeMatema´tica,FacultaddeMatema´ticayComputacio´n,UniversidaddelaHabana,Cuba,elina@matcom.uh.cu
+4EstudiantedeLicenciaturaenMatema´tica,FacultaddeMatema´ticayComputacio´n,UniversidaddelaHabana,Cuba
+*AutorparaCorrespondencia
+Introduccio´n tiendenacrecerjuntoaladimensio´ndelproblema.
+Enestainvestigacio´nsepresentantablasprobabil´ısticas
+ElEscalamientoMultidimensional(MultidimensionalSca-
+de evaluacio´n de STRESS con la intencio´n de contar en la
+ling,MDSporsussiglaseningle´s)esunate´cnicaexploratoria
+pra´cticadecotassuperioresparadichamagnitud.Estatabla
+paraelana´lisisdesimilitudesydisimilitudesentreobjetos;
+seobtuvoapartirgeneracio´naleatoriadematricesdedisimili-
+en general, medidas de relacio´n entre varios individuos de
+tudysuprocesamientomedianteme´todosdeEscalamiento
+estudio.Late´cnicaintentamodelarlosdatoscomodistancias
+Me´tricoyNoMe´trico.
+entrepuntosenunespaciogeome´trico,usualmentequesea
+reconocibledemaneravisual.
+1. Perspectiva de Escalamiento
+PararealizarMDSesnecesariounalgoritmocomputacio-
+Multidimensional
+nalqueapartirdelosdatosinicialesseacapazdeencontrar
+unarepresentacio´nfielalarealidad.Paramedirlabondadde EnelMDSserepresentanmedidasdesimilitudodisimili-
+ajustedeunasolucio´nseutilizalafuncio´nSTRESSoalguna tudentreparesdeobjetos(individuos),comodistanciasentre
+desusvariantes. espaciosdebajadimensio´n,usualmente2o´ 3.Larepresen-
+En la evaluacio´n de la calidad de la representacio´n del tacio´ngra´ficaqueproveeelEscalamientoMultidimensional
+MDSapartirdesuvalordeSTRESSsehanplanteadonume- permite literalmente explorar su estructura visualmente, lo
+rososcriteriosemp´ıricosteniendoencuentaque,cuandose querevelaregularidadesquepermanecenocultascuandose
+estudiaunnu´merograndedeobjetos,losvaloresdeSTRESS estudianlosnu´merosindistintamente.[9]
+126 TabladeEvaluacio´ndeStressparaEscalamientoMultidimensional
+En dependencia de la transformacio´n utilizada para el explicacionesenlaliteraturanosondeltodoclarasyresultan
+escalamientodelasproximidadesiniciales,losmodelosde insuficientes.[11]
+MDSseclasificanenMe´tricoyNoMe´trico.Elmodeloma´s
+utilizadoenlaliteraturaeselnome´tricouordinalquesebasa 1.1 STRESSycalidaddelarepresentacio´n
+enlapremisadequelasdisparidadesesta´nenescalaordinal, Paramedirlabondaddeajustedeunasolucio´nseutiliza
+lafuncio´nSTRESSoalgunadesusvariantes.SeaX una
+lo que significa que para la construccio´n de las distancias (n×p)
+configuracio´n en Rp, la expresio´n de X como solucio´n del
+finales solo importa el orden inicial de las proximidades y
+MDSen pdimensionessehallageneralmenteminimizando
+nosetieneencuentasuvalor.Elmodelonome´tricoposee
+lafuncio´ndepe´rdidaStress−1o´ deKruskal,dadapor:
+varias ventajas respecto al me´trico, ya que los valores de
+(cid:118)
+bondaddeajustesonmejoresquesucontraparte,tambie´nel (cid:117) (cid:117)∑(d
+ij
+−δ(cid:98)ij )2
+procesodeoptimizacio´nesma´sflexible,loquepermitemover (cid:117)
+conmayorlibertadlasdisparidades.Lasdesventajasdeeste
+Stress−1=(cid:117)
+(cid:117) (cid:116)
+i<j
+∑d2
+ij
+modelo radican en la aparicio´n de soluciones degeneradas i<j
+yquenosetieneencuentacomoinformacio´nrelevantelas
+dondelosd sonlasnuevasdistanciaseucl´ıdeas,obtenidas
+nocionesdecercan´ıaolejan´ıa.[5][6] ij
+delasnuevascoordenadasparalospuntosdeΩ.[8][6]
+SetrabajaconMDSMe´tricocuandolafuncio´ndedispa-
+Estafuncio´ntomavaloresenelintervalo[0,1]yexpresasi
+ridades es continua, parame´trica y mono´tona. En este caso
+larepresentacio´nobtenidareflejacorrectamentelasrelaciones
+sedeseaconservar,adema´sdelosrangosordinalesentrelas
+dedistanciasoriginales.Otrasvariantesdelafuncio´ndeStress
+proximidades,lanocio´ndemagnitudentreellas.Estosmo-
+son:elStress-normadoyelS-Stress.[3][4]
+delosposeenlaventajadequeapartirdelascaracter´ısticas
+Para evaluar la calidad de la representacio´n del MDS a
+de la funcio´n de disparidad es posible buscar propiedades
+partirdelSTRESSexistenvariasopiniones.Estainvestiga-
+matema´ticasdeseablesparalosalgoritmos.Adema´s,elmo-
+cio´n sigue dos l´ıneas de esta teor´ıa: los criterios emp´ıricos
+delome´tricoevitaladegeneracio´nalimponerunaestructura
+deKruskalde1964,yeldebondaddeajustebajoseleccio´n
+menosflexiblequeelmodeloordinal.Sudesventajaradica
+aleatorizadaplanteadoporBorg,Groenen,&Mairen2013.
+enlabondaddeajuste,pueslalibertaddemovimientodelas
+[10][4]
+disparidadesescontroladaporunafuncio´ncontinuaypara
+Elcriterioemp´ıricodeKruskalsebasaenlaexperiencia
+lograr una buena representacio´n se requiere datos bastante
+delinvestigador,yestablecelassiguientesclasificacionespara
+precisos.Porloanterior,losvaloresdeSTRESSenelcaso
+unarepresentacio´ndepuntos:
+delmodelome´tricosera´ngeneralmentemayores,auncuando
+lasrepresentacionesseanaproximadamenteequivalentes.[3] Stress Ajuste
+[4] 0.20 Pobre
+Apartirdelplanteamientomatema´ticodelproblemadel 0.10 Justo
+MDS,losalgoritmospuedendividirseendosramas:te´cnicas 0.05 Bueno
+algebraicasyalgoritmositerativos.Dentrodelasprimerasse 0.025 Excelente
+encuentraelEscalamientoCla´sico,cuyafuncio´ndeajustees 0 “Perfecto”
+elSTRAINysuoptimizacio´nsebasaenlateor´ıadelades-
+Borg,Groenen,&Mairindicanqueunasolucio´ndeMDS
+composicio´nespectral.[8][5]Dentrodelositerativosesta´n,
+perfectaesaquellaquetieneSTRESS=0,puesenestecaso
+porejemplo:loscuasi-Newton,ma´ximodescenso,ALSCAL,
+las distancias de la configuracio´n representan los datos de
+SMACOF,entreotros;as´ıtambie´ncomome´todosheur´ısticos
+manera precisa (en el sentido deseado). Esto conlleva a la
+aproximados.
+preguntadecua´ndounvalordeSTRESSessuficientemente
+Losalgoritmositerativossonunpocoma´sflexiblesque bueno.
+elMDSCla´sico,puespermitenelre-escalamientoo´ptimode Primeramentehadeanalizarsequeelalgoritmoutilizado
+losdatos.Usualmenteestosalgoritmospartendeunaconfigu- debesercapazdereconocerpatronesocultosenlosdatos,i.e.
+racio´ninicial,muevenlospuntosparareducirelSTRESS,y captarlatopolog´ıadeestos,reconocerquelosdatosposeen
+posteriormentereescalanlasdisimilitudesinicialesdeforma cierta estructura, y que no son solo un conjunto de datos
+o´ptimaparagenerarnuevasdisparidades,dentrodelosl´ımites aleatorios. Segu´n los autores, la evaluacio´n de un valor de
+delosdatos.Esteprocesodemodificarlaconfiguracio´ndel STRESSespec´ıficoesunacuestio´ncompleja,queinvolucra
+MDS (manteniendo fijas las disparidades), y re-escalar las ungrannu´merodepara´metrosyconsideraciones.
+disparidades(manteniendofijaslasdistancias),serepitehasta Engeneral,unvalordeSTRESSessuficientementebueno
+lograrconvergencia.[3][4] si es menor que el valor esperado de STRESS a partir de
+Sinembargo,noentodosloscasoslosresultadoshansido aleatorizacio´n de las matrices de disimilitud. Si esto no se
+deltodosatisfactoriosespecialmentecuandoladimensio´n1 cumple,esimposibleinterpretarsignificativamenteenningu´n
+(i.ecantidaddeindividuos)esalta.Adema´s,laimplementa- sentidolasdistanciasqueseobtienenmedianteelalgoritmo,
+cio´ndeunaherramientaapartirdelmaterialdisponibleresulta ya que estas noesta´n realmente relacionadascon los datos.
+unatareaqueenocasionessehaceimposibledebidoaquelas [12]
+TabladeEvaluacio´ndeStressparaEscalamientoMultidimensional 127
+En[12]seestablecenl´ımitesdealeatorizacio´ndelSTRESS, delaliteraturayreales,seobtuvieronlosmejoresresultados
+oseaell´ımitequeindicaqueunvalorpordebajodee´ltiene paralosme´todosantesmencionados.[11][10]
+probabilidad1%deserobtenidoapartirdeconfiguraciones
+aleatorias,oseaelpercentildeladistribucio´nemp´ıricabajo 2.1 Evolucio´nDiferencialenMDSNoMe´trico
+simulaciones. Losalgoritmosevolutivossonme´todosdebu´squedadiri-
+Otras medidas, como el STRESS por punto, y los dia- gidabasadaenprobabilidad.Estosalgoritmosestablecenuna
+gramas de Shepard se reportan que pueden ser u´tiles. No analog´ıaentreelconjuntodesolucionesdeunproblemayel
+obstante,enlapra´ctica,losvaloresdeSTRESSobtenidoscon conjuntodeindividuosdeunapoblacio´nnatural,codificando
+datosrealessonmenoresquelosqueprovienendeseleccio´n lainformacio´ndecadasolucio´nenunstringamododecro-
+aleatoria,estosedebealaestructurapropiadedichosdatos. mosoma.Atalefectoseintroduceunafuncio´ndeevaluacio´n
+deloscromosomas,quellamaremoscalidad(“fitness”)yque
+2. Evaluacio´n del STRESS para matrices esta´ basadaenlafuncio´nobjetivodelproblema.Igualmen-
+te se introduce un mecanismo de seleccio´n de manera que
+aleatorias
+loscromosomasconmejorevaluacio´nseanescogidospara
+Laevaluacio´ndelSTRESSescostosacuandoelnu´mero “reproducirse”ma´samenudoquelosquelatienenpeor.[13]
+deindividuoseselevado,perocuandoladimensio´ncrecees La Evolucio´n Diferencial se caracteriza por el uso de
+importanteobtenerindicadoresdelacalidaddelarepresenta- vectoresdeprueba,loscualescompitenconlosindividuosde
+cio´n. lapoblacio´nactualafindesobrevivir.Elalgoritmoasumeque
+Teniendoencuentaque,unamatrizdedisimilitudesque lasvariablesdelproblemaaoptimizaresta´ncodificadascomo
+representa datos reales contiene una estructura subyacente unvectordenu´merosrealesyqueeldominiodelasvariables
+al escalamiento, pero una matriz de disimilitudes generada delproblemaesta´ restringidoporciertascotasdefinidaspara
+aleatoriamentecarecedeestructurapredefinida,esacertado cadavariable.Dadoqueseoperaconunapoblacio´nencada
+pensarquelosvaloresdeSTRESSqueseobtienendeescalar iteracio´n,seesperaqueelme´todoconverjademodoqueal
+matricesaleatoriassonmayoresqueaquellosqueseobtienen finaldelprocesolapoblacio´nseamuysimilar,yenelinfinito
+dematricesreales.Porlocual,losvaloresdeajusteobteni- sereduzcaaunsoloindividuo.[7]
+dosdelescalamientodematricesaleatoriasproveenunacota
+superiorenlapra´cticaparalafuncio´ndeSTRESS. 2.2 CMA-ESenMDSMe´trico
+En1969,Klahrmuestraquepara8objetoslosvaloresde Laestrategiaevolutivadeadaptacio´ndelamatrizdecova-
+STRESSobtenidosdelescalamientodematricesaleatorias rianzasoCovarianceMatrixAdaptationEvolutionEstrategy
+eransuperioresalosdematricesconestructurareal.Posterior- (CMA-ES,porsussiglaseningle´s)esunodelosalgoritmos
+mente,en1973,SpenceandOgilviereportanexperimentacio´n de optimizacio´n continua ma´s exitoso de los u´ltimos an˜os.
+conmatricesaleatoriasde12-48objetosyde1-5dimensiones. Estealgoritmocontrolamediantelaadaptacio´ndelamatriz
+En1978,Levineproduceunatablaquereflejalaprobabi- decovarianzaslospasosindividualesencadadireccio´nylas
+lidaddeencontrarunvalorespec´ıficodeSTRESSparauna relacionesentrelascoordenadas.[2]
+configuracio´ndada.EstatablamuestravaloresdeSTRESSde Medianteunadistribucio´nnormalsegeneranlasmutacio-
+1–5dimensionespara6,8,10,12,16,20y24objetos.Esta nes,creandolanuevapoblacio´n.CMA-ESadaptalamatriz
+ideafueretomadaporSturrock&Rocha,en2000,quienes decovarianzasdeladistribucio´nnormalmultivariantedemu-
+ofrecenunatabladevaloresaleatoriosdeSTRESSpara5-100 taciones, captando las relaciones de dependencia entre las
+objetosescaladosporme´todosnome´tricos.[12] variables,yaquelamatrizdecovarianzasdefineladependen-
+Borg&Groenenplanteanlanecesidaddeobtenerelvalor ciaporparesentrelasvariablesdeladistribucio´n.
+esperadobajoseleccio´naleatoriadelafuncio´ndeSTRESS CMA-ESesta´ especialmenteorientadaparaelescenario
+comoposiblecotasuperior.Sinembargo,nosecuentaenla provistodeproblemas“black-box”ypuedesobrellevarproble-
+literaturaconcifrasdeestetipoparaelmodelome´trico.[4] masdealtadimensionalidaddeformara´pida.Esta´ disen˜ada
+Elobjetivodeestainvestigacio´neselaborarunatablaque paratomarventajadeespaciosescarpados,problemasnose-
+recopilelospercentilesdenivel1deunamuestradevalores parables, no linealidad, no suavidad y multimodalidad del
+deSTRESSobtenidosapartirdelescalamientodematricesde STRESS.ElSTRESSesconsideradounafuncio´nde“black-
+disimilitudgeneradasaleatoriamenteparacontarenlapra´ctica box”,puessudominionoseconoceexpl´ıcitamente,peroel
+concotassuperioresdebondaddeajuste. valordecadarepresentacio´npuedecalcularse,siendoestala
+Paraellosegeneraronmatricesdedisimilitudde5-25ob- u´nicainformacio´ndisponible.[1]
+jetosapartirdeunadistribucio´nuniforme[0,1](800matrices
+encadacaso)quefueronescaladasmedianteMDSNome´tri-
+3. Resultados
+coconEvolucio´nDiferencialyMDSMe´tricoconCMA-ES
+absoluto. Segeneraron20000matricesdedisimilitudaleatoriamen-
+Laseleccio´ndeestosalgoritmossebasaentrabajospre- te(distribuidascomosedescribeanteriormente),yseprocesa-
+vios de los autores donde, al aplicar Escalamiento Multidi- ronporMDSMe´tricoconCMA-ESAbsoluto(disimilitudes
+mensionalempleandodiferentesMetaheur´ısticasaejemplos noescaladas)yMDSNoMe´tricoconEvolucio´nDiferencial.
+128 TabladeEvaluacio´ndeStressparaEscalamientoMultidimensional
+Elprocesamientodelasmuestraspermitio´ laelaboracio´n
+detablasparacadaalgoritmo[Figuras1y3]querepresentan
+losvaloresM´ınimosyMa´ximos,Mediasypercentilesdenivel
+1paracadacantidaddeobjetosestudiada(5-25).
+Figura3.TablaStress.MDSconEvolucio´nDiferencial
+Conclusiones
+Segeneraron20000matricesdedisimilitudaleatoriamen-
+Figura1.TablaStress.MDSconCMAES te,yseprocesaronporMDSNoMe´tricoconEvolucio´nDi-
+ferencialyMDSMe´tricoconCMA-ESabsoluto.Elprocesa-
+mientodelasmuestraspermitio´ laelaboracio´ndeunatabla
+que representa los percentiles de nivel 1. La tabla elabora-
+daofrececotassuperioresdecalidadparalaevaluacio´ndel
+STRESSenestosme´todos.Lascifrasobtenidassirvencomo
+herramientaalinvestigadorparajuzgarapartirdelvalorde
+STRESSdesurepresentacio´nsielme´todoempleadoreconoce
+laestructuraoriginaldelosdatos.Setrabajaenelincremen-
+to del nu´mero de objetos y la validacio´n de los resultados
+mediantesucomparacio´nconejemplosreales.
+Referencias
+[1] A Auger and N. Hansen. Tutorial cma-es: evolution
+strategiesandcovariancematrixadaptation. InGECCO
+(Companion).,2012.
+[2] A.Bolufe´Ro¨hler.Bu´squedadepoblacio´nm´ınima–unal-
+Figura2.CurvadecrecimientoCMAES
+goritmodeoptimizacio´nescalableparaproblemasmulti-
+modales. TesisdeDoctorado.,2015.
+El percentil de nivel 1 aporta una cota superior de los
+valoresesperadosdeSTRESSparaunnu´meroespec´ıficode [3] IngwerBorgandPatrickJ.F.Groenen. ModernMultidi-
+objetoscuandosetrabajecondatosreales. mensionalScaling.TheoryandApplications. Springer.,
+Como era esperado, los valores de STRESS crecen al 2005.
+crecerelnu´merodeobjetos.EnlasFiguras2y4puedeapre-
+[4] Ingwer Borg, Patrick J. F. Groenen, and Patrick Mair.
+ciarseelcomportamientodelosvaloresdeSTRESSalcrecer
+Appliedmultidimensionalscaling. Springer.,2013.
+ladimensio´n.
+Losresultadosobtenidosparalosdosme´todosempleados [5] TrevorF.CoxandMichaelA.A.Cox.Multidimensional
+coincidenconlosreportadosporSturrock&Rocha(2000). Scaling. Chapman&Hall.,1994.
+TabladeEvaluacio´ndeStressparaEscalamientoMultidimensional 129
+Figura4.CurvadecrecimientoEvolucio´nDiferencial
+[6] CarlesM.Cuadras. NuevosMe´todosdeAna´lisisMulti-
+variante. CMCEditions.,2008.
+[7] StefanEtschbergerandAndreasHilbert. Multidimensio-
+nalscalingandgeneticalgorithms:Asolutionapproach
+toavoidlocalminima. Arbeitspapierezurmathematis-
+chenWirtschaftsforschung.,No.181,2003.
+[8] K.V.Mardia,J.T.Kent,andJ.M.Bibby. Multivariate
+Analysis.,volumeTenthprinting.1995. AcademicPress
+Inc.,1979.
+[9] Elina Miret. Un enfoque unificado para te´cnicas de
+representacio´neuclidiana. TesisdeDoctorado.,2005.
+[10] JavierA.Quintero. Algoritmodeescalamientomultidi-
+mensionalme´tricoconelempleodelaestrategiaevolu-
+tivadeadaptacio´ndelamatrizdecovarianzas. Tesisde
+Licenciatura.,2016.
+[11] Mar´ıa E. Reyes. Escalamiento multidimensional em-
+pleandometaheur´ısticas. TesisdeLicenciatura.,2015.
+[12] KennethSturrockandJorgeRocha. Amultidimensional
+scalingstressevaluationtable. FieldMethods,2000.
+[13] El-GhazaliTalbi. MetaheuristicsFromDesigntoImple-
+mentation. JohnWiley&Sons.,2009.

@@ -1,0 +1,483 @@
+CienciasMatemáticas,Vol.31,No.2,Pag.133-141, 2017
+Recibido09-2016
+Evaluacio´n del algoritmo de clasificacio´n basado en
+reglas JRip para datos standard y desbalanceados
+Evaluation of the classification algorithm based on
+rules JRip for standard and unbalanced data
+Laidy De Armas Jacomino1*, Danilo Valdes Ramirez 2
+Resumen Laste´cnicasdeminer´ıadedatosseusanenelaprendizajeautomatizadodema´quinasdesdehace
+variosan˜osparainferirconocimientosapartirdelasinformacionesalmacenadasenempresaseinstituciones.
+Algunas de estas te´cnicas ma´s usadas son la clasificacio´n, regresio´n, agrupamiento, etc. La clasificacio´n
+supervisadatieneelobjetivodeasignarobjetosaclasespredefinidasapartirdeungrupodeobjetospreviamente
+almacenados que ya esta´n clasificados. Existen para tareas de clasificacio´n diversos algoritmos, estos se
+agrupanusualmenteenfamiliasatendiendoalaformaderepresentarelconocimientoqueextraendelosdatos.
+Lasreglasdedecisio´nsonunaformaderepresentacio´ndelconocimientomuyusadacuandosequierequelos
+usuariosentiendanlosresultadosobtenidos.Elpresenteestudiotienecomoobjetivoevaluarelcomportamiento
+delalgoritmodeclasificacio´nbasadoenreglasJRipparaproblemasdeclasificacio´nstandardydesbalanceados.
+Este algoritmo es comparado adema´s con otros tres de su familia Ridor, DecisionTable y OneR. Para la
+evaluacio´nexperimentalseusalavalidacio´ncruzadayparaanalizarlosresultadosobtenidosdelamismael
+testdeFriedmanyeltestpost-hocFinner.Sepresentanydiscutenlosresultadosobtenidosdelasevaluaciones
+paralosdiferentestiposdeproblemasdeclasificacio´ndeminer´ıadedatos.
+Abstract Dataminingtechniqueshavebeenusedinautomatedmachinelearningforseveralyearstoinfer
+knowledgefrominformationstoredincompaniesandinstitutions. Someofthesetechniquesmoreusedarethe
+classification, regression, clustering, etc. The supervised classification aims to assign objects to predefined
+classesfromagroupofpreviouslystoredobjectsthatarealreadyclassified. Thereareseveralalgorithmsfor
+classificationtasks,theseareusuallygroupedinfamiliesaccordingtothewaytheyrepresenttheknowledge
+they extract from the data. Decision rules are a widely used form of knowledge representation when users
+are expected to understand the results obtained. The present study aims to evaluate the behavior of the
+classificationalgorithmbasedonrulesJRipforstandardandunbalancedclassificationproblems. Thisalgorithm
+isalsocomparedtothreeotheralgorithmsbasedonrulesRidor,DecisionTableandOneR.Fortheexperimental
+evaluation,cross-validationisusedandtoanalyzetheresultsobtainedfromthesametheFriedmantestandthe
+post-hocFinnertest. Wepresentanddiscusstheresultsobtainedfromtheevaluationsforthedifferenttypesof
+dataminingclassificationproblems.
+PalabrasClave
+Clasificacio´n—datosdesbalaceados—datosconruido—JRip—reglas—valoresperdidos
+1,2FacultaddeCienciasInforma´ticas,UniversidaddeCiegodeA´vilaMa´ximoGo´mezBa´ez,CiegodeA´vila,Cuba.laidy@unica.cu
+*AutorparaCorrespondencia
+Introduccio´n LasreglasutilizanunformatoSi-Entonces(delingle´sIf-Then)
+pararepresentarelconocimiento,laparteIfdeunareglaes
+Laminer´ıadedatossehaconvertidohoyend´ıaenuna
+unacondicio´n(tambie´nllamadapremisaoantecedente),yla
+herramientapoderosaparaanalizarlainformacio´nquetienen
+parteThendelaregla(tambie´nllamadaaccio´n,conclusio´n
+lasempresasparalatomadedecisiones.Elaprendizajeauto-
+oconsecuente)permiteinferirunconjuntodehechosnuevos
+matizado(delingle´sMachineLearning)utilizalaste´cnicas
+siseverificanlascondicionesestablecidasenlaparteIf[1].
+deminer´ıadedatosparaconvertirestasinformacionesenco-
+Igualmenteapartirdeunconjuntodeejemplos(apartirde
+nocimientosqueaportanvaloragregado.Pararepresentarlos
+ahoradatasets)diversosalgoritmosdeminer´ıadedatosex-
+conocimientosdescubiertosporlosme´todosdeaprendizaje
+traenconocimientoenformadereglas,dondelosantecedentes
+automatizadoseusandiversasformasoestiloscomotablas,
+sonejemplos(delingle´sinstances)ylosconsecuentespueden
+a´rboldedecisio´n,reglas,etc[14].
+134 Evaluacio´ndelalgoritmodeclasificacio´nbasadoenreglasJRipparadatosstandardydesbalanceados
+serclasesoconjuntosdeclases.Una´rboldedecisio´nsepuede obtenerreglasquepermitanclasificarnuevosejemplos.De
+expresarcomounconjuntodereglas.Paraobtenerreglasa formagenerallossistemasdeinduccio´ndereglasevalu´anlos
+partirdeuna´rbolcadahojaseconvierteenunaconclusio´n atributosdelconjuntodeentrenamientoydecidencua´lesusar
+yelantecedentedelareglaincluyeunacondicio´nparacada paradiscriminarentrelasdiferentesclases.
+nodoenelcaminodesdelara´ızhastalahoja. JRip es la implementacio´n del me´todo RIPPER (Repeated
+Losalgoritmosdeclasificacio´nbasadosenreglasyena´rboles IncrementalPruningtoProduceErrorReduction)enlaherra-
+dedecisio´nseconsiderante´cnicasdecajablancapuesson mientademiner´ıadedatosWeka.Elme´todooriginalRIPPER
+altamenteinterpretablesyporellosonmuyutilizadosenla fuepropuestoporWillliamW.Cohenen1995[2].Esteme´to-
+tomadedecisiones.Algunasdelasaplicacionesdondesehan doconsisteenunapodaincrementalrepetidaparaproducir
+empleadosonlaprediccio´ndelfracasoescolar[9],diagno´stico unareduccio´ndelerror,unaversio´noptimizadadelme´todo
+de huecos de tensio´n [12], prono´stico de supervivencia de IREP(IncrementalReducedErrorPruning).Deformageneral
+infartocerebralaterotrombo´tico[10],etc. consiste en hacer una lista ordenada de reglas conjuntivas
+Elpresenteestudiotienecomoobjetivoevaluarelcomporta- yevaluarlasenordenparaencontrarlaprimerareglaquese
+mientodelalgoritmodeclasificacio´nbasadoenreglasJRip cumplesobreelejemploaclasificar.Unavezencontradadicha
+para problemas de clasificacio´n esta´ndar y desbalanceados. reglasehaencontradolareglama´seficienteparaeseejemplo
+JRipescomparadoadema´sconotrostresdesufamiliaRidor, yesasignadoconunaetiquetadevalordesalida.RIPPERes
+DecisionTableyOneR. unme´tododirecto,queextraereglasdirectamentedesdelos
+Existen varios trabajos similares al que se propone donde datos.Esteme´todoesta´ compuestoportresprocedimientos:
+seevalu´aelrendimientodediversosclasificadoresbasados RIPPER,BUILDRULESETyOPTIMIZERUKESET.
+enreglas.En[4]secomparan179clasificadoresdediversas JRipcuentacondosetapas:unaetapadeconstruccio´ndelas
+familiassobre121datasetsdelrepositorioUniversityofCali- reglas y otra de optimizacio´n. La etapa de construccio´n de
+forniaIrvineMachineLearningRepository(UCIMLR)1.De lasreglasasuvezcuentaconunafasedecrecimientoyotra
+losclasificadorescomparadosen[4]12sonbasadosenreglas, enquelasreglassonpodadas.Estenuevome´todosoluciona
+entreestosseencuentranlosevaluadosenestetrabajo. algunosproblemasdelRIPPERoriginalsobrelalongituddel
+En[11]secomparanlosclasificadoresbasadosenreglasJRip, RuleSetoconjuntodereglasylaprecisio´n.Acontinuacio´nse
+RIDOR(RippleDownRulelearner)yDecisionTableconel muestranlospasosdelaimplementacio´ndelalgoritmoJRip
+datasetsIrisdelrepositorioUCIMLR,usandodiversasme´tri- enWeka:
+casfundamentalmentecalidaddelaclasificacio´nytiempode
+InicializarRS={},yparacadaclasedesdelamenosprevale-
+ejecucio´n.ElclasificadorRIDORdiomejoresresultadoscon
+cientehastalama´sfrecuentehacer:
+estedatasetenparticular.
+Porotroladoen[13]secomparaelcomportamientodelos
+1. Etapadeconstruccio´n:Repetirlosincisosa)yb)has-
+algoritmosJ48,REPTree,PART,JRipyRidorente´rminos
+taquelalongituddedescripcio´n(DL)delconjuntode
+de complejidad de la estructura del a´rbol y precisio´n de la
+reglasydelosejemplossea64bitsma´sgrandequela
+clasificacio´n usando 7 datasets esta´ndar del UCIMLR. De
+DLma´spequen˜aconocida,oquenoexistanejemplos
+estosalgoritmosJ48yREPTreegeneranlasalidaenforma
+positivos.
+dea´rbolmientrasquePART,RidoryJRipgeneranreglas.De
+losalgortimosbasadosenreglas,Ridorsecomporto´ mejor a) Fasedecrecimiento:Desarrollarunareglaan˜adien-
+quePARTyJRipdebidoalaltoporcientodeprecisio´ndela
+dogolosamenteantecedentesocondicionesala
+clasificacio´nen5delos7datasets.
+reglahastaqueseaperfecta,porejemplo100%
+Elpresentetrabajoseestructuraentressecciones.Enlasec- precisa.Elprocedimientopruebacadavalorposi-
+cio´n 1 Algoritmos basados en reglas se describe el funcio- bleparacadaatributoyseleccionalacondiciones
+namiento del algoritmo JRip y se explica brevemente los conlamayorgananciadeinformacio´n:p(log(p/t)-
+clasificadoresRidor,DecisionTableyOneR.Enlaseccio´n2 log(P/T))
+Materialesyme´todossepresentanlosdatasetsusadospara
+b) Fase de poda: Incrementalmente poda cada re-
+evaluarJRip,lasme´tricasempleadasparamedirsucomporta-
+gla y permite el podado de cualquier secuencia
+mientoylametodolog´ıaquesesigueenesteestudio.Enla
+final de antecedentes. La me´trica de podado es
+u´ltimaseccio´nResultadosydiscusio´nsepresentanyanalizan
+(p-n)/(p+n)–peroesrealmente2p/(p+n)-1,as´ı
+losresultadosexperimentalesobtenidosapartirdeltrabajo.
+queenestaimplementacio´nsimplementeseusa
+Poru´ltimo,sepresentanlasconclusionesdelestudio.
+p/(p+n)(realmente(p+1)/(p+n+2),as´ıquesip+n
+es0,estoes0.5)
+1. Algoritmos basados en reglas
+2. Etapadeoptimizacio´n:Luegodegenerarelconjunto
+Los me´todos de induccio´n de reglas permiten a partir
+dereglasiniciales{Ri},genereypodedosvariantesde
+de un conjunto de ejemplos de entrenamiento etiquetados
+cadareglaRidelosdatosrandomizadosusandoelpro-
+1http://archive.ics.uci.edu/ml/datasets.html cedimientoa)yb).Perounavarianteesgeneradadesde
+Evaluacio´ndelalgoritmodeclasificacio´nbasadoenreglasJRipparadatosstandardydesbalanceados 135
+unareglavac´ıamientrasqueotraesgeneradaan˜adiendo • Cuentecua´ntasvecesaparececadaclase.
+golosamenteantecedentesalareglaoriginal.Adema´s • Encuentrelaclasema´sfrecuente.
+lame´tricadepodausadaaqu´ıes(TP+TN)/(P+N).En-
+• Haga que la regla asigne esa clase a este
+tonceslaDLma´spequen˜aposibleparacadavariante
+atributo-valor.
+y la regla original son calculadas. La variante con la
+DL m´ınima es seleccionada como la representacio´n Calculeel´ındicedeerrordelasreglas.
+final de Ri en el conjunto de reglas. Despue´s de que
+Elijalasreglasconlatasadeerrorma´spequen˜a.
+todas las reglas en {Ri} hayan sido examinadas y si
+aunhaypositivosresiduales,ma´sreglassongeneradas
+basadoenlospositivosresidualesusandoelescenario
+deconstruccio´nnuevamente. 2. Materiales y me´todos
+3. Eliminarlasreglasdelconjuntodereglasquepuedan Para evaluar el desempen˜o del algoritmo basado en reglas
+incrementarlaDLdelconjuntodereglascompletosi JRipseemplearondiferentesme´tricassegu´nlosproblemasde
+estabaene´lysean˜adeelconjuntodereglasresultante clasificacio´nesta´ndarydesbalanceados.Losdatasetsemplea-
+aRS. dos en la experimentacio´n fueron obtenidos en su mayor´ıa
+delsitiowebdelaherramientademiner´ıadedatosKeel2 y
+Laimplementacio´ndelclasificadorJRipenWekaasumetaly
+convertidosalformato.arffdelWeka.Solamentelosdatasets
+comosemuestraenelCuadro1clasesnominales,binariasy
+lymphyzoofueronobtenidosdirectamentedelUCIMLR.
+valoresperdidos.Adema´slosatributospuedentomarvalores
+Para los problemas de clasificacio´n esta´ndar se empleo´ la
+nominales,nume´ricos,fechas,valoresperdidos,etc.
+me´tricaprecisio´ndelaclasificacio´n(percentcorrectenWe-
+Paraevaluareldesempen˜odeJRipenestetrabajosecompara
+ka). Esta me´trica mide la proporcio´n de casos clasificados
+con tres clasificadores de su familia Ridor, DecisionTable
+correctamente[1] y puede ser empleada cuando hay clases
+yOneR.Acontinuacio´nsedescribenbrevementecadauno
+binariasomu´ltiples.Losproblemasdeclasificacio´nesta´ndar
+de ellos. Las propiedades sobre los valores de las clases y
+sedividieronenlosquepresentanruidoylosquecontienen
+atributosqueasumensemuestranenelCuadro1.
+valoresperdidos(27entotal).
+1. RIDOR:Generaunareglapordefecto(predetermina- Se emplearon 15 datasets con 5% de ruido para probar el
+da)yluegotomalasexcepcionesparalareglaprede- comportamientodeJRipconrespectoalosotrosdesufamilia
+terminadaconlam´ınimatasadeerror[5].Entoncesse antesmencionados.EnelCuadro2semuestranlosnombres
+generalamejorexcepcio´nparacadaexcepcio´niterando delosdatasets,elnu´merodeatributos(#atributos),ejemplos
+hastalogrardisminuirelerror.Luegogeneraunaexpan- (#ejemplos)yclases(#clases)quecontienen.Losatributosy
+sio´nsimilarauna´rboldeexcepciones.Laexcepcio´nes lasclasescontienenvaloresnominalesynume´ricos.
+unconjuntodereglasqueprediceclases.Estealgoritmo EnelCuadro2semuestranlos12datasetsconvaloresper-
+esusadoparagenerardichasexcepciones. didosusadosenlaexperimentacio´n.Deellossemuesrauna
+descripcio´nresumenconlosnombres,nu´merodeatributos
+2. DecisionTable A partir de los datos de entrenamien-
+(#atributos),ejemplos(#ejemplos)yclases(#clases)que
+to construye una tabla formada por un subconjunto
+tienen,as´ıcomoelporcientodevaloresperdidosconrespecto
+-llamadoesquema-desusatributosyunaseleccio´nde
+altotaldeejemplosdeldatasets(%VP).
+losejemplosdeentrenamiento.Paraclasificarunnue-
+ParaevaluarelcomportamientodeJRipydelosotrosalgorit-
+vo ejemplo el algoritmo busca en la tabla todos los
+mosbasadosenreglasenproblemasdesbalanceadosseuso´
+ejemplosqueconcuerdan,teniendoencuentaso´lolos
+comoalternativaalaprecisio´ndelaclasificacio´nlame´trica
+atributos que forman el esquema. Si no se encuentra
+Kappa.Adiferenciadelaprecisio´ndelaclasificacio´nKappa
+ningu´nejemploqueconcuerde,elalgoritmodevuelve
+anotalose´xitosenlaclasificacio´nindependientementepara
+laclasema´scercanadelatabla;enotrocaso,sedevuel-
+cadaclase.Enlaprecisio´ndelaclasificacio´nsetiendeapre-
+velaclasemayoritariadelconjuntodeejemplosque
+juiciarporlaclasemayoritaria,esdecir,laquemayorcantidad
+concordaron[8].
+deejemploscontiene.Esteaspectoesmuyimportantepara
+3. OneR:ElprincipiodeOneRo1Reshacerreglasque latomadedecisionesfundamentalmenteenlosproblemasde
+pruebanunsoloparatributo-valor.Sepruebantodoslos diagno´sticosme´dicos,deteccio´ndefraudesyotrosdondeuna
+paresatributo-valoryseseleccionaelqueocasioneel clasificacio´nerro´neatienegranimpacto.
+menornu´merodeerrores[7].Losatributosnume´ricos Losdatasetsdesbalanceadosusadosenestetrabajosedividen
+los trata como cont´ınuos. A continuacio´n se muestra endosgrupos:15conelratiooproporcio´ndedesbalance(RD)
+brevementelospasosquesesiguenenestealgoritmo: mayorque9yclasesbinarias(VerCuadro3),y13datasets
+condiversosRDperoconmu´ltiplesclases(VerCuadro3).En
+Paracadaatributo,
+totalseemplearon28datasetsdesbalanceados.
+Paracadavalordelatributo,hagaunareglacomo
+sigue: 2http://www.keel.es
+136 Evaluacio´ndelalgoritmodeclasificacio´nbasadoenreglasJRipparadatosstandardydesbalanceados
+Cuadro1.PropiedadeslosalgoritmosJRip,Ridor,DecisionTableyOneR.
+JRip Ridor OneR DecisionTable
+Clase Nominal,valoresperdidos,binaria Fecha,nominal,
+valoresperdidos,
+nume´rica,binaria.
+Atributos Unarios,nominales,nume´ricos,valoresperdidos,
+fechas,nominalesvac´ıos.
+Cuadro2.Descripcio´nresumendelosdatasetsconruido(1)yvaloresperdidos(2).
+(1) #Atribs #Ejems #Clas (2) #Atr #Ej #Cla %VP
+contraceptive- 9 1473 3 bands 19 539 2 32.28
+5an-nn
+ecoli-5an-nn 7 336 8 cleveland 13 303 5 1.98
+glass-5an-nn 9 214 7 dermatology 34 366 6 2.19
+heart-5an-nn 13 270 2 ecoli+MV-10- 7 336 8 48.21
+1tra
+ionosphere- 33 351 2 hepatitis 19 155 2 48.39
+5an-nn
+iris-5an-nn 4 150 3 horse-colic 23 368 2 98.1
+page-blocks- 10 5472 5 housevotes 16 435 2 46.67
+5an-nn
+pima-5an-nn 8 768 2 magic+MV- 10 1902 2 58.20
+10-1tra
+satimage-5an- 36 6435 7 mammographic 5 961 2 13.63
+nn
+segment-5an- 19 2310 7 marketing 13 8993 9 23.54
+nn
+sonar-5an-nn 60 208 2 newthyroid+MV- 5 215 3 35.35
+10-1tra
+spambase- 57 4597 2 post-operative 8 90 3 3.33
+5an-nn
+thyroid-5an- 21 7200 3
+nn
+wdbc-5an-nn 30 569 2
+wine-5an-nn 13 178 3
+Evaluacio´ndelalgoritmodeclasificacio´nbasadoenreglasJRipparadatosstandardydesbalanceados 137
+Cuadro3.Descripcio´nresumendelosdatasetsdesbalanceadosconRD>9ycantidaddeclases2(1)ydatasetsconmu´ltiples
+clases(2).
+(1) #Atribs #Ejems RD (2) # # RD
+Atribs Ejems
+abalone9- 8 731 16.4 balance 4 625 5.88
+18
+cleveland- 13 177 12.62 contraceptive 9 1473 1.89
+0 vs 4
+dermatology- 34 358 16.9 ecoli 7 336 71.25
+6
+ecoli-0-1- 7 281 39.14 glass 9 214 8.44
+3-7 vs 2-
+6
+ecoli-0-1- 6 280 13 hayes-roth 4 132 1.7
+4-6 vs 5
+ecoli4 7 336 15.8 lymph 19 148 40.5
+glass2 9 214 11.59 lymphography 18 148 40.5
+glass5 9 214 22.78 new- 5 215 4.84
+thyroid
+lymphography- 18 148 23.67 pageblocks 10 548 164
+normal-
+fibrosis
+poker- 10 244 29.25 shuttle 9 2175 853
+9 vs 7
+shuttle- 9 230 22 thyroid 21 720 36.94
+6 vs 2-3
+shuttle-c2- 9 129 20.5 wine 13 178 1.5
+vs-c4
+yeast- 7 281 39.14 zoo 18 101 10.25
+1 vs 7
+yeast- 8 514 9.08
+2 vs 4
+zoo-3 16 101 19.2
+138 Evaluacio´ndelalgoritmodeclasificacio´nbasadoenreglasJRipparadatosstandardydesbalanceados
+Lospara´metrosdelalgoritmoJRipas´ıcomodelosotrosalgo- diferenciassignificativaseneldesempen˜odelosalgoritmos
+ritmosdesufamiliaempleadossonlosdefinidosenlaherra- basadosenreglascomparadosparalosdatasetsconvalores
+mientaWekapordefecto.ParaJRipsedefinenlospara´metros: perdidosusados.SinembargoenelrankingdeFriedman,el
+Folds3,minNo2.0,optimizations2yseed1. clasificadorJRipescompetitivoconelrestoparacuandolos
+Para realizar el ana´lisis estad´ıstico y la presentacio´n de los datasetstienenvaloresperdidoscomosemuestraenelgrafo
+resultadossesiguelametodolog´ıapropuestaporDemsar[3]. delaFigura1a.Enlosnodosdelgrafosemuestranlosresul-
+Enestametodolog´ıaseproponeenprimerlugaraplicareltest tadosobtenidosapartirdeaplicareltestpost-hocFinner.El
+deFriedmanparaconocersialmenosunodelosalgoritmos nu´meroindicaelrankingdeFriedmanenelqueseencuentra
+secomportadiferentesalosdema´s,esdecir,tienediferencias cadaalgoritmobasadoenreglacomparado.JRipseencuen-
+significativas con respecto al resto. El test de Friedman se trasobresaltadoencolorverdeporqueparalosdatosusados
+usacuandosoncincoomenoslosme´todoscomparados,en obtuvounmejordesempen˜oyporlotantotieneunranking
+otro caso se usa una correccio´n a Friedman, el test Iman menorqueelresto.
+y Davemport. Se puede comprobar que existen diferencias
+significativassielvalordeprobabilidadop-valueobtenidoes Cuadro4.Resultadosexperimentalessobredatosconvalores
+menorqueunα,enestecasoseusaα =0,05. perdidos.
+Sielresultadodeltestdaqueα <0,05entoncesseaplicaun
+Dataset JRip Ridor DecisionTable OneR
+testpost-hocparaconocercua´lalgoritmoenparticularsecom-
+bands 67.34 65.50 63.45 66.98
+portamejorqueelresto.Enestetrabajoseusaeltestpost-hoc
+cleveland 54.46 54.76 56.09 52.83
+Finner,elcualseusacuandosequierecompararunalgoritmo dermatology 92.09 94.82 90.98 49.73•
+contraelresto[6].Enestetrabajoseusaadema´sapartirdel ecoli+MV 75.17 76.85 68.85• 60.95•
+hepatitis 74.75 77.96 74.88 80.00
+testpost-hocaplicadoelrankingpromediodeFriedmanpara
+horse-colic 85.57 85.02 82.60 81.52
+mostrargra´ficamentecua´nbuenoesunme´todoconrespecto
+housevotes 95.41 94.95 93.35 95.64
+a los otros. El ranking es obtenido a partir de asignar una magic+MV 78.43 75.86 76.04• 69.43•
+posicio´nacadaalgoritmodependiendodesudesempen˜opara mammographic 82.62 81.58 82.21 81.89
+marketing 22.76 28.20◦ 32.47◦ 28.27◦
+cadadataset.Elalgoritmoquealcanzaelmejordesempen˜o
+newthyroid+MV 90.11 89.68 90.71 85.95
+enundatasetsespec´ıficoobtieneelprimerranking(valor1), post-operative 71.11 71.11 68.89 67.78
+luegoelquealcanzaelsegundomejordesempen˜oobtieneel ◦,•mejoraestad´ısticamentesignificativaoempeoramiento
+lugar2,yas´ısucesivamente.Finalmentelosvaloresobtenidos
+enelrankingporcadaalgoritmoparacadadatasetsesumany Eldesempen˜odelclasificadorJRiptambie´nfueevaluadocon
+sepromedian. datosruidosos.Serealizo´ igualmenteunavalidacio´ncruzada
+Lostestsestad´ısticosaplicadosparaevaluarelalgoritmoJRip con10foldparamedirlacalidaddelaclasificacio´ndeeste
+serealizaronconlabibliotecaparaelana´lisisestad´ısticoSC- algoritmoconrespectoaRidor,DecisionTableyOneR.Los
+MAMP (Statistical Comparison of Multiple Algorithms in resultadosexperimentalessobredatosconruidosemuestran
+MultipleProblems)dellenguajedeprogramacio´nR. enelCuadro8.
+Cuadro5.Resultadosexperimentalessobredatosconruido.
+3. Resultados y discusio´n
+Dataset JRip Ridor DecisionTable OneR
+3.1 Problemasdeclasificacio´nesta´ndar contraceptive 50.78 51.26 51.80 46.77•
+Enestaseccio´nsepresentanlosresultadosdelaevalua- ecoli 74.69 72.33 72.64 57.99•
+glass 58.87 67.77 59.31 52.79
+cio´ndeldesempen˜odelclasificadorJRipcondatosesta´ndar,
+heart 77.41 74.81 81.11 64.81•
+esdecir,datosquenopresentandesbalanceoesteesm´ınimo. ionosphere 86.31 86.87 87.44 77.51•
+Sinembargo,losdatasetsesta´ndarquesepresentans´ıtienen iris 88.00 90.67 92.67 92.67
+problemasderuidoyotroscontienenvaloresperdidos. page-blocks 96.07 95.71 94.88• 93.18•
+pima 73.44 74.22 74.36 72.66
+Paraevaluarlaprecisio´ndelaclasificacio´ndeJRipydelos
+satimage 85.50 84.26 78.51• 57.93•
+otrostresclasificadoresdesufamiliaRidor,DecisionTable segment 90.43 91.21 82.12• 62.25•
+yOneRserealizo´ unavalidacio´ncruzadaenlaherramienta sonar 72.05 70.05 71.60 66.40
+spambase 90.21 89.28 85.19• 77.68•
+de miner´ıa de datos Weka. Se seleccionaron 10 fold para
+thyroid 98.36 98.03 97.44• 94.43•
+la validacio´n cruzada para todos los algoritmos evaluados. wdbc 92.79 92.09 90.85 84.88•
+En el Cuadro 7 se muestran los resultados obtenidos de la wine 93.30 89.35 84.18 78.66•
+evaluacio´nexperimentalrealizada. ◦,•mejoraestad´ısticamentesignificativaoempeoramiento
+Apartirdelosresultadosexperimentalesobtenidosenlavali-
+dacio´ncruzadaseaplico´ eltestdeFriedmanparaverificarsi Apartirdelosresultadosexperimentalesseaplico´ eltestde
+existendiferenciassignificativasentreJRipyalmenosotros Friedman.Enestecasoelp-valueovalordeprobabilidades
+delosclasificadores.EltestdeFriedmanarrojo´ comoresul- 7.111e-05,valorinferiora0.05.Secomprobo´ portantoque
+tado el valor 0.2535. Este resultado valida que no existen existendiferenciassignificativasentreJRipyelclasificador
+Evaluacio´ndelalgoritmodeclasificacio´nbasadoenreglasJRipparadatosstandardydesbalanceados 139
+JRip JRip OneR
+2.04
+1.87 3.83
+Ridor
+2.38 Ridor
+DecisionTable 2.13
+2.5
+DecisionTable
+OneR
+2.17
+3.08
+(a)RankingdeFriedmansobrevaloresperdidos. (b)RankingdeFriedmansobrevaloresconruido.
+Figura1.RankingdeFriedmansobrevaloresperdidosyconruido.
+OneR.EnelCuadro6asemuestranlosp-valuesobtenidosa portamientossimilaresaJRip.EnelgrafodelaFigura2bse
+partirdeltestdeFriedman. apreciaqueRidoryDecisionTableesta´nrelacionadosaJRip
+EnlaFigura1bsemuestraelgrafoconlosresultadosdelran- altenercomportamientosimilaresenestetipodedesbalance.
+kingdeFriedmanluegodeaplicareltestpost-hocFinner.Se Porelcontrario,elalgoritmoOneRseencuentradistantede
+puedeobservarqueJRipobtieneenestasituacio´nresultados JRipysoloseconectaconDecisionTable.Losvaloresdelran-
+significativamentemejoresqueOneRyescompetitivoconel kingpromediodeFriedmanmuestranqueJRipseencuentra
+resto.ElclasificadorOneRseencuentraaisladoenelgrafo enprimerlugarcon1,71.
+puestieneundesempen˜oyporconsiguienteunlugarenel
+rankingsignificativamentepeorparadatosconruidoqueel
+resto.
+Conclusiones
+3.2 Problemasdeclasificacio´ndesbalanceados
+Enelep´ıgrafeanteriorseevaluo´ eldesempen˜oelalgorit- Enelpresenteestudioseevaluo´ eldesempen˜odelalgo-
+moJRipenproblemasdeclasificacio´ncondatosruidososy ritmobasadoenreglasJRipparaproblemasdeclasificacio´n
+valoresperdidos.Enesteep´ıgrafesepresentanlosresultados convaloresruidosos,valoresperdidosydesbalanceados.Se
+experimentalesdelcomportamientodeesteclasificadorcon emplearoncomome´tricaslaprecisio´ndelaclasificacio´npara
+respectoalosotrosdesufamiliacuandolosdatasetsesta´n datosesta´ndaryKappaparadatosdesbalanceados.Apartir
+desbalanceados.EnelCuadro10semuestranlosresultados delasevaluacionesexperimentalesydeltestdeFriedmany
+experimentalescuandoelRDessuperiora9ylasclasesson Finner se obtuvieron conclusiones sobre el comportamien-
+binarias. En el Cuadro 11 los resultados se basan en datos todeJRipconrespectoaRidor,DecisionTableyOneR.En
+desbalanceadosconmu´ltiplesclasesydiferentesvaloresde problemasdeclasificacio´ncondatosperdidoselalgoritmo
+RD. JRip se comporto´ de manera similar al resto de los algorit-
+Lame´tricaempleadaparaevaluarlosalgoritmosparadatos mos, en el ranking de Friedman obtuvo el primer lugar lo
+desbalanceadosesKappa.Enestame´tricalosvalorescercanos cuallohacecompetitivoenestostiposdeproblemas.Enlos
+a1sonlosdeseadospuesindicanundesempen˜osignificativa- problemasdeclasificacio´ncondatosruidososJRipsedesem-
+mentebueno,mientrasqueloscercanosa-1locontrario. pen˜o´ significativamentemejorqueOneRydeformasimilar
+Los resultados del test de Friedman para el primer tipo de alresto.
+problema desbalanceado que se presenta arrojo´ 0.1411. A Ensituacionesdedesbalancecuandosoloexistendosclases
+partirdeesteresultadosecompruebaquenoexistendiferen- y el RD es mayor que 9 no se presentaron diferencias en-
+ciassignificativasentrelosalgoritmoscomparados,todosse trelosalgoritmos.Sinembargo,JRipobtuvoelprimerlugar
+comportandemanerasimilarenestecasoenparticular.Sin enelrankingparaestetipodeproblemadedesbalance.Los
+embargo, el algoritmo JRip obtuvo primer lugar en el ran- testaplicadossobrelosresultadosexperimentalessobredatos
+kingdeFriedmanconrespectoalosotrosbasadosenreglas desbalanceadosconmu´ltiplesclasess´ımostrarondiferencias
+comparadoscomosemuestraenelgrafodelafigura2a. significativas.ElclasificadorJRipsecomporto´ significativa-
+Enproblemasdedesbalancecuandoexistenmu´ltiplesclases, mente mejor que OneR al igual que en los problemas con
+losclasificadoresbasadosenreglasanalizadossipresentan ruido.Sinembargo,DecisionTableyOneRtienenuncompor-
+diferencias significativas ya que el valor de probabilidad a tamientosimilarenestecasoenparticular.
+partirdeltestdeFriedmanarrojo´ 9.917e-05.EnelCuadro6b SeconcluyeportantoqueJRipessignificativamentemejor
+semuestraquealmenosunodelosalgoritmosessignificati- quelosotrosdesufamiliacomparadoscuandoexistenpro-
+vamentediferenteaJRip.Eltestpost-hocFinnerrevelo´ queel blemasdeclasificacio´nconruidoydesbalanceconmu´ltiples
+comportamientodeJRipessignificativamentemejorqueelde clases.Enlasotrassituacionesserecomiendaemplearcual-
+OneR.Porelcontrario,RidoryDecisionTablepresentancom- quieradelosotrosclasificadorescomparadosmenosOneR,
+140 Evaluacio´ndelalgoritmodeclasificacio´nbasadoenreglasJRipparadatosstandardydesbalanceados
+Cuadro6.Valoresp-valueenproblemasdeclasificacio´nconruidoydesbalanceados.
+(b)Problemasdeclasificacio´ndesbalanceadoscon
+(a)Problemasdeclasificacio´nconruido. mu´ltiplesclases.
+JRip Ridor DecisionTable OneR JRip Ridor DecisionTable OneR
+n/a 0.672 0.672 0.000 n/a 0.874 0.102 0.000
+JRip Jrip
+1.9 1.71
+Ridor Ridor
+2.67 1.79
+DecisionTable DecisionTable
+2.47 2.67
+OneR OneR
+2.97 3.83
+(a)RD>9yclasesbinarias. (b)Desbalanceconmu´ltiplesclases.
+Figura2.RankingdeFriedmansobredatosdesbalanceados.
+Cuadro7.Resultadosexperimentalessobresobredatoscon Cuadro8.Resultadosexperimentalessobredatos
+RDmayorque9yclasesbinarias. desbalanceadosymu´ltiplesclases
+Dataset JRip Ridor DecisionTable OneRDataset JRip Ridor DecisionTable OneR
+abalone9-18 0.36 0.16 0.16 0.14balance 0.65 0.62 0.52• 0.23•
+cleveland-0-vs-4 0.38 0.08 0.24 0.13contraceptive 0.25 0.28 0.28 0.14•
+dermatology-6 0.98 0.98 0.98 0.94Ecoli-Bal 0.73 0.74 0.67 0.53•
+ecoli-0-1-3-7-vs-2-6 0.66 0.47 0.66 0.29Glass-Identification-Database 0.52 0.53 0.52 0.33•
+ecoli-0-1-4-6-vs-5 0.56 0.59 0.54 0.63Hayes-Roth 0.74 0.66 0.33• 0.02•
+ecoli4 0.58 0.61 0.58 0.62lymphography 0.54 0.59 0.55 0.52
+glass2 -0.01 -0.02 -0.01 -0.02New-Thyroid-Bal 0.84 0.84 0.81 0.79
+glass5 0.69 0.44 0.09• 0.09p•ageblocks 0.77 0.70 0.72 0.73
+lymphography-normal-fibrosis 0.50 0.50 0.40 0.10shuttle 0.99 0.99 0.98 0.88•
+poker-9-vs-7 0.39 0.10 0.20 0.20thyroid 0.89 0.84 0.85 0.72•
+shuttle-6-vs-2-3 0.90 0.96 1.00 1.00wine 0.90 0.84 0.80 0.68•
+shuttle-c2-vs-c4 0.90 0.90 0.90 1.00zoo 0.83 0.92 0.81 0.04•
+yeast-1-vs-7 0.31 0.26 0.27 0.17 ◦,•mejoraestad´ısticamentesignificativaoempeoramiento
+yeast-2-vs-4 0.65 0.65 0.72 0.62
+zoo-3 0.60 0.56 0.50 0.50
+◦,•mejoraestad´ısticamentesignificativaoempeoramiento [3] Janez Demsar. Statistical comparisons of classifiers
+overmultipledatasets. JournalofMachineLearning
+Research,(7):1–30,2006. 2
+queentodoslosexperimentosobtuvoresultadosinferioresal
+resto. [4] ManuelFerna´ndez-Delgado,EvaCernadas,Sene´nBa-
+rro, and Dinami Amorim. Do we Need Hundreds of
+Agradecimientos ClassifierstoSolveRealWorldClassificationProblems?
+JournalofMachineLearningResearch,15:3133–3181,
+A la profesora Drc. Maria Matilde Garc´ıa Lorenzo del 2014. (document)
+CentrodeEstudiosdeInforma´ticadelaUniversidaddeLas
+Villasporsusconsejosparaeldesarrollodeestainvestigacio´n. [5] BrianR.GainesandPaulCompton. InductionofRipple-
+Down Rules Applied to Modeling Large Databases.
+JournalofInteligentInformationSystem,5(3):211–228,
+Referencias
+1995. 1
+[1] RafaelEstebanBelloPerez,ZoilaZenaidaGarciaVal-
+[6] SalvadorGarc´ıa,A.Ferna´ndez,J.Luengo,andFrancis-
+divia,MariaMatildeGarciaLorenzo,andAntonioRey-
+coHerrera. Advancednonparametrictestsformultiple
+nosoLobato. AplicacionesdelaInteligenciaArtificial.
+comparisonsinthedesignofexperimentsincomputatio-
+Me´xico,segundaedition,2002. (document),2
+nalintelligenceanddatamining:Experimentalanalysis
+[2] WilliamW.Cohen. FastEffectiveRuleInduction. pages of power. Information Sciences, 180(10):2044–2064,
+115–123,1995. 1 2010. 2
+Evaluacio´ndelalgoritmodeclasificacio´nbasadoenreglasJRipparadatosstandardydesbalanceados 141
+[7] R. C. Holte. Very simple classification rules perform ternationalJournalofComputerScienceEngineering,
+wellonmostcommonlyuseddatasets. MachineLear- 4(3),2015. (document)
+ning,11:63–91,1993. 3
+[12] RonaldVelandiaOrtegaandFredyHerna´ndezSua´rez.
+[8] Ron Kohavi. The Power of Decision Tables. pages Evaluacio´n de algoritmos de extraccio´n de reglas de
+174–189,1995. 2 decisio´nparaeldiagno´sticodehuecosdetensio´n. Inge-
+nieroelectricista,UniversidadindustrialdeSantander,
+[9] CarlosMa´rquezVera,Cristo´balRomeroMorales,and
+Bucaramanga,2010. (document)
+Sebastia´nVenturaSoto. Prediccio´ndelFracasoEscolar
+mediante Te´cnicas de Miner´ıa de Datos. IEEE-RITA,
+[13] W.NorHaizanW.Mohamed,MohdNajibMohdSalleh,
+7(3):109–117,2012. (document)
+andAbdulHalimOmar. AComparativeStudyofRedu-
+[10] Da´nel Sa´nchez Tarrago´. Prono´stico de supervivencia cedErrorPruningMethodinDecisionTreeAlgorithms.
+deinfartocerebralaterotrombo´ticousandoaprendizaje Penang,Malaysia,2012. (document)
+atomatizado. pages1–11. (document)
+[14] IanH.Witten,EibeFrank,andMarkA.Hall. DataMi-
+[11] V. Veeralakshmi and D. Ramyachitra. Ripple Down ning.PracticalMachineLearningToolsandTechniques.
+Rulelearner(RIDOR)ClassifierforIRISDataset. In- (document)

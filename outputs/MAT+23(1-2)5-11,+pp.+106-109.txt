@@ -1,0 +1,275 @@
+REVISTA CIENCIAS MATEMÁTICAS Vol. 23 único, Nos. 2005-2006
+UN ENFOQUE GEOMÉTRICO PARA INTRODUCIR
+EL CONCEPTO DE CAMPO CENTRAL
+DE LA MECÁNICA CLÁSICA
+Jorge Erick López Velázquez*, Julián Bravo Castillero1 y Reinaldo Rodríguez Ramos
+Facultad de Matemática y Computación, Universidad de La Habana, Ciudad de La Habana, Cuba
+RESUMEN
+En este trabajo se prueba la equivalencia entre tres definiciones del concepto de campo central de la
+mecánica clásica, en el espacio euclidiano
+106
+n
+-dimensional, usando técnicas no estándar. La
+demostración involucra importantes procedimientos y conceptos de la geometría y el álgebra lineal. El
+carácter integrador de estas ideas pudiera ser de interés para estudiantes de licenciatura en
+matemática.
+ABSTRACT
+In this work a proof of the equivalence between three definitions of central field concept of classical
+mechanics in
+n
+-dimensional euclidean space is presented by using a non-traditional way. The proof
+involves important techniques and concepts of linear algebra. The connected character of these ideas
+could be interesting for mathematics students, which have this subject included in their curricula.
+INTRODUCCIÓN
+Es natural encontrar estudiantes de la carrera de licenciatura en matemática sin motivación previa para
+estudiar contenidos de la disciplina de mecánica que, frecuentemente, aparecen en materias de sus
+currículos. Sin embargo, importantes técnicas y conceptos matemáticos son usados en mecánica y, más
+aún, teorías matemáticas modernas surgen a partir de tener que resolver problemas en mecánica (ver, por
+ejemplo 1).
+El objetivo fundamental de esta contribución es ilustrar un enfoque geométrico para introducir el concepto
+de campo central de la mecánica clásica. Este punto de vista permite la integración de importantes
+definiciones de la geometría y el álgebra lineal con los fundamentos matemáticos de este concepto clave de
+la mecánica clásica.
+En 1, el concepto de campo central con centro O se introduce como un campo vectorial en el plano
+euclidiano que es invariante con respecto al grupo de los movimientos del plano que mantienen fijo a O
+Seguidamente, en la página 30 de 1 se plantea el siguiente problema: Demuestre que todos los vectores
+de un campo central están situados sobre rayos con origen en O de manera que la magnitud del campo
+vectorial en cada punto sólo depende de la distancia del punto al centro del campo. El contenido de este
+problema se corresponde con la definición que usualmente se utiliza en la literatura para introducir el
+concepto de campo central (ver, por ejemplo: página 30 en 2, página 72 en 3, y página 81 en 4, etc.). En
+este trabajo se presenta una solución del problema, arriba mencionado, planteado en 1, en un contexto
+más general del espacio euclidiano n -dimensional. Los resultados que se presentarán a continuación fueron
+logrados por el estudiante JELV durante un curso de mecánica clásica, que recién finalizó en enero de 2006,
+bajo el asesoramiento de los profesores JBC y RRR.
+CARACTERIZACIONES MATEMÁTICAS DE LOS CAMPOS DE FUERZAS CENTRALES
+Notaciones: Se trabajará en el espacio vectorial euclidiano n -dimensional denotado por Rn, cuyos
+elementos r, son vectores columnas (o matrices de orden n  1)), con la base canónica (e )n y el producto
+i i1
+escalar dado por r,s rTs r,sRn. El símbolo AT denota la transpuesta de la matriz A. La norma r
+E-mail: 1jbravo@matcom.uh.cu
+*Estudiante de cuarto año de Licenciatura en Matemática
+de un vector
+107
+r  R n se representa por el número real no-negativo r  r  r , r . Con O
+n
+( R ) se identifica al
+conjunto de todos las matrices ortogonales de orden n. El convenio de suma abreviada de Einstein será
+utilizado.
+Para lograr el propósito de esta comunicación es necesario recordar qué se entiende por movimiento en
+R n y algunas de sus propiedades relevantes.
+Definición 1. (Movimiento en R n ) Se llama movimiento en R n , a toda transformación T : R n  R n que es
+una isometría, es decir, tal que d ( T ( r ) , T ( s ) )  d ( r , s )  r , s  R n , donde d ( r , s )  r  s , r  s .
+Teorema 1. Una transformación T : R n  R n es un movimiento en Rn si y solo si existen G  O
+n
+( R ) y b  Rn
+tales que T ( r )  G r  b  r  R n .
+Demostración:
+(Necesidad) Se cumple T ( r )  T ( s ) , T ( r )  T ( s )  r  s , r  s  r , s  R n . Por otra parte, la transformación
+g : R n  R n definida por g ( r )  T ( r )  T ( 0 ) satisface las siguientes condiciones: (i) g ( 0 )  0 y (ii)
+g ( r )  g ( s ) , g ( r )  g ( s )  r  s , r  s . Haciendo s = 0 en (ii) se verifica que g es una isometría, es decir
+g ( r ) , g ( r )  r , r por lo que desarrollando la condición (ii) resulta, en virtud del carácter bilineal del producto
+escalar, que g ( r ) , g ( s )  r , s . Si g ( e )i  a e
+ji j
+entonces la matriz A  ( a )
+ij
+es ortogonal, A T A  I , donde I
+denota a la matriz unidad de orden n . En efecto, note que, ( A T A )
+il
+ a
+k
+ai
+k l
+ a a
+ji k
+δl
+jk
+ a a
+ji k l
+e ,j e
+k
+
+ a e
+ji
+,j a
+k
+el
+k
+ g ( e
+i
+) , g ( e
+l
+)  e ,i e
+l
+ δ ,
+il
+siendo  las componentes de la delta de Kronecker.
+ij
+Ahora, si r = re representa un vector arbitrario de Rn, se tiene que
+i i
+g ( r )  s  s
+k
+e
+k
+y de ( A T s )
+i
+ a
+k
+si
+k
+
+ a s
+ji k
+δ
+jk
+ a s
+ji k
+e ,j e
+k
+ a e
+ji
+,j s
+k
+e
+k
+ g ( e
+i
+) , g ( r )  e ,i r  r
+i
+resulta que ATsr de donde g ( r )  s  A r
+por lo que T(r)  ArT(0)completa la prueba.
+La suficiencia es inmediata pues
+d ( T ( r ) , T ( s ) ) 2  [T ( r )  T ( s ) ] T [T ( r )  T ( s ) ]  [G ( r  s ) ] T G ( r  s )  ( r  s ) T G T G ( r  s )  ( r  s ) T ( r  s )  d ( r , s ) 2 .
+Nota 1. Este teorema le brinda al estudiante una útil caracterización de todos los posibles movimientos en
+Rn, a partir de la cual se pueden obtener aquellos, que satisfacen ciertas propiedades restrictivas. Por
+ejemplo, se puede ver que una transformación T, es un movimiento en Rn que deja fijo a O, si y solo si
+T ( r )  G r  r  R n con G  O
+n
+( R ) . En particular, estos son los movimientos de interés para introducir el
+concepto de campo central siguiendo el enfoque geométrico indicado por V.I. Arnold en página 29 de 1.
+Proposición 1. Dado r  R n existe una matriz QO (R) tal que el vector Qr tiene sus n -1 últimas
+n
+coordenadas nulas.
+Demostración: Usando la técnica de descomposición Q-R, que los estudiantes conocen de los cursos donde
+reciben métodos numéricos del álgebra lineal (ver, por ejemplo: página 363 en 5), existe una
+matriz Q ' O
+n
+( R ) y un vector r'Rn,con las n -1 últimas coordenadas nulas, tales que r Q'r' lo que implica
+que Q'Tr r', por lo que basta considerar QQ'Tpara completar la prueba.
+Corolario 1. Si dos vectores r, s  Rn tienen igual magnitud, o sea r = s, entonces existe R  O (R) tal que
+n
+s = Rr.
+Demostración: De la proposición 1, existen
+108
+Q
+1
+, Q
+2
+ O
+n
+( R ) tales que Q
+1
+r y Q
+2
+s tienen sus últimas n - 1
+coordenadas nulas, y como Q
+1
+r  r  s  Q
+2
+s resulta que Q
+1
+r  Q
+2
+s ó Q
+1
+r   Q
+2
+s de donde se
+tiene que s  R r para R  Q 2 1 Q
+1
+o R   Q 2 1 Q
+1
+.
+Corolario 2. Dado r  R n , existe G  O
+n
+( R ) tal que r  K e r ( I  G ) y d im K e r ( I  G )  1 .
+Demostración: Se considera la matriz diagonal B  ( b )
+ij
+, donde b
+1 1
+ 1 y b
+k k
+  1 , para k 2,...,n. Note
+que B  O
+n
+( R ) . Se verifica que G  Q  1B Q cumple lo deseado (donde la matriz Q es del tipo estudiado en la
+proposición 1). En efecto, G  O
+n
+( R ) por ser producto de matrices ortogonales, además se cumple que
+(I  G )r  Q  1 (I  B )Q r  0 pues si A  I  B , entonces AQr = 0.
+Finalmente, dimKer(IG)dimKerA nrangA n(n1)1.
+Teorema 2. (Caracterizaciones matemáticas de los campos de fuerzas centrales)
+Para un campo vectorial de fuerzas f:Rn Rn, son equivalentes:
+1) f tiene un potencial U ( r )  U ( r ) , que solo depende de r.
+2) Existe una función real k : R  R tal que f ( r )  k ( r ) r . .
+3) f permanece invariante ante los movimientos en Rn que dejan fijo a O.
+3’) f ( G r )  G f ( r )  G  O
+n
+( R ) y  r  R n .
+Nota 2. La condición 3’) no es más que la traducción al lenguaje matemático de la condición 3), teniendo en
+cuenta la Nota 1. La demostración asociada a la aplicación de los resultados previamente presentados es la
+correspondiente a la implicación de 3) para 2), sin embargo para que el trabajo sea auto-contenido
+incluiremos las ideas básicas de todas las demostraciones. A modo de complemento e integración con
+resultados del análisis matemático y sus aplicaciones, se puede sugerir a los estudiantes que repasen el
+enunciado y la demostración del teorema 1, página 205 de 6 lo que les permitirá reconocer, además, la
+equivalencia de las definiciones involucradas en este teorema 2 con la invarianza del trabajo realizado por el
+campo de fuerzas f, en abiertos simplemente conexos, y su repercusión en la ley de la conservación de la
+energía mecánica.
+Demostración:
+1)  2). Hallando el gradiente de U  U ( r ) para obtener que k ( r )  
+1
+r
+d
+d
+U
+r
+( r ) .
+2)  1). Definiendo U ( r )   
+r
+r0
+k (  ) d  .
+2)  3´). Sea G  O
+n
+( R ) y r  R n  f ( G r )  k ( G r ) G r  k ( r ) G r  k ( r ) G r  G f ( r ) .
+3´)  2). Sea rRn con r 0 , tomando a G como en el corolario 2, es decir r = Gr, resulta que
+de f ( r )  f ( G r )  G f ( r ) se tiene que r , f ( r )  K e r ( I  G ) y como dimKer(IG)1 entonces existe
+k ' ( r )  R tal que f ( r )  k ' ( r ) r .
+Para probar que k'(r)k(r) se consideran dos vectores r,sRn tales que r s, luego según el corolario 1
+existeRO (R)tal que sRrde donde k'(s)s f(s)f(Rr)Rf(r)k'(r)s implica que k'(s)k'(r) por lo que
+n
+k'(r) k(r).
+COMENTARIOS
+Este enfoque geométrico aquí presentado para introducir la definición de campo central le permite al
+estudiante, de licenciatura en matemática, palpar la integración entre importantes conceptos y técnicas de
+diferentes disciplinas de la carrera (geometría, álgebra, análisis matemático y análisis numérico). La
+caracterización matemática dada sienta las bases para posibilitarle el conocimiento de dos propiedades
+invariantes para los campos de fuerzas centrales (el trabajo y el momento angular) que les facilitará asociar
+la existencia de leyes de conservación (de la energía mecánica y del momento angular) a la de primeras
+integrales de las ecuaciones del movimiento de Newton y consecuentemente su integración en cuadraturas.
+Este último comentario les representa un aporte desde la mecánica al conocimiento de la teoría de las
+ecuaciones diferenciales.
+AGRADECIMIENTOS
+A los profesores Ángela M. León Mecías y Alejandro Mesejo Chiong por sus valiosas sugerencias para
+mejorar la presentación de este trabajo.
+REFERENCIAS
+1 ARNOLD, V.I. (1989): Mathematical methods of classical mechanics (Second edition)
+Springer-Verlag, New York.
+2 LANDAU, L.D. and E.M. LIFSHITZ (1976): Mechanics (Third edition) Pergamon Press, New York.
+3 GOLDSTEIN, H.; C. POOLE and J. SAFKO (2000): Classical Mechanics (Third edition)
+Addison Wesley, San Francisco.
+4 SUSSMAN, G.J.; J. WISDOM and M.E. MAYER (2000): Structure and Interpretation of
+Classical Mechanics, MIT Press, Cambridge.
+5 HIGHAM, N.J. (1996): Accuracy and Stability of Numerical Algorithms, Society for Industrial
+and Applied Mathematics, Philadelphia.
+6 FERNÁNDEZ MUÑIZ, J.L. y G. TORRE MOLNÉ (1984): Análisis Matemático. Tomo IV,
+Editorial Pueblo y Educación, La Habana.
+109

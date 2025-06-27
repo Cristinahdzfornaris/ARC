@@ -1,0 +1,360 @@
+Sociedad Cubana de Matemática y Computación
+Demostración de la unicidad del ciclo de Collatz
+MSc. Denis Martínez Tápanes (denismt@ucm.vcl.sld.cu)
+Universidad de Ciencias Médicas, Santa Clara
+Dr. José Enrique Martínez Serra (josee@uclv.edu.cu)
+Universidad Central Marta Abreu, Las Villas
+Resumen do, se obtiene una sucesión de números que conduce a un ciclo
+En este artículo se ofrece una demostración de una subconjetu- único. Estas operaciones son:
+ra de la conjetura de Collatz enunciada en 1937, en particular se
+demuestra la unicidad del ciclo de Collatz, y queda expresada 1. Si el número es par, se divide por 2 sucesivamente hasta ob-
+la necesidad de la demostración de dicha conjetura. tener un número impar.
+2. El número impar obtenido en el paso 1(o el dado inicialmen-
+Abstract te) se multiplica por 3 y se le suma 1, obteniendo así un nue-
+In this article it´s offers a demonstration of a sub-conjecture of vo número par.
+the Collatz´s conjecture enunciated in 1937, in particular the 3. Si se ha obtenido un número ya obtenido anteriormente en-
+uniqueness of the Collatz´s cycle is demonstrated, and the ne- tonces fi nalizar, sino volver al paso 1.
+cessity of the demonstration of this conjecture is expressed.
+Algunos ejemplos son:
+ Para el número 5, las operaciones serían:
+5·3+1=16, 16/2=8, 8/2=4,
+1. Introducción
+4/2=2, 2/2=1, 1·3+1=4, 4/2=2, 2/2=1.
+ Para el número 12:
+En 1937, el matemático alemán Lothar Collatz enunció una te-
+12/2=6, 6/2=3, 3·3+1=10, 10/2=5,
+sis que se ha mantenido incólume hasta nuestros días. Su aseve-
+y el proceso continua según el del número 5 visto primero,
+ración ha llegado a nombrarse con el tiempo como: «Conjetura
+que también conduce al número 1.
+de Collatz», aunque también ha recibido otras denominaciones,
+entre las que se encuentran: problema de Siracusa, problema
+El lector puede observar y experimentar tres aspectos impor-
+de Kakutani, problema de Ulam o problema 3x + 1, esta última
+tantes:
+muy adecuada para ser vista como un caso particular del pro-
+blema más general nx + 1, n impar, etcétera.
+1. En ambos números seleccionados y en colecciones grandes de
+¿En qué consiste la conjetura? Collatz conjeturó que si se
+números, el algoritmo conduce al único ciclo [4,1], signifi ca
+toma un número natural cualquiera y se somete a determinadas
+que existe solo un ciclo para varios números seleccionados.
+operaciones sucesivas, dadas por un algoritmo bien determina-
+— 78 —
+Revista Ciencias Matemáticas
+2. Si en el algoritmo, en lugar de multiplique por 3, se multiplica Otros intentos de demostraciones del problema 3x + 1, como
+por 5 (problema 5x + 1), entonces existen colecciones grandes (Cadogan, 2006) y (Bruckman, 2008), están incompletos.
+de números que conducen a uno de los tres ciclos diferentes: Este artículo proporciona una demostración de una parte
+[3,1] [13, 33, 83] o [17, 43, 27], dependiendo del número na- importante de la conjetura de Collatz que establece: si el ciclo
+tural inicial escogido. de Collatz existe, entonces este ciclo es único, precisamente el
+3. Un ejemplo de este último caso que conduce a un proceso que ese Collatz predijo.
+largo y que culmina en el ciclo [3,1] es: Otra manera de afi rmar esta conjetura es: si dos números
+7, 9, 23, 29, 73, 183, 229, 573, 1433, 3583, 4479, 5599, conducen respectivamente a dos ciclos de Collatz por medio
+6999, 8749, 21873, 54683, 34177, 85443, 26701, 66753, del proceso considerado, entonces dichos ciclos deben ser igua-
+166883, 52151, 65189, 162973, 407433, 1018583, 1273229, les. Solo faltaría demostrar en trabajos futuros que todo núme-
+3183073, 7957683, 310847, 388559, 485699, 151781, ro conduce a algún ciclo por medio del algoritmo establecido,
+379453, 948633, 2371583, 2964479, 3705599, 4631999, en otros términos: que el algoritmo no puede generar una can-
+5789999, 7237499, 4523437, 11308593, 28271483, 17669677, tidad infi nita de números diferentes.
+44174193, 110435483, 69022177, 172555443, 6740447,
+8425559, 10531949, 26329873, 65824683, 41140427,
+25712767, 32140959, 40176199, 50220249, 125550623, 2. Desarrollo
+156938279, 196172849, 490432123, 306520077, 766300193,
+1915750483, 299336013, 748340033, 1870850083,
+A continuación, se enuncian una serie de defi niciones que con-
+584640651, 365400407, 456750509, 1141876273, 951563561,
+tribuirán a obtener una adecuada representación de la conjetu-
+2378908903, 2973636129, 7434090323, 1161576613,
+ra y el problema tratado y que facilitarán la demostración de la
+2903941533, 7259853833, 18149634583, 11343521615,
+parte de la conjetura que se analiza.
+28358804037, 17724252523, 11077657827, 3461768071,
+2163605045, 1352253153, 3380632883, 33013993, 82534983,
+Defi nición 1
+103168729, 257921823, 322402279, 403002849, 1007507123,
+Se denomina Proceso de Collatz a una sucesión de opera-
+39355747, 12298671, 15373339, 9608337, 24020843,
+ciones que se genera a partir de un número impar determinado
+15013027, 4691571, 366529, 916323, 286351, 357939, 6991,
+p ! 2N - 1, que sigue el siguiente esquema:
+8739, 2731, 1707, 1067, 667, 417, 1043, 163, 51, 1, 3, 1.
+f(p),f(p),...,f(p).
+0 1 i
+Donde,
+Desde la segunda mitad del siglo XX hasta la actualidad se han f(p)=p!2N-1
+0
+realizado muchas investigaciones que intentan obtener una de- 3f (p)+1
+f(p)= i-1 ,K !N,talque f(p)!2N-1
+mostración general de la existencia del ciclo en el problema
+i 2Ki i i
+3x + 1 y se han realizado otras para verifi car la conjetura para Resulta obvio percatarse que todo proceso de Collatz está com-
+grandes colecciones de números. Muchos de estos trabajos se puesto por ecuaciones sucesivas de la siguiente forma:
+resumen en los artículos (Lagarias, 2003) y (Lagarias, 2006).
+3p+1=2K1f
+1
+(p)
+3f(p)+1=2K2f(p)
+Entre los artículos que han verifi cado la conjetura para ca- i 2
+g
+sos particulares se encuentran: (Roosendaal, 2004) que verifi có
+3f (p)+1=2Knf(p)
+n-1 n
+la conjetura 3x + 1 para más de 6.89 × 1017 números (Oliveira
+Para más comodidad, puede redefi nirse este sistema de ecua-
+y Silva, 2004) propuso un algoritmo computacional de alta efi -
+ciones realizando el cambio f(p) = X, obteniendo así las ecua-
+ciencia que verifi có la conjetura para más de 4.899 × 1018 nú- i i
+ciones del Proceso de Collatz:
+meros, este constituye el récord actual para la verifi cación de la
+conjetura de Collatz.
+— 79 —
+Sociedad Cubana de Matemática y Computación
+3X +1=2K1X Defi nición 4
+0 1
+3X 1 +1=2K2X 2 Se denomina Número de Collatz a todo número natural cuyo
+(1)
+g
+proceso de Collatz conduce a un ciclo de Collatz que tiene la
+3X +1=2KnX
+n-1 n
+representación:
+3X +1
+[1]=&X = i , X =10
+i+1 4 0
+Defi nición 2
+Utilizando las defi niciones anteriores, se reformulará la con-
+Se entiende por Ciclo de Collatz a todo conjunto fi nito de
+jetura de Collatz de la siguiente forma.
+números generados mediante las operaciones del proceso de
+Collatz, tal que al iniciar un proceso de Collatz en cualquiera
+Conjetura de Collatz (enunciado)
+de sus elementos, digamos X, todos los demás son generados
+i
+Todo número natural es de Collatz, o sea, el proceso de Collatz
+sucesivamente en dicho proceso en un orden único bien defi ni-
+de todo número natural conduce al ciclo especifi cado en la de-
+do, hasta obtener nuevamente X.
+i
+fi nición 4.
+Es evidente entonces que un ciclo de Collatz no es más que
+De esta conjetura pueden sustraerse dos subconjeturas que
+un proceso de Collatz similar al (1) pero donde X = X para al-
+0 n
+giran alrededor del concepto de ciclo, a saber:
+gún n!N y que puede representarse por el siguiente conjunto
+de ecuaciones:
+Subconjetura 1 (existencia del ciclo de Collatz)
+3X +1=2K1X
+0 1
+3X +1=2K2X El proceso de Collatz iniciado en cualquier número natural
+1 2
+(2)
+g conduce a un ciclo.
+3X +1=2KnX
+n-1 0
+Para mejorar la notación, un ciclo de n elementos a , a,..., a Subconjetura 2 (unicidad del ciclo de Collatz)
+0 1 n-1
+generados en ese orden será representado por [a , a,..., a ], de Si un proceso de Collatz conduce a un ciclo, este no puede ser
+0 1 n-1
+forma similar a como se hace en el grupo simétrico S . otro que:
+n [1]=&X = 3X i +1 , X =10
+Por otra parte, como un ciclo de Collatz puede ser iniciado i+1 4 0
+en cualquiera de sus elementos X, su ciclo de n ecuaciones será En lo adelante comprobaremos que la segunda subconjetura cons-
+i
+representado como [X, X ,..., X ], donde: tituye en sí un teorema. Nuestro objetivo en lo adelante es la de-
+1 i+1 i+n-1
+3X +1 mostración de dicho teorema, utilizando para ello cuatro lemas
+X = i+r-1 ,X =X,K !N,r!{0,1,...,n-1}
+i+r 2Ki+r i+n i i
+necesarios, de los cuales el 1 y el 3 son resultados clásicos de la
+teoría de los números, pero que no obstante también se demuestran.
+Defi nición 3
+Se llama Extensión del Proceso de Collatz al número total Lema 1
+de ecuaciones diferentes con las cuales puede ser representado El conjunto de los números naturales impares es abarcado en su
+dicho proceso. totalidad por sus subconjuntos:
+Ejemplo: el proceso que se inicia en el número 3 es de ex- S = {6n - 5, n!N}, S = {6n - 3, n!N} y S = {6n - , n!N}
+1 2 a 1
+tensión 3, pues solamente puede ser representado por las tres
+Esto signifi ca que,
+ecuaciones:
+3$3+1=2$5 ,3 i=1 S i =2N-1,
+3$5+1=24$1 S i +S j =Q, i,j!{1,2,3}, i!j
+3$1+1=22$1 La demostración de este lema se considera muy elemental en
+la Teoría de los Números, por lo que no se incluye en este apar-
+De continuar buscando otras ecuaciones del proceso, estas se-
+tado. ▲
+rán iguales a la última; o sea, en lo adelante se repetirá la últi-
+ma ecuación, la cual representará un ciclo de Collatz que será
+seguidamente defi nido.
+— 80 —
+Revista Ciencias Matemáticas
+Lema 2 2KX -1
+i+1 <X
+3 i+1
+El subconjunto S no puede tener representantes en un ciclo
+2 2KX -1<3X
+i+1 i+1
+de Collatz. X (2K-3)<1
+i+1
+Este último resultado es contradictorio siendo K > 1 y
+Demostración X + 1 ! N.
+i
+Como se aprecia, los elementos del conjunto son los impa- Así se ha demostrado por reducción al absurdo, que siendo
+res múltiplos de 3. Supongamos que en el ciclo de Collatz (2) el K > 1 debe cumplirse que
+elemento es múltiplo de 3. Esto contradice la última ecuación X > X ...▲
+i i + 1
+del ciclo:
+3X = 2KnX, Lema5
+n-1 0
+pues se tendría un miembro izquierdo que no sería múltiplo de En un ciclo de Collatz (2) con más de una ecuación (n > 1),
+3 y el miembro derecho sí. todos los no pueden ser mayores que la unidad.
+Como el ciclo puede iniciarse en cualquiera de sus elemen- Demostración: Por reducción al absurdo, supongamos que en
+tos, razonando análogamente para cualquiera de ellos, se obtie- el ciclo (2), con n > 1, todos los K son mayores que la unidad,
+i
+ne la misma contradicción...▲ entonces se tiene en virtud del lema 4, la siguiente cadena de
+desigualdades
+Lema 3 X  X  X  ...  X  X.
+0 1 2 n - 1 0
+El número es múltiplo de 3 si, y solo si, K es un número par. De aquí se tiene que
+(X  X  X) & (X = X 6 ! N, 1 ≤ i ≤ n),
+0 i 0 i 0, i
+Demostración lo cual es inadmisible, debido a que esto conduce al hecho de
+Por el binomio de Newton se tiene que: que todas las ecuaciones del ciclo serían iguales, o lo que es lo
+2k-1=(3-1)K-1=:
+/
+k
+aKk(-1)K-i3iD-1=
+mismo, que se trata del ciclo en que n = 1 que no es la suposi-
+i=0 i
+=:
+/
+k
+aKk(-1)K-i3iD+[(-1)K-1] ción inicial...▲
+i=1 i
+donde el número resultante de la sumatoria es obviamente múlti- Demostración de la subconjetura 2
+plo de 3. Por tanto 2K - 1 será múltiplo de 3 si y solo si (-1)K - 1 Según los lemas 1 y 2, los conjuntos de números impares, cu-
+lo es, y esto solo es posible si y solo si K es par, para el cual se yos elementos pueden pertenecer a un ciclo de Collatz son S y S.
+1 3
+anula este sumando...▲ Por otra parte, como todo impar es de la forma 2m - 1, m !
+N en cualquier ecuación de un proceso de Collatz y por consi-
+Lema 4 guiente en un ciclo, se obtiene, a partir de cualquier 2m - 1 un
+Si K > 1, entonces en cualquier igualdad de la forma número par de la forma 6m - 2 (véase la defi nición 1 del proce-
+3X + 1 = 2KX , se tendrá que so de Collatz; es decir
+i i + 1
+X ≥ X . (2m - 1)3 + 1 = 6m - 2
+i i + 1
+Supongamos que el ciclo comienza en el número 6p - 1 ! S 1
+3
+Demostración 2N - 1 entonces se tiene:
+De la igualdad considerada se tiene que: 3(6p-1)+1=2K1X
+1
+2KX -1 3X +1=2K2X
+X = i+1 1 2
+i 3 ...
+Supongamos, por el contrario, que siendo K > 1 se tiene que 3X +1=2Kn(6p-1)
+n-1
+X < X
+i i + 1 Pero como en toda ecuación se obtiene, tal y como vimos más
+Sustituyendo el X en esta desigualdad se tiene:
+i arriba, un número de la forma 6m - 2 se puede establecer la
+igualdad
+— 81 —
+Sociedad Cubana de Matemática y Computación
+2Kn(6p - 1) = (6m - 2), 3. Conclusión fi nal
+y transformando se tiene:
+6(Knp - m) = 2(2Kn - 1) (3) Con este trabajo ha quedado refl ejada la importancia de divi-
+dir la conjetura de Collatz en dos subconjeturas, una referida
+Conclusión parcial 1 (CP): a la existencia del ciclo de Collatz y otra referida a la unicidad
+1
+Pero, según el lema 3, para que el miembro derecho de (3) del mismo, la segunda de las cuales ha quedado totalmente de-
+sea múltiplo de 3 se requiere que K - 1 sea par y por tanto ma- mostrada.
+n
+yor que 1, y K - 1 > 1 implica que
+n
+K > 2
+n
+Supongamos, ahora, que el número que inicia el ciclo es
+4. Recomendaciones
+6p - 5 ! S 1 2N - 1; razonando de manera análoga al caso
+1
+anterior podemos plantear, esta vez, la igualdad
+Se recomienda continuar trabajando en la demostración de la
+2Kn(6p - 5) = (6m - 2).
+existencia del ciclo de Collatz y en la demostración de la exis-
+Mediante transformaciones sencillas se obtiene:
+tencia de los ciclos que generalizan dicha conjetura.
+6(2Knp-m)=5$2Kn-2=3$2Kn+2(2Kn-1)
+(4)
+Puede notarse que la demostración de la existencia del ciclo
+de Collatz puede ser aplicada de forma análoga a un tipo más
+Conclusión parcial 2 (CP ):
+2 general de proceso de Collatz, es decir, al proceso:
+qui P e a re r , a s q e u g e ú n e l e m l l i e e m m a b r 3 o , q d u e e re K ch o se d a e p ( a 4 r ) , e se s a d m ec ú ir l , tiplo de 3 se re- / c n=* aX i +1= n$ 2 X K i i+ + 1 1 ,"n,X 0 ,!2N+1k,K i+1 !
+n
+talque Xi+1!2N+1
+K > 1.
+n
+Teniendo en cuenta que en un ciclo de Collatz cualquiera de sus La unicidad no puede ser demostrada análogamente puesto que
+elementos puede ser el inicial, (por lo cual podemos considerar existen contraejemplos convincentes de la no unicidad en el
+arbitraria nuestra elección, de la primera y la última ecuacio- caso general, como es el hecho del proceso
+nes) se puede inferir, de (CP 1 ) y (CP 2 ), que en todo ciclo de Co- /5 c =* aX i +1= 5$ 2 X K i i+ + 1 1 ,X 0 !2N+1k,K i+1 !N 4
+llatz, la totalidad de los son mayores que la unidad. talque Xi+1!2N+1
+Luego, si existiese un ciclo de Collatz con más de una ecua-
+Para el cual existen, al menos, tres ciclos: el [3,1], el [13,33,83]
+ción en su representación de la forma (2), entonces esto entraría en y el [17,43,27].
+franca contradicción con la afi rmación demostrada en el lema 4.
+Por tanto, (CP) y (CP) se cumplen solamente cuando , o sea
+1 2
+cuando el ciclo de Collatz tiene la única ecuación Bibliografía
+3X + 1 = 2KX,
+0 0
+la cual es equivalente a:
+APPLEGATE, D. and LAGARIAS, J. C. (2006). The 3x+1
+1 = X(2K - 3).
+0 semigroup, J. Number Theory 177 (2006), 146-159 (MR
+Se nota claramente que esto último es solo posible si X = 1 y
+0 2006k:11037).
+K = 2, teniendo en cuenta que X ! N, por lo cual no puede ser
+0 BRENT, B. (2002). 3X + 1 dynamics on rationals with fi xed de-
+negativo. Entonces el ciclo
+3X +1 nominator, eprint: arXiv math.DS/0204170.
+[1]=&X +1= i ,X =10,
+i 4 0
+BRUCKMAN, P. S. (2008). A proof of the Collatz conjecture,
+es el único posible...▲
+International Journal of Mathematical Education in Science
+and Technology, 39, No. 3 (2008), 403-407 [Erratum: 39, No.
+4 (2008), 567.
+— 82 —
+Revista Ciencias Matemáticas
+CADOGAN, CH. C. (2000). The 3x + 1 problem: towards a so-
+lution, Caribbean J. Math. Comput. Sci. 10 (2000), paper 2,
+11pp. (MR 2005g:11032)
+CADOGAN, CH. C. (2003). Trajectories in the 3x + 1 problem,
+J. of Combinatorial Mathematics and Combinatorial Com-
+puting, 44 (2003), 177--187. (MR 2004a:11017)
+CADOGAN, CH. C. (2006). A Solution to the 3x + 1 Problem,
+Caribbean J. Math. Comp.Sci. 13 (2006), 1-11.
+KONTOROVICH, A. V. AND MILLER, S., J. (2005). Ben-
+ford’s law, values of L-functions, and the 3x + 1 problem,
+Acta Arithmetica 120 (2005), 269--297. (MR 2007c:11085).
+KONTOROVICH, A. V. AND SINAI, Y. G. (2002). Structure
+Theorem for (d, g, h)-maps, Bull. Braz. Math. Soc. (N.S.) 33
+(2002), 213-224. (MR 2003k:11034).
+LAGARIAS, J. C. (2003). The 3x + 1 Problem: An Annotated
+Bibliography (1963-1999), eprint: arxiv:math.NT/0309224
+Sept. 13, 2003, v11.
+LAGARIAS, J. C. y SOUNDARARAJAN, K. (2006), Ben-
+ford’s Law for the 3x+1 Function, J. London Math. Soc. 74
+(2006), 289-303. (MR 2007h:37007)
+LEVY, D. (2004). Injectivity and Surjectivity of Collatz Func-
+tions, Discrete Math. 285 (2004), 190--199. (MR 2005f:
+11036).
+OLIVEIRA, T y SILVA (2004). Computational verifi cation
+of 3x + 1 conjecture, web document at http://www.ieeta.pt/
+~tos/; email: tos@ieeta.pt.
+ROOSENDAAL, E. (2004). On the 3x + 1 problem, web docu-
+ment, available at: http://www.ericr.nl/wondrous/index.html
+SLAKMON, A. y MACOT, L. (2006). On the almost conver-
+gence of Syracuse sequences, Statistics and Probability Let-
+ters 76, No. 15 (2006), 1625-1630.
+— 83 —

@@ -1,0 +1,269 @@
+ALGORITMO PARA LA GENERACIÓN
+ALEATORIA DE MATRICES INVERTIBLES
+P.Freyre*1,N. Díaz* ,E. R.Morgado**
+*Facultad deMatemáticay Computación,Universidad de La Habana, Cuba.
+**Facultad de Matemática, Físicay Computación,Universidad Central “Marta Abreu”
+delas Villas. Cuba.
+RESUMEN
+En el presente artículo se exponen cuatro algoritmos para matrices cuadradas
+nxn invertibles con sus elementos pertenecientes al campo primo Z . El
+p
+primero permite la generación aleatoria de matrices, el segundo obtiene la
+inversa de una matriz seleccionada aleatoriamente por el algoritmo anterior. El
+tercero multiplica un vector fila por una matriz seleccionada aleatoriamente y
+el cuarto multiplica un vector fila por la matriz inversa de una matriz
+seleccionada aleatoriamente.
+ABSTRACT
+This work presents four new algorithms for square matrix of nxn defined in
+finite fields Z The first one allows generate a random matrix, the second one
+p.
+calculates the inverse matrix of a randomly selected non-singular matrix by the
+previous algorithm; the third one multiplies a row vector by a randomly
+selected matrix and the fourth onemultiplies a row vector by theinverse matrix
+ofa randomly selected non-singular matrix.
+MSC: 15A52
+KEY WORDS: Vector –Random matrix products,Random matrix over finite
+fields.
+1. INTRODUCCIÓN
+El objetivo del presente trabajo es dar a conocer, programados en lenguaje Mathematica,
+cuatro nuevos algoritmos para matrices cuadradas nxn invertibles donde sus elementos
+pertenecen auncampo primo Z ,ellos son:
+p
+1. Generaciónaleatoria dematrices.
+2. Cálculo de la inversa de una matriz seleccionada aleatoriamente por el
+algoritmoanterior.
+3. Multiplicaciónde unvector filaporunamatriz seleccionada aleatoriamente.
+4. Multiplicación de un vector fila por la matriz inversa de una matriz
+seleccionadaaleatoriamente.
+En Freyre P, Díaz N y Morgado E. R. (2009) se presentan en forma de pseudo código
+los cuatros algoritmos que se exponen en este trabajo para matrices cuadradas nxn con
+sus elementos pertenecientes a un campo finito arbitrario GF(q), q potencia de un primo
+p, bridándose además toda la fundamentación teórica y el análisis de la complejidad de
+los mismos.En Freyre P, Díaz N y Morgado E.R. (2010) se presentan programados, en
+1ForContact:pfreyre@matcom.uh.cu
+lenguaje Mathematica, para matrices booleanas el primero y los dos últimos de estos
+algoritmos.
+Los algoritmos que se exponen en este trabajo para la multiplicación de un vector fila
+poruna matrizseleccionada aleatoriamente ypara lamultiplicaciónde unvector fila por
+la matriz inversa de una seleccionada aleatoriamente mejoran en cuanto a complejidad a
+otros algoritmosconocidos (ver Knuth E. D. 1981yRandal D. 1993).
+En el trabajo se muestran 4 ejemplos de corrida de los programas. Los polinomios
+primitivos utilizados son tomados de Lidl R. yNiederreiter H. (1994).
+2.GENERACIÓNALEATORIADE MATRICES.
+En losprogramas tenemos que:
+n–Es el tamaño de lamatriz.
+lpp – Es la lista de polinomios primitivos g(x)  Z [x], i  {1…n}, a utilizarse en el
+i p
+algoritmo, representados en forma descendente según su grado, y se calculan con
+anterioridad. Los mismos pueden serseleccionados arbitrariamente.
+vbc – Es un parámetro de entrada y no es más que la matriz A={a } , donde a  Z
+i,j nxn i,j p
+y i, j  {1…n}, expresada en forma de filas comenzando por la n – ésima hasta la
+primera. Los componentes de la matriz A se seleccionan aleatoriamente y tienen como
+únicarestricción,que noexistai {1…n} tal que a = a =...a =0.
+i,i i,i+1 i,n
+m–Es lamatriz resultante.
+v–Vector que semultiplica porlamatriz.
+vec–Vector resultante.
+ALGORITMO PARA GENERAR DE FORMAALEATORIAUNA MATRIZ
+BOOLEANA.
+Programación del algoritmo.
+Clear[Lbi]
+Lbi[n_,i_,v_,vbc_,lpp_]:=
+Block[{x,t},
+x=lpp[[1]][Take[v,{1,i-1}]]+
+lpp[[1]][Take[vbc[[i]],{1,i-1}]]*lpp[[1]][Take[v,{i,i}]];
+If[TrueQ[x==0],x=lpp[[1]][PadLeft[{},n]]];
+t=lpp[[i]][Take[v,{i,n}]]*lpp[[i]][Take[vbc[[i]],{i,n}]];
+If[TrueQ[t==0],t=lpp[[i]][PadLeft[{},n+1-i]]];
+Return[Join[Take[x[[1]],{1,i-1}],t[[1]]]];
+]
+Clear[Genmatriz]
+Genmatriz[n_,vbc_,lpp_]:=
+Block[{m={},v=IdentityMatrix[n],i,j,vec},
+For[j=1, j<=n,j++,
+i=j+1;vec=v[[j]];While[(i=i-1)>0,vec=Lbi[n,i,vec,vbc,lpp]];
+AppendTo[m,vec]
+];
+Return[m];
+]
+ALGORITMO PARA LA MULTIPLICACIÓN DE UN VECTOR X POR UNA
+MATRIZ SELECCIONADAALEATORIAMENTE.
+Programación del algoritmo.
+Clear[Lbi]
+Lbi[n_,i_,v_,vbc_,lpp_]:=
+Block[{x,t},
+x=lpp[[1]][Take[v,{1,i-1}]]+
+lpp[[1]][Take[vbc[[i]],{1,i-1}]]*lpp[[1]][Take[v,{i,i}]];
+If[TrueQ[x==0],x=lpp[[1]][PadLeft[{},n]]];
+t=lpp[[i]][Take[v,{i,n}]]*lpp[[i]][Take[vbc[[i]],{i,n}]];
+If[TrueQ[t==0],t=lpp[[i]][PadLeft[{},n+1-i]]];
+Return[Join[Take[x[[1]],{1,i-1}],t[[1]]]];
+]
+Clear[Mulvec]
+Mulvec[n_,v_,vbc_,lpp_]:=
+Block[{vec},
+vec=v;Do[vec=Lbi[n,n-i,vec,vbc,lpp],{i,0,n-1}];
+Return[vec];
+]
+ALGORITMO PARA LA MULTIPLICACIÓN DE UN VECTOR BINARIO X
+POR LA INVERSA DE UNA MATRIZ SELECCIONADA ALEATORIAMENTE.
+Programación del algoritmo.
+Clear[ILb]
+ILb[n_,i_,v_,vbc_,lpp_]:=
+Block[{x,t},
+t=lpp[[i]][Take[v,{i,n}]]*(lpp[[i]][Take[vbc[[i]],{i,n}]]^-1);
+If[TrueQ[t==0],t=lpp[[i]][PadLeft[{},n+1-i]]];
+x=lpp[[1]][Take[v,{1,i-1}]]-
+lpp[[1]][Take[vbc[[i]],{1,i-1}]]*lpp[[1]][t[[1]][[{1}]]];
+If[TrueQ[x==0],x=lpp[[1]][PadLeft[{},n]]];
+Return[Join[Take[x[[1]],{1,i-1}],t[[1]]]];
+]
+Clear[IMulvec]
+IMulvec[n_,v_,vbc_,lpp_]:=
+Block[{i,vec},
+i=0;vec=v;While[(i=i+1)<n+1,vec=ILb[n,i,vec,vbc,lpp]];
+Return[vec];
+]
+Ejemplo 1.Dados los polinomios primitivos:1+x+ x6; 1+x2+ x5; 1+x+ x4; 1+x2
++x3; 1+x+ x2; 1+x,ylos vbc= {{1,0,0,0,0,0},{0,1,1,0,0,1},{0,0,0,1,0,1},
+{0,1,0,0,1,0},{0,1,1,0,1,1},{1,0,1,0,1,1}} quehansido seleccionados aleatoriamente.
+Generacióndelamatrizaleatoria.
+<<Algebra`FiniteFields`
+lpp= {GF[2, {1, 1,0,0,0,0,1}], GF[2, {1, 0,1,0,0,1}], GF[2, {1, 1,0,0,1}],
+GF[2, {1, 0,1,1}], GF[2, {1, 1,1}], GF[2, {1, 1}]}
+vbc={{1,0,0,0,0,0},{0,1,1,0,0,1},{0,0,0,1,0,1},{0,1,0,0,1,0},{0,1,1,0,1,1},
+{1,0,1,0,1,1}}
+m= Genmatriz[6,vbc,lpp]
+MatrixForm[%]
+
+
+
+
+
+M  u  lti  pl  ic  ac  ióndeunvector por lamatriz.
+<<Algebra`FiniteFields`
+x={0,1,1,0,1,1}
+y=Mulvec[6,x,vbc,lpp]
+IMulvec[6,y,vbc,lpp]
+{0,1,1,0,1,1}
+{1,0,1,0,0,0}
+{0,1,1,0,1,1}
+Multiplicaciónde unvector porlamatrizinversa.
+<<Algebra`FiniteFields`
+x={0,1,1,0,1,1}
+y=IMulvec[6,x,vbc,lpp]
+Mulvec[6,y,vbc,lpp]
+{0,1,1,0,1,1}
+{0,0,1,1,1,0}
+{0,1,1,0,1,1}
+Ejemplo 2.Dados los polinomios primitivos:2+x5 +x6; 1+x2 +x4+ x5; 2+x3+ x4;
+1+2x2+ x3; 2+x+ x2; 1+x,ylos vbc={{2,0,0,2,1,1},{2,2,1,0,2,2},{0,2,1,1,0,1},
+{0,1,2,2,0,2},{0,1,1,1,0,1},{2,1,1,1,1,2}} quehansido seleccionados aleatoriamente.
+Generacióndelamatrizaleatoria.
+<<Algebra`FiniteFields`
+lpp= {GF[3, {2, 0,0,0,0,1,1}], GF[3, {1, 0,1,0,1,1}], GF[3, {2, 0,0,1,1}],
+GF[3, {1, 0,2,1}], GF[3, {2, 1,1}],GF[3, {1, 1}]}}
+vbc={{2,0,0,2,1,1},{2,2,1,0,2,2},{0,2,1,1,0,1},{0,1,2,2,0,2},{0,1,1,1,0,1},
+{2,1,1,1,1,2}}
+m= Genmatriz[6,vbc,lpp]
+MatrixForm[%]
+
+
+
+
+
+M  ul  tip  li  ca  ci  ónde unvector porlamatriz.
+<<Algebra`FiniteFields`
+x={0,1,2,2,0,2}
+y=Mulvec[6,x,vbc,lpp]
+IMulvec[6,y,vbc,lpp]
+{0,1,2,2,0,2}
+{2,2,1,0,2,1}
+{0,1,2,2,0,2}
+Multiplicaciónde unvector porlamatrizinversa.
+<<Algebra`FiniteFields`
+x={0,1,2,2,0,2}
+y=IMulvec[6,x,vbc,lpp]
+Mulvec[6,y,vbc,lpp]
+{0,1,2,2,0,2}
+{2,2,1,1,2,0}
+{0,1,2,2,0,2}
+Ejemplo 3.Dados los polinomios primitivos:2+x5 +x6; 2+x2 +x5; 3+x+ x3+x4;2
++x2+ x3; 2+x+ x2; 2+x,ylos vbc={{1,2,0,0,4,4},{2,2,2,0,3,3},{4,1,2,3,1,1},
+{1,2,3,4,1,0},{1,4,3,4,2,0},{2,1,3,0,3,1}} quehansido seleccionados aleatoriamente.
+Generacióndelamatrizaleatoria.
+<<Algebra`FiniteFields`
+lpp= {GF[5, {2, 0,0,0,0,1,1}], GF[5, {2, 0,1,0,0,1}], GF[5, {3, 1,0,1,1}],
+GF[5, {2, 0,1,1}], GF[5, {2, 1,1}],GF[5, {2, 1}]}
+vbc={{1,2,0,0,4,4},{2,2,2,0,3,3},{4,1,2,3,1,1},{1,2,3,4,1,0},{1,4,3,4,2,0},
+{2,1,3,0,3,1}}
+m= Genmatriz[6,vbc,lpp]
+MatrixForm[%]
+
+
+
+
+
+M  ul  tip  li  ca  ci  ónde unvector porlamatriz.
+<<Algebra`FiniteFields`
+x={4,1,2,3,1,1}
+y=Mulvec[6,x,vbc,lpp]
+IMulvec[6,y,vbc,lpp]
+{4,1,2,3,1,1}
+{1,1,2,0,0,1}
+{4,1,2,3,1,1}
+Multiplicaciónde unvector porlamatrizinversa.
+<<Algebra`FiniteFields`
+x={4,1,2,3,1,1}
+y=IMulvec[6,x,vbc,lpp]
+Mulvec[6,y,vbc,lpp]
+{4,1,2,3,1,1}
+{4,0,4,3,1,1}
+{4,1,2,3,1,1}
+Ejemplo 4.Dados los polinomios primitivos:3+x4 +x5+ x6; 4+x4+ x5; 3+x2+ x3+
+x4; 2+x+x2 +x3; 3+ x+x2; 2+ x,ylosvbc= {{2,6,6,6,1,2},{5,1,6,0,6,6},
+{2,1,2,5,3,6},{3,4,3,4,5,4},{0,0,5,3,3,5},{5,4,5,0,0,4}}que han sido seleccionados
+aleatoriamente.
+Generacióndelamatrizaleatoria.
+<<Algebra`FiniteFields`
+lpp= {GF[7, {3, 0,0,0,1,1,1}], GF[7, {4, 0,0,0,1,1}], GF[7, {3, 0,1,1,1}],
+GF[7, {2, 1,1,1}], GF[7, {3, 1,1}], GF[7, {2, 1}]}
+vbc={{2,6,6,6,1,2},{5,1,6,0,6,6},{2,1,2,5,3,6},{3,4,3,4,5,4},{0,0,5,3,3,5},
+{5,4,5,0,0,4}}
+m= Genmatriz[6,vbc,lpp]
+MatrixForm[%]
+
+
+
+
+
+M  ul  tip  li  ca  ci  ónde unvector porlamatriz.
+<<Algebra`FiniteFields`
+x={3,4,3,4,5,4}
+y=Mulvec[6,x,vbc,lpp]
+IMulvec[6,y,vbc,lpp]
+{3,4,3,4,5,4}
+{4,3,0,6,2,6}
+{3,4,3,4,5,4}
+Multiplicaciónde unvector porlamatrizinversa.
+<<Algebra`FiniteFields`
+x={3,4,3,4,5,4}
+y=IMulvec[6,x,vbc,lpp]
+Mulvec[6,y,vbc,lpp]
+{3,4,3,4,5,4}
+{0,1,6,6,3,3}
+{3,4,3,4,5,4}
+BIBLIOGRAFÍA
+FREYRE P., DÍAZ N. Y MORGADO E. R. (2009): Fast algorithm for the
+multiplication of a row vector by a randomly selected matrix A. Journal of
+Discrete Mathematical Sciences & Cryptography,12,533–549.
+FREYRE P, DÍAZ N Y MORGADO E. R. (2010) “Algoritmo para la
+generación aleatoria de matrices booleanas invertibles”. Revista Investigación
+Operacional.Universidad delaHabana. Vol. 31,No.3, 258-263..
+KNUTHE. D. (1981). The Art ofComputerProgramming. Vol 2.Addison –Wesley.
+2daed. ,N. York.
+LIDL R.yNIEDERREITER H. (1994). Introduction to Finite Fields and their
+Applications.Cambridge University. New York.
+RANDAL D. (1993). Efficient Generation ofRandom Nonsingular Matrices.
+(http://citeseer.ist.psu.edu).

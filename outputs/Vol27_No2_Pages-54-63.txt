@@ -1,0 +1,548 @@
+Sociedad Cubana de Matemática y Computación
+Justifi cación analítica y numérica del método
+^f^ , hd h = 0
+de solución del problema directo div x y u ,
+con coefi ciente variable y condición de contorno tipo
+Dirichlet
+Emmanuel Abdias Romano Castillo (aromano@mixteco.utm.mx), Alexandre I. Grebennikov (agrebe50@yahoo.com.mx)
+Benemérita Universidad Autónoma de Puebla, FCFM BUAP
+Resumen 1. Introducción
+Se propone un nuevo método para resolver el problema de Di-
+richlet para la ecuación div [ε(x,y)grad u (x,y)] = 0 donde la En nuestro entorno a cada momento se desarrollan dos clases
+función ε(x,y) es una función conocida. El método está basa- de problemas: directos e inversos. La resolución de un proble-
+do en el Principio de Rayos Generales (PRG) propuesto en [1]. ma directo, por ejemplo, encontrar las soluciones de una ecua-
+Con este método se obtiene una solución explícita del problema ción algebraica, predecir los efectos de una acción, involucra
+de contorno de Dirichlet empleando la Transformada Directa análisis o razonamiento progresivo, es decir, de premisas a
+e Inversa de Radon. El objetivo de este artículo es exponer la conclusiones. En cambio la, resolución de un problema inverso
+justifi cación teórica y la implementación numérica del método. involucra síntesis o razonamiento regresivo, es decir, de con-
+La implementación numérica se realiza por algoritmos rápidos, clusiones a premisas o de efectos a causas [1]. El desarrollo de
+programados en el sistema Matlab y se compara con el método nuevos métodos para resolver problemas directos es muy im-
+de elemento fi nito. portante para resolver problemas inversos [2, p. 311]. La ecua-
+ción div [ε(x,y)grad u (x,y)] = 0 describe la distribución de la
+Abstract
+función potencial u(x,y)para cualquier campo estacionario, que
+We propose a new method for solving the Dirichlet problem puede interpretarse como electrostático, elástico u óptico; don-
+for equation [ε(x,y)grad u (x,y)] = 0 where ε(x,y) is a known de ε(x,y) representa alguna característica del medio [3] [4]. Hay
+function. The method is based on the Principle of General Ray dos principales enfoques para resolver la ecuación div [ε(x,y)
+(PRG) proposed in [1]. With this method provides an explicit grad u (x,y)] = 0 en forma analítica para cuando ε(x,y) es co-
+solution of the Dirichlet boundary problem with direct and nocida: descomposición de Fourier y método de funciones de
+inverse transform Radon. The aim of this paper is to present Green [3]. La descomposición de Fourier es usada, como re-
+theoretical justifi cation and the numerical implementation of gla, solo en investigaciones teóricas. El método de funciones de
+the method. The numerical implementation is realized by rapid Green es uno de los más explícitos [3], pero su difi cultad radica
+algorithms programmed in the system Matlab, and is compared en la construcción de la función de Green para coefi ciente va-
+with the method of fi nite element. riable e igualmente si el dominio es de geometría compleja (Ω
+un dominio estrellado). Los algoritmos numéricos conocidos
+para el problema considerado están basados en el método de
+— 54 —
+Revista Ciencias Matemáticas
+diferencias fi nitas, método de elemento fi nito (volumen fi nito) y 3. Fundamento teórico de la p-versión
+el método de ecuaciones integrales de contorno. El tratamiento
+del GR-método y esquema de solución
+numérico de los algoritmos conocidos induce a resolver siste-
+para (1)-(2) empleando la p-versión
+mas lineales de ecuaciones algebraicas [4], que requieren ma-
+yor tiempo de cómputo y memoria.
+En trabajos [9] y [10] fueron presentadas investigaciones de la
+Un enfoque nuevo para resolver problemas de contorno en
+posibilidad de reducir el problema en Ecuaciones Diferencia-
+la base del Principio de Rayos Generales (PRG) fue propuesto
+les Parciales (EDP) a una familia de Ecuaciones Diferenciales
+en [5], [6] para campos de ondas estacionarias. En [7] se pro-
+Ordinarias (EDO) usando la Transformada Directa de Radon.
+pone la p-versión del Método de Rayos Generales, esta versión
+El método de solución planteado para resolver (1)-(2) al cual
+está basada en la aplicación de la transformada directa e inver-
+nombramos la p-versión del Método de Rayos Generales (para más
+sa de Radon para EDP [8]. En este artículo se considera que el
+información consulte apéndice) consiste en los siguientes pasos:
+coefi ciente de permitividad del medio es una función de distri-
+bución espacial y se propone la reducción de coefi cientes varia-
+Paso 1: Reducir el problema de contorno no-homogéneo a un
+bles a coefi cientes constantes. Los algoritmos correspondientes
+problema homogéneo mediante un cambio de variable.
+están realizados como programas en el sistema MATLAB e
+Paso 2: Reducir la ecuación (1) con coefi ciente variable a una
+ilustrados por experimentos numéricos, además se realiza una
+ecuación tipo Poisson con coefi cientes constantes.
+comparación entre el método de solución y el Método de Ele-
+Paso 3: Describir la distribución de la función potencial a lo
+mento fi nito (MEF).
+largo de un rayo general (línea recta ℓ) por su transformada
+directa de Radon u(p).
+ϕ
+Paso 4: Construir la familia de EDO en la variable p con res-
+2. Planteamiento del problema
+pecto a la función u(p), aplicando la transformada directa
+ϕ
+de Radon a EDP con condición de contorno homogénea.
+Sea Ω un dominio estrellado, acotado simplemente conexo con
+Paso 5: Resolver la familia de EDO sujeta a condiciones de
+frontera Γ sufi cientemente regular y sea ε: Ω → R una función
+contorno homogéneas.
+estrictamente positiva y dos veces continuamente diferenciable.
+Paso 6: Calcular la inversa de la transformada de Radon de la
+Considere la ecuación diferencial parcial de tipo elíptico,
+solución obtenida en paso anterior.
+esto es
+Paso 7: Recuperar la solución del problema (1) - (2), agregan-
+div6f(x,y)du(x,y)@=0 (x,y)!X
+(1) do funciones construidas para satisfacer las condiciones (2).
+y condición de contorno de la primera especie (fi jar el valor de
+la solución que se va buscando en la frontera): Suponemos que el contorno Γ puede ser descrito en coordena-
+u(x,y)=f(x,y), (x,y)!C (2) das polares (r,θ), para alguna función positiva que denotamos
+por r (θ), θ![0,2π]. Esto es siempre posible para una región es-
+Las ecuaciones (1)-(2) defi nen lo que se denomina Problema de 0
+trellada cerrada Ω con centro en el origen de coordenadas. De
+Dirichlet. El problema consiste en hallar u(x, y) dos veces con-
+este modo podemos escribir la condición de contorno como:
+tinuamente diferenciable en ambas variables en el interior del
+f(i)=f^r(i)cosi,r(i)s en ih (3)
+dominio Ω, suponiendo conocidasf(x,y) y ε(x,y) > 0. Tenemos 0 0
+_
+la ecuación (1) en forma divergente y el problema (1)-(2) descri- Paso 1: Suponemos que las funciones: r (θ) y f(θ) tienen se-
+0
+be la distribución de la función potencial u(x, y) para cualquier gundas derivadas e introducimos las siguientes funciones:
+campo estacionario, que puede interpretarse como electrostáti- f(i)
+f(i)= , (x,y)!X (4)
+0 r2(i)
+co, elástico u óptico [3], [4]. 0
+— 55 —
+Sociedad Cubana de Matemática y Computación
+u (x,y)=u(x,y)-r2f(i) (5) f(i)=f(Rcosi,Rseni) (16)
+0 0
+f(x,y)8f 0 (r,i) (6) 1
+Supongamos que f(x,y)= es positivo y que
+6cos(x+y)+2@
+Obteniendo la ecuación (1) en forma polar e intercambiando el
+v = v = 1, la representación de ε(x,y) en coordenadas polares
+coefi ciente variable por (6) queda: x y
+es denotada por ε (r,θ).
+0
+(7)
+4.1 Solución analítica
+Sustituyendo (5) en (7) y simplifi cando queda:
+Procedemos a recuperar la solución u (x,y) para el problema
+div^f duh=-}
+(8)
+0
+0 0 0 equivalente (10) - (11), empleando la primer variante de (12):
+donde
+u (x,y)=
+#x
+8v xB
+dx+h(y) (17)
+} =4f
+f(i)+2rf(i)a2f0k+f f''(i)+f'(i)a2f0k
+(9)
+0 f
+0 0 0 0 2r 0 0 0 2i x1
+#x
+De este modo conseguimos el problema equivalente a (1) - (2): u (x,y)= "cos^x,yh+2,dx +h(y) (18)
+0 0 0
+div^f duh=-}
+(10)
+x1
+0 0 0
+Para determinar h(y) de manera explícita en (18) procedemos
+u = 0 (11)
+0
+conforme a lo siguiente:
+Usando (2), (3), (4) y (5) se tiene (11) que representa la tran-
+sición de condición de contorno no-homogénea a homogénea.
+1. Establecemos límites de integración, para satisfacer auto-
+Paso 2: Para reducir la ecuación (10) con coefi cientes variables
+máticamente las condiciones de contorno en las curvas Γ
+a una ecuación con coefi cientes constantes, se realiza la si- 2
+Γ y Γ, donde Γ es la rama izquierda de (19) y Γ es la rama
+guiente reducción: 1 2 1 2
+derecha de (19).
+f0a2u0k=a2vk,
+f
+c2u0 m=a2vk
+(12)
+2x 2x 0 2y 2y 2. Sea h(y) una función a trozos, debido a la condición de con-
+2 af 2u0k=a22vk, 2 cf 2u0 m=d 22y n (13) torno en distintas ramas denotadas como Γ 1 y Γ 2 .
+2x 0 2x 2x2 2y 0 2y 2y2
+3. Establecer la continuidad de la solución hasta la frontera,
+Empleando (12) – (13) en (10) se consigue la realización del por coincidencia de valores de las funciones obtenidas por
+paso 2 del esquema quedando: las fórmulas que presentan la solución analítica en diferen-
+Δv = -ψ , (14) tes partes del dominio que corresponden a las curvas Γ y Γ
+0 1 2.
+v = 0. (15)
+donde el lado derecho de (14) está representado por (9). La reali- Para el primer paso, considere dos ramas del círculo de radio R
+zación concreta de los pasos: 3-7 del esquema están implementa- centrado en el origen; en términos de la expresión matemática:
+dos en los algoritmos desarrollados para sistema Matlab y cuyos x2+y2=R2&x=! R2-y2 (19)
+resultados numéricos presentan las etapas de procesamiento.
+Una vez despejada la variable x en (19) se puede emplear para es-
+tablecer los límites de la ecuación (18) y se aplican según la rama:
+4. Ejemplo analítico-numérico para la
+Z]
+] ]
+]
+Z]
+] ]] + R2-y2 + R2-y2
+_b
+b bb
+ecuación div^f^x,yhduh = 0 con coe- ] ] ] ]
+] ] ]
+[
+\
+] ] ]]
+x 0
+8
+=x
+cos(x 0 +y)dx 0 +
+x 0
+8
+=x
+2dx 0 `
+a
+b b bb + (20a)
+fi ciente variable ]]+h(y),0#x#+ R2-y2,
+u
+0
+(x,y)=[]
+] ] ]
+Z]
+] ]]
+1
+x 0 =x x 0 =x
+_b
+b bb
+Consideremos el problema de contorno (1) – (2) sobre el círculo ] ] ] ] ] ] [] ] ]]- R 8 2-y2 cos(x 0 +y)dx 0 + - R 8 2-y2 2dx 0 `b b bb +
+]\ a (20b)
+]]h(y),- R2-y2#x#0,
+de radio R. Luego Γ puede ser descrita en coordenadas polares \ 2
+(r,θ) y (3) cambia por:
+— 56 —
+Revista Ciencias Matemáticas
+Realizando integración queda: Así podemos formular a u como:
+0
+Z] ] ] ] * sen_ R2-y2+yi-sen(x+y)+ 4+ (20c) u 0 (x,y)=sen(x+y)-sen_ R2-y2+yi+2_x+ R2-y2i
+] ]
+]
++2_ R2-y2-yi &u(x,y)=sen(x+y)-sen_- R2-y2+yi+
+]
+] ] +h(y),0#x#+ R2-y2, +2_x+ R2-y2i+H (y)
+u =(x,y)[] 1 2
+0 ] ] sen^x+yh-sen(- R2-y2+y)+ &u =sen(x+y)+2(x+y)=
+] ] * 4+ C
+] ] +2_x+ R2-y2-yi =sen_- R2-y2+yi+2_- R2-y2+yi
+]
+\
+] ]+h
+2
+(y),- R2-y2 #x#0, (20d) &sen_- R2-y2+yi+2_- R2-y2+yi=
+Proponemos el siguiente par de ecuaciones que deben satisfa-
+=sen_- R2-y2+yi-sen_- R2-y2+yi+
++2_- R2-y2+ R2-y2i+H (y)
+cer las condiciones de contorno: 2
+u 0 (x,y)=g(x,y)+h(y) (21a) &H 2 (y)=sen_- R2-y2+yi+2_- R2-y2+yi
+u(x,y)=u 0 (x,y)+H(y) (21b)
+&(x,y)=sen(x+y)-sen_- R2-y2+yi+
++2_x+ R2-y2i+sen_- R2-y2+yi+2_- R2-y2+yi
+A fi n de obtener la solución explícita, se realizan dos etapas que com-
+&u(x,y)=sen(x+y)+2(x+y)
+prende la obtención de (21a) seguida de (21b) en las ramas Γ y Γ.
+1 2
+De este modo, las soluciones correspondientes a las ramas Γ y
+1
+Γ, muestran de manera explícita para un ejemplo modelo la va-
+Caso 1: Solución en la rama Γ 2
+1
+u (x,y)=sen_ R2-y2+yi-sen(x+y)+ lidez del método, para un conjunto de datos de entrada.
+0
++2_ R2-y2-yi+h (y)
+1
+4.2 Experimentos numéricos
+&u =sen_ R2-y2+2i-sen_ R2-y2+yi+
+0 C
++2_ R2-y2- R2-y2i+h (y) Se realizan experimentos numéricos para el problema (1)-(2)
+1
+u =0&h (y)=0 siguiendo los pasos del esquema (1)-(7). Sea el ejemplo si-
+0 C 1
+Así podemos formular a u como: mulado cuya solución exacta es u(x,y) = sen (x + y) + 2(x +
+0
+u 0 (x,y)=sen_ R2-y2+yi-sen(x+y)+2_ R2-y2+yi y) y considere el coefi ciente de permisividad en dos sistemas
+1
+Una representación equivalente de la expresión anterior es: de referencia: (rectangular) f(x,y)= ; (polar)
+cos(x+y)+2
+u (x,y)=-sen_ R2-y2+yi+sen(x,y)-2_ R2-y2-yi 1
+0 f (r,i)= .
+&u(x,y)=-sen_ R2-y2+yi+sen(x,y)-
+0 cos(r^cosi+senih)+2
+-2_ R2-y2-yi+H (x) Considere Ω el círculo centrado en el origen de radio R,
+1
+&u =sen(x,y)+2(x+y)= cuya parametrización de la condición de contorno defi nida por
+C
+=sen_ R2-y2+yi+2_ R2-y2+yi Γ simple; por otro lado debemos componer la expresión (9) me-
+&sen_ R2-y2+yi+2_ R2-y2+yi= diante resultados parciales a partir de las fórmulas (3)-(6):
+=-sen_ R2-y2+yi+ sen^R^cosi+senihh 2^cosi+senih
+f(i)= + , 2
++sen_ R2-y2+yi-2_ R2-y2- R2-y2i+H (y) 0 R2 R
+1
+-^seni+cosih
+&H (y)=sen_ R2-y2+yi+2_ R2-y2+yi f'= 6cos^R^cosi+senihh+2@.
+1 0 R
+&u(x,y)=-sen_ R2-y2+yi+sen(x+y)-
+-^seni+cosih
+-2_ R2-y2-xi+sen_ R2-y2+yi+2_ R2-y2+yi f 0 ''= R 6cos^R^cosi+senihh+2@-
+&u(x,y)=sen(x+y)+2(x+y) -^cosi-senih2sen^R^cosi+senihh
+2f
+sen^r^cosi+senihh6r^cosi-senih@
+=
+2i 6cos^r^cosi+senihh+2@2
+Caso 2: Solución en la rama Γ 2f sen^r^cosi+senihh6^cosi-senih@
+2 2r = 6cos^r^cosi+senihh+2@2
+u (x,y)=sen(x+y)-sen_- R2-y2+yi+
+0
++2_x+ R2-y2i+h (y) A continuación procedemos a realizar cálculos numéricos a tra-
+2
+&u =sen_- R2-y2+yi-sen_- R2-y2+yi+ vés de las expresiones obtenidas para R = 1, de este modo de-
+0 C
++2_- R2-y2+ R2-y2i+h (y), seamos cumplir los siguientes puntos:
+2
+u =0&h (y)=0
+0 C 2
+— 57 —
+Sociedad Cubana de Matemática y Computación
+1. Resolver el problema equivalente (14)-(15). A continuación presentamos una descripción de los rasgos en
+2. Recuperar u (x,y) en forma analítica por formula (20a)- forma detallada:
+0
+(20b) según las curvas Γ, Γ.
+1 2
+3. Recuperar u(x,y) por (5) en forma numérica y comparar con 1. La transformada de Radon se obtuvo mediante dos vías y
+la solución exacta del problema para el coefi ciente de permi- comprende el empleo de dos métodos: programa alternativo
+sividad expresado como una función ε(x,y). escrito por autores y comando interno de sistema Matlab. A
+primera vista el comando interno genera un tipo de informa-
+Se procede a analizar el comportamiento cualitativo de la aproxi- ción artifi cial; en forma visual corresponde a dos mesetas de
+mación numérica de la solución para el problema (1)-(2) dados los valor cero a los costados, paralelas al eje que corresponde al
+datos iniciales: permisividad del medio y condición de contorno. parámetro angular. Aún no contamos con una estrategia de
+Los experimentos se realizan para n-valores de nodos y n-rayos de eliminación de esta información artifi cial.
+escaneo, algunas variables indicadoras del comportamiento de la 2. Por nuestro método e implementación de programa obtene-
+p-versión del método de rayos generales se resumen a continuación: mos la transformada de Radon; observe que no agrega infor-
+mación artifi cial.
+1. Comparación del cálculo de la transformada de Radon por 3. Las superfi cies obtenidas no guardan similitud alguna, tie-
+los programas pradon y comando interno de Matlab radon. nen una morfología distinta.
+2. Verifi cación de las condiciones de contorno a lo largo de las
+Experimento numérico que muestra las recu-
+ramas Γ, Γ.
+1 2
+peraciones de las soluciones v(x,y) y u (x,y)
+3. Efectos de la simetría del problema y escala de presentación.
+0
+4. Convergencia de la p-versión del método de rayos generales.
+Experimento numérico de la Transformada
+de Radon por dos vías de obtención
+— 58 —
+Revista Ciencias Matemáticas
+Se presenta una descripción de la calidad de las recuperaciones En las siguientes líneas se explican las fi guras tomando el or-
+en problemas: (14)-(15) y (10)-(11) mediante cálculos numéri- den por renglones de arriba-abajo.
+cos obtenidos:
+1. El primer experimento corresponde al primer renglón; este
+1. La fi gura a la izquierda corresponde a la solución del proble- fue realizado para n = 41 nodos en cada variable p y φ (n ra-
+ma (14)-(15) por el empleo del método de la Transformada yos y n escaneos), mientras que el segundo experimento co-
+Directa e Inversa de Radon por autores. Un rasgo importan- rresponde al segundo renglón; este fue realizado para n = 81
+te que hay que señalar es que cumple las condiciones de con- nodos en cada variable p y φ (n rayos y n escaneos).
+torno en el contorno. 2. Las columnas de izquierda a derecha representan lo siguien-
+2. La fi gura a la izquierda tiene un punto máximo y punto mí- te: soluciones u exactas del problema (1) - (2) y soluciones u
+nimo y espacialmente tiene la característica de simetría res- recuperadas al problema (1) - (2) empleando los pasos 1 – 7
+pecto a una proyección de la recta y = x. de la p-versión del método de rayos generales.
+3. La fi gura a la derecha muestra la recuperación de la solución u 3. Seleccionamos dos variables que nos permiten medir la ca-
+0
+numéricamente para el problema equivalente (10)-(11), la cual lidad de recuperación a través de nuestro método; estas son:
+satisface las condiciones de contorno, está solución numérica dmáx - el error máximo y dsr – el error promedio en media
+se sustituye en (5) para determinar u de manera aproximada. cuadrática.
+4. Se realizan muchos experimentos en función de la cantidad
+Experimento numérico que muestra
+de rayos de escaneo, para resumir mostramos dos experi-
+la recuperación de la solución del problema mentos: el experimento para n = 41 nodos en cada varia-
+(1)-(2) para n-nodos e igualmente n-rayos de ble p y φ (n rayos y n escaneos) se obtuvo dmáx = 0.2365,
+escaneo dsr = 0.0571; el experimento para n = 81 nodos en cada va-
+— 59 —
+Sociedad Cubana de Matemática y Computación
+riable p y φ (n rayos y n escaneos) se obtuvo dmáx = 0.1606, truido; medir la calidad y rapidez de recuperación mediante
+dsr = 0.0372. cálculos numéricos.
+5. Observe que la recuperación por la p-versión del esquema de
+rayos generales para el ejemplo numérico, cuyos datos de en-
+trada se establecieron en líneas superiores cumple los siguien- 7. Apéndice
+tes puntos: aumento de número de nodos muestra una clara
+tendencia a disminuir el error máximo y el error promedio en
+7.1. Método de Rayos Generales
+media cuadrática; por tanto la calidad de recuperación óptima.
+Para modelar problemas que no dependen de la variable tem-
+poral y que están restringidos a las variables espaciales, cuya
+6. Comentarios fi nales
+dinámica es considerada estacionaria y concretamente en
+ecuaciones diferenciales parciales (EDP) los modelos mate-
+Este trabajo de investigación explica el esquema de solución máticos cuyo enfoque está aplicado a los problemas de con-
+del problema planteado (1)-(2) por medio de la p-versión del torno se utilizará el Principio de Rayos Generales (PRG). El
+método de rayos generales y para un ejemplo sintético abarca PRG fue propuesto en [5] y [6] y consta de las siguientes su-
+los aspectos analítico y numérico, que nos permiten establecer posiciones:
+las siguientes afi rmaciones:
+1. Considera la infl uencia del campo físico externo como rayos
+1. Se muestra analíticamente el valor de las funciones auxilia- que pueden ser simulados matemáticamente por el campo
+res h(y), h (y) que componen a la solución u en forma ana- vectorial plano V(l) paralelo a la dirección a lo largo de la
+1 2 0
+lítica para cada una de las ramas Γ y Γ (izquierda y derecha) línea recta l;
+1 2
+del círculo de radio R expresado en (19). 2. El campo V(l) es caracterizado con alguna función
+2. Obviamente se calculó de manera analítica la solución u u(x,y);
+para el problema (1) - (2) empleando (21a) - (21b) para las ra- 3. Valores de la función u(x,y) o fl ujo del vector V(l) son co-
+mas: Γ
+1
+y Γ
+2
+; la cual en la frontera coincide con la condición nocidos en el contorno Γ.
+de contorno de Dirichlet prefi jada.
+3. Se resolvió numéricamente (1) - (2), para el ejemplo simula- La aplicación del PRG a problemas bajo investigación signifi -
+do y se estudió el comportamiento del cálculo numérico de ca la construcción de un análogo de la ecuación (1)-(2) descri-
+la transformada directa de Radon; a través de dos progra- biendo la distribución de la función u(x,y) a lo largo de “Rayos
+mas: programa pradon y función interna de sistema Matlab Locales Generales” que formalizan un modelo matemático del
+radon. De lo cual se desprende que nuestro método de cons- esquema de escaneo, los cuales vienen expresados como líneas
+trucción es mejor; ya que no incorpora información artifi cial l para algún tipo de parametrización.
+la cual destruye propiedades esperadas de las soluciones. Considere la parametrización de alguna línea recta l debi-
+4. Los pasos posteriores del experimento generaron los resul- do al parámetro t: x = pcosφ - tsinφ, y = psinφ + tcosφ. Aquí
+tados parciales con la satisfacción de las condiciones de con- |p| es la longitud de la perpendicular del centro de coorde-
+torno en la ramas Γ y Γ para la solución v al problema (14) nadas a la línea l, φ ! [0,π] es el ángulo entre el eje x y está
+1 2
+- (15) y la solución numérica u al problema (10) – (11) em- perpendicular.
+0
+pleando (12). Luego, el siguiente uso del resultado numérico En trabajos [5] y [6] fue construida la t-versión del método
+u en (5) permite recuperar u con buena calidad y rapidez. de rayos generales. Usando la parametrización se convierten
+0
+5. Por lo tanto, la parte analítica y numérica para este ejemplo las funciones u(x,y), ε(x,y), f(x,y) en (x,y) ! l para p, φ fi jo a las
+sintético permiten: establecer la validez del método cons- función de u(t), ε(t) f(t) de la variable t. Supongamos ahora que
+— 60 —
+Revista Ciencias Matemáticas
+el dominio Ω es convexo. Defi namos para cada p y φ fi jo las u en el interior de Ω en forma numérica. Es un requisito estable-
+funciones u (p,φ) = u(t), u(pφ) = u(t), para los parámetros t cer parámetros que permitan determinar la calidad mediante la
+0 0 1 1 0
+y t, que corresponden a los puntos de la intersección de la línea representación visual y el tiempo de realización de cálculos nu-
+1
+l y la frontera del dominio. méricos. El toolbox denominado PDETool del sistema Matlab
+Aquí, el PRG conduce a la reducción de EDP a una familia utiliza en la resolución de EDP el Método de Elemento Finito
+(que dependen de p,φ) de ecuaciones diferenciales ordinarias (MEF) para problemas defi nidos en dominios acotados en el
+(EDO) como una versión local de la ecuación (1): plano. Para aproximar la solución numérica de una EDP elípti-
+6f^thu(t)@ =0,t!6t,t@ (22) ca se procede mediante tres pasos:
+t t 0 1
+Las correspondientes condiciones de contorno conducen a las
+1. Describir la geometría del dominio Ω y la condición de
+correspondientes condiciones de contorno locales para u(t) en
+contorno. Esto se puede realizar en cualquiera de las vías:
+los puntos t y t. Designamos como u (t) la solución del pro-
+0 1
+p,{
+interactiva usando pdetool o a través de archivos *.m
+blema local (22) con tales condiciones de contorno. La t-versión
+2. Construir una mallado o grilla triangular del dominio
+del método de rayos generales consiste en la aplicación de la
+Ω. El paquete tiene un generador de grilla y facilita el
+fórmula fi nal
+R V refi namiento de la misma. Una malla es descrita por tres
+S Su (p.{)(t -t)+ W W
+S 0 1 0 W
+u(x,y)=R-1S S u (p,{)-u (p,{) W W (23) matrices de formato fi jo que contiene información acer-
+S SS + 1 K (p,{ 0 ) K 0 (p,{)W WW ca de los nodos de la malla, segmentos de contorno y los
+T 1 X
+1 #t1 triángulos.
+donde c(t)= ; k (t)= c(p)dp;
+f(t) 0
+3. Discretizar la EDP y la condición de contorno para ob-
+t0
+#t1
+tener un sistema lineal Ku = F. El vector desconocido u
+K (p,{)= k (p)dp; K (p,{)=k (t)
+0 0 1 0 1
+t0 contiene los valores de la solución aproximada en los pun-
+La p-versión del método de rayos generales, desarrollado en tos de la malla, la matriz K es obtenida a través de las
+este trabajo fue propuesta para el Problema de Dirichlet para la funciones ε(x,y) y f(x,y) el lado derecho denotado por F
+ecuación de Laplace en [7]. contiene valores promedio de f alrededor de cada nodo.
+7.2 Comparación del Método Se procedió a realizar una serie de experimentos para obtener
+de Rayos Generales con Método la solución numérica de (23a)-(23b) en el pdetool de sistema
+de Elementos Finitos Matlab descritos en la tabla 1:
+Tabla 1 Cantidad de experimentos a realizar por las estrategias de
+Para realizar la comparación procedemos a determinar la solu-
+aproximación numérica
+ción numérica del problema: Experimento Cantidad de rayos de escaneo
+div(f(x,y)gradu)=0, (x,y)!X 1 14
+(23)
+u =f(x,y), (x,y)!2X 2 28
+C
+Mediante sistema de programas construido para realizar la 3 42
+p-versión del método de rayos generales y programas Toolbox
+PDETool de sistema Matlab.
+Se procede a medir los tiempos de ejecución que toman las
+Usando el ejemplo numérico anterior con las siguientes fun-
+estrategias: aplicación pdetool que incorpora aproximación
+ciones: y f(x,y) - sin(x+y) + 2(x+y).
+por medio del método de elemento fi nito y p-versión del mé-
+Dada la formulación (23a) – (23b) e igualmente los valores de las todo de rayos generales en la aproximación de la solución
+funciones se tiene un problema directo. El objetivo es recuperar numérica.
+— 61 —
+Sociedad Cubana de Matemática y Computación
+La segunda estrategia incorpora dos variables que permiten por MEF para n-rayos de escaneo que aumenta según tabla 2 y
+medir: el error máximo y el error promedio en media cuadráti- tercer renglón corresponde a la solución recuperada por nuestro
+ca, que se cometen en comparación con la solución exacta del programa para p-versión del método de rayos generales.
+problema y se capturan en la tabla 2. Aquí ofrecemos la siguiente conclusión: a medida que au-
+mentamos la cantidad de rayos de escaneo la ejecución de la
+Tabla 2. Tiempo de ejecución de las estrategias de aproximación
+p-versión del método de rayos generales mejora el tiempo re-
+numérica y medida de los errores cometidos
+querido de cómputo frente al pdetool de sistema Matlab.
+Rayos
+Pdetool Método GR Dmax Dsr
+de escaneo
+14 0.902346seg 0.32455seg 0.6555 0.1713 7.3 Convergencia del método
+28 0.869951seg 0.097181seg 0.4917 0.1076 de rayos generales
+42 2.387995seg 0.197593seg 0.3985 0.0819
+En la siguiente fi gura se realiza una comparación visual del pro- El análisis numérico [11] es la parte de las matemáticas que diseña
+blema (1)-(2) para datos iniciales dados arriba; las columnas métodos para aproximar de forma efi ciente las soluciones de pro-
+en la fi gura indican la cantidad de rayos de escaneo: izquierda blemas expresados matemáticamente. Así la existencia de la solu-
+n = 14, central n = 28 y derecha n = 42; igualmente los renglones ción de un problema directo se puede garantizar por medio de la
+indica: primer renglón corresponde a las soluciones exactas para teoría apropiada al problema; el contrario del análisis que permite
+n-rayos de escaneo, segundo renglón corresponde a la solución obtenerla mediante algún proceso constructivo.
+— 62 —
+Revista Ciencias Matemáticas
+Un método constructivo es un conjunto de instrucciones their applications. Uspehi Mat. Nauk, 10, 3-70.
+conducentes a calcular la solución de un problema, bien en un [10] V. A. Borovikov (1959) Fundamental solutions of linear partial
+número fi nito de pasos o bien en un número infi nito mediante differential equations with constant coeffi cients. Trudy Moscow.
+un proceso de paso al límite. Math Obshch, 8, 877-890.
+[11] Consulta de sitio web: http://pcmap.unizar.es/~mpala/C_N_lecci/
+Una tarea esencial es establecer la convergencia de la solución
+Calc_N_1.I.pdf
+producida por el algoritmo (solución numérica) a la solución exacta
+del problema, y también estudiar la velocidad de convergencia a di-
+cha solución. Luego deseamos establecer como disminuyen: el error
+máximo y error promedio en media cuadrática a medida que au-
+mentamos el número de n-nodos e igualmente n-rayos de escaneo.
+Por consiguiente nos enfocamos en dos características de exac-
+titud que nos permitan medir la convergencia del método a cargo
+de los errores que se cometen. Aquí se ofrece una segunda conclu-
+sión respecto al orden de convergencia: analizando la información
+de la Tabla 2 para las columnas Dmax y Dsr concluimos que para
+los diferentes valores de n los errores disminuyen linealmente a
+medida que aumentamos la cantidad de n-rayos de escaneo.
+Referencias bibliográfi cas
+[1] A. I. GREBENNIKOV (2005) A novel approach for solution of
+direct and inverse problems for some equations of mathematical
+physics Proceedings of the 5-th International conference on Inver-
+se Problems in Engineering: Theory and Practice (ed. D. Lesnic)
+Vol. II, Leeds University Press, Leeds, UK, chapter G04, 1-10.
+[2] A. N. TIKHONOV (199) Mathematical Geophysics, Moscow.
+[3] S. L. SOBOLEV (1996) Equations of Mathematical Physics, Moscow.
+[4] A.A. SAMARSKY (1977) Theory of Difference Schemes, Moscow.
+[5] A. I. GREBENNIKOV (2003) Fast algorithm for solution of Di-
+richlet problem for Laplace equation. J. WSEAS Transaction on
+Computers, 2(4), 1039-1043.
+[6] A. I. GREBENNIKOV (2003) The study of the approximation qua-
+lity of GR-method for solution of Dirichlet problem for Laplace
+equation. J. WSEAS Transaction on Mathematics, 2(4), 312-317.
+[7] A. I. GREBENNIKOV (2007) General Ray Method for Solution of
+Boundary Value Problems for Elliptic Partial Differential Equations.
+APLIEDMATH, Memorias del Congreso Internacional en Matemá-
+ticas Aplicadas, Instituto Politécnico Nacional, México, 200-209.
+[8] HELGASON SIGURDUR (1999) The Radon Transform, Bir-
+khauser, Boston-Berlin.
+[9] M. Gelfand, S. J. Shapiro (1955) Homogeneous functions and
+— 63 —

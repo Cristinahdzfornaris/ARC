@@ -1,0 +1,1039 @@
+CienciasMatemáticas,Vol.33,No.2,Pag.119-128, 2019
+Recibido11-2018, Aceptado 09-2019
+Nuevo modelo probabilístico en autenticación
+gráfica
+New probabilistic model on graphical authentication
+Carlos Miguel Legón 1*, Pedro Navarro1, Raisa Socorro2, Osviel Rodríguez3, Ernesto Borrego1
+Resumen Laautenticaciónesesencialenlaseguridaddelosmodernosserviciosdigitalesdeprocesamiento
+deinformación.Lascontraseñasalfanuméricassonlasmásempleadas,peroposeendebilidadesquelashacen
+vulnerablesadiversosataquesbasadosenmodelosprobabilísticos.Unadelasalternativaseslaautenticación
+gráfica. Los modelos probabilísticos en autenticación gráfica se aplican para estimar la clave más probable
+a seleccionar, en cada imagen, por el usuario que se va a registrar. En este trabajo se propone un nuevo
+modeloprobabilísticodeautenticacióngráfica,suprincipalaporteconsisteenquepermitecuantificarelgrado
+deautenticidaddecadausuario.Seconfirmaexperimentalmentequeelmodelopropuestoesefectivoypermite
+medirenlaprácticaelniveldeautenticidaddelosusariosautenticados.
+Abstract Authenticationisessentialinthesecurityofmoderndigitalinformationprocessingservices. Alphanu-
+mericpasswordsarethemostused,buttheyhaveweaknessesthatmakethemvulnerabletovariousattacks
+basedonprobabilisticmodels. Oneofthealternativesisgraphicalauthentication. Theprobabilisticmodelsin
+graphicalauthenticationareappliedtoestimatethemostlikelykeytobeselectedineachimagebytheusertobe
+registered. Inthisworkanewprobabilisticmodelofgraphicauthenticationisproposed,itsmaincontributionis
+thatitallowstoquantifythedegreeofauthenticityofeachuser. Itisconfirmedexperimentallythattheproposed
+modeliseffectiveandallowstomeasureinpracticetheauthenticitylevelofautenticatedusers.
+PalabrasClave
+Autenticacióngráfica—modeloprobabilístico—contraseñas
+1InstitutodeCriptografía,FacultaddeMatemáticayComputación,UniversidaddelaHabana,Habana,clegon58@gmail.com,
+pedropepe3437@gmail.com,ernesto.borrego@matcom.uh.cu
+2FacultaddeInformática.UniversidadTecnológicadeLaHabana,raisa@ceis.cujae.edu.cu
+3FacultaddeCienciasytecnologías.UniversidaddelascienciasInformáticas,osviel@uci.cu
+*AutorparaCorrespondencia
+Introducción alfanuméricaytambiénparaevaluarsuseguridadpuedeverse
+en[23].Seprofundizaenlosdosmodelosprincipales,losmo-
+Laautenticacióndeunusuarioparaconcederleaccesoa delosdeMárkov[10],[18]ylasgramáticaslibresdecontexto
+unsistemaorecursoesunaspectoesencialparalaseguridad [37],[19],[7].Existenotrosmodelosmenospopularescomo
+delainformación[9].Segúnlainformaciónqueutilizan,los laleydezip[25],[15],[36],[24],lasredesneuronales[26]y
+sistemasdeautenticaciónsuelenclasificarseen:sistemasbasa- técnicasdeaprendizajeautomático[33],[12].
+dosenconocimiento(¿quésabes?),enTokens(¿quétienes?) Paralascontraseñasgráficaselempleodemodelosprobabilís-
+yeninformaciónBiométrica(¿quiéneres?).Losbasadosen ticoshasidomenosinvestigadoyexistenmenosmodelos.En
+conocimientoempleancontraseñas,lasquepuedenseralfanu- sumayoríaestossebasanentécnicasdetratamientodeimá-
+méricasográficas[28]. genesdigitalesyenlascaracterísticasdelaimagen[16],[40],
+Lascontraseñasalfanuméricassonlasmásempleadas,apesar [14].Estosmodelospermitenpronosticar,paracadaimagen,
+dequeposeenunacontradicciónentresuseguridadysuusa- laclavemásprobableaseleccionarporelusuarioquesevaa
+bilidad,puesparasersegurasdebenseraleatorias,largasyno registrar.Seusanparaescogerlasimágenesmásadecuadasa
+predeciblesmientrasqueparaserusablesdebensermemori- emplearenestetipodeautenticaciónytambiénparadesarro-
+zables,estacontradicciónsueledenotarsecomothepassword llarataquesdediccionario.
+problem[35].Estasdebilidadesreducenelespaciodebúsque- Enestetrabajoseproponeunnuevomodeloprobabilístico
+daylashacenpredeciblesyvulnerablesadiversosataques decontraseñasgráfica,lanovedadprincipaldeestemodelo
+basadosenmodelosprobabilísticos[22]. consisteenquedespuésqueunusuarioesautenticado,este
+Uninteresanteestudiosobrelaaplicacióndemodelosprobabi- modelo permite cuantificar la autenticidad de este usuario,
+lísticospararealizarataquesdediccionariosalascontraseñas asignándoleunaprobabilidaddeserelusuariolegítimo.Hasta
+120 Nuevomodeloprobabilísticoenautenticacióngráfica
+donde saben los autores de este trabajo, no existen antece- gráficapuedeverseen[28].Unapropuestade2018paraimple-
+dentes de esto en los modelos de contraseñas gráficas. Se mentarautenticaciónparacomputaciónenlanubemediante
+confirmaexperimentalmentequeelmodelopropuestoesefec- contraseñasgráficas,seproponeen[30].En[20]secomparan
+tivo y permite medir en la práctica el nivel de autenticidad distintossistemasdeautenticacióngráficadeacuerdoalos
+delosusariosautenticados.Estainvestigaciónsecentraespe- parámetrosusabilidad,confiabilidad,funcionalidadmanteni-
+cíficamenteenlossistemasdeautenticacióngráficadeltipo bilidad,eficienciayportabilidadcomosedefinenenlanorma
+CuedRecal[5],[31]. ISO−9126[1].
+EnlosSistemasdeAutenticaciónGráficadeltipoCuedRe-
+1. Preliminares call,lacontraseñadelusuarioconsisteenkpuntos(pixeles)
+que este seleccionaen lafasederegistro,de una(o varias)
+Modelosprobabilísticos:contraseñasalfanuméricas
+imágenes,dadaporelsistemaoescogidaporelusuario.Se
+ModelosProbabilísticosdecontraseñas:unmodelopro-
+espera que el usuario legítimo recuerde aproximadamente
+babilísticodecontraseñas[23],estádeterminadoporcualquier
+el orden y la posición de los k pixeles seleccionados en la
+funciónP,definidaenelespaciodeposiblescontraseñas(S)
+fase de registro, pero realmente es muy poco probable que
+enelintervalo[0,1],queasignaunaprobabilidadP(s)acada
+logrerecordardeformaexactalaposicióndecadapixel.Por
+contraseñadeformatalque:
+estarazónlaimagensediscretiza,definiendóseunaregión
+P(s)≥0,paratodacontraseñas∈S. detoleranciaalrededordecadapunto.Enlafasederegistro,
+|S| el sistema por cuestiones de seguridad, no almacena los k
+∑ i=1 P(s i )=1 puntos,nisusregionesdetolerancia,sinoelvalordelhash
+Estosmodelosconstituyenunaherramientafundamentalpara delaconcatenaciónordenadadelaskregionesdetolerancia
+investigarlaseguridaddelascontraseñas[23].Ladefinición determinadasporlacontraseña.
+einterpretacióndeP(s),dependedelmodelo. Enestossistemassehanempleadovariosmétodosdediscreti-
+Laexistenciadegrandesbasesdedatosdecontraseñasalfa- zaciónparadefinirlaregióndetolerancia,ladiscretización
+numéricasdisponibleseninternet[13],hapermitidocapturar robusta [6], la centrada [11] y la óptima [4]. La discretiza-
+experimentalmentesuscaracterísticas,lasquesonutilizadas ciónrobustarequiereunaregióndetoleranciamayorquelas
+paraladefinicióndeP(s).LascadenasdeMárkovylasgra- centrada y óptima. Una descripción detallada de estas tres
+máticas libres de contexto han sido los dos modelos más discretizaciones y una discusión de sus limitaciones puede
+empleadosparacuantificarmedianteP(s)laprobabilidadde verseen[8].
+queesacontraseñasseaseleccionada,porelusuario,enla Paraautenticarse,elusuariodebeescogerenelordencorrec-
+fasederegistro.EstosvaloresP(s)sonlabasedelosataques to,losmismoskpuntosaproximadamente.Seráautenticado
+dediccionarioydealgunasmétricasdeevaluacióndelasegu- síysolosílospuntosqueescogedeterminanunhashigualal
+ridaddelascontraseñas([27],[34],[2],[38]). quefueguardadoporelsistema,esdecirsiloskpuntosque
+Existendiversasherramientas(consideradassoftwarelibre) escogióestándentrodelasregionesdetolerancia(definidas
+para atacar contraseñas [13], las cuales hacen uso de dife- porelmétododediscretización)desucorrespondientepunto
+rentesmodelosydelainformaciónobtenidadelasbasesde delacontraseña.Entrelossistemasdeestetipo,destacapor
+datos.Entreestasherramientasparainvestigarlaseguridad susventajaselsistemaPassPoint[39].
+delascontraseñasalfanuméricassedestacaPARS[32],una Elespaciodeclavesquedadeterminadopor3parámetros,el
+plataformapropuestaen2015quecontiene12algoritmospara tamañodelaimagen,eltamañodelaregióndetolerancia,y
+atacar contraseñas, 15 sitios sobre métricas de fortaleza de elnúmerokdepuntosdelacontraseña.Paracadatamañode
+contraseñas,8métricasacadémicasdefortalezadecontrase- imagensepuedenescogerelnúmerodekpuntosyeltama-
+ñasy15métricascomercialesdefortalezadecontraseñas. ñodelaregióndetoleranciadeformaqueladimensióndel
+En[17]seproponeunaherramientaestadística,paraclasificar espacio de contraseñas sea mayor que para una contraseña
+en3claseslosintentosdeautenticaciónmediantecontrase- alfanuméricadekpuntos
+ñasalfanuméricas,detectandolosintentossospechosos.Se
+empleandiferentesparámetroscomo:direcciónIP,geoloca-
+lización, configuración del browser, hora, etc. En [23] se Limitacionesdelosmétodosdediscretización
+clasificanlasinvestigacionessobrecontraseñasatendiendoa Durantelaautenticaciónentrelasprincipaleslimitaciones
+suobjetivo,estaclasificacióndebeserampliadaparaincluir detectadasseencuentran:
+investigacionescomo[17]ylapropuestaenestetrabajo.
+Primera: La distancia entre el punto de la contraseña y el
+Sistemasdeautenticacióngráficacuedrecall puntoescogidoparalaautenticaciónsetieneencuen-
+En[5]sepresentaunresumenmuycompletohasta2011 taparaautenticaronoalusuario,peronosetieneen
+delossistemasdeautenticaciónbasadosencontraseñasgráfi- cuentaentrelosusuariosautenticados.Laautenticación
+cas,[31]seenfocaenlossistemasdeltipoCuedclickpoints. nohacedistinciónentrelospuntosdentrodelaregión
+Unadescripciónyevaluacióncriticaactualizadadelaseguri- detolerancia,lesdaelmismotratamientoatodoslos
+dadyusabilidaddelosdiferentessistemasdeautenticación puntos dentro de esta región. Este enfoque tiene una
+Nuevomodeloprobabilísticoenautenticacióngráfica 121
+limitaciónpuescontradiceelcomportamientoesperado dediccionarioytambiénparaevaluarsiunaimagenesapro-
+paraunusuariolegítimo,delcualintuitivamentesees- piadaparaserusadaenestetipodeautenticación.
+peraqueescojaconmayorfrecuenciaalospuntosmás En[40]apartirdelainformaciónenclaroqueelsistemaguar-
+cercanosalpuntolegítimodelacontraseña.Sorpresiva- daenelprocesodediscretización,seconstruyendiccionarios
+mente,nosehanencontradoreportesdondesediscuta decontraseñasmásprobablesquepermitenrealizarataques
+esta limitación de la autenticación gráfica, la cual se dediccionariosaltamenteefectivos.
+investigaráusandoelmodelopropuestoenestetrabajo. En[14]sedemuestraqueexistecorrelaciónestadísticaentre
+lascaracterísticaspersonalesdelusuario(edad,sexo,etnia,
+educación,etc)ylospatronesexistentesenlacontraseñaque
+Segunda: Existenalgunasparejasdepuntossituadosambos elselecciona.Seproponeunamétricaparamedirlafortaleza
+a la misma distancia del punto de la contraseña, sin delascontraseñas,apartirdelospatronesqueellacontiene,
+embargounosquedandentrodelaregióndetolerancia sinconocimientopreviodelaimagen,niestudiosestadísticos
+yotrosquedanfuera.Estospuntosserianigualmente decontraseñasanteiores.
+aceptablesparaelusuariolegítimo,sinembargo,ladis- Enconclusión,lossistemasdeautenticacióngráficadeltipo
+cretizaciónlesdauntratamientodiferente. cuedrecall,clasificanalosusuariosquetratandeautenticarse
+endosclases:usuariolegítimoousuarioilegítimo,perono
+soncapacesdediferenciaralosusuariosdentrodeunadees-
+Tercera: Existenalgunasparejasdepuntos,talesqueambos
+tasclases.Elresultadode[17]paracontraseñasalfanuméricas
+están situados a diferentes distancias del punto de la
+nosmotivóainvestigarlaformadedefinirparacontraseñas
+contraseña,perounoesinternoalaregióndetolerancia
+gráficasunafunciónP(S)queseacapazdesepararalosusua-
+yelotroesexterno.Lalimitacióndeladiscretización
+riossegúnsugradodelegitimidad.Losresultadossemuestran
+consisteenqueelpuntoquequedafueradelaregión
+enelsiguienteepígrafeyconstituyenelaporteprincipalde
+detoleranciaestámáscercadelpuntodelacontraseña
+estetrabajo.
+queelquequedaadentro.
+Las limitaciones segunda y tercera se deben a que la
+2. Resultados y discusión
+regióndetoleranciaescuadradamientrasladistancia
+defineuncírculo,unasoluciónpodríaserdefiniruna Notaciones, hipótesis y transformación del estadí-
+regióndetoleranciacircular[8],[21]. grafodeverosimilitud.
+SedenotaráporI alaimagen,porS∗=(s∗,...,s∗)∈
+m×n 1 k
+Ik a la contraseña, formada por k puntos/pixeles, selec-
+m×n
+Cuarta: Cadaunadeestasdiscretizacionesconservacierta
+cionada por el usuario legítimo en la fase de registro y por
+informaciónnecesariapararepetirladiscretizaciónde S=(s ,...,s )∈Ik alacontraseña,seleccionadaporun
+1 k m×n
+laimagenenlafasedeautenticación.Esainformación usuarioquetratadeautenticarseyporP(S)=P(S=S∗)ala
+esaprovechadaparaaumentarlaefectividaddelosata- probabilidaddequeS=S∗.
+quesdediccionario[3],[29]. Para simplificar el modelo, se asume que los k puntos de
+lacontraseñaS=(s ,s ,...,s )sonseleccionadosdeforma
+1 2 k
+independiente. Bajo esta hipótesis de independencia el es-
+Modelosprobabilísticosdecontraseñasgráficas tadígrafo L(S)=P(S)=P(S=S∗)de verosimilitud para S
+Encontraseñasgráficas,noexistenbasesdedatosdecon- será:
+traseñasdisponibleseninternet,peroaunasísehanaplicado L(S)=πk P(s)=πk P(s =s∗) (1)
+i=1 i i=1 i i
+modelosprobabilísticos[16],[40],[14].
+AlacontraseñaS=S∗másprobablelecorrespondeelmáxi-
+LascaracterísticasdelafunciónP(s)hansidoextraídasde
+movalordeL(S)(ma´x L(S))entodalaimagen.Apli-
+tresfuentesprincipales,enprimerlugar,delapropiaimagen S∈I m k ×n
+candoellogaritmoalaecuación(1)elestadígrafoquedaría
+propuestaparalaautenticaciónusandotécnicasdesegmen-
+como:
+tacióndeimágenesparadetectarlasregionesmásprobables.
+Ensegundolugar,delainformaciónaportadaporelmétodo k
+L (S)=logL(S)=logP(S)=∑logP(s) (2)
+dediscretizaciónytercerodelascaracterísticaspersonales 1 i
+i=1
+delusuario.
+Estosmodelossonaplicadosenataquesdediccionario,pero PorpropiedadesdellogaritmoL1(S)tomavaloresnegativos.
+hasta donde sabemos, en ningún caso se aplica un modelo Por razones de implementación, para trabajar con valores
+paracuantificarelgradodeautenticidaddelusuario. enterospositivos,seseleccionaunaconstanteC L ∈N∗ yse
+En[16]seproponeunmodeloqueparacadapuntodelaima- aplicarálasiguientetransformaciónlineal:
+gencalculalaprobabilidaddeque,enlafasederegistro,ese (cid:32) (cid:33)
+ma´x L (S )−L (S)
+puntoseaseleccionadoporelusuariolegítimocomopunto
+L (S)=
+S0∈Im×n 1 0 1
+∗C
+2 L
+de la contraseña. Emplean segmentación de imágenes para ma´x S0∈I
+m
+k
+×n
+L 1 (S 0 )−m´ın S0∈I
+m
+k
+×n
+L 1 (S 0 )
+detectarlasregionesmásprobables.Esaplicableenataques (3)
+122 Nuevomodeloprobabilísticoenautenticacióngráfica
+La transformación L (S) es una línea recta con pendiente repeticióndepuntos)tienenprobabilidadP(S)= 1 .
+2 1 |RT(s∗)|k
+negativa,portantoL 2 (S)esfuncióndecrecientedeL 1 (S)tal Laprobabilidaddelaregióndetoleranciaserá:
+comosepresentaen(4):
+P(RT(s∗))= ∑ P(S)=1 (6)
+(cid:32) (cid:33) 1 1
+−C L S∈[RT(s∗)]k
+L (S)= ∗L (S)
+2 1
+ma´x L (S )−m´ın L (S )
+S0∈I m k ×n 1 0 S0∈I m k ×n 1 0 Enresumen,unacaracterísticadelaautenticaciónenestos
+(cid:32) (cid:33) sistemasydeestemodeloasociadoesquenotienenencuenta
+C ∗ma´x L (S )
++
+L S0∈Im×n 1 0
+(4)
+lasdiferenciasdelosvaloresd(s,s∗)dentrodeRT(s∗).Esta
+ma´x L (S )−m´ın L (S )
+S0∈I
+m
+k
+×n
+1 0 S0∈I
+m
+k
+×n
+1 0 característicaconstituyeunalimitaciónpuesnoreflejaade-
+cuadamenteelcomportamientorealdelusuariolegítimo,que
+ParaS∈Ik seobtieneL (S)∈0,...,C .AlacontraseñaS
+m×n 2 L semodelaenelsiguienteepígrafe.
+másprobablelecorrespondeelmínimovalorL (S)=0ya
+2
+lamenosprobableelmáximovalorL 2 (S)=C L >0. Modelacióndelusuariolegítimo
+ElproblemaalcalcularL 2 (S)paraunacontraseñaS∈I m k ×n Condiciones sobre P(s). Las condiciones 1 y 2 son las
+sereduceadefinirlaformadecalcularlaprobabilidadP(s i ) comunesacualquiermodeloprobabilístico,paragarantizar
+decadapuntos i .Parasimplificarlasnotacionesseomitirán queP(s)seaunadistribucióndeprobabilidadessobretodos
+lossubíndicesysedenotarapors∗aunsolopuntodelacon-
+lospuntosdelaimagen.
+traseñalegítima,porselcorrespondientepuntoescogidopor
+elusuarioqueintentaautenticarse,pord(s,s∗)aladistancia Condición1: P(s)≥0,paratodopuntosdelaimagen.
+entresys∗,yporP(s)=P(s=s∗)laprobabilidadP(s)de
+Condición2: ∑ P(s)=1sumandosobretodoslospuntoss
+quesseaelpuntos∗delacontraseñalegítima. s
+delaimagen.
+Ladistanciad(s,s∗)esunparámetrodecisivoenelprocesode
+autenticación,perodebidoaquenoseconocenbasesdedatos Se espera que el usuariolegítimo escojapuntos s tales que
+decontraseñas,niseconoceelcomportamientoexperimental s∈RT(s∗)yquelosvaloresded(s,s∗)seanpequeños.Para
+deesasdistancias,seaplicaráunenfoqueaxiomático.Apartir reflejaresecomportamientoseimponelacondición3.
+delaformadediscretizaciónyautenticación,sedeterminan
+lascondicionesesencialesquedebecumplirP(s)=P(s=s∗) Condición3: P(s)=P(s=s∗)=P(d(s,s∗)) debe ser una
+ysebuscaránanalíticamentefuncionesP(s)quesatisfagan
+funciónestrictamentedecrecientedeladistanciad(s,s∗),
+estascondiciones. porlocual
+P(s)alcanzasumáximoend(s,s∗)=0,para
+Modelaciónprobabilísticadelaautenticaciónenlos
+s=s∗
+sistemasdeautenticacióngráficacuedrecall
+Denotando por RT =RT(s∗) a la región de tolerancia P(s)alcanzasumínimodentrodeRT(s∗)enaque-
+alrededordelpuntos∗ypor|RT(s∗)|asucardinal,entonces llosstalqued(s,s∗)=ma´x
+s∈RT(s∗)
+d(s,s∗).
+elprocesodeautenticaciónenestossistemaspuedemodelarse P(s)alcanzasumínimodentrodeI enaque-
+m×n
+mediante una distribución uniforme dentro de la región de llosstalesqued(s,s∗)=max d(s,s∗).
+s∈Im×n
+tolerancia.LaprobabilidadP(s)dequeelusuariolegítimo
+1
+seleccioneelpuntosdurantelaautenticaciónpuededefinirse Enlossistemasactualesunusuarioesautenticadosiysolo
+como: sitodoslospuntosescogidosporeseusuariocaendentrode
+susrespectivaszonasdetolerancia,poresoP(RT(s∗))=1.
+(cid:40) 1
+P(s)=P(s=s∗)= |RT 1 (s∗)| , paras∈RT(s∗) (5) En la práctica un usuario legítimo pueda escoger por error
+1 0, paras(cid:54)∈RT(s∗) unpuntoscercanos∗,peros(cid:54)∈RT(s∗)(fueradelaregiónde
+tolerancia).Paraflexibilizarelprocesodeautenticaciónyad-
+EstemodeloreflejamediantelaregiónRT(s∗)elconocimien-
+mitirestaposibilidadseintroduceenelmodelounparámetro
+todelusuariolegítimosobres∗: ε talqueP(RT(s∗))=1−ε.
+Porotraparte,paraqueelsistemadeautenticaciónseaefec-
+Sielusuarioescogeunpuntos(cid:54)∈RT(s∗),estemodelo
+tivoelusuariolegítimodebeserautenticadoconaltaproba-
+leasignaP(s=s∗)=0,locualreflejaladecisióndel
+1
+bilidad,portanto,lasumadelasprobabilidadesdetodoslos
+sistemaderechazarlaautenticación.
+puntosquepertenecenalazonadetoleranciadebeser"muy
+Elmodeloasignalamismaprobabilidad|RT(s∗)|−1a alta",porlocualseimponelacondición4:
+cada punto dentro de esa región, sin distinguir entre
+Condición4: P(RT(s∗))=1−ε, pero con ε ≈ 0, ε >0.
+ellostalcomohacenlossistemasdeautenticaciónque
+Teniendo en cuenta los k puntos de la contraseña la
+representa.
+probabilidaddequeelusuariolegítimoseaautenticado
+Cadaunadelas|RT(s∗)|k contraseñasformadasporkpuntos será:
+seleccionadosdentrodelaregióndetolerancia(admitiendo P[s∈RT(s∗)]=[1−ε]k (7)
+Nuevomodeloprobabilísticoenautenticacióngráfica 123
+Laprobabilidaddeerrordeautenticaciónparaelusua- EstaeleccióndeP(s)cumpleque:
+riolegítimoseráiguala:1−[1−ε]k,locualreafirma
+queelvalorε debeser"suficientementepequeño”.Se P(s M )=P(s M ,s∗)=−ln d M (sM ax , D s∗) =−lnM M a a x x D D =0, lo
+tuvoencuentalahipótesisdeindependenciaentrelos cualsecorrespondeconlacondición3.
+puntosyademásseasumióqueP(RT(s∗))=1−ε es
+Si s=s∗, queda d(s,s∗)=0 y P(s∗,s∗)=−ln 0 ,
+lamismaparaloskpuntos. MaxD
+porloqueellogaritmoseindefine.Estepuntos=s∗se
+debevercomounpuntodediscontinuidad,alcualdebe
+Modeloprobabilísticodeautenticacióngráfica
+asignárseleunaltovalordeP(s),estepuedetomarse
+Se propone una nueva función P(s)=P(s=s∗) que
+2 2 cercanooigualaldelospuntos,s(cid:54)=s∗máscercanosa
+tendrá en cuenta no solo la región RT(s∗), sino además la
+s∗.
+distanciad(s,s∗)dentrodeesaregión.Paracadapuntosdela
+imagensecalculautilizandolaecuación(8): ParagarantizarlacondiciónP(RT(s∗))=1−ε esnecesario
+(cid:40) ser capaces de aumentar a conveniencia la probabilidad de
+P(d(s,s∗)), sis∈RT(s∗)
+P(s)= (8) laregióndetoleranciayparalograrloseintroduceenelmo-
+2 ε d(s,s∗) , sis(cid:54)∈RT(s∗) delounparámetroC =C(ε)(cid:29)1,cuyaselecciónapropiada
+ε
+contribuyecumplirlacondición4.Paralospuntosdentrode
+Tal que ε d(s,s∗) es función decreciente de d(s,s∗) y además
+laregióndetoleranciasemultiplicarálaecuación9poreste
+secumpleque∑ s(cid:54)∈RT(s∗) ε d(s,s∗) =ε =1−P(RT(s∗)).Basta
+valorC . Finalmente, se definirá P(s) como se plantea en
+hallarunafunciónP(d(s,s∗))quecumplalascondiciones3 ε 2
+(10):
+y4.Estascondicionesestablecenqueunpequeñogrupode
+lasmenoresdistanciasd(s,s∗)debetenerasignadamuyalta 
+−ln 1 ∗C , sis=s∗
+d
+p
+In
+i
+r
+e
+o
+t
+n
+e
+b
+t
+r
+a
+e
+p
+b
+a
+r
+il
+e
+i
+l
+t
+d
+o
+a
+a
+s
+c
+d
+m
+i
+.
+ó
+e
+n
+n
+g
+o
+e
+re
+o
+s
+m
+v
+é
+a
+t
+l
+r
+o
+i
+r
+c
+e
+a
+s
+d
+d
+e
+(s
+P
+, 2 s
+(
+∗
+s
+)
+)
+,
+.
+ta
+E
+l
+n
+es
+la
+qu
+re
+e
+g
+s
+ió
+∈
+n
+R
+co
+T
+r
+(
+re
+s∗
+sp
+),
+o
+e
+n
+l
+-
+P 2 (s)=P 2 (d(s,s∗))=
+
+−ln
+M
+d M (
+a
+s a ,
+x
+x s
+D
+D ∗)∗C
+ε
+ε , sis∈RT(s∗)ys(cid:54)=s∗
+á
+P
+r
+(
+e
+R
+a
+T
+b
+(
+a
+s
+jo
+∗)
+l
+)
+a
+=
+cu
+1
+rv
+−
+a
+ε
+de
+≈
+la
+1
+f
+,
+u
+m
+nc
+ie
+ió
+n
+n
+tra
+b
+s
+u
+q
+sc
+u
+a
+e
+d
+e
+a
+n
+P
+l
+2
+a
+(s
+r
+)
+eg
+d
+i
+e
+ó
+b
+n
+e
+s
+s
+(cid:54)∈
+er
+R
+ig
+T
+u
+(
+a
+s
+l
+∗
+a
+)
+−ln
+d(s,s∗), sis(cid:54)∈RT(s∗)
+que contiene a la mayoría de los puntos s∈I , la distri- MaxD
+m×n (10)
+bución P(s) debe tener una cola estrecha y muy larga a la
+2 Paragarantizarlascondiciones1y2bastacondividirentrela
+derecha,eláreabajoesacoladebeserε ≈ 0.Estaspropieda-
+sumadelosvaloresdeP(s)entodalaimagen:
+2
+desdeP(s)orientaránsubúsqueda.
+2
+PropuestadeP(d(s,s∗)).Seproponeutilizarenestecasola P(s)
+P(s)= 2 (11)
+funciónP(d(s,s∗))=−lnX conX ∈]0,1]puesesconocido 3 ∑ s∈In×m P 2 (s)
+queesunafuncióncóncava,estrictamentedecrecienteenel
+valordeX tomandomuyaltosvaloresparacuandoX →0y ComparacióndeP(s)yP(s).Laautenticacióndeestossis-
+3 1
+valor0paraX =1. temassemodelaporP(s)(ecuación5),mientrasqueP(s)
+1 3
+ParaaplicarestafunciónsedebedefinirsuargumentoX como (ecuación11)porsuformadeconstrucciónmodelaconmás
+funciónded(s,s∗).Como−ln1=0,ylim −lnX=∞,el exactitudelcomportamientoesperadointuitivamenteparael
+X→0
+valorX =1debeasignárseleaelpuntosdelaimagenmás usuariolegítimo,porestarazónseproponeintroducirP(s)
+3
+alejadodes∗.Esdecir,porlacondición3ylaspropiedadesde en los sistemas de autenticación, lo cual se discutirá en el
+−lnX elargumentoX =X(d(s,s∗))debedefinirsedeforma epígrafe4.
+talque: SobreelparámetroC .Paracomprenderlainfluenciadelpa-
+ε
+(cid:40) rámetroC ε ,debetenerseencuentaque
+1, si d(s,s∗)=MaxD
+X(d(s,s∗)=
+0, si d(s,s∗)=0 P(RT(s∗))= ∑ P(s) (12)
+2 2
+s∈RT(s∗)
+DondeMaxD=ma´x d(s ,s∗)esladistanciaentres∗
+sM∈Im×n M
+Sutituyendo(10)en(12)seobtiene:
+yelpuntos máslejanoas∗ entodalaimagen(unodelos
+M
+4vértices).EstaexigenciasobreX(d(s,s∗))sugieredeinme- 1 d(s,s∗)
+diatotomarX = d M (s a , x s D ∗) ygarantizaquealadistanciamáxima P 2 (s)=−ln MaxD ∗C ε + s∈RT(s ∑ ∗)ys(cid:54)=s∗ −ln MaxD ∗C ε
+se le asigna el argumento X =1 donde el logaritmo toma
+(13)
+valorcero,mientrasalasdistanciasmáspequeñas,cercanasa
+Porlotanto,sianalizamoselcomportamientodelparámetro
+ceroseleasignaunaltovalorde−lnX,cumpliéndoseasílas
+c enlaecuación(13),siseaumentaelvalordeC ,aumen-
+ε ε
+condiciones3y4exigidasalmodelo.
+tará la probabilidad P(RT(s∗)) (ecuación 11) de la región
+ElresultadoanteriorpermitedefinirP(d(s,s∗))como: 3
+detoleranciaydisminuyeε comosepresentaenlaecuación
+d(s,s∗) (14).
+P(d(s,s∗))=−ln (9) ε =1−P(RT(s∗)) (14)
+MaxD 3
+124 Nuevomodeloprobabilísticoenautenticacióngráfica
+UnaformadeaumentarlainfluenciadelparámetroC ,enla
+ε
+diferenciadelasprobabilidadesdentrodelaregióndetole-
+ranciaestomartambiénaC comounafuncióndecreciente
+ε
+deladistanciad(s,s∗).Seproponeemplearlaecuación(15).
+10α
+C =C(d(s,s∗),α)= (15)
+ε d(s,s∗)2
+AlaumentarelvalordelparámetroαaumentanC(d(s,s∗),α),
+P(RT(s∗)),P(RT(s∗))ydisminuyeelvalordeε.Estoper-
+2 3
+mitirá aumentar a conveniencia en el modelo el valor de
+P(RT(s∗))paraajustarloalosobservadosexperimentalmen-
+3
+te.Estaopciónseaplicaráenlosexperimentosdelsiguiente
+epígrafe.
+3. Validación experimental del Modelo
+SecomprobaráquelaexpresiónP(s),satisfacelascondi-
+3
+ciones3y4exigidasalmodelo.Ladimensióndelaimagen
+empleada es 441×331. Se utilizaron 2 tamaños de región
+detolerancia9×9y21×21pixeles,porserlamáspeque-
+ñaymayorrespectivamente,encontradasenlabibliografía
+consultada. Se utilizó la ecuación (15) para calcular C y ε
+se halló experimentalmente que para α =5 se cumple que
+C(d(s,s∗),α)(cid:29)1yademásε ≈0, ε >0.
+Las probabilidades como función decreciente de las dis-
+tancias. Para s∗ =(50,50), se calculó P(s) para todos los 3
+puntos s de la imagen. La figura 1 muestra la distribución
+P(s)obtenida,seobservaqueP(s)=P(d(s,s∗))decreceal
+3 3 3
+aumentard(s,s∗),conunacolamuylargaaladerecha.Ese
+comportamientosemantienealcambiars∗,loqueconfirma
+queP(s∗)satisfacelacondición3.
+3
+0.1
+0.08
+0.06
+0.04
+0.02
+0
+0 2 4 6 8 10 12 14 16 18 20
+dadilibaborp
+pesar de que contienen solo un pequeño porcentaje de los
+puntosdelaimagen).Losresultadossepresentanenlatabla
+1,confirmandoasíqueP(s∗)cumplelacondición4.Entra-
+3
+bajosfuturossedebecompararestosvaloresteóricosdela
+probabilidaddeRT,convaloresobservadosenlaprácticay
+modificarsiesnecesariolasprobabilidadesteóricas(mediante
+losparámetrosdelmodelo)paralograrunbuenajuste.
+Tabla1.Porcentajedepuntosenlaregióndetoleranciaysu
+probabilidadenunaimagende441×331
+|RT(s∗)| 9×9 21×21
+|RT(s∗)|
+0,05 0,302
+|Im×n|
+P (RT(s∗)) 0,95=1−0,5 0,99=1−0,01
+3
+Aplicación del modelo como métrica de autentici-
+daddelusuario
+ApartirdelasprobabilidadesP(s)calculadasmediante
+3
+elmodelopropuesto,seemplearáelestadígrafoL (S)deve-
+2
+rosimilitudparamedirelniveldeautenticidaddelusuarioque
+intentaautenticarseconlacontraseñaS.
+Diseñodelexperimento.Seempleóunaimagendedimen-
+sión441×331pixeles,unaregióndetoleranciade21×21
+pixeles.ConcontraseñaS∗=(s∗,...,s∗)1.Serealizaronen
+1 5
+total 4000 intentos de autenticación divididos en 4 grupos
+(1000intentosencadagrupo).Losgruposintentanmodelar
+tiposdeusuariostalesqueelniveldeautenticidadeshomogé-
+neodentrodecadagrupo,perodifiereentrelosgrupos.
+Elobjetivodelexperimentoescomprobarsilosvaloresde
+L (s)sonhomogéneosdentrodelosgrupos(pequeñavarian-
+2
+za)ydifierenentreellos(diferentesvaloresesperados)pues
+enesecasoL (s)podríaemplearseparareconoceraquegru-
+2
+poperteneceunusuario.
+GrupoG :LacontraseñaS=(s ,...,s )propuestaporel
+1 1 5
+usuario que intenta autenticarse está formada por 5
+puntos dentro de la región de tolerancia que además
+estarántodosmuycercanosalpuntocorrespondientede
+lacontraseñaS∗,enparticulard(s,s∗)≤5.Estegrupo
+simulaaunusuariolegítimo,querecuerdamuybiensu
+contraseña.
+GrupoG :Los5puntosS=(s ,...,s )estarándentrodela
+2 1 5
+regióndetoleranciaperolejosdelpuntocorrespondien-
+distancia
+Figura1.ProbabilidadesP
+3
+(s),ejeY,comofunción tedelacontraseñaS∗,aunadistancia5≤d(s,s∗)≤10.
+decrecientedelasdistanciasd(s,s∗),ejeX ,entodala Simulaaunusuariolegítimo,quenorecuerdamuybien
+imagen. sucontraseña.
+Grupo3 :Modelacióndeunusuarioilegítimoconmásin-
+AltaProbabilidaddelapequeñaregióndetolerancia.
+formación, al menos uno de los puntos está dentro
+En una imagen de 441×331, las regiones de tolerancia de
+de la región de tolerancia, con una distancia tal que
+9×9y21×21tienensegúnP(RT(s))unaaltaprobabilidad
+3
+P
+3
+(RT(s∗))=1−ε igual a 0.95 y 0.99 respectivamente, a 1S∗=((50;50),(100;00),(150;150),(200;200),(250;250))
+Nuevomodeloprobabilísticoenautenticacióngráfica 125
+5<d(s,s∗)≤10,ylosrestantespuntosfueradelare-
+gióndetolerancia,perocercanaaella,aunadistancia
+15≤d(s,s∗)≤20.
+GrupoG :Los5puntosseleccionadosporelusuarioque
+4
+intentaautenticarseestánsiemprefueradelazonade
+toleranciade21×21pixeles,peromuycercanosaella,
+aunadistancia15≤d(s,s∗)≤20.Usuarioilegítimo,
+queposeealgunainformaciónsobrelacontraseña.
+Encadagrupo,lospixelesdelacontraseñaseescogieronalea-
+toriamentedentrodelrangodedistanciasquecaracterizanal
+grupo.Losmétodosactualesdeautenticacióngráfica,autenti-
+caránalosusuariosdelosgrupos1y2,perosindistinguirla
+diferenciaentreellos,mientrasrechazanausuariosdegrupos
+3y4.
+SeesperaqueparalascontraseñasS=(s ,...,s ),delos4 1 k
+grupos, anteriores, el modelo propuesto les asigne valores
+distinguiblesdelestadígrafoL (S)=P(S)=πkP(s)locual
+2 i i
+justificarásuempleocomounamétricaquepermitecuantifi-
+carelniveldeautenticidaddelusuario,reconociendoacuál
+grupopertenece.
+Paraqueelmodeloseaefectivo,seesperaquelosvaloresde
+L (S)tenganuncomportamientocrecienteentrelosgrupos
+2
+G ,G ,G ,G eneseorden.Losresultadosdelexperimento
+1 2 3 4
+semuestranenlafigura3ylatabla2.
+3.5×107
+3×107
+2.5×107
+2×107
+1.5×107
+1×107
+5×106
+0
+2L
+seobservanalgunoscasoenqueseconfundeconunusuario
+delgrupoG .
+2
+LomásimportanteadestacaresquelosvaloresdeL (S)se
+2
+diferencianentrelosgruposG yG ,apesardequeambos
+1 2
+sonigualmenteautenticadoseindistinguiblesparalossiste-
+masactualesdeautenticacióngráfica.
+Estosresultadosexperimentalesvalidanlaefectividadprác-
+tica del modelo para cuantificar el nivel de autenticidad de
+los usuarios, significa que el modelo propuesto permite di-
+ferenciaralosusuariosquesonautenticadosporelsistema,
+asignándolesdiferentesgradosdeautenticidadysugiereque
+talvezelmodelopuedaserempleadoparadetectarlosataques
+dediccionarioquerealizanunpronósticodelacontraseña,lo
+cualesunaspectoquedebeserinvestigado.
+Losresultadosilustradosenlafigura3seresumenenlafigura
+3yenlatabla2.
+3x107
+2.5x107
+2x107
+1.5x107
+G1
+G2
+G3
+G4 1x107
+5x106
+0
+G1 G2 G3 G4
+usuarios
+Figura2.ValoresdeL
+2
+(s)enlosgruposG
+1
+,G
+2
+,G
+3
+,G
+4
+Discusióndelosresultados.Seobservaqueelestadígra-
+foL (s)aportainformaciónsobrelaautenticidaddelusuario.
+2
+AmenorvalordeL (s),máscercaestánlospuntospropuestos
+2
+porelusuariodelospuntosdelacontraseñayportantomás
+confiabilidadexistesobrelaautenticidaddelusuario.
+ElvalordeL (S)logradistinguirclaramentelos4tiposde
+2
+usuarioscorrespondientesalosgruposG ,G ,G ,G .Como
+1 2 3 4
+seesperaba,losusuarioslegítimosquerecuerdanmuybiensu
+contraseña(G ),muestranlosmenoresvaloresdeL (S).Los
+1 2
+grupos3y4deusuariosilegítimossedistinguenclaramente
+delosgrupos1y2deusuarioslegítimos.
+El Grupo G , a pesar de tener algunos puntos dentro de la
+3
+regióndetolerancia,esreconocidocorrectamenteporelmo-
+delolacasitotalidaddelasvecescomounusuarioilegítimo,
+2L
+Figura3.ComportamientodeL
+2
+(s)enlosgruposG
+1
+,G
+2
+,
+G ,G
+3 4
+Tabla2.ValoresmáximoymínimodeL
+2
+(S),consus
+frecuenciasporgrupos.
+Grupo Máximo Frecuencia Mínimo Frecuencia
+deL (S)) deL (S))
+2 2
+G 8201503 1 1602158 1
+1
+G 11453131 1 8735939 1
+2
+G 27743039 1 27568825 1
+3
+G 26546809 1 10252333 1
+4
+∪4G 27743039 1 1602158 1
+i i
+En la figura 3 se observa que los valores esperados de
+L (s)difierenentrelosgrupos,ademásseapreciandiferen-
+2
+cias notables entre la magnitud de las varianzas, siendo el
+grupoG eldemayorvarianza,yaquecorrespondeaunusua-
+3
+rioconciertainformaciónsobrelaclavelegítima,queescoje
+126 Nuevomodeloprobabilísticoenautenticacióngráfica
+algunospuntosdentroyotrosfueradelaregióndetolerancia. Elenfoqueanteriornoesaplicableendiscretizaciónrobusta
+Losvaloresdemediayvarianzapermitendistinguirelcom- puesnosepuedenrecobrarloskpuntosdelacontraseña.Se
+portamientomedioencadagrupo,locualjustificaelempleo proponeparafuturostrabajos,desarrollarunaaplicaciónpara
+deL (s)parareconoceraquegrupoperteneceunusuario,es incluirestecriterioensistemasdeautenticacióngráficaque
+2
+decircomounamétricaparaevaluarsuniveldeautenticidad. empleandiscretizaciónóptimaocentrada.
+Estosresultadossugierendefinir3umbralesy4regionesen
+lasquesepuedeclasificaralosusuariosautenticadossegún Conclusiones y trabajo futuro
+suniveldeautenticidad,loscualessepresentanenlatabla3.
+Se obtuvo un nuevo modelo probabilístico que permite
+distinguir/clasificar a los usuarios asignándoles una proba-
+Tabla3.UmbralesparalosvaloresdeL
+2
+(s) bilidad P
+3
+(S) de que su contraseña S sea seleccionada por
+elusuariolegítimo.Ademassecomprobóexperimentalmen-
+Región L (S)) Nivelde te que el modelo cumple las condiciones esperadas para el
+2
+Autenticidad usuariolegítimoyqueelestadígrafopropuestoescapazde
+R 0≤L (s)<8201503 Alto distinguiralosusuariossegúnsuniveldeautenticidad.
+1 2
+R 8201503≤L (s)<11453131 Medio Alosusuariosautenticadosconbajaprobabilidaddeserlegí-
+2 2
+R 11453131≤L (s)<26546809 Bajo timos,selepuedesolicitarunaautenticaciónadicionallocual
+3 2
+R 26546809≤L (s) Muybajo aumentaría la seguridad del sistema de autenticación. Este
+4 2
+modeloesaplicableon-lineenlossistemasdeautenticación
+queempleandiscretizacióncentradayóptima.Nopuedeser
+empleadoenlossistemasqueempleandiscretizaciónrobusta
+Los usuarios de la región R corresponden a los no au-
+4 pueslainformaciónquerequierenoestádisponibleyesnece-
+tenticadosylasregionesR ,R yR alosautenticados,se
+1 2 3 sariohallarlaformadehacerlaaccesiblesincomprometerla
+proponeinvestigarlaformadeaprovecharestenuevoconoci-
+seguridaddelsistema.
+mientosobresuniveldeautenticidad,porejemplo,alosde
+Algunasdireccionesdetrabajosfuturosson:
+laregiónR selespuedeexigiralgunainformaciónadicional
+3
+antesdeautenticarlo. Desarrollarunaaplicaciónqueimplementeelmodeloy
+Se requieren nuevos experimentos con mayor número de puedaincorporarseensistemasdeautenticacióngráfica
+muestrasydiversidaddeusuariosparaevaluarconmásexac- aumentandosuseguridad.
+titudelniveldeprecisiónalcanzadoporelmodeloylacon-
+Obtenervaloracionessobrelaeficienciadeestaaplica-
+venienciaderedefinirlosumbrales.Estaesunadirecciónde
+ción para evaluar la afectación a la usabilidad de los
+trabajofuturo.
+sistemasenqueseutilice.
+4. Introducción práctica del modelo en Evaluar el modelo en escenarios más complejos, por
+ejemplo,simulandoausuariosilegítimosquetratande
+los sistemas de autenticación gráfica
+pronosticarlacontraseñaporataquesdediccionarios,
+Para obtener P(s) = P(s = s∗) = P(d(s,s∗)), es im- los cuales pueden llegar a tener varios puntos dentro
+3 3 3
+portante destacar que se requiere conocer S∗ =(s∗,...,s∗) delaregióndetoleranciayhastacercadelpuntodela
+1 k
+y S=(s ,...,s ) para calcular d(s,s∗). La contraseña S= contraseña.
+1 k
+(s ,...,s ) es introducida por el usuario, pero los sistemas
+1 k CaracterizarelcomportamientodeL (s)enesosnuevos
+de autenticación gráfica no guardan directamente el valor 2
+escenariosyevaluarsipuededetectaresosataques.
+S∗=(s∗,...,s∗),sudesconocimientopareceimpedirlaintro-
+1 k
+ducciónprácticadelmodelo. Usarelmodeloparacalcularkdistribucionesdeproba-
+Ladificultadanteriorpuederesolverse,enalgunoscasos,te- bilidades,unaporcadapuntodelacontraseñaycada
+niendoencuentalaspropiedadesdelosmétodosdediscreti- unadefinidassobretodoslospuntosdelaimagen,con-
+zación.Endiscretizacióncentradayoptima,unavezqueun siderandoladependenciaentreloskpuntos.
+usuarioesautenticado,sepuedecalcular,acadaunodelos
+puntoss delacontraseñaS=(s ,...,s )propuestaporeste ExplorarelempleodeotrostiposdefuncionesP(s)que
+i 1 k
+usuario,suceldadediscretización. cumplanlascondicionesimpuestas.
+Porlaformaenqueserealizaladiscretización,elcentrode
+Cambiarelenfoqueaxiomático,paraestimarladistri-
+esta celda es el punto s∗ de la contraseña S∗ =(s∗,...,s∗).
+i 1 k buciónapartirdemuestrasdelasdistanciasd(s,s∗),en
+Conociendos∗ yelpuntos seleccionadoporelusuario,se k
+i i particularinvestigarelajustedeladistribucióndelas
+puedecalculard(s,s∗)∀i=1,...,kysecalculalaprobabili-
+i i distanciasd(s,s∗)paralosusuarioslegítimos,mediante
+dadP(s)asociadaaesadistancia.Conlaskprobabilidades k
+3 i algunaleydepotenciacomolaLeydeZipf-Mandelbrot.
+secalculaelestadígrafoL (s)quepermitevalorarelnivelde
+2
+autenticidaddelusuario. .
+Nuevomodeloprobabilísticoenautenticacióngráfica 127
+Referencias [13] X.C.deCarnavaletandM.Mannan. Fromveryweak
+toverystrong:Analyzingpassword-strengthmeters. In
+[1] Iso-9126softwareproductevaluation–qualitycharacte-
+21stAnnualNetworkandDistributedSystemSecurity
+risticsandguidelinesfortheiruse.
+Symposium.TheInternetSociety,2014.
+[2] SAggarwal,SHoushmand,andRFlood. Probabilistic
+[14] M.Devlin,J.R.Nurse,D.Hodges,M.Goldsmith,and
+passwordcrackingsystem,2016.
+S.Creese. Predictinggraphicalpasswords. InProcee-
+dingsoftheThirdInternationalConferenceonHuman
+[3] Bin. B., D.W. Zhu, M. Yang, and J.. Yan. Security
+Aspects of Information Security, Privacy, and Trust -,
+implicationsofpassworddiscretizationforclick-based
+volume9190,pages23–35,NewYork,NY,USA,2015.
+graphicalpasswords. InWWW,2013.
+Springer-VerlagNewYork,Inc.
+[4] K. Bicakci. Optimal Discretization for High-Entropy
+[15] W.Ding,HaibomC.,P.Wang,X.Huang,andG.Jian.
+GraphicalPasswords.T. PhDthesis,OBBUniversityof
+Zipfslawinpasswords. IEEETransactionsonInforma-
+EconomicsandTechnology,Ankara,Turkey,2007.
+tionForensicsandSecurity,12(11):2776–2791,2017.
+[5] R.Biddle,S.Chiasson,andP.C.VanOorschot. Grap-
+[16] A.E.Dirik,L.F.Cranor,andJ.CBirget. Modelinguser
+hical passwords: Learning from the first twelve years.
+choiceinthepasspointsgraphicalpasswordscheme. In
+ACMComputerSurvey,44(4):19:1–19:41,September
+Proceedingsofthe3rdSymposiumonUsablePrivacy
+2012. andSecurity,pages20–28,NewYork,NY,USA,2007.
+ACM.
+[6] J.C.Birget,D.Hong,andNMemon. Graphicalpass-
+wordsbasedonrobustdiscretization.IEEETransactions [17] D.Freeman,S.Jain,M.Dürmuth,B.Biggio,andG.Gia-
+onInformationForensicsandSecurity,1(3),Sep2006. cinto. Whoareyou?Astatisticalapproachtomeasuring
+userauthenticity. InNDSS.TheInternetSociety,2016.
+[7] J.Blocki,H.Benjamin,andSamsonZ. Ontheecono-
+micsofofflinepasswordcracking. InIEEESymposium [18] M.GollaandM.DÃŒrmuth. Ontheaccuracyofpass-
+onSecurityandPrivacy,volume1,2018. wordstrengthmeters. InConferenceonComputerand
+CommunicationsSecurity,Toronto,Canada,Oct2018.
+[8] E.BBorrego,P.E.Navarro,andC.M.Legón. Debilida-
+desdelosmétodosdediscretizaciónparacontraseñas [19] S.HoushmandandS.Aggarwal. Buildingbetterpass-
+gráficas. InInstitutodeCriptografía.SociedadCubana wordsusingprobabilistictechniques. InProceedingsof
+de Matemática y Computación., editor, IV Seminario the28thAnnualComputerSecurityApplicationsConfe-
+CientíficoNacionaldeCriptografía.Universidaddela rence,pages109–118,NewYork,USA,2012.ACM.
+Habana,2018.
+[20] L.JueMin,L.YongHao,N.HueyWen,T.SoonGuan,
+Y.LiHo,A.Azman,andL.SiongHoe. Comparisonof
+[9] W.E.Burr,D.F.Dodson,E.M.Newton,R.A.Perlner,
+graphicalpasswordusingiso9126. AdvancedScience
+W.T.Polk,S.Gupta,andE.A.Nabbus. Electronicaut-
+Letters,4:400–407,2016.
+henticationguideline:Recommendationsofthenational
+instituteofstandardsandtechnology-. Technicalreport,
+[21] P. Karmajit, N. Bhushan, D. Prasad-Mishra, and
+U.S.DepartmentofCommerceandNationalInstituteof
+P. Priyadarsini-Satapathy. Cued-click point graphical
+StandardsandTechnology,USA,2012.
+passwordusingcirculartolerancetoincreasepassword
+spaceandpersuasivefeatures.InProceedingsofInterna-
+[10] C.Castelluccia,M.DÃŒrmuth,andD.Perito. Adaptive
+tionalConferenceonCommunication,Computingand
+password-strengthmetersfrommarkovmodels. In19th
+Virtualization,volume79,pages561–568,2016.
+AnnualNetwork&DistributedSystemSecuritySympo-
+sium,SanDiego,UnitedStates,Feb2012.
+[22] C.M.Legón,P.E.Navarro,E.A.Borrego,O.Rodríguez,
+andR.Socorro. Modelosprobabilísticosdecontraseñas
+[11] S.Chiasson,J.Srinivasan,R.Biddle,andP.C.vanOors-
+alfanuméricas. In IV Seminario Científico Nacional
+chot. Centereddiscretizationwithapplicationtographi-
+deCriptografía.UniversidaddelaHabana,Noviembre
+calpasswords. InUsability,Psychology,andSecurity,
+2018.
+2008.
+[23] J.Ma,W.Yang,M.Luo,andN.Li. Astudyofprobabi-
+[12] H.C Chou, H.C. Lee, H. J Yu, F.P. Lai, K.H. Huang,
+listicpasswordmodels. InIEEESymposiumonSecurity
+andC.W.Hsueh. Passwordcrackingbasedonlearned
+andPrivacy,volume1,pages689–704,2014.
+patternsfromdisclosedpasswords. InternationalJour-
+nalofInnovativeComputing,InformationandControl, [24] D.MaloneandK.Maher. Investigatingthedistribution
+9(2):821–839,2013. ofpasswordchoices. CryptographyandSecurity,2011.
+128 Nuevomodeloprobabilísticoenautenticacióngráfica
+[25] D.MaloneandK.Maher. Investigatingthedistribution ofthe31stAnnualComputerSecurityApplicationsCon-
+ofpasswordchoices. InProceedingsofthe21stInterna- ference,pages321–330,NewYork,USA,2015.ACM.
+tionalConferenceonWorldWideWeb,pages301–310,
+NewYork,NY,USA,2012.ACM. [33] M.N.Todd. Aninvestigationofmachinelearningfor
+password evaluation. Master’s thesis, Arizona State
+[26] W. Melicher, B. Ur, S.M. Segreti, S. Komanduri, University,2016.
+L.Bauer,N.Christin,andL.FCranor. Fast,lean,and
+accurate:Modelingpasswordguessabilityusingneural [34] AToledo,MGarcía,C.M.Legón,andJ.L.Morales.Ca-
+networks. InProceedingsofthe25thUSENIXSecurity racterizacióndeunatacanteasistemasdeautenticación
+Symposium,pages10–12,2016. porcontraseña. InSegurmática,2014.
+[27] L.L.MoralesandC.M.Legón. Estimacióndelaforta- [35] E.Walkup. Thepasswordproblem. Technicalreport,
+lezadelascontraseñas. Technicalreport,Facultadde SandiaNationalLaboratories,Albuquerque,UnitedSta-
+IngenieríaInformática.UniversidadTecnológicadela tes,2016.
+Habana,2014.
+[36] D.WangandP.Wang. Ontheimplicationsofzipfslaw
+[28] O.Rodríguez,C.M.Legón,andR.Socorro. Seguridad
+inpasswords. InEuropeanSymposiumonResearchin
+y usabilidad de los esquemas y técnicas de autentica-
+ComputerSecurity,pages11–131,2016.
+cióngráfica. RevistaCubanadeCienciasInformáticas,
+[37] M.Weir,S.Aggarwal,B.deMedeiros,andB.Glodek.
+12(EspecialUCIENCIA):13–27,Sep2018.
+Passwordcrackingusingprobabilisticcontex-freegram-
+mars. In IEEE Symposium on Security and Privacy,
+[29] S.Salehi-Abari,J.Thorpe,andP.C.vanOorschot. On
+pages391–405,2009.
+purelyautomatedattacksandclick-basedgraphicalpass-
+word. InComputerSecurityApplicationsConference,
+[38] D.L.Wheeler. zxcvbn:Low-budgetpasswordstrength
+2008.
+estimation. InProceedingsofthe25thUSENIXSecu-
+[30] A.Shaikh,R.Pathan,R.Patel,andS.Rukaiya. Imple-
+ritySymposium,SEC’16,pages157–173,Berkeley,CA,
+mentation of authentication using graphical password USA,2016.USENIXAssociation.
+cloud computing. International Research Journal of
+[39] S.Wiedenbeck,J.Waters,J.Birget,A.Brodskiy,and
+EngineeringandTechnology,5(5),2018.
+N. Memon. Passpoints: design and longitudinal eva-
+[31] SunilShendageSwapnil,PrakashDhainje,andShivaji luationofagraphicalpasswordsystem. International
+YevaleRamesh. Cuedclickpoints:Graphicalpassword JournalofHumanComputersStudies,63(1):102–127,
+authenticationtechniqueforsecurity. InternationalJour- 2005.
+nalofComputerScienceandInformationTechnologies,
+[40] Bi.B.Zhu,D.Wei,M.Yang,andJ.Yan. Securityimpli-
+5(2),2014.
+cationsofpassworddiscretizationforclick-basedgraphi-
+[32] J.Shouling,Y.Shukun,W.Ting,L.Changchang,L.Wei- calpasswords. InProceedingsofthe22NdInternational
+Han,andB.Raheem. Pars:Auniformandopen-source ConferenceonWorldWideWeb,pages1581–1591,New
+passwordanalysisandresearchsystem. InProceedings York,USA,2013.ACM.

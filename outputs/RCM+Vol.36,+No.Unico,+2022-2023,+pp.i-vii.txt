@@ -1,0 +1,407 @@
+Editorial CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.i–vii
+Recibido(Received):06-11-2024,Revisado(Revised):10-11-2024
+Aceptado(Accepted):15-11-2024,Enlínea(Online):23-11-2024
+Nueva Época de la revista Ciencias Matemáticas:
+creativa, interactiva y dinámica
+New Period of the journal Ciencias Matemáticas:
+creative, interactive and dynamic
+Damian Valdés Santiago1*
+1DirectoryEditor-JefedelarevistaCienciasMatemáticas.DepartamentoMatemáticaAplicada,FacultaddeMatemáticayComputación,
+UniversidaddeLaHabana,LaHabana,Cuba.Email:rcm@matcom.uh.cu.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):RoxanaCabreraPuig,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.
+Citarcomo: ValdésSantiago,D.(2024).NuevaÉpocadelarevistaCienciasMatemáticas:creativa,interactiva
+ydinámica[Editorial].CienciasMatemáticas,36(Único),i-vii.DOI:https://doi.org/10.5281/zenodo.14209816.
+Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/10381.
+L
+a revista Ciencias Matemáticas (ISSN 0256-5374, lamentablementefallecido,yen1999asumeestecargoelDr.
+RNPS 0228), patrocinada por la Sociedad Cubana CarlosSánchezFernández.De2007a2012,larevistaestuvo
+deMatemáticayComputación(SCMC)ylaFacultad nuevamentedirigidaporunamujer,laDra.VivianSistachs
+deMatemáticayComputación(MATCOM)delaUniversidad Vega.Apartirde2013pasanaliderarlalaboreditorialelDr.
+deLaHabana(UH),sefundóen1980yhadivulgadoelqueha- JuliánBravoCastilleroyelDr.JoséA.MesejoChiong.Esta
+cermatemático,computacionalylasideasmásnovedosasde direccióncolectivasemantuvopor5años,hastaqueen2019
+enseñanzaentornoaestasciencias,asícomosusresultados queda al frente de la revista el Dr. José A. Mesejo Chiong,
+enotrospaíses. laborquerealizóhasta2021.
+PublicaartículosoriginalesdetodaslasramasdelasMa- Convistasacelebrarsus45añosdefundada(1980–2024),
+temáticasylaComputación,además,tieneunespacioparael con123númerospublicados,queincluyenmásde622artícu-
+debatesobresuenseñanzaenlosdiferentesniveleseducativos, los,CienciasMatemáticasentraenunaNuevaÉpocamarcada
+dondeestascienciascontribuyenaunatransformacióndelos porsupresenciaenlainternet,innovadorasformasdegestio-
+modelosdeaprendizaje.Ensusvariadosnúmerossepublican narelprocesoeditorialysudigitalización.
+ensayos histórico-críticos que exponen una reflexión sobre Apartirdel29defebrerode2024comenzósusfunciones
+eldesarrollodelconocimientomatemáticoycomputacional. un nuevo Equipo Editorial formado por la Dra.C. Roxana
+Tiene un sistema de revisión por pares a doble ciego y no CabreraPuig(EditoraEjecutiva),Lic.AliciaPérezFigueredo,
+cobracargosporlapublicación. Lic. Lázaro Daniel González Martínez, Lic. Merling Saba-
+SegúnGoogleAcadémico,larevistacuentaconuníndice terRamírez(todosmiembrosdelComitéEjecutivo)yDr.C.
+H = 5 (https://scholar.google.com/citatio DamianValdésSantiago(DirectoryEditor-Jefe).
+ns?user=NfqS2oUAAAAJ&hl=en).ElservicioMIAR, Deinmediatoestecomitérealizóloscontactosnecesarios
+que computa el Índice Compuesto de Difusión Secundaria conlaDireccióndeInformaciónCientífico-Técnica(DICT)
+(ICDS),unindicadorpensadocomoformasintéticademos- de la UH para acceder al Open Journal System (OJS) de
+trar la difusión de una revista en diferentes bases de datos la revista (https://revistas.uh.cu/rcm), con el
+científicasdealcanceinternacional,estimóquelarevistatuvo objetivodefamiliarizarseconestesistemadepublicaciónen
+en2021unICDS=6,50. líneaylaformadecargarlosvolúmenesynúmerosdequese
+disponía.
+Ciencias Matemáticas ha sido dirigida por prestigiosos
+Esteprocesoincluyóeldiseño,creaciónycolocaciónde
+profesoreseinvestigadoresyporsuinvaluableimprontaapro-
+informacióndelarevistaenelOJScomoloslogos,banner,
+vechamos para resaltar y reconocer la austeridad con que
+indexaciones,secciones,políticas,mensajeríadeemails,pla-
+guiaron sus volúmenes. Nuestra directora fundadora fue la
+nillas de revisión, perfil temático de la revista, entre otras
+Dra.GladysLinaresFleites,queliderólarevistade1980has-
+tareas.Paraello,serevisarondiferentesrevistasafinesalas
+ta1988.ElDr.JoséLuisFernandezMuñiz,lamentablemente
+matemáticasylacomputación,asícomosuenseñanza,para
+fallecido,estuvoalfrentedesde1989hasta1994.
+implementarlasmejoresprácticas.
+Luego de una pausa de 4 años, la revista fue retomada
+bajoladireccióndelDr.BaldomeroValiñoAlonso,también
+ii Editorial
+Deestamanera,sepropusieronnuevasseccionesdonde Atribución-NoComercial 4.0 Internacional(https://cr
+agrupar las contribuciones enviadas por los autores: Edito- eativecommons.org/licenses/by-nc-nd/4.0).
+rial, Artículo Original, Presentación de Tecnología, Comu- Losavancesenlagestióneditorialdelarevistasepresen-
+nicaciónBreve,ArtículodeRevisión,ArtículodeOpinión, taronanteelConsejoCientíficoyelClaustrodeProfesores
+Carta al Editor, Nota Histórica, Reseña de Libro, Divulga- deMATCOM,laConvenciónCientíficadelaUniversidadde
+ción Científica, Entrevista, Actualidad, Anuncios, Proyec- CiegodeÁvila2024yelTallerdeAplicacionesdeTécnicas
+tos de Investigación, Resumen de Tesis y Obituario. Los NuclearesenlaAgricultura(ATENA2024).
+detalles pueden revisarse en el siguiente enlace: https: Tambiénsediseñaroncertificadosparaagradeceranues-
+//revistas.uh.cu/rcm/about/submissions. trosrevisoresporsuinvaluableaportealacalidadcientífica
+Además,serealizóundiagnósticodelosvolúmenesdigi- delostrabajosquesonenviadosalarevista.Elprocesode
+taleseimpresosdisponibles,quefueronorganizadosypro- reformaenelConsejoEditorial(https://revistas.u
+cesados para ser publicados en el OJS. De esta forma, se h.cu/rcm/about/editorialTeam) ha establecido
+encuentranyaaccesiblesparasuconsultaycitaciónlosartícu- lasfuncionesquedebencoordinarseyejecutarsedemanera
+losqueaparecendesdeelVolumen23,2005-2006hastael expedita.Esteconsejoquedóconstituidopor60expertosen
+Volumen35,2021.Encorrespondencia,seincorporaron203 las temáticas de la revista, muchos de los cuales han sido
+artículosalOJSatextocompletoenformatoPDF,asícomo miembros del consejo de la revista en años anteriores. De
+susmetadatosenespañoleinglés,esdecir,título,resumen, estosexpertos,el30%sonespecialistasinternosdelaUH,
+palabrasclave,autoreseinstitucionesycódigosORCID. mientras un 70% son externos. De los 42 colegas externos
+alaUH,el50%pertenecenainstitucionesextranjeras.De
+Porotrolado,desdelagestióneditorialsehanrealizado
+estaformasehalogradoconformarunexcelenteconsejo,con
+varioscambios.Semodificósignificativamentelaplantillade
+expertosdereferenciayconampliaexperienciaenlapubli-
+Latexexistenteparaelenvíodecontribucionesalarevista,
+cacióncientífica.Agradecemoslaconfianzaydisposiciónde
+donde se incluyó la declaración de conflictos de intereses,
+estoscolegasparaintegrarnuestroConsejoEditorial.
+lacontribucióndeautoría,ladisponibilidaddeinformación
+Comopartedelastareasparadivulgarlosartículospubli-
+suplementaria,lainclusióndelcódigoORCIDdelosautores,
+cadosenlarevista,asícomolosllamadosacontribuciones
+el uso de la taxonomía Mathemtical Subject Classificacion
+yparamantenerinformadosanuestrosautores,lectoresein-
+paraseleccionarpalabrasclave,asícomoladeclaraciónde
+teresados,secrearonperfilesdelarevistaendiferentesredes
+la relevancia del estudio. Estos elementos forman parte de
+socialesdigitalescomoFacebook(https://www.face
+buenasprácticasinternacionalesdecalidaddelapublicación
+book.com/profile.php?id=61567208877903),
+científicaquedecidimosincorporarconvistasalaindización
+Instagram(https://www.instagram.com/rev_ci
+enbasesdedatosdeprestigiointernacional.Larevistatam-
+enciasmatematicas)yTelegram(https://t.me/R
+biénaceptatrabajosenformatoWordquecumplanlasnormas
+evistaCienciasMatematicas).
+APA7,paraluegosermaquetadosporelComitéEjecutivoen
+Sehandiseñadoflyersytrípticosparadivulgarlarevista,
+Latex.
+susnormasdepublicación,susitiowebylosserviciosdonde
+Sereformaronlaspolíticasdelarevista,enparticular,se
+estáindizada.
+establecióunapolíticadecambiosenlosartículosdespuésde
+Estas tareas a favor de la visibilidad de la revista y el
+supublicaciónyotrasobreelusodeherramientasdeInteligen-
+uso del OJS han permitido que el sitio de la revista tenga
+ciaArtificialGenerativaenlosartículoscientíficos(https:
+visitasdetodosloscontinentes(Figura1).Igualmente,sehan
+//revistas.uh.cu/rcm/about/submissions).
+incrementadolasconsultasdelosresúmenes(Figura2)ylas
+Tambiénsepropondráunapolíticacontraelplagioacadémico
+descargasdelostrabajos(Figura3).LaFigura4muestralos
+y se utilizarán sistemas de detección de coincidencias para
+10artículosconmásvisitashastanoviembrede2024.
+garantizarlacalidaddelostrabajospublicados.
+Comopartedeunarduoprocesodetrabajo,actualmen-
+Elflujoeditorialdelarevistafueperfeccionadoparaque
+te la revista está incluida en las siguientes bases de datos,
+seadaptaraalusodelOJS.Actualmentelarevistatieneun
+repositoriosyserviciosdeindización:
+esquemadepublicacióncontinua,denúmeroabierto,loque
+permite que, una vez aprobado el trabajo, este sea publica- Latindex: https://latindex.org/latinde
+do,indizadoypuedacitarse,sinesperarquesecompleteel x/ficha/4130.
+número.Comopasosfinalesdeesteflujoseagregalainfor-
+macióndelosartículosdentrodelossistemasdeindizacióny BibliotecaLatinoamericanaeninvestigacióncientífica
+repositoriosdondeestáincluidalarevista.
+ysocial:https://biblat.unam.mx/es/revi
+sta/ciencias-matematicas.
+GraciasalrepositorioZenodo,secuentaconunDigital
+ObjectIdentificator(DOI)paralascontribucionespublicadas.
+MIAR:https://miar.ub.edu/issn/0256-5
+Comonovedadenlapublicacióndelostrabajos,nosolose
+374.
+incluyeelPDFsinotodoslosarchivosLatex.Estopermite
+quetantoautorescomolectorestenganaccesoaestosarchi- FuenteAcadémicaPlus:https://www.ebsco.co
+vos, distribuidos mediante la Licencia Creative Commons m/m/ee/Marketing/titleLists/fap-cov
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.i–vii ValdésSantiago,D.
+https://revistas.uh.cu/rcm/article/view/10381 https://doi.org/10.5281/zenodo.14209816
+Editorial iii
+denoviembrede2024.Estolespermitióactualizarseentemas
+comolanormalizacióndecontenidos,lagestióneditorial,las
+revistaselectrónicas,elaccesoabierto,entreotros.
+Pararesponderaunpedidodenuestrosautores,seestáim-
+partiendodesdeel6denoviembreyhastael18dediciembre
+de2024elcursodepostgrado“Redaccióncientíficausando
+Latex”,dondeselesbrindaherramientasdediversotipopara
+prepararartículoscientíficosdecalidad.
+Lospróximospasosaseguirconsistenensolicitarune-
+ISSN de la revista, que constituye un elemento importante
+Figura1.Lugaresdelmundodedondesehanrecibidovisitas
+paralavisibilidaddesuversiónenlínea.Además,nosprepa-
+alsitiodelarevistahastanoviembrede2024[Placesinthe
+ramosparalaindizaciónenDOAJyposteriormenteenScielo.
+worldfromwhichvisitstothejournal’swebsitehavebeen
+Serealizangestionesparalareinclusióndelarevistaenzb-
+receiveduntilNovember2024].
+MATHOpen(antesconocidocomoZentralblattMATH),que
+eselservicioderesumenyrevisióndematemáticaspurasy
+erage.htm. aplicadasmáscompletoyantiguodelmundo.
+ConayudadelGrupoCientíficoEstudiantildelarevista,
+SistemaIntegradodeInformaciónDocumentalCentro- coordinado por la Dra.C. Cabrera Puig, ha comenzado el
+americano (SIIDCA): https://catalogosiid procesoparadigitalizarlosnúmerosdelarevistaanterioresa
+ca.csuca.org/Record/UCR.000503170/De
+2004.Sehapresentadounproyectoinstitucionaldelprograma
+tails#description.
+decienciaytécnicadelaUHparaapoyaresteproceso.
+Paraconcluir,losautoresqueconsultenesteVolumen36,
+CatálogoMundial:https://search.worldcat.
+2022-2023,queahoraseencuentrapublicadoennuestrositio
+org/es/title/1010627314.
+yprontoseráimpreso,tendránaccesoa10artículosdeuna
+PERIODICA.ÍndicedeRevistasLatinoamericanasen amplia variedad temática: artículos de biomatemática (mo-
+Ciencias-DGBSDI,UNAM:https://clase.dg delacióndeepidemiasoprocesosbiológicos),integradores
+b.unam.mx/F/QQB1M4V1RF6UY7R2JU2CHXCQ exponenciales,procesamientodeimágenesmédicas,enseñan-
+TJIUJGGIPHCE7FEAB82LB2LUSI-25487?fun zadelanálisismatemáticoyelálgebrayelusodemodelos
+c=find-b&REQUEST=ciencias+matematica delenguajesagranescalaeninteligenciaartificial.
+s. Además,sereseñandostextos,unonicaragüenseyotro
+cubano.Elprimerotratasobrelamatemáticaafectivaylas
+ResearchBib:https://journalseeker.rese maneras de medir las actitudes de los estudiantes hacia las
+archbib.com/view/issn/0256-5374. matemáticas.Elsegundoestádedicadoalanálisisfuncional
+lineal e incluye ejercicios con respuestas al final del texto,
+Zenodo:https://zenodo.org/communities
+que es presenta con un estilo claro y riguroso, ideal para
+/rcm.
+estudiantes.
+GoogleAcadémico:https://scholar.google Finalmente,sereseñandosimportanteseventosqueacon-
+.com/citations?user=NfqS2oUAAAAJ&hl= tecieronen2023:elTallerInternacionalsobreÁlgebraCompu-
+en. tacional en la Computación Científica (CASC) y el XVIII
+CongresoInternacionaldeMatemáticayComputación,Com-
+Sherpa Romeu: https://v2.sherpa.ac.uk/ pumat2023,LaHabana,2023.
+id/publication/45793. Agradeceratodoslosautores,revisores,colegaseinstitu-
+cionesporlasmuestrasinfinitasdeapoyoquehandemostrado
+EuroPub: https://europub.co.uk/journa
+sinreparosydemaneracomprometidaconlarevistaenesta
+ls/31942. NuevaÉpocaparaqueseacreativa,interactivaydinámica.□
+ERICHPlus:http://kanalregister.hkdir.
+no/publiseringskanaler/erihplus/peri
+odical/info?id=507488.
+CertificadaporelMinisteriodeCiencia,Tecnologíay
+MedioAmbiente(CITMA),Cuba.
+Lasuperaciónyactualizaciónentemaseditorialesesmuy
+necesaria.Porello,losmiembrosdelComitéEjecutivoparti-
+ciparonenelcursoenlínea“Ediciónyvisibilidadderevistas
+científicas”,impartidoporLatindex,del23deseptiembreal4
+ValdésSantiago,D. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.i–vii
+https://doi.org/10.5281/zenodo.14209816 https://revistas.uh.cu/rcm/article/view/10381
+iv Editorial
+Figura2.Númeromensualdelecturasalosresúmenesdelosartículospublicadosenelsitiodelarevistahastanoviembrede
+2024[Monthlynumberofreadingsofabstractsofarticlespublishedonthejournal’swebsiteuntilNovember2024].
+Figura3.Númeromensualdedescargasdeltextocompletodelosartículospublicadosenelsitiodelarevistahastanoviembre
+de2024[Monthlynumberoffull-textdownloadsofarticlespublishedonthejournal’swebsiteuntilNovember2024].
+Figura4.Diezartículosmásvistosenelsitiodelarevistahastanoviembrede2024[Toptenmostviewedarticlesonthe
+journal’swebsitethroughNovember2024].
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.i–vii ValdésSantiago,D.
+https://revistas.uh.cu/rcm/article/view/10381 https://doi.org/10.5281/zenodo.14209816
+Editorial v
+English version (DICT)oftheUHtoaccessthejournal’sOpenJournalSystem
+(OJS)(https://revistas.uh.cu/rcm),inorderto
+T
+he journal Ciencias Matemáticas (ISSN 0256-5374,
+becomefamiliarwiththisonlinepublicationsystemandhow
+RNPS 0228), sponsored by the Cuban Society of
+touploadthevolumesandissuesavailable.
+MathematicsandComputerScience(SCMC)andthe
+Thisprocessincludedthedesign,creationandplacement
+FacultyofMathematicsandComputerScience(MATCOM)
+of journal information in OJS such as logos, banner, inde-
+oftheUniversityofHavana(UH),wasfoundedin1980and
+xing,sections,policies,emailmessaging,reviewtemplates,
+hasdisseminatedmathematicalandcomputationalworkand
+thematic profile of the journal, among other tasks. For this
+themostinnovativeteachingideasinthesesciences,aswell
+purpose,differentjournalsrelatedtomathematicsandcompu-
+astheirresultsinothercountries.
+terscience,aswellastheirteaching,werereviewedinorder
+It publishes original articles on all branches of Mathe-
+toimplementbestpractices.
+maticsandComputerScience,aswellasaspacefordebate
+Thus,newsectionswereproposedtogroupthecontribu-
+ontheirteachingatdifferenteducationallevels,wherethese
+tions sent by the authors: Editorial, Original Article, Tech-
+sciencescontributetoatransformationoflearningmodels.In
+nologyPresentation,BriefCommunication,ReviewArticle,
+itsvariousissues,itpublisheshistorical-criticalessaysthat
+OpinionArticle,LettertotheEditor,HistoricalNote,BookRe-
+reflectonthedevelopmentofmathematicalandcomputational
+view,ScientificDisclosure,Interview,News,Announcements,
+knowledge.Ithasadouble-blindpeerreviewsystemanddoes
+ResearchProjects,ThesisAbstractandObituary.Detailscan
+notchargepublicationfees.
+bereviewedatthefollowinglink:https://revistas.u
+According to Google Scholar, the journal has an H = 5
+h.cu/rcm/about/submissions.
+index (https://scholar.google.com/citatio
+Inaddition,adiagnosiswasmadeoftheavailabledigital
+ns?user=NfqS2oUAAAAJ&hl=en).TheMIARservice,
+andprintedvolumes,whichwereorganizedandprocessedto
+whichcomputestheCompositeIndexofSecondaryDissemi-
+bepublishedinOJS.Thus,articlesfromVolume23,2005-
+nation(ICDS),anindicatordesignedasasyntheticwayof
+2006toVolume35,2021arenowaccessibleforconsultation
+showingthedisseminationofajournalindifferentscientific
+andcitation.Correspondingly,203articleswereincorporated
+databases of international scope, estimated that the journal
+intotheOJSinfulltextinPDFformat,aswellastheirme-
+hadanICDS=6.50in2021.
+tadatainSpanishandEnglish,i.e.,title,abstract,keywords,
+Ciencias Matemáticas has been directed by prestigious
+authorsandinstitutions,andORCIDcodes.
+professorsandresearchersandfortheirinvaluableimprintwe
+takethisopportunitytohighlightandrecognizetheausterity On the other hand, several changes have been made in
+withwhichtheyguideditsvolumes.Ourfoundingeditorwas editorial management. The existing Latex template for the
+Dr.GladysLinaresFleites,wholedthejournalfrom1980to submissionofcontributionstothejournalwassignificantly
+1988.Dr.JoséLuisFernandezMuñiz,unfortunatelydeceased, modified to include the declaration of conflicts of interest,
+wasatthehelmfrom1989to1994. theauthorshipcontribution,theavailabilityofsupplementary
+Aftera4-yearbreak,thejournalwasresumedunderthedi- information,theinclusionoftheORCIDcodeoftheauthors,
+rectionofDr.BaldomeroValiñoAlonso,alsosadlydeceased, theuseofthetaxonomyMathemticalSubjectClassification
+andDr.CarlosSánchezFernándezassumedthispositionin toselectkeywords,aswellasthedeclarationoftherelevance
+1999.From2007to2012,thejournalwasonceagaindirected of the study. These elements are part of international good
+by a woman, Dr. Vivian Sistachs Vega. In 2013, Dr. Julián practicesofqualityofscientificpublicationthatwedecidedto
+BravoCastilleroandDr.JoséA.MesejoChiongtookoverthe incorporatewithaviewtoindexingindatabasesofinternatio-
+leadershipoftheeditorialwork.Thiscollectivedirectionwas nalprestige.ThejournalalsoacceptspapersinWordformat
+maintainedfor5years,until2019,whenDr.JoséA.Mese- thatcomplywithAPA7standards,tobelaterlayoutbythe
+joChiongtookovertheleadershipofthejournal,ataskhe ExecutiveCommitteeinLatex.
+carriedoutuntil2021. Thejournal’spolicieswerereformed,inparticular,apo-
+Inviewofcelebratingits45yearsoffoundation(1980– licyonchangestoarticlesafterpublicationandanotheron
+2024),with123issuespublished,includingmorethan622 theuseofGenerativeArtificialIntelligencetoolsinscientific
+articles,CienciasMatemáticasentersaNewPeriodmarked articleswasestablished(https://revistas.uh.cu/r
+byitspresenceontheinternet,innovativewaysofmanaging cm/about/submissions). A policy against academic
+theeditorialprocessanditsdigitalization. plagiarismwillalsobeproposedandmatchdetectionsystems
+In February 29, 2024, a new Editorial Team began its willbeusedtoensurethequalityofpublishedpapers.
+functions,formedbyDr.C.RoxanaCabreraPuig(Executive Theeditorialflowofthejournalwasimprovedtoadapt
+Editor),Lic.AliciaPérezFigueredo,Lic.LázaroDanielGon- ittotheuseofOJS.Currently,thejournalhasanopen-issue
+zálezMartínez,Lic.MerlingSabaterRamírez(allmembersof continuouspublicationscheme,whichallowsthat,oncethe
+theExecutiveCommittee)andDr.C.DamianValdésSantiago workisapproved,itispublished,indexedandcanbecited,
+(DirectorandEditor-in-Chief). withoutwaitingfortheissuetobecompleted.Asfinalsteps
+Thiscommitteeimmediatelymadethenecessarycontacts of this flow, the information of the articles is added within
+withtheDirectorateofScientificandTechnicalInformation the indexing systems and repositories where the journal is
+ValdésSantiago,D. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.i–vii
+https://doi.org/10.5281/zenodo.14209816 https://revistas.uh.cu/rcm/article/view/10381
+vi Editorial
+included. TJIUJGGIPHCE7FEAB82LB2LUSI-25487?fun
+ThankstotheZenodorepository,thereisaDigitalObject c=find-b&REQUEST=ciencias+matematica
+Identifier(DOI)forpublishedcontributions.Asanoveltyin s.
+thepublicationofpapers,notonlythePDFbutallLatexfiles
+ResearchBib:https://journalseeker.rese
+are included. This allows both authors and readers to have
+archbib.com/view/issn/0256-5374.
+accesstothesefiles,distributedundertheCreativeCommons
+Attribution-NonCommercial4.0InternationalLicense(http
+Zenodo:https://zenodo.org/communities
+s://creativecommons.org/licenses/by-nc-n
+/rcm.
+d/4.0).
+Theadvancesintheeditorialmanagementofthejournal GoogleAcadémico:https://scholar.google
+werepresentedtotheScientificCouncilandtheFacultyof .com/citations?user=NfqS2oUAAAAJ&hl=
+MATCOM, the Scientific Convention of the University of en.
+CiegodeAvila2024andtheWorkshoponApplicationsof
+NuclearTechniquesinAgriculture(ATENA2024). Sherpa Romeu: https://v2.sherpa.ac.uk/
+Certificateswerealsodesignedtothankourreviewersfor id/publication/45793.
+their invaluable contribution to the scientific quality of the
+EuroPub: https://europub.co.uk/journa
+papersthataresenttothejournal.Thereformprocessinthe
+ls/31942.
+EditorialBoard(https://revistas.uh.cu/rcm/a
+bout/editorialTeam)hasestablishedthefunctionsto
+ERICHPlus:http://kanalregister.hkdir.
+becoordinatedandexecutedinanexpeditiousmanner.This no/publiseringskanaler/erihplus/peri
+boardismadeupof60expertsinthejournal’stopics,manyof odical/info?id=507488.
+whomhavebeenmembersofthejournal’sboardinprevious
+years.Oftheseexperts,30%areinternalUHspecialists,while CertificadaporelMinisteriodeCiencia,Tecnologíay
+70%areexternal.Ofthe42colleaguesexternaltotheUH, MedioAmbiente(CITMA),Cuba.
+50%belongtoforeigninstitutions.Inthisway,anexcellent
+Theimprovementandupdatingineditorialmattersisvery
+boardhasbeenformed,withexpertsofreferenceandwithwi-
+necessary.Forthisreason,themembersoftheExecutiveCom-
+deexperienceinscientificpublication.Wearegratefulforthe
+mitteeparticipatedintheonlinecourse“Editionandvisibility
+trustandwillingnessofthesecolleaguestojoinourEditorial
+ofscientificjournals”,givenbyLatindex,fromSeptember23
+Board.
+to November 4, 2024. This allowed them to be updated on
+Aspartofanarduousworkprocess,thejournaliscurrently
+topicssuchascontentstandardization,editorialmanagement,
+includedinthefollowingdatabases,repositoriesandindexing
+electronicjournals,openaccess,amongothers.
+services:
+Inresponsetoarequestfromourauthors,thepostgraduate
+Latindex: https://latindex.org/latinde course“ScientificwritingusingLatex”isbeingtaughtfrom
+x/ficha/4130. November 6 to December 18, 2024, providing them with
+varioustoolstopreparequalityscientificarticles.
+BibliotecaLatinoamericanaeninvestigacióncientífica
+Thenextstepstobetakenaretoapplyforane-ISSNfor
+ysocial:https://biblat.unam.mx/es/revi
+thejournal,whichisanimportantelementforthevisibilityof
+sta/ciencias-matematicas.
+itsonlineversion.Inaddition,wearepreparingforindexing
+inDOAJandlaterinScielo.Arrangementsarebeingmadefor
+MIAR:https://miar.ub.edu/issn/0256-5
+reinclusionofthejournalinzbMATHOpen(formerlyknown
+374.
+asZentralblattMATH),whichistheworld’soldestandmost
+FuenteAcadémicaPlus:https://www.ebsco.co comprehensivepureandappliedmathematicsabstractingand
+m/m/ee/Marketing/titleLists/fap-cov reviewservice.
+erage.htm. Withthehelpofthejournal’sStudentScientificGroup,
+coordinated by Dra. Cabrera Puig, the process to digitize
+SistemaIntegradodeInformaciónDocumentalCentro-
+issuesofthejournalpriorto2004hasbegun.Aninstitutional
+americano (SIIDCA): https://catalogosiid
+projectoftheUHScienceandTechnologyProgramhasbeen
+ca.csuca.org/Record/UCR.000503170/De
+submittedtosupportthisprocess.
+tails#description.
+To conclude, authors consulting this Volume 36, 2022-
+2023,whichisnowpostedonoursiteandwillsoonbeprinted,
+CatálogoMundial:https://search.worldcat.
+will have access to 10 articles of a wide thematic variety:
+org/es/title/1010627314.
+articlesonbiomathematics(modelingepidemicsorbiological
+PERIODICA.ÍndicedeRevistasLatinoamericanasen processes),exponentialintegrators,medicalimageprocessing,
+Ciencias-DGBSDI,UNAM:https://clase.dg teachingmathematicalanalysisandalgebra,andtheuseof
+b.unam.mx/F/QQB1M4V1RF6UY7R2JU2CHXCQ large-scalelanguagemodelsinartificialintelligence.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.i–vii ValdésSantiago,D.
+https://revistas.uh.cu/rcm/article/view/10381 https://doi.org/10.5281/zenodo.14209816
+Editorial vii
+Inaddition,twotextsarereviewed,oneNicaraguanand Havana,2023.
+theotherCuban.Thefirstdealswithaffectivemathematics To thank all the authors, reviewers, colleagues and ins-
+andwaysofmeasuringstudents’attitudestowardsmathema- titutions for the infinite support they have shown without
+tics.Thesecondisdevotedtolinearfunctionalanalysisand hesitation and in a committed way with the journal in this
+includesexerciseswithanswersattheendofthetext,which NewPeriodtomakeitcreative,interactiveanddynamic.■
+ispresentedinaclearandrigorousstyle,idealforstudents.
+Finally,twoimportanteventsthattookplacein2023are
+reviewed:theInternationalWorkshoponComputerAlgebra
+inScientificComputing(CASC)andEthsteaXobVraIIIesItn´atebranjoatiuonnaallicencia Creative Commons “Atribuci´on-NoComercial-
+SinDerivadas4.0Internacional”.
+CongressofMathematicsandComputing,Compumat2023,
+1
+ValdésSantiago,D. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.i–vii
+https://doi.org/10.5281/zenodo.14209816 https://revistas.uh.cu/rcm/article/view/10381

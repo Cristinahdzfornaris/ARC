@@ -1,0 +1,538 @@
+REVISTA CIENCIAS MATEMÁTICAS Vol. 23 único, Nos. 2005-2006
+EL LEGADO DE JACOBO BERNOULLI
+A LA CIENCIA DEL CÁLCULO
+(UN RECONOCIMIENTO EN EL 300 ANIVERSARIO
+DE SU MUERTE)
+Concepción Valdés Castro, Universidad de la Habana
+RESUMEN
+Jacob Bernoulli es uno de los matemáticos más sobresalientes del siglo XVII y además el institutor de
+una cultura matemática en su familia que la convirtió en una dinastía científica sin parangón en la
+historia. Junto a Leibniz y su hermano Johann contribuyó sustancialmente al desarrollo de la
+matemática de las magnitudes variables o Nuevo Cálculo como se le llamaba y lo aplicó con eficacia al
+estudio geométrico de las curvas y a problemas de la mecánica. Elaboró el primer método general para
+el estudio de problemas de optimización y con ello colaboró en el surgimiento del cálculo de
+variaciones. Lo que se considera su obra cumbre, el Ars Conjectandi, quedó inconclusa al morir el 16
+de agosto de 1705, sin embargo, en ella nos legó la primera versión de lo que hoy conocemos como ley
+de los grandes números, generando la transformación en ciencia matemática del cálculo de
+probabilidades. A 300 años de su muerte escribimos este artículo como sencillo reconocimiento.
+ABSTRACT
+Jacob Bernoulli was one of the most prominent mathematicians of the XVIII century and the one that
+introduced mathematical culture in his family, that transformed it into a scientific dynasty without
+precedent in History. Together with Leibniz and his brother Johann, he promoted in a major way, the
+development of differential and integral calculus and its applications to geometrical research of curves
+and to solve mechanical problems. He developed the first general method of research into optimization
+problems, so he contributed to the birth of the Calculus of Variations. Jacob Bernoulli's most
+transcendental work Ars Conjectandi was incomplete at the time of his death, the 16 August of 1705,
+however, in this work Bernoulli accomplishes the first version of what today we know as the Law of
+Large Numbers, bringing probability calculus into mathematical science. 300 years after his death, we
+write this work as a modest acknowledgment to him.
+1. INTRODUCCIÓN
+Jacob Bernoulli nace en 1654 en el seno de una familia de comerciantes de la ciudad de Basilea. El deseo
+de su padre lo llevó a prepararse para la carrera eclesiástica, con este fin realizó estudios filosóficos,
+teológicos y de idiomas en la Universidad de Basilea. Se graduó con el grado de Magíster en Filosofía a los
+17 años y 5 años más tarde era Doctor en Teología. Dominaba los idiomas alemán, francés, inglés, latín y
+griego. Pero Jacob sentía una gran inclinación hacia las Ciencias Matemáticas y a escondidas del padre
+estudiaba diferentes aspectos de estas ciencias sin maestro alguno y casi sin libros adecuados. Desde los
+18 años ya resolvía correctamente algunos problemas difíciles de estas ciencias, en especial los
+relacionados con la astronomía.
+Como era costumbre, al término de sus estudios comenzó Jacob Bernoulli un largo periplo de 4 años por
+Suiza, Francia e Italia. En esta época comenzó a llevar una libreta de notas donde incluía diferentes
+comentarios con carácter científico. Un lugar fundamental en estas notas lo ocupa la resolución de
+problemas matemáticos. Estas notas revelan cómo, de forma paulatina, Jacob se comenzó a interesar
+primero en los métodos matemáticos clásicos y más tarde quedó fascinado con los nuevos métodos del
+cálculo de los diferenciales de Leibniz, a cuyo desarrollo y perfeccionamiento contribuyó significativamente.
+También es posible conocer de su interés en las aplicaciones de la matemática y la época en que desarrolló
+sus ideas básicas plasmadas en el Ars Conjectandi.
+Dos años después de su regreso a Basilea, Bernoulli viaja de nuevo, pero esta vez lo hace a Holanda e
+Inglaterra. En Amsterdam conoce a Huygens, el cual ejercerá una influencia enorme en su trabajo sobre
+cálculo de probabilidades. Como resultado de sus viajes, Jacob estableció relaciones con varios geómetras
+europeos de primera línea con los cuales mantuvo una amplia correspondencia durante toda su vida.
+Su labor docente profesional se inició en 1683 cuando comenzó a enseñar Física Experimental en
+la Universidad de Basilea. En octubre de 1686 quedó vacante el puesto de profesor de matemáticas en la
+84
+Universidad de Basilea y como ya los éxitos de Jacob eran conocidos, el senado universitario, de forma
+unánime, lo eligió para este puesto. Es difícil que los asistentes a este acto modesto se imaginaran que eran
+testigos presenciales del comienzo de un hecho sin parangón en la Historia de las Matemáticas: desde ese
+instante la Cátedra de Matemática de la Universidad de Basilea sería ocupada ininterrumpidamente por un
+miembro de la familia Bernoulli durante más de 100 años. Aun más, los miembros de esta familia serían
+profesores de su Universidad natal ininterrumpidamente durante un cuarto de milenio, hasta el comienzo de
+la segunda mitad del siglo 20.
+En el mismo año de su toma de posesión de la cátedra, Jacob Bernoulli leyó el trabajo pionero de Leibniz
+sobre el Nuevo Método, donde se publicaban por vez primera las ideas del ahora denominado Cálculo
+Diferencial e Integral, encontró ciertos resultados difíciles de comprender y le escribió a Leibniz pidiéndole
+aclaraciones. Leibniz estaba en un viaje de trabajo de forma que solo recibió la carta tres años después de
+ser escrita, cuando para Bernoulli la consulta no era en absoluto necesaria, pues no sólo lo había
+comprendido perfectamente, sino que ya había realizado sus primeros aportes al desarrollo de esta nueva
+rama de la matemática.
+Uno de los episodios más significativos en la vida de Jacob Bernoulli ocurrió cuando su hermano menor
+Johann, comenzó a estudiar matemática bajo su tutoría. Johann, 13 años más joven que Jacob, al tiempo
+que estudiaba la carrera de medicina quiso que su hermano le enseñara a desentrañar los misterios de las
+matemáticas. Y así los hermanos, con su espíritu crítico y polemista, llegaron a dominar el cálculo diferencial
+e integral y a la vez, ellos mismos contribuyeron significativamente a su desarrollo. Esta relación fraternal
+enseguida devino en una agria rivalidad, la cual quedó plasmada inclusive en una revista científica como era
+el Acta Eruditorum.
+Jacob Bernoulli realizó aportes significativos no solo al cálculo diferencial e integral, trabajó en todas las
+ramas de la matemática del siglo XVIII (excepto teoría de números): en geometría de curvas, probabilidades,
+series, ecuaciones diferenciales, cálculo de variaciones y mecánica y en todas fue de los pioneros.
+Entre los años 1689-1704 escribió 5 memorias con el título general de Proposiciones aritméticas acerca de
+las series infinitas que fueron la primera guía que existió para el estudio de la teoría de las series. Jacob
+también realizó importantes trabajos en física, tales como la determinación del centro de oscilación de
+cuerpos sólidos y el cálculo de la resistencia de los cuerpos que se mueven en un líquido.
+A pesar de sus aportes cruciales al desarrollo del Análisis Matemático, se considera que el trabajo de
+Jacob que ha tenido mayor trascendencia fue el Ars Conjectandi (Arte de las Conjeturas), publicado en
+Basilea en 1713 por su sobrino Nicolaus I, 8 años después de la muerte de su autor. Cuando muere Jacob
+Bernoulli, el trabajo estaba aún incompleto, no obstante, constituía una obra de gran significación para una
+nueva rama de las matemáticas que se estaba gestando en esa época: la teoría de las probabilidades.
+En 1699 la Academia de París, por vez primera, eligió 8 miembros extranjeros y entre ellos estaban,
+además de Newton y Leibniz, los hermanos Jacob y Johann Bernoulli. Por su parte, al fundarse la Academia
+de Berlín también se eligió a ambos hermanos Bernoulli miembros extranjeros de la misma.
+A fines del siglo XVII enfermó Jacob Bernoulli de tuberculosis y falleció, a los 50 años, el 16 de agosto
+de 1705.
+2. APORTES DE JACOB BERNOULLI AL ANÁLISIS MATEMÁTICO
+Uno de los problemas más acuciantes del siglo XVII era el estudio de las curvas. Los métodos desarrollados
+hasta el momento, fundamentalmente por Descartes y Fermat, permitían el estudio de las curvas algebraicas.
+Precisamente el objetivo de Leibniz cuando desarrolla su nuevo cálculo de los diferenciales es poseer un
+método general que permita el estudio de todas las curvas, tanto algebraicas como trascendentes. Este nuevo
+cálculo de diferenciales constituirá el arma principal de los hermanos Jacob y Johann Bernoulli cuando se
+deciden a estudiar las curvas y una amplia gama de problemas asociados con ellas.
+El primer trabajo relacionado con el análisis de los infinitesimales publicado por Jacob Bernoulli fue en
+1690 en el Acta Erudirorum. En él resolvió un problema que había sido propuesto por Leibniz tres años
+antes: Encontrar la curva, situada en un plano vertical, según la cual un punto material desciende alturas
+iguales en tiempos iguales.
+85
+Este problema había sido resuelto anteriormente por Leibniz y Huygens, pero la primera solución con el
+uso de los diferenciales fue dada por Bernoulli. Este artículo de Jacob sirvió para aclarar el alcance de la
+nueva metodología introducida por Leibniz, ayudó a establecer una opinión favorable sobre su alto grado de
+generalidad. Además, este trabajo es particularmente importante para la historia del cálculo, ya que la
+denominación integral aparece por vez primera con su significado actual de proceso inverso al de la
+diferenciación. Jacob concluye, proponiendo como reto a la maestría en el manejo del nuevo cálculo, el
+conocido como problema de la catenaria: Encontrar la forma que toma una cuerda (o cadena) perfectamente
+flexible y homogénea por la acción sólo de su peso, si ella es fijada en sus extremos.
+Este era un viejo problema que los geómetras más eminentes de épocas anteriores no habían sido
+capaces de resolver satisfactoriamente. La forma que toma la cuerda o cadena tiene un gran parecido con
+una parábola y precisamente ésta fue la primera conjetura formulada por varios matemáticos, Galileo entre
+ellos. Después de lanzado el reto por Jacob Bernoulli, el problema fue resuelto geométricamente por
+Huygens y mediante el uso de los medios del cálculo infinitesimal por Johann Bernoulli y Leibniz. Huygens
+denominó a esta curva catenaria, del vocablo latino catena que significa cadena. Todas las soluciones fueron
+publicadas en el Acta Eruditorum durante el año 1691.
+También se interesó Bernoulli por estudiar las espirales. Comenzó estudiando la llamada espiral parabólica,
+que él mismo introdujo, es decir la curva dada en coordenadas polares por (p – a)2 = 2ap, donde a y p son
+constantes. Para el estudio de esta curva, Jacob presenta por vez primera, aunque en forma embrionaria, una
+idea de lo que hoy conocemos como coordenadas polares. Además, Jacob elabora un método para construir
+las tangentes de esta curva, calcula el área de un sector de la misma y encuentra su punto de inflexión.
+El problema de hallar la longitud de un arco de esta espiral condujo a Jacob a considerar la primera
+integral elíptica en la historia de la matemática. De manera que este trabajo fue un aporte importantísimo al
+perfeccionamiento del instrumento matemático recién creado por Leibniz.
+Pero la espiral que recabó la mayor atención de Jacob fue la que actualmente se conoce como espiral
+logarítmica: Cek, donde C es una constante cualquiera no nula. Era usual en la época que nos ocupa
+tratar de investigar las curvas lo más profundamente posible, intentar encontrar todos los elementos o curvas
+relacionadas con ellas que pudieran brindar información en cuanto a su forma, comportamiento y
+propiedades y que fueran potencialmente útiles en otros contextos de las Ciencias Matemáticas. Jacob
+Bernoulli analizó profundamente la espiral logarítmica y comprobó propiedades sorprendentes de esta curva:
+la evoluta es nuevamente una espiral logarítmica, también lo es la inversa con respecto al origen. Si se
+coloca una fuente de luz en el origen, entonces las cáusticas por reflexión y refracción son también espirales
+logarítmicas idénticas. (Acta Eruditorum junio 1691, mayo de 1692).
+Esta propiedad extraordinaria, que tiene este tipo de espiral, de reproducirse bajo diversas transformaciones
+fue lo que motivó que Jacob la denominara spira mirabilis (espiral milagrosa) y ordenó que fuera colocada en
+la lápida de su tumba junto a la inscripción latina Eadem Mutata Resurgo lo que puede traducirse como: Aún
+siendo modificada, resurjo. Comentemos que tal vez debido a la ignorancia matemática del lapidario
+encargado de realizar la voluntad del difunto Bernoulli, la espiral que aparece grabada en su tumba es la de
+Arquímedes y no la logarítmica, como él había dispuesto.
+Jacob Bernoulli estudió otras muchas curvas y este estudio contribuyó significativamente al desarrollo del
+naciente cálculo de los diferenciales. En particular se interesó por la curva que denominó elástica (1694, Acta
+Eruditorum, junio) y que puede describirse de la forma siguiente: Una barra se fija verticalmente en un
+extremo, un peso es colocado en el otro extremo de modo que este puede desplazarse horizontalmente.
+La curva es la forma que toma la barra bajo el efecto del peso. Bernoulli dedujo la ecuación diferencial de la
+elástica:
+x2dx
+dy =
+a4 x4
+donde a es la distancia horizontal entre los dos extremos de la barra. La solución la expresó mediante una
+x ax2dx
+construcción geométrica, equivalente a la fórmula analítica ay   . Bernoulli pudo haber escrito
+a4 x4
+0
+esta expresión, pero no lo hace, pues para él lo importante era poder construir la curva en forma geométrica.
+86
+Entonces analizó lo que se conoce como construcción por cuadratura, asumiendo sin explicación, que es
+posible determinar un rectángulo (ay) con área igual al área bajo la curva. También calculó el diferencial de
+arco de la elástica lo que le dio la posibilidad de encontrar la relación entre esta curva y la isócrona
+paracéntrica.
+La isócrona paracéntrica la estudia Jacob en el mismo trabajo en que publica sus resultados sobre la
+elástica. Este problema lo había propuesto Leibniz en 1689 y consistía en: encontrar la curva plana que
+describe un punto pesado P que se mueve de modo que su distancia a un punto fijo O varíe
+proporcionalmente al tiempo empleado al recorrer cada arco de dicha curva. Para resolver este problema
+Jacob plantea la ecuación diferencial
+87
+d
+2
+( a r
+a
+)
+r
+
+a
+a
+2
+4
+d
+
+u
+u 4
+,
+la cual resultaría complicada aún con los métodos desarrollados posteriormente.
+En el lado derecho reconoció el diferencial de la longitud de arco de la elástica y así concluyó que podía
+dar una construcción por rectificación.
+Algo después, en septiembre de ese mismo año, retomó Jacob la determinación de la isócrona paracéntrica
+y la describió haciendo uso de una curva que introdujo especialmente para ello: la que llamó lemniscata
+(teniendo en cuenta la palabra latina que describe su aspecto en forma de lazo) y que hoy conocemos como
+lemniscata de Bernoulli, la cual es una curva algebraica. Así que Jacob Bernoulli logró dar una solución del
+problema por rectificación de una curva accesible y, para las concepciones de la época, podía considerarse
+el problema resuelto.
+Ambos métodos, la construcción "por cuadratura" y la construcción "por rectificación" eran métodos
+aceptados en la época, sin embargo los geómetras de entonces se inclinaban a considerar preferibles los
+últimos, por ejemplo, Leibniz opinaba que reducir un problema a la rectificación de una curva era mejor que
+reducirlo a una cuadratura, pues "la dimensión de una línea es más simple que la dimensión del plano".
+En junio de 1696 el hermano de Jacob, Johann Bernoulli retó a la comunidad matemática a resolver el
+problema de la braquistócrona, añadiendo que "la curva era una bien conocida de los matemáticos".
+El problema se expresa como sigue: Dados dos puntos A y B en un plano vertical, hallar el camino AMB por
+el que una partícula móvil M, descendiendo por su propio peso, iría de A a B en el menor tiempo posible.
+Aunque la curva solución al problema resultó una curva realmente muy bien conocida y apreciada por los
+matemáticos, la cicloide, la novedad del problema en sí era evidente: no se trata de encontrar puntos donde
+una curva tiene un máximo o un mínimo, sino que la misma incógnita buscada es una curva la cual debe
+minimizar cierta relación. Según palabras de Leibniz este tipo de problemas "resulta muy bello y hasta el
+momento totalmente desconocido".
+Varios matemáticos resolvieron el problema de la braquistócrona: Newton publicó su solución
+(anónimamente) en el número de enero de Phylosophical Transactions de 1697, las soluciones de Johann,
+Jacob y L'Hôpital aparecieron todas en el número de mayo de 1697 del Acta Eruditorum. Sin embargo, el
+único que reconoció en este tipo de problemas un nuevo campo de investigación, fue Jacob Bernoulli.
+El trabajo en que Jacob resuelve el problema de la braquistócrona tiene especial interés para el futuro
+desarrollo de las Ciencias Matemáticas, lleva el original título Resolución del problema de mi hermano, a
+quien yo a mi vez planteo otro. El problema propuesto por Jacob es una generalización del antiguo problema
+isoperimétrico: entre todas las curvas que tienen un mismo perímetro, encontrar aquella que encierra un área
+mayor. Jacob enuncia su problema en los siguientes términos:
+De entre todas las figuras de igual perímetro sobre la base común BN, determínese la curva BFN que
+aunque ella misma no contenga la máxima área, en cambio haga que sí la tenga otra curva BZN cuya
+ordenada PZ es proporcional a una potencia o raíz del segmento PF o del arco BF.
+El enunciado del problema, Jacob Bernoulli lo acompaña de una retórica desafiante, de la cual puede
+deducirse la confianza que tenía en la generalidad y potencia del método por él elaborado. La respuesta de
+su hermano Johann fue inmediata y la realizó en un tono agresivo, sin embargo, la solución al problema
+isoperimétrico dada por Johann no resultó satisfactoria. Después de un enconado y nada fraternal debate,
+Jacob decidió, en junio de 1700, publicar en el Acta Eruditorum una nota titulada La solución del problema
+isoperimétrico, que fue seguida por el trabajo Análisis del problema isoperimétrico general (en el número de
+marzo de 1701 de la misma publicación), donde desarrolla su metodología.
+Este trabajo de Jacob ejerció gran influencia en Euler cuando elaboró el primer método general de
+resolución de este tipo de problemas. Posteriormente Lagrange introdujo un nuevo procedimiento mediante
+la utilización del concepto de variación. La importancia de este concepto fue reconocida por Euler, quien
+bautizó a la nueva rama del análisis matemático como Cálculo de Variaciones. Es interesante notar que
+cuando se propone y resuelve el problema de la braquistócrona sólo habían pasado 13 años de la
+publicación del artículo de Leibniz que colocó la primera piedra en el futuro edificio del cálculo diferencial.
+Entre los años 1689-1704 Jacob Bernoulli publicó 5 memorias con el título general de Proposiciones
+aritméticas acerca de las series infinitas que fueron la primera guía que existió para el estudio de la teoría de
+series infinitas. Estos trabajos tomaron la forma de tesis asignadas a sus estudiantes para la defensa y
+fueron publicados por su sobrino Nicolaus I como apéndice al Ars Conjectandi.
+En estas memorias Bernoulli da varias demostraciones de la divergencia de la serie armónica, encuentra
+la suma de algunas series convergentes y demuestra la conocida como "desigualdad de Bernoulli":
+(1 + x)n  1 + nx. Para la serie de los inversos de los cuadrados de los números naturales solo probó que su
+suma era menor que 2, mediante comparación con la serie
+88
+n
+ 0
+n ( n
+1
+ 1 )
+, pero no pudo encontrar el valor
+exacto de la suma. Por ello escribió: "Si alguien encuentra y nos comunica lo que hasta ahora han eludido
+nuestros esfuerzos, nuestra gratitud será enorme". Este desafío lanzado por Jacob pronto se conoció como
+el problema de Basilea y fue resuelto por Euler, quien encontró n
+ 0
+n
+1
+2
+
+
+6
+2
+.
+Jacob dedica las últimas tres memorias a la aplicación de las series de potencias a los problemas de
+cuadratura y rectificación de curvas, es decir a la resolución de integrales para las cuales no era posible
+encontrar explícitamente una primitiva.
+No son estos los únicos aportes de Jacob al Nuevo Cálculo, pero si aún quedan dudas de su talento y su
+indiscutible mérito como "calculista" pasemos a valorar su contribución al arte de las conjeturas.
+3. JACOB BERNOULLI Y LA TEORÍA DE PROBABILIDADES
+Ya a fines del siglo XV aparecen enunciados claramente los primeros problemas que hoy asociaríamos al
+cálculo de probabilidades. Por ejemplo, en la obra de Lucas Pacioli Suma de conocimientos de aritmética,
+geometría, relaciones y proporcionalidad (1494), en la parte de la obra titulada Problemas no Habituales
+aparece enunciado el problema conocido como de la repartición equitativa de la apuesta: Se realiza un cierto
+juego hasta 60 puntos y se hace una apuesta de 22 ducados. En razón de ciertas circunstancias, el juego no
+puede ser terminado y la apuesta debe ser repartida. En el momento de la suspensión, uno de los jugadores
+ha alcanzado la cifra de 50 puntos y el otro la de 30. ¿Cuál parte de la apuesta debe recibir cada
+contrincante?
+La primera solución correcta a éste y a otros problemas relacionados con el concepto de probabilidad va a
+aparecer en el conocido carteo entre Pascal y Fermat, en el cual muchos sitúan el origen de la ciencia de la
+probabilidad. En este intercambio epistolar ambos correspondientes van a exhibir soluciones correctas de los
+problemas considerados, no obstante, no se delimitará ninguno de los conceptos básicos de la teoría de
+probabilidades. Tanto Pascal como Fermat solo se limitan a calcular el número de casos posibles y
+favorables al suceso en cuestión, lo que, desde luego, constituye un paso importante para la posterior
+aparición del concepto de probabilidad.
+En 1655 el holandés Christian Huygens viajó a París y conoció los problemas sobre los cuales trataba la
+correspondencia entre Pascal y Fermat. A su regreso a Holanda, Huygens se propuso encontrar él mismo la
+solución a estos problemas. Como resultado de su esfuerzo, escribió la obra titulada De los razonamientos
+en los juegos de azar, la cual fue publicada en 1657 como un apéndice al libro Estudios matemáticos de su
+maestro F. Van Schooten. Ésta fue la primera obra escrita relacionada con el cálculo de probabilidades y va
+a ejercer una influencia decisiva en Jacob Bernoulli.
+Los problemas relacionados con la teoría de probabilidades Jacob Bernoulli los estudió durante los últimos
+20 años de su vida. Se trazó una meta para suplir una necesidad urgente en su época: escribir un tratado
+que sirviera de manual sobre esta nueva rama de las matemáticas. Sin embargo, Jacob no pudo concretar
+las ideas fundamentales que lo animaban, así que su obra más importante Ars Conjectandi, estaba
+incompleta cuando muere su autor. Este trabajo solo se publicará en forma inacabada en 1713, 8 años
+después de la muerte de Bernoulli. Su sobrino Nicolaus I es quien se va a encargar de la edición de esta
+obra. En el prólogo al libro, Nicolaus I realizó un llamamiento a los matemáticos invitándolos a completar el
+trabajo iniciado por Jacob. Sin embargo los matemáticos que compartían estos intereses como De Moivre y
+Montmort declinaron la oferta.
+A pesar de estar inconcluso, el Ars Conjectandi es considerado el trabajo más original de Jacob Bernoulli y
+una obra de gran significación para la Teoría de Probabilidades. Jacob comienza el libro con una
+reproducción significativamente comentada del trabajo de Huygens. En el trabajo de Huygens, la
+probabilidad aún no se destaca como un concepto objeto de investigación. En la época que nos ocupa, esta
+palabra era utilizada con diferentes acepciones, sin asignársele una definición precisa. En su libro, Bernoulli
+le dedica gran atención a este concepto.
+Bernoulli divide su libro en cuatro partes, pero desde un punto de vista actual, podemos distinguir dos
+secciones muy bien diferenciadas. Las tres primeras partes, donde Jacob obtiene resultados importantes,
+pero que están estrechamente relacionadas con los problemas y métodos que ya en su época se discutían.
+Podemos decir que estas tres partes están escritas en el espíritu de Huygens y pueden considerarse como la
+culminación de la prehistoria en el desarrollo de la ciencia del azar. En la cuarta parte de su obra, Jacob
+rompe radicalmente con la temática tradicional, va a realizar consideraciones infinitesimales en el cálculo de
+probabilidades cuando enuncia y demuestra el teorema límite. Con este teorema y las ideas que en el se
+desarrollan podemos decir que comienza realmente la historia de la teoría de probabilidades.
+La primera parte del Ars Conjectandi se titula Apuntes sobre los posibles cálculos en los juegos de azar de
+Christian Huygens con notas de Jacob Bernoulli. Jacob considera que la comprensión adecuada de estas
+primeras proposiciones resulta esencial para entender toda la obra.
+La primera proposición es:
+Si tengo iguales posibilidades de obtener a y b, entonces esto me vale
+89
+a 
+2
+b
+.
+Para aclarar la idea Jacob propone un ejemplo ilustrativo:
+Supongamos que alguien oculta en una mano 3 monedas y en la otra 7. Dos personas
+indican cada una a diferentes manos y obtienen las monedas correspondientes a la mano
+señalada. Ambos conjuntamente obtendrán 10 monedas. Cada uno tuvo idéntico derecho al
+señalar las manos, así que la esperanza conjunta debe ser dividida a la mitad, o sea que la
+esperanza de cada uno es obtener 5 monedas. En el caso cuando en una mano haya a
+monedas y en la otra nada, la esperanza de cada uno será igual a a/2.
+De forma semejante, pero utilizando p + q urnas en lugar de las manos, argumenta la proposición:
+Si el número de casos en los cuales se obtiene la suma a es igual a p y el número en los que
+ocurre la suma b es q y todos los casos pueden producirse igualmente, entonces el valor de
+paqb
+la esperanza es .
+pq
+A continuación comienza el análisis de los problemas relacionados con la repartición equitativa de las
+apuestas. Bernoulli llama la atención acerca de que, en tales problemas, es necesario tener en cuenta, para
+los cálculos, sólo las partidas que están obligados a ganar cada uno de los jugadores para poder ganar el
+juego, y no tiene ninguna influencia el resultado de las partidas que ya transcurrieron. Después de un
+análisis detallado, concluye que cuando se tiene una apuesta de a unidades, al primer jugador le falta una
+partida y al segundo dos, la repartición equitativa (es decir, tomando en cuenta los posibles resultados si el
+juego hubiera continuado) es en la proporción 3:1, esto es, 3a/4 para el primero y a/4para el segundo. Si al
+primero le faltara una y al segundo tres partidas, entonces el primero debe recibir 7a/8 y el segundo a/8 y así
+sucesivamente. Y concluye en forma general: “si a mí me falta una partida y a mi oponente le faltan n,
+entonces mi parte de la apuesta y la de él deben relacionarse en la proporción de (2n – 1):1”.
+También Bernoulli observa que podría pensarse que la proporción en el reparto de la apuesta deba ser la
+misma cuando lo es la proporción de partidas que cada jugador debe ganar. Sin embargo, esto no es así,
+por ejemplo, cuando las partidas que restan por ganar a cada jugador son respectivamente 2 y 4, el primero
+debe recibir 13a/16 y el segundo 3a/16. Pero si las partidas necesarias a cado uno fueran 3 y 6, entonces
+deberían obtener respectivamente 219a/256 y 37a/256. Es evidente que en el segundo caso al jugador que
+va ganando le corresponde una parte menor de la apuesta.
+Señalemos la forma tan original que Bernoulli propone para aclarar la imposibilidad de aplicar el teorema
+de la suma de probabilidades cuando los sucesos son compatibles. Para ello pone el ejemplo:
+“Si a dos individuos que merecen la pena de muerte se les indica que tiren los dados, con la
+condición de que aquél que obtenga menos puntos mantiene la pena y el otro, que obtuvo
+más puntos, conserva su vida y ambos conservan la vida, si obtienen el mismo número de
+puntos, entonces encontramos para la esperanza de uno 7/12..., pero de esto no debe
+concluirse que la esperanza del otro sea 5/12, ya que evidentemente ambas son iguales,
+luego el otro también debe esperar 7/12 de vida, lo que da para los dos 7/6 de vida, o sea
+más de una vida. La causa radica en que no hay ningún caso en que los dos deban morir y
+si hay varios casos en que ambos pueden quedar vivos.”
+Para los problemas de repartición de las apuestas Huygens había propuesto las tablas correspondientes a
+3 jugadores y comenta que para ello es necesario saber calcular el número de formas en que pueden
+obtenerse cierta cantidad de puntos con una cantidad de dados prefijada. Sobre esta nota Bernoulli comenta
+que la forma de contar los casos posibles es aburrida y larga, por lo que él propone una forma rápida y fácil
+de lograrlo para cualquier caso sin excepción. El resultado propuesto puede expresarse de la forma
+siguiente: el número de maneras de obtener m puntos en el lanzamiento de n dados es igual al coeficiente
+de xm en el desarrollo de (x + x2 + x3 +…+ x6) n . Esto, sin dudas, es un antecedente del uso de las funciones
+generatrices que se concreta explícitamente en la obra de Laplace.
+Bernoulli generaliza el análisis del problema de la división de las apuestas al caso cuando un juego es no
+equitativo. Enunciemos más precisamente este tipo de problema:
+Supongamos que se realiza un juego que consta de n partidas, de forma que en cada una el
+primer jugador tiene una probabilidad p de ganar y una probabilidad q = 1 - p de perder
+(y por lo tanto de que gane su contrincante). Queremos conocer cuál es la probabilidad de
+que el primer jugador haya ganado k partidas del total de n jugadas.
+Este esquema es uno de los aportes cruciales de Jacob, que en su honor lleva el nombre de esquema de
+Bernoulli.
+En la segunda parte expone Jacob los resultados sobre combinatoria conocidos hasta el momento,
+incluyendo sus propios resultados. En particular introduce los números que más tarde Euler denominó
+números de Bernoulli. En la tercera parte utiliza las herramientas desarrolladas en las dos primeras para
+resolver 24 problemas sobre juegos de azar que eran discutidos en la época.
+Las tres primeras partes del Ars Conjectandi tienen un indudable valor, en ellas se asimilan de forma
+novedosa una serie de problemas estándares para la teoría de probabilidades. Estas partes constituyen un
+aporte esencial no solo a esta teoría sino a la Matemática en general. Sin embargo, la parte fundamental del
+Ars Conjectandi es la última e inconclusa, que Bernoulli titula Applicationes Doctrinae in Civilibus, Moralibus
+et Oeconomicis (Aplicación de la doctrina a cuestiones civiles, morales y económicas). Del título se infiere
+que en esta última parte, Bernoulli pretendía aplicar el arte de las conjeturas a la solución de problemas no
+vinculados con los juegos de azar, más concretamente, a problemas de tipo económico y social.
+Nadie pone en duda la gran cantidad de aplicaciones que ha encontrado en nuestros días la teoría de
+probabilidades, tanto en las ciencias naturales y sociales como en la tecnología. Sin embargo, en el siglo
+XVIII resultaba difícil hacer un uso efectivo de las probabilidades en áreas de la actividad humana que no
+estuvieran relacionadas con los juegos de azar. Gran parte de las aplicaciones de los cálculos con
+probabilidades que se realizan actualmente están relacionados con la definición estadística de probabilidad,
+esta noción aparece por vez primera en esta parte del Ars Conjectandi y en gran medida está sustentada por
+la conocida como ley de los grandes números (así la llamaría posteriormente Poisson).
+90
+Sin embargo, en el siglo XVII la noción de probabilidad tenía una connotación filosófica y no matemática.
+La cuarta parte del Ars Conjectandi comienza con la aclaración de qué entiende su autor por probabilidad en
+un sentido matemático:
+"Probabilidad es un grado de certeza y difiere de la certeza absoluta como una parte difiere
+del todo. Si, por ejemplo, el todo y la certeza absoluta – la cual designaremos por la letra a o
+por el símbolo de la unidad 1 – se supone que consiste en 5 probabilidades o partes, tres de
+las cuales favorecen la existencia o futura existencia de algún suceso, las dos restantes son
+contrarias a su existencia o futura existencia, este suceso se dice que tiene (3/5)a o 3/5 de la
+certeza."
+Más adelante define lo que entiende por el arte de las conjeturas y lo relaciona con la probabilidad:
+“Ars conjectandi se define como el arte de medir lo más exacto posible la probabilidad de las
+cosas, para que en nuestros juicios o acciones podamos siempre elegir o seguir lo que será
+encontrado como lo mejor, más satisfactorio, moderado y razonable. En esta unidad se
+resume toda la sabiduría del filósofo y la prudencia del político.”
+Bernoulli continúa esta parte realizando algunas consideraciones, de tipo filosófico, relacionadas con el
+azar. Su punto de vista era el denominado determinista y que más tarde se daría en llamar laplaciano
+(asociándolo así a la figura de Laplace):
+“Es totalmente indudable que dada una posición de los dados, la velocidad y la distancia a la
+mesa en el momento en que se lanzan, éstos no pueden caer de otra forma que en la que
+en efecto lo hacen.”
+A continuación Bernoulli explica por qué es difícil aplicar los cálculos con probabilidades a fenómenos que
+sean diferentes de los juegos de azar. Comenta que, cuando pueden contarse el número de casos y la
+frecuencia con que éstos aparecen en las pruebas, entonces es posible calcular la fuerza demostrativa de
+estas pruebas y la probabilidad correspondiente. Pero aparecen nuevas dificultades y aclara muy
+acertadamente:
+"Toda la cuestión se reduce a que para hacer una suposición correcta sobre alguna cosa se
+hayan calculado exactamente, tanto el número de casos, así como determinado cuales de
+ellos pueden encontrarse más fácilmente que otros. Pero aquí encontramos un obstáculo, ya
+que sólo excepcionalmente es posible hacer esto y casi nunca se logra, excepto en los
+juegos que dependen del azar, los cuales, desde un inicio, los inventores se esforzaron por
+hacerlos equitativos, ellos fueron construidos de modo tal que es totalmente conocido el
+número de casos que conducen a ganar o a perder y ambos tipos de situaciones pueden
+encontrarse igual de fácil. En la mayoría de los fenómenos, que dependen o bien de la
+acción de las fuerzas naturales o bien de la voluntad libre de las personas no tiene lugar ni lo
+uno ni lo otro...”
+Seguidamente, Bernoulli comenta que
+"en estos casos tenemos otro camino, y aquello que no es posible obtener a priori puede, al
+menos, obtenerse a posteriori, esto es, por múltiples observaciones de los resultados en
+ejemplos semejantes... Para tales razonamientos se necesita gran cantidad de
+observaciones... Aunque esto, naturalmente, es conocido de todos, la demostración
+construida sobre fundamentos científicos, en general, no es tan frecuente, por esto
+necesitamos exponerla. Precisamente se trata de investigar si, ante tal aumento del número
+de las observaciones, la probabilidad alcanzará realmente la relación entre el número de los
+casos bajo los cuales un cierto suceso puede ocurrir o no ocurrir..., es decir, si el problema
+tiene su asintótica,…"
+En el párrafo anterior podemos reconocer la definición de probabilidad a través de las observaciones
+estadísticas, es decir la que actualmente se conoce como definición estadística de probabilidad.
+Veamos cómo enuncia Jacob Bernoulli su teorema fundamental:
+91
+"Supongamos que el número de casos favorables se relaciona al número de los no
+favorables exacta o aproximadamente como r es a s, o al número total de casos como r es a
+r + s o r es a t, esta relación se encuentra entre los limites (r + 1)/t y (r – 1)/t. Se quiere
+demostrar, que es posible realizar tal cantidad de experiencias, para que en cualquier
+número (C) de veces sea más probable que el número de las obeservaciones favorables
+caiga entre estos límites y no fuera de ellos, esto es que la relación entre las observaciones
+favorables y el numero total de todas ellas será no mayor que (r + 1)/t y no menor que
+(r – 1)/t."
+La demostración que hace Bernoulli de este teorema es totalmente correcta, se basa en la consideración
+del término central en el desarrollo del binomio (p + q)n. Además encontró un estimado del valor de N que es
+necesario tomar para satisfacer la desigualdad del teorema. Pero este estimado era bastante burdo y por
+ello, las comprobaciones prácticas que realizó lo llevaron a notar que el número real de experimentos
+necesarios era mucho menor que el proporcionado por su estimado. Tal vez esto hizo que no confiara
+demasiado en el resultado obtenido y fuera una de las razones por las que nunca se decidió a publicar sus
+investigaciones.
+Posteriormente durante todo el siglo XVIII y parte del XIX se realizaron numerosos ensayos para verificar
+experimentalmente el teorema de Bernoulli, en especial con el lanzamiento de una moneda. Por ejemplo, en
+1777 el naturalista francés G. L. Buffon realizó un experimento con el lanzamiento de una moneda. En un
+total de 4040 tiradas, escudo salió en 2048 ocasiones y cara en 1992. De modo que obtuvo una frecuencia
+de 0,507 para escudo y 0,493 para cara, las cuales están suficientemente próxima a 0,5.
+El trabajo de Jacob Bernoulli abrió para la teoría de probabilidades un nuevo camino de desarrollo y la
+convirtió en una disciplina científica que utilizaba profusamente los métodos matemáticos, con una temática
+relacionada con aquellos fenómenos que dependen de la influencia de factores casuales y cuyas leyes
+pueden ser detectadas a través de observaciones reiteradas.
+El primer resultado importante que da continuación a estas ideas lo obtuvo en 1733 A. de Moivre. El
+objetivo perseguido por De Moivre fue mejorar la forma en la que Bernoulli estimó el número de ensayos
+necesarios para asegurar que la frecuencia observada se aproxime a la probabilidad buscada. Para ello
+utilizó un desarrollo en serie de la integral de la función que ahora conocemos como densidad normal.
+De Moivre demostró, para el caso p = ½, un resultado que posteriormente Laplace generaliza para
+cualquier p entre 0 y 1, y consiste en la estimación de la desviación de la frecuencia observada, X/N,
+respecto de la probabilidad p cuando se han realizado N pruebas independientes. En lenguaje actual, el
+teorema límite de Moivre-Laplace puede enunciarse como: Dados dos números a y b cualesquiera se tiene
+lim P
+
+
+
+a
+XNp
+b
+
+
+
+
+1
+
+b
+e
+t2/2
+dt,donde q = 1 – p.
+N  Npq  2
+a
+Este tipo de resultado es lo que más tarde se denominó teorema central del límite y, que junto a la ley de
+los grandes números, constituye uno de los principales logros de la teoría de probabilidades en el siglo XVIII.
+Los resultados de Bernoulli y De Moivre aclararon el concepto probabilidad mediante el descubrimiento,
+por medios analíticos, de teoremas que demostraban propiedades esenciales de este concepto. Estos
+teoremas límites no solo pusieron de manifiesto facetas desconocidas del concepto probabilidad, sino que
+sentaron las bases para su posterior aplicación a la ciencia, la tecnología y, tal como lo soñó Jacob Bernoulli,
+a las ciencias sociales.
+Al respecto se expresan A.N. Kolmogorov y B. V. Gnedenko:
+“En una construcción formal de un curso de teoría de probabilidades, los teoremas límites se
+presentan como una clase de superestructura sobre los capítulos elementales, en los cuales
+todos los problemas tienen un carácter finito, puramente aritmético. Sin embargo, [...]sin los
+teoremas límites es imposible comprender el contenido real de los conceptos primarios de
+nuestra ciencia [....]. En efecto, todo el valor epistemológico de la teoría de probabilidades
+está basado sobre esto: que los fenómenos aleatorios masivos en su acción colectiva crean
+una regularidad estrictamente no aleatoria.” (B. Gnedenko, A. Kolmogórov (1949)).
+92
+A Jacob Bernoulli corresponde el enorme mérito de ser el primero en advertir la importancia de este punto
+de vista sobre la probabilidad y, como se infiere del título de esta cuarta parte, intuyó su especial relevancia
+en las aplicaciones. La muerte prematura de Jacob Bernoulli dejó inconclusa su obra cumbre, el Ars
+Conjectandi. Sin embargo, los tres siglos que nos separan de su muerte han confirmado definitivamente la
+confianza expresada por su sobrino Nicolaus I, cuando finaliza el prólogo con las siguientes palabras:
+Esperamos, que en cualquier caso, estos principios generales, expuestos por el autor en los
+5 capítulos de la última parte, serán útiles al lector para la resolución de muchas cuestiones
+particulares.
+REFERENCIAS
+BERNHARDT, H. (1989): “La familia de matemáticos Bernoulli”, En Biografías de grandes
+matemáticos. H. Wussing & W. Arnold. Prensas Universitarias de Zaragoza.
+BOS, H.J.M. (1993): “Lectures in the History of Mathematics”. Amer. Math. Soc.
+CHABERT, J.L. (1993) : “Le problème brachistochrone“. En Histoires de problèmes. Histoire des
+Mathématiques. I.R.E.M. Paris.
+DASTON, L. (1995): Classical Probability in the Enlightenment, Princenton Univ. Press
+GOLDSTINE, H.H. (1980): A History of the Calculus of Variations. Springer. New York.
+HACKING, I (1971): “Jacques Bernoulli's Art of Conjecturing”, British J. Phil. Sci. 22(3), 209-229.
+HORMIGÓN, M. (1994): Las matemáticas en el siglo XVIII. Akal. Madrid.
+MAISTROV, L.E. (1974): Probability Theory: A Historical Sketch, Academic Press.
+MATHÚNA, D. Ó (2000): The Bernoulli Project. Dungaldan Press. Dundalk, Ireland.
+NIKIFOROVSKII, V.A. (1984): Los grandes matemáticos Bernoulli. Moscú. (en ruso)
+SÁNCHEZ FERNÁNDEZ, C. y C. VALDÉS CASTRO (2001): Los Bernoulli. Geómetras y
+viajeros, Nivola, Madrid.
+SÁNCHEZ FERNÁNDEZ, C. y C. VALDÉS CASTRO (2004): De los Bernoulli a los Bourbaki.
+Una historia del arte y la ciencia del cálculo, Nivola, Madrid.
+SHAFER, G. (1996): “The significance of Jacob Bernouilli's Ars Conjectandi for the philosophy of
+probability today”, J. Econom. 75(1), 15-32.
+STRUIK, D. (1969): A Source Book in Mathematics. Harvard Univ. Press. Cambridge.
+En el sitio http://gallica.bnf.fr/ aparecen los números de las Acta Eruditorum correspondientes a los
+años 1691-1702, donde pueden consultarse la mayoría de los artículos de Jacob Bernoulli citados
+en este trabajo.
+93

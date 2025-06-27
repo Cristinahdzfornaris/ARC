@@ -1,0 +1,534 @@
+CienciasMatema´ticas,Vol.30,No.2,Pag.5-14,2016
+Recibido06-2016
+Comprobacio´n nume´rica del proceso de
+homogeneizacio´n mediante el me´todo de los
+elementos finitos.
+Numerical verification of the homogenization
+process by means of the Finite Elements Method.
+Ernesto Iglesias Rodr´ıguez1*, Armando Arredondo Soto2.
+Resumen Enelpresentetrabajoseestudiaelproblemaestacionariodelatransmisio´ndelcalor.Seobserva
+queparacoeficientesdeconductividadra´pidamenteoscilantesesunproblemanume´ricamenteinestablepero
+aplicandolate´cnicadehomogeneizacio´nytransformandoelproblemaensuformavariacionalsepuederesolver
+efectivamentemedianteelme´tododeloselementosfinitos.ParaelloseempleaelsoftwareFreeFEM++.
+Abstract In this work the stationary heat transfer problem is studied. For rapidly oscilating coefficients its
+numericalinstabilityisshown,butbymeansofhomogenizationtechniquesandthevariationalformulation,the
+problemcouldbeeffectivelysolvedusingtheFiniteElementsMethod. ForthisweusethesoftwareFreeFEM++.
+PalabrasClave
+ElementosFinitos—Homogeneizacio´n.
+1IGP-ServicioGeolo´gicodeCuba,LaHabana,Cuba,ernesto@igp.minem.cu
+2CEMAT,InstitutoSuperiorPolite´cnicoJose´ AntonioEcheverr´ıa,LaHabana,Cuba,asoto@cemat.cujae.edu.cu
+*AutorparaCorrespondencia
+1. Introduccio´n Enlaseccio´n4semuestranlosresultadosnume´ricosdela
+comprobacio´ndelprocesodehomogeneizacio´nyserealiza
+Enmedioscompuestosprovistosdeunaestructuracom-
+unana´lisisdelerror.Poru´ltimo,sepresentanlasconclusiones
+pleja,generalmente,laconductividadte´rmicatomavalores
+deltrabajoyseincluyeunape´ndiceconresultadosteo´ricos
+altamente oscilantes. Esto hacen que el estudio local de la
+queapoyanlosprocedimientosescogidos.
+conduccio´ndecalorseaunatareapra´cticamenteimposible.
+La Teor´ıa de Homogeneizacio´n permite transforma el mo-
+delo inicial con coeficientes ra´pidamente oscilantes en un 2. El problema de Homogeneizacio´n
+modeloequivalenteconcoeficientesconstantes(propiedades
+El problema que se pretende estudiar es una familia de
+efectivas). Las propiedades efectivas de un compuesto son
+ecuaciones diferenciales el´ıpticas con coeficientes perio´di-
+determinadasapartirdelaspropiedadesf´ısicasygeome´tricas
+cosconunper´ıodomuycortodependientedeunpara´metro
+conocidasdesuscomponentes.LaHomogeneizacio´ntambie´n
+pequen˜o.
+estudia las te´cnicas para la obtencio´n de estas propiedades
+efectivas[1,3].
+−∇·(k ∇u )= f.
+Losproblemasdecontornoderivadosdelaconduccio´nde ε ε
+calorenestoscasosson,engeneral,muydif´ıcilderesolver
+dondek esunamatrizra´pidamenteoscilantecuandoε →0.
+ε
+por me´todos anal´ıticos, por lo que el uso de los me´todos
+Comocasodeestudioproponemos:
+variacionalessehacecadavezma´sfrecuente.
+En este art´ıculo se muestra la resolucio´n de problemas (cid:18) 1 (cid:16) x(cid:17)(cid:19)
+k =Id 1+ sin 2π .
+el´ıpticos vinculados con la conduccio´n del calor mediante ε 2 2 ε
+elMe´tododelosElementosFinitos(FEMporsussiglasen
+ingle´s)aplicadosaunproblemadehomogeneizacio´n.Enla Nuestroobjetivoestransformarlaresolucio´ndeestepro-
+seccio´n 2 se presenta el proceso de homogeneizacio´n para blema por la bu´squeda de una solucio´n de otro problema
+unafamiliadeproblemasel´ıpticos.Enlaseccio´n3seformula equivalenteperoconcoeficientesconstantes.
+elproblemafuertedelaconduccio´ndelcalor,sededucesu Ente´rminospra´cticosestosignificatransformarunpro-
+formade´bilysemuestraqueesunproblemabienplanteado. blemasobreunmedioconmuchasheterogeneidadesygran
+6 Comprobacio´nnume´ricadelprocesodehomogeneizacio´nmedianteelme´tododeloselementosfinitos.
+variabilidadenunproblemasimilarperosobreunmedioho-
+moge´neo. Esta caracter´ıstica es lo que lo convierte en un
+problemadehomogeneizacio´n.
+Laconvergenciadelasolucio´ndelproblemaoriginalala
+delproblemahomogeneizadocuandoelpara´metrogeome´trico
+pequen˜otiendeaceroseencuentrarigurosamentedemostrada
+en los trabajos de diferentes autores [3, 2], as´ı como cada
+uno de los teoremas que utilizan para la solubilidad de los
+problemasenlospasosdelalgoritmoparalaconstruccio´nde
+una solucio´n asinto´tica [7]. Algunos de los resultados ma´s
+importantessepuedenencontrarcomoape´ndicealfinalde
+esteart´ıculo.
+Enelcasonuestro
+(cid:18) 1 (cid:16) x(cid:17)(cid:19)
+k =Id 1+ sin 2π
+ε 2
+2 ε
+Figura1.Laregio´ndeintere´sΩ.
+(cid:16)x y(cid:17)
+=Id K , , ω-perio´dica.
+2
+ε ε
+materialaaltastemperaturas.Entreambossehacolocadoun
+Nuestroobjetivoesencontrarunafuncio´nu talque
+0
+disipadorrepresentadomediantelaconductividadk .Eneste
+ε
+l´ım u =u , ejemplolaradiacio´ninducidadesdeelexteriorsoloafectael
+ε→0 ε 0
+materialcontenidoenelcilindromenorgenerandolasaltas
+quesatisfaga: temperaturas.Enestecasosetoman f =0yg=x2+y2.
+−∇·(k ∇u )= f.
+0 0
+3.1 Formulacio´nvariacional
+Elcoeficientek puedeserobtenidopordiversaste´cnicas,
+0 Esteproblemadecontornoes,engeneral,muydif´ıcilde
+enparticulardelaecuacio´n(*)enelape´ndice:
+resolverdirectamente.Sinembargo,debilitandolashipo´tesis
+(cid:18) [K−1]−1 0 (cid:19) se pueden usar me´todos variacionales para llegar a dicho
+k := ,
+0 0 [K] resultadomedianteaproximacionesenespaciosdefunciones.
+Elespaciodesolucio´nydelasfuncionesdepruebaesco-
+(cid:82)
+donde[·]= eslaintegralsobrelaceldaperio´dica. gidoes:
+ω
+H1 (Ω)= (cid:8) u∈H1(Ω):u=0enΓ (cid:9) ⊂H1(Ω).
+3. Formulacio´n del problema de contorno Γ2 2
+Deestaformaobtenemos
+Consideremos el problema de la conduccio´n del calor
+enunmedioconductivocaracterizadoporsucoeficientede (cid:90) (cid:90)
+− ∇·(k∇u)v= f v ∀v∈H1 (Ω),
+conductividadkencadapunto.Consideraremosunmediode-
+Ω Ω
+Γ2
+finidoapartirdedosfronteras,sobreunadeellasseconsidera
+unatemperaturafija,mientrasquesobrelaotraseleaplicaun
+peroenH1(Ω):
+flujodecalorg.Denotandopor f elcalorinducidoentodoel (cid:90) (cid:90) (cid:90)
+medioporradiacio´n,elproblemaestacionarioesta´ definido v(∇·Φ)+ ∇v·Φ= v(Φ·n).
+comosigue: Ω Ω Γ1
+Encontraru∈C2(Ω),Ω∈R2,talque
+EstoesuncasoparticulardelTeoremadeStokes(demostrado
+en[6]).
+−∇·(k∇u)= f, enΩ,
+k∇u·n=g, enΓ , (1) Teorema 1 (Stokes). Sea Ω ⊂RN Lipschitz-continuo y n
+1
+vectornormalunitarioen∂Ω.Laaplicacio´n
+u=0, enΓ .
+2
+ParadoscurvassuavesΓ yΓ talesque∂Ω=Γ ∪Γ . γ n : C∞(Ω¯)→H− 2 1 (∂Ω)
+1 2 1 2
+Asumiremos que k es una matriz sime´trica y definida u→(u·n)
+positiva.Enparticularestoesciertoparaloscoeficientesk y
+ε
+k 0 talcomofuerondefinidosenlaseccio´nanterior. escontinuaenH div (Ω).Y
+Amododeejemplohemosescogidounmediobidimen- (cid:90) (cid:90)
+sional(Figura1)formadoporunacircunferenciayunaelipse. w(∇·u)+ ∇w·u=(cid:104)γ 0 w,γ n u(cid:105) H1/2,H−1/2 ,
+Ω Ω
+Esterepresentalaseccio´ntransversaldeuncilindro(tuber´ıa)
+enelcualsehacolocadootroma´spequen˜oporelquefluyeun paraeloperadortrazaγ .
+0
+Comprobacio´nnume´ricadelprocesodehomogeneizacio´nmedianteelme´tododeloselementosfinitos. 7
+Paraelproblema(1)setienelaformulacio´nequivalente: EncuantoalacontinuidaddeL,no´tesequeparacualquier
+Encontraru∈H1 (Ω),talque v∈H setiene:
+Γ2
+(cid:90) (cid:90) (cid:90) |L(v)|≤(cid:107)f(cid:107) (cid:107)v(cid:107) +(cid:107)g(cid:107) (cid:107)v(cid:107) ,
+∇v·k∇u= f v+ gv ∀v∈H1 (Ω). (2) L2(Ω) L2(Ω) L2(Γ1) L2(Γ1)
+Ω Ω Γ1
+Γ2
+pordesigualdaddeCauchy-Schwarz.Dadoquelasnormas
+Demostraremosacontinuacio´nqueesteproblemasatisfa- (cid:107)·(cid:107) H1(Ω) y(cid:107)·(cid:107) H sonequivalentesenH,setienequeexiste
+celashipo´tesisdelteoremadeLax-Milgram[5]. C 1 >0talqueparacualquierv∈H:
+Teorema2(Lax-Milgram). SeaH unespaciodeHilbert,A (cid:107)v(cid:107) ≤(cid:107)v(cid:107) ≤C (cid:107)v(cid:107) .
+L2(Ω) H1(Ω) 1 H
+unaformabilinealyLlinealenH:
+siAescontinua,Aescoerciva,yLescontinua.Elproblema Adicionalmente,porlacontinuidaddeloperadortraza,existe
+C >0talqueparacualquierv∈H1(Ω):
+2
+(cid:40)
+Encontraru∈H talque
+(cid:107)v(cid:107) ≤C (cid:107)v(cid:107) ≤C C (cid:107)∇v(cid:107) .
+A(u,v)=L(v), ∀v∈H.
+L2(Γ1) 2 H1(Ω) 1 2 L2(Ω)
+Entoncesseobtienefinalmentequeparacualquierv∈H:
+admiteunau´nicasolucio´ny
+(cid:16) (cid:17)
+|L(v)|≤ C (cid:107)f(cid:107) +C C (cid:107)g(cid:107) (cid:107)v(cid:107) ,
+(cid:107)L(cid:107) 1 L2(Ω) 1 2 L2(Γ1) H
+(cid:107)u(cid:107)≤ ,
+α
+estodemuestralacontinuidaddeL.
+dondeα esunaconstantedecoercividad,esdecir Deestamaneraquedansatisfechaslashipo´tesisdelteore-
+madeLax-Milgram,luegoesteesunproblemabienplanteado.
+A(u,u)≥α(cid:107)u(cid:107)2. Notemosadema´sque,porlaunicidad,lasolucio´ndedicho
+H
+problemaesunasolucio´nelproblemadecontornooriginal.
+SeaH=H1 (Ω)dotadodelanorma:
+Γ2
+4. Experimentacio´n y discusio´n de
+(cid:16)(cid:90) (cid:17)1
+(cid:107)u(cid:107) H =(cid:107)∇u(cid:107) L2 = |∇u|2 2. resultados
+Ω
+Enlasseccionesanterioressemuestrateo´ricamenteque
+Tomando:
+(cid:90) l´ımu ε =u 0 ,
+A(u,v)= ∇v·k∇u, ε→0
+Ω
+(cid:90) (cid:90) esdecirquelasolucio´ndelproblemaconcoeficientesra´pida-
+L(v)= f v+ gv,
+menteoscilantestiendealasolucio´ndelproblemahomoge-
+Ω Γ1
+neizado.
+EsevidentequeAesunaformabilineal,yLlineal,enH.Por Unodelosobjetivosdeestetrabajoescomprobarestehe-
+otrolado,notemosque: chonume´ricamente,paraelcasoparticulardeestosproblemas
+decontorno.Late´cnicaconsisteenencontraru resolviendo
+0
+|A(u,v)|=(cid:104)k∇u,∇v(cid:105)≤(cid:107)k(cid:107)(cid:104)∇u,∇v(cid:105) elproblema(1)parak ,yencontraru resolvie´ndoloparak
+0 ε ε
+≤(cid:107)k(cid:107)(cid:107)u(cid:107) (cid:107)v(cid:107) , convariosvaloresdeε.
+H H
+Paracadak ,k seresuelveunaformulacio´nvariacional
+0 ε
+porladesigualdaddeCauchy-Schwarz,donde ana´loga a la presentada en (2). Para ello se empleo´ el soft-
+warelibreFreeFEM++,unaherramientacomputacionalque
+(cid:107)k(cid:107)= sup kξ.
+automatiza el proceso de discretizacio´n de la regio´n en los
+|ξ|=1
+elementos(Figura2)yllevaacaboelco´mputodelprocesode
+Deaqu´ıseobtienelacontinuidaddeA. integracio´nnume´rico.Laimplementacio´nseencuentraenel
+Lamatrizkesdefinidapositiva,esdecir: archivoadjuntosource.edp.
+∃C>0:ξ·kξ ≥C|ξ|2, ∀ξ ∈RN. 4.1 Resultadosnume´ricos
+Lasolucio´nparaelcasol´ımiteu semuestraenlafigura
+0
+Enparticularparaξ =∇u,setiene: (3),mientrasquelafigura(4)muestralassolucionesu del
+ε
+(cid:90) problemanohomogeneizadoparaalgunosdelosvaloresdeε
+A(u,u)= ξ·kξ seleccionados.
+Ω
+(cid:90) Se puede comprobar por simple inspeccio´n que efecti-
+≥C |ξ|2=C(cid:107)u(cid:107) H . vamente las curvas de nivel de u ε se asemejan a las de u 0
+Ω
+progresivamente.Acontinuacio´nserealizaunana´lisisma´s
+Estodemuestraquelaaplicacio´nAescoerciva. detalladodelaconvergencia.
+8 Comprobacio´nnume´ricadelprocesodehomogeneizacio´nmedianteelme´tododeloselementosfinitos.
+nosepuedeverificarnume´ricamentequeE puedaserarbi-
+ε
+trariamentepequen˜o,nisiquieradentrodelrangoadmisible
+delaaritme´ticaflotante.
+Paracomprenderelmotivodeestecomportamientoapa-
+rentementecontradictorioresultaconvenientelavisualizacio´n
+deladiscretizacio´ndelafuncio´nK =K
+(cid:0)x,y(cid:1)
+paravalores
+ε ε ε
+decrecientesdeε (Figura6).
+Debidoaqueelper´ıododeK esε,lafrecuenciadeesta
+ε
+funcio´nenΩtiendeainfinitocuandoε tiendeacero.Esto
+provocalaaparicio´ndelefectodealiasingyaquelamuestra
+quesetomadeK essiemprelamisma(ladiscretizacio´ndeΩ
+ε
+nodependedeε),ysepuedecomprobarqueapartirdecierto
+valor,K pierdecompletamentesuestructurayseconvierte
+ε
+enruido.
+Puestoqueelefectodelaliasingesinevitable,seconcluye
+que, fijada la discretizacio´n de la regio´n y el orden de la
+aproximacio´n, el error de la aproximacio´n u no se puede
+ε
+hacerarbitrariamentepequen˜ohaciendoε tenderacero.
+Figura2.Detalledeladiscretizacio´ndeΩ.
+5. Conclusiones
+La experimentacio´n realizada nos permite arribar a las
+siguientesconclusiones:
+Esposibleresolverelproblemaestacionariodelacon-
+duccio´ndelcalorenunmediolaminadoutilizandolas
+te´cnicasdehomogeneizacio´n.
+Elcorrespondienteproblemavariacionalesbienplan-
+teadoluegosusolucio´ncoincideconladelproblema
+originalensuformulacio´nfuerte,yutilizandoFEMse
+obtieneunaaproximacio´ndelasolucio´ndelproblema
+variacional.
+Severifico´ nume´ricamentequelasolucio´nu obtenida
+0
+medianteelprocesodehomogeneizacio´ncoincidecon
+ell´ımitedelasucesio´n{u },cuandoε →0.
+ε
+Encontrar este l´ımite nume´ricamente mediante FEM
+haciendoε→0esunme´todonoconvergente.Elefecto
+Figura3.Solucio´nl´ımiteu
+0
+. aliasingespredominanteeinevitable.
+4.2 Ana´lisisdelerror
+Paracomprobarlaconvergenciadelassoluciones,sepro-
+cedio´ acalcularelerrorincurridoencadaundelasu .Este
+ε
+errorsedefinecomo:
+(cid:90)
+E = |u −u |.
+ε 0 ε
+Ω
+Seesperaque l´ımE =0.Lafigura(5)muestraelvalorde
+ε
+ε→0
+E paraalgunosdelosvaloresdeε seleccionados.
+ε
+Enlafigura(5)seobservaciertatendenciadecrecientede
+E ,peroalhacerε aunma´spequen˜o,esteerrornodecrece
+ε
+muchoma´sdeloquesemuestraenlafigura,matenie´ndose
+acotadoporelvalor0,03aproximadamente,conalgunasosci-
+lacionesespora´dicasparavaloresmuypequen˜osdeε.Esdecir,
+Comprobacio´nnume´ricadelprocesodehomogeneizacio´nmedianteelme´tododeloselementosfinitos. 9
+Ape´ndice Teorema 4. SiW es separable, para toda sucesio´n de fun-
+ciones(F ) definidaenW existeunasubsucesio´nE(cid:48)∈E
+ε ε∈E
+Acontinuacio´nsemuestranalgunos[7]delosprincipales y un Γ-l´ımite F
+0
+tal que (F
+ε
+)
+ε∈E(cid:48)
+Γ-converge a F
+0
+cuando
+resultadosdelaTeor´ıadelaHomogeneizacio´nquevalidanla E(cid:48)(cid:51)ε →0.
+convergenciadescrita.
+Ente´rminosgenerales,parautilizarlaΓ-convergenciaen
+Γ-convergencia homogeneizacio´n,usualmentesetransformalaecuacio´nen
+LaΓ-convergenciaesunanocio´nabstractadelaconver- unproblemadeoptimizacio´n.Considermosporejemploel
+gencia funcional enfocada en la descripcio´n del comporta- problema:
+miento asinto´nico de una familia de problemas extremos,
+ (cid:16) x (cid:17)
+usualmente dependiente de algu´n para´metro de naturaleza −∇· A( )∇u = f, enΩ⊂RN,
+ε
+geome´tricaoconstitutiva,derivadodealgunadiscretizacio´n, ε (3)
+aproximacio´n,etc.Estate´cnicatienemuchasaplicacionesin-  u ε =0, en∂Ω,
+cluyendo,porejemplo,elca´lculodevariacionesylahomoge-
+neizacio´ndeecuacionesdiferencialesenderivadasparciales. conAcoerciva,acotadaysime´trica.
+Acontinuacio´nveremosladefinicio´n,susteoremasfun- Paraε ∈E hacemos
+damentalesycomoseutilizaenlahomogeneizacio´ndeecua-
+1(cid:90) x (cid:90)
+cionesdiferencialesenderivadasparciales. F (u)= A( )∇u·∇udx− fudx; u∈H1(Ω). (4)
+ε 2 Ω ε Ω 0
+Definicio´n1. SeaW unespaciome´tricoydsudistancia.Sea
+ComoAessime´trica,(3)esequivalentealproblemademini-
+(F ) unasucesio´ndefuncionesrealesenW.Lasucesio´n
+ε ε∈E
+mizacio´n
+(F ) sedicequeΓ-convergealafuncio´nl´ımiteF sipara
+ε ε∈E 0
+cualquierx∈W: (cid:40)
+Encontraru ∈H1(Ω)talque
+ε 0
+(5)
+1. Toda sucesio´n (x ε ) ε∈E convergente a x enW cuando F ε (u ε )≤F ε (v)paratodav∈H 0 1(Ω).
+ε →0satisface
+LuegolaΓ-convergenciadelaseriedefuncionales(F )
+ε ε∈E
+F 0 (x)≤l´ıminfF ε (x ε ), (definidapor(4))enL2(Ω)-fuerteesequivalentealahomo-
+ε→0
+geneizacio´ndelaecuacio´ndiferencialparcial(3).Elme´todo
+deΓ-convergenciaaplicadoalateor´ıadelahomogeneizacio´n
+2. Existe una sucesio´n (x ) convergente a x cuando
+ε ε∈E
+no esta´ restringido a la ecuaciones lineales ni a estructuras
+ε →0talque
+perio´dicas. Si bien es cierto que es una de las te´cnicas de
+homogeneizacio´nma´sutilizadas,sesuelecriticarportener
+F (x)≥ l´ımF (x ).
+0 ε ε
+ε→0 pocointere´senlosproblemaspra´cticosdelaf´ısicadelmedio
+continuo.Sibienexistenautoresquelogranexplicardichos
+Llamaremosaunasucesio´n(F ) definidaenW equi- problemasapartirdeproblemasdeminimizacio´n[4].
+ε ε∈E
+mediocoercivaenW siexisteunconjuntocompactoK (inde-
+pendientedeε)talque H-convergencia
+LaH-convergenciaesunageneralizacio´ndelaG-convergencia
+´ınf F (x)= ´ınfF (x).
+ε ε unme´todobienconocidoparaproblemassime´tricosbasado
+x∈W x∈K
+enlaFuncio´ndeGreen.
+Teorema3. Sea(F ε ) ε∈E unasucesio´nequi-mediocoerciva SeaRN (cid:51)Ωabiertoy0<α ≤β.SedefineM(α,β,Ω)
+enW queΓ-convergeall´ımiteF 0 .Entonces como el conjunto de las matrices N×N con constante de
+coercividadα yacotacio´nβ:
+1. Elvalorm´ınimode(F )convergealdeF :
+ε 0
+(cid:18) (cid:19) (cid:110)
+m´ınF (x)= l´ım ´ınf F (x) , M(α,β,Ω)= A∈L∞(Ω,M ):∀ξ ∈RN
+0 ε N
+x∈W ε→0 x∈W
+(cid:111)
+α|ξ|2≤A(x)ξ·ξ ≤β|ξ|2 c.d.Ω .
+2. Losm´ınimosde(F )convergenalosdeF ,asaber,si
+ε 0
+x ε →xenW y Consideremos(A ) ⊂M(α,β,Ω).Dada f ∈L2(Ω),
+ε ε∈E
+(cid:18) (cid:19) existeunasolucio´n(Lax-Milgram)u ε ∈H 0 1(Ω)para
+l´ımF (x )= l´ım ´ınf F (x)
+ε ε ε
+ε→0 ε→0 x∈W (cid:40)
+−∇·(A ∇u )= f, enΩ,
+ε ε
+(6)
+entoncesxesunm´ınimodeF(0). u =0, en∂Ω.
+ε
+10 Comprobacio´nnume´ricadelprocesodehomogeneizacio´nmedianteelme´tododeloselementosfinitos.
+Definicio´n2. Lasucesio´n(A ) sedicequeH-converge asumiendoqueAesunamatrizsime´trica,definidapositiva,
+ε ε∈E
+aunl´ımiteA∗ cuandoε →0(ε ∈E),si,paracualquier f ∈ acotadayI-perio´dica(I=[0,1]N).
+L2(Ω)enelmiembroderechosetiene Intentaremosbuscarunasolucio´nenformadedesarrollo
+asinto´ticoadobleescala
+u (cid:43)u debilmenteenH1(Ω),
+ε 0 0
+A ∇u (cid:43)A∗∇u debilmenteenL2(Ω)N, u ε (x)=u 0 (x,ξ)+εu 1 (x,ξ)+ε2u 2 (x,ξ)+...,
+ε ε 0
+donde u son I-perio´dicas con respecto a la variable local
+cuandoε →0,dondeu eslasolucio´ndelproblemahomoge- i
+0
+ξ =x/ε.Sustituyendoen(8):
+nizadoasociadoaA:
+(cid:40) −∇·(A∗∇u 0 )= f, enΩ, ε−2∇ ξ · (cid:0) A(ξ)∇ ξ u 0 (x,ξ) (cid:1)
+u
+0
+=0, en∂Ω.
+(7) +ε−1(cid:0)
+∇
+ξ
+·A(ξ)
+(cid:0)
+∇
+ξ
+u
+1
+(x,ξ)+∇
+x
+u
+0
+(x,ξ)
+(cid:1)
+(cid:1)
++A(ξ)∇ ·∇ u (x,ξ)
+Entresuspropiedadesseencuentran: x ξ 0
++ε0(cid:0)
+∇ ·A(ξ)
+(cid:0)
+∇ u (x,ξ)+∇ u (x,ξ) (9)
+ξ ξ 2 x 1
+1. Si(A ε ) ε∈E ⊂M(α,β,Ω)H-converge,suH-l´ımitees +A(ξ)∇ · (cid:0) ∇ u (x,ξ)+∇ u (x,ξ) (cid:1)(cid:1)
+u´nico. x ξ 1 x 0
++ε1(···)+···
+2. El H-l´ımite no depende ni del punto inicial ni de la
+=−ε0f(x).
+condicio´ndecontorno.
+3. Si (A ) ⊂M(α,β,Ω) H-converge a A∗ entonces Elsiguientepasoconsisteenigualarloscoeficientesque
+ε ε∈E
+ladensidaddeenerg´ıaasociadatambie´nconverge,esto acompan˜anlasdiferentespotenciasdeε.Deestaforma,para
+es,A ∇u ·∇u convergeaA∗∇u·∇uenelsentidode ε−2:
+ε ε ε (cid:0) (cid:1)
+lasdistribuciones. −∇ ξ · A(ξ)∇ ξ u 0 (x,ξ) =0.
+DehecholaH-convergenciaesunapropiedadlocal.
+Estaecuacio´nsoloadmitesolucionesI-perio´dicasconstantes
+Nota: En la G-convergencia solo se exige u →u , sin
+respectoaξ,esdecir:
+ε 0
+restricciones para el flujo A ∇u ; esta u´ltima es necesaria
+ε ε
+u =u (x).
+cuandoseeliminalasimetr´ıadelashipo´tesispuesgarantiza 0 0
+la unicidad del l´ımite. En realidad la verdadera utilidad de
+Paraε−1sedemuestraque
+la H-convergencia se basa en el siguiente resultado sobre
+compacidad.
+u =χ(ξ)·∇ u (x)+uˆ(x);
+1 x 0
+Teorema5. Paracualquiersucesio´n(A ) ⊂M(α,β,Ω),
+ε ε∈E dondeχ =(χ ,...,χ )sonlassolucionesI-perio´dicadelos
+existeunasubsucesio´nE(cid:48)⊂E yunl´ımite 1 N
+llamadosproblemaslocales:
+β2
+A∗∈M(α, ,Ω) −∇ · (cid:0) A(ξ)∇ χ (x,ξ) (cid:1) =−∇ ·(A(ξ)e ), (10)
+α ξ ξ j ξ j
+talqueA ε H-convergeaA∗cuandoE(cid:48)(cid:51)ε →0. (e j vectoresdelabasecano´nica).
+De manera similar se sustituye para ε0, solo que esta
+Me´tododeexpansio´nasinto´nica vez,adema´s,sipromediamosrespectolavariablelocalenI
+Elme´tododeexpansio´nasinto´nicaenlahomogeneizacio´n obtenemos:
+esunprocedimientoformalparaderivarlosproblemasl´ımites. −∇· (cid:0) Aˆ(x)∇u 0 (x) (cid:1) = f(x)
+Usualmenteesnecesarioutilizarotraste´cnicasparajustificar
+DondeAˆ=(aˆ )para
+losresultadosdehomogeneizacio´nobtenidosporesteme´todo. ij
+Sibienenaparienciaesunodelosme´todosma´ssimplesen
+N ∂χ
+realidadsebasaenestablecerunaforma(unansatz)parael aˆ =[a −∑a j ]. (*)
+ij ij ik
+problemahomogeneizado.[1] k=1 ∂ξ k
+Adiferenciadelosme´todosdescritosconanterioridadel
+Esteesprecisamenteelproblemahomogeneizadool´ımite,
+me´tododeexpansio´nasinto´nicasoloesusadoenproblemas
+dondeAˆ conservalasimetr´ıayelcara´cterdefinidopositivo.
+dehomogeneizacio´nlineal.
+Esteprocedimientogarantizaquelaecuacio´nobtenidasea
+Enparticular,analizaremoselproblema
+correcta,peroquedaentoncesdemostrarlaconvergenciadelas
+ (cid:16) x (cid:17) soluciones.Esteultimopasosepuederealizarpordiferentes
+−∇· A( )∇u = f, enΩ,
+ε ε (8) me´todos,comolaΓoG-convergencia,utilizandofunciones
+ u =0, en∂Ω, depruebaoscilantes,elprincipiodelma´ximo,etc.
+ε
+Comprobacio´nnume´ricadelprocesodehomogeneizacio´nmedianteelme´tododeloselementosfinitos. 11
+Agradecimientos [4] BenamouJ.D.andBrenierY.(2000)Acomputational
+fluidmechanicssolutiontothemonge-kantorovichmass
+LosautoresdeseanagradeceralosprofesoresSe´bastien
+transferproblem.NumerischeMathematik,84:375-393.
+Martin(Universite´ ParisDescartes)yA´ngelaLeo´nMecias
+(UniversidaddeLaHabana)porsulaborduranteelcursode
+ElementosFinitos(LaHabana,2016),yalprofesorJulia´nBra-
+voCastillero(UniversidaddeLaHabana)porsusoportunos [5] ErnA.,GuermondJ-L.(2004)TheoryandPracticeof
+comentarios. FiniteElements.Springer-VerlagInc.,NewYork.
+Referencias
+[6] BoyerF.(2013)MathematicalToolsfortheStudyofthe
+[1] BakhalovN.yPanasenkoG.(1989)Homogenization:
+Incompressible Navier Stokes Equations and Related
+AveragingProcessesinPeriodicMedia.KluwerAcade-
+Models.SpringerScience+BusinessMedia,NewYork.
+micPublishers.
+doi:10.1007/978-1-4614-5975-0.
+[2] Allaire G., Briane M. (1996) Multiscale convergence
+and reiterated homogenisation. P Roy Soc Edinb A
+126(2):297-342.doi:10.1017/S0308210500022757.
+[7] DouanlaH.Y.(2013)Two-scaleConvergenceandHo-
+[3] Cioranescu D., Donato P. (1999) An Introduction to mogenization of Some Partial Differential Equations.
+Homogenization. Oxford University Press Inc., New ChalmersUniversityofTechnologyUniversityofGot-
+York. henburg(PhD.Thesis).
+12 Comprobacio´nnume´ricadelprocesodehomogeneizacio´nmedianteelme´tododeloselementosfinitos.
+Figura4.Lasolucio´nu
+ε
+paradiferentesvaloresdeε.Laescalamostradamuestralosvaloresentre0y100
+Comprobacio´nnume´ricadelprocesodehomogeneizacio´nmedianteelme´tododeloselementosfinitos. 13
+Ε
+ε
+0.12
+0.10
+0.08
+0.06
+0.04
+0.02
+0.00 ε
+0.2 0.5 1 2
+Figura5.Errorabsolutodeu
+ε
+enfuncio´ndeε.
+14 Comprobacio´nnume´ricadelprocesodehomogeneizacio´nmedianteelme´tododeloselementosfinitos.
+Figura6.Lafuncio´nK
+ε
+paradiferentesvaloresdeε.Loscoloresclaros(oscuros)denotanbaja(alta)conductividad.

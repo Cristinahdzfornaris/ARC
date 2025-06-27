@@ -1,0 +1,321 @@
+CienciasMatema´ticas,Vol.29,No.2,Pag.93-98,2015
+Recibido06-2015
+Criterios para identificar reglas de asociacio´n
+espacial entre objetos hidrolo´gicos y coberturas
+terrestres en imágenes de satélite
+Criteria for identification of spatial association
+rules between hydrological objects
+Leisy Sosa Castro1
+Resumen Elestudiointegraldelmediogeogra´ficomedianteelusodeinformacio´ngeoespacialenlaactualidad
+constituyeunretotecnolo´gicodebidoalgranvolumendeinformacio´ndediversastema´ticasquecontienenlas
+ima´genesdesate´lites.Ellassonportadorasdeungrannu´merodeobjetos:vegetacio´n,suelos,construcciones,
+litolog´ıa,relieveylosobjetoshidrolo´gicos,objetodeestudiodeestainvestigacio´n.Paradesarrollarlainvestiga-
+cio´n,primeramenteseobtendra´nloselementosquecaracterizanelestadodelartedelatema´tica,mediante
+el estudio de las fuentes bibliogra´ficas existentes a escala nacional e internacional, para luego caracterizar
+losme´todosyte´cnicas.Contalesantecedentes,elobjetivoprincipaldelainvestigacio´nesdisen˜arunme´todo
+para extraer con la mayor eficiencia las asociaciones espaciales impl´ıcitas entre objetos hidrolo´gicos y las
+coberturasterrestresenima´genesdesate´lites,as´ıcomosuvisualizacio´nytraduccio´naunlenguajecomu´n,
+parafavorecerelana´lisisulteriorencontextosma´sampliosenotrasima´genessatelitales,ylaidentificacio´nde
+objetosquepermitanlatomadedecisionessobreelestadodelmedioambientegeogra´ficoysuselementos
+componentes.Aspectosimportantesenelordencient´ıficosonlacaracterizacio´ndelataxonom´ıahidrolo´gicaa
+utilizar,lacualconstituyeelorigenparaeldescubrimientodelasrelacionesespacialesynoespacialesconel
+restodelosobjetosambientalesqueloscircundan,as´ıcomolarealizacio´ndelosexperimentosapropiados
+con el fin de disen˜ar y validar los algoritmos que dara´n soporte a la identificacio´n y extraccio´n de las reglas
+de asociacio´n espacial, impl´ıcitas en las ima´genes de sate´lites, as´ı como su visualizacio´n y traduccio´n a un
+lenguajecomprensibleporlosusuarios.
+Abstract Thecomprehensivestudyofthegeographicalenvironmentbyusinggeospatialinformationcurrently
+constitutesatechnologicalchallengeduetothelargevolumeofinformationonvarioustopicscontainingsatellite
+images. Theyarecarryingalargenumberofitems: vegetation,soil,construction,lithology,reliefandhydrological
+objects,objectofstudyofthisresearch. Todevelopresearch,firsttheelementsthatcharacterizethestateofthe
+arttheme,bystudyingexistingliteraturesourcesatnationalandinternationallevel,andthencharacterizethe
+methodsandtechniqueswillbeobtained. Withthisbackground,themainobjectiveoftheresearchistodesign
+amethodtoextractasefficientlyimpliedhydrologicalspatialassociationsbetweenobjectsandlandcoverin
+satelliteimageryandvisualizationandtranslationintoacommonlanguagetopromoteFurtheranalysisinbroader
+contexts other satellite images and identifying objects that allow decisions about the status of geographical
+environmentanditscomponents. Importantinthescientificorderaspectsarethecharacterizationofhydrological
+taxonomytobeused,whichisthesourceforthediscoveryofspatialandnon-spatialrelationshipswithother
+environmentalobjectsthatsurroundthem,andtheundertakingofappropriateexperimentsinordertodesign
+andvalidatealgorithmsthatwillsupporttheidentificationandextractionofspatialassociationrulesimplicitin
+satelliteimageryandvisualizationandtranslationintoalanguageunderstoodbyusers.
+PalabrasClave
+Ima´genesdesate´lites,objetoshidrolo´gicos,coberturasterrestres,reglasdeasociacio´nespacial,relaciones
+impl´ıcitas
+1UniversidadAgrariadeLaHabana”FructuosoRodr´ıguezPe´rez”,FacultaddeCienciasTe´cnicas,Cuba,lscastro@unah.edu.cu
+1. Introduccio´n espaciales.Estospredicadossonlasrelacionesespaciales(Ej.
+Topolo´gicas,Distancia,etc.)entrelatema´ticadereferenciay
+Enlaactualidadelmanejodegrandesvolu´menesdedatos
+elconjuntodetema´ticasrelevantes[3]porloqueseadopta
+espacialesenima´genesdesate´litestraeconsigolademanda
+uncriteriocomplejoparadescartarcombinacionesdelosob-
+de nuevas te´cnicas para la extraccio´n de relaciones u otros
+jetoshidrolo´gicosenlaevaluacio´ndepredicadosespaciales
+patronesnoexpl´ıcitoscontenidosendichasima´genes.Estas
+enlasima´genesdesate´lites,haciendoelprocesoma´seficaz.
+relacionessonmuyu´tilesparaencontrareidentificarobjetos
+Unaspectoesencialquesehaconsiderado,esquenoexiste
+similaresencontextosespacialesma´samplios,esdecir,en
+suficienteexperienciaenelempleodelasherramientasdelas
+otrasima´genesdesate´litesdeterritoriosdiferentes,decaraa
+reglasdeasociacio´nespacialdisponiblesensoftwarecomogv-
+unacaracterizacio´nma´seficientedelosobjetosestudiados,
+SIG,paraincluirnuevasfuncionalidadescomovisualizacio´n
+quefacilitenunaevaluacio´nma´sobjetivadesdeelpuntode
+ytraduccio´n.
+vistamedioambientalylatomadedecisionessobreelusoy
+Esporelloqueelpresentetrabajoesta´ dirigidoalaex-
+coberturadelatierra.Laste´cnicastradicionalesdeana´lisis
+traccio´nderelacionesespacialesentreobjetoshidrolo´gicosy
+dedatosnohantenidoundesarrolloequivalenteasualma-
+losobjetosambientalesqueloscircundanenelentornodelas
+cenamiento,pueselvolumendealmacenamientosuperala
+cuencashidrogra´ficas,quesondesconocidasporelusuario;
+capacidaddeana´lisis[14].
+peroqueesta´nimpl´ıcitasenlasima´genesdesate´lites.Enlos
+Ennuestropa´ıs,existendiversosprogramasmedioambien-
+momentosactuales,deacuerdoconlasinformacionessumi-
+tales;entreelloselProgramaNacionaldeCambiosGlobales
+nistradas por el Centro de Aplicaciones de Tecnolog´ıas de
+queaglutinama´sdeunatreintenadetema´ticas.Laintegracio´n
+Avanzadas(CENATAV)yconstatadasconelGrupodeInves-
+de sus resultados implica movilizar un numeroso grupo de
+tigacionesdeAgrof´ısicas(GIAF)delaUniversidadAgraria
+expertos,nologra´ndoseconte´cnicastradicionalesdeana´li-
+delaHabana(UNAH),enelpa´ısnosedisponedeunme´to-
+sisestablecerlasasociacionesentredichastema´ticas.Segu´n
+do para la extraccio´n de reglas de asociacio´n entre objetos
+Rosette[14]institucionescomoelMinisteriodelaAgricul-
+hidrolo´gicosydis´ımilescoberturasterrestresdelentornode
+tura(MINAGRI),MinisteriodeCienciaTecnolog´ıayMedio
+lacuencahidrogra´ficaenima´genesdesate´lites.
+Ambiente(CITMA),InstitutoNacionaldeRecursosHidra´uli-
+cos(INRH)yelGrupoEmpresarialGEOCUBA,entreotras,
+generanungranvolumendedatosgeogra´ficosqueresultan 2. Desarrollo
+importantesparalatomadedecisionesenela´mbitoecono´mi-
+Eninvestigacionescient´ıficasrelacionadasconlasima´ge-
+coysocial.
+nes de sate´lites para lograr el procesamiento digital en las
+Porotraparte,enCubanoabundanlosestudiosparalaex-
+mismasseutilizaelana´lisisestad´ısticoquesonunsustento
+traccio´nderelacionesimpl´ıcitasentrelosobjetoshidrolo´gicos
+paraanalizarlacalidaddelaimagen,extraerlascaracter´ısti-
+ylascoberturasterrestresdesuentornoenima´genesdesate´li-
+casespectralesparticulares,valorarlacorrelacio´nentrepares
+tes.Tampocoseconocenalgoritmosparalavisualizacio´nde
+decanales,reducirelvolumendelosdatos,as´ıcomofiltrary
+lasreglasdeasociacio´nespacialentrelosobjetoshidrolo´gicos
+segmentarlaimagen,etc.talcomosemuestraenlafigura1.
+ylasclasesdecoberturasterrestresdelentornodelascuen-
+cashidrogra´ficasenima´genesdesate´lites,as´ıcomoparala
+traduccio´ndelasreglasdeasociacio´nespacialaunlenguaje
+comu´nma´scomprensibleporelusuariodelsistema.
+Deaqu´ıquesehacenecesariorealizarunacorrectaabs-
+traccio´n del mundo real para el proceso de filtrado de los
+datos con el fin de garantizar una correcta valoracio´n en la
+organizacio´n de las tema´ticas en la base de datos geoespa-
+cial,yaquelosalgoritmostampocoofrecenlascondiciones
+deseleccio´ndelosobjetosgeogra´ficosqueintervienenenel
+Figura1.Te´cnicasdeprocesamientodigitaldeima´genesde
+sate´lites[10].
+ana´lisisparacadaniveldelataxonom´ıahidrolo´gicadisen˜ada.
+Enestesentidolaminer´ıadedatosespacialescomoramade
+lacienciaqueseencargade¨extraerconocimientoreferente AutorescomoLillesandyKiefer,(1987);HarrisonyJupp
+a la naturaleza espacial de los datos¨ (Han y Kamber, [7]) [8];Lo´pez[10],MelhyPeinado[11],Basterra[2],Villar[15],
+constituye una derivacio´n especial dentro de la miner´ıa de corroboranlapotencialidaddeestaste´cnicasenelprocesa-
+datos,loqueayudar´ıanotablementealdescubrimientodees- miento digital de las ima´genes de sate´lites y coinciden en
+tasasociacionesquepermanecensubyacenteseinvisiblesa quelarepresentacio´nvisualdelosdatosdeimagennecesi-
+primeravistaenlasima´genesdesate´lites.Ladiferenciaentre tamaximizarelcontrasteentrelosnivelesdevisualizacio´n
+ambascategor´ıasradicaenquenoso´loseempleanatributos disponibles para proveer una diferenciacio´n o´ptima de las
+noespaciales,sinoqueenelprocesode“minado”delosdatos caracter´ısticasdelaimagen.Existendosme´todosparallevar
+intervienenatributosespacialescombinadosconlosmismos, a cabo el re-escalado de una imagen estos se mencionan a
+incorpora´ndosetambie´notroscriterioscomolospredicados continuacio´n.
+Criteriosparaidentificarreglasdeasociacio´nespacialentreobjetoshidrolo´gicosycoberturasterrestresen
+ima´genesdesate´lite 95
+2.1 Me´todolineal implica la negacio´n de la otra y viceversa. Luego que, con
+Losautoresantesmencionadosconsideranqueparame- vistas a mejorar o resaltar la informacio´n que nos brindan
+jorarelcontrastetotaldelaimagen,generalmenteloquese lasima´genesdesate´lites,esnecesariorealizarunprocesode
+haceesseleccionarlosvaloresm´ınimoyma´ximodelamisma, filtrajeendichasima´genes
+auxilia´ndosedelhistogramadefrecuencias,posteriormente
+losvaloresm´ınimoyma´ximoseleccionadossonllevadosa
+3. Filtraje de ima´genes de sate´lites
+0 y 255 respectivamente, realiza´ndose la operacio´n para el
+restodelosvalorescomprendidosentrelosvaloresm´ınimoy
+De acuerdo con Villar [15] el proceso de filtraje de las
+ma´ximo.
+ima´genes(verfigura2)sesueleemplearprincipalmentepara
+Adema´smencionanquesereportanbuenoscontrastesen
+suavizaroeliminarruidosenlaimagenyparaladeteccio´nde
+lasima´genesdetele-deteccio´nseleccionandolosvaloresm´ıni-
+bordes,seutilizanvariostiposdefiltros.
+moyma´ximoquerepresentanel1%yel99%delhistograma
+Conociendoqueunaimagenquedarepresentadapor f(x,y)=
+acumulativodelaimagen.Losvaloresqueseencuentrenpor
+NDconunavariacio´nespacial,sepuedehacercorresponder
+debajodelpixelquerepresentael1%yporencimadelque
+dichafuncio´naunasen˜alsinusoidalconunafrecuenciadeter-
+representeel99%sepierden.Tambie´nsereportaelempleo
+minada(y,portanto,conunper´ıodoT).
+delospixelesquerepresentenel1%y95%.
+Si f(x,y)esperio´dica,sera´ unafuncio´ninfinitadesenos
+Paraunintervalode0a255elre-escaladoquedar´ıaexpre-
+ycosenoscondiferentesamplitudesyfases.Lasfunciones
+sadocomo:
+f(x,y)= f∞(sen,cos),seconocencomoseriesdeFourier.
+y=0, x<x Si f(x,y)noesperio´dica,perodevariablerealeintegrable
+m´ın
+y=255 (x−xm´ın) , x ≤x<x (pudiendoser,asuvez,continuaodiscreta),sepuedeaplicar
+(xma´x−xm´ın) m´ın ma´x
+todalateor´ıadetransformadasdeFourierylosprocesosde
+y=255, x≥x
+ma´x
+convolucio´nylaplacianos.
+dondeyvalorre-escalado;xvalorare-escalar.
+2.2 Me´todonolineal
+Segu´nLo´pez[10]adiferenciadelme´todolinealendonde
+losvaloressondistribuidosproporcionalmenteparallenarel
+intervalode0a255aqu´ıselectivamenteseaumentalasepara-
+cio´nodistribucio´nentrelosvaloresm´ınimosoma´ximosde Figura2.Filtrajedeima´genesdesate´lites[15].
+laimagen.
+Demanerageneralsepuedeimplementarcomounafun- AutorescomoLo´pez[10]yBasterra[2]ratificanlauti-
+cio´nexponencialdelaformasiguiente: lizacio´ndeestosfiltrosparamejorarlavisualizacio´nenlas
+ima´genes de sate´lites. Adema´s Melh y Peinado [11] hacen
+y=A x≤x
+m´ın referenciaaotrosfiltroscomo:filtrosdeensanchesdebordes,
+y=A+B(x−x )t x <x≤x
+m´ın m´ın ma´x filtrosdireccionales,filtrosnolineales.
+y=A+B(x −x ) x>x
+ma´x m´ın ma´x Luego de visualizar la informacio´n que contienen las
+dondeyvalorre-escalado;xvalorare-escalar;Avalorm´ınimo ima´genes de sate´lites es necesario extraer el conocimiento
+desalida(puedeser0uotro);Bfactordeescalaentreintervalo referentealanaturalezaespacialdelasmismasmediantelas
+deentradaydesalida;t valorparaelestimado. te´cnicasdeminer´ıadedatos.
+Esta es una formulacio´n general y se pueden dar las si-
+guientessituaciones:t=10Re-escalamientoLineal;t<10 3.1 Me´todosutilizadosenlaminer´ıadedatosespa-
+Re-escalamientonoLinealconfuncio´nlogar´ıtmica,seaumen- ciales
+taelcontrasteentrelosvaloresm´ınimosdelaimagen(zonas Encuantoalosme´todosdeminer´ıadedatosespaciales,en
+oscuras);t>10Re-escalamientonoLinealconfuncio´nexpo- lainvestigacio´nqueseproponerealizar,seasumira´elme´todo
+nencial,seaumentaelcontrasteentrelosvaloresma´ximosde de exploracio´n de asociacio´n espacial, ya que el descubri-
+laimagen(zonasclaras). miento de reglas de asociacio´n espacial permite establecer,
+Deigualmodoelcontrastepuedesermodificadoaplican- comosunombreloindica,reglasqueasocianobjetosespacia-
+doalospixelesdeentradaotrafuncio´nmatema´ticadirecta- lesconunooma´sobjetosespacialesdesuentorno.Desdeel
+menteprogramada:logaritmo,exponencial,etc. puntodevistaconceptual,unaregladeasociacio´nsedefine
+Paralainvestigacio´nseasumeelme´todonolinealpuesto comoX →Y,dondeX yY sonconjuntosdepredicadosespa-
+queelhistogramadelasima´genesdesate´litesesmultimodal, cialesonoespaciales(Vyasetal.[16]).Enestesentido,se
+comoeselcasodeima´genesinfrarrojasdondeexistepresen- debeacotarquelospredicadosespacialespermitencalcular
+cia de agua y vegetacio´n, se puede entonces re-escalar una relacionesentreobjetosydevuelvenunvalorbooleano,entre
+caracter´ısticaencuestio´nseleccionandosusvaloresm´ınimoy losqueseencuentranvalorescomodisjoint,touches,overlaps,
+ma´ximo.Enestecasoelre-escalamientodeunacaracter´ıstica contains,adjacent to,near by,inside,close to,entreotros.
+Criteriosparaidentificarreglasdeasociacio´nespacialentreobjetoshidrolo´gicosycoberturasterrestresen
+96 ima´genesdesate´lite
+Enlate´cnicadeasociacio´nseintroducendosconceptos: as´ıcomoparainvestigacionesposteriorescomopuntodepar-
+m´ınimo soporte y m´ınima confianza. En las grandes bases tidaclasificarlosmismosenlascuencashidrogra´ficas.
+dedatospuedenencontrarsemu´ltiplesasociacionesentrelos Elesquemataxono´micodepartidaesgeneraldebidoaque
+objetos,peroe´stasdebenpoderaplicarseapequen˜osgrupos; esnecesarioconocerlostiposdeclasificacionesdeobjetos
+porestosedebenfiltrarlasasociacionesutilizandom´ınimo hidrolo´gicosque esta´npresentes anivelnacionale interna-
+soporteym´ınimaconfianza[1]. cionalparadeah´ıgenerarnuevosesquemastaxono´micosde
+Uno de los algoritmos ma´s conocidos en la asociacio´n acuerdoconlaimagendesate´litequeseinserteenelSIG.
+espacialsedenominaApriori,desarrolladoporAgrawaletal DemanerapreliminarysiguiendoloscriteriosdeMon-
+[1],en1993.Estealgoritmotrabajaba´sicamenteendospasos: Treux[12],Cowardinetal[5]yCervantes[4],hemosadopta-
+enelprimero,losgrandes´ıtemssondeterminadosdeacuerdo dolasiguientetaxonom´ıaquesemuestraenelorganigrama
+conlafrecuenciadeloselementosdentrodelgrupo,mientras delafigura4,conlacualsetrabajara´ enlainvestigacio´nque
+queenelsegundopasosedetectanlasreglasdeasociacio´n sellevara´ acabo.
+[1].
+4.0.1 Conclusiones
+Como un complemento, las reglas de asociacio´n espa-
+Duranteelprocesodeinvestigacio´nparaestetrabajo,se
+cial representan las relaciones objeto/predicado, las cuales
+pudocorroborarlacoincidenciadecriteriosdemuchosinves-
+contienenpredicadosespaciales.
+tigadoresalplantearqueelprocesodegeneracio´nyobtencio´n
+delasreglasdeasociacio´nespacialescomplejoyquerequiere
+3.2 Relaciones espaciales entre objetos geogra´fi-
+delempleodediversasoperaciones.Teniendocomoreferencia
+cos.Criteriosatenerencuentaparaestablecer
+laslimitacionesdetectadasenlossistemasyme´todospropues-
+lasreglasdeasociacionesespaciales.
+tosendiversasinvestigacionesrealizadasporvariosautores
+Segu´nlosautoresGuillermo[6],Bogorny[3],Xiaoshenga
+searribaalassiguientesconclusiones:
+[17], existen tres tipos de relaciones: distancia, direccio´n y
+topolo´gicas(veafigura3)
+1. Seconsideraapropiadoalosefectosdelainvestigacio´n
+quesellevara´acabo,utilizarel“me´tododeexploracio´n
+de asociaciones espaciales” como parte de la te´cnica
+deminer´ıadedatos,paraeldescubrimientoreglasde
+asociacio´nespacialquerelacionenaunooma´sobjetos
+espaciales.Estoserealizara´ utilizandotantolasima´ge-
+nesdesate´litescomolosSIGconelfindeutilizarestos
+datosparadescubrirlasasociacionesespacialesentre
+Figura3.Ejemploderelacionesespaciales[6].
+losobjetoshidrolo´gicosylasclasesdecoberturaque
+loscircundan.
+En la tabla 1 se describe la clasificacio´n de predicados
+espacialessegu´nlacategor´ıaTopolo´gicosqueseasumeenla 2. En cuanto a las relaciones espaciales entre objetos
+investigacio´nparaestablecerelgradodeconectividadentre geogra´ficosenlainvestigacio´n,seproponeutilizarlas
+losdistintostiposdehumedalesyelentornoquelocircunda. topolo´gicasdebidoaquelarepresentacio´ndelosda-
+tos geogra´ficos es la vectorial ya que realiza una co-
+dificacio´n eficiente de la topolog´ıa y las operaciones
+4. Taxonom´ıa propuesta para los objetos
+espaciales.
+hidrolo´gicos presentes en las ima´genes
+de sate´lites 3. Enlainvestigacio´npropuesta,seasumira´ elesquema
+taxono´mico de objetos hidrolo´gicos en ima´genes de
+Segu´nKubski[9]sedefinetaxonom´ıacomounajerarqu´ıa
+sate´litesdeobservacio´ndelatierraplanteadoanterior-
+osuperposicio´nderelacionesentrelasdiferentesclasesde
+mente,elcualseutilizara´ ulteriormentecomodatode
+unelemento.Estoselementospuedenclasificarseendistintas
+partida para facilitar el descubrimiento de relaciones
+categor´ıas.As´ıseestablecenrelacionesentrelasmismasen
+espacialesynoespacialesconlosobjetosambientales
+te´rminosdeelementoshijosyelementospadres.
+delentornoenlasima´genesdesate´litesdela´readeestu-
+Paraeldesarrollodelainvestigacio´npropuesta,esnece- dio,realizandolaadecuacio´ndelesquemataxono´mico
+sario disponer a modo de datos de partida, de un esquema general.
+taxono´mico general de los objetos hidrolo´gicos que sera´n
+la base para el descubrimiento de las relaciones espaciales
+Referencias
+ynoespacialesconelrestodelosobjetosambientalesque
+loscircundan.Esteesquemaesmuyimportante,puespermi- [1] Agrawal,R.T.,Imielinski,Swami,A.Miningassociation
+tira´ identificarlostiposdeobjetoshidrolo´gicospresentesen rulesbetweensetsofitemsinlargedatabases.Proceeding
+elcontextodelasima´genesdesate´litesdesdeunaperspecti- ofthe1993ACMSIGMODInternationalConferenceon
+vahomoge´neaparalainvestigacio´nquesepretenderealizar, ManagementofData,1993.1-4.
+Criteriosparaidentificarreglasdeasociacio´nespacialentreobjetoshidrolo´gicosycoberturasterrestresen
+ima´genesdesate´lite 97
+Tabla1.Clasificacio´ndepredicadosespacialessegu´nlacategor´ıaTopolo´gicos[13].
+Categor´ıadePredicados OperadoresEspaciales Ejemplo Significado RangodeValores
+separados separados(A,B) ObjetoAseparadodelB Verdadero,Falso
+intercepta intercepta(A,B) ObjetoAinterceptaalB Verdadero,Falso
+contiene contiene(B,A) ObjetoBcontienealA Verdadero,Falso
+PredicadosTopolo´gicos dentro dentro(A,B) ObjetoAdentrodelB Verdadero,Falso
+topar topar(A,B) ObjetoAtocaelbordedelB Verdadero,Falso
+igual igual(A,B) ObjetoAesigualalB Verdadero,Falso
+cubre cubre(B,A) ObjetoBcubrealA Verdadero,Falso
+[2] Basterra,I.1999.Procesamientodigitaldeima´genes. [10] Lo´pez,J.1990.Procesamientodigitaldeima´genes.Bo-
+gota´.
+[3] Bogorny,V.2006.EnhancingSpatialAssociationRule
+MininginGeographicDatabases.UniversidadFederalde [11] Melh,H.,Peinado,O.1992.In:Raumfahrt,D.Z.(ed.)
+RioGrandedelSur. Fundamentosdelprocesamientodigitaldeima´genes
+[4] Cervantes,M.1994.Gu´ıaregionalparaelconocimiento, [12] Montreux 1990. Towards the Wise Use of Wetlands,
+manejo y utilizacio´n de los humedales del noroeste de GranBretan˜a.
+Me´xico.,Me´xico.
+[13] Ronghua,M.2005.CognitivelogicRepresentationof
+[5] Cowardin, L. M., Carter, V., Golet, F. C., Roe, E. T. L. SpatialAssociationRulesofknowledgeDiscoveryfrom
+1979.Classificationofwetlandsanddeepwaterhabitats GISDatabase.6.
+of the United States. In: Program, B. S. (ed.) Fish and
+[14] Rosette, F. D. S. 2013. Me´todo para la extraccio´n de
+WildlifeService.Washington,D.C.
+asociaciones espaciales en bases de datos geogra´ficos.
+[6] Guillermo,O.2010.Aplicacio´ndeminer´ıadedatosespa- Doctorado,MinisteriodelasFuerzasArmadasRevolu-
+cialesenunestudiodecambiodeusodelsuelo.Universi- cionarias. Instituto Te´cnico Militar Jose´ Mart´ı. Orden
+daddeConcepcio´n,Chile. “AntonioMaceo”.Orden“CarlosJ.Finlay”.
+[15] Villar, A. A. 2002. Teledeteccio´n y sistemas de trata-
+[7] Han, J., Kamber, M. 2006. Data mining concepts and mientodigitaldeima´genes.
+techniques,MorganKaufmann.
+[16] Vyas,R.,Kumar,L.,Tiwary,U.2007.Exploringspatial
+[8] Harrison, B. A., Jupp., D. L. B. 1989. Introduction to ARM(SpatialAssociationRuleMining)forgeo-decision
+ImageProcessing.Australia. supportsystem.JournalofComputerScience,3,1-3
+[9] Kubski, M. I. 2005. Aplicacio´n Orientada al Descubri- [17] Xiaoshenga,L.2005.ExtractSpatialAssociationRules
+mientodelConocimientoenBasesdeDatos.Universidad byMethodofSpatialAnalysis.4.
+NacionaldelNordeste:Argentina.
+Criteriosparaidentificarreglasdeasociacio´nespacialentreobjetoshidrolo´gicosycoberturasterrestresen
+98 ima´genesdesate´lite
+Figura4.Taxonom´ıahidrolo´gicaapartirdelasdefinicionesdeMonTreux[12],Cowardinetal[5]yCervantes[4].

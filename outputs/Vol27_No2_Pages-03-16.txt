@@ -1,0 +1,645 @@
+Revista Ciencias Matemáticas
+Emergencia de una cultura matemática en Cuba
+Carlos Sánchez Fernández y Concepción Valdés Castro
+Facultad de Matemática y Computación
+Universidad de La Habana, Cuba.
+Resumen 1. Introducción
+Estas notas históricas representan los resultados de un
+examen preliminar al problema de la formación de una Las culturas aborígenes caribeñas no dejaron una huella mate-
+cultura matemática en Cuba. Hemos querido agrupar ras- mática notable en Cuba como lo hicieron las culturas maya y
+gos generales y hechos notables que permitan una apre- azteca en las cercanas regiones de Centro América y México.
+ciación objetiva del panorama histórico de la actividad En los dos primeros siglos de la Colonia no existió el más mí-
+matemática en el país. nimo interés por estimular el desarrollo de la ciencia, ni para
+El contexto sociocultural escogido se extiende casi establecer estudios de nivel superior con fundamentos sólidos
+200 años, desde los primeros brotes de una conciencia de ciencias básicas. No obstante, se reporta el uso de algunos
+criolla en la encrucijada de los siglos XVIII y XIX, hasta la libros de formación militar en los que se fomenta el estudio de
+realización del Primer Congreso Nacional de Matemáti- las matemáticas. Como por ejemplo, los dos manuales escritos
+ca en 1982. Hacemos énfasis en las principales persona- por el que fuera capitán general y gobernador de La Habana
+lidades que a nuestro juicio propiciaron la emergencia de entre 1663 y 1670, el canario Francisco Dávila Orejón y Gas-
+una cultura matemática en la Isla. cón (Navarro Loidi, 2004). Sin duda, otros ingenieros militares
+que trabajaron en Cuba durante el siglo XVII tenían un nivel de
+Abstract
+conocimientos matemáticos superiores, pero no tuvieron posi-
+These historical notes are the results of a preliminary bilidades de publicar como tenía Dávila y Orejón. No debe pa-
+study about the formation of a mathematical culture in sarse por alto el sobresaliente libro de casi 400 páginas Arte de
+Cuba. We show some general features and notable events Navegar (1673), escrito por el médico sevillano afi cionado a la
+that provide an objective assessment of the historical pa- astronomía Lázaro de Flores, que fue estudiado, en su aniver-
+norama of the mathematical activity in the country in the sario 300, por el investigador López Sánchez (1973) y señalado
+chosen sociocultural context, which spans almost 200 como el primer libro científi co escrito en Cuba, aunque fuera
+years: since the fi rst outbreaks of national consciousness, publicado en Madrid.
+at the crossroads of eighteenth and nineteenth centuries, Pero estos aislados saberes no se socializaron en tertulias o
+until the First National Congress of Mathematics, held in asociaciones que al menos aparezcan documentadas. solocon el
+1982. We focus on the main personalities that, in our opi- nacimiento y la ampliación gradual del movimiento iluminis-
+nion, propitiated the emergence of a mathematical cultu- ta criollo en la segunda mitad del siglo XVIII se fueron creando
+re in the island. condiciones para la institucionalización de la ciencia y su en-
+señanza en la Cuba colonial. Aunque la primera universidad
+fue aprobada por el Papa Inocencio XIII en 1721, se considera
+— 3 —
+Sociedad Cubana de Matemática y Computación
+que la fecha de la fundación de la Real y Pontifi cia Universidad contramos que en 1835, en el Colegio de San Cristóbal, se ense-
+de San Cristóbal de La Habana es el 5 de enero de 1728, sien- ñaba Álgebra Elemental y Superior, Geometría, Trigonometría
+do una de las primeras en Hispanoamérica. No obstante existir y Geodesia, Aplicaciones del Álgebra a la Geometría y Cálculo
+una cátedra de Matemática en la Facultad de Filosofía, según Diferencial e Integral (Trelles, 1918) Otro ejemplo ilustrativo
+tradición escolástica, estuvo vacante hasta 1816 por ausencia de de esta situación sui generis es que Don José Silverio Jorrín,
+aspirantes a poseerla y los primeros profesores que la ocuparon explicó el primer curso completo que se dio en Cuba de Cálculo
+de manera interina no tenían estímulo alguno para fomentar Infi nitesimal.(Vilaseca, 1985), pero no fue en la Universidad de
+la actividad matemática. Por tanto, para nuestros objetivos, no La Habana sino en el Colegio de Carraguao.
+entendemos necesario detenernos en el análisis de las circuns- Un ejemplo de criollo cuya actividad matemática en sus pri-
+tancias anteriores al siglo XIX. meros pasos estuvo ligada a la enseñanza secundaria se da en el
+Nuestro interés al publicar estas notas es brindar una pa- poco mencionado José María Villafañe (1830-1915). José Ma-
+norámica histórica de la actividad matemática en Cuba. No se ría Villafañe y Viñals nació y se formó en Santiago de Cuba.
+pretende determinar con precisión cuándo se acreditó una co- Poco se sabe de cómo transcurrió su infancia y de los estudios
+munidad matemática, simplemente se presentan hechos nota- que realizó durante su adolescencia y juventud hasta que el 9
+bles y rasgos generales que permitan apreciar lo difícil que ha de julio de 1849 se le expidió el título de Agrimensor en su
+sido el problema de la formación de una cultura matemática en ciudad natal. En 1858 el Gobernador Civil de la Isla de Cuba
+Cuba. El contexto sociocultural donde se enmarca este traba- le nombró Profesor ayudante de la clase de Matemáticas de la
+jo es aproximadamente de unos 200 años, desde los primeros Escuela General Preparatoria de Santiago de Cuba. Desempe-
+brotes de una conciencia criolla en la encrucijada de los siglos ñó sus funciones de educador «con los mejores resultados en
+XVIII y XIX, hasta la realización del Primer Congreso Nacional la enseñanza y a satisfacción de la Dirección y Junta de Pro-
+de Matemática en 1982. Hacemos énfasis en las principales fi - fesores» desde 1859 hasta enero de 1864. Por el momento no
+guras inspiradoras de la actividad matemática en la Isla y que se dispone de otros datos referentes a esta institución, excepto
+en nuestra opinión son francos responsables de la formación que fue suprimida en el año 1864, por lo que, desde el día 1 de
+de una voluntad por socializar y justipreciar las bondades del julio del mismo año, Villafañe pasó a desempeñar la cátedra
+saber matemático. de Topografía, Agricultura Teórico-Práctica y Dibujo en la Es-
+cuela Profesional de Cuba que también estaba ubicada en San-
+tiago de Cuba. Prestó sus servicios sucesivamente en ambos
+2. La frugal actividad matemática
+destinos como catedrático numerario durante 6 años, 8 meses y
+en el agitado siglo cubano
+XXIIXX 3 días, puesto que el 31 de julio de 1869 pasó a la situación de
+excedencia al suprimirse la Escuela Profesional. Villafañe era
+El movimiento reformista en la segunda enseñanza comenzado un ardiente partidario de la reforma autonomista y aparente-
+en 1795 por el clérigo José Agustín Caballero (1762-1835), en- mente por sus ideas, además de por su precaria situación labo-
+cuentra seguidores locuaces y enérgicos en el presbítero Félix ral, tuvo que salir de Cuba a principios de 1871.
+Varela (1787-1853) y el maestro Don José de la Luz y Caballe- Villafañe pudo regresar al servicio activo cuando fue nom-
+ro (1800-1862). Con esta inspiración liberal e ilustrada, en el brado, por Real Orden del 16 de noviembre de 1871, catedrático
+segundo tercio del siglo XIX, la enseñanza de la Matemática de Matemáticas del Instituto de segunda enseñanza de Hues-
+parece haber sido mejor en los colegios de segunda enseñanza ca. Posteriormente, con más de 40 años, Villafañe obtuvo los
+que en la escolástica Universidad de La Habana. Se destaca- títulos de bachiller, licenciado y doctor. Trabajó en diferentes
+ban los colegios El Salvador, San Fernando y San Cristóbal en universidades españolas hasta que fue nombrado en 1891 cate-
+la capital, donde un notable grupo de educadores, cubanos y drático de Análisis Matemático en la Universidad Central de
+peninsulares, desarrolló su actividad docente. Por ejemplo, en- Madrid y murió en 1915, con 84 años, siendo catedrático en la
+— 4 —
+Revista Ciencias Matemáticas
+Universidad de Valencia. «Los libros de Matemática que es- dicionales de Geometría y Álgebra Superior. Pero, no pense-
+cribió Villafañe alcanzaron una difusión más que notable en mos que este plan encontró aptos ejecutores. En el expediente
+su época ya que fueron utilizados como libros de texto en la administrativo Nº 335 aparece una carta del Decano Felipe
+enseñanza universitaria. No puede decirse que su obra mate- Poey al Rector Dr. del Valle, con fecha 22 de agosto de 1881
+mática fuera original, aunque al examinarla se observa que Vi- donde se dice: «La escasez de Doctores en Ciencias ha llegado
+llafañe estaba en posesión de una vasta cultura matemática [...]» a tal punto, a consecuencia de las disposiciones prohibitivas de
+(Llombart, J.; lorenzo, J., 2001). Con Villafañe mostramos un la Reforma de 1871, que sospecho no haya de quien echar mano
+ejemplo de lo que el país perdió en la época de la Colonia cuan- para proveer las plazas de profesores auxiliares que he insinua-
+do no existían ni se propiciaban condiciones para el laboreo do a las autoridades superiores en tiempo oportuno. Quedaría
+matemático. el remedio de habilitar para el caso a los Licenciados, pero son
+No hay dudas de que en esta época de fomento de la economía tan escasos como los doctores o poco menos, por la razón que
+en Cuba, tuvieran gran demanda los conocimientos aritméticos, acabo de exponer».
+ejemplo de ello es la profusión de ediciones de textos de Arit- Concretamente encontramos registrado que en el curso
+mética Comercial, que llegaron a ser récord en Hispanoamérica 1880-1881 aparecen en la Facultad de Ciencias 2 semestres de
+(Vilaseca, 1985). Pero buscaríamos infructuosamente una refe- Análisis Matemático y como catedrático de Análisis Matemáti-
+rencia a la matemática en los estatutos para la Academia de Cien- co y Geometría el Dr. Manuel Fernández de Castro (1822-1883),
+cias Médicas, Físicas y Naturales de La Habana, aprobados por un dominicano que recibió grado de Licenciado en Filosofía
+la Reina Isabel II en 1860, así como en las actas de las sesiones en 1849 por la sección de Ciencias Naturales en la Universi-
+de la Academia, que se sucedieron en todo el resto del siglo XIX. dad de La Habana. En 1852 fue nombrado sustituto de la Cáte-
+En el expediente administrativo 3025 aparece la informa- dra de Matemática. Luego, en 1855, aparece como catedrático
+ción siguiente: «El 23 de marzo de 1861 aparece un edicto propietario de Matemática, cargo que desempeñó hasta el año
+convocando a cubrir una plaza vacante de Catedrático Super- 1863 cuando se suprimió temporalmente la Facultad de Filo-
+numerario en la facultad de Filosofía con el tema: Demostrar sofía. Pasó a integrar la comisión de servicio de la Cátedra de
+los servicios que puede prestar a la ciencia fi sico matematica Física y Química en el Instituto de segunda enseñanza de La
+el cálculo infi nitesimal. El concursante Lic. Don Jesús Benig- Habana. En 1870 volvió a la Universidad para encargarse de la
+no Gálvez seleccionó la bola 67 sobre Astronomía: Su objeto Cátedra de Geografía Universal. Un año después es nombrado
+y como se justifi ca que es la rama de las ciencias fi sico mate- catedrático en propiedad de Complementos de Álgebra, Geo-
+máticas que más ha progresado». Este es uno de los primeros metría, Trigonometría y Geometría Analítica. Durante todo
+actos donde se observa un interés por el desarrollo de la disci- este tiempo Fernández de Castro no era Doctor en Ciencias
+plina de Análisis Matemático en la Universidad de La Habana. porque como aparece en su expediente administrativo, fue en
+En 1873 toma posesión como presidente de la Facultad de 1872 cuando recibe ese grado científi co en la Universidad de La
+Filosofía, Letras y Ciencias el insigne científi co Felipe Poey y Habana. Por Real Orden del 7/12/80 se le confi rma en el car-
+Aloy (1799-1891); enseguida se realizan importantes reformas go asignándosele las asignaturas de Geometría y ambos cursos
+institucionales, entre ellas, la cátedra de Matemática se divide de Análisis Matemático. No pudo disfrutar mucho tiempo de
+en dos: la cátedra A de Álgebra Superior, donde ya se incluían su cargo y grado porque murió el 20/11/83 en La Habana. A
+rudimentos del Análisis Infi nitesimal, y la cátedra B de Geo- partir del fallecimiento del Dr. Fernández de Castro, queda va-
+metría y Trigonometría. Se pretendía elevar el nivel de las dis- cante la cátedra A de Álgebra y Análisis, aun cuando constan
+ciplinas para alcanzar el que en la Península se impartía. Pero en las Memorias de la Universidad varios alumnos matricula-
+como se sabe «del dicho al hecho va un enorme trecho». dos en estos cursos. Todo parece indicar que la asignatura era
+En el plan de estudio de 1880 comprobamos que se incluían cubierta por los catedráticos interinos, entre ellos el Dr. Luis
+asignaturas de cálculo diferencial e integral, además de las tra- Arozarena y Lasa, quien es el autor del Programa del Primer
+— 5 —
+Sociedad Cubana de Matemática y Computación
+Curso de Análisis Matemático (1890). Este programa pone en y equivocada parsimonia con que se ha tratado en las Cortes
+evidencia que lo que se incluía en este primer curso eran solo españolas los asuntos de Cuba».1
+temas de Álgebra Elemental (ecuaciones de primero y segundo Si se estudia la situación de la Universidad colonial de La Ha-
+grado, sistemas de ecuaciones lineales, determinantes, fórmula bana, hay que decir que la misma, al igual que la del resto de las de
+del binomio) y una buena parte del curso estaba dedicado a la América Latina, estaba en función de la oligarquía nacional; des-
+Trigonometría vinculada del convulso panorama de la sociedad cubana y ajena a
+En el expediente Nº 147 de Don José Fermín de Muzquiz y los verdaderos problemas que tenía el país; que sus enseñanzas es-
+Callejas (España, 1844-Colón, Matanzas, 1893), aparece que fue taban permeadas de lo europeo, no en el sentido del conocimiento
+nombrado auxiliar supernumerario de la Facultad de Ciencias el científi co, sino de un falso concepto que despreciaba lo autóctono
+2 de octubre de 1890. Existe también carta de 16 de diciembre de por las modas intelectuales europeas y que su sistema de estudio,
+1891 donde se dice que con fecha 10 de agosto de 1891, se envió al en su estructura, era esencialmente escolástico. Poco favorable
+Gobernador General la carta ofi cial Nº 933 relativa a la oposición era este ambiente para fomentar una cultura matemática.
+verifi cada en esa capital para proveer la cátedra de Análisis Ma- En el conjunto de cambios revolucionarios que Martí propu-
+temático vacante en la Facultad de Ciencias al ganador propuesto so, estaba presente la necesaria transformación de la universi-
+por el tribunal José Fermín Múzquiz. Proveniente de la Acade- dad en un centro científi co, actualizado, dinámico y, por sobre
+mia de Ingenieros Militares de Guadalajara, España, Múzquiz todas las cosas, popular. Pero la temprana muerte del Maestro,
+obtuvo el grado de Doctor en Ciencias por la Universidad de La el 19 de mayo de 1895, y la frustración de la revolución, por la
+Habana en 30 de junio de 1889, sección de ciencias físico-mate- hábil maniobra de parte de la oligarquía cubana y la interven-
+máticas. Además tenía los títulos de Maestro de Obras en 5 de ción militar norteamericana, dieron al traste con esa posibili-
+marzo, de Perito Mercantil de 24 de enero, de Perito Mecánico y dad. La Universidad de La Habana seguiría siendo un centro
+de Perito Químico en 30 de enero, todos en 1890. Aparentemente docente al servicio de una camarilla de proyecciones elitistas,
+Múzquiz fue el último catedrático de Álgebra y Análisis Mate- antipopulares y antinacionales, desinteresada de socializar los
+mático antes de la ocupación militar de EE. UU., aunque muere pocos saberes matemáticos que podía ostentar.
+en 1893. Sobre la cátedra B de Geometría que desde 1884 ostentó
+el Dr. Claudio Mimó y Caba, hasta su muerte en 1929 en La Ha-
+3. Universidad y enseñanza
+bana, hablaremos más adelante.
+de la Matemática durante
+Entre 1892 y 1895 entró en crisis el Partido Autonomista,
+la república mediatizada
+que había dominado el panorama político interno de Cuba. Di-
+rigido por notables fi guras de la intelectualidad cubana del pe-
+ríodo, había sido la expresión política de la oligarquía azucarera La situación social, cultural y educacional en Cuba al comien-
+cubana, que siempre se había manifestado en contra de todo zo de la ocupación militar norteamericana era más aterradora
+intento revolucionario. Las fuerzas de la revolución se fueron de lo que podía esperarse. Las dos terceras partes de la pobla-
+haciendo fuertes paso a paso. En ello desempeñó un papel des- ción de la Isla resultaban analfabetas. Si en los centros urbanos,
+tacadísimo José Martí y Pérez (1853-1895). Ya en 1892 este especialmente La Habana, existía cierta instrucción, en los dis-
+insigne patriota pudo anunciar la unión de todos los revolucio- tritos rurales, es decir, en la mayor parte del territorio nacional,
+narios independentistas en un solo y único partido, el Partido la ignorancia, según palabras del ilustre pedagogo Enrique José
+Revolucionario Cubano. En cuanto a los supuestos logros que Varona, «era casi absoluta» (Varona, 1900). Solo 0,5 % de los
+el Partido Autonomista había obtenido, entre ellos las mejoras habitantes de la Isla habían obtenido título universitario, la ma-
+universitarias, señalaba: «se deben más al miedo a los revolu- yoría en Derecho, Medicina y Farmacia. Muchos no ejercían, ni
+cionarios que a la súplica de los pacífi cos, así puede afi rmarse se preocupaban por los problemas de la Isla.
+que lo que se ha dejado de obtener se debe al académico recato
+1 Martí (1963-1965, t. 1, p. 191).
+— 6 —
+Revista Ciencias Matemáticas
+Los norteamericanos se vieron prácticamente ante la inexis- Escuela de Pedagogía se interesaron por recibir, más tarde, una
+tencia en el país de una estructura docente que pudiera frenar formación especializada en la carrera de físico-matemático.
+cualquier intento de penetración en este terreno y que, a su El Plan Varona redujo a tres las facultades. Cada una de es-
+vez, pudiera dar organicidad y trasmitir todos los elementos tas facultades estaba constituida por escuelas. La Facultad de
+de una cultura cubana, reafi rmando la personalidad nacional Letras y Ciencias estaba formada por cinco escuelas: Letras
+propia. En la conformación de una base económica dependien- y Filosofía; Pedagogía; Ciencias; Agronomía y Escuela de In-
+te y el aseguramiento de esta a través de una superestructura genieros, Electricistas y Arquitectos. Todos los títulos se ele-
+idónea a su estrategia de dominación, la educación ocupó un vaban al doctorado, excepto los de ingenieros, electricistas y
+destacado lugar. arquitectos. El plan redujo el número de cátedras y asignaturas,
+Con el fi n de atraer los maestros cubanos y, sobre todo, des- pero pretendía aumentar el rendimiento cultural, profesional y
+lumbrarlos con los logros del sistema educacional norteame- práctico de las asignaturas que permanecieron.
+ricano —uno de los más desarrollados de aquella época— el Dentro del Plan Varona las Cátedras de Matemática seguirán
+Superintendente de escuelas de la Isla, Alexis E. Frye, proyectó siendo: la Cátedra A de Análisis Matemático, cuyo Profesor Titu-
+y llevó a cabo un plan consistente en enviar a Estados Unidos, lar será el ingeniero José Ramón Villalón Sánchez (1864-193?) y
+para ser capacitados, a 1 450 maestros cubanos (que represen- la Cátedra B de Geometría y Trigonometría cuyo Profesor Titular
+taban, por aquel entonces, 41,4 % de los existentes en el país). será el Doctor Claudio Mimó y Caba (1844-1929). Estos dos cate-
+Si en la educación primaria y media, los neocolonialistas dráticos tenían una formación muy diferente, y representan las dos
+norteamericanos pudieron hacer con relativa facilidad una re- tendencias que en una primera etapa de República mediatizada y
+organización total, en la educación superior se encontraron con dependiente, lucharon por la hegemonía en las aulas universitarias.
+obstáculos. Contaba la única universidad del país con una sóli- José Ramón Villalón y Sánchez nació en Santiago de Cuba
+da tradición de más de 170 años y en ella existía un cuadro de en 1864 y se graduó de ingeniero civil en la Universidad de
+profesores, algunos de muchos años en servicio, ante lo cual no Lehigh, en Pennsylvania, EE. UU. Ejerció su profesión en la
+era factible un trabajo tan vertical y descarnado como el que se zona oriental de Cuba, contratado por una empresa minera nor-
+había hecho en los otros niveles de la enseñanza. No obstante, teamericana. Intentó introducirse en el negocio del alumbrado
+la universidad, en su estructura, en su sistema de estudio y en promoviendo la instalación de plantas eléctricas en Santiago de
+los fi nes a que estaba encaminada, adolecía de serios defectos. Cuba (1890) y Guantánamo (1894), pero sin éxito. Al iniciarse
+Sobre todo, estaba completamente retrasada en relación con su la Guerra de Independencia se trasladó a los Estados Unidos.
+época y no respondía a las apremiantes necesidades del país. Volvió a Cuba en una expedición que desembarcó en la zona
+El doctor Enrique José Varona (1842-1933), el más insigne occidental, donde se incorporó al ejército libertador bajo las
+pedagogo cubano de la época, formado dentro de los criterios órdenes del lugarteniente general Antonio Maceo. Terminó la
+de la sociología burguesa y de la fi losofía positivista, partida- contienda con el grado de teniente coronel de ingenieros, al
+ria del realismo, va a proponer la más radical reforma de la frente de la división de cañones de dinamita. Durante la pri-
+enseñanza y en especial de los estudios universitarios. Estas mera intervención norteamericana en Cuba desempeñó el car-
+ideas se plasmarán en la Orden Militar Nº 280 del Ejército de go de ingeniero auxiliar del Mayor W. M. Black, y luego el
+Ocupación, con fecha 12 de julio de 1900. En este mismo año de ingeniero jefe de Matanzas y Santa Clara. Manteniendo sus
+nace la Escuela de Pedagogía de la Universidad de La Habana, vínculos a empresas mineras y ferroviarias, fue nombrado en
+que sería la segunda en América, solo antecedida por el Insti- 1902 catedrático de Análisis Matemático en la Universidad de
+tuto Pedagógico de Chile. La Escuela de Pedagogía, con el im- La Habana, cargo al que tuvo que renunciar en 1913, cuando el
+pulso del ilustre maestro D. Enrique José Varona, sirvió para presidente García Menocal —un político estrechamente vincu-
+complementar con nuevos enfoques didácticos los claustros de lado a los intereses capitalistas norteamericanos en la Isla— lo
+maestros de la enseñanza media. Muchos de los egresados de la designó como Ministro de Obras Públicas.
+— 7 —
+Sociedad Cubana de Matemática y Computación
+No cabe duda de que los textos de Análisis Matemático que de Barcelona. Hizo oposición en 1881 a la Cátedra de Geome-
+se utilizaban, además de tener al menos un siglo de atraso, en tría Analítica de la Universidad de Barcelona, y no pudo ob-
+aras de una supuesta adaptación didáctica presentaban la mate- tenerla. Así optó a una plaza de catedrático en la Facultad de
+ria de forma distorsionada que va a ser magnifi cada. Distorsión Ciencias de la Universidad de La Habana, la cual obtuvo en
+esta que va a ser magnifi cada por la ignorancia y falta de ac- brillantes ejercicios. Para tomar posesión de dicha Cátedra se
+tualización matemática del Catedrático Titular de la disciplina trasladó a La Habana en 1884, residiendo desde esa fecha hasta
+(detalles sobre los textos recomendados y el nivel matemático su muerte, el 10 de agosto de 1929, en Cuba.2
+del Ing. Villalón, así como los cambios ocurridos al hacerse El Centre Catalá de La Habana exaltó a Don Claudio Mimó
+cargo de la Cátedra A el Dr. Pablo Miquel, pueden encontrarse hasta su presidencia en diferentes períodos. Sus alumnos y
+en Valdés Castro; Sánchez Fernández, 2001). amigos le testimoniaron su estimación al cumplir 40 años de
+profesorado en Cuba y 80 de vida, tributándole un merecido
+homenaje en 1924. Perteneció además a la Sociedad Económi-
+ca de Amigos del País, así como a otras instituciones culturales
+y científi cas, cubanas y españolas. Desempeñó 46 años la Cá-
+tedra B de Geometría de la Universidad de La Habana. La So-
+ciedad Cubana de Ciencias Médicas, Físicas y Naturales, rindió
+homenaje al profesor Mimó develando su retrato en la Cátedra
+que él prestigió con su saber y rectitud. Una placa testimonian-
+do este homenaje, se conserva en el aula que lleva su nombre en
+la Facultad de Matemática y Computación.
+Además de su gran labor en la Universidad de La Haba-
+na, don Claudio Mimó fi gura entre nuestros educadores como
+fundador y director de un prestigioso Colegio de Segunda En-
+señanza, el cual llevó su propio nombre. Publicó entre otras
+obras: Aritmética, Explicación y Resolución de Problemas de
+Aritmética Elemental (es una traducción, que dedica a E. J. Va-
+rona), Gramática Castellana y Apuntes sobre salinas.
+Es en torno a D. Claudio Mimó, sin mucha infl uencia del Ing.
+Villalón, que comienzan a forjarse los primeros matemáticos y
+físicos cubanos de este siglo.
+Entre los cursos 1902-1903 y 1905-1906, se expidieron solo4
+Sobre don Claudio Mimó y Caba, a quien podemos considerar
+títulos de Doctor en Ciencias, denominación genérica dada por
+como un precursor del movimiento matemático en Cuba, he-
+el Plan Varona, ninguno en relación con la Matemática3. Con la
+mos consultado documentos que nos permiten reconstruir en
+segunda ocupación militar yanqui en 1906 se vuelven a tomar
+parte su trayectoria profesional. Nacido en Villanueva y Geltrú,
+medidas reformistas, entre ellas el Decreto nº 737 que retoma,
+Cataluña, en diciembre de 1844, Mimó se graduó de Bachiller
+en cierto sentido, la estructura existente durante la vigencia del
+en Filosofía y Letras en 1863 y de Bachiller en Ciencias en
+último plan de estudio de la época colonial, soloque la Facultad
+1865, por la Universidad de Barcelona y como Doctor de Cien-
+cias Exactas en 1869, por la Universidad de Madrid, con las
+más altas califi caciones. De estudiante pasó a profesor sustitu- 2 Información extraída de las Hojas de Servicio de D. Claudio Mimó que se
+conservan en el Archivo de la UH.
+to en varias cátedras hasta que en 1876 es nombrado Profesor 3 Información extraída de la Relación de las Tesis de Grado de los Doctores
+en Ciencias, durante los primeros cincuenta años de Cuba Independiente,
+Auxiliar interino de la Facultad de Ciencias de la Universidad
+Publicaciones de la Facultad de Ciencias, Universidad de La Habana, 1953.
+— 8 —
+Revista Ciencias Matemáticas
+de Ciencias lleva ahora el nombre de Escuela de Ciencias. Los Físico-Matemáticas con califi cación unánime de sobresaliente,
+títulos de Doctor vuelven también a darse por las secciones. dada por un tribunal presidido por el Dr. Claudio Mimó. Des-
+D. Pablo J. Miquel y Merino (1887-1944) fue el primer Doctor de antes de recibir el grado de Doctor, Miquel trabajaba como
+ayudante del Gabinete de Astronomía e interinamente como
+profesor sustituto en la Cátedra A. En 1913, al ser designado el
+Ing. Villalón Secretario de Obras Públicas, Miquel se hace car-
+go de la Cátedra A de Análisis Matemático. El 1º de septiembre
+de 1921 asumió en propiedad las funciones de Catedrático con
+célebres oposiciones. Mantuvo la cátedra de Análisis Matemá-
+tico por más de 30 años, hasta su muerte. Los textos que escri-
+bió Elementos de Álgebra Superior (1ª ed. 1914; 2ª ed. 1939;
+3ª ed. 1943, con 695 pp.) y Curso de Cálculo Diferencial e Inte-
+gral (1941 vol. 1; 1942 vol. 2) son modelo de rigor y didactismo.
+En nuestra opinión, el primer salto cualitativo importante en
+la enseñanza de la matemática universitaria, va a darse cuando
+en el año 1914 aparece la primera edición del libro del Dr. Pablo
+Miquel, Álgebra Superior, en el cual se van a desarrollar con
+amplitud los contenidos del programa del primer curso y parte
+de los del segundo (Valdés Castro; Sánchez Fernández, 2001).
+Sin embargo, es interesante notar que este libro no se incluye en
+la Memoria Anuario, como texto recomendado, hasta el curso
+1924-1925, en el que además van a aparecer importantes cambios
+en la estructura y organización de los programas de la asignatura.
+en Ciencias Físico-Matemáticas que defendió su tesis después No obstante en el Informe sobre los programas de las asignatu-
+de 1998, exactamente el 22 de diciembre de 1908. Sin dudas es ras y textos realizado en 1942 y que consta en el expediente del
+D. Pablo Miquel la fi gura criolla, que junto a Mimó, más inci- Profesor Pablo Miquel (Expediente 6027) se afi rma que su libro
+dió en la formación de una cultura matemática en la Isla duran- de Álgebra Superior era texto desde el año de su aparición. En
+te los primeros años de la República. lo concerniente a los conceptos de función, límite, continuidad,
+Nacido en La Habana en 1887, era el primogénito de don diferenciación y series el texto Álgebra Superior de Miquel es no
+Pablo Miquel y Costas, comerciante importador natural de solo superior a lo que se recomendaba hasta ese momento, sino
+Barcelona, y de Doña Sofía Merino y Medina, habanera de na- que podemos considerarlo muy actualizado para la época de su
+cimiento. Cursó estudios secundarios en el Colegio de los je- publicación, la segunda década del siglo XX.
+suitas, el Colegio de mayor prestigio educacional en Cuba. Por Otro de los legados más importantes y reconocidos que le
+recomendación de la dirección del Colegio, pasó después a Es- debemos al Profesor Pablo Miquel es su obra en dos tomos
+paña, estudiando unos pocos meses en la Universidad de Deus- Cálculo Diferencial e Integral. Esta obra es el fruto de 30 años
+to, en Bilbao, de donde regresó enfermo a matricularse en la de ininterrumpida labor docente en el área del Análisis Mate-
+Universidad de La Habana, primero la carrera de Ingeniero Ci- mático y en ella el Dr. Miquel expone en forma rigurosa y con
+vil y después las de Arquitecto y Ciencias Físico-Matemáticas. un didactismo ejemplar los elementos de esta área del conoci-
+El título de Doctor en Ciencias Físico-Matemáticas lo obtiene miento matemático.
+en 1908, en 1910 el de Ingeniero Civil y en 1912 el de Arqui- Los documentos que hemos podido consultar atestiguan
+tecto. Termina los ejercicios del grado de Doctor en Ciencias que ni durante la época colonial, ni en los primeros 30 años de
+— 9 —
+Sociedad Cubana de Matemática y Computación
+República, se dieron las condiciones objetivas y subjetivas ne- na de Ciencias Físicas y Matemáticas con la participación de
+cesarias para alcanzar, al menos, el nivel cultural matemático 34 entusiastas de estas ciencias y se elige su Junta Directiva. En
+de España, que era muy inferior al que ya a principios de siglo la primera reunión de esta Junta se toma, entre otros, el acuerdo
+se gozaba en los Estados Unidos. de crear una revista como órgano divulgativo de la Sociedad y
+Los acontecimientos de la denominada Revolución del nombrar director al presidente recién electo, el Dr. Pablo Mi-
+Treinta, tuvieron un contenido esencialmente político, no obs- quel Merino y como redactor general, a su vicepresidente, el Dr.
+tante, la vida académica no estuvo totalmente exenta de la in- Manuel Francisco Gran Gilledo.
+troducción de ajustes e innovaciones en la organización de No cabe duda que la elección de Don Pablo Miquel como
+los estudios universitarios (más detalles ver Armas, R. et al. presidente de la Sociedad y director de la revista obedece al de-
+1984, vol. 2). En cuanto a la carrera de Ciencias Físico-Mate- seo de tributar un justo reconocimiento al esforzado «Maestro
+máticas podemos afi rmar que, mientras en los primeros 33 años de las Matemáticas en Cuba», califi cativo que le otorgaron los
+de República se gradúan en la Universidad de La Habana solo participantes en el Congreso de Santiago de Cuba. El Dr. Mi-
+36 doctores en Ciencias Físico-Matemáticas, en los siguientes quel fue Presidente de esta Sociedad desde su fundación hasta
+16 años se graduarán 120 (relación de tesis de grado de los doc- su fallecimiento el 3 de abril de 1944.
+tores en ciencias 1953 y 1956). Es conveniente añadir que, ade- La Sociedad pronto consiguió la publicación de una revista
+más de este evidente salto cuantitativo, puede observarse un que aunque no era periódica desempeñó un papel divulgador y
+cambio cualitativo en los programas de estudio y los textos re- estimulador importante. Los objetivos y estructura básica del
+comendados. De este modo encontramos que en el curso 1937- órgano divulgativo de la Sociedad, que vio la luz en el mismo
+1938 se introducen 4 semestres de Física Teórica y asignaturas año 1942, aparecen declarados explícitamente en las «Prime-
+complementarias de Geometría, Análisis Matemático y Mecá- ras Palabras» con las que comienza su primer número: «Esta
+nica Racional, donde se van a estudiar por vez primera de for- revista será el exponente de los trabajos de la Sociedad Cubana
+ma sistemática temas como ecuaciones diferenciales, series de de Ciencias Físicas y Matemáticas, y se propone dar a conocer
+Fourier, análisis vectorial y algunas nociones de teoría de gru- las investigaciones realizadas por los miembros de aquella, na-
+pos (Memoria anuario, 1938). cionales o extranjeros; divulgar los tópicos más interesantes de
+Una de las iniciativas, que surgió como consecuencia de este estas ciencias sin rebajarlos; proponer problemas y cuestiones
+avance en el terreno de las ciencias físicas y matemáticas en que inciten al manejo de los conocimientos físico-matemáticos
+Cuba, y que contó con el apoyo incondicional del Dr. Miquel del público, y levantar con el ejemplo el espíritu de trabajo en
+fue la creación de la Sociedad Cubana de Ciencias Físicas y estas especialidades».
+Matemáticas (Sánchez Fernández, 2013). En enero del año 1942 Resulta interesante observar que se dedica un párrafo para
+un pequeño, pero inspirado grupo de físico-matemáticos se señalar también que «el progreso de la Sociedad y el avance
+reúnen durante el Tercer Congreso de Doctores en Ciencias de la cultura científi ca del país exigen que nuestros profesores
+y en Filosofía, celebrado en la ciudad de Santiago de Cuba y secundarios muestren mayor interés en los trabajos de investi-
+acuerdan agruparse, «para que sus pequeños esfuerzos indi- gación y que concurran al seno de la Sociedad a ofrecer a los
+viduales en pro de la cultura científi ca, al reunirse, produzcan demás el fruto de sus estudios». Destaquemos que, años más
+una resultante apreciable que se traduzca en benefi cio mutuo y tarde, en la revista aparece un artículo de la insigne maestra
+del progreso científi co del país». Esta iniciativa va a recibir la normalista, la Dra. Dulce María Escalona, con título «La en-
+adhesión de un grupo de 121 socios fundadores de la Sociedad señanza de la Geometría demostrativa», donde se realiza una
+integrado no solo por graduados, sino también por algunos es- revisión de los objetivos fundamentales del aprendizaje de la
+tudiantes universitarios. El 25 de febrero de 1942 en el Salón geometría y, con un enfoque muy válido todavía hoy, se lamen-
+de Actos del Edifi cio Poey de la Universidad de La Habana se ta que entre nosotros la preocupación pedagógica gire siempre
+realizó la reunión de constitución ofi cial de la Sociedad Cuba- alrededor de la reforma de los programas, exaltándose en todo
+— 10 —
+Revista Ciencias Matemáticas
+momento la función informativa, sin tener en cuenta que lo ver- cual no se le otorga hasta el 3 de febrero de 1960. Fue junto a
+daderamente esencial es el método, el razonamiento, por el cual Pablo Miquel y Manuel F. Gran, fundador de la Sociedad Cu-
+se llega al establecimiento de la verdad geométrica. bana de Ciencias Físicas y Matemáticas, electo vice-presidente
+Respecto a las temáticas de los artículos y notas publica- Primero de la Sociedad desde su constitución hasta el año 1959.
+das en la Revista de la Sociedad Cubana de Ciencias Físicas y Enfermo y sin mucha voluntad, fue llevado por sus hijos en
+Matemáticas, se constata (Valdés Castro, 2000) un predominio 1968 a la Florida donde murió. Manuel Labra no fue simple-
+casi absoluto de las ciencias matemáticas (82 %) y, dentro de mente un profesor más de Matemáticas, sino fue un forjador de
+estas encabeza la lista de materias el Análisis Matemático con matemáticos. Encontramos entre sus alumnos en el Instituto de
+45 % del total, seguido de la Geometría con 18 %. Aparecen Matanzas, una parte importante del grupo de los iniciadores de
+también artículos de Álgebra, Aritmética, Ecuaciones Diferen- la Sociedad Cubana de Ciencias Físicas y Matemáticas. Uno de
+ciales y Enseñanza de la Matemática. ellos fue el Dr. Mario González.
+Esta distribución por materia refl eja los intereses de los pro-
+fesores y graduados de la carrera de Ciencias Físico-Matemática
+de la época y se corrobora con los temas de las tesis presenta-
+das durante la primera mitad del siglo. De los 156 doctores en
+Ciencias Físico-Matemáticas del período 1902-1956 realizan te-
+sis correspondientes a las Ciencias Matemáticas 122, o sea 78 %
+(ver relación de tesis de grado de los doctores en ciencias 1953 y
+1956). Los dos matemáticos más frecuentes en las páginas de la
+revista son Mario O. González (1913-1999) con 14 publicaciones
+y Manuel Labra Fernández (1900-1982), con 10.
+Manuel Labra Fernández nació el 19 de enero de 1900 en
+Cangas de Onís, Asturias. En la segunda década del siglo, la
+familia Labra emigró a Cuba radicándose en la provincia de
+Matanzas. En el Instituto de Segunda Enseñanza de Matan-
+zas obtuvo califi cación de Sobresaliente en todas las asigna-
+turas y en 1919 se matricula en la Universidad de La Habana
+en Ciencias Naturales, Ciencias Físico-Químicas y Ciencias
+Físico-Matemáticas. En 1923 recibe el primer título como Dr.
+en Ciencias Naturales y el 26 de noviembre de ese mismo año
+Mario Octavio González Rodríguez nació en Matanzas el 14 de
+es nombrado Profesor Titular de la Cátedra E del Instituto de
+septiembre de 1913. En 1925 ingresa en el Instituto de segunda
+Segunda Enseñanza de Matanzas. En 1930 al caer asesinado
+Enseñanza de Matanzas, siendo su profesor de matemáticas el
+Rafael Trejo fi rma con otros profesores una protesta y es ce-
+Dr. Manuel Labra. En 1930 ingresa en la Universidad de La Ha-
+santeado. Establece un colegio privado y a la caída del tira-
+bana donde enseguida se destacará y recibirá la tutoría del Dr.
+no Machado es reintegrado a la cabeza de los profesores. En
+Pablo Miquel. Aún siendo estudiante entre 1933 y 1938, publicó
+1934 defi ende las tesis respectivas para el Doctorado en Cien-
+25 pequeños artículos en revistas de Madrid, San Sebastián y
+cias Físico-Químicas y Ciencias Físico-Matemáticas. En 1938
+Buenos Aires. Fue profesor de la Escuela de Agrimensura del
+matricula Pedagogía y en 1945 se le otorga el título de Dr. en
+Instituto de Segunda Enseñanza de Matanzas de 1933 a 1940.
+Pedagogía. Se desempeña como director del Instituto de Ma-
+Recibió el título de Dr. en Ciencias Físico-Matemáticas en
+tanzas y Jefe de Cátedra de Matemática en varios períodos des-
+1938 con la Tesis «Algunos tipos de ecuaciones diferenciales
+de 1936 hasta 1957 en que enferma y solicita su jubilación, la
+invariantes en ciertas transformaciones infi nitesimales». Por la
+— 11 —
+Sociedad Cubana de Matemática y Computación
+excelencia de desempeño como estudiante le otorgaron una Al cumplimiento del plazo de la licencia y no presentación
+beca Guggenheim para estudios de posgrado en el Institu- de solicitud de prórroga la junta Superior de Gobierno de la
+to Tecnológico de Massachusetts (MIT por las iniciales de su Facultad de Ciencias presidida por el Dr. Roberto Peña López,
+nombre en inglés, Massachusetts Institute of Technology) de resolvió con fecha 13 de enero de 1961 separar al Profesor Gon-
+EE. UU., beca que fue ampliada un año para continuar inves- zález del cargo que venía desempeñando como propietario de
+tigaciones en la Universidad de Princeton hasta el verano de la cátedra A. Esta resolución puede considerarse también como
+1941. disolución de la Cátedra A.
+A su regreso de los estudios realiza un enjundioso informe Destaquemos las obras principales de Mario González, pu-
+con fecha 25 de junio de 1941, que es publicado en la revista blicadas antes de 1960, y que a nuestro criterio tuvieron mayor
+Universidad de La Habana Nºs. 35-36-37 y editados en una mo- incidencia en la elevación del nivel cultural matemático en el
+nografía. Aquí entre otras recomendaciones se plantea: país:
+• Sustituir los cursos denominados Complementos de Análi- • (1940) Introducción al Análisis Matemático, Barani, Ma-
+sis Matemático (2 horas semanales) y Funciones de variable tanzas.
+compleja (1 hora semanal) por otros titulados Análisis Mate- • (1942) Informe sobre Estudios Matemáticos Superiores,
+mático 3er. curso (Ecuaciones diferenciales) y Análisis Ma- Universidad de La Habana.
+temático 4to. curso (Teoría de funciones), ambos de 3 horas • (1944) Ensayo sobre las series divergentes Premio de Cul-
+semanales. tura. Universidad de La Habana
+• Crear la asignatura Historia y Filosofía de las Ciencias Físi- • (1945) Programa de la Cátedra de Análisis Matemático,
+co-Matemáticas. Universidad de La Habana.
+• Fundar seminarios. • (1952) Fundamentos de la teoría de funciones de variable
+• Contratar profesores extranjeros (especialmente europeos). compleja, Cultural, Habana.4
+• Organizar la Sociedad Matemática Cubana. • (1956-57) Álgebra Elemental Moderna (con J. D. Mancill)
+• Publicar una revista matemática subvencionada por la So- 2 vols. Editorial Selecta, Habana; reimpreso por Editorial
+ciedad y por la universidad. Kapeluz, Buenos Aires, 1962.
+• Establecer premios especiales en la Escuela de Ciencias. • (1960) Complementos de Aritmética y Álgebra, Editorial
+• Ofrecer cursos matemáticos de verano, con miras a elevar el Selecta, 10ª ed. Habana; reimpreso por Minerva Books,
+nivel del profesorado secundario. New York, 1965.
+• Crear cuando las medidas precedentes hayan proporcionado • (1960) Complementos de Geometría y Nociones de Cálculo
+el ambiente cultural adecuado, un instituto científi co superior. Diferencial e Integral, Editorial Selecta, 9ª ed. Habana; re-
+impreso por Minerva Books, New York, 1965.
+Enseguida comienza su labor como Profesor Auxiliar en la Cá-
+tedra de Análisis Matemático y en marzo de 1943 propugnó Sus libros de texto (1956-1957) y (1960), se usaron por muchos
+una reforma de la Cátedra A para dejarla en los 4 cursos que años para la preparación preuniversitaria en Cuba de muchos
+recomendaba en su informe de estudios superiores. A la muer- futuros profesionales.
+te de Miquel en 1944 pasa a Profesor Titular de dicha cátedra, En nuestra opinión, sin dudas, el Dr. Mario González fue el
+cargo que ocupa hasta 1960. matemático cubano que tuvo mayor proyección internacional
+El 29 de septiembre de 1960 pidió licencia con sueldo por antes del triunfo revolucionario de 1959, participó como repre-
+40 días, para asistir a la reunión auspiciada por la UNESCO de sentante de Cuba en la refundación de la International Mathe-
+representantes de instituciones científi cas latinoamericanas en
+4 Este texto fue usado en Cuba varios años después de 1960 y sirvió de
+Caracas, Venezuela, del 3 al 7 de octubre. base para un posterior libro Classical Complex Analysis, que M. González
+publicó por la editorial Marcel Dekker Inc. de New York en 1992.
+— 12 —
+Revista Ciencias Matemáticas
+matical Union después de la Segunda Guerra Mundial y en 4. Institucionalización
+muchos eventos internacionales.5 de la actividad matemática
+En las páginas de la Revista de la Sociedad Cubana de
+en las primeras décadas
+Ciencias Físicas y Matemáticas (Valdés Castro, 2000) se do-
+del período revolucionario
+cumentan los esfuerzos que se realizaron por esta asociación
+(1960-1980)
+de maestros y profesores universitarios para elevar el nivel en
+la enseñanza secundaria y expandir el nivel matemático de la
+población: contribuyó a la superación de los profesores me- La Revolución, desde los primeros momentos, inicia un esfuer-
+diante cursos y seminarios, al mejoramiento de los programas, zo gigantesco en la esfera educacional. Crea miles de escuelas,
+creando comisiones donde participaban sus asociados y muy edita libros de textos, emplea cuantiosos recursos económicos y
+especialmente promoviendo la elaboración de libros de textos humanos en la educación general.
+criollos, algunos de los cuales fueron utilizados hasta la década Debe destacarse que el salto cuantitativo de llevar la edu-
+de 1970. La Sociedad convocó a concursos de Física y Matemá- cación general a todos los ciudadanos produjo, junto a la masi-
+tica para estudiantes de Bachillerato de todo el país, aunque la vidad de estudiantes en las enseñanzas primaria y secundaria,
+falta de apoyo ofi cial infl uyó en que no siempre se lograran or- una insufi ciencia de maestros debidamente califi cados, pero
+ganizar exitosamente. Estos concursos serán el germen inicial también la presencia de grupos reducidos, pero no desprecia-
+de los concursos nacionales que se realizarán exitosamente a bles, de jóvenes talentosos y bien preparados que en las viejas
+partir de la década de 1960. circunstancias quizás no hubieran tenido acceso a los estudios.
+No podemos perder de vista que a partir de 1952 la san- Estos jóvenes profesionales provenientes de todos los estratos
+grienta dictadura de Fulgencio Batista y sus compinches obli- sociales del país, pronto elevaron con su actividad la compren-
+gaba cada vez más a preocuparse por la supervivencia y cada sión social sobre la importancia de las ciencias y en particular
+vez menos por el desarrollo de la ciencia. Los intereses for- de la matemática.
+mados en muchos de los profesionales que habían alcanzado En 1962 se realiza la Reforma Universitaria y comienza una
+un nivel superior, no eran exactamente los de ayudar a la ele- nueva reestructuración en las universidades. La Reforma Uni-
+vación de nuestra cultura científi ca. Prueba fehaciente de esto versitaria estipulaba el desarrollo multifacético y la formación
+es que al triunfo de la Revolución, sin mucho esperar a defi - integral de los especialistas; sin embargo, faltaba madurez cien-
+niciones, decidieron abandonar el país y vivir en condiciones tífi ca. El profesorado que acometió los cambios en la enseñanza
+más cómodas. superior de la matemática, estaba compuesto casi totalmente
+Sirva de confi rmación el hecho de que en la Universidad por un grupo de profesores de la enseñanza media que fueron
+de La Habana, en 1960, solo quedaba un profesor del antiguo convocados con estos fi nes, junto a una exigua cantidad de pro-
+claustro de matemática, el Dr. Roberto Peña López (1921-1988), fesores extranjeros. En julio de 1963, el entonces presidente
+Profesor Auxiliar de la cátedra de Astronomía, quien fue de- de la República Dr. Osvaldo Dorticós Torrado expresaba: «Es
+signado Decano de la Facultad de Ciencias y después Jefe de necesario desde ahora comenzar a sentar las bases de nuestro
+su departamento de Matemática Aplicada. Posteriormente, en futuro desarrollo científi co y debemos hacerlo partiendo de la
+el Primer Congreso de la Sociedad Cubana de Matemática y convicción de que si no lográsemos ese desarrollo científi co no
+Computación, en 1982, le sería otorgada con razón la categoría podríamos avanzar mucho más en nuestro desarrollo económi-
+de Miembro Emérito. co». Estas afi rmaciones ponen de manifi esto que desde el inicio
+del período revolucionario se consideró la necesaria unidad del
+5 El Dr. Mario O. González después de renunciar como profesor de la
+progreso científi co y técnico con el desarrollo socioeconómico.
+UH fi rmó contrato como profesor de Matemática en la Universidad de
+Alabama desde 1961 hasta 1979 en que se jubiló como Professor Emeritus. Los primeros años siguientes a la Reforma de 1962 se de-
+En su Curriculum Vitae aparecen 102 publicaciones, de ellas 79 con fecha
+anterior a 1960. Murió en Coral Gables, Estados Unidos, el 14 de febrero dicaron a la reorganización de la enseñanza superior y a una
+de 1999.
+— 13 —
+Sociedad Cubana de Matemática y Computación
+apertura hacia las investigaciones aplicadas. En el Ministerio y alemanes occidentales, particularmente en la Universidad de
+de Industria, impulsado por el comandante Che Guevara, se or- La Habana. Esto devino momento signifi cativo para la mate-
+ganizaron cursos de capacitación donde se incluían temas de mática en Cuba. Las Escuelas de Verano que se suceden entre
+probabilidades y estadística, teoría de la información, investi- 1967 y 1972 estimulan notablemente el interés por la investiga-
+gación de operaciones y computación. La escuela Juan F. Noyo- ción matemática y la actualización, sobre todo, en los campos
+la, adscrita a la Junta Central de Planifi cación, ofreció durante del análisis funcional, la teoría de probabilidades, la estadísti-
+varios años cursos de nivel medio de estadística. En varios Mi- ca matemática y el control optimal. En este período se reciben
+nisterios, como el de la Construcción y el de la Industria Ali- varios profesores en estancias de uno o dos años y un número
+menticia se crearon grupos de investigación operacional que apreciable de especialistas en estancias cortas. Esta colabora-
+realizaron aplicaciones de ruta crítica y programación lineal. ción infl uyó notablemente en la actualización de los planes de
+Más adelante se creó el departamento de Matemática Aplica- estudio de la carrera de matemática y en la defi nición de líneas
+da de la Junta Central de Planifi cación (JUCEPLAN), que cen- de investigación, así como en el nivel de los profesores en las
+tró todo el trabajo de investigación, docencia y aplicaciones, en universidades, fundamentalmente en La Habana.
+los diferentes organismos del Estado. Surge de aquí la revista En 1963 se había creado la Licenciatura de Matemática en la
+científi ca cubana Investigación Operacional, la primera desti- Universidad Central de Las Villas y en 1969 se inauguran las
+nada a divulgar resultados teóricos y aplicados de esta rama de carreras de Licenciatura en Matemática en la Universidad de
+la matemática y que todavía hoy mantiene su prestigio a nivel Oriente y en Ciencias de la Computación en la de Las Villas, un
+internacional. año antes de que se creara esta carrera en La Habana. La carrera
+En la Universidad de La Habana la reforma establecía las de Computación, tanto en Las Villas como en La Habana, para
+especialidades de Análisis Numérico y Estadística junto a la es- su comienzo se nutrió en lo esencial de especialistas formados
+pecialidad de Matemática Pura. La docencia en estas especiali- en la línea del Análisis Numérico.
+dades fue desarrollada con la colaboración de los alumnos más En el curso 1971-1972 se incluyó en el plan de estudio de
+destacados, organizados a través del entonces incipiente Movi- todas las carreras matemáticas del país la vinculación a las ac-
+miento de Alumnos Ayudantes; que se ha mantenido como can- tividades laborales en diferentes empresas, centros de investiga-
+tera principal de docentes para la enseñanza superior. ción y otros organismos estatales (Ministerio de Salud Publica,
+En 1963 se crea el Grupo de Matemáticas en la Academia de Instituto de Ciencia Animal, Instituto Técnico Militar, Centro
+Ciencias, que estaba constituido en su mayoría por ingenieros Nacional de Investigaciones Científi cas, JUCEPLAN, Aca-
+eléctricos, muchos de los cuales ejercían docencia en la univer- demia de Ciencias, etc.). Esta decisión también infl uirá en la
+sidad. Dada la dualidad de funciones de estos investigadores y dirección aplicada de las investigaciones matemáticas y en la
+hacerse necesario la dedicación exclusiva a la labor docente en inserción de mayor número de egresados en las ramas produc-
+las Universidades, el Grupo de Matemáticas de la Academia de tivas de la economía.
+Ciencias se redujo considerablemente y su infl uencia en el desa- El período 1967-1972 debe considerarse más bien de actuali-
+rrollo de la matemática durante varios años fue prácticamente zación y recalifi cación del personal docente de las especialida-
+nula. Al crearse en 1973 el Instituto de Matemática, Cibernética des matemáticas, mientras que a partir de 1972 se enfatiza en la
+y Computación se trató de promover tanto la investigación bá- actividad de posgrado y de investigación. Se envían al extran-
+sica como la aplicada en las diferentes líneas integrantes de las jero, principalmente a la URSS y RDA, los mejores graduados
+Ciencias Matemáticas. con becas para obtener grados científi cos. Entre 1972 y 1976 se
+Ya hemos señalado que desde los primeros años del triun- defi enden las primeras 30 tesis de maestría en matemática de
+fo revolucionario tuvimos asistencia técnica de profesores in- ellas cuatro en el extranjero y las demás asesoradas por profe-
+vitados de varias naciones amigas. Pero en 1967 comienza la sores invitados provenientes en su mayoría del entonces campo
+colaboración más estrecha por parte de matemáticos franceses socialista de Europa del Este. En 1974 llega a Cuba el primer
+— 14 —
+Revista Ciencias Matemáticas
+matemático con grado de doctor obtenido en la RDA y en 1976 fi nes diáfanos dirigidos a la elevación de la cultura matemá-
+con los dos siguientes doctores por la Universidad Lomonosov tica de la población.
+de Moscú, la obtención de grados científi cos en Ciencias Mate- • La investigación matemática no se circunscribe a uno o dos
+máticas se hizo más frecuente. temas fundamentales, sino abarca un espectro amplio de
+Durante varios años, como era de suponer, las investigaciones problemáticas tanto teóricas como aplicadas.
+matemáticas estuvieron asesoradas casi en su totalidad por espe- • La actividad matemática se desarrolla en las tres regiones
+cialistas extranjeros y por consiguiente, estas investigaciones se del país: occidente, centro y oriente. La cantidad de profe-
+originaron en problemas matemáticos del interés de estos aseso- sionales con grado científi co en Ciencias Matemáticas crece
+res. En los primeros años de la década de 1980 el desarrollo cien- signifi cativamente en todas las regiones.
+tífi co-técnico nacional reclamó la participación de matemáticos
+en equipos multidisciplinarios. Esto, unido a una fase superior
+del desarrollo de los matemáticos cubanos, determinó el inicio
+5. Palabras fi nales
+de investigaciones originadas en los propios intereses nacionales.
+A fi nales de la década de 1970, bajo el auspicio de la Acade-
+mia de Ciencias se creó la Sociedad Cubana de Matemática, la Tal vez para un europeo o un asiático, el bregar de 200 años para
+cual se denominó legalmente Sociedad Cubana de Matemática construir una cultura científi ca no sea mucho. Quizás si lo analiza
+y Computación a partir de 1988, por solicitud expresa de sus un joven estadounidense piense que es demasiado. Para nosotros
+miembros. no es mucho ni poco, ha sido lo posible dadas las circunstancias
+La Sociedad, desde su inicio, promovió la edición de un Bo- económicas y sociales reinantes en el país. Es cierto que en el pe-
+letín (1983) de carácter divulgativo. Esta publicación viene a ríodo 1940-1960 se fue adquiriendo cierto nivel de madurez cien-
+completar el espectro de las revistas periódicas de Matemática: tífi ca y, por ejemplo, se creó la infl uyente Sociedad Cubana de
+Investigación de Operaciones (1965), constituida fundamental- Ciencias Físicas y Matemáticas con su Revista de acertados fi nes
+mente con trabajos de aplicaciones matemáticas y Ciencias Ma- divulgativos y se instituyeron la Universidad de Oriente y la Uni-
+temáticas (1980) dedicada a artículos teóricos de la Matemática versidad Marta Abreu de Las Villas, provocando el surgimiento
+y la Computación. de focos culturales científi cos allende las fronteras de la capital.
+Como colofón de toda esta labor de institucionalización de la Pero este movimiento no obtuvo los frutos que sus esfuerzos me-
+actividad matemática en el país y marcando un salto cualitativo ritaban, porque los intereses de la clase dominante en esta época
+hacia la diversifi cación en la investigación matemática, en 1982 no eran los de elevar el nivel de la cultura matemática en el país
+se celebró el Primer Congreso Nacional de Matemática. En él y las intenciones bienhechoras de unos pocos talentos no podía
+participaron 278 delegados de todas las provincias del país, se consolidarse como una colectividad científi ca sufi cientemente
+debatieron 97 trabajos y se dictaron 22 conferencias. fuerte y amplia en condiciones tan adversas.
+El análisis histórico-crítico que hasta ahora hemos realiza- En nuestra opinión la década de 1980 fue la más fructífera
+do, basado en la labor pionera de otros estudiosos de la historia en los propósitos de formar una comunidad matemática sólida
+de la ciencia cubana, aunque sea incipiente y bastante limita- y con ella una conciencia social de la importancia del saber ma-
+do, nos permite afi rmar que la política científi ca llevada en los temático y sus aplicaciones. Baste señalar que en esta década
+primeros 30 años del período revolucionario eliminó rezagos se formaron 81 doctores en Ciencias Matemáticas, que se man-
+de subdesarrollo presentes en la actividad matemática antes de tuvieron activos en las tres regiones principales del país, tanto
+1960 y ha obtenido logros evidentes como los siguientes: en investigaciones teóricas como aplicadas, junto a los otros
+14 primeros doctores formados en la década de 1970.6 Además,
+• La educación matemática a todos los niveles es masiva, gra-
+tuita y centralmente organizada, con planes sólidos y con 6 Datos tomados del registro ofi cial de la Comisión Nacional de Grados
+Científi cos.
+— 15 —
+Sociedad Cubana de Matemática y Computación
+fue en esta década que surgió la revista Ciencias Matemáticas Memorias Anuario de la Universidad de La Habana (1880-1881
+(1980) y la Sociedad Cubana de Matemática (1978, unida con a 1905-06). Imprenta M. Ruiz y Comp., La Habana
+Computación desde 1988). No es casualidad que sea esta década NAVARRO LOIDI, J. (2004). Dávila y Orejón, los ingenieros
+la de mayor bienestar y mejores condiciones económicas para militares y las matemáticas en Cuba durante la segunda mi-
+la socialización del saber en el llamado período revolucionario. tad del siglo XVII. Ciencias Matemáticas 22 (2), 156-173
+Pero nos parece prematuro y demasiado audaz exponer conclu- SÁNCHEZ FERNÁNDEZ, C. (2000). La Matemática en la Uni-
+siones de estas primeras décadas posteriores al triunfo de la Re- versidad de La Habana en un entorno del 98. En: E. Ausejo
+volución de 1959. & Mª C. Beltrán (eds.), La Enseñanza de las Ciencias: una
+Este acercamiento al problema de la formación de una cultu- perspectiva histórica. «Cuadernos de Historia de la Ciencia».
+ra matemática en Cuba está inacabado por varias razones, pero 11. Zaragoza, Universidad de Zaragoza, vol. 1, pp. 77-88.
+sobre todo porque no profundiza en los logros tanto en la en- SÁNCHEZ FERNÁNDEZ, C. (2013). Discurso en conmemora-
+señanza como en la socialización de los saberes matemáticos ción del 70 aniversario de la fundación de la sociedad cubana
+en las zonas alejadas de la capital, alrededor de la Universidad de ciencias físicas y matemáticas y de su revista científi ca. Re-
+Central de Las Villas y la Universidad de Oriente. Estos focos vista Anales de la Academia de Ciencias de Cuba. vol. 3, No. 1.
+de saber han irradiado su infl uencia a los territorios cercanos SIMPSON, R. (1984). La Educación Superior en Cuba bajo el
+que poco a poco se han ido insertando en la comunidad ma- colonialismo español ed. Ciencias Sociales, C. de La Habana.
+temática de la Isla. Este nuevo y más completo análisis quizás SUAREZ, M. (1997). «Aproximaciones históricas a los aspec-
+tendrá que esperar por la disposición de nuevos investigadores tos académico-docentes de la carrera de Matemática». En:
+surgidos en esas regiones. Colectivo de autores Educación Matemática. Apuntes para
+su historia en la Universidad de La Habana. Facultad de
+Matemática y Computación.
+Bibliografía
+TRELLES C.M. (1918). Biblioteca Científi ca Cubana, Matan-
+zas.
+VAL DÉS CASTRO, C. (2000). La primera publicación periódi-
+ARMAS, R. DE; TORRES CUEVAS, E.; CAIRO BALLES-
+ca cubana de Ciencias Físico-Matemáticas (1942-59): Noti-
+TER, A. (1984). Historia de la Universidad de La Habana.
+cias y Consideraciones, vol. 23, 451-468.
+1728-1929. vol. 1, Editorial de Ciencias Sociales, La Habana.
+VALDÉS CASTRO, C.; SÁNCHEZ FERNÁNDEZ, C. (2001).
+CHACÓN Y CALVO, J. M. (1942). Figuras cubanas de la in-
+«El texto Elementos de Álgebra Superior de Pablo Miquel».
+vestigación científi ca. Publicaciones del Ateneo de La Haba-
+Ciencias Matemáticas 20 (1), 54-66.
+na, La Habana.
+VARONA, E. J. (1900) Las Reformas de la Enseñanza Superior,
+Gaceta de La Habana (1880-1898). Biblioteca Nacional José
+Tipografía El Fígaro, La Habana.
+Martí, La Habana.
+VILASECA, S. (1985) «Matemática y Astronomía en la Histo-
+JIMÉNEZ POZO, M.; SÁNCHEZ FERNÁNDEZ, C. (1993). «Pa-
+ria de Cuba» Quipu, 1 (2.)
+norama de la Matemática en Cuba». Ciencias Matemáticas 14
+(2-3), 99-123.
+LEROY Y GALVÉS, L. F. (1965) «La Real y Literaria Univer-
+sidad de La Habana. Síntesis Histórica». Revista de la Biblio-
+teca Nacional José Martí 56 (4), 57 (1).
+LLOMBART PALET, J.; VICENTE, J.L. (2001) «José Mª Vil-
+lafañe: De la Escuela General Preparatoria de Stgo. de Cuba
+a la Universidad Central de Madrid». Ciencias Matemáticas
+19 (2), 120-132.
+— 16 —

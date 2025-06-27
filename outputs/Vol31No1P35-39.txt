@@ -1,0 +1,468 @@
+CienciasMatemáticas,Vol.31,No.1,Pag.35-39, 2017
+Recibido09-2016
+Escalamiento Multidimensional empleando
+Metaheur´ısticas
+Multidimensional Scaling by using Metaheuristics
+Mar´ıa Esther Reyes Calzado1*
+Resumen Dentro del Ana´lisis Multivariado, el Escalamiento Multidimensional se utiliza para obtener una
+representacio´n en un espacio de dimensio´n reducida de ciertos individuos u objetos cuyas similaridades o
+disimilaridadesfueronobtenidaspreviamente.Enestetrabajotomandounamatrizdedistancias,resultadodel
+MDS-Cla´sico,quebajociertocriteriodeerror(Strain)eso´ptima,seconsideraotrocriteriodeerror(STRESS)a
+minimizar,empleandoMDSNoMe´tricoconMetaheur´ısticas.SeimplementanalgoritmosenlenguajeMATLABy
+losresultadosobtenidossoncomparadosconlosdeme´todosconocidos.
+Abstract InMultivariateAnalysis,MultidimensionalScaling(MDS)isusedtoobtainarepresentationinalower
+dimensionalspaceforcertainindividualsorobjectswhichsimilaritiesordissimilaritieswerepreviouslycollected.
+InthisworkaminimizationoftheerrorcriterionStressemployingNonMetricMDSwithMetheuristicsisapplied
+afterusingtheStrainminimizationwithClassicMDSasaninitialdistancematrix. Algorithmsareimplementedin
+MATLABlanguageanditsresultsarecomparedwiththecorrespondingintheMDSknownmethods.
+PalabrasClave
+EscalamientoMultidimensional—Metaheur´ısticas—Proximidades—Stress
+1DepartamentodeMatema´tica,UniversidaddelaHabana,Cuba,m.reyes@matcom.uh.cu
+*AutorparaCorrespondencia
+Introduccio´n elNome´tricoconMetaheur´ısticas(minimizandolafuncio´n
+Stress)conelobjetivodeobtenerresultadosaceptablesque
+Dentrodelaestad´ısticadescriptiva,elana´lisisexplorato-
+superendeficienciasnume´ricasdelosme´todosma´sconoci-
+riodedatosmultivariados,agrupalosme´todosquepretenden
+dos.
+representar datos agrupados en una matriz de entrada, que
+Se compararon las estrategias programadas a partir de
+tieneasociadaciertamatrizdeproximidades.Laesenciade
+susresultadosenejemplosdelaliteraturayreales.Entodos
+estosme´todosconsisteenhacerunconjuntodetransformacio-
+loscasosselogro´ minimizarelresultadodelMDSCla´sicoy
+nesalamatrizdedatosinicialqueculminanconlaaplicacio´n
+secomprobo´ quesemanten´ıanlasrelacionesdesemejanzas
+delteoremadedescomposicio´nsingulardeEckart&Young
+originales.
+(1936).
+ElEscalamientoMultidimensional(MDS),seencargade
+representar ciertos objetos o individuos de los que so´lo se 1. Escalamiento Multidimensional
+conocen similaridades o disimilaridades debidas a su com-
+Sean Ω={ω ,ω ,...,ω } un conjunto de n elementos
+1 2 n
+portamientorespectoavariablescualitativasomixtasqueles diferentes,yδ =δ(i,j)=δ(j,i)(cid:62)δ(i,i)=0unadistancia
+ij
+han sido medidas previamente, encontrando en un espacio
+odisimilaridadentreloselementosi,jdeΩ.Consideremos
+dedimensio´nreducida,puntoscuyasdistanciaseucl´ıdeasse
+lamatrizdedistancias:
+aproximenlomejorposiblealasrelacionesdeproximidades
+originales.  δ δ ··· δ 
+11 12 1n
+La implementacio´n de una herramienta computacional δ 21 δ 22 ··· δ 2n
+p
+re
+r
+s
+o
+u
+p
+l
+u
+ta
+es
+u
+ta
+na
+en
+la
+l
+b
+a
+o
+l
+r
+it
+d
+e
+i
+r
+f
+a
+´ı
+t
+c
+u
+i
+r
+l
+a
+d
+p
+e
+a
+b
+r
+i
+a
+do
+la
+a
+s
+q
+o
+u
+lu
+e
+ci
+l
+o
+a
+´n
+in
+d
+f
+e
+or
+e
+m
+st
+a
+e
+c
+p
+io´
+ro
+n
+b
+s
+l
+u
+e
+m
+m
+i
+a
+-
+∆= 
+
+. .
+.
+. .
+.
+... . .
+.
+ 
+
+δ δ ··· δ
+nistradanoessuficienteymuchasvecesladescripcio´ndel n1 n2 nn
+algoritmonoesmuyclarademodoquepermitaentenderla
+δ =δ =δ(i,j)(cid:62)δ =0
+ij ji ii
+te´cnicaparasuaplicacio´nposterior.
+Enestetrabajo,seelaboro´unpaquetedeprogramasenlen- ElobjetivodelEscalamientoMultidimensional(Multi-
+guajeMATLABdealgoritmosquecombinanelEscalamiento dimentionalScaling,MDS)esencontrarunamatrizX dela
+Cla´sico (cuyo criterio de error a minimizar es el Strain) y forma
+36 EscalamientoMultidimensionalempleandoMetaheur´ısticas
+Lafuncio´ndepe´rdidama´sconocidaparaelMDSCla´sico
+ 
+x 11 x 12 ··· x 1p sellamaStrainyvienedadaporlaexpresio´n:
+x 21 x 22 ··· x 2p
+X =   . . . . . . ... . . .    Strain=(cid:107)B−B(k)(cid:107)=tr(P (n−p) Λ2 (n−p) P ( (cid:48) n−p) )=∑ n λ i 2−∑ p λ i 2
+x x ··· x i=1 i=1
+n1 n2 np
+tal que δ
+i
+2
+j
+=∑
+α
+p
+=1
+(x
+iα
+−x
+jα
+)2 =(x
+i
+−x
+j
+) (cid:48) (x
+i
+−x
+j
+), donde Enalgunasaplicaciones,especialmenteenBiolog´ıayPsi-
+x ,x ,...,x ∈Rp sera´n las coordenadas de los puntos que colog´ıa,enlugardeunamatrizdedistancias∆,sedisponede
+1 2 n
+unamatrizconcoeficientesquemidenelgradodesimilaridad
+representanaloselementosdeΩ.Siestosecumple,decimos
+entrecadapardeindividuos.Paraaplicarlaste´cnicasdeMDS
+que∆esunamatrizdedistanciaseucl´ıdeas.[5]
+esnecesariotransformarlassimilaridadesendistancias,que
+puedensereucl´ıdeasono.(Ver[8])
+Los modelos de MDS pueden clasificarse fundamental-
+menteenMe´tricosyNoMe´tricos.EnelEscalamientoMe´trico
+1.2 EscalamientoNoMe´trico
+seutilizaunafuncio´nparame´trica,yesrecomendablecuando
+Supongamosquelamatrizdedistancias∆esnoeucl´ıdea.
+lamatrizdedisimilaridadesesbiencondicionada.ElEscala-
+EntonceslamatrizB(porelTeorema1)tienevalorespropios
+mientoNoMe´tricotrabajaconunafuncio´nmono´tonaeinten-
+taaproximarlamejorrepresentacio´nenelespacioeucl´ıdeo.
+negativos:λ
+1
+(cid:62)...(cid:62)λ
+p
+(cid:62)0>λ
+p+1
+(cid:62)...(cid:62)λ p(cid:48).
+El fundamento del MDS no me´trico es transformar las
+[1][4]
+Elcasoma´ssimpledeMDSeselEscalamientoCla´sico,
+distanciasδ
+ij
+paraconvertirlaseneucl´ıdeas,peroconservando
+lasrelacionesdeproximidadentreloselementosdelconjunto
+tambie´nllamadoAna´lisisdeCoordenadasPrincipales(Ana´li-
+Ω.
+sis de Componentes Principales aplicado a una matriz de
+SeaX unaconfiguracio´nenRp,laexpresio´ndeX co-
+distancias),dondeseoptimizaporv´ıaalgebraicaunafuncio´n (n×p)
+mosolucio´ndelMDSenpdimensionessehallageneralmente
+depe´rdida,conocidacomoStrain.[8][4]
+mediantelafuncio´ndepe´rdidaStress[1][2]dadapor:
+EnelEscalamientoNoMe´trico,larepresentatividadde
+m un e a nt s e o m lu e c d io´ ia n nt d e e l l a M fu D n S cio´ e n n d p ep d e i ´ m rd e i n da sio St n r e e s ss s . e L h o a s l a la lg g o e ri n t e m ra o l s - (cid:118) (cid:117) (cid:117) (cid:117) ∑(d ij −δ(cid:98)ij )2
+IterativosdeMDSencuentranunaconfiguracio´ndeMDScon
+Stress=(cid:117)
+(cid:117) (cid:116)
+i<j
+∑d2
+o´ptimo Stress, para lo cual, re-escalan los datos siguiendo ij
+i<j
+ciertasrestricciones.[1][2]
+dondelosd sonlasnuevasdistanciaseucl´ıdeas,obtenidas
+ij
+1.1 EscalamientoCla´sico delasnuevascoordenadasparalospuntosdeΩ.
+Sea∆,unamatrizdedistancias,A=−1∆(2)yB=HAH Estafuncio´ntomavaloresenelintervalo[0,1]yexpresasi
+2
+donde ∆(2) es la matriz que contiene en la posicio´n i,j el larepresentacio´nobtenidareflejacorrectamentelasrelaciones
+dedistanciaoriginales.Unasolucio´nperfectadelMDStiene
+cuadrado del elemento correspondiente a la matriz ∆; H =
+I−n−111 (cid:48) y1eselvectorcolumnaconformadopornunos. Stress=0. Se considera que una solucio´n aproximada es
+suficientementebuenasielStressesmenorque0.2.[8]
+Secumpleelsiguienteteorema:
+Otras variantes de la funcio´n de Stress son: el Stress-
+normadoyelS-Stress.[1][2]
+Teorema 1: La matriz de distancias ∆ es eucl´ıdea si y
+solosiBessemidefinidapositiva.
+LosalgoritmositerativosdeMDSencuentranunaconfi-
+(cid:48) guracio´ncono´ptimoStress,paralocual,re-escalanlosdatos
+Sea ahora B=PΛP la descomposicio´n espectral de B,
+siguiendo ciertas restricciones. Estos algoritmos presentan
+dondePesunamatrizden×pvectorespropiosortonormales
+dosfases.Encadafasesefijaunconjuntodepara´metrosy
+deBcorrespondientesalosvalorespropiosordenadosdela
+matrizΛ:λ (cid:62)...(cid:62)λ (cid:62)λ =0. semodificaotroconjuntodeargumentosdemaneraquese
+1 p p+1
+reduzcaelStress.
+Obse´rvese que B1=0, y por tanto λ =0 es valor
+p+1
+Siluegodet iteraciones,esteprocesonoreduceelvalor
+propiodeBcorrespondientealvectorpropio1.Tambie´n,se
+1 (cid:48)
+deStresshastaciertacantidadprefijada,sedetieneelalgorit-
+tienequesiX =PΛ2 cumplequeB=XX .
+modebu´squedayX setomacomolasolucio´no´ptima.Debe
+Luego,lascoordenadasdelelementoideΩsera´n t
+tenerseencuentaqueestosalgoritmositerativosnosiempre
+(cid:48) garantizanqueseencuentreunasolucio´no´ptimaglobal,de-
+x =(x ,...,x )
+i i1 ip
+bidoaqueloscambiosencadapasosonpequen˜osypuede
+dondex eslafilai-e´simadeX.E´stasrecibenelnombrede detenerseenunm´ınimolocaldelafuncio´nStress.
+i
+coordenadasprincipalesycumplenque Losme´todosma´sconocidossondetipodescensodegra-
+diente, pero muchas veces conducen a o´ptimos locales del
+p
+δ2 = ∑(x −x )2=(x −x ) (cid:48) (x −x ) Stress.Otrosme´todos,basadosenunafuncio´ndemayoriza-
+ij iα jα i j i j cio´n(me´todoSMACOF)oelme´tododeTunelado(Tunneling)
+α=1
+EscalamientoMultidimensionalempleandoMetaheur´ısticas 37
+tampocogarantizanquesellegueauno´ptimoglobal;yotras xquenoeste´ enlalistatabu´,hastasatisfaceralgu´ncriterio
+implementacioneshandemostradoserunpocolentas.[1][2] deparada.Esteme´todoaumentaelrendimientodebu´squeda
+localmedianteelusodeestructurasdememoriayaqueuna
+vezqueunasolucio´npotencialquedadeterminada,semarca
+2. Estrategias y procedimientos
+como“tabu´”demodoqueelalgoritmonovuelvaavisitaresa
+empleados
+posiblesolucio´n.(Ver[11][13])
+Apartirdelaconfiguracio´ninicialdadaporlasolucio´n ParaaplicarestealgoritmoalproblemadelMDSnome´tri-
+del MDS Cla´sico, el proceso iterativo de MDS no me´trico co,sediscretizo´ elespaciodedimensio´nreducida,dibujando
+siguelasdosfasesmencionadasanteriormente,entantono una cuadr´ıcula imaginaria de h∗h, donde h se selecciona
+secumplaalgunodeciertoscriteriosdeparadapreviamente segu´n la cantidad de elementos y la escala de la represen-
+prefijados. tacio´n en R2. En cada iteracio´n, si el valor de s disminuye,
+DenotaremosX (0) alasolucio´ndelMDSCla´sico(solucio´n X (k+1) sera´ tomadocomonuevasolucio´ninicial.Sino,nos
+inicialdelalgortitmoiterativo),X lasolucio´ndelaiteracio´n movemoshaciaotracuadr´ıculasiguiendoelsiguientecriterio:
+(k)
+kys elvalordelstressparalasolucio´nX .
+(k) (k)
+Enlaprimerafasesegeneranposiblessolucionessiguien- Sienelmovimientoanteriorelpuntosemantuvoenla
+do una estrategia de vecino ma´s cercano [7] en la que se mismacuadr´ıcula,entoncesnosmovemosalacuadr´ıcu-
+relaciona cada elemento particular i con aquellos cuya dis- lama´scercanaenlamismadireccio´ndelmovimiento
+tanciaesm´ınima.Enlasegundafasesecalculanlasnuevas anterior.
+distancias y procedemos a escoger la nueva solucio´n a par-
+tirdelaestrategiadeterminadaporlametaheur´ısticaquese
+Sienelmovimientoanteriorelpuntocambio´decuadr´ıcu-
+la, entonces nos movemos en el sentido opuesto a la
+decidaaplicar.
+direccio´ndelmovimientoanterior.
+2.1 RecocidoSimuladoenMDSNoMe´trico
+ElalgoritmodeRecocidoSimuladosebasaenelproceso 2.3 AlgoritmoGene´ticoenMDSNoMe´trico
+derecocidodelaceroycera´micas,unate´cnicaqueconsisteen UnAlgoritmoGene´ticoesunme´tododebu´squedadiri-
+calentaryluegoenfriarlentamenteelmaterialparavariarsus gidabasadaenprobabilidad.Bajounacondicio´nmuyde´bil
+propiedadesf´ısicas.Elcalorcausaquelosa´tomosaumenten (queelalgoritmomantengaelitismo,esdecir,guardesiempre
+suenerg´ıayquepuedanas´ıdesplazarsedesusposicionesini- almejorelementodelapoblacio´nsinhacerleningu´ncambio),
+ciales(unm´ınimolocaldeenerg´ıa);elenfriamientolentoles sepuededemostrarqueelalgoritmoconvergeenprobabili-
+damayoresprobabilidadesderecristalizarenconfiguraciones dadalo´ptimo.Enotraspalabras,alaumentarelnu´merode
+conmenorenerg´ıaquelainicial(m´ınimoglobal). iteraciones,laprobabilidaddetenerelo´ptimoenlapoblacio´n
+Elme´todoconsisteen,dadox ,generarunpuntoy tal tiendea1.Estosalgoritmoshacenevolucionarunapoblacio´n
+k k
+que,sielvalordelafuncio´nobjetivodisminuye,x =y . deindividuossometie´ndolaaaccionesaleatoriassemejantes
+k+1 k
+Sino,laaceptacio´ndelasolucionrespondera´ aciertaleyde alasqueactu´anenlaevolucio´nbiolo´gica(mutacionesyre-
+probabilidad.Estaleydependera´deunpara´metrodetempera- combinacionesgene´ticas),as´ıcomotambie´nauna“seleccio´n”
+turat queseira´ disminuyendoamedidaquepasaeltiempo deacuerdoconalgu´ncriterio,enfuncio´ndelquesedecide
+yteniendoencuentaque∆ = f(y )−f(x )>0.Paraunt cua´lessonlosindividuosma´sadaptados,quesobreviven,y
+k k k
+fijo,amayor∆ ,menorprobabilidaddetomary comonuevo cua´leslosmenosaptos,quesondescartados.(Ver[11][9][6]
+k k
+puntodeiteracio´n.Laprobabilidaddeaceptarunasolucio´n [12])
+que no mejore la actual es proporcional a la temperatura e Enlabu´squedademejoressolucionesalproblemaencues-
+inversamenteproporcionalalcambioenlafuncio´nobjetivo. tio´n,encadaiteracio´n,apartirdelasolucio´n(X )segenero´
+(k)
+Si consideramos {x } una sucesio´n de variables aleatorias, unapoblacio´ndemaneraaleatoria,empleandoladistribucio´n
+k
+puededemostrarsequeelalgoritmoconvergeenprobabilidad uniformeenelintervalo[0,1].Cadaindividuoseevalu´aenla
+alo´ptimo.(Ver[11][3][14]) funcio´nobjetivoparaconocersuaptitud.Seseleccionanlas
+Paranuestrasolucio´nalproblemadelMDSnome´trico,en dossolucionesconmejorStressyserealizaelcruzamiento
+laiteracio´nk,lasolucio´nX (k) seacepto´ onodeacuerdoauna parahallarX (k+1) quegenerara´ lanuevapoblacio´n.
+distribucio´ndeprobabilidadnormal(es/T),dondeelpara´me-
+trodetemperaturainicialT(0)=1,disminuyeamedidaque 2.4 Evolucio´nDiferencialenMDSNoMe´trico
+pasaeltiempoarazo´nde0.95,esdecirT(k+1)=0.95∗T(k). La Evolucio´n Diferencial se caracteriza por el uso de
+vectoresdeprueba,loscualescompitenconlosindividuosde
+2.2 Bu´squedatabu´ enMDSNoMe´trico lapoblacio´nactualafindesobrevivir.Elalgoritmoasumeque
+ElalgoritmodeBu´squedaTabu´tieneasociadaunalistacu- lasvariablesdelproblemaaoptimizaresta´ncodificadascomo
+yoselementosnosepuedenconsiderar(listatabu´).Utilizaun unvectordenu´merosrealesyqueeldominiodelasvariables
+procedimientodebu´squedalocalparamoverseiterativamente delproblemaesta´ restingidoporciertascotasdefinidaspara
+desdeunasolucio´nxhaciaunasolucio´nx(cid:48)enlavecindadde cadavariable.(Ver[11])
+38 EscalamientoMultidimensionalempleandoMetaheur´ısticas
+ParaaplicarestealgoritmoalproblemadelMDSnome´tri- matricesdedisimilitudesnoeucl´ıdea,yaquelasdistancias
+co,empleandoladistribucio´nuniformeenelintervalo[0,1], por carretera no son en l´ınea recta, y sus mediciones esta´n
+segeneraronaleatoriamentenvectoresdePerturbacio´n(Vec- sujetas a errores debido al relieve, entre otros factores, sin
+tordeDiferencias)queserecombinanconX paragenerar embargo,comoestasdisimilitudesseacercanbastantealas
+(k)
+unanuevapoblacio´n.Lamejorsolucio´n(solucio´nconmenor distancias eucl´ıdeas, el MDS Cla´sico nos brinda una muy
+Stress) se convertira´ en la nueva solucio´n inicial(X ), y buenasolucio´n.AlaplicarposteriormenteMDSNoMe´trico
+(k+1)
+pasara´ aconformarlanuevapoblacio´n. conmetaheur´ısticasnologramosqueestasolucio´nmejorase
+muchoma´s,aunquepuedeversequelaEvolucio´nDiferencial
+eselalgoritmoquemejoroptimizaelstressparaestosejem-
+3. Resultados
+plos.
+Paracomprobarlosresultadosdelosme´todosimplemen-
+tados,fueronaplicadosaejemplosdelaliteraturayproble-
+Durantelaexperimentacio´n,entodosloscasosselogro´
+masrealesrealizandosimulacionesenlasquesevariaronlos
+reducirlape´rdidadeinformacio´nporStressrespectoaladel
+para´metros de perturbacio´n de la solucio´n y el nu´mero de
+MDSCla´sico(porStrain)ysecomprobo´quesemanten´ıanlas
+iteraciones.
+relacionesdesemejanzasoriginales.Sepudoapreciarquelos
+algoritmosevolutivosconvergenalm´ınimoma´sra´pidoque
+Elprimerejemplo,extra´ıdodeBorg&Groenen(2013),
+lasheur´ısticasdebu´squedalocal.Enlafigura1sepresenta
+presentalasfrecuenciasporestadodelosdiferentescr´ımenes
+unresumendelosresultadosobtenidos.
+enEstadosUnidos.
+Alcompararlasolucio´nconstress=0dadaporlosauto-
+resconlaobtenidaporlosme´todosimplementadossepudo
+observarqueaunquelosvaloresdeStressnosontanpequen˜os
+comopodr´ıaesperarse,larepresentacio´nbidimensionalessu-
+ficientementecercanaalarealidad.Selograronobservardos
+vecindadesprincipales:cr´ımenesdondesedan˜aalaspersonas
+(asesinato,asalto,violacio´n);ycr´ımenessobrelapropiedad Figura1.Resultadosdelaexperimentacio´n.
+(estafa,robo,robodeauto).Elatracoseencuentraenmedio
+deestasvecindades,posiblementeporqueencasodeservio-
+lentos, no solo dan˜an las propiedades de las personas sino
+tambie´nsuscuerpos. Conclusiones
+Seelaboro´unpaquetedeprogramasenlenguajeMATLAB
+Mederos, Linares & Miret (2000) describen el estudio
+que reu´ne algoritmos que combinan MDS No Me´trico con
+realizadoconsieteexpertosdelCENSA-ISCAH,quejuzgaron
+Metaheur´ısticas.Secompararonlasestrategiasprogramadas
+10paresdea´carosquepuedenformarseteniendoencuenta
+apartirdesusresultadosenejemplosdelaliteraturayreales
+diferentesvariablescomolamorfolog´ıaexterna,lamorfolog´ıa
+obteniendoresultadosprometedores,particularmente,cuando
+interna,tipodealimentacio´n,etc.
+sedispongadebasesdedatosparalascualeselMDSCla´sico
+Segu´n los expertos, los a´caros 2, 4 y 5 se alimentan de
+noseaeficienteporlosproblemasdemalcondicionamiento
+ce´lulas epide´rmicas de las hojas y otros tejidos verdes de
+delasmatricesdedistanciasqueprocesaylaconfiguracio´n
+la planta, por lo que tienen comportamientos parecidos y
+inicialnosealosuficientementeconfiabledelosdatosque
+deben estar cerca en la representacio´n final. Sin embargo,
+rerpresenta,encuyocasolasmetaheur´ısticasseencargara´nde
+el a´caro 1 se alimenta de restos de materias orga´nicas y el
+ofreceralusuariolamejorconfiguracio´n.
+3 es depredador de insectos, por tales razones deben estar
+separadosdelresto,ynomuyseparadosentres´ı.
+Agradecimientos
+Alaplicarlosme´todosimplementadosaestosdatospudo
+versequeaunqueapartirdelasmetaheur´ısticasnosellega
+A mi tutora Dra. Elina Miret Barroso por el tiempo y
+aalcanzaruno´ptimoglobal,s´ıselograestablecerentrelos
+esfuerzo dedicado para que este trabajo se llevara a cabo,
+elementoslarelacio´nexpuestapreviamenteporlosexpertos.
+muchasgraciasporsuapoyo.
+Adema´s,sepudonotarque,aunquelaevolucio´ndiferencial
+convergeconmayorvelocidad,sedetieneenuno´ptimolocal
+Referencias
+diferentedelglobal.
+[1] IngwerBorgandPatrickJ.F.Groenen. ModernMultidi-
+Una de las aplicaciones ma´s conocidas del MDS es la mensionalScaling.TheoryandApplications. Springer.,
+reconstruccio´ndemapas[10].Dadaslamatrizdedistancias 2005.
+porcarreteraentrelasprincipalesciudadesenCubaeInglate-
+rra,seaplicaronlosalgoritmosdescritosanteriormentepara [2] Ingwer Borg, Patrick J. F. Groenen, and Patrick Mair.
+obtener una representacio´n en el plano eucl´ıdeo. Estas son Appliedmultidimensionalscaling. Springer.,2013.
+EscalamientoMultidimensionalempleandoMetaheur´ısticas 39
+[3] William Castillo, Jorge Gonza´lez, and Oldemar
+Rodr´ıguez. Me´todosdeoptimizacio´ndelstress.compa-
+racionesusandodisimilitudestipointervalo. Revistade
+Matema´tica:Teor´ıayAplicaciones.CIMPA.,2003.
+[4] TrevorF.CoxandMichaelA.A.Cox.Multidimensional
+Scaling. Chapman&Hall.,1994.
+[5] CarlesM.Cuadras. NuevosMe´todosdeAna´lisisMulti-
+variante. CMCEditions.,2008.
+[6] StefanEtschbergerandAndreasHilbert. Multidimensio-
+nalscalingandgeneticalgorithms:Asolutionapproach
+toavoidlocalminima. Arbeitspapierezurmathematis-
+chenWirtschaftsforschung.,No.181,2003.
+[7] TeuvoKohonen. Newdevelopmentsofnonlinearprojec-
+tionsforthevisualizationofstructuresinnonvectorial
+datasets. AaltoUniversitypublicationseriesSCIENCE
++TECHNOLOGY.,2011.
+[8] K.V.Mardia,J.T.Kent,andJ.M.Bibby. Multivariate
+Analysis.,volumeTenthprinting.1995. AcademicPress
+Inc.,1979.
+[9] RudolfMatharandAntanasZilinskas. Onglobalopti-
+mizationintwo-dimensionalscaling. KluwerAcademic
+Publishers,1993.
+[10] Elina Miret. Un enfoque unificado para te´cnicas de
+representacio´neuclidiana. TesisdeDoctorado.,2005.
+[11] El-GhazaliTalbi. MetaheuristicsFromDesigntoImple-
+mentation. JohnWiley&Sons.,2009.
+[12] P.Tecuanhuehue-Vera,Jesu´sArielCarrasco-Ochoa,and
+Jose´Fco.Mart´ınez-Trinidad. Geneticalgorithmformul-
+tidimensionalscalingovermixedandincompletedata.
+NationalInstituteforAstrophysics,OpticsandElectro-
+nics.,2012.
+[13] Mario Villalobos and Javier Trejos. Ana´lisis de pro-
+ximidades me´trico usando bu´squeda tabu´. Revista de
+Matema´tica:Teor´ıayAplicaciones.CIMPA,2000.
+[14] MarioVillalobosandJavierTrejos. Applicationofsimu-
+latedannealinginmetricmultidimensionalscaling. Re-
+vistaInvestigacio´nOperacional.,Vol.22,No.3.,2001.

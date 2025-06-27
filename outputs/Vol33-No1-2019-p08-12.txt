@@ -1,0 +1,379 @@
+CienciasMatemóticas,Vol.33,No.1,Pag.8-12,2019
+Generación de matrices circulantes invertibles y su
+aplicación al criptosistema McEliece
+Generating invertible circulant matrices and their
+application to the McEliece cryptosystem
+Ernesto Dominguez Fiallo1*, Frank E. Acosta Fonseca1, Luis R. Piñeiro Díaz1
+Resumen En este artículo se propone un algoritmo para generar matrices circulantes invertibles sobre F
+2
+deordenprimo.Lageneracióndetalesmatricesserealizaactualmentedeformaaleatoria.Semuestracomo
+emplearelalgoritmopropuestoparagenerarllavesenelcriptosistemaMcEliecebasadoencódigosQC-LDPC(el
+cualesunadelasvariantesmásimportantespropuestasparaestándarasimétricopostcuántico),proponiendo
+otros dos algoritmos para construir las matrices S y Q que componen la llave privada y con las cuales se
+generalallavepública.Estosalgoritmosreducenconsiderablementeelprocesomáscostosodelesquema:la
+generacióndellaves.
+Abstract InthispaperanalgorithmisproposedtogenerateinvertiblecirculantmatricesoverF ofprimeorder.
+2
+Thegenerationofsuchmatricesiscurrentlycarriedoutrandomly. Itisshowshowtousetheproposedalgorithm
+togeneratekeysintheMcEliececryptosystembasedonQC-LDPcodes(whichisoneofthemostimportant
+variantsproposedforpostquantumasymmetricstandard),proposingtwootheralgorithmstobuildthematrices
+SandQwhichmakeuptheprivatekeyandwithwhichthepublickeyisgenerated.
+PalabrasClave
+matricescirculantesinvertibles,criptosistemaMcEliece,criptografíapostcuántica
+Keywords
+invertiblecirculantmatrices,McEliececryptosystem,post-quantumcryptography
+1InstitutodeCriptografía,UniversidaddeLaHabanaó,LaHabana,Cuba,edominguezfiallo@nauta.cu,frankorazonero@nauta.cu,
+lrp@matcom.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción 1. Preliminares
+ElcriptosistemaMcElieceesunadelasalternativasmás SeanF elcampofinitodeqelementosyFnelF espacio
+q q q
+importantesaestandarpostcuántico[1].Unadesusvariantes vectorialcuyoselementossonvectoresdencomponentesen
+másprominenteseslabasadaencódigosCuasi-Cíclicoscon F .
+q
+Baja Densidad en la Matriz de Control (QC-LDPC siglas
+en inglés)[7]. Para generar las llaves se emplean matrices Definición1 Seank,n∈Ntalesque1≤k<n.Uncódigo
+circulantes(verdefinición7)invertibles.Enlaactualidadno linealC essubespaciovectorialdeFndedimensiónk.AC se
+q
+existenalgoritmoseficientesparagenerartalesmatricesyse lellamacódigolinealsobreF conlongitudnydimensiónk
+q
+construyendeformaaleatoriachequeandosuinvertibilidad. ysedenotapor[n,k] .AloselementosdeC selesdenomina
+q
+Enesteartículoseproponeunalgoritmoparagenerarma- palabrasdecódigo.
+tricescirculantesinvertiblessobreF deordenprimo.Apartir
+2
+de dicho algoritmo, se proponen otros dos algoritmos: uno Definición2 Sea C un [n,k] código lineal. Una matriz G
+q
+probabilístico(conprobabilidadcercanaa1)paragenerarma- detamañok×ncuyosvectoresfilasformenunabasedeC
+tricescirculantesinvertiblesdensas(verdefinición10)yuno como espacio vectorial de dimensión k es llamada matriz
+determinísticoparagenerarmatricescirculantesinvertibles generadoradeC.SiGtienelaformaG=(I |A),dondeI
+k k
+sparse(verdefinición9).Paracadaalgoritmopropuestose es la submatriz identidad de orden k y A es una submatriz
+realizaunanálisisdesucomplejidadalgorítmicademostrando detamañok×(n−k),entoncessedicequeGestádadaen
+laeficienciacomputacionaldelosmismos.Estosalgoritmos formaestandaroenformasistemática.
+mejoranelprocesodegeneracióndellavesdelavariantedel
+criptosistemaMcEliececonsiderado. Lacodificaciónconcódigoslinealesesmuysimpledebi-
+doasudescripciónalgebraica.Dadounmensajeu∈Fk,se
+q
+GeneracióndematricescirculantesinvertiblesysuaplicaciónalcriptosistemaMcEliece 9
+codificaenlapalabradecódigocmediantelamultiplicación En particular, es de interés el caso en que r = 1. Se
+0
+c=uG. cumple entonces que k =n −1, la matriz de control del
+0 0
+(cid:2) (cid:3)
+código tiene la forma H = H H ... H y H es
+Definición3 AunamatrizH detamaño(n−k)×nquesa- 0 1 n0−1
+derangocompleto(casodeinterés)sialmenos,unodelos
+tisfaceHcT =0∀c∈C seledenominamatrizdecontroldel
+bloquesH, i=0,...,n −1,esnosingular.
+[n,k] códigolinealC. i 0
+q
+Definición4 La distancia de Hamming entre dos vectores Definición9 Unamatrizdetamañom×nsedenominaspar-
+u,v∈Fn es el número de coordenadas en las cuales u y v sesi #elementos(cid:54)=0 ≈ log(m·n).
+q m·n m·n
+sondiferentes.ElpesodeHammingwdeunvectoru∈Fn
+q
+eselnúmerodecoordenadasdistintasdecero,osea,w(u)= Definición10 Unamatrizdetamañom×nsedenominaden-
+d(u,0). sasi #elem m en ·n tos(cid:54)=0 ≈ 3 4 .
+Definición5 Ladistanciamínimad m´ın deuncódigolinealC Definición11 UncódigoesLDPCsisumatrizdecontroles
+esladistanciadeHammingmáspequeñaentredospalabras sparse.
+decódigocualesquieraydiferentesd (C)=m´ın {d(c,c ):
+m´ın ci(cid:54)=cj i j
+c,c ∈C}. Definición12 UncódigoQC-LDPCesunaclaseparticular
+i j
+deuncódigoQCcaracterizadapormatricesdecontrolque
+CuandoseconoceladistanciamínimadelcódigoC,en-
+sonsparse.
+toncessedicequeC esun[n,k,d ] códigolineal.Ladis-
+m´ın q
+tanciamínimapermitedeterminarelnúmerodeerroresque
+1.2 CriptosistemaMcEliecebasadoencódigosQC-
+puedecorregirelcódigo.
+LDPC
+Teorema6 [6]SiC esun[n,k,d ] códigolineal,entonces Generacióndellaves:DadouncódigoLDPCcapazdecorre-
+m´ın q
+C puedecorregirhasta(cid:98)dm´ın−1(cid:99)errores. girt errores,elmismoserepresentaporsumatrizdecontrol
+2
+H en la cual se tiene que n=n ·p, k =k ·p y se toma
+0 0
+Definición7 Unamatrizcirculantedeorden pesunamatriz
+k =n −1.Loanteriorsignificaquen−k=pyquelama-
+  0 0
+a a ... a (cid:2) (cid:3)
+0 1 p−1 trizHesdelaformaH= H H ... H dondecada
+a p−1 a 0 ... a p−2 submatrizH, i∈[0,n −1] 0 esuna 1 matrizcir n c 0 u − l 1 antedeorden
+delaformaA=   . . . . . . ... . . .    Siloselementosde pconpesod i v encada 0 filaycolumna.ComoH esderango
+a a ... a completo, se puede asumir sin pérdida de generalidad que
+1 2 0
+dichamatrizpertenecenalcampoF 2 ,entoncessedenomina H n0−1 esinvertible.
+matrizcirculantebinaria. ApartirdelamatrizH,seobtienelamatrizgeneradoraG
+(cid:2) (cid:3)
+quetendrálaformaG= I |A dondeI eslama-
+Si se considera el anillo de polinomios F 2 [x]/(xp+1), k×k k×(n−k)  (cid:16) k×k (cid:17)T 
+entonceslacorrespondencia  H n − 0 1 −1 H 0 
+A→a(x)= p ∑ −1 a i ·xi trizidentidaddeordenk yA k×(n−k) =     (cid:16) H n − 0 1 − . 1 H 1 (cid:17)T     .
+i=0  . . 
+ 
+esunisomorfismodeanillosypermiteasociarcadamatriz (cid:16) (cid:17)T
+H−1 H
+circulanteconunpolinomioquetienecomocoeficientesalos n0−1 n0−2
+elementosdelaprimerafiladelamatriz. SeseleccionandosmatricesSyQambasinvertiblescones-
+Enloadelante,soloseconsideraráncódigoslinealesbina- tructura QC siendo S una matriz densa de orden k y Q una
+rios,osea,elcampofinitoF seráelcampobinarioF . matrizsparsedeordennconpesom>1encadafila.Lama-
+q 2
+trizQCgeneradoradelcódigopúblicoG(cid:48)seobtieneapartir
+1.1 CódigosQC-LDPC deGdelsiguientemodo:G(cid:48)=S−1GQ−1.
+LoscódigosQC-LDPCsonlaunióndedosfamiliasde ElusodelamatrizQinfluyedirectamenteenlacapacidad
+códigoslineales:loscódigosQC[8]yloscódigosLDPC[3]. de corregir errores del código. Si el código secreto puede
+corregirhastaterrores,paraqueladecodificaciónseacorrecta,
+Definición8 UncódigoQCesuncódigolinealdelongitud
+elnúmeromáximodeerroresintencionalest(cid:48)quesepueden
+n=p·n ydimensiónk=p·k enelquecadadesplazamiento
+0 0 introducirenelesquemaduranteelcifradoest(cid:48)≤t/m.
+cíclico de una palabra de código en n posiciones es una
+0 Lallavepúblicaeselpar(G(cid:48),t(cid:48))ysutamañoes(n −1)·p
+palabradecódigo.Sumatrizdecontrolesdelaforma 0
+  bits,mientrasquelallavesecretasonlasmatrices(H,S,Q).
+H H ... H
+00 01 0(n0−1) Cifrado: Sea u∈Fk el mensaje a transmitir. Se cifra del
+H=     H . . . 10 H . . . 11 . . . .. . H 1(n . . . 0−1)     dondeca- s d i u g c u i i d e o nt s e el m ec o c d i o o : n y ad = o 2 u al G ea (cid:48)+ tor e i , a d m o e n n d t e e e ta e l s qu el e v w e ( c e to ) r = er t r (cid:48) o ≤ ri t n / t m ro . -
+H H ... H Descifrado:Dadoelvectorrecibidoy,secalculay·Q=x=
+(r0−1)0 (r0−1)1 (r0−1)(n0−1)
+dasubmatrizH , 0≤i≤r −1, 0≤ j≤n −1esunamatriz u·S−1·G+e·Q.Seaplicaelalgoritmoeficientededecodifi-
+ij 0 0
+circulantedeorden p. caciónD yseobtieneD(x)=u·S−1.Luegosemultiplicaa
+CienciasMatemóticas,Vol.33,No.1,Pag.8-12,2019
+10 GeneracióndematricescirculantesinvertiblesysuaplicaciónalcriptosistemaMcEliece
+laderechaporlamatrizSyserecuperaelmensajeoriginal Demostración. Un polinomio f tiene peso par si y solo si
+D(x)·S=u. f(1)=0pero f(1)=0siysolosi f esmúltiplodex+1.
+Detalles sobre la seguridad del esquema y selección de
+parámetros se dan en [2]. El punto clave aquí es que para Proposición19 TodamatrizcirculantedeordennsobreF 2
+garantizarseguridad,pdebeserimpar,porloqueenparticular conunnúmeropardeunosenunafilaessingular.
+puedeserprimo.
+Demostración.Siunamatrizcirculantetieneunnúmeropar
+deunosenunafila,entoncessupolinomiocorrespondiente
+2. Algoritmo para generar matrices
+tiene peso par. Por la proposición 18, dicho polinomio es
+circulantes invertibles de orden primo
+múltiplo de x+1. Aplicando la proposición 13, se tiene el
+resultadoenunciado.
+2.1 Resultadospreliminares
+Proposición13 [4]Unamatrizcirculantebinariadeorden
+2.2 Algoritmo
+nesinvertiblesiysolosisucorrespondientepolinomioenel
+anilloF [x]/(xn+1)esprimorelativoaxn+1. Seanunnúmeroprimotalqueo n (2)=n−1.Losresulta-
+2 dosanterioresimplicanqueelpolinomioxn+1tienesolodos
+Delaproposiciónanteriorsededucequeparainvestigarla factoresirreducibles:Q 1 ,Q n .Porlaproposición19,todoslos
+invertibilidaddelasmatricescirculantes,esmuyútilconocer polinomiosdepesoimparexceptoQ n correspondenamatrices
+lafactorizacióndelpolinomioxn+1enF [x],locualconduce circulantesinvertibles.Deestaformasetieneunalgoritmo
+2
+aladefinicióngeneraldepolinomiociclotómico. paragenerarmatricescirculantesinvertiblesbinariasdeorden
+primoconpesod encadafilaycolumnadelconjuntode
+(cid:0)n(cid:1)
+v dv
+Definición14 Sea k impar y ζ una k-ésima raíz primiti- matricesdeestetipo.
+va de la unidad sobre F . Entonces el polinomio Q (x)=
+2 k
+∏ (x−ζs)esllamadok-ésimopolinomiociclotó-
+Algoritmo1:Generacióndematricescirculantesinver-
+s:gcd(s,k)=1,s≤k tiblesbinariasdeordennprimoconpesod encadafila
+micosobreF . v
+2 ycolumna
+Enloadelanteo k (2)denotaelordende2enelgrupoZ∗ k Data:nprimotalqueo n (2)=n−1,d v imparyd v <n
+yφ(d)denotalafuncióndeEuler. Result:unpolinomio f correspondienteaunamatriz
+circulanteinvertiblebinariadeordenncond
+v
+Teorema15 [5]Paranimparsetiene: unosencadafilaycolumna
+1. xn+1=∏Q (x)enF [x]. 1 Seleccionart 0 ,...,t dv−1 delconjunto{0,...,n−1}de
+k 2 formaindependienteeigualmentedistribuidossin
+k|n
+reemplazo.
+2. loscoeficientesdeQ k (x)estánenF 2 . 2 Devolverelpolinomio f(x)=∑ d i= v− 0 1xti
+Teorema16 [5]LospolinomiosQ (x)sefactorizanen φ(k)
+k ok(2)
+polinomiosmónicosdistintoseirreduciblesdegradoo (2)
+k 2.3 Aplicación al McEliece basado en códigos QC-
+enF [x].
+2 LDPC
+Sea f ∈F [x]yψ(f)elnúmerodepolinomiosdegrado Actualmentenoexisteunprocedimientoparagenerarlas
+2
+menor que son primos relativos a f en F [x]. En [4] se de- matricesSyQenelcriptosistemaMcEliecebasadoencódi-
+2
+muestra que si gcd(f,g)=1 entonces ψ(fg)=ψ(f)ψ(g). gos QC-LDPC, por lo que dicho proceso se hace de forma
+aleatoria lo cual hace más costoso la generación de llaves.
+El número de matrices circulantes binarias e invertibles de
+ordennes,segúnlaproposición13,ψ(xn+1)yutilizando Basadosenelalgoritmo1,seproponendosalgoritmos:uno
+probabilísticoparagenerarlamatrizSyotrodeterminístico
+losteoremasanterioressetienelasiguienteproposición.
+paragenerarlamatrizQ.
+Proposición17 [4] Sea n=2αm, donde m es impar y α Seproponeusarelalgoritmo2paraconstruirSduranteel
+es un entero positivo. Entonces se tiene que ψ(xn+1)= procesodegeneracióndellavesdelesquema.
+2n∏
+(cid:16)
+1−2−ok(2)
+(cid:17)φ(k)/ok(2)
+.
+Teorema20 Sea punnúmeroprimotalqueo (2)= p−1.
+p
+k|m
+SeaSlamatrizconstruídaporelalgoritmo2.Entonces
+Acontinuaciónsedandosproposicionesqueseránmuy
+útilesparaelanálisisdelasmatricescirculantesbinariasque
+(cid:18)
+1
+(cid:19)k0
+P(Sseainvertible)≥ 1−
+soninvertibles. 2p−1
+Proposición18 Sea f ∈F [x]/(xn+1).Entonces f tienepe- Demostración.SeaSlamatrizgeneradaporlosdosprime-
+2
+soparsiysolosiesmúltiplodex+1. rospasosdelalgoritmo2.Sicadapolinomiocorrespondiente
+CienciasMatemóticas,Vol.33,No.1,Pag.8-12,2019
+GeneracióndematricescirculantesinvertiblesysuaplicaciónalcriptosistemaMcEliece 11
+Algoritmo2:ConstruccióndelamatrizS
+Data:k ,p
+0
+Result:matrizbinariadek ×k submatrices
+0 0
+circulantesdeorden p
+1 Generarcadabloquesobreladiagonalprincipal
+independienteeigualmentedistribuidodelconjuntode
+todaslasmatricescirculantesbinariasdeorden pcon
+pesoimpar;
+2 Generarcadabloquefueradeladiagonalprincipal
+independienteeigualmentedistribuidodelconjuntode
+todaslasmatricescirculantesbinariasdeorden pcon
+pesopar;
+3 Permutarcadafilabloquedelamatrizporuna
+permutaciónseleccionadaindependienteeigualmente
+Algoritmo3:ConstruccióndelamatrizQ
+distribuidadelespaciodetodaslaspermutacionesdek
+0
+Data:n , p, u,v∈N, u≥2 par, vimpar
+elementos. 0
+Result:matrizQconpesoencadafilaycolumna
+m=u(n −1)+vycompuestaden ×n
+0 0 0
+a las submatrices de la diagonal principal es invertible en- bloquescirculantesdeorden p
+tonces S es invertible. La probabilidad de que cada polino- 1 Parai=1hastan 0 hacer:
+mio de las submatrices de la diagonal principal sea inver- 2 Seleccionarvnúmerosdiferentesd 1 i,d 2 i,...,d v i del
+tible en F [x]/(xp+1) es ψ(xp+1) . Trabajando se tiene que conjunto{1,2,...,p}deformaindependientee
+2 2p
+ψ(xp+1) =1− 1 .Comosetienenk deestospolinomios igualmentedistribuidos.
+2p 2p−1 0 3 CrearunamatrizcirculanteDideorden pconunosen
+elegidosalazarydeformaindependienteycomononecesa-
+lasposicionesdi,di,...,di delaprimerafila.
+riamenteparaqueSseainvertiblelospolinomioscorrespon- 1 2 v
+dientesalassubmatricesdeladiagonalprincipaldebenser 4 Fin
+invertibles,setieneelresultadodeseado. 5 Parai=1hastan 0 (n 0 −1)hacer:
+Esdenotarqueaunqueelalgoritmo2esprobabilístico, 6 Seleccionarunúmerosdiferentesbi 1 ,bi 2 ,...,bi u del
+conjunto{1,2,...,p}deformaindependientee
+laprobabilidaddeéxitoesmuypróximaa1paratodoslos
+igualmentedistribuidos.
+valoresrealesdelosparámetros[2].
+La matriz Q tiene peso m constante en cada fila, tiene 7 CrearunamatrizcirculanteBideorden pconunosen
+que ser invertible y está compuesta de n 0 ×n 0 submatrices lasposicionesbi 1 ,bi 2 ,...,bi u delaprimerafila.
+circulantesdeorden p.Luego,mtienequeserimparyloes- 8 Fin
+cribiremosconvenientementecomom=u(n 0 −1)+v,donde 9 CrearlamatrizBcompuestaden 0 ×n 0 bloques
+u≥2esparyvimpar.Bajoestascondicionesseproponeel circulantesdeorden pubicandolosbloquesDienla
+algoritmo3paraconstruirQ.
+diagonalprincipalylosbloquesBifueradeladiagonal
+principal.
+Teorema21 Seapprimotalqueo p (2)=p−1.Supongamos 10 Permutarcadafilabloquedelamatrizporuna
+quelosvaloresn 0 ,uyvsatisfacen(ciertoenlapráctica) permutaciónseleccionadaindependienteeigualmente
+distribuidadelespaciodetodaslaspermutacionesden
+n !·(max{u,v})n0 <p 0
+0 elementos.
+Entonceselalgoritmo3siempreproduceunamatrizinvertible
+Q.
+Demostración. Aplicando la fórmula de Leibniz1 para el
+determinante de Q, el peso del determinante es a lo más
+n !·(max{u,v})n0 <p.Siladesigualdaddelteoremasecum-
+0
+ple, entonces el determinante de Q debe ser un polinomio
+depesoimpardistintode∑
+p−1xi.Luegoeldeterminantees
+i=0
+invertibleyporendenoesundivisordecero,locualgarantiza
+lainvertibilidaddelamatrizQ
+n
+1det(A)= ∑ sgn(σ)∏a
+σ(i),i
+dondeA=(aij)i,j=1,...,nysgneslaesla
+σ∈Sn i=1
+funciónsignodepermutacionesenelgrupodepermutaciónSnquedevuelve
+1y-1parapermutacionespareseimpares,respectivamente.
+CienciasMatemóticas,Vol.33,No.1,Pag.8-12,2019
+12 GeneracióndematricescirculantesinvertiblesysuaplicaciónalcriptosistemaMcEliece
+3. Eficiencia computacional (conprobabilidadcercanaa1)paragenerarmatrices circu-
+lantes invertibles densas y uno determinístico para generar
+Enestasecciónserealizaunanálisisdelacomplejidad
+matricescirculantesinvertiblessparse.Serealizóunanálisis
+computacional de los algoritmos propuestos. El objetivo y
+delacomplejidadcomputacionaldecadaalgoritmopropuesto
+principalresultadoesdemostrarquelostresalgoritmosposeen
+demostrandoasísueficienciacomputacional.
+complejidadpolinomialyportantosoncomputacionalmente
+Con los resultados obtenidos queda claro la ventaja de
+eficientes.
+losalgoritmospropuestosparagenerarmatricescirculantes
+invertiblesylasmatricesquecomponenlallavedelcripto-
+Teorema22 Lacomplejidadcomputacionaldelalgoritmo1
+sistema McEliece basado en códigos QC-LDPC. Ya no es
+esO(d ).
+v necesariogenerardeformaaleatoriaestasmatricesyverificar
+sicumplenlorequerido,losalgoritmospropuestosbrindan
+Demostración.Seleccionarunelementodeunconjuntoden
+unprocedimientoparaconstruirestasmatricesyademáslos
+elementostieneuncostodeO(1)(constante).Comoeneste
+mismostienencomplejidadpolinomial;ordencuadráticomás
+casoseseleccionand elementos,elcostodelalgoritmo1es
+v concretamente.
+O(d )
+v
+Acknowledgments
+Teorema23 Lacomplejidadcomputacionaldelalgoritmo2
+esO(k2p2).
+0 LosautoresagradecenalprofesorRaúlGramatgesyal
+DrC.CamiloErnestoNápolesporsusvaliosasconsideracio-
+Demostración.Elpasoquedominaelcostoenelalgoritmo
+nessobreladefinicióndematrizsparseutilizada.
+2eselpaso3,porloqueestimandoelcostodedichopasose
+tieneunaestimacióndelcostodelalgoritmoengeneral.
+Referencias
+CadafilabloquedelamatrizSconstadek matricesdeor-
+0
+den p.Unavezseleccionadaaleatoriamenteunapermutación [1] Chen,Lily,LilyChen,StephenJordan,YiKaiLiu,Dustin
+diferentealaidentidaddeltotaldek 0 !−1posiblespermuta- Moody,RenePeralta,RayPerlneryDanielSmith-Tone:
+ciones,aplicarlapermutaciónseríarealizarunacopiadecada Reportonpost-quantumcryptography. USDepartment
+matrizdeorden penelordenestablecidoporlapermutación ofCommerce,NationalInstituteofStandardsandTech-
+enunnuevafilabloquevacía(unnuevoespacioenmemoria nology,2016.
+similaralocupado).
+Comocadamatriztieneorden p,recorrertodossusele- [2] Fiallo,ErnestoD.:AnálisisdelcriptosistemaMcEliece
+mentosparacopiarcadaunodeellosrequierelautilización basadoencódigosQC-LDPC. TesisdeMaestría,2019.
+dedosciclosfor,unodentrodeotro.Loanteriorconllevarea-
+[3] Gallager,Robert:Low-densityparity-checkcodes. IRE
+lizarentonces p2copias.Comoencadafilabloquesetienen
+Transactionsoninformationtheory,8(1):21–28,1962.
+k matrices de orden p, permutar una fila bloque completa
+0
+necesitak 0 p2operacionesdecopiaycomolamatrizStienek 0 [4] Jungnickel, D: FiniteFields: structureand arithmetics,
+filasbloque,lacantidaddeoperacionescopiastotalarealizar Mannheim,BI-Wiss,1993.
+esk2p2
+0
+Conunrazonamientomuysimilaralademostracióndel [5] Lidl,RudolfyHaraldNiederreiter:Introductiontofinite
+teorema23,sepuededemostrarunresultadoanálogoparael fieldsandtheirapplications. Cambridgeuniversitypress,
+algoritmo3. 1994.
+[6] MacWilliams, Florence Jessie y Neil James Alexander
+Teorema24 Lacomplejidadcomputacionaldelalgoritmo3
+Sloane:Thetheoryoferror-correctingcodes. Elsevier,
+esO(n2p2).
+0 1977.
+4. Conclusiones [7] NIST: Post-Quantum Cryptography, Round 2 Submis-
+sions. 2019.
+Enesteartículosepropusounalgoritmoparagenerarma-
+trices circulantes invertibles sobre F de orden primo y se [8] Townsend,RichardyEWeldon:Self-orthogonalquasi-
+2
+mostró como aplicarlo a la generación de llaves del cripto- cycliccodes. IEEETransactionsonInformationTheory,
+sistema McEliece basado en códigos QC-LDPC. De dicha 13(2):183–195,1967.
+aplicaciónseproposuierondosalgoritmos:unoprobabilístico
+CienciasMatemóticas,Vol.33,No.1,Pag.8-12,2019

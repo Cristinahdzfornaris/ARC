@@ -1,0 +1,331 @@
+Sociedad Cubana de Matemática y Computación
+Descripción de la categoría derivada
+de un álgebra hereditaria de tipo de representación
+(cid:976)inita de la forma A equiorientada
+3
+Lic. Laura Decalo Salgado (l.decalo@matcom.uh.cu), Dr. José Fidel Hernández Advíncula ((cid:980)idel@matcom.uh.cu)
+Facultad de Matemática y Computación Universidad de La Habana
+Resumen En lo que sigue A será una K-álgebra básica, hereditaria
+y de dimensión (cid:976)inita.
+En este artículo se muestra como obtener el carcaj de Aus-
+lander-Reiten asociado a la categoría derivada de los comple-
+De(cid:976)inición:
+jos acotados sobre una K-álgebra A hereditaria, básica y de
+Sea A una categoría abeliana (todo mor(cid:976)ismo posee nú-
+dimensión (cid:976)inita. Como resultado se obtuvo un método que
+cleo y conúcleo) y K(A) la categoría de complejos sobre A
+permite representar álgebras mediante grafos, de dicha re-
+cociente la relación de homotopía. Una categoría D(A) se
+presentación y la teoría expuesta, se obtiene el carcaj deseado.
+denomina categoría derivada de A si existe un funtor (ge-
+Abstract neralización del concepto de aplicación para categorías)
+Q: K(A) ⟶ D(A) tal que:
+This paper describes how to obtain the Auslander-Reiten
+quiver associated to the derived category of bounded com-
+(D1) Si f es un casi-isomor(cid:976)ismo entonces Q(f) es un iso-
+plex over A, where A is an hereditary, basic and (cid:976)inite dimen-
+mor(cid:976)ismo.
+sional K-algebra. As a result, a method to represent algebras
+(D2) Cualquier funtor F: K(A) ⟶ D que transforme ca-
+using graphs was obtained. From this representation and
+si-isomor(cid:976)ismos en isomor(cid:976)ismos puede ser facto-
+the explained theory, the desired quiver could be obtained.
+rizado de forma única sobre D(A) es decir, existe
+un único funtor G: D(A) ⟶ D tal que F = GQ.
+1. Nociones Generales
+Sea A una categoría aditiva (el conjunto Mor(X,Y) posee es-
+c
+tructura de grupo abeliano y la composición de mor(cid:976)ismos
+De(cid:976)inición:
+es Z bilineal) con idempotentes que escinden. La condición
+Un álgebra se denomina hereditaria si gld A (cid:3409) 1
+anterior es equivalente a que para cada objeto X indescom-
+(dimensión global de A).
+ponible en A el anillo de los endomor(cid:976)ismos End(X) sea lo-
+Donde gld A = max {proy.dim M, M módulo}
+— 26 —
+Revista Ciencias Matemáticas
+cal (en un anillo local los únicos idempotentes centrales Equivalentemente, para cada X ∈ modA, existe una dua-
+son 0 y 1). lidad de espacios vectoriales
+Hom(P,X)xHom(X,vP) ⟶ K
+Nota: Un idempotente e = e2 ∈HomA(X,X) se dice que escin- donde a (ξ, η) se le asigna (ξ | η) tal que (ξμ|η) = (ξ|μη) y
+de si existen mor(cid:976)ismos μ: Y ⟶ X, ρ: X ⟶ Y tal que μορ = e. (πξ|η) = (ξ|ην(π)) para todos los mor(cid:976)ismos μ en modA y
+todo π en P.
+A
+Si se cumplen las condiciones anteriores, A se denomina ca-
+tegoría de Krull-Schmidt y se cumple un resultado análogo Teorema:
+al teorema de Krull-Schmidt para módulos, es decir, todo Sea A una K-álgebra de dimensión global (cid:976)inita. Entonces la
+objeto posee una única descomposición en suma directa de categoría derivada de los complejos acotados Db(A) posee
+objetos indescomponibles, salvo isomor(cid:976)ismo. triángulos de Auslander-Reiten.
+A continuación se introducen los llamados triángulos
+de Auslander-Reiten y el funtor de Nakayama, para así de- Nota: La demostración de este teorema puede ser consul-
+mostrar la equivalencia entre los A-módulos izquierdos y tada en [1].
+A-módulos derechos, de donde se deduce que la categoría
+derivada de los complejos acotados Db(A) posee triángulos
+2. Carcaj de Auslander-Reiten
+de Auslander-Reiten, resultado de gran importancia.
+de un Álgebra
+De(cid:976)inición:
+Un triángulo X u Y v Z w TX es llamado trián- Sea C la subcategoría plena de modA, el objetivo esencial es
+gulo de Auslander-Reiten si se cumplen: representar C en forma de carcaj. Resulta natural pensar que
+los puntos representan los objetos y las (cid:976)lechas los mor(cid:976)is-
+(AR1) X, Z son indescomponibles. mos. Cada objeto en C se descompone como la suma directa
+(AR2) w ! 0. de indescomponibles y los mor(cid:976)ismos que admiten represen-
+(AR3) Si f: W ⟶ Z no es retracción, entonces existe taciones no triviales son los irreducibles, esto sin duda va a
+f': W ⟶ Z tal que vf' = f condicionar la de(cid:976)inición del carcaj deseado. A continuación
+se muestra de forma no exhaustiva cómo encontrarlo, pero
+Se dice que una categoría triangulada y de Krull-Schmidt para una mejor comprensión puede profundizar en [2].
+C posee triángulos de Auslander-Reiten si para todo obje-
+to indescomponible Z ∈ C existe un triángulo de A.R. de la De(cid:976)inición: Sea A una K-álgebra básica y de dimensión (cid:976)i-
+forma: nita, C la subcategoría plena de modA. El carcaj Γ(C) se de-
+X u Y v Z w TX (cid:976)ine como:
+Sea A un álgebra de dimensión (cid:976)inita con 1 sobre el cuerpo
+K. Se puede comprobar que P y I son equivalentes median- • Los vértices en Γ(C) son las clases de isomor(cid:976)ismo [X] de
+A A
+te el funtor de Nakayama v = DHom (—, A), donde D denota los objetos indescomponibles X en C.
+A A
+la dualidad en modA respecto al cuerpo base K. • Sean [M] y [N] vértices de Γ(C). Las (cid:976)lechas [M] ⟶ [N] de
+Una cuasi-inversa de v está dada por v— = Hom (D(A ),—). Γ (C) están en correspondencia biyectiva con los vecto-
+A A
+Existe una transformación natural inversible res de la base del K-espacio vectorial Irr(M, N).
+α : DHom(P,—) →Hom(—,vP)
+P
+En particular, si C = modA, el carcaj Γ(modA) se denomina
+carcaj de Auslander-Reiten asociado a A.
+— 27 —
+Sociedad Cubana de Matemática y Computación
+Teorema: Proposición:
+Si Z ∈ modA es un módulo indescomponible no proyectivo, Sea X* objeto indescomponible de Db(A), entonces X* es iso-
+entonces existe una sucesión de Auslander-Reiten de la forma, morfo al complejo concentrado, cuyo objeto concentrado es
+0 ⟶ X ⟶ Y ⟶ Z ⟶ 0
+indescomponible.
+Análogamente, si X ∈ modA es un módulo indescomponi-
+ble no inyectivo, entonces existe una sucesión de Auslan-
+Demostración:
+der-Reiten de la forma,
+Como Db(A) es equivalente a Kb(A), basta probar que todo
+0 ⟶ X ⟶ Y ⟶ Z ⟶ 0
+indescomponible en Kb(A) es isomorfo a algún
+Y estas sucesiones son únicas salvo isomor(cid:976)ismo. X u Y v Z w TX
+siendo dj epimor(cid:976)ismo.
+3. Carcaj de Auslander-Reiten Sea I* un indescomponible de Kb(I). Trasladando, en caso
+A
+de la Categoría Derivada que sea necesario, se puede asumir que I* tiene la forma:
+f 0 I0 d0 I1 1 12 f
+A continuación se de(cid:976)ine el carcaj → Γ = Γ → (𝒜) de una catego- donde I0 ! 0. Sea I0 g X h I1 una factorización de d0
+ría de Krull-Schmidt 𝒜: con g epimor(cid:976)ismo y h monomor(cid:976)ismo. Como A es heredita-
+Sean X, Y objetos en 𝒜. Entonces rad2(X,Y) está dado por ria se tiene que X es inyectivo y h es una sección. Por tanto,
+el conjunto de los mor(cid:976)ismos de la forma gf con f ∈ rad(X,M), existe un isomor(cid:976)ismo en modA,
+X +C (h,u) I1
+g ∈ rad(M,Y) para algún objeto M en 𝒜 rad(N,M) denota el
+subespacio de Hom𝒜(N,M) de los mor(cid:976)ismos no inversi- Como d1h = 0 se tiene un isomor(cid:976)ismo de complejos:
+bles de N a M). Se denota por Irr(X,Y) = rad(X,Y)/rad2(X,Y) el
+End(X) — End(Y)-subbimódulo de Hom(X,Y)
+y sea d = dim Irr(X,Y).
+XY K
+Si X y Y son indescomponibles, entonces f: X ⟶ Y es irre-
+Como I* es indescomponible, uno de los siguientes comple-
+ducible si y sólo si f ∈ rad(X,Y)/rad2(X,Y).
+g
+jos f"0"I0"X"0"f o f"0"C"I2"I3"fes
+Por tanto existe una transformación irreducible de X
+cero en Kb(I). En el primer caso I* se reduce a un complejo
+en Y si y sólo si Irr(X,Y)!0, así el bimódulo Irr(X,Y) es una A
+con longitud menor y se reitera el razonamiento. En el se-
+medida para multiplicidad de las transformaciones irre- g
+gundo caso, I* es isomorfo a f"0"I0"X"0"f.
+ducibles, por ello adquiere el nombre de bimódulo de las
+transformaciones irreducibles.
+→ → Corolario:
+Los vértices del carcaj Γ = Γ (𝒜) serán las clases de iso-
+Sea A una K-álgebra hereditaria y
+mor(cid:976)ismos [X] de los objetos indescomponibles X de 𝒜. El
+X* f0* X*"g"X* fr*-1 X*
+0 1 r-1 0
+carcaj tendrá d (cid:976)lechas de [X] a [Y].
+XY un ciclo en Db(A). Entonces existe un n ∈ Z tal que cada X * es
+i
+isomorfo a TnX para algún X ∈ modA.
+i i
+4. Representación de la Categoría A continuación se muestra cómo hallar los triángulos de
+Derivada en el caso hereditario Auslander-Reiten para una K-álgebra hereditaria de tipo de
+representación (cid:976)inita A dada por un carcaj Q = (Q ,Q).
+0 1
+El objetivo de esta sección es conocer la estructura del car- Este método diferencia dos casos, uno cuando el A-mó-
+caj de A.R. de la categoría derivada de los complejos acota- dulo indescomponible es proyectivo y otro cuando no lo es.
+dos Γ(Db(A)) para una K-álgebra A hereditaria, básica y de Sea Z* = TiZ para algún i ∈ Z y Z ∈ modA no proyecti-
+dimensión (cid:976)inita. Los resultados que se muestran a conti- vo. Como Z es no proyectivo existe una sucesión de Aus-
+u v
+nuación pueden encontrarse en [1]. lander-Reiten 0"X"Y"Z"0 que termina en Z. Sea
+— 28 —
+Revista Ciencias Matemáticas
+el elemento que correspon- Proposición:
+de. De esta forma se obtiene el triángulo El carcaj Γ(Db(A)) coincide con .
+TiX Tiu TiY Tiv TiZ Tiw Ti+1X
+Dicho triángulo es de Auslander-Reiten.
+5. Carcaj de Db(A)
+Si ahora Z* = TiP donde P es el proyectivo indescompo-
+a a
+nible asociado al vértice a ∈ Q , se asume, sin pérdida de
+0
+Sea el álgebra dada por el siguiente carcaj 1 ⟶ 2 ⟶ 3 (di-
+generalidad i = 0. Sea E el A-módulo dado por la representa-
+cha álgebra se conoce como A equiorientada), a continua-
+ción (contravariante) siguiente: 3
+ción se muestra cómo construir Γ(Db(A)).
+3
+Nótese que el carcaj de Auslander-Reiten asociado a A
+• Si x ∈ Q , entonces E(x) es el espacio generado por los ca- 3
+0
+minos de la forma p: x ⟶ ... ⟶ a o p: x⟶ ... ⟶ a. tiene la siguiente forma,
+P
+1
+(E(x) = 0 si x no es comparable con a)
+• Si a: X ⟶ Y está en Q y a > y, entonces E(a): E(y) ⟶ E(x)
+1 P I
+2 2
+hace corresponder a p el camino pa dado por el producto
+de los caminos.
+P S I
+• Si a: X ⟶ Y está en Q y a ≤ y, entonces E(a) hace corres- 3 2 1
+1
+Como A es hereditaria, todo objeto indescomponible es
+ponder a q el camino q' o el camino 0, en dependencia si 3
+isomorfo a un complejo concentrado. Para los proyectivos
+q tiene la forma aq' o no.
+indescomponibles se tienen los complejos siguientes
+Por w se denota la composición P a i E p I a donde I a de- ... ⟶ P i ⟶ ... i = 1,2,3
+Pero si el módulo es no proyectivo, para encontrar el com-
+nota el inyectivo indescomponible asociado al vértice a. Sean
+I I plejo asociado se debe hallar su resolución proyectiva y
+h!Ext1a a ,Pk=Hom a a ,TPk
+A socI a Db(A) socI a
+a a aplicar el teorema de Álgebra Homológica que plantea:
+las extensiones asociadas a las sucesiones exactas
+I
+0"P i E p a "0
+a socI
+a
+Dado un módulo M y su resolución proyectiva
+y ... ⟶ 0 ⟶ P ⟶ ... ⟶ P ⟶ P ⟶ M ⟶ 0
+0"radP i E p I "0 s 1 0
+a a
+entonces el complejo
+donde i denota la inclusión y p la proyección.
+... ⟶ 0 ⟶ P ⟶ ... ⟶ P ⟶ P ⟶ 0
+LT-1I e - T T - - 1 1 p hl o T-1 I a +radP ^T-1n,ih P "I es homotópico a la suc s esión 1 0
+a socI a a a
+a
+... ⟶ 0 ⟶ ... ⟶ 0 ⟶ M ⟶ 0
+es un triángulo de Auslander-Reiten.
+A continuación se muestra cómo conocer la estructura
+El procedimiento para construir la resolución proyectiva
+de Γ(Db(A)) para una K-álgebra hereditaria de tipo de repre-
+de un A-módulo M, donde A es hereditaria es bastante sen-
+sentación (cid:976)inita A dada por el carcaj Q = (Q , Q ).
+0 1 cillo, primero se debe hallar la cubierta proyectiva de M,
+Sea el carcaj de Auslander-Reiten de A. Se denota por
+supongamos que es P ,
+Γ una copia del carcaj Γ(modA) para cada i ∈ Z y por el (cid:2030)
+i P { M 0
+carcaj obtenido de la unión disjunta ∐ (cid:1985) de manera tal {
+i∈Z i
+Luego se busca el núcleo, si no es proyectivo, se halla la cu-
+que por cada (cid:976)lecha α: a ⟶ b en Q se añade una (cid:976)lecha des-
+1
+bierta proyectiva del núcleo, y así hasta que sea proyectivo. En
+de el módulo inyectivo I en Γ al proyectivo P en Γ + 1.
+a i b i
+general, para álgebras hereditarias se obtiene una sucesión
+En el caso que A no sea de tipo de representación (cid:976)inita,
+exacta corta, además, son útiles los siguientes resultados:
+aparecen además componentes dadas por las componentes
+regulares (tubos) de dicha álgebra.
+— 29 —
+Sociedad Cubana de Matemática y Computación
+• Para un álgebra hereditaria, el núcleo de la cubierta pro- En el caso de P ,
+2
+yectiva es proyectivo. 0"P(011)"E(111)" I 2 =I(100)
+2 socI 1
+2
+• Para un módulo simple S, se cumple que su cubierta pro-
+i
+Y para P ,
+yectiva es P. 1
+i
+• La cubierta proyectiva de un indescomponible es indes- 0 ⟶ radP = P (011) ⟶ E (111) ⟶ I (100) ⟶ 0
+1 2 1
+componible. Aplicando el lema, se obtienen los triángulos,
+T-I "T-I +radP "P "I
+3 2 3 3 3
+Para S : T-I "T-I +radP "P "I
+2 2 1 2 2 2
+I
+La cubierta proyectiva de S es P y completando a una su- T-I "T- 1 +radP "P "I
+2 2 1 socI 1 1 1
+1
+cesión exacta se tiene,
+0 P(001) P(011) { S "0 donde los trasladados se obtienen a partir de los complejos.
+3 2 2
+Por tanto, el complejo Por último se desea conectar los triángulos para cons-
+... ⟶ 0 ⟶ P ⟶ P ⟶ 0 ⟶ ... truir el carcaj de Auslander-Reiten. Como existen (cid:976)lechas
+3 2
+es isomorfo a de 1 a 2 y de 2 a 3, se obtienen (cid:976)lechas en el carcaj de I en P
+1 2
+... ⟶ 0 ⟶ S ⟶ 0 ⟶ ... y de I en P , por tanto el carcaj de Auslander-Reiten para la
+2 2 3
+Para los restantes módulos no proyectivos se tienen las si- categoría derivada Db(A ) queda de la forma siguiente,
+3
+guientes resoluciones proyectivas, P P S I P
+1 3 2 1 1
+[0] [1] [1] [1] [2]
+0 ⟶ P (011) ⟶ P (111) ⟶ I = S (100) P I P I P I
+2 1 1 1 ... ...
+2 2 2 2 2 2
+y [0] [0] [1] [1] [2] [2]
+P S I P P S I
+0 ⟶ P (001) ⟶ P (111) ⟶ I (110) ⟶ 0 3 2 1 1 3 2 1
+3 1 2 [0] [0] [0] [1] [2] [2] [2]
+de donde se obtienen los complejos
+Este mismo procedimiento se tiene para cualquier A , con
+... ⟶ 0 ⟶ P ⟶ P ⟶ 0 ⟶ ... n
+2 1 cualquier orientación. Más aún, para cualquier álgebra he-
+Como son no proyectivos, el triángulo de Auslander-Reiten
+reditaria de tipo de representación (cid:976)inita.
+se obtiene de la sucesión de
+Auslander-Reiten asociada, o sea, se tienen los siguien-
+tes triángulos Referencias bibliográ(cid:976)icas
+P "P "S w1!0 TP
+3 2 2 3
+P "P "I w2!0 TP
+2 1 1 2
+P "P "I w3!0 TP (cid:529)1(cid:530) D.HAPPEL. Triangulated Categories in the Representation
+3 1 2 3
+Theory of Finite Dimensional Algebras. Lecture Note Series
+A continuación se expone como son los triángulos de
+119, London Mathematical Society.
+Auslander-Reiten para los proyectivos.
+(cid:529)2(cid:530) M. AUSLANDER, I. REITEN, S. SMALO. Representation Theory
+Primero hay que encontrar para cada P, el correspon-
+i
+of Artin Algebras. Cambridge studies in advanced mathema-
+diente E (caminos que salen o llegan a i) ya que si existe E,
+tics, 36, 1995, Cambridge University Press.
+entonces también existirá el triángulo de Auslander-Reiten
+(cid:529)3(cid:530) S. GELFAND, Y. MANIN. Methods of Homological Algebra.
+asociado al proyectivo, como muestra el lema. Recordemos
+Springer
+que E viene determinado también por las sucesiones exactas,
+I
+0"P "E" a "0
+a socI
+a
+0"radP "E"I "0
+a a
+Para P se tiene,
+3
+I
+0"P(001)"E(111)" 3 =I (110)"0
+3 socI 2
+3
+— 30 —

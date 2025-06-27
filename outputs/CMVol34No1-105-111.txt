@@ -1,0 +1,468 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.105-111
+Recibido06-2020,Aceptado07-2020
+COVID-19 en Cuba: Estimación del número de
+camas diarias que se requieren durante un período
+de la epidemia
+COVID-19 en Cuba: Estimating the number of beds
+needed per day during a period of the COVID-19
+outbreak
+Sira M. Allende Alonso1*, Gemayqzel Bouza Allende1, William L. Sariol-Nuñez1
+Resumen En este trabajo se presenta un procedimiento para estimar la cantidad de camas que serán
+necesarias durante un período de la epidemia de COVID-19 en Cuba. Para ello se precisan datos como la
+proporcióndepersonasqueresultanpositivas,entreloshospitalizadosporsospechaylaproporción,entrelos
+confirmados,deaquellosqueyaestabanaisladosenhospitalescomosospechosos.Tomando,paracadadía
+delperíodo,lospronósticosdelacantidaddeinfectadosenactivoydeelloscuántosinfectadossonnuevos,
+seobtieneelnúmerodecamasnecesariasparasospechososyparainfectados.Dentrodeestasúltimasse
+determinarácuántascorrespondenacamasensalasdecuidadoycuántasenunidadesdeterapiaintensivaa
+partirdelestudiodelaevolucióndelospacientesenunperíododelaepidemiaprevioalqueseconsidera.Se
+muestraunejemploenqueseilustranestoscálculos.
+Abstract Thepresentworkproposesanestimationofthenumberofbedsneededduringacertainperiodof
+the COVID-19 outbreak in Cuba. As input data the approach uses the number of active infected people per
+day,thenumberofnewinfectionsperday,therateofpatientspositivetotheCOVID-19overthesuspicious
+hospitalized cases and the rate of infected people hospitalized as suspects over the set of detected infected
+people. Then, for each day of the period, the amount of beds needed for suspicious hospitalized cases and
+forinfectedpersonsiscomputed. Usingthemedicalevolutionofthediseaseinthepatientsbeforethestudied
+period,weobtainhowmanybedsareneddedattherapyunitsandhowmanyfornon-specialcarepatients. An
+illustrativeexampleispresented.
+PalabrasClave
+estimación,logística,númerodecamas
+Keywords
+estimation,logistics,numberofbeds
+1DepartamentodeMatemáticaAplicada,UniversidaddeLaHabana,Cuba,sira,gema,wiliam.sariol@matcom.uh.cu.
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción según sea su estado (de cuidado, grave o crítico) en sala o
+unidadesdeterapiaespecializada.Cadaunodeestostiposde
+serviciostienediferentesrequerimientosdeequipamientoy
+Losmodelosdepronósticoelaboradospararepresentar
+personalmédico,segúnestableceelreglamentodelaOrgani-
+latransmisióndelaepidemiaCOVID-19prevénelnúmero
+zaciónMundialdelaSalud.Porello,esconvenientecontar
+deinfectados.Paragarantizarlaatencióndelospacienteses
+conunestimadodelnúmerodecamasqueserequierendife-
+importantedisponerpreviamentedelosinsumosypersonal
+renciandoellugarenqueseencuentreningresados,asaber
+necesarios.Elsistemadesaludcubanoestablecelahospitaliza-
+sospechosos(serefierealaislamientohospitalariodepersonas
+cióndetodapersonaconsíntomadeCOVID-19considerada,
+quepresentansíntomas),saladecuidadooterapia.
+por ello, sospechosa de haber sido contagiada por el virus.
+Transcurridostresocincodíasdespuésdeliniciodelossín- Los modelos dinámicos de pronóstico, ver [1], [2], [3],
+tomas,se aplicaalsospechoso lapruebadiagnóstico. Sise ofrecen,paracadadía,elnúmeroestimadodepersonasinfec-
+confirmaelcontagioporelvirus,elpacienteeshospitalizado tadas.Setiene,enparticular,losdíasenqueseesperaqueun
+106COVID-19enCuba: Estimacióndelnúmerodecamasdiariasqueserequierenduranteunperíododelaepidemia
+mayornúmerodepersonasrequieradeserviciosmédicos(pi- confirmadosenN díasdeepidemiaanterioresalperíodode
+codelaepidemia).Considerandolosvaloresquebrindanlos interés.Deestospacientesesnecesarioconocerlafechade
+modelosdepronóstico,esimportantedeterminarlacantidad ingreso,lafechaenqueseconfirmacomocontagiadoysu
+decamasnecesariasparalahospitalizacióndiferenciadaen estado en cada día de su estadía en el hospital, es decir, su
+salasdesospechosos,decuidadoydeterapiaenelperíodo evolución.Losposiblesestadosenundíat son:
+críticodelaepidemia.Deestaformasepodránorganizar,con
+Sano:personacuyafechadeprimerossíntomasoingre-
+anticipación,losrecursosnecesarios.
+soesposterioraldíat.
+Enlaliteraturasereportantrabajossobrelaaplicaciónde
+modelosmatemáticosparadeterminarnecesidadeshospita- Aislado:personaaisladacomosospechosoenunhospi-
+larias,ver[4],[5],[6].Enlaprimerareferenciasemuestran tal.
+algunosdelosproblemaslogísticosque,comoladistribución
+derecursosmédicosylaubicacióndeservicios,sepresentan Cuidado:personayaconfirmadaconevoluciónvalorada
+anteelbrotedeunaepidemia.ProfesoresdelaUniversidadde comodecuidado.
+Navarrahandesarrolladounsimuladorparalatomaóptimade
+EnTerapia:personacuyapruebadiopositivayseen-
+decisionesenelsistemahospitalarioantelaCOVID-19,como
+cuentraensalasdeterapia.
+sereportaen[5].En[6]seproponeunmodeloqueusacomo
+datosdeentradaeltiempoenqueseesperasedupliquelacan- Alta:personaconaltamédica.
+tidaddeingresos,lostiemposmediosdeestancia,lacantidad
+Fallecido.
+decasoshastaeldíadehoy,laproporcióndecasosquese
+esperanecesitencuidadosespeciales,etcétera.Laherramien-
+Sediferencialascamassegúncorrespondaapersonasos-
+tasepuedeencontrarensurfcovid19.shinyapps.io/pop_prod.
+pechosa,pacientedecuidadooenterapia.Pararepresentar
+Laevaluacióndetalesparámetrospuederesultardifícildado
+lasalidadelsistemaseincluyencomosalasartificialesaltay
+lorecientedeestaenfermedad,lasposiblesdiferenciasensu
+fallecidos.Lavariableaestudiares:
+comportamientodeunpaísaotroylaspeculiaridadesdelos
+protocolosdeatencióneintervenciónencadapaís. z (t):númerodepacientesensalakeldíat,
+k
+Elobjetivodeestetrabajoesbrindarunaestimacióndel
+númerodecamasqueseocuparíanenlosdistintostiposde k=2,.,5,t=N+1,...,N+M.
+salasdeacuerdoalprotocolodeactuaciónquesesigueenCu-
+1.2 Estimacióndelnúmerodepersonasingresadas
+ba.Seasumesedisponeelestadodiariodeunciertonúmero
+comosospechosaseldíat
+depacientesduranteundeterminadoperíodoprevioalaetapa
+Se asume que el test se aplica a la persona sospechosa
+quesedeseaanalizar.Losmodelosdepronóstico,brindarán
+y se tiene el resultado en el día ∆∈{5,6,7} después de su
+lacantidaddenuevosenfermosquesedetectaránencadadía
+ingreso. Si resulta positivo, la persona pasa a ser paciente
+dedichaetapa.Laestimacióndelascamasnecesariasensalas
+yquedadisponiblesucamaenlaclaseaisladosospechoso,
+desospechosos,decuidadoyterapiarequieresolodeestos
+pasaalasaladeconfirmadosygeneraunconjuntodenuevos
+dosdatosydelacantidaddedíasaestimar.
+sospechosos:loscontactosquedeclara,deloscualesunaparte
+Enlasecciónsiguienteseintroducenlasnotacionesnece-
+queda hospitalizada de acuerdo a los criterios establecidos.
+sariasylamodelaciónmatemáticadelproblema.Ensendas
+Si resulta negativo, asumimos que la persona queda en su
+subseccionessediscutenlaestimacióndelnúmerodecamas
+domiciliobajovigilancia.
+requeridasparalahospitalizacióndesospechososydeconfir-
+Para estimar el número de pacientes ingresados como
+mados,estasúltimas,segúneltipodeservicioquerequieran.
+sospechosos en el día t, t >N, será necesario un estudio
+Luegoseilustralaaplicacióndelapropuestaenunejemplo.
+estadísticodelossiguientesdatosenlosdías1,...,N:
+Cabedestacarquelosresultadosdependenfuertementede
+laprecisióndelospronósticosutilizados.Seconsideranlos
+Eltiempoenqueserealizaacadapacienteeltestpara
+modelosdepredicciónpropuestosen[1],[2]paraestimarla
+confirmarloonocomocasopositivo.
+cantidaddecamasnecesariasparasospechosos.Elcálculodel
+númerodecamasdecadatipoparapacientesconfirmados,se Lacantidaddepacientesingresadoscomosospechosos
+ilustramediantelaconstruccióndelatrayectoriahospitalaria queresultópositivo.
+de50pacientesficticios.
+Elnúmerodecontactosdecadapacienteconfirmado
+queseaislan.
+1. Modelo matemático
+Elnúmerodeingresosencondicióndesospechosos.
+1.1 Losdatos:
+Se asume un modelo de pronóstico con la información Contalesdatossepodríaestimarladinámicadelosingresos
+sobrelosinfectadosactivosquesepronosticanencadadíatde enlassalasdesospechosos.Nótesequesereportadiariamente
+epidemia(I(t))ylosnuevosinfectadosquesedetectancada elnúmerodecasosestudiados.Estereporteincluyelasprue-
+día (IN(t)). Se requiere la información sobre los pacientes basrealizadasapersonasenriesgoquenoocupancamasen
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.105-111
+COVID-19enCuba: Estimacióndelnúmerodecamasdiariasqueserequierenduranteunperíododelaepidemia107
+centroshospitalarios(personasenhogaresdeancianosobajo 1.3 Estimacióndelnúmerodecamasnecesariaspa-
+vigilanciamédicaensudomicilio,porejemplo).Apartirde ra pacientes confirmados, según el estado de
+esteanálisis,seproponerealizarlaestimacióndelnúmerode losmismos.
+camasusandolassiguientesinformaciones: Paraestimarlacantidaddecamasnecesariasensalasde
+cuidadoydeterapia,sehadetenerencuentacuántosnuevos
+∆:tiempoestimadoenqueserealizaeltestparaconfir-
+ingresos,trasladosyaltasseesperanpordía.Paracadadía,
+maronouncasopositivo.
+el número de infectados activos es un resultado directo de
+los modelos de pronóstico. Teniendo en cuenta los estados
+p:porcientodeconfirmadosqueestabanhospitalizados
+relacionadosconpersonasyainfectadas(cuidado,terapia,alta
+comosospechososconrespectoaltotaldeconfirmados.
+yfallecido)ylaevolucióndelaenfermedad,sonposibleslas
+δ:porcientodeconfirmadosqueestabanhospitalizados siguientestransiciones.
+comosospechososconrespectoaltotaldehospitaliza-
+dosenlasaladesospechosos. Estardecuidadoyserdadosdealta.
+IN(t):estimacióndelacantidaddenuevosinfectados Estardecuidadoypasaraterapia.
+pordía.
+Permanecerenelestadodecuidado.
+Acontinuaciónseilustraunaformadetomarlosparáme-
+trostomandocomoreferencialosprimeroscuarentadíasde Estarenterapiayfallecer.
+evolucióndelaepidemiaenCuba.
+Estarenterapiaypasaracuidado.
+En cuanto al parámetro ∆, los dos escenarios extremos
+son:
+Permanecerenelestadodeterapia.
+Optimista laaplicacióndeltesteneltercerdíadehospitalización
+Seasumequeunapersonaquefallecenecesitópreviamen-
+ysuprocesamientoen24horas.
+tedetratamientosespeciales.Luego,esdeesperarqueprecise
+Pesimista laaplicacióndeltestenelquintodíadehospitalización pasarunashorasenunasaladeterapia.Deahíqueeldíade
+ysuprocesamientoen72horas. sumuerteseconsideraseencuentraubicadoenesteservicio.
+Asímismo,unpacientedeterapia,luegodepasarlagravedad,
+Elprimerescenario,adiferenciadelsegundoofreceunmenor
+sesuponevuelvealasala,conlocualnoserecibiríaelalta
+tiempodehospitalizaciónyportantoserequeriráunmenor
+desdeterapia.
+númerodecamas.
+Eltiempoqueunpacientellevaenunestadoktieneuna
+Sehainformadoquealrededordeun4%delaspruebas influenciaensuposiblecambioalestadok(cid:48).Esporestoque,
+sonpositivas.Estenúmerodebevariarsisetomaelporciento
+encadadíat delaepidemia,esimportantesabercuántospa-
+depruebaspositivasentrepersonashospitalizadascomosos-
+cientesllevan1,2,...Ddíasconsecutivosenlasalaenquese
+pechosasynoenlapoblaciónengeneral.Sinembargo,brinda encuentraypronosticarcuántosdeelloscambianalestadok(cid:48).
+unposiblevalordeδ.Teniendoencuentaquealrededordeun
+Paraellounaciertaproporcióndeltotaldepersonasquellevan
+45%sonpacientesasintomáticosenelmomentodelaprueba, d díasenelestadokcambiaráalestadok(cid:48).Estaproporción
+esdeesperarquenoestaríanensumayoríahospitalizados.
+seinterpretacomolaprobabilidaddequeunpacientecambie
+Puedetomarse55%comounaaproximaciónde p suestadodek ak(cid:48) luegoded días.Parapoderestimareste
+Conesosdatosehipótesisoperativas,resultaclaroquede
+valorsehacenecesariorecopilarlainformacióndecómoseha
+laspersonasqueingresaneldíatcomosospechosos,denotado
+comportadolaevolucióndelaenfermedadenunconjuntode
+comoP(t),unaδ parteresultaconfirmado.Comoel p%de
+pacientesenlosdíaspreviosalperíodoquesequiereanalizar.
+IN(t+∆)provienedeesasalaresultaque
+Conesteobjetivo,primerosere-organizólainformación
+recibidaconelformatoquesemuestraenlaTabla1.Acada
+P(t)δ =IN(t+∆)p.
+pacientelecorrespondeunafila.Sucódigopuedeseruniden-
+tificadorencriptado.FIS,FIyFCcorrespondenalafechade
+Teniendoencuentalanecesidaddepermanecerenlasalade
+iniciodesíntomas,deingresoydeconfirmaciónrespectiva-
+sospechosos∆días,laspersonasqueingresanhoyhayque
+mente.ElcampoEvolucióndíat correspondealestadodel
+tenerlasencuentalosdíast+σ,σ =0,...,∆−1.Deahíque
+pacienteeneldíat delaepidemia.Encadadíasecolocará
+∆−1 unoysolounodelossiguientesestados:
+z (t)= ∑ P(t−σ).
+2
+σ=0 Sano: en los días que sean anteriores a su fecha de
+ingresoencuidado.
+Luegolacantidaddecamasocupadasquesepronosticaes:
+Decuidado.
+p ∆
+z (t)= ∑ IN(t+σ).
+2 δ EnTerapia.
+σ=1
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.105-111
+108COVID-19enCuba: Estimacióndelnúmerodecamasdiariasqueserequierenduranteunperíododelaepidemia
+Tabla1.Datos
+Código FIS FI FC Evolución Evolución ... Evolución FS
+día1 día2 díaN
+Paciente1
+Paciente2
+.
+.
+.
+Alta El número total de camas necesarias en el día t de la
+epidemiaes
+Fallecido. NC(t)=∑z (t).
+k
+k
+ElcampoFScorrespondealafechadesalidadelhospitalya
+Loscálculosasociadosaesteprocedimientosedesarrollaron
+seaporaltaoporfallecimiento.
+enunatablaEXCEL,porserunambientefamiliarparapoten-
+Sedefine,parad≤N:
+cialesusuarios.Parainicializarlafórmularecurrente(1),es
+x (t):númerodepersonasqueeldíat delaepidemiallevan
+d,k necesariocalcularlosvaloresx
+d,k
+(40)yπ d,k,k(cid:48).Separtedela
+d díasseguidosingresadosenestadok.
+informaciónrecopiladaenlaTabla1.Estafueelresultadode
+Para ilustrar su definción, sea un paciente que entra a sa-
+depurar,completaryreorganizarlosdatosbrindadossobrela
+la de cuidado el día t = 4 de la epidemia, permanece en
+evoluciónhospitalariade1125pacientesdurantelosprimeros
+ella por dos días, pasa por una estadía de tres días en te- 40díasdelaepidemia1.Nótesequelosvaloresx (t)yel
+d,k
+rapiayfinalmentesetrasladanuevamenteasala.Tributaalas
+numeradoryeldenominadordeπ d,k,k(cid:48) secalculanrecorriendo
+variablesx (4),x (5),x (6),x (7),
+1,cuidado 2,cuidado 1,terapia 2,terapia ycontabilizandolosdatosnecesariosenlaTabla1.
+x (8),x (9).
+1,terapia 1,cuidado Eldecisordebeintroducirlossiguientesdatos:
+Lasprobabilidadesdetransiciónsedenotancomo:
+π d,k,k(cid:48):proporcióndepersonasque,luegoded−1díassegui-
+D:lacantidaddediasapartirdeldía41delaepidemia
+dosenestadok,aldíasiguientepasanalestadok(cid:48),respectoal enquesequierepronosticarlacantidaddecamas.
+númerodepersonasqueporalmenosd−1díasconsecutivos IN(41),...IN(41+D):losvaloresdenuevosinfecta-
+estánenelestadok.
+dosqueseesperahayaencadaunodeesosdías.
+En las personas que, luego de d−1 días seguidos en
+(cid:0)
+estadocuidadoeneldíad recibenalta,seincluyenatodos Partiendode x 1,cuidado (40),x 2,cuidado (40),...x D,cuidado (40),
+lospacientesenestasituaciónindependientementedeenque x 1,terapia (40),x 2,terapia (40),...x D,terapia (40)),usandolarela-
+díat de la epidemia esto haya sucedido y si los d−1 días ciónderecurrencia(1)ylacantidadpronosticadadenuevos
+(cid:0)
+decuidadoocurrieronluegodequeelindividuoencuestión contagiosIN(41),sehalla x 1,cuidado (41),x 2,cuidado (41),...,
+(cid:1)
+hayapasadoporotrosservicios.Estacantidadcorrespondeal x D,cuidado (41),x 1,terapia (41),x 2,terapia (41),...x D,terapia (41) y
+numeradordelaproporción.Eldenominadoreslacantidad así,sucesivamente,sehallaelrestodelosvalores.
+depacientesquehanpermanecidoalmenosd−1díasenel Comosalidasetendráunatablaque,paracadadía,t =
+estadodecuidado.Enestehechonoinfluyeelmomentode
+41,...,41+D,muestralacantidaddecamasnecesariasen
+inicio del período ni los cambios de estado que pudo tener salas de cuidado y en unidades de terapia. Se da la opción
+(cid:0)
+conanterioridad. deaccederaunatablaquecontieneelvector x 1,cuidado (t),
+Eltotaldecamasnecesariasparaelestadokeneldíat de x 2,cuidado (t),...x D,cuidado (t), x 1,terapia (t), x 2,terapia (t),...,
+laepidemiaes: x D,terapia (t)),paracadaunodelosD díasapronosticar.
+z (t)=∑x (t), Dadoquelascantidadessubsiguientesnotienenqueser
+k d,k
+enteras,enlarespuestaestasseredondeanporexceso,para
+d
+evitarque,porunasubestimacióndelacantidaddecasos,no
+donde:
+hayarecursosplanificados.
+x d,k (t) = x d−1,k (t−1)−∑ k(cid:48)π d,k,k(cid:48) x d−1,k (t−1),
+d>1. 2. Ejemplos ilustrativos
+(1)
+Enestapartedeltrabajoseilustracómoserealizanlos
+x 1k (t) = IN(t)π 0,sano,k +∑ k(cid:48)π d,k(cid:48),k x d−1,k(cid:48) (t−1), cálculos.Paraestimarlacantidaddesospechososeinfectados
+k=cuidado,terapia.
+ingresados se utilizan las estimaciones que, de la cantidad
+de los infectados ingresados y de los nuevos confirmados,
+Acá π representa la proporción de nuevos infectados
+0,sano,k
+ofrecencuatromodelosdepronóstico.Estosmodelosson
+queingresanenelestadok.Dadoquetodossehospitalizan
+π
+0,sano,cuidado
++π
+0,sano,terapia
+=1. 1Eldía40delaepidemiaenCubacorrespondeal19deabrilde2020
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.105-111
+COVID-19enCuba: Estimacióndelnúmerodecamasdiariasqueserequierenduranteunperíododelaepidemia109
+QLG:ajustedelerrormínimocuadráticodeaproximar
+lacantidaddeinfectadosactivosdurantelosprimeros
+24díasdelaepidemia,porlacurvaresultantedeadi-
+cionarelefectodelostratamientospropuestopor[2]
+al modelo presentado en [3]. Los parámetros obteni-
+dos fueron la tasa de exposición luego del contacto
+entresusceptibleseinfectadosiguala1;0,0276como
+probabilidad de no desarrollar el virus luego de una
+exposiciónalvirus;0,0527,larecuperacióndelosin-
+fectadosrelacionadaconeltratamientoy6/233como
+tasadepersonasqueseaislandelgrupodesusceptible Figura1.Cantidaddeinfectadosenactivo.Valorreal·,QLG,
+ydeenfermosquefallecen. A.84,A.775,A.64.
+LaadaptacióndelosmodelosSEIRpropuestaen[1]
+con α =.84, .775, .64, que mide el impacto guberna-
+mental,denotadosrespectivamentecomoA.84,A.775y
+A.64,respectivamente.Estapropuestasubdividelacla-
+sedeinfectadosenloshospitalizados,losasintomáticos
+ylossintomáticosnodetectados.
+Primeramenteseanalizóladiferenciaentrelosvalorespro-
+nosticados y los valores reales para la cantidad de nuevos
+infectados,IN ylosactivos,I.Seobtuvieronlosresultados
+quesemuestranenlaTabla2dondeseobservaqueelmodelo
+QLGmuestralasmenoresdiferencias. Figura2.Cantidaddecamasparasospechososhospitalizados
+Enelsiguienteejemploseilustraelnúmerodecamaspara QLG,A.84,A.775,A.64
+hospitalizados(sospechososeinfectados)necesariasenlos
+díaspronosticados,considerandolosmodelosanteriores.
+algunos casos, la fecha de confirmación de la infección es
+Ejemplo1 Estimacióndelnúmerodecamasparainfectados, anterior al primer día analizado y que todos los pacientes
+parasospechososyentotal.δ=4%,p=55%. iniciansuperíodoinfecciosoenestadodecuidado.Losdatos
+referentesalospacientesquenohantransitadoporterapias
+A partir de la estimación brindada por los modelos antes nihanfallecido,semuestranenlasTablas3y4.
+descritos,enlaFigura1semuestranparaelloslosvaloresde Encuantoapersonasquehanestadoenterapiasohan
+I(t),quecorrespondealacantidaddecamasdeinfectados.La fallecido,setienequehayunpacienteconcadaunadelas
+cantidaddesospechososyeltotaldecamaseneltiempo,z (t) siguienteshistoriasclínicas:
+2
+yI(t)+z (t),segraficanenlasFiguras2y3,respectivamente.
+2
+11díasdecuidado,9críticoyalta.
+El modelo QLG pronostica que el pico de la epidemia
+tendrálugaralrededordeldía45conmenosde950infectados
+6díasdecuidado,9críticoyalta.
+activos.Encuantoalascamasdesospechosos,sumáximo
+sealcanzaalgunosdíasantesconalrededorde1500camas. 10díasdecuidadoyfallece.
+Entotalseesperaunmáximode2500unidadesocupadas.La
+9díasdecuidadoyfallece.
+peorsituaciónaparececonelmodeloA.64.Enestecasoel
+máximodeinfectadosactivosseobtienedespués,cercadel
+7díasdecuidado,6críticoyfallece.
+día60delaepidemia.(cid:3)
+Acontinuaciónseilustracómoestimarelnúmerodeper- 4díasdecuidado,7gravey6crítico.
+sonasinfectadasqueestánenlasaladecuidadoydeterapia,
+diferenciandoentrelosestadosgraveycrítico.Tambiénson Lasituacióneneldía14deabrilsedescribeenlasTablas
+posiblestransicionescomodecuidadoafallecidoodeterapia 5y6.
+aalta.Estopruebaque,detenerlosdatoscorrespondientes, Losresultadoscorrespondientesaldía15deabril,seen-
+sepuedeextenderesteprocedimientoalcasoenquesetengan cuentranenlasTablas7,8y9.
+másestados.Aunqueenlaaplicaciónsecalculanlasprobabi-
+lidadesconrespectoalosprimeros40días,acásetomanlas 3. Conclusiones y observaciones finales
+correspondientesalejemplotomado.
+En este trabajo se propone un modelo para pronosticar
+Ejemplo2 Se generan los estados diarios de 50 pacientes el número de camas requeridas, diferenciando los tipos de
+ficticios en los primeros 14 días de abril. Se asume que en serviciossegúnelestadodelpaciente.Elmodelorepresentael
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.105-111
+110COVID-19enCuba: Estimacióndelnúmerodecamasdiariasqueserequierenduranteunperíododelaepidemia
+Tabla2.Estadísticos
+Modelos IN-QL I-QL IN-A.84 I-A.84 IN-A.775 I-A.775 I-A.64 I-A.64
+Media 4.79 38.35 7.17 153.26 14.39 -136.07 22.117 -103.13
+Desviación 11.47 23.33 21.39 135.25 35.797 127.36 57.97 151.42
+mediana 1.72 33.8 1 -122.5 1 97.5 0 -71.5
+Cuartil1 -1.52 28.79 -3 -2.98 -3 -374.5 -4.5 -240.25
+Cuartil3 11.47 58.41 13 -18.5 17.25 -16.25 17.25 -4.57
+Min -23.42 2.85 -40 -349 -40 -345 -48 -342
+Max 37.52 83.64 78 0 133 0 217 354
+Tabla6.Cantidaddecamasenestadograveycríticoeneldía
+14deabril
+Enestadogravenoseencuentraningúnpaciente.
+Díasenestadocrítico 6
+Cantidaddepacientesdía14 1
+Tabla7.Probabilidadesautilizarparatransicionesdesdeel
+estadodecuidado.
+Figura3.CantidadtotaldecamasQLG,A.84,A.775,A.64 Díasdeestadía 16 17 18
+Probabilidadde
+Tabla3.Cantidaddepacientesquesolohantransitadopor permanecerencuidado 33/35 21/30 5/11
+estadodecuidadoyaúnnohansalidodealtaysusdíasde Probabilidadde
+estadía. irsedealta 2/35 9/30 6/11
+Díasendecuidado 15 16 17 18
+Cantidaddepacientes 3 10 4 0 Tabla8.Pacientesyaltasenestadodecuidado,día15de
+abril
+Cantidadde/día 16 17 18 Total
+pacientesdía15 3 7 2 12
+protocoloseguidoenCubaparaeltratamientodelospacientes.
+altasendía15 0 3 2 5
+Ha sido concebido en correspondencia con la información
+disponible.
+Re-organizandolosdatosrecibidosdelaformapropues-
+Tabla9.Resultados,día15deabril,estadocrítico
+ta en la Tabla 1, se puede obtener la siguiente información
+fácilmente: Probabilidaddepermanecerenestasala 2/3
+Probabilidaddefallecer 1/3
+Tabla4.Cantidaddepacientesquesolohantransitadopor Cantidaddepacienteeldía15 1
+estadodecuidadoyestándealtaluegoded díasencuidado
+Díasen 11 12 13 14 15 16 17 19
+tiempodehospitalizacióndecadapacientedealta(di-
+decuidado
+ferenciaentrealtayfechadeconfirmación)
+Cantidad 6 1 2 2 9 6 0 1
+depacientes
+tiempo de hospitalización de cada paciente fallecido
+(diferenciaentrefechadefallecimientoyfechadecon-
+firmación).
+Tabla5.Cantidaddecamasenestadodecuidadoeneldía14
+deabril
+lamediadelostiemposdehospitalizacióndelosfalle-
+cidos.
+Díasendecuidado 15 16 17 18 Total
+Cantidaddepacientesdíat 3 10 4 0 17 eltiempodehospitalizaciónmásfrecuenteentrepacien-
+tesfallecidos.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.105-111
+COVID-19enCuba: Estimacióndelnúmerodecamasdiariasqueserequierenduranteunperíododelaepidemia111
+eltiempomediodehospitalizacióndelpacienteencada delasestimaciones.Cabedestacarqueporlonovedosodela
+estado. enfermedad,estospronósticossonsoloválidosacortoplazo.
+Además,continuamenteseajustanlasmedidasdecontrol,lo
+Además,paracadaestadocuidado,terapia)seestimó: queprovocacambiossustancialesenelcomportamientode
+laenfermedady,porende,enelpronósticodelacantidadde
+el número de pacientes que en un día dado de la epi-
+infectados.
+demiaviveneldíad desuestanciahospitalariaenun
+ciertoestado.
+Referencias
+lafrecuenciaconqueocurrelatransicióndeunestado
+aotroparaunpacientequeseencuentraeneldíad de [1] G.Bayolo, A.Marrero, andD. Menció. Modelospara
+suestanciahospitalaria laestimacióndeinfectadosactivosdelacovidcondife-
+renciaciónentredetectadosynodetectados. COVID-19,
+Conlasestimacionesanterioresylosvaloresdeinfectados
+Cuba,comunicaciónpersonal,2020.
+activosofrecidosporlosmodelosdinámicossepronostica:
+Elnúmerodecamasdetipok(cuidadooterapia)reque- [2] R. Guinovart and et al. Modelo para la estimación de
+ridasparacadadíat,t=N+1,...,N+M. infectadosactivosdelacovid. COVID-19,Cuba,comuni-
+caciónpersonal,2020.
+Elnúmerototaldecamasparaconfirmadosrequeridas
+encadadíat,t=N+1,...,N+M.
+[3] Q.Linandetal. Aconceptualmodelforthecoronavi-
+rusdisease2019(COVID-19)outbreakinwuhan,china
+El número total de camas requeridas en cada día t,
+withinduvidualreactionandgovernmentalaction. Int.J.
+t =N+1,...,N+M. (suma del total de camas para
+InfectiousDiseases,93:211–216,2020.
+confirmadosyparasospechosos).
+[4] M. Liu, J. Cao, J. Liang, and M. J. Chen. Epidemic-
+La aplicación puede introducir otras opciones como la logisticsmodeling:anewperspectiveonOperationsRe-
+actualizacióndelasprobabilidadesconlosnuevosdatos.Tam- search. Springer,2020.
+bién mostró cómo la metodología utilizada permite incluir
+másestadossinqueestorepresentemayordificultad.Deesta [5] F.MallorandD.García. Previsióndecamashospitalarias
+manerasepodríadiferenciarlaterapiaenlosestadosgrave ycamasenUCInecesariasparapacientesconCOVID-
+ycríticoenvezdeenglobarloenunestadocomúncomose 19. amp.20minutos.es/noticia/4254144/0/,1993.
+realizó. Se proyecta elaborar una herramienta que permita
+automatizarestecálculoyrealizarlaentradaylasalidade [6] K.McFarlane,T.Zhangetal.,andD.Scheinker.Amodel
+datosenunambienteamigable. toestimatebeddemandforcovid-19relatedhospitaliza-
+Losdatossobrelaevolucióndecadapacientedebeserlo tion. mdxriv.org/content/10.1101/2020.03.2420042762v1,
+másprecisa posible,yaque esfundamentalpara lavalidez 2020.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.105-111

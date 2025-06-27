@@ -1,0 +1,84 @@
+ReseñadeLibro/BookReview CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.100–101
+Recibido(Received):25-04-2024,Revisado(Revised):30-04-2024
+Aceptado(Accepted):02-05-2024,Enlínea(Online):19-07-2024
+Roldán Inguanzo, R. (2022). Análisis Funcional lineal. Ciudad Educativa. La Habana,
+Cuba. ISBN: 978-1-5129-8888-8
+Roldán Inguanzo, R. (2022). Functional Linear Analysis. Ciudad Educativa. Havana, Cuba.
+ISBN: 978-1-5129-8888-8
+Carlos Sánchez Fernández1*
+1DepartamentodeMatemática,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+csanchez@matcom.uh.cu.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadoymaquetadopor(Editedandlayoutby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLa
+Habana,Cuba.
+Citar como: Sánchez Fernández, C. (2024). Roldán Inguanzo, R. (2022). Análisis Funcional lineal. Edi-
+torial Ciudad Educativa. La Habana, Cuba. ISBN: 978-1-5129-8888-8 [Reseña de libro]. Ciencias Ma-
+temáticas, 36(Único), 100-101. DOI: https://doi.org/10.5281/zenodo.14192326. Recuperado a partir de
+https://revistas.uh.cu/rcm/article/view/9058.
+ElAnálisisFuncionalse asignatura. En un principio se adaptaron los textos existen-
+formacomonuevadiscipli- teseninglésoentraduccionesalespañolhastaqueapareció
+na en los albores del siglo ellibrodelcubano-mexicanoMiguelJiménezPozo(LaHa-
+XX y se considera estable- bana,1989)Medida,IntegraciónyFuncionales.Obramuy
+cida al publicarse en 1932 socorrida y meritoria que cumplió su objetivo de servir de
+el texto en idioma francés referenciaenlasdosasignaturasdeMedidaeIntegracióny
+Théorie des Operations Li- Análisis Funcional de la Licenciatura en Matemática, pero
+néaires (Teoría de las Ope- queadolecedeseruntextoenciclopédico,muypretencioso
+racionesLineales)delpola- y recargado, con pocos atributos didácticos. En cambio, el
+coStephanBanach,libroba- textoqueaquíreseñamos,satisfacenosololasexigenciasdel
+sadoensutesisdoctoralde rigoranalíticoydelosobjetivosdelprogramadelaasignatura
+1922quelediounimpulso AnálisisFuncional,sinoqueademásposeeunvalordidáctico
+vital a la consolidación de queconsideramosfundamental.
+estaramaabstractadelAná- Ellibrotocalostemasbásicos,perosiempreútiles,del
+lisisMatemático.ElAnálisis AnálisisFuncional,divididoen8capítulos,unaintroducción
+FuncionalLinealfueconstruidoparaeltratamientoteóricode yunasmínimasreferenciasbibliográficascomoculminación.
+lasecuacionesfuncionalesdeltipoTx=y,dondexoyvarían Después de un primer capítulo recordatorio sobre espacios
+enalgúnespaciovectorialtopológicodedimensióninfinitay métricos,siguentrescapítulosqueserefierenalosespacios
+T significaunaoperaciónlineal(porejemplo,diferenciación vectorialestopológicosbásicos:normados,euclidianosyun
+ointegración)queligaaestasvariables.Suestudioincluyela pocodeálgebrasnormadas.Aquísedestacandeformasucinta
+investigacióndelosespaciosvectorialestopológicosquege- aspectostopológicosfundamentalesparatodolosucesivo.El
+neralizanalosespacioseuclidianosylasoperacioneslineales máscontundenteeselcapítulosobrelosespaciosnormados,
+sobreestosespacios. a los que se dedican 50 de las 253 páginas del texto, algo
+Pasóalgúntiempoantesdequeenlasmejoresuniversi- natural,puestoqueconstituyenelentornoidealparainiciar
+dadesdelmundoseincluyeraestamateriaenlosplanesde coneficaciaelestudiodelasoperacioneslinealesabstractas,
+estudiodelascarrerasdeMatemática.Conestoaparecieron quegeneralizanladiferenciaciónylaintegraciónconocida
+losprimerostextosconobjetivosdidácticos,comoeldeFrig- sobreespacioseuclidianos.Aesoscuatrocapítulossigueotro
+yesRieszyBélaSz.-Nagy(UniversidaddeBudapest,1952), capítulosobrelosteoremasbásicos,principiosteóricosindis-
+eldeAndreiN.KolmogórovySergueiFomín(Universidad pensablesparalaargumentaciónposteriorenlostrescapítulos
+LomonósovdeMoscú,1954)oeldeAngusE.Taylor(Uni- restantessobreteoríaespectraldeoperadoresacotados,suapli-
+versidaddeCalifornia,1957). caciónalateoríadeecuacionesintegralesyunúltimo,-quizás
+EnCubahuboqueesperaralareformauniversitariade demasiadobreve,aunquesustancioso-,sobrediferenciación
+1962paraqueelAnálisisFuncionalLinealseincluyeraen enespaciosnormados.
+losprogramasobligatoriosdelaLicenciaturaenMatemática. Esnecesariodestacarlosejerciciosmuytemperados,que
+Antes solo apareció en cursos optativos o cursos comple- culminancadaunodelos8capítulosyquealfinaldellibrore-
+mentariosdeAnálisisMatemático,sinteneridentidadcomo cibenrespuestasy/osugerenciasefectivasparasuresolución.
+RoldánInguanzo,R.(2022). AnálisisFuncionallineal. EditorialCiudadEducativa. LaHabana,Cuba 101
+Todalaobraexhibeunestiloconcisoypreciso,expresando Estospequeñosdetallesenlabibliografía,anuestropa-
+conclaridad,rigorycoherencialosargumentos;anuestroen- recer,nodemeritanelenormevalordidácticodelaobraque
+tenderesteeselprincipalméritodeestetexto,pueslepermite consideramosindispensablepararesponderalasexigencias
+lograr la comunicación eficaz con jóvenes aprendices, que del nuevo plan de estudio de la carrera de Licenciatura en
+siempreagradecenestosatributosdidácticoscuandoaparecen MatemáticadelaRepúblicadeCuba.
+unidos a una exposición atractiva de los contenidos, como Paraloscomentarioshistóricoshemosutilizadoloslibros
+exigenlosobjetivosactualesdelaeducaciónmatemáticasu- siguientes:
+perior.
+Noqueremosconcluirsinseñalardospequeñosdetalles Pietsch,A.(2007)HistoryofBanachSpacesandLinear
+relacionadosconlabibliografíacitadaalfinaldellibroyque Operators.Ed.Birkhauser.Berlín.
+en nuestro criterio deben eliminarse en una futura segunda
+edición. Primero, de 13 referencias solo 3 textos incluidos SanchezFernández,C.yValdésCastroC.(2023)Prác-
+tienenfechadeediciónposterioralaño2000ysolounoes ticasMatemáticasdelaEdadModerna.ParteII,Capí-
+posterioral2010.Además,enlacitadetítuloseninglésapa- tulo3.EdicióndigitaldelaEditorialFélixVarela.La
+recelapalabra“Funktional”conunakenlugardeunac.Esto Habana.
+últimoesunafaltadeatencióndeloseditores,sinmuchatras-
+cendencia,peroconsideramossignificativalanoinclusiónde Ellibroseencuentradisponibleparasudescargagratuita
+consultasatextosmásactualizados-porejemplo,JosephMus-
+enelsiguienteenlace:http://biblioteca.eduniv.
+cat(2014)FunctionalAnalysis,queharecibidounasegunda
+cu/download/792/pdf/792.pdf.
+edición por la editorial Springer Verlag en este mismo año
+2024oeldeBarbaraMacCluer(2009)ElementaryFunctional
+Analysis,muyconcisoyadecuado,comolosonotrostextos
+nomencionados-estacarenciapuededEastralaobimrapersets´aióbnajeorruónnaealicencia Creative Commons “Atribuci´on-NoComercial-
+SinDerivadas4.0Internacional”.
+dequelaautoranoestáactualizadaensusconocimientos.
+SánchezFernández,C. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.100–101
+https://doi.org/10.5281/zenodo.14192326 https://revistas.uh.cu/rcm/article/view/9058
+1

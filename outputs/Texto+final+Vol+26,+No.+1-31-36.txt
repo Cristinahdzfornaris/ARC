@@ -1,0 +1,366 @@
+REVISTA CIENCIAS MATEM`TICAS 31
+Estimaci(cid:243)n de parÆmetros de transmisi(cid:243)n
+para un brote epidØmico de Dengue
+en Ciudad de La Habana
+Carlos Rafael Sebrango Rodr(cid:237)guez1 / Lizet SÆnchez Valdez2
+/Ziv Shkedy3 / NØstor Carbonell Rivero4
+RESUMEN. DespuØs de casi 20 aæos sin actividad de Dengue en Ciudad de La Habana en junio del
+2001 ocurri(cid:243) un brote con 12889 casos. El objetivo de esta investigaci(cid:243)n es estimar parÆmetros de
+transmisi(cid:243)n de este brote epidØmico para comprender la transmisi(cid:243)n de la enfermedad y estudiar
+el impacto de las medidas de control. Se estim(cid:243) R a partir de la fase inicial de crecimiento expo-
+0
+nencial y posteriormente se ajust(cid:243) un modelo de Richards multifase para determinar los puntos
+de retorno del brote. La estimaci(cid:243)n de R fue (IC 95 %: 1.401-1.405). El modelo de Richards de tres
+0
+ondas fue el de mejor ajuste. El primer punto de retorno se estima entre el 14 y 20 de octubre, una
+semana despuØs de intensi(cid:222) carse las acciones de control en toda la provincia. El segundo punto de
+retorno ocurri(cid:243) entre el 4 y 10 de noviembre, al iniciarse la bœsqueda casa a casa de casos febriles.
+El tercer punto de retorno ocurri(cid:243) entre el 2 y 8 de diciembre. El cuarto punto de retorno fue entre
+el 30 de diciembre y 5 de enero del 2002, quizÆs debido al retraso del brote en el municipio Habana
+Vieja. El quinto punto de retorno ocurri(cid:243) entre el 13 y 19 de enero, coincidiendo con el comienzo
+de la campaæa intensiva, permitiendo la eliminaci(cid:243)n del brote en marzo del 2002. Los mØtodos
+implementados mostraron utilidad tanto para alertar sobre la posibilidad de la epidemia en fases
+tempranas como para evaluar las medidas de control.
+INTRODUCI(cid:211)N fue rÆpidamente controlado (SÆnchez 2006). En
+Junio del 2001 una nueva epidemia azot(cid:243) al
+El Dengue se reconoce como el principal pro-
+pa(cid:237)s, con(cid:222) rmÆndose 12 889 nuevos casos, de
+blema de salud en las regiones tropicales y
+ellos 78 fueron de FHD y 3 fallecieron (Pelaez
+subtropicales. Actualmente es endØmica, con
+2004).
+brotes epidØmicos en AmØrica, el sudeste de Asia
+Dentro de los parÆmetros de transmisi(cid:243)n de
+y el Pac(cid:237)(cid:222) co. Se estima que la incidencia global
+la infecci(cid:243)n, quizÆs los mÆs importantes sean
+es de 50-100 millones de casos anualmente, de
+el nœmero reproductivo bÆsico (R0), el punto de
+los cuales hasta 500 000 son casos severos y
+retorno o acmØ de la epidemia y el nœmero mÆxi-
+19 000 mueren.
+mo de casos o tamaæo de la epidemia, aunque
+DespuØs de 16 aæos sin transmisi(cid:243)n, en 1997
+tambiØn se re(cid:222) eren el tiempo de generaci(cid:243)n y el
+se detect(cid:243) en Santiago de Cuba un brote produ-
+tiempo de duplicaci(cid:243)n. El nœmero reproductivo
+cido por Dengue 2. Fueron con(cid:222) rmados 3 012
+bÆsico (R0) es de(cid:222) nido como el nœmero prome-
+casos, de los cuales 205 se clasi(cid:222) caron como
+dio de infecciones causadas por un individuo
+FHD y 12 fallecieron. En el aæo 2000, en Ciudad
+infeccioso cuando Øste es introducido en una
+de La Habana se report(cid:243) un brote de 138 casos
+poblaci(cid:243)n de susceptibles e intenta capturar la
+con(cid:222) rmados asociados a los serotipos 3 y 4 que
+capacidad reproductiva de la enfermedad o su
+transmisibilidad. Sus ra(cid:237)ces se deben a traba-
+1 Universidad de Sancti Sp(cid:237)ritus, Cuba, sebrango@suss.co.cu
+jos de Alfred Lotka, Ronald Ross y otros, pero
+2 lsanchez@ipk.sld.cu
+3 ziv.shkedy@uhasselt.be su primera aplicaci(cid:243)n moderna fue por George-
+4 nestor@suss.co.cu
+32 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Mac Donald en 1952, quien construy(cid:243) modelos las intervenciones de control y determinar las
+poblacionales de la propagaci(cid:243)n de la malaria. mÆs efectivas al mÆs corto plazo.
+Este es un concepto clave en la epidemiolog(cid:237)a y Esta investigaci(cid:243)n tiene como objetivo esti-
+mÆs importante aœn, a menudo sirve como pa- mar parÆmetros de transmisi(cid:243)n para el brote
+rÆmetro de umbral que predice si una infecci(cid:243)n epidØmico de Dengue ocurrido en Ciudad de La
+se propagarÆ (Hefferman et al. 2005). Cuando Habana en el per(cid:237)odo 2001-2002 para compren-
+R < 1 la infecci(cid:243)n desaparecerÆ en un corto pe- der la transmisi(cid:243)n de la enfermedad y estudiar
+0
+r(cid:237)odo de tiempo. Pero cuando R > 1 la infecci(cid:243)n el impacto de las medidas de intervenci(cid:243)n y con-
+0
+serÆ capaz de propagarse en la poblaci(cid:243)n. Altos trol. Para ello se estima el R0 a partir de la fase
+valores de R pueden indicar la posibilidad de inicial de crecimiento exponencial y tambiØn se
+0
+una epidemia transcendental. Para una enfer- ajusta un modelo de Richards multifase a las
+medad causada por un vector, R puede ser en- noti(cid:222) caciones semanales de casos de dengue
+0
+tendido como el nœmero de personas que ser(cid:237)an para determinar con precisi(cid:243)n los puntos de re-
+infectadas a partir de una sola persona inicial- torno del brote, que permiten estudiar el impac-
+mente infectada por un mosquito (Marques et al. to de las medidas de control.
+1994, Lopez et al. 2002, Massad et al. 2010).
+El punto de retorno, de(cid:222) nido como el punto
+DESARROLLO
+en el tiempo en el cual la raz(cid:243)n de acumula-
+ci(cid:243)n cambia de crecimiento a decrecimiento, o Estimaci(cid:243)n de R a partir de la fase
+0
+viceversa, puede ser determinado con precisi(cid:243)n inicial de crecimiento
+fÆcilmente encontrando el punto de in(cid:223) exi(cid:243)n de
+la curva epidØmica de casos acumulados, el mo- Posiblemente la forma mÆs fÆcil de estimar R
+0
+mento en el cual la trayectoria comienza a des- es a partir de la fase inicial de un brote y fue
+cender. Esta medida tiene una obvia importan- debido a Anderson y May (1991), quienes pro-
+cia epidemiol(cid:243)gica, indicando el inicio (momento pusieron estimar el tiempo de duplicaci(cid:243)n t , y
+d
+de aceleraci(cid:243)n despuØs de la desaceleraci(cid:243)n) o el utilizar la siguiente f(cid:243)rmula
+(cid:222) n (momento de desaceleraci(cid:243)n despuØs de la
+aceleraci(cid:243)n) de una onda de infecciones (Hsieh
+2009). Cuando hay mÆs de una onda epidØmica
+existen dos tipos de puntos de retorno, el prime-
+donde μ es la raz(cid:243)n de mortalidad natural de
+ro que indica el (cid:222) n del crecimiento exponencial
+la poblaci(cid:243)n y γ es la raz(cid:243)n de recuperaci(cid:243)n de
+inicial y el otro donde la raz(cid:243)n de crecimiento
+la infecci(cid:243)n. Marques et al. (1994) propusieron
+del nœmero de casos acumulados comienza a
+asumir una raz(cid:243)n de crecimiento exponencial
+incrementarse nuevamente, signi(cid:222) cando el ini-
+para la fase inicial del brote(eΛt), y dedujeron
+cio de una nueva onda (Hsieh 2006). El punto
+una relaci(cid:243)n entre el nœmero reproductivo bÆsi-
+de retorno nos permite estudiar el impacto de
+co y la raz(cid:243)n de crecimiento exponencial Λ,
+las medidas de intervenci(cid:243)n.
+A pesar de la vasta literatura internacional que
+Λ
+re(cid:222) ere modelos de Dengue no aparecen trabajos R = 1 +
+0 μ + γ
+que analicen los brotes ocurridos en Cuba. Sin
+embargo, el control del Dengue constituye una En esta investigaci(cid:243)n se utiliz(cid:243) esto como pri-
+prioridad para nuestro Sistema Nacional de Sa- mer mØtodo para estimar R .
+0
+lud. Cuba es uno de los pocos pa(cid:237)ses que logra
+El primer paso es delimitar que va a consi-
+controlar la transmisi(cid:243)n, evitando que el pa(cid:237)s
+derarse como fase inicial de crecimiento expo-
+se convierta en endØmico. Contar con metodolo-
+nencial, para estimar la fuerza de infecci(cid:243)n. Una
+g(cid:237)as para la estimaci(cid:243)n del nœmero reproductivo
+forma intuitiva ser(cid:237)a ajustar el nœmero de casos
+bÆsico en fases iniciales de transmisi(cid:243)n puede
+acumulados por una funci(cid:243)n exponencial pero
+alertar a las autoridades del riesgo de ocurren-
+este tiene una de(cid:222) ciencia. Frecuentemente al
+cia de epidemias. Adicionalmente el contar con
+comienzo de una epidemia hay una fase de bajo
+modelos que se ajusten a los datos del reporte
+nivel de transmisi(cid:243)n que hace dif(cid:237)cil determinar
+de casos puede permitir evaluar el impacto de
+donde termina la fase exponencial. Si en cambio
+REVISTA CIENCIAS MATEM`TICAS 33
+el nœmero medio de nuevos casos por unidad de Cuando hay mÆs de una onda de infecciones
+tiempo (semanas) es gra(cid:222) cado contra el nœmero se propone una variaci(cid:243)n en el modelo de Ri-
+acumulado de casos, la fase de crecimiento ex- chard (Hsieh & Cheng 2006), el cual hace una
+ponencial del nœmero de casos acumulados se distinci(cid:243)n entre los dos tipos de puntos de re-
+evidencia por el crecimiento lineal de esta curva. torno. AdemÆs el punto de in(cid:223) exi(cid:243)n de la curva
+La cuesti(cid:243)n fundamental es determinar cuando inicial, hay un segundo tipo de punto de retorno
+esta fase exponencial termina. Utilizando esta en la curva epidØmica multi-onda donde la raz(cid:243)n
+fase inicial podemos estimar la fuerza de la in- de crecimiento del nœmero de casos acumulados
+fecci(cid:243)n Λ a travØs de modelos no lineales mixtos comienza a aumentar de nuevo, signi(cid:222) cando el
+considerando la distribuci(cid:243)n de Poisson. inicio de una nueva onda. Las diferentes ondas
+son distinguidas por los puntos de retorno (o
+Modelo de Richards multifases
+puntos de in(cid:223) exi(cid:243)n), denotando la aceleraci(cid:243)n o
+Para calcular la estimaci(cid:243)n del R y el punto de despuØs de una desaceleraci(cid:243)n al (cid:222) nal de cada
+0
+retorno con datos de los casos reportados se- segmento en forma de S, los cuales son tambiØn
+manalmente, se utilizarÆ el modelo de Richard m(cid:237)nimos locales de la correspondiente curva de
+propuesto antes para ajustar el crecimiento de incidencia. Para un brote epidØmico de n fases,
+dos brotes epidØmicos ocurridos en Singapur y los n −1 m(cid:237)nimos locales separan las n fases.
+en TaiwÆn (Hsieh and Ma 2009, Hsieh and Chen El procedimiento del modelo de Richard mul-
+2009). El modelo de Richard considera solo el ti-ondas requiere de los siguientes 5 pasos:
+tamaæo de la poblaci(cid:243)n infectada acumulada.
+1. Ajustar el modelo de Richard a los casos
+La premisa bÆsica de este modelo es que la cur-
+acumulados en d(cid:237)as sucesivos usando ruti-
+va de incidencia de una sola onda de infecciones
+nas m(cid:237)nimo-cuadrados estÆndar. Para bro-
+consiste de un solo pico de alta incidencia, re-
+tes de una fase la estimaci(cid:243)n del parÆmetro
+sultando en una curva epidØmica en forma de S
+t, punto de retorno, convergerÆ cuando la
+y un solo punto de retorno del brote. En 1959, i
+trayectoria se acerca al nœmero de casos
+Richards propuso el siguiente modelo para es-
+mÆximo a travØs del curso de la epidemia.
+tudiar el crecimiento de poblaciones biol(cid:243)gicas:
+2. Si el parÆmetro estimado t permanece con-
+i
+vergente siempre que se detecta un caso
+nuevo, el brote tiene solo una fase. Sin em-
+bargo, si la estimaci(cid:243)n comienza a divergir
+desde el valor convergente anterior, uno
+La soluci(cid:243)n explicita del modelo de Richards sabe que el punto de retorno denota el co-
+estÆ dada por: mienzo de una segunda fase.
+3. Ubicar el punto de retorno, t , que separa
+min
+dos fases de la epidemia.
+4. Ajustar el modelo Richard nuevamente a la
+curva de casos acumulados, pero comen-
+Donde I(t) es el nœmero de casos acumulados
+zando desde t + 1, es decir una semana
+en el tiempo t (en semanas), N es el nœmero
+min
+T despuØs de comenzar la segunda fase. El
+de casos mÆximos sobre una onda simple de la
+parÆmetro estimado t convergerÆ de nuevo
+epidemia, r es la raz(cid:243)n de crecimiento intr(cid:237)nse-
+i
+ca per cÆpita de la poblaci(cid:243)n infectada y a es el cuando la curva se acerca al nœmero de ca-
+exponente de la desviaci(cid:243)n para la curva epi- sos mÆximo para la segunda fase.
+dØmica en forma de S para I(t). El parÆmetro t 5. Repetir los pasos 2-4 en las epidemias de
+m
+estÆ relacionado con el punto de retorno t de la mÆs fases hasta que (cid:222) nalice el brote.
+i
+epidemia por la f(cid:243)rmula,
+Para las estimaciones de estos dos parÆme-
+tros epidemiol(cid:243)gicos importante se utilizarÆn los
+(lna)
+t = t + softwares SAS y R.
+m i r
+donde ln denota la funci(cid:243)n logaritmo natural.
+34 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+RESULTADOS Tomando en cuenta las observaciones del cre-
+cimiento exponencial inicial del brote estimamos
+Estimaci(cid:243)n de R a partir de la fase la fuerza de la infecci(cid:243)n y R . Los resultados de
+0 0
+las estimaciones se muestran en la tabla 1.
+inicial de crecimiento
+Para determinar cuando termina la fase inicial
+Estimaciones de los parÆmetros
+de crecimiento exponencial gra(cid:222) camos el nœme-
+para el modelo de Richards de tres fases
+ro de casos declarados semanalmente contra el
+nœmero de casos acumulados para el brote de Ajustando los datos del nœmero de casos acu-
+Dengue. La elipse indica la parte lineal del grÆ- mulados por el procedimiento del modelo de Ri-
+(cid:222) co correspondiente al crecimiento exponencial chards multifases descrito anteriormente, fueron
+inicial de la epidemia lo que coincide con un pe- obtenidos las estimaciones de los parÆmetros de
+r(cid:237)odo de tiempo de 18 semanas (Fig. 1). las tres ondas (Tabla 2), con la correspondiente
+curva epidØmica te(cid:243)rica (Figura 2). La tabla 2 da
+los resultados de estimaci(cid:243)n para el punto de
+retorno, la raz(cid:243)n de crecimiento r y el numero
+mÆximo de casos (o el numero de casos acumu-
+lados) K para cada onda del brote, donde K es
+tambiØn la estimaci(cid:243)n del numero de casos acu-
+mulados al (cid:222) nal de cada onda. Note que los ver-
+daderos nœmeros de casos acumulados para la
+segunda y tercera onda fueron 10 562 y 12 679
+respectivamente, los cuales estÆn dentro de los
+intervalos de con(cid:222) anza al 95 % para las estima-
+ciones de K de cada una de estas dos ondas.
+En la (cid:222) gura 4 se observa el ajuste por el mo-
+delo de Richards de tres fases de la curva epi-
+dØmica de los casos nuevos y casos acumulados
+por semana en cada una de las tres ondas.
+Fig. 1 Casos reportados de Dengue contra casos
+acumulados semanales. Ciudad de La Habana
+2001-2002.
+Tabla 1 Estimaci(cid:243)n de R con intervalo de con(cid:222) anza del 95 % a partir de la fase inicial de crecimiento
+0
+MØtodo de estimaci(cid:243)n Per(cid:237)odo de tiempo Λ (IC 95 %) R (IC 95 %)
+0
+Fase de crecimiento inicial 1-18 0.403(0.401-0.405) 1.403 (1.401-1.405)
+Tabla 2 Resultados de las estimaciones de los parÆmetros del modelo de Richards multifases para la primera
+onda durante las semanas 1-20, para la segunda onda durante las semanas 21-28 y para la tercera onda
+durante las semanas 29-36. Note que el nœmero mÆximo de casos es redondeado al entero superior.
+Per(cid:237)odo de tiempo Punto de retorno Raz(cid:243)n de crecimiento Nœmero mÆximo de casos
+AIC
+(Semanas) (95 % CI) (95 % CI) (95 % CI)
+1-20 (Primera onda) 17.47 (17.07;17.87) 0.59 (0.39;0.80) 7000 (5963;8037)
+21-28 (Segunda onda) 24.28 (21.67;26.67) 0.86 (0*;2.67) 11001 (9144;12858) 411.4
+29-36 (Tercera onda) 30.11 (26.27;33.96) 1.34 (0*;3.61) 12718 (12499;12937)
+*Max(0, cota inferior).
+REVISTA CIENCIAS MATEM`TICAS 35
+(a) (b)
+Fig. 2 Casos con(cid:222) rmados de Dengue por semana de inicio de los s(cid:237)ntomas y ajuste del modelo de
+Richard para tres ondas. Ciudad de La Habana 2001-2002. a) Incidencia acumulada b) Incidencia.
+IMPACTO DE LAS MEDIDAS iniciarse la bœsqueda casa a casa de casos febri-
+DE CONTROL DEL DENGUE les. El tercer punto de retorno ocurri(cid:243) entre el 2
+y 8 de diciembre. En la semana 28 (entre el 30
+Para estudiar el impacto de las medidas de con- de diciembre y 5 de enero del 2002) cambia la
+trol estableceremos una correspondencia entre pol(cid:237)tica de hospitalizaci(cid:243)n, los pacientes sospe-
+el modelo te(cid:243)rico de mejor ajuste, el modelo de chosos de Dengue son tratados en la casa y vi-
+Richards de tres ondas, y las medidas de inter- sitados diariamente por los mØdicos de familia.
+venci(cid:243)n y control implementadas. Como parte Este cambio en la pol(cid:237)tica de aislamiento de los
+de la prevenci(cid:243)n del Dengue, las entidades sa- casos de Dengue hace que se incremente la posi-
+nitarias de la provincia Ciudad de La Habana bilidad de contacto hombre enfermo-mosquito-
+realizaban acciones de vigilancia de esta enti- hombre susceptible, aumentando posiblemente
+dad y de control de Aedes aegypti, vector de esta la transmisi(cid:243)n y con esto el reporte de casos,
+enfermedad. A travØs de la vigilancia serol(cid:243)gica aunque este nuevo aumento se puede haber de-
+se detecta el primer caso en la semana epide- bido al retraso del brote en algunos municipios
+miol(cid:243)gica 25 del aæo 2001, primera semana de principalmente en Habana Vieja. Por œltimo, en
+nuestro estudio. A pesar de los cambios en la la semana 31 (entre el 13 y 19 de enero), quin-
+vigilancia, la intensi(cid:222) caci(cid:243)n de las acciones de to punto de retorno del modelo de Richard de
+control del mosquito alrededor de los casos re- tres ondas, comienza la campaæa intensiva, que
+portados y la pol(cid:237)tica de aislamiento de los ca- revierte nuevamente el reporte ascendente de
+sos sospechosos de Dengue en Hospitales, no casos, permitiendo la eliminaci(cid:243)n del brote en
+es hasta la semana 17 (entre el 14 y 20 de octu- marzo del 2002.
+bre) que se obtiene el primer punto de retorno
+(descenso del reporte de casos), lo cual es una
+CONCLUSIONES
+semana despuØs de ampliarse e intensi(cid:222) carse
+las acciones de control del vector en todos los ● La estimaci(cid:243)n R a partir de la fase ini-
+0
+municipios de la provincia. El segundo punto de cial de crecimiento exponencial (IC 95 %:
+retorno ocurri(cid:243) entre el 4 y 10 de noviembre, al 1.401-1.405) y permite alertar temprana-
+36 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+mente a las autoridades de salud de la Heffernan JM, Smith RJ & Wahl LM (2005). Perspec-
+ocurrencia de un brote cuando se obtie- tives on the basic reproductive ratio. Journal of
+nen valores R superiores a 1. Royal Society Interface 2, 281(cid:150)293 .
+0 Hsieh YH & Chen CWS (2009). Turning points, re-
+● El modelo de Richards multifases result(cid:243)
+production number, and impact of climatological
+el mÆs adecuado para modelar el compor-
+events for multi-wave dengue outbreaks. Tropical
+tamiento de la curva epidØmica del brote Medicine and International Health, volume 14 no
+en estudio. 6 pp 628(cid:150)638.
+Hsieh YH & Cheng YS (2006) Real-time forecast of
+● El modelo de tres ondas result(cid:243) el de me-
+multi-wave epidemic outbreaks. Emerging Infec-
+jores resultados y permiti(cid:243) describir el
+tious Diseases 12, 122(cid:150)127.
+efecto de las medidas de control imple-
+Hsieh YH & Ma S (2009) Intervention measures, tur-
+mentadas.
+ning point, and reproduction number for dengue,
+● Aunque el anÆlisis fue realizado de forma Singapore, 2005. American Journal of Tropical
+retrospectiva, el modelo de Richards mul- Medicine and Hygiene 80, 66(cid:150)71.
+Hsieh YH (2008) Richards model: a simple procedure
+tifases puede ser utilizado para el anÆlisis
+for real-time prediction of outbreak severity. To
+en tiempo real de futuros brotes.
+appear in (cid:145)(cid:145)Proceedings of Workshop of China-
+Canada Joint Program on Modeling of Infectious
+BIBLIOGRAF˝A Diseases(cid:146)(cid:146), Xian, China, 2006(cid:146)(cid:146). World Scienti(cid:222) c,
+Singapore.
+Burattini MN, Chen M, Chow A et al. (2008). Mo- Marques CA, Forattini OP & Massad E (1994). The
+delling the control strategies against dengue in basic reproduction number for dengue fever in
+Singapore. Epidemiology and Infection 136, 309- Sao Paulo state, Brazil: 1990-1991 epidemic.
+319. Transactions of the Royal Society of Tropical Me-
+Favier C, Degallier N, Rosa-Freitas MG. et al (2006). dicine and Hygiene 88, 58-59.
+Early determination of the reproductive number Mart(cid:237)nez E. (2004). Dengue y Dengue HemorrÆgico.
+for vector-borne diseases: the case of dengue in Ciudad de La Habana : CDS ediciones digitales.
+Brazil. Tropical Medicine and International Heal- Massad E.,F.A.B.Coutinho (2010). Estimation of R0
+th. Volumen II No 3, pp. 332-340. from the initial phase of an outbreak of a vector-
+GonzÆlez D, Castro O, Rodr(cid:237)guez F, Portela D, GarcØs borne infection. Tropical Medicine and Interna-
+M, Mart(cid:237)nez A et al. (2008). Descripci(cid:243)n de la tional Health. Volumen I5 No I, pp. 120-126.
+(cid:222) ebre hemorrÆgica del dengue, serotipo 3, Ciu- Pelaez O, Guzman MG, Kouri G et al. (2004). Den-
+dad de la Habana, 2001-2002. Rev Cubana Med gue 3 epidemic, Havana, 2001. Emerg Infect Dis.
+Trop;60(1). 10:719-722.
+GuzmÆn M.G., PelÆez O., Kour(cid:237) G et al.(2006). Ca- SÆnchez L, Vanlerberghe V, Alfonso L, Marquetti MC,
+racterizaci(cid:243)n (cid:222) nal y lecciones de la epidemia de Guzman MG, Bisset J, Van der Stuyft P (2006).
+Aedes aegypti larval indices identify neighbour-
+dengue 3 en Cuba, 2001(cid:150)2002. Rev Panam Salud
+hood high risk for Dengue epidemics. Emerg Inf
+Publica/Pan Am J Public Health 19(4).
+Disease; 12:800-806.
+ABSTRACT. After almost 20 years without dengue activity, in June 2001, dengue transmission was
+detected in Havana, Cuba; 12889 cases were reported. The objective of this research is to estimate
+the R and turning points for the outbreak to describe the impact of control interventions. Firstly,
+0
+we estimated R0 from the initial growth phase and later a multi-phase Richards(cid:146)s model was (cid:222) tted
+to weekly cumulative dengue data to pinpoint the turning points of the outbreak. The R estimation
+0
+was R =1.4030 (IC 95 %: 1.401-1.405). A three waves Richards(cid:146)s model was the best (cid:222) t. The (cid:222) rst
+0
+turning point occurred among October 14 and 20, 2001, one week after to be intensi(cid:222) ed the vector
+control actions in all municipalities of Havana City. The second turning point was estimated bet-
+ween November 4 and 10, 2001, when started a house by house survey for febrile cases. The third
+turning point occurred among December 2 and 8, 2001, when the number of cases began to dimi-
+nish again. The fourth turning point was among December 30, 2001 and January 5, 2002; it was
+maybe due to the delay of outbreak in the municipality of (cid:147)Habana Vieja(cid:148). The (cid:222) fth turning point
+occurred among the 13 and 19 January, coinciding with the launch of the intensive campaign that
+reverts the report of cases again, allowing the elimination of the outbreak in March 2002. The im-
+plemented methods showed utility for alerting about the possibility of the epidemic in early phases
+and to study the impact of the intervention and control measures.

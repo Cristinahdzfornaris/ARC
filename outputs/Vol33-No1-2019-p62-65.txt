@@ -1,0 +1,218 @@
+CienciasMatema´ticas,Vol.33,No.1,Pag.62-65,2019
+S-cajas Afines con Igual Varianza del Coeficiente de
+Confusio´n
+Affine S-boxes with the Same Confusion Coefficient
+Variance
+Ismel Mart´ınez-D´ıaz1*, Alejandro Freyre 1, Eziel Ramos 1, C.M. Lego´n1
+Resumen Laspropiedadesdeno-linealidadyvarianzadelcoeficientedeconfusio´nsondegranimportancia
+enlasS-cajas,componentesprincipalesdeloscifradoresdebloques.EsnecesarioagruparlasS-cajasdemodo
+quetodasposeanelmismovalordeno-linealidadyelmismovalordevarianzadelcoeficientedeconfusio´n.
+Enestetrabajosedemuestraexperimentalmentecomo,apartirdeunaS-cajainicial,sepuedeconstruirun
+subconjuntodeS-cajasaffinesquetienenigualvarianzadelcoeficientedeconfusio´n.Semuestraadema´sque
+lasS-cajaspertenecientesadichosubconjuntonoreflejanlamismafugahipote´ticadepotenciabajoelmodelo
+defuga:pesodeHamming.
+Abstract Properties as non-linearity and confusion coefficient variance are important in S-box design. In
+thisworkweshowanewmethodthatconstructanaffinesubsetofS-boxesfromaninitialS-box. Thissubset
+containsS-boxeswiththesameconfusioncoefficientvariancebutnotthesamehypotheticalleakageunderthe
+Hammingweightleakagemodel.
+PalabrasClave
+S-cajas—No-linealidad—Varianzadelcoeficientedeconfusio´n
+1InstitutodeCriptograf´ıa,FacultaddeMatema´ticayComputacio´n,UniversidaddelaHabana,Habana,Cuba,ismel@matcom.uh.cu,
+a.freyre@estudiantes.matcom.uh.cu,e.ramos@estudiantes.matcom.uh.cu,clegon58@gmail.com
+*AutorparaCorrespondencia
+1. Introduccio´n puedagenerarS-cajassemejantes.Enlaliteraturaactualno
+seconocenalgoritmosdeestetipo.
+Enlacriptograf´ıasime´trica,enparticulareneldisen˜ode
+Esconocidoadema´squelastransformacionesafinesma-
+cifradoresdebloques,esdeespecialimportancialascompo-
+tieneninvarianteelvalordeNL[3]yquelasS-cajaspueden
+nentesconocidascomoS-cajasocajasdesustitucio´n.Para
+reflejarlamismaresistenciaantelosataquesdecanalcolateral
+asegurarlaseguridadenelcifradoesnecesarioquelasS-cajas
+porconsumodepotenciasegu´nelmodelodefuga:pesode
+poseanbuenosvaloresdeciertaspropiedadescriptogra´ficas.
+Hamming[8].
+Entreestaspropiedadescriptogra´ficasdestacan:lapropiedad
+Enestetrabajoseinvestigalaexistenciadetransformacio-
+deno-linealidadNL(Non-linearity)[1]antelosataqueslinea-
+nesafinesquemantenganinvariantesambospara´metros(NL
+lesydiferenciales,ylapropiedaddevarianzadelcoeficiente
+y CCV). Se identifica un subconjunto de transformaciones
+deconfusio´nCCV(ConfusionCoefficientVariance)[7]ante
+afinesquenoalteranelvalordelavarianzadelcoeficientede
+losataquesdecanalcolateralporconsumodepotenciabajo
+confusio´n.Sepresentaunnuevome´todoquepermite,dado
+elmodelodefuga:pesodeHamming.
+una S-caja inicial, obtener S-cajas que poseen los mismos
+Existenvariosme´todosparaconformarS-cajasconbuenos
+valores de NL y CCV que la S-caja inicial. Se demuestra
+valoresdeNLoCCV.Engeneralestosme´todossepueden
+experimentalmenteelbuenfuncionamientodelme´todoenel
+agruparen:me´todosporconstruccio´nalgebraica[4],me´todos
+espaciodeS-cajasde8bitsy4bits.Finalmente,semuestra
+heur´ısticos(incluidalabu´squedaaleatoria)[5,9]ome´todos
+queapesardeposeerelmismovalordeCCV,lasS-cajasdel
+mixtos[2].
+conjuntonoreflejanlamismaresistenciaantelosataquesde
+Mientrasma´saltosseanlosvaloresdeestasdospropie- canalcolateralporconsumodepotenciabajoelmodelode
+dades,ma´sresistenteeslaS-cajaantedistintosataquescrip- fuga:pesodeHamming.
+togra´ficos[10],sinembargo,cuandoaumentaelvalordeNL,
+disminuyeelvalordeCCV,yviceversa[7].Deacuerdocon 1.1 Nocionesba´sicas
+loanterior,esmuycomplejoobtenerS-cajasconbuenosvalo- Una S-caja es una funcio´n vectorial booleana biyectiva
+resdeNLyCCValmismotiempo.SiseobtieneunaS-caja definidacomoS:{0,1}n→{0,1}n.LasS-cajasafinesauna
+conestascaracter´ısticas,esu´tilcontarconunalgoritmoque S-cajaSsonaquellasS-cajasS =S(x⊕a)⊕b,∀x∈{0,1}n
+a,b
+S-cajasAfinesconIgualVarianzadelCoeficientedeConfusio´n 63
+donde a,b∈{0,1}n, en el caso particular de a=0,b=0, 2.1 Experimentosrealizados
+entoncesS =S. Para evaluar el nuevo me´todo presentado se realizo´ el
+0,0
+TodaS-cajaaf´ınS aunaS-cajaSpoeseeelmismovalor siguienteexperimento:
+a,b
+NLqueS[3].
+DosS-cajasS ,S poseenlamismafugahipote´ticadepo- 1. En los espacios de S-cajas de 8 bits (n=8) y 4 bits
+a b
+tenciabajoelmodelodefuga:pesodeHammingsiHW(S (x))= (n=4).
+a
+HW(S (x)),∀x∈{0,1}n [8], donde la funcio´n de peso de 2. Segeneran10000S-cajasaleatoriasiniciales.
+b
+HammingHW(y),y∈{0,1}n,calculalacantidaddeunosen 3. PorcadaS-cajaaleatoriainicialseaplicaelme´todo1y
+elvectorbooleanoy. secreasuconjuntodetransformacionesafinescorres-
+TantoelvalordelapropiedadNLycomodelapropiedad pondiente.
+CCV de una S-caja S, pueden ser calculadas mediante la 4. SecalculaelvalorCCVdetodaslasS-cajaspertene-
+herramientaSET(S-boxEvaluationTool)presentadaen[6]. cientesacadaconjuntodeS-cajasresultante.
+Losresultadosobtenidosmostraronexperimentalmenteel
+2. Resultados y discusio´n
+correctofuncionamientodelme´todo.Sepudocomprobarque
+todaslasS-cajasdelosconjuntosresultantespose´ıanigual
+AfindeencontraralgunaS-cajaconaltovalorCCVman-
+valorCCVquecadaunadelasS-cajasinicialesalaplicarse
+teniendolaNL,seanalizantodaslasS-cajasafinesalamejor
+respectivamente10000veceselme´todo.
+S-cajapresentadaen[7].NoseencuentraS-cajaalgunacon
+dichacaracter´ıstica,enparticularporquelaS-cajainiciales SeguidamentesemuestralaS-cajaSPicek 8,0 ,pertenecien-
+unaS-cajaobtenidaporcomputacio´nevolutivayrepresenta tealconjuntoresultantedeaplicarelAlgoritmo1alaS-caja
+uno´ptimolocal.PerosepudocomprobarquetodaslasS-cajas presentadaen[7].EnparticularSPicek 8,0 seobtuvoconlos
+afines obtenidas cuando b=0 o b=255 poseen el mismo valores a=8 y b=0; es un ejemplo de S-caja con altos
+valorCCVquelaS-cajasinicial. valoresdeNLyCCVyaquesuS-cajainicialexhibeestas
+caracter´ısticas.
+Loanteriorsugiereplantear:
+Conjetura1. SeaSunaS-caja.ElsubconjuntodeS-cajasafi- SPicek 8,0 =(55,4f,ac,dd,3d,b0,13,cc,59,d2,7f,48,
+nesA={S |S (x)=S(x⊕a)⊕b},∀x∈{0,1}n,don- 08,8f,d1,94,0a,97,1e,7d,cb,71,bc,83,7b,19,4e,93,54,
+a,b a,b
+dea∈{0,1}n,b∈{0}n∪{1}n,cumplequeCCV(S )= cd,20,1f,4a,f7,5b,f2,17,5a,2f,22,eb,10,8d,67,a5,25,
+a,b
+CCV(S),∀S ∈A. 04,e3,4c,2d,86,ec,75,29,38,2c,d8,70,f5,07,41,ef,a6,
+a,b
+9c,1b,2e,8c,f6,76,06,96,c2,a3,45,fc,51,40,b7,c9,e0,
+ElconjuntoAposeeuntaman˜ode2∗(2n−1)S-cajasafi- 3a,be,74,e2,4d,69,bd,c0,ff,0c,7a,d4,ea,3c,21,73,a2,
+nesconigualvalordeCCValaS-cajainicialS.Estacantidad ab,6a,b3,ad,58,dc,a0,f3,2a,57,34,a4,46,89,e6,53,2b,
+creceenunordenexponencialconrespectoalacantidadde 8a,af,cf,88,62,90,f8,79,fd,43,44,ee,47,42,b1,d6,91,
+bitsn(verTab.1). 5f,77,50,8b,a8,f0,c8,3e,0d,84,35,85,52,23,fb,87,65,
+Paraestudiarexperimentalmentelacorrectituddelacon- 99,68,6b,82,df,05,5d,e4,9b,15,32,7e,98,9f,36,d5,ca,
+jetura,sepresentaunnuevome´todoparaobtenerS-cajascon 16,e9,24,db,64,6d,95,92,3b,03,6f,27,5e,1c,3f,b9,02,
+igualvalordeNLeigualvalordeCCVaunaS-cajasinicial. 8e,a1,ba,66,fa,18,60,ce,c3,11,4b,ae,81,fe,bb,12,c1,
+Dichome´todosedescribedeacuerdoalossiguientespasos b8,e8,aa,ed,b4,28,f4,31,c5,14,de,9d,d9,d0,78,c7,00,
+(verAlg.1): f9,a9,da,b5,49,d3,0b,f1,09,e7,e5,0f,6c,56,6e,80,bf,
+0e,e1,1d,c6,33,30,d7,5c,9e,1a,37,a7,01,63,61,7c,b2,
+Algorithm 1 Me´todo para obtener S-cajas con igual NL e 9a,26,c4,b6,72,39)
+igualCCV AunquelasS-cajasdeAposeenelmismovalordeCCV,
+noposeenlamismafugahipote´ticadepotenciabajoelmodelo
+Require: S,S-caja.
+defuga:pesodeHamming.
+Ensure: R,conjuntodeS-cajasconigualNLyCCVqueS.
+Para demostrar lo anterior se define el siguiente experi-
+1: R←0/
+2:
+fora∈{0,1}n\{0}ndo mento:
+3:
+forb∈{0}n∪{1}ndo
+4:
+forx∈{0,1}ndo 1-SecreamedianteelAlgorimo1elsubconjuntodeS-
+cajasafinesA alaS-cajadelcifradorAESqueposeensu
+5: S a,b (x)←S(x⊕a)⊕b aes
+mismovalorCCV.
+6: endfor
+7: R←R∪{S a,b }
+8: endfor
+9: endfor A ={S |S (x)=S (x⊕a)⊕b},∀x∈{0,1}n (1)
+10: return R aes a,b a,b aes
+dondea∈{0,1}n,b∈{0}n∪{1}n.
+64 S-cajasAfinesconIgualVarianzadelCoeficientedeConfusio´n
+Cuadro1.Taman˜odelconjuntoAenrelacio´nconeltaman˜odebitsn
+Cantidaddebits Cantidad de ele-
+mentosdelconjunto
+4 30
+8 510
+2- Para cada S-caja S ∈A se calcula su distancia
+a,b aes
+euclideana:
+(cid:115)
+ED(S ,S )= ∑ (HW(S (x))−HW(S (x)))2 (2)
+a b a b
+x∈{0,1}8
+ysudistanciadeHamming:
+(cid:40)
+1 HW(S (x))(cid:54)=HW(S (x)),
+HD(S ,S )= ∑ a b (3)
+a b
+0 e.o.c
+x∈{0,1}8
+conrespectoalaS-cajaS .
+AES
+Losresultadosobtenidoscompruebanloesperado.LasS-
+cajasdelconjuntoA poseendistintafugahipote´ticadelaS- Figura2.HDentrecadaS-cajaquepertencealconjunto(1)-
+aes
+cajaS .InclusodistandedichaS-cajaconvaloresdiferentes puntosalrededor-ylaS-cajadelcifradorAES-punto
+AES
+(verfiguras1.y2.)segu´ndistanciastandis´ımilescomoson central-
+ladistanciaeuclidianayladistanciadeHamming.Enelcaso
+deladistanciaeuclideanasepuedeverque:ED(S ,S )>
+a,b AES
+dichoconjuntodeS-cajasparaestudiarmejorelespaciode
+25,∀S ∈A .MientrasqueparaladistanciadeHamming:
+a,b aes
+bu´squedadetodaslasS-cajas.Quedacomoproblemaabierto
+HD(S ,S )>150,∀S ∈A .
+a,b AES a,b aes
+encontrarS-cajasafinesqueposeanlamismafugahipote´tica
+depotenciabajoelmodelodefuga:pesodeHamming.
+Referencias
+[1] Claude Carlet and Cunsheng Ding. Nonlinearities of
+s-boxes. Finitefieldsandtheirapplications,13(1):121–
+135,2007.
+[2] Reynier Antonio de la Cruz Jime´nez. On some met-
+hodsforconstructingalmostoptimals-boxesandtheir
+resilience against side-channel attacks. IACR, (618),
+2018.
+[3] Gregor Leander and Axel Poschmann. On the classi-
+fication of 4 bit s-boxes. Arithmetic of Finite Fields,
+(159-76),2007.
+Figura1.EDentrecadaS-cajaquepertencealconjunto(1)-
+[4] KaisaNyberg. Diffrentiallyuniformmappingsforcry-
+puntosalrededor-ylaS-cajadelcifradorAES-punto
+ptography. InAdvancesinCryptology-EUROCRYPT
+central-
+93,WorkshopontheTheoryandApplicationofCrypto-
+graphicTechniques,pages55–64.Springer,1994.
+Conclusiones [5] StjepanPicek.Applicationsofevolutionarycomputation
+tocryptology. sn:SI,2015.
+SedefineunnuevoconjuntodeS-cajasqueposeenigual
+no-linealidadeigualvarianzadelcoeficientedeconfusio´ny [6] StjepanPicek,LejlaBatina,DomagojJakobovic´,Barıs¸
+sepresentaunme´todoparagenerardichoconjuntoatrave´s Ege, and Marin Golub. S-box, set, match: a toolbox
+deunaS-cajainical.Comotrabajofuturosepretendeutilizar fors-boxanalysis. InIFIPInternationalWorkshopon
+S-cajasAfinesconIgualVarianzadelCoeficientedeConfusio´n 65
+InformationSecurityTheoryandPractice,pages140– depotencia. Tesisdediploma,FacultaddeIngenier´ıaIn-
+149.Springer,2014. forma´tica,UniversidadTecnolo´gicadelaHabana,2016.
+[9] DaniaTamayo. Algoritmosheur´ısticosh´ıbridosparael
+[7] StjepanPicek,KostasPapagiannopoulos,Barıs¸Ege,Lej-
+disen˜odes-cajas.Master’sthesis,FacultaddeMatema´ti-
+laBatina,andDomagojJakobovic. Confusedbyconfu-
+cayComputacio´n,UniversidaddelaHabana,2017.
+sion:Systematicevaluationofdparesistanceofvarious
+s-boxes. InInternationalConferenceinCryptologyin
+[10] HenkCAVanTilborgandSushilJajodia. Encyclope-
+India,pages374–390.Springer,2014.
+diaofcryptographyandsecurity. SpringerScience&
+BusinessMedia,2014.
+[8] RicardoSa´nchez. Generacio´ndes-cajasequivalentes
+segu´nsuresistenciaalosataquesporana´lisisdiferencial

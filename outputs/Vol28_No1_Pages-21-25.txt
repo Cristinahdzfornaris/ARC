@@ -1,0 +1,284 @@
+Revista Ciencias Matemáticas
+Descripción de la categoría derivada
+de un álgebra de tipo A equiorientada
+3
+con radical cuadrado cero
+Lic. Bely Rodríguez Morales (b.rodriguez@matcom.uh.cu), Dr. José Fidel Hernández Advíncula ((cid:980)idel@matcom.uh.cu)
+Facultad de Matemática y Computación, Universidad de La Habana
+Resumen Se puede probar que:
+El presente trabajo está dedicado a exponer una represen-
+Teorema:
+tación diagramática de la categoría derivada de un álgebra
+En toda categoría de Krull-Schmidt C se satisface el teo-
+no hereditaria. Se describe primeramente algunas pro-
+rema de Krull-Schmidt, es decir, todo objeto de C se des-
+piedades de los triángulos de Auslander Reiten, los cuales
+compone como suma de objetos indescomponibles y esta
+constituyen una herramienta fundamental para la cons-
+descomposición es única salvo isomor(cid:976)ismos.
+trucción del carcaj que representa a la categoría estudiada.
+Finalmente se expone el proceso de construcción del carcaj
+De(cid:976)inición:
+que representa a la categoría derivada.
+Sea C una categoría de Krull Schmidt y X,Y !C. Se de(cid:976)ine
+Abstract rad(X,y) como el subespacio de Hom (X,Y) formado por to-
+C
+dos los mor(cid:976)ismos no inversibles.
+This work is dedicated to expose a diagrammatic represen-
+Y el conjunto rad2(X,Y) se de(cid:976)ine como los mor(cid:976)ismos de
+tation for the derived category of a non- hereditary algebra.
+la forma fg con g ! rad(X,M), f ! rad(M,Y) para cierto M ! C.
+At (cid:976)irst, the Auslander Reiten triangles and their proper-
+Además se denota
+ties are described. Finally, the construction process of the
+quiver which represents the derived category is explained. lrr(X,Y) = rad(X,Y)/rad2(X,Y)
+De(cid:976)inición:
+Un mor(cid:976)ismo h:X → Y se dice irreducible si:
+1. Categorías de Krull Schmidt
+• h no es sección,
+De(cid:976)inición: • h no es retracción,
+Se dice que C es una categoría de Krull-Schmidt si para todo • Si h = h h h = h h es una factorización cualquiera de h
+2 1 2 1
+objeto indescomponible Z ! C el anillo End(Z) es local, es entonces se cumple que h h es retracción o h h es sec-
+2 2 1 1
+decir, posee un único ideal maximal y además para cada ción.
+X,Y ! C el conjunto Hom (X,Y) tiene estructura de K-espacio
+C Se tiene entonces que:
+vectorial de dimensión (cid:976)inita.
+— 21 —
+Sociedad Cubana de Matemática y Computación
+Proposición: Nota: Si en la de(cid:976)inición anterior se sustituye 𝓚(𝒜) por
+Sea C una categoría de Krull Schmidt y X,Y ∈ C objetos in- 𝓚b(𝒜) se obtiene entonces la categoría derivada de com-
+descomponibles. Entonces f: X → Y es irreducible si y solo si plejos acotados que se denota por 𝓓b(𝒜).
+f ! rad(X,Y)\rad2(X,Y). El teorema que asegura la existencia de la categoría de-
+Ahora se presentará una forma de representar a C me- rivada así como las propiedades fundamentales sobre cate-
+diante un carcaj. gorías derivadas pueden ser consultados en [2].
+En el caso en que A es un algebra de Artin se denota por
+De(cid:976)inición: 𝓓b(𝒜) a la categoría derivada de complejos acotados de
+Sea C una categoría de Krull Schmidt entonces se de(cid:976)ine el modA.
+carcaj Γ(C) como sigue: Esta sección se centrará en la descripción de herramien-
+tas que permitan estudiar el carcaj de Auslander Reiten de
+• Los vértices son las clases de isomor(cid:976)ismo de los objetos 𝓓b(𝒜), el cual se denota por Γ(𝓓b(𝒜)) .
+indescomponibles de C, siendo [X] = [X'] si y solo si X b X'. Las demostraciones que no sean desarrolladas aquí se
+• La cantidad de (cid:976)lechas del vértice [X] a [Y] viene dada pueden estudiar en [1].
+por d = dimlrr(X,Y). Durante todo este trabajo C = (C; 𝒯; T) denotará una cate-
+XY
+goría triangulada y de Krull-Schmidt.
+En caso de que C = modA entonces el carcaj Γ(modA) recibe
+el nombre de carcaj de Auslander Reiten del álgebra A. De(cid:976)inición:
+Para un estudio más profundo de las categorías de Krull Se dice que un triángulo X u Y v Z w TX es un
+Schmidt puede consultarse [1]. triángulo de Auslander Reiten si:
+(AR1) X y Z son indescomponibles,
+2. Triángulos
+(AR2) w≠ 0,
+de Auslander Reiten
+(AR3) Si f: W→Z no es retracción entonces existe f': W → Z
+tal que f = vf', visto en forma de diagrama conmu-
+Durante el resto de este trabajo C = (C; 𝒯; T) denotará una tativo quedaría: C
+categoría triangulada y de Krull-Schmidt.
+W
+f’ f
+De(cid:976)inición (Categoría Derivada):
+Sea 𝒜 una categoría abeliana y 𝒦(𝒜) la categoría de com-
+u v w
+X Y Z TX
+plejos sobre 𝒜 cociente la relación de homotopía. Una ca-
+tegoría 𝓓(𝒜) se llama categoría derivada de 𝒜 si existe un
+funtor 𝒬:𝓚(𝒜) → 𝓓(𝒜) que satisface: De(cid:976)inición:
+Se dice que C tiene triángulos de Auslander Reiten si para
+(DC1) Si f es un cuasi-isomor(cid:976)ismo entonces Q(f) es un iso- todo objeto indescomponible Z ! C existe un triángulo de
+mor(cid:976)ismo. Auslander Reiten de la forma:
+(DC2) Cualquier funtor F:𝓚(𝒜) → 𝒟 que trasforme cua- X u Y v Z w TX
+si-isomor(cid:976)ismos en isomor(cid:976)ismos puede ser factori-
+zado de forma única sobre 𝓓(𝒜), es decir, existe un Proposición:
+único funtor G: 𝓓(𝒜) → 𝒟 tal que F = GQ. Si X u Y v Z w TX es un triángulo de Auslan-
+der Reiten entonces u y v son irreducibles.
+— 22 —
+Revista Ciencias Matemáticas
+Si A es una K-álgebra se conoce entonces que el funtor de Lema:
+Nakayama Sea 𝒞 una categoría triangulada de Krull Schmidt que po-
+v = DHom (—,A): P→ l
+A A A see triángulos de Auslander Reiten, X y M objetos indescom-
+induce una equivalencia entre las categorías P e l, más
+A A ponibles en 𝒞 y X u Y v Z w TX un triángulo
+aún, una cuasi-inversa para el funtor de Nakayama es
+de Auslander Reiten. Sea Y=+ i k =1 Y i di una descomposición
+v— = DHom (D(A ),—). Es decir, existe una transformación b
+A A de Y en objetos indescomponibles tales que Y Y implica
+natural inversible (cid:2009) p :DHom(P,—)→Hom(—,vP) o de forma i = j. Entonces lrr(X,M) ≠ 0 si y solo si M b Y p i ara a i lgún i y
+equivalente, para cada X ! modA existe una dualidad de i i
+además se tiene d = d .
+espacios vectoriales i XM
+(cid:1766).,.(cid:1767): Hom(P,X) ⨯ Hom(X,vP)→K, ((cid:2022),(cid:2015))↦ (cid:1766)(cid:2022),(cid:2015)(cid:1767),
+3. Estudio
+tal que (cid:1766)(cid:3091) (cid:2022),(cid:2015)(cid:1767) = (cid:1766)(cid:2022), (cid:2015)(cid:3091)(cid:1767) y (cid:1766)(cid:2022)(cid:3095), (cid:3100)(cid:3095)(cid:3086)(cid:1767) = (cid:1766)(cid:2022), (cid:2015)(cid:3091)(cid:1767) para todo mor-
+de la categoría 𝓓b(A)
+(cid:976)ismo (cid:2020)∈ mod A(cid:2020) y todo mor(cid:976)ismo (cid:2024)∈ P.
+A
+Teorema:
+En esta sección se darán resultados y métodos para la
+Sea A una K-álgebra de dimensión (cid:976)inita y de dimensión glo-
+construcción del carcaj de la categoría derivada de comple-
+bal (cid:976)inita. Entonces la categoría 𝓓b(𝒜) tiene triángulos de
+jos acotados de modA.
+Auslander Reiten.
+Demostración:
+Proposición:
+El funtor de Nakayama induce una equivalencia, que se se-
+Si A es hereditaria entonces los objetos indescomponibles
+guirá denotando por ν, entre las categorías 𝒦b( P) y 𝒦b( I)
+A A de 𝓓b(A) son isomorfos a complejos concentrados cuyo ob-
+y una transformación natural inversible
+jeto concentrado es indescomponible.
+α DHom(P.,—)→Hom(—,νP.).
+P:
+De hecho si X ∈ 𝒦b(modA), la dualidad asociada
+Demostración:
+(cid:1766).,.(cid:1767): \Hom(P.,X) ⨯ Hom(X,νP.)→K,
+Como 𝓓b(A) es equivalente a 𝒦b( I) basta probar que todo
+se de(cid:976)ine como A
+/ indescomponible en 𝒦b( I) es isomorfo a algún
+p,h = (-1)i pi,hi . A
+i!Z f 0 Ij dj Ij+1 0 f
+Como A tiene dimensión global (cid:976)inita entonces 𝓓b(𝒜) es
+siendo dj epimor(cid:976)ismo.
+equivalente (como categoría triangulada) 𝒦b( P) y a 𝒦b( I).
+A A Sea I. un indescomponible de 𝒦b( I). Trasladando, en
+Luego todo objeto de 𝓓b(𝒜) puede ser escrito en la forma A
+caso de que sea necesario, se puede asumir que I. tiene la
+P. donde P.∈ 𝒦b( P).
+A
+forma:
+Supóngase ahora que P. es indescomponible en 𝓓b(𝒜)y
+f 0 I0 d0 I1 d1 I2 f,
+sea φ ∈ D Hom(P.,P.) la forma lineal de(cid:976)inida sobre End(P)
+donde I0 ≠ 0. Sea I0 g X h I1 una factorización de d0
+que se anula sobre rad(End(P)) y cumple φ(id ) = 1. Consi-
+P
+con g epimor(cid:976)ismo y h monomor(cid:976)ismo. Como A es heredita-
+dérese α (φ) ∈ D Hom(P.,vP.), α (φ) es una forma lineal no
+. .
+P P
+ria se tiene que X es inyectivo y h es una sección. Luego se tie-
+nula tal que α (φ) f = 0 siempre que el mor(cid:976)ismo f ∈ 𝓓b(A)
+P . ne un isomor(cid:976)ismo en modA de la forma X +C (hu) I1.
+no sea una retracción. Esto implica que
+T-1vP$ Mc(T-1aP$({)) P$ aP$({) vP$ Como d1h = 0, se tiene un isomor(cid:976)ismo de complejos:
+satisface (AR3). Luego es un triángulo de Auslander Reiten.
+El siguiente lema a(cid:976)irma que los triángulos de Auslander
+Reiten de una categoría triangulada 𝒞 llevan la informa-
+ción del carcaj Γ(𝒞).
+— 23 —
+Sociedad Cubana de Matemática y Computación
+De donde la categoría 𝓓b(A). Así que cuando se diga que un módulo P
+f 0 I0 g X 0 f en 𝓓b(A) es vértice del carcaj deberá entenderse que
+es cero o ... → 0 → P → 0 → ... es un vértice del carcaj.
+f 0 C I2 I3 f
+Del carcaj de Auslander Reiten del álgebra de A, cuya es-
+es cero. En el primer caso se deduce que el complejo I. tiene
+tructura es
+longitud menor y se reitera el razonamiento. En el segundo
+caso I. es isomorfo a
+f 0 I0 g X 0 f
+Nota: En el caso de que A no sea una K-álgebra heredita-
+ria se sigue cumpliendo que los concentrados de objetos in- se tiene que los concentrados de los vértices de dicho carcaj
+descomponibles serán siempre indescomponibles en 𝓓b(A) son indescomponibles en 𝓓b(A), es decir, son indescomponi-
+pero, además existirá al menos un objeto indescomponible bles: P3, P2, P1, S2 e I1. Conviene ahora buscar las expresiones
+no isomorfo a un concentrado. que representan a S2 y a I1 en la categoría de complejos acota-
+dos de proyectivos que es equivalente a 𝓓b(A) y para esto bas-
+Proposición: ta con calcular resoluciones proyectivas para estos módulos:
+La séxtupla P → P → S → 0,
+3 2 2
+T-1I d - T T - - 1 1 p v' n T-1I /SOC(I)+rad(P) (T-1vi) P "I P 3 → P 2 → P 1 → I 1 → 0.
+a a a a a a
+Entonces S e I en 𝓓b(A) serían respectivamente
+es un triángulo de Auslander Reiten. 2 1
+... → 0 → P → P → 0 → ... y
+3 2
+... → 0 → P → P → P → 0 → ....
+3 2 1
+4. Análisis de la categoría Se puede comprobar que ... → 0 → P → P → 0 → ... es
+2 1
+𝓓b(A) en un álgebra indescomponible. Además analizando los mor(cid:976)ismos no so-
+no hereditaria breyectivos de la forma PS1+PS2+PS3 "Pr1+Pr2+Pr3 se
+1 2 3 1 2 3
+puede probar que el complejo ... → 0 → P2 → P1 → 0 → ...
+El proceso de construcción del carcaj que representa a la ca- es el único indescomponible no isomorfo a un concentrado.
+tegoría 𝓓b(A) para un álgebra no hereditaria suele ser en la Además el complejo
+mayoría de los casos muy complejo. Esto se debe a que no f 0 P 2 2 P 1 0 f
+existe un método sencillo que permita describir Γ(𝓓b(A)) es isomorfo al cono del mor(cid:976)ismo (cid:2034):P → P , el cual se de-
+2 1
+para un álgebra no hereditaria como sucede en el caso he- nota por Mc((cid:2034)).
+reditario. Analizando el carcaj de Auslander Reiten de A se tiene
+Esta sección tiene como objetivo describir el proceso la existencia de un mor(cid:976)ismo irreducible S → P . Además
+2 1
+de construcción de 𝓓b(A) cuando A es el álgebra dada por se tiene el siguiente mor(cid:976)ismo irreducible de S [0] → P [-1]:
+2 3
+f P P f
+el carcaj 1 a 2 b 3 sujeto a las relaciones dadas S = 3 2
+2
+por el ideal (cid:1766)βα(cid:1767) el cual coincide con radical cuadrado del
+P[-1]
+carcaj. 3 f P 0 f
+3
+No se pretende ser demasiado exhaustivo en la justi(cid:976)i- Entonces la construcción de Γ(𝓓b(A)) comenzaría:
+cación de todos los resultados sino más bien ilustrar las
+diferentes técnicas que se utilizan para la construcción de
+dicho carcaj.
+Nota: Se tomará el convenio de identi(cid:976)icar todo módulo Luego de la resolución proyectiva que represen-
+P∈modA con el complejo concentrado en 0 asociado a él en ta a I se deduce la existencia del mor(cid:976)ismo irreducible
+1
+— 24 —
+Revista Ciencias Matemáticas
+P [-1] → Mc((cid:2034))[0] dado por: I [0] S [-1] P[-1] I [-1]
+3 1 2 1 1
+P[0]=I [0] S [0] P[-1] I [-1]
+2 3 2 3 3
+Aplicando una translación al último triángulo se tiene:
+P[-1]=I [-1] S [-1] P[-2] I [-2]
+2 3 2 3 3
+De la proposición enunciada en la sección referente a los
+Se puede ver que el mor(cid:976)ismo de P [0] → Mc((cid:2034))[0] dado por
+1 triángulos de Auslander Reiten se tiene que los dos prime-
+ros mor(cid:976)ismos que aparecen en los triángulos anteriores
+son irreducibles. Entonces el paso siguiente para construir
+el carcaj Γ(𝓓b(A)) sería:
+es irreducible. Entonces la construcción seguiría:
+Pero aquí ya se ve una regularidad en el grá(cid:976)ico y razonan-
+do de la misma forma se continua desarrollando el carcaj
+Ahora se deben buscar mor(cid:976)ismos que salgan del cono de
+a ambos lados. Luego el carcaj que representa a la cate-
+(cid:2034). Se tienen los mor(cid:976)ismos irreducibles Mc((cid:2034))[0] →P [-1] y
+2 goría derivada de complejos acotados de módulos sobre
+Mc((cid:2034))[0] →I [0] dados respectivamente por
+2 1 a 2 b 3sujeto a las relaciones dadas por (cid:1766)βα(cid:1767) es:
+Mc(2)[0]= f P 2 P f
+2 1
+2
+P[-1]= f P 0 f Bibliografía
+2 2
+y
+HAPPEL, DIETER (1988): Triangulated Categories in the Repre-
+sentation Theory of Finite Dimensional Algebras. Cambridge
+University Press, 1988.
+Entonces el proceso de construcción continúa:
+BARRY MITCHEL Theory of Cathegories ACADEMIC PRESS New
+York and London, 1965.
+SERGEI I. GELFAND, YURI I. MANIN Methods of Homological Al-
+gebra. Springer, 1989.
+C.CIBILS, F.LARRIÓN y L.SALMERÓN Métodos diagramáticos en
+Teoría de Representaciones. Monogra(cid:976)ía del Instituto de Ma-
+Aunque A no es hereditaria para los vértices j del carcaj
+temáticas de la UNAM, No. 11, México, 1981.
+asociado a A tales que el módulo E, descrito en la sección
+M. AUSLANDER, I. REITEN, S. SMALO, Representation Theory of
+anterior, sea no nulo se cumplirá que el siguiente triángulo
+Artin Algebras, Cambridge studies in advanced mathematics,
+será de Auslander Reiten:
+36, 1995, Cambridge University Press.
+I Trad(P) + I /SOC(I) TP TI
+j j j j j j
+Donde T es el funtor de translación [-1].
+Tal es el caso de los vértices 1 y 3 del carcaj1 a 2 b 3.
+Y por tanto se tienen los triángulos de Auslander Reiten:
+— 25 —

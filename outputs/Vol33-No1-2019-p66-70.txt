@@ -1,0 +1,291 @@
+CienciasMatema´ticas,Vol.33,No.1,Pag.66-70,2019
+Debilidades de los me´todos de discretizacio´n para
+contrasen˜as gra´ficas
+Weakness of the discretization methods for graphic
+passwords
+Ernesto A. Borrego Rodr´ıguez1*, Pedro E. Navarro Sosa1, Carlos M. Lego´n Pe´rez1
+Resumen Laautenticacio´ngra´ficasurgecomounaalternativaaproblemaspresentadosporlascontrasen˜as
+alfanume´ricas,perolosme´todosdediscretizacio´ndeima´genesexistenteshastaahoraau´npresentanproblemas
+deseguridadyusabilidadparalosusuarios.Enestetrabajoseanalizanycomparantresme´todosdediscretiza-
+cio´ndeima´genes:Discretizacio´nRobusta,Discretizacio´nCentradayDiscretizacio´nOptima;ysemuestransus
+principalesdiferenciasydebilidadescriptogra´ficasmediantesusregionesdetoleranciayr-seguridad.
+Abstract Graphicauthenticationemergesasanalternativetoproblemspresentedbyalphanumericpasswords,
+buttheexistingmethodsofimagesdiscretizationstillpresentsecurityandusabilityproblemsforusers. Inthis
+work, three methods of images discretization are analyzed and compared: Robust Discretization, Centered
+DiscretizationandOptimalDiscretization;anditsmaindifferencesandcryptographicweaknessesareshown
+throughitsregionsoftoleranceandr-security.
+PalabrasClave
+Autenticacio´ngra´fica—Discretizacio´n—Regio´ndetolerancia—r-seguridad
+1InstitutodeCriptograf´ıa,UniversidaddeLaHabana,LaHabana,Cuba,ernesto.borrego@matcom.uh.cu,pedropepe3437@gmail.com,
+clegon58@gmail.com
+*AutorparaCorrespondencia
+Introduction punto como su contrasen˜a en la fase de registro para que,
+posteriormente lo reseleccione en la fase de autenticacio´n.
+Losme´todosdeautenticacio´ngra´ficacomoPureRecall,
+Comoesdeesperar,pedirlealusuarioquevuelvaaseleccionar
+RecognitionyCuedRecallBasedTechniquessurgencomo
+exactamente el mismo punto dos veces volveria el proceso
+unaalternativaparasolucionarproblemaspresentadosporlas
+demasiadocomplejo,hayquetenerencuentaquerequerirel
+contrasen˜asalfanume´ricas.[1]Elpresentetrabajoseenfocaen
+mismo punto para la autenticacio´n es pedir exactamente el
+elestudiodetresdelosprincipalesme´todosdediscretizacio´n
+mismop´ıxeldentrodeunaimagendem×npixeles.Loque
+deima´genesutilizadosensistemasdeautenticacio´ndeltipo
+hacenecesariodefinirunmargendeerroralrededordelpunto
+CuedRecall[1],[2],[3].Secomparandichasdiscretizaciones
+originaldelacontrasen˜adentrodelcualsepudeseleccionar
+encuantoaltaman˜oderegio´ndetoleranciaqueutilizan,el
+unpuntoyseaaceptadocomova´lido.
+radiodeseguridadqueofrecen,ylosproblemasdeseguridad
+quepuedenpresentar.
+Definicio´n1(Regio´ndeTolerancia) SellamaRegio´ndeTo-
+Primeramentesevera´ co´moeselfuncionamientodelas
+leranciaalconjuntodepuntosdelaimagenquesonacepta-
+tresdiscretizacio´nesdentrodelossistemasdeautenticacio´n
+doscomova´lidosenlafasedeautenticacio´nparaelpunto
+[1],[2],[3].Acontinuacio´nseexplicanlasdeficienciasque
+original.
+presentancadaunadelasdiscretizaciones.
+SeaRT elconjuntodepuntosdelaregio´ndetolerancia,
+I elconjuntodepuntosdelaimagen,y f unafuncio´nindica-
+1. Discretizacio´n doraqueparatodopuntodelaimagendevuelve1sielpunto
+esaceptadocomova´lidoy0sino,entonces:
+Todotipodeautenticacio´ngra´ficadeltipoCued-Recall
+[4]sebasainvariablementeenseleccionaralmenosunpunto RT ⊂Italque∀p∈RT, f(p)=1
+deunaimagen.Espec´ıficamenteenelPassPointsyenelCued
+Click Point [4] esto plantea una serie de requerimientos y Estaregio´ndetoleranciaeslaquedeterminara´ entodos
+problemasatenerencuentaalahoradecrearunsistemade lossistemasdeautenticacio´ncualessonlospuntosalrededor
+autenticacio´n. de la contrasen˜a aceptados por el sistema. Estrechamente
+Paraempezar,senecesitaqueunusuarioseleccioneun relacionadatenemoslasiguientedefinicio´n:
+Debilidadesdelosme´todosdediscretizacio´nparacontrasen˜asgra´ficas 67
+Definicio´n2(Puntor-seguro) Unpunto p sedicer-seguro sonnecesariasysuficientesparaasegurarunaseparacio´nde
+0
+enunaRTparaunradiordado,siysolosi: almenosrpixelesentreelpuntoyalmenosunadelasparti-
+ciones.
+∀p∈I, talque(cid:107)p−p (cid:107)<rentonces p∈RT, En la figura 1 se observan tres particiones diferentes
+0
+G ,G ,G ,dospuntosAyBescogidosenlafasederegistroy
+0 1 2
+dondep eselpuntooriginaldelacontrasen˜a.Alpara´me- doscircunferenciasderadiorcentradasendichospuntos.En
+0
+trorseledenominaradiodeseguridad. estecasoocurrequeelpuntoAesta´aunadistanciamenorque
+rdelasparticionesG yG ,porloqueenestecasoparael
+1 2
+Esta definicio´n, plantea una propiedad indispensable a puntoAseescogelaparticio´nG ,mientrasqueBseencuentra
+0
+cumplirparatodoregio´ndetolerancia: demasiadocercadeG ,peroesr-seguroenG yG ,porlo
+0 1 2
+que para el punto B se pueden escoger cualquiera de estas
+Propiedad1 Todo punto p 0 de la contrasen˜a debe ser r- dosparticiones.Unavezescogida,seseleccionacomoRTel
+seguroensuregio´ndetolerancia. cuadrantededichaparticio´nalqueperteneceelpunto.
+Paralograrobtenerquecadapuntodelacontrasen˜aperte-
+nezcaaunaregio´ndetoleranciadondesear-seguroenlacual
+unusuarioleg´ıtimopuedaautenticarse,surgeladiscretizacio´n
+delaimagen.Unaprimeraideamuyintuitivaser´ıaparticionar
+laimagenencuadr´ıculas,loqueplanteaelsegundoproblema
+a tener en cuenta a la hora de discretizar una imagen para
+autenticar:elproblemadelve´rtice.[1]
+El problema del ve´rtice plantea que para una particio´n
+comolaanterior,existelaposibilidaddequeseseleccione
+un punto que se encuentre en uno de los ve´rtices o aristas
+de la particio´n, o relativamente cerca(<r). El primer caso
+planteaunproblemadedecisio´nparaseleccionarcualesla
+regio´ndetoleranciaquelecorrespondealpunto,mientrasque
+paraamboscasosnosecumplelapropiedad1delaregio´nde
+tolerancia.
+Una de las principales razones por la cual es necesario
+ladiscretizacio´nsebasaenlaseguridad.Sibiensenecesita
+aceptar puntos relativamente cerca del punto original de la
+contrasen˜a, el sistema no puede guardar en texto plano los Figura1.Particiones
+puntosseleccionados.Paraello,unavezescogidoslospuntos
+de la contrasen˜a por el usuario, el sistema calcula su valor EnlaDiscretizacio´nRobustaparalograrlar-seguridaddel
+hashyloguarda.Estosuponeotroproblemaatenerencuenta, punto,lascuadr´ıculasdelasparticionessonde6rx6r(tolerancia)
+yaque,parapuntoscercanosenlaimagen,susvaloreshash ycadaparticio´nestaaunadistanciade2r delasotras.Por
+sonbastantediferentes,porloquedadolosvaloreshashde construccio´n,enlafasedeautenticacio´n,unpuntoaunadis-
+dospuntos,noesposibledeterminarladistanciaentreellos, tancia menor o igual a r del punto original pertenecera´ al
+portanto,tampocosepuedeasegurarqueseencuentrenauna mismocuadrante,loqueaseguralavalidezdelusuarioyaque
+distanciamenorquer.Pararesolveresto,esnecesariocifrar la imagen de la funcio´n hash sera´ la misma. Por otro lado,
+√
+todolaregio´ndetoleranciaunavezescogidaynoexactamente cualquierpuntoaunadistanciamayora5 2rperteneceraa
+elpuntooriginaldelacontrasen˜a. otrocuadrante,porloquesegarantizalanoautenticacio´n.
+Enresumen,esnecesariodiscretizarlaimagendeforma Lafigura2muestrauncuadrantedeunadelastrespar-
+tal que, para todo punto de la imagen exista una regio´n de ticionesyunalineadepuntosazulesquedelimitalaregio´n
+toleranciaalacualpuedapertenecerenlaquesear-seguroy exactadelospuntosdentrodelcuadrantequedeserseleccio-
+dondeenelsistemadeautenticacio´nsecifretodasuregio´n nadoscomocontrasen˜aseseleccionar´ıadichocuadrante.Se
+detolerancia. debenotarqueenelpeordeloscasosdelalineadepuntos
+azules(esquinasuperiorderechaoesquinainferiorizquierda)
+1.1 Discretizacio´nRobusta elpuntoseleccionadopermanecer-segurodentrodelcuadran-
+Paraevitarelproblemadelve´rtice,en[1]seproponeun te,yadema´s,cualquierpuntofueradelalineaazuldevolver´ıa
+me´todollamadoRobustDiscretization(Discretizacio´nRobus- otrocuadranteaseleccionar.
+ta)queutilizaunconjuntodetresparticionesdiferentesde Peroestaformadediscretizarimplicaunatoleranciadema-
+laimagen:G ,G ,G ;paragarantizarquetodopuntosear- siadograndeconrespectoalc´ırculodefinidoporlar-seguridad
+0 1 2
+seguro en al menos una de las tres particiones. Es bastante delpunto.Loqueconllevaauna´readeaceptacio´ncompleta-
+intuitivoqueparaunaimagenbidimensional,3particiones menteporfueradelc´ırculo.
+68 Debilidadesdelosme´todosdediscretizacio´nparacontrasen˜asgra´ficas
+enelpuntox,porloqueseconstruyeelsegmentodelongitud
+2rcentradoenelpuntoyapartirdeestesegmentoseparti-
+cionaelintervalo[0,m]ensegmentosdeiguallongitud.Es
+evidentequeenlamayoriadeloscasosexistira´ unsobrante
+delongitudd∈[0,2r)aliniciodelintervalo[0,m]porloque
+siseguardaestalongitudd,esposibleconstruirlaparticio´n
+ensegmentosdelongitud2rcomenzandoend dondeunode
+lossegmentostendra´ porcentroalpuntox.
+Figura4.Discretizacio´ncentradaunidimensional
+Una vez fijado r y establecido el punto x en la fase de
+registro, se puede calcular la distancia sobrante inicial de
+la siguiente forma d =(x−r) mod 2r, mientras que si se
+Figura2.Regio´ndetolerancia
+enumeran todos los intervalos de la particio´n, el intervalo
+x−r
+exactodondeseencuentraxsepuedehallar:i=(cid:98) (cid:99).
+2r
+Unavezseleccionadounpuntoenlafasedeautenticacio´n,
+x(cid:48)−d
+secalculaelvalordelintervaloi(cid:48)=(cid:98) (cid:99).Notesequex(cid:48)
+2r
+noesta´ necesariamentecentradoenelintervaloi(cid:48),perosise
+cumple que |x−x(cid:48)|<r entonces i=i(cid:48), y por lo tanto sus
+valoreshashtambienlosera´n.
+Porejemplo,seanx=13yr=5,5,entonces:
+x−r 13−5,5
+i=(cid:98) (cid:99)=(cid:98) (cid:99)=0
+2r 11
+Porotroladod=(x−r)mod2r=7,5.
+Seanahorax(cid:48)=10,entonces:
+x(cid:48)−d 10−7,5
+i(cid:48)=(cid:98) (cid:99)=(cid:98) (cid:99)=0=i
+2r 11
+Figura3.Falsosaceptados
+Pararealizarlaextensio´nadosdimensionessolohayque
+considerarparacadapuntodelacontrasen˜aelpar(d ,d ),el
+x y
+cualseguardaentextoclaroenelsistema,yelvalorhashdel
+En la figura 3 se muestra que a la izquierda del punto
+vectordelosicorrespondientesacadapunto.[2]
+original, la tolerancia solo acepta puntos en una distancia
+Esteme´todosolucionalosproblemasdelaDiscretizacio´n
+menorquer,mientrasquealaderechaseaceptanhastauna
+Robustapresentadosenelep´ıgrafeanterior,yaquecentrala
+distanciade5r.
+regio´ndetoleranciaenelpuntodelaclave.
+Porestarazo´nsurgieronotrosme´todosdediscretizacio´n
+queresuelvenelproblemadelosfalsosaceptadoscentrando 1.3 Discretizacio´nOptimal
+laregio´ndetoleranciaenelpuntooriginal.[2] Otrome´todollamadoOptimalDiscretizationesdescrito
+en [3]. Este me´todo es bastante similar a la Discretizacio´n
+1.2 Discretizacio´nCentrada Centradaencuantoaquelogramantenerlafilosof´ıadeuna
+Para resolver los problemas presentes en la Discretiza- regio´ndetoleranciacentradaenelpuntooriginaldelacla-
+cio´nRobusta,en[2]proponenlaDiscretizacio´nCentradaque ve, pero utiliza propiedades de la aritme´tica modular para
+ofrececonsiderablesmejorasdeseguridadyusabilidad. construirla.Unavezma´sseempezara´describiendolaideaen
+Se analizara´ primero el caso unidimensional de dicha unadimensio´nparamayorcomprensio´n,yaqueesfacilmente
+discretizacio´n,luegosoloseextendera´ elrazonamientoados extendible.
+dimensionesparaaplicarloalcasodeima´genes. SeaelvalorX elpuntooriginalescogidoporelusuario
+Sea un punto x sobre la semirrecta nume´rica [0,∞), en enlafasederegistrocomosucontrasen˜a,xelvalordadoal
+realidadx∈[0,m]dondemeseltaman˜odelaimagen(anchoo sistemaparalaautenticacio´n,yr elradiodetolerancia.Se
+largo).Elobjetivoesquelaregio´ndetoleranciaestecentrada calculaunvalorϕ delasiguienteforma:
+Debilidadesdelosme´todosdediscretizacio´nparacontrasen˜asgra´ficas 69
+si(X mod2r≥r),entoncesϕ =X modr r(enpixeles) 4 6 9
+RT 24×24 36×36 54×54
+(X mod2r<r),entoncesϕ =(X mod2r)−r
+Cuadro2.RTfijandoelradiodeseguridad
+Elvalorϕ seguardaentextoclaroenelsistemajuntocon
+(cid:22) (cid:23)
+X−ϕ Sinembargo,laDiscretizacio´nCentradaylaOptima,al
+elvalorhashdeS = .Unavezelsistemaobtieneel
+X 2r centrarlaRegio´ndeToleranciaalrededordelpunto,nopre-
+(cid:22) x−ϕ (cid:23) sentanproblemasenlarelacio´nentreestayelradio;pero,en
+valorxseleccionado,calculaelvalorhashdeS =
+x 2r amboscasos,comoenlaDiscretizacio´nRobusta,seaceptan
+ylocomparaconelyaguardado.Noteseque: yrechazanpuntosqueseencuentranalamismadistanciadel
+puntooriginaldelacontrasen˜a.Estosedebeaqueenlostres
+S =S ⇐⇒ x−r≤X <x+r casoslaRegio´ndeToleranciatieneformacuadrada(figura5),
+X x
+mientrasqueparaevitarpuntosaceptadosyrechazdoscon
+Porejemplo,seanX =38yr=5,entonces: distanciasequivalentes,esnecesariaunatoleranciacircular.
+[2],[5]
+ϕ =X modr=38mod5=3
+(cid:22) (cid:23) (cid:22) (cid:23)
+X−ϕ 38−3
+PorotroladoS = = =3.
+X
+2r 10
+Seaahorax=40,entonces:
+(cid:22) (cid:23) (cid:22) (cid:23)
+x−ϕ 40−3
+S = = =3=S
+x X
+2r 10
+Otrocaso,X =83 y r=5,entoncesϕ =−2,porotro
+(cid:22) (cid:23)
+X−ϕ
+ladoS = =8.Seaahorax=80,entonces:
+X
+2r
+(cid:22) (cid:23) (cid:22) (cid:23)
+x−ϕ 80+2
+S = = =8=S
+x X
+2r 10
+Extendiendo a dos dimensiones, en el sistema se guar-
+dan en texto claro los pares (ϕ ,ϕ ) para cada punto, y el
+x y
+valor hash del vector de pares (S ,S ), donde (x,y) son las
+x y
+coordenadasdelpuntoselecionadoporelusuario.
+2. Ventajas y desventajas
+Figura5.Regio´ndetoleranciacuadradaycircular
+Estastresdiscretizacionescumplenconelobjetivoinicial
+planteado anteriormente para discretizar una imagen, pero Ademas,todaslasdiscretizacionesantesvistas,guardan
+difierenentresienespectosescencialescomoeltaman˜ode algu´ntipodeinformacio´nenelsistemaentextoclaro,loque
+laregio´ndetolerancia,elradiodeseguridadqueofreceny puedeseraprovechadoporunatacanteparareducirelespacio
+lainformacio´nreveladaporelsistema.Enelep´ıgrafe1.1se debu´squedayrealizarataquesdediccionario.[6]
+mostro´ comoenlaDiscretizacio´nRobustaesnecesariauna EnlaDiscretizacio´nRobusta,sedejaentextoclarocuales
+toleranciarelativamentegrandeconrespectoalcirculoder- son las tres particiones que utiliza, incluso revela cua´l es
+seguridaddelpunto.En[2]seanalizacomoparataman˜osde la particio´n exacta que le corresponde a cada punto. En la
+tolerancianormalesenlaDiscretizacio´nRobusta,elradiode Centrada y en la Optima, lo guardado en texto claro es la
+r-seguridaddelpuntoespequen˜o.(Cuadro1) distanciasobranteiniciald yelvalorϕ respectivamente,con
+loscualessepuedeconstruirtambie´nlaparticio´nutilizada.
+RT 9×9 13×13 19×19 Aunquelasdosu´ltimasmuestranmenosinformacio´naun
+r(enpixeles) 1,50 2,17 3,17 atacante,entodasesposibleconstruirdiccionariosutilizan-
+doesosdatoseintersecta´ndolosconlospuntosquesonma´s
+Cuadro1.RadiodeseguridadfijandoRT probablesqueelusuarioutilice(hotspot),loscualessecalcu-
+lanporte´cnicasdetratamientodeima´genesdigitalescomo
+Por otro lado, para radios de r-seguridad aceptables se segmentacio´n;paraellosoloesnecesariorealizarleuntrabajo
+requierengrandesregionesdetolernacia.(Cuadro2) previodeprocesamientodeima´genesalaimagenutilizada
+70 Debilidadesdelosme´todosdediscretizacio´nparacontrasen˜asgra´ficas
+paraautenticarse. Adema´s,lainvestigacio´nmuestraunanecesidaddecrear
+En los cuadros 3 y 4 se pueden apreciar las principales untipodediscretizacio´nconunaregio´ndetoleranciacircular
+diferenciasentreestasdiscretizaciones.SemuestraquelaDis- pararesolverestosproblemasdeusabilidad,yaqueelc´ırculo
+cretizacio´nRobustapresentaseriosproblemasdeusabilidad esloqueseajustaalaideadedistanciautilizadaparaaceptar
+por la relacio´n entre el radio de seguridad y el taman˜o de orechazarlospuntosseleccionados.
+laRegio´ndeTolerancia.Mientrasqueentodasesrevelada Porotrolado,tambie´nesnecesariocrearunadiscretiza-
+informacio´naprovechableparacomprometersuseguridad. cio´nquenoreveleninguntipodeinformacio´nentextoclaro
+para dificultarle la construccio´n de diccionarios a un posi-
+Tipodediscretizacio´n RT=13x13 r=6,5 ble atacante y asi corregir los problemas de seguridad que
+Robusta r=2,17 RT =39x39 presentanlastresdiscretizacionesanalizadasenestetrabajo.
+Centrada r=6,5 RT =13x13
+Optima r=6,5 RT =13x13 Referencias
+[1] Hong D. Memon N. Birget, J.C. Graphical passwords
+Cuadro3.Comparacio´ndeRTyr
+based on robust discretization. IEEE Transactions on
+InformationForensicsandSecurity,2006.
+Tipodediscretizacio´n Informacio´nentextoclaro [2] SrinivasanJ.BiddleR.OorschotP.C.Chiasson,S. Cente-
+Robusta LastresparticionesG 0 ,G 1 ,G 2 reddiscretizationwithapplicationtographicalpasswords.
+Centrada Ladistanciasobranteiniciald 2008.
+Optima Elvalorϕ
+[3] K.Bicakci. Optimaldiscretizationforhigh-entropygrap-
+Cuadro4.Comparacio´ndeRTyr hicalpasswords. Technicalreport,TOBBUniversityof
+EconomicsandTechnology,Ankara,Turkey,2007.
+[4] Lego´nC.SocorroR.NavarroP.Rodriguez,O. Esquemas
+yte´cnicasdeautenticacio´ngra´fica. 2018.
+Conclusiones
+[5] P.Karmajit. Cued-clickpointgraphicalpasswordusing
+Vistaslascaracter´ısticasprincipalesdelasdiscretizacio-
+circulartolerancetoincreasepasswordspaceandpersua-
+nesRobusta,OptimayCentradasepuedeconcluirquelastres
+sivefeatures. ProcediaComputerScience,2016.
+formasdediscretizacio´npresentanprobemasdeusabilidad
+en la fase de registro debido a pixeles equidistantes que se [6] BinB.Zhu. Securityimplicationsofpassworddiscretiza-
+encuentrantantodentrocomofueradelaregio´ndetolerancia, tionforclick-basedgraphicalpasswords. 2013.
+mientrassonaceptadosotrosmaslejanos.

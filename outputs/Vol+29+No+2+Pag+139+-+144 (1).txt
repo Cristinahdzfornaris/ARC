@@ -1,0 +1,381 @@
+CienciasMatema´ticas,Vol.29,No.2,Pag.139-144,2015
+Recibido06-2015
+La comprensio´n de textos en la resolucio´n de
+problemas que conducen a ecuaciones
+Reading comprenhesion in the problem-solving that
+leads to equations
+Juan Carlos Navarro Gonza´lez1*, Allan Blanco Garc´ıa1, Elisabet Vivar Reyes2
+Resumen Laexperienciaenlapra´cticaescolarhamostrado,queau´nteniendoestudiantescondestrezasen
+latraduccio´ndellenguajecomu´nalalgebraicoas´ıcomoenlaresolucio´ndeecuacionesysistemas,estosno
+tienene´xitoalresolverunproblemaalgebraicoporlasdificultadesconlacomprensio´ndeltexto,estasituacio´n
+seagudizasilosestudiantessondepa´ısesnohispanohablantes.
+EnelCentrodeConvencionesyServiciosAcade´micosdeCoj´ımarlosestudiantesmatriculadospertenecen
+apa´ısesnohispanohablantesensumayor´ıa,esporelloquenosplanteamoselproblemasiguiente:¿Co´mo
+trabajarlacomprensio´ndetextoenespan˜ol,alresolverproblemasqueconducenaecuaciones,conestudiantes
+nohispanohablantesdelCentrodeConvencionesyServiciosAcade´micosdeCoj´ımar?
+Elobjetivodeestetrabajoes:Mostrarlosresultadosalcanzadoseneltratamientodelacomprensio´ndetexto
+enespan˜ol,alresolverproblemasqueconducenaecuaciones,conestudiantesnohispanohablantesdelCentro
+deConvencionesyServiciosAcade´micosdeCoj´ımar.Seempleo´ elprogramaheur´ısticogeneral;elempleode
+lasestrategiasdelDr.CPHe´ctorJime´nezMilia´n;unaadaptacio´nalalgoritmodecomprensio´ndetextosdela
+asignaturaespan˜olparalacomprensio´ndetextosdeproblemasqueconducenaecuacionesyunsistemade
+preguntasquefunciono´ comobaseorientadoradelaaccio´nparaelestudiante.
+Losresultadosalcanzadosmuestranlaviabilidaddelosprocederesdesarrolladosparatrabajarlacomprensio´n
+detextoenespan˜ol,enlaresolucio´ndeproblemasqueconducenaecuaciones.
+Abstract Evenstudentswithskillsintranslatingthecommonlanguagetothealgebraicaswellasinequations
+and systems solving are unsuccessful in solving an algebraic problem, due to the text comprehension, this
+situationisexacerbatediftheyarenotSpanishspeakers. Thatiswhyweconsiderasscientificproblem: Howto
+worktextcomprehensioninproblemssolvingleadingtoequationswithnon-Englishspeakingstudentsfromthe
+ConventionCenterandAcademicServicesCoj´ımar?
+Apreexperimentwithtwoexperimentalgroupsandonecontrolgroupwereincludedinthestudy. Initialandfinal
+lestwereapplied. Descriptivestatisticsisusedtoshowthefeasibilityofthemethodologicalelementsintroduced
+intoschoolpractice. Intheexperimentalgroupstheproblemsolvingstrategiesfromthecognitivenodesthrough
+phasesandactionsofDr. CP.HectorJimenezMilia´nanadaptationcomprehensionalgorithmofSpanishcourse
+forthecomprehensionofproblemsleadingtoequations,thetechniquesproposedbyShoenfeldhowtoperform
+problemsolvingwithstudentsandapulsesystemthatfacilitatecommonlanguagetranslationofalgebraicand
+findthewaytosolvetheproblem.
+The results show the feasibility of the procedures used to work with text comprehension in solving problems
+leadingtoequationswithnon-Englishspeakingstudents.
+PalabrasClave
+Comprensio´ndetextos,ecuaciones
+1CCSA,LaHabana,Cuba,juannavarrog@infomed.sld.cu,allanbgarcia@infomed.sld.cu
+2ELAM,LaHabana,Cuba,evivar@elacm.sld.cu
+*AutorparaCorrespondencia
+1. Introduccio´n blesparalograrunaprendizajeso´lidoyaplicable,tantoala
+vidacotidianacomoeneldesempen˜oprofesional,esporello
+Laimportanciadelaensen˜anzadelaMatema´ticaparala queenlastransformacionesquesevienedesarrollandoenel
+formacio´nmultilateraldelosestudiantesesuniversalmente procesodocenteenCuba,lamismaocupaunlugarpriorizado.
+reconocida. Los contenidos ba´sicos de esta son indispensa-
+140 Lacomprensio´ndetextosenlaresolucio´ndeproblemasqueconducenaecuaciones
+Laprioridadconsisteenlograrquetodoslosdocentesdelas ApesardequePolyafuecriticado,yaquesuenfoquecen-
+diferentesasignaturasdeCienciascontribuyanaquelosestu- tralainstruccio´nenlaresolucio´ndeproblemasdeMatema´tica
+diantesaprendanarazonarlo´gicamente,abuscardemanera fundamentalmenteenlaheur´ısticaota´cticadesolucio´n,los
+heur´ısticasolucionesaproblemas[1]. estudiospresentadosenlaactualidadpordiferentesautores
+La asignatura Matema´tica que se imparte en el Curso cubanos y de otros pa´ıses, relacionados con las estrategias
+Preme´dico,tienedefinidoensuobjetivogeneralcomohabi- para la resolucio´n de problemas, proponen 3 etapas o ma´s,
+lidad la resolucio´n de problemas y en la estrategia docente todasrelacionadasconlacomprensio´n;labu´squedadelav´ıa
+quesedespliega,esta´ concebidoqueelprocesosedesarrolle desolucio´n;lasolucio´nylavaloracio´ndelorealizado.
+comounprocesoprofesionalquecontemplaentresusprinci- Unejemplodeloantesexpuestoloapreciamosenlacon-
+paleslineamientos:laprofesionalizacio´n,lasistematizacio´n cepcio´n del Dr. CP. He´ctor Jime´nez Milia´n para propiciar
+yeltratamientodelasesencialidadesdeloscontenidos.Esta aprendizajedesarrolladorenlaensen˜anzadelaMatema´tica
+concepcio´ndelprocesohallevadoaplantearproblemas,lo alabordarlasestrategiaspararesolverproblemasapartirde
+ma´scercanoposiblealafuturaprofesio´ndelosestudiantes losnodoscognitivos,atrave´sdefasesyacciones.Comose
+[2]. muestranacontinuacio´n:
+Laexperienciaenlapra´cticaescolarenlaEscuelaLati-
+noamericanadeMedicina(ELAM)hamostrado,queau´nte- Accionesdelafase”Paracomprender”:
+niendoestudiantescondestrezasenlatraduccio´ndellenguaje
+comu´nalalgebraicoas´ıcomoenlaresolucio´ndeecuaciones • Leerenellenguajeenqueesta´ escrito.
+y sistemas de ecuaciones, estos no tienen e´xito al resolver
+• TranscribirallenguajedelaMatema´tica
+unproblemaalgebraicoporlasdificultadesquesepresentan
+enlacomprensio´ndetextos,estasituacio´nseagudizasilos • Identificarlobuscadoylodado.
+estudiantessondepa´ısesnohispanohablantes.
+• Identificar los conocimientos asociados con lo
+Apartirdeloslineamientosdelcongresodelpartidoco-
+buscadoyconlodado.
+munistacubanosurgio´ elproyectodeformacio´ndeme´dicos
+extranjeros en Cuba con autofinanciamiento o contrato de • Expresarenformadeconclusio´n.
+gobiernos con financiamiento, en su primer curso preme´di- • Graficar.
+co desarrollado en el Centro de Convenciones y Servicios
+Acade´micosdeCoj´ımar(CCSA)losestudiantesmatriculados Accionesdelafase”Paraconcebirunav´ıadesolucio´n”:
+pertenecenapa´ısesnohispanohablantesensumayor´ıa,espor
+elloquenosplanteamoselproblemasiguiente:¿Co´motraba-
+• Verificarocontradecir.
+jarlacomprensio´ndetextoenespan˜ol,alresolverproblemas
+• Interpretarlobuscadoentodaslasformasposibles
+queconducenaecuaciones,conestudiantesnohispanohablan-
+yrelacionarloconloquesabesyconlodado.
+tesdelCentrodeConvencionesyServiciosAcade´micosde
+Coj´ımar? • Seleccionardeloquesabesloquenecesitaspara
+Elobjetivodeestetrabajoes:Mostrarlosresultadosalcan- inferirlobuscado(Condicionesnecesarias,condi-
+zadoseneltratamientodelacomprensio´ndetextoenespan˜ol, cionessuficientes,Procedimiento).
+alresolverproblemasqueconducenaecuaciones,conestu-
+• Determinardeloquetedan,que´esu´tilparainferir
+diantes no hispanohablantes del Centro de Convenciones y
+lobuscado.
+ServiciosAcade´micosdeCoj´ımar.
+• Utilizarestrategiasdetrabajohaciaadelante,con
+lodadoyloquesabes,yhaciaatra´sconlobusca-
+2. Antecedentes
+doparaconectarlosmedianteinferencias,forman-
+Losantecedenteshisto´ricosdelaresolucio´ndeproblemas dounacadenadondecadainferenciaysupremisa
+seenmarcanenunantesyundespue´sdeunafechasignifi- formanuneslabo´n.
+cativayunhombreG.Polya(1945)quienrevoluciono´ todo
+lorelacionadoconesteprocesoproponiendoestrategiasque
+Acciones de la fase ”Para representar la v´ıa de solu-
+permitenalosestudiantesreflexionesenlabu´squedadelav´ıa
+cio´n”:
+desolucio´nquesonrealmentefundamentalesyfuncionanal
+resolverproblemas.Entreellasseencuentranlassiguientes:
+• Establecerunacadenadeinferencias.
+Analizar lo que se da y lo que se busca, dibujar una figura,
+• Fundamentarcadainferencia.
+separarunacondicio´nenpartes,considerarcasosespeciales,
+pensarenunproblemama´ssimpleyconsiderarelproblema • Recorrerlacadenaenlasdosdirecciones.
+resuelto;todasestasestrategiasquedanrecogidasenelme´to-
+• Verificarsicierranloseslabones(s´ı-entonces=s´ı-
+doheur´ısticoparalaresolucio´ndeproblemas[2]:compresio´n
+entonces=...).
+delproblema,concebirelplandesolucio´n,ejecutarelplande
+solucio´nyevaluarlasolucio´n. • Evaluarlavalidezdelasolucio´n.
+Lacomprensio´ndetextosenlaresolucio´ndeproblemasqueconducenaecuaciones 141
+Lonovedosodeestapropuestaesta´dadoenquenoexiste a) ¿Que´ esinformacio´n?
+una fase de control y valoracio´n de los resultados porque
+b) ¿Que´ esinco´gnita?
+concibeestosmomentosdurantetodoelprocesoderesolucio´n
+c) ¿Que´ esdato?
+delproblema.Tambie´nconstituyenovedadelhechodeque
+elestudiante,atendiendoasusconocimientosyexperiencia,
+2. ¿Que´ relacionesseestablecenentrelasvariables?Esta
+pueda construir las estrategias o incorporar a las dadas sus
+preguntadebepermitirreflexionarsobre:
+criterios[2].
+En la ELAM se emplea, para resolver problemas en la
+a) Comoestablecerigualdadesentredatoseinco´gni-
+asignaturaMatema´ticaenelCursoPreme´dico,elprograma
+tas a partir de operaciones matema´ticas que se
+heur´ıstico general incluyendo el trabajo con las estrategias
+manifiestenexplicitaoimpl´ıcitamenteeneltexto.
+antes expuestas, ya que las mismas favorecen el desarrollo
+dehabilidadesrelacionadascon:co´motomarunadecisio´nde
+3. ¿Co´modeclararvariablesmatema´ticas?Estapregunta
+maneraacertada,co´moconsiderardiferentespuntosdevista,
+permitetrabajaren:
+co´moextraerlaideaesencialdelproblema,co´moevaluarlos
+resultadosalcanzadosyco´mocomunicarlasideasdeforma a) Latomadedecisionesencuantoalacantidadde
+coherente. variablesmatema´ticasaemplearparafacilitarla
+Lacomprensio´ndelproblema,ensentidogeneralesuna bu´squedadelav´ıadesolucio´n.
+delasfasesdondelosestudiantespresentanma´sdificultades.
+b) Definir:¿Que´relacionespuedoutilizarparadecla-
+Esnecesarioabordarlacomprensio´ndetextosdeproblemasa
+rarvariablesycua´lespararesolverelproblema,a
+partirdealgoritmosdecomprensio´ndetextosdelaasignatura
+partirdelatomadedecisionesanterior?
+Espan˜ol.
+EnlaELAMsetrabajo´conunaadaptacio´nalalgoritmode c) Comenzar la traduccio´n del lenguaje comu´n al
+comprensio´ndetextosdelaasignaturaEspan˜olparalacom- algebraico.
+prensio´ndetextosdeproblemasqueconducenaecuaciones
+4. ¿Que´ v´ıadesolucio´nemplear?Estapreguntapermite:
+[1].
+1. Realizarunalecturamodeloparaunaprimerafamilia- a) Traducir completamente del lenguaje comu´n al
+rizacio´n con el texto del problema (puede hacerla el algebraico.
+profesorounestudiantequesepaleercorrectamente). b) Determinarprocedimientosdeca´lculoapartirde
+lasecuacionesquequedendefinidas.
+2. Leerindividualyensilencio.
+Lautilizacio´ndeestealgoritmoyelsistemadeimpulsos
+3. Analizar el conjunto de palabras del texto que no se
+enformasdepreguntashanfavorecidolacompresio´nenel
+comprenden,paralabu´squedadesusignificado.
+procesoderesolucio´ndeproblemasqueconducenaecuacio-
+4. Analizarlainformacio´nquemepidenparadefinirlas nesenlaasignaturaMatema´ticayhaservidoparaconsolidar
+variablesdelproblemaydespue´sestablecerlasvaria- eltrabajoqueserealizaenlaasignaturaespan˜olcomolengua
+blesmatema´ticas. maternaocomoidioma,segu´nlaprocedenciadelestudiante.
+5. Analizar la informacio´n que me ofrecen teniendo en
+3. La estrategia con estudiantes del
+cuentapalabrasofrasesclavesyllegaralaexpresio´n
+dedichainformacio´nenellenguajematema´tico(d´ıgase CCSA
+variables,operacionesdeca´lculo,etc.).
+ParalosestudiantesdelCCSA,lacomprensio´ndetextos
+deproblemasmatema´ticos,fundamentalmentelosquecondu-
+6. Analizarlosconocimientoscomplementariosparapo-
+cenaecuaciones,esunadificultadquenopermiteelavance
+derrealizarlosrazonamientoslo´gicosnecesariosyes-
+enlabu´squedadelav´ıadesolucio´n,porlasbarrerasdelidio-
+tablecer relaciones que permitan encontrar la v´ıa de
+ma,yaquelamayor´ıadelosestudiantesmatriculadosenel
+solucio´n(d´ıgaseecuacionesy/oinecuaciones).
+primercursosonnohispanohablantesquerecibieronuncurso
+Estealgoritmodecomprensio´nsecomplementaconun preparatoriodeEspan˜olconfinescomunicativosycomienzan
+sistema de impulsos en formas de preguntas que facilitan elPreme´dicosinpreviapreparacio´nenellenguajete´cnicode
+la traduccio´n del lenguaje comu´n al algebraico y posibilita lasasignaturas.
+encontrarlav´ıadesolucio´ndelproblema. A partir de las premisas antes expuestas se trabajo´ con
+Paracomprenderelproblemayllegaralav´ıadesolucio´n losestudiantesdelprimercursoPreme´dicodelCCSAenla
+deberesponder: resolucio´n de problemas incluyendo adema´s el trabajo con
+palabras usualmente empleadas y te´cnicas propuestas por
+1. ¿Cua´lessonlasvariablesdelproblema?Estapregunta Shoenfelddeco´morealizarlasolucio´ndeproblemasconlos
+debepermitiridentificareneltexto: estudiantes,estasson[1]:
+142 Lacomprensio´ndetextosenlaresolucio´ndeproblemasqueconducenaecuaciones
+1. Resolverproblemasconelalumno,utilizandolaidea La edad de una persona hace tres an˜os conocida la
+delprofesor. actual:edadactualx,edadhacetresan˜osx−3;edad
+actualm+3,edadhacetresan˜osm.
+Elpapelquejuegaelprofesoresdemoderador(conocela
+v´ıaylasolucio´n)ylosestudiantesresolvera´nelproblema. En Cuba en el an˜o 1998 se ten´ıan registrados 1 784
+enfermos de SIDA, entre fallecidos y no fallecidos:
+1. Discusio´ndeproblemascontodoelgrupo.
+fallecidosx,nofallecidos1784−x.
+Elpapeldelprofesoresayudaralosestudiantesasacar
+ventajasdesuspropiasideasymotivarlosacercadeco´moha- Secomprendeunproblemaqueconduceaecuacionessi
+cerlo.Estadiscusio´nayudaalalumnoadesarrollarestrategias seencuentralav´ıadesolucio´ncorrecta,anuestrojuicioesa
+deautorregulacio´nalresolverproblemas. eslapruebadequeserealizo´ unacorrectacomprensio´ndel
+mismo.
+1. Elprofesoraprueba.
+Paraentrenaralosestudiantesenlabu´squedadelav´ıade
+Aqu´ıelprofesorresuelveproblemas(sinpreparacio´npre- solucio´nsetrabajo´ conelsistemadeimpulsosenformasde
+via)tra´ıdosporlosestudiantesyellosobservanelproceder preguntasantesmencionado,unejemplodesuempleoesel
+delprofesoranteslaresolucio´ndeunproblema. problematratadoenlaprimeraclasedeltema:
+Encuantoalaspectoreferidoalacomprensio´nytraduc- Aunafarmaciallego´untanquede200Ldealcoholet´ılico
+cio´ndellenguajecomu´nalalgebraicosetrabajo´ utilizando al90%paralaelaboracio´ndemedicinaverde.Sieneltanque
+lasideassiguientes: quedael25%delalcoholqueyasehautilizado.¿Cua´ntos
+daLdealcoholet´ılicoal90%quedaneneltanque?
+Las terminaciones plo, ble y ple, pueden traducirse
+Altrabajarconlapregunta1sedebatio´conlosestudiantes
+comomultiplicacio´n,enlasrelacionesqueseestablecen
+queelproblemanoesdetantoporciento,unodelosprimeros
+eneltextodelproblemasentrevariablesydatos,por
+errores al tratar de resolverlos individualmente, ese debate
+ejemplos:eltriplodelosestudiantesaprobados:3x;el
+permitio´ definircorrectamentelasvariables:alcoholal90%
+cua´drupledelosfallecidos:4f yeldobledelosobreros:
+eneltanqueyalcoholal90%utilizado.
+2p
+Sedetermino´ queelporcentajeeraunainformacio´nsobre
+Laexpresio´n“tantaspartes”,puedetraducirsecomola laconcentracio´ndealcoholdelamezclayquenadaten´ıaque
+multiplicacio´nporunafraccio´n,enlasrelacionesque verconlasolucio´ndelproblema,noconstitu´ıaundato.
+seestableceneneltextodelproblemasentrevariables Eltratamientodelapregunta2hizoreflexionarcolectiva-
+y datos, por ejemplos: la cuarta parte: 1x y las tres menteconlosestudiantesqueexist´ıandosrelacionesentrelas
+4
+quintaspartes: 3y variablesunaexplicitayotraimpl´ıcita:
+5
+Lasexpresiones“ladiferencia”;“elproducto”;“elco- Alcoholutilizado+alcoholeneltanque=200(impl´ıci-
+ciente”; “el cubo”; ”la suma”; llevan impl´ıcito en la ta)
+traduccio´nelconceptodelasoperacionesba´sicasypor
+alcoholeneltanque=25%alcoholutilizado(explicita)
+lotantopuedenestarrelacionandodatoyvariableodos
+variables,porejemplo:elme´dicoatendio´ unnu´merode
+Nospermitio´ tambie´nreflexionarencomotraducirlaex-
+nin˜osy20adultos:n + 20;ladiferenciaentreaproba-
+presio´n “representa tanto de”, al analizar como expresar la
+dosysuspensosdeunaprueba:a − syelcubodelas
+traduccio´nde“el25%delalcoholutilizado”:
+horasempleadas:h3.
+25
+Lapalabraexcedeusualmenteusadaentextosdeproble- ·(alcoholutilizado) o´
+masqueconducenaecuaciones,debehacerreflexionarque 100
+la traduccio´n no siempre se realiza a partir del significado 0,25·(alcoholutilizado) o´
+etimolo´gico,comoeselcaso;“tienema´s”quegeneralmente 1
+·(alcoholutilizado)
+setraducecomosumayesoesunerror,porqueenelcontexto 4
+deunproblemaalgebraicorefiereunarelacio´nMatema´tica
+Para la pregunta 3 se trabajo´ en la reflexio´n con los estu-
+de“mayorque”yquealtraducirseaigualdadsepuedehacer
+diantesprimero,en¿cua´ntasvariablesmatema´ticas?y¿por
+detresformasdiferentes,porejemplolavelocidaddelmo´vil
+que´?,despue´sen¿co´mohacerladeclaracio´ndevariables?y
+Aexcedeen20km/haladelmo´vilBsignifica“velocidad
+¿que´utilizarparaello?Esollevo´ adetresvariantesparahacer
+de A > velocidad de B” (¿Cua´nto ma´s? 20 km/h) y puede
+ladeclaracio´ndevariablesqueseemplearonenelgrupo:
+representarse:V −20=V o´V =V +20o´V −V =20
+A B A B A B
+Esimportanteenelprocesodeensen˜ar,co´moserealiza
+Variante 1: Alcohol utilizado 200−x, alcohol en el
+latraduccio´ndellenguajecomu´nalalgebraico,irproponien-
+tanquex,
+dotextosdondesenecesitedefinirvariablesdelproblemay
+sus relaciones analizando diferentes formas de expresar la Variante 2: Alcohol utilizado a, alcohol en el tanque
+traduccio´n,porejemplo: 0,25·a,
+Lacomprensio´ndetextosenlaresolucio´ndeproblemasqueconducenaecuaciones 143
+Variante3:Alcoholutilizadou,alcoholeneltanquet. Tabla1.Resultadosalcanzadoseneldiagno´sticoyenla
+pruebafinal.
+No obstante en el ana´lisis oral se fundamentaron otras
+variantessimilaresalaspropuestas. Tipodeexamen Con2 Con3 Con4 Con5
+Lapregunta4quenospermitellegaralav´ıadesolucio´n Diagno´stico 29 0 0 0
+seabordo´ apartirdelastresvariantesenquesedeclararon Pruebafinal 10 3 6 10
+las variables. Se reflexiono´ colectivamente que en las dos
+primerasvariantesalutilizarunavariablematema´tica,laotra
+variabledelproblemaseexpresaenfuncio´ndeestahaciendo
+usodeunadelasrelacionesqueseestablecenentreellasy Al analizar los resultados en la prueba final se aprecia
+quelaotrarelacio´nentoncesseempleaparalav´ıadesolucio´n. un avance en un grupo de estudiantes (65,5%), fundamen-
+Queenelcasodelavariantetreslasdosrelacionesseemplean talmenteenelaspectodelacomprensio´ndebidoaquepor
+paralav´ıadesolucio´n.Searribaalasecuaciones: la norma de calificacio´n se alcanza 3 cuando se encuentra
+correctamentelav´ıadesolucio´n.
+Variante1:x=0,25(200−x), Aunqueelavancedelgrupoengeneralnoessignificati-
+vosiesnecesarioconsiderarqueel84%delosestudiantes
+Variante2:a+0,25·a=200,
+queencontraronlav´ıadesolucio´n,d´ıgasecomprendieronel
+Variante3:u+t=200,t=0,25·u. problema,lograronresolverlo.
+Se utilizo´ el grupo 2 de la variante II como grupo de
+Se resolvio´ el problema de forma aritme´tica utilizando control,enestegrupotrabajo´ otrodocentequenoaplico´ los
+comorecursounesquemaytrabajandoelporcentajecomo procederesantesexpuestos.Latabla2muestralacomparacio´n
+fraccio´ndelaformasiguiente:Comoelalcoholeneltanque delosresultadosalcanzadosporlosdosgruposexperimenta-
+representael25%delalcoholutilizado,eltotal(200L)puede lesconelgrupodecontroleneldiagno´sticoyenlaprueba
+dividirse en 5 partes iguales y por lo tanto el alcohol en el final.
+tanquees40Lyelalcoholutilizadoes160L.Secomprueba Losgruposexperimentalesyelgrupodecontroltuvieron
+mediante en ca´lculo que 40 L representa la cuarta parte de 0% de estudiantes que comprendieron el problema. En los
+160L(d´ıgaseel25%).Sehacee´nfasisenlosconceptoscomo gruposexperimentalesel65,5%delosestudianteslograron
+formafundamentalparaeldesarrollodelpensamientolo´gico comprenderelproblemadelapruebafinalyenelgrupode
+ysefundamentaapartirdelasolucio´naritme´ticaencontrada, controlel40,9%.
+queseapoyaenelconceptodefraccio´n. En la tabla 3 se presentan los resultados generales del
+Enlasconclusionescolectivasanalizadasseplantearon:si diagno´sticoylapruebafinaldelosgruposexperimentales.
+seutilizaunavariablematema´ticalav´ıadesolucio´nesresol- LosestudiantesquecursaronelprimerPreme´dicoenla
+verunaecuacio´n,siseutilizanma´sdeunavariablematema´tica CCSAdeCoj´ımarnosolopresentabandificultadesconelidio-
+lav´ıadesolucio´nesresolverunsistemadeecuacionesyno maporsernohispanohablantessinoquetambie´npresentaban
+necesariamentesetienenqueutilizarvariablesmatema´ticas problemasconloscontenidosesencialesdelaasignaturaya
+pararesolverunproblema,existenotrasv´ıasquenonecesitan queel0%deellosaprobaroneldiagno´stico.El100%delos
+delasvariables. estudiantesdelosgruposexperimentalesyel90,9%delos
+estudiantesdelgrupodecontrolaprobaronMatema´ticaenel
+cursopreme´dico.Lacalidaddelapromocio´nenlosgrupos
+4. Ana´lisis de los resultados
+experimentalesfuedel58,6%ydelgrupodecontrolfue45%.
+Paravalidarlosresultadosenlaaplicacio´ndeestospro-
+cederessetrabajo´ conunamuestrade29estudiantesdedos
+5. Conclusiones
+gruposdelcursopreme´dico.Estecursofuedesarrolladocon
+dosvariantes,unade20semanas,queessuduracio´nnormal Lacomprensio´ndetextosparalaresolucio´ndeproblemas
+yotraconunaduracio´nde12semanas,lamatr´ıculatotalfue queconducenaecuacionesesesencialparaquelosestudiantes
+de51estudiantes. logrenele´xitoenlabu´squedadelav´ıaylasolucio´ndelos
+Losgruposempleadosparaelpreexperimentofueronel mismos.
+grupo1delavarianteIyelgrupo2delavarianteII,dondetra- EltrabajoconestudiantesnohispanohablantesenelCurso
+bajaronlosmismosprofesores.Losresultadosalcanzadosen Preme´dicorequieredeunmayoresfuerzoenrelacio´nconla
+eldiagno´sticoyenlapruebafinal,enlapreguntarelacionada comprensio´n de textos en la resolucio´n de problemas, por
+coneltema,semuestranenlatabla1. lasdificultadesquepuedenpresentarseconelEspan˜olcomo
+Enelana´lisisdelosresultadosseobservaque0%delos segundalengua.
+estudiantesencontraronlav´ıadesolucio´nalproblemaenla LosresultadosalcanzadosconelprimerCursoPreme´dico
+pruebadediagno´sticoyesoesdebidofundamentalmentea muestranlaviabilidaddelosprocederesdesarrolladospara
+lasdificultadesquepresentanconelespan˜olcomosegunda trabajarlacomprensio´ndetextoenlaresolucio´ndeproblemas
+lengua. queconducenaecuacionesconestudiantesnohispanohablan-
+144 Lacomprensio´ndetextosenlaresolucio´ndeproblemasqueconducenaecuaciones
+Tabla2.Comparacio´ndelosresultadosalcanzadosporlosdosgruposexperimentales.
+Tipodeexamen Con2 Con3 Con4 Con5
+Diagno´stico(gruposexperimentales) 29 0 0 0
+Pruebafinal(gruposexperimentales) 10 3 6 10
+Diagno´stico(grupocontrol) 22 0 0 0
+Pruebafinal(grupocontrol) 13 1 1 7
+Tabla3.Resultadosgeneralesdeldiagno´sticoylapruebafinal.
+Tipodeexamen Con2 Con3 Con4 Con5
+Diagno´stico(gruposexperimentales) 29 0 0 0
+Pruebafinal(gruposexperimentales) 10 3 6 10
+Diagno´stico(grupocontrol) 22 0 0 0
+Pruebafinal(grupocontrol) 13 1 1 7
+tesdelCentrodeConvencionesyServiciosAcade´micosde duplodeloshombres,¿cua´ntoshombresymujeresaprobaron
+Coj´ımar. dichaasignatura?
+Norma:noencontro´ lav´ıadesolucio´n(2);encontro´ la
+Referencias v´ıa correcta(3); v´ıa y solucio´n correcta (4) y v´ıa, solucio´n
+correcta,comprobacio´nyrespuestaliteral(5).
+[1] NavarroGonza´lez,JuanCarlosyVivarReyesElisabet.
+Preguntaynormaparalacalificacio´ndelapreguntarela-
+Propuestametodolo´gicaparaeltratamientodelosproble-
+cionadaconeltemaenlapruebafinal.
+masqueconducenaecuacionesosistemasdeecuaciones
+GrupodelavarianteI:
+enelCursoPreme´dicodelaELAM.2009.Memoriasdel
+IIEncuentroCient´ıficometodolo´gicosobrelaensen˜anza Doscarrospipasde5000Ly10000Lrespectivamente
+delasCienciasExactas.ENCE2007(ISBN978-959-18- abastecendeaguadurantetodoeld´ıa,aunpolicl´ınicoinsta-
+0327-6). ladoenlazonamontan˜osadelorientecubano.Entreambos
+realizan8viajes.Siconlamitaddelosviajesquerealizan
+[2] NavarreteGarc´ıa,Mar´ıadelCarmenyNavarroGonza´lez, cada uno se transportan 27 500 L. ¿Cua´ntos viajes realiza
+JuanCarlos.Laresolucio´ndeproblemasenelprocesode cadacarrospipaseneld´ıa?
+ensen˜anza–aprendizajedelaMatema´ticaenlaELAM.
+GrupodelavarianteII:
+2010.XIIEventoCient´ıficoInternacional“Laensen˜an-
+Armando y Belkis son dos me´dicos de familia que han
+zadelaMatema´ticaylaComputacio´n”MATECOMPU
+atendido entre ambos 40 pacientes. El triplo de los pacien-
+2010(ISBN978-959-18-0596-6).
+tes atendidos por Belkis excede en 20 a los atendidos por
+Armando. ¿Cua´ntos pacientes han sido atendidos por cada
+Anexo1
+me´dico?
+Preguntaynormaparalacalificacio´ndelapreguntarela-
+cionadaconeltemaeneldiagno´stico. Norma: no encontro´ la v´ıa de solucio´n (2); encontro´ la
+Delos100estudiantesaprobadosenunaasignaturaseco- v´ıa correcta (3); v´ıa y solucio´n correcta (4) y v´ıa, solucio´n
+nocequeeltriplodelasmujeresaumentadoen30equivaleal correcta,comprobacio´nyrespuestaliteral(5).

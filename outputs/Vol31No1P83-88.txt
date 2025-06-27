@@ -1,0 +1,522 @@
+CienciasMatemáticas,Vol.31,No.1,Pag.83-88, 2017
+Recibido02-2017
+´
+Sobre la Estructura del Algebra de Wiener-Walsh
+On Wiener-Walsh Algebra Structure
+Claudia Fonte Sa´nchez1, Carlos Sa´nchez Ferna´ndez1*
+Resumen En1922,Walshintrodujounsistemaortogonalycompletoqueser´ıaposteriormenteconocidopor
+sunombre.Enlaactualidadmuchassonlasaplicacionesquesehanencontradoalasfuncionesrepresentables
+por series de Walsh, que hacen importante el estudio de tal sistema. En el presente trabajo se demuestran
+propiedadesestructuralesdela´lgebradelasfuncionesconseriesdeWalshabsolutamenteconvergente.En
+particular,semuestraqueelespectrodela´lgebraesunespaciome´tricoregular,homeomorfoalgrupodia´dico,y
+seabordaelproblemaabiertodelas´ıntesisespectral.
+Abstract In1922,Walshintroducedanorthogonalandcompletesystem,laterknownbyhisname. Nowadays,
+many applications to the functions which can be represented as Walsh series have been found, making the
+study of such system very important. In this article, several structural properties of the algebra of functions
+withabsolutelyconvergentWalshseriesareproved. Inparticular,isarguedthatthespectrumofthisalgebrais
+aregularmetricspacehomeomorphetothedyadicgroup. Alsoispresentedthedifficultproblemofspectral
+synthesis.
+PalabrasClave
+A´lgebradeWiener—GrupoDia´dico—ElementosIdempotentes—S´ıntesisEspectral
+1DepartamentodeMatema´tica,UniversidaddeLaHabana,Cuba,c.fonte@estudiantes.matcom.uh.cu,csanchez@matcom.uh.cu
+*AutorparaCorrespondencia
+Introduccio´n toalgebraico-topolo´gicascomoespectrales.Enparticular,se
+demuestraqueelespaciodelosidealesmaximalesdela´lgebra
+Bajoelt´ıtuloUnConjuntoCerradodeFuncionesOrto- eshomeomorfoalgrupodia´dico,ZN
+,sepruebaqueexisteuna
+2
+normales,Walshpublico´ en1922unestudiosobreunsistema
+me´tricaquegeneralatopolog´ıadeGelfandsobreelmismoy
+ortonormalcompletoconlaparticularidaddequelasfuncio-
+seidentificaunacantidadnumerabledeconjuntosdes´ıntesis
+nesdelmismosolotomanlosvalores1y−1.Enlasu´ltimas
+espectral.
+de´cadassehanencontradonumerosasaplicacionesdeestea
+El trabajo esta´ dividido en dos partes, en una primera
+problemas como procesamiento digital y compresio´n de la
+seccio´n se estudia la teor´ıa de Gelfand aplicada al a´lgebra
+informacio´n;deteccio´ndepatronesfacialesyelestudiodebio-
+mencionadayenlasegundaseccio´nseabordaelproblemade
+marcadoresparaeldiagno´sticodeenfermedades,sustituyendo
+las´ıntesisespectral.
+enocasionesalasma´sconocidasyestudiadasseriesdeFou-
+rierporsuscaracter´ısticasma´ssimplesymanipulables.Esto
+seconstatap.e.enGolubov[1],primeraexposicio´nsistema´ti- 1. Teor´ıa de Gelfand del A´lgebra de
+casobreeltema,yenrecientesart´ıculoscomoJuefei-Xu[5],
+Wiener-WalshW(ZN
+)
+2
+Hassan[4]yFan[3].
+ElsistemaortonormaldeWalshesta´ constituidoporlos
+ElsistemadeWalshhasidoampliamenteestudiadodesde
+caracteres del grupo dia´dico
+ZN
+. Por este motivo el primer
+unpuntodevistacla´sico.Alsistemaortonormalyalatrans- 2
+aca´pite se dedica al estudio de este grupo y su grupo dual.
+formacio´n asociada, a veces, se le llama sistema de Walsh-
+Conloscaracteresseconstruyeela´lgebradeWiener-Walsh,
+Hadamardytransformacio´ndeHadamardoWalsh-Hadamard,
+estoes:
+indistintamente,enhomenajealosdosmatema´ticosquepri-
+merolaestudiaron.Duranteunaprimeraetapasedemostraron ∞ ∞
+propiedades ana´logas a la representacio´n de Fourier con el
+W(ZN
+2
+)={f ∈C(ZN
+2
+): f = ∑ fˆ(n)δ
+n
+;∑|fˆ(n)|<∞},
+sistematrigonome´trico,encontra´ndosecondicionesparasu n=1 n=1
+(1)
+convergencia puntual, uniforme y absoluta. En el presente
+dondeδ sonloscaracteresdelgrupodia´dicoyloscoeficien-
+n
+art´ıculoseanalizadesdeunpuntodevistaestructural:secon- tes fˆ(n)vienendadospor
+sideraela´lgebratopolo´gicaconstitu´ıdaporlasfuncionescon
+seriesdeWalshabsolutamenteconvergentes,conocidacomo (cid:90)
+fˆ(n)= f(x)δ (x)dµ, (2)
+a´lgebradeWiener-Walsh,yseestudiansuscaracter´ısticastan- ZN n
+2
+84 SobrelaEstructuradelA´lgebradeWiener-Walsh
+siendo µ la medida de Haar sobre el grupo, normalizada hacerunabiyeccio´nλ entreelconjuntoGy[0,1]∗dadapor
+paraqueµ(ZN)=1.Suestructuraalgebraicaytopolo´gicaes laexpresio´n5,dondead− selehacecorresponderlasuma
+2
+estudiadaacontinuacio´n. infinitayad+lasumafinita.
+[0,1]∗ con la operacio´n ⊕: x⊕y=λ(λ−1(x)+λ−1(y))
+1.1 RepresentacionesdelGrupoDia´dico esungrupoisomorfoaZN .Igualmente,porlabiyeccio´nλ
+2
+Con la topolog´ıa producto el grupo dia´dico es un gru- esposibletraspasarlatopolog´ıaproductoT al[0,1]∗.Enlo
+po topolo´gico. Los miembros de este grupo pueden expre- adelante,usaremoslaletraGparareferirnosindistintamente
+sarse como una sucesio´n de elementos de Z , esto es, b= aunouotrogrupotopolo´gico.
+2
+(b ,b ,...,b,...), tal que b ∈Z , donde la operacio´n del Enelpro´ximoaca´pite,seidentificanloscaracteresdeeste
+1 2 i i 2
+grupo(+),esta´ dadaporlasumamo´dulodoscomponentea grupo.
+componente,esdecir,
+1.2
+CaracteresdeZN
+(cid:26) 2
+a+b=(a ⊕b ,a ⊕b ,...):a ⊕b = 0 sia i =b i . Sead∈G,comosehavistoarriba,d+d=0,deaqu´ıque,
+1 1 2 2 i i 1 sia i (cid:54)=b i todocaracterδ debacumplirqueδ(2d)=δ2(d)=δ(0)=1,
+(3) porlocualδ(d)∈{1,−1}, ∀d∈G.
+Deaqu´ısededuceque−b=bya−b=a+b=b+apara Se denota por e , k∈N al elemento de G que tiene un
+k
+todoa,b∈G. uno en la posicio´n k y cero en todas las dema´s. Sea K =
+Se denota E i a los subconjuntos de Z 2 dados por E i = {k:δ(e k )=−1},elconjuntoK debeserfinito.Enefecto,se
+{i}; i=0,1.Lacoleccio´ndetodoslossubconjuntodeG: puededemostrar,apartirdelaformadeloselementosdela
+baseBquelaserie,
+m
+B(i,m)=(∏Z 2 )×E i ×ZN 2 , (4) ∑ ∞ a k e k , (6)
+z=1
+k=1
+coni=1,2ym∈N,unio´nZN
+,esunasubbasedelatopolog´ıa
+donde a
+k
+=1 si k∈K y cero en otro caso, converge al ele-
+2
+mentoquetieneununoentodaslasposicionesdeK ycero
+productoT.Luego,lasinterseccionesfinitasdeloselementos
+enlasrestantes,d ,segu´nlatopolog´ıaT.
+de dicha coleccio´n conforman una base B de T. La forma K
+Deaqu´ıque,porserδ continua,δ(s )→δ(d ),peroeso
+detalesconjuntosconduceaque,paratodoB∈B,existeun n K
+conjuntode´ındicesfinitoI⊂N,talqueloselementosdeB implicaque:
+tienenexactamenteelmismovalor(0o1)enlasposiciones
+l´ımδ(s )=l´ım(−1)2n=l´ımδ(s )=(−1)2n+1. (7)
+correspondienteaesos´ındices,ypuedeencontrarsecualquier
+2n 2n+1
+combinacio´ndecerosyunosparalasrestantesposiciones. Locual,evidentemente,esunacontradiccio´n.
+Como Z 2 con la topolog´ıa discreta es compacto, por el Por otra parte, sea d ∈G, K d el conjunto de´ındices de
+teorema de Tikhonov, G es compacto. As´ı mismo, sea a(cid:54)= lasposicionesdonded esuno,laseriedefinidapor6donde
+b,existeunaposicio´n j talquesusvaloresenestadifieren. K hace el papel de K, converge a d. En consecuencia, δ
+d
+TomandolosabiertosE i =E(j−1,i)∈B,sedemuestraque quedatotalmentedeterminadoporelvalorquetomeenlos
+esunespaciodeHausdorff. elementose ,dichodeotramanera,porelconjuntoK.
+k
+Otraformaderepresentarestegrupolovinculaconlos Adema´s,seaMunsubconjuntofinitodeN,laaplicacio´n
+racionalesdia´dicos,nu´merosentre0y1queseescribencomo determinadapor,
+lasumafinitadepotenciasde 1.Seab∈ZN ,Jelconjuntode
+2 2 (cid:26)
+´ındicesdelasposicionesdondebtomavalor1.Entoncesb −1 sik∈M
+δ (e )= , (8)
+puedeexpresarsecomo, M k 1 sik∈/M
+1 esunhomomorfismocontinuo.Enefecto,seand∈G,δ (d)=
+b= ∑(
+2
+)j. (5) (−1)card(M(cid:84)Kd).Luegoparatodoa,b∈Gcomoconsec M
+uencia
+j∈J
+delaspropiedadesdelasumavistasantes,setieneque,
+Comolaserie∑∞ (1)j=1,cadabqueapareceenZN puede (cid:92) (cid:92) (cid:92)
+j=1 2 2 card(M K )=card(M K )+card(M K )−2L,
+representarse como un nu´mero entre 0 y 1. No´tese que pa- a+b a b
+(9)
+ra conjuntos de´ındices finitos J se obtienen los racionales
+donde L es el nu´mero de ´ındices de J tales que en las po-
+dia´dicosQ .Cadanu´merorealquenoseaunracionaldia´dico
+d siciones correspondientes ambos elementos tienen un uno.
+tiene exactamente una representacio´n de la forma 5, y, por
+Entonces,
+tanto,esta´ encorrespondenciaconunu´nicoelementodeG.
+Encambio,losracionalesdia´dicos,poseendosmanerasde δ (a+b)=δ (a)·δ (b)·(−1)−2L, (10)
+M M M
+escribirse:comounasumafinita,ocomounasumainfinita.
+Seconsideraentonceselintervalo[0,1]∗,delosnu´meros dedondeseconcluyequeδ esunhomomorfismo.
+M
+del[0,1],dondesehanduplicadolosracionalesdia´dicos,los Porotraparte,δ−1(−1)eselconjuntodeloselementos
+M
+cualesaparecen repetidoscomo d− y d+. Esposibleahora que tienen un nu´mero total impar de unos contando todos
+SobrelaEstructuradelA´lgebradeWiener-Walsh 85
+losqueaparecenenalgunadelasposicionesdeM.ComoM Como (A(G),(cid:107)·(cid:107) ) es completo, se cumple que, si
+A(G)
+esfinito,elnu´merodeformadecolocarcerosyunosenlas ∑(cid:107)f
+n
+(cid:107)converge,entoncesexiste f talque∑f
+n
+convergeen
+posicionesdeMtalqueeltotalseaimparesfinita.Entonces, normaa f.Enconsecuencia,si f seexpresadelaforma13se
+δ−1(−1) se escribe como la unio´n de los miembros de la tiene:
+M
+basequeprecisamentetienenfijoslasposicionesdeJencada
+unadeesascombinaciones.Ana´logamentesedemuestraque
+ϕ(f)=ϕ(l´ım k→∞∑k
+n=0
+a
+n
+w
+n
+)= l´ımϕ(∑k
+n=0
+a
+n
+w
+n
+)
+k→∞
+δ M −1(1) (total par) pertenece a la topolog´ıa. Por lo cual se =∑∞ n=0 a n w n (d ϕ )= f(d ϕ ).
+concluyequeδ escontinuo. (16)
+M
+Enresumen,seobtienequeloscaracteresdelgrupodia´di- Deesaformaseobtienequesead=d ϕ ,ϕ(f)=ϕ d = f(d)
+cosonexactamenteloshomomorfismosδ ,dondeMesun paratoda f ∈A(G),conlocualseconcluyelademostracio´n.
+M
+subconjuntofinitodeN.Ma´saun,comotodonu´meronatural Comoconsecuenciadeesteteoremaseobtieneque,los
+nsepuedeexpresardeformau´nicacomo nu´cleosdeloshomomorfismos,loscualescoincidenconlos
+idealesmaximales,sondelaformaM ={f ∈A(G): f(x)=
+x
+∞
+n= ∑a 2k, a =1 (k), (11) 0}. Lo cual implica que el radical del a´lgebra esta´ consti-
+k k M
+tuidou´nicamenteporelelementonuloyelu´nicoelemento
+k=1
+nilpotenteeselcero.
+existeunabiyeccio´nentreloscaracteresdeGylosnu´meros
+As´ımismo,loselementosinvertiblessonexactamentelas
+naturales.Loscaracteresw
+n
+=δ
+M
+:[0,1]∗→C(w
+0
+=δ
+0/
+=
+funciones f talesqueϕ x (f)= f(x)(cid:54)=0, ∀x∈Gyelespectro
+1) son precisamente las funciones de Walsh. De estos, los de f, del que se conoce su coincidencia con {ϕ(f):ϕ ∈
+caracteresr j =w 2j =δ {j} ,sonlasfuncionesdeRademacher Φ
+A(G)
+},esigualasuimagen.
+[1].
+No´teseque
+1.4 Φ A(ZN) como Espacio Topolo´gico. Representa-
+2
+w ·w = ∏r ∏ r = ∏r =w , (12) cio´ndeGelfand.
+n m j j j k
+j∈Jn j∈Jm j∈Jk A continuacio´n, indagaremos acerca de la topolog´ıa de
+Gelfand, hallaremos la representacio´n de Gelfand del a´lge-
+dondeJ k =(J n (cid:83)J m )\(J n (cid:84)J m ). braW(G) y analizaremos la regularidad de esta a´lgebra de
+funciones.
+1.3 A(ZN 2 ),Φ A(ZN) ,ElementosyPropiedades
+2
+Conocidosloscaracteresela´lgebradeWiener-Walshse Teorema Existeuname´tricaenGtalquelatopolog´ıainduci-
+construyecomo: dapordichame´tricacoincideconlatopolog´ıaproducto.
+∞ Seaxlarepresentacio´ndeunelementodeGcomomiem-
+A(G)={f ∈C(G): f = ∑a
+n
+w
+n
+,∑|a
+n
+|<∞} (13)
+brodel[0,1]∗,seconstruyelafuncio´ng(x)quetomasuco-
+n=0
+rrespondientevalorenelintervalo[0,1].Entonces,ρ(x,y)=
+A(G)constituyeuna´lgebrayconlanorma∑|a
+n
+|,una´lgebra g(x⊕y)esunadistancia.
+deBanach. Enefecto,comox⊕x=0, ∀x∈G,setienequeρ(x,x)=
+g(0)=0.As´ımismo,alserGungrupoabeliano,x⊕y=y⊕x,
+Teorema LoshomomorfismoscontinuosdeA(ZN 2 )enCson luegoρ(x,y)=ρ(y,x).Paraverificarladesigualdadtriangular
+exactamentelospuntuales. serazonadelasiguientemanera:x⊕yes,enlarepresentacio´n
+deZN
+,lacoleccio´nordenadadecerosyunosqueposeeununo
+Noesdif´ıcildemostrarqueloshomomorfismospuntuales 2
+enlasposicionesdondeexactamenteunodeamboselementos
+sonrealmentehomomorfismoscontinuos.Acontinuacio´nse
+poseaununo,yceroenlasrestantes.Deaqu´ıque,six⊕y
+verificaque,adema´s,sonlosu´nicos.
+tieneununoenlaposicio´n j,almenosunodeloselementos
+Sea ϕ que pertenece al espacio de los homomorfismos
+x⊕zoz⊕y,poseaununoendichaposicio´n.As´ıpues,todo
+continuosdeA(G)enC,Φ ,dadoquer ·r =1setiene
+A(G) j j te´rmino(1)j queaparezcaenlarepresentacio´ndex⊕yen
+ϕ(r )=1,−1 para toda j∈N. Esto justifica que se pueda 2
+j [0,1]∗,aparecera´ enladex⊕zoenladez⊕y.
+construirelsiguienteelemento,elcualperteneceaG:
+Acontinuacio´nsedemuestraquelasbasescorrespondien-
+1−ϕ(r ) 1−ϕ(r ) 1−ϕ(r) tesalame´tricayalatopolog´ıaproducto,inducenlamisma
+d ϕ =( 1 , 2 ,..., i ,...). (14) topolog´ıa.
+2 2 2
+Seay∈B(x,ε),paraε<1.Tomemosε =ε−ρ(x,y)<1,
+1
+No´tesequeϕ(r j )=r j (d ϕ ).Peroparatodaw n ,funcio´nde entonces,existektalque,
+Walsh,secumplequew
+n
+=∏
+j∈Jn
+r
+j
+,delocualderivaque:
+1 1
+<ε < . (17)
+ϕ(w
+n
+)= ∏ϕ(r
+j
+)= ∏r
+j
+(d
+ϕ
+)=w
+n
+(d
+ϕ
+). (15) 2k 1 2k−1
+j∈Jn j∈Jn
+Para todo z=(y ,y ,...,y ,!,...), con las primeras k posi-
+1 2 k
+Ve´asequeelproductotienesentidoporserJ finito. cioneside´nticasalasdey,ycualquiercombinacio´ndeceros
+n
+86 SobrelaEstructuradelA´lgebradeWiener-Walsh
+y unos a partir de la interrogante, se cumple que, ρ(y,z)= generaelmismosistemadevecindadesqueB
+x0
+g(0,0,...,0
+k
+,!,...)≤g(0,0,...,0
+k
+,1,1,...)=∑∞
+j=k+1
+(1
+2
+)j= Comolas f
+i
+∈A(G)⊂C(G)ylafuncio´n|x|escontinua,
+2−k. lafuncio´nh
+i
+(x)=|f
+i
+(x)−f
+i
+(x
+0
+)|esunafuncio´ncontinuade
+Enconsecuencia,
+GenR+(cid:83){0}.Luego,h−
+i
+1(−1,ε)∈T,porlocual,
+ρ(x,z)≤ρ(x,y)+ρ(y,z)≤ρ(x,y)+2−k≤ρ(x,y)+ε 1 =ε. E(x ,f ,...,f ,ε)= (cid:92) n h−1(−1,ε)∈T. (21)
+(18) 0 1 n i
+i=1
+Esdecir,todaslaszdelaformadadaarribapertenecen
+a B(x,ε); pero el conjunto de las z descritas conforman un locualimplica,porlacaracterizacio´ndeabiertoporelementos
+elementodelabaseB.Luego,sehaencontradounabiertoB deunabase,queexisteB∈B :x ∈B⊂E(x ,f ,...,f ,ε).
+x0 0 0 1 n
+talquey∈B⊂B(x,ε). Sea ahora, B ∈ B , como ya se ha visto, estas vecin-
+x
+Ve´aseque,dadoy∈B⊂Bykelmayordelo´ındicesde dades pueden ser de tres formas, en dependencia de x. Si
+lasposicionesfijadas,ε = 1 ,y∈B(y,ε)y,cualquierasea x∈/ Q , entonces B=(x−2−j,x+2−j). Sea este el caso,
+2k+1 d
+x∈B(y,ε),secumplequexcoincideconyalmenosentodas es posible seleccionar un racional dia´dico r del intervalo
+1
+lasposicioneshastalak,porloqueperteneceaB.Esdecir, (x−2−j,x),yunracionaldia´dicodelintervalo(x,x+2−j),
+y∈B(y,ε)⊂B.Conloqueseconcluyelademostracio´n. r .Lafuncio´n f =1 escontinua.Ma´sau´n,paratodo
+2 [r+,r−]
+ComocorolarioseobtienequeB x ={B(x,2−j),j=1,2,...}, k>max(−log ρ(r−,r 1 +) 2 ,−log ρ(r−,r+))secumpleque
+esunsistemafundamentaldevecindadesdexparalatopo- 2 1 1 2 2 2
+log´ıaproductoT. 1
+w( ,f)= sup |f(x)−f(t)|=0. (22)
+Esinteresanteobservarlaformaquetomanestasbolasen 2k
+[0,1]∗,locualdependedeltipodeelementodelcualsetrate: ρ(x,t)< 2 1 k
+Peroseconocequesi f ∈C(G)estalque
+ (x−2−j,x+2−j) six∈/Q
+ d
+B(x,2−j)=  (cid:2) (cid:2) ( x x ,( − x+ 2− 2 j − )+ j) , − x (cid:3) (cid:3) s s i i x x ∈ ∈ Q Q d , , x x = = x x − + , ∑ ∞ 22 k w( 2 1 k ,f)<∞, (23)
+d k=0
+(19)
+dondelosintervalosesta´ndadosegu´nelordenusualdeRso- entonces f ∈A(G),[1]pa´g.63.Enconsecuencia,x∈E(x,f,1)=
+2
+breg(x),agregandox−<x+,∀x∈Q d .Notarqueρ(x−,x+)= [r 1 +,r 2 −]⊂B.
+2−(k−1),dondekeselmayorexponentedelarepresentacio´n Ana´logamente, se demuestra lo anterior para bolas con
+finita. centroenx−yx+yradio2−j,tomandolasfuncionesindica-
+Estascaracter´ısticasdelasbolasendependenciadecomo doras f =1 y f =1 respectivamente,
+1 [(x−2−j)+,x−] 2 [x+,(x+2−j)−]
+seaelelementoestudiadotambie´nseobservaenlarepresen- ysustituyendo f por f.
+i
+tacio´nporsucesionesdeZ 2 : Comoambastopolog´ıasposeenelmismosistemadeve-
+cindades,entonces,coinciden.Enparticularestomuestraque
+1. SixnoperteneceaRD,entoncestieneinfinitoscerosy
+Φ esmetrizable.Ma´sau´n,Φ esnormal,comotodos
+unosensurepresentacio´n,deah´ıqueexistansucesiones A(G) A(G)
+los espacios me´tricos. En tal caso, la topolog´ıa de Gelfand
+queseacerquenae´lporamboslados(sicolocasununo
+coincideconlatopolog´ıadeZariski.
+dondeanteshab´ıauncero,teacercasporladerecha,ysi
+No´tesequeexisteunisomorfismodea´lgebraentrelare-
+cambiasununoporunceroteacercasporlaizquierda,
+presentacio´ndeGelfand,Aˆ(G)yelpropioA(G).Adema´sse
+y,mientrasma´slargasealasecuenciainicialquedejes
+cumpleque:
+intacta,ma´spro´ximoalnu´meroestara´s).
+fˆ(ϕ )=ϕ (f)= f(x). (24)
+2. Six=x+,entonces,apartirdeunaposicio´n,lasrestan- x x
+tessoncero(ysolotepuedesacercarae´lporladerecha,
+cambiandocerosporunos). 2. Problema de la S´ıntesis Espectral
+3. Six=x−apartirdeciertaposicio´nsiempreesuno,(so-
+Eltemadelacaracterizacio´ndelosconjuntosdes´ıntesis
+lopuedesacercarteporlosmenoresquee´l,cambiando
+espectralesrecurrenteenelestudiodelasa´lgebrasdeWiener.
+cerosporunos).
+Sinembargo,nosehanobtenidoma´squeresultadosparciales,
+Teorema Labiyeccio´nψ :x→ϕ x ,entreZN 2 yΦ A(ZN) ,esun siendounodelosma´ssignificativosproblemasabiertosdel
+2 ana´lisisarmo´nico.Suintere´ssurgio´ apartirdelostrabajosde
+homeomorfismo.
+Malliavinparaela´lgebradeWienercla´sica,a´lgebradelasfun-
+Parademostraresteteorema,sepruebaqueelsistemafun- cionesdeseriedeFourierabsolutamenteconvergentesobre
+damentaldevecindadesinducidoporlatopolog´ıadeGelfand: eltorounidimensional.Esfa´cilcomprobarqueenela´lgebra
+detodaslasfuncionescontinuasC(T)todoslossubconjuntos
+E(x ,f ,...,f ,ε)={x:|f(x)−f(x )|<ε, ∀i=0,n} cerradossondes´ıntesisespectral,Malliavindemostro´ queen
+0 1 n i i 0
+(20) ela´lgebradeWienersobreTexistensubconjuntoscerrados
+SobrelaEstructuradelA´lgebradeWiener-Walsh 87
+que no son de s´ıntesis. De forma ana´loga al caso de T se Sea y =x , si y∈/ Q , de que y →y en la topolog´ıa
+n kn d n
+demuestra que no todos los subconjuntos de [0,1]∗ son de euclideana,setieneque:
+s´ıntesis, como puede verse en [[6], pag. 245]. No obstante,
+l´ım f(y−)= f(y)= l´ım f(y+). (27)
+acontinuacio´nseencuentraunacantidadnumerabledesub- n→∞ n n→∞ n
+conjuntosdelgrupodia´dicoques´ıloson.Concretamentese De que el primero de estos l´ımites exista se deriva que
+muestraqueexisteunaestrecharelacio´nentreloselementos existeunN talque,paratodon>N, f(y−)tienevalorcons-
+n
+idempotentesdela´lgebraylosconjuntosdes´ıntesisespectral. tante.Peroestoimplicaque,comoy ∈E, f(y+)tomapara
+n n
+Primeramenteseidentificantaleselementos. todaesasnelotroposiblevalor,luegoambosl´ımitestoman
+Los conjuntos de la forma [x 1 +,x 2 −] donde x 1 ,x 2 son ra- valoresdiferentes,locualesunacontradiccio´nconlaigualdad
+cionalesdia´dicos,sonabiertosycerrados.Igualmente,sito- planteada.
+mamoslaunio´ndisjuntayfinitadeconjuntosdeestaforma, Siy∈Q ,entonceslassucesionesy+yy−convergenen
+d n n
+resultaunconjuntoquetambie´nesabiertoycerrado,luego, la topolog´ıa producto a y− y, razonando ana´logamente, se
+laindicadoradelmismosera´ unelementoidempotente. llegaalacontradiccio´n.
+No´tese que el conjunto de los extremos de los interva- Nota:enelcasoenquelacoleccio´ninfinitafuerax+ y
+losanteriores,incluyendoalceroyaluno,determinanuna y∈Q ,setienequedichasucesio´nconvergeenlatopolo k g n ´ıa
+d
+particio´ndelgrupo[0,1]∗. productoay+ylacontradiccio´nsiguedelaexistenciadelos
+l´ımitesen27.
+{[0,x 1 −],[x 1 +,x 2 −],...,[x i +,x i − +1 ],...,[x n + −1 ,x n −],[x n +,1−]}, De lo anterior se deduce que E debe ser finito, (E =
+(25) {x,i=1,...,n:x <x <...<x }).Entonces f puedeser
+i 1 2 n
+con extremos en Q d . A su vez, por cada particio´n de esta expresadaporlaparticio´ndeterminadaporE,delaforma25.
+forma,lasfuncionesquesederivandeasignarlescualquier Dada una funcio´n f, construyendo el conjunto E como
+combinacio´ndeunosyceros,aloselementosdetalparticio´n, en26,obtenemosunaparticio´ntalque f cambiasuvalorde
+sonelementosidempotentesdelaformaantesdescrita.¿Sera´n unintervaloalsiguiente.Adema´s,dadaunaparticio´n,existen
+losidempotentescons-truidosdeestamaneralosu´nicosexis- exactamentedoselementosidempotentesquecumplancon
+tentes? estapropiedad.Puestoquedadasdosparticionesdiferentes,
+Larespuestaesafirmativa.Parasudemostracio´n,puede las cuatro funciones determinadas son distintas, se obtiene
+versequelafuncio´n f :[0,1]∗→Cescontinuaenxsiysolo queelnu´merodefuncionesidempotentesexistentesesdos
+si: veceselnu´merodeparticionesquesepuedenconstruirdela
+forma25.Estasparticionesesta´nencorrespondenciaconlos
+Parax∈/Q d secumplequeparatodasucesio´ndenu´me- subconjuntosfinitosdeQ d .Asuvez,losracionalesdia´dicos
+rosrealesqueconvergeag(x)enlanormaeuclideana, estanenbiyeccio´nconlossubconjuntosfinitosdeN,luego,
+{g(x n )},{f(x n )}convergea f(x). elcardinaldelconjuntodelosidempotentesesnumerable.
+Si x es de la forma y−, deben converger la sucesio´n
+Teorema Losconjuntosabiertosycerrados,loscualesson
+{f(x )}paratodaslassucesiones{g(x )}queconver-
+n n delaforma(cid:83)n [x+,y−],sonconjuntosdes´ıntesis.
+genag(x)enlanormaeuclideanaporlaizquierda. i=1 i i
+Paraelcasodelasxdelaformay+debecumplirselo
+SeaelconjuntoJ(E)definidopor:
+anteriorparalassucesionesqueconvergenag(x)por
+{f ∈W(G): fˆtienesoportecompactoy(suppfˆ) (cid:92) E=0/},
+laderecha.
+(28)
+Sea entonces f ∈A(G) un elemento idempotente, f to- seconocequeEesunconjuntodes´ıntesissiysolosi,J(E)=
+ma solo los valores 0 y 1 sobre G. Una consecuencia de la k(E),dondek(E)eselnu´cleodeE,esdecir,elconjuntode
+proposicio´nanterioresque,si f tomaambosvaloresenun lasfuncionesdeA(G)queseanulanenloselementosdeE.
+intervalo,entoncesexistex∈Q talque f(x−)(cid:54)= f(x+).Sea, Estopuedeverse,porejemplo,en[[2],pa´g.257].
+d
+Porlaidentificacio´ndeΦ yGporunhomeomorfismo,
+A(G)
+E={x∈Q d : f(x−)(cid:54)= f(x+)}, (26) ydeque fˆ(ϕ x )= f(x),tenemosque,comoGescompacto,
+fˆtienesoportecompactoparatoda f ∈A(G).Adema´scomo
+ve´asequeE esfinito. GescompactodeHausdorff,queK seaunsubconjuntocom-
+ElconjuntoEesunsubconjuntoacotadodeR,suponiendo pactodeGesequivalenteaqueseaunsubconjuntocerrado.
+queseainfinito,entoncesporelteoremadeWeiestrass,tiene LuegoJ(E)tomalaforma,
+al menos un punto de acumulacio´n y (segu´n la topolog´ıa
+J(E)={f ∈A(G):∃F cerrado: f| =0}. (29)
+euclideana).Estoimplicaqueexisteunasucesio´n{x }⊂E: G\F
+n
+x →y. A la subsucesio´n formada por todos los elementos SeaE abiertoycerrado,esclaroque,1 ∈J(E).Luego,
+n E
+de la misma menores que y la denotaremos por {x } y a comoJ(E)esunidealcerradodeA(G),paratodag∈k(E),
+kn
+la formada por los elementos mayores que y por {x(cid:48) }. Al setieneque1 ·g=g∈J(E),porlocual,k(E)=J(E),(La
+kn E
+menosunadeestassubsucesionesesinfinita.Sinpe´rdidade desigualdadJ(E)⊂k(E)esevidenteysecumpleparatodo
+generalidad,supongamosquesetratadelaprimeradeestas. cerradoE⊂G).
+88 SobrelaEstructuradelA´lgebradeWiener-Walsh
+3. Conclusiones [2] KaniuthE. ACourseinCummutativeBanachAlgebras.
+Springer,1thedition,2009.
+Hemosaplicadolateor´ıadeGelfandparahacerunana´lisis
+estructuraldela´lgebradeWienerasociadaalgrupodia´dico.
+[3] Lin C-H. Chen C-C. Fan G-T., Yang C-L. and Shih C-
+Sehandemostradopropiedadesqueesperamospuedanrela-
+H. Applications of hadamard transform-gas chromato-
+cionarseconaplicacionesyaencontradasonuevasdelsistema
+graphy/massspectrometrytothedetectionofacetonein
+deWalsh.
+healthyhumananddiabetesmellituspatientbreath. Else-
+Elproblemadelas´ıntesisespectralhasidoabordado,so-
+vierB.V.,20:386–390,2014.
+bretodoparaelcasodela´lgebradeWienercla´sica,sinobtener
+unacaracterizacio´ngeneraldelosconjuntosdes´ıntesis.En
+[4] Osman I. Hassan M. and Yahia M. Walsh-hadamard
+el a´lgebra de Wiener-Walsh hemos encontrado una familia
+transformforfacialfeatureextractioninfacerecognition.
+numerabledeconjuntosdes´ıntesisasociadaalconjuntode
+ProceedingsofWorldAcademyofScience,Engineering
+loselementosidempotentesdela´lgebra.Noexistenelementos
+andTechnology,23:194–198,2007.
+idempotentesnotrivialesenelcasocla´sicoyportanto,este
+resultadonopuedeextendersealgrupocontinuoT.Esteatrac-
+[5] IEEE Juefei-Xu F. and Savvides M. Subspace-based
+tivoproblemadelas´ıntesisespectralau´nnohasidocerrado,
+discrete transform encoded local binary patterns repre-
+constituyendounal´ıneadeinvestigacio´nparafuturostrabajos.
+sentations for robust periocular matching on nists face
+recognitiongrandchallenge.IEEETransactionsonImage
+Referencias
+Processing,23:3490–3505,2014.
+[1] GolubovB.;EfimovA.andSkvortsovV. WalshSeries
+andTransforms. Springer-Science+BusinessMedia,B. [6] Katznelson Y. An Introduccion to Harmonic Analysis.
+V.,1thedition,1991. StanfordUniversity,3rdedition,2002.

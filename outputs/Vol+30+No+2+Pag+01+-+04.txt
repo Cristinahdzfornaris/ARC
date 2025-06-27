@@ -1,0 +1,287 @@
+CienciasMatema´ticas,Vol.30,No.2,Pag.1-4,2016
+Recibido06-2016
+El modelo de Lotka -Volterra
+The Lotka-Volterra model
+Jorge Estrada Herna´ndez1, Ana Isis Toledo Marrero1
+Resumen EnestetrabajoseanalizaunmodelodeLotka-Volterra,opresa-depredador,condosecuaciones
+enderivadasparciales.Sehaceunaprimeraaproximacio´nmedianteelMe´tododeDiferenciasFinitas,yluego
+se demuestra que el problema simplificado esta´ bien planteado y se puede resolver mediante el Me´todo
+de Elementos Finitos. Por u´ltimo, se resuelve nume´ricamnte el problema con el software FreeFem++ y se
+experimentacondiversospara´metros,regionesycondicionesiniciales.
+Abstract InthispaperweanalyzeaLotka-Volterra,orpredator-preymodeloftwopartialdifferentialequations.
+AfirstapproximationusingtheFiniteDifferencesMethodismade. Thenitisprovedthatthesimplifiedproblemis
+well-posedandcanbesolvedusingtheFiniteElementsMethod. Finally,theproblemissolvednumericallyusing
+theFreeFem++softwareandexperimentsaremadevaryingtheparameters,regionsandinitialconditions.
+PalabrasClave
+Lotka-Volterra,ElementosFinitos,DiferenciasFinitas
+1DepartamentodeMatema´tica,UniversidaddeLaHabana,Cuba,jestrada@matcom.uh.cu,nany@matcom.uh.cu
+1. Introduccio´n blacioneselmismoha´bitat,aumentara´ latasadecrecimiento
+delosdepredadoresenunacantidadproporcionalalnu´mero
+El modelo matema´tico de Lotka-Volterra, tambie´n co-
+depresasexistentesenesemomento,alavezquelaspresas
+nocidocomopresa-depredador,fuepropuestoinicialmente
+experimentar´ıanunadisminucio´nensutasadecrecimiento
+por Alfred J. Lotka en ”teor´ıa de las reacciones qu´ımicas
+proporcionalalnu´merodedepredadoreseneseinstante.
+autocatal´ıticas”,en1910.Estaeraefectivamentelaecuacio´n
+log´ıstica,quedebesuorigenaPierreFranc¸oisVerhulst.En
+Asumiendo las condiciones anteriormente descritas, el
+1920,atrave´sdeKolmogorov,Lotkaextendio´ elmodelo a
+modelodeLotka-Volterraexplicalaevolucio´nconjuntadelas
+”sistemas ecolo´gicos”, con una especie de planta y una es-
+dosespecieseneltiempoyelespaciomedianteelsistema:
+pecie de animales herb´ıvoros como ejemplo, y es en 1925
+(cid:26)
+cuandoutilizalasecuacionesparaanalizarlasinteracciones ∂ t u=D 1 ∆u−α 1 uv (1)
+depredador-presaensulibrosobrebiomatema´ticas,dondese ∂ t v=D 2 ∆v+α 2 uv
+llegaalasecuacionesquehoyseconocen.Demaneracasi
+donde D , D , α y α son constantes positivas, ∂φ repre-
+1 2 1 2 t
+simulta´nea,en1926,VitoVolterraenunana´lisisestad´ısticode
+sentaladerivadaparcialconrespectoaltiempodelafuncio´n
+lascapturasdepecesenelmarAdria´tico,investigo´ deforma
+φ(t,x,y)y∆eseloperadorLaplacianodefinidocomo
+independiente,estasmismasecuaciones;esportalmotivoque
+elmodeloesreconocidoenlaactualidadporelnombrede
+∂2φ ∂2φ
+∆φ = +
+ambos.[GonMa] ∂x2 ∂y2
+Enloquesigueseconsiderara´ncondicionesdefrontera
+Estemodelodescribelaluchaconstanteporlasuperviven- tipoDirichlet,nohomegeneas,osea
+ciaentredosespecies:
+u(t,x,y)=g (t,x,y),v(t,x,y)=g (t,x,y),∀(x,y)∈∂Ω,t∈[0,T]
+En un ha´bitat en el que hay abundantes recursos naturales u v
+sedejaevolucionardosespecies,unadepredadoraylaotra ycondicionesiniciales
+presa.Sedesignara´ porv(t,x,y)alnu´merodeindividuosde
+u(0,x,y)=u (x,y),v(0,x,y)=v (x,y), ∀(x,y)∈Ω
+laespeciedepredadoraenelinstantetenlaubicacio´ndecoor- 0 0
+denadas(x,y)yporu(t,x,y)alacantidaddepresasenese dondeΩesunaregio´ndelplanoabierta,conexayacotada.
+instanteenelmismolugar. En este informe se analizara´ el comportamiento de las
+soluciones del sistema (1) por medio de la utilizacio´n del
+Sesabequelaespeciedepredadoraseextinguir´ıaenausen- Me´todo de los Elementos Finitos combinado con una dis-
+ciadepresasyqueasuvezlapoblacio´ndepresascrecer´ıasin cretizacio´npreviadelproblemautilizandoelMe´tododelas
+lapresenciadelosdepredadores,seasumeestecrecimiento Diferencias Finitas para aproximar la derivada parcial con
+deformaexponencial.Sinembargo,alcompartirlasdospo- respectoaltiempo.
+2 ElmodelodeLotka-Volterra
+2. Una aproximacio´n al problema desde Reescribiendoelsistemaanterior,setiene:
+el Me´todo de las Diferencias Finitas (cid:26)
+−∆u +C u =u (C −C v ) (2,1)
+n+1 1 n+1 n 1 2 n
+Sianalizamoselproblemadesdeelenfoquedelasdiferen- −∆v +C v =v (C +C u ) (2,2)
+n+1 3 n+1 n 3 4 n+1
+ciasfinitas,estamosenpresenciadeunsistemadeecuaciones
+enderivadasparcialesbidimensional,paraelcualesimpor- dondeC = 1 ,C = α 1 ,C = 1 yC = α 2 .
+1 2 3 4
+tanteseleccionarconvenientementeunesquemaadecuadoen (cid:52)tD 1 D 1 (cid:52)tD 2 D 2
+diferencias,demaneraquelaresolucio´ndelsistemacorres-
+No´tesequeencadaiteracio´n,conociendou ,v yresol-
+n n
+pondientenoseamuycostosacomputacionalmenteyadema´s
+viendo(2,1)parau entoncessepodr´ıacalcularv por
+n+1 n+1
+quesepuedagarantizarlaconsistenciayestabilidaddelmis-
+medio de (2,2). Los valores u y v se tienen de las condi-
+0 0
+mo.
+ciones iniciales del problema, por tanto de forma iterativa
+se obtendr´ıan los vectores soluciones u=(u ,u ,...,u ) y
+0 1 N
+Aesteana´lisisser´ıaimportanteagregarqueelsistemade v=(v ,v ,...,v ).
+0 1 N
+ecuacionesdiferencialesaestudiarnoeslinealyportanto,
+aunqueseutilizaraunesquemadediscretizacio´necono´mico
+Faltar´ıasolamentedefinirlamaneraenquesera´ resuelta
+(endireccionesalternadas)quegarantizaradisminuirelcosto cadaecuacio´nparapasardelnivelnalniveln+1.
+computacional,lanolinealidaddelmismoimplicar´ıacompli-
+cacionesteo´ricasypra´cticasconsiderablementealtasparala
+3. Resolucio´n del problema por el
+demostracio´ndelaestabilidadoconsistenciadelesquema,as´ı
+Me´todo de los Elementos Finitos
+comoparaelca´lculonume´ricodelassoluciones.
+Enestaseccio´nsedemuestraquecadaunadelasecua-
+Suponiendoquetodoslosobsta´culosanteriormentemen- ciones del sistema anteriormente planteado para un nivel n
+cionadosfueraneficientementesalvados,limitarnosalMe´todo dado,sepuederesolveraplicandoelMe´tododelosElementos
+delasDiferenciasFinitasimplicar´ıalimitacionesrelacionadas Finitos.
+conlaregio´nΩdeestudiodelproblema,puesusualmentese
+utilizanmallasregularesorectangularesynoresultasencillo Asu´manse conocidos u y v , la cuestio´n sera´ entonces
+n n
+discretizarunaregio´narbitrariaconestetipodemallado. encontrarlasolucio´nu delsiguienteproblemael´ıpticocon
+n+1
+condicionesdefronteratipoDirichlet:
+Aunqueelme´tododelasDiferenciasFinitasnoesade-
+(cid:26)
+cuado para resolver completamente el problema planteado −∆u n+1 +C 1 u n+1 =u n (C 1 −C 2 u n v n ), ∀(x,y)∈Ω
+anteriormente,sisera´degranayudaparatransformarelsiste- u n+1 (x,y)=g u (t n+1 ,x,y), ∀(x,y)∈∂Ω
+maenunnuevosistemalinealquepuedeseriterativamente (3)
+resueltopormediodelMe´tododelosElementosFinitos. Para resolver (3) es importante obtener la formulacio´n va-
+riacional del mismo y demostrar que es un problema bien
+planteado.
+Enefecto,conside´resequeeltiempovar´ıaenelintervalo
+I=[0,T]ysea
+No´tese que, co´mo las condiciones de frontera de Diri-
+(cid:26)
+T
+(cid:27) chletnosonhomoge´neas,unopertenecealespacioH1;sin
+0
+I = t =n·(cid:52)t, n=0...N, N=
+h n embargo,
+(cid:52)t
+1
+g
+u,n+1
+:=g
+u
+(t
+n
+,x,y)∈H2(∂Ω)
+Sea
+luego,existeunoperadordeextensio´n(eningle´s,lift
+φ n (cid:39)φ(t n ,x,y) operator)R
+0
+(g
+u,n+1
+):H2 1 (Ω)→H1(Ω)talquesutrazaen
+unaaproximacio´ndeφ enlosmomentost n .Usandoladiscre- ∂Ωesg u,n+1 .Luego,lanuevavariableser´ıau=u−R 0 (g u,n+1 )
+tizacio´ndeEulerparaaproximarladerivadaconrespectoal lacualesta´ enH1(Ω).
+0
+tiempo,setiene Introduciendolafuncio´ndepruebaφ ∈H1(Ω)yporme-
+0
+diodelaintegracio´nporpartes,seobtienelasiguienteformu-
+φ (x,y)−φ (x,y) lacio´nvariacionaldelproblema(3)
+∂φ(t ,x,y)(cid:39)
+n+1 n
+t n+1
+(cid:52)t
+(cid:90) (cid:90) (cid:90)
+− ∇u ∇φ+C u φ = u (C −C v )φ (4)
+n+1 1 n+1 n 1 2 n
+seobtienelasiguientediscretizacio´ndelproblemaplanteado Ω Ω Ω
+en(1)conrespectoaltiempo:
+Acontinuacio´nseenunciaelteoremadeLax-Milgram,
+ u −u quesera´utilizadoparademostrarqueelproblemavariacional
+ n+
+(cid:52)
+1
+t
+n =D 1 ∆u n+1 −α 1 u n v n (4)esta´ bienplanteado,estoes,quetieneunasolucio´nu´nica
+v −v (2) yqueestadependecontinuamentedelosdatos.
+
+n+1 n
+=D
+2
+∆v
+n+1
++α
+2
+u
+n+1
+v
+n
+(cid:52)t
+ElmodelodeLotka-Volterra 3
+TeoremadeLax-Milgram dondeM=C ||u || +C ||u || ||v || .Paralasdesigual-
+1 n L2 2 n L4 n L4
+SeaH unespaciodeHilbert,a(·,·)unaformabilinealyLuna dadesanterioressehautilizadoladesigualdadtriangular,la
+formalineal.Sisecumplenlassiguientescondiciones desigualdaddeCauchy-Schwarzparaelproductousualu φ y
+n
+ladesigualdaddeHo¨lderparau v φ.
+n n
+i) a(·,·)escontinua,estoes∀(u,φ)∈H,
+|a(u,φ)|≤(cid:107)a(cid:107)(cid:107)u(cid:107) (cid:107)φ(cid:107)
+H H Comosehanverificadolashipo´tesisdelteoremadeLax-
+Milgramparaelproblema(4)enelespaciodeHilbertH1(Ω),
+ii) a(·,·)escoerciva,estoes∃α >0: se puede asegurar la existencia y unicidad de la solucio´n y
+∀u∈H,a(u,u)≥α(cid:107)u(cid:107)2 ladependenciacontinuadeestaconrespectoalosdatosdel
+H
+problema;esdecir,elproblemaesta´ bienplanteado.
+iii) Lescontinua,estoes∀u∈H,|L(u)|≤(cid:107)L(cid:107)(cid:107)u(cid:107)
+H
+Entonceselproblema 4. Resolucio´n nume´rica del problema
+utilizando FreeFEM++
+buscaru∈H:a(u,φ)=L(φ),∀φ ∈H
+Acontinuacio´nseexponeunseudoco´digopararesolver
+admiteunau´nicasolucio´nuyestasolucio´nsatisfaceadema´s
+nuestroproblemaconelsoftwareFreeFem++
+(cid:107)L(cid:107)
+que(cid:107)u(cid:107) H ≤ . procedureRESOLUCIO´NDELPROBLEMAUSANDOFREE-
+α
+FEM++
+(1)Declararlafronteradelaregio´n,elespaciodeele-
+Porlalinealidaddelaintegralydeloperador∇(gradien- mentosfinitos(enestecasoP2)ylosvaloresdelospara´me-
+te),setieneclaramenteque tros.
+(cid:90) (cid:90) (2)Plantearlosproblemasensuformulacio´nvariacio-
+a(u n ,φ)=− ∇u n ∇φ+C 1 u n φ nalylascondicionesdefrontera.
+Ω Ω
+(3)Resolverlosproblemas.
+esunaformabilinealenH1(Ω),veamosadema´squeesconti- (4)Graficarlassoluciones.
+nua. (5)Actualizarlascondicionesiniciales.
+(6)Repetir(3)-(5)enelintervalodetiempodeseado.
+(cid:12) (cid:12) (cid:12)(cid:90) (cid:12) (cid:12)(cid:90) (cid:12)
+(cid:12)a(u ,φ)(cid:12)≤(cid:12) ∇u ∇φ(cid:12)+C (cid:12) u φ(cid:12) endprocedure
+(cid:12) n (cid:12) (cid:12) n (cid:12) 1(cid:12) n (cid:12)
+Ω Ω Se experimento´ con diversos valores de los para´metros
+D ,D ,α ,α ,diversascondicionesinicialesydosregiones
+(cid:114)(cid:90) (cid:114)(cid:90) (cid:114)(cid:90) (cid:114)(cid:90) 1 2 1 2
+≤ ||∇u ||2 ||∇φ||2+C u 2 φ2 distintas: La circunferencia unitaria y el cuadrado de lado
+n 1 n
+Ω Ω Ω Ω 2,ambosconcentroen(3,4).Lasiguientelistaresumelos
+(cid:114)(cid:90) (cid:114)(cid:90)
+(cid:16) (cid:17) resultadosdelaexperimentacio´nnume´rica:
+≤ ma´x(C ,1) (||∇u ||2+u2) ||∇φ||2+φ2
+1 n n
+Ω Ω
+= ma´x(C 1 ,1)||u n || H1(Ω) ||φ|| H1(Ω) Paravalorespequen˜osdeα 1 ,α 2 respectoaD 1 ,D 2 ,las
+solucionesconvergeneneltiempo.
+(En la segunda desigualdad usamos Cauchy-Schwarz.) Paravaloresunpocomayoresdeα ,α lassoluciones
+1 2
+Adema´ssecumpleque sonperio´dicas,comoest´ıpicodelossistemasdeEDOs
+depresa-depredador.
+(cid:90) (cid:90)
+a(u n ,u n )= ∇u n 2+C 1 u n 2≥m´ın(C 1 ,1)||u n ||2 H1(Ω) Para valores grandes de α 1 ,α 2 , sin embargo, las so-
+Ω Ω luciones explotan en tiempo finito en el centro de la
+conlocualtambie´nsetienequea(·,·)escoerciva. regio´n.
+No hubo diferencias significativas entre el comporta-
+No´teseporu´ltimoquelaformalineal mientodentrodelcuadradoydelacircunferencia.
+(cid:82)
+L(φ)= u (C −C v )φ escontinua
+Ω n 1 2 n
+(cid:12) (cid:12) (cid:12)(cid:90) (cid:12)
+(cid:12)L(φ)(cid:12) = (cid:12) u (C −C v )φ(cid:12) Referencias
+(cid:12) (cid:12) (cid:12) n 1 2 n (cid:12)
+Ω
+(cid:12)(cid:90) (cid:12) (cid:12)(cid:90) (cid:12) [GonMa] Gonza´lez, M., T.,Modelo predador-presa de
+≤ C 1 (cid:12) (cid:12) u n φ(cid:12) (cid:12) +C 2 (cid:12) (cid:12) u n v n φ(cid:12) (cid:12) Volterra-Lotka, Proyecto de Innovacio´n y Mejora
+Ω Ω
+de la Calidad Docente, Proyecto 29, UCM MATH-
+≤ C ||u || ||φ|| +C ||u || ||v || ||φ||
+1 n L2 L2 2 n L4 n L4 L2 TRAINING1.0:Desarrollodeunaplataformadesoftwa-
+≤ C
+1
+||u
+n
+||
+L2
+||φ||
+H1
++C
+2
+||u
+n
+||
+L4
+||v
+n
+||
+L4
+||φ||
+H1 reydemo´dulosdocentesenmatema´ticas,Universidad
+≤ M||φ|| ComplutensedeMadrid.
+H1
+4 ElmodelodeLotka-Volterra
+[All07] Allaire, G., Numerical Analysis and Optimization,
+OxfordSciencePublication,2007.
+Figura1.Poblacio´ndelapresaenunc´ırculo
+[Leo10] Leo´n,A.M, Me´todosNume´ricosAvanzados para
+EDDP,NotasdeClase,curso2010-2011,UH.
+[Hecht] Hecht,M.,FreeFem++,ThirdEdition,version3.40,
+Figura2.Poblacio´ndelapresaenuncuadrado http://www.freefem.org/ff++

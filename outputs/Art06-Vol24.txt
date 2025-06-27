@@ -1,0 +1,367 @@
+REVISTA DE CIENCIAS MATEMÁTICAS Vol. 24, único, Nos. 2007-2008
+ANILLOS DE SCHUR Y MÓDULOS -GLOBALMENTE
+
+SIMPLES.
+Pedro Domínguez Wade1, Jesús Barreto Molina2
+1Universidad de Matanzas, 2Universidad Pedagógica de Villa Clara, Cuba.
+RESUMEN
+Sea F un campo de números algebraicos y Rsu correspondiente anillo de enteros algebraicos
+I ,,I I  I I
+con ideales maximales . Sea además, el ideal fraccional . Entonces
+1 n 1 n
+K  R m
+es un anillo semisimple de característico . En el trabajo se demuestra que el
+m I
+ 
+anillo M R , de las nn -matrices sobreR, es un anillo de Schur si y solo si hay un
+n
+RG-retículo  -globalmente simple, donde  es el conjunto de los divisores primos de m .
+ABSTRACT
+Let F be a field of algebraic numbers and let Rbe the ring of algebraic integers of F
+Assume that I ,,I is a list of maximal ideals of Rand I  I I a fractional ideal.
+1 n 1 n
+Then K  R is a semisimple ring of characteristicm . In this paper we show that the ring
+m I
+ 
+M R of the nn-matrices over R, it is a Schur ring if and only if there is an RG-lattice
+n
+  m
+-globally simple, where is the set of the prime divisors of .
+1.INTRODUCCIÓN.
+El concepto del anillo de Schur fue introducido por Issai Schur en 1933, en unartículo donde Schur
+probó que un grupo cíclico de orden compuesto es un B-grupo según Burnside. Es decir, fue probado
+que cada extensión primitiva, de un grupo cíclico finito Z de orden compuesto n, por el grupo
+n
+simétricoS es un grupo permutación doble transitivo.
+n
+ 
+Sea Run anillo conmutativo. Entonces el anillo matricialM R , de las nn-matrices sobreR,
+n
+ 
+es llamado anillo de Schur si existe un grupo finito G GL R tal que el R-módulo generado por G
+n
+   
+coincida con M R , es decir, G M R . (Ver [3]).
+n R n
+Esta claro que el problema principal en este caso es determinar para que n el anillo matricial
+ 
+M R es de Schur. Para precisar más el problema utilizaremos el concepto de álgebra de Azumaya.
+n
+Para un anillo local R un álgebra de Azumaya es una R-álgebra A, libre y de rango finito r
+como R-módulo, para la cual la acción natural de A sobre si mismo por multiplicación por la izquierda
+y la acción del anillo opuesto A0 por multiplicación por la derecha definen un producto tensorial
+isomorfo a un álgebra de rr - matrices sobre R.
+Visto de esta manera, el problema en cuestión se reduce a determinar cuáles de las álgebras de
+Azumaya sobre R son obtenibles como la imagen epimorfa del grupo anillo RGpara algún grupo finito
+G.
+En [3], por primera vez, Zalesskii y Van Oystayen abordan este problema para el caso en que R
+es un anillo de enteros algebraicos de un campo aritmético F de números algebraicos, utilizando como
+herramienta fundamental las representaciones modulares de grupos finitos, ellos en particular utilizan
+60
+las llamadas representaciones globalmente irreducibles de grupos finitos. Destaquemos que una
+representación de un grupo finito sobre un campo de números algebraicos se dice globalmente
+irreducible si es irreducible por reducción para cualquier número primo p (Ver [3]).
+Sea G un grupo finito con campo raíz F , donde F es un campo de números álgebraicos,
+denotemos por Ral anillo de los enteros álgebraicos de F . Asumamos que ,, son
+1 n
+valuaciones discretas sobre F asociadas a los ideales maximales I ,,I de R. Entonces el anillo
+1 n
+    ˆ ˆ ˆ
+semilocal R  aF : a 1,i 1,,n , con ideales maximales I ,,I tales que I I , es
+m i 1 n i i
+llamado anillo de las valuaciones discretas .
+i
+ˆ ˆ ˆ
+El conjunto I  I I es un ideal fraccional de R , el cual contiene al entero positivo
+1 n m
+R
+m  p p , siendo p p la factorización primaria de m . Luego, K  m es un anillo
+1 n 1 n m I ˆ
+semisimple de característica m con ideales maximales
+K
+ 
+ y campos residuales k  m   de característica p .
+i i  i
+i
+Por tanto, si G es un grupo finito entonces se cumple:
+ 
+K G  k Gk G1.0.1
+m 1 n
+De (1.0.1) se infiere que los K G- módulos simples son precisamente los k G -módulos simples.
+m i
+A la descomposición de K Gcomo suma directa de campos, dada anteriormente,
+m
+le corresponde una expresión de la forma 1 f  f , para la identidad de K , donde los
+1 n m
+sumandos f son idempotentes primitivos y ortogonales dos a dos. Por ende,k G  K Gf . Sea U
+i i m i
+un K G-módulo. Entonces tenemos:
+m
+U Uf Uf
+1 n
+donde los sumandos directos Uf son k G-módulos . El problema concreto que estudiaremos es el
+i i
+siguiente:
+ 
+¿Cuáles son los puntos de contacto entre los anillos de Schur M R , donde R es un anillo de
+n
+enteros algebraicos de un campo de números algebraicos F y las m -representaciones de los grupos
+finitos?
+2.NOTACIONES Y DEFINICIONES.
+A través del trabajo F denota a un campo de números algebraicos y R al correspondiente anillo de
+los enteros algebraicos de F .Aquí K denota un anillo semisimple de característica m con
+m
+ 
+factorización primaria p p . Sus ideales maximales se denotan por  y a sus
+1 n i
+K
+correspondientes campos residuales, de característica p , por k  m  . Denotemos por  al
+i i 
+i
+conjunto formado por todos los divisores primos de la característica m .
+Sea G un grupo finito, entonces K G denota el anillo grupal de G. Sea A un anillo y G un
+m
+ 
+grupo finito , entonces J G denota al radical del anillo grupal AG . El anillo de las nn-matrices
+61
+ 
+sobre R se denota por M R .Sea  una R-representación del grupo finito G. Entonces el R-
+n
+módulo en M  R  generado por G es denotado por G .
+n R
+3.PRINCIPALES RESULTADOS.
+Definición: Sea A un módulo finitamente generado sobre un anillo conmutativo . Entonces A-
+módulo U se dice libre indescomponible si es libre como -módulo y no puede ser expresado como
+una suma directa de dos A-módulos, libres como -módulos.
+Definición: Un K G-módulo S se dice -cuasisimple si cada sumando Sf es un K G-módulo
+m i m
+absolutamente simple.
+Sea R un anillo principal, entonces un RG-módulo L es llamado RG-retículo si es finitamente
+generado y libre como un R-módulo.
+Lema(1.1.1) :
+Sean G un grupo finito y  una k-representación de G, siendo k un campo de característica p.
+Sea   G  G ˆ , entonces  es absolutamente simple si y sólo si G ˆ  M  k  .
+n
+k
+Demostración
+Si  es una representación absolutamente simple, entonces aplicando el clásico teorema de
+Burnside la implicación es inmediata. Recíprocamente, si $
+ˆ   kG
+G  M k entonces el álgebra matricial correspondiente a  en   es precisamente
+n J G
+k
+ 
+M k por tanto  es absolutamente simple ( Ver [2] proposition 9.2). ■
+n
+  ˆ
+Teorema(1.1.2): Sean G un grupo finito y  una K -representación de G. Sea G G ,
+m
+ˆ  
+entonces G  M K si y sólo si  es -cuasisimple.
+n m
+K
+m
+Demostración
+Tenemos:
+ˆ ˆ ˆ    
+G  G  G  M k M k
+n 1 n t
+K k k
+m 1 t1
+Por tanto:
+ˆ  
+G  M k , para todo i.
+n i
+k
+i1
+Así, aplicando el lema anterior el resultado es inmediato. Recíprocamente si  es -cuasisimple,
+ˆ  
+entonces G  M k para todo i, aplicando nuevamente el lema
+n i
+k
+i1
+precedente. Por tanto:
+ˆ ˆ ˆ      
+G  G  G  M k M k  M k
+n 1 n t n m
+K k k
+m 1 t1
+Así, concluimos la demostración del teorema. ■
+Sean F un campo de números algebraicos y R el anillo de los enteros algebraicos
+62
+de F . Sea V un RG-módulo finitamente generado, siendo Gun grupo finito. Admitamos que  es
+un conjunto finito de números primos p .
+i
+Denotemos por ,i 1,,, a las valuaciones discretas sobre F asociadas a los ideales
+i
+maximales I ,i 1,,t, con p I ,i 1,,t, de R. Sea además, R el anillo de las valuaciones
+i i i m
+ˆ R
+discretas con ideal primo I tal que K  m . Puesto que R  R se infiere que
+i m I ˆ m
+~
+~ ~ ~
+V
+V  R  V es un R G -retículo. Luego V  ~ es la reducción de V módulo . La
+m R m I ˆ V
+reducción módulo  está bien definida según el teorema de Brauer-Nesbitt (Ver [2] theorem (9.18)).
+~
+Si  es la representación de G asociada a V entonces se dice que la representación  de G,
+~
+asociada a V , es la reducción de  módulo .
+~
+Definición Un RG-módulo V se dice - globalmente simple si V es -cuasisimple.
+Lema(1.1.3):
+Sean F un campo de números algebraicos con anillo de enteros algebraicos R y
+ una valuación discreta sobre F asociada al ideal maximal I de R. Sea además, R el anillo
+
+R
+valuación con ideal maximal I y campo residual k   de característica p. Asumamos que
+ I
+
+~ ~
+G es un grupo finito y V un RG-módulo. Sean el R G-módulo V  R  V y V la
+ m R
+~ ~ ~
+reducción de V módulo p. Sean  y  las representaciones asociadas a V y V respectivamente.
+       
+Admitamos que G G y G G . Entonces G  M R si y sólo si G  M k .
+  R n  k n
+
+Demostración.
+Puesto que k  R  de G  M  R  se infiere que G  M  k  .
+I  R n  k n
+ 
+Recíprocamente, puesto que rank G  rank G el resultado es inmediato. ■
+k k R   R 
+Lema (1.1.4)
+ˆ R
+Sea R el anillo de las valuaciones discretas con ideal primo I y anillo residual K  m
+m i m I ˆ
+semisimple de característica m y sea el grupo finito G tal que todo divisor primo de su orden es
+divisor de m .
+ 
+Asumamos que U es un R G -módulo con representación asociada  tal que G G .
+m m
+~
+Entonces G M  K  si y sólo si U es un K G-módulo
+m K n m m
+m
+-cuasisimple, siendo  el conjunto de los divisores primos de m .
+Demostración
+~
+Sea  la representación de G asociada a U .
+63
+   
+Asumamos que G G . Entonces de G  M R se obtiene
+m K n m
+m
+ 
+G  M K .
+n m
+K
+m
+Sea K k k la descomposición de K como suma directa de campos k de
+m 1  m i
+característica p . Luego tenemos:
+i
+ 
+G  M k ,para todo i.
+n i
+k
+i
+Luego, aplicando el lema (1.1.1) se obtiene el resultado deseado.
+Razonando en sentido inverso la prueba de la otra implicación es inmediata. ■
+Lema (1.1.5)
+Sean R el anillo de los enteros algebraicos del campo de números algebraicos F
+y G un grupo finito. Asumamos que  es el conjunto de los divisores primos del
+orden de G y que V es un RG-módulo con representación asociada  al que
+GG ˆ
+. Sea
+R el anillo de las valuaciones discretas  asociadas a los ideales maximales I de Rcon p I
+m i i i i
+  ~  
+y p i 1,, . Sea  la representación asociada a V con  G G .
+i m m m
+Entonces G ˆ  M  R  si y sólo si G  M  R  .
+R n m R m n m
+Demostración.
+ 
+Si G  M R , entonces combinando los lemas (1.1.3) y (1.1.4) se obtiene
+m R n m
+m
+ 
+G  M R para toda valuación discreta  asociada al ideal maximal I de R, contenedor del
+ R n  i i
+
+número primo p , el cual es un elemento de .
+i
+Así, para cualquier otro valuación discreta  asociada a un ideal maximal I de R contenedor de
+ 
+un número primo p no divisor del orden del grupo se cumple que G  M R (Ver [2]
+ R n 
+
+ˆ  
+theorem (9.19)). Por tanto se cumple G  M R (Ver [3] theorem (1.4)). La demostración de la
+n
+R
+otra implicación es trivial. ■
+Teorema (1.1.6)
+Sean R el anillo de los enteros algebraicos del campo de números algebraicos F
+y G un grupo finito. Admitamos que V es un RG-módulo y que  es su
+correspondiente representación. Sea además,GG ˆ . Entonces G ˆ  M  R  si y sólo si V es
+n
+R
+un -globalmente simple.
+Demostración
+ˆ  
+Si G  M R entonces combinando los lemas (1.1.4) y (1.1.5) se obtiene la demostración de
+n
+R
+esta implicación.
+ 
+Recíprocamente, si V es -cuasisimple entonces se cumple G  M R acorde al lema
+m R n m
+m
+(1.1.4) .Luego, aplicando el lema (1.1.5) se obtiene el resultado deseado. ■
+64
+ 
+Lema (1.1.7) Sea el grupo G GL R tal que
+
+G  M R con 1. Entonces existe un grupo H GL  R  tal que
+R m n
+ 
+H M R .
+m R n
+Demostración Ver [3] lemma (3.3) ■
+Ejemplo
+Sea el anillo K de característica 6 tal que K  k k , siendo k un campo de
+6 6 1 2 1
+característica 2 de dos elementos y k un campo de característica 3 de 9 elementos. Admitamos que
+2
+G es una extensión, no semidirecta (Ver [4]), de un 2-grupo de orden 16 con centro de orden 4, por el
+grupo simétrico S . En este caso hay un K G-módulo 6-cuasisimple S, de rango dos, tal que
+3 6
+S U U , donde U es un k G -módulo simple, con G  S , y U es un k G -módulo simple,
+1 2 1 1 3 2 2
+ 
+siendo G G. Por tanto, si R contiene una raíz primitiva cuarta de la unidad entonces M R es
+2
+ 
+un anillo de Schur, según el último teorema,. Además, para n2N el anillo matricial M R es
+n
+también de Schur, según el lema (1.1.7).
+ 
+Precisando mas en el ejemplo, observe que según lo anterior, M Z i es un anillo de Schur para
+n
+n2N. ■
+REFERENCIAS
+ 
+1 Chambert L.A. Algèbre Commutative, www.poly tecnique.fr.
+ 
+2 Webb P. Finite Group Representations for Pure Mathematician,
+www.math.umn.edu/~webb/. (2004) .
+ 
+3 Zalesskii A.E. and Van Oystaeyen F. Finite Groups over Arithmetical Rings and Globally
+Irreducible Representations,J.Algebra 215 (1999), 418-436.
+65

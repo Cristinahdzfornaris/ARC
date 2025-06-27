@@ -1,0 +1,75 @@
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.100
+ReseñadeLibro/BookReview
+Recibido(Received):25-04-2024,Revisado(Revised):01-06-2024
+Aceptado(Accepted):05-01-2025,Enlínea(Online):27-04-2024
+Hernández, J. F. y Miret, E. (2022). Introducción al Álgebra. Editorial Universitaria, La
+Habana. ISBN 978-959-16-4725-2
+Hernández, J. F. y Miret, E. (2022). Introduction to Algebra. Editorial Universitaria, Havana.
+ISBN 978-959-16-4725-2
+María Esther Reyes Calzado1*
+1DepartamentodeMatemática,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+mariaestherrcalzado@gmail.com.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Maquetadopor(Layoutby):PauloEnriqueLantiguaCuervo,InstitutodeCriptografía,UniversidaddeLaHabana,LaHabana,Cuba.
+Citarcomo: ReyesCalzado,M.E.(2024).Hernández,J.F.yMiret,E.(2022)IntroducciónalÁlgebra.Editorial
+Universitaria,LaHabana.ISBN978-959-16-4725-2[Reseñadelibro].CienciasMatemáticas,37(1),100.DOI:
+https://doi.org/10.5281/zenodo.15293084.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9061.
+Para la carrera de Licenciatu- linealesconteoremadeKronecker-Capelli.
+raenMatemáticas,ladisciplinade
+Cadacapítuloiniciaconunabrevereseñahistóricadelos
+Álgebraconstituyeunodesuspila-
+matemáticos que contribuyeron al desarrollo de la discipli-
+resfundamentales.Estelibropre-
+na,particularmenteeneltemaqueseabordaráenelmismo.
+tende servir de texto básico a un
+Cuentaconunbuennúmerodedemostracionesyejemplos
+primer semestre de esta asignatu-
+resueltos,yentodosseconcluyeconunepígrafedeejerci-
+ra,loqueresultaunaherramienta
+ciosseleccionadosdelabibliografíabásicaladisciplina,así
+esencialtantoparaprofesoresco-
+comodeelaboraciónpropiadelosautores.Entrelasfuentes
+moestudiantes.
+utilizadas se encuentran autores clásicos como Faddieev &
+Este texto es el resultado del
+Sominski(1971),Kostrikin(1983)yKurosch(1968),yotros
+trabajodevariosañosdelcolectivo
+máscontemporáneoscomoBravoetal.(2013),Cárdenaset
+deprofesoresdeestadisciplinaen
+al.(1995)ySpiegel&Moyer(2006).
+laFacultaddeMatemáticayComputacióndelaUniversidad
+La lectura del libro es especialmente agradable, consi-
+de La Habana, razón por la que los autores, en su prólogo,
+guiendo incluso que partes de ciertas demostraciones, que
+reconocenydedicanestaobraalosprofesoresDr.Roberto
+pudieransertediosasparaellector,resultenamenas,sinque
+Núñez, Dra. Teresita Noriega, Dr. Héctor de Arazoza y Dr.
+seahorreenningúnmomentorigorenlaexposición.Seapoya
+BaldomeroValiño,quienescontribuyeronasuformaciónco-
+ademásdelusodefigurasque,sinrecargareltexto,apoyanla
+modocentes,asícomoalaDra.RitaRoldánInguanzopor
+interpretacióngeométricadelosconceptospresentados.
+susrecomendacionesdurantelaedicióndelmismo.
+Ellibroestáestructuradoentrescapítulosdedicadosapre- Enconclusión,estetextoconstituyeunbuenresumende
+sentarloscontenidospreliminaresnecesariosparaprepararal notacionesyconstruccionesalgebraicasbásicas,intentando
+lectorantesdeenfrentarseauncursodeÁlgebraLineal,pero cubrirlosposiblesagujerosenlaformaciónpreviadellector,
+quetambiénsirvencomoherramientaparaotrasdisciplinas loqueresultaespecialmenteimportanteteniendoencuentasu
+delasCienciasMatemáticasydelaComputación. públicoobjetivoquesonlosestudiantesdeprimersemestre
+Elprimercapítulointroducelosnúmeroscomplejosyrea- de la universidad, introduciendo las bases conceptuales ne-
+lizaunestudioprofundodelasoperacionesenesteconjunto cesariasparaadentrarsealestudiodelÁlgebraLinealylas
+numérico.Enelsegundocapítuloseabordanlospolinomios CienciasMatemáticasengeneral.
+concoeficientesenuncuerpo,apartirdelaanalogíadeeste
+Puededescargarsegratuitamenteellibroenelsiguiente
+conjuntoconelconjuntodelosnúmerosenterosconcluyendo
+enlace:http://biblioteca.eduniv.cu/downloa
+conlapresentacióndelconjuntodelasfraccionesracionales
+d/718/pdf/718.pdf.
+construyéndolodeformaanálogaalconjuntodelosnúmeros
+racionales.
+Eltercercapítulosecentraenlosmétodosparalasolución
+delossistemasdeecuacioneslinealessepresentanlasmatri-
+cesysusoperaciones,yEcsotnacloubyraeceosnt´aelbeasjotuduinoadleiclernacniagoCyreative Commons “Atribuci´on-NoComercial-
+SinDerivadas4.0Internacional”.
+suaplicaciónalanálisisgeneraldelossistemasdeecuaciones
+1

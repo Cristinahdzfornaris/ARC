@@ -1,0 +1,743 @@
+Sociedad Cubana de Matemática y Computación
+La regla de Simpson con mallados
+generales e integrales impropias
+Solution of a boundary problem Very Complex for hyperbolic equations: Case Zero Index
+J. L. G. Santander
+Universidad Católica de Valencia, C/ Guillem de Castro 106, 46003 Valencia, España
+J. M. Isidro,, M. A. García-March
+Universidad Politécnica de Valencia, Instituto de Matemática Pura y Aplicada, Valencia 46022, España
+P. Fernández de Córdoba,, D. Acosta Iglesias
+Universidad Hermanos Saiz, Dpto. Matemáticas, Pinar del Río y Universidad de La Habana, Cuba
+Resumen los métodos más conocidos de integración numérica. El alumno
+puede comprobar cómo estos métodos tienen limitaciones en el
+En el presente artículo se generaliza la conocida regla de inte-
+cálculo de integrales impropias. Este trabajo propone que el alum-
+gración numérica de Simpson, para mallados de cualquier tipo.
+no experimente con un método de Simpson generalizado, que uti-
+Particularizando para mallados lineales, se recupera la conoci-
+liza mallados exponenciales, para ver cómo se puede obtener un
+da regla de Simpson. Se deduce una expresión para mallados
+error relativo aceptable en el cálculo de esas integrales impropias.
+exponenciales y se aplica al cálculo de integrales impropias. Se
+La exposición de los procesos propios de la Matemática, en
+contrastan los resultados con los calcu lados de manera exacta,
+este como en otros temas, debe estar acompañado de una profun-
+constatándose un error relativo del mismo orden de magnitud
+da concepción metodológica que rebasa las propias exigencias de
+que la tolerancia en el criterio de parada.
+la ciencia pura, que permita situar al estudiante, más que en un
+Abstract simple espectador de los resultados, en un individuo que aprende
+y es capaz de participar del proceso, que permita por tanto una
+The present article generalizes the known rule of Simpson’s nume-
+mayor socialización del aprendizaje; pues la presentación riguro-
+ric integration, for meshes of any type. The well known Simpson’s
+sa de los contenidos, no es sufi ciente para conseguir la meta, de
+Rule could be obtain with a particularizing it for linear meshes. It
+que cada interesado aprenda, con su propio ritmo.
+deduces an expression for exponential meshes and it is applied to
+the calculation of inappropriate integrals. The obtained results are
+compared with the calculated in exact way, proving a relative error
+2. Regla de Simpson
+in the same magnitude order than the tolerance for the stop’s criteria.
+para un mallado cualquiera
+1. Introducción 2.1 Polinomio interpolador
+en un subintervalo
+Este trabajo se encuadra en las prácticas de laboratorio de la Consideremos la función f(x)=exp(-x2) , que es la base de
+asignatura de Métodos Matemáticos I, impartidas en la Escuela la función de distribución de la teoría de errores, de mucha
+Técnica Superior de Ingenieros Industriales de la Politécnica de aplicación en el estudio de problemáticas que se extienden in-
+Valencia [1]. En esas prácticas, los alumnos se familiarizan con cluso a las ciencias sociales, como procesos con distribución
+— 64 —
+Revista Ciencias Matemáticas
+normal. Esta función, a pesar de tener muy buenas propieda- R S V W
+Sx3 -x3 (x +x )(x2 -x2 ) W
+des, de continuidad y derivabilidad, no admite primitiva en y 2j+1 S S S 2j+1 3 2j-1 - 2j+1 2j 2 2j+1 2j-1 +W W W
+S W (5)
+términos elementales y requiere de otras técnicas para poder SSx x (x -x ) WW
+P = T 2j-1 2j 2j+1 2j-1 X
+2j-1 (x -x )(x -x )
+encontrar los valores de la integral defi nida, sobre intervalos 2j+1 2j-1 2j+1 2j
+Sustituyendo las siguientes identidades en (3)
+acotados y no acotados, como puede ser la posibilidad de sus-
+x3 -x3 =(x -x )(x2 -x2 x2 +x2 )
+tituir esta tal función, por otras más simples, que se le parez- 2j+1 2j-1 2j+1 2j-1 2j+1 2j+1 2j-1 2j-1
+x2 -x2 =(x +x )(x -x )
+2j+1 2j-1 2j+1 2j-1 2j+1 2j-1
+can sufi cientemente, y sustituyan el papel de la primitiva de
+y operando, se obtiene para P
+la función dada. 2 j-1
+y 6x2 +x x -2x2 -3x x +3x x @
+Supongamos que tenemos un conjunto impar de puntos P = 2j-1 2j+1 2j+1 2j-1 2j-1 2j 2j+1 2j 2j-1 ,
+"^x i ,y i h, i=1,...,2n+1 . El polinomio interpolador de Lagrange p j 2j- y 1 ^x +2x -3x h 6 ^ ( x x 2j-1 - - x x 2j ) h
+de tres puntos consecutivos de la for ma (x 2j-1 ,y 2j-1 ), (x 2j ,y 2j ), = 2j-1 2j+1 6( 2 x j-1 -x 2j ) 2j+1 2j-1 , (6)
+2j-1 2j
+(x 2j+1 ,y 2j+1 ), con j = 1,...n, tiene la siguiente expresión = y 2j-1a 2- x 2j+1 -x 2jk^x -x h.
+6 x -x 2j+1 2j-1
+p (x)=y L (x)+y L (x)+y L (x) 2j 2j-1
+j 2j-1 2j-1 2j 2j 2j+1 2j+1
+donde Análogamente, para P y P nos queda
+2 j 2 j+1
+(x-x )(x-x ) y ^x -x h3
+L (x)= 2j+1 2j P = 2j 2j+1 2j-1 , (7)
+2j-1 (x -x )(x -x ) 2j-1 6(x -x )^x -x h
+2j-1 2j+1 2j-1 2j 2j 2j-1 2j+1 2j
+L
+2j
+(x)=
+(x
+(x
+-
+-
+x
+x 2j+
+)
+1 )
+(
+(
+x
+x-
+-
+x 2j
+x
+)
+)
+P 2j-1 = y 2 6 j+1a x x
+2
+2
+j
+j+ - 1 - x
+2
+x
+j+
+2
+1
+jk^x 2j+1 -x 2j-1 h. (8)
+2j 2j-1 2j-1 2j
+Sustituyendo ahora (6)-(8) en (2), la integral de Simpson resulta,
+(x-x )(x-x )
+L 2j+1 (x)= (x 2j+1 -x 2 2j j - -1 1 )(x 2j -x 2j 2j+1 ) R S S Sy a 2- x 2j+1 -x 2jk + V W W W
+S 2j-1 x -x W
+S 2j 2j-1 W
+Agrupando términos queda, x -x S S y (x -x )2 W W
+I = 2j+1 2j-1S S+ 2j 2j+1 2j-1 +W W (9)
+P(x)= y 2j-1 6x2-^x 2j +x 2j+1 hx+x 2j+1 x 2j @ + j 6 S S S (x 2j -x 2j-1 )(x 2j+1 -x 2j ) W W W
+j ^x 2j-1 -x 2j+1 h^x 2j-1 -x 2j h S S S+y a 2- x 2j -x 2j-1k W W W
+y 6x2-^x +x hx+x x @ T 2j+1 x 2j+1 -x 2j X
++ 2j ^x - 2j+ x 1 h^ 2j x -1 -x 2j h -1 2j+1 + (1) De acuerdo con la figura 1, definimos la distancia de la parte
+2j 2j-1 2j 2j+1
+y 6x2-^x +x hx+x x @ izquierda y derecha de cada subintervalo como
++ 2j+1 2j-1 2j 2j-1 2j
+^x -x h^x -x h I:=x -x , (10)
+2j+1 2j-1 2j+1 2j j 2j 2j-1
+r:=x -x , (11)
+j 2j+1 2j
+2.2 Integral del polinomio
+interpolador en un subinterva lo
+x x x
+2j - 1 2j 2j + 1
+Integrando la expresión (1), resulta Fig. 1 Subintervalos izquierdo y derecho.
+I j =
+#x2j+1p
+j (x)dx=P 2j-1 +P 2j+1 (2) l +r =x -x . (12)
+x2j-1 j j 2j+1 2j-1
+Sustituyendo (10)-(12) en (9), queda finalmente
+donde
+y 2j-1 R S S S S S x 2 3 j+1 - 3 x 2 3 j-1 - (x 2j +x 2j+1 )( 2 x 2 2 j+1 -x 2 2 j-1 ) + V W W W W W I j = l j + 6 r j<y 2j+1 a 2- r l j jk +y 2j (l j + l j r r j j )2 +y 2j+1 a 2- r l j jkF (13)
+S W (3)
+SSx x (x -x ) WW
+P = T 2j+1 2j 2j+1 2j-1 X
+2j+1 (x 2j-1 -x 2j+1 )(x 2j-1 -x 2j ) 2.3 Regla de Simpson generalizada
+R V
+S W
+Sx3 -x3 (x +x )(x2 -x2 ) W
+y 2j S S S S 2j+1 3 2j-1 - 2j+1 2j-1 2 2j+1 2j-1 +W W W W (4) Para calcular numéricamente la integral definida de una fun-
+SSx x (x -x ) WW
+P = T 2j-1 2j+1 2j+1 2j-1 X ción dada f(x), podemos aproximar la función f(x) por una
+2j (x -x )(x -x )
+2j 2j-1 2j 2j+1
+— 65 —
+Sociedad Cubana de Matemática y Computación
+función a tramos definida por cada uno de los polinomios in- como paso de integración
+terpoladores p(x), en cada uno de los subintervalos (x , x ). b-a
+j 2j-1 2j+1 h= n (20)
+f(x).p (x) x!(x ,x )
+j 2j-1 2j-1
+donde Por otro lado, este paso de integración h, según (12) y (19), ha de ser,
+y i =f(x i ) i=1,...,2n+1 h=l j +r j (21)
+Por tanto, tomando x = a y x = b, el cómputo aproximado Para elegir adecuadamente los nodos pares, consideremos en prin-
+1 2n+1
+de la integral definida vendrá dado por
+cipio, la siguiente proporción constante entre los nodos izquierdo
+I:=
+#b
+f(x)dx.
+/n
+I . (14) y derecho
+j
+a j=1 r
+b:= j (22)
+Teniendo en cuenta la expresión obtenida en (13), la integral l
+j
+definida dada en (14) se puede aproximar como sigue Eliminando r de (21) y (22), obtenemos
+j
+R S V W h
+I. 1 6 / j= n 1 (l j +r j ) S S S S S S S SS+ f( f x ( 2 x j- 2 1 j+ ) 1 a ) 2 c2 - - r l j j r l k j + m f(x 2j ) (l j + l j r r j j)2 + W W W W W W W WW (15) A l e j x h = p o r r 1 e a s + i b ó b i n e n, según (10), los nodos pares vienen dados por (2 l 3 a )
+T j X
+x =x +l (24)
+2j 2j-1 j
+Por tanto, sustituyendo los resultados dados en (19) y (23), llegamos a
+3. Regla compuesta
+1
+de Simpson y Cuadratura Gaussiana x 2j =hcj-1+ 1+b m+a. (25)
+Por otro lado, teniendo en cuenta (22), resulta que
+De acuerdo a (10) y (11), si los puntos "x i ,2 i= n+ 1 1 se hallan equies- (l j + l r r j )2 = (1+ b b)2 . (26)
+j j
+paciados por una distancia h/2, entonces se cumple que,
+Sustituyendo (22) y (26) en (15), tenemos que la cuadratura
+r j =l j =h/2 (16)
+para el mallado dado en (19) y (25) es
+Sustituyendo (16) en (15), recuperamos la conocida regla com-
+f(x )(2-b)+
+puesta de Simpson [2], I. 6
+h/n
++f(
+2
+x
+j-1
+) (1+b)2 +f(x )c2- 1 m (27)
+h/n j=1 2j b 2j+1 b
+I. f(x )+4f(x )+f(x ),
+6 2j-1 2j 2n+1
+j=1 Vamos a determinar el parámetro b de tal modo que para calcu-
+(17)
+. h = f(x 1 )+4f(x 2 )+2f(x 3 )+g+ G
+6 lar I solo tengamos que evaluar f en los nodos pares. Para ello,
++2f(x )+4f(x )+f(x )
+2n-1 2n 2n+1
+consideremos el sigu iente sumatorio I´, donde solo tenemos en
+El error ε cometido al aplicar esta cuadratura está acotado de la
+cuenta los nodos impares en cada subintervalo
+siguiente forma [3],
+h/n 1
+f1 (b 2 - 88 a 0 )3 max f(4)(p) (18) Il:. 6 j=1 f(x 2j-1 )(2-b)+f(x 2j+1 )c2- b m (28)
+p!6a,b@
+Desarrollando (28), llegamos a
+En la regla de Simpson, todos los puntos del mallado equidistan
+/n
+Il=(2-b);f(x)+ f(x )E+
+h/2 entre sí, siendo el paso de integración de cada subintervalo h. 1 2j-1
+j=1
+Si conservamos este paso de integración h con un mallado lineal +c2- 1 m; /n f(x )+f(x )E,
+b 2j+1 2j+1
+para los nodos impares (véase figura 1), pero elegimos adecuada- j=1 (29)
+1 /n
+=(2-b)f(a)+c4-b- m f(x )+
+mente el punto intermedio de cada subintervalo (es decir, los no- b 2j+1
+j=2
+dos pares), podemos mejorar el error dado en (18). Efectivamente, +c2- 1 mf(b).
+b
+tomemos el siguiente mallado lineal para los nodos impares
+Podemos anular el sumatorio dado en (29), escogiendo un b
+x 2j-1 =h(j-1)+a, j=1,...,n+1, (19)
+que satisfaga
+donde x = a. Para que el último nodo x = b, hemos de tomar
+1 2n+1
+— 66 —
+Revista Ciencias Matemáticas
+1
+4-b- b =0 (30) se cumple que limx 1 = a .
+n"3
+Despejando b, obtenemos Por otro lado,
+b ! =2! 3 (31) x 2n+1 =b (40)
+Tomemos ahora una proporción constante en cada uno de los
+Por tanto
+(1+ b b ! ! )2 =6, 2-b ! =" 3, 2- b 1 ! =! 3 (32) B su : b = in r t j e . rvalos, de tal manera que se satisfaga al igual que en ( ( 2 4 2 1 ) )
+l
+j
+Sustituyendo (32) en (27), nos quedan las siguientes cuadraturas,
+El tamaño de cada intervalo será
+/n f(b)-f(a)
+I!:=h( f(x 2 ! j )! 2 3 2, (33) h j :=x 2j+1 -x 2j-1 =an-jH(1-a) (42)
+j=1
+Ahora bien, según (10) y teniendo en cuenta (41), tenemos que
+donde, sustituyendo el valor de β (31), en la expresión dada
+para los nodos pares (25), vienen d ± ados por h j =l j +r j =(1+b)l j (43)
+h 1 Eliminando h de (42) y (43), llegamos a
+x 2 ! j = 2 c2j-1" 3 m+a. (34) 1- j a
+l =a H (44)
+j n-1 1+b
+Haciendo la media de las aproximaciones dadas en (33), nos
+queda, De acuerdo con (10), los nodos pares tienen la siguiente expresión
+I++I- h/n x =x +l (45)
+I. = f(x+)+f(x-) (35) 2j 2j-1 j
+2 2 2j 2j
+j=1 Por tanto, sustituyendo (36) y (44) en (45), llegamos a
+La expresión dada en (35) es precisamente la cuadratura gaus-
+1-a
+siana para 1 punto por subintervalo [4]. El error cometido por x 2j =a n-j Hca+ 1+b m (46)
+esta aproximación [5] es menor que el dado para la regla com- Por otro lado, teniendo en cuenta (41), obtenemos la misma ex-
+puesta de Simpson (18) presión que en (26)
+(b-a)5 (l +r)2 (1+b)2
+f1 4320 max f(4)(p) . j l r j = b (47)
+p!6a,b@ j j
+Esta mejora en el error es lógica, pues hemos elegido los nodos Sustituyendo ahora (42), (41) y (47), llegamos a la siguiente ex-
+dentro de cada subintervalo de tal modo que eliminamos las presión para la cuadratura,
+R V
+evaluaciones en los nodos impares. S Sf(x )(2-b)+ W W
+S 2j-1 W
+S W
+H /n S (1+b)2 W
+4. Regla de Simpson I. 6 (1-a) j=1 an-jS S S S +f(x 2j ) b +W W W W . (48)
+para un mallado exponen cial
+S S SS+f(x
+2j+1
+)c2-
+b
+1 m W W WW
+T X
+Evaluemos ahora el siguiente sumatorio I´, donde hemos tenido
+Tomemos un mallado con la siguiente expresión para los nodos en cuenta solo los puntos extremos de cada subintervalo en (48)
+R V
+impares, S W
+S (1+b)2 W
+x =an-j+1H+a, j=1,...,n+1 (36) Il:= /n an-j S S S f(x 2j-1 )(2-b)+f(x 2j ) b +W W W,
+2j-1 S W
+donde llamamos H a la longitud del intervalo de integración j=1 S S SS+f(x
+2j+1
+)c2-
+b
+1 m W W WW
+T X
+H:=b-a, (37) /n
+Il=(2-b);an-1f(x)+ an-jf(x )E+
+y tomamos el parámetro α como 2j-1
+j=1 (49)
+a!(0,1). (38) +c2- 1 m< /n-1 an-jf(x )+f(x )F,
+b 2j+1 2j-1
+De acuerdo al mallado escogido, observemos que j=2
+=(2-b)an-1f(x)+c 2-b +2- 1 m /n an-jf(x )+
+x =anH+a (39) 1 a b 2j+1
+1 j=2
+El valor de x está tan próximo a “a” cuanto queramos, pues +c2- 1 mf(x ).
+1 b 2j+1
+— 67 —
+Sociedad Cubana de Matemática y Computación
+Análogamente al caso lineal, podemos anular la sumatoria donde
+dada en (49), escogiendo un b que satisfaga, # c
+I:= f(x)dx (54)
+l
+2-b 1 a
+a +2- b =0 (50) #b
+I:= f(x)dx (55)
+r
+a
+Despejando b, obtenemos
+Haciendo el cambio x = a + c - x en (54), llegamos a que (53)
+b =1+a! a2+a+1 (51)
+1 se puede expresar como
+Por tanto, teniendo en cuenta (40) y (51), la cuadratura queda I:=
+#
+c g(x)dx+
+#b
+f(x)dx,
+R V a c
+S W
+San-1f(x)(2-b ) W
+S S 1 ! W W donde la función g(x) = f(a + c - x) tiene ahora el punto de fuer-
+I. H 6 (1-a) S S S S /n an-jf(x 2j ) (1+ b b ! )2 + W W W W (52) te variación en x = a. Ahora, cada una de las integrales I e I se
+S Sj=1 ! W
+W
+l r
+S S S+f(x 2j+1 )c2- b 1 m W W W pueden aproximar utilizando la cuadratura para mallados expo-
+T ! X nenciales dada en (52). Cuando el punto de fuerte variación es
+donde, recapitulando las expresiones anteriores, hemos consi- una asíntota vertical, es preferible tomar en (51) b , pues el ajus-
+-
+derado: te será más adecuado tomando el nodo par del subintervalo en el
+6!(0,1), b =1+a! a2+a+1,
+! lado izquierdo, es decir, en donde la función crece o decrece más
+1-a
+H=b-a, x1=anH+a, x 2 ! j =an-jHca+ 1+b m rápidamente. Cuando el punto de fuerte variación sea una fuerte
+!
+oscilación, podemos tomar el valor medio dado en (35).
+5.1 Refinamiento para funciones
+5. Aplicación del mallado
+con asíntotas verticales
+exponencial a inte grales impropias
+En el caso en el que tengamos una asíntota vertical, podemos
+Cuando tenemos una función f(x) que varía fuertemente en el en-
+refinar el resultado dado en (52). Considerando por ejemplo I,
+r
+torno E de algún punto c, por ejemplo una función con una asín-
+basta observar en la figura 2 que el intervalo de integración al
+tota vertical o con una fuerte oscilación en c, la conocida regla de aproximar por un mallado exponencial es realmente (x,c), por lo
+1
+Simpson falla. Si la función oscila fuertemente en E, un mallado que nos queda por aproximar el subintervalo residual (a,x). Para
+1
+lineal no es adecuado, porque aplicar el mismo paso de integra- ello, podemos utilizar el polinomio interpolador p(x) que pasa
+1
+ción requerido en E para obtener una buena aproximación a todo por los puntos (x,y), (x,y), (x,y), y utilizarlo en el intervalo
+1 1 2 2 3 3
+el intervalo de integración sería muy costoso computacionalmen- de integración (a,x). Teniendo en cuenta (2)-(5) y llamando I al
+1 0
+te. Si tenemos una asíntota en c, la tradicional regla de Simpson
+refinamiento, obtenemos
+también falla; o bien, porque alguno de los nodos cae sobre c y #x1
+I:= p1(x)dx=P(0)+P(0)+P(0), (56)
+0 1 2 3
+entonces la aproximación se va a infinito; o bien, sino hay ningún a
+donde
+nodo sobre c, porque el error cometido es muy alto, ya que la ma-
+(x -a)3 (x +x)(x2-a2)
+yor cantidad de área bajo f(x) se concentra en E. Por tanto, para f(x); 1 - 2 3 1 +x x (x -a)E
+1 3 2 3 2 1 (57)
+P(0)= ,
+una función que varíe fuertemente en E, es conveniente tomar un 1 (x -x)(x -x)
+1 3 1 2
+mallado no lineal que concentre los puntos en E, evitando tomar
+(x -a)3 (x +x)(x2-a2)
+f(x); 1 - 1 3 1 +x x (x -a)E
+ningún nodo c. El mallado exponencial explicado en la sección 2 3 2 1 3 1 (58)
+P(0)= ,
+anterior se ajusta convenientemente a este caso. 2 (x 2 -x 1 )(x 2 -x 3 )
+Si tenemos c ∈[a, b], podemos desglosar la integral I en una (x -a)3 (x +x)(x2-a2)
+f(x); 1 - 1 2 1 +x x (x -a)E
+parte izquierda I y otra derecha I P(0)= 3 3 2 2 1 1 , (59)
+l r 3 (x -x)(x -x)
+#b # c #b 3 2 3 1
+I:= f(x)dx= f(x)dx+ f(x)dx, (53)
+a a c
+— 68 —
+Revista Ciencias Matemáticas
+sas funciones f (x). Se ha observado que I- es más preciso que I+,
+véase (52), presumiblemente porque el nodo x- está más cerca
+2j
+del punto de fuerte variación que el x+ . Por tanto, se ha tomado
+2j
+I = I-. En todos los mallados se ha utilizado un valor de a =
+aprox
+0,9 y una tolerancia f = 10-5. Todos los valores se comparan con
+el valor exacto I , por medio del error relativo h.
+exacta
+I -I
+h:= exacta aprox
+I
+exacta
+El valor n representa el número total de evaluaciones de la fun-
+ción f(x). Los puntos que presentan una fuerte variación en el
+intervalo de integración [ a, b ] se denotan con c.
+Fig. 2 Refinamiento para el caso de una asíntota vertical.
+6.1 Ejemplo en MATLAB
+5.2 Integrales con un recinto
+de integración infinito Se han elaborado unos códigos en MATLAB que implementan
+los métodos que se han presentado en este trabajo. En el Apén-
+dice se detallan estos programas en MATLAB. Para utilizarlos,
+Cuando tenemos una integral impropia con uno de los límites
+lo primero que tenemos que hacer es defi nir el integrando como
+de integración con un valor infinito, como por ejemplo,
+una función anónima. Por ejemplo, la función , se introduciría,
+#!3
+I:= f(x)dx
+en la ventana de comandos de MATLAB, como
+a
+podemos hacer el siguiente cambio de variable >> f = @(x) exp(-x)./sqrt(abs(x));
+x=tan(xl), dx=sec2(xl)dx (60) Para integrar esta función en [ -1,1 ], teniendo en cuenta que
+para obtener un recinto de integración finito presenta una asíntota vertical en x = 0, podemos teclear,
+I=
+#!r
+2 f6tan(xl)@sec2(xl)dx (48) >> [I,n]=simpson_puntos_fuertes(f,-1,1,0,1)
+tan-1(a) I =
+4.4189
+Ahora, el integrando dado en (61) tiene una asíntota vertical en
+r n =
+! , por lo que hemos de considerar este punto como un punto
+2 408
+de fuerte variación.
+donde I es el resultado de la integración y h el número puntos
+que se han usado en el mallado. El último argumento de la fun-
+ción lo hemos tomado 1 para que evalúe el residuo. Si queremos
+6. Resultados numéricos
+evaluar ahora el error relativo de la función, basta teclear,
+>> eta=error_rel(f,-1,1,0,1)
+Se ha elaborado un programa que implementa el método des-
+eta =
+crito anterior mente. Este algoritmo va añadiendo puntos al ma- 9.4621e-006
+llado exponencial hasta que se cumple el siguiente criterio de
+Para más detalles en el manejo de MATLAB consúltese [6].
+parada, I -I 1f donde, según (52), I =akf(x) y, de
+k k+1 k k
+acuerdo con (46),
+6.2 Tabla de resultados
+1-a
+x =akHca- m+a
+k 1+b
+A continuación se ofrece una tabla con los valores aproximados En el cuadro 1 se ofrecen unas cuantas funciones que presentan
+de la integral I utilizando un mallado exponencial para diver- puntos de fuerte variación de diversa índole.
+aprox
+— 69 —
+Sociedad Cubana de Matemática y Computación
+SSooccieieddaadd C Cuubbaannaa d dee M Maatteemmáátticicaa y y C Coommppuuttaaccióiónn
+Cuadro 1.
+f(x)Sociedad Cub[ aan,ba ]de Matemáticac y Computación I h n
+exacta
+CCuuaaddrroo 1 1..
+e-x
+x [ f-f(1(xx,) )1 ] [ [a a,0b,b ] ] cc
+r6erf(1)-ierf(i)@
+II 9,46 10-6 4h0h8 nn
+exexacatcata
+Cuadro 1.
+ee--xx
+e-xlog x f(x) [ -1 xx , 1 ] [ a,b [ ] [- -11,0 ,1 1 ] ] c 00 Ei(-1)-Ei(1)+rr I i6r6eerrff((11))--iieerrff((ii))@@ 8,60 10-6 h 99,4,4626 71 2100--66 n 440088
+exacta
+sin2a x l k e- x x ee--x[xl 0olog, grx x] [ -1, 1[ [ -] -11,0 ,1 1 ] ] 0 00 3 2 r -rcos a r 1 rk6e-ErEfSi(ii(1a(--) r 2 1-1k))i-e-rEfE(iii()(1@1))++iirr 2,12 10-4 9,46 1808,-6,66090 11 100--66 408 227722
+sin6log(x)@e-xlogssixni[n 022a , a rx l x l kk ] [ -1, 1[ []0 0, ,0r r ]] 0 00 r 2 "sin6log(r)@E-i(c- 3 o 3 2 r s2 1 r 6)l-o--grrE(rcico()os1@s a ,)a r 1 + r 1kikr--SSii aa r 2 r 2kk 6,34 10-4 8,60 1202,-1,16228 11 100--44 272 9911
+cot(x) sin2sasini l n[ 6 k 0 6lol,o grg(/(x2x) )] @@ [ 0, r [ []00 0,, ,rr r/ 2]] 0 00 r 3rrr2 -""srsinicn6o6lsolo a gg 1 ((r k r)-)@@-S-ic a co 2 oss6k6lologg((rr)8)@@,,2,4 10-6 2,12 1606,-3,34424 81 6100--44 91 8811
+x 2222 r r
+tanh-1(x) sin6log(xc[c)o o@ 0tt,( (1xx) ]) [ 0, r[ [0 ]0, 0,r ,r /1/22 ] ] 0 00, ,r r//22 rr "-silnog6l(o2g)(r)@-crros6 2 l 2 og(r)@, 7,90 10-6 6,34 1808,-2,24424 01 7100--66 81 228866
+x 22 22
+erf-1(x) cot
+t
+(
+ta
+x
+an
+)
+n
+[
+h h
+0
+-
+,
+-1 1(
+1
+(x x
+]
+))
+[ 0, r/2[ []0 0, 1,1 1 ] ] 0, r/200, ,1 1
+1
+r
+rr2
+--lologg((22)) 1,78 10-5 8,24 1707,9-,96010 21 3100--66 286 220077
+xx r 222
+x-1 3log(x) tanh-1( ee x r[r ) f f0--1,1( (xx) )] [ 0, 1 ][ [0 0, 0,1 1 ] ] 0, 1 11 -r2csca2rkco r ta - 2r lo k g(2 1 ) 1 1,26 10-4 7,90 1101,-7,76858 31 1000--55 207 112233
+1+x x 3 2 3 rr
+e-xlog(x) erf-1 x ( x- x -1 3)[ 1 3l 0 olo , g g  ((x x ] )) [ 0, 1 [] [0 0, ,0  ] ] 1 00 -c --rr22c 1 cssccaa22rrkkccoottaa22rrkk 3,85 10-5 1,78 1101,-2,256166 1 9100--44 123 553300
+11++xx r 33 33
+e-x2-e-x x-1 3logee(--xxxl[ )ol0og,g  ((x]x)) [ 0,  [] [0 0, ,0  ] ] 0 00 - c r2csca2rkco--tcac2rk 2,35 10-51,26 1303,-8,845154 1 2100--55 530 116699
+x 1+x 2 3 3
+ee--x2x2--ee--xx cc
+e-xloge(-xx) xx e-xlo [ g 0, x  ][0[0, , ]] 0 00 programa, al h-accer e 2 l 2 cambio de variable da3d,8o5 e12n20,3 ,-3(5565 01 1)0,0- -c5o5nsi-169 114422
+Las funciones
+x
+y presentan una asíntota ver-
+r
+dera automáticamente el punto en como un punto de fuerte
+tical en c = 0 e . - L x2 a - x s L e L f a - u a x ss n f c fu i un o nc n ci e oi s on n s ee i[ s n0 s ,2 aee-
+x
+x ] l -x
+x
+xk y y y e s e- i -x n xlol 6 o l g o g g xx0(x ) p @ prre e p sse r e e nn s tta a e nn n u - unnaa a v as a sí r ín i nt a ot c ot i ta ó a n v ve , er t -r a - l y c 2 p c p o rro m ogg o rra a s m e m a c a, o , a m al l e h n ha t ac ó ce e a rr 2 n e t el e l r c i ca o am r m m bb e i2oi n ,o 3 t d e 5de . e1 v0
+r
+v
+r
+a-ar5riaiabblele ddaaddoo1 4 ee2nn (6(600)), , ccoonnssi-i-
+ddeerraa a auutotommáátticicaammeenntete e el lp puunntoto e enn c coommoo u unn p puunntoto d dee f fuueerrtete
+tan una oscilaci t ó ti n cica v al l i e o en l n e n cc t = a = e 0 n 0e. -. c Lx L = aas 0 s f , f u e p u - n o x nc l r c o i o l i g o on ne q x es u s e ss i n nin o 22 a t a i x le x ln kk e s yy e s n si t ni i n d6o6lol ogg((xx))@@ P p o pr r re es lo s e e g npn e -r- n o e g r r a v a v l a m , a r s r a i e ai , a c c a ci o ói l ó n n h n s , a , t t c a ta e a t l a r ly y q e c l u c o e c om a m e m o l o e b s r se i r o e o c c r d o o e m r m e v e l e a n a n t r t i ót i v ó a o a b a 2 n l h2 n e t et e e d r s ri a oi d d or e o rm l m e e m e n nn i t s ( et - 6 e. . 0 ), consi-
+considerar el Lreas nfuamnciieonnteos prop x uesyto en la secc piórens e4n.1t.a n una asíntomtao v eorr-den de magnitud que la tolerancia. Lo r s únicos casos en
+La functiicóanl e tta nc an o n ct u ( u = n x n a ) a 0 o .p o s Lr sc e c a i s li s a e l ac nf ci ut ói a ó n n n cu v i no vi an oi ol ea el ss en í n s t n ta it a n o e 2 e t n a a n c x l v c e = k = r t 0 iy 0, c , a p s p l i o n o e rr 6 n l l ol o o c g q q = u ( u x e 0 e ) n @ . no o p t ti r e q i e en u s ne e e e s n t se e - en n nt e tid m id v d oo o a e s r r i a a u a c n u i ó t e o n P r P m , r o o o t r á a r r t l l i ol r y c o e a g l c g m a e o e t n i e m n v e n e o r o t ra e a s l m ,l e e , l s á c se p s e o u c m g c n o r o e t n a o n n s n s t t e d ó ta n a e t a ta a2 n s q o t q e u n u r e c e i l o o e a e m r l s l m e o e f r e u rr u n ro n n o t r c e r p i . r o re u e n l n al e a t t s o ti vi v d oo e h hf u e e e ss r d t d e e el lm misis--
+A m m u e o n n s q ta c u o e u n n s e a i n c t d a f o e n u n c r e s a u = r i r n A d t c A e c a e o q r 2 u o r v u n u o n L a n a n s e L s q r s a r i c q a u di n i e e i u d a f e e l o l l fu e a e c r u r c r i e a n e e ó t a n i e n r c e n  ó n r c n t i n e n n ó o , i e l e ó c a y n r l c v m r n n m a = re i = o e o o  q i  c l e s r 2 n u e c d o r n 2 n o a n e e t o t a t m t o ( l t m a ( c a x r n i p x a n e ) ei o p = ) r e o n n o e n a p t t n p p c r s 2 ot r et o d í u r e e = n n e p n i e s p e e , t s r e s e 0o m r e o n t n l m o , t o n a t p t a o e p p ta u o e s a u f o e e s v n u u e r n s u e o n n st o l l n r t ot d a o a c tr t o a i i r i a s e q ó c a c a e a e n h s u n a n a s c í l o e a ín l s c , e a n l sí t n i p a x ín ó ot p s o n u o p t t s n o e ot n ta e e t o d c a t i 4 t c r c t e a v e o i . c a v 1 i n - - e ói e . v r e ó n v rt e n ti s er ci 4 e r sc i q t 4 a . n nti i 1 a . u l ci n 1 t t . l c e a i e e . 6 d a e lr ln o ,l o on p , s gc op c c p l ( o i = ao x l = d a d d )0 e m n o @0 e- . r- . o v , d P d i o o e o e l r l q q r m b e d q q m p u u i l n e o u u d r o e e o t n i e e o a m o g o t o m d o a r e e t s e r e d e s n n c e q d r n c e i e e n u e m s li e n m r a t l n e u m a e a a n b d o n l n g d o , e i e s o v n e n n s s v i m t e i e u oi m e t e u o s n u l r c a l e n l a p v d o e g n e g e o a n n n e n t q r n l s ta s i r t o r u a i ti t o m ro b t u a m e o e r u r l d t e r n n e d a e l n r o a n q e e re t q q e x l et u l t d u e a u l o s t e a e e e t r e u l e ti a e n l v c i b e n al p r v o i a l e a c o o n e t l e n o l ot t l m a r o c e e m m l e r r e i l r n á o a e n v o á r e t s r . ra ot s a l a o s n L r r l g p n i r o e g n c n r o o n c l r o i a r a l 2 s o ai a e n i a t a . d n n i s ú d . d v x e d i o Ll n e e d L o e m ko i c u o c c s h s a i s c o o s o y c o l ú o s n e . ú o n m n s c m n l i a d al o ci a o c s s e o s o s o l s s i f s s m ni fu c n u e c 2 n a i 2 n a a n s c s a c s - o x i l o o x i l s o k s n k n e e e e n y s n y s
+s ra e d h o a r c e e  n in A a  m u n n L i i e q t a n a u m m . t m m f e o u e o E . e o n n s e n n s U c t n ta c i n a c ó a o u c o m n u n s n n = i s n b a t si a u o d i c f d r 2 a s e f o u e c u r t e r c i a e ( r ó a a r r x t n r n s et ) q o e o q s v u s v p i u a , t e m a r e e r e c ri n e i ai s e l e l a a e = c l m c r n i e ói e t n o ó 0 o n a nt s n , c o , t u o , u y r r o 2 n y r r n a t n r a a o r e q o , a q a u d c s u s d e a o e í e e e r n s n l í c al t h n c a o l a p = a t t p = o a e c f e t n r 2 a u v o n r 2 d e n n di v r c s e , i t e , e i i n i d l ó n r c al t e t n a e a t i e - l c f e fu a e e n u l n n n , n d c od c c i i p b ó c i i o ó c = ht nE he d n o n 0 o e n e e p - . i x pd ex u pl uo p n e sn ce t r s u q q ot r c i o i -i u u a n o - d e e n6 r l o o t o e es i s g l s in in 2 c n ni p ( t i e n et x l s r 6m e a e 6 r e l ) r ol n p @s oo p o g e o sg v o f n l ( r i al ( t xu o e a e x d ) c n l d ) o @ e m e o @ r n e , r u é t d , r d a d t n r d e o e m o e a l eb d l r p b e i c o p di r n r o d ri e o c t im m o e l o m a a e p n a e t e q i r a n q v r o u r s u o t s a e e u r e u c l b o n m b i n e i s ó o in n o á n n d t e t s et e o o s d er s r s g r e p v n p v r m o a o l a o a o l s n o é l si d s o d b t i e e o b r l e en el e d c n e s o s e e u e c e o s x l x l l o n s t t r s t m r a u e ra u l d b c a a o p b o u i p s o in s s r o n l t - i f al et n u a e r r 2 r n rv e a v c e a l a x l i l l p o ol p k o o n o r l e r e il y e s in s n si o di om du m ua io a i l o .l .
+tanh- x 1(x) m m , e o p n s u ta e c s r s s r o a e u a e n d p n d h o s r a h o i a e d a r f c s re e c u e e e r e e n  a n i r t r n in a t a n e a  m q u  m v n u n n i a i e ei a ti e r n ta i n a e a . a t l o . t s c o E í . i e E n . ó n U n t n U n o t n a o , t n a a m y r s m n s a i e b ti o b n tu q o u o a u s d c a s c e e c = c i ó c l i a c ó a a n 1 s n s p = o s o y e s si s , n im u 2 , m d c n i c i li a e , al = a = n r p l r a t e 0 o e 0 o n , c f e , c d u u n u r i 2 n r r e 2 rr d c n re i i , e - ó c , c h s n co se o o e n e n a p sh x h l i d u a p v al a a a n o e c fp t r sc fu o o t i u o a - n cn n n t o c s ic si vi md ó i ia d ó i e n e n e n -r d - t c e e i r a p S l o e o i ob s m l b . a t E et p d E E en n s o l n n o i r di e p , n d e d l o r d l o i e s c e ( m s c l f u b c u u p c a e i o a n d r o d r n i d c o n r m m i ro e ó a o e e l é n 2 l q r t p 2 o p u s s r q d s r e u e e u e e o s b n a o s e i o o e c d f n n fr n o t t e re e et d n e s e c r e s c m e p v i m e s o a M u é t l u é s e t n o i ot A n b a o e e d a l T d n n c e o c o L o e l e o c a m A c x l o m o s t c p n B r u p n u a a ) b o a a r p o i r t a d y o n tr ac r r o l t ci o a a e e s ói t s r l ó r n u d v e n d s r o a l d e o a d s l p e - s o e o m l m r l ol e i é os n é s t s ot i o r d o re d m u e d s o s a o i u s o u l s l . tl r ta re a e d c d c o u o u s r s -r -
+r
+te innita s e e n hca =cttae 0a n.ni hnh--11n((xixt)a). , , E p p n uu ee a ss m p pr b re o es s se en c nt a ta s a o u u s nn , a a c a as = síín n 0 tot , o ttaa 2 e en , n c s c e = = h 1 1 a y y c u o ugn n nua s a i np d dpe e oen - n dldaiei ecnnu--a E d n r s a s e i t vi l u v o r c os a u s a c a c d o d om r a m o p e e t 2 r a rc t c s i i e ai v a l a o ele s f d s r . . e e E c El L e l p o u pr b n ri a im a m t t e c o er o r m ( m f m u p éé n a tot c r od a i d ó c oo n i ó c c q n oo u n d n a s e si d si l l st o et d e s e e r e n e n s l u ala l c t c a uu d aa o dd s r raattuurraa
+La func ra ió d n o erref-1n(axxmx)i e p n r t e o s . e n U t n a u si n tu a a a c s i í ó n n t o s t i a m v i e la r r t ic o a c l u e rr n e cc =on 1 l . a fu M nc A ió T n L AB o ) b , t [ e 6 n ]. a i a d dd o aa s p pt c ta o at n tivi v e aa l d p de r e e S s S e iim n m t p e p s m soon é n t o (f( d fuu o nn c c ci o óió n nn o q t q r uu o a s ad d d d o de s e m MM é A t A o TT d L o LA s A r BB e ) c ) u yy r - eel l ssee--
+Las tres úl t t a im nh as -t1 et f (e u xi in n )n c  i, n o n p i n ti u ta e a e s e s e t n i n p e c rn c e = es = ne 0 n 0 u . t . na ruencai natsoí ndteo tian teeng rca =ci ó1n y i nun-a pendien- sivos g c gu o un m ndd e o r o c l i al a a l c e cu s u . a ad E dr l ra a p ttu r u i r m raa e aa r d d m aapp é t t ta o at d tivi o va a c d o de n e s L i L s oo t b e ba a e ttt n ot o l a (f( fu c u u nn a cci d ói r ón a n t q u qu r u a aa ddl l ddee
+nito, por lo que x h L e L m aa o f fu s u nn d cc e iói ó h nn a e c er e rf r f- -1 e 1(( l x x) c ) a p m prr b ees io see nn d tta e a u v un a na r a i a a a b ssí l ín e n tot d ot a ta d a v o ve errtticicaal le enn c c = = 1a 1d..apt M a M ti A v A a TT L d LA e A B S B) i ), m ,[ 6[ p 6] s ]. o . n (función quad de MAT LAB) y el se-
+te in L n La i a t s a s t e trre n es s c ú ú = ltl ti 0 imm . aass f fuunnccioionneess t tieienneenn u unn r reecciinntoto d dee i innteteggrraaccióiónn i inng-u-ndo la cuadratura adaptativa de Lobatto (función quadl de
+en (60), para poder evaluar estas integrales. Las funciones 7. Conclusiones
+x-1 3log(x)
+y
+L a e n - n f i x u ti l ot n o o, g c , i p ( ó p x o n o ) r r e l r ol
+t
+o f
+i e
+- q 1
+n
+q ( u
+e
+u x e
+n
+e ) h
+c
+h p e
+a
+em r
+d
+m e
+a
+o s o e ss
+u
+n d
+n
+t d a e
+a
+e
+,
+u hh n
+u
+aa a
+n
+cc
+a
+e a e r s r
+a
+í e
+s
+n el
+í
+t l
+n
+o c
+t
+c t a
+o
+a am
+t
+m
+a
+v b e b
+v
+i r oi
+e
+t o i
+r
+c d
+t
+d a
+i
+e
+-
+l e v e v n aar c riai a = bbl el 1 e . ddaaddMoo AT LAB), [6].
+1+x Las tr e e en s n ú (6 l ( t 60 i 0 m )), , a p s p a f ar u raa n c pp i o o od n de e er s r t e i e e vv n aal e ul n ua a u rr n e e r s e stta c as i s n t i o inn t d ete e gg r i ra n al t el e es g s. r . a LL c a i a ó ss n f f i u n un  nc - cioionneess 77.. CCoonncclluussiioonneess
+Por lo general, la cuadratura adaptativa de Simpson es muy
+cal en c = n0i.t oL,a p x f x ou -- r1 3 n 1 3l cl ol oi og ó g n ( q (x u x t ) ei ) e n h y ee y mu ee no --x as xl ol id o n gg ed ( ( e x h x t ) ae ) cr me tti r ei i en ne ne al e n cc n i óa c m c n aa d be da ni a o c u u d n = n e a a , 0 v , . u a u E n r n il a a a b a l as e sí ín d nt a oto d tta o a vveerrtti-i-
+en (60), 11p+a+rxax poder evaluar estas integrales. Las func e i c o o n n e ó s mic 7 a . e n C c o ua n n c to l u a n s ú i m o e n ro e s de evaluaciones, con un error
+PPoorr lolo ggeenneerraal,l , lala ccuuaaddrraattuurraa aaddaappttaattivivaa ddee SSiimmppssoonn eess mmuuyy
+x-1 3lo c g ca ( al x le ) enn c
+y
+c = = e 0 - 0 x . . l L o L g aa ( f x fuu ) nnc c
+t
+ió
+i
+i
+e
+ón
+n
+n
+e
+t ti
+n
+eie nn
+c
+e
+a
+e u
+d
+un
+a
+n aa
+u
+i
+n
+inn
+a
+dd
+,
+e et
+u
+ete
+n
+rrm
+a
+m i
+a
+in
+s
+na
+í
+a
+n
+cci
+t
+ói
+o
+ón
+t
+n
+a
+e e
+v
+nn
+e
+c
+r
+c
+t
+=
+i
+=
+-
+0 0. .E El l
+1+x — 70 — eeccoonnóómmicicaa eenn ccuuaanntoto aa nnúúmmeerroo ddee eevvaaluluaaccioionneess, , ccoonn uunn eerrrroorr
+Por lo general, la cuadratura adaptativa de Simpson es muy
+cal en c = 0. La función tiene una indeterminación en c = 0. El
+——ec 7o 70n0 ó— m—ica en cuanto a número de evaluaciones, con un error
+— 70 —
+Revista Ciencias Matemáticas
+Cuadro 2. [5] KAHANER, DAVID; MOLER, CLEVE; NASH, STEPHEN
+(1989). Numerical Methods and Software, §5.2.
+f (x) h n h n h N
+1 1 2 2 [6] M. C. CASADO FERNÁNDEZ, Manual Básico de MATLAB,
+Servicios Informáticos U. C. M., www.sisoft.ucm.es/Manuales/
+e-x
+4,80 10-6 396 2,50 10-6 667 9,46 10-6 408
+x MATLAB_r2006b.pdf.
+[7] GANDER, W. AND W. GAUTSCHI, Adaptive Quadrature-Revi-
+e-xlog x 6,50 10-6 188 2,46 10-7 458 8,60 10-6 266
+sited, BIT, Vol.40, 2000, pp. 84-101.
+sin2a l k
+3,01 10-4 598 2,35 10-6 6169 2,12 10-4 91
+x
+sin6log(x)@
+4,93 10-6 98 6,77 10-6 169 6,34 10-4 81
+cot(x) 3,54 10-6 226 2,01 10-7 529 8,24 10-6 286
+tanh-1(x)
+7,80 10-6 107 1,80 10-6 260 7,90 10-6 207
+x
+erf-1(x) 2,20 10-5 74 5,79 10-7 199 1,78 10-5 123
+x-1 3log(x)
+3,81 10-5 594 6,01 10-5 1279 1,26 10-4 530
+1+x
+e-xlog(x) 2,19 10-5 126 7,09 10-7 319 3,85 10-5 169
+e-x2-e-x
+4,16 10-5 70 5,02 10-6 139 2,35 10-5 142
+x
+relativo bastante aceptable. Con la cuadratura adaptativa de
+Lobatto se mejora el error relativo, pero a costa de un incre-
+mento considerable en el número de evaluaciones de la función.
+El método propuesto tiene, excepto para la función sin2 (1/x),
+un error relativo mayor que ambos métodos adaptativos, con
+un número de evaluaciones liger amente superior a la cuadra-
+tura adaptativa de Simpson, pero sustancialmente inferior a la
+cuadratura de Lobatto.
+Referencias bibliográfi cas
+[1] J. L. GONZÁLEZ-SANTANDER MARTÍNEZ, F. JIMÉNEZ PA-
+LOMARES, G. RUBIO NAVARRO, Prácticas de Métodos Mate-
+máticos I, Ed. UPV, 2007.
+[2] SÜLI, ENDRE AND MAYERS, DAVID (2003). An Introduction
+to Numerical Analysis. Cambridge University Press, §7.2.
+[3] ATKINSON, KENDALL A. (1989). An Introduction to Numerical
+Analysis (2nd edition ed.). John Wiley & Sons, equation (5.1.15).
+[4] ABRAMOWITZ, MILTON y STEGUN, IRENE A., (1972). Han-
+dbook of Mathematical Functions (with Formulas, Graphs, and
+Mathematical Tables), Dover, p. 887.
+— 71 —

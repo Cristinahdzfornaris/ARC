@@ -1,0 +1,815 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.137-142
+Recibido06-2020,Aceptado07-2020
+Modelo matemático de la interacción virus-sistema
+inmune con activación de células NK
+Mathematical model of the virus-immune system
+interaction with NK cell activation
+Annia Ruiz Sánchez1, Erick Eduardo Ramirez-Torres2, Antonio Rafael Selva Castañeda3, Sandy
+Sánchez Domínguez1*, Roberto Labrada-Claro1, Marlon Cobas-Batista1, Luis Enrique Bergues
+Cabrales4, Luis Eugenio Valdés García5, Isabel Martén Powell6, Antonio Iván Ruiz Chaveco1
+Resumen Enelpresenteartículoserealizaunestudiodelosdiferentestiposdepatógenos,seinvestigan
+lascaracterísticasdelosvirus,susmanifestacionesyapariencia;seestudianlascaracterísticasdelsistema
+inmune así como la inmunidad, ya sea innata o adquirida, que incluye la activación de las células NK; se
+investigalarelaciónentrelosvirusyelsistemainmunitariodeunapersona,ademásseanalizacomoelsistema
+inmunitariopuedereaccionarantelapresenciadeunvirus.Estadinámicasesimulamedianteunsistemade
+ecuacionesdiferencialesordinarias,sedeterminanlospuntosdeequilibrioysedeterminaelcomportamiento
+delastrayectoriasenunavecindaddelaspocisionesdeequilibrio.
+Abstract Inthepresentarticleastudyofthedifferenttypesofpathogensiscarriedout,thecharacteristicsof
+theviruses,theirmanifestationsandappearanceareinvestigated;Thecharacteristicsoftheimmunesystem
+are studied, as well as immunity, whether innate or acquired, which includes the activation of NK cells; The
+relationshipbetweenvirusesandaperson’simmunesystemisinvestigated,aswellashowtheimmunesystem
+canreacttothepresenceofavirus. Thisdynamicsissimulatedusingasystemofordinarydifferentialequations,
+theequilibriumpointsaredeterminedandthebehaviorofthetrajectoriesinaneighborhoodoftheequilibrium
+positionsisdetermined.
+PalabrasClave
+CélulaNK,ModeloMatemático,SistemaInmune,Virus
+Keywords
+NKcells,MathematicalModel,immunesystem,virus
+1DepartamentodeMatemática,FacultaddeCienciasNaturalesyExactas,UniversidaddeOriente,Cuba,anniaruiz@nauta.cu,
+sandys@uo.edu.cu,evilrobertolc@gmail.com,marloncobasbatista@gmail.com,iruiz2005@yahoo.es
+2DepartamentodeIngenieríaBiomédica,FacultaddeIngenieríaenTelecomunicaciones,InformáticayBiomédica,UniversidaddeOriente,
+SantiagodeCuba,Cuba,eramirez@uo.edu.cu
+3DepartamentodeTelecomunicaciones,FacultaddeIngenieríaenTelecomunicaciones,InformáticayBiomédica,UniversidaddeOriente,
+SantiagodeCuba,Cuba,aselva@uo.edu.cu
+4DireccióndeCienciaeInnovaciónTecnológica,CentroNacionaldeElectromagnetismoAplicado,UniversidaddeOriente,SantiagodeCuba,
+Cuba,berguesc@yahoo.com
+5CentroProvincialdeHigiene,EpidemiologíayMicrobiología,SantiagodeCuba,Cuba,valdez@infomed.sld.cu
+6UniversidaddeCienciasMédicasdeSantiagodeCuba,Cuba,isamp@infomed.sld.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introduction When the immune system does not function properly,
+it decreases its ability to defend our body. Thus, we are
+Theimmunesystem,isasetofelementsthatexistinthe morevulnerabletodiseasessuchastonsillitisorstomatitis,
+human body. These elements interact with each other and candidiasis,skininfections,earinfections,herpes,coldsand
+aim to defend the body against diseases, viruses, bacteria, flu. To strengthen the immune system and avoid problems
+microbesandothers. Thehumanimmunesystemservesas with low immunity, special attention is needed with food.
+aprotection,ashieldorabarrierthatprotectsusfromunde- Somefruitshelpincreaseimmunity,suchasapples,oranges
+sirablebeings,antigens,thattrytoinvadeourbody. Thus,it andkiwis,whicharecitrusfruits. Theintakeofomega3is
+representsthedefenseofthehumanbody. alsoanallyfortheimmunesystem.
+138 Modelomatemáticodelainteracciónvirus-sistemainmuneconactivacióndecélulasNK
+Theimmunesystemismadeupofacomplexofdifferent cells could differentiate cells infected by a virus or tumor
+cellsthatreceiveandemitdifferentsignalsdirectedatwhite cellsthathaveundergonemalignanttransformations. They
+bloodcells,thusregulatingthebody’sdefensemechanisms. areabletoidentifywhichcellsarethehost’sownandwhich
+Themediatorsofthisinteractionareproteins,peptidesand areforeign.
+othersubstancesthatfortheiractivityarecalledimmunomod- Inadditiontothissystem,theyreleaseinterferonandother
+ulators.Biologicalimmunomodulatorsaremadeupofagroup cytokines to trigger their nonspecific response and destroy
+ofmoleculeswithspecificproperties,manyofthemchemi- the cell that expelled this substance when it is attacked by
+callyandbiologicallyverywellcharacterizedandothersto aviralaction. NKcellsareactivatedbyinterferons,which
+bediscovered. [15,17,21]. areproducedbyvirus-infectedcells(itisafeedbackprocess)
+Inthehumanorganismthereareowncellsandimproper Afterthespecificimmunesystemisactivated,antibodieshave
+cells,amongtheimproperonesarepathogens;theseimproper anactivatingroleinNKcells. Whenacellisinfectedwith
+cells can cause changes in the body, which can turn into viruses,itsantigensarepresentedonthesurfaceoftheinfected
+diseases and even cause the person to die; pathogens can cellandantibodieslinkedtoNK,inturn,bindtotheinfected
+includeviruses,bacteria,fungiandparasites;pathogenscan cell.
+beintracellularandextracellular. Naturalkillercellsareathirdpopulationoflymphocytes,
+Virusesaresimplestructures,theyareconsideredmanda- different from B lymphocytes and T lymphocytes, and be-
+toryintracellularparasites,becausetheydependoncellsto longtotheinnateimmunesystem. Theycomefromthebone
+multiply. Outsidetheintracellularenvironment,virusesare marrowandarefoundinthebloodandlymphatictissues,es-
+inert. However,onceinsidethecell,thereplicationcapacity peciallyinthespleen;Theyaremorphologicallycharacterized
+ofvirusesissurprising: asinglevirusiscapableofmultiply- bybeingmainlylargelymphocyteswithcytoplasmicgranules.
+ing, in a few hours, thousands of new viruses. Viruses are Theyareahighlyheterogeneoussubpopulation;whosemain
+capableofinfectinglivingbeingsfromalldomains. Inthis functionsarecytotoxicityandcytokinesecretion. NKcells
+way,virusesrepresentthegreatestbiologicaldiversityonthe areactivatedthroughcontactwithsensitivecellsortargetcells
+planet, being more diverse than bacteria, plants, fungi and orbytheactionofsolublemediators,mainlycytokines.
+animalscombined[17]. TheparticipationofNKcellsisrelevantinthefirstevents
+Whenthehumanbodyisattackedbyavirus,areaction ofthedefensiveresponse. Amongthebest-knownexamples
+from the immune system to the person quickly occurs to thatrespondaccordingtothispattern,inanimalmodels,are
+preventthisaggression;thereareoccasionswhenthisreaction infections caused by mononuclear blood cells, which sig-
+issufficienttofreetheorganismfromanyinfection, butin nificantly increase this production by bacterial stimulation.
+manycasesthisisnotenoughanditisnecessarytosupply Thesuccess,therefore,oftheimmuneresponsewilldepend
+medicationandotherartificialsubstancescapableofadding on the result of the balance between the production of pro-
+immunitysuchasinterferons,amongothers. inflammatoryandanti-inflammatorycytokines[1,2,16,22].
+Immunitycanbeinnateoracquired,acquiredimmunity Interferonsareglycoproteinsthathaveseveralbiological
+isadaptiveandisformedbylymphocytes;thisisformedby actions,includingcomplexantiviral,immunomodulatoryand
+cellsandmoleculeswiththegreatfunctionofdefendingthe antiproliferative effects. Its production and endogenous re-
+organismfromanyaggressor,thesecellsandmoleculeshave leaseoccursinresponsetovirusesandotherinducers,withthe
+thecapacitytokill,thisisaninstantaneousprocess,thisbeing exceptionofbacterialexotoxins,polyanions,somelowmolec-
+thefirstdefenseoftheorganism. ularweightcompoundsandmicroorganismswithintracellular
+TheNKcell,naturalkillerorkillercellisalymphocyte growth[20].
+and an important component of the innate immune system Therearemanydiseasesthataretransmittedfromperson
+for the defense of the body. Its function is the destruction topersondirectly,anddifferentformsofcontagionareused
+of infected cells and cancer cells, in addition to regulating forthispurpose,oftenthroughspeechorbreathingorinsome
+immuneresponses. Morphologically,theyarealmostindis- otherway;butinmanyothercasesthistransmissioncanbe
+tinguishablefromlargelymphocytes,exceptforthegranules carriedoutbymeansofavectorbeingthemosquitothemost
+they contain. They are characterized by their granules and common. Itissaidthatthecasesofmaximumriskareadults
+theirstructure. Thelyticgranulesfoundinthecytoplasmof ofthethirdageandespeciallythosewhosufferfromsome
+the NK cell are secretory lysosomes. This means that they chronicdisease;butpracticehasshownthatinthefaceofthis
+havecharacteristicsofboththelysosomalcellcompartment disease,thereisnoonesafe,anditcanhaveaslowevolution
+andthespecializedsecretorymechanismoftheNKcell. The thatactsinafulminatingway.
+resultisadual-functionorganelle,afunctionspecializedin Todaythemostworryingsituationisgivenbycoronavirus,
+destructiveactivitiesduetoitslysosomalpropertiesandalso arespiratorydiseasethatsomanyliveshaveclaimed,there
+anassociatedsecretoryfunction[1,2,16]. aremanyideasonhowtofightthisdisease;butthemethod
+GranularNKlymphocytesareidentifiedbytheirabilityto that most researchers agree on, is given by the method of
+recognizeandkilltumorcellsorcellsinfectedbyvirusesand isolatingtheinfectedtopreventpossibletransmissiontoother
+bacteria,withouttheneedforasensitizingantigen. NKkiller people[18,19]. In[19]thisprocessofcoronaviruscontagion
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.137-142
+Modelomatemáticodelainteracciónvirus-sistemainmuneconactivacióndecélulasNK 139
+issimulatedusingageneralizationofthelogisticalmethodto process. Here the signs of the coefficients of the previous
+characterizetheprocesswhenitgrowsandwhenitdecreases; developmentcorrespondtothecharacteristicsoftheproblem
+indicatingthemomentofthecurve’sconcavitychange. addressed.
+One of the treatments that has already given results is
+Inthiswaythemodelwillbegivenbythefollowingsystem
+interferonalfab ,inadditiontoothersalreadytestedinthe
+2 ofdifferentialequations.
+treatmentofotherdiseasessuchasAIDS,hepatitis,among
+o
+n
+t
+e
+h
+ti
+e
+c
+rs
+E
+.
+n
+A
+g
+l
+i
+p
+n
+h
+e
+a
+er
+b
+in
+2
+g
+in
+a
+t
+n
+e
+d
+rfe
+B
+r
+i
+o
+o
+n
+te
+,
+c
+w
+h
+a
+n
+s
+o
+d
+lo
+e
+g
+v
+y
+el
+C
+op
+e
+e
+n
+d
+te
+b
+r
+y
+an
+th
+d
+e
+h
+C
+as
+ub
+a
+a
+lr
+n
+ea
+G
+d
+e
+y
+-   x 1 (cid:48) =a 1 x 1 −a 2 x 1 x 2 −a 3 x 1 2+X 1 (x 1 ,x 2 ,x 3 )
+x(cid:48) =−b x +b x x −b x x +X (x ,x ,x ) (1)
+beenusedindifferentpartsoftheworldwithhighlyreliable 2 1 2 2 1 2 3 2 3 2 1 2 3
+x(cid:48)
+=−c x +c x x +X (x ,x ,x ).
+results[5,13]. 3 1 3 2 2 3 3 1 2 3
+In[3]differentreal-lifeproblemsaretreatedusingequa-
+Wherethecoefficientshavethefollowingmeanings:
+tionsandsystemsofdifferentialequations,allofthemonly a represents the increase of healthy immune cells with re-
+1
+intheautonomouscase;whereexamplesaredevelopedand
+specttoyourconcentration.
+other problems and exercises are presented for them to be a representsthereductionofhealthyimmunecellsbymeet-
+2
+developed by the reader. The authors of [4] indicate a set
+ingwithvirus.
+ofarticlesformingacollectionofseveralproblemsthatare a representsthedecreaseofimmunecellsintheabsenceof
+3
+modeledindifferentprocesses,butingeneralthequalitative
+viruses
+andanalyticaltheoryofdifferentialequationsisusedinboth b representsthereductionofviruswithrespecttoyourcon-
+1
+autonomous and non-autonomous cases, in both books the
+centration.
+authorsaddresstheproblemofepidemicdevelopment. b representstheincreaseofvirusbymeetingwithhealthy
+2
+Inthe work[19], thelogisticmodel isusedtosimulate immunecells.
+population growth, which are applied to the development b representsthereductionofvirusbymeetingNKcells.
+3
+of epidemics, but different forms of the logistic model are c representsthereductionofNKcellswithrespecttoyour
+1
+presented. Therearemultipleworksdevotedtothestudyof concentration.
+thecausesandtheconditionsunderwhichanepidemicmay c representstheincreaseofNKcellsbymeetingwithhealthy
+2
+develop,amongwhichwecanindicate[12]. immunecells.
+Theproblemofepidemicmodelinghasalwaysbeenof And functions X(x ,x ,x ), (i=1,2,3) they are distur-
+i 1 2 3
+greatinteresttoresearchers,suchas[6,7,8,9,10,11,13]and bancesnotinherentintheprocessthatcancausechangesat
+[14].Inthisworkwewillapplythegeneralizedlogisticmodel, anygiventime;fromamathematicalpointofview,theyare
+wherethecaseofthegrowthanddecreaseoftheinfectedare infinitesimalsofahigherorderinaneighborhoodoforigin,
+appliedinthesameequation; tomodelthedevelopmentof thesefunctionsadmitthefollowingdevelopmentinseriesof
+epidemics,amodelthatallowsforecastsoffuturebehavior. powers,
+X(x ,x ,x )= ∑ X (p) x (p1) x (p2) x (p3) , |p|= p +p +p ,
+i 1 2 3 i 1 2 3 1 2 3
+1. MODEL FORMULATION |p|≥2
+(i=1,2,3).
+Thehumanbodyworkslikeaprefectmachine,producing
+Themainobjectiveofthisworkistodeterminetheequi-
+enzymes,hormonesandsubstancesthatwillbeusedaccord-
+libriumpositionsandtostudythetrajectoriesofthesystem
+ingtoneeds;butthereareoccasionsthatthisisnotenough
+inthevicinityoftheequilibriumpositions. Ifthefunctions
+duetothecausesofthoseneeds,forexampleinthecaseofthe
+X(x ,x ,x ), (i=1,2,3)areidenticallynull, thenthesys-
+i 1 2 3
+appearanceofavirussituationinwhichingeneralartificial
+tem(1)takestheform,
+suppliesarenecessarytoachieveaneffectivecopingwiththe
+
+situation. x(cid:48) =a x −a x x −a x2
+ 1 1 1 2 1 2 3 1
+Inordertoformulatethemodelusingasystemofdiffer- x(cid:48) =−b x +b x x −b x x (2)
+2 1 2 2 1 2 3 2 3
+entialequations,thefollowingvariableswillbeintroduced: x(cid:48)
+=−c x +c x x .
+x is the total concentration of healthy immune cells at the 3 1 3 2 2 3
+1
+momentt. Theequilibriumpositionsofthesystem(2)arethepoints,
+x 2 isthetotalvirusconcentrationatthetimet. (cid:0) a 1 (cid:1) (cid:0) b 1 a 1 b 2 −a 3 b 1 (cid:1)
+P(0, 0, 0),P , 0, 0 ,P , , 0 ,
+x istheconcentrationofcurrentlyactivatedNKcellst. 1 2 3
+3 a b a b
+3 2 2 2
+Inaddition,itwillbedenotedby c b
+(cid:0) 1 1(cid:1)
+V α ={(x¯ 1 ,x¯ 2 ,x¯ 3 )∈R3/a−α <x¯ 1 <a+α, P 4 0, c , − b and
+2 3
+b−α <x¯ <b+α, c−α <x¯ <c+α}.Thesetof
+2 3 a c −a c c a b c −a b c −a b c
+(cid:0) 1 2 2 1 1 1 2 2 2 2 1 3 1 2(cid:1)
+valuesforthepermissibleconcentrationsofthehealthycells P 5 a c , c , a b c .
+andthevirus,respectively. 3 2 2 3 3 2
+ThestudyofthepointP,lackbiologicalsense.
+4
+Remark1 Ifyouareconsideringthattheinitialencounter ThepointP(0,0,0),hasapositiveeigenvalue,therefore,
+1
+is favorable to viruses, otherwise there would be no viral theequilibriumpositionisunstable.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.137-142
+140 Modelomatemáticodelainteracciónvirus-sistemainmuneconactivacióndecélulasNK
+1.1 AnalysisatpointP y1 y2
+2 0.10 0.07
+(cid:0) a 1 (cid:1) 0.08 0.06
+TothepointP 2 , 0, 0 ,istosaywhentheNKcellsare 0.05
+a 3 0.06 0.04
+notyetactivated,itisnecessarytomakeachangeofvariables 0.04 0.03
+0.02
+toanalyzethebehaviorofthetrajectoriesinaneighborhood 0.02
+0.01
+a t t
+1 5 10 15 20 5 10 15 20
+ofthatpoint. Thetransformationofcoordinates,x 1 =y 1 + , Figure1. Trajectoriesof Figure2. Trajectoriesof
+a
+3
+x 2 =y 2 ,x 3 =y 3 reducesthesystem(2)inthenextsystem, y 1 (t)intheExample4 y 2 (t)intheExample4
+ a a y3
+ y(cid:48)
+1
+=−a
+1
+y
+1
+−
+a
+1
+3
+2 y
+2
+−a
+3
+y2
+1
+−a
+2
+y
+1
+y
+2
+0
+0
+.
+.
+0
+1
+8
+0
+y(cid:48) = a 1 b 2 −a 3 b 1 y +b y y −b y y (3) 0.06
+y 2
+(cid:48) =−c y
+a
+3
++c y y
+2
+.
+2 1 2 3 2 3
+0
+0
+.
+.
+0
+0
+2
+4
+3 1 3 2 2 3
+t
+5 10 15 20
+Thecharacteristicequationofthematrixofthelinearpartof Figure3. Trajectoriesofy 3 (t)intheExample4
+thesystem(3)hastheform,
+  −a 1 −λ − a a 1 a 2 0   x 1 =z 1 + b b 1 2 ,x 2 =z 2 + a 1 b 2 a 2 − b 2 a 3 b 1 andx 3 =z 3 thatreduces
+ 3  thesystem(2)tothesystem,
+Det a
+1
+b
+2
+−a
+3
+b
+1
+=0.
+ 0 −λ 0  
+ a  a b a b
+0 3 0 −c 1 −λ  z(cid:48) 1 =−
+a b
+b 3
+2
+−
+1 z
+a
+1 −
+b
+b 2
+2
+1 z
+a
+2 −
+b
+a
+b
+3 z2 1
+−
+−
+a
+a
+b
+2 z
+b
+1 z 2
+S
+T
+tr
+o
+i
+h
+v
+,
+e
+i
+i
+a
+o
+t
+l
+r
+h
+e
+s
+a
+o
+m
+s
+l
+,
+u
+2
+(
+ti
+a
+o
+1
+T
+n
++
+h
+o
+e
+λ
+f
+n
+t
+)
+h
+e
+(
+e
+c
+c
+e
+1
+s
+s
+y
++
+s
+s
+a
+t
+λ
+e
+r
+m
+y
+)(
+a
+a
+(3
+1
+n
+)
+b
+d
+2
+to
+s
+−
+u
+b
+f
+a
+e
+fi
+3
+c
+a
+(
+i
+s
+b
+e
+y
+1
+n
+m
+t
++
+p
+c
+t
+λ
+o
+o
+n
+)
+ti
+)
+d
+c
+=
+i
+a
+t
+l
+i
+l
+o
+0
+y
+n
+.
+st
+f
+a
+o
+b
+r
+le
+th
+i
+e
+s
+
+z
+z
+(cid:48)
+3
+(cid:48) 2
+=
+=
+a
+1
+1
+b
+2
+2
+c
+a
+2
+2
+−
+3
+a
+a
+3
+1
+b
+2
+z
+b
+1
+1
+c
+2
++
+2
+−
+3
+a
+2
+1
+b
+2
+3 a
+c
+2
+1
+b
+z
+2
+3
+1
++
+2
+c
+2
+3
+z
+z
+2
+3
+z
+3
++
+.
+b 2 z 1 z 2 −b 3 z 2 z 3
+(5)
+thata b >a b .
+1 2 3 1
+Thecharacteristicequationofthematrixofthelinearpartof
+ThepreviousconditionsareconsequencesofHurwitz’stheo- thesystem(5)hastheform,
+rem,guaranteeingasymptoticstabilityfromthefirstapproxi- λ3+ a 2 a 3 b 1 +a 2 b 2 c 1 +a 3 b 1 c 2 −a 1 b 2 c 2 λ2+Aλ−B,
+mationsystem. a b
+2 2
+b (a b −a b )(a b c +a b c −a b c )
+Remark3 Whenevertheconditionismeta b >a b with whereB= 1 3 1 1 2 2 2 1 3 1 2 1 2 2 ,
+1 2 3 1 a b2
+thepresenceofavirus,itwillnotbenecessarytoreactivate 2 2
+b (a b (a b +a (c −b ))+a c (a b −a b ))
+NKcellstocontrolthevirus;andconsequentlytherewillbe A = 1 2 2 1 2 3 1 1 3 2 3 1 1 2 .
+noconsequenceforthepatientwhenevertheconsideredpoint a 2 b2 2
+isinthesetofadmissiblevalues,thatis,P 2 (a a 1 3 , 0, 0)∈V α . Theorem5 Thetrivialsolutionofthesystem(5)isasymptot-
+icallystableifandonlyifconditionsaremet:
+Example4 Bethesystem
+C : a b c +a b c >a b c
+ 1 2 2 1 3 1 2 1 2 2
+y(cid:48) =−0.10y −0.06y −0.30y3−0.20y y
+ 1 1 2 1 1 2 C : a c (a b −a b )(a b +2b c )+(a b −a b )2c2+
+y(cid:48) =−0.26y +0.10y y −0.60y y (4) 2 2 2 3 1 1 2 3 1 2 1 3 1 1 2 2
+2 2 1 2 2 3 +a2b (a b (c −b )+b (a b +c2))>0.
+y(cid:48)
+=−0.10y +0.30y y .
+2 2 3 1 1 1 2 1 1 1
+3 3 2 3
+Remark6 Whenever the conditions are met C and C , it
+1 2
+TheEigenvaluesoffundamentalmatrixofsystem(4)are willnottakemuchreactivationofNKcellstocontrolthevirus;
+λ 1 =−0.266667,λ 2 =−0.1andλ 3 =−0.1 andconsequentlytherewillbenoconsequenceforthepatient
+whenever the considered point is in the set of admissible
+b a b −a b
+(cid:0) 1 1 2 3 1 (cid:1)
+1.2 AnalysisatpointP 3 values,thatis,P 3 b , a b , 0 ∈V α .
+2 2 2
+b a b −a b
+(cid:0) 1 1 2 3 1 (cid:1)
+TothepointP 3 , , 0 ,thatistosayinthe Example7 Bethesystem
+b a b
+2 2 2
+casewhereNKcellshavenotyetbeenactivated,andthereis 
+z(cid:48) =−0.033z −0.033z −0.10z2−0.10z z
+aviruspresent,forthistomakebiologicalsensethecondition  1 1 2 1 1 2
+mustbemeta 1 b 2 >a 3 b 1 ,whichcoincideswiththestability z(cid:48) 2 =0.50z 1 −0.50z 3 +0.30z 1 z 2 −−0.30z 2 z 3 (6)
+conditionofthesystem2;itisnecessarytochangevariables,
+z(cid:48)
+=−0.16z +0.20z z .
+3 3 2 3
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.137-142
+Modelomatemáticodelainteracciónvirus-sistemainmuneconactivacióndecélulasNK 141
+TheEigenvaluesoffundamentalmatrixofsystem(6)are Theorem9 TheequilibriumpositionP asymptoticallystable
+5
+λ =−0.166667,λ =−0.0166667+0.128019i if and only if the conditions are met n >0, (i=1,2,3) and
+1 2 i
+andλ =−0.0166667−0.128019i n n >n .
+3 1 2 3
+Theproofofthistheoremisobtainedfromthepreviousand
+z1 z2 fromtheconditionsofHurwitz’stheorem.
+0.15
+0.04
+0.10 Remark10 Iftheconditionsn >0,
+i
+0.02 0.05 (i=1,2,3)andn n >n ofthetheorem(9)aremet,theval-
+1 2 3
+20 40 60 80 100 t 20 40 60 80 100 t uesofthevirusconcentrations,theconcentrationsofimmune
+-0.05 cellshealthyandtheNKcellconcentrationsarekeptcloseto
+-0.02
+P andifthecoordinatesofthatpointareclosetotheoptimal
+Figure4. Trajectoriesof Figure5. Trajectoriesof 5
+concentrationvalues,i.e. P ∈V ,therewillbenoadverse
+z 1 (t)intheExample6 z 2 (t)intheExample6 5 α
+consequencesforthepatient,itwillbeinabasalstate.
+Example11 Bethesystem
+z3 z2
+0.10 0.15
+
+0.08 0.10 w(cid:48) =−0.4875w −0.1w2−2.4375w −0.5w w
+0.06
+ 1 1 1 2 1 2
+0.05 w(cid:48) =0.0075w +0.3w w −0.005w −0.2w w (8)
+0.04 2 1 1 2 3 2 3
+0.02 -0.02 0.02 0.04 z1 w(cid:48) 3 =2.685w 2 +0.4w 2 w 3 .
+t -0.05
+5 10 15 20 25 30
+Figure6. Trajectoriesof Figure7. Trajectoriesofz TheEigenvaluesoffundamentalmatrixofsystem(8)are
+1
+z (t)intheExample6 vsz intheExample6 λ =−0.449122,λ =−0.0191892+0.113584i
+3 2 1 2
+andλ =−0.0191892−0.113584i
+3
+Remark8 IftheconditionC isnotmet,thenthesystem(5)
+1
+w1 w2
+isunstable,thereforeitmakesbiologicalsensetoactivatethe
+0.1
+0.03
+NKcellsandthereforethepointP takeaction.
+5 50 100 150 200 t 0.02
+0.01
+1.3 AnalysisatpointP 5 -0.1 50 100 150 200 t
+(cid:0) a 1 c 2 −a 2 c 1 c 1 a 1 b 2 c 2 −a 2 b 2 c 1 −a 3 b 1 c 2(cid:1) -0.2 -0.01
+ToP 5 a c , c , a b c , itis -0.02
+3 2 2 3 3 2 Figure8. Trajectoriesof Figure9. Trajectoriesof
+necessarytomakeachangeofvariablestoanalyzethebehav-
+w (t)intheExample8 w (t)intheExample8
+ioroftrajectoriesinaneighborhoodatthatpoint. 1 2
+Thetransformationofcoordinates,x =w +h,x =w +
+1 1 2 2
+kandx =w +lreducesthesystem(2)inthenextsystem,
+3 3 w3 w3
+1.0 1.0
+ w(cid:48) =a −a k−a h)w −a hw −a w w −a w2
+w 1
+(cid:48) =b
+1
+kw
+2
++(b h
+3
+−b
+1
+−b
+2
+l)w
+2
+−b
+2
+k
+1
+w
+2
++b
+3
+w
+1
+w −
+0.5 0.5
+2 2 1 2 1 3 2 3 3 2 1 2
+w(cid:48)
+=
+−b
+c
+3 w
+lw
+2 w
++
+3
+(c k−c )w +c w w . -0.5
+50 100 150 200 t -0.02 -0.01
+-0.5
+0.01 0.02 0.03 w2
+3 2 2 2 3 3 2 2 3
+(7) Figure10. Trajectoriesof Figure11. Trajectoriesof
+a c −a c c w (t)intheExample8 w vsw intheExample8
+1 2 2 1 1 3 2 3
+whereh= ,k= and
+a c c
+3 2 2
+a b c −a b c −a b c
+1 2 2 2 2 1 3 1 2
+l= .
+a 3 b 3 c 2 Acknowledgments
+Thecharacteristicequationofthematrixofthelinearpart
+ofthesystem(7)hastheformλ3+n λ2+n λ+n =0 Theauthorsappreciatethetechnicalsupportandinvalu-
+1 2 3
+wheren ,n andn havetheform, able feedback provided by Digna de la Caridad Bandera
+1 2 3
+n =b l+a k+2a h−a −b h+b , Jiménez, Adriana Rodríguez Valdés, Manuel de Jesús Sal-
+1 3 2 3 1 2 1
+n =b c hk+b c kl−b c h+a b h−a b l−a b hk+ vadorÁlvarez,HildaMorandeiraPadrón,ItciarAriasPortales
+2 2 2 3 3 2 1 1 2 1 3 2 2
++a b k+a b kl−2a b h2+2a b h+2a b l− andSergioMirandaReyes. WealsothanktoUniversidadde
+2 1 2 3 3 2 3 1 3 3
+−2a c hk+2a c h+a b hk−a b , Oriente,DireccióndeDATYS-SantiagodeCuba,Dirección
+3 2 3 1 2 2 1 1
+n =a b c h−a b c hk−a b c kl+a b c hk2+ ProvincialdeSaludPúblicaandmanagersoftheprovincial
+3 1 2 1 1 2 3 1 3 3 2 2 2
++a b c kl−2a b c hk+2a b c h+2a b c hkl. governmentofSantiagodeCuba.
+2 3 1 3 1 2 3 1 1 3 3 3
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.137-142
+142 Modelomatemáticodelainteracciónvirus-sistemainmuneconactivacióndecélulasNK
+References effects of routine varicella immunization of preschool
+children in the United States. Am. J. Epidemiol, 140:
+[1] AbbasA,LichtmanA,PoberJ:CellularandMolecular
+81–104,1994.
+Immunology.W.SaundersandCompany,1997.
+[2] BironC,NguyenK,PienG,CousensL,Salazar-Mather [12] HamerW.H:EpidemicdiseaseinEngland.Lancet,1:
+T: Natural killer cells in anti-viral defense: Function 733–739,1906.
+andregulationbyinnatecytokines.AnnRevImmunol,
+[13] HethcoteH.W:Athousandandoneepidemicmodels,in
+17: 189–220,1999.
+FrontiersinTheoreticalBiology.Springer-Verlag,1994.
+[3] Chaveco,A.I.R.etal: ModelingofVariousProcesses.
+Appris,2018. [14] HethcoteH.W:Qualitativeanalysesofcommunicable
+diseasemodels.Math.Biosci.,28: 335–356,1976.
+[4] Chaveco, A. I. R. et al: Applications of Differential
+EquationsinMathematicalModeling.CRV,2016. [15] Janeway CA, Jr.; et al.: Immunobiology. Garland Sci-
+ence,2005.
+[5] Del Sol G. Y: The interferon that treats covid-19.
+Granma,2020.
+[16] LeibsonP:Signaltransductionduringnaturalkillercell
+[6] EarnD.J.D.,RohaniP.,BolkerB.M.,andGrenfellB. activation: Inside the mind of a killer. Immunity, 6:
+T:Asimplemodelforcomplexdynamicaltransitionsin 655–661,1997.
+epidemics.Science,287: 667–670,2000. [17] Maitland,H.B.;Maitland,M.C:Cultivationofvaccinia
+viruswithouttissueculture.Lancet,596–597,1928.
+[7] EstevaL.andVargasC:Analysisofadenguedisease
+transmissionmodel.Math.Biosci,150: 131–151,1998. [18] MonteroC.L:Covid19withscienceinChina.Cubade-
+bate,2020.
+[8] GreenhalghD.andDasR:Somethresholdandstability
+results for epidemic models with a density dependent
+[19] RuizA;etall.: Coronavirus,achallengeforsciences,
+deathrate.Theoret.PopulationBiol,42:130–158,1992.
+mathematicalmodeling.(IOSR-JM)Journalofmathe-
+matics,16(3):28–34,2020.
+[9] GripenbergG:Onanonlinearintegralequationmod-
+elling an epidemic in an age-structured population. J.
+[20] SenG:Virusesandinterferons.Annu.Rev.Microbiol,
+ReineAngew.Math,341: 147–158,1983.
+13(2): 255–294,2001.
+[10] HalloranM.E.,WateletL.,andStruchinerC:Epidemio-
+logicaleffectsofvaccineswithcomplexdirecteffectsin [21] Schneider, David: Innate Immunity Lecture 4: Plant
+anage-structuredpopulation.Math.Biosci,121: 193– immuneresponses.StanfordUniversityDepartmentof
+225,1994. MicrobiologyandImmunology,2005.
+[11] HalloranM.E., CochiS.L., LieuT.A., WhartonM., [22] Trinchieri G: Biology of natural killer cells. Adv Im-
+andFehrsL:Theoreticalepidemiologicandmorbidity munol,47: 187–375,1989.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.137-142

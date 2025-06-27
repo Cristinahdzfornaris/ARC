@@ -1,0 +1,339 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.37,No.1,2024,Pag.1-7
+Recibido(Received):26-05-2024,Revisado(Reviewed):04-07-2024
+Aceptado(Accepted):22-10-2024,Enlínea(Online):01-12-2024
+Ejercicios de cálculo, de orientación y divergentes
+utilizados en los contenidos de Geometría Analítica
+Exercises in calculus, orientation, and divergence
+used in the contents of Analytic Geometry
+Roxana Cabrera Puig1* , Alicia Robbio Marrero2
+Resumen EnlametodologíadelaenseñanzadelaMatemática,unadelaslíneasdirectricesfundamentales
+eseltratamientodeloscontenidosgeométricosparafijarlasideasesencialesdelosconceptosyquesepuedan
+demostrar,inferiryestableceranalogías,loquefavorecelaresolucióndeproblemasmatemáticosdondelos
+mediosdecómputosirvandeapoyoparaunamejorvisualizacióndelcontenidoqueseaborda.Esporelloque,
+desdelasclasesserecomiendaimpulsarelempleodelGeogebracomosoftwaredinámicoparalacomprensión
+dedefinicionesyteoremas,comounaperspectivanovedosaparaadquirirelnuevoconocimiento.Elobjetivodel
+trabajoespresentarejerciciosdeorientación,cálculoydivergentesquehancontribuidoavisualizareinvestigar
+losobjetosgeométricos,asícomosurepresentaciónalgebraicamediantelaspropiedadesqueloconforman
+yquepotencianlasolidezdeconceptosestudiadosenlabúsquedadevíasoestrategiasparalarealización
+de demostraciones sencillas. La propuesta ha sido utilizada en primer año de la carrera de Licenciatura en
+Matemáticaconresultadosfavorablesensuaplicaciónenlasclasesprácticasdelaasignatura.
+PalabrasClave:ejercicios,Geogebra,geometría.
+Abstract InthemethodologyofMathematicsteaching,oneofthefundamentalguidelinesisthetreatmentof
+geometriccontentstofixtheessentialideasoftheconceptsandthattheycanbedemonstrated,inferredand
+establishanalogies,whichfacilitatestheresolutionofmathematicalproblemswherethecomputingresources
+support a better visualization of the content that is being addressed. That is why, from the classes, it is
+recommendedtopromotetheuseofGeogebraasdynamicsoftwarefortheunderstandingofdefinitionsand
+theorems, as a new perspective to acquire new knowledge. The aim of this work is to present orientation,
+calculationanddivergentexercisesthathavecontributedtovisualizeandinvestigategeometricobjects,aswell
+astheiralgebraicrepresentationbymeansofthepropertiesthatconformthemandthatenhancethesolidityof
+conceptsstudiedinthesearchforwaysorstrategiesfortherealizationofsimpledemonstrations. Theproposal
+hasbeenusedinthefirstyearoftheBachelor’sDegreeinMathematicswithfavorableresultsinitsapplicationin
+thepracticalclassesofthesubject.
+Keywords: exercises,Geogebra,geometry.
+MathematicsSubjectClassification: 97D40,97G70,97C70.
+1DepartamentodeMatemática,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+roxana.cabrera@matcom.uh.cu.
+2DepartamentodeMatemática,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+alicia.robbio@matcom.uh.cu.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Maquetadopor(Layoutby):LázaroDanielGonzálezMartínez,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,La
+Habana,Cuba.
+Citar como: Cabrera Puig, R.,& Robbio Marrero, A. (2024). Ejercicios de cálculo, de orientación y di-
+vergentes utilizados en los contenidos de Geometría Analítica. Ciencias Matemáticas, 37(1), 1–7. DOI:
+https://doi.org/10.5281/zenodo.14252295.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9477.
+Introducción de los objetos matemáticos estudiados. Los resultados que
+sepresentanindicanqueenlamedidaqueseinsertenenel
+LaasignaturaGeometríaAnalíticaestáconformadapor
+procesodeenseñanzayaprendizajeserámayorlaadquisición
+trestemasyasegura,enlaCarreradeMatemática,losconteni-
+deconocimientosyseelevarálacomprensióndedefiniciones
+dosdelasasignaturasqueconformanladisciplinaTopología
+yteoremasdesdeunaópticamásnovedosa.
+y Geometría, por lo que, en el primer año, apoya de forma
+gráficayanalíticalosconceptosfundamentalesylasnociones
+básicasquedebenadquirirloseducandosparairdesarrollando 1. Desarrollo
+lasdestrezasdeaprendizaje.
+Elimportantepapelqueofrecelavisualizaciónenelapren-
+LautilizacióneinsercióndelasTecnologíasdelaInforma-
+dizajematemáticocontribuyedemaneradetalladaalacom-
+ciónylasComunicacionesenloscontenidosdelaasignatura
+prensióndeconocimientosmatemáticosyalaadquisiciónde
+hatraídonuevasformasdeafrontarelaprendizaje,laconcep-
+unamayorsolidezdeloscontenidosquevanalcanzando[3].
+cióndecómoimpartirloscontenidosmatemáticosobligaa
+Elempleodetareasdiferenciadasdebidamentegraduadas
+elevarlapreparaciónmetodológicadelosdocentes[4].Enla
+ylapresentacióndeejerciciosvariadospermitiráeldesarrollo
+actualidad,dentrodelossoftwaresdinámicosqueapoyanel
+deconocimientos,habilidadesyvalores,desarrollándosecon
+aprendizajesepuedemencionarGeogebra,yaque,desdesu
+uncarácterproblemático,queincitealanecesidaddelestudio
+soportegráficoyalgebraico,permitedescribirlaresolución
+delosnuevosconceptosparalaobtencióndedemostraciones
+deproblemasquesepresentanenlostemasqueconformanla
+sencillas, que serán concebidos para la sistematización de
+asignatura.
+conocimientosteóricosyparaeldesarrollodehabilidadesen
+Esnecesarioelevareltrabajointelectualparalograrmayor
+tareasdecarácterinvestigativo[5].
+disposicióndelrazonamientológico,conelfindeorientarla
+Paralograrestospropósitos,¿quétiposdeejerciciosse
+clasehaciaeldebate,elanálisisdediversasvíasdesoluciónde
+debenpresentardesdelasclasesdeGeometríaAnalítica?
+unproblemaylarealizacióndeposiblesgeneralizaciones[1].
+Seentenderácomoejerciciosdeorientaciónaquelloscuya
+Deahíque,loseducadorescentrenlaatenciónenactividades
+respuestadebesersinrealizarelcálculo,esdecir,loseducan-
+dondeloseducandospuedanobtenerinformaciónyprocesar
+dospuedenidentificarlarespuestademanerareproductiva.
+elconocimientoquenecesitanparalasolucióndelastareas
+propuestasenloscontenidosdeenseñanza.Deestamanera Ejerciciosdecálculosonaquellosdondeloseducandos
+puedenresolverproblemasprácticosconelusodevariados seleccionanyaplicanunalgoritmodetrabajoparaanalizar
+enfoques. ollevaradiscusiónelmismo,dondeesnecesarioaplicarel
+contenidoestudiadoquefinalmenteconllevaalaobtención
+Entre las variantes que pudieran utilizarse para promo-
+deunresultado.
+verquelosestudiantesinvestiguen,exponganydiscutanla
+utilización de modelos matemáticos están los ejercicios de Losejerciciosdivergentessonaquellosquetienenposi-
+orientación,decálculoydivergentes[2].Estoscontribuyen bles solucione,s con los cuáles se fomenta el pensamiento
+a la formación de hábitos de trabajo independiente, donde creativo,seestimulanaptitudesycapacidades,ysebrindan
+los educandos sean capaces de extraer conclusiones, hacer elementosparalareflexión.Sonejerciciosparamodelarma-
+recomendaciones bien fundamentadas y que al analizar un temáticamentelassoluciones[2].
+problemapuedanorientarseenlasposiblesvíasymétodosde Acontinuaciónsepresentanalgunosdelosejerciciosa
+solución. incorporarenlostemasdelaasignaturaGeometríaAnalítica,
+Deahíque,secoincidacon[6]enqueresultanecesario segúnsuclasificación.
+educaralosalumnosenelsaberdiferenciarlosaspectosprin- Ejemplosdeejerciciosdeorientaciónparalasclasesprác-
+cipalesdelossecundarios,distinguirlasanalogíasqueexisten ticasdelostemasdelaasignaturapuedenser:
+entrediversosconceptosmatemáticosestudiados,puedanrea-
+lizardemostracionessencillasqueayudenenlacomprensión TemaI.ÁlgebraVectorial
+deunnúmerodedefinicionesyteoremas;ensuma,queen Ejemplo1:DadoslospuntosP(x ;y )yP(x ;y ),se-
+1 1 1 2 2 2
+cadaactividaddocentequedebienclaroquéesloquesehace, ñalecuáleslaexpresiónquepermitehallarladistancia
+porquésehaceycómosehace. entreellos:
+(cid:112)
+__ d(P,P)= (x −x )2+(y −y )2
+1 2 1 2 1 2
+Relevancia del estudio
+(cid:112)
+__ d(P,P)= (x −y )2+(x −y )2
+Eltratamientodidácticodecontenidosgeométricos,don- 1 2 1 1 2 2
+(cid:112)
+delastecnologíassirvandeapoyoenlasclases,propiciará __ d(P,P)= (x −x )2+(y −y )2
+1 2 1 2 1 2
+una mayor solidez de los conocimientos. El empleo de los
+ejerciciosdeorientación,cálculoydivergentesconelsoftwa- EjemploparaGeogebra:
+redinámicoGeogebracontribuiráavisualizar,investigarlos Construya un deslizador y denótelo con la letra “a”.
+objetosgeométricosysurepresentaciónalgebraica,asícomo UbiqueunpuntoA,sobreOX.Enlabarradeentrada,
+larealizacióndedemostracionesapartirdelaspropiedades escribalasintaxisencoordenadasdelamanerasiguien-
+Ejerciciosdecálculo,deorientaciónydivergentesutilizadosenloscontenidosdeGeometríaAnalítica 3
+te1:M=(x(A),a).Muevaelpuntodeinterceptocon Ejemplosdeejerciciosdecálculoparalasclasesprácticas
+eleje“x”.Identifiqueenquécuadranteseencuentrael delostemas:
+puntoM diseñado.Analiceenlavistaalgebraica,las
+TemaI.ÁlgebraVectorial
+coordenadasqueseasignan.
+Ejemplo4:HalleladistanciadesdeelpuntoA(−1,1)
+TemaII.GeometríaAnalíticadelplano hastaelpuntoB(3,4).ApoyándoseenGeogebra.Gra-
+Ejemplo2:Seleccionecuáleslaexpresiónadecuada fiquelospuntosdados.
+paradeterminarlaecuacióndelarectaquenopasapor
+elpolo,sabiendoqueelpuntoP(a,b)∈rysecumple 4.1 ObtengaelvalordeladistanciadeAE ycomprue-
+queOPr. beelresultadoobtenidoconelresueltodeforma
+manual.
+__ ρcos(θ−b)=a
+4.2 Construyaundeslizador,conincremento1yes-
+__ ρcos(θ−a)=b cribaenlalíneadeediciónlasiguientesintaxis:
+__ ρcos(aθ−b)=0 y=0,75ax−0,75a+4.Comparelarectadibuja-
+dayelsegmentoanterior.Muevaeldeslizadory
+EjemploparaGeogebra:
+expliqueloqueobserva.
+Escriba en la línea de entrada la expresión siguiente:
+25x2+9y2=225.Responda: TemaII.GeometríaAnalíticadelPlano
+Ejemplo5:Dibujeelárealimitadaporlascurvasy=
+__ Elcentroestáenelorigendecoordenadas. √
+x2 y y= x. Obtenga los puntos de intersección.
+__ Nosepuededefinir. ConelGeogebra,visualicelaregiónycompruebeel
+resultadoobtenido.
+TemaIII.GeometríaAnalíticadelEspacio
+Ejemplo3:Indiqueconuna(X),cuáleslaproposición Ejemplo6:Escribaenlalíneadeentrada,laexpresión
+correctaparalasuperficiecuádricadadaporlaecuación siguiente:9x2+25y2=225,hallalascoordenadasde
+(x−1)2+y2=1. losfocos.Graficalasmismas,enlavistagráfica.Ubica
+unpuntosobrelaelipse.Obtengaladistanciadelpunto
+__ Conoconcentroen(1;0)quesedesarrollaenel
+acadafoco,compruebaelresultadoconladefinición
+eje“z”
+dellugargeométrico.Muevaelpuntosobrelaelipsey
+__ Cilindroconcentroen(1;0)quesedesarrollaen digaaquéconclusiónpuedearribar.
+eleje“z”
+LasoluciónpuedeobservarseenlaFigura1.
+__ Cilindroconcentroen(1;0)quesedesarrollaen
+eleje“z” TemaIII.GeometríaAnalíticadelEspacio
+Ejemplo7:Calculalascoordenadasdelpuntosimétri-
+GrafiqueconGeogebralaecuacióndadayverifiquela coalcentrodelaesfera:(x−3)2+(y+2)2+(z−1)2=
+opciónmarcadaporusted. 24,respectoalplanotangentealamismaenelpunto
+M(−1;0;3).
+Enloquesiguesemuestranotrosejerciciosdeorientación,
+quepuedensercomplementariosparareforzarloscontenidos LasoluciónpuedeobservarseenlaFigura2.
+estudiadosengradosprecedentesyqueayudanaunamejor LavisualizacióngráficaconelGeogebrapermitirála
+visualizaciónysolidezdelosconocimientosconelGeogebra,
+observación del plano tangente y puede debatirse la
+comorecursodidáctico.
+búsquedadeotrosobjetosmatemáticos,porejemplo:
+determinacióndeplanosparalelosyperpendiculares,
+FunciónlinealconGeogebra
+búsquedaderectasyvectoresdirectores,elángulode
+Ejercicio1.Construyaundeslizadorsobreeleje“x”,
+intersecciónentrelosplanos.
+enelintervalode(−10,10),conincremento1.Eldes-
+lizadorpordefectosenombraa.Enlalíneadeentra-
+Paralosejerciciosdivergentes,sepropone:
+da, introduzca la sintaxis2: f(x)=ax+3a. Pruebe a
+construirdosdeslizadoresymodificarlaentradadela TemaI.ÁlgebraVectorial
+funciónlinealentérminosdeellos. Ejemplo8:SepuedeproponerconGeogebra:Dibu-
+jarpuntosyconstruirvectores,hallarproductomixto.
+Muevaeldeslizadoryobserveelcomportamientode
+Comprobar si tres puntos son coplanares. Hallar un
+lafunción.¿quéocurrecuandoeldeslizadortomavalo-
+vectornormalaunodelosplanos.
+respositivos(negativos)?¿Cuáleslamonotoníadela
+función? LasoluciónpuedeobservarseenlaFigura3.
+1Nota:laexpresióncambiadeacuerdoalnombrequeseleasignealpunto
+TemaII.GeometríaAnalíticadelPlano
+ubicadosobreelejex.
+2Nota:laexpresióncambiadeacuerdoalnombrequeseleasigneala Ejemplo9:Sepuedenconstruirdeslizadoresyenla
+variabledeslizador. sintaxisobservaralvariarquéocurreconloslugares
+CabreraPuig,R.,&RobbioMarrero,A. CienciasMatemáticas,Vol.37,No.1,2024,Pag.1-7
+https://doi.org/10.5281/zenodo.14252295 https://revistas.uh.cu/rcm/article/view/9477
+4 Ejerciciosdecálculo,deorientaciónydivergentesutilizadosenloscontenidosdeGeometríaAnalítica
+Figura1.Comprobacióndeladefinicióndellugargeométrico(elipse)conGeogebra[Checkingthedefinitionofthelocus
+(ellipse)withGeogebra].
+Figura2.VisualizaciónconGeogebradelplanotangenteparalaobtencióndelpuntosimétrico[VisualizationwithGeogebraof
+thetangentplanetoobtainthesymmetricpoint].
+Figura3.Vistagráficadevectoresdeposición[Positionvectorgraphicalview].
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.1-7 CabreraPuig,R.,&RobbioMarrero,A.
+https://revistas.uh.cu/rcm/article/view/9477 https://doi.org/10.5281/zenodo.14252295
+Ejerciciosdecálculo,deorientaciónydivergentesutilizadosenloscontenidosdeGeometríaAnalítica 5
+geométricosdeestacónicaalinvertirlasvariablesenla Tabla1.Totaldeestudiantesevaluadosenlosejerciciosde
+líneadeentrada. orientaciónparalostemasdelaasignatura[Totalnumberof
+studentsevaluatedintheorientationexercisesforthetopics
+Comprobarelvalordelindicadorapartirdelaecuación
+ofthesubject].
+desegundogradogeneralendosvariablesqueaparece
+enlalíneaalgebraica.
+Tema Presentados Aprobados Con5 Con4 Con3 Con2
+Eligeconlaherramienta“Nuevopunto”yconstruyael TemaI 34 25 7 8 10 9
+TemaII 31 20 4 10 6 11
+puntoAenelejex.Conlaherramienta“Elige”ymueve
+TemaIII 25 17 4 6 7 8
+debeelpuntoAdesplazarsesolosobreelejex.
+Escribe en la barra de entrada la siguiente sintaxis:
+B = (x(A),−1), observe que este punto al moverse, Tabla2.Totaldeestudiantesevaluadosenlosejerciciosde
+se obtiene la coordenada x del punto A inicialmente cálculoparalostemasdelaasignatura[Totalnumberof
+ubicado. studentsevaluatedinthecalculationexercisesforthetopics
+ofthesubject].
+Verificaquéocurrealescribirlasintaxissiguienteenla
+barradetareas.C=(x(A),h(x(A)).Comentedeacuer-
+Tema Presentados Aprobados Con5 Con4 Con3 Con2
+doalafunciónquetengadibujadaqueinterpretadelas TemaI 34 25 7 8 10 9
+coordenadasdelpuntoC. TemaII 31 20 4 10 6 11
+TemaIII 25 17 4 6 7 8
+LasoluciónpuedeobservarseenlaFigura4.
+TemaIII.GeometríaAnalíticadelEspacio
+Tabla3.Totaldeestudiantesevaluadosenlosejercicios
+Ejemplo10:Ellugargeométricodelospuntosdeles-
+divergentesparalostemasdelaasignaturaTotalnumberof
+paciocuyadistanciaalpunto(2,−1,0)esdosvecessu
+studentsevaluatedinthedivergentexercisesforthetopicsof
+distanciaalplanoXY,correspondeaunasuperficiecuá-
+thesubject.
+drica.Hallarlaecuacióndeestasuperficie,identificarla
+yrealizarunbosquejodeella.
+Tema Presentados Aprobados Con5 Con4 Con3 Con2
+TemaI 30 20 6 5 9 10
+Solución:D((x,y,z);(2,−1,0))=2·D((x,y,z);(x,y,0)),
+TemaII 31 20 5 6 9 11
+aquíutilizandolafórmuladedistanciasellegaalresul- TemaIII 25 19 8 5 6 6
+tado.
+Se puede debatir con posterioridad los cilindros pro-
+yectantes,ecuacionesdetransformacióndecoordena-
+Enlastablas1–3puedeapreciarseque,aunquelosresul-
+das,regionesenalgunodelosplanoscoordenados,se
+tadosdelredimiendoacadémiconosonsiemprefavorables
+puedenbuscaropcionesparaintegrarlostrestemasy
+encadatipodeejercicio,seobservaqueenlamedidaquese
+consolidarelcontenidodelaasignatura.
+utilicen los tipos de ejercicios se obtendrán resultados cua-
+litativamente superiores que potencien el aprendizaje y la
+Otrosproblemascomplementariosdesdeelpuntodevista
+visualizacióndeloscontenidosgeométricos.
+geométricoparalavisualizaciónpuedenser:
+1. Dados tres vértices del paralelogramo ABCD, en ese
+Conclusiones
+orden:A(2;3),B(4;−1)yC(0;5),halleelcuartovér-
+ticeDutilizandosolamentelafórmuladeladistancia Elempleodeejerciciosdeorientación,decálculoydiver-
+entredospuntosdelplano.EmpleeelGeogebrapara gentesenlaresolucióndeproblemasgeométricospermitea
+visualizarlasoluciónobtenida. loseducandosestareninteracciónconlasrelacionesquese
+danenlarealidad,medianteelusodellenguajedeotrostemas
+LasoluciónpuedeobservarseenlaFigura5.
+dematemáticascomoelálgebra,elanálisisdefunciones,los
+2. Hallalaecuacióndelaesferaderadio3queestangente conceptos,teoremasypropiedades.Alemplearelsoftware
+enelpuntoA(1;1;−3),alplanox+2y+2z+3=0. Geogebraquepermitevisualizarestoselementos,observar
+laspropiedadesylacomprensióndeloslugaresgeométricos,
+LafiguraquesevisualizaconelGeogebradelresultado
+sepodránobtenerresultadosquepropicienunaprendizajede
+halladoeslaquesemuestra.Alresolverdichoejerci-
+lostemasdelaGeometríaAnalítica.
+cio manualmente se obtienen dos parámetros, según
+la orden, solo se podría pensar en escribir una de las
+dosecuaciones,sinembargo,Geogebrapermitevisuali- Suplementos
+zarquehaydosesferasquecumplentalcondicióncon
+respectoalplanodado. Esteartículonocontieneinformaciónsuplementaria.
+LasoluciónpuedeobservarseenlaFigura6.
+CabreraPuig,R.,&RobbioMarrero,A. CienciasMatemáticas,Vol.37,No.1,2024,Pag.1-7
+https://doi.org/10.5281/zenodo.14252295 https://revistas.uh.cu/rcm/article/view/9477
+6 Ejerciciosdecálculo,deorientaciónydivergentesutilizadosenloscontenidosdeGeometríaAnalítica
+Figura4.Construccióndelagráficadelaecuacióndesegundogradoapartirdelostrescoeficientes[Constructionofthegraph
+oftheseconddegreeequationfromthethreecoefficients].
+Figura5.RepresentaciónconGeogebradelosvérticesdelparalelogramo[RepresentationwithGeogebraoftheverticesofthe
+parallelogram].
+Figura6.Vistagráficadelasesferastangentesalplano[Graphicviewofthespherestangenttotheplane].
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.1-7 CabreraPuig,R.,&RobbioMarrero,A.
+https://revistas.uh.cu/rcm/article/view/9477 https://doi.org/10.5281/zenodo.14252295
+Ejerciciosdecálculo,deorientaciónydivergentesutilizadosenloscontenidosdeGeometríaAnalítica 7
+Conflictos de interés rollo-de-la-creatividad-a-traves-de-l
+os-p-rocesos-matematicos-2-ed/978843
+Sedeclaraquenoexistenconflictosdeinterés.Losauto-
+6820713/1105289?srsltid=AfmBOop7nngS
+resdeclaranquenohubosubvencionesinvolucradaseneste
+VPWVTC0nQW12wKSLFpHAlIyIRTdLLzwOyhYe
+trabajo.
+ypPEBgpW.
+Contribución de autoría [4] Delgado, J.: La enseñanza de la matemática en el um-
+braldelsigloXXI. EnHernández,DelgadoyFernández
+Conceptualización R.C.P.,A.R.M.
+(Comp.).Cuestionesdedidácticadelamatemática,pági-
+Curacióndedatos R.C.P.,A.R.M. nas121–144,2001.
+Análisisformal R.C.P.
+[5] Morales,W.yR.Cabrera:Compendiodeclasesprácti-
+Investigación R.C.P.,A.R.M. casdeGeometríaAnalítica. FacultaddeMatemáticay
+Metodología R.C.P.,A.R.M. Computación,UniversidaddeLaHabana,2019.
+Redacción:preparacióndelborradororiginal R.C.P. [6] Robbio,A.:Unaestrategiadidácticaparalaidentifica-
+Redacción:revisiónyedición R.C.P.,A.R.M. ción de la estructura de un modelo matemático de un
+problemamatemáticodeMatemáticaSuperiorI. Tesis
+en opción al título de Máster en Ciencias de la Educa-
+Referencias
+ción,UniversidaddeCienciasPedagógicas“EnriqueJosé
+[1] Ballester,S.:Metodologíadelaenseñanzadelamatemá- Varona”,2009.
+ticaIII. EditorialUniversitaria,2000.
+[2] Cabrera,R.:Modelodidáctico,conelusodelasTIC,para
+laformaciónmatemática. Tesisenopciónalgradocientí-
+ficodeDoctorenCienciasdelaEducación,Academiade
+lasFARGeneralMáximoGómez,2010.
+[3] De Guzmán, M.: Para pensar mejor: desarrollo de la
+creatividadatravésdelosprocesosmatemáticos. Pirá-
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+mide, Madrid,2006. https://www.casadellib
+SinDerivadas 4.0 Internacional”.
+ro.com/libro-para-pensar-mejor-desar
+CabreraPuig,R.,&RobbioMarrero,A. CienciasMatemáticas,Vol.37,No.1,2024,Pag.1-7
+https://doi.org/10.5281/zenodo.14252295 https://revistas.uh.cu/rcm/article/view/9477
+1

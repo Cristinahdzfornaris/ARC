@@ -1,0 +1,551 @@
+CienciasMatemáticas,Vol.32,No.2,Pag.135-139, 2018
+Recibido02-2018
+Modelacio´n y solucio´n del problema del pe´ndulo
+doble utilizando RK-4
+Modeling and solving the double pendulum problem
+using RK-4
+Miguel A´ngel Abreu Tera´n1, Alejandro Mesejo Chiong2, Glicerio Viltres Castro1
+Resumen En el presente trabajo se aborda el estudio del problema de oscilaciones de un pe´ndulo doble,
+comouncasoaparentementesencillodeunsistemaf´ısicoquepuedemostraruncomportamientocao´tico.Se
+presenta de manera breve la formulacio´n anal´ıtica del problema para obtener dos Ecuaciones Diferenciales
+desegundoorden,acopladasyaltamentenolineales.Estasecuacionesesta´nasociadasalosa´ngulosθ y
+1
+θ ,porcuantobajocondicionesinicialesconocidasesposibleresolverelproblemaoriginaldesarrollandoun
+2
+algoritmoRunge-Kuttadeordencuatro“RK4”paraobtenerlasolucio´nnume´rica.Paraelca´lculonume´ricose
+empleo´ elSACWolframMathematica9.0.Alfinalsepresentancomparacionesentrelassolucionesobtenidas
+porlasdiferentesalternativaspropuestasydiferenciassignificativasqueexistenentrelasolucio´ndelsistema
+originaldeEcuacionesDiferencialesNoLinealesysurespectivalinealizacio´n.
+Abstract Inthepresentworkthestudyoftheproblemofoscillationsofadoublependulumisapproachedas
+an apparently simple case of a physical system that can show a chaotic behavior. The analytical formula of
+theproblemispresentedbrieflytoobtainthesecondorderdifferentialequations,coupledandhighlynonlinear.
+Theseequationsareassociatedwiththeanglesθ andθ ,becauseunderknowninitialconditionsitispossible
+1 2
+to solve the original problem by developing a Runge-Kutta algorithm of order ”RK4” to obtain the numerical
+solution. ForthenumericalcalculationtheSACWolframMathematica9.0wasused. Attheend,comparisonsare
+presentedbetweenthesolutionsobtainedforthedifferentproposedalternativesandsignificantdifferencesthat
+existbetweenthesystemsolutionoriginalofNonlinearDifferentialEquationsandtheirrespectivelinearization.
+PalabrasClave
+modelacio´nmatema´tica—EDOsnolineales—solucio´ndesistemasdeEDOsnolineales
+1DepartamentodeMatema´ticaAplicada,UniversidaddeOriente,Cuba,maabreu@uo.edu.cu,glicerio@uo.edu.cu,
+2DepartamentodeMatema´tica,UniversidaddelaHabana,Cuba,mesejo@matcom.uh.cu
+Introduccio´n dedospe´ndulossimples,conelinteriorcolgandodelamasa
+pendulardelsuperior.Normalmentesesobreentiendequenos
+Lameca´nicaeslaramadelaF´ısicaqueestudiayanaliza
+referimosaundoblepe´nduloplano.Estesistemaf´ısicopo-
+elmovimientoyreposodeloscuerposaligualquesuevo-
+seedosgradosdelibertadyexhibeunricocomportamiento
+lucio´neneltiempo,bajolaaccio´ndefuerzas.Lameca´nica
+dina´mico,sumovimientoesta´ gobernadopordosecuaciones
+anal´ıticaesunaformulacio´nabstractaygeneraldelameca´ni-
+diferencialesdesegundoordenordinariasnolinealesacopla-
+caquepermiteelusoenigualdaddecondicionesdesistemas
+das.Porencimadeciertaenerg´ıasumovimientoescao´tico.
+inerciales o no inerciales sin que, a diferencia de las leyes
+Si bien estas EDOs poseen serias dificultades para obtener
+deNewton,laformaba´sicadelasecuacionesdemovimiento
+lasolucio´nanal´ıticaesposibleobtenerunalinealizacio´nque
+cambie.Seconsideraqueelrasgodeterminanteesconsiderar
+permiteaplicarlaTransformadadeLaplacebajociertascon-
+la exposicio´n y planteamiento de la misma en te´rminos de
+diciones y obtener una solucio´n anal´ıtica para oscilaciones
+coordenadasgeneralizadas.
+suficientementepequen˜as.
+Sisequiereestudiarunsistemaf´ısicoesimportanteen
+principioconocerloselementos,variables,para´metrosypo-
+siblescomportamientosquepuedenderivarsedeundetermi-
+nadoescenariooevento.Engeneralunpe´ndulodobleesun
+sistemacompuestopordospe´ndulos,conelsegundocolgan-
+dodelextremodelprimero.Enelcasoma´ssimple,setrata
+136 Modelacio´nysolucio´ndelproblemadelpe´ndulodobleutilizandoRK-4
+primera part´ıcula es v(cid:126) =L θ˙ y su expresio´n vectorial es-
+2 2
+tara´ dadaporlaecuacio´n:
+v(cid:126) =L θ˙ cosθ(cid:126)i+L θ˙ senθ (cid:126)j (8)
+2 2 2 2 2 2 2
+Ahorapodemosplantearlaenerg´ıacine´ticacomo
+1 1
+E = m v2+ m v2 (9)
+c 2 1 1 2 2 2
+Entoncesellagrangianodelsistemapodemosescribirlo
+L=E −E
+c p
+Figura1.Pe´nduloDoble.
+Ente´rminosdelascoordenadasgeneralizadaspodemosescri-
+birlotrasrealizaroperacionesalgebraicas
+1. Ana´lisis del movimiento del pe´ndulo
+1 1
+doble plano L= (m +m )(L )2(θ˙ )2+ (m L2θ ˙2)+
+2 1 2 1 1 2 2 2 2
+1.1 Cinema´tica +(m L L θ˙ θ˙ cos(θ −θ ))+
+2 1 2 1 2 1 2
+Laformulacio´npartedequeelsistemaoscilaenunplano
++(m +m )gL cos(θ )+m gL cos(θ ) (10)
+verticalynoexistenfuerzasdeamortiguamientoenelmismo. 1 2 1 1 2 2 2
+En la cinema´tica solo estamos interesados en encontrar las Apartirdellagrangianoseobtienenlasecuacionesdelmo-
+expresiones de la posicio´n, la velocidad, la aceleracio´n en vimiento que conducen a un sistema de EDOs no lineales
+te´rminosdelasvariablesqueespecificanelestadodelpe´ndu- acopladas.UtilizandolasecuacionesdeEuler-Lagrangeen
+lodoble,sininteresarnosporlasfuerzasactuantes.Usando estecasoparticular:
+las proyecciones de las l´ıneas L y L sobre un sistema de
+1 2 (cid:34) (cid:35) (cid:34) (cid:35)
+coordenadaslocalizadoenelextremosuperiordelpe´ndulo1, d ∂L ∂L
+= (11)
+esposibleestablecerlasposicionesdelasmasasm 1 ym 2 de dt ∂θ˙ 1 ∂θ 1
+acuerdoconlasecuaciones(1)a(4).
+(cid:34) (cid:35) (cid:34) (cid:35)
+d ∂L ∂L
+= (12)
+x 1 =L 1 senθ 1 (1) dt ∂θ˙ 2 ∂θ 2
+Calculandoexpl´ıcitamentelasderivadasdelasexpresiones
+y =−L cosθ (2)
+1 1 1
+anterioresseobtieneelsistema(13)deEDOsnolineales
+x
+y
+2
+2
+=
+=
+x
+y
+1
+1
++
+−
+L
+L
+2
+2
+s
+c
+e
+o
+n
+s
+θ
+θ
+2
+2
+(
+(
+3
+4
+)
+)
+  0=
++m
+(m
+2 L
+1
+2
++
+(θ
+m
+˙ 2
+2
+)
+)
+2
+L
+si
+1
+n
+θ¨
+(
+1
+θ
++
+1 −
+m 2
+θ
+θ
+2
+¨ 2
+)
+L
++
+1 L
+(m
+2 c
+1
+o
++
+s(
+m
+θ 1
+2 )
+−
+gs
+θ
+i
+2
+n
+)
+(
++
+θ 1 )
+Sisesitu´aelnivelcerodeenerg´ıapotencialenelpuntode
+e
+su
+x
+s
+p
+p
+re
+e
+s
+n
+a
+s
+d
+io
+a
+´n
+de
+de
+la
+l
+s
+p
+i
+r
+g
+i
+u
+m
+ie
+e
+n
+r
+t
+p
+e
+e´
+f
+n
+o
+d
+rm
+ul
+a
+o
+:
+la energ´ıa potencial queda  0=
+−m
+m 2
+L
+L 2
+(
+θ¨
+θ˙
+2 +
+)2
+m
+si
+2
+n
+θ
+(
+¨ 1
+θ
+L 1
+−
+co
+θ
+s(
+)
+θ
++
+1 −
+m
+θ
+g
+2 )
+s
+−
+in(θ )
+2 1 1 1 2 2 2
+(13)
+E =m gy +m gy (5) Esva´lidoobservarqueelsistemadadoanteriormentenoposee
+p 1 1 2 2
+solucio´nanal´ıticaconocida,sinembargopodemosconsiderar
+ysustituyendo(2)y(4)en(5)queda:
+quesilosgirossonpequen˜os,esdecir
+E
+p
+=−(m
+1
++m
+2
+)gL
+1
+cosθ
+1
++m
+2
+gL
+2
+cosθ
+2
+(6) cos(θ
+1
+−θ
+2
+)≈1 (14)
+sin(θ −θ )≈0 (15)
+Notemosquelamagnituddelavelocidaddelprimerpe´ndulo 1 2
+seobtienecomoelproductoentreelradiodelacircunferencia sinθ ≈θ (16)
+1 1
+ylavelocidadangular.
+sinθ ≈θ (17)
+2 2
+v(cid:126) =L θ˙ Considerandoquelosgirossonpequen˜oselsistemapuedeser
+1 1 1
+simplificadoaunsistemadeEDOslineales,alcualpodremos
+Suexpresio´nvectorialestara´ dadaporlaecuacio´n encontrarleunasolucio´nanal´ıtica.Deotramaneraconsiderar
+que los giros no son pequen˜os y el sistema (13) es posible
+v(cid:126) =L θ˙ cosθ(cid:126)i+L θ˙ senθ (cid:126)j (7) encontrarleunasolucio´nnume´ricaporreduccio´ndeordena
+1 1 1 1 1 1 1
+cuatroecuacionesdiferencialesdeprimerordennolineales
+La magnitud de la velocidad de la segunda part´ıcula en un concondicionesadaptadas,partiendodelsistemaoriginal.
+sistema de referencia que se mueve con velocidad v de la
+1
+Modelacio´nysolucio´ndelproblemadelpe´ndulodobleutilizandoRK-4 137
+1.2 Solucio´nparacasosparticulares m =1slug, g=32ft/s2
+2
+Consideremosprimerolasoscilacionespequen˜aslibresde
+θ (0)=1rad, θ (0)=−1rad
+unpe´ndulodobleplanoydesarrollemosunejemploconlos 1 2
+siguientesdatos θ (0)=θ (0)=0rad/s
+1 2
+parauntiempofinalde30s.
+L =16ft, L =16ft, m =3slug
+1 2 1
+m 2 =1slug, g=32ft/s2 Elsistema(18)sepuedereduciraunsistemadecuatro
+ecuacionesdiferencialeslinealesconsiderandoque
+θ (0)=1rad, θ (0)=−1rad
+1 2
+θ (0)=θ (0)=0rad/s dθ
+1 2 1
+=w (20)
+1
+dt
+parauntiempofinalde30s.
+dθ
+Sustituyendoenelsistema(13)podemosescribir 2 =w (21)
+2
+dt
+
+ 0=4θ¨ 1 +θ¨ 2 +8θ 1 dw 1 1
+= (−8θ +2θ ) (22)
+(18) dt 3 1 2
+0=θ¨ +θ¨ +2θ
+1 2 2 dw 8
+2
+= (θ −θ ) (23)
+1 2
+dt 3
+ResolvemoselsistemautilizandolatransformadadeLaplace
+teniendoencuentalascondicionesinicialesdadasyapoya´ndo- Solamentemostraremosenlatablayenlagra´ficalosvalores
+nosenelteoremadelosresiduospodemosobtenerfinalmente det comprendidosentre0y3s.
+lasolucio´nanal´ıticadelsistema:
+t θ θ
+1 2
+0 0 0
+ 3 1 2 0,1 0,0009978 0,0019956
+ θ
+1
+(t)=
+4
+cos(2t)+
+4
+cos(√
+3
+t)
+0,2 0,0019624 0,0039248
+(19) 0,3 0,0028617 0,0057234
+θ
+2
+(t)=−
+3
+cos(2t)+
+1
+cos(√
+2
+t)
+0
+0
+,
+,
+4
+5
+0
+0
+,
+,
+0
+0
+0
+0
+3
+4
+6
+3
+6
+4
+5
+8
+8 0
+0
+,
+,
+0
+0
+0
+0
+7
+8
+3
+6
+3
+9
+1
+6
+7
+2 2 3
+0,6 0,0048855 0,009771
+Podemosilustrargra´ficamentelasolucio´nanal´ıticadelsiste-
+0,7 0,0052605 0,0105209
+mautilizandoelasistenteWolframMathematica9.0.
+0,8 0,0054604 0,0109208
+0,9 0,0054787 0,0109573
+1 0,0053146 0,0106292
+1,1 0,0049737 0,0099474
+1,2 0,0044673 0,0089347
+1,3 0,0038123 0,0076246
+1,4 0,0030304 0,0060608
+1,5 0,0021476 0,00429513
+1,6 0,0011934 0,0023868
+1,7 0,0001994 0,0003989
+1,8 −0,0008012 −0,0016024
+1,9 −0,0017752 −0,0035504
+Figura2.LinealizadoutilizandoTransformadadeLaplace.
+2 −0,0026901 −0,0053802
+En la gra´fica se muestra el modelo linealizado, el segundo 2,1 −0,0035156 −0,0070311
+pe´ndulo(rojo)conamplitudesdegiromayorqueelprimero 2,2 −0,0042241 −0,0084481
+(azul). Se puede apreciar la forma de la solucio´n dada en 2,3 −0,004792 −0,009584
+cosenosendondelaamplitudnoesperio´dicaalolargode 2,4 −0,005201 −0,010401
+todoelintervalo. 2,5 −0,005436 −0,01087
+2,6 −0,005491 −0,010981
+1.2.1 Solucio´ndelmodelolinealutilizandoRK-4
+2,7 −0,005363 −0,010725
+Seutilizara´nlosmismosdatosdelaseccio´n1.2
+2,8 −0,005056 −0,010112
+2,9 −0,004581 −0,009163
+3 −0,003954 −0,007908
+L =16ft, L =16ft, m =3slug
+1 2 1
+138 Modelacio´nysolucio´ndelproblemadelpe´ndulodobleutilizandoRK-4
+dw
+1
+(m +m )l
+1 2 1
+dt
+− (27)
+m l cos(θ −θ )
+2 2 1 2
+Este nuevo sistema puede ser resuelto nume´ricamente me-
+dianteunaadaptacio´ndelMe´tododeRK-4parasistemasde
+EDOsconlosdatosdadosanteriormente.Seobtuvieronlos
+valoresdeθ yθ queaparecenenlasiguientetabla.Sola-
+1 2
+mentemostraremosenlatablayenlagra´ficalosvaloresdet
+comprendidosentre0y0.2s.
+t θ θ
+1 2
+0 0 0
+0,01 0,000251505 0,000103045
+0,02 0,00034483 0,000206091
+0,03 6,06362 0,000309136
+Figura3.LinealizadoutilizandoRK-4.
+0,04 −0,000450133 0,000412182
+Enlagra´ficasemuestraelmodelolinealizadoutilizando 0,05 −0,000616787 0,000515227
+elMe´tododeRK-4,elsegundope´ndulo(rojo)conamplitudes 0,06 5,3009 0,000618273
+de giro mayor que el primero (azul). Se puede apreciar la 0,07 0,00123555 0,000721318
+formadelasolucio´ndadaencosenosendondelaamplitud 0,08 0,001669569 0,000824364
+noesperio´dicaalolargodetodoelintervalo.Notemosque 0,09 0,000250582 0,000927409
+los gra´ficos de las soluciones obtenidas en ambos no son 0,1 −0,002328668 0,001030455
+significativamentediferentes. 0,11 −0,003281604 0,0011335
+0,12 −0,00012773 0,001236545
+1.2.2 Solucio´ndelmodelonolinealutilizandoRK-4
+0,13 0,00564887 0,001339591
+Seutilizara´nlosmismosdatosdelaseccio´n1.2
+0,14 0,007876718 0,001442636
+0,15 0,001003321 0,001545682
+L =16ft, L =16ft, m =3slug
+1 2 1
+0,16 −0,011831485 0,001648727
+m
+2
+=1slug, g=32ft/s2
+0,17 −0,01695083 0,001751773
+θ (0)=1rad, θ (0)=−1rad 0,18 −0,001729951 0,0018548181
+1 2
+0,19 0,027168524 0,00195786355
+θ (0)=θ (0)=0rad/s
+1 2 0,2 0,038270127 0,002060909
+parauntiempofinalde30s.
+Partiendodelsistema(13)esposiblemediantereduccio´nde
+ordenobtenerelsiguientesistemadeecuacionesdiferenciales
+nolinealesdeprimerorden.
+dθ
+1
+=w (24)
+1
+dt
+dθ
+2
+=w (25)
+2
+dt
+dw −m l w2sin(θ −θ )cos(θ −θ )
+1 = 2 1 1 1 2 1 2 +
+dt l [(m +m )−m cos2(θ −θ )]
+1 1 2 2 1 2
+m gsin(θ )cos(θ −θ )
++ 2 2 1 2 −
+l 1 [(m 1 +m 2 )−m 2 cos2(θ 1 −θ 2 )] Figura4.NolinealizadoutilizandoRK-4.
+m l w2sin(θ −θ )+(m +m )gsin(θ )
+− 2 2 2 1 2 1 2 1 (26) EnlaFigura4θ 1 apareceencolorazulyθ 2 apareceencolor
+l [(m +m )−m cos2(θ −θ )]
+1 1 2 2 1 2 rojo.
+Segu´nelgra´ficopodemosapreciarelcomportamientocao´tico
+dw −m l w2sin(θ −θ )−(m +m )gsin(θ ) delprimerpe´ndulo,cuyoa´ngulodegiroesθ ,estonosper-
+2 = 2 2 2 1 2 1 2 1 − 1
+dt m l cos(θ −θ ) miteestablecerunacomparacio´nentrelasolucio´ndelmodelo
+2 2 1 2
+Modelacio´nysolucio´ndelproblemadelpe´ndulodobleutilizandoRK-4 139
+linealizadoyelmodelonolinealizado,esdecir,paraoscila- [3] J.B.CastilleroyR.R.RamosyB.Valin˜o.Apuntespara
+cionesnopequen˜asexisteunadiferenciaconsiderableentre uncursodemeca´nicacla´sica.
+ambassoluciones.
+[4] D.Garanin.ExercisesinClassicalMechanics.
+[5] V.H.Mandell.TheDoublePendulumProblem,2000.
+2. Resultados y Conclusiones
+[6] K.R.Symon.Mechanics,1960.
+Apartirdelosresultadosobtenidosquedaclaroquecuan-
+dosemodelacualquierfeno´menodebemossermuycuidado- [7] Stickel.TheDoublePendulum,2009.
+sos,cuandoseconsideraronoscilacionespequen˜aslosresul-
+[8] G.Gonza´lez.SingleandDoubleplanependulum.
+tadosobtenidosenelmodelolinealexhibendiferenciasno
+muysignificativasentreelmodelonume´ricoyelanal´ıtico,no
+[9] P.Valde´sCastro.Sistemadeactividadesdedina´micano
+ocurriendoas´ısiquisie´ramosestablecercomparacio´nentre
+linealenuncursoinicialdeMeca´nica,2015.
+lasolucio´naproximadadelmodelonolinealylassoluciones
+linealizadas. [10] Seoane, J., Zambrano, S. y SanJua´n, M. (2011) “Tea-
+chingNonlinearDynamicsandChaosforBeginners”.
+Referencias
+[11] S.C.ChaprayR.P.Canale.Me´todosNume´ricospara
+[1] L.Lifshitz.Mechanics,1976. Ingenieros.719-756,2007.
+[2] M.R.Spiegel.Theoryandproblemsoftheoreticalme-
+chanics,1967.

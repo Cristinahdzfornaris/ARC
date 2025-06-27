@@ -1,0 +1,1038 @@
+REVISTA DE CIENCIAS MATEMÁTICAS Vol. 24, único, Nos. 2007- 2008
+APLICACIÓN DE LAS FRACCIONES CONTINUAS
+GENERALIZADAS Y LA CONEXIÓN CON LOS POLINOMIOS
+ORTOGONALES GENERALES EN ECUACIONES DE TIPO TODA
+Andrés Gago Alonso1, Luís Santiago Moreno2, Luís Ramiro Piñeiro3
+1CENATAV, 2Universidad de Toronto, 3Universidad de la Habana
+RESUMEN
+Estudiamos sistemas dinámicos no lineales finitos que generalizan en cierta forma los estudiados
+por J. Coussement, A. B. J. Kuijlaars y W. Van Assche en [7]. Nuestros sistemas dinámicos tienen
+representación matricial similar a las analizadas en el artículo mencionado. Esta vez consideramos
+D(x) una familia uniparamétrica de matrices de Hessenberg, y M(x) triangular inferior con
+elementos no nulos en la diagonal.
+M 1(x)D(x) D(x)M 1(x)
+Las matrices de Hessenberg , son utilizadas para probar la
+integrabilidad del sistema. Usando la conexión con los polinomios ortogonales generales [16],
+{ }
+consideramos vectores de polinomios y formas sesquilineales , asociadas mediante
+x
+relaciones de ortogonalidad. Los valores propios generalizados son constantes y las formas
+{ } { }
+sesquilineales tienen representación explícita en términos de (Condiciones
+x 0
+iniciales). Finalmente, proponemos un desarrollo en fracción continua que generaliza el estudiado
+en [16], y es el análogo en el contexto de las T-fracciones para series de Laurent, como en [7].
+ABSTRACT
+We study finite nonlinear dynamical systems that somehow generalize those studied by J.
+Coussement, A.B.J. Kuijlaars and W. Van Assche in [7]. Our dynamical systems have a matrix
+representation very similar to the ones that were previously analyzed in [7]. In our case D(x) is
+considered a uniparametrical family of n n Hessenberg matrices, and M(x) a lower
+n n
+triangular matrix with nonzero elements on the diagonal.
+M 1(x)D(x) D(x)M 1(x)
+The Hessenberg matrices and are used to prove the integrity of
+the system. Using the connection with general orthogonal polynomials, we consider vectors of
+{ }
+polynomials and the sesquilinear forms , associated by orthogonality relationships. The
+x
+{ }
+generalized eigenvalues are constant and the sesquilinear forms have explicit
+x
+{ }
+representation in terms of . Finally, we obtain a development as a continued fraction that
+0
+generalizes those studied in [16], in an analogous way as it was done for Laurent series in [7].
+1. INTRODUCCIÓN
+Formas generalizadas para las ecuaciones de Toda relativistas fueron consideradas por J.
+Coussement, A. B. J. Kuijlaars y W. Van Assche [7]
+L'(t) f(L(t)M(t) 1) L(t) L(t) f(M(t) 1L(t))
+(1)
+M '(t) f(L(t)M(t) 1) M(t) M(t) f(M(t) 1L(t))
+donde f R R es una función arbitraria en R , y las dos matrices bidiagonales L(t) y M(t) están
+definidas a partir de las incógnitas a (t) y b (t) por
+n n
+.
+Email: 3lrp@matcom.uh.cu
+13
+a (t) 1 0   0
+1
+0 a (t) 1 0
+2
+0 0 a (t)  
+L(t) 3
+    
+  a (t) 1
+N 1
+0    0 a (t)
+N
+1 0 0   0
+b(t) 1 0 0
+1
+0 b (t) 1  
+M(t) 2 (2)
+    
+  1 0
+0    b (t) 1
+N 1
+siendo a (t) 0 para 1 n N, b (t) 0 para 1 n N 1, y b 0 b 0.
+n n 0 N
+El sistema (1) es una generalización de las ecuaciones de Toda relativistas (RTL), introducidas por
+Ruijsenaars [15] e investigadas en [5,4]. Los casos particulares obtenidos de (1) mediante los cambios
+de variables f(x) x ó f(x) 1x, constituyen representaciones en forma de Lax para las ecuaciones
+de Ruijsenaars-Toda. El caso finito de las RTL es definido por el sistema de ecuaciones
+exp(q (t) q (t)) exp(q (t) q (t))
+q (t) q (t) q (t) n 1 n q (t) n n 1 (3)
+n n n 1 1 2exp(q (t) q (t)) n 1 1 2exp(q (t) q (t))
+n 1 n n n 1
+con N N 1 n N y por convenio q y q . Este sistema escrito de forma
+0 N 1
+Newtoniana, haciendo q (t) x (t) 1 y 0 obtenemos las ecuaciones de Toda no-relativistas
+n n
+(NRTL) en el caso finito
+x (t) exp(x (t) x (t)) exp(x (t) x (t)) 1 n N (4)
+n n 1 n n n 1
+estudiadas por J. Moser y generalizadas en posteriores estudios [2, 3,16].
+En el epígrafe 3 mostramos que las ecuaciones (1) estudiadas en [7] son casos particulares de la
+siguiente forma generalizada de las ecuaciones de Toda relativistas
+D'(x) f(D(x)M(x) 1) D(x) D(x) f(M(x) 1D(x))
+(5)
+M '(x) f(D(x)M(x) 1) M(x) M(x) f(M(x) 1D(x))
+donde f es cierta función arbitraria, D(x) es una matriz de Hessenberg, y M(x) triangular inferior
+con los elementos de la diagonal no nulos, ambas de N N y definidas a partir de las funciones
+incógnitas d (x) y m (x)
+i j i j
+d (x) d (x) 0  0
+00 01
+d (x) d (x) d (x)  0
+10 11 12
+D(x)     
+    d (x)
+N 2N 1
+d (x) d (x)  d (x)
+N 10 N 11 N 1N 1
+14
+m (x) 0 0  0
+00
+m (x) m (x) 0  0
+10 11
+M(x)      (6)
+    0
+m (x) m (x)  m (x)
+N 10 N 11 N 1N 1
+El principal objetivo de este trabajo es resolver las ecuaciones de Toda relativistas en la forma
+general (5) con ayuda de una transformación espectral directa e inversa, de manera análoga a la
+realizada para el caso relativista en [16] y al caso no-relativista en [7]. Mientras la transformación
+espectral para las ecuaciones estudiadas en [7] utiliza la teoría espectral de pares de matrices
+bidiagonales y los polinomios ortogonales de Laurent, en nuestro caso la transformación espectral está
+basada en las propiedades espectrales de las matrices de Hessenberg y los polinomios ortogonales
+generales estudiados por L. Santiago y L. Robert en [14, 16, 17]. En la figura 1 se muestra el esquema
+general para la integración del problema de Cauchy a partir de los problemas espectrales directo e
+inverso.
+Condiciones iniciales, x = 0 Soluciones en x
+Problema espectral directo Problema espectral inverso
+Datos espectrales para x = 0 Evolución Datos espectrales en x
+FIGURA 1. ESQUEMA GENERAL
+Transformaciones de este estilo fueron discutidas por O. Ragnisco y M. Brushi en [6] para el caso de
+las RTL periódicas, por J. Coussement, A. B. J. Kuijlaars y W. Van Assche en [7] para cierta forma
+generalizada del caso relativista y por L. Santiago en [16] para el no-relativista.
+2. PROBLEMAS ESPECTRALES: DIRECTO E INVERSO
+Sean D (d ) una matriz de Hessenberg y M (m ) triangular inferior con elementos no nulos
+i j i j
+en la diagonal. Dado que M es inversible, los problemas generalizados de valores propios no-simétrico
+   
+del par de matrices (D M) por la izquierda Dv Mv y por la derecha utD utM , coincide con
+los problemas de valores propios de las matrices de Hessenberg D M 1D y D DM 1
+1 2
+respectivamente. Los ceros del polinomio característico p (z) det(zM D) coinciden con las ceros
+N
+de los polinomios característicos de las matrices de Hessenberg D y D , en efecto
+1 2
+det(zM D)
+det(z M 1D) det(z DM 1)
+det(M)
+Denotemos S(D M) ( … ) el espectro generalizado de los operadores asociados a las
+0 1 N 1
+matrices D y M , el cual coincide con S(D ) y S(D ). Esto nos permitirá utilizar los resultados
+1 2
+obtenidos sobre propiedades espectrales para matrices de Hessenberg, demostrados en [8, 16, 14, 17]
+para estudio de las propiedades espectrales del par de matrices (D M) .
+2.1. MATRICES DE HESSENBERG FINITAS
+Para toda matriz de Hessenberg D se puede definir de manera biunívoca un vector de polinomios en
+C[z], {p (z) p (z)… p (z)}i 1 2 tales que p (z) 1, p (z) mónico, gradp (z) n para
+0 1 N 0 N n
+15
+n 01… N y
+Dpˆ (z) zpˆ (z) (D) p (z)e (7)
+N N N 1N N N
+donde pˆ (p (z) p (z)… p (z))t y e (0… 01)t.
+N 0 1 N 1 N
+El siguiente operador fue definido en [16] y nos permitirá caracterizar la descomposición de Jordán de
+D.
+r r
+DEFINICIÓN 2.1. Para un polinomio p(z) (z ) i con N definiremos el operador
+i 0 i i 0 i
+R(p ) de las funciones infinitamente derivables en Cn mediante
+q(1)( ) q( 0 1)( ) q( r 1)( )
+R(p q) q( ) 0 … 0 … q( )… r
+0 1 ( 1) r ( 1)
+0 r
+Dicho operador también lo definiremos en los vectores de funciones infinitamente derivables con N
+componentes, aplicándolo a cada componente, el resultado será una matriz de N N.
+La siguiente proposición demostrada en [16] nos brinda una caracterización de la descomposición de
+Jordán de una matriz de Hessenberg finita.
+r r
+PROPOSICIÓN 2.1. Sea p (z) k (z ) i con N, Q R(p pˆ ) y
+N N i 0 i i 0 i N N N
+J diag(A A… A )
+0 1 r
+1 … 0
+i
+0  0
+A i
+i  1
+0 0
+i
+entonces se cumple que
+D Q JQ 1
+N N
+COROLARIO 2.1.
+N 1
+det(zI D) d p (z)
+ii 1 N
+i 0
+2.2. PROBLEMA ESPECTRAL DIRECTO
+Para resolver el problema de Cauchy (5) por el esquema descrito en la figura 1, se empieza a partir
+de las condiciones iniciales D(0) (d (0)) y M(0) (m (0)).
+i j i j
+En nuestro caso el problema directo consiste en obtener a partir de las matrices de Hessenberg D y
+1
+D involucradas en las condiciones iniciales, ciertas formas sesquilineales en la manera descrita en [8,
+2
+16, 14, 17] y que resumimos a continuación.
+Se conoce que dada dos matrices de Hessenberg D y D se pueden definir de manera biunívoca
+1 2
+dos vectores de polinomios en C[z], {p (z) p (z)… p (z)} i 1 2 como en (7).
+i0 i1 iN
+En este caso la forma sesquilineal regular o fórmula de cuadratura1 N -ésima
+{p(z) q(z)} p(D) q(D )t (8)
+1 2
+00
+1Según L. Santiago en [16]
+16
+definida para p(z) y q(z) en C [z], es la única que satisface las siguientes relaciones de
+N
+ortogonalidad
+{p (z) p (z)} 0 n m N (9)
+1n 2m nm
+para los polinomios indicados.
+NOTA 2.1. El problema directo para dos matrices de Hessenberg D y D consiste en computar los
+1 2
+momentos de la forma sesquilineal {zn zm} para 0 n m N a partir de D , D y de la
+nm 1 2
+fórmula (8).
+2.3. PROBLEMA ESPECTRAL INVERSO
+NOTA 2.2. El problema inverso para una forma sesquilineal { } consiste en encontrar las matrices de
+Hessenberg D y D asociadas según (7), a los únicos polinomios que satisfacen (9).
+1 2
+Una vez conocidos los momentos {zn zm} de la forma sesquilineal, se pueden encontrar los
+nm
+polinomios que satisfacen (9) por el algoritmo de Gram-Schmidt. Luego, a partir de la siguiente relación
+n
+zp (z) (D) p (z) 0 n N 1
+in i n j j
+j 0
+es posible determinar las entradas de las matrices D y D .
+1 2
+En caso que las matrices de Hessenberg D y D sean conocidas y estén definidas de la siguiente
+1 2
+manera,D M 1D, D DM 1 a partir de las matrices D y M , será posible determinar M
+1 2
+utilizando el siguiente lema.
+LEMA 2.1. Sean D M 1D,D DM 1, pˆ (z) pˆ (z) (p (z)… p (z))t, el vector de
+1 2 i iN i0 iN 1
+polinomios asociado a la matriz D i 1 2 por medio de la relación (7). Entonces, pˆ (z) 1 Mpˆ (z).
+i 2 m 1
+00
+DEMOSTRACIÓN.
+Se procede como en (7)
+M 1Dpˆ (z) zpˆ (z) d p (z)e
+1 1 1N 1N 1N N 1
+DM 1pˆ (z) zpˆ (z) d p (z)e
+2 2 2N 1N 2N N 1
+Multiplicando la segunda ecuación por M 1, aplicando el corolario 1, restando las ecuaciones,
+realizando algunas operaciones algebraicas, obtenemos m M 1pˆ (z) pˆ . Por tanto
+00 2 1
+pˆ (z) 1 Mpˆ (z).
+2 m 1
+00
+3. FORMA GENERALIZADA DE LAS ECUACIONES DE TODA RELATIVISTAS Y EVOLUCIÓN
+DE LOS DATOS ESPECTRALES
+En este epígrafe se define la estructura de sistemas de ecuaciones diferenciales de tipo
+Toda como en (5) considerando una forma matricial basada en matrices de Hessenberg.
+PROPOSICIÓN 3.1. Supongamos que las matrices de D(x) y M(x) satisfacen las ecuaciones
+diferenciales
+17
+dD(x)
+D(x)A(x) B(x)D(x)
+dx
+(10)
+dM(x)
+M(x)A(x) B(x)M(x)
+dx
+donde A(x) y B(x) son matrices triangulares inferiores, entonces el espectro S(L(x) M(x)), no
+dependen de x.
+DEMOSTRACIÓN.
+Sean las matrices L (x) y L (x) las soluciones únicas de los siguientes sistemas de ecuaciones
+1 2
+dL(x)
+1 L(x)B(x) L(0) I
+dx 1 1
+(11)
+dL (x)
+2 A(x)L (x) L (0) I
+dx 2 2
+puede verificarse sin problemas que estas matrices son triangulares inferiores con los elementos de la
+diagonal no nulos y por tanto son inversibles.
+Aplicando reglas de derivación tenemos
+d
+(L(x)D(x)L (x)) L(x)D(x)L (x) L(x)D(x)L (x) L(x)D(x)L (x)
+dx 1 2 1 2 1 2 1 2
+luego por (10) y (11)
+d
+(LDL ) LBDL L(DA BD)L LDAL 0
+dx 1 2 1 2 1 2 1 2
+de manera análoga d (L(x)M(x)L (x)) 0, lo que significa
+dx 1 2
+L(x)D(x)L (x) L(0)D(0)L (0) D(0)
+1 2 1 2
+L(x)M(x)L (x) L (0)M(0)L (0) M(0)
+1 2 1 2
+de aquí L(x)(zM(x) D(x))L (x) zM(0) D(0) y como det(L (x)) 0 y det(L (x)) 0,
+1 2 1 2
+llegamos finalmente a que det(zM(x) D(x)) y det(zM(0) D(0)), se anulan para los mismos
+valores de z , lo cual prueba la proposición. 
+Utilizando este hecho y las propiedades de las matrices de Hessenberg discutidas en el epígrafe 2.1,
+se obtiene el siguiente resultado.
+PROPOSICIÓN 3.2. Sean A(x) y B(x) matrices triangulares inferiores de N N, D(x) una familia
+uniparamétrica de matrices de Hessenberg de N N y M(x) una matriz triangular inferior de N N
+con elementos no nulos en la diagonal. Supongamos que todas estas matrices satisfacen (10). Entonces,
+las matrices de Hessenberg D (x) M 1(x)D(x) y D (x) D(x)M 1(x) tienen la misma forma de
+1 2
+Jordán y esta no depende de x.
+LEMA 3.1. Sean A(x) y B(x) matrices triangulares inferiores de N N tales que
+(A(x)) (B(x)) 0, D(x) una familia uniparamétrica de matrices de Hessenberg de N N y
+00 00
+18
+M(x) una matriz triangular inferior de N N con elementos no nulos en la diagonal tal que
+m (x) m 0 no depende de x. Tomemos las siguientes matrices de Hessenberg
+00 00
+D (x) M 1(x)D(x) y D (x) D(x)M 1(x) como en la proposición (3.2). Denotemos por
+1 2
+pˆ (z x) pˆ (z x) (p (z x)… p (z x))t el vector de polinomios asociado a la matriz
+i iN i0 iN 1
+D(x) i 1 2 mediante la relación
+i
+D(x)pˆ (z x) zpˆ (z x) d p (z x)e
+i i i iN iN N 1
+Entonces las siguientes proposiciones son equivalentes
+(i)
+dD(x)
+D(x)A(x) B(x)D(x)
+dx
+dM(x)
+M(x)A(x) B(x)M(x)
+dx
+(ii)
+dD (x)
+1 [D (x) A(x)]
+dx 1
+dD (x)
+2 [D (x) B(x)]
+dx 2
+(iii)
+dpˆ (z x)
+1 A(x)pˆ (z x)
+dx 1
+dpˆ (z x)
+2 B(x)pˆ (z x)
+dx 2
+DEMOSTRACIÓN.
+La equivalencia entre (ii) y (iii) es consecuencia directa de [16, Lema 7.3].
+Dado las siguientes expresiones de las derivadas que tienen lugar
+(M 1(x)D(x)) M 1(x)M (x)M 1(x)D(x) M 1(x)D(x) (12)
+(D(x)M 1(x)) D(x)M 1(x)M (x)M 1(x) D(x)M 1(x) (13)
+(i) (ii) es fácil, sólo hay que combinar (i) con (12) y (13).
+Demostremos que (ii) (i). De (ii), (12) y (13) se llega fácilmente a
+dD(x) dM(x)
+D(x)A(x) B(x)D(x) ( M(x)A(x) B(x)M(x))M 1(x)D(x)
+dx dx
+dD(x) dM(x)
+D(x)A(x) B(x)D(x) D(x)M 1(x)( M(x)A(x) B(x)M(x))
+dx dx
+Sustituyendo en estas ecuaciones E (x) dD(x) D(x)A(x) B(x)D(x) y
+L dx
+E (x) dM(x) M(x)A(x) B(x)M(x) obtenemos
+M dx
+19
+E (x) E (x)D(x)
+L M 1
+E (x) D (x)E (x)
+L 2 M
+Combinando estas igualdades
+D (x)E (x) E (x)D (x) (14)
+2 M M 1
+Trabajando como en la proposición 3.2, sea la descomposición de Jordán de D (x) Q (x)JQ 1(x)
+1 1 1
+sustituyendo en (14)
+D (x)(E (x)Q(x)) (E (x)Q(x))J (15)
+2 M 1 M 1
+Aplicando [16, corolario 4.4] obtenemos que E (x)Q (x) Q (x)H(x). Como m (x) 0 y
+M 1 2 00
+(A(x)) (B(x)) 0 entonces la primera fila de dM(x) es cero, al igual que en M(x)A(x) y
+00 00 dx
+B(x)M(x), por tanto la primera fila de E (x) es cero. Ahora por la propia forma que tiene H(x)
+M
+según [16, corolario 4.4], se llega a que H(x) 0, E (x) 0 y E (x) 0, como se quería.
+M L
+
+TEOREMA 3.1. Sea f (z x) N 1 a (x)zk donde las a (x) son funciones continuas en R,
+i k 1 ki k
+D (x) dos familias uniparamétricas de matrices de Hessenberg de N N, M (x) matrices
+i i
+triangulares inferiores de N N con elementos no nulos en la diagonal tal que m (x) m 0 no
+i00 i00
+depende de x y { }(i) las familias de formas sesquilineales definidas mediante
+x
+{ (z) (z)}(1) ( (M 1(x)D (x)) (M 1(x)D (x)) t )
+x 1 1 2 2 00
+(16)
+{ (z) (z)}(2) ( (D(x)M 1(x)) (D (x)M 1(x)) t)
+x 1 1 00
+2 2
+donde (z) (z) C[z],i 12 entonces son equivalentes
+(i)
+dD(x)
+i D(x)F(x) G (x)D(x)
+dx i i i i
+dM (x) (17)
+i M (x)F(x) G (x)M (x)
+dx i i i i
+i 1 2
+donde
+F(x) A(x) f (M 1(x)D(x) x) (f (M 1(x)D(x) x)) I
+i i i i i i i i 00 N
+F(x) t F (x)
+1 2
+G (x) B(x) f (D(x)M 1(x) x) (f (D(x)M 1(x) x)) I
+i i i i i i i i 00 N
+G (x) t G (x)
+1 2
+20
+y A(x) y B (x) matrices triangulares inferiores de N N tales que (A(x)) (B(x)) 0.
+i i i 00 i 00
+(ii)
+x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(1)
+{ }(1) 0
+x x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(1)
+0
+(18)
+x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(2)
+{ }(2) 0
+x x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(2)
+0
+DEMOSTRACIÓN.
+Sea D (x) M 1(x)D(x) y D (x) D(x)M 1(x) y consideremos los polinomios pˆ (z x)
+i1 i i i2 i i i j
+asociados a la matriz D (x) mediante la relación
+i j
+D (x)pˆ (z x) zpˆ (z x) d p (z x)e . (19)
+i j i j i j i jN i jN N 1
+Denotemos m(j)(x) {zi zk}(j) los momentos de la forma sesquilineal.
+ik x
+(ii) (i)
+De (ii) se tiene que
+x x
+f (z )d f (z )d
+{pˆ (z x)e 0 1 pˆ (z x)e 0 2 }(j)
+1j 2 j 0 I
+x x N
+f (z )d f (z )d
+{e 0 1 e 0 2 }(j)
+0
+derivando esta igualdad
+d {pˆ (z x)e 0 x f 1 (z )d pˆ (z x)e 0 x f 2 (z )d }(j) d {e 0 x f 1 (z )d e 0 x f 2 (z )d }(j)
+dx 1j 2 j 0 dx 0 I (20)
+x x x x N
+f (z )d f (z )d f (z )d f (z )d
+{e 0 1 e 0 2 }(j) {e 0 1 e 0 2 }(j)
+0 0
+pero
+x x
+f (z )d f (z )d
+d {e 0 1 e 0 2 }(j)
+dx 0
+x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(j)
+0
+x x x x
+f (z )d f (z )d f (z )d f (z )d
+{f (z x)e 0 1 e 0 2 }(j) {f (z x)e 0 1 e 0 2 }(j)
+1 0 2 0
+x x x x
+f (z )d f (z )d f (z )d f (z )d
+{e 0 1 e 0 2 }(j) {e 0 1 e 0 2 }(j)
+0 0
+N 1
+{f (z x)1}(j) {1 f (z x)}(j) (a (x)m(j)(x) a (x)m(j)(x))
+1 x 2 x k1 k0 k2 0k
+k 1
+Sean A(x) y B (x) de forma tal que
+i i
+dpˆ (z x) dpˆ (z x)
+i1 A(x)pˆ (z x) i2 B(x)pˆ (z x) (21)
+dx i i1 dx i i2
+21
+(de aquí que (A(x)) (B(x)) 0) y utilizando que
+i 00 i 00
+f (z x)pˆ (z x) f (D (x) x)pˆ (z x) p (z x)vˆ (z x)
+i i j i i j i j i jN i j
+donde vˆ (z x) es un vector de polinomios en z , obtenemos que
+i j
+dpˆ (z x) x x
+f (z )d f (z )d
+{( 11 f (z x)pˆ (z x))e 0 1 pˆ (z x)e 0 2 }(1)
+dx 1 11 21 0
+x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(1)
+0
+A(x) f (D (x) x)
+1 1 11
+x dpˆ (z x) x
+f (z )d f (z )d
+{pˆ (z x)e 0 1 ( 21 f (z x)pˆ (z x))e 0 2 }(1)
+11 dx 2 21 0
+x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(1)
+0
+t t
+A (x) f (D (x) x)
+2 2 21
+Sumamos las dos últimas igualdades y sustituyendo (20) nos queda
+N 1
+A(x) A (x) t f (D (x) x) f (D (x) x) t (a (x)m(j)(x) a (x)m(j)(x))I .
+1 2 1 11 2 21 k1 k0 k2 0k N
+k 1
+t
+Como m(1) {zk 1}(1) ((D (x))k) y m(1) {1 zk}(1) ((D (x))k ) la igualdad anterior se
+k0 x 11 00 0k x 21 00
+transforma en
+A(x) A (x) t f (D (x) x) f (D (x) x) t (f (D (x) x) f (D (x) x)t) I
+1 2 1 11 2 21 1 11 2 21 00 N
+Con esto llegamos a que F(x) t F (x). Análogamente con { }(2) obtenemos G(x) t G (x).
+1 2 1 2
+Finalmente empleando el lema 3.1, (21) y algunas transformaciones algebraicas obtenemos (i).
+(i) (ii). De (i) se deduce que
+dD(x)
+i D(x)A(x) B(x)D(x)
+dx i i i i
+dM (x)
+i M (x)A(x) B(x)M (x)
+dx i i i i
+i 1 2
+que por el lema 3.1 es equivalente a
+dpˆ (z x) dpˆ (z x)
+i1 A(x)pˆ (z x) i2 B(x)pˆ (z x)
+dx i i1 dx i i2
+Por la forma en que fueron definidos los polinomios pˆ , las matrices D y el corolario 2.1
+i j i j
+tenemos que el polinomio p es una constante multiplicada por el polinomio
+i jN
+p (z x) det(zM (x) D(x)) para j 1 2. Por tanto si tomamos las descomposiciones de Jordán
+i i i
+22
+para las matrices D (x) Q (x)JQ 1(x) con Q (x) R(p (z x) pˆ (z x)) (como en la
+i j i j i i j i j i i j
+proposición 3.1), tenemos
+dQ (x) dQ (x)
+i1 A(x)Q (x) i2 B(x)Q (x)
+dx i i1 dx i i2
+d(Q (x)) 1 d(Q (x)) 1
+i1 (Q (x)) 1A(x) i2 (Q (x)) 1B(x)
+dx i1 i dx i2 i
+t
+Tomemos (x) (Q (x)) 1(Q (x)) 1 y por las ecuaciones anteriores obtenemos
+j 1j 2 j
+d 1 (x) (Q (x)) 1(A(x) A (x) t )(Q (x)) 1 t
+dx 11 1 2 21
+(Q (x)) 1(f (D (x) x) (f (D (x) x)) I
+11 1 11 1 11 00 N
+t t
+(f (D (x) x) (f (D (x) x)) I ) )(Q (x)) 1
+2 21 2 21 00 N 21
+usando las descomposiciones de Jordán y realizando algunas transformaciones algebraicas, llegamos a
+d (x)
+t
+1 (f (J x) (f (J x)) I ) (x) (x)(f (J x) (f (J x)) I )
+dx 1 1 1 1 00 N 1 1 2 2 2 2 00 N
+mediante un razonamiento similar se puede verificar que
+d (x)
+t
+2 (f (J x) (f (J x)) I ) (x) (x)(f (J x) (f (J x)) I )
+dx 1 1 1 1 00 N 2 2 2 2 2 2 00 N
+Se puede demostrar, que de esta última ecuación, obtenemos
+(x) g(x)e 0 x f 1 (J 1 )d (0)e 0 x f 2 (J 2 ) td
+j j
+g(x) e 0 x (f 1 (J 1 ) f 2 (J 2 ) t) 00 d
+Por [16, Teorema 5.3]
+{ (z x) (z x)}(j) R(p ) (x)R(p ) t
+x 1 j 2
+por tanto
+t
+x x
+f (J )d f (J )d
+{ (z x) (z x)}(j) g(x)R(p )e 0 1 1 (0)R(p )e 0 2 2
+x 1 j 2
+Luego
+x f(J )d N1 ( x a ( )d )Jk
+R(p )e 0 i i R(p )e k1 0 ki i
+i i
+R(p i e k N 1 1 ( 0 x a ki ( )d )zk ) R(p i e 0 x f i (z )d )
+Por lo tanto
+23
+x x
+f (z )d f (z )d
+{ (z x) (z x)}(j) g(x)R(p e 0 2 ) (0)R(p e 0 2 )
+x 1 j 2
+x x
+f (z )d f (z )d
+g(x){ (z x)e 0 1 (z x)e 0 2 }(j)
+0
+como trabajamos con formas sesquilineales tales que {11}(j) 1, entonces
+x
+x x
+f (z )d f (z )d
+g(x) ({e 0 1 e 0 2 }) 1
+y finalmente
+x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(j)
+{ }(j) 0
+x x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(j)
+0
+
+3.1. CONCLUSIÓN
+El teorema 3.1 provee un resultado muy general con el cual se completa el proceso de integración
+planteado en (1) para los dos sistemas de ecuaciones diferenciales, como los descritos en (17) al mismo
+tiempo, solo hay que verificar que se cumplen las condiciones que se indican. Este teorema muestra la
+evolución en x los datos espectrales.
+Como un caso particular tenemos el sistema
+dD(x)
+i D(x)A(x) B(x)D(x)
+dx i i i i
+dM (x) (22)
+i M (x)A(x) B(x)M (x)
+dx i i i i
+i 1 2
+con
+t
+A(x) (f (D (x) x) f (D (x) x))
+1 1 11 2 21
+A(x) (f (D (x) x) f (D (x) x)t) I (f (D (x) x) f (D (x) x) t)
+2 2 21 1 11 00 N 2 21 1 11
+t
+B (x) (f (D (x) x) f (D (x) x))
+1 1 12 2 22
+B (x) (f (D (x) x) f (D (x) x)t) I (f (D (x) x) f (D (x) x) t)
+2 2 22 1 12 00 N 2 22 1 12
+que es obtenido de (17) imponiendo la condición d (x) 1 0 k N 2 y
+1kk 1
+m (x) 1 0 k N 1.
+1kk
+Tomando ahora D(x) L(x),M (x) M(x), como en (2), D (x), M (x) y f , apropiadamente,
+1 1 2 2
+y sustituyendo luego en (22), obtenemos un nuevo caso particular
+L(x) L(x)A(x) B(x)L(x)
+(23)
+M (x) M(x)A(x) B(x)L(x)
+24
+con A(x) (f(M 1(x)L(x))) , B(x) (f(L(x)M 1(x))) , al igual que (1).
+4. DESARROLLOS EN FRACCIONES CONTINUAS
+En este epígrafe recordaremos un algoritmo para desarrollar en fracción continua los elementos de
+CN z 1 CN z 1 , y mostraremos otro que generaliza en cierta forma el algoritmo de Jacobi-
+Perron para elementos de CN z 1 . Este último es análogo, en el contexto de las fracciones continuas
+vectoriales, al caso de las T-fracciones.
+DEFINICIÓN 4.1. Sea f f 1 CN z 1 CN z 1
+f2
+f f f …
+1 10 11
+f f f …
+2 20 21
+Definamos
+1 1 f 10 …
+f f
+20 20
+f f 21 f 22 …
+f f
+20 20
+De la definición de inverso de f podemos introducir un algoritmo para el desarrollo en fracción
+continua de manera análoga al caso estándar para series formales [13]. Si en cierto paso del desarrollo
+la componente f del elemento invertido es cero entonces el algoritmo termina.
+20
+Sea
+1
+f a0
+1
+a1
+1
+a2
+
+con ai CN z CN z , lo cual vamos a escribir abreviadamente en la forma f ai . Las
+i 0
+fracciones convergentes de f son definidas como la fracción continua truncada en el n-ésimo término,
+n
+para ellas escribiremos n ai .
+i 0
+Sea D una matriz de Hessenberg, M una matriz triangular inferior con elementos no nulos en la
+diagonal, C una matriz triangular superior con los elementos de la diagonal principal distintos de cero,
+todas de N N. Denotemos por f(z) et[zM D] 1C , entonces tenemos el siguiente teorema.
+0
+TEOREMA 4.1. La serie f puede ser desarrollada en una fracción continua. Tenemos que
+0
+N 1
+f ak con a0 0 y
+0 k 0
+c c c
+ak k 1k k 2k … nk …
+1 c c c
+kk kk kk
+c c
+ak ( k 1k 1 m z d k 2k 2 m z d
+2 c d kk kk c d kk 1 kk 1
+kk k 1k kk k 2k 1
+c 1
+… 00 m z d m z d 0…)
+c d k1 k1 c k0 k0
+kk 01 kk
+25
+para k 0.
+DEMOSTRACIÓN.
+n
+Probaremos que f bi con bi ai para i n y bn an rn con rn igual a
+0 i 0 1
+c q 1 n 2 1 n k
+n 1n 1 n 1 c q … c q …
+c q c q n 2i i c q ni i
+nn n nn n i n 1 nn n i n 2
+y rn igual a
+2
+1 c c
+( n 1n 1 (m z d )q n 2n 2 (m z d )q
+q c d in in i d in 1 in 1 i
+n nn n 1n i n 1 n 2n 1 i n 1
+c
+… 00 (m z d )q (m z d )q 0…)
+d i1 i1 i i0 i0 i
+01 i n 1 i n 1
+y claramente el resultado se sigue de aquí. Note que de (q ) n las sumatorias de arriba están bien
+n
+n
+definidas y (rn) 0. Para probar que f bi es suficiente chequear que
+0 i 0
+1
+rn
+an 1 rn 1
+y entonces usar inducción. Pero esta última igualdad se sigue inmediatamente de la definición de inverso
+y usando la fórmula
+m z d q d q m z d q
+n 1n 1 n 1n 1 n 1 nn 1 n in 1 in 1 i
+i n 2
+obtenida de calcular el término (0 n 1) en ambos lados de (zM D) 1(zM D) I .
+
+5. REPRESENTACIÓN DE LAS SOLUCIONES MEDIANTE DESARROLLOS EN FRACCIONES
+CONTINUAS
+En este epígrafe analizamos casos particulares de los sistemas resueltos según el teorema 3.1.
+TEOREMA 5.1. Sea f (z x) N 1 a (x)zk donde las a (x) son funciones continuas en R, D (x)
+i k 1 ki k i
+dos familias uniparamétricas de matrices de Hessenberg de N N, M (x) matrices triangulares
+i
+inferiores de N N con elementos no nulos en la diagonal tal que m (x) m 0 no depende de
+i00 i00
+x y { } B la forma sesquilineal definida mediante
+{ (z) (z)} (DM 1) (D M 1) t
+1 1 2 2
+00
+para D D (0),M M (0), con (z) y (z) funciones analíticas, entonces si
+1 1 1 1
+d (x) 1 0 k N 2 y m (x) 1 0 k N 1 la solución de los sistemas de ecuaciones
+1kk 1 1kk
+diferenciales
+26
+dD(x)
+i D(x)A(x) B(x)D(x)
+dx i i i i
+dM (x)
+i M (x)A(x) B(x)M (x)
+dx i i i i
+i 1 2
+con
+t
+A(x) (f (D (x) x) f (D (x) x))
+1 1 11 2 21
+A(x) (f (D (x) x) f (D (x) x)t) I (f (D (x) x) f (D (x) x) t)
+2 2 21 1 11 00 N 2 21 1 11
+t
+B (x) (f (D (x) x) f (D (x) x))
+1 1 12 2 22
+B (x) (f (D (x) x) f (D (x) x)t) I (f (D (x) x) f (D (x) x) t)
+2 2 22 1 12 00 N 2 22 1 12
+con condiciones iniciales D D (0) y M M (0), viene dada por
+1 1 1 1
+f 1 g 1
+a0 b0
+0 1 0 1
+a1 b1
+1 1
+a2 b2
+1 1
+… …
+aN 1 bN 1
+donde f( x) es igual a
+x x x
+{e0 xf1(z )d e 0 f 2 (z )d } {e0 xf1(z )d ze 0 f 2 (z )d } {e0 xf1(z )d zke 0 f 2 (z )d }
+z z … z …
+x x x x x x
+f (z )d f (z )d f (z )d f (z )d f (z )d f (z )d
+{e 0 1 e 0 2 } {e 0 1 e 0 2 } {e 0 1 e 0 2 }
+g( x) es igual a
+x x x
+1 {e 0 f 1 (z )d e0 xf2(z )d } {ze 0 f 1 (z )d e0 xf2(z )d } {zke 0 f 1 (z )d e0 xf2(z )d }
+z z … z …
+m x f (z )d x f (z )d x f (z )d x f (z )d x f (z )d x f (z )d
+200 {e 0 1 e 0 2 } {e 0 1 e 0 2 } {e 0 1 e 0 2 }
+y ak a 1 k , bk b 1 k con ak( x) igual a
+ak bk 2
+2 2
+c c
+( k 1k 1 m d k 2k 2 m d
+c d 1kk 1kk c d 1kk 1 1kk 1
+kk 1k 1k kk 1k 2k 1
+c 1
+… 00 m d m d 0…)
+c d 1k1 1k1 c 1k0 1k0
+kk 101 kk
+k1
+donde c i 0 d 2ii1 (x) y bk( x) igual a
+kk k1 2
+m (x)
+i 0 2i1i1
+27
+m d m d
+( 2kk 2kk 2kk 1 2kk 1
+d d
+2k 1k 2k 2k 1
+m d
+… 2k1 2k1 m d 0…)
+d 2k0 2k0
+201
+DEMOSTRACIÓN.
+Sea D (x) M 1(x)D(x) y D (x) D(x)M 1(x) y consideremos los polinomios pˆ (z x)
+i1 i i i2 i i i j
+asociados a la matriz D (x) mediante la relación
+i j
+D (x)pˆ (z x) zpˆ (z x) d p (z x)e
+i j i j i j i jN i jN N 1
+Por la condición d (x) 1 0 k N 2 y m (x) 1 0 k N 1 tenemos que
+1kk 1 1kk
+d 10 k N 2 y de la misma manera que en la demostración del teorema 3.1 se cumple
+1jkk 1
+dpˆ 11 (zx) A(x)pˆ (z x) y dpˆ 12 (zx) B(x)pˆ (z x), entonces (A(x)) (B (x)) 0, además
+dx 1 11 dx 1 12 1 diag 1 diag
+A(x) A (x) t (f (D (x) x) f (D (x) x) t ) (f (D (x) x) f (D (x) x)t) I
+1 2 1 11 2 21 1 11 2 21 00 N
+B(x) B (x) t (f (D (x) x) f (D (x) x) t ) (f (D (x) x) f (D (x) x)t) I
+1 2 1 12 2 22 1 12 2 22 00 N
+por tanto
+t
+A(x) (f (D (x) x) f (D (x) x))
+1 1 11 2 21
+A(x) (f (D (x) x) f (D (x) x)t) I (f (D (x) x) f (D (x) x) t)
+2 2 21 1 11 00 N 2 21 1 11
+t
+B (x) (f (D (x) x) f (D (x) x))
+1 1 12 2 22
+B (x) (f (D (x) x) f (D (x) x)t) I (f (D (x) x) f (D (x) x) t)
+2 2 22 1 12 00 N 2 22 1 12
+pero
+dD(x)
+i D(x)A(x) B(x)D(x)
+dx i i i i
+dM (x)
+i M (x)A(x) B(x)M (x)
+dx i i i i
+i 1 2
+por tanto nuestro sistema de ecuaciones es equivalente al del teorema 3.1 de aquí
+x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(2)
+{ }(2) 0
+x x x
+f (z )d f (z )d
+{e 0 1 e 0 2 }(2)
+0
+pero
+28
+(2) (2)
+1 1
+f( x) 1 … zk … et( I D (x)) 1 C (x) t
+z z 0 12 22
+x x
+et[ I D (x)M 1(x)] 1C (x) t
+0 1 1 22
+et[( M (x) D (x))M 1(x)] 1C (x) t
+0 1 1 1 22
+etM (x)[ M (x) D (x)] 1C (x) t
+0 1 1 1 22
+m et[ M (x) D (x)] 1C (x) t
+100 0 1 1 22
+et[ M (x) D (x)] 1C (x) t
+0 1 1 22
+para D (0) y con C (x)pˆ (z x) (z), lo que implica que
+12 22 22 N
+k1
+c (x) k 1 d (x) i 0 d 2ii1 (x) , donde C (c ), y de forma análoga
+22kk i 0 22ii 1 k1 m (x) 22 22i j
+i 0 2i1i1
+(2) (2)
+1 1 1
+g( x) 1 … zk …
+m z z
+200 x x
+1
+et ( I D (x)) 1 C (x) t
+m 0 22 12
+200
+et[ M D (x)] 1C (x) t
+0 2 2 12
+para D (0) y con C (x)pˆ (z x) (z), lo que implica que
+22 12 12 N
+k 1
+c (x) d (x) 1, con C (c ), de donde el resultado se sigue tomando
+12kk i 0 12ii 1 12 12i j
+{ } { }(2), c (x) c (x) aplicando el teorema 4.1 a f y a g. 
+0 kk 22kk
+5.1. CASOS PARTICULARES
+Presentaremos algunos corolarios del teorema anterior que muestran a ciertos sistemas de
+ecuaciones, como los estudiados en [7]. Sean
+a (x) 1 0   0
+0
+0 a (x) 1 0
+1
+0 0 a (x)  
+L(x) 2
+    
+  a (x) 0
+N 2
+0    0 a (x)
+N 1
+1 0 0   0
+b(x) 1 0 0
+1
+0 b (x) 1  
+M(x) 2 (24)
+    
+  1 0
+0    b (x) 1
+N 1
+29
+con a (x) 0 y b (x) 0, como en [7].
+n n
+COROLARIO 5.1. Sea f(z x) N 1 a (x)zk donde las a (x) son funciones continuas en
+k 1 k k
+R;L(x), M(x) son dadas como en (24) y C (R) C el funcional definido por
+( (z)) ( (LM 1)) , entonces la solución de la ecuación
+00
+dL(x)
+f(L(x)M(x) 1) L(x) L(x) f(M(x) 1L(x))
+dx
+(25)
+dM(x)
+f(L(x)M(x) 1) M(x) M(x) f(M(x) 1L(x))
+dx
+con condiciones iniciales L L(0) y M M(0), viene dada por
+h 1
+c0
+0 1
+c1
+1
+c2
+1
+…
+cN 1
+donde h( x) es igual a
+e0 xf(z )d e0 xf(z )d e0 xf(z )d
+z z z
+… …
+x x x
+f(z )d f(z )d f(z )d
+e 0 e 0 e 0
+y ck c 1 k(wx) con ck(w x) igual a
+ck(wx) 2
+2
+a ( a ) a a
+k k k k 1 0…
+b b
+k k 1
+DEMOSTRACIÓN.
+Se sigue tomando en el teorema 5.1 D(x) L(x), M (x) M(x), D (x) [M(x)]t,
+1 1 2
+M (x) [L(x)]t. 
+2
+REFERENCIAS
+[1] M. Adler and P. van Moerbeke. String-orthogonal polynomials, String equations and Two-Toda
+symmetries. Comm. and Appl. Math., 50:241–290, 1997.
+[2] A. Aptekarev, A. Branquinho, and F. Marcellan. Toda-type differential equation for the recurrence
+coefficients of ortogonal polynomials and Freud transformation. Journal of Computation and Applied
+Mathematics, 16:139–160, 1997.
+[3] A. Branquinho and A. Aptekarev. Padé approximants and complex hight order Toda lattices.
+Journal of Computation and Applied Mathematics, 155(2):231–237, 2003.
+[4] M. Bruschi and Ragnisco O. Lax representation and complete integrability for the periodic
+relativistic Toda lattice. Physics Letters A, 134(6):365–370, January 1989.
+[5] M. Bruschi and O. Ragnisco. Recursion operator and the Bäcklund transformations for the
+Ruijsenaars-Toda lattice. Physics Letters A, 129(1):21–25, May 1988.
+30
+[6] M. Bruschi and O. Ragnisco. The periodic relativistic Toda lattice: direct and inverse problem.
+Inverse Problems, 5(3):389–405, 1989.
+[7] J. Coussement, A. B. J. Kuijlaars, and W. Van Assche. Direct and inverse spectral transform for the
+relativistic Toda lattice and the connection with Laurent orthogonal polynomials. Inverse Problems,
+(18):923–942, 2002.
+[8] A. Gago. Aproximación racional en sistemas dinámicos no lineales. Tesis de Diploma, Universidad
+de la Habana, Abril 2004.
+[9] M. Kudryavtsev. Resolution of the Cauchy problem for the Toda lattice with non-stabilized initial
+data, ArXiv Mathematics e-prints, 2001.
+[10] K. Mahler. Perfect systems. Comp. Math., 19:95–166, 1968.
+[11] A Miranov, A Zhedanov, and S Kharchev. Faces of relativistic Toda chain. Inter. J. Mod. Phys. A.,
+12:2675–2724, 1997.
+[12] J. K. Moser. Three integrable Hamiltonian systems connected with isospectral deformation. Adv.
+In Math., 16:197–220, 1975.
+[13] E.M. Nikishin and V.N. Sorokin. Rational Approximation and Orthogonality, Volume 92 of
+Translation of Mathematical Monographs. American Mathematical Society, Providence, RI, 1991.
+[14] L. Robert. Polinomios ortogonales generales. Tesis de Maestría, Universidad de la Habana, 2001.
+[15] S. Ruijsenaars. Relativistic Toda systems. Comm. Math. Phys., pages 217–247, 1990.
+[16] L. Santiago. Aproximación racional simultánea para un número infinito de funciones. Tesis de
+Maestría, Universidad de la Habana, Marzo 2003.
+[17] L. Santiago and L. Robert. Finite sections method for Hessenberg matrices. Journal of
+Approximation Theory, 123(1):68–88, July 2003.
+31

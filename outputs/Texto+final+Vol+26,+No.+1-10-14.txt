@@ -1,0 +1,279 @@
+10 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Recurso didÆctico para la interpretaci(cid:243)n
+f(cid:237)sica de un modelo matemÆtico aplicado
+a las transmisiones mecÆnicas
+Elsa C. Ram(cid:237)rez Garc(cid:237)a1
+Angel Isaac Moreno Delfrade2 Rafael Chaviano Conde3 Universidad Central (cid:147)Marta Abreu(cid:148)
+de Las Villas, Santa Clara, Cuba.
+RESUMEN. El componente didÆctico (cid:147)medio de enseæanza(cid:148), al igual que el componente (cid:147)mØtodo(cid:148) estÆ
+determinado esencialmente por el objetivo y el contenido. Un medio de enseæanza correctamente
+seleccionado y empleado coopera en el proceso de asimilaci(cid:243)n a precisar el objetivo y comprender
+mÆs claramente el contenido.
+El presente trabajo se relaciona con las transmisiones mecÆnicas complejas denominadas reduc-
+tores planetarios diferenciales cerrados. Las transmisiones mecÆnicas son mecanismos que se em-
+plean para transformar las condiciones cinemÆticas y de carga en un sistema de elementos de
+mÆquinas.
+Como resultado fundamental se obtienen un modelo matemÆtico y varias maquetas como recursos
+didÆcticos en el proceso docente educativo para la formaci(cid:243)n del ingeniero mecÆnico, que facilita la
+comprensi(cid:243)n de las caracter(cid:237)sticas cinemÆticas de los reductores planetarios diferenciales cerrados.
+El modelo matemÆtico obtenido describe las complejas relaciones cinemÆticas que presentan algu-
+nos tipos de reductores planetarios diferenciales cerrados.
+Las maquetas permiten evaluar el modelo matemÆtico para tres condiciones cinemÆticas diferentes,
+que abarcan los valores positivos y negativos de la funci(cid:243)n que ilustran el rango de variaci(cid:243)n de la ve-
+locidad de rotaci(cid:243)n de los elementos del sistema y el caso particular en que se produce el movimiento
+de traslaci(cid:243)n circular del elemento principal de los reductores planetarios diferenciales cerrados.
+INTRODUCCI(cid:211)N rar todos los que necesite y pueda confeccionar
+para lograr el desarrollo de clases con mayor
+La necesidad de elevar la calidad del proce- rendimiento, as(cid:237) como tener en cuenta que los
+so de formaci(cid:243)n integral de la educaci(cid:243)n medios complementan el trabajo del profesor,
+superior, nos ha llevado a un continuo anÆlisis pero nunca lo sustituyen. Esto se resume en
+didÆctico, entre los que estÆn la aplicaci(cid:243)n de lo planteado por Vicente GonzÆlez Castro: (cid:147)Los
+mØtodos adecuados al contenido y al objetivo, el medios de enseæanza deben servir para mejorar
+enriquecimiento de las formas met(cid:243)dicas bÆsi- las condiciones de trabajo de los profesores y
+cas con variantes efectivas en cuanto al apren- estudiantes, en ningœn momento para deshu-
+dizaje y el empleo de recursos didÆcticos que in- manizar la enseæanza.(cid:148) (GonzÆlez C. V.,1979)
+tensi(cid:222) quen y racionalicen dicho proceso. Entre las funciones principales de los medios
+Para el desarrollo de habilidades espec(cid:237)(cid:222) cas de enseæanza, se referencia los siguientes:
+es fundamental la interacci(cid:243)n de los estudiantes ● Favorecer en los estudiantes la formaci(cid:243)n
+con los medios, y constituye una gran responsa- de la concepci(cid:243)n materialista el mundo.
+bilidad por parte del profesor hacer el uso mÆs
+● Convertir a los estudiantes en participan-
+racional de los medios a su disposici(cid:243)n y elabo-
+tes directos del proceso de aprendizaje.
+● Aumentar la efectividad en la transmisi(cid:243)n
+1 elsa@uclv.edu.cu
+de los conocimientos optimizando el pro-
+2 amoreno@uclv.edu.cu
+3 rafch@uclv.edu.cu ceso docente educativo.
+REVISTA CIENCIAS MATEM`TICAS 11
+● Servir de punto de partida para el anÆlisis planetarios diferenciales cerrados en funci(cid:243)n de
+y comprensi(cid:243)n de la esencia de fen(cid:243)menos los nœmeros de dientes de las ruedas que con-
+complejos. tienen, veamos algunas de estas transmisiones
+● Actuar como movilizadores y revitalizado- mecÆnicas.
+res de la atenci(cid:243)n. a) Reductor planetario diferencial cerrado de en-
+● Relacionar en la enseæanza la teor(cid:237)a con granajes con simple satØlite (Anexo, Figura 1a).
+la prÆctica y a la vez solucionar la cues-
+ti(cid:243)n acerca de la sistematicidad. (Correa, Z Z Z
+1 3 6
+A. F., 2005) i = (1)
+1H Z Z −Z Z
+En el presente trabajo presentamos los re- 1 6 3 4
+sultados de una investigaci(cid:243)n que ha permitido
+perfeccionar el proceso de enseæanza aprendi- b) Reductor planetario diferencial cerrado de en-
+zaje de una disciplina del Plan de Estudios del granajes y cadena con doble satØlites (Anexo,
+ingeniero mecÆnico, no solo por la elaboraci(cid:243)n Figura 1b).
+de valiosos medios de enseæanza, sino tambiØn
+por el proceso de modelaci(cid:243)n matemÆtica que (Z Z +Z Z ) (Z Z )
+1 3 2 4 6 8
+permite la interpretaci(cid:243)n f(cid:237)sica del comporta- i = (2)
+1H Z Z Z Z − Z Z Z Z
+miento cinemÆtico de varios reductores planeta- 1 3 6 8 2 4 5 7
+rios diferenciales cerrados.
+Los resultados obtenidos han contribuido a c) Reductor planetario diferencial cerrado de ci-
+mejorar el proceso de comprensi(cid:243)n de los temas clo (Anexo, Figura 1c).
+objeto de estudio y han enriquecido el trabajo
+didÆctico del colectivo de la disciplina.
+Z Z Z
+2 5 8
+i = (3)
+1H Z Z Z + Z Z Z − Z Z Z
+DESARROLLO 3 4 6 2 5 8 3 5 8
+Las transmisiones mecÆnicas son mecanismos
+Estas expresiones no permiten conocer la in-
+que se emplean para transformar las condicio-
+(cid:223) uencia que tienen el reductor planetario y el
+nes cinemÆticas y de carga en un sistema de
+reductor desarrollado presentes en el sistema
+elementos de mÆquinas. Entre las trasmisiones
+de transmisi(cid:243)n, en las condiciones cinemÆticas
+mecÆnicas se encuentran los reductores pla-
+del reductor planetario diferencial cerrado, por
+netarios diferenciales cerrados, que presentan
+lo que las principales limitaciones en el proceso
+complejas relaciones cinemÆticas.
+de enseæanza - aprendizaje son:
+Los reductores planetarios diferenciales ce-
+● No facilitan la interpretaci(cid:243)n f(cid:237)sica de las
+rrados son transmisiones mecÆnicas comple-
+particularidades cinemÆticas de la trans-
+jas, porque permiten variar sus parÆmetros ci-
+misi(cid:243)n mecÆnica.
+nemÆticos de una forma amplia y el sentido de
+● No facilitan la interpretaci(cid:243)n f(cid:237)sica de la
+rotaci(cid:243)n, con solo realizar pequeæas modi(cid:222) ca-
+in(cid:223) uencia de los parÆmetros cinemÆticos
+ciones constructivas.
+y geomØtricos de cada parte en el sistema
+Estos mecanismos estÆn presentes en las in-
+en su conjunto.
+dustrias mecÆnicas y constituyen un tema de es-
+● No es posible apreciar la ocurrencia del
+tudio de la asignatura Elementos de MÆquinas,
+movimiento de traslaci(cid:243)n circular en el
+que integra conocimientos de varias asignatu-
+elemento principal.
+ras de la disciplina MecÆnica Aplicada (MecÆni-
+ca Te(cid:243)rica, Resistencia de Materiales y Teor(cid:237)a de ● No facilitan el uso de mØtodos activos de
+Mecanismos y MÆquinas, entre otras). enseæanza.
+En el proceso de enseæanza - aprendizaje ● No facilitan el desarrollo de la prÆctica de
+de la disciplina se utilizaban los modelos ma- laboratorio del tema.
+temÆticos tradicionales que representan los pa- A partir del estudio de los modelos tradicio-
+rÆmetros cinemÆticos de diferentes reductores nales de transmisiones planetarias diferenciales
+12 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+cerradas, se dedujo un modelo matemÆtico que ● Facilita el desarrollo de la prÆctica de la-
+relaciona las expresiones cinemÆticas de cada boratorio del tema.
+una de las partes que lo componen, lo cual faci-
+Para demostrar las interpretaciones antes
+lita interpretar la in(cid:223) uencia que tiene cada una
+seæaladas se construyeron varias maquetas de
+de ellas en el sistema en su conjunto.
+reductores planetarios, las que han contribuido
+La expresi(cid:243)n se dedujo obteniendo la velo- a los siguientes aportes al proceso de enseæanza
+cidad de rotaci(cid:243)n del Ærbol de salida (→ω ) me- - aprendizaje:
+H
+diante la superposici(cid:243)n de las velocidades pro-
+(cid:150) Se logra una mejor comprensi(cid:243)n del con-
+ducidas por el reductor planetario simple (→ω )
+HP tenido de enseæanza en el tema relaciona-
+y la transmisi(cid:243)n desarrollada (→ω ), dada por la
+HC do con las transmisiones mecÆnicas.
+expresi(cid:243)n:
+(cid:150) Se utilizan procedimientos didÆcticos que
+permiten que el estudiante participe acti-
+→ → →
+ω = ω + ω (4)
+vamente en el proceso cognoscitivo (elabo-
+H HP HC
+raci(cid:243)n conjunta y trabajo independiente).
+Transformando convenientemente la expre-
+(cid:150) Se introduce en los objetivos y contenido
+si(cid:243)n (4), se obtuvo:
+de las prÆcticas de laboratorio, el anÆlisis
+de las particularidades cinemÆticas de las
+n i • i transmisiones planetarias complejas.
+e p c
+i = = (5)
+(cid:150) Se enriquece el sistema de evaluaci(cid:243)n al
+t n (i + i −1)
+s p c desarrollarse trabajos investigativos, por
+parte de los estudiantes.
+donde: i , es la relaci(cid:243)n entre la velocidad de
+t Estos medios han sido utilizados en las cla-
+rotaci(cid:243)n del Ærbol de entrada (n ) y el de salida
+e ses de Elementos de MÆquinas, tanto para ilus-
+(n ) del reductor planetario diferencial cerrado,
+s trar la interpretaci(cid:243)n de los diferentes parÆme-
+i , e i representan las relaci(cid:243)n de transmisi(cid:243)n
+p c tros que intervienen en el modelo matemÆtico,
+del reductor planetario y de la transmisi(cid:243)n de-
+como para evaluar algunos tipos de reductores
+sarrollada que contiene.
+planetarios diferenciales cerrados de forma in-
+Esta expresi(cid:243)n representa las caracteristicas
+tegral, de modo que se logra no solo una mayor
+cinemÆticas de varias transmisiones planetarias
+motivaci(cid:243)n y orientaci(cid:243)n hacia el objetivo de la
+diferenciales cerradas y brinda las siguientes
+actividad docente, sino tambiØn un aumento de
+posibilidades:
+la efectividad del proceso docente educativo, al
+● Facilita la interpretaci(cid:243)n de las particu- lograrse una racionalizaci(cid:243)n de las actividades a
+laridades cinemÆticas de la transmisi(cid:243)n desarrollar por el profesor y por los estudiantes.
+mecÆnica. En el anexo, la tabla 1 ofrece una evaluaci(cid:243)n
+● Facilita la interpretaci(cid:243)n de la in(cid:223) uencia de los modelos matemÆticos tradicionales y el
+de los parÆmetros cinemÆticos y geomØtri- modelo general para diferentes variantes de tres
+cos de cada parte en el sistema en su con- reductores planetarios diferenciales cerrados.
+junto. La magnitud y variaci(cid:243)n del senti- Al emplear estos medios de enseæanza, el
+do de rotaci(cid:243)n de la velocidad de salida se profesor analiza y modi(cid:222) ca los mØtodos de en-
+puede lograr con pequeæas modi(cid:222) caciones
+seæanza o los procedimientos met(cid:243)dicos a utili-
+geomØtricas en las transmisiones simples
+zar, de forma tal que se logra la optimizaci(cid:243)n del
+que contiene (ampliaci(cid:243)n de objetivos, me-
+proceso de aprendizaje, con mayor precisi(cid:243)n en
+dios y mØtodos en otras asignaturas de la
+la orientaci(cid:243)n hacia el objetivo y mayor dominio
+disciplina).
+del contenido de estudio, es decir, una trans-
+● Es posible apreciar la ocurrencia del mo- formaci(cid:243)n del trabajo metodol(cid:243)gico por parte de
+vimiento de traslaci(cid:243)n circular en el ele- los docentes en la plani(cid:222) caci(cid:243)n y control de las
+mento principal. tareas docentes a desarrollar. En el anexo, la
+● Facilita el uso de mØtodos activos de en- Figura 2 es una foto de la maqueta del reductor
+seæanza. planetario diferencial cerrado de ciclo.
+REVISTA CIENCIAS MATEM`TICAS 13
+CONCLUSIONES BIBLIOGRAF˝A
+Como resultados fundamentales, se obtienen: CatÆlogo. (1990) Sumimoto SM - Cyclospeed and
+Gear motor. Chicago.
+● Un modelo matemÆtico que permite la
+Correa, A. F. (2005). Los medios de enseæanza. Dis-
+descripci(cid:243)n e interpretaci(cid:243)n de las com-
+ponible en: http:www.monogra(cid:222) as.com/index.
+plejas relaciones cinemÆticas para varios
+shtml
+reductores planetarios diferenciales cerra-
+GonzÆlez C, V., (1979) Medios de enseæanza, Edito-
+dos. A partir de la interpretaci(cid:243)n f(cid:237)sica de rial Pueblo y Educaci(cid:243)n, La Habana.
+las variables en este modelo, se logra una HernÆndez, A. (2002) Una visi(cid:243)n contemporÆnea del
+mayor comprensi(cid:243)n de las transmisiones proceso de enseæanza aprendizaje. CEPES. Uni-
+mecÆnicas y sus aplicaciones. versidad de la Habana. Disponible en: http://
+www.cepes.uh.cu/bibliomaestria/didacticauni-
+● Varias maquetas, como medios de en-
+versitaria/
+seæanza a utilizar en el proceso docente
+Klingberg, L. (1980) (cid:147)Introducci(cid:243)n a la DidÆctica Ge-
+educativo en la formaci(cid:243)n del ingeniero
+neral(cid:148). Editorial Pueblo y Educaci(cid:243)n, Reimpre-
+mecÆnico, que facilita la comprensi(cid:243)n de
+si(cid:243)n.
+las caracter(cid:237)sticas cinemÆticas de comple- Kudriavtsev, V. H. (1983). Transmisiones planeta-
+jas transmisiones mecÆnicas denomina- rias. Moscœ. Editorial MIR.
+das reductores planetarios diferenciales Moreno, D. A. (2001). Reductor planetario de en-
+cerrados. granajes. Certi(cid:222) cado de autor de invenci(cid:243)n Nro.
+22754, La Habana, Cuba.
+● Un enriquecimiento del trabajo didÆctico
+PØrez M. A. (2008). Efecto de los medios de enseæan-
+en las asignaturas relacionadas con las
+za en la creatividad del estudiante. Disponible en
+trasmisiones mecÆnicas tanto en el pre-
+http:www.edutecnologia.wordpress.com/
+grado como el postgrado, para una mayor
+Vega R. N, D(cid:237)az C. M (2002). Los medios de ense-
+e(cid:222) ciencia del proceso docente educativo, a æanza como componentes del proceso de ense-
+partir de la relaci(cid:243)n entre los componen- æanza-aprendizaje. Disponible en: http://www.
+tes objetivo - contenido - mØtodo - medio sabetodo.com/contenidos/EkuFkZupkuDZnR-
+de enseæanza. jDww.php.
+ANEXOS
+Fig. 1 Esquemas de reductores planetarios complejos.
+14 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Tabla 1 Evaluaci(cid:243)n del modelo matemÆtico que representa las caracter(cid:237)sticas cinemÆticas de
+las tres variantes de reductores de la (cid:222) gura 1.
+Figura Var z z z z z z z z i i i i
+1 2 3 4 5 6 7 8 1H p c 1H
+1 20 40 60 15 50 60 X X 16 4 - 4 16
+2 20 40 60 20 50 60 X X → ± ∝ 4 - 3 → ± ∞
+1a
+3 20 40 60 30 50 60 X X - 8 4 - 2 - 8
+1 18 18 12 30 30 60 11 15 +42 3,5 -2,72727272 +42
+2 18 18 12 30 30 60 12 15 → ± ∝ 3,5 -2.5 → ± ∞
+1b
+3 18 18 12 30 30 60 13 15 -42 3,5 −2,307692308 -42
+1 X 32 36 40 72 22 90 X 36 7,3636363636 36
+2 X 32 36 35 77 22 90 X → ± ∝ 9 → ± ∞
+1c
+3 X 32 36 40 30 22 90 X - 41 11,1818181818 - 41
+Fig. 2 Foto de la maqueta del reductor plane-
+tario complejo de ciclo.
+ABSTRACT. The didactic component (cid:147)means of teaching,(cid:148) as the component (cid:147)method(cid:148) is essentially
+determined by the purpose and content. A properly selected medium of instruction and employee
+cooperates in the process of assimilation to clarify the purpose and a clearer understanding of the
+content.
+This work involves complex mechanical transmissions. Mechanical transmissions are mechanisms
+that are used to transform the kinematic and loading conditions in a system of machine compo-
+nents. Among the mechanical transmissions are planetary gearboxes.
+As a main result is obtained as a teaching model used in the educational process in mechanical
+engineering education, which facilitates the understanding of the kinematic characteristics of the
+differential planetary transmission closed. From the mathematical model obtained is described and
+interpreted the complex kinematic relations for this model reducer. Elements are constructed of a
+closed loop differential gear that allows to evaluate the mathematical model for three different kine-
+matic conditions, which include positive and negative values of the function to describe the range
+of variation of the rotational speed of the system elements.

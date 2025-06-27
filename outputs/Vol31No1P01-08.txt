@@ -1,0 +1,506 @@
+CienciasMatemáticas,Vol.31,No.1,Pag.1-8, 2017
+Recibido09-2016
+Una estrategia GRASP aplicada al Problema de
+Enrutamiento de Veh´ıculos con Recogida y Entrega
+Simulta´nea
+A GRASP strategy for the Vehicle Routing Problem
+with Simultaneous Pickup and Delivery
+Alina Ferna´ndez Arias1*, Sira Allende Alonso2
+Resumen ElProblemadeEnrutamientodeVeh´ıculosconRecogidayEntregaSimulta´neaesunaextensio´n
+del Problema de Enrutamiento de Veh´ıculos con Restricciones de Capacidad. El objetivo de este problema
+es disen˜ar rutas que satisfagan la demanda de recogida y entrega de los clientes en una u´nica visita y se
+minimiceelcostototaldetransportacio´n.Enestetrabajosepresentaunaestrategiadepenalizacio´nbasada
+enlametaheur´ıstica GreedyRandomizedAdaptiveSearchProcedure.Enlaconstruccio´ndelassoluciones
+inicialesseutilizo´ unasimplificacio´ndelconceptodefactibilidadyseempleo´ laBu´squedaporEntornosVariables
+Descendentespararealizarlabu´squedalocalencadapaso.Enestetrabajoseproponendiferentesvariantes
+deGRASP.Losresultadoscomputacionalesmuestranelcomportamientodelosalgoritmosdesarrolladospara
+elconjuntodepruebadescritoporSalhiyNagy.
+Abstract The Vehicle Routing Problem with Simultaneous Pickup and Delivery is an extension of the well-
+knownCapacitatedVehicleRoutingProblem. Thegoalofthisproblemistodesignroutesinsuchawaythat
+pickupanddeliverydemandsofeachcustomermustbeperformedwiththesamevehicleandtheoverallcostis
+minimized. InthispaperapenalizationapproachbasedonGreedyRandomizedAdaptiveSearchProcedureis
+presented. FortheinitialsolutionarelaxationofthefeasibilityconstrainisconsideredandVariableNeighborhood
+Descendant is used to perform local search at each step. This study proposes different variants of GRASP.
+ExperimentalresultsshowtheperformanceoftheproposedapproachfortheSalhiandNagybenchmark.
+PalabrasClave
+enrutamientodeveh´ıculos—recogidayentregasimulta´nea—GRASP—VND
+1DepartamentodeMatema´tica,UniversidaddeLaHabana,LaHabana,Cuba,aly@matcom.uh.cu
+2DepartamentodeMatema´ticaAplicada,UniversidaddeLaHabana,LaHabana,Cuba,sira@matcom.uh.cu
+*AutorparalaCorrespondencia
+Introduccio´n me´todosenlosquesecombinenlosprocesosderecogiday
+entregadeformao´ptima,particularmenteenescenariosenlos
+El transporte de mercanc´ıa es un tema al que se dedica
+cualeslosclientesrequieranambosservicios.
+granatencio´nenlasindustrias.Estudiosrealizadosmuestran
+queelcostodetransportacio´npuederepresentarhastaun20 ElProblemadeEnrutamientodeVeh´ıculosconRecogi-
+porcientodeloscostostotalesdelosproductos[18],loque dayEntregaSimulta´nea(VRPSPDporsussiglaseningle´s)
+justificaelempleodete´cnicasdelainteligenciaartificialy pertenecealafamiliadeproblemasconrestriccionesdeca-
+delainvestigacio´noperacionalparaasistiralaplanificacio´n pacidadenlaflota.Formalmentesedefinecomosigue:dado
+eficientedelossistemasdedistribucio´n. undepo´sitocentralyunconjuntodeclientescondemandas
+Existennumerosassituacionesenlascualesesnecesario conocidas de recogida y entrega de mercanc´ıa, el objetivo
+manejarelflujodematerialesdesdeloscentrosdedistribu- del VRPSPD es disen˜ar un sistema de rutas, con el menor
+cio´nhacialosconsumidoresydesdee´stoshastalosdepo´sitos costoposible,quepermitasatisfacerlasdemandasdetodos
+opuntosdereciclaje:industriadebebidasembotelladas,em- los clientes. Cada cliente es visitado exactamente una vez.
+presasdemensajer´ıa,distribucio´ndemercanc´ıayrecogidade Todaslasrutascomienzanyterminaneneldepo´sitocentral,
+mermaenlossupermercados,etc.Atenderdeformaseparada dondesecargalamercanc´ıaadistribuirenlosclientesy,una
+estosserviciosimplicaunmalaprovechamientodelaflotade vezfinalizadoelrecorrido,sedescargalamercanc´ıarecogida.
+veh´ıculos,porloqueresultainteresantedisen˜areimplementar Segarantizaadema´squelacargadelveh´ıculonoexcedasu
+2 UnaestrategiaGRASPaplicadaalProblemadeEnrutamientodeVeh´ıculosconRecogidayEntregaSimulta´nea
+capacidad. determinantodaslasposiblesinsercionesyseseleccionala
+Lacaracter´ısticaesencialdeesteproblemaesquelacarga demenorcostoqueseafactible.Esteprocedimientoserepite
+delveh´ıculoesunamezclaentrelamercanc´ıapreviamente mientrasquedenclientesporatender.Seutilizandiferentes
+recogidaylaqueau´nfaltaporentregar,loqueimplicaquela criteriosdeinsercio´nenlosquesemanejan,deformaseparada
+factibilidaddebeserverificadaencadapuntodelrecorrido. y/ocombinada,ladistanciaylacapacidaddelveh´ıculo.
+Dadalacomplejidadasociadaalabu´squedadesoluciones Entrelosme´todosbasadosenbu´squedaporvecindadesse
+factibles para el VRPSPD, en este trabajo se propone una puedencitarlostrabajosdeChenetal.[3](tomandocomopun-
+estrategiaquepenalizaenlafuncio´nobjetivolanofactibilidad todepartidaunasolucio´nfactibleobtenidaporunme´todode
+delasrutasporexcesodecarga.Sedisen˜o´ unme´todobasado insercio´n,aplicanunalgoritmoh´ıbridoenelquesecombinala
+en la metaheur´ıstica Greedy Randomized Adaptive Search bu´squedatabu´ conunesquemarecord-to-recordtravel),Tang-
+Procedure (GRASP por sus siglas en ingle´s) en el que se Montane´ etal.[16](bu´squedatabu´ condiferentesestrategias
+empleo´ lametaheur´ısticaBu´squedaporEntornosVariables de vecindad), Zachariadis et al. [19](bu´squeda tabu´ combi-
+Descendentes(VNDporsussiglaseningle´s)pararealizarla nada con una bu´squeda local guiada, la solucio´n inicial la
+bu´squedalocalencadaiteracio´ndeGRASP.Paravalidarlos construyensiguiendounenfoquedeahorros),Subramannian
+procedimientospropuestosseempleo´ elconjuntodeprueba etal.[15](partiendodeunasolucio´ngolosadesarrollanuna
+propuestoporSalhiyNagyen1999[14]. estrategiadebu´squedalocaliteradaenlaqueempleanvarias
+Eldocumentohasidoorganizadocomosigue:enlasec- estrategias de vecindad) y Polat [12](me´todo de mu´ltiples
+cio´n 1.1 se formalizan aspectos relativos al VRPSPD y se reiniciosbasadoenbu´squedaporentornosvariables,inclu-
+comentan algunos de los principales resultados en torno al yenunmecanismodeperturbacio´nquepermiteutilizarlos
+problema.En2sedescribelaestrategiadesolucio´npropuesta. o´ptimoslocalespreviamenteobtenidosenlasiteracionessu-
+Losresultadosobtenidossoncomentadosen3.Finalmente cesivas)
+aparecenlasconclusionesyreferenciasbibliogra´ficas. Sereportantambie´nvariosenfoquespoblacionales:Za-
+chariadis et al. [20](algoritmo de memoria adaptativa que
+incorporamecanismosparadiversificarlabu´squeda),Tasan
+1. Problema de Enrutamiento de
+etal.[17](algoritmogene´ticoquecodificalassolucionesco-
+Veh´ıculos con Recogida y Entrega mo una permutacio´n de todos los clientes que es dividida
+Simulta´nea enrutasfactibles)yGoksaletal.[8](enfoqueh´ıbridoenel
+que se combina la versio´n discreta de la optimizacio´n por
+Elproblemadeenrutamientodeveh´ıculosconrecogiday
+enjambredepart´ıculasconlabu´squedaporentornosvariables
+entregasimulta´nea,aligualqueelrestodelosproblemasderi-
+descendentes).
+vadosdelVRP,pertenecealaclaseNP-duro[5].Suobjetivo
+esdisen˜arunconjuntoderutas,conelmenorcostoposible,
+quepermitansatisfacerlademandadetodoslosclientesen 1.1 Formalizacio´ndelVRPSPD
+unau´nicavisita,garantizandoquelamercanc´ıatransportada UnainstanciadelVRPSPDsecaracterizaporlossiguien-
+noexcedalacapacidaddelveh´ıculo.ElVRPSPDfuepresen- tesdatos:depo´sitocentral0,conjuntodeclientesI={1,...,n}
+tado por Min [11] en 1989 relacionado con la distribucio´n I+ =I∪{0}, para cada cliente i∈I se conoce la deman-
+yrecoleccio´ndelibrosentreunabibliotecacentraly22bi- dadeentregad i ylademandaderecogida p i ,costodevia-
+bliotecassecundariasenlaciudaddeOhio.Minpropusoun je c ij entre cada par de cliente i,j∈I+, flota de veh´ıculos,
+esquema en dos fases en la cual primero se agrupaban los K={1,...,m},paracadaveh´ıculok∈K seconocesucapa-
+clientessegu´nsusdemandasylacapacidaddelveh´ıculoyen cidadQk ycostoasociado fk.
+lasegundaetapaseorganizanlasrutasapartirdeunrecorrido EnelVRPSPDlosrecorridoscomienzanyterminanen
+o´ptimodelproblemadelviajante. el depo´sito central, donde se carga toda la mercanc´ıa para
+Aunque existen algunos enfoques exactos para el VR- entregar en los clientes y una vez finalizado el trayecto, se
+PSPD, estos so´lo son aplicables a problemas de pequen˜as descarga toda la mercanc´ıa recogida. Cada veh´ıculo puede
+dimensiones: Anbuudayasankar et al. [1] proponen un mo- realizaralosumounviaje.Unarutaesunasecuenciaordena-
+delo de programacio´n matema´tica que es resuelto usando dadeclientesasociadasaunveh´ıculoenespec´ıfico,denotada
+CEPLEXparaproblemasdehasta15clientesyDell’Amico por[R,k]=[(r 0 =0,r 1 ,...,r l ,r l+1 =0),k].
+etal.[4]desarrollaronunalgoritmoderamificacio´nyprecio Sea[R,k]unaruta.Elcostodelarutaeselcostodeviaje
+parainstanciasdehasta40clientes.Dadalacomplejidadde ma´s el costo asociado al veh´ıculo (expresio´n (1)). El costo
+losmodelosdeprogramacio´nmatema´ticaparaelVRPSPD,la de viaje (TC) es la suma de los costos de todos los arcos
+mayorpartedelasestrategiasdesolucio´nsebasanenme´todos presentesenR.
+heur´ısticos.
+Unadelosenfoquesma´ssimplesparaesteproblemaesla C([R,k])=TC([R,k])+fk (1)
+heur´ısticaporinsercio´npresentadaporDethloff[5].Laidea
+generalesmanejarunconjuntoderutasparcialesenlasque Unasolucio´nesunconjuntoderutasdenotadoporS=
+adicionan los clientes sucesivamente. En cada iteracio´n se {[R ,k ],...,[R ,k ]}.ElcostodeSsecalculasegu´nlaex-
+1 1 m m
+UnaestrategiaGRASPaplicadaalProblemadeEnrutamientodeVeh´ıculosconRecogidayEntregaSimulta´nea 3
+presio´n(2). Algoritmo1GRASP
+C(S)=∑C([R ,k ]) (2) 1: fork=1toK do
+s s
+s∈S 2: Construirunasolucio´ngolosa-aleatoriaS k
+3: Realizarunabu´squedalocalempleandoVNDapartir
+ElobjetivodelVRPSPDes: deS →O
+k k
+4: endfor
+m´ınC(S) (3) 5: return m´ın{O i } i=1,...,K
+Unasolucio´nSdebesatisfacerquecadaclientesevisite
+exactamenteunavezyquelacarganoexcedaalacapacidad
+2.1 Solucio´nGolosa–Aleatoria
+enningu´npuntodelrecorrido.
+La construccio´n de soluciones iniciales es un procedi-
+Adiferenciadelproblemadeenrutamientodeveh´ıculos miento iterativo que sigue el paradigma goloso – aleatorio.
+cla´sico,enelVRPSPDlafactibilidaddelasrutassedetermina Encadaiteracio´nseconstruyeunalistarestringidadecandi-
+noso´loporelsubconjuntodeclientesquelaintegran,sino datosdondeseincluyenlosclientesqueesta´nrelativamente
+tambie´n,porelordenenqueestossonvisitados.Luego,al cercadelu´ltimoclienteinsertadoenlasolucio´n.Lacercan´ıa
+asumirunaflotalimitada,encontrarunasolucio´nfactiblepara esta´ determinadaporunpara´metroα ∈[0,1].
+esteproblemaesNP–duro[2],deah´ılanecesidaddedisen˜ar Comosecomento´ enlaseccio´n1.1,paraelVRPSPDla
+me´todosheur´ısticosdesolucio´n. factibilidaddelasrutasesta´asociadaalacargaencadapunto
+Enestetrabajosedisen˜o´ unaestrategiaquepenalizaen delrecorridoy,comoseilustraenlaexpresio´n(4),paracal-
+la funcio´n objetivo la no factibilidad asociada al exceso de cularestevaloresnecesariotenerencuentatodoslosclientes
+carga, atendiendo a la complejidad asociada a la bu´squeda presentesenlamisma.Enestetrabajoseempleo´ unasimpli-
+desolucionesfactibles.Laparticularidaddeesteproblemaes ficacio´ndelconceptodefactibilidadparalaconstruccio´nde
+queencadapuntodelrecorridolacargaesunamezclaentrela lassolucionesgolosas–aleatorias.
+mercanc´ıapreviamenterecogidaylaqueau´nfaltaporentregar.
+Sea[R,k]unaruta,entoncesparatodo j=0,...,l+1,lacarga Definicio´n2.1 Unaruta[R,k]esde´bilfactiblesieltotalde
+secalculasegu´n(4). mercanc´ıaparaentregar,as´ıcomoeltotaldemercanc´ıapor
+recogernoexcedenlacapacidaddelveh´ıculok.Esdecir,si
+j j sesatisfacenlasexpresiones(7)y(8).
+L([R,k],j)=∑p + ∑ d (4)
+ri ri
+i=1 i=j+1 l
+∑d ≤ Qk (7)
+ri
+Lapenalidadasociadaalarutasedeterminaapartirdel i=1
+exceso de carga en cada punto, lo que se formaliza en la l
+∑p ≤ Qk (8)
+expresio´n(5). ri
+i=1
+l+1 (cid:110) (cid:111) Paratodarutade´bilfactibleexisteunreordenamientode
+P([R,k])= ∑ma´x 0,L([R,k],j)−Qk (5)
+losclientesquegarantizanlacondicio´ndefactibilidad[7].
+j=0
+Laestrategiagolosa–aleatoria(Algoritmo2)sebasaen
+adicionarclientesacadarutamientrasseconservelacondi-
+Lafuncio´nobjetivoconsideradaenestetrabajoeslaex-
+cio´ndefactibilidadde´bil.Lalistarestringidadecandidatos
+presio´n(6),dondeµesunfactordepesoparapenalidad.Enla
+(RCLporsussiglaseningle´s)seconstruyetomandocomo
+medidaqueseaumentaelvalordeµ sefavorecelaobtencio´n
+puntodereferenciaelu´ltimoclientean˜adido.Sinoesposible
+desolucionesfactibles.
+realizarningunainsercio´nqueseade´bilfactibleentoncesse
+inicializaunanuevarutayenestecasosetomacomopunto
+m´ın∑C([R ,k ])+µP([R ,k ]) (6)
+s s s s dereferenciaaldepo´sito.UnclienterseincluyeenlaRCLsi
+s∈S
+elcostoasociadoasuinsercio´nseencuentraenelintervalo
+[c ,c +α(c −c )]dondec ,c son,respectiva-
+min min max min min max
+2. Estrategia de Solucio´n mente,elmenoryelmayorcostodeinsercio´n.Lacalidadde
+lasolucio´ngolosa–aleatoriadependedelvalordelpara´metro
+EnestetrabajoseproponeunenfoqueGRASP[6]enel αseleccionado.Siα=0lasolucio´nescompletamentegolosa
+queseemplealaBu´squedaporEntornosVariablesDescenden- ysiα =1escompletamentealeatoria.
+tes[9]-[10]pararealizarlabu´squedalocalencadaiteracio´n.
+La caracter´ıstica fundamental de GRASP (Algoritmo 1) es 2.2 VariantesdeGRASP
+queesunametaheur´ısticademu´ltiplesreiniciosqueencada Ele´xitodeGRASPdependeengranmedidadelacapa-
+pasorealizaunabu´squedadeterministaquetomacomopunto cidad de generar soluciones diferentes que sirvan de punto
+departidaunasolucio´ngolosa–aleatoria. de partida a la bu´squeda iterativa. Dado que no es posible
+4 UnaestrategiaGRASPaplicadaalProblemadeEnrutamientodeVeh´ıculosconRecogidayEntregaSimulta´nea
+Algoritmo2Solucio´nGolosa–Aleatoria Algoritmo3GRASPReactivo
+1: Clientesporan˜adiralasolucio´nA=I 1: Nu´merodeiteracionesparahacerelajustedeα →T
+2: Inicializarlasolucio´n→S 2: fork=1toK do
+3: U´ltimoclientean˜adido→c=0 3: ifimo´dT =0then
+4: Mercanc´ıaparaentregarD=0 4: Calcularladesviacio´nesta´ndar→E T yelpromedio
+5: Mercanc´ıaporrecogerP=0 P T delasT u´ltimassolucionesinicialesconstruidas
+6: while|A|>0do ymodificarconsecuentementeelvalordeα donde
+7: Construirlalistarestringidadecandidatosapartirdec λ ∈[0,1]yε ∈[0,1]sonvaloresprefijados
+considerandoelfactordealeatoriedadα →RCL 5: if Si ET >ε then
+PT
+8: SeleccionaraleatoriamenteunclientedeRCL→r 6: α =α−λ
+9: if D+d r ≤Qk∧P+p r ≤Qk then 7: else
+10: Adicionarralarutaactual 8: α =α+λ
+11: else 9: endif
+12: An˜adirlarutaactualalasolucio´nS 10: endif
+13: Crearunarutanueva,D=0,P=0 11: Construirunasolucio´ngolosa-aleatoriaS k consideran-
+14: An˜adirralarutanueva doelvalordeα previamentecalculado
+15: endif 12: Realizarunabu´squedalocalempleandoVNDapartir
+16: D=D+d r deS k →O k
+17: P=P+p r 13: endfor
+18: EliminarrdeA 14: return m´ın{O i } i=1,...,K
+19: endwhile
+20: return S
+Algoritmo4GRASPconPertubacio´n
+1: Construirunasolucio´ngolosa-aleatoriaO 0
+conocerdeantemanoelvaloridealparaelpara´metroα,se 2: fork=1toK do
+realizaronalgunasmodificacionesalprocedimientocla´sico 3: Perturbarelo´ptimolocalpreviamenteobtenidoO k−1
+deGRASPparalograrunamayorexploracio´ndelespaciode →S
+k
+bu´squedaconelobjetivodemejorarlacalidaddelassolucio- 4: Realizarunabu´squedalocalempleandoVNDapartir
+nesobtenidasporlametaheur´ıstica. deS →O
+k k
+Elprocedimiento3proponeunaseleccio´nma´sadecuada 5: endfor
+delpara´metroα,deformatalquesiseobtienensoluciones 6: return m´ın{O i } i=1,...,K
+inicialesmuycercanasseaumenteelvalordeα paralograr
+unamayordiversidadyporelcontrariosilassolucionesson
+muylejanassereduzcaα paraintensificarlabu´squeda.
+Seconsideraroncuatrofuncionesdevecindad:moverun
+Ladesventajafundamentaldelosprocedimientos1y3es
+clientedentrodeunamismaruta,intercambiardosclientes
+quenoseaprovechan,enlasiteracionessucesivas,lainfor-
+dentrodelamismaruta,moverunclientedeunarutahacia
+macio´ndeloso´ptimoslocalespreviamenteobtenidos.Enel
+otradiferenteeintercambiardosclientesdedosrutasdiferen-
+procedimiento4sepresentaunenfoqueenelcual,enlugar
+tes.
+decrearunanuevasolucio´nencadaiteracio´nseincluyeun
+mecanismoderupturaquemodificaaleatoriamenteunfrag-
+2.4 Reordenamientoexactodelasrutas
+mentodelasolucio´nconelobjetivodeescapardelo´ptimo
+El elevado nu´mero de variables y restricciones presen-
+local.
+Seconsiderarontresmecanismosdeperturbacio´n:elimi-
+tesenlosmodelosdeprogramacio´nmatema´ticaparaelVR-
+PSPDhacenpra´cticamenteimposiblesusolucio´nmediante
+nar10porcientodelosclientesyreinsertarlosnuevamente
+procedimientosexhaustivos.Apesardequeenlaliteratura
+enposicionesaleatorias,invertirunarutayrealizaruncruza-
+se presentan algunas estrategias exactas solo han sido apli-
+mientoaleatorioentredosrutasdiferentes.
+cadas a problemas de pequen˜as dimensiones. Sin embargo,
+Enelprocedimientodesarrollado,encadapasoseselec-
+ciono´ aleatoriamente uno de los me´todos de perturbacio´n al considerar solamente una ruta, disminuye notablemente
+lacomplejidaddelmodelo,porloquepuedeserresueltode
+propuestos.
+formaexactaconrelativamentepocoesfuerzocomputacional.
+2.3 Bu´squedaLocal Nosepuedeasegurarquelasolucionesencontradaspor
+En cada iteracio´n de GRASP para realizar la bu´squeda estav´ıaseano´ptimosglobales,pueslaasignacio´ndeclientes
+localseempleo´ lametaheur´ısticaBu´squedaporEntornosVa- acadarutaesta´ determinadaporlametaheur´ıstica.
+riablesDescendentes.VNDesunenfoquedeterministacuyo Acontinuacio´nsepresentaelmodelodeprogramacio´n
+principiofundamentalesrealizarunaexploracio´nexhaustiva matema´ticautilizadoparaelordenamientoo´ptimodeunaruta
+delentorno(Algoritmo5). del VRPSPD. Sea [R,k] una ruta, J el conjunto de ´ındices
+UnaestrategiaGRASPaplicadaalProblemadeEnrutamientodeVeh´ıculosconRecogidayEntregaSimulta´nea 5
+Algoritmo5VND mercanc´ıarecogida.(14)-(15)garantizanquesesatisfagan
+1: Dadaunasolucio´ninicialS 0 lasdemandasdecadacliente.Larestriccio´n(16)corresponde
+2: Dadas{V i }estructurasdeentornos alcontroldelacargaencadapuntodelrecorrido.(17)-(19)
+3: whilei≤Ido serefierenalascotasdelasvariables.
+4: ExplorarlavecindadV i ((S k−1 )hastaencontrarelpri- Elmodelodeprogramacio´nmatema´ticadescritofuere-
+merelementoquemejorelasolucio´nS →S sueltoconlaversio´nacade´micadeGAMS[13].
+k−1 k
+5: ifS k =0/ then
+6: i=i+1 3. Experimentacio´n y Resultados
+7: else
+8: i=0 Los procedimientos presentados en la seccio´n 2 fueron
+9: S k+1 =S k evaluados empleando el conjunto de prueba propuesto por
+10: endif SalhiyNagyen1999[14].Estejuegodedatosconstade26
+11: endwhile problemas euclidianos generados a partir de instancias del
+12: return S k problemadeenrutamientodeveh´ıculosconrestriccionesde
+capacidad.Estosproblemashansidoampliamenteutilizados
+en la literatura para la comparacio´n de resultados [3], [8],
+delosclientesdelaruta,J+=J∪{0}yQlacapacidaddel [12], [15], [16], [20] y [19]. En la tabla 1 se describen las
+veh´ıculo. dimensiones de los problemas del conjunto de prueba y la
+Variablesdedecisio´n mejorsolucio´nreportadaparacadaunodeellos.
+Serealizaroncuatrobloquesdeexperimentosconunsub-
+(cid:26)
+1 indicasielarco(i,j)formapartedelasolucio´n conjuntodelasinstanciasdepruebaparaanalizarlainfluencia
+x =
+ij 0 enotrocaso delfactordealeatoriedaddeGRASP(α)as´ıcomodelfactor
+depenalidaddelafuncio´nobjetivo(µ).Entodosloscasos,
+D :Cantidaddemercanc´ıaporentregartransportadapor
+ij lasrutasdelasolucio´nobtenidaporlametaheur´ısticaseorde-
+elarco(i,j)
+narondeformaexactautilizandoelmodelodeprogramacio´n
+P :Cantidaddemercanc´ıarecogidatransportadaporel
+ij matema´ticapropuestoen2.4.
+arco(i,j)
+Funcio´nObjetivo: GRASPCla´sico Seconsidero´ α =0,2,α =0,5yα =0,8.
+Paracadaunodeellosporseparado,seanalizo´ lain-
+m´ın ∑ x c (9)
+ij ij fluenciadelfactordepenalidad:sinpenalidad µ =0,
+i,j∈J+
+penalidadbajaµ =10ypenalidadaltaµ =50.
+Restricciones:
+GRASPReactivo Seconsiderarontresvaloresinicialespara
+∑ x = 1 ∀j∈J (10)
+elfactordealeatoriedad:α =0,2,α =0,5yα =0,8y
+ij
+dosvaloresparaelfactordepenalidad:µ=0yµ=10.
+i∈J+
+Cada10iteracionessereajusto´ elvalordeα yencaso
+∑ x − ∑ x = 0 ∀j∈J (11)
+ij ji
+de no haberse obtenido ninguna solucio´n factible se
+i∈J+ i∈J+
+aumento´ elvalordeµ en10unidades.
+D = ∑d (12)
+0j i
+i∈J GRASPconPerturbacio´n1 Se consideraron tres valores
+P i0 = ∑p i (13) inicialesparaelfactordealeatoriedad:α=0,2,α=0,5
+i∈J y α =0,8 y dos valores para el factor de penalidad:
+∑ D ij − ∑ D ji = d j ∀j∈J (14) µ =0yµ =10.Encadaiteracio´nseselecciono´ alea-
+i∈J+ i∈J+ toriamenteelme´tododeperturbacio´naemplearysiel
+∑ P ji − ∑ P ij = p j ∀j∈J (15) o´ptimolocalencontradonoesfactibleseaumento´ en
+i∈J+ i∈J+ 10unidadeselfactordepenalidad.
+D +P ≤ x Q ∀i,j∈J+ (16)
+ij ij ij
+GRASPconPerturbacio´n2 La diferencia con el me´todo
+x ∈ {0,1} ∀i,j∈J+ (17)
+ij GRASP con Perturbacio´n 1 es que no se aumento´ el
+D ij ≥ 0 ∀i,j∈J+ (18) valorµ encasodenoencontrarsesolucionesfactibles.
+P ≥ 0 ∀i,j∈J+ (19) Seconsiderarondosvaloresparaelfactordepenalidad:
+ij
+µ =10yµ =50.
+La funcio´n objetivo es minimizar el costo de viaje. La
+restriccio´n(10)esrelativainclusio´ndetodoslosclientesy Enlatabla2seresumenlosmejoresresultadosobtenidos
+(11) se refiere a la continuidad del recorrido a partir de un en cada uno los experimentos desarrollados. Se resalta en
+punto.Con(12)y(13)seaseguraquetodalamercanc´ıapara negritas la mejor solucio´n para la instancia y subrayada la
+entregarsecargueeneldepo´sitoalcualseregresacontodala mejorsolucio´nobtenidaenestetrabajo.
+6 UnaestrategiaGRASPaplicadaalProblemadeEnrutamientodeVeh´ıculosconRecogidayEntregaSimulta´nea
+Tabla1.Descripcio´ndelasinstanciasdeprueba
+Problema Clientes V Costo R Referencia
+CMT1X 50 6 466.77 3 Subramanianetal.[15]
+CMT1Y 50 5 466.77 3 Subramanianetal.[15]
+CMT2X 75 10 682.39 6 Zachariadisetal.[19]
+CMT2Y 75 12 679.44 6 Chenetal.[3]
+CMT3X 100 10 719.06 5 Zachariadisetal.[19]
+CMT3Y 100 10 719.00 5 Tang-Montane´ etal.[16]
+CMT4X 150 15 852.46 7 Zachariadisetal.[20]
+CMT4Y 150 15 852.35 7 Chenetal.[3]
+CMT5X 199 19 1030.56 10 Zachariadisetal.[20]
+CMT5Y 199 19 1030.56 10 Zachariadisetal.[20]
+CMT6X 50 6 476.00 3 Tang-Montane´ etal.[16]
+CMT6Y 50 6 474.00 3 Tang-Montane´ etal.[16]
+CMT8X 100 10 720.00 5 Tang-Montane´ etal.[16]
+CMT8Y 100 10 721.00 5 Tang-Montane´ etal.[16]
+CMT9X 150 15 885.00 7 Tang-Montane´ etal.[16]
+CMT9Y 150 15 900.00 8 Tang-Montane´ etal.[16]
+CMT10X 199 20 1100.00 11 Tang-Montane´ etal.[16]
+CMT10Y 199 21 1083.00 11 Tang-Montane´ etal.[16]
+CMT11X 120 11 831.09 4 Zachariadisetal.[19]
+CMT11Y 120 11 829.85 4 Zachariadisetal.[19]
+CMT12X 100 10 658.83 5 Zachariadisetal.[19]
+CMT12Y 100 11 660.47 5 Zachariadisetal.[19]
+CMT13X 120 13 918.00 5 Tang-Montane´ etal.[16]
+CMT13Y 120 12 910.00 5 Tang-Montane´ etal.[16]
+CMT14X 100 13 675.00 5 Tang-Montane´ etal.[16]
+CMT14Y 100 12 689.00 5 Tang-Montane´ etal.[16]
+Losexperimentosrealizadosmuestranquelosrefinamien- caracter´ısticasdescritasparalosexperimentosGRASPcon
+tosaplicadosalaestrategiaGRASPsereflejanenunamejor´ıa Perturbacio´n1y2.Enelsegundoseaumento´ elnu´merode
+enlacalidaddelassoluciones.Alreodenarlasrutasdelos iteracionesparafavorecerunamayorexploracio´ndelespacio
+o´ptimoslocalespreviamenteobtenidosnoseobservo´ ungran debu´squeda.Enlatabla3aparecenlosmejoresresultadosob-
+decrecimientoenelvalordelafuncio´nobjetivo,loqueapunta tenidosempleandoestosprocedimientos.GRASP15serefiere
+hacia la efectividad de las estrategias intra - ruta, de ah´ı la a15iteracionesdeGRASPyGRASP30a30iteraciones.
+necesidad de incluir movimientos que exploren ma´s en el En ninguno de los problemas de grandes dimensiones
+espaciointer-ruta. fueposiblemejorarlasolucio´nreportadaenlaliteratura.Al
+EnGRASPCla´siconoseobtuvieronsolucionesfactibles aumentarelnu´merodeiteracionesseobtuvo,comopromedio,
+paraµ =0.Comopromedioelmodelodeprogramacio´nma- unasolucio´n2,30porcientomejor.
+tema´ticamejoro´ enundosporcientolasolucio´nobtenidapor Enlatabla4seresumenlosmejoresresultadosobtenidos
+lametaheur´ıstica. porlaestrategiapropuestaenestetrabajo(GG)ysecompa-
+EnGRASPReactivoelmejorrendimientoseobtuvopara ranconlosreportadosenlaliteratura.Semejoraroncuatro
+α =0,5. Como promedio el modelo de programacio´n ma- delassolucionesreportadas:CMT6X,CMT6Y,CMT13Xy
+tema´ticamejoro´ enundosporcientolasolucio´nobtenidapor CMT13Y y se igualo´ una CMT1Y. En general se obtuvie-
+lametaheur´ıstica. ronsolucionesconmenosdeun5porcientodegapconla
+EnGRASPconPerturbacio´n1comopromedioelmodelo literaturapara18problemas.
+deprogramacio´nmatema´ticamejoro´ enununoporcientola
+solucio´nobtenidaporlametaheur´ıstica.
+Conclusiones
+EnGRASPconPerturbacio´n2comopromedioelmodelo
+deprogramacio´nmatema´ticamejoro´ enun0,9porcientola En este trabajo se presentaron diferentes variantes del
+solucio´nobtenidaporlametaheur´ıstica. me´todo GRASP aplicadas al problema de enrutamiento de
+En general, las variantes de GRASP con Perturbacio´n veh´ıculoconrecogidayentregasimulta´nea.Engeneral,los
+fueron los me´todos con mejor desempen˜o. Para las restan- procedimientoscla´sicoyreactivomostraronresultadossimi-
+tesinstanciasdelconjuntodepruebaempleadoserealizaron laresentres´ı.Lasmejoressolucionesseobtuvieronporlas
+dos bloques de experimentos. El primero con las mismas estrategiadepertubacio´n,enlacualesseremplazalacreacio´n
+UnaestrategiaGRASPaplicadaalProblemadeEnrutamientodeVeh´ıculosconRecogidayEntregaSimulta´nea 7
+Tabla2.VariantesdeGRASP
+Cla´sico Reactivo Perturbacio´n1 Perturbacio´n2
+Problema Literatura GRASP GAMS GRASP GAMS GRASP GAMS GRASP GAMS
+CMT1X 466.77 492.06 480.07 478.00 471.53 475.10 473.03 467.79 467.79
+CMT1Y 466.77 479.20 478.69 474.38 467.79 472.77 466.75 472.87 472.36
+CMT2X 682.39 742.42 735.71 728.47 723.35 715.48 714.89 713.97 713.97
+CMT2Y 679.44 730.61 723.36 724.68 722.80 718.26 717.56 708.34 708.34
+CMT3X 719.06 780.32 749.57 756.55 735.28 748.94 744.36 746.03 738.15
+CMT3Y 719.00 770.87 757.78 763.83 738.15 746.38 740.76 752.40 745.29
+CMT6X 476.00 485.79 473.28 480.01 472.36 473.62 467.79 475.71 475.71
+CMT6Y 474.00 486.88 478.55 477.22 474.38 479.95 472.36 473.86 471.53
+CMT8X 720.00 778.38 762.31 754.21 735.35 746.10 743.76 739.90 739.90
+CMT8Y 721.00 770.81 752.19 756.25 745.54 730.50 730.50 736.74 736.74
+CMT11X 831.09 999.98 938.70 977.01 920.60 917.80 901.37 933.56 908.62
+CMT11Y 829.85 951.11 922.89 950.87 930.82 927.85 906.45 911.82 908.95
+CMT12X 658.83 745.21 732.10 740.98 729.91 689.78 683.96 696.21 681.67
+CMT12Y 660.47 748.84 744.00 730.20 705.88 684.19 675.19 692.76 686.53
+CMT13X 918.00 965.96 953.14 973.60 911.35 917.14 904.86 897.85 880.08
+CMT13Y 910.00 920.42 896.53 923.11 891.47 902.41 882.15 907.65 896.80
+CMT14X 675.00 701.87 696.92 693.07 684.63 692.87 688.57 680.74 676.04
+CMT14Y 689.00 714.69 708.35 736.02 721.50 706.98 693.37 698.66 695.09
+Tabla3.GRASPconPerturbacio´nparalosproblemasdegrandesdimensiones
+GRASPconPertutbacio´n1 GRASPconPertubacio´n2
+GRASP15 GRASP30 GRASP15 GRASP30
+Problema Literatura GRASP GAMS GRASP GAMS GRASP GAMS GRASP GAMS
+CMY4X 852.46 945.83 930.46 909.98 900.21 1000.06 961.80 941.00 932.18
+CMT4Y 852.35 953.65 939.18 950.41 924.68 936.80 931.25 925.58 922.00
+CMT5X 1030.56 1169.21 1150.60 1167.23 1152.00 1232.48 1204.93 1168.35 1145.33
+CMT5Y 1030.56 1185.44 1164.78 1168.77 1159.59 1191.62 1173.00 1179.91 1172.77
+CMT9X 885.00 971.79 950.15 958.30 937.17 962.04 948.02 901.01 896.07
+CMT9Y 900.00 970.10 961.08 926.57 903.00 975.66 957.98 960.59 940.29
+CMT10X 1100.00 1227.65 1205.63 1190.36 1177.90 1205.61 1191.58 1222.31 1212.81
+CMT10Y 1083.00 1211.78 1196.89 1181.63 1150.63 1172.49 1168.32 1155.34 1148.24
+denuevassolucionesporuncriterioderupturaquepermite locales.
+aprovecharpartedelaestructuradelo´ptimolocalencontrado
+en el paso anterior. Las rutas de las mejores soluciones ob- Agradecimientos
+tenidasporelprocedimientoGRASPseordenarondeforma
+LasautorasquierenagradeceralGrupodeOptimizacio´n
+exactautilizandoelmodelodeprogramacio´nmatema´ticare-
+delaFacultaddeMatema´ticayComputacio´nporlacolabo-
+sueltoconlaversio´nacade´micadeGAMS.Conlaestrategia
+racio´neneldesarrollodeestetrabajo.AOscarLuisporsu
+presentadasemejoraronlassolucionesdecuatroinstancias
+ayudaeneldisen˜odelosalgoritmosyenlaejecucio´ndelos
+delconjuntodepruebadeSalhiyNagy(CMT6X,CMT6Y,
+experimentos.Alosrevisoresano´nimosporlassugerencias
+CMT13XyCMT13Y).
+realizadas.
+Engeneralnoseaprecio´ unadiferenciasignificativaentre
+lassolucionesreportadasporGRASPylasobtenidasdespue´s Referencias
+de aplicar GAMS, lo que apunta hacia la efectividad de la
+[1] SPAnbuudayasankarandKMohandas. Mixed-integer
+metaheur´ıstca en la ubicacio´n de los clientes dentro de las
+linear programming for vehicle routing problem with
+rutas.Deah´ılanecesidaddeincluirnuevosmovimientosinter-
+simultaneousdeliveryandpick-upwithmaximumroute-
+rutaquegaranticenunamayordiversidad.Otroelementoa
+length. TheInternationalJournalofAppliedManage-
+considerar para futuras investigaciones es la sustitucio´n de
+mentandTechnnology,6(1):31–52,2007.
+la bu´squeda determinista (VND) en cada paso de GRAPS
+porunenfoquealeatorioquepermitaunamayorexploracio´n [2] RBaldacci,MBatarra,andDVigo. Thevehiclerouting
+delespaciodebu´squedayevitequedaratrapadoseno´ptimos problem:latestadvancesandnewchallenges,chapter
+8 UnaestrategiaGRASPaplicadaalProblemadeEnrutamientodeVeh´ıculosconRecogidayEntregaSimulta´nea
+Tabla4.Comparacio´nconlaliteratura
+Problema Literatura GG Problema Literatura GG Problema Literatura GG
+CMT1X 466.77 467.79 CMT5Y 1030.56 1159.59 CMT11X 831.09 901.37
+CMT1Y 466.77 466.75 CMT6X 476.00 467.79 CMT11Y 829.85 906.45
+CMT2X 682.39 713.97 CMT6Y 474.00 471.53 CMT12X 658.83 681.67
+CMT2Y 679.44 708.34 CMT8X 720.00 735.35 CMT12Y 660.47 675.19
+CMT3X 719.06 735.28 CMT8Y 721.00 730.50 CMT13X 918.00 880.08
+CMT3Y 719.00 738.15 CMT9X 885.00 896.07 CMT13Y 910.00 882.15
+CMT4X 852.46 900.21 CMT9Y 900.00 903.00 CMT14X 675.00 676.04
+CMT4Y 852.35 922.00 CMT10X 1100.00 1177.90 CMT14Y 689.00 693.37
+CMT5X 1030.56 1145.33 CMT10Y 1083.00 1148.24
+Routing heterogeneous fleet of vehicles, pages 3–28. [12] OPolat,KalayciC-B,OKulak,andH-OGunther.Aper-
+Springer,2008. turbationbasedvariableneighborhoodsearchheuristic
+for solving the vehicle routing problem with simulta-
+[3] J-F Chen and T-H Wu. Vehicle routing problem with neous pickup and delivery with time limit. European
+simultaneous deliveries and pickups. Journal of the JournalofOperationalResearch,pages369–382,2015.
+OperationalResearchSociety,57(5):579–587,2006. [13] RRosenthal. AGAMSTutorial. www.gams.com.
+[4] M Dell’Amico, G Righini, and M Salani. A branch- [14] SSalhiandGNagy. Aclusterinsertionheuristicforthe
+and-priceapproachtothevehicleroutingproblemwith singleandmultipledepotvehicleroutingproblemwith
+simultaneousdistributionandcollection. Transportation backhauling. TheJournaloftheOperationalResearch
+Science,40(2):235–247,2006. Society,50(10):1034–1042,1999.
+[5] J. Dethloff. Vehicle routing and reverse logistics: the [15] ASubramanianandLCabral. Anilsbasedheuristicfor
+vehicleroutingproblemwithsimultaneousdeliveryand thevehicleroutingproblemwithsimultaneouspickup
+pick-up. ORSpektrum,23:79–96,2001. anddeliveryandtimelimit. InJvanHemertandCCot-
+ta,editors,EvoCOP,pages135–146.Springer-Verlag,
+[6] JDre´o,APe´trowski,andETaillard. Metaheuristicsfor 2008.
+HardOptimization. Springer,2006.
+[16] F-ATang-Montane´andR-DGalvao. Atabusearchalgo-
+rithmforthevehicleroutingproblemwithsimultaneous
+[7] A Ferna´ndez-Arias. Problema de enrutamiento de
+pick-upanddeliveryservice.ComputersandOperations
+veh´ıculos con recogida y entrega simulta´nea conside-
+Reseach,33:595–619,2006.
+randounaflotaheteroge´nea. Master’sthesis,Facultad
+deMatema´ticayComputacio´n.UniversidaddeLaHa-
+[17] A-STasanandMGen.Ageneticbasedapproachtovehi-
+bana,2010.
+cleroutingproblemwithsimultaneouspick-upanddeli-
+veries. ComputersandIndustrialEngieneering,62:755–
+[8] F.P Goksal, I Karaoglan, and F Altiparmk. A hybrid
+761,2012.
+discreteparticleswarmoptimizationforvehiclerouting
+problemwithsimultaneouspickupanddelivery. Com- [18] PTothandDVigo. Thevehicleroutingproblem. SIAM,
+putersandIndustrialEngineering,65:39–53,2013. MonographonDiscreteMathematicsandApplications,
+9,2002.
+[9] P Hansen and N Mladenovic. Variable neighborhood
+search:Principlesandapplications. EuropeanJournal [19] EZachariadis,CTarantilis,andCKiranoudis. Ahybrid
+ofOperationalResearch,(130):449–467,2001. metaheuristicalgorithmforthevehicleroutingproblem
+withsimultaneousdeliveryandpick-upservice. Expert
+[10] P Hansen, N Mladenovic, and JA Moreno-Pe´rez. SystemwithApplications,36:1070–1081,2009.
+Bu´squedadeentornovariable. RevistaIberoamericana
+deInteligenciaArtificial,(19):72–92,2003. [20] EZachariadis,CTarantilis,andCKiranoudis.Anadapti-
+vememorymethodologyforthevehicleroutingproblem
+[11] HMin. Themultiplevehicleroutingproblemwithsi- withsimultaneousdeliveryandpick-upservice. Expert
+multaneousdeliveryandpick-uppoints. Transportation SystemwithApplications,36:1070–1081,2010.
+Reseach,23A(5):377–386,1989.

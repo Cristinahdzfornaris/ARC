@@ -1,0 +1,561 @@
+Revista Ciencias Matemáticas
+Integración de osciladores perturbados
+mediante un esquema multipaso
+basado en una extensión de la serie de Taylor
+Solution of a boundary problem Very Complex for hyperbolic equations: Case Zero Index
+J. A. Reyes (jose.reyes@ua.es), F. García-Alonso (fernando.garcia@ua.es)
+Escuela Politécnica Superior (E.P.S.). Departamento de Matemática Aplicada. Universidad de Alicante (España).
+Agradecimientos
+El presente trabajo se ha realizado con el apoyo del proyecto GRE09-13,
+de la Universidad de Alicante, y del proyecto GV/2011/032 de la Generalitat Valenciana.
+Resumen Abstract
+El método de series basado en G-funciones de Scheifele para The method of series based on the Scheifele G-functions for the
+la integración de osciladores armónicos forzados, presenta la integration of forced harmonic oscillators, presents the good
+buena propiedad de que si los términos de perturbación son eli- property that if the terms of perturbation are eliminated, then
+minados, entonces el método numérico integra exactamente el the numerical method integrates exactly the corresponding
+correspondiente problema no perturbado. Este método de series unperturbed problem. This method is highly accurate but diffi -
+es de gran precisión pero de difícil aplicación, debido a la com- cult to implement due to the complexity of the preliminary cal-
+plejidad de los cálculos previos necesarios la obtención de las culations needed to obtain the recurrence formulas to compute
+recurrencias para computar los coefi cientes. Con el objetivo de the coeffi cients. This problem is resolved in by converting the
+resolver esta difi cultad, en este artículo se construye un nuevo G-functions series method into a multistep scheme, VSVO type.
+esquema multipaso basado en el método series de G-funciones To obtain variable order algorithms will establish a procedure
+de Scheifele, de tipo VSVO. Para la obtención de algoritmos de for calculation, by recurrent matrix, to compute the coeffi cients
+orden variable se establecerá un procedimiento de cálculo, me- of the method. This procedure is based on the relationship be-
+diante matrices recurrentes, para computar los coefi cientes del tween the divided differences and the elementary and complete
+método. Este procedimiento se basa en la relación existente entre symmetrical functions. Explicit, implicit and predictor-correc-
+las diferencias divididas y las funciones simétricas elementales y tor methods are introduced that generalize SMF ones, which in-
+completas. Se construyen tanto métodos explícitos como implí- tegrate exactly the homogeneous problem. The good behaviour
+citos, así como un método predictor-corrector que integra exac- of the new methods is shows, when applied to test problems,
+tamente el problema homogéneo. El buen comportamiento de los with analytical solution known, allowing to obtain the relative
+nuevos métodos se pone de manifi esto al aplicarlos a problemas errors of the position and the speed. While being known his
+test, de los que su solución analítica está calculada, lo que per- analytical solution, this problems present diffi culty in its nu-
+mite la obtención de los errores relativos de la posición así como merical integration with the codes adapted to the calculation of
+de la velocidad. Aun siendo conocida su solución analítica, los solutions of this type of oscillators.
+problemas propuestos presentan difi cultades en su integración
+numérica mediante códigos adaptados al cálculo de soluciones
+de este tipo de osciladores.
+— 17 —
+Sociedad Cubana de Matemática y Computación
+1. Introducción Martín y Ferrándiz (1995), (1997), modifi can el método de
+Scheifele convirtiéndolo en el esquema multipaso SMF, de orden
+fi jo, que conservando las buenas propiedades del método de se-
+La importancia de los osciladores armónicos perturbados en la
+ries de G-funciones, evita los cálculos previos que este requería.
+modelización de problemas de la física, de la química, de la in-
+En el presente artículo se construye un nuevo esquema mul-
+geniería, de la mecánica celeste, etc., se pone de manifi esto en
+tipaso, también basado en el método series de G-funciones
+(García-Alonso y Reyes, 2007), presentándose una familia de
+de Scheifele, pero de paso y orden variable, es decir, del tipo
+funciones, las G-funciones de Scheifele, y un método de series,
+VSVO. Este nuevo esquema multipaso conserva las buenas pro-
+basado en esas G-funciones. Así mismo se desarrollaban apli-
+piedades del método de series y generaliza los esquemas SMF.
+caciones de este método de series para la integración de osci-
+A tal efecto, se aproximan las derivadas de la función de per-
+ladores armónicos perturbados, que puede considerarse como
+turbación que aparecen en el método de series mediante dife-
+una extensión de la serie de Taylor.
+rencias divididas, junto con unos coefi cientes d , elementos de
+El tipo de integradores construidos, basados en series de i,j
+una cierta matriz A-t (Vigo-Aguiar and Ferrándiz, 1998) (Gar-
+G-funciones, tienen su origen en la resolución de problemas p
+cía-Alonso, Reyes, Ferrándiz and Vigo-Aguiar, 2009), de los
+de mecánica celeste. En los últimos años, debido fundamen-
+que no se conoce una relación de recurrencia entre ellos. Análo-
+talmente a las mayores exigencias de los programas espaciales,
+gamente para el caso implícito, la matriz de la que se extraerán
+ha ido ganando interés el cálculo preciso de órbitas de satélites
+los nuevos coefi cientes d , se denotará por B t (Vigo-Aguiar
+artifi ciales y los geodestas necesitan precisiones subcentimétri- i,j p
+and Ferrándiz, 1998) (García-Alonso, Reyes, Ferrándiz and Vi-
+cas en el cálculo de la posición exacta del satélite artifi cial en
+go-Aguiar, 2009a).
+un sistema de referencia inercial.
+Para la obtención de algoritmos de orden variable se esta-
+En los métodos de cálculo de órbitas resulta ventajoso sus-
+blecerá un método de cálculo recurrente para computar las ma-
+tituir las ecuaciones newtonianas del movimiento por otras
+trices A-t y B-t , que está basado en la relación existente entre
+mejor acondicionadas para su integración numérica. Las trans- p p
+las diferencias divididas y las funciones simétricas elementales
+formaciones de Kunstaanheimo-Stiefel o Burdet-Ferrándiz
+y completas. Esta relación permite el cómputo de las matrices
+reducen esas ecuaciones a osciladores perturbados del tipo
+A-t y B-t mediante las matrices recurrentes S , (Vigo-Aguiar,
+x''(t) + ax(t) = ff(x(t), x'(t),t), para los que el método está di- p p p,n
+1999) (García-Alonso, Reyes, Ferrándiz y Vigo-Aguiar, 2009a),
+señado. Estos integradores son construidos para obtener pre-
+para el método explícito y S (Vigo-Aguiar, 1999) (Gar-
+cisión en la resolución de osciladores perturbados del tipo p,n + 1
+cía-Alonso, Reyes, Ferrándiz and Vigo-Aguiar, 2009a), para el
+anteriormente descrito, más que para evolucionar a métodos de
+método implícito.
+coefi cientes variables.
+Llegados a este punto, se construyen tanto métodos explí-
+Este método de series basado en G-funciones (Stiefel and
+citos como implícitos y basados en ellos, un método predic-
+Scheifele, 1971) (Scheifele, 1971), presenta la buena propiedad
+tor-corrector que integra exactamente el problema homogéneo
+de que si los términos de perturbación son eliminados, enton-
+y es posible implementar con facilidad en un computador.
+ces el método numérico integra exactamente el correspondien-
+El buen comportamiento de los nuevos métodos se pone de
+te problema no perturbado.
+manifi esto al aplicarlos a problemas test, contrastando los resul-
+Dicho método de series es de gran precisión pero de difícil
+tados obtenidos frente a otros conocidos integradores numéricos.
+aplicación, debido a la complejidad de los cálculos previos ne-
+cesarios en la obtención de las recurrencias se necesitan para
+2. Preliminares
+computar los coefi cientes del método. Estas recurrencias son
+específi cas de cada uno de los problemas a los que se quiera
+aplicar el método de series. Si x(t) es la solución del oscilador armónico perturbado de
+ecuación:
+— 18 —
+Revista Ciencias Matemáticas
+x" + ax = f . f(x,x',t), hecho de que estas se pueden expresar mediante desarrollos en
+(1) series absolutamente convergentes para todo valor de t:
+x(0) = x , x'(0) = x'
+0 0
+y se supone que la función g(t) = f(x,x',t) admite un desarrollo (10)
+de la forma:g(t) donde B = (-a)j y B = 0, j ≥ 0.
+2j 2j+1
+El resultado que permite defi nir un método de integración nu-
+, el PVI (1), puede escribirse de
+mérica basado en series de G-funciones, se deduce de que la
+la forma siguiente:
+solución del PVI (1) es:
+(2) (11)
+La solución de (2) se obtiene de forma habitual, sumando a la Para la construcción de un método numérico basado en series
+solución general de la ecuación homogénea con las condiciones de G-funciones que integre el PVI (1), se supone que su solu-
+iniciales dadas, una solución particular de la ecuación comple- ción x(t), es una función analítica, es decir:
+ta en la que se anula la solución y su derivada en t = 0. Esta úl-
+(12)
+tima puede calcularse aplicando el principio de superposición
+de soluciones a los PVI: Calculadas todas las G-funciones necesarias por truncamiento
+de las series que las defi nen, para obtener una aproximación a
+(3) la solución x(t) sustituimos un truncamiento de su desarrollo
+combinando linealmente sus soluciones con los coefi cientes de en (1), lo que nos permitirá establecer relaciones de recurren-
+f.c . cia para calcular los coefi cientes c = g(k)(0), a partir de x y x' .
+n k 0 0
+Partiendo de esta idea, G. Scheifele (1971), defi nió una co- Una vez conocidos los coefi cientes c para k = 0,..., m - 2 y
+k
+lección de funciones especialmente adaptadas a la resolución fi jado un paso h, la aproximación a la solución y su derivada en
+de este tipo de problemas. el punto h, es decir, en el primer paso, vienen dadas respectiva-
+Se llaman G-funciones de Scheifele, a las funciones G que mente por las expresiones:
+n
+verifi can:
+(13)
+(4)
+(14)
+donde x (t) son las soluciones de los problemas (3), es decir, las
+n
+funciones G satisfacen En general, calculada una aproximación a la solución y a su de-
+n
+rivada en el punto t = nh, que llamaremos respectivamente x y
+n
+(5) x' , lo que interesa es obtener una solución al problema
+n
+Las soluciones de los problemas homogéneos:
+(15)
+(6)
+(7)
+defi nen las funciones de Scheifele G (t) y G(t), respectivamente.
+0 1 con n > 0,
+Las G-funciones presentan las siguientes propiedades:
+Para n ≥ 1 se cumple que: (8) con n > 0.
+(9) Si , en general:
+Para n ≥ 0 se cumple que:
+Otra propiedad relevante en el cálculo de las G-funciones1 es el con n > 0,
+1 También es posible obtener expresiones trigonométricas, útiles para el con n > 0.
+cálculo de las G-funciones.
+Si , en general: Si a = 0, entonces con n  0.
+— 19 —
+Sociedad Cubana de Matemática y Computación
+Para calcular una aproximación a la solución y a su derivada Una vez calculada la matriz A-t , se establece un cálculo re-
+p
+en el punto (n + 1)h, se efectúa el cambio de variable t = τ + nh, currente de esta, a través de la matriz S , para el método ex-
+p,n
+obteniéndose plícito.
+El estudio de los polinomios simétricos (MacDonald, 1998)
+(16)
+y su relación con las diferencias divididas, nos permitirá el cál-
+Calculándose por recurrencia los coefi cientes del desarrollo: culo computacional de la matriz S .
+p,n
+Para la construcción de un método multipaso explícito de p
+(17) pasos y de paso variable, se utilizará la diferencia dividida de
+orden (p-1)-ésimo, de la función g, en los puntos t ,...,t ,
+n n-p+1
+la aproximación a la solución en el punto (n + 1)h viene dada que se nota como g[t ,...,t ] (Milne-Thomson, 1981).
+n n-k
+por las fórmulas: Las diferencias divididas de la función de perturbación g,
+(18) satisfacen (Vigo-Aguiar y Ferrándiz, 1988):
+(20)
+(19)
+(21)
+Las expresiones (18) y (19) constituyen el método de integra-
+Denotando por D , la matriz de orden 1 x p siguiente
+ción numérica para osciladores armónicos perturbados basado p,n
+en series de G-funciones. (22)
+Aunque el método de series de G-funciones, es de gran preci- y escogiendo H = max{H,...,H }, se verifi ca la identidad
+1 p-1
+sión e integra exactamente el problema homogéneo (García-Alon-
+so y Reyes, 2007) (Stiefel and Scheifele, 1971) (Scheifele, 1971),
+(23)
+el cálculo recurrente de los coefi cientes c, del desarrollo (17), es
+k
+difícil para expresiones complicadas de la función de perturba-
+donde
+ción, lo que puede llegar a impedir la implementación del méto-
+do de series de G-funciones en un computador.
+Para resolver esta difi cultad, en el epígrafe siguiente se des- (24)
+cribe la transformación del método numérico basado en series
+de G-funciones en un esquema multipaso, similar a los méto-
+dos SMF, pero de paso y orden variable, es decir, obteniéndose en notación más compacta
+esquemas multipaso VSVO.
+(25)
+Para la obtención del esquema multipaso se aproximarán las
+derivadas de la función de perturbación mediante diferencias divi- Efectuando un truncamiento y despejando la matriz Z se ob-
+px1
+didas, formulándose tanto métodos explícitos como implícitos que tiene
+permitirán la implementación de métodos tipo predictor-corrector. (26)
+Designando por (d ) =A-t = (A-1 )t, se puede escribir
+3. Método explícito de p pasos ij pxp p p
+para osciladores perturbados
+(27)
+Para obtener el método explícito, se sustituyen las derivadas
+de la función de perturbación por expresiones en términos de Sustituyendo en (18) y en (19) resulta
+diferencias divididas y de los coefi cientes d , elementos de la
+ij
+matriz A-t.
+p
+— 20 —
+Revista Ciencias Matemáticas
+y S = {todas las diferentes permutaciones a = (a ... a ) de λ}
+λ 1 n
+con , en el caso r < 0, se defi ne h = 0.
+n,r
+En particular h = 1 y h = e 4.
+(28) n,0 n,1 n,1
+Entre las diferencias divididas de la función g(t) = tm, que
+notamos como t [t,...,t ] y las funciones simétricas completas,
+m 1 n
+se establece la siguiente relación:
+(36)
+Trabajando en el punto t , se defi ne las funciones simétricas
+(29) n
+completas
+(37)
+en los valores H = t - t* con k = 0,...,i-1, y t*![a,b].
+Llamando
+n-k n-k
+Las matrices cuadradas de orden k, P = (q (n)) y
+(30) k,n i,j
+S = (v (n)), son regulares.
+k,n i,j
+(31) Ya que H = t -t* y H = t -t es posible escribir
+n-j n-j j n n-j
+(t -t*)-H = H con j = 0,...,i-1.
+con i = 1,..., p, se obtienen para un método multipaso explícito, n j n-j
+En el caso particular de que t* = tn se tiene H = -Hcon
+las fórmulas siguientes: n-j j
+j = 0,...,i - 1.
+(32)
+Las diferencias divididas de la función g satisfacen la pro-
+(33) piedad:
+(38)
+Con el propósito de diseñar un método de orden y paso variable,
+VSVO, se obtendrán los elementos de matriz A-t = (d ) de Si , y como q (n) tiene orden j-i
+p ij pxp i,j
+forma recurrente. en H, es posible escribir, basándonos en este último resultado
+Las recurrencias de los elementos d , se basan en las fun- la siguiente expresión:
+ij
+ciones simétricas completas h 2 y en las funciones simétricas (39)
+n,r
+elementales e 3 (MacDonald, 1998), (Vigo-Aguiar, 1999), de-
+n,r
+fi nidas como: Considerando t* = t y expresando las igualdades (39) en forma
+n
+(34) matricial, se tiene
+donde siendo
+(40)
+(35)
+2 Por ejemplo para tres variables, t, t, t tenemos: y como q (n) = h en los argumentos H ,...,H , es posi-
+1 2 3 i,j+1 i,j n n-(i-1)
+h = 1, h = t + t + t, ble escribir
+3,0 3,1 1 2 3
+h = t 2 + t 2 + t 2 + tt + t t + t t,
+3,2 1 2 3 12 1 3 2 3
+h = t 3 + t 3 + t 3 + t 2t + t 2t + t 2t + t 2t + t t 2 + t t 2 + t t 2 + t t t .
+3,3 1 2 3 1 2 1 3 2 1 2 1 1 2 1 3 2 3 1 2 3
+La función generatriz de h , es es decir, (41)
+n,r
+efectuando un desarrollo de Mac Laurin de la función E(t), hasta orden
+n
+n, sus coefi cientes serían las funciones simétricas elementales h .
+n,r
+3 por ejemplo para tres variables, t, t, t tenemos:
+1 2 3
+e = 1, e = t + t + t, e = tt + tt + tt, e = ttt.
+3,0 3,1 1 2 3 3,2 12 13 23 3,3 123
+La función generatriz de e , es es decir, 4 Entre las funciones simétricas elementales y completas se establece la
+n,r relación:
+efectuando un desarrollo de Mac Laurin de la función E(t), hasta orden
+n
+n, sus coefi cientes serían las funciones simétricas elementales e .
+n,r
+— 21 —
+Sociedad Cubana de Matemática y Computación
+Ya que para i,j  2 (Vi-
+go-Aguiar, 1999), si se tiene en cuenta que t* = t , entonces:
+n
+(49)
+(42)
+Designando por , se puede escribir
+La expresión recurrente de la matriz A-t se obtiene mediante (50)
+p
+la expresión:
+(43)
+Procediendo de forma análoga al caso explícito, se obtiene:
+es decir
+(44)
+donde
+(51)
+es una matriz diagonal, tal que , con i =
+0,...,p-1 y N = M-1.
+p p
+Las expresiones (43) y (44) permiten calcular la matriz A-t me-
+p
+diante recurrencia, utilizando la matriz S-t .
+p,n
+Sustituyendo (44) en (28), (29), (30) y (31), es posible defi -
+(52)
+nir el método multipaso explícito, usando la siguiente notación:
+x es la aproximación al valor de la solución en t .
+n n
+x' es la aproximación al valor de la derivada de la solución en t .
+n n
+Llamando
+Los valores iniciales de la solución x(t) en los puntos t ,...,t
+0 p-1
+son: x ,...,x . (53)
+0 p-1
+Los valores iniciales de la derivada de la solución x'(t) en los
+(54)
+puntos t ,...,t son: x' ,...,x' .
+0 p-1 0 p-1
+La expresión formal, del método multipaso explícito, basado con i = 1,...,p + 1, se obtienen para un método multipaso implí-
+en G-funciones, es cito, las fórmulas siguientes:
+(55)
+(45)
+(56)
+(46) Una vez conocida la matriz B-t, se establece un cálculo recurren-
+p
+te a través de la matriz S , para el método implícito, siendo la
+donde p,n+1
+matriz S :
+p,n+1
+(47)
+(48)
+(57)
+4. Método implícito de p pasos
+para osciladores perturbados
+donde
+(58)
+De forma similar al caso explícito, la matriz de la que se obtie- con i,j  2, (Vigo-Aguiar, 1999)
+nen los coefi cientes d se nota como B-t , siendo la matriz B: La expresión recurrente de la matriz B-t , se obtiene mediante
+ij p p p
+— 22 —
+Revista Ciencias Matemáticas
+la expresión: ciones y con las defi niciones anteriores, dadas en (45) a (48) y
+(59) (60) a (63). Es decir, el método predictor-corrector empleado es
+es decir del tipo P(EC) μ E 1-t, con t = n = 1 (Lambert, 1991).
+(60)
+5.1 Experimentos numéricos
+donde
+es una matriz diagonal, tal que , con
+En esta sección, cuatro problemas muestran el buen comporta-
+i=0,...,p y N = M-1 .
+p+1 p+1 miento del nuevo método basado en G-funciones, comparando
+Las expresiones (58) y (59) permiten calcular computacio-
+la precisión de este, frente a los conocidos códigos:
+nalmente la matriz B-t , por recurrencia, utilizando la matriz
+p LSODE, que obtiene soluciones numéricas utilizando el in-
+St .
+p,n+1 tegrador Stiff Livermore ODE.
+Sustituyendo (59) en (51), (52), (53) y (54), es posible defi -
+GEAR, que obtienen soluciones numéricas por medio del
+nir el método multipaso implícito, usando la siguiente notación:
+método de Burlirsch-Stoer, de extrapolación racional.
+x es la aproximación al valor de la solución en t .
+n n MGEAR [msteppart] que es un método multipaso, suscepti-
+x' es la aproximación al valor de la derivada de la solución
+n ble de ser aplicado a problemas stiff.
+en t .
+n Los problemas propuestos son conocidos problemas test, de
+Los valores iniciales de la solución x(t) en los puntos t ,...,t
+0 p-1 los que su solución analítica está calculada, lo que permite la
+son: x ,...,x .
+0 p-1 obtención de los errores relativos de la posición x(t) así como
+Los valores iniciales de la derivada de la solución x'(t) en los
+de la velocidad x'(t).
+puntos t ,..., t son: x' ,..., x' .
+0 p - 1 0 p - 1 Aun siendo conocida su solución analítica, los problemas
+La expresión formal, del método multipaso implícito, basa-
+propuestos presentan difi cultades en su integración numéri-
+do en G-funciones, es
+ca mediante códigos LSODE, GEAR y MGEAR, entre otros,
+adaptados al cálculo de soluciones de este tipo de osciladores.
+(61)
+Para realizar la comparación de los errores producidos se
+con n ≥ p-1
+ha utilizado la implementación en MAPLE de los códigos an-
+(62)
+teriormente citados, para asegurar que los resultados no son
+con n ≥ p-1
+distorsionados por una defi ciente programación que favorezca
+donde
+el nuevo código.
+(63)
+Problema I
+(64)
+Consideremos el oscilador armónico perturbado, altamente os-
+cilatorio.
+(65)
+5. Método predictor-corrector
+.
+de p pasos para osciladores perturbados
+La solución exacta y su derivada, se expresan mediante las
+ecuaciones:
+El método predictor-corrector, con tamaño de paso variable, (66)
+de p pasos, para osciladores armónicos perturbados, se defi ne (67)
+como el que tiene como factor predictivo el método explícito, y
+Este problema, corresponde al problema general propuesto por
+como método corrector el implícito, ambos basados en G-fun-
+Petzold (1981), para A = 50 y a = 40.
+— 23 —
+Sociedad Cubana de Matemática y Computación
+En la fi gura 1 se contrasta el gráfi co del logaritmo deci-
+mal del valor absoluto del error relativo de la solución x(t),
+(68)
+obtenida con 40 dígitos y contrastados con los gráfi cos del
+logaritmo decimal del valor absoluto del error relativo de la La solución exacta y su derivada, se expresan mediante las
+solución que proporcionan los métodos LSODE[backfunc] ecuaciones:
+con tol = 10-17, MGEAR con errorper = 10-13 y GEAR con
+(69)
+errorper = 10-13.
+En la fi gura 2, se contrasta la derivada x'(t) bajo las mismas (70)
+condiciones. En las fi guras 3 y 4 se contrastan los gráfi cos del logaritmo de-
+cimal del valor absoluto del error relativo de la solución x(t) y
+de su derivada x'(t), respectivamente, obtenidas con 40 dígitos y
+contrastadas con los gráfi cos del logaritmo decimal del valor ab-
+soluto del error relativo de las aproximaciones a x(t) y x'(t) que
+proporcionan los métodos LSODE[backfunc] con tol = 10-17,
+MGEAR con errorper = 10-13 y GEAR con errorper = 10-13.
+Fig. 1 x'' + 400x = 50sin(20t), x(t) posición.
+Fig. 3 x''(t) + x(t) = cos(100t), x(t) posición.
+Fig. 2 x'' + 400x = 50sin(20t), x'(t) posición.
+Problema II
+Consideremos el oscilador armónico con perturbación periódica,
+altamente oscilatoria y proporcional al parámetro de perturba-
+ción (García-Alonso, Reyes, Ferrándiz. and Vigo-Aguiar, 2009b).
+Fig. 4 x''(t) + x(t) = cos(100t), x'(t) posición.
+— 24 —
+Revista Ciencias Matemáticas
+Problema III
+Consideremos el PVI:
+x'' + k2x = k2t
+x(0) = 10-5 (71)
+x(0) = 1 - 10-5kcot(k)
+donde k = 314.16, propuesto por G. Denk (1993), como un pro-
+blema test, altamente oscilatorio.
+La solución analítica y su derivada, se expresan como
+(72)
+(73)
+De forma análoga a los dos casos anteriores, en las fi guras 5 y 6, Fig. 5 x'' + k2x = k2t con k = 314.16, x(t) posición.
+se contrasta la precisión del método multipaso, frente a los mé-
+todos LSODE[backfunc] con tol = 10-20, MGEAR con error-
+per = 10-17 y GEAR con errorper = 10-17.
+Problema IV
+Consideremos el oscilador armónico con función de perturba-
+ción que no depende explícitamente del tiempo, que supone una
+generalización del propuesto en García-Alonso (2008), descrito
+por las ecuaciones:
+(74) Fig. 6 x'' + k2x = k2t con k = 314.16, x'(t) posición.
+Con solución analítica y derivada, altamente oscilatorias, da-
+das por las expresiones:
+x(t) = cos(100t) (75)
+x'(t) = -100sin(100t) (76)
+En las fi guras 7 y 8 se contrastan los gráfi cos del logaritmo de-
+cimal del valor absoluto del error relativo de la solución x(t) y
+de su derivada x'(t), respectivamente, obtenidas con 40 dígitos
+y contrastadas con los gráfi cos del logaritmo decimal del valor
+absoluto del error relativo de las aproximaciones a x(t) y x'(t) que
+Fig. 7 x'' +(1+x)(x-cos(100t))+10000cos(100t)=0, x(t) posición.
+proporcionan los métodos LSODE[backfunc] con tol = 10-17,
+MGEAR con errorper = 10-17 y GEAR con errorper = 10-17.
+6. Comentarios fi nales
+A pesar de la gran precisión que se puede obtener mediante el mé-
+todo basado en series de G-funciones, este presenta la difi cultad
+de solo poder aplicarse en algunos casos, debido a la complejidad
+de los cálculos preliminares necesarios para el diseño de las re- Fig. 8 x'' +(1+x)(x-cos(100t))+10000cos(100t)=0, x'(t) posición.
+— 25 —
+Sociedad Cubana de Matemática y Computación
+currencias que utiliza el algoritmo. Además, estos cálculos preli- tions on Mathematical Software (TOMS), vol. 36, nº 4, article
+minares deben realizarse de forma específi ca en cada problema. 21.
+En este artículo se resuelve la difi cultad anterior, transforman- [6] LAMBERT, J. D. (1991): Numerical methods for ordinary di-
+do el método de series de G-funciones en un algoritmo multipaso. fferential systems. John Willey and Sons Ltd., New York.
+[7] MacDONALD, I. G. (1998): Symmetric Functions and Hall
+A tal efecto, se aproximan las derivadas de la función de per-
+Polynomials. Oxford University Press Inc. New York.
+turbación, mediante diferencias divididas.
+[8] MARTÍN, P., FERRÁNDIZ, J.M. (1995): «Behaviour of the
+Basándose en las relaciones existentes entre las diferencias
+SMF method for the numerical integration of satellite orbits»,
+divididas y las funciones simétricas elementales y completas, se
+Celestial Mechanics and Dynamical Astronomy, vol. 63, nº 1,
+establecen recurrencias que permiten, mediante un procedimien-
+29-40.
+to algebraico sencillo, calcular los coefi cientes del nuevo método,
+[9] MARTÍN, P., FERRÁNDIZ, J. M. (1997): «Multistep nume-
+lo que facilita su implementación en un computador.
+rical methods based on Scheifele G-functions with applica-
+Se construyen tanto métodos explícitos como implícitos y
+tion to satellite dynamics», SIAM J. Numer. Anal., vol. 34, nº 1,
+basados en ellos, un método predictor-corrector que integra
+359-375.
+exactamente el problema homogéneo. [10] MILNE-THOMSON, LM. (1981): The calculus of fi nite diffe-
+Los nuevos métodos construidos son de paso y orden varia- rences. The Macmillan Press. New York.
+ble, es decir son del tipo VSVO y mejoran los métodos SMF, [11] PETZOLD, LR. (1981): «An effi cient numerical method for hi-
+conservando las buenas propiedades de este. ghly oscillatory ordinary differential equations». SIAM J. on
+El buen comportamiento de los nuevos métodos se pone de Numerical Analysis; vol.18 nº3, 455-479.
+manifi esto, al aplicarlos a problemas test, contrastando los re- [12] SCHEIFELE, G. (1971): «On numerical integration of per-
+turbed linear oscillating systems», ZAMP; vol. 22, nº 1,
+sultados obtenidos frente a otros conocidos integradores numé-
+186-210.
+ricos, tales como LSODE, MGEAR y GEAR.
+[13] STIEFEL, E. L. and SCHEIFELE, G. (1971): Linear and regu-
+lar celestial mechanics, Springer, New York.
+[14] VIGO-AGUIAR, J., FERRÁNDIZ, J. M. (1998): «Higher-or-
+Referencias bibliográfi cas
+der variable-step algorithms adapted to the accurate numerical
+integration of perturbed oscillators», Computer in Physics, vol.
+[1] DENK, G. (1993): «A new numerical method for the integra- 12, nº 5, 467-470.
+tion of highly oscillatory second-order ordinary differential [15] VIGO-AGUIAR, J. (1999): «Approach to Variable Coeffi cients
+equations». Appl. Numer. Math, vol.13, 57-67. Methods for Special Differential Equations». International
+[2] GARCÍA-ALONSO, F. (2008): « Algoritmos para la integra- Journal of Applied Mathematics. Ed Academic Pub, vol. 1, nº 8,
+ción de problemas oscilatorios en varias frecuencias», Edicio- 911-921.
+nes Biblioteca Virtual Miguel de Cervantes. Alicante.
+[3] GARCÍA-ALONSO, F. REYES, J. A. (2007): «Una extensión
+de la serie de Taylor y su aplicación a la integración de oscila-
+dores», Boletín de la Sociedad Cubana de Matemática y Com-
+putación, vol. 5, nº 1, 1-21.
+[4] GARCÍA-ALONSO, F., REYES, J. A., FERRÁNDIZ, J. M.
+VIGO-AGUIAR, J. (2009a): «Multistep numerical methods for
+the integration of oscillatory problems in several frequencies»,
+Advances in Engineering Sofware, vol. 40, nº 8, 543-553.
+[5] GARCÍA-ALONSO, F., REYES, J. A, FERRÁNDIZ J. M., VI-
+GO-AGUIAR, J. (2009b): «Accurate numerical integration of
+perturbed oscillatory Systems in two frequencies». Transac-
+— 26 —

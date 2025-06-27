@@ -1,0 +1,493 @@
+Revista Ciencias Matemáticas
+Acotación uniforme.
+Estabilidad y estabilidad uniforme de las soluciones
+de un sistema íntegro-diferencial tipo Volterra
+José R. Velázquez Codina (velazquez@facinf.uho.edu.cu)
+Universidad de Holguín, Cuba
+Resumen #t
+xl(x)=A(t)x(t)+ B(t,s)x(s)ds+F(t), (I)
+En este trabajo se obtienen condiciones sufi cientes para garan-
+0
+tizar la acotación uniforme, de las soluciones de un sistema ín-
+#t
+tegro-diferencial tipo Volterra, así como para la estabilidad y yl(t)=A(t)y(t)+ B(t,s)y(s)ds, (II)
+0
+la estabilidad uniforme de la solución nula del correspondiente
+donde A(t) y B(t,s) son matrices cuadradas de orden n conti-
+sistema no perturbado. Se usa como método de trabajo, la cons-
+nuas, n  1, 0  s  t <+  y f:[0,+3["Rn, es continua. Se
+trucción de Funcionales de Liapunov.
+obtienen condiciones sufi cientes para que las soluciones del sis-
+tema perturbado sean uniformemente acotadas y la solución
+Abstract
+nula del sistema no perturbado sea uniformemente estable, o
+In this paper enough conditions are obtained to guarantee that
+que posean otras propiedades cualitativas.
+all the solutions of an integro-differential system of Volterra
+En [7], con la construcción de adecuadas Funcionales de
+type are uniform bounded, and the zero solution of unper-
+Liapunov, se obtuvieron resultados referidos a la acotación uni-
+turbed system is stable, and uniformly stable. It is used as wor-
+forme de las soluciones del sistema (I), así como para la estabi-
+king method, the construction of Functional of Liapunov.
+lidad y la estabilidad uniforme de la solución nula del sistema
+(II), y la pertenencia de estas soluciones a L1[0,+3[. Para ello
+se introdujo una función P(t) que es una matriz cuadrada de or-
+1. Introducción
+den n  1 derivable, acotada y no singular. Se utilizó la misma
+ecuación lineal auxiliar que la dada en [6], pero se cambió la
+Una de las técnicas de trabajo que se emplean para el estudio de
+condición Y(s) = I, por P(s).Y(s) = I. En el presente trabajo, se
+diversas propiedades cualitativas de las soluciones de ecuaciones
+cambia la ecuación lineal auxiliar y la condición Y(s) = I, por
+y sistemas integrales e íntegro-diferenciales tipo Volterra se fun-
+P(s).Y(s) = I.
+damenta en los resultados dados por W. E. Mahfoud en [6], los
+que se obtienen con el apoyo de la solución de un sistema lineal
+auxiliar y la construcción de una adecuada Funcional de Liapunov.
+2. Resultados
+En ese trabajo, se consideran los sistemas íntegro-diferen-
+ciales:
+Sean E(t) y L(t,s) matrices cuadradas de orden n  1, continuas
+0  s  t <+ .
+— 39 —
+Sociedad Cubana de Matemática y Computación
+Considérense la ecuación auxiliar Teorema 1
+Pl(t) Sea Z(t,s) solución de la ecuación (1). Supóngase que exis-
+Yl(t)=< +E(t)FY(t),
+P(t) (1) ten constantes positivas K, K , y K de manera que se cumplen
+1 2 3
+donde 1# P(t) #P. P(s).Y(s)=I las condiciones:
+(a) Z(t,t) 1K
+y M(t,s) que es una matriz cuadrada de orden n  1, que satis- 0 1
+2Pl(s)
+Z(t,s)(A(s)-< +E(s)F2+
+face la condición #t P(s)
+(b) P(t) ds#K 1K
+2M
+2
+(
+t
+t,s) =< 2
+P
+Pl
+(
+(
+t)
+t) +E(t)FM(t,s)+L(t,s)
+(2)
+0 +
+#t
+Z(t,u)B(u,s)du
+2 1
+s
+#t Z(t,u)f(u)
+Si Z(t,s) es la solución de la ecuación (1), entonces es inme- (c) du #K
+P(u) 3
+diato que
+t0
+Entonces todas las soluciones del sistema (I), son uniforme-
+#t
+M(t,s)=P(t)=Z(t,s)M(s,s)+ Z(t,u)L(u,s)duG
+(3) mente acotadas y la solución nula del sistema (II), es unifor-
+s
+memente estable.
+En efecto, para ello basta derivar la igualdad (3) respecto a sus-
+tituir en la misma a (1) y comparar la expresión obtenida, con
+Demostración
+la igualdad (2).
+Sea L(t,s) = B(t,s), entonces de (3), (4) y de (b) resulta que
+2Pl(s)
+Sea M(s,s)=A(s)-< +E(s)F
+(4)
+#t
+P(t) M(t,s) ds#K 1K
+2 1
+#t 0
+x(t)- M(t,s)x(s)ds Además, (7) permite escribir,
+y V(t,x(.))= 0 (5) V(t,x(.)) # Z(t,t 0 ) V(t0,z) +
+P(t)
+#t
+(8)
++ Z(t,u)g(u,x(.))du
+La derivada respecto a t de V^t,x^.hh a lo largo de una solu-
+t0
+ción x(t)=x(t,t,z) del sistema (I) se expresa como:
+0 como L(t,s) = B(t,s) evidentemente
+V(t,x(.))=
+Pl(t)
+=x(t)-
+#t
+M(t,s)x(s)dsG+ f(t)
+P(t) g(t,x(.))= (9)
+P(t)
+0
+1 #t 2M(t,s)
++ =xl(t)- x(s)ds-M(t,t)x(t)G Por otra parte, de (5) se infi ere que
+P(t) 2t
+0 #t
+z(t) + M(t,s) z(s) ds
+Nótese que al sustituir el sistema (I), (2) y (1) en la última ex-
+v(t0,z) # 0
+presión, esta se transforma en P(t)
+0
+Vl(t,x(.))=<
+Pl(t)
++E(t)FV(t,x(.))+
+Dado que P(t
+0
+) $1 entonces,
+P(t) V(t 0 ,z) #(1+K 2 ) z (10)
+#t
+(6)
+[B(t,s)-L(t,s)] Aplicándose (a), (c), (8), (9) y (10) se obtiene fi nalmente la es-
+f(t)
++0 x(s)ds+ timación
+P(t) P(t)
+K (1+K). z
+V(t,x(.)) #4,donde K = 1 2 +K,K !R*
+Por consiguiente, 4 P(t) 3 4 +
+0
+#t
+Obsérvese que
+V(t,x(.))=Z(t,t)V(t,z)+ Z(t,u)g(u,x(.))du (7)
+0 0
+t0
+x(t) -
+#t
+M(t,s) x(s) ds
+donde
+0 # V(t,x(.)) #K
+#t P(t) 4
+[B(t,x)-L(t,s)]
+f(t) y como P(t) #P, se tiene que
+g(t,x(.))= 0 x(s)ds+
+P(t) P(t)
+— 40 —
+Revista Ciencias Matemáticas
+#t Luego,
+x(t) - M(t,s) x(s) ds#K P(t) #PK =K
+0 4 4 (11) Y(t) 1PK (1+K) (1-K 2 ) f+K f=f
+1 2 K (1+K)P 2
+donde K!R* 1 2
++
+Ahora, o existe una constante B > 0 tal que x(t) 1B 2 , para Es decir, y(t 1 ) 1f lo que es una contradicción con lo su-
+2
+todo t  t y esto signifi ca que las soluciones del sistema (I) puesto.
+0
+son uniformemente acotadas, o existe una sucesión monótona En esta última parte se ha probado la estabilidad de la solu-
+"t ,"+3, tal que: ción nula del sistema (II) y como d es independiente de t , en-
+n 0
+y x(t
+n
+) =máx x(t) y x(t
+n
+) $+3 , cuando t
+n
+$+3 . tonces la misma es uniformemente estable.
+0#t#tn
+Del teorema precedente se obtiene el siguiente corolario.
+Supóngase que se cumple esta última condición. Entonces, al
+relacionar la premisa (b) con la desigualdad (11) resulta que:
+#tn Corolario
+x(t) - x(t) K # x(t) - x(t) M(t,s) ds
+n n 2 n n n Si n = 1, C, J y M son constantes positivas, tales que:
+0
+Es decir, <A(s)-
+Pl(s)
++CFexp[-C(t-s)]+
+x(t) (1-K)# x(t) -
+#tn
+M(t,s) x(s) ds#K (i) P(t)
+#t P(s)
+ds#J11
+n 2 n n #t
+0 0 + exp[-C(t-u)]B(u,s)du
+que es una contradicción, pues de acuerdo con lo supuesto,
+s
+debe ocurrir que x(t n ) (1-K 2 )$+3 , cuando t n $+3 . (ii) #t exp[-C(t-u)] f(u)du #M
+P(u)
+De esta forma se ha demostrado la acotación uniforme de
+0
+las soluciones del sistema (I). Entonces, las soluciones del sistema (I) son uniformemente
+Además la solución nula del sistema (II), es uniformemen- acotadas.
+te estable.
+En efecto, considérese V(t,y(.))s de la forma siguiente: Demostración
+Pl(t)
+#t Sea +E(t)=-C luego la solución de la ecuación (1)
+y(t)- M(t,s)y(s)ds P(t)
+(5*)
+V(t,y(.))= 0 se expresa como:
+P(t)
+Z(t,s)=exp[-C(t-s)] , por lo tanto
+donde y(t) es solución del sistema no perturbado (II). Z(t,s) = exp[-C(t-s)] #K,K !R* (12)
+1 1 +
+Realizándose un trabajo similar al efectuado desde (5) hasta
+Lo anteriormente señalado, posibilita escribir la condición (i)
+(10) y teniéndose en cuenta que para el sistema (II), f(t)=0 ,
+de la forma siguiente:
+se obtiene la estimación:
+Pl(s)
+V(t,y(.)) # Z(t,t 0 ) . V(t 0 ,z) # Z(t,t 0 ) z 61+K 2 @ #t <A(s)- P(s) +CFexp[-C(t-s)]+
+P(t) ds=
+Sea f > 0 cualquiera, 0 +
+#t
+exp[-C(t-u)]B(u,s)du
+(1-K)
+d=d(f)1 2 f y z 1d(f) s
+K 1 (1+K 2 )P t0 #t (A(s)-< 2 P Pl ( ( s s ) ) +E(s)F2exp[-C(t-s)]+
+Supóngase que existe t
+1
+> t
+0
+tal que y(t
+1
+) =f y en . = P(t)
+#t
+ds=(13)
+0 + exp[-C(t-u)]B(u,s)du
+De la igualdad (5*) se obtiene que:
+#t s
+Y(t) # P(t) V(t,Y(.)) + M(t,s) Y(s) ds Z(t,s)(A(s)-< 2Pl(s) +E(s)F2+
+#t P(s)
+0 = P(t) ds#J11
+para todo t![t 0 ,t 1 ]. #t
+0 + Z(t,u)B(u,s)du
+Dado que f(t) = 0 entonces (8) se transforma en
+0
+V(t,x(.)) # Z(t,t) . V(t,z)
+0 0 Sin difi cultad, con el uso de la premisa (ii) se llega a:
+y por la condición (a) y (10) resulta que
+#t Z(t,u)f(u)
+V(t,x(.)) #K z 61+K@ du #2M (14)
+1 2 P(u)
+0
+— 41 —
+Sociedad Cubana de Matemática y Computación
+Obsérvese que (12), (13) y (14) son las mismas que las premisas Además,
+del Teorema 1. <A(s)- Pl(s) +CFexp6-C(t-s)@+
+P(s)
+Este resultado es una generalización respecto al corolario
+#t
+dado en [6], como lo muestra el siguiente ejemplo: + exp6-C(t-s)@B(u,s)du=
+Ejemplo s R S S Sa 1+ b k + ab exp V W W W
+Dada la siguiente ecuación escalar S S 2 2 W W
+x d l o ( n t) de = A A , ( f t , ) } x( s t) on - f b u 4 2 n 0 c # i t o e n xp es 6 - co b n ( t t i - nu s a ) s @ , }(t,s)ds+f(t) =exp:- b 2 (t-s)D S S S S S S S S S S exp a b 2 s k J K K K K K K K K- ex e p x a p - a - b 2 b t k s - k N O O O O O O O O W W W W W W W W W W = (**)
+f(s) #kexp a b -ck^t-sh,k!R ,01a#}(t,s)#1 TR S Sa b k L ab 2 V W W PX
+2 + =exp:- b (t-s)D S S S 1+ 2 + 2 exp W W W
+es una función no nula, derivable y tal que 2 S S b ab W W
+S Sexp a - (t-s) k - W W
+1#P(t)# b c a+2 m,0#A(t)- Pl(t) #1,01c1 b T 2 2 X
+2 b+2 P(t) 2
+Teniendo en cuenta (*) y (**), es posible escribir
+Se muestra primeramente, que se satisfacen las premisas del
+Pl(s)
+<A(s)- +CFexp6-(t-s)@+
+corolario y por tanto, que las soluciones de dicha ecuación, son #t P(s)
+P(t) ds#
+uniformemente acotadas.
+#t
+0 + exp6-C(t-u)@B(u,s)du
+b
+Sea C= , entonces de (1) se obtiene que s R V
+2 S S Sa 1+ b k + W W W
+Z(t,s)=exp:- b
+2
+(t-s)D
+. b(a+2) #t b
+S S
+S S ab
+2
+b
+W W
+W W
+# exp:- (t-s)DS S+ exp a - (t-s) k - W Wds=
+La expresión 2(b+2) 2 S 2 2 W
+S W
+0 S W
+<A(s)- Pl(s) +CFexp6-C(t-s)@+ #t exp6-C(t-u)@B(u,s)du S S S- ab W W W
+es p E o n s i e t f i e v P c a ( t . s o ) s = b 2( ( b a + + 2 2 ) ) Z [ ] ] ] ]] ] ] ] ]] c + b 2 a + 61 1 - - ex a p m; ^ 1 - - bt e T h x @ p a 2 - b 2 t kE+ _ ` b b b bb b b b bb # X
+2
+Pl(s) \ a
+<A(s)- +CFexp6-C(t-s)@+ b(a+2) 2 a
+P(s) # c - +1m11
+2(b+2) b 2
+#t
++ exp6-C(t-s)@B(u,s)du=
+Lo que es evidente, pues de (*) y (**) se infi ere que
+s
+=<A(s)- P P l ( ( s s ) ) + b 2 Fexp6-C(t-s)@exp c b 2 - a 2 +1m20 ya que b 2 c b a+ + 2 2 m20 pero ab24 , que
+exp:- b (t-s)D- b2 #t }(u,s)exp:- b (t-u)Dexp (*) es consecuencia de la relación b 2 c b a+ + 2 2 m21
+2 4 2
+0 Es fácil comprobar que
+b b
+exp6-b(u-s)@ds$
+2
+exp:-
+2
+(t-s)D-
+c
+2
+-
+a
++1m+
+a^ab-4h
+=
+2
+c
+a+2
+m
+b 2 2b^a+2h b b+2
+b2 b #t b
+- exp:- (t-s)D exp:- (u-s)Ddu= a^ab-4h
+4 2 2 y como 20
+s 2b^a+2h
+b
+= exp6-b(t-s)@20 resulta que
+2
+2 a 2 a+2
+01 - +11 c m
+b 2 b b+2
+como se quería.
+Por otro lado, del hecho que
+b a+2
+1#P(t)# c m
+2 b+2
+— 42 —
+Revista Ciencias Matemáticas
+y que Aquí,
+s 0 e # t i e n x fi p e 6 r - e C la ( e t s - ti u m ) a @ c f i ( ó u n ) du #M zl(t,y(.))= t #+3 P( 1 u) Z [ ] ] ] ] ] ] ] ]+ 2 1 b 1 M D6 ( B t,s ( ) u, + t)-L(u,t)@ _ ` b b b b b b b b
+a
+\ a (16)
+#t exp6-
+P
+C
+(u
+^t
+)
+-uh@
+f(u)du #M du y(t) - 1
+#t
+*2
+1
+b M(u,s) + a
+1
+4 y(s) ds
+P(u)
+0 0 D6B(t,s)-L(t,s)@
+Por tanto, se satisface la otra premisa del corolario y con ello
+se garantiza que las soluciones de esta ecuación, sean unifor- Si se escoge L(t,s)=B(t,s) y se sustituye además (16) en (15),
+se obtiene:
+memente acotadas. Sin embargo, bajo la condición de que
+A(t)$ ab no es aplicable el corolario dado en [6]. Wl(t,y(.))# y(t) #+3 1 ' 1 M(u,t) 1du y(s)
+4 2b P(t) P(u) 2b
+t
+Pl(t)
+Por otra parte, las relaciones (3), (4) y +E(t)=C , con-
+Teorema 2 P(t)
+vierten la desigualdad anterior en:
+Pl(t)
+Si +E(t)=C, C es una matriz constante y estable y
+P(t) Wl(t,y(.))# 1
+J una constante positiva tal que: 2b P(t)
+Z] R S V W_b
+(a) P(t) t #+3 + Z( # u u Z - ( t u )< - A s ( ) t) B - (s, P P t) l ( ( d t t ) s ) -CF+ du#J11 [ ] ] ] ]] ] ] ] ] ]] -1+ P(t) S S S S S S S S S SS t #+3 + Z( # u u Z - ( t u )< - A s ( ) t) L - (s, P P t) l ( ( d t t ) s ) -CF+ du W W W W W W W W W WW ` b b b bb b b b b bb y(t)
+\ T t Xa
+t Al usar (a) y tener en cuenta que 1# P(t) #P , de la des-
+Entonces, para toda solución y(t) del sistema (II), se cumple
+igualdad precedente, se llega a la acotación
+que
+y(t)!L160,+36
+(J-1) y(t) (J-1) y(t)
+Wl(t,x(.))# # 10
+2b P(t) 2b P
+Demostración
+para todo t$t .
+0
+Sea C(t)=C una matriz constante y estable, D la única Integrándose desde t hasta t ambos miembros de esta últi-
+0
+matriz simétrica, defi nida positiva, que satisface la condición ma desigualdad, se obtiene:
+CTD+DC=-I,CT es la matriz transpuesta de C, I es la matriz (J-1) #t
+0#W(t,y(.))#W(t,z)+ y(s) ds
+0 2b P
+idéntica de orden n  1, a2 y b2 el menor y mayor valor propio
+t0
+de D respectivamente, entonces se cumple que (Ver (20) de [6]): pues W(t,x(.)) es defi nida positiva. De esta forma se concluye
+a2 z 2#zTDz#b2 z 2 , para todo z!4n . que y(t)!L160,+36 .
+Sea W(t,y(.))=6VTDV@1 2+z(t,y(.))donde:
+Z]
+]
+Z]
+] 1
+_b
+b
+_b
+b Teorema 3
+z(t,y(.))= 0 #t [ ] ] ] ] ] ]t #+3 P( 1 u) [ ] ] ] ] ] ]+ 2b 1 M D6 ( B u, ( s u ) ,s + )-L(u,s)@ ` b b b b b b du y(s) ` b b b b b b ds Sea A(t)- P P l ( ( t t ) ) =R , R es una matriz constante y esta-
+a
+\ \ a a
+ble, D, a2 y b2 son como antes y existe una constante positiva
+La derivada de W(t,y(.)) respecto a una solución
+N tal que:
+y(t)=y(t,t,z) del sistema (II) es
+0
+#+3
+a
+y(t) DP(u)B(u,t) du#N1 (17)
+Wl(t,x(.))# + 2b
+2b P(t) t
+Z]
+] 1
+_b
+b Entonces, para toda solución y(t) del sistema (II) se cumple
++ P 1 (t) 0 #t [ ] ] ] ] ] ]+ 2b a 1 M D6 ( B t,s ( ) t,s + )-L(t,s)@ ` b b b b b b (15) e q s u t e a : b y l ( e t . )!L160,+36 y la solución nula de dicho sistema, es
+\ a
+y(s) ds+zl(t,y(.))
+— 43 —
+Sociedad Cubana de Matemática y Computación
+Demostración la Sociedad Nacional de Matemática-Computación. COMPUMAT
+Al sustituir (16) en (15) se obtiene: 2005 Volumen 3 y No 1 del 2005) ISSN: 17286042.
+y(t) [10] VELÁZQUEZ J.R, (2007) Acotación y Estabilidad de las solu-
+Wl(t,y(.))#- +
+2b P(t) ciones en un sistema de Ecuaciones integrodiferenciales (X Con-
++ t #+3 P( 1 u) Z [ ] ] ] ] ] ] ] ]+ 2 1 b 1 M D6 ( B u, ( t u ) ,t + )-L(u,t)@ _ ` b b b b b b b b du y(t) (18) greso Nacional de Matemática y Computación. Holguín 2007).
+a
+\ a
+Sean C = R y L(t,s) ≡ 0 entonces de (4) y (5) resulta que
+M(t,s) ≡ 0 por lo que (18) se transforma en
+x(t) 1 #+3
+Wl(t,y(.))#- 2bP + a DB(u,t) du y(t) (19)
+t
+En consecuencia, al tener en cuenta (17) y (19), es inmediato
+que:
+1 N
+Wl(t,y(.))#c- + m y(t) 10
+2b P a
+y como W(t,y(.)) es defi nida positiva, es válida la tesis del teo-
+rema.
+Referencias bibliográfi cas
+[1] GRIMMER, R y G. SEIFERT. Stability properties of Volterra in-
+tegrodifferential equations, J. Differential Equations 19 (1975) 142
+– 166.
+[2] BURTON, T. A., Perturbed Volterra Equations. J. Differential
+Equations 43 (1982) 168 – 183.
+[3] HALLE, J.K. Ordinary differential equations, Wiley, New York
+(1969).
+[4] HALLE, J.K. Construction of Liapunov Functionals for Volterra
+equations, J. Math., Analysis Applic 85 (1982) 90-105.
+[5] HALLE, J.K. Examples of Lyapunov functionals for non-differen-
+tiated equations, Proccedings of the First World Congress of Non-
+linear Analysis. Tampa, Florida, August 19-26, (1992) 1203-1214.
+[6] MAHFOUD, W.E. Boundedness properties in Volterra integro-di-
+fferential systems, Proc. Amer. Math. Soc. 100 (1987) 37-45.
+[7] NÁPOLES, J.E. y J.R.VELÁZQUEZ, Generalizaciones de un re-
+sultado de Mahfoud sobre el comportamiento cualitativo de un
+Sistema Integro-Diferencial de tipo Volterra. Comunicaciones
+Científi cas y Tecnológicas 1998, Universidad Nacional del Nores-
+te, Argentina, Tomo IV, No 8 (1998) 17 -20.
+[8] VELÁZQUEZ J. R, Sobre el Comportamiento Cualitativo de cier-
+tos Sistemas Integrodiferenciales tipo Volterra”. Revista Ciencias
+Matemáticas, U. H. Cuba, Vol. 20, No.1 (2002) (22-33).
+[9] VELÁZQUEZ J. R, (2005) Algunos tipos de Estabilidad con el
+empleo de la Fórmula de Variación de los Parámetros”.Boletín de
+— 44 —

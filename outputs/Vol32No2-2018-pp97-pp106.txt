@@ -1,0 +1,809 @@
+CienciasMatemáticas,Vol.32,No.2,Pag.97-106, 2018
+Recibido02-2018
+Un esquema spline co´nico de Hermite fair.
+A fair Hermite quadratic spline scheme.
+D. Garc´ıa Pe´rez1, J. Estrada Sarlabous1*, S. Behar Jequ´ın2, W. Morales Lezca2
+Resumen Enestetrabajopresentamosunnuevoesquemaparalainterpolacio´ndeHermitedeunconjuntode
+puntosenelplanopormediodeunacurvasplineracionalcuadra´tica.Elsplineco´nicoesrepresentadocomouna
+curvaracionalcuadra´ticadeBe´zier,elcualdependedeunpara´metrodetensio´nlocalquecontrolalaformade
+cadaseccio´n.Definimosunafamiliadefuncionalesdefairness comoelconjuntolascombinacioneslinealesde
+lalongituddearcoydelaenerg´ıaela´sticadelaseccio´nco´nica.Elvalordelpara´metrodetensio´nqueminimiza
+elfuncionalcorrespondealacurvafair.Aplicandoelesquemadesubdivisio´nparasplinesco´nicospropuestoen
+[5]obtenemosbuenasaproximacionesnume´ricasdelfuncionalysusderivadas.Sedemuestraadema´squeel
+funcionalalcanzasuvalorm´ınimoencadaunodelossegmentosdelsplineyutilizamosunalgoritmonume´rico
+parahallarlo.Escogiendounadeterminadacombinacio´nlinealenelfuncionalsedemuestraqueelesquema
+splineco´nicodeHermitepropuestoesinvariantebajotransformacionesr´ıgidasyhomotecias,reproducearcos
+decircunferenciaysatisfacelascondicionespresentadasen[7].ElesquemahasidoimplementadoenMatLab
+ysepresentaunagaler´ıadesalidasgra´ficasdelco´digo.
+Abstract InthisworkwepresentanewschemeforHermiteinterpolationofagivensetofplanarpointswitha
+conicsplinecurve. TheconicsplineisrepresentedasapiecewiserationalquadraticBeziercurve,whichdepends
+onlocaltensionparametersinordertocontroltheshapeofeachsection. Wedefineafairness functionalfamily
+asthesetoflinearcombinationsofthearclengthandthebendingenergyoftheconicsection. Thevaluesofthe
+tensionparametersminimizingthisenergyfunctionaldeterminethefairest curve. Applyingasubdivisionscheme
+forconicsplinesintroducedin[5],weobtaingoodapproximationsofthefunctionalanditsderivative,whichare
+usedforanefficientnumericalcomputationofitsminimumvalue. Ifwechooseanspecificlinearcombination
+of the functional we can show that the proposed Hermite conic spline scheme is invariant to rigid chages of
+coordinatesanduniformscalings,reproducesarcsofcirclesandsatisfiesthefairness requirementslistedin[7].
+Thefair HermiteconicsplineschemehasbeenimplementedinMatLabandagalleryofresultsisshown.
+PalabrasClave
+Fairness,G1-continuidad,seccio´nco´nica,SplineracionaldeBe´zier,Interpolacio´ndeHermite.
+MSC:41A15,97N50,65D05
+1DepartamentodeMatema´tica,InstitutodeCiberne´tica,Matema´ticayF´ısica,LaHabana,Cuba,dayron@icimaf.cu,jestrada@icimaf.cu
+2DepartamentodeMatema´tica,UniversidaddelaHabana,LaHabana,Cuba,sofia@matcom.uh.cu,wilfre@matcom.uh.cu
+*AutorparaCorrespondencia
+Introduccio´n la curva C(t) que minimiza al funcional es solucio´n de un
+sistemadeecuacionesdiferencialesdeEulerdeorden2n.La
+Unate´cnicamuypopularparalosdisen˜adoresdecurvas
+solucio´nnume´ricadeestesistemadeecuacionesdiferencia-
+esconstruirunsplinequeinterpoleunasecuenciadepuntos
+lespuedesercomputacionalmentecostosaydesdeelpunto
+sobreelplano.Perolainterpolacio´nnosolamenteselimitaa
+devistateo´ricoesdif´ıcilgarantizarquelacurvao´ptimasea
+e´stos,sinoquetambie´nsepuedeespecificarqueseatangente
+acotada,conexaynosingularenlaregio´ndeintere´s.Poreste
+a ciertas direcciones en cada uno de los puntos (interpola- motivonosrestringiremosabuscarelm´ınimodelfuncionalde
+cio´ndeHermite).Existeninfinitascurvasquesatisfacenestas fairnessenunespaciodefuncionesG1-continuasdedimen-
+condicionesdeinterpolacio´n,porloqueesdeesperarqueel
+sio´nfinitaquesatisfagandeformanaturallainterpolacio´nde
+disen˜ador seleccione la que mejor se ajusta a los datos. En Hermiteycuyagraficacio´nseapococostosa:lascurvasspline
+estesentidoseintroducelanocio´ndeloqueesunacurvafair.
+racionalescuadra´ticasdeBe´zier.
+Segu´nelca´lculovariacional[4],considerandoalascom- Dadounconjuntoordenadodepuntosdelplanoyvectores
+ponentesdelaparametrizacio´ndelacurvaC(t)=(x(t),y(t)) asociadosae´stos,nosproponemosconstruirunsplineracional
+comofuncionessuavesdet,sielfuncionaldefairnessincluye cuadra´ticodeBe´ziertalquelosinterpoleyquelatangentedel
+alasderivadasdeordenndex(t)yy(t)respectoat,entonces splineenesospuntostengalamismadireccio´nqueelvector
+98 Unesquemasplineco´nicodeHermitefair.
+queseleasocia.EstalacurvasplinedebeserG1-continuay Bernstein-Be´zier(1),seobtienecomounacombinacio´nconve-
+fair.Seestudiaunfuncionaldefairnessdefinidoente´rminos xa(barice´ntrica)delospuntosdecontrolparacadat∈[0,1]y
+delaenerg´ıaela´sticaylongituddearcodeunaseccio´ndel esta´contenidaenlaenvolturaconvexadelpol´ıgonodecontrol.
+splineysedemuestranalgunasdesuspropiedades,comoson
+su invarianza a transformaciones r´ıgidas de coordenadas y LascurvasenlaformaBernstein-Be´zierofrecenlaventaja
+homoteciasylareproduccio´ndearcosdecircunferencias. de poder manipular su geometr´ıa a trave´s de los puntos de
+control.Estascurvastienenunageneralizacio´nalcasoracio-
+1. Algunos Resultados Relativos a las nalofreciendoma´sflexibilidadasuspropiedadesgeome´tricas
+yaplicaciones.
+Curvas de Be´zier
+Unsplinedeinterpolacio´nesta´ constituidoporsecciones
+decurvasdebajogradoqueinterpolanunconjuntodepuntos Definicio´n UnacurvaracionaldeBe´zierdegradonesuna
+ordenadosdelplano.Elhechodequelasseccionesinterpolan- curva parame´trica descrita por los puntos de control
+tesnotenganungradotanelevadogarantizaquenopresente {b i }n i=0 ,lospesos{ω}n i=0 yelpara´metrot∈[0,1],con
+oscilacionesindeseadas.Sedicequeunsplinedeinterpola- laforma
+cio´n es de Hermite si adema´s de interpolar un conjunto de C(t)=
+∑n
+i=0
+ω
+i
+b
+i
+Bn
+i
+(t)
+. (2)
+puntos del plano, tambie´n lo hace para ciertas direcciones ∑n i=0 ω i Bn i (t)
+tangentessobrecadaunodelospuntos.Enestetrabajocada
+Algunas de las propiedades de las curvas racionales de
+unodee´stossegmentosesunacurvaracionalcuadra´ticade
+Be´ziersonlainvarianciaaf´ın,lainvarianciabajotransfor-
+Be´zier,lascualesporsuspropiedades,sonadecuadasparala
+macionesparame´tricasafines,lapropiedaddelaenvoltura
+interpolacio´n.
+convexaylainterpolacio´ndelospuntosextremosylasaristas
+incidentesdelpol´ıgonodecontrol.
+En esta seccio´n introduciremos algunas definiciones y
+resultadosba´sicosdelascurvasdeBe´ziertomadosde[5].
+1.3 SeccionesCo´nicas
+Lasseccionesco´nicas(deformaabreviada:co´nicas)han
+1.1 PolinomiosdeBernstein
+recibidolamayoratencio´nalolargodelossiglos.Acontinua-
+Definicio´n LospolinomiosdeBernsteindegradonsondela
+cio´nmostraremosalgunosdelosconceptosba´sicosrelaciona-
+forma
+dosconestascurvas,quesera´npartedelobjetodeestudiode
+(cid:18) n (cid:19) estetrabajo.Paralasseccionesco´nicasusaremoslasiguiente
+Bn(t)= ti(1−t)n−i, i=0,...,n.
+i i definicio´ntomadade[6]:
+Definicio´n Unaseccio´nco´nicaenR2eslaproyeccio´ndeuna
+Una propiedad de los polinomios de Bernstein es que
+para´bolaenR3sobreunplano.
+satisfacenlasiguientefo´rmuladerecursio´n
+Porestoesnaturalverlasco´nicascomocurvasracionales
+Bn(t)=(1−t)Bn−1+tBn−1(t).
+i i i−1 enelplano.Enparticular,surepresentacio´nenlaformade
+Otrapropiedadimportanteesqueformanunaparticio´n Bernstein-Be´zier(2)es
+delaunidad,dadoque
+C(t)=
+∑2
+i=0
+ω
+i
+b
+i
+B2
+i
+(t)
+.
+∑
+n
+Bn(t)= ∑
+n (cid:18) n (cid:19)
+tj(1−t)n−j=[t+(1−t)]n=1.
+∑2
+i=0
+ω
+i
+B2
+i
+(t)
+j i
+j=0 j=0 Llamamosalospuntosb i puntosdecontroldelaco´nica
+C,alpol´ıgonoqueseconstruyeuniendodospuntosdecontrol
+1.2 CurvasdeBe´zier consecutivospol´ıgonodecontrolyalospara´metrosdetensio´n
+De acuerdo a lo anterior, los polinomios de Bernstein ω selesdenominanpesoscorrespondientesalosve´rticesdel
+i
+Bn degradonformanunabasedelespaciovectorialdelos pol´ıgonodecontrol.Estacurvapuedeserparametrizadaala
+i
+polinomiosdegradomenoroigualquen.Deestemodo,toda formaesta´ndar demaneraqueω =ω =1yω =ω,por
+0 2 1
+curvapolino´micaC(t)degradomenoroigualquenposee tantolacurvaseexpresacomo
+unarepresentacio´ndeBe´zieru´nica
+b B2(t)+ωb B2(t)+b B2(t)
+n C(t)= 0 0 1 1 2 2 , (3)
+C(t)=∑b i Bn i (t), (1) B2 0 (t)+ωB2 1 (t)+B2 2 (t)
+i=0
+dondeelpara´metroω controlalaformadelacurvademanera
+dondeloscoeficientes{b}n ⊂Rm,m=2,3,...sonllama- mono´tona,permitiendolasiguienteclasificacio´n:Si0<ω<1
+i i=0
+dos puntos de control (o puntos de Be´zier). Si los puntos se tiene una elipse, con el c´ırculo como caso particular. Si
+{b}n ,formanunpol´ıgonoconvexo(uniendolosve´rticesen ω =1setieneunapara´bola.Siω >1setieneunahipe´rbola.
+i i=0
+elordendado),entonceslacurvapolino´micaenlaformade
+Unesquemasplineco´nicodeHermitefair. 99
+Aunquetienesentidohablardeω <0,apartirdeahora y es tangente en P j al segmento P j P j . Este arco de
+k+2 k+1 k+2
+seconsiderara´ ω ≥0amenosqueseindiquelocontrario;de co´nica queda dividido en 2 subarcos de co´nica racional de
+estemodosegarantizaquesecumplalapropiedaddeenvol- Be´zier,contria´ngulosdecontroldeterminadosporlosve´rtices
+turaconvexa,lacualsera´deespecialimportanciadeahoraen dePj+1ysuspara´metrosdetensio´nsecalculanapartirdeω j .
+i
+adelante.
+Losdetallesdelesquemadesubdivisio´nsedanaconti-
+Como las co´nicas son curvas racionales de grado 2, se nuacio´n.Lademostracio´ndelosresultadosdeestaseccio´n
+necesitan 3 puntos de control. Al tria´ngulo cuyos ve´rtices puedenverseenlatesisdeR.D´ıaz[5].
+sontalespuntosselellamatria´ngulodecontrol.Laco´nica
+correspondiente a (3), interpola a los ve´rtices b y b y es
+0 2
+tangentealosladosqueunendichosve´rticesconb .
+1
+Avecesesma´su´tilconocerlaecuacio´nimpl´ıcitadeuna
+curvaenvezdelaexpresio´nparame´trica,enparticular,como
+unmododecomprobarsiunpuntoseencuentrasobrelacurva
+ono.Todaco´nicaC(t)tieneunarepresentacio´nimpl´ıcitade
+laforma: f(x,y)=0,donde f esunpolinomiocuadra´ticode Figura1.ProcesodeSubdivisio´n.
+xyy.Haciendousodelascoordenadasbarice´ntricaspodemos
+plantearelsiguienteteorema. Enefecto,dados3puntosconsecutivosdePj,P j ,P j ,
+i i+1
+P j , con i impar, y el para´metro ω j del arco de co´nica
+Teorema Sean(u,v,1−u−v)lascoordenadasbarice´ntricas i+2 i
+asociado,secalculanapartirdee´stos5puntosdelpol´ıgono
+de un punto perteneciente a la co´nica con para´metro
+refinadoP
+j+1,..,P j+1
+comosigue.
+ω correspondientealtria´ngulodecontrol,secumple 2i−1 2i+3
+entonces que u y v satisfacen la siguiente ecuacio´n
+impl´ıcita
+v2−4ω2u(1−u−v)=0. (4) P 2 j+ i− 1 1 = P i j, (5)
+P j+1 = P j . (6)
+Tomando la representacio´n de la co´nica en la forma de 2i+3 i+2
+Bernstein-Be´zier (3), se denomina shoulder point al punto
+Tomamos los puntos P j,P j de la arista i y los puntos
+S=C(1), cumplie´ndose adema´s que es la interseccio´n de i i+1
+larecta 2 queunealve´rticeb 1 deltria´ngulodecontrolconel P i j +1 ,P i j +2 delaaristai+1paracalcularnuevospuntossobre
+puntomediodelaaristaqueuneb conb .Estepuntodela ellas
+0 2
+co´nicajuegaunpapelfundamentalenlaregladesubdivisio´n
+P
+j+ω j
+P
+j
+queveremosacontinuacio´n. P j+1 = i i i+1, (7)
+2i 1+ω j
+i
+2. Regla de Subdivisio´n P j +ω j P j
+P j+1 = i+2 i i+1. (8)
+Dadounconjuntodepuntos{Q i ,i=1,..,m}yvectores
+2i+2 1+ω
+i
+j
+asociadosae´stos{(cid:126)v,i=1,..,m},sicalculamoslospuntosM
+i i
+Comoyahab´ıamosvistoanteriormente,elshoulderpoint
+deinterseccio´ndelarectaquepasaporQ contangente(cid:126)v con
+i i
+puedesercalculadomediante
+larectaquepasaconporQ contangente(cid:126)v ,entonces
+i+1 i+1
+podemosconstruirunpol´ıgonoinicialdesubdivisio´nP0con
+ve´rtices{P0 i ,i=1,..,2m−1}definidoscomoP0 2i−1 =Q i y S j=S j+1=P j+1 = P 2 j+ i 1+P 2 j+ i+ 1 2. (9)
+P0 =M.Apartirdeestepol´ıgonoinicialdecontrolsecons- i 2i 2i+1 2
+2i i
+truyenrecursivamenterefinamientosPj,quesonelresultado
+Si sustituimos las ecuaciones (7) y (8) en (9) se tiene
+deaplicar j-vecesunaregladesubdivisio´naP0.
+finalmenteque
+EsteprocesoderefinamientodePj consisteenlosiguien-
+t c e o . n D k a i d m o p s a t r r , e e s n p P un j+ to 1 s se co c n o s n e s c e u rv ti a v n os el d p e ri P m j e , r P o k j y , P el k j + u´l 1 ti y mo P k j ( + P 2 j , P 2 j+ i+ 1 1 = P i j+2 2 ω (1 i j P + i j + ω 1 i j + ) P i j +2. (10)
+k
+j j
+y P ) y el punto intermedio, P , se sustituye por tres
+k+2 k+1 Encadaiteracio´n,lospuntosdelapoligonaldecontrol
+nuevospuntos,quesonciertospuntosinterioresdelosseg-
+consub´ındiceimparpertenecenalacurva.Amedidaqueel
+j j j j
+mentos P P y P P y el sholuder point del arco de
+k k+1 k+1 k+2 algoritmorealizaunmayornu´merodeiteracionessegenera
+j j
+co´nicaconpara´metrodetensio´nω i queinterpolaaP k+1 y unamayorcantidaddepuntossobrelacurva.
+j j j j
+estangenteenP alsegmentoP P einterpolaaP
+k+1 k k+1 k+2
+100 Unesquemasplineco´nicodeHermitefair.
+Teorema Seaω j elpara´metrodetensio´nasociadoalaco´ni- porlospuntosP ,P ,P puedeserdescritoporlaparametri-
+i 0 1 2
+ca i-e´sima en el paso j-e´simo y sean ω j y ω j los zacio´n
+2i−1 2i
+para´metros asociados a los subarcos de esta co´nica,
+P B2(t)+ωP B2(t)+P B2(t)
+entoncessecumpleque x(t) = 0,x 0 1,x 1 2,x 2 ,
+B2(t)+ωB2(t)+B2(t)
+0 1 2
+(cid:115)
+1+ω j y(t) =
+P
+0,y
+B2
+0
+(t)+ωP
+1,y
+B2
+1
+(t)+P
+2,y
+B2
+2
+(t)
+.
+ω j+1 =ω j+1= i . (11) B2(t)+ωB2(t)+B2(t)
+2i−1 2i 2 0 1 2
+dondeP =(P ,P ),i=0,1,2.
+i i,x i,y
+Esta´ claro que los puntos con sub´ındice impar inserta-
+dosencadapasopertenecenaunarcodeco´nicaracionalde Realizandounaadecuadatraslacio´nyrotacio´ndelosejes
+Be´zierquecorrespondeaunacurvasplinequeinterpolalos coordenadosdemodoqueelsegmentoP 0 P 2 este´ incluidoen
+puntos dados como datos y las tangentes asociadas a cada elejedelasabscisas(verFigura2)selograunaparametriza-
+unodeellos,peronoquedaclaroquelasucesio´ndepuntos cio´nma´ssencilladelaseccio´nco´nicainterioraltria´ngulode
+quesevagenerandocubretodoestearcodeco´nicaynose controlconve´rticesP 0 ,P 1 yP2.
+acumulanalrededordeunnu´merofinitodepuntossobrela
+co´nica.Sepuededemostrarquelasucesio´ndelma´ximode
+lasnormasdelasdiferenciasentredospuntosconsecutivos P
+1
+encadarefinamientotiendeacero,ve´ase[5].
+P(cid:48)(cid:48)
+1
+P
+3. Estudio del Fairness 2
+P
+0
+Porfair seentiende,deformaintuitiva,unacurvacuya
+P(cid:48)(cid:48) P(cid:48)(cid:48)
+gra´ficadecurvaturaescontinua,conmuypocasoscilaciones 0 2
+Figura2.Cambiodecoordenadas
+yconvaloresextremosnomuygrandes.Taldefinicio´n,apesar
+desersubjetiva,essinembargomuypra´ctica,puesunacurva
+faires,este´ticamente,loquema´sdeseaundisen˜ador.Elplo- Laparametrizacio´ndelacurvaconrespectoalasnuevas
+teodecurvaturasera´ usadoporundisen˜adordeexperiencia coordenadasquedadelasiguientemanera
+como una herramienta cotidiana e imprescindible pues, en
+2a(1−t)tω+Lt2
+general, de todas las posibles curvas que puedan utilizarse x(t) = , (12)
+parainterpolarunconjuntodedatos,sueleserlacurvafair
+(1−t)2+2(1−t)tω+t2
+quienmejorlohace. 2b(1−t)tω
+y(t) = , (13)
+(1−t)2+2(1−t)tω+t2
+Comorequisitosimportantesquedebesatisfacerunacurva
+fairpodemoscitarlossiguientes(quefuerontomadosde[7]): donde L es la longitud del segmento P P y (a,b) son las
+0 2
+nuevascoordenadasdelsegundove´rticedeltria´ngulo,P (cid:48)(cid:48).
+1
+1. Extensionalidad,entendidaapartirdequesiseadicio-
+nancomonuevosdatospuntosqueesta´nsobreelspline Conestanuevaparametrizacio´ndelascurvasracionales
+original,elnuevosplinenovar´ıasignificativamente. deBe´zierdebemosdejarclaroenque´ dominiooespaciode
+para´metrosesta´nellasdefinidas.Puestoquelaparametriza-
+cio´ndependedea,b,L,ω yt,definimosentonceselsiguiente
+2. Redondez,entendidacomoreproduccio´ndearcosde
+espaciodepara´metros.
+c´ırculo.
+Definicio´n Sedefinecomoelespaciodepara´metrosE⊂R5
+3. Altoordendecontinuidad.
+alospuntosquecumplenlassiguientescondiciones
+4. Curvaturamono´tona. E = {(a,b,L,ω,t)∈R5talesque
+a>0,b>0,L>0,ω ≥0,0≤t≤1}. (14)
+3.1 Uncambiodecoordenadasadecuado
+Enestaseccio´nintroduciremosuncambiodecoordenadas Elmotivoporelquedebemosespecificarque´valorespue-
+queposibilitaunarepresentacio´nma´ssencilladelaparame- detomarcadapara´metrodelaparametrizacio´ndadapor(12)
+trizacio´ndeunaseccio´nco´nicaenlabasedeBernstein-Be´zier. y(13)esqueparavaloresnegativosdea,byLeltria´ngulode
+controlesdegenerado,ylasco´nicasdeBe´zieresta´ndefinidas
+Lossegmentosdelsplinesedescribenmediantelafo´rmula paravaloresdeω≥0yt∈[0,1]comosemostro´enlaseccio´n
+parame´tricadadapor(3).Elsegmentodeco´nicadeterminado 1.2.
+Unesquemasplineco´nicodeHermitefair. 101
+3.2 Longituddearcodeunaco´nica 3.3 Energ´ıaEla´sticadeunaCo´nica
+La longitud de arco de una curva parame´trica C(t) se Laenerg´ıaela´sticaoenerg´ıadedeformacio´nesuncon-
+puedecalcularpor ceptoquevienedelaF´ısicaysedefinecomoelaumentode
+energ´ıainternaacumuladaenelinteriordeunso´lidodeforma-
+(cid:90) 1
+S= ||C(cid:48)(t)||dt, (15) blecomoresultadodeltrabajorealizadoporlasfuerzasque
+0 provocanladeformacio´n.Elvalordelaenerg´ıaela´sticade
+(cid:112)
+dondesabemosque||C(cid:48)(t)||= (x(cid:48)(t))2+(y(cid:48)(t))2 ylasex- unacurvasedefinecomoelvalordelasiguienteintegral:
+presiones de x(cid:48)(t)y y(cid:48)(t)se obtienen dederivar (12) y (13)
+(cid:90) l
+respectoalpara´metrot. E= k2(s)ds,
+0
+DadostrespuntosdelplanoP ,P ,P ,e´stosdefinentres
+0 1 2 dondel eslalongituddelacurvayk(s)eslacurvaturadel
+valoresparalospara´metrosa,byLdelaparametrizacio´nde
+punto que describe una longitud de arco s. Si hacemos un
+lacurvadadaporlasecuaciones(12)y(13).Siconsideramos
+fijoslospara´metrosa,byLentoncesde(12)y(13)seobtiene cambiodepara´metrospodemosdecirque
+lasiguienteexpresio´nparalalongituddearco.
+(cid:90) l (cid:90) 1(cid:18) ds (cid:19)
+(cid:113) E= k2(s)ds= k2(t) (t) dt.
+(cid:90) 12 b2ω2(2t−1)2+(−2atω+aω+Lt−Lt2+Lt2ω)2 0 0 dt
+S(ω)= dt
+0
+(−1+2t−2t2−2tω+2t2ω)2
+Sabemosquedentrodeunamismafamiliadeco´nicasde
+(16)
+Be´zier,cadamiembrodelafamiliaesta´ caracterizadoporun
+dondelospara´metrosa,byLdeterminanlageometr´ıadel
+determinadovalordelpara´metroω.Siprocedemosigualque
+tria´ngulodecontrol. en la seccio´n 3.2, fijando los valores de a, b y L, entonces
+laenerg´ıaela´sticadeunaco´nicapuederepresentarseporla
+Elsiguientelemaargumentalacontinuidaddelafuncio´n siguientefuncio´n
+S(ω):
+(cid:90) 1 b2ω2L2(cid:0) −1+2t−2t2−2tω+2t2ω (cid:1)4
+Lema Restringiendolospara´metrosalespacioE,lafuncio´n E(ω)=
+0 2
+(cid:16)
+b2ω2(2t−1)2+(−2atω+aω+Lt−Lt2+Lt2ω)2
+(cid:17)5/2 dt.
+S(ω)en(16)ysuderivadarespectoaω sonfunciones
+(17)
+continuasdeω.
+Demostracio´n
+Lema Restringiendolospara´metrosalespacioE,secumple
+Essuficientehallarlosvaloresdelospara´metrosqueanulanel que
+denominadordelintegrandode(16)ycomprobarquedichos
+valoresnoesta´nenE. a) lafuncio´nE(ω)en(17)ysuderivadarespectoa
+ω sonfuncionescontinuasdeω,
+Enefecto,eld
+√
+enominadordelintegrandoen(16)seanulapara b) siω →0entoncesE(ω)→∞,
+±t= −1+ω+ −1+ω2 .Esportantoinmediatoverificarquesi c) siω →∞,entoncesE(ω)→∞.
+2(−1+ω)
+0≤ω<1oω>1,loscerosdeldenominadordelintegrando
+Demostracio´n
+nopertenecenalintervalo[0,1]previstoparat∈E.Porotra
+parte,siω =1,eldenominadoreside´nticamenteiguala1y
+a)Eldenominadordelintegrandoen(17)esigualaunacons-
+noseanula.(cid:4)
+tantemultiplicadaporlara´ızdeunasumadecuadrados,que
+noseanulansimulta´neamentesit,ω,L∈E.
+Cuandoω →0,laco´nicaquedescribeestepara´metrode
+tensio´nseaproximaalsegmentoderectaqueunealospuntos b)Paratyωmuypequen˜os,laderivadadelintegrandode(17)
+deinterpolacio´nP 0 yP 2 ,esdecir respectoatyevaluadaent=0esiguala−5b2L3a+O (cid:0) ω−3(cid:1) .
+2ω4
+l´ımS(ω)=||P −P ||. Respectivamente,laderivadadelintegrandode(17)respec-
+0 2
+ω→0
+to a ω y evaluada en t =0 igual a −
+3b2L2
+. Por lo
+Sielpara´metrodetensio´ntomavaloresmuyelevados,el
+2ω4(a2+b2)5/2
+tanto,ambasderivadassonnegativasyexisteentoncesuna
+arcodecurva(queesconvexoeinterpolaaP yP )tiende
+0 2
+vecindad V de (t,ω)=(0,0) para la que el integrando de
+a acercarse al segundo ve´rtice del tria´ngulo P , lo que trae
+1
+(17)esestrictamentedecreciente.Siδ >0essuficientemente
+comoconsecuenciaquelalongituddearcoseaproximaala
+pequen˜o,podemossuponerque{(t,ω)/ma´x(t,ω)≤δ}⊂V
+sumadelaslongitudesdelosladosdeltria´nguloP P yP P ,
+0 1 1 2
+yadema´ssecumplequelaevaluacio´ndeesteintegrandoen
+estoes
+(t,ω)=(δ,δ)esiguala
+b2L2
++O
+(cid:0) δ−2(cid:1)
+.De-
+l´ım S(ω)=||P
+0
+−P
+1
+||+||P
+1
+−P
+2
+||. 2(2aL+b2+L2+a2)5/2 δ3
+ω→∞ bidoalamonoton´ıadelintegrandorestringidoaV resultaque
+De lo anterior se infiere que la longitud de arco de una laintegralparaelsubintervalot∈[0,δ]esmayorqueO
+(cid:0) δ−2(cid:1)
+co´nicaesunafuncio´nacotadadelpara´metroω.
+102 Unesquemasplineco´nicodeHermitefair.
+Puesto que el integrando es no negativo, la integral para combinacio´nlinealdelfuncional(18),conλ ∈[0,+∞);
+t ∈[0,1]en(17)esmayoralaintegralparaelsubintervalo entonceselfuncionalF (ω)alcanzasum´ınimoenel
+λ
+t ∈[0,δ], consecuentemente, la integral en (17) es estricta- intervalo(0,+∞)paraω.
+mente mayor que O
+(cid:0) δ−2(cid:1)
+. Si δ (y consecuentemente ω )
+Demostracio´n
+tiendea0,estau´ltimaintegraltiendea∞.
+Elfuncionaldefairnesstomavalorestanelevadoscomouno
+c) Si ω es muy grande, el integrando de (17) es igual a
+quieracuandoω →0yω →∞.Loanteriorpermiteafirmar
+(cid:16)
+b2(2t−
+8
+1
+b
+)2
+2
++
+L2
+(
+t
+−
+4(
+2
+−
+a
+1
+t
++
++
+t
+a
+)
++
+4ω Lt2)2(cid:17)5/2 +O(1), o sea, es O(ω), para que,paraalmenosdosvaloresdiferentesdeω,elfuncional
+alcanza un mismo valor. Supongamos que ello ocurre para
+δ >0suficientementepequen˜oyt∈[δ,1−δ].Porlotanto,
+ω =ε yω =ξ,osea,F (ε)=F (ξ).
+λ λ
+la integral en (17) restringida al subintervalo t ∈[δ,1−δ]
+tiendea∞siω tiendea∞.(cid:4)
+Asumiendoε <ξ yrestringiendoahoraelfuncionalalinter-
+valo[ε,ξ]enelqueyasehab´ıademostradosucontinuidad
+3.4 Funcionaldefairness
+entonces,porelteoremadeWeierstrass,sepuedeafirmarque
+Existendiferentesfuncionalesquenosbrindanunaidea
+losvaloresextremosenesteintervalosealcanzan.Ennuestro
+delfairnessdeunacurva.Entrelosma´sempleadosseencuen-
+casoenparticular,nosinteresasuvalorm´ınimo.
+traneldeminimizarlaenerg´ıaela´sticaylalongituddearcode
+unacurva.Elfuncionaldefairessma´scomu´nmenteempleado
+SabemosporelteoremadeFermat(ver[8])quesiunextremo
+enlaliteraturaesunacombinacio´nlinealdelaenerg´ıaela´stica
+se alcanza en un punto interior de un intervalo donde la
+ydelalongituddearco(ve´ase[2],[9],[10],[11]).
+funcio´nesderivable,laderivadaendichoextremoseanula.
+F (ω) = E(ω)+λS(ω) (18) Dado que ya se probo´ que el funcional es derivable en el
+λ
+(cid:90) 1(cid:18) ds (cid:19) (cid:90) 1ds intervalo [ε,ξ] y adema´s F λ (ε) = F λ (ξ) entonces por el
+= k2(ω,t) (ω,t) dt+λ (ω,t)dt. teoremadeRolle(ver[8])laderivadadelafuncio´nseanula
+dt dt
+0 0 al menos una vez en el intervalo y, el m´ınimo buscado se
+Estefuncionaldescribelaenerg´ıaela´sticaquealmacena halla,portanto,entrelospuntosqueanulanladerivadadel
+una curva racional cuadra´tica de Be´zier ma´s la longitud
+funcional.(cid:4)
+de arco multiplicada por un cierto λ ≥0, donde el usuario
+decidesuvalorendependenciaacua´ldelasdosenerg´ıasle Ellemaanteriorsoloestablecelaexistenciadeunm´ınimo
+quieredarmayorpeso. del funcional (18) en el intervalo (0,+∞) para ω, pero no
+establecesuunicidad.Demostrarlaunicidaddirectamentea
+Comoyasehademostradoenloslemasdelassecciones partirdelana´lisisdelasegundaderivadadelfuncionalresul-
+3.2y3.3tantoelfuncionalF (ω)comosuderivadarespecto ta ser muy engorroso. Sin embargo, en todos los ejemplos
+λ
+al para´metro ω son continuos en el espacio de para´metros nume´ricoscalculados,estefuncionalresultaserconvexo.Por
+E.Otrapropiedaddemostradaenlaseccio´n3.3,esquetoma lotanto,declaramosunaseccio´ndeco´nicacomofair,sisu
+valoresmuyelevadoscuandoω →0yω →∞. para´metro ω es un m´ınimo local del funcional (18) y por
+extensio´n,unsplineco´nicoesfair,sitodassusseccioneslo
+LaderivadadeF (ω)respectoaω , ∂F λ (ω) ,esiguala son.
+λ ∂ω
+(cid:18) (cid:19)
+3.5 Aproximacionesdelfuncionaldefairness
+∂ k2(ω,t)ds(ω,t)
+(cid:90) 1 dt (cid:90) 1∂ds(ω,t) Elprocesodesubdivisio´n(seccio´n2)generaunasecuen-
+F(cid:48)(ω)= dt+λ dt dt. (19)
+λ 0 ∂ω 0 ∂ω ciadepoligonalesconvergentesalacurva{P0,P1,...,Pj,...}.
+Tomamosentonceslasumadelaslongitudesdelossegmentos
+que componen la poligonal Pj como aproximaciones de la
+Secalcularonexpresionesexpl´ıcitasparalosintegrandos
+longituddearco.Setieneentonceslaaproximacio´n
+enlaformulaanterior,quenoseincluyenporsucomplejidad.
+(cid:90) 1 n n
+3.4.1 Existenciadem´ınimo S(ω)= ||C(cid:48)(ω,t)||dt≈∑||P j−P j ||=∑l, (20)
+Elvalordelpara´metroω quedescribelacurvafaircomo
+0 i=1
+i i−1
+i=1
+i
+hab´ıamosdefinidodesdeelinicio,eselsiguiente:
+donde l =||P j−P j || es la distancia entre los puntos P j
+arg{m´ınF (ω)}. i i i−1 i
+ω λ y P j , por tanto, la longitud del segmento i-e´simo de la
+i−1
+poligonaldeaproximacio´nPj.
+Elsiguientelemademuestraqueelfuncionaldefairness
+alcanzasuvalorm´ınimoenelespaciodepara´metrosE.
+Laintegralquedefinelaenerg´ıaela´sticapuedeserredu-
+Lema Sienelespaciodepara´metrosEestablecemosvalores cidaaunaintegralel´ıptica,peroelprocesodesureduccio´n
+fijosdea,byL,yadema´sfijamoselvalordeλ enla a la forma normal de Legendre resulta ser complicado e
+Unesquemasplineco´nicodeHermitefair. 103
+inestablenume´ricamente,porloqueutilizamoselhechode deconvergenciadee´steme´todoestancomplicadocomore-
+quepodemosgenerarunamuestrasuficientementegrandede solveranal´ıticamentelaecuacio´n.Debemosdestacarquela
+puntossobrelacurvay,conpococostoadicional,aproximar expresio´nanal´ıticadeladerivadadelfuncionaldefairness
+lasintegralesutilizandounme´tododeintegracio´nnume´rica F(cid:48)(ω)esmuchoma´scomplicadaqueladelpropiofuncional,
+λ
+comoelme´tododelostrapecios. noobstanteelalgoritmodesarrolladoevalu´adirectamentesu
+expresio´n.Laexpresio´nanal´ıticadelasegundaderivadadel
+Usandoelcambiodecoordenadasdadoenlaseccio´n3.1 funcionalF(cid:48)(cid:48)(ω),resultatancomplicadaqueesma´seficien-
+λ
+para la i-e´sima seccio´n del spline, si tenemos una muestra te obtener aproximaciones de sus valores por medio de la
+depuntos{P ,...,P }sobrelai-e´simaseccio´ndelsplinecon diferenciacio´nnume´ricadelaprimeraderivada
+0 n
+coordenadas P =(x ,y ),k =0,..,n , a cada punto P se
+k k k k
+F(cid:48)(x+h)−F(cid:48)(x)
+le hace corresponder un u´nico valor del para´metrot k en la F(cid:48)(cid:48)(x)=l´ım λ λ .
+parametrizacio´ndelacurva,dadoporlafo´rmuladeinversio´n λ h→0 h
+2ω(bx −ay ) El segundo me´todo es conocido en la literatura como
+i k k
+t
+k
+= . (21) Me´tododelaSeccio´ndeOrooMe´tododelaSeccio´nA´urea
+2ω(bx −ay )+Ly
+i k k k
+(Ver[1]).Esteme´todoba´sicamentevareduciendoelintervalo
+Unavezcalculadoelvalort esposiblecalcularelvalor de incertidumbre donde se encuentra el valor m´ınimo de
+k
+decurvaturaenelpuntoP utilizandolaparametrizacio´nen la funcio´n hasta obtener un intervalo donde el error de la
+k
+(12)y(13): aproximacio´nnoseamayorqueunciertovalordadoporel
+usuario.Usualmenteelme´todobrindabuenasaproximaciones
+|x(cid:48)(t )y(cid:48)(cid:48)(t )−y(cid:48)(t )x(cid:48)(cid:48)(t )|
+k(t )= k k k k . (22) enelcasodequelafuncio´nobjetivoseaconvexa,sinembargo,
+k ((x(cid:48)(t k ))2+(y(cid:48)(t k ))2)3/2 este resultado no se demostro´ en el presente trabajo por
+locomplicadoqueresultatrabajarconelfuncionaldefairness.
+Esposibleentoncesobtenerbuenasaproximacionesdel
+valordelafuncio´ndelaenerg´ıaela´sticadefinidabasa´ndonos
+Noobstante,ambosme´todosbrindanigualresultadopara
+enlamuestradepuntosgeneradasobrelai-e´simaseccio´nde
+losmismospara´metroscomosemostrara´ enlaseccio´n4.
+lacurvaspline.Comoyahab´ıamosvistoenlaseccio´n2,la
+muestradepuntossobrelacurvaquesegeneraenelproceso
+desubdivisio´nnoseacumulanalrededordeunnu´merofinito 4. Resultados nume´ricos
+de ellos y a mayor cantidad de iteraciones que se realicen, Debemosdestacaradema´senestaseccio´nquepeseaque
+menorsera´ladistanciaentrecadapardepuntosconsecutivos. no se obtuvieron soluciones exactas de las integrales que
+Estogarantizaquelalongituddelosintervalosdelaparticio´n definenlosfuncionalesdeenerg´ıaela´sticaylongituddearco
+del intervalo de integracio´n [0,1] sea tan pequen˜a como se en las secciones 3.2 y 3.3, las aproximaciones nume´ricas
+desee,permitiendoqueelme´tododelostrapeciosaporteuna realizadasmuestranbuenosresultados,loscualesproponemos
+buenaaproximacio´ndelfuncional. acontinuacio´n.
+Esposibleobtenertambie´naproximacionesparaladeri- Laexperimentacio´nnume´ricarealizadaparaqueelfun-
+vadadeF (ω)respectoaω ,
+∂F
+λ
+(ω)
+,calculandoaproximada- cional de fairness presente las caracter´ısticas expuestas en
+λ ∂ω
+mentelasintegralesen(19). eliniciodelaseccio´n3,motivo´ aproponercomovalordel
+para´metroλ enlaexpresio´n(18)elsiguiente
+3.5.1 Hallarelvalorm´ınimo
+Yatenemosentoncestantoaproximacionesdelfuncional sen2(β)
+λ = (23)
+y de su derivada respecto a ω, nos resta entonces hallar cos2(α+γ)L2
+el valor del para´metro ω que minimiza el valor de este 2
+funcional. Como ya hab´ıamos planteado en la seccio´n dondeα =(cid:94)MQQ ,β =(cid:94)QMQ ,γ =(cid:94)QQ M
+i i i+1 i i i+1 i i+1 i
+3.4.1elfuncionalalcanzasuvalorm´ınimoenelespaciode yL=||Q −Q||comosemuestraenlaFigura3.
+i+1 i
+para´metros en el que esta´ definido. Hasta ahora tenemos
+aproximacionestantodelfuncionaldefairnesscomodesu Ahorabien,¿porque´ escogerelvalordeλ queaparece
+derivada,porloquerestaaplicarunalgoritmonume´ricopara en(23)ynootro?Comoyahab´ıamosdichoenlaseccio´n3.4,
+hallarlo.Enestetrabajoempleamosdosme´todosparahallarlo. paracadavalordeλ enlacombinacio´nlinealdelalongitud
+de arco y energ´ıa ela´stica se defin´ıa un nuevo funcional de
+Elprimerodelosme´todoseselMe´tododeNewton-Raph- fairness.Precisamentealtomarestevalorenlacombinacio´n
+son(ve´ase[3]).Enlaseccio´n3.4.1vimosqueladerivadadel linealdelfuncional,esteu´ltimomanifiestabuenaspropiedades
+funcional se anula al menos una vez en el intervalo donde paraeldisen˜ogeome´tricocomosonlassiguientes:
+el para´metro de tensio´n ω toma sus valores, por lo que la
+ecuacio´n F(cid:48)(ω)=0 tiene solucio´n donde F (ω) es el fun- Elvalorde
+λ λ
+cional de fairness. Sin embargo, chequear las condiciones arg{m´ınF λ (ω)}
+ω
+104 Unesquemasplineco´nicodeHermitefair.
+M
+i
+β
+α γ
+Q
+i
+Q
+i+1
+Figura4.Reproduccio´ndeunc´ırculo.
+Figura3.A´ngulosinterioresdeltria´ngulodecontrol.
+Teorema SeanQ yQ dospuntoscondireccionestangen-
+i i+1
+esinvariantebajotransformacionesr´ıgidasdecoorde- tesasociadas(cid:126)v y(cid:126)v respectivamente,denotemospor
+i i+1
+nadasyhomotecias. M elpuntodeinterseccio´ndelasrectasquepasanpor
+i
+lospuntosQ yQ condireccionestangentesdadas
+Reproducearcosdecircunferencia(Redondez). i i+1
+porlosvectores(cid:126)v y(cid:126)v .Sedefineλ como
+i i+1 C
+4.1 Reproduccio´ndearcosdecircunferencia
+sen2(β)
+Comopartedeestetrabajotambie´nseencuentrarepro- λ C = cos2(α+γ)L2
+ducirarcosdecircunferencias,puescomohab´ıamosvistoal 2
+iniciodeestaseccio´n,sisituamoslospuntosdeinterpolacio´n
+dondeL=||Q −Q||,α =(cid:94)MQQ ,
+sobreunacircunferenciaentonceslacurvama´sfairquelosin- i+1 i i i i+1
+γ =(cid:94)MQ Q yβ =(cid:94)QMQ .
+terpolaesprecisamenteelarcodecircunferenciaquecontiene i i+1 i i i i+1
+adichosdatos.Paraquelacurvainterpolanteseaunarcode
+circunferenciaeltria´ngulodecontroldebeseriso´scelesporla SiQ i ,(cid:126)v i , Q i+1 y(cid:126)v i+1 sondatosque provienendeun
+simetr´ıadelc´ırculo.Endichocaso,debemosdemostrarque c´ırculoC i ,entonceslaco´nicadeBe´zierqueinterpolaa
+elc´ırculodeinterpolacio´nesu´nico.Elpara´metrodetensio´n Q i ,(cid:126)v i ,Q i+1 ,(cid:126)v i+1 yminimizaelfuncional
+asociadoadichaco´nicadebecumplirlasiguientecondicio´n.
+F (ω)=E(ω)+λ S(ω)
+λC C
+Lema Denotemos por α =(cid:94)MQQ , β =(cid:94)QMQ ,
+i i i+1 i i i+1
+γ =(cid:94)QQ M yL=||Q −Q||comosemuestra eselarcoQ (cid:92) Q delc´ırculoC.
+i i+1 i i+1 i i i+1 i
+enlaFigura3.Entoncessecumpleque:
+Demostracio´n
+i. Los datos Q,(cid:126)v y Q ,(cid:126)v provienen de un
+i i i+1 i+1
+c´ırculosiysolosiα =γ;enotraspalabras,siel Si imponemos a los para´metros a,b,L que el tria´ngulo sea
+tria´nguloconve´rticesQ,Q yM esiso´sceles. iso´celes(comocorrespondeaunaseccio´ndecircunferencia)
+i i+1 i
+y que ω =cos(α)=cos(γ), como se establece en el lema
+ii. SilosdatosQ,(cid:126)v yQ ,(cid:126)v provienendeun
+i i i+1 i+1
+anterior, entonces es posible calcular exactamente las
+c´ırculo entonces el c´ırculo descrito en i. puede
+integralesqueaparecenen(19)ydespejarelvalorλ deλ
+representarse como una curva co´nica de Be´zier C
+(Ve´aselaseccio´n1.2)tomandocomotria´ngulode queanulaa ∂F λ (ω) .(cid:4)
+∂ω
+controlalformadoporlospuntosQ,M yQ
+i i i+1
+ypara´metroω =cos(α)=cos(γ). Observacio´n. Si los datos a interpolar provienen de un
+arco de c´ırculo C, pero el valor de λ en la combinacio´n
+i
+Lademostracio´ndee´steresultadopuedeverseen[6]. linealdelfuncionalnoesigualaλ ,entonceselm´ınimodel
+C
+funcionalF (ω)nonecesariamentereproduceaC.
+λ i
+Un c´ırculo completo puede obtenerse uniendo piezas
+de un spline cerrado, donde cada segmento sea un arco 4.2 Implementacio´nNume´rica
+de circunferencia. Por ejemplo, podemos representar un El algoritmo para generar puntos sobre una curva
+c´ırculo utilizando tres arcos iguales (Figura 4). Con todos co´nicadeBe´zierdescritoenlaseccio´n2fueimplementado
+losa´ngulosα =γ =600ylospesosω = 1 seobtieneuna en MatLab. Ya una vez teniendo a mano un algoritmo
+j j j 2
+representacio´nexactadeunc´ırculo. bastante eficiente para generar puntos sobre las co´nicas se
+implemento´ tambie´nenelmismosoftwarevariasfunciones
+PartiendodelLemaanteriorpodemosargumentarlascon- quetienencomoobjetivocalcular,demaneraaproximaday
+secuenciasdetomarelvalorqueproponemosparaelpara´me- como se indica en la seccio´n 3.5, el valor del funcional de
+troλ aliniciodeestaseccio´nyqueseexponenenelsiguiente fairnessydesuderivadaconrespectoalpara´metroω para
+teorema: unacombinacio´ndedatosespec´ıfica.Adema´sseprogramaron
+Unesquemasplineco´nicodeHermitefair. 105
+ambos me´todos para hallar el valor m´ınimo del funcional. E(ω)
+Algunos de los resultados obtenidos por el programa se ω 4iteraciones 8iteraciones 12iteraciones
+muestranacontinuacio´n. 0.01 3.7908 1132.3 1547.0
+0.3 2.6969 2.7709 2.7712
+En lo adelante, expondremos los resultados de nuestro 0.5 1.8095 1.8134 1.8134
+algoritmo para el siguiente conjunto de puntos en el plano 0.7071 1.6658 1.6654 1.6654
+P =(0,0),P =(1,1)yP =(2,0),tomadoscomotria´ngulo 1 1.7528 1.7524 1.7524
+0 1 2
+decontrol.EnlaFigura5mostramosunacomparacio´nentre 10 9.4707 9.4450 9.4449
+diferentesco´nicasdeBe´zierdefinidasenelmismotria´ngulo 50 44.3944 44.4090 44.4071
+decontrolencuantoalgra´ficodelosvaloresdecurvatura. 100 86.9953 88.1138 88.1085
+Cuadro2.Aproximacionesdelaenerg´ıaela´stica.
+Otraobservacio´nimportantequepodemosrealizardelos
+datosobtenidosesqueparavaloresmuypequen˜osdelpara´me-
+trodetensio´nω ypocasiteracionesnoseobtienenbuenas
+aproximacionesdelfuncional,sinembargo,mientrasmayor
+sea la cantidad de iteraciones en el proceso de subdivisio´n,
+mejoressera´nlosresultadosenlaaproximacio´n.
+4.3 Aplicaciones
+Figura5.Izquierda:Gra´ficodelasco´nicasdeBe´zier. Las curvas spline actualmente en el disen˜o geome´trico
+Derecha:Gra´ficodelosvaloresdecurvatura. asistidoporcomputadorajueganunpapelfundamental.En
+esta seccio´n se mostrara´n algunos de sus usos en la vida
+EnelCuadro1semuestranvaloresaproximadosdelalon- diaria.Comomotivodevisualizarunacurvafaireneldisen˜o
+gituddearcoparadistintosvaloresdelpara´metrodetensio´n. geome´trico se ha desarrollado una aplicacio´n con interfaz
+Con4iteracionesdelalgoritmodesubdivisio´nseobtienen gra´fica de MatLab donde el disen˜ador puede introducir los
+buenas aproximaciones para S(ω). Debemos observar que puntosytangentesdeinterpolacio´nenuna´readestinadapara
+cuandoω →0setienequeS(ω)→2ycuandoω →∞en- eldisen˜o.
+√
+toncesS(ω)→2 2comoseyaseplanteo´ enlassecciones
+3.2y3.3. Unaaplicacio´ninmediatadelascurvassplineeseldisen˜o
+defigurasplanasydecarreteras.Enlafigura8sepresentaun
+S(ω) ejemplodeobjetorealquefuemodeladoutilizandolainterfaz
+ω 2iteraciones 4iteraciones 8iteraciones gra´ficadesarrollada.
+0.01 2.0002 2.0003 2.0004
+0.3 2.0767 2.0875 2.0884
+0.5 2.1445 2.1571 2.1580
+0.7071 2.2125 2.2259 2.2268
+1 2.2808 2.2947 2.2956
+10 2.7119 2.7206 2.7213
+50 2.8020 2.8047 2.8050
+100 2.8149 2.8164 2.8166
+Cuadro1.Aproximacionesdelalongituddearco.
+Figura6.Disen˜odeuncorazo´n.
+En el Cuadro 2 muestra que para obtener buenas
+aproximaciones de la energ´ıa ela´stica es necesario realizar
+unamayorcantidaddeiteracionesdelprocesodesubdivisio´n.
+5. Conclusiones
+La razo´n por la que hay que realizar ma´s subdivisiones
+esta´ en el hecho de que como utilizamos el me´todo de los Se da solucio´n al problema de encontrar un spline
+trapeciosparaobtenerlasaproximaciones,mientrasmayor G1-continuo racional cuadra´tico de Be´zier que interpole
+sea el nu´mero de puntos generados sobre la curva, menor un conjunto de puntos del plano con vectores tangentes
+sera´ el paso de la integral (ver seccio´n 3.5) con lo que se asociadosacadaunodeellosytambie´ncumplelapropiedad
+obtienenmejoresresultados. de ser fair, ya que cada segmento que lo compone es la
+curvaqueminimizaelfuncionaldefairnessquesepropone.
+106 Unesquemasplineco´nicodeHermitefair.
+[2] Bajaj,ChandrajitL.,EnergyformulationsforA-splines.
+ComputerAidedGeometricDesign,16,39–59,1999.
+[3] BoorC.,ConteS.D.,ElementaryNumericalAnalisys
+An Algorithmic Approach. Editorial Fe´lix Varela, La
+Habana,2004.
+[4] Courant,R.;Hilbert,D.,Methodsofmathematicalphy-
+Figura7.Disen˜odeunacarretera.
+sics, I, New York, N.Y.: Interscience Publishers, Inc.,
+ISBN0-471-50447-5,1953.
+[5] D´ıaz, R., Esquema de subdivisio´n interpolatorio con
+para´metros de tensio´n local basado en spline co´nico.
+Tesispresentadaenopcio´ndelgradodeLicenciadoen
+CienciasMatema´ticas,UniversidaddelaHabana,2010.
+[6] Farin,G.,CurvesandSurfacesforComputerAidedGeo-
+metricDesign:apracticalguide.AcademicPressInc,
+1997.
+a) b) c)
+[7] Levien,R.,Se´quinC.,InterpolatingSplines:Whichis
+Figura8.Modelodeunapiezadeajedrez.(a)Curva
+thefairestofthemall?.Computer-AidedDesign&Ap-
+generatriz.(b)Disen˜otridimensional.(c)Objetoreal.
+plications,6(1),91–102,2009.
+Paralaminimizacio´ndelfuncionaldefairnessseutilizaron [8] Rudin, W., Principles of Mathematical Analysis (3rd
+aproximacionesnume´ricas.Enlaexperimentacio´nnume´rica ed.)NewYork:McGraw-Hill.ISBN978-0-07-054235-
+semuestraqueseobtuvieronbuenosvaloresdeaproximacio´n 8.1976.
+conpocasiteraciones.
+[9] Yang,Xunnian.,Curvefittingandfairingusingconic
+splines.Computer-AidedDesign36,461–472,2004.
+Desdeelpuntodevistateo´ricosedemuestraqueelfuncio-
+naldefairnesstienebuenaspropiedadescomosonsuinvarian-
+[10] Yong,J-H.,ChengF.,GeometricHermitecurveswith
+zaatransformacionesr´ıgidasdecoordenadasyhomoteciasy
+minimum strain energy. Computer-Aided Design 21,
+lareproduccio´ndearcosdecircunferencias.
+281-301,2004.
+Referencias
+[11] Y.J.Ahn,C.Hoffmann,P.Rosen,Geometricconstraints
+[1] Alikhani, J., Hosseini, S., M., M., Maalek, F., M., A on quadratic Be´zier curves using minimal length and
+newoptimizationalgorithmbasedonchaoticmapsand energy,JournalofComputationalandAppliedMathe-
+goldensectionsearchmethod.EngineeringApplications matics(2013).
+ofArtificialIntelligence,50,201–214,2016.

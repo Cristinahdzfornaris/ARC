@@ -1,0 +1,728 @@
+CienciasMatemáticas,Vol.32,No.1,Pag.1-9, 2018
+Recibido10-2017
+´
+SOLUCION DE UN PROBLEMA DE CONTORNO
+COMPLEJO PARA ECUACIONES DE TIPO
+´ ´
+PARABOLICO: CASO INDICE CERO
+Solution of a parabolic problem with complex
+boundary, for the case of index zero
+Dr. Lorgio F. Batard Mart´ınez1, Dra. Yanelis Estrada Herna´ndez2, Lic. Roxana Pe´rez Garc´ıa1
+Resumen En presente trabajo se aborda un problema parabo´lico con condiciones de contorno de gran
+complejidadqueesreducido,medianteeloperadordeFourier,aunProblemadeContornodeRiemanncon
+solucio´nconocida.Apartirdelasolucio´ndelProblemadeRiemannseobtienelasolucio´nencuadraturasdel
+problemaparabo´licoinicialmenteplanteadoparacasosparticularesdesumaimportanciaenlasaplicaciones.
+Abstract In this paper a parabolic problem with complex boundary conditions has been transformed into a
+RiemannboundaryproblemofknownsolutionbymeansoftheFourieroperator. Thisallowstheobtentionof
+quadraturesolutionsinavarietyofwidelygeneralizedparticularcasesoftheoriginalproblem.
+PalabrasClave
+Ecuacio´n—Riemman—Parabo´lico
+1DepartamentodeMatema´tica,UniversidadCentraldeLasVillas,54830SantaClara,Cuba,lorgio@uclv.edu.cu,ropgarcia@uclv.cu
+2DepartamentodeFI´sica,UniversidadCentraldeLasVillas,54830SantaClara,Cuba,yestrada@uclv.cu
+Introduccio´n 1. Problema de contorno general de tipo
+parabo´lico. Reduccio´n a un problema de
+En el ep´ıgrafe I se establecen definiciones y resultados
+auxiliares as´ı como clases de funciones que son de suma Riemann
+relevanciaparaelestudiorealizado.Adema´shacemoselplan-
+1.1 Definicionesyresultadosauxiliares.
+teamientodelproblemaencuestio´n,consistenteenencontrar
+Dadalafuncio´n f :R→C,siexistelaintegral:
+la solucio´n a una ecuacio´n en derivadas parciales de tipo
+parabo´licoconcondicionesdefronterasmuygenerales.La
+mismasebuscara´ enunaciertaclasedefuncionesdeamplia F(x)= √1 2π (cid:82) − + ∞ ∞ f(t)eixtdt[f(t)= √1 2π (cid:82) − + ∞ ∞F(x)e−ixtdt]
+aplicacio´npra´ctica.Tambie´nreducimosnuestroproblemaa
+unProblemadeContornodeRiemanncuyasolucio´nesco- para algu´n x real, se denomina Integral de Fourier de
+nocidamediantelate´cnicadeChersky,paraellousamosel f,F (Integral de Fourier Inversa de F,f ). Si se determina
+operadordeFourieryfinalmenteencontramosunaecuacio´n unaclasededefunciones f(F),entonceslafuncio´nV(V−1)
+funcionalqueconstituyeunProblemadeRiemann.
+definidapor:F(x)=V{f(t)},f(t)=V−1F(x)sedenomina
+operadordirecto(inverso)deFourier.Sedefineel´ındice(ver
+Enelep´ıgrafeIIestudiamoslascondicionesdesolubilidad [4])deunafuncio´ncomplejacontinuayquenoseanulasobre
+delProblemadeRiemannmediantecondicionesnecesariasy elejereal,m(t)=m 1 (t)+im 2 (t),t∈R,delaformasiguiente:
+suficientesparaqueelcoeficienteyelte´rminoindependiente
+dedichoproblemaeste´nenlasclasesdefuncionesadecuadas. Ind m(t)= 1 [argm(t)]+∞= 1 [lnm(t)]+∞=
+2π −∞ 2πi −∞
+Esinteresanteelestudiorealizadosobreelvalordel´ındicey 1 (cid:82)+∞d[lnm(t)]
+2πi −∞
+losdiferentesvaloresdeacuerdoaloscoeficientesdelproble-
+mayporu´ltimoenelep´ıgrafeIIIsedeterminalasolucio´ndel Lasintegralesanterioresdebenentenderseenelsentidode
+problemaencuadraturasparaelcasode´ındicecero.Todoesto Stieltjessinoesdiferenciableyesdevariacio´nacotada.Del
+serecogeenunaseriedeteoremasqueresumenlosresultados teorema del resto logar´ıtmico (Principio del argumento) se
+obtenidos. tienequesieselvalordecontornodeunafuncio´nanal´ıticaen
+elsemiplanosuperior(inferior),conexcepcio´nquiza´sdeun
+nu´merofinitodepolosenestesemiplano,entoncessecumple
+SOLUCIO´NDEUNPROBLEMADECONTORNOCOMPLEJOPARAECUACIONESDETIPOPARABO´LICO:CASO
+2 ´INDICECERO
+lasiguienteigualdad: Paraquelafuncio´n f (x)seaelementodeL−(R)esnece-
+− 2
+sarioysuficientequesutransformadaF−(t)=V{f (x)}sea
+−
+Ind m(t)=N−P(Ind m(t)=P−N) elementodeL−(R).
+2
+Donde Ind m(t) denota el´ındice de m(t) y por N,P se La clase de las funciones Lλ(R) se define por Lλ(R)=
+2 2
+denotaelnu´merodecerosypolosenelsemiplanosuperiore L (R)∩H (R).
+2 λ
+inferiorrespectivamenteconsiderandocadaceroypolotantas
+vecescomosuordendemultiplicidad. LaclasedelasfuncionesL (R)queperteneceaunade
+2
+lasfuncionesdeHoldersedenotanporels´ımbolo{{0}},o
+EnestetrabajosedenotaporK alosconjuntosnume´ricos sea,{{0}}=∪ L (R)∩H (R).
+λ∈(0,1] 2 λ
+Ro´C.
+Losespacios{0} sonaquellosdelasfuncionesquetie-
+λ
+Sea f unafuncio´nf:R→K,sediceque f pertenecea nensutransformadaenLλ(R),oseaV{f(x)}eselementode
+2
+la clase de Holder, si existen las constantes Ayλ, A>0, y Lλ(R),si f ∈{0} .
+λ ∈(0,1]paralascualesseverifica: 2 λ
+La clase de las funciones f ∈{0} tales que f ≡0 si
+λ
+1) |f(x )−f(x )|≤A|x −x |λ∀x ,x ∈R x<0(x>0) se denotan por Lλ (R)(Lλ (R)). La clase de
+2 1 2 1 1 2 2− 2+
+∃N>0:si|x 1 |>N,|x 2 |>N secumpleque: las funciones f ∈L 2 (R) tales que f =0 si x<0(x>0) se
+denotanporL (R)(L (R)).
+2) |f(x )−f(x )|≤A|1 − 1|λ∀x ,x ∈R, 2− 2+
+2 1 x2 x1 1 2
+Las constantes A y λ y s e denominan respectivamente LaclasedelasfuncionesF∈L 2 λ(R)quesonprolongables
+coeficientee´ındicedeHolder.Laclasedelasfuncionesque anal´ıticamentealsemiplanoinferior(superior)yquesatisfa-
+satisfacenlacondicio´ndeHolderparaunmismo´ındiceλ se cenque:
+denotanporH λ (R).
+(cid:82)
+−
++
+∞
+∞|F−(x+iy)|2dx<Msiy<0( (cid:82)
+−
++
+∞
+∞|F+(x+iy)|2dx<M
+si y > 0) donde M es independiente de y , se denota por
+Se cumple que D (R)⊂H (R)⊂H (R)⊂H (R)⊂
+Lλ−(R)(Lλ+(R)).
+A 1 λ2 λ1 2 2
+C(R),para0<λ <λ <1,dondeporD (R)seentiendela
+1 2 A
+clasedelasfuncionesf :R→Rconderivadasacotadassobre Laclasedelasfunciones f quenoseanulansobreRyta-
+Rquecumplen: lesque f(±∞)=1y(f−1)eselementodeLλ−(R)(Lλ+(R)
+2 2
+sedenotanporLλ−(R+1)(Lλ+(R+1).
+2 2
+l´ım f(x)=l´ım f(x)
+x→+∞ x→−∞
+Delteoremaydefinicionesanterioressetieneelteorema
+Severificafa´cilmentequeλ ∈(0,1]laclaseH λ (R)con siguiente:Unacondicio´nnecesariaysuficienteparaquela
+lasumayelproductoporunescalarusualesdefuncioneses funcio´n f pertenezcaaLλ (R)(Lλ (R)esquesuTransforma-
+2+ 2−
+una´lgebraasociativa. dadeFourierpertenezcaaLλ+(R)(Lλ−(R)).
+2 2
+Decimosque f :R→K esunelementodeL (R)si
+2 Definicio´ndeOperadorP±:P±:Lλ(R)→Lλ±(R)
+(cid:82)+∞|f(t)|2dx<+∞.ElespacioL+(R)eselespaciodefun- 2 2
+−∞ 2 f →P±(f)=(VoT±oV−1)f
+cionesF+ deL (R)quesonprolongablesanal´ıticamenteal
+2 −
+semiplanosuperiory>0ycumplencon: dondeT±:{0} →Lλ (R)
+λ 2±
+(cid:82)+∞|F+(x+iy)|2dx<ctelamisma∀y>0 h(x)→T±(h(x))= 1(signt±1)h(x)=h (x)
+−∞ 2 ±
+Tambie´nL 2 −(R)eselespaciodefuncionesF− deL 2 (R) DadounProblemadeSalto
+que son prolongables anal´ıticamente al semiplano inferior
+y<0ycumplencon: F+(x)−F−(x)=H(x)∈Lλ(R)(L (R))
+2 2
+(cid:82)
+−
++
+∞
+∞|F−(x+iy)|2dx<ctelamisma∀y<0
+P±(H(x))=(VoT±oV−1)H(x)=(VoT±)V−1(H(x))
+Seconoceelsiguienteteorema. V−1(H(x))=h(x)∈{o}
+λ
+sario Pa y ra su q fi u c e ie l n a t f e u q n u c e io´ s n u f t + ra ( n x s ) fo se rm a a e d le a m F e + nt ( o t) d = eL V 2 + { (R f + ) ( e x s )} ne s c e e a - P±(H(x))=VoT±(h(x)=V(h ± (x))∈L 2 λ ± (R − )
+elementodeL+(R).
+2 −
+P±(H(x))=F±(x)∈Lλ±(R)
+2
+SOLUCIO´NDEUNPROBLEMADECONTORNOCOMPLEJOPARAECUACIONESDETIPOPARABO´LICO:CASO
+´INDICECERO 3
+1.2 Planteamientodelproblemageneral. a) Aplicacio´ndelaTransformadadeFourieralaecuacio´n
+Enesteep´ıgrafeprocederemosarealizarelplanteamiento (1).Realizandoestaoperacio´nseobtienelaecuacio´n
+delproblemadecontornogeneraldetipoParabo´licoconcon- diferencialordinaria:
+dicionesdecontornocomplejas:
+dU(x,y)
+k −x2U(x,y)=G(x,y) (6)
+DadalaEcuacio´nDiferencialParcialdetipoParabo´lico: dy
+u (x,y)+ku (x,y)=g(x,y),k(cid:54)=o (1)
+xx y b) Obtencio´ndelasolucio´ndelaecuacio´ndiferencial(6).
+Enlaregio´n: Lara´ızdelaecuacio´ncaracter´ıstica
+D={(x,y)∈R2:0<y<+∞} (2) kz−x2=0 (7)
+Ylascondicionesdecontorno:
+x2
+z(x)= (8)
+k
+Luegolasolucio´ngeneralde(6)es:
+U(x,y)=C(x)ez(x)y+V(x,y) (9)
+Donde V(x,y) es una solucio´n particular de (9) que
+vienedadapor:
+V(x,y)= e x k 2 y(cid:90) G(x,y)e−x k 2 ydy (10)
+k
+yC(x)esunafuncio´narbitrariaquedebemosdetermi-
+nar.
+Figura1.Regio´nD
+c) Adaptacio´n de las condiciones de contorno (3) y (4)
+paralaaplicacio´ndelaTransformadadeFourier.
+β u(x,0+)+β u (x,0+)+β u (x,0+)=g (x), x<0
+00 10 x 01 y 11 Coneseobjetivoseintroducenlasfunciones f y f
+(3) + −
+γ u(x,0+)+γ u (x,0+)+γ u (x,0+)=g (x), x>0
+00 10 x 01 y 12
+funcio´ndesconocidadeL (R) x>0
+(4) f (x)= { 2+
+− − + 0 x<0
+Donde β y γ ; i=0,1,j=0,1, son nu´meros reales, g∈
+i,j i,j
+L 2 (R),g 1,1 ∈L 2 (−∞,0)yg 1,2 ∈L 2 (0,+∞) f − (x)= { 0 funcio´ndesconocidadeL (R) x x > < 0 0
+2−
+Sedeseaencontrarcondicionessobreloselementoscono-
+Estasfuncionespermitenescribir(3)y(4)enlaforma
+cidosde(1),(3)y(4)paraquelaecuacio´n(1)tengasolucio´n
+u´nicaenlaregio´n(2),quesatisfaganlascondiciones(3)-(4)
+du(x,0+)
+yquepertenezcanalaclase. β u(x,0+)+β u (x,0+)+β =g (x)+f (x),
+00 10 x 01 11− +
+dy
+S={u∈F(D):u ∈L (R),u ∈L (R),u∈L (R),0<y<+∞} (11)
+xx 2 y 2 2
+(5) |x|<+∞
+DondeF(D)eslaclasedefuncionesqueesta´ndefinidassobre
+elsemiplanoD. γ u(x,0+)+γ u (x,0+)+γ
+du(x,0+)
+=g (x)+f (x),
+00 10 x 01 12+ −
+dy
+Elproblemaesta´ bienplanteadoporqueelnu´merodecondi- (12)
+ciones de contorno ( dos ) es igual al orden de la ecuacio´n |x|<+∞
+diferencialcorrespondiente(uno),porelnu´meroderegiones
+(una),ma´suno(ver[3]). Donde:
+g x<0
+g (x)= { 11
+1.3 Reduccio´naunproblemadeRiemann. 11− 0 x≥0
+Acontinuacio´nseaplicalate´cnicadeCherskypararedu-
+g x>0
+cirelproblemaplanteadoen1.2aunproblemadeRiemann g (x)= { 12
+12+ 0 x≤0
+paraelsemiplano.
+SOLUCIO´NDEUNPROBLEMADECONTORNOCOMPLEJOPARAECUACIONESDETIPOPARABO´LICO:CASO
+4 ´INDICECERO
+d) Aplicacio´ndelaTransformadadeFourieralasnuevas SiV(x,0+),xV(x,0+)y dV(x,0+) pertenecenaL (R)es
+dy 2
+condicionesdecontorno. evidentequeH (x)yH (x)pertenecenaL (R)
+1 2 2
+Realizandoestaoperacio´nen(11)y(12)seobtiene: De(16)obtenemos:
+dU(x,0+) F+(x) H (x)
+β 00 U(x,0+)−ixβ 10 U(x,0+)+β 01 dy =G− 11 (x)+F+(x) C(x)= P(x) + P 1 (x) (18)
+1 1
+(13)
+dU(x,0+) sustituyendo (18) en (17) obtenemos el Problema de
+γ U(x,0+)−ixγ U(x,0+)+γ =G+(x)+F−(x)
+00 10 01 dy 12 Riemann
+(14)
+F+(x)=D(x)F−(x)+H(x) (19)
+De acuerdo a la definicio´n de f yf las funciones
+− +
+F−(x)yF+(x)sepuedenconsiderar(verseccio´n4)co- DondeD(x)= P1(x) yH(x)= P1(x)H (x)−H (x)
+molosvaloresl´ımitesdelasfuncionesF−(z)yF+(z), P2(x) P2(x) 2 1
+anali´ıticasenelsemiplanoinferiorysuperiorrespecti-
+2. Condiciones de solubilidad del
+vamente,quesatisfacenlascondiciones:
+problema de Riemann obtenido a partir
+(cid:82)+∞|F−(x+iy)|2dx<M,y<0 de un problema parabo´licocomplejo.
+−∞
+Ana´lisis del´ındice.
+(cid:82)+∞|F+(x+iy)|2dx<M,y>0 EnesteEp´ıgrafesedeterminancondicionesnecesariasy
+−∞
+suficientessobreloscoeficientesde(1),(3)y(4),paraqueel
+coeficienteyelte´rminoindependientede(19)satisfaganlas
+Respectivamente,dondeMeselmismoparatodaslasy
+condicionescorrespondientesalproblemadeRiemann.
+De acuerdo a [2], para obtener la solucio´n de (19) en
+e) Obtencio´ndeunaecuacio´nfuncionalenlacuallasu´ni-
+−
+casfuncionesdesconocidassonF+yF−: laclaseL
+2
+λ±(R)(L
+2
+±(R)),serequierequeD(x)pertenezcaa
+−
+la clase Lλ(R+1) y el te´rmino independiente pertenezca a
+2
+Apartirde(9)seobtienefa´cilmente Lλ(R − )(L (R));siendoLλ(R − +1)laclasedelasfunciones f
+2 2 2
+quesatisfacenlascondicionessiguientes:
+dU(x,y) dV(x,y)
+=z(x)C(x)ez(x)y+ (15)
+dy dy i) f notienenicerosnipolossobreR
+Sustituyendo(10)y(15)en(13)y(14),yefectuando ii) lim f(x)=1
+|x|→+∞
+lasoperacionesnecesariasseobtieneelsistema:
+−
+iii) (f−1)∈Lλ(R)
+P(x)C(x)−F+(x)=H (x) (16) 2
+1 1
+2.1 Determinacio´ndelascondicionesparaqueD(x)
+P
+2
+(x)C(x)−F−(x)=H
+2
+(x) (17) satisfagalacondicio´ni:
+Tenemosque:D(x)= P1(x)
+Donde: P2(x)
+luegopodemosescribir:
+P(x)=β −ixβ
++x2
+β y
+1 00 10 k 01
+x2β −ixkβ +kβ
+P(x)=γ −ixγ +x2 γ D(x)= 01 10 00 (20)
+2 00 10 k 01 x2γ −ixkγ +kγ
+01 10 00
+H (x)=G−(x)−(β −ixβ )V(x,0+)−β dV(x,0+) Siseparamosparterealyparteimaginariaenelnumeradorde
+1 11 00 10 01 dy (2.1.1)eigualamosacero,obtenemoselsistema:
+H
+2
+(x)=G+
+12
+(x)−(γ
+00
+−ixγ
+10
+)V(x,0+)−γ
+01
+dV(
+d
+x
+y
+,0+) x2β
+01
++kβ
+00
+=0 (21)
+xkβ =0 (22)
+10
+Apartirde(10)setiene:
+Comok(cid:54)=0,elsistema(21),(22)tieneevidentementera´ıces
+V(x,0+)= 1 k l´ım y→0+ (cid:82) G(x,y)e − k x2 ydy realessolamenteenlassiguientesvariantes:
+1) β =0hayra´ızenx=0
+00
+SOLUCIO´NDEUNPROBLEMADECONTORNOCOMPLEJOPARAECUACIONESDETIPOPARABO´LICO:CASO
+´INDICECERO 5
+2) β (cid:54)=0,β =0,kβ00 <0:haydosra´ıcesrealesdeltipo 2.3 Determinacio´ndecondicionesparaqueD(x)sa-
+01
+(cid:113)
+10 β01
+tisfagalacondicio´niii.
+x=± kβ00
+β01 Teorema3:Sisecumplesimulta´neamenteunadelascon-
+dicionesdelTeorema1yunadelascondicionesdelTeorema
+Secumpleentonceselsiguienteteorema:
+−
+2,entonces(D(x)−1)∈Lλ(R).
+2
+Teorema1:Elnumerador(denominador)deD(x)notiene
+niceros(nipolos)parax∈R,siysolosisecumpleunade Demostracio´n:
+lascondicionessiguientes:
+−
+Probemosprimeramenteque(D(x)−1)∈H (R).Como
+λ
+1) β 00 β 10 (cid:54)=0(γ 00 γ 01 (cid:54)=0) − −
+D (R)⊂H (R),bastaprobarque(D(x)−1)∈D (R).Sise
+A λ A
+cumplesimulta´neamenteunadelascondicionesdelTeorema
+2) β =0,kβ β >0(γ =0,kγ γ >0)
+10 00 01 10 00 01
+1yunadelascondicionesdelTeorema2,sepuedeasegurar
+quelim D(x)=l,yl(cid:54)=0.Sil(cid:54)=1seconsidera(25)en
+2.2 Determinacio´ndelascondicionesparaqueD(x) |x|→+∞
+lugarde(19),luegonosepierdegeneralidadcuandoconside-
+satisfagalacondicio´nii.
+ramosquelim D(x)=1.
+|x|→+∞
+Como:
+x2β −ixkβ +kβ Si se cumple simulta´neamente una de las condiciones
+lim D(x)=lim 01 10 00 (23) del Teorema 1 y una de las condiciones del Teorema 2, es
+|x|→+∞ |x|→+∞ x2γ −ixkγ +kγ
+01 10 00 fa´cilprobarque(D(x)−1)esunafuncio´nacotadasobreRy
+adema´s:
+setienetrivialmenteelsiguienteTeorema:
+(D(x)−1)(cid:48)= P1(x)P 2 (cid:48)(x)−P 1 (cid:48)(x)P2(x)
+Teorema 2: El l´ımite del segundo miembro de (23) existe (P2(x))2
+yesdistintodecerosiysolosi;secumpleunadelascondi-
+−
+ciones: luego(D(x)−1)∈D (R)
+A
+a) β 01 γ 01 (cid:54)=0,enestecasoell´ımiteindicadoen(23)es Porultimo,comolim D(x)=l .loscoeficientesde
+|x|→+∞
+l= β01 mayorgradodeP(x)yP(x)sonigualesyconsecuentemente
+γ01 1 2
+|D(x)−1|=O( 1 )enunavecindaddelinfinito,ycomoD(x)
+|x|
+b) β 01 =γ 01 =0,β 10 γ 10 (cid:54)=0enestecasoell´ımiteindicado esderivablesetieneque:
+en(23)esl= β10
+γ10
+(cid:82)+∞|D(x)−1|2dx<+∞
+−∞
+c) β =γ =β =γ =0,β γ (cid:54)=0en este caso el
+01 01 10 10 00 00
+l´ımiteindicadoen(23)esl= β00 Portantoquedaprobadoque(D(x)−1)∈Lλ(R − ).
+γ00 2
+Lademostracio´ndeesteTeoremaestrivial.
+2.4 Determinacio´n de las condiciones para que el
+te´rmino independiente de (19) sea elemto de
+Sil(cid:54)=1,entoncesmultiplicando(19)por 1 obtenemos:
+l L 2 (R)
+F+(x) = D(x)F−(x)+H(x) Teorema4:Sisecumplesimulta´neamenteunadelascon-
+l l l dicionesdelTeorema1yunadelascondicionesdelTeorema
+2,yadema´s,V(x,y),xV(x,0+)y dV(x,0+) pertenecenaL (R),
+considerandoentonceslasfunciones: dy 2
+entonceselte´rminoindependientede(19)perteneceaL (R).
+2
+F+(x) D(x)
+F+(x) F−(x)=D (x)F−(x)=+ (24)
+1 l 1 1 l Demostracio´n:
+Seobtienelaecuacio´nfuncional: Tenemos que el te´rmino independiente de (19) tiene la
+forma:
+H(x)
+F+(x)=D (x)F−(x)+ (25)
+1 1 1 l H(x)= P1(x)H (x)−H (x)
+P2(X) 2 1
+paralocualsecumplelim D (x)=1
+|x|→+∞ 1
+Deacuerdoalascondicionesimpuestasesevidenteque
+Luegode(24)y(25)seobtendr´ıalasolucio´ndelproblema H 1 (x) y H 2 (x) son elementos de L 2 (R); y P P 2 1 ( ( X x) ) es una fun-
+original. cio´n acotada sobre R . De aqu´ı se tiene obviamente que
+SOLUCIO´NDEUNPROBLEMADECONTORNOCOMPLEJOPARAECUACIONESDETIPOPARABO´LICO:CASO
+6 ´INDICECERO
+H(x)∈L (R). 2.1-e) β =0,γ (cid:54)=0,kβ β >0,kγ γ >0
+2 10 10 01 00 01 00
+2.1-f) β (cid:54)=0,γ =0,kβ β >0,kγ γ >0
+Sielproblemaoriginaleshomoge´neo(g(x,y)=0)elTeo- 10 10 01 00 01 00
+rema4quedar´ıaenlasiguienteforma:
+2.1-g) β =γ =0,kβ β >0,kγ γ >0
+10 10 01 00 01 00
+Corolario(delTeorema4):Sisecumplesimulta´neamen- 2.1-h) β 10 =β 01 =γ 10 =γ 01 =0,β 00 γ 00 (cid:54)=0
+teunadelascondicionesdelTeorema1yunadelascondi-
+2.2) Casosde´ındiceuno:
+cionesdelTeorema2,entonceselte´rminoindependientede
+(19)perteneceaL (R).
+2 2.2-a) β =γ =0,β β <0,γ γ >0
+01 01 10 00 10 00
+2.5 Ca´lculodel´ındicedelcoeficiente. 2.2-b) β =0,kβ β >0,kγ γ <0kγ γ <0
+10 01 00 01 00 10 01
+Nuestroana´lisisesta´ dadoaloscasosenquesecumplen
+2.2-c) kβ β <0,kβ β >0,γ =0,kγ γ >0,
+simulta´neamenteunadelascondicionesdelTeorema1yuna 10 00 10 01 10 01 00
+delascondicionesdelTeorema2.
+2.2-d) β (cid:54)=0,kβ β >0,kγ γ <0,kγ γ <0
+10 01 00 01 00 01 10
+Comolasra´ıcesdeP 1 (x)yP 2 (x)vienendadasrespectiva- 2.2-e) γ10(cid:54)=0,kβ 01 β 00 <0,kβ 01 β 10 >0,kγ 01 γ 00 >0
+menteporlasexpresiones:
+2.3) Casosde´ındicedos:
+(cid:112)
+kβ i± −k2(β )2−4kβ β
+10 10 01 00 (26) 2.3-a) kβ 01 β 00 <0,kβ 01 β 10 >0,kγ 01 γ 00 <0,
+2β
+01 kγ γ <0
+01 10
+y
+2.4) Casosde´ındicemenosuno:
+(cid:112)
+kγ i± −k2(γ )2−4kγ γ
+10 10 01 00
+(27) 2.4-a) β =γ =0,β β >0,γ γ <0
+2γ 01 01 10 00 10 00
+01
+Tenemoslassiguientesposibilidades: 2.4-b) kβ 10 β 01 <0,kβ 01 β 00 <0,γ 10 =0,kγ 01 γ 00 >0
+a) β (cid:54)= 0,kβ β > 0(γ (cid:54)= 0,kγ γ > 0) entonces 2.4-c) β 10 =0,kβ 10 β 00 >0,kγ 10 γ 01 >0,kγ 01 γ 00 <0,
+10 01 00 10 01 00
+P(x)(P(x))tienera´ıcesimaginariasensemiplanosdi-
+1 2 2.4-d) β (cid:54)=0,kβ β >0,kγ γ <0,kγ γ >0
+10 01 00 01 00 01 10
+ferentes.
+2.4-e) γ10(cid:54)=0,kβ β <0,kβ β <0,kγ γ >0
+01 00 01 10 01 00
+b) β (cid:54)= 0,kβ β < 0(γ (cid:54)= 0,kγ γ < 0) entonces
+10 01 00 10 01 00
+P 1 (x)(P 2 (x))tiene2ra´ıcescomplejasenelmismosemi- 2.5) Casosde´ındicemenosdos:
+planosi4k|β β |>k2(β )2(4k|γ γ |>k2(γ )2),
+01 00 10 01 00 10
+eimaginariasenelmismosemiplanosi 2.5-a) kβ 01 β 00 <0,kβ 01 β 10 <0,kγ 01 γ 00 <0,
+4k|β 01 β 00 |<k2(β 10 )2(4k|γ 01 γ 00 |<k2(γ 10 )2). kγ 01 γ 10 >0
+c) β =0,β β (cid:54)=0(γ =0,γ γ (cid:54)=0)entonces
+01 10 00 01 10 00 3. SOLUCIO´N DEL PROBLEMA DE
+P(x)(P(x))tieneunasolara´ızimaginaria−β00i(−γ00i).
+1 2 β10 γ10 RIEMANN PARA LOS CASOS DE´INDICE
+d) β = 0,kβ β > 0(γ = 0,kγ γ > 0) entonces CERO.
+10 01 00 10 01 00
+P(x)(P(x))tiene2ra´ıcesimaginariasconjugadas.
+1 2 Enelpresentecap´ıtulobuscaremoslasolucio´ndelProble-
+madeRiemann(19)paraloscasosde´ındiceceroestablecidos
+e) β =β =0,β (cid:54)=0(γ =γ =0,γ (cid:54)=0)entonces
+10 01 00 10 01 00
+enelcap´ıtuloanterior,cumplesimulta´neamenteunadelas
+P(x)(P(x))notienera´ıces.
+1 2
+condicionesdelTeorema1yunadelascondicionesdelTeo-
+Luegotenemoslassiguientesvariantesparael´ındicedeD(x) rema2.
+.
+•Casos2.5.1-a),2.5.1-e),2.5.1-f)y2.5.1-g)
+2.1) Casosde´ındicecero:
+Enestoscasoslaexpresio´n(19)tomalaforma:
+2.1-a) β (cid:54)=0,kβ β >0,γ (cid:54)=0,kγ γ >0
+10 01 00 10 01 00
+β (x−ai)(x−bi) β (x−ai)(x−bi)
+2.1-b) β (cid:54)=0,kβ β <0,γ (cid:54)=0,kγ γ <0y F+(x)= 01 F−(x)+ 01 H (x)−H (x)
+10 01 00 10 01 00 γ (x−ci)(x−di) γ (x−ci)(x−di) 2 1
+β β ]γ γ <0 01 01
+10 01 10 01 (28)
+dondea>0,b<0,c>0yd<0
+2.1-c) β =γ =0,kβ β <0,kγ γ <0
+01 01 10 00 10 00
+2.1-d) β =γ =0,kβ β >0,kγ γ >0 •Enelcaso2.5.1-e)setienequea=−b,enelcaso2.5.1-f)
+01 01 10 00 10 00
+SOLUCIO´NDEUNPROBLEMADECONTORNOCOMPLEJOPARAECUACIONESDETIPOPARABO´LICO:CASO
+´INDICECERO 7
+c=−d y en el caso 2.5.1-g) a=−b y c=−d simulta´nea- dondefinalmentelasolucio´nanuestroproblemaparalos
+mente. casos2.5.1-a),2.5.1-e),2.5.1-f)y2.5.1-g)es:
+Laexpresio´n(28)sepuedeescribirenlaforma:
+(x−di)F+(x)= β01(x−ai)F−(x)+β01(x−ai)H (x)−(x−di)H (x) u(x,y)=√1 2π [ (cid:82) − + ∞ ∞F (t + − ( a t i ) ) + (t H − 1 b ( i t ) )e t k 2 y−ixtdt+ (cid:82) − + ∞ ∞V(t,y)e−ixtydt]
+(x−bi) γ01(x−ci) γ01(x−ci) 2 (x−bi) 1
+ParaelcasoHomoge´neo,esdecirparaV(x,y)=0tene-
+haciendo: moselsiguienteteoremasimilaralTeorema5∗:
+(x−di)
+F+(x)= F+(x) (29)
+1 (x−bi)
+Teorema 5∗: Si k<0 , entonces el problema (1)−(4)
+F−(x)= β01(x−ai)F−(x) paraloscasos2.5.1-a),2.5.1-e),2.5.1-f)y2.5.1-g)tienesolu-
+1 γ01(x−ci) cio´nu´nicaenlaclase(5)dadaporu(x,y)=V−1[U(x,y)].
+H (x)= β01(x−ai)H (x)−(x−di)H (x)
+3 γ01(x−ci) 2 (x−bi) 1
+•Casos2.5.1-b)
+NosquedaelProblemadeSalto.
+Enestecasohaydosposibilidades:
+F+(x)−F−(x)=H (x) (30)
+1 1 3
+2.5.1-b1Todaslasra´ıcesdeP(x)yP(x)esta´nenelse-
+1 2
+Luegopodemosenunciarelsiguienteteorema: miplano superior (esto ocurre cuando k<0 , si se cumple
+adema´s,β β <0yγ γ <0)
+Teorema5:Sik<0yV(x,y),xV(x,0+),y dV(x,0+) per- 10 01 10 01
+dy
+tenecenaL 2 (R),entonceselproblema(1)–(4)paraloscasos 2.5.1-b2Todaslasra´ıcesdeP 1 (x)yP 2 (x)esta´nenelse-
+2.5.1-a),2.5.1-e),2.5.1-f)y2.5.1-g)tienesolucio´nu´nicaen miplano inferior (esto ocurre cuando k<0 , si se cumple
+laclase(5)dadaporU(x,y)=V−1[U(x,y)].DondeU(x,y)
+adema´s,β β >0yγ γ >0)
+10 01 10 01
+esta´ dadaporlasfo´rmulas(9)y(19),y
+Subcaso2.5.1-b1):Laexpresio´n(19)tomalaforma(28)
+x−bi (cid:90) +∞
+F+(x)= √ h (t)eixtdt (31) peroahoraa,b,cydsonnu´meroscomplejosconparteimagi-
+3
+(x−di) 2π 0 nariamayorquecerosi4|kβ β |>k2(β )2y4|kγ γ |>
+01 00 10 01 00
+k2(γ )2,onu´merosimaginariossobreelejeimaginarioposi-
+Siendoh =V−1[H ] 10
+3 3 tivosi4|kβ β |<k2(β )2 y4|kγ γ |<k2(γ )2 .(Tam-
+Demostracio´n: 01 00 10 01 00 10
+bie´nsepuedeobteneruncasomixto).
+Lasolucio´ndelProblemadeSalto(30)segu´nlaDefinicio´n
+dadadeOperadorproyeccio´nenelCap´ıtulo1es:
+Haciendo:
+F+(x)=F+(x) (34)
+P±(H (x))=(VoT±oV−1)H (x)=VoT±(h )=V(h ) 1
+3 3 3 3±
+V(h (t))= √ 1 (cid:90) +∞ h (t)eixtdt=F+(x) (32) F 1 −(x)= β γ0 0 1 1 ( ( x x − − c a i i ) ) ( ( x x − − d b i i ) )F−(x)
+3+ 2π 0 3 1 H (x)= β01(x−ai)(x−bi)H (x)−(x−ai)(x−bi)H (x)
+V(h
+3−
+(t))= √1
+2π
+(cid:82)
+0
++∞h
+3
+(t)eixtdt=F
+1
+−(x)
+N
+4
+osqued
+γ
+a
+01
+e
+(
+l
+x−
+P
+c
+r
+i
+o
+)(
+b
+x−
+le
+d
+m
+i)
+ad
+2
+eSalto
+(x
+:
+−ci)(x−di) 1
+dondeh =V−1[H ]
+3 3
+Luegodelasustitucio´nde(32)en(28)seobtienelaexpresio´n F 1 +(x)−F 1 −(x)=H 4 (x)
+(31).Porotrapartede(9)y(18)tenemos
+Luegoporunana´lisissimilaralrealizadoenlademostra-
+U(x,y)= F+(x)+H 1 (x) e x k 2 y+V(x,y) (33) cio´ndelTeorema5,resultaevidenteunteoremaconenunciado
+(x−ai)(x−bi) similaralanteriorperoconH enlugardeH y
+4 3
+En(33)F+(x)∈L+(R),H (x)∈L−(R).LuegoU(x,y),
+x2U(x,y)y dU(x,y)
+2
+pertenec
+1
+enaL (
+2
+R)paratodoy
+F+(x)= √1
+2π
+(cid:82)
+0
++∞h
+4
+(t)eixtdt dondeh
+4
+=V−1[H
+4
+]
+dy 2
+,0<y<+∞,porlotantou(x,y)pertenecealaclase(5).
+Luegode(1.3.4)y(1.3.13)obtenemos:
+Comou(x,y)=V−1[U(x,y)],nosqueda: U(x,y)= F+(x)+H1(x)e x k 2 y+V(x,y)
+(x−ai)(x−bi)
+u(x,y)=V−1[U(x,y)]= √1 2π (cid:82) − + ∞ ∞F (t + − ( a t i ) ) + (t H − 1 b ( i t ) )e t k 2 ye−ixtdt Subcaso2.5.1-b2):Laexpresio´n(19)tomalaforma(28)
++√1 (cid:82)+∞V(t,y)e−ixtydt peroahoraa,b,cydsonnu´meroscomplejosconparteimagi-
+2π −∞
+nariamenorquecerosi4|kβ β |>k2(β )2y4|kγ γ |>
+01 00 10 01 00
+SOLUCIO´NDEUNPROBLEMADECONTORNOCOMPLEJOPARAECUACIONESDETIPOPARABO´LICO:CASO
+8 ´INDICECERO
+k2(γ )2,onu´merosimaginariossobreelejeimaginarionega- yF+(x)= (x−ci)F+(x)
+10 1 (x−ai)
+tivosi4|kβ β |<k2(β )2 y4|kγ γ |<k2(γ )2 .(Tam-
+01 00 10 01 00 10
+bie´nsepuedeobteneruncasomixto),ynosqueda: F−(x)= β01F−(x)
+1 γ01
+(x−ci)(x−di)F+(x)=β01F−(x)+β01H (x)−(x−ci)(x−di)H (x) H (x)= β01H (x)−x−ciH (x)enelcaso(38)
+(x−ai)(x−bi) γ01 γ01 2 (x−ai)(x−bi) 1 7 γ01 2 x−ai 1
+Denotando: Luegodeformaevidentesecumpleunteoremaconenun-
+ciadoydemostracio´nsimilaralTeorema5conH enlugar
+6
+F+= (x−ci)(x−di)F+(x) deH yF+(x)= 1 (cid:82)+∞h (t)eixtdt dondeh =V−1[H ]en
+1 (x−ai)(x−bi) 3 2π 0 6 6 6
+elcaso2.5.1-c)yH enlugardeH y
+7 3
+F−= β01F−(x) F+(x)= (x−ai)(x−bi) (cid:82)+∞h (t)eixtdt donde
+1 γ01 (x−ci)(x−di)2π 0 7
+h =V−1[H ]enelcaso2.5.1-d).
+H (x)= β01H (x)−(x−ci)(x−di)H (x) 7 7
+5 γ01 2 (x−ai)(x−bi) 1
+Luegode(9)y(18)obtenemos
+Nosquedaelproblemadesalto:
+F+(x)−F−(x)=H (x) U(x,y)= F+( ( x x ) − + a H i) 1(x)e x k 2 y+V(x,y)
+1 1 5
+Elcaso2.5.1-h)noloconsideramosporcarecerdeimpor-
+Por un ana´lisis similar al realizado en la demostracio´n
+tanciapra´ctica.
+del Teorema 5, resulta evidente un teorema con enunciado
+similar al anterior pero con H en lugar de H y F+(x)=
+5 3
+(x−ai)(x−bi) (cid:82)+∞h (t)eixtdt dondeh =V−1[H ] 4. CONCLUSIONES
+(x−ci)(x−di)2π 0 5 5 5
+Apartirdelascondicionesimpuestasencadacasoestu-
+Luegode(9)y(18)obtenemos diado, hemos encontrado la solucio´n en cuadraturas de un
+ProblemaParabo´licoconCondicionesdeContornoComple-
+U(x,y)= F+(x)+H1(x)e x k 2 y+V(x,y) jas, tanto para una ecuacio´n homoge´nea como para una no
+(x−ai)(x−bi)
+homoge´nea.Esinteresantelate´cnicautilizadaconsistenteen
+Casos2.5.1-c),2.5.1-d) reducirelproblemaoriginalconelauxiliodelaTransformada
+deFourier.
+EnestoscasoselProblemadeRiemann(28)adoptala
+forma: Los resultados obtenidos constituyen inobjetablemente
+un aporte teo´rico a la teor´ıa de los Problemas de Contorno
+β (x−ai) β (x−ai)
+F+(x)= 01 F−(x)+ 01 H (x)−H (x) de las Ecuaciones Diferenciales Parciales, pues no existen
+2 1
+γ 01 (x−ci) γ 01 (x−ci) te´cnicasanal´ıticasenlaactualidad,queabordenproblemasde
+(35)
+estanaturalezadondelascondicionesdecontornodifierenen
+y
+diferentespartesdeleje.
+x−ci β β x−ci
+F+(x)= 01F−(x)+ 01H (x)− H (x) (36) Lasolucio´nobtenidamedianteintegralesdetipoFourier
+2 1
+x−ai γ γ x−ai
+01 01 permitequelosprofesionalesqueutilizanmodelosparabo´li-
+respectivamente cospuedanencontrarlasolucio´nconrelativafacilidadcon
+la ayuda de un paquete matema´tico adecuado, sin que sea
+De(35)y(36)llegamosalosProblemasdeSalto: necesarioqueposeanundominioprofundodelateor´ıaantes
+expuesta.
+F+(x)−F−(x)=H (x) (37) Lasolucio´nparaloscasosde´ındiceuno,dos,menosuno
+1 1 6
+ymenosdossera´nanalizadosenpro´ximosart´ıculos.
+F+(x)−F−(x)=H (x) (38)
+1 1 7
+Donde. Referencias
+[1] Mederos,O.B.yBatard,L.F.ElproblemadeRiemann
+F+(x)=F+(x)
+1 conpara´metropequen˜oenelespacio.RevistaCiencias
+Matema´ticasNo3.1990.
+4F−(x)= β01(x−ai)F−(x)
+1 γ01(x−ci)
+[2] Batard,L.F.LasecuacionesdiferencialesyelProblema
+H (x)= β01(x−ai)H (x)−H (x)enelcaso(37) deRiemannconpara´metropequen˜o.TesisdeDoctorado.
+6 γ01(x−ci) 2 1
+1990.
+SOLUCIO´NDEUNPROBLEMADECONTORNOCOMPLEJOPARAECUACIONESDETIPOPARABO´LICO:CASO
+´INDICECERO 9
+[3] Mederos,O.B.yBatard,L.F.Reduccio´ndeunaclasede [13] F.E.Browder,NonlinearOperatorsandNonlinearEqua-
+problemasdecontornoenecuacionesenderivadaspar- tionsofEvolutioninBanachSpaces,Proc.Symp.Pure
+cialesconpara´metropequen˜oalProblemadeRiemann. Math.,18,part2,Amer.Math.Soc.,1976.
+RevistaCienciasMatema´ticasNo3.1990.
+[14] P.ButzerandH.Berens,Semi-groupsofOperatorsand
+[4] Gajov,F.D.yChersky,Yu.I.EcuacionesdetipoConvo- Approximations,Springer,1967.
+lucio´n.Moscu´.Ciencia.1978.
+[15] A. Carasso and A. Stone (editors), Improperly Posed
+[5] Tijonov.Samarski.EcuacionesdelaF´ısicaMatema´tica BoundaryValueProblems,Pitman,1975.
+[6] Gajov,F.D.ProblemasdeContorno [16] R.W. Carroll, Abstract Methods in Partial Diferential
+Equations,Harper-Row,1969.
+[7] Budak.Samarski.ProblemasdelaF´ısicaMatema´tica
+[17] R.W.CarrollandR.E.Showalter,SingularandDegene-
+[8] Mart´ınez,Y.H.yBatard,L.F.Solucio´ndeunproblema rateCauchyProblems,AcademicPress,1976.
+decontornocomplejoparaEcuacionesdetipohiperbo´li-
+[18] J.Cea,Optimization.TheorieetAlgorithmes,Dunod,
+co.Aplicaciones.Tesisdemaestr´ıa.2000.
+1971.
+[9] R.A.Adams,SobolevSpaces,AcademicPress,1976.
+[19] P.G.Ciarlet,NumericalAnalysisoftheFiniteElement
+[10] S. Agmon, Lectures on Elliptic Boundary Value Pro- Method for Elliptic Boundary Value Problems,North-
+blems,VanNostrand,1965. Holland,1977.211
+[20] D.L.Colton,PartialDiferentialEquationsintheCom-
+[11] J.P.Aubin,ApproximationofEllipticBoundaryValue
+plexDomain,Pitman,1976.
+Problems,Wiley,1972.
+[12] H. Brezis, Operateurs Maximaux Monotones, North- Solongandthanksforallthefish[?].
+HollandMath.Studies5,1973.

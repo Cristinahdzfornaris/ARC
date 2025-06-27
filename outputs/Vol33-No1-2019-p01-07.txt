@@ -1,0 +1,607 @@
+CienciasMatema´ticas,Vol.33,No.1,Pag.1-7,2019
+Protocolo para el intercambio de claves
+criptogra´ficas basado en el problema “learning with
+rounding”
+Key exchange protocol based on learning with
+rounding problem
+Esp. David Ricardo Ledo Baster1*, Dr C. Manuel Marin˜o Betancourt2, Dr C. Miguel Cruz
+Ram´ırez2
+Resumen Lamayor´ıadelosprotocolosdeintercambiodeclavesutilizadosconmayorfrecuenciasebasanen
+lasuposicio´ndequelosproblemasdellogaritmodiscretoylafactorizacio´ndeciertosnu´merossonproblemas
+dif´ıcilesderesolver.Sinembargo,dichasuposicio´nnosecumplesiutilizamoscomputadorascua´nticas.Eneste
+trabajoseproponeunprotocoloparaelintercambiodeclavescriptogra´ficasbasadoenelproblemaLearning
+withRounding(LWR),elcualesinmunealacomputacio´ncua´ntica.
+Abstract Most of the key exchange protocols used most frequently are based on the assumption that the
+problemsofthediscretelogarithmandthefactorizationofcertainnumberstheyaredifficultproblemstosolve.
+However, this assumption is not met if we use quantum computers. In this paper is proposed a protocol for
+theexchangeofcryptographickeysbasedontheLearningwithRounding(LWR)problem,whichisimmuneto
+quantumcomputing.
+PalabrasClave
+protocolosdeintercambiodeclaves,criptograf´ıaasime´trica,criptograf´ıapostcua´ntica
+1DepartamentodeInforma´tica,UniversidaddeHolgu´ın,Holgu´ın,Cuba,dledob@uho.edu.cu
+2UniversidaddeHolgu´ın,Holgu´ın,Cuba
+*AutorparaCorrespondencia
+Introduccio´n deestandarizacio´ndelNIST[15].Enparticularelproblema
+LWE1[17]tienemuchosaspectosinteresantesparadiversos
+Lacriptograf´ıaesta´ presenteenmuchaspartesdenues-
+usosdebidoalareduccio´nhaciaproblemassobrelatticesenel
+travidadiaria,porejemploentarjetasdecre´dito,comercio
+peordeloscasosyladificultadpararesolverloau´nconcompu-
+electro´nicomedianteinternet,votacioneselectro´nicas,etc.Un
+tadorascua´nticas.Brevementesedefinecomolasolucio´na
+aspectoimportantedelacriptograf´ıaloconstituyenlosme´to-
+unsistemadeecuacionesdelaformab =as+e (mo´d q)
+dosparaintercambiarunaclavesecretaatrave´sdeunacanal i i i
+dondea yssonelegidossiguiendounadistribucio´nuniforme
+abierto, posiblemente vigilado, sin tener que intercambiar i
+ye segu´nladistribucio´ndeGauss.ElproblemaLWR[2]es
+ningu´nsecretopreviamente.Estosme´todossonllamadospro- i
+la variante determin´ıstica del LWE, donde se reemplaza la
+tocolosdeintercambiodeclaves.Lamayor´ıadelosprotocolos
+distribucio´ndeGaussporelredondeoutilizandounmo´dulo
+deintercambiodeclavesutilizadosconmayorfrecuenciase
+pma´spequen˜o.Estogarantizamayoreficienciaenloscripto-
+basan en la suposicio´n de que los problemas del logaritmo
+sistemasdebidoaqueseeliminalaoperacio´ndeseleccionar
+discretoylafactorizacio´ndeciertosnu´merossonproblemas
+nu´merossegu´nladistribucio´ndeGauss.
+dif´ıcilesderesolver.Sinembargo,dichasuposicio´nnosecum-
+Losprotocolosparaelintercambiodeclavescriptogra´fi-
+plesiutilizamoscomputadorascua´nticasyelalgoritmode
+cassepresentanprincipalmenteendosvariantes,enlaprime-
+Shor[18](verunaexcelenteexplicacio´nen[19]).Teniendo
+ra,concidacomoKEM2,seutilizaunalgoritmodecifrado
+encuentaloanterior,muchasorganizacionesgubernamenta-
+asime´tricoparacifrar,conlaclavepu´blicadelreceptor,una
+lesyprivadashancomenzadoaestudiarydesarrollarnuevos
+clavedesesio´n;enlasegunda,conocidacomoDH3,ambos
+protocolosparaelintercambiodeclaves.Particularmente,el
+NISTlanzo´ unproyectoparacrearesta´ndarescriptogra´ficos
+1LWE:LearningwithErrors
+queseaninmunesalacomputacio´ncua´ntica[14].
+2KEM:KeyEncapsulationMechanism
+Lacriptograf´ıabasadaenlatticesconstituyeunaopcio´n 3PorserDiffieyHellmanlosprimerosenproponerunprotocolodeeste
+atractiva y es una de las ma´s representadas en el proyecto tipo
+2 Protocoloparaelintercambiodeclavescriptogra´ficasbasadoenelproblema“learningwithrounding”
+participantesintercambianinformacio´npu´blicaparaderivar mentesiguiendoladistribucio´nχ.Paran,h∈Zy0≤h≤n,
+laclavedesesio´n.LosprotocolostipoDHtienenlapropiedad HWT (h) es el conjunto de los vectores {−1,0,1}n con
+n
+dequenoesposibleobtenerlaclavedesesio´nconociendolas pesodeHammingh.
+clavesprivadasdelosusuarios,locualseconocecomosecre-
+Funcio´n de redondeo. Sean q,p∈Z tal que q≥ p≥2.
+tohaciaadelante.Otrapropiedadnecesariaenlosprotocolos
+Sedefinelafuncio´n(cid:98)·(cid:101) :Z →Z como(cid:98)x(cid:101) =(cid:98)(p/q)·x¯(cid:101)
+deintercambiodeclaveseslaautenticidaddelainformacio´n p q p p
+(mo´d p)dondex¯esunnu´merocongruenteconxmo´duloq.
+que se intercambia, para evitar el ataque del hombre en el
+La funcio´n (cid:98)·(cid:101) puede extenderse a matrices y vectores en
+medio,lacualsepuedealcanzardeformaexpl´ıcitafirmando p
+Z aplicandolafuncio´ncomponenteacomponente.En[7]se
+digitalmentelainformacio´nqueseintercambia,odeforma q
+definelafuncio´nprobabil´ısticaInv(·):Z →Z quetomaun
+impl´ıcitasielprotocolotienemecanismospropiosparaga- p q
+elementox∈Z comoentradayseleccionauniformemente
+rantizarlealreceptorqueesta´ interactuandoconelemisory p
+un elemento del conjunto {u∈Z |(cid:98)u(cid:101) =x} y lo retorna
+viceversa. q p
+como salida. De manera intuitiva se puede observar que si
+Dentrodelasopcionesbasadasenlacriptograf´ıasobre
+xesuniformeenZ entoncesInv(x)esuniformeenZ ;sin
+latticesaparecenlosprotocolospropuestosen[6,12,16,20, p q
+embargo, en [7] no aparece la demostracio´n. Debido a la
+11,5,9,8,3,1,10]deloscuales[9,8,3,1,10]utilizanel
+importanciadelauniformidaddeInv,nosotrosproponemosy
+problemaLWR.Deestosu´tlimos,soloelprotocolospKEX
+demostramoselsiguientelema:
+propuesto por Bhattacharya et al. en [3] es del tipo DH, y
+adema´sconstituyeelmenosdensodeloscinco.Sinembargo,
+Lema1. Si p|qyx←− $ Z entoncesInv(x)esuniformeenZ .
+elmecanismoparaderivarlaclavesecretanogarantizaque p q
+seauniformeenelespaciodeclavesteniendoencuentaquees Demostracio´n. Sea q=kp y S ={u∈Z |(cid:98)u(cid:101) =x}. Sea
+x q p
+unmecanismoaproximadoenelquesedebeenviarinforma-
+lavariablealeatoriaScuyoespaciomuestralloconstituyen
+cio´nextraparaqueambosparticipantesdelprotocolopuedan
+los p−1subconjuntosS con0≤i≤ p−1.Calculemosla
+i
+derivarlamismaclave.Tampocosedemuestralaseguridaden probabilidaddequeInv(x)=rparar∈Z .
+q
+funcio´ndeladificultaddelproblemaLWR,soloseanalizan
+losprincipalesataquesconocidosyseestimanlospara´metros
+$
+P(Inv(x)=r) = P(r←−S∧S=S )
+paraquedichosataquesnotengane´xito. x
+$
+= P(r←−S|S=S )P(S=S )
+x x
+Motivacio´n. Por lo tanto, en este trabajo se desarrolla un
+11
+protocolo para el intercambio de claves criptogra´ficas tipo =
+k p
+DHqueutilizaideaspropuestasenlostrabajos[3]y[5]para
+1 1
+garantizarlauniformidaddelasclavesgeneradasenpresencia
+= =
+de informacio´n extra, y que la seguridad del protocolo se kp q
+pueda demostrar con respecto a la dificultad del problema
+LWR. Locualseobtienedebidoaquesix←− $ Z entoncesP(S=
+p
+$
+S )=1/p y P(r ←−S|S=S )=1/k porque r se seleccio-
+x x
+1. Preliminares nauniformementedeunsubconjuntoS x ,loscualestienenk
+elementospues p|q.
+Notaciones. Losvectoressedenotanporletrasenminu´scu-
+la,ennegritaysiempresonconsideradoscomovectoresco- Mecanismo de reconciliacio´n. Como mecanismo de re-
+lumna,porejemplov.Lasmatricessedenotanporletrasen
+conciliaco´nutilizamoseldefindoen[5]elcualestableceque
+mayu´scula y en negrita, por ejemplo M. Un vector colum-
+n
+la
+a
+m
+v 1
+at
+s
+r
+e
+iz
+tr
+M
+ans
+s
+f
+e
+o
+d
+rm
+en
+a
+o
+e
+ta
+n
+p
+e
+o
+l
+r
+ve
+M
+ct
+(cid:62)
+o
+.
+r
+E
+fi
+l
+la
+pr
+v
+o
+1
+d
+(cid:62)
+u
+.
+c
+L
+to
+a
+i
+t
+n
+ra
+te
+n
+r
+s
+n
+p
+o
+ue
+d
+s
+e
+ta
+d
+d
+o
+e
+s
+[·] 2B :v→(cid:98)2−B¯ v(cid:101) (mo´d 2B)
+vectores v 1 y v 2 se define por (v 1 ,v 2 )=v 1 (cid:62)·v 2 . La norma dondev∈Z q yB¯=log 2 q−B.Tambie´nseestableceque
+deunvectoreslaeuclidianal ,amenosquesemencionelo
+2
+contrario.Sedenotapor(cid:107)M(cid:107) ∞ elma´ximovalorabsolutode (cid:104)·(cid:105) 2B :v→(cid:98)2−B¯+1v(cid:99) (mo´d 2)
+lasentradasdelamatrizM.Paracadanu´merorealxsedefine
+(cid:98)x(cid:99)=max{n∈Z}|n≤xy(cid:98)x(cid:101)=(cid:98)x+1/2(cid:99). y la funcio´n rec(·,·) que tiene como entrada w∈Z y b∈
+q
+Siχesunadistribucio´ndeprobabilidadsobreunconjunto {0,1}yretorna[v] ,dondeveselelementoma´scercanoa
+2B
+S,x←− $ χ significaelegirx∈Sdeacuerdoconχ.SiSesun wtalque(cid:104)v(cid:105) 2B =b.
+conjunto, entoncesU(S) es la distribucio´n uniforme sobre De[5]setomaronloslemassiguientes:
+S,yseleccionarunelementoxuniformeyaleatoriamentese
+Lema2. Siv∈Z esseleccionadodeformauniforme,enton-
+$ $ q
+denotaporx←−U(S)osimplementex←−S.Paraunamatriz
+ces[v] esuniformeconociendo(cid:104)v(cid:105) .
+2B 2B
+$ $
+Mounvectorv,lanotacio´nM←−χ ov←−χ significaque
+todaslasentradasdeMyvsonseleccionadasindependiente- Lema3. Si|v−w|<q/2B+2,entoncesrec(w,(cid:104)v(cid:105) 2B )=[v] 2B .
+Protocoloparaelintercambiodeclavescriptogra´ficasbasadoenelproblema“learningwithrounding” 3
+ProblemaLWEysusvariantes. De acuerdo con [9] la dificultad del problema anterior
+puedeobtenersedesdeelproblemaLWEconlamismadistri-
+Definicio´n1(Distribucio´nLWE). Seannyqenterospositi-
+vos. Sea χ una distribucio´n deprobabilidad sobre Z. Para bucio´nparaelsecreto,teniendoencuentaquelareduccio´nde
+un vector s∈Zn, la distribucio´n LWE A sobre Zn×Z LWEhaciaLWResindependientedeladistribucio´ndelsecre-
+q s,χ q q to.EnelcasodelproblemaLWEconpesodeHamminghpara
+se obtiene seleccionando a←− $ U(Zn q ), e←− $ χ y retornando elsecreto,esta´ demostradaunareduccio´nhaciaelproblema
+(a,b=(a,s)+e (mo´d q)). LWEen[8].
+Problema1(LWE debu´squeda). Sisetienenmmues-
+n,q,χ,m
+trasindependientes(a,b)∈Zn×Z seleccionadasdeA 2. Descripcio´n del protocolo
+i i q q s,χ
+parauns←− $ U(Zn q )(fijoparatodaslasmuestras),encontrar Elprotocolopropuestoenestetrabajosebasaenladifi-
+s. cultadderesolverlasiguientevariantedelproblema5:
+Problema2(LWE dedecisio´n). Sisetienenmmues-
+n,q,χ,m Problema 6 (sp-terLWR ). Sean m, n, n¯, p, q y h
+trasindependientes(a,b)∈Zn×Z dondecadamuestraes m,n,p,q,h,n¯
+i i q q enterospositivos.Lavariantedebu´squedadelproblemasp-
+seleccionadade(1)A s,χ parauns←− $ U(Zn q )(fijoparatodas terLWR m,n,p,q,h,n¯ (ssp-terLWR m,n,p,q,h,n¯ ) consiste en encon-
+lasmuestras),ode(2)ladistribucio´nuniformeenZn
+q
+×Z
+q
+, trarunamatrizSformadaporvectorescolumnasconpesode
+elproblemadedecisio´nconsisteendistinguirentrelasdos Hammingh,talque(cid:98)AS(cid:101) =B.Lavariantededecisio´ndel
+p
+distribucionesdeprobabilidad. problema sp-terLWR (dsp-terLWR ) con-
+m,n,p,q,h,n¯ m,n,p,q,h,n¯
+sisteendistinguirentreladistribucio´n(A,(cid:98)AS(cid:101) ),dentoda
+En ambos problemas se utiliza un nu´mero m de mues- p
+porO ,ylauniformeenZm×n×Zm×n¯.
+tras(ecuacionesenladefinicio´n1),porloquelosvectoresa S,h q p
+i
+sepuedenagruparenunamatrizAdemfilasyncolumnas.
+Estonoesmasquelavariantequeutilizamatricespara
+Tambie´nesposiblesustituirlosvectoressyeporlasrespecti-
+el secreto, donde n¯ representa las instancias del problema
+vasmatricesSyEobteniendoproblemasequivalentes,segu´n 5, Am×n los coeficientes de las n ecuaciones y Sn×n¯ los n¯
+sedemuestraen[13].
+vectoressecretos.
+ProblemaLWRysusvariantes.
+Lema 4. Existe una reduccio´n polinomial del problema 5
+Definicio´n2(Distribucio´nLWR). Seann, pyqenterospo- (sp-terLWR)haciaelproblema6(sp-terLWR ).
+m,n,p,q,h,n¯
+sitivos.Paraunvectors∈Zn,ladistribucio´nLWRO sobre
+q s
+Estareduccio´nsepuededemostrarsiguiendounrazona-
+Zn×Z seobtieneseleccionandoa←− $ U(Zn)yretornando
+q p q mientosimilara[13].(esta´ escritaperonodigital.....)
+(a,b=(cid:98)(a,s)(cid:101) ).
+p El protocolo comienza con la definicio´n de los siguientes
+Problema3(LWR debu´squeda). Sisetienenmmues- para´metrospu´blicos:
+n,p,q,m
+tras independientes (a,b)∈Zn×Z seleccionadas de O
+i i q p s q:elmo´dulomayordelproblemaLWR.
+parauns←− $ U(Zn)(fijoparatodaslasmuestras),encontrar
+q
+s. p:elmo´duloutilizadopararedondear,elcualesuna
+potenciade2ydivideaq.
+Problema4(LWR dedecisio´n). Sisetienenmmues-
+n,p,q,m
+trasindependientes(a i ,b i )∈Zn q ×Z p dondecadamuestraes n: la dimensio´n del problema LWR, y tambie´n la di-
+seleccionadade(1)O s parauns←− $ U(Zn q )(fijoparatodas mensio´ndelamatrizpu´blicaA∈Zn q ×n.
+lasmuestras),ode(2)ladistribucio´nuniformeenZn×Z ,
+q p h:elpesodeHammingdelsecreto.
+elproblemadedecisio´nconsisteendistinguirentrelasdos
+distribucionesdeprobabilidad. n¯,m¯:nu´merodeintanciasdelproblemaLWRcreadas
+porAliceyBobrespectivamente.
+La confiabilidad en los problemas 3 y 4 se debe a que
+existeunareduccio´ndesdeelproblemaLWEhaciaelcorres-
+B:cantidaddebitsqueseextraenporcadacoeficiente.
+pondienteproblemaLWR[4,2].
+seed :semillaconlaqueseinicializaungeneradorde
+Problema 5 (sp-terLWR). Sean m, n, p, q y h enteros po- A
+nu´merospseudoaleatoriosparaobtenerlamatrizA.
+sitivos. La variante de bu´squeda del problema sp-terLWR
+(ssp-terLWR) consiste en encontrar s∈{−1,0,1}n con pe-
+s:taman˜oenbitsdelasemilla.
+so de Hamming h si se tienen m muestras independientes
+(a,(cid:98)(a,s)(cid:101) ) . La variante de decisio´n del problema sp- Basadosenlospara´metrospu´blicosanteriores,AliceyBob
+i i p
+terLWR (dsp-terLWR) consiste en distinguir entre la dis- utilizanelprotocolodescritoenlaFigura1paraacordarla
+tribucio´n (a,(cid:98)(a,s)(cid:101) ), dentoda por O , y la uniforme en clavesecretaK.
+p s,h
+Zn×Z conunaventajanodespreciable,paraunvalorfijo Ambaspartessiemprepuedancalcularelmismovalorde
+q p
+des∈{−1,0,1}nconpesodeHammingh. K,locualloestableceelsiguienteteorema:
+4 Protocoloparaelintercambiodeclavescriptogra´ficasbasadoenelproblema“learningwithrounding”
+Alice Bob
+seed ←− $ U({0,1}s)
+A
+A←Gen(seed )
+A
+S←− $ HWT (h)n¯
+n
+B←(cid:98)AS(cid:101) −−−
+s
+−
+ee
+−
+dA− ,
+−
+B
+−→ A←Gen(seed )
+p A
+∈{0,1}s×Zn
+q
+×n¯
+S(cid:48)←− $ HWT (h)m¯
+n
+V¯ ←(cid:98)S(cid:48)(cid:62)Inv(B)(cid:101)
+p
+V←Inv(V¯)
+C←(cid:104)V(cid:105)
+2B
+V(cid:48)←Inv(B(cid:48))S ←−−− B − (cid:48),C −−−− B(cid:48)←(cid:98)S(cid:48)(cid:62)A(cid:101)
+p
+∈Z
+q
+m¯×n×Zm
+2
+¯×n¯
+K←rec(V(cid:48),C) K←[V]
+2B
+Figura1.ElprotocolodeintercambiodeclavesbasadoenelproblemaLWRconpara´metros(n,p,q)ylospara´metros
+n¯,m¯,h,B∈Zpropiosdelainstanciadelprotocolo.LamatrizAsegenerautilizandoungeneradordenu´merospseudoaleatorios
+Genconsemillaseed .
+A
+Teorema1. Sisecumplelarelacio´n2h+1<p/2B+2,enton- 3.1 Uniformidaddelaclave
+cesambaspartesobtienenelmismovalordeK. Teorema2. EnelprotocolomostradoenlaFigura1,elvalor
+de[V] esuniformeconociendo(cid:104)V(cid:105) .
+2B 2B
+Demostracio´n. CalculemoslosvaloresdeV(cid:48)yV.
+Demostracio´n. Por el lema 1 si x∈Z es uniforme, enton-
+p
+V(cid:48)=Inv(B(cid:48))S=(S(cid:48)(cid:62) A+E )S=S(cid:48)(cid:62) AS+E S ces lo es tambie´n Inv(x). Asumiendo que el problema dsp-
+1 1
+terLWR esdif´ıcil,entoncesB←(cid:98)AS(cid:101) esuniforme
+n,p,q,h,n¯ p
+enZ porloqueInv(B)tambie´nloesenZ yporconsiguien-
+p p
+V=Inv(V¯)=S(cid:48)(cid:62) Inv(B)+E 2 =S(cid:48)(cid:62) (AS+E 3 )+ teV¯ ←(cid:98)S(cid:48)(cid:62)Inv(B)(cid:101) p constituyeunainstanciadelproblema
+dsp-terLWR loqueimplicaqueV¯ seauniforme.Apli-
+E 2
+=S(cid:48)(cid:62) AS+S(cid:48)(cid:62)
+E 3 +E 2 candoellema
+n,
+2
+p,q
+a
+,h
+V
+,n¯
+=Inv(V¯),queesuniformetambie´n,se
+obtieneelresultadoesperado.
+Como(cid:107)E (cid:107) <q/p,(cid:107)E (cid:107) <q/p,(cid:107)E (cid:107) <q/pyS,S(cid:48) tie-
+1 ∞ 2 ∞ 3 ∞
+nenhentradas∈{−1,1}entonces(cid:107)E S(cid:107) <hq/py
+1 ∞ 3.2 Demostracio´ndelapropiedadIND-CPA
+(cid:107)S(cid:48)(cid:62)E (cid:107) <hq/pporloque
+3 ∞ Paraprobarlaseguridaddelprotocoloseconsideraaun
+adversarioqueintentadistinguirentreunaclavedesesio´nKy
+(cid:107)V−V(cid:48)(cid:107) =(cid:107)S(cid:48)(cid:62)E +E −E S(cid:107) <2hq/p+q/p
+∞ 3 2 1 ∞ unauniformeK(cid:48) conociendolosvalorespu´blicosdelprotoco-
+lo.FormalmentesedefinelaventajadetaladversarioA como
+yhacemos2hq/p+q/p<q/2B+2,aplicandoellema3obte-
+nemoselresultadoesperado.
+dondelosvaloresdeA,B,B(cid:48),C,KsemuestranenlaFigu-
+3. Ana´lisis de la seguridad ra1.
+Elsiguienteteoremaimplicaquebajolasuposicio´ndeque
+Nuestroana´lisisdelaseguridadutilizalosmismosmecanis- elproblema5(dedecisio´n)esdif´ıcil,todoslosadversarios
+mosque[3]encuantoa: eficientesobtienenunaventajainfinitesimalconrespectoal
+protocolomostradoenlaFigura1.
+Ataquesutilizandolosalgoritmosdereduccio´nenlatti-
+ces. Teorema 3. Sean n, n¯, m¯, p, q y h enteros positivos. Si el
+problemadsp-terLWR(verproblema5)esdif´ıcil,entonces
+Ataquesespecializadosqueexplotanelusodelsecreto elprotocolodesarrolladogeneraclavesconunadistribucio´n
+conunpesodeHammingdeterminado. indistinguibledelauniforme.Deformama´sexacta,
+Consideracionesparaelca´lculodelamatrizA. Advddh−like (A)≤n¯·Advdsp−terLWR(A ◦B )+
+n,p,q,h,n¯,B n,p,q,h 1
+yagregamoslademostracio´ndelauniformidaddelaclave m¯·Advd n, s p p , − q, t h erLWR(A ◦B 2 )
+obtenidaKylapropiedadIND-CPAdelprotocolo.
+dondeB yB semuestranenlaFigura3.
+1 2
+Protocoloparaelintercambiodeclavescriptogra´ficasbasadoenelproblema“learningwithrounding” 5
+Experimento1 Experimento2 Experimento3 Experimento4
+1: A←− $ U(Zn q ×n) 1: A←− $ U(Zn q ×n) 1: A←− $ U(Z q n×n) 1: A←− $ U(Zn q ×n)
+2: S←− $ HWT n (h)n¯ 2: B←− $ U(Zn p ×n¯) 2: B←− $ U(Zn p ×n¯) 2: B←− $ U(Zn p ×n¯)
+3 4 5 6 7 8 : : : : : : B S B V C K ¯ (cid:48) (cid:48) ← ← ← ← ← ← − $ (cid:98) (cid:98) (cid:10) [ H (cid:98) I A S I n S n (cid:48) S v (cid:48) (cid:62) v W (cid:62) ( (cid:101) ( I V A V n p ¯ ¯ T v ) (cid:101) ) ] ( (cid:11) p 2 n B 2 B ( B ) h (cid:101) ) p m¯ 3 4 7 5 6 : : : : : S B K V C ¯ (cid:48) (cid:48) ← ← ← ← ← − $ (cid:98) (cid:10) [ H (cid:98) I S I n S n (cid:48) v (cid:48) (cid:62) v W (cid:62) ( ( I V A V n ¯ ¯ T v ) (cid:101) ) ] ( (cid:11) p 2 n B 2 B ( B ) h (cid:101) ) p m¯ 3 4 7 6 5 : : : : : S K K C [ (cid:48) B (cid:48) ← ← ← ← − (cid:48) $ − (cid:107) $ V (cid:10) [ H ¯ U I I n ] n ( ← v v W { ( ( 0 V V ¯ ¯ (cid:98) T , ) S 1 ) ] (cid:11) (cid:48) } 2 n (cid:62) 2 B n ( ¯ B · [ h m A ¯ ) · m B (cid:107) ¯ ) Inv(B)](cid:101) p 3 4 5 6 7 : : : : : C K K b [ ∗ B (cid:48) ← ← ← ← (cid:48) − − $ (cid:107) $ V (cid:10) [ ¯ U U I I n ] n ( ( ← v v − { { $ ( ( 0 0 V V ¯ U ¯ , , ) 1 1 ) ] ( } (cid:11) } 2 Z 2 ) B n¯ B m · p ¯ m¯ × ·B (n ) +n¯) )
+9: K(cid:48)←− $ U({0,1}n¯·m¯·B) 8: K(cid:48)←− $ U({0,1}n¯·m¯·B) 8: b∗←− $ U({0,1}) 8: ifb∗=0
+10: b∗←− $ U({0,1}) 9: b∗←− $ U({0,1}) 9: ifb∗=0 return(A,B,B(cid:48),C,K)
+11: i r f e b tu ∗ r = n( 0 A,B,B(cid:48),C,K) 10: i r f e b tu ∗ r = n( 0 A,B,B(cid:48),C,K) 10: e re ls t e urn(A,B,B(cid:48),C,K) 9: e re ls t e urn(A,B,B(cid:48),C,K(cid:48))
+12: else 11: else
+return(A,B,B(cid:48),C,K(cid:48))
+return(A,B,B(cid:48),C,K(cid:48))
+return(A,B,B(cid:48),C,K(cid:48))
+Figura2.SecuenciadeexperimentosparalapruebadelTeorema3.
+Advddh−like (A) = |Pr[A(A,B,B(cid:48),C,K)=1]−Pr[A(A,B,B(cid:48),C,K(cid:48))=1]|,
+n,p,q,h,n¯,B
+Demostracio´n. Lademostracio´nsiguelametodolog´ıabasa- tanto, si A puede distinguir entre los experimentos 1 y 2,
+daenexperimentosampliamenteutilizadaenlacriptograf´ıa entoncesA ◦B puededistinguirlasdistribucionesO o
+1 S,h
+basadaenlattices[5,16,6].SeaS eleventodeadivinarelbit U(Zn×n)×U(Zn×n¯).Entonces,
+i q p
+b∗enelExperimentoidelaFigura2.
+|Pr(S )−Pr(S )|≤ Advdsp−terLWR(A ◦B )
+Experimento1. Esteeselexperimentoreal,dondelosmen- 1 2 n,p,q,h,n¯ 1
+(2)
+sajessongeneradoshonetsamentesegu´nlaFigura1.Enel Advdsp−terLWR(A ◦B )≤ n¯·Advdsp−terLWR(A ◦B )
+n,p,q,h,n¯ 1 n,p,q,h 1
+experimento 1 los pares LWR son (A,B) con secreto S; y
+(A,B(cid:48))y(B,V)consecretoS(cid:48).Porlotanto Experimento3. ElExperimento3esunasimplereescritura
+del Experimento 2. La clave pu´blica de Bob B(cid:48) y el secre-
+Advd n, d p h , − q, l h i , k n¯ e ,B (A)=|Pr(S 1 )−1/2| (1) toV¯ sonsimultaneamentegeneradosdeS(cid:48).ElparLWRes
+([A(cid:107)Inv(B)],[B(cid:48)(cid:107)V¯]) con secreto S(cid:48), lo que constituye una
+Experimento 2. En este experimento la clave pu´blica de
+instanciadelproblema6conpara´metros(n+n¯),p,q,h,m¯.
+Aliceesgeneradademaneraaleatoria.LosparesLWRson
+(A,B(cid:48))y(B,V)consecretoS(cid:48).
+Diferencias entre el Experimento 2 y el Experimento 3.
+Como el Experimento 3 es una reescritura del Experimen-
+Diferencias entre el Experimento 1 y el Experimento 2.
+to2setieneque
+EnelExperimento1,(A,B)eselegidosegu´nO .EnelEx-
+S,h
+perimento2,(A,B)eselegidosegu´nU(Zn×n)×U(Zn×n¯).
+q p Pr(S )=Pr(S ) (3)
+Suponiendoqueelproblemadsp-terLWResdif´ıcil,enton- 2 3
+ceslasdosdistribucionessonindistinguiblesconunfactorn¯
+Experimento 4. En el Experimento 4 no hay pares LWR,
+segu´nlodemostradoenellema4. losvaloresdeB(cid:48)yV¯ songeneradosdeformauniforme.
+Sea el algoritmo B de la Figura 3 que toma como en-
+1
+tradaelpar(A,B).Cuando(A,B)eselgidodeO donde Diferencias entre el Experimento 3 y el Experimento 4.
+S,h
+S←− $ HWT (h)n¯, entonces la salida de B se distribuye
+EnelExperimento3,([A(cid:107)Inv(B)],[B(cid:48)(cid:107)V¯])eselegidosegu´n
+n 1 O conpara´metros(n+n¯),p,q,h,m¯.EnelExperimento4,
+exactamente como en el Experimento 1. Cuando (A,B) es S,h
+elgidodeU(Zn×n)×U(Zn×n¯),entonceslasalidadeB se
+([A(cid:107)Inv(B)],[B(cid:48)(cid:107)V¯])eselegidosegu´nU(Zn
+q
+×(n+n¯)
+)×
+q p 1
+distribuye exactamente como en el Experimento 2. Por lo
+U(Zm¯×(n+n¯)
+).Suponiendoqueelproblemadsp-terLWRes
+p
+6 Protocoloparaelintercambiodeclavescriptogra´ficasbasadoenelproblema“learningwithrounding”
+B (A,B) B (Y,Z)
+1 2
+1: S(cid:48)←− $ HWT n (h)m¯ 1: (cid:2)A B(cid:62) (cid:62)(cid:3) ←Y
+2:
+B(cid:48)←(cid:98)S(cid:48)(cid:62)A(cid:101)
+p 2:
+(cid:2)B
+V¯
+(cid:48)
+(cid:62)
+(cid:62)(cid:3)
+←Z
+3 4 : : V C ¯ ← ← (cid:98) (cid:10) S In (cid:48)(cid:62) v( I V n ¯ v ) ( (cid:11) B 2B )(cid:101) p 4 3 : : K C← ← (cid:10) [I I n n v v ( ( V V ¯ ¯ ) ) ] (cid:11) 2 2 B B
+5:
+K←[Inv(V¯)]
+2B
+5:
+K(cid:48)←− $ U({0,1}n¯·m¯·B)
+6:
+K(cid:48)←− $ U({0,1}n¯·m¯·B)
+6: b∗←− $ U({0,1})
+7: b∗←− $ U({0,1}) 7: ifb∗=0return(A,B,B(cid:48),C,K)
+8: ifb∗=0return(A,B,B(cid:48),C,K) 8: elsereturn(A,B,B(cid:48),C,K(cid:48))
+9:
+elsereturn(A,B,B(cid:48),C,K(cid:48))
+Figura3.ReduccionesparalapruebadelTeorema3.
+dif´ıcil,entonceslasdosdistribucionessonindistinguiblescon Referencias
+unfactorm¯ segu´nlodemostradoenellema4.
+[1] Hayo Baan, Sauvik Bhattacharya, Oscar Garcia-
+Sea el algoritmo B de la Figura 3 que toma como en-
+2 Morchon,RonaldRietman,LudoTolhuizen,Jose-Luis
+tradaelpar(Y,Z).Cuando(Y,Z)eselgidodeO donde
+S(cid:48)(cid:62),h Torre-Arce,andZhenfeiZhang. Round2:Kemandpke
+S(cid:48) ←− $ HWT (h)m¯, entonces la salida de B se distribuye basedonglwr. CryptologyePrintArchive,Report2017,
+n 2
+exactamente como en el Experimento 3. Cuando (Y,Z) es 2017. http://eprint.iacr.org/2017.
+elgidodeU(Zn×n)×U(Zn×n¯),entonceslasalidadeB se
+q p 2
+[2] AbhishekBanerjee,ChrisPeikert,andAlonRosen.Pseu-
+distribuye exactamente como en el Experimento 4. Por lo
+tanto, si A puede distinguir entre los experimentos 3 y 4, dorandom functions and lattices. Cryptology ePrint
+entoncesA ◦B puededistinguirlasdistribucionesO o Archive, Report 2011/401, 2011. http://eprint.
+2 S(cid:48)(cid:62),h
+U(Zn×n)×U(Zn×n¯).Entonces, iacr.org/2011/401.
+q p
+|Pr(S )−Pr(S )|≤ Advdsp−terLWR(A ◦B ) [3] Sauvik Bhattacharya, Oscar Garcia-Morchon, Ronald
+3 4 n+n¯,p,q,h,m¯ 2 (4) Rietman, and Ludo Tolhuizen. spkex: An optimized
+Advdsp−terLWR(A ◦B )≤ m¯·Advdsp−terLWR(A ◦B ) lattice-basedkey-exchange. CryptologyePrintArchive,
+n+n¯,p,q,h,m¯ 2 n+n¯,p,q,h 2
+Report2017,2017. http://eprint.iacr.org/
+Sumando las desigualdades 2 y 4, queda
+2017.
+que despue´s de sustituir la ecuacio´n 3 nos [4] AndrejBogdanov,SiyaoGuo,DanielMasny,SilasRi-
+chelson,andAlonRosen. Onthehardnessoflearning
+withroundingoversmallmodulus.CryptologyePrintAr-
+PartiendodequeenelExperimento4secumplePr(S 4 )= chive,Report2015,2015. http://eprint.iacr.
+1/2yconlaecuacio´n1obtenemoselresultadoesperado. org/2015.
+4. Conclusiones y trabajo futuro [5] Joppe Bos, Craig Costello, Leo Ducas, Ilya Mironov,
+MichaelNaehrig,ValeriaNikolaenko,AnanthRaghu-
+Enelpresentetrabajosedesarrollo´ unprotocoloparael nathan,andDouglasStebila. Frodo:Takeoffthering!
+intercambiodeclavescriptogra´ficasdeltipoDHquebasasu practical,quantum-securekeyexchangefromlwe. Cry-
+seguridadenunavariantedelproblemaLWR.Conrespecto ptologyePrintArchive,Report2016/659,2016. http:
+a[3],seutilizo´ unmecanismodereconciliaco´nsimilarpero //eprint.iacr.org/2016/659.
+garantizando la uniformidad de la clave acordada y la de-
+mostracio´ndelapropiedadIND-CPA.Conrespectoa[5],se [6] Joppe W. Bos, Craig Costello, Michael Naehrig, and
+obtuvounavariantema´seficientedebidoaquenosenecesita Douglas Stebila. Post-quantum key exchange for the
+lageneracio´ndenu´merosgaussianos. tls protocol from the ring learning with errors pro-
+Comotrabajofuturoqueda: blem. Cryptology ePrint Archive, Report 2014/599,
+2014. http://eprint.iacr.org/.
+1. Reduccio´n ma´s ajustada del problema LWE hacia el
+sp-terLWR.
+[7] LongChen,ZhenfengZhang,andZhenfeiZhang. On
+thehardnessofthecomputationalring-lwrproblemand
+2. Ca´lculodelospara´metros.
+itsapplications.CryptologyePrintArchive,Report2018,
+3. Implementacio´nyca´lculodelrendimiento. 2018. http://eprint.iacr.org/2018.
+Protocoloparaelintercambiodeclavescriptogra´ficasbasadoenelproblema“learningwithrounding” 7
+|Pr(S )−Pr(S )| ≤ n¯·Advdsp−terLWR(A ◦B )+m¯·Advdsp−terLWR(A ◦B )
+1 4 n,p,q,h 1 n,p,q,h 2
+[8] JungHeeCheon,KyooHyungHan,JinsuKim,Chang- forthepost-quantumcryptographystandardizationpro-
+min Lee, and Yongha Son. A practical post-quantum cess, 2016. http://csrc.nist.gov/groups/
+public-keycryptosystembasedonsplwe. Cryptology ST/post-quantum-crypto/documents/
+ePrint Archive, Report 2016/1055, 2016. http:// call-for-proposals-draft-aug-2016.
+eprint.iacr.org/2016/1055. pdf.
+[9] Jung Hee Cheon, Duhyeong Kim, Joohee Lee, and
+[15] National Institute of Standards and Techno-
+YongsooSong. Lizard:Cutoffthetail!practicalpost-
+logy. Proposed submission for the post-
+quantumpublic-keyencryptionfromlweandlwr. Cry-
+quantum cryptography standardization pro-
+ptologyePrintArchive,Report2016/1126,2016.http:
+cess, 2017. https://csrc.nist.gov/
+//eprint.iacr.org/2016/1126.
+projects/post-quantum-cryptography/
+[10] Jan-PieterD’Anvers,AngshumanKarmakar,SujoySin- round-1-submissions.
+haRoy,andFrederikVercauteren.Saber:Module-lwrba- [16] Chris Peikert. Lattice cryptography for the internet.
+sedkeyexchange,cpa-secureencryptionandcca-secure Cryptology ePrint Archive, Report 2014/070, 2014.
+kem. Cryptology ePrint Archive, Report 2018, 2018. http://eprint.iacr.org/.
+http://eprint.iacr.org/2018.
+[17] OdedRegev. Onlattices,learningwitherrors,random
+[11] JintaiDing,XiangXie,andXiaodongLin.Asimplepro-
+linearcodes,andcryptography. InACM,editor,Thirty-
+vablysecurekeyexchangeschemebasedonthelearning
+seventhAnnualACMSymposiumonTheoryofCompu-
+with errors problem. Cryptology ePrint Archive, Re-
+ting,pages84–93,2005.
+port2012/688,2012.http://eprint.iacr.org/
+2012/688.
+[18] PeterW.Shor. Polynominaltimealgorithmsfordiscrete
+[12] AtsushiFujioka,KoutarouSuzuki,KeitaXagawa,and logarithms and factoring on a quantum computer. In
+KazukiYoneyama. Stronglysecureauthenticatedkey LectureNotesinComputerScience,volume877,page
+exchange from factoring, codes, and lattices. Crypto- 289.Springer,1994.
+logy ePrint Archive, Report 2012/211, 2012. http:
+//eprint.iacr.org/. [19] SongY.Yan.QuantumAttacksonPublic-KeyCryptosys-
+tems. Springer,2013.
+[13] DanieleMicciancio. Onthehardnessoflearningwith
+errorswithbinarysecrets. CryptologyePrintArchive,
+[20] Jiang Zhang, Zhenfeng Zhang, Jintai Ding, Michael
+Report2018,2018. http://eprint.iacr.org/ Snook,andO¨zgu¨rDagdelen. Authenticatedkeyexchan-
+2018.
+gefromideallattices.CryptologyePrintArchive,Report
+[14] National Institute of Standards and Technology. Pro- 2014/589,2014. http://eprint.iacr.org/.
+posedsubmissionrequirementsandevaluationcriteria

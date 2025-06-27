@@ -1,0 +1,612 @@
+Revista Ciencias Matemáticas
+Metodología para evaluar la habilidad docente
+procesamiento de datos en la formación matemática
+del profesor de la educación secundaria básica
+Methodology to evaluate the ability educational prosecution of data in the mathematical formation
+of the professor of the secondary basic education.
+Dr.C Ricardo Sánchez Casanova (ricardo.sanchez@matcom.uh.cu)
+Universidad de La Habana
+Dra. Olga Lidia Pérez González (olga.perez@reduc.edu.cu)
+Universidad de Camagüey
+Resumen 1. Introducción
+Esta investigación tiene como objetivo ofrecer una metodología
+para evaluar la habilidad docente procesamiento de datos en la La información, en sus diversas modalidades expresivas, ha
+formación matemática del profesor de la Educación Secunda-
+existido en todos los tiempos y en múltiples circunstancias so-
+ria Básica sustentada en un modelo didáctico. Tiene su origen
+ciales y culturales, pero solo a partir del siglo XX comienza a ser
+en inconsistencias y confl ictos entre las explicaciones prácticas y
+considerada como un fenómeno de gradual importancia, razón
+teóricas existentes en el proceso de evaluación de la habilidad do-
+por la cual la sociedad necesita hombres capaces de consultar
+cente procesamiento de datos, cuya naturaleza se manifi esta entre
+un gran volumen de información y utilizar este caudal de co-
+el carácter general de este proceso centrado en la apropiación de
+nocimientos en la solución creadora de los problemas que se
+la habilidad, en contraposición al carácter particular centrado en
+plantean.
+la apropiación de la habilidad docente.
+Como puede apreciarse, en el modelo de escuela cubana
+Palabras clave: habilidad docente procesamiento de datos,
+cuya aspiración es formar a un joven patriota y revolucionario,
+los nexos símbolos-objetos, la mediación semiótica, estado me-
+comprometido con la lucha por la independencia nacional y con
+tacognitivo, la evaluación.
+valores e ideales que se correspondan con nuestra identidad, es-
+tán presentes los contenidos de procesamiento de información
+Summary
+desde el tercer grado de la Educación Primaria.
+This investigation's objective to offer a Methodology to evaluate
+Existen estudios que abordan aspectos de carácter cogniti-
+the ability educational data processing in the professor’s mathe-
+vo, práctico y metodológico de la habilidad procesamiento de
+matical formation of and the Secondary Basic Education sus-
+datos (HPD), en la Educación Secundaria Básica tales como:
+tained in a Didactic Model. The same one has their origin in
+inconsistencies and confl icts among the practical and theoretical «Fases del método para la recopilación y procesamiento de In-
+existent explanations in the process of evaluation of the ability formación» (Ballester, S., 2002: 8), «La habilidad de procesar
+educational data processing whose nature is manifested among datos cuantitativos en la Secundaria Básica» (Quintana, A.,
+the general character of this process centered in the appropria- 2003:45), «La habilidad procesar datos cuantitativos. Conside-
+tion of the ability, in opposition to the character matter centered raciones metodológicas para su desarrollo en el noveno grado»
+in the appropriation of the educational ability. (Sánchez, R., 2004:36).
+Key Words: ability educational data processing, the nexuses Resultan de interés también, para la compresión de este pro-
+symbol-objects, the mediation semiótica, state metacognitivo, blema, los trabajos siguientes: «La habilidad procesar datos
+the evaluation. cuantitativos en la enseñanza de la matemática de la Secundaria
+— 37 —
+Sociedad Cubana de Matemática y Computación
+Básica» (Hurtado, F., 2005:57), «Recopilar, procesar y valorar 2. Desarrollo
+datos. Una necesidad para dirigir la labor educacional» (Balles-
+ter, S., 2008:12) y «Una concepción didáctica del proceso de en- 2.1 Descripción del modelo didáctico
+señanza-aprendizaje de los contenidos estadísticos en el octavo
+grado del municipio Pinar del Río» (Fernández, C., 2009:44).
+2.1 Fundamentación teórica del modelo didáctico
+Estas investigaciones son material de consulta obligatoria
+El modelo teórico, es la representación de aquellas carac-
+para todo investigador en esta temática, por sus aportes teóri-
+terísticas esenciales del proceso de evaluación de las ha-
+cos y prácticos para la formación y desarrollo de la habilidad
+bilidades docentes en el procesamiento de información y
+procesamiento de datos.
+comunicación. Este permite descubrir y estudiar nuevas re-
+Los hechos pedagógicos origen de esta investigación, iden-
+laciones y cualidades del objeto que se investiga con vistas
+tifi cados a partir de la experiencia pedagógica e investigadora
+a su transformación.
+de los autores, así como de insatisfacciones que han manifesta-
+Para la evaluación de la HDPD se requiere superar la contra-
+do en su momento los autores mencionados en los párrafos an-
+dicción externa existente entre la incorporación de habilidades
+teriores, constituyen fuentes de necesidad para transformar la
+matemáticas que amplíen los procedimientos lógicos para el
+realidad educativa presente en los resultados que alcanzan los
+tratamiento y solución de los problemas prácticos, específi ca-
+estudiantes de la Educación Secundaria Básica, cuando no sa-
+mente, en el procesamiento de información y la necesidad de
+tisfacen el procesamiento de datos con los conocimientos ma-
+analizar y extraer conclusiones de carácter ideológico y políti-
+temáticos que han desarrollado.
+co de la información sistemática acerca de la situación actual
+Indudablemente, la situación problémica que se presenta en
+de Cuba y el mundo.
+la formación de estos estudiantes, no puede ser considerada des-
+El carácter particular de la evaluación de la HDPD se pone
+de otra mirada que no sea el de las limitaciones que en el orden
+en contradicción interna con el carácter general de la evalua-
+didáctico presentan sus profesores, cuando en su intención de
+ción de la apropiación de la habilidad, que no es la habilidad, si
+evaluar la HPD no demuestran dominio de su carácter docente y
+no la tríada habilidad-conocimiento-metaconocimiento.
+esto, es una limitación propia de su formación matemática.
+De hecho, lo metacognitivo está relacionado con la dirección
+A pesar de todo lo que se ha avanzado en este campo, un
+de la cognición, con el proceso de apropiación de la habilidad, o
+análisis del currículo de la Educación Secundaria Básica ac-
+sea, con la habilidad docente. Es por ello que en el profesor de
+tual revela que en los programas de Matemática se trabaja con
+formación matemática, la formación de la habilidad y la forma-
+procedimientos y conceptos de la Estadística Descriptiva, sin
+ción docente de la habilidad deben conformar una unidad
+embargo, persisten difi cultades en la preparación del profe-
+Con relación a las habilidades en el plano profesional o ha-
+sor para que pueda asumir con la calidad requerida el proceso
+bilidades profesionales el investigador C. Álvarez (1999), con-
+de evaluación de la habilidad docente procesamiento de datos
+sidera que «la habilidad profesional es aquella que permite al
+(HDPD).
+egresado integrar los conocimientos y elevarlos al nivel de apli-
+A partir de estas insufi ciencias y del estudio epistemológico
+cación profesional, dominar la técnica para mantener la infor-
+realizado por los autores, permitió identifi car como problema
+mación actualizada, investigar, saber establecer vínculos con
+científi co de la investigación: ¿Cómo contribuir al perfecciona-
+el contexto social y gerenciar recursos humanos y materiales»
+miento de la evaluación de la HDPD en la formación matemáti-
+(Álvarez, C., 1999: 52).
+ca del profesor de la Educación Secundaria Básica?
+En el marco de estos referentes teóricos se formulan las si-
+El objetivo de nuestra investigación es ofrecer una metodo-
+guientes ideas básicas que sustentan el modelo didáctico:
+logía para evaluar la HDPD, sustentada en un modelo didáctico
+que contribuya al perfeccionamiento de la misma en la forma-
+• La relación de los nexos símbolos-objetos para el procesa-
+ción matemática del profesor de la Educación Secundaria Básica.
+miento de datos: el carácter conceptual de la HDPD deter-
+— 38 —
+Revista Ciencias Matemáticas
+mina la necesidad de su representación a nivel simbólico Se asume la defi nición de sistema que ofrece C. Álvarez
+(esquemas, tablas, gráfi cos, entre otros). (1990), cuando expresa que «un sistema es un conjunto de com-
+• La recodifi cación semiótica del nexo símbolo-objeto: se re- ponentes interrelacionados entre sí, desde el punto de vista es-
+conoce que el sujeto consolida el nexo símbolo-objeto e inde- tático y dinámico, cuyo funcionamiento está dirigido al logro
+pendiza el objeto de su representación semiótica, cuando es de determinados objetivos» (Álvarez, C., 1990: 20).
+capaz de representar el mismo objeto en diferentes registros El modelo didáctico que se propone se caracteriza por:
+de representación semiótica (registro literal, algebraico, gráfi -
+co, icónico, entre otros) y hacer transferencias entre los dife- • Ser fl exible: se reconocen las potencialidades que brindan
+rentes registros de representación semiótica (Miyar, I. 2009). los contenidos en pos de derivar a partir de él, las tareas
+• Enfoque problémico: basado en la actividad exploratoria docentes que el profesor ha de resolver desde las diferentes
+que posibilita el planteamiento de problemas prácticos con- materias. Asimismo tiene en consideración la diversidad de
+textualizados, que involucran al profesor en la producción criterios que pueden tener los profesores al dar solución a
+de datos vinculados a la vida, con lo cual se orienta el objeti- las tareas, dado por su desarrollo de habilidades y universo
+vo y los contenidos para el desarrollo de la HDPD. del saber.
+• La metacognición: se trata de fortalecer los procesos y proce- • Ser contextualizado: signifi ca que se reconocen las peculia-
+dimientos que operan en la mente del profesor con la HDPD, ridades de cada asignatura, sus objetivos y contenidos, así
+y de poner a relieve las estrategias (enseñar a autorregular la como de las particularidades de los profesores a quienes van
+actividad mental) y estilos de aprendizaje de este. dirigidas las tareas docentes, lo que exige tenerlas en consi-
+deración al planifi car las actividades, las cuales han de favo-
+recer su formación profesional.
+El objetivo del modelo didáctico es perfeccionar la evaluación
+• Ser dinámico: está presente, al no ver de forma estática el
+de la HDPD, centrada en las relaciones habilidad-conocimien-
+sistema de relaciones que se establece entre los componen-
+to, habilidad-metacognición (la cognición y regulación de la
+tes del proceso de enseñanza-aprendizaje. Asimismo reco-
+cognición), conocimiento-capacidad metacognitiva (conocer lo
+noce el dinamismo presente entre lo cognitivo, lo afectivo,
+que conoce, conciencia de sus propios pensamientos, planifi car
+lo cultural, en combinación armónica, con las estrategias de
+estrategias, refl exionar y evaluar la productividad intelectual)
+enseñanza y aprendizaje empleadas, lo que motivará al pro-
+y la mediación semiótica (materialización semiótica y recodifi -
+fesor en relación con la resolución de las tareas docentes.
+cación semiótica).
+• Ser abierto: permite, a partir de la esencia que lo distingue,
+ser enriquecido en el marco concreto de aplicación, donde
+2.2 Caracterización del modelo didáctico
+los profesores aportan nuevos matices a su materialización.
+para la evaluación de la habilidad docente
+procesamiento de datos
+Defi nimos como sistema el conjunto de objetos (procesos) re-
+lacionados entre sí por alguna forma de interacción, con de-
+Los presupuestos teóricos que fundamentan la concepción del
+terminada independencia y coherencia, por lo cual, en esta
+modelo didáctico que se propone toman como punto de parti-
+investigación se considera como sistema de mayor jerarquía el
+da el enfoque sistémico estructural funcional. Este se constitu-
+proceso de evaluación de las habilidades docentes en el proce-
+ye en el postulado epistemológico general que lo dinamiza, en
+samiento de información y comunicación. El proceso de eva-
+tanto caracteriza e interpreta su esencia, al revelar el sistema
+luación de la HDPD es un subsistema del mismo.
+como una totalidad que regula el funcionamiento de las partes
+Se determinó la recursividad del sistema, o sea, su cohe-
+que lo integran defi niendo los atributos y poseyendo caracterís-
+rencia a partir de que es un sistema abierto reconocible porque
+ticas propias que trascienden las que sus componentes aportan.
+contiene lo esencial de los procesos de evaluación apropiación
+— 39 —
+Sociedad Cubana de Matemática y Computación
+de las habilidades, con énfasis en las de carácter docente, des- La evaluación es instructiva solo si parte del presupuesto
+tacándose causas y efectos tanto dentro del sistema, como entre anterior, que se concreta en el estudiante como verdadero suje-
+éste y su medio (proceso de enseñanza-aprendizaje). to protagonista del proceso, en particular de su evaluación. No
+Como puede apreciarse, el proceso de evaluación de la obstante, la evaluación tiene que evidenciar sus fundamentos,
+HDPD se encuentra estructurado por los subsistemas: la eva- por ejemplo, en la asignatura matemática a través de los con-
+luación de impacto orientada en la apropiación-generalización ceptos y su demostración y profesionalización, al servicio de la
+del concepto matemático, la evaluación de las habilidades do- profesión de los contenidos de aprendizaje. Tiene que llamar la
+centes centrada en la apropiación de la metacognición y la eva- atención del estudiante sobre lo esencial, las invariantes, ideas
+luación de las habilidades docentes centrada en la apropiación rectoras, entre otros, las formas en que se asimilan las habilida-
+de la capacidad metacognitiva. des intelectuales, docentes y prácticas que deben poseer.
+De hecho se determinaron las funciones de cada uno de sus El efecto de resonancia ha sido considerado por otros auto-
+subsistemas. La evaluación de impacto orientada a la apropia- res en un plano macro estructural, en relación con el sistema
+ción-generalización del concepto matemático tiene la función de evaluativo de una institución, subsistema o país en su conjun-
+centrar el proceso de evaluación en lo esencial (el problema), la to, y se le denomina Baskwash o repercusión. El efecto de re-
+evaluación de las habilidades docentes centrada en la apropia- sonancia es el refl ejo objetivo o distorsionado de los efectos
+ción de la metacognición tiene la función de guiar el proceso de instructivos y educativos de la evaluación, en los diferentes su-
+evaluación (el objetivo), y la evaluación de las habilidades do- jetos y contextos sociales.
+centes centrada en la apropiación de la capacidad metacognitiva La función de control es la función evaluativa más reconocida
+tiene la función de activar el proceso de evaluación (el método). y estudiada en la literatura pedagógica y psicológica, así como
+A propósito el estudio de los antecedentes históricos de las en la práctica escolar. El control, convertido en el gran «dicta-
+bases psicológico-pedagógicas y la multifactorial infl uencia dor» del proceso pedagógico, en muchos casos ha determinado
+de otras ciencias, particularmente en Cuba y América Latina, el quehacer del profesor y su intencionalidad, así como la acti-
+permite comprender el papel de la evaluación del aprendizaje, vidad del estudiante, llegando a ser su objetivo más importante.
+devenido espacio de convergencia psicológica, económica y so- Los autores de esta investigación consideran que la funcio-
+cial, sin perder su esencia pedagógica. nalidad del proceso evaluativo permite al profesor estimular el
+El investigador O. Castro (1996), propone la siguiente clasi- pensamiento crítico, controlar sistemáticamente las acciones y
+fi cación de la evaluación: operaciones de la HDPD, la asimilación consciente del conte-
+nido en el proceso de enseñanza-aprendizaje, entre otros. De
+• Función pedagógica. hecho la evaluación tiene que dar continuidad al proceso que
+• Función innovadora. garantiza el pensamiento fl exible y comprobarlo fehaciente-
+• Función de control. mente, por lo que las técnicas empleadas, en especial las pre-
+guntas como forma básica del control, deben propiciar juicios
+La función pedagógica puede ser considerada la función rec- alternativos, soluciones algorítmicas, reformulación de los pro-
+tora de la evaluación. Se caracteriza por producir tres efectos blemas o la elaboración de otros nuevos.
+importantes e interrelacionados: el instructivo, el educativo y Dichos subsistemas infl uyen e interactúan dialécticamente
+el de resonancia. El efecto instructivo se logra adecuadamen- unos con otros. Tienen en común que representan los procesos que
+te cuando se establece con precisión la relación objetivos-eva- ocurren en la actividad cognoscitiva de los profesores, los cuales
+luación, cuando el estudiante es orientado correctamente hacia están mediados por factores externos sobre los que se puede ac-
+esos objetivos, tiene clara conciencia de qué se espera de él, qué tuar de manera directa en el proceso de evaluación de la HDPD.
+camino ha de seguir y cómo debe comprobar el grado de efi - Un aspecto de vital importancia es la interdependencia en-
+ciencia de su actividad. tre los subsistemas. Ninguno debe ser entendido y analizado en
+— 40 —
+Revista Ciencias Matemáticas
+Impacto de la evaluación de la HDPD Pertenencia de la evaluación de la HDPD
+LO ESENCIAL LA ASPIRACIÓN
+Relación de los nexos símbolo-objetos
+Formación de la HDPD
+para el procesamiento de datos
+Lo potencial
+Optimización de la evaluación de la HDPD
+Lo dinámico
+EL MÉTODO
+Enseñanza-aprendizaje de la HDPD Perfeccionamiento
+de la evaluación de la HDPD
+Fig. 1 Representación gráfi ca de las relaciones del modelo didáctico que sintetiza lo potencial y lo dinámico.
+forma aislada y un cambio en alguno de ellos o en su interac- 2.3 Características del modelo didáctico
+ción, afecta a los demás. Cada subsistema condiciona los res-
+tantes y a su vez es condicionado por estos.
+La modelación del proceso de evaluación de la HDPD, median-
+El carácter general de la evaluación de las habilidades docen-
+te la determinación de sus componentes y sus interrelaciones,
+tes centrada en la apropiación de la HPD y el carácter particular
+permite representar una concepción integral que evidencia la
+de la evaluación de las habilidades docentes centrada en la apro-
+lógica de este proceso, sustentada en:
+piación de la HDPD como contrarios dialécticos conforman la
+contradicción fundamental que dinamiza el modelo didáctico y a
+• La mediación semiótica para la relación de los nexos símbo-
+la vez mantiene su homeostasis para conservar y prevenir al siste-
+los-objetos. La representación y tratamiento del concepto ma-
+ma contra cambios bruscos que puedan afectarlo en su totalidad.
+temático para el procesamiento de datos en diferentes registros
+A partir de la relación de la evaluación centrada entre la
+de representación semiótica, son necesarios para la relación de
+apropiación de la HDPD, el conocimiento y el metaconoci-
+los nexos símbolos-objetos. La transferencia entre registros de
+miento, se revela la lógica integradora de la concepción del sis-
+representación semiótica posibilitan la apropiación de cada uno
+tema abierto al proceso de evaluación de la HDPD, al indagar
+de los elementos esenciales del objeto conceptual, al lograr, a
+la homeostasis y la armonía entre lo esencial, la aspiración y el
+través de las coordinaciones de los diferentes registros, estable-
+método en busca de una cualidad esencial: el perfeccionamien-
+cer las relaciones entre dichos elementos, y propiciar la forma-
+to de la evaluación de la HDPD.
+ción del concepto matemático para el procesamiento de datos.
+Se defi ne el Perfeccionamiento de la evaluación de la HDPD
+• La capacidad metacognoscitiva. Esta capacidad facilita en-
+teniendo en cuenta: el papel signifi cativo de la autovaloración
+tender su conocimiento sobre la HDPD, tener conciencia de
+del profesor, el control, la comprobación de la identidad entre
+sus propios pensamientos, planifi car estrategias para resol-
+el objetivo y el resultado y las formas de enseñanza que carac-
+ver el problema, refl exionar y evaluar la productividad de su
+terizan a la HDPD.
+aprendizaje
+— 41 —
+Sociedad Cubana de Matemática y Computación
+3. Descripción cimiento, qué logra hacer el profesor por sí solo y qué no
+de las etapas de la metodología sabe hacer (con la HDPD), explorando así su zona de de-
+sarrollo potencial, con vistas a ofrecer la ayuda requerida.
+4. Principio didáctico del carácter educativo de la evalua-
+3.1 Metodología para evaluar la HDPD
+ción: la evaluación se orienta a estimular el desarrollo;
+constituye una vía de ayuda que se puede graduar según
+Teniendo en cuenta las relaciones que se establecen entre los
+las necesidades educativas de los profesores, es eminen-
+componentes (la apropiación-generalización de los conceptos
+temente de naturaleza social, cooperativa y solidaria.
+matemáticos, el proceso de enseñanza-aprendizaje y la eva-
+luación de impacto, la metacognición como supervisión de la
+3.4 Etapas de la metodología
+cognición), es importante notar que en el modelo didáctico está
+para evaluar la HDPD
+contenida la metodología para evaluar la HDPD que se propone.
+La metodología propuesta resultará ser una herramienta que
+La metodología para evaluar la habilidad docente procesamien-
+está integrada por un objetivo general, principios, requerimien-
+to de datos propuesta posee tres etapas. Caracterizamos cada
+tos para su implementación, características fundamentales y
+una de estas etapas a partir de: objetivos, acciones fundamenta-
+etapas.
+les y consideraciones metodológicas.
+3.2 Objetivo general
+PRIMERA ETAPA
+Diagnóstico pedagógico inicial y análisis de los resultados
+El objetivo general es evaluar la HDPD en la formación mate-
+Objetivos: obtener criterios acerca de los conocimientos sobre
+mática del profesor de la Educación Secundaria Básica, que re-
+la HDPD, detectar a los profesores con más difi cultades y a los
+gulada por principios, permiten ordenar el pensamiento y modo
+que poseen más posibilidades. Jerarquizar las principales defi -
+de actuación de los profesores.
+ciencias detectadas para poder determinar las tareas docentes a
+realizar en cada fase de la etapa de ejecución.
+3.3 Principios para la evaluación de la HDPD
+Las acciones fundamentales a realizar para la planifi cación
+del diagnóstico pedagógico son:
+1. Principio pedagógico de unidad entre la actividad, la co-
+municación y la personalidad: desde que nace, y a lo largo • Análisis de los contenidos del programa de matemática que
+de toda su vida, el hombre realiza un sin número de ac- propician el desarrollo de la HDPD.
+tividades y se comunica constantemente en ellas (para el • Planifi cación de los momentos de aplicación del diagnóstico,
+intercambio y transmisión de los conocimientos), de ma- selección y elaboración del instrumento para la realización
+nera que estos dos elementos resultan esenciales en el pro- del diagnóstico, teniendo en cuenta los conceptos matemáti-
+ceso de educación de la personalidad. cos fundamentales.
+2. Principio pedagógico interdisciplinario: la educación con- • Aplicación del instrumento seleccionado y elaborado a los
+temporánea debe caracterizarse, tanto en la estructura- implicados.
+ción curricular como en el desarrollo metodológico del
+quehacer pedagógico, por «la integración de los conteni- Las acciones fundamentales a realizar para el análisis de los re-
+dos (conocimientos, habilidades, actitudes y valores). sultados del diagnóstico son:
+3. Principio didáctico del diagnóstico pedagógico sistemáti-
+co: para diagnosticar el nivel de logros en el aprendizaje • Análisis de los principales resultados obtenidos acerca de la
+es necesario llegar a conocer, de cada elemento del cono- aplicación del instrumento, en relación con la HDPD.
+— 42 —
+Revista Ciencias Matemáticas
+• Identifi cación de conceptos matemáticos mal formados por tando sus rasgos esenciales y establecer relaciones funciona-
+los profesores de la carrera. les de forma ascendente, para lo cual vinculan las diferentes
+• Jerarquización de las defi ciencias detectadas y motivación semióticas (literal, algebraica, gráfi ca), utilizando diferentes
+para su solución a partir de nuevas metas. recursos didácticos (libros de texto, software educativo y
+otros materiales complementarios).
+SEGUNDA ETAPA
+• Se enfrentarán tareas y problemas prácticos cuya solución
+Elaboración y aplicación de las tareas docentes
+requiere de la apropiación y aplicación de los conceptos.
+que permitan el desarrollo de la habilidad docente
+procesamiento de datos
+TERCERA ETAPA:
+Objetivo: planifi car las tareas docentes por unidades según los
+Evaluación de la habilidad docente procesamiento de datos.
+programas de las asignaturas, de manera que permita la siste-
+Objetivo: diagnosticar los conocimientos de los profesores en la
+matización de las acciones y operaciones de la HDPD: obtener
+habilidad docente procesamiento de datos en el proceso de en-
+datos, simplifi car los datos y comunicar los resultados. En el
+señanza-aprendizaje.
+caso de la asignatura Matemática se debe tener en cuenta la
+La evaluación del indicador dominio de las acciones y opera-
+apropiación-generalización del concepto matemático con rela-
+ciones de la HPD como: obtener datos (localización, selección,
+ción a la mediación semiótica (materialización semiótica y re-
+recopilación, organización e identifi cación), simplifi car datos
+codifi cación semiótica).
+(identifi cación de datos claves y su interrelación, obtención de
+Las acciones fundamentales que se deben realizar son:
+resultados cuantitativos y cualitativos) y comunicar resultado
+(selección de las herramientas de comunicación del resultado,
+• Revisión de programas y orientaciones metodológicas, li-
+calidad de la elaboración del resultado presentado y dominio
+bros de texto, videoclases, teleclases y software educativos
+del resultado presentado).
+para establecer los nexos interdisciplinarios.
+Consideraciones metodológicas:
+• Elaboración de una página web educativa para el desarrollo y
+evaluación de la HDPD desde la carrera Matemática y Física
+• Para evaluar el grado de desarrollo de la HDPD, es necesario
+en la Universidad de Ciencias Pedagógicas.
+el dominio de las operaciones de la acción que la conforman.
+• Para lograr los objetivos trazados en la fase de la evaluación
+Posteriormente, viene un momento en el cual el evaluador
+de impacto orientada en la apropiación generalización del
+se guía por los indicadores de cada nivel con respecto a las
+concepto matemático, se deben seleccionar las tareas de for-
+operaciones; esos indicadores deben traducirse en manifes-
+ma que posibiliten representar los objetos en un registro se-
+taciones externas de la habilidad.
+miótico para estudiar sus características esenciales, tratar las
+• Ha sido elaborada una escala de valoración sintética para
+representaciones obtenidas al interior de un registro estable-
+evaluar el desempeño de los profesores en las acciones de la
+cido, (esto incluye utilizar diferentes representaciones dentro
+HDPD, debido a que ese instrumento permite cumplimentar
+de un mismo registro) y de convertir las representaciones de
+los objetivos relacionados con el desarrollo de habilidades.
+un registro a otro. La conversión se hará fundamentalmente
+• Es importante tener en cuenta que el proceso de conversión
+entre el lenguaje natural, el algebraico y el gráfi co.
+entre registros semióticos, las causas profundas de los erro-
+• Esta conversión posibilita establecer una articulación cohe-
+res hay que buscarlas en la no congruencia entre sistemas
+rente entre las representaciones del concepto matemático
+semióticos, la cual revela una carencia de coordinación (ca-
+para el procesamiento de datos.
+pacidad para reconocer dos representaciones distintas como
+• Para resolver las tareas se debe ir de lo más simple a lo más
+representaciones de un mismo objeto) entre dichos sistemas.
+complejo; para ello los profesores deben responder a pregun-
+La no congruencia puede deberse a un fenómeno de compar-
+tas y formularlas, formar los conceptos matemáticos para el
+timentación entre los sistemas de representación.
+procesamiento de datos a partir de ir abstrayendo e interpre-
+— 43 —
+Sociedad Cubana de Matemática y Computación
+• Es muy importante que el evaluador verifi que el trabajo que gicas que representan 60 %, 12 son Máster en ciencias afi nes a
+ejecutan los profesores, propicie el intercambio entre ellos, es- la Educación, que representan 40 %, de ellos 10 son Profesores
+timule su metaconocimiento y autorregulación como vía de ir Titulares y 12 son Profesores Auxiliares, el resto son Asistentes.
+contrastando los conceptos científi cos con las concepciones El 33,3 % de los especialistas tiene más de 10 años de experien-
+que poseen, para identifi car y corregir sus limitaciones y no cia y 66,6 % tiene más de 20 años.
+esencialidad de las propiedades atribuidas a los objetos. Es importante señalar que los sujetos encuestados mostraron
+disposición real de colaborar en el trabajo, buena capacidad de
+análisis, creatividad y un elevado espíritu crítico y autocrítico. El
+4. Resultados de la validación criterio seguido para la selección de los expertos fue considerar
+aquellos que tuvieran un coefi ciente de competencia alto o me-
+de la metodología
+dio, por tanto cumplieron con este criterio 30 de los encuestados.
+Para el procesamiento estadístico de los datos se aplicó el
+4.1 Experiencia en la aplicación
+modelo de Torgerson (Campistrous & Rizo, 1998), utilizando
+de la metodología para evaluar la HDPD
+como medio una hoja excel soportada en Windows. Se elaboró
+una escala para efectuar la valoración integral del modelo di-
+Se hace una valoración de la misma mediante el método de ex-
+dáctico y de la metodología para evaluar la HDPD destinada a
+perto para corroborar el valor científi co metodológico del mode-
+perfeccionar la evaluación de la habilidad. Para la valoración de
+lo didáctico y la metodología propuesta. Además, se presentan
+los expertos, se incluyeron los siguientes indicadores:
+los resultados de la realización de un pre-experimento, a través
+del cual se implementó la metodología para evaluar la HDPD,
+1. Contribución al desarrollo de las habilidades pedagógicas
+en el cual se determinó la efectividad preliminar de la misma.
+profesionales.
+La valoración en nuestra investigación se desarrolla en dos
+2. Infl uencia de la capacidad metacognoscitiva para la eva-
+etapas: la primera, dedicada a la determinación de un conjunto
+luación del aprendizaje.
+de posibles especialistas que se consideren como expertos, para
+3. Infl uencia de la relación dialéctica entre la materializa-
+la metodología para evaluar la HDPD, premisa central del trabajo
+ción semiótica y la recodifi cación semiótica en la apro-
+y, la segunda etapa: la consulta a los expertos así seleccionados.
+piación-generalización del concepto matemático para el
+Para la constatación de la factibilidad de la metodología para
+procesamiento de datos.
+evaluar la HDPD se realizaron las siguientes acciones:
+4. Pertinencia del modelo didáctico que sustenta la metodo-
+logía para evaluar la HDPD.
+• Consulta a expertos sobre la factibilidad del modelo didácti-
+5. Correspondencia entre el modelo didáctico (concepción teó-
+co y de la metodología para evaluar la HDPD.
+rica) y la metodología para evaluar la HDPD (instrumento).
+• Desarrollo de un pre-experimento con el objetivo de estudiar
+6. Correspondencia entre los tipos de tareas docentes y las
+el comportamiento de la metodología que evalue la HDPD
+acciones de la HDPD.
+en la práctica pedagógica.
+7. Contribución de la metodología para evaluar la HDPD a
+la mejoría de la efectividad de los profesores.
+Se escogieron 36 posibles expertos, se seleccionaron y evalua-
+8. Posibilidades que brinda la metodología para evaluar la
+ron 30 y se obtuvieron los siguientes resultados: 13 presentaron
+HDPD para el trabajo interdisciplinario con la habilidad.
+un coefi ciente de conocimiento alto (43,3 %), 15 un coefi ciente
+de conocimiento medio (50 %) y dos un coefi ciente de conoci-
+Los expertos consultados consideran muy adecuada los indica-
+miento bajo para un (6,66 %). Resulta de interés que de los 30
+dores: 1, 2, 3, 7, 8 y también considera adecuada los indicadores
+expertos seleccionados, 18 son Doctores en Ciencias Pedagó-
+4 y 5. De hecho los resultados obtenidos demuestran el valor
+— 44 —
+Revista Ciencias Matemáticas
+científi co-metodológico del modelo didáctico y la metodología HPD; 1.3 Dominio de cómo evaluar la HPD; 1.4 Vínculos in-
+para evaluar la HDPD propuesta, en la formación matemática terdisciplinarios de la HPD con otras asignaturas.
+del profesor de la Educación Secundaria Básica y que estos re- • Dimensión 2: Desarrollo de la HPD en los estudiantes.
+sultan factibles como solución al problema de la investigación. Indicadores: 2.1 Obtener los datos; 2.2 Simplifi car los datos;
+2.3 Comunicar los resultados.
+4.2. Evaluación de impacto • Dimensión 3: Evaluación de la HPD.
+de la aplicación pre-experimental Indicadores: 3.1 Cantidad y calidad en la realización de las
+de la metodología para evaluar la HDPD acciones con sus operaciones; 3.2 Grado de independencia
+en el trabajo; 3.3 Capacidad metacognoscitiva.
+Con la fi nalidad de constatar la efectividad de la metodología
+PASO 2: Selección de la muestra
+para evaluar la habilidad docente procesamiento de datos ela-
+Se eligió un total de 12 profesores y 80 estudiantes de cuatro gru-
+borada y dejar está establecida, se aplicó un pre-experimento en
+pos, escogidos intencionalmente de los centros, Escuela Vocacio-
+el cual se emplearon seis pasos.
+nal de Artes (EVA) Luis Casas Romero y la Escuela Secundaria
+PASO 1: Toma de decisiones respecto al número de varia- Básica Urbana (ESBU) Pepito Mendoza, ambas en el municipio
+bles independientes y dependientes que deberán ser inclui- Camagüey en el curso 2007-2008. La selección de las escuelas se
+das en el pre-experimento realizó tomando como criterios las experiencias de los colectivos
+Para poder delimitar las variables, resultó necesario realizar el pedagógicos que imparten la docencia en estos centros y las ca-
+planteamiento de la siguiente hipótesis: racterísticas de sus estudiantes.
+Si se aplica una metodología para evaluar la habilidad do-
+cente procesamiento de datos sustentada en un modelo didácti- PASO 3: Realización del diagnóstico inicial
+co que evidencie la relación de los nexos símbolo-objeto en la Antes de la puesta en práctica de la metodología para evaluar la
+medición de la pertinencia, impacto y optimización se puede HDPD y el inicio del pre- experimento se controló en el grupo
+contribuir al perfeccionamiento de la misma en la formación el estado inicial de la variable dependiente: la evaluación de la
+matemática del profesor de la Educación Secundaria Básica. HDPD, mediante la aplicación de encuestas.
+Como variable independiente se precisa a partir de una me-
+PASO 4: Capacitación de los profesores
+todología para evaluar la HDPD y la variable dependiente es la
+y del equipo auxiliar de investigación
+evaluación de la HDPD. Esta se defi ne como: «El proceso de diag-
+Para ello, se desarrolló durante el curso escolar 2007-2008 un
+nóstico y sistematización de la obtención y simplifi cación de los
+programa que incluyó a los directores, subdirectores docentes y
+datos, y comunicación del resultado; mediante el cual el profesor y
+jefes de grado de las escuelas del municipio de Camagüey, para
+el estudiante concientizan el grado de desarrollo y toman decisión
+un total de 33 participantes. Las actividades se realizaron con
+para su mejoramiento en las capacidades, actitudes y estrategias».
+una frecuencia mensual de cuatro horas, con la fi nalidad de pre-
+A propósito se operacionaliza la variable dependiente, se
+parar, con posterioridad, a los profesores de sus centros labo-
+determinan las dimensiones y los indicadores. Se tuvo como
+rales en la utilización de la metodología para evaluar la HDPD.
+referentes las bases teóricas que aparecen en «La Parametri-
+zación en la Investigación Educativa» (Añorga, J. et al, 2008).
+PASO 5: Introducción de la metodología
+para evaluar la habilidad docente procesamiento
+• Dimensión 1: Preparación del profesor en la estructura di- de datos en la práctica educativa
+dáctica y evaluación de la HPD. De acuerdo a la muestra descrita anteriormente se selecciona-
+Indicadores: 1.1 Dominio teórico de la estructura didáctica ron, de manera intencional dos profesores y dos grupos, cons-
+de la HPD; 1.2 Dominio de las acciones y operaciones de la tatándose la efectividad de la preparación de los profesores en
+— 45 —
+Sociedad Cubana de Matemática y Computación
+dos etapas: durante las actividades realizadas en los talleres y, metacognición y en la apropiación de la capacidad metacognitiva,
+posteriormente, a través de su desempeño en el grupo docente. lo que fundamenta una nueva cualidad en dicho sistema, para que
+el profesor, desde el punto de vista matemático, posea los rasgos
+PASO 6: Análisis o constatación fi nal
+que lo llevarán a un adecuado desempeño profesional pedagógico.
+de los resultados del pre-experimento
+A propósito para el procesamiento estadístico, se determinaron
+las tendencias en las opiniones de los profesores, los estudiantes
+Bibliografía
+y los funcionarios, sobre la base de los resultados de las encuestas
+y las observaciones a clases. Se utilizó el cálculo de la mediana y
+la prueba estadística Kolmogorov-Smirnov de bondad de ajuste ADDINE, F. (2002). Las concepciones curriculares para la forma-
+con un nivel de signifi cación de 95 % o 99 % de confi abilidad. ción inicial de docentes en Cuba. Soporte digital. La Habana.
+ÁLVAREZ, A. & SÁNCHEZ, R. & HURTADO, F. (2002). La ha-
+Al fi nal del pre-experimento, en el análisis realizado con los bilidad procesar datos. Consideraciones metodológicas para su
+profesores de la muestra, los directivos de la escuela y los profe- desarrollo en la Secundaria Básica. Camagüey, «inédito», p. 15
+sores que participaron en la investigación estos reconocieron la ÁLVAREZ, C. (1990). Fundamentos teóricos de la dirección del
+relevancia del desarrollo del proceso de evaluación de la HDPD, proceso docente educativo en la Educación Superior Cubana.
+no solo para la formación profesional docente de los profesores, Ed. Pueblo y Educación. La Habana.
+sino también para los estudiantes. Todo lo anterior indica que BALLESTER, S. (2008). Recopilar, procesar y valorar datos.
+el modelo didáctico y su respectiva metodología para evaluar la Una necesidad para dirigir la labor educacional. I.S.P. «Enri-
+HDPD, introducida en la práctica, tuvieron aceptación. que José Varona». Soporte electrónico. La Habana.
+BRITO, H. (1990). Aspectos metodológicos para la formación,
+desarrollo y evaluación de las habilidades en una asignatura.
+I.S.P. «Enrique José Varona». Material impreso. La Habana.
+5. CONCLUSIONES
+DUVAL, R., et.al. (1999). Semiosis y pensamiento humano. Re-
+gistro semiótico y aprendizajes intelectuales.Universidad del
+Como resultado del proceso investigativo realizado se conclu-
+Valle. Soporte electrónico. México.
+ye que la utilización del enfoque sistémico estructural funcio-
+FERNÁNDEZ, C. (2005). Una estrategia para la dirección del
+nal en el tratamiento de las relaciones esenciales del proceso de
+proceso de formación de las habilidades de procesamiento
+evaluación de las habilidades docentes en el procesamiento de
+de información estadística en las escuelas secundarias bási-
+información y comunicación, develó regularidades y caracterís-
+cas en el campo del municipio Pinar del Río. Tesis presenta-
+ticas de la evaluación de la HDPD en la formación matemática
+da en opción al Título Académico de Máster en Ciencias de
+del profesor de la Educación Secundaria Básica. Lo que permite
+la Educación. Pinar del Río.
+resolver la contradicción entre el carácter general de la evalua-
+LEONTIEV, A. (1981). Actividad. Conciencia. Personalidad.
+ción de las habilidades docentes centrada en la apropiación de la
+Ed. Pueblo y Educación. La Habana.
+HPD y el carácter particular de la evaluación de las habilidades
+PÉREZ, O. (2002). Evaluación del aprendizaje: principios, re-
+docentes centrada en la apropiación de la HDPD.
+gularidades y funciones. Material en soporte magnético. Ca-
+La concepción que tiene el modelo didáctico de la evaluación
+magüey.
+de la HDPD, desde las regularidades de esencialidad, la aspi-
+VIGOTSKY, L. (1979). El desarrollo de las funciones psicológi-
+ración y el método empleado en este proceso, concibe, desde el
+cas superiores. Ed. Crítica. Barcelona.
+punto de vista teórico, una evaluación de impacto orientada a la
+apropiación-generalización del concepto matemático, al desarro-
+llo de las habilidades docentes centrada en la apropiación de la
+— 46 —

@@ -1,0 +1,1132 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.67-72
+Recibido06-2020,Aceptado07-2020
+Evolución de la CoVid19 a partir de un Modelo
+SAIRV con tasa de transmisión variable ante
+precepción de riesgo, cuarentena y hospitalización.
+Caso Cuba
+Evolution of the CoVid19 from a SAIRV model with
+variable transmission rate with risk perception,
+quarantine and hospitalization. Case Cuba
+Daniel Menció Padrón1, Gabriela Bayolo Soler2, Aymée Marrero Severo2*
+Resumen ApartirdelapropuestayestudiodeunavarianteSEIRdemodeloepidemiológicopoblacionalpara
+representarladinámicadetransmisióndelaCoVid19,confuncionesquesimulanaccionesantelapercepciónde
+riesgoyquedistingueentrelaspoblacionesdeinfectadossintomáticosyasintomáticos(ver[5]),sepresentauna
+nuevavariantequeconsideraexposiciónalvirusyladiferenciacióndepersonasencuarentenayhospitalizados,
+ademásdeinfectadosyasintomáticoslibresenlapoblación.Serealizóelajustedelosparámetros,utilizando
+diferentesestrategiasconvistasasimularelcomportamientodelasvariablesesencialesparalosobjetivosde
+esteestudio,segúndatosenCuba.
+Abstract StartingfromavariantofepidemicpopulationSEIRmodelproposedin[5],anditstudytorepresent
+the dynamics of transmission of CoVid19, with functions that simulate actions of the perception of risk and
+distinguishingamongthepopulationsofinfectedsymptomaticandasymptomatic,inthispaperisproposeda
+newvariantthatconsidersexpositiontothevirus,andpeople’sdifferentiationinquarantineandhospitalizedand
+infectedandasymptomaticfreeinthesociety. Itrealizestheadjustmentofparameters,usingdifferentstrategies
+withaviewtosimulatingthebehavioroftheprincipalvariablesforoursinvestigations,accordingtodatainCuba.
+PalabrasClave
+ModeloSAIRV,CoVid19,cuarentena,hospitalización,tasadetransmisión.
+Keywords
+ModelSAIRV,CoVid19,quarantine,hospitalization,transmissionrate.
+1DepartamentodeMatemática,UniversidaddelaHabana,LaHabana,Cuba,daniel.mencio@fec.uh.cu
+2DepartamentodeMatemática,UniversidaddelaHabana,LaHabana,Cuba,aymee@matcom.uh.cu,gabriela.bayolo@matcom.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción que adiciona la subpoblación de individuos en período de
+incubaciónolatencia,distinguiendoentrelosinfectadossin-
+Lacomunidadcientíficacubanahatrabajadointensamente tomáticosyasintomáticos,considerandoestosúltimoscomo
+paraapoyarlasaccionesdelasinstitucionesdeSaludPública unanuevasubpoblación.Además,conlatasadetransmisión
+y las instancias gubernamentales con vistas a diseñar una variableenfuncióndeparámetrosquerepresentanlafuerza
+estrategiadeenfrentamientoalanuevaenfermedadCoVid19, delaaccióndecontrolylapercepciónderiesgo(ver[5]).
+desdeantesdequeaparecieranlosprimeroscasosennuestro
+Apartirdelosresultadosobtenidosen([5])ydelestudio
+país.
+delosartículos([7],[6]),proponemosenestetrabajounnuevo
+Apesardesurecienteapariciónydebidoalarapidezcon modelo queconsidera una variante con exposición al virus
+quealcanzólacategoríadepandemiamundial,haaparecido y la diferenciación de personas asintomáticos e infectados
+ungrannúmerodeestudioseinvestigacionesconaltadifu- librementeenlasociedadyencuarentenayhospitalizados,
+sión.Lostrabajos([1],[2],[4],[8])nosmotivaronalaprimera conservando las principales definiciones de parámetros del
+propuesta de un modelo tipo SEIR que denotamos SEAIR modeloanterior.
+EvolucióndelaCoVid19apartirdeunModeloSAIRVcontasadetransmisiónvariableanteprecepciónderiesgo,
+68 cuarentenayhospitalización. CasoCuba
+1. La modelación biomatemática
+VariablesdelModelo  dS SI
+S(t):
+t
+p
+d
+p
+P
+S
+e
+e
+o
+e
+u
+q
+r
+r
+r
+r
+s
+u
+a
+s
+s
+t
+c
+e
+a
+o
+o
+e
+u
+d
+n
+n
+p
+p
+n
+o
+a
+a
+t
+u
+a
+i
+s
+s
+r
+e
+b
+e
+p
+s
+e
+d
+l
+s
+a
+o
+e
+n
+e
+n
+s
+b
+a
+n
+c
+a
+s
+l
+u
+a
+s
+i
+s
+n
+c
+a
+e
+e
+t
+i
+r
+r
+n
+o
+ó
+e
+i
+m
+n
+n
+l
+n
+a
+t
+fl
+f
+e
+á
+e
+p
+n
+t
+o
+i
+c
+o
+a
+t
+c
+t
+a
+b
+,
+o
+a
+n
+l
+o
+d
+s
+a
+t
+,
+a
+e
+c
+e
+s
+i
+e
+l
+t
+ó
+n
+r
+v
+a
+n
+a
+f
+l
+i
+n
+e
+r
+e
+e
+u
+r
+s
+n
+m
+n
+m
+s
+t
+e
+a
+o
+r
+i
+l
+s
+a
+m
+s
+o
+i
+r
+n
+b
+r
+h
+e
+s
+a
+i
+o
+t
+n
+e
+.
+a
+s
+n
+n
+p
+c
+t
+t
+o
+a
+i
+e
+t
+l
+n
+a
+.
+d
+t
+l
+S
+a
+i
+e
+z
+c
+e
+t
+a
+t
+i
+o
+c
+d
+e
+o
+o
+m
+c
+n
+s
+o
+p
+s
+n
+o
+y
+i-
+
+d
+d
+d
+d
+d
+A
+A
+d
+I
+t
+t
+L
+L
+t
+=
+=
+=
+(
+−
+q
+S
+1
+N
+S
+N
+−
+[β
+[
+q
+β
+(
+)
+t
+(
+N
+S
+)
+t
+(
+)
+[
+I
+(
+β
+L
+I L
+(
++
+t
++
+)
+θ
+(
+θ
+I
+A
+L
+A
+L
++
+L
+−
++
+θ
+c
+A
+c
+P
+L
+P
+f
+)
+−
+f )
++
+c
++
+P
+β
+β
+f
+v
+V
+)
+C
++
+A
+]−
+C
+β
++
+v
+(
+V
+d
+β
+]
++
+h
+−
+I
+γ
+h
+(
+I
++
+L
+d
+)
++
+β
+I
+L
+v
+γ
+V
+A
+]
+L
+)A
+L
+A L (t): AsintomáticosLibres c = (β c A c +β h I h )−(d+γ AC )A c
+I
+L
+(t):
+P
+e
+c
+t
+s
+l
+I
+i
+a
+n
+o
+n
+e
+b
+e
+l
+f
+n
+p
+r
+r
+e
+l
+e
+s
+e
+t
+a
+c
+d
+i
+o
+n
+s
+b
+t
+e
+,
+s
+n
+a
+l
+e
+t
+o
+p
+d
+a
+e
+e
+l
+c
+o
+s
+s
+o
+c
+i
+i
+b
+t
+s
+e
+p
+c
+n
+a
+l
+(
+d
+o
+o
+s
+a
+d
+S
+t
+a
+n
+c
+r
+o
+i
+a
+d
+i
+n
+s
+c
+n
+ó
+e
+.
+t
+,
+o
+t
+n
+l
+o
+S
+e
+e
+n
+m
+S
+fl
+m
+e
+t
+d
+a
+a
+o
+á
+n
+i
+e
+r
+c
+t
+t
+g
+s
+u
+a
+i
+t
+t
+r
+C
+c
+o
+n
+t
+i
+a
+o
+r
+e
+t
+o
+n
+c
+e
+e
+s
+m
+v
+,
+o
+)
+d
+t
+2
+m
+p
+n
+r
+L
+e
+a
+o
+s
+u
+i
+a
+n
+l
+b
+i
+s
+o
+e
+t
+s
+n
+r
+,
+i
+r
+m
+s
+e
+n
+e
+s
+d
+s
+q
+t
+n
+i
+í
+e
+o
+s
+n
+u
+c
+o
+m
+o
+t
+e
+r
+o
+r
+e
+a
+s
+á
+m
+d
+c
+e
+t
+o
+e
+i
+i
+a
+c
+r
+e
+j
+s
+e
+a
+e
+o
+n
+l
+r
+c
+s
+n
+d
+o
+u
+v
+o
+o
+o
+n
+p
+ir
+d
+e
+e
+i
+u
+d
+n
+r
+e
+n
+s
+e
+a
+f
+t
+n
+e
+e
+a
+l
+s
+o
+m
+c
+c
+.
+e
+s
+t
+t
+r
+a
+a
+b
+s
+q
+d
+d
+ie
+u
+u
+o
+o
+n
+s
+e
+s
+s
+-
+-
+
+d
+d
+d
+d
+d
+I
+V
+t
+R
+h
+t
+t
+=
+=
+=
+d
+γ
+ξ
+N
+A
+1
+(
+L
+(
+I
+L
+A
+A
++
+L
+L
++
++
+A
+L
+A
+γ
+I
++
+C
+L
+)
+I
+A
+L
++
+C
++
+ξ
+)
+γ
+2
+−
+A
+(
+C
+I
+(
+L
+A
+γ
++
+h
+C
++
++
+I
+h
+m
+)
+γ
+−
+h
+)
+I
+I
+h
+h
+vV
+dt
+PersonasconelSarsCov2consíntomasnodetectados (1)
+enlasociedad.Senutredelosquedejarondesersus-
+ceptiblesporcontactoconasintomáticosoinfectados DiagramadelmodeloSAIRVpropuesto
+libres,poblaciónflotantetransmisoraoelvirusambien-
+talenelinstantedetiempot,decreciendoenlosque
+sondetectados,muerenoserecuperan. A c
+γAc(cid:45)
+R
+A C (t): AsintomáticosenCuarentena
+βc(cid:0)
+(cid:0)(cid:18) (cid:65)γ
+(cid:65)
+AL(cid:0)
+(cid:0)(cid:18)
+(cid:1)
+(cid:1)(cid:1)(cid:21) (cid:54)
+Personas con el SarsCov2 sin síntomas. Se nutre de (cid:27)cPf(cid:45)
+S
+(cid:0) (1−q(cid:45))β
+A L
+(cid:0) (cid:65)
+(cid:1)(cid:65)
+(cid:1) γIL
+γh (2)
+los que dejaron de ser susceptibles por contacto con (cid:64) (cid:64) (cid:1) (cid:65)
+asintomáticoseinfectadoscontroladosenelinstantede (cid:64) (cid:1) (cid:64) d(cid:65)
+tiempotylosdetectadosquepasanahospitalización, qβ (cid:64)(cid:82) (cid:1) d (cid:64)(cid:82)(cid:65)(cid:85)
+(cid:45) (cid:112)(cid:112)(cid:112)(cid:112)m(cid:112)(cid:112)(cid:112)(cid:45)(cid:112)(cid:112)
+decreciendoenlosqueserecuperan. I L I h
+d
+I (t): InfectadosHospitalizados(Testados) CondicionesIniciales:
+h
+S = N−I , A = 0, I = 0, A = 0, I =
+Tributanaestapoblaciónlosinfectadoslibres,losasin- 0 h0 L0 L0 C0 h0
+3, R =0, V =1000.
+tomáticoslibresylosasintomáticosencuarentenade- 0 0
+Donde
+tectados, en el instante de tiempo t. Abandonan esta
+poblaciónlosquepasanelperíododehospitalizacióny (cid:18) I (t)+A (t) (cid:19)k
+L L
+losquemueren. β(t)=b 0 (1−α(t)) 1−m
+N
+R(t): Recuperados defineelcoeficientedecontagiootransmisión.
+α(t)=1−e−γt describelafuerzadelaacciónguberna-
+Infectadossintomáticos,asintomáticosyconfirmados
+mental.
+quepasadoelperíododeinfestaciónserecuperandela
+Nótesequelafunciónquedescribelavariacióndelcon-
+enfermedad
+tagio en el tiempo β(t) depende de la fuerza de la acción
+V(t): Concentracióndevirusenelambiente gubernamentalalpha(t)eindividualk,antelapercepciónde
+riesgo.
+Concentracióndevirusenelentornodebidoalosasinto-
+β (t)=β (1−α(t))(1−ρA ),
+c c0 c
+máticosyaloshospitalizados,enelinstantedetiempot,
+disminuyendoenladisipacióndelvirusenelambiente β h (t)=β h0 (1−α(t))(1−ρI h ),
+porfactoresambientales.
+β (t)=β (1−α(t))(1−ρV).
+v v0
+Lasfuncionesanterioresdefinenlastasasdecontagiores-
+ElModelo pectivasparaconfinados,hospitalizadosyelvirusambiental,
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.67-72
+EvolucióndelaCoVid19apartirdeunModeloSAIRVcontasadetransmisiónvariableanteprecepciónderiesgo,
+cuarentenayhospitalización. CasoCuba 69
+variableseneltiempoylosvaloresβ ,β ,β representan
+c0 h0 v0
+lasconstantesinicialesrespectivas.
+TeniendoencuentalosdatosdelosúltimosañosenCuba
+conrespectoalaemigracióneinmigracióndepersonas,se
+Tabla1.Parámetrosdelmodelo
+consideró una población flotante, con distribución normal,
+conmedia−2,dadoquecomopromediosalenmáspersonas
+Definición Valor Fuente
+quelasqueingresan,eneserangoaproximadamente.
+θ Cte.detransmisión 19,5 estimado
+Estimacióndelosparámetrosdelmodelo
+paraasintomáticos
+El problema general de estimación de parámetros para
+Proporciónde asumido
+modelosdescritosporecuacionesdiferencialesordinariasse
+C transmisoresen 0,2 (según[5])
+formula como un problema de optimización asociado a en-
+poblaciónflotante
+Cte.decontagio 3,72·10−8 contrar el vector de parámetros u óptimos en el modelo en
+cuestión.
+β porasintomáticos (pers/día) estimado
+c0
+Minimizarelerrorresidualquesecometealaproximar
+enconfinamiento
+estosparámetrosteniendoencuentadatosexistentesconlle-
+Cte.decontagio 0,9482
+vaalsiguienteproblemadeoptimizaciónconocidocomoel
+β porinfectados (pers/día) estimado
+h0
+ProblemadeEstimacióndeParámetros(PEP):
+hospitaizados
+Cte.decontagio 2,5·10−7
+β v0 porvirusen (pers/día) estimado 1 m
+elambiente m
+p
+´ınϕ(u)=
+2
+∑(X datoi −X(t i ,p))T(X datoi −X(t i ,p))
+q Proporcióndeinfec- 0.2 asumido i=1
+tadosconsíntomas (según[5]) s.a:X˙(t,u)= f(X,t,u), 0≤t≤T
+d Tasadedetección 0.06 estimado
+X(0)=X
+0
+m Tasademuerte 0.0325 estimado X ∈Rn,u∈Rk,f :Rn×Rk×[0,T]→Rn
+porlaenfermedad
+donde:X sonlosdatosobservadosdelasfuncionesX
+γ Tasaderecuperación 0.36 estimado
+datoi
+AL enlosinstantest yX(t,u)sonlosvaloresobtenidosmediante
+i i
+enasintomáticoslibres
+lasoluciónnuméricadelsistemadeecuacionesdiferenciales
+γ Tasaderecuperación 0.27 estimado
+IL (EDO).
+eninfectadoslibres
+Esto significa que se está modelando un proceso diná-
+Tasaderecuperación
+mico definido por un sistema n-dimensional de ecuaciones
+γ enasintomáticos 0.106 estimado
+AC diferenciales ordinarias, las cuales dependen de un vector
+enconfinamiento
+k-dimensionaldeparámetrosdesconocidosu.
+γ Tasaderecuperación 0.29 estimado
+h Laideageneraldelaestrategiadesoluciónesintegrarlas
+enhospitalizados
+EDOusandoesquemasdeintegraciónnumérica,demanera
+Dispersiónambiental 2.3(por asumido
+que estas se conviertan en restricciones, así se transforma
+ξ delvirusporinfec- personapor (según[7])
+1 el problema continuo en un problema discreto que puede
+tadosasintomáticos díaporml)
+resolversedeunamaneramássencilla.
+Dispersiónambiental 10−8(por asumido
+Uncriterioatenerencuentaalahoradeelegirlafunción
+ξ delvirusporinfec- personapor (según[7])
+2 deajusteϕ es,sindudas,laposibilidaddeafrontarmatemá-
+tadoshospitalizados díaporml)
+ticamentesituacionesparticularesdelPEPespecíficoquese
+v Tasadeeliminación 1 asumido
+desearesolver.Enelcasodeesteestudio,nosecuentacon
+delvirusabiemtal (pordía) (según[7])
+todoslosdatosnecesariosdelasvariablesdeestadodelmode-
+b 0 Cte.inicialde 0.05 estimado lopropuesto,puesporejemplosehaceimposibletenerdatos
+transmisión realesdelosinfectadossintomáticosyasintomáticosquecon-
+δ Cte.deintervención 0,0149 estimado vivenlibrementeenlapoblaciónsinserdiagnosticados.Por
+delgobierno lo tanto, la elección de la función objetivo debe admitir el
+k Fuerzaacción 100,4 asumido tratamientodesituacionesexperimentalesdeestetipo,osea,
+individual (según[5]) dondenotodaslascomponentesdelvectordeestadopueden
+ρ Coeficientedeajuste 1,01·10−4 asumido sermedidasuobservadas;esaeslarazónporlacualseapuesta
+delatransmisión (según[7]) porlaformulaciónclásicademínimoscuadradosponderados
+nolineales
+1
+m´ın
+p
+ϕ(u)=
+2
+∑m
+i=1
+(X
+datoi
+−X(t
+i
+,p))TW
+i
+(X
+datoi
+−X(t
+i
+,p))
+s.a:D X−F(X,u)=0
+h
+u ≤u≤u
+1 2
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.67-72
+EvolucióndelaCoVid19apartirdeunModeloSAIRVcontasadetransmisiónvariableanteprecepciónderiesgo,
+70 cuarentenayhospitalización. CasoCuba
+donde las matricesW son matrices diagonales de pon-
+i
+deraciones con elementos no negativos, XT es la solución
+numéricadelasrestriccionesdiferencialesdelproblemade
+acuerdoconunadiscretizaciónquelasconvierteenlasres-
+triccionesalgebraicas,D eslamatrizcorrespondienteala
+h
+discretizacióndeX yF esunafuncióndeX yu,cuyaforma
+dependedelmétododediscretizaciónempleado.
+Cuandohayausenciadedatos,comoseexplicóanterior-
+mente,seotorgaunaponderacióniguala0enloselementos
+diagonalescorrespondientesalascomponentesquenohan
+sidomedidas.Porsupuesto,esposibleelegirpesosdistintos
+deceroacordealasdiferentesprecisionesdelascomponentes
+delsistema,porejemplo,sobrelabasedealgunainformación
+estadística.
+Aunquesehanutilizadovariosmétodospararesolverel
+PEPenEDOsbasadosenformulacionesconrestriccionesal- Figura1.GráficadeInfectadosHospitalizadosencada
+gebraicas,quedevienenderestriccionesdiferenciales,eneste instantedetiempo(días),lospuntosrojoscorrespondenalos
+casoseresuelveelproblemasinlasrestriccionesalgebraicas datosdisponibleshastaelmomentodelcortedela
+atravésdelaformulaciónconrestriccionessoloparalascotas investigación.
+delosparámetros.
+Enlosestudiosyestimacionesrealizadasconestemodelo,
+seminimizóelerrorrelativoconrespectoalvalormáximode
+losdatosobtenidosparalanorma2,segúnlaexpresión
+(cid:12)(cid:12) (cid:12)(cid:12)
+(cid:12)
+(cid:12)
+(cid:12)
+(cid:12)
+X datoi −X(t i ,u)(cid:12)
+(cid:12)
+(cid:12)
+(cid:12) ,i=1,2,...,n(neselnúmerodeva-
+(cid:12)(cid:12) max(X ,ε) (cid:12)(cid:12)
+datoi 2
+riables)paraevitardivisiónporcero.Ennuestrotrabajo,sólo
+seponderóconpesodiferentedecerolavariableInfectados
+Hospitalizados, que es para la que se dispone de datos pre-
+cisos.Pararesolverelproblemadeoptimización,seusaron
+diferentes variantes, en ocasiones hibridizando heurísticas
+comoRecocidoSimuladoyAlgoritmosGenéticosconméto-
+dosquasinewtonimplementadosenMatlab,conelobjetivo
+de utilizar el punto óptimo obtenido en las primeras como
+punto inicial para los métodos clásicos en funciones como
+fminsearchyfmincom.
+Figura2.Conjuntodegráficasquemuestranlasestimaciones
+paralaspoblacionesdeInfectadosSintomáticosy
+1.1 Simulaciones y análisis de resultados. Datos
+AsintomáticosLibresyControlados.
+Cuba
+Paraestetrabajoseutilizarondatosdisponibleshastael
+día93delapandemiaennuestropaís.Teniendoencuentaque
+alorealizadoen([5]),permitecomprendercómovariaríael
+apartirdeldía75seoriginarondeterminadoseventosdetrans-
+comportamientoylaprediccióndelapandemiaennuestro
+misiónlocal,porelnocumplimientoestrictodelasacciones
+paísycómonosmantenemosenunescenariofavorable.
+decontrolestablecidas,trabajamosconunavariantecontinua
+Por último, la figura 7 muestra el comportamiento de
+atrozosparalafunciónquemidelaaccióngubernamentalde
+algunosdelosparámetrosdelmodeloquesehandefinidopor
+modoqueseadecuaraadichasituación.
+funcionesvariableseneltiempo,enparticularlafuerzadela
+A continuación se muestran figuras con los resultados accióngubernamentalylastasasdecontagioytransmisión
+obtenidosparalosInfectadosHospitalizados,losAcumulados porlasvíasfundamentales.
+yelrestodelasvariables,utilizandoelmejorajustequese
+obtuvoconlavariantefminsearch. 1.2 Algunasconsideracionesfinales
+Manteniendo la metodología del trabajo anterior de los En este trabajo se presenta un modelo para simular la
+propiosautores,citadoen([5]),serealizóunasimulaciónpara dinámicadetransmisióndelaCoVid19,deltipoSEIRcon
+variantesenun±5%delosvaloresóptimosobtenidospara laparticularidaddequeincorporalavariablequesimulala
+losparámetrosquesimulanlasaccionesdelasinstanciasgu- contaminaciónambientaldelvirusysubdividelaspoblaciones
+bernamentalesydesalud,asícomoladepercepciónderiesgo deAsintomáticoseInfectadosenlosqueseencuentranlibres
+enlapoblación.Estaestrategia,ademásdedarcontinuidad en la sociedad y los que son controlados y tratados por las
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.67-72
+EvolucióndelaCoVid19apartirdeunModeloSAIRVcontasadetransmisiónvariableanteprecepciónderiesgo,
+cuarentenayhospitalización. CasoCuba 71
+Figura3.GráficadeInfectadosHospitalizadosAcumulados Figura5.GráficadeInfectadosHospitalizadosAcumulados
+encadainstantedetiempo(días),lospuntosrojos encadainstantedetiempo(días),paradiferentesvaloresde
+correspondenalosdatosdisponibleshastaelmomentodel lasaccionesgubernamentaleseindividualesdecontroly
+cortedelainvestigación. percepciónderiesgo.Lacurvaazulcorrespondealvalordel
+parámetroquemejorajusteproporciona.
+Figura4.GráficadeInfectadosHospitalizadosencada
+instantedetiempo(días),paradiferentesvaloresdelas Figura6.Conjuntodegráficasquemuestranlasestimaciones
+accionesgubernamentaleseindividualesdecontroly paralaspoblacionesdeInfectadosSintomáticosy
+percepciónderiesgo.Lacurvaazulcorrespondealvalordel AsintomáticosLibresyControlados,paradiferentesvalores
+parámetroquemejorajusteproporciona. delasaccionesgubernamentaleseindividualesdecontroly
+percepciónderiesgo.
+instanciasdeSalud.
+Seplanteóademásunaestrategiadeajustedeparámetros cambian.
+apartirdeformularelproblemadeestimacióndeparámetros LosresultadosquesemuestranparalavariableInfectados
+ponderadoporlafaltadedatosparaalgunasdelasvariables Hospitalizados,subpoblaciónparalacualsedisponededatos
+fundamentales del modelo. Sin embargo, la calidad de los precisos,permiteninferirlasensibilidaddelassimulaciones
+resultadosobtenidos,acordeconlosdatosdelapandemiaen yprediccionesalaestrategiadeajustedeparámetros.Conclu-
+elpaís,permitióestimareinferirelcomportamientofuturode sionesdefinitivasprecisarándeestudiosmásprofundosyel
+laenfermedad. empleodetécnicasdeestadísticayanálisisdedatos.
+Debetenerseencuentaquesehatrabajadoconuncoefi- Dadalasensibilidaddelosmétodosdeoptimizaciónno
+cienteotasadetransmisiónvariableyquedependedefactores linealalospuntosiniciales,seutilizaronvariantesdehibri-
+quesimulanlafuerzadelasaccionesgubernamentales,delas dizaralgunasmetaheurísticasconmétodosclásicosdeltipo
+entidadesdesaludylaprecepciónderiesgodelapoblación, quasinewtonpararesolverelproblemadeEstimacióndepa-
+por lo que los resultados obtenidos varían si esos factores rámetros,usandodiferentesunitsimplementadasenMatLab.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.67-72
+EvolucióndelaCoVid19apartirdeunModeloSAIRVcontasadetransmisiónvariableanteprecepciónderiesgo,
+72 cuarentenayhospitalización. CasoCuba
+[2] Gutiérrez,J.M.andVarona,J.L.AnálisisdelCovid-19
+por medio de un modelo SEIR. Blog del Instituto de
+MatemáticasdelaUniversidaddeSevilla,20demarzo
+2020
+[3] Hellewell,J.,Abbott,S.,Gimma,A.,Bosse,N.,Jarvis,
+C.,Russell,T.,Munday,J.,Kucharski,A.andEdmunds,
+J.FeasibilityofcontrollingCOVID-19outbreaksbyiso-
+lationofcasesandcontacts.CentrefortheMathematical
+ModellingofInfectiousDiseasesCOVID-19Working
+Group, Sebastian Funk, Rosalind M Eggo. Published
+OnlineFebruary28,2020https://doi.org/10.1016/S2214-
+109X(20)30074-7.
+[4] Lin, Q., Zhao, S., Gao, D., Lou, Y., Yang, S., Mu-
+Figura7.Conjuntodegráficasquemuestranlasvariaciones sa, S., Wang, M., Caig, Y., Wang, W., Yang, L. and
+deparámetrosesencialesenelcontagiodelaenfermedad, Hee,D.Aconceptualmodelforthecoronavirusdisea-
+segúnelmodelopropuesto. se 2019 (COVID-19) outbreak in Wuhan, China with
+individualreactionandgovernmentalaction.Internatio-
+nalJournalofInfectiousDiseasesjournal,homepage:
+Aunquelosresultadosquepresentamoscomoóptimosyque
+www.elsevier.com/locate/ijid
+mostraron los mejores ajustes se obtuvieron para las hibri-
+daciones con fminsearch, es precipitado establecerla como
+[5] Marrero, A., Menció, D., Bayolo, G. Modelo SEAIR
+definitiva,teniendoencuentaquelosresultadospresentados
+con percepción de riesgo para la CoVid19. Caso Cu-
+son aún preliminares. Así mismo se debe tratar de trabajar
+ba.PresentadoalarevistaCienciasMatemáticas,mayo
+con un mejor y más confiable conjunto de datos, que por
+2020.
+ejemplodiscrimineentreloscontroladosparaqueelajustede
+parámetrossehagaapartirdeunnúmeromayordevariables.
+[6] Tang,B.,Bragazzi,N.L.,Li,Q.,Tang,S.,Xiao,Y.and
+Esimportantereconocerqueelprocesodeestimaciónde
+Wu,J.Anupdatedestimationoftheriskoftransmission
+parámetrosóptimosencadamodeloylaeleccióndel”mejor”
+of the novel coronavirus (2019-nCov). Infectious Di-
+modelo, retroalimenta el proceso de modelación, y en este
+seaseModelling5(2020)248e255.Journalhomepage:
+sentido,cualquierresultadonoserádefinitivo,sinoquecon-
+www.keaipublishing.com/idm
+tribuyealaperfectibilidaddelosmismosenarasdealcanzar
+uncomportamientomáscercanoalarealidad.
+[7] Villatoro,F.ElmodeloSEIRVaplicadoalaepidemia
+Todoslasinvestigacionesyresultados,aunlosparcialesy
+de coronavirus en Wuhan, China. 14 marzo, 2020.
+preliminarestributaránabrindarvariadasymúltiplesherra-
+https://francis.naukas.com/2020/03/14/el-modelo-
+mientasalosdecisoresparaconocerycontrolarlosprocesos
+seirv-aplicado-a-la-epidemia-de-coronavirus-en-
+epidémicos,enbiendelasaludpública.
+wuhan-china/
+Referencias [8] Wu,J.T.,Leung,K.andGabrielMLeung.Nowcasting
+andforecastingthepotentialdomesticandinternational
+[1] Chen,T.,Rui,J.,Wang,Q.,Zhao,Z.,Cui,J.andYin,L.
+spreadofthe2019-nCoVoutbreakoriginatinginWuhan,
+Amathematicalmodelforsimulatingthephase-based
+China:amodelingstudy.PublishedOnlineJanuary31,
+transmissibility of a novel coronavirus. Infectious Di-
+2020.https://doi.org/10.1016/S0140-6736(20)30260-9
+seasesofPoverty.https://doi.org/10.1186/s40249-020-
+00640-3
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.67-72

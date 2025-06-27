@@ -1,0 +1,767 @@
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19
+Recibido11-2020,Aceptado04-2021
+Mejorando la seguridad de la implementación de la
+multiplicación escalar para curvas generales en
+forma de Weierstrass en Bouncy Castle
+Improving the security of the scalar multiplication
+implementation for general curves in Weierstrass
+form in Bouncy Castle
+Yessica C. Castaño Sainz1, Carlos M. Legón Pérez2, Teresa B. Pagés López3
+Resumen Enelpresentetrabajoseexponenresultadosparcialesdelaimplementacióndelaaritméticapara
+curvas generales de Weierstrass en Bouncy Castle. Se hacen comparaciones de eficiencia y se presentan
+aspectosrelacionadosconlaimplementacióndealgoritmosparalaaritméticaparaelcasoenqueelpuntoP
+esvariable.SevaloralapropuestadearitméticaparalaadicióndepuntosporJoppeW.Bosetal.utilizando
+la fórmula completa para la aritmética propuesta por Joost Renes et al. Como resultado se obtuvo una
+implementacióndealgoritmospararealizarlamultiplicaciónescalarcuandoelpuntoesvariablemássegura
+frenteaataquesdetiempoycachémanteniendovalorescompetitivosdeeficiencia.Finalmentesedescriben
+laslíneasparatrabajofuturo.
+Abstract ThepresentworkpresentspartialresultsoftheimplementationinBouncyCastleofalgorithmsfor
+the scalar multiplication for the case of general Weierstrass curves . Efficiency comparisons are made and
+aspects related to the implementation of scalar multiplication algorithms are presented for the case in which
+thepointPisvariable. Itisstudiedthepossibilityofchangingtheconstanttimeadditionformulaproposedby
+JoppeW.Bosetal. bythecompleteformulaproposedbyJoostRenesetal.. Asaresult,animplementation
+ofalgorithmstoperformscalarmultiplicationwhenthepointisvariablemoresecureagainsttimeandcache
+attackswasobtained,maintainingcompetitiveefficiencyvalues. Finally,thelinesforfutureworkaredescribed.
+PalabrasClave
+Curvaselípticas,multiplicaciónescalar,tiempoconstante,libredeexcepciones,fórmulacompleta
+Keywords
+Ellipticcurves,scalarmultiplication,constanttime,exceptionsfree,completeformula
+1DepartamentodeCriptografía,UniversidaddeLaHabana,LaHabana,Cuba,yessica.castano@matcom.uh.cu,ykcastano@gmail.com
+2DepartamentodeCriptografía,UniversidaddeLaHabana,LaHabana,Cuba,clegon58@gmail.com
+3DepartamentodeCriptografía,UniversidaddeLaHabana,LaHabana,Cuba,teresa.bernarda@matcom.uh.cu
+Introducción cionesdelaaritméticadecurvaselípticasconstituyeunaparte
+fundamentalenlaseguridaddeloscriptosistemasbasadosen
+ElInstitutodeCriptografíadelaUniversidaddeLaHaba- curvaselípticas.
+nasehadadoalatareadeimplementarunaInfraestructurade
+Laseguridaddelosalgoritmosqueimplementanlaarit-
+clavepública(PKIporsussiglaseninglés)basadasolamente
+méticaseañadealacorrectaseleccióndelosparámetrosde
+encurvaselípticasparalaemisióndecertificadosdigitales.Pa-
+definición, trabajo previo cuyos resultados se presentan en
+raellosehacenecesarioelestudiodelosdiferentessoftwares
+[42].
+quepudieranbrindaresteservicio.
+Paraunacorrectaimplementaciónesnecesarioteneren
+Unodeellos,altamenteutilizado,esEJBCAelcualutiliza cuentalosposiblesataquestantodesdeelpuntodevistama-
+lalibreríaBouncyCastlecomoproveedorcriptográfico.La temáticoydediseñodelosprotocoloscomodelosataques
+necesidad de añadir curvas trae como consecuencia que se decanalcolateralqueaunqueenunprimermomentonose
+hagaimprescindibleladefinicióndelaaritméticaautilizar les prestó suficiente atención, han ganado en popularidad
+conlasnuevascurvasyaquelaseguridaddelasimplementa- en los últimos años dentro de la comunidad criptográfica
+Mejorandolaseguridaddelaimplementacióndelamultiplicaciónescalarparacurvasgeneralesenformade
+10 WeierstrassenBouncyCastle
+[31],[21],[11],[26]. SepresentanresultadosdelaimplementaciónenBouncy
+Asuvez,comoentodaslasáreasdeCriptografíasedeben Castledealgoritmosparalamultiplicaciónescalarcuandoel
+considerarlosdiferentestiposdeescenariosdondesetienela puntoPesvariable.Estoconstituyeunresultadoparcialya
+implementación,siesdesoftwareoesunaimplementación quesetrabajaactualmenteencompletarestetrabajoconla
+enunatarjetainteligenteylosataquesquesonmáscomunes implementación de la aritmética para los otros dos casos a
+enellayaqueenlamayoríadeloscasossenecesitallegara tenerencuentaparalaimplementacióndelaaritmética:Punto
+unconsesoentreseguridadyeficiencia. fijoyelcasoaP+bQ.
+Es por ello que en la literatura se tienen en cuenta tres Estetrabajodemuestraquelafórmulacompletapropuesta
+escenariosprincipalesdeexplotación:Porejemploen[29]se en[36]esmáseficientequelavarianteparalaadicióncomple-
+consideranlosescenarios:entornoprotegido,entornodered tautilizadaen[7]yquesuintegraciónconlosalgoritmospara
+yentornohostil. lamultiplicaciónescalarutilizadosen[7]constituyeunaal-
+Enelprimercasoseconsideralaimplementacióncomo ternativaquefacilitalasimplementacionesdealgoritmosque
+unacajanegradelacualelatacantenotieneaccesoadetalles corranentiempoconstanteysegurosfrenteaataquesdecaché
+específicoscomoeltiempodecómputo. yaqueeliminalanecesidadderecurriraenmascaramientos
+Elsegundocasohacereferenciaalosentornosenquees dentrodelafórmulaparaevitarexcepciones.
+posiblecorrerlaimplementacióndelosalgoritmosatravés Además,evidenciaqueesposibleimplementaralgoritmos
+delared. de multiplicación escalar en Bouncy Castle que corran en
+Porúltimo,elentornohostilincluyelasimplementaciones tiempoconstante,libredeexcepcionesyconcontramedidas
+alascualeselatacantetieneaccesocompletoalaimplemen- parahacerfrenteaataquesdecachésinperdereneficiencia,
+tación y a todos los posibles ataques de canal colateral, lo loscualespudieraninclusoseroptimizadossitécnicaspara
+cual ocurre regularmente en sistemas embebidos y tarjetas mejorarlaeficienciadelasoperacionesdelcampobasefueran
+inteligentes. utilizadas.
+Varias son las propuestas de investigadores para lograr Enelprimerepígrafeseintroducenlascurvaselípticas,
+implementacioneseficientes.Lagranmayoríahanrecurridoa losprincipalesalgoritmosutilizadosparalamultiplicaciónes-
+otrasformasdeexpresarlacurvacomolascurvasdeMont- calarylosprincipalesataquesdecanalcolateral.Seanalizan
+gomery [32] y Twisted Edwards [6] con el fin de ganar en losalgoritmospropuestosporJoppeW.Bosetal.en[7]yla
+eficienciayseguridadfrenteaataquesdecanalcolateral.Esto seguridadyeficienciadelafórmulacompletapropuestaen
+sejustificaporelhechodequelascurvasdeEdwardspueden [36].Trabajosrelacionadossonpresentadosenlasección2.
+serdotadasdeunaleyinternacompletaqueestambiénrelati- Lasección3tratasobrelalibreríacriptográficaBouncyCastle
+vamenteeficiente(comparadaconotrasleyesdeadiciónpara ylasconsideracionessobrelaimplementacióndelosalgorit-
+lascurvasdeEdwards). mos.Enlasección4sepresentanlosresultadosdelanálisis
+delaeficienciadelosalgoritmosimplementados.Finalmente,
+Sinembargo,laformadeWeierstraspresentabeneficios
+líneasdetrabajosfuturosonexpuestasenlasección5.
+quenosetienencuandoseutilizanotrosmodelosdecurvas.
+Porejemplo,laausenciadesubgrupospequeñossimplifica
+el proceso de validación de los puntos de entrada y sobre
+1. Sobre las curvas elípticas, su
+camposfinitosprimosparaunalongitudfija,nosacrificabits
+aritmética y ataques de canal colateral.
+deseguridadconrespectoaataquesdelproblemadelloga-
+ritmodiscreto.Además,lascurvasenformadeWeierstrass Enestetrabajonositeresanlascurvaselípticasdefinidas
+soncompatiblesconlasimplementacionesquesetienenpa- sobreuncampofinitoF decaracterísticaprima p>3.Cada
+p
+ralascurvasdelNISTsobrecamposfinitosprimos,locual curvaelípticaE definidasobreuncampofinitoF ,puedeser
+p
+traecomoconsecuenciaquenosenecesitencambiosenlos representadaenformareducidadeWeierstrasscomo:
+protocolosquelasutilizan.
+Es por ello que en trabajos como [7] y [36] se presen- E/F : y2=x3+ax+b (1)
+p
+tanfórmulasparahacereficientelaaritméticadelascurvas
+elípticasenformadeWeierstrass. Paravaloresarbitrariosdea,b∈F unacurvaelípticasobreF
+p p
+Dos de los ataques más importantes contra los cuales sedefinecomoelconjuntodesoluciones(x,y)delaecuación
+deberíamosprotegerunaimplementacióndesoftwarelocons- delacurvaE/F : y2=x3+ax+b,conunpuntoadicional
+p
+tituyenataquesdecachéydetemporización.Unapropuesta llamado punto al infinito y generalmente representado por
+de este tipo fue presentada por Joppe W. Bos et al. en [7] elsímbolo∞(oporelsímboloO ).Esospuntosformanun
+dondesedemuestraquelosalgoritmospropuestossonlibres grupocon∞comoelementoneutro.
+deexcepcionesycondicionales. Losvaloresparalasconstantesa,b∈F debenserescogi-
+p
+Elpresentetrabajotomalosresultadosen[7]comopunto dosdeformatalquecumplanconlosrequisitosdeseguridad
+de partida y explora la posibilidad de cambiar la fórmula queseplanteanenlosestándaresparalacriptografíadecurvas
+queelloscompletanpormediodeenmascaramientosporuna elípticas[33,12,3,24,27]yenlasdiscusionesrecientespara
+fórmulacompleta[36]. laestandarizacióndenuevascurvas[18,28,29,8,14].
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19
+Mejorandolaseguridaddelaimplementacióndelamultiplicaciónescalarparacurvasgeneralesenformade
+WeierstrassenBouncyCastle 11
+El orden de la curva es denotado como: #E(F ). Para ElhechodequelaseguridadyeficienciadelosCriptosis-
+p
+curvaselípticasseguras#E(F )tienelaforma#E(F )=nh, temasdeCurvasElípticas(CCE)sebaseenestaoperación
+p p
+dondenesunprimograndeyhesunnúmeropequeño. justifica el interés de la comunidad criptográfica en buscar
+La criptografía de curvas elípticas se basa en la dificul- alternativaseficientesyseguras.
+tadderesolverelproblemadellogaritmodiscretodecurvas
+elípticas(ECDLPporsussiglaseninglés).Locualsignifica 1.1 Aritméticadepuntosenunacurvaelíptica
+quedadosdospuntosP,Q∈E(F )encontrark∈Ztalque Como se mencionó anteriormente la operación de mul-
+p
+Q=kP,siexiste,escomputacionalmentedifícilderesolver. tiplicaciónescalarkPdominaeltiempodeejecucióndelos
+LaoperacióndecalcularQ=kPesllamadamultiplica- esquemas critográficos sobre curvas elípticas. Asumiendo
+ciónescalaryescalculadaapartirdeadicionesydoblados #E/F =nh donde n es primo y h pequeño. k∈[0,n−1],
+p
+sucesivos, dependiendo de la codificación que se haga del k = (k ,...,k ,k ) la representación binaria de k, donde
+t−1 1 0
+escalark. t ≈m=(cid:100)log q(cid:101). La operación kP se puede realizar utili-
+2
+Estasoperacionesfinalmentesetraducenamultiplicacio- zandoelalgoritmodouble-and-add.Sepuedenhacerdosim-
+nes, inversiones y adiciones en el campo finito subyacente. plementacionesdelalgoritmodouble-and-add,right-to-lefty
+Lasmultiplicacionesmodularessonmuchomáscostosasque left-to-right.ELalgoritmoleft-to-rightsepresentaen1.
+las adiciones de campo en términos de tiempo y memoria,
+constituyendolasinversionesdecampolasmáscostosasde Algoritmo1Métodobinariodemultiplicacióndeizquierdaa
+calcular. derecha(Doubleandaddleft-to-right)
+Laeleccióndelsistemadecoordenadastambiéninfluye Entrada: k=(k ,...,k ,k ) ,P∈E(F ).
+t−1 1 0 2 p
+enlaeficienciadelaoperacióndemultiplicaciónescalar,por Salida: kP.
+ejemploatravésdelusodecoordenadasproyectivasseevitan 1: Q=∞
+lasinversionesdecampo. 2: parai=t−1decreciendohasta0hacer
+Seakuncampo,yseancyd enterospositivos,sedefine 3: Q=2Q
+unarelacióndeequivalencia∼enelconjuntok3\{(0,0,0)}
+4: Sik i =1entoncesQ=Q+P
+delastriplasnonulassobrekpor: 5: finpara
+6: Salida Q.
+(X ,Y , Z )∼(X ,Y , Z ) siX =λcX ,Y =λdY , Z =λZ ,
+1 1 1 2 2 2 1 2 1 2 1 2
+paraalgúnλ ∈k∗. Conelobjetivodeacelerarelcálculosepuedehaceruso
+Laclasedeequivalenciaquecontienea(X,Y,Z)∈k3\ de la representación en forma no adyacente NAF (por sus
+{(0,0,0)}es siglaseninglés)delescalark,veralgoritmo 3.Estarepresen-
+(X : Y : Z)= (cid:8) (λcX, λdY, λZ):λ ∈k∗(cid:9) , taciónfueintroducidacomounaalternativaalarepresentación
+binariadekconelobjetivodereducireltiempodeejecución
+(X :Y :Z) es llamado punto proyectivo, y (X, Y, Z) es
+delamultiplicaciónescalaryaquepermitereducirelpesode
+llamadorepresentantede(X :Y :Z).
+Hammingdelescalar,ver[11]paraotrasformasdeexponen-
+Elconjuntodetodoslospuntosproyectivosesdenotado
+porP(k).SiZ(cid:54)=0,entonces(X/Zc.Y/Zd,1)esunrepresen- ciaciónrápida.
+Ademássepuedenutilizarmétodosdeventanas[35]para
+tantedelpuntoproyectivo(X :Y :Z),ydehechoeselúnico
+elcálculodelarepresentaciónsisedisponedememoriapara
+concoordenadaZiguala1.
+precalcularalgunospuntosmúltiplosdeP.Enlugardeutilizar
+Cuando c=1 y d =1. La ecuación para el caso de la
+unarepresentaciónenbase2seríaenbase2wparaweltamaño
+formadeWeierstrassreducida1es:
+delaventanayelalgoritmoprocesaríawdígitosdekalavez.
+Y2Z=X3+aXZ2+bZ3 (2) ElmétododeventanaconrepresentaciónwNAFestápre-
+senteenvariaslibreríasincluyendoBitcoin,Cryptlib,OpenSSL
+Elúnicopuntoenlalíneaalinfinitoqueademáspertenece yenBouncyCastle.
+a la curva E es (0:1:0). El punto proyectivo (0:1:0) Sinembargo,laimplementacióndelamultiplicaciónes-
+correspondealpuntoalinfinito. calarutilizandométodosdeventanaconrepresentacióndel
+Cuandoc=2yd=3estamosenpresenciadelascoorde- escalarwNAFpuedehacerelprotocolovulnerablefrentea
+nadasjacobianas,dondeelpuntoproyectivo(X:Y :Z),Z(cid:54)=0, ataquesdecanalcolateral[15].
+corresponde al punto afín (X/Z2,Y/Z3). El punto al infini- En[23]M.Joyeetal.proponenvíasalternativasparala
+toes(1:1:0),mientraselpuntoopuestode(X :Y :Z)es representacióndelescalarkquepermitenimplementaciones
+(X :−Y :Z). regularesdelosalgoritmosdeexponenciación,locualconsti-
+EnelcasodelascoordenadasdeChudnovsky,elpunto tuyeunrequisitoparalograrimplementacionesresistentesa
+jacobiano (X :Y :Z) es representado como (Z :Y :Z :Z2 : ataquessimpledepotenciaydetemporización.
+Z3).Estarepresentaciónesutilizadaparaganareneficiencia En[9]JoppeW.Bosetal.utilizanunamodificaciónde
+enalgunosmétodosdemultiplicacióncuandolaadiciónde larepresentaciónregulardelescalarpropuestaen[23]para
+puntossehaceencoordenadasproyectivas. obtenerunarepresentacióndelongitudfijaparaelescalark.
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19
+Mejorandolaseguridaddelaimplementacióndelamultiplicaciónescalarparacurvasgeneralesenformade
+12 WeierstrassenBouncyCastle
+Algoritmo2AlgoritmowNAFparalamultiplicaciónescalar
+Entrada: Elanchodelaventanaw,elenteropositivok,P∈
+E(F ).
+p
+Salida: kP.
+1: Utilizar el algoritmo 3 para calcular wNAF(k) =
+∑ l i= − 0 1k i 2i,
+2: CalcularP i =iPparai∈{1,3,5,...,2w−1−1}.
+3: Q←∞.
+4: parai=l−1decreciendohasta0hacer
+5: Q=2Q
+6: sik i (cid:54)=0entonces
+7: sik i >0entonces
+8: Q=Q+P ki Algoritmo4Algoritmodemultiplicaciónescalarutilizando
+9: sino
+elmétododeventanafijaparapuntobasePvariable.
+10: Q=Q−P −ki Entrada: Escalar k ∈[0,r(cid:105) y el punto P=(x,y)∈E(F )
+11: finsi p
+donde#E(F )=r·hconcofactorh∈Z+yrprimo.
+12: finsi p
+Salida: kP.
+13: finpara
+1: sik=0∨k≥rentoncesreturn(error:escalarnoválido)
+14: Salida Q.
+2: CorrerelalgoritmodevalidacióndelpuntoPsiretorna
+Algoritmo3CálculodelarepresentaciónwNAF deunentero noválidoentoncesreturn(error:puntonoválido)
+positivo Fasedeprecálculo
+Entrada: Elanchodelaventanaw,enteropositivok. 3: Fijarlalongituddelaventana2≤w<10∈Z+.
+Salida: wNAF(k). 4: Calcular P[i]=(2i+1)P para 0≤i<2w−2, usando el
+1: i=0 algoritmo4de[9].
+2: mientrask≥1hacer Fasederecodificacióndelescalar
+3: sikesparentonces 5: Hacerodd=k mo´d2
+4: k 0 =k mo´d2w,k=k−k i 6: siodd=0,entoncesk=r−k.
+5: sino 7: Recodificark=(k t ,...,k 0 )=(s t ·|k t |,...,s 0 ·|k 0 |),usando
+6: k i =0 elalgoritmo6,dondet=(cid:100)log 2 (r)/(w−1)(cid:101)ys j sonlos
+7: finsi signosdelosdígitosrecodificados.
+8: k=k/2,i=i+1 Fasedeevaluación
+9: finmientras 8: Q=s t P[(|k t |−1)/2]
+10: Salida k=(k k−1 ,k i−2 ...,k 1 ,k 0 ). 9: parai=t−1decreciendohasta1hacer
+10:
+Q=2(w−2)Q
+11: Q=2Q+s i P[(|k i |−1)/2]
+Elalgoritmopropuestoen[9]paraelcasoenqueelpuntode 12: finpara
+entradaPesvariablesemuestraenelalgoritmo4. 13: Q=2(w−1)Q
+Paralograrelcorrectofuncionamientodelalgoritmo4y 14: Q=Q⊕s 0 P[(|k 0 |−1)/2]
+deesaformaobtenerunaimplementaciónlibredecondicio- 15: siodd=0entoncesQ=−Q
+nalessedeberánenmascarlascondicionalesifpresentesen 16: ConvertirQacoordenadasafines(x,y)
+lospasos6y15. 17: Salida Q.
+En[9]losautoresdemuestranqueestealgoritmocorreen
+tiempoconstanteylibredeexcepcionescuandoesimplemen-
+tadoutilizandounafórmulacompletapararealizarlaadición
+representadaporelsímbolo⊕enelpaso14.
+Unaleydeadicióndepuntosenunacurvaelípticasedi-
+cequeescompletasicalculacorrectamentelasumadedos
+puntoscualesquieraenelgrupodepuntosdelacurvaelípti-
+ca.Unaleydeadicióncompletareducelasvulnerabilidades
+deuncriptosistemabasadoencurvaselípticasyfacilitalas
+implementaciones.
+ElhechodequelascurvasenformadeEdwardspermitala
+definicióndeunaleydegrupocompletayeficienteconstituye
+laprincipalrazónporlacualestashanganadopopularidaden
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19
+Mejorandolaseguridaddelaimplementacióndelamultiplicaciónescalarparacurvasgeneralesenformade
+WeierstrassenBouncyCastle 13
+Algoritmo6Algoritmoprotegidodecodificacióndeescalares
+(soloimpares)paraelmétododemultiplicacióndeventana
+fija.
+Entrada: Enteroimpark∈[1,r(cid:105)ylalongituddelaventana
+w≥2, donde r es el orden (primo) del subgrupo de la
+curvaelípticaconlaqueseestátrabajando.
+Algoritmo5Adicióncompletapropuestaen[7]encoorde-
+Salida: (k,...,k ), donde k ∈{±1,±3,...,±(2w−1−1)} y
+nadas proyectivas usando enmascaramiento y coordenadas t 0 i
+t=(cid:100)log (r)/(w−1)(cid:101).
+JacobianasparacurvasdeWeierstrasssobrecamposfinitos 2
+primos. 1: t=(cid:100)log 2 r/(w−1)(cid:101)
+2: parai=0hastat−1hacer
+Entrada: P,Q ∈ E(F p ) tal que P = (X 1 ,Y 1 ,Z 1 ) y Y = 3: k i =(k mo´d2w)−2w−1
+( S X a 2 li , d Y a 2 , : Z R 2 ) = es P tá + n Q en ∈ co E o ( r F de ) na e d n a c s o J o a r c d o e b n i a a d n a a s s. Jacobianas.Los 4: k=(k−k i )/2w−1
+p 5: finpara
+pasosmarcadoscon∗deberánserimplementadosentiempo
+6: k t =k
+constanteusandoenmascaramiento.
+7: Salida (k t ,...,k 0 ).
+1: T[0] = ∞ {T[i] = 25: simask=0entoncest 7 =
+(X(cid:98)i ,Y(cid:98)i ,Z(cid:98)i )}para0≤i< X
+1
+[∗]
+losúltimosaños.NoobstantelascurvasenformadeWeiers-
+5 26: t 1 =t 5 ·t 7 trass presentan beneficios sobre las otras formas de curvas
+2: T[1]=Q 27: Z(cid:98)2 =Z 1 ·t 2 elípticaspropuestasincluyendoporejemploelhechodeque
+3: T[4]=P 28: Z(cid:98)3 =Z 2 ·Z(cid:98)2 sepuedenconsiderargruposdepuntosdecurvaselípticascon
+4: t 2 =Z 1 2 29: si mask (cid:54)= 0 entonces cofactoruno,locualsetraduceenbeneficiosdeseguridadya
+5: t 3 =Z 1 ·t 2 t 3 =t 2 [∗] queseevitanataquesdesubgrupopequeño[16],[39].
+6: t 1 =X 2 ·t 2 30: si mask (cid:54)= 0 entonces Losresultadoen[9]sindudasconstituyenunavíaparalo-
+7: t 4 =Y 2 ·t 3 t 6 =t 5 [∗] grarimplementacioneseficientes,detiempoconstanteylibre
+8: t 3 =Z 2 2 31: t 2 =t 3 ·t 6 deexcepcionesalcompletarlafórmuladeadiciónmediante
+9: t 5 =Z 2 ·t 3 32: t 3 =t 2 /2 técnicasdeenmascaramiento,lograndovaloresdeeficiencia
+10: t 7 =X 1 ·t 3 33: t 3 =t 2 +t 3 equivalentesalasfórmulasdedicadas.
+11: t 8 =Y 1 ·t 5 34: si mask (cid:54)= 0 entonces
+LaeleccióndeJoppeW.Bosetal.deutilizartécnicasde
+12: t 1 =t 1 −t 7 t 3 =t 4 [∗]
+enmascaramientosinrecurriralasfórmulascompletas,cono-
+13: t 4 =t 4 −t 8 35: t 4 =t 3 2 cidasdede1955en[38]sejustificaporganareneficiencia.
+14: index=3 36: t 4 =t 4 −t 1
+Sinembargo,en[36]seproponeunamejorasignificativaa
+15: si t 1 = 0 entonces in- 37: X(cid:98)2 =t 4 −t 1
+lasfórmulaspropuestasen[38]lograndoreducirelnúmero
+dex=0{R=∞}[∗]. 38: X(cid:98)3 =X(cid:98)2 −t 2
+deoperacionesdecamponecesarias.Elalgoritmo7muestra
+16: si t 4 = 0 entonces in- 39: simask=0entoncest 4 =
+lasoperacionesdecampoparacalcularlafórmulacompleta
+dex=2{R=2P}[∗]. X(cid:98)2 sinot
+4
+=X(cid:98)3 [∗]
+encoordenadasproyectivas.
+17: si P = ∞ entonces in- 40: t 1 =t 1 −t 4
+Teniendoencuentalacomplejidaddesdeelpuntodevista
+dex=1{R=Q}[∗]. 41: t 4 =t 3 ·t 1
+delaimplementaciónqueestastécnicasdeenmascaramiento
+18: si Q = ∞ entonces in- 42: simask=0entoncest 1 =
+leañaden,elhechodereemplazarlaporunafórmulacompleta
+dex=4{R=P}[∗]. t sinot =t [∗]
+5 1 8
+conunaeficienciasimilarseríanosolodegranayudapara
+19: mask=0 43: simask=0entoncest 2 =
+laimplementaciónsinotambiénmássegura,porserdeme-
+20: si index=3 entonces t 5 [∗]
+norenvergaduralastransformacionesqueloscompiladores
+mask=1 (Caso P+Q). 44: t 3 =t 1 ·t 2
+puedanocasionaralcódigodelprograma.
+45: Y(cid:98)2 =t 4 −t 3
+Como parte de este trabajo se implementó la fórmula
+21: t 3 =X 1 +t 2 46: Y(cid:98)3 =Y(cid:98)2
+completade[36],lacualpodráserutilizadaparasustituirla
+22: t 6 =X 1 −t 2 47: R = T[index] =
+adicióndelpaso14delalgoritmo4.
+23: simask=0entoncest 2 = (X(cid:98)index ,Y(cid:98)index ,Z(cid:98)index )
+Y 1 sinot 2 =t 1 [∗] 48: Salida R.
+24: t 5 =t 2 2 1.2 Resistenciafrenteaatquesdecanalcolateral
+Hoy en día los ataques de canal colaterar, primeramen-
+teintroducidosporKocher[25]hanganadoenpopularidad
+entre la comunidad criptográfica, debido a la existencia de
+resultadosqueconfirmansufortalezaylosposicionancomo
+unaamenazarealparalaseguridaddeloscriptosistemastanto
+declavesimétricacomodeclavepública.
+Disímiles son los trabajos que se centran en proponer
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19
+Mejorandolaseguridaddelaimplementacióndelamultiplicaciónescalarparacurvasgeneralesenformade
+14 WeierstrassenBouncyCastle
+Algoritmo7FórmulacompletaencoordenadasproyectivasparacurvasenformadeWeierstrasspropuestaen[36].
+Entrada:P,Q∈E(F )talqueP=(X :Y :Z )yQ=(X :Y :Z ).
+p 1 1 1 2 2 2
+Salida:(X :Y :Z )=P+Q∈E(F )encoordenadasProyectivas.
+2 2 2 p
+1: t 0 =X 1 ·X 2 16: X 3 =X 3 ·Y 3 31: Y 3 =t 1 +Y 3
+2: t 1 =Y 1 ·Y 2 17: Y 3 =t 0 +t 2 32: t 1 =t 0 +t 0
+3: t 2 =Z 1 ·Z 2 18: Y 3 =X 3 −Y 3 33: t 0 =t 1 +t 0
+4: t 3 =X 1 +Y 1 19: Z 3 =b·t 2 34: t 0 =t 0 −t 2
+5: t 4 =X 2 +Y 2 20: X 3 =Y 3 −Z 3 35: t 1 =t 4 ·Y 3
+6: t 3 =t 3 ·t 4 21: Z 3 =X 3 +X 3 36: t 2 =t 0 ·Y 3
+7: t 4 =t 0 +t 1 22: X 3 =X 3 +Z 3 37: Y 3 =X 3 ·Z 3
+8: t 3 =t 3 −t 4 23: Z 3 =t 1 −X 3 38: Y 3 =Y 3 +t 2
+9: t 4 =Y 1 +Z 1 24: X 3 =t 1 +X 3 39: X 3 =t 3 ·X 3
+10: X 3 =Y 2 +Z 2 25: Y 3 =b·Y 3 40: X 3 =X 3 −t 1
+11: t 4 =t 4 ·X 3 26: t 1 =t 2 +t 2 41: Z 3 =t 4 ·Z 3
+12: X 3 =t 1 +t 2 27: t 2 =t 1 +t 2 42: t 1 =t 3 ·t 0
+13: t 4 =t 4 −X 3 28: Y 3 =Y 3 −t 2 43: Z 3 =Z 3 +t 1
+14: X 3 =X 1 +Z 1 29: Y 3 =Y 3 −t 0
+15: Y 3 =X 2 +Z 2 30: t 1 =Y 3 +Y 3
+contramedidasparacontrarrestarsuaplicación[10],[36],[13], dad/eficienciaparaganareneficiencia/seguridadyenalgunos
+pero como se demuestra en [17], [1], [26], el proceso de casosprotegiendocontraunataquesepuedeintroduciruna
+diseñaralgoritmossegurosfrentealasdiversaspropuestasde vulnerabilidadfrenteaotro.
+ataquesdecanalcolateralnuncatermina,debidoalaconstante Porejemplo,unaimplementaciónresistenteaunataque
+aparicióndepropuestasdeataquesqueinvalidanlasmedidas decanalcolateraldetemporizaciónpuedequenosearesis-
+quehastaesemomentoparecíanseguras[4],[11],[2]. tenteaataquesdeltipoDPA(DifferentialPowerAnalysis)y
+Losataquesdecanalcolateralexplotanfugasdeinforma- viceversapudieraocurrirquealprotegerunaimplementación
+cióncríticasobrelosparámetrossecretosdeuncriptosistema concontramedidasparaserresistenteaataquesDPAsevuelva
+durantepasosintermediosdesuscorridasyadiferenciadel vulnerablecontraataquesdetemporización.Unejemplode
+criptoanálisisconvencional,dondeunatacanteteníaacceso estoloconstituyelascontramedidasimplementadasen[13]
+solamentealasparejasdeentrada/salidadetexto,losataques paracomplementarlafórmulacompletapropuestaen[36].
+de canal colateral utilizan información como: el tiempo de Los ataques de canal colateral se pueden clasificar en
+cómputo,elconsumodepotencia,lasemisioneselectromagná- pasivos y activos. En el caso de los pasivos el atacante no
+ticasdelosdispositivoscorriendolosalgoritmosolainserción manipula o modifica los datos sino que analiza de forma
+defallasparaganarinformaciónsobredatosintermediosu pasivalafugadebitsdedatostalescomolosbitsdelescalar
+operaciones. k. Estos ataques se aprovechan de la diferencia del tiempo
+De esta forma a través de la información obtenida por decorridadelasoperaciones,elconsumodepotenciaylas
+canalescolateralessepuedelograrrecuperarlaclavesecreta radiacioneselectromagnéticas.Losataquesactivosutilizan
+sintenerquerompermatemáticamentelasprimitivascripto- lainsercióndeerrorespararevelarlosbitsdekyseconocen
+gráficas. tambiéncomoataquesdefallas.Estosataquesincluyenlos
+Lasalgoritmoscriptográficospuedenserimplemetados ataques de punto y curva no válidos, los cuales pueden ser
+ensoftwareoenhardware.Lasimplementacionesensoftware mitigados mediante la correcta elección de los parámetros
+tienenlacaraterísticadequesonflexiblesyaquepuedenser dedefinicióndelacurvaylarealizacióndelasvalidaciones
+actualizadosfácilmenteadiferenciadelasimplementaciones pertinentesenlaimplementacióndelosalgoritmos.
+enhardwareparalascualessureconfiguraciónpuedeconlle- Enestetrabajo,comosemencionódesdelaintroducción
+varunaltocosto.Sinembargolasaplicacionesenhardware nosinteresalaseguridaddelasimplementacionesconrespec-
+puedenalcanzarmayorrendimiento. toaataquesdecachéytemporización,estosataquespueden
+Paraasegurarunaimplementacióncontraataquesdeca- serrealizadosatravésdeunaconexiónderedesdecomputado-
+nalcolateral,elprimerpasoesdeterminarenquéescenario rasyconstituyenunaamenazarealparaimplementacionesde
+estarácorriendoelalgoritmoycuálessonlasmayoresame- software.
+nazas reales que este podría enfrentar. Lo cierto es que es Ataquedetemporización:Losataquesdetemporización
+bien conocido que en Criptografía la mayoría de las veces expuestosporprimeravezen[25]explotanlavariaciónde
+tenemosquehacerconcesionesencuantoacriteriosdeseguri- tiempo consumido para diferentes entradas y pueden estar
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19
+Mejorandolaseguridaddelaimplementacióndelamultiplicaciónescalarparacurvasgeneralesenformade
+WeierstrassenBouncyCastle 15
+presentesenimplementacionesdondeexistansentenciascon- peroestonoesutilizadocomopartedelalgoritmodeventana
+dicionalesquedependandebitsdevaloressecretos. utilizadoparaelcálculodelamultiplicaciónescalarenelcaso
+Ataquesdetiempodeaccesoacaché:Informaciónso- depuntovariable.
+breelementossecretos,seobtieneapartirdelamedicióndel
+tiempodeaccesoacaché.[22],[10],[40],[41].
+Conelobjetivodecontrarrestarataquesdecanalcolateral 3. Sobre la implementación en la librería
+pasivossedebeeliminarlarelacióndelosdatossecretosy Bouncy Castle
+las fugas físicas, es decir para lograr una implementación
+detiempoconstanteenelcasodelamultiplicaciónescalar Conelobjetivodehacerusodetécnicasparaoptimizarla
+en curvas elípticas un algoritmo debe realizar las mismas implementacióndelaoperacióndemultiplicaciónescalaren
+operacionescualquierasealarepresentacióndelescalar,esto curvaselípticassedistinguenlostrescasos:Puntovariable,
+noquieredecirqueelalgoritmocomountodotengaquecorrer PuntofijoyelcasoECDSAaP+bQ.
+enelmismotiempo,perosilapartedeestequeinvolucradatos ParaelcasodepuntovariableBouncyCastleutilizapor
+secretos. defectoelmultiplicadorWNafL2RMultiplier,elcualimple-
+Paraelcasodelosataquesdecachésedeberágarantizar mentaelalgoritmodemultiplicaciónWNAF(WindowNon-
+queelaccesoatablasdeprecálculosehagadeformatalque AdjacentForm),algoritmo3.36de[20].
+nosepuedarelacionarelpuntoextraídodelatablaconbits
+Como se mencionó en la introducción, este trabajo es
+delarepresentacióndelsecreto,enestecasoelescalark.
+parte de un esfuerzo por añadir nuevas curvas a la librería
+Porotraparte,lasimplementacionespuedensersuscep-
+BouncyCastleydotarlasconunaairtméticasegurafrentea
+tibles a ataques simple de potencia, posiblemente los más
+ataquesdetemporizaciónycaché.Hastaelmomentosehan
+mencionados,silastrazasdepotenciamuestranpatronesdis-
+implementadolosmultiplicadoresUHwNafL2RMultipliery
+tintivosdeoperacionesdependientesdelaclavesecreta.El
+UHwNafL2RMultiplierComplete.
+valordelaclavepuedeserreveladosieladversariopuededis-
+ElmultiplicadorUHwNafL2RMultiplierimplementael
+tinguirladiferenciaentreunaadiciónyundobladodepuntos
+algoritmoutilizadoporPatrickLongaetal.en[7]pararealizar
+apartirdeunatrazadelconsumodepotencia.Elalgoritmo
+la multiplicación escalar de punto variable. En el caso del
+Double-and-add-alwaysfueintroducidoparacontrarrestarla
+multiplicadorUHwNafL2RMultiplierCompleteelalgortimo
+aplicacióndeataquessimpledepotenciaalrealizarunaadi-
+pararealizarlaúltimaadicióndepuntosesmodificadopara
+ciónyundobladoencadapasodelalgoritmo.Sinembargo
+hacerlautilizandolafórmulacompletapropuestaporRenes
+estealgoritmonoesresistentefrenteataquesmásavanzados
+etal.en[36].
+depotenciacomoDPAoRPA(RefinedPowerAnalysis),ver
+Elmultiplicadorautilizarpararealizarlamultiplicación
+[19],[1].
+escalardepuntovariablesedefinecomounapropiedaddela
+Noesobjetivodelapresenteinvestigaciónafirmarquelos
+curva a utilizar. Se creó una carpeta uhCurves en donde se
+algoritmosimplementadosseanresistentesaataquessimple
+podránañadirlascurvasylaclaseuhPoint.Hastaelmomento
+depotencia,nimuchomenosaataquesmássofisticadosdepo-
+seutilizalaaritméticadecampofinitoquetraepordefecto
+tencia.Laafirmacióndequeunaimplementaciónesresistente
+BouncyCastle,peroestatambiénconstituyeunáreaenlacual
+aataquesdepotenciarequieredeotrotipodeanálisisyme-
+sepretendetrabajar.
+dicionesfísicasqueenestosmomentosnonosencontramos
+Paraasegurarqueelaccesoalastablasseasegurofrente
+encondicionesderealizar.Sinembargo,comosemenciona
+a ataques de caché Bouncy Castle implementa la función
+en[7],laformaquetienenlosalgoritmosloshaceserbuenos
+createCacheSafeLookupTable dentro de la clase ECCurve.
+candidatosparaserresistentesaataquesdepotencia.
+Esta función fue sobrescrita y modificada en las curvas de
+prueba añadidas para almacenar puntos en coordenadas de
+2. Trabajos relacionados
+Chudnovsky.
+La existencia de trabajos haciendo referencia a ataques Además se modifica el punto al infinito, el cual es con-
+prácticos[11],[40],[41]decachéytemporizaciónhafomenta- sideradoenBouncyCastlecomo(x=null,y=null,z=0)
+doelestudioypropuestadealternativasdeimplementaciones paraser(0,1,0)encoordenadasproyectivas.Estosehacepor-
+yliberíasparalascualesunodelosobjetivosfundamentales quelaformaenqueelpuntoalinfinitoestratadoenBouncy
+es lograr implementaciones de tiempo constante. Tal es el Castleconllevadeinmediatoaexcepciones.Elalgoritmopara
+casodelaslibreríasbearssl,Bitcoincryptographylibrary[34] realizarlaúltimaadiciónenelalgoritmodemultiplicación
+yMSRECCLib[30]. escalarrequiereguardarenunatablaunarreglodepuntosque
+EnelcasodeBouncyCastle,aunquelacomunidadcrip- incluyeelpuntoalinfinitoysedebehacerdeformatalque
+tográficareconoceelhechodequenoseencuentraprotegida noexistancondicionales.Deigualformalaimplementación
+frenteaestetipodeataques,hastalaúltimaversióndelali- de la fórmula completa propuesta en [36], ver algoritmo 7,
+brería,versión1.66[37],estanoincluyemedidasparamitigar necesitaestetipoderepresentacióndelpuntoalinfinito.
+losataquesdetemporización.Lalibreríaimplementalookup
+tablesparaelaccesoatablasdeprecálculodeformasegura
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19
+Mejorandolaseguridaddelaimplementacióndelamultiplicaciónescalarparacurvasgeneralesenformade
+16 WeierstrassenBouncyCastle
+4. Análisis de los resultados parciales Como era de esperarse la adición de tiempo constante
+propuestaporJoppeW.Bosetal.en[7]eslaquemástiempo
+Apartirdelanálisisdelosresultados,hastalafecha,sobre
+consume con un menor número de operaciones realizadas
+ataquesdecanalcolateralaimplementacionesdesoftware,así
+enpromedio.Estosejustificaporlosenmascaramientosque
+comodelasdiferentescontramedidasquehansidopropuestas
+son necesarios realizar para lograr tiempo constante y las
+eimplementadaspordiferentesgruposdeinvestigación,se
+operacionesnecesariasparadistinguirsiesundobladoouna
+decidiómodificarlalibreríaBouncyCastleparatrabajarenla
+adiciónloquenecesitahacerse.
+implementacióndeunaaritméticaquesearesistenteaataques
+Tambiénsesiguedelatabla1quelaquemejorsecompor-
+detemporizaciónydecachéconelobjetivodegarantizarla
+taeslaadiciónparalaimplementacióncustomdelascurvas
+seguridaddelasnuevascurvasquefuesenañadidas.
+de SECG, lo cual también se esperaba debido al hecho de
+Aunqueesteconstituyeuntrabajoenprocesolosresulta-
+queestasfórmulasnosoncompletas,hansidooptimizadas
+dosobtenidoshastaelmomentonospermitenhacercompara-
+yademásutilizanunaaritméticadecampofinitooptimizada
+cionesdeeficienciaquenospuedenbrindarunaideadecuánto
+apartirdelaexplotacióndelasbondadesdelosprimosque
+sería el costo en cuanto a eficiencia de las nuevas medidas
+definenelcampofinitobase.
+implementadas.
+Luego,esválidodestacarlaeficienciadelafórmulacom-
+BouncyCastleimplementacurvasdefinidasenlosestán-
+pletapropuestapor[36],lacualpermiteimplementarlamul-
+dares(definedcurves)ycurvasoimplementacionesdeestas
+tiplicaciónescalarentiempoconstanteylibredeexcepciones
+quenohansidoincluidasenestándares(customcurves).Para
+acostadeunfactordepérdidadeeficienciaconrespectoalas
+lascurvasdeSECG(LasmismaspropuestasporelNIST)se
+implementacioneseficientesdelascurvasdeSECGacotado
+cuentacondosimplementaciones,unadentrodelaclaseSEC-
+por1.82;factorquepudieraserdisminuidosisecontaracon
+NamedCurves.javaenelpaqueteorg.bouncycastle.asn1.sec
+implementacioneseficientesdelaaritméticadecampo.Este
+ylaotracomocustomcurveenlaclaseespecíficaparacada
+es uno de los aspectos en los que debemos seguir trabajan-
+curvapropuesta.Enparticularparalacurvasecp192r1seim-
+do.Optimizarlamultiplicación,disminuyendocomplejidad,
+plementaenlaclaseSecP192R1Curve.javadentrodelpaquete
+quizásconoperacionesmássimplesodesplazamientos[5].
+org.bouncycastle.math.ec.custom.sec.
+Ademássecalculólacantidaddeoperacionesdemultipli-
+Lacurvasecp192r1definidaenSECNamedCurves.java
+caciónqueteníanlugardurante10segundos(procesoque,al
+utilizalaaritméticadecamposfinitosimplementadapordefec-
+igualqueenelcasodelasfórmulasparalaadición,fuerepe-
+toenBouncyCastle,lamismaquehastaelmomentoutiliza
+tido100vecesypromediado).Losresultadoscomparativos
+laimplementacióndeestetrabajo.Porelcontrariolaimple-
+semuestranenlatabla2.
+mentación custom de esta curva en SecP192R1Curve.java
+Losresultadosquesemuestranenlatabla2referentea
+utilizaunaaritméticadecampofinitoespecíficaparaganar
+lasimplementacionesdelalgoritmodemultiplicaciónescalar,
+eneficiencia,teniendoencuentalascaracterísticasdelcampo
+algoritmo4,puedenservaloradoscomoalentadoresyaque
+primobase.Lomismosetieneparalasotrascurvasdefinidas
+secuentaconunaimplementaciónqueseesperaseejecuteen
+porSECGyestandarizadasporelNIST.
+tiempoconstante,libredeexcepcionesyresistenteaataques
+Parahacerelanálisiscomparativoencuantoalaeficien-
+decachéyquemantienevalorescompetitivosdeeficiencia.
+cia se implementaron cinco curvas de SECG (secp192r1,
+secp224r1, secp256r1, secp384r1, secp521r1) para utilizar
+Conclusiones
+losmultiplicadores:
+UHwNafL2RMultiplieryUHwNafL2RMultiplierComplete. En este trabajo se presentaron los resultados de la im-
+Como se dijo anteriormente el multiplicador se define plementacióndealgoritmosresistentesaataquesdetiempo
+comounapropiedaddelacurvaelíptica. y caché para la realización de la multiplicación escalar en
+Estonospermitecompararcuántoseestaríaperdiendoen BouncyCastle.
+eficienciaalutilizarlaaritméticadecampofinitopordefecto Sedemostrólaeficienciadelafórmulacompletaparala
+deBouncyCastle,fórmulascompletasylaadicióndemedidas adiciónde[36]encomparaciónconelalgoritmocompletode
+deenmascaramientoparaevitarlaexistenciadecondicionales. [7].
+Las pruebas se corrieron en una Máquina Virtual con Selogróunaumentoenlaseguridaddelosalgoritmospara
+LinuxMint19.1,kernel4.15.0-20-genericarquitecturax86- realizarlamultiplicaciónescalarcuandoelpuntoesvariabley
+64,con4GbdeRAMy8coresdeprocesamientoaunmáximo sedemuestraqueesposiblecontarconlaimplementaciónde
+de3.4GHz.SeusóVMwareWorkstation15comosoftware algoritmosdiseñadosparacorrerentiempoconstante,librede
+thevirtualización. excepcionesyresistentesfrenteaataquesdecaché,sintener
+Enlatabla1secomparalaeficienciadelasfórmulaspara queperdereneficiencia.
+laadición(paralascurvasdeSECG)propuestasen[7],[36] Esporelloquerecomendamoselusodelosalgoritmos
+y la adición para las implementaciones custom y standard presentadosenestetrabajoenlugardelosqueseencuentran
+de estas curvas. Se calculó la cantidad de operaciones de implementadosenBouncyCastlenosoloparalaspropuestas
+adición que tenían lugar durante 10 segundos, proceso que denuevascurvasquesequieranincluirsinotambiénparaser
+fuerepetido100vecesypromediado. utilizadosconlascurvasestandarizadasporelNIST,aspecto
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19
+Mejorandolaseguridaddelaimplementacióndelamultiplicaciónescalarparacurvasgeneralesenformade
+WeierstrassenBouncyCastle 17
+Tabla1.Númerodeoperacionesdeadicióndurante10segundos(procesoquefuerepetido100vecesypromediado)paracinco
+curvasestandarizadasporelNISTySECG,usandolafórmuladetiempoconstanteylibredeexcepcionespropuestaen[7],ver
+algoritmo5,lafórmulacompletapropuestaen[36]ydelaadiciónpordefectodelasimplementacionesestándaresycustomde
+estascurvasenBouncyCastle.Elfactordeeficienciamuestracuántasvecesesmáseficienteelalgoritmodeadiciónutilizando
+lafórmulacompletaconrespectoalaimplementacióncustomdelascurvasdeSECG,dedondesesiguequenoestantala
+diferenciayqueinclusosepudierallegaramejorarutilizandounaaritméticadecampoeficiente.
+No.deoperacionesen10s
+secp192r1 secp224r1 secp256r1 secp384r1 secp521r1
+Adicióntiempoconstante[7] 792250 1416606 1513035 587296 410568
+Fórmulacompleta[36]∗ 5333161 7806364 6661628 2208379 900369
+SECGimplementaciónStandard 1123956 1135107 1039974 822106 893315
+SECGimplementaciónCustom(cid:63) 8955665 5612091 5077553 2457831 1637391
+Factordeeficiencia(cid:63)/∗ 1,68 0,72 0,76 1,11 1,82
+Tabla2.Númerodeoperacionesdemultiplicaciónescalardurante10segundos(procesoquefuerepetido100vecesy
+promediado)paracincocurvasestandarizadasporelNISTySECG,usandolosmultiplicadoresUHwNafL2RMultiplier,
+UHwNafL2RMultiplierCompleteyelmultiplicadorWNafL2RMultiplierparalasimplementacionesestándaresycustomde
+estascurvasenBouncyCastle.LosmultiplicadoresUHwNafL2RMultiplieryUHwNafL2RMultiplierCompletesolodifierenen
+larealizacióndelaúltimaoperacióndeadiciónenelalgortimo4.
+No.deoperacionesen10s
+Multiplicador secp192r1 secp224r1 secp256r1 secp384r1 secp521r1
+UHwNafL2RMultiplier 2474454 2505308 2310984 2307156 2154232
+UHwNafL2RMultiplierComplete 2465627 2530054 2325716 2292887 2148574
+BouncyCastleWNafL2RMultiplier
+(SECGCustom) 2474131 2506776 2312614 2302902 2160116
+BouncyCastleWNafL2RMultiplier
+(SECGStandard) 2481960 2501171 2296028 2299768 2164471
+queinfluirápositivamenteenelrobustecimientodelmódulo Referencias
+criptográficodelEJBCAyconsecuentementedelosservicios
+[1] Abarúa,Rodrigo,ClaudioValenciayJulioLópez:Sur-
+queseprestenconlaPKI.
+veyforPerformance SecurityProblemsofPassiveSide-
+Igualmente,seesperaqueelhechodecontarconlafómula
+channel Attacks Countermeasures in ECC. Crypto-
+completade[36]seamuchomássignificativoenlaeficiencia
+logyePrintArchive,Report2019/010,2019. https:
+delaimplementacióndelalgoritmodemultiplicaciónescalar
+//eprint.iacr.org/2019/010.
+libredeexcepcionesparaelcasoenqueelpuntoPesvariable.
+[2] Aldaya,AlejandroCabrera,CesarPereidaGarcíayBilly
+5. Trabajos futuros
+BobBrumley:FromAtoZ:Projectivecoordinateslea-
+Comotrabajosfuturostendremosqueenfocarnosencom- kageinthewild. IACRCryptol.ePrintArch.,2020:432,
+pletar la implementación de los algoritmos para realizar la 2020. https://eprint.iacr.org/2020/432.
+multiplicación escalar para el caso en que el punto es fijo.
+Paraestecasoseseguirálaideaen[7]peroevaluarreempla- [3] ANSI,ANSI:X9.62:2005:PublicKeyCryptography
+zarelalgoritmocompleto(utilizandoenmascaramientos)que fortheFinancialServicesIndustry. Theellipticcurve
+seutilizaparalaadicióndepuntosporlafórmulacompleta digitalsignaturealgorithm(ECDSA),2005.
+propuestaen[36].
+También se planea evaluar la aritmética de campo para
+[4] Aranha,DiegoF.,FelipeRodriguesNovaes,AkiraTa-
+asegurarquedeigualformaestaseejecuteentiempocons-
+kahashi,MehdiTibouchiyYuvalYarom:LadderLeak:
+tanteylaposibilidaddeganareneficienciadesdeelpuntode
+Breaking ECDSA With Less Than One Bit Of Nonce
+vistadelaimplementacióndelosalgoritmos.
+Leakage. IACRCryptol.ePrintArch.,2020:615,2020.
+https://eprint.iacr.org/2020/615.
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19
+Mejorandolaseguridaddelaimplementacióndelamultiplicaciónescalarparacurvasgeneralesenformade
+18 WeierstrassenBouncyCastle
+[5] Bernstein, Daniel J.: Multidigit multi- [16] Fan,Junfeng,BenediktGierlichsyFrederikVercaute-
+plication for mathematicians. URL: ren:ToInfinityandBeyond:CombinedAttackonECC
+http://cr.yp.to/papers.html. Using Points of Low Order. En Preneel, Bart y Tsu-
+yoshiTakagi(editores):CryptographicHardwareand
+[6] Bernstein, Daniel J., Peter Birkner, Marc Joye, Tanja
+Embedded Systems – CHES 2011, páginas 143–159,
+LangeyChristianePeters:TwistedEdwardsCurves. En
+Berlin,Heidelberg,2011.SpringerBerlinHeidelberg,
+Progress in Cryptology - AFRICACRYPT 2008, First
+ISBN978-3-642-23951-9.
+InternationalConferenceonCryptologyinAfrica,Casa-
+blanca,Morocco,June11-14,2008.Proceedings[6],pá- [17] Fan,Junfeng,XuGuo,ElkeDeMulder,PatrickSchau-
+ginas389–405. http://dx.doi.org/10.1007/ mont, Bart Preneel y Ingrid Verbauwhede: State-of-
+978-3-540-68164-9_26. the-art of Secure ECC Implementations: A Survey on
+KnownSide-channelAttacksandCountermeasures. En
+[7] Bos,JoppeW.,CraigCostello,PatrickLongayMichael
+Plusquellic, Jim y Ken Mai (editores): HOST 2010,
+Naehrig: Selecting Elliptic Curves for Cryptography:
+Proceedings of the 2010 IEEE International Sympo-
+An Efficiency and Security Analysis. Informe técnico,
+siumonHardware-OrientedSecurityandTrust(HOST),
+MicrosoftResearch,2014.
+13-14 June 2010, Anaheim Convention Center, Cali-
+[8] Bos, Joppe W., Craig Costello, Patrick Longa y Mi- fornia, USA, páginas 76–87. IEEE Computer Society,
+chaelNaehrig:Selectingellipticcurvesforcryptography: 2010. https://doi.org/10.1109/HST.2010.
+an efficiency and security analysis. J. Cryptographic 5513110.
+Engineering,6(4):259–286,2016. http://dx.doi.
+org/10.1007/s13389-015-0097-y. [18] Flori,Jean-Pierre,JérômePlût,Jean-RenéReinhardy
+Martin Ekerå: Diversity and Transparency for ECC.
+[9] Bos, Joppe W., Craig Costello, Patrick Longa IACR Cryptology ePrint Archive, 2015:659, 2015.
+y Michael Naehrig: Selecting elliptic curves for http://eprint.iacr.org/2015/659.
+cryptography: an efficiency and security analy-
+sis. J. Cryptographic Engineering, 6(4):259–286, [19] Goubin, Louis: A Refined Power-Analysis Attack on
+2016. http://dblp.uni-trier.de/db/ EllipticCurveCryptosystems. EnDesmedt,Yvo(edi-
+journals/jce/jce6.html#BosCLN16. tor):PublicKeyCryptography-PKC2003,6thInter-
+national Workshop on Theory and Practice in Public
+[10] Braun, Benjamin A., Suman Jana y Dan Boneh: Ro-
+KeyCryptography,Miami,FL,USA,January6-8,2003,
+bustandEfficientEliminationofCacheandTimingSi-
+Proceedings,volumen2567deLectureNotesinCompu-
+de Channels. CoRR, abs/1506.00189, 2015. http: terScience,páginas199–210.Springer,2003. https:
+//arxiv.org/abs/1506.00189.
+//doi.org/10.1007/3-540-36288-6_15.
+[11] Brumley, Billy Bob y Nicola Tuveri: Remote Timing
+[20] Hankerson, D., A. Menezes y S. Vanstone: Guide to
+AttacksAreStillPractical. EnAtluri,VijayyClaudia
+EllipticCurveCryptography. firsted.2004.
+Diaz (editores): Computer Security – ESORICS 2011,
+páginas 355–371, Berlin, Heidelberg, 2011. Springer [21] Jancar, Jan, Vladimir Sedlacek, Petr Svenda y Marek
+BerlinHeidelberg,ISBN978-3-642-23822-2. Sys:Minerva:ThecurseofECDSAnonces. Cryptology
+ePrint Archive, Report 2020/728, 2020. https://
+[12] Certicom Research: Standards for Efficient Crypto-
+eprint.iacr.org/2020/728.
+graphy2(SEC2):RecommendedEllipticCurveDomain
+Parameters.Technicalreport,CerticomCorp,2010.
+[22] Jayasinghe,D.,J.Fernando,R.HerathyR.Ragel:Remo-
+teCacheTimingAttackonAdvancedEncryptionStan-
+[13] Chmielewski,L.,MassolinoP.M.C.,J.Vliegen,L.Ba-
+dardandcountermeasures. En2010FifthInternational
+tinayN.Mentens:CompletingthecompleteECCfor-
+ConferenceonInformationandAutomationforSustai-
+mulae with countermeasures. Journal of Low Power
+nability,páginas177–182,2010.
+ElectronicsandApplications,vol.7,2017.
+[14] Costello, Craig, Patrick Longa y Michael Naehrig: A [23] Joye,MarcyMichaelTunstall:ExponentRecodingand
+briefdiscussiononselectingnewellipticcurves.Informe RegularExponentiationAlgorithms. EnPreneel,Bart
+técnico,MicrosoftResearch,2014. (editor):ProgressinCryptology–AFRICACRYPT2009,
+páginas 334–349, Berlin, Heidelberg, 2009. Springer
+[15] DeMicheli,Gabrielle,RémiPiauyCécilePierrot:ATa-
+BerlinHeidelberg,ISBN978-3-642-02384-2.
+leofThreeSignatures:PracticalAttackofECDSAwith
+wNAF. En Nitaj, Abderrahmane y Amr Youssef (edi- [24] Kerry,CameronF.,ActingSecretaryyCharlesRomine
+tores):ProgressinCryptology-AFRICACRYPT2020, Director:FIPSPUB186-4FEDERALINFORMATION
+páginas361–381,Cham,2020.SpringerInternational PROCESSING STANDARDS PUBLICATION Digital
+Publishing,ISBN978-3-030-51938-4. SignatureStandard(DSS),2013.
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19
+Mejorandolaseguridaddelaimplementacióndelamultiplicaciónescalarparacurvasgeneralesenformade
+WeierstrassenBouncyCastle 19
+[25] Kocher, P. C.: Timing attacks on implementations of [35] Okeya,KatsuyukiyTsuyoshiTakagi:Thewidth-wNAF
+Diffie-Hellman,RSA,DSS,andothersystems. EnKo- methodprovidessmallmemoryandfastellipticscalar
+blitz,N.(editor):Crypto1996,volumen1109deLecture multiplicationssecureagainstsidechannelattacks,pá-
+NotesinComputerScience,páginas104–113.Springer, ginas 328–342. Lecture Notes in Computer Science
+1996. (includingsubseriesLectureNotesinArtificialIntelli-
+genceandLectureNotesinBioinformatics).Springer
+[26] Legón,C.M.,Y.Delgado,I.Millán,CamiloDenisGon-
+Verlag,Germany,2003,ISBN3540008470.
+zálezyP.Bouza:SideChannelattacks:arealthreatto
+cryptographicalgorithmsimplementations.Ataquesde [36] Renes,Joost,CraigCostelloyLejlaBatina:Complete
+canalcolateral:Unaamenazarealalasimplementa- AdditionFormulasforPrimeOrderEllipticCurves. En
+cionesdealgoritmoscriptograficos. Agosto2016. EUROCRYPT,2016.
+[37] TheLegionoftheBouncyCastle:BouncyCastleCrypto
+[27] Lochter, Manfred y Johannes Merkle: Elliptic Curve
+package,accedidoseptiembre2020. https://www.
+Cryptography(CCE)BrainpoolStandardCurvesand
+bouncycastle.org/releasenotes.html.
+CurveGeneration. RFC5639(Informational),2010.
+[38] W,Bosma.yH.W.Lenstra:Completesystemsoftwo
+[28] Lochter, Manfred, Johannes Merkle y Jöne Marc
+addition laws for elliptic curves. Journal of Number
+Schmidt: Requirements for Elliptic Curves for High-
+Theory,53(2):229-240,1995.
+AssuranceApplications. TorstenSchütze,2015.
+[29] Lochter,Manfred,JohannesMerkle,Jörn-MarcSchmidt [39] Wronski,Michal:Combinedsmallsubgroupsandside-
+yTorstenSchütze:RequirementsforStandardElliptic channelattackonellipticcurveswithcofactordivisible
+Curves. IACR Cryptology ePrint Archive, 2014:832, by2m. InternationalJournalofElectronicsandTelecom-
+2014. http://eprint.iacr.org/2014/832. munications,vol.65(No2):203–209,2019.
+[30] M, Research.: MSR Elliptic Curve Cryptography Li- [40] Yarom,YuvalyNaomiBenger:RecoveringOpenSSL
+brary (MSR ECCLib), 2014. http://research. ECDSA Nonces Using the FLUSH+RELOAD Cache
+microsoft.com/en-us/projects/nums. Side-channelAttack. IACRCryptologyePrintArchive,
+2014:140, 2014. https://eprint.iacr.org/
+[31] Micheli,GabrielleDe,RÃ(cid:13)cmiPiauyCÃ(cid:13)ccilePierrot: 2014/140.
+A Tale of Three Signatures: practical attack of ECD-
+SA with wNAF. Cryptology ePrint Archive, Report [41] Yarom,YuvalyKatrinaFalkner:FLUSH+RELOAD:A
+2019/861, 2019. https://eprint.iacr.org/ High Resolution, Low Noise, L3 Cache Side-Channel
+2019/861. Attack. En23rdUSENIXSecuritySymposium(USENIX
+Security14),páginas719–732,SanDiego,CA,Agosto
+[32] Montgomery, P. L.: Speeding the Pollard and elliptic
+2014.USENIXAssociation,ISBN978-1-931971-15-7.
+curvemethodsoffactorization. Mathematicsofcompu-
+https://www.usenix.org/conference/
+tation,48(177):243–264,1987.
+usenixsecurity14/technical-sessions/
+[33] NationalInstituteofStandardsandTechnology:FIPS
+presentation/yarom.
+186-2. Digital Signature Standard. Informe técnico,
+[42] YessicaCaridadCastañoSainz:Generacióndecurvas
+NIST,2000.
+elípticasconbuenaspropiedadescriptográficassobre
+[34] Nayuki: Bitcoin Cryptography Library. camposfinitosprimos. TesisdeMaestría,Universidad
+https://www.nayuki.io/page/ delaHabana,Enero2018.
+bitcoin-cryptography-library.
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.9-19

@@ -1,0 +1,336 @@
+CienciasMatemáticas,Vol.32,No.1,Pag.37-43, 2018
+Recibido11-2017
+Resolucio´n de ecuaciones de segundo grado a
+partir de una experiencia basada en la
+implementacio´n de secuencias dida´cticas.
+Resolution of quadratic equations from an
+experience based on the implementation of didactic
+sequences.
+Mar´ıa Virginia Rodr´ıguez Quiroz 1 , Idania Urrutia Roman´ı. 2
+Resumen En los pa´ıses latinoamericanos, es conocido y difundido el problema del bajo rendimiento en
+Matema´ticadelosestudiantesenlaeducacio´nba´sica(primariaysecundaria).Segu´nlasencuestasrealizadas
+por los organismos internacionales pertinentes. El presente art´ıculo busca disen˜ar secuencias dida´cticas
+dentrodeltemaderesolucio´ndeecuacionescuadra´ticasparalasasignaturasdeMatema´ticadeestudiantes
+de nivel secundario, utilizando las TIC como instrumento de apoyo. Teniendo en cuenta que el disen˜ar una
+secuenciadida´ctica,buscaordenaryplanificarlaensen˜anzaparaobtenerlosresultadosdeseadosyestoha
+sidoutilizadoenvariasinvestigacionesconbuenosresultados.Pretendiendolograraprendizajessignificativos
+enlosestudiantes.
+Abstract In Latin-American countries, the problem of poor academic performance in Math courses among
+studentsinbothelementaryandmiddleschoolinstitutionsiswellknown,aspollshaveshowninthepast. This
+paper shows the design didactic sequences within topics in quadratic equations to enhance the teaching of
+MathematicscoursesinmiddleschoolbyincorporatingICTasasupportingtool. Consideringthefactthatthe
+design of a didactic sequence aims to structure and improve education planning in expectation of achieving
+theendgoals,andthatextensiveresearchhasbeenconductedonthetopicwithpromisingresults,weaimto
+significantlyimprovestudents’performance.
+PalabrasClave
+Secuenciasdida´cticas—Competencias—Resolucio´ndeecuaciones—Teor´ıaSocioformativa—TIC—Apren-
+dizajessignificativos
+1UniversidadSanAgust´ın.Arequipa.Peru´
+2UniversidaddelaHabana.Cuba.
+Introduccio´n lasencuestasrealizadas,nuestrosestudiantesseencuentran
+ubicadosenlosu´ltimoslugares;situacio´nquepreocupaala
+Elconocimientomatema´ticotieneunpapelmuyimportante
+comunidadengeneral.ElPeru´ ocupo´ elu´ltimolugarentrelos
+eneldesarrollocient´ıficodecadapa´ısycomoconsecuencia
+65pa´ısesqueparticiparonenelProgramaparalaEvaluacio´n
+en la formacio´n integral del ser humano. Hay que tener en
+InternacionaldeEstudiantes(PISA)2012.Elexamenesapli-
+cuenta que los avances tecnolo´gicos no existen sin la cola-
+cadocadatresan˜osporlaOrganizacio´nparalaCooperacio´n
+boracio´ndeestadisciplinayeneld´ıaad´ıaelconocimiento
+yelDesarrolloEcono´mico(OCDE).
+matema´ticocolaboraconnuestrahabilidadparacomprender
+Losresultadossen˜alanquelaeducacio´nenAme´ricaLatina
+conceptos y para relacionarlos basa´ndonos en esquemas y
+seencuentrapordebajodelesta´ndarpromediodelaOCDE.
+te´cnicasordenadas.Esatrave´sdelpensamientomatema´tico
+ElPeru´ obtiene368puntosparaMatema´ticaenunrangode
+quepodemosconvertirlosca´lculos,lashipo´tesis,lascuantifi-
+[613-368],384paraLecturaenunrangode[570-384]y
+cacionesylasproposicionesenunrecursonaturaldenuestro
+373paraCienciaenunrangode[580-373].Lospa´ısesque
+cerebro.
+esta´n mejor posicionados en la regio´n son Chile (423, 441,
+Enlospa´ıseslatinoamericanos,esconocidoydifundidoel
+445)yMe´xico(413,424,415).EnelAnexo1aparecenlos
+problema del bajo rendimiento en Matema´tica de los estu-
+resultadosdeesteestudio.
+diantesenlaeducacio´nba´sica(primariaysecundaria).Segu´n
+Resolucio´ndeecuacionesdesegundogradoapartirdeunaexperienciabasadaenlaimplementacio´ndesecuencias
+38 dida´cticas.
+Enelan˜o2014elPeru´ tambie´nparticipo´ enelTercerEstudio 1. Las secuencias dida´cticas como
+RegionalComparativoyExplicativo(TERCE);lapruebafue herramientas para el perfeccionamiento
+organizada por el Laboratorio Latinoamericano de Evalua-
+del proceso de aprendizaje de las
+cio´ndelaCalidaddelaEducacio´n,cuyacoordinacio´nte´cnica
+ecuaciones cuadra´ticas.
+esta´ acargodelaUNESCO.Estapruebamideeldesempen˜o
+escolarenestudiantesdeterceroysextogradodeprimaria Seselecciono´ eltemadelasecuacionescuadra´ticasdebidoa
+queasistenacolegiospu´blicosyprivadosde15pa´ıseslati- lasdificultadesdetectadasporlasinvestigadorasdentrodesu
+noamericanos.Losresultadosobtenidosporlosestudiantes experienciacomodocentes.DentrodeloscursosdeMatema´ti-
+peruanosmuestranunamejoraconrespectoalu´ltimoexamen cadictadosenlaUniversidad,lasecuacionescuadra´ticasapa-
+PISA.Sinembargo,cabesen˜alarqueesteu´ltimoexamense recencomosoporteparalaresolucio´ndemu´ltiplesejercicios
+tomo´ soloenpa´ıseslatinoamericanosymuchodelospa´ıses relacionadosconelca´lculodel´ımite,bu´squedadeextremos
+queobtienenmenorpuntajequeelPeru´,noparticiparonenel yana´lisisdelamonoton´ıa,determinacio´ndepuntosdeinfle-
+examenTERCE2014. xio´neintervalosdeconcavidadyconvexidaddefuncionesde
+Porotraparte,paraeldesarrollodeestetrabajoseconverso´con unavariable,descomposicio´ndepolinomios,identificacio´ny
+estudiantesydocentesdeCa´lculoenunavariableenlaUni- determinacio´ndelascaracter´ısticasdesuperficiescua´dricas,
+versidadNacionalSanAgust´ındeArequipa,enreferenciaa enproblemasdeoptimizacio´nas´ıcomoenlaintegracio´nma-
+laproblema´ticaquetuvieroneneldesarrollodelaasignatura, tema´tica.
+obteniendolossiguientesresultados;Deuntotalde70estu-
+diantes pertenecientes a las carreras Ingenier´ıa de Sistema, Losproblemasqueconducenaecuacionescua´dricasapare-
+Ingenier´ıa Meca´nica e Ingenier´ıa Metalu´rgica, el 80% res- cieronenlahistoriadelaMatema´ticadesdetiemposremotos,
+pondio´ quehab´ıasentidodificultadesenelprimercursode losprimerosseidentificanenlastablillasaritme´ticasdelos
+Matema´tica.Deuntotalde60estudiantesdecarrerascomo babilonios alrededor del an˜o 2000 A. C. mientras que los
+MarketingyArquitecturaelporcientodeestudiantesquesin- egipcioslosplasmaronensuspapirosdelan˜o1650A.C.Los
+tierondificultadesfueau´nmayor.Seconsultaronadema´slas babiloniosdemodosorprendenteresolv´ıanestasecuaciones
+calificacionesdelprimerexamendeMatema´tica,lascuales mediante el completamiento del cuadrado y con el uso de
+mostraronungranporcientodedesaprobados. ciertasfo´rmulasgenerales.Losegipcios,porsuparte,lasre-
+Los resultados de las entrevistas realizadas a estudiantes y solv´ıanusandounprocedimientomuyengorroso,conocido
+profesorespermitieronconstatarlasinsuficienciasenelapren- comome´tododefalsaposicio´n.(ColectivodeAutores.1991.
+dizajedelostemasdeMatema´ticaincluidosenlaensen˜anza p.140).
+precedente y la falta de motivacio´n hacia la Matema´tica a Alpasodeltiempofueronutilizadosdiferentesprocedimien-
+partirdelmodoenquefueensen˜ada.Enamboscasos,pro- tospararesolverproblemasqueconducenaecuacionescuadra´ti-
+fesoresyestudiantes,sepronunciaronsobrelanecesidadde casentrelosquesepuedenmencionarelme´todogriegodel
+unexamendenivelacio´n.Contodoesto,quedacomprobada Algebrageome´trica,proporcionesyeltrabajocona´reas.
+lanecesidaddeimpulsaralternativasdida´cticasquepermitan Enlapresenteinvestigacio´nseasumelasiguientedefinicio´n
+mejorarelrendimientoenMatema´ticasdenuestrosestudian- desecuenciasdida´cticasdadaporTobo´n:(...)son,sencilla-
+tesdesdelaeducacio´nba´sica,trabajodif´ıcilderesolverpara mente,conjuntosarticuladosdeactividadesdeaprendizajey
+elcualsenecesitadelaparticipacio´ndetodaslasentidades evaluacio´n que, con la mediacio´n de un docente, buscan el
+involucradas:estudiantes,padres,docentes,instituciones,es- logro de determinadas metas educativas, considerando una
+tado. seriederecursos.(Tobo´nS.atal.2010.p.20).
+Elpresentetrabajobuscadisen˜arsecuenciasdida´cticasden- Componentesdelassecuenciasdida´cticas:
+trodeltemaderesolucio´ndeecuacionescuadra´ticasparalas
+1. LasActividadespertinentes.
+asignaturasdeMatema´ticadeestudiantesdenivelsecundario,
+utilizandolasTICcomoinstrumentodeapoyo.Teniendoen 2. LaEvaluacio´nformativa(orientadaaenjuiciarsistema´ti-
+cuentaqueeldisen˜arunasecuenciadida´ctica,buscaordenar
+camenteelproceso).
+yplanificarlaensen˜anzaparaobtenerlosresultadosdeseados
+yestohasidoutilizadoenvariasinvestigacionesconbuenos 3. LosRecursos.
+resultados.Pretendiendolograraprendizajessignificativosen
+En el presente trabajo, se disen˜ara´n secuencias dida´cticas
+losestudiantes.Segu´nlosresultadosqueseobtenganafuturo
+consistentesenunconjuntodetareasdirigidasporelprofesor
+sepodra´nextenderalaensen˜anzadeotrostemasymejorar
+conelobjetivodecontribuiralmejoramientodelaprendizaje
+as´ıestebajorendimientodelosestudiantes.
+delasecuacionescuadra´ticas.
+Seproponelossiguientesejemplosdesecuenciasdida´cticas:
+dirigidaaidentificaroreconocerecuacionescuadra´ticas
+dirigidaalaresolucio´ndeecuacionescuadra´ticasme-
+dianteelusodelasTIC.
+Resolucio´ndeecuacionesdesegundogradoapartirdeunaexperienciabasadaenlaimplementacio´ndesecuencias
+dida´cticas. 39
+2. Las secuencias dida´cticas por locultural,elarte,lacienciaylatecnolog´ıa.(Tobo´nS.atal.
+competencias: un enfoque 2010.p.11).
+Enelenfoquesocioformativosehaconsideradoesteconcep-
+socioformativo.
+todecompetenciaparaproponerlasiguientedefinicio´n:las
+Elmodeloporcompetenciassecomenzo´ autilizarconcierta competenciassonactuacionesintegralesanteactividadesy
+frecuenciaenlasuniversidadesenlade´cadadel70delsiglo problemasdelcontexto,conidoneidadycompromisoe´tico,
+pasado,aunquesusor´ıgenesseremontanaalgunosan˜osatra´s, integrandoelsaberser,elsaberhaceryelsaberconoceren
+espec´ıficamenteenellibroAspectsoftheTheoryofSyntax unaperspectivademejoracontinua.(´Idem.p.10).
+deNoamChomskypublicadoen1965.Laintroduccio´ndelas Estadefinicio´nsignificaquesepuedeformarestudiantescon
+competenciasenela´mbitodelascienciassocialesseprodu- muchosconocimientos;sinembargo,paraqueseancompe-
+jodemaneragradualyprogresiva.Dentrodelcampodela tentesesnecesarioqueaprendanaaplicarlosenactividades
+psicolog´ıa,emergieronvinculadasalabu´squedadelascuali- yproblemasconcalidad,integrandounaactuacio´ne´tica,con
+dadesquedebeposeerelsujetoparaundesempen˜oeficiente base en valores y actitudes. Hablando en palabras de ma-
+de su profesio´n. Autores como Sa´nchez A. et. al. (2004) y tema´ticos,noescuestio´ndesabersemuchosteoremassino,
+Gonza´lez V. (2006) establecen su aparicio´n en los trabajos esimportanteadema´selsaberlosaplicarlos,enformacon-
+delpsico´logoDavidMcClelland(1973),profesordelaUni- veniente.Engenerallassecuenciasdida´cticassetrabajantan
+versidaddeHarvard,quienatrave´sdelapublicacio´ndeun so´loconlastrescomponentesmencionadasenlaseccio´nante-
+art´ıculotituladoTestingforCompetenceRathertanIntelligen- rior,sinembargo,apartirdelosactualesestudiosdelautorde
+ce,definio´ lacompetenciacomolacaracter´ısticaesencialde estadefinicio´ndesecuenciadida´cticayencorrespondencia
+lapersonaqueeslacausadesurendimientoeficienteenel conlosnuevosmarcoseducativosdondelaintroduccio´nde
+trabajo.(Sa´nchezA.et.al.2004,p.2). lascompetenciasesunhechoyhatrascendidocomounaporte
+Laintroduccio´ndelascompetenciasenlosmarcosdedebate sustancialdentrodelasinvestigacionespedago´gicasconpro-
+sobrelanecesidadderealizarcambiosprofundosenlafor- badaefectividadendiversoscontextos,seplantealainclusio´n
+macio´n universitaria se produjo a fines del siglo pasado. A deunanuevacomponentedentrodelassecuenciasdida´cticas,
+partirdelasnuevasconcepcionesrelacionadasconmejorar lasCompetencias.Conello,sesigueunal´ıneametodolo´gi-
+la calidad de la ensen˜anza y la insercio´n de las competen- ca que permite a los docentes que una mejor adaptacio´n al
+cias se presentan los Proyectos Tunning Europeo (2000) y trabajoporcompetenciasenelaula.
+TunningAme´ricaLatina(2005).Conelpuntodepartidaorigi-
+nadoenambasreuniones,comenzaronaefectuarsediferentes
+eventos,conferenciasysimposiosrelacionadosconeltema
+delaconceptualizacio´ndelascompetenciasylapropuesta
+demodificacionesenlosplanesdeestudioparasuinsercio´n
+encorrespondenciaconlasexigenciasactualesdelaEduca-
+cio´nSuperior,eltemadelascompetenciasentraeneldebate
+internacionalyapuntaalacreacio´ndenuevasl´ıneasdeinves-
+tigacio´ndentrodelasCienciasPedago´gicas.
+ElInstitutoCIFE(CentrodeInvestigacio´nenFormacio´ny
+Evaluacio´n,Madrid,Espan˜a)haidentificadocuatrograndes
+enfoquesdelascompetenciasanivelmundial: 3. Competencias Matema´ticas
+ElproyectoPISA/OECDdefinelaalfabetizacio´nocompeten-
+funcionalista, ciamatema´ticacomo:“lacapacidadindividualparaidentificar
+ycomprenderelpapelquedesempen˜anlasmatema´ticasenel
+conductual, mundo,emitirjuiciosbienfundados,utilizarlasmatema´ticas
+ycomprometerseconellas,ysatisfacerlasnecesidadesdela
+constructivista, vidapersonalcomociudadanoconstructivo,comprometidoy
+reflexivo”.(OECD,2004,p.3;OECD,2003,p.24,citadopor
+socioformativo.
+RicoL.,2006,p.49).
+Lascompetenciasoprocesosgeneraleselegidosporelpro-
+Elenfoquesocioformativo,tambie´nsesueledenominaren-
+yectoPISAson:
+foque siste´mico-complejo o enfoque complejo comienza a
+estructurarseafinalesdelade´cadadel90delpasadosiglo.El pensaryrazonar
+mismo:
+Concibelaformacio´ndelascompetenciascomopartedela argumentar
+formacio´nhumanaintegral,apartirdelproyectoe´ticodevida
+comunicar
+de cada persona, dentro de escenarios educativos colabora-
+tivos y articulados con lo social, lo econo´mico, lo pol´ıtico, modelar
+Resolucio´ndeecuacionesdesegundogradoapartirdeunaexperienciabasadaenlaimplementacio´ndesecuencias
+40 dida´cticas.
+plantearyresolverproblemas 4. Ejemplos de disen˜o de secuencias
+dida´cticas para la resolucio´n de
+representar
+ecuaciones cuadra´ticas.
+utilizarellenguajesimbo´lico,formalyte´cnicoy
+Observacio´n:Setieneencuentaqueparaobteneraprendiza-
+usarherramientasyrecursos.(OECD,2004,p.40,cita-
+jessignificativos:Sedeberelacionarunnuevoconocimiento
+doporRicoL.,2006,p.58).Ma´srecientementeseha
+o informacio´n con la estructura cognitiva previa. Luego es
+definidolacompetenciamatema´ticacomo:“unacapaci-
+importanteverificarlosconocimientosprecedentesdeloses-
+dadbasadaenelprofundoconocimientoindividualpara
+tudiantes.
+tratarexitosamenteconsituacionesquerepresentanun
+Acontinuacio´nseexponendossecuenciasdida´cticasdisen˜adas:
+tipoparticularderetomatema´tico”.(NissM.,2011,p.
+3).
+Lascompetenciasmatema´ticasseorganizandelasiguiente
+manera:
+Competenciadepensamientomatema´tico.
+Competenciademanipulacio´ndeproblemas.
+Competenciademodelacio´nmatema´tica.
+Competenciaderazonamientomatema´tico.
+Maestr´ıa en el uso del lenguaje y de las herramientas ma-
+tema´ticas:
+Competenciaderepresentacio´n.
+Competenciaparaelusodelsimbolismoyformalismo.
+Comunicacio´nmatema´tica.
+Competenciaparaelusodeayudasyherramientasma-
+tema´ticas.(´Idem,p.4y5).
+Segu´nalgunosautores,e´stasserelacionancondeterminados
+aspectosdelaeducacio´nelementalcomoson:ladisciplinaen
+eltrabajo,lafacilidaddeexpresio´nydegestio´n,autoestudio
+yelmanejocorrectodelasherramientasdecomputacio´n.
+Enestetrabajosebuscalascompetenciasquesedesarrollan
+Secuencia:
+enlassecuenciasdida´cticasquesedisen˜anparaelestudiode
+Conocimientoprevio:
+lasecuacionescuadra´ticas.Entreellasesta´n:
+Yasepuedenresolverecuacioneslinealesconunavariable,
+elrazonamientomatema´tico, sistemasdeecuacioneslinealescondosvariables,ecuaciones
+que contengan fracciones, problemas que se resuelvan con
+laresolucio´ndeproblemas,
+ecuacioneslineales,factorizacio´ndepolinomioscuadra´ticos.
+elusodesimbolismos, Introduccio´n:Presentaralgunaecuacio´nlineal,enunciarel
+nuevotipodeecuacio´nquesedefinira´.
+elusodeherramientasyrecursos.
+Definicio´ndeecuacio´ncuadra´tica:
+Adema´sdelascompetenciasmatema´ticasseseleccionanotro Unaecuacio´ncuadra´ticaesaquellaquepuedeescribirsedela
+tipodecompetenciascomoeselTrabajocolaborativo. forma:
+Con todo esto es importante el mencionar que: Al disen˜ar
+secuenciasdida´cticas,estoes,establecerdeterminadasactivi- ax2+bx+c=0 (1)
+dades,consusevaluacionesyrecursosbuscandodesarrollar
+competencias,seesperaquelosestudiantesobtenganaprendi-
+zajessignificativos. Dondea,bycsonnu´merosreales,cona(cid:54)=0.
+Paralocualseasumelasiguientedefinicio´n: Elte´rminoax2sedenominate´rminocuadra´tico.
+AprendizajeSignificativo: Elte´rminobxsedenominate´rminolineal.
+Procesosegu´nelcualserelacionaunnuevoconocimientoo Elte´rminocsedenominate´rminoindependiente.
+informacio´n con la estructura cognitiva del que aprende Ejemplos:
+deformanoarbitrariaysustantivaonoliteral.(Ausubel, Dadaslassiguientesecuaciones,identificarlosvaloresdea,
+1976,2002;Moreira,1997,CitadoporRodr´ıguezL.(2004).). byc.
+Resolucio´ndeecuacionesdesegundogradoapartirdeunaexperienciabasadaenlaimplementacio´ndesecuencias
+dida´cticas. 41
+Trabajo:
+Observacio´n:
+Hayecuacionesquemediantetransformacionesalgebraicas
+setransformanenecuacionescuadra´ticas.Porejemplo:
+Trabajoengrupopara2personas.Paraserrealizadoen15
+minutos.Terminadoeltiempodarlarespuestaparatodos.
+2.Secuenciadida´cticadirigidaalaresolucio´ndeecuacio-
+nescuadra´ticasmedianteelusodelasTIC.
+Tiempodeduracio´ndelasecuencia:2horas.
+Componentesdelasecuencia:
+Resolucio´ndeecuacionesdesegundogradoapartirdeunaexperienciabasadaenlaimplementacio´ndesecuencias
+42 dida´cticas.
+Conocimientosprevios:
+Reconocimientodeecuacionesdesegundogrado,incluidoel
+valordesuscoeficientesa,byc. Ejemplos:
+Definicio´ndediscriminante.Dadalaecuacio´ncuadra´tica:
+ax2+bx+c=0 (2)
+eldiscriminanteeselvalordadoporD=b2−4ac
+Seconsideranloscasossiguientes:
+. Caso1:D>√0.Seobtienendossoluciones:
+x = −b± b2−4ac .
+1,2 2a
+. Caso2:SiD=0.Seobtieneunasolucio´n:x= −b
+2a
+. Caso3:SiD<0.Laecuacio´nnotienesolucio´n.
+Ejemplos:UtilizandoalgunodelosAsistentesComputaciona-
+les.Sepuedenmostrarlassiguientesactividades:
+ConMaple18
+Trabajo:
+Paralassiguientesecuacionescuadra´ticasrealicelasactivida-
+desmostradasanteriormente:
+1. 3x2−6x+2=0
+2. 4x2+3x−22=0
+3. 6x2−13x=10x−21
+4. x2+2x−5=0
+5. x2+(x+5)2=5+16(3−x)
+Resolucio´ndeecuacionesdesegundogradoapartirdeunaexperienciabasadaenlaimplementacio´ndesecuencias
+dida´cticas. 43
+Conclusiones Mapping.Pamplona,Spain.Documentoenformatodi-
+gital.
+Apartirdeldisen˜odesecuenciasdida´cticasysuposteriorim-
+plementacio´nparaeltratamientodelasecuacionescuadra´ti-
+[7] Sa´nchezA.Mart´ınezC.Marrero.C.(2004).Necesidad
+casenlosprogramasdeestudiodelaensen˜anzasecundariay
+delestudiodelascompetenciaslaborales.Unamirada
+media,sepretendemejorarlosnivelesdecomprensio´nyde
+asusor´ıgenes.RevistaCubanadeEducacio´nSuperior
+aprendizajedelasecuacionesengeneralconelfindequelos
+No.2/2004,p.53-65.
+estudiantesadquieranhabilidadesenelmanejodelasmismas
+ylesproporcionenlasherramientasnecesariasparaaumentar
+[8] Estada B. Herna´n, Manilla P. Ignacio.: Estudio de un
+su preparacio´n con vistas a acometer los contenidos de la
+modelomatema´ticoparalapropagacio´ndelSIDA,Rev
+Matema´ticasuperior.
+ColombiaCiencias.19(72),pp107-116,1994.
+Enestetrabajosemuestrandossecuenciasdirigidasa:identi-
+5. Anexos
+ficaroreconocerecuacionescuadra´ticasyalaresolucio´nde
+ecuacionescuadra´ticasmedianteelusodelasTIC.Enambos
+ejemplossedelimitanlasactividadesarealizaras´ıcomolas
+competenciasadesarrollar.Medianteestapra´cticadocentese
+deseacontribuiradema´sallogrodeaprendizajessignificati-
+vos.
+Referencias
+[1] Colectivodeautores.CEPES.(2015).Visio´nPedago´gica
+delaformacio´nuniversitariaactual.EditorialUH.Cuba.
+ISBN:978-959-7211-72-3
+[2] Colectivo de autores. (1991). Matema´tica 9no grado.
+EditorialPuebloyEducacio´n.LaHabana.Cuba.ISBN
+959-13-0434-X.
+[3] Gonza´lezV.(2006).Laformacio´ndecompetenciaspro-
+fesionalesenlauniversidad.Reflexionesyexperiencias
+desdeunaperspectivaeducativa.RevistaXXIEducacio´n.
+UniversidaddeHuelva.Volumen8diciembre2006,p.1-
+16.
+[4] NissM.(2011).Competenciesinmathematicseducation
+– potentials and challenges. What’s the point? What’s
+new? What do we gain? What are the pitfalls? XIII
+ConferenciaInteramericanadeEducacio´nMatema´tica.
+XIIICIAEM-IACME,Recife,Brasil.
+[5] RicoL. (2006). Lacompetencia matema´ticaen PISA.
+PNA,1(2),47-66.Documentoenformatodigital.
+[6] Rodr´ıguez L. (2004). La Teor´ıa del Aprendizaje Sig-
+nificativo.ConceptMaps:Theory,Methodology,Tech-
+nology Proc. of the First Int. Conference on Concept

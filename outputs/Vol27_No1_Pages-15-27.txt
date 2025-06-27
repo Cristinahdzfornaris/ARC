@@ -1,0 +1,631 @@
+Revista Ciencias Matemáticas
+Solución de un problema de contorno
+de gran complejidad para ecuaciones
+de tipo hiperbólico: caso índice cero
+Solution of a boundary problem Very Complex for hyperbolic equations: Case Zero Index
+Dr. Lorgio F. Batard Martínez
+MSc. Yanelis Estrada Hernández
+Departamento de Matemática, Universidad Central Marta Abreu, Santa Clara, Villa Clara, Cuba
+Resumen lico con condiciones de fronteras muy generales. La misma se
+buscará en una cierta clase de funciones de amplia aplicación
+práctica. Con el apoyo del operador de Fourier reducimos nues-
+En el presente trabajo se aborda un problema hiperbólico con con-
+tro problema original a un Problema de Contorno de Riemann
+diciones de contorno de gran complejidad que es reducido, median-
+que resolvemos mediante la técnica de Chersky [ver 3].
+te el operador de Fourier, a un problema de contorno de Riemann
+Luego estudiamos las condiciones de solubilidad del Proble-
+con solución conocida. A partir de la solución del problema de Rie-
+ma de Riemann mediante condiciones necesarias y sufi cientes
+mann se obtiene la solución en cuadraturas del problema hiperbóli-
+para que el coefi ciente y el término independiente de dicho pro-
+co inicialmente planteado para los casos de índice cero, los cuales
+blema estén en las clases de funciones adecuadas. Es interesan-
+son de suma importancia en las aplicaciones.
+te el estudio realizado sobre el valor del índice y los diferentes
+Abstract valores de acuerdo a los coefi cientes del problema. Por último
+se determina la solución del problema en cuadraturas para el
+caso de índice cero. Todo esto se recoge en una serie de teore-
+In this paper a hyperbolic problem with complex boundary
+mas que resumen los resultados.
+conditions has been transformed into a Riemann boundary
+problem of known solution with the help of the Fourier opera-
+tor. By means of the Riemann problem solutions, the solution of
+1.1 Planteamiento del problema
+the boundary problem is obtained in quadratures, in the case
+of index cero, which is very important for the aplications.
+de contorno general de tipo hiperbólico
+Introducción
+En el presente epígrafe hacemos el planteamiento del objeto
+centrado de nuestra investigación: el estudio de un problema
+En el presente artículo se establecen defi niciones y resultados
+hiperbólico con condiciones de contorno complejas, defi nidas
+auxiliares, así como clases de funciones que son de suma rele-
+por semiejes. Su solución la encontramos en la banda infi nita
+vancia para el estudio realizado. Además, hacemos el plantea-
+trabajando con clases de funciones adecuadas (ver [8]).
+miento del problema en cuestión, consistente en encontrar la
+En el epígrafe se utiliza la técnica de Chersky para reducir
+solución a una ecuación en derivadas parciales de tipo hiperbó-
+el problema de la física-matemática estudiado a un problema
+— 15 —
+Sociedad Cubana de Matemática y Computación
+de Riemann, cuya solución general ha sido estudiada anterior-
+(1.2.1)
+mente en [2] y [3].
+Los resultados se pueden generalizar a otros tipos de regiones, Obtención de la solución de la ecuación diferencial (1.2.1).
+Las raíces de la ecuación característica
+incluso acotadas, trabajando con transformaciones conformes.
+Dada la ecuación diferencial parcial de tipo hiperbólico (1.2.2)
+correspondiente a (1.2.1) son
+(1.1.1)
+(1.2.3)
+en la banda
+Luego la solución general de (1.2.1) es:
+(1.1.2)
+(1.2.4)
+y las condiciones de contorno
+donde
+(1.1.3)
+(1.1.4)
+(1.1.5)
+donde a, b y c; i=0,1,2 son números reales
+i i i es una solución particular de (1.2.4) y C(x), C(x), funciones ar-
+1 2
+, , y
+bitrarias que debemos determinar.
+.
+Se desea encontrar condiciones sobre los elementos conocidos 1.2.2 Adaptación de las condiciones
+de (1.1.1), (1.1.3) - (1.1.5) para que la ecuación (1.1.1) tenga so- de contorno (1.1.4) y (1.1.5) para la aplicación
+lución única en la región (1.1.2), que satisfagan las condiciones de la Transformada de Fourier
+(1.1.3)- (1.1.5) y que pertenezcan a la clase
+Con ese objetivo se introducen las funciones f y f
+(1.1.6) + -
+donde F(D) es la clase de funciones que están defi nidas sobre
+la banda infi nita D y L (R) es la clase L (R) con respecto a la
+2x 2x
+variable x (ver [8]).
+Estas funciones permiten escribir (1.1.3) y (1.1.4) en la forma
+El problema está bien planteado, porque el número de condi-
+(1.2.5)
+ciones de contorno (3) es igual al orden de la ecuación diferencial
+con respecto a (2), por el número de regiones (1), más uno (ver [3]).
+(1.2.6)
+donde
+1.2 Reducción a un problema de Riemann
+A continuación se aplica la técnica de Chersky para reducir el pro-
+blema planteado en 1.1 a un problema de Riemann para la banda.
+1.2.3 Aplicación de la Transformada
+1.2.1 Aplicación de la Transformada de Fourier a las nuevas condiciones
+de Fourier a la ecuación (1.1.1) de contorno y a la condición (1.1.3).
+Realizando esta operación se obtiene la ecuación diferencial
+ordinaria: Realizando esta operación en (1.1.3), (1.2.5) y (1.2.6) se obtiene:
+(1.1.3)
+— 16 —
+Revista Ciencias Matemáticas
+Luego sustituyendo (1.2.4), (1.2.9), (1.2.10) y (1.2.11) en
+(1.2.7) (1.2.8) obtenemos una expresión en función de F+(x) y F-(x),
+dada de la siguiente forma:
+(1.2.8) (1.1.11)
+el cual es el Problema de Riemann (ver [8]) correspondiente al
+De acuerdo a la defi nición de f y f las funciones F-(x) y F+(x)
++ -
+caso hiperbólico, en cuyo caso es el coefi ciente
+se pueden considerar (ver [4]) como los valores límites de las
+funciones F-(z) y F+(z), analíticas en el semiplano inferior y su- del problema Rieman y siendo el término independiente
+perior respectivamente, que satisfacen las condiciones:
+(1.1.12)
+y
+Siendo
+,
+si V(x,0+), xV(x,0+) y pertenecen a L (R), es evi-
+2x
+Respectivamente, donde M es el mismo para todas las y.
+dente que H(x) pertenece a L (R) y ∆(x) viene dada por la
+3 2x 1
+expresión:
+1.2.4 Obtención de una ecuación
+funcional en la cual las únicas ,
+funciones desconocidas son F+ y F-:
+donde y
+, además el término (x) viene
+2
+A partir de (1.2.4) se obtiene fácilmente
+dado por:
+(1.2.9)
+Sustituyendo (1.2.4) y (1.2.9) en (1.2.7) y (1.2.8), y efectuando
+las operaciones necesarias se obtienen La expresiones de y:
+Si desarrollamos , nos queda:
+(1.2.10)
+(1.2.11)
+donde (1.2.13)
+donde
+A = ab A = ac
+1 1 1 1 1
+B = -a b + ab B = -a c + ac
+0 1 1 0 1 0 1 1 0
+C = -a b C = -a c
+2 2 1 2 2
+D = a b D = a c
+0 0 1 0 0
+Si , , , , y E = a b - ab E = a c - ac
+2 1 1 2 1 2 1 1 2
+F = -a b - a b F = -a c - a c
+, pertenecen a L (R), es evidente que H(x) y H(X) 0 2 2 2 1 0 2 2 0
+2x 1 2
+pertenecen a L (R).
+2x
+— 17 —
+Sociedad Cubana de Matemática y Computación
+1.3 Condiciones
+(1.3.1)
+de solubilidad del problema
+Como tenemos que la parte real que no acompaña al exponen-
+de Riemann obtenido a partir
+cial tiene la forma
+de un problema hiperbólico complejo
+(1.3.2)
+sustituyendo (1.3.1) en (1.3.2), obtenemos
+En este epígrafe se determinan condiciones necesarias y sufi -
+(1.3.3)
+cientes sobre los coefi cientes de (1.1.3), (1.1.4) y (1.1.5), para que
+pues x2=a -x2, e igualamos a cero para poder encontrar las
+el coefi ciente y el término independiente de (1.2.11) satisfagan 0
+posibles raíces reales que pudieran anular la expresión (1.3.3).
+las condiciones correspondientes al problema de Riemann.
+Trabajando algebraicamente en (1.3.3), obtenemos la ecuación
+De acuerdo con [2], para obtener la solución de (1.2.11) en
+algebraica de segundo orden y las dos raíces respectivamente,
+la clase , se requiere que D(x) pertenezca a
+es decir
+la clase y el término independiente pertenezca a
+; siendo la clase de las funciones f
+(1.3.5)
+que satisfacen las condiciones siguientes:
+i. f no tiene ceros, ni polos sobre R
+por lo tanto si se cumple que
+ii.
+(1.3.6)
+iii.
+no existen ceros, es decir, no existen raíces reales, solo se-
+donde , y es la clase , y rían raíces complejas conjugadas en el caso que B ! 0 o
+con respecto a la variable x. raíces imaginarias conjugadas si B = 0, en este último caso
+También se requiere según [2], que supongamos a ≤ 0 para la relación se convertiría en
+0
+que el índice del problema de Riemann tenga una expresión , el cual sería un caso particular de
+análoga en toda la región. (1.3.6). Luego si se cumple (1.3.6) y (1.3.5) nos quedan las raí-
+ces complejas conjugadas en caso o imaginarias conjugadas
+1.3.1 Determinación de las condiciones si B = 0.
+para que D(x) satisfaga la condición i
+Luego como , por lo tan-
+Para que pertenezca a la clase tiene que cumplirse
+to, la ecuación (1.3.2) no tiene raíces reales, cumpliéndose que
+en primer lugar que D(x) no tenga ni ceros ni polos sobre R, lo
+con A ! C.
+cual se recoge en el siguiente teorema
+Veamos ahora la parte imaginaria del numerador que tiene
+la forma:
+Teorema 1:
+(1.3.7)
+La expresión de D(x), no tiene ni ceros ni polos si se cumplen
+Igualando (1.3.7) a cero nos queda la expresión:
+las condiciones:
+(1.3.8)
+La expresión (1.3.8) tiene como raíces x = 0 y ,
+como a ≤ 0 y , esto implica que la relación
+Demostración del Teorema 1: 0
+, por lo tanto x serían raíces imaginarias conjuga-
+Para demostrar estos teoremas primero trabajaremos con la
+parte real, que no acompaña a la parte que tiene exponencial en das y entonces la única raíz posible es x = 0, cumpliéndose que:
+el numerador, o sea: E ! 0 (1.3.9)
+— 18 —
+Revista Ciencias Matemáticas
+Veamos ahora la parte real del coefi ciente del problema de
+Riemann que acompaña a la exponencial en el numerador, la
+cual tiene la forma:
+(1.3.13)
+(1.3.10)
+Haciendo igual que en la expresión (1.3.2),
+nos queda la relación:
+Las expresiones del numerador y denominador de la fracción
+que interviene en la ecuación (1.3.13) son números complejos,
+así mismo la división de dos números complejos es un número
+complejo y el logaritmo de un número complejo es un núme-
+Luego con la misma condición (1.3.6) y (1.3.5), la expresión an-
+ro complejo, por lo tanto el miembro derecho de la ecuación
+terior no tiene raíces reales.
+(1.3.13) es un número complejo. En el caso del miembro iz-
+Analicemos ahora la parte imaginaria del numerador que
+quierdo de (1.3.13), el elemento a ≤ 0 y x2 ≥ 0, esto implica que
+0
+tiene la forma:
+es un número imaginario puro. Pero por las condicio-
+(1.3.11) nes impuestas en (1.3.12), ni el numerador ni el denominador de
+(1.3.13) se anulan, y constituyen un número complejo con parte
+lo cual implica que y sucede lo mismo la úni-
+ca raíz posible es x = 0, con E ! 0. real e imaginaria . Por lo tanto, como el miembro dere-
+cho siempre es un número complejo y el izquierdo un número
+Luego trasladando las mismas condiciones al denominador
+imaginario puro , entonces la igualdad (1.3.13) no pue-
+del coefi ciente del problema de Riemann obtenemos un resul-
+de ocurrir nunca para ningún x ! R y por tanto las ecuaciones
+tado parcial: los coefi cientes de la exponencial y lo que no está
+afectado por la exponencial en el numerador y denominador
+respectivamente del coefi ciente del problema de Riemann no
+y
+se anulan simultáneamente si se cumple que:
+(1.3.12)
+Solo falta ver si con la condición (1.3.12) sea posible que las
+no tienen soluciones reales (se realiza el mismo procedimiento
+ecuaciones:
+para la segunda ecuación).
+1.3.2 Determinación de las condiciones
+y para que satisfaga la condición ii
+Teorema 2:
+Si se cumplen las condiciones del Teorema 1, entonces
+tengan ceros reales. Trabajemos primero en la primera ecua-
+.
+ción, despejando nos queda:
+Demostración del Teorema 2:
+Con las condiciones impuestas en el Teorema 1, y teniendo
+en cuenta que es un número complejo con módulo uno
+, entonces cuando
+— 19 —
+Sociedad Cubana de Matemática y Computación
+Demostración del Teorema 4:
+Entonces si El término independiente del problema de Riemann tiene
+Multiplicando el coefi ciente del problema de Riemann por la forma:
+nos queda .
+donde
+1.3.3 Determinación de condiciones
+para que se D(x) satisfaga la condición iii
+Teorema 3:
+Si se cumplen las condiciones del Teorema 1 y Teorema 2
+entonces . Por las condiciones impuestas pertene-
+cen a y , son funciones acotadas
+Demostración del Teorema 3: sobre R.
+Es conocido que Si el problema original es homogéneo el Teore-
+para , donde por D (R) se entien- ma 4 quedaría en la siguiente forma:
+A
+de las clases de funciones f: con derivadas acotadas Corolario del Teorema 4: Si se cumplen las condiciones del
+sobre R que cumplan: Teorema 1 entonces se cumple que: .
+Como , probemos primero que
+, para lo cual basta con probar que
+1.4 Cálculo del índice
+. Por las condiciones impuestas
+del coefi ciente. Solución
+(en caso de que el límite sea k ! 1 se multi-
+del problema de Riemann
+plica por como señalamos antes), y es fácil probar que
+para los casos de índice cero
+es una función acotada sobre R, lo cual impli-
+ca que y, por tanto, .
+En este epígrafe buscaremos la solución en cuadraturas para
+Falta solamente probar que . En efecto, como
+los casos de índice cero.
+y es continua en R por ser derivable
+por las condiciones de la hipótesis, se tiene que:
+Caso 1.4.1
+(Solamente A ! 0 y A ! 0)
+Luego y el teorema queda probado. 1
+Por lo que nuestro problema de contorno se reduce a:
+1.4.4 Determinación de las condiciones
+en la banda
+para que el término independiente de (1.2.12)
+y las condiciones de contorno
+sea elemento de L (R).
+2x
+Teorema 4:
+.
+Si se cumplen las condiciones del Teorema 1 y suponien-
+Además el coefi ciente del Problema de Riemann queda de la
+do que y pertenezcan a
+forma:
+L (R) entonces se cumple que .
+2x
+— 20 —
+Revista Ciencias Matemáticas
+Caso 1.4.2
+(Solamente ), esto implicaría
+En este caso como el coefi ciente del problema de Riemann es que , por lo que
+una constante esto implica que no hay raíces ni en el numera- nuestro problema de contorno se reduce a:
+dor ni en el denominador por lo que el problema de Riemann
+correspondiente sería: en la banda
+y las condiciones de contorno
+Pues
+haciendo
+Además el coefi ciente del problema de Riemann queda de la
+forma:
+nos queda el Problema de Salto, donde utilizamos para cada
+Las raíces del numerador tienen la forma:
+caso el concepto de operador proyección para buscar la solu-
+,
+ción:
+Luego podemos enunciar el siguiente teorema: las cuales son raíces imaginarias conjugadas. Las raíces del de-
+nominador tienen la forma:
+Teorema 5:
+,
+Si y pertenecen a
+las cuales son raíces imaginarias conjugadas. Por lo tanto, como
+, entonces el problema para este caso tiene solución úni- por defi nición , esto implica que el índice es
+ca en la clase (1.1.6) dada por . cero y el problema de Riemann queda de la forma:
+Donde
+y
+siendo , y
+donde a > 0, b > 0, c > 0 y d < 0.
+Como estamos buscando funciones F+(x) y F-(x) prolonga-
+bles analíticas al semiplano superior e inferior obtenemos:
+Para el caso homogéneo, es decir tenemos el si-
+guiente teorema:
+Teorema 5´:
+haciendo:
+Si , entonces el problema para este caso tiene solución
+única en la clase (1.2.6) dada por .
+nos queda el Problema de Salto:
+— 21 —
+Sociedad Cubana de Matemática y Computación
+Luego podemos enunciar un teorema similar al Teorema 5 con un polo en el semiplano inferior. El coefi ciente del problema de
+H(x) en lugar de H(x). Riemann queda de la forma:
+5 4
+donde Por lo que el problema de Riemann queda de la siguiente
+manera:
+donde
+siendo
+de lo cual obtenemos:
+haciendo:
+Para el caso homogéneo, podemos enunciar un teorema similar
+al Teorema 5´, con H(x) en lugar de H(x).
+5 4
+Caso 1.4.3
+nos queda el Problema de Salto:
+Luego podemos enunciar un teorema similar al Teorema 5
+(Solamente )
+con H(x) en lugar de H(x).
+6 4
+Por lo que nuestro problema de contorno se reduce a:
+donde
+en la banda
+y las condiciones de contorno
+donde
+Para el caso homogéneo, podemos enunciar un teorema si-
+milar al Teorema 5´, con H(x) en lugar de H(x).
+6 4
+Además el coefi ciente del problema de Riemann queda de la
+forma: Caso 1.4.3.2
+Por lo tanto, las raíces del numerador (denominador) serían: , las raíces quedarían de
+la forma:
+Tanto el numerador como el denominador de D(x) son polino-
+mios de segundo grado. La solución del problema de Riemann
+depende del índice del coefi ciente D(x) y para nuestro proble-
+ma solo estudiaremos los casos de índice cero, para todos estos las cuales son raíces imaginarias y la raíz cero que se simplifi ca
+casos ∆ (x) = 0. la del numerador con la del denominador en el coefi ciente del
+2
+problema de Riemann. El coefi ciente del problema de Riemann
+Caso 1.4.3.1 queda de la forma:
+, las raíces quedarían de la
+forma:
+Esto conduce a los siguientes subcasos:
+Caso 1.4.3.2 a)
+las cuales son raíces imaginarias conjugadas, dos ceros y dos sgF ! sgC, las raíces son imaginarias en
+polos: un cero y un polo en el semiplano superior y un cero y el semiplano superior.
+— 22 —
+Revista Ciencias Matemáticas
+Por lo que el problema de Riemann queda de la siguiente Dos ceros y dos polos imaginarios puros en el semiplano supe-
+manera: rior. donde a > 0, b > 0, c > 0 y d > 0.
+Por lo que el problema de Riemann queda de la siguiente
+manera:
+donde a > 0 y b > 0, haciendo:
+donde obtenemos:
+y nos queda el Problema de Salto:
+Luego podemos enunciar un teorema similar al Teorema 5
+con H(x) en lugar de H(x). haciendo:
+7 4
+Para el caso homogéneo, podemos enunciar un teorema si-
+milar al Teorema 5´, H(x) en lugar de H(x).
+7 4
+Caso 1.4.3.2 b)
+y nos queda el problema de Salto:
+sgF ! sgC, las raíces son imaginarias
+Luego podemos enunciar un teorema similar al Teorema 5
+en el semiplano inferior.
+con H(x) en lugar de H(x).
+Por lo que el problema de Riemann queda de la siguiente 9 4
+Para el caso homogéneo, podemos enunciar un teorema si-
+manera:
+milar al Teorema 5´, con H(x) en lugar de H(x).
+9 4
+Caso 1.4.3.5
+donde a < 0 y b < 0 y obtenemos:
+Un cero y un polo en el semiplano superior y un cero y un
+y haciendo:
+polo en el semiplano inferior imaginarios puros, donde a > 0,
+b < 0, c > 0 y d < 0.
+Por lo que el problema de Riemann queda de la siguiente
+manera:
+y nos queda el Problema de Salto:
+Luego podemos enunciar un teorema similar al Teorema 5
+con H(x) en lugar de H(x).
+8 4
+donde obtenemos:
+Para el caso homogéneo, podemos enunciar un teorema si-
+milar al Teorema 5´, H(x) en lugar de H(x).
+8 4
+Caso 1.4.3.3
+y haciendo:
+Dos ceros y dos polos en el semiplano superio complejos, donde
+Rea > 0, Rea = -Reb, Rec > 0, Rec = -Red y Ima = Imb > 0,
+Imc = Imb.
+Caso 1.4.3.4 y nos queda el problema de Salto:
+Luego podemos enunciar un teorema similar al Teorema 5
+con H (x) en lugar de H(x).
+10 4
+— 23 —
+Sociedad Cubana de Matemática y Computación
+Para el caso homogéneo, podemos enunciar un teorema si- Raíces imaginarias puras, un cero y un polo en el semiplano
+milar al Teorema 5´, con H (x) en lugar de H(x). superior y un cero y un polo en el semiplano inferior (a > 0,
+10 4
+b < 0, a = -b, c > 0 y d < 0, c = -d).
+Caso 1.4.3.6
+Caso 1.4.3.10
+Dos ceros complejos y dos polos complejos en el semiplano in-
+ferior, donde Rea > 0, Rea = -Reb, Rec > 0, Rec = -Red y Ima Raíces imaginarias puras, un cero y un polo en el semiplano
+= Imb < 0, Imc = Imb < 0. superior y un cero y un polo en el semiplano inferior (a > 0,
+Por lo que el problema de Riemann queda de la siguiente b < 0, a = -b, c > 0 y d < 0, c = -d).
+manera:
+Caso 1.4.3.11
+donde obtenemos:
+Raíces imaginarias puras, un cero y un polo en el semiplano
+superior y un cero y un polo en el semiplano inferior (a > 0,
+y haciendo: b < 0, a = -b, c > 0 y d < 0, c = -d).
+Caso 1.4.3.12
+y nos queda el problema de Salto:
+Raíces imaginarias puras, un cero y un polo en el semiplano
+Luego podemos enunciar un teorema similar al Teorema 5
+superior y un cero y un polo en el semiplano inferior (a > 0,
+con H (x) en lugar de H(x).
+11 4
+b < 0, a = -b, c > 0 y d < 0, c = -d).
+Para el caso homogéneo, podemos enunciar un teorema si-
+milar al Teorema 5´, con H (x) en lugar de H(x).
+11 4 Caso 1.4.3.13
+Caso 1.4.3.7
+Raíces imaginarias puras, un cero y un polo en el semiplano
+superior y un cero y un polo en el semiplano inferior (a > 0,
+Raíces imaginarias puras, un cero y un polo en el semiplano
+b < 0, a = -b, c > 0 y d < 0, c = -d).
+superior y un cero y un polo en el semiplano inferior (a > 0,
+b < 0, a = -b, c > 0 y d < 0, c = -d).
+Caso 1.4.3.14
+Caso 1.4.3.8
+Un cero y un polo en el semiplano superior imaginarios puros y
+Raíces imaginarias puras, un cero y un polo en el semiplano un cero y un polo en el semiplano inferior imaginarios puros (a > 0,
+superior y un cero y un polo en el semiplano inferior (a > 0, b < 0, a = -b, c > 0 y d < 0, c = -d).
+b < 0, a = -b, c > 0 y d < 0, c = -d). Por lo que el problema de Riemann queda de la siguiente
+manera:
+Caso 1.4.3.9
+por lo tanto obtenemos:
+— 24 —
+Revista Ciencias Matemáticas
+Dos ceros en el semiplano inferior imaginarios y dos polos en
+el semiplano inferior complejos, donde a < 0, b < 0 y Rec > 0,
+Rec = -Red, Imc = Imd < 0.
+y haciendo: Por lo que el problema de Riemann queda de la siguiente ma-
+nera:
+donde obtenemos:
+y nos queda el problema de Salto:
+Luego podemos enunciar un teorema similar al Teorema 5
+con H (x) en lugar de H(x). haciendo:
+12 4
+Para el caso homogéneo, podemos enunciar un teorema simi-
+lar al Teorema 5´, con H (x) en lugar de H(x).
+12 4
+Caso 1.4.3.15 nos queda el Problema de Salto:
+Luego podemos enunciar un teorema similar al Teorema 5
+con H (x) en lugar de H(x).
+14 4
+Raíces complejas en el numerador e imaginarias puras en el de- Para el caso homogéneo, podemos enunciar un teorema simi-
+nominador, dos ceros y dos polos en el semiplano superior, don- lar al Teorema 5´, con H (x) en lugar de H(x).
+14 4
+de Rea > 0, Rea = -Reb, Ima = Imb > 0, c > 0, d > 0.
+Por lo que el problema de Riemann queda de la siguiente Caso 1.4.3.17
+manera: a = b = b = c = c = 0 (Solamente B ! 0 y E ! 0)
+1 0 2 0 2
+Por lo que nuestro problema de contorno se reduce a:
+y en la banda
+por lo que obtenemos: y las condiciones de contorno
+Además el coefi ciente del Problema de Riemann queda de la
+haciendo:
+forma:
+haciendo
+nos queda el Problema de Salto:
+nos queda la ecuación que tiene raíz en
+Luego podemos enunciar un teorema similar al Teorema 5
+con H (x) en lugar de H(x).
+13 4
+Para el caso homogéneo, podemos enunciar un teorema simi-
+Este es un caso de índice cero si
+lar al Teorema 5´, con H (x) en lugar de H(x).
+13 4
+Caso 1.4.3.16 El problema de Riemann quedaría de la forma:
+— 25 —
+Sociedad Cubana de Matemática y Computación
+donde donde el coefi ciente del Problema de Riemann queda de la forma:
+Y se desarrolla de la misma manera que el Caso 1.4.1.
+donde tenemos que si:
+Conclusiones
+A partir de las condiciones impuestas en cada caso estudiado,
+nos queda el Problema de Salto: hemos encontrado la solución en cuadraturas de un problema
+Luego podemos enunciar un teorema similar al Teorema 5 hiperbólico con condiciones de contorno complejas, tanto para
+con H (x) en lugar de H(x). una ecuación homogénea como para una no homogénea. Es in-
+15 4
+Para el caso homogéneo, podemos enunciar un teorema simi- teresante la técnica utilizada consistente en reducir el problema
+lar al Teorema 5´, con H (x) en lugar de H(x). original con el auxilio de la Transformada de Fourier.
+15 4
+Los resultados constituyen inobjetablemente un aporte teó-
+Caso 1.4.3.18
+rico a la teoría de los Problemas de Contorno de las Ecuaciones
+Diferenciales Parciales, pues no existen técnicas analíticas en
+la actualidad, que aborden problemas de esta naturaleza, donde
+las condiciones de contorno difi eren en diferentes partes del eje.
+El problema de Riemann quedaría de la forma:
+La solución obtenida mediante integrales de tipo Fourier
+permite que los profesionales que utilizan modelos hiperbóli-
+cos puedan encontrar la solución con relativa facilidad y con
+la ayuda de un paquete matemático adecuado, sin que sea ne-
+donde tenemos que si:
+cesario que posean un dominio profundo de la teoría antes
+expuesta.
+La solución para los casos de índice uno, dos, menos uno y
+menos dos serán analizados en próximos artículos.
+nos queda el Problema de Salto:
+Luego podemos enunciar un teorema similar al Teorema 5
+Referencias bibliográfi cas
+con H (x) en lugar de H(x).
+16 4
+Para el caso homogéneo, podemos enunciar un teorema simi-
+[1] MEDEROS, O. B. y BATARD, L. F. “El problema de Riemann con
+lar al Teorema 5´, con H (x) en lugar de H(x).
+16 4
+parámetro pequeño en el espacio ”. Revista Ciencias Matemáticas
+Caso 1.4.3.19 No 3. 1990.
+[2] BATARD, L. F. “Las ecuaciones diferenciales y el Problema de
+D(x) ! 0 y D(x) ! 0 con todos los demás coefi cientes iguales
+1 Riemann con parámetro pequeño”. Tesis de Doctorado. 1990.
+a cero. Esto implica a ! 0, b ! 0 y m ! 0 es decir se re-
+0 0 0 [3] MEDEROS, O. B. y BATARD, L. F. “Reducción de una clase de
+duce al problema de contorno siguiente:
+problemas de contorno en ecuaciones en derivadas parciales con
+parámetro pequeño al Problema de Riemann”. Revista Ciencias
+en la banda Matemáticas No 3. 1990.
+y las condiciones de contorno [5] GAJOV, F.D. Y CHERSKY, YU.I. “Ecuaciones de tipo Convolu-
+ción”. Moscú. Ciencia.1978.
+[6] TIJONOV. SAMARSKI. “Ecuaciones de la Física Matemática”
+[7] GAJOV, F.D. “Problemas de Contorno”
+— 26 —
+Revista Ciencias Matemáticas
+[8] BUDAK. SAMARSKI. “Problemas de la Física Matemática”
+2012 LORGIO F. BATARD MARTÍNEZ, YANELIS ESTRADA
+HERNÁNDEZ. “Solución de un problema de contorno de gran
+complejidad para ecuaciones en derivadas parciales de tipo para-
+bólico: caso índice cero”. Revista Ciencias Matemáticas. Aceptado
+para su publicación
+[9] 2012 LORGIO F. BATARD MARTÍNEZ, YANELIS ESTRADA
+HERNÁNDEZ. “Solución de un problema de contorno de gran
+complejidad para ecuaciones en derivadas parciales de tipo para-
+bólico: caso índices diferentes de cero”. Revista Ciencias Matemá-
+ticas. Aceptado para su publicación
+[10] R.A. ADAMS, Sobolev Spaces, Academic Press, 1976.
+[11] S. AGMON, Lectures on Elliptic Boundary Value Problems, Van
+Nostrand, 1965.
+[12] J.P. AUBIN, Approximation of Elliptic Boundary Value Problems,
+Wiley, 1972.
+[13] H. BREZIS, Operateurs Maximaux Monotones, North-Holland
+Math. Studies 5, 1973.
+[14] F.E. BROWDER, Nonlinear Operators and Nonlinear Equations
+of Evolution in Banach Spaces, Proc. Symp. Pure Math., 18, part 2,
+Amer. Math. Soc., 1976.
+[15] P. BUTZER y H. BERENS, Semi-groups of Operators and
+Approximations, Springer, 1967.
+[16] A. CARASSO y A. STONE (editors), Improperly Posed Boun-
+dary Value Problems, Pitman, 1975.
+— 27 —

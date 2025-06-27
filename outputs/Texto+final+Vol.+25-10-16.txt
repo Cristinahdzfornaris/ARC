@@ -1,0 +1,303 @@
+10 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Comparaci(cid:243)n de mØtodos de regresi(cid:243)n
+en la predicci(cid:243)n de di(cid:243)xido de carbono
+Gladys Linares (Departamento de Investigaciones
+en Ciencias Agr(cid:237)colas) /AdriÆn Saldaæa (Departamento de Investigaciones
+en Ciencias Agr(cid:237)colas) / Marcela Rivera (Facultad de Ciencias
+de la Computaci(cid:243)n) / Hortensia J. Cervantes
+(Facultad de Ciencias F(cid:237)sico-MatemÆticas)
+BenemØrita Universidad Aut(cid:243)noma de Puebla
+Av. San Claudio y 14 Sur, Puebla, MØxico
+RESUMEN: el objetivo de este estudio es comparar los mØtodos de regresi(cid:243)n que se utilizan mÆs fre-
+cuentemente en la prÆctica, a saber, regresi(cid:243)n por m(cid:237)nimos cuadrados ordinarios, regresi(cid:243)n paso a
+paso, regresi(cid:243)n con componentes principales y regresi(cid:243)n por m(cid:237)nimos cuadrados parciales. En este
+art(cid:237)culo se exponen los elementos te(cid:243)ricos de cada uno de los mØtodos mencionados y se aplican a
+un conjunto de datos reales en la predicci(cid:243)n del di(cid:243)xido de carbono en funci(cid:243)n de propiedades del
+suelo, en un per(cid:237)odo de seca, en el Parque Ecol(cid:243)gico Coatzacoalcos, Veracruz, MØxico.
+Palabras claves: gases de efecto invernadero, multicolinealidad, regresi(cid:243)n paso a paso, regresi(cid:243)n
+con componentes principales, regresi(cid:243)n por m(cid:237)nimos cuadrados parciales.
+1. INTRODUCCI(cid:211)N si(cid:243)n, pero con varianzas mÆs pequeæas que los
+estimadores OLS. En este grupo se encuentran
+Los gases efecto invernadero, entre los que se
+la regresi(cid:243)n con componentes principales (RCP)
+encuentra el di(cid:243)xido de carbono (CO ), son de
+y la regresi(cid:243)n por m(cid:237)nimos cuadrados parciales
+2
+suma importancia debido a que ellos son conti-
+(PLS, por sus siglas en inglØs).
+nuamente emitidos y removidos en la atm(cid:243)sfera
+El prop(cid:243)sito del presente trabajo es comparar
+por procesos naturales sobre la tierra.
+estos cuatro mØtodos de regresi(cid:243)n para seleccio-
+En la actualidad existe un gran interØs cien-
+nar el mejor modelo que prediga las emisiones de
+t(cid:237)(cid:222) co en establecer la relaci(cid:243)n que guardan las
+di(cid:243)xido de carbono en funci(cid:243)n de las propiedades
+emisiones de gases de efecto invernadero y las del suelo, en un per(cid:237)odo de seca, en el Parque Ja-
+propiedades del suelo. En los problemas de pre- guaroundi, Coatzacoalcos, Veracruz, MØxico.
+dicci(cid:243)n de gases efecto invernadero a partir de
+En la secci(cid:243)n 2 se brindan las caracter(cid:237)sti-
+propiedades del suelo es bastante frecuente que
+cas esenciales de las regresiones OLS, RPP, RCP
+las variables independientes del modelo sean al-
+y PLS. En la secci(cid:243)n 3 se aplican al problema
+tamente colineales, y por tanto, los estimadores
+antes mencionado y se comparan a travØs de
+de la regresi(cid:243)n por m(cid:237)nimos cuadrados ordina-
+diferentes estad(cid:237)sticos que muestran la capaci-
+rios (OLS, por sus siglas en inglØs) no son ade-
+dad predictiva de los mismos. Finalmente, en
+cuados porque poseen varianzas muy grandes.
+las secciones 4 y 5 se dan las conclusiones y se
+Se han propuesto diferentes tØcnicas para relacionan las referencias.
+manejar los problemas causados por la multi-
+colinealidad. Entre ellos, puede citarse la regre-
+2. M(cid:201)TODOS DE REGRESI(cid:211)N: OLS, RPP,
+si(cid:243)n paso a paso (RPP), que es una tØcnica que
+RCP Y PLS
+permite reespeci(cid:222) car el modelo. Otro grupo de
+tØcnicas se encaminan a buscar estimadores
+En esta secci(cid:243)n se explican los mØtodos OLS,
+sesgados de los coe(cid:222) cientes del modelo de regre-
+RPP, RCP y PLS.
+REVISTA CIENCIAS MATEM`TICAS 11
+El modelo de regresi(cid:243)n para estos mØtodos selecciona para entrar al modelo es el que ten-
+puede escribirse como: ga la mÆxima correlaci(cid:243)n simple con la varia-
+ble respuesta, luego en cada paso se reevalœan
+y = 1β + Xβ + ε (1) todos los regresores que hab(cid:237)an entrado antes
+o
+al modelo, mediante sus estad(cid:237)sticas parciales
+donde, F. Un regresor agregado en una etapa anterior
+y es un vector n x 1 de observaciones de la puede volverse redundante, debido a las relacio-
+variable dependiente, es una constante desco- nes entre Øl y los regresores que ya estÆn en la
+nocida, ecuaci(cid:243)n. Si la estad(cid:237)stica F de una variable es
+menor que la F de salida, esa variable se elimi-
+X es una matriz n x p que consiste de n ob-
+na del modelo. En este mØtodo de regresi(cid:243)n se
+servaciones de las p variables,
+requieren dos valores de corte, la F de entrada y
+β es un vector p x 1 de coe(cid:222) cientes de la re-
+o la F de salida.
+gresi(cid:243)n (parÆmetros desconocidos),
+β es un vector p x 1 de coe(cid:222) cientes de la re-
+2.3. Regresi(cid:243)n con componentes
+gresi(cid:243)n (parÆmetros desconocidos), y
+principales (RCP)
+ε es un vector n x 1 de errores independientes
+e idØnticamente distribuidos con media cero y
+La RCP es una de las maneras de tratar los pro-
+varianza σ2.
+blemas de mal condicionamiento de matrices.
+Si las variables incluidas en la matriz X y en BÆsicamente lo que hace es obtener el nœmero
+el vector y estÆn centradas, la ecuaci(cid:243)n (1) pue- de componentes principales que brinda la va-
+de escribirse de manera mÆs simple como: riaci(cid:243)n mÆxima de X. Realmente es un mØtodo
+de regresi(cid:243)n lineal en que la respuesta es re-
+y = Xβ + ε (2) gresada sobre los componentes principales de
+la matriz X.
+La expresi(cid:243)n del estimador en RCP es
+2.1. Regresi(cid:243)n m(cid:237)nimo cuadrÆtica
+ordinaria (OLS)
+β = V  (4)
+Cuando la matriz X tiene rango completo p, el RCP m m
+estimador OLS se obtiene minimizando la suma
+donde V es una matriz que consiste de los
+de cuadrados de los residuos. Este estimador es m
+primeros m vectores de norma unidad,
+un vector de dimensi(cid:243)n p x 1 cuya expresi(cid:243)n es
+βˆ = (X΄X)-1 X΄γ (3)
+OLS 
+m
+= (Z΄
+m
+Z
+m
+)-1 Z΄γ (5)
+y brinda estimadores insesgados de los elemen-
+Z son las componentes principales y m es el nœ-
+tos del vector de parÆmetros desconocidos del
+mero de estas componentes principales reteni-
+modelo con varianza m(cid:237)nima para alguna fun-
+das en el modelo. RCP da estimadores sesgados
+ci(cid:243)n lineal de las observaciones. Cuando las va-
+de los parÆmetros.
+riables independientes estÆn altamente correla-
+cionadas, X΄X es mal condicionada y la varianza
+2.4. Regresi(cid:243)n m(cid:237)nimo cuadrÆtica
+de los estimadores OLS se hace muy grande, y
+parcial (Regresi(cid:243)n PLS)
+por tanto, son estimadores muy inestables.
+Otro mØtodo para construir modelos predic-
+2.2. Regresi(cid:243)n paso a paso (RPP) tivos cuando las variables independientes son
+muchas y altamente colineales es el PLS. Para
+La RPP permite la re-especi(cid:222) caci(cid:243)n del modelo.
+llevar a cabo la regresi(cid:243)n de y con las variables
+Este procedimiento comienza con la hip(cid:243)tesis de
+independientes X ,(cid:133),X , PLS trata de encontrar
+que no hay regresores en el modelo ademÆs de la 1 p
+nuevos factores que desempeæan el mismo pa-
+ordenada al origen. El primer regresor que se
+12 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+pel que las X(cid:146)s. Estos nuevos factores se llaman PRESS y el R2 predicci(cid:243)n para seleccionar el me-
+variables latentes o componentes. AnÆlogamen- jor modelo.
+te a RPC, cada componente es una combinaci(cid:243)n
+lineal de X , (cid:133),X , pero mientras RCP usa solo
+1 p 3.1 Problema de estudio
+la variaci(cid:243)n de X para construir los nuevos fac-
+tores, PLS usa tanto la variaci(cid:243)n de X como de El Parque Ecol(cid:243)gico Jaguaroundi, en Coatza-
+y para construir los nuevos factores que se usa- coalcos, Veracruz, MØxico, se ubica dentro del
+rÆn como variables explicatorias del modelo. complejo petroqu(cid:237)mico denominado la Cangreje-
+Existen diferentes algoritmos para obtener ra, correspondiente a las instalaciones de Petr(cid:243)-
+los estimadores PLS, pero los mÆs usados son el leos Mexicanos (PEMEX) y es una zona que pre-
+NIPALS y el SIMPLS. senta diferentes grados de perturbaci(cid:243)n debido
+a actividades de dos tipos. La primera es que
+esta zona fue usada como fuente de materiales
+3. ESTUDIO COMPARATIVO DE OLS,
+de construcci(cid:243)n para el complejo industrial y
+RCP Y PLS EN LA PREDICCI(cid:211)N
+como lugar de con(cid:222) namiento de materiales de
+DEL DI(cid:211)XIDO DE CARBONO
+desecho durante la construcci(cid:243)n y la segunda
+es un pertinaz pastoreo de ganado bovino reali-
+Antes de comparar la capacidad predictiva de
+zado por campesinos de los alrededores.
+los modelos es œtil introducir varias medidas del
+ajuste del modelo a los datos y de la fuerza de Las propiedades f(cid:237)sicas y qu(cid:237)micas de las 24
+predicci(cid:243)n de esos modelos. muestras de suelo tomadas se analizaron por el
+grupo de Edafolog(cid:237)a del Instituto de Geolog(cid:237)a de
+La Suma de Cuadrados de Error de Predic-
+la Universidad Aut(cid:243)noma de MØxico. En el pe-
+ci(cid:243)n, conocida como la estad(cid:237)stica PRESS, se
+r(cid:237)odo de seca se consideraron 16 predictores.
+considera una medida de lo bien que funciona
+un modelo de regresi(cid:243)n para predecir nuevos Los resultados que se presentan en cada mØ-
+datos. Se de(cid:222) ne como la suma de los residuales todo fueron obtenidos en MINITAB 15.
+PRESS al cuadrado que son los residuos que se
+obtienen entre el valor observado y el valor pre- 3.2 Modelos ajustados por todos
+dicho de la i-Øsima respuesta observada, basa-
+los mØtodos de predicci(cid:243)n
+do en un ajuste de modelo con los n-1 puntos
+restantes de la muestra. A continuaci(cid:243)n se muestran los resultados ob-
+tenidos por cada mØtodo de regresi(cid:243)n en el pro-
+Con la estad(cid:237)stica PRESS se puede calcular
+blema bajo estudio.
+otro estad(cid:237)stico conocido como R2 para la pre-
+dicci(cid:243)n, que se de(cid:222) ne como:
+3.2.1 Regresi(cid:243)n m(cid:237)nimo cuadrÆtica
+ordinaria (OLS)
+R2 = 1 (cid:150) (PRESS/Suma de Cuadrados Total)
+predicci(cid:243)n
+La tabla 1 muestra los coe(cid:222) cientes del mode-
+(6)
+lo de regresi(cid:243)n OLS, los errores estÆndar de los
+Una aplicaci(cid:243)n muy importante de estos es-
+coe(cid:222) cientes, el estad(cid:237)stico t de Student con sus
+tad(cid:237)sticos es comparar modelos de regresi(cid:243)n. En
+correspondientes valores p y los factores de in-
+general un modelo con pequeæo valor de PRESS
+(cid:223) aci(cid:243)n de la varianza (VIF). Estos œltimos indi-
+es preferible a uno con PRESS grande. El R2 pre-
+can los graves problemas de multicolinealidad
+dicci(cid:243)n se interpreta de manera similar al es-
+ya que todos son mayores que 1. Aunque el va-
+tad(cid:237)stico R2 utilizado usualmente para medir
+lor de R2 es 82.6 %, el R2 predicci(cid:243)n es 0 %. Exis-
+la bondad del ajuste del modelo a los datos: a
+te evidencia de que este modelo no es adecuado
+mayores valores de estos estad(cid:237)sticos mayor es
+por las razones antes expuestas.
+la bondad del ajuste y mayor es la capacidad
+predictiva del modelo.
+3.2.2 Regresi(cid:243)n paso a paso (RPP)
+Dado que el uso principal de los modelos de
+En este mØtodo de regresi(cid:243)n se requieren dos
+regresi(cid:243)n que utilizaremos para la predicci(cid:243)n
+valores de corte, la F de entrada y la F de sali-
+del di(cid:243)xido de carbono es la predicci(cid:243)n de fu-
+da, y hemos preferido de(cid:222) nirlas como iguales.
+turas observaciones utilizaremos la estad(cid:237)stica
+REVISTA CIENCIAS MATEM`TICAS 13
+Tabla 1. Regresi(cid:243)n OLS
+Se tom(cid:243), en todos los casos, una tasa  de error 3.2.3 Regresi(cid:243)n con componentes
+tipo I igual a 0.15, para generar F de entrada y principales
+F de salida.
+El anÆlisis de componentes principales se realiz(cid:243)
+La tabla 2 muestra los dos pasos llevados a
+sobre la matriz de correlaciones (tabla 3). Puede
+cabo por el procedimiento. Obviamente el mejor
+apreciarse que 7 componentes principales expli-
+modelo es el de dos predictores, a saber, altitud
+can el fen(cid:243)meno en casi su totalidad (93.7 %).
+y porciento de nitr(cid:243)geno total, ambos signi(cid:222) ca-
+En la primera componente se destacan como va-
+tivos al 5 %. La bondad del ajuste que muestra
+riables muy importantes el carbono, el nitr(cid:243)geno
+el R2 es del 44.14 % mientras que la capacidad
+total, la conductividad elØctrica (CE) y la den-
+predictiva mostrada por el R2 de predicci(cid:243)n es
+sidad aparente (D.Ap). En esta componente se
+s(cid:243)lo del 19.07 %.
+muestra oposici(cid:243)n entre el carbono, la conducti-
+vidad elØctrica y el nitr(cid:243)geno (signos negativos) y
+Tabla 2. Regresi(cid:243)n paso a paso
+la densidad aparente (signo positivo).
+Por simplicidad se decidi(cid:243) realizar la regre-
+si(cid:243)n lineal simple con la primera componente,
+dado que a pesar de mostrar un R2 de 34.7 %, la
+prueba F obtenida en el anÆlisis de varianza que
+se muestra en la tabla 3(C) result(cid:243) signi(cid:222) cativa.
+El R2 predicci(cid:243)n es 28.2 %.
+La ecuaci(cid:243)n de regresi(cid:243)n obtenida es:
+CO = 124 - 41.1 (CP1).
+2
+14 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Tabla 3. AnÆlisis de componentes principales de la matriz de correlaci(cid:243)n
+Tabla 3 (C). AnÆlisis de varianza para CO por RCP (una componente)
+2
+3.2.4 Regresi(cid:243)n m(cid:237)nimo cuadrÆtica La densidad aparente tiene el coe(cid:222) ciente nega-
+parcial (Regresi(cid:243)n PLS) tivo mÆs alto.
+La tabla 5 muestra la comparaci(cid:243)n entre los
+La tabla 4 muestra los resultados de la regresi(cid:243)n
+modelos segœn su capacidad predictiva. Puede
+por m(cid:237)nimos cuadrados parciales. El nœmero de
+observarse que el modelo con mayor capacidad
+componentes fue seleccionado por validaci(cid:243)n
+predictiva para estos datos, correspondientes al
+cruzada. Puede apreciarse que el modelo con
+per(cid:237)odo de secas, es la RCP que tiene una estad(cid:237)s-
+una sola componente tiene la mayor capacidad
+tica PRESS de 446335 mÆs baja que los restantes
+predictiva y el AnÆlisis de varianza mostr(cid:243) que
+mØtodos y R2 predicci(cid:243)n igual a 28.1 %, mÆs alto
+la prueba F es signi(cid:222) cativa.
+que el PLS en mÆs de 23 unidades porcentuales
+Los coe(cid:222) cientes estandarizados mÆs altos con
+y superando el modelo de regresi(cid:243)n paso a paso
+signos positivos aparecen en los predictores al-
+en 9 unidades porcentuales.
+titud, nitr(cid:243)geno total y conductividad elØctrica.
+REVISTA CIENCIAS MATEM`TICAS 15
+Tabla 4 (A). Regresi(cid:243)n PLS. Selecci(cid:243)n de modelo y validaci(cid:243)n para CO por PLS
+2
+Tabla 4 (B). Regresi(cid:243)n PLS. AnÆlisis de Varianza para CO por PLS (una componente)
+2
+Tabla 4 (C). Regresi(cid:243)n PLS. Coeficientes de regresi(cid:243)n
+16 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Tabla 5. Comparaci(cid:243)n de 4 modelos de regresi(cid:243)n para predecir CO
+2
+4. CONCLUSIONES 5. REFERENCIAS
+Se ha llevado a cabo un estudio comparati- [1] Montgomery, D. C., Peck, E. A. y Vining, G. G.,
+vo entre los mØtodos de regresi(cid:243)n OLS, RPP, Introducci(cid:243)n al AnÆlisis de Regresi(cid:243)n Lineal,
+Compaæ(cid:237)a Editorial Continental. MØxico.
+RCP y PLS en el estudio de predicci(cid:243)n de CO
+2 [2] Saldaæa, J.A., Ruiz-SuÆrez, L.G., HernÆndez, J.M.
+en funci(cid:243)n de propiedades del suelo con datos
+y Morales. B.M. (2006). Emisiones de gases efecto
+que presentaban multicolinealidad severa. La
+invernadero en suelos perturbados con diferente
+comparaci(cid:243)n se realiz(cid:243) bajo el criterio de mejor
+cobertura vegetal en Coatzacoalcos, Veracruz,
+capacidad predictiva. La RCP con una compo- MØxico. (por aparecer).
+nente mostr(cid:243) la estad(cid:237)stica PRESS mÆs baja y el [3] Yeray, O y Goktas, A., A Comparison of Partial
+R2 predicci(cid:243)n mÆs alto entre los cuatro modelos Least Squares Regression with other Prediction
+considerados. Methods, Hacettepe Journal of Mathematics and
+Statistics. 31, 99-111 (2002).on-info.html, 1999.

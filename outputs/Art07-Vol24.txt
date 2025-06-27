@@ -1,0 +1,526 @@
+REVISTA DE CIENCIAS MATEMÁTICAS Vol. 24, único, Nos. 2007- 2008
+LA COMPRENSIÓN DESDE LA PERSPECTIVA DE LA
+EDUCACIÓN MATEMÁTICA.
+Aida María Torres Alfonso1 y Dámasa Martínez Martínez2.
+Facultad de Matemática Física y Computación. Universidad Central de Las Villas
+RESUMEN
+La comprensión del conocimiento matemático constituye un objeto de investigación de
+interés actual y creciente en Educación Matemática. La reconocida complejidad que
+significa abordar la comprensión matemática y el considerable volumen de teorías,
+resultados investigativos, así como experiencias didácticas que se presentan en la
+actualidad, justifican la pertinencia de trabajos como el que aquí se presenta, que tiene
+como principal propósito valorar los antecedentes y los estados de arte de este tema; así
+como las relaciones existentes entre los cambios de representación, la visualización de los
+objetos matemáticos y el uso de las nuevas tecnologías en los contextos educacionales
+que en la actualidad pretendan favorecer el proceso comprensivo de la matemática en los
+estudiantes.
+Palabras clave: comprensión matemática, modelos, situaciones didácticas.
+ABSTRACT
+The understanding of the mathematical knowledge constitutes an object of investigation, of growing interest
+in Mathematical Education For grateful complexity that means to approach the mathematical understanding
+and the considerable volume of theories, investigative results, as well as didactic experiences that are
+presented at the present time, are justified the relevancy of works like the one that here is presented that
+has as main purpose to value the antecedents and the states of art of this topic; as well as the existent
+relationships among the representation changes, the visualization of the mathematical objects and the use
+of the new technologies in the educational contexts that at the present time seek to favor the understanding
+process of the mathematical one in the students.
+Key words: mathematical understanding, models, didactic situations.
+INTRODUCCION
+Durante muchos años se han identificado dificultades relacionadas con la enseñanza y el aprendizaje
+de las matemáticas, como la desmotivación hacia el aprendizaje, las altas tasas de mortalidad
+académica, la apatía, la deserción y en ocasiones la creencia de que a un buen profesor de matemática
+no le aprueban la materia un número significativo de estudiantes. Además, existe la tendencia, un tanto
+generalizada, de considerar la matemática como algo inalcanzable e incomprensible, limitándose por
+esto su estudio, muchas veces, a la mecanización y a la memoria, y no a la comprensión de sus
+conceptos, teorías y sus posibles aplicaciones prácticas. Estas dificultades, entre otras, han generado
+diferentes estudios e investigaciones sobre lo que “debería” ser o sobre cómo hacer matemática en la
+escuela, interrogantes de los que se encarga actualmente la educación matemática, la cual se considera
+como una disciplina en formación que pretende dar cuenta de los procesos que se dan en los centros
+educacionales, desde y alrededor de la matemática.
+El tema de la comprensión en matemáticas debe interesarnos como profesores, formadores de
+profesores e investigadores, ya que nuestro objetivo fundamental es que los estudiantes comprendan
+más y mejor las matemáticas y para lograrlo tenemos que saber acerca del concepto de comprensión,
+para saber qué deben hacer los estudiantes para comprender, como debemos actuar los profesores
+para propiciar que ellos comprendan y en que aspectos se debe modificar el currículo práctico, para
+lograr este objetivo.
+.
+Email: 1 aida@uclv.edu.cu
+2 damasa@uclv.edu.cu
+66
+DESARROLLO
+La comprensión humana suele considerarse uno de los problemas fundamentales en la investigación
+de áreas tan consolidadas como la filosofía, la epistemología o la psicología. Durante las últimas
+décadas la preocupación por su estudio también se ha generalizado en el ámbito de la Educación
+Matemática, al reconocerse de forma mayoritaria la conveniencia de garantizar entre los alumnos un
+aprendizaje comprensivo de las matemáticas, principalmente porque aporta ventajas de formación
+intelectual, reduce las dificultades derivadas del carácter jerárquico de la propia disciplina matemática,
+proporciona experiencias satisfactorias que fomentan actitudes favorables hacia las matemáticas, apoya
+la autonomía en el aprendizaje futuro y propicia el uso flexible del conocimiento ante nuevos tipos de
+problemas en contextos diversos (Rico, 1997; NCTM, 2000), entre otras razones.
+A este reconocimiento hay que unir, de otro lado, la consideración de la especificidad del
+conocimiento matemático como factor determinante que condiciona su comprensión, lo cual acredita aún
+más que su estudio se contemple en la actualidad como una labor específica a realizar desde la
+Educación Matemática.
+DIFERENTES MIRADAS AL TRATAMIENTO DEL TÉRMINO: COMPRENSIÓN MATEMÁTICA.
+Debido a la diversidad de enfoques que encontramos en la revisión bibliográfica realizada, en cuanto
+a lo que significa comprensión y sin pretender realizar un análisis completo del tema, entendemos
+necesario comentar algunos de ellos y suscribirnos a los que tomaremos como base teórica de nuestra
+propuesta de modelo didáctico para desarrollar la comprensión matemática en estudiantes
+universitarios, que es el objetivo fundamental del proyecto investigativo que desarrolla en la actualidad, la
+autora principal de este trabajo.
+El término comprensión es usado de manera diversa según los contextos institucionales,
+predominando el enfoque psicológico, el cual enfatiza la faceta mental de la comprensión, abiertamente
+contestada por Wittgenstein. Estando, evidentemente influenciado por la revolución cognitiva que
+reclaman autores como Vygotsky: prioridad analítica y genética de los factores socioculturales cuando se
+trata de comprender los procesos psicológicos en el individuo (Vygotsky, 1934) ó Bruner con su
+propuesta de una psicología cultural (Bruner, 1990) y con posterioridad Chevallard quien habla de una
+de antropología cognitiva y didáctica que necesita una reconceptualización del propio saber matemático
+y en qué consiste su comprensión (Chevallard, 1992)
+La importancia de la idea de comprensión para la Didáctica de las Matemáticas se pone de manifiesto en
+los trabajos de Sierpinska, Pirie y Kieren, Koyama (1993), entre otros.
+Una de las ideas más ampliamente aceptadas en la Educación Matemática es que los estudiantes
+deberían comprender las matemáticas (Hiebert y Carpenter 1992).
+En términos similares comienza Sierpinska su libro sobre la comprensión en matemáticas, "¿cómo
+enseñar de modo que los estudiantes comprendan? (Sierpinska, 1994), el que supone un paso
+importante, al discernir entre acto y proceso de comprensión, y relacionar la "buena" comprensión de un
+objeto matemática dado: concepto, teoría o problema, a la secuencia de actos de superar obstáculos
+específicos de esta situación didáctica que presentó el objeto.
+La actualidad del tema se evidencia al revisar las memorias de diferentes eventos internacionales de
+la comunidad de Educación Matemática donde de manera general se reconoce el interés mostrado por
+las reformas curriculares promovidas en muchos países por promover la enseñanza de las matemáticas
+con comprensión, siendo reflejado además en actas de congresos y en artículos de revistas en el campo
+de la psicología y la inteligencia artificial (Pirie y Kieren, 1994).
+El término comprensión ha sido estudiado por numerosos investigadores y puede ser entendido y
+utilizado tanto en el sentido conceptual como secuencial y procedimental. A continuación les
+presentamos algunos de estos resultados que evidencian el debate actual del tema de análisis de este
+67
+trabajo
+Sierpinska (1990) señala que la comprensión es un objeto digno de estudio y aparece en toda
+investigación sobre obstáculos epistemológicos para quien "comprender" es obviamente una palabra
+común en educación matemática, distingue varios usos de esta palabra y dice que: “en la práctica de la
+enseñanza, "¿habéis comprendido?" es muy a menudo otra forma de decir "¿puedo continuar?", sin
+embargo en la investigación considera que "comprender" se asume algunas veces para una noción bien
+definida y aparece como un ideal a ser logrado por los estudiantes”, indicando que el objetivo principal de
+la elaboración de diseños de enseñanza, proyectos y libros de texto es promover una mejor comprensión
+del saber objeto de estudio en los estudiantes, y más adelante, esta investigadora se plantea si existen
+diferencias entre comprender un concepto, comprender un texto, comprender una actividad humana y su
+producto, o son casos especiales del concepto general de comprensión.
+Para esta investigadora “la comprensión de un concepto se podría medir por el número y la calidad de
+los obstáculos epistemológicos relativos a él y que uno haya superado”. Afirma que la rapidez de
+comprensión no es una característica que permita discriminar ya que lo que cuenta es la calidad del nivel
+de comprensión, y considera la identificación, discriminación, generalización y sintetización como
+distintas categorías de comprensión.
+Godino (1996) plantea que el problema de la comprensión está íntimamente ligado a cómo se
+concibe el propio conocimiento matemático. Los términos y expresiones matemáticas denotan entidades
+abstractas cuya naturaleza y origen tenemos que explicitar para poder elaborar una teoría útil y efectiva
+sobre qué entendemos por comprender tales objetos. Esta explicitación requiere responder a preguntas
+tales como: ¿Cuál es la estructura del objeto a comprender? ¿Qué formas o modos posibles de
+comprensión existen para cada concepto? ¿Qué aspectos o componentes de los conceptos matemáticos
+es posible y deseable que aprendan los estudiantes en un momento y circunstancias dadas? ¿Cómo se
+desarrollan estos componentes?
+Rico (1997) señala que comprender significa: percibir mentalmente algo; captar el significado de algo;
+entender con claridad lo que quiere decir alguien; conocer en un objeto todo lo que en él es conocible;
+llegar a conocer la naturaleza o modo de ser de una cosa. Resultando así, para este autor la
+comprensión un modo destacado de conocimiento de los objetos matemáticos, brindándole una especial
+atención en el desarrollo de su investigación a las relaciones que existen entre comprensión y los
+diferentes cambios de representación de los objetos matemáticos
+Como hemos enunciado varios autores definen el conocimiento matemático como información
+internamente representada, por ejemplo, según Hiebert y Carpenter (1992) la comprensión ocurre
+cuando las representaciones logran conectarse en redes progresivamente más estructuradas y
+cohesivas.
+Similar concepción la encontramos en la teoría APOS, donde se considera que para lograr la
+comprensión de un concepto matemático el individuo ha de producir acciones, procesos, objeto y
+esquemas. (Asiala, 1996 citado por Torres y Martínez 2004: 42).
+En esta teoría, el desarrollo de la comprensión está ligado a la transformación de objetos
+matemáticos por parte del sujeto, y estas acciones se concretan por medio de signos matemáticos.
+Pero equiparar la actividad matemática al procesamiento de información a criterio de las autoras de este
+trabajo resulta excesivamente reduccionista, por lo que, las teorías de la comprensión derivadas de esta
+concepción no modelizarían adecuadamente los procesos de enseñanza y aprendizaje de las
+matemáticas, en especial los aspectos sociales y culturales implicados en dichos procesos.
+Con algunos puntos de contacto con las teorías anteriormente descritas, pero mucho más dialéctica y
+sistémica, Pirie y Kieren (1992) consideran la comprensión como un proceso de crecimiento
+interminable, dinámico y estratificado pero no lineal. Rechazando la noción de la comprensión como una
+función monótona creciente y la consideran como un proceso dinámico de organización y reorganización.
+68
+Es la comprensión matemática una temática de actualidad investigativa, lo cual se constata al revisar
+el artículo de Godino (2002) donde el autor establece las relaciones que se presentan en el proceso de
+enseñanza aprendizaje entre la comprensión y la competencia matemática, presentando los referentes
+teóricos que fundamentan su complemento desde la perspectiva de la Teoría de la Funciones
+Semióticas.
+Por otra parte, más recientemente, Font (2003) asume que comprender un objeto matemático
+consiste en ser capaz de reconocer sus características, propiedades y representaciones; relacionarlo
+con otros objetos matemáticos y usarlo en toda la variedad de situaciones problémicas que sean
+propuestas por el profesor y reconoce además que las bases psicopedagógicas que han inspirado el
+currículo de los actuales sistemas educativos, en sentido general, entienden la comprensión como un
+proceso mental que es un punto de vista que responde a una concepción epistemológica divergente,
+aunque no contrapuesta a la asumida por el autor en este trabajo y con la cual, las autores del presente
+se suscriben.
+Del otro lado del problema didáctico a resolver, el alumno habrá comprendido un objeto matemático
+cuando lo usa en diversas situaciones didácticas, en las que requerirá utilizar diferentes notaciones y
+convertir una representación en otra de manera natural, y además tenga la capacidad de poder
+expresarlo públicamente, con argumentos que demuestren que su pensamiento ha evolucionado tras
+un esfuerzo intelectual productivo y no igualar estas prácticas evaluativas con la participación “activa”
+de los estudiantes en las cuales solo se analiza si participó o no en clases, pero no si la misma se
+sustenta en un desarrollo de su pensamiento y actividad matemática concreta.
+EVOLUCIÓN DE LA COMPRENSIÓN DESDE LA EDUCACIÓN MATEMÁTICA
+“… ¡No pienses ni una sola vez en la comprensión como 'proceso mental!, Pues ésa
+es la manera de hablar que te confunde... En el sentido en el que hay procesos
+(incluso procesos mentales) característicos de la comprensión, la comprensión no es
+un proceso mental….¨ (Wittgenstein, 1953: 155)
+Como hemos analizado en el anterior apartado de este trabajo, en sentido general el término
+comprensión es usado de manera diversa según los contextos institucionales. Presentamos a
+continuación a manera de resumen, sin pretender tener en cuenta todas las definiciones, posiciones y
+marcos teóricos asumidos en la comunidad de Educación Matemática, una síntesis de la evolución que
+han tenido estas perspectivas en esta temática de reconocida actualidad investigativa.
+Antes de 1976
+Comprensión estaba identificada con conocimiento, estando vinculada a la de manipulación algorítmica
+o resolución de problemas (Brownell y Sims, 1946). Polya (1962).
+Skemp (1976)
+Primer trabajo donde se diferencia el conocimiento de la comprensión.
+Comprensión instrumental y relacional
+Tendencia a proporcionar respuestas
+Un saber hacer y por que se
+rápidas a las cuestiones que se le plantea
+debe hacer
+a un individuo
+Byers (1977) y Tall (1978)
+Sugieren una serie de categorías para la comprensión, concibiéndose la comprensión como
+instrumental, relacional, intuitiva y formal.
+69
+Davis (1984) y Hiebert (1986)
+Comprensión es el desarrollo de conexiones entre ideas, hechos o procedimientos. Por lo tanto, el
+desarrollo de la comprensión resulta un proceso de conectar el conocimiento a una red estructurada y
+relacionada, lo que requiere conocer las correspondencias entre los conocimientos nuevos y los
+elementos de la red, así como la estructura que une a todo el conjunto.
+Sierpinska (1990) y Cornu (1991)
+Enfoques constructivistas que han aportado nuevos elementos a la noción de comprensión. Entre las
+múltiples aportaciones, destacar la distinción de obstáculos cognitivos. La que ayuda a identificar las
+dificultades en el aprendizaje y por tanto a diseñar mejores estrategias de enseñanza. Los obstáculos se
+clasificaban en genéticos, didácticos y epistemológicos dependiendo de que su aparición se deba al
+desarrollo personal, al sistema de enseñanza o a las propias matemáticas.
+Vinner (1991)
+La comprensión como generadora de imágenes del concepto. La construcción de las imágenes se
+origina cuando aparece nueva información y por tanto hay que ordenarla en la estructura cognitiva ya
+presente. El proceso de incorporación estaría vinculado a la idea de abstracción reflexiva de Piaget
+(1989).
+Chevallard (1992)
+Desarrolla la antropología cognitiva y didáctica que necesita una reconceptualización del propio
+saber matemático y en qué consiste su comprensión, donde entran en juego el saber a enseñar, los
+profesores y el alumno como sistemas del contrato didáctico. Con basamento teórica en la revolución
+cognitiva que reclaman autores como Vygotsky: prioridad analítica y genética de los factores
+socioculturales del sujeto que aprende.
+Godino (1996)
+La comprensión está íntimamente ligada a cómo se concibe el propio conocimiento matemático. Los
+términos y expresiones matemáticas denotan entidades abstractas cuya naturaleza y origen tenemos
+que explicitar para poder elaborar una teoría útil y efectiva sobre qué entendemos por comprender tales
+objetos. Posteriormente en Godino (2002) se considera la competencia y la comprensión en Matemática
+como nociones cognitivas complementarias cuyo logro implica un proceso de crecimiento progresivo que
+debe tener en cuenta las diversas facetas del conocimiento matemático.
+(Font, 2003)
+Entiende la comprensión como competencia reconociendo la necesidad de un desarrollo mental, pero
+centra su interés en las descripciones y representaciones a medida que se construyen mediante las
+interacciones que se desarrollan en una institución escolar dada, ya sea entre los alumnos, entre ellos y
+sus profesores, entre estos últimos y entre cualquiera de estos sujetos y el contexto social en el cual se
+desarrolla el proceso de aprendizaje. Esta perspectiva enmarca los procesos formativos dentro de una
+concepción del desarrollo progresivo y gradual, adjudicando un lugar secundario a la demostración
+observable de los resultados como la que representa por ejemplo, un examen o un test.
+MODELOS QUE POTENCIAN LA COMPRENSIÓN MATEMÁTICA
+Todo modelo de comprensión matemática involucra un estudio de los objetos matemáticos a
+estudiar, lo cual nos lleva a la adopción de un modelo epistemológico sobre la propia Matemática. De
+una manera u otra existe consenso en la comunidad de investigadores en Educación Matemática de que
+la comprensión matemática no se alcanza por generación espontánea sino que hay que planificarla,
+orientarla, controlarla, y para ello debemos adoptar modelos ricos y coherentes con el modelo
+epistemológico de base.
+En la literatura consultada hemos encontrado diversos modelos teóricos que postulan como objetivo
+fundamental favorecer la comprensión matemática, a continuación abordamos de manera sintética
+algunos de ellos, a criterio de las autoras, los más significativos y actuales.
+70
+MODELO APOS
+Esta teoría, que es una adaptación de la teoría de Piaget sobre la abstracción reflexiva, persigue
+modelizar las construcciones mentales utilizadas en el aprendizaje matemático avanzado. Al considerar
+que los objetos pueden ser desencapsulados de nuevo a los procesos a partir de los cuales fueron
+formados. Finalmente, las acciones, procesos y objetos pueden ser organizados en esquemas” (Asiala y
+cols, 1996). Por supuesto, todo esto no sucede a la misma vez y los objetos, una vez construidos,
+pueden ser utilizados en nuevos procesos, etc. Los investigadores que siguen esta teoría la utilizan para
+construir descomposiciones genéticas de los conceptos que se enseñan en niveles universitarios y
+diseñan secuencias de enseñanza que reflejan las estructuras genéticas que han construido y probado.
+Igual que sucede con cualquier modelo, el modelo APOS ofrece solamente una visión parcial del
+desarrollo cognitivo en Matemáticas, pero es innegable que presta especial atención a la discontinuidad
+cualitativa que se presenta en las relaciones que los alumnos desarrollan con respecto a los conceptos
+matemáticos.
+MODELO DE PIERE Y KIERE
+Una característica de este modelo, que lo diferencia esencialmente de otros que se desarrollan en la
+actualidad es que relegan a un último plano, en el proceso de comprensión el contenido matemático.
+El modelo está estructurado en ocho estratos: conocimiento primitivo, creación de la imagen,
+obtención de la imagen, observación de las propiedades, formalización, observación, estructuración e
+invención.
+El modelo proporciona el redoblado como un mecanismo generativo que corresponde al regreso del
+estudiante a un estrato interno de la comprensión para discutir, reestructurar o expandir las
+comprensiones inadecuadas de los estratos mas internos. La evaluación de la comprensión en este
+modelo no se suscribe a los resultados en test, práctica muy recurrida en estos tiempos en
+investigaciones de la Educación Matemática, en su lugar, se potencia el valor de los resultados de las
+entrevistas con los estudiantes.
+MODELO DE RAZONAMIENTO GEOMÉTRICO DE VAN HIELE
+La problemática que existe con respecto al aprendizaje y enseñanza de la Geometría es una
+situación que viene observándose desde hace varios años en el ámbito internacional, es así que por los
+años cincuenta en Holanda, dos profesores de geometría llamados Pierre Van Hiele y Dina Van Hiele-
+Geldolf, preocupados porque sus alumnos no entendían lo que se explicaba, deciden realizar una
+investigación que les permita primero, determinar la forma como se produce la evolución del
+razonamiento geométrico en los estudiantes y segundo, buscar la manera de ayudar a los alumnos a
+mejorar la calidad de sus razonamiento. Los estudiantes pueden resolver problemas concretos con
+bastante habilidad, pero carecen de ideas cuando deben resolver esos mismos problemas planteados en
+un contexto algo diferente, abstracto o más formalizado. Otra situación típica de las clases de
+matemática, es la de los estudiantes que tienen que recurrir a memorizar las demostraciones de los
+teoremas o las formas de resolver los problemas, pues es la única manera de aprobar los exámenes.
+(Van Hiele, 1986).
+Las ideas fundamentales que defiende este modelo parten de que se pueden encontrar varios
+niveles diferentes de perfección en el razonamiento de los estudiantes, por lo que si una relación
+matemática no puede ser expresada en el nivel actual de razonamiento de los estudiantes, será
+necesario esperar a que éstos alcancen un nivel de razonamiento superior. Reconoce la responsabilidad
+del profesor en este proceso de comprensión matemática al fundamentar que a una persona sí se le
+puede ayudar mediante una enseñanza adecuada de la matemática.
+71
+TEORÍA DE SITUACIONES DIDÁCTICAS
+Constituye una teoría del aprendizaje organizado y dirigido de las matemáticas, que describe un
+entorno de aprendizaje potente en el que no sólo se presta atención al saber matemático puesto en
+juego en las tareas, sino también a las actividades de comunicación en el aula, todo ello en una
+secuencia organizada de situaciones y momentos didácticos.
+Aportando una ayuda potencial para el diseño y concreción de un modelo didáctico que favorezca la
+comprensión matemática. Recomendamos la consulta de Chevallard, Bosch y Gascón (1997) donde se
+describen las principales características de la teoría de las Situaciones Didácticas y un enfoque general
+de los procesos de estudio de las matemáticas acorde con el modelo didáctico que proponemos y que
+constituye fundamentalmente la posición teórica desde la Educación Matemática, asumida por las
+autoras del trabajo.
+ALGUNOS RESULTADOS DE INVESTIGACIONES QUE RELACIONAN LOS CAMBIOS DE
+REPRESENTACIÓN, LA VISUALIZACIÓN Y EL USO DE LAS TECNOLOGÍAS CON LA
+COMPRENSIÓN MATEMÁTICA.
+Los sistemas de representación han sido abordados por diferentes investigadores: sin embargo, los
+trabajos de Duval los consideramos de especial relevancia por las reflexiones pertinentes que realiza en
+relación con los sistemas de representación.
+Las aportaciones de Duval, realizadas desde un marco cognitivo, son una relevante aportación al
+campo científico de la Didáctica de la Matemática (Duval, 1996, 2000). Es decir, asume un modelo
+sociocultural y comunicativo basado en las interacciones sociales. Eso sí, reconoce lo inevitable de que
+se originen importantes problemas de coordinación entre sistemas. Por lo que desde esta perspectiva,
+aparecen las causas profundas de los errores, ya que siempre que se cambia de sistema semiótico, el
+contenido de la representación se modifica, mientras que el objeto permanece igual. Esto significa que
+como los objetos matemáticos pueden ser identificados por cualquiera de sus representaciones, al
+principio los estudiantes son incapaces de discriminar el contenido de la representación y el objeto
+representado. Es decir, para ellos los objetos cambian cuando cambia la representación.
+La pregunta entonces nos aborda inmediatamente: ¿cómo puede un estudiante comprender un objeto
+matemático a través de los cambios entre sus posibles representaciones diferentes?
+En (Font, 2000) se plantea: “…Generalmente los objetos matemáticos se representan mediante
+notaciones diferentes que ayudan a producir diferentes sentidos. Cada una de las notaciones ayuda a
+producir sentido, pero no produce todos los sentidos. Por lo tanto, comprender un objeto matemático
+requiere utilizar diferentes notaciones y desarrollar la capacidad de convertir una representación en
+otra…”.
+Por otra parte, existen creencias de que la Matemática no es visual, esto influido quizás por la idea de
+que siendo la Matemática una disciplina deductiva, se piensa que sus argumentos deben estar
+representados únicamente en términos de sentencias lógicamente concatenadas. Compartimos una
+aseveración de Miguel de Guzmán, acerca de que la comunidad educativa pudiese aprender aún más a
+usar la visualización creativamente, como una herramienta para el entendimiento: la visualización
+matemática es el proceso de formar y transformar imágenes, con lápiz y papel o con ayuda de la
+tecnología, y usar tales imágenes efectivamente para descubrir matemáticas y comprenderlas.
+Conceptualicemos entonces la visualización como la capacidad del individuo de poder reconocer en un
+registro de acciones y representaciones, las reglas con las cuales fueron construidas, y así pues, que de
+tal forma esta información le permita realizar las conversiones adecuadas a otro registro.
+Al respecto Fernando Hitt menciona; “El conocimiento de un concepto es estable en el alumno, si este
+es capaz de lograr articular sin condición algunas diferentes representaciones del mismo objeto, así
+como el de recurrir a ellas, las representaciones, en forma espontánea durante la resolución de
+problemas” (Hitt, 1998). Los resultados de sus investigaciones han demostrado que las ideas,
+conceptos y métodos del Análisis Matemático, presentan una gran riqueza de contenidos visuales,
+72
+intuitivos, geométricos, que están constantemente presentes en el mecanismo mental, tanto en las
+tareas de presentación y manejo de los teoremas y métodos como en la de resolución de problemas.
+En cuanto al uso de las tecnologías en el aprendizaje de la matemática universitaria, el acento en las
+transformaciones docentes habría que ponerlo, en la comprensión de los procesos matemáticos más que
+en la ejecución de ciertas rutinas que en la educación matemática actual, ocupan todavía gran parte de
+la energía de nuestros alumnos, con el consiguiente sentimiento de esterilidad del tiempo que en ello
+emplean.
+Luego, en las estrategias didácticas que pongamos en juego, resulta necesaria la inclusión de estos
+medios y actividades que permitan desarrollar la comprensión matemática con un uso efectivo de estas
+tecnologías y utilizar estos medios para evaluar la capacidad de comprensión matemática que han
+alcanzado los alumnos, aprovechando los resultados de investigaciones realizadas.
+En los últimos años se han desarrollado tres grandes líneas de investigación que vinculan la
+informática y el Análisis Matemático; por una parte, la seguida por los miembros que participan en
+diversos proyectos RUMEC sobre distintas ramas de las matemáticas, los cuales utilizan la teoría APOS
+(Dubinsky, 1996)
+La segunda línea de investigación está relacionada con los trabajos de investigadores franceses
+sobre la informática en la enseñanza de la Matemática, la cual viene reflejada en Guin y Trouche (2002),
+donde los autores destacan los aspectos de los cambios cualitativos que la informática debe representar
+para la enseñanza de la Matemática.
+Una tercera línea de investigación esta relacionada con la visualización matemática de los conceptos
+del Análisis Matemático, su representación y las nuevas tecnologías (Gutiérrez, 1997; Hitt, 1998; Queralt,
+2000; Camacho y González, 2001 y Afonso, 2003), la cual pone de manifiesto la importancia de la
+articulación entre las distintas representaciones semióticas de los objetos matemáticos.
+Sin embargo, se reconoce la necesidad de realizar investigaciones didácticas sobre el uso de la
+tecnología, como por ejemplo, la que podemos analizar en Contreras y Ortega (2003) donde establecen
+que es necesario realizar un análisis crítico de las principales aportaciones existentes y hacer una
+selección de las experiencias innovadoras que se efectúan en investigaciones reconocidas, concretando
+en módulos de prácticas los contenidos Análisis Matemático.
+EN TORNO A LA ACTUALIDAD Y CALIDAD EN LA INVESTIGACIÓN SOBRE COMPRENSIÓN
+MATEMÁTICA
+La comprensión del conocimiento matemático constituye un objeto de investigación de interés
+creciente en Educación Matemática. Sin embargo, su elevada complejidad hace que los avances más
+recientes aún resulten insuficientes y reclama la necesidad de ir adoptando enfoques más operativos y
+menos preocupados por el estudio directo de sus aspectos internos. Autores como Kieran (1994),
+reconocen que los cambios producidos durante los últimos años en la investigación en dicho campo
+muestran una forma distinta de pensar sobre la comprensión del conocimiento matemático.
+Así, a diferencia de épocas pasadas, la reflexión actual se viene desarrollando a un elevado nivel de
+precisión, en parte como consecuencia de la evolución experimentada por las metodologías de
+investigación. Por tratarse de un ámbito de estudio diverso, se suelen adoptar perspectivas diferentes,
+abordando en ocasiones cuestiones parciales. Como ha quedado evidenciado en apartados anteriores
+de este trabajo.
+Como referencia específica, los trabajos más recientes pueden situarse en alguno de los dos
+enfoques genéricos de estudio de la comprensión en matemáticas:
+(a) Enfoque directo (“principios” de la comprensión). Bajo este enfoque se contempla la comprensión
+del conocimiento matemático desde una perspectiva amplia y profunda, centrándose el interés en el
+73
+estudio de aspectos como su naturaleza, funcionamiento, evolución o valoración. Forman parte de él las
+diversas teorías y aproximaciones específicas existentes (Hiebert y Carpenter, 1992; Sierpinska, 1994;
+Pirie y Kieren, 1994; Duffin y Simpson, 1997; Godino, 2000) así como los modelos de comprensión, de
+categorías y cognitivos.
+(b) Enfoque indirecto (“consecuencias” de la comprensión). Bajo este otro enfoque se sitúan los
+trabajos preocupados por el desarrollo de la comprensión matemática y por la gestión externa de los
+efectos que produce. En él se incluyen los estudios curriculares, asi como propuestas que defienden
+argumentos y aportan sugerencias acerca de cómo enseñar y aprender matemáticas con comprensión
+(Hiebert y cols, 1997; Fennema y Romberg, 1999; Goñi, 2000).
+En términos generales, se afirma en Gallardo 2004, que el panorama actual en la investigación sobre
+comprensión en Educación Matemática muestra un carácter atomista con un bajo nivel de cohesión entre
+los estudios del primer enfoque y una limitada articulación entre los estudios desarrollados por uno u otro
+enfoque.
+Asumiendo la situación descrita en los apartados precedentes, resulta oportuno preguntarse en éste por
+los requisitos que debieran cumplir en la actualidad las investigaciones sobre comprensión del
+conocimiento matemático para poder ser consideradas de calidad.
+De acuerdo con lo subrayado por algunos de los autores que han venido reflexionando sobre esta
+cuestión en los últimos años (Romberg, 1992; Sierpinska et al., 1993; Coriat, 2001), todo estudio sobre
+comprensión en matemáticas, al igual que sobre cualquier cuestión de interés para la Educación
+Matemática, debería manifestar suficientes garantías de validez, racionalidad, originalidad, rigurosidad,
+reproductibilidad o relevancia, entre otros criterios. Pero además de cumplir con ellos, que caracterizan a
+la calidad en un sentido clásico, la investigación también habría de garantizar su calidad en el sentido
+más amplio, sobre todo en lo concerniente a proporcionar conocimiento que permita el avance del área
+de forma significativa. Para tal fin se promueven investigaciones que incluyan desarrollos teóricos
+sólidos conectados con estudios empíricos descriptivos siempre considerados de forma provisional. Y
+tales desarrollos deberían proporcionar aproximaciones indirectas sobre la comprensión matemática con
+la suficiente potencialidad descriptiva y prescriptiva para garantizar su utilidad y efectividad en Educación
+Matemática (Koyama, 1993).
+Asimismo, toda aproximación en torno a la comprensión del conocimiento matemático resultante de
+una investigación de calidad tendría que ser, en lo posible, integradora. Lo que implica que debe ser
+flexible y compatible, con capacidad para asimilar y adoptar información externa a la producida por ella
+misma y con disposición a ser modificada y mejorada, debiéndose considerar siempre abierta y
+provisional. Además deben ser operativas para garantizar un grado de aplicabilidad suficiente con
+consecuencias directas en el desarrollo de la comprensión. Dicha operatividad demandaría, entre otras
+cosas, precisión de cara a la aplicación de los procedimientos metodológicos generados.
+Entendemos por ello que resulta preciso continuar con el empeño de elaborar nuevos enfoques
+integradores y sobre todo más operativos que los existentes.
+CONCLUSIONES
+Ante el propósito de realizar una investigación que aborde algunas de las aristas de la problemática
+científica referente al desarrollo de la comprensión matemática, que hemos constatado de relevante
+actualidad e importancia, los investigadores deberán tener en cuenta las teorías científicas que
+sustentan los pasos que darán durante la resolución del problema científico que se han planteado. En
+nuestro caso, los resultados de una investigación en desarrollo por parte de las autoras propone un
+modelo didáctico que potencia el desarrollo de la comprensión de objetos matemáticos, proporcionando
+además un soporte teórico y metodológico al diseño de situaciones didácticas, con enfoque sistémico e
+interdisciplinar, en correspondencia con los principios didácticos y los objetivos formativos de la
+universidad cubana actual.
+74
+REFERENCIAS
+Afonso, R.M. (2003): Problemas de convergencia en un contexto de software educativo, Revista
+Números, 56, 3-40.
+Asiala y cols. (1996): A Framework for research and Curriculum Development in Undergraduate
+Mathematics Education, en Jim Kaput, Alan H. Schoenfeld, Ed. Dubinsky (Eds.), Research in Collegiate
+Mathematics Education. II Conference Board of the Mathematical Sciences (CBMS), Issues in
+Mathematics Education, Volume 6, pp.1-32.
+Brownell, W. A. y Sims, V. M. (1946): The nature of understanding: En J.F. Weaver y J. Kilpatrick (Eds.)
+(1972), The place of meaning in mathematics instruction: Selected theoretical papers of William A.
+Brownell, Studies in Mathematics, Vol. 21, pp. 161 – 179.
+Bruner, J. (1990): Acts of meaning. Cambridge, MA: Hardward University Press.
+Byers, V. y Herscovics, N. (1977): Understanding school mathematics. Mathematics Teaching, 81, pp.
+24-27.
+Camacho, M. y González, S. (2001): Una aproximación geométrica al cálculo de primitivas utilizando la
+TI-92, Revista Números, 45, pp. 61-68.
+Chevallard, Y. (1992): Concepts fondamentaux de la didactique: Perspectives apportés par une
+approche anthropologique. Recherches en Didactique des Mathématique, 12 (1), pp. 73-112.
+Chevallard, Y. Bosh, M. y Gascón, J. (1997): Estudiar matemáticas: El eslabón perdido entre
+enseñanza y aprendizaje. Barcelona, España: Editorial Horsori.
+Contreras y Ortega (2003)
+Coriat, M. (2001): Los problemas de un director de Tesis. Anexos. Ponencia presentada en el
+Departamento de Didáctica de la Matemática, de las Ciencias Sociales y de las Ciencias Experimentales
+de la Universidad de Málaga.
+Cornu, B. (1991): Limits. En Tall (Ed.), Advanced Mathematical Thinking, pp. 153- 166. Dordrecht:
+Kluwer.
+Davis, R. B. (1984): Learning mathematics: the cognitive science approach to mathematics education.
+London: Croom Helm.
+Duffin, J. y Simpson, A. (1997): “Towards a new theory of understanding”. En: E. Pehkonen (Ed.)
+Proceedings of the 21st Conference of the International Group for the Psychology of Mathematics
+Education, Vol. 4, pp.166-173. Lahti, Finland.
+Dubinsky, E. (1991): Reflective Abstraction in Advanced Mathematical Thinking, en D. Tall (Ed.):
+Advanced mathematical thinking, pp. 95-123. Dordrecht. Kluwer A. P, .
+Duval, R. (1996): Quel cognitif retenir en Didactique des Mathematiques?, Recherches en Didactique
+des Mathématiques, Vol. 16, nº 3, pp. 349-382.
+_ _ _ _ _ _ (2000): Basic Issues for Research in Mathematics Education (Plenary Address), Proceedings
+of the 24th Conference of the International Group for the Psychologie of Mathematics Education (tome I),
+pp. 55-69. (Eds.) Taddao Nakahara an Masataka Koyama, Hiroshima University (Japan),.
+Fennema y T. A. Romberg, (Eds.) (1999): Mathematics classrooms that promote understanding.
+Mahwah, N.J.: Lawrence Erlbaum Associates.
+Font V. (2000): Algunos puntos de vista sobre las representaciones en Didácticas de las Matemáticas,
+Recuperado el 15 de junio del 2004 en www.ugr.es/seiem/Documentos/Font-Representaciones.PDF
+Font, V. (2003): Processos mentals versus competencia. Spain, 3-6 December 2003, pp. 66-68.
+Gallardo, J. (2004): Diagnóstico y evaluación de la comprensión del conocimiento matemático. El caso
+del algoritmo estándar escrito para la multiplicación de números naturales. Tesis Doctoral. Málaga:
+Universidad de Málaga.
+Godino, J. D.(1996): Significado y comprensión de los objetos matemáticos. En L. Puig y A. Gutierrez
+(Eds.), Proceedings of the 20th PME Conference, Vol. 2, pp. 417-424. Valencia, España.
+Godino, J. D. (2000): Significado y comprensión en matemáticas. UNO, n. 25, pp. 77-87.
+Godino, J. D. (2002): Competencia y comprensión matemática: ¿Qué son y cómo se consiguen? UNO,
+n. 29, pp. 9-19.
+Goñi, J. Mª (2000): La enseñanza de las matemáticas, aspectos sociológicos y pedagógicos. En J. Mª
+Goñi (Coord.) El currículum de matemáticas en los inicios del siglo XXI, pp. 23-57. Barcelona: Grao.
+Guin, D. y Trouche, L. (2002) : Calculatrices symboliques: Transformer un outil en un instrument du
+travail mathématique: un problème didactique, Grenoble: La Pensée Sauvage, Éditions.
+75
+Gutiérrez, A. (1997): Fronteras en el uso de las calculadoras gráficas, Revista Números, 32, pp. 54-66.
+Hiebert, J. (Ed.) (1986): Conceptual and procedural knowledge: The case of mathematics. Hillsdale, NJ:
+Erlbaum.
+Hiebert, J. y Carpenter, T. P. (1992): Learning and Teaching with understanding. En D. A. Grouws (Ed.)
+Handbook of Research on Mathematics Teaching and Learning, pp. 65-97. New York: MacMillan
+Publishing Company.
+Hiebert, J., Carpenter, T. P., Fennema, E., Fuson, K.C., Wearne, D., Murray, H., Olivier, A. y Human,
+P. (1997): Making Sense: teaching and learning mathematics with understanding. Portsmouth, N. H.:
+Heinemann.
+Hitt, F. (1998): Visualización matemática, nuevas representaciones, nuevas tecnologías y currículo.
+Revista de Educación Matemática. Vol. 10. 1998, pp. 23-45.
+Kieran, C. (1994): Doing and seeing things differently: a 25-year retrospective of mathematics education
+research on learning. Journal for Research in Mathematics Education 25, 6, pp. 583-607.
+Koyama, M. (1993): Building a two axes process model of understanding mathematics. Hiroshima
+Journal of Mathematics Education, 1, pp. 63-73.
+NCTM. (2000): Principles and standards for school mathematics. Recuperado en marzo del 2002 en:
+http://standards.nctm.org/ Publicación en español, Servicio de Publicaciones de la Sociedad Andaluza
+de Educación Matemática THALES.
+Piaget, J; (1989): Hacia una lógica de las significaciones. Barcelona. Gedisa.
+Pirie, S. y Kieren, T. (1992): Creating constructivist environments and constructing creative
+mathematics. Educational Studies in Mathematics, 23, pp.505 - 528.
+Pirie, S. y Kieren, T. (1994): Growth in mathematical understanding: how can we characterize it and how
+can we represent it? Educational Studies in Mathematics, 26, pp. 165-190.
+Polya, G. (1962): Mathematical discovery, Vol. 2. New York, NY: Wiley
+Queralt, T. (2000): Las matemáticas con tecnología entran, Revista Números, 14, pp. 23-36.
+Rico, L. (1997): Reflexión sobre los fines de la Educación Matemática. Suma 24, pp. 5-19.
+Romberg, T. A. (1992): Perspectives on Scholarship and Research Methods. En: D. A. Grouws (Ed.)
+Handbook of Research on Mathematics Teaching and Learning, pp. 49-64. MacMillan Publishing
+Company, New York.
+Skemp, R. (1976): Relational understanding and instrumental understanding. Mathematics Teaching,
+Sierpinska, A. (1990): Some remarks on understanding in mathematics, For the Learning of
+Mathematics, 10(3), pp. 24 – 41.
+Sierpinska, A.; Kilpatrick, J.; Balacheff, N.; Howson, A. G.; Sfard, A.; Steinbring, H. (1993): What Is
+and What Are its Results?. Journal for Research in Mathematics Education
+Sierpinska, A. (1994): Understanding in Mathematics. London: The Flamer Press.
+Tall, D. (1978): The dynamics of understanding mathematics. Mathematics Teaching, 84, pp. 50- 52.
+Torres A, y Martínez D. (2004): Enfoques y Metodologías de la Investigación en Didáctica de las
+Matemáticas. Santa Cara, Villa Clara, Cuba: Editorial Feijó, Cuba.
+Torres A, y Martínez D. (2006): Dimensiones de un modelo didáctico para desarrollar comprensión en la
+matemática universitaria. Memorias del IV Encuentro sobre la enseñanza de la matemática y la
+informática. ISBN 959-18-0138-6, La Habana, Cuba.
+Vinner, S. (1991): The role of definitions in the teaching and learning of mathematics.En D. Tall (Ed.),
+Advanced mathematical thinking (pp. 65-81). Dordrecht:Kluwer Academic Publisher.
+Vygotski, L. S. (1934): Pensamiento y lenguaje. La Pléyade, Buenos Aires.
+Wittgenstein, L. (1953): Philosophical investigations. Oxford: Basil Blackwell.
+76

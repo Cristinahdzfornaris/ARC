@@ -1,0 +1,322 @@
+REVISTA CIENCIAS MATEM`TICAS 71
+Algoritmo matemÆtico para la calibraci(cid:243)n
+y cÆlculo de incertidumbre en tanques
+horizontales de cabezas planas, inclinados
+y con centros de medici(cid:243)n desplazados
+(THCPICD)
+Vladimir Pacheco GonzÆlez,
+Universidad de Cienfuegos.
+(vpacheco@ucf.edu.cu)
+RESUMEN. En el siguiente trabajo se presenta un algoritmo matemÆtico en etapas, para el cÆlculo del
+volumen parcial de llenado de tanques horizontales de cabezas planas, inclinados y con su centro
+de medici(cid:243)n separado del centro geomØtrico del recipiente y tiene la (cid:222) nalidad de dar respuesta a la
+carencia de este procedimiento en las normas cubanas.
+En el art(cid:237)culo se muestra ademÆs los pasos generales para la obtenci(cid:243)n de el valor de la incer-
+tidumbre de la calibraci(cid:243)n con un factor de cobertura 2, y as(cid:237) el resultado poderlo insertar en la
+cadena nacional de trazabilidad de la magnitud Volumen y Gasto.
+S˝NTESIS. Cuba ha identi(cid:222) cado al ahorro y control de los recursos energØticos, como una de las fuen-
+tes de ingresos mas alta de que puede disponer. El presente trabajo tiene como prop(cid:243)sito, llevar
+a la prÆctica los conocimientos mas generales en materia de estimaci(cid:243)n de Incertidumbre en las
+calibraciones; para calcular la correspondiente a las calibraciones de THCPICD. Se identi(cid:222) can los
+pasos de este proceso y las fuentes de incertidumbre. Los resultados obtenidos demuestran la via-
+bilidad del uso del mØtodo geomØtrico de aforo de recipientes para el caso que nos ocupa, cuando no
+se dispone de los recursos para ser llevado a cabo el aforo por mØtodo volumØtrico, o simplemente
+la accesibilidad al recipiente en su lugar de uso solo permite mediciones geomØtricas del mismo.
+DESARROLLO
+gistran en el correspondiente documento, para
+la posterior emisi(cid:243)n de los resultados.
+Procedimiento de calibraci(cid:243)n de RHCPICD
+La boca de medici(cid:243)n desplazada del centro
+Para la calibraci(cid:243)n de RHCPICD se segui- del tanque puede ocupar diferentes posiciones
+caracter(cid:237)sticas, vinculadas con el punto de cho-
+rÆn los pasos de la (cid:222) gura 1, segœn la nor-
+que de la varilla con el tanque y la forma de
+ma API (API Standard 255 Standard method
+llenado del tanque. La varilla pudiera tocar el
+for measurement and calibration of horizontal
+fondo del tanque o una cabeza del tanque, y el
+tanks, 1987). En el aforo de recipientes siempre
+l(cid:237)quido pudiera llenar primero el largo y despuØs
+se comprueban antes de la calibraci(cid:243)n algunas
+la altura o primero la altura y despuØs el largo.
+condiciones f(cid:237)sicas y de seguridad necesaria,
+Un estudio realizado (ver 3.2) demuestra que
+previas a la calibraci(cid:243)n que pueden invalidar
+los tanques de medici(cid:243)n que se usan en com-
+la ejecuci(cid:243)n del trabajo y que se muestran en
+bustibles y que estÆn inclinados con la boca de
+el diagrama, a continuaci(cid:243)n se ejecuta la tarea
+medici(cid:243)n desplazada, la varilla choca el fondo
+fundamental de determinaci(cid:243)n de las capacida-
+del tanque y el l(cid:237)quido llena primero el largo del
+des del recipiente. Todas las actividades se re-
+72 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+recipiente que la altura, por lo que se impone
+establecer condiciones fronteras a ser evalua-
+das, antes de proseguir la medici(cid:243)n.
+Si el tanque se encuentra levantado del lado
+derecho:
+Fig. 3 Condici(cid:243)n de la frontera izquierda.
+Fig. 1 Procedimiento general para la calibraci(cid:243)n Fig. 4 Condici(cid:243)n de la frontera derecha.
+de RHCP.
+Fig. 2 Esquema de un RHCPICD, (altura de la varilla hasta el fondo).
+REVISTA CIENCIAS MATEM`TICAS 73
+Ecuaci(cid:243)n del tanque: (Z − r)2 + X2 = r2 r -- radio del cilindro (2.3)
+l (m)- Largo del volumen muerto l (w)(cid:150) Largo a partir del largo del
+m total.parcial
+h (cid:150) Altura del volumen muerto volumen muerto sin llegar al largo total
+m
+V (Vm) (cid:150) Volumen muerto del tanque h (h) (cid:150) Altura total de la varilla en el
+muerto total varilla
+h (cid:150) altura total del tanque tanque
+total
+E (s)(cid:150) Espesor de las paredes del cuerpo del E (s) (cid:150) Espesor de las paredes de las
+p c
+tanque (dato de campo) cabezas del tanque (dato de campo)
+P - Per(cid:237)metro del tanque (dato de campo) l (c)(cid:150) Longitud de llenado del tanque
+increm
+α - `ngulo de inclinaci(cid:243)n del tanque.
+l (l)(cid:150) Longitud total del tanque (dato de
+total d
+α = arcsen
+campo) l
+total
+h (cid:150) Altura incrementada en el llenado l (t)(cid:150) Largo desde el borde del tanque
+increm tope
+del tanque, sin llenar a cubrir el largo del a la boca de medici(cid:243)n en el sentido de
+mismo, despuØs de cubierto el largo se llenado del tanque
+convierte en la h l (cid:150) Diferencia entre l y l
+total parcial(etapa2) r tope m
+h (v)(cid:150) Altura de la varilla, marcada
+h (cid:150) Altura incrementada en el varilla
+increm (etapa 3) por el volumen de l(cid:237)quido incorporado al
+llenado del tanque, despuØs de cubierto el
+tanque (dato de campo)
+largo del mismo
+d- Cateto que marca la diferencia de
+l (cid:150) Longitud del tanque hasta la boca de
+tope planos horizontales de los bordes extremos
+medici(cid:243)n en el sentido de llenado del tanque
+del tanque para determinar el Ængulo de
+(dato de campo)
+inclinaci(cid:243)n (dato de campo)
+DETERMINACI(cid:211)N DE LAS CAPACIDADES ● Tercera etapa: Determinaci(cid:243)n del volumen
+DEL RECIPIENTE del l(cid:237)quido hasta la altura de la varilla o
+cinta de medici(cid:243)n de la altura del conteni-
+La determinaci(cid:243)n de las capacidades del reci- do del l(cid:237)quido, que determina el alcance de
+piente se realiza en cuatro etapas la altura total del tanque por el liquido.
+● Primera etapa: Determinaci(cid:243)n del volumen ● Cuarta etapa: Determinaci(cid:243)n del volumen
+muerto: Consiste en la determinaci(cid:243)n de del l(cid:237)quido hasta la altura de la varilla o
+aquella cantidad de contenido de l(cid:237)quido cinta de medici(cid:243)n de la altura del conteni-
+que no se registra en la varilla o cinta de do del l(cid:237)quido, que determina el alcance de
+medici(cid:243)n de la altura del contenido del l(cid:237)- la longitud del tanque por el l(cid:237)quido por la
+quido. parte superior del mismo hasta la boca o
+● Segunda etapa: Determinaci(cid:243)n del volu- lugar de medici(cid:243)n, (cid:222) nal del aforo.
+men del l(cid:237)quido hasta la altura de la va- Primera Etapa: El volumen muerto se deter-
+rilla o cinta de medici(cid:243)n de la altura del mina por medio de la integral triple (2.4)
+contenido del l(cid:237)quido, que determina el al-
+cance de la longitud total del tanque por
+(2.4)
+el l(cid:237)quido.
+74 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Z = a + by a, b ∈ R (2.5) a = h (2.6)
+m
+es la ecuaci(cid:243)n de la recta que representa la h = m tan α (2.7)
+m
+proyecci(cid:243)n del plano del l(cid:237)quido, donde las m = t− l (2.8)
+r
+constantes a y b se buscan mediante los I = h sen α (2.9)
+r
+puntos P (l , 0) y P (0, h )
+1 m 2 m
+m = t − h sen α (2.10) a = (t − h sen α) tan α (2.11)
+h 2r
+h = t o t a l = (2.11a)
+cos α cos α
+de (2.1) , (2.2), (2.10),(2.11), (2.11a)
+(2.11b) (2.11c)
+h
+b = − h /m (2.12) tan α = m
+m m (2.13)
+de (2.2) y (2.14)
+b = − tan α (2.14) (2.14a)
+Segunda Etapa: El volumen del l(cid:237)quido hasta
+la altura de la varilla o cinta de medici(cid:243)n de la (2.15)
+altura del contenido del l(cid:237)quido, que determina
+el alcance de la longitud total del tanque por el
+Nota: El volumen calculado por esta f(cid:243)rmula ya tiene incorporado
+l(cid:237)quido y se calcula por:
+el volumen muerto de la primera etapa.
+Z = a + by a, b ∈ R (2.16) l (w) = l + l (m) (2.17)
+total.parcial increm m
+es la ecuaci(cid:243)n de la recta que representa la
+proyecci(cid:243)n del plano del l(cid:237)quido, donde las h (v)
+l = varilla (2.18)
+constantes a y b se buscan mediante los puntos increm sen α
+P (l ,0) y P (0,h )
+1 total.parcial 2 total.parcial
+a = h (2.20)
+total.parcial
+m (ver 2.11c) (2.19)
+h = w tan α (2.21)
+total.parcial
+de (2.17), (2.18) y (2.19)
+α (ver 2.2), b (ver 2.14), r (ver 2.1)
+(2.22)
+REVISTA CIENCIAS MATEM`TICAS 75
+Tercera Etapa: Cubierta la longitud total, el
+nivel de l(cid:237)quido aumenta parejo en ambas caras
+(2.30)
+del tanque. El volumen del l(cid:237)quido hasta la altu-
+ra de la varilla o cinta de medici(cid:243)n de la altura
+del contenido del l(cid:237)quido, que determina el al-
+cance de la altura total del tanque por el l(cid:237)quido,
+Nota: El volumen calculado por esta f(cid:243)rmula ya tiene incorporado
+se determina por medio de la integral triple.
+el volumen de las dos etapas anteriores.
+Z = a + by a, b ∈ R (2.31) a =h* +h (2.32)
+increm.etapa3 total parcial.etapa2
+es la ecuaci(cid:243)n de la recta que representa la proyecci(cid:243)n h* (cid:150) se ha resaltado con el
+increm(etapa3)
+del plano del l(cid:237)quido, donde las constantes a y b se asterisco para simbolizar la altura
+buscan mediante los puntos P (0; a) P (l ; h* ) acumulada en la etapa 3
+1 2 total increm.etapa3
+El valor de ¤a¤ es el elemento que en esta etapa depende de la altura de la varilla (h ) y
+varilla
+cuya representaci(cid:243)n se puede ver en la figura 2.7
+p = h − h (2.33) h = (l−2s− l ) sen α (2.34)
+varilla(v) varilla.etapa2 final varilla.etapa2 final m
+h − sen α (l−2s− l )
+cos α = p/q (2.35) q = varilla m (2.36)
+c o s α
+h = (l−2s) tan α (2.37) a =h + q (2.38)
+etapa2 final etapa2 final
+de 2.2, 2.36, 2.37, 2.38
+h + (d / (l−2s))l
+h − sen α (l−2s− l ) (2.39) a = varilla v m(m) (2.40)
+varilla m
+a = + ( l − 2 s ) t a n α cos (arc sin (d / (l−2s)))
+cos α
+α (ver 2.2) b (ver 2.14) r (ver 2.1)
+Fig. 5 Esquema para la cuarta etapa de medici(cid:243)n.
+Cuarta Etapa: (etapa (cid:222) nal del aforo). Cubier- l(cid:237)quido hasta la altura de la varilla o cinta de
+ta la altura total, el l(cid:237)quido comienza a cubrir medici(cid:243)n de la altura del contenido del l(cid:237)qui-
+la longitud superior del tanque. El volumen del do, que determina el alcance de la longitud del
+76 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+tanque por el l(cid:237)quido, por la parte superior del tud tope), se determina por medio de la integral
+mismo hasta la boca o lugar de medici(cid:243)n (longi- triple (2.44)
+(2.44)
+Fig. 6 Esquema para la cuarta etapa de medici(cid:243)n.
+Z = a + by a, b ∈ R (2.45)
+es la ecuaci(cid:243)n de la recta que representa la proyecci(cid:243)n del plano del l(cid:237)quido cuando este ha
+concluido la tercera etapa; a representa la altura total del tanque y b la pendiente del nivel
+del l(cid:237)quido, al igual que en las etapas anteriores.
+Z = q + by a, b ∈ R (2.46)
+es la ecuaci(cid:243)n de la recta que representa la proyecci(cid:243)n del plano del l(cid:237)quido cuando el l(cid:237)quido
+comienza a llenar el tanque en la cuarta etapa, hasta que el extremo izquierdo del mismo
+alcance la boca de medici(cid:243)n
+p − 2πs
+a = altura.total = (2.47) q = a + h (2.48)
+π increm.etapa 4
+q = − tan α (ver 2.14)
+En el caso de q, matemÆticamente es un intercepto con el eje ¤z¤ que se va fuera de los
+l(cid:237)mites del tanque, pero que es muy œtil en los cÆlculos y se obtiene mediante la siguiente
+secuencia.
+h
+h = v (2.49) h = h − h (2.50)
+increm.etapa 4 cos α v varilla (v) varilla.etapa3
+h − h h = h − (t − s) sen α (2.52) y
+sen α = varilla.total(h) varilla.etapa3 (2.51) varilla.etapa3
+l h = h −(t − s)d/(l − 2s)(2.53)
+t o p e ( t) varilla.etapa3
+REVISTA CIENCIAS MATEM`TICAS 77
+v − h + (t − s)d/(l − 2s)
+h = v − h + (t − s)d/(l − 2s) (2.54) h = (2.55)
+v in c r e m .e t a p a 4 c o s α
+de 2.47; 2.55
+p − 2πs v − h + (t − s)d/(l − 2s) sen α =
+h
+varilla.total(h)
+− h
+varilla(v) (2.57)
+q = + l − l
+π c o s α (2.56) to p e ( t) in c r e m .e t a p a 4
+l (h − v)
+l = t − (2.58)
+increm.etapa4 d
+Esta etapa se ejecutarÆ hasta que se cumpla CONCLUSIONES
+que
+El reconocimiento tÆcito de que:
+l ≤l (2.59) ● En Cuba los tanques horizontales se mon-
+increm.etapa4 tope(t)
+tan con un grado de inclinaci(cid:243)n determi-
+(esta œltima es una medici(cid:243)n de campo) que
+nado.
+se corresponde con la altura total de la vari-
+● El control de combustibles y l(cid:237)quidos pre-
+lla htotal varilla(h), la cual es una medici(cid:243)n de
+ciados es de vital importancia para el pa(cid:237)s.
+campo.
+● Los medios tØcnicos para el aforo volu-
+mØtrico de los recipientes son costosos de
+EVALUACI(cid:211)N Y EXPRESI(cid:211)N
+adquirir y mantenerlo que ha permitido el
+DE LA INCERTIDUMBRE
+desarrollo del presente trabajo.
+DEL RESULTADO DE LA MEDICI(cid:211)N
+Para esto se han tenido en cuenta todos
+los requisitos establecidos en la NC-ISO/IEC
+La incertidumbre de las mediciones es un parÆ- 17025:2006, los establecidos por la ONARC y
+metro de competencia tØcnica de un laboratorio otras normas y documentos tanto nacionales
+y de competencia comercial entre laboratorios, como internacionales. Como parte de este tra-
+por lo que cada procedimiento que se establezca bajo se realiz(cid:243) un profundo estudio de la gu(cid:237)a
+y la forma de cÆlculo de los valores, resultan de incertidumbre ISO y se ha elaborado un
+elementos totalmente novedosos procedimiento general para la estimaci(cid:243)n de la
+En la (cid:222) gura se detallan los pasos generales para incertidumbre de las calibraciones y se cuenta
+la evaluaci(cid:243)n y expresi(cid:243)n de la incertidumbre. con un procedimiento para realizar el aforo de
+Fig. 7 Procedimiento general para la evaluaci(cid:243)n, cÆlculo y expresi(cid:243)n de la incertidumbre.
+78 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+THCPICD y ademÆs la estimaci(cid:243)n de la incerti- Gaceta O(cid:222) cial de la Repœblica de Cuba Decreto-Ley
+dumbre del mismo permite insertar el resultado No.182 de Normalizaci(cid:243)n y Calidad. (1998).
+de la calibraci(cid:243)n laboratorio en la cadena de tra- ISO 5725-Parte 1 a 6:1999, Exactitud (veracidad y pre-
+cisi(cid:243)n) de los resultados y mØtodos de medici(cid:243)n.
+zabilidad correspondiente.
+NC 90-04-13:81 Recipientes Horizontales de Cabezas
+Planas. MØtodos y medios de veri(cid:222) caci(cid:243)n.(1981)
+BIBLIOGRAF˝A NCISO/IEC 17025:2006 Requisitos generales para
+la competencia de los laboratorios de ensayo y de
+A2LA Asociaci(cid:243)n Americana para la Acreditaci(cid:243)n de
+calibraci(cid:243)n. Organizaci(cid:243)n Internacional de Nor-
+Laboratorios. Interim Policy on Measurement
+malizaci(cid:243)n. (2006).
+Uncertainty for Testing Laboratories. (2000).
+O(cid:222) cina Nacional de Normalizaci(cid:243)n. (2005). Servicio
+API Standard 2551 Standard method for measure-
+Nacional de metrolog(cid:237)a. Retrieved from http://
+ment and calibration of horizontal tanks. (1987)
+www.nc.cubaindustria.cu/metrologia/servicio_
+BIPM, ISO, OIML(1993). Gu(cid:237)a BIPM/ISO (GUM) Para
+nac.htm.
+la expresi(cid:243)n de la incertidumbre en las medicio-
+ONARC. (cid:211)rgano Nacional de Acreditaci(cid:243)n de la Re-
+nes. Colectivo de autores. (2006).
+pœblica de Cuba. Pol(cid:237)tica de Incertidumbre de las
+Trazabilidad e incertidumbre de los resultados ex-
+mediciones. (2004).
+perimentales. Retrieved from http://www.ciao.
+Organizaci(cid:243)n Internacional de Normalizaci(cid:243)n. (1999).
+es/Trazabilidad_e_incertidumbre_de_los_resul-
+ISO 3534-1:1993, Estad(cid:237)sticas. Vocabulario y
+tados_experimentales_54296.
+s(cid:237)mbolos-Parte I Probabilidad y tØrminos estad(cid:237)s-
+EAL-R2, European Cooperation for Acreditation (of
+ticos generales.
+Laboratories): Expression of the Uncertainty in
+Calibration, Requirement Document. (1998).
+ABSTRACT. In this work it is presented a mathematical algorithm in stages for the calculation of the
+partial volume for the (cid:222) lling of horizontal tanks with inclined (cid:223) at heads and with its measuring
+center separated from the geometrical one of the container. It is also intended to address this lack
+in the Cuban norms.
+This paper also shows the general steps for obtaining the value of uncertainty of the calibration with
+a coverage factor 2 and then the result could be inserted to the national chain of traceability of the
+magnitude Volume and Expense.

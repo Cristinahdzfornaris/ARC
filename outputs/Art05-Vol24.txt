@@ -1,0 +1,453 @@
+REVISTA DE CIENCIAS MATEMÁTICAS Vol. 24, único, Nos. 2007- 2008
+ANALISIS DISCRIMINANTE LINEAL EN EL ESTUDIO DE LA
+CALIDAD DE LOS SUELOS DE LA SIERRA NORTE DE PUEBLA,
+MEXICO.
+M.G. Tenorio Arvide1, M.A. Valera Pérez2, G. Linares Fleites2, O. A Acevedo Sandoval3 y J.B.
+Dixon4
+1 Postgrado en Ciencias Ambientales, ICUAP, B. Universidad Autónoma de Puebla, México.
+2 Dpto. de Investigaciones en Ciencias Agrícolas. B. Universidad Autónoma de Puebla, México.
+3 Universidad Autónoma de Hidalgo. 4 Texas A&M University, College Station, Texas. USA.
+RESUMEN
+Desarrollar criterios de Calidad de Suelos que puedan utilizarse en una evaluación objetiva de
+riesgos ambientales es un reto al que se enfrentan actualmente los investigadores de la Ciencias
+del Suelo. En este trabajo se han analizado, en la región de la Sierra Norte de Puebla, México, tres
+problemas relacionados, a saber, (1) Contenidos de materia orgánica y residuos en los suelos para
+evaluar la Calidad de Suelos, (2) La reacción pH del suelo, y (3) La fertilidad natural del suelo. El
+objetivo es identificar las propiedades del suelo que permitan distinguir entre suelos con Calidad
+Inherente (suelos con vegetación forestal) y suelos con Calidad Dinámica (suelos de agricultura
+temporal). Se obtuvieron funciones discriminantes para cada uno de los tres problemas,
+mostrándose que el uso del suelo es el factor determinante en el cambio de calidad del mismo.
+ABSTRACT
+The developments of soil quality criteria that can be used in an objective evaluation of
+environmental risk are actual challenges that confront the soil science research. In the present
+research we has analyzed three problems about soil quality at Sierra Norte de Puebla, México; (1)
+Quantification of organic matter/residues in the soil to evaluate soil quality; (2) Soil pH reaction; and
+(3) Natural soil fertility. The goal is to identify the properties of the soil that can be used to
+distinguish between soils with Inherent Quality (soils with forest vegetation) and soils with Dynamic
+Quality (soils with season crops). It was possible to obtain discriminates functions for each one of
+these problems; the result showed that the use of soil is a determinant factor in the quality change
+of the soils.
+Palabras claves: Andisoles, Calidad Inherente, Calidad Dinámica, Función Discriminante.
+INTRODUCCIÓN.
+Existe un interés creciente en la Sociedad hacia el desarrollo sustentable y con ello se ha ampliado la
+comprensión de la importancia del uso del suelo. El suelo influye de manera positiva en el tiempo de vida
+de los seres humanos por su contribución a una nutrición adecuada, incluyendo agua limpia, aire limpio y
+el mantenimiento de la biodiversidad, pero también puede influir de manera negativa dada la
+contaminación del espacio en que vivimos (Blum, 1999).
+Actualmente, uno de los retos más importantes que enfrenta la ciencia del suelo es desarrollar criterios
+de Calidad del Suelo (CS) que puedan utilizarse en una evaluación objetiva de riesgos ambientales
+(Sims et al., 1997). Debido a la inquietud existente con respecto a la degradación del suelo y a la
+necesidad de un manejo sostenible de los agro- ecosistemas, ha resurgido el estudio de las propiedades
+del suelo enfatizándose hacia una función específica del uso del suelo (Carter et al., 1997). Este enfoque
+ecológico del suelo reconoce las interacciones suelo - ser humano y de esta manera la CS es
+inesperable del concepto de sostenibilidad del sistema y de su uso.
+Doran y Parkin, en 1994, definieron la CS como la “capacidad que tiene un suelo para sostener la
+productividad biológica dentro de los límites de su ecosistema, permitiendo conservar la calidad
+ambiental y promoviendo la salud de plantas y animales”; por lo tanto, el concepto de calidad se
+relaciona con una función o uso específico del suelo. La CS se clasifica en Calidad Inherente (CI) y
+Calidad Dinámica (CD). La CI se conforma con las propiedades innatas del suelo, tales como textura,
+mineralogía, color, etc., mientras que la CD son las propiedades de la CI modificadas por las actividades
+antropogénicas (Natural Resources Conservation Service (NRSC), 2001).
+50
+La evaluación de la CS es una herramienta que sirve para valorar el impacto de las prácticas de manejo
+utilizadas y diagnosticar las causas de los problemas en una determinada región. En particular, en la
+Sierra Nororiental del Estado de Puebla, México, no se han realizado estudios sobre la CS. a pesar de la
+gran importancia que tiene poder discriminar si las propiedades del suelo mantienen la CI o se han
+modificado para tornarse en suelos con CD.
+El objetivo del trabajo es identificar las propiedades del suelo que establezcan la diferencia entre CI y CD
+obteniendo sendas funciones discriminantes que permitan predecir la CS. Para lograr estos objetivos se
+seleccionaron tres problemas de los propuestos por la NRSC (2001):
+Problema 1. Contenidos de materia orgánica y residuos en los suelos;
+Problema 2. La reacción pH del suelo, y
+Problema 3. La fertilidad natural del suelo.
+En cada uno de estos problemas se determinaron propiedades que pueden ser empleadas para la
+evaluación de la CS; se compararon las propiedades de los suelos que conservan su vegetación forestal
+y por tanto mantienen su CI, con otros suelos que después de haber perdido su cobertura forestal son
+utilizados para la agricultura temporal, modificando sus propiedades y alcanzando una CD.
+DESARROLLO.
+1. CARACTERIZACIÓN DEL ESTUDIO.
+La zona estudiada corresponde a la Caldera de Teziutlán, estado de Puebla, México, con suelos que
+derivan fundamentalmente de material piroclásico y cubren una superficie aproximada de 846 Km2. Se
+identificaron suelos de los órdenes Entisol, Inceptisol, Alfisol y Ultisol, predominando los del orden
+Andisol (Valera, et al., 2001).
+Las muestras de suelo corresponden a los horizontes A de 25 perfiles representativos y geo-
+referenciados. Se identificaron dos grupos de suelo, uno que conserva la vegetación forestal del que se
+observaron 13 muestras, y otro, que se utiliza para agricultura de temporal, observándose las restantes
+12 muestras.
+Las variables consideradas para cada uno de los tres problemas aparecen en el Cuadro 1. En los
+problemas seleccionados de la “Guía para valorar la Calidad del Suelo en planes de Conservación” de la
+NRCS (2001) no está considerado el por ciento de Nitrógeno (%N) para definir los problemas 1 y 3, sin
+embargo, en otros trabajos sobre Andisoles, el %N ha sido utilizado como variable en la determinación
+de la CS (Roldán, et al., 2003), por lo que decidimos incluirlo en nuestro estudio.
+Las resultados de los análisis físicos y químicos de las muestras de suelo se efectuaron según el Soil
+Survey Laboratory Methods Manual” (Soil Survey Staff, 2006) y se resumen en el Cuadro 2.
+Cuadro 1. Propiedades físicas y químicas de los problemas considerados en el estudio de la
+Calidad de Suelos de la Sierra Norte de Puebla, México.
+Problema 1 Problema 2 Problema 3
+- % Carbono Orgánico (%CO) - Acidez Hidrolítica (AH; pH - - % Carbono Orgánico (%CO)
+H O, relación 1:2)
+2
+- % Nitrógeno Total (%N) - Acidez Intercambiable (AI; pH - Acidez Hidrolítica (AH; pH -
+– KCI, relación 1:2) H O, relación 1:2)
+2
+- % Volumen Raíces (%VR) - Capacidad de intercambio
+Catiónico (CIC)
+- Profundidad del horizonte A, - Saturación en Bases (%V)
+en cm. (Prof)
+- % Residuos en volumen (%R) - Calcio intercambiable (Ca)
+- Magnesio intercambiable (Mg)
+- Sodio intercambiable (Na)
+- Potasio intercambiable (K)
+- % Nitrógeno Total (%N)
+51
+Cuadro 2. Propiedades físicas y químicas de las muestras seleccionadas para determinar
+la Calidad de Suelos de la Sierra Norte de Puebla, México.
+Muestraa
+P
+(c
+r
+m
+of
+)
+. AHb AIc COd Ne
+(%
+V
+)
+Rf Rg Vh CIC C
+(c
+a
+mol(+
+M
+)/k
+g
+g S)
+Na K
+CI1 3 6.0 5.2 10.5 0.8 2.4 40.0 29.4 19.4 3.3 1.6 0.2 0.6
+CI2 4 5.1 4.4 4.0 4.3 32.0 33.3 36.9 13.6 2.9 1.1 0.4 0.6
+CI3 6 6.5 5.8 5.2 0.3 4.8 25.0 54.5 19.3 5.4 2.8 0.9 1.4
+CI4 5 5.3 4.5 4.6 0.3 4.0 28.6 47.0 13.2 3.0 2.3 0.4 0.5
+CI5 10 5.9 5.3 6.7 0.4 8.0 16.7 10.6 33.0 2.3 0.5 0.4 0.3
+CI6 5 5.4 4.7 5.3 0.4 4.0 28.6 19.8 19.4 2.0 1.0 0.4 0.5
+CI7 21 5.3 4.8 5.8 0.4 16.8 8.7 14.2 34.6 3.5 1.0 0.2 0.1
+CI8 20 4.8 4.0 7.0 0.5 16.0 23.1 27.4 35.8 5.6 1.4 2.0 0.8
+CI9 34 5.1 4.5 7.4 0.5 27.2 15.0 50.6 16.8 4.1 1.3 2.8 0.3
+CI10 5 6.0 5.4 5.9 0.5 4.0 28.6 55.7 34.2 9.7 3.1 2.2 4.0
+CI11 17 5.4 4.4 4.5 0.5 13.6 19.0 10.6 30.5 1.1 0.2 1.6 0.3
+CI12 14 5.3 4.4 6.5 0.5 11.2 22.2 32.7 29.0 5.0 3.0 0.6 0.6
+CI13 40 3.5 3.7 17.6 0.9 32.0 9.1 23.6 21.8 3.3 0.9 0.4 0.6
+CD1 8 5.0 4.4 3.7 0.3 0.1 2.5 28.4 16.4 3.4 0.6 0.4 0.5
+CD2 15 6.0 5.1 1.7 0.1 7.2 3.3 31.3 21.4 3.4 0.9 1.4 1.0
+CD3 15 5.0 4.2 3.9 0.3 12.0 3.3 30.0 21.3 3.0 2.0 0.8 0.6
+CD4 13 5.0 4.1 7.7 0.0 10.4 3.8 4.7 29.1 0.8 0.2 0.6 0.1
+CD5 15 6.5 4.7 8.0 0.2 12.0 3.3 9.3 48.4 3.0 1.2 0.2 0.1
+CD6 15 5.5 5.1 5.7 0.4 12.0 3.3 12.0 44.2 4.0 1.0 0.2 0.1
+CD7 11 5.8 4.8 4.7 0.4 5.3 4.5 13.5 27.3 2.0 1.0 0.4 0.3
+CD8 12 4.2 3.6 5.7 0.4 9.6 4.2 33.8 12.9 3.1 0.6 0.3 0.4
+CD9 4 6.8 6.4 8.9 0.9 6.4 5.0 264.8 42.0 106.0 4.1 0.6 1.1
+CD10 8 5.4 4.2 4.4 0.4 6.4 2.5 179.1 12.1 19.8 1.5 0.4 0.7
+CD11 6 5.6 4.6 3.0 0.5 4.8 3.3 120.1 21.0 20.9 2.7 0.3 1.3
+CD12 7 4.6 3.3 5.4 0.4 5.6 2.9 82.6 16.0 9.4 2.6 0.4 0.8
+a CI: Calidad Inherente; c AI: Acidez Intercambiable (pH en KCl) f VR: % del volumen ocupado por raíces en 100 cm2
+CD: Calidad Dinámica dCO: % de Carbono orgánico. g R: % de Raíces finas
+b AH: Acidez Hidrolítica (pH en agua) e N: % de Nitrogéno h V: % de Saturación en bases
+2. MÉTODOS ESTADÍSTICOS UTILIZADOS.
+Para cada uno de estos problemas, utilizando MINITAB 15, se llevaron a cabo los siguientes análisis
+estadísticos:
+(A) Análisis Multivariado de Varianza (MANOVA) para determinar si las variables observadas
+expresaban las diferencias entre los dos grupos de suelos considerados y cuáles de ellas
+explicaban esas diferencias.
+(B) Análisis Discriminante Lineal para obtener las funciones discriminantes y valorar la calidad de
+las mismas.
+Previo a estos análisis se llevaron a cabo análisis exploratorios univariados con el fin de hacer
+transformaciones en las variables que lo requirieran para conseguir normalidad. Otros análisis bivariados
+permitieron conocer el grado de asociación entre parejas de variables (Linares, 1990).
+Para probar que los vectores de medias de ambas poblaciones son iguales contra la alternativa de que
+no lo son, utilizamos la generalización multivariada del Análisis de Varianza (Linares, 2006). Desde el
+punto de vista del cálculo, para tamaños de muestras moderados (como es nuestro caso) se utiliza el
+estadístico (Ecuación.1)
+λ = m Σ log(1+ λ) Ecuación. 1
+0 i i
+donde λ son los vectores propios de la matriz W-1B, y W es la matriz de las desviaciones respecto a las
+i
+medias de cada población y B es la matriz que mide la variabilidad explicada por las diferencias entre las
+medias de cada población. Además de este criterio, conocido como criterio de Wilks, se usan: la prueba
+52
+de Lawley y Hotelling (traza de W-1B) y la prueba de Pillai (traza de B(B+W)-1. Las distribuciones exactas
+de estos estadísticos se aproximan a la distribución F de Fisher.
+Dado que existen diferentes enfoques en el problema de la discriminación, decidimos utilizar el análisis
+discriminante clásico, basado en la normalidad multivariada de las variables consideradas y que es
+óptimo bajo dicho supuesto (Peña, 2002). En este enfoque se construye una función discriminante para
+cada una de las poblaciones consideradas (suelos con CI y suelos con CD) y se establece la regla de
+clasificación que coloca el individuo a clasificar en la población con valor máximo de la función
+discriminante. Dado que la utilidad de la regla de clasificación depende de los errores esperados, estos
+se calcularon aplicando la función discriminante a las 25 observaciones y clasificándolas. Este método
+tiende a subestimar las probabilidades de error de mala clasificación ya que los mismos datos se utilizan
+para estimar los parámetros y para evaluar la regla resultante. Un procedimiento mejor es clasificar cada
+elemento (muestra de suelo) con una regla que no se ha construido usándolo. Para ello, se construyeron
+n=25 funciones discriminantes con las muestras que resultan al eliminar uno a uno cada elemento de la
+población y clasificar después cada dato en la regla construida sin él. Este método se conoce como
+validación cruzada y conduce a una mejor estimación del error de clasificación. En el estudio se utilizan
+ambos procedimientos de estimación de ese error.
+3. RESULTADOS Y DISCUSIÓN.
+Las tablas 1, 2 y 3 muestran los resultados obtenidos, los que se discuten a continuación.
+PROBLEMA 1.
+Las variables consideradas para este problema presentaban sesgos positivos pronunciados por lo que
+se aplicó la transformación logarítmica. En particular, al ln%N se sumó la constante 0.1 para conseguir
+normalidad.
+En la tabla 1(A1) se muestran los tests multivariados Wilks, Lawley-Hotelling y Pillai para el único
+término del modelo. Los valores de s, m y n usados para el cálculo del estadístico aproximado F fueron,
+1, 1.5 y 8.5 respectivamente. Examinando los valores p de estos tests observamos que son 0.000, lo
+que indica que existe diferencia significativa entre los niveles de calidad del suelo.
+La tabla 1(A2) señala que el porciento de nitrógeno y el porciento de residuos son significativos al nivel
+de significación de 0.05, mientras que el porciento de carbono orgánico lo es al nivel de significación de
+0.10. El % Residuos está altamente correlacionado con la profundidad de manera negativa. (Tabla
+1(A3)).
+En el análisis de valores y vectores propios (ver Tabla 1(A4)) sólo fue necesario mostrar la primera
+columna puesto que el primer valor propio es capaz de explicar el 100% de la variabilidad total. Si
+observamos los elementos del vector propio puede apreciarse que la profundidad del horizonte A y el
+porciento de residuos tienen los valores más altos del vector propio, lo que expresa la influencia de estos
+elementos para diferenciar los suelos con CI y con CD.
+La función discriminante mostrada en la tabla 1(B) clasifica correctamente al 100% con los dos
+procedimientos de estimación del error de mala clasificación. Obsérvese que en ambas funciones
+discriminantes el coeficiente de la variable % de Residuos es el más alto.
+PROBLEMA 2.
+La tabla 2(A1) muestra los tests multivariados Wilks, Lawley-Hotelling y Pillai, para el único término del
+modelo. Los valores de s, m y n usados para el cálculo del estadístico aproximado F fueron, 1, 0.0 y 10
+respectivamente. Examinando los valores p de los estos tests, observamos que son 0.214, lo que indica
+no existe diferencia significativa entre los vectores de medias de los niveles de calidad del suelo.
+53
+La tabla 2(A2) señala que ninguna de las dos variables respuestas son significativas al nivel de
+significación de 0.05. La Tabla 2(A3) muestra que entre pH-H2O y pH-KCI existe alta correlación
+positiva.
+El análisis de valores y vectores propios (ver Tabla 2(A4)) nos permite valorar como las medias de las
+respuestas difieren entre los niveles del factor. Sólo fue necesario mostrar la primera columna puesto
+que el primer valor propio es capaz de explicar la variabilidad total. Si observamos los elementos del
+vector propio puede apreciarse que el valor más alto es el de pH-KCI, de ahí que es la respuesta que
+señala la más alta diferencia entre las medias de los niveles, aunque el pH-H2O también muestra un
+valor alto en valor absoluto, por lo que también es capaz de señalar diferencias entre las medias de la
+calidad inherente y la dinámica.
+Las funciones discriminantes son mostradas en la tabla 2(B). La proporción de clasificación correcta es
+sólo del 68% con el primer procedimiento de estimación del error de mala clasificación y del 64% con el
+procedimiento de validación cruzada.
+PROBLEMA 3.
+La tabla 3(A1) muestra los tests multivariados Wilks, Lawley-Hotelling y Pillai, para el único término del
+modelo. Los valores de s, m y n usados para el cálculo del estadístico aproximado F fueron, 1, 3.5 y 6.5
+respectivamente. Examinando los valores p de estos tests, observamos que toman el valor 0.022, lo que
+indica que existe diferencia significativa entre los vectores de medias de los niveles de calidad
+considerados.
+La tabla 3(A2) señala que el por ciento de nitrógeno (%N) es significativo al 5% mientras que el porciento
+de carbono orgánico (%CO) lo es al 10% de significación. El Sodio (Na), aunque no es significativo,
+presenta un valor de p bajo.
+La Tabla 3(A3) muestra correlaciones positivas altas entre las siguientes parejas de variable: Ca y %V
+(0.87); Mg y %V (0.75); K y %V (0.73); Mg y Ca (0.80); K y Ca (0.61); y Mg y K (0.66)
+El análisis de valores y vectores propios (ver Tabla 3(A4)) nos permite valorar como las medias de las
+respuestas difieren entre los niveles del factor. Sólo fue necesario mostrar la primera columna puesto
+que el primer valor propio es capaz de explicar la variabilidad total. Si observamos los elementos del
+vector propio puede apreciarse que las respuestas que más destacan las diferencias entre las medias de
+los niveles son: Ca, %CO y %N.
+Las funciones discriminantes para este problema (ver Tabla3(B)) presentan un 92% de buena
+clasificación con el primer procedimiento, lo que es un estimador muy optimista y poco realista, ya que al
+aplicar el procedimiento de validación cruzada sólo clasifica correctamente en un 68%. La Saturación en
+Bases (%V) muestra los coeficientes de más altos valores de las respectivas funciones discriminantes.
+CONCLUSIONES.
+Los resultados obtenidos muestran que la CS está determinada por diferentes propiedades físicas,
+químicas y biológicas de los suelos. Coincidiendo con otros autores (Kennedy y William, 2006)
+encontramos que estos factores están interrelacionados, por lo que el fenómeno en estudio debe ser
+analizado de manera multidimensional.
+Con respecto a las propiedades indicadoras requeridas para la evaluación de la CS propuestas en la
+“Guía para valorar la Calidad del Suelo en planes de Conservación” de la NRSC, donde no se tiene en
+cuenta el %N, estimamos que en suelos derivados de material piroclástico, principalmente Andisoles, es
+una propiedad de interés, ya que tiene influencia para diferenciar suelos con CD o CI. La función
+discriminante para evaluar la CS con esas propiedades clasificó correctamente el 100% de las muestras
+de suelos.
+Para el problema de la reacción pH del suelo, el evaluar sólo la AH como indicador de las CI y CD no es
+suficiente, dado la alta correlación con AI. Sin embargo, nuestros resultados apuntan a que estas
+propiedades no son capaces de discriminar adecuadamente la CS.
+Para el problema de definir la fertilidad natural de los suelos mediante su CS, las propiedades
+combinadas que destacan las diferencias entre la CI y la CD son, como generalmente se plantea en la
+literatura, el %CO y el %N. El calcio intercambiable (Ca) y la Saturación en Bases (%V) mostraron fuerte
+influencia en la función discriminante dado los altos valores de sus coeficientes
+Finalmente, puede señalarse que este estudio sobre CI (suelos con vegetación forestal) y CD (suelos
+con agricultura de temporal), indica que el uso del suelo es el factor determinante en el cambio de
+calidad del mismo.
+54
+REFERENCIAS.
+Blum W.E.H., 1999. “Sustainable Land Management in the Tropics in Relation to Environmental
+and Socio-Economic Soil Function”. In M. Vikram Reddy (Ed.). Management of Tropical
+Agroecosystems and the Beneficial Soil Biota, Science Publishers, Inc. Enfield, NH, USA, pp
+83–99.
+Carter, M.R., Gregorich, E.G., Anderson, D.W., Doran, J.W., Janzen, H.H. y F.J. Pierce, 1997.
+Concepts of Soil Quality and their Significance. In Gregorich, E.G. and Carter, M.R. (eds.) Soil
+Quality for Crop Production and Ecosystem Health. Developments in Soil Science. 25. Elsevier
+Sc.
+Doran, J.W. y T. B. Parkin, 1994. Defining and Assessing Soil Quality. In: Doran, J.W; Coleman,
+D.C., Bezdicek, D.F., and B.A.Stewart (eds) Defining Soil Quality for a Sustainable
+Environment. Soil Sci. Soc. Am. Sp. Pub. No. 35. Am. Soc. of Agron., Madison, Wisc. USA. pp.
+3-21.
+Kennedy, Ann C., and William F. Schillinger, 2006. Soil quality and water intake in traditional-till
+vs. No-till Critically paired farms in Washington’s Palouse Region. Soil Sci. Soc. Am. J., 70: 940-
+949.
+Linares Fleites, G., 1990. Análisis de Datos. Ministerio de Educación Superior. La Habana,
+Cuba. 320p.
+Linares Fleites, G., 2006. Análisis de Datos Multivariados. Editorial Benemérita Universidad
+Autónoma de Puebla. Facultad de Computación. México. 277p (ISBN 968 9182 15 3)
+MINITAB Release 15 (2005). Statistical Software. Minitab. Inc.
+Natural Resources Conservation Service, (NRSC), 2001. “Guidelines for Soil Quality
+Assessment in Conservation Planning.”. United States Department of Agriculture and Soil
+Quality Institute. USA.
+Peña, D., 2002. Análisis de Datos Multivariantes. Mc. Graw Hill/Interamericana de España, S.
+A U. Madrid, España. 539p (ISBN 84-481-3610-1)
+Roldán A., F. Caravaca, M. T. Hernández, C. García, C. Sánchez-Brito, M. Velásquez, M.
+Tiscareño, 2003. No-tillage, crop residue additions, and legume cover cropping effects on soil
+quality characteristics under maize in Patzcuaro watershed (Mexico), Soil & Tillage Research,
+72: 65–73
+Sims, J.T, Cunningham, S.D. y M. E. Sumner, 1997. Assessing Soil Quality for Environmental
+Purposes: Roles and Challenges for Soil Scientists, J. Environ. Qual., 26: 20-25.
+Soil Survey Staff, 2006. Keys of Soil Taxonomy. United States Department of Agriculture and
+Natural Resources Conservation Service. Tenth Edition. USA.
+Valera, M.A., Tenorio. M.G., Linares, G., Ruiz, J. y Tamariz, J.V., 2001. Aplicación de
+indicadores químicos de degradación para suelos ácidos de la Sierra Negra de Puebla.
+Memorias COLOQUIOS Cuba-México sobre manejo sostenible de los suelos. Benemérita
+Universidad Autónoma de Puebla. pp 57-64. (ISBN 968 8635 10 3).
+55
+Tabla 1
+Problema 1. Contenidos de materia orgánica y residuos
+en los suelos para evaluar la CS.
+(A1) MANOVA para un Factor con dos niveles (Calidad inherente y Calidad dinámica)
+Criterio Test estadístico Estadístico F gl num gl Valor p
+denom
+Wliks 0.05796 61.762 5 19 0.000
+Lawley-Hotelling 16.25315 61.762 5 19 0.000
+Pillai 0.94204 61.762 5 19 0.000
+(A2) ANOVA para cada una de las variables respuestas del problema.
+Variables Estadístico F gl (Factor, error) Valor p
+ln% Carbono Orgánico 2.97 (1, 23) 0.098
+ln% Nitrógeno + 0.1 5.39 (1, 23) 0.030
+ln% Volumen Raíces 1.67 (1, 23) 0.209
+lnProfundidad 0.01 (1, 23) 0.939
+ln% Residuos 151.70 (1, 23) 0.000
+(A3) Matriz de Correlaciones Parciales de la matriz de Sumas de Cuadrados y Productos
+Cruzados del Error. (Triángulo inferior de la matriz)
+ln% C. Org ln% N + 0.1 ln% VR lnProfundidad ln% Res.
+ln% C. Org. 1.0000
+ln% N + 0.1 0.0558 1.0000
+ln% VR 0.2122 0.1551 1.00000
+lnProfundidad 0.2032 -0.3334 0.4888 1.00000
+ln% Residuos -0.1252 0.2079 -0.1699 -0.72376 1.00000
+(A4) Análisis de valores y vectores propios para el factor
+Columna 1
+Valor propio 16.253
+Proporción 1.000
+Proporción Acumulada 1.000
+Vector propio
+ln% Carbono Orgánico 0.03152
+ln% Nitrógeno +0.1 0.11845
+ln% Volumen raíces -0.07969
+lnProfundidad 0.43185
+ln% Residuos 0.86931
+(B) Función Discriminante Lineal
+Calidad Dinámica Calidad Inherente
+Constante -49.89 -148.97
+ln%CO 7.44 8.61
+ln%N+0.1 1.87 6.27
+ln%VR -3.90 -6.86
+lnProf 22.02 38.05
+ln%R 37.35 69.61
+56
+Tabla 2
+Problema 2. La reacción pH del suelo
+(A1) MANOVA para un Factor con dos niveles (Calidad Inherente y Calidad Dinámica)
+Criterio Test Estadístico gl gl Valor p
+estadístico F num denom
+Wliks 0.86928 1.654 2 22 0.214
+Lawley-Hotelling 0.15038 1.654 2 22 0.214
+Pillai 0.13072 1.654 2 22 0.214
+(A2) ANOVA para cada una de las variables respuestas del problema.
+Respuestas Estadístico F gl (Factor, error) Valor p
+pH - H2O 0.11 (1, 23) 0.749
+pH - KCI 0.32 (1, 23) 0.577
+(A3) Matriz de Correlaciones Parciales de la matriz de Sumas de Cuadrados y Productos
+Cruzados del Error. (Triángulo inferior de la matriz)
+pH - H O pH - KCI
+2
+pH - H O 1
+2
+pH - KCI 0.88470 1
+(A4)Análisis de valores y vectores propios para el Factor
+Columna 1
+Valor propio 0.1504
+Proporción 1.0000
+Proporción Acumulada 1.0000
+Vector propio
+pH - H2O -0.5756
+pH - KCI 0.6309
+(B) Análisis Discriminante Lineal
+Calidad Dinámica Calidad Inherente
+Constante -27.105 -26.413
+pH-H20 9.991 7.936
+pH-KCI -0.053 2.199
+57
+Tabla 3
+Problema 3. La fertilidad natural del suelo.
+(A1) MANOVA para un Factor con dos niveles (Cal. Inherente y Calidad Dinámica)
+Criterio Test Estadístico gl gl Valor p
+estadístico F num denom
+Wliks 0.46394 1.926 9 15 0.022
+Lawley-Hotelling 1.15543 1.926 9 15 0.022
+Pillai 1.15543 1.926 9 15 0.022
+(A2) ANOVA para cada una de las variables respuestas del problema.
+Respuestas Estadístico F gl (Factor, error) Valor p
+ln% CO 2.18 (1, 23 ) 0.098
+pH-H2 0.11 (1, 23 ) 0.749
+CIC 0.10 (1, 23 ) 0.753
+ln%V 2.40 (1, 23 ) 0.554
+lnCa+.8 1.79 (1, 23 ) 0.201
+Mg 0.00 (1, 23 ) 0.961
+Na 2.91 (1, 23 ) 0.101
+lnK+0.01 0.55 (1, 23 ) 0.509
+ln%N+0.01 2.00 (1, 23 ) 0.030
+(A3) Matriz de Correlaciones Parciales de la matriz de Sumas de Cuadrados y Productos
+Cruzados del Error. (triángulo inferior de la matriz)
+ln%CO pH-H O CIC ln%V lnCa+ Mg Na lnK+.1 ln%N+.1
+2
+.8
+ln% CO 1.00
+pH-H O -0.188 1.00
+2
+CIC 0.349 0.437 1.00
+ln%V -0.116 0.131 -0.312 1.00
+lnCa+.8 0.123 0.321 0.296 0.870 1.00
+Mg -0.042 0.395 0.072 0.751 0.803 1.00
+Na -0.196 0.053 0.069 0.152 0.106 0.078 1.00
+lnK+0.01 -0.266 0.171 -0.278 0.738 0.611 0.668 0.314 1.00
+ln%N+0.01 -0.058 -0.087 -0.161 0.485 0.452 0.245 -0.222 -0.256 1.00
+58
+(A4) Análisis de valores y vectores propios para el Factor
+Columna 1
+Valor propio 1.927
+Proporción 1.000
+Proporción Acumulada 1.000
+Vector propio
+ln% CO -0.3562
+pH-H2 -0.1229
+CIC 0.0021
+ln%V -0.0481
+lnCa+.8 0.4150
+Mg 0.1141
+Na -0.1881
+lnK+0.01 -0.0770
+ln%N+0.01 - 0.3199
+(B) Función Discriminante Lineal.
+Calidad Dinámica Calidad
+Inherente
+Constant -386.90 -396.35
+ln%CO 42.99 47.54
+pH-H20 12.49 14.06
+CIC 8.99 8.96
+ln%V 235.54 236.16
+lnCa+0.8 196.18 -201.48
+Mg -39.15 -37.70
+Na -30.26 -27.85
+lnK+.1 4.22 5.20
+ln%N+0.1 -25.24 -21.15
+59

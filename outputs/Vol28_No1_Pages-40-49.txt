@@ -1,0 +1,589 @@
+Sociedad Cubana de Matemática y Computación
+La generalización de un orden de medias:
+desde la geometría hasta el cálculo
+Effective properties for multi-phase (cid:980)ibrous elastic composites.
+Otilio B. Mederos Anoceto (omederosa@gmail.com)
+Facultad de Ciencias Físico-Matemáticas, Universidad Autónoma de Coahuila, México
+Rita Roldán Inguanzo (rroldan@matcom.uh.cu) y José E. Martínez, Serra (josee@uclv.edu.cu)
+Facultad de Matemática Física y Computación, Universidad Central de Las Villas, Cuba
+Resumen case of the (cid:976)irst two contexts. The results obtained using
+the differential calculus techniques show the ease with
+En este trabajo se presenta un conjunto de problemas, obser-
+which it generalizes the results achieved with techniques
+vaciones y preguntas para facilitar a los profesores la prepa-
+of synthetic geometry and basic algebra.
+ración de actividades para un proyecto de aprendizaje sobre
+el establecimiento de un orden total para la extensión del
+concepto de media p-ésima en tres contextos: el geométrico
+1. Introducción
+para p ∈ {-2,-1,1,2}, el algebraico para p ∈ Z y el del cálculo di-
+ferencial para p ∈ R. Lo planteado para estos tres contextos
+El proceso de enseñanza requiere la creación de condicio-
+diferentes propicia el trabajo de articulación vertical desde
+nes para que se produzca la adquisición de conocimientos
+la enseñanza secundaria hasta la universitaria, así como el
+por parte de los estudiantes. Muchas de estas condiciones
+de integración de conocimientos en el caso de los dos prime-
+pueden lograrse con la realización de un proyecto de apren-
+ros contextos. Los resultados obtenidos utilizando técnicas
+dizaje basado en una organización signi(cid:976)icativa de los con-
+del cálculo diferencial muestran la facilidad con que se gene-
+tenidos, mediante el cual se propicien las condiciones para
+ralizan los resultados alcanzados con técnicas de la geome-
+que el estudiante amplíe, modi(cid:976)ique o rechace, las estructu-
+tría sintética y del álgebra básica.
+ras que posee a partir de la presentación del nuevo conoci-
+Abstract miento en forma signi(cid:976)icativa.
+En este artículo se presenta un conjunto de problemas,
+This paper presents a set of problems, comments and ques-
+observaciones y preguntas que pueden facilitar a los pro-
+tions to make it easier for the teachers, the preparation of
+fesores la preparación de actividades para una población
+activities, in order to perform a learning project on the es-
+determinada de alumnos, con el (cid:976)in de realizar un proyec-
+tablishment of a total order for the extension of the concept
+to de aprendizaje con dos características especí(cid:976)icas sobre
+of p-nth mean in three contexts: the geometric for p ∈ {-2,-
+el desarrollo del concepto de media p-ésima. Por una par-
+1,1,2}, the algebraic for p ∈ Z and the differential calculus for
+te, el desarrollo de este concepto se hace a partir del esta-
+p ∈ R. The raised for these three different contexts, it facili-
+blecimiento de una relación de orden para la colección de
+tates the work of vertical link from secondary education to
+medias p-ésimas para p ∈ {-2,-1,1,2} en el contexto geomé-
+university; as well as the integration of knowledge in the
+— 40 —
+Revista Ciencias Matemáticas
+trico, y las generalizaciones de esta relación de orden a las en el sentido de representar el mismo objeto. En Mederos y
+colecciones correspondientes a p ∈ Z\{0} en el contexto al- Roldan (2014) se da la de(cid:976)inición siguiente de concepto:
+gebraico, y ap ∈ R\{0} en el contexto del cálculo diferencial.
+Por otra parte, lo planteado para estos tres contextos dife- De(cid:976)inición 1.1
+rentes, propicia el trabajo de articulación vertical desde la Se de(cid:976)ine un concepto como un par (E, C), donde por E se
+enseñanza secundaria hasta la universitaria; así como el de indica la extensión del concepto y por C se denota su con-
+integración de conocimientos en el caso de los dos primeros tenido; es decir, un conjunto {Pi} (I es un conjunto) de
+i ∈ I
+contextos. modelos de propiedades esenciales del objeto, cuyo cumpli-
+Los contenidos se han organizado por medio del plan- miento es su(cid:976)iciente para determinar si un objeto dado per-
+teamiento y la resolución de problemas estructurados de tenece o no a la extensión del concepto.
+manera que cada uno de ellos vaya surgiendo como una En Mederos y Martínez (2005) se ejempli(cid:976)ican, haciendo
+necesidad del propio desarrollo conceptual, algunos de los uso de la resolución de problemas y ejercicios, los procesos
+cuales pueden ser planteados y resueltos por los propios es- de formación de los conceptos de media p-ésima y media
+tudiantes, para lo cual se ofrecen sugerencias y observacio- numérica que culminan con las de(cid:976)iniciones 1.2 y 1. 3, que a
+nes contenedoras de consejos didácticos oportunos para la continuación se exponen:
+realización de un proyecto de aprendizaje.
+En la asignatura “Resolución de problemas” del primer De(cid:976)inición 1.2
+año de la carrera de Licenciatura en Matemática de la Uni- Se llama media numérica de dos números reales positivos a y
+versidad Central de las Villas, Cuba y en asignaturas opta- b, a todo número M(a, b) que satisface las propiedades:
+tivas de Matemática Educativa en la Universidad Autónoma
+de Coahuila, México, se han aplicado proyectos de apren- (i) La media numérica de dos números reales positivos
+dizaje para el desarrollo del concepto de media p-ésima, toma un valor entre el menor y el mayor de los núme-
+tomando como base la organización de los contenidos del ros; i. e.,
+presente artículo han sido utilizados, con resultados satis- mín{a,b} ≤ M(a,b) ≤ máx{a,b}.
+factorios. (ii) La igualdad de la expresión anterior solo es válida para
+En la primera sección de este trabajo se presentan algu- a = b; i.e.,
+nos resultados y de(cid:976)iniciones necesarios para el desarrollo mín{a,b} = M(a,b) = máx{a,b} ⟺ a = b.
+de las secciones siguientes. (iii) La media numérica es invariante ante un cambio de es-
+cala; i.e.,
+M(ta,tb) = t.M(a,b) para todo t ∈ R.
+2. Resultados
+y de(cid:976)iniciones auxiliares
+En el artículo escrito por Nicolai (1977) se presenta esta de(cid:976)i-
+nición del concepto de media numérica. La extensión del con-
+Todo concepto posee siempre dos características lógicas: el cepto de media numérica de dos números reales se indica por
+contenido y la extensión. El contenido de un concepto es un M (a,b). El contenido de este concepto es {(i), (ii), (iii)}.
+n
+conjunto de propiedades esenciales de objetos del mismo,
+que es su(cid:976)iciente para distinguir sus nuevos objetos. La ex- De(cid:976)inición 1.3
+tensión de un concepto es la clase (conjunto) de de los obje- Se denomina media p-ésima de dos números reales positi-
+tos que dicho concepto abarca. Los objetos de la extensión se vos a y b para p ∈ R\{0} al número
+materializan mediante una de sus representaciones (grá(cid:976)ica, La extensión del concepto de media p-ésima se denota
+analítica, etc.) o una clase de representaciones equivalentes por M(a,b). En Mederos y Martínez (2005) se demuestra
+p
+— 41 —
+Sociedad Cubana de Matemática y Computación
+que el concepto de media numérica es una generalización En la sección 3 de este trabajo se establece un orden para
+del concepto de media p-ésima, ya que: la colección de medias numéricas
+{M (a,b)} ⋃{G(a,b)}
+• Para todo número real p se cumple que p p∈{-2,-1,1,2}
+utilizando herramientas geométricas. En la sección 4 se ge-
+mín{a,b} ≤ M (a,b) ≤ máx{a,b}
+p neraliza esta relación de orden a la colección
+mín{a,b} = M(a,b) = máx{a,b} ⇔ a = b;
+;
+M (ta,tb) = t .M (a,b) {M (a,b)} ⋃{G(a,b)}
+p p p p∈Z\{0}
+• Pertenecen a M (a,b) \ M (a,b) la media geométrica utilizando herramientas algebraicas. En la sección 5 se ge-
+n p
+G(a,b)= abn y los números M (a,b) de(cid:976)inidos, para neraliza esta relación de orden construida en la sección 5 a
+pp
+1 2
+todo los números reales p y p tales que p1p2 ≥ 0 y la colección
+1 2
+p + p ! 0, por la igualdad
+1 2 {M (a,b)} ⋃{G(a,b)}.
+p p∈R\{0}
+M (a,b)=a ap1bp2+ap2bp1kp1+ 1 p2 (1)
+p1p2 2 De esta forma se desarrolla el concepto de media numérica
+Entre las medias p-ésimas resaltan los casos particulares p mediante un resultado de tipo 4.
+∈ {-2,-1,1,2}, a saber: Continúa la sección 6 con la construcción de un isomor-
+a+b
+• La media aritmética M (a,b)= (cid:976)ismo creciente entre la extensión del concepto de media
+1 2
+a2+b2 p-ésima de dos números reales positivos a y b (a < b), y el
+• La media cuadrática M 2 (a,b)= 2
+intervalo (a,b), por lo que se logra el desarrollo del concepto
+a-1+b-1 -1 2ab
+• La media armónica M -1 (a,b)=a 2 k = a+b de media p-ésima por medio de un resultado del tipo 2. Cul-
+mina esta sección estableciendo un isomor(cid:976)ismo creciente
+2ab
+• La media armónica cuadrática M -2 (a,b)= a2+b2 entre el eje real y el segmento (a,b), que es una relación sig-
+ni(cid:976)icativa al asociar a cada punto del eje real (que corres-
+En este trabajo se considera que un concepto ya formado se
+ponde a un valor de p) un punto de (a,b) (que corresponde
+ha desarrollado cuando se ha logrado, entre otros, al menos
+a M (a,b). El intervalo (a, b) es una representación grá(cid:976)ica
+uno de los resultados siguientes: p
+de todas las medias p-ésimas y de la media geométrica, tal
+que dados dos puntos de este intervalo el de la izquierda
+1. La ampliación de la clase de elementos conocidos de su
+representa la menor de las dos medias, por lo tanto se desa-
+extensión.
+rrolla el concepto de media p-ésima mediante un resultado
+2. El establecimiento de isomor(cid:976)ismos entre su extensión y
+del tipo 5.
+la extensión de otros conceptos u otros conjuntos.
+3. La determinación de nuevas propiedades de los elemen-
+tos de su extensión. 3. Ordenamiento
+4. La generalización de una propiedad que cumplen los ele- de cinco medias numéricas
+mentos de una colección de objetos de la extensión a una
+colección mayor de objetos de su extensión.
+Según ideas de Iles-Wilson (1977), Wei (1977) y de los propios
+5. El establecimiento de relaciones signi(cid:976)icativas con otros
+autores, en esta sección se ordenan las medias geométrica,
+conceptos.
+aritmética, cuadrática, armónica y armónica cuadrática, me-
+diante construcciones y demostraciones geométricas senci-
+Mediante la colección {M (a,b)} de(cid:976)inida por la igualdad
+p 1 p 2 llas. A través de cuatro problemas se prueban sucesivamente
+(1) se desarrolla el concepto de media numérica con un re-
+las relaciones G ≤ M, M ≤ G, M ≤ M y M ≤ M , que indicamos
+sultado de tipo 1. 1 -1 1 2 -2 -1
+— 42 —
+Revista Ciencias Matemáticas
+respectivamente por R,R ,R y R; es decir, se prueba la cade- impulsos para que planteen y traten de probar o refutar, las
+1 2 3 4
+na de desigualdades M ≤ M ≤ G ≤ M ≤ M . conjeturas que consideren.
+-2 -1 1 2
+Problema 1 Problema 2
+Dados dos números positivos a y b (a < b), pruebe, uti- Dados dos números reales positivos a y b, (a < b), prue-
+lizando una construcción geométrica adecuada, que su be, utilizando una construcción geométrica adecuada, que
+media aritmética M(a,b) es mayor o igual que la media su media armónica M (a,b) es menor o igual que su media
+1 -1
+geométrica G(a,b). geométrica G(a,b).
+Sugerencia. Construya un semicírculo con diámetro de
+longitud a + b. Solución
+Solución. Sean el semicírculo de la (cid:976)igura 1 con diámetro A partir de la (cid:976)igura 1, construyendo CP perpendicular a
+AB = AC + CB, donde se tiene que |AC| = a, |CB| = b y CD es OD, se obtiene la (cid:976)igura 2.
+perpendicular a AB. Por el teorema de Thales el triángulo De la semejanza de los triángulos COD y PCD resulta que
+ABD es rectángulo en D y por el teorema de las alturas se |DP| . |DO| = |CD|2. Pero OD es un radio de la circunferencia
+tiene que |CD|2 = |AC| . |CB|. De esta última igualdad resulta y CD = ab, por tanto DP =
+a
+2
++
+ab
+b
+=M
+-1
+(a,b). Puesto que
+que CD = ab =G(a,b) . CD y DP son las longitudes de la hipotenusa y un cateto del
+Como OD es un radio del semicírculo, su longitud cumple triángulo PCD, respectivamente; resulta la desigualdad
+obviamente la cadena de igualdades OD = a+b =M (a,b) y M (a,b)= 2ab 1 ab =G(a,b)
+2 1 -1 a+b . Q.e.d.
+como, además, es la hipotenusa del triángulo OCD, del cual
+CD es un cateto, se cumple que |CD| < |OD|. Con ello se ha
+Observación 2
+probado que G(a,b)= ab 1 a+ 2 b =M 1 (a,b) . Q.e.d. Siguiendo la idea de la observación 1, puede lograrse que
+los alumnos participen en la demostración de las proposicio-
+D nes de la doble implicación: M (a,b) = G(a,b) si y solo si a = b.
+-1
+Problema 3
+Realice una construcción geométrica que le permita pro-
+bar que para dos números reales positivos a y b, (a < b), la
+media aritmética M es menor o igual que la media cuadráti-
+1
+ca M y que la igualdad solo se alcanza cuando a = b.
+2
+A C O B
+Sugerencia
+Fig. 1 Semicírculo con diámetro de longitud a = b. Construya un nuevo rectángulo en la (cid:976)igura 2.
+Observación 1 D
+Resulta importante mediar para que los estudiantes
+sientan la necesidad de averiguar qué sucede:
+• Si a = b (en la (cid:976)igura 1 se tendría |AC| = |CD| y se alcanza-
+ría la igualdad G(a,b) = M(a,b). P
+1
+• Si a < b (bastaría considerar en la (cid:976)igura 1, |AC| = b y |CB| = a).
+A C O B
+Una vez que sientan esa necesidad, resulta muy útil ofrecer
+Fig. 2 Construcción auxiliar para el problema 2.
+— 43 —
+Sociedad Cubana de Matemática y Computación
+Solución
+D
+La (cid:976)igura 3 se ha formado construyendo OE en la (cid:976)igura 2,
+perpendicular a OD y tal que |OE| = |OC|.
+D
+F
+E
+P
+A C O B
+P E
+Fig. 4 Construcción auxiliar para el problema 4.
+A C O B cateto del triángulo DFP respectivamente, queda probado
+que M (a,b) < M (a,b) si a < b. Q.e.d.
+Fig. 3 Construcción auxiliar para el problema 3. -2 -1
+Puesto que
+Observación 4
+a+b a-b
+OC = BC - OB =b- = ,
+2 2 Siguiendo ideas similares a las utilizadas en las tres obser-
+se tiene que OE = a- 2 b . Por el teorema de Pitágoras, resulta vaciones anteriores se prueba que M (a,b) = M (a,b) si y solo
+-2 -1
+que se cumple la igualdad |ED|2 = |OD|2 + |OE|2. Sustituyendo si a = b.
+|OD| y |OE| por sus valores respectivos y despejando |ED| se
+a2+b2 Conclusión 1
+obtiene ED = =M (a,b) . Por tanto, como se tie-
+2 2
+Se ha probado que se cumple la cadena de desigualdades
+a2+b2
+ne que OD = 2 =M 1 (a,b) y |OD| es la longitud de un siguiente:
+cateto del triángulo ODE, del cual |ED| es la hipotenusa, que- M (a,b) M (a,b) G(a,b) M(a,b) M(a,b)
+-2 -1 1 1
+da probado que si a < b entonces M(a,b) < M(a,b). Q.e.d. Media ≤ Media ≤ Media ≤ Media ≤ Media
+1 2 Armónica Armónica Geométrica Aritmética Cuadrática
+Cuadrática
+Observación 3 Observaciones:
+De manera análoga a la observación 2, debe hacerse notar a 1. Este resultado puede utilizarse para instar a los estu-
+los estudiantes que M(a,b) = M (a,b) si y solo si a = b. diantes a la demostración de esta cadena, utilizando
+1 2
+solo herramientas algebraicas.
+Problema 4 2. La escritura de esta cadena en la forma
+Pruebe, utilizando una construcción geométrica, que la media M ≤ M ≤ G ≤ M ≤ M para p y p tales que p < p y
+-p -p p p 1 2 1 2
+2 1 1 2
+armónica M (a,b) de dos números reales positivos a y b, (a < p∈{1,2},i = 1,2 y la observación por parte del profesor
+-1 i
+b), es mayor o igual que la media armónica cuadrática M (a,b). sobre que el establecimiento de esta cadena con res-
+-2
+pecto a la colección de todas las medias p-ésimas ha
+Solución sido un resultado muy limitado; puede contribuir a la
+La (cid:976)igura 4 se ha formado construyendo en la (cid:976)igura 3 el participación activa de los alumnos en el planteamien-
+segmento PF perpendicular a ED con F sobre ED. to de diferentes conjeturas sobre su generalización a
+De la semejanza de los triángulos DOE y DFP se obtiene dominios mayores para p, por ejemplo, para p ∈ N, pi ∈
+i i
+DF = DP $OD . Sustituyendo los elementos conocidos Q+ o p ∈ Q.
+DE i
+del miembro derecho por sus valores respectivos se prueba 3. Siguiendo las mismas ideas geométricas, también pudo
+que DF = 2ab es la media armónica cuadrática de a y b. haberse probado la cadena M ≤ M ≤ G ≤ M ≤ M en el
+a2+b2 -2 -2 1 2
+Como |DP| = M (a,b) y |DF| = M (a,b) son la hipotenusa y un orden R → R →R →R , pues R y R pueden probarse,
+-1 -2 1 3 2 4 2 3
+— 44 —
+Revista Ciencias Matemáticas
+indistintamente, en cualquier orden (ya que una no ne- Problema 6
+cesita de elementos obtenidos en la otra), a diferencia Pruebe que M (a,b) ≤ G(a,b) ≤ M (a,b) para todo p ente-
+-p p
+de cualquier otro intento de intercambiar R con R(i,j = ro positivo; y que la igualdad se cumple solamente para los
+i j
+1 : 4, i ! j); en las que R y R necesitan elementos proba- elementos (a,b) de R2 tales que a = b.
+2 3
+dos en R y (cid:976)inalmente, R necesita elementos de R . Si se procede como se ha indicado en la solución del pro-
+1 4 3
+blema 5; pero tomando (cid:2009) = a1/p y (cid:2010) = a1/p se prueba que
+G(a,b) ≤ M (a,b) y si se toma (cid:2009) = a-1/p y (cid:2010) = a-1/p se tiene que
+p
+4. Orden total para la colección
+M (a,b) ≤ G(a,b).
+-p
+de las medias p-ésimas con p en-
+Para establecer un orden total para las medias p-ésimas
+tero y la media geométrica
+cuando p es un número natural, resulta muy útil probar an-
+tes, las desigualdades que se presentan en los problemas 7 y 8.
+Como parte del desarrollo del concepto de media numérica Las demostraciones de estas desigualdades, utilizando
+de dos números reales positivos, en esta sección se genera- solo herramientas del álgebra elemental resultan algo ex-
+liza la relación de orden construida en la sección 3 a la colec- tensas e ingeniosas. Consecuentemente, por un problema
+ción {M (a, b)} ⋃{G(a,b)}. Con este objetivo se presenta de espacio no se desarrollarán en este artículo; no obstante,
+p p∈Z\{0}
+un conjunto de problemas y observaciones que facilitan la se ofrecen sugerencias en cada caso.
+generalización utilizando solo herramientas del álgebra; es
+decir, se prueba que M ≤ M ≤ G ≤ M ≤ M para p y p tales Problema 7
+-p -p p p 1 2
+2 1 1 2
+que p< p y p, p ∈ N, i = 1,2. Pruebe que para p y q naturales con p > q y (cid:2009) real diferen-
+1 2 i i
+te de 1 se cumple la desigualdad
+Problema 5 ap-1 aq-1
+2 (2)
+p q
+Pruebe con herramientas del álgebra la cadena de des-
+igualdades M (a,b) ≤ G(a,b) ≤ M(a,b) y pruebe que las igual- Demostración
+-1 1
+dades solo se cumple si a = b. La desigualdad (2) es equivalente a la desigualdad
+Al analizar las diferentes vías de solución que hayan utili- q((cid:2009)p - 1) - p((cid:2009)q - 1) > 0 (3)
+zado los estudiantes, el profesor puede guiarlos para que de-
+Se tiene que,
+terminen un método de demostración que sirva para probar
+Δ = q((cid:2009)p - 1) - p((cid:2009)q - 1)
+ambas desigualdades y que además sea generalizable. Por
+= ((cid:2009) - 1){q((cid:2009)p - 1 + (cid:2009)p - 2 + ... (cid:2009) + 1) - p((cid:2009)q - 1 + (cid:2009)q - 2 + ... (cid:2009) + 1)}
+ejemplo, puede conducir a los estudiantes para que prueben
+es decir,
+las desigualdades G(a,b) ≤ M(a,b) y M (a,b) ≤ G(a,b) a partir
+1 -1 Δ = ((cid:2009) - 1){q((cid:2009)p - 1 + (cid:2009)p - 2 + ... (cid:2009) + 1) -
+de las desigualdades (b1/2 - a1/2)2 ≥ 0 y (b-1/2 - a-1/2)2 ≥ 0 res- (4)
+- (p - q)((cid:2009)q - 1 + (cid:2009)q - 2 + ... (cid:2009) + 1)}
+pectivamente. De aquí se puede orientar la demostración
+de ambas desigualdades a partir de la desigualdad general La demostración continúa diferenciando los casos (cid:2009) > 1 y
+((cid:2009) - (cid:2010))2 ≥ 0 con (cid:2009) = a1/2 y (cid:2010) = a1/2 para probar que G(a,b) ≤ (cid:2009) < 1, en los problemas 7.1 y 7.2.
+M(a,b) y con (cid:2009) = a-1/2 y (cid:2010) = a-1/2 para probar que M (a,b) ≤
+1 -1
+G(a,b). El análisis de cuando se tienen las igualdades, resulta Problema 7.1
+trivial con esta forma de probar la cadena de desigualdades. Pruebe que si (cid:2009) > 1 se cumple que (cid:1986) > 0
+Existen muchas formas, que dejamos al estilo y creativi-
+dad de los profesores, de guiar a los estudiantes para que Sugerencias
+generalicen el procedimiento anterior a un p real cualquie- Tenga presente que se cumple la desigualdad
+ra, y planteen y den solución al problema 6. (cid:2009)p - 1 + (cid:2009)p - 2 + ... (cid:2009)q > (p - q) (cid:2009)q (5)
+— 45 —
+Sociedad Cubana de Matemática y Computación
+Utilice esta desigualdad y la cadena de igualdades (4) Proposición 3.1:
+para probar que (cid:1986) > 0. Si n y n son números naturales tales que n < n cumplen
+1 2 1 2
+las desigualdades M (a,b) ≤ M (a,b) y M (a,b) ≤ M (a,b)
+n1 n2 n1 n2
+Δ = ((cid:2009) - 1){q(p - q)(cid:2009)q - (p - q)q(cid:2009)q - 1} = q(cid:2009)q - 1(p - q)((cid:2009) - 1)2 > 0 para todo par de números reales positivos (a,b) y la igual-
+dad se tiene si y solo si a =b.
+Problema 7.2
+Pruebe que si (cid:2009) < 1 se cumplen que (cid:1986) > 0. Demostración
+Haciendo (cid:2009) = an1, (cid:2010) = bn1 y (cid:2019) = n /n en la desigualdad del pro-
+2 1
+Sugerencias blema 9 resulta
+Utilice las desigualdades a an1+bn1k n n1 2 # an2+bn2
+2 2
+(cid:2009)p - 1 + (cid:2009)p - 2 + ... + (cid:2009)q < (p - q) (cid:2009)q, (6)
+Esta desigualdad es equivalente a
+(cid:2009)q - 1 + (cid:2009)q - 2 + ... + (cid:2009) + 1 > q(cid:2009)q - 1, (7) a an1+bn1kn 1 1 #a an2+bn2kn 1 2
+2 2
+para probar que
+Queda así probado que M (a,b) ≤ M (a,b), para n , n ∈ Z+
+Δ < q (p-q)(cid:2009)q - 1 ((cid:2009) - 1). (8) n1 n2 1 2
+con n < n . La otra parte de la demostración se realiza de
+1 2
+De (8) y (4) se obtiene la cadena de desigualdades
+manera análoga para (cid:2009) = a-n1, (cid:2010) = b-n1 y considerando (cid:2019) =
+(cid:1986) > q(p — q) (cid:2009)q-1((cid:2009) - 1)2 > 0.
+(-n )/(-n) = n /n teniendo en cuenta que se invierte la rela-
+2 1 2 1
+El planteamiento del problema 7 y el proceso de solución
+ción de orden al elevar ambos miembros positivos a un ex-
+han sido tomados del problema 49 del capítulo 8 (desigual-
+ponente negativo. Q.e.d.
+dades) página 100 y soluciones del capítulo 8, página 433
+del libro escrito por Krechmar (1974).
+Observaciones:
+8. Como se cumple la relación G= M -n .M n para todo
+Problema 8
+n ∈ N,se puede a(cid:976)irmar que G ocupa el punto central
+Pruebe que se cumple la desigualdad de Bernoulli (1 + x)(cid:2019)
+de la subsucesión geométrica {M ,G,M} con razón
+-n n
+≥ 1 + (cid:2019)x para todo x real mayor que -1 y para todo número q= M n /M -n .
+fraccionario (cid:2019) = p/q mayor que 1, y que la igualdad se cum-
+9. La proposición 3.1 pudo enunciarse de la forma si-
+ple si y solo si x = 0.
+guiente: Para todo par de elementos diferentes a y b de
+(0,+∞) la función F de(cid:976)inida sobre Z\{0} por la rela-
+ab
+Sugerencias
+ción F (n) = M (a,b) es creciente. Cuando a = b, la fun-
+Sustituya (cid:2009) por
+(1+x)1
+q para x > -1 en la desigualdad (4).
+ab n
+ción F es constante.
+aa
+10. Si se considera G = M y F (0) = M , entonces F es cre-
+0 ab 0 ab
+Problema 9
+ciente sobre Z.
+Pruebe que para todo par de números reales positi-
+vos (cid:2009) y (cid:2010) y todo número fraccionario (cid:2019) ≥ 1 se cumple que
+Conclusión 2
+^a+bhm# am+bm y la igualdad se tiene si y solo si (cid:2009) = (cid:2010).
+2 2 A partir de los resultados obtenidos en el problema 6 y la pro-
+posición 3.1; así como de la propia de(cid:976)inición del concepto de
+Sugerencias
+media numérica obtenida en la primera parte de este artícu-
+Demuestre la desigualdad ^ a 2 + a b hm+_ a 2 + b b im$2 , transfor- lo, ha quedado probada la cadena de desigualdades a ≤ ... ≤
+mando sus sumandos de manera que se pueda aplicar la ≤ M ≤ ... ≤ M ≤ M ≤ M ≤ M ≤ M ≤ ... ≤ M ≤ M ≤ ... ≤ b,
+desigualdad de Bernoulli a cada uno de ellos, y deduzca la
+-(n1 + 1) -2 -1 0 1 2 n1 n1 + 1
+si 0 < a < b, donde n es cualquier número natural mayor
+1
+desigualdad que se desea demostrar.
+que 2.
+— 46 —
+Revista Ciencias Matemáticas
+5. Orden total de la colección Proposición 4.1
+de las medias p-ésimas cuando La función F es creciente sobre R\{0}.
+ab
+p es un número real cualquiera
+Demostración
+Considerando F (0) = M utilizando los problemas 10 y 11 y
+Utilizando herramientas del cálculo diferencial continua- ab 0
+siguiendo la idea de la demostración de la proposición 3.1,
+mos en esta sección el desarrollo del concepto de media
+se prueba que F es creciente sobre R. Q.e.d.
+numérica, generalizando los resultados de la sección 4 a do- ab
+La potencialidad de las herramientas del cálculo diferencial
+minios más amplios.
+permite probar un conjunto de propiedades de las medias
+numéricas, que resultaría muy di(cid:976)ícil plantearse y respon-
+Problema 10
+der con herramientas del álgebra y con un pensamiento
+(Generalización del problema 8). Pruebe que se cumple la
+algebraico. Tres de estas propiedades se enuncian y de-
+desigualdad de Bernoulli (1 + x)(cid:2019) ≥ 1 + (cid:2019)x para todo x real
+muestran en las proposiciones 4.2- 4.5.
+mayor que -1 y para todo número real (cid:2019) mayor que 1, y que
+la igualdad se cumple si y solo si x = 0.
+Proposición 4.2
+La función F es continua sobre R\{0}.
+Demostración ab
+Como la función g de(cid:976)inida por g(x) = (1 + x)(cid:2019) es in(cid:976)inita-
+Demostración
+mente derivable en (-1,+∞), por el teorema de Taylor
+La continuidad de F sobre R\{0} es una consecuencia di-
+existe un c entre 0 y x tal que para la función g se tiene ab
+recta de la continuidad de las funciones potenciales y de la
+g(x)=g(0)+ g'(0)x+ g''(C)x2 para todo x de (-1,+∞). Luego,
+1! 2! función de(cid:976)inida por m " 1 sobre R\{0}; así como de los
+(1+x)m=1+mx+ 1(1+c)mx2 , y de aquí se tiene, obvia- m
+2
+teoremas que garantizan la continuidad de la composición
+mente, que (1 + x)(cid:2019) > 1 + (cid:2019)x, para todo x > -1 y x ! 0. Para
+y la suma de funciones continuas. Q.e.d.
+x = 0 se cumple, trivialmente, la igualdad. Q.e.d.
+Proposición 4.3
+Observación 11
+La función F es derivable sobre R\{0}.
+La utilización de herramientas del cálculo diferencial per- ab
+mitió obtener esta generalización con una demostración
+Demostración
+mucho más sencilla que la realizada con herramientas del
+Siga la idea esbozada en la demostración de la proposición 4.2,
+Álgebra, para dar solución al problema 8.
+sustituyendo la palabra continuidad por derivabilidad. Q.e.d.
+Problema 11
+Proposición 4.4
+(Generalización del problema 9). Pruebe que para todo par
+El límite de F cuando (cid:2019) tiende a 0 es G(a,b).
+de números reales positivos (cid:2009) y (cid:2010) y todo número real (cid:2019) ≥ 1 ab
+se cumple que ^a+bh# am+bm y la igualdad se tiene si y solo
+2 2
+Demostración
+si (cid:2009) = (cid:2010).
+Considerando lnF (m)= 1 lnam+bm y aplicando la regla de
+ab m 2
+L´Hospital se tiene que
+Sugerencia
+d (lnam+bm) 2^amlna+bmlnbh
+Proceda similarmente a como se resolvió el problema 9, uti- limlnF (m)=lim dm 2 =lim 2 =
+m"0 ab m"0
+d
+d
+m
+m am+bm
+lizando la desigualdad establecida en el problema 10.
+lna+lnb
+= =ln ab
+2 .
+— 47 —
+Sociedad Cubana de Matemática y Computación
+Pero el logaritmo es una función continua e inyectiva sobre Las técnicas del cálculo relativas a su objeto de estudio,
+R\{0}, por tanto resulta que limF (m)=G(a,b). Q.e.d. las funciones reales, permiten obtener resultados globales,
+ab
+m"0
+como los relativos a la continuidad y el crecimiento globales
+Corolario 4.1 de las funciones utilizadas y sus imágenes.
+La función F de(cid:976)inida sobre R, considerando que F (0) = Los resultados obtenidos hasta ahora sugieren, entre
+ab ab
+M (a,b) = G(a,b), es una función continua sobre R. otras las preguntas siguientes:
+0
+Proposición 4.5 • ¿Existe una construcción geométrica sencilla que permi-
+Si 0 < a < b se cumple que limF ab (m)=a y limF ab (m)=b. ta darle signi(cid:976)icado geométrico a cada una de las medias
+m"-3 m"+3
+M para p∈R?
+p
+Demostración • ¿Es posible probar geométricamente la relación
+Obviamente se cumple que G= M p .M -p para cada p de R\{0}?
+limlnF (m)= lim amlna+bmlnb = • ¿Se pueden generalizar los resultados obtenidos en el tra-
+m"-3 ab m"-3 am+bm
+bajo sobre las medias numéricas de dos números reales po-
+lna+^bhmlnb .
+= lim a =lna sitivos a medias numéricas de n números reales positivos?
+m"-3 1+^ a bhm
+• ¿Cuáles son las aplicaciones de estos resultados?
+Análogamente se tiene
+amlna+bmlnb ^ahmlna+lnb
+m l " im +3 lnF ab (m)= m l " im +3 am+bm = m l " im +3 b ^a b hm+1 =lnb Realmente estas preguntas parecen muy audaces; sin em-
+bargo, con técnicas similares a las aquí usadas, se respon-
+De la continuidad de la función logaritmo resultan las igual-
+den a(cid:976)irmativamente.
+dades ln`limF ^mhj=lna y ln`limF ^mhj=lnb .
+ab ab
+m"-3 m"-3
+De la inyectividad de la función logaritmo se deduce que
+m l " im -3 F ab ^mh=lna y m l " im -3 F ab ^mh=lnb . Bibliogra(cid:976)ía
+Conclusión 3
+DAVIDOV, V. (1981). Tipos de generalización en la enseñanza. La
+La función F transforma de manera creciente y continua el
+ab Habana. Editorial Pueblo y Educación.
+eje real en el intervalo (a,b). Especí(cid:976)icamente, transforma el
+DE GUZMÁN, M. (sin fecha). Tendencias innovadoras en educación
+0 en G(a,b) y contrae los intervalos (-∞,0) y (0,∞) en los in-
+matemática. Organización de estados iberoamericanos para
+tervalos (a,G(a,b)) y (G(a,b),b) respectivamente.
+educación, la ciencia y la cultura. Editorial Popular. ISBN: 84-
+7884-O92-3. Depósito Legal: M-9207-1993.
+6. Conclusiones ILES, KIM Y WILSON, L. J. (1977). “A Further Neglected Mean”. Ma-
+thematics Teacher 70, (January), 27-28.
+KRECHMAR, V. A. (1974). “A Problem Book in Algebra”. English
+La belleza, generalidad y facilidad con que se estableció el
+translation. Moscú. Mir Publishers.
+orden para la colección de medias {M (a, b)} ⋃{G(a,b)}
+p p∈R\{0} MEDEROS, O. B. y MARTÍNEZ, J. E. (2005). La resolución de pro-
+justi(cid:976)ica la utilización de las herramientas del cálculo dife-
+blemas y la formación y desarrollo de conceptos. El concepto
+rencial, teniendo presente que no se requieren ideas nue-
+de media numérica. Canarias, Números, Vol.62, Pp.53-64.
+vas con respecto a los resultados que ya se tenían para p
+MEDEROS, O.B., ROLDÁN, R.A. y otros (2014). “Algunas formas
+entero.
+de generalización de conceptos en la matemática disciplinar
+La aplicación de herramientas de la geometría y el álgebra
+y escolar” México. Plaza y Valdés Editores. ISBN: 978-607-506-
+no tan potentes como las del cálculo, no solo limita sus gene-
+179-5
+ralizaciones, sino también complica las demostraciones.
+— 48 —
+Revista Ciencias Matemáticas
+NICOLAI, M.B. (1977). Commenting on Maor’s “A Mathematician
+repertoire of means”. In Readers Reactions. Mathematics Tea-
+cher 70. September 486.
+VYGOTSKI L.S. (1998). Pensamiento y Lenguaje. La Habana. Edi-
+torial Pueblo y Educación. Segunda Edición.
+WEI, JUI(cid:487)HUNG. (1977). Commenting on Iles and Wilson’s “A fur-
+ther neglected Mean”. In Readers Reactions. Mathematics Tea-
+cher 70. (September).
+— 49 —

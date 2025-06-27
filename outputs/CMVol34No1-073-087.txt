@@ -1,0 +1,1271 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+Recibido06-2020,Aceptado07-2020
+Modelos SIR modificados para la evolución del
+COVID-19
+Modified SIR models for the evolution of COVID-19
+Nana Cabo Bizet1, Alejandro Cabo Montes de Oca 2
+Resumen SeestudiaelmodeloSIR,contasadecontagiovariable,aplicadoalaevolucióndelCOVID-19en
+Cuba.Seformulaunmodelosemi-empíricodondealcanzarβ∗≈0debidoalaislamiento,selogradespuésdel
+tiempo de duración media de la enfermedad τ =1/γ, β∗(t) debe decaer en forma brusca el día de inicio del
+confinamientoyreducirsehastaanularsealfinaldelintervaloτ.Elanálisislogradescribirapropiadamentela
+curvadeinfeccióndeAlemania.Elmodeloconundecaimientoexponencialparaβ∗ seaplicaalaepidemiaen
+Cuba, estimando el máximo de infectados a finales de abril 2020 y del orden de los 1000 casos. Con datos
+dejunioseestimalasegundacaídadelosinfectados.Seconsideralarazónkentreelnúmerodeinfectados
+observadosyelnúmerototaldeinfectadosmenorquelaunidad,elreducidovalordekdisminuyelosvalores
+máximoscuandoβ∗−γ >0.Enlaregiónlinealconkconstantelaevolucióndelaspoblacionesdetectadases
+independientedek.Seestudiatambiénelvalordeβ∗(t)apedazos,porintervalosdetiempo,ajustandoalos
+datosdeCuba,AlemaniayCoreadelSur.Enesteesquemasecomparalaextrapolacióndelaevoluciónde
+Cubacontasadecontagioaldía16.04.20conlaobtenidasuponiendoafinalesdeabrilunacuarentenaestricta.
+Estemodelodescribecorrectamentelaevolucióndelaepidemia,estimandoparaCubaelprimerpicodeforma
+compatiblealmétodoanterior.ElmáximodeseadodelacurvadeinfectadosdelSIRnoeselmáximoestándard
+conβ∗ constante,elcualparagrandespoblacionesdaríamillonesdeinfectados,sinounmáximologradocon
+medidasdecontencióntalqueβ∗(t)disminuyaeneltiempo,alcanzandoR˜ (t)=β∗(t)/γ <1.
+0
+Abstract TheSIRmodel,withavariablecontagionrateisappliedtotheevolutionofCOVID-19inCuba. A
+semi-empiricalmodelisformulated,wherereachingβ∗≈0duetoisolationisachievedafterthemeanduration
+ofthediseaseτ=1/γ,β∗(t)shouldhaveanabruptdecreaseontheinitialdayofconfinementanddecreaseuntil
+cancelingattheendoftheintervalτ. TheanalysisappropriatelydescribestheinfectioncurveforGermany. The
+modelwithanexponentialdecayforβ∗,isappliedtotheoutbreakinCuba,estimatingtheinfectedmaximumat
+theendofAprilandoftheorderof1000cases. WithdatafromJunethesecondpeakoftheinfectedisalso
+estimated. Weconsidertheratiobetweentheobservedandrealinfectedcases(k)lessthanunity,thelowvalue
+ofkdecreasesthemaximumwhenβ∗−γ >0. Theobservedevolutionisindependentofkinthelinearregion.
+Thevalueofβ∗ isalsostudiedbytimeintervals,adjustingtothedataofCuba,GermanyandSouthKorea. We
+comparetheextrapolationoftheevolutionofCubawiththecontagionrateuntil16.04.20withthatobtainedbya
+strictquarantineattheendofApril. Thismodelcorrectlydescribestheoutbreakevolution,estimatingthefirst
+peakforCubainacompatiblewaywithpreviousmethod. ThedesiredmaximumoftheSIRinfectedcurveisnot
+thestandardmaximumwithconstantβ∗,forwhichlargepopulationwillgivemillionsofinfected,butamaximum
+definedbycontentionmeasureswhenβ∗(t)decreasesintime,reachingR˜∗(t)=β∗(t)/γ <1.
+0
+PalabrasClave
+suceptibles-infectados-recuperados,tasadecontagiovariable,tasaderecuperación
+Keywords
+SIRmodel,variablecontagionrate,recuperationrate
+1DepartamentodeFísica,DCI,CampusLeón,UniversidaddeGuanjuato, CP.37150,León,Guanajuato,México,nana@fisica.ugto.mx.
+2DepartamentodeFísicaTeórica,InstitutodeCibernética,MatemáticayFísica,CalleE,No.309,Vedado,LaHabana,Cuba,cabo@icimaf.cu.
+1. Introducción Elpresentetrabajoestádedicadoaexploraraspectosdeesta
+epidemia,losresultadosesencialesestáncontenidosenelpre-
+La pandemia asociada al COVID-19 está siendo inves-
+print[22].Consideramosunmodelodeterministaempleadoen
+tigada con gran intensidad hoy día y la descripción de sus
+elestudiodeepidemias,elSIR(siglasdeSusceptibles,Infec-
+singularespropiedadesampliamentedifundidas[1,2,3,4,5,
+tadosyRecuperados).Losparámetrosquecontrolandichos
+6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22].
+74 ModelosSIRmodificadosparalaevolucióndelCOVID-19
+modelossonβ yγ.Elprimerodefineelnúmerodepersonas mucho más pequeño que la población N. En esta situación
+susceptiblesporunidaddetiempoqueenfermanporunidad elnúmerodesusceptiblesenesaetapasepuedeaproximar
+depersonasusceptibleyporunidaddepersonainfectada.Este porlapoblacióndelpaísN.Sepresentaentonceslasconoci-
+tambiénseutilizadespuésdemultiplicadoporelnúmerodela dassolucionesexplícitasdelproblemaparaβ yγ constantes.
+población,enlasunidadesβ∗=β×N.Elsegundodetermina Estassonexponencialescuyotiempocaracterísticodecreci-
+elnúmerodepersonasporunidaddetiempoqueserecuperan mientoodecrecimientoesdeterminadoporelúniconúmero
+entre el número de personas infectadas. Estimamos que la β∗−γ.Siestacantidadespositivalasolucióndelproblema
+aplicación del SIR en una efectiva predicción de los datos creceindefectiblemente,independientedelosvaloresdeIy
+necesitalaclarificaciónunaspectocentral:elcomoestimarla Renelmomentodado.Estaesunapropiedadimportantede
+dependenciatemporaldelosparámetrosβ yγ.Enparticular la dinámica considerada. Para que I decrezca en esta zona
+aquínosenfocamosenelestudiodelaevolucióndelprimero debajosvalores(I(cid:28)N)esestrictamentenecesarioquelos
+deestos. valoreslocalesdeβ−γ resultennegativosoqueelparámetro
+En la sección 2 se exponen las ecuaciones del modelo
+(R˜
+0
+<1).Portanto,entodoslospaísesenquesehalogrado
+SIRysepresentansusconstantesparaelcasodeCuba.Las larecuperaciónloquesehaalcanzadosonvaloresnegativos
+solucionesobtenidasseajustanalosdatosdenúmerodein- deestacantidad.Sinembargo,aunqueelpaísimpongaais-
+fectadosactivosquesereportandiariamente.Destacamoslas lamientototalapartirdeciertodía,lascurvasdeinfectados
+condicionesenqueseobtieneunmáximovalordelnúmerode enningúncasocomienzanabajar.Parecelógicosuponerque
+infectadosencircunstanciasrealistas.Dichascaracterísticas esasmedidasdebenforzarlavalidezdelacondiciónβ =0,o
+son conocidas, pero creemos útil el insistir sobre ellas, se sea,ausenciadetransmisibilidad.Lascausasdeestaaparente
+destacaquesiemprequelasecuacionesindicaninfección,se contradicciónseanalizanenlasiguientesección.
+cumpleβ∗>γ.Enesasituaciónelmáximodelnúmerode
+En esta sección 5 se presenta una razón por la cual el
+infectadossiemprealcanzaunvalordelordendelapoblación valor de β =0 no es inmediatamente determinado por las
+N,loqueparaCubaresultaríaenmillones.Resaltamosque medidas de aislamiento. La idea se basa en que el tiempo
+esosmáximos,nosonlosquesereportanenlospaísesque enquelosenfermossufrenelpadecimientoseestimaenun
+rebasaronlaepidemia(porej.China,CoreadelSuryAlema- intervaloτ de15a20días.Enestecasoelenclaustramiento
+nia),loscualespresentanmáximosdelnúmerodeinfectados delasfamilias,indicaqueengrancantidaddeellaspueden
+muchomenoresquelapoblación. existirenfermosasintomáticos.Portantoelnúmeropositivo
+Enlasección3seconsideraelmismomodeloSIRpero deinfectadosporunidaddetiemponoseanulaalmomento,
+en el cual se introduce una ya reconocida propiedad de la sinoquedebevariardiscontinuamentedevalor(elentorno
+presenteepidemia:larazónkentreelnúmerodeinfectados de cada infestado cambia abruptamente). Por tanto a partir
+observados(porlossistemasdesalud)yeltotaldeinfectados, delinstanteenquecomienzaelaislamientoyduranteveinte
+esunnúmeroqueseestimaenelintervalode0,1a0,2[5,12]. días, el número β no debe ser nulo sino debe decrecer de
+Enestasecciónsemuestranlascurvassolucióndespuésde ciertaformahastaanularsealos20díasaproximadamente.
+ajustarlosdatosparalosinfectadosrealesconlosdatosob- Ladependenciatemporaleneseintervalosinembargonoes
+servadosdespuésdedivididospork.Losenormesnúmeros conocida.Soloesdeesperarqueellatengaunsaltobruscoel
+máximosdeenfermosobservadossereducenamedidaquek díadelaislamientodebidoaquelascondicionesdecontacto
+disminuye.Esteefectoesunaconsecuenciadirectadelano delosinfectadosconsuentornocambiarondrásticamente.En
+linealidaddelsistemadeecuaciones.Sielsistemafueralinear lasecciónseanalizaademáslacurvadeinfeccióndeChinala
+elmáximonodeberíacambiar,puesalvariarlascondiciones quepermiteestimarelvalordeγ enalrededorde1/20.Este
+iniciales en ser divididas por k, la solución para el número modelocualitativodelaevolucióndeβ bajocondicionesde
+totalseríaproporcionalalaanterior.Luego,despuésdemul- aislamientoseaplicaadescribirlascurvasdeinfectadosde
+tiplicar por k el máximo número de infestados totales para AlemaniayCubaenlasubsección5.1.
+obtener el observado, se volvería a obtener el mismo valor. Lasubsección5.1.1primeramentefijalosparámetrosβ y
+Sinembargo,comoelsistemadeecuacionesesnolineal(el γ enelcomienzodecrecimientoexponencialdelainfección
+númerodeinfectadosnopuedesobrepasarlapoblacióndel enAlemania.Posteriormenteseutilizalainformacióndeque
+país)lanolinealidadresultacapazdereducirelmáximo.Sin enesepaíslasmedidasdeaislamientocomenzaroncercadel
+embargonuestrointeréssonlascondicionesrealistasdonde 20 de marzo. Utilizando que la curva de infección muestra
+elmáximoestámuylejosdeacercarsealapoblacióndelpaís, uncambioenpendienteesedía,seestimaentonceselnuevo
+por lo tanto estamos en la región lineal. Esto significa que valordeβ alquecambiaestamagnitudbruscamentealimpo-
+nuestrapredicciónparainfectadosyrecuperadosobservados nerelaislamiento.Posteriormenteseasumequeβ disminuye
+sikesconstanteesindependientedesuvalor.Enlasección
+linealmenteduranteuntiempodevidadelaenfermedadde
+IIIdiscutimoslascondicionesdeaparicióndeesosmáximos cerca de 20 días. Al final de ese período de confinamiento,
+reducidos. elvalordisminuyedrásticamenteacero.Ajustandoladepen-
+Lasección4comienzadiscutiendolassolucionesdelsis- dencia temporal de β para tiempos posteriores al instante
+tema SIR en los casos de que el número de infectados I es de aislamiento, hasta su disminución brusca a cero 20 días
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+ModelosSIRmodificadosparalaevolucióndelCOVID-19 75
+después,selograentoncesdescribirlacurvadeinfecciónde Lasunidadesdeestaecuacióncorrespondenapersonas(P)
+Alemania.Elmismomodeloseaplicaalacurvadeinfección paralasmagnitudesdegrupospoblacionalesson[S]=[I]=
+deCubaen5.1.2.Setomael24demarzocomoeldíadeim- [R]=P. La unidad de tiempo (T) es un día y β tiene uni-
+posicióndelaislamientoylosparámetrosβ yγ sederivande dades: [β]=1/(PT). Las unidades de γ son [γ]=1/T. El
+describiraproximadamentelosdatosdiariosdeinfectados.Se númeroγ representalaproporciónderecuperadosporunidad
+obtieneunmáximodeinfectadosquedependedelrigorcon de tiempo entre la población infectada. Consideraremos la
+queseimpongaelaislamiento.Losdatossugierenquesiel cantidadγ estimadadelascurvasderecuperacionenpaíses
+aislamientoresultaragradualmentemenosefectivosepodría quehansobrepasadoyalaepidemia,comoeselcasodeChi-
+obtenerdesdeunmáximodelordende1200casoscercadel na,elresultadohaciendounajustedemínimoscuadradoses
+1demayo.Tomandodatosposterioresal23.04.20concasos γ =1/20.
+sintomáticosyrealizandounajusteseobtieneunestimado Estasecuacionestambiénpuedendarseenunidadesdonde
+similarymásprecisoafinalesdeabril.Elanálisisengeneral laspoblacionesseanadimensionalesS˜=S/N,I˜=I/N,R˜=
+sugierequelosmáximosdelaepidemiaenCubatienenbuena R/N:
+probabilidaddesucedereneserangodevalores.
+Enlaúltimasubsección5.2seestudianlascurvasdein- ∂S˜ β ˜S˜I˜ ∂I˜ β ˜S˜I˜ ∂R˜
+=− , = −γI˜, =γI˜.
+fectadosdeCuba,AlemaniayCoreadelSur.Elmétodoque ∂t N ∂t N ∂t
+se sigue es el de explorar la tasa de contagio variable β(t)
+Lasunidadesdeβ ˜ =βN2=β∗N estándadaspor[β ˜]=P/T.
+haciendo ajustes locales, al dividir los datos en segmentos.
+Tambiénemplearemosβ∗=β×N conunidades[β∗]=1/T.
+SeestudianlosdatosdeCuba,considerandodosescenarios:
+Algo a destacar es que las magnitudes S,I y R en las
+Enelprimerolatasadecontagiocontinuasiendolatasaal
+ecuaciones(1,2,3)sonlosnúmerosdepersonassusceptibles,
+16.04.20, la epidemia se extendería a septiembre y los en-
+infectadas y recuperadas que existen realmente en toda la
+fermos detectados en el pico rondarían los 200,000. En el
+población. Sin embargo, los datos de que se disponen para
+segundoescenarioafinalesdeabrillacuarentenaestrictalo-
+gra R˜ <1 y por tanto el pico de la epidemia se alcanza a resolverlasecuacionesapartirdesuscondicionesiniciales,
+0
+en muchos casos son solo la población total del país y los
+finalesdeabril,ylosenfermosdetectadosenelpicorondan
+númerosdeinfectadosyrecuperadosquedetectaelsistema
+los1000.SecompruebaquelacuarentenaenelcasodeAle-
+de Salud. En esta sección consideraremos que de los datos
+maniayCoreadelSuralafechaestudiadaalcanzalaregión
+deseadaR˜ <1(β∗−γ <0).Estosúltimosresultadosenfati- observados,elúnicoqueesexactoeslapoblacióndelpaís
+0
+que define a S al inicio. Se toma en cuenta una población
+zanlaimportanciadeunacuarentenaestricta.Todoloanterior
+de12millonesdepersonasparaCubayde83millonespara
+seresumeennuestraconclusionesenlaúltimasección.Fi-
+Alemania.
+nalmentesepresentantresapéndicesenqueseextiendenel
+Amedidadecomenzarconunmodelodejuguete,con-
+estudioparaCuba,aperíodosposterioresalosdescritosen
+sideremoslosdatospresentadosapartirdel16.03.20aldía
+el trabajo. El primer apéndice 7 muestra el ajuste para Cu-
+16.04.2020,empleándoloscalculamoslossiguientesparáme-
+badelatasaderecuperaciónγ =0,062±0,004.Elsegundo
+trosglobalesdelmodeloSIRdeCuba:
+apéndice8estimalallegadadelsegundomáximodelacurva
+deinfectadoscondatosdehastael7.06.20conintervalosde
+1 1 1
+confianza.Elúltimoapéndice9extiendeelanálisisalfuturo R˜ 0 =4,04413, β∗=0,202206 , γ = . (4)
+T 20 T
+delaepidemiacondatoshastael23.07.20conintervalosde
+confianza.
+Estadependenciaseobtieneajustandoalosdatosexpe-
+rimentales,esdecirladependenciadelosinfectadosactivos
+2. El modelo SIR
+entérminosdeltiempoalcomienzodelaepidemia.Secon-
+Elmodelo“SuceptibleInfectedRecovered"(SIR)esunode sideraunatasadedeteccióndel100porciento.Estoesuna
+losmássencillosyclavesenlosestudiosepidemiológicospara valoraciónmuyprimitivadelapandemia,quedebecorregirse
+lapropagacióndeenfermedades[1].Enelmismolapoblación tomandounatasadedeteccióndelordendel10%[12]yen
+totalN sedivideentresgrupos:suceptiblesS,infectadosI nuestraopiniónconsiderandovaloresvariablesdeβ parare-
+yrecuperadosR.DenominemosporN lapoblaciondelpaís flejarlasmedidasdecontención.Losresultadossemuestran
+considerado. Las ecuaciones diferenciales del modelo que enlafigura1.
+gobiernanlaevolucióndelaepidemiaestándadaspor
+3. Modelos SIR y razón entre infectados
+∂S
+=−βSI, (1) detectados y totales
+∂t
+∂I
+Consideremosahoraqueelnúmerototaldepersonasin-
+=β SI−γI, (2)
+∂t fectadas I(t) se desconoce. Esto sucede debido a que hay
+∂R personasqueenfermanysanansinserreportadas,debidoa
+=γI. (3)
+∂t presentarsíntomasleves,denotemosporI (t)alnúmerode
+o
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+76 ModelosSIRmodificadosparalaevolucióndelCOVID-19
+2.0×10
+0
+0 50 100 150 200
+6
+4.0×10
+6
+1.0×10
+8.0×106
+6.0×106
+7
+1.2×10
+7
+Días,día1:16demarzo
+ABUCLABOLGRIS
+Tasadedetección100%
+120000
+100000
+80000
+60000
+40000
+20000
+0
+0 10 20 30 40 50 60
+Días,día1:16demarzo
+SOVITCASODATCEFNIABUCLABOLGRIS
+merodelosinfectadosactivosysusincrementosdiariosobser-
+vadosporelSistemadeSaluddeCubaentrelosdías11.03.20
+y3.04.20.Lasolucióndelsistemadebedescribirlosvalores
+dedichalistadespuésdedivididosporelfactork=0,2
+1
+I(t)= I (t). (5)
+o
+k
+Losdatosparaelnúmerodeinfectadoscrecenrápidamente
+enformacompatibleconlaconocidaevoluciónexponencial
+de las soluciones SIR cuando la cantidad de infectados es
+pequeña.Elvalordeγ describeundecaimientoexponencial
+Tasadedetección100%
+de los infectados si no hay contagio (β =0). Dado que el
+tiempo típico en que se cura cada enfermo es de alrededor
+de15a20días,enestasecciónadoptaremoselestimadode
+γ = 1 =0,066. Se obtuvieron valores de β que permiten
+15
+unaaproximacióndelosdatosobservadosparaI (t).
+o
+SeresolvióentonceselsistemadeecuacionesSIRfijando
+lascondicionesinicialesparaI(t)eneltiemponuloI(0).Estas
+condicionesinicialesseajustaronconvistasareproducirlos
+datos reportados. Los valores obtenidos de los parámetros
+fueron
+β∗
+β∗=0,212073,γ =0,066, β = =1,76727×10−8.
+Figura1.Curvas“ideales"delaevolucióndelSIRenCubacontasade N
+contagioconstanteal16.04.20,ytasadedeteccióndel100%. Enelpanel
+LasoluciónobtenidaparaI(t)ysuderivadasemuestranen
+dearriba,lacurvaazulcorrespondealossusceptibles,lanaranjaalos
+lafigura2.
+recuperadosylaamarillaalosinfectadosactivos.Losnúmerosobtenidos
+songigantescos,porquenoseconsideraelefectodelacuarentenaenla
+disminucióndeβ∗,nielhechodequesólosedetectandelordendel10%de
+250
+loscasos[5].Elpaneldeabajomuestraunintervalodetiempomáspequeño.
+200
+personasinfectadasobservado.LarelaciónkentreI (t)eI(t) 150
+0
+asumiremos que es una constante estimada en la literatura
+100
+[5,12],porlocual
+r 50
+I (t)=kI(t), k= ,
+o
+1+r
+0
+dondereslarazónentreelnúmerodeinfectadosobservados 15 20 25 30
+Tiempoendias
+yelnúmerodelos noobservados,lacualhasidoestimada
+en la referencia [5] a un valor en el rango (0,1−0,2). Los
+casos observados están entre un décimo y dos décimos de
+los casos no observados. Adoptaremos un valor de k=0,2
+cercano a r=1/5, el cual es simplemente un estimado. El
+cociente entre el número de recuperados observados a un
+tiempodadoyelnúmerototalderecuperadosk∗ podríaser
+tambiénunaconstanteenlazonadetiempospequeños,yaque
+lasoluciónesexponencial.Noasumiremosquek∗ coincide
+con el valor de k, aunque en los gráficos representaremos
+tambiénlamagnitud
+R (t)=kR(t),
+o
+queconstituyenlosrecuperadosobservadosenelcasodeque
+k∗=k.Porlocualestenúmeronoconstituyeunapredicción
+paraelnúmeroderecuperadosobservados.
+Consideremoslasolucióndelsistemadeecuaciones(1,2,3)
+quedescribaaproximadamentelalistadevaloresparaelnú-
+)t('oI
+,)t(oI
+Figura2.SemuestralasolucióndelSIRaldeterminarlascondiciones
+inicialesqueajustanalosvaloresobservadosdelacurvadeinfectadosen
+Cuba[11].Lacurvaylospuntosazulescorrespondenalosinfectados
+predichosyobservados,ylacurvaylospuntosamarillosaladerivada
+respectoaltiempodepredichosyobservados.Lacurvacontinuapara
+tiemposmayoresalosdelgráfico,alcompararseconlosdatos,muestranel
+funcionamientodelasmedidasdeconfinamientoapartirdeldía24.03.2020.
+Puede observarse que la evolución presenta el carácter
+exponencialenlaregióndetiemposanterioralconfinamiento,
+pese a las fluctuaciones de los datos. Para un intervalo de
+tiempomayor:(0,200),laevolucióntemporalparaelnúmero
+deinfectadosmuestraunmáximocomoseilustraenlafigura
+3,quepresentaademáslascurvasdelnúmerodesusceptibles
+yrecuperados(considerandok∗=k).
+Lascurvasploteadasenunintervalode200días,muestran
+losresultadosparaelnúmerodesusceptibles,infectadostotal
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+ModelosSIRmodificadosparalaevolucióndelCOVID-19 77
+1.2×107
+1.0×107
+8.0×106
+6.0×106
+4.0×106
+2.0×106
+0
+0 50 100 150 200
+Tiempoendias
+)t(o
+R,)t(S,)t('o
+I,)t(o
+I
+Figura3.SeploteanIo(t),S(t),yRo(t)enunintervalode200días.La
+curvaazulcorrespondealosinfectados,lanaranjaalossusceptiblesyla
+amarillaalosrecuperados.Elnúmerodeinfectadosobservadostieneun
+máximodelordendevarioscientosdemiles.Estosaltosnúmerosocurren
+siemprequelosvaloresdeβ∗yγseanconstantesyexistainfección
+creciente:β∗>γ.Paradetenerlainfecciónesnecesariolograrβ∗<γ.
+SyelnúmerodeinfectadosobservadoI queefectivamente
+o
+sonreportados.Finalmente,comoantesseindicó,R (t)=k o
+R(t) representa el número de recuperados, asumiendo que
+k∗=k.Lacurvasenfigura4muestranI (t)paratresvalores
+o
+distintosdek.Sepuedenotarquebajolassuposicioneshechas,
+los picos del número de enfermos se pronostican a ocurrir
+entre80a90díasapartirdel11deMarzoycorrespondena
+cercadecientosdemilesdepersonas,enelcasodequenose
+tomenmedidasquepuedanlograrβ∗−γ <0.
+600000
+500000
+400000
+300000
+200000
+100000
+0
+0 50 100 150 200
+Tiempoendias
+)t(o
+I
+paralosnúmerostotalesdeinfectadossiendoproporcionales
+con 1/k. En el caso de que las ecuaciones fueran lineales,
+el máximo de I (t) hubiera resultado idéntico para las tres
+o
+curvas. Sin embargo, la no linealidad del sistema tiene un
+efectorelevanteenlareduccióndelmínimoenelnúmero1/k.
+Lanolinealidadseproducedebidoaqueelnúmerototalde
+infectadosnopuedenuncasersuperioralapoblación.
+4. Relevancia del parametro β∗−γ
+Acontinuacióndiscutiremoslassolucionesdelsistema
+SIRenloscasosdequeelnúmerodeinfectadosesmucho
+máspequeñoquelapoblaciónI(cid:28)N.Estaaproximaciónes
+relevanteconvistasadiscutirloscasosdelospaísesquehan
+superadolaepidemia,enestospaísesestarelaciónsecumple.
+Enestecasoelnúmerodesusceptiblessepuedeaproximar
+porlamismapoblacióndelpaísS(t)≈N.
+Portantoelsistemadeecuaciones(1,2,3)sesimplificaa
+laforma
+∂S
+=−βN I, (6)
+∂t
+∂I
+=β NI−γ I, (7)
+∂t
+∂R
+=γ I. (8)
+∂t
+Dadoquelasecuacionessonlineales,lassolucionesresultan
+exponencialesdadaspor:
+S (t)=N−β∗iExp((β∗−γ)t), (9)
+e
+I (t)= iExp((β∗−γ)t) (10)
+e
+γ R (t)= iExp((β∗−γ)t). (11)
+e β∗−γ
+β∗=βN, (12)
+dondeiconstituyeelúnicoparámetrolibredelasolución.Para
+paísesconmillonesdehabitantes,comoantessemencionó,
+lasoluciónexponencialesunamuybuenaaproximaciónpara
+tiemposenqueI(t)(cid:28)N.
+Enestepuntoesdeinteréssubrayarquesienesasecua-
+ciones se considera β∗ como una variable dependiente del
+Figura4.Númerodeinfectadosparatresvaloresdistintosdelarelación tiempo,elsignodeβ∗(t)−γ determinaelsignodeladeri-
+entreelnúmerodeinfectadosobservadosyeltotal:k=0,411,0,2,0,1(el vada temporal de I(t). Es decir, que la magnitud β∗(t)−γ
+ordensecorrespondeavalorescrecientesdelmáximo).Debidoalano brinda un factor tan relevante como si la epidemia crece o
+linealidadlacantidadmáximadeinfectadosdecrececonladisminucióndek. decreceenelinstanteconsiderado.
+Lanolinealidadsesiguedequeelnúmerodeenfermosnopuedesuperara Enelcasoquenohaycontagioβ =0,porlocualelvalor
+lapoblación. deγ correspondepredecirundecaimientoexponencialdelos
+infectados(casodeChina).Sinembargoeltiempotípicoen
+Losvaloresdelosparámetrosfueronk=0,411,0,2,0,1, que se cura cada enfermo es de 15 a 20 días. Por lo tanto,
+fijando β y γ. La curva con valor más bajo del máximo se adoptaremosenestasecciónelestimadodeγ = 1 =0,066.
+15
+correspondeak=0,1,laasociadaalmáximodevalorinter- TalcomocomentamosenlaIntroducción,lassolucionesex-
+mediok=0,2ylaqueposeeelmásaltovalorak=0,411. ponenciales tienen un tiempo característico de crecimiento
+Quisieramos subrayar que la disminución del valor del odecrecimientodeterminadoporelnúmeroβ∗−γ.Siesta
+máximoconelaumentode1/k,esunefectopuramenteno cantidadresultapositivalasolucióndelproblemacreceinde-
+lineal.Estoocurredebidoaqueusamosdatosexperimentales fectiblemente,independientementedelosvaloresespecficos
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+78 ModelosSIRmodificadosparalaevolucióndelCOVID-19
+deIyRenelmomentodado.Estaesunapropiedadrelevante aproximadamente.Comoseveráenlasiguientesubseccción,
+enladinámicadeesteproblema.ParaqueI decrezcaenla elmodelofuncionabastantebienparaesepaís.Sinembargo,
+inmportanteregióndelosbajosvaloresesimprescindibleque enotrassituacionespuedesucederquealfinaldeunperíodo
+elvaloreneltiempodeβ∗−γ resultenegativo.Deacuerdo deduracióndespuésdelconfinamiento,latasadecontagio
+aesto,entodoslospaísesenquesehalogradolarecupera- comienceadecrecerapartirdeunvalordisminuído.Estoes
+cióndelaepidemia,sehapodidohacerqueesacantidadsea de esperar en países donde el aislamiento se aleje bastante
+negativa,dandounmáximodeinfectadosactivosconI(cid:28)N. delindividual,dondeexisteaglomeracióndepersonasenla
+Sinembargo,estambiénconocidoqueaunqueelpaísim- familia media. En esos casos, supondremos que pasado el
+pongaaislamientototalapartirdeciertafecha,lascurvasde citadointervalodetiempolosvaloresdeβ∗ disminuyenex-
+infecciónenningúncasocomienzanabajarinstantaneamente. ponencialmenteconunaconstantededecaimientocuyovalor
+Es decir, aunque es lógico suponer las medidas deben fijar controlaráelmáximodeI (t).Acontinuaciónelmodelocua-
+o
+instantaneamentelacondiciónβ∗=0(ausenciadetransmi- litativo descrito de la evolución de β∗ bajo condiciones de
+sibilidad)losdatosdeinfecciónnieganestapropiedadylas aislamientoseaplicaadescribirlascurvasdeinfectadosde
+pendientescontinuansiendopositivasdíasdespuésdelafecha AlemaniayCuba.
+deconfinamiento.Analicemoslascausasdeestecomporta-
+mientoenlasiguientesección. 5.1 AplicaciónaAlemaniayaCuba
+Consideremosenestasubsecciónunadescripcióndelas
+curvasdeinfeccióndeAlemaniayCubaenbasealmodelo
+5. Modelo cualitativo del aislamiento
+simpledescrito.Paraello,primeramentefijamoslosparáme-
+Describamosahoraunmodelocualitativoquebrindauna tros β∗ y γ en el comienzo de crecimiento exponencial de
+razónporlaqueelvalordeβ∗=0nosehaceceroinmediata- lainfecciónenambospaíses.Elvalordelarelaciónkentre
+mentedespuésdetomarlasmedidasdeaislamiento.Conside- elnúmerodeinfectadosobservadosyeltotalsetomócomo
+remoslacircunstanciadequeeltiempoenquelosenfermos k=0,2.
+sufrenelpadecimientoseestimaenunperíodoτ =15−20
+5.1.1 Alemania
+días.Elenclaustramientodelasfamilias,implicaqueengran
+DiscutamosprimeramenteelcasodeAlemania.Paraeste
+cantidaddeellasexistenenfermosasintomáticosoinfectados
+país se tiene una importante información: sus medidas de
+levesquepuedentransmitirlaenfermedadasusfamiliares.
+aislamientocomenzaronaimponersefuertementecercadel
+Portantosepuedeestimarqueelnúmeropositivodesuscep-
+20demarzodel2020.Losdatosdecurvasdeinfectadosal
+tiblesquepasanaserinfectadosporunidaddetiemponose
+iniciodelaepidemiapermitieronestimarβ∗y γ cuyosvalor
+puedeanularalinstantedeimplantarelaislamiento.Portanto
+β∗(t)nodebereducirselosuficienteparacambiarelsignode resultaron:
+β∗−γ (R˜ <1).Sinembargo,loquedebeserválidoesque β∗=0,31, γ =1/20.
+0
+trasunperíodocercanoaltiempodevidadelaenfermedad, Elvalordeγ seestimódelosdatosdelacaídaexponencial
+yanodebenexistircasosdeenfermoslevesenlasfamilias. delacantidaddeinfectadosenChina[11].
+Por lo cual después de ese intervalo de tiempo β∗ →0. El
+modelopropuestosebasacentralmenteenestaafimación.
+Esdecir,queundíadespuésdelaimplantacióndelconfi-
+60000
+namiento,ydurantedigamosaproximadamenteveintedíasβ∗
+debedecrecerhastaanularse.Ladependenciatemporalenese
+40000 intervalonoesconocida.Soloesdeesperarquelafunciónten-
+gaunadisminuciónbruscaelprecisodíaenquecomienzael
+aislamiento,dadoquelascondicionesdecontactodelosinfec- 20000
+tadosconsuentornocambiarondrásticamente.Unavezquela
+transmisibilidadseanula,lacurvadedecaídadelnúmerode 0
+infectadosI(t)debeteneruncarácterexponencialcontiempo 0 10 20 30 40 50 60
+Tiempoendias
+dedecaimientoγ.Comoantesmencionamoslacurvadeinfec-
+cióndeChinareportadaenelsitiowebwww.worldometer.info
+[11],permitenestimarelvalorde1/γ entre15y20días.
+Haremosuncomentariofinalacercadelassuposiciones
+delmodelo.Considerarβ∗=0luegodeuntiempodedura-
+cióndelaafeccióndespuésdeinstauradoelaislamiento,es
+válidosisesuponequeesteaislamientoesunipersonal.Es
+decirsicadapersonaseencuentraaislada.Pasadoesteinter-
+valo,elnúmerodesusceptiblesnopuedevariarconeltiempo
+puesnoesposibleinfectarlos.SiendoAlemaniaunodelos
+paísesmásdesarrollados,esacondiciónpudierasatisfacerse
+)t(oI
+Figura5.NúmerodeinfectadoscomofuncióndelosdíasparaAlemania
+[11].LalíneacontinuamuestralasolucióndelmodeloSIR.β∗yγson
+constantesenlosprimeros20días,sinmedidasdeaislamiento.Lacurva
+continua(exponencialenlaaproximaciónlineal)siguealaobservadaenese
+intervalo.Enelrango20-40díaslavariacióndeβ∗semuestraenlafigura6.
+Lacaídaexponencialdelnúmerodeinfectadosobservadoscomienzatrasun
+períododeduracióndelaenfermedadapartirdelaislamiento.
+Estosparámetrosdeterminaronunadependenciaexponen-
+cialparacortostiemposquedescribemuybienlacurvade
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+ModelosSIRmodificadosparalaevolucióndelCOVID-19 79
+datosreportadosparaAlemaniaenlareferencia[11],hastalos
+20díasdelmesdemarzo.Enelentornodeestafechafueron
+impuestaslasmedidasdeaislamiento.LacurvadeI (t)en
+o
+esaregióndetiempossemuestraenlafigura5.
+0.30
+0.25
+0.20
+0.15
+0.10
+0.05
+0.00
+0 10 20 30 40 50 60
+Tiempoendias
+]t[*β
+Los resultados para I (t) entre el 1 de marzo (fecha en
+o
+quesecomienzamedireltiempot endías)yel24Marzo,se
+muestranalaizquierdadelafigura7.Enellalospuntospre-
+sentanlosdatosreportadosporelMinisteriodeSaludPública
+ylascurvascontinuasrepresentanlassolucionesdelsistema
+deecuacionesSIR.Sepuedeobservarquelacurvacontinua
+describeaceptablementelosdatosdelnúmerodeinfectados
+antesdeestablecerseelaislamientoel24demarzo(t=24).
+Cabesubrayarquelacurvaexponencialalaextremaizquierda
+enelgráfico,eslasolucióndelasecuacionesSIRenausencia
+delascondicionesdeaislamiento.Ellaindicaqueenelcaso
+denohaberseaplicadoelconfinamiento,elcrecimientodel
+númerodeinfectadoshubierasidomuygrande,dossemanas
+despuésdel24deMarzo,mostrandoclaramenteelpapeldel
+aislamiento.
+1200
+Figura6.Dependenciatemporaldeβ∗quereproducelacurvade
+1000
+infectadosdeAlemania.Unaprimeradisminuciónbruscaalimponerel
+800
+aislamientoesdeesperardebidoaqueelconfinamientoreducelas
+posibilidadesparaelcontagio.Elsaltoalvalornulotambiénpuedeesperarse 600
+debidoaquetranscurridoeltiempomediodeinfección,esnaturalqueno
+400
+hayacasidisminucióndelnúmerodesusceptiblesporunidaddetiempo,t.q.
+200
+β∗≈0.Lavariaciónenlazonainterioreslinealylapendientesedetermina
+ajustandoalosinfectadosenlazonadesusmáximosvalores. 0
+0 20 40 60 80 100 120
+Acontinuaciónseutilizaquelacurvadeinfecciónmues- Tiempoendias
+trauncambioenpendienteesemismodía20demarzo.Esto
+permitióestimarelnuevovalordeβ∗alquedisminuyeesta
+magnitudbruscamente,alimponerelaislamiento.Posterior-
+mente,dadoquenosetieneinformaciónaprioriacercadel
+comportamientodeβ∗enlos20días(tiempomedioquedura
+la enfermedad) posteriores al 20 de marzo, se asumió que
+β∗disminuyelinealmenteduranteeltiempodepermanencia
+delaenfermedadhastaquebruscamentesaltaalvalornulo
+trasesos20días.Estoimplementaelmodelodelasección
+anterior.Lafigura6muestraestavariación.Ajustandolade-
+pendencialinealdeβ∗paratiemposposterioresalinstantede
+aislamiento,selograentoncesdescribirsatisfactoriamentela
+curvadeinfeccióndeAlemania,comolomuestralafigura5.
+PuededecirsequeelcasodeAlemaniabrindaunejemplo
+dequelacorrectaimplantacióndelasmedidasdeaislamiento
+puededeterminarundecaimientoexponencialdelapandemia,
+transcurridoaproximadamenteunperíodomediodeduración
+delaenfermedad.Pensamosqueesteefectopudieraserre-
+levanteparaexplicarloscasosdeotrospaísesenestaetapa
+comoCoreadelSur,Austria,Suiza,etc.
+5.1.2 Cuba
+Posteriormenteelmismomodeloseaplicóalacurvade
+infeccióndeCuba,asumiendolafechadel24demarzo2020
+paralaimposicióndelaislamiento.Tomandoγ =0,05,para
+elparámetroβ∗ derivadodelosdatosdiariosdeinfectados
+brindadosenlareferencia[11],seobtuvieronlosvalores
+β∗=0,307088, γ =1/20.
+]t[o
+I
+Figura7.SolucióndelSIRparaCubaconβ∗constanteantesdeldía
+24.03.2020(iniciodelaislamiento).Másalládelcitadodía,seconsideraque
+β∗decrece,conunadisminuciónbruscaaunvalorconstanteduranteun
+tiempodeduracióndelaafecciónτ.Alfinaldeeseintervalo,sesuponeque
+β∗decaeexponencialmentecomoexp(−α(t−24−τ)).Talqueβ∗≈0tras
+elaislamiento.Lascurvassecorrespondenalosvaloresα=0,6,0,3,0,15,
+0,075,0,0375.Elordendeestasconstantesindicavalorescrecientesdesus
+máximos.
+Posteriormenteal24demarzo,sesupuso,talcomoenel
+modelo,queβ∗disminuyebruscamenteprecisamenteesedía,
+a un valor, menor. En este caso supusimos que dicho valor
+permanececonstantetras17dedíasdeduracióntípicadela
+afección.Transcurridoesetiempo,consideramosqueβ∗tien-
+decero,peronobruscamente.Enlugardeesto,asumiremos
+quetiendeaceroconunadependenciaexponencialdeltipo
+β∗(t)=Exp[−α (t−(24+τ))],
+dondeenestecaso,tomamosτ=17comoeltiempodemedio
+de la enfermedad. Las curvas que se muestran en la figura
+7 para tiempos mayores que 24+τ corresponden a los va-
+lores de α =0,6,0,3,0,15,0,075,0,0375. Estas consideran
+seis formasde decaimiento exponencial de β∗ con vistas a
+intentar describir la esperada disminución de β∗ a suceder
+despuésdeestablecidoelaislamientoyesperaruntiempode
+duraciondelaenfermedad.Comosecomentóenladiscusión
+delmodelo,enpaísesenqueelconfinamientoselogracon
+masdificultad,solocabeesperarqueβ ∗decaigadespuesde
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+80 ModelosSIRmodificadosparalaevolucióndelCOVID-19
+esperaruntiempoτ apartirdeldíadeaislamiento.Esinterés
+entonces comparar las observaciones que se ofrecen por el
+MinisteriodeSaludPúblicaconlascurvasdeinfectadospara
+variosvaloresdelparametroα.Obsérvesequeparaα =0,6
+laexponencialsereducebastanteenelcursodedosdías,por
+loqueparaesevalorsepuedeconsiderarqueseestáimpo-
+niendoβ∗=0unavezpasadounperíodomediodeduración
+delaenfermedad.Estopuedeconsiderarsecomounabuena
+aproximacióndeunarespuestasimilaraladeAlemania.Para
+valoresmayoresdeα lascurvasdelafigurapredicenmáxi-
+mosdemayorvalorquevanapareciendoatiempostambién
+superiores.Lostiemposaqueocurrenestándescritosporlos
+cerosdelafunción
+I(cid:48)(t)
+=β∗(t)−γ, (13)
+I(t)
+queseploteaenlafigura8.Esclarodelosdatosobservados,
+que los dos primeros max´imos, asociados a α =0,6 y 0,3
+no pueden ocurrir, pues los datos de número de infectados
+han sobrepasado esos valores ya. Los datos de 16 de abril
+se acercan a los de la curva de α =0,15 pero no muestran
+aúnunaderivadacercanaacero,porloquesumáximo(de
+cercade800casosactivos)nodeberealizarsetampoco.Para
+α =0,075,sinembargoelmáximoseapareceríaparacerca
+del1demayo,mostrando1200casos.Porotroladolacurva
+de α =0,0375 mostraría su máximo cerca del 12 de mayo
+conalrededorde2000casosdeinfectadosactivos
+Cabeestimarquedadoslovaloresdelasobservaciones
+mostradas,existenbuenasposibilidadesparaquelosmáximos
+aocurrirrealmenteesténpordebajode1,000o2,000casos
+Lavariacióntemporaldescritaparaβ∗ semuestraenla
+figura8paraelcasodeα =0,15.LacurvadeI (t)asociada
+o
+eslalíneacontinuamásgruesaenlafigura7.
+0.30
+0.25
+0.20
+0.15
+0.10
+0.05
+0.00
+0 20 40 60 80 100 120
+Tiempoendias
+]t[β
+ciertacoherenciaconladependenciatemporaldelaβ∗(t)−γ
+asumidaenelmarcodelmodeloconsiderado.Ladependencia
+más allá del día 16 de abril, debe decidir cuan válida es la
+suposiciónsugeridaporelmodelodeAlemania:considerar
+queβ∗(t)debetenderacerodespuésdeuntiempodeduración
+mediodelaenfermedad.
+Una sugerencia importante que puede extraerse de las
+figuras8 y7serefiereaasumirquelacurvaazuldelosdatos
+paraI(cid:48)(t)/I(t)en8sedebeesperarqueseapegueaalgunade
+lasexponencialesploteadasenella.Sielloesasí,sesigueque
+lascotasdeunmáximonosuperiora1,000o2,000casos,a
+sucederafinalesdeabril,puedenresultarválidascomoindica
+lafigura7.
+0.5
+0.4
+0.3
+0.2
+0.1
+0.0
+0 20 40 60 80 100 120
+Tiempoendias
+Figura8.Semuestralavariacióntemporaldeβ∗quepermitedescribirla
+curvadenúmerodeinfectadosobservadosparaCubamásgruesaquese
+muestraenlafigura7.Estacorrespondeaα=0,15.
+Como ya mencionamos, la figura 8 muestra las curvas
+de I(cid:48)(t)/I(t)=β∗(t)−γ para el modelo y para los datos,
+estimadaparaestosporlarazónentreelnúmerodeenfermos
+reportadosdiariamenteylacantidadtotaldeenfermosactivos.
+A pesar de las fluctuaciones, debidas a que la cantidad de
+casosesaúnreducida(respectoalapoblación),seindentifica
+]t['I ]t[I
+Figura9.CurvasdeI(cid:48)(t)/I(t)=β∗(t)−γparalasoluciónyparalos
+datos.Elgráficomuestraciertasemejanzaentrelaβ∗(t)asumidaenelmarco
+delmodeloconlaobservada.Las5curvasexponencialesqueaparecen
+correspondenalosvariosvaloresdeα=0,6,0,3,0,15,0,075,0,0375.La
+curvagruesacorrespondeaα=0,15.Estafigurasugierequeelmáximodel
+númerodecasospodríaserdelordende1,000silacurvaazuldeI(cid:48)(t)/I(t)
+observadacortaelejehorizontalafinalesdeabril.
+Concluimosestasecciónconunestudiomásexactorea-
+lizadocondatosparaCubaposterioresalperíodoenquese
+completaronlasseccionesprincipalesdeltrabajo.Estosson
+datostomadoshastael23.04.20.Alrededordel16.04.20las
+medicionesmejoraronsignificativamente,detectándoseuna
+granproporcióndecasosasintomáticos.Lafigura10muestra
+elestudiodelaevoluciónenfuncióndeltiempodeI(cid:48)/Ipara
+casos sintomáticos, obteniéndose un estimado de β∗ ≈γ a
+partirdel30.04.20.Estoconcuerdaconalcanzarunpicopara
+losinfectadosactivosafinalesdeabril2020.
+5.2 Ajustes a modelos con tasa de contagio varia-
+ble
+Enestasubsecciónrealizaremosunestudioexperimental
+delcambiodelatasadecontagioβ paravariospaíses.Estos
+resultados los comparamos con el modelo presentado ante-
+riormente,llegandoalaconclusióndequeefectivamenteesta
+tasadecontagiovariableseajustaalosdatos,ysereducecon
+elprocesodecuarentena.Porlocualelestudiodeladinámica
+deestatasadecontagioesrelevante.
+Quisiéramosdestacarademásqueestudiandoelcasode
+AlemaniayelcasodeCoreadelSurcomprobaremosqueel
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+ModelosSIRmodificadosparalaevolucióndelCOVID-19 81
+Tabla1.ValoresdetasadecontagiovariablesdeCubaobtenidasajustandolocalmentealcomportamientoexponencialdelSIRparatiempospequeños.Enel
+primerescenarioseextrapolaconlatasadecontagiodelperiodoIV.EnelsegundoescenariosefijaunatasadecontagiareducidaapartirdelperiodoV.Se
+consideraunatasaderecuperaciónγ=1/20,estimadadelacoladelacurvadeChina.
+Períodos γ(R˜ −1) β∗ R˜
+0 0
+I:16.03.20 al 21.03.20 0.38313 0,43313 8.66261
+II:22.03.20 al 28.03.20 0.207859 0,257859 5.15717
+III:29.03.20 al 9.04.20 0.105325 0,155325 3.10649
+IV:10.04.20 al 16.04.20(oenadelante) 0.0460772 0,0960772 1.92154
+V:30.04.20-enadelante -0.0115691 0,0384309 0.768618
+1000
+800
+600
+400
+200
+0
+0 10 20 30 40
+Días,día1:16demarzo
+Figura10.Evolucióndelamagnitud(β∗−γ)paraCuba.Seestimacon
+datoshastael23.04.20queelvalorβ∗−γ=0,esdecirelpicodeinfectados
+activos,sealcanzaafinalesdeabril,paraβsiguiendoelcomportamientodel
+ajusteexponencialcalculado.Eldía55esel27.04.20.
+máximoalcanzado(ydeseado)secorrespondeconunmáximo
+debido a β∗−γ <0, o lo que es lo mismo R˜ <1. El cual 0
+no es el máximo estándar del SIR, si no uno logrado en la
+regióndondeS≈N.Empleandolosdatosquesetienenhasta
+el16.04.20construimosunmodeloSIRparaCubadividido
+encuatroetapas,considerandovaloresdeβ∗dependientesdel
+tiempo.Losvaloressemuestranenlatabla1.Estosvalores
+de β∗ locales se emplean para construir dos escenarios, el
+primerocontresvaloresdeβ∗ yextrapolandolaevolución
+paratiemposmayoresconlaúltimatasadecontagiocalculada.
+Elsegundo,suponiendoqueafinalesdeabrilelβ∗sereduce
+dandoR˜ <1.
+0
+Enlafigura11semuestralasolucióndelSIR,emplean-
+dolosvaloresβ∗ obtenidoshaciendoajustesexponenciales
+localesmediantemínimoscuadrados.Elpanelizquierdode
+lafigura11muestraelajustealosdatos,yelpanelderecho
+de 11 destaca que sucedería a la curva si a finales de abril
+disminuyelatasadecontagioalnivelβ∗−γ <0.
+Lafigura12muestraenlaprimeracolumnalasituación
+hipotéticadeevolucióndelmodeloSIRsilatasadecontagio
+continuasiendolaobservadaal 16.04.20.Elpicodelainfec-
+ciónseríadilatadohastaseptiembre,yalcanzaríalos200,000
+infectadosactivosobservados.Seconsideraunatasadede-
+tecciónk=0,14[5,12]loquediríaqueelpicorealseriade
+aproximadamente1.5millonesdepersonas.Esteescenario
+diríaquelamayorpartedelapoblacióndelpaísseenfermaría,
+PETSABUCneSODATCETEDSODATCEFNI
+1200
+1000
+800
+600
+400
+200
+0
+0 20 40 60 80 100 120 140
+Días,día1:16demarzo
+PETSABUCneSODATCETEDSODATCEFNI
+Figura11.Lafigurasuperiorrepresentaelnúmerodeinfectadostotal
+(puntos),ylaprediccióndelmodeloSIRcontazadecontagiovariable(curva
+naranja)paraCuba.Lafigurainferiorrepresentaelcasooptimistade
+extrapolaciónenqueelconfinamientologrealcanzarunatasadecontagio
+efectivaconR(cid:101)0<1afinalesdeabril.Datoshastael18.04.20.
+como se puede ver en el panel izquierdo de la figura 13, y
+no esdeseable. De aquíla necesidadde confinamiento.En
+la segunda columna de la figura 12 se muestra la situación
+hipotéticaquedebidoalasmedidasdeconfinamiento,afina-
+lesdeabrilsealcanceunβ∗=0,0384309dadoenlaquinta
+columnadelatabla1.
+En este caso el pico de infectados activos se alcanzaría
+a finales de mayo y los valores observados estarían en el
+orden de los 1200, los reales más bien en los 8,000 casos.
+Estosepuedevertambiénenelpanelderechodelafigura13
+dondeseobservaclaramentequelapoblacióninfectadasería
+unapequeñafraccióndelos12millonesdehabitantes.Este
+escenarioidealesunamuestraclaradequeelmáximoque
+queremosalcanzarnoeselmáximostandarddelaevolución
+delSIR,sinounmáximologradocuandoR˜ <1. Esteesuna
+0
+propiedadimportanteatenerencuentaporlaspersonasque
+enestostiemposdeseencomenzaraanalizarestapandemia.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+82 ModelosSIRmodificadosparalaevolucióndelCOVID-19
+Tabla2.TasadecontagiovariableapedazosparaAlemania.EnelpresenteperíodosealcanzaR˜ 0<1,porloquelaepidemiaestáporelmomentocontrolada.
+Períodos γ(R˜ 0 −1) β ˜ R˜ 0
+(1):26.02.20 al 29.02.20 0.583043 5,25552∗107 12.6609
+(2):29.02.20 al 04.03.20 0.32193 3,08777∗107 7.43861,
+(3):04.03.20 al 08.03.20 0.324113 3,10589∗107 7.48226
+(4):08.03.20-al 12.03.20 0.242933 2,43193∗107 5.85866
+(5):12.03.20-al 16.03.20 0.241112 2,41682∗107 5.82225
+(6):16.03.20-al 20.03.20 0.249774 2,48873∗107 5.99549
+(7):20.03.20-al 24.03.20 0.10755 1,30798∗107 3.15101
+(8):24.03.20-al 28.03.20 0.127047 1,46985∗107 3.54094
+(9):28.03.20-al 01.04.20 0.0400058 7,47228∗106 1.80012
+(10):01.04.20-al 05.04.20 0.04677 8,03384∗106 1.9354
+(11):05.04.20-al 14.04.20 -0.0161831 2,80747∗106 0.676337
+Tabla3. TasadecontagiovariableapedazosparaCoreadelSur.EnelpresenteperíodosealcanzaR˜ 0 <1,porloquela
+epidemiaestáporelmomentocontrolada.
+Períodos γ(R˜ −1) β ˜ R˜
+0 0
+(1):29.02.20 al 03.03.20 0.164554 1,10431∗107 4.29108
+(2):03.03.20 al 07.03.20 0.0743729 6,40147∗106 2.48746
+(3):07.03.20 al 11.03.20 0.0146416 3,3271∗106 1.29283
+(4):11.03.20-al 15.03.20 -0.00454485 2,33958∗106 0.909103
+(5):15.03.20-al 19.03.20 -0.0244965 1,31267∗106 0.510071
+(6):19.03.20-al 23.03.20 -0.0348858 777930. 0.302285
+(7):23.03.20-al 27.03.20 -0.0480769 98981,1 0.0384617
+(8):27.03.20-al 31.03.20 -0.0258793 1,24149∗106 0.482413
+(9):31.03.20-al 04.04.20 -0.0357962 731069 0.284076
+(10):04.04.20-al 08.04.20 -0.0180901 1,64241∗106 0.638199
+(11):08.04.20-al 14.04.20 -0.0317687 938363. 0.364625
+Paraaclararaúnmásnuestraideamostraremoslascurvas enpaísescomoAlemania.ElsegundoesunmodeloSIRcon
+deAlemaniayCoreadelSur,estaultimaconlosdatosconsi- tasadecontagiovariable,lacualseajustaexperimentalmente,
+deradosyaenfasedesalidadelaepidemia.Lasfiguras14y ysuvariaciónseasumequeseproduceaconsecuenciadela
+15muestranlaevolucióndelaepidemiaenestasdosnaciones cuarentena.Estosanálisissugierenquelatasadecontagioa
+empleandounmodeloSIRcontasadecontagiovariableenel partirdeldíadeaislamientosecomportaaproximadamente
+tiempo,convistasareflejarelefectodelconfinamiento.Las comounaexponencial.Ambasdescripcionescoinciden,yel
+líneassólidasrepresentanalassolucionesdelasecuaciones enfásisdeambosanálisisradicaenqueuncontroldelaepide-
+diferencialesdelmodeloSIRempleandolatasaβ(t)obtenida miasóloselograconunconfinamientoriguroso.Porlocual
+derealizarajusteslocales.EnlasTablas2y3serepresenta analizandolaevolucióndelaepidemia,resultamuyimportan-
+laevolucióndelosvaloresdelastasasdecontagioβ,R˜ y teelmonitorearlosvaloresdeβ instantáneosparamedirsi
+0
+γ(R˜ −1).Seobservaqueambospaísesalcanzaronlaregión elconfinamientoestásiendoloestrictoquesenecesita.Esto
+0
+R˜ <1. es,convistasacontrolarlapandemiaconunnúmerodein-
+0
+fectadosmuyinferioralapoblacionserequierequeencierto
+períododedíassecumplalacondicionβ∗−γ <0(R˜ <1).
+0
+6. Conclusiones Enlosdíasdel12-04-20al18.04.20,cuandoseterminóparte
+deloscalculosenlaseccioneslatasadecontagiodeCuba
+Eneltrabajoseexplorarondosdescripcionesdelapande-
+estuvoenR˜ =1,92154,porloqueaúnnoerantotalmente
+mia.Unadeellasconstituyeunmodeloempíricoenelcualse 0
+efectivas las medidas de confinamiento (La última tasa de
+consideraquedesdeelpuntoenqueseestableceelconfina-
+contagioestimadaenestetrabajoparaAlemaniafuede0.68,
+miento,latasadecontagiodebe,almenos,empezaradecrecer
+coincidenteconlareportadatambiénenlaliteratura).
+tendiendocerodespuésdeunperíododeduracióndelaenfer-
+medad(1/γ)(aproximadamente15a20días).Estemodelo Elmodeloparalaevolucióndeβ∗aplicadoalcasocubano,
+escapazdedescribirbienelcomportamientodelaepidemia predicequelaepidemiapudieraconcluirinclusiveafinales
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+ModelosSIRmodificadosparalaevolucióndelCOVID-19 83
+1.0×10
+500000
+0
+0 50 100 150 200 250 300
+6
+1.5×10 6
+Días,día1:16demarzo
+PETSABUCneSELAERSODATCEFNI
+200000
+150000
+100000
+50000
+0
+0 50 100 150 200 250 300
+Días,día1:16demarzo
+PETSABUCneSODATCETEDSODATCEFNI
+8000
+6000
+4000
+2000
+0
+0 20 40 60 80 100 120 140
+Días,día1:16demarzo
+PETSABUCneSELAERSODATCEFNI
+1200
+1000
+800
+600
+400
+200
+0
+0 20 40 60 80 100 120 140
+Días,día1:16demarzo
+PETSABUCneSODATCETEDSODATCEFNI
+2.0×10
+0
+0 50 100 150 200 250 300
+Figura12.NúmerodeinfectadospredichosporelmodeloSIRcontasa
+variableparaCuba.Latazadedetecciónsetomadek=0,14[5,12].Los
+dosprimerosgráficosmuestranlosinfectadosactivostotalesyobservados,
+considerandounatasadecontagiovariableajustada.Laextrapolacióna
+grandestiempossehaceempleandolatasadecontagioal16.04.20.Losdos
+gráficossiguientesmuestranlaevolución deinfectadostotalesyobservados
+paraelcasodeimponerunconfinamientomásestrictoafinalesdeabril
+(tabla).
+6
+4.0×10 6
+1.0×10
+8.0×106
+6.0×106
+7
+1.2×10 7
+Días,día1:16demarzo
+ABUCneSELAERPETSRIS
+2.0×10
+0
+0 50 100 150
+6
+4.0×10 6
+1.0×10
+8.0×106
+6.0×106
+7
+1.2×10 7
+Días,día1:16demarzo
+PETSABUCneSELAERRIS
+Figura13.Evolucióndesuceptibles,infectadosyrecuperadosenel
+modeloSIRaplicadoaCuba.Lacurvaazulrepresentalossusceptibles,la
+rojalosrecuperadosylaamarillalosinfectados.Enlaprimerafilaseveque
+conlatasadecontagioal16.04.20seestimaque4millonesdepersonasno
+sufrancontagio.Lasegundofiguramuestracom´oejemploelefectodeun
+confinamientoestrictoafinalesdeabril:unaepidemiacontroladacomo
+pareceserelcasodeChinayAlemania,enquelenúmerodeinfectadoses
+muyinferioralapoblación.
+deabriloprincipiosdemayosilasmedidasdeaislamiento
+tomadasenelentornodel24deMarzo,resultaranefectivas.
+Enestecasoelmáximonúmerodeinfectadosresultaríadel
+ordende1000infectadosactivosconelmáximoapareciendo
+afinalesdeabril.Elvalordelmáximocreceríaamedidaque
+estetardemasenrealizarse.Esclaroporlaevoluciónposterior
+de la epidemia en Cuba que en nuestro trabajo estimamos
+correctamenteestatendencia.
+Tambiénenlosmodelosdeβ∗ variablesapedazoenel
+tiempo,seasumióunaefectividaddelaislamientoafinalesde
+abrillograndoβ∗−γ<0,quepodríadefinirafinalesdeabril
+unpicodeinfectadosactivosdelordendelas1000personas.
+Enestasituaciónoptimistaelnúmerodepersonasmáximo
+enestadograveestaríaenelordenloscientos.Enelcasode
+nohaberselogradocontrolarlaevolucióndelaepidemia,y
+continuarconlatasadecontagioal16.04.20loscasosgraves
+hubiesenrondadolos20000,yelpicosehubiesealcanzado
+enelmesdeseptiembre.Esteanálisiscoincideconelanterior.
+El apéndice 7 muestra la estimación de la tasa de recu-
+peración para Cuba como γ =0,062±0,004, la cual posee
+coincidenciaconlaestimadaparalacoladelacurvadeinfec-
+tadosdeChina,dándoseunauniversalidadenesteparámetro.
+Conlosmétodosestudiadoseneltrabajolosapéndices8y9
+sededicanalaevolucióndelaepidemiaenCubacondatosal
+7.06.20yal23.07.20respectivamente.Elprimerestudionos
+permiteestimarlaaparicióndeunsegundopicoydecaimiento
+delcontagio.Elsegundoestudiointentaserunaestimacióna
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+84 ModelosSIRmodificadosparalaevolucióndelCOVID-19
+140000
+120000
+100000
+80000
+60000
+40000
+20000
+0
+0 10 20 30 40 50
+Días,día1:24defebrero
+ainamelAedsodavresbo)R+I(:RIS
+0.30
+0.25
+0.20
+0.15
+0.10
+0.05
+0.00
+25 30 35 40 45
+Días,Día1:24defebrero.
+LAICNENOPXEEETSUJA.ainamelAed*βoigatnocedasatRIS
+Figura15.Laprimerafiguramuestralaevolucióndelosinfectadospara
+CoreadelSurdeacuerdoalosdatosexperimentales(puntosazules)yaun
+modeloSIRcontasadecontagioβvariable.Lasegundafiguramuestrala
+variacióndelatasadecontagioeneltiempo.Seconsideraγ=1/20.Corea
+delSurseencuentraenlaregióndondeβ∗−γ<0.
+Figura14.Laprimerafiguramuestralaevolucióndelosinfectadospara
+Alemaniadeacuerdoalosdatosexperimentales(puntosazules)enaun
+modeloSIRcontasadecontagioβvariable(líneanaranja).Elsegundo
+gráficomuestraelnúmerodeI+Rdelosdatos(puntosazules)confrontado
+conelmodelo(líneanaranja).Eltercergráficomuestraprimerolavariación
+delatasadecontagioeneltiempo,yelcuartográficoserealizaelajustede
+unadeexponencial(línea)alasβslocales(puntos)apartirdel
+confinamiento.Seconsideraγ=1/20.Alemaniaseencuentraenlaregión
+dondeβ∗−γ<0.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+ModelosSIRmodificadosparalaevolucióndelCOVID-19 85
+futuroapartirdelafechaenqueseenvíaestetrabajo.
+Nosgustaríadestacarqueelmensajeimportantedeeste
+trabajo es el hecho de que la dinámica de los parámetros
+que controlan la evolución de la epidemia es relevante. En
+particularlaevolucióndelatasadecontagioβ∗(odeR˜ −1,
+0
+I(cid:48)(t) ode )debetomarsemuyencuentaparadeterminarque
+I(t)
+medidasimponer.Laobservacióndeestascantidadessinduda
+permiteunaestimacióncualitativadecuandosedebeobtener
+elmáximodecasos,esdecir,decuandocomenzaráelfinde
+laepidemia.
+Agradecimientos
+AgradecemosaJuanBarranco,ArgeliaBernal,Alejandro
+CaboBizet,MilagrosBizet,DavidDelepine,AlejandroGil,
+AugustoGonzález,AlmaGonzález,AlejandroLage,Oscar
+Loaiza,AlbrechtKlemm,DamiánMayorga,MauroNapsu-
+ciale,GustavoNiz,OctavioObregónyLuisUreña,pordis-
+cusionesmuyútilesycomentariosduranteeldesarrollodel
+trabajo.NCBagradecealProyectoCONACyTA1-S-37752,
+al Proyecto UG CIIC 290/2020 y al Proyecto COVID19-
+UG36/2020“Modelaciónmatemáticadelapropagacióndel
+COVID-19 en México y Guanajuato", y al Laboratorio de
+Datos, DCI, de la Universidad de Guanajuato. ACM desea
+agradecerelapoyorecibidodelNetwork09,delaOficinade
+Asuntos Externos (OEA) del “Centro Internacional para la
+FísicaTeórica"(ICTP)enTrieste,Italia.
+7. Apéndice A: Gamma
+Acontinuaciónenlafigura16mostramosunagráficade
+dR/dt versusI.Sepuedeapreciarquelosvaloresdelatasa
+derecuperaciónsonaproximadamentesconstantes.
+80
+60
+40
+20
+0
+0 200 400 600 800
+CasosActivosI(t).Día1:16demarzo.
+.γetneidnePabuCaraptd/Rd
+a futuro teniendo en cuenta las incertidumbres. El primero
+sebasóenlaestimacióndeR (t)delosdatosdeinfectados
+0
+acumuladosyelsegundodelosdatosdeactivos.Elprimero
+poseemenosdispersiónqueelsegundo.
+ModeloI:ElúltimográficoenlaFig.17muestraelvalor
+deR obtenidodelajusteexponencial: 0
+(I+R)(cid:48)
+R = +1. (14)
+0
+γ(I+R)
+Estaformulaesexactaenellímitedondelaecuaciones
+del SIR son lineales. Note que este valor de R provee un
+0
+estimado valido siempre que R >1 puesto que los casos
+0
+acumuladossiempreaumentan.Existíaunriesgoconelvalor
+de R , dando resultados locales por encima de 1. Las tres
+0
+primerasfigurasen17muestranlosgráficosde:I,R,(I+R)
+conestaextrapolaciónexponencialalfuturo.Seconsideran
+erroresenlamedicióndecondicionesinicialesparaextrapolar.
+Sereportanparámetrosconel95%deconfianza.
+800
+600
+400
+200
+0
+(17.1) 0 50 100 150 200
+DAYS.Day1:16.03.2020
+Figura16.LafiguramuestraelajusteparaγdeCuba,obteniéndose
+γ=0,062±0,004.Losdatoscorrespondenalintervalodel16.03.20al
+23.07.20,sinembargoesteparámetronohavariadoconsiderablementedesde
+elcomienzodelaepidemia,yesteresultadoesuniversal(secorrespondeal
+estimadodelacoladelacurvadeinfectadosdeChina).Sereportaconel
+95%deconfianza.
+8. Apéndice B: Segundo pico
+En los meses posteriores a la aparición del primer pico
+empleamosdosmodelosparaestudiarlaevolucióndeCuba
+RORREPXEATEBabuCNISESACEVITCA
+3000
+2500
+2000
+1500
+1000
+500
+0
+(17.2) 0 50 100 150 200
+DAYS.Day1:16.03.2020
+RORREPXEATEB+abuCNISESACHTAED+DEREVOCER
+3000
+2500
+2000
+1500
+1000
+500
+0
+(17.3) 0 50 100 150 200
+DAYS.Day1:16.03.2020
+RORREPXEATEB+abuCNISESACDETALUMUCA
+ModeloII:ElúltimográficoenlaFig.18muestraelvalor
+deR obtenidodelajusteexponencial:
+0
+I(cid:48)
+R = +1. (15)
+0 γI
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+86 ModelosSIRmodificadosparalaevolucióndelCOVID-19
+4
+3
+2
+1
+0
+(17.4) 0 20 40 60 80 100
+DAYS.Day1:16.03.20
+abuCfo))R+I(γ(/')R+I(+1=0R
+Figura17. ModeloI,estimadosdeR 0=(
+γ
+(I
+(
++
+I+
+R
+R
+)(cid:48)
+)
++1).Lasfiguras(17.1)
+(17.2)y(17.3)muestranI,Re(I+R)conestaextrapolaciónexponencialal
+futuroapartirdel7.06.20.Lafigura(17.4)muestraelR 0obtenidodelajuste
+exponencialdecondatosdel16.03.20al06.06.20.Seconsideranerroresen
+lamedicióndecondicionesinicialesparaextrapolar.Sereportanparámetros
+conel95%deconfianza.Lospuntosazulessonlosdatos,lacurva
+intermediadenotaelvalormásprobable,ylazonasombreadalas
+trayectoriasposibles.
+Esta estimación es exacta en el límite donde la ecuaciones
+delSIRsonlinealesyvalidaparacualquiervalordeR ,sin
+0
+embargoposeemásdispersiónque(14)comopudeapreciarse.
+ElprimergráficoenlaFig.18eslacurvadeactivos,descrita
+primero por un β∗ a pedazos y con extrapolación al futuro
+exponencial. El segundo gráfico muestra el cambio en los
+valoresdeR ,primeroapedazoseneltiempo,luegoconuna
+0
+extrapolaciónexponencial.
+800
+600
+400
+200
+0
+(18.1) 0 50 100 150 200
+Días,día1:16demarzo
+RORRE+PETSABUCneSODATCETEDSODATCEFNI
+8
+6
+4
+2
+0
+(18.2) 0 20 40 60 80 100 120 140
+DAYS.Day1:16.03.20
+abuCI/'ImorfRIS0R
+6
+5
+4
+3
+2
+1
+0
+(18.3) 0 20 40 60 80 100
+DAYS.Day1:16.03.20
+AmbosestimadosenelModeloIyenelModeloIIpermi-
+tierondeterminarel7.06.2020queocurriríaunsegundopico
+delaepidemia,yelvalordelosinfectadosdisminuiría.
+abuCfo)Iγ(/'I+1=0R
+Figura18.ModeloII,estimadosdeR 0=(
+γ
+I(cid:48)
+I
++1).Lasfiguras(18.1)y
+(18.2)muestranI(t)yR 0conunatasadecontagioapedazosyesta
+extrapolaciónexponencialalfuturoapartirdel07.06.20.Lafigura(18.3)
+muestraelR 0obtenidodelajusteexponencial.Sereportanparámetrosconel
+95%deconfianza.Lospuntosazulessonlosdatos,lacurvaintermedia
+denotaelvalormásprobable,ylazonasombreadalastrayectoriasposibles.
+9. Apéndice C: Última actualización
+Considerandodatoshastael23.07.2020realizamosuna
+extrapolacióndelaspoblacionesdeCubaalfuturo.Conside-
+randointervalosdeconfianzaseapreciaquelasituaciónestá
+porelmomentocontrolada.
+Losgráficosenlafigura19muestran:I,R,(I+R)conesta
+extrapolaciónexponencialalfuturoparaelModeloI.Secon-
+sideranerroresenlamedicióndecondicionesinicialespara
+extrapolar.Sereportanparámetrosconel95%deconfianza.
+800
+600
+400
+200
+0
+(19.1) 0 50 100 150 200 DAYS.Day1:16.03.2020
+RORREPXEATEBabuCNISESACEVITCA
+2500
+2000
+1500
+1000
+500
+0
+(19.2) 0 50 100 150 200
+DAYS.Day1:16.03.2020
+RORREPXEATEB+abuCNISESACDETALUMUCA
+Referencias
+[1] “TheSARS-CoV-2inMexico:analysisofplausiblesce-
+nariosofbehavioralchangeandoutbreakcontainment",
+Acuña-Zegarraetal.Sinpublicar.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87
+ModelosSIRmodificadosparalaevolucióndelCOVID-19 87
+2500
+2000
+1500
+1000
+500
+0
+(19.3) 0 50 100 150 200
+DAYS.Day1:16.03.2020
+RORREPXEATEB+abuCNISESACHTAED+DEREVOCER
+https://medium.com/data-for-science
+[11] “Databaseworldometer"
+https://www.worldometer.info
+[12] “Estimating the number of infections and the impact
+of non- pharmaceutical interventions on COVID-19
+in11Europeancountries".https://www.imperial.ac.
+uk/media/imperial-college/medicine
+Figura19.ModeloI:Lasfiguras(19.1)(19.2)y(19.3)muestranlos
+[13] “CoronavirusCovid-19spreadinginItaly:optimizingan
+gráficosdeI,Re(I+R)conestaextrapolaciónexponencialalfuturoapartir
+epidemiologicalmodelwithdynamicsocialdistancing
+del23.07.20.Seconsideranerroresenlamedicióndecondicionesiniciales
+throughDifferentialEvolution"
+paraextrapolar.Sereportanparámetrosconel95%deconfianza.Lospuntos
+azulessonlosdatos,lacurvaintermediadenotaelvalormásprobable,yla https://arxiv.org/pdf/2004.00553.pdf
+zonasombreadalastrayectoriasposibles.
+[14] “Epidemic situation and forecasting of COVID-19 in
+and outside China"Yubei Huanga, Lei Yangb, Hongji
+[2] “An updated estimation of the risk of transmission of Daia, Fei Tiana, and Kexin Chena. https://www.who.
+thenovelcoronavirus(2019-nCov)",Tangetal. int/bulletin/online_first/20-255158.pdf
+https://www.sciencedirect.com/science/article/
+[15] “Clinical Characteristics of 138 Hospitalized Patients
+pii/S246804272030004X
+With 2019 Novel Coronavirus-Infected Pneumonia in
+[3] “Modelo de infectados para el Edo. de Guanajuato Wuhan, China", D.Wang et al. https://jamanetwork.
+COVID-19",J.BarrancoyA.Bernal.Sinpublicar. com/journals/jama/fullarticle/2761044
+[4] EntradadeBlog:“Comousélasmatemáticasparapre- [16] “Clinical features of patients infected with 2019
+decirCOVID-19enelestadodeGuanajuato,México", novel coronavirus in Wuhan, China", C.Huang et
+LisaShiller. al. https://www.thelancet.com/journals/lancet/
+https://www.lisashiller.com. article/PIIS0140-6736(20)30183-5/fulltext
+[5] “Substantialundocumentedinfectionfacilitatesthera- [17] “A Time-dependent SIR model for COVID-19 with
+piddisseminationofnovelcoronavirus(SARS-CoV2)", Undetectable Infected Persons", Y.Chen. P.E.Lu, CS.
+Lietal.Science2020, Chang and T.H. Liu. https://arxiv.org/pdf/2003.
+https://science.sciencemag.org/content/early/ 00122.pdf
+2020/03/24/science.abb3221
+[18] “Estimating the asymptomatic proportion of coro-
+[6] “Public Health Responses to COVID-19 Outbreaks navirus disease 2019 (COVID-19) cases on board
+onCruiseShipseuroWorldwide",Februaryhrefeuro the Diamond Princess cruise ship, Yokohama, Japan,
+“March2020",Moriartyetal. 2020",K.Mizumoto,K.Kagaya,A.Zarebski,G.Chowell.
+https://www.cdc.gov/mmwr/volumes/69/wr/ https://www.eurosurveillance.org/content/10.
+mm6912e3.htm 2807/1560-7917.ES.2020.25.10.2000180
+[7] “AnSIREpidemicModelwithTimeDelayandGeneral [19] “La pandemia covid-19-coronavirus en México y el
+NonlinearIncidenceRate",MingmingLiandXianning mundo"José-AntoniodelaPeña.Sinpublicar.
+Liu,
+[20] “Covid Cuba data". https://covid19cubadata.
+https://doi.org/10.1155/2014/131257
+github.io/#cuba
+[8] “Infectiousdiseasemodelswithtime-varyingparameters
+[21] “Preliminaryestimationofthebasicreproductionnum-
+andgeneralnonlinearincidencerate",XinzhiLiuand
+berofnovelcoronavirus(2019-nCoV)inChina,from
+PeterStechlinski
+2019to2020:Adata-drivenanalysisintheearlypha-
+https://doi.org/10.1016/j.apm.2011.08.019
+seoftheoutbreak",InternationalJournalofInfectious
+[9] “JohnHopkinsData" Diseases 92 (2020) 214-217. S. Zhao et al. https:
+https://data.humdata.org/dataset/ //pubmed.ncbi.nlm.nih.gov/32007643/
+novel-coronavirus-2019-ncov-cases
+[22] “Modelos SIR modificados para la evolución del CO-
+[10] “EpidemicModeling101:OrwhyyourCoVID-19ex- VID19"Nana Cabo Bizet, Alejandro Cabo Montes de
+ponentialfitsarewrong",BrunoGonçalves Oca.https://arxiv.org/abs/2004.11352
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.73-87

@@ -1,0 +1,296 @@
+58 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Promediaci(cid:243)n de estructuras regulares
+AlejandroAlonso Fœster1 / David GuinovartSanjuÆn2 / RaœlGuinovart D(cid:237)az3
+/ Reinaldo Rodr(cid:237)guez Ramos4 JuliÆn Bravo Castillero5
+RESUMEN. En el trabajo se estudia una metodolog(cid:237)a para la determinaci(cid:243)n de las propiedades efec-
+tivas de medios cuasi peri(cid:243)dicos en coordenadas curvil(cid:237)neas. Para lograr este objetivo se utiliz(cid:243) el
+mØtodo de homogeneizaci(cid:243)n asint(cid:243)tica, desarrollado en [1-2]. Se ejempli(cid:222) canlos resultados alcan-
+zados para un compuesto curvil(cid:237)neo multi-laminado encoordenadas esfØricas.
+Palabras claves: Materiales compuestos; coe(cid:222) cientes efectivos; homogeneizaci(cid:243)n asint(cid:243)tica; coor-
+denadas curvil(cid:237)neas.
+INTRODUCCI(cid:211)N de equilibrio de los medios heterogØneos que
+estudiamos en el presente trabajo poseen co-
+Los materiales compuesto laminados han sido
+e(cid:222) cientes cuasi peri(cid:243)dicos rÆpidamente oscilan-
+ampliamente estudiadosdebido a las mœlti-
+tes. El tratamiento numØrico de tales problemas
+ples aplicaciones de los mismos. Estos se dise-
+puede ser simpli(cid:222) cado si obtenemos algoritmos
+æan con el objetivo de obtener nuevos materia-
+anal(cid:237)ticos a partir de modelos asint(cid:243)ticos. El
+les que exhiben las propiedades necesarias para
+mØtodo de homogeneizaci(cid:243)n asint(cid:243)tica (MHA)
+dar respuesta a los crecientes problemas que se
+ha demostrado ser una herramienta e(cid:222) caz para
+presentan en la ciencia y la tecnolog(cid:237)a. Las cien-
+este prop(cid:243)sito.
+cias biol(cid:243)gicas y biomecÆnicas no han escapa-
+El objetivo de nuestro trabajo es explicarun
+do a la in(cid:223) uencia de los nuevos materiales, los
+algoritmo anal(cid:237)tico para encontrar los coe(cid:222) cien-
+bio-compuestos son usados como implantes en
+tes efectivos de medios laminados cuasi peri(cid:243)-
+huesos, dientes y muchas veces para la sustitu-
+dicos en coordenadas curvil(cid:237)neas. Comenzamos
+ci(cid:243)n de tejidos biol(cid:243)gicos. Recientemente se han
+planteando un problema general de la teor(cid:237)a de
+presentado modelos que describen la c(cid:243)rnea del
+elasticidad, descrito por un sistema de ecua-
+ojo humano como un medio laminado curvil(cid:237)neo
+ciones diferenciales con coe(cid:222) cientes variables y
+[3-4] y esta ha sido una motivaci(cid:243)n importante
+empleando el MHA se encuentra un problema
+para realizar el presente trabajo.
+aproximado con coe(cid:222) cientes constantes. Segui-
+La utilizaci(cid:243)n de mØtodos matemÆticos para
+damente se determinan las expresiones gene-
+la determinaci(cid:243)n de las propiedades globales o
+rales para los coe(cid:222) cientes en un cierto sistema
+efectivas de los materiales compuestos permite
+de coordenadas curvil(cid:237)neos y se ejempli(cid:222) can los
+desarrollar algoritmos con los cuales se pueden
+mismos para el caso esfØrico.
+predecir las mismas de manera te(cid:243)rica y orien-
+tar la realizaci(cid:243)n de experimentos a partir de los
+DESARROLLO
+resultados alcanzados.
+Las ecuaciones diferenciales de los proble-
+mas de contorno, que modelan las condiciones Metodolog(cid:237)a para la obtenci(cid:243)n
+de la soluci(cid:243)n del problema
+1 Universidad de las Ciencias InformÆticas, Carretera San Antonio
+de los Baæos, km 5‰, Reparto Lourdes, Boyeros, La Habana, Se estudia el problema de la determinaci(cid:243)n de
+Cuba, alejandroaf@uci.cu
+las propiedades efectivas de un material com-
+2 d.guinovart@lab.matcom.uh.cu
+3 guino@matcom.uh.cu puesto que consiste en una esfera como la que
+4 reinaldo@matcom.uh.cu se muestra en la Fig.1 formada por N capas de
+5 jbravo@matcom.uh.cu
+REVISTA CIENCIAS MATEM`TICAS 59
+→
+grosor δ y las propiedades del solido var(cid:237)an se- pida ξ que estÆ de(cid:222) nida sobre la celda de pe-
+gœn la posici(cid:243)n radial. Podemos considerar que riodicidad. Estas variables estÆn relacionadas a
+→
+→
+el tensor m(cid:243)dulo elÆstico C solo depende de la travØs de la igualdad ξ = x/ε , donde ε > 0 repre-
+componente x1 = r y posee la propiedad de perio- senta un parÆmetro pequeæo.
+dicidad La soluci(cid:243)n del problema (1.3)-(1.4) se busca
+C (r + nδ) = C(r) (1.1) en forma de un desarrollo asint(cid:243)tico formala dos
+escalas hasta orden 2 de la siguiente forma [2]:
+Donde n = 1, 2 ,(cid:133), N y
+R = nδ. (1.2)
+n
+(1.2)
+dond→e v (x) son funciones de clase C 2(Ω); Nl
+(ξ → , x→) y Nlk m (ξ → , x→) son funciones peri(cid:243)dicas ( d 0) e m
+(1)m →
+clase C2 respecto a la variable ξ y cumplen que
+El parØntesis angular denota
+el promedio de la funci(cid:243)n sobre la celda peri(cid:243)di-
+ca sobre V.
+Sustituyendo (1.6) en (1.3)-(1.5). Aplicando
+las operaciones y agrupando en potencias de ε y
+Fig. 1 Esfera compuesta por N lÆminas. por la teor(cid:237)a de la aproximaci(cid:243)n nula se obtiene
+el problema homogeneizado de la forma.
+A las estructuras que cumple la condici(cid:243)n
+(1.1)-(1.2) se les denomina estructuras cuasi
+(1.7)
+peri(cid:243)dicas.
+Consideremos un problema de contorno de la
+teor(cid:237)a de elasticidad no lineal en coordenadas Para estructuras cuasi peri(cid:243)dicas, los coe(cid:222) -
+curvil(cid:237)neas dado de la siguiente forma [1]: cientes
+(1.3)
+se denominan coe(cid:222) cientes efectivos para el pro-
+Con las condiciones de contorno:
+blema (1.7), tomando la direcci(cid:243)n de la tercera
+componente x3 de x→, setienen las siguientes ex-
+presiones:
+(1.4)
+La ley de Hooke toma la forma:
+(1.5)
+(1.8)
+Donde la soluci(cid:243)n u(x→) estÆ de(cid:222) nida en la
+regi(cid:243)n Ω⊂r3, con frontera Σ ∪Σ y Γp son los
+1 2 mn
+s(cid:237)mbolos de Christoffel.
+En general para las estructuras regulares el
+tensor m(cid:243)dulo elÆstico depende de dos variables
+espaciales; la variable global x→y una variable rÆ-
+60 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+AdemÆs se tiene que Nlk (ξ) y Nl son solu- En virtud de que se satisface lo anterior se
+(1)m (0)m
+ciones de los problemas locales: tiene la siguiente proposici(cid:243)n:
+Proposici(cid:243)n 2: Se satisface la relaci(cid:243)n si-
+(1.9) guiente
+(1.16)
+(1.10)
+donde,
+Para obtener la funci(cid:243)n Nlk (ξ) y los coe(cid:222) -
+(1)m (1.17)
+cientes efectivos se procede de la forma siguien-
+te: integrando (1.11) y restando en ambos miem-
+bros Ci3lk se tiene que:
+Son los tensores m(cid:243)dulos elÆsticos de la
+aproximaci(cid:243)n nula. [1] AdemÆs cumplen que
+(1.11)
+Donde los Ai3lk son constantes de integraci(cid:243)n,
+respecto a las derivadas de las funciones locales
+(1.12)
+Luego el tensor efectivo m(cid:243)dulo elÆstico es
+Tomando promedio de la parte izquierda de la
+ecuaci(cid:243)n anterior, por la hip(cid:243)tesis de continui-
+dad sobre la celda se tendrÆ:
+(1.18)
+Se obtiene de (1.12)
+(1.13)
+2. DESCRIPCI(cid:211)N DE LA METODOLOG˝A
+OBTENIDA. CASO ESF(cid:201)RICO
+Sustituyendo en (1.12) se obtiene (cid:222) nalmente
+Como resultado del anÆlisis realizado en la sec-
+ci(cid:243)n anterior se puede establecer una metodolo-
+g(cid:237)a general para determinar los coe(cid:222) cientes de
+la ecuaci(cid:243)n de equilibrio homogeneizada y de las
+condiciones en las fronteras (Hil, Hikl, Hijkl, Hijl).
+*
+(1.14)
+Explicaremos la metodolog(cid:237)a a travØs de un
+ejemplo. Consideremos el caso inicial del traba-
+La siguiente proposici(cid:243)n facilitara el cÆlculo jo (Figura 1). Una esfera formada por N capas de
+de los restantes coe(cid:222) cientes: grosor δ y cumple las condiciones de periodici-
+Proposici(cid:243)n 1: se tiene las siguientes rela- dad (1.1)-(1.2).
+ciones para las funciones locales Nl y Nlk Para ello trabajemos en las coordenadas esfØ-
+(0)m (1)m
+ricas dadas por
+(1.15) x1 = θ; x2 = φ; x3 = r (2.1)
+REVISTA CIENCIAS MATEM`TICAS 61
+Para el caso considerado, el tensor mØtrico donde las lÆminas son perpendiculares al eje x3,
+es una matriz cuadrada de orden 3 diagonal y reportados en [1].
+sus componentes no nulas estÆn dadas por las Sin embargo, considerar un sistema coorde-
+siguientes expresiones: nado curvil(cid:237)neo (esfØrico en particular), implica
+la determinaci(cid:243)n de otro grupo de coe(cid:222) cientes
+g = (rsen(φ))2; g = r2; g = 1 ( 2.2) efectivos asociados a los tensores de segundo y
+11 22 33
+tercer orden(Hil, Hikl, Hijl), que s(cid:237) dependen de los
+*
+s(cid:237)mbolos de Christoffel y se hallan a partir de la
+Los correspondientes s(cid:237)mbolos de Christoffel
+igualdad (1.16). Se muestra a continuaci(cid:243)n la
+no nulos son:
+lista de estos coe(cid:222) cientes:
+(2.3)
+Supongamos que los materiales que confor-
+man el compuesto son medios isotr(cid:243)picos y se
+tiene un medio cuasi-peri(cid:243)dico compuesto por n
+lÆminas de grosor δ con diferentes propiedades
+del medio (para el caso tratado en este trabajo
+son v y E llamados Raz(cid:243)n de Poisson y M(cid:243)dulo
+de Young respectivamente). Por tanto el tensor
+elÆstico, para cada fase, tendrÆ la siguiente lista
+de componentes:
+Estos Hijkl, que se han obtenido empleando
+la f(cid:243)rmula (1.18), coinciden con los coe(cid:222) cientes Una vez determinado los coe(cid:222) cientes efecti-
+efectivos para un medio laminado rectangular, vos se sustituyen en el problema homogenei-
+62 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+zado (1.7 y se obtiene la soluci(cid:243)n aproximada En [5] se a(cid:222) rma que para la mayor(cid:237)a de los au-
+→
+υ (x), que cumple que tores solo la Estromaposee una estructura que
+m
+permite justi(cid:222) car la resistencia mecÆnica obser-
+vada en la c(cid:243)rnea en su funci(cid:243)n primordial de
+mantener la integridad estructural del ojo. Es
+por esta raz(cid:243)n que se le asignarÆ los valores del
+M(cid:243)dulo de Young (E = 0.622 N/mm2) numØrica-
+S
+donde u es la soluci(cid:243)n exacta del problema ori- mente mayores que se han determinado en [6],
+ginal. mientras que los de menor valor numØrico a
+En la (cid:222) gura 2 se muestra un modelo geomØtrico las dos lÆminas restantes (E = 0.275 N/mm2
+EP
+de una c(cid:243)rnea humana donde se ha considera- y E = 0.279 N/mm2). Por otro lado, la Estroma
+EN
+do que se ajusta a la forma de una subregi(cid:243)n ocupa el 90 % del grosor de la c(cid:243)rnea, lo cual ac-
+esfØrica. El radio medido en la regi(cid:243)n central tœa directamente sobre el volumen de fracci(cid:243)n que
+oscila entre 495 y 510 μm; en la (cid:222) gura 3, por se calcula como V = A (cid:218)A , donde (Ai = (r 2−r2 ) φ),
+f i T e i i
+otro lado, se pueden observar las tres capas (A = (r 2−r2 ) φ) y φ = arcsen (D/(2r )) = 0.82 Rad
+T e i i c
+fundamentales que conforman estructuralmen- (Ver Figura 2).que se emplearÆ para calcular los
+te la c(cid:243)rnea denominadas Epitelio, Estroma y valores numØricos de los coe(cid:222) cientes efectivos
+Endotelio, las cuales estÆn separadas por dos Hijkl y Hijl, asociados al compuesto laminado en
+*
+membranas (Bowman y Descemet) de grosor coordenadas rectangulares y al compuesto en
+despreciables para los efectos de la formulaci(cid:243)n coordenadas curvil(cid:237)neas esfØricas que contiene
+de este trabajo. aporte geomØtrico, respectivamente.
+Fig 2 Modelo geomØtrico de la c(cid:243)rnea humana.
+Fig 3 Estructura interna de la c(cid:243)rnea humana.
+REVISTA CIENCIAS MATEM`TICAS 63
+A continuaci(cid:243)n se muestran los grÆ(cid:222) cos com- En la Figura 5, se tiene una comparaci(cid:243)n en-
+parativos para las relaciones entre coe(cid:222) cientes tre los coe(cid:222) cientes efectivos plano H1111 y H113
+efectivos en coordenadas rectangulares y esfØri- pero ahora tomando los dos valores extremos
+cas que se han obtenido en este trabajo. En la del grosor de la c(cid:243)rnea dados en [5, 6] y ana-
+Figura 4, se puede observar que se describe el lizando su comportamiento en los extremos de
+comportamiento en el Æpex (centro) de la c(cid:243)rnea la lÆmina, es decir φ = 0.82 Rad. Lo cual no
+Max
+de los coe(cid:222) cientes efectivos del caso rectangular muestra que el efecto de la no linealidad geomØ-
+H1313 y el caso esfØrico H131, donde se muestra trica in(cid:223) uye en que los valores numØricos de los
+una tendencia a disminuir el valor numØrico a H113 son siempre menores que los de los H1111, lo
+medida que el volumen de fracci(cid:243)n V tiende a 1, cual resulta interesante siempre que se pueda
+f
+ademÆs de ser signi(cid:222) cativamente menor todos explicar coherentemente el signi(cid:222) cado f(cid:237)sico de
+los valores numØricos a medida que el grosor de los coe(cid:222) cientes efectivos analizados.
+la lÆmina R aumenta.
+Max
+CONCLUSIONES
+El objetivo central de este trabajo ha sido la ex-
+plicaci(cid:243)n de una metodolog(cid:237)a descrita en [1],
+para hallar las propiedades efectivas de medios
+cuasi peri(cid:243)dicos usando coordenadas curvil(cid:237)-
+neas. El algoritmo presentado es un mØtodo
+bastante general que estÆ rigurosamente jus-
+ti(cid:222) cado. El mismo puede ser fÆcilmente imple-
+mentado computacionalmente. Se muestra la
+lista de coe(cid:222) cientes efectivos que se determinan
+en este formalismo y su importancia para de-
+terminar aquellos que aportan a la no lineali-
+dad geomØtrica del problema en cuesti(cid:243)n. En
+las grÆ(cid:222) cas (Figuras 4 y 5) se puede observar
+c(cid:243)mo afecta este fen(cid:243)meno en el centro de una
+estructura con forma esfØrica y compuesta por
+varias capas, aunque no resulta posible dar una
+explicaci(cid:243)n f(cid:237)sica inmediata a los valores numØ-
+Fig 4 Comparaci(cid:243)n entre coe(cid:222) cientes efectivos.
+ricos calculados del coe(cid:222) ciente efectivo. Ser(cid:237)a
+necesario resolver el problema elÆstico lineal
+empleando los coe(cid:222) cientes efectivos calculados
+y comparar con resultados te(cid:243)ricos y prÆcticos
+publicados en el mundo para determinar mejor
+la adecuaci(cid:243)n del modelo al interØs de los auto-
+res de describir el comportamiento de una c(cid:243)r-
+nea humana en estado de equilibrio sometida a
+cargas diversas. El modelo desarrollado ha con-
+siderado solamente medios elÆsticos, pero pue-
+de ser generalizado a estructuras cuasi peri(cid:243)di-
+cas, donde existan interacciones mÆs complejas
+entre las propiedades de las fases, por ejemplo
+acoplamientos de campos mecÆnicos, elØctricos
+y magnØticos; lo cual resulta de mucho interØs
+en la ciencia y las aplicaciones de los materiales
+compuestos. Este trabajo abre as(cid:237) una ventana
+para la modelaci(cid:243)n de otras estructuras cuasi
+peri(cid:243)dicas laminadas como la que se estudia en
+Fig. 5 Comparaci(cid:243)n entre los coe(cid:222) cientes efectivos. los trabajos [3-6] citados en la literatura.
+64 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+BIBLIOGRAF˝A [4] David Huang, Maolong Tang, RajShekhar.Mathe-
+matical Model of Corneal SurfaceSmoothing After
+[1] B.E. Pobedrya, Mechanics of Composite Mate- Laser Refractive Surgery. American Journal ofO-
+rials, Moscow State University Press, Moscow, phthamology, 135 (2003) 267-278.
+(1984) in Russian. [5] Anna Pandol(cid:222) , Gerhard A. Holzapfel.Three-dimen-
+[2] N. Bakhvalov, G. Panasenko. Homogenisation: sional modeling and computational analysis of the
+Averaging Processes in Periodic Media. Mathema- human cornea considering distributedcollagen (cid:222) -
+tics and its Application (Soviet Series). (1989). bril orientations.Journal of Biomechanical Engi-
+[3] Long-yuan Li, Brian Tighe; Nonlinear analysis of neering.Vol. 130 (2008), pp 061006-1-061006-12.
+static axisymmetric deformation of the human [6] D. Cabrera FernÆndez et Al. Finite element analy-
+cornea. Computational Materials Science, 38 sis applied to cornea reshaping. Journal ofBio-
+(2007) 618(cid:150)624 mecanical Optics. Vol. 10(6), (2005), pp 1-19.
+ABSTRACT. In this work, we show a methodology for the determination of the effective properties of
+quasi periodic structures in curvilinear coordinates. In order to reach this target, the asymptotic
+homogenization method developed in [1-2] was used. The results are illustrated for a laminate cur-
+vilinear composite in spherical coordinates.

@@ -1,0 +1,841 @@
+REVISTA CIENCIAS MATEMÁTICAS Vol. 23 único, Nos. 2005-2006
+ALGUNAS NOTAS SOBRE LAS PROPIEDADES
+EFECTIVAS DE COMPUESTOS LAMINADOS
+TERMOPIEZOELÉCTRICOS
+Esperanza García Santoyo, Julián Bravo Castillero1 y Reinaldo Rodríguez Ramos
+Facultad de Matemática y Computación, Universidad de La Habana, La Habana, Cuba
+Federico J. Sabina, Instituto de Investigaciones en Matemáticas Aplicadas y Sistemas,
+Universidad Nacional Autónoma de México, México, D. F., México
+Raúl Martínez Rosado, Instituto Superior de Estudios Superiores de Monterrey, Campus, Estado de México,
+Escuela de Ingeniería y Computación, Estado de México, México
+RESUMEN
+Se obtienen las expresiones generales de las propiedades efectivas para medios laminados termo-
+piezoeléctricos, provistos de una estructura periódica y cualquier número finito de láminas por celda
+periódica unitaria. Este resultado se basa en la combinación de las fórmulas reportadas por Pobedrya
+(Capítulo 5, Mecánica de Materiales Compuestos, 1984) para el caso puramente elástico, con las
+notaciones abreviadas utilizadas en Galka et al. (Comput. Assis. Mech. Engng. Sci., 3, 113-154, 1996).
+En particular, se demuestra que a partir de las fórmulas generales obtenidas para n fases, resultan las
+correspondientes al caso n = 2, reportadas en el mencionado artículo de Galka et al.
+ABSTRACT
+General expressions of the effective properties for thermopiezoelectric laminated media, which have a
+periodic structures and a layers finite number by each unit periodic cell, are obtained. This result
+consists in the combination of formulae reported by Pobedrya (Chapter 5, Mechanics of Composite
+Materials, 1984) for the purely elastic case, with the summarized notations used in Galka et al. (Assis.
+Mech. Engng. Sci.3, 113-154, 1996). The formulae corresponding to two-layered thermopiezoelectric
+composites published by Galka et al. are derived of the general formulae obtained for n phases.
+INTRODUCCIÓN
+El Método de Homogeneización Asintótica es una eficiente técnica matemática para obtener propiedades
+efectivas de materiales compuestos. Este método ha sido aplicado extensivamente a los más diversos
+medios heterogéneos, sin embargo, a continuación sólo nos referiremos a algunos trabajos donde ha sido
+aplicado a medios laminados provistos de una estructura periódica. Por ejemplo, en [1] es usado para
+encontrar fórmulas generales de compuestos termo-piezoeléctricos bifásicos. En [2] se logran fórmulas
+analíticas generales para todos los coeficientes efectivos de compuestos piezoeléctricos n-laminados
+mediante una generalización previa de los resultados publicados en el capítulo 5 de [3] para el caso
+puramente elástico. Importantes resultados matemáticos relativos a los fundamentos del método, con
+particular insistencia en medios termo-piezoeléctricos laminados, pueden ser encontrados en [4].
+La contribución teórica de este artículo es la generalización de las fórmulas reportadas en [1] al caso de
+compuestos termo-piezoeléctricos formados por cualquier número finito de láminas. Basado en los
+resultados publicados en [5] se tiene que tales fórmulas son válidas tanto para estructuras periódicas como
+no periódicas.
+En la sección 2 se presenta el planteamiento del problema para un medio termo-piezoeléctrico formado por
+múltiples láminas, se plantean los problemas locales (modelo matemático) utilizando la notación compacta
+introducida en [4], y se describe el procedimiento de obtención de las expresiones analíticas para los
+correspondientes coeficientes efectivos. En la sección 3, siguiendo una vía diferente de solución de los
+problemas locales, a saber la que aparece en [4], se obtienen las fórmulas generales correspondientes a las
+propiedades efectivas de compuestos bifásicos. Finalmente, en la sección 4 se demuestra que tales fórmulas
+resultan a partir de las obtenidas en la sección 2 para un caso particular n = 2.
+E-mail: 1jbravo@matcom.uh.cu
+76
+2. COEFICIENTES EFECTIVOS Y PROBLEMAS LOCALES
+Sea
+77
+   3 la región acotada que ocupa un compuesto laminado termo-piezoeléctrico, constituido por
+elementos recurrentes (celdas) que están periódicamente distribuidas a lo largo del eje O x
+3
+. Cada celda puede
+poseer cualquier número finito de láminas termo-piezoeléctricas. Los ejes de simetría del material de cada
+lámina son paralelos entre sí y el eje x
+3
+es perpendicular al laminado. Las componentes de los tensores
+elástico, termo-elástico, piezoeléctrico, dieléctrico y piro-eléctrico serán denotadas, respectivamente, por c , ,
+ijkl ij
+g ,  y . A lo largo de este artículo los índices latinos toman valores 1, 2 y 3; y los índices griegos recorren
+ijk ij i
+desde 1 hasta 4. Es adoptado el convenio de suma respecto a los índices repetidos. Denotaremos por k la
+ij
+conductividad del calor, por  
+C
+T
+e
+0
+; C el calor específico en tensión constante por unidad de volumen y
+e
+por T la temperatura de referencia (absoluta). Supongamos que todas las funciones materiales son Y-
+0
+periódicas donde Y = y : 0  y  1 es la celda periódica unitaria. Aquí
+3 3
+y
+3
+
+x
+
+3 es la coordenada local
+l
+(rápida) y   es un p arámetro geométrico pequeño, el cual representa la razón entre una longitud
+L
+característica l de la celda periódica Y, y una longitud característica L del dominio completo .
+Usando una notación compacta introducida en [1, 4], los coeficientes efectivos pueden ser escritos como:
+C
+   
+ C
+   
+ C
+  3
+d
+
+d
+
+y
+
+3
+ (1)
+k
+ij
+ k
+ij
+ k
+3i
+d
+d
+j
+y
+3
+(2)
+donde C  c , C  g , C  -  , C  - , C   and C  . El corchete angular define el
+ijmn ijmn 4jmn jmn 4j4n jn ij44 ij 4j44 j 4444
+1
+promedio por unidad de longitud de la magnitud sobre la celda unitaria, es decir F  F(y )dy . Aquí las
+3 3
+0
+funciones auxiliares  y j con los pre-subíndices  y j son soluciones de los siguientes problemas
+
+locales:
+Problema L: Encontrar  sobre
+ 
+Y 
+
+0 , y 13
+
+
+y
+13 , y 23
+
+ . . . 
+y
+n3 ,1
+
+, que satisfacen la ecuación
+d
+d
+y
+3
+
+C
+ 3  3
+d
+
+d
+
+y
+
+3
+  C
+ 3  
+
+= 0 (3)
+tal que  0, (1) - (0) = 0 (condición de periodicidad) y las condiciones de contacto perfecto en
+     
+las interfases:
+ 
+ 
+
+
+ 
+y m3
+ 0 , (4)
+   
+C (y )   C (y ) 0, m = 0,…,n (5)
+ 33 3 y3 3 3 
+ym
+3
+Problema jL: Encontrar j Y-periódica que satisface la ecuación:
+78
+d
+d
+y
+3
+
+k
+3 j
+ k
+3 3
+d
+d
+j
+y
+3
+
+ 0 . (6)
+tal que  0,
+k
+
+k
+(1 )  
+k
+( 0 )  0 (condición de periodicidad) y las condiciones de contacto perfecto en las
+interfases:
+ 
+k
+ 
+y m3
+ 0 ,
+ k
+ik
+ k 
+ij k
+
+,j
+
+y m3
+ 0 , m = 2,…,n
+donde  (  )  
+y m3
+ (  ) m ( y m3  1 )  (  ) m  1 ( y m3  1 )
+1
+f  f(y)dy.
+0
+Siendo (  ) i el valor que toma la función en la lámina
+y
+i3 1 , y 13
+
+y y m3 , m = 1,…,n, indican las interfases entre
+cada lámina.
+2.1. Coeficientes efectivos de un compuesto termo-piezoeléctrico de
+n
+fases
+Para obtener las expresiones generales de los coeficientes efectivos definidos por las relaciones (1) - (2),
+es necesario resolver los anteriores problemas locales. Usaremos, para este caso, el procedimiento
+empleado en [3] para el caso puramente elástico. En efecto, la ecuación (3) es equivalente a:
+C ( )´ + C C0
+33   3 3
+siendo C0 las componentes del tensor constante resultante de la integración. Despejando en la ecuación
+3
+anterior resulta
+ 
+(  )´C1 C0 C (7)
+  33 3 3
+donde C1 son las componentes de la matriz inversa de C .
+33 33
+Las funciones locales  pueden ser escritas como:
+ 
+n1
+() (i)()I() (8)
+   i
+i1
+donde (i) es la correspondiente a la lámina i, e I es la función indicadora, es decir
+  i
+ 
+1 si  yi1,yi
+ 3 3
+I i () =    siendo y0 3 0, yn 3 1 1
+ 0 si yi1,yi
+ 3 3
+Promediando en ambos miembros de (8), resulta:
+(  )´  n1 y  i (  )´()d (n1)(1) (0)(0) n1    (9)
+          y(i)
+3
+i1yi1 i2
+3
+La expresión (9) se anula en virtud de las condiciones de contacto ideal, (4) y (5). Seguidamente,
+promediando en ambos miembros de (7), se obtiene:
+79
+C 0p
+3 q 3
+ C  13
+ 3
+ 1
+C  13
+ 3
+C
+ 3  
+(10)
+Luego sustituyendo (10) en (7) se tiene que:
+d    C1   C1 1 C1 C C   (11)
+dy
+33
+
+33 33 3 3
+
+3
+Finalmente, sustituyendo (11) en (1) se obtiene la expresión general para los coeficientes efectivos de
+compuestos termo-piezoeléctricos formados por n láminas:
+C      C
+   
+ C
+  3
+C  13
+ 3
+C  13
+ 3
+ 1
+C  13
+ 3
+C
+ 3  
+ C
+  3
+C  13
+ 3
+C
+ 3  
+(12)
+Siguiendo un procedimiento análogo, se pueden obtener los coeficientes efectivos para el tensor de la
+conductividad térmica, a saber:
+k
+ij
+ k
+ij
+ k
+i3
+k 3 13 k 3 13
+ 1
+k 3 13 k
+3 j
+ k
+i3
+k 3 13 k
+3 j
+(13)
+2.1.1. Algunas notas
+1) Las fórmulas (12) y (13) son también válidas para un laminado finito no necesariamente periódico. Las
+expresiones de los problemas locales y de los coeficientes efectivos son las mismas en ambos casos, con
+la particularidad de que para un problema no periódico las funciones locales toman el valor cero en las
+caras opuestas de la celda unitaria Y (ver, por ejemplo [5], de donde resulta que para el caso
+unidimensional, que aquí se estudia, las condiciones de contorno son equivalentes a las condiciones de
+periodicidad).
+2) En (12) y (13) se cumplen las propiedades de simetría de las fases así como las condiciones de elipticidad,
+es decir,
+Ch Ch ,Ch Ch ,Ch Ch
+     
+0:eE3Ch e e  e 2
+S   
+ 0:eE3 khaa  e 2
+1 S ij i j 1
+La comprobación de las propiedades de simetría se realiza haciendo permutaciones de índices
+convenientemente hasta obtener la expresión deseada. Para verificar, las condiciones de elipticidad basta
+seguir la técnica empleada en el Capítulo 6, Págs. 196-222 de [6].
+3) A modo de control, se puede observar de (12) y (13) que las unidades para los coeficientes efectivos
+coinciden con las unidades de las fases. Además, si el medio es homogéneo, los paréntesis angulares
+desaparecen y se reproducen las propiedades efectivas de las fases del medio homogéneo.
+4) En la literatura técnica este tipo de distribución de las láminas (y  y ) es conocida como “conectividad en
+3
+serie” (ver Figura 1), y el caso correspondiente y  y (o y ) es llamado “conectividad en paralelo” (ver [4]).
+1 2
+De (13) y (14), intercambiando en estas expresiones los índices 3 y 2 (ó 1), puede ser obtenida la
+correspondiente fórmula para el caso de conectividad en paralelo.
+Figura 1. Distribución laminada “conectividad en serie”.
+3. COEFICIENTES EFECTIVOS PARA EL CASO BILAMINADO (n = 2)
+Para que el trabajo sea auto-contenido, se incluye ahora la solución correspondiente al caso bifásico dada
+en [4]. Los problemas locales (3)-(6) pueden ser resueltos usando el procedimiento empleado en [1] para el
+caso de un compuesto bilaminado, como sigue: De (7) resulta que:
+ =
+ 
+80
+C  13
+ 3
+
+C 0
+3  
+ C
+ 3  
+
+y
+3
+ A  
+Para que la notación sea más simple hagamos y = y, de donde se tiene que las funciones locales (y)
+3  
+se pueden definir por:
+(1)
+
+ (y),y(0,)
+ 
+
+ (y)
+ 
+
+(2)
+
+  (y),y(,1)
+ 
+En este caso las condiciones (4)-(5) vienen dadas por:
+(1
+ 
+)
+
+
+( 0 )
+
+( 2
+ 
+)
+
+
+(1 )
+(1) (2)
+,  ,
+ ()  ()
+   
+las cuales conducen a las siguientes expresiones:
+(1
+A
+ )
+
+
+
+(
+C
+2 )
+
+1 
+3  3
+
+C 0
+3  
+
+(
+C
+2 )
+ 3  
+
+
+( 2
+A
+)
+
+ 
+(14)
+(1
+C
+)
+
+1 
+3  3
+
+C 0
+3  
+
+(1
+C
+)
+ 3  
+
+
+(1
+A
+ )
+
+
+
+(
+C
+2 )
+
+1 
+3  3
+
+C 0
+3  
+
+(
+C
+2 )
+ 3  
+
+ 
+( 2
+A
+)
+
+ 
+(15)
+Restando miembro a miembro (14) y (15) se obtiene:
+ (1)1 (1) (2)1 (2) 
+C0 B1   (16)
+3  Cj33 C j3(1) C j33 C j3
+donde
+81
+B
+ 
+ 
+(1 )C 1
+ 3  3  (1   )
+( 2C ) 1
+ 3  3
+Sustituyendo (16) en (7), resulta
+
+ (1)  ~  
+  (1)B1 C (17)
+    3
+ 
+ ( 2
+ 
+)
+
+
+
+
+  
+~B
+ 1
+ C
+ 3  
+ 
+(18)
+donde
+~B
+ 
+  C (2 )
+ 
+ (1   )C (1 ) y
+ C
+ 3  
+ 
+ C (2 )3
+  
+ C (1 )3
+  
+Para obtener los coeficientes efectivos asociados al problema local L basta sustituir (17) y (18) en (1), de
+
+donde se tiene que:
+  ~  
+Ch C(1) (1)C(2) (1) C B1 C (19)
+   j3 j j3
+La fórmula (19) fue reportada en [4] salvo un pequeño detalle de impresión en el orden de los factores del
+segundo sumando, el cual no tendría sentido desde el punto de vista algebraico. Esta fórmula general puede
+ser aplicada a tensores cartesianos de segundo rango, como es el caso del tensor de conductividad térmica,
+de donde resulta que:
+k hm
+n
+ k
+m n
+  (1   )  k
+m 3
+   ~K  1  k
+3 n
+  (20)
+siendo
+~K
+  k (2 )
+3 3
+  k (1 )
+3 3
+.
+4. RELACIÓN ENTRE LAS FÓRMULAS (12) Y (13) CON (19) Y (20), RESPECTIVAMENTE
+Las fórmulas (19) y (20) pueden ser obtenidas a partir de (12) y (13). Para probar que de (12) resulta (19)
+como caso particular, re-escribamos primero la ecuación (12) de la forma siguiente:
+C
+   
+ C
+   
+ A
+   
+ B
+   
+(21)
+donde
+A
+   
+ C
+  3
+C  13
+ 3
+C  13
+ 3
+ 1
+C  13
+ 3
+C
+ 3  
+(22)
+B  C C1 C (23)
+ 3 33 3
+para el caso n = 2, (23) se puede escribir como:
+  ~
+A  C(1) (C(1) )1(1)C(2) C(2) )1 C(1) B1C(2) 
+ 3 33 3 33 33  33
+ 
+ (C(1) )1C(1) (1)C(2) )1C(2) ) (24)
+33 3 33 3
+donde
+B  C1 (C1 )1(1)(C(2) )1,
+ 33 33 33
+~
+B C(2) (1)C(1) , (25)
+ 33 33
+1 ~ ~
+B1  C1 C(2) B1C(1) C(1) B1C(2) ,
+ 33 33  33 33  33
+~
+B C(1) B C(2) C(2) B C(1) . (26)
+ 33  33 33  33
+Efectuando los productos indicados en (22) resulta:
+82
+A
+   
+  2 C (1 )
+ 3
+~B
+ 1 C (23
+
+)
+3
+( C (1 )3
+  3
+)  1 C (1 )3
+  
+  (1   )C (1 )
+ 3
+~B
+ 1 C (23
+
+)
+
+
+~
+(1)C(2) (C(2) )1(C(1) B1C(2) (C(1) )1C(1) 
+3 33 33  33 33 3
+ (1   ) 2 C (2 )
+3   
+( C (23
+
+)
+3
+)  1 C (1 )3
+  3
+~B
+ 1 C (23
+
+)
+
+Es decir,
+A
+   
+  C (1 )
+ 3
+~B
+ 1
+
+C (23
+
+)
+3
+( C (1 )3
+  3
+)  1 C (1 )3
+  
+ (1   )C (23
+
+)
+
+
+
+~
+(C(2) )1C(1) B1C(2) (C(1) )1C(1) 
+ 33 33  33 33 3 
++(1)C(2)   (27)
+3
+ (1)(C(2) )1C(1) B ~ 1C(2) 
+ 33 33  3 
+Por otra parte, para (23) se tiene que
+B =
+
+ C (1 )
+3
+( C (1 )3
+  3
+)  1 C (1 )3
+  
+ (1   )C (2 )
+3   
+( C (23
+
+)
+3
+)  1 C (23
+
+)
+
+es decir
+~ ~
+B = C(1) B1B (C(1) )1C(1)
+ 3   33 3
+ (1   )C (2 )
+3   
+( C (23
+
+)
+3
+)  1 C (23
+
+)
+
+(28)
+Completando la diferencia A - B , agrupando el primer término de (27) y el primer término de (28);
+ 
+y el segundo sumando de (27) con el segundo sumando de (28) respectivamente resulta:
+A - B =
+ 
+ C (1 )
+ 3
+~B
+ 1
+ 
+
+(2 ) C
+3  
+(1 
+3
+
+(
+)
+C
+( C
+(1 )3
+3  
+(2 )
+3  
+)
+
+1 
+
+C
+~B
+(1 )3
+ 
+(
+ 
+
+C
+
+(1 )3
+  3
+)  1 C (1 )3
+  
+
+(29)
+~
+(C(2) )1C(1) B1C(2) (C(1) )1C(1)  
+ 33 33  33 33 3 
++ (1 - )C(2)  
+3
+ (1)(C(2) )1C(1) B ~ 1C(2) (C(2) )1C(2) 
+ 33 33  3 33 3
+Usando la fórmula (25), el primer sumando de (29) toma la forma
+~  
+A* (1)C(1) B1 C(2) )C(1)
+ 3  3 3
+Análogamente, usando (25) y (26), el segundo sumando de (29) se transforma en
+83
+B *
+  
+  (1   )C (2 )
+   3
+~B
+ 1
+
+C (23
+
+)
+
+)  C (1 )3
+  
+
+Finalmente
+A
+   
+ B
+   
+ A *
+  
+ B *
+  
+
+  (1   )
+
+C (2 )
+   3
+ C (1 )
+ 3
+ ~B
+ 1
+
+C (23
+
+)
+
+ C (1 )3
+  
+
+es decir,
+A - B =
+ 
+ (1   )
+ C
+   3
+  ~B
+ 1
+ C
+ 3  
+ 
+(30)
+ 
+donde C C(2) C(1) .
+  
+Ahora sustituyendo (30) en (21) llegamos finalmente a:
+C h
+  
+ C
+   
+  (1   )
+ C
+  3
+  ~B
+ 1
+ C
+ 3  
+ 
+la cual coincide con (19).
+Utilizando el mismo procedimiento de arriba puede obtenerse (20) a partir de (13).
+CONCLUSIONES
+Combinando las notaciones compactas reportadas en [1] con el procedimiento de homogeneización
+desarrollado en [3], para el caso puramente elástico, se han obtenido expresiones analíticas para todos los
+coeficientes efectivos de compuestos termo-piezoeléctricos laminados con cualquier número finito “n” de
+láminas. A modo de control, se demuestra que para “n = 2” se obtienen, como caso particular, las fórmulas
+reportadas en [1].
+AGRADECIMIENTOS
+Este trabajo ha sido apoyado por los proyectos CONACYT 47218-F, y CITMA PNCIT IBMFQC 09-2004.
+REFERENCIAS
+[1] GALKA, A.; J.J. TELEGA and R. WOJNAR (1996): Some Computational aspects of Homogeni-
+tation of Termopiezoelectric Composites, Computer Assisted Mechanics and Engineering
+Sciences, 3:133-154.
+[2] CASTILLERO, J.B.; J.A. OTERO; R.R. RAMOS and A. BOURGEAT (1998): “Asymptotic
+Homogenization of Laminated Piezocomposite Materials”, Int. J. Solids Structures 35(5-6),
+527-541.
+[3] POBEDRYA, B.E. (1984): Mecánica de Materiales Compuestos, Universidad Estatal de
+Moscú, (en ruso).
+[4] GALKA, A.; J.J. TELEGA and R. WOJNAR (1997): “Thermodiffusion in Heterogeneous Elastic
+Solids and Homogenization”, Reports on Mathematical Physics, 40 585-598.
+[5] GOLBACHEV, V.I. and B.E. POBEDRYA (1997): “The effective characteristics of inhomogeneous
+media”, J. Appl. Maths. Mechs., 61 145-151.
+[6] BAKHALOV, N.S. and G.P. PANASENKO (1989): Homogenization: Averaging Processes in
+Periodic Media, Kluwer, Dordrecht.

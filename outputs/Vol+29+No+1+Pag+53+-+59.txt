@@ -1,0 +1,633 @@
+CienciasMatema´ticas,Vol.29,No.1,Pag.53-59,2015
+Recibido02-2015
+Bifurcacio´n de Hopf subcr´ıtica para el modelo
+reversible no Lineal de Gray-Scott con difusio´n
+Subcritical Hopf Bifurcation for reversible non linear
+Gray-Scott model with diffusion
+Susely Figueroa Iglesias1*, Mariano Rodr´ıguez Ricard1
+Resumen Lainvestigacio´ndelaocurrenciadebifurcacio´ndeHopf,sepuedellevaracaboenunainfinidadde
+modelos,incluyendosistemasdina´micosdetiporeaccio´n-difusio´n.Unsistemaimportantedeestetipoqueda
+representadocuandoelte´rminodereaccio´nesta´ dadoporunmodeloreversiblenolinealdeGray-Scott,que
+eselma´ssimpleconsistenteconprincipiosqu´ımicos.Propuestoen1983porGrayyScott,elmodelohasido
+estudiado en gran medida como un simple modelo polinomial de accio´n de masa, que tiene una dina´mica
+rica.ElmodeloreversibledeGray-Scottesunaexpansio´ndelmodelooriginalyesta´ derivadodelconjuntode
+dosreaccionesqu´ımicasreversibles.Elmodelooriginalcorrespondeadosreaccionesirreversibles,dondeel
+productoesinerte,yportantosemodelacondosvariables,perosisesuponequenoloseaentoncessetiene
+unmodelocontresdimensiones,desdeelpuntodevistadelasvariables.Enestetrabajoserealizo´ unana´lisis
+sobrelaocurrenciadebifurcacio´ndeHopfsubcr´ıticadelsistemadereaccio´n-difusio´nquerepresentaelmodelo
+reversiblenolinealdeGray-Scott.Paraesteana´lisisseutilizo´ lateor´ıageneraldelabifurcacio´nencuestio´nyla
+correspondientealTeoremadelaVariedadCentral.
+Abstract To investigate Hopf Bifurcation, can be made in several models, including dynamics models of
+reaction-diffusion. Animportantsystemofthistypecanberepresentedwhenthetermofreactionisareversible
+nonlinearmodelofGray-Scott,whichisthesimplerconsistentwithchemicalprinciples. ProposedbyGrayand
+Scottin1983,themodelhavebeenstudiedinagreatformlikeasimplepolynomialofmassactionmodel,which
+hasarichdynamic. ThereversiblemodelofGray-Scottisanexpansionoforiginalmodelanditisderivedfrom
+a set of two reversible chemical reactions with inert product, and it’s represented with two variables, but if it
+supposethattheproductisn’tinert,thenthemodelhasthreedimensions,fromthepointofviewofvariables.
+InthisworktheobjectivewastodoananalysisaboutthesubcriticalHopfbifurcationinthereaction-diffusion
+system which represent the nonlinear reversible model of Gray-Scott. For this it is used the Hopf bifurcation
+generaltheoryandCenterManifoldtheorem.
+PalabrasClave
+Bifurcacio´ndeHopf,modeloGray-Scott
+1DepartamentodeMatema´tica,UniversidaddeLaHabana,Cuba,s.figueroa@matcom.uh.cu,rricard@matcom.uh.cu
+*AutorparaCorrespondencia
+1. Introduccio´n y ana´lisis global. Por ejemplo, comportamientos post-cr´ıti-
+costalescomolabifurcacio´nsilla-nodoylabifurcacio´nde
+Lateor´ıadelossistemasdina´micosnolinealesjuegaun
+Hopfpuedenserestudiadaslocalmenteenunavecindaddel
+papelmuyimportanteencasitodaslasa´reasdelacienciay
+puntocr´ıtico,mientrasqueo´rbitasheterocl´ınicasyhomocl´ıni-
+laingenier´ıa,yaquelosmodelosmatema´ticosdelosfeno´me-
+cas, y caos son esencialmente comportamientos globales y
+nosdelmundorealsondehechonolineales.Lateor´ıadela
+lo´gicamentetienenqueserestudiadosglobalmente.Lasdos
+dina´micaesparticularmenteu´tilenelestudiodecomporta-
+categor´ıasmencionadasnecesitansertratadascondiferentes
+mientoscomplejostalescomolainestabilidad,labifurcacio´n
+teor´ıasymetodolog´ıas[1].
+yelcaos,loscualessonencontradosenmeca´nica,aerona´utica,
+circuitosele´ctricos,sistemascontrolables,problemaspobla- Muchossistemasdina´micossonmodeladosmedianteecua-
+cionales, econom´ıa, sistemas financieros, acciones de mer- ciones de reaccio´n- difusio´n, ya que estas son convencio-
+cado, sistemas ecolo´gicos, etc. En general, el ana´lisis del nalmente usadas en la f´ısica-qu´ımica para describir la dis-
+comportamientodelassolucionesdesistemasnolinealespue- tribucio´n de concentracio´n y temperatura. En este caso, la
+de serdivididoen doscategor´ıas principales:ana´lisis local transferencia de calor y masa es descrita por el te´rmino de
+54 Bifurcacio´ndeHopfsubcr´ıticaparaelmodeloreversiblenoLinealdeGray-Scottcondifusio´n
+difusio´nmientrasqueelte´rminodereaccio´ndescribelarazo´n ejemplo la velocidad a la que un agente externo esta´ sumi-
+de produccio´n de masa y calor. Estos te´rminos no lineales nistrandolasustancia.Entonceselmodelodeecuacionesse
+sonusualmenteconsideradosapartirdelaLeydeAccio´nde convierteen[4]
+Masa.
+dA
+Laseleccio´ndelaformadereaccio´npuedevariar[2]. =−k AB2+k B3+k (A −A),
+1 −1 f 0
+Ahorabien,unatareaimportanteenelestudiodelossis- dt
+temasdina´micosnolinealesdetiporeaccio´n-difusio´n,cuyo dB =k AB2−k B3− (cid:0) k +k (cid:1) B+k C,
+1 −1 f 2 −2
+te´rminodereaccio´npuededependerdeunooma´spara´metros, dt
+esinvestigarlaocurrenciadebifurcaciones.Unabifurcacio´n dC
+=k B−k C−k C.
+2 −2 f
+esuncambiocualitativoenladina´micadelsistema,elcual dt
+puede ocurrir cuando los para´metros se hacen variar desde
+concondicionesiniciales:
+unciertovalorcr´ıtico.Ellosexpresanlatransicio´nentrelas
+diversas regiones de funcionamiento y es esencial su cono-
+A(0)=A ,B(0)=0,C(0)=0.
+cimientoparaelana´lisisdeladina´micadelsistema,donde 0
+diferentescomportamientosdeunprocesodadonecesitanser
+Aqu´ıA(t),B(t)yC(t)representanlasconcentracionesdelas
+predeterminados.
+sustancias A,ByC respectivamente para t≥0 . No obstante,
+Un sistema importante de este tipo queda representado
+enausenciadeagitacio´n,lasdiferentesconcentracionesde-
+cuandoelte´rminodereaccio´nesta´dadoporunmodelorever-
+penden no solo del tiempo, sino tambie´n, debido a la difu-
+siblenolinealdeGray-Scott,queeselma´ssimpleconsistente
+sio´n,desuubicacio´nenelreactor.Asumiendounageometr´ıa
+conprincipiosqu´ımicos.Propuestoen1983porGrayyScott,
+unidimensional, con coordenada espacial x , el modelo de
+elmodelohasidoestudiadoengranmedidacomounsimple
+Gray-Scottentoncesquedacomounsistemadeecuacionesde
+modelopolinomialdeaccio´ndemasa,quetieneunadina´mica
+reaccio´n-difusio´n:
+rica[5].
+dA d2A
+=D −k AB2+k B3+k (A −A),
+2. Modelo completo de Gray-Scott dt A dx2 1 −1 f 0
+El modelo de Gray-Scott, es el ma´s simple consistente dB =D d2B +k AB2−k B3− (cid:0) k +k (cid:1) B+k C,
+dt B dx2 1 −1 f 2 −2
+queesconocidoparaexhibirlasoscilacionestemporalesen
+unreactorcontinuo[7].ElmodeloreversibledeGray-Scott dC d2C
+=D +k B−k C−k C.
+esunaexpansio´ndelmodelooriginaldeGray-Scottyesta´de- dt C dx2 2 −2 f
+rivadodelconjuntodedosreaccionesqu´ımicasreversibles.1
+Aqu´ı DA,DB y DC son los coeficientes de difusio´n de los
+ k qu´ımicosA,ByCyx∈[0;L].Seconsideranadema´scondicio-
+ ϑ → A+2B −
+k
+← → −1 3B nesdefronteraycondicionesiniciales:
+−1
+ B − ← k → −2 C dA (cid:12) (cid:12) (cid:12) = dB (cid:12) (cid:12) (cid:12) = dC (cid:12) (cid:12) (cid:12) =0
+k −2 dx(cid:12) 0,L dx(cid:12) 0,L dx(cid:12) 0,L
+Aqu´ık ,k yk sonrazonesconstantespositivas,querepresen-
+1 2 f A(0)=A ,B(0)=0,C(0)=0.
+0
+tanlasvelocidadesdelaprimeraysegundareaccio´ndirecta
+yk ,k seasumenpositivastambie´nyrepresentanlasra-
+−1 −2 2.1 Nildimensionalizacio´ndelSistema
+zonesdelaprimeraysegundareaccio´ninversa.Enestecaso
+Conelfindetrabajarelsistemaenvariablessindimensio-
+sediscutelasituacio´nenlacualelreaccionanteAesta´siendo
+nessehacenlassiguientestransformaciones:
+an˜adido continuamente dentro de un reactor sin agitar. La
+razo´n ϑ en la cual se suministra A se asume positiva si la A B C
+concentracio´nadeAcaepordebajodeunvalorpre-asignado a= ,b= ,c= ,
+A A A
+0 0 0
+A ,ynegativasiestaexcedeaA .Espec´ıficamenteseasume
+0 0 (cid:48)
+x
+que: x= ,t=t (cid:48) k A2,
+ϑ =k (A −a) L 1 0
+f 0
+D(cid:48)
+. D i = k A2 i L2 ,(i=A,B,C)
+Asean˜adealsistemaytodaslasespeciessoneliminadas 1 0
+k k
+del sistema por el flujo, esto es que esta´n siendo extra´ıdas η = −1,η = −2
+delreactorporunagujerootubo.Sololoste´rminosqueson 1 k 1 2 k 2 (cid:48)
+an˜adidosdependendefactoresexternos,quepudieraserpor k (cid:48) =k A2k ,k =αk A2
+2 2 0 1 f 1 0
+1sellamareaccio´nreversiblealareaccio´nqu´ımicaenlacuallosproductos
+delareaccio´nvuelvenacombinarseparagenerarlosreactivos. dondelaprimadenotalavariableoriginal.
+Bifurcacio´ndeHopfsubcr´ıticaparaelmodeloreversiblenoLinealdeGray-Scottcondifusio´n 55
+1
+Sustituyendo entonces por los nuevos para´metros, (lue- b=b∗= ,
+(cid:16) (cid:17)
+v
+g
+a
+o
+ri
+d
+a
+e
+bl
+c
+e
+o
+s
+n
+a
+s
+d
+id
+im
+er
+e
+a
+n
+r
+s
+A
+io
+0
+n
+=
+ale
+1
+s
+)
+:
+,seobtieneelsiguientesistemaen 2 1+ α+ k η 2 2k2 +η 1
+queser´ıa:
+∂a=D ∂ a−ab2+η b3+α(1−a),
+t A xx 1
+P∗=(a∗,b∗,c∗)
+∂b=D ∂ b+ab2−η b3−k (b−η c)−αb, (1)
+t B xx 1 2 2 (cid:18) (cid:18) (cid:19) (cid:19)
+k k
+∂ t c=D C ∂ xx c+k 2 (b−η 2 c)−αc. = 1−b∗ 1+ 2 ,b∗, 2 b∗ ,
+α+η k α+η k
+2 2 2 2
+concondicionesdefrontera:
+Caso 3. R>0 entonces se tienen otros dos puntos
+(cid:12) (cid:12) (cid:12)
+∂a(cid:12) ∂b(cid:12) ∂c(cid:12) estacionarios, a partir de las otras dos posibilidades
+∂x (cid:12) (cid:12) = ∂x (cid:12) (cid:12) = ∂x (cid:12) (cid:12) =0 parab,
+0,L 0,L 0,L
+√
+1± R
+,ycondicionesiniciales:
+b=b = ,
+± (cid:16) (cid:17)
+2 1+ k2 +η
+a(0,x)=1,b(0,x)=0,c(0,x)=0.
+α+η2k2 1
+loscualesser´ıan:
+3. Ana´lisis para la Bifurcacio´n.
+P =(a ,b ,c )
+± ± ± ±
+Aqu´ıhayqueasumirprimeroelproblema(1)cuandolas (cid:18) (cid:18) k (cid:19) k (cid:19)
+= 1−b 1+ 2 ,b , 2 b .
+difusividadessonigualesacero,estoeselsistemacine´ticode ± α+η k ± α+η k ±
+2 2 2 2
+ecuaciones:
+3.2 Ana´lisisdelaestabilidad
+∂a=−ab2+η b3+α(1−a),
+t 1 Seprocedeahoraaanalizarlaestabilidaddelospuntos
+∂b=ab2−η b3−k (b−η c)−αb, (2) estacionarios del sistema en cada caso posible, a partir del
+t 1 2 2
+ana´lisisdelamatrizjacobiana(J),evaluadaencadapuntoy
+∂c=k (b−η c)−αc.
+t 2 2
+buscandoposiblesvalorespropiosimaginariospuros.
+Lassolucionesqueaqu´ıseobtengansontambie´nsoluciones
+3.2.1 Caso1
+espacialmente homoge´neas (es decir, independientes de la
+Suponiendoentoncesquesolosetieneelpuntoestaciona-
+variableespacial)delsistemadereaccio´n-difusio´n.
+riotrivialP ,evaluandoJenesteseobtiene:
+0
+3.1 Puntosestacionarios  
+α 0 0
+Resolviendoelsistemadeecuacionesquequedaalhacer
+J
+0
+=0 −k
+2
+−α k
+2
+η
+2
+,
+nulalasderivadasconrespectoaltiempo,seobtiene:
+0 k −k η −α
+2 2 2
+cuyatrazaesτ =−3α−k (1+η )<0,determinanteδ =
+(cid:20)(cid:18) (cid:19) (cid:18) (cid:19)(cid:21) 0 2 2 0
+b 1+ k 2 +η 1 b2−b+α 1+ k 2 =0. α3−α2k 2 (1+η 2 )<0,yvalorespropiosλ 1,2 =−α yλ 3 =
+α+η 2 k 2 α+η 2 k 2 −α−k 2 (1+η 2 ) , que son todos reales y negativos ya que
+todoslospara´metrosdelsistemaseconsideranestrictamente
+Deaqu´ısiempresetieneelpuntoestacionariotrivial
+positivos.DebidoaestoyalTeoremadeHartmanentoncesel
+puntodeequilibriotrivial(1;0;0)esunpuntodeequilibrio
+P(a ;b ;c )=(1,0,0)
+0 0 0 0 asinto´ticamenteestableynoocurrebifurcacio´ndeHopf.
+ysepuedeestablecerentoncesunacondicio´nsobreelespacio
+3.2.2 Caso2
+delospara´metros:
+Para que se cumpla en la igualdad, R=0 se necesitan
+(cid:18) (cid:19)(cid:18) (cid:19) buscar valores del para´metro α tal que, una vez fijados los
+k k
+R=1−4α 1+ α+η 2 k 1+ α+η 2 k +η 1 ≥0, para´metros η 1 =η 2 =10−2 y k 2 =0,059, se anule el radi-
+2 2 2 2 cal.LaFigura1devuelvelosposiblesceros:α ∈[0;0,0001],
+1
+α ∈[0,03;0,04]yα ∈[0,09;0,1].
+paralacualsetienendiferentesposibilidades: 2 3
+SetienenentoncestresposibilidadesparaP∗yseaP∗el
+i
+Caso 1. R<0 , entonces solo queda el punto trivial, puntocorrespondientealaevaluacio´nparaα i ,coni=1,2,3.
+P(a ;b ;c )=(1,0,0) Evaluandolamatrizjacobianaenestospuntossecalculan
+0 0 0 0
+losvalorespropiosquesemuestranenlaTabla1.
+Caso2.R=0,entoncessetienesolootropuntoesta- Porlotanto,ana´logoalCaso1,seconcluyequealrededor
+cionario,correspondientea: delpuntoP∗noocurrebifurcacio´n.
+56 Bifurcacio´ndeHopfsubcr´ıticaparaelmodeloreversiblenoLinealdeGray-Scottcondifusio´n
+Figura1.Gra´ficadeRcomofuncio´ndeα Figura2.Expresio´nbajoelradicaldelosvalorespropios
+λ comofuncio´ndeb .
+2,3 −
+Tabla1.ValorespropiosparaelCaso2
+Puntos ValoresPropios Tabla2.ValoresdeR λ (b − )
+λ 1 =−0,0490714 b − R λ (b − ) b − R λ (b − )
+P∗ λ =−0,0001263 0 35,5097 0,20 298,264
+1 2
+λ =−0,0001158 0,01 16,1871 0,25 324,467
+3
+λ =−0,0308777 0,05 6,12228 0,30 264,562
+1
+P∗ λ =0,0195688 0,1 89,3989 0,31 241,798
+2 2
+λ =−0,0034207 0,15 206,574 0,35 117,312
+3
+λ =−0,0967559
+1
+P∗ λ =−0,0383408
+3 2
+λ 3 =−0,0017883 Esto significa que los valores propios son reales y no
+complejosconjugadoscomosenecesitaparalograrunpunto
+deHopf.
+3.2.3 Caso3
+Paraestecasosecumplelarelacio´nenelespaciodelos
+PuntoP+ Paraestecasolosvalorespropiosobtenidosson
+losmismos,salvolaevaluacio´nenb .Nuevamentesetoma
+para´metros de manera estricta, o sea R>0 y por tanto se +
+ungra´ficodeR ahoracomofuncio´ndeb yseobtienela
+obtuvieron dos estados estacionarios adema´s del trivial; se λ +
+Figura3.3.
+haceunana´lisisdecadaunoporseparado.
+PuntoP− SeaentoncesJ − lamatrizjacobianaevaluadaen
+elpuntoestacionarionotrivialP ,delca´lculodelasra´ıces
+−
+delpolinomiocaracter´ısticoseobtienenlosvalorespropios:
+λ =−α,
+1
+λ
+2,3
+=a
+−
+b
+−
+−α−
+2
+1
+0
+0
+0
+1 k
+2
+−
+2
+1
+0
+0
+0
+3 b2±
+20
+1
+0
+[R
+λ
+] 1 2,
+donde:
+R (b )=10609b4 −41200a b3+
+λ − − − −
+(cid:0) 40000a2 − −19606k 2 (cid:1) b2 − − Figura3.Expresio´nbajoelradicaldelosvalorespropios
+39600k
+2
+a
+−
+b
+−
++10201k
+2
+2. λ 2,3 comofuncio´ndeb + .
+Toma´ndoseungra´ficodeR comofuncio´ndeb ,seobtiene IgualmenteacomosehizoparaelcasodeP seseleccio-
+λ − −
+laFigura2. nanvaloresaleatoriosdeα quecumplanlarelacio´nsobreel
+Enelintervaloseleccionadoseobservaapartirdelagra´fi- espacio de los para´metros y se procede a evaluar R ahora
+λ
+caquelafuncio´nradicandoespositiva,peroparacorroborarlo paravaloresdeα obtenie´ndoselaTabla3.
+seseleccionanvaloresaleatorioscercanosaesteintervaloy Siendoas´ıentoncesparavaloresdelospara´metroscerca-
+contenidosene´lyseprocedeaevaluarR obtenie´ndosela nosalosfijadossiempresetendra´queelradicandoesnegativo
+λ
+Tabla2. yportantolosvalorespropiossoncomplejosconjugados.
+Bifurcacio´ndeHopfsubcr´ıticaparaelmodeloreversiblenoLinealdeGray-Scottcondifusio´n 57
+Tabla3.Valoresdelradicandoenlosvalorespropioscomofuncio´ndeα.
+α R (α) α R (α)
+λ λ
+0,03 13,4687−43,6126i 0,043 −91;8064
+0,034 −2,74925 0,05 −131;557
+0,035 −22,7068 0,07 −183;051
+0,036 −34,9436 0,09 −104;456
+0,04 −70,5695 0,1 27;4717−126;496i
+Porotraparteparapodergarantizarlabifurcacio´n,laparte quetomanvaloresdediferentessignosenlosextremosdel
+realdelosvalorespropiosdebeanularseenalgu´npunto.Sea mismo.
+µ(α)=ℜ(λ ),talque: EntoncesmedianteleTeoremaparalabifurcacio´ndeHopf
+2,3
+queseencuentraen[3]sepuedegarantizarqueparaelsistema
+101 103
+µ(α)=a b −α− k − b2. completodeGray-ScottsetieneunaBifurcacio´ndeHopf,y
++ + 200 2 200 +
+seestablececomopara´metroparalabifurcacio´nα =α =
+0
+Si se grafica µ(α) en el punto estacionario P + como una 0,039504509689813.
+funcio´ndelpara´metroαparaelvalordek =0,059seobtiene,
+2
+laFigura3.4.
+4. Teorema de la Variedad Central
+Enarasdecaracterizarlamismaydeterminarlaestabili-
+daddelastrayectoriascerradasyladegeneracio´nonodela
+bifurcacio´nsedebeaplicarelTeoremadelaVariedadCentral
+alsistemaencuestio´nyaqueenunpuntodeHopfesta´ bien
+definidaunavariedadcentralbidimensionaleinvariante[6].
+4.1 Traslacio´ndecoordenadasysistemaenunaba-
+sedefuncionespropias.
+Conside´resenuevamenteelsistemadeGray-Scottsindi-
+mensionesysindifusio´n(2)conpara´metrodebifurcacio´nα
+paralosvaloresfijadosdelospara´metros,k =0,059yη =
+2 1
+η =10−2,yseaelpuntodeequilibrioP =(a ,b ,c )con
+2 + + + +
+valorespropiosλ =−α yλ (P ).
+Figura4.ParteRealdelosvalorespropioscomofuncio´nde 1 2,3 +
+Seprocedeahoraaescribirelsistema(2)enlaforma:
+α
+X´ =J(α)X+F(X,α)
+Estagra´ficamuestralaexistenciaunvalorα ∈[0,035;0,04]
+0
+talqueµ sehacecero.Basa´ndoseenestegra´ficoserealizo´ la dondeF esunafuncio´nvectorialsuavecuyascomponentes
+evaluacio´n de esta funcio´n en los extremos del intervalo F tienendesarrollosdeTaylorenXquecomienzanalmenos
+1,2
+[0,0395;0,04]yseobtuvieronvaloresdediferentesigno;pa- conte´rminoscuadra´ticos,yJeslamatrizjacobianaevaluada
+ra acotar un poco ma´s el intervalo se utilizo´ el Me´todo de enelpuntoP (α).
++
+Biseccio´nyseobtuvieronlosvaloresdelaTabla4. Trasladando el punto de equilibrio hasta el origen me-
+Estopermiteafirmarqueelvalordeα 0 perteneceaeste diante una traslacio´n lineal de coordenadas, se tiene X =
+u´ltimo intervalo, ya que la funcio´n µ(α) es continua en el (x ,x ,x )T, donde x =a−a , x =b−b , x =c−c .
+1 2 3 1 + 2 + 3 +
+intervalocerradoyesaplicableentonceselTeoremadeBol- Siendoas´ısetieneelnuevosistemaenlaformanecesaria:
+zanoparafuncionesrealescontinuasenunintervalocerrado
+ x´   −b2 −α 3η b2 −2a b 0  x 
+1 + 1 + + + 1
+x´ 2= b2
++
+−3η
+1
+b2
++
++2a
++
+b
++
+−k
+2
+−α k
+2
+η
+2
+x 2+F(X),
+x´ 0 k −k η −α x
+3 2 2 2 3
+donde: 4.2 Ca´lculodelaVariedadCentral
+ −2x
+1
+x
+2
+b
++
+−x
+1
+x
+2
+2−a
++
+x
+2
+2+3η
+1
+b
++
+x
+2
+2+η
+1
+x
+2
+3 Sean
+0
+=2lacantidaddevalorespropiossobreelejeima-
+F(X)= 2x 1 x 2 b + +x 1 x 2 2+a + x 2 2−3η 1 b + x 2 2−η 1 x 2 3  ginariocorrespondientesalpuntoestacionarioP + evaluado
+0
+58 Bifurcacio´ndeHopfsubcr´ıticaparaelmodeloreversiblenoLinealdeGray-Scottcondifusio´n
+Tabla4.Valoresyevaluacionesdeµ enfuncio´ndeα
+Intervalos Evaluacio´nextremoizquierdo Evaluacio´nextremoderecho
+[0,035;0,04] 0,00731429 −0,000682727
+[0,035;0,039] 0,00731429 0,000709885
+[0,039;0,04] 0,000709885 −0,000682727
+[0,039504;0,039505] 7,09418×10−7 −6,8243×10−7
+[0,0395045096;0,0395045096] 1,25006×10−10 −1,41786×10−11
+enelvalorα=α y(n−n )=3−2=1losquetienenparte
+0 0
+real distinta de cero, de los cuales n =1 tiene parte real
+−
+negativayn =0positiva.Comon >0,entoncesseaE el
++ 0 0
+subespaciolineal(hiperplano)correspondientealaunio´nde
+lossubespaciospropiosgeneradosporlosn valorespropios
+0
+sobreelejeimaginario.PortantoelvectorX dedimensio´n
+n +n =npuedesersustituido,medianteunatransforma-
+0 − Figura5.VariedadCentraltangenteparaelsistema
+cio´nlinealdecoordenadas,por(X ;X )dedimensionesn y
+1 2 0
+n respectivamenteparapoderescribirelsistemaenunabase
+−
+defuncionespropias.Conlocualelsistemaqueda: 4.3 Ca´lculodelPrimerCoeficientedeLyapunov
+SeaelvectorF(X)obtenidoanteriormente,siseescribe
+ u´   0 β 0  u   G (u ,u ,v)  ente´rminosdefuncionesmultilinealesM(ε,δ)yN(ε,δ,γ),
+1 1 1 1 2
+u´ 2=−β 0 0 u 2+G 2 (u 1 ,u 2 ,v) paratresvectorescualesquieradeR3 ,ε =(ε 1 ,ε 2 ,ε 3 ),δ =
+v´ 0 0 −α 0 v H(u 1 ,u 2 ,v) (δ 1 ,δ 2 ,δ 3 )yγ =(γ 1 ,γ 2 ,γ 3 )talesque:
+Dondeβ =ℑλ (P )yG ,G yH sonfuncionessuavesdel 1 1 (cid:16) (cid:17)
+2,3 + 1 2 F(X)= M(X,X)+ N(X,X,X)+O (cid:107)X(cid:107)4 ,
+nuevovectordecoordenadasY =(u 1, u 2 ,v)cuyosdesarrollos 2 6
+enseriedeTaylorcomienzanente´rminosdealmenosorden
+entoncesseobtieneque:
+dos.
+Por el Teorema de Variedad Central se puede garanti-  
+−4b ε δ −2a ε δ +6η b ε δ
+zarqueexisteunavariedadWc (0)invariante,dedimensio´n + 1 2 + 2 2 1 + 2 2
+n =2suaveylocalmentede
+l
+fi
+oc
+nidaqueestangenteaE en
+M(ε,δ)= 4b
++
+ε
+1
+δ
+2
++2a
++
+ε
+2
+δ
+2
+−6η
+1
+b
++
+ε
+2
+δ
+2
+,
+0 0 0
+Y =Y =0.Lavariedadcentralpuedeserlocalmenterepre-
+0
+sentadacomoelgra´ficodeunafuncio´nsuaveconlasiguiente  
+−6ε δ γ +6η ε δ γ
+representacio´n: 1 2 2 1 2 2 2
+N(ε,δ,γ)= 6ε 1 δ 2 γ 2 −6η 1 ε 2 δ 2 γ 2 
+0
+1 1 (cid:16) (cid:17)
+v=V(z,z¯)= ω 20 z2+ω 11 zz¯+ ω 02 z¯2+O |z|3 . Deah´ıqueelprimercoeficientedeLyapunovsepuedacalcu-
+2 2
+larsegu´nlasiguientefo´rmulainvariante:
+Aqu´ılavariablezrepresentalanuevacoordenadadelsistema,
+luegodeescribiresteensuformacompleja,siendoz=u 1 +  (cid:104)p,N(q,q,q´)(cid:105)− 
+i a u s 2 ´ı . se Lo p s ro co ce e d fi e cie a n e te s s cr ω ib ij ir so e n l d s e is s t c e o m no a c e id n os su pe f r o o rm en a C co . m Si p e l n e d j o a l 1 (0)= 2 1 β ℜ  (cid:68) p 2 ,M (cid:10) p (cid:16) ,M q´, (cid:0) (2 q i , β − + α 0 − α 1M )− ( 1 q M ,q´ ( ) q (cid:1) , (cid:11) q + ) (cid:17)(cid:69)  
+obtenie´ndose: 0
+1 1 Aqu´ıqy psonlosvectorespropiosdelamatrizjacobianay
+z˙=iβz+ G z2+G zz¯+ G z¯2+
+2 20 11 2 02 sutraspuestarespectivamenteysatisfacen:
+1(cid:0) G −2 (cid:10) G ,−α−1H (cid:11) +
+2 21 10 o 11 (cid:104)p,q(cid:105)=1.
+(cid:68) (cid:69)(cid:17)
+G
+01
+,(2iβ+α
+0
+)−1H
+20
+z2z¯,
+Finalmentealcalcularlosvectorespropiosyvincularlossegu´n
+lafo´rmulaparal apartirdelasfuncionesMyNespecificadas
+dondelosG ylosH correspondenalasderivadasparciales 1
+ij ij anteriormente,seobtiene:
+deordenmayoroigualados.Seprocedeentoncesagraficar
+la Variedad Central, luego de calcular cada uno de los ω
+ij
+, a partir de los G ij , obtenie´ndose las gra´ficas de la Figura  (0,5581−1,3064i)− 
+1
+4.1,dondeesta´representadalavariedadobtenida,vistadesde l
+1
+(0)= ℜ 2(13,5755+18,8909i)+ ≈584,883
+2β
+diferentesa´ngulos. (75,4621+1,70235i)
+Bifurcacio´ndeHopfsubcr´ıticaparaelmodeloreversiblenoLinealdeGray-Scottcondifusio´n 59
+Como se observa el Primer Coeficiente l (0) de Lyapunov una solucio´n perio´dica que se bifurca para cierto valor del
+1
+espositivoestrictamenteyportanto,aplicandoelTeorema para´metro.
+paralaBifurcacio´ndeHopfqueapareceen[3],seconcluye Comodificultadesdeesteprocedimientohayqueindicar
+elsiguienteTeorema: queaunquelascondicionesparalabifurcacio´nsonobtenidas
+anal´ıticamente,estassonevaluadasdeformanume´ricapara
+Teorema1 Para el sistema parame´trico de Gray-Scott (2) ciertosvaloresdelospara´metrosinvolucradosenelsistema.
+conpara´metrovariableα,yconvaloresfijosparaelresto Noobstanteestohacequesurjalamotivacio´nquesepropone
+de los para´metros η 1 =η 2 =10−2 y k 2 =5,9×10−2 ocu- como una recomendacio´n a trabajo futuro, de tomar otros
+rre una Bifurcacio´n de Hopf para el valor cr´ıtico de α 0 = valoresdeestoscoeficientesytratardeobtenerotrotipode
+0,039504509689813,lacualesnodegeneradaysubcr´ıtica. bifurcacio´nparaestemismosistema.Adema´slaste´cnicasque
+llevanalosresultadosdeestetrabajopuedensermuyu´tiles
+5. Conclusiones y Recomendaciones enelestudioposteriordeotrosmodelosyaseadedina´mica
+qu´ımicaodeotrassituaciones.
+Esimportantedestacarquesehaobtenidounacaracteri-
+zacio´nesencialdelmodelotridimensionalnolinealdeGray-
+Scott,queesunsistemadetresecuacionesenderivadasparcia- Referencias
+lesdetipoparabo´licoconcondicionesdefronteracondifusio´n [1] Carrillo,F.A.,2006,“ControldeOscilacionesenSiste-
+yconpara´metrosdependientesdelavariableespacial.Este masNoLinealesalrededordePuntosdeEquilibrioNo
+problemahasidoreducidoalana´lisisdeunabifurcacio´nde Hiperbo´licos”,TesisdeMaestr´ıa,UniversidaddeSonora.
+Hopfenunsistemadeecuacionesdiferencialesordinarias.
+Elproblemainicial,queesunaexpansio´ndelmodeloori- [2] Egan˜a,G.,2008“ExistenciadeSolucio´nPerio´dicaPro-
+ginaldeGray-Scottyesta´ derivadodelconjuntodedosreac- medioparaelSistemadeHollingconDifusio´n”,Tesisde
+cionesqu´ımicasreversiblesdondesesuponequeelproducto Maestr´ıa,UniversidaddeLaHabana.
+noesinerte,primeramentesellevaavariablesnildimensiona-
+les.Siguiendoentonceselobjetivoprincipaldeestetrabajose [3] Kuznetsov,Y.A.,2004,“ElementsofAppliedBifurcation
+intentademostrarelcumplimientodelascondicionesparael Theory”,AppliedMathematicalSciences,vol.59,Second
+surgimientodeunabifurcacio´ndeHopfparaelnuevosistema Edition,Springer-Verlag,NewYork.
+deecuacionesdiferencialesordinariassindimensiones.
+[4] Mahara,H.,Suematsu,etal.,2004,“ThreeVariablerever-
+Aunqueprimeramentesedemuestraqueelsistemapresen-
+sibleGray-ScootModel”,TheJournalofChemicalPhy-
+taparaelvalordelpara´metroα unabifurcacio´ndeHopf,la
+0
+sics,121(18),Disponibleen:http://hdl.handle.
+extensio´nadimensio´narbitrariadelteoremaquelogarantiza,
+net/2115/5428.
+depende en gran medida del Teorema de la Variedad Cen-
+tral,queesunresultadosumamentefuerteentodalateor´ıa
+[5] Peletier,L.A.,2000,“Pulses,kinksandfrontsintheGray-
+de las ecuaciones diferenciales. Se procede entonces anali-
+ScottModel”,MathematicalInstitute,LeidenUniversity,
+zarlascondicionesparaelcumplimientodelashipo´tesisdel
+Leiden,TheNetherlands.
+mismo y se logra una primera aproximacio´n de esta varie-
+dadhastaloste´rminoscuadra´ticos,locualpermitereducirel [6] Sotomayor,J.,Mello,L.F.,Braga,D.C.,2007,“Lyapu-
+sistemaadimensio´ndosycalcularelPrimerCoeficientede novcoefficientsfordegenerateHopfbifurcations”,arXiv:
+Lyapunov,l 1 (0),queeselvalornecesarioparacaracterizarla 0709.3949v1[math.DS].
+bifurcacio´nobtenida.Seobtienel (0)>0loquedemuestra
+1
+finalmentequelabifurcacio´nesnodegeneradaysubcr´ıtica [7] Vastano, J.A.,et.al, 1987 “Chemical Pattern Formation
+por lo cual se espera la presencia de un ciclo l´ımite como withequalDiffusionCoefficients”,PhysicsLettersA,Vol
+o´rbitadelsistema.Losresultadosparaelsistemacondifusio´n 124number6,7.
+son semejantes y aparece tambie´n para el sistema original

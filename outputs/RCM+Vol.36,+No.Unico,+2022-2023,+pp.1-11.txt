@@ -1,0 +1,641 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11
+Recibido(Received):22-04-2024,Revisado(Reviewed):22-05-2024
+Aceptado(Accepted):18-06-2024,Enlínea(Online):19-07-2024
+Simulación computacional para la dinámica de
+enfermedades transmitidas por vectores
+Computational simulation for the dynamics of
+vector-borne diseases
+Ernesto Alfonso Hernández1 , Aymée de los Ángeles Marrero Severo2*
+Resumen En este trabajo se presenta un modelo basado en redes complejas para simular la dinámica
+de personas y vectores en determinado entorno. El diseño representa a las personas como agentes para
+analizarsutomadedecisiones.Laaplicaciónpermitesimulardiferentesescenariosylavalidacióndelmodelo
+desarrollado. Se simula el comportamiento de las personas en la sociedad a través de un mapa cognitivo
+difusoquerepresentaalasaccionescomoconjuntosdifusos,loquepermitequelosagentesdecidanentre
+diferentesactuaciones,enfuncióndesussentimientosyelgradodepertenenciaalosconjuntosensuentorno
+de convivencia como una red compleja. Esta herramienta y los resultados obtenidos pueden proporcionar
+informaciónrelevanteaautoridadesencargadasdelcontroldeepidemias,puesconociendoelcomportamiento
+deunaepidemiaendeterminadomomento,sepuedensugeriraccionesalaspersonasyfacilitarlatomade
+decisionesparaimplementarmedidasquereduzcanlosriesgosasociados.
+PalabrasClave:epidemias,mapascognitivosdifusos,modelosbasadosenagentes,redescomplejas,simula-
+ción.
+Abstract Thispaperpresentsamodelbasedoncomplexnetworkstosimulatethedynamicsofpeopleand
+vectorsinagivenenvironment. Thedesignrepresentspeopleasagentstoanalyzetheirdecisionmaking. The
+applicationallowsthesimulationofdifferentscenariosandthevalidationofthedevelopedmodel. Thebehavior
+of people in society is simulated through a fuzzy cognitive map that represents actions as fuzzy sets, which
+allowsagentstodecidebetweendifferentactions,dependingontheirfeelingsandthedegreeofbelongingto
+thesetsintheircoexistenceenvironmentasacomplexnetwork. Thistoolandtheresultsobtainedcanprovide
+relevantinformationtoauthoritiesinchargeofepidemiccontrol,sinceknowingthebehaviorofanepidemicata
+giventime,actionscanbesuggestedtopeopleandfacilitatedecisionmakingtoimplementmeasurestoreduce
+theassociatedrisks.
+Keywords: epidemics,fuzzycognitivemaps,agent-basedmodels,complexnetworks,simulation.
+MathematicsSubjectClassification: 00A72,03E72,90B18,91B43,92-10.
+1DepartamentoMatemáticaAplicada,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.Email:
+ernealfonnso00@gmail.com
+2DepartamentoMatemáticaAplicada,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.Email:
+aymee@matcom.uh.cu,aymeema@gmail.com
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadoymaquetadopor:DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.
+Citar como: Alfonso Hernández, E.,& Marrero Severo, A.A. (2024).Simulación computacional para
+la dinámica de enfermedades transmitidas por vectores. Ciencias Matemáticas, 36(Único), 1–11.DOI:
+https://doi.org/10.5281/zenodo.13914881.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9952.
+Introducción micadelefectodelasmedidasdeanálisisycontrol.Permite
+diseñarcomportamientosindividualesjuntoconescenariosde
+Modelosbasadosenagentes intervencionesnofarmacéuticas,midiendocómoseveafec-
+Losmodelosbasadosenagentessimulanreglasmicros- tadaladinámicadelasimulacióny,porlotanto,brindando
+cópicasdeinteraccionessimultáneasdemúltiplesindividuos informaciónútilpararealizarintervencionescombinadas,en
+dentrodeunapoblaciónconlaintencióndesimularladiná- lasdiferentesetapasdeunaepidemia[1].Otraherramienta
+2 Simulacióncomputacionalparaladinámicadeenfermedadestransmitidasporvectores
+utilizadaparasimularlascaracterísticasperiódicasdelcom-
+portamientodelosasentamientoshumanos,enlapropagación
+deenfermedadescontagiosaseselmodelodeautómatacelu-
+lar,usandosistemasdeecuacionesdiferencialesordinariaso
+parciales,teniendoencuentaelrangodemovimientodelos
+elementosdelapoblación,comoseexplicaen[8].
+Lasimulaciónbasadaenagentes,ABM,porsussiglasen
+inglés,esunenfoquedemodelacióncomputacionalquese
+utiliza para simular sistemas complejos, donde los agentes
+individualesinteractúanentresíyconsuentorno.Cadaagente
+esunaentidadautónomaconsupropiocomportamiento,obje-
+tivosyreglasdeinteracción.Elestadointerno,supercepción
+del entorno y las interacciones con otros agentes es lo que Figura1.EjemplodeunFCM[IlustrationofaFCM].
+defineladecisiónoacciónarealizarporestos[3,7].
+En [3], además de utilizar una red social, se basan en
+queposeeelconceptoiconelconcepto j yF(x)eslafun-
+agentesparasimular.Ensucasolaspersonassonagentesque
+cióndetransformaciónsigmoidalquenormalizalosvalores
+poseenciertogradodeinfección,ciertaprobabilidaddetrans-
+conceptualesalrango[0,1][13].
+mitir,tienencierta movilidad,peropor loqueseinterpreta
+estosagentesnotienenlacapacidaddedecidirenuninstante
+detiempoquehacerexactamente,sinoqueelgrafoyaestá Relevancia del estudio
+definidodetalformaqueestossemuevenporloqueenla
+Lasimulacióncomputacionalesunaherramientaesencial
+red seindica. Pero, ¿qué sucederíasi las personastuvieran
+paraestudiarladinámicayelcontroldepatógenostransmi-
+la posibilidad de decidir; según lo que perciben del medio,
+tidosporvectores.Alutilizardiferentesmodelosytécnicas
+segúnsussentimientos;quéhacerenelinstantedetiempoen
+desimulación,sepuedenexplorardiversosescenariosyes-
+queseencuentran?
+trategias de control para prevenir y mitigar la propagación
+En teoría, toda persona teniendo encuentra el contexto
+deenfermedadesinfecciosas.Estassimulacionesrepresentan
+socialysupresente,tienelacapacidadderealizaronouna
+unaherramientamuyvaliosaparalosresponsablesdelatoma
+accióndeterminada,porlocual,paralapreguntaformulada
+dedecisionesensaludpública,puesayudanaevaluarlaefec-
+anteriormente, se interpreta que de implementarse así, un
+tividaddemedidasdecontrolyelimpactodeunaenfermedad
+agentesecomportaríasimilaraunapersona.
+infecciosa,comoeselcasodeldengueennuestrapoblación.
+Surgeotrainterrogante,¿cómolograrquelosagentesse
+Existendiversasestrategiasdecontrolquesepuedeneva-
+comportendeunaformauotrasegúnloqueperciben?Una
+luar mediante la simulación computacional, entre las más
+maneradedarlerespuestaaestapreguntaesmediantemapas
+comunesenelcontextocubano,estáelusodeinsecticidas,
+cognitivosdifusos(FCM,porsussiglaseninglés).
+queseaplicanenáreasdondelosvectoressereproducenyse
+alimentan.Otraestrategiaeslaimplementacióndeprogramas
+Mapascognitivosdifusos
+deprevenciónyeducación,parareducirlaexposicióndelas
+Bart Kosko [6] brinda un concepto de mapa cognitivo
+personasalvectorylaenfermedad.
+difuso,argumentaquesondigrafosenloscualeslosnodos
+son variables, que representan conceptos y las aristas son
+conexionesentreestos. 1. Modelación para la simulación de
+Sea G un digrafo que representa al FCM, sea la arista: enfermedades transmitidas por vectores
+⟨a,b⟩∈G si w(a,b)>0 (w(a,b)<0)⇒ El concepto que
+representaelnodoainfluyepositivamente(negativamente)en 1.1 Enfermedadestransmitidasporvectores
+elconceptoquerepresentaelnodob.Lospesosdelasaristas Entrelasenfermedadestransmitidasporvectores(ETV)
+sonvaloresen[−1,1]. quehanaumentadoenlasúltimasdécadasestánelpaludismo
+En la Figura 1, losC hacen referencia al concepto del omalaria,lafiebrehemorrágicapordengue,laesquistosomia-
+i
+agente.Elvalordelosconceptosdelosagentessecalculaen sis,latripanosomiasisamericanaoenfermedaddeChagas,la
+elmomentoenqueestedebarealizarunaacciónutilizandola tripanosomiasisafricanaoenfermedaddelsueño,laleishma-
+siguientefunción: niasis,lafiebreamarilla,laencefalitisjaponesa,lafiebrepor
+zikaylafiebreporchikungunya.OtrasETVmenosfrecuentes
+n
+sonlaborreliosisoenfermedaddeLymeylaenfermedadpor
+X(t+1)=F(X(t)+∑(X (t)×w j,i))),
+i i j ( elvirusdeloestedelNilo[16,17].
+j=1
+La distribución de las ETV está vinculada a una serie
+dondeX(t)eselvalordeli−ésimoconceptoenelt−ésimo defactorescomplejosdenaturalezademográfica,ecológica,
+i
+instante de tiempo, i,j=1,2,···,n, donde n es el número medioambientalysocial.Actualmente,laenfermedadtrans-
+de conceptos, w(i,j) es el peso que representa la relación mitidaporvectorconmayorcrecimientomundialeseldengue.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11 AlfonsoHernández,E.,&MarreroSevero,A.A.
+https://revistas.uh.cu/rcm/article/view/9952 https://doi.org/10.5281/zenodo.13914881
+Simulacióncomputacionalparaladinámicadeenfermedadestransmitidasporvectores 3
+Aligualqueelvirusdeldengue,eldelzika,elchikungunya Sea G=(V,E) un grafo de la simulación. Sea H ⊂V
+ylafiebreamarillasontransmitidosporlosmosquitosaedes talquev ∈H⇔∀v ∈H,(v,v )∈E;C={H ,H ,···,H},
+i j i j 1 2 l
+aegyptiyaedesalbopticus.Másde3900millonesdeperso- ∀i,H ⊂V talquesiv ∈H ⇒v ̸=H ,∀k̸=i.
+i j i j k
+nasenmásde129paísescorrenelriesgodecontraerdengue, Entonces, las relaciones están definidas de la siguiente
+y se estima que cadaaño se registran 96 millones de casos forma: (v,v ) ∈ E,∀i,j representa la relación ser familia
+i j
+sintomáticosy40000muertes[14,11,12]. ⇔∃ktalquev,v ∈H ,H ∈C.Siv ∈H ,v ∈/H ,H ∈C
+i j k k i k j k k
+y∃(v,v )⇒laarista(v,v )representalarelaciónsercono-
+i j i j
+1.2 Modelacióndelentorno cidos.
+Lo primero que se debe crear y modelar para simular Deestamanera,almomentoenqueseidentificancuáles
+cómoocurrelapropagacióndeenfermedadeseselentorno agentessonfamilias,segeneranlascasasdelasimulación,
+enqueestaocurrirá.Estetrabajomodelalarealidadsocialy unaporcadafamilia.Elrestodelaslocacionescreadasson
+paraestoseentiendequeexistenparámetrosadesarrollar:las decididasporelespecialistaqueseencuentragenerandola
+relacionespersonales,loslugaresyelcomportamientodelas simulación.
+personas. Laspersonas,enelcursodelarealizacióndesusactivida-
+desdiarias,sedesplazanentrevarioslugares,exponiéndosea
+1.2.1 Localizaciones agentesinfecciososytransportandolasenfermedades.Paralo-
+En la actualidad, la mayoría de las personas tienen un grarrepresentarymodelarestosprocesossegeneraunaredde
+programadevidadefinido,esdecir,unapersonaxtieneuna contactossocialesquepuedeservistacomoungrafobipartito,
+vivienda,uncentrodetrabajoyotroslugaresalosqueasiste dondeelconjuntoAestácompuestoportodaslaspersonas
+pordeterminadascircunstancias;porloquepararepresentar delasimulaciónyelconjuntoBportodaslaslocalizaciones.
+la sociedad, es necesario, según se entiende, modelar estos Lasaristasenestegrafosondirigidasyrepresentanellugar
+lugares.Además,eldinamismodelasociedadactualjuegaun endondeseencuentralapersona.
+papelfundamentalenlapropagacióndeETV,pueslarotación Sea G=(V,E) grafo dirigido. ∀i,j si (v,v )∈E ⇒ la
+i j
+yelmovimientodeloshumanospordistintaslocacioneses personav seencuentraenellugarv .Elgrafodefinidoante-
+i j
+elprincipalmotivoparaqueunaenfermedadpuedaalcanzar riormenteesungrafodinámico,esdecir,varíaendependencia
+elniveldeunaepidemia.Estaeslarazónporlacual,eneste dellugardondeseencuentreunapersona.Lasfiguras2y3
+artículoserepresentanlaslocalizacionescomounobjetode sonejemplosdeestegrafo.
+lasimulación.
+Localizacionesrelevantesarepresentar:
+1. Casas:representaunhogarfamiliar.
+2. Hospitales:indicauncentrodeatenciónmédica.
+3. Centrosdetrabajo:hacereferenciaatodolugarlaboral.
+4. Mercados.
+1.2.2 Personas
+Una de las herramientas conocidas para describir rela-
+cionesentreagentessonlosgrafos[10].Ungrafoesunpar Figura2.Ejemplodegrafoderelacionespersonales
+ordenado G=(V,E) donde V es un conjunto no vacío de generadosporelmodelo.Personas:300,Probabilidadde
+nodosyE esunconjuntodeparesnoordenadosdearistas. arista:0,05[Exampleofthegraphpersonalsrelationship
+G=(V,E)talqueV ={v ,v ,v ,···,v }esunconjuntofi- generatedbythemodel.Persons:300,Edgeprobability:
+1 2 3 n
+nito de vértices. E ={(v,v )|v,v ∈V} es un conjunto de 0.05].
+i j i j
+paresnoordenadosdevérticesquerepresentanlasaristasdel
+grafo.
+Enestainvestigaciónseconstruyeungrafoquerepresenta 1.2.3 Vectores
+la relación “ser familia” y la relación “ser conocidos”. En Losmosquitosseestablecenenunlugarypocoonada
+este, un nodo v representa a la persona i de la simulación semuevendesusalrededores,portanto,sedecidióquelos
+i
+y una arista (v,v ) que simboliza la relación i→ j, donde vectoresennuestrasimulaciónnotuviesenlacapacidadde
+i j
+expresaquelaspersonasiy jsonfamiliaresoconocidos.Para moverseporlaslocalizacionescomolaspersonas,yaqueesto
+identificarsilaarista(v,v )representalarelaciónserfamilia nosacercamásaloqueocurreenlarealidad.Estosmosqui-
+i j
+olarelaciónconocidos,seejecutaunprocesoestocásticoque tos,segúnmecanismosestocásticos,decidensipicaronoy
+ocurre una sola vez, el cual consiste en escoger de manera teniendo en cuenta el nivel de infección de la persona y la
+aleatoriaelconjuntoCquesedefineacontinuación. susceptibilidaddelmismoesteseinfectaono.Tambiénpo-
+AlfonsoHernández,E.,&MarreroSevero,A.A. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11
+https://doi.org/10.5281/zenodo.13914881 https://revistas.uh.cu/rcm/article/view/9952
+4 Simulacióncomputacionalparaladinámicadeenfermedadestransmitidasporvectores
+quelosmismosseinfectenopuedantransmitirlainfeccióna
+otros.
+1.4 Conceptos(Personas)
+1.4.1 Percepción
+Una idea útil para la sección de los conceptos de per-
+cepcióneslaqueestableceque,paracadaconcepto,secrea
+sucontrapuestocomoconcepto,porejemplo,sisedefineel
+concepto“cercaníadehospital”,entoncesseráútildefinirel
+concepto“lejaníadehospital”,pueslasposiblesaccionesa
+ejecutar se benefician por uno y se perjudican por el otro,
+añadiendofacilidadaladecisióndelagente.
+Cadaconceptoenestacategoríatieneunparámetroque
+representacuángrandeeselintervaloqueseconsiderapara
+darleunvalorenlafuzzificaciónentre(0,1)(elnúmeroque
+Figura3.Ejemplodegrafoquerepresentaalaredde
+seencuentraentreparéntesisalladodelconcepto),encaso
+contactossociales[Exampleofagraphthatrepresentsthe
+de que sea menor o mayor a los límites del intervalo, su
+networkofsocialcontacts].
+valor final es 0 o 1. La idea de este procedimiento es la de
+implementar la fuzzificación teniendo en cuenta lo que se
+seenunparámetroquerepresentalaprobabilidaddeinfectarse percibedelentorno.Elvalordeesteparámetroporconcepto
+debidoaunapicada. nuncacambia,entoncessurgelainterrogantesiguiente:¿cómo
+En la Figura 4 se ilustra cómo se modela el entorno de modelarquelaperspectivadelentornovaría?Estevalorpasa
+lasimulación.Existenunosagentesquesonlaspersonasy porunprocesoenelcualsetomanvariablesquesícambian
+losvectores,loscualesposeenciertascaracterísticasyestos enelentornoyseutilizaelmismoparafuzzificarelvalordel
+interactúanconlaslocalizacionesparacumplirsuspropósitos; concepto,elcualesdistintoalparámetrorepresentadoenla
+eldelaspersonastrabajarysocializaryeldelosvectoresali- listaanterior.
+mentarse,lograndoasíacercarnosaunmodeloquerepresenta Elprocesodefuzzificaciónesdistintoparacadaconcepto,
+deformaprecisacómosepropagaunaETV. peroporreglageneralsesiguelasiguienteidea:
+1. Setomaunvalordelentornodelagentequetengarela-
+1.3 Interaccióndelosagentesconelentorno
+ciónconelconceptoafuzzificar,llamémoslevariable
+Una herramienta computacional que brinda la posibili-
+defuzzificación.
+daddecrearagentesconciertainteligenciaparamanejarsus
+decisiones son los FCM [5]. Para el diseño de un FCM es 2. Seobtieneunintervalodevaloresutilizandoelparáme-
+necesariodefinirlosconceptosqueesteagrupará,asícomo trodelconcepto,llamémosleintervalodefuzzificación.
+lascategoríasdeconceptos.
+3. Secomparalavariabledefuzzificaciónconlosextremos
+Zadeh [18] define que para X un espacio de puntos x
+delintervalodefuzzificación,enelcasodeencontrarse
+(X ={x}).UnconjuntodifusoAenX escaracterizadopor
+incluidaeneste,sedecidesiesmásimportantequese
+una función de membresía f (x), que asocia a cada punto
+A
+encuentrecercadelmáximoodelmínimodelintervalo
+enX unvalorrealenelintervalo[0,1]conelvalorde f (x)
+A
+defuzzificaciónysefuzzificadeacuerdoalintervalo,
+enxrepresentandoelgradodemembresíadexenA,talque
+teniendoencuentacualdelosextremosseconsidera
+mientrasmáscercaelvalorde f (x)alaunidadmásaltoesel
+A
+enelprocesodefuzzificación.
+gradodemembresíadexenA.Puedeverseunejemploen[18].
+Al crear un FCM se consideraron tres clases de conceptos: Seavlavariabledefuzzificación.Sea(i ,i )elintervalo
+0 1
+percepciones,sentimientosyacciones. defuzzificación.Searelresultadodelprocesodefuzzificación.
+PararepresentarelflujoaseguirdeesteFCM,paraque Seainvunavariablebooleana,talque:
+losagentesdecidanunaacciónuotra,unagentepercibeun ifinv=True,v≥i ⇒r=1,
+1
+estadodelentorno.Esteestadoprovocaunsentimientoenel ifinv=False,v≤i ⇒r=1.
+0
+agentey,asuvez,estesentimientoprovocaunaacción: Cuandovseencuentradentrodelintervaloocurrelosi-
+guiente:
+Percepciones→Sentimientos→Acciones v−i
+ifinv=True⇒r= 0 ,
+i −i
+1 0
+Lasaccionesdelosagenteslogranqueestossedesplacen i −v
+ifinv=False⇒r= 1 .
+atravésdelentorno,moviéndoseentrelasdiferenteslocalida- i −i
+1 0
+des.Enestasubicaciones,losagentescoincidenyentranen Lacombinacióndevaloresenestosconceptos,oelvalor
+interacciónconotrosindividuosymosquitos.Comoresultado deunconceptoporsímismo,afectaalvalorquetomaalgún
+deestasinteracciones,seincrementanlasprobabilidadesde conceptoenlacategoríasentimientos.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11 AlfonsoHernández,E.,&MarreroSevero,A.A.
+https://revistas.uh.cu/rcm/article/view/9952 https://doi.org/10.5281/zenodo.13914881
+Simulacióncomputacionalparaladinámicadeenfermedadestransmitidasporvectores 5
+Figura4.Esquemaquerepresentaelentornomodelado[Schemerepresentingthemodeledenvironment].
+1.4.2 Sentimientos generaunprocesoestocásticoenelcualtienemásprioridadel
+En esta categoría se tienen en cuenta los sentimientos mercadooelhospitalalquenormalmenteacudelapersonaen
+básicosdeunserhumanoylosquemejorseadaptabanpara cuestión.Lasúltimastresacciones,lapersonalasejecutaen
+representarlamovilidaddelosmismos. lalocaciónquehacereferenciaasucasa.Mientras,alescoger
+Conceptosdefinidosparalacategoríasentimientos: laaccióndecaminar,esteseleccionaaleatoriamenteaunode
+susconocidosparairavisitarlos,porende,setrasladahacia
+Miedo,
+lacasadelagenteencuestión.
+Hambre, Losnodospercepciónrepresentadosalaizquierdaenla
+Figura5poseenpesos,quesonutilizadosenlasimulación
+Necesidad, para hallar el intervalo de pertenencia de un concepto de
+percepción. A modo de ejemplo, se presenta la manera de
+Enfermedad,
+calcular el intervalo de pertenencia del concepto personas
+Indiferencia,y enfermasaltas,paraconestehallarelgradodepertenencia
+del parámetro cantidad de personas enfermas al concepto
+Cansancio. encuestión,elcualesunconjuntodifuso,comomuestrala
+Figura6conrespectoalgrafodelaFigura5.
+1.4.3 Acciones
+Seaplavariablequerepresentalacantidaddepersonasen
+Se definen las acciones fundamentales que modelan el
+lasimulación.Sean lavariablequerepresentaelpesodelno-
+comportamientodeunapersonaenunambienteepidémico: e (cid:20) (cid:21)
+p p
+doatratar.Elintervaloestádefinidodelaforma ,2· .
+Iratrabajar, n n
+e e
+Silacantidaddepersonasenfermasseencuentraporenci-
+Iralmercado,
+madelmáximodelintervalo,entonceselgradodepertenencia
+deesteparámetrotienevalor1,siesinferioralmínimoes0y
+Iralhospital,
+siseencuentradentrodeesteseleotorgaunnúmeroentre0y
+Caminar, 1.
+Sedefineunafunciónsigmoidenecesariaparacomprender
+Estudiar,
+elsiguienteprocesoutilizado[15].Unafunciónsigmoidalestá
+Descansar,y definidapor:
+1
+σ(x)= .
+Prevenir. 1+e−x
+Lasaccionessonlasencargadasdeefectuarelmovimiento Lasaristas,aligualquelosnodos,poseenpesos,peroestos
+delosagentes;cadaacciónenunalocalizacióndelasimula- nosonutilizadosparaestablecerlosintervalosdepertenencia
+ción.Lastresprimerassonevidentes:enelcorrespondiente delosconceptosradicadosenelconjuntodesentimientos.En
+trabajodelindividuo,enunmercadodelentornoyenuncen- cambio,seutilizaunafunciónsigmoidalparaestablecerel
+trodesaluddelentorno,respectivamente.Cuandounagente valorfinaldelconceptoquesetrata,puescomonoexisteun
+decideescogermoversehaciaunmercadooaunhospitalse parámetrodelentornoquedefinamuybienelconcepto,se
+AlfonsoHernández,E.,&MarreroSevero,A.A. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11
+https://doi.org/10.5281/zenodo.13914881 https://revistas.uh.cu/rcm/article/view/9952
+6 Simulacióncomputacionalparaladinámicadeenfermedadestransmitidasporvectores
+Figura5.GrafoquerepresentalasrelacionesentrelosnodosdepercepciónysentimientosdelFCMinicialdecadapersona
+[Graphthatrepresenttherelationsbetweentheperceptionandfeelingnodesofeachperson’sforinitialFCM].
+utilizaelgradodepertenenciaqueseledioalosconceptos 1.5 Vectoresysusacciones
+de percepción y se multiplica por los pesos que posean las Paralosvectores(porejemplo,mosquitos)seconsideraron
+aristas.Cadaunodeestosvaloressonsumadosentresíyeste sololasaccionesdepicaronopicar,poreso,noconsideramos
+resultadofinalesutilizadoparacalcularsuvalorsigmoide. unFCMcomoenelcasodelaspersonas.Sinembargo,siguen
+Unavezobtenidoslosgradosdepertenenciasdelospará- siendoagentesennuestrasimulaciónpuestienelaposibilidad
+metrosalosconceptosdepercepciónseprocedeaencontrar dedecidirsialimentarseono.Estostienenunparámetroque
+los valores sigmoides de los conceptos de sentimientos. Se representaelniveldesaciedadqueposeen.Endependencia
+ejemplificaacontinuación,ladinámicaparaencontrarelvalor delvalorqueestereflejeenelinstantedetiempoenquese
+delconceptomiedo. encuentre,elagentetomaladecisióndepicarono,yacuántas
+SeaMlamatrizdeadyacenciadelaFigura6.Seanelnú- personasintentarhacerlo.Decididalacantidaddepersonas
+merototaldefilasdeM.Seaxelvalorsigmoidedelconcepto a picar se genera un valor aleatorio el cual se encarga de
+miedoymlacolumnaquerepresentaamiedoenlamatriz. representarsielvectortuvoéxitoensumisióndealimentarse
+1 ysinimportarelresultadoobtenido,secontinúaparalaotra
+⇒x= ,siendo
+1+e−t personaseleccionadaapicaryserepiteelproceso.
+Lapoblacióndevectoresutilizadanotienelacapacidadde
+n reproducirse,perosílademorir.Esimportantedestacarqueel
+t=∑M[i,m]·oldConcept,
+usodevaloresaleatoriosenlosprocesosrelacionadosconlos
+i=0
+vectoresenlasimulaciónnoimplicaquelosresultadossean
+conoldConceptrepresentandoelvaloranteriordelconcepto impredecibles,laideaesreflejarlanaturalezaprobabilísticade
+i−ésimo. estosprocesosenunentorno.Esimportantedestacarquetener
+unamodelacióndelasaccionesnoessuficiente,esnecesario
+De la misma forma en que se calculan los valores sig-
+indagarsobrelaprobabilidaddetransmisióndelaenfermedad
+moidesdelosconceptosdesentimientos,secalculanlosde
+encuestiónylaprobabilidaddeinfeccióndelosagentes,para
+los conceptos de acciones, utilizando a los primeros de la
+cuando estos realicen sus labores diarias la transmisión se
+mismaformaenqueellosutilizanalaspercepciones.Enlas
+asemejealarealidaddeesta.
+figuras7y8semuestranelgrafoylamatrizqueilustraneste
+procedimiento.
+Alobtenerlospesosovaloressigmoidescorrespondientes 1.6 Infección,muerteyrecuperacióndelosagentes
+alosconceptosdeacciones,elagentequerepresentaalaper- Elmodeladodelasmuertesylasinfeccionesenlasimula-
+sonaenlasimulaciónsololequedadecidirquéacciónrealizar. ciónesimportanteparacomprenderypredecirlapropagación
+Paraestosetieneencuentaquenosiempreunserhumano deenfermedadestransmitidasporvectores.Paralograrrepre-
+escogelamejordecisión.Poresto,sehallalasumadetodos sentar estos fenómenos se utilizan varios factores como la
+los conceptos de acciones y este resultado es dividido por transmisióndepatógenos,lasusceptibilidaddelosindividuos
+cadaunodeestos,conelobjetivodehallarlapartequerepre- ylainteracciónentreellos.
+sentacadanododeltotaldenodos.Estascifrassonsituadas SegúnelCentrodeControlyPrevenciónparaEnferme-
+enunarectanumérica,seescogeunnúmeroaleatorioentre0 dades[4],el5%deloscasosdedenguepuedenprogresara
+y1,yseescogenlosextremosdelintervaloalquepertenezca. graveylamortalidadpuedellegarhastaun13%enpacientes
+Luego,aleatoriamenteseseleccionaunodeestosdosvalores quenotengantratamiento.Lacantidaddepersonasenfermas
+teniendolamismaprobabilidaddeserescogidos,elconcepto enlaregióndeAméricaLatinaduranteel2023pordenguefue
+deacciónalqueestevalorhacíareferencia,seríalaacción deaproximadamentetresmillones[12].Duranteesteperíodo
+querealizaríaelagenteenesemomentodelasimulación. secontabilizaron1302muertesconunatasademortalidad
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11 AlfonsoHernández,E.,&MarreroSevero,A.A.
+https://revistas.uh.cu/rcm/article/view/9952 https://doi.org/10.5281/zenodo.13914881
+Simulacióncomputacionalparaladinámicadeenfermedadestransmitidasporvectores 7
+Figura6.MatrizdeadyacenciadelgrafodelaFigura5conlospesosdelasaristas[AdjacencymatrixofthegraphinFigure5
+withtheweightsontheedges].
+Figura7.GrafoquerepresentalasrelacionesentrelosnodosdesentimientosyaccionesdelFCMinicialdecadapersona
+[Graphthatrepresenttherelationsbetweenthefeelingsandactionsnodesofeachperson’sforinitialFCM].
+Figura8.MatrizdeadyacenciadelgrafodelaFigura7conlospesosdelasaristas[AdjacencymatrixofthegraphinFigure7
+withtheweightsontheedges].
+AlfonsoHernández,E.,&MarreroSevero,A.A. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11
+https://doi.org/10.5281/zenodo.13914881 https://revistas.uh.cu/rcm/article/view/9952
+8 Simulacióncomputacionalparaladinámicadeenfermedadestransmitidasporvectores
+del0,04%. elfenómenoqueseestáestudiando.Paralograrloserequiere
+Elprocesodeinfeccióndeunagenteestádefinidoporlas lacontribucióndeexpertosenáreasespecíficasdelaciencia,
+picadas.Seexpresaacontinuación,cómoseinfectaunaper- queposeanconocimientosyexperienciaenlacaracterización
+sona.Luegodetranscurrirunahoradesimulaciónodellegar ymedicióndelosparámetros.
+aunanuevalocalización,lapersonaessometidaaunproceso Paragrafossemejantesoisomorfoselmodelononecesa-
+aleatorioparaobtenerlacantidaddevectoresquedecidirán riamentebrindaresultadosparecidos.Estonosolosedebea
+picarla.Enelproyectosepresentaunaescalaascendentedel la estocasticidad con la que se define el mismo, puede pro-
+0al10querepresentacuánenfermoseencuentraunapersona. ducirse también por valores de parámetros distintos; pero,
+Elnúmerodeinfecciónesmultiplicadoporunvalorquerepre- grafossemejantes,convaloresigualesdeparámetrosbrinda-
+sentalarealidaddelprocesoparaobtenerunaprobabilidadde rían resultados muy parecidos. Con la idea de reflejar esto,
+queelagenteencuestiónmuera.Losestadosderecuperación se realizaron simulaciones con valores distintos para cada
+delaspersonassemodelannuevamentedemaneraestocástica, variable en cuestión. Una idea seguida en la validación se
+esdecir,teniendoencuentalaincertidumbreyvariabilidad basaenelconceptodeautopromediado(self-averaging),que
+inherente. serefierealapropiedaddeciertascantidadesfísicasenun
+sistemaqueexhibenunaconsistenciayestabilidadestadística
+2. Implementación y resultados de a medida que el tamaño del sistema aumenta. Cuando una
+cantidadfísicaesautopromediada,estosignificaquesuvalor
+experimentos
+promediosepuedeobtenerapartirdeunaúnicarealización
+2.1 Detallesdeimplementación delsistemayqueelpromediosobremúltiplesrealizaciones
+Elconocimientodelacomplejidadtemporaldelmodelo delsistemanointroduceunavariabilidadsignificativaenel
+generadopermiteentenderlamejormaneradeusarlo.Esta valorpromedio.
+complejidadtemporalestádadapor: En otras palabras, si se toman diferentes muestras del
+sistema y se calcula el promedio de la cantidad de interés
+h,lacantidaddehorasasimular,
+encadauna deellas,losvalorespromedioobtenidos serán
+consistentes y estarán cerca del valor promedio obtenido a
+p,lacantidaddepersonasincluidasenlasimulación,y
+partirdeunasolamuestra.Elconceptodeautopromediadoes
+m,lacantidaddemosquitosporlocalizacionesescogi- útilporquesimplificaelanálisisdesistemasfísicos.Siuna
+l
+dosparapicarenesahora. cantidadesautopromediada,entoncesessuficienteestudiarun
+únicosistemagrandeparaobtenerinformaciónprecisasobre
+Entonces la complejidad temporal del modelo es O(h· elcomportamientopromediodelsistemaengeneral.Estoes
+p[3·13·16+14+m l ]). especialmenteimportanteensistemascomplejos,dondereali-
+Puedeapreciarsequesih=pennuestrasimulación,en- zarmúltiplessimulacionesoexperimentospuedesercostoso
+tonceslacomplejidadpasaríaasercuadrática,yaquesería odifícil.
+p2.Enelcasodequem l =p,seríacuadráticatambién,pero EnlaFigura9semuestracómovaríanlosvaloresdelos
+m l esunvalorquedependedeunaprobabilidad,porlotanto, conceptos referentes a las acciones cuando solo existe una
+el modelo no siempre procesaría el conjunto de mosquitos personaenlasimulación.
+completos.Porloque,paraelpeorcasodemoraríalomismo,
+pero,porlogeneral,seríamásrápido.
+2.2 Detallesdelaexperimentación
+Paralavalidacióndelmodeloimplementadosegeneraron
+varios grafos con distintos juegos de parámetros. En [2] se
+proponen algunos de los valores que se utilizaron en este
+proyecto,dígase:
+Tasademortalidaddehumanos(0,000024),
+Tasaderecuperacióndelaenfermedad(0,143),y
+Tasadetransmisióndehumanoamosquito(entre
+0,16346y0,16384).
+Lacorrectaevolucióndelmodelopropuestodependeen Figura9.Valoresdelosconceptosdeaccionesparanueve
+granmedidadelosvaloresdelosparámetrosquelocaracteri- iteracionesdeunapersona[Valuesofactionsconceptsfor
+zanyque,ensumayoría,sehanconsideradocomoconstantes. nineiterationsofapersons].
+Laobtencióndevaloresadecuadosparaestosparámetros
+esesencialparagarantizarqueelmodeloreflejeconprecisión Se puede apreciar en la Figura 9 que en la primera ite-
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11 AlfonsoHernández,E.,&MarreroSevero,A.A.
+https://revistas.uh.cu/rcm/article/view/9952 https://doi.org/10.5281/zenodo.13914881
+Simulacióncomputacionalparaladinámicadeenfermedadestransmitidasporvectores 9
+ración todos los conceptos tienen valor igual a 0,5, esto se
+debe a que en la primera instancia los valores referentes a
+losconceptosdesentimientoson0,porlotanto,lafunción
+sigmoidaldevuelve0,5.Tambiénseapreciaque,apartirde
+laterceraiteración,todoslosconceptosvaríanmuypocosu
+valor, por lo que se decidió, que cada vez que una persona
+fuesearealizarunaacción,seejecutarantresactualizaciones
+delFCM.
+Es importante recalcar que esta figura también muestra
+queelFCMfuncionadeacuerdoaloquesequeríamodelar.
+Las acciones de trabajar y descansar son las que más se
+ejecutaríanenunentornoindividual,ambasconvaloresmuy
+parecidos.Otroaspectoadestacardelgráficoesquelaacción
+deiralhospitalespocoprobablequeseejecutesilapersona
+no se encuentra enferma, esto con la misma intención de
+representarlarealidad.Sinembargo,lospesoscambiande
+acuerdoaloquesucede,portanto,enalgunosmomentosde
+lasimulación,sisepresentanlascondiciones,iraltrabajo, Figura11.Datosyestimacionesdehumanosinfectados,
+podríaserlaacciónquemenospesotuviera. tomadode[2][DataandEstimationsofinfectedhumans,
+takenfrom[2]].
+querepresentaladesviaciónestándarconrespectoalprome-
+diodepersonasinfectadasesde5,88%.Elhechodequeuna
+desviación estándar represente aproximadamente el 6,00%
+delvalorpromediosugierequelavariabilidadentrelasrea-
+lizacionesdelsistemaesrelativamentebajaencomparación
+conelvalorpromedio.Estoindicaunaciertaconsistenciay
+estabilidadestadísticaenlassimulaciones.Apartirdeesto,
+paracualquiervalordepersonas,mayorque1000bastacon
+simularunasolavez.
+Comovalidaciónfinaldelmodeloimplementadosereali-
+zóunasimulaciónde43000personas,poblaciónactualde
+unmunicipiodeLaHabana,losresultadosobtenidosporeste
+modelo lo validan [9], de donde se obtiene la cantidad de
+personasinfectadaspormesdurantelaepidemiadedengue
+del2006,enlacualreaparecieronlosserotipos3y4.
+Parámetrosutilizados:
+Figura10.Datosyestimacionesdehumanosinfectados
+segúnnuestromodelo[DataandEstimationofinfected Cantidaddepersonas:43000,
+humansbyourmodel].
+Cantidaddedías:30,
+LaFigura10ilustralosresultadosobtenidospornuestro Valordelmercado:250,
+modelo.LacurvaazulenlaFigura11representalosdatosy
+Probabilidaddearistas:0,009,
+laroja,lasestimaciones,segúnlosresultadosobtenidosen
+[2].
+Cantidaddemosquitosporlugares:40,
+Losdescensosqueseapreciansondebidosalascampañas
+defumigación.Estoesunefectoexternoquenuestrasimula- Probabilidaddepicar:0,15,
+ciónnotieneencuenta,yaquelosagentessonlosencargados
+Probabilidaddeinfectarse:0,15,
+deprotegerse,porloqueenestasoloexisteundescenso.A
+pesardelasdiferenciasentreparámetros,comolacantidadde Probabilidaddemorir:0,000001,
+personas,seobservaqueambosresultadosalcanzanelpico
+delaepidemiaentrelos100y150díasdesimulación. Trabajos:4,
+Despuésderealizar30simulacionesconuntotalde1000
+Mercados:3,y
+personas,conlosmismosvaloresdelosparámetros,seevi-
+dencióqueelsistemaesautopromediado,pueselporcentaje Hospitales:3.
+AlfonsoHernández,E.,&MarreroSevero,A.A. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11
+https://doi.org/10.5281/zenodo.13914881 https://revistas.uh.cu/rcm/article/view/9952
+10 Simulacióncomputacionalparaladinámicadeenfermedadestransmitidasporvectores
+Alfinalizarlasimulación,loshumanosinfectadosfueron
+1391yenlosdatosextraídosde[9]daunpromediodeaproxi-
+madamente1000personaspormes.Realizandounajustede
+losparámetrossepuedeconseguirunvalormásprecisopara
+laspersonasinfectadas.Estoseilustraenlasfiguras12-14.
+Conclusiones
+Seconfirmóqueelusodelasredescomplejaspermitemo-
+delardemaneraprecisaelentornodescritoporlocalizaciones
+yrelacionesentreagentes.Además,sevalidaquetrataralas
+personas como agentes garantiza la posibilidad de ejecutar
+accionesdeformaindependiente.
+Sedemostróqueelusodelosmapascognitivosdifusos
+proporcionalabasefundamentalparaquelasdecisionesde
+laspersonascomoagentesesténdebidamenteorientadas.
+Figura12.Datosyestimacionesdehumanosinfectadosdel
+Elestudiorealizadoevidenciaqueesfactibleimplementar
+modelopara43000personas[DataandEstimationof
+un modelo de simulación que tenga en cuenta la dinámica
+infectedhumansbythemodelfor43.000persons].
+del comportamiento de las personas y los vectores en un
+entornodeterminado.Losresultadosrespaldanlautilidady
+laefectividaddelmodelopropuestocomounaherramienta
+confiableparaelanálisisdelapropagacióndeenfermedades
+transmitidasporvectores.
+Agradecimientos
+AgradecemoselfinanciamientodelProyectoPN223LH010-
+042“Nuevasaproximacionesenlamodelacióndinámicade
+enfermedades”delProgramaNacionaldeCienciasBásicas,
+MinisteriodeCiencia,TecnologíayMedioAmbiente,Cuba,
+2024-2026.
+Referencias
+[1] Álvarez Pomar, L. y S. Rojas Galeano: Herramienta
+Figura13.Cantidaddepersonasquevisitaronpor
+basada en agentes para la valoración del impacto de
+localizaciones(43000)[Numberofpeoplewhovisitedby
+intervencionesnofarmacéuticascontralaCOVID-19.
+locations(43.000)].
+TecnoLógicas,23(49):201–221,2020. http://www.
+scielo.org.co/scielo.php?script=sci_
+arttext&pid=S0123-77992020000300179.
+[2] ArazozaRodríguez,H.de,A.SánchezPérez,A.A.Ma-
+rrero Severo, J. Barrios Ginart, T. Noriega Sánchez y
+M.E. García Garaluz: Un Enfoque en la Modelación
+MatemáticayAnálisisPreliminardeProblemasEpide-
+miológicos.UnaAplicaciónaunModelodeDengueen
+Cuba,páginas110–117. 2010.
+[3] Bissett,K.R.,J.Cadena,M.Khan,andC.J.Kuhlman:
+Agent-BasedComputationalEpidemiologicalModeling.
+JournaloftheIndianInstituteofScience,101:303–327,
+2021. https://doi.org/10.1007/s41745-0
+21-00260-2.
+[4] CDC:ClinicalConsiderationsforDengueVirusInfec-
+Figura14.Cantidaddepersonasquevisitaronpor
+tion. ClinicalOutreachandComunicationActivity,2022.
+localizaciones(43000)[Numberofpeoplewhovisitedby
+https://emergency.cdc.gov/newsletter
+locations(43.000)].
+s/coca/083022.htm.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11 AlfonsoHernández,E.,&MarreroSevero,A.A.
+https://revistas.uh.cu/rcm/article/view/9952 https://doi.org/10.5281/zenodo.13914881
+Simulacióncomputacionalparaladinámicadeenfermedadestransmitidasporvectores 11
+[5] Jose, A.: Dynamic Fuzzy Cognitive Maps for the Su- [16] Tercero-Gutiérrez,M.yR.OlallaHerbosa:Enfermeda-
+pervision of Multiagent Systems, páginas 307–324. destropicalestransmitidasporvectores.Medidaspre-
+SpringerBerlinHeidelberg,Berlin,Heidelberg,2010, ventivasyprofilaxis.Elsevier,27(6):78–89,2008.http
+ISBN978-3-642-03220-2. https://doi.org/10 s://www.elsevier.es/es-revista-offar
+.1007/978-3-642-03220-2_13. m-4-articulo-\enfermedadestropicales
+-transmitidas-por-vectores--13123519.
+[6] Kosko, B.: Fuzzy cognitive maps. International
+Journal of Man-Machine Studies, 24(1):65–75, 1986, [17] Torres-Castro,M.,H.Noh-Pech,C.Lugo-Caballero,K.
+ISSN0020-7373. https://www.sciencedirec Dzul-Rosado y F. Puerto: Las enfermedades transmi-
+t.com/science/article/pii/S002073738 tidas por vector: importancia y aspectos epidemioló-
+6800402. gicos. Bioagrociencias,13(1),2020,ISSN2007-431X.
+https://www.revista.ccba.uady.mx/ojs
+[7] Macal,C.andN.M.:Tutorialonagent-basedmodelling /index.php/BAC/article/view/3446.
+andsimulation. JournalofSimulation,4:151–162,2010.
+https://doi.org/10.1057/jos.2010.3. [18] Zadeh, L.A.: Fuzzy sets. Information and Control,
+8(3):338–353,1965,ISSN0019-9958. https://ww
+[8] Mansilla,R.andJ.L.Gutierrez:DeterministicSiteEx- w.sciencedirect.com/science/article/
+change Cellular Automata Models for the Spread of pii/S001999586590241X.
+Diseases in Human Settlements. Complex Systems,
+13(2):143–159,2001. https://www.complex-s
+Conflictos de interés
+ystems.com/abstracts/v13_i02_a03/.
+Sedeclaraquenoexistenconflictosdeinterés.Ninguno
+[9] Massón López, A.C., G.J. González Valladares y R.F.
+delosautores,nilaInstituciónhemosrecibidopagodeterce-
+EspinosaÁlvarez:Comportamientoclínicoyepidemio-
+rosparaningúnaspectorelacionadoconlaobrapresentada.
+lógicodelDengueenelmunicipio10deOctubre. Re-
+Hemospresentadodocumentaciónqueincluyeelmanualde
+vistaCubanadeMedicinaGeneralIntegral,31(1):5–16,
+usuarioparaelregistrodelsoftware.
+2015. http://scielo.sld.cu/scielo.php
+?script=sci_arttext&pid=S0864-21252
+Contribución de autoría
+015000100003&lng=es&tlng=es.
+Conceptualización A.A.M.S.,E.A.H.
+[10] Newman,M.E.J.:TheStructureandFunctionofCom-
+Curacióndedatos E.A.H.,A.A.M.S.
+plex Networks. SIAM Review, 45(2):167–256, 2003.
+https://doi.org/10.1137/S00361445034 Análisisformal E.A.H.,A.A.M.S.
+2480. AdquisicióndeFinanciamiento A.A.M.S.
+Investigación A.A.M.S.,E.A.H.
+[11] Organization, World Health: Vector-borne diseases,
+2020. https://www.who.int/news-room/ Metodología E.A.H.,A.A.M.S.
+fact-sheets/detail/vector-borne-dis
+Software E.A.H.
+eases.
+Validación E.A.H.
+[12] Organization, World Health: Dengue - the Region of Visualización E.A.H.
+theAmericas.DiseaseOutbreakNews,2023. https:
+Redacción:preparacióndelborradororiginal A.A.M.S.,
+//www.who.int/emergencies/disease-o
+E.A.H.
+utbreak-news/item/2023-DON475.
+Redacción:revisiónyedición A.A.M.S.,E.A.H.
+[13] Poczeta,K.,E.I.Papageorgiou,andV.C.Gerogiannis:
+Fuzzycognitivemapsoptimizationfordecisionmaking Suplementos
+andprediction. Mathematics,8(11):2059,2020. http
+Esteartículonocontieneinformaciónsuplementaria.
+s://doi.org/10.3390/math8112059.
+[14] Reisen,W.K.:Landscapeepidemiologyofvector-borne
+diseases. AnnualReviewofEntomology,55:461–83,
+2010. https://pubmed.ncbi.nlm.nih.gov/
+19737082.
+[15] Saeed,M.:AGentleIntroductionToSigmoidFunction,
+202E1s.tahtotbpras:e/st/´amabcahjoinuenlaealircennicniagmCarseatteivrey.Ccommons “Atribuci´on-NoComercial-
+omS/inaD-egreivnadtalse4-.0iInntterronadcuiocntali”o.n-to-sigmoid
+-function.
+AlfonsoHernández,E.,&MarreroSevero,A.A. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.1-11
+https://doi.org/10.5281/zenodo.13914881 https://revistas.uh.cu/rcm/article/view/9952
+1

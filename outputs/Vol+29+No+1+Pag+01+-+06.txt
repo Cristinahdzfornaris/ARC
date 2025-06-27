@@ -1,0 +1,400 @@
+CienciasMatema´ticas,Vol.29,No.1,Pag.1-6,2015
+Recibido04-2014
+Mecanismos de aceleracio´n para el algoritmo
+prototipo de optimizacio´n basado en ana´lisis de
+intervalos
+Acceleration mechanisms for the prototype
+algorithm of optimization based on interval analysis
+Greter Dom´ınguez Rodr´ıguez1*, Ayme´e Marrero Severo2, Jorge Luis Rodr´ıguez Pe´rez3,
+Gonzalo Joya Caparro´s4
+Resumen Enlaliteraturaespecializadahaygranvariedaddetrabajosreferentesalproblemadeoptimizacio´n
+globalqueutilizandesdete´cnicascla´sicashastaheur´ısticas.Estetrabajopresentaunate´cnicadeterminista
+usadapararesolverelproblemadelaoptimizacio´nglobalbasadaenAna´lisisdeIntervalos.Enprimerlugarse
+abordanlascaracter´ısticasfundamentalesdelAna´lisisdeIntervaloyseexplicaelusodeestate´cnicaenla
+confeccio´ndelAlgoritmoPrototipodelaOptimizacio´nGlobal(AP).Posteriormentesepresentan2mecanismos
+implementados con el objetivo de acelerar la convergencia del AP y se realiza el ana´lisis de los resultados
+obtenidosenlaexperimentacio´nnume´rica.Poru´ltimoseexponenlasconclusionesdeltrabajo.
+Abstract Intheliteraturetherearemanyresultsconcerningtheglobaloptimizationproblemusingtechniques
+fromclassicaltoheuristics. Thispaperpresentsadeterministictechnicalusedtosolvetheproblemofglobal
+optimization based on Interval Analysis. In first place are addressed the basics features of Interval Analysis
+andexplainedtheuseofthistechniqueintheconstructionoftheGlobalOptimizationAlgorithmPrototype(AP).
+SubsequentlyarepresentedtwomechanismsimplementedinordertoacceleratetheconvergenceoftheAPand
+areperformedtheanalyzingoftheresultsofthenumericalexperiments. Finallyareexposedtheconclusions.
+PalabrasClave
+Ana´lisisdeIntervalos,Optimizacio´nGlobal,ProcesamientoParalelo
+1UniversidaddeLaHabana,Direccio´nDocentedeInformatizacio´n,greter.dominguez@iris.uh.cu
+2UniversidaddeLaHabana,FacultaddeMatema´ticayComputacio´n,aymee@matcom.uh.cu
+3UniversidaddeCienciasInforma´ticas,Cuba,jlrp@uci.cu
+4UniversidaddeMa´laga,Dpto.Tecnolog´ıaElectro´nica,E.T.S.Ing.Telecomunicacio´n,gjoya@uma.es
+*AutorparaCorrespondencia
+1. Introduccio´n sepuedeincorporardesdelaversio´n5.3),yqueesellenguaje
+utilizadoenestetrabajopararealizarestudioscomputaciona-
+LasposibilidadesqueofreceelAna´lisisdeIntervalospara
+les.
+afrontarelproblemadelaoptimizacio´nglobalfueronexplo-
+El ana´lisis de intervalos ha sido aplicado con e´xito en
+tadasporprimeravezeneltrabajodeSkelboede1974[1],
+campos muy diversos, como en ingenier´ıa qu´ımica, disen˜o
+mejorado en 1976 por [2]. Desde entonces han sido nume-
+asistido por ordenadores, sistemas dina´micos y caos, siste-
+rososlostrabajosrelacionadosconelAna´lisisdeIntervalos
+masexpertos,controldecalidadymeca´nicadefluidos,entre
+quehantratadoproblemasdeoptimizacio´n,principalmente
+otros.Sinembargo,apesardesuextendidouso,elAlgoritmo
+sinrestricciones.Noobstante,nofuehastalade´cadadelos
+Prototipo para resolver problemas de optimizacio´n basado
+90 que el Ana´lisis de Intervalos tuvo mayor difusio´n entre
+enAna´lisisdeIntervalostieneunaltotiempodeejecucio´n
+lacomunidadcient´ıfica.Estofueposiblealsurgirlenguajes
+debidoaquesuordenesexponencialrespectoalnu´merode
+deprogramacio´nysoftwareconherramientasimplementadas
+variablesdelproblemaaresolver.
+para el trabajo con intervalos. Algunos ejemplos son FOR-
+TRANXSC,tambie´nconocidocomoACRITH-XSC[3](una Enunintentopormejorardichotiempodeejecucio´nsurge
+librer´ıa para FORTRAN 90), C-XSC [4] (una librer´ıa para estetrabajo,cuyoobjetivosecentraenelaborarmecanismos
+C++),Pascal-XSC[5](unaextensio´ndelPascalesta´ndar),e deaceleracio´nparaelalgoritmoprototipo.Eltrabajoaborda
+INTLAB[6](IntervalLaboratory-untoolboxdeMatlabque dosmodificacionesalalgoritmo,laprimeraincorporate´cnicas
+2 Mecanismosdeaceleracio´nparaelalgoritmoprototipodeoptimizacio´nbasadoenana´lisisdeintervalos
+nume´ricasconelobjetivodemejorarlospuntoscr´ıticosde 2.2 FuncionesdeInclusio´n
+sufuncionamiento,ylasegundautilizate´cnicasdeprograma- Elconceptoclaveeneldesarrollodelateor´ıadelaopti-
+cio´nenparalelodemaneraquepuedanexplotarsemejorlas mizacio´nbasadaenAna´lisisdeIntervaloseseldefuncio´nde
+potencialidadesdelhardwareutilizado. inclusio´n[8].
+El trabajo esta´ dividido en cuatro secciones, la primera
+Definicio´n1 SeaD⊂Rn unconjuntocualquiera, f :D→R
+dedicada a la Aritme´tica de Intervalos y las funciones de
+unafuncio´ndefinidasobree´l.In(D)={X :X∈In,X⊂D}el
+inclusio´nporseresteelconceptoquesustentatodalateor´ıa
+conjuntodelosvectoresdeintervaloscontenidosenD.Una
+del AP, la segunda a explicar el funcionamiento del AP, la
+funcio´n f :In(D)→I sedicequeesunafuncio´ndeinclusio´n
+terceraapresentarlaste´cnicasdeaceleracio´nimplementadas
+de f si
+y en la cuarta se exponen los resultados computacionales
+obtenidos para problemas test de optimizacio´n global y el fu(X)={f(X):X∈X}⊆f(X) ∀X∈In(D) (1)
+ana´lisisrealizadoapartirdedichosresultados.Eldocumento
+La utilidad de las funciones de inclusio´n radica en que
+culmina con la presentacio´n de las conclusiones donde se
+podemosobtenerdirectamentecotasinferioresysuperiores
+planteanadema´slasposiblesl´ıneasfuturasdeinvestigacio´ny
+de f sobrecualquiercajaX eneldominiode f tomando f(X)
+finalmenteseincluyelabibliograf´ıaconsultada.
+y f(X),respectivamente(ve´asefigura1).
+Las funciones de inclusio´n de funciones vectoriales se
+2. Aritme´tica de Intervalos y Funciones
+definendeformaana´loga.Entalcaso,lacondicio´n(1)debe
+de Inclusio´n
+sersatisfechaencadacomponente.
+Elconjuntodelosintervalosrealescerradoslodenotare-
+mosporI,elconjuntodevectoresn-dimensionalesdeinter-
+valos, tambie´n llamados cajas, por ln. Las letras en negrita
+denotara´nintervalos,lasminu´sculascantidadesescalaresy
+las mayu´sculas vectores, tambie´n llamados cajas. Los cor-
+chetes[.]delimitara´nintervalos,mientrasquelospare´ntesis
+(.)delimitara´nvectores.Elsubrayadoinferiordenotara´ los
+extremosinferioresdelosintervalosyelsubrayadosuperior
+losextremossuperiores. Figura1.Obtencio´ndecotasatrave´sdefuncionesde
+Conestanotacio´n,sitenemosqueX =(x 1 ,···,x n )esuna inclusio´n.
+cajaovectordeintervalosrealescerrados,siendolacompo-
+(cid:2) (cid:3)
+nentei-e´simaelintervalox i = x i ,x i ,podemosescribirque Para las funciones h predeclaradas en los lenguajes de
+(cid:2) (cid:3)
+X = X,X ,dondeX =(x 1 ,···x n )yX =(x 1 ,···,x n ). programacio´n (como la exponencial, el seno, etc.), es fa´cil
+obtenerfuncionesdeinclusio´nh,yaquelosintervalosdemo-
+2.1 Aritme´ticadeintervalos noton´ıadedichasfuncionessonconocidos,ysepuedetomar
+Debidoaquelosintervalospuedenserinterpretadoscomo h(x)=hu(x)paracualquierx∈I eneldominiodeh.Dehe-
+conjuntos,lasoperacionesaritme´ticaspuedenserdefinidas cho,cualquieradeloslenguajesdeprogramacio´nFORTRAN-
+mediantelasiguienteexpresio´n: XSC[3],C-XSC[4],Pascal-XSC[5],INTLAB[6]as´ıcomo
+otroslenguajespreparadosparaelca´lculocient´ıfico,disponen
+x(cid:12)y={x(cid:12)y:x∈x,y∈y}
+defuncionesdeinclusio´npredeclaradash paracadaunade
+Donde(cid:12)representaunadelascuatrooperacionesbinarias lasfuncionespredeclaradash.
+ba´sicas(+;−;∗;/)yx/yesta´ definidosolosi0∈/y. Para una funcio´n general f(x), x∈Rn, la obtencio´n de
+Una manera de representar las operaciones aritme´ticas, funcionesdeinclusio´nsepuedehacerdeformaautoma´tica
+ma´sco´modapararealizarunaimplementacio´ndelasmismas, conelusodelaaritme´ticadeintervalosydedichasfunciones
+esexpresarlasenfuncio´nde losextremos delos intervalos deinclusio´npredeclaradas.
+queintervienenenlaoperacio´n[7].
+Seanx=[x,x],y= (cid:2) y,y (cid:3) : 3. Algoritmo Prototipo
+x+y=[x+y,x+y] Para la presentacio´n del AP de la optimizacio´n global,
+consideraremoselproblemadeoptimizacio´ndadopor:
+x−y=[x−y,x−y]
+x∗y=[m´ın (cid:8) xy,xy,xy,xy (cid:9) ,ma´x (cid:8) xy,xy,xy,xy (cid:9) ]   m´ınf(x)
+(cid:2) (cid:3) s.a. g i (x)≤0,j=1,···,r (2)
+x/y=x∗ 1/y,1/y , si0∈/y
+ x∈X ∈In
+0
+Lasoperacionesaritme´ticassobrecajasovectoresdein- Donde f,g :D⊂Rn→R, j=1,···,r,sonfuncionescua-
+i
+tervalossonlasextensionesnaturalesdelasdefinidassobre lesquiera, y X ⊆D es una caja o vector de intervalos que
+0
+vectoresreales. contienealconjuntodondesequierebuscarelo´ptimo.
+Mecanismosdeaceleracio´nparaelalgoritmoprototipodeoptimizacio´nbasadoenana´lisisdeintervalos 3
+Esteproblemaesnecesarioreformularlodeformatalque testdefactibilidadyeltestdepuntomedioquesedescribena
+sepuedausarlateor´ıadeAna´lisisdeIntervalosparahallar continuacio´n,aunquetambie´nexistenotrastalescomo:testde
+su solucio´n, para ello transformamos la funcio´n objetivo y monoton´ıaytestdeconcavidad,paraloscualesesnecesario
+las restricciones del problema en sus respectivas funciones elusodediferenciacio´nautoma´tica.
+deinclusio´n,demaneraqueelproblemaaresolverporelAP
+quedar´ıaplanteadodelasiguienteforma: 3.1 Testdefactibilidad[8]:
+Definicio´n2 SedicequeunacajaY⊆X cumple(concer-
+ 0
+
+m´ınf(X) teza)larestriccio´ng
+j
+(Y)≤0sig
+j
+(Y)<0yquelaincumple
+s.a. g i (X)≤0,j=1,···,r (3) (concerteza)sig j (Y)>0.
+ X⊆X ∈In
+0
+Estadefinicio´nsejustificagraciasalconceptodefuncio´n
+ElAPsigueunesquemaderamificacio´nyacotacio´n.Co-
+deinclusio´n(verdefinicio´n1).
+mienza dividiendo la caja inicial X en varias subcajas, de
+0
+estassubcajassoneliminadaslasquesetienelacertezade Definicio´n3 Una caja Y se dice (ciertamente) factible si
+quenocontienenpuntosdem´ınimosglobales,mientrasque cumple (con certeza) todas las restricciones del conjunto
+lasrestantessonalmacenadasenunalistadetrabajoparauna factible, (ciertamente) infactible si incumple (con certeza)
+posteriorsubdivisio´n.Esteprocesoserepitehastaquelasca- algunadelasrestriccionesquedefinenelconjuntofactible,e
+jasenlalistadetrabajotienenunanchomenorqueunacierta indeterminadaenotrocaso.
+toleranciaprescrita,denotadaporε.Comoentodoslosalgo-
+ritmosderamificacio´nyacotacio´n,sucostocomputacional As´ıpues,lascajasY paralasquealgu´ng (Y)>0,pueden
+j
+esdeordenexponencialrespectoalacantidaddevariables sereliminadasporserinfactibles.
+yesta´ determinadoporelana´lisisdelascajasresultantesdel
+procesodesubdivisio´nencadaiteracio´n. 3.2 Testdepuntomedio[8]:
+Enformadepseudoco´digo,elalgoritmoquedar´ıacomo Eneltranscursodelalgoritmo,lafuncio´nobjetivo f es
+sigue: evaluadaendistintospuntosfactibles.Elmenorvalorobtenido
+en dichas evaluaciones en un momento dado f(cid:101)es una cota
+Algorithm1Pseudoco´digodelalgoritmoprototipo superior para el valor o´ptimo f∗ del problema. Si para una
+1: Y ←X 0 ,L t ←0/,L s ←0/;
+cajaY, f(Y)> f(cid:101)entonces la cajaY puede ser eliminada,
+2: Elegirlasdireccionescoordenadasalolargodelascuales ya que ningu´n punto de dicha caja mejora el valor f(cid:101), esto
+realizarlasubdivisio´ndeY; esta´ garantizadograciasalconceptodefuncio´ndeinclusio´n
+3: SubdividirY perpendicularmente a las direcciones ele- (verdefinicio´n1).
+gidas,realizandoundeterminadonu´merodecortesalo Estetestesconocidocomoeltestdepuntomedioporque
+largodecadadireccio´n; lo habitual para intentar mejorar el valor de f(cid:101)durante en
+4: SeanY 1 ,···,Y s lassubcajasobtenidas; algoritmo es evaluar la funcio´n f en el punto medio de la
+5: fori=1tosdo cajaelegidaparasersubdividida(siestepuntoesfactible),
+(cid:110) (cid:111)
+6: ifY i notienepuntoso´ptimosthen y actualizar entonces f(cid:101)como f(cid:101)=min f(cid:101),f(m(Y)) . No
+7: EliminarY i ; obstante, tambie´n ser´ıa va´lido utilizar cualquier otro punto
+8: else factibley∈Y .
+9: Almacenar Y i en la lista de trabajo L t , siguiendo
+algu´ncriteriodeordenacio´n;
+4. Te´cnicas de Aceleracio´n
+10: endif
+11: endfor 4.1 Laoptimizacio´nnume´ricayeltestdepuntome-
+12: ifL t =0/ then dio
+13: return Alolargodelaejecucio´ndelalgoritmo, lafuncio´nob-
+14: endif jetivo f es evaluada en diferentes cajas factibles. Como se
+15: Seleccionar una caja de L t y eliminarla de dicha lista. hab´ıa explicado anteriormente, el menor valor obtenido en
+DenotemosporY dichacaja; dichas evaluaciones f(cid:101)constituye una cota superior para el
+16: if(Y−Y)<ε then valoroptimodelproblemayesempleadoporeltestdelpunto
+17: AdicionarY enlalistaL s delascajassolucio´neiral medioparadecidirsiunacajaesdescartableono.
+paso16; Comoelvalor f(cid:101)esunpunto,ynounintervalo,resulta
+18: else entoncesva´lidoplantearseelproblemadeemplearalgu´nal-
+19: Iralpaso2 goritmodeoptimizacio´nnume´ricaquepermitaobtenercon
+20: endif rapidez valores de f(cid:101)tan bajos como sea posible y de esta
+manerahacerma´sefectivoeltestdelpuntomedio.
+Losme´todospararechazarunasubcajacorrespondena Para resolver este problema de optimizacio´n, seleccio-
+pruebasdeseleccio´n,entreellaslasma´simportantessonel namosdosme´todosnume´ricoscla´sicosqueconvergenaun
+4 Mecanismosdeaceleracio´nparaelalgoritmoprototipodeoptimizacio´nbasadoenana´lisisdeintervalos
+m´ınimolocaldelafuncio´nobjetivo,elMe´tododema´ximo 5. Resultados Computacionales
+descenso y el Me´todo Cuasi-Newton con las correcciones
+Semuestraunaseleccio´ndelosresultadosobtenidospara
+DFPyBFGS[9].
+unaseriedeproblemascla´sicos,conelobjetivodevalidarla
+4.2 Paralelizacio´ndelalgoritmo eficaciadelasdiferenteste´cnicasdeaceleracio´naplicadasal
+Elpaso4delAP,sebasaenelana´lisisdeunacoleccio´n APoriginal.
+decajas,alasquedebenaplicarseunconjuntodetest,con
+el objetivo de descartarlas o preservarlas. Este paso puede 5.1 Problema1
+reformularsedeformama´sdetalladacomosigue:
+5
+Algorithm2Reformulacio´ndelpaso4
+m´ınf(x)=−∑ksin[(k+1)x+k]
+k=1
+1: fori=1tosdo
+2: AplicaralacajaY i eltestT 1 (X).Silacajanopasael
+test,eliminarla;
+3: AplicaralacajaY i eltestT 2 (X).Silacajanopasael
+test,eliminarla;
+4: ...
+5: AplicaralacajaY i eltestT k (X).Silacajanopasael
+test,eliminarla;
+6: Silacajahapasadosatisfactoriamentetodoslostest.
+GuardarlaenlalistadetrabajoL ypasaraanalizarla
+t
+siguientecaja;
+7: endfor Figura2.Representacio´ngra´ficadelafuncio´n f dadapor
+Schuberten[11]
+Alanalizarloanterior,esclaroquecadaiteracio´nsere-
+sume en la aplicacio´n de un conjunto de k test (funciones) Comointervaloinicialparaelalgoritmosetomo´[−10;10]
+independientesunasdeotra,sobreunamismacaja.Portanto,
+enelcuallafuncio´npresenta3m´ınimosglobalescomose
+sedecidio´ ejecutarconcurrentementecadaunodeesostest.
+puedeapreciarenlafigura2,ycomocotaparalascondiciones
+Pararealizaresteprocesodeoptimizacio´nseimplemento´un deparadaε =10−4.
+esquemadeparalelizacio´nJefe/Trabajador(Manager/Worker)
+Conestaconfiguracio´nlosresultadosalcanzadossemues-
+[10]queesutilizadocuandounproblemapuedeserdividido
+tranenlatabla1.
+enunconjuntodetareasquelostrabajadores(workers)pue-
+denprocesarsinnecesidaddecomunicarseentres´ı,esdecir;
+lastareassonindependientes.
+Lacaracter´ısticama´simportantedeestemodeloesque
+cadatrabajadorsecomunicaexclusivamenteconelproceso
+jefe(manager)ynotieneinformacio´nacercadeloqueotros
+trabajadoreshacen.
+Elesquemaimplementadoeselsiguiente:
+Algorithm3EsquemaParalelo Figura3.Representacio´ngra´ficadelcomportamientodel
+1: SeaPunalistaquecontieneunnu´merosdecajas,ysea algoritmooriginalconrespectoalalgoritmomejorado
+unconjuntodefuncionestestT (X),T (X),...,T (X); mediantete´cnicasnume´ricasyalalgoritmoparaleloparael
+1 2 k
+2: P←L t ; problema1.
+3: fori=1tosdo
+4: Crearkprocesossubordinados,cadaunodeloscuales Elalgoritmoofrececomoresultadotresintervalosquecon-
+encapsulaunafuncio´ntestT(X);
+i tienenlospuntosdem´ınimosglobalesyofrecenunaestima-
+5: AsignaracadaprocesolacajaanalizadadelalistaP; cio´ndelvaloro´ptimoconunaprecisio´nmenorqueε=10−4.
+6: Ejecutartodoslosprocesosdemaneraconcurrente; Enlafigura3queilustrasucomportamientosepuedeapreciar
+7: Recopilarlosresultadosdevueltosporcadaunodelos unaligeradisminucio´neneltiempodeejecucio´nalaplicar
+procesos;
+te´cnicasdeoptimizacio´nnume´rica.Estadisminucio´nesta´ da-
+8: An˜adirlacajaalalistaL t sipaso´ satisfactoriamente da por el hecho de que el test del punto medio resulta ma´s
+todoslostest;
+efectivo,porlotantoseeliminanma´scajasenlasprimeras
+9: endfor etapasdelalgoritmo,yestoprovocaunadisminucio´napre-
+ciableeneltotaldecajasquesegeneranalolargodetoda
+Mecanismosdeaceleracio´nparaelalgoritmoprototipodeoptimizacio´nbasadoenana´lisisdeintervalos 5
+Tabla1.Resultadosparaelproblema1.
+Puntoso´ptimos Intervalosresultantes Valoro´ptimo Valorresultante
+x =−6,7745 x∈[−6,7746;−6,7745] −12,0312 −12,0312
+1
+x =−0,4914 x∈[−0,4914;−0,4913] −12,0312 −12,0312
+2
+x =5,7918 x∈[5,7918;5,7919] −12,0312 −12,0312
+3
+laejecucio´n.Sinembargoelalgoritmoparaleloresultalige-
+ramentesuperior almejorado mediantete´cnicasnume´ricas
+debidoalareduccio´neneltiempodeejecucio´n.
+5.2 Problema2
+1
+m´ınf(x)=2x2−1,05x4+ ∗x6−x x +x2
+1 1 6 1 1 2 2 Figura5.Representacio´ngra´ficadelcomportamientodel
+algoritmooriginalconrespectoalalgoritmomejorado
+Estafuncio´nesconocidacomofuncio´ncamellodetresjoro-
+mediantete´cnicasnume´ricasyalalgoritmoparaleloparael
+bas[12].Lafuncio´ntieneunm´ınimoglobalenelorigende
+problema2.
+coordenadas, dos m´ınimos locales en [±1,75,±0,87] y dos
+puntosdeensilladuraen[±1,07,±0,535].Enlafigura4se
+muestraelgra´ficodelafuncio´n.
+delospuntoso´ptimosconlaprecisio´ndeseada.Esteproblema
+ilustraqueelempleodete´cnicasnume´ricasnosiempreresulta
+beneficioso. En problemas que como este, el test de punto
+medioespocoefectivo,mejorarelvalordelacotasuperior
+delo´ptimomedianteme´todosnume´ricosnoproduceningu´n
+beneficioapreciable;alcontrario,seincurreenunpequen˜o
+sobrecostoparaeltiempototaldeejecucio´ndelalgoritmo.En
+cambioelempleodete´cnicasdeprogramacio´nenparalelosi
+conllevaunamejoraencuantoaltiempodeejecucio´n.
+5.3 Problema3
+m´ınf(x)=(x −10)3+(x −20)3
+1 2
+s.a
+Figura4.Representacio´ngra´ficadelafuncio´n¨camellode g
+1
+(x)=(x
+1
+−5)2+(x
+2
+−5)2−100≥0
+tresjorobas¨ g (x)=−(x −6)2+(x −5)2+82,81≥0
+2 1 2
+13≤x ≤100
+Paraesteproblema,seconsidero´ lacajainicial[[−10;10]; 1
+[−10;10]]ycomocotaparalascondicionesdeparadaε = 0≤x 2 ≤100
+10−4 .Con esta configuracio´n los resultados alcanzados se
+Lasolucio´nglobalconocidaparaesteproblemaeselpunto
+muestranenlatabla2.
+x=[14,095;0,84296]quealserevaluadoresultaenunvalor
+Tabla2.Resultadosparaelproblema2. o´ptimo f(x)=−6961,81381.
+Paralaspruebasconlasdiferentesvariantesdelalgoritmo
+Puntoo´ptimo Intervalosresultantes
+seempleo´ comocajainicial[[13;100];[0;100]]ycomocota
+[0;0] [0,01000;0,01000]
+paralascondicionesdeparadaε =10−4.
+[−0,01000;−0,01000]
+Conestaconfiguracio´nlosresultadosalcanzadossemues-
+[−0,01000;0,01000]
+tranenlatabla3.
+[0,01000;−0,01000]
+ElresultadoalcanzadoporelAPparaesteproblemaes
+igualmenteprecisoquelosejemplosanteriores,seobtuvieron
+Enestecasoelalgoritmoalcanzacuatrointervalosdege- cuatrointervalosdegeneradosqueaproximanelo´ptimodela
+nerados(Decimosqueunintervaloxesdegeneradosix=x. funcio´nconunaprecisio´nmenorqueε =10−4.
+Tal intervalo contiene un solo nu´mero real x y lo podemos Enlafigura6sepuedeobservarqueenesteproblema,las
+denotarpordichonu´mero)queconstituyenunaaproximacio´n optimizacionesnume´ricasnoprovocanningunamejor´ıa.Esto
+6 Mecanismosdeaceleracio´nparaelalgoritmoprototipodeoptimizacio´nbasadoenana´lisisdeintervalos
+Tabla3.Resultadosparaelproblema3. unme´todoh´ıbridoentreelAPyalgunametaheur´ıstica,para
+Puntoo´ptimo Intervalosresultantes obtenerunacombinacio´nbalanceadaentreprecisio´nyrapidez
+[14,095;0,84296] [14,0952;0,8432] yconcretarlaideadeaplicarestealgoritmoenlaresolucio´n
+[14,0940;0,8409] delproblemadeestimacio´ndepara´metrosparamodelosepi-
+[14,0942;0,8414] demiolo´gicos.
+[14,0943;0,8416]
+Agradecimientos
+Estainvestigacio´nhasidoparcialmentefinanciadaporlos
+proyectosAECIDD/017218/08yD/9842/07sobre”Mode-
+lacio´nMatema´ticadeProcesosBiome´dicos.Estimacio´nde
+Para´metros”.
+Referencias
+[1] S.Skelboe.1974.ComputationofRationalIntervalFun-
+Figura6.Representacio´ngra´ficadelcomportamientodel
+ctions.ed.BIT.Vol.14.
+algoritmooriginalconrespectoalalgoritmoparaleloparael
+problema3. [2] R.E.Moore.1976.ComputingtheRangeofValuesofa
+RationalFunctionofnvariablesoverBoundedRegion.
+Computing.Vol.16.
+se debe a que dichas te´cnicas, por su naturaleza, no hacen
+ningu´nchequeodefactibilidadsobrelospuntosdeiteracio´n, [3] W.V.Walter.1993.AportableFortran90modulelibrary
+porloquepuedenconvergenaunpuntoqueesm´ınimolocal foraccurateandreliablescientificcomputing.Computing
+delproblemairrestricto,peroquedafueradelconjuntofactible (Suppl).Vol.9.
+unavezaplicadaslasrestricciones.
+[4] W.Hofschuster,W.Kramer,S.Wedner,A.Wiethoff.1993.
+Elalgoritmoparaleloresultaligeramentesuperioralal-
+CXSC2.0,AC++ClassLibraryforExtendedScientific
+goritmo original en cuanto a tiempo de ejecucio´n, lo cual
+Computing.Springer-Verlag.
+se evidencia los tiempos de ejecucio´n de los test paralelos
+respectoasusversionesseriales.
+[5] R.Klatte,U.Kulisch,M.Neaga,D.RatzyCh.Ullrich.
+1992.PASCAL-XSCLanguageReferencewithExamples
+6. Conclusiones H.Springer.
+Estetrabajomuestraunalgoritmocapazderesolverpro- [6] S.M. Rump. 1999. INTLAB- Interval Laboratory. N.
+blemasdeoptimizacio´nglobalconysinrestricciones,paralos Springer.
+queseprecisaencontrarunintervaloquecontengalasolucio´n
+o´ptimaconunaciertaprecisio´n.Elalgoritmofuemodificado [7] R.B.Kearfott.1996.RigorousGlobalSearch:Continuous
+mediantelaadicio´ndeunme´todonume´ricodeminimizacio´n, Problems.ed.D.KluwerAcademicPublisher.
+as´ıcomomediantelaaplicacio´ndeunesquemadeejecucio´n
+[8] J. Ferna´ndez. 1999. Nuevas te´cnicas para el disen˜o y
+paralelaamuchasdesusoperaciones.Laincorporacio´nde
+resolucio´n de modelos de localizacio´n continu´a. Tesis
+te´cnicasnume´ricasnoresultasiemprebeneficiosa,depende
+doctoral.UniversidaddeMurcia.Ine´dita
+delascaracter´ısticasdelproblemaaresolver.Sinembargola
+implementacio´nusandote´cnicasdeprogramacio´nenparalelo [9] J.M. Otero, A. Kakes y A. Marrero. 2006. Modelos de
+logradisminuireltiempodeejecucio´nparaproblemasdetodo Optimizacio´nContinuos,54:149-232,1998.ed.Fe´lixVa-
+tipo.Au´nas´ı,eltiempodeejecucio´ndelAPcontinu´asiendo rela.
+supuntocr´ıtico.
+Nuestrointere´sdemejorarelAlgoritmoPrototipobasado [10] J.Kepner.2009.ParallelMATLABforMulticoreand
+enAna´lisisdeIntervalospararesolverproblemasdeoptimiza- MultinodeComputers.SIAMPress.
+cio´nglobalesta´ dadoporlanecesidadderesolverproblemas
+[11] B. O. Schubert. 1972. A sequential Method Seeking
+deestimacio´ndepara´metrosenmodelosepidemiolo´gicosdefi-
+the Global Maximum of a Function. SIAM Journal of
+nidosporEcuacionesDiferencialesOrdinarias(EDO),donde
+NumericalAnalysis.
+nosolosenecesitanhallarvaloresdelospara´metrosqueca-
+ractericenladina´micadedichosmodelosdeformacercana [12] E. Hansen. 1980. Global optimization using interval
+a la realidad, sino para validar los intervalos de definicio´n analysisthemulti-dimensionalcase.NumerischeMathe-
+obtenidosparaestosmediantete´cnicasestad´ısticas. matik.Vol.34.
+Conestaperspectivafuturarecomendamosconfeccionar

@@ -1,0 +1,542 @@
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.91-99
+Recibido02-2021,Aceptado09-2021
+Nueva propuesta para el ajuste del rango interno en
+el agrupamiento de documentos mediante
+Factorizaciones No Negativas de Matrices
+New proposal to adjust the internal rank in the
+documents clustering by Non Negative Matrix
+Factorizations
+Iosvanny Jesús Alfonso Veloso1*, Dra. Marta Lourdes Baguer Díaz-Romañach2,
+Dra. Lydia Castro Odio3.
+Resumen Las técnicas de agrupamiento de documentos han recibido mucha atención como herramienta
+fundamental para la organización eficiente, navegación, recuperación y resumen de grandes volúmenes de
+textos. Con un método de agrupamiento robusto se pueden organizar los documentos en una jerarquía de
+gruposquepermitalabúsquedaynavegacióneficienteatravésdeuncorpus,locualesunvaliosocomplemento
+alasdeficienciasdelastecnologíastradicionalesderecuperacióndeinformación.Enestetrabajosepresenta
+unsoftwaredesarrolladoenMATLABqueincorporaunprocedimientoadaptativoparadeterminarelrangoen
+laFactorizaciónnonegativadelamatrizTF-IDFdeuncorpus.Elsoftwareagrupalosdocumentossegúnlas
+temáticasymuestralaspalabrasmásimportantesdecadagrupo.Paraellosesuponenconocidoslosconjuntos
+depalabrasportemáticas.
+Abstract Documents clustering techniques have received a lot of attention as a fundamental tool for the
+efficient organization, navigation, retrieval, and summary of large volumes of text. With a robust clustering
+method,documentscanbeorganizedintoahierarchyofgroups,allowingefficientsearchandnavigationthrough
+acorpus,whichisavaluablecomplementtotheshortcomingsoftraditionalinformationretrievaltechnologies. In
+thispaper,wepresentsoftwaredevelopedinMATLABthatincorporatesanadaptiveproceduretodeterminethe
+rangeinthenon-negativeFactorizationoftheTF-IDFmatrixofacorpus. Thesoftwaregroupsthedocuments
+accordingtothethemesandshowsthemostimportantwordsineachgroup. Forthispurpose,thewordsetsby
+subjectareassumedtobeknown.
+PalabrasClave
+Corpus,Factorización,Agrupamiento.
+Keywords
+Corpora,Factorization,Clustering.
+1FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba,iosvanny.alfonso@estudiantes.matcom.uh.cu
+2FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba,mbaguer@matcom.uh.cu
+3FacultaddeArtesyLetras,UniversidaddeLaHabana,LaHabana,Cuba,lydia@fayl.uh.cu
+*Autorparacorrespondencia.
+Introducción general y, por tanto, poder hacer una clasificación con esa
+informaciónobtenida.
+Es de interés, dado un conjunto de documentos (deno- Lamineríadetextosesunáreamultidisciplinariabasada
+minadocorpus),poderclasificarlosportemáticas,sintener enlarecuperacióndeinformación,mineríadedatos,aprendi-
+quehacerunanálisisdirectoyexhaustivoconcadaunode zajeautomático,estadísticasyProcesaminetodelLenguaje
+ellosyapelaralainterpretaciónparapoderllegararesultados. Natural1(PLN).Suobjetivofundamentalesexaminarunaco-
+Enlamineríadedatospodemosencontrarunaramadenomi- leccióndedocumentosnoestructuradosescritosenlenguaje
+nadamineríadetextos,enlacualseestudianmétodospara
+laextracciónderelacionesentreloscontenidosdetextosen 1EningléssedenominaNaturalLanguageProcessing(NLP).
+NuevapropuestaparaelajustedelrangointernoenelagrupamientodedocumentosmedianteFactorizacionesNo
+92 NegativasdeMatrices
+naturalydescubririnformaciónnocontenidaenningúndocu- frecuenciainversadeldocumento(idf).Lafórmulaparaesta
+mentoindividualdelacolección,ladeteccióndetendencias, métricaeslasiguiente:
+patrones o similaridades en los textos. Dada una colección
+dedocumentos,amenudosurgelanecesidaddeclasificarlos tfidf(t,d,D)=tf(t,d)∗idf(t,D)
+engruposbasadosenlasimilituddesuscontenidos.Cuando
+dondet eseltérmino,d denotacadadocumento,Delespacio
+setratadegrandesvolúmenesdetextos,elprocesodeagru-
+totaldedocumentosytfidf eselpesoasignadoaesetérmino
+pamientomanualseríaenextremoagotadoryengorroso.El
+en el documento correspondiente. La combinación de los
+empleodeprogramasparasuautomatizaciónreduceconsi-
+valoresdetf eidf brindaunamétricaquepermiteconocer
+derablemente el tiempo necesario para la realización de la
+cuánúnicassonlaspalabrasdeundocumento.Laponderación
+clasificaciónyelprocesamientodelostextos.
+asignaunaltopesoauntérminosiseproduceconfrecuencia
+Entre las aplicaciones de la minería de textos podemos
+enesedocumento,peroraravezenlacoleccióncompleta.Sin
+encontrar el resumen automático de textos, la detección de
+embargo,sieltérminoocurrepocasveceseneldocumento
+fraudes, el estudio de tendencias electorales, el análisis de
+o aparece prácticamente en todos ellos, disminuye el peso
+sentimientosylaclasificacióndetextos;aestaúltimalepres-
+asignadoporlaponderacióntfidf [21].
+taremosmayoratención.
+LaFactorizaciónNoNegativadeMatriceshasidovalo- 1.1.1 Tiposdetf
+rada positivamente en una serie de aplicaciones en el área tf(t,d) se define como frecuencia del término o term
+del procesamiento de textos, entre las cuales se destaca el frecuency.Existendistintasformasdemedirestafrecuencia,
+agrupamiento por temas. Es menester entonces expresar el entrelasquedestacan:
+problemaenunaestructuradedatosmatemática,porloque
+seintroducelaMatrizTérmino-Documento,quecontendrála 1. Recuento(Raw):
+información,extraídadelostextos,necesariaparaeltrabajo.
+tf(t,d)=n
+Luego,conlosresultadosobtenidosdelafactorizaciónmatri- t,d
+cialseconformanlasclasesportemasenquesevaaclasificar
+donde n es la cantidad de veces que aparece el tér-
+t,d
+elcorpus.
+minot eneldocumentod.
+1. Fundamentos Teóricos
+2. Formabooleana(Binary):
+Dadounconjuntodetextos,deseamossepararlosenclús-
+
+teressegúnsustemáticas,paraellollevemoselproblemaal  1 sit apareceend
+espacioRm×n,representandolainformaciónesencialdelcor- tf(t,d)=
+pus en una una estructura bidimensional que relaciona los  0 sino
+documentosylaspalabrasmediantelaimportanciaquetenga
+unapalabraenundocumento;estaestructuraesllamadama-
+trizTérmino-Documento,demodoquecadacolumnadela
+3. FrecuenciadeTérminoNormalizada:
+mismacaracterizaundocumento.Dichaimportanciaopeso
+puedevariarsegúnloscriteriosdeconformacióndelamatriz, n t,d
+tf(t,d)=
+(cid:114)
+unabuenaopciónpararesumirlainformacióndelcorpuses ∑n2
+t(cid:48),d
+laMatrizdeFrecuenciadeTérmino-FrecuenciaInversade t(cid:48)∈d
+Documento,oporsussiglas:TF-IDF.
+1.1 MatrizTF-IDF
+4. FrecuenciaLogarítmicaEscalada(Log):
+LamatrizTF-IDF2(FrecuenciadeTérmino-Frecuencia
+InversadeDocumento)esunamatrizcuyoselementosconsti- 
+1+logn si n >0
+ t,d t,d
+tuyenunamedidanuméricaqueexpresacuánrelevanteesuna
+tf(t,d)=
+palabraparaundocumentoenunacolección.Elvalortf-idf
+ 0 si n =0
+t,d
+(lodenotaremostfidf)aumentaproporcionalmentealnúmero
+devecesqueunapalabraapareceeneldocumento,peroes
+1.1.2 Tiposdeidf
+compensadoporlafrecuenciadelapalabraenlacolecciónde
+idf(t,D)sedefinecomofrecuenciainversadedocumento
+documentos,loquepermiteponderarelhechodequealgunas
+o inverse documentfrecuency. Durante elcálculo de lafre-
+palabrassongeneralmentemáscomunesqueotras.
+cuenciadeltérminoseconsideraquetodoslostérminostienen
+Lasponderacionestfidf secalculancomoelproductode
+igualimportancia,noobstante,seconocencasosenlosque
+dosmedidas,lafrecuenciadeaparicióndeltérmino(tf)yla
+ciertostérminospuedenaparecermuchasvecesperotienen
+2Lassiglassonporsunombreeninglés:TermFrequency-InverseDocu- pocaimportancia.Esnecesariomencionarlasstopwords,que
+mentFrequency sonvocablosnoconceptualesodecontenidogramaticalque
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.91-99
+NuevapropuestaparaelajustedelrangointernoenelagrupamientodedocumentosmedianteFactorizacionesNo
+NegativasdeMatrices 93
+son irrelevantes para el estudio que se hace y aumentan la ElmodeloclásicoparaencontrarW yH sebasaenmi-
+dimensióndelproblema(ennuestrocasosonconsiderados nimizarladiferenciaentreM yWH debidoaqueenpocos
+enestaclaselosartículos,preposiciones,conjunciones,entre casossepuedeobtenerunafactorizaciónexacta:
+otros).Estasegundapartedelafórmulacompletaelanálisis
+deevaluacióndelostérminosyactúacomocorrectordetf.Los m´ın 1 ∑ n ∑ m (m −(wh) )2
+ij ij
+idf másutilizadossonlosquesepresentanacontinuación: W,H2
+i=ij=1
+1. Unitaria(Unary): sujetoaw ≥0, h ≥0, ∀i, a, b, j(a,b=1,...,r).
+ia bj
+Estamos en presencia de un problema de Optimización
+idf(t,D)=1
+NoLinealconrestriccionesdenonegatividad.Notemosque:
+n m
+2. FrecuenciaInversadelDocumento(Normal): ∑∑(m −(wh) )2=(cid:107)M−WH(cid:107)2
+ij ij F
+i=ij=1
+N
+idf(t,D)=log
+1+df(t) donde (cid:107).(cid:107) es la norma de Frobenius [23]. La función ob-
+F
+jetivo puede considerarse de modo más general como una
+donde
+funcióndedivergenciaquemideladiferenciaentreM yel
+productoWH;entreestasfuncionespodemosencontrarlaDi-
+- N=|D|:Númerodedocumentosdelcorpus.
+vergenciaϕ deCsiszár,laα−Divergencia,laDivergenciade
+- df(t):Frecuenciadedocumentos Bregman,β−Divergencia[19],laDivergenciaItakura-Saito
+df(t)=|{d∈D:t∈d}| (IS),laDivergenciaKullback-Leiber(K-L),elErrorMínimo
+Cuadrático(LSE-LeastSquareError),entreotras.
+Un elemento de gran importancia es el rango de la fac-
+3. FrecuenciaInversadelDocumentoconsuavizado:
+torización, rango interno o dimensión interna, el cual es la
+(cid:18) (cid:19) dimensión r quecorresponde conel númerode componen-
+N
+idf(t,D)=log 1+ tes latentes [20] y determina la reducción de la dimensión
+df(t)
+delproblema.Sonllamados“componentes”porquetratande
+con N =0⇐⇒df(t)=0 recomponerlamatrizoriginalatravésdenuevasbasesysede-
+df(t) nominan“latentes”porquenoemergenhastaqueelalgoritmo
+deNMFlasconstruye.Usualmenterseescogetalque
+4. FrecuenciaInversaMáximadelDocumento(Max):
+(n+m)r≤nm.
+ma´xdf(t(cid:48))
+idf(t)=log
+t(cid:48) Como r≤m´ın(n,m) se puede entender la aplicación de la
+1+df(t) NMF a la matriz M como una compresión de datos (con
+pérdidas, desde luego). Valores altos de r pueden tener co-
+Estos y otros pesos tf e idf pueden ser encontrados en moresultadomatricesdispersas(sparse)enlafactorización,
+[21]. esdecir,quetienenunacantidadconsiderabledeelementos
+nulos;enmuchoscasosestoesbeneficioso,puesestablece
+1.2 Factorización No Negativa de Matrices (NMF) y fácilmentecuálessonloscomponentesmásimportantespara
+agrupamiento lalabordereconstruccióndelamatrizoriginal.Enlabiblio-
+DadaunamatrizM∈Rn×m concoeficientesm ≥0(la grafía consultada, para mayores valores de r generalmente
+ij
+notaciónm indicaqueeselelementoqueseubicaenlafila seobteníanmejoresresultados,comoen[23],aunqueaun
+ij
+i−ésimaylacolumna j−ésimadelamatrizM)yunentero mayorcostocomputacional.
+positivor<<m´ın(m,n),elobjetivoesencontrardosmatrices Seenfrentanvariasdificultadesaltratardeobteneruna
+nonegativasW ∈Rn×r yH∈Rr×mtalesque: NMFdeunamatriz,entreellasdestacaelhechodequeesun
+problemaNP-duro(NP-hard)[2]debidoaquetodoslosele-
+M≈WH mentosdeW yHsonvariablesadeterminar[18],adiferencia
+de la factorización sin restricciones que puede ser resuelta
+SicadacolumnadeMrepresentaunobjeto(ennuestrocaso eficientemente mediante la descomposición en valores sin-
+talobjetoesundocumentodelcorpus),laNMFloaproxima gulares(SVD),portanto,seaplicanalgoritmosovariantes
+medianteunacombinaciónlinealdercolumnasbaseenW. dealgoritmosdeoptimizaciónnolinealconrestriccioneso
+Estafactorizaciónhasidoutilizadaenvariasáreasdeinvesti- métodosdedescensodondelafunciónobjetivoesconvexa
+gación,talescomolabúsquedadevectoresbaseenimágenes, en W y en H individualmente, son iterativos y minimizan
+descubrimientodepatronesmolecularesyagrupamientode alternadamenteW y H [3]. En el caso general el problema
+documentos,comoveremosmásadelante. NMF es no convexo y los algoritmos pueden converger a
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.91-99
+NuevapropuestaparaelajustedelrangointernoenelagrupamientodedocumentosmedianteFactorizacionesNo
+94 NegativasdeMatrices
+mínimoslocales.Sehanreportadovariosalgoritmosparaso- filasdeH losindicadoresdepertenenciadelosdocumentos
+lucionarlaNMF,entrelosquedestacanlosdeActualización alosgrupos.Cadadocumentopuedeserrepresentadocomo
+Multiplicativa ([19], [16], [3], [1], [11]), Mínimos Cuadra- unacombinaciónlinealdecadatópico:
+dosAlternados(ALS)([23],[16],[13],[15],[11]),Gradiente
+r
+Proyectado([11],[16],[3],[23]),algoritmodeNewton[3], m ≈ ∑h ·w
+j kj k
+métodoQuasi-Newton([3],[16]),AlgoritmodelasProyec-
+k=1
+cionesSucesivas(SPA)[18],entreotros.Estosmétodoshan
+CadafiladeM,queeslacodificacióndecadapalabraenel
+sidoprobadossatisfactoriamenteendiversasaplicacionesy
+corpus,sepuederepresentarcomounacombinaciónlinealde
+lamayoríatieneunacomplejidadcomputacionaldeO(nmr),
+lostópicostambién:
+dondelamatrizafactorizaresden×myelrangointernode
+r
+lafactorizaciónesr.Otroproblemaeslaseleccióncorrecta mi≈ ∑w ·hk
+ik
+dercuandoserealizalafactorización[18],elcualsetratará
+k=1
+másadelante.
+Estadescomposiciónsepuedeinterpretardelasiguientefor-
+Comolamayoríadelosalgoritmosparalasolucióndel
+ma:
+problemadelaNMFsoniterativossedebeninicializarambas
+matrices o una de ellas en algunos casos; dicha inicializa- 1. w ik indica el grado de pertenencia de la palabra i al
+ción es crucial generalmente para la obtención de buenos grupok.
+resultados;unabuenainicializaciónenlaNMFmejoralave-
+2. h indicaelgradodepertenenciadeldocumento jal
+locidaddeconvergenciaylaexactituddelassolucionesen kj
+grupok.
+muchosalgoritmos,aunquetambiénpuedeproducirunarápi-
+daconvergenciaamínimoslocales.Enalgunosserequieren 3. Si el documento q pertenece al grupo s entonces h
+sq
+inicializacionesdeambasmatricesyenotrossoloseinicializa tomaunvaloralto,mientrasqueelrestodeelementos
+unadeellasylaotraseobtienedeestacomoresultadodeun delacolumnasonmuchomenores.Deigualforma,si
+pasodealgoritmodeformaalternada[10].Entrelasiniciali- lapalabra ppertenecealgrupot entoncesw tomaun
+pt
+zacionespodemosencontrarlaaleatoria,queconsisteenque valoralto,mientrasqueelrestodeelementosdelafila
+ambas matrices sean inicializadas con números aleatorios3 sonmuchomenores.
+del intervalo {x∈R: 0≤x≤1}; esta variante no brinda,
+engeneral,unabuenaestimacióninicialparalosalgoritmos
+NMF.Enartículosespecializadosserefierelainicialización
+decentroides[6]construidaapartirdeladescomposiciónde
+centroides[4],lacualconstituyeunamejoralternativaquela
+anterior.OtraeslainicializacióndecentroidesSVD,lacual
+inicializaAconladescomposicióndecentroidesapartirdel
+factorquecontienelosvaloressingularesdeladescomposi-
+ciónX =SVD[9].C.BoutsidisyE.Gallopoulosproponen
+en[12]otravariantedeinicializaciónbasadaenladescompo-
+Figura1.AnálisisdelaNMFdelaTF-IDF
+siciónSVDdenominadaNonnegativeDoubleSingularValue
+Decomposition(NNDSVD). Portanto,dadounconjuntodedocumentos,laNMFiden-
+ElmodeloNMFtienecaráctergenerativo[7].Acontinua- tificalostópicosyclasificalosdocumentosencadaunode
+cióndenotaremosm alacolumna j−ésimadelamatrizM estos:laposicióndelmayorpesoencadafiladeW indicaen
+j
+y mi a la fila i−ésima de la matriz M. Cada columna de la quétópicoseencuentralapalabracorrespondienteyelmayor
+matrizTF-IDF,denotadaporM,contienelacodificaciónde decadacolumnadeH diceencuálseencuentraeldocumento
+undocumentodelcorpusycadam delvectorcolumnam (verFigura1)[23].
+ij j
+eslaimportanciadeltérminoiconrespectoalasemántica En la bibliografía se consideran otros modelos para la
+dem ,dondeitomavaloresenloselementosdelvocabulario factorizaciónqueconstituyenmodificacionesdelclásicopre-
+j
+deD(corpus).Entonces,elproblemadelaFactorizaciónNo sentadoanteriormente,comosoneltri-NMF(NMTF)([16],
+NegativadelamatrizMseentiendecomo:encontrarunaapro- [17],[22],[24])dondeseagreganrestriccionesdeortogona-
+ximacióndeMderangor(enestecasodichorangoseelige lidadsobrelosfactores,elNon-SmoothNMF(nsNMF),el
+porelusuario,yaquerepresentaráelnúmerodetópicosenlos NMFMulticapa[16],entreotros.En[24]secomparanalgu-
+cualesseagruparánlostextos)empleandoalgunamétricapor nosdelosmodelosmencionados.
+mediodelafactorizacióndeMenelproductodedosmatrices
+demenordimensión(W yH),dondelasfilasdeW sonlos 2. TextClustersMaker: Software para el
+indicadoresdeimportanciadecadapalabraenlosgruposylas agrupamiento
+3Los números generados son realmente pseudoaleatorios debido a la TextClustersMakerfueprogramadoenMATLABR2018a,
+incapacidaddegeneracióndenúmerosaleatoriosdelosordenadores. utilizandoTextAnalyticsToolbox,queresultadegranutili-
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.91-99
+NuevapropuestaparaelajustedelrangointernoenelagrupamientodedocumentosmedianteFactorizacionesNo
+NegativasdeMatrices 95
+Figura2.InterfazGráficadelsoftwareTextClustersMaker
+dadparaelprocesamientodetextos.Lainterfazdeusuario residuos(normadeFrobeniusdelamatrizresiduo)menorque
+(verFigura2)fueconcebidaconlaherramientaGUIDE[14], latoleranciaoquealcanceelnúmeromáximodeiteraciones.
+queseempleaenlacreacióndeestructurasdeestetipo.Pa- LuegosehaceelanálisismencionadoenlaSubsección
+ralaobtencióndelamatrizTF-IDFseconsideróelmodelo 1.2 con el objetivo de obtener el agrupamiento deseado, a
+Bag-of-Words, que trata al corpus como una bolsa de pala- travésdeltrabajoconmatricesenMATLAB[5].Lafunción
+brasquecuentaautomáticamentelasaparicionesdeestasen wordcloudseencargademostraralusuariounaimagencon
+losdiferentesdocumentosqueloconforman;seeliminanpa- laspalabrasmásimportantesdelacolección.
+labrasquenosontrascendentales(stopwords)ypuedenser Lasprincipalesfuncionalidadesdeestesoftwareson:
+eliminadaslasqueaparecenpoco,lasdegranlongitudomuy
+a) Realizar el preprocesamiento de los documentos del
+pequeñas,conlocualdisminuyenlasdimensionesdelama-
+corpus(conelmismoformato:TXT,PDF,etc.)
+triz.Esimportanteprecisarquelaeliminaciónanteriormente
+descritapuedeserpersonalizadaporelusuario. b) La creación de la Matriz Término - Documento que
+mide los pesos de las palabras en el corpus que, en
+Utilizando la Bag-of-Words se puede extraer la matriz
+estecaso,eslaMatrizTF-IDF;seproveealusuariode
+TF-IDFconunafuncióndeTextAnalyticsToolboxllamada
+diversas opciones para poder formar dicha matriz ya
+tfidf;estarecibecomoentrada,además,lospesosdeTFeIDF
+quenoesúnica.
+(vistosenlaSubsección1.1).
+Se proponen al usuario opciones para la inicialización c) LaFactorizaciónNoNegativadelamatrizTF-IDFcon
+del algoritmo que eligirá para la factorización. Entre estas unrangointernoinicialr 0 .
+inicializacionesseencuentranlaaleatoriaylaNNDSVD.
+d) Elagrupamientoportemáticasdelosdocumentosdel
+La factorización puede ser NMF clásica (dos factores) corpus y la creación de WordClouds (ver Figura 3),
+otri-NMF.ParalafactorizaciónNMFclásicaseproponeel que muestran de una forma gráfica las palabras más
+algoritmodeactualizaciónmultiplicativapropiodeMATLAB, importantesencadagrupo(sincoloresportemáticas).
+el Alternated Constrained Least Squares (ACL) y el Alter-
+e) Elagrupamientoportemáticasdelosdocumentosdel
+natedHoyer-ConstrainedLeastSquares(AHCLS).Parala
+corpus y la creación de WordClouds (ver Figura 4),
+factorizacióntri-NMFseproponenvariosalgoritmosdeactua-
+que muestran de una forma gráfica las palabras más
+lizaciónmultiplicativa[24].Elnúmeromáximodeiteraciones
+importantesencadagrupo(concoloresportemáticas).
+arealizarencadaalgoritmoestápredefinida(son500),aun-
+que se puede modificar por el usuario. La tolerancia es de f) Lapropuestaderangointernorparalafactorización,
+1e−4yseconsideracomocriteriodeparadaquedositera- basadoenelmétodoqueutilizaencamposemántico
+cionesconsecutivastenganunadiferenciaensusrespectivos (Sección3).
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.91-99
+NuevapropuestaparaelajustedelrangointernoenelagrupamientodedocumentosmedianteFactorizacionesNo
+96 NegativasdeMatrices
+3. Método de ajuste del rango interno de correctamenteconfeccionados,entonces
+la NMF
+r =|K|.
+new
+Sielusuarioconoceelnúmerodetemáticaspresentesen
+elcorpusysuobjetivoesagruparlostextosendependencia Esimportantedestacarqueestemétodopropuestodepen-
+de dichas temáticas entonces el problema de determinar el dedirectamentedelacorrectaseleccióndeloscampossemán-
+rangointernodelafactorizaciónquedaresueltodebidoaque ticosatenerencuentaydelpreprocesamientodelostextos,
+estosdosvaloresdebencoincidir.Máscercanoalarealidad principalmentedelacorrectaeliminacióndelosvocablosque
+eselcasoenqueelusuarionoconocecuántostemasseven noaportanalanálisis(stopwords).
+implicadosenelcorpus.Enestetrabajoseproponeunproce-
+dimientoadaptativoparadeterminarelrangointerno,basado 4. Experimentación
+enunrangointernoinicialr .
+0
+Se cuenta con una familia de conjuntos T, i=1,...n, 4.1 Ejemplosinlautilizacióndelapropuestademé-
+i
+cadaunocontienepalabrasquepertencenalmismocampo tododeajustedelrangointernodelaNMF.
+semántico,esdecir,estánrelacionadasconeltemai;acada Parailustrarelcorrectofuncionamientodelprograma,se
+unodelosconjuntosanterioresseleasociaunaternaRGB4 estudió un corpus de 6 documentos pequeños, distribuidos
+quelocaracterizará,lacualestágeneradademanerapseudo- de la forma siguiente: los dos primeros tratan sobre Albert
+aleatoria,porloquetomamoselprimerelementodelaterna Einstein,losdossiguientessobreEspañayelúltimosobre
+(R) como representación de cada conjunto. Se desea com- el Papa. Los ubicamos en 3 grupos (los tres mencionados),
+probarsielagrupamientoescorrecto.Severificasiexisten utilizandoTextClustersMaker.Primeroelprogramanosmues-
+temasqueesténpresentesenclústeresdistintosysienalgún tralaspropiedadesdelcorpus,lacantidaddedocumentosy
+clúster,almenos,haytemasdifusos;paraelloseutilizanlos depalabras(sintomarencuentalasstopwords,puesfueron
+representantesRdecadaconjunto. eliminadasenelpreprocesamiento),asícomounalistacon
+Encadaclúster j delosr creadossehacelosiguiente: los10vocablosmásfrecuentes;semuestraunaWordCloud
+0
+Se crea una lista L donde se registran los indicadores de quedaunavisiónmásgráficadelafrecuenciadelaspalabras
+j
+pertenenciadecadapalabraacadagrupo(c , k=1,...,|W |, enlacolección(3).Luegodeelegirlospesostf eifd (raw
+jk j
+donde|W |eslacantidaddepalabrasalmacenadasenelclúster
+ynormal)5,respectivamente,secrealamatrizTF-IDF.Se
+j
+j),esdecir,elnúmeroRquecaracterizaaltema.Deestalista asume3comorangointernodebidoaqueeslacantidadde
+seextraelamodac ysufrecuenciaabsoluta f(c ).Puede gruposquequeremosformar,realizamoslafactorizaciónno
+jM jM
+sucederquelafrecuenciarelativadedichamoda, f (c )no negativadelamatrizTF-IDFyelagrupamiento.Semuestran
+R jM
+seaalta(porejemplo: f (C )<0,80),loqueindicaríaque 3tablasconlosdocumentosquepertenecenacadagrupoy3
+R jM
+elclúster jdebecontenertemasdifusos,osea,temascuyas WordCloudsconlaspalabrasmásimportantesencadauno,
+frecuencias relativas se encuentran en cierto rango y cuyo dondeeltamañoindicalaimportanciadelvocabloenesetema
+extremomayoresmenorque0,80.Unavezcalculadastodas respectoalasdemáspalabrasyelcolorsupertenenciaalos
+las frecuencias relativas f (c ) se eligen aquellos c que temaspredefinidos,parapoderasíevaluarelagrupamiento
+R jk jk
+puedanestarendichasituación(sepuedentomaraquellosque (Figura4).
+0,40< f (c )<0,80)yseagreganalalistaD;encasode
+R jk
+bag = Counts: [6x481 double]
+queestonosucedaseagregac alalistaA.Secreanluego
+jM
+Vocabulary: [1x481 string]
+laslistasH=A∪DyK={x∈H},estaúltimacontienelos
+NumWords: 481
+elementosdeH.TeniendoencuentalasdefinicionesdeK y
+NumDocuments: 6
+H,secumpleladesigualdad
+|K|≤|H|.
+La propuesta para el rango interno está acotada por el top = "papa" 10
+cardinal del conjunto que contiene a los temas que tienen "españa" 8
+importanciaentodoslosgrupos,esdecir: "familia" 6
+"padre" 6
+1<r ≤|K|. "islas" 6
+new
+"iglesia" 6
+Siseobtieneque|D|=0y|K|=|H|entonceselagrupa- "también" 5
+mientoescorrecto.Sisonelegidoslosparámetrosparalas "mar" 5
+frecuenciasrelativasdelamejorformaylosconjuntosT son "territorio" 5
+i
+"obispo" 5
+4UnaternaRGBesunvectordetrescomponentesdondecadaunaespeci-
+ficalasintensidadesderojo,verdeyazuldeciertocolor.Lasintensidadesen
+MATLABsetomanenelintervalo[0;1]. 5Sepuedenelegirotrospesos.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.91-99
+NuevapropuestaparaelajustedelrangointernoenelagrupamientodedocumentosmedianteFactorizacionesNo
+NegativasdeMatrices 97
+queelrangointernodebíaserr=3.Acontinuaciónsepre-
+sentanlosresultadosdecadaagrupamientoyenlasfiguras5,
+6y7lasWordCloudscorrespondientes:
+r=2
+Figura3.WordCloudconlainformacióndelejemplo
+ilustrador
+Figura5.WordCloudsdondesemuestraelagrupamiento
+erróneoconr=2.UnadelasWordCloudstienetemas
+Agrupamiento
+difusos(varioscolorespredominantes).
+Grupo 1: 1, 2.
+Grupo 2: 3, 4.
+Agrupamiento
+Grupo 3: 5, 6.
+Grupo 1: 3, 4.
+Grupo 2: 1, 2, 5, 6.
+Propuesta de rango interno: 3
+r=3
+Figura4.WordCloudconelagrupamientoyelcomplemento
+decolores.
+Figura6.WordCloudsdondesemuestraelagrupamiento
+Podemos notar que en (4) hay palabras en color negro,
+correctoconr=3.UnadelasWordCloudstienealgunos
+estassonaquellasquenofueronclasificadasdentrodenin-
+coloresperounodeellosespredominante.
+gunodelosconjuntosT,locualpuedeprovocarerroresenla
+i
+evaluaciónautomáticadelagrupamiento.Tambiénpodemos
+apreciarqueenlasnubes2y3haypresenciadevarioscolores,
+loqueindicaqueexistenpalabrasdegruposdistintos,aunque Agrupamiento
+sobresalenlasdelgruporepresentadasporelcolorverde. Grupo 1: 3, 4.
+Grupo 2: 1, 2.
+Grupo 3: 5, 6.
+4.2 Ejemplo con la utilización de la propuesta de
+métododeajustedelrangointernodelaNMF.
+Propuesta de rango interno: 3
+Se utilizaron los mismos documentos para analizar las
+consecuenciasdelaincorrectadesignacióndelrangointerno
+paralafactorización.SetomaroncomolosconjuntosT (i= r=4
+i
+1, 2, 3)laspalabrasdelostextosquetratabansobrecadauno
+delostrestemas,demodoqueestefueraelcamposemántico Agrupamiento
+correspondiente.Sehicieroncorridasdelprogramaconlos Grupo 1: 1, 2.
+rangosr=2, r=4, r=3,encadacasoelprogramapropuso Grupo 2: 3.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.91-99
+NuevapropuestaparaelajustedelrangointernoenelagrupamientodedocumentosmedianteFactorizacionesNo
+98 NegativasdeMatrices
+[5] J.Atencia,R.Nestar:AprendaMatlab6.0comosiestuvie-
+raenprimero. EscuelaSuperiordeIngenierosIndustriales,
+UniversidaddeNavarra,SanSebastián.2001.
+[6] S.Wild:Seedingnon-negativematrixfactorizationswith
+sphericalk-meansclustering. Master’sthesis,University
+ofColorado.2003.
+[7] D.Donoho,V.Stodden:WhenDoesNon-NegativeMatrix
+FactorizationGiveaCorrectDecompositionintoParts?.
+Figura7.WordCloudsdondesemuestraelagrupamiento
+2003.
+erróneoconr=4.DosdelasWordCloudstienenelmismo
+tema(predominaelmismocolor). [8] R.Mitkov:TheOxfordHandbookofComputationalLin-
+guistics. OxfordUniversityPress.2003.
+Grupo 3: 5, 6.
+[9] A.N.Langville:Experimentswiththenonnegativematrix
+Grupo 4: 4
+factorizationandthereuters10dataset. SlidesfromSAS
+Meeting.2005.
+Propuesta de rango interno: 3
+[10] A.N.Langville,C.D.Meyer,R.Albright:Initializations
+5. Conclusiones fortheNonnegativeMatrixFactorization.2006.
+Lasfactorizacionesnonegativasdematricesconstituye [11] C-J.Lin:ProjectedGradientMethodsforNon-negative
+unaherramientadegranutilidadparaelagrupamientodetex- MatrixFactorization.2006.
+tos.ElprogramaTextClustersMaker,queseapoyaendichas
+factorizaciones,cuentaconunainterfazgráficasencillayque [12] C.Boutsidis,E.Gallopoulos:SVDbasedinitialization:
+permiteelpreprocesamientodedocumentosparasuanálisis Aheadstartfornonnegativematrixfactorization. Com-
+y la determinación de sus temas subyacentes. Este progra- puter Engineering and Informatics Departament, Patras
+maintegravariasinicializacionesyalgoritmosparahallarla University.2007.
+factorizacióndelamatriztérmino-documentosTF-IDFque
+contienelainformacióndelacolecciónaanalizar.Sepropuso [13] H.Kim,H.Park:Sparsenon-negativematrixfactoriza-
+tionsviaalternatingnon-negativity-constrainedleastsqua-
+unmétodoadaptativoparadeterminarelrangointernodela
+factorizacióntomandocomobaseelcamposemántico.Este
+resformicroarraydataanalysis.2007.
+softwarepuedeserutilizadoparaestudiossobrelautilización
+[14] D.O.Barragán:ManualdeInterfazGráficadeUsuario
+delidiomaendistintoscontextossociales,sudesarrolloenel
+enMATLAB(ParteI).2008.
+tiempo;tambiénparalaorganizacióndebibliografíadigital.
+Elprogramapropiciaráresultadosmásacertadosendependen-
+[15] A. N. Langville, C. D. Meyer, R. Albright, J. Cox, D.
+ciadelaseleccióndelosconjuntosdepalabrasquedefinen
+Duling:Algorithms,Initializations,andConvergencefor
+lastemáticas.
+theNonnegativeMatrixFactorization.2008.
+En trabajos posteriores se estudiarán otros modelos de
+factorizacionesmatricialesysecompararánlosresultadosdel
+métodopropuestoconcadaunodeestos. [16] A.Cichocki,R.Zdunek,A.H.Phan,S.I.Amari:Nonne-
+gativematrixandtensorfactorizations. JohnWileySons,
+Referencias Ltd.2009.
+[1] D. D. Lee, S. H. Seung : Algorithms for non-negative [17] J. Yoo, S. Choi: Orthogonal nonnegative matrix tri-
+matrixfactorization. AdvancesinNeuralInformationPro- factorizationforco-clustering:Multiplicativeupdateson
+cessingSystems401.2001. Stiefelmanifolds.InformationProcessingandManagement
+46.ElsevierLtd.2010.
+[2] T. H. Cormen, C. E. Leiserson, R. L. Rivest, C. Stein:
+IntroductiontoAlgorithms. TheMassachusettsInstituteof
+[18] N. Gillis: The Why and How of Nonnegative Matrix
+Technology.2001.
+Factorization.2014.
+[3] Z-Y.Zhang:NonnegativeMatrixFactorization:Models,
+[19] J.M.RodríguezyR.Hausdorff:Seleccióndeβ enFac-
+AlgorithmsandApplications.2001.
+torizacióndeMatricesNoNegativasusandolaβ−diver-
+[4] I.S.Dhillon:Conceptdecompositionsforlargesparse gencia. TesisdeGradoenLicenciaturaenMatemáticas
+text data using clustering. Machine Learning, 42(1/2). Aplicadas. Instituto Tecnológico Autónomo de México.
+2001. 2014.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.91-99
+NuevapropuestaparaelajustedelrangointernoenelagrupamientodedocumentosmedianteFactorizacionesNo
+NegativasdeMatrices 99
+[20] M.Á.Pérez:TécnicasdeFactorizaciónNo-negativade Diploma.FacultadedMatemáticayComputación,Univer-
+MatricesenSistemasdeRecomendación.Tesisdegradoen sidaddeLaHabana.2018.
+IngenieríadelasTecnologíasdeTelecomunicación,Escue-
+[24] I. Alfonso: Una aplicación de las Factorizaciones no
+laTécnicaSuperiordeIngeniería,UniversidaddeSevilla.
+Negativas de Matrices a la Minería de Textos. Tesis de
+2017.
+Diploma.FacultadedMatemáticayComputación,Univer-
+[21] M. Calvo: Text Analytics para Procesado Semántico. sidaddeLaHabana.2020.
+TrabajoFindeMásterenTécnicasEstadísticas.Universi-
+daddeVigo.2017. [25] J.Gamboa:TextMining:Análisisdesentimientospara
+latomadedecisiones. PresentaciónenVISIÓN,Congre-
+[22] N. Del Buono, G. Pio: Non-Negative Matrix Tri-
+so Internacional de Ingeniería, Ciencias Aeronáuticas y
+Factorization for co-clustering: an analysis of the block
+Arquiford.XXIEdición.
+matrix. InformationSciences.2017.
+[23] R. Díaz: Análisis Factorial y Factorizaciones no Ne-
+gativas de Matrices en Lingüística de Corpus. Tesis de
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.91-99

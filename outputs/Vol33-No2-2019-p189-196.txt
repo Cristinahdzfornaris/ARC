@@ -1,0 +1,522 @@
+CienciasMatemáticas,Vol.33,No.2,Pag.189-196, 2019
+Recibido12-2018, Aceptado 09-2019
+El proceso de enseñanza-aprendizaje de la
+Matemática desde un enfoque semántico
+The process of teaching and learning mathematics
+from a semantic approach
+Eladio Jorge Oliveros Sau´co1, Ricardo Sa´nchez Casanova2, Idania Urrutia Roman´ı3
+Resumen Enestetrabajoserealizaunanálisissobrelaimportancia quetienelasemántica matemática parael
+desarrollodelpensamientoengeneraly,enparticular,paradesarrollarelpensamientomatemáticoyelpoderse-
+mántico,conceptoqueelautordefineenesteartículo.Parasuestudioseestablecentresnivelessemánticosyse
+ejemplificanatravésdelanálisisdeuncasoparticular.Porotraparte,semuestralasemánticamatemática como
+un principio heurístico ysu estrecha relación con los procedimientos heurísticos yelpensamiento lateral.
+AbstractThispaperisananalysisoftheimportance thathasthemathematical semantics forthedevelopment of
+thinkingingeneraland,inparticular,todevelopmathematical thinkingandthesemanticpower,conceptthatthe
+author defined inthis article.Three semantic levels are established forstudy and are exemplifiedthrough the
+analysis ofaparticular case.Ontheotherhand,shows thesemantic mathasaheuristic principle anditsclose
+relationshipwiththeheuristicproceduresandlateralthinking.
+PalabrasClave
+Sema´nticamatema´tica—podersema´ntico—heur´ıstica
+1DepartamentodeMatema´tica,UniversidadSantaMar´ıacampusGuayaquil,Ecuador,eoliveross@usm.edu.ec
+2FacultadMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba,ricardo.sanchez@matcom.uh.cu
+3FacultadMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba,idania@matcom.uh.cu
+Introduccio´n laensen˜anzahancaracterizadolaeducacio´nenlasuniversi-
+dadesdeAme´ricaLatinayelcaribeenelpresentesiglo”[1].
+Desde la antigu¨edad hasta hoy, el procesode ensen˜ary
+Enmayoromenormedida,estatristerealidadpersistecasi20
+aprenderMatema´ticahaconstituidounserioproblemaparala
+an˜osdespue´s.
+sociedadensuconjuntoporque,antetodo,resultainsuficiente
+loqueaprendeelalumnopararesolverlosdiferentesycom- Enestosmomentos,esimposibleensen˜araldiscentetoda
+plejosproblemasque,encadae´poca,generaeldesarrollohu- la obra matema´tica que le antecede, ni siquiera el cu´mulo
+mano.Siemprehaestadopresenteestasituacio´nproble´mica, de conocimientos que e´l pueda necesitar en su vida profe-
+quehantratadoderesolvermuchospedagogos,metodo´logos, sional. Por tanto, entre los grandes desaf´ıos actuales de la
+psico´logosymatema´ticosalolargodelahistoria. ensen˜anzadelaMatema´ticauniversitaria,talvezlosma´sim-
+portantes, son las respuestas a las siguientes interrogantes:
+Enlaspostrimer´ıasdelsigloXIX,Jose´Mart´ısentenciaba
+¿que´ contenidosdebemosseleccionarparadesarrollarelpro-
+que“Escriminaleldivorcioentrelaeducacio´nqueserecibe
+cesodeensen˜anzaaprendizaje?,¿co´modebemosdesarrollar
+enunae´poca,ylae´poca”[6].Hoyd´ıa,estaproblema´ticase
+esteproceso?,¿que´ metodolog´ıayque´ herramientasutilizar
+hacema´sostensibledebidoalvertiginosocrecimientodela
+paraensen˜arapensaranuestrosalumnos?
+cienciaylatecnolog´ıaduranteelsigloXXylosprimeros16
+an˜osdelXXI.Seharadicalizadoeldivorcioalqueserefer´ıa Segu´n el especialista en Educacio´n Andreas Schleicher
+Mart´ıyaparecennuevosdesaf´ıospedago´gicosporquealviejo delaOCDE:“... There’snocompetitiveadvantagetodayin
+problemadelainsuficienciadelconocimientosehansumado knowingmorethanthepersonnexttoyou.Theworlddoesn’t
+otros. carewhatyouknow.Whattheworldcaresaboutiswhatyou
+Muchas veces nos preguntamos, ¿esta´n preparados los candowithwhatyouknow”[9].Latraduccio´ndelfinalde
+graduadosuniversitariosparalavidaprofesionalmoderna? lafraseanteriornosexpresaque:“Almundonoleinteresa
+LainvestigadoraReglaM.Caldero´n,expreso´:“Ladesvincu- cua´ntosabes,sinoloquepuedeshacerconloquetu´ sabes”.
+lacio´ndelaparatoproductivoyelcara´cteracademicistade Alanalizarestaideaconcluimosqueelobjetivoprincipalde
+190 ELPROCESODEENSEN˜ANZA-APRENDIZAJEDELAMATEMA´TICADESDEUNENFOQUESEMA´NTICO
+laensen˜anzadelaMatema´ticanoradicaenensen˜armuchos expresio´n(lenguajeformalonatural)admiteunacorrespon-
+contenidos,sinoenconseguirlaconstruccio´ndecapacidades denciaentreexpresionesdes´ımbolosopalabrasysituaciones
+enelserhumanoquelespermitaenfrentarsecone´xitoalos oconjuntosdecosasqueseencuentranenelmundof´ısicoo
+diferentesproblemasquesepresentan. abstractoquepuedeserdescritopordichomediodeexpresio´n.
+Enefecto,serequiereensen˜arapensar,nohayotroca- Hoyd´ıa,noexisteconsensosobreelconceptodesema´nti-
+minoylaMatema´ticacomocienciaysoportecient´ıficode ca. El problema principal es que la sema´ntica no solo se
+mu´ltiplesteor´ıasesunaherramientainsustituibleenestepro- encargadelsignificadodesignos,s´ımbolosysen˜ales,sinode
+ceso.LapropiaDra.Reglaofrecio´ uncriterioqueelautorde lainterpretacio´ndeestructurasyrepresentacionesformalesy
+esteart´ıculocomparteplenamente:“Laeducacio´nsuperior noformales.Sinembargo,segu´nlasinvestigacionesrealiza-
+debe lograr en el estudiante la capacidad de aprender, es dasporelautor,lasema´nticaformapartedeuncampoma´s
+decir,latareadelaUniversidadnoconsisteendarunagran amplio:lasemio´tica.Tampocoexisteunconsensosobreel
+cantidaddeconocimientossinoensen˜aralalumnoapensar, conceptodesemio´tica,sinembargo,elautorasumeelconcep-
+aorientarseindependientemente”[1]. todelnorteamericanoCharlesSandersPeirce(sindesconocer
+Enlahistoriadeestegranproblemacient´ıfico,elcompo- losaportesdeFerdinanddeSaussure)porconsiderarlalama´s
+nentedelaensen˜anzadelaMatema´ticaquehasufridoma´s general y por tanto la ma´s flexible: “Teor´ıa general de los
+eslaformacio´ndeconceptos,porqueenlarutinadeltrabajo signos”.
+escolarnoshemosdedicadoprincipalmenteaensen˜arprocedi- Muchosautorescoincidenenquelasemio´ticatienetres
+mientosycontenidoseste´rilesconvistasalas“evaluaciones elementosprincipales,asaber:
+perio´dicas”,queunavezrealizadas,hacenqueloscitadospro-
+Lasinta´ctica:estudialarelacio´nentrelossignosylas
+cedimientos(muchosdeloscualessinlo´gicafundamentacio´n)
+normasparasuuso.
+pierdanvaloryra´pidamentesonolvidadosporlafaltadeuna
+Lasema´ntica:estudialossignosysusignificado.
+correctasistematizacio´n.Esto,enmayoromenormedidase
+Lapragma´tica:estudialarelacio´nentretalessignosy
+mantieneenela´mbitouniversitario.
+loscontextosycircunstanciasenquesonusados.
+Nocabelamenordudaqueelprocesometodolo´gicopara
+laformacio´ndeconceptosconstituyeunelementoinsustitui- Comoesteart´ıculosecentraenelestudiodelasema´ntica,
+bleparaensen˜arapensareinvestigaryaqu´ıjuegaunpapel elautordara´unadefinicio´ndesema´nticaquenosecircunscri-
+esencial la sema´ntica matema´tica, que tambie´n sera´ de ex- beu´nicamentealsignificadodelossignosys´ımbolos,sino
+tremautilidadeneltratamientodeteoremasysusdemostra- quebrindalaposibilidaddelograrunmayoralcanceparasu
+ciones,as´ıcomocomplementoba´sicoenlaaplicacio´ndela aplicacio´n.
+heur´ısticaenlaresolucio´ndeproblemas. Sema´ntica:Eselestudiodelarelacio´nentrelossignos,
+¿Co´moactuarpararesolverlosproblemasplanteadosy lasexpresionesylasestructurasysusrespectivossignificados
+que´recursosmetodolo´gicosusar?Enesteart´ıculoseabordara´ enundeterminadocontexto.
+lamaneraenquelasema´ntica,comoherramientalingu¨´ıstica, Existe,sinembargo,unamplioconsensosobrelosdife-
+contribuyealdesarrollodelalo´gicaydelpensamientoma- rentes tipos de sema´ntica, segu´n el campo donde se aplica.
+tema´ticoengeneralyseconvierteenunprincipioheur´ıstico As´ı,podemossen˜alarlossiguientes:
+paralaresolucio´ndediversosproblemas.Suaplicacio´n,por
+Sema´nticalingu¨´ıstica:Estudiaelsignificadodelaspa-
+tanto,nosereduceexclusivamentealainterpretacio´ndesig-
+labrasylasexpresionesdellenguajecomu´n.Aqu´ı,la
+nosenlaformacio´ndeconceptospuesseconvertira´enfuente
+pragma´ticaespredominantedebidoaqueelcontexto
+inagotabledebu´squedaeimaginacio´nconstantes.
+esesencial.
+Sema´ntica lo´gica o matema´tica: Estudia el significa-
+1. Desarrollo dodeloss´ımbolosmatema´ticos,delasexpresionesy
+regularidadesdeestaciencia.
+1.1 Conceptodesema´nticaysurelacio´nconlase-
+Sema´nticadelascienciascognitivas:Estudialosmeca-
+mio´tica
+nismosps´ıquicosentreelhablanteyeloyente.
+Lapalabrasema´nticaprovienedelgriegosemantikosque
+quieredecirsignificadorelevante,peroelprefijosemaquiere La Sema´ntica lo´gica desarrolla una serie de problemas
+decir signo o sen˜al [2]. Por tanto, segu´n la etimolog´ıa de lo´gicosdesignificacio´n,destacandoenparticularlarelacio´n
+la palabra, sema´ntica quiere decir significado relevante de entre el signo lingu¨´ıstico y el contexto real. Por eso, esta
+lossignosylassen˜ales.Sinembargo,comoocurreconotros disciplina, estudia las condiciones necesarias para que un
+tantosconceptos,coneltiempoyeldesarrollodelaciencia,se signoos´ımbolopuedaaplicarseaunobjetoylasreglasque
+ampl´ıatantoelcampodeusoyaplicacio´nquelaconcepcio´n aseguranunasignificacio´nexacta.
+originalesdesbordadaporlarealidad. Hoyd´ıamuchospedagogosenelmundoenteroprocuran,
+Segu´nlapa´ginawebWikipedia,elte´rminosema´nticase comosehaplanteadoanteriormente,transformarlasviejasy
+refierealosaspectosdelsignificado,sentidoointerpretacio´n arraigadasestructurasdelprocesodeensen˜anzaaprendizaje
+designoslingu¨´ısticoscomos´ımbolos,palabras,expresioneso dondeelobjetivoprincipalconsist´ıaenensen˜arlamayorcan-
+representacionesformales.Enprincipio,cualquiermediode tidaddecontenidoscient´ıficosposiblesalestudiante(tengan
+ELPROCESODEENSEN˜ANZA-APRENDIZAJEDELAMATEMA´TICADESDEUNENFOQUESEMA´NTICO 191
+onoposibilidadescognitivasparaaplicarlas).Esatransforma- interpretarestructurasydiferentessituacionessimplesointe-
+cio´ndebeenfocarseenunparadigmaclaroypreciso:ensen˜ar gradasenuncontextodecontenidosdiversos.
+apensarylasema´nticaesunrecursoinestimableporloque Ahorapodemosafirmarquesinelpodersema´nticonohay
+aportaaldesarrollodelpensamientocreador. pensamientolo´gico.Nomanejarelarsenalsema´nticoesla
+Unavezqueelestudianteadquierelahabilidadderecurrir razo´nfundamentalporlaquefuturosprofesionalestienentan-
+alasema´nticapararealizartodaslasinterpretacionesposibles tasdificultadescuandoseenfrentanasituacionesproblema´ti-
+deunobjetooregularidadmatema´ticasecreaunfuerteha´bito caspuessuscapacidadessonlimitadasy,alosumo,logran
+dehacerloendis´ımilessituacionesdeaprendizajeyloque verlaparteexternadelosobjetosyfeno´menos.Enestosca-
+esma´simportante:lorealizaantelasmu´ltiplessituaciones sos,quesonabundantes,lafaltadelpodersema´nticoconduce
+problema´ticasqueenfrentara´ alolargodesuvidaprofesio- inevitablemente a grandes limitaciones en la capacidad de
+nal.Enesemomentodejadeserreproductivoyseconvierte ana´lisis,s´ıntesis,abstraccio´nycreacio´n.
+unprofesionalcreativo,muyproclivehacialainvestigacio´n
+cient´ıfica.Yesoesloquenecesitamos. 1.2 Nivelesdelasema´ntica
+Segu´nelgrupodeautoresyamencionadoenesteart´ıculo:
+Sinembargo,noestansencillolograrquelasema´ntica
+“Lasema´nticaenelprocesodeensen˜anzaaprendizajedela
+seaunrecursoempleadoporlosdocentesylosdiscentesenel
+matema´ticasignificaelestudiodelsignificadodelossignos
+desarrollodelprocesoeducativo.EnsutesisdoctoralArnaldo
+lingu¨´ısticosmatema´ticos,estoes,laindagacio´ndelsignifi-
+Faustinoplantea:
+cado por parte de los implicados en el proceso formativo
+matema´ticoqueseexpresamediantepalabras,expresiones,
+Actualmentelograrelvalorsema´nticomatema´ticoabsoluto
+enunciados,teoremas,propiedadesyaxiomas”[4].
+enlosfuturosprofesionalesesunatareamuydif´ıcilyaque
+Elautordeesteart´ıculoconsideramuyestrechoelcampo
+elprocesodeensen˜anzaaprendizajedelasmatema´ticasen
+deaccio´nqueloscitadosinvestigadoresconcedenalasema´nti-
+la Educacio´n Superior Angolana se rige en los fundamen-
+camatema´tica.Reducirelusodelasema´nticaal“estudiodel
+tosdelapedagog´ıadesarrolladora,apesardeprevalecer
+significadodelossignoslingu¨´ısticosmatema´ticos”es,cuando
+enlosprofesionalesrasgosdelaaplicacio´ndeprocedimien-
+menos,olvidarqueligadosalaobservacio´neinterpretacio´n
+tos tradicionalistas, ... generalmente el profesional en su
+ba´sicadesignosyobjetosmatema´ticos,sedesarrollauninten-
+quehacermatema´ticoeldocenteenfatizama´slaaplicacio´n
+soprocesodeinterpretacio´ndeenunciadoscomplejosque,a
+deme´todosexpositivosydejadeladolaintegracio´ndeme´to-
+lapostre,permiteneldesarrollodecapacidadespararesolver
+dosinteractivosquedinamizanlaensen˜anzaaprendizajeque
+problemas.
+sonmuyimportantesparadesarrollardiferenteshabilidades
+Debidoaloanteriory,comosehadichoanteriormente,la
+comunicativasparaeldesarrollodelpensamientolo´gico.[3]
+realidadcognitivahasobrepasadoaladefinicio´noriginalde
+sema´nticasehacenecesarioestablecer,adema´sdelanueva
+definicio´ndadadesema´ntica,losnivelesenqueestadisciplina
+Debeenfatizarsequeestefeno´meno,quesedescribepa-
+incide en el desarrollo del pensamiento matema´tico de los
+ra Angola por el Profesor Arnaldo en su tesis doctoral, no
+estudiantes.
+es lejano a la problema´tica de la educacio´n superior en la
+Taldimensio´ntieneelcampodondedesarrollasuaccionar
+Repu´blicadelEcuadory,segu´nlasinvestigacionesrealizadas
+queelautorhaestablecidotresnivelesdeaplicacio´nytrabajo
+por el autor, es un problema que esta´ presente en muchos
+conlasema´nticamatema´tica.Estosnivelesserepresentanen
+pa´ısesdenuestraregio´n.
+elsiguienteesquema:
+Lo peor que puede suceder en la ensen˜anza de la disci-
+plina Matema´tica en la Universidad es que los estudiantes
+soloconozcanprocedimientossintenerunarepresentacio´n
+mentalclaradelosconceptos,losteoremasylasestrategias
+ma´ssignificativas(encorrespondenciaconsuespecialidad)
+para resolver problemas. Se forman profesionales carentes
+detodainiciativayprofundidadenlosana´lisiscuantitativos
+ycualitativosrelativosalosproblemasquelescorresponde
+enfrentarensuvidalaboral.
+Elconocidopsico´logoVygotski,afirmo´ que:...”elobjeto
+matema´tico sin el pensamiento lo´gico matema´tico es una
+cosamuertayunpensamientolo´gicomatema´ticocarentedel
+objetomatema´ticopermanecenenlasombra”[10].Elautor, De forma general, en el primer nivel se desarrolla el
+atrave´sdesuquehacercomoprofesordurantema´sde44an˜os procesodeidentificacio´ndesignosys´ımbolosinvolucrados
+hacomprobadoreiteradamenteestaafirmacio´n.Esma´s,estos enunaexpresio´ndeterminada,as´ıcomolarelacio´nentreestos.
+antecedentesmotivaronlacreacio´ndelasiguientecategor´ıa: En otras palabras, en el 1er nivel se busca la comprensio´n
+Poder sema´ntico: Es la capacidad del individuo para ba´sicadelasituacio´nplanteada,correspondaaladefinicio´n
+192 ELPROCESODEENSEN˜ANZA-APRENDIZAJEDELAMATEMA´TICADESDEUNENFOQUESEMA´NTICO
+deunconcepto,alaestructuradeunteoremaoalenunciado Ana´lisisdeltrabajodeldocenteenelauladeclasesen
+de un problema. Si el discente no ha vencido este nivel, es ladiscusio´ndeesteejemplo:
+decir,sinoreconoceelsignificadodelossignosys´ımbolos Paraele´xitodeltrabajodocenteycumplirelobjetivode
+presentes, se hace imposible que comprenda y con ello, se lograrunaprendizajesignificativo,antetodo,serequierela
+truncaelprocesodeaprendizaje. determinacio´ndelosconocimientospreviosquedebeposeer
+Conelafa´ndeensen˜artantosprocesos,casisiempreal- elestudiante.Ennuestrocaso,sonnecesarioslossiguientes:
+gor´ıtmicos, el docente obvia esta primera interpretacio´n y
+losestudiantessenutrendemecanismosquesoninservibles Conceptosdefuncio´n,valorfuncional,valorabsolutoy
+porque no esta´n respaldados por una clara comprensio´n de ecuacio´n.
+conceptosyregularidades.Comoconsecuencia,lamayor´ıade Habilidad para representar gra´ficamente una funcio´n
+nuestrosalumnosnopuedenresolverproblemas,porsimples lineal.
+queestossean,peorau´nconstruirmodelosmatema´ticospa-
+Porotrolado,sesuponequeeldiscenteau´nnoconocela
+rarepresentarproblemasdesuespecialidaduniversitaria.Es
+funcio´nvalorabsolutoyqueseenfrentaaunanuevasituacio´n.
+justodecirque,conelpasardeltiempo,olvidanconrelativa
+Veremosahoraco´moprocedeeldocenteparatrabajarlostres
+facilidadestos“procesos”matema´ticosganadosafuerzade
+niveles sema´nticos a trave´s de la solucio´n de este ejercicio
+enormecantidadderepeticiones.
+que,paramuchosestudiantesqueau´nnohantrabajadoconla
+Yaenelsegundonivelseprocuralatransformacio´nde
+funcio´nvalorabsoluto,puedeconstituirunproblema.
+lossignificadosparticularesencontradosenelprimernivel
+a)Esmenesterqueeldocenterealicelassiguientespregun-
+enelementossema´nticosquepermitanlacomprensio´nglobal
+tas:¿Porque´ larelacio´ndadaesunafuncio´n?,¿que´ significa
+delasdiversassituacionesplanteadas.Lasaccionespropias
+definidaenR?,¿que´significa f(−3)?Procederalca´lculosin
+deestenivelson,entreotrasafines,lajerarquizacio´ndecon-
+hacerunadiscusio´ndeestaspreguntasser´ıacorrerungran
+ceptosyleyes(determinacio´ndeloqueesparticular,delo
+riesgo:mecanizarelprocesoyperderelencantodepensar.Es
+que es general y abarca lo anterior), la bu´squeda de nexos
+claroquelasrespuestasdeestaspreguntasseenmarcanenel
+consignificadosanteriores,ladeterminacio´ndecontraejem-
+1ernivelsema´ntico.
+plos y la transformacio´n de tesis en las demostraciones de
+Debehacersehincapie´enlalecturadelaexpresio´n f(−3).
+propiedadesmatema´ticas.Estau´ltimaaccio´nconstituyeuna
+Enlugardeleer“f de–3o f en–3”debeinculcarseenlos
+reglaheur´ısticayrevisteespecialimportanciaenelproceso
+estudiantes la expresio´n “la imagen del –3 por la funcio´n
+deresolucio´ndeproblemas.
+f”. Una vez concluido este ana´lisis se procede al ca´lculo:
+Eltercernivelseexigelaaplicacio´ndelossignificados
+f(−3)=|−3+2|=|−1|=1
+alana´lisisdeexpresionesma´scomplejas,alana´lisisdelos
+b) Aqu´ı veremos elementos del primer y del segundo
+nexosconlossaberesprecedentespararesolversituaciones
+nivelsema´ntico.Aligualqueenelcasoanterioreldocente
+problema´ticasdiversas.Aqu´ı,eldiscentedebesercapazde
+debedirigirelprocesodelpensamientodelosestudiantesa
+combinaryconectarsignificados,inferirsoluciones,estable-
+trave´sdepreguntasmuybienestructuradas.Entreotras:¿Que´
+cer regularidades y realizar conjeturas. Un buen uso de la
+significa representar gra´ficamente una funcio´n de variable
+sema´nticamatema´tica,delasinterpretacionesdeexpresiones
+real?, ¿cua´les son los elementos de una funcio´n?, segu´n el
+nosolocontribuyeaencontrarv´ıasdesolucio´n,tambie´nayu-
+resultadoobtenidoenelliteralanterior,¿yatenemosalgu´n
+dadeformadirectaadesarrollarunpensamientocreadory
+parordenadoquepertenezcaalafuncio´n,porque´?
+perspectivo,aplicableencualquiersituacio´nfutura.
+Hasta este momento solo hemos trabajado el 1er nivel
+Atrave´sdeunejemploconcretosepuedeilustrareltra´nsi-
+sema´ntico. Debe insistirse en el significado del resultado
+todelprocesodeensen˜anzaaprendizajeporestostresniveles
+f(−3)=1 obtenido anteriormente, es decir, esto es equi-
+mencionados.Peroantesesnecesarioaclararunaspectomuy
+valentealaexpresio´n(−3;1)∈ f.
+importante: en la pra´ctica cognitiva es muy dif´ıcil separar
+Ahora surge la idea (natural) de continuar encontrando
+lostresnivelesmencionados.Enmuchasocasionesaparecen
+puntos,situarlosenelplanocartesianoparaobtenerunaidea
+entrelazadosporqueexisteunadivisio´nmuyfinaentreellos
+del gra´fico de f. Esto, desde luego, puede hacerse y es un
+eincluso,comoveremosposteriormente,interrelacionados
+recursova´lido.Sinembargo,porserunprocesoinductivono
+conloselementosdelaheur´ıstica.Entodocaso,eldocenteen
+siemprenosdara´lacertezadelgra´ficoquequeremosencontrar.
+todomomentodebetenerclaridadsobrelaetapadelproceso
+Tambie´npuedenusarselasTICydeterminarelgra´ficoatrave´s
+enqueseencuentra.
+deunsoftware,peroestou´ltimoacabar´ıaconlasilusionesdel
+Ejemplo1:Dadalafuncio´n f(x)=|x+2|definidaenel pensamiento.Porello,podemosusarunconocidoprincipio
+conjuntoRdelosnu´merosreales. heur´ısticoypreguntar:¿Podemosencontrarelgra´ficode f
+usando los gra´ficos de funciones conocidas (las lineales)?,
+1. Halla f(−3) ¿co´mohacerlo?
+2. Representagra´ficamentelafuncio´ndada. Ya en este punto, entramos al 2do nivel sema´ntico por-
+3. ¿Cua´ntassolucionestienelaecuacio´n f(x)=−x?Jus- quenecesariamentedebemoshacerunatransformacio´nore-
+tificaturespuesta. formulacio´ndelaestructuradelaecuacio´nquedescribela
+ELPROCESODEENSEN˜ANZA-APRENDIZAJEDELAMATEMA´TICADESDEUNENFOQUESEMA´NTICO 193
+funcio´n.Adema´s,ahoraestablecemosnexosconotrasestruc-
+turassema´nticas.Valelapenapreguntar:¿Que´ significa|x|y
+|x+2|?Enunaconversacio´nconlosestudiantesseconcluye
+que:
+(cid:26)
+x+2six+2≥0
+y=|x+2|= (1)
+−x−2six+2<0
+(cid:26)
+x+2six≥−2
+y=|x+2|= (2)
+−x−2six<−2
+Tenemospues,unav´ıaparaobtenerelgra´ficodelafun-
+cio´ndada:representardosfuncioneslineales,enlosdominios gra´ficamentelacantidaddepuntosdondeseintersectanambos
+indicados. gra´ficos.
+Ahora debe dirigirse el ana´lisis gra´fico de la siguiente
+manera:
+El gra´fico de la funcio´n descrita y=|x+2| consta de
+dos semirrectas. Es claro que la semirrecta de la derecha
+se intersecta en un solo punto con el gra´fico de la funcio´n
+y=−xyporello,podemosdecirquelaecuacio´nplanteada
+yatieneaqu´ıunasolucio´ndebidoaquedosrectascoplanares
+nocoincidentestienen,alosumo,unpuntodeinterseccio´n.
+Sin embargo, ¿podemos asegurar que la otra semirrecta (a
+laizquierdadelpunto–2)noseintersectaconelgra´ficode
+y=−x?Efectivamente,noseintersectan,¿porque´?
+Estau´ltimapreguntadebeprovocarunana´lisisgra´ficoque
+c)¿Porque´ f(x)=−xesunaecuacio´n?,¿que´significala concluyetantolarectay=−xcomolasemirrectay=−x−2,
+expresio´n f(x)=−x?Alestablecernexosentredoselementos descritaenelintervalo(−∞;−2],sonparalelaspuestienen
+sema´nticosdecontextosdiferentes,estamosenel3ernivel. la misma pendiente. Finalmente, podemos asegurar que la
+Queda claro que existe una intencio´n natural por parte del ecuacio´ndadatienesolucio´nu´nica:x=−1.Esteresultado
+alumno(tambie´nporpartedelprofesor)dereemplazar f(x) debecorroborarseatrave´sdelca´lculopues,adema´s,genera
+por|x+2|yresolverlaecuacio´nconvalorabsoluto,locual otra posibilidad para sistematizar el concepto de funcio´n y
+es correcto. Sin embargo, no nos piden la o las soluciones estrechalosv´ınculosentreela´lgebraylageometr´ıa.
+de la ecuacio´n, solo nos piden cua´ntas y, por otro lado, se Como puede apreciarse, el trabajo en los tres niveles
+perder´ıa la gran oportunidad de ampliar los horizontes del sema´nticos, requiere de una exquisita preparacio´n docente,
+podersema´nticodelosestudiantes. tantometodolo´gicacomocient´ıficapuesaqu´ıelprofesorco-
+Portodoloanterior,enejercicioscomoestos,serecomien- mo director del proceso es quien dirige el pensamiento de
+daresolveralgebraicamentelaecuacio´nplanteadasoloalfinal, losestudianteshacialasema´ntica.Esjustodecirquetambie´n
+despue´sdeseguirelprocesoqueseindicaacontinuacio´n. requieredetiempo,perobienvalelapena.Cabedestacarque
+Encadaunodelosnivelesesprimordialeindispensable enelauladeclases,ara´ızdelaspreguntascasualesdeloses-
+lalecturasema´nticadelasdiferentesexpresionesinvolucra- tudiantes,sepresentanhabitualmentemuchasoportunidades
+das.Enestecasonospodemospreguntar¿decua´ntasformas para trabajar con los niveles sema´nticos, lo cual ha podido
+diferentespuedeleerselaigualdadanterior?Aqu´ıseexponen comprobarelautoralolargodesuexperienciadocente.
+dosdeellas:
+1.3 Lasema´nticacomoprincipioheur´ıstico
+Debemosencontrarlosvaloresrealestalesquesuima- Siconvenimosqueelobjetivoprincipaldelaensen˜anza
+gen por la funcio´n f den como resultado su opuesto delaMatema´ticaSuperiorenlostiemposactualesesensen˜ar
+(2donivelsema´ntico). apensarparaqueelfuturoprofesionalseenfrentecone´xitoa
+Dadaslasfuncionesy=|x+2|ey=−xdebemosen- loscrecientesycomplejosproblemasdelmundocient´ıficoy
+contrar los valores de x para los cuales se obtienen tecnolo´gico,entoncesestamosobligadosarealizarconstantes
+lasmismasima´genesporambasfunciones(3ernivel mencionesalaheur´ısticacomome´todoycomocienciadel
+sema´nticopuestoqueelevamoselniveldeinterpreta- descubrimiento.Hansidomuchoslosinvestigadoresdeeste
+cio´nysignificacio´nenotroscontextos). me´todo,peroelautorsesienteidentificadoespecialmentecon
+GeorgePolya[8]yHorstMu¨ller[7],porqueparticularmen-
+Aprovechamosestau´ltimalecturapuesnossugierelaidea teelloselevaronelpapeldelaheur´ısticaydemostraronsu
+degraficarenelmismoplanolafuncio´ny=−xyverificar existenciacomome´todocient´ıfico.
+194 ELPROCESODEENSEN˜ANZA-APRENDIZAJEDELAMATEMA´TICADESDEUNENFOQUESEMA´NTICO
+Perolaheur´ısticasinlasema´nticanoexiste,porquepreci- adema´sdeconocimientosba´sicosdegeometr´ıaeuclidiana.De
+samente,labu´squedadeideasenlaresolucio´ndeproblemas cualquiermanera,eldocentedebedirigirlaatencio´ndelalum-
+esta´ directamenterelacionadaconlacapacidaddeinterpre- nadoymotivarlosparaqueobserven,unayotravez,antesde
+tacio´n de los discentes, con el poder sema´ntico que hayan escribirporqueestaesunacaracter´ısticainherentealpoder
+desarrollado.ElDr.Garc´ıalaRosaexpresa:Enlabu´squeda sema´ntico.
+de la v´ıa de solucio´n a los problemas geome´tricos el estu- Porsupuesto,enlacomplejatramadelpensamientoma-
+diantedeberealizarunaseriedeactividadesmuymovidas tema´ticonadaapareceaislado.Enespecial,laaplicacio´nde
+quenosolorequierendelpensamientolo´gico,sinotambie´n lasema´nticaesta´ ligadaalaaplicacio´ndeotrasreglasyprin-
+delpensamientolateral... dondesepongademanifiestosu cipiosheur´ısticos.Enestecaso,eldocentedebeguiarlaob-
+creatividad, fantas´ıa e imaginacio´n que le permita no solo servacio´ndelestudiantehacialaformadeloselementosque
+seguiruncaminoformalmentelo´gicosino,hacerconjeturas intervienenenelenunciadodado.Elsiguienteesquemapro-
+hipote´ticassobreposiblesv´ıasdesolucio´n[5]. porcionaunarepresentacio´ndeloquedebelograrse:
+El autor considera importante el planteamiento del Dr.
+Garc´ıa porque no solo es va´lido para Geometr´ıa, sino para
+lacienciaMatema´ticaengeneral.Lasema´nticamatema´tica,
+porquesucara´cter,juegaunpapeldecisivoeneldesarrollo
+delpensamientolateralyesteasuvez,contribuyedemanera
+especialaldesarrollodelacreatividadylafantas´ıa.
+Cabedestacarquelaheur´ıstica,comometodolog´ıacient´ıfi-
+ca,esaplicableacualquiercienciaeincluyelaelaboracio´nde
+mediosauxiliares,principios,reglas,estrategiasyprogramas
+que faciliten la bu´squeda de v´ıas de solucio´n a problemas. Es claro que, luego de algunas reflexiones y usando la
+Segu´nMu¨ller,losprocedimientosheur´ısticoscomome´todo analog´ıa,surjalaideadedistanciaentredospuntos.Deigual
+cient´ıficopuedendividirseenprincipios,reglasyestrategias. forma,analizandotodalaexpresio´n,noesdif´ıcilconcluirque
+Particularmente,otorgaunpapelpredominantealosprinci- se trata de la suma de dos distancias, del mismo punto de
+piosheur´ısticosdebidoaqueestetipodeprocedimientonos coordenadas(x,x)aotrosdospuntos.Aqu´ı,deformanatural,
+brindalaideadelasolucio´ndeunproblemadeterminado[7]. debe surgir la idea de representar en el plano cartesiano la
+Elautorasumeladefinicio´nqueofreceMu¨llersobreprincipio problema´ticaplanteada.Otravezlasema´nticaparareconocer
+heur´ıstico. que el punto de coordenadas (x,x) es uno de los infinitos
+puntosdelarectay=x.Apartirdeaqu´ı,losotrosdospuntos
+Principios heur´ısticos: constituyen sugerencias para sedeterminansinmayoresdificultades.
+encontrar—directamente—laideadesolucio´n;posibi-
+litadeterminar,portanto,alavez,losmediosylav´ıa
+desolucio´n.
+Tomandocomobaseelpreceptodequeestadefinicio´nes
+va´lida sepuede asegurar quela sema´ntica matema´tica pue-
+deconsiderarseunprincipioheur´ıstico.Larazo´nprincipal:
+elusoadecuadoycreativodelpodersema´nticofavorecela
+generacio´ndeideasquebrindanlosmediosylasv´ıasdeso-
+lucio´ndediversosproblemas.Espec´ıficamente,elusodela
+sema´nticamatema´ticaesta´directamenterelacionadoconalgu-
+nosconocidosprincipiosheur´ısticos,talescomolaanalog´ıa,
+lavariacio´ndecondiciones,elana´lisisdecasosparticularesy
+lareduccio´n. Lademostracio´ndeladesigualdadplanteadaconcluyeen
+Atrave´sdeunejemplosepuedeapreciarcomoelusodel otroana´lisissema´ntico:LospuntosRyQsonfijosysiempre
+podersema´nticogeneradirectamentelaideadelasolucio´n formara´nuntria´nguloconelpuntomo´vilP,exceptoqueP
+deunproblemadedemostracio´n. seaelorigendecoordenadas.Ahoraasociamos:
+Ejemplo 2: Demuestra que para todo nu´mero real x se
+cumpleque (cid:113) (cid:113)
+x2+(x−1)2=|PR|; x2+(x+1)2=|PQ|;|RQ|=2
+(cid:113) (cid:113)
+(4)
+x2+(x−1)2+ x2+(x+1)2≥2 (3)
+Entonces,podemosescribirlosiguiente:
+Ana´lisisdeltrabajodeldocenteenelauladeclases:
+Primero,esprudenteaclararque´ conoceelestudianteal (cid:113) (cid:113)
+enfrentarseaesteejerciciodedemostracio´n.Hastaahoraco- x2+(x−1)2+ x2+(x+1)2≥2=|PR|+|PQ|≥|RQ|
+noceloselementosba´sicosdelca´lculoaritme´ticoyalgebraico, (5)
+ELPROCESODEENSEN˜ANZA-APRENDIZAJEDELAMATEMA´TICADESDEUNENFOQUESEMA´NTICO 195
+Recordandopropiedadesba´sicasreferidasalosladosde porelloquelosdocentesdebenprestarespecialatencio´nala
+untria´ngulo,recordamosladesigualdadtriangular,quenos formacio´ndeconceptos.Enespecial,eldocentedebeprestar
+garantizalau´ltimadesigualdadyconelloquedaprobadala muchaatencio´nenlaseleccio´ndeejerciciosquecoadyuven
+desigualdad. Solo nos faltar´ıa el caso particular en que P aldesarrollodelpodersema´ntico.
+coincidaconelorigendecoordenadas.Enesteu´ltimocasose En los estudios de tercer nivel se hace fundamental el
+cumplir´ıalaigualdad. concepto de funcio´n y todos los conceptos ba´sicos afines
+Esobvioqueestadesigualdadpuededemostrarsedeotras al mismo. A manera de ejemplo, el autor expone aqu´ı un
+formas,comenzandoporlaconsabidav´ıaalgebraicadonde, ejerciciotipoquesistematizaestetipodecontenidosydonde
+elevamosalcuadradoyvamostrabajandohaciaadelantebus- elestudiantedeformadirectaoindirectadesarrollasupoder
+cando alguna desigualdad conocida. Pero en estos casos la sema´ntico.
+sema´nticatambie´nesta´presentedeunauotraformapues,por Ejercicio:SeandadoslosconjuntosA={1,2,3,...,50}
+ejemplo,laaccio´ndeelevaralcuadradolosmiembrosdeuna y N el conjunto de los nu´meros naturales. Sea la funcio´n
+desigualdadimplicaelconocimientodelasignificacio´ndelas f definida de A en N tal que a cada elemento x de A se le
+bases;sisonpositivas,negativas,sisemantieneelordendela hace corresponder la suma de las cifras de x. Por ejemplo,
+desigualdad,etc. f(34)=3+4=7
+1. Fundamentaporque´ f esunafuncio´n.
+1.4 La sema´ntica matema´tica: una herramienta in-
+2. Halla f(27)
+sustituibleparaladocencia
+3. ¿Cua´ntoselementostieneelrangode f?
+Lasdiscusionesteo´ricasyejemplosanalizadosanterior-
+4. ¿Tienelafuncio´n f valoresextremos?,¿cua´locua´les?
+mente muestran la importancia de la sema´ntica en la for-
+5. Analizalainyectividad,sobreyectividadybiyectividad
+macio´n del pensamiento en general y del pensamiento ma-
+delafuncio´n f
+tema´tico en particular. De igual forma, se ha comprobado
+6. Resuelvelaecuacio´n f(x)=10
+una estrecha relacio´n entre el poder sema´ntico, el desarro-
+7. ¿Tieneceroslafuncio´n f?
+llo del pensamiento lateral y la heur´ıstica. Todo esto hace
+8. ¿Escrecientelafuncio´n f?,¿porque´?
+quelasema´nticamatema´ticaseconviertaenunaherramienta
+9. ¿Esciertoque(53,8)∈ f?Justificaturespuesta
+insustituibleparaladocencia.
+10. Usando el mismo dominio A, ¿puedes construir una
+Podemosresumirunespectrodeelementosdelaprendiza-
+funcio´ngqueseabiyectiva?
+jequelasema´nticamatema´ticafavorece,fortaleceyayudaa
+potenciar.Entreotrossepuedencitarlossiguientes:
+2. Conclusiones
+Ayudaalrazonamiento,lomejorayresultaindispensa-
+Hoyd´ıa,cuandonoesposibleensen˜aralestudianteuni-
+bleparalasistematizacio´ndeloscontenidosmatema´ti-
+versitariotodalaobramatema´ticaqueleantecede,sehace
+cos.
+necesarioensen˜arapensaryparaello,lasema´nticamatema´ti-
+Por su estrecha relacio´n con el pensamiento lateral,
+caconstituyeunapoderosaherramientaqueeldocentedebe
+fomentalacreatividadylafantas´ıa.
+usarcomounprincipioheur´ıstico,paragenerarideasybus-
+Incrementaelacervoculturalylariquezadellenguaje
+car v´ıas de solucio´n en mu´ltiples problemas, no solo de la
+natural.
+Matema´tica,sinodelacienciaengeneral.
+Facilitalacomprensio´n,ayudandodirectamenteama-
+Porlaamplitudyelalcancedesusaplicaciones,esconve-
+nipularysustituirtesisenlaresolucio´ndeproblemas.
+nienteestructurarlosnivelesdelasema´ntica,loquefacilita
+Facilitalabu´squedadeestrategiasyv´ıaspararesolver
+eltrabajodetratamientometodolo´gicoquerealizaelprofesor.
+problemas, generando en no pocas ocasiones la idea
+Elautorhaestablecidotresnivelesqueesta´nestrechamente
+principal.
+ligadosconlosprocedimientosheur´ısticosyelpensamiento
+Contribuyedemaneraespecialalcrecimientopersonal
+lateral.
+einterpersonal.
+Para desarrollar el poder sema´ntico en los estudiantes
+Ayudadirectamenteenlatraduccio´neinterpretacio´n
+universitariosesimprescindibleuncuidadosomanejometo-
+desituacionesdis´ımilesenotrascienciasycontextos
+dolo´gicoenlaformacio´ndeconceptos,as´ıcomolasistemati-
+acade´micosdiferentes.
+zacio´ndepropiedadesafinesaestosconceptos.Soloas´ılos
+Elusosistema´ticodelasema´nticamatema´ticadesarro-
+procedimientosmatema´ticostienensentidoyservira´ndegu´ıa
+llaelha´bitodeformarycomprendernuevosconceptos.
+para encontrar v´ıas de solucio´n a los problemas, as´ı como
+nuevosconocimientosatrave´sdelainvestigacio´ncient´ıfica.
+Nocabendudasquelasituacio´nt´ıpicadelaensen˜anzade
+lamatema´ticaquema´ssebeneficiaconelusodelasema´ntica
+Referencias
+eslaformacio´ndeconceptos,aspectoesencialenlaformacio´n
+deunprofesionalporquesinunaso´lidabaseconceptuales [1] Caldero´n,R.M.(1996).Tesisdoctoral:Laensen˜anzadel
+imposiblelograrquenuestrosfuturosgraduadosseenfrenten ca´lculointegral.Unaalternativabasadaenelenfoque
+con e´xito a los problemas de la ciencia y la tecnolog´ıa. Es histo´ricoculturalydelaactividad.LaHabana.
+196 ELPROCESODEENSEN˜ANZA-APRENDIZAJEDELAMATEMA´TICADESDEUNENFOQUESEMA´NTICO
+[2] Etimolog´ıas. (s.f.). Obtenido de [6] Mart´ı,J.(1883).Obrascompletas.LaHabana:Editorial
+www.etimolog´ıas.dechile.net PuebloyEducacio´n.
+[3] Faustino, A. (2016). La sema´ntica desde una
+[7] Mu¨ller,H.(1987).Me´todosHeur´ısticos.LaHabana:Edi-
+perspectiva matema´tica en el proceso de en-
+cio´nmimeografiadadelISP.
+sen˜anza aprendizaje. Obtenido de Monograf´ıas:
+http://www.monografias.com/trabajos95/semantica-
+[8] Polya, G. (1957). ”How to solve it”(Traduccio´n al es-
+perspectiva-matematica-proceso-ensenanza-
+pan˜ol: C¸o´mo plantear y resolver problemas”. Me´xico:
+aprendizaje/semantica-perspectiva-matematica-proceso-
+EditorialTrillas.
+ensenanza-aprendizaje.shtmlixzz3vXX41cuM
+[4] Faustino, A., del Pozo Gutie´rrez, E., Rodr´ıguez, O. A. [9] Schleicher, A. (2014). ¿Quie´nes son los profesores de
+(2012).Fundamentosepistemolo´gicosqueintervienenen
+Ame´ricaLatinayelCaribe?InformealBancoMundial
+eldesarrollodelacomunicacio´nmatema´tica.
+delaOrganizacio´nparalaCooperacio´nyelDesarrollo
+Econo´mico.
+[5] Garc´ıa La Rosa, J. E. (2011). Propuesta metodolo´gica
+paraeltratamientoalaresolucio´ndeproblemasgeome´tri- [10] Vygotski,L.S.(1997).Lahistoriadeldesarrollodelas
+cosdeca´lculoydemostracio´n.UniversidadPedago´gica funcionesps´ıquicassuperiores.Habana:EditorialCien-
+FrankPa´ıs,2. ciasSociales.

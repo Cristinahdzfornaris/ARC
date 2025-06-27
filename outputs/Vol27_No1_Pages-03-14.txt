@@ -1,0 +1,924 @@
+Revista Ciencias Matemáticas
+Un método de series especialmente adaptado
+a la integración de osciladores armónicos perturbados
+F. García-Alonso (fernando.garcia@ua.es)
+Universidad de Alicante (España), Escuela Politécnica Superior, Departamento de Matemática Aplicada
+J. A. Reyes (jose.reyes@ua.es)
+Universidad de Alicante (España), Escuela Politécnica Superior, Departamento de Matemática Aplicada
+Resumen 1. Introducción
+En este artículo, de carácter divulgativo, se estudian las φ-funcio- La integración de osciladores armónicos perturbados es un
+nes de Ferrándiz, sus propiedades y relaciones con las G-funcio- problema común e importante en muchos campos de la física
+nes de Scheifele y un método numérico, especialmente adaptado y de la ingeniería (García-Alonso y Reyes, 2007), habiéndo-
+a la integración precisa de osciladores armónicos perturbados. se desarrollado diferentes métodos numéricos que permiten el
+Este tipo de ecuaciones diferenciales aparecen frecuentemente cálculo de la solución. Así mismo es relevante la integración de
+en modelos matemáticos de muchos problemas de la física, inge- osciladores armónicos perturbados en astrodinámica, pues las
+niería y astrodinámica. El método de series utiliza desarrollos en transformaciones de Kunstaanheimo-Stiefel (KS), (Ferrándiz
+φ-funciones, siendo capaz de integrar, sin error de truncamiento, and Vigo-Aguiar, 1996) y de Burdet-Ferrándiz (BF), (Ferrán-
+bajo ciertas condiciones, el problema perturbado. Este método diz, 1986, 1988), (Ferrándiz y Sansaturio, 1989), (Ferrándiz,
+supone un refi namiento del método de series de Taylor y de los Sansaturio and Pojmand, 1992), reducen el problema de Kepler
+métodos basados en series de G-funciones. Su aplicación se ilus- a osciladores.
+tra con la resolución exhaustiva de dos problemas stiff a modo de Debido fundamentalmente al desarrollo de los programas es-
+test, comparándose la precisión del método frente a otros códigos paciales, es de gran interés el calculo preciso de orbitas de saté-
+conocidos, implementados en MAPLE V. lites artifi ciales, pues algunos problemas geodinámicos, llegan
+a necesitar precisiones subcentimétricas para conseguir la posi-
+Abstract
+ción exacta del satélite artifi cial en una referencia inercial.
+In this article, of popularizing nature, the φ-functions of Ferrán- En 1970 Scheifele (1971), (Stiefel and Scheifele, 1971) di-
+diz are studied, and also their properties and relations with the señó un algoritmo capaz de integrar sin error de truncación el
+Scheifele G-functions and a numerical method, specially adap- oscilador armónico no perturbado. La solución fue expresada
+ted to the precise integration of perturbed harmonic oscillators. en serie de las llamadas G-funciones de Scheifele, funciones
+This type of differential equations appears frequently in mathe- que fueron utilizadas por Martín y Ferrándiz (1995, 1997) para
+matical modelling of many problems in physics, engineering and introducir un método multipaso de paso fi jo, denominado SMF
+astrodynamics. The method uses series of φ-functions, being que, conservando las buenas propiedades del método de Schei-
+able to integrate without truncation error, under certain condi- fele, evita los cálculos previos que este requería. Utilizando
+tions, the perturbed problem. This method represents a refi ne- también G-funciones, Vigo y Ferrándiz, (1998a, 1998b) intro-
+ment of the Taylor series method and methods based on series of dujeron unos nuevos métodos multipaso del tipo VSVO, que
+G-functions. Its application is illustrated by the resolution of two presentaban buenas propiedades adicionales.
+stiff problems, comparing the accuracy of the method to other Por otra parte, alrededor de 1970, Stiefel y Bettis (1969),
+known codes, implemented in MAPLE V. (Bettis, 1970) modifi caron los métodos clásicos de diferencias
+— 3 —
+Sociedad Cubana de Matemática y Computación
+de Cowell. Bettis dio formulaciones recurrentes válidas para /3 tn
+g(t)=f^t,x(t),xl(t)h= c (2)
+n n!
+modifi car los métodos de Störmer, Cowell, Adams-Bashforth n=0
+y Adams-Moulton (Norsett , 1969), (Franco, Correas y Petriz, En términos del operador diferencial D, donde Dn representa
+1997), con orden arbitrario.
+, (1) se puede expresar del modo siguiente:
+En este trabajo estudiaremos el método numérico basado en
+las llamadas φ-funciones de Ferrándiz (García-Alonso, Reyes,
+(3)
+Ferrándiz y Vigo Aguiar, 2009), algoritmo capaz de integrar,
+bajo ciertas condiciones y sin error de truncación, el oscila- Aplicando el operador diferencial D2 + β2 a (3), con el fi n de
+dor armónico perturbado, . anular la perturbación, se obtiene la ecuación de orden supe-
+De forma análoga a los métodos basados en G-funciones (Gar- rior siguiente:
+cía-Alonso y Reyes, 2007), la solución que proporciona este D4x(t)+()D2x(t)+a2b2x(t)=
+(4)
+nuevo método se expresa mediante una serie de φ-funciones. =f$(D2+b2)f^t,x(t),xl(t)h
+El algoritmo de series de φ-funciones presenta un mejor com-
+Dado que x(0)=x y xl(0)=xl y como:
+portamiento que el basado en G-funciones, pues permite ganar 0 0
+un orden de con respecto a estas, es decir, consigue que el error
+xm(t)-=a2x(t)+f$f^t,x(t),xl(t)h,
+(5)
+de truncación contenga a ε2 como factor mientras que en el algo-
+entonces:
+ritmo basado en G-funciones solo tenía como factor a ε.
+xm(t)-=a2x +f$f^0,x,xlh=xm (6)
+0 0 0 0
+El trabajo fi naliza con un pormenorizado estudio de dos os-
+Además:
+ciladores perturbados, que ilustran el modo de empleo del mé-
+todo y contrastan su buen comportamiento mediante un estudio J K K2f^t,x(t),xl(t)h N O
+O
+K + O
+comparativo de su precisión frente a otros conocidos códigos
+K
+K
+2t O
+O
+K K 2f^t,x(t),xl(t)h O O
+tales como GEAR, MGEAR y LSODE, utilizando su imple- xn(t)=-a2xl(t)+fK K K K + 2x xl(t)+O O O O = (7)
+mentación en MAPLE, para evitar que los resultados queden K K 2f^t,x(t),xl(t)h O O
+KK+ xm(t) OO
+distorsionados por una mala programación que favorezca el L 2xl P
+método basado en φ-funciones. =-a2xl(t)+fdf(t,x(t),xl(t))(1,xl(t),xm(t)),
+entonces:
+2. Preliminares xn(0)=-a2xl(0)+fd vf(0,x,xl)(1,x,xl)=xn, (8)
+0 0 0 0 0
+donde d
+vf
+es la notación usual del vector gradiente
+Consideremos las ecuaciones de la forma: 2f 2f 2f
+c , , m
+xm(t)+a2x(t)=f$f^t,x(t),xl(t)h, 2t 2x 2xl .
+(1)
+Nótese que las ecuaciones (6) y (8) están defi nidas a lo largo de
+x(0)=x y xl(0)=xl
+0 0
+la solución de (1).
+que formulan un PVI correspondiente a un oscilador forzado
+Las ecuaciones (4), (6) y (8) permiten defi nir un nuevo PVI
+de frecuencia α donde α ! R, con ε un parámetro de perturba-
+auxiliar:
+ción, usualmente pequeño.
+D4x(t)+(a2+b2)D2x(t)+a2b2x(t)=
+La solución de (1), x(t) obtenida para las condiciones inicia-
+=f$(D2+b2)f(t,x(t),xl(t))
+les dadas, es analítica en el intervalo [0,T] 1 R y la función (9)
+de perturbación g(t)=f^t,x(t),xl(t)h admite en [0,T], un de-
+x(0)=x0,xl(0)=xl,xm(0)=xm,xn(0)=xn
+0 0 0
+sarrollo en serie de potencias, absolutamente convergente, de
+la forma: que tiene la misma solución exacta que (1), en el intervalo.
+Por brevedad se introduce una notación más compacta, llamando:
+— 4 —
+Revista Ciencias Matemáticas
+L 4 (x(t))=((D2+b2)(D2+a2))x(t) (10) Proposición 1: }l (t)=} (t),6n!N con n$1 .
+n n-1
+El PVI auxiliar (9), se puede escribir del modo siguiente: Demostración:
+L 4 (x(t))=f$(D2+b2)g(t) L 4 (}l n (t))=(D2+(a2+b2)D2+a2b2)(}l n )=
+(11)
+x(0)=x,x'(0)=xl,xm(0)=xm,xn(0)=xn
+0 0 0 0 (14)
+= d (L (} (t)))= d (L (} (t)))= d atn k= tn-1
+Con la ayuda del desarrollo de Taylor de g(t) dado en (2), el PVI dt 4 n dt 4 n dt n! (n-1)!
+(11), se puede formular mediante las ecuaciones: Teniendo en cuenta la defi nición de las funciones } (t), dada
+n
+L (x(t))=f$ /3 (c +b2c) tn , en (14), se tiene que }l n (0)=}m n (0)=}n n (0)=0 .
+4 n=0 n+2 n n! (12) Y como también } (0)=0, entonces:
+n
+x(0)=x,x'(0)=xl,xm(0)=xm,xn(0)=xn
+0 0 0 0
+}(iv)(0)=D4} (0)=(-(a2+b2)D2-a2b2)} (0)=0 .
+n n n
+Como es usual, la solución del PVI (12), se puede dividir en
+Luego }'(t) y } (t)son soluciones del mismo PVI y por
+dos partes, una corresponde a la solución x(t) asociada al PVI n n-1
+h
+el teorema de unicidad de soluciones podemos afi rmar que
+homogéneo con las condiciones iniciales dadas, y la otra parte
+}'(t)=} (t).
+es la solución del PVI no homogéneo en la que esta y sus tres n n-1
+primeras derivadas se anulan en t = 0.
+Proposición 2: Las funciones } (t)6n!N , verifi can la
+Teniendo en cuenta el principio de superposición de solucio- n
+siguiente ley de recurrencia:
+nes, esta última se puede obtener calculando la solución de los
+tn+4
+siguientes PVI particulares: } n (t)+(a2+b2)} n+2 (t)+a2b2} n+4 (t)= (n+4)! .
+tn Demostración:
+L (x (t))= ,
+4 n n! (13) Dado que:
+x (0)=xl (0)=xm (0)=xn (0)=0,conn$0
+n n n n L (} (t))=(D4+(a2+b2)D2+a2b2)} (t) ,
+4 n+4 n+4
+combinándolas de forma adecuada con f, c y β.
+n teniendo en cuenta la defi nición 1 y aplicando la proposición 1,
+Es obvio que la solución de (12) y de (1) se puede expresar
+se obtiene:
+como suma de x (t) y una serie, similar a la que aparece en tn+4
+H } n (t)+(a2+b2)} n+2 (t)+a2b2} n+4 (t)= (n+4)! .
+los algoritmos de series de funciones de Scheifele (1971), (Stie-
+Es de resaltar que las expresiones explícitas y analíticas de las
+fel and Scheifele, 1971), que son generalizadas en términos de
+funciones } (t), dependen de las frecuencias a y b.
+unas nuevas funciones llamadas {-funciones. n
+Consideremos el problema homogéneo con las condiciones
+3. Las {-funciones iniciales dadas.
+Sea x (t) la solución general del problema homogéneo con
+H
+las condiciones iniciales dadas, dicha solución se obtendrá apli-
+En este epígrafe se procede a construir y estudiar las propieda-
+cando el principio de superposición a las soluciones de cuatro
+des de las {-funciones.
+PVI homogéneos particulares cuyas expresiones dependerán
+A tal efecto se consideran los PVI particulares defi nidos en (13).
+de los valores de las frecuencias a y b.
+Sea x (t), con n  0, solución de (13).
+n
+Una vez obtenidas las expresiones analíticas de estas funcio-
+Defi nición 1: } (t)=x (t),6n!N nes podemos, en cada caso, construir la solución del PVI (11),
+n n
+Es decir las funciones } (t) 6n!N , verifi can: utilizando éstas, junto a las funciones dadas en la defi nición 1.
+n
+Para no trabajar con dos tipos de funciones, las unifi care-
+tn
+L (x (t))= ,
+4 n n! (14) mos defi niendo unas nuevas funciones que llamaremos ge-
+x n (0)=xl n (0)=xm n (0)=xn n (0)=0,conn$0 néricamente {-funciones denominación dada por Ferrándiz
+(García-Alonso, Reyes, Ferrándiz and Vigo Aguiar, 2009).
+— 5 —
+Sociedad Cubana de Matemática y Computación
+3.1 Caso I (a ! 0, b ! 0, a ! b) Es decir {(t), con i = 0,1,2,3 son las soluciones de los PVI:
+i
+L ({ (t))=0
+4 i
+(16)
+{(j)(0)=d ,coni,j=0,1,2,3
+Proposición 3: i i,j
+Las }(t)-funciones se pueden expresar mediante series:
+n
+/3 (-1)m b2m+2-a2m+2
+}n(t)= t2m+4+n= Proposición 4:
+(2m+4+n)! b2-a2
+m=0 Las funciones { (t) con n = 0,1,2,3, se pueden expresar me-
+/3 n
+= b[n]t2m+4+n
+m diante funciones trigonométricas elementales, de la manera si-
+m=0
+(-1)m b2m+2-a2m+2 guiente:
+donde b[n]= , con n  0.
+m (2m+4+n)! b2-a2
+1
+{ (t)= ^a2cos(bt)-b2cos(at)h
+0 a2-b2
+Demostración:
+Basta suponer: } (t)= /3 b[n]tk , { (t)= 1 ca2 sin(bt)- b2 sin(at)m
+n k 1 a2-b2 b a
+k=0
+Sustituyendo en (14) e identifi cando coefi cientes se obtiene
+1
+la ecuación en diferencias: { (t)= ^cos(bt)-cos(at)h
+2 a2-b2
+(k+4)(k+3)(k+2)(k+1)b[n] +
+k+4
+d
++(a2+b2)(k+1)(k+2)b[ k n + ] 2 +a2b2b[ k n]= k k ! ,n , { 3 (t)= a2- 1 b2 c b 1 sin(bt)- a 1 sin(at)m
+de la que conocemos, debido a las condiciones iniciales de (13):
+b 0 [n]=b 1 [n]=b 2 [n]=b 3 [n]=0 . Demostración:
+Resolviendo esta ecuación para los distintos valores de n, se Basta aplicar los métodos tradicionales de resolución de EDO´S.
+obtienen las fórmulas:
+/3 (-1)m+r b2m-(2r+2)-a2m-(2r+2)
+} (t)= t2m, con r  0, Corolario 1:
+2r 2m! b2-a2
+m=r+2 Las funciones { (t) con n = 0,1,2,3, se pueden expresar me-
+} 2r-1 (t)=
+/3
+(
+(
+2
+-
+m
+1
+-
+)m
+1
++
+)
+r
+!
+b2m-(2r
+b
++2
+2
+)
+-
+-a
+a
+2
+2
+m-(2r+2)
+t2m-1 , con r  1. diante las series:
+n
+m=r+2
+Efectuando el cambio de índices m = i + r + 2, se obtiene: /3 (-1)m+1 a2b2(b2m-2-a2m-2)
+{ (t)= t2m,
+0 (2m)! b2-a2
+/3 (-1)i b2i+2-a2i+2 m=0
+} (t)= t2(i+r+2),
+2r (2(i+r+2))! b2-a2
+i=0 /3 (-1)m+1 a2b2(b2m-2-a2m-2)
+{ (t)= t2m+1,
+1 (2m+1)! b2-a2
+/3 (-1)i b2i+2-a2i+2 m=0
+} (t)= t2(i+r+2)-1,
+2r-1 (2(i+r+2)-1)! b2-a2
+i=0 /3 (-1)m+1 b2m-a2m
+{ (t)= t2m,
+Bastaría notar 2r como N y 2r - 1 como M para constatar que 2 (2m)! b2-a2
+m=0
+las }(t), se pueden expresar de forma única.
+n /3 (-1)m+1 b2m-a2m
+Por otra parte, consideremos el problema homogéneo: { (t)= t2m+1,
+3 (2m+1)! b2-a2
+L (x(t))=0 m=0
+4
+(15)
+x(0)=x,x'(0)=x',x''(0)=x'',x'''(0)=x'''
+0 0 0 0 Demostración:
+cuya solución se construirá mediante una combinación lineal de Basta desarrollar en serie de potencias las funciones trigo-
+funciones {(t), con i = 0,1,2,3, que a continuación se defi nen. nométricas que intervienen en proposición 4.
+i
+Defi nición 2: Proposición 5:
+Sean { (t),{(t),{ (t),{ (t), las soluciones de L(x(t)) = 0 con El sistema {{ (t), {(t), { (t), { (t)} es un sistema fundamental
+0 1 2 3 4 0 1 2 3
+condiciones iniciales {( i j)(0)=d i,j , i,j = 0,1,2,3, siendo d i,j la de soluciones de la ecuación L 4 (x(t)) = 0.
+delta de Kronecker.
+— 6 —
+Revista Ciencias Matemáticas
+Demostración: Utilizando las funciones }(t), es posible extender las fun-
+n
+Evidentemente el Wronskiano W({ (t), {(t), { (t), { (t)) = 1 ciones { (t), del modo siguiente:
+0 1 2 3 n
+Teorema 1: Defi nición 3:
+La solución general de (15) es: { (t) = } , con n  0.
+n+4 n(t)
+x (t)=x { (t)+x'{ (t)+x''{ (t)+x'''{ (t) . Es sencillo comprobar, basándose en la defi nición y en la proposi-
+H 0 0 0 1 0 2 0 3
+ción 1, que las {-funciones verifi can las siguientes relaciones:
+Demostración: {'(t)=-a2b2{ (19)
+0 3
+Por la proposición 5:
+{ 1 '(t)={ 0 (t) (20)
+x (t)=C { (t)+C { (t)+C { (t)+C { (t) ,
+H 0 0 1 1 2 2 3 3
+y como x(j)(0)=C {(j)(0)=C , con j = 0,1,2,3, {' 2 (t)={ 1 (t)-(a2+b2){ 3 (t) (21)
+H j j j
+entonces: {' n (t)={ n-1 (t) (22)
+x (t)=x { (t)+x'{ (t)+x''{ (t)+x'''{ (t) .
+H 0 0 0 1 0 2 0 3 Estas relaciones muestran directamente que su clausura lineal
+es cerrada respecto a la derivación.
+Teorema 2:
+Utilizando las {-funciones el Teorema 2 se puede reescribir,
+La solución general de (12) es:
+obteniéndose la solución de (12), como:
+/3
+x(t)=x (t)+f ^c +b2ch} (t) .
+H n+2 n n x(t)=x { (t)+x'{ (t)+x''{ (t)+x'''{ (t)+
+n=0 0 0 0 1 0 2 0 3
+/3 (23)
++f (c +b2c){
+n+2 n n
+Demostración: n=0
+/3
+L (x(t)) = L (x (t))+fL c (c +b2c )} (t)m= o bien:
+4 4 H 4 n+2 n n
+n=0
+/3
+/3 x(t)=v(t)$x+f (c +b2c){ (t) (24)
+= f (c +b2c )L (} (t)) = n+2 n n+4
+n+2 n 4 n n=0
+n=0
+/3 tn utilizando una notación más compacta.
+= f (c +b2c ) = f$(D2+b2)g(t)
+n+2 n n! . Además, es posible establecer relaciones entre las G-funcio-
+n=0
+nes de Scheifele y las {-funciones de Ferrándiz.
+Veamos que x(t) verifi ca las condiciones iniciales del problema.
+Si se introduce la notación {(t,a,b), con el fi n de resaltar la
+Utilizando una notación más compacta, si
+v(t)=^{ (t) { (t) { (t) { (t)h y x=(x x' x'' x''')t , dependencia de las {-funciones respecto de las frecuencias a y
+0 1 2 3 0 0 0 0
+b, de forma análoga G (t,a) y G (t,b), para las G-funciones, en-
+entonces: n n
+/3 tonces se puede probar que:
+x(0)=v(0)$x+ (c +b2c)} (0)=v(0)$x=x
+n+2 n n 0
+n=0 a2G (t,a)-b2G (t,b)
+x'(0)=v'(0)$x+
+/3
+(c +b2c)}'(0)=v'(0)$x=x'
+{
+n
+(t,a,b)= n
+a2-b2
+n 6n$2 (25)
+n+2 n n 0
+n=0 (17)
+x''(0)=v''(0)$x+ /3 (c +b2c)}''(0)=v''(0)$x=x'' y que:
+n+2 n n 0
+n / = 3 0 G n (t,a)={ n (t,a,b)+b2{ n+2 (t,a,b)6n$2 (26)
+x'''(0)=v'''(0)$x+ (c +b2c)}'''(0)=v'''(0)$x=x'''
+n+2 n n 0
+n=0 Aclaremos que las G (t,a) y G (t,b) se calculan para las ecuacio-
+n n
+Luego x(t) es solución de (12).
+nes
+x''(t)+a2x(t)=f$f(t,x(t),x'(t))
+y
+La relación expresada en el teorema anterior es análoga a:
+x''(t)+b2x(t)=f$f(t,x(t),x'(t))
+, respectivamente y vienen
+/3
+x(t)=G 0 (t)x 0 +G 1 (t)x 0 ' +f c n G n+2 (t) (18) dadas por las expresiones (García-Alonso y Reyes, 2007):
+n=0
+obtenida para el oscilador armónico y las G-funciones de /3 t2k+n
+G (t,a)= (-a2)k (27)
+n (2k+n)!
+Scheifele (García-Alonso y Reyes, 2007). k=0
+— 7 —
+Sociedad Cubana de Matemática y Computación
+/3 t2k+n En este Caso V, la solución de (12) es
+G (t,b)= (-b2)k (28)
+n (2k+n)! /3
+k=0 x(t)=v(t)$x+f c { (t) (39)
+n+2 n+4
+n=0
+3.2 Caso II (a ! 0, b = 0) 4. Método de series de {-funciones
+Las fórmulas, expresiones e igualdades correspondientes a este
+La novedad del método de series de {-funciones, consiste en el
+caso, se pueden obtener mediante un proceso análogo al Caso I,
+uso de una segunda frecuencia para eliminar en cierta medida
+o bien mediante el cálculo de límites, sobre las expresiones obte-
+los efectos de la perturbación.
+nidas en el caso anterior, cuando b tiende a cero (García-Alonso,
+Consideremos el PVI (1) y sea x(t) la solución, que supone-
+Reyes, Ferrándiz y Vigo Aguiar, 2009). /3 tn
+mos analítica en el intervalo [0,T] 1 R, es decir x(t)= a
+Las {-funciones φ (t) para n = 1,2,3, se expresan como: n n!
+n n=0
+y que la función de perturbación g(t) admite en [0,T], un desarro-
+{ (t)=1 (29)
+0 llo en serie de potencias, absolutamente convergente, de la forma
+{ 1 (t)=t (30) g(t)= /3 c tn .
+n n!
+1-cos(at) n=0
+{ (t)= (31)
+2 a2
+Como x''(t)+a2x(t)=fg(t) , entonces:
+{ 3 (t)= a 1 2 a t- a 1 sin(at) k (32) /3 tn /3 tn /3 tn
+a +a2 a =f c ,conn$4 (40)
+n+2 n! n n! n n!
+defi niéndose para n  0 , siendo n=0 n=0 n=0
+/3 (-1)m de donde se deduce que
+} n (t)= m=0 (2m+4+n)! a2mt2m+4+n (33) a n+2 +a2a n =fc n ,conn$0,con (41)
+En este caso la solución de (12) es:
+dng(0)
+/3 c = (42)
+x(t)=v(t)$x+f c { (t) (34) n dtn
+n+2 n+4
+n=0
+Siendoa
+0
+=x
+0
+,a
+1
+=x
+0
+'. (43)
+3.3 Otros casos
+Por (6), (8) y (41), es posible plantear la siguiente recurrencia:
+Las fórmulas, expresiones e igualdades de las {-funciones jun-
+to a la expresión analítica de la solución de (12), para el Caso III (44)
+(a = 0, b ! 0) y Caso IV (a = b ! 0), puede obtenerse
+calculando, en las fórmulas del Caso I, los límites cuando a tien-
+de a cero y a tiende a b, respectivamente. con n  4.
+Para el Caso V (a = b = 0), las fórmulas de las {-funcio- Por el teorema 2, se sabe que:
+nes y la expresión analítica de la solución de (12), se calculan /3
+x(t)=v(t)$x+f (c n+2 +b2c n ){ n+4 (t) (45)
+mediante un proceso similar al Caso I, obteniéndose las ex- n=0
+presiones: defi niendo:
+t2 t3
+{ 0 (t)=1,{ 1 (t)=t,{ 2 (t)= 2 ,{ 3 (t)= 3! , (35) b 0 =a 0 ,b 2 =a 2 ,b 3 =a 3 ,b n =f(c n-2 +b2c n-4 ),conn$4 (46)
+defi niéndose de (41), se deduce que:
+{ n+4 (t)=} n (t)paran$0 (36) b n =a n +(a2+b2)a n-2 +a2b2a n-4 ,conn$4 (47)
+t4+n
+siendo} n (t)= (4+n)! (37) Por tanto,
+/3
+verificándoseque{ n (t,0,0)=G(t,0)6n$2 (38) x(t)= b n { n (t), (48)
+n=0
+— 8 —
+Revista Ciencias Matemáticas
+que prescindiendo de truncaciones, es análoga a las expre- a =x,
+0 i
+siones obtenidas para desarrollos en G-funciones (Stiefel and a =x',
+1 i
+Scheifele, 1971), (Scheifele, 1971). a =-a2a +ff(ih,x*(0),x*'(0))
+2 0
+Si notamos por x 1 ,x 1 ',x 1 '',y x 1 ''' las aproximaciones a x(h),x'(h), a 3 =-a2a 1 +ff(ih,x*(0),x*'(0)) (53)
+x''(h),y x'''(h)respectivamente, la aproximación a la solución, a n =-a2a n-2 +ff(n-2)(ih,x*(0),x*'(0)),conn$4.
+b =a,b =a,b =a,
+utilizando (p+1) {-funciones, vendrá dada por: 0 0 1 1 2 2
+b =a,b =a +(a2+b2)a +a2b2a ,
+/p 3 3 n n n-2 n-4
+x = b { (h) conn$4,
+1 n n
+n=0 /p
+/p x = b { (h)
+x' =b {'(h)+b {'(h)+b {'(h)+b {'(h)+ b { (h) i+1 n n
+1 0 0 1 1 2 2 3 3 n n-1 n=0
+n=4 (49) /p
+/p x' =b {'(h)+b {'(h)+b {'(h)+b {'(h)+ b { (h)
+x''=b {''(h)+b {''(h)+b {''(h)+b {''(h)+ b { (h) i+1 0 0 0 1 0 2 0 3 n n-1
+1 0 0 1 1 2 2 3 3 n n-2 n=4
+n=4 /p
+/p x'' =b {''(h)+b {''(h)+b {''(h)+b {''(h)+ b { (h)
+x'''=b {'''(h)+b {'''(h)+b {'''(h)+b {'''(h)+ b { (h) i+1 0 0 0 1 0 2 0 3 n n-2
+1 0 0 1 1 2 2 3 3 n n-3 n=4
+n=4 /p
+x''' =b {'''(h)+b {'''(h)+b {'''(h)+b {'''(h)+ b { (h)
+El segundo paso de integración, presenta la difi cultad de que i+1 0 0 0 1 0 2 0 3 n n-3
+n=4
+la función de perturbación depende explícitamente de t. Para
+teniendo en cuenta las siguientes relaciones:
+efectuar este segundo paso de integración, se toman como va-
+lores iniciales x 1 ,x 1 ',x 1 '',y x 1 ''' es decir se considera el PVI: {' 0 '(t)=-a2b2{ 2 (t) (54)
+L (x(t))=ff(t,x(t),x'(t)) {' 0 ''(t)=-a2b2{' 2 (t) (55)
+4
+(50)
+x(h)=x 1 ,x'(h)=x 1 ',x''(h)=x 1 '',x'''(h)=x 1 ''', {' 2 '(t)={ 0 (t)-(a2+b2){ 2 (t) (56)
+siendo necesario efectuar el cambio de origen t = t* + h y consi- {' 2 ''(t)={' 0 (t)-(a2+b2){' 2 (t) (57)
+derar x*(t*) = x(t* + h), con lo que (50) se expresa como:
+L (x*(t*))=ff((t*+h),x(t*+h)),x'(t*+h)),x''(t*+h))=
+4 4.1 Cálculo del residuo
+=ff((t*+h)x*(t*),x*'(t*))
+(51)
+x*(0)=x(h)=x,x*'(0)=x'(h)=x',
+1 1
+Si se nota
+x*''(0)=x''(h)=x'',x*'''(0)=x'''(h)=x''',
+1 1
+/3
+Se defi ne: S(t)= (c n+2 +b2c n ){ n+4 (t) (58)
+n=0
+la solución de (12) se puede expresar como:
+(52)
+x(t)=v(t)$x+fS(t),
+(59)
+truncando la solución de (12) obtenida en el Teorema 2, con
+(m + 1) {-funciones y m  4, se llega a la expresión fi nita si-
+con n ≥ 4.
+guiente:
+Recurrencias que permiten el cálculo de las b correspondien-
+n m/-4
+tes, así como el cálculo de x 2 ,x 2 ',x 2 '',y x 2 ''', no siendo necesario x m (t)=v(t)$x+f (c n+2 +b2c n ){ n+4 (t) (60)
+n=0
+calcular el valor de las {-funciones por tenerlo calculado en el
+El correspondiente residuo es:
+paso anterior. R (t)=f$(D2+b2)g(t)-L (x (t))=
+m 4 m
+Esta estrategia nos permite reiniciar el método y diseñar el =f$ /3 (c +b2c) tn (61)
+n+2 n n!
+algoritmo que se describe a continuación. n=m-3
+Si suponemos calculada la aproximación a la solución En consecuencia el parámetro de perturbación f es factor del
+x =x(ih) y a su derivada x'=x'(ih) entonces: residuo, por lo tanto el residuo será pequeño con f. Si f = 0, el
+i i
+método de series de {-funciones, integra sin error de trunca-
+ción el problema (12), con tan sólo el término v(t)$x.
+— 9 —
+Sociedad Cubana de Matemática y Computación
+5. Ejemplos numéricos que es posible integrar exactamente mediante el método de series
+de {-funciones, con tan solo las cuatro primeras, pero no es posi-
+ble integrarlo exactamente con el método de series de G-funciones.
+Se presenta una aplicación del método de series de {-funciones
+A tal efecto, se construyen las {-funciones siguientes, co-
+al cálculo de la solución de PVI’s, stiff altamente oscilatorios.
+rrespondientes al Caso IV:
+El buen comportamiento del método basado en {-funciones
+/3 (-1)m+1(m-1)
+se evidencia mediante su comparación con otros conocidos có- { 0 (t)= (2m)! i2mt2m=
+m=0
+digos, implementados en el packaged DSOLVE NUMERIC del i
+=cos(it)+ tsin(it),
+2
+programa MAPLE, tales como LSODE, método que obtiene
+/3 (-1)m+1(m-1)
+una solución numérica que se calcula utilizando el Livermore { 1 (t)= (2m+1)! i2mt2m+1=
+m=0
+Stiff ODE solver. GEAR, que proporciona una solución numé- t 3
+=- cos(it)+ tsin(it),
+2 2i
+rica calculada por medio del método de extrapolación racional
+/3 (-1)m+1(m) t (66)
+de Burlirsch-Stoer. MGEAR [msteppart], método multipaso, { (t)= i2m-2t2m=- sin(it),
+2 (2m)! 2i
+m=1
+adecuado para los sistemas stiff. Para realizar la comparación /3 (-1)m+1(m)
+{ (t)= i2m-2t2m+1=
+de los errores producidos se ha utilizado la implementación en 3 (2m+1)!
+m=1
+1 t
+MAPLE de los códigos anteriormente citados, para asegurar =- sin(it)- cos(it),
+2i3 2i2
+que los resultados no son distorsionados por una defi ciente pro-
+/3 (-1)m+1(m+1)
+{n(t)= i2mt2m+n,6n$4.
+gramación que favorezca el nuevo código y además, porque esta (2m+n)!
+m=1
+aplicación permite un fácil cambio del número de dígitos usado
+Partimos x y de x' , par calcular x' y x'. En un primer paso de
+0 0 1 1
+en los cálculos y dispone de una adecuada capacidad gráfi ca.
+integración se obtienen las recurrencias:
+a =x,
+0 0
+5.1 Un problema altamente oscilatorio a =x',
+1 0
+Se considera el problema altamente oscilatorio, propuesto por a 2 =-i2a 0 +c 0 =-i2a 0 =x 0 '',
+a =-i2a +c =-i2a +ia=x''', (67)
+Petzold (Palacios, 2003), (Petzold, 1981), en el que aparece el 3 1 1 1 0
+a =-i2a +c =-i2a +
+oscilador armónico: n n-2 0 n-2
+x''(t)+i2x(t)=asin(it), +a /n-2 cn- j 2mijsin`j r 2 j=x 0 '',conn$4.
+j=0
+a (62)
+con x(0)=1,x'(0)=-
+2i y se calculan los coefi cientes b del desarrollo en serie de {-fun-
+k
+y solución exacta ciones mediante las relaciones:
+x(t)=`1-
+2
+a
+i
+tjcos(it)
+(63)
+b
+0
+=a
+0
+, b
+2
+=a
+2
+, b
+3
+=a
+3
+, b
+n
+=a
+n
++ 2i2a
+n-2
++ i4a
+n-4
+con n ≥ 4,
+Si notamos por x y x' las aproximaciones a x(h) y x'(h), res-
+1 1
+siendo su derivada
+pectivamente, la aproximación a la solución, utilizando (p + 1)
+a a
+x'(t)=-i`1-
+2i
+tjsin(it)-
+2i
+cos(it)
+(64)
+{-funciones, vendrá dada por:
+/p
+x = b { (h) (68)
+1 n n
+Aunque la solución puede ser calculada exactamente mediante
+n=0
+procedimientos analíticos, este problema se propone para ilus-
+/p
+x' =b {'(h)+b {'(h)+b {'(h)+b {'(h)+ b { (h) (69)
+1 0 0 1 1 2 2 3 3 n n-1
+trar cómo trabaja el método de series de {-funciones con per- n=4
+El segundo paso de integración presenta la difi cultad de que
+turbación armónica altamente oscilatoria.
+Aplicando el operador D2 + b2, con a = b = i ! 0, se obtie- la función de perturbación depende explícitamente de t. Para
+efectuar este segundo paso se toman como valores iniciales x y
+ne el PVI: 1
+x', es decir, se considera el PVI:
+x(IV)(t)+2i2x''(t)+i4x(t)=0 1
+-a 3ai (65) L (x(t))=asin(it)
+x(0)=1,x'(0)= ,x''(0)=-i2,x'''(0)= 4
+2i 2 (70)
+x(h)=x1,x'(h)=x'
+1
+— 10 —
+Revista Ciencias Matemáticas
+realizando el cambio de variable independiente t = t* + h por el MGEAR con errorper = Float(1,-9) y GEAR con errorper(1.-8).
+que x*(t*) = x(t* + h), (70) se expresa como: En las fi guras 3 y 4 se ha representado, en el eje de abscisas, el
+L (x*(t*))=asin(i(t*+h))
+4 tiempo de computación, utilizando una escala logarítmica y en
+x*(0)=x(h)=x,x*'(0)=x'(h)=x'
+1 1
+Obteniéndose las recurrencias:
+a =x,
+0 1
+a =x',
+1 1
+a =-i2a +c =-i2a +f'^x*(0),x*'(0),hh=
+2 0 0 0
+=-i2a +asin(ih)=x''
+0 1
+a =-i2a +c =-i2a +f'^x*(0),x*'(0),hh= (71)
+3 1 1 1
+=-i2a +acos(ih)=x'''
+1 1
+a =-i2a +c =-i2a +f(n-2)^x*(0),x*'(0)hh
+n n-2 n-2 n-2
+=-i2a +
+/n-2 cn-2mijasin`ih+j rj,conn$4.
+n-2 j 2
+j=0
+Recurrencias que permiten el cálculo de las b correspondientes así
+n Fig. 1. Gráfi co de error de la solución x(t) con cuatro {-funciones y
+como el cálculo de x, x', x'' y x''' , no siendo necesario calcular el h = 0.9.
+2 2 2 2
+valor de las {-funciones por tenerlo calculado en el paso anterior.
+Esta estrategia nos permite reiniciar el método y diseñar el
+algoritmo que se describe a continuación.
+Si calculamos la aproximación a la solución x = x(ih) y
+i
+x' = x'(ih), entonces la aproximación a la solución x y a su de-
+i i + 1
+rivada x' , viene dada mediante el algoritmo descrito en (53).
+i + 1
+a =x,
+0 i
+a =x',
+1 i
+a =-i2a +asin(ihi),
+2 0
+a =-i2a +acos(ihi),
+3 1
+a =-i2a +i asin`ihi+(n-2) rj+
+n n-2 n-2 2
+Fig. 2. Gráfi co de error de la derivada x'(t) con cuatro {-funciones
++a /n-3 c n- j 2 mijsin`iih+j r 2 j,conn$4, (72) y h = 0.9.
+j=0
+b =a,b =a,b =a,b =a,
+0 0 1 1 2 2 3 3
+b =a +2i2a +i4a ,conn$4,
+n n n-2 n-4
+/3
+x = b { (h),
+i+1 j j
+j=0
+/3
+x' = b {'(h).
+i+1 j j
+j=0
+En la fi gura 1 y en la fi gura 2 se muestran los gráfi cos obteni-
+dos, con 100 dígitos, del logaritmo del valor absoluto del error
+relativo de la solución x(t) y su derivada x'(t) respectivamente,
+para i = 1000 y a = 100, calculados mediante (53), con cua-
+tro {-funciones y tamaño de paso h = 0.9, frente a los gráfi cos
+correspondientes al logaritmo del valor absoluto del error re-
+Fig. 3. Gráfi co de efi ciencia para el problema 5.1. Error en la coor-
+lativo de los métodos LSODE[BACKFUNC] con tol = 10-14, denada x(t) para el último punto, t = 100, versus tiempo de computa-
+ción para diferentes métodos.
+— 11 —
+Sociedad Cubana de Matemática y Computación
+para a = 1.
+1 f
+H(x,x')= (x2+x'2)- x3 (74)
+2 3
+Para resolver este problema por el método de series de {-funcio-
+nes se toma como segunda frecuencia b = 2 y f = 10-3. Por tanto
+las {-funciones utilizadas, corresponden a las del caso I.
+Sea x(t) la solución del problema anterior, que suponemos
+analítica, por lo que
+/3 tk
+x(t)= a,dedonde (75)
+k! k
+k=0
+/3 tk /3 tk
+x2(t)=c a mc a m (76)
+k k! k k!
+Fig. 4. Gráfi co de efi ciencia para el problema 5.1. Error en la deri- k=0 k=0
+vada x'(t) para el último punto, t = 100, versus tiempo de computa- tk
+llamando u =a y aplicando la Regla de Cauchy para el
+k k k!
+ción para diferentes métodos.
+producto de series se obtiene:
+el eje de ordenadas el logaritmo decimal del error de integración
+/3 /3 /3
+x2=c u mc u m= w
+en el último punto, t = 100. En las fi guras 3 y 4 se muestran en- k k k
+k=0 k=0 k=0
+tre paréntesis, el logaritmo decimal de las tolerancias usadas en /3 /3 /k
+= (u u +u u +...+u u)= d uu n=
+0 k 1 k k 0 i k-i
+los códigos estándar. El número de dígitos del método de series k=0 k=0 i=0 (77)
+/3 /k ti tk-i /3 /k ti tk-i
+de {-funciones se representa en las fi guras 3 y 4 entre paréntesis, = d a a n= d aa n=
+i i! k-i(k-i)! i k-i i! (k-i)!
+k=0 i=0 k=0 i=0
+seguido de “d”. La longitud de la mantisa utilizada por MAPLE
+=
+/3
+d
+/k akkaa
+n
+tk
+i i k-i k!
+se ajusta de acuerdo con las tolerancias del integrador, usándo-
+k=0 i=0
+se -log(tol) + 4 dígitos, con el fi n de evitar falsos aumentos en el sustituyendo esta expresión en el PVI (73), obtenemos:
+tiempo de computación. El tamaño de paso es también h = 0.9. /3 tk /3 tk /3 tk /3 tk
+a +a2 a =fc a mc a m (78)
+En el caso de usar más {-funciones, los resultados son aná- k+2 k! k k! k k! k k!
+k=0 k=0 k=0 k=0
+logos, ya que el método integra exactamente el problema, con Identifi cando coefi cientes se establecen las siguientes igualdades:
+tan solo las cuatro primeras {-funciones.
+a =x ,
+0 0
+a =x',
+1 0
+a =-a2a +fc =-a2a +fx2, (79)
+2 0 0 0 0
+5.2 Oscilador lineal
+a +a2a =f
+/k akkaa
+6k$2
+k+2 k i i k-i
+con perturbación cuadrática
+i=0
+Se considera el mismo problema propuesto por Stiefel y Schei- que nos permiten defi nir la siguiente sucesión:
+fele (1971), (Stiefel and Scheifele, 1971), para introducir el mé-
+b =a i=0,1,2,3
+i i
+(80)
+todo de series de G-funciones. b =a +(a2+b2)a +a2b2a 6k$4
+k+2 k+2 k k-2
+x''+a2x=fx2
+(73) Denotando por x y x' las aproximaciones a x(h) y x'(h) res-
+x(0)=1y x'(0)=0 1 1
+pectivamente, la aproximación a la solución y sus derivadas,
+Utilizaremos, para contrastar el método, la integral primera1
+con (p+1) {-funciones, vendrá dada por:
+/p
+1 Se considera la ecuación diferencial x''(t) + x(t) - fx2(t) = 0. Derivando x 1 = b n { n (h)
+1 f n=0 (81)
+respecto a t, la función H(x(t),x'(t))= 2 ^x2(t)+x'2(t)h- 3 x3(t) x' =b {'(h)+b { (h)+b {'(h)+b { (h)+ /p b { (h)
+1 0 0 1 0 2 2 3 2 n n-1
+se obtiene x'(t)x''(t) + x(t)x'(t) - fx2(t)x'(t) = x'(t)(x''(t) + x(t) - fx2(t)), que es n=4
+0 cuando x(t) es solución de la ecuación diferencial dada. A las funciones Una vez obtenido el valor de las {-funciones, cada paso de inte-
+que como en el caso de la función son constantes sobre las soluciones de la
+ecuación diferencial dada, se les llama integrales primeras.
+— 12 —
+Revista Ciencias Matemáticas
+gración, se completa mediante el algoritmo siguiente:
+a =x,
+0 i
+a =x',
+1 1
+a =-a2a +fx2,
+2 0 i
+a =-a2a +2fxx',
+3 1 i i
+/k k
+a =-a2a +f c ma a ,con2#k#p-2,
+k+2 k j j k-j
+j=0 (82)
+b =a,i=0,1,2,3,
+i i
+b =a +^a2+b2ha +a2b2a ,con2#k#p-2,
+k+2 k+2 k k-2
+/p
+x = b { (h),
+i+1 n n
+n=0
+/p
+x' =b {'(h)+b { (h)+b {'(h)+b { (h)+ b { (h)
+i+1 0 0 1 0 2 2 3 2 n n-1
+m=4
+En la fi gura 5 se presenta una comparación del nuevo algoritmo
+Fig. 5. Gráfi co de efi ciencia para el problema 5.2. Error para el úl-
+frente a los códigos LSODE, MGEAR y GEAR, implementa-
+timo punto, t = 100, versus tiempo de computación para diferentes
+dos en MAPLE. La información de la fi gura está organizada métodos.
+del mismo modo que en las fi guras 3 y 4. El tamaño de paso
+es h = 0.1.
+La fi gura 6 proporciona información sobre las ventajas de
+usar {-funciones en lugar de G-funciones. El tamaño de paso es
+también h = 0.1. Como puede observarse para f = 10-2, f = 10-4,
+f = 10-8 y f = 10-16, el método de series de {-funciones presen-
+ta un mejor comportamiento que el método de series de G-fun-
+ciones, pues permite ganar un orden de f2 con respecto a estas.
+6. Comentarios fi nales
+Se estudia una sucesión de funciones analíticas dependientes
+{{ (t)} de dos parámetros a y b, que generaliza a las G-fun-
+n n ! (cid:792)
+ciones de Scheifele y nos permite presentar un método de in-
+tegración numérica capaz, bajo ciertas hipótesis, de integrar
+exactamente el problema perturbado.
+En los experimentos numéricos se pone de manifi esto que el
+método de series basado en {-funciones, compite exitosamen-
+te con con otros métodos muy conocidos, tales como GEAR,
+MGEAR y LSODE, implementados en MAPLE.
+La sencillez de la construcción teórica de las {-funciones hace
+del método numérico de series asociado a ellas, una herramienta
+útil y asequible para su exposición en los primeros cursos de Es- Fig. 6. G-funciones versus, {-funciones, para diferentes valores de f.
+cuelas Técnicas y Facultades de Ciencias. Además, el método de Error a lo largo de la trayectoria para G-funciones (I) y para {-fun-
+ciones (II).
+series de {-funciones es generalizable a la integración de siste-
+— 13 —
+Sociedad Cubana de Matemática y Computación
+mas de ecuaciones diferenciales, manteniendo las mismas buenas [10] MARTÍN, P. and FERRÁNDIZ, J.M. (1995): «Behaviour of the
+propiedades que presenta el algoritmo diseñado para ecuaciones. SMF method for the numerical integration of satellite orbits», Ce-
+lestial Mechanics and Dynamical Astronomy, vol. 63, nº 1, 29-40.
+[11] MARTÍN, P. and FERRÁNDIZ, J.M. (1997): «Multistep numeri-
+cal methods based on Scheifele G-functions with application to
+Referencias
+satellite dynamics», SIAM J. Numer. Anal., vol. 34, nº 1, 359-375.
+[12] NORSETT, S. P. (1969): «An A-stable modifi cation of the
+[1] BETTIS, D.G. (1970): «Stabilization of fi nite difference methods Adams-Bashforth methods». In Conference on the Numerical So-
+of numerical integration». Celestial Mechanics and Dynamical lution of Differential Equations, Lecture Notes in Mathematics,
+Astronomy, vol. 2, nº 3, 282-295. vol. 109. Dold A, Eckmann B. eds. Springer-Verlag, Berlín, Hei-
+[2] FERRÁNDIZ, J. M. (1986): «Linearization in special cases of per- delberg, New York, 214-219.
+turbed Keplerian motions», Celestial Mechanics and Dynamical [13] PALACIOS, M. (2003): «Métodos multirevolución simétricos
+Astronomy, vol. 39, nº 1, 23-31. para propagación de órbitas en intervalos grandes de tiempo».
+[3] FERRÁNDIZ, J. M. (1988): «A general canonical transformation Monografías de la Real Academia de Ciencias de Zaragoza, nº
+increasing the number of variables with application to the two- 22, 55-66.
+body problem», Celestial Mechanics and Dynamical Astronomy, [14] PETZOLD, L. R. (1981): «An effi cient numerical method for hi-
+vol. 41, nº 1-4, 343-357. ghly oscillatory ordinary differential equations», SIAM J. Numer.
+[4] FERRÁNDIZ, J. M. y SANSATURIO, M. E. (1989): «Elemento de Anal., vol. 18 , nº 3, 455-479.
+tiempo en variables de Ferrándiz», Actas XIV Jornadas Hispa- [15] ROY, A. E. (1988): Orbital Motion, Institute of Physics Publishing
+no-Lusas de Matemáticas, Puerto de la Cruz, vol. III, 1231-1236. Bristol and Philadelphia.
+[5] FERRÁNDIZ, J. M. , SANSATURIO, M. E. and POJMAND, J. R. [16] SCHEIFELE, G. (1971): «On numerical integration of perturbed li-
+(1992): «Increased accuracy of computations in the main satellite near oscillating systems», ZAMP; vol. 22, nº 1, 186-210.
+throught linearization methods», Celestial Mechanics and Dyna- [17] STIEFEL E. L. and BETTIS, D. G. (1969): «Stabilization of
+mical Astronomy, vol. 53, nº 4, 347-363. Cowell’s method». Numer. Math., vol. 13, nº 2, 154-175.
+[6] FERRÁNDIZ, J. M. and VIGO-AGUIAR, J. (1996): «New nume- [18] STIEFEL, E. L. and SCHEIFELE, G. (1971): Linear and regular
+rical method improving the integration of time in KS regulariza- celestial mechanics, Springer, New York.
+tion», J. Guidance, vol. 19, nº3, 742-745. [19] VIGO-AGUIAR, J. and FERRÁNDIZ, J.M. (1998(a)): « A gene-
+[7] FRANCO, J. M., CORREAS, J. M. y PETRIZ, F. (1997): «Méto- ral procedure for the adaptation of multistep algorithms to the
+dos adaptados de tipo Störmer- Cowell de orden elevado». Rev. integration of oscillatory problems», SIAM J. Numer. Anal., vol.
+Internac. Method. Numer. Cal. Diseñ. Ing., vol. 7, nº 2, 193-216. 35, nº 4, 1684-1708.
+[8] GARCIA-ALONSO, F. y REYES, J. A. (2007): «Una extensión de [20] VIGO-AGUIAR, J. and FERRÁNDIZ, J.M. (1998(b)): «Hi-
+la serie de Taylor y su aplicación a la integración de osciladores», gher-order variable-step algorithms adapted to the accurate
+Boletín de la Sociedad Cubana de Matemática y Computación, numerical integration of perturbed oscillators», Computer in
+vol. 5, nº 1, 1-21.
+Physics, vol 12, nº 5, 467-470.
+[9] GARCÍA-ALONSO, F., REYES, J. A., FERRÁNDIZ, J. M. and VI-
+GO-AGUIAR, J. (2009): «Accurate numerical integration of per-
+turbed oscillatory systems in two frequencies». ACM Transactions
+on Mathematical Software, vol. 36, nº 4, 1-34.
+— 14 —

@@ -1,0 +1,384 @@
+Sociedad Cubana de Matemática y Computación
+Un estudio diagnóstico
+sobre Ecuaciones Diferenciales Ordinarias
+en estudiantes de Licenciatura en Química.
+Consecuencias en representaciones mentales
+A diagnostic study concerning Ordinary Differential Equations
+for undergraduate chemistry students. Consequences in mental representations
+María del Carmen Rivalta Valladares, Facultad de Matemática y Computación, Universidad de La Habana
+Herminia Hernández Fernández, Centro de Estudios para la Educación Superior (CEPES), Universidad de La Habana
+Resumen after a semester of being graded. This diagnostic test invol-
+ved a chemical problem to be solved through ordinary di-
+Un estudio diagnóstico fue realizado con la (cid:976)inalidad de
+fferential equations. This test made evident the lack of long
+investigar la representación mental que sobre ecuaciones
+lasting knowledge as well as the need of having hand in the
+diferenciales ordinarias tiene el estudiante después de un
+way that mental representations go on during the teaching
+semestre de haberlas estudiado. El diagnóstico incluyó la
+– learning process.
+resolución de un problema de carácter químico conducente
+The test applied and the results are shown in this paper.
+a ecuaciones diferenciales ordinarias. Este estudio puso en
+This led us to the following question:
+evidencia falta de solidez en el conocimiento y, la necesidad
+What to do to make students reach a sound mental re-
+de intervenir sobre las representaciones mentales durante
+presentation aimed at providing ways to connect chemical
+el proceso de enseñanza-aprendizaje.
+problems with suitable mathematical models?
+Los instrumentos aplicados y los resultados se expresan
+In addition, an analysis is made upon the elements that
+en el trabajo y justi(cid:976)ican la siguiente interrogante: ¿cómo
+are raising dif(cid:976)iculties to attain a long lasting knowledge. It
+hacer que los estudiantes alcancen una representación
+is argued the relevance of an ongoing appraisal of the stu-
+mental sólida que les permita vincular la resolución de pro-
+dent’s mental representation.
+blemas químicos con sus correspondientes modelos mate-
+Key words: Ordinary Differential Equations, appraisal,
+máticos?
+mental representation, long lasting knowledge.
+Además, se hace un análisis de los factores que atentan
+contra la solidez de los conocimientos, así como se argu-
+1. Introducción
+menta acerca de la importancia de valorar las representa-
+ciones mentales de los estudiantes.
+Palabras claves: Ecuaciones Diferenciales Ordinarias, A menudo los profesores de ciencias comparten una sensa-
+valoración, representación mental, solidez del conocimiento. ción de frustración, al comprobar que sus esfuerzos por lo-
+grar un "aprendizaje de calidad" en sus estudiantes, tienen
+Abstract
+un limitado alcance.
+A study was aimed at investigating the student`s mental re- Investigaciones realizadas por Pozo y Gómez [1], en la
+presentation dealing with Ordinay Differential Equations educación secundaria en España y Cuba, Feria [2], Maza-
+— 50 —
+Revista Ciencias Matemáticas
+río [3], Cruz [4], Rebollar [5], Delgado [6], Llivina [7] —por forma de sistema, donde el estudiante haga conexiones,
+solo citar algunos investigadores en matemática educati- desconecte, asocie, recupere información relevante para la
+va— re(cid:976)lejan que los estudiantes presentan di(cid:976)icultades resolución de problemas es realmente lo que se debe aspi-
+en la comprensión de conceptos y en el aprendizaje de pro- rar a lograr. Un aprendizaje con estas cualidades —salvo
+cedimientos para resolver problemas, así como se eviden- excepciones— es adquirido bajo la orientación, el estímulo
+cia que estos sostienen actitudes y creencias inadecuadas y el rol regulador del profesor y de la interacción social en
+respecto a la naturaleza de las ciencias y su aprendizaje. los contextos donde el proceso de enseñanza y aprendizaje
+Por otro lado, instrumentos que se han aplicado con rela- (PEA) tenga lugar.
+ción a la solidez de los conocimientos asimilados, permi- Por otra parte, el profesor resuelve problemas emplean-
+ten corroborar la siguiente aseveración: «[…] usualmente do su conocimiento organizado, en tanto experto, pero no
+los estudiantes olvidan lo que en un momento determinado siempre muestra los pasos que llevó a cabo para su resolu-
+demostraron haber aprendido, porque solo retuvieron en ción. A veces ofrece un resultado que el estudiante (novato)
+memoria los conceptos y procedimientos objeto de apren- percibe como acto de magia, es decir, no siempre transpa-
+dizaje como hechos aislados y no inmersos en una organi- renta ante los estudiantes su lógica, alternativas o método
+zación o estructura lógica.»[8] para resolverlo, a (cid:976)in de ir acortando la distancia intelec-
+Es incuestionable que la falta de solidez o el olvido es tual que existe entre el experto y el novato, al decir de la
+consecuencia, no solo de di(cid:976)icultades que pueda haber en psicología cognitiva.
+el proyecto curricular, sino en su proceso de realización. A Para que el aprendizaje sea sólido, es menester hacer
+continuación se analizan algunos de estos problemas. análisis diagnóstico frecuente, para in(cid:976)luir y regular las
+Muchos profesores dominan la materia que enseñan representaciones mentales que sobre lo aprendido vaya
+pero, con frecuencia, desconocen cómo va transcurrien- conformando el estudiante. Sobre regulación y solidez en
+do la asimilación de estos contenidos en la cabeza de sus representaciones mentales y sobre los resultados de un es-
+estudiantes. Existe también la creencia de que el aprendi- tudio diagnóstico realizado, versan estas cuartillas.
+zaje es un proceso natural, que se produce de manera iso-
+morfa a lo que el profesor enseña, preocupándose por lo
+2. Desarrollo
+que han aprendido los estudiantes solo cuando es tiempo
+de evaluaciones parciales o (cid:976)inales. Aunque ciertamente el
+aprendizaje es natural, en el sentido de que todas las per- Sobre representaciones mentales
+sonas están capacitadas para aprender algo, a partir de Según De Vega [9], una de las cuestiones generales, más po-
+"otro" que enseñe, cabe cuestionarse: ¿cómo va ocurriendo lémicas, di(cid:976)íciles e interesantes de la psicología cognitiva
+ese aprendizaje?, ¿cómo se va representando mentalmen- es la relativa a las representaciones mentales. La experien-
+te el estudiante, el contenido de aprendizaje?, ¿puede el es- cia intuitiva nos revela que pensamos con palabras e imá-
+tudiante resolver cualquier tipo de problema atinente al genes mentales.
+contenido que se le acaba de enseñar?, ¿pueden transferir Se podría decir que el despliegue de acciones, procedi-
+conocimientos para resolver problemas relativos a otros mientos, justi(cid:976)icaciones que realiza un estudiante cuando
+contenidos matemáticos, así como problemas de otras dis- resuelve un problema matemático, es un lado visible (ex-
+ciplinas que requieran de la matemática?, ¿el conocimiento terno) de su representación mental con relación a la temá-
+perdura al paso del tiempo, o el estudiante olvida lo que en tica relativa al problema a resolver (anexo 3 ) Asimismo,
+un momento determinado demostró haber aprendido? cuando se pide al estudiante que exprese grá(cid:976)icamente las
+Las autoras sostienen la hipótesis de que solo un apren- conexiones entre conceptos, teoremas, procedimientos es-
+dizaje organizado e instalado según redes jerárquicas, en pecí(cid:976)icos, habilidades que se ponen en juego en el abordaje
+— 51 —
+Sociedad Cubana de Matemática y Computación
+y solución de un problema, se está ante otro lado visible de nes son construidas por cada persona. Sin embargo, no hay
+la representación mental (anexo 4). Se trata de exteriorizar una in(cid:976)inita variedad de representaciones porque los indi-
+el contenido de lo interno, que en el caso que nos ocupa se viduos ‘reproducen’ las representaciones fundamentales
+centra en el aprendizaje matemático y en particular en las de la sociedad en la cual viven del mismo modo que repro-
+ecuaciones diferenciales ordinarias (EDO). Se hace visible ducen el lenguaje, las normas de comportamiento, entre
+para valorar su contenido y en consecuencia regularlo, en otros.» (Arbeláez, ob.cit.)
+el sentido de ajuste y corrección. Si bien esta postura legitima el carácter social en la
+Es así que especialistas en psicología cognitiva han tra- construcción de las representaciones, solo reconoce el an-
+tado de explicar cómo acontece el aprendizaje del ser huma- claje social, pues insiste en la regulación social del cono-
+no en el contexto en que se desarrolla. Al respecto Arbeláez cimiento, en contraposición con el enfoque estructuralista
+en [10] a(cid:976)irma: «Los seres humanos, construyen represen- de Piaget que tiende más a reconocer la construcción indi-
+taciones mentales sobre el entorno que los rodea, sobre sí vidual de las representaciones.
+mismos, sobre la sociedad y sobre la naturaleza en la cual Otra posición, es la desarrollada por Rodrigo Rodríguez
+se constituyen como personas. Estas representaciones se y Marrero. En esta, se parte del supuesto
+organizan en estructuras conceptuales, procedimentales y
+actitudinales para darle sentido a la interioridad y exterio- […] que las representaciones son construcciones tanto
+ridad de su entorno, con miras al dominio, la intervención, individuales como sociales, pues el ser humano no cons-
+el control y la transformación del mismo.» En este último truye su representación en solitario, ni sobre la base
+aspecto es prudente añadir que cuando un individuo activa de experiencias idiosincráticas, sino a partir de las re-
+estas representaciones para "actuar en el entorno", (léase: laciones con los miembros de su cultura, es decir, las
+resolver un problema productivo o creativo) integra todas representaciones están fuertemente orientadas por la
+estas estructuras, pues siempre se produce una conjunción actividades (prácticas culturales) que el individuo rea-
+del concepto, con la forma de proceder con él y a su vez con liza en su grupo y que suele tener lugar en un contexto
+la relación afectiva que se establece acorde a lo que esa de relación y de comunicación interpersonal (formatos),
+experiencia signi(cid:976)ique para el estudiante, como resultado que trascienden la dinámica interna de la construcción
+de una de las ideas centrales de Vigotsky: la unidad de los individual. [10]
+afectivo y lo cognitivo.
+Desde la psicología cognitiva, existen diferentes enfo- Esta postura, por su carácter integrador y por estar en ar-
+ques para conceptualizar las representaciones mentales. monía con el enfoque histórico-cultural asumido por las au-
+Entre estos se distingue, el enfoque estructuralista de Pia- toras de este trabajo, proporciona por el momento un marco
+get. Desde esta perspectiva, las representaciones mentales adecuado para una caracterización de las representaciones
+son elaboradas de manera individual y se conforman en el mentales, si se identi(cid:976)ica a las "actividades", con la dinámi-
+propio funcionamiento cognitivo, lo cual se traduce en que ca que tiene lugar en las clases de matemáticas y las tareas
+las personas construyen interpretaciones acerca de la rea- que se desarrollan en ella y al "contexto de relación y comu-
+lidad, dependiendo del desarrollo de su estructura mental, nicación interpersonal" con el lenguaje común y el lengua-
+mientras que el medio social se concibe como un soporte je matemático, así como en las relaciones profesor-alumno,
+mínimo de estimulación. Este enfoque estructuralista no alumno-alumno y alumno-consigo mismo. Más adelante se
+concede al medio social toda la relevancia que tiene en el hace referencia a formatos en el plano intrapsicológico, es
+proceso de construcción de las representaciones. decir, en el plano individual o plano de la subjetividad.
+En cambio, el enfoque de la psicología social, esbozado Se destacar la importancia que puede tener para el
+por Moscovici y Jodelet, acepta «[…] que las representacio- aprendizaje el problema de la estructura y organización del
+— 52 —
+Revista Ciencias Matemáticas
+conocimiento, como parte integrante del estudio de las re- • El aprendizaje no ocurre fuera de los límites de la ZDP.
+presentaciones mentales. Importante también para la com- • El aprendizaje (sentido estricto) y la educación (sentido
+prensión del proceso de aprendizaje es tener en cuenta la amplio) preceden al desarrollo, o conducen al desarrollo.»
+«Ley Genética Fundamental del Desarrollo», de L. S. Vigotsky
+[11], la cual establece que toda función psíquica aparece en Las representaciones mentales, en tanto vestiduras del
+acción dos veces, primero en el plano social (interpsicológi- aprendizaje —parafraseando a Vigotsky en Pensamiento y
+co). Luego, esa función psíquica se interioriza y pasa al plano Lenguaje— siguen estos rasgos, en la medida en que se ex-
+de la subjetividad (intrapsicológico). Se entiende el plano in- terioricen, se diagnostiquen y se regulen.
+terpsicológico como el plano de la comunicación donde la ac- Por otra parte, en la caracterización asumida, al decir
+tuación del sujeto ocurre con la ayuda del prójimo (sea este que «[…] las representaciones mentales están fuertemente
+otro estudiante o el profesor). Aquí se revelan las potenciali- orientadas por las actividades (…) que el individuo reali-
+dades del sujeto y del grupo en su interacción. En cambio, el za en su grupo […]»[10], se hace necesario recurrir al con-
+plano intrapsicológico es el plano individual, que expresa el cepto de actividad como uno de los puntos esenciales para
+desarrollo alcanzado por el sujeto en un momento determi- argumentar sobre de la importancia de valorar las repre-
+nado. Aquí el estudiante dependiendo de su desarrollo utili- sentaciones mentales de los estudiantes.
+za "signos" que den sentido a su aprendizaje y conocimientos. La actividad mediatiza la relación entre el hombre y su
+Estos signos constituyen maneras de organizar estas repre- realidad objetiva. A través de esta el hombre modi(cid:976)ica la
+sentaciones mentales individuales, las cuales pudieran es- realidad y se transforma a sí mismo. Por lo que ningún co-
+tructurarse mejor en la medida en que se sea consciente de la nocimiento puede ser asimilado sin su inclusión en alguna
+representación mental que se tiene acerca de algo. actividad.
+La caracterización de representaciones mentales acep- Una organización correcta del proceso de aprendiza-
+tada por el momento, condiciona a que se tenga otra con- je, desde esta perspectiva, debe garantizar los siguientes
+cepción del aula, del grupo escolar y del aprendizaje. El componentes funcionales de toda actividad: la orientación,
+hecho de considerar la in(cid:976)luencia social en las representa- la ejecución, el control y la regulación o ajuste.
+ciones mentales individuales, hace que se sustituya la co- Orientación: es este el momento de creación de una base
+municación de nuca a nuca entre los estudiantes por una de orientación para la acción, donde el estudiante debe
+comunicación cara a cara, con intercambios de logros y fra- apropiarse del plan de acción para la ejecución de la tarea
+casos, de estímulos y desalientos. Esta comunicación que propuesta o de resolución de un problema (plani(cid:976)icación).
+se da en el plano interpsicológico introduce de manera na- Es aquí donde el estudiante debe recuperar información
+tural, el concepto de zona de desarrollo próximo (ZDP), no- relacionada con el problema que se debe resolver, conec-
+ción cardinal en la obra de L. S. Vigotsky. La ZDP se de(cid:976)ine tar una información con otra. Entiéndase en este caso in-
+como la distancia que media entre lo que el sujeto puede formación, como conocimientos y habilidades establecidas
+hacer solo y lo que puede lograr mediante la guía o la coo- y en constante desarrollo. De forma tal que el estudiante
+peración del otro, en la solución de cierto problema o ejecu- pueda por sí mismo o con la ayuda de otros, plani(cid:976)icar y de
+ción de una tarea. esta forma sentirse descubridor.
+A decir de una de las autoras de este trabajo en [8]: «La Ejecución: este es el momento de realización de la acción
+ZDP provoca una reestructuración en el concepto de apren- en el plano práctico mental, lo cual presupone variantes de
+dizaje, que se resume en lo siguiente: ejecución en el plano material, verbal y mental. La ejecu-
+ción de la tarea en los planos verbal y mental exige del estu-
+• El aprendizaje no existe al margen de las relaciones so- diante justi(cid:976)icar tanto los pasos o acciones a realizar como
+ciales. los criterios en que se basa su trabajo y ello contribuye a la
+— 53 —
+Sociedad Cubana de Matemática y Computación
+re(cid:976)lexión, a la defensa de posiciones y de criterios técnicos Otro aspecto que se debe tener en cuenta, que se toma
+y cientí(cid:976)icos. del PPI es la relación entre expertos y novatos. Esta induce
+Control: este es el momento de asegurarse de la calidad al experto (profesor) a adelantar en años las experiencias
+de las decisiones tomadas y de recoger las señales de aviso del novato (estudiante) poniendo a su disposición elemen-
+en este sentido. Abarca tanto el control de la plani(cid:976)icación tos que permitan entrenarlo en la solución de problemas
+como el de las operaciones, como el control según el resul- y asimismo, el experto transparenta su estructura y orga-
+tado (cid:976)inal de la tarea que se ejecuta. nización de conocimientos, sus representaciones mentales,
+Manifestaciones de control deben producirse tanto en ante el estudiante.
+el momento de orientación como en el de ejecución de la Lo expuesto hasta aquí justi(cid:976)ica la necesidad no solo de
+actividad. valorar las representaciones mentales, sino también fun-
+Regulación o ajuste: el control es necesario, pero no su- damenta la necesidad de establecer un plan de acción para
+(cid:976)iciente, en tanto es menester una regulación de la acción incidir, si es necesario en la corrección de estas represen-
+que presupone aplicar correctivos y realizar ajustes; bien taciones mentales.
+por el profesor, mejor por los propios estudiantes y tantísi-
+mo mejor si es por el propio estudiante, lo que se converti-
+3. Solidez como una característi-
+ría en una autorregulación.
+ca de la actividad de aprender
+Como puede apreciarse en cada uno de los componentes
+funcionales de la actividad, está presente la necesidad de
+hacer evidente las representaciones mentales que se vayan Se pretende otorgar signi(cid:976)icado a la solidez y al olvido, du-
+conformando sobre el objeto a aprender. rante el aprendizaje, de la memoria, que como ya se ha ex-
+Se rememora a L. Morenza cuando dice en [12], que presado, los estudios sobre ella han estado vinculados a la
+uno de los aportes más importantes del Paradigma del hipótesis de las representaciones mentales.
+procesamiento de la información (PPI) es el haber plan- Con referencia a la memoria a largo plazo, R. Corral [13]
+teado la existencia de representaciones mentales en la expresa: «[…] el olvido no es de(cid:976)iciencia del sistema —falta
+memoria a largo plazo e hipotetiza que los formatos o có- de capacidad, limitación de las operaciones— sino un error
+digos de las representaciones mentales son de tres tipos causado por la selección inadecuada de las claves y puede
+fundamentales: evitarse a través de una práctica sistematizada.»
+Si se analiza esta aseveración en clave pedagógica, se
+• El formato de las imágenes mentales, que posee una consideraría muy absoluta, aunque no se niega. Ahí se dice
+analogía estructural con la imagen perceptual, ya que que el olvido puede no ser pérdida de la información al-
+codi(cid:976)ica la información de modo tal que exige de una macenada, sino un error en las claves de recuperación. Sin
+evocación visual que se inserte en el espacio. desechar la idea de Corral, y con la mirada pedagógica, se
+• El formato verbal que se corresponde con las palabras podría añadir que el olvido puede deberse a diversos facto-
+que el individuo utiliza en su lenguaje. res, por citar solo algunos.
+• El formato proposicional que se corresponde con una re-
+presentación de la información que puede formalizarse • La información se instaló temporalmente con carácter re-
+de acuerdo a una lógica de predicados. productivo, memorístico, como segmentos discretos, sin un
+signi(cid:976)icado para el estudiante y sin una integración cons-
+Como se aprecia el PPI compulsa a transparentar el conteni- ciente en el entramado de conocimientos correspondientes.
+do del plano intrapsicológico, es decir, las representaciones • No hubo su(cid:976)iciente control, evaluación, retroalimenta-
+mentales que sobre algún contenido tenga el estudiante. ción sobre la representación mental del estudiante. En
+— 54 —
+Revista Ciencias Matemáticas
+(cid:976)in, regulación por parte del profesor, de los otros, del de las particulares y las sólidas de las no estables. Caracte-
+propio estudiante, que favoreciera la corrección e insta- rísticas de la acción que el profesor debe poder diferenciar
+lación sólida de esa información. para la valoración y regulación de las sucesivas represen-
+• No se activó esa información ante la necesidad de resol- taciones mentales del estudiante.
+ver problemas, donde no solo entra en juego ese entra- Corresponde el mérito a Galperin [15], haber determi-
+mado de contenidos, sino que cualquiera sea el problema, nado un conjunto de características, que se deben tomar
+exige buscar, y vincular con otros entramados o nodos en cuenta como parámetros cualitativos para asegurar la
+de diferente cualidad. calidad de la acción y actividad de aprendizaje, además
+de, la calidad de ese entramado de conocimientos que se
+Los dos primeros factores apuntan al título de este artícu- exterioriza y deja ver cómo va la representación mental
+lo, toda vez que se trata de valorar representaciones men- sobre un contenido determinado (para un estudio de to-
+tales para garantizar solidez del conocimiento. Ahora bien, das las características de la acción, consultar el texto de
+¿cómo fundamentar la solidez del conocimiento más allá de la referencia).
+su antonimia con el olvido? Se centrará el análisis sucesivo en dos de las caracterís-
+En lo expresado hasta ahora, se han empleado funda- ticas: re(cid:976)lexión y solidez.
+mentalmente categorías de la psicología cognitiva, en tan- La re(cid:980)lexión o grado de conciencia, es una característi-
+to hay un trabajo pretérito de H. Hernández, [8] que toma ca de la acción que trata de la posibilidad que el estudian-
+préstamos de ésta en conjunción con postulados de L. S. Vi- te tiene de poder expresar verbalmente el contenido del
+gotsky y sus seguidores. En lo sucesivo esta será la pers- aprendizaje que posea; un grado de re(cid:976)lexión sobre lo que
+pectiva teórico-metodológica. piensa y hace, que pueda explicar su lógica. La re(cid:976)lexión es
+Se concuerda con O. González [14], cuando dice que: inferida, se vale del lenguaje oral y escrito, pero lo más re-
+levante es la conexión que se produce cuando el estudiante
+El aprendizaje es un proceso de construcción y recons- traduce la lógica de su acción a la lógica de los conceptos,
+trucción (no solo de registro y observación) por parte del con la que fundamenta su actuación y así le da signi(cid:976)icado
+sujeto que aprende, de conocimientos, formas de compor- real al discurso que emplea para ello.
+tamiento, actitudes, valores, afectos y sus formas de ex- La solidez es una característica muy dependiente de la
+presión; que se producen en condiciones de interacción forma (material o materializada), de la re(cid:976)lexión, del grado
+social en un medio socio-histórico concreto [...] de generalización que se logre. La acción resulta más sóli-
+da en la medida en que transcurra de la forma material a
+la mental, con el control y regulación que proceda en cada
+Se sabe que el aprendizaje presupone desestructuración
+caso, en cada ejercicio o problema a resolver. El aprendiza-
+del conocimiento para luego volver a estructurarse bajo
+je será más sólido en la medida en que se proyecte un siste-
+una condición espacio–temporal de equilibrio. Una de las
+ma de tareas que permita su inserción en una organización
+palabras clave de esta disertación es solidez, de ahí que
+sistémica de los contenidos a aprender.
+ahora se vuelva a la de(cid:976)inición de aprendizaje para dete-
+nerse a pensar, que aprendizaje es proceso y todo proce-
+so es generador de actividad y para valorar la calidad de
+4. Análisis
+la actividad de aprendizaje y de las acciones implicadas en
+del diagnóstico realizado
+ella, hay que conocer sus principales características. Estas
+características permiten diferenciar: las acciones de carác-
+Con el objetivo de valorar cuán estable era el conocimiento
+ter reproductivo de las que no lo son, las que son re(cid:976)lexivas
+de un grupo de estudiantes de la carrera Licenciatura en
+o conscientes de las que no lo son, así como las generales
+— 55 —
+Sociedad Cubana de Matemática y Computación
+Química, después de concluida la última asignatura de ma- En el Anexo 3 se muestra la respuesta de un estudiante
+temáticas, Ecuaciones Diferenciales, cursada en el segun- al instrumento aplicado, y en el Anexo 4 se expone una re-
+do semestre del segundo año de la carrera, fue aplicado un presentación inferida, a partir de la respuesta a la primera
+examen diagnóstico, seis meses después de haber realiza- pregunta, de este estudiante.
+do el examen (cid:976)inal de esta asignatura (anexo 1). El diagnós- En la segunda pregunta, una representación de exper-
+tico contenía dos preguntas de este examen (cid:976)inal, una de to como la del Anexo 2, mostraría que el estudiante debe-
+las cuales era un problema químico conducente a una ecua- ría que accionar de manera análoga. Primeramente tendría
+ción diferencial, que nunca había sido tratado en clases de que interpretar, para reconocer que la velocidad de reac-
+la manera presentada. ción se corresponde con el modelo de derivada de la con-
+El instrumento fue aplicado a 26 estudiantes de una ma- centración respecto al tiempo (modelar) y analizar que
+trícula de 41, los cuales asistieron por propia voluntad y no esta velocidad es negativa porque la concentración va dis-
+seleccionados de manera intencional. De los 26 estudiantes minuyendo. Tendría que identi(cid:976)icar el tipo de ecuación
+diagnosticados, 16 habían realizado este examen (cid:976)inal. diferencial para aplicar en consecuencia el método ade-
+La pregunta relativa a conceptos básicos de ecuaciones cuado que permita resolverla. Debería expresar la solu-
+diferenciales ordinarias y procedimiento para resolver ción como una función que depende del tiempo y calcular
+una ecuación diferencial, sujeta a condiciones iniciales solo en qué tiempo la concentración decrece hasta el valor esta-
+fue resuelta adecuadamente por dos estudiantes. blecido. Luego tendría que interpretar el resultado para
+En la pregunta referente al problema químico condu- darle respuesta al problema químico planteado.
+cente a una ecuación diferencial, diez de los examinados Además respecto a los resultados del problema químico
+mostraron recordar total o parcialmente como transferir presentado en el examen, se puede conjeturar, que en este
+conceptos, procedimientos y modelos matemáticos al len- caso, no representó un obstáculo para los estudiantes, la
+guaje químico. Cuatro de estos diez estudiantes, no habían conexión del concepto velocidad de reacción con la deriva-
+mostrado este desempeño en el examen (cid:976)inal, dos de ellos da como razón de cambio de la concentración respecto al
+no habían realizado este examen. Esta pregunta la resol- tiempo, aunque este es un contenido químico que se forma-
+vieron perfectamente cinco estudiantes. Los cinco restan- liza en la asignatura Cinética Química que cursarían en el
+tes, mostraron olvido en procedimientos. sexto semestre de la carrera.
+En el procesamiento de la información para darle solu- El resultado de este diagnóstico corrobora la necesidad,
+ción a un problema, el estudiante tiene que hacer uso del no solo de inferir y describir cómo cada estudiante ha orga-
+contenido aprendido, tanto el especí(cid:976)ico (conceptos, proce- nizado sus conocimientos y la representación mental que
+dimientos y modelos), como el no especí(cid:976)ico (habilidades se hace sobre un determinado concepto, procedimiento y
+generales matemáticas y habilidades generales de estudio), habilidad, sino la necesidad de poder intervenir (el profe-
+de manera indistinta. sor, otro estudiante y el propio estudiante a modo de au-
+En el Anexo 2 se muestra una representación de experto torregulación) en estas representaciones.
+sobre la forma de proceder para resolver la primera pre- Este diagnóstico reveló que los estudiantes olvidaron
+gunta del diagnóstico aplicado. A la luz de este esquema, se conceptos y procedimientos básicos para resolver ecuacio-
+puede inferir que la mayoría de los estudiantes olvidó es- nes diferenciales ordinarias. Solo dos estudiantes demos-
+tablecer las condiciones de existencia y unicidad de la so- traron tener un conocimiento sólido y en consecuencia una
+lución de un problema de Cauchy y por tanto, el modo de representación mental adecuada que les permitió resolver
+aplicar las mismas. Por otro lado, aunque diez de los estu- esos problemas exitosamente.
+diantes diagnosticados reconocen el método de resolución
+de la ecuación diferencial, olvidaron el procedimiento.
+— 56 —
+Revista Ciencias Matemáticas
+5. Conclusiones [2] F. F. FERIA VELÁZQUEZ, 2003, El perfeccionamiento de la
+y recomendaciones dinámica del proceso docente educativo en la disciplina Meto-
+dología de la Enseñanza de la Matemática, Tesis Doctoral.
+[3] I. MAZARÍO TRIANA, 2002, La resolución de problemas en
+No siempre, como profesores, estimulamos que el estu-
+la Matemática I y II de la carrera de Agronomía, Tesis Doctoral.
+diante sea re(cid:976)lexivo o consciente de las representaciones
+[4] M. CRUZ RAMÍREZ, 2002, Estrategia metacognitivaben la
+mentales que va conformando con relación a su aprendiza-
+formulación de problemas para la enseñanza de la Matemática,
+je y lo expresado en esta ponencia apunta a la necesidad de
+Tesis Doctoral.
+exteriorizarlas a los efectos de su valoración y regulación.
+Las representaciones mentales pueden ayudar a transpa- [5] A. REBOLLAR MOROTE, 2000, Una variante para la estruc-
+rentar el funcionamiento del plano intrapsicológico. Asimis- turación del proceso de enseñanza aprendizaje de la matemáti-
+mo, conocer y comprender las representaciones mentales de ca, a partir de una nueva forma de organizar el contenido, en la
+un estudiante permite al profesor y al resto de los estudian- escuela media cubana, Tesis Doctoral.
+tes adentrarse en su epistemología personal, en sus creen- [6] J. R. DELGADO RUBÍ, 1999, La enseñanza de la resolución
+cias, en sus teorías implícitas y posibilita incidir en ellas, en de problemas. Dos elementos fundamentales para su efi cacia:
+aras de lograr un aprendizaje sólido. En esta dirección, el de- la estructuración sistémica del contenido de estudio y el desa-
+sarrollo de las habilidades generales matemáticas por parte rrollo de las habilidades generales matemáticas, Tesis Doctoral.
+de cada estudiante, pudiera formar parte de los indicadores [7] M. J. LLIVINA LAVIGNE, 1999, Una propuesta metodoló-
+para establecer la calidad de su representación mental. gica para contribuir al desarrollo de la capacidad para resolver
+Hacer explícitas las representaciones mentales trae de problemas matemáticos, Tesis Doctoral.
+hecho un cuestionamiento al sujeto y también al contexto
+[8] H. HERNÁNDEZ FERNÁNDEZ, 1998, Vigotsky y la estrucc-
+del cual hace parte, generando de alguna manera transfor-
+turación del conocimiento. Experiencia cubana, de Cuestiones de
+maciones en uno y otro ámbito, pues no se podría transfor-
+didáctica de la matemática, Homo Sapiens, pp. 33-54.
+mar aquello que es desconocido.
+[9] M. DE VEGA, 2005, Introducción a la Psicología, vol. I, Felix
+El estudio diagnóstico puso en evidencia la necesidad de
+Varela.
+proponer acciones conducentes a incidir en las representa-
+[10] M. C. ARBELÁEZ GÓMEZ, 2010, Las representaciones men-
+ciones mentales —entre otras— con estrategias de acceso,
+tales, http://www.utp.edu.co/~chumanas/revistas/revistas/rev29/
+búsqueda y recuperación de la información almacenada.
+arbelaez.htm. [Consultado: 19 agosto 2012].
+Identi(cid:976)icar o seleccionar problemas químicos conducen-
+[11] L. S. VIGOTSKY, 1968, Pensamiento y lenguaje, La Habana:
+tes a modelos matemáticos que permitan activar y transferir,
+Edición Revolucionaria.
+conceptos y procedimientos, así como (cid:976)ijar modos de actua-
+[12] L. MORENZA PADILLA, 2001, Enseñar a aprender y apren-
+ción, propiciaría un aprendizaje re(cid:976)lexivo y sólido, siempre
+der a enseñar, Pueblo y Educación.
+que de manera sistemática se haga valoración y regulación
+de las representaciones mentales de los estudiantes. [13] R. CORRAL, 1991, El estudio de la memoria en la psicología
+cognoscitiva contemporánea, Impresos Universidad de la Habana.
+[14] O. GONZÁLEZ PACHECO, 1994, Aprendizaje e instrucción,
+Referencias bibliográ(cid:976)icas
+Impresos Universidad de La Habana.
+[15] P. Y. GALPERIN, 1986, Sobre el método de formación por
+[1] J. I. POZO MUNICIO y M. Á. GÓMEZ CRESPO, 1998, etapas de las acciones mentales, de Antología de la psicología
+Aprender y enseñar ciencia. Del conocimiento cotidiano al cono- pedagógica y de las edades, La Habana, Pueblo y Educación,
+cimiento científi co, Madrid: Ediciones Morata, S. L. pp. 114-117.
+— 57 —

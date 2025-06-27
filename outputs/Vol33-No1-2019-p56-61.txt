@@ -1,0 +1,374 @@
+CienciasMatema´ticas,Vol.33,No.1,Pag.56-61,2019
+Algoritmo determinista de factorizacio´n
+Deterministic factorization algoritms
+Alexi Masso´ Mun˜oz1, Magdiel Vicet Morejo´n2, Redelio Herna´ndez Rubio3
+Resumen Enelpresenteart´ıculoseincluyenlosresultadosdeunaincipienteinvestigacio´nencaminadaa
+obtener un algoritmo matema´tico-computacional que permita la factorizacio´n de manera determinista de un
+nu´mero. En el mismo se incluyen los puntos de vista y elementos que pudieran permitir la optimizacio´n del
+algoritmoas´ıcomoparticularidadesqueadaptanelalgoritmoparalafactorizacio´ndelnu´merondelRSA..
+Abstract Onthisarticlewepresenttheresultsoftheearlyinvestigationtogetanmatematicalandcomputa-
+cionaldeterministfactoringalgorithm. Weincludedtosomeviewpointsandelementstoallowtheoptimizationof
+thealgorithmandexplainsomeparticualaritiesthatadjustthemethodtofactorizatetheRSAnnumber.
+PalabrasClave
+Factorizacio´n,Me´todo,Algoritmo.
+1InstitutodeCriptograf´ıa,universidaddelaHabana,LaHabana,Cuba,alexi.masso@matcom.uh.cu´
+2InstitutodeCriptograf´ıa,universidaddelaHabana,LaHabana,Cuba,magdiel.vicet@matcom.uh.cu
+3Ca´tedradeInforma´tica,InstitutoTe´cnicoMilitar,LaHabana,Cuba
+1. Introduccio´n trabajo).
+El uso del algoritmo RSA es, todav´ıa, bastante alto. In- 2. Multiplicacio´n de nu´meros enteros
+clusocuandosesabenlasposibilidadesdelosalgoritmosde
+factorizacio´nexistentes,sesigueusandoesteme´todoasime´tri- Seandosnu´merosdelmismoorden
+co en aplicaciones donde no se requiere una alta potencia
+a=(a ...a ) y b=(b ...b ) (1)
+criptogra´fica.Otravariantedeusodeestealgoritmolopode- 0 n 0 n
+mosencontrartambie´nmediantelautilizacio´ndellavesde Elproductodeambossecalculapor:
+grancantidaddebits(8192bitsosuperior).
+Es por ello que la factorizacio´n de nu´meros grandes sigue
+n n
+siendounanecesidadlatenteenelmundodelaCriptograf´ıa. c=∑∑ab 10i+j (2)
+i j
+No existen en la actualidad algoritmos de factorizacio´n de- j i
+terministasque,aplicadosanu´merosgrandes,seanfactibles
+Dondesehausadolabase10parafijarideas.
+desdeelpuntodevistadeltiempodeca´lculonecesariopara
+Elordendecesalmenosde2noentodocaso2n+1.
+ejecutarlosencomputadorascla´sicas.
+Losproductosparcialesquedanlugaracpuedeponerseco-
+Enelcasodelafactorizacio´ndelnu´merondelRSAexisten
+mo:
+algoritmosconunbuendesempen˜ocomoeselcasodelacriba
+cuadra´ticaylacribadelcamponume´rico.Estosalgoritmos
+permitenrealizarlafactorizacio´ninclusomedianteelusodel c(cid:48) = a b
+0 0 0
+paralelismoparaaumentarsueficiencia.Sinembargocuando c(cid:48) = a b
+0 0 0
+sonusadosparafactorizarlosnu´merosgrandesqueseusan
+c(cid:48) = a b +a b
+hoyendiaenelRSAtodav´ıasonprohibitivos.Muestrade 1 0 1 1 0
+loanteriorsepuedeobtenersiseanalizanlosresultadosdel c(cid:48) 2 = a 0 b 2 +a 1 b 1 +a 2 b 0
+RSAFactoringChallenge.Paralafactorizacio´ndelRSA-768 ? (3)
+sehanutilizadoma´sdedosa?osdeco´mputoenvarioscien- c(cid:48) = a b +a b +...+a b
+k 0 k 1 (k−1) k 0
+tosdeCPUsloqueequivaleama´sde1500an˜osdeunsolo
+?
+procesador.
+Enesteart´ıculosepresentanlosprimerosresultadosdeuna c(cid:48) n = a 0 b n +a 1 b (n−1) +...+a n b 0
+incipienteinvestigacio´nencaminadaaobtenerunalgoritmo c(cid:48) = a b +a b +...+a b
+(n+1) 1 n 2 (n−1) n 1
+que permita la factorizacio´n de manera determinista de un
+c(cid:48) = a n−1)b +a b
+nu´mero y un conjunto de aspectos para su posible optimi- (2n−1) ( n n (n−1)
+zacio´n (aunque la optimizacio´n no es objetivo del presente c(cid:48) z = a b
+2n n n
+Algoritmodeterministadefactorizacio´n 57
+Esdecirlacantidaddesumandoscrecehastac(cid:48) yluego atenuandofuertemente,enelcasoanalizadorealmente:
+n
+decrece hasta el u´ltimo valor, el producto total se expresa
+conformea:
+Dˆ2(c(cid:48))=0 (8)
+0
+2n
+c=∑c(cid:48)10i (4)
+i
+i=0 peropuededemostrarseenelcasoextremoc(cid:48) influyeen
+0
+Esta´ claroquelosc(cid:48) sonlosnu´merosqueexistieronenuna c 2 alosumoenunaunidad.
+i
+Alrealizarseunamultiplicacio´n,lasoperacionesenlascifras
+multiplicacio´nporcolumnasdenorealizarselasoperaciones
+inferioresinfluyendemaneradecrecienteenlassuperiores.
+deacarreocorrespondientes.
+Veamosc?mosecumplelarelaci?n(5)
+Porejemploenlamultiplicacio´n:
+Seanlamultiplicacio´n:
+47
+934
+∗64
+∗956
+16 28
+892904
+28 42
+28 58 28
+Donde:
+donde:
+934
+∗956
+c(cid:48) =28
+0 54 18 24
+c(cid:48) =58
+1 45 15 20
+c(cid:48) =28
+2 81 27 36
+81 72 105 38 24
+Apartirdelosc(cid:48) sepuedeconstruirelnu´merocrepresentado
+i
+enbase10oseacomo:
+Siendo:
+n−1
+c= ∑c10i (5)
+i
+i=0
+c(cid:48) =24, c(cid:48) =38, c(cid:48) =105, c(cid:48) =72yc(cid:48) =81
+Entonces: 0 1 2 3 4
+Porloque:
+c = Rˆ(c(cid:48))
+0 0
+c = Rˆ(c(cid:48) +Dˆ(c(cid:48))) (6)
+1 1 0
+c = Rˆ(c(cid:48) +Dˆ(c(cid:48) +Dˆ(c(cid:48)))) c 0 = Rˆ(24)=4
+2 2 1 0
+c = Rˆ(38+Dˆ(24))=0
+1
+c = Rˆ(105+Dˆ(38+Dˆ(24)))=9
+2
+LaspropiedadesdelosoperadoresRbarrayDbarraseexpo-
+c = Rˆ(72+Dˆ(105+Dˆ(38+Dˆ(24))))=2
+nenen[1].Estonosllevaaque: 3
+c = Rˆ(81+Dˆ(72+Dˆ(105+Dˆ(38+Dˆ(24)))))=9
+4
+c = Dˆ(89)=8
+5
+c =Rˆ(c(cid:48) +Dˆ(c(cid:48) +Dˆ(c(cid:48) +Dˆ(c(cid:48) +···)))) (7)
+k k k−1 k−2 k−3
+Obse´rvesequeDˆ(24)≡Dˆ(c(cid:48))influyo´ enc con2unidadesy
+0 1
+La fo´rmula (5) nos dice que en cualquier d´ıgito c influye enc conunaunidadnoteniendopesonienc ,c yc ,por
+k 2 3 4 5
+enprimerlugarelproductocorrespondienteaeseordenc(cid:48) supartec influyo´ enc peronoenc ,c yc .
+k 1 2 3 4 5
+yluegolosrestantesproductosperoatenuadosporelopera- De lo expuesto se desprende que las combinaciones multi-
+dor Dˆ que divide el resultado entre 10, lo que implica que plicatoriasaumentandec(cid:48) ac(cid:48) ydisminuyendec(cid:48) ac(cid:48)nlo
+0 n 0 2
+c(cid:48) influyeconDˆ(c(cid:48))enc(cid:48) yconDˆ2(c(cid:48))enc(cid:48).Comolosc(cid:48) queesta´ enconsecuenciaconlaestructuraescalonadaenla
+0 0 1 0 2 i
+sonproductosdenu´merosde1d´ıgitosumayorvalores81 multiplicacio´n.
+lasinfluenciasdelvalordec(cid:48) sobrelosc posterioresseva
+i k
+58 Algoritmodeterministadefactorizacio´n
+3. Proceso de factorizacio´n
+Dondedenuevo:
+Ahorapongamosloscoeficientesc(cid:48) dadospor(3)defor-
+i
+maescalonadacomo:
+e =Rˆ(a b +a b )=Rˆ(Rˆ(a b )+Rˆ(a b )) (17)
+0 0 2 2 0 0 2 2 0
+··· [a b ] [a b ] [a b ]
+0 2 0 1 0 0 Elprocesopuedereiterarseysiemprellevaalaecuacio´n:
+··· [a b ] [a b ]
+1 1 1 0
+··· [a 2 b 0 ] (9) d k0 =Rˆ(Rˆ(a 0 b k )+Rˆ(a k b 0 )) (18)
+c= ··· c(cid:48) ∗102 c(cid:48) ∗101 c(cid:48) ∗100
+2 1 0
+Quesecorrespondeconelnu´mero: Dondea 0 ,b 0 yd k0 sonconocidos:
+Este proceso puede servir para factorizar un nu´mero si se
+puedenresolverlasecuaciones:
+c=···c c c (10)
+2 1 0
+Rˆ(a b )=d =c
+Se sabe que c =Rˆ(c(cid:48)). Si se conocen a y b entonces al 0 0 00 0
+0 0 0 0 Rˆ(Rˆ(a b )+Rˆ(a b ))=d =d (19)
+restarc(cid:48) acydividirentre10seobtiene: 0 1 1 0 10 0
+0
+Rˆ(Rˆ(a b )+Rˆ(a b ))=d =e
+0 2 2 0 10 0
+(c−c(cid:48))
+d= 0 =···c(cid:48) ∗102+c(cid:48) ∗101+c(cid:48) ∗100 (11)
+10 3 2 1 yas´ısucesivamente.
+Lasecuacionesanteriorespuedendesdoblarseparahacerlas
+Quesecorrespondeconelnu´meroescalonado: ma´ssimple,enefectodadoqueelvalorma´ximodeRˆ(a b )y
+0 k
+Rˆ(a b )eselvalor9susumavalealosumo18portantolas
+k 0
+··· [a b ] [a b ] [a b ] ecuacionespuedenplantearsecomo:
+0 3 0 2 0 1
+··· [a b ] [a b ] [a b ]
+1 2 1 1 1 0
+··· [a b ] [a b ]
+2 1 2 0 Rˆ(a b ) = d
+··· [a b ] 0 0 00
+3 0
+(12) Rˆ(a b )+Rˆ(a b ) = d o (20)
+c= ··· c(cid:48) ∗102 c(cid:48) ∗101 c(cid:48) ∗100 0 1 1 0 10
+3 2 1 Rˆ(a b )+Rˆ(a b ) = 10+d siemprequed <8
+0 1 1 0 10 10
+Cuyarepresentacio´nseobtienecomo: Rˆ(a b )+Rˆ(a b ) = d o
+0 2 2 0 20
+Rˆ(a b )+Rˆ(a b ) = 10+d siemprequed <8
+0 2 2 0 20 20
+(···c c c c −c(cid:48))
+d= 3 2 1 0 0 =···d d d d (13)
+3 2 1 0
+10
+Ydeigualformaparalosrestantescoeficientes:
+Obse´rvesequelascombinacionesdecoeficientearestarpue-
+Dondeahora:
+denrealizarsesimulta´neamentedirigidaaafectarlacolumna
+que se quiere dejar con dos te´rminos, sin embargo, al usar
+d =Rˆ(a b +a b )=Rˆ(Rˆ(a b )+Rˆ(a b )) (14) todaslascombinacionesposiblespuedetenersecomocriterio
+0 0 1 1 0 0 1 1 0
+deparadacuandoelnu´meroresultantedelarestaseamenor
+oigualacero.
+Si se conoce a , b puede repetirse el proceso restando las
+1 1 Dadoquesolosondeintere´slosnu´merosimparesdondeno
+combinaciones
+existenfactoresentre2y9lasterminacionesdetalesnu´meros
+son 1, 3, 7 y 9 y la tabla de multiplicar nos dice que en la
+d−r ecuacio´n:
+r=a b +a b +a b ∗10 oseae= (15)
+0 1 1 0 1 1
+10
+Obtenie´ndose: Rˆ(a 0 b 0 )=d 00 d 00 =1,3,7o9 (21)
+Existen4solucionesposiblesencadacaso:
+··· [a 0 b 3 ] [a 0 b 2 ] Tomandoencuentaloexpuestopuedeenunciarseunme´todo
+··· [a 1 b 2 ] defactorizacio´n,enefectoporcadaunodelos4paresa 0 ,b 0
+··· [a 2 b 1 ] [a 2 b 0 ] quedalaprimeraecuacio´nsedanvaloresaa 1 desde0a9y
+··· [a 3 b 0 ] sevesi:
+=···e e (16)
+e= ··· e(cid:48) ∗101 e(cid:48) ∗100 1 0
+1 0
+Algoritmodeterministadefactorizacio´n 59
+Sia =b seobtienenlasecuaciones:
+x=d −Rˆ(a b )ox(cid:48)=10+d −Rˆ(a b ) (22) 0 0
+10 1 0 10 1 0
+sonsolucio´ndeRˆ(a b ).
+0 1
+Obtenie´ndoselosparesa ,b quesatisfacenestacondicio´n. Rˆ(a 0 b l )+Rˆ(a l a 0 )=d l o (27)
+1 1
+Crea´ndoseuna´rboldesolucio´ndelasiguienteforma: Rˆ(a b)+Rˆ(aa )=10+d
+0 l l 0 l
+Apartirdelprimernivelhaciaabajoelnu´merodehijos
+Enamboscasospresentanlas10solucionesposiblesparalos
+posiblesnoseconoce,loscaminosdelgrafodanlosposibles
+factoresdelosnu´meros(a n ···a 2 a 1 a 0 ),(b n ···b 2 b 1 b 0 ).
+pares(a
+l
+b
+l
+)noobstantehayposibilidaddereduccio´nparaca-
+Este algoritmo as´ı presentado, si bien es cierto que calcula
+sosparticularesyaquecadacolumnaded´ıgitosmultiplicados
+demaneradeterministatodoslosfactoresdelnu´mero,inclu- tienecomoresultado:
+yendo los primos, lo hace a un costo elevado, pues puede
+demostrarsequeelpardeecuaciones(22): l
+∑a b =c(cid:48) (28)
+k l−k l
+k=0
+Rˆ(ab)+Rˆ(a b )=d o (23)
+i l m j k
+Rˆ(ab)+Rˆ(a b )=10+d Esteresultadosecorrespondeconeld´ıgito:
+i l m j k
+Dondei+l= j+m=k l
+Rˆ(∑Rˆ(a b ))=d(cid:48) (29)
+Posee10solucionesposiblesparacadapara i ,b j conocidos, k l−k l
+k=0
+portanto,lacantidaddecaminosdelgrafoaumentandefor-
+ma exponencial, de manera que en el peor caso, y despue´s
+Quepuedeponersecomo:
+deanalizadalacifraqueposeeelpar(a ,b )habr´ıan10k−1
+k k
+caminosposibles.Noobstante,valelapenaanalizaralgunas
+delasparticularidadesdelme´todoconvistaasuposibleopti- l
+Rˆ(Rˆ(a b)+Rˆ(∑(a b ))+Rˆ(ab ))=d(cid:48) (30)
+mizacio´n. 0 l k l−k l 0 l
+k=0
+Lafactorizacio´nens´ıposeealgunascaracter´ısticasnume´ricas
+quedebenanalizarse. Supongamosquelacolumnal−1yafueeliminadaenelpro-
+Loscriteriosdedivisibilidadparafactoresdeunacifrason cesoderestaysolofaltaporrestarlosfactoresdea yb
+l−1 l−1
+simples y viables en todos los casos o bien por inspeccio´n osea:
+de las cifras o uso de la aritme´tica modular. Por tanto, un
+nu´merocualquierapuedereducirsehastanotenerfactoresde
+l−1 l−1
+und´ıgito,entodosloscasoslasterminacionesposiblesson: a ∑bk−1+b ∑ak−1−a b 10l−1 (31)
+l−1 k l−1 k l−1 l−1
+k=1 k=1
+a ,b =1,3,7,9 (24)
+0 0 Entonceselte´rminodadopor(30)tienecuatrosumandos:
+Siemprequelasumadesignosalternosdelosd´ıgitosseadi-
+ferentedeceroparaevitarladivisibilidadporonce.Cadauna Rˆ(Rˆ(a 0 b l )+Rˆ(a 1 b l−1 )+Rˆ(a l−1 b 1 )+Rˆ(a l b 0 ))=d l (cid:48) (32)
+deestasterminacionestieneasuvezunconjuntodefactores
+Quepuedeponersecomo:
+quelaproducenqueson:
+1→a 0 =1b 0 =1;a 0 =9b 0 =9;a 0 =7b 0 =3 Rˆ(Rˆ(a 0 b l )+Rˆ(a 1 b l−1 +a l−1 b 1 )+Rˆ(a l b 0 ))=d l (cid:48) (33)
+3→a =1b =3;a =9b =7
+0 0 0 0
+7→a =7b =1;a =9b =3 (25) Quesereduceen:
+0 0 0 0
+9→a =9b =1;a =7b =3
+0 0 0 0
+Rˆ(Rˆ(a b +ab )+Rˆ(a b +a b ))=d(cid:48) (34)
+0 l l 0 1 l−1 l−1 1 l
+Si se observan las estructuras (9), (12) y (16) se ve que la
+formula(23)quedareducidaentodosloscasosa: Lasdosecuacionesquesederivande(34)son:
+Rˆ(a b)+Rˆ(ab )=d o (26) Rˆ(a b +ab )=d(cid:48)−Rˆ(a b +a b ) (35)
+0 l l 0 l 0 l l 0 l 1 l−1 l−1 1
+Rˆ(a b)+Rˆ(ab )=10+d Rˆ(a b +ab )=d(cid:48)+10−Rˆ(a b +a b )
+0 l l 0 l 0 l l 0 l 1 l−1 l−1 1
+60 Algoritmodeterministadefactorizacio´n
+Laprimerarelacio´nde(35)noesposiblecuando: Deloscualessepruebaelvalordelpar(a b )quecompleta
+2 2
+elprocesoesa =2b =4.
+2 2
+Portantosonfactores253y452.
+Rˆ(a 1 b l−1 +a l−1 b 1 )>d l (cid:48) (36) Almargendeloquesequer´ıamostrar,elnu´merodelejemplo
+esparportantoenlapra´cticaenvezdetrabajarconelnu´mero
+de6cifras114356estepuedesimplificarse,comoseobserva
+Portanto,so´loesva´lidalasegunda.
+cumpleelcriteriodedivisibilidadpor4yaque:
+Vale aclarar que en el caso de l = 2 so´lo se considera el
+te´rminodadopor:
+2c +c =2∗5+6=16
+1 0
+Rˆ(a b )
+1 1
+Esmu´ltiplode16adema´selnu´merotambie´nesmu´ltiplode
+Conformealaregladerestadadapor(30). 11yaque:
+Unejemplodeestecasoeselsiguiente:
+Factoricemoselnu´mero:114356
+s
+Comoelnu´merotiene6cifrasalosumotiene2factoresde ∑(−1)ic =6−5+3−4+1−1=0
+i
+3cifras.Paraabreviarelprocesonoseanalizara´ntodaslas
+i=0
+posibilidades.
+Suponemosa 0 =3yb 0 =2 Portanto,serequer´ıahallarlosfactoresde:
+Alrestara b dividiren10,tenemos:11435
+0 0
+comoRˆ(3b 1 )+Rˆ(2a 1 )=5o´ Rˆ(3b 1 )+Rˆ(2a 1 )=15 114356 =2599
+44
+Hacemos a =5 y b =5 quedando despue´s de restar
+1 1
+a b +a b ydividiren10:1141.
+1 0 0 1
+Aqu´ıtenemosencuentaque:
+4. Conclusiones
+Rˆ(a b )=5>1 (37) Enefectoelalgoritmodescritopermitelafactorizacio´nde
+1 1
+unnu´merocualquiera.Esteme´todopuedeseroptimizadopara
+tratardedisminuiralma´ximolacantidaddeparescandidatos
+Porlotanto,seescogelaecuacin´: quesegeneranenlabu´squedadelosfactores.
+Enarasdeaumentarlavelocidaddelme´todosepuedensusti-
+tuiralgunosdelospasos,porotrosequivalentes,peroquesean
+Rˆ(a 0 b 2 )+Rˆ(a 2 b 0 )=1+10−Rˆ(a 1 b 1 ) (38) computacionalmentema´seficientes.Actualmentesetrabaja
+enlaoptimizacio´ndelme´todoexpuesto.
+Quedando
+5. Referencias
+Rˆ(3b 2 )+Rˆ(2a 2 )=6 (39) [1]M.Vicet,R.Herna´ndezyA.Masso´.2018.Sistemas
+nume´ricosembebidos
+Enefectoalrestara b queda:
+1 1 6. Bibliograf´ıa
+Gvozdanovic,Jadranka.NumeralTypesandChan-
+1141
+gesWorldwide(1999).
+−25
+1116 Walter Mora F.2010. Introduccio´n a la Teor´ıa de
+Nu´meros.
+VictorShoup.2008.AComputationalIntroduction
+Laecuacio´n(38)brinda8pares(a 2 b 2 )posiblesqueson: toNumberTheoryandAlgebra,Version2.
+R. Tijdeman December. 2007. Combinatorial and
+(0,7)(1,8)(2,4)(0,3)(5,2)(6,8)(4,7)(0,8) AnalyticNumberTheory.
+Algoritmodeterministadefactorizacio´n 61
+MartynR.Dixon.2010.AlgebraandNumberTheory. A. Menezes, P. van Oorschot, yS. Vanstone, 1996.
+HandbookofAppliedCryptography
+Schneier,B.(1996).AppliedCryptography(2daEdi-
+cio´n).JohnWileyandSons.

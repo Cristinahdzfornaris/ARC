@@ -1,0 +1,1117 @@
+26 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Generalizaciones y caracterizaciones
+del concepto de mØtrica
+Otilio Mederos Anoceto
+(Universidad Aut(cid:243)noma de Coahuila, MØxico) /
+Rita RoldÆn Inguanzo
+(Universidad de La Habana, Cuba)
+RESUMEN: en el trabajo se proponen dos conjuntos de tareas didÆcticas necesarias, a juicio de los
+autores, para que los estudiantes participen en el aprendizaje de los conceptos de caracterizaci(cid:243)n
+y generalizaci(cid:243)n conceptual, respectivamente. Se construyen catorce caracterizaciones y cuatro
+generalizaciones (pseudomØtrica, semimØtrica, quasimØtrica y mØtrica sin identidad) del concepto
+de mØtrica. Se construyen, ademÆs, colecciones de elementos de las extensiones del concepto de
+mØtrica y de cada una de las generalizaciones, que se utilizan para probar que si la cardinalidad
+[M] del conjunto M, sobre el que estÆn de(cid:222) nidos los conceptos de mØtricas y sus generalizaciones,
+es (cid:222) nita (resp. in(cid:222) nita) entonces sus cardinalidades son 2[M] (resp. ℵ).
+INTRODUCCI(cid:211)N caracterizaci(cid:243)n de un concepto y un conjunto de
+tareas, para que los estudiantes participen en la
+En nuestra prÆctica docente de pregrado y formaci(cid:243)n y desarrollo de este concepto. 4. Mos-
+de posgrado, hemos observado que los es- trar c(cid:243)mo pueden aplicarse las tareas para reali-
+tudiantes no saben aplicar correctamente las zar caracterizaciones del concepto de mØtrica.
+operaciones conceptuales, entre otras, la de(cid:222) ni-
+En la secci(cid:243)n 1 se hacen algunas precisiones
+ci(cid:243)n, la generalizaci(cid:243)n y la clasi(cid:222) caci(cid:243)n. Hemos
+sobre los conceptos de de(cid:222) nici(cid:243)n cient(cid:237)(cid:222) ca y de
+comprobado que no conocen estas operaciones
+concepto, necesarios para el desarrollo del tra-
+porque en ninguna asignatura del curr(cid:237)culo se
+bajo. En el ep(cid:237)grafe 2.1 de la secci(cid:243)n 2 se presen-
+de(cid:222) nen ni se presentan tareas necesarias para
+ta la de(cid:222) nici(cid:243)n del concepto de caracterizaci(cid:243)n
+su comprensi(cid:243)n. Art(cid:237)culos sobre las operacio-
+conceptual que se utiliza en el trabajo, y en el
+nes de clasi(cid:222) caci(cid:243)n y generalizaci(cid:243)n, relaciona-
+ep(cid:237)grafe 2.2 se proponen seis tareas necesarias
+dos con este trabajo, pueden verse en[Med1988,
+para que los estudiantes participen en el proce-
+Med1997, Med2007, Med2009].
+so de formaci(cid:243)n del concepto de caracterizaci(cid:243)n
+TambiØn hemos comprobado en nuestra conceptual.
+prÆctica docente, que muchos de los estudian-
+En el ep(cid:237)grafe 3.1 presentamos una de(cid:222) nici(cid:243)n
+tes de carreras de matemÆticas, al llegar a los
+de la operaci(cid:243)n generalizaci(cid:243)n de conceptos y
+aæos superiores no han adquirido el concepto
+en el ep(cid:237)grafe 3.2 se proponen ocho tareas ne-
+de caracterizaci(cid:243)n conceptual, ni han resuelto
+cesarias para que los estudiantes participen en
+tareas preparadas para su comprensi(cid:243)n.
+el proceso de generalizaci(cid:243)n conceptual. Algu-
+Los objetivos de este trabajo son: 1. Presentar nas de estas tareas fueron aplicadas con Øxito
+una de(cid:222) nici(cid:243)n de la operaci(cid:243)n generalizaci(cid:243)n de a un grupo de seis estudiantes que participaron
+conceptos y un conjunto de tareas necesarias en el proceso de generalizaci(cid:243)n del concepto de
+para organizar y facilitar la participaci(cid:243)n de los derivada[Med2009].
+alumnos en los procesos de generalizaci(cid:243)n con-
+La secci(cid:243)n 4 se dedica a la presentaci(cid:243)n de
+ceptual. 2. Mostrar c(cid:243)mo pueden aplicarse las
+las de(cid:222) niciones de los conceptos de mØtrica y
+tareas para realizar generalizaciones del con-
+espacio mØtrico, y en la secci(cid:243)n 5 se muestran,
+cepto de mØtrica. 3. Presentar una de(cid:222) nici(cid:243)n de
+en forma de proposiciones con sus demostra-
+REVISTA CIENCIAS MATEM`TICAS 27
+ciones, resultados imprescindibles para el de- 2. CARACTERIZACIONES
+sarrollo del resto de las secciones. En la secci(cid:243)n DE UN CONCEPTO
+6 se construyen catorce caracterizaciones del
+concepto de mØtrica y en la secci(cid:243)n 7 se realizan En la prÆctica docente, no siempre se presta la
+cuatro generalizaciones del concepto de mØtrica, atenci(cid:243)n debida al trabajo con diferentes ca-
+y se construyen in(cid:222) nitos elementos de cada una racterizaciones de un mismo concepto. Cuando
+de estas generalizaciones que no son mØtricas. esto ocurre, si se lepregunta a los estudiantes, e
+incluso a los graduados, de una carrera, el sig-
+ni(cid:222) cado del concepto de caracterizaci(cid:243)n de un
+1. SOBRE EL CONCEPTO DE CONCEPTO
+concepto, por lo general, no pueden explicarlo
+satisfactoriamente.
+En [Aus2000](pp. 86), se seæala: (cid:147)Para nuestros
+prop(cid:243)sitos, de(cid:222) niremos a los conceptos como
+objetos, acontecimientos, situaciones o propie- 2.1 Sobre el concepto de caracterizaci(cid:243)n
+dades que poseen atributos de criterios y que
+estÆn diseæados en cualquier cultura dada me- Dado el concepto ya formado (E , C ) que se ha
+1 1
+diante algœn signo o s(cid:237)mbolo aceptado. Casa, de(cid:222) nido a partir del concepto (E, C), pueden
+triÆngulo, guerra y verdad son algunos de los encontrarse diferentes colecciones P de propie-
+conceptos culturalmente aceptados que emplea- dades que solo cumplen los elementos de E .
+1
+remos(cid:148). En esta de(cid:222) nici(cid:243)n hay dos elementos Cualquier otra colecci(cid:243)n P, por la cual pueda
+que consideramos muy importantes: los atribu- sustituirse C sin alterar E , recibe el nombre
+1 1
+tos de criterios y la utilizaci(cid:243)n de signos o s(cid:237)m- de caracterizaci(cid:243)n del concepto (E , C ). Esto es
+1 1
+bolos para designarlos. posible cuando las colecciones de propiedades P
+y C son equivalentes, en el sentido de que cada
+En [Bruning2005] (pp. 53) aparece: (cid:147)Los con- 1
+una se puede obtener de la otra.
+ceptos son las estructuras mentales mediante
+las que representamos categor(cid:237)as signi(cid:222) cativas. Si se parte de otro conjunto (F, D) para de(cid:222) -
+Objetos o hechos concretos se agrupan sobre la nir (E , C ) y al imponer a los elementos de F las
+1 1
+base de similitudes que se perciben entre ellos; propiedades que forman C se obtienela exten-
+1
+los que (cid:145)encajan(cid:146) en la categor(cid:237)a son ejemplos del si(cid:243)n E , se dice que los conceptos de(cid:222) nidos a
+1
+concepto; los que no encajan son no-ejemplos(cid:148). partir de (E, C) y de (F, D) respectivamente, son
+equivalentes. Se puede a(cid:222) rmar entonces que el
+Todo concepto tiene dos caracter(cid:237)sticas muy
+concepto (E , C ), de(cid:222) nido a partir (F, D), es una
+importantes, su extensi(cid:243)n y su contenido. Se 1 1
+caracterizaci(cid:243)n del concepto (E , C ), de(cid:222) nido a
+denomina extensi(cid:243)n de un concepto al conjunto 1 1
+partir de (E, C).
+E de todos los objetos que corresponden a ese
+concepto y contenido a una colecci(cid:243)n de propie-
+dades C = { pi, i ∈ I }, donde I es un conjunto, que 2.2 Tipos de tareas que se presentan
+cumplen todos los elementos de C y solo estos en matemÆticas
+elementos. En este trabajo, teniendo en cuenta
+1. Dados un concepto (E , C ) y un conjunto
+las necesidades al operar con los conceptos, se
+1 1
+de propiedades P; determinar si P es una
+indica un concepto por el par (E, C), o simple-
+caracterizaci(cid:243)n del concepto (E , C ).
+mente por E.
+1 1
+2. Dado un concepto (E , C ), obtener una o
+La operaci(cid:243)n de(cid:222) nici(cid:243)n cient(cid:237)(cid:222) ca sobre la
+1 1
+varias caracterizaciones del mismo.
+colecci(cid:243)n de conceptos parte de un concepto
+de(cid:222) nido (E, C) y agregÆndole propiedades a la 3. Si se dispone de un concepto (E , C ) y va-
+1 1
+colecci(cid:243)n C osustituyendo algunas de las pro- rias caracterizaciones del mismo, determi-
+piedades de C por propiedades mÆs fuertes, se nar de d(cid:243)nde es mÆs œtil partir al realizar
+obtiene una nueva colecci(cid:243)n de propiedades C una acci(cid:243)n, si de una caracterizaci(cid:243)n o del
+1
+a la que corresponde una subcolecci(cid:243)n E de E. contenido del concepto.
+1
+Si se cumple que C implica C, C no implica C 4. Hacer uso de diferentes de(cid:222) niciones de un
+1 1
+y E es una subcolecci(cid:243)n propia de E; se tiene
+mismo concepto, dejando (cid:222) jo el concepto de
+1
+un nuevo concepto (E , C ) de(cid:222) nido a partir de
+partida y utilizando diferentes caracteriza-
+1 1
+(E, C).
+ciones del concepto como contenido.
+28 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+5. Utilizar diferentes tipos de de(cid:222) niciones de zaci(cid:243)n. (cid:147)Dado el concepto ya formado (E ,C ) que
+1 1
+un mismo concepto, dejando (cid:222) jo el conte- se ha de(cid:222) nido a partir del concepto (E,C), la ope-
+nido y variando el conjunto de partida de la raci(cid:243)n que permite construir, a partir de (E ,C ),
+1 1
+de(cid:222) nici(cid:243)n. el concepto (F ,D ) con las propiedades:
+1 1
+Para dar cumplimiento a una tarea del tipo 1,
+p . D es un debilitamiento de C , (C ⇒D y D ⇒ C ),
+hay que probar que una condici(cid:243)n necesaria 1 1 1 1 1 1 1
+su(cid:222) ciente para que se cumplan las propieda-
+p . D es mÆs fuerte que C, (D ⇒ C y C ⇒ D ) y
+des de C es que se cumplan las propiedades de 2 1 1 1
+1
+P. La tarea 2 es compleja y para darle cumpli- p . ∅⊂ E ⊂ F ⊂ E,
+3 1 1
+miento hay que tener cierto nivel de desarrollo
+se llama generalizaci(cid:243)n del concepto (E ,C ) su-
+en matemÆticas. La tarea 3 es quizÆs la tarea 1 1
+bordinada a (E,C)(cid:148). El proceso de construcci(cid:243)n
+mÆs importante para el aprendizaje de los estu-
+de (F ,D ) a partir de (E ,C ) recibe el nombre de
+diantes, pero pocas veces en el proceso de ense- 1 1 1 1
+proceso de generalizaci(cid:243)n; y el concepto (E ,C )
+æanza-aprendizaje se les presentan problemas 1 1
+se denomina concepto de partida de la genera-
+que exijan la realizaci(cid:243)n de este tipo de tarea.
+lizaci(cid:243)n. En la (cid:222) gura 1 se presenta un mapa de
+Las tareas 4 y 5 suelen resultar muy œtiles para
+las extensiones E , F y E.
+que los estudiantes comprendan la relatividad 1 1
+del conjunto de propiedades que se toma como
+contenido y el conjunto de partida del concepto
+que se de(cid:222) ne. Para ello se debe ejercitar a los es-
+tudiantes en el uso de diferentes de(cid:222) niciones de
+un mismo concepto, dejando (cid:222) jo el concepto de
+partida y variando el contenido, o dejando (cid:222) jo el
+contenido y variando el conjunto de partida.
+Este tipo de ejercicio muestra a los alumnos
+Fig. 1 Mapa de las extensiones E , F y E.
+c(cid:243)mo la elecci(cid:243)n de una de(cid:222) nici(cid:243)n in(cid:223) uye en sus 1 1
+modelos de pensamiento y c(cid:243)mo la demostra- Puede ocurrir que las propiedades p y p se
+1 2
+ci(cid:243)n de propiedades con una de(cid:222) nici(cid:243)n pueden cumplan y que no se cumpla la propiedad p .
+3
+resultar muy complicadas, mientras que con Por ejemplo, si se considera que (E,C) es el con-
+otra pueden simpli(cid:222) carse y viceversa. Un inte- cepto de funci(cid:243)n con dominio A y codominio
+resante art(cid:237)culo que muestra la relatividad del B, entonces el contenido D del concepto de
+1
+contenido del concepto de valor absoluto es el funci(cid:243)n inyectiva (F ,D ) cuando el cardinal de A
+1 1
+de Brum(cid:222) el [Brum1980], donde se analizan cin- es mayor que el cardinal de B, cumple las pro-
+co de(cid:222) niciones diferentes del concepto de valor piedades p y p con respecto al concepto de fun-
+1 2
+absoluto. Otros art(cid:237)culos importantes relativos ci(cid:243)n biyectiva, (E ,C ); pero no cumple la condi-
+1 1
+al valor absoluto son los de Ahuja [Ahu1976] y ci(cid:243)n p , ya que en este caso E = F = ∅. En este
+3 1 1
+Sink [Sink1979]. trabajo los debilitamientos D con respecto a C
+1 1
+que se realizan, se obtienen eliminando una de
+las propiedades de C .
+3. GENERALIZACIONES 1
+DE UN CONCEPTO
+3.2. Tipos de tareas que se presentan
+Para el estudio de muchos conceptos es nece- en matemÆticas
+sario realizar una o varias generalizaciones, con
+En el trabajo matemÆtico se pueden presentar
+el prop(cid:243)sito de ampliar diferentes signi(cid:222) cados
+distintos tipos de tareas relativas a la genera-
+necesarios del concepto que se generaliza.
+lizaci(cid:243)n de conceptos (ver Mederos y Mederos
+(2009), entre las cuales estÆn las siguientes:
+3.1. Sobre el concepto de generalizaci(cid:243)n 1. Preparar el concepto (E , C ) para su gene-
+1 1
+ralizaci(cid:243)n.
+A continuaci(cid:243)n se presenta una modi(cid:222) caci(cid:243)n de
+2. Dados un concepto (E , C ) y un conjunto D
+la de(cid:222) nici(cid:243)n, tomada de la tesis escrita por Mar- 1 1 1
+de propiedades relativas a los elementos de
+t(cid:237)nez (ver [Mar20003]), del concepto de generali-
+E; determinar si D es mÆs dØbil que C .
+1 1
+REVISTA CIENCIAS MATEM`TICAS 29
+3. Dado un concepto (E , C ), obtener un debi- C), es importante determinar cuÆl de las relacio-
+1 1
+litamiento D de C . nes E ⊂E , E ⊂E , E = E , E ∩E = ∅, E ∩E ≠∅
+1 1 1 2 2 1 2 1 1 2 1 2
+4. Dado un concepto (E , C ) y un debilitamien- con E ⊄E y E ⊄E se cumple. Si se cumple que
+1 1 1 2 2 1
+to D de C ; construir elementos de F /E y E ∩E ≠∅, entonces se debe estudiar E \E , E \
+1 1 1 1 1 2 1 2 2
+E/F . E y E ∩E . Si E ∩E =∅, entonces es importante
+1 1 1 2 1 2
+estudiar E\(E ∪E ). Si E =E , entonces los con-
+5. Dado un concepto (E , C ) y un debilita- 1 2 2 1
+1 1 ceptos (E , C ) y (E , C ) coinciden. Toda genera-
+miento D de C ; construir la generalizaci(cid:243)n 1 1 2 2
+1 1 lizaci(cid:243)n de (E , C ) sin exceder los l(cid:237)mites de E
+(F , D ) de (E , C ). 1 1
+1 1 1 1 determina un concepto subordinado a (E, C).
+6. Dado un concepto (E , C ); realizar una o
+1 1 1.4 De(cid:222) nir nuevos conceptos (E , C ) a partir
+varias generalizaciones de (E , C ), determi-
+2 2
+1 1 de (E , C ). Una vez de(cid:222) nido (E , C ) se debe apli-
+nando los debilitamientos de C correspon-
+1 1 2 2
+1 car la tarea 1.1 para estudiar este conjuntoy la
+dientes.
+tarea 1.2 para estudiar E \E y E\E .
+7. Dados un concepto (E , C ) y varias genera- 1 2 2
+1 1 1.5 Dotar a E de estructuras algebraicas. Si
+lizaciones (F ,D ), k =1,(cid:133),m; establecer las
+1
+k k
+relaciones conjuntistas entre las extensio- el concepto de partida E tiene determinadas es-
+nes F , k =1,(cid:133),m; y construir mapas de ex- tructuras algebraicas, se debe comprobar cuÆles
+k
+tensiones y de contenidos. de esas estructuras hereda E y quØ estructuras
+1
+tiene E que no tiene E. Esta es una informa-
+8. Dados dos conceptos (E , C ) y (F , D ), su- 1
+1 1 1 1 ci(cid:243)n muy importante, puesto que mientras mÆs
+bordinados a un mismo concepto de partida
+compleja es una estructura de E , mÆs rÆpida-
+(E, C), determinar si uno de ellos es una ge- 1
+mente puede ampliarse la subcolecci(cid:243)n de sus
+neralizaci(cid:243)n del otro.
+elementos conocidos utilizando esa estructura.
+9. Dados dos conceptos (E , C ) y (E , C ) su-
+1 1 2 2 Por ejemplo, si E hereda la estructura de grupo
+bordinados al concepto (E, C), tales que 1
+de E para una operaci(cid:243)n interna T, entonces se
+E ⊂E , una colecci(cid:243)n de generalizaciones
+1 2 puede asegurar que aTb∈E si a∈E y b∈E , que
+(F,D), i =1:m, de (E , C ) y otra colecci(cid:243)n de 1 1 1
+i i 1 1 aTb ∈ E\E si a∈E y b∈E\E . Si a,b∈E\E , en-
+generalizaciones (G,H), j =1:n de (E , C ); de- 1 1 1 1
+j j 2 2 tonces a Tb puede pertenecer o no pertenecer a
+terminar el mapa de las extensiones{F}∪{G}
+i j E . Estos resultados permiten transformar una
+correspondientes a las dos colecciones de 1
+clase C de elementos conocidos de E en una
+generalizaciones. 1 1
+clase C , C = {aTb; a∈C y b∈E\E }, de elemen-
+Para dar cumplimiento a una tarea del primer 2 2 1 1
+tos conocidos de E\E . De esta forma se hace
+tipo se pueden realizar las subtareas siguientes: 1
+uso de operaciones internas para construir co-
+1.1 Estudio conjuntista de E . En este estudio lecciones de elementos de extensiones concep-
+1
+se deben determinar las condiciones para que tuales.
+E sea un subconjunto propio de E, ya que si
+1 1.6 Dotar a E de otras estructuras. Es impor-
+E = E no se tiene un concepto nuevo y si E = ∅ 1
+1 1 tante conocer si E tiene otras estructuras, por
+se tendr(cid:237)a un concepto que carece de interØs. 1
+ejemplo mØtricas, topol(cid:243)gicas o medibles. Dada
+Es œtil, ademÆs, determinar las cardinalidades
+una cadena ∅⊂E ⊂E ⊂E, si E tiene una de es-
+de E y de E\E , y compararlas con la de E. Es 2 1
+1 1 tas tres estructuras y los elementos de E tienen
+muy importante la construcci(cid:243)n de colecciones 1
+cierta propiedad en correspondencia con esa es-
+de elementos de E y, en particular, de elemen-
+1 tructura, que no cumplen los elementos de E ;
+tos de E con propiedades singulares. 2
+1 entonces se puede utilizar esta informaci(cid:243)n para
+1.2 Estudio de E\E . Este estudio debe estar
+1 construir elementos interesantes de E \E .
+dirigido tanto al estudio de las propiedades de 1 2
+Para dar cumplimiento a una tarea del segun-
+sus elementos, como a la construcci(cid:243)n de sub-
+do tipo, es necesario demostrar que C implica
+colecciones y elementos con propiedades singu- 1
+D y refutar la proposici(cid:243)n D implica C . Esta
+lares. 1 1 1
+proposici(cid:243)n puede refutarse mediante la cons-
+1.3 Estudio comparativo entre E y las exten-
+1 trucci(cid:243)n de un contraejemplo. La tercera tarea
+siones de otros conceptos subordinados a (E, C).
+es de mayor complejidad que la segunda y se
+Si (E , C ) es otro concepto subordinado a (E,
+2 2 presenta cuando se quiere, por ejemplo, obtener
+30 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+un nuevo concepto que generalice algœn signi(cid:222) - tancia de x a y, y si hay posibilidades de confusi(cid:243)n
+cado del concepto que se desea generalizar. m-distancia de x a y. La propiedad m , 4: m(x, y) = 0
+1
+La realizaci(cid:243)n de la tarea cuatro puede re- si, y solo si x = y, que resulta de considerar las
+querir de un proceso complejo. Este es el caso propiedades m y m juntas se denomina identi-
+1 4
+cuando (E , C ) es el concepto de mØtrica sobre dad de indiscernibles.
+1 1
+un conjunto M con cardinal mayor o igual a 2; ya El concepto de donde se parte para de(cid:222) nir
+que el cardinal del concepto de mØtrica en este el concepto de mØtrica en la de(cid:222) nici(cid:243)n anterior
+caso es mayor o igual que el continuo (ver sec- es (F , C), donde F es la colecci(cid:243)n de todas las
+M M
+ciones 5 y 7). Consecuentemente, para cualquier funciones con dominio M×M y codominio [0, +∞),
+generalizaci(cid:243)n (F , D ) de (E , C ) la construcci(cid:243)n que satisfacen las propiedades de C={f , f }, tal
+1 1 1 1 1 2
+de un elemento de F /E hay que realizarla para que
+1 1
+una cantidad de mØtricas mayor o igual que el
+f : para todo elemento (x, y)∈M×M existe un
+continuo (ver secciones 5 y 7). 1
+r ∈[0, +∞) tal que ((x,y), r) pertenece al grafo de m;
+Una tarea del quinto tipo demanda un proceso
+f : si((x,y), r ) y ((x,y), r ) pertenecen al grafo de
+de generalizaci(cid:243)n consistente en considerar a D 2 1 2
+1 m; entonces r =r .
+como el contenido de un nuevo concepto, asociar 1 2
+La colecci(cid:243)n C ={m ; i=1:4}, constituye el con-
+a este contenido un conjunto F formado por to- 1 i
+1 tenido del concepto de mØtrica (M , C ). La co-
+dos los objetos de E que satisfacen las propieda-
+M 1
+lecci(cid:243)n M , la forman los elementos de F que
+des de D , utilizar una notaci(cid:243)n adecuada para
+M M
+1 satisfacen las propiedades de C .
+F y emplear el par (F , D ) para indicar el nuevo
+1
+1 1 1
+concepto, donde en lugar de F se utiliza su no-
+1
+taci(cid:243)n. Cuando no hay dudas es usual utilizar la 5. RESULTADOS AUXILIARES
+notaci(cid:243)n de F para referirse al concepto (F , D ).
+1 1 1
+Presentamos a continuaci(cid:243)n algunos resulta-
+En el ep(cid:237)grafe 4.2 de este art(cid:237)culo se realizan
+dos necesarios para el desarrollo del trabajo que
+varias generalizaciones del concepto de mØtrica,
+sirven, ademÆs, de preparaci(cid:243)n del concepto de
+determinando los debilitamientos necesarios,
+mØtrica para su generalizaci(cid:243)n. De esta forma
+se establecen las relaciones conjuntistas de sus
+se da cumplimiento a la tarea 1 de 3.2.
+extensiones y se construyen algunos de los ma-
+pas correspondientes. Se muestra de esta forma Si M=∅, entonces aceptando que M×M=∅, se
+c(cid:243)mo proceder para dar cumplimiento a tareas tiene que F ={∅}. Como la aplicaci(cid:243)n vac(cid:237)a no
+M
+de los tipos 6, 7 y 8. No se da cumplimiento a la incumple las propiedades m, i =1:4, entonces
+i
+tarea 9 en este trabajo. En [Med2009] se mues- M = F . Se concluye que en este caso el con-
+M M
+tra c(cid:243)mo realizar esta tarea. cepto de mØtrica sobre M coincide con el con-
+cepto de funci(cid:243)n real no negativa de(cid:222) nida sobre
+M x M, y por tanto, no es un concepto nuevo (ver
+4. EL CONCEPTO DE M(cid:201)TRICA
+[Med1997]). Esta es la raz(cid:243)n por la cual al de(cid:222) nir
+Y DE ESPACIO M(cid:201)TRICO
+el concepto de mØtrica se debe considerar M≠∅.
+Esto es tambiØn obviamente vÆlido para cual-
+Dado un conjunto M se denomina mØtrica so-
+quier generalizaci(cid:243)n del concepto de mØtrica.
+bre M a toda aplicaci(cid:243)n m: M × M →[0, +∞) que
+veri(cid:222) ca para todos los elementos x, y, z ∈ M las Si M={a}, entonces M ={m }, donde por m se
+M o o
+propiedades siguientes: indica la funci(cid:243)n con dominio M(cid:215)M={(a,a)} y con
+imagen {0}. Evidentemente, la colecci(cid:243)n M estÆ
+m ) Si x = y, entonces m(x, y) = 0. (Propiedad
+M
+1 estrictamente contenida en F ; pero en general
+de identidad)
+M
+esta mØtrica m no es de interØs.
+m ) m(x, y) = m(y, x). (Propiedad de simetr(cid:237)a) o
+2
+m ) m(x, y) ≤m(x, z) + m(z, y). (Propiedad trian- Si M={a,b}, entonces M = {mr}r ∈ [0,+∞),
+3 M
+gular o de subaditividad)
+donde
+m ) Si m(x, y) = 0, entonces x = y. (Propiedad
+4 m(a,a) = m(b,b) = 0 y m(a,b) = m(b,a) = r, (1)
+de de(cid:222) nitoreidad). r r r r
+Para dos elementos cualesquiera x, y∈M el y trivialmente se tiene que F /M ≠∅, o sea,
+M M
+nœmero no negativo m(x, y) se denomina dis- ∅⊂M ⊂F .
+M M
+REVISTA CIENCIAS MATEM`TICAS 31
+Si M tiene mÆs de dos elementos, entonces la existen dos funciones f(N ), f(N ) ∈B \A tales
+1 2 M M
+colecci(cid:243)n {m}r∈[0,+∞) estÆ estrictamente con- que f(N ) ≠ f(N ), entonces [B ] = [B \A ] = 2d.
+r 1 2 M M M
+tenida en M .Obviamente, existen in(cid:222) nitos ele-
+M
+Demostraci(cid:243)n. Por ser [M]=d, resulta [℘(M)]=2d.
+mentos de F que no pertenecen a M . Luego,
+Al imponer la condici(cid:243)n
+M M
+∅⊂M ⊂F . De esta forma se da cumplimiento a
+M M
+parte de la subtarea 1.1. [M\N] ≥ 3 (i = 1,2) ,
+i
+Proposici(cid:243)n 5.1. Si M tiene mÆs de dos ele- estamos quitando de ℘(M) las colecciones
+mentos, entonces toda funci(cid:243)n real no negativa
+m de(cid:222) nida sobre M×M, que satisface la condi- A = {M\{ x }} x ∈ M y
+1
+ci(cid:243)n m y que cumple la desigualdad
+1 A = {M\{x}}(x,y)∈MxM, que tienen cardinalidad
+1
+d. Por tanto, si A = ℘(M)\(A ∪A ), se tiene [A]=2d.
+a≤m(x, y)≤2a, a>0, (2) 1 2
+Como a todo elemento N de A se asocia un ele-
+mento f de B \A , queda de(cid:222) nida una funci(cid:243)n
+para todo (x, y)∈MxM que no estØ en la diagonal,
+N M M
+inyectiva f de A en B \A y, como B \A ⊂F ,
+cumple la propiedad m .
+M M M M M
+3 se tiene que [B \A ]=2d y de aqu(cid:237) resulta que
+Demostraci(cid:243)n. Para cualquier subconjunto M M
+[B ]=2d.
+{x,y,z} de M se tiene que M
+Q.e.d.
+m(x,z) + m(z,y) ≥ a+a = 2a ≥ m(x, y).
+Corolario 5.2. Si se sustituye la condici(cid:243)n
+Si x=y, x=z o y=z, se tiene tambiØn trivial-
+mente la condici(cid:243)n m . [M\N] ≥ 3 (i=1,2),
+3 i
+Q.e.d.
+por la condici(cid:243)n [M\N] ≥ 2 (i =1,2) en la proposi-
+i
+Como la propiedad m es consecuencia de la ci(cid:243)n anterior, se obtiene el mismo resultado.
+4
+desigualdad (2), se obtiene el siguiente corolario.
+Demostraci(cid:243)n. Se obtiene sustituyendo A en
+Corolario 5.1. Si m es ademÆs simØtrica, en- la demostraci(cid:243)n de la proposici(cid:243)n anterior por
+tonces pertenece a M . A =℘(M)\A .
+M 1
+Con el objetivo de responder a la pregunta Q.e.d.
+sobre el cardinal de los conjuntos que estudia-
+En el caso de las colecciones M y F \M , si
+remos, denotemos por [A] al cardinal de un con- M M M
+consideramos A = {m}r > o, como [{m}] = c, de la
+junto A y por c al cardinal del continuo ([IR]= c). M r r
+proposici(cid:243)n 5.2 se deduce la siguiente:
+Se cumplen los siguientes resultados de carÆc-
+Proposici(cid:243)n 5.4. Si 1<[M]<∞; entonces
+ter general:
+Proposici(cid:243)n 5.2. Dados un conjunto (cid:222) nito [M ] = [F \M ] = c.
+M M M
+M y dos conceptos (A , C ) y (B , C ) tales que
+M A M B En el caso en que la cardinalidad de M sea in-
+A ⊂B ⊂F . Si [AM] = c y si se puede establecer
+M M M (cid:222) nita, asociemos a todos los N subconjuntos no
+una correspondencia uno a uno entre un sub-
+vac(cid:237)os de M la funci(cid:243)n de(cid:222) nida para r > 0 sobre
+conjunto no numerable de los nœmeros reales y
+M×M por
+un subconjunto de B \A , entonces [B ]=[B \
+M M M M {
+A ] = c. r (x = y)
+M
+Demostraci(cid:243)n. Se conoce que [F ] = c, por • m(N)=
+1 {x,y}⊂N (3)
+M r
+lo que [B ] = c, por ser siempre A ⊂B ⊂F y 2 {x,y}⊄N).
+M M M M
+[A ]=[F ]=c. Por otra parte, la correspondencia
+M M Esta funci(cid:243)n es una mØtrica sobre M si y solo
+uno a uno entre un subconjunto no numerable
+si r = 0, por ser simØtrica, cumplir la condici(cid:243)n
+de los nœmeros reales y un subconjunto de B \
+M m y satisfacen la condici(cid:243)n m por la proposici(cid:243)n
+A garantiza que [B \A ] = c.
+1 3
+M M M 5.1, ya que 1 ≤ m (x,y) ≤ 2 para todo (x, y) que no
+Q.e.d. N
+estÆ en la diagonal de M×M. Si N ≠N son sub-
+Proposici(cid:243)n 5.3. Dados un conjunto in(cid:222) nito 1 2
+conjuntos de M con mÆs de dos elementos cada
+M con [M]=d y dos conceptos (A ,C ) y (B ,C ) ta-
+M A M B
+uno; entonces m(N )≠m(N ), pues para x∈N \N e
+les que A
+M
+⊂B
+M
+⊂F
+M
+. Si dados dos subconjuntos
+y∈N resulta que m
+1
+(x,y)
+2
+≠m (x,y). Por lo t
+1
+ant
+2
+o,
+distintos N y N de M, tales que [M\N]≥3 (i=1,2), 1 N1 N2
+se cumple la siguiente proposici(cid:243)n:
+1 2 i
+32 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Proposici(cid:243)n 5.5. Si M es in(cid:222) nito, [M ]=d; en- sobre [0,r] por ser f creciente. Como f cumple la
+M
+tonces [M ]=[F \M ]= 2d. condici(cid:243)n iii) se tiene que f se anula sobre [0,2r].
+M M M
+Demostraci(cid:243)n. Aplicando la proposici(cid:243)n 5.3 Continuando en esta forma se tiene que f es
+a las combinaciones de conjuntos A {m(N)}r>0, idØnticamente nula. Luego la suposici(cid:243)n es fal-
+M r
+B =M y A =M , B =F se deduce respectiva- sa y, consecuentemente si f(x)=0 entonces x=0.
+M M M M M M
+mente [M ]= 2d y [F \M ]= 2d.
+M M M Q.e.d.
+Q.e.d.
+Proposici(cid:243)n 5.6. Si M es un conjunto no vac(cid:237)o
+Con las proposiciones 5.4 y 5.5 se da cum- y m es un elemento de M ; entonces
+M
+plimiento a otras de las actividades de la sub-
+tarea 1.1. fom ∈M para todo f∈A.
+M
+Estos resultados permiten concluir que si Demostraci(cid:243)n. Obviamente fom∈F . Esta fun-
+M
+un conjunto M tiene mÆs de un elemento, en- ci(cid:243)n cumple las condiciones m , m , m y m por
+1 2 3 4
+tonces el nœmero de elementos de F que son ser m una mØtrica sobre M y por cumplir f la
+M
+mØtricas sobre M es muy (cid:147)grande(cid:148), mayor que condici(cid:243)n i), ser una funci(cid:243)n, satisfacer las con-
+el nœmero de elementos de M y, tan (cid:147)grande(cid:148) diciones ii) e iii), y cumplir la condici(cid:243)n iv) res-
+como el nœmero de elementos de F que no son pectivamente.
+M
+mØtricas. Sin embargo, resulta dif(cid:237)cil encontrar
+Q.e.d.
+una mØtrica con determinadas propiedades so-
+DespuØs que se ha formado un concepto, una
+bre un conjunto dado M, cuando no se dispone
+de las tareas fundamentales que debe realizarse
+de herramientas para ello. Estas conclusiones
+es la de ampliar la colecci(cid:243)n de elementos cono-
+compulsan al estudio de mØtodos para obtener
+cidos de su extensi(cid:243)n. La proposici(cid:243)n 5.6 per-
+nuevos elementos de M a partir de uno dado.
+M mite ampliar la colecci(cid:243)n C de elementos co-
+Con este objetivo se considera la colecci(cid:243)n A de M
+nocidos de M a la colecci(cid:243)n ∪A , m∈C , donde
+las funciones continuas de [0,+∞) en s(cid:237) mismo M m M
+A =∪{fom : f∈A}. Con esta proposici(cid:243)n se reduce
+no idØnticamente nulas que satisfacen las con- m
+el problema de la ampliaci(cid:243)n de C al problema
+diciones M
+mÆs sencillo de ampliar la clase de las funciones
+i) f (0) = 0,
+continuas conocidas de [0,+∞) en s(cid:237) mismo, no
+ii) f es creciente, idØnticamente nulas y que satisfacen las condi-
+iii) f(x+y) ≤ f(x) + f(y) para todo x,y∈[0,+∞). ciones i)-iv).
+La colecci(cid:243)n A es: Las condiciones impuestas a los elementos f
+de A son su(cid:222) cientes, pero no necesarias, para
+a) No vac(cid:237)a. En efecto, son elementos de A
+que dado un elemento m de M se cumpla que
+las funciones f , i =1,2,3 de(cid:222) nidas sobre M
+i fom pertenezca a M . A continuaci(cid:243)n se analizan
+[0,∞) por f (t) = t/(t+1), f (t) = log (1+t) y f (t) M
+1 2 3 cuÆles de estas condiciones son necesarias:
+= min(r,f) con r ∈[0,+∞) y f ∈A.
+La condici(cid:243)n de ser f no idØnticamente nula
+b) Un semigrupo que no es un monoide con la
+es necesaria, ya que si se supone lo contrario y
+suma usual, y con la composici(cid:243)n de fun-
+M tiene mÆs de un elemento, entonces fom in-
+ciones respectivamente [Med1999].
+cumple la condici(cid:243)n m . La condici(cid:243)n i) tambiØn
+Se tiene ademÆs que si f∈A, entonces αf∈A 4
+es necesaria, pues si se supone lo contrario, en-
+para todo nœmero real α>0. Por tanto, cualquier
+tonces fom incumple la condici(cid:243)n m . La funci(cid:243)n
+combinaci(cid:243)n lineal (cid:222) nita con escalares positivos 1
+de(cid:222) nida sobre [0,+∞) por
+n
+α, ∑ α g {
+i i i
+(i=1)
+y toda composici(cid:243)n (cid:222) nita g o(cid:133)o g de elementos f(x) = (0≅x≅1+
+n 1
+g de A, pertenecen a la colecci(cid:243)n A.
+i
+Lema 5.1. Todo elemento f de A satisface la
+condici(cid:243)n: Si f(x) = 0, entonces x = 0. donde 1<λ≤2,es decreciente para x>λ. Si m es
+Demostraci(cid:243)n. Supongamos que existe un nœ- una mØtrica con imagen en [1,+∞) para todo (x, y)
+mero real r>0 tal que f(r)=0; entonces f se anula que no estÆ en la diagonal de M×M; entonces
+REVISTA CIENCIAS MATEM`TICAS 33
+fom es tambiØn una mØtrica, pues evidentemen- m y se denomina propiedad de no negatividad.
+5
+te cumple m , m y m , y cumple m por tomar Trivialmente se prueba que la colecci(cid:243)n P ={m ,
+1 2 4 3 1 2
+valores entre 1 y 2 para todo (x,y) que no estÆ en m y m } es una caracterizaci(cid:243)n del concepto de
+3 5
+la diagonal de M×M. Luego la condici(cid:243)n ii) no es mØtrica.
+necesaria. La funci(cid:243)n f de(cid:222) nida sobre [0,+∞) por
+Lindenbaum [Lind1926] prob(cid:243) que la colec-
+f(x)=x2 incumple la condici(cid:243)n iii) y, sin embargo,
+ci(cid:243)n de condiciones C ={m, i=1:4}, de la de(cid:222) -
+para toda mØtrica m tal que m(x,y)∈[1,√2] para 1 i
+nici(cid:243)n de mØtrica es equivalente a la colecci(cid:243)n
+todo (x, y) que no estÆ en la diagonal de M×M, se
+P ={m ,m , m }, donde por m se indica la pro-
+tiene que fom∈M . 2 1 23 4 23
+M piedad m(x,y)≤m(z,x) + m(z,y), para x, y, z cua-
+Los elementos de la colecci(cid:243)n de mØtricas que lesquiera de M. En efecto, considerando z=y
+se construy(cid:243) para demostrar la proposici(cid:243)n 5.5
+en la condici(cid:243)n m resulta la desigualdad m(x,
+23
+tienen caracter(cid:237)sticas singulares que permiten
+y)≤m(y, x) y cambiando los roles de x e y en
+dar cumplimiento a otra de las actividades de la
+la condici(cid:243)n m y haciendo z=x se obtiene la
+subtarea 1.1. La proposici(cid:243)n 5.6 facilita la cons- 23
+desigualdad m(y, x)≤m(x, y). De estas dos des-
+trucci(cid:243)n de elementos singulares de M .
+M igualdades se obtiene la condici(cid:243)n m . De la
+2
+Proposici(cid:243)n 5.7. En todo espacio mØtrico condici(cid:243)n m y m resulta la propiedad m . La
+2 23 3
+(M, m), donde [M]>2 y m≠m , existen tres ele- demostraci(cid:243)n de la implicaci(cid:243)n C ⇒P es inme-
+o 1 2
+mentos a, b y c tales que m(a,b)≠m(a,c)+m(c,b). diata. Luego, la colecci(cid:243)n P es una caracteriza-
+2
+Demostraci(cid:243)n. Supongamos que para tres ele- ci(cid:243)n del concepto de mØtrica.Se muestra de esta
+mentos x, y, zdiferentes cualesquiera se cumple forma un ejemplo de aplicaci(cid:243)n de la tarea 1 del
+que: ep(cid:237)grafe 2.2.
+m(x,y) = m(x,z) + m(c,y), (5) La colecci(cid:243)n P ={m , m }, donde por m se
+3 14 23 14
+indica la propiedad m(x, y)=0 si, y solo si, x=y, es
+m(x,z) = m(x,y) + m(y,z), (6)
+otra caracterizaci(cid:243)n del concepto de mØtrica. Si
+se plantean la desigualdad triangular y la pro-
+m(y,z) = m(y,x) + m(x,z). (7)
+piedad m solo para los casos en que x, y, z son
+23
+Restando ordenadamente las igualdades (5) diferentes dos a dos y se indican estas nuevas
+y (6), y simpli(cid:222) cando, resulta que m(x,y)=m(x,z). propiedades por m(cid:146) y m(cid:146) entonces las coleccio-
+3 23
+De esta igualdad y de la igualdad (5) se tiene que nes P = {m , m(cid:146) , m }, P = {m , m , m(cid:146) , m }, P ={m ,
+4 2 3 5 5 1 2 3 4 6 1
+m(z,y)=0. Realizando las mismas acciones con m(cid:146) , m } y P ={m , m(cid:146) } son caracterizaciones
+23 4 7 14 23
+las igualdades (5) y (7) y teniendo en cuenta que del concepto de mØtrica. Los ejemplos P, i=3:7,
+i
+m(z,y)=0, se obtiene que m(x,y)=m(y,z))=0. De esta se puede utilizar para dar cumplimiento a las
+œltima igualdad y de la igualdad m(x,y)=m(x,z), tareas de la 1 a la 5 del ep(cid:237)grafe 2.2.
+obtenemos m(x,y)= m(x,z)=m(y,z)=0. De aqu(cid:237) se
+La no negatividad de m es una consecuen-
+concluye que m=mo, lo que escontrario a una
+cia de las condiciones m y m . En efecto, m
+de las hip(cid:243)tesis. Por tanto nuestra suposici(cid:243)n 2 3 3
+nos permite asegurar que para todo y de M se
+es falsa.
+cumple que m(x, y) ≤ m(x, y) + m(y,y). De esta
+Q.e.d.
+desigualdad resulta trivialmente que m(y, y)≥0
+El conjunto [0,+∞) con la operaci(cid:243)n adici(cid:243)n para todo y de M. De las propiedades m y m se
+2 3
+es un semigrupo conmutativo que no es un gru- tiene, para x e y cualesquiera de M, que m(x,
+po. Esta estructura la hereda M . Para todo nœ- x)≤2m(x,y). Luego, por ser m(x, x)≥0, se obtie-
+M
+mero real positivo α y todo m de M se cumple ne que m(x,y)≥0 para todo x,y∈M. Consecuen-
+M
+que ∝m ∈M . Estos resultados corresponden a temente, se obtienen siete caracterizaciones del
+M
+la subtarea 1.5. concepto de mØtrica m sobre M considerando
+una funci(cid:243)n de MxM en R que cumple cuales-
+6. CARACTERIZACIONES quiera de las colecciones de propiedades C , P,
+1 i
+DEL CONCEPTO DE M(cid:201)TRICA i =1:7. Estas siete caracterizaciones del concep-
+to de mØtrica se pueden utilizar para dar cum-
+Para todo elemento f de F , la propiedad, f(x,y)>0 plimiento a la tarea 6 de la secci(cid:243)n 2.2.
+M
+si, y solo si, x≠y, para todo x,y∈M, se indica por
+34 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+7. GENERALIZACIONES DEL CONCEPTO coincide con la de(cid:222) nida en (8) con r =s, r =t, r =
+3 4 1
+DE M(cid:201)TRICA r =k que cumple las propiedades m , m y m ,
+2 2 3 4
+pero no cumple m .
+1
+En esta secci(cid:243)n se estudian las cuatro genera-
+lizaciones del concepto de mØtrica que se obtie-
+7.1. El concepto de pseudomØtrica
+nen eliminando una sola de las propiedades de
+su contenido. Se obtienen los cuatro espacios
+Un elemento p de F que satisface las condi-
+(X, f), donde X es un conjunto y f es una funci(cid:243)n M
+ciones m, (i=1:3), se denomina pseudomØtri-
+real no negativa de(cid:222) nida sobre X×X, que satis-
+ca sobre M
+i
+y el par (M, p) se denomina espacio
+face uno de los cuatro conjuntos de propiedades
+pseudomØtrico. La extensi(cid:243)n del concepto de
+{m} , j∈N , donde N ={1, 2, 3, 4}, N =N\{j}
+pseudomØtrica se indica por P .
+y j∈
+i
+N
+i∈N
+.
+4j 4 4 4j
+M
+4 Si M tiene tres o mÆs elementos entonces
+N(cid:243)tese que si M=∅, y G es la extensi(cid:243)n de
+∅⊂M ⊂P ⊂F . En efecto,si M={a,b,c},toda fun-
+M
+una generalizaci(cid:243)n del concepto de mØtrica M M M
+ci(cid:243)n pr:M×M→[0,+∞), tal que r>0 y
+con contenido N para j=1,(cid:133),4, entonces es
+4j
+M =G =F ={∅}. As(cid:237) mismo, si M={a}, se tiene que pr(x,x)=pr(a,b)=pr(b,a)=0 si x∈M, (11)
+M M M
+M =G ={0}⊂F . Por ello solo resulta de interØs
+M M M
+estudiar estas generalizaciones del concepto de pr(a,c)= pr(c,a)= pr(c,b)= pr(b,c)=r, (12)
+mØtrica para conjuntos M con mÆs de un ele-
+pertenece a P /M . Note que en este caso se ha
+mento. M M
+obtenido una colecci(cid:243)n de elementos de P /M
+En el caso en que M tiene dos elementos; es M M
+que estÆ en correspondencia uno a uno con el
+decir, M = {a,b}, el anÆlisis depende de que las
+conjunto (no numerable) de los nœmeros reales
+propiedades m y m formen o no parte del con-
+1 2 positivos. Entonces la proposici(cid:243)n 5.2 garantiza
+tenido de la generalizaci(cid:243)n del concepto. En ge-
+que [P ]=[P \M ]=c, si 2<[M]<∞.
+neral se tendrÆ que G ={m │r ≥ 0, i =1:4}, M M M
+M r1 r2 r3 r4 i En el caso general, sea M un conjunto ((cid:222) ni-
+donde
+to o in(cid:222) nito) con mÆs de tres elementos y N un
+m (a,b) = r , m (b,a) = subconjunto de M, tal que [M\N]≥2.
+r1 r2 r3 r4 1 r1 r2 r3 r4
+= r , m (a,a) = r, m (b,b) = r . (8) Sean x , y ∈M\N, x ≠y , y sea p la funci(cid:243)n
+2 r1 r2 r3 r4 r1 r2 r3 r4 4 0 0 0 0 N
+de(cid:222) nida sobre M×M para r>1por
+Si se cumple m y m , se observa fÆcilmen-
+1 2
+te que tiene que ser r = r = 0 y r = r = r, de
+3 4 1 2 {
+donde m ,=m y M = {m, r>0} = G ⊂F , para 1 x ≠ y {x, y}⊂N
+rr00 r M r M M
+las funciones m de (1),por lo que G no es una p (x, y) = r x ≠ y, ⊄N,(x, y)∉{(x , y ),(y , x )}.
+generalizaci(cid:243)n d
+r
+e M . Ello no suce
+M
+de si no se
+Nr 0 0 0 0
+0 en otro caso
+M (13)
+cumple m , pues en ese caso se puede de(cid:222) nir la
+2
+funci(cid:243)n
+Esta funci(cid:243)n no es mØtrica, pues p (x , y )=0.
+{ N 0 0
+0 x = y Las propiedades m y m se comprueban fÆcil-
+1 2
+q = (x, y) r (x, y) = (a, b), 0<k ≠r (9) mente; si p (x, y)=r, para todo z∈M se tiene que
+kr N
+k (x, y) = (b, a) p (x, z)=r o p (z, y)=r, mientras que si p(x, y)=1,
+N N r
+es p (x, z)+ p (z, y) =1 o 2r para todo z∈M, por lo
+N N
+FÆcilmente se comprueba que esta funci(cid:243)n que se cumple m y p es entonces una pseudo-
+3 N
+coincide con la de(cid:222) nida en (8) con r =r =0 y r =r mØtrica. Si consideramos ahora las funciones
+3 4 1
+y r =k y cumple las propiedades m , m y m , p y p del tipo (13) para dos conjuntos N ≠N
+2 1 3 4 N1 N2 1 2
+pero no cumple m . Tampoco sucede si no se tales que [M\N ]≥2 y [M\N ] ≥2. Obviamente es
+2 1 2
+cumple m , pues la funci(cid:243)n p ≠p y la proposici(cid:243)n 5.3 garantiza que si
+1 N1 N2
+M es un conjunto in(cid:222) nito con [M]=d, entonces
+{
+s (x, y) = (a, b) [P ]=[P \M ]=2d.
+M M M
+ϕ = (x, y) t (x, y) = (b, b), 0 < s, t ≤ 2r (10) Los espacios pseudomØtricos fueron investi-
+rst
+r (x ≠y) gados por Birkhoff [Birk 1936].
+REVISTA CIENCIAS MATEM`TICAS 35
+7.2. El concepto de semimØtrica fom (x,y) > fom (x,z) + fomN(z,y) ,
+N N
+Un elemento s de F que satisface las condicio- lo que indica que fom no cumple la propiedad
+M N
+nes m , m y m de la de(cid:222) nici(cid:243)n de mØtrica se m . Si consideramos ahora dos subconjuntos di-
+1 2 4 3
+denomina semimØtrica sobre M. La extensi(cid:243)n ferentes N y N de M con [M\N ]≥2 y [M\N ] ≥2 y
+1 2 1 2
+del concepto de semimØtrica sobre un conjunto sean las semimØtricas sobre M del tipo anterior
+M se indica por S . Todo par (M,s), donde M es correspondientes fom y fom las, entonces
+M N1 N2
+un conjunto con mÆs de dos elementos y s es ellas son diferentes, ya que si x∈N \N e y∈N ,
+1 2 1
+una semimØtrica sobre M se denomina espacio entonces
+semimØtrico.
+fom (x,y)=f(1)=5 y fom (x,y)=f(2)=1.
+Si [M]=2, como el concepto de semimØtrica 1 2
+satisface las propiedades m y m , se tiene que La proposici(cid:243)n 5.3 garantiza entonces que
+1 2
+S =M . Sea M un conjunto con mÆs de dos ele- si M es un conjunto in(cid:222) nito con [M]=d, enton-
+M M
+mentos y sean a y b dos elementos diferentes de ces [S ]=[S \M ]=2d. Si M es un conjunto in-
+M M M
+M, entonces la proposici(cid:243)n 5.1 garantiza que la (cid:222) nito, entonces se cumplen las inclusiones
+colecci(cid:243)n de funciones sα, α>0, de(cid:222) nidas sobre ∅⊂M ⊂S ⊂F y P ∩S =M . Como (P \S )⊂(F \S )
+M M M M M M M M M M
+M×M por y [PM\SM]=2d, se tiene que [F \S ]=2d.De igual
+M M
+forma, como (S \P )⊂(F \S ) y [S \P ]=2d, se
+M M M M M M
+{ tiene que [F \P ]=2d.
+0 x=y M M
+Se concluye que sobre un conjunto M con tres
+p (x, y) = ∝ (x, y) ∈{(a, b)}y x ≠ y. (14)
+∝ o mÆs elementos las colecciones de las semimØ-
+2∝ en otro caso
+tricas que no son mØtricas y de las funciones que
+no son semimØtricas son ampl(cid:237)simas. Los or(cid:237)ge-
+es una colecci(cid:243)n de mØtricas sobre M. Conside-
+nes de la palabra semimØtrica pueden verse en
+rando ahora una funci(cid:243)n f de(cid:222) nida en [0,+∞) con
+[Men1927, Men1931, Men1931a, Chit1917].
+valores no negativos, que cumpla que f (0)=0,
+α
+f (α)=4α y f (2α)=α, resulta sencillo comprobar
+α α 7.3. El concepto de quasimØtrica
+que la composici(cid:243)n f os es una semimØtrica que
+α α
+no es mØtrica.
+Una quasimØtrica sobre un conjunto M es un
+De manera anÆloga a la generalizaci(cid:243)n del elemento de F que satisface las condiciones, m ,
+M 1
+ep(cid:237)grafe anterior, se ha obtenido aqu(cid:237) una m y m [Steen1995]. La extensi(cid:243)n del concepto
+3 4
+colecci(cid:243)n de elementos de S /M que estÆ en de quasimØtrica sobre M se indica por Q . El par
+M M M
+correspondencia uno a uno con el conjunto (no (M,q), donde M es un conjunto con al menos dos
+numerable) de los nœmeros reales positivos. En- elementos y q es una quasimØtrica sobre M se
+tonces la proposici(cid:243)n 5.2 permite a(cid:222) rmar que denomina espacio quasimØtrico.
+[S ]=[S \M ]=c, si 2<[M]<∞.
+M M M Las funciones de(cid:222) nidas en (9) nos muestran
+El conjunto F /S contiene a la colecci(cid:243)n de una colecci(cid:243)n de elementos de Q /M que estÆ
+M M M M
+las funciones constantes, por lo que tambiØn en correspondencia uno a uno con el conjunto
+es [F \S ]=c. En este caso se cumple la cade- (no numerable) de los nœmeros reales positivos
+M M
+na de inclusiones ∅⊂M ⊂S ⊂F y la igualdad en el caso en que [M]≥2. Entonces la proposici(cid:243)n
+M M M
+P ∩S =M . 5.2 garantiza que en ese caso es [Q ]=[Q \M ]=c
+M M M M M M
+Otro ejemplo de utilidad para determinar la y en general se cumple:
+cardinalidad de S cuando M es in(cid:222) nito, se cons- Proposici(cid:243)n 7.1. Si [M]=2, entonces
+M
+truye a partir de la mØtrica (3) presentada en la
+M ={m, r>0}=P ⊂Q ⊂F y si 2<[M]<∞,
+proposici(cid:243)n 5.5, en composici(cid:243)n con una funci(cid:243)n M r M M M
+f de [0,+∞) en s(cid:237) mismo que cumpla que f(0)=0, entonces ∅⊂M ⊂Q ⊂F y P ∩Q =M .
+M M M M M M
+f(1)=5 y f(x)=1 si x∉{0,1}.La composici(cid:243)n fom es Otro ejemplo de utilidad para determinar la
+N
+una semimØtrica sobre M que no es mØtrica. En cardinalidad cuando M es in(cid:222) nito, se construye
+efecto, de las de(cid:222) niciones de f y m se prueba del siguiente modo: Sea N un subconjunto de M,
+N
+que la funci(cid:243)n fom satisface las propiedades tal que [M\N]≥2, y sean x ,y ∈M\N con x ≠y . Se
+N 0 0 o o
+m , m y m . Si x≠y, x,y∈N, z∉N se tiene que de(cid:222) ne sobre M×M la funci(cid:243)n q por
+1 2 4 N
+36 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+{ {
+0 x = y 0 x = y
+1 {x, y}⊂N r (x, y)=(x , y ). (16)
+q
+N
+(x, y) = 3/2 (x, y)=(x
+0
+, y
+0
+). (15) ϕ
+r
+(x, y) =
+2r en otro
+0
+cas
+0
+o
+2 en otro caso
+las cuales cumplen las propiedades m , m y m ,
+1 3 4
+pero incumplen m . Entonces tambiØn es [F \
+La funci(cid:243)n q cumple las propiedades m y
+2 M
+N 1 S ]=ℵ. En este caso se cumple ∅⊂M ⊂I ⊂F y
+m por de(cid:222) nici(cid:243)n y la propiedad m por la pro-
+M M M M
+4 3 la igualdad Q ∩I =P ∩I =S ∩I =M .
+posici(cid:243)n 5.1. Sin embargo, no es simØtrica por-
+M M M M M M M
+que q (x ,y )=3/2 y q (y ,x )=2. Se concluye que En el caso en que M es in(cid:222) nito, sea N un sub-
+N 0 0 N 0 0
+q ∈Q /M . Si N y N son dos subconjuntos di- conjunto de M, tal que M\N={x , y }. Se de(cid:222) ne
+N M M 1 2 0 0
+ferentes de M con [M\N ]≥2 y [M\N ]≥2, enton- sobre M×M la funci(cid:243)n ϕ por
+1 2 N
+ces las funciones q y q son diferentes, pues
+N1 N2
+para x∈N \N e y∈N , resulta que q (x,y)≠q {
+1 2 2 N1 N2
+1 {x, y}⊂N
+(x,y). La proposici(cid:243)n 5.3 garantiza entonces que
+ϕ (x, y) = 2 {x, y}={x , y }. (17)
+si M es un conjunto in(cid:222) nito con [M]=d, entonces N 0 0
+3 en otro caso
+[Q ]=[Q \M ]=2d. Se cumple que [F \Q ]=2d, por
+M M M M M
+ser (S \M )⊂(F \Q ) y [S \M ]=2d.
+M M M M M M
+Para todo conjunto M con mÆs de dos elemen- Es obvio que la funci(cid:243)n ϕ cumple las propie-
+N
+tos se cumple que P ∩Q =S ∩Q =M . dades m y m . La propiedad m se comprueba
+M M M M M 2 4 3
+Algunos resultados interesantes sobre las fÆcilmente analizando los casos posibles. Sin
+quasimØtricas se pueden encontrar, por ejem- embargo, ϕ no es mØtrica porque ϕ (x ,x )≠0.
+N N 0 0
+plo, en [Rom1999, Rod2005]. Fue Wilson, W. A. Entonces ϕ ∈I /M . Si N y N son dos subcon-
+N M M 1 2
+[Wils 1931], quien introdujo el tØrmino de quasi- juntos diferentes de M con [M\N ]=2 y [M\N ] =2,
+1 2
+metric spaces y determin(cid:243) propiedades de estos entonces las funciones ϕ y ϕ son diferentes,
+N1 N2
+espacios y relaciones con los espacios mØtricos pues para x∈N \N e y∈ N ∩N , resulta que 1 =
+1 2 1 2
+y topol(cid:243)gicos. ϕ (x,y)≠. La proposici(cid:243)n 5.3 garantiza entonces
+N1
+que si M es un conjunto in(cid:222) nito con [M]=d, en-
+tonces [I ]=[I \M ]=2d.
+7.4 El concepto de mØtrica sin identidad M M M
+Una mØtrica sin identidad sobre un conjunto M 7.5 CONCLUSIONES
+es un elemento de F que satisface las condi-
+M A modo de conclusiones se muestran los mapas
+ciones m , m y m . La extensi(cid:243)n del concepto
+2 3 4 de extensiones, simb(cid:243)licos y de cardinalidades
+de mØtrica sin identidad sobre M se indica por
+de las mØtricas y sus generalizaciones.
+I . Todo par (M,ϕ), donde M es un conjunto con
+M
+mÆs de dos elementos y ϕ es una mØtrica sin
+MAPAS SIMB(cid:211)LICOS
+identidad sobre M se denomina espacio mØtrico
+sin identidad. ● CASO [M]=2:
+Las funciones de(cid:222) nidas en (10) nos muestran
+P =S =M , I ∩Q =M ,
+M M M M M M
+que cuando M={a,b}, se cumple la cadena de ∅⊂F \(I ∪Q )⊂F , I \M ≠∅, QM\IM≠∅
+M M M M M M
+inclusiones M ={m; r>0}=P ⊂I ⊂F . Si M es un
+M r M M M No existen los conceptos P y S .
+conjunto con mÆs de dos elementos, es eviden- M M
+te que las funciones constantes no nulas cons- ● CASO [M]>2:
+tituyen una colecci(cid:243)n de elementos de I /M I ∩P ∩Q ∩S = M , F (I ∪P ∪Q ∪S )≠∅,
+M M M M M M M M M M M M
+que estÆ en correspondencia uno a uno con el
+I \M ≠∅, P \I ≠∅, Q \M ≠∅, S \M ≠∅,
+M M M M M M M M
+conjunto (no numerable) de los nœmeros reales
+positivos. Entonces la proposici(cid:243)n 5.2 garantiza MAPAS DE CARDINALIDADES
+que [I ]=[I \M ]=c, si 2<[M]<∞.
+M M M ● CASO [M]=2:
+El conjunto F /I contiene a la colecci(cid:243)n de
+M M [M ]= [I \M ]= [Q \M ]= [F \(I ∪Q )]=ℵ.
+las funciones ϕ de(cid:222) nidas para r>0 y x ≠y por M M M M M M M M
+r 0 0
+REVISTA CIENCIAS MATEM`TICAS 37
+● CASO [M]>2: [Brum1980] Brum(cid:222) el, C. (1980). (cid:147)Teaching the ab-
+solute value function(cid:148), Mathematics Teacher, 73
+[M ]= [I \M ]= [P \M ]= [Q \M ]= [S \M ]
+M M M M M M M M M January 24-30. USA.
+{
+[Brun2005] Bruning, R. H. y otros. (2005). (cid:147)Psicolo-
+c [M]<∞
+= [F \(I ∪P ∪Q ∪S )]= g(cid:237)a cognitiva y de la instrucci(cid:243)n(cid:148). 4ta edici(cid:243)n. Pear-
+M M M M M 2d [M]=d,d in(cid:222) nito
+son Educaci(cid:243)n, S. A. Madrid. Printice Hall. ISBN. 84-
+205-4346-2
+MAPAS DE EXTENSIONES
+[Chit1917] Chittenden, W. (1917). On the Equivalen-
+● Para [M]=2 la colecci(cid:243)n ce of Ecart and Voisinage. Transactions of American
+Mathematical Society. Vol. 18, No. 2, pp. 161-166.
+{F \(I ∪Q ), I \M , Q \M , M } (18)
+M M M M M M M M [Lind 1926] Lindenbaum,A. (1926). Contributions (cid:224)
+ľetude de ľespace mØtrique. I, Fundamenta Mathe-
+es una partici(cid:243)n de F (ver (cid:222) gura 2a).
+M maticae, Vol. 8, pp 209-222.
+● Para [M]>2 la colecci(cid:243)n
+[Mar2003] Mart(cid:237)nez, A. (2003). Procedimiento meto-
+{F \(I ∪P ∪Q ∪S ), I \M ,P \M , dol(cid:243)gico para la generalizaci(cid:243)n de conceptos de los
+M M M M M M M M M temas Dominio NumØrico y Series en la Educaci(cid:243)n
+Q \M , S \M , M } (19)
+M M M M M Superior. Tesis doctoral. Departamento de Mate-
+mÆticas. Facultad de matemÆtica, F(cid:237)sica y Compu-
+es una partici(cid:243)n de F (ver (cid:222) gura 2b).
+M taci(cid:243)n. Universidad Central, (cid:147)Marta Abreu(cid:148), Santa
+Por tanto, las generalizaciones I , Q si [M]=2 Clara. Cuba.
+M M
+e I ,P ,Q ,S si [M]>2 del concepto de mØtrica [Med1988] Mederos, O.B. y Mart(cid:237)nez, M.A. (1988).
+M M M M
+M , junto con M generan una clasi(cid:222) caci(cid:243)n del Clasi(cid:222) caci(cid:243)n de las funciones elementales. Revista
+M M
+concepto de F , que estÆ formada por los con- Cubana de Educaci(cid:243)n Superior. Vol. VIII, No. 3.
+M
+ceptos que tienen por extensi(cid:243)n cada uno de los [Med1997] Mederos, O. B. y Mart(cid:237)nez, A. (1997). Las
+conjuntos de las colecciones (18) y (19) respec- operaciones generalizaci(cid:243)n y restricci(cid:243)n de concep-
+tivamente. tos. Bolet(cid:237)n de MatemÆtica. Universidad Nacional de
+Colombia. Volumen IV, Numero 2.
+REFERENCIAS [Med1999] Mederos, O. B. y GonzÆlez, B. E. (1999).
+Una variante metodol(cid:243)gica parael estudio de los con-
+[Ahu1976] Ahuja, M. (1976). An approach to the ceptos a partir de una generalizaci(cid:243)n. Foro de la Revis-
+absolute value problems. Mathematics Teacher. 69. ta Electr(cid:243)nica del Departamento de MatemÆticas. Fa-
+USA. cultad de Ciencias, UNAM. FORO.RED-MAT, Vol. 9.
+[Aus2000] Ausubel, D. P., Novak J. D. y H. Hanesian. [Med2007] Mederos, O. B. y Ruiz, A. M. (2007). Apli-
+(2000). Psicolog(cid:237)a educativa. Un punto de vista cog- caci(cid:243)n de la operaci(cid:243)n clasi(cid:222) caci(cid:243)n de conceptos al es-
+noscitivo. Trillas, MØxico. tudio de los cuadrilÆteros convexos. Revista N(cid:218)MEROS.
+Nœmero 67, Ideas y recursos para el aula.
+[Birk1936] Birkhoff, G. (1936). On the combination
+of topologies. Fundamenta Mathematicae, Vol. 26, [Med2009] Mederos, O. B. Mederos, B. J. (2009). Los
+pp.156. ejemplos y contra ejemplos como herramientas para
+Q
+M
+P \M
+M M
+Q \M P = S = M I \M Q \M M S \M
+M M M M M M M M M M M M
+I \M
+M M
+I
+F \I ∪Q
+M M M M F \(I ∪P ∪Q ∪S
+M M M M M
+a) CASO: [M]=2 b) CASO: [M]>2
+Fig. 2. Mapas de las extensiones de mØtricas y sus generalizaciones
+en dependencia del nœmero de elementos de M.
+38 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+facilitar el proceso de generalizaci(cid:243)n conceptual. [Rod2005] Rodr(cid:237)guez-L(cid:243)pez, J., Romaguera, S. y
+Acta Latinoamericana de matemÆtica educativa. Sopena, A. (2005). Casi-mØtricas Difusas y Domi-
+Vol. 22. pp. 257-266. nios de computaci(cid:243)n. Invstigaci(cid:243)n (cid:222) nanciada por
+Generalitat Valenciana, mediante la ayuda GRU-
+[Men1927] Menger, K. (1927). Bemerkungen zur
+POS03/027.
+zweiten Untersuchung (cid:252)ber allgemeine Metrik. Proc.
+Amsterdam, Vol. 30, pp. 710-714 [Rom1999] Romanguera, S. y Schellekens, M. (1999).
+Quasi.metric properties of complexity spaces. Topo-
+[Men1931] Menger, K. (1931). Beitr(cid:228)ge zur Grup-
+logy Appl. Vol. 18. pp. 311-322.
+pentheory I. (cid:220)ber einen Abstand in Gruppen. Math.
+Zeitschrift, Vol. 33, pp. 396-418 [Sink1979] Sink, S. (1979) (cid:147)Understanding absolute
+value(cid:148). Mathematics Teacher 72, March. 191-95.
+[Men1931a] Menger, K.(1931). Bericht (cid:252)ber metris-
+che Geometrie. Jahresbericht der Deutschen Mathe- [Steen 1995] Steen L.A. y Seebach J.A. (1995) Coun-
+matiker-Vereinigung, Vol. 40. pp. 201-219 terexamples in Topology. Holt, Reinehart and Wins-
+ton Inc. New York. Pp. 34.
+[Pep1993] Peper, F. Shirazi, Mehdi y Nudihidiki, (1993).
+A noise suppressing Distance Measure for Competitive [Wils1931] Wilson, W.A. (1931). On quasi-Metric Spa-
+Learning Neural Networks IEEE Transactions on neu- ces. American Journal of Mathematics, vol. 53, No. 3,
+ral networks. Vol. 4 No. 1 January. 151-153. pp. 675-684.
+ABSTRACT: In this paper, two sets of necessary teaching tasks are proposed, according to the au-
+thors point of view, to engage students in learning the concepts of characterization and conceptual
+generalization, respectively. Fourteen characterizations and four generalizations (pseudometric,
+semimetric, quasi-metric and metric without identity) of the concept of metricsare built. They are
+constructed also collections of elements of the extensions of the concept of metrics and each of the
+generalizations, which are used to prove that if the cardinality [M] of the set M, on which are de(cid:222) ned
+the concepts of metric and generalizations, is (cid:222) nite (resp. in(cid:222) nite) then their cardinalities are 2[M]
+(resp. ℵ).

@@ -1,0 +1,526 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.37,No.1,2024,Pag.77-84
+Recibido(Received):28-08-2024,Revisado(Reviewed):19-11-2024
+Aceptado(Accepted):30-12-2024,Enlínea(Online):27-04-2025
+Modelación de la propagación de procesos de
+contagios influidos por la distancia de contacto
+Modeling the spread of contagious processes
+influenced by contact distance
+Dagoberto Acosta Iglesias1* , Miguel Enrique Iglesias Martínez2 , Milton Henry Perea3
+Resumen Lapropagacióndedisímilesenfermedadesenagrupacionesdepersonas,animalesoplantaspuede
+ocurrirdediversasformascomoelaire,elagua,contactofísico,vectores,fluidosdelosindividuos,entreotros.
+Algunasdeestasvíaspuedenestarvinculadasaladistanciaenlaqueserelacionanlosobjetosdecontagio.
+Enesoscasos,esposibleelaborarunmodelodepropagaciónbasadoenelmodelologístico,dondeseincluye
+unfactordedistanciaentreindividuos.Enesteartículoserealizaunapropuestademodeloparalapropagación
+ylarecuperacióndelosafectados,semuestrangráficasqueindicanunadistribucióndiariaysecomparael
+modeloconuncasoreal.
+PalabrasClave:contagiados,logístico,modelo.
+Abstract Thespreadofdifferentdiseasesingroupsofpeople,animalsorplantscanoccurinvariousways
+suchasair,water,physicalcontact,vectors,fluidsofindividuals,amongothers. Someofthesewayscanbe
+linkedtothedistanceinwhichtheobjectsofcontagionarerelated. Inthesecases,itispossibletodevelopa
+propagationmodelbasedonthelogisticmodel,whereafactorofdistancebetweenindividualsisincluded. In
+thisarticle,amodelproposalismadeforthespreadandrecoveryofthoseaffected,graphsindicatingadaily
+distributionareshown,andthemodeliscomparedwitharealcase.
+Keywords: infected,logistic,model.
+MathematicsSubjectClassification: 26,26-04,34,34-11.
+1FacultaddeCienciasdelaTierra,UniversidadEstatalAmazónica,Puyo,Ecuador.Email:dacosta@uea.edu.ec.
+2GrupodeModelizaciónInterdisciplinar,InterTech,InstitutoUniversitariodeMatemáticaPurayAplicada,UniversitatPolitècnicadeValència,
+España.Email:migueliglesias2010@gmail.com.
+3DepartamentodeMatemáticayFísica,UniversidadTecnológicadelChocóDiegoLuisCórdoba,Chocó,Colombia.Email:
+dmilton.perea@utch.edu.co.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Maquetadopor(Layoutby):MerlingSabaterRamírez,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,
+Cuba.
+Citarcomo: AcostaIglesias,D.,IglesiasMartínez,M.,&HenryPerea,M.(2024).Modelacióndelapropagación
+de procesos de contagios influidos por la distancia de contacto. Ciencias Matemáticas, 37(1), 77–84. DOI:
+https://doi.org/10.5281/zenodo.15292953.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/10043.
+Introducción comovariabledelestudioclínico[11,5].Portanto,durante
+laocurrenciadeunprocesodecontaminaciónconinfluencia
+Lapropagacióncomofenómenodevariablesfísicaspuede deladistancia,puedeestimarsesutrasmisióncontrolandola
+estarpresenteennumerososprocesosdelavidaprácticaen cercaníayutilizandomodelosdepredicción,basadosenla
+general, como mecanismo de caracterización de resultados ecuación logística [17, 21, 14, 7], utilizada en procesos de
+experimentales o estudios en disímiles ramas de la ciencia crecimientopoblacionalydebiomasa.
+[1,3,4,6,11,12,19,18,2].Enparticular,elfenómenode Unamanifestaciónactivadepropagacióndeunvirus,en
+propagacióndediferentesenfermedadesenagrupacionesde laquelaseparaciónadecuadaentrelosindividuosgeneraun
+personas,animalesoplantas,puedeocurrirdediversasformas efectoimportanteenelnocontagio,eslaqueseproducepor
+comoelaire,elagua,contactofísico,vectores,fluidosdelos elcoronavirus.Segúnseexpresaen[8,2,12],elcontagiopor
+individuos,entreotros. coronavirusesunapandemiaderivadadelaenfermedadpor
+Algunas de estas vías pueden estar vinculadas a la dis- coronavirusiniciadaen2019(COVID-19),ocasionadaporel
+tancia en la que se relacionan los objetos de contagio o al virusdelsíndromerespiratorioagudograve(SARS-CoV-2).
+movimientodelapersonaylamedicióndeestemovimiento
+78 Modelacióndelapropagacióndeprocesosdecontagiosinfluidosporladistanciadecontacto
+Larápidadiseminacióndelvirusylaconsecuenteenfer- 2. Ladistanciaentreindividuossegúnelfactor:
+medadrequierendelamayoratenciónydelabúsquedade
+d
+información que contribuya al control y atenuación de los 1− , (1)
+d
+efectosfatalesqueprovoca[10].Desdediferentespartesdel m
+mundoseinformaacercadeladeteccióndepersonasconta- donded m representaladistanciamínimadenocontagioyd
+giadasyseimplementanmedidasparaaislaralosindividuos esunparámetrodedistanciaqueseconsideraenelintervalo
+detectadosenespaciosadecuadosyaplicartratamientoalos [0,d m ].
+gruposdepersonasenfermasconuntipodeneumoníadesco- Según la primera consideración, en una agrupación de
+nocida. individuoslasubpoblacióndeinteréssería:
+Con fecha 17 de junio de 2020, la cifra de contagiados
+P−I(t), (2)
+y fallecidos alcanza 8 223 454 y 444 813, respectivamente
+[8,2].Aniveldecadapaístambiénsemuestrancifrasalar-
+dondePeslapoblaciónpotencialdepersonasoindividuosde
+mantes.Lasmedidasdeaislamientosocialparecenefectivas
+laqueunaparteessusceptibledecontagio,dadoquepuede
+yconservarunadistanciamínimadenocontagiopuedeser
+encontrarseenelrangodeladistanciadecontagioconotros
+oportunoensitiosdondelaconcurrenciaesinevitable.
+individuos,I(t)representalacantidaddecontagiadosenel
+Lostresprimeroscasosconfirmadosdelapandemia(en-
+tiempot.
+fermedadporcoronavirus)enCubafueronreportadosel11
+Alsustituir(2)enlaecuaciónlogísticaseobtiene:
+de marzo de 2020. Los reportes emitidos diariamente por
+las autoridades epidemiológicas del país señalan con deta- dI (cid:18) P−I(t) (cid:19)
+lle en qué medida se pesquisa y se controlan los casos de- =k(P−I(t)) 1− ,
+dt A
+tectados en situación de aislamiento. Pese a este rigor, las
+personascontagiadasalcanzan2995enfermosy85decesos dondeArepresentalacapacidaddesoportedelmedioque,en
+[3,4,9,15,16,20]. lascondicionesdeunproblemadepropagacióndeunaenfer-
+Enestetrabajosetomacomoreferencialainformación medad,puedeconsiderarsecomotodalapoblaciónexistente
+delprocesodelapandemiaenCubayseutilizaelmodelode (enalgunamedidadiferenteacomoseinterpretaenprocesos
+laecuaciónlogísticainterpretadoentérminos,primero,del decrecimientodebiomasa).Enestascondicionesresulta:
+procesodeinfeccióny,dependientedeeste,sehaceunase-
+dI k
+gundaformulaciónparaobtenerlascurvasdelosrecuperados. = I(t)(P−I(t)). (3)
+Apartirdelassolucioneslogísticasseconstruyendistribucio- dt P
+nesdefrecuenciadiariasdeinfectadosyrecuperados.Parala
+Si se asume el supuesto de que el contagio no ocurre a
+soluciónlogísticaderecuperación,sehatenidoencuentala
+másded metros,laecuación(3)sereescribecomo:
+m
+incidenciadelosfallecidos.
+(cid:18) (cid:19)
+dI d k
+= 1− I(t)(P−I(t)), (4)
+dt d P
+Relevancia del estudio m
+Enunprocesodecontagiodeterminadoporlacercanía cuya solución general es el conjunto infinito de funciones
+entreindividuos,lacantidaddeinfectadosaumentacuando biparamétricasen:
+disminuye la distancia a la que se relacionan, o no ocurre
+(cid:32) d (cid:33)
+contaminación si la separación entre estos es superior a la
+k 1− t
+distanciaenlaqueelvirussepropagaosobrevive.Elmodelo PCe d m
+I(t)= , (5)
+estimaeltiempoparaqueesacantidaddeindividuosresulte (cid:32) d (cid:33)
+infectadaylaocurrenciadelasmayoresafectaciones,dado k 1− d t
+1+Ce m
+que hay individuos enfermos en relaciones de cercanía en
+elrangodeladistanciadecontagio.Elestudiocontribuyea dondeCesunaconstantedeintegraciónykeslaconstante
+pronosticarestecomportamientoenelcontextodelosentes deproporcionalidad.
+biológicosquesonpartedeunapoblaciónpotencialdada,que Si se mide la cantidad de contagiados en dos instantes
+enuntiempodeterminadopermanecencercanosparaqueel sucesivos(seconsiderandías),nonecesariamenteconsecu-
+contagiopuedaocurrir. tivos,esdecir,ladiferenciaentrelasdosmedicionespuede
+sermayoraundía,yconsiderandoadicionalmentequelos
+pesquisados pueden encontrarse en relaciones de distancia
+1. Modelo de propagación considerando
+distintasycadamediciónincluyetiempo–distancia–cantidad
+el efecto del parámetro de distancia
+decontagiados,esposiblecalcularparalascondicionesex-
+Lavelocidaddepropagacióndependede: perimentalesdadaslosvaloresdeCydek.Lasmediciones
+propuestasseexpresandelaforma:
+1. Lacantidaddeindividuosnocontaminados,quepueden
+encontraseenelentornodeladistanciadecontagio. I(t ,d )=I ; I(t ,d )=I . (6)
+0 0 0 1 1 1
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.77-84 AcostaIglesias,D.,IglesiasMartínez,M.,&HenryPerea,M.
+https://revistas.uh.cu/rcm/article/view/10043 https://doi.org/10.5281/zenodo.15292953
+Modelacióndelapropagacióndeprocesosdecontagiosinfluidosporladistanciadecontacto 79
+Lascondiciones(6)alsersustituidasen(5)permitenen- Siseincluyeeltérminodedistanciadeaislamientoyun
+contrar las constantes propias del problema y, por tanto, la factordetiemponecesarioparalarecuperación,seobtiene
+soluciónparticularalmodelo,quefacilitasimularlapropaga- finalmente:
+ciónposibledelaenfermedad,influidaporeldistanciamiento dR(t) k (cid:18) d (cid:19)
+hasta dos metros o la distancia que las características del = 1 1− (t−t r )R(t)(I−R(t)−k 2 ). (13)
+dt I−k d
+2 m
+contagiodeterminen.
+Eltiempoenelqueserecuperaunindividuocontagiado
+Paraestepropósito,resultanlasecuaciones,
+serát .
+r
+(cid:32) d (cid:33) Lasolucióngeneralde(13)serálasiguiente:
+0
+1
+P
++
+C
+C
+e
+k
+e k
+(cid:32)
+1−
+1−
+d
+d
+m d
+m 0
+(cid:33)
+t0
+t0
+=I(t 0 ,d 0 )=I 0 , (7) R(t)= (I
+1
+−
++
+k
+C
+2 )
+e
+C
+k
+e
+1 (
+k
+1
+1
+−
+(1
+d
+−
+d m
+d
+)
+d m
+(t
+)
+−
+(
+2 t
+t
+r
+−
+)2
+2 tr)2 . (14)
+dondeC es una constante de integración y el parámetro k
+2
+(cid:32) d 1 (cid:33) cuantificalosdecesosypuedeformularseenlascondiciones
+k 1−
+d
+t1
+delproceso,apartirdealgunainformaciónquefaciliteuna
+PCe m
+(cid:32) d (cid:33) =I(t 1 ,d 1 )=I 1 . (8) tendenciadecomportamiento.Paralaejecucióndelmodelo
+1
+k 1−
+d
+t1 esta tendencia será considerada como lineal, basada en la
+1+Ce m cantidaddefallecidosendosmomentosdiferentes.Elfactor
+queacompañaal−k tiendealvalor1eneltiempo.
+Aldespejarken(8),dependientedeC,resulta: 2
+Para obtener las constantes k yC se procede similar a
+1
+(cid:18) I (cid:19) lorealizadoparalasfórmulas(9)y(10),dondeseconside-
+ln 1
+ran como datos iniciales el día en el consecutivo en que se
+C(P−I )
+k= (cid:18) (cid:19) 1 . (9) recuperanunoovariosindividuosaunadistanciadada,yel
+d
+1− 1 t 1 primerdíaenquesedetectanpersonascontagiadas.Paraeste
+d
+m díaenqueseidentificancontagios,seasumequenohayaun
+recuperados, ni individuos que fallecen; siempre para cual-
+Cuandosesustituye(9)en(7)yserealizanloscálculos
+quier distancia en el rango donde se mantienen durante el
+pertinentes,seencuentraelsiguientevalordeC:
+acercamiento–aislamiento, dado que la función que cuanti-
+(dm−d1)t1 ficalosrecuperadosdependedelafunciónquedescribelos
+I dm(t1−t0)+d0t0−d1t1 infectados.
+C= 0 . (10)
+(P−I 0 )dm(t1− (d t m 0) − + d d 1 0 ) t t 0 1 −d1t1 (cid:16) (P− I1 I1) (cid:17) dm(t1− (d t m 0) − + d d 0 0 ) t t 0 0 −d1t1 Enlascondic R i ( o t n
+0
+, e d s:
+0
+)=α; R(t
+r
+,d)=R
+r
+, (15)
+Eltérminod (t −t )+d t −d t puedesernulopara elvalordeαdebeconsiderarsesuficientementecercanoacero
+m 1 0 0 0 1 1
+ciertosvaloresdelasdistanciasd yd enelintervalo[0,d ], pues,aliniciodelproceso,noseconsideranindividuosrecupe-
+0 1 m
+aunqueenlascondicionesdelproblema,cualesquierasean rados,acercandoelplanteamientoalarealidaddelfenómeno,
+las mediciones de tiempo implicadas, ocurre que las medi- sinincidirenelcomportamientoasintóticodelasolución.Los
+das de distancia que producen el resultado nulo describen valoresdeRcorrespondenat 0 yat r ,respectivamente,queal
+circunstanciasdenopropagación. sersustituidasen(14),resultan:
+min U os n d a e ná lo li s si i s nf d e e ct l a o d s o r s ec m u e p n e o ra s d l o o s s p in u d ed iv e id p u la o n s te re a c rs u e pe e r n ad té o r s - R(t ,d )= (I 0 −k 2 +2α)C¯e k1 (cid:16) 1− d d m 0 (cid:17)(t0− 2 tr)2 =α, (16)
+y los que definitivamente no se recuperan o fallecen. Este 0 0 1+C¯e k1 (cid:16) 1− d d m 0 (cid:17)(t0− 2 tr)2
+procesoderestablecimientotienecomosoportemáximola
+cantidadtotaldecontaminadosdescontandolosquesalende R(t ,d)= C¯(I tr −k 2 ) =R . (17)
+lapoblaciónl−k
+2
+: r 1+C¯ r
+Aldespejarlaconstanteen(17),seobtiene:
+(cid:18) (cid:19)
+dR(t) I−R(t)−k
+=k (I−R(t)−k ) 1− 2 . (11) R
+dt 1 2 I−k
+2
+C= r . (18)
+I −R −k
+tr r 2
+Laecuaciónanterioressimilara(4)yseconsideraquese Cuandosesustituye(18)en(16)yseconsiderad ̸=d
+0 m
+conocelacantidaddeinfectadosI yfallecidosk 2 paracada (elcasocontrarionoesdeinterés),seobtienek 1 :
+instantedetiempo,comocapacidaddesoporte: (cid:16) (cid:17)
+ln
+α(Itr −Rr−k2)
+dR(t) = k 1 R(t)(I−R(t)−k 2 ). (12) k 1 = (cid:16) 1− Rr d ( 0 I0 (cid:17) −k ( 2 t + 0− α t ) r)2 . (19)
+dt I−k
+2
+dm 2
+AcostaIglesias,D.,IglesiasMartínez,M.,&HenryPerea,M. CienciasMatemáticas,Vol.37,No.1,2024,Pag.77-84
+https://doi.org/10.5281/zenodo.15292953 https://revistas.uh.cu/rcm/article/view/10043
+80 Modelacióndelapropagacióndeprocesosdecontagiosinfluidosporladistanciadecontacto
+Elvalorinicialdelaconstantek (individuosquenoper- decontagiados,enlamedidaqueaumentalaseparaciónentre
+2
+manecenenelprocesoporfallecimiento)enelcálculodek losindividuos.
+1
+escero,noasíenelcálculodeC,puesparadeterminareste ParalapoblacióndelaFigura1,manteniendolacondi-
+parámetro,seutilizainformaciónenuntiempoavanzadodel ción de que se aísla el 99,9% de los miembros, se asume
+proceso. quealdetectarlacontaminación,nohayrecuperadosyestos
+La diferencia entre las soluciones de las dos categorías ocurrenenunmomentoposterioreneldesarrollodelproceso.
+principales,infectados–recuperados,estaúltimaincluyelos EnlaFigura2seobservacómosecomportalacantidadde
+individuos que se pierden, muestra la relación ascendente– recuperados.
+descendente entre ambas. Es posible además mostrar una Paracontrolarlaevolucióndelosindividuosinfectados
+distribucióndelacantidaddecasosdiariosdeambascatego- eneltiemposeutilizacomopoblaciónlafracciónqueestá
+rías. expuesta al contagio, determinada previamente, y se evolu-
+cionaconsiderandonivelesglobalesdecercaníadesdecero
+2. Resultados hastadosmetros.Tambiénesposiblegeneraraleatoriamente
+losnivelesdecercaníaentrelosindividuosparaquepueda
+LasgráficasseobtienenenMatlabversión9.9(R2020b),
+reflejarelcomportamientodeunapoblaciónquesecomporta
+para las que se considera la fracción de una población que
+enunmedionatural.
+serelacionaendistanciasmenoresqueladecontagio.Para
+Seconsideraeláreadedesempeñodeformarectangulary
+detectarindividuosenestascondicionesdecercaníasecolo-
+conunasdimensionesconocidas,entresrelacionesdiferentes
+canaleatoriamentepuntossobreunrectánguloysedetermina
+de densidad poblacional: una cercana a la de la población
+cuántosestánsuficientementecerca.Posteriormente,segra-
+mundial,ajustadaa0,1%delosindividuos,unapoblación
+ficacadafuncióndecontagiosendiferentesdistanciasenel
+dedensidadmediayotradealtaconcentraciónpoblacional,
+rango[0;dm]yseevolucionaelmodeloconsiderandoquecasi
+tambiénenmarcadasparalamismacantidaddepobladores.
+todalapoblaciónenriesgodecontaminaciónseencuentraen
+cadaunodelos21((dm/h)+1)nivelesdedistanciasdiferen-
+3. Discusión
+tesconsiderados,dondeh=0,1eselpasoseleccionado.
+Unprocesosimilarserealizaparagraficarelcomporta- LasgráficasdelaFigura1seobtienenbajolaconsidera-
+mientodelosrecuperados,asociadoalasdistanciasenque ciónde,queresultaenelcasoparticularC= I 0 ,obtenido
+seprodujoelcontagio.Seconsideratambiénelcasodetres P−I
+0
+(cid:18) (cid:19)
+poblacionescondiferentesdensidadespoblacionalesyseeli- Ln I 1 (P−I 0 )
+gealeatoriamenteunadistanciadecontagiocomúnparalas I (P−I )
+tres.Seapreciaenlasgráficaslarapidezdistintaenlasque
+de(10)yderepresentacióndirectadek=
+(cid:18)
+0
+d (cid:19)
+1 ,
+1− 1 t
+ocurrenlosprocesosdecontagioyrecuperación. 1
+d
+m
+ParalaFigura1sehaconsideradounapoblacióndere- queresultade(9).
+ferencia con 11 340 miembros, en la que se propaga una Esto indica que la rapidez de propagación está modifi-
+enfermedad que se adquiere a menos de dos metros de se- cadaporladistanciaenlaqueseencuentranlosindividuos
+paración,dondesedetectaunindividuocontagiadoyhoras descubiertosenlasegundadetección,loqueimplicaunadis-
+después otros tres. A estas detecciones se asocian tiempos minucióndelacantidaddecontagiadoseneltiempo,entanto
+y distancias que permitan evaluar las condiciones en (6) y el restode no detectados se encuentrena una distanciapor
+obtenerlafuncióndepropagación. d
+1−
+Encadafigura,lapartesuperiorindicalacantidaddecon- d
+encimaded ,dadoque m <1sid>d .
+tagiosorecuperacionesocurridosdeformaacumuladayla 1 d 1
+1− 1
+parteinferiormuestralacantidadofrecuenciadiariadecon- d
+m
+tagiadosorecuperados,enlaqueseapreciaeldíademayor Unanálisissimilarpuedehacerseenlaexpresión(10)si
+cantidaddeinfectadosorecuperados,segúnladistancia.Este seasumeenelestudiodelaexpresiónd (t −t )+d t −d t
+m 1 0 0 0 1 1
+díaseprolongaeneltiempo,enlamedidaqueserepresenta quelasdosdistanciasdedetecciónsoniguales.Lasgráficas
+unafuncióndecontagiadosorecuperadosconunadistancia muestrancómoenlamedidaenquelosposiblescontagiados
+máscercanaaladistanciamínimadenocontagio.Lasfigu- seseparanentresí,seextiendelaaparicióndenuevoscasos
+ras 3 y 4, particularmente se refieren a tres poblaciones en eneltiempo.Además,siserealizaunaevoluciónmásfinadel
+diferentesdensidadespoblacionales. parámetrodeladistancia,setendríancurvasdecrecimiento
+Se realiza una evolución de la cantidad de contagiados máslento(aplanadas),entredoscurvasconsecutivasconel
+en 100 días del proceso, donde se escala la distancia en la paso utilizado, donde se tendrán más curvas cercanas a la
+quesemantienenlosintegrantes,desdecerohastaladistancia posiciónhorizontal,loquesignificalaocurrenciadepocos
+mínimadenocontagio.Lagráficahorizontal(señaladacon contagios,quetípicamentemuestraquedistanciascercanas
+símbolos“+”)muestraquealalejarsealadistanciamínima a la separación de no contagio. Una ventaja apreciable del
+denocontagio,losinfectadossemantienenenelnivelinicial retardoenlaaparicióndenuevoscasosradicaenlaposibilidad
+yseobservacómoseexpandeeltiempodemayorcantidad detomarmedidasoportunasynoagotarlasposibilidadesde
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.77-84 AcostaIglesias,D.,IglesiasMartínez,M.,&HenryPerea,M.
+https://revistas.uh.cu/rcm/article/view/10043 https://doi.org/10.5281/zenodo.15292953
+Modelacióndelapropagacióndeprocesosdecontagiosinfluidosporladistanciadecontacto 81
+Figura1.Evolucióndelmodelodecontagios,considerandoquelapoblaciónenriesgodecontaminaciónseencuentraenlos
+diferentesnivelesdedistanciasconsiderados,durante100días[Evolutionofthecontagionmodel,consideringthatthe
+populationatriskofcontaminationisatthedifferentdistancelevelsconsidered,for100days].
+Figura2.Evolucióndelmodeloderecuperación,cuandonohayindividuosrecuperadoseneliniciodelproceso,apareciendo
+estosenunmomentoposterior[Evolutionoftherecoverymodel,whentherearenorecoveredindividualsatthebeginningof
+theprocess,theseappearingatalatertime].
+AcostaIglesias,D.,IglesiasMartínez,M.,&HenryPerea,M. CienciasMatemáticas,Vol.37,No.1,2024,Pag.77-84
+https://doi.org/10.5281/zenodo.15292953 https://revistas.uh.cu/rcm/article/view/10043
+82 Modelacióndelapropagacióndeprocesosdecontagiosinfluidosporladistanciadecontacto
+atenciónalproblema. población dada, puede disminuirse o alargase en el tiempo
+Lasfiguras1y2muestran(desdeladistanciacero“0”, siseincluyenenelmodelotérminosqueconsiderenelemen-
+hastaladistanciados“+”)elcomportamientodelascurvas tosdeinhibicióndelapropagación,asociadosalprocesoen
+decontagiosyderecuperados,respectivamente,tantopara cuestión.
+lasocurrenciasacumuladas(gráficasigmoidea)comoparalas
+ocurridasdiariamente(gráficasdecampana).Estasseobtienen Suplementos
+sobreunafraccióndelapoblación,queseencuentraexpuesta
+Esteartículonocontieneinformaciónsuplementaria.
+alcontagio,yqueinevitablementeocurrecondicionadopor
+la distancia, e indican que en la medida que se reduce la
+distanciadenocontagio,seposponeeltiempoenquesuceden Conflictos de interés
+loscontagios.
+Sedeclaraquenoexistenconflictosdeinterés.
+Lasfiguras3y4ilustranuncomportamientosimilarsobre
+lamismafraccióndelapoblación,peroencondicionesdife-
+Contribución de autoría
+rentesdedensidadpoblacional(desdeladensidadpoblacional
+baja“0”,hastaladensidadpoblacionalalta“+”),característica Conceptualización D.A.I.
+quemodificalaposibilidadonodeexposiciónalacontamina- Curacióndedatos D.A.I.
+ción,segúnlaconcentracióndeindividuos[13,14],puesestos
+Análisisformal M.E.I.M.
+segeneranaleatoriamenteyseconsideranimplicadoslosque
+aparecenamenosdedosmetrosdeseparación,paralostres Investigación D.A.I.,M.E.I.M.
+casos de densidad poblacional (bajo “0”, medio “-” y alto Metodología D.A.I.
+“+”).Adicionalmentelacurvagraficadacon“*”representala
+Software D.A.I.,M.E.I.M.
+distribucióndiariadelaocurrenciadecasos,enunasituación
+Supervisión M.H.P.P.
+real[9,2],duranteloscienprimerosdíasdeldesarrollodela
+epidemia. Visualización M.E.I.M.
+Seobservaenlasfiguras3y4larelaciónentreelcom-
+Redacción:preparacióndelborradororiginal D.A.I.,
+portamientopropuestoporelmodelo,paraunapoblaciónde
+M.E.I.M.
+densidadmedia,yelcasoreal,dondeseapreciaundespla-
+Redacción:revisiónyedición M.H.P.P.
+zamientoyextensiónaladerechadelospicosdecontagios
+yrecuperaciones,quepuedendebersealaimplementación
+demedidasdesdeelpuntodevistasanitario,quelimitanla Referencias
+contaminación o extienden el tiempo en que se considera [1] Acosta,D.,P.FernándezdeCórdoba,J.M.Isidro,and
+recuperadounpaciente. J.L.GonzálezSantander:AnEntropicPictureofEmer-
+Lapresenciadeunabrechadetiempoextendida,dealta gentQuantumMechanics. InternationalJournalofGeo-
+ocurrenciadecasosenlosdatosrealesconrespectoalaque metricMethodsinModernPhysics,9(5):1250048,2012.
+muestraelmodeloparaambascaracterísticas,puededeberse https://doi.org/10.1142/S02198878125
+aotrascondicionesdemanejodelproceso,quepuedanincidir 0048X.
+enesteyquenosonconsideradasenelmodeloyque,enalgu-
+namedida,sevaloranseguidamente.Esposibleconsideraren [2] BBC News: Coronavirus Disease Named COVID-19,
+elplanteamientodelosdosmodelosotrascaracterísticasdel 2020. https://www.bbc.com/news/world-a
+proceso,comoelementosinhibidoresoaceleradoresdelcon- sia-china-51466362.
+tagio,esdecir,queestascaracterísticaspuedenincluirseenel
+[3] Beldarraín Chaple, E.: La información científica con-
+modelocomoexponentemayorqueuno,silacaracterística
+fiableylaCOVID-19. RevistaCubanadeInformación
+esinhibidoraymenorqueunosiesaceleradora,asociadasal
+en Ciencias de la Salud, 31(3):e1609, 2019. https:
+d
+factor1− .Elgradodeestosdebesermedidoexperimen- //www.medigraphic.com/pdfs/acimed/ac
+d
+m i-2020/aci203d.pdf.
+talmenteocomotérminosadicionalesalosconsideradosen
+elmodeloseguido.
+[4] Broche Pérez, Y., Z. Fernández Fleites, and E.
+Jiménez Puig: Gender and Fear of COVID-19 in a
+Conclusiones CubanPopulationSample. InternationalJournalofMen-
+talHealthandAddiction,2020. https://doi.or
+Lametodologíapropuestaconstituyeunaformulaciónque
+g/10.1007/s11469-020-00343-8.
+ilustralaocurrenciaextremaenunprocesodecontagiodeuna
+agrupacióndeindividuos,quesemantienenensituaciónde [5] Chen, J., R. Wang, and H. Zhang: Impact of Contact
+riesgo,yaseaporunacircunstanciareguladaoaleatoria,solo DistanceonDiseaseSpreadinComplexNetworks. Sci-
+influidadesdeelmodelo,porunfactordedistancia.Elmodelo entificReports,11:1223,2021. https://doi.org/
+reflejaenlasgráficasuntopedecontaminaciónque,enuna 10.1038/s41598-021-81234-7.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.77-84 AcostaIglesias,D.,IglesiasMartínez,M.,&HenryPerea,M.
+https://revistas.uh.cu/rcm/article/view/10043 https://doi.org/10.5281/zenodo.15292953
+Modelacióndelapropagacióndeprocesosdecontagiosinfluidosporladistanciadecontacto 83
+Figura3.Evolucióndelmodelodecontagios,considerandotrespoblacionescondensidadpoblacionaldiferentes,enelmismo
+niveldedistancia[Evolutionofthecontagionmodel,consideringthreepopulationswithdifferentpopulationdensities,atthe
+samedistancelevel].
+Figura4.Evolucióndelmodeloderecuperación,considerandotrespoblacionescondensidadpoblacionaldiferentes,enel
+mismoniveldedistancia[Evolutionoftherecoverymodel,consideringthreepopulationswithdifferentpopulationdensities,at
+thesamedistancelevel].
+AcostaIglesias,D.,IglesiasMartínez,M.,&HenryPerea,M. CienciasMatemáticas,Vol.37,No.1,2024,Pag.77-84
+https://doi.org/10.5281/zenodo.15292953 https://revistas.uh.cu/rcm/article/view/10043
+84 Modelacióndelapropagacióndeprocesosdecontagiosinfluidosporladistanciadecontacto
+[6] Córdoba,P.Fernándezde,L.García,A.Mayado,and [15] Medina Mendieta, J.F., M. Cortés Cortés, and M.
+J.M.Sanchis:Arealdeliveryproblemdealtwithmonte Cortés Iglesias: COVID-19 Forecasts for Cuba Using
+carlotechniques. TOP,8(1):57,2000. https://li LogisticRegressionandGompertzCurves. MEDICC
+nk.springer.com/article/10.1007/BF02 Review,22(3),2020. https://www.scielosp.o
+564828. rg/article/ssm/content/raw/?resource
+_ssm_path=/media/assets/medicc/v22n3
+[7] Garcia,L.M.andP.M.Gomez:QuantitativeApproaches /1555-7960-medicc-22-03-00032.pdf.
+toEpidemiologicalModeling. ComputationalBiology
+[16] Medina Mendieta, J.F., M.E. Cortés Cortés, M. Cor-
+andChemistry,98:107664,2023. https://doi.or
+tésIglesias,A.C.PérezFernándezyM.ManzanoCabre-
+g/10.1016/j.compbiolchem.2023.107664.
+ra:EstudiosobremodelospredictivosparalaCOVID-19
+[8] Gorbalenya,A.E.,S.C.Baker,R.S.Baric,R.J.DeGroot, enCuba. Medisur,18(3),2020. https://www.me
+C.Drosten,andA.A.Gulyaeva:SevereAcuteRespira- digraphic.com/pdfs/medisur/msu-2020/
+torySyndrome-RelatedCoronavirus:TheSpeciesand msu203n.pdf.
+ItsViruses,2020. https://doi.org/10.1101/
+[17] Mosquera,L.A.yM.H.Perea:Modelomatemáticopara
+2020.02.07.937862.
+la enfermedad del dengue. Boletín de Matemáticas,
+XIII(2):176–185,2006. https://dialnet.unir
+[9] GuinovartDíaz,R.,I.AbellóUgaldeyW.MoralesLez-
+ioja.es/descarga/articulo/2382887.pd
+ca: La ocurrencia de rebrotes de la COVID-19 y su
+f.
+relaciónconelnúmeroreproductivo. RevistaCubana
+de Higiene y Epidemiología, 57:e303, 2020. http: [18] Pérez,J.,S.Hoyas,D.L.Skuratov,Y..Ratis,I.A.Se-
+//scielo.sld.cu/scielo.php?pid=S1561 lezneva,P.FernándezdeCórdoba,andJ.Urchueguía:
+-30032020000100020&script=sci_arttex Heat Transfer Analysis of Intermittent Grinding Pro-
+t&tlng=pt. cess. InternationalJournalofHeatandMassTransfer,
+51:4132–4141,2008. https://www.sciencedir
+[10] Huang, Q. and Y. Zhang: Mathematical Modeling of ect.com/science/article/abs/pii/S001
+COVID-19withVariableTransmissionRates. Bulletin 7931008000148.
+of Mathematical Biology, 85(3):36, 2023. https:
+//doi.org/10.1007/s11538-023-01034-8. [19] Pérez,J.,F.R.Villatoro,J.L.GonzálezSantander,M.A.
+Borovsky,Y.L.Ratis,andE.A.Izzheurov:Heattrans-
+[11] IglesiasMartínez,M.E.,J.C.CastroPalacio,P.Fernán- ferbetweenagasandanultralowthermalconductivity
+dezdeCórdoba,J.M.Isidro,andE.NavarroPardo:Fea- porousstructure. AppliedMathematicsandComputa-
+ture extraction and similarity of movement detection tion, 204:687–700, 2008. https://www.scienc
+during sleep, based on higher order spectra and en- edirect.com/science/article/abs/pii/
+tropyoftheactigraphysignal:ResultsoftheHispanic S0096300308005390.
+Community Health Study/Study of Latinos. Sensors,
+[20] PradesEscobar,E.yD.MarínSánchez:Modelosesta-
+12(18):4310, 2018. https://www.mdpi.com/1
+dísticosparalasprediccionesdelaCOVID-19enCuba.
+424-8220/18/12/4310/pdf.
+RevistaCubanadeHigieneyEpidemiología,57:e303,
+2020. https://www.medigraphic.com/pdfs
+[12] JohnsHopkinsUniversity:CoronavirusCOVID-19Glo-
+/revcubhigepi/chi-2020/chi201d.pdf.
+balCasesbytheCenterforSystemsScienceandEngi-
+neering,2020. https://www.rfp.org/resour [21] Zill,D.G.:Ecuacionesdiferencialesordinariasconapli-
+ces/coronavirus-covid-19-global-cas caciones de modelado. International Thomson Edito-
+es-by-the-center-for-systems-science res,6ededición,1997,ISBN968-7529-21-0. https:
+-and-engineering-csse-at-johns-hopki //fiq.umich.mx/educenter/ficheros/ca
+ns-university-jhu/. rtas_descriptivas/Ecuaciones%20Difer
+enciales.pdf.
+[13] Jones, M.E., R.T. Smith, and A.B. White: Modeling
+Epidemics in Real-Time Using Differential Equations.
+JournalofMathematicalBiology,86(2):89–112,2023.
+https://doi.org/10.1007/s00285-023-0
+1756-x.
+[14] Liu,X.,X.Zhao,andY.Yu:COVID-19Transmission
+DyEnastmaicos:brAaMeastth´aembaatjiocaulnAapplrioceancchi.aMCartehaetmivaeticCaolmmons “Atribuci´on-NoComercial-
+BioSsinciDenercievsa,d3a4s24:.100I8n6t7e0rn,a2c0io2n2a.l”h.ttps://doi.or
+g/10.1016/j.mbs.2022.108670.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.77-84 AcostaIglesias,D.,IglesiasMartínez,M.,&HenryPerea,M.
+https://revistas.uh.cu/rcm/article/view/10043 https://doi.org/10.5281/zenodo.15292953
+1

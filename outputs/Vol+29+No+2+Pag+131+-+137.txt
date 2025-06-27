@@ -1,0 +1,651 @@
+CienciasMatema´ticas,Vol.29,No.2,Pag.131-137,2015
+Recibido09-2015
+Reflexiones sobre el teorema de Abel extendido a
+las filas de la tabla de Pade
+Consequences of Abel´s theorem extended to the
+rows of Pade´´s table
+Abel Ferna´ndez Infante1*, Luis Ramiro Pin˜eiro2
+Resumen Estetrabajorespondeaunasugerenciarealizadaalatesis“Sobreelcomportamientoenlafrontera
+de las filas de la tabla de Pade´” defendida en Julio de 1998. El objetivo de este art´ıculo es revisar algunas
+consecuenciasdelteoremadeAbelextendidoalasfilasdelatabladePade´,quemuestranqueelmismonosolo
+esva´lidoparaunaclaseampliadefuncionessinoqueadema´s,puederesultardegranutilidadenlapra´ctica,ya
+quecomosevera´ suaplicacio´npermiteobtenerinformacio´nsobrelafuncio´nqueesrepresentadamediante
+unaseriedepotencias,ma´salla´ desudiscodeconvergencia.
+Abstract Thisworkrespondstoasuggestionmadetothethesis“Aboutthebehaviourattheboundaryofrows
+ofPade´´stable”defendedinJuly1998. TheaimofthispaperistoreviewsomeconsequencesofAbel´stheorem
+extendedtotherowsofPade´´stable,thatshowthatthistheoremisvalidnotonlyawideclassoffunctionsbut
+ratheralso,itcanbeofgreatutilityinthepractice,sincelikeitsapplicationallowstoobtaininformationaboutthe
+functionthatisrepresentedbymeansofpowerseries,beyonditsconvergencedisk. Keywords: Rowsofthe
+Pade´ table.
+PalabrasClave
+FilasdelatabladePade´
+1InstitutoSuperiorPolite´cnicoJose´ A.Echeverr´ıa,LaHabana,Cuba,afdez@cemat.cujae.edu.cu
+2UniversidaddeLaHabana,Cuba,lrp@matcom.uh.cu
+*AutorparaCorrespondencia
+1. Introduccio´n En1975Gonchar[3]mejoro´ esteresultado.
+Otrosresultadosalcanzadosporlosmatema´ticosenesta
+Unresultadobienconocidoenlateor´ıadelosaproximan-
+l´ınea de investigacio´n pertenecen a los problemas de tipo
+tesdePade´ eselteoremadebidoaMontessusen1902([6],
+inverso.Osea,dadoelcomportamientodelospolosdeuna
+[7]).
+ciertasucesio´ndeaproximantesdePade´ construidadeuna
+Teorema1(deMontessusdeBallore) Seafanal´ıticaenuna seriedepotenciasformal,seplantealosiguiente:¿Esposible
+vecindaddez=0ytalqueeneldiscoD hayexactamente determinarsiestaseriedepotenciasrepresentaunafuncio´n
+m
+m polos de f, a ,···,a de multiplicidades p ,···,p con
+anal´ıticaenunavecindaddez=0?¿Que´puededecirseacerca
+1 µ 1 µ
+∑ i µ =1 p i =m.Entonces, delaextensio´nmeromorfadeestafuncio´nylalocalizacio´n
+desussingularidades?¿Estassingularidadescorrespondena
+l´ımitesdesucesionesdetalespolos?
+1. l´ım q (z)=w (z)dondeq eselpolinomiodel En 1922, el matema´tico france´s E. Fabri obtiene el si-
+n→∞ n,m m n,m
+denominadordelafuncio´naproximanteF yw (z)= guienteresultadoqueconstituyeelprimerodetipoinverso
+n,m n
+∏ i µ =1 (z−a i )pi. (Bieberbach[1]):
+2. F n,m converge uniformemente a la funcio´n f cuando Teorema3 Sea f(z)=∑∞ n=0 f n zn talquel´ım n→∞ f n /f n+1 =
+n→∞sobretodoconjuntocompacto a(cid:54)=0.Entonces,fesanal´ıticaen|z|<|a|ya,espuntosingu-
+larde f.
+K⊂D∗=D \ (cid:8) a ,···,a (cid:9)
+m 1 µ
+Esteteoremaconstituyeunresultadodetipoinversorela-
+.
+tivoalaprimerafila,pues
+Notacio´n2 Cuando f cumplalashipo´tesisdelteoremade f
+n
+q (z)=z− (f f (cid:54)=0).
+Montessusseusara´ lanotacio´nm∈M(f). n,1 f n n+1
+n+1
+132 ReflexionessobreelteoremadeAbelextendidoalasfilasdelatabladePade
+(cid:12) (cid:12)
+ElresultadosiguienteesdebidoaGonchar[4]yesencial- 1. R
+m
+≥ma´x 1≤j≤m(cid:12)a j(cid:12).
+menteesreferidoaunproblemadetipoinverso.Esteresultado
+(cid:12) (cid:12)
+esde1981yenelsehaceunacaracterizacio´ndelaextensio´n
+2. Todoslospuntosa
+j
+talesque(cid:12)a j(cid:12)<R
+m
+,sonpolosde f
+enD .
+meromorfadeunafuncio´nente´rminosdelcomportamiento m
+asinto´ticodelospolosdelafuncio´naproximanteF . (cid:12) (cid:12)
+Sean f(z)=∑∞
+n=0
+f
+n
+zn,F
+n,m
+lafuncio´naproxim
+n
+a
+,m
+nteaso-
+3. T
+si
+o
+n
+d
+g
+o
+u
+s
+la
+l
+r
+o
+e
+s
+s
+p
+d
+u
+e
+n
+f
+to
+(z
+s
+)
+a
+.
+j
+tales que (cid:12)a j(cid:12)=R
+m
+, son puntos
+ciadaa f,mfijoy
+Notacio´n5 Cuando f cumplalashipo´tesisdelteorema2de
+Suetinseusara´ lanotacio´nm∈S(f).
+P={a ,a , ···, a }, 0≤m ≤m
+n,1 n,2 n,mn n
+Elobjetivodeestetrabajoesrevisaralgunasconsecuen-
+denotaelconjuntodepolosdeF .Seaadema´s,
+n,m ciasdelteoremadeAbelextendidoalasfilasdelatablade
+Pade´,quemuestranqueelmismonosoloesva´lidoparauna
+|·| =min{|·|,1}
+1
+claseampliadefuncionessinoqueadema´s,puederesultarde
+ya∈Cfijo.LospolosdeF seordenanenformacreciente granutilidadenlapra´ctica,yaquecomosevera´suaplicacio´n
+n,m
+respectoasudistanciaalpuntoa: permiteobtenerinformacio´nsobrelafuncio´nqueesrepresen-
+tadamedianteunaseriedepotencias,masalla´ desudiscode
+|a−a |≤|a−a |≤···≤|a−a |. convergencia.
+n,1 n,2 n,mn
+LossiguientesindicadoresfueronintroducidosporGon-
+2. Conceptos y resultados preliminares.
+char:
+∆(a)= n l → ´ım ∞ ∏
+mn
+(cid:12)
+(cid:12)a n,j −a
+(cid:12)
+(cid:12) 1 n
+1 Definicio´n6 Seafunafuncio´nanal´ıticaenz=0,
+n=1
+∞
+(si m n =0 entonces el producto en el miembro derecho se f(z)= ∑ f n zn (1)
+tomaiguala1)y n=0
+D ={z∈C:|z|<R }denotaeldiscodeconvergenciadela
+(cid:12) (cid:12)1 0 0
+δ j (a)= n l → ´ım ∞ (cid:12)a n,j −a(cid:12) 1 n serie(1).Param∈NconsideremosD m ={z∈C:|z|<R m }
+elmayordiscoconcentroenz=0dentrodelcual f puede
+(donde j =1,2,3,...,m(cid:48), m(cid:48) =l´ım n→∞ m n y para j =m(cid:48)+ prolongarsecomounafuncio´nmeromorfaconnoma´sdem
+1,...,msetomaδ j (a)=1). polos(contandolamultiplicidad).AD m seledenominam-
+Adema´s,µ(a)representaelnu´merodepolosdeF
+n,m
+que e´simodiscodeHadamardodiscodem-meromorfismoyaR
+m
+tiendenalpuntoaconvelocidadgeome´tricacuandontiende radiodem-meromorfismo.
+ainfinitoyλ(a)representaelnu´merodepolosdeF que
+n,m
+tiendenalpuntoacuandontiendeainfinito,esdecir, Definicio´n7 Dadosenterosnonegativosn,melaproximante
+dePade´F de f dadopor(1),puededefinirsecomolarazo´n
+n,m
+(cid:8) (cid:9)
+µ(a)=ma´x j:δ <1 , p /q dedospolinomioscualesquiera p yq quesa-
+j n,m n,m n,m n,m
+(cid:110) (cid:12) (cid:12) (cid:111) tisfacengrad(pn,m)≤n,grad(qn,m)≤m,noide´nticamente
+λ(a)=ma´x j:
+n
+l
+→
+´ım
+∞
+(cid:12)a−a n,j(cid:12)=0 .
+nuloy
+En1984,Suetin[8]demuestraelsiguienteresultadocuan- (q f−p )(z)=r zn+m+1+···+ (2)
+n,m n,m n,m
+dotodoslospolosdelosaproximantesdePade´ tienenl´ımite.
+Lafuncio´nF puededeterminarseapartirdeloscoefi-
+n,m
+Teorema4(deSuetin) Sea f anal´ıticaenunavecindadde cientes f deldesarrollo(1).Denotemospor
+n
+z=0 y los ceros del polinomio q convergen a los ceros
+n,m
+a (j=1,...,m)delpolinomioq ,osea, p (z)=a +a z+···+a zn,
+j m n,m 0 1 n
+q (z)=b +b z+···+b zm,
+m n,m 0 1 m
+l´ımq (z)=q (z)=∏(z−a ).
+n,m m j
+n→∞ alospolinomiosdelnumeradorydenominadorrespectivamen-
+j=1
+tedelafuncio´nF .Entonces,de(2)obtenemoslaigualdad
+n,m
+Entonces,
+(b +b +···+b zm)(f +f z+···+f zn+···)=
+0 1 m 0 1 n
+a +a z+···+a zn+r zn+m+1+···
+0 1 n n,m
+ReflexionessobreelteoremadeAbelextendidoalasfilasdelatabladePade 133
+yde aqu´ıse obtieneel sistemade ecuacioneslinealesho-
+moge´neo:
+b f + b f + ··· + b f = 0
+m n−m+1 m−1 n−m+2 0 n+1
+b f + b f + ··· + b f = 0
+m n−m+2 m−1 n−m+3 0 n+2 (3)
+··· ··· ··· ··· ··· ··· ··· ··· ···
+b f + b f + ··· + b f = 0
+m n m−1 n+1 0 n+m
+Proposicio´n9 Paracadapardenu´merosenterosnonegati-
+Este sistema homoge´neo de m ecuaciones lineales con vos(n,m),elaproximanteF n,m delafuncio´n f,dadapor(1)
+m+1 inco´gnitas tiene infinitas soluciones. Podemos elegir esu´nico.
+unasolucio´nnotrivialparaelpolinomioq yde(2),igua-
+n,m
+landocoeficienteacoeficientelosn+1primeroste´rminosdel A partir de la definicio´n 7 se puede construir una tabla
+desarrollodeq f,obtenerunasolucio´nparaelpolinomio de doble entrada en la cual a (n,m) corresponde el aproxi-
+n,m
+p n,m elcualdenotaremospor mantedePade´ F n,m (z).EstatablasedenominatabladePade´.
+Adema´s, a toda sucesio´n de la tabla para la cual al menos
+p (z)=[(q f)(z)] . (4) unodelos´ındicestiendealinfinito,sedenominasucesio´nde
+n,m n,m n
+aproximantesdePade´.
+Elsistemaanteriorsugiereladefinicio´nsiguiente.
+Proposicio´n10 Unacondicio´nnecesariaysuficientepara
+Definicio´n8 Sean n,m∈N. Se denomina determinante de que exista q n,m tal que q n,m (0)=b 0 (cid:54)=0 es que H n,m (cid:54)=0
+donde q es el polinomio que aparece en (2). Si adema´s,
+Hadamarddetipo(n,m)conrespectoa(1)a n,m
+f (cid:54)=0 dicha condicio´n es necesaria y suficiente para que
+0
+(cid:12) (cid:12) f n−m+1 f n−m+2 ··· f n (cid:12) (cid:12) p n,m (0)=a 0 (cid:54)=0.
+(cid:12) (cid:12)
+H n,m = (cid:12) (cid:12) (cid:12) f n− ·· m · +2 f n− ·· m · +3 · ·· ·· · f · n · + · 1 (cid:12) (cid:12) (cid:12) , H n,0 =1, Proposicio´n11 Unacondicio´nnecesariaysuficientepara
+(cid:12) (cid:12) quegradq =m(b (cid:54)=m)esqueH (cid:54)=0dondeq es
+(cid:12) f n f n+1 ··· f n+m−1 (cid:12) n,m m n+1,m n,m
+elpolinomioqueapareceen(2).
+donde f =0parak=0,1,2,....
+−k
+Deacuerdoalaproposicio´n11,siH (cid:54)=0entoncesy
+n+1,m
+soloentoncesq (0)=b (cid:54)=0.Sisesuponequeb =1,el
+Las proposiciones siguientes pueden consultarse en el n,m 0 0
+sistema(3)sepuedeescribir:
+librodeLo´pez-Vavilov(ver[5]).
+    
+f f ··· f b f
+n−m+1 n−m+2 n m n+1
+  f n−m+2 f n−m+3 ··· f n+1     b m−1  =−   f n+2  .
+ ··· ··· ··· ···  ···   ··· 
+f f ··· f b f
+n n+1 n+m−1 1 n+m
+(Sesuponeque f =0parak<0).Laecuacio´nanterior yportantoelpolinomio p (z),donde
+k n,m
+permitedeterminarloscoeficientesb yconelloselpolinomio
+i
+q n,m (z).Ahora,tambie´nseobtienende(2)loscoeficientesa i a 0 = f 0 ,
+a = f +f b ,
+1 1 0 1
+a = f +f b +f b , (5)
+2 2 1 1 0 2
+.
+.
+.
+m´ın(n,m)
+a = f + ∑ f b.
+n n n−i i
+i=1
+134 ReflexionessobreelteoremadeAbelextendidoalasfilasdelatabladePade
+Proposicio´n12 Sea f dadapor(1),n,m∈Nfijos.SiH (cid:54)= Delaproposicio´n13sededuceque
+n,m
+0,F =p /q eselaproximantedePade´ detipo(n,m)
+asoc
+n
+i
+,m
+ado a
+n,
+f
+m
+y e
+n
+l
+,m
+polinomio q esta´ normalizado bajo la (F −F )(z)=
+B
+n
+zn+m+1−dn
+, n∈Z . (11)
+n,m n+1 n +
+Q (z)Q (z)
+condicio´nq (0)=1,entonces: n n+1
+n,m
+Deestaigualdadsededucequelaconvergenciadelasucesio´n
+1. {F },parazfijo,esequivalentealaconvergenciadelaserie
+n
+(cid:12) (cid:12)
+q n,m (z)= H 1 n,m (cid:12) (cid:12) (cid:12) (cid:12) (cid:12) b) d f c n ) ) − · f · m n · +1 · · · · · · · · · f n+ · f · m n · −1 f f n · n + · + · m 1 (cid:12) (cid:12) (cid:12) (cid:12) (cid:12) , F n0 (z)+ k ∑ = ∞ n0 Q B k k ( z z k ) + Q m k + + 1 1 − ( d z k ) , (12)
+(cid:12) (cid:12) e)zm ··· z 1f) (cid:12) (cid:12) donden 0 esunnu´meronaturalseleccionadoconvenientemen-
+(6) te,deformaqueQ (z)(cid:54)=0paratodon≥n .
+n 0
+En[4],A.A.Gonchardemostro´ lafo´rmula
+2.
+1
+(q f−p )(z)= H n+1,m+1 zn+m+1+···, (7) R = n l → ´ım ∞ |B n |1/n, (13)
+n,m n,m
+H
+n,m queconstituyeunageneralizacio´ndelaconocidafo´rmulade
+Cauchy-Hadamardparaelradiodeconvergenciadeunaserie
+3.
+deTaylor.
+(F −F )(z)= H n+1,m+1 zn+m+1 , (8) Enloquesigueseusalanotacio´nδ n pararepresentarla
+n+1,m n,m H n,m q n,m (z)q n+1,m (z) distanciaentreelconjuntodecerosa n,j , (j=1,..., m)del
+polinomioQ yelconjunto{z }.Lacondicio´nqueseexige
+n 0
+siempreque enelteoremaeslasiguiente
+H ·H (cid:54)=0.
+n+1,m n,m l´ımδ =δ >0. (14)
+n
+n→∞
+En lo sucesivo el ´ındice m es fijo, por lo que se omite
+Estogarantizaqueexisten ∈Ntalqueparatodon≥n se
+en las notaciones y se escribe D=D , R=R , A =r , 0 0
+m m n n,m
+tiene que Q (z )(cid:54)=0. Por lo que tiene sentido hablar de la
+F = p /q , donde p = p , q =q (salvo que se indi- n 0
+n n n n n,m n n,m
+serie
+queotracosa).SesuponequeF =P/Q dondeP yQ son
+n n n n n ∞ B zk+m+1−dk
+polinomiosprimosrelativos(estosseobtienendespue´sdecan- ∑ k 0 .
+celarlosfactorescomunes).Observarquesiz=z n esuncero k=n0 Q k (z 0 )Q k+1 (z 0 )
+delpolinomio p yq conz (cid:54)=0,cuyoordenesd ,entonces
+n n n n
+haciendo p n (z)=(z−z n )dnP n (z) y q n (z)=(z−z n )dnQ n (z), 3. Teorema de Abel extendido a las filas
+de(2)seobtiene
+de la tabla de Pade´.
+(Q f−P)(z)= A n zn+m+1+··· =A∗zn+m+1+···, En[2]fuedemostradoelsiguienteteoremadeAbelpara
+n n (z−z )dn n lasfilasdelatabladePade´:
+n
+y los polinomios P y Q satisfacen las condiciones de la Teorema14 Sea f anal´ıtica en una vecindad de z = 0 y
+n n
+definicio´n7.Porellosepuedesuponerque p n yq n notienen |z 0 |=Rtalquel´ım n→∞ δ n =δ >0.Silaserie
+ceroscomunesdiferentesdez=0.Porotraparte,siz=0es ∞ B zk+m+1−dk
+uncerocomu´nde p yq resultaquelospolinomiosP yQ ∑ k 0
+n n n n
+Q (z )Q (z )
+nosatisfacennecesariamentelascondicionesenladefinicio´n k=n0 k 0 k+1 0
+7.Ma´sau´n,sid n eslamultiplicidaddelcerodeq n paraz=0 esconvergente,entonces
+(0≤d
+n
+≤m),esdecir,p
+n
+(z)=z
+n
+dnP
+n
+(z)yq
+n
+(z)=z
+n
+dnQ
+n
+(z),
+∞ B zk+m+1−dk
+ento
+1
+n
+.
+c
+g
+e
+r
+s
+a
+P
+d
+n
+P
+y
+≤
+Q
+n
+n
+−
+sa
+d
+tis
+,
+f
+g
+ac
+ra
+e
+d
+n
+Q
+:
+≤m−d ,Q noide´nticamente
+z
+l
+→
+´ım
+z0
+f(z)=F n0 (z 0 )+
+k
+∑
+=n0 Q k (
+k
+z 0
+0
+)Q k+1 (z 0 )
+, (15)
+n n n n n
+dondeell´ımiteestomadoporelinteriordecualquiera´ngu-
+nulo.
+lo Aϕ con el ve´rtice en el punto z=z , radialmente y de
+0
+2. magnitud2ϕ <π.
+(Q f−P)(z)=A zn+m+1−dn+···,(0≤d ≤m). Esteteoremapuedereformularsesinutilizarellenguajede
+n n n n
+(9) laserie,pueslaconvergenciadelasucesio´n{F n },parazfijo,
+esequivalentealaconvergenciadelaserieen(12).Luego,
+Proposicio´n13 Sean∈Z + ,entoncessecumpleque puedeafirmarsequesilasucesio´n{F n }esconvergentepara
+z=z ,entonces
+(P Q −PQ )(z)=B zn+m+1−dn, (0≤d ≤m) (10) 0
+n+1 n n n+1 n n
+l´ım f(z)= l´ımF (z ).
+n 0
+dondeB
+n
+esunaconstantequesolodependeden. z→z0 n→∞
+ReflexionessobreelteoremadeAbelextendidoalasfilasdelatabladePade 135
+3.1 Consecuenciasdelteorema. Ejemplo17 Sealaserieformaldepotencias∑∞ (n+1)zn,
+n=0
+Lacondicio´n(14)permitetenercontrolenladisposicio´n D ={z∈C:|z|<1}, (R=1).Enestecasodichaserierepre-
+0
+decerosdelpolinomioQ .Lamismasesatisfacesiseexige sentaunfuncio´nanal´ıticaeneldiscounidad,seaestafuncio´n
+n
+hipo´tesisdetipoSuetin(m∈S(f))ohipo´tesisdetipoMon- f(z).Observarqueparam=0laseriedadaesdivergente
+tessus(m∈M(f)),porloqueunaclaseampliadefunciones paratodoztalque|z|=1,pues|(n+1)zn|=n+1notiende
+satisfacendichacondicio´n. acero.¿Sera´ posiblerecuperaralgu´nvalordelafuncio´nfen
+lafronteradeldiscounidad?Veamosqueesposibleeneste
+Corolario15 Seam∈S(f),|z |=Rylasucesio´n{F }con- caso.
+0 n
+(cid:12) (cid:12)
+vergente para z=z
+0
+, z
+0
+(cid:54)=a
+j
+para todo j tal que (cid:12)a j(cid:12)=R. Sea m=1 (fila uno de la tabla de Pade´). Usando las
+Entonces, fo´rmulas(4)y(6)seobtieneque:
+l´ım f(z)= l´ımF (z ),
+n 0 n+2
+z→z0 n→∞
+q (z)=1− z,
+n
+n+1
+dondeell´ımiteestomadoporelinteriordecualquiera´ngulo
+n+2 n+1
+A
+ϕ
+conelve´rticeenelpuntoz=z
+0
+,radialmenteydemagnitud q
+n
+(z)=− (z− ), (H
+n,1
+=n+1(cid:54)=0)
+n+1 n+2
+2ϕ <π.
+y
+Demostracio´n.Lascondicionesm∈S(f),|z |=Ryz (cid:54)=a
+paratodo jtalque (cid:12) (cid:12)a j (cid:12) (cid:12)=Rgarantizanelcum 0 plimiento 0 dela j p n (z)=− n n + + 1 2 (− n n + + 1 2 − n+ n 2 z− n n + − 2 1 z2−···− n+ 1 2 zn).
+condicio´n(14).Pues,lasucesio´nδ esta´acotadayfijandon ∈
+n 0
+Nlosuficientementegrande,loscerosa , (j=1,..., m)del Ma´sau´n,segu´n(8)seobtieneque
+n,j
+polinomioQ sontalesque,paratodon≥n setieneque
+n 0 n−1 1 zk+2
+F (z)=F (z)+∑− , (16)
+s n 0 k+3 (cid:0) z−k+1(cid:1)(cid:0) z−k+2(cid:1)
+a n,j ∈D(a j , ), (j=1,..., m), k=0 k+2 k+3
+10
+donde
+dondeD(a ,s/10)eseldiscoconcentroena yradios/10 k+1
+j j Q (z)=z− ,
+con s=d(z ,∪m {a }) y d representa distancia. En otras k k+2
+0 j=1 j
+(cid:12) (cid:12)
+palabras,(cid:12)z
+0
+−a n,j(cid:12)>s/10paratodon≥n
+0
+y j=1,...,m. yadema´s,
+−1
+Teniendoencuentaelteorema,elcorolarioesinmediato.
+F (z)= .
+0
+2
+(cid:0) z−1(cid:1)
+2
+Corolario16 Sea m ∈M(f), |z |=R y la sucesio´n {F }
+0 n ElpolinomioQ estalquel´ım Q (z)=z−1yporotra
+k k→∞ k
+convergenteparaz=z0.Entonces,
+parteD =D puessegu´n(13)setieneque
+1 0
+l´ım f(z)= l´ımF (z ), 1
+z→z0 n→∞ n 0 n l → ´ım ∞ |B n |1/n= n l → ´ım ∞(n+3)1/n =1=R 1 =R.
+dondeell´ımiteestomadoporelinteriordecualquiera´ngulo
+Demaneraqueparalafilam=1sesatisfacenhipo´tesisde
+A conelve´rticeenelpuntoz=z ,radialmenteydemagnitud
+ϕ 0
+tipoSuetin.
+2ϕ <π.
+Enestecasoa =1∈∂D .Tomandoporejemplo,z =
+1 1 0
+−1∈∂D seobservaquesesatisfacenlashipo´tesisdelteo-
+Demostracio´n. Un razonamiento similar al realizado en la 1
+remadeAbelparalafilam=1delatabladePade´,yaque
+demostracio´ndelcorolario1conducealavalidezdelcoro-
+loscerosdelpolinomioQ (z)paransuficientementegrande
+lario2.Enestecasotodoslospolosdelosaproximantesde k
+esta´nlejosdelpuntoz =−1ylaseriequeseobtienede(16)
+Pade´ convergenapolosdelafuncio´n f queseencuentranen 0
+paraestepunto
+eldiscoD.
+∞ (−1)k(k+2)
+∑ ,
+4. Aplicaciones del teorema de Abel para
+(2k+3)(2k+5)
+k=0
+las filas de la tabla de Pade´.
+esconvergente.Portanto,siell´ımiteestomadocomoafirma
+ElsignificadodelteoremadeAbelparalasfilasdelatabla
+elteoremadeAbelextendidoalasfilasdelatabladePade´se
+dePade´ consiste,enquedadaunaserieformaldepotencias
+obtieneque
+conradiodeconvergenciaR,esposibleobtenerinformacio´n
+delafuncio´nanal´ıticaquerepresentadichaserieenpuntos ∞ (−1)k(k+2)
+l´ım f(z)=F (−1)−∑ .
+delafronteradeldiscodem-meromorfismo,siemprequeen
+z→−1
+0
+(2k+3)(2k+5)
+k=0
+estospuntoselaproximantedePade´ correspondientealafila
+mseaconvergente.Entalcasoesposiblededeterminarlas Comoseobservaelvalorde f puederecuperarseenla
+sumasdeciertasseriesnume´ricas. fronteradeldiscoD utilizandoelteoremadeAbelextendido
+1
+136 ReflexionessobreelteoremadeAbelextendidoalasfilasdelatabladePade
+a las filas de la tabla de Pade´, lo que no puede realizarse o
+utilizando el teorema cla´sico de Abel. Realizando algunos
+ca´lculossepuedeobtenerque F (z)=F (z)+ n ∑ −1 B k zk+2,F (z)= 4+3z ,
+n 1 1
+Q (z)Q (z) 4−3z
+∞ (−1)k(k+2) 1 k=1 k k+1
+∑ = ,
+(2k+3)(2k+5) 12 dondeelpolinomioQ (z)esdelaforma
+k=0 k
+ycomoF
+0
+(−1)=1/3sesigueque (k2k+1)((k+1)2k+1)
+Q (z)=z− , (k=1,2,...),
+k k2k((k+1)2k+1+1)
+1
+l´ım f(z)= .
+z→−1 4 ylasucesio´nB esta´ dadapor
+k
+Contodaintencio´nsehaseleccionadounejemplosimple
+2−k[2k(k+1)(k2+5k+8)+1]
+de modo de verificar el resultado, pues tambie´n es posible
+B = , (k=1,2,...).
+obtenerlafuncio´nsumadelaseriedepotenciasdadayas´ıde- k k(k+1)2((k+2)2k+2+1)
+terminarque f(z)=(1−z)−2,|z|<1.Pues,modificandola
+Porconsiguiente,deacuerdocon(13)setieneque
+te´cnicaanterioryapoya´ndonosenlafuncio´naproximante
+F n (z)= q p n ( ( z z ) ) k l → ´ım ∞ |B k |1/k= 1 2 .
+n
+−n+2(−n+1− n z−n−1z2−···− 1 zn)
+Esdecir,R =2eselradiodeldiscoD .Adema´s,
+= n+1 n+2 n+2 n+2 n+2 1 1
+−n+2(z−n+1)
+n+1 n+2 l´ımQ (z)=z−1,
+∑
+n −(n+k+1)zk k→∞ k
+n+2
+= k=0 , Enestecaso,elpuntol´ımitez=1∈∂D yesunpuntointerior
+z−n+1 0
+n+2 del disco D 1 , por lo que se satisfacen las hipo´tesis de tipo
+Montessus.Siseseleccionaelpuntoz=−2∈∂D ,entonces
+dedondesededuceque 1
+sepuedeverificarquelaserie
+1
+l´ımF (z)= = f(z), |z|<1.
+n→∞ n (1−z)2 ∑ ∞ B k (−2)k,
+Q (−2)Q (−2)
+Osea, k=1 k k+1
+1 ∞ es convergente. Por tanto, la sucesio´n de aproximantes de
+z→ l´ım −1 f(z)= n l → ´ım ∞ F n (−1)= 4 = ∑(n+1)(−1)n. Pade´ {F n }esconvergenteparaz=−2∈∂D 1 .
+n=0 EnvirtuddelteoremadeAbelextendidoalasfilasdela
+Laseriedadaessumableenz=−1enelsentidodeAbel.De tabladePade´ytomandoell´ımiteenformaadecuadapodemos
+laexpresio´nanteriorsededucequenosenecesitaconocer afirmarque
+lafuncio´n f,pueselaproximantehapermitidorecuperarel
+valorenlafrontera. l´ım f(z)= l´ımF n (−2)
+z→−2 n→∞
+Ejemplo18 Sealaseriedepotencias =F (−2)+∑ ∞ B k (−2)k+2.
+1
+Q (−2)Q (−2)
+∞ 1 k=1 k k+1
+1+∑(1+ )zn,
+n2n TeniendoencuentaqueF (−2)=−1/5yquelasumadela
+n=1 1
+seriesepuedeestimarconlaprecisio´ndeseada,seobtieneel
+enD ={z∈C:|z|<1}, (R =1),lacualrepresentauna
+0 0 valordeseadoenz=−2.
+ciertafuncio´nanal´ıtica f eneldiscounidad.Observequela
+seriedadaesdivergenteentodoslospuntosdelafrontera
+D .¿Sera´ posibleobtenerinformacio´ndelafuncio´n f ma´s Referencias
+0
+alla´ deldiscoD 0 ? [1] Bieberbach,L.,AnalytischeForsetzung,Springer-Verlag,
+Veamosqueesposible.Consideremosquem=1,siutili- 1955.
+zamoslasfo´rmulas(6)y(8)seobtieneque:
+[2] Ferna´ndez,A.,G.Lo´pez,Ontheboundarybehaviorof
+rowsofPade´Approximants,Proceedingsofthe2ndInter-
+F (z)=F (z)+ nationalConferenceonApproximationandOptimization
+n 1
+intheCarribbean,Havana,September26-October1,1993.
+n−1 2−k−2[2k(k+1)(k2+5k+8)+1]
+∑ zk+2, PeterLangSeriesonApproximationandOptimization.
+(k+2)(k+1)2(k2k+1)q (z)q (z)
+k=1 k k+1 Vol.8,1995,243?255.
+ReflexionessobreelteoremadeAbelextendidoalasfilasdelatabladePade 137
+[3] Gonchar, A. A., On the convergence of generalized [6] MontessussdeBallore,Surlesfractionscontinuesalge-
+Pade´ approximants of meromorphic functions Mat. Sb. briqueBull.Soc.Math.Francais30(1902),28?36.
+98(140), 1975, 564?577, traducido al ingle´s en Math.
+[7] Perron,O.,DieLehrevondeenKettenbruchen,Chelsea
+USSRSb.27,1975,503?514.
+Publ.Comp.,NewYork,1950.
+[4] Gonchar,A.A.,ThepolesoftherowsofthePadetable
+[8] Suetin,S.P.,Onaninverseproblemforthemthrowof
+and the memomorphic extension of the functions Mat.
+Sb.,115(157),4(8),1981,590-613,traducidoalingle´s the Pade table, Mat. Sb. 124 (166), 1984, traducido al
+ingle´senMath.USSRSb.52(1),(1985),231-244.
+enMath.USSRSb.,43(1982).
+[5] Lopez,G.,V.V.Vavilov,AlgunascuestionesdelaTeor´ıa
+deAproximacio´n,ed.PuebloyEducacio´n,(1985).

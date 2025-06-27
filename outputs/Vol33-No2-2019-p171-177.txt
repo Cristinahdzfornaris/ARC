@@ -1,0 +1,461 @@
+CienciasMatemáticas,Vol.33,No.2,Pag.171-177, 2019
+Recibido08-2019, Aceptado 09-2019
+Algoritmo ra´pido de codificacio´n fractal para la
+deteccio´n de masas en mamograf´ıas
+Fast fractal encoding-based algorithm for masses
+detection in mammograms
+Nigreisy Montalvo Zulueta1*, Mariella Lorenzo Sua´rez2, A´ngela Leo´n Mec´ıas3, Lorena Leo´n
+Arencibia3
+Resumen Elpresentetrabajoproponeunalgoritmora´pidobasadoenlacodificacio´nfractalparaladeteccio´n
+demasasenima´genesdemamograf´ıa.Elprocesodecodificacio´nfractalsebasaenelcriteriodeauto-similitud
+ylaaplicacio´ndetransformacionesafines,conelobjetivodeencontrarparalasceldasrangodelaimagen,una
+celdadominioquesealama´ssimilaraella.Suprincipallimitanteradicaensualtocostocomputacional.Eneste
+art´ıculoseproponenmodificacionesalalgoritmodecodificacio´nfractalconvencionalconelobjetivodedisminuir
+sutiempodeejecucio´nydetectarautoma´ticamentelasceldasrangosqueformanpartedelaanomal´ıa.Para
+elloseplantealareduccio´ndelconjuntodetransformacionesafinesutilizadasduranteelprocesoconvencional
+decodificacio´nfractalyelagrupamientodelasceldasdominiomedianteelcriteriodevectordecaracter´ısticas.
+Losresultadosalcanzadosevidenciaronunareduccio´nsignificativadeltiempodeejecucio´ndelalgoritmo,sin
+comprometerlaprecisio´n,validadossobreima´genesdemamograf´ıasdelabasededatosInBreast.
+Abstract In the present work, a fast fractal encoding-based algorithm is proposed to detect the present of
+massesinmammograms. Fractalencodingisbasedontheconceptofself-similarityandapplicationofisometry
+transformationstofindthemostsimilardomaincellforeachrangecellintheinputimage. Itsmainlimitationis
+itshightimecomplexity. Inthispapertwomodificationsarepresentedforreducingtheencodingtimeoffractal
+encodinganddetectingautomaticallyrangecellsbelongingtobreastmasses. Weproposetheuseoffeature
+vectorforgroupingdomaincellsoftheimageandthereductionofisometrytransformationssetestablishedin
+conventionalfractalencoding. Theobtainedresultsshowedanimportantreductionoftheencodingtimeandno
+significantchangeinthequalityoffinalsegmentationofbreastmasses,validateduponInBreastdatabase
+PalabrasClave
+Mammograf´ıa,anomal´ıamasa,codificacio´nfractal,vectordecaracter´ısticas,transformacionesafines
+1InstitutodeCiberne´ticaMatema´ticayF´ısica
+2InstitutodeMeteorolog´ıadelaRepu´blicadeCuba
+3DepartamentodeMatema´tica,FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana
+*mnigre94@gmail.com
+Introduccio´n reportaronenelpa´ısaproximadamente1541casosdemuerte
+depacientesconlaenfermedad.
+Elca´ncerdemamaconstituyeunodelostiposdeca´ncer
+ma´scomunesqueafectaalasmujeresanivelmundialyes La deteccio´n temprana del ca´ncer de mama puede au-
+unadelascausasprincipalesdemuerteentrelasmujeres.Se mentar la probabilidad de supervivencia de la paciente. La
+manifiestacomountumormalignoqueafectaeltejidoglan- mamograf´ıaconstituyeunme´todoefectivoparadetectarla
+dulardelamamaysuorigensedebealamultiplicacio´nyel enfermedad,inclusoensufaseinicial.Lainspeccio´nvisual
+descontroladocrecimientodece´lulasmalignasenlaregio´nde delasima´genesdemamograf´ıarequiereexperienciame´dica,
+lamama,lascualessepuedenextenderra´pidamentealresto debido a que un gran por ciento de la informacio´n que se
+delcuerpo.Enelan˜o2018,sereportaron2,088,849nuevos utilizaparaeldiagno´sticoseobtieneapartirdelaapariencia
+casosdeca´ncerdemamay626,679muertesasociadasala del propio tumor. La complejidad del tejido de la mama y
+enfermedad a nivel mundial[4]. En Cuba cada an˜o se diag- lasdiferentesanomal´ıasquesepuedenobservardificultanen
+nosticanma´sde2,200nuevoscasosylasmujeresdeedades granmedidaeltrabajodelosradio´logos.Enlamayor´ıadelos
+comprendidasentrelos50y60an˜ospresentanmayorespro- casosserequiereelcriteriodevariosespecialistasparaarribar
+babilidadesdecontraerca´ncerdemama.Enelan˜o2016se aundiagno´sticofinal.
+172 Algoritmora´pidodecodificacio´nfractalparaladeteccio´ndemasasenmamograf´ıas
+Lossistemasdedeteccio´nasistidosporordenadorsonhe- propuestasnofueronsignificativas.
+rramientascuyoprincipalobjetivoesresaltara´reasenlama- Enelpresentetrabajoseproponenmodificacionesalme´to-
+mograf´ıaquepuedanindicarlapresenciadeca´nceryalertara dodesarrolladoen[19]paradisminuireltiempodelacodifica-
+losradio´logossobrelanecesidadderevisarlascuidadosamen- cio´nfractal.Elart´ıculoesta´organizadodelasiguientemanera:
+te.Debidoalosdiferentestiposdeanomal´ıasrelacionadas enlaseccio´n1sepresentanalgunosaspectosba´sicosdela
+con la enfermedad, estos sistemas comu´nmente se especia- codificacio´nfractaldeima´genesyvectordecaracter´ısticasse
+lizanenunaanomal´ıaenparticular.Porejemplo,en[14]se introducecomoprincipalte´cnicaparareducirelcostocompu-
+propusounme´todobasadoenlatransformadawaveletparala tacionaldelalgoritmo;enlaseccio´n2sedescribelabasede
+deteccio´nysegmentacio´ndemicrocalcificaciones.En[6]se datosInBreast;losresultadosobtenidosenlasexperimenta-
+propusounacombinacio´ndeOptimizacio´ndeEnjambresde cionesrealizadasenlabasededatosanteriorsediscutenenla
+Part´ıculasyC-centroidesdifusoparaladeteccio´ndeclu´steres seccio´n3yalgunasobservacionesyconclusionessepresentan
+de microcalcifiaciones. En [22] los autores presentaron un enlaseccio´n4.
+modeloautomatizadodeescalamu´lipleparalaclasificacio´n
+demalignidaddemasas.En[15]seexponeunresumensobre 1. Codificacio´n fractal para la deteccio´n
+losavancesrecienteseneldiagno´sticoasistidoporordenador de masas en mamograf´ıas
+basadoenelana´lisisdemamograf´ıas.
+Losfractalessonobjetosmatema´ticoscaracterizadospor
+Lageometr´ıafractalhasidoampliamenteutilizadaenel
+dospropiedadesfundamentales:autoreferenciayautosimili-
+procesamientodeima´genesme´dicas,debidoasucapacidad
+tud.Laprimerapropiedadserefiereaqueelobjetoapareceen
+pararepresentartexturasyformascomplejasanivelesdegri-
+ladefinicio´ndee´lmismo,talqueunarelacio´nderecurrencia
+ses. En [10], los autores propusieron un me´todo basado en
+puedeserutilizadaparagenerarlo.Lasegundadeterminaque
+fractalesparaladeteccio´ndetumorescerebralesapartirde
+el objeto muestre patrones similares a medida que escalas
+ima´genesderesonanciamagne´tica.En[1],lageometr´ıafrac-
+ma´s pequen˜as son analizadas, en otras palabras, que posee
+talseutilizo´paradiferenciarentretumoresmalignosagresivos
+invarianzaaescala.
+ynoagresivosenelpulmo´napartirdetomograf´ıascomputari-
+Losfractalespermitendescribirestructurasyfeno´menos
+zadas,yen[3]paraladeteccio´ndelca´ncerdemamaapartir
+complejosdelanaturaleza,talescomomontan˜as,coposde
+delana´lisisdemamograf´ıasdigitales.Dadoqueeltejidodela
+nieve,redesneuronales,nubesyfeno´menosatmosfe´ricos.Por
+mamasecaracterizaporunaltogradodeauto-similitud[18],
+esa razo´n, han sido ampliamente utilizados en el procesa-
+locualconstituyeunapropiedadfundamentaldelosfractales,
+miento de sen˜ales, particularmente en el procesamiento de
+se ha incrementado la aplicacio´n de algoritmos basados en
+ima´genes.Lacodificacio´nfractal,usadafundamentalmenteen
+lageometr´ıafractal[5],[9],[7],considerandoquesiunades-
+lacompresio´ndeima´genes,esunejemplodelaaplicacio´nde
+viacio´nestructuraldelaregularidadglobalocurrenuna´rea
+lageometr´ıafractalenelprocesamientodigitaldeima´genes.
+determinado, entonces se puede considerar la presencia de
+SeaI(x,y)→zunaimagenenescaladegrisesdedimen-
+unalesio´neneste.
+sio´nN×Mpixeles,donde0≤x<N−1,0≤y<M−1yz
+Unaaplicacio´nimportantedelageometr´ıafractalenel sonlosvaloresdeintensidadente0y255.Enelalgoritmode
+procesamiento de ima´genes es la codificacio´n fractal, utili- codificacio´nfractalconvencionalpropuestoporBarnsley[2]
+zadafundamentalmenteenlacompresio´ndeima´genes.Esta yJacquin[11],laimagenasercodificadaesprimeramente
+te´cnicatambie´nhasidoutilizadaenotroscasos,parama´sin- particionadaenunconjuntoRdeceldasrangosnosolapadas
+formacio´nconsultar[8].Lacodificacio´nfractalsebasaenla R quecubrentotalmentelaimagen,yunconjuntoDdecel-
+i
+premisadequepartesdeunaimagensonmuysimilaresaotras dasdominioD.CadaD eseldobledelasdimensio´ndelos
+i i
+partesdelamismaimagenyesteconceptohasidoutilizado R. Un conjunto T de transformaciones afines se escongen
+i
+paramodelareltejidodelamama.En[19],elautorpropuso tambie´ndeantemano.Elobjetivodelacodificacio´nfractales
+unalgoritmobasadoenlacodificacio´nfractalparalasegmen- encontrarparacadaceldarango,laceldadominioma´ssimilar
+tacio´ndeanomal´ıasdeltipomasaenima´genesmamogra´ficas. aellaenlaimagen.Lafigura1muestraunesquemageneral
+Apesarderepresentarunabuenaaproximacio´n,suprincipal delme´todo.
+limitanteradicabaenelaltocostocomputacionaldelalgorit- Elme´todocontinu´adelamanerasiguiente:lasceldasenD
+moconvencionaldecodificacio´nfractal.Conelobjetivode seescalanalasdimensionesdelasceldasdelconjuntoR.Para
+superarestadesventaja,en[21]sepropusounalgoritmora´pi- cadaR seescogenunaceldadominioD yunatransforma-
+i i
+dodecodifiacio´nfractalparadetectarmicrocalcificacionesen cio´nt ∈T,talesqueseminimiceladistanciad(R,L(t (D))).
+k i k i
+mamograf´ıas.Elautorpresento´ tresme´todosparaacelerarel L(x)=s×x+oesunafuncio´ndeajustedebrilloyconstraste.
+procesodecodificacio´n,reduciendoladimensio´ndelconjunto Las transformaciones afines t ∈T utilizadas en el algorit-
+k
+delasceldasdominio.Estosme´todosestabanbasadosenla moconvencionaldecodificacio´nfractalconvencionalson:1)
+mediaylavarianza,caracter´ısticasdelcentrodemasayrango identidad,2)rotacio´nde900,3)rotacio´nde1800,4)rotacio´n
+dina´micodelosbloquesdelaimagen.Losresultadosobte- de2700,5)reflexio´nsobreelejevertical,6)reflexio´nsobre
+nidosmostraronquelasdiferenciasente´rminosdeprecisio´n elejehorizontal,7)reflexio´nsobrelaprimeradiagonaly8)
+alcanzadosporelalgoritmoconvencionalylasmodificaciones reflexio´nsobrelasegundadiagonal.Lafigura2muestraun
+Algoritmora´pidodecodificacio´nfractalparaladeteccio´ndemasasenmamograf´ıas 173
+ejemplodelasanteriorestransformacionesaplicadasauna mentacionesrealizadassobrelabasededatosMIAS[23]enel
+celdadominiodeunamamograf´ıa. trabajoanterior,laprincipaldesventajadelme´todoconsist´ıa
+ensualtocostocomputacional.Enelme´tododecodificacio´n
+fractalconvencional,cadaceldarangosecomparaconcada
+celdadominiotransformadapor8funcionesdeisometr´ıa,lo
+cualrepresentaunabu´squedaexhaustivay,enconsecuencia,
+unprocesoquetomaunlargotiempo.
+1.1 Aceleracio´ndelacodificacio´nfractal
+Un enfoque para reducir el tiempo de ejecucio´n de la
+codificacio´n fractal es clasificar las celdas dominio en un
+nu´meropredefinidodeclasesantesdeempezarelprocesode
+codificacio´n[16].Estaideapermitelareduccio´ndelnu´mero
+decomparacionesqueserealizandurantelabu´squedadelas
+celdasma´ssimilares,debidoaquelaceldarangosolamentese
+Figura1.Codificacio´nfractaldeunaimagen
+comparaconaquellasceldasdominiosasociadasaunaclase
+enespec´ıfico.Enestetrabajoseproponeclasificarlasceldas
+En[19]seutilizo´lacodificacio´nfractalconvencionalpara
+dominiosmedianteelusodevectordecaracter´ısticas.
+segmentaranomal´ıasconocidascomomasasenmamograf´ıas
+digitalizadas. Se escogieron celdas dominios no solapadas
+Vectordecaracter´ısticas
+de dimensio´n 16×16 pixeles y celdas rangos de 8×8. Se
+La idea fundamental de vector de caracter´ısticas es cla-
+utilizo´ elerrorm´ınimocuadra´ticocomome´tricadedistancia
+sificarlasceldasdominiodeacuerdoasuestructura.SeaC
+paracompararlasceldas.Lasceldasrangoydominiocubr´ıan
+unaceldacuadradayc ,c ,...,c susvaloresdeintensidad.
+1 2 n
+completamentelaimagen.
+Suvalormedioenescaladegrisessedefinepor
+Con el objetivo de detectar regiones en la imagen que
+pudierancontenermasas,en[19]paracadaceldasealmaceno´ 1 n
+ladistanciaasuceldadominioma´ssimilar.Porsimplicidad, C= ∑c i .
+n
+llamaremosaestevalorsimilitudm´ınima.Sielvalordesimi- i=1
+litudm´ınimaasociadoalaceldarangoR eramenoroigual
+i Si el valor medio en escala de grises de los cuatro cua-
+queunvalordeumbraldesimilituddado,laregio´ncorres-
+drantesnosolapadosdeCseconsideran(superiorizquierdo,
+pondienteaestaceldaeraconsideradabienestructurada(o
+superiorderecho,inferiorizquierdoeinferiorderecho),de-
+mapeada).Enotrocaso,elestadodelaceldaseconsideraba
+notados por A, i=0,1,2,3, se puede definir un vector de
+i
+nomapeadaypartedelaanomal´ıa.Comosepuedeobservar,
+caracter´ısticaw=[w ,w ,w ,w como
+0 1 2 3]
+elme´todoconsist´ıaendosfases:codificacio´n,dondeseejecu-
+tabalacodificacio´nfractalyumbralizacio´n,lacualpermit´ıa (cid:26)
+1 : A >C
+ladeteccio´ndelamasaenlamamograf´ıa,conformadaporlas w i = 0 : A i ≤C.
+i
+celdasrangosnomapeadas.
+Estadistribucio´npermitegenerar16vectoresquedefinen
+clasesdiferentes.Duranteelprocesodecodificacio´nfractal,
+lasceldasrangossolamentesecomparanconaquellasceldas
+dominioquepertenzcanasumismaclase,enotraspalabras,
+cuyosvectoresdecaracter´ısricaeste´nformadosporlasmis-
+mascomponentes.
+2. Base de datos utilizada
+Enesteestudioseutilizo´ labasededatosInBreast[13].
+InBreastcontiene410mamograf´ıasde115pacientes,adquiri-
+dasdelCentroHospitalardeS.Joao,Oporto.Lasima´genes
+disponibles fueron compiladas entre abril del 2008 y julio
+del2010conundetectoramorfodeseleniodeestadoso´lido,
+con taman˜o de pixel de 70 mm (micrones) y resolucio´n de
+Figura2.Transformacionesafinesenelalgoritmo contrastede14bits.Lasima´genessondetaman˜o3328×4084
+convencionaldecodificacio´nfractal o2560×3328pixeles.
+InBreast incluye ejemplo de ima´genes de mamograf´ıas
+Apesardelosbuenosresultadosalcanzadosenlasexperi- normalesyotrasquecontienenmasas,microcalcificaciones,
+174 Algoritmora´pidodecodificacio´nfractalparaladeteccio´ndemasasenmamograf´ıas
+distorsionesdelaarquitectura,asimetr´ıasymu´ltipleshallaz-
+gos.Labasededatoscontienetambie´nanotacionesdeground
+truthaniveldepixeleseinformacio´nhistolo´gicaparacada
+mamograf´ıa.
+3. Resultados y discusio´n
+Seutilizaron105ima´genesdelabasededatosInBreast
+queconten´ıanlaanomal´ıamasa.Seextrageronregionesde
+intere´s de dimensio´n 512×512 pixeles, y se consideraron
+celdasrangoyceldasdominiodedimensiones8×8y16×16
+pixelesrespectivamente.
+En el algoritmo de codificacio´n fractal convencional se
+Figura3.Tiempopromediodeejecucio´nenminutosdelas
+establecen8funcionesafines(verseccio´n1).Enlapra´ctica,
+variantesdecodificacio´nfractal
+estastransformacionesaumentaneltaman˜odelconjuntode
+lasceldasdominoD(dehecho,es8vecesmayor).En[20],
+[17]y[12]losautorespropusieronsolamenteelusodelas
+3. T =P .
+4 primeras funciones. Las experimentaciones realizadas en 3 80
+lostrabajospreviosnomostraroncambiossignificativosenla
+4. T =P .
+calidaddelprocesodecodificacio´nsiseutilizabansolamente 4 85
+estasfunciones.Basadosenestosresultados,enelpresentetra-
+Consideramoslasceldasrangosnomapeadascomodatos
+bajoseproponetambie´nconsiderarsolamenteestasfunciones
+ano´malos en el conjunto de datos, porque se espera que la
+afines.
+mayor´ıadelasceldasrangopertenezcaaltejidosanoenla
+Paraestudiarelfactorenelcuallasmodificacionespro-
+mamograf´ıa.En[24]sesugiereinspeccionarelementospor
+puestas reducen el tiempo de codificacio´n, comparamos el
+encimadelP paraencontrarlosdatosano´malos.Enparticu-
+me´tododesarrolladoconlassiguientesvarientesdecodifica- 75
+lar,T esta´definidoapartirdeunareglacomu´nmenteutilisada
+cio´nfractal:codificacio´nfractalcon8transformacionesde 1
+paraladeteccio´ndelosdatosano´malos.
+isometr´ıa(deahoraenadelantesenombrara´C8),codificacio´n
+Paraevaluarlacalidaddelasegmentacio´napartirdelas
+fractalcon4transformacionesdeisometr´ıa(C4)ycodifica-
+diferentes variantes de codificacio´n fractal y los valores de
+cio´nfractalconvectordecaracter´ısticasy8transformaciones
+umbralespropuestos,consideramoslossiguientespara´metros
+(FV8).Elalgoritmopropuestoenelpresentetrabajo,codifi-
+basadosenlamatrizdeconfusio´n(tabla1):verdaderosposi-
+cacio´nconvectordecaracter´ısticasy4transformacionesde
+tivos(VP),verdaderosnegativos(VN),falsospostivos(FP)
+isometr´ıasedenotara´ porFV4.
+yfalsosnegativos(FN).Elpara´metroVP(VN)representael
+Lafigura3muestraeltiempopromedioenminutodela
+nu´merodeejemplospostivos(negativos)quefueroncorrecta-
+ejecucio´ndelasvarientesdecodificacio´nconsiderada,sobre
+menteclasificados.FP(FN)serefierealnu´merodeejemplos
+lasregionesdeintere´sextraidasdeInBreast.Comosepuede
+positivos(negativos)queelalgoritmoclasifico´ incorrectamen-
+observar,lavarianteC8fuelaqueconsumio´ ma´stiempo,y
+te.Enesteestudiounejemplopositivoesunaceldarangoque
+la variante FV4 redujo dicho tiempo en un 94.5%, lo cual
+espartedeunamasaenlamamograf´ıa(enotraspalabras,una
+constituyeunamejorasignificativa.Tambie´nnotamosqueal
+celdarangonomapeada)yunejemplonegativoesunacelda
+utilizarlasvarianteC8serealizaron4,194,304comparaciones,
+rangoquepertenecealtejidosano.
+mientrasqueconFV4serealizaronsolamente1,788,394.
+Lasegundafasedelalgoritmo,laumbralizacio´n,permite
+detectarysegmentarlaanomal´ıaenlaregio´ndeintere´sana- Cuadro1.Matrizdeconfusio´nparaunproblemade
+lizada.Enestetrabajopropusimoscuatrovaloresdeumbral clasificacio´nbinario
+basadosenlospercentilesdelosvaloresdesimilitudm´ınima
+Prediccio´npositiva Prediccio´nnegativa
+delasceldasrango.Enestad´ıstica,lospercentilesseutilizan
+Clasepositiva Verdaderopositivo(VP) Falsonegativo(FN)
+paraentendereinterpretarelconjuntodedatosqueseesta´ Clasenegativa Falsopositivo(FP) Verdaderonegativo(TN)
+analizando.Eln-e´simopercentil(P)deunconjuntodedatos
+n
+eselvalorpordebajodelcualelnporcientodelasobserva-
+Seescogieronlassiguientesme´tricasconelobjetivode
+cionesseencuentra.Enestetrabajo,elconjuntodedatosesta´
+compararlosme´todosanteriores:
+formado por los valores de similitud m´ınima de las celdas
+rango.
+1. Precisio´n,querepresentalaproporcio´ndecasospositi-
+Contemplamoslossiguientesvaloresdeumbral:
+vosynegativoscorrectamenteidentificados:
+1. T =P +1,5×IQR,whereIQR=P −P .
+1 75 75 25
+TP+TN
+2. T =P . P= . (1)
+2 75 TP+FN+FP+TN
+Algoritmora´pidodecodificacio´nfractalparaladeteccio´ndemasasenmamograf´ıas 175
+2. Recobrado,querepresentalaproporcio´ndecasosposi-
+tivoscorrectamenteidentificados:
+TP
+R= . (2)
+TP+FP
+3. MedidaF,querepresentaunarelacio´narmo´nicaentre
+precisio´nyrecobrado:
+2(P×R)
+F = . (3)
+P+R
+Latabla2muestralosresultadosencuantoaprecisio´n,
+recobradoymedidaFobtenidosporlasvariantesdecodifica-
+cio´nfractalyumbralespropuestos.Seobtuvieronresultados
+similaresparalosumbralesT ,T yT ,yT obtuvolosmejo-
+1 3 4 2
+res resultados en general. Tambie´n notamos que cuando se
+utilizo´ elumbralT ,todaslasvariantesdecodificacio´nfractal
+2
+obtuvieronresultadossimilares.EnparticularVC4,apesar
+deserlavariantema´sra´pida,nocomprometio´ lacalidaddela
+segmentacio´nfinal.
+Cuadro2.Qualitymeasuresaccordingtoselectionof
+similaritythreshold
+Umbral Variante Precisio´n Recobrado MedidaF
+T1 C8 0.747 0.445 0.423
+C4 0.747 0.445 0.426
+VC8 0.747 0.391 0.384
+VC4 0.747 0.392 0.384
+T2 C8 0.785 0.595 0.612 Figura4.Resultadosobtenidosparaunaregio´ndeintere´sde
+C4 0.785 0.595 0.612
+ACR1
+VC8 0.789 0.604 0.620
+VC4 0.789 0.603 0.620
+T3 C8 0.747 0.445 0.426
+C4 0.747 0.445 0.426 lasceldasrangosnomapeadassemuestrancomocuadrados
+VC8 0.747 0.392 0.384
+debordesblancos.Apartirdeestasfigurassepuedeobser-
+VC4 0.747 0.392 0.384
+T4 C8 0.747 0.445 0.426 var que las variantes de codificacio´n fractal contempladas
+C4 0.747 0.445 0.426
+alcanzaronresultadoscasiide´nticos.Estosejemplostambie´n
+VC8 0.747 0.392 0.384
+VC4 0.747 0.392 0.384 destacanquelareduccio´ndeltaman˜odelosconjuntosdelas
+celdasdominiosylastransformacionesafinesnoempeoraron
+LabasededatosInBreasttambie´ncontieneinformacio´n lacalidaddelassegmentacionesobtenidas.
+sobreladensidaddeltejidoparacadamamograf´ıa.Estades-
+cripcio´nseexpresaapartirdelcampoACR,cuyosvalores
+4. Conclusiones
+semuestranenlatabla3.Engeneral,todaslasvariantesde
+Enestetrabajosepresento´unalgoritmobasadoenlacodi-
+codificacio´nfractalconsideradasobtuvieronlosmejoresre-
+ficacio´nfractalparalasegmentacio´ndelaanomal´ıamasaen
+sultadosparamamograf´ıasconACR1yACR2.Sinembargo,
+mamograf´ıas.Laprincipaldesventajadelacodificacio´nfrac-
+lassegmentacionesdelaanomal´ıamasaobtenidasparama-
+talconvencionalessugrancomplejidadtemporal,debidoa
+mograf´ıasconACR3y4nofueronsatisfactoriasporquese
+quecadaceldarangosecomparacontodaslasceldasdominio
+generaronmuchosfalsospositivos.
+durantelabu´squedadelasceldasma´ssimilaresenlaimagen.
+Cuadro3.ValoresdeACRparaladensidaddelamama Propusimosunconjuntodemodificacionesalalgoritmode
+codificacio´n fractal convencional para disminuir su tiempo
+ACR Patro´n de ejecucio´n y utilizarlo en la segmentacio´n automa´tica de
+1 Predominantementegraso
+la anomal´ıa masa en mamograf´ıas. Se utilizo´ la te´cnica de
+2 Densidadmedia
+vectordecaracter´ısticasparaagruparlasceldasdominioen
+3 Heteroge´neamentedenso
+4 Denso unnu´meropredefinidodeclasesantesdeiniciarelprocesode
+codificacio´n,ysepropusotambie´nlareduccio´ndelnu´mero
+Lasfiguras4y5muestranlosresultadosdelasegmenta- detransformacionesafinesconsideradas.
+cio´nparadosregionesdeintere´sutilizadasdurantelasexperi- Seutilizo´ labasededatosInBreastenlasexperimentacio-
+mentaciones.Enestosejemplosseselecciono´ elumbralT y nesrealizadas.Secompararo´ lacalidaddelasegmentacio´n
+2
+176 Algoritmora´pidodecodificacio´nfractalparaladeteccio´ndemasasenmamograf´ıas
+[3] KendraABatchelder,AaronBTanenbaum,SethAlbert,
+Lyne Guimond, Pierre Kestener, Alain Arneodo, and
+AndreKhalil. Wavelet-based3dreconstructionofmi-
+crocalcificationclustersfromtwomammographicviews:
+newevidencethatfractaltumorsaremalignantandeucli-
+deantumorsarebenign. PloSone,9(9):e107580,2014.
+[4] FreddieBray,JacquesFerlay,IsabelleSoerjomataram,
+Rebecca L Siegel, Lindsey A Torre, and Ahmedin Je-
+mal. Globalcancerstatistics2018:Globocanestimates
+of incidence and mortality worldwide for 36 cancers
+in185countries. CA:acancerjournalforclinicians,
+68(6):394–424,2018.
+[5] Dar-RenChen,Ruey-FengChang,Chii-JenChen,Ming-
+Feng Ho, Shou-Jen Kuo, Shou-Tung Chen, Shin-Jer
+Hung,andWooKyungMoon.Classificationofbreastul-
+trasoundimagesusingfractalfeature. Clinicalimaging,
+29(4):235–245,2005.
+[6] J Dheeba and Tamil Selvi. Bio inspired swarm algo-
+rithm for tumor detection in digital mammogram. In
+InternationalConferenceonSwarm,Evolutionary,and
+MemeticComputing,pages404–415.Springer,2010.
+[7] Radu Dobrescu, Loretta Ichim, and Daniela Crisan.
+Diagnosisofbreastcancerfrommammogramsbyusing
+fractalmeasures. Internationaljournalofmedicalima-
+Figura5.Resultadosobtenidosparaunaregio´ndeintere´sde
+ging,1(2):32–38,2013.
+ACR2
+[8] Regina K Ferrell, Shaun S Gleason, and Kenneth W
+Tobin Jr. Application of fractal encoding techniques
+del algoritmo propuesto con diferentes variantes de codifi-
+forimagesegmentation. InSixthInternationalConfe-
+cacio´nfractal,ente´rminosdeprecisio´n,recobrado,medida
+rence on Quality Control by Artificial Vision, volume
+F y tiempo de ejecucio´n. Los resultados obtenidos demos-
+5132,pages69–77.InternationalSocietyforOpticsand
+traron que la variante de codificacio´n fractal con vector de
+Photonics,2003.
+caracter´ısticasycuatrofuncionesafinesredujeroneltiempo
+de ejecucio´n de la codificacio´n fractal convencional en un [9] QiGuo,JiaqingShao,andVirginieFRuiz. Characteri-
+94,5%aproximadamente,sincomprometerlacalidaddela zationandclassificationoftumorlesionsusingcompute-
+segmentacio´n. rizedfractal-basedtextureanalysisandsupportvector
+machinesindigitalmammograms. Internationaljour-
+nalofcomputerassistedradiologyandsurgery,4(1):11,
+Agradecimientos
+2009.
+LosautoresquierenagradeceralgrupodeInBreastpor
+proporcionarlabasededatosdelasima´genesdemamograf´ıas [10] KhanMIftekharuddin,WeiJia,andRonaldMarsh.Frac-
+digitalesutilizadasdurantelaexperimentacio´n.
+talanalysisoftumorinbrainmrimages.MachineVision
+andApplications,13(5-6):352–362,2003.
+Referencias [11] Arnaud E Jacquin. Image coding based on a fractal
+theory of iterated contractive image transformations.
+[1] MZCheAzemin,DineshKantKumar,TienYinWong,
+IEEE transactions on Image Processing, 1(1):18–30,
+RyoKawasaki,PaulMitchell,andJieJinWang. Robust
+1992.
+methodologyforfractalanalysisoftheretinalvasculatu-
+re. IEEEtransactionsonmedicalimaging,30(2):243– [12] NLu. Fractalimagingacademicpress. SanDiego,1997.
+250,2011.
+[13] AmaralI.Moreira,I.etal. Inbreast:towardafull-field
+[2] MBarnsley. Fractalseverywhere(newyork:Academic). digitalmammographicdatabase. Academicradiology,
+1988. 19(2):236–248,2012.
+Algoritmora´pidodecodificacio´nfractalparaladeteccio´ndemasasenmamograf´ıas 177
+[14] RafayahMousa,QutaishatMunib,andAbdallahMoussa. [20] DeepaSankar. Fractalbasedtechniquesforclassifica-
+Breastcancerdiagnosissystembasedonwaveletanaly- tionofmammogramsandidentificationofmicrocalcifi-
+sisandfuzzy-neural. ExpertsystemswithApplications, cations. 2011.
+28(4):713–723,2005.
+[21] DeepaSankarandTessammaThomas. Anewfastfrac-
+[15] ArnauOliver,JordiFreixenet,JoanMarti,ElsaPerez,
+talmodelingapproachforthedetectionofmicrocalci-
+Josep Pont, Erika RE Denton, and Reyer Zwiggelaar.
+ficationsinmammograms. Journalofdigitalimaging,
+A review of automatic mass detection and segmenta-
+23(5):538–546,2010.
+tioninmammographicimages. Medicalimageanalysis,
+14(2):87–110,2010.
+[22] FilipeSoares,FilipeJanela,ManuelaPereira,Joa˜oSea-
+[16] JuanAntonioPe´rezOrtiz.Codificacio´nfractaldeima´ge-
+bra,andMa´rioMFreire. Classificationofbreastmas-
+nes. PhDthesis,TesisdeMaster,UniversidaddeAlican-
+ses on contrast-enhanced magnetic resonance images
+te,1998.
+throughlogdetrendedfluctuationcumulant-basedmulti-
+fractalanalysis. IEEESystemsJournal,8(3):929–938,
+[17] JuanAntonioPe´rezOrtiz. Codificacionfractaldeima-
+2013.
+genes. 1998.
+[18] PepaRamirezandBraniVidakovic. Wavelet-based2d
+[23] J Suckling et al. The mammographic image analysis
+multifractal spectrum with applications in analysis of
+societydigitalmammogramdatabasedigitalmammo-
+digitalmammographyimages.Technicalreport,Georgia
+graphy ed ag gale, sm astley, dr dance and ay cairns,
+InstituteofTechnology,2007.
+1994.
+[19] Mo´nica Rodr´ıguez. Algoritmo de deteccio´n de ano-
+mal´ıasenima´genesdemamograf´ıabasadoencodifica- [24] CourtneyTaylor. Understandingtheinterquartilerange
+cio´nfractal,2015. instatistics,2019.

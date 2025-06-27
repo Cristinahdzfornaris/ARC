@@ -1,0 +1,686 @@
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.81-90
+Recibido01-2021,Aceptado09-2021
+Desarrollo de la nueva versión multiplataforma de
+OpenLatino Server (OLS)
+Develop of the new multiplatform version of
+OpenLatino Server (OLS)
+Frankie Mujica Cal1, Joanna Campbell Amos1, Eduardo Quesada Orozco1
+Resumen OpenLatinoesunservidordemapasdesarrolladoporeldepartamentoCasasoftdelaUniversidad
+delaHabana.Estesoftwarefuedesarrolladohacealgunosañosyactualmentepresentavariasdeficienciasque
+limitansuuso.EnelsiguientetrabajoseproponedesarrollarunaversiónmultiplataformadeOpenLatinoServer,
+queposea,almenos,todaslasfuncionesbásicasqueyaesteteníayquemejoresusdeficienciasrespectoa
+otrossistemassimilares.
+Abstract OpenLatinoisamapserverdevelopedbytheCasasoftdepartmentoftheUniversityofHavana. This
+softwarewasdevelopedafewyearsagoandcurrentlyhasseveraldeficienciesthatlimititsuse. Inthefollowing
+work it is proposed to develop a multiplatform version of OpenLatino Server, which has at least all the basic
+functionsthatitalreadyhadandwhichimprovesitsdeficienciescomparedtoothersimilarsystems.
+PalabrasClave
+SIG,ASP.NETCore,WMS,Multiplataforma,Framework
+Keywords
+GIS,ASP.NETCore,WMS,Multiplatform,Framework
+1DepartamentodeProgramacióneIngeniaríadesoftware,UniversidaddelaHabana,LaHabana,Cuba,frankie.mujica@matcom.uh.cu,
+joanna@matcom.uh.cu,quesada@matcom.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción lasgeometríasdeloslugares(tambiénconocidoscomoDatos
+Espaciales).Paramanejarlosdatos,estossonagrupadosen
+LosSistemasdeInformaciónGeográfica(SIGoGIS,por
+conjuntosdenominadosCapas,demodoqueunmapaesel
+sussiglaseninglés,GeograficInformationSystem)sonun
+resultadodecombinarvariascapas.Lascapasasuvezpueden
+conjuntodeherramientasinformáticasqueasocianelementos
+contenerdatosdedostipos:RasteroVectorial,losdatosraster
+espacialesconbasesdedatosypermitenalusuariocrearcon-
+son,enesencia,cualquiertipodeimagendigitalrepresentada
+sultasinteractivas,analizarmejorlainformación,editardatos,
+enmallasylosvectorialesestándestinadosaalmacenarcon
+mapasypresentarlosresultadosdetodasestasoperaciones.
+granexactitudloselementosgeográficos,cadaunadeestas
+Graciasalsurgimientoydesarrollodelainternetsehizomás
+geometríasestávinculadaaunafilaenunabasededatosque
+fácilcompartiryactualizarlainformación,loquemotivóel
+describesusatributosypolígonos.
+surgimientodelosWebGIS1
+Como consecuencia de su importancia, el servidor de
+mapasconstituyeelobjetodeestudiodeestetrabajo
+Un componente esencial para un Web GIS es el Servi-
+dordeMapas(eninglésconocidocomoIMS:InternetMap
+1. Motivación , justificación y formulación
+Server).Esteesdegranimportanciadebidoaqueescapaz
+demanejarmuchainformaciónprovenientedediversospro- del problema
+veedoresypermiterealizardiversasconsultasuoperaciones
+OLSfuedesarrolladousandolasbuenasprácticasdela
+(Querieseninglés)sobrelosdatosquemanejaensolounos
+programaciónorientadaaobjetos[1]ylosprincipiosSOLID
+milisegundos, incluso si se trata de millones de datos. Los
+[2]porloquesucódigoesfácildeentenderypermiteincor-
+servidoresdemapassonlosencargadosdeservirlosdatos
+porarmejorasfácilmente.Porotrolado,fuecreadousandola
+alfanuméricosdelosterritoriosylosdatosrelacionadoscon
+tecnologíadeASP.NETFramework2[4],enconsecuencia,solo
+1WebGISesunconceptoqueenglobalasfuncionalidadesdeunsistema 2UnFrameworkesunconjuntodebibliotecasdeclasesqueenglobancon-
+deinformacióngeográficoypermiteaccederdesdeinternet. ceptos,prácticasycriteriosparaenfocaruntipodeproblemáticaparticular.
+82 DesarrollodelanuevaversiónmultiplataformadeOpenLatinoServer(OLS)
+puede ejecutarse en entorno Windows y publicarse usando ASP.NETCore[6],unatecnologíamásrecientedeMicrosoft
+IIS3[5]. que permite desarrollar servidores Web multiplataforma, y
+asíaprovecharalgunasdelasfuncionalidadesyaexistentes
+Esto lo pone en desventaja respecto a otros servidores enOLSparanotenerqueimplementarlasdesdeceroyasí
+multiplataforma (es decir, que pueden ejecutarse en varias ahorrartiempoyesfuerzo.
+plataformascomoWindowsyLinux)quecadavezdominan Dadas las deficiencias que posee el servidor actual de
+máselmercadodelsoftwaredebidoalasventajasdeportabi- OpenLatino,podemosdefinirelproblemaapartirdelassi-
+lidad4queofrecen.Además,podemosseñalarotrosaspectos guientesinterrogantes:
+importantesquedemuestranlanecesidaddedesarrollaruna
+nuevaversióndeOpenLatinoServercomo: 1. ¿Será posible, usando ASP.NET Core, desarrollar un
+nuevo servidor capaz de funcionar de forma estable
+1. Para funcionar bien, necesita una serie de configura-
+tantoenWindowscomoLinux?
+ciones para sus capas y los proveedores de los datos
+2. ¿SeráposiblemigrarloscódigosparaASP.NETCorede,
+de estas, así como los estilos que se pueden usar, su
+almenoselnúcleodeOLS,queseencargadeobtener
+informaciónalfanumérica,entreotras.Esasconfigura-
+informacióndefuentesdedatosvectorialesyescapaz
+cionesseobtienendelabasededatos,peronoexiste
+deconvertirla,atravésdeunprocesoderenderizado,
+unaherramientavisualquefaciliteeltrabajo,porloque
+enimágenesenformatoPNGoJPGpararesponderlos
+elservidorsolopuedeserconfiguradoporunprogra-
+pedidosGetMap?
+mador.
+3. ¿Cómo hacer un módulo con interfaz visual cómoda
+2. Paracomunicarseconsusclientes,OLSutilizaelproto-
+paraconfigurarlascapas,losestilos,losproveedoresy
+coloWMS[7][8],perotienependientelaimplementa-
+demásconfiguracionesquerequiereelservidor?
+cióndelpedidoGetCapabilitiesqueenvíainformación
+4. ¿Cómohacerunmóduloconinterfazvisualpararegis-
+descriptivadelascapasquepuedeservir,losservicios
+traraplicacionesygestionarsusWorkspaces?
+conlosquecuentaylosestilosconlosquepuederen-
+5. ¿CómoimplementarlafunciónGetCapabilitiesdelpro-
+derizar5lascapas.
+tocoloWMSrespetandolaarquitecturaqueyaexistía
+3. Noexisteunainterfazvisualpararegistraraplicaciones
+ymanteniendobuenasprácticasdeprogramación?
+yadministrarsusespaciosdetrabajo(eninglésWorks-
+6. ¿Cómointegrarunmódulodeseguridadalainterfazde
+paces) y permisos sobre los recursos y funciones de
+OLSque,deformaeficiente,seacapazdedeterminar
+OLS.
+cuándounpedidoesatendidoycuandoesignorado?
+4. AntesderesponderalasQuerieshechasporunaapli-
+7. ¿QuémejoraspuedenhacersealpedidoGetMappara
+cación cliente, OLS usa otro servidor auxiliar de au-
+querespondademodomásrápido?
+torizaciónparasabersielpedidodebeserrespondido
+odenegadosuacceso.Sinembargo,elserviciodeau-
+1.1 Objetivos
+torizaciónpudierarealizarsedesdeelmismoOpenLa-
+tinosinnecesidaddetenerotroservidorejecutándose Pararesolverlosproblemaspresentadosyresponderalas
+paralelamentequeesmáscostosoeconómicamentey interrogantes,seplanteanlossiguientesobjetivosprincipales:
+computacionalmente.
+5. ElpedidoGetMapdelprotocoloWMSfuncionacorrec- 1. Implementarlasfuncionesbásicasdelnuevoservidor
+tamente,peroenocasiones,puedesermuylento,porlo basándoseenelaprovechamientodelasbuenasprácti-
+quenecesitaalgunamejoraderendimiento. casylacorrectaarquitecturaqueyaposeeOpenLatino
+Server.
+Podemos decir que es posible el desarrollo de una nue- 2. Implementar la función GetCapabilities y completar
+vaversiónmultiplataformadeOLSquemejorelosaspectos asítodaslasfuncionesdelprotocoloWMS,basándo-
+señalados,debidoaque,enlaactualidad,yaexistenotrosser- se en el estándar establecido por el Open Geospatial
+vidoresmultiplataformacomo:QGisServer,unservidormul- Consortium(OGC)[9].
+tiplataformadesarrolladoenPythonypublicadoenApache6
+3. Implementarunmódulodeinterfazvisualquepermi-
+queesmuypopularenelcontextointernacional,entreotras ta,alosadministradoresdeOLS:agregar,eliminaro
+cosas: por ser eficiente, configurable y su alta portabilidad. editarlascapasdelservidor,asícomolosestilos,los
+Además,esposiblemigrarcódigosdeASP.NETFrameworka proveedores de datos y la información alfanumérica.
+Ademásdepermitir,ausuarioscomunes,registrarsus
+3InternetInformationService(IIS)esunServidorWebyunconjuntode
+aplicacionesycrear,editaroeliminarWorkspacespara
+serviciosparaelsistemeaoperativoWindows.
+4SeentiendeporPortabilidadalacapacidaddeunsoftwaredeejecutarse lasmismas.
+endiferentesplataformas 4. Implementar un módulo de seguridad que se acople
+5Renderizaresuntérminoquenoposeetraducciónalespañol,perose
+al servidor y permita determinar de forma eficiente
+refiereagenerarimágenesapartirdeobjetosenmemoria.
+6EsunservidorHTTPdecódigoabiertoquefuncionaenLinux,Windows cuandoresponderoignorarlospedidosprovenientesde
+oMac. unaaplicacióncliente.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.81-90
+DesarrollodelanuevaversiónmultiplataformadeOpenLatinoServer(OLS) 83
+5. Mejorar la eficiencia del proceso de renderizado del Desventajas:Losmecanismosdecomunicaciónconel
+servidor para que la respuesta al pedido GetMap sea servidorsonmuycerrados,porloquehacercualquier
+másrápida. modificaciónenelfuncionamientodeunprotocolore-
+presentaunproblemayhaceelcódigopocoextensible.
+Paracumplirconlosobjetivosprincipalesexplicadospre-
+Conclusión:En general, tiene todo lo básico que se
+viamente,seplanteanlossiguientesobjetivossecundarios:
+necesita, pero fue desarrollado usandoC# basado en
+el Framework .NET 4.0 y no existe una versión que
+1. Investigarlasventajasyanalizarlafactibilidaddemi-
+seacompatibleconASP.NETCore,porloqueNOes
+grarloscódigosyaexistentesylaarquitecturadeOLS
+multiplataformayhayquedescartarlo.
+alanuevatecnologíaASP.NETCore.
+2. InvestigarlasespecificacionesdelprotocoloWMSque
+ArcGis[12][13] :Esunconjuntodeproductosdesoftware
+seestableceenelOGCparaunacorrectaimplementa-
+producidosydistribuidosporESRI[10].Lafamiliade
+cióndelprotocoloGetCapabilities.
+aplicaciones de escritorio, es una de las más amplia-
+3. Analizarlasvariantesexistentesparadesarrollarlain-
+menteutilizadas,incluyendoensusúltimasediciones
+terfaz de usuario de la configuración del servidor y
+lasherramientasArcReader,ArcMap,ArcCatalog,Ar-
+registrodeaplicaciones.
+cToolbox, ArcScene y ArcGlobe, además de diversas
+4. DefinirmejorasalaarquitecturadeOLSquepermitan
+extensiones.Recientementefueanunciadaunanueva
+incorporarfácilmenteelnuevomódulodeseguridad.
+versiónqueincluyecomponentesvisualesparaleery
+mostrarmapasparaWPFenASP.NETCore3.0.
+2. Estado del Arte
+Ventajas: Se ajusta a los estándares internacionales
+Enladécadadelos90sehicieronpopulareslosSistemas establecidosenlaOGCloquegarantizaqueunmayor
+deInformaciónGeograficagraciasaqueyalascomputadoras númerodeclientespuedeaccederaél(Pueslamayoría
+eranmáspotentesypodíanprocesarmayorcantidaddedatos delosclientesusaelestándardelaOGC).
+ytambiéngraciasalsurgimientodeArcView,unsoftwarede
+Desventajas: El software no es gratuito, sino que se
+escritorioqueeracapazdeusarseenWindowsysudifusión
+distribuyecomercialmentebajotresnivelesdelicencias
+propiciólaadopcióndesuestándardearchivos(Shapefile)
+queson,enordencrecientedefuncionalidades(ycoste):
+como estándar internacional para los SIG. Además, el sur-
+ArcView,ArcEditoryArcInfo.
+gimientodelainternetpropicióunmedioparaextenderlos
+mapasydiolugaralsurgimientodelosservidoresdemapas. Conclusión:Estaopciónsedescartaporquelacompo-
+nentequetienedisponiblemultiplataformasólofuncio-
+EnlaactualidadesprácticamenteimposiblequeunSIG naenentornodeescritorio(WPF)yelobjetivoeshacer
+tengaéxitosinelusodeservidoresdemapaswebdebidoa unservidorWeb.Además,noesgratuito.
+lasimportantesventajassobrelasversionesdeescritorioque
+ofrecen,porejemplo:estosbrindanlaposibilidaddeobtener AsposeGIS[14] : Este Framework permite acceder y ma-
+informaciónmásactualizada,inclusoentiemporealyquelos nipularinformacióngeográficaprocedentedefuentes
+usuariosnonecesitaninstalarningúnsoftwareespecializado vectoriales. Su interfaz de aplicaciones (API por sus
+paraobteneryvisualizarlosdatos. siglaseninglés)seencuentradisponibleparaASP.NET
+Core.
+2.1 FrameworksyLibreríasdemapas
+Ventajas:ComoseencuentradisponibleenASP.NET
+Para crear la nueva versión de OLS con las funcionali-
+CorepermitecrearunservidorWebmultiplataformaco-
+dadesantesmencionadas,seanalizarondistintasbibliotecas
+moserequiere.Permiteleer,escribiryconvertirvarios
+y herramientas que pudieran servir para implementarlas. A
+delosformatosmáscomunesenlosGIScomo:Sha-
+continuación,sedescribenalgunasdelasvariantes.
+pefile,GeoJSON,FileGDB,KML,entreotros.Además,
+permiterenderizaraformatosdeimagencomo:JPEG,
+SharpMap[11] :Esunabibliotecademapasparacrearapli-
+PNG, BMP, entre otros y permite realizar consultas
+cacioneswebydeescritorio,delacualseposeeconoci-
+espacialestalescomo:calcularlaintercepcióndeobje-
+mientoprevioenCasasoft.Conestalibreríasepueden
+tos,obtenerelcentroidedeunageometría,encontrarla
+realizarconsultasalosdatosespacialesparaelmanejo
+distanciamínimaentredosgeometrías,componerdos
+yanálisisdelosmismos.
+polígonos,entreotras.
+Ventajas: Genera mapas de alta calidad para ser vi-
+Desventajas:NoposeesoporteparaelprotocoloWMS.
+sualizadosenlaaplicacióncliente.Soportaunaamplia
+Noesgratuito.
+variedaddeformatosdeentradacomo:PostGIS,Shape-
+file,ArcSDE,OracleSpatial,SpatiaLite,MapInfoFile, Conclusión:Estaopciónnoesviable,puesnoesgra-
+entreotros.Esextensibleadiversostiposdeproveedo- tuita.Además,noimplementaelprotocoloWMSque
+resdedatos. serequiereysíestáimplementadoenOLS.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.81-90
+84 DesarrollodelanuevaversiónmultiplataformadeOpenLatinoServer(OLS)
+MapTileService[15] :Esunaimplementaciónminimalista modificacionesparalaseguridadyparaacogerelnuevocon-
+y a códigoabierto de un servidorde mapas capaz de ceptodeEspaciodeTrabajo.SeseparóelconceptodeUsuario
+servircapasRaster7 provenientesdebasesdedatoso deldeCliente.UnUsuariorepresentaalhumanoqueaccedea
+archivoslocales.Fuedesarrolladoen2017,enC#yen lainterfazvisualypuedehacerdeterminadoscambioscomo
+ASP.NETCore2.0. agregar,editaroeliminarcapas.UnClienterepresentauna
+aplicaciónregistradaparausarlosserviciosdelservidorde
+Ventajas:Estaopciónpodríaproporcionarunpuntode
+mapas.Aniveldebasededatosserepresentanconlastablas
+partidaparadesarrollarlanuevaversiónquequeremos,
+ApplicationUseryClientrespectivamente.Otrocambiofue
+esmultiplataformaybrindalonecesarioparaelmanejo
+eneltipoderelaciónentreCapasyEstilos.Anteriormente,
+decapasRaster.
+una Capa podía tener múltiples estilos, pero un estilo solo
+Desventajas:Alserunaimplementacióntanbásicay
+podíaestarasociadoaunaCapa.Estotienecomoconsecuen-
+sencilla, carece de muchas de las características que
+cianegativa,queobligaacrearalmenosunestiloporcada
+yaposeeOLS.Ejemplo:Noimplementaelprotocolo
+capa,siendo,aveces,visualmenteidénticos.Encambio,se
+WMS,nopermiteleerdefuentesdedatosvectoriales,
+decidequeestarelacióndebeserdemuchosamuchos,loque
+notieneimplementadasoperacionesespaciales.
+permitequeunmismoestilosípuedetenervariascapasque
+Conclusión:Sedescartaestaopcióndebidoaque,por lousan.
+carecerdetantascaracterísticas(yaexistentesenOLS),
+habríaquereimplementarmuchasfunciones,algunas
+3.1 NuevoconceptodeWorkspace
+biencomplejas,comorenderizarcapasprovenientesde
+EnelservidordeseguridadqueusaOLS,existeuncon-
+fuentes de datos vectoriales a formato PNG o JPG y
+cepto de Workspace. Este define, para cada usuario, todos
+ocuparíademasiadotiempo.
+lospermisosqueposee.Lospermisosestándefinidosporlas
+entidadesServiceAccessRuleyDataAccessRulequeasuvez
+Debidoaquenoseencontróunavariantede.NET que
+guardaninformacióndeunaentidadPermisssionquepuede,a
+seafactibleparacumplirlosobjetivosplanteados.Seanalizó
+suvez,tenerpermisosheredados.Porloque:autorizarunde-
+laposibilidaddeutilizarotrosFrameworksWebparaimple-
+terminadoUsuario,conundeterminadoWorkspace,paraque
+mentarlasfuncionesbásicasdelIMSreutilizandolamayor
+puedahacerunRequestaOLSsepuedevolvercomplicado.
+cantidaddecódigoposibledeOLS.Deestamanera,sepueden
+Enestanuevaversión,seredefiniólaentidadWorkspace.
+cumplirlosobjetivosplanteadosmanteniendo(ensumayoría)
+Enesenciamantienesuobjetivo,establecerlospermisosque
+elmodeloylasbuenasprácticasestablecidasenOLSynose
+tienenlosclientes,perotambiénagregapersonalizacionesde
+desechaeltrabajoyaexistente.EntrelosFrameworksestudia-
+estiloalascapasparacadacliente.AhoraunWorkspacetiene
+dosseencuentran:Django,Laravel,ExpressyASP.NETCore,
+asociadaunalistadecapasyunalistadefunciones(IFunction),
+perosedecideutilizarASP.NETCoredebidoasusimilitud
+ademásexisteunarelacióndemuchosamuchosentreCliente
+con.NETFramework,queesconelquesedesarrollóOLS.
+y Workspace que para representarla requiere otra tabla. La
+Estopermitereutilizargranpartedelcódigooriginal.Además,
+nuevatablaqueserequiereparamanejarlarelaciónmuchos
+.NETCoreesunFrameworkdegraneficiencia,multiplata-
+amuchos,tambiéntieneasociadounEstiloquepermiteper-
+forma,gratuitoydecódigoabierto.Sepuedenencontrarlos
+sonalizarcomodebepintarsecadaCapaparaeseCliente.En
+detallesdeestaelecciónen[26].
+la figura 1 se muestra la estructura final con que quedó la
+nueva versión de OLS, las nuevas tablas que se agregaron
+3. Proceso de desarrollo
+estándesplegadas.
+El primer paso para obtener las nueva versión de OLS
+fuereutilizarlamayorparteposibledelaversiónexistente.
+Paraellosellevóacabounprocesodemigracióndelcódigo,
+procesoengorrosoquellevaanalizartodaslasdependencias
+decadamóduloyrealizarunaseriedepasosparaadaptarel
+códigoparaelnuevoFramework,losdetallesdeesteproceso
+sepuedenveren[26].Unavezrealizadoelproceso,setiene
+cumplidoelprimerobjetivo,pues,secuentaconunanueva
+versiónen.NETCorequeposeelasfuncionesbásicasOLS.
+Además, se mantiene la misma arquitectura del servidor y
+tienecasielmismomodelodedatos(lasdiferenciassonlos
+pequeñoscambiosquesehicieronparaadaptarseaEFCore).
+Paraagregarlasnuevasfuncionalidadesfuenecesariode-
+finirunnuevomodelodedatosbasadoenelanteriorperocon
+Figura1.Infraestructuradelabasededatosdelanueva
+7UnacapaRasteresunaimágenenmapadebits,conunaestructuraen
+versióndeOLS.
+formaderejillarectangulardepixeles.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.81-90
+DesarrollodelanuevaversiónmultiplataformadeOpenLatinoServer(OLS) 85
+Losdatosalosquesetieneaccesopuedendefinirsepor serviciosqueofreceelservidor.Losmetadatossonespecifica-
+lascapasalasquesetieneacceso,enotraspalabras,uncliente dosenformatoXMLqueesunformatoentendibletantopor
+solopodráaccederalosdatoscontenidosenlascapasalas humanoscomoporaplicaciones.
+quepuedeacceder. Lainformaciónrequeridayelformatoenquedebeapare-
+Losserviciosalosquesetieneaccesoestándefinidospor cer,seencuentranbiendefinidaenlaespecificacióndeWMS
+losIFunctionquesepuedensolicitar.Losservicios,sonlos quesemencionópreviamente.Algunosdelosdatosmásim-
+tiposdepedidosquesepuedenhacer,porejemplo:GetMap, portantesquecontieneson:
+GetCapabilities,entreotros,yporcadatipodepedidoexiste
+unIFunctionquelorepresenta.Esimportantenotar,quelos Laversióndelprotocoloqueseestáusando.
+permisosdelecturaoescrituratambiénestándefinidosporlos
+Nombredelservidordemapasyunapequeñadescrip-
+IFunction,yaqueunafuncióntieneimplícitasoperaciones
+cióndelmismo.
+delecturaoescritura,porejemplo:GetMapsolohaceopera-
+cionesdelectura.Sisequieredotaraunclientedepermiso
+Elnúmeromáximodecapasquesepuedensolicitaren
+"total"paralectura,bastaríaconpermitirleaccederatodoslos
+unmismopedido.
+IFunctionquerealizanoperacionesdelectura.
+TodoclientequeseregistraenelnuevoservidordeOpen- Eltamañomáximoquepuedesolicitarseparaunaima-
+Latino adquiere acceso a unWorkspace llamadoçommon". gendemapa.
+Esteespaciodetrabajocuentaconunmínimodefuncionali-
+desycapasparaqueelclientepuedausar.Además,elusuario LalistadepedidosdelprotocoloWMSqueestánim-
+queregistrólaaplicaciónpuedecrearnuevosWorkspacesy plementadosenelservidor.
+asídarleaccesoamáscapasyservicios.
+Lalistadetodaslascapasquesepuedensolicitarcon
+Paracomunicarseconelservidor,elclientedebeincluir,
+susposiblesestilos.
+enlosHeadersdesuspedidos,elIdentificadordelWorkspace
+porelquequierequeserespondasupedido.Sepuedenver
+Losdetallessobresuimplementaciónpuedenencontrarse
+losdetallesen[27]
+enelcapitulo4de[26].
+El uso del nuevo concepto de Workspace trae consigo
+cambiosimportantesenlasfuncionalidadesdelservidor,por
+ejemplo:GetCapabilitiesdevuelveunficheroXML8 conla 3.3 SeguridadaniveldeCliente
+Para la seguridad a nivel de Clientes, es necesario esta-
+información referente a todos los servicios que se pueden
+blecerunprotocolodecomunicaciónquepermitaidentificar,
+solicitarylascapasyestilosdisponibles.Pero,ahoraestas
+desdeelpropiopedido,quéaplicacióneslaquehaceelpedido
+estánrestringidasasololoqueesaccesibleporelespaciode
+yquépermisostiene.Paralograresto,sedecideimplementar
+trabajoqueseespecificaenelpedido(Losdetallesdelproceso
+elprotocoloJWT.
+deimplementaciónpuedenverseenelcapitulo4de[26]).El
+JasonWebToken(JWT)seespecificaenelestándarRFC
+pedido GetMap tiene una diferencia importante en cuanto
+7519.Estedefineunaformacompactayauto-contenidade
+alestiloconelquesedibujanlascapasrespectoacomose
+asegurarlatransmisióndeinformaciónentredospartesusan-
+hacíaenOLS.Ahoraelestilodeunacapasedeterminadela
+doelformatoJSON.Estainformaciónesconfiableporque
+siguienteforma:
+seencuentrafirmadadeformadigital.Lafirmadigitalpuede
+1. Sepintaconelestilosolicitadoenelpedido,silapro- hacerseusandounallavesecreta(conelalgoritmoHMAC9)
+piedad Styles del mismo incluye uno por cada capa oconunpardellavespública/privadausandoRSA10 oEC-
+solicitadaycadacapaposeeelestiloqueselesolicita. DASA11.Además,losJWTpuedenserencriptados,paraque
+2. Sepintantodaslascapasconelestiloquetienendefi- la información contenida en él sea ilegible para cualquiera
+nidopordefectoenelWorkspacesolicitado,sinose queintercepteelpedido,cuandoeltokenfuefirmadousando
+puedeaplicar(1). unpardellavespublica/privada,estotambiénaseguraqueel
+3. Para las capas que no se aplique (1) y no tienen un Tokensolopuedeserdecodificadoporquienlogeneró.
+estilopordefectoenelWorkspacesolicitado,seescoge Cuandoseregistraunanuevaaplicacióncliente,basado
+elprimerelementoenlalistadeestilosdeesacapa. enlainformacióndeesta,segenerauntokenúnicoquesele
+muestraalUsuarioqueregistrólaaplicación.EseTokendebe
+3.2 PedidoGetCapabilities serenviadoenlosheadersdecadapedidoquelaaplicación
+Otrodelosobjetivosplanteadosescompletarlaimplemen- hagaaOLS.Cadavezquellegueunpedidoalnuevoservidor
+tacióndelprotocoloWMSsegunseespecificaensusitioofi- deOLS,sevalidaqueestecontengauntokenválidoyqueel
+cialdeOGC:https://www.opengeospatial.org/standards/wms. clientequehizolasolicitudtienelospermisosnecesarios.
+Paraello,esnecesarioimplementarelpedidoGetCapabili-
+ties.Elpropósitodeestepedidoesobtenermetadatosdelos 9HMACesunalgoritmousadoenCriptografíaparacalcularelcódigode
+autentificacióndeunmensaje
+8XMLesunformatoestándarparaelintercambiodeinformaciónestruc- 10SistemaCriptográficodeclavepública.
+turadaentrediferentesplataformas. 11AlgorítmoCriptográficopropuestocomomejoradelalgoritmoDSA
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.81-90
+86 DesarrollodelanuevaversiónmultiplataformadeOpenLatinoServer(OLS)
+Problema obtenerlosmilesdePolígonosquesesolicitanusualmente,
+Auncontodaslascomprobacionesquesehacen,hayun puedetardarunossegundos.
+problemagravedeseguridad,pues,unagenteexternopuede EnlanuevaversióndeOpenLatinosereestructurólaCa-
+interceptarlospedidosqueviajanaOLSyobteneruntoken cheparaquenosolooptimiceelprocesoderenderizado,sino
+quenoessuyo,estoimplicaquepuedeusarlopararealizar también la obtención de geometrías. Es evidente que para
+pedidos al servidor como si fuera ese cliente y acceder a pedidosdondesesolicitanlasmismascapas,seobtienenlos
+informaciónconfidencialsinserdetectado. mismosPolígonosyporeso,conlanuevaCache,primerose
+preguntasiestáguardadalaimagenparalascapasyestilos
+Solución quesesolicitany,encasopositivo,sedacomorespuestala
+SeleestableceuntiempodevidalimitadoparacadaTo-
+imagenguardada.
+ken,esdecir,cadaunodelosTokensqueselesentregaalos
+Deestaformaseevitatenerqueobtenerlasgeometríasde
+clientesseráválidosoloporuntiempoprefijado.Estecam-
+formainnecesarialoqueprovocaqueeltiempoderespuesta
+biogarantizaque,siunTokenesrobado,estenoservirápor
+paracapasyestilosqueyahayansidosolicitadosdisminuya
+muchotiempoyunavezqueseacabesutiempodevidano
+asolo0.1segundos.
+servirá.Parapoderhacerestecambio,esnecesariodotaralos
+ParaimplementarlanuevaCacheseusóMongoDB,que
+Clientesauténticosdeunmétodoquelespermitarenovarsus
+eselmismogestordebasededatos(NoRelacional)quese
+TokensparapoderseguiraccediendoaOLS,elprocesode
+usabaenOLS.Estosedebeaquesesiguenalmacenandolos
+actualizacióndetokensseexplicadetalladamenteen[26].
+Bytesdelasimágenesquesegeneranynoesposibleusaruna
+basededatosrelacionalparaalmacenarcadenasdeBytesde
+3.4 SeguridadaniveldeUsuarios
+grantamaño[17].Losdetallessobrelaestructuradelanueva
+ASP.NETCoreproveevariasfuncionalidadescomoparte
+Cachepuedenencontrarsealfinaldelcapítulo3en[26].
+de su Middleware, una de ellas facilita integrar la Autenti-
+caciónyAutorizacióndeUsuariosalservidor.ConIdentity 3.6 InterfazVisualdeAdministración
+Systemsehacemuyfácilimplementarlaseguridadanivelde ASP.NETCoreposeeunaimplementacióndelpatrónMVC
+Usuarios.Estesistemaesfácilmenteconfigurable,extensible [6](Modelo-Vista-ControladoroModel-View-Controller,en
+ysoportavariasformasdealmacenarlainformacióndecada inglés),estoagilizamuchoelprocesodecrearinterfacesvisua-
+usuario. lesparalasaplicacionesWebyporesto,unidoalaexperiencia
+En este caso, se extiende la base de datos de la nueva previaconestatecnología,sedecidecrearlainterfazvisual
+versióndeOLS,paraquealmaceneallítambiénlastablasque del módulo de administración de la nueva versión de OLS
+requiereIdentity. usandoASP.NETCoreMVC.
+3.5 OptimizacióndelpedidoGetMap PatrónMVC
+Elpedidomáslento,enOLS,esGetMap.Estosedebe A grandes rasgos, se puede decir que el patrón MVC
+a que requiere que, por cada una de las capas solicitadas, significasepararelproyectoen,almenostrespartes:
+se obtengan sus geometrías, que usualmente son cientos o
+Modelos,quecontieneorepresentalosdatosconlos
+miles.Lasgeometríasseobtienenpormediodeunaconsul-
+queelusuariotrabaja.
+ta a base de datos y una vez conseguidas todas, se pasa a
+renderizarlaimagen.Elprocesoderenderizarlaimagencon- Vistas,quesonusadaspararenderizaralgunaspartes
+sisteenobtenerunaimagen,enformatoPNGoJPG(usando delmodelocomounainterfazvisual.
+System.Drawing.Common)delospolígonosobtenidos,com-
+Controladores, que procesan los pedidos que le lle-
+poniendoysuperponiendocadaunodeestas.Enlaantigua
+ganalservidor,realizanoperacionesconelmodeloy
+versión de OLS, esta solicitud demora como promedio al-
+seleccionanquévistasdebensermostradasalusuario.
+rededor de 4 segundos en dar una respuesta, lo que resulta
+demasiadolento.
+Cadapartedelaarquitecturaestábiendefinidayautocon-
+UnamejoraquesehacíaeracrearunaCacheparaguardar
+tenida,gracias,alaseparacióndeconceptos.Lalógicaque
+losbytesdecadaimagenquesegeneraba.Luegodeobtener
+manipulalosdatosdelModeloseencuentrasoloenelMode-
+lasgeometrías,seconsultabasilaimagendelasmismasse
+lo,lalógicademostrarcontenidovisualseencuentrasoloen
+encontrabaguardadaenCache,encasopositivosedevolvía
+lasvistasyelcódigoquemanejalospedidosdelusuariose
+comoresultadolosdatosdelaCache.Peroestamejorareal-
+encuentrasoloenelcontrolador.Conestaclaraseparaciónde
+mentenoaportabamucho,porquesoloagilizabaelproceso
+laspartes,laaplicación,enestecasoOLSseráextensibley
+derenderización.Esteprocesoserealizasolamenteconinter-
+fácildemantenersinimportarquetangrandesehaga.
+accióndelamemoriaRAMyelProcesadorquesoncapaces
+deprocesaraaltasvelocidadesinclusomilesdePolígonos.
+4. Experimentación y Resultados
+Encambio,laetapadeobtencióndelasgeometríasesmu-
+chomáslento,pues,enlasconsultasabasededatosinterviene Enelsiguientecapítulosemuestranunconjuntodeprue-
+elDiscoDuroqueesmuchomáslentoquelaRAMypara basdefuncionalidadyderendimientoquesehicieron,enla
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.81-90
+DesarrollodelanuevaversiónmultiplataformadeOpenLatinoServer(OLS) 87
+nuevaversióndelservidordeOpenLatinoServerparaprobar
+quesecumplieronlosobjetivosplanteados.
+Paralarealizacióndelaspruebasseutilizóunalaptopcon
+lassiguientescaracterísticas:
+ProcesadorAMDA10-7300RaedonR6,1900Ghz
+8GbdeRAM
+DiscoduroToshiba1Tb,SerialATA,5400Rpm
+Parasimularpedidosdeunaaplicaciónclientealservidor,
+Figura5.RespuestaapedidoGetMap.
+seusóPostman[19].
+Pruebas de Funcionalidad Resultado
+Conestapruebasecomprobóelcorrectofuncionamientodel
+Prueba 1: Prueba de Registro de Aplicaciones y RegistroyLogindeusuariosqueformanpartedelaseguridad
+Workspaces aniveldeusuario,además,secomprobóelcorrectofuncio-
+Objetivo namiento de la interfaz visual para la creación de espacios
+Mostrarelcorrectofuncionamientodelmódulovisualparael detrabajoyregistrodeaplicaciones.Porúltimo,larespuesta
+registrodeaplicacionesyconfiguracióndeWorkspaces. positivadelpedidoGetMapcompruebaquefuncionancorrec-
+ParaestapruebaseregistróunUsuariocomúnenelservi- tamentelasfuncionesbásicasdelservidor.
+dor(usuariotest@gmail.com),secreóunespaciodetrabajo
+personalizado(TestW1)conaccesoalospedidosGetMapy Prueba2:FuncionamientoenLinux
+GetCapabilities y a las capas Calles y Edificios solamente. Objetivo
+Se registró una aplicación (AppTest1) y se hizo un pedido ComprobarquelanuevaversióndeOLSescapazdefuncio-
+GetMapparasolicitarlascapasCallesyEdificios. nartambiénenelsistemaoperativoLinux.
+Para esta prueba, se pondrá a ejecutarse el servidor en
+Ubuntu18.04,enlamismalaptopquesemencionóalprinci-
+piodelcapítulo,seintentaráaccederdesdeelnavegadorala
+páginadeiniciodelservidoryseharáunpedidoGetCapabili-
+ties.
+Figura2.Registrodelusuario(usuariotest@gmail.com).
+Figura3.CreacióndelworkspaceTestW1. Figura6.ServidorejecutándoseenUbuntu18.04.
+Resultado
+ConestapruebasemostróquelanuevaversióndeOLSes
+capaz de funcionar correctamente tanto en el Sistema Ope-
+rativoWindowscomoenLinuxsinrealizarningúncambio
+significativo.
+Pruebas de Rendimiento
+Figura4.RegistrodelaaplicaciónAppTest1.
+Unodelosobjetivosplanteadosenestetrabajofuemejo-
+rarlaeficienciadelpedidoGetMapqueeselmáslentoenla
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.81-90
+88 DesarrollodelanuevaversiónmultiplataformadeOpenLatinoServer(OLS)
+Resultado
+Ladisponibilidaddelservidorsemantieneenamboscasos,
+perolaversiónnuevasuperaconcrecesalaanteriorrespecto
+alacantidaddepedidosqueescapazderesponderyeltiempo
+queletomaenresponderunpedido.
+Prueba2:
+Objetivo
+SabersinuevaversióndeOLSmejorólaeficienciadelpinta-
+dodelmapa.Paraestaprueba,sehaceunpedidoGetMapque
+nuncaantessehabíahecho(NoestálarespuestaenlaCache
+Figura7.PáginadeiniciodelServidor,ejecutándoseen inicialmente)sobrelascapas1,2y3alasdosversionesde
+Ubuntu18.04. OLSysesimulan2clientespor30segundos.
+Antiguaversión Nuevaversión
+NumPedidosRealizados 8 115
+Respuestasatiempo 4 115
+TiempoPromdeResp(Seg) 4.30 0.17
+NumRespporSeg) 0 5
+Tabla1.Pruebaderendimiento#2
+Resultado
+OLS mejoró su disponibilidad ya que antes no era capaz
+de responder a todos los pedidos que le hacían los clientes
+Figura8.PedidoGetCapabilities,enUbuntu18.04. enuntiempocortoyahorasimantieneestadisponibilidad.
+Además, el tiempo de respuesta disminuyó drásticamente,
+cuandoserepiteelpedidovariasveces,loqueimplicauna
+antiguaversióndeOLS.Acontinuación,seexponenvarias
+mejoraimportante.
+pruebasrealizadasparamedirlaeficienciadelnuevoservi-
+Con las pruebas de funcionalidad y rendimiento, se pudo
+dorcomparándoloconlaantiguaversiónoconotroservidor
+comprobarquelanuevaversióndeOLScumplecontodoslos
+desarrolladoenCasasoftquefuehechoen.NetFramework
+objetivospropuestos.Ademásdelaspruebasanteriormente
+usandoSharpMapparatrabajarconmapas.
+descritassehicieronotras,sepuedenencontrarlosdetallesde
+Parallevaracabolaspruebas,seutilizóunsoftwareescri-
+todaslaspruebasrealizadasenelcapítulo5de[26].
+toenGo[20]llamadoGoBench[21],elcualpermitedefinir
+unRequestycrearNprocesos,cadaunosimulaseruncliente
+5. Conclusiones
+quehaceconstantementeelpedidoqueseespecificóporun
+tiempoTyluegoreportaestadísticasútilessobreelrendimien- Coneltrabajorealizado,sehancumplidotodoslosobjetivos
+todelservidoralqueselerealizaronlaspruebas. planteadosinicialmente.Pues,seobtuvounanuevaversión
+multiplataformadeOLS,contodaslasfuncionalidadesbá-
+Prueba1: sicas de la antigua versión. Además, se agregó un módulo
+Objetivo visualparafacilitarlaconfiguracióndelservidoryunopara
+Saber si la nueva versión de OLS mejoró su velocidad de que los usuarios puedan registrar aplicaciones y configurar
+respuestaenpedidosbásicosquenorequiereninteraccióncon susespaciosdetrabajo.Semejorólaestructuraqueexistíaen
+basededatos.Paraestaprueba,sehaceunpedidoparaque elservidorparadefinirunespaciodetrabajo,dandolugara
+muestrelapáginadeinicioysesimulan500clientes. unnuevoconceptodeWorkspacequepermiteconfigurarel
+accesoacapasyfuncionesdelservidor,asícomopersonalizar
+estilosparalascapas.Seimplementóunacapadeseguridad
+Antiguaversión Nuevaversión quemanejaelaccesoalosserviciosdeOLS,paraquesolo
+NumPedidosRealizados 35594 102421 puedanaccederaplicacionesregistradasytieneencuentalos
+Respuestasatiempo 35594 102421 permisosdelWorkspacequesesolicita.Porúltimo,seimple-
+NumRespuestasporSeg 1227 2926 mentóunaCachequemejoranotablementeelrendimientodel
+TiempodePrueba(Seg) 30 30
+pedidoGetMap.
+Figura9.Pruebaderendimiento#1.
+Podemosconcluirquelosprincipalesaportesdeestain-
+vestigaciónson:
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.81-90
+DesarrollodelanuevaversiónmultiplataformadeOpenLatinoServer(OLS) 89
+Elnuevoservidordemapasdesarrolladoen ASP.NET [2] EricFreemanyElisabethFreemanHeadFirstDesign
+Coreescompletamentefuncionalporsímismocomo Patterns.(FirstEdition),2007.O’Really.
+servidordemapas,pero,además,sucapadeDominio,
+[3] Bipin Joshi Beginning SOLID Principles and Design
+porestarbiendesacoplada,puedeusarsecomoFrame-
+PatternsforASP.NETDevelopers.2016Apress
+workparadesarrollarnuevosservidoresdemapasen
+ASP.NETCore.UsándosecomoFramework,brindafa- [4] JamieKurtzASP.NETMVC4andtheWebAPI.,2013.
+cilidadesparaprocesarcapasvectorialesycumplircon Apress.
+elprotocoloWMS.Facilidadesquenoestabandisponi-
+blespreviamenteparaASP.NETCoredeformagratuita. [5] Sitio Oficial de Windows. URL:
+El estudio realizado, sobre el proceso de migración, https://www.microsoft.com. Consultado en 14 de
+representaparaelfuturounafuentedereferenciacada febrerode2022
+vezqueserequieraunprocesosimilar.
+[6] AdamFreemanProASP.NETCoreMVC.(6thedition),
+ElprocesodeimplementacióndelpedidoGetCapabi-
+2016.Apress.
+litiesconstituyeunaguíaparasaberenelfuturocomo
+extender los protocolos de comunicación que imple- [7] JeffdeLaBeaujardièreWebMapServiceImplementa-
+mentaOLS. tionSpecificationPart2XMLforRequestsusingHTTP
+ElmódulodeseguridadimplementadousandoJSON POST,2002OpenGISDiscussionPaper
+WebTokensproveeaOLSdeunmecanismodeseguri-
+[8] JeffdeLaBeaujardièreOpenGIS®ImplementationSpe-
+dadrobustoyextensible.
+ElmecanismodeCacheimplementadomejoramucho
+cificationVersion:1.3.0,2006OpenGeospatialConsor-
+laeficienciadelpedidoGetMapysugiereotrasnuevas tiumInc
+mejorasquesepuedenhacerenunfuturo(Seexplica
+[9] OGC. OGC official site. ESRI. URL:
+mejorenelTrabajoFuturo).
+https://www.ogc.org/. Consultado en 14 de febre-
+rode2022
+5.1 Líneasfuturasdeinvestigación
+Apesardehabercumplidoconlosobjetivosplanteadosini- [10] ESRI. ESRI official site. ESRI. URL:
+cialmente,elnuevoservidordeOpenLatinopuedecontinuar https://www.esri.com/es-es/home. Consultado en
+mejorando, para ello, se proponen los siguientes aspectos 14defebrerode2022
+comotrabajofuturo:
+[11] Codeplex. SharpMap - Geospatial Ap-
+ImplementarunproveedordedatosusandoPostgreSQL plication Framework for the CLR.
+[22]quepermitaprocesarcapasvectorialesyobtener https://archive.codeplex.com/?p=sharpmap. Con-
+lasgeometrías,ejecutándosedesdeWindowsodesde sultadoen14defebrerode2022
+Linux.
+[12] ESRI official site. About ARCGis.
+Implementarproveedoresdedatosparaformatoscomo
+https://www.esri.com/es-es/arcgis/about-
+GeoJSON,ShapeFile,KML,entreotros.
+arcgis/overview. Consultado en 14 de febrero
+Implementar un proceso que se ejecute en segundo
+de2022
+planoyquegenererespuestasadiferentespedidosGet-
+MapparaqueestasseanalmacenadasenCacheein- [13] ESRI Community ARCGis.
+crementelasprobabilidadesdequecuandollegueun https://comminity.esri.com/community/developers/native-
+pedidoGetMapalservidorlarespuestaaesteyaesté
+app-developers/arcgis-runtime-sdk-for-
+almacenada. net/blog/2019/08/22/announcing-arcgis-runtime-
+Extender el uso de la Cache para que si se solicita sdk-for-net-1006-and-preview-of-support-for-wpf-for-
+unacajacontenedoraA,cuyasgeometríasnoestánen net-core-30.Consultadoen14defebrerode2022
+Cache,peropuedenobtenerseporcomposicióndelas
+geometríasdelascajascontenedorasByC,entonces, [14] Asposeofficialsite.https://products.aspose.com/gis/net.
+enlugardeconsultarabasededatosparaobtenerto- Consultadoen14defebrerode2022
+daslasgeometríasdeA,seobtengancomponiendolas
+[15] Map Tile Github Docs.
+geometríasdeByC.
+https://github.com/apdevelop/map-tile-service-asp-net-
+core/blob/master/README.md. Consultado en 14 de
+Referencias
+febrerode2022
+[16] CesardelaTorreLlorente,UnaiZorrillaCastro,Javier
+Referencias
+CalvarroNelso,MiguelAngelRamosGuiadeArquitec-
+[1] Meyer,Bertrand.Object-OrientedSoftwareConstruc- turaN-CapasOrientadaalDominio(1raedición),2010
+tion.1988. MicrosoftIbéricaS.R.L
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.81-90
+90 DesarrollodelanuevaversiónmultiplataformadeOpenLatinoServer(OLS)
+[17] MongoDBOfficialSite.URL:https://mongodb.com.es. [23] DaherL.MoraValdés,ProveedordedatosShapefiley
+Consultadoen14defebrerode2022. ConsultasEspacialesenOpenLatinoServer.,Habana:
+Matcom,2019.Consultadoen14defebrerode2022.
+[18] MoraLinet.OpenLatinoServer2.0.0:Herramientaspara
+[24] Carlos E. Aguilera Medina, Adición de herra-
+la mejora en el rendimiento de la generación de imá-
+mientas para la gestión de información geográ-
+genes. Habana : Matcom, 2016. Consultado en 14 de
+fica en el visor de mapas OpenLatinoViewer:
+febrerode2022.
+?Get−FeatureInfo?, ?Spatial−Query?, ?Advanced-
+[19] Postman Official Site - Learning Url: Query?,?View−Focus−Highlight?y?Legend?.,Haba-
+https://learning.postman.com. Consultado en 14 de na:Matcom,2019.Consultadoen14defebrerode2022.
+febrerode2022.
+[25] HiránDíazdeAcevedoGuanche,Autenticación,Autori-
+zaciónyGeneracióndeMapasTemáticosenOpenLatino
+[20] AlanA.A.Donovan,GoProgrammingLanguage,1st
+Server,Habana:Matcom,2019.Consultadoen14de
+Edition2015Addison-WesleyProfessionalComputing
+febrerode2022.
+Series
+[26] FrankieMujicaCal,Desarrollodelanuevaversiónmul-
+[21] GitHub Gobench Docs Url:
+tiplataformadeOpenLatinoServer,Habana:Matcom,
+https://github.com/cmpxchg16/gobench. Consul-
+2020.Consultadoen14defebrerode2022
+tadoen14defebrerode2022.
+[27] FrankieMujicaCal,ManualdeUsuariodeOpenLatino
+[22] PostgreSQL Official Site Url: https://postgresql.org. ServerV2,Habana:Matcom,2020.Consultadoen14de
+Consultadoen14defebrerode2022. febrerode2022
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.81-90

@@ -1,0 +1,758 @@
+ArtículodeRevisión/ReviewPaper CienciasMatemáticas,Vol.37,No.1,2024,Pag.85-95
+Recibido(Received):19-07-2024,Revisado(Reviewed):14-11-2024
+Aceptado(Accepted):22-12-2024,Enlínea(Online):27-04-2025
+Teorema de los ceros de Hilbert: aplicaciones de sus
+versiones débil y fuerte
+Hilbert’s zero theorem: applications of its weak and
+strong versions
+Jolbin José Mairena Aráuz1 , Isaura Lisbeth Hudiel Fuentes2 , Cliffor Jerry
+Herrera-Castrillo3*
+Resumen El teorema de los ceros de Hilbert (nullstellensatz) es un pilar del álgebra conmutativa y la
+geometríaalgebraica,conaplicacionesquetrasciendensuformulaciónoriginal,loqueincluyelasherramientas
+computacionales. Este artículo revisa las versiones débiles y fuertes del teorema, mediante la consulta de
+estudiospublicadosentre1977y2024,seleccionadosporrelevancia,idiomayactualidad.Lametodología,de
+enfoquecualitativoeinterpretativo,resaltalaescasezdepublicacionesenespañol,loquesubrayalaimportancia
+delteoremaenproblemasmatemáticos.Suaplicaciónunificamétodosalgebraicosygeométricospararesolver
+sistemaspolinomialesyestudiaridealesyvariedades.Lasversionesdébilesyfuertesabordan,respectivamente,
+laexistenciayunicidaddesoluciones.Seenfatizaenlarelevanciadelteoremaenlaoptimizaciónconvexayla
+complejidadcomputacional,mientrasseñalalimitacionesrelacionadascondemostracionescomputacionales.
+Estetrabajobuscaapoyarainvestigadores,loquefomentacompetenciasenelnivelsuperiorymotivafuturas
+exploracionesdelteoremaencontextoseducativosytecnológicos.
+PalabrasClave:álgebraconmutativa,aplicaciones,competencias,teoremadeloscerosdeHilbert,versión
+débilyfuerte.
+Abstract Hilbert’szerostheorem(nullstellensatz)isapillarofcommutativealgebraandalgebraicgeometry,
+withapplicationsthattranscenditsoriginalformulation,includingcomputationaltools. Thisarticlereviewsthe
+weakandstrongversionsofthetheorembyconsultingstudiespublishedbetween1977and2024,selectedfor
+relevance,languageandtopicality. Themethodology,withaqualitativeandinterpretativeapproach,highlights
+thescarcityofpublicationsinSpanish,whichunderlinestheimportanceofthetheoreminmathematicalproblems.
+Itsapplicationunifiesalgebraicandgeometricmethodstosolvepolynomialsystemsandtostudyidealsand
+varieties. Theweakandstrongversionsaddress,respectively,theexistenceanduniquenessofsolutions. The
+relevanceofthetheoreminconvexoptimizationandcomputationalcomplexityisemphasized,whilepointingout
+limitationsrelatedtocomputationalproofs. Thisworkseekstosupportresearchers,whichfosterscompetences
+atthehigherlevelandmotivatesfutureexplorationsofthetheoremineducationalandtechnologicalcontexts.
+Keywords: commutativealgebra,applications,skills,Hilbert’szerotheorem,weakandstrongversion.
+MathematicsSubjectClassification: 13,12Exx,12E25,13-XX.
+1CentroUniversitarioRegionaldeEstelí.UniversidadNacionalAutónomadeNicaragua,Managua,Nicaragua.Email:
+jolbinjosemairena@gmail.com.
+2CentroUniversitarioRegionaldeEstelí.UniversidadNacionalAutónomadeNicaragua,Managua,Nicaragua.Email:
+hudielisaura6@gmail.com.
+3CentroUniversitarioRegionaldeEstelí.UniversidadNacionalAutónomadeNicaragua,Managua,Nicaragua.Email:
+cliffor.herrera@unan.edu.ni.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Maquetadopor(Layoutby):LázaroDanielGonzálezMartínez,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,La
+Habana,Cuba.
+Citar como: Mairena Aráuz, J.J., Hudiel Fuentes, I.L.,& Herrera-Castrillo, C.J. (2024). Teorema de los
+ceros de Hilbert: aplicaciones de sus versiones débil y fuerte. Ciencias Matemáticas, 37(1), 85–95. DOI:
+https://doi.org/10.5281/zenodo.15292987.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9954.
+Introducción deloscerosdeHilbert,puestoqueexistepocainformación
+enhablahispana,porloqueconstituyeunaporteparafuturas
+Labúsquedadesolucionesaecuacionesalgebraicasha
+investigaciones,laactualizacióndelconocimientoylacom-
+sidounadelaspreocupacionesesencialesenelcampodelas
+prensióndeconceptosclaveparadesarrollarhabilidadesde
+matemáticas.Filósofos,matemáticosycientíficos,alolargo
+razonamientomatemáticoenelnivelsuperior.
+delossiglos,handedicadoesfuerzossignificativosquevan
+Encuantoalasinvestigacionesprevias,lamayoríasehan
+másalládeloslímitestradicionalesdelálgebra,paracompren-
+centradoenaspectosteóricosyabstractosdelteoremadelos
+derlanaturalezaylaspropiedadesdeestosprocedimientos,
+ceros,comosudemostración,propiedadesyaplicacionesen
+asícomoparaestablecerprincipiosyteoremasquepermitan
+diversasáreasdelasMatemáticas.Sinembargo,sehapres-
+abordardemanerasistemáticaestedesafío.
+tado menos atención a las problemáticas relacionadas con
+Enelpanoramaactual,dondelatecnologíaylainvesti-
+la implementación y aplicación práctica del teorema, espe-
+gaciónmatemáticaseencuentrancadavezmásentrelazadas,
+cialmenteenelcontextodelamodelizaciónmatemáticayla
+unodeloshitosmástrascendentalesdeestalargayfructífera
+resolucióndeproblemasencienciasaplicadas.
+trayectoriahasidoeldesarrollodelteoremadeloscerosde
+Enestesentido,sehandesarrolladodiversosestudiosde
+Hilbert,tambiénconocidocomoelnullstellensatz[26].For-
+investigación a nivel internacional que se han enfocado en
+muladoafinalesdelsigloXIXporeldestacadomatemático
+explorarelteoremadeloscerosdeHilbertenlaresoluciónde
+alemán David Hilbert, este resultado ha tenido un impacto
+problemasfundamentalesenelcampodelálgebraconmuta-
+profundoysólidoenelcampodelálgebraylageometría,lo
+tivaylageometríaalgebraica[8,25].Asimismo,laversión
+queestablecelasbasesparacomprenderdemostracionesalter-
+débildelteoremahasidoaplicadaenlademostracióndepro-
+nativas,elestudiodesusdiversasversionesylaexploración
+piedadesclavedelascurvasalgebraicasysurelaciónconla
+desusaplicacionesenproblemascontemporáneos[3].
+teoríadenúmerosalgebraicos[14,30,24].
+Con el advenimiento de la computación simbólica y el
+Encambio,existenpocosestudiosreferentesalnulltellesn-
+desarrollodepotentesherramientasdeálgebracomputacional,
+saztdeHilbert,quesolamentehasidoretomadocomoconcep-
+elteoremahaadquiridounarelevanciaaúnmayor.Estosavan-
+toquesustentainvestigacionescomoeltrabajodegradode
+ces han permitido explorar y aplicar el teorema de manera
+Solórzanoycolaboradores[31].Deestemodoseobservala
+máseficiente,tantoenlaresolucióndesistemasdeecuaciones
+necesidadderealizarestudioscomoeste,parafamiliarizarse
+polinomialescomoenelestudiodelaestructuradelosideales
+conelcontextodelálgebramoderna.
+yvariedadesalgebraicas.
+SibienelnullstellensatzdeHilbertseenmarcaenelámbi-
+SegúnBigattiycolaboradores[5],losalgoritmosypaque-
+todelascienciasexactas,sutrascendenciaparalasociedadno
+tesdesoftwareespecializados,comolosbasadosenlateoría
+debesubestimarse.Lasmatemáticas,incluyendoderivaciones
+deGröbner,hansidofundamentalesparaimplementardema-
+comoesta,sonlapiedraangularsobrelacualseconstruyen
+neraprácticalasideassubyacentesalteoremadeloscerosde
+muchasaplicacionesprácticasencamposcomolafísica,la
+Hilbert.Así,lainteracciónentrelateoríaalgebraicaylastéc-
+ingeniería,lainformáticaylascienciasnaturales.Alampliar
+nicascomputacionaleshaabiertonuevasvíasdeinvestigación
+elconocimientoteóricosobrelaspropiedadesdelospolino-
+yaplicacióndeesteimportanteresultadomatemático,loque
+miosylosanillosconmutativosseabrennuevasposibilidades
+expandesuimpactoenmúltiplesámbitosdelascienciasyla
+dedesarrollotecnológicoycientíficoque,asuvez,pueden
+ingeniería.
+beneficiaraampliossectoresdelasociedad.
+Sinembargo,unadelasprincipalesinterrogantesqueaún
+Mencionado lo anterior, el objetivo de esta revisión es
+nosehantratadoporcompletoeslacaracterizaciónyclasifi-
+sintetizar el conocimiento actual sobre las aplicaciones del
+cacióndelostiposdecerosquepuedenexistirenunafunción
+TeoremadelosCerosdeHilbert,tantoensuversióndébilco-
+continua[28].Sibienseconocenlasversionesdébilyfuerte
+moensuversiónfuerte,endiversoscamposdelamatemática
+delteoremadelosceros,aúnnosehanestudiadoexhaustiva-
+y la ciencia. Abordar esta temática en futuras investigacio-
+mentelaspropiedadesyparticularidadesdecadatipodecero,
+nespodríaaportarnuevosconocimientosyherramientaspara
+comosumultiplicidad,estabilidad,comportamientoasintóti-
+ampliarlacomprensiónyaplicabilidaddelnullstellensatz.
+co,entreotros[12].
+Porestarazón,esteestudioesdegranconvenienciayuti-
+Relevancia del estudio
+lidaddesdemúltiplespuntosdevista.Altenerconsecuencias
+teóricasimportantes,secolaboraenlarelacióndelteorema Elestudioabordaunatemáticaesencialenelcampodel
+conlateoríadelacomputabilidad,locualesrelevanteparael álgebra conmutativa y la geometría algebraica, al explorar
+diseñodealgoritmosyelestudiodelacomplejidadcompu- lasversionesdébilyfuertedelteoremadeloscerosdeHil-
+tacional.Además,lastécnicasymétodosdesarrolladosenla bert.Surevisiónsistemáticapermiteidentificarvacíosenla
+demostracióndelteoremainfluyenenelavancedediversas produccióncientíficahispanohablante,loquefavorecelade-
+áreasdelasmatemáticas,comolateoríadeconjuntos,elál- mocratización del conocimiento matemático avanzado. La
+gebraylatopologíaalgebraica,loqueposibilitaposteriores investigacióncontribuyealfortalecimientodecompetencias
+aplicacionesencienciaytecnología. académicasennivelessuperioresypromuevelaintegración
+Esteartículofomentaelaprendizajecontinuodelteorema deherramientascomputacionalesenelanálisisalgebraico,lo
+TeoremadeloscerosdeHilbert: aplicacionesdesusversionesdébilyfuerte 87
+quefacilitasuaplicaciónencontextoseducativos,tecnológi- específicasdefinidasporelgrupoinvestigador,deacuerdocon
+cosycientíficos.Esteenfoqueimpulsanuevasperspectivas losobjetivosdelestudio.Ensegundainstanciaseexcluyeron
+paralaenseñanzayeldesarrollodeinvestigacionesfuturasen publicacionesquenoestuvieranrelacionadasconelteorema
+matemáticasyáreasafines. oquesecentraranenotrasvariablesdeestudio.Porúltimo,se
+eliminaronartículosselectosquepresentabaninconsistencias
+duranteelprocesodeinvestigación.
+1. Materiales y métodos
+En ese mismo sentido, la información extraída de los
+Lametodologíaempleadaenestetrabajosebasaenun estudiosanalizadossebasóenaspectosderelevancia,idioma
+paradigma interpretativo, con un enfoque cualitativo, pues- yañodepublicación,dondeseconsideraronlasimplicaciones
+to que persigue describir y comprender el contenido, bajo delusodelteoremadeloscerosdeHilbert.Encuantoala
+procedimientosderevisiónbibliográfica.Comoestrategiade exploracióndelosdatosobtenidos,sesintetizarondemanera
+búsquedaseseleccionólabasededatosdeGoogleacadémico narrativa,puestoqueestaestrategiafacilitalacomprensión
+utilizandolassiguientespalabrasclave:“teoremadelosce- de la temática y permite describir con detalle conceptos y
+rosdeHilbert”,“nullstellensatz”,“versionesdébilyfuerte”, procedimientos.
+“aplicaciones”ycombinacionesdeestas.Además,nosolose Paragarantizarlacalidadmetodológicayrelevanciadelos
+indagaronartículospublicadosenespañol,sinoquetambién artículosseleccionadossedefinieronlossiguientescriterios:
+en inglés, con restricción de fecha desde 1977 hasta 2024,
+Relevanciatemática:Seconsiderarelevantecualquier
+debidoalaescasainformaciónqueexisteylanecesidadde
+artículo que aborde explícitamente aplicaciones del
+ampliarelconocimientobásicosobredichoteorema.
+nullstellensatzdeHilbertenálgebraconmutativa,geo-
+LaelecciónderestringirlasfuentesdebúsquedaaGoo-
+metríaalgebraica,ocienciasafines.Sepriorizanaque-
+gle Académico se basa en su amplia accesibilidad y en su
+llosestudiosqueincluyenejemplosprácticos,aplicacio-
+habilidad para compilar estudios de diversas disciplinas y
+nescomputacionales,asícomoanálisisteóricosrelacio-
+fuentesacadémicas,comorevistasindexadas,libros,tesisy
+nadosconlasversionesdébilesyfuertesdelteorema.
+actasdeconferencias.Estaplataformafueseleccionadacomo
+herramientainicialdebidoasuversatilidadyfacilidaddeuso, Calidadmetodológica:Seseleccionanúnicamentear-
+especialmenteensituacionesdondeelaccesoabasesdedatos tículospublicadosenrevistasindexadas,conferencias
+especializadaspuedeverseobstaculizadoporrestriccionesde dealtoimpactoorepositoriosacadémicosconfiables.
+suscripciónolimitacionesfinancieras. Cadaartículodebedescribirdetalladamentesumetodo-
+Esrelevantemencionarqueesteestudioespartedeltraba- logía,asícomolasherramientasylosprocedimientos
+joacadémicorealizadoenelcontextodelCursodeÁlgebra empleadosparalaobtenciónderesultados.
+Computacional, dirigido a estudiantes de cuarto año de la
+Idiomayaccesibilidad:Losartículosdebenestarescri-
+carreradeMatemáticasenlaUNAN-Managua/CUR-Estelí.
+tosenunlenguajetécnicoadecuadoalpúblicoobjetivo,
+Esteentornoacadémicohapermitidoalosestudiantesinvesti-
+yaseaenespañoloinglés,conprioridadparaaquellos
+garconceptosclavedelálgebraconmutativaylageometría
+queproporcionenexplicacionesclarasyaccesibles.
+algebraica,comoelnullstellensatzdeHilbert,desdeunapers-
+pectivatantoteóricacomopráctica. Añodepublicación:Seincluyepreferentementelitera-
+turapublicadaenlosúltimos10años,afindegarantizar
+laactualidaddelconocimientorevisado.Sepermitela
+inclusióndeartículoshistóricossolosirepresentanun
+aporte seminal o son esenciales para el contexto del
+tema,apartirde1977.
+Impacto académico: Se evalúa el impacto mediante
+el número de citas, la calidad de la publicación y la
+aplicabilidaddelosresultadosencontextosacadémicos
+ytecnológicos.
+Adecuación temática: La pertinencia temática se de-
+Figura1.Procesodeseleccióndelaliteraturacientífica
+relativosalteoremadeloscerosdeHilbert[Scientific terminadeacuerdoaltítulo,resumenypalabrasclave
+literatureselectionprocessregardingHilbert’szeroes decadaartículo,dondeseverificaquesecumplanlos
+theorem]. objetivosespecíficosdelestudio.Sondescartadoslos
+estudiosquesedesvíendelostópicosdelnullstellensatz
+oenfoquesrelacionados.
+Por otra parte, la selección de los estudios discurrió en
+tresfases(Figura1).Laprimeraincluyóestudiosrelevantes Estos criterios buscan minimizar sesgos, asegurar la re-
+queabordaronlasaplicacionesdelteoremadeloscerosde presentatividad de la muestra y fortalecer la validez de los
+Hilbertensusversionesdébilyfuerte,conlascaracterísticas hallazgospresentadosenesteartículo.
+MairenaAráuz,J.J.,HudielFuentes,I.L.,&Herrera-Castrillo,C.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.85-95
+https://doi.org/10.5281/zenodo.15292987 https://revistas.uh.cu/rcm/article/view/9954
+88 TeoremadeloscerosdeHilbert: aplicacionesdesusversionesdébilyfuerte
+Tabla1.Etapasdelprocesodeinvestigación,retomadodeCrespo[11][StagesoftheresearchprocessfromCrespo[11]].
+Problema de in- Revisióndelali- Diseño del estu- Selección de la Recopilación de Análisisdedatos
+vestigación teratura dio muestra datos
+Seidentificarony Se realizó una Se elaboró un di- Se determinaron Sellevaronacabo Se aplicaron téc-
+delimitaronclara- exhaustiva re- señodeinvestiga- loscriteriosdein- lastécnicasdere- nicas cualitativas
+mente los objeti- visión de la ción adecuado a clusión y exclu- coleccióndedatos apropiadas para
+vos de la investi- literatura existen- losobjetivosplan- siónparalaselec- establecidasenel analizarlosdatos
+gación, así como te sobre el tema teados, seleccio- ción aleatoria de diseñodelestudio, recopilados, con
+las preguntas de deestudio,conel nando la metodo- la muestra en el donde se utiliza- el objetivo de
+investigaciónque fin de contextua- logíamásapropia- estudio. ronlasherramien- responder a las
+guiaron el estu- lizar el problema, da para abordar taspertinentes. preguntas de
+dio. identificar vacíos las preguntas de investigación.
+enelconocimien- investigaciónyre-
+to y establecer copilando los re-
+una base teórica cursosnecesarios.
+sólida.
+Porotraparte,lamuestraenestudioestuvoconformada que no garantiza la inclusión de los estudios más significa-
+por 25 artículos en los cuales se definieron las siguientes tivos o influyentes. Esto podría limitar la profundidad y la
+categoríasdeanálisis:campodeaplicacióncomputacional, representatividaddeloshallazgosobtenidos.
+contextomatemáticoylasimplicacionesdelusodelteorema Lamenciónsuperficialdelapartecomputacional,sinin-
+deloscerosdeHilbert.Lasvariablesfueronmedidasatravés cluir demostraciones prácticas o aplicaciones con software
+delascalificacionesentreVariosyPocostalcomosemuestra deálgebracomputacionalcomoMaple,MathematicaoSage-
+Figeunral 2a. FCaigteugroaría2s. de análisis Math,limitalautilidadprácticadelartículo.Estacarenciaes
+especialmentesignificativa,dadoqueelcamposebeneficia
+enormementedelasherramientascomputacionalesenlareso-
+lucióndeproblemascomplejos,loquepodríaserabordado
+Implicaciones del teorema 4 5
+másafondoenotrosestudios.
+sa La traducción de artículos del inglés al español puede
+íro
+g Contexto matemático 6 2 generar errores de interpretación, especialmente en temas
+eta
+C avanzadosdeálgebraygeometríaalgebraica,dondelostérmi-
+nostécnicosymaticescomplejossonfundamentalesparauna
+Álgebra computacional 5 3
+comprensiónprecisa.Estasituaciónpuedeafectarlacalidad
+delanálisisylavalidezdelasconclusionesalcanzadasenel
+0 2 4 6 8 10
+estudio.
+Cantidad de documentos
+Varios Pocos
+Figura2.Categoríasdeanálisis[Analysiscategories]. 2. Resultados y discusión
+Enelámbitodelalgebracomputacionalyotrasdisciplinas
+1.1 Limitantesdelestudio científicas,elteoremadeloscerosdeHilberthasidountema
+Aunque este estudio se basó principalmente en Google deinteréssignificativoenlosúltimosaños.Estaproposición,
+Académico,esfundamentalqueinvestigacionesfuturasincor- en sus versiones débil y fuerte, ha sido objeto de escasas
+porenunamayordiversidaddefuentes,comobasesdedatos publicaciones científicas, lo que subraya su importancia y
+académicasreconocidas(Scopus,JSTOR,IEEEXplore).Es- complejidadenelcampomatemático.Paracomprendermás
+tasplataformasofrecenestudiosconmetodologíasmássólidas sobre este tópico se parte de un preámbulo sobre ideales y
+yunarepresentaciónmáscompletadelconocimientoactual variedadesafines,porseréstoslosconceptosfundamentales
+sobre el teorema de nullstellensatz. Ampliar las fuentes de delteoremadeloscerosdeHilbert.
+informaciónpermitiríaenriquecerlosanálisisalincluirenfo-
+quesinterdisciplinariosyresultadossignificativosendiversas 2.1 Ideales y variedades afines: fundamentos del
+áreasdeaplicación. teoremadeloscerosdeHilbert
+La muestra de 25 artículos es relativamente pequeña, y Enmatemáticas,losideales,comoconjuntosdeelementos
+laselecciónaleatoria,sincriteriosadicionales,puedeafectar enálgebras(anillosogrupos),desempeñanunpapelcrucial
+larelevanciadelamuestra.Enrevisionesbibliográficas,el en la teoría de anillos, el álgebra abstracta y la geometría
+uso de una muestra aleatoria no siempre es apropiado, ya algebraica.Atravésdelarelaciónentreidealesyvariedades
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.85-95 MairenaAráuz,J.J.,HudielFuentes,I.L.,&Herrera-Castrillo,C.J.
+https://revistas.uh.cu/rcm/article/view/9954 https://doi.org/10.5281/zenodo.15292987
+TeoremadeloscerosdeHilbert: aplicacionesdesusversionesdébilyfuerte 89
+Tabla2.Rúbricadeevaluacióndeartículos[Article (deunaomásvariables)tomanelvalorcero.SeaV(X)lava-
+evaluationrubric]. riedadalgebraicaafíndefinidaporunconjuntodepolinomios
+Aspecto Excelente Aceptable No Acepta- X ⊆k[x].Engeneral,sedicequeunsubconjuntoU ⊆kn es
+ble unavariedadalgebraicasiexistetalX quesatisfaceU=V(X).
+Relevancia El artículo El artícu- El artículo Enotraspalabras,V(X)⊂kn eselconjuntodetodaslas
+solucionesdelsistemadeecuaciones:
+aborda de lo trata no aborda
+manera algunasapli- las aplica-
+f 1(x
+1
+,x
+2
+,···,xn)= f 2(x
+1
+,x
+2
+,···,xn)=···= fn(x
+1
+,x
+2
+,···,xn)=0,
+exhaustiva caciones ciones del
+las aplica- relevantes teorema de con f ,f ,···,f ∈X [23,2,24].
+1 2 n
+ciones del del teorema los ceros La importancia de estas definiciones radica en la cone-
+teorema de delosceros de Hilbert xiónfundamentalconelteoremadeloscerosdeHilbert.Esto
+los ceros de Hilbert, o lo hace permiteabordarproblemasdeunamaneramásunificadaypo-
+de Hilbert pero de de manera tente,yaquesepuedenutilizarherramientastantoalgebraicas
+en diversos manera tangencial comogeométricasparaestudiaryresolvercontrariedadesen
+campos de superficial diversasáreasdelasmatemáticas.Además,sonunodelos
+la matemá- objetoscentralesdeestudiodelageometríaalgebraicaclásica
+tica y la ymoderna[20].
+ciencia
+Idioma El artículo El artículo El artículo 2.2 TeoremadeloscerosdeHilbert
+está en un está es- está en un ElnullstellensatzdeHilbert,traducidocomo“teoremade
+idiomaacce- crito en idioma que loslugaresdelosceros”,estableceunarelaciónfundamental
+sibleycom- un idioma dificulta entrevariedadesalgebraicasylosidealesenanillosdepolino-
+prensible que podría significati- miosdefinidossobrecuerposalgebraicamentecerrados.Dado
+requerir un vamente su uncuerpoalgebraicamentecerrado,seconsideraelanillode
+esfuerzo compren- polinomiosasociadosyunidealenesteanillo.Lavariedad
+adicional sión afínvinculadaadichoidealcorrespondealconjuntodetodas
+para com- lasn−tuplasdeelementosenelcuerpoqueanulantodoslos
+prenderlo polinomiospertenecientesalideal[32].
+Año de pu- El artículo El artículo El artículo Coxycolaboradores[10]exponenqueunavariedadV ⊆
+blicación fue publi- fue publica- fue publica-
+KnyunidealI,consideralacorrespondenciaqueseobserva
+cado en dohacemás dohacemás enlaTabla3.
+los últimos de 10 años, de 10 años
+Tabla3.Variedadeseidealescorresponden[Varietiesand
+5 años pero aun y podría no
+IdealsCorrespond].
+reflejandoel contiene in- reflejar el
+conocimien- formación conocimien- Variedadesafines Ideales
+to actual relevante toactualdel V (cid:55)−→ I(V)
+sobre el tema
+tema Nota:LacorrespondenciaentreidealesI⊆k[x 1 ,...,x n ]y
+variedadesV(I)⊆knnoesbiyectiva.Esposiblequedistintos
+idealesgenerenlamismavariedadalgebraica,esdecir,
+afinesseestablecelabaseparacomprenderelnullstellensatz
+V(I
+1
+)=V(I
+2
+)aunqueI
+1
+̸=I
+2
+.
+deHilbert,unconceptocentralenestecontexto.
+Sin embargo, Hernández [19] profundiza en estos con-
+Recíprocamente,dadounidealI⊆K[x ,···,x ],sedefine
+ceptos desde una perspectiva donde estudia las demostra- 1 n
+elconjunto:
+cionesysurelaciónconlosteoremasfundamentales.Mien-
+trasqueensudefiniciónformalsedicequeunsubconjunto
+V(I)={x∈Kn: f(x)=0 ∀f ∈I}. (4)
+I⊆k[x ,···,x ]esunidealsicumplelassiguientescondicio-
+1 n
+nes:
+LoanterioraseguraqueV(I)seaunavariedadafínporque
+existe un conjunto finito de polinomios f ,···,f ∈I :I =
+1 s
+0∈I, (1)
+⟨f ,···,f ⟩,dondeV(I)eselconjuntoderaícescomunesde
+1 s
+Si f,g∈Ientonces f±g∈I, (2) estospolinomios.Porconsiguiente,setieneelmapeodonde
+Si f ∈Iyg∈k[x]entoncesgf ∈I. (3) se observa una correspondencia entre ideales y variedades,
+peronoesbiyectivo,esdecir,idealesdiferentespuedenco-
+Asímismo,lasvariedadesalgebraicasafinesrepresentan rresponderalamismavariedadcomosemostróenlaTabla
+conjuntosdepuntos(finitooinfinito)dondelospolinomios 3.
+MairenaAráuz,J.J.,HudielFuentes,I.L.,&Herrera-Castrillo,C.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.85-95
+https://doi.org/10.5281/zenodo.15292987 https://revistas.uh.cu/rcm/article/view/9954
+90 TeoremadeloscerosdeHilbert: aplicacionesdesusversionesdébilyfuerte
+El nullstellensatz de Hilbert ha sido un resultado trans- toncessoniguales,salvopotencias;esdecir,siunpolinomio
+cendental,nosoloporqueestableceunarelaciónfundamental seanulaentodoslospuntosdelavariedad,entoncesexisteun
+entrelasramasdelasmatemáticas,sinoporquetambiénestá númeronaturalmtalque fm∈I.Estoimplicaqueelpolino-
+√
+involucradoenproblemasalgorítmicos[29].Porloanterior, miopertenecealradicaldelideal,denotadocomo I.Cabe
+Solórzanoycolaboradores[31]enfatizanqueelteoremade destacarqueelteoremagarantizalaexistenciadetalpotencia,
+loscerosdeHilbertrepresentaelmargendelamonedacuyas peronoestableceunvalorespecíficoparacadacaso.
+carassonelálgebraconmutativaylageometríaalgebraica.
+Además,eslaherramientafundamentalparaeltraslado 2.3 Versióndébil
+dellenguajeenambasáreas.Asímismo,elteoremaestablece SeaKuncampoalgebraicamentecerradoeI,unidealcon
+quesiunpolinomiotienecoeficientesenterosytieneraíces V(I)=0/,entoncesI=k[x 1 ,···,x n ].Estoreflejaunacondi-
+enelconjuntodenúmeroscomplejos,entoncestambiéntiene ciónnecesariaparaqueunconjuntoalgebraicoseanovacío
+raícesenelconjuntodenúmerosenteros[7].Enestesentido, [31].
+[16] resalta que se puede demostrar mediante las bases de Demostración.ParaprobarqueI=k[x 1 ,···,x n ],laestrategia
+Gröbner. esmostrarqueelpolinomioconstante1estáenI,porquesi
+Enciertosentido,esteteoremaesunageneralizacióndel 1∈I,entonces,porladefinicióndeideal, f = f·1∈I,para
+teoremafundamentaldelálgebra,queexpresaquetodopoli- todo f ∈k[x 1 ,···,x n ].Porlotanto,demostrarque1∈I basta
+nomionoconstanteenk[x]tieneunaraíz.Elnullstellensatz paraconcluirqueI=k[x 1 ,...,x n ],yaquetodopolinomiodel
+débilrefierequeparatodoidealpropioak[x ,···,x ](esdecir, anillopuedeexpresarsecomomúltiplode1,loqueimplica
+1 n
+quenocontienelospolinomiosconstantes),lospolinomiosen queelidealcontieneatodosloselementosdelanillo.
+atienenuncerocomún,dondeaestádefinidocomounpunto Lapruebaesporinducciónsobren,elnúmerodevariables.
+enkelevadoan(véaseTabla4),tienenuncerocomún[27]. Sin=1,I⊂K[x]satisfaceque:
+Tabla4.Glosariodetérminos[Glossaryofterms]. V(I)=0/. (5)
+Símbolo Significado
+Supóngasequesecumpleparaelanillodepolinomiosen
+k (generalmente algebraica-
+n−1variablesenk[x ,···,x ].SeaI=⟨f ,···,f ⟩unideal
+1 n 1 s
+mentecerrado)
+enk[x ,···,x ]conV(I)=0/.Seasumequeelpolinomiono
+1 n
+k[x ,x ,···,x ] Anillo de polinomios en n
+1 2 n esconstanteporquedelocontrarionohabríanadaqueprobar.
+variablessobreelcampok
+Admítasequeelgradototalde f esN≥1;sepuedeasumir
+1
+I Ideal en el anillo
+tambiénque f tienelaforma:
+1
+k[x ,x ,···,x ]
+1 2 n
+V(I) Conjuntodesolucionesen f (x ,···,x )=cxN+términosenx congrado <N, (6)
+1 1 n 1 1
+kn del sistema de ecuacio-
+nes polinomiales definido dondec̸=0esunaconstante.
+porelideal Considereelcambiolinealdecoordenadas:
+p Ideal primo en
+x =x¯ ,
+k[x ,x ,···,x ] 1 1
+1 2 n
+∩ Interseccióndeconjuntoso x 2 =x¯ 2 +a 2 x¯ 1 ,
+ideales .
+.
+.
+⊆ Inclusión de conjuntos o
+ideales x n =x¯ n +a n ,
+= Igualdad de conjuntos o
+dondelosa sonconstantesenK quedebendeterminarse.Si
+ideales i
+a=(a ,a ,···,a ) Puntoenkn sesustituyex 1 ,···,x n , f 1 adquierelaforma f 1 (x 1 ,···,x n )=
+1 2 n f (x¯ ,x¯ +a x¯ ,···,x¯ +a x¯ )=c(a ,a ,···,a )xN+térmi-
+f ,f ,···,f Polinomios en 1 1 2 2 1 n n 1 1 2 n 1
+1 2 n nosenx congrado<N,
+k[x ,x ,···,x ] 1
+1 2 n Donde c(a ,a ,···,a ) es una expresión polinomial no
+Idealgeneradoporlospoli- f ,f ,···,f 1 2 n
+1 2 n nulaena ,···,a .Pordefinicióndepolinomiosantesdepro-
+nomios 1 n
+seguirsepruebaqueK esuncampoalgebraicamentecerrado
+Ideal maximal en
+einfinito.
+k[x ,x ,···,x ]
+1 2 n
+2.4 Versiónfuerte
+Unamuestradeesteteoremaenlarelaciónentrelageome- SikesuncampoalgebraicamentecerradoyI esunideal
+√
+tríayelálgebraes:lassolucionesdeunsistemadeecuaciones enk[x ,···,x ],entoncesI(V(I))= I.Loanteriorestablece
+1 n
+polinomialessonobjetosgeométricosylosidealesyradica- que cualquier ideal radical en un anillo de polinomios en
+lessonobjetosalgebraicos[22].Elteoremadeloscerosde n variables sobre el campo k, el conjunto algebraico de la
+Hilbertdicequesidosidealesdefinenlamismavariedad,en- variedaddelidealIesfinito.Estacorrespondenciabiyectiva
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.85-95 MairenaAráuz,J.J.,HudielFuentes,I.L.,&Herrera-Castrillo,C.J.
+https://revistas.uh.cu/rcm/article/view/9954 https://doi.org/10.5281/zenodo.15292987
+TeoremadeloscerosdeHilbert: aplicacionesdesusversionesdébilyfuerte 91
+Tabla5.Finituddelabasedeidealesenanillosnoetherianos
+[Finitenessofthebasisofidealsinnoetherianrings].
+Variable Concepto
+Anillosnoetherianos Se establece que un anillo
+conmutativo R es noethe-
+Figura3.Correspondenciabiyectivaentrevariedadese
+riano si todo ideal de R es
+ideales[Bijectivecorrespondencebetweenidealand
+finitamentegenerado.
+varieties].
+Idealesenanillosdepolino- En el anillo de polino-
+mios mios k[x ,x ,···,x ] sobre
+1 2 n
+uncampok,elteoremade
+esesencialparacomprenderlasestructurasdelosidealesy
+los ceros de Hilbert garan-
+susconjuntosasociados[16,21].
+tiza que todo ideal propio
+Demostración.Parademostrarlaversiónfuerteimplicain-
+√
+tienealmenosuncero.
+volucrarlaversióndébil.Lainclusión I⊆I(V(I))esclara.
+Finitud de la base de un Utilizando el teorema de
+Recíprocamente,sea f ∈I(V(I)).Seintroduceunavariablez
+ideal los ceros de Hilbert, Ati-
+yseconsideraelidealJ=⟨(1−zf)I⟩dek[z,x].ElidealJno
+yah y MacDonald [3] de-
+tienesoluciones(siJtuvieraunasolución,seríasoluciónde
+muestran que todo ideal
+I.Six esunasolucióndeI,entonces1−zf(x )=1,quees
+0 0
+en un anillo de polino-
+unacontradicción).Luego,porlaversióndébil1∈k[z,k]=J.
+miosk[x ,x ,···,x ]esfini-
+Porlotanto,sepuedeescribir: 1 2 n
+tamentegenerado.Esdecir,
+r tieneunabasefinita.
+1=q (1−zf)+∑q g , (7)
+0 j j Extensiónaanillosnoethe- Losautoresmuestrancómo
+j=1
+rianos esteresultadosobrelafini-
+dondeg ∈I,q ∈k[z,x]. tud de la base de ideales
+j j
+Se sustituye z = 1 en la ecuación anterior, y después enanillosdepolinomiosse
+f
+se multiplica por fs, donde s es la mayor potencia de z en puedeextenderaidealesen
+q ,···,q ,dondeseobtiene: anillosnoetherianosarbitra-
+1 r
+rios, gracias al teorema de
+r loscerosdeHilbert.
+fs= ∑q˜ g , (8)
+j j
+j=1
+dondeg j ∈I,g˜ j ∈k[x]. caso,seutilizaunaversióndébildelteoremaparademostrar
+√ laexistenciadesolucionesóptimasenproblemasdeprogra-
+fs∈I ∴ f ∈ I. (9)
+maciónlinealycuadrática.Porotrolado,laversiónfuertede
+esteteoremaseempleaparaestablecerlaunicidaddedichos
+resultados.
+Esteteoremarepresentaunaderivaciónfundamentalenel
+Asímismo,Basuycolaboradores[4]refierensuimpor-
+campodelageometríaalgebraica.Ensuformamásbásica,
+tancia en la teoría de la computación, especialmente en el
+afirmaquesiunpolinomiomultidimensionalno“desaparece”
+estudiodelacomplejidaddeproblemasdedecisiónenálge-
+enunpuntodeterminado,entonceshayunadirecciónenla
+bracomputacional.Además,Hartshorne[18]destacaquela
+que el polinomio nunca “desaparece”. Esta idea, también
+versiónfuerteescrucialengeometríaalgebraica,puespermite
+conocidacomoprincipiocerodeHilbert,tieneimportantes
+caracterizarlosconjuntosalgebraicoscomolosconjuntosde
+aplicacionesendiversoscamposdelasmatemáticas,lafísica
+derivacionesdesistemasdeecuacionespolinomiales.
+ylaingeniería.
+La versión débil del teorema de los ceros de Hilbert es
+fundamentalparalacaracterizacióndelosidealesmaximales
+3. Aplicaciones del nullstellensatz
+enunanilloconmutativo,locualtieneaplicacionesenálgebra
+ElnullstellensatzdeHilberttienenumerosasaplicaciones abstractayteoríademódulos[15].
+endiversasáreasdelamatemática,desdeelálgebraconmuta- Ensuma,elnullstellensatzdeHilbertesunaherramienta
+tivahastalageometríaalgebraica.AtiyahyMacDonald[3] esencialenelestudiodelaestructuradelosanillosdepolino-
+enfatizanlaimportanciadelteoremaparademostrarlafinitud miosysusideales,conaplicacionesenálgebraconmutativay
+delabasedeidealesenanillosnoetherianos.Losautorespro- álgebracomputacional[9].
+fundizanenestaaplicacióndelteorematalycomosemuestra Consecuentemente,entodassusvariantes,elnullstellen-
+enlaTabla5. satzdeHilbertafirmaquetodoidealpropiodeunanillode
+Unadelasaplicacionesmásfamosasdelnullstellensatzde polinomiossobreuncampoesfinitamentegenerado.Ensu
+Hilbertestáenelcampodelaoptimizaciónconvexa.Eneste versióndébil,elteoremaafirmaquetodoidealpropiodeun
+MairenaAráuz,J.J.,HudielFuentes,I.L.,&Herrera-Castrillo,C.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.85-95
+https://doi.org/10.5281/zenodo.15292987 https://revistas.uh.cu/rcm/article/view/9954
+92 TeoremadeloscerosdeHilbert: aplicacionesdesusversionesdébilyfuerte
+anillo de polinomios sobre un campo es generado por un
+númerofinitodeelementos.Porotrolado,laversiónfuerte
+delteoremaestablecequetodoidealpropiodeunanillode
+polinomiossobreuncampoadmiteunabasefinita.
+Además,correspondemencionarqueenesteestudionose
+logróabordardemostracionesensoftwaredeálgebracompu-
+tacional,locualesimportanteparaunamejorcomprensión
+deltópicousandodiferentesteorías,demodoqueestorepre-
+sentaunalimitanteenelalcanceyextensióndeesteestudio.
+Sepresentarondeficienciasdelamuestra,puestoquesese-
+leccionóaleatoriamentesegúnloscriteriospropuestosporel
+grupoinvestigador.Masaún,Setuvierondificultadesenla
+recolección de datos, así que se recurrió a la traducción de
+publicacioneseninglesahablahispana.
+4. Herramientas computacionales para Figura5.Ejemplodeaplicaciónenelsoftwaresingular
+aplicar el teorema de los ceros de Hilbert [Exampleofapplicationonsoftwaresingular].
+ElnullstellensatzdeHilberthaencontradoaplicaciones
+prácticasgraciasaldesarrollodeherramientascomputacio-
+nalesquepermitenmanejarcálculosalgebraicoscomplejos, Figura6.Ejemplodeaplicacióndesingularobtenidode[1]
+especialmenteenelestudiodeidealesyvariedadesalgebrai- [Exampleofapplicationofsingularfrom[1]].
+cas.Algunasdelasherramientasysoftwaremásutilizados
+sonMacaulay2,singularyCoCoA.
+Macaulay2 [9] es un software creado para la investiga- máseficiente,ampliandosuusoenlaresolucióndeproblemas
+ciónenálgebraconmutativaygeometríaalgebraica.Facilita matemáticosyencamposcomolafísica,laingenieríaylas
+cálculossobreideales,variedadesafinesybasesdeGröbner, cienciascomputacionales.
+quesonesencialesparalaaplicacióndelnullstellensatz[6]. ElnullstellensatzdeHilberttieneaplicacionesprácticas
+UnejemploseríasiseconsideraI=⟨x2−y2−1⟩∈R[x,y]. enáreascomolaoptimizaciónconvexa,lateoríadelacompu-
+ConMacaulay2,sepuededeterminarV(I)yverificarsiesun taciónylaresolucióndesistemasdeecuacionespolinomiales.
+√
+polinomio p(x,y)pertenecea I(Figura4). Suimpactoenálgebracomputacional,atravésdeherramien-
+tas como Macaulay2, singular y CoCoA, permite resolver
+problemascomplejosengeometríaalgebraicayálgebracon-
+mutativa,loquesugierequesuutilidadpodríaextendersea
+otroscampos,comolafísicateórica,laingenieríaylainte-
+ligenciaartificial,dondelosmodelosalgebraicostienenun
+Figura4.EjemplodeaplicaciónenelsoftwareMacaulay2 papelcrucial.
+[ExampleofapplicationonsoftwareMacaulay2].
+Conclusiones
+Elsoftwaresingular(figuras5y6)esmuyutilizadopara
+llevaracabocálculosalgebraicosenelámbitodelálgebracon- Finalmente, este artículo de revisión ha permitido acla-
+mutativaylageometríaalgebraica.Proporcionaherramientas rar varios aspectos clave del nullstellensatz de Hilbert. En
+paratrabajarconidealesyvariedades,asícomopararealizar primerlugar,seevidencialaescasezdeestudiosenidioma
+verificacionesdirectasdelteorema[17]. españolpublicadosrecientemente,locualsubrayalanecesi-
+SegúnDuqueycolaboradores[13],CoCoAesunsistema daddefomentarinvestigacionesquecontribuyanaampliar
+algebraico computacional creado en la Universidad de Gé- laaccesibilidaddelconocimientosobreesteteoremaenlas
+nova,Italia.Estádiseñadopararealizarcálculosenálgebra comunidades hispanohablantes. Este vacío en la literatura
+conmutativayutilizaelalgoritmodeBuchbergerparacalcular presentaunaoportunidadparaeldesarrollodetrabajosque
+basesdeGröbner,asícomounavarianteparaelcálculode abarcansusaplicacionesypropiedades.
+syzígias.CoCoAinteraccionaconlosusuariosatravésdeun El nullstellensatz de Hilbert ha demostrado ser funda-
+protocolodebajonivel,independientedelaarquitectura.Ade- mental en campos como la teoría de ideales, la geometría
+más,ofreceherramientasparamanejarvectoresymatrices, algebraica,lasbasesdeGröbnerylaresolucióndesistemas
+loqueloconvierteenunaherramientaversátilparaabordar de ecuaciones polinomiales. Este artículo ha explorado las
+problemasmatemáticos. versiones débiles y fuertes del teorema, analizando sus de-
+Lacombinacióndeestasherramientascomputacionalesfa- mostracionesyaplicaciones.Estosresultadosconsolidansu
+cilitalaexploracióndelasaplicacionesdelteoremademanera importanciaenelpanoramadelainvestigaciónmatemática,
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.85-95 MairenaAráuz,J.J.,HudielFuentes,I.L.,&Herrera-Castrillo,C.J.
+https://revistas.uh.cu/rcm/article/view/9954 https://doi.org/10.5281/zenodo.15292987
+TeoremadeloscerosdeHilbert: aplicacionesdesusversionesdébilyfuerte 93
+tantoenaspectosteóricoscomoenaplicacionesprácticas. Conflictos de interés
+Además,herramientascomputacionalescomoMacaulay2,
+Sedeclaraquenoexistenconflictosdeinterés.
+singularyCoCoAdesempeñanunpapelcrucialparafacilitar
+la implementación práctica del teorema. Estas plataformas
+permitenrealizarcálculoscomplejos,analizarestructurasal- Contribución de autoría
+gebraicasyresolverproblemasconmayoreficiencia,loque
+Conceptualización J.J.M.A.,I.L.H.F.
+fomentasuintegraciónenáreascomolacomputaciónsimbó-
+lica,lamodelaciónmatemáticaylaenseñanza. Curacióndedatos C.J.H.C.,J.J.M.A.
+Se espera que este trabajo sea una contribución valiosa Análisisformal J.J.M.A.,I.L.H.F.,C.J.H.C.
+tantoparainvestigadoresenprocesodeformacióncomopara
+AdquisicióndeFinanciamiento C.J.H.C.
+aquellosmásavanzados,proporcionandoinformaciónactua-
+lizadaquepermitafortalecercompetenciasprofesionalesen Investigación J.J.M.A.,I.L.H.F.,C.J.H.C.
+elnivelacadémicosuperior.Finalmente,losaspectosaúnno
+Metodología J.J.M.A.,I.L.H.F.
+tratadosdelnullstellensatzdebensermotivodepróximasin-
+vestigaciones,conelobjetivodeprofundizarensuestudioy Administracióndeproyecto J.J.M.A.,I.L.H.F.,C.J.H.C.
+ampliarsureddeconocimientoyproyección.Enuncontexto
+Recursos J.J.M.A.,I.L.H.F.
+dondelatecnologíaylainteligenciaartificialseentrelazan
+con la educación, estas herramientas ofrecen un marco pa- Software J.J.M.A.,I.L.H.F.
+radesarrollarmodelosdidácticosinnovadoresyestrategias Supervisión C.J.H.C.
+de pensamiento computacional, fomentando el aprendizaje
+Validación J.J.M.A.,I.L.H.F.,C.J.H.C.
+continuoylainvestigacióninterdisciplinaria.
+Elartículosecentraenunenfoquecualitativonarrativo, Visualización C.J.H.C.
+lo que limita el análisis. Dado que el teorema de los ceros
+Redacción:preparacióndelborradororiginal J.J.M.A.,
+deHilberttieneaplicacionescomplejasytécnicasenálgebra
+I.L.H.F.
+computacional,serecomiendaparafuturosestudioscomple-
+mentarloconanálisiscuantitativosoherramientasdevisuali- Redacción:revisiónyedición C.J.H.C.
+zación.Estasadicionespodríanayudarapresentardemanera
+másclaralasrelacionesentreconceptosylasaplicacionesdel
+Referencias
+teoremaendiversasáreas.Estarelaciónentreálgebra,varie-
+dadeseidealeseslabaseestructuralsobrelaqueseconstruye [1] Abbott,J.andA.M.Bigatti:WhatisnewinCoCoA? In
+elteoremadeloscerosdeHilbert(véaseFigura7). MathematicalSoftware–ICMS2014:4thInternational
+Congress,Seoul,SouthKorea,August5-9,2014.Pro-
+ceedings4,pages352–358.SpringerBerlinHeidelberg,
+2014. https://link.springer.com/cont
+ent/pdf/10.1007/978-3-662-44199-2_55.
+pdf.
+[2] ArteagaBastidas,R.H.:AlgunasRelacionesentreÁlge-
+bradeCaminosyVariedadesAlgebraicasAfines. Tesis
+deDoctorado,UniversidadNacionaldeColombia,Co-
+lombia,2023. https://repositorio.unal.e
+du.co/handle/unal/85477.
+[3] Atiyah,M.F.andI.G.MacDonald:IntroductiontoCom-
+mutativeAlgebra. CRCPress,2018. https://doi.
+org/10.1201/9780429493638.
+Figura7.ConexiónconelteoremadeloscerosdeHilbert [4] Basu,S.,R.Pollack,andM.F.Roy:AlgorithmsinReal
+conlasdefiniciones[ConnectionwithHilbert’szeroes AlgebraicGeometry,volume10. Springer,2006. http
+theoremwiththedefinitions]. s://doi.org/10.1007/3-540-33099-2__4.
+[5] Bigatti, A.M., M. Caboara, and L. Robbiano: On the
+ComputationofHilbert-PoincaréSeries. ApplicableAl-
+Suplementos gebrainEngineering,CommunicationandComputing,
+2(1):21–33,1991. https://link.springer.co
+Esteartículonocontieneinformaciónsuplementaria. m/article/10.1007/BF01810852.
+MairenaAráuz,J.J.,HudielFuentes,I.L.,&Herrera-Castrillo,C.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.85-95
+https://doi.org/10.5281/zenodo.15292987 https://revistas.uh.cu/rcm/article/view/9954
+94 TeoremadeloscerosdeHilbert: aplicacionesdesusversionesdébilyfuerte
+[6] Burr, M., O. Clarke, T. Duff, J. Leaman, N. Nichols, deValladolid,Perú,2014. https://doi.org/10
+andE.Walker:SubalgebraBasesinMacaulay2. arXiv .18800/9786123170561.004.
+preprint,2023. https://arxiv.org/abs/2302
+[17] Gómez González, E., A. C. López Martín, D. Sán-
+.12473.
+chez Gómez y T. C. Tejero Prieto: Proyecto de inno-
+[7] Chuquillanqui,T.V.:Propiedadesalgebraicasenlade- vacióndocentesingalcon-Desarrollodeprogramasen
+mostración del teorema de los ceros de Hilbert. Pro- singularparaelaprendizajedelÁlgebraConmutativa.
+Matemática,2(3):49–83,1988. https://revistas 2013. https://gredos.usal.es/bitstream
+.pucp.edu.pe/index.php/promathematic /handle/10366/124643/MID2013-044.pdf
+a/article/view/6054. ?sequence=1.
+[8] Córdoba Molina, D.D. y S.T. Vega Agredo: Algunas [18] Hartshorne, R.: Algebraic Geometry, volumen 52 de
+aplicacionesdelteoremadeloscerosdeHilbert,2009. Graduatetextsinmathematics. Springer-Verlag,1977.
+http://repositorio.unicauca.edu.co: https://link.springer.com/content/pd
+8080/handle/123456789/7957. f/10.1007/978-1-4419-1596-2.pdf.
+[9] Cox,D.,J.Little,andD.O’Shea:TheAlgebra-Geometry [19] HernándezLópez,L.C.:UnaIntroducciónalaGeome-
+Dictionary. InIdeals,Varieties,andAlgorithms,Grad- tríaAlgebraica. UniversidaddeCórdoba,Facultadde
+uate Texts in Mathematics, pages 175–232. Springer, CienciasBásicas,2023. https://repositorio.
+2015. https://link.springer.com/chapte unicordoba.edu.co/bitstreams/e213566
+r/10.1007/978-3-319-16721-3_4. 6-6662-4ff1-b2ee-b010762c7db4/downlo
+ad.
+[10] Cox,D.A.,J.Little,andD.O’Shea:Geometry,Algebra,
+and Algorithms. In Ideals, Varieties, and Algorithms, [20] Laplagne,S.J.:Algoritmosdeálgebraconmutativaen
+UndergraduateTextsinMathematics,page5.Springer, anillosdepolinomios. TesisdeDoctorado,Universidad
+fourtheditionedition,2008. https://link.sprin deBuenosAires,FacultaddeCienciasExactasyNatu-
+ger.com/chapter/10.1007/978-0-387-3 rales,2012. https://hdl.handle.net/20.50
+5651-8_4. 0.12110/tesis_n5119_Laplagne.
+[11] Crespo-Montero,R.:Etapasdelprocesodelainvestiga- [21] Lev,G.yC.J.Rubio-Barrios:Notassobrelasbasesde
+ción,2006. https://www.revistaseden.org Gröbner(enespañol).BasesdeGröbneryelTeorema
+/files/2-CAP%202.pdf. delosCerosdeHilbert,2013. https://www.rese
+archgate.net/publication/236877368.
+[12] Deimling,K.:ImplicitFunctionsandProblemsatRe-
+sonance. EnSpringer,Berlin,Heidelberg(editor):Non- [22] Luque Duque, D.F.: Commutative algebra and some
+linearFunctionalAnalysis,páginas146–185.Springer, resultsinalgebraicgeometry. Master’sthesis,Pontificia
+1985. https://link.springer.com/chapte UniversidadJaveriana,Colombia,2016. https://hd
+r/10.1007/978-3-662-00547-7_4. l.handle.net/10554/43015.
+[13] Duque,Á.,P.RodríguezyF.Novoa:Unprogramapara [23] PortilloRivas,Z.yÁ.CamposChiquillo:Aplicaciónde
+calcularlasrepresentacionesirreduciblesdeS enla losAnillosNoetherianosConmutativosylasVariedades
+n
+formaseminormaldeYoung,matemáticacomputacional AlgebraicasAfinesenlaDemostracióndelTeoremade
+como apoyo a la docencia. Universitas Scientiarum, losCerosdeHilbert,2011. https://oldri.ues.
+7(1):5–16,2002. https://www.redalyc.org/ edu.sv/id/eprint/10357/.
+pdf/499/49925477003.pdf.
+[24] RamosRamos,J.A.:Nullstellensatz.TesisdeDoctorado,
+[14] Echegoyen Ruiz, P.: Una Prueba Autocontenida del BeneméritaUniversidadAutónomadePuebla,México,
+NullstellenstazEfectivodeZ.Jelonek,2020. https: Puebla,2022. http://sidim.org/proc2023.p
+//repositorio.unican.es/xmlui/handle df.
+/10902/20493.
+[25] Reyes, A. y J. Hernández-Mogollón: A Survey on So-
+[15] Eisenbud,D.:CommutativeAlgebrawithaViewToward meAlgebraicCharacterizationsofHilbert’sNullstellen-
+Algebraic Geometry. Graduate Texts in Mathematics. satz for Non-commutative Rings of Polynomial Type.
+1995. https://www.math.ens.psl.eu/~ben IngenieríayCiencia,16(31):27–52,enero-junio2020.
+oist/refs/Eisenbud.pdf. https://doi.org/10.17230/ingciencia.
+16.31.2.
+[16] Gimenez,P.:UnaintroducciónalasbasesdeGröbnery
+algunasaplicaciones. EnVIEscuelaDoctoralIntercon- [26] Reynoso,C.:GeometríadeCurvasAlgebraicas. Journal
+tinentaldeMatemáticasPUPC-UVA2013.Universidad ofBasicSciences,4(1):16–33,2005. https://revi
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.85-95 MairenaAráuz,J.J.,HudielFuentes,I.L.,&Herrera-Castrillo,C.J.
+https://revistas.uh.cu/rcm/article/view/9954 https://doi.org/10.5281/zenodo.15292987
+TeoremadeloscerosdeHilbert: aplicacionesdesusversionesdébilyfuerte 95
+stas.ujat.mx/index.php/jobs/article/ rosHilbertsobreMV-álgebras. TesisdeLicenciatura,
+download/872/731. Universidad Tecnológica de Pereira, Colombia, 2022.
+https://hdl.handle.net/11059/14191.
+[27] Riddick,M.yP.Vizzarri:Introducciónalageometría
+algebraica,2008. https://www.mate.unlp.ed [31] SolórzanoRojas,K.D.,Y.R.LanzasArechavalayY.A.
+u.ar/~demetrio/Monografias/Materias RamírezBonilla:ResolucióndeSistemasdeEcuaciones
+/EA/20.%20Introduccion%20a%20la%20Ge PolinomialesutilizandolasBasesdeGröbneryelMé-
+ometria%20Algebraica.pdf. tododeAutovalores,2015. https://core.ac.uk
+/download/pdf/53103557.pdf.
+[28] Rudin,W.,M.I.AlcerrecaSánchezyL.BriseñoAguirre:
+PrincipiosdeAnálisisMatemático. McGraw-Hill,1980. [32] Sombra, M.: Estimaciones para el Teorema de Ceros
+https://asoimatepn.wordpress.com/w deHilbert. TesisdeDoctorado,UniversidaddeBuenos
+p-content/uploads/2015/04/rudin-wal Aires, 1998. http://digital.bl.fcen.uba.
+ter-principios-de-anc3a1lisis-matem ar/Download/Tesis/Tesis_3035_Sombra.
+c3a1ticoc2b4c2b4-tercera-edicic3b3 pdf.
+n-mcgraw-hill-mc3a9xico-1980-ocr.p
+df.
+[29] Sabia,J.R.:UnAlgoritmoefectivoparaelTeoremade
+losCerosdeHilbert.TesisdeDoctorado,Universidadde
+BuenosAires,FacultaddeCienciasExactasyNaturales,
+1992. http://digital.bl.fcen.uba.ar/D
+ownload/Tesis/Tesis_2524_Sabia.pdf.
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+[30] SánchezCeballos,C.C.:Comparaciónentreelteorema
+SinDerivadas 4.0 Internacional”.
+clásicodeloscerosdeHilbertyelteoremadelosce-
+MairenaAráuz,J.J.,HudielFuentes,I.L.,&Herrera-Castrillo,C.J. CienciasMatemáticas,Vol.37,No.1,2024,Pag.85-95
+https://doi.org/10.5281/zenodo.15292987 https://revistas.uh.cu/rcm/article/view/9954
+1

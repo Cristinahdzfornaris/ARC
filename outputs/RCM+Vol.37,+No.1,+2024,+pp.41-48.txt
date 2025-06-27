@@ -1,0 +1,551 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.37,No.1,2024,Pag.41-48
+Recibido(Received):23-05-2024,Revisado(Reviewed):22-07-2024
+Aceptado(Accepted):16-10-2024,Enlínea(Online):03-01-2025
+Retos pos-Covid de la educación a distancia en
+matemática para la formación de ingenieros
+Post-Covid challenges of distance education in
+mathematics for the training of engineers
+Tania Diez Fumero1* , Abelardo López Domínguez2 , Alisbet Martínez Bello3
+Resumen LapandemiadeCovid-19provocócambiossignificativosenlamodalidaddeeducaciónadistancia,
+pueslosprocesoseducativosserealizarondeformaabruptamediantelainterfazdeunacomputadorapersonal
+o un teléfono inteligente, sincrónica y asincrónicamente, para lo cual no todos estaban preparados. Aunque
+existen antecedentes importantes de estudios científicos sobre esta modalidad en Cuba, legalizados en un
+modelo de educación a distancia, este es susceptible de ser actualizado para que la didáctica universitaria
+estéatonoconlasdemandasmundialesdelaeducaciónhíbrida.Esporeso,queelobjetivodeestetrabajo
+esproponerunaconcepcióndidácticaparaeldesarrollodelaeducaciónhíbridaenlascarrerasdeingeniería
+del Instituto Técnico Militar “José Martí” (ITM), a partir de las experiencias obtenidas durante la Covid-19 y
+laindagacióncientíficasobreestetema.Estaconcepciónproponeobjetivos,habilidades,valores,materiales
+didácticosytecnológicos,formasdeevaluaryautogestionarelaprendizaje,ademásderesaltarelpapelque
+desarrollalainstitución,elprofesoryeltutor.LapropuestaseimplementóenladisciplinaMatemáticaSuperior
+delaIngenieríaenRadioelectrónicadelITMconresultadosfavorables.Semuestranejemplosdeaplicaciónen
+estadisciplina,queseimparteenlosdosprimerosañosdelacarrera.Elestudiorealizadotuvounenfoque
+cualitativoyexploratorio.
+PalabrasClave:educaciónhíbrida,aprendizajeautónomo,matemáticasuperior.
+Abstract TheCovid-19pandemiccausedsignificantchangesinthedistanceeducationmodality,sincethe
+educational processes were carried out abruptly through the interface of a personal computer or a smart
+phone,synchronouslyandasynchronously,forwhichnoteveryonewasprepared. Althoughthereareimportant
+antecedents of scientific studies on this modality in Cuba, legalized in a distance education model, this is
+susceptibletobeupdatedsothatuniversitydidacticsisintunewiththeworlddemandsofhybrideducation. That
+iswhy,theobjectiveofthisworkistoproposeadidacticconceptionforthedevelopmentofhybrideducationin
+theengineeringcareersoftheMilitaryTechnicalInstitute“JoséMartí”(ITM),basedontheexperiencesobtained
+duringtheCovid-19andthescientificresearchonthistopic. Thisconceptionproposesobjectives,skills,values,
+didacticandtechnologicalmaterials,waysofevaluatingandself-managinglearning,inadditiontohighlightingthe
+roleplayedbytheinstitution,theteacherandthetutor. TheproposalwasimplementedintheHigherMathematics
+disciplineofRadioelectronicsEngineeringatITMwithfavorableresults. Examplesofapplicationinthisdiscipline,
+whichistaughtinthefirsttwoyearsofthecourse,areshown. Thestudyisqualitativeandexploratory.
+Keywords: hybrideducation,autonomouslearning,highermathematics.
+MathematicsSubjectClassification: 97C70,97D40,97D70,97I40,97U99.
+1DepartamentodeMatemática,InstitutoTécnicoMilitar“JoséMartí”,LaHabana,Cuba.Email:taniadiez2010@gmail.com.
+2CentrodeEstudiosparaelPerfeccionamientodelaEducaciónSuperior,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+alopezdom@gmail.com.
+3DepartamentodeElectrónica,InstitutoTécnicoMilitar“JoséMartí”,LaHabana,Cuba.Email:alisbetmartinez88@nauta.com.cu.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Maquetadopor(Layoutby):MerlingSabaterRamírez,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,
+Cuba.
+Citar como: Diez Fumero, T., López Domínguez, A.,& Martínez Bello A. (2024). Retos pos-Covid de la
+educaciónadistanciaenmatemáticaparalaformacióndeingenieros.CienciasMatemáticas,37(1),41–48.DOI:
+https://doi.org/10.5281/zenodo.14592249.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9476.
+Introducción InstitutoTécnicoMilitar“JoséMartí”(ITM),apartirdelas
+experienciasobtenidasdurantelapandemiadeCovid-19yla
+EnCubaexisteunmodelodeeducaciónadistancia(EaD)
+indagacióncientíficasobreestetema.
+paralaeducaciónsuperior,elaboradoporelCentroNacional
+Estaconcepciónproponeobjetivos,habilidades,valores,
+deEducaciónaDistanciadelaUniversidaddelasCiencias
+materiales didácticos y tecnológicos, formas de evaluar y
+Informáticas,conlaparticipaciónde34profesionalesde13
+autogestionarelaprendizaje,ademásdedestacarelpapelque
+centros de educación superior, el Ministerio de Educación
+desarrollalainstitución,elprofesoryeltutor.Laconcepción
+SuperioryelMinisteriodeEducacióndeCuba,comoparte
+didácticapropuestaseimplementaenladisciplinaMatemática
+delComitédeExpertosenEducaciónaDistancia.
+que se imparte en los dos primeros años de la carrera de
+Estemodelodescribecómodebeconcebirseestamoda-
+IngenieríaRadioelectrónica.
+lidaddeenseñanzaapartirdedeterminarsusfundamentos,
+La estrategia metodológica empleada en esta investiga-
+principios y componentes [6], y cuenta, además, con docu-
+cióntieneunenfoquecualitativoyexploratorio,yaqueesun
+mentoscomplementarios[6],indicadores[7],asícomouna
+resultadoparcialqueseobtuvodurantelapandemiadeCovid-
+baselegalparasuimplementación[16].
+19,donde,másquecantidadyestandarización,sebuscaron
+Sin embargo, el modelo da una visión global de cómo
+opinionesdeprofesoresyestudiantessobrelasexperiencias
+debe desarrollarse este tipo de modalidad en la educación
+obtenidas,loquesirviódebaseparaunposteriorproyectode
+superiorcubana,peronoparticularizaenelcontextodelas
+investigacióninstitucional.
+disímilescarrerasuniversitariasqueseestudianenCuba,ni
+En el nivel teórico se emplearon los métodos histórico-
+enlasdiferentesdisciplinasdelosplanesdeestudiodeestas
+lógico, el análisis documental, el análisis y síntesis, la in-
+carreras.Porello,muchasinvestigacioneshanindagado,con
+ducción,la deducciónylamodelación, loqueposibilitóel
+basescientíficas,cómoimplementarelmodelodeEaDdela
+análisis teórico de diversas investigaciones que abordan el
+educaciónsuperiorcubana,quéimpactotienesuejecución
+temadelaeducaciónadistanciay,enparticular,lahíbrida,así
+yquéproblemaspersistenenlauniversidadescubanasenla
+comolaobtencióndelaconcepcióndidácticacomoresultado
+actualidadparasuóptimaaplicación[12,1,9,15,14].
+científico.
+Por otra parte, la pandemia de Covid-19 y el acelerado
+desarrollo tecnológico demuestran que es necesario buscar
+Relevancia del estudio
+alternativas plausibles que combinen las modalidades pre-
+senciales, semipresenciales y a distancia, lo que se conoce Lapandemiaacelerólaadopcióndemodalidadesdeen-
+como educación híbrida (que forma parte de la educación señanzaremota,exponiendotantosuspotencialidadescomo
+a distancia), donde se potencie el aprendizaje autónomo y suslimitaciones,especialmenteendisciplinascomolasma-
+laindependenciacognoscitivadelosestudiantes,loqueles temáticas,lasqueformanpartedelcurrículobasedetodas
+permitiráenfrentarloscambiostecnológicosyelvolumende lasingenierías,porloqueescrucialinvestigarcómomejorar
+informaciónquelasredessocialesofrecen. lacalidaddelaeducación,garantizarlacomprensiónprofun-
+EnCuba,lasituacióneconómicaqueseviveapartirde da de conceptos abstractos y mantener el compromiso y la
+lapandemiaydelférreobloqueoqueelgobiernodeEstados motivacióndelosestudiantesenunentornovirtual.
+Unidosimpone,precisapotenciarlaeducaciónhíbrida,para Elestudioesresultantedeunatesisdemaestríadeuna
+queensituacionesdecontingenciasnosedetenganlosproce- delasautoras,enlaquesediseñóunaestrategiadedirección
+sosdeenseñanza-aprendizaje,tantoenelpregradocomoenel desde el trabajo metodológico que establece acciones para
+posgrado.Paraello,esmenesterpreparareincentivaralosdo- eldesarrollodelaeducaciónadistancia.Estainvestigación
+centesparatrabajarestamodalidadyentrenaralosestudiantes escontinuidaddeunatesisdoctoralencurso,queintenciona
+paraafrontarunaprendizajeautónomo,conladireccióndelos unaestrategiadidácticaparalaenseñanzahíbrida,demanera
+profesores,tutoreseinstituciones,loquetodavíanoalcanza tal,quelamismadevengaenelaccionarprácticoycotidiano
+losnivelesóptimosentodaslasuniversidadescubanas. delprocesoynosoloseaunaalternativaantesituacionesde
+El desarrollo tecnológico alcanzado a nivel mundial ha contingencias.
+traído como consecuencia que los profesores de las univer-
+sidades se enfrenten a nativos digitales, que en su mayoría
+1. Desarrollo
+asisten al centro de estudios con un teléfono inteligente, el
+queyaparaellos,ytambiénparalosprofesores,sehavuelto 1.1 Basesconceptualesdelaeducaciónhíbridaen
+imprescindible.Enlasclasespresencialesmuchosprofesores laformacióndeingenieros
+afrontanelproblemadequelosteléfonosinteligentesnose Existendiversidaddetérminosanivelmundialparadeno-
+utilicenporlosestudiantes,cuandoenrealidadelproblema minarlamodalidaddeEaD,porejemplo,enseñanzadirigida,
+debesercómoutilizarlosenfuncióndelaprendizaje;aesto educación abierta, enseñanza no presencial y teleducación
+tambiéncontribuyelaeducaciónhíbrida. [18,2,5,19].Sinembargo,casitodoslosautorescoinciden
+Esporesoqueelobjetivodeestetrabajoestáencamina- enqueestetipodemodalidadsedistingueporlaseparación
+do a proponer una concepción didáctica para el desarrollo físicadelprofesoryelestudiante,deformasincrónicaoasin-
+de la educación híbrida para las carreras de ingeniería del crónica,elapoyodeunaorganizacióntutorial,elaprendizaje
+Retospos-Coviddelaeducaciónadistanciaenmatemáticaparalaformacióndeingenieros 43
+autónomo, la utilización sistemática de medios y recursos varíanlosritmos,estilosyestrategiasdeaprendizajeenloses-
+técnicosparalacomunicación,asícomolaexistenciadeuna tudiantes.Estaflexibilidaddebesertomadaencuentatambién
+instituciónqueregula,controlaygarantizaeldesarrollode enlotecnológico,loorganizacionalylotemporal-espacial,
+estamodalidad. endependenciadelosrecursosdisponibles.
+Elmodelodeeducaciónadistanciadelaeducaciónsupe- Encuantoalprincipiodelaconvergenciaeintegración
+riorcubanarespondeaestascaracterísticas,dondeseasume tecnológica,estefacilitaelaccesoaunavariedadderecursos
+que: educativosdigitales(unmismocontenidoendiferentesfor-
+matosotipologías)atravésdedistintosdispositivos,comoel
+“Laeducaciónadistanciaesunamodalidadedu-
+radio,eltelevisor,lacomputadoraylosdispositivosmóviles,
+cativaenlaqueelprocesodeenseñanza-aprendizaje
+entreotros,pararesponderalasnecesidadesdelosestudiantes
+se caracteriza por la separación del profesor y
+cuandoseencuentrenendiversosescenariostecnológicos.
+el estudiante en tiempo y espacio, se apoya en
+ElmodelodeEaDconstadecuatrocomponentesestrecha-
+diferentesrecursoseducativosquepropicianyes-
+menterelacionadosentresí:recursoshumanos,pedagógicos,
+timulanelaprendizajeautónomodelestudiante.
+tecnológicosyorganizativos[6,p.12].
+Existeunainstituciónquegarantizalacomunica-
+LapandemiadeCovid-19obligóalamayoríadelasuni-
+ciónmultidireccional.”[6,p.3]
+versidadesdelmundoy,enparticular,alascubanasapasar
+Comoprincipiosfilosóficossetieneladialécticamateria- aestetipodemodalidaddeformaabrupta,oamodalidades
+listayelcontenidohumanistadelmarxismo.Además,toma: híbridasdondesepotenciólovirtual.Lamodalidaddeeduca-
+ciónhíbridaenesteescenarioepidemiológicocomplejofue
+“LosaportesrecogidosenlaobradeFélixVarela, unexperimentoparacasitodaslasuniversidadesdelmundo.
+JosédelaLuzyCaballero,EnriqueJoséVarona Variedaddeautores[13,10,4]definenlaeducaciónhíbri-
+yJoséMartí,enloreferidoalosprincipiosdela daoaprendizajecombinado(b-learning,blendedlearning)a
+educaciónparalavida,laeducaciónparatodos, partirdecombinarlamodalidadpresencialconlaEaDypo-
+laeducacióncientífica,lavinculacióndelestudio tenciarelaprendizajeautónomo,asícomo,diseñarestrategias
+y el trabajo y la unidad de la instrucción y la educativasparasulogro.
+educación.”[6,p.8] Estaesunamodalidadquenosurgióconlapandemia,pero
+queduranteeseperíodocobróaugeyconstituyóretoparala
+Dentrodesusfundamentosatesoralospostuladospsico-
+enseñanzauniversitaria,conénfasisenelpregrado,yaquesu
+lógicosdelenfoquehistórico-cultural,desarrolladoporVy-
+utilizacióneramásfrecuenteenlaenseñanzadepostgrado.
+gotsky[6,p.6],complementadosconlosresultadosdeotros
+Incluso, está modalidad ha sido extrapolada a los eventos
+investigadoresqueprofundizaronenlasconcepcionesdeeste
+científicosqueserealizanenlaactualidaddemanerahíbrida,
+enfoque.
+sincrónicosyasincrónicos,loqueenopinióndeestosautores
+“Desdeelsustentopedagógico,enelmodelode haelevadoeldiapasóndesocializacióndelasinvestigaciones
+EaDseconsideraladireccióncientíficaporparte científicas.
+delprofesordelaactividadcognoscitiva,práctica Porotrolado,Goméz[11,p.2]planteaque:
+yvalorativadelosestudiantes.”[6,p.9]
+“Lamodalidadhíbridaesunmodelodeenseñan-
+Desdeelpuntodevistatecnológico,seasumelavisiónde zaqueintegralaenseñanzapresencialconlaen-
+losestudiosdeciencia,tecnologíaysociedadenCuba,que señanzaremota.Lamodalidadremotapuedeser
+consideranlatecnologíacomounprocesosocialdeimportan- sincrónicaoasincrónicasegúnlasposibilidades
+ciavitalparaeldesarrollodelahumanidad,eintegranfactores delaescuelaylosestudiantes.Seconsideraun
+psicológicos,sociales,económicos,políticosyculturales. modelo híbrido cuando se acerca a un 50% de
+Estemodelohaceénfasisenque: presencialidady50%deenseñanzaremota.”
+“Elanálisisdelaaplicacióndelatecnologíapara En este sentido se tratan de establecer por los autores
+laeducaciónadistanciaenelcontextonacional, porcentajes de presencialidad y virtualidad, con opiniones
+parte de las siguientes premisas esenciales: las diferentesalrespecto,apartirdelprincipiodelaflexibilidad,
+condicionespolíticasyeconómicasactuales,las peroexisteconsensosobrelanecesidadderepensarlasactivi-
+particularidadesterritorialesydelasinstituciones dadespresencialesenestetipodemodalidad.Deestaforma,
+y los segmentos de la población a los que se sedejanparaelautoaprendizajelasactividadesquenonecesi-
+dirige.”[6,p.10] tendelapresenciadelprofesor,como,porejemplo,lalectura
+deunartículooelvisionadodealgúnmaterial.Porotraparte,
+Consideraentresusprincipioslaflexibilidad,lainterac-
+se potencia la presencialidad para el debate, la resolución,
+ciónylacomunicación,ylaconvergenciaeintegracióntecno-
+formulaciónydiscusióndeproblemasysussoluciones.
+lógica[6,p.8].Elprincipiodelaflexibilidadestápresenteen
+todoslosmomentosdelaaplicacióndelmodelo,puespermite
+efectuarajustesencualquieretapadesuaplicación,yaque
+DiezFumero,T.,LópezDomínguez,A.,&MartínezBello,A. CienciasMatemáticas,Vol.37,No.1,2024,Pag.41-48
+https://doi.org/10.5281/zenodo.14592249 https://revistas.uh.cu/rcm/article/view/9476
+44 Retospos-Coviddelaeducaciónadistanciaenmatemáticaparalaformacióndeingenieros
+Además,Goméz[11,p.4]esbozaque: 6. Repensarlaevaluación:Nosedebecambiarlasformas
+de enseñanza y mantener una evaluación tradicional,
+“Elvaloragregadodelamodalidadhíbridaesque sedebenbuscarvíaseinstrumentosdeevaluaciónque
+tienelapotencialidaddecombinarlasfortalezas desarrollenlacreatividad,laresolucióndeproblemas,
+deambasmodalidades,lograndounaexperien- laindagacióncientífica,elusodelastecnologías,etc.
+cia de aprendizaje que ninguna de las dos mo-
+dalidades–presencialyremota–porsímismas 7. Garantizarlacapacitaciónylostiemposdeplanifica-
+lograrían.Laintegracióndeambasmodalidades ción:eltrabajometodológicoparaprepararalprofesor
+enunaúnicaexperienciadeaprendizaje,puede juegaunpapelpreponderante,existeresistenciaalcam-
+potenciar las oportunidades de aprendizaje de bio de muchos profesores en cuanto a migrar a este
+los estudiantes. Más aún, la modalidad híbrida tipo de educación. En muchas ocasiones esto sucede
+tambiénesreconocidaporoptimizarelusodere- por la falta de estrategias didácticas que le permitan
+cursosdelasescuelas(espaciofísico)ytiempos desarrollarestamodalidadeducativa,loqueenocasio-
+ycostosdetransportehacialasescuelas.” nesatentaparaobtenernivelesóptimosdeaprendizaje
+autónomo.
+EsteautorcoincideconelmodelodeEaDcubanoenque
+8. Laimplementacióndeunamodalidadhíbridarequiere
+la flexibilidad debe constituir un principio de la educación
+decambiosinstitucionalesqueposibilitenalosdocen-
+híbridayproponequedebeexistirunarelaciónpedagógica
+tesdedicarletiempoparaplanificarunapropuestade
+conmayoresespaciosparalaautonomíadelosestudiantes.
+educaciónhíbrida.
+Sinembargo,enfatizaenquelaautonomíanoesunahabilidad
+innataquesedesarrollademaneralinealoespontánea,porlo
+9. Intercambiarconloscolegasyautoevaluarse:Buscar
+queseopinaqueesnecesariobuscarrecursosparaeldesarro-
+víasdeautoevaluación,coevaluaciónyevaluacióngru-
+llodeestahabilidadenlosestudiantes;habilidadqueesbien
+pal.Sirealmentesequierenobtenernivelesadecuados
+logradaenmuchasocasiones,entreotrosfactores,porqueno
+deaprendizajeautónomo,yaquelaevaluaciónutilizan-
+siempreseenseñaalosestudiantescómodesarrollarla.
+doestasformasencombinaciónconlaheteroevaluación
+El mismo autor traza 10 claves que se valoran desde la
+constituyenpremisasesencialesparaelaprendizajeau-
+perspectivacubana[11]:
+tónomo.
+1. Partirdeundiagnósticorealistaparaconocerelumbral 10. Problematizar la presencialidad: Se considera que la
+yelrangodebrechasdigitalesdelosestudiantes:En educaciónhíbridaprecisaderepensarlapresencialidad
+este sentido, se considera que en el contexto cubano tradicional, loque requiere de unsistemático trabajo
+debevalorarsetambiénlasbrechasdigitalesdelospro- metodológico.
+fesores, teniendo en cuenta que muchos son nativos
+analógicos,asícomo,losnivelesdelosestudiantesen 11. Asegurarlacontinuidadpedagógicadetodos:Unade
+eldesarrollodelahabilidaddeaprendizajeautónomo. las claves pedagógicas para lograrlo es la capacidad
+delasescuelasylosdocentesdereconocerlosfunda-
+2. Cuidarlacomunicaciónylaplanificación:Realizarun mentospedagógicosdelmodelohíbridoydesarrollar
+encuadredelcursoparaestablecerelbalanceentrela una propuesta educativa que, reconociendo las parti-
+presencialidadylanopresencialidad,asícomoentregar cularidadesdecadacomunidad,seacapazdegenerar
+atiempolosmaterialesdidácticosquefacilitenelau- ecosistemasdeaprendizajeparatodosytodaslasestu-
+toaprendizajeyverificarquerealmentelosestudiantes diantes.
+tendránaccesoaellos.
+Seconsideraqueesteprincipioeselmásimportante.La
+3. Aprovecharalmáximolasinstanciaspresenciales:Se pospandemiademostróqueenmuchasuniversidadescubanas,
+debevalorareneltrabajometodológicocuálesconteni- luegodevolveralapresencialidad,seretomaronlosméto-
+dosnecesitandepresencialidadyseleccionarmétodos dos y formas de enseñanza y evaluación tradicional,donde
+dediscusiónyanálisisquepermitandirigirelproceso seminimizóelusodelosentornosvirtualesdeaprendizaje,
+yevacuarlasdudasdelosestudiantesenelprocesode lo que conllevó a minimizar las vías para el desarrollo del
+aprendizajeautónomo. aprendizajeautónomoenlosestudiantes.
+4. Potenciarlaautonomíadelosestudiantes:Estadebeser 1.2 Concepcióndidácticaparalaeducaciónhíbrida
+intencionada,noespontanea. enlascarrerasdeingenieríadelITM
+Eltérminoconcepcióndidácticaescomplejopuesabarca
+5. Proponeractividadesquealientenlainteracción:noso- ideas, creencias y prácticas que orientan la enseñanza y el
+brecargaralestudianteyrealizarorientacionesprecisas, aprendizaje.Reflejalavisiónqueundocentetienesobreel
+alentandolacomunicaciónconelprofesor,elgrupou aprendizaje,elroldelestudiante,elcontenido,laevaluación,
+otroestudiante. asícomolosmediosyformasdeenseñanzayaprendizaje.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.41-48 DiezFumero,T.,LópezDomínguez,A.,&MartínezBello,A.
+https://revistas.uh.cu/rcm/article/view/9476 https://doi.org/10.5281/zenodo.14592249
+Retospos-Coviddelaeducaciónadistanciaenmatemáticaparalaformacióndeingenieros 45
+Múltiplessonlosautoresqueenelúltimoquinqueniohan de disciplinas para el desarrollo de la modalidad de
+realizadoestudioscuyasoluciónhasidounaconcepcióndi- educaciónhíbrida.TambiénenlaDirecciónCientífico-
+dáctica[3,17].Apartirdelosaportesdeestasinvestigaciones Metodológicasevaloranproyectosdeinvestigaciónque
+seasumelaconcepcióndidácticacomounsistemaorganizado indaguenencómodesarrollarestamodalidadyquévías
+decomponentesteóricosyprácticosqueorientanlaactividad utilizarparaeldesarrollodelaprendizajeautónomo.
+docente metodológica en modalidad de educación híbrida,
+Las direcciones de las comisiones metodológicas de
+potenciandoelaprendizajeautónomodelosestudiantes,el
+asignaturasorganizan,planifican,ejecutanycontrolan
+usodelastecnologíasyelpapeldeorientacióndelprofesor.
+lasformasdetrabajometodológicoparaeldesarrollo
+Seconsideraoportunoasumirestadefiniciónporqueparte
+deloscursosporlamodalidadhíbrida.Aestenivelse
+deunsistemadecomponentesteóricosyprácticos.Además,
+decideelporcentajedeclasespresencialesynopresen-
+sebasaenloscomponenteshumanos,consideralaparticipa-
+ciales.
+ciónactivadeprofesoresyestudiantes,asícomoenfatizaen
+que la concepción logra transformaciones en el proceso de Además,sedeterminanlasactividadesparacadatipode
+enseñanza-aprendizaje,queeselobjetivodeestainvestiga- clases,lasqueincluyenlosobjetivosaalcanzar,conén-
+ciónaltransitaralamodalidaddeeducaciónhíbridaenlas fasisenlascondicionesderealizacióndelaacción,las
+carrerasdeingenieríadelITM. habilidadesadesarrollar,lasevaluacionesylosdiversos
+Debetenerseencuentaqueestascarreras,porsupropio recursostecnológicosautilizar.Todoestoapartirdel
+perfildesalida,requierendefomentarestamodalidadporlas principio de la flexibilidad, donde se tiene en cuenta
+misionesqueenocasionestienenquecumplirse,sindescuidar quelosritmosdeaprendizajesindividualesygrupales
+laformacióndefuturosoficialestécnicosdeperfilsuperior. sonvariados.
+Laconcepcióndidácticapartedelosprincipiosyfunda-
+Por otraparte, los profesores organizan, planifican, eje-
+mentos del modelo cubano de EaD, que fueron abordados
+cutan,controlanytienenencuentalosgruposdeestudio,el
+enelepígrafeanterioryquesoncompatiblesnosoloconla
+sistema de clases y todos los componentes didácticos para
+EaD,sinotambiénconlamodalidadpresencial.Encuantoa
+este tipo de modalidad. Con respecto a la tutoróa se sugie-
+suscomponentes,parasuanálisissedividenendosgrandes
+reutilizarelmovimientodealumnosayudantesymonitores
+momentos: trabajo metodológico y proceso de enseñanza-
+comotutores,dadoqueenelITMtodoslosestudiantesson
+aprendizaje. Estos dos momentos asumen, a su vez, los re-
+internos.Losestudiantesaventajadospermitendisminuirla
+cursoshumanos,pedagógicos,tecnológicosyorganizativos
+zona de desarrollo próximo de los estudiantes promedio y
+comocomponentesdelmodelo.
+con dificultades. Los profesores seleccionan en sus grupos
+Conrespectoaltrabajometodológico,separtedeldiag-
+quiénes asumirán los roles de tutores y cómo estos grupos
+nósticoparaevaluarelumbraldebrechaspedagógicasytec-
+seránorientadosparaeldesarrollodelaprendizajeautónomo.
+nológicasdelpersonaldocenteparaimplementarlaeducación
+Referidoalcomponentepedagógico,setienenencuenta
+híbrida.
+losfundamentosasumidosporelmodelodeEaDparadesa-
+Encuantoalosrecursoshumanos,estosdeterminanelres-
+rrollarformasdetrabajometodológicoyorientaralcolectivo
+todeloscomponente.Unpapelfundamentaljuegaelpersonal
+deprofesoresencuantoacómoanalizarlascaracterísticasde
+dedirecciónyaque:
+losdiferentescomponentesdidácticos.Porejemplo,laformu-
+Ladireccióndelainstitución,apartirdeldiagnóstico, lacióndelosobjetivosdebetenerencuentalascondiciones
+representadaporlasecretaríageneralqueesdesdedon- derealización,perodebenserredactadosdeformatalqueel
+desedirigenlascomisionesmetodológicasdecarreras, estudiantepuedaentenderlosysaberelfinquedebealcanzar.
+realiza actividades centralizadas en los concentrados En cuanto al contenido deben buscarse alternativas de
+metodológicosmensualesqueorientenalclaustrode actividadesdocentesdondesetengaencuentalosrecursos
+lascátedrassobrecómo,aniveldeinstitución,sepuede tecnológicosdisponibles,lashabilidadesenelusodelastec-
+desarrollarlamodalidadhíbrida,apartirdediferentes nologías y en el manejo de información de los estudiantes.
+formasdetrabajometodológicoparaeldesarrollode Además,enelcasodelasclasesnopresencialesserecomien-
+estamodalidad. daevitarelexcesodeinformación,parabuscarlaesencialidad
+deloscontenidos.Tambiénserecomiendapotenciarlaauto-
+Deestediagnóstico,seevalúan,además,laspotencia-
+evaluación,lacoevaluaciónylaevaluacióngrupal,comovías
+lidadestecnológicasinstitucionalesparaeldesarrollo
+paraeldesarrollodelaprendizajeautónomo.
+deestamodalidadygarantizaelpersonaldeapoyoque
+Enelcasodelosrecursostecnológicossedebetrabajar
+creecondicionesenloslaboratoriosparaelusodelos
+conelentornovirtualdeaprendizaje(EVA)delITM,sopor-
+recursostecnológicos,ademásdecapacitaralclaustro
+tadoenlaplataformaMoodle,elcualseencuentraenlared
+parasuuso.
+docentedelITMyalquelosestudiantestienenaccesomedian-
+Ladireccióndelacátedra,apartirdelaplanificación telaredwifi.Sedebetenerencuentarecursostecnológicos
+institucionalydelosresultadosdeldiagnóstico,traza enlínea,perotambiénfueradelínea,paraqueelprocesono
+enelcolectivodelacátedraestrategiasporcomisiones sedetengaporfaltadeconectividad.
+DiezFumero,T.,LópezDomínguez,A.,&MartínezBello,A. CienciasMatemáticas,Vol.37,No.1,2024,Pag.41-48
+https://doi.org/10.5281/zenodo.14592249 https://revistas.uh.cu/rcm/article/view/9476
+46 Retospos-Coviddelaeducaciónadistanciaenmatemáticaparalaformacióndeingenieros
+Se sugiere la elaboración de diapositivas con audios u Lasclasespresencialessededicaronaldebatedelosméto-
+otras alternativas que orienten el aprendizaje autónomo, la dosylacomparación,encuantoaconvergenciaalasolución
+elaboracióndevídeosqueayudenalacomprensióndelconte- exactademétodospararesolverunmismoproblema,median-
+nido. teejemplosprácticosvinculadosasuperfilprofesional.
+Enelplanodidácticosematerializantodasestasactivida- Para el desarrollo del aprendizaje autónomo y la auto-
+desdiseñadasenelplanometodológico,dondedebequedar evaluación, se utilizó el sistema de preguntas de los nodos
+claroqueelpapelprotagónicoeseldelestudiante,guiadopor cognitivos. Estos nodos cognitivos son puntos de acumula-
+elprofesoryporeltutor,dondelasinteraccionesapartirdel cióndeconocimientosentornoaunahabilidadocontenido
+modelodeEaDdebenser: específico[8].Amaneradeejemplo,enlaresolucióndepro-
+blemasseformularonlassiguientespreguntas:¿pararesolver
+Profesor–Estudiante–Grupo–Tutor.
+elproblemadequédispones?,¿quéconocimientos,habilida-
+Estudiante–Contenidosespecíficosynoespecíficos. des,procedimientosteevocaesteproblemaparasusolución?,
+¿cuálessontuscreenciasconrelaciónaestetipodeproblema?,
+Estudiante–Medios tecnológicos en línea y fuera de ¿tienelógicalarespuestaalaquehearribado?
+línea. Durante la aplicación de esta modalidad de educación
+híbridaenlaMatemáticaNuméricaseencontraronmuchos
+Estudiante–Estudiante–Grupo.
+detractores,tantoprofesorescomoestudiantes.Luegodeuna
+Deigualforma,sedebepartirdeldiagnósticoparaevaluar encuesta,seobtuvieronlassiguientesopiniones:
+el umbral de brechas tecnológicas de los estudiantes y los
+Muyacertadaslasclasesdigitalizadasyelrestodelos
+nivelesdeaprendizajeautónomoqueposeen.
+materiales,yaqueteníalainformaciónsinlapresencia
+delprofesor.
+1.3 Implementacióndelaconcepcióndidácticaen
+el tema Métodos Numéricos de la asignatura
+Aveceslasclasesteóricaspresencialessonmuyaburri-
+Matemática
+dasyasísonmásmotivadores.
+EltemaMétodosNuméricosesimportanteparalosinge-
+nieros, ya que la mayoría de los modelos matemáticos que Elsistemadeevaluaciónayudóasuperarlasdificulta-
+resuelvenproblemasdesuperfilprofesionalsesolventanpor desdeuncursoirregular(refiriéndosealperíodopan-
+estetipodemétodos.Losmétodosnuméricossebasanenlas démico).
+operacionesdesuma,resta,multiplicaciónydivisión,pero
+Muchosprofesoressecuestionenaúncuántoaprenden
+soniterativos;significaqueestasoperacionesserealizangran
+losestudiantesconestamodalidad.
+cantidaddeveces,porloqueseprecisadelusodemediosde
+cómputo.
+Al ser un estudio cualitativo y exploratorio, como paso
+Eltemaeselúltimodelaasignaturaytieneuntotalde
+inicial de un proyecto institucional, no se cuantificaron los
+24horas/clase.Eneltrabajometodológicosedeterminaronla
+resultados.
+cantidaddeclasespresencialesynopresenciales,distribuidas
+comosemuestraenlaTabla1.
+Conclusiones
+Obsérvesequeel41,6%delasclasesnofueronpresencia-
+lesytodasfueronclasesteóricas,yaqueelestudiantedebe El desarrollo tecnológico, la pandemia de Covid-19, la
+apropiarsedelmétodomedianteelaprendizajeautónomo.Pa- necesidaddeeducaciónparatodalavidaylassituacionesde
+ra ello, se pusieron a disposición de los estudiantes, tanto contingenciaqueelpaísyelmundopuedanenfrentar,impone
+enelEVAdelITMcomoengruposdeWhatsApp,librosen alaeducaciónsuperiorelretodeimplementarlamodalidad
+formatodigital,presentacionesdigitalesconaudiosdondese híbridadeenseñanzaparafomentarelaprendizajeautónomo
+explicabaelcontenido,vídeoselaboradosporlosprofesores ylaindependenciacognoscitiva.
+de la cátedra un archivo Excel con la programación de los En Cuba existe un modelo de EaD cuyos fundamentos,
+métodos. principiosycomponentespuedenserimplementadosparala
+Además, se utilizaron aplicaciones móviles que permi- modalidadhíbridaenlaformacióndeingenieros.
+tieron la visualización y la ejecución de los métodos, para Las opiniones sobre la concepción didáctica propuesta
+compararconlosprogramadosporellosenExcel.Amanera permitieronvalorarsuimplementaciónenlaMatemáticaNu-
+deejemplo,seutilizóelsoftwareGeogebra1(fueradelínea) méricaparalaformacióndeingenierosdelITM,loqueindicó
+paralavisualización,elsoftwareSymbolab2(enlínea)ypara quesepuedefavorecereldesarrollodelaprendizajeautónomo
+lacomparaciónseutilizóNumericalMethodsTools3. enlosestudiantes.
+1https://www.geogebra.org.
+2https://www.symbolab.com.
+3https://play.google.com/store/apps/details?id=
+com.chatosolutions.numericalmethodstools&hl=en-US&
+pli=1.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.41-48 DiezFumero,T.,LópezDomínguez,A.,&MartínezBello,A.
+https://revistas.uh.cu/rcm/article/view/9476 https://doi.org/10.5281/zenodo.14592249
+Retospos-Coviddelaeducaciónadistanciaenmatemáticaparalaformacióndeingenieros 47
+Tabla1.Distribucióndeclasespresencialesynopresenciales.
+Denominacióndelaclase Modalidad
+1.TeoríadeErrores Presencial
+2.SoluciónNuméricadeEcuaciones.MétodosdeBisecciónyNewton Nopresencial
+3.Ejercicios Presencial
+4.IntegraciónNumérica Nopresencial
+5.Ejercicios Presencial
+6.AjustedeCurvas.MínimosCuadrados Nopresencial
+7.Ejercicios Presencial
+8.InterpolaciónPolinomial.InterpolacióndeLagrange Nopresencial
+9.Ejercicios Presencial
+10.Soluciónnuméricadeecuacionesdiferenciales.MétodosdeEuleryRunge-Kutta2doy4toorden Nopresencial
+11.Ejercicios Presencial
+12.Ejercicios.Claseintegradora Presencial
+Suplementos of_the_open_educational_resources_oe
+r_movement_final.pdf.
+Esteartículonocontieneinformaciónsuplementaria.
+[3] Ayala,L.Posadade:Propuestametodológica:concep-
+Conflictos de interés cióndidáctica-pedagógicaenlaformacióncontinua
+de profesionales de enfermería en docencia. Varo-
+Sedeclaraquenoexistenconflictosdeinterés.Losauto-
+na. Revista Científico Metodológica, 73:61–73, 2021.
+resdeclaranquenohubosubvencionesinvolucradaseneste
+http://scielo.sld.cu/scielo.php?scr
+trabajo.
+ipt=sci_arttext&pid=S1992-823820210
+00200061&lng=es&tlng=es.
+Contribución de autoría
+[4] Bonk,C.JandC.R.Graham:TheHandbookofBlended
+Conceptualización T.D.F.,A.L.D.,A.M.B.
+Learning:GlobalPerspectives,LocalDesigns. Wiley
+Análisisformal T.D.F.,A.L.D.,A.M.B. +ORM,2012. https://books.google.com.c
+Investigación T.D.F.,A.L.D.,A.M.B. u/books/about/The_Handbook_of_Blende
+d_Learning.html?id=2u2TxK06PwUC&redi
+Metodología T.D.F.,A.L.D.,A.M.B.
+r_esc=y.
+Administracióndeproyecto T.D.F.
+[5] BouJaoude,S.:Thinkingcollaboratively:Learningina
+Recursos T.D.F.,A.L.D.,A.M.B.
+communityofinquiry. InternationalReviewofEduca-
+Supervisión T.D.F.,A.L.D.
+tion,62(1):123–125,2016,ISSN1573-0638. https:
+Validación T.D.F.,A.L.D.,A.M.B. //doi.org/10.1007/s11159-016-9538-9.
+Visualización T.D.F.,A.L.D.,A.M.B.
+[6] CienciasInformáticas,CentroNacionaldeEducacióna
+Redacción:preparacióndelborradororiginal T.D.F. DistanciadelaUniversidadde:ModelodeEducación
+Redacción:revisiónyedición T.D.F.,A.L.D. a Distancia de la Educación Superior Cubana, 2016.
+https://aulacened.uci.cu/pluginfile.
+php/13407/mod_page/content/7/Modelo%
+Referencias
+20de%20Educaci%C3%B3n%20a%20Distanci
+[1] Aragón, B., Y. Coca, D. González y Y. Zulueta: Una a%20de%20la%20Educaci%C3%B3n%20Super
+aproximaciónalaeducacióndigitalenuniversidades ior%20Cubana_CENED%202016.pdf.
+cubanas. 2021. https://repositorio.uci.cu
+/jspui/handle/123456789/9677. [7] CienciasInformáticas,CentroNacionaldeEducacióna
+DistanciadelaUniversidadde:Indicadoresdereferen-
+[2] Atkins,D.E.,J.S.Brown,andA.L.Hammond:AReview ciaparalaimplementacióndelModelodeEducación
+oftheOpenEducationalResources(OER)Movement: a Distancia de la Educación Superior Cubana, 2018.
+Achievements,Challenges,andNewOpportunities,vol- Recuperadode:http://uci.cu.
+ume 164. Report to The William and Flora Hewlett
+Foundation.CreativeCommonMountainView,2007, [8] DiezFumero,T.yH.HernándezFernández:Unsiste-
+ISBN9781894975629. http://oerderves.org/ madeevaluacióndelaprendizajeparalamatemática
+wp_content/uploads/2007/03/a_review_ superiorenperfilesingenieros. EditorialUniversitaria,
+DiezFumero,T.,LópezDomínguez,A.,&MartínezBello,A. CienciasMatemáticas,Vol.37,No.1,2024,Pag.41-48
+https://doi.org/10.5281/zenodo.14592249 https://revistas.uh.cu/rcm/article/view/9476
+48 Retospos-Coviddelaeducaciónadistanciaenmatemáticaparalaformacióndeingenieros
+2008. http://repositorio.eduniv.cu/fi [15] Hernández,Y.,L.RuizyJ.Sepúlveda:Evaluacióndela
+les/original/24ac8d63dffa09124a40747 implementacióndelModelodeEducaciónaDistancia
+3c9ff98ec.pdf. delaEducaciónSuperiorCubana. RevistaReferencia
+Pedagógica,10(1):76–89,2022,ISSN2308-3042. ht
+[9] Estrada, R. et al.: Implementación de un diseño me- tp://scielo.sld.cu/pdf/rp/v10n2/230
+todológico para la educación médica a distancia en 8-3042-rp-10-02-79.pdf.
+tiemposdeCovid-19. SciComm,1(2),2021. https:
+//doi.org/10.32457/scr.v1i2.1480. [16] Ministerio de Educación Superior: Resolución 15/23.
+Normasgeneralesparalaimplementacióndelmodelo
+[10] Garrison,D.R.andN.D.Vaughan:Blendedlearningin deeducaciónadistanciaconelusodelastecnologías
+higher education: Framework, principles, and guide- delainformaciónylacomunicación,enlaeducación
+lines. Jossey-Bass,2008. https://doi.org/10 superiorcubana,2023. http://mint.mes.edu.c
+.1002/9781118269558. u/sites/default/files/2023-10/docume
+nto/resolucion-de-educacion-a-dista
+[11] Gómez,E.:¿Quéeselmodelohíbridoycómoponerlo ncia_no15-de-2023ok_2.pdf.
+enpráctica?DocumentoNo.15.ProyectoLaspreguntas
+[17] Quintana,J.,O.Vega,RoseteA.yN.álvarez:Desarrollo
+educativas:¿quésabemosdeeducación?,2021. http
+delahabilidadderesolverproblemascombinatorioscon
+s://www.laspreguntaseducativas.com/w
+ejerciciosdedemostración.Experienciasdedocentes.
+p-content/uploads/2021/06/15-Hibrido
+Revista Cubana de Educación Superior, 42(2), 2023.
+-nuevo.pdf.
+http://scielo.sld.cu/scielo.php?scr
+ipt=sci_arttext&pid=S025743142023000
+[12] González,C.yY.Aragón:Laeducaciónadistanciaen
+Cuba:ModelodeeducaciónadistanciaenlaUniversi-
+200024&lng=es&tlng=es.
+daddelasCienciasInformáticas. SerieCientíficadela
+[18] Rosenshine, B.: Principles of instruction: Research-
+UniversidaddelasCienciasInformáticas,13(10),2020,
+basedstrategiesthatallteachersshouldknow.American
+ISSN2306-2495. http://publicaciones.uci.
+Educator,36(1):12–20,2012. https://files.er
+cu.
+ic.ed.gov/fulltext/EJ971753.pdf.
+[13] Graham,C.:Blendedlearningsystems:Definition,cu- [19] Siemens,G.:Connectivism:Alearningtheoryforthe
+rrenttrends,andfuturedirections,páginas3–21. Enero digitalage.InternationalJournalofInstructionalTechno-
+2006. https://www.researchgate.net/pub logyandDistanceLearning,2(1):3–10,2004. https:
+lication/258834966_Blended_learning_ //jotamac.typepad.com/jotamacs_weblo
+systems_Definition_current_trends_an g/files/connectivism.pdf.
+d_future_directions.
+[14] Hernández,T.yL.Jiménez:Lasuperaciónprofesionala
+distanciavirtualdeldocentedelaformaciónacadémica.
+Concepciónteórica.RevistaOpuntiaBrava,15(3),2023,
+ISSN2222-D81X. https://biblat.unam.mx
+/es/revista/opuntia-brava/articulo/
+la-superacion-profesional-a-distanc
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+ia-virtual-del-docente-de-la-formaci
+SinDerivadas 4.0 Internacional”.
+on-academica-concepcion-teorica.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.41-48 DiezFumero,T.,LópezDomínguez,A.,&MartínezBello,A.
+https://revistas.uh.cu/rcm/article/view/9476 https://doi.org/10.5281/zenodo.14592249
+1

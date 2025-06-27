@@ -1,0 +1,447 @@
+CienciasMatemáticas,Vol.31,No.2,Pag.117-123, 2017
+Recibido03-2017
+Clasificacio´n morfolo´gica usando descriptores
+elementales en ima´genes digitales de muestras de
+HUVEC
+Morphological classification using elemental
+descriptors in digital images of HUVEC samples
+Miriela Escobedo Nicot1*, Silena Herold Garc´ıa1, Ligia Ferreira Gomez2, Camila Machado3,
+Elisaˆngela Monteiro Pereira4, Wilkie Delgado Font1
+Resumen Elana´lisisdeladeformacio´ncelularenmuestrasbiolo´gicasconstituyeunaherramientaimportante
+para el estudio de algunas enfermedades o procesos asociados a enfermedades en el ser humano. Es por
+elloqueenestetrabajonoscentramosenlaposibilidaddeobtenerdeformaautomatizada,unaclasificacio´n
+morfolo´gicacelularenima´genesdeculturasinvitro 2Ddece´lulasendotelialesdevenasdecordo´numbilical
+humano (HUVEC) para estudio de la angioge´nesis usando muestras control y otras tratadas con β GPI. Se
+2
+realizo´ laclasificacio´nsupervisadadelasce´lulasentresclases:circulares,deformadasalargadas(elongadas)
+ydeformadaspocoalargadas(otrasdeformaciones)usandoloscoeficientesdeformasel´ıptico(ESF)ycircular
+(CSF), lo que permitio´ identificar formas celulares relevantes para la evaluacio´n de este proceso. Todos los
+algoritmosfueronimplementadosenPlataformaMatlab®.Paracompararlosresultadosobtenidosentrelas
+muestrascontrolylastratadas,secalcularonlosintervalosconfidencialesparacadaunadelasclasesconun
+niveldeconfiabilidaddel95%.
+Abstract Theanalysisofcellulardeformationinbiologicalsamplesisanimportanttoolforthestudyofsome
+diseasesorprocessesassociatedtodiseasesinthehumanbeing. Forthatreasoninthispaperwefocused
+in obtain an automatic morphological classification of cells in images of 2D cultures of human umbilical vein
+endothelialcell(HUVEC)forangiogenesisstudiesusingcontrolsamplesandotherwithβ GPI.Thesupervised
+2
+classificationofcellswasperformedinthreeclasses: circular,deformedelongated(elongated)anddeformed
+slightlyelongated(otherdeformations),usingtheellipticalshapecoefficient(ESF)andcircularshapecoefficient
+(CSF),allowingtheidentificationofcellshapesthatexpressmorphologicalelementsthatarerelevantforthe
+assessmentoftheangiogenesisprocess. AllalgorithmswereimplementedinMatlab®platform. Tocomparethe
+resultsobtainedbetweenthecontrolandtreatedsamples,theconfidentialintervalswerecalculatedforeachof
+theclasseswithareliabilitylevelof95%.
+PalabrasClave
+Clasificacio´ndeformas—Angioge´nesis—HUVEC
+1DepartamentodeComputacio´n,UniversidaddeOriente,SantiagodeCuba,Cuba.miri@uo.edu.cu,silena@uo.edu.cu,wilkie@uo.edu.cu
+2DepartamentodeAna´lisisCl´ınicosyToxicolo´gicos,UniversidaddeSa˜oPaulo,Sa˜oPaulo,Brasil.lfgomes@usp.br
+3DepartamentodeFisiopatologiaExperimental,FaculdadedeMedicina,UniversidadedeSa˜oPaulo,Sa˜oPaulo,Brasil.
+camilamachado@usp.br
+4DepartamentodeAna´lisesCl´ınicaseToxicolo´gicas,FaculdadedeCieˆnciasFarmaceˆuticas,UniversidadeFederaldeAlfenas,MinasGerais,
+Brasil.elimonteirop@gmail.com
+*AutorparaCorrespondencia
+Introduccio´n ciaquetienelaextraccio´ndedatosdeintere´senlasciencias
+enlasqueseaplique.Elana´lisisdeima´genesdigitalesincluye
+Enlaactualidadlasima´genesdigitalesjueganunrolsu- variospasosentrelosqueseencuentran:laadquisicio´ndela
+mamenteimportanteenmuchoscamposdelaciencia,porlo imagenatrave´sdeundispositivoo´ptico,elpreprocesadode
+quelabu´squedacontinuademe´todospararealizarelprocesa- lamismaparaeliminarimperfeccionesquepuedenaparecer
+mientodeestasima´genes,sehaconvertidoenunatema´tica duranteelprocesodecaptura,lasegmentacio´ndelosobjetos
+ampliamenteestudiadaenlosu´ltimosan˜osdebidoalarelevan- presentesenlaimagenyelestudiodelascaracter´ısticasquese
+118 Clasificacio´nmorfolo´gicausandodescriptoreselementalesenima´genesdigitalesdemuestrasdeHUVEC
+obtienenapartirdelasegmentacio´nrealizada,loquepermite delaangioge´nesis([13],[14],[15],[16]).
+llegaraconclusiones(decara´ctercualitativasocuantitativas) Enestasinvestigacionesloma´scomu´neshacerelana´lisis
+sobredichosobjetosenlaimagen. de la angioge´nesis a partir de la cuantificacio´n del a´rea de
+Dentrodelana´lisisdecaracter´ısticas,elestudioautomati- regionesindividualesodegruposdece´lulas,delana´lisisde
+zadodeobjetossegu´nsuformarevistegranimportanciaenla ladireccio´ndelcrecimientocelularodelasestructurascon
+actualidad,yesta´ ampliamentedifundidoenunagranvarie- formasdetuboscapilaresqueseformanenelprocesoapartir
+daddeentornosenlavidahumana.Estepuedeconsiderarse de delimitar su longitud y taman˜o. Pero cuando se analiza
+especialmentenecesarioenaquellosentornosqueofrezcan elcomportamientocelulardesdeetapastempranas(apartir
+mayor dificultad para el ser humano en cuanto a poder lo- de las 24 h de incubacio´n) entonces resulta ido´neo realizar
+grar resultados confiables y abarcadores, como pueden ser un ana´lisis morfolo´gico que permita hacer una diferencia-
+aquellosrelacionadosconelana´lisisenima´genesdemuestras cio´ndondeseexpresenlosdiferentesnivelesdedeformacio´n
+microsco´picas,debidoalgranesfuerzoquesuponeparaun celular.Elana´lisisenetapastempranaspuedeproporcionar
+especialistaelpermanecer,avecesdurantehoras,observando informacio´n que indique la conducta de las ce´lulas ante el
+enelmicroscopioloscamposvisualesparaemitiruncrite- est´ımuloaqueesta´nsiendoexpuestas.
+riocuantificable.Enestoscasoselcansancio,laposicio´n,la Teniendoencuentaestosantecedentes,enestetrabajose
+dificultaddelpropiomediodeobservacio´n,einclusolavaria- proponerealizarunana´lisismorfolo´gicocuantitativodeHU-
+bilidaddecriteriosentreespecialistas,incidenenlacalidad VECsbajolainfluenciadelaβ 2 GPI,presentesenima´genes
+de los resultados obtenidos y provocan que el esfuerzo sea digitalesdeculturas2Dinvitro.Laβ 2 GPIesunaprote´ınaala
+realmenteelevadoparagarantizarlaveracidaddelosmismos. cualselehaatribuidopropiedadesdecara´cteranti-angioge´ni-
+cas en determinados ambientes experimentales ([17], [18]).
+Enlapra´cticaexisteninfinidaddecasosdondesetratan
+Ladiferenciacio´ncelularseproponeestudiarlaentresclases:
+situacionesdeclasificacio´ndeobjetosdetectadosenima´genes
+circulares,deformadasalargadas(elongadas)ydeformadas
+digitalessegu´nsuforma.Porejemploenmedicina,algunas
+pocoalargadas(otrasdeformaciones).Desdeelpuntodevista
+enfermedadesodeterminadosprocesosfisiolo´gicos,causan
+computacionalnosetienereferenciadequeesteprocesohaya
+deformacionescelularesquepuedenseridentificadasypro-
+sidoestudiadodeestaforma.Estaclasificacio´npermitedeter-
+cesadasparaemitirdiagno´sticosysugerirtratamientosade-
+minarformasqueexpresanelementosmorfolo´gicosrelevantes
+cuados.Enestetrabajoharemosreferenciaalaangioge´nesis,
+paralaevaluacio´ndelprocesodelaangioge´nesis,comopor
+dondelaformadelasce´lulasendotelialessepuedecorrela-
+ejemplo: formacio´n de prolongamientos celulares, pe´rdida
+cionarconlosprocesosdemigracio´nyproliferacio´ncelulary
+delasimetr´ıaradial,aparecimientodelasimetr´ıaaxialode
+formacio´ndeestructurastubulares.
+formastriangulares,variacionesdetaman˜o,entreotras.
+Laangioge´nesiseselprocesoquepermitelaformacio´nde
+Lasmuestrasvaloradasfueronobtenidasalas24horas
+nuevoscapilaresapartirdevasospre-existentesenelcuerpo
+deincubacio´nparapermitirelestudiodeformaprecoz.Se
+yqueenvuelveunasecuenciacomplejadeeventosmediados
+emplearoncomocaracter´ısticasmorfolo´gicaselcoeficiente
+pormole´culasdesen˜alizacio´nparaelcrecimiento,lamigra-
+el´ıptico(ESF)yelcoeficientedecircularidad(CSF)[19],que
+cio´nyladiferenciacio´ncelular[1].Suestudiorevistegran
+handemostradobuendesempen˜oalserempleadosconanterio-
+importancia pues es un proceso estrechamente relacionado
+ridadenestudiosconce´lulasqueadoptanformassemejantes
+a un gran nu´mero de eventos patolo´gicos, que incluyen la
+alasdefinidasenestainvestigacio´n[20].
+transicio´ndelafasedecrecimientovascularinofensivoala
+Lametodolog´ıapropuestaplanteadosetapasenelestudio:
+potencialmentefataldeltumor.
+una primera etapa donde se utilizan del total de ima´genes
+Enlosu´ltimosan˜ossehanrealizadodiversasinvestigacio-
+unsubconjuntodeellasparadeterminarlaefectividaddela
+nesdirigidasalaautomatizacio´ndelana´lisisdelaangioge´ne-
+realizacio´ndel procesode deteccio´ny clasificacio´ncelular
+sisenima´genesdigitalesdecultivosinvitrodece´lulasendo-
+teniendoencuentaelcriteriodelespecialistayunasegunda
+teliales, espec´ıficamente para el estudio de los procesos de
+etapadonde,considerandolavalidezdelprocesodemostrada
+migracio´n, proliferacio´n y formacio´n de estructuras en for-
+enlaprimeraetapa,seempleaesteme´todoparaobtenerun
+madetubos.En([2],[3],[4],[5],[6],[7],[8],[9])pueden
+criterionume´ricosobreladeformacio´nexistenteenlasce´lulas
+encontrarse algunos ejemplos, con los que se demuestra la
+presentesenelrestodelasima´genes.Lacomparacio´ndelos
+factibilidad de desarrollar un estudio automatizado en este
+para´metrosobtenidosparalasmuestrascontrolylastratadas
+tipo de ima´genes. Otros estudios han centrado su atencio´n
+fuedesarrolladacalculandolosintervalosconfidencialespara
+enlavaloracio´ndeefectosproducidosporvariadostiposde
+cadaunadelasclasesconunniveldeconfiabilidaddel95%.
+intervencio´ndecara´cterprooanti-angioge´nicoapartirdel
+ana´lisiscuantitativodelaangioge´nesisenensayosinvitro.En
+estesentidosehanrealizadoinvestigacionesdesdeelpunto 1. Me´todos
+devistacomputacionaldirigidasalestudiodelaactividadde Lasdiferentesetapasdesarrolladaspuedenresumirseco-
+varios compuestos en ([10], [11], [12]). Tambie´n se tienen mosigue:
+otrasaproximacionesqueempleanelana´lisismorfolo´gicode
+lasce´lulasendotelialesenestetipodemuestrasparaelestudio Preparacio´ndelasmuestrasycapturadelasima´genes.
+Clasificacio´nmorfolo´gicausandodescriptoreselementalesenima´genesdigitalesdemuestrasdeHUVEC 119
+Segmentacio´nusandoelme´tododeumbralizacio´n. u objetos, y es uno de los elementos fundamentales en el
+estudioautomatizadodeima´genes,debidoaqueesenesta
+Evaluacio´ndela´reacelular.
+etapadondeseextraenlosobjetosdeintere´sdeunaimagen
+pararealizarana´lisisposteriores,queincluyendescripcio´ny
+Clasificacio´nusandoloscoeficienteselementalesESF
+reconocimientodecaracter´ısticas[23].
+yCSF.
+Enestetrabajoconsiderandoqueexisteunabuenadife-
+Conteodelasce´lulas. renciacio´nentrelosobjetosdeintere´s(HUVEC)yelfondo,
+esdecir,losvaloresdeintensidaddelosobjetosesta´nfuera
+Todoslosalgoritmosusadosfueronimplementadosenplata- delrangodelosvaloresdeintensidaddelfondo,lasima´genes
+formaMatlab®. fueronsegmentadasusandounme´tododesegmentacio´npor
+Despue´s de adquirida la imagen es segmentada usando umbralizacio´n, el cual hace una clasificacio´n de la imagen
+elme´tododeumbralizacio´n.Elestudiofuerealizadoconsi- en dos clases de p´ıxeles. Sea f(x,y) una imagen, tal que los
+derandoelcampodeobservacio´ndelmicroscopiocompleto. p´ıxelespertenecientesalosobjetosyalfondotienenvalores
+Luegodelasegmentacio´nelruidoquedespue´sdesegmenta- deintensidadagrupadosendosmodosdominantes.Laimagen
+dalaimagenau´nsemantienepresente,eseliminadousando umbralizadag(x,y)quedadefinidadelasiguienteforma:
+operacionesmorfolo´gicasdeaperturaycierre[21].Fueron
+(cid:26)
+consideradasregionesva´lidasparaclasificarmorfolo´gicamen- 1 si f(x,y)≥T,
+g(x,y)= (1)
+teaquellasquepresentaronuna´reamayorquelamitaddel 0 si f(x,y)<T.
+a´reapromediodetodoslosobjetossegmentadosenlaimagen
+DondeT eselvalordeumbraldefinido.
+ymenorqueeldobledelamisma,conelobjetivodedescartar
+regionesquecontengansolapamientosdece´lulasosecorres-
+1.2 Descriptoreselementalesdeformas
+pondanconlasregionesmuypequen˜asnopertenecientesa
+Entrelosdescriptoresma´selementalesparaelana´lisisde
+ce´lulas.
+formas esta´n el coeficiente de forma circular (CSF por sus
+Para determinar la morfolog´ıa celular usando los coefi-
+siglaseningle´s)yelcoeficientedeformael´ıptico(ESFpor
+cientesESF yCSF,seemplearonlosvaloresdeterminados
+sussiglaseningle´s)[19],loscualessebasanencaracter´ısti-
+en[22].Aunquehayquedestacarqueserealizo´ unajustedel
+casgeome´tricasdelosobjetos.ElvalordeESF expresala
+umbralusadoparaelcoeficienteCSF locualgarantizo´ una
+elongacio´ndelobjeto,mientrasqueelvalordeCSF expresa
+mayorrobustezencuantoaladiferenciacio´ndelasce´lulas
+quetancercanoseencuentraelobjetoaunaformacircular.
+circularesylasdeformadaspocoalargadas.Losvaloresson
+Sielobjetoesperfectamentecircularambosdescriptoresto-
+definidosdelasiguienteforma:
+manelvalor1.SiAyPrepresentanela´reayper´ımetrodel
+objetorespectivamente,entoncesambosvalorespuedenser
+SiESF<0,5lace´lulaesdeformadaalargadaoelonga-
+obtenidosdelasiguienteforma:
+da.
+4πA
+SiESF>0,5yCSF<0,9lace´lulaesdeformadapoco CSF = . (2)
+P2
+alargadaoconotradeformacio´n.
+E
+SiESF>0,5yCSF>0,9lace´lulaescircular. ESF = me , (3)
+E
+ma
+Algunasdelasetapasprincipalesdeltrabajosonmostra- Donde:
+dasenlaFigura1.
+E representalaabscisamenordelobjeto.
+me
+E representalaabscisamayordelobjeto.
+ma
+1.3 Preparacio´ndelasmuestras
+Los estudios fueron conducidos con subfracciones del
+procesodepurificacio´nquesonricasenmono´merosdeβ GPI
+2
+purificada,obtenidasporelucio´ndelacolumnadeHeparina
+Sefarosadespue´sdefiltracio´npormembranasdeacetatode
+Figura1.Flujodetrabajodelproceso.
+celulosa, con poros de dia´metro 0,22 µm para eliminar la
+contaminacio´nbacterianaydilucio´nenmediodeculturasin
+suero.
+1.1 Segmentacio´n
+Las ce´lulas endoteliales en la concentracio´n de 2×104
+El primer paso a seguir para realizar el ana´lisis de es-
+ce´lulas/ml,fueroncolocadasenmediodecultivoRPMI16401
+tructuras de intere´s presentes en una imagen digital es la
+suplementadoconsuerofetalbovinoa10%enplacasde24
+segmentacio´n de las mismas. La segmentacio´n es el proce-
+so que subdivide una imagen en sus partes constituyentes 1MediodecultivoRoswellParkMemorialInstitute.
+120 Clasificacio´nmorfolo´gicausandodescriptoreselementalesenima´genesdigitalesdemuestrasdeHUVEC
+pozos,sobrecubreobjetosdevidriocon13mmdedia´metro, Sensibilidad(TruePositiveRate(TPR)porsussiglas
+previamenteesterilizadosenautoclave.Encadapozofueadi- eningle´s)eslaproporcio´ndeobjetosqueesta´nclasifi-
+cionadounaconcentracio´niguala30µg/mldelaprote´ınayla cadosdentrodelaclaseC,deentretodoslosobjetos
+i
+incubacio´nfueinterrumpidaalas24h.Lasce´lulasadheridas querealmentesondelaclaseC.
+i
+aloscubreobjetosdevidriofueronten˜idasconunamezcla
+deHematoxilinayAzuldeMetilenoutilizadaenlaboratorios Precisio´n(P)eslaproporcio´ndeobjetosquerealmente
+deHematolog´ıa(May-Grunwald-Giemsa),paraunresultado tienen claseC i de entre todos los objetos que se han
+depatro´nsuaveconbuenatransparenciacitoplasma´tica. clasificadodentrodelaclaseC i .
+1.4 Capturadelasima´genes Especificidad(TrueNegativeRate(TNR)porsussiglas
+Fueronobtenidasima´genesdedistintoscamposapartirde en ingle´s) es la proporcio´n de objetos que han sido
+4muestrasdeHUVEC,usandounaca´maraPointGrey(GS3- clasificados dentro de las otras clases diferentes a la
+U3-1455M) con objetivo de aumento de 3,2×. Para cada claseC i yquenopertenecenalaclaseC i .
+la´mina,queincluyentrespozosdecultivo,fueroncapturadas
+Enlasegundaetapaserealizo´ laclasificacio´nparatodo
+entre 17 y 22 ima´genes de campos secuenciales sobre un
+elconjuntodeima´genesrestantes.Losresultadosobtenidos
+dia´metrodeterminadoenlamuestra,conunaresolucio´nde
+fueronprocesadosusandoelsoftwareSTATISTICA,versio´n
+1384×1036p´ıxeles.Lasima´genesutilizadassedividieron
+10.Seconsidero´ comovalorrepresentativoparaelconjunto
+endosgrupos,ungruponotratadoconlaβ GPI,denominado
+2
+deima´genesquesecorrespondenaunpozo,elvalorprome-
+grupocontrolyungrupotratadoconlaβ GPI.Entotalfueron
+2
+diodelospara´metrosmedidos.Paralacomparacio´ndelos
+procesadasunconjuntode222ima´genes,distribuidasen87
+resultadosobtenidosentrelasmuestrascontrolylastratadas,
+ima´genes obtenidas de las muestras control y 94 ima´genes
+secalcularonlosintervalosconfidencialesparacadaunade
+obtenidasdelasmuestrastratadasconβ GPI.
+2
+lasclasesconunniveldeconfiabilidaddel95%.
+1.5 Descripcio´ndelosexperimentos
+Elana´lisisdelosresultadosobtenidosfuedivididoendos 2. Resultados y discusio´n
+etapas,encargadasde:
+Enlaprimeraetapafueronprocesadas40ima´genes(cerca
+1. Verificarlaefectividaddeladeteccio´ndece´lulascomo
+del18%deltotaldeima´genes),conuntotalde1501ce´lulas.
+resultado del proceso de segmentacio´n y verificar la
+Los resultadosobtenidos en la deteccio´n semuestranen la
+efectividadderealizarunaclasificacio´nsupervisadaen
+Tabla1,alcanza´ndoseun95,07%deefectividadenladetec-
+estetipodeima´genes,tomandounapartedeltotalde
+cio´n.Todaslasce´lulaspresentesenlasima´genesvaloradas
+lasima´genesdelconjunto.
+fueron detectadas, las regiones no pertenecientes a ce´lulas
+2. Realizarlaclasificacio´nparatodoelconjuntodeima´ge- detectadassecorrespondenconartefactosqueprovienende
+nesrestantesyelana´lisisestad´ısticodelosresultados laformadepreparacio´ndelasmuestras.Elana´lisisrealizado
+obtenidos. demostro´ queelprocesodedeteccio´ndelasregionesdein-
+tere´s(ce´lulas)enlasima´genesvaloradaseseficienteyaque
+Paravalidarlaefectividadenladeteccio´ndece´lulasenlas
+logradetectardeformacorrectalamayorcantidaddece´lulas
+ima´genes,seaplico´ elsiguientefuncionaldecalidad:
+posibles.
+OBC
+φ(p)= , (4)
+OBC+OMC+OAC Cuadro1.Resultadosobtenidosconladeteccio´ndece´lulas.
+OBC OMC OAC (OBC+OAC) φ(P)
+donde:
+985 51 0 985 95,07
+OBC:representalacantidaddece´lulasbiendetectadas
+enelprocesodedeteccio´np.
+Como segundo paso de esta etapa se realizo´ el ana´lisis
+OMC:cantidadderegionespertenecientesace´lulasno delaclasificacio´ncomparandocontraelcriteriodelosespe-
+detectadas. cialistas,loscualesseencargarondeclasificarmanualmente
+teniendoencuentalasclasesyadescritas,las1501ce´lulaspre-
+OAC:cantidaddece´lulasmaldetectadas.
+sentesenlasima´genestomadasparacontroldelproceso.La
+Paraevaluareldesempen˜oenlaclasificacio´nseutilizaron matrizdeconfusio´ndelprocesodeclasificacio´nsupervisada
+unconjuntodeima´genesclasificadasdeantemanodeforma desarrolladoenestaetapaylosresultadosdelasmedidasob-
+manualporpartedelosespecialistas.Lasmismasfueronseg- tenidassonmostradosenlaTabla2,dondeCsecorresponde
+mentadasyclasificadascomosedescribio´anteriormente.Para conlaclasecircular,E secorrespondeconlaclaseelongada
+cadaclaseobtenidasedeterminaronlosvaloressesensibili- yODconlaclasedeotrasdeformaciones.
+dad, precisio´n y especificidad, medidas de calidad que son Losvaloresobtenidosenelprocesodevalidacio´ncruzada
+extra´ıdasapartirdelamatrizdeconfusio´n[24].Estosvalores mostraronqueloscoeficienteselementalesESFyCSFpre-
+puedenserdescritosdelasiguienteforma: sentaronundesempen˜oalto.Lasensibilidadparalas3clases
+Clasificacio´nmorfolo´gicausandodescriptoreselementalesenima´genesdigitalesdemuestrasdeHUVEC 121
+Cuadro2.Resultadosobtenidosconloscoeficientes
+elementales.
+Clase C E OD TPR TNR P
+C 267 0 10 96,38 96,48 90,81
+E 0 336 10 97,10 96,27 98.24
+OD 27 6 845 96,24 96,78 97,68
+Total 96,58 96,52 95,58
+esta´ porencimadel96%.Ningunace´lulacircularfueclasifi-
+cadacomoelongadayviceversa.Enelcasodelasce´lulascon
+otrasdeformacioneseldesempen˜ofueelmenoralcanzado,
+aunque la cantidad de errores en la clasificacio´n se puede (a)
+considerarm´ınima,cercadel2%delasce´lulasconotrasde-
+formacionesfueronclasificadascomocircularesyelongadas,
+estosedebeaquehayce´lulasconotrasdeformacionesque
+puedenserunpocoma´scercanasalosvaloresdecircularidad,
+odeelongacio´n.
+Enlasegundaetapaserealizo´ laclasificacio´nparatodo
+elconjuntodeima´genesrestantes.Elana´lisisestad´ısticorea-
+lizadoesmostradoenlaFigura2.Enelcasodelasce´lulas
+circularesyelongadascomopuedeapreciarseenlaFigura2a
+y2b,losintervalosconfidencialessesolapanylamediade
+amboscaeenelintervaloconfidencialdelotro,porlotantose
+puedeconcluirquenohaydiferenciassignificativasentrela
+cantidaddece´lulascircularesyelongadasparalasmuestras (b)
+controlytratadas,conunniveldeconfiabilidaddel95%.En
+las ce´lulas circulares se puede ver un ligero aumento en la
+mediayenladispersio´nenlasmuestrastratadas.Enelcaso
+delasce´lulaselongadas,hayunadisminucio´nenelvalorde
+lamediaylosvaloresseconcentranma´sentornoaestaen
+lasmuestrastratadas,sepuedeobservarqueenlasmuestras
+controlladispersio´nesmayor.Paralasce´lulasconotrasdefor-
+maciones,losintervalosconfidencialesnosesolapan(Figura
+2c),loquenospermiteindicarquehaydiferenciassignificati-
+vasentrelasmuestrascontrolylastratadas.Sepuedeapreciar
+queadema´squeenlasmuestrastratadashayunadisminucio´n
+en el valor de la media y un aumento en la dispersio´n, lo
+cual puede ser asociado a que en esta clase se contemplan (c)
+todoslostiposdedeformacionescelularesqueexistenenestas Figura2.Comparacio´ndelascantidadesdece´lulasentrelas
+muestrasquenolleganaserpropiamentece´lulaselongadaso muestrascontrolylastratadas.(a)Ce´lulascirculares,(b)
+circulares. ce´lulaselongadasy(c)ce´lulasconotrasdeformaciones.
+3. Conclusiones
+cacio´nlosresultadosobtenidosenlasmuestrascontrolcon
+Enestetrabajosehapropuestounametodolog´ıaparaob-
+respectoalasmuestrastratadas,evidenciaronquenoexisten
+tenerunaclasificacio´nmorfolo´gicaautomatizadadece´lulas
+diferenciassignificativasenlasce´lulascircularesyelongadas,
+presentes en ima´genes digitales de muestras de culturas in
+ysienlasotrasdeformaciones.
+vitro2DdeHUVEC,bajolainfluenciadelaβ GPI.Elpro-
+2
+cesopermiteobtenerdeformara´pidalacantidaddece´lulas El estudio de la morfolog´ıa de las ce´lulas endoteliales
+circulares,elongadasyconotrasdeformacionespresentesen es una importante herramienta debido a que la alteracio´n
+lasima´genestomadasalas24horasdetratamientousandolos en la estructura y en el crecimiento de estas ce´lulas puede
+coeficienteselementalesdelana´lisisdeformasESF yCSF. representarunarespuestapositivaonegativaauntratamiento
+Lametodolog´ıaaplicadapermiteobservarqueenlasmues- opatolog´ıa.Losresultadosobtenidosenestetrabajopermiten
+trasvaloradas,selogro´ segmentarlasce´lulaspresentesconun afirmarqueelana´lisisdelasalteracionesmorfolo´gicasinvitro
+95,07%deefectividadenladeteccio´n.Encuantoalaclasifi- puedeserutilizadaenculturas2Dprecoces(24horas)parala
+122 Clasificacio´nmorfolo´gicausandodescriptoreselementalesenima´genesdigitalesdemuestrasdeHUVEC
+cuantificacio´ndefeno´menosqueusualmentesonestudiados [7] M.-L.Boizeau,P.Fons,L.Cousseins,J.Desjobert,D.Si-
+en culturas 3D a partir de 48 horas de incubacio´n, lo cual brac, C. Michaux, A.-L. Nestor, B. Gautret, K. Neil,
+permitequesesimplifiquelacuantificacio´nysereduzcael C.Herbert,etal.,“Automatedimageanalysisofinvitro
+costo del ana´lisis de la respuesta de proliferacio´n asociada angiogenesisassay,”Journaloflaboratoryautomation,
+a efectos de sustancias anti-angioge´nicas sobre las ce´lulas p.2211068213495204,2013.
+endoteliales.
+[8] I.Valavanis,T.Goudas,M.Michailidou,I.Maglogian-
+nis,H.Loutrari,andA.Chatziioannou,“Anovelimage
+Agradecimientos
+analysismethodologyfortheevaluationofangiogene-
+Este trabajo esta´ soportado por las agencias de investi- sis in matrigel assays and screening of angiogenesis-
+gacio´n brasilen˜as CAPES, FAPESP y CNPq a trave´s de su modulatingcompounds,”inIFIPInternationalConfe-
+proyectoPDJ402601/2015-7,laUniversidaddeSa˜oPaulo renceonArtificialIntelligenceApplicationsandInnova-
+ylaUniversidadFluminense,ambasdeBrasilylaUniversi- tions,pp.61–71,Springer,2015.
+daddeOriente,Cuba.AgradeceralprofesorDr.CDurvanei
+[9] C. Balsat, S. Blacher, N. Singolle, F. Kridelka, and
+AugustoMaria,delInstitutoButantan,porlasce´lulasendote-
+A. Noe¨l, “Image analysis characterization of the
+lialesutilizadasenestetrabajo.AlosprofesoresDr.C.Mikiya
+lymph/angiogenesisinexperimentalmodelsandclinical
+Muramatsu y Dr. C. Adriano Alencar, por ceder el micros-
+studies,”ActaStereologica,2015.
+copioylasinstalacionesutilizadasparalasmedidasyalDr.
+C.DiogoSogaporelmontajedelainstalacio´nusadaparala [10] D.Guidolin,A. Vacca,G.Nussdorfer,andD. Ribatti,
+capturadelasima´genes,todospertenecientesalInstitutode “Anewimageanalysismethodbasedontopologicaland
+F´ısicadelaUniversidaddeSa˜oPaulo,Brasil.AlaDra.C.La- fractalparameterstoevaluatetheangiostaticactivityof
+risaZamoradelaUniversidaddeOrienteporsucolaboracio´n docetaxelbyusingthematrigelassayinvitro,”Micro-
+enelana´lisisdelosresultados. vascularresearch,vol.67,no.2,pp.117–124,2004.
+[11] S.M.Irvine,J.Cayzer,E.M.Todd,S.Lun,E.W.Floden,
+Referencias
+L.Negron,J.N.Fisher,S.G.Dempsey,A.Alexander,
+[1] P.Carmeliet,“Angiogenesisinlife,diseaseandmedici- M.C.Hill,etal.,“Quantificationofinvitroandinvivo
+ne,”Nature,vol.438,no.7070,pp.932–936,2005. angiogenesis stimulated by ovine forestomach matrix
+biomaterial,” Biomaterials, vol. 32, no. 27, pp. 6351–
+[2] K.Peters,H.Schmidt,R.E.Unger,M.Otto,G.Kamp,
+6361,2011.
+andC.J.Kirkpatrick,“Software-supportedimagequan-
+tificationofangiogenesisinaninvitroculturesystem: [12] P. Nowak-Sliwinska, A. Weiss, J. R. v. Beijnum, T. J.
+applicationtostudiesofbiocompatibility,”Biomaterials, Wong,J.-P.Ballini,B.Lovisa,H.vandenBergh,and
+vol.23,no.16,pp.3413–3419,2002. A.W.Griffioen,“Angiostatickinaseinhibitorstosustain
+photodynamicangio-occlusion,”Journalofcellularand
+[3] A.Niemisto,V.Dunmire,O.Yli-Harja,W.Zhang,and
+molecularmedicine,vol.16,no.7,pp.1553–1562,2012.
+I.Shmulevich,“Robustquantificationofinvitroangio-
+genesisthroughimageanalysis,”IEEEtransactionson [13] M. S. Angulo, J, “Application of mathematical morp-
+medicalimaging,vol.24,no.4,pp.549–553,2005. hologytothequantificationofinvitroendothelialcell
+organizationintotubular-likestructures,”Cellularand
+[4] A. F. Santos, A. B. Zaltsman, R. C. Martin, A. Kuz-
+MolecularBiology,vol.53,no.2,pp.22–35,2007.
+min, Y. Alexandrov, E. P. Roquemore, R. A. Jessop,
+M.G.M.v.Erck,andJ.H.Verheijen,“Angiogenesis: [14] C.-G.Roxana,H.Oualid,L.Anne,D.Agne`s,andA.D.
+animprovedinvitrobiologicalsystemandautomated Claude,Verdieand,“Morphologicalanalysisoftumor
+image-basedworkflowtoaididentificationandcharac- cell/endothelialcellinteractionsundershearflow,”Jour-
+terizationofangiogenesisandangiogenicmodulators,” nalofbiomechanics,vol.40,no.2,pp.335–344,2007.
+Assayanddrugdevelopmenttechnologies,vol.6,no.5,
+[15] M.-C.Liu,H.-C.Shih,J.-G.Wu,T.-W.Weng,C.-Y.Wu,
+pp.693–710,2008.
+J.-C.Lu,andY.-C.Tung,“Electrofluidicpressuresensor
+[5] D.Guidolin,G.Albertin,andD.Ribatti,“Exploringin embedded microfluidic device: a study of endothelial
+vitroangiogenesisbyimageanalysisandmathematical cellsunderhydrostaticpressureandshearstresscombi-
+modeling,” Microscopy: science, technology, applica- nations,”LabonaChip,vol.13,no.9,pp.1743–1753,
+tionsandeducation,vol.2,pp.876–884,2010. 2013.
+[6] C.P.Khoo,K.Micklem,andS.M.Watt,“Acomparison [16] C. Machado, M. Escobedo, C. Nigro, V. Sara, P. Cas-
+ofmethodsforquantifyingangiogenesisinthematrigel sia, D. Augusto, F. Palacios, and L. Ferreira, “Digital
+assay in vitro,” Tissue Engineering Part C: Methods, image processing assessment of the differential in vi-
+vol.17,no.9,pp.895–906,2011. tro antiangiogenic effects of dimeric and monomeric
+Clasificacio´nmorfolo´gicausandodescriptoreselementalesenima´genesdigitalesdemuestrasdeHUVEC 123
+beta2-glycoproteini,”JournalofCytology&Histology, LatinAmericanCongressonBiomedicalEngineering
+vol.2013,2013. CLAIB’11,vol.33,pp.543–546,IFMBE,2013.
+[17] P.Yu,F.Passam,D.Yu,G.Denyer,andS.Krilis,“β2- [21] J. Serra and P. Soille, Mathematical morphology and
+glycoproteiniinhibitsvascularendothelialgrowthfactor its applications to image processing, vol. 2. Springer
+andbasicfibroblastgrowthfactorinducedangiogenesis Science&BusinessMedia,2012.
+throughitsaminoterminaldomain,”JournalofThrom-
+[22] S.Eom,S.Kim,V.Shin,andB.Ahn,“Leukocyteseg-
+bosis and Haemostasis, vol. 6, no. 7, pp. 1215–1223,
+mentation in blood smear images using region-based
+2008.
+activecontours,”inAdvancedConceptsforIntelligent
+[18] H.Nakagawa,S.Yasuda,E.Matsuura,K.Kobayashi, VisionSystems,pp.867–876,Springer,2006.
+M.Ieko,H.Kataoka,T.Horita,T.Atsumi,andT.Koike,
+[23] T.S.Yoo,Insightintoimages:principlesandpractice
+“Nickedβ2-glycoproteinibindsangiostatin4.5(plas-
+forsegmentation,registration,andimageanalysis. AK
+minogenkringle1-5)andattenuatesitsantiangiogenic
+property,”Blood,vol.114,no.12,pp.2553–2559,2009. PetersLtd,2004.
+[19] L.A.StoyanandH.Stoyan,Fractals,RandomShapes [24] S. V. Stehman, “Selecting and interpreting measures
+andPointFields. JohnWileyandSons,1995. ofthematicclassificationaccuracy,”RemoteSensingof
+Environment,vol.62,no.1,pp.77–89,1997.
+[20] K.Ferna´ndez,S.Herold,A.Ferna´ndez,M.Escobedo,
+G. Coello, and P. Marrero, “Estudio morfolo´gico en
+muestrasdesangreperife´rica,”inProceedingsoftheV

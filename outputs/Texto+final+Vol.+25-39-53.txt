@@ -1,0 +1,843 @@
+REVISTA CIENCIAS MATEM`TICAS 39
+Data Warehousing en soluciones
+de Inteligencia de Negocios
+Lucina Garc(cid:237)a HernÆndez1 (Facultad de MatemÆtica y Computaci(cid:243)n,
+Universidad de La Habana, Cuba / Lis VelÆzquez Vidal2
+(Divisi(cid:243)n de Sistemas de Gesti(cid:243)n Empresarial DATYS, Cuba)
+/ Mijail Veliz Monteagudo3 (Divisi(cid:243)n de Turismo DATYS, Cuba)
+RESUMEN: la Inteligencia de Negocios constituye una estrategia de trabajo para el desarrollo de so-
+luciones computacionales que transforman los datos primarios en conocimiento en funci(cid:243)n de la
+misi(cid:243)n y la visi(cid:243)n de una instituci(cid:243)n. Un data warehouse es una herramienta de carÆcter universal
+en el contexto organizacional que facilita la comprensi(cid:243)n de los datos al transformarlos en informa-
+ci(cid:243)n œtil de modo que sea posible crear conocimiento.
+La poblaci(cid:243)n de un data warehouse consiste en la aplicaci(cid:243)n de un conjunto de tØcnicas que provee
+un soporte comprensible para la copia y la transformaci(cid:243)n, esencialmente automÆtica, de los datos
+desde las locaciones de origen hasta la ubicaci(cid:243)n de destino de manera controlada, consistente,
+repetible y viable. En la actualidad existen diversas herramientas orientadas al data warehousing
+sobre plataformas particulares como soporte de los datos; no obstante, generalmente no estÆn com-
+prometidas con el proceso de poblaci(cid:243)n en todo su alcance.
+El presente art(cid:237)culo tiene como objetivo contribuir al diseæo y la instrumentaci(cid:243)n del data warehouse
+con un enfoque arquitect(cid:243)nico de tres capas, que proporcione alternativas para su propio enrique-
+cimiento as(cid:237) como para la evoluci(cid:243)n del entorno en que se desarrolla. Se incluye un procedimiento
+para el diseæo del (cid:223) ujo ETCL as(cid:237) como una formalizaci(cid:243)n matemÆtico computacional para el modelo
+de datos multidimensionales. Se expone un modelo de soluci(cid:243)n genØrico para representar el proce-
+so de creaci(cid:243)n de estructuras multidimensionales a partir de un almacØn œnico de datos, que pro-
+picia la creaci(cid:243)n de herramientas extensibles e independientes de los gestores de bases de datos.
+1. INTRODUCCI(cid:211)N La informaci(cid:243)n (cid:151)cada d(cid:237)a mÆs abundante y
+diversa, procedente de mœltiples fuentes en di-
+Para cualquier empresa el desempeæo del ne-
+ferentes formatos y que es imprescindible reco-
+gocio es la realizaci(cid:243)n de una serie de even-
+ger, ordenar y manipular para obtener un valor
+tos cuya naturaleza y frecuencia var(cid:237)an segœn
+aæadido(cid:151) forma parte de la habilidad compe-
+las funciones particulares de la organizaci(cid:243)n.
+titiva de las organizaciones. El uso de la infor-
+De cualquier manera los eventos siempre estÆn
+maci(cid:243)n como un arma estratØgica, sustentado
+presentes y constituyen la base y el componente
+por modelos matemÆtico computacionales como
+fundamental de la marcha del negocio. Mante-
+soporte de aplicaciones anal(cid:237)ticas que maximi-
+ner un registro de los eventos que garantice la
+cen el rendimiento de las organizaciones en sus
+informaci(cid:243)n detallada, generada como parte de
+actividades para generar e(cid:222) ciencia operativa y
+la interacci(cid:243)n entre los eventos y los procesos
+asegurar la evoluci(cid:243)n, constituye una necesidad
+de la empresa, constituye un ingrediente funda-
+en el mundo actual.
+mental en la toma de decisiones.
+Uno de los enfoques mÆs difundidos en la ac-
+tualidad consiste en la explotaci(cid:243)n inteligente de
+1 lucina@matcom.uh.cu los recursos computacionales con vistas a favo-
+2 lis.velazquez@datys.cu
+recer el accionar y el devenir de la organizaci(cid:243)n.
+3 mijail.veliz@datys.cu
+40 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Corresponde, entonces, buscar respuestas a la ner actualizados los datos, procesar y analizar la
+necesidad de garantizar el funcionamiento y el informaci(cid:243)n diaria e hist(cid:243)rica, realizar diagn(cid:243)sti-
+progreso de la empresa mediante la combina- cos, pron(cid:243)sticos y revelaciones para tomar deci-
+ci(cid:243)n apropiada de lo existente con los nuevos siones y proyectar acciones tÆcticas y estratØgicas
+paradigmas y tecnolog(cid:237)as en aras del enriqueci- en funci(cid:243)n de los objetivos de la organizaci(cid:243)n.
+miento del escenario. Resulta mÆs procedente hablar de sistemas
+La clave del uso del paradigma de la Inteli- o soluciones de Inteligencia de Negocios puesto
+gencia de Negocios en cualquier organizaci(cid:243)n, que no existe un modelo œnico para su desarro-
+sea o no lucrativa, radica en el tratamiento de la llo. Una soluci(cid:243)n de Inteligencia de Negocios no
+informaci(cid:243)n. En la actualidad, la mayor(cid:237)a de solo consiste en interpretar los datos y los pro-
+las grandes compaæ(cid:237)as productoras de software cesos de la empresa en tØrminos de la toma de
+(cid:151)Microsoft, Oracle, SAS Institute, Hyperion So- decisiones, sino tambiØn la concepci(cid:243)n de una
+lutions, entre otras(cid:151) ofrecen herramientas para arquitectura matemÆtico-computacional que per-
+la construcci(cid:243)n de soluciones de inteligencia de mita combinar y desarrollar creativamente un
+negocios que incluyen utilidades para data ware- conjunto de herramientas para instrumentar un
+housingy el procesamiento anal(cid:237)tico sobre plata- ambiente de trabajo orientado a los especialistas
+formas particulares como soporte de los datos, y los ejecutivos de la instituci(cid:243)n.
+aunque no estÆn comprometidas con el proceso A partir de la diversidad y la pluralidad del
+de poblaci(cid:243)n en todo su alcance [7]. anÆlisis y la contribuci(cid:243)n espec(cid:237)(cid:222) ca de las herra-
+El presente art(cid:237)culo pretende contribuir al di- mientas se requiere construir la soluci(cid:243)n sobre
+seæo y la instrumentaci(cid:243)n del data warehouse la base de aproximaciones, mediante la aplica-
+con un enfoque arquitect(cid:243)nico de tres capas, ci(cid:243)n de un enfoque evolutivo que la conduce a
+que proporcione alternativas para su propio en- un estatus superior en cuanto a la toma de deci-
+riquecimiento a partir de la aportaci(cid:243)n del mo- siones a medida que se trabaja y se lanza nuevas
+delo dimensional para representar el escenario estrategias. Por otro lado, asegurar la calidad de
+organizacional, as(cid:237) como para la evoluci(cid:243)n del los datos en el sentido de su existencia,validez,
+entorno en que se desarrolla dado el carÆcter exactitud y veracidad tambiØn constituye un as-
+iterativo de las soluciones de inteligencia de ne- pecto trascendental en las soluciones de Inteli-
+gocios. Se incluyen los fundamentos para la con- gencia de Negocios.
+fecci(cid:243)n de unambiente computacional extensible Sin dudas, la arquitectura de las soluciones de
+y genØrico orientado a la conformaci(cid:243)n del pro- inteligencia de negocios ha progresado. En estas
+ceso de poblaci(cid:243)n del data warehouse. soluciones no basta con tener un manejador de
+datos robusto, ya que subsiste la problemÆtica
+2. LOS DATOS ESTRUCTURADOS de la extracci(cid:243)n de datos almacenados en otros
+sistemas. Una visi(cid:243)n contemporÆnea contempla
+EN LAS SOLUCIONES DE INTELIGENCIA
+una infraestructura de middleware que habilite
+DE NEGOCIOS
+y gestione la comunicaci(cid:243)n para la integraci(cid:243)n
+Teniendo en cuenta que coexisten numerosas de- entre componentes aplicativos diversos [13].
+(cid:222) niciones mÆs o menos coincidentes, los autores En realidad no es imprescindible la presencia
+hemos considerado provechoso insistir en que de un data warehouse (DW) en una soluci(cid:243)n de
+(cid:147)La Inteligencia de Negocios se puede resumir Inteligencia de Negocios, ya que los escenarios
+como una estrategia de trabajo que persigue op- pueden ser heterogØneos. Sin embargo, es preci-
+timizar la toma de decisiones apoyÆndose en un so tomar en consideraci(cid:243)n la contribuci(cid:243)n de los
+conjunto de instrumentos y tØcnicas enfocadas a datos factuales para evaluar el progreso de una
+la administraci(cid:243)n y la extracci(cid:243)n de conocimien- organizaci(cid:243)n as(cid:237) como el prop(cid:243)sito que persigue
+to mediante el anÆlisis de los datos existentes en el proceso de poblaci(cid:243)n del data warehouse, en
+una organizaci(cid:243)n con el (cid:222) n de contribuir certera cuanto a la integraci(cid:243)n de los datos, con vistas a
+y pertinentemente al Øxito empresarial(cid:148) [7]. la exploraci(cid:243)n multidimensional acertada.
+Se trata de modelar, diseæar e implementar En estudios anteriores [1, 17] se a(cid:222) rm(cid:243) y se
+una plataforma matemÆtico-computacional con comprob(cid:243) que un data warehouse estÆ orienta-
+un enfoque integrador que contribuya a mante- do a optimizar la toma de decisiones, raz(cid:243)n por
+REVISTA CIENCIAS MATEM`TICAS 41
+la cual muchas de las soluciones de Inteligencia Analizando estos puntos de vista extremos se
+de Negocios incluyen el proceso de data ware- re(cid:223) eja la importancia que debe tener cada etapa
+housing, puesto que contempla la administra- dentro del proceso. Una posici(cid:243)n intermedia se
+ci(cid:243)n de los datos estructurados y la informaci(cid:243)n re(cid:222) ere a la arquitecturaconceptual de los datos
+desde su origen y brinda un entorno favorable de tres capas propuesta por Devlin [5],cuya no-
+para la extracci(cid:243)n de conocimiento. menclatura se expone a continuaci(cid:243)n.
+Existe la opini(cid:243)n que no siempre un data ● Los sistemas operacionales como origen
+warehouse es apropiado para la aplicaci(cid:243)n de de los datos de tiempo real conforman la
+algoritmos de la miner(cid:237)a de datos. Aœn as(cid:237), du- primera capa l(cid:243)gica, que se re(cid:222) ere a los
+rante las diferentes etapas del proceso de crea- datos primarios en sus soportes respecti-
+ci(cid:243)n y mantenimiento deldata warehouse se rea- vos.
+lizan operaciones que pueden ser aprovechadas ● El data warehouse empresarial (DWE) que
+o combinadas con las requeridas para la obten- almacena f(cid:237)sicamente los datos reconcilia-
+ci(cid:243)n y la generaci(cid:243)n del conocimiento [6]. dos de las distintas fuentes operacionales,
+La de(cid:222) nici(cid:243)n de data warehouse mÆs acep- creando una vista œnica de los datos de
+tada por la comunidad cient(cid:237)(cid:222) ca fue expuesta toda la organizaci(cid:243)n como respuesta a la
+en la dØcada de 1990 por William H. Inmon integraci(cid:243)n, constituye la segunda capa
+quien plante(cid:243) que: (cid:147)Un data warehouse es una l(cid:243)gica.
+colecci(cid:243)n de datos integrada, orientada a suje- ● El warehouse informacional (WI) que con-
+tos, variante en el tiempo y no volÆtil, utilizada serva los datos bajo un enfoque dimensio-
+como apoyo para los procesos de toma de deci- nal que permite mœltiples derivaciones,
+si(cid:243)n.(cid:148) [8]. resumiØndolos y optimizÆndolos para las
+Para todo data warehouse es una necesidad consultas desde perspectivas anal(cid:237)ticas
+ser su(cid:222) cientemente (cid:223) exible ante cambios en los diferentes, asienta la tercera capa.
+datos as(cid:237) como en las exigencias de anÆlisis de Podr(cid:237)a pensarse que este enfoque es imprac-
+la informaci(cid:243)n. En este sentido las implemen- ticable por el tiempo y los recursos que deman-
+taciones particulares responden a arquitectu- da. Es cierto que, en ocasiones, existen sistemas
+ras de los datos que se diseæan de acuerdo a operacionales que re(cid:223) ejan el universo completo
+la complejidad conceptual del fen(cid:243)meno y cada del fen(cid:243)meno a modelar y almacenan datos his-
+autor propone una nomenclatura para denomi- t(cid:243)ricos. Sin embargo, la prÆctica ha demostrado
+nar las capas del data warehouse. Asimismo, la ser mÆs rica de lo que sea posible imaginar y
+existencia de las capas es tambiØn un tema po- lo que parece su(cid:222) ciente hoy, maæana pudiera
+lØmico. no serlo. Teniendo en cuenta el surgimiento de
+Dos de los exponentes fundamentales del fuentes de datos no consideradas en un primer
+data warehousing asumen posiciones distintas. diseæo (cid:151)tal vez por no existir(cid:151), se sugiere como
+Para Inmon [9], el data warehouse estÆ formado paradigma y se adopta en el marco de la presen-
+por los datos reconciliados mientras que los da- te investigaci(cid:243)n la arquitectura conceptual de
+tos derivados o vista informacional estÆn fuera tres capas. AnÆlisis mÆs detallados al respecto
+desu alcance. Con este criterio se estÆ mutilan- se realizan en [17, 18].
+do al almacØn de datos de su carÆcter informa- Por otro lado, asegurar la calidad de los datos
+cional destinÆndolo solo a una funci(cid:243)n regula- en el sentido de que sean precisos, consistentes,
+dora. completos y sin ambig(cid:252)edades constituye un as-
+En el otro extremo conceptual se encuentra pecto trascendental en las soluciones de Inteli-
+Ralph Kimball [10], quien expone que el data gencia de Negocios. Indudablemente, la detecci(cid:243)n
+warehouse corresponde a la uni(cid:243)n de varias re- y la soluci(cid:243)n automÆtica de errores es un proce-
+presentaciones multidimensionales de los datos so que reviste alta complejidad y, por lo regular,
+divididos por temÆticas. Esta opini(cid:243)n no tiene entraæa el establecimiento de compromisos entre
+en cuenta que siempre que se colectan datos de los desarrolladores y los usuarios (cid:222) nales.
+diversas fuentes es necesaria la transformaci(cid:243)n El proceso de extracci(cid:243)n, transformaci(cid:243)n y
+y la depuraci(cid:243)n para lograr la integraci(cid:243)n. carga (ETL) de los datos originales en un data
+42 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+warehouse constituye tambiØn un contexto De ah(cid:237) que, para obtener un resultado exitoso en
+apropiado para profundizar en esta arista del funci(cid:243)n de garantizar la calidad de los datos y,
+problema dados sus objetivos de integraci(cid:243)n y por consecuencia, la utilidad de la informaci(cid:243)n
+expresi(cid:243)n cualitativa a travØs del tiempo y segœn puesta a disposici(cid:243)n de los usuarios (cid:222) nales, sea
+la plani(cid:222) caci(cid:243)n prevista. Consecuentemente, la imprescindible la interacci(cid:243)n entre los procesos
+mejor opci(cid:243)n para el logro de estos prop(cid:243)sitos de poblaci(cid:243)n.
+es precisamente la inclusi(cid:243)n de almacenes de Por ende, ambas herramientas no solo son
+datos en su concepci(cid:243)n mÆs amplia en el marco extensibles y genØricas sino que se comple-
+de las soluciones de Inteligencia de Negocios. mentan para brindar un entorno que favorece
+La creaci(cid:243)n y la explotaci(cid:243)n de un data ware- la instrumentaci(cid:243)n del proceso de poblaci(cid:243)n de
+house puede contar con varias etapas de pobla- un data warehouse as(cid:237) como de los data marts
+ci(cid:243)n que, aun cuando tienen un estrecho v(cid:237)nculo, respectivos que comprendan las aproximacio-
+son modularmente diferenciables en dependencia nes sucesivas de la soluci(cid:243)n de Inteligencia de
+de la arquitectura seleccionada. En la arquitec- Negocios para una organizaci(cid:243)n segœn las prio-
+tura de tres capas existen dos procesos de pobla- ridades informacionales.
+ci(cid:243)n, a saber, la poblaci(cid:243)n del data warehouse
+empresarial desde los sistemas operacionales y
+3. EL PROCESO DE POBLACI(cid:211)N
+la poblaci(cid:243)n del warehouse informacional desde
+DEL DATA WAREHOUSE EMPRESARIAL
+el data warehouse empresarial.
+Cabe destacar que en gran parte de la biblio- El diseæo f(cid:237)sico correcto y el control del proce-
+graf(cid:237)a el proceso ETL utilizado para data ware- so de poblaci(cid:243)n determinan no solo la estructu-
+housing incluye tanto la poblaci(cid:243)n, la integra- ra adecuada de los datos puestos a disposici(cid:243)n
+ci(cid:243)n y la limpieza de los datos como la creaci(cid:243)n para el anÆlisis y la toma de decisiones de los
+de los datos informacionales. Claro estÆ que, en usuarios (cid:222) nales sino tambiØn su autenticidad y
+la arquitectura de tres capas los procesos de po- oportunidad. Entre los objetivos del data ware-
+blaci(cid:243)n del DWE y del WI se independizan, pues house empresarial se encuentra dar respuesta
+cumplen objetivos distintos y bien delimitados. al carÆcter integrador y a la variaci(cid:243)n en el tiem-
+po de los datos de un data warehouse.
+En el presente tema de investigaci(cid:243)n se ha
+profundizado en el proceso ETL con el prop(cid:243)si- El proceso de poblaci(cid:243)n del data warehouse
+to de establecer un procedimiento que ha ser- empresarial es el encargado de convertir y uni-
+vido de base a la concepci(cid:243)n y la elaboraci(cid:243)n (cid:222) car los datos operacionales en un œnico repo-
+de una herramienta cuyas caracter(cid:237)sticas esen- sitorio de datos con un enfoque relacional. Por
+ciales responden a la diversidad funcional y es- tanto, la copia de los datos en el DWE consti-
+tructural del proceso de poblaci(cid:243)n de un data tuye un tipo especial de rØplica, en el cual se
+warehouse empresarial as(cid:237) como a brindar (cid:223) exi- modi(cid:222) can los datos operacionales capturados
+bilidad para su implantaci(cid:243)n en diferentes am- para obtener un escenario mÆs completo y con-
+bientes computacionales. sistente de la organizaci(cid:243)n desde la perspectiva
+de los datos.
+Asimismo, se ha penetrado en el modelo di-
+mensional en la arista te(cid:243)rico-conceptual al in- Entre las tareas del DWE se encuentra la con-
+cursionar en una formalizaci(cid:243)n matemÆtica, en ciliaci(cid:243)n de los datos de diversos or(cid:237)genes. En
+el Ængulo metodol(cid:243)gico al profundizar en el di- muchos casos estos datos di(cid:222) eren en el diseæo
+seæo multidimensional y en el Æmbito aplicativo de sus estructuras, carecen de llaves primarias
+al servir de fundamento para la concepci(cid:243)n de o poseen llaves que di(cid:222) cultan su manipulaci(cid:243)n.
+una herramienta que permite implementar y en- Para resolver estos problemas se propone el em-
+riquecer el proceso de poblaci(cid:243)n del warehouse pleo de las llaves sustitutas (surrogatekeys).
+informacional en diversas plataformas. Las llaves sustitutas son enteros asignados
+Los procesos de poblaci(cid:243)n propios de un data de forma secuencial por el diseæador del DWE,
+warehouse tienen una relaci(cid:243)n de interdepen- segœn sea necesario para poblar un conjunto
+dencia que no se mani(cid:222) esta solo desde el punto de entidades. Estas llaves no tienen signi(cid:222) cado
+de vista de diseæo, sino tambiØn de explotaci(cid:243)n. empresarial e identi(cid:222) can inequ(cid:237)vocamente cada
+REVISTA CIENCIAS MATEM`TICAS 43
+elemento del conjunto. Sin embargo, por simple sustitutas. El Tipo 3 se aplica a menudo cuan-
+que pudiera parecer la soluci(cid:243)n, la administra- do, a pesar de haber tenido lugar un cambio,
+ci(cid:243)n de estas llaves es bien compleja pues es es aœn l(cid:243)gicamente posible actuar como si el
+preciso preservar la integridad referencial para mismo no hubiera acontecido o referenciar los
+garantizar el funcionamiento correcto del data registros indistintamente por sendas versiones
+warehouse. del atributo en cuesti(cid:243)n.
+El empleo de llaves sustitutas asegura la op- Por otra parte, las marcas de tiempo (times-
+timizaci(cid:243)n de las consultas, la depuraci(cid:243)n de los tamps) cumplen una funci(cid:243)n fundamental en la
+datos operacionales y apoya el mantenimiento persistencia de la historia en el data warehouse
+de la historia. Desempeæan un papel funda- al soportar la representaci(cid:243)n de los datos pe-
+mental en el procesamiento de los cambios en ri(cid:243)dicos y sus estados ya que consignan el mo-
+el modelo informacional, puesto que permiten mento en que un registro se inserta, se borra o
+diferenciar las entidades originales de las que se se modi(cid:222) ca. En una base de datos relacional las
+generan con el objetivo de conservar el registro marcas de tiempo se adicionan a la llave prima-
+de las modi(cid:222) caciones en los datos y sus esta- ria original de la tabla con el objetivo de identi-
+dos a travØs del tiempo con vistas a suministrar (cid:222) car cada tupla inequ(cid:237)vocamente y/o constituir
+la informaci(cid:243)n requerida parala realizaci(cid:243)n de la expresi(cid:243)n f(cid:237)sica de los metadatos de tempo-
+anÆlisis hist(cid:243)ricos y la predicci(cid:243)n del comporta- ralidad que pueden aplicarse a los conjuntos de
+miento de la organizaci(cid:243)n. entidades, las tuplas o los atributos.
+Es preciso tambiØn garantizar la (cid:222) delidad El mecanismo mÆs ampliamente difundido
+de los datos que tributan al anÆlisis aunque para re(cid:223) ejar los cambios de estado de los datos
+no sea imprescindible mantener el registro del se basa en el uso de marcas dobles de tiempo de
+momento justo en que se realizan los cambios. modo que los atributos identi(cid:222) can el inicio y el
+Vale acotar que los mecanismos de soluci(cid:243)n que (cid:222) n del per(cid:237)odo de prevalencia de cada registro.
+se incluyen en este ep(cid:237)grafe, aunque se enfocan Este mecanismo garantiza la optimizaci(cid:243)n de
+desde el punto de vista dimensional, son vÆlidos las consultas aunque adiciona una sobrecarga
+para el data warehouse empresarial porconsti- en la actualizaci(cid:243)n, que es despreciable dada la
+tuir la base delwarehouse informacional. orientaci(cid:243)n informacional del data warehouse.
+La determinaci(cid:243)n de la frecuencia de varia- En realidad, las marcas de tiempo y las SCD
+ci(cid:243)n de las dimensiones es relativa pero se han no son mecanismos mutuamente excluyentes,
+propuesto mØtodos combinados para almacenar sino que pueden combinarse con facilidad apro-
+los cambios, subdividiendo las dimensiones de vechando las llaves sustitutas para garantizar
+forma que los atributos que se actualizan con la integridad referencial, lo que resulta una al-
+mayor asiduidad conformen un conjunto de en- ternativa conveniente para asegurar la calidad
+tidades independiente para optimizar el almace- de los datos durante el proceso de poblaci(cid:243)n del
+namiento de las modi(cid:222) caciones y sea posible apli- DWE as(cid:237) como para la poblaci(cid:243)n y la explotaci(cid:243)n
+car otras prÆcticas a las dimensiones de cambio del WI.
+lento,tambiØn conocido por sus siglas SCD (del Aun cuando el proceso de poblaci(cid:243)n de un
+inglØs, Slowly Changing Dimension) [12]. data warehouse se divide en tres etapas esencia-
+El tratamiento bÆsico propuesto para el enfo- les: extracci(cid:243)n, transformaci(cid:243)n y carga, algunos
+que dimensional como respuesta a los cambios autores (cid:151)entre los que se destaca Ralph Kimball
+en los datos fuentes se resume en sobrescribir [11](cid:151) redistribuyen el (cid:223) ujo de datos mediante
+el valor (Tipo 1), adicionar un registro (Tipo 2) una propuesta funcional aplicada espec(cid:237)(cid:222) camen-
+y/o adicionar un campo (Tipo 3). El Tipo 1 es la te al enfoque dimensional. Desde este punto de
+implementaci(cid:243)n t(cid:237)pica en los sistemas operacio- vista el proceso se dividir(cid:237)a en Extracci(cid:243)n, De-
+nales, pero no permite mantener el registro de puraci(cid:243)n, Integraci(cid:243)n y Distribuci(cid:243)n (una tra-
+los cambios en el atributo en cuesti(cid:243)n.El Tipo 2 ducci(cid:243)n lo mÆs cercana posible de Extraction,
+mantiene el v(cid:237)nculo con el elemento modi(cid:222) cado Cleaning, Conforming and Delivery).
+en el ambiente operacional, as(cid:237) como con todos Al incluir una etapa independiente de depu-
+los estados anteriores, mediante el uso de llaves raci(cid:243)n, esta nueva propuesta realza la impor-
+44 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+tancia de garantizar la calidad de los datos al- fuente en el conjunto de datos destino se destacan
+macenados en el data warehouse pero reduce la laselecci(cid:243)n, la concatenaci(cid:243)n/separaci(cid:243)n, lanor-
+transformaci(cid:243)n a depuraci(cid:243)n e integraci(cid:243)n œni- malizaci(cid:243)n/denormalizaci(cid:243)n, la transposici(cid:243)n, la
+camente. De esta forma se estÆ obviando uno de agregaci(cid:243)n, la conversi(cid:243)n y el enriquecimiento.
+los objetivos fundamentales del data warehouse En sentido general, las transformaciones son
+dado que durante el (cid:223) ujo de datos en el proceso consideradas componentes de una etapa inde-
+de poblaci(cid:243)n se efectœan transformaciones con pendiente en el (cid:223) ujo ETL, sin embargo, por lo
+(cid:222) nes meramente informacionales que no inten- regular estÆn distribuidas a lo largo de todo el
+tan integrar los datos obtenidos de las distin- proceso de poblaci(cid:243)n.
+tas fuentes sino enriquecer la respuesta que se La calidad de los datos constituye un aspecto
+pone a disposici(cid:243)n de los usuarios (cid:222) nales. importante para una gran parte de los usuarios
+El esquema de la (cid:222) gura 1 constituye una pro- de la informaci(cid:243)n, no solo para grupos de usua-
+puesta de (cid:223) ujo de datos que incluye la Depura- rios espec(cid:237)(cid:222) cos como los administradores y de-
+ci(cid:243)n (Cleaning) como una etapa independiente, sarrolladores del data warehouse, sino tambiØn
+aunque mantiene el tØrmino Transformaci(cid:243)n para para los usuarios (cid:222) nales, ya que sin datos correc-
+describir de manera mÆs abarcadora la etapa de tos es imposible pensar en tomar decisiones cer-
+transici(cid:243)n de los datos desde el origen hasta la teras.Los datos que se pondrÆn a disposici(cid:243)n de
+estructura adecuada en el destino (cid:222) nal. En este los usuarios (cid:222) nales en el data warehouse deben
+trabajo preferimos abordar el proceso ETCL con ser correctos, lo que puede interpretarse en el
+respecto a c(cid:243)mo enfrentar su instrumentaci(cid:243)n. sentido de que sean vÆlidos, satisfagan las re-
+En la extracci(cid:243)n de los datos se debe tener en glas del negocio y estØn bien de(cid:222) nidos[14].
+cuenta la variedad de formatos existentes en los La depuraci(cid:243)n de los datos constituye un tipo
+sistemas operacionales, los que pueden no solo de transformaci(cid:243)n no solo por el hecho de mo-
+encontrarse almacenados en diferentes bases de di(cid:222) car los datos sino porque para su implemen-
+datos relacionales, sino tambiØn en otros sopor- taci(cid:243)n se utilizan los tipos de transformaciones
+tes menos estructurados como hojas de cÆlculo, expuestos con antelaci(cid:243)n. El principio bÆsico de
+(cid:222) cheros XML o texto. la etapa de depuraci(cid:243)n de errores es detectar los
+En la etapa de transformaci(cid:243)n los datos obte- problemas de calidad en los datos, corregirlos
+nidos de los sistemas operacionales deben modi- automÆticamente si es factible y en caso negati-
+(cid:222) carse con el (cid:222) n de homogeneizar sus formatos vo registrar su ocurrencia, lo que debe llevarse
+para integrarlos consistentemente de acuerdo a cabo evitando rechazar registros o detener el
+con la estructura y el diseæo del DWE. Gene- (cid:223) ujo ETCL.
+ralmente, estas transformaciones distan de la Durante la carga los datos se almacenan con
+replicaci(cid:243)n clÆsica, por lo que se precisa de la la estructura adecuada para servir de fuente al
+combinaci(cid:243)n de operaciones espec(cid:237)(cid:222) cas aplica- warehouseinformacional y se asegura el mante-
+das a las fuentes durante el proceso de migra- nimiento de la historia de los cambios ocurridos
+ci(cid:243)n en dependencia del resultado deseado. en los datos.
+Entre las operaciones mÆs frecuentes que se Las etapas de extracci(cid:243)n, transformaci(cid:243)n, de-
+aplican para transformar el conjunto de datos puraci(cid:243)n y carga no son independientes pues
+Fig. 1. Etapas del proceso ETCL.
+REVISTA CIENCIAS MATEM`TICAS 45
+la combinaci(cid:243)n de ellas gu(cid:237)a el (cid:223) ujo de un con- como una acci(cid:243)n, cualquiera sea su compleji-
+junto de datos espec(cid:237)(cid:222) co desde la fuente hasta dad.Cada uno de los chequeos de calidad cons-
+el DWE. Con el objetivo de analizar el proceso tituye tambiØn una operaci(cid:243)n at(cid:243)mica que, en
+ETCL y orientar su instrumentaci(cid:243)n de(cid:222) nire- dependencia de los errores detectados, puede
+mos sus componentes esenciales. generar como resultado un conjunto de datos y,
+en funci(cid:243)n de su posible soluci(cid:243)n, modi(cid:222) car el
+● ACCI(cid:211)N: consiste en una operaci(cid:243)n at(cid:243)mica
+conjunto resultante o dejarlo intacto.
+con un signi(cid:222) cado l(cid:243)gico que puede repre-
+sentar la extracci(cid:243)n de un conjunto de un Finalmente, es posible considerar los tipos de
+origen dado, una transformaci(cid:243)n espec(cid:237)(cid:222) - carga como acciones. Su funcionamiento var(cid:237)a
+ca, un chequeo de calidad o una modali- en dependencia de la captura de cambios utiliza-
+dad de carga. da y del tipo de respuesta a los cambios para las
+SCD que se empleen en el conjunto de datos.
+● TAREA: agrupa un conjunto de acciones de-
+pendientes entre s(cid:237), representativo de una Habiendo de(cid:222) nido cada operaci(cid:243)n at(cid:243)mica
+transformaci(cid:243)n l(cid:243)gica en los datos, que se podrÆ plani(cid:222) car las tareas a instrumentar.
+puede abarcar desde la extracci(cid:243)n hasta Cada una de las acciones seleccionadas, agru-
+la carga en el conjunto (cid:222) nal del DWE. padas y ordenadas adecuadamente en funci(cid:243)n
+de los datos que se desea poner a disposici(cid:243)n
+● SUBPROCESO: reœne un conjunto de tareas
+de los usuarios (cid:222) nales conforman las tareas del
+dependientes entre s(cid:237).Un subproceso pue-
+proceso ETCL que existen con el objetivo marca-
+de supeditarse a la consumaci(cid:243)n de uno
+do de consolidar acciones l(cid:243)gicas dependientes.
+o varios subprocesos, puede ejecutarse en
+Una tarea encierra una semÆntica pues reœne
+un punto predeterminado en el tiempo o
+las acciones que gu(cid:237)an un conjunto de datos o
+puede ser desencadenado por un evento
+varios dependientes entre s(cid:237) a travØs del (cid:223) ujo
+empresarial.
+del proceso ETCL.
+● PLANIFICACI(cid:211)N: comprende el diseæo y la rea-
+Las tareas tambiØn pueden ser agrupadas en
+lizaci(cid:243)n de un plan consecuente en fun-
+subprocesos con una funcionalidad un tanto
+ci(cid:243)n de los subprocesos, su dependencia
+diferente. Los conglomerados de tareas depen-
+temporal o subordinaci(cid:243)n eventual.
+dientes entre s(cid:237) existen para garantizar la eje-
+● EJECUCI(cid:211)N: se encarga de cumplimentar las
+cuci(cid:243)n apropiada de las mismas en el (cid:223) ujo del
+acciones, las tareas y los subprocesos a
+proceso ETCL. Los subprocesos forman parte de
+partir de la plani(cid:222) caci(cid:243)n diseæada.
+los componentes bÆsicos del proceso ETCL ya
+● NOTIFICACI(cid:211)N: consiste en la emisi(cid:243)n de con-
+que garantizan la integridad del proceso de po-
+(cid:222) rmaciones de ejecuci(cid:243)n o la divulgaci(cid:243)n
+blaci(cid:243)n en funci(cid:243)n del tiempo.
+de avisos para tomar las medidas que ate-
+Las implementaciones que excluyen la cate-
+nœen o eliminen los problemas detecta-
+gor(cid:237)a de los subprocesos permiten, entonces,
+dos, manteniendo un registro del estado
+plani(cid:222) car las tareas. Esto ocasiona que a corto
+de las alertas.
+o largo plazo terminen sucumbiendo ante la ne-
+Para diseæar el proceso ETCL es necesario de-
+cesidad de especi(cid:222) car la concurrencia de tareas
+terminar las operaciones l(cid:243)gicas con un compor-
+predecesoras en funci(cid:243)n del tiempo, lo cual pro-
+tamiento at(cid:243)mico, agruparlas en base a su in- voca redundancia entre las instancias de una
+terdependencia y programar la ejecuci(cid:243)n de las misma tarea proyectadas en el tiempo.
+mismas en funci(cid:243)n del proceso en su totalidad.
+Es importante tener en cuenta el orden y, en
+As(cid:237) tendremos que la etapa de extracci(cid:243)n consecuencia, el paralelismo de las acciones,
+puede diseæarse como una acci(cid:243)n l(cid:243)gica inde- las tareas y los subprocesos para asegurar el
+pendiente que, parametrizada en funci(cid:243)n del funcionamiento correcto y la optimizaci(cid:243)n del
+origen y el formato de los datos, constituya una proceso ETCL durante la ejecuci(cid:243)n, cuidando
+estructura at(cid:243)mica del proceso ETCL indepen- no incurrir en los problemas clÆsicos (cid:151)como
+dientemente del mecanismo de captura de cam- el deadlock y los ocasionados por la concurren-
+bios utilizado. cia(cid:151) que son complejos de detectar y depurar.
+De igual forma, cada uno de los tipos de Por otra parte, la plani(cid:222) caci(cid:243)n de tareas o
+transformaciones analizados puede ser tratado subprocesos debe estar en correspondencia con
+46 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+el funcionamiento de la empresa de modo que Una estructura multidimensional representa
+no se afecte la actividad de los sistemas ope- un paradigma de bases de datos que intenta re-
+racionales. Adicionalmente, es necesario contar (cid:223) ejar de manera f(cid:237)sica varias dimensiones dado
+con un subsistema de noti(cid:222) caci(cid:243)n que favorezca que el enfoque relacional solo aporta estructu-
+la inmediatez de la respuesta manual a los pro- ras de dos dimensiones. De ah(cid:237) que se introduz-
+blemas que puedan detectarse durante la po- ca el concepto de cubo de informaci(cid:243)n, cuyas
+blaci(cid:243)n del DWE. celdas contienen resœmenes de los datos, segœn
+mœltiples aristas.
+De este modo se resume el procedimiento que
+ha servido de base a la concepci(cid:243)n y la elabora- Los cubos son los objetos principales del pro-
+ci(cid:243)n de la herramientaque facilitala instrumen- cesamiento anal(cid:237)tico en l(cid:237)nea. Se conoce como
+taci(cid:243)n del proceso de poblaci(cid:243)n del data ware- cubo a los datos que se organizan y se resumen
+house empresarial en correspondencia con la en una estructura multidimensional represen-
+arquitectura de datos de tres capas. tada por un juego de medidas (cid:151)que consiste en
+el conjunto de valores con que se mide el desem-
+peæo de la actividad que se estØ analizando(cid:151) y
+4. RIQUEZA DEL ENFOQUE DIMENSIONAL
+dimensiones (cid:151)caracter(cid:237)sticas o propiedades
+que brindan dis(cid:237)miles perspectivas de anÆlisis
+El warehouse informacional constituye la terce-
+sobre un hecho dado(cid:151) que responden al fen(cid:243)-
+ra capa de la arquitectura f(cid:237)sica del DW. En ella
+meno o proceso en cuesti(cid:243)n. [16]
+se almacenan los datos con vistas a su anÆlisi-
+sulterior desde diferentes perspectivas. El enfoque multidimensional estÆ dirigido a
+mejorar la e(cid:222) ciencia de las consultas. Por su-
+La modelaci(cid:243)n es una manera grÆ(cid:222) ca y efec-
+puesto, la e(cid:222) cacia de los anÆlisis multidimen-
+tiva de representar los procesos y las reglas que
+sionales depende de la manera en que los datos
+caracterizan un fen(cid:243)meno o negocio. La mode-
+se representen y se almacenen. En cualquier
+laci(cid:243)n empresarial abarca la representaci(cid:243)n sin-
+caso, resulta esencial la presencia de los exper-
+tØtica del escenario de la organizaci(cid:243)n en cuanto
+tos en la actividad que se estÆ modelando as(cid:237)
+al (cid:223) ujo de los procesos empresariales y la circu-
+como su estrecha interrelaci(cid:243)n con el diseæador
+laci(cid:243)n de los datos para expresar el comporta-
+para precisar las reglas del negocio y los reque-
+miento dela instituci(cid:243)n y podr(cid:237)a ser utilizada
+rimientos informacionales.
+por sus directivos para desarrollar estrategias y
+Los modelos matemÆticos de datos constitu-
+trazar las l(cid:237)neas de acci(cid:243)n.
+yen en esencia el sostØn orgÆnico de los siste-
+La modelaci(cid:243)n de los datos persigue repre-
+mas de gesti(cid:243)n de bases de datos, aun cuando
+sentar el universo de datos con que trabaja la
+los primeros SGBD convencionales aparecieron
+organizaci(cid:243)n y las relaciones entre ellos. A gran-
+en la prÆctica antes que laformalizaci(cid:243)n mate-
+des rasgos se puede plantear una secuencia,
+mÆtica de los enfoques utilizados para la repre-
+no necesariamente obligatoria, para obtener un
+sentaci(cid:243)n computacional de los datos.
+modelo de los datos de una empresa desde el
+Los modelos matemÆticos de datos se utilizan
+punto de vista funcional, avalado computacio-
+para el diseæo l(cid:243)gico de los datos y se basan,
+nalmente por el enfoque relacional con un alto
+sustancialmente, en conceptos que son abstrac-
+grado de normalizaci(cid:243)n para minimizar las ano-
+ciones de las estructuras de las bases de datos y
+mal(cid:237)as de actualizaci(cid:243)n.
+no abstracciones del universo de discurso. Los
+Ahora bien, si se desea caracterizar la reali-
+modelos matemÆticos de datos estÆn formados
+dad empresarial en tØrminos anal(cid:237)ticos resulta
+por tres componentes, a saber,
+mÆs apropiado emplear el enfoque dimensional.
+● Las estructuras de los datos para la re-
+Al trabajar con la multidimensionalidad se per-
+presentaci(cid:243)n de los datos y sus interrela-
+sigue examinar los datos desde perspectivas di-
+ciones.
+ferentes con el (cid:222) n de lograr una visi(cid:243)n global
+● Las reglas de integridad para delimitar los
+de la problemÆtica que permita fundamentar las
+valores que pueden estar presentes en la
+decisiones estratØgicas en diferentes circuns-
+base de datos.
+tancias, objetivas y subjetivas, con una inciden-
+cia signi(cid:222) cativa de la temporalidad. ● Las operaciones para la manipulaci(cid:243)n de
+los datos.
+REVISTA CIENCIAS MATEM`TICAS 47
+Al intentar procesar los datos para la toma elementos que se han considerado esenciales en
+de decisiones desde la perspectiva matemÆtico- el modelo.
+computacional se ha utilizado varios conceptos Dado que no existe un punto de vista œni-
+y tØcnicas. Entre ellos se pueden mencionar las co, se consider(cid:243) oportuno concebir un enfoque
+ecuaciones o funciones matemÆticas que des- constructivo propio para expresar formalmente
+criben el comportamiento de los datos, as(cid:237) como el modelo y que, a su vez, contribuyera a su apli-
+las reglas estad(cid:237)sticas que, ademÆs, facilitan la caci(cid:243)n prÆctica. Vale acotar que a continuaci(cid:243)n
+obtenci(cid:243)n de diagn(cid:243)sticos y pron(cid:243)sticos. Las ho- solo incluiremos los componentes esenciales del
+jas de cÆlculo, junto con otros programas con- modelo multidimensional y que la discusi(cid:243)n de-
+feccionados a la medida, facilitan el trabajo con tallada se puede encontrar en [16].
+ambos enfoques e, incluso, con muchos otros.
+En primer lugar, un dominio consiste en un
+Por su parte, la teor(cid:237)a de conjuntos ofrece una conjunto de miembros que no son mÆs que va-
+manera de clasi(cid:222) car los datos y sus operaciones lores, todos del mismo tipo. Se considera que los
+contribuyen a modelar las interrelaciones entre dominios son conjuntos abiertos de tipos de da-
+los conjuntos resultantes, de modo que consti- tos en el sentido que los usuarios pueden de(cid:222) nir
+tuye un soporte formal para re(cid:223) ejar la realidad. nuevos tipos y que todo valor corresponde a un
+De esta manera se podr(cid:237)a considerar los tipo determinado, sea o no escalar [15].
+datos que representan el funcionamiento del Se de(cid:222) ne un nivel como la relaci(cid:243)n de asocia-
+negocio, sin perder generalidad, como valores ci(cid:243)n entre un nombre y un conjunto de valores
+cuantitativos mientras que los criterios median- escalares con semÆntica similar. Se denota por
+te los cuales se analizan estos valores cuantita- L al subconjunto de los datos multidimensio-
+tivos se dividir(cid:237)an en dos grupos. Con el primero nales formado por niveles de modo que a cada
+se identi(cid:222) ca el escenario en que ocurre el evento l∈L se le asocia un dominio o conjunto de valo-
+analizado y contiene los criterios complemen- res (cid:151)denotado por DOM(l)(cid:151) que contendrÆ los
+tarios o dimensiones; al segundo corresponden miembros del nivel. La cardinalidad del nivel se
+directamente los valoresexaminados, conocidos denotarÆ por Card(l). Formalmente, li = {(cid:145)Nom-
+como criterios cuantitativos o medidas. bre(cid:146), {DOM(l)}} para todo l∈L.
+i i i
+Desde el punto de vista de los datos en su Para cualquier subconjunto de niveles L(cid:146) c
+v(cid:237)nculo con la realidad, los valores cuantitativos L es posible de(cid:222) nir al menos una relaci(cid:243)n de
+cobran sentido œnicamente cuando se relacio- precedencia Rp(cid:146) tal que Rp(cid:146)(l, l) donde i < (>)
+i j
+nan con los conjuntos de criterios complementa- j y l, l∈L(cid:146). Se dice entonces que li es inferior
+i j
+rios. La obtenci(cid:243)n de informaci(cid:243)n mÆs detallada (superior) a lj segœn Rp(cid:146) o que l〈Rp(cid:146)l (l〉Rp(cid:146)l).
+i j i j
+es posible gracias a la existencia de jerarqu(cid:237)as Asimismo, para cualesquiera dos niveles l, l∈
+i j
+en las dimensiones, que se mani(cid:222) estan median- L(cid:146) c L y l〈Rp(cid:146)l es posible de(cid:222) nir al menos una
+i j
+te el establecimiento de relaciones de pertenen- relaci(cid:243)n de correspondencia Rc(cid:146) para toda k, k =
+cia entre las subdivisiones l(cid:243)gicas del conjunto 1, (cid:133) , Card(l,) tal que Rc(cid:146)(μlik, {μljk}) donde μlik∈
+i
+de datos de cada dimensi(cid:243)n. DOM(l) y {μljk} c DOM(l).
+i j
+Hasta aqu(cid:237) se ha expuesto un acercamien- Cada relaci(cid:243)n de precedencia Rp(cid:146)∈Rp permite
+to informal a los elementos multidimensiona- establecer relaciones de correspondencia entre
+les. Ahora bien, resulta conveniente contar con cada par de niveles l, l siempre que l 〈Rp(cid:146) l. Por
+i j i j
+de(cid:222) niciones tales que permitan expresar cada tanto, la relaci(cid:243)n formada por una Rp(cid:146) y el con-
+componente del modelo multidimensional inde- junto de todas las relaciones de corresponden-
+pendientemente de c(cid:243)mo se instrumente una cia entre varios niveles consecutivos constituye
+soluci(cid:243)n posterior. Para ello varios autores han una jerarqu(cid:237)a. Si se denota por J al conjunto de
+publicado estudios que di(cid:222) eren unos de otros las jerarqu(cid:237)as, entonces ji∈ J se puede de(cid:222) nir
+[2, 3, 4]. Asimismo, se detect(cid:243) que los enfoques, como ji= {L(cid:146), RpL(cid:146), {RcL(cid:146)}} para todo ji∈J donde
+en sentido general, no eran su(cid:222) cientemente RpL(cid:146)∈Rp y RcL(cid:146)⊂Rc.
+abarcadores para acatarlos como paradigmas,
+A partir de lo anterior, se de(cid:222) ne una dimen-
+ya sea por haberse planteado desde un princi-
+si(cid:243)n como la relaci(cid:243)n entre un nombre, un con-
+pio objetivos mÆs restrictivos o por omisi(cid:243)n de
+junto de niveles y un conjunto de jerarqu(cid:237)as
+48 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+establecidas sobre tales niveles que pueden o no relaci(cid:243)n de un nombre, un conjunto de cubos
+compartir una relaci(cid:243)n de precedencia. Luego, construidos sobre determinadas dimensiones
+el conjunto de todas las dimensiones se expresa (cid:151)que, a su vez, estÆn construidas sobre deter-
+por D, de modo que D = { d = {(cid:145)Nombre(cid:146), L(cid:146), J(cid:146)} minado conjunto de niveles(cid:151) y un conjunto de
+donde L(cid:146) ⊂ L y J(cid:146) ⊂ J}. Asimismo, se denota por dimensiones que aœn no estÆn asociadas a nin-
+LD al conjunto de todos los niveles de las dimen- gœn cubo. Por tanto, siendo B el conjunto de
+siones que expresan los criterios cualitativos. todas las bases de datos multidimensionales, se
+Siguiendo la de(cid:222) nici(cid:243)n formulada se puede tiene que:
+establecer el conjunto de medidas M como una
+B = {bi = {(cid:145)Nombre(cid:146), C(cid:146), D(cid:146)}, donde C(cid:146) ⊂ C
+dimensi(cid:243)n que solo contiene un nivel a cuyo i
+dominio pertenecen los criterios cuantitativos. y D(cid:146) ⊂ D para todo b∈ B}.
+i
+Formalmente, M ⊂ D de modo que m si m ∈M
+Si se combinan las relaciones de las jerar-
+entonces m = {(cid:145)Medidas(cid:146), L , J } donde Lm={ l1}
+m m qu(cid:237)as de cada dimensi(cid:243)n con las funciones del
+⊂ L yJ = { L , Rp(cid:146)Lm, {Rc(cid:146)Lm}} ⊂ J tal que Rp(cid:146)Lm=
+m m cubo es posible obtener las operaciones de na-
+{} yRc(cid:146)Lm= {}.
+vegaci(cid:243)n del cubo, conocidas como drill-down y
+Para lograr que los datos en estudio cobren
+roll-up.
+sentido y expresen la realidad de manera cohe-
+Finalmente, el modelo de restricciones del en-
+rente deben vincularse los valores cuantitativos
+foque relacional garantiza la integridad, la consis-
+y los criterios de anÆlisis. Para ello se de(cid:222) ne una
+tencia y la veracidad de los datos. Estas restric-
+funci(cid:243)n F en cuyo dominio se encuentran los
+ciones son vÆlidas para el enfoque dimensional,
+miembros de cada dimensi(cid:243)n. La imagen de F
+aunque sus estructuras de datos y las operacio-
+es el conjunto de todos los hechos y se denota
+nes sean diferentes. AdemÆs, las de(cid:222) niciones de
+por H. En otras palabras, el conjunto H estÆ for-
+las propias estructuras ofrecen restricciones del
+mado por las tuplas de los valores cuantitativos
+modelo. Por ejemplo, no pudiera existir una di-
+que corresponden a cada criterio cuantitativo.
+mensi(cid:243)n sin un nivel asociado, ni un cubo sin al
+Formalmente, se tiene F:Dom(L )UDom(L )-> H
+menos una medida y una dimensi(cid:243)n.
+d m
+para Dom(F) = Dom(L ) U Dom(L ) e Img(F) = H.
+d m Como en todo fen(cid:243)meno existen reglas del ne-
+Lo que puede expresarse tambiØn como F(L , L )
+d m gocio que no se pueden expresar mediante las
+= H = (valor1, (cid:133), valor ) donde Card(L ) >= 0,
+rn d restricciones propias del modelo o los predica-
+Card(L ) > 0 y n = Card(L ).
+m m dos, en cuyo caso serÆ la programaci(cid:243)n la que
+Ahora bien, en tØrminos del anÆlisis informa-
+permita controlar el comportamiento de los da-
+cional y sin perder generalidad, se plantea que
+tos para cumplir con los requerimientos de los
+existe una funci(cid:243)n de agregaci(cid:243)n, llamada genØ-
+usuarios (cid:222) nales.
+ricamente Fa, de(cid:222) nida para cada miembro del
+Expresar la realidad en tØrminos anal(cid:237)ticos
+dominio de las medidas que permite resumirlas
+pudiera resultar complejo, sin embargo, al exa-
+en correspondencia con los requerimientos ana-
+minar conceptual y prÆcticamente las estruc-
+l(cid:237)ticos. En lo adelante se harÆ referencia a las
+turas dimensionales se evidencia la riqueza del
+operaciones de agregaci(cid:243)n en sentido general
+modelo para re(cid:223) ejar el comportamiento de los
+utilizando el s(cid:237)mbolo (cid:145)Ω(cid:146).
+principales indicadores de una organizaci(cid:243)n en
+Siendo C el conjunto de todos los cubos, D(cid:146)⊂D
+correspondencia con sus escenarios y su ejerci-
+un conjunto (cid:222) nito de dimensiones, m⊂D(cid:146)≠ {} y L
+cio en el marco de las soluciones de inteligencia
+d
+= {U L} donde i = 1, (cid:133), Card(D(cid:146)) y L ⊂L, se de(cid:222) ne
+de negocios.
+i i d
+un cubo c∈C como c = {(cid:145)Nombre(cid:146), D(cid:146), m, F(cid:146), F(cid:146)am
+i i i
+tal que F({UjDom(lj)} donde j = 1, (cid:133), Card(Ld) y
+5. AMBIENTE PARA LA INSTRUMENTACI(cid:211)N
+l∈L ) → H y F(cid:146)am(UDom(l)}, j = 1, (cid:133), Card(L )
+j d j j d DEL DATA WAREHOUSING
+y lj∈L ) →ΩH. Si los datos estÆn detallados, en-
+d
+tonces Img(F(cid:146)) = Img(F(cid:146)am).
+Resulta trascendental la veracidad del data
+Concluyendo la formalizaci(cid:243)n de las estruc- warehouse como re(cid:223) ejo del funcionamiento y de
+turas de datos del modelo, se tiene que una las caracter(cid:237)sticas propias de la empresa y,para
+base de datos multidimensional consiste en la lograrlo, es esencial que la representaci(cid:243)n f(cid:237)sica
+REVISTA CIENCIAS MATEM`TICAS 49
+del DW constituya una proyecci(cid:243)n concreta del to persiguiendo que el ambiente se pueda exten-
+modelo o diseæo l(cid:243)gico de la empresa. der a diferentes gestores de bases de datos tanto
+A partir de las especi(cid:222) caciones de la arqui- relacionales como dimensionales. De la misma
+tectura de datos de tres capas y de la anterior manera se desea que puedan ser incluidos nue-
+aseveraci(cid:243)n se hace necesario separar el diseæo vos tipos de transformaciones en el proceso de
+f(cid:237)sico de las capas de datos reconciliados y de poblaci(cid:243)n del data warehouse empresarial.
+datos derivados manteniendo la interrelaci(cid:243)n de Como respuesta a estos prop(cid:243)sitos, en el caso
+dependencia entre ellas y el modelo de datos de del DWE la arquitectura basada en extensiones
+la empresa. Se trata entonces de ofrecer un am- constituye el fundamento conceptual y prÆcti-
+biente computacional con un conjunto de he- co de la herramienta genØrica que responde al
+rramientas genØricas que comprendan el diseæo procedimiento de diseæo del proceso ETCL as(cid:237)
+f(cid:237)sico de estas dos capas de la arquitectura y como a la realizaci(cid:243)n del proceso de poblaci(cid:243)n
+sus respectivas etapas de poblaci(cid:243)n que, inte- del DWE en el marco de la creaci(cid:243)n y la explota-
+ractuando entre s(cid:237), conformen un proyecto que ci(cid:243)n de un data warehouse. Asimismo, sirve de
+facilite el diseæo y la puesta a punto del data base a la aplicaci(cid:243)n del modelo de soluci(cid:243)n en
+warehouse de la organizaci(cid:243)n. funci(cid:243)n de diversas plataformas al igual que al
+La complejidad de la soluci(cid:243)n se mani(cid:222) esta, perfeccionamiento de la herramienta, mediante
+por un lado, en el suministro de facilidades para la inclusi(cid:243)n de nuevas funcionalidades.
+satisfacer los requerimientos de instrumenta- La (cid:222) gura 3 muestra las relaciones que se es-
+ci(cid:243)n y explotaci(cid:243)n del proceso de data ware- tablecen entre los componentes esenciales del
+housing en funci(cid:243)n no solo de las peculiaridades procedimiento de diseæo del proceso de pobla-
+de la organizaci(cid:243)n, sino tambiØn de la arquitec- ci(cid:243)n del DWE y la arquitectura basada en exten-
+tura conceptual de los datos y, por otro, en la siones que la sustenta. Un marco denotado con
+contribuci(cid:243)n a perfeccionar las funcionalidades l(cid:237)neas discont(cid:237)nuas engloba las acciones del (cid:223) u-
+delambiente y habilitarlo en nuevos entornos de jo ETCL como componente y el otro marco agru-
+acuerdo con las exigencias de los diseæadores pa el resto de las componentes del procedimien-
+del data warehouse. to, mientras que las (cid:223) echas seæalan la direcci(cid:243)n
+Para implementar el modelo de soluci(cid:243)n plan- de la interacci(cid:243)n entre los elementos del modelo.
+teado nos hemos apoyado en las fortalezas de la Por otra parte, las imÆgenes cil(cid:237)ndricas denotan,
+programaci(cid:243)n orientada a objetos, en particular como de costumbre, el soporte f(cid:237)sico y la relaci(cid:243)n
+en la herencia y el polimor(cid:222) smo. El ambiente con uno o mÆs soportes en dependencia del tipo
+para la instrumentaci(cid:243)n del data warehousing de extensi(cid:243)n.
+fue desarrollado en .NET creando un prototipo Cada grupo de extensiones cumple un obje-
+para Microsoft SQL Server. En la (cid:222) gura 2 puede tivo espec(cid:237)(cid:222) co dentro del diseæo del proceso de
+observarse el (cid:223) ujo de ambos procesos de pobla- poblaci(cid:243)n.
+ci(cid:243)n instrumentados sobre sendas herramien- ● EXTENSIONES DE EXTRACCI(cid:211)N: provee una
+tas genØricas. alternativa a la dependencia del soporte
+Las herramientas genØricas tienen como ob- f(cid:237)sico y la diversidad de or(cid:237)genes de los
+jetivo facilitar la poblaci(cid:243)n del DW en su conjun- datos.
+Fig. 2. Poblaci(cid:243)n del data warehouse.
+50 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Fig. 3. Modelo de soluci(cid:243)n para la poblaci(cid:243)n del DWE.
+● EXTENSIONES DE ACCIONES DEL DWE: respon- de los diseæadores y los administradores e
+de a la dependencia y la variabilidad del incluye los m(cid:243)dulos con los que interac-
+soporte f(cid:237)sico del data warehouse empre- tœan directamente estos usuarios.
+sarial. ● GRUPO BASE: constituye los cimientos de la
+● EXTENSIONES DE METADATOS: proporciona una funcionalidad e implementaci(cid:243)n ulterior
+alternativa a la dependencia y la variabili- de las extensiones, dado que en sus m(cid:243)-
+dad del soporte f(cid:237)sico de los metadatos. dulos se incluyen las clases bases de las
+Los grupos de extensiones se instrumentaron jerarqu(cid:237)as de los tipos de extensiones.
+a partir de los patrones de diseæo de la progra- ● GRUPO DE EXTENSIONES: estÆ compuesto por
+maci(cid:243)n orientada a objetos. Por ejemplo, en la cada una de las implementaciones con-
+jerarqu(cid:237)a de acciones existe una clase abstracta cretas de las clases abstractas.
+para cada tipo de transformaci(cid:243)n y chequeo de En la (cid:222) gura 4 se resumen los grupos descritos
+calidad, lo cual garantiza el dinamismo de las ac- y se expresa el v(cid:237)nculo existente entre ellos y los
+ciones en el (cid:223) ujo ETCL aplicando el Patr(cid:243)n de Es- distintos roles de los usuarios de la aplicaci(cid:243)n.
+trategia. De igual manera se aæade en la jerarqu(cid:237)a
+Dada la importancia de la extensibilidad lo-
+una clase abstracta que sirve de enlace entre los
+grada a partir del modelo de soluci(cid:243)n propuesto
+componentes del nœcleo y el grupo de acciones
+se sugiere que se continœe implementando ex-
+incluidas en una implementaci(cid:243)n concreta de la
+tensiones que respondan a nuevas acciones del
+extensi(cid:243)n de acciones del DWE y para un formato
+proceso de Extracci(cid:243)n, Transformaci(cid:243)n, Depu-
+f(cid:237)sico espec(cid:237)(cid:222) co. En este mismo sentido se imple-
+raci(cid:243)n y Carga, con el prop(cid:243)sito de enriquecer el
+mentaron el resto de los grupos de extensiones
+ambiente de poblaci(cid:243)n.
+cada uno representado por un patr(cid:243)n de diseæo
+Por otra parte, en el Æmbito matemÆtico-com-
+diferente en relaci(cid:243)n con sus objetivos.
+putacional las estructuras dimensionales for-
+El proyecto dirigido a la poblaci(cid:243)n del DWE
+malizadas pueden expresarse en tØrminos de
+estÆ conformado por diferentes m(cid:243)dulos. Te-
+abstracciones que resultan c(cid:243)modas y claras,
+niendo en cuenta el papel que desempeæa cada
+con vistas a generar un modelo de clases so-
+uno en su relaci(cid:243)n con el modelo de soluci(cid:243)n,
+bre el cual se fundamenta la concepci(cid:243)n de la
+los m(cid:243)dulos se clasi(cid:222) can en tres grupos:
+herramienta genØrica que permite implementar
+● GRUPO DE GESTI(cid:211)N: proporciona los medios y enriquecer el proceso de poblaci(cid:243)n del data
+para la instrumentaci(cid:243)n y el control del warehouse en diversas plataformas desde la
+proceso de poblaci(cid:243)n de un DWE por parte perspectiva informacional.
+REVISTA CIENCIAS MATEM`TICAS 51
+Fig. 4. Instrumentaci(cid:243)n de la herramienta genØrica del DWE.
+El modelo de clases concebido que resume El modelo de soluci(cid:243)n para la instrumenta-
+una base multidimensional consiste en: ci(cid:243)n del proceso de poblaci(cid:243)n del WI compren-
+● Base de Datos de un conjunto de interfaces que solo exponen
+quØ caracter(cid:237)sticas y operaciones corresponden
+o Nombre
+a cada tipo de estructura dimensional y un con-
+o Lista de Dimensiones
+junto de clases que implementan soluciones
+o Lista de Cubos
+particulares para las plataformas espec(cid:237)(cid:222) cas
+● Cubo
+apoyadas en la herencia.
+o Nombre
+La aplicaci(cid:243)n consta de varios proyectos. En
+o Lista de Dimensiones
+la (cid:222) gura 5 se distingue la funcionalidad de cada
+● Dimensi(cid:243)n
+proyecto segœn sus objetivos, as(cid:237) como su in-
+o Nombre
+tegraci(cid:243)n en la soluci(cid:243)n propuesta. El proyec-
+o Lista de Niveles
+to CubeDesign, instrumenta la creaci(cid:243)n del WI
+● Nivel para lo cual se apoya en el resto de los ensambla-
+● Nombre dos mediante una interfaz de usuario dirigida al
+creador/administrador del WI. Se ha subrayado
+● Lista de Cubos
+el proyecto CubeDSOWrapper por simbolizar el
+● Lista de Dimensiones
+prototipo desarrollado para veri(cid:222) car la validez
+● Lista de Niveles
+de la soluci(cid:243)n propuesta.
+Fig. 5. Instrumentaci(cid:243)n de la herramienta genØrica del WI.
+52 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+La herramienta para la poblaci(cid:243)n del WI fue la estrategia de desarrollo en espiral con vistas
+diseæada bajo los mismos principios de la he- al crecimiento y el perfeccionamiento del data
+rencia para lograr la extensibilidad deseada y el warehouse, de manera que conserve su carÆcter
+aislamiento del formato f(cid:237)sico de las estructu- de pilar esencial para el tratamiento de datos
+ras dimensionales. BasÆndonos en el modelo de estructurados orientado a la toma de decisiones
+clases se cre(cid:243) un conjunto de interfaces dentro en cualquier organizaci(cid:243)n o empresa.
+del proyecto CubeDimensional que representan El modelo conceptual y las soluciones arqui-
+cada una de las estructuras dimensionales y se tect(cid:243)nicas en su per(cid:222) lutilitario, adaptativo y
+implement(cid:243) el prototipo heredando de dichas progresivo pretenden contribuir a las exigencias
+interfaces. evolutivas de las soluciones de inteligencia de
+Teniendo en cuenta que uno de los objetivos negocios desde la perspectiva de los datos.
+de los DW consiste en el aislamiento de los pro- Quedan abiertas aœn numerosas ramas de
+p(cid:243)sitos informacionales de los (cid:222) nes operaciona- investigaci(cid:243)n en el marco de la Inteligencia de
+les, ser(cid:237)a aconsejable continuar trabajando en Negocios, se pudiera intentar complementar los
+la formalizaci(cid:243)n del modelo multidimensional y metadatos desde el punto de vista semÆntico.
+su instrumentaci(cid:243)n genØrica, en particular, en Asimismo, el empleo de mØtodos de miner(cid:237)a de
+el desarrollo de un Ælgebra que permita expre- datos, la aplicaci(cid:243)n de cuadros de mando inte-
+sar las restricciones y operaciones del modelo grales, el aprovechamiento del ambiente Web,
+de datos. el tratamiento de datos no estructurados, entre
+Por œltimo, la relaci(cid:243)n intr(cid:237)nseca de depen- otros, pudieran propiciar el modo de facilitar-
+dencia entre las dos etapas de poblaci(cid:243)n dicta- le alos especialistas y ejecutivosde una orga-
+mina la generaci(cid:243)n de los conjuntos de datos y nizaci(cid:243)n los diversos tipos de informaci(cid:243)n que
+los metadatos necesarios para el procesamiento requieren para tomar decisiones pertinentes,
+en el WI durante la poblaci(cid:243)n del DWE. Por otra oportunas y certeras.
+parte, existe una particularidad de la integra-
+ci(cid:243)n que fomenta la necesidad de sincronizaci(cid:243)n
+BIBLIOGRAF˝A
+entre ambos procesos.
+El ambiente para la instrumentaci(cid:243)n del data 1. `lvarez SÆnchez, R. Estudio te(cid:243)rico y conceptual
+sobre el proceso de poblaci(cid:243)n del Data Ware-
+warehousing proporciona alternativas para de-
+house Empresarial. Tesis de Licenciatura en
+terminar las tareas que conforman los subproce-
+Ciencia de la Computaci(cid:243)n, dirigida por la Dra.
+sos y las dependencias entre ellas, ya sea como
+Lucina Garc(cid:237)a HernÆndez y la Lic. Lis VelÆzquez
+componentes del proceso de poblaci(cid:243)n del data
+Vidal. Facultad de MatemÆtica y Computaci(cid:243)n.
+warehouse empresarial en su papel estructural
+Universidad de La Habana, Cuba, 2002.
+y funcional, o como ejecutor del procesamiento 2. Cabibbo, L. Torlone, R.A LogicalApproachto Mul-
+multidimensional en su carÆcter funcional. tidimensional Databases, Sixth International
+Conference on Extending Database Technology,
+Universidad de Roma, Italia, 1998.
+6. CONCLUSIONES
+3. Carpani, Fernando. CMDM: Un Modelo Concep-
+tual para la Especi(cid:222) caci(cid:243)n de Bases Multidimen-
+Penetrar en el data warehousingen la arista te(cid:243)-
+sionales. Tesis de Maestr(cid:237)a, Instituto de Compu-
+rico-conceptual al incursionar en una formali-
+taci(cid:243)n-Facultad de Ingenier(cid:237)a. Universidad de la
+zaci(cid:243)n matemÆticadel modelo dimensional, en
+Repœblica. Pedeciba InformÆtica, Montevideo,
+el Ængulo metodol(cid:243)gico al profundizar en el pro-
+Uruguay, 2000.
+cedimiento de diseæo del proceso de poblaci(cid:243)n y 4. Cid D(cid:237)az, Hedrie. AlmacØn de Datos: Propuesta
+en el Æmbito aplicativo al servir de fundamento de Formalizaci(cid:243)n del Modelo Dimensional. Na-
+para la concepci(cid:243)n de un ambiente que permite vegando y Construyendo Agregaciones. Tesis de
+implementar y enriquecer el proceso de pobla- Licenciatura en Ciencia de la Computaci(cid:243)n, diri-
+ci(cid:243)n del data warehouse en diversas plataformas gida por el Lic. Alfredo Somoza Moreno. Universi-
+dad de La Habana, Cuba, 2002.
+constituyen los resultados mÆs signi(cid:222) cativos.
+5. Devlin, B. Data Warehouse from Architecture to
+El ambiente para la instrumentaci(cid:243)n del
+Implementation. Addison Wesley Longman, Inc.
+data warehousing fundamenta la aplicaci(cid:243)n de
+1997.
+REVISTA CIENCIAS MATEM`TICAS 53
+6. FerrÆ D(cid:237)az, R. Preparaci(cid:243)n de datos para la ex- 13. Magic Quadrant for Business. Intelligence Plat
+tracci(cid:243)n de conocimiento en un Data Warehouse. forms, IQ07, 2007.
+Tesis de Licenciatura en Ciencia de la Compu- 14. Olsen, Jack E. (cid:147)Data Quality: The Accuracy Di-
+taci(cid:243)n, dirigida por la Dra. Lucina Garc(cid:237)a Her- mension(cid:148). Morgan KaufmannPublishers. 2003.
+nÆndez. Facultad de MatemÆtica y Computaci(cid:243)n, 15. Pendse, Nigel. What is OLAP? The OLAP Report.
+Universidad de La Habana, Cuba, 2007. www.olapreport.com. 2003.
+7. Garc(cid:237)a HernÆndez, L.; Oliva Santos, R.; Prendes 16. VelÆzquez Vidal, L. Herramienta genØrica para la
+Arencibia, H.; VelÆzquez Vidal, L; Veliz Monte- poblaci(cid:243)n del Warehouse Informacional. Tesis de
+agudo, M. La inteligencia de negocios desde la Maestr(cid:237)a en Ciencia de la Computaci(cid:243)n, dirigida
+perspectiva de los datos. 4to. Evento Nacional de por la Dra. Lucina Garc(cid:237)a HernÆndez. Universi-
+InformÆticos. COPEXTEL, Cuba, 2008. dad de La Habana, Cuba, 2009.
+8. Inmon, W. H. www.cait.wustl.edu/cait/papers/ 17. VelÆzquez Vidal, L. y Veliz Monteagudo, M. Estu-
+prism Prism Solutions, Inc. 1995. dio te(cid:243)rico y conceptual sobre Data Warehouse.
+9. Inmon, W. H. Building the Data Warehouse. Tesis de Licenciatura en Ciencia de la Computa-
+Wiley Computer Publishing, 2002. ci(cid:243)n, dirigida por la Dra. Lucina Garc(cid:237)a HernÆn-
+10. Kimball, R. y Ross, M. The Data Warehouse Tool- dez. Universidad de La Habana, Cuba, 2000.
+kit. The Complete Guide to Dimensional Modeling. 18. Veliz Monteagudo, Mijail. Herramienta genØrica
+Wiley Computer Publishing, 2002. para la poblaci(cid:243)n del Data Warehouse Empresa-
+11. Kimball, Ralph y Caserta, Joe (cid:147)The Data Ware- rial. Tesis de Maestr(cid:237)a en Ciencia de la Computa-
+house ETL Toolkit: Practical Techniques for Ex- ci(cid:243)n, dirigida por Dra. Lucina Garc(cid:237)a HernÆndez.
+tracting, Cleaning, Conforming, and Delivering Universidad de La Habana, Cuba, 2009.
+Data(cid:148). Wiley Computer Publishing. 2004. 19. White, C. Intelligent Business Strategies: OLAP
+12. Kimball, Ralph (cid:147)A Dimensional Modeling Mani- in the Database. Columna publicada en la revista
+festo(cid:148). DBMS Online. Agosto de 1997. electr(cid:243)nica. DM Review Magazine, Junio 2003.

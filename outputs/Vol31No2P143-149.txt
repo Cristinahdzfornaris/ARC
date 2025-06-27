@@ -1,0 +1,447 @@
+CienciasMatemáticas,Vol.31,No.2,Pag.143-149, 2017
+Recibido12-2016
+Secuenciacio´n dida´ctica entre logos y praxis de la
+combinacio´n lineal
+Lineal combination logos and praxis methodological
+approach
+Angela Martin Sa´nchez1, Olga Lidia Pe´rez Gonza´lez2*, Laura Casas Fuentes2, Ricardo
+Sa´nchez Casanova4
+Resumen Elpresentetrabajotienecomointencio´npropiciarenlosestudiantesdeingenier´ıaunadecuado
+desempen˜oenlaresolucio´ndetareasalgebraicasapartirdeunapropuestadesecuenciacio´ndida´cticaentre
+logosypraxisdelacombinacio´nlinealdelosvectoresdeunespaciovectorial,comocontextoparaeltratamiento
+dida´cticodelosconceptosenelA´lgebraLineal(AL).Lapropuestaseimplemento´ durantecuatrocursosysus
+resultadoscontribuyeronaquelosestudiantesmostraranmayorsatisfaccio´nporelestudiodelAL.Secomprobo´
+queutilizandoestapropuestasefavorecelaindependenciadelosestudiantesparalabu´squedadeposibles
+soluciones a tareas algebraicas, con argumentaciones desde los elementos comunes y diferentes en cada
+concepto.
+Abstract Theaimofthispaperistopromoteinengineeringstudentsasuitableperformancetosolvingalgebral
+problems beginning from vectors lineal combination logos and praxis methodological approach, as context
+for methodological treatment of Lineal Algebra notion. The proposal was implemented for four courses and
+itsresultshelpedstudentstoshowgreaterappreciationofthestudyofLinealAlgebra. Thisproposalhelpto
+self-sufficiencyofstudentstothesearchforpossiblesolutionstoalgebraproblemswithargumentsfromcommon
+anddiferentelementsineachnotion.
+logos,praxis,linealcombination
+logos—praxis—combinacio´nlineal
+1FacultaddeCiencias,UniversidadAuto´nomadeSantoDomingo,SantoDomingo,Repu´blicaDominicana,m.angela24@gmail.com
+*2DepartamentodeMatema´tica,UniversidaddeCamagu¨ey,Camagu¨ey,Cuba,olga.perez@reduc.edu.cu,laura.casas@reduc.edu.cu
+4FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,LaHabana,Cuba,rsanchezcasanova@yahoo.es
+*AutorparaCorrespondencia
+Introduction escontribuiraldesarrollodelejerciciodelaprofesio´n,yque
+ellasdevelanlasinterrelacionesentrelosdiferentesciclosdel
+LosestudiossobreelA´lgebraLineal(AL)hanproliferado
+plandeestudio(ba´sico,ba´sicoespec´ıficoyejerciciosdela
+en la u´ltima de´cada y evidencian que insuficiencias en el
+profesio´n),sindetrimentodelafundamentalizacio´n,adema´s
+tratamientodida´cticodelosconceptosdeestaasignaturaen
+precisaquesutratamientodida´cticodebehacerseteniendo
+lascarrerasdeingenier´ıa,loquelimitaeldesempen˜odelos
+comoprincipalpremisaquelosestudianteslogrendevelarlas
+estudiantes en la solucio´n de tareas algebraicas. Segu´n [7],
+interrelacionesentrelosciclosdelplandeestudio,estoquiere
+notodoslosaspectosdelasasignaturasdematema´ticatienen
+decir que sea explicita para ellos la contribucio´n cient´ıfica
+lamismaimportanciaparaelfuturoingeniero,porloquese
+queleshacelaMatema´ticaalcicloba´sicoespec´ıficodesu
+hace necesario analizar convenientemente el ordenamiento
+profesio´n.
+racionaldelainformacio´nconceptualqueestenecesita,pero
+lamentablementeesta´faltandolaintegracio´ndeloscontenidos Paralograrloanterior,actualmenteseabogaporunafor-
+pues,porlogeneral,elprocesoesta´ orientadoalaprendizaje macio´n so´lida en las ciencias ba´sicas en los primeros an˜os
+de cada uno de los conceptos por separado, al desarrollo delacarrera,entrelasqueseincluyeelAL,paradesplegar
+de habilidades de generalizacio´n y a la comprensio´n desde lasespecialidadesingenierilesenlosan˜ossuperioresconla
+la relacio´n parte/todo, de manera que se limita el trabajo visio´n de formar al ingeniero 2020 [4]. Al respecto se han
+independienteylacreatividaddelosestudiantes[2]. hechovariadaspropuestas,unadeellaslautilizacio´ndelcon-
+Parasolucionarestaproblema´tica,[7]demuestraquela ceptode“perfilamplio”paralaformacio´ndeingenieros,el
+funcio´ndelascienciasba´sicasenlascarrerasdeingenier´ıa quegeneralmenteseanalizadesdeela´ngulodelejerciciode
+144 Secuenciacio´ndida´cticaentrelogosypraxisdelacombinacio´nlineal
+laprofesio´nynodesdelao´pticadelcicloba´sico,paraqueel Lapraxisconstituyeunaunidadpra´cticayte´cnicamientras
+estudiantetengaunaso´lidaformacio´nenlascienciasba´sicas. queellogosconstituyelaunidaddelosaspectostecnolo´gico
+Sinembargo,paraqueenlaformacio´ndeesteprofesional yteo´rico.
+sepuedanrevertirenalgunamedidalosprono´sticosdelospo- Enestetrabajoseasumenadema´slosconceptosdelogosy
+siblesresultadospartiendodelosproblemasidentificados,se praxisintroducidospor[6]atrave´sdelenfoqueontosemio´tico
+deber´ıaabordarlaensen˜anzayaprendizajedelA´lgebraLineal delacognicio´nmatema´tica,yseconsideralapraxiscomolas
+desdepraxeolog´ıasquecombinenelsaberconelsaberhacer, acciones(delsujetoantelastareasmatema´ticas)ysituaciones
+demaneraqueserelacionenloscontenidosdentrodeuntema (tareasqueinducenlaactividadmatema´tica),yloslogoscomo
+yentrelostemasparapropiciarelmayorenfoquesiste´mico losconceptos,reglas,proposicionesylasargumentaciones.
+delaasignatura.Porlotanto,elobjetivodeltrabajoespropi- Redondeando todo lo analizado hasta ahora se pudiera
+ciarenlosestudiantesdeingenier´ıaeladecuadodesempen˜o decirqueellogosenglobaladescripcio´n,explicacio´nyjusti-
+enlasolucio´ndetareasalgebraicasmedianteunapropuesta ficacio´ndelaste´cnicasempleadas,querecibeelnombrede
+desecuenciacio´ndida´cticaentrelogosypraxis,tomandoa tecnolog´ıa,ytambie´nlafundamentacio´ndelatecnolog´ıa,la
+lacombinacio´nlinealcomooperacio´nrelacionantedecada cualrecibeelnombredeteor´ıa.As´ı,alrededordeunatarea
+concepto. problema´tica(T)seencuentraalmenosunate´cnica(τ),una
+tecnolog´ıadeτ,ϕ,yunateor´ıadeϕ,θ.Eltotal,indicadopor
+(T/τ/ϕ/θ),constituyelapraxeolog´ıa.
+1. Fundamentos teo´ricos de la propuesta
+Porsuparte[1]sostienenquesaberysaberhacersondos
+Elmodelodepraxeolog´ıasparaestructurarlaensen˜anza componentescomplementariasdelconocimientomatema´tico
+aprendizajedelasmatema´ticas,demaneraqueseidentificala y deben ser consideradas partes ´ıntimamente ligadas, que
+praxisconsaber-haceryellogoconsaber[3]. formanunapraxeolog´ıa(praxis+logos).Ma´sadelantesen˜alan
+quenodisponerdelsaberasociadoalsaberhacer,odellogos
+El concepto de combinacio´n lineal dado por [8], en asociadoalapraxis,llevaalabandonodelatarea,demodoque
+sucalidaddeformaexistencialdelosvectoresdeun unobjetivofundamentaldebeserlabu´squedadelequilibrio
+espaciovectorial,comolace´lulaquelepermitecons- entreambas.
+truirconunenfoquesiste´micoelprocesodeensen˜anza Unadelasperspectivasma´sestudiadasyqueau´ntiene
+aprendizaje(PEA)delAL. vigenciaeneltratamientodida´cticodelosconceptosdelAL
+para las carreras de ingenier´ıa, es la relacionada con la es-
+Tomandocomobaselosu´ltimosenfoquesdelaTeor´ıaantro-
+tructuracio´n siste´mica del contenido y el desarrollo de las
+polo´gicadelodida´ctico(TAD[3],citadoen[5]),seadoptala
+habilidadesmatema´ticas,desdeelpuntodevistadelenfoque
+nocio´ndeobramatema´ticaparadotaralamatema´ticainstitu-
+siste´micodetipogene´tico[8,10,9].
+cionaldeunmodelo.Partiendodeestaideasonlosproblemas
+Con la utilizacio´n de este enfoque se develo´ una nueva
+deunaovariasclaseselmododematerializarloselementos
+formadeabordarlosconceptosylasrelacionesentreellos,
+ytareasproblema´ticasqueconformanunaobramatema´tica.
+peroconlao´pticadeestudiarcadaconceptoensutotalidad,
+Loanteriornoimplicaquesepresentenconenunciadossimi-
+comoresultadodeldesarrollodelelementoinicialdelsistema,
+lares,sinoqueesposibleabordarlosapartirdeunate´cnica
+dondelostiposfundamentalesderelacionessonlasgene´ticas
+matema´tica.
+ylasdedesarrollo,mientrasqueelconceptofundamentalo
+Elmodeloalquesehacereferenciahadadoenllamarse
+formadordelsistemaderelacioneseslace´lulageneradora.
+praxeolog´ıaysecomponededosaspectosonivelesconexos:
+EslaDra.HerminiaHerna´ndez[8]quiendevelaelconcep-
+elprimerotienequeverconlapraxisoelsaberhacerycom-
+todecombinacio´nlineal,ensucalidaddeformaexistencial
+prendeundeterminadotipodetareasabordadasenclasesde
+delosvectoresdeunespaciovectorial,comolace´lulaquele
+problemasymateriasqueseestudian,as´ıcomolasherramien-
+permiteconstruirconunenfoquesiste´micoelPEAdelAL,
+tasyte´cnicasparadarlessolucio´n;elsegundoaspectosehalla
+y modelar, adema´s, al me´todo de Gauss para la resolucio´n
+ma´senfocadoaellogosoelsaber,ene´lsedeclaran,describen,
+desistemasdeecuacioneslineales,comoelelementoopera-
+yjustificanlaste´cnicasaemplearmedianteunelementoque
+tivodeapoyoadichace´lulaparaposibilitarsumovimiento
+recibeelnombredetecnolog´ıa,elcualacogeladisertacio´n
+ydesarrolloenelsistema,locualrepresentaunelementode
+razonada sobre la pra´ctica. Se considera, segu´n el modelo,
+novedaddida´ctica.
+unsegundonivel,dentrodelsaberyeseldelateor´ıadonde
+seaportanlasdescripcio´n-explicacio´n-justificacio´ntambie´n
+Metodolog´ıa
+denominadotecnolog´ıadelatecnolog´ıa.Deestaformaqueda
+establecidoquesonlastecnolog´ıasylasteor´ıas,endefinitiva, La metodolog´ıa esta´ constituida por cuatro fases en las
+loselementosconstitutivosdetodaobramatema´tica[5]. quelasecuenciacio´ndida´cticavatransitandodelogosapra-
+Portanto,losautoresdelainvestigacio´nconcuerdancon xis,ydepraxisalogos.Semuestraalacombinacio´nlineal
+[3]enquelaensen˜anza-aprendizajedelasmatema´ticasdebe comooperacio´nrelacionantealestudianteparaqueestelogre
+estructurarsesobrelaconcepcio´ndepraxeolog´ıas,identifican- representarloidentitariodecadaconceptoobjetodeestudio;
+dodeestaformalapraxisconsaber-haceryellogosconsaber. yquecomprenda,deestamaneraqueunconceptosepresenta
+Secuenciacio´ndida´cticaentrelogosypraxisdelacombinacio´nlineal 145
+comolaunidaddeladiferenciaentree´lysuentorno,sien- Estoimplico´ prepararalestudianteparaquefueracapaz
+dosudiferenciacio´neslaquegenerasuentorno.Estanueva de:identificarlasrelacionesconceptualesatrave´sdecinco
+concepcio´ndeestructurarelcontenidotuvocomobasecuatro tareassobrelacombinacio´nlineal(detipodirecto,inverso,
+exigenciasdida´cticas: dedependenciadelosdatos,defactibilidadydeunicidad);y
+clasificarlasenrelacionesde:tiposuperordinado-subordinado,
+1. Incorporarelenfoquedelascincotareastipos,enlas
+gene´rico-espec´ıfico,parte-todo,polivalentesycomplejas;lo
+cuales,senecesitadelusodeunacombinacio´nlineal
+que requirio´ por parte del docente, el desarrollo de una se-
+paradefinirnuevosconceptosoresolverunatareaalge-
+cuenciacio´n dida´ctica entre logos (conceptos, definiciones,
+braica.
+preposiciones,argumentaciones)ypraxis(algoritmos,opera-
+ciones,procedimientos),dondefueconcebidalapraxiscomo
+2. Reconoceryutilizarlacombinacio´nlinealdevectores
+la promotora y contextualizadora en la obtencio´n de las re-
+como el concepto base a partir del cual se organizan
+laciones conceptuales, mientras los logos desempen˜aron el
+eutilizanlosconceptosquesubyacenasualrededor,
+papelnormativoyfueron,asuvez,elresultadodeunaacti-
+estableciendo la articulacio´n entre cada uno de ellos
+vidadreflexivayregulativadelapraxis,teniendoencuenta
+y la apropiacio´n de me´todos propios para plantear o
+queellenguajealgebraicoesta´ presentedemaneraintr´ınseca
+solucionartareas.
+yconstitutiva,tantoenlapraxiscomoenloslogos,porlo
+3. Trabajarlasformasdediferenciacio´ndeconceptosa quesepresto´ unaespecialatencio´nalacorrectautilizacio´n
+partirdelasrelacionesdetiposuperordinado-subordinado, dellenguajealgebraico.
+gene´rico-espec´ıfico,parte-todo,polivalentes-comple-
+1.0.2 Identificacio´n de los conceptos del AL a trave´s de
+jas, a partir del uso de grafos que representen las es-
+las relaciones con la combinacio´n lineal de vecto-
+tructurasidentitariasderelacioneseinteraccionesparti-
+res
+cularesydeunamatrizdeadyacencia,dondelasfilas
+Elprincipalobjetivoenestafaseesprepararalestudiante
+ylascolumnasrepresentanlosnodos(conceptos)del
+paraquelogrereconoceryargumentarlaidentidaddecada
+grafo,yelnu´merodearistas(relaciones)entrecadapar
+unodelosconceptosenfuncio´ndelasrelacionesconlacom-
+deconceptos.
+binacio´nlinealdevectores,desdelasecuenciacio´ndida´ctica
+delogosypraxis,poniendomayore´nfasisenloslogos.
+4. Eldesarrollodelasecuenciacio´ndida´cticaentrelogos
+Estoimplicaqueelestudiantepuedareconoceryutilizar
+ypraxisdelacombinacio´nlinealcomounaalternativa
+la combinacio´n lineal de vectores como el concepto base,
+de trabajo dida´ctico para la ensen˜anza del AL en las
+a partir del cual se organizan e utilizan los conceptos que
+carrerasdeingenier´ıa,dondesepropiciaelaprendizaje
+subyacenasualrededor,estableciendolaarticulacio´nentre
+implicando a docentes y estudiantes en dos sentidos
+cadaunodeellosylaapropiacio´ndeme´todospropiospara
+fundamentales:
+plantearosolucionarproblemas.
+Orientarcorrectamentealalumnoparaqueiden-
+tifique a la combinacio´n lineal como concepto 1.0.3 Representacio´ndelaredidentitariadelareddere-
+lacionesconceptuales
+fundamentaloformadordelsistema.
+La fase tiene como objetivo orientar al estudiante para
+Lograrconstruirlaredidentitariadetodalared
+que sea capaz de reconocer la combinacio´n lineal como la
+de conceptos, la que puede generar al sistema
+representacio´n identitaria que agrupa y diferencia a unos y
+conceptual.
+otrosconceptos,yqueenesejuegoidentitarioentrelouno
+y lo otro, se descubra la fuerza dina´mica de las relaciones
+Fases del proceso secuenciacio´n conceptuales; lo que implica formar al estudiante para que
+dida´ctica entre logos y praxis de la comprendaqueestaformadeorganizacio´nvama´salla´ dela
+reunio´ndeconceptos,yqueesnecesarioconstruirestructuras
+combinacio´n lineal para el tratamiento de
+identitarias,derelacioneseinteraccionesparticulares,quese
+conceptos
+conviertenendiferenciadores;yquedeestasinteraccionesse
+construyenco´digosnuevosycompartidos.
+1.0.1 Representacio´ndelasrelacionesconceptualesen
+Delasrelacionesdecoordinacio´nysubordinacio´ndelos
+lacombinacio´nlineal.
+Enestafasesedebe: anteriorescomponentesresultalacuartafase:
+Prepararalestudianteparaquedistingalasformasde 1.0.4 Representacio´ndelaredidentitariageneradoradel
+diferenciacio´nentrelosconceptos,apartirdesusrela- sistemaconceptual
+En esta fase se persigue orientar al estudiante para que
+cionesconlacombinacio´nlinealdevectores.
+puedacomprenderque,sitenemoslaredidentitariadetoda
+Disponer al estudiante para que comprenda que esas lareddeconceptos,ellapuedegeneraralsistemaconceptual,
+formasdediferenciacio´nregulanelmodoenquepuede pueslaparteestara´ eneltodoyeltodoestara´ enlaparte,lo
+verselaidentidaddecadaconcepto. que implica preparar al estudiante para que distinga la red
+146 Secuenciacio´ndida´cticaentrelogosypraxisdelacombinacio´nlineal
+XesunvectordeEyfesunaaplicacio´ndeEenF,entonces
+lasdosformasba´sicasson:
+n
+∑λ ∗X =X (1)
+i i
+i=1
+n n
+f(∑λ ∗X)=∑λ ∗f(X) (2)
+i i i i
+i=1 i=1
+1. UnvectordelespacioEescombinacio´nlinealdelos
+vectoresdelsistemaA,ecuacio´n1.
+Figura1.Secuenciacio´ndida´cticaentrelogosypraxisdela
+combinacio´nlineal. 2. Laimagenporfdeunacombinacio´nlinealdevectores
+deAesigualalacombinacio´nlinealdelasima´genes
+porfdeesosvectores,ecuacio´n2.
+identitariaapartirdelarelacio´nelementalesencialdeltodo,
+Adema´sseenfatizo´ enelempleodecincotareastiposdela
+dondelostiposderelacionesqueprevalecensonlasgene´rico-
+combinacio´nlinealparadefinirnuevosconceptosoresolver
+espec´ıfico,yparaquecomprendaqueenlaredelconcepto
+unproblema.Finalmente,paramayorcomprensio´n,sedestaca
+fundamentaloformadordelsistemaeslacombinacio´n.
+queenestetipodetareasexisteunelementooperativoque
+Estasrelacionesdanlugaralsurgimientodelarepresenta-
+es el me´todo de Gauss para la resolucio´n de un sistema de
+cio´ndelasrelacionesdelobjetoalgebraicoatrave´sdelared
+ecuacioneslineales,elcualesintr´ınsecoparaeltrabajoconel
+identitaria¸loquesignificaqueelestudiantepodra´representar
+conceptodecombinacio´nlineal[8].Loselementosvariables
+loidentitariodecadaconceptoobjetodeestudiomedianteuna
+mencionadosanteriormenteson:
+operacio´nrelacionante,yargumentarquecadaconceptose
+presentacomolaunidaddeladiferenciaentree´lysuentorno Elcara´cterfijooarbitrariodeloselementosdelsistema
+(relacionesconceptuales),yqueprecisamentesudiferencia- devectoresconsiderado.
+cio´n con otros conceptos es la que genera su entorno (ver
+Elcara´cterconocido,inco´gnitooarbitrariodelosesca-
+1).
+lares(coordenadas).
+2. Concrecio´n de la metodolog´ıa Elcara´cterconocidoovariabledelvectordelespacio
+vectorialresultantedelacombinacio´nlineal.
+Serequirio´ lautilizacio´n,porpartedeldocente,desiste-
+masinteligentesquelefacilitarandarseguimientoaltrabajo Luegoelestudiante,guiadoporelprofesor,enlaresolu-
+delosestudiantesy,asuvez,proporcionaranestoslabu´sque- cio´n de las restantes situaciones, estudiaba las definiciones
+dadesolucionesalastareaspropuestassobrelacombinacio´n de conjunto de vectores linealmente independientes (LI) o
+lineal,yapartirdeellasargumentarelentornodeestecon- linealmentedependientes(LD),espaciosgenerados,basede
+cepto. unEspacioVectorial(EV),dimensio´ndeunEV,subespacio
+Loanteriorimplico´ prepararalestudianteparacompren- vectorial, diferentes tipos de base, as´ı como los diferentes
+derqueeneltrabajoconlacombinacio´nlineal,debeocuparse procedimientosyme´todosdetrabajo.
+delabu´squedadeladiferenciacio´n,demaneraquedistinga Esteprocesocontribuyo´ aquelosestudiantesrevelaran
+entreigualydesigualenlosresultados;paracomprenderque inicialmentesusideasy,luegodeinteractuarconellas,argu-
+enlasolucio´ndeproblemassobrelacombinacio´nlinealexis- mentaranlosconceptosqueseestabantrabajando,alavez
+tenelementosvariablesyque,adema´s,estascombinaciones quelespermitio´,tantoaelloscomoalprofesor,detectarinsu-
+aparecenendosformasba´sicas. ficienciasenelestablecimientoderelacionesconceptuales.
+Enelcasodeldisen˜ogene´ticodelAL,seconsidero´ co- Enlasrestantessituacionesseplanteabandiferentestareas
+mo elementos variables: el cara´cter fijo o arbitrario de los aresolverporelestudiante,yelprofesordirig´ıasuactividad
+elementos del sistema de vectores considerado; el cara´cter fundamentalmentealacorreccio´ndelasposiblesdesviacio-
+conocido,inco´gnitooarbitrariodelosescalares(coordena- nesenelconocimientoyenlashabilidadesencuestio´n.En
+das)queintervienenenlacombinacio´nlineal,yelcara´cter ladina´micadelproceso,losestudiantesten´ıanquecompletar
+conocidoovariabledelvectordelespaciovectorialresultante elestudiodenuevasdefiniciones,propiedades,teoremas,ca-
+delacombinacio´nlineal. racterizacionesyme´todosdetrabajoengeneral,pues,enel
+Asimismo,sereconocierondosformasba´sicascontentivas discursodelprofesorso´loseexplicabanloscontenidosdados
+delasdis´ımilessituacionesenquesenecesitadelusodeuna enlasituacio´ninicial.
+combinacio´nlinealparadefinirunnuevoconceptooresolver Loanteriorrequirio´ porpartedeldocenteeldesarrollode
+unproblema,asaber: unasecuenciacio´ndida´cticade logosy praxis parael trata-
+SiE,Fsonespaciosvectorialesdefinidossobreelcuerpo miento de cada tipo de agrupacio´n de los conceptos, orien-
+K;A=X esunsistemadevectorescontenidoenE,(i=1...n), tandoalestudiodelasdesigualdadesentreestosma´squeen
+i i
+Secuenciacio´ndida´cticaentrelogosypraxisdelacombinacio´nlineal 147
+las semejanzas y trabajando el paso de una forma de dife- cente,competencia,creatividad,disposicio´naparticipardela
+renciacio´n a otra; para lo cual fue necesario consolidar las encuesta,capacidaddeana´lisis,pensamientoyv´ınculoconla
+anticipacionesparaelulteriordesarrollo.Lasformasdedife- ensen˜anzadelamateriaenlaeducacio´nsuperior.
+renciacio´ndebentrabajarseapartirdelasrelacionesdetipo Paralaconfeccio´ndelosindicadoresamedireneltest
+superordinado-subordinado,gene´rico-espec´ıfico,parte-todo, aplicadoalosexpertossetuvieronencuentalaconcrecio´n
+polivalentes y complejas. Para esto se utilizaron los grafos de la propuesta de secuenciacio´n dida´ctica y lo que se pre-
+querepresentaranlasestructurasidentitariasderelacionese tend´ıalograrenlosestudiantes(adecuadodesempen˜oenla
+interaccionesparticularesyunalamatrizdeadyacencia,don- solucio´ndetareasalgebraicas).Lamatrizderangoencada
+delasfilasylascolumnasrepresentanlosnodos(conceptos) preguntadeltestseobtuvomedianteelempleodelaste´cni-
+delgrafo,yelnu´merodearistas(relaciones)entrecadapar casestad´ısticas:gradodeconcordanciadelosexpertospara
+deconceptos. el conjunto de todas las preguntas utilizando el coeficiente
+Enelprocesodeelicitacio´ndelasrelacionesconceptuales deconcordanciadeKendall,concordanciaentremedidasde
+enlasecuenciacio´ndida´cticaentrelogosypraxisdelacombi- grupos de expertos empleando el coeficiente de rango par
+nacio´nlineal,seevidencianrelacionesdecoordinacio´nentre deSpearmanyladeterminacio´ndelacategor´ıaogradode
+suscuatrocomponentes;aunqueenunprimermomentolare- adecuacio´nma´sfrecuentessegu´nlaopinio´ndelosexpertos
+presentacio´ndelasrelacionesconceptualesenlacombinacio´n encadapregunta.
+lineal,laidentificacio´ndelosconceptosdelALatrave´sde ElcoeficientedeconcordanciadeKendallencadapregun-
+lasrelacionesconlacombinacio´nlinealylarepresentacio´n taarrojo´ resultadosporencimadeδ=0,82(Pδ=0,05)loque
+delaredidentitariadelaredderelacionesconceptuales,se evidenciaunaltogradodeconcordanciaenloscriteriosemiti-
+subordinaronalarepresentacio´ndelaredidentitariagenera- dosporlosexpertos,resultadossimilaresseobtuvieroncon
+dora del sistema conceptual, y posteriormente evolucionan elcoeficientedeSpearman.Lacategor´ıama´sfrecuentefuela
+arelacionesdecoordinacio´nparaquesepudierareconocer de.adecuado”.Apartirdeestosresultadosseprecisaronlos
+lacombinacio´nlinealcomolarepresentacio´nidentitariaque siguientesindicadoresparavalorarlavariableindependiente:
+agrupa y diferencia a unos y otros conceptos, y develar la
+dina´micadeestasrelacionesconceptuales. Uso de la combinacio´n lineal de vectores (operacio´n
+relacionante) para representar lo identitario de cada
+concepto.
+3. Validacio´n experimental de los
+resultados Bu´squedadesolucionesalastareaspropuestassobrela
+Lapropuestaseimplemento´ enlacarreraIngenier´ıaIn- combinacio´nlinealmediantelautilizacio´ndesistemas
+forma´ticadesdeelcurso2012-2013hastael2015-2016,en inteligentes.
+laUniversidaddeCamagu¨eyIgnacioAgramonteLoynaz,en
+Argumentacionessobreelementoscomunesydiferen-
+condicionesnormales,ysegu´nlametodolog´ıaplanteadaante-
+tesdecadaconceptodesdelaCL.
+riormente.
+Para la validacio´n de los resultados se asumio´ una me-
+Empleodelaredidentitariadeconceptosparalasolu-
+todolog´ıaexperimentalypartio´ deconsiderarselasiguiente
+cio´ndetareasalgebraicas.
+hipo´tesis:Siseimplementaunapropuestadesecuenciacio´n
+dida´cticaentrelogosypraxissustentadaenunmodelodida´cti- Participacio´nendiscusionessobrerelacionesconcep-
+co, que asuma la formacio´n y desarrollo de las relaciones tualesdadasendiferentesformas.
+conceptualesquesegeneranapartirdelacombinacio´nlineal
+delosvectoresdeunespaciovectorial,comocontextoparael Elaboracio´ndeme´todospropiosparaplantearosolu-
+tratamientodida´cticodelosconceptosenelAL,debecontri- cionartareasalgebraicas.
+buiraquelosestudiantesdeingenier´ıalogrenunadecuado
+Independenciaenlasolucio´ndetareasalgebraicas.
+desempen˜oenlasolucio´ndetareasalgebraicas.
+Serealizo´ unavalidacio´nmedianteelcriteriodeexpertos HorasdedicadasalestudioindependientedelA´lgebra
+conelobjetivodeestablecerlosindicadoresparadeterminar
+Lineal.Paraelexperimentoserealizo´ unestudiolongi-
+lavariableindependiente:adecuadodesempen˜oenlasolucio´n
+tudinalyprospectivo.Durantesuejecucio´n,lavariable
+detareasalgebraicas.Sobrelabasedelosaspectosteo´ricosy
+independientefuemanejadaporlosinvestigadores.Tan-
+metodolo´gicosrelacionadosconeltemaobjetodeestudio,se
+toelgrupodecontrolcomoelexperimental,seestudian
+selecciono´ unamuestrade12expertospartiendodeunrango
+enelsiguienteper´ıododetiempo.
+m´ınimodecompetencia,obtenidoapartirdeladeterminacio´n
+de un coeficiente de competencia segu´n el uso del me´todo Grupodecontrol:cursos2012-2013y2013-2014.Grupo
+DELPHIaplicadoenestecasocomodeterminacio´nperspec- experimental: cursos 2014-2015 y 2015-2016. La muestra
+tivadelaoperacionalizacio´ndeunavariableysusposibles estuvo conformada por todos los alumnos matriculados en
+dimensiones.Lamuestradeexpertosseselecciono´ teniendo los cursos acade´micos anteriormente mencionados. Para el
+encuentalossiguientesindicadores:an˜osdeexperienciado- procesamientodelosdatosseempleo´ elMicrosoftExcelyel
+148 Secuenciacio´ndida´cticaentrelogosypraxisdelacombinacio´nlineal
+SPSS;analiza´ndoselascalificacionesfinalesdelosestudian- querepresentaranlasestructurasidentitariasderelacionese
+tes(5-excelente,4-bien,3-regular,2-mal).Seutilizo´ laprueba interaccionesparticularesyunalamatrizdeadyacencia,don-
+dechicuadrado(X2)paradosmuestrasindependientesdela delasfilasylascolumnasrepresentanlosnodos(conceptos)
+estad´ısticanoparame´trica.Serealizaronvariascomparaciones delgrafo,yelnu´merodearistas(relaciones)entrecadapar
+entreloscursosexperimentalesydecontrol. deconceptos.
+La u´ltima comparacio´n se realizo´ entre los dos grupos Enelprocesodeelicitacio´ndelasrelacionesconceptuales
+experimentalesconlaintencio´ndecomprobarsiexistieron enlasecuenciacio´ndida´cticaentrelogosypraxisdelacombi-
+diferenciassignificativasentrelosresultadosobtenidosenam- nacio´nlineal,seevidencianrelacionesdecoordinacio´nentre
+bosgrupos.Adema´sseenfatizo´ enelempleodecincotareas suscuatrocomponentes;aunqueenunprimermomentolare-
+tiposdelacombinacio´nlinealparadefinirnuevosconceptos presentacio´ndelasrelacionesconceptualesenlacombinacio´n
+oresolverunproblema.Finalmente,paramayorcomprensio´n, lineal,laidentificacio´ndelosconceptosdelALatrave´sde
+sedestacaqueenestetipodetareasexisteunelementoope- lasrelacionesconlacombinacio´nlinealylarepresentacio´n
+rativo que es el me´todo de Gauss para la resolucio´n de un delaredidentitariadelaredderelacionesconceptuales,se
+sistemadeecuacioneslineales,elcualesintr´ınsecoparael subordinaronalarepresentacio´ndelaredidentitariagenera-
+trabajoconelconceptodecombinacio´nlineal[8]. dora del sistema conceptual, y posteriormente evolucionan
+Loselementosvariablesmencionadosanteriormenteson: arelacionesdecoordinacio´nparaquesepudierareconocer
+lacombinacio´nlinealcomolarepresentacio´nidentitariaque
+Elcara´cterfijooarbitrariodeloselementosdelsistema
+agrupa y diferencia a unos y otros conceptos, y develar la
+devectoresconsiderado.
+dina´micadeestasrelacionesconceptuales.
+Todas estas tareas debieron constituir un reto para que
+Elcara´cterconocido,inco´gnitooarbitrariodelosesca-
+losestudiantesalcanzaranmetassuperioresparademanera
+lares(coordenadas).
+independiente, establecer relaciones conceptuales, emplear
+Elcara´cterconocidoovariabledelvectordelespacio estrategiasdetrabajoyemitirjuiciosalresolverunatarea.
+vectorialresultantedelacombinacio´nlineal.
+4. Conclusiones
+Luegoelestudiante,guiadoporelprofesor,enlaresolu-
+cio´n de las restantes situaciones, estudiaba las definiciones Teniendoencuentalosresultadosobtenidosdelestudio
+de conjunto de vectores linealmente independientes (LI) o experimental se comprobo´ que no existe diferencia signifi-
+linealmentedependientes(LD),espaciosgenerados,basede cativaentrelosdoscursosdondeseaplico´ lapropuesta.Por
+unEspacioVectorial(EV),dimensio´ndeunEV,subespacio otraparteseconstato´ lasuperioridadenlosresultadosdelas
+vectorial,diferentestiposdebase,as´ıcomolosdiferentespro- evaluacionesfinalesenlosgruposdondesellevo´ acaboel
+cedimientosyme´todosdetrabajo.Esteprocesocontribuyo´ a experimento.
+quelosestudiantesrevelaraninicialmentesusideasy,luego Elana´lisisporcentualdecadaunodelosindicadoresemi-
+deinteractuarconellas,argumentaranlosconceptosquese tidosporlosexpertospermitio´ develarqueconlapropuesta
+estaban trabajando, a la vez que les permitio´, tanto a ellos dida´cticaloscambiosenlosestudiantesfueronnotablesen
+comoalprofesor,detectarinsuficienciasenelestablecimiento cuantoalempleodelacombinacio´nlinealdevectores(ope-
+derelacionesconceptuales. racio´nrelacionante)pararepresentarcadaconcepto,lautili-
+Enlasrestantessituacionesseplanteabandiferentestareas zacio´ndesistemasinteligentesparalabu´squedadev´ıasde
+aresolverporelestudiante,yelprofesordirig´ıasuactividad solucio´nanteunatareaplanteadaas´ıcomolaelaboracio´nde
+fundamentalmentealacorreccio´ndelasposiblesdesviacio- me´todospropiosparaplantearosolucionartareasalgebraicas.
+nesenelconocimientoyenlashabilidadesencuestio´n.En Adema´s,seincremento´ elempleodelaredidentitariadecon-
+ladina´micadelproceso,losestudiantesten´ıanquecompletar ceptosparalasolucio´ndeestetipodetareas,propicia´ndose
+elestudiodenuevasdefiniciones,propiedades,teoremas,ca- una participacio´n superior en discusiones sobre relaciones
+racterizacionesyme´todosdetrabajoengeneral,pues,enel conceptualesdadasendiferentesformas,dondelosestudian-
+discursodelprofesorso´loseexplicabanloscontenidosdados tesfueroncapacesdeidentificarenmayormedidaelementos
+enlasituacio´ninicial. comunesydiferentesencadaconceptoimplicado.Finalmen-
+Loanteriorrequirio´ porpartedeldocenteeldesarrollode teelestudiocomprobo´ tambie´nunaumentoenlashorasde
+unasecuenciacio´ndida´cticade logosypraxis parael trata- estudio independiente dedicadas a la asignatura y una ma-
+miento de cada tipo de agrupacio´n de los conceptos, orien- yorindependenciadelosestudiantesenlasolucio´ndetareas
+tandoalestudiodelasdesigualdadesentreestosma´squeen algebraicas.
+las semejanzas y trabajando el paso de una forma de dife- Lacorrelacio´ndelasvaloracionescient´ıficasobtenidas
+renciacio´n a otra; para lo cual fue necesario consolidar las demostro´ lastransformacionesalcanzadasporlosestudiantes
+anticipacionesparaelulteriordesarrollo.Lasformasdedife- deingenier´ıa,as´ıcomolafactibilidaddelapropuestacomo
+renciacio´ndebentrabajarseapartirdelasrelacionesdetipo alternativaparalaformacio´nydesarrolloderelacionescon-
+superordinado-subordinado,gene´rico-espec´ıfico,parte-todo, ceptuales en el PEA del AL en dichos estudiantes, aunque
+polivalentes y complejas. Para esto se utilizaron los grafos no se deben obviar sus limitaciones y la necesidad de una
+Secuenciacio´ndida´cticaentrelogosypraxisdelacombinacio´nlineal 149
+adecuada preparacio´n de los profesores, pues en ocasiones [6] J.GodinoandC.Batanero.Unaaproximacio´nsemio´tica
+resultainevitableelempleodeotrasactividadesdida´cticas. y antropolo´gica a la investigacio´n en dida´ctica de las
+matema´ticas. Technicalreport,1999.
+Referencias
+[1] J.Bu´a,M.T.Ferna´ndez,andJ.Salinas. Competencia
+[7] M.Gutie´rrez,R.Va´zquez,andO.Pe´rez. Laintegracio´n
+matema´ticadelosalumnosenelcontextodeunamo-
+y sistematizacio´n de las matema´ticas en la formacio´n
+delizacio´n:aceiteyagua. RevistaLatinoamericanade
+ba´sicadeprofesionalesdelaingenier´ıa.ActaLatinoame-
+Investigacio´nenMatema´ticaEducativa.,19(2):135–163,
+ricanadeMatema´ticaEducativa.,16(2):824–829,2003.
+2007.
+[2] G.E.CapoteLeo´n,N.RizoRabelo,andG.BravoLo´pez.
+Laformacio´nde ingenierosenla actualidad. Unaex- [8] H.Herna´ndez. Elperfeccionamientodelaensen˜anza
+plicacio´nnecesaria.RevistaUniversidadySociedad., delaMatema´ticaSuperiorCubana.Experienciasenel
+8(1):21–28,2016. A´lgebraLineal. PhDthesis,CiudaddelaHabana,1989.
+[3] Y.Chevallard. L’analysedespratiquesenseignantesen
+the´orieanthropologiquedudidactique. Recherchesen [9] C. Mola. Estrategia dida´ctica para la comprensio´n
+DidactiquedesMathe´matiques.,19(2):221–266,1999. delosobjetosdela´lgebralinealenlascarrerasdein-
+genier´ıa de la universidad de Camagu¨ey. PhD thesis,
+[4] G.W.Clough. Theengineerof2020:Visionsofengi-
+UniversidaddeCamagu¨ey,2013.
+neeringinthenewcentury. Technicalreport,National
+AcademyofEngineering,Washington,DC.,2004.
+[5] J.Gasco´n. Evolucio´ndeladida´cticadelasmatema´ticas [10] I. Yordi. La habilidad del ca´lculo de procesos en la
+comodisciplinacient´ıfica. RechercheenDidactiquedes solucio´n de tareas docentes de la asignatura A´lgebra
+Mathe´matiques,18/1(52):7–33,1998. Lineal. PhDthesis,UniversidaddeCamaguey.,2003.

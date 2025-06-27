@@ -1,0 +1,688 @@
+CienciasMatema´ticas,Vol.30,No.2,Pag.33-41,2016
+Recibido06-2016
+Aplicacio´n del MEF a un Problema de Poisson sobre
+regiones mu´ltiplemente conexas.
+FEM applied to a Poisson Problem on multiply
+connected domains.
+Abraham Toledo Sa´nchez1
+Resumen En este trabajo se resuelve un Problema de Poisson mediante el Me´todo de Elementos Finitos
+(MEF).Elproblemasedefinesobreunaregio´nacotadaymu´ltiplementeconexa,dadacomoelconjuntodelos
+puntoscomprendidosentreunacircunferencia,centradaenelorigendecoordenadas,yunpol´ıgonoregular
+exterioradichacircunferencia,tambie´ncentradoenelor´ıgendecoordenadas.Lafuncio´nsolucio´ndebecumplir
+condicionesdeperiodicidadenlafronteradeterminadaporelpol´ıgonoyanularseenlafronteradeterminada
+porlacircunferencia.Seobtienelaformulacio´nvariacionalcorrespondienteysedemuestraquesesatisfacen
+lascondicionesdelteoremadeLax-Milgram.Laimplementacio´ncomputacionalserealizausandoFreeFem++.
+Losresultadosseaplicanalca´lculodelapermeabilidadefectivadeunmedioporosoysecontrolanmediante
+comparacionesconlosreportadosporotrosautores.
+Abstract Inthiswork,aPoissonProblemissolvedbymeansoftheFiniteElementMethod(FEM).Theproblem
+isdefinedonabounded,multiplyconnecteddomain,givenasthesetofpointsbetweenacircumference,centered
+inthecoordinatesoringin,andaregularpolygon,exteriortothecircumference,alsocenteredinthecoordinates
+origin. Thesolutionmustsatisfysomeperiodicitycondicionsontheborderdeterminedbythepolygon,andmust
+benullontheborderdeterminedbythecircumference. Thecorrespondingvariationalformulationisobtained
+anditisprooventhattheLax-MilgramTheoremconditionsaresatisfied. Thecomputationalimplementationitis
+madeusingFreeFem++. Theresultsareappliedtothecalculationofeffectivepermeabilityofaporousmedium
+andarecontroledbycomparisonwithotherauthorsresults.
+PalabrasClave
+MEF—EDP—MetododeElementosFinitos—ProblemadePoisson
+1Estudiantedeu´ltimoan˜odeLicenciaturaenMatema´tica.FacultaddeMatema´ticayComputacio´ndelaUniversidaddeLaHabana,San
+La´zaroyL,CP10400,LaHabana,Cuba.
+Introduccio´n altocostocomputacionaloriginal.Estosproblemassobreel
+elementorepresentativosonusualmentellamados”problemas
+Con frecuencia en la ingenier´ıa, es necesario estudiar sobre la celda ba´sica”. En [6], se resuelven problemas de
+feno´menos que ocurren sobre medios heteroge´neos cuyas Poissonsobrelacelda,usandoFEM,parapredecirlapermea-
+propiedades f´ısicas fluctu´an notablemente. Las ecuaciones bilidad efectiva de medios perio´dicos porosos. El presente
+diferencialesquemodelanmatema´ticamentetalesprocesos trabajotienecomoobjetivoresolverestosmismosproblemas
+tienen coeficientes ra´pidamente oscilantes. La implementa- queen[6]usandoFreeFem++.
+cio´ndirectademe´todosnume´ricosparasusolucio´nrequiere En la seccio´n 1 se dan conceptos preliminares que se
+deunelevadocostocomputacional.Losme´todosdehomo- emplearanposteriormente.Enparticularsepresentalanocio´n
+geneizacio´n([3],[4],[5],entreotros)permitentransformar deCoordenadasOblicuas,lascualesseempleanparadefinir
+dichasecuacionesenotrasconcoeficientesconstantes,que laregio´nasociadaalproblemadeintere´s.Adema´sseexponen
+son los llamados coeficientes efectivos y su conocimiento brevementealgunosresultadosdelAna´lisisFuncional.Enla
+lebrindaalingenierounaestimadodelcomportamientoma- seccio´n 2 se presentan las formulaciones fuerte y de´bil del
+crosco´picodelmedioheteroge´neodeintere´s.Sinembargo,la Problema de Poisson estudiado y se demuestra, aplicando
+determinacio´ndedichoscoeficientesrequieredelasolucio´n el Teorema de Lax-Milgram [8], que la segunda, tambie´n
+deproblemasdecontornosobreunelementorepresentativo denominada formulacio´n variacional, es un problema bien
+dedichomedio,conlaventajadequeloscoeficientesdelas planteado.Ellassecciones3y4serealizanlosca´lculosde
+ecuacionesaresolversondiscontinuosperonora´pidamente permeabilidad y sea analiza co´mo var´ıa con respecto a los
+oscilantes siendo posible aplicar me´todos nume´ricos sin el valoresdelospara´metros,adema´ssecomparanlosvalores
+34 Aplicacio´ndelMEFaunProblemadePoissonsobreregionesmu´ltiplementeconexas.
+obtenidosconloscorrespondientesen[6].Alfinalseanexa C
+elco´digodeFreeFem++implementadoparalasolucio´n.
+C'
+1. Resultados preliminares
+1.1 Puntosinterioresdeuntria´ngulo.Coordenadas P
+Oblicuas
+#» #»
+Definicio´n1.1. Seanlosvectores v,w ∈R2linealmentein-
+#»
+dependientes.Entoncesparacualquier p ∈R2existenescala-
+resα,β ∈Rtalesque A B
+#» #» #» Figura1.2.Puntointeriordel(cid:52)ABC.
+p =α v +β w. (1.1)
+#» #»
+Sedicequelosvectores v y w formanunsistemadecoor-
+Dadountria´ngulo(cid:52)ABC enelplanoaf´ın,sepuedeen-
+denadas oblicuas (o una base oblicua) en el plano R2 y las
+#» contrarunsistemadecoordenadasoblicuasa # s » oci # a » doael,por
+coordenadasde p enestesistemason(α,β)(Fig1.1)[?].
+ejemplo,sepuededefinirlabaseoblicua{AB,AC}.SiPes
+# »
+unpuntodelplanoaf´ın,asociandoaPelvectorAPesposible
+# »
+expresarAPcomo
+# » # » # »
+AP=αAB+βAC, (1.3)
+w
+dondeα,β ∈R.Unacondicio´nnecesariaparaqueelpuntoP
+seainterioral(cid:52)ABC,esquepertenezcaalprimercuadrante,
+esevidenteportantoque
+Βw
+p
+α,β ≥0 (1.4)
+Porotrolado,siPesinterioral(cid:52)ABCentonces,debeestar
+# »
+sobrealgu´nsegmentoBC(cid:48),dondeC(cid:48)=A+qAC,con0≤q≤1
+v
+(Fig1.2).Luego
+Αv
+# » # » # »
+(cid:211) AP=(1−t)AB+tAC(cid:48)
+Figura1.1.Sistemadecoordenadasoblicuas.
+# » # »
+(cid:211) =(1−t)AB+tqAC (1.5)
+# »
+Proposicio´n1.1. SeanA,B,Cpuntosnocolinealesdelplano con 0≤t ≤1. Por tanto las coordenadas de AP en la base
+# » # »
+af´ın.DadounpuntoPsobreelsegmentoBC,sepuedeexpre- {AB,AC}sonα =1−t yβ =tq.Sumandosetiene
+sarsuvectordeposicio´nrespectoaAcomo
+α+β =1−t+qt≤1−t+t=1.
+# » # » # »
+AP=(1−t)AB+tAC 0≤t≤1 (1.2)
+Hasidoprobadalasiguienteproposicio´n.
+Demostracio´n. EsconocidoquesiPesunpuntodelsegmen- Proposicio´n1.2. SiA,B,Csonpuntosnocolinealesdelplano
+toBC,entonces af´ınyPunpuntointeriordel(cid:52)ABC.Lascoordenadas(α,β)
+# » # » # »
+P=B+t(C−B) deAPenlabaseoblicua{AB,AC}satisfacenladesigualdad
+paraalgu´nt∈[0,1].RestandoelpuntoAdelaecuacio´nante- α+β ≤1 (1.6)
+riorqueda
+P−A=B−A+t(C−B) Lascondiciones(1.4)y(1.6),sonadema´ssuficientespara
+queunpuntoPseainterioral(cid:52)ABC.Portantotalescondi-
+oenformavectorial cionescaracterizanalospuntosinterioresdeuntria´ngulo.
+# » # » # »
+AP=AB+tBC 1.2 HerramientasdelAna´lisisFuncional
+# » # » # »
+Definicio´n1.2(Formalinealcontinua). SiV esunespacio
+=AB+t(AC−AB)
+# » # » deHilbertyF :V →ResunaformalinealsobreV.Sedice
+=(1−t)AB+tAC queF escontinuasiexisteM>0talque
+|F(v)|≤M(cid:107)v(cid:107) ∀v∈V. (1.7)
+V
+Aplicacio´ndelMEFaunProblemadePoissonsobreregionesmu´ltiplementeconexas. 35
+Definicio´n1.3(Formabilinealcontinua). SiV esunespacio X 2
+deHilbertya:V×V →ResunaformabilinealsobreV.Se
+dicequeaescontinuasiexistec>0talque (cid:71) 1 0.4 (cid:87)
+|a(u,v)|≤c(cid:107)u(cid:107) (cid:107)v(cid:107) ∀u,v∈V. (1.8)
+V V
+0.2
+Definicio´n1.4(Formabilinealcoercitiva). SiV esunespacio
+deHilbertya:V×V →ResunaformabilinealsobreV.Se X
+(cid:45)0.4 (cid:45)0.2 0.2 0.4 1
+dicequeaescoercitivasiexistec>0talque
+(cid:71)
+a(v,v)≥c(cid:107)v(cid:107)2 ∀v∈V. (1.9) (cid:45)0.2 2
+V
+Definicio´n 1.5. Sea Ω una subconjunto abierto de Rn. Se
+(cid:45)0.4
+defineH1(Ω)comoelespacio
+√
+H1= (cid:8) v∈L2(Ω):∂αv∈L2(Ω), ∀α ∈Nn, |α|=1 (cid:9) . (a) Parak=2,θ0=π/4,a= 2/2
+(1.10)
+X
+Verdefinicio´n1.1de[1]. 2
+Teorema1.1(DesigualdaddePoincare´-Friedrichs). SeaΩun (cid:71) (cid:87)
+1
+subconjuntoabierto,acotado,Lipschits-continuoyconexode
+0.5
+Rn.SupongaΓesunsubconjuntocerradode∂Ωconinterior
+novac´ıo.Sedefine
+H Γ 1(Ω)= (cid:8) u∈H1(Ω):u| Γ =0 (cid:9) . (1.11) (cid:45)1.0 (cid:45)0.5 0.5 1.0 X 1
+(cid:71)
+EntoncesexisteunaconstanteC>0quedependedeΩtal 2
+queparatodafuncio´nu∈H1(Ω)secumple
+Γ
+(cid:45)0.5
+(cid:107)u(cid:107) ≤C(cid:107)∇u(cid:107) . (1.12)
+L2 L2
+Ver Teorema 1.14 de [1]. El s´ımbolo ∇ denota el operador
+(b) Parak=3,θ0=0,a=1
+Gradiente
+∂u ∂u Figura2.1.Regio´nΩenelproblema(2.1).
+∇u=( ,..., ). (1.13)
+∂x ∂x
+1 n
+Acontinuacio´nseenunciaunteoremaquesera´ degran dondeP =(acos(iπ +θ ),asin(iπ +θ )),θ ∈[0,2π)(em-
+i k 0 k 0 0
+utilidadma´sadelante. pleandounciertoabusodelenguaje,seinterpretaaP como
+# » i
+suvectordeposicio´nOP).Sedefinenadema´s
+Teorema1.2(Lax-Milgram). SeaV unespaciodeHilbert, i
+a(·,·):V×V →Runaformabilinealcontinuaycoercitiva
+2k−1
+sobreV yF :V →RunfuncionallinealycontinuosobreV. Γ = (cid:91) (cid:8) (x,y)∈R2:(x,y)=αP+βP ;
+1 i i+1
+Entonceselproblema,encontraru∈V talque
+i=0
+(cid:9)
+α,β ≥0; α+β =1
+a(u,v)=F(v) ∀v∈V (1.14)
+yΓ =∂D.Finalmenteseplanteaelsiguienteproblemade
+admitesolucio´nu´nica. 2
+contornoparalaecuacio´ndePoisson,
+VerTeorema2.1de[1]. 
+−∆u= f, x∈Ω
+
+u:Ω−Perio´dica, x∈Γ (2.1)
+1
+2. Formulacio´n matema´tica del problema
+u=0, x∈Γ 
+2
+2.1 Definicio´ndelproblemaensuformafuerte (Fig2.1),donde∆eseloperadorLaplaciano
+Seana,r>0,k=2,3,...yD={(x,y)∈R2:x2+y2≤r}.
+∂2
+Sedefinelaregio´nΩcomo ∆u= ∑ u.
+∂x
+i=1,2 i
+(cid:18)2k−1
+Ω= (cid:91) (cid:8) (x,y)∈R2:(x,y)=αP+βP ; LaΩ−periodicidadesta´ descritaporlaley
+i i+1
+i=0
+(cid:19) u(αP+βP )=u(βP +αP );
+(cid:9) i i+1 i+k i+1+k
+α,β ≥0; α+β <1 \D
+∀i∈Z ; α,β ≥0; α+β =1 (2.2)
++
+36 Aplicacio´ndelMEFaunProblemadePoissonsobreregionesmu´ltiplementeconexas.
+dondelossub´ındicesxeydenotanderivacio´nconrespecto
+P
+1
+ΑP
+0
+(cid:43)ΒP
+1
+P
+0
+aesavariable.Sumandomiembroamiembrolasecuaciones
+(2.4)y(2.5),yagrupandoconvenientementesetiene
+(u v) +(u v) =∆uv+∇u·∇v
+x x y y
+dedondeseobtiene
+∆uv=(u v) +(u v) −∇u·∇v. (2.6)
+x x y y
+Ahorasustituyendo(2.6)en(2.3)setiene
+P
+2
+ΒP
+2
+(cid:43)ΑP
+3
+P
+3 (cid:90)(cid:90) (cid:90)(cid:90) (cid:90)(cid:90)
+√ fvdX = ∇u·∇vdX− (u v) +(u v) dX. (2.7)
+(a) Parak=2,θ0=π/4,a= 2/2 x x y y
+Ω Ω Ω
+P P No´tese que, utilizando el Teorema de Green para regiones
+2 1
+mu´ltiplementeconexas(Teorema11.23de[2],pa´g387),se
+obtienelaidentidad
+ΑP (cid:43)ΒP
+0 1
+(cid:90)(cid:90) (cid:73)
+(u v) +(u v) dX = u vdy−u vdx−
+x x y y x y
+P P
+3 0 Ω Γ1
+(cid:73) (cid:73)
+u vdy−u vdx= u vdy−u vdx (2.8)
+x y x y
+ΒP
+3
+(cid:43)ΑP
+4
+Γ2 Γ1
+puestoquev| =0yportanto
+P P Γ2
+4 5
+(cid:73)
+u vdy−u vdx=0.
+(b) Parak=3,θ0=0,a=1 x y
+Figura2.2.Leydeperiodicidadenelproblema(2.1). Γ2
+Considerandoahoralafamiliadefuncionesϕ :[0,1]→R2
+i
+(Fig2.2).Pararesolverelproblema(2.1)seusara´ elme´todo dadaspor
+deelementosfinitos(MEF)yparalaimplementacio´ndee´ste ϕ(α)=(1−α)P+αP . (2.9)
+i i i+1
+se empleara´ el software FreeFem++. Es de intere´s adema´s
+Porlapropiedaddeperiodicidad(2.2)setieneque
+analizarlasvariacionesdelafuncio´nsolucio´nuencontradao
+ma´sbiendesupromediosobreΩ,paradiferentesvaloresde
+ϕ(α)=(1−α)P+αP
+laconcentracio´nc=|D|/|Ω∪D|,donde|(·)|denotaela´rea i i i+1
+delaregio´n(·). =αP i+k +(1−α)P i+1+k
+=ϕ (1−α). (2.10)
+i+k
+2.2 Formade´bilovariacionaldelproblema
+Pararesolverelproblema(2.1)medianteelMEF,sedebe Notequelasϕ sonparametrizacionesdelossegmentosque
+i
+expresarensuformavariacionalode´bil.Seaelespaciode componenaΓ ,osea,si(x,y)∈Γ entonces(x,y)=ϕ(α)
+1 1 i
+Hilbert paraalgu´ni=1,2,...,2k−1yα∈[0,1].Adema´slasϕ esta´n
+i
+definidasdeformatalquerecorrenlafronteraΓ ensentido
+1
+V ={v∈H1(Ω):v| Γ2 =0y antihorario.Porconsiguientesetieneque
+v| :Ω−perio´dicasenelsentidode(2.2)}.
+Γ1
+1
+(cid:73) 2k−1(cid:90)
+Enlaprimeraecuacio´ndelproblema(2.1),multiplicandopor u vdy−u vdx= ∑ (u v,−u v)| ϕ(cid:48)dα
+x y x y ϕi i
+v∈V enambosmiembroseintegrandosobreΩ,
+i=0
+Γ1 0
+(cid:90)(cid:90) (cid:90)(cid:90)
+1
+fvdX =− ∆uvdX. (2.3) k−1(cid:90)
+= ∑ (u v,−u v)| ϕ(cid:48)dα
+Ω Ω x y ϕi i
+i=0
+0
+Noteque
+1
+2k−1(cid:90)
+(u v) =u v+u v (2.4) + ∑ (u v,−u v)| ϕ(cid:48)dα
+x x xx x x x y ϕi i
+(u y v) y =u yy v+u y v y (2.5) i=k 0
+Aplicacio´ndelMEFaunProblemadePoissonsobreregionesmu´ltiplementeconexas. 37
+siconsideramosβ =1−α yaplicamos(2.10) 3. Resolucio´n, resultados,
+comparaciones
+1
+k−1(cid:90)
+= ∑ (u v,−u v)| ϕ(cid:48)dα
+x y ϕi i 3.1 Casosparticularesparaelproblema
+i=0
+0 Enlosdoscasosparticularesdelproblema(2.1)quetra-
+k−1(cid:90) 1 taremosenestaseccio´n,lafuncio´n f tomaelvalorconstante
+−∑ (u
+x
+v,−u
+y
+v)|
+ϕi(β)
+ϕ
+i
+(cid:48)(β)dβ f =1.Recordemosladefinicio´nde
+√
+Ωenelproblema(2.1).
+i=0 0 Paralosvaloresk=2,θ 0 = π 2 ,a= 2 2,secompruebaquela
+=0. (2.11) seccio´ndefronteraΓ 1 tieneformadecuadradocentradoenel
+origen,conladol=1,elmayorradioquepuedealcanzarla
+Aplicandoesteresultadoa(2.8)seobtieneque
+circunferenciainteriordeterminadaporΓ ,esr =0,5.Se
+2 max
+(cid:90)(cid:90)
+denominara´ Ω aΩparaestaseleccio´ndelospara´metros
+(u v) +(u v) dX =0 (2.12) cuad
+x x y y
+(Fig2.1(a)).Enestecasoestaremosresolviendoelproblema
+Ω
+
+yfinalmenteaplicandoasuvezesteu´ltimoa(2.7)seobtiene −∆u=1 enx∈Ω
+cuad 
+(cid:90)(cid:90) (cid:90)(cid:90) u:Ω −Perio´dica enx∈Γ (3.1)
+cuad 1
+fvdX = ∇u·∇vdX. (2.13) u=0 enx∈Γ 
+2
+Ω Ω
+Enelcasoquelospara´metrosenladefinicio´ndeΩtomen
+Comosehaescogidov∈V arbitrario,seesta´enpresenciadel
+losvaloresk=3,θ =0ya=1,secompruebaquelaseccio´n
+0
+problemavariacional,estoes,encontraru∈V talque
+defronteraΓ tieneformadehexa´gonoregularcentradoen
+1
+(cid:90)(cid:90) (cid:90)(cid:90)
+elorigendecoordenadas,conladol=a=1.Enestecaso
+∇u·∇vdX = fvdX; ∀v∈V (2.14) √
+elvalorma´ximopararesr = 3.Sedenominara´ Ω a
+Ω Ω max 2 hex
+Ωparaestaseleccio´ndelospara´metros(Fig2.1(b)).Eneste
+2.3 Existenciayunicidaddelasolucio´ndelproble- casoseestara´ resolviendoelproblema
+mavariacional
+
+Paraprobarlaexistenciayunicidaddelasolucio´ndelpro-
+−∆u=1 enx∈Ω
+hex 
+blemaensuformade´bil,bastacondemostrarquesecumplen u:Ω hex −Perio´dica enx∈Γ 1 . (3.2)
+lashipo´tesisdelTeoremadeLaxMilgram(1.2).
+u=0 enx∈Γ
+2
+
+Proposicio´n 2.1. El problema (2.14) admite una solucio´n
+3.2 Resolucio´nmedianteelMEF
+u´nica.
+Paraencontrarlasolucio´ndelosproblemas(3.1)y(3.2)se
+Demostracio´n. Paraesteproblemasetiene aplicaelMEF,implementadoconFreeFem++.Elprimerpaso
+(cid:90)(cid:90) sera´ encontrarladiscretizacio´notriangulacio´ndelaregio´n
+a(u,v)= ∇u·∇vdX (2.15)
+Ω.ParahacerestoenFreeFem++,esnecesarioespecificarlas
+Ω fronterasdelaregio´nmediantecurvasparame´tricascerradas
+(cid:90)(cid:90)
+sin auto intersecciones. Recordando el problema (2.14), se
+F(v)= fvdX. (2.16)
+tiene que ∂Ω=Γ ∪Γ , donde adema´s los segmentos que
+1 2
+Ω
+componenaΓ sepuedenparametrizarporlasfuncionesϕ
+1 i
+ylanorma(cid:107)·(cid:107) V =(cid:107)·(cid:107) H1 =(cid:107)∇·(cid:107) L2 .Lacoercitividaddeaes para i=0,...,2k−1 (ver ecuacio´n 2.10). Por otro lado Γ 2
+inmediata puedeparametrizarseporlafuncio´nζ :[0,2π)→R2,donde
+a(v,v)=(∇v,∇v)=(cid:107)∇v(cid:107)2≥(cid:107)v(cid:107)2 ∀v∈V. (2.17)
+V ζ(t)=(rcost,rsint). (3.3)
+Lacontinuidaddea(u,v)obtienedeaplicarladesigualdadde
+Cauchy-Schwarz Enelsiguienteco´digosedefinenΓ yΓ enFreeFem++.
+1 2
+a(u,v)=(∇u,∇v)≤(cid:107)u(cid:107) (cid:107)v(cid:107) ∀u,v∈V. (2.18) // Parametrizaciones ϕ de los
+V V i
+// segmentos de Γ . alph ∈[0,1].
+La continuidad de F se tiene de aplicar la desigualdad de 1
+func VECT phi(int i, real alph){
+Cauchy-SchwarzyluegoladesigualdaddePoincare´
+VECT Res =
+F(v)=(f,v)≤(cid:107)f(cid:107)(cid:107)v(cid:107)≤C(cid:107)f(cid:107)(cid:107)v(cid:107) V ≤C(cid:107)v(cid:107) V . (2.19) (1-alph) * PP(i % (2 * k),:)
++ alph * PP((i+1) % (2 * k), :);
+Habiendocomprobadoelcumplimientodelashipo´tesisdel
+return Res;
+Teorema1.2(Lax-Milgram),setienequeelproblema(2.14)
+}
+admiteunasolucio´nu´nica.
+Paraestademostracio´nsesiguio´ lamismaideaqueen[7] // Definici´on Γ
+1
+p192. border G1(t=0,1;i){
+38 Aplicacio´ndelMEFaunProblemadePoissonsobreregionesmu´ltiplementeconexas.
+// Espacio de EF
+fespace Vh(Th, Pk,
+// Condiciones de periodicidad
+periodic=[
+[0, ratio(0, x, y)],
+[0+k, 1-ratio(0+k, x, y)]
+,[1, ratio(1, x, y)],
+[1+k, 1-ratio(1+k, x, y)]
+h
+// Descomentar para k=3,
+// Comentar para k=2
+//,[2, ratio(2, x, y)],
+// [2+k, 1-ratio(2+k, x, y)]
+]);
+√
+Figura3.1.Triangulacio´ndeΩparak=2,a= 2,h=0,2.
+2
+Vh u,v;
+VECT p = phi(i,t); FinalmentesedefineyresuelveelproblemadePoisson
+x=p(X); y=p(Y); sobreΩysecalculaelpromediok∗=(cid:104)u(cid:105) sobrelacelda
+Ωcp
+label=i; perio´dica, donde Ω = Ω∪D y (cid:104)·(cid:105) es el operador de
+cp Ωcp
+} promediacio´nsobreΩ
+cp
+macro LABG2() 1000// Label Γ
+2
+// Definici´on Γ 1 (cid:90)
+2 (cid:104)u(cid:105) = udX. (3.4)
+border G2(t=0,2*pi){ Ωcp |Ω |
+cp
+x=r * cos(t); y=r * sin(t); Ωcp
+label=LABG2;
+Elco´digoparaestoes
+}
+solve Poisson(u,v,solver=CG) =
+LavariablePPutilizadaenelco´digocorrespondealacolec-
+cio´ndepuntosP,oseasusvectoresdeposicio´n. int2d(Th)(dx(u) * dx(v)
+i
+Losiguienteesgenerarlatriangulacio´nT deΩ,donde + dy(u) * dy(v))
+h
+h =ma´x{(cid:107)P −P(cid:107):P,P ∈T ∈T }≤heseldia´metro - int2d(Th)(v)
+max 1 2 1 2 n h
+ma´ximodelostria´ngulosqueconformanT .Latriangulacio´n +on(LABG2,u=0);
+h
+enFreeFem++serealizamedianteelAlgoritmodeDelaunay-
+// ´Area de la celda peri´odica
+Voronoi[9],elcualgarantizaqueladensidaddeve´rticesenel
+interiordeT esproporcionalaladensidadenlasfronteras. real Acp = a * a *
+h
+Definiendo una densidad constante 1/h en las fronteras se cos(pi/(2*k)) * sin(pi/(2*k));
+real kAst = int2d(Th)(u)/Acp;
+obtienelamismadensidadconstanteenelinterior,demanera
+talqueh ≤hFig3.1.Laimplementacio´neslasiguiente.
+max Lafigura3.2muestralagra´ficadelafuncio´nencontrada
+// Esta es la forma de definir un array (u)paraunaconcentracio´nc=0,5,tantoparaelproblemacon
+// de fronteras en FreeFem. Ω=Ω (Fig3.2(a)),comoparaelproblemaconΩ=Ω
+cuad hex
+int[int] nn(2*k); (Fig3.2(b)).Elpromediok∗modelalapermeabilidadefectiva
+// n=longitud∗densidad deuncompuestoporoso[6].Elco´digocompletodelprograma
+nn=(2*a*sin(pi/(2*k)) * 1./h; quepuedeejecutarseconelsoftwareFreeFem++apareceen
+// Triangulaci´on T de Ω elAnexo.
+h
+mesh Th = buildmesh(G1(nn)
++ G2(-2.*pi * r / h));
+A continuacio´n se define el espacio correspondienteV
+h
+de elementos finitos, en el que las funciones deben ser Ω-
+perio´dicasenelsentidode(2.2).
+// Raz´on entre los segmentos PP y PP
+i i i+1
+func real ratio(int i, real x, real y){
+VECT p = [x,y], A = p-PP(i%(2*k),:),
+B=PP((i+1)%(2*k),:)-PP(i%(2*k),:);
+return norm(A)/norm(B);
+(a) Ω=Ωcuad (b) Ω=Ωhex
+} Figura3.2.Regio´ndedefinicio´ndelproblema.
+Aplicacio´ndelMEFaunProblemadePoissonsobreregionesmu´ltiplementeconexas. 39
+3.3 Evaluacio´nyComparaciones Adema´ssepresentaunacolumnaconlosresultadosobtenidos
+por[6].Enesetrabajoelautorcalculalapermeabilidadcomo
+Acontinuacio´nseutilizaelprogramadescritoenlasec-
+cio´nanterior,parahallarlosvaloresdek∗ adiferentescon- (cid:104)u(cid:105)
+centracionesytambie´nvariandoeldia´metroma´ximohpara
+(cid:101)k=
+4r
+Ω
+2
+cp. (3.5)
+observardeformacualitativalaconvergenciadelMEF.Los
+cuadros1y2muestranlosresultadosparaloscasosk=2(cel- Por esa razo´n los valores incluidos en esa columna de las
+daperio´dicacuadrada)yk=3(celdaperio´dicahexagonal), tablas, esta´n multiplicados por 4r2. Tambie´n se presentan
+as´ıcomoeltiempodeejecucio´ndelprogramaencadacaso. columnasparaloserroresabsolutosentrelosresultadosen
+ambostrabajos.
+Cuadro1.PermeabilidadparaelcasoΩ=Ω
+cuad
+ydiferentesvaloresdecyh.Comparacio´ncon[6].
+P P Comparacio´ncon[6]
+1 2
+c h k∗ t (seg) k∗ t (seg) 4r2(cid:101)k |k∗−4r2(cid:101)k|(P
+1
+) |k∗−4r2(cid:101)k|(P
+2
+)
+0.1 0.05 0.0810166 0.04 0.0820764 0.073
+0.1 0.02 0.0812168 0.155 0.0813988 0.648
+0.1 0.01 0.0812561 0.822 0.0813013 4.962
+0.1 0.005 0.0812655 5.036 0.0812764 49.437 0.0812671 1.54002e-006 9.33916e-006
+0.3 0.05 0.0223098 0.031 0.0226294 0.06
+0.3 0.02 0.0224352 0.118 0.0224859 0.427
+0.3 0.01 0.0224529 0.541 0.0224658 3.01
+0.3 0.005 0.0224575 3.124 0.0224608 22.166 0.0224569 6.4892e-007 3.88164e-006
+0.5 0.05 0.00696453 0.026 0.00712745 0.042
+0.5 0.02 0.00705838 0.085 0.00708329 0.262
+0.5 0.01 0.00707086 0.359 0.00707685 1.675
+0.5 0.005 0.00707374 1.958 0.00707522 12.744 0.00707348 2.54978e-007 1.73987e-006
+0.77 0.05 0.00129857 0.022 0.00135209 0.034
+0.77 0.02 0.00133414 0.051 0.00134277 0.115
+0.77 0.01 0.00133922 0.163 0.00134141 0.576
+0.77 0.005 0.00134051 0.744 0.00134107 4.014 0.00134059 7.95356e-008 4.78879e-007
+Cuadro2.PermeabilidadparaelcasoΩ=Ω
+hex
+ydiferentesvaloresdecyh.Comparacio´ncon[6].
+P P Comparacio´ncon[6]
+1 2
+c h k∗ t (seg) k∗ t (seg) 4r2(cid:101)k |k∗−4r2(cid:101)k|(P
+1
+) |k∗−4r2(cid:101)k|(P
+2
+)
+0.1 0.05 0.0514399 0.034 0.0524636 0.053
+0.1 0.02 0.0516456 0.1 0.0518218 0.346
+0.1 0.01 0.0516796 0.444 0.0517245 2.379
+0.1 0.005 0.051689 2.685 0.0516996 19.595 0.0516904 1.40803e-006 9.24442e-006
+0.3 0.05 0.0133676 0.025 0.0136784 0.038
+0.3 0.02 0.0134889 0.08 0.0135411 0.241
+0.3 0.01 0.0135081 0.324 0.0135211 1.569
+0.3 0.005 0.0135127 1.774 0.013516 11.6 0.0135129 1.75023e-007 3.11611e-006
+0.6 0.05 0.0016381 0.022 0.00173809 0.029
+0.6 0.02 0.00169752 0.051 0.00171523 0.118
+0.6 0.01 0.0017076 0.175 0.00171189 0.672
+0.6 0.005 0.00170997 0.815 0.00171105 4.575 0.00171009 1.21145e-007 9.63691e-007
+0.9 0.05 4.8198e-005 0.018 6.44944e-005 0.023
+0.9 0.02 5.96582e-005 0.029 6.30346e-005 0.042
+0.9 0.01 6.1993e-005 0.06 6.28124e-005 0.13
+0.9 0.005 6.25479e-005 0.183 6.27566e-005 0.583 6.26777e-005 1.29853e-007 7.88384e-008
+40 Aplicacio´ndelMEFaunProblemadePoissonsobreregionesmu´ltiplementeconexas.
+4. Conclusiones y recomendaciones }
+return PP;
+Eneltrabajosepresentaunme´todorelativamentesencillo }
+pararesolverunproblemadePoissonsobreunaclaseparticu- // Norma de un vector
+larderegionesmu´ltiplementeconexasdeR2.Laideaseguida
+func real norm(VECT A){
+puedeservircomogu´ıapararesolverelmismoproblemaen return sqrt(A ’* A);
+otrostiposderegionesmu´ltiplementeconexas.Losresultados }
+obtenidosmedianteelempleodelprogramaimplementado, // Vertices de Γ
+1
+muestran como disminuye la permeabilidad a medida que VECTARR PP =
+aumenta la concentracio´n de poros, tanto en el modelo de genVertexes(a, phi0, k);
+celdacuadrada,comoeneldeceldahexagonal.Lacompa-
+racio´nconlosresultadosde[6]daunamedidadelavalidez // Parametrizaciones ϕ de los
+i
+delosaqu´ıpresentados.Enelerrorabsolutoseapreciaque // segmentos de Γ .
+1
+losresultadosenambostrabajossonmuypro´ximos,aunque func VECT phi(int i, real alph){
+talproximidaddisminuyeamedidaqueseaumentalacon- VECT Res =
+centracio´n,porloqueserecomiendacompensarlape´rdidade (1-alph) * PP(i % (2 * k),:) +
+precisio´nmedianteelusodeunespaciadohma´spequen˜oen
+alph * PP((i+1) % (2 * k), :);
+estoscasos. return Res;
+EstetrabajoformapartedelproyectodeTesisdeGrado }
+delautor,enelquesepropone,porejemplo,ampliarelestudio
+alcasoenqueΓ 2 seaunasu´percircunferencia,esdecireste´ // Definicion Γ
+dadaporlaecuacio´n|x|p+|y|p=rpcon p,r>0.
+border G1(t=0,1;
+1
+i){
+VECT p = phi(i,t);
+Anexo x=p(X); y=p(Y);
+label=i;
+4.1 ProgramaenFreeFem++
+}
+Semuestracompletamenteelprogramautilizadoparael
+macro LABG2() 1000// Label Γ
+ca´lculoenFreeFem++ 2
+// Definicion Γ
+2
+// Definici´on de par´ametros.
+border G2(t=0,2*pi){
+int k = 2; // caso cuadrado
+x=r * cos(t); y=r * sin(t);
+// int k = 3; // caso hex´agono
+label=LABG2;
+real h = 0.2;
+}
+real phi0 = pi/4; // caso cuadrado
+// real phi0 = 0; // caso hex´agono
+// Esta es la forma de definir un array
+real a = sqrt(2.)/2;
+// de fronteras en FreeFem.
+real Acp = aˆ2 * int[int] nn(2*k);
+cos(pi/(2*k))*sin(pi/(2*k)); // La f´ormula indica la longitud del
+real r = 0.4;
+// segmento entre h
+nn=2.*a*sin(pi/(2.*k))/h;
+macro Pk() P1// Definir el tipo de // Construcci´on de la triangulaci´on de
+// elemento finito
+// Omega
+mesh Th = buildmesh(G1(nn)
+macro X() 0 // Coordenada ’x’
++ G2(-2.*pi * r / h));
+macro Y() 1 // Coordenada ’y’
+plot(Th, wait=1);
+macro VECT() real[int] // Vector
+// Array de Vectores // Raz´on entre los segmentos PP y
+i
+macro VECTARR() real[int,int] //
+// PP
+i i+1
+func real ratio(int i, real x, real y){
+// Generaci´on de los v´ertices del
+VECT p = [x,y], A = p-PP(i%(2*k),:),
+// pol´ıgono formado por Γ 1 . B=PP((i+1)%(2*k),:)-PP(i%(2*k),:);
+func VECTARR genVertexes(real a,
+return norm(A)/norm(B);
+real phi0, int k){
+}
+VECTARR PP(2*k,2);
+// Espacio de EF
+for(int i = 0; i < 2*k; i++){
+fespace Vh(Th, Pk,
+PP(i,X)= a * cos(phi0 + (i * pi)/k); // Condiciones de periodicidad
+PP(i,Y)= a * sin(phi0 + (i * pi)/k);
+Aplicacio´ndelMEFaunProblemadePoissonsobreregionesmu´ltiplementeconexas. 41
+periodic=[ Matema´ticayComputacio´ndelaUniversidaddeLaHabana,
+[0, ratio(0, x, y)], porlapropuestadeltemayporsuconstanteapoyoeintere´s
+[0+k, 1-ratio(0+k, x, y)] eneldesarrollodeltrabajo.
+,[1, ratio(1, x, y)],
+[1+k, 1-ratio(1+k, x, y)]
+Referencias
+// Descomentar para k=3,
+// Comentar para k=2 [1] Boyer,F.,Martin,S.,2016.Anintroductiontothefinite
+//,[2, ratio(2, x, y)], elementmethod.
+// [2+k, 1-ratio(2+k, x, y)]
+[2] Apostol,T.M.1969.CALCULUSVOLUMEII.MultiVa-
+]);
+riableCalculusandLinearAlgebra,WithApplications
+toDifferentialEquationsandProbability.SecondEdi-
+Vh u,v;
+tion.JohnWiley&Sons.NewYork,London,Sydney,
+Toronto.
+solve Poisson(u,v,solver=CG) =
+int2d(Th)(dx(u) * dx(v) [3] Bensoussan, A., Lions, J.L., Papanicolaou, G., 1978.
++ dy(u) * dy(v)) Asymptotic Analysis for Periodic Structures. North-
+- int2d(Th)(v)
+Holland,Amsterdam.
++on(LABG2,u=0); [4] Sa´nchez-Palencia,E.,1980.NonHomogeneousMedia
+and Vibration Theory. Lecture Notes in Physics, vol.
+plot(u,fill=1,wait=1); 127.Springer,Berlin.
+real kAst = int2d(Th)(u)/Acp; [5] Bakhvalov,N.S.,Panasenko,G.P.,1989.Homogeniza-
+tion Averaging Processes in Periodic Media. Kluwer,
+cout << "k*=" + kAst << endl; Dordrecht.
+[6] Lisboa,E.F.A.2000.UnMe´todoMulti-escalaparael
+Ca´lculodePermeabilidadLongitudinaldeMediosPoro-
+Agradecimientos
+sosFibrososAleatorios.RiodeJaneiro.
+SeagradecealprofesorSe´bastienMartindelaUniversi-
+dadDescartesdePar´ısporelcursoimpartidosobreelMe´todo [7] Larson, M.G.; Bengson, F. 2013. The Finite Element
+Method: Theory, Implementation and Applications.
+deElementosFinitosyporlaasistenciaprestadaenlacom-
+prensio´ndellenguajeFreeFem++.AlosDres.A´ngelaMireya Springer.
+Leo´nMes´ıasyJose´ AlejandroMesejoChiong,ambosdela
+[8] Quarteroni,A.2009.NumericalMethodsforDifferential
+FacultaddeMatema´ticayComputacio´ndelaUniversidadde
+Methods.Springer.
+LaHabana,porelapoyobrindadoaestetrabajosobretodoen
+lorelacionadoconelMEF.Poru´ltimo,peronomenosimpor- [9] George, P.L. 1996. Automatic triangulation. Wiley &
+tante,alprofesorDr.Julia´nBravoCastillerodelaFacultadde Sons.

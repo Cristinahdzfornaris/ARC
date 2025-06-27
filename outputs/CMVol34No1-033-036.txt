@@ -1,0 +1,251 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.33-36
+Recibido06-2020,Aceptado07-2020
+Modelando la Covid-19 con solo una ecuación
+Modeling Covid-19 with a single equation
+Celia T. González González1, Mariano Rodríguez Ricard2*
+Resumen Nuestro interés en este trabajo es la presentación de un modelo de dinámica de epidemia que
+constadeunasolaecuación.SemuestralaequivalenciadelmodeloconlosclásicosdeltipoSIR.Sedestaca
+la conveniencia del modelo para una epidemia de la que se conoce el período medio de recuperación. Se
+muestraunprocedimientoparaelajustedeparámetrosdeacuerdoadatosdados,yenparticular,losquese
+consideraroncuandomodelamoslaepidemiadelaCovid-19enCuba.
+Abstract Our concern in this paper is to present a dynamic model of an epidemic disease with a single
+equation. WeshowtheequivalenceofthismodelwiththeclassicSIR-type. Theconvinienceofthismodelforan
+epidemicforwhichitisknowntherecoveryperiod,ishighlightened. Weshowamethodfortheestimationof
+parametersforagivendata,inparticular,thoseconsideredwhenwemodeledtheCovid-19inCuba.
+PalabrasClave
+modeloSIR,dinámicadeepidemia
+Keywords
+SIRmodel,epidemiologicaldynamics
+1DepartamentodeMatemática,UniversidaddeLaHabana,LaHabana,Cuba,celia@matcom.uh.cu
+2DepartamentodeMatemática,UniversidaddeLaHabana,LaHabana,Cuba,rricard@matcom.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción demodoqueγ+η =1,yasílosnorecuperadossonlosque
+fallecen.Elsistemaecs.2-3serefiereahoraalasfracciones
+Sonbienconocidoslosmodelosdeladinámicadeepide-
+depoblaciónrepresentadasenlasumaS+I+R+R˜=1.
+miasbasadosenuncontactoaleatorioentrelapoblaciónde
+Comoqueenestosmodelosseasumequelapoblación
+infecciososylapoblacióndesuceptibles[1]-[3].Elejemplo
+totalesconstanteynosreferimosafraccionesdepoblación,
+mássimple[4]eselconocidocomomodeloSIS(suceptible-
+resultacómodoreducirvariablesenelsistema,porejemplo
+infeccioso-suceptible),yqueesrepresentadoporelsistema
+eliminandolafraccióndelossuceptibles.Estopuedehacerse
+encualquieradelossistemasmencionadosanteriormente.
+dS/dt=γI−βSI ; dI/dt=−γI+βSI (1)
+El modelo que consideramos en este trabajo resulta de
+asumirconocidoelperíododerecuperación,loquepermite
+dondeS+I=1,SeslafraccióndesuceptibleseIeslafrac-
+eliminar también la tercera ecuación del sistema ec.2. Las
+cióndeinfecciososrespectodeunapoblacióncuyacantidad
+ecuacionessontodasnildimensionales,yparaellohemoscon-
+esconocida,β eslatasadecontagio(odecontacto),yγ es
+sideradofraccionesdepoblaciónrespectodeunapoblación
+la tasa de recuperación. Se asume en este modelo que los
+totalfijaconocida,yunaescalatemporaldeundía.Así,los
+recuperadossetornansuceptiblesnuevamente.
+parámetros en las ecuaciones tampoco tienen dimensiones
+OtromodelomuyempleadoeselllamadoSIRendonde
+físicas.EstosdetalleslosveremosenlaSección1.EnlaSec-
+se asume que los recuperados no se vuelven a infectar. El
+ción2semuestralafunciónobjetivoylamaneraenquese
+modelotípicoeseldeKermack-McKendrick[2],
+puedenestimarlosparámetrosdelaepidemia.EnlaSección3
+semuestranalgunasfigurasapartirdedatosoficialesrecopila-
+dS/dt=−βSI ; dI/dt=βSI−γI ; dR/dt=γI (2)
+dos.Alfinal,enlaSección4,damosunasbrevesconclusiones
+deltrabajo.
+en la que se asume nuevamente que S+I+R=1, y se re-
+fierenlasfraccionesauntamañodepoblaciónconstante.En
+1. La ecuación del modelo
+ocasiones,elsistemaec.2secomplementaconunaecuación
+asociadaalafraccióndefallecidos(removidos)R˜apartirde Porelmomento,consideremoselsistemaec.2,enelque
+unatasadeletalidadη,resultando, vamosaasumirquelafracciónderecuperadosseincluyeenla
+delossuceptibles,resultandoelsistemaec.1.Así,básicamen-
+dR˜/dt=ηdI/dt , (3) tehaydospoblaciones,ladelosnoinfecciosos(suceptibles
+34 ModelandolaCovid-19consolounaecuación
++recuperados)representadaporS(t)yladelosinfecciosos remarcaelhechodequeconlostresparámetrosmencionados
+(sintomáticos+asintomáticos)representadaporI(t).Sedes- enlaec.6yelconocimientodelperíodomedioderecupera-
+tacaquepartedelapoblacióndeinfecciosospasa,alcabode ción,yatenemoslacurvadelaepidemia.Lostresprimeros
+unciertoperíododetiempo,algrupodelosrecuperados.De parámetroshayquedeterminarlosdelosdatosrecopilados,
+estamanera,S(t)+I(t)=1,ypodemoseliminarlavariable mientrasqueT debedeterminarseporlosespecialistasapartir
+S,quedandolaecuaciónparalosinfecciosos(=infectados) delconocimientodelaenfermedad.
+enlaforma Complementariamente,laletalidadde laepidemiasolo
+dI/dt=I(σ−βI) (4) puededeterminarseapartirdelosdatosquesetenganencada
+lugardeinfectación,ydependedelosrecursoshospitalarios
+enlaquehemosconsideradoelparámetro
+queesténadisposicióndelosenfermos,ydelascondiciones
+σ =β−γ (5) físicasdecadainfectado.Esohacequesoloestimadosestadís-
+ticospudierandaralgúnvalorrazonabledelatasadeletalidad
+elquedebeserpositivoparaqueexistaunapoblacióndein- en la ec.3. De ese modo, la tasa de letalidad no tiene que
+fecciosos.Estaecuacióntienesolodospuntosestacionarios, incluirsedentrodelosparámetrosadeterminarenelsistema,
+I=0eI=σ/β,elprimeroesinestablemientrasqueelsegun- puessedeterminademaneraindependiente.
+doesasintóticamenteestable.RecordandoqueI representa
+unafraccióndepoblación,seconcluyequeelsegundoesel
+2. Estimación de parámetros
+valormáximodelafraccióndepoblacióndeinfecciosos.La
+interpretacióndeesteparámetroσ seaclaraacontinuación. TenemosquedeterminarlafunciónI(t)dadaenlaec.6y,
+La solución de la ec.4 resulta fácil de obtener, y se puede paraellocontamosconelconocimientodelosdatosrecopila-
+representarenlaformasiguiente: dosparaintentarhacerelajustedelosparámetrosquepermita
+queelgráficodelafunciónI(t)brindelamejoraproximación
+exp(σt)
+I(t)=Lκ (6) posiblealosdatosoficialessobrelacantidaddeindividuos
+κexp(σt)−κ+1
+quesehancontagiadoeneltranscursodelaepidemia.Estoes
+lomismoquedecirquelospuntossobreelgráficofracciónde
+Aquí L=l´ım I(t) es el valor máximo de la fracción de
+t→∞
+poblacióninfectadavstiempoquecorrespondenalosdatos
+infecciosos,yκ representalafraccióninicialdeinfecciosos
+oficiales diarios disten lo menos posible de la curva de la
+relativaaltotaldeinfecciososposible,estoes,I(0)=Lκ.Por
+funciónI(t).
+estarazón,κ resultasertambiénunparámetrodesconocido
+Naturalmente,haymuchasformasdeenfocaresteproble-
+aunqueseconozcaelnúmerodeinfectadosenelmomento
+mayalgunasdeellasmuysimples.Sinembargo,podemos
+inicial.Deestaforma,paradescribirladinámicadelaepide-
+considerarelsiguienteenfoque.Sealadesviacióncuadrática
+miatenemosqueidentificartresparámetros:L,σ,κ.Eneste
+media
+momentoesconvenienteaclararlarelaciónentreelnúmeroL
+querepresentaelmáximodelafraccióninfecciosos,yelbien F(L,σ,κ)= M 1 (cid:0) ΣM i=1 d2(a i ,I(t i )) (cid:1)1/2 (9)
+conocidonúmeroreproductivobásicoR deladinámicade
+0 dadaparaunvalorfijodet.Ahoraa representalafracción
+poblaciones.Delaec.5sesigue i
+deinfecciososeneli-ésimodíaseleccionado(t)obtenidade
+i
+σ losdatosoficiales,mientrasqueMrepresentaeltotaldedías
+L= =1−R−1 (7)
+β 0 considerados.Además,d(.,.)representaunadistanciaenR.
+Elproblemaconsisteenencontrarunjuegodevaloresdelos
+conlocuállacondiciónevidenteparaquepersistalapropaga-
+parámetrosparaelcuállafunciónobjetivoenlaec.9alcance
+cióndelaepidemia,esdecirL>0,resultaserequivalentea
+unvalormínimolocalenelespaciodeparámetros.Puedeque
+queR >1.
+0 existamásdeunmínimolocalparaestafunciónobjetivo,pero
+Restaporverlacuantificacióndelosrecuperadosapartir
+almenosenelejemploquenosocupa,sepudoidentificaruno
+de la evolución en la ec.6, o de manera equivalente, la de-
+solo.Pudieratambiénocurrirquenosegaranticelaconver-
+terminación de la cantidad de individuos infectados que se
+genciaalmínimoporunmétododeaproximacionessucesivas
+mantienen activos en un momento dado. Un elemento adi-
+dado,peronofueeseelcasoenelejemploestudiado.Otro
+cional que es brindado por los especialistas de salud es el
+aspecto a destacar es que el juego de parámetros en donde
+llamadoperíodomedioT derecuperacióndelaenfermedad.
+se lograla mejor aproximación dependede la selecciónde
+Conociendo este período medio de recuperación, podemos
+losvaloresydíasseleccionados.Porsupuesto,deberíaocurrir
+introducirlafraccióndeinfectadosactivosY(t)enuninstante
+que,amedidaqueseconsiderenmáspuntos,losjuegosde
+detiempot>T,laqueestarádadapor
+parámetrosquerepresentenlamejoraproximaciónseencuen-
+trencerca deun ciertoconjuntode atracción enel espacio
+Y(t)=I(t)−I(t−T). (8)
+de parámetros y el valor mínimo alcanzado por la función
+PrecisamenteeslacurvadadaporelgráficodelafunciónY(t) objetivoserámenor,alpreciodecálculoscadavezmayores.
+laqueinteresaenlapredicción,demodoqueenellaserepre- Nuestro interés es solo indicar la tendencia de la dinámica
+sentalacantidaddeinfecciososactivosencadamomento.Se para que se puedan tomar decisiones apropiadas. Un papel
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.33-36
+ModelandolaCovid-19consolounaecuación 35
+muyimportantelotieneelexponentedecrecimientoσ yla Seconsideróenloscálculosqueelperíodomedioderecupe-
+determinacióndelacantidadmáximadeindividuosRdelos raciónfuede18días,resultandodelaec.10laigualdad
+queresultenserinfectadosalolargodelaepidemia.
+(cid:18) (cid:19)
+Sepuedeobtenerlafórmulaparaencontrarelvalort=t˜
+t˜=
+1
+ln
+1−2κ
++9. (11)
+enelquealcanzaelmáximodelafunciónY(t)quedescribe 2σ κ2
+la fracción de infecciosos activos. Esto se logra derivando
+El gráfico en la fig.1 corresponde a los valores anteriores.
+respectodelavariabletenlaecuaciónec.8teniendoencuenta
+En ese gráfico aparecen tres curvas: la de puntos oscuros
+lafórmulaec.6,eigualandoacero.Así
+correspondealgráficodelacurvaquerepresentalafracción
+(cid:18) (cid:19)
+1 1−2κ deindividuosinfectados,ladepuntosclaroscorrespondeala
+t˜= ln eσT . (10)
+2σ κ2 fraccióndeinfectadosquedejandeserlo,bienporquesehan
+recuperadooporquehanfallecido.Aunquedelafigura1se
+Seaclaraquelatasadeletalidadenlaec.3tambiénpuede
+puedeestimareltiempot˜endondesealcanzaelmáximode
+serotroparámetromásadeterminarteniendoencuentalas
+infecciososactivos,tambiénsepuededeterminardelaec.11,
+cifrasoficialesdelosfallecidos,atravésdeunafunciónobje-
+obteniéndosequet˜=36díasaproximadamenteapartirdel
+tivoapropiada.Entendemosquelosvaloresobtenidosenese
+díainicial,esdecir,del3deabrildel2020.
+casopuedensermuydiferentesdelosquesehayantenidoen
+Lafraccióndefallecidosseestimóapartirdeunatasade
+realidad.
+letalidadqueesestimadaporvíaestadística,yqueenaquél
+momentofueη=0,04.Digamosquelafraccióndefallecidos
+3. Modelado de la Covid-19 (oremovidos)fueobtenidade
+EnestaSecciónmostraremosdiferentesgráficosquefue-
+R˜(t)=ηI(t). (12)
+ron obtenidos en la predicción de la curva de infecciosos
+activosparalaepidemiadelaCovid-19enCuba,loqueasu
+Notemosqueapartirdelaec.6,lafórmulaenlaec.12permite
+vezservirádeilustracióndelametodologíaindicada.
+unaestimacióndelnúmerodefallecidosencadadía.
+4. Conclusiones
+LasconclusionesqueseobtienendelsistemadeKermack-
+McKendricksonequivalentes,paraunmismotamañototalde
+población,alasqueseobtienenmediantelaecuaciónsencilla
+ec.4.Ladinámicaasociadaaestaecuaciónesbienconocida,
+seidentificausualmentecomolaecuaciónlogísticayquese
+interpretademanerasdiferentessegúnseaelfenómenoque
+seestémodelando.Lobásicoquehemosconsideradoesla
+existenciadedosclases:ladelossuceptibles,queincluyea
+losrecuperados;ladelosinfecciosos,alaquehayqueres-
+Figura1.Líneadepuntososcuros=I(t);Líneadepuntos tarlelosquesonrecuperadosalolargodelaepidemia(estos
+claros=I(t-T);Líneacontinua=Y(t).ElejeX representalos pasanalaclasedesuceptibles,almenosformalmente)ylos
+díasconsiderados,mientrasqueelejeY representala removidos.Lapoblacióndereferenciaqueconsideramosenla
+fraccióndeinfectados.Lafraccióndeinfectadosseconsideró Sección3fuede10000individuos,apartirdelascantidades
+sobreunapoblacióndereferenciade10000individuos. deinfecciososdetectadosenlosprimerosdíasdelaepidemia.
+Entrelasventajasquetieneelprocederquehemospresen-
+Loscálculosparalaobtencióndelmínimolocaldelafun- tadoaquísetienenlassiguientes:lasolucióndelaecuación
+ciónobjetivosehicieronconsiderandoqueeldíainicialfue paralafraccióndeinfecciososseexpresaanalíticamente(ec.6)
+el03/04/2020yseconsideraronlosdatosde30díasposterio- yesopermitequeelajustedeparámetrossehagademanera
+resparalaconstruccióndedichafunción.Paradeterminarel simple.Esotambiéndeterminalaposibilidaddedescribirla
+mínimolocaldelafunciónobjetivoseempleóunavariante funciónquerepresentalafraccióndeinfecciososactivosde
+del Método de Newton para la obtención de las sucesivas manera analítica, y también una fórmula para la obtención
+aproximaciones. deltiempodondesealcanzaelmáximodeestapoblaciónde
+Elpuntoenelespaciodeparámetrosendondesealcanzó infecciososactivos.
+elmínimodelafunciónobjetivofue: Esconvenienteaclararqueestosmodelosdeladinámica
+deepidemiasreflejanmejorlarealidadcuandolosindividuos,
+L=0,2005; κ =0,0505; σ =0,1095, por alguna razón, están más ajenos a la forma de trasmi-
+sión,aunquesepanqueparacontagiarsehayqueteneralgún
+yelvalordeesafunciónenelpuntodemínimofue
+contactodirectooindirectoconunindividuoenfermo.Más
+F =5,0616×10−4. precisamente,estosmodelosnotienenencuentanieltemor
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.33-36
+36 ModelandolaCovid-19consolounaecuación
+alcontagioquepuedantenerlosindividuos,nielalcancede [2] Kermack,W.O.yA.G.McKendrick:Contributiontothe
+lasmedidasgubernamentales.Demodoqueesdeesperarque mathematical theory of epidemics. Roy. Stat. Soc. J.,
+losestimadosdelacantidaddeindividuosenfermosmediante 115:700–721,1927.
+estosmodelos,seansuperioresalareal.
+[3] Murray,J.D.:MathematicalBiology:I.AnIntroduction,
+Acknowledgments
+volumen 17 de Interdisciplinary Applied Mathematics.
+Springer,NewYork,thirdedición,2001.
+LosautoresqueremosexpresarnuestrafelicitaciónalCo-
+mitéEditorialdelaRevistaporlaideadeconformarunnú-
+merodedicadoalmodeladodelaCovid-19enCuba.Agrade-
+[4] Ricard,M.R.,C.T.GonzálezGonzálezyR.C.Bassanezi:
+cemoslaaceptacióndeestetrabajoendichonúmero.
+Epidemiologicalmodelwithfastdispersion. EnMondai-
+ni,R.yR.Dilon(editores):BIOMAT2005,Proceedings
+Referencias of the International Symposium on Mathematical and
+ComputationalBiology,páginas245–264.WorldScienti-
+[1] Edelstein-Keshet,L.:MathematicalModelsinBiology,
+fic,2006.
+volumen 46. SIAM, Classics in Applied Mathematics,
+Philadelphia,2005.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.33-36

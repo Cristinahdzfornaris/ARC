@@ -1,0 +1,501 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.37-48
+Recibido06-2020,Aceptado07-2020
+Predicciones en tiempo real de la Covid-19 en Cuba
+y sus provincias: Modelos fenomenológicos
+dinámicos y un modelo no lineal con efectos mixtos.
+Real-time predictions of Covid-19 in Cuba and its
+provinces: Dynamic phenomenological models and
+a nonlinear mixed effects model
+Carlos R. Sebrango Rodríguez1*, Lizet Sánchez Valdés2, Waldemart Baldoquin3,Osvaldo
+Norman Montenegro4,Raúl Guinovart5
+Resumen En ausencia de información confiable sobre los mecanismos de transmisión de una infección
+emergente como la Covid-19, modelos fenomenológicos dinámicos pueden proporcionar una evaluación
+temprana de un posible alcance del brote en tiempo real. En este estudio se emplean diferentes modelos
+fenomenológicosdinámicos,quetienenencuentadiferentesperfilesdecrecimientoinicialdelaepidemia:los
+modelos logístico y de Richards generalizados, para generar pronósticos de un horizonte de 10 días de la
+incidenciadecasosconfirmadosdelaCovid-19enCuba,haciendousodeunenfoquedebootstrapparamétrico
+paracuantificarlaincertidumbre.Elpronósticodelnúmerodecasosconfirmadosanivelprovincial,serealiza
+usualmenteparacadaprovinciaporseparado,ignorandolavariabilidadentreydentrodelasprovincias.Enla
+presenteinvestigaciónsehacenpronósticosconunhorizontede7díasdeloscasosconfirmadosdecadaunade
+lasprovinciasdeCubautilizandounmodelonolinealconefectosmixtosquetieneencuentalaheterogeneidad
+entrelasprovincias.
+Abstract In the absence of reliable information about transmission mechanisms of an emerging infection,
+simplephenomenologicalmodelscanprovideanearlyassessmentofthepotentialscopeofoutbreaksinnear
+real-time. In this study, several dynamic phenomenological models are used, that incorporate flexible early
+epidemic growth profiles, the generalized logistic and Richards models, in order to generate 10-day ahead
+forecastsoftheincidenceofconfirmedcasesofCovid-19inCuba. Inaddition,weuseaparametricbootstrap
+approachtoquantifytheuncertainty. Short-termforecastsattheprovinciallevelareusuallyperformedforeach
+province separately, ignoring variability between and within provinces. In this research, we generate 10-day
+aheadforecastsofcumulativecasereportsofeachprovinceusinganonlinearmixedeffectsmodelthattakes
+intoaccounttheheterogeneitybetweenprovinces.
+PalabrasClave
+Covid-19,modelosfenomenológicosdinámicos,modelonolinealconefectosmixtos
+Keywords
+Covid-19,dynamicphenomenologicalmodel,Nonlinearmixedeffectsmodel
+1UniversidaddeSanctiSpíritus"JoséMartíPérez",CentrodeEstudiosdeEnergíayProcesosIndustriales(CEEPI),Cuba,
+sebrango@uniss.edu.cu
+2CentrodeInmunologíaMolecular,LaHabana,Cuba,lsanchez@cim.sld.cu
+3InstitutodeMedicinaTropicalIPK,LaHabana,Cuba,wbaldoquin@ipk.sld.cu
+4CentrodeBioactivosQuímicos,UCLV,VillaClara,Cuba,onorman@uclv.edu.cu
+4UniversidaddeLaHabana,FacultadMatemáticaycomputación,Cuba,gino@matcom.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción diciembrede2019ysehaexpandidorápidamentellegando
+a185paises.Cubatampocohapodidoescapardeestemor-
+Laactualepidemiadeunanuevaenfermedadporcoronavi-
+tal virus, el 11 de marzo del 2020 tuvo sus primeros casos
+rus(Covid-19)comenzóenlaprovinciadeHubei,China,en
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+38 modelonolinealconefectosmixtos.
+confirmados.Enelpaíssehanestablecidopolíticaspúblicas para estimar parámetros epidemiológicos y hacer pronósti-
+efectivas,paracontenerlaepidemiaCovid-19:aislamiento, cosacortoplazo,serealizausualmenteparacadaáreapor
+cuarentenas,distanciamientosocial,reordenamientolaboral, separado,perocuandoelinterésconsisteenestimarelcom-
+resticcionesdeviajes,etc.Apesardeestaspolíticaselnúmero portamientopromediodeunáreaenparticularenlapoblación,
+decasossigueaumentandoyelpaísnecesitatomardecisiones y la variabilidad entre y dentro de las áreas, se propone un
+sobrediferentesrecursosparalograrcontrolarlaepidemia.La modelonolinealconefectosmixtos[17].
+modelaciónmatemáticapuedejugarunpapelfundamentalen Enesteestudioseempleandiferentesmodelosfenomenológi-
+estefin. cosparagenerarpronósticosdeunhorizontede10díasdela
+Enlosúltimosañoshaexistidouninteréscrecienteeneluso incidenciaydelnúmeroacumuladodecasosconfirmadosde
+delosmodelosmatemáticosparaelanálisisdebrotesdeen- laCovid-19enCuba,anivelnacionalyprovincialrepectiva-
+fermedadesinfecciosas[4].Estosmodeloshanpermitidodes- mente.Paraelpronósticodelaincidenciacasosconfirmados
+cribirelcomportamientodebrotes,facilitarlaestimaciónde enCubayparaestudiarlosperfilesdecrecimientoepidémi-
+parámetrosepidemiológicosclaves,evaluarelimpactodelas cotemprano,seutilizanlosmodeloslogísticoydeRichards
+intervencionesdecontrol,hacerprediccionesentiempo-real generalizados.Paraelpronósticoacortoplazodeloscasos
+yayudaraentenderydescribirladinámicadelatransmisión. confirmadosenlasprovincias,seutilizaunmodelonolineal
+Cuandolacomprensióndelimpactodeunaenfermedadin- conefectosmixtosquetieneencuentalavariabilidadentre
+fecciosaemergente,comolaCovid-19,eslimitada,elusode todaslasprovincias.
+modelosfenomenológicossimplespuedeproporcionaruna Elartículoestáorganizadodelasiguienteforma:LaSección1
+evaluacióntempranadeunposiblealcancedelbroteentiempo Materialesymétodos,describelosdatosutilizados,sepresen-
+casireal. tanlosmodelosfenomenológicosdinámicos,lacuantificación
+Eldesarrollodeherramientasestadísticasparalaestimación de la incertidumbre y el modelo no lineal con efectos mix-
+y predicción de parámetros en epidemias de enfermedades tos para la modelación y pronóstico. Los resultados de los
+infecciosasemergentesyreemergentesrepresentaunapriori- métodospropuestosalosdatossemuestranenlaSección2
+dadparalasautoridadesdesaludensutrabajoparaprevenir y en la Sección 3 se discuten los resultados y se hacen las
+ymitigarlasamenazasdeenfermedades[18].Losmodelos conclusiones.
+fenomenológicospuedenayudarmuchoenestesentido.Los
+modelosfenomenológicos(porejemplo,Hsiehycols.[10])
+1. Materiales y Métodos
+prescindendelossupuestosdelosmodelosmatemáticosde
+transmisión.Ensulugar,elloshacensupuestosgeneralesacer- 1.1 Fuentededatos
+ca de la forma de la curva de incidencia. En general, tales En el presente estudio se utilizaron los datos de casos con-
+modelosfenomenológicosutilizanpocosparámetros,hacen firmadosdiariosdeCovid-19desdeel11demarzodel2020
+suposicionesmássencillas,ysonprobablesadarestimacio- hasta el 21 de mayo del 2020 para toda Cuba y las 15 pro-
+nesmásrobustascuandosonaplicadosencontextoscondatos vinciasyelmunicipioespecialIsladelaJuventud.Estaserie
+muylimitados[13]. de datos fueron obtenidos a partir de los reportes oficiales
+Entre los modelos fenomenológicos más utilizado para la emitidosporpartedelasautoridadesdelministeriodesalud
+modelacióndedatosdeenfermedadesinfecciosasseencuen- públicaydelsitioWebhttps://covid19cubadata.github.io.
+tra el modelo logístico [7, 19, 6] y el modelo de Richards
+[14,20,11,9,10,8],aunquerecientementeChowellycols. 1.2 Modelosfenomenológicosparacaracterizarper-
+[3,2,5,4,1]hanutilizadounageneralizacióndeestosmode- filesdecrecimientoepidémicotemprano
+los,elmodelologísticoydeRichardsgeneralizados,queha Enlasepidemiasemergentes,losdatosepidemiológicosson
+ayudadoacaracterizarlosperfilesdecrecimientoepidémico limitados,ylosparámetrosepidemiológicosnecesariospara
+tempranoapartirdedatosdebrotesdeenfermedadesinfec- calibrarmodeloselaboradosdetransmisiónmecanicistaaún
+ciosascomoZika,ÉbolayVIHSIDA.Estostrabajosprevios nosehanaclaradocompletamente.Lospronósticosacorto
+handemostradoquelosmodelosfenomenológicosdinámicos, plazoentiemporealdebenbasarseenmodelosfenomenoló-
+puedecapturarlospatronesempíricosdeepidemiaspasadasy gicosdinámicosquehayansidovalidadosdurantebrotesde
+sonútilesparagenerarpronósticosacortoplazodelatrayec- enfermedadesinfecciosasprevias[3,2,5,4,1,15,16]
+toriaepidémicaentiemporeal.Lospronósticosacortoplazo
+en tiempo real generados a partir de tales modelos pueden 1.2.1 Modelologísticogeneralizado
+serútilesparaguiarlaasignaciónderecursosnecesariospara El modelo logístico generalizado (MLG) es una extensión
+mitigarocontrolarlaepidemia. delmodelologísticoqueincluyeunparámetroadicional, p
+Algunasveceslosreportesdecasosacumuladossecoleccio- , para permitir la ampliación del crecimiento; p=1 indica
+nanparatodaslasáreasurbanasenunaregiónenparticular, un crecimiento exponencial temprano, p=0 representa un
+yparalosepidemiólogosresultadeinterésestimarlospará- crecimientoconstante,y0≤p≤1acomodacrecimientossub-
+metrosepidemiológicosclavesoestudiarlaheterogeneidad exponencialesopolinómicostempranos[3,2,5,4,1,15,16].
+regionaldelatransmisióndelaenfermedad.Lamodelación, ElGLMestádefinidoporlaecuacióndiferencial:
+CienciasMatemáticas,Vol.31,No.1,2020,Pag.37-48
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+modelonolinealconefectosmixtos. 39
+(cid:104) (cid:105)
+C (cid:48) (t)=rCp(t) 1−C(t) regionaldelatransmisióndelaenfermedad.Lamodelación,
+K
+serealizausualmenteparacadaprovinciaporseparado,pero
+dondeC(t)representaelnúmerodecasosacumuladosenel cuandoelinterésconsisteentenerencuentalavariabilidad
+(cid:48) entreydentrodelasprovincias,seproponeunmodelonoli-
+tiempot,C(t)representaelnúmerodenuevoscasosinfecta-
+nealconefectosmixtos.Enestasecciónsedescribeelmodelo
+doseneltiempot,reslarazóndecrecimiento, peslaescala
+fenomenológicoconefectosmixtos
+delparámetrodecrecimientoyK eslacapacidaddecargao
+El modelo no lineal con efectos mixtos correspondien-
+eltamañofinaldelaepidemia.
+te para el número acumulado de casos reportadosY en la
+ij
+1.2.2 ModelodeRichardsgeneralizado provinciaieneltiempot es
+j
+ElmodelodeRichardsgeneralizado(MRG)esunaextensión
+α
+delmodelodeRichards,queasumeunafasedecrecimiento Y = i +ε , (1)
+inicial exponencial. Para tener en cuenta dinámicas de cre- ij (cid:104) 1+k.e−ki.γi (tj−ηi ) (cid:105) k 1 i ij
+i
+cimiento inicial[3, 2, 5, 4, 1, 15, 16], se creó el MRG que
+incorpora el parámetro p, también conocido parámetro de
+El vector de parámetros para la provincia específica es
+desaceleracióndelcrecimiento.Porloque,elMRGtienela
+modeladocomo:
+forma:
+θ =Xθ+Zb (2)
+i i i i
+(cid:104) (cid:16) (cid:17)a(cid:105)
+C (cid:48) (t)=rCp(t) 1− C(t) Dondeθ eselvectordeparámetrosfijos,b eselvector
+α i
+de efectos aleatorios de la provincia específica, X y Z son
+i i
+Donde0≤p≤1.Enlasetápasinicialesdelaepidemia,este matrices de diseño conocido para los efectos fijos θ y los
+modeloescapazdecaptardiferentesperfilesdecrecimientos, efectosaleatoriosb,respectivamente:
+i
+mencionadosconelmodeloanterior.
+     
+Lasestimaciónyprediccionesdelosparámetrosdeestosmo- 1 0 0 0 α b i1
+d M e A lo T s L se A g B en ( e T r h a e ro M ne a m th p w le o a r n k d s, o I l n a c f . u ) n c c o i n ón la L o S p Q c C ió U n R L V e E ve F n IT be d r e g l - X i =Z i =    0 0 1 0 0 1 0 0    ,θ =    γ k    ,b i =    b b i i 2 3   
+Marquardt.Paracuantificarlaincertidumbreenlaestimación 0 0 0 1 η b i4
+delosparámetrosdelmodeloyenelpronósticodelnúmero (3)
+decasosseconstruyeronintervalosdeconfianzacomoenes- Delaecuación2siguequeelvectordeparámetrosdeárea
+tudiosanteriores[3,2,5,4,1,15,16]mediantelasimulación específicapuedeserexpresadacomo
+de200realizacionesdelacurvademejorajusteutilizandoun    
+α α+b
+bootstrapparamétricoconunaestructuradeerrordePoisson. i i1
+Losintervalosdeconfianzadel95%secalcularontomando   k i  =   k+b i2   (4)
+lospercentiles2.5y97.5delasdistribucionesdeparámetros  γ i   γ+b i3 
+η η+b
+generados. i i4
+Unmodelopropiamentecalibradoalosdatospuedeusarse
+Seasumequelosefectosaleatoriosb estándistribuidosnor-
+i
+para generar predicciones a corto plazoo a largo plazodel
+malmente como b ∼ N(0,Ψ) y el error dentro del grupo
+i
+sistema,generandounapredicciónbasadaenlaincertidumbre ε ∼ N(0,σ2). Para representar la estructura de varianza-
+de modelos dada por f(t,θˆ ),f(t,θˆ ),...,f(t,θˆ ) (ajustes ij
+1 2 200 covarianzadelosefectosaleatoriosΨseutilizaunamatriz
+de las 200 curvas generadas por el procedimiento de cuan-
+generaldefinidapositiva.
+tificacióndelaincertidumbre),lacualrequierepropagarla
+Paralaestimacióndelosparámetrosypronósticodelnúme-
+incertidumbredelestadoactualaunhorizontedetiempodeh
+ro de casos confirmados en cada una de las provincias por
+unidades: f(t+h,θˆ ),f(t+h,θˆ ),..,f(t+h,θˆ ).
+1 2 200 elmodelonolinealconefectosmixtosseutilizaelpaquete
+Sibienpodemosinspeccionarlosresiduosparadetectarcual-
+nlme del software R. La función nlme de ese paquete im-
+quierdesviaciónsistemáticadelmodeloqueseajustealos
+plementaelalgoritmopropuestoporLindstromyBates[12].
+datos,tambienesposiblecuantificarelerrordelmodeloajus-
+Estealgoritmodeestimaciónalternaentredospasos,unpaso
+tadoutilizandométricasderendimiento.Estasmétricasson
+demínimoscuadradosnolinealespenalizadoyunpasode
+útilestambiénpara cuantificarelerrorasociado enlospro-
+efectosmixtoslineales.
+nósticos.Entrealgunasdelasmétricasmásutilizadasestán
+lasumadecuadradosdelerror(SSE),errorabsolutomedio 1.3.1 Estrategiadeconstruccióndelmodeloconefectos
+(MAE)ylaraizdelerrorcuadráticomedio(RMSE)[1]. mixtos
+Enestasección,seexplicabrevementelaestrategiaquesede-
+1.3 Modelofenomenológicoconefectosmixtos beseguirparaobtenerelmodelonolinealconefectosmixtos
+Algunasveceslosreportesdecasosacumuladossecoleccio- quemejorayudeaexplicarlavariabilidaddelosparámetros
+nanparatodaslasprovinciasdeunpaísenparticular,ypara epidemiológicosdentrodelasprovincias.
+losepidemiólogosresultadeinterésestimar,pronosticarpará- Unpasocrucialenlaconstruccióndemodelosconefectos
+metrosepidemiológicosclavesoestudiarlaheterogeneidad mixtos es decidir que coeficientes en el modelo necesitan
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.37-48
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+40 modelonolinealconefectosmixtos.
+efectosaleatoriosparatenerencuentalavariaciónentrelas caríaquenohayningunaviolacióndeestesupuesto.Sihay
+provinciasycualesdebensertratadoscomoefectospuramen- unpatróndiferente,nosecumpliríaestesupuestoyseríanece-
+tefijos.Paraello,laestrategiademodelaciónesajustarvarios sario,quizás,utilizarfuncionesdelavarianza(implementadas
+modelos teniendo en cuenta en cada modelo diferentes pa- enelpaquetenlmedeR)paramodelarlaheterocedasticidad.
+rámetrosconefectosaleatorios.Dentrodelaestrategia,una Elgráficodeloserroresestandarizadoscontraloscuantiles
+alternativaesconsiderarenprimerlugarunmodelosinefectos de la distribución normal ayuda a evaluar la violación del
+aleatorios.Luego,sedebenutilizartodaslascombinaciones supuestodenormalidadparaloserroresdentrodelosgrupos.
+deparámetrosconefectosaleatorios.Enestaalternativase Laadecuacióndelmodeloajustadosedebevisualizarmejor
+sugiereasumirquelamatrizdevarianza-covarianzatieneuna realizandoungráficoconjuntoconlosvaloresobservadosy
+estructurageneraldefinidapositiva. ajustados o predichos, donde se observen las predicciones
+Otraestrategiaalternativadeconstruccióndelmodeloesco- entrelasprovincias(usandolosefectosaleatoriosestimados).
+menzarconunmodeloconefectosaleatoriosparatodoslos Unaspectoatenerencuenta,esqueelmodelofinalobtenido
+parámetrosyentoncesexaminarlosresultadosdelajustepara debetenersentidopráctico.
+decidircuáldelosefectosaleatoriosdebesereliminadodel
+modelo. Un problema con este enfoque es que, cuando se 2. Resultados
+asumeunaestructurageneraldefinidapositivaparalamatriz
+2.1 Modelosfenomenológicosparacaracterizarper-
+devarianza-covarianzadelosefectosaleatorios,elnúmero
+filesdecrecimientoepidémicotemprano
+de parámetros a estimar crece con el cuadrado del número
+Paraestudiarlosperfilesdecrecimientoepidémicoyhacer
+deefectosaleatorios.Encasosdondeelnúmerodeefectos
+pronósticos a corto plazo se ajustaron el modelo logístico
+aleatoriosesrelativamentegrandealnúmerodegrupos(pro-
+generalizado(MLG)yelmodelodeRichardsgeneralizado
+vincias), se recomienda generalmente utilizar inicialmente
+(MRG) a los datos de los primeros 25, 30, 35, 40, 45 y 50
+unaestructuradematrizdiagonalparalamatrizdevarianza-
+días de la epidemia Covid-19 en Cuba. En las tablas 1 y 2
+covarianzadelosefectosaleatorios,paraprevenirproblemas
+semuestrandiferentesestadísticosométricasderendimiento
+deconvergenciaconunmodelosobre-parametrizado.
+MAE,RMSEySSEdelajustedeestosdosmodelosparalos
+Durante este proceso, se sugiere observar en las salidas de
+diferentesintervalosdedatosrespectivamente.Observecomo
+losresultados,lasestimacionesdelasdesviacionesestándar
+lasmétricasdelmodelodeRichardsgeneralizadosonligera-
+de los efectos aleatorios ya que desviaciones cercade cero
+mentesuperioresalosdelmodelologísticogeneralizado.
+puedensugerirqueeseparámetrodebeserconsideradocomo
+LasestimacionesdelosparámetrospyKparalosdosmode-
+efectofijo.Unopuedeprobarsiciertoefectoaleatoriopuede
+losfenomenológicosdinámicosestudiados,conincertidumbre
+sereliminadodelmodelo,realizandolapruebaderazónde
+cuantificadageneradaporlametodologíadescritaenlasec-
+verosimilitud.
+ción1.2semuestraenlasfiguras1y2respectivamente.En
+Otroaspectoimportanteaobservarenlosresultados,eslama- estasfigurassemuestranloshistogramasdelasdistribuciones
+trizdecorrelacionesestimadasdelosefectosaleatoriosporque empíricasdelasestimacionesdeparámetrospyKutilizando
+puedesugerirlaestructuradelamatrizdevarianza-covarianza. 200realizacionesbootstrapparacadaunodelosperíodosde
+Porejemplo,altascorrelacionesentredosefectosaleatorios datosepidémicosestudiados.Además,paracadaperíodoen
+comparadosconotrascorrelacionesdeotrosefectosaleatorios elpaneldeabajosemuestranlas200realizacionesdelacurva
+sugierequelamatrizesnocondicionadayquelaestructurade epidémica asumiendo una estructura de error de Poisson y
+losefectosaleatoriospuedeestarsobre-parametrizada,quizás laslíneasdemejorajusteylosintervalosdeconfianzasdel
+sugiriendounaestructuradiagonalenbloque.Ungráficode 95% de estos dos modelos MLG y MRG en su período de
+diagnósticoútilparaevaluarlasobre-parametrización,esel calibración.
+gráficodedispersióndelosefectosaleatoriosestimadosque Esimportantedestacarquetantoenlasfiguras1y2consolo
+aparecenenmuchossoftware,enRsepuedeutilizarlafunción 25díasdedatos,noesposibleestimardemaneraconfiable
+pairsdelpaquetenlme.Tambiénsepuedeutilizarlaprueba elparámetrodedesaceleracióndecrecimientop,porquesu
+derazóndeverosimilitudparaprobarsiciertaestructurade intervalodeconfianzavaríade0.7a1.Dehecho,noesposi-
+matrizdevarianza-covarianzadebeserconsiderada. blediscriminarentredinámicassubexponencialesydecreci-
+Finalmente,sedebechequearsilossupuestosdelmodelono mientoexponencialbasadosensololosprimeros25datos.A
+linealconefectosaleatorioparecenválidosparaelmodelo medidasqueseempleanmásdatosdelafasedecrecimiento
+ajustado a los datos. Para ellos el uso de métodos gráficos inicialparaestimarlosparámetrosdelosmodelos,laincer-
+proporcionanlasherramientasmásútilesparaevaluaresos tidumbre en las estimaciones de los parámetros no solo se
+supuestos.Elgráficodeloserroresestandarizadoscontralos reducesinoquelasestimacionesdelosparámetrosestánmás
+valoresajustados,ayudaaevaluarelsupuestoqueloserrores restringidasalrededordesusvaloresverdaderos.Sinembargo,
+dentrodelgruposonindependienteseidénticamentedistribui- esdedestacarqueparaelmodelodeRichardsgeneralizado
+doscondistribuciónnormalconmediaceroyvarianzaσ2.Si conelincrementodelosdatos,nosecomportódeesaforma
+losresiduosestándistribuidossimétricamentealrededorde yaquelosintervalosdeconfianzasiguenvariandoentre0.7y
+ceroconunavarianzaaproximadamenteconstante,estoindi- 1.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.37-48
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+modelonolinealconefectosmixtos. 41
+Tabla1.Estadísticosométricasderendimiento(MAE,RMSEySSE)delajusteobtenidoporelmodelologísticogeneralizado
+utilizandodiferentesintervalosdedatosepidémicos.
+Período 1-25 1-30 1-35 1-40 1-45 1-50
+MAE 3.76 4.45 4.53 4.87 4.77 5.16
+RMSE 5.74 6.86 7.07 7.08 6.79 7.35
+SSE 824.92 1412.58 1747.19 2007.02 2073.11 2703.15
+Tabla2.Estadísticosométricasderendimiento(MAE,RMSEySSE)delajusteobtenidoporelmodelodeRichards
+generalizadoutilizandodiferentesintervalosdedatosepidémicos.
+Periodo 1-25 1-30 1-35 1-40 1-45 1-50
+MAE 3.75 4.28 4.53 4.87 4.66 5.19
+RMSE 5.73 6.81 6.71 7.08 6.77 7.35
+SSE 820.71 1389.44 1576.08 2007.02 2059.63 2701.11
+Para las estimaciones del parámetro K, tamaño final de la parámetrosα,kyη comoefectosaleatorios.
+epidemia, ocurre algo similar. Con solo pocos datos, sobre
+todos para períodos de datos que no incluyen el pico hay Tabla3.Estimacióndelosparámetrosparaelmodelosconα,
+muchaincertidumbre.Sinembargo,paralosperíodoscon40, η,γ comoefectosaleatoriosconmatrizde
+45 y 50 datos ambos modelos, MLG y MRG, estiman este varianza-covarianzabloque-diagonal.
+parámetrodemaneramásconfiable,susestimacionesestán Parámetro Estimación(IC95%)
+alrededordelos2000casosconfirmados. Efectosfijos:
+Estosmodelosfenomenológicosdinámicospuedenserutiliza- α 121.59(10.00,233.17)
+dosparaelpronósticoacortoplazo,másespecíficamentepara k 0.71(0.63,0.79)
+elpronósticodeunhorizontede10díasdelaincidenciadeca- γ 0.20(0.15,0.24)
+sosconfirmados.Lasfiguras3y4muestranlospronósticosde η 32.85(30.12,35.57)
+10díasbasadosenelmodelologísticoymodelodeRichards Varianza
+generalizadosrespectivamente.Estosmodelosfueroncalibra- σ2 23.65(21.47,26.04)
+dos utilizando una cantidad creciente de datos epidémicos Efectosaleatorios
+(25, 30, 35, 40, 45 y 50 días). Observe como para interva- SD(b ) 227.39(160.75,321.63)
+i1
+losdetiemposantesdelpicolospronósticossubestimanla SD(b ) 0.075(0.05,0.11)
+i3
+incidenciadecasosolaincertidumbredelospronósticoses SD(b ) 5.17(3.57,7.49)
+i4
+considerable.Sinembargo,amedidaquelosperíodosdeda-
+tosparalacalibraciónsobrepasanelpicodelaepidemia,los
+Lamatrizdelgráficodedispersióndelosefectosaleatorios
+pronósticossehacenmasconfiables,labandadeconfianzase
+proporcionaundiagnósticoútilparaevaluarlosproblemasde
+hacemásestrechaconsiderandoambosmodelos.
+sobre-parametrización.Lanoexistenciadepatronesentrelos
+efectosaleatoriosα,η yγ (Figura5,Panelizquierdo)indica
+2.2 Modelofenomenológicoconefectosmixtos queelmodelonoestásobre-parametrizado.Lasbajascorre-
+Nuestraestrategiademodelaciónfueajustardiferentesmode- laciones entre los efectos aleatorios sugieren que la matriz
+losteniendoencuentaencadamodelodiferentesparámetros diagonalΨpudieraserutilizadapararepresentarlaestructura
+conefectosaleatorios.Dentrodelaestrategia,alprincipiono devarianza-covarianzadelosefectosaleatorios.Paraprobar
+seconsideraronparámetrosconefectosaleatorios.Luego,se siunamatrizdiagonalΨpudieraserutilizadapararepresentar
+utilizarontodaslascombinacionesdeparámetrosconefec- laestructuradevarianza-covarianzadelosefectosaleatorios,
+tosaleatoriosyseconsiderócomolaestructuradevarianza- sellevóacabounapruebaderazóndeverosimilitud(tabla
+covarianzadelosefectosaleatoriosΨlamatrizgeneralde- 4).Elvalornosignificativodelp-valuedelapruebaderazón
+finidapositiva.Entodosloscasos,elparámetroα,tamaño deverosimilitudylosvaloresmáspequeñosdelAICyBIC
+finaldelaepidemia,seconsiderócomounefectoaleatorio corroboranlaestructuradevarianza-covarianzadiagonal.
+porsugranvariabilidad.Latabla3muestralasestimaciones Elgráficodeloserroresestandarizadoscontralosvaloresajus-
+delosparámetrosparaelmodelonolinealconefectosaleato- tadoscorrespondientealmodeloconα,η yγ comoefectos
+riosdemejorajuste.LosmenoresvaloresdeAIC=5551,842 aleatorios y con matriz de varianza-covarianza Ψ diagonal
+yBIC=5590,036fueronobtenidosparaelmodeloconlos presentadoenelpaneldeladerechadelafigura5,muestra
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.37-48
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+42 modelonolinealconefectosmixtos.
+Tabla4.Pruebaderazóndeverosimilitudparaelmodeloconmatrizdevarianza-covarianzaΨdefinidapositivacontrael
+modeloconmatrizdevarianza-covarianzabloque-diagonal.
+Modelo AIC BIC LogVer. Test RazónV. p-value
+Modelo1(Ψdefinidapositiva) 5552.612 5605.128 -2765.306
+Model2(ΨBloque-diagonal) 5551.842 5590.036 -2767.921 1vs2 5.2303 0.1557
+quelosresiduosestándistribuidossimétricamentealrededor 3. Discusión y Conclusiones
+delceroconunavarianzaaproximadamenteconstante.Esto
+noindicaningunaviolacióndelossupuestosdelmodelono Los modelos fenomenológicos son útiles en el contexto de
+linealconefectosmixtos,exceptoparaalgunasobservaciones datosepidemiológicoslimitadosocuandoseenfrentanepide-
+paraelprovinciadeLaHabana. miasdesencadenadaspornuevospatógenos,comoelSARS
+Una de las ventajas de este tipo de modelo es que permite Cov-2. En el presente estudio se utilizan dos modelos fe-
+detectarprovinciasconuncomportamientoatípicooquepre- nomenológicosdinámicos,modeloslogísticoydeRichards
+sentan mayor variabilidad de los residuos del modelo con generalizados,paraproducirconosdepronósticode10días
+respectoaotras.Enlafigura6seobservacomolasprovincias delaincidenciadecasosconfirmadosparaCubautilizandoin-
+másatípicashansidoLaHabana,VillaClarayMatanzas. tervaloscrecientesdedatosepidémicos.Paralaestimaciónde
+losparámetrosdelosmodelosyparaelpronósticosecuantifi-
+cólaincertidumbrehaciendousodeunenfoquedebootstrap
+paramétricoasumiendounaestructuradeerrordePoisson.Se
+mostróquelaincertidumbredelasestimacionesdeparáme-
+trossereduceysevuelvemásprecisautilizandounacantidad
+crecientededatosdelafasedecrecimientoepidémico.
+Enmuchosestudiospreviosfueronutilizadosmodelosfeno-
+menológicos que en su mayoría asumen una fase de creci-
+miento exponencial temprana como los modelos logístico,
+Richards,Gompertz,etc.Unadelasventajasdeutilizarlos
+modelosfenomenológicosdinámicosexpuestosenestetraba-
+joesquepermitenestudiarycaracterizardiferentesperfiles
+decrecimientotempranoquenopuedensertenidosencuen-
+ta con estos modelos fenomenológicos previos. En futuras
+investigacionespretendemoshacerpronósticosusandodife-
+rentes modelos fenomenológicos con diferentes perfiles de
+crecimientotempranoperoutilizandotécnicasdepromedio
+demodelos,esdecirquetienenencuentatodoslosmodelos.
+También,enlainvestigaciónseproponeunmodelonolineal
+conefectosmixtosparamodelaryhacerpronósticosdeuna
+semanaparaelnúmerodecasosconfirmadosacumuladospara
+Figura6.Análisisdelosresiduosdelmodeloparacada
+cadaunadelasprovinciasdeCuba.Esteenfoquedemodela-
+provinciaconelfindedetectaráreasatípicas
+cióntienecomoprincipalventajaquenoignoralavariabilidad
+entrelasprovincias,lacualnoestenidaencuentacuandose
+Unaevaluaciónfinaldelacapacidadpredictivadeestemodelo modelan cada una de las provincias por separado. Además
+estádadoporelgráficodelasprediccionesypronósticoenla desdeelpuntodevistapráctico,elusodeunmodelonolineal
+figura7.Paracomparaciónyparamostrarcomolosefectos conefectosmixtosrequieredemenosparámetrosaestimar,
+individuales son tenidos en cuenta por el modelo no lineal permitetenerencuentalavaribilidadentrelasprovinciasy
+conefectosmixtos,sepresentanlasprediccionesdentrode dentrodeellas,puedeserutilizadoparadeterminarprovincias
+lasprovincias(obtenidasutilizandolosefectosaleatoriosesti- conuncomportamientoatípicaypermiteincluirlaposibilidad
+mados).Notequelasprediccionesdentrodelosgruposestán deincorporarvariablescontextualesparaexplicarlasdiferen-
+enacuerdoconloscasosacumuladosobservados,ilustrando ciasentrelasprovincias(porcientodepruebasPCR,densidad
+queelmodelonolinealconefectosmixtospuedeacomodar poblacional,variablesmedioambientales,etc.).Estaúltima
+los efectos individuales. Se tomó como período de calibra- temáticaseráobjetodeestudioenfuturasinvestigaciones.
+ciónlosdatoshastael14demayoysetomócomoperíodo
+Lospronósticosacortoplazogeneradosporlasmetodologías
+depronósticoelperíododesdeel15demayohastael21de
+expuestasenestetrabajopuedenserunaherramientavaliosa
+mayo.
+paralosdecisoresdesaludpúblicaparaguiarenlaasignación
+derecursoscríticosnecesariosparacontrolarlaepidemiay
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.37-48
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+modelonolinealconefectosmixtos. 43
+pararesponderafuturosbrotesdeenfermedadesinfecciosas. [10] Hsieh,Y.H.,H.ArazozayR.Lounes:Temporaltrends
+andregionalvariabilityof2001-2002multiwaveDENV-
+Referencias 3 Epidemic in Havana City: did Hurricane Michelle
+contributetoitsseverity? TropicalMedicineandInter-
+[1] Chowell,G.:Fittingdynamicmodelstoepidemicout-
+nationalHealth,18(7):830–838,July2013.
+breakswithquantifieduncertainty:Aprimerforpara-
+[11] Hsieh,Y.H.,H.M.HuangyY.C.Lan:OnTemporalPat-
+meteruncertainty,identifiability,andforecasts. Infect.
+ternsandCirculationofInfluenzaVirusStrainsinTai-
+Dis.Model.,2:379398,2017.
+wan,2008-2014:Implicationsof2009pH1N1Pandemic.
+PLoSONE,11(5):e0154695,2016.
+[2] Chowell, G., D. Hincapie-Palacio, J. Ospina, B. Pell,
+A. Tariq, S. Dahal, S. Moghadas, A. Smirnova, L. Si-
+monsenyC.Viboud:UsingPhenomenologicalModels [12] Lindstrom,M.J.yD.M.Bates:Nonlinearmixed-effects
+toCharacterizeTransmissibilityandForecastPatterns modelsforrepeatedmeasuresdata. Biometrics,46:673–
+andFinalBurdenofZikaEpidemics. PLOSCurrents 687,1990.
+Outbreaks,May2016.
+[13] Ma, J., J. Dushoff, B. Bolker y D. Earn: Estimating
+[3] Chowell, G., L. Sattenspiel, S. Bansald y C. Viboud: initialepidemicgrowthrate. BullMathBiol,76:245–
+Mathematical models to characterize early epidemic 260,2014.
+growth:Areview. PhysicsofLifeReviews,July2016.
+[14] Richards,F.J.:AFlexibleGrowthFunctionforEmpirical
+[4] Chowell, G. y C. Viboud: Is it growing exponentially
+Use. JournalofExperimentalBotany,10(29):290–301,
+fast?-Impactofassumingexponentialgrowthforcha-
+1959.
+racterizingandforecastingepidemicswithinitialnear-
+exponentialgrowthdynamics. InfectiousDiseaseMode-
+[15] Roosa,K.,Y.Lee,R.Luo,A.Kirpich,R.Rothenberg,
+lling,2016.
+J.Hyman,P.YanyG.Chowell:Real-timeforecastsof
+[5] Chowell,G.,C.Viboud,L.SimonsenyS.M.Moghadas: the2019-nCoVepidemicinChinafromFebruary5thto
+Characterizingthereproductionnumberofepidemics February24th,2020. Infect.Dis.Model.,2020.
+withearlysubexponentialgrowthdynamics. J.R.Soc.
+Interface,13(20160659),2016. [16] Roosa,K.,Y.Lee,R.Luo,A.Kirpich,R.Rothenberg,J.
+Hyman,P.YanyG.Chowell:Short-termForecastsof
+[6] Firat,M.,E.Karaman,E.BasaryD.Narinc:Bayesian
+theCOVID-19EpidemicinGuangdongandZhejiang,
+Analysis for the Comparison of Nonlinear Regression
+China:February1323,2020. JournalofClinicalMedi-
+ModelParameters:anApplicationtotheGrowthofJapa-
+cine,9:596,2020.
+neseQuail.BrazilianJournalofPoultrySciense,Special
+issue(Quails):19–26,2015.
+[17] Sebrango,C.,L.SanchezyZ.Shkedy:Modelingden-
+[7] Hsieh, Y.H.: Richards Model: A Simple Procedure gueoutbreakdatausingnonlinearmixedeffectsmodel.
+for Real-time Prediction of outbreak Severity. En InvestigaciónOperacional,38(3):252–258,2017.
+Ma, Zhien, Jianhong Wu y Yicang Zhoue (edito-
+res): Modeling and Dynamics of Infectious Disea- [18] Smirnova, A. y G. Chowell: A primer on stable para-
+ses (Volumen 11), Contemporary Applied Mathema- meterestimationandforecastinginepidemiologybya
+tics(CAM),páginas216–236.HigherEducationPress, problem-orientedregularizedleastsquaresalgorithm.
+2009, ISBN978-981-4261-25-8. http://mail. InfectiousDiseaseModelling,2(2):268–275,2017.
+cmu.edu.tw/~hsieh/pdf/pub57.pdf.
+[19] Tsoularis,A.yJWallace:AnalysisofLogisticGrowth
+[8] Hsieh, Y.H.: Temporal course of 2014 Ebola virus di-
+Models. MathematicalBiosciences,179(1):21–55,July-
+sease(EVD)outbreakinWestAfricaelucidatedthrough
+August2002.
+morbidityandmortalitydata:ataleofthreecountries.
+PLoSONE,10(11):e0140810,2015.
+[20] Wang,X.,J.WuyY.Yang:Richardsmodelrevisited:va-
+lidationbyandapplicationtoinfectiondynamics. Jour-
+[9] Hsieh,Y.H.:Temporalpatternsandgeographicheteroge-
+nalofTheoreticalBiology,313:12–19,2012.
+neityofZikavirus(ZIKV)outbreaksinFrenchPolynesia
+andCentralAmerica. PeerJ,(5):e3015,2017.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.37-48
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+44 modelonolinealconefectosmixtos.
+Figura1.Estimacióndelosparámetrosconincertidumbrecuantificadagenerada.Loshistogramasmuestranlasdistribuciones
+empíricasdelasestimacionesdeparámetrospykutilizando200realizacionesbootstrap.Elpaneldeabajomuestraelajuste
+delMLGalosdiferentesperíodos.Lospuntosazulessonlosdatosdiariosmientrasquelalinearojacontinuacorrespondeal
+mejorajustedelMLGalosdatos.Laslineasazulescorrespondenalas200realizacionesdelacurvaepidémicaasumiendouna
+estructuradeerrordePoisson.Laslíneasrojasdiscontinuascorrespondenalasbandasdeconfianzadel95%alrededordel
+mejorajuste.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.37-48
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+modelonolinealconefectosmixtos. 45
+Figura2.AjustandoelmodelologísticogeneralizadoMRGalosprimeros(25,30,35,40,45y50)díasdelaepidemia
+Covid-19enCuba.Estimacióndelosparámetrosconincertidumbrecuantificadagenerada.Loshistogramasmuestranlas
+distribucionesempíricasdelasestimacionesdeparámetrospykutilizando200realizacionesbootstrap.Elpaneldeabajo
+muestraelajustedelMRGalosdiferentesperíodos.Lospuntosazulessonlosdatosdiariosmientrasquelalinearojacontinua
+correspondealmejorajustedelMRGalosdatos.Laslineasazulescorrespondenalas200realizacionesdelacurvaepidémica
+asumiendounaestructuradeerrordePoisson.Laslíneasrojasdiscontinuascorrespondenalasbandasdeconfianzadel95%
+alrededordelmejorajuste.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.37-48
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+46 modelonolinealconefectosmixtos.
+Figura3.Pronósticosepidémicosde10díasbasadosenelmodelodelogísticogeneralizado(MLG)calibradoutilizandouna
+cantidadcrecientededatosepidémicos(círculosnegros):(A)25,(B)30,(C)35,(D)40,(E)45y(F)50díasepidémicos.La
+líneadiscontinuaverticalindicaelfinaldelperíododecalibración.Semuestranlamedia(línearojacontinua)yelICdel95%
+(líneasrojasdiscontinuas)delosconjuntosdeajustedelmodelo(curvasazules).
+CienciasMatemáticas,Vol.34,No.1, 2020,Pag.37-48
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+modelonolinealconefectosmixtos. 47
+Figura4.Pronósticosepidémicosde10díasbasadosenelmodelodeRichardsgeneralizado(MRG)calibradoutilizandouna
+cantidadcrecientededatosepidémicos(círculosnegros):(A)25,(B)30,(C)35,(D)40,(E)45y(F)50díasepidémicos.La
+líneadiscontinuaverticalindicaelfinaldelperíododecalibración.Semuestranlamedia(línearojacontinua)yelICdel95%
+(líneasrojasdiscontinuas)delosconjuntosdeajustedelmodelo(curvasazules).
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.37-48
+PrediccionesentiemporealdelaCovid-19enCubaysusprovincias: Modelosfenomenológicosdinámicosyun
+48 modelonolinealconefectosmixtos.
+Figura5.Gráficodedispersiónparalasestimacionesdelosefectosaleatoriosdelmodeloconα,η yγ comoefectosaleatorios
+(Panelizquierdo)yGráficodedispersióndeloserroresestandarizados(Panelderecho)paraelmodeloconΨbloquediagonal.
+Figura7.Ajusteypronósticos(línearoja)conunhorizontedeunasemanadelnúmerodecasosacumuladosconfirmadosde
+todaslasprovinciasdeCuba(puntosnegros),paraelmodelonolinealconefectosmixtosdemejorajuste.Lalíneadiscontinua
+separaelperíododecalibracióndeldepronóstico.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.37-48

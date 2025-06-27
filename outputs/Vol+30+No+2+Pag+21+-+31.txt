@@ -1,0 +1,560 @@
+CienciasMatema´ticas,Vol.30,No.2,Pag.21-31,2016
+Recibido06-2016
+Aproximacio´n por el me´todo de los elementos finitos
+para el problema estacionario de Navier-Stokes
+Approach by the finite elements methods to the
+steady-state equations of Navier-Stokes
+Angel Ulise Tabares Gonza´lez1*, Miguel Angel Socorro Borges2
+Resumen EnestetrabajosepresentaunaestrategiaparasolucionarlasecuacionesestacionariasdeNavier-
+Stokesmedianteelme´tododeloselementosfinitosutilizandoFreeFem++.Seobtienelaformulacio´nvariacional
+delproblemadeStokesysepruebalaexistenciayunicidaddelasolucio´nenestecaso.Luegosemuestraco´mo
+el problema de Navier-Stokes puede ser resuelto utilizando una linealizacio´n, los resultados son mostrados
+visualmente.Seanexatambie´ntodoelco´digodelprogramaenFreefem++.
+Abstract Thispaperpresentsastrategyforsolvingsteady-stateNavier-Stokesequationsbythefiniteelement
+methodusingFreeFem++. AvariationalformulationoftheStokesproblemisobtainedandtheexistenceand
+uniquenessofthesolutioninthiscaseisproved. ThenitshowshowtheNavier-Stokesproblemcanbesolved
+bymeansofalinearization,theresultsarevisuallydisplayed. AllFreeFem++codeisalsoprovided.
+PalabrasClave
+Navier-Stokes—FreeFem—Me´tododelosElementosFinitos
+1VERTEXEntornosInteractivos3D,UniversidaddelasCienciasInforma´ticas,LaHabana,Cuba,ulise@uci.cu
+2CentrodeInforma´ticaIndustrial,UniversidaddelasCienciasInforma´ticas,LaHabana,Cuba,miguelsb@uci.cu
+*AutorparaCorrespondencia
+Introduccio´n muestra:
+LasecuacionesestacionariasdeNavier-Stokesdescriben −v∆u+∇p=f, enΩ⊂R2,
+elmovimientodeunfluidocondensidadρ constanteenun ∇·u=0, enΩ, (2)
+dominio Ω ∈ Rd(con d=2,3) a los efectos de este trabajo
+u=g, sobreΓ=∂Ω.
+Ω∈R2. Adema´s se considera que dicho flujo no altera su
+velocidadrespectoaltiempo.Estoseescribecomosigue: Estadiferencialoconviertesindudasenunmodeloma´s
+fa´cildetratardesdeelpuntodevistamatema´ticoycompu-
+u·∇u−v∆u+∇p=f, enΩ⊂R2, tacional.
+∇·u=0, enΩ, (1)
+Formulacio´nvariacionaldelproblemadeStokes
+u=g, sobreΓ=∂Ω, Enelproblema(2) p∈L2perou(cid:54)∈H1debidoaqueenΓ
+0 0
+u=g.Sinembargosepuedeafirmarqueg∈H 1 2 (∂Ω)loque
+siendoulavelocidaddelfluido, pelcocientedelapresio´n quieredecirqueexisteR g∈H1(Ω)talquesutrazaen∂Ω
+0
+yladensidad,v= µ laviscosidadcinema´tica, µ laviscosi- esg;entonceslanuevainco´gnitau˜ =u−R g,deah´ıqueel
+ρ 0
+daddina´mica,yfunte´rminodefuerzaporunidaddemasa. problema(2)puedaserexpresadocomo:
+El te´rmino (u·∇)u describe el proceso de transporte con-
+−v∆(u˜+R g)+∇p=f, enΩ⊂R2,
+vectivo,−v∆ueselprocesodedifusio´nmolecularcuandov 0
+esconstante.∇·u=0eslacondicio´ndeincompresibilidad. ∇·(u˜+R 0 g)=0, enΩ, (3)
+En la u´ltima ecuacio´n g es una funcio´n que constituye las u˜ =0, sobreΓ=∂Ω.
+condicionesenlafrontera[6].
+Simultiplicamoslaprimeraecuacio´nde(3)porunafun-
+cio´n de prueba v∈H1 e integramos en el dominio Ω, se
+0
+ProblemadeStokes obtiene:
+(cid:90) (cid:90) (cid:90)
+ElcasoestacionariodeStokessonuncasoparticularde
+− v∆u˜·vdΩ+ ∇p·vdΩ= (f+ν∆R g)·vdΩ. (4)
+0
+(1)dondeelte´rminoconvectivoesdespreciado,talcomose Ω Ω Ω
+22 Aproximacio´nporelme´tododeloselementosfinitosparaelproblemaestacionariodeNavier-Stokes
+TeniendoencuentalaprimeraidentidaddeGreen,yelteore- 1. Existencia y unicidad
+madeladivergencia[5],[7]
+Laexistenciadelasolucio´npara(1)sepuedeprobarpara
+(cid:90) (cid:90) ∂u˜ (cid:90) d=2,sinembargounicidadsehaprobadosoloparaelcaso
+v∆u˜·vdΩ=v vdγ−v ∇u˜·∇v·dΩ, (5) enquelosdatossonsuficientementepequen˜os[6],estoquiere
+Ω
+∂Ω∂n
+Ω
+(cid:90) (cid:90) (cid:90) decirquelasdimensionesf´ısicasdelproblemadebenestaren
+∇p·vdΩ= p(vn)dγ− p∇·v·dΩ. (6) unentornocontrolado.SisedefineRe= |U|L dondeLesuna
+Ω ∂Ω Ω v
+longitudrepresentativadeldominioΩ,yU unavelocidaddel
+Sustituyendo(5)y(6)en(4): fluidotambie´nrepresentativa.Elnu´merodeReynoldsmide
+el punto en que la conveccio´n prevalece sobre la difusio´n.
+(cid:90) ∂u˜ (cid:90) (cid:90) CuandoRe<<1elte´rminoconvectivopuedeseromitido,de
+−v vdγ+v ∇u˜·∇v·dΩ+ p(vn)dγ
+∂Ω∂n
+Ω ∂Ω
+locontrariosiReesgrandepuedenexistirproblemasrelativos
+(cid:90) (cid:90) alaunicidaddelasolucio´n.Demaneraqueelproblemade
+− p∇·v·dΩ= (f+ν∆R g)·vdΩ. (7)
+0 Stokesesunabuenaaproximacio´nparaelproblemadeNavier-
+Ω Ω
+Stokescondatoslosuficientementepequen˜os,deah´ıquese
+Sedebenotarqueelte´rmino∆R 0 gnoesta´necesariamente realicenlossiguientesana´lisissobre(8).
+biendefinidoyaqueR gnonecesariamenteperteneceaH2.
+0
+(cid:82)
+Sinembargoelte´rmino Ω ν∆R 0 g·vdΩdebeserreescrito,en 1.1 Condicionesdeexistenciayunicidad
+realidadsepuedeprobarque∆R g∈H−1 demaneraquela
+0
+partelinealsedebeleerdeformarigurosacomo Teorema1(Brezzi) SeanV yQespaciosdeHilbert;sean
+a(·,·)yb(·,·)formasbilinealescontinuasenV×VyV×Q
+(cid:90)
+f·vdΩ+(cid:104)ν∆R g,v(cid:105) . respectivamente.Denotemoselkerneldeb(·,·)comoZ=
+0 H−1,H1
+Ω 0 {v∈V :b(v,q)=0,∀q∈Q}.Sia(·,·)escoercivaenZ,y
+sib(·,·)satisfacelacondicio´ninf-sup:
+YaqueR g∈H1,elte´rminolinealsepuedereescribirdela
+0
+siguienteforma:
+b(v,q)
+(cid:90) (cid:90) β||q|| Q ≤sup , ∀q∈Q, (9)
+f·vdΩ− ν∇R 0 g·∇vdΩ. v∈V ||v|| V
+Ω Ω
+entoncesexisteunau´nicasolucio´n(u,p)∈V×Qparael
+Alnotenerinformacio´nde ∂u˜ nide ponenlafrontera,es problemadepuntodeensilladura(8).
+∂n
+deayudahaberescogidov∈H1porqueconv=0en∂Ω,(7)
+0
+resulta:
+Paraobtenerdetallesdeesteteoremaconsultar[5].
+(cid:90) (cid:90) (cid:90)
+Sisequiereasegurarquelasolucio´na(8)existeyesu´nica
+v∇u˜·∇vdΩ− p∇·vdΩ= (f·v−ν∇R g·∇v)dΩ.
+0
+Ω Ω Ω se debe probar, de acuerdo al teorema 1, que los te´rminos
+bilinealesa(u˜,v)yb(v,p)soncontinuosyqueelprimeroes
+De manera ana´loga se puede proceder con la segunda
+coercivo.Definamos||·|| como
+equacio´nen(3);semultiplicaporunafuncio´ndepruebaqe H 0 1
+(cid:82) (cid:82)
+integramosconlocualseobtiene q∇·u˜dΩ= R gqdΩ.
+Ω Ω 0 H1→R,
+Luego,elsistemadescritoen(3),puedeserplanteadocomo 0
+(cid:90)
+s
+E
+i
+n
+g
+c
+u
+o
+e
+n
+.
+trar(u˜,p)∈(H1(Ω))2×L2(Ω)talque:
+u(cid:55)→||u||
+H 0 1
+:=( |∇u|2) 1 2.
+0 0
+GraciasaladesigualdaddePoincare´-Friedrichs,estoes
+(cid:40)
+a(u˜,v)+b(v,p) = f(v), ∀v∈(H1(Ω))2, unequivalentealanormausualH1enH1.
+0 (8) 0
+b(u˜,q) =h(q), ∀q∈L2(Ω),
+0
+Continuidaddea(u˜,v)
+Sedebeprobarque
+donde:
+(cid:90) |a(u˜,v)|≤β||u˜|| ·||v|| , conβ >0.
+a(u˜,v)=v ∇u˜·∇v·dΩ, H 0 1 H 0 1
+Ω
+(cid:90) Desarrollando|a(u˜,v)|:
+b(v,p)=− p∇·v·dΩ,
+Ω (cid:90)
+(cid:90)
+|a(u˜,v)|=|ν ∇u˜·∇vdΩ|,
+f(v)= (f·v−ν∇R g·∇v)dΩ,
+0 Ω
+Ω (cid:90)
+(cid:90)
+|a(u˜,v)|=|ν| |∇u˜|·|∇v|dΩ.
+h(q)=− R g·qdΩ.
+0 Ω
+Ω
+Aproximacio´nporelme´tododeloselementosfinitosparaelproblemaestacionariodeNavier-Stokes 23
+UsandopropiedadesdelproductoescalarenL2ydesigualdad sitomamos p∈L2entonces
+0
+deCauchysetiene:
+b(v,p) b(Π(p),p)
+|a(u˜,v)|≤|ν|||∇u˜|| L2 ·||∇v|| L2 , sup ≥ ,
+||v|| ||Π(p)||
+|a(u˜,v)|≤|ν|||u˜|| ·||v|| , v∈H1 H1 H1
+H1 H1
+0 0
+dondeΠ(p)esuncampodevelocidadasociadoa pusan-
+loquepruebalacontinuidaddea(u˜,v). doelteorema2,sedebenotarqueestoesposiblerealizarlo
+porquealseleccionarunavenparticular,d´ıgaseΠ(p),seob-
+Continuidaddeb(v,p)
+tieneunaestimacio´ninferiorconrespectoalacotasuperior.
+Siguiendo la misma idea el te´rmino |b(v,p)| puede ser Entoncesb(Π(p),p)=||p||2 ,porloque:
+L2
+desarrollado:
+(cid:90)
+|b(v,p)|= |p|·|∇·v|dΩ.
+sup
+b(v,p)
+= sup
+||p||2 L2.
+Ω ||v|| ||v||1
+v∈H1 H1 v∈H1 H
+UsandopropiedadesdelproductoescalarenL2yladesigual-
+Pero||Π(p)|| ≤c||p|| deah´ıqueloanteriorresulte
+daddeCauchysetiene: H1 L2
+|b(v,p)|≤||p|| L2 ·||
+(cid:90)
+∇·v|| L2 ,
+sup
+b(v,p)
+≥
+||p||2
+L2
+,
+|b(v,p)|≤||p|| L2 ·( |∇v|2)1/2, v∈H1 ||v|| H1 c||p|| L2
+b(v,p)
+|b(v,p)|≤||p|| ·||v|| , sup ≥c−1||p|| .
+L2 H 0 1 v∈H1 ||v|| H1 L2
+loquepruebalacontinuidaddeb(v,p). Estosecumpleparacualquiercampodepresio´n p∈L2
+0
+(enparticularlaconstantecnodependede p),locualgaranti-
+Coercividaddea(u˜,v)
+zalaexistenciayunicidaddelproblema(8).Apesardeque
+Sedebeprobarquea(u,u)≥β||u||2,conβ >0,veamos:
+estaformulacio´nesnecesariaparauntratamientomatema´tico
+(cid:90) rigurosodelproblemaenlapra´cticasseutilizanotrosme´todos
+a(u,u)=ν ∇u∇u·dΩ,
+paramanejarlasrestriccionesenlafronteradesdeelpunto
+Ω
+(cid:90) devistacomputacional[2],deah´ıquedeahoraenadelante
+a(u,u)=ν |∇u|2·dΩ,
+se considere el problema con condiciones de fronteras ho-
+Ω
+a(u,u)=ν||∇u||2=ν||u||2 , moge´neas.
+H1
+0
+loquepruebalacoercividaddea(u˜,v)yaqueν espositi- 2. Aproximacio´n por el me´todo de los
+vo. elementos finitos
+Habiendo ya comprobado las condiciones de continui-
+Para encontrar una solucio´n aproximada de (8) por el
+dadycoercividadenloste´rminosquelorequierenbastacon
+me´tododeloselementosfinitossedebeparticionarlaregio´n
+verificarquesecumpla(9),estoes:
+Ωcontinuaenunacantidadfinitadeelementosdiscretosrela-
+cionadosatrave´sunnu´merodiscretodenodos.Enestecaso
+b(v,p) la regio´n es Ω=(0,a)×(0,b)∈R2 por lo que se utilizan
+β||p|| ≤ sup , ∀p∈L2(Ω).
+L2 0 v∈H1(Ω) ||v|| H1 0 tria´ngulosparadichadiscretizacio´n.Sisedenotalatriangula-
+cio´nporτ entonces:
+h
+Ω¯ = (cid:91) K, dondeΩ¯ =Ω∪∂Ω.
+Teorema2(Bogovskii) SeaΩundominiodeLipschitzen
+Rd conexoyacotado.Existeunoperadorlinealcontinuo
+K∈τh
+ΠdeL2(Ω)a(H1(Ω))d,talque∀q∈L2(Ω),lafuncio´n Losiguienteesconstruirelsubespaciodedimensio´nfi-
+0 0 0
+u=Π(q)satisface: nita donde se buscara´ la solucio´n, es decir un conjunto de
+funcionesquedefinadeformau´nicaeldesplazamientodentro
+delelementoenfuncio´ndelosdesplazamientosnodales.Se
+∇·u=q. utilizaunesquemaP −P queesestable[2],demaneraque
+2 1
+la velocidad u es aproximada con el espacio de elementos
+finitosP (X ),ylapresio´nesaproximadaconelespaciode
+2 h
+Paraobtenerdetallesdeesteteoremaconsultar[1]. elementosfinitosP (M )donde:
+1 h
+Setiene
+X ={v∈H1(]0,1[2)|∀K∈τ v ∈P },
+(cid:90) h h |K 2
+b(v,p)=− p∇·vdΩ, M ={v∈H1(]0,1[2)|∀K∈τ v ∈P }.
+Ω h h |K 1
+24 Aproximacio´nporelme´tododeloselementosfinitosparaelproblemaestacionariodeNavier-Stokes
+DeformageneralP representaelconjuntodelospolinomios Sihacemosk tendera+∞(enlapra´cticasepuedeusarun
+n
+de grado n. X yV son espacios de funciones cuadra´ticas testdeparada)podemosobtenerlasolucio´ndelsistemade
+h h
+olinealesrespectivamenteencadatria´nguloyglobalmente Navier-Stokes,sielprocesoconverge.Sedebenotarquelali-
+continuas. nealizaciondelte´rminoinercialpuedeseru ·∇u enlugar
+k k+1
+Comoaproximacio´ndeldesplazamientoenelelemento deu ·∇u .
+k+1 k
+setoma:
+Propuesta2.Unaaproximacio´nrudadelasolucio´ndel
+M
+u (x)=∑u (a)Φ(x) x∈Ω, sistemadeNavier-Stokessepuedeconstruirusandoelsiguien-
+h h i i
+teprocedimiento:
+i=1
+dondea esunnododeterminadoyΦ(x)eselconjuntode Calcular la solucio´n (u,p) del sistema de Stokes (es
+i i
+lasbasesnodalesdefinidasenlosnodosdeτ .
+decir,obviarelte´rminonolineal):
+h
+Estedesarrollosepuedehacerdemanerama´sexhaustiva
+−v∆u+∇p=f,
+y rigurosa sin embargo como se apreciara´ ma´s adelante en
+∇·u=0.
+te´rminos de implementacio´n por lo general trabajando con
+Freefem++estosdesarrollosserealizandeformatransparente.
+Calcularlacorreccio´n(u˜,p˜)usandoelcampodevelo-
+Paraunaexplicacio´nma´sdetallaver[4].
+cidadesudelsistemaanteriordeStokescomote´rmino
+detransporte:
+3. Posibles soluciones
+u˜·∇u−v∆u˜+∇p˜=f,
+El problema principal existente para aplicar el me´todo
+deloselementosfinitosalproblemaestacionariodeNavier- ∇·u˜ =0.
+Stokessonloste´rminosnolineales(u·∇)uqueimpidenex-
+traerdirectamenteunsistemadeecuacioneslineales.Laprin- Enestapropuesta,(u˜,p˜)defineunaaproximacio´nrudadel
+cipaldiferenciaentrelosme´todosexistentesparatratareste sistemadeNavier-Stokesyaquelasolucio´ndelsistemade
+problemaconsisteprecisamenteenco´motratarestete´rmino. Stokes(u,p)seutilizacomounestimadodelcampodevelo-
+cidades.SedebenotarquelaPropuesta2consisteenparar
+3.1 Procedimientosbasadosenlinealizacio´n la Propuesta 1 luego de solo dos iteraciones Los ca´lculos
+La idea de este me´todo consiste un utilizar un procedi- sonma´sra´pidospero,porsupuesto,nogarantizanunagran
+mientoiterativoqueconstadelossiguientespasos: exactitudenlosresultadosnume´ricosdelasolucio´n.Comose
+vera´ ma´sadelante,estasegundavarianteeslaquesedecidio´
+1. Obtenerunestimadoinicialdelasolucio´n
+implementar.
+2. Mientraselerrorseamayordeunatoleraciaprefijada,
+hacer: 3.1.2 Linealizacio´ndelproblemadeNavier-Stokes
+Sienelproblema(1)linealizamos,entoncesseobtiene:
+a) Linealizar las ecuaciones no lineales utilizando
+losresultadosdelaiteracio´nanterior.
+b) Resolverelsistemadeecuacioneslinealesobteni-
+u ·∇u −v∆u +∇p=f,
+k+1 k k+1
+do.
+∇·u =0.
+k+1
+3.1.1 Linealizacio´n
+Que escrito en una forma ma´s compacta y tras la for-
+LanolinealidaddelproblemadeNavier-Stokesseencuen-
+mulacio´nvariacional,utilizandocondicionesdefronterade
+traenelte´rminoinercial(u·∇)u.Enarasdedeobtenerla
+Dirichlet(g=0)paramayorcomodidad:encontrar(u,p)∈
+solucio´ndelproblemasepuedeprocederdediferentesmane-
+(H1(Ω))2×L2(Ω)talque:
+ras. 0 0
+Propuesta1.Lasolucio´ndelproblemadeNavier-Stokesse (cid:40)
+a(u,v)+b(v,p) = f(v), ∀v∈(H1(Ω))2,
+puede obtener iterativamente calculando la sucesio´n {u } 0
+k k
+queconvergealasolucio´n,encadapasodelprocedimiento
+b(u,q) =0, ∀q∈L2
+0
+(Ω).
+secalculalasolucio´ndeunproblemalinealdeNavier-Stokes
+donde:
+graciasalalinealizacio´nde(u·∇)u,demaneraqueelproce-
+(cid:90) (cid:90)
+dimientosedescribecomosigue:
+a(u,v)= u·∇u ·vdΩ+ν ∇u·∇vdΩ,
+k
+Ω Ω
+Definiru =0. (cid:90)
+0
+b(v,p)=− p∇·v·dΩ,
+Parak∈N,calcularlasolucio´nu de Ω
+k+1 (cid:90)
+f(v)= f·vdΩ.
+u ·∇u −v∆u +∇p=f, Ω
+k+1 k k+1
+∇·u =0. Sedebenotaraqu´ıque∇u esconocido.
+k+1 k
+Aproximacio´nporelme´tododeloselementosfinitosparaelproblemaestacionariodeNavier-Stokes 25
+3.2 Procedimientogeneraliterativo int nc=2∗floor(2∗pi∗radius∗nx);
+Unavezlinealizadoelte´rminoconvectivoelme´todoesta´ndar
+deGalerkinpuedeseraplicado.Unacuestio´nimportantea border A(t=0,1){x=t ;y=0;label =1;};
+tenerencuentaescua´nbuenadebeserlaaproximacio´nini- border B(t=0,1){x=1;y=t ; label =2;};
+cialparaqueelme´todoconverjara´pido.Esconocidoquela border C(t=0,1){x=1−t ;y=1;label =3;};
+iteracio´n de Newton converge ra´pido pero depende de una border D(t=0,1){x=0;y=1−t ; label =4;};
+buenaaproximacio´nadiferenciadelaiteracio´ndePicardque border Hole1(t=0,2∗pi){x=0.5+radius∗cos(
+notieneunavelocidaddeconvergenciagrandeperolaregio´n t);y=0.5+radius∗sin(t); label =5;};
+esmayorporloquenonecesitaunaaproximacio´ninicialtan
+precisa,deah´ıqueunaposibleestrategiaiterativamejorada mesh Th= buildmesh(A(nx)+B(ny)+C(nx)+D(
+ser´ıa: ny)+Hole1(−nc));
+1. Empezarconunestimadoinicial.
+4.2 Espaciosdeelementosfinitos
+2. RealizarunaspocasiteracionesdePicardconelobjeti-
+EnFreefem++paracrearlosespaciosdeelementosfinitos
+vodemejorarelestimadoinicial.
+sedebeproveerunatriangulacio´ncomolaobtenidaanterior-
+menteyunespaciodefuncionesdeaproximacio´n,paraluego
+3. Utilizarlaiteracio´ndeNewtonhastaqueelerroresti-
+especificarcadamagnitudenqueespacioseencontrara´,en
+madoseamenorquelatolerancia.
+nuestroco´digoestoser´ıa:
+4. Implementacio´n
+Fragmentodeco´digo2.Espacios
+Acontinuacio´nsevera´ comoseimplemento´ lasolucio´n
+func gx=1;
+enFreeFem++.
+func gy=0;
+4.1 Generacio´ndelamalla
+fespace Xh(Th,P2);
+Lamallaescogidaesuncuadradounitarioqueenelcen-
+fespace Mh(Th,P1);
+tro posee un hueco con 0,1 unidades de radio como puede
+Xh u2,v2;
+apreciarseacontinuacio´n:
+Xh u1,v1;
+Fragmentodeco´digo1.Mallado
+4.3 Desarrollodeloste´rminosparaimplementacio´n
+int nx=20, ny=nx; Acontinuacio´nsemuestraelproblemaescritoenellen-
+real radius =0.1; guajedeFreefem++elcualseexplicara´ te´rminoate´rmino.
+Fragmentodeco´digo3.Problema
+1 problem NavierStokes ([u1,u2,p] ,[v1,v2,q]) =
+2 int2d(Th)(
+3 + nu ∗ ( dx(u1)∗dx(v1) + dy(u1)∗dy(v1)
+4 + dx(u2)∗dx(v2) + dy(u2)∗dy(v2) )
+5 − p∗q∗epsr
+6 + p∗dx(v1)+ p∗dy(v2)
+7 + dx(u1)∗q+ dy(u2)∗q
+8 )
+9 + int1d(Th)( −fhx∗v1 − fhy∗v2)
+10 + int2d(Th)(rho∗(u1∗dx(up1)∗v1+u2∗dy(up2)∗v2))
+11 + on(2,4,u1=ghx,u2=ghy)
+12 + on(1,3,u1=0,u2=0)
+13 + on(5,u1=0,u2=0);
+26 Aproximacio´nporelme´tododeloselementosfinitosparaelproblemaestacionariodeNavier-Stokes
+guientes.
+Comparandoconlaformulacio´nvariacionalenlaecua-
+cio´n (8) las l´ıneas 4 y 5 no son ma´s que el desarrollo de 4.4 Inicializacio´n
+ν∇u∇v, aqu´ı u1, u2, v1 y v2 son las componentes en x e y Yaquesehaformadounesquemaiterativosurgeunaspec-
+deuyvrespectivamente.Esnecesarionotarenlal´ınea6el toimportantequedebesertomadoencuenta,yeslanecesidad
+uso de p·q·eps que no es ma´s que un te´rmino de estabili- deobtenerunaaproximacio´ninicialrelativamentebuena,esta
+zacio´nnecesarioaqu´ıporqueelesquemaP −P para pyq puedeserlasolucio´nalproblemadeStokes,quenoesma´s
+1 1
+nosatisfacelacondicio´ninf-sup,enestecasoeps=1e−8. quelasecuacionesencuestio´nconelte´rminoconvectivoomi-
+Lal´ınea7correspondealte´rmino∇p·v.Laexpresio´n∇·uq tido. En estas si el nu´mero de Reynolds es muy grande es
+seveclaramentereflejadaenlal´ınea8yacontinuacio´nla posiblequeladistanciaentreambassolucionesseademasia-
+9esf·vdonde fhxy fhvsonlascomponentesenxeydef da,porelcontrariosielnu´merodeReynoldsespequen˜olas
+respectivamente,no´teseaqu´ıqueloste´rminosbilinealesres- solucionesdebenestarpro´ximasyesunabuenaideatomar
+pecto a u y v esta´n precedidos del operador de Freefem++ la solucio´n del primer problema como estimado inicial del
+int2d, no as´ı los lineales que van precedidos de int1d. Las segundo.
+condicionesdefronterasevenclaramenteenlasl´ıneasdela
+11ala13,estoquieredecirqueenlasfronteraslateralesu=g 5. Resultados
+dondesedefinedirectamenteg =1yg =1,enelrestode
+x y
+Acontinuacio´nsemuestraelco´digocompletoconcomen-
+lasfronterasu=0.
+tariosparasumejorcomprensio´n:
+Elrestodeloste´rminosseexplicara´nenlosaca´pitessi-
+// these are the mesh divisions
+int nx=20, ny=nx;
+real radius =0.1;
+int nc=2∗floor(2∗pi∗radius∗nx);
+// definition of the border of a domain
+// the direction must be counter clockwise
+border A(t=0,1){x=t ;y=0;label =1;};
+border B(t=0,1){x=1;y=t ; label =2;};
+border C(t=0,1){x=1−t ;y=1;label =3;};
+border D(t=0,1){x=0;y=1−t ; label =4;};
+border Hole1(t=0,2∗pi){x=0.5+radius∗cos(t);y=0.5+radius∗sin(t); label =5;};
+// definition of a mesh
+mesh Th= buildmesh(A(nx)+B(ny)+C(nx)+D(ny)+Hole1(−nc));
+plot (Th, wait=1);
+// function f defined by components
+func fx=x∗x+y;
+func fy=y∗x;
+// function g defined by components
+func gx=1;
+func gy=0;
+// declaration of the FE Space. Will use a P2−P1 scheme
+fespace Xh(Th,P2);
+fespace Mh(Th,P1);
+Xh u2,v2;
+Xh u1,v1;
+Mh p,q;
+Mh fhx=fx;
+Mh fhy=fy;
+Aproximacio´nporelme´tododeloselementosfinitosparaelproblemaestacionariodeNavier-Stokes 27
+Mh ghx=gx;
+Mh ghy=gy;
+real epsr = 1e−8;
+// First we solve Stokes to obtain a first approximation
+solve Stokes ([u1,u2,p] ,[v1,v2,q]) =
+int2d(Th)( ( dx(u1)∗dx(v1) + dy(u1)∗dy(v1)
++ dx(u2)∗dx(v2) + dy(u2)∗dy(v2) ) // divergence of u and v terms
+− p∗q∗epsr // stabilization terms
++ p∗dx(v1)+ p∗dy(v2) // pressure gradient terms
++ dx(u1)∗q+ dy(u2)∗q // divergence of q term
+)
++ int1d(Th)( −fhx∗v1 − fhy∗v2) // external contribution term
++ on(2,4,u1=ghx,u2=ghy) //boundary conditions
++ on(1,3,u1=0,u2=0)
++ on(5,u1=0,u2=0);
+//Here we plot initial estimates
+plot (coef=0.2,cmm=” p ” ,p, wait=1,value=1, fill =1);
+plot (coef=0.2,cmm=” [u1,u2] ” ,[u1,u2] ,ArrowSize=0.5,wait=1,value=1, fill =1);
+plot (coef=0.2,cmm=” [u1,u2] y p ” ,p,[u1,u2] ,ArrowSize=0.5,wait=1,value=1, fill =1);
+int i=0;
+real nu=1./100.;
+real dt=0.1;
+real alpha=1/dt ;
+real rho=1.0;
+Xh up1,up2;
+/∗Now will solve Navier−Stokes
+As we can see the non linear term has been replaced
+by a first order discretization
+∗/
+problem NavierStokes ([u1,u2,p] ,[v1,v2,q]) =
+int2d(Th)(
++ nu ∗ ( dx(u1)∗dx(v1) + dy(u1)∗dy(v1) // gradient of uˆ(k+1) dot
+gradient of v
++ dx(u2)∗dx(v2) + dy(u2)∗dy(v2) )
+− p∗q∗epsr // stabilization term
++ p∗dx(v1)+ p∗dy(v2) //p divergence of v
++ dx(u1)∗q+ dy(u2)∗q //q divergence of uˆ(k+1)
+)
++ int1d(Th)( −fhx∗v1 − fhy∗v2) // f dot v
++ int2d(Th)(rho∗(u1∗dx(up1)∗v1+u2∗dy(up2)∗v2)) //uˆ(k+1) dot gradient of uˆk
+dot v
++ on(2,4,u1=ghx,u2=ghy) //same boundary conditions
++ on(1,3,u1=0,u2=0)
++ on(5,u1=0,u2=0);
+// the output of the Stokes problme is used as input in Navier−Stokes
+up1=u1;
+up2=u2;
+NavierStokes;
+28 Aproximacio´nporelme´tododeloselementosfinitosparaelproblemaestacionariodeNavier-Stokes
+//Here we plot final solution
+plot (coef=0.2,cmm=” p” ,p, wait=1,value=1, fill =1);
+plot (coef=0.2,cmm=” [u1,u2]” ,[u1,u2] ,wait=1,value=1, fill =1);
+plot (coef=0.2,cmm=” [u1,u2] y p ” ,p,[u1,u2] ,ArrowSize=0.5,wait=1,value=1, fill =1);
+Enlafigura1sepuedeapreciara)elresultadodelatrian- laesperayela´nimo.
+gulacio´ndelproblema,estamallasera´ usadatantopararesol-
+verelproblemadeStokescomoeldeNavier-Stokes;luegoen
+Referencias
+b)semuestralasdiferenciasdepresio´nenlasdiferentesa´reas
+del dominio, como se puede ver los mayores valores esta´n [1] FranckBoyerandPierreFabrie. MathematicalToolsfor
+aladerechadelaimagenteniendolospicosenlasesquinas theStudyoftheIncompressibleNavier-StokesEquations
+superior e inferior derecha. Se muestra en la figura 1 c) el andRelatedModels,volume183ofAppliedMathemati-
+campovectorialquerepresentalavelocidaddelflu´ıdodonde calSciences. Springer,2013.
+losvaloresabsolutosdelavelocidadma´selevadossonenlas
+zonasporencimaypordebajodelhuecoenlamalla.Estos [2] FranckBoyerandSebastienMartin. Anintroductionto
+datossonlosutilizadoscomoentradainicialpararesolver(8). thefiniteelementmethod. 2016.
+Enlasfiguras2,3,4,5,6,7y8,semuestranloscampos
+(escalares)depresionesyloscampos(vectoriales)develoci- [3] A. J. Figueredo and P. S. A. Wolf. Assortative pairing
+dadesqueseobtienencomosolucio´nparadiferentesvalores andlifehistorystrategy-across-culturalstudy. Human
+delcoeficienterho(ρ)variandodesde0.2hasta2.0,estava- Nature,20:317–330,2009.
+riacio´nesequivalenteamodificarnu(ν)enelotrote´rmino,lo
+quedeterminaelcomportamientodelsistemaescua´ldeestos [4] AngelaMireyaLeonMecias. Notasdeclase.metodos
+te´rminospredomina,dichodeotramaneraamayorvalordeρ numericos avanzados para ecuaciones diferenciales en
+menosviscosoeselfluido,oseamenosespeso.No´tesecomo derivadasandparciales,2010.
+amedidaqueelvalordeρ aumentalasolucio´nsealejadela
+figura1,ycomienzaadominarelte´rminoinercialcomoera [5] FredrikBengzonMatsG.Larson.TheFiniteElementMet-
+deesperarse,queprovocavisualmentelasespeiralescadavez hod:Theory,Implementation,andApplications. Number
+ma´spronunciadas. pag335.Springer,2013.
+[6] AlfioQuarteroni. NumericalModelsforDifferentialPro-
+blems. Springer,2009.
+Agradecimientos
+Al profesor Sebastien Martin por todos los minutos de [7] JamesStewart. Calculus:earlytranscendentals. Cengage
+revisio´ndedicados.AlaprofesoraA´ngelaLeo´nMec´ıaspor Learning,2015.
+Aproximacio´nporelme´tododeloselementosfinitosparaelproblemaestacionariodeNavier-Stokes 29
+(a) Triangulacio´n (b) Campodepresio´n (c) Campodevelocidades
+Figura1.ResultadoderesolverelproblemadeStokes.
+(a) Campodepresio´n (b) Campodevelocidades
+Figura2.ResultadoderesolverelproblemadeNavier-Stokesconuncoeficienteρ =0,2.
+(a) Campodepresio´n (b) Campodevelocidades
+Figura3.ResultadoderesolverelproblemadeNavier-Stokesconuncoeficienteρ =0,5.
+30 Aproximacio´nporelme´tododeloselementosfinitosparaelproblemaestacionariodeNavier-Stokes
+(a) Campodepresio´n (b) Campodevelocidades
+Figura4.ResultadoderesolverelproblemadeNavier-Stokesconuncoeficienteρ =1,0.
+(a) Campodepresio´n (b) Campodevelocidades
+Figura5.ResultadoderesolverelproblemadeNavier-Stokesconuncoeficienteρ =1,2.
+(a) Campodepresio´n (b) Campodevelocidades
+Figura6.ResultadoderesolverelproblemadeNavier-Stokesconuncoeficienteρ =1,4.
+(a) Campodepresio´n (b) Campodevelocidades
+Figura7.ResultadoderesolverelproblemadeNavier-Stokesconuncoeficienteρ =1,6.
+Aproximacio´nporelme´tododeloselementosfinitosparaelproblemaestacionariodeNavier-Stokes 31
+(a) Campodepresio´n (b) Campodevelocidades
+Figura8.ResultadoderesolverelproblemadeNavier-Stokesconuncoeficienteρ =2,0.

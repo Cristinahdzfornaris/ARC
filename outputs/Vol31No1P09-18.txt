@@ -1,0 +1,580 @@
+CienciasMatemáticas,Vol.31,No.1,Pag.9-18,2017
+Recibido09-2017
+Wavelets Logar´ıtmicas: Una Herramienta Efectiva
+para el Procesamiento de Mamogramas
+Logarithmic Wavelets: An Effective Tool for
+Mammograms Processing
+Damian Valde´s Santiago*, Daniel Mesejo Leo´n, A´ngela Leo´n Mec´ıas
+Resumen El ca´ncer de mama es uno de los ma´s frecuentes en este tipo de enfermedad y constituye la
+segunda causa de muerte en las mujeres. El e´xito del tratamiento depende de la deteccio´n temprana de la
+enfermedad.Lamamograf´ıaderayosXesesencialparasudiagno´stico.Elretodelexamenesobtenerima´genes
+conbuencontrasteyresolucio´naplicandopequen˜asdosisderadiacio´n.Lamanipulacio´ndeloscoeficientesde
+detalleenlaTransformadaWaveletDiscreta(TWD)bidimensionalaplicadaalasima´genespermiteincrementar
+elcontrastedelasanomal´ıasrespectoalaregio´ncircundante.Tambie´npuedeaplicarseTWDutilizandomodelos
+nolinealesdelprocesamientodeima´genes.Estate´cnicasenombraTransformadaWaveletLogar´ıtmicaDiscreta
+(TWL).Enesteart´ıculoseproponeunalgoritmoparaincrementarelcontrasteenmamograf´ıaempleandoTWL.
+Paralaexperimentacio´nseuso´ labasededatosMIASysoftwarebasadoenellenguajePython2.7.Lineprofile,
+diagramas de caja, CII y DSM fueron utilizados como medidas de calidad del mejoramiento. Los resultados
+demostraronlaefectividaddelme´todopropuestoyvalidaronqueelme´todoCorrelacio´nLocalcombinadoconel
+modeloS–LIPobtuvolosmejoresresultadosmedida–visualidad.Enocasiones,lasmedidasnoreflejaronlos
+resultadosvisualesdebidoaladefinicio´nderegio´ndeintere´sdeMIAS.
+Abstract Breastcancerrepresentsthemostcommonofthistypeofdiseaseandisthesecondleadingcause
+ofdeathinwomen. Successfultreatmentdependsonearlydetectionofthedisease. X-raymammographyis
+essentialfordiagnosis. Thechallengeofthetestistoobtainimagesofgoodcontrastandresolutionrequiring
+smalldosesofradiation. ThemanipulationofdetailcoefficientsinbidimensionalDiscreteWaveletTransform
+(DWT)appliedtoimagescanincreasethecontrastoftheanomaliesrelativetothesurroundingregion. DWT
+canalsobeappliedusingnon–linearimageprocessingmodels. ThistechniqueisnamedLogarithmicDiscrete
+WaveletTransform(LWT).Inthispaper,analgorithmtoincreasethecontrastinmammographyusingLWTis
+proposed. WeusedMIASdatabaseandPython2.7programminglanguagefortheexperimentation. Lineprofile,
+boxplots,CIIandDSMwereusedasqualityimprovementmeasures. Theresultsdemonstratedtheeffectiveness
+oftheproposedmethodandvalidatedthatthecombinationoftheLocalCorrelationmethodandtheS-LIPmodel
+gavethebestresultsaccordingtothemeasuresandvisually. Sometimes,themeasuresdidnotreflectthevisual
+resultsduetothedefinitionofregionofinterestbyMIAS.
+PalabrasClave
+MejoramientodeContraste—TransformadaWavelet—TransformadaWaveletLogar´ıtmica—Mamograf´ıa
+DepartamentodeMatema´ticaAplicada,FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba
+dvs89cs@gmail.com,dmesejo@matcom.uh.cu,angela@matcom.uh.cu
+*AutorparaCorrespondencia
+Introduccio´n ima´genesdemamograf´ıaesmejorarelcontrastedelaimagen.
+Elretoenesteexamenesobtenerima´genesdebuencontraste
+Elca´ncerdemamaesunproblemadesaludmundial.Esel yresolucio´naplicandopequen˜asdosisderadiacio´n,yaque
+tipodeca´ncerma´sfrecuenteyeslasegundacausademuerte elusoderadiacionesionizantesesdan˜inoparaelpacientey
+enlasmujeres.El1%delosca´nceresdemamacorresponden puedeprovocarca´ncerdemama.Seentiendeporimagende
+ahombres[1].Ladeteccio´ntempranaescrucialparaele´xito buencontraste,unaimagendondesedestaquenlosbordesde
+deltratamiento[2].Larealizacio´ndelamamograf´ıaderayos lasanomal´ıasyestasseandistinguiblesrespectoaltejidoque
+X es un examen de costo relativamente bajo que brinda in- lascircunda.
+formacio´nesencialparaeldiagno´sticodeestetipodeca´ncer.
+Una de las tareas ma´s importantes en el procesamiento de Lasanomal´ıasenlamamapuedenserdevariostipos:ma-
+10 WaveletsLogar´ıtmicas: UnaHerramientaEfectivaparaelProcesamientodeMamogramas
+sas,microcalcificaciones,calcificaciones,entreotras.Existen cialmentedetresetapas.Primero,laimagensedescompone
+elementosdelaanatom´ıadelamamaquesonimportantesen encoeficientesdedetallehorizontales,verticalesydiagonales;
+eldiagno´sticocomoelmu´sculopectoral,elpezo´nyelborde ycoeficientesdeaproximacio´n.Enestaprimerafasehayque
+delamama[3]. determinarelnu´merodenivelesdedescomposicio´nylabase
+El reto de la mamograf´ıa como me´todo de diagno´stico waveletquesedeseausar.Lasegundafaseconsisteenaplicar
+radicaenquereducirlaradiacio´nimplicaladisminucio´ndel unalgoritmodetransformacio´ndeloscoeficienteswavelet
+contraste en la imagen, lo que dificulta la apreciacio´n. El conelpropo´sitodeincrementarelcontraste.Finalmente,la
+contraste se define como el cociente entre la media de las imagenmejoradasereconstruyeapartirdelosnuevoscoefi-
+intensidadesdelosp´ıxelesdeunaregio´ndelaimagenyla cientes,mediantelaTransformadaWaveletInversa(ITWD).
+mediadelasintensidadesdelosp´ıxelesdelaregio´nquela Este enfoque ha sido aplicado en mamograf´ıa [11, 12].
+circunda. Por tal razo´n, se necesitan algoritmos que permi- LuyHealy[13]usaronTWDparaaumentarelcontrastede
+tanaumentarelcontrasteenlaregio´ndondeseencuentran ima´genesme´dicas.LaineySong[14,15]fueronlosprimeros
+lasanomal´ıas,locualfacilitar´ıaunamejordeteccio´ndelas enutilizarunafuncio´nnolinealparatransformarloscoefi-
+mismasporlosradio´logos. cientesenladescomposicio´nwavelet.Ladificultaddeeste
+Latareadelmejoramientodelcontrasteenlaimagende enfoque radica en la eleccio´n de la funcio´n no lineal para
+mamograf´ıaconsisteenrealzarlosbordesdelasanomal´ıas realizarelmejoramiento.Laineycolaboradores[16]brindan
+enelprimerplanodelaregio´ndeintere´s(ROI)oincrementar cuatrorequisitosquedebecumplirestafuncio´n.
+elcontrasteentreelprimerplanoyelfondodelamisma[4]. Otravarianteparaincrementarelcontrastedeunaimagen
+Seconocequesiunaregio´ndifiereenluminosidadrespecto escombinarme´todosdemejoramientoglobalylocalmediante
+a su alrededor en menos del 2%, entonces esta regio´n es fusio´ndelasima´genesresultantes[17].
+indistinguibleporelojohumano[5]. Tambie´n puede aplicarse wavelet shrinkage [18]. Esta
+EneltrabajodeHeng-DaChengycolaboradores[6]se te´cnicaconsisteenrealizarladescomposicio´nwaveletyde-
+resumenme´todosdemejoramientodelcontrasteparamamo- terminarpara´metrosparamodificarloscoeficientes.Existen
+graf´ıa: me´todos convencionales, me´todos de mejoramiento variasformasdeelegirestospara´metros,quepuedensercon-
+por regiones y me´todos basados en caracter´ısticas. Los al- sultadosenelart´ıculodeYasudayKodera[19].
+goritmos convencionales no son capaces de incrementar el Losmodelosnolinealesdelprocesamientodeima´genes
+contrastedelasmicrocalcificacionesyprovocanlaaparicio´n (NPI)sonunaalternativaalprocesamientodeima´genesbasa-
+deruidoenlaimagenresultante[6].Losprocedimientosba- doenaritme´ticaconnu´merosreales,puesesteenfoquetiene
+sados en regiones pueden resaltar detalles anato´micos con limitacionescomoeltruncamientoalsumarlasintensidades
+introduccio´nm´ınimaderuido,yhandemostradoquepueden dep´ıxelesconma´ximovalor[20].Estosmodelosmodifican
+identificarconefectividadcalcificacionesenmamasdensas, la forma con que se operan las intensidades de los p´ıxeles.
+donde el contraste es muy bajo [7]. Los me´todos basados Su relevancia se debe a la analog´ıa establecida entre la no
+encaracter´ısticasincrementanelcontrastedelasanomal´ıas linealidaddelavisio´nhumanaylasima´genestransmitidas
+segu´nsusrasgosyseagrupanendoscategor´ıas:incrementar porluz.Lateor´ıahomomo´rficaintroducidaporOppenheim
+elcontrastedea´reassospechosas,yeliminarelruidoyestruc- [21]eselpuntodepartidaparaestosmodelos.Elprincipioes
+turaseneltejidodefondo[6].Estosme´todospermitensuperar introducirfuncioneslogar´ıtmicashomomo´rficasquepermitan
+alosme´todosconvencionales,puestoquepuedenincrementar representarunaimagenenunaestructuraalgebraicasuperior.
+elcontrastedelasmicrocalcificaciones.Aestaclasificacio´n En1972,Stockmanpropusounme´tododemejoramientode
+pertenecen los me´todos basados en Transformada Wavelet imagenbasadoenlateor´ıahomomo´rfica[22].Posteriormen-
+Discreta(TWD). te aparecen modelos ma´s elaborados: LIP [23], HLIP [24],
+Existeunafuerteconexio´nentreelana´lisiswaveletyla Pseudo–LIP[25]yS–LIP[26].
+formaenqueelojohumanoprocesalainformacio´n.Lamulti- Lamayor´ıadeestosmodeloshademostradosucorrespon-
+orientacio´nylamultiresolucio´nsonpropiedadesdelsistema denciaconelsistemadevisio´nhumana[23].Estapropiedad
+visualhumano[8,9].Lamultiresolucio´nconsisteenquelos permite el uso de los modelos NPI en correccio´n de ilumi-
+objetosquesevenbienenunaescalafina,vanprogresivamen- nacio´n [27], mejoramiento del contraste [28], deteccio´n de
+tedesapareciendodelavistaalmoverseaescalasma´sgruesas. bordes[25]ymejoramientodelrangodina´mico.Susuperiori-
+Cualquier algoritmo para el procesamiento de informacio´n dadrespectoalosme´todoscla´sicoshasidoprobada[29].
+visualdebesermultiescalaymultiresolucio´n[10]. LosmodelosNPIsehanempleadoenelmejoramientode
+La TWD permite descomponer una imagen como una lasima´genessatelitales,devigilancianocturna,yenima´genes
+sumadedetallesyaproximacionesendiferentesescalas.Es- derayosX.Enlarevisio´nbibliogra´ficasoloseencontro´ un
+to resulta de utilidad debido a que las microcalcificaciones art´ıculo que empleo´ una parametrizacio´n del modelo LIP
+puedenlocalizarseconloscoeficientesdedetalledelmamo- combinadaconunsharpmaskingparamejorarelcontrasteen
+gramay,graciasaladescomposicio´n,esposibleaislarlaspara mamograf´ıa[30].
+mejorarsucontrasterespectoalaregio´ncircundante. Otra forma de mejorar el contraste en las ima´genes es
+LaTWDenelprocesamientodeima´genesconstaesen- aplicardescomposicio´nwaveletenunaimagenrepresentada
+WaveletsLogar´ıtmicas: UnaHerramientaEfectivaparaelProcesamientodeMamogramas 11
+medianteunodelosmodelosNPIprevios.Esteenfoquese
+nombraTransformadaWaveletLogar´ıtmicaDiscreta(TWL)
+ypermitelacompresio´n,deteccio´ndebordesylaeliminacio´n
+deruidoenima´genes[31].
+Enelpresenteart´ıculoseproponeunalgoritmoparaincre-
+mentarelcontrasteenima´genesdemamograf´ıaquemodifica
+loscoeficienteswaveletsdelaimagenempleandounmodelo
+NPI.EnlaSeccio´n1sedescribencuatroformasdemodifi-
+carloscoeficientesenlaTWDparaincrementarelcontraste. (a) (b)
+En la Seccio´n 2 se presentan los modelos NPI y se detalla
+el modelo S–LIP utilizado. En la Seccio´n 3 se presenta el
+algoritmopropuestoparamejorarcontrasteenmamograf´ıa.
+En la Seccio´n 4 se describen las medidas empleadas en la
+experimentacio´nparavalidarelprocesamiento,softwareem-
+pleado,resultadosydiscusio´n.Finalmente,enlaSeccio´n5se
+presentanlasconclusiones.
+1. Formas de modificar los coeficientes (c) (d)
+Figura1.Cuatromanerasdemodificarloscoeficientes
+de la Transformada Wavelet
+waveletdeunaregio´ndeintere´s:(a)Simple,(b)Umbral,(c)
+Larepresentacio´ndeunaimagenmediantelaTWDreali- Correlacio´ny(d)Correlacio´nLocal
+zaunadescomposicio´ndelaimagenenbloquesdediferentes
+frecuencias,dadosporlosllamadoscoeficientesdeaproxima-
+cio´nycoeficientesdedetalle(coeficienteswavelets).Unav´ıa lograunbuencontrastedelasanomal´ıasycaracter´ısticasde
+paramejorarelcontrastedeunaimagenesmodificarestos lamama.
+coeficientesdedetalle. EnlaFigura1semuestranlosresultadosdeaplicarcada
+EneltrabajodeMartinsycolaboradoresdel2014[32] unodeestosme´todosdemodificacio´ndecoeficienteswavelets
+se exponen cuatro me´todos para modificar los coeficientes: aunaROIdeterminada.
+Simple,Umbral,Correlacio´nyCorrelacio´nLocal.
+El me´todo Simple aplica un incremento constante G a 2. Modelos no lineales del procesamiento
+todos los coeficientes de detalle. El incremento G se elige de ima´genes
+de forma emp´ırica, e.g. G=5. Este me´todo incrementa el
+LosmodelosNPIsonestructurasalgebraicasqueseutili-
+contraste de lesiones tipo masas grandes, no as´ı el de las
+zanpararepresentarunaimagenyrealizaroperacionessobre
+microcalcificacionesomasasma´spequen˜as.Adema´s,porlo
+estaconunaaritme´ticadiferentealacla´sica(puntoapunto).
+general,estealgoritmodifuminaelmu´sculopectoral.
+Estosmodelossonefectivosenvariastareasdelprocesamien-
+El me´todo Umbral fue propuesto por Laine y colabora-
+todeima´genesylavisio´nporcomputadora.
+dores[33].Laideaprincipaldelme´todoesdistinguirentre
+Laconstruccio´nmatema´ticadeunmodeloNPIcomienza
+los p´ıxeles de borde y los p´ıxeles que no aportan informa-
+porladefinicio´ndeleyesoperacionales(adicio´nymultipli-
+cio´n,apartirdedestacarlosprimerosydejarlossegundossin
+cacio´nporunescalar)o,deformaequivalente,encontrando
+cambiar.Engeneral,elme´todoUmbrallograunmayorincre-
+unafuncio´ngeneradora(isomorfismo)querepresenteelcon-
+mentodelcontrastedelasmasas,aunquesuavizaelpectoral
+juntodedefinicio´ndelmodeloinvestigadoenunaestructura
+ma´squeelme´todoSimple.
+algebraicareal[29].
+Elme´todoCorrelacio´nsebasaenconceptosteo´ricospre-
+Dado que la estructura algebraica del modelo tiene un
+sentados por Stefanou y colaboradores [34] y Chen y cola-
+dominioespec´ıfico,sedebentransformarlosvaloresdelos
+boradores[35].Consisteenquelosp´ıxelesconvaloresaltos
+p´ıxelesdelaimagen(u)hacialosvaloresdeldominio.Esta
+deloscoeficienteswaveletsennivelesconsecutivos,tienen
+transformacio´nserealizamedianteunafuncio´nbiyectivah.
+altacorrelacio´nyportantopuedenserpartedeunaanomal´ıa.
+2u M
+Esteme´todolograunbuenincrementodelcontrastedemasas, En este trabajo se empleo´ h(u)= − cuya inversa es
+M
+microcalcificacionesyotroselementosdelaanatom´ıadela
+M(u+1)
+mamacomoelpectoralyelbordedelamisma. h − 1(u)= [36].
+2
+Elme´todoCorrelacio´nLocalesunavariantedelme´todo Loquedistingueunmodeloeselisomorfismoescogido,
+anterior.Ladiferenciaesta´enquelacorrelacio´nsecalculare- puesestedeterminalasoperacionesdelaestructuraalgebraica.
+lativaalavecindaddecadap´ıxel(detaman˜oL)ynorespecto Existenvariosmodelos:LIP[23,20],HLIP[24,36],Pseudo–
+atodalaimagen.Deestamanera,lasanomal´ıasyeltejido LIP[25]yS–LIP[26].Enlaexperimentacio´nrealizadalos
+circundantesontratadosdiferenciadamente.Estealgoritmo mejoresresultadosfueronobtenidosconelmodeloS–LIP,el
+12 WaveletsLogar´ıtmicas: UnaHerramientaEfectivaparaelProcesamientodeMamogramas
+cualseabordara´ acontinuacio´n. 4. Experimentacio´n
+Enestaseccio´nsemencionanlabasededatosdeima´genes
+2.1 S–LIP
+demamograf´ıaempleadaparalavalidacio´ndelalgoritmopro-
+Elmodelosime´tricoLIP(S–LIP)fuepropuestoporNava-
+puesto,lasmedidasutilizadasparaevaluarelcontrasteylas
+rroycolaboradores[26]parasuperarlasdesventajasdelos
+herramientasdesoftwarequepermitieronsuimplementacio´n.
+modelosprevios,respectoalasimetr´ıayalsignificadovisual
+Adema´s,sepresentanydiscutenlosresultados.
+delamisma.
+Enestemodelosedefineelisomorfismo
+4.1 BasesdedatosMIAS
+(cid:18) M u (cid:19) LabasededatosMIAS(MammographicImageAnalysis
+Φ(u)= Msgn(u)ln −| | (1) Society)[39]esunadelasbasesdedatosma´santiguasyes
+− M
+muy usada en la literatura. Esta´ disponible online, aunque
+cuyoinversoes noseactualiza.MIASconsisteen161casos,322ima´genes
+MLOdigitalizadasdondeesta´npresentestodoslostiposde
+Φ
+−
+1(u)=Msgn(u) (cid:16) 1 e
+−
+|M u | (cid:17) (2) anomal´ıas,incluyendolesionesbenignasymalignas,ymasas.
+− LasanotacionesdelasMIASconsistenenelcentroyradio
+delc´ırculoqueencierraela´readeintere´s.
+Estasfuncioneslogranuncomportamientosime´tricode
+losvalorespositivosynegativos,conloquereduceladesven-
+4.2 Evaluacio´n de la calidad en mejoramiento del
+tajadelosmodelosanteriores.
+contraste
+Laestructuraalgebraicasubyacenteenelmodeloesun
+4.2.1 LineProfile
+espaciovectorial,debidoalasimetr´ıadelconjuntodedefi-
+Ellineprofileoscanlineenunaimagenconsisteenlos
+nicio´n( M,M).Adema´s,estemodeloesconsistenteconla
+− valoresdeintensidaddelosp´ıxelesqueseencuentransobre
+formacio´n de ima´genes transmitidas por luz y las leyes de
+unal´ıneatrazadasobrelaimagen.Elco´mputodellineprofile
+percepcio´ndelbrilloenlavisio´nhumana[37].
+serealizaconelalgoritmodeBresenhamqueesta´ disponible
+EnlaFigura2seexponeelefectodelasoperacionesenel
+enskimage0.9.3(toolboxdeprocesamientodeima´genespara
+modeloS–LIP.Puedeobservarsequeestamanipulacio´nnoes
+SciPy[40]).Estaherramientaesu´tilparaevaluarelcontraste
+suficienteparamejorarelcontrastedelamamograf´ıa.Portal
+enmamograf´ıa[16,33,41],puesaltrazarunal´ıneasobreuna
+razo´n,losmodelosNPIsecombinanconotraste´cnicascomo
+anomal´ıa,puedengraficarselosvaloresdeintensidaddelos
+laTWD.
+p´ıxelessobrelamisma,antesydespue´sdelmejoramiento.Si
+lasdiferenciasentrelosp´ıxelesdeltejidodelamamaylosde
+3. Wavelets Logar´ıtmicas para mejorar laanomal´ıaseacentu´an,setieneunmayorcontraste.
+contraste en mamograf´ıa
+4.2.2 BoxPlots
+Laswaveletslogar´ıtmicasfueronintroducidasporCourbe- Delaestad´ısticaseconocequeloscuartilessonvalores
+baisseycolaboradoresen2002[38].Dichosautoresprobaron posicionalesquedividenlainformacio´nencuatropartesigua-
+la ventaja de estas wavelets para resolver problemas como les,elprimercuartildejael25%delainformacio´npordebajo
+la deteccio´n de singularidades. La idea de las wavelets lo- dee´l,yel75%porencima,elsegundocuartil,aligualquela
+gar´ıtmicasesmanipular,deformanolineal,lasdilatacionesy mediana,dividelainformacio´nendospartesiguales,ypor
+traslacionesdelasmismas.Estaswaveletssonsuperioresalas u´ltimoeltercercuartildejael75%pordebajodes´ı,yel25%
+cla´sicaspuessusamplitudescambiandeformalogar´ıtmicay porencima.
+permanencenacotadas[31]. Losdiagramasdecaja(boxplots)songra´ficosqueper-
+La TWL puede definirse usando las operaciones no li- mitenobservardeformasimulta´neacincoestad´ısticassobre
+neales de cada modelo; sin embargo, en este trabajo se im- losdatosquerepresenta:m´ınimo,segundocuartil,promedio,
+plemento´ una segunda v´ıa. Esta consiste en aplicar Φ a la tercercuartilyma´ximo.Lascajasdelgra´ficomuestranlos
+imagen,luegocalcularlaTWDydespue´srevertirlatransfor- intervalosdeconfianzadeloscuartilesyelpromedio.Elpro-
+macio´nmedianteΦ 1.Laprincipaldiferenciaentreambas medioserepresentaporunal´ıneahorizontalenelcentrode
+−
+maneraseselcostocomputacionalquepuedeimplicareluso lacaja.Elrangodevaloresserepresentamediantedosl´ıneas
+delisomorfismo[31]. horizontales. Los puntos que se extienden ma´s alla´ de este
+Elalgoritmopropuestoenesteart´ıculocombina,mediante rango se consideran ruido (outliers) y se grafican fuera de
+laswaveletslogar´ıtmicas,losme´todosdemejoramientodel lacaja.Estetipodegra´ficopermitenotarvaloresat´ıpicosy
+contrastebasadosenTWDylosmodelosNPIparadestacar
+analizarlasimetr´ıadeladistribucio´n.
+lasanomal´ıaspresentesenlamamograf´ıa,comosemuestra
+4.2.3 MedidasbasadasenRegionesdeIntere´s
+enlaFigura3.
+Enlaexperimentacio´nseutilizaronmedidasbasadasen
+regionesdeintere´scomoCII[5]yDSM[42].
+WaveletsLogar´ıtmicas: UnaHerramientaEfectivaparaelProcesamientodeMamogramas 13
+(a) (b) (c) (d) (e)
+Figura2.Efectodelasoperaciones y delmodeloS–LIPenelmamogramamdb209:(a) 100,(b) 50,(c)imagen
+⊕ (cid:9) (cid:9) (cid:9)
+original,(d) 50y(e) 100
+⊕ ⊕
+Modificar
+Imagen Imagen
+ℎ Φ TWD coeficientes ITWD Φ−1 ℎ−1
+original resultante
+wavelet
+Figura3.Algoritmopropuestoparamejoramientodelcontrasteenmamograf´ıa
+Elobjetivodeestasmedidasescuantificarelcontrastepre- Se tomaron todas las bases wavelets de las familias
+senteenunazonadelmamograma,elegidaporelespecialista Haar,Daubechies,Symlets,Coiflets,Biorthogonal,Re-
+odefinidadeformaautoma´tica.Unaregio´ndeintere´s(ROI) versebiorthogonalyMeyer,presentesenPyWavelets
+esta´ compuesta de un primer plano (foreground) donde se [45].
+ubicalaanomal´ıa,yelfondo(background)compuestoporel
+Seejecuto´ ladescomposicio´nwavelethastaelma´ximo
+tejidocircundante.Estoreflejaelactosubconscientepresente
+nivelposiblesegu´ncadabasewavelet.
+enlapercepcio´nhumana,queobservaunobjetorespectoal
+entornodondeesta´ ubicado. Serealizo´elfiltradodecoeficientesdelascuatroformas
+Enlaexperimentacio´nseempleo´ labasededatosMIAS planteadas en la Seccio´n 1, con el procesamiento de
+[39]. En MIAS, la ROI se define de la siguiente forma: el todoslosnivelesenlosme´todosSimpleyUmbral,ydel
+primerplanoesunc´ırculodondeesta´contenidalaanomal´ıay segundonivelenadelante,enlosme´todosCorrelacio´n
+elfondoesuncuadradoconce´ntrico,creadoporlosautores, yCorrelacio´nLocal.Encadanivelsemodificaronlas
+quecontieneaestec´ırculo. tresorientaciones.
+Lasmedidasutilizadasfueron:
+Medianteunana´lisispreviodelosresultadosparamdb209
+ContrastImprovementIndex(CII):Midelaganancia [VerFigura1],sedecidio´ extenderlaexperimentacio´nconla
+de contraste entre la imagen original y la procesada. baseSymlet6,G=5,L=9yloscincou´ltimosnivelesde
+CII>0ymientrasmayorseasuvalor,mayorsera´ la descomposicio´n(conelfindepodercomputarlacorrelacio´n
+calidaddelcontraste[43,5]. entrelosdetallesdedosnivelesconsecutivos),empleandolos
+me´todos presentados, excepto el me´todo Umbral en el que
+DistributionSeparationMeasure(DSM):Representa
+sefiltraronlosu´ltimostresniveles.Adema´s,fueronfiltradas
+cua´nfundidaesta´ unaanomal´ıaconlaregio´ncircun-
+todaslasorientaciones.
+dante.Idealmente,DSM>0yesdirectamentepropor-
+Elme´todoSimple–comoseesperaba–fueelderesul-
+cionalalacalidaddelcontraste[42].
+tados ma´s modestos. El mayor incremento del contraste se
+4.3 Software logro´ conelme´todoUmbral,aunquelosme´todosCorrelacio´n
+Paraimplementarlasideasexpuestasenestetrabajose yCorrelacio´nLocaltienenvaloresdeCIImuycercanosaUm-
+utilizo´ ellenguajePython2.7.6[44].Paraeltrabajoconwa- bral.Adema´s,esteu´ltimome´todologralamejorseparacio´n
+veletsseempleo´ elmo´duloPyWavelets0.2.2[45].Adema´sse entreloshistogramasdelprimerplanoydelfondo,aunque
+utilizaronlosmo´dulosNumPy1.7.1[46],SciPy0.13.0[40], losresultadosfueroncercanosalosdelme´todoCorrelacio´n.
+Matplotlib1.3.1[47],skimage0.9.3[48]yOpenCV2.4.6.0 Losme´todosCorrelacio´nyCorrelacio´nLocalresaltaronma´s
+[49]. losbordesdelasanomal´ıaseincrementaronlahomogeneidad
+delamisma.Enesteaspecto,elme´todoUmbralresulto´ serel
+4.4 ResultadosyDiscusio´n peor.
+Para mostrar el efecto de los algoritmos planteados se Delosme´todosbasadosenwavelets,Correlacio´nLocal
+trabajara´ conlaimagenmdb209deMIAS.EnlaFigura4se obtuvomejoresvaloresdelasmedidasyresultadosvisuales
+muestralaimagenyunaROIdondesesen˜alantresmicrocal- queconcuerdanconlasmismas[Figuras1,7ay7c].
+cificaciones.
+Paralosme´todosbasadosenwaveletssedisen˜o´ laexperi- Paracontinuarlaexperimentacio´nseaplicaronlosme´to-
+mentacio´ndelasiguienteforma: dos de modificacio´n de coeficientes wavelets mediante la
+Capítulo3. Experimentación 42
+14 WaveletsLogar´ıtmicas: UnaHerramientaEfectivaparaelProcesamientodeMamogramas
+Microcalcificaciones
+ROI
+mdb209
+Figura4.Imagenparalaexperimentacio´nysuregio´ndeintere´s
+Figura3.5:Imagenparalaexperimentaciónysuregióndeinterés
+TWL,empleandolosmodelosLIP,HLIP,Pseudo–LIPyS– relacio´nmedida–visualidad[Figuras5y7].
+LIP,ylospara´metrosdelosmejoresresultadosvisualesante-
+riores.LosmodelosLIPyS–LIPsonlosquemejoresresulta- 5. Conclusiones
+dosmuestran,puesenlosotrosdosmodeloselmejoramiento
+Enestetrabajosepropusounalgoritmobasadoenwave-
+conwaveletsfuemenosefectivo.
+Tabla3.3Mejorypeorresultadoparameledtsidloagar´ıtmicasparamejorarcontrasteenmamograf´ıa.Para
+EnlaFigura5seexponeelresultadodeaplicarleamdb209
+laexperimentacio´nseempleo´ labasededatosMIASymedi-
+elme´todoCorrelacio´nLocalmedianteTWDyCenIIelmarcoMdéetodo Base Niveles
+dasdecalidaddelmejoramientobasadasenROI.Enalgunos
+laTWLempleandoS–LIP.Puedeobservarseelincrementode
+Peor 0.319 Simplceasos,rlbosiova3l.o3resdelas7medidasnosereflejanenlosresulta-
+laintensidaddelasregionessen˜aladasresp−ectoalaimagen
+Mejor 1.132 Umbradolsvisudable1s,5porloque5esnecesarioelusodeotrasformasde
+original,adema´sdeldecrementodelaintensidadenlosp´ıxe-
+evaluacio´ncomoellineprofileylosdiagramasdecaja.Estos
+lesvecinosalamicrocalcificacio´nquesedesearesaltar.Estas
+valoreserro´neossedebenenpartealcriteriodeROIempleado.
+propiedadessonlasqueexpresanlamejoradDelScMontrasteM. étodo Base Niveles
+Laexperimentacio´nmostro´ queelme´todoCorrelacio´nLocal
+EnlaFigura6puedeobservaPrseeoerlincrem8en9t.o1d3e2lconUtrams-bral bior3.1 8
+fueeldemejoresresultadosmedidas–visualidad.Alaplicar
+tedeunamasaenmdb028.No´teseco´moa−laplicarTWLcon
+Mejor 30.784 Simpleestosalghoariatmrosexpres1a0ndolaimagenenunmodelonolineal
+S–LIPseoscurecema´seltejidocircundante,loqueprovoca
+paraprocesamientodeima´genes,esteme´todofuetambie´nel
+unmayorcontrastedelamasa.
+demejoresresultadosmedidas–visualidadencadamodelo,
+Finalmente,seejecuto´ laTWLylosme´TtoBdoCssdemoMdifié-todo Base Niveles
+peroelcontrasteseincremento´ ma´salusarelmodeloS–LIP.
+cacio´ndecoeficienteswavelet,cPoneolorspara´me0tr.o0s7p5reviosU,emn bral db15 5
+−
+todaslasima´genesdeMIAS.
+Mejor 0.682 Simple rbio3.3 7
+Referencias
+AlaplicarTWLenelmodeloS–LIP,elme´todoSimple
+es, nuevamente, el de resultados ma´s modestos. El me´todo [1] Bernard W. Stewart and Christopher P. Wild. World
+TBC Método Base Niveles
+Umbrallogro´ elmayorincrementodelcontraste,εaunqueel CancerReport2014. InternationalAgencyforResearch
+me´todoCorrelacio´ntuvouncomPepoorrtamiento0m.0u4y8parecUidmo,bral ondCba1n5cer/World5HealthOrganization,Lyon,2014.
+−
+respectoaestamedida.AdifereMncieajoderlaapli4c.a1c8io´6ndeTWSDim, ple bior3.1 8
+conelmodeloS–LIPseintrodujomenosruidoenelmejora- [2] Mariana Castro Barba. Avances en Diagno´stico por
+mientodelcontraste.Lamayorseparacio´nentreloshistogra- Ima´genes. EdicionesJournal,BuenosAires,2010.
+D Método Base Niveles
+masenlaROIsealcanzo´ porelme´todoUmbral.Elme´todo
+[3] Ce´sarS.PedrosaandRafaelCasanova. Diagno´sticopor
+Simple fue el que obtuvo mejoPrereoarlce de ho6m.0o8geneidaUdmy bral haar 10
+Imagen.CompendiodeRadiolog´ıaCl´ınica. Interameri-
+bordesdelaROI,aunqueelme´tModeojCoorrrelac9io´0n.1L4o2calobtUuvmo bral bior3.1 8
+canaMcGraw-Hill.
+resultadosmuycercanosalosdeesteme´todo[Figura7].
+Enlosrestantesmodelos,losresultadosdelasmedidas [4] Azeddine Beghdadi and Alain Le Negrate. Contrast
+fueronmuyparecidosparacadaunodelosme´todos,aunque EnhancementTechniqueBasedonLocalDetectionof
+losresultadosvisualesindicaronqueempleandoelmodelo Edges. InComputerVision,Graphics,andImagesPro-
+S–LIPyelme´todoCorrelacio´nLocalseobtuvounabuena cessing,pages162–174,1989.
+WaveletsLogar´ıtmicas: UnaHerramientaEfectivaparaelProcesamientodeMamogramas 15
+(a)
+(b) (c)
+(d) (e)
+Figura5.Efectodelamodificacio´ndecoeficientesmedianteCorrelacio´nLocal:(a)imagenoriginal,(b)usandoTWD,(c)line
+profilecorrespondiente,(d)usandoTWLconS–LIPy(e)lineprofilecorrespondiente
+16 WaveletsLogar´ıtmicas: UnaHerramientaEfectivaparaelProcesamientodeMamogramas
+(a) (b) (c)
+Figura6.MejoramientodelcontrastedeunamasamedianteCorrelacio´nLocal:(a)imagenoriginal,(b)usandoTWDy(c)
+usandoTWLconS–LIP
+CII CII
+2.0 2.0
+1.5 1.5
+1.0 1.0
+Capítulo 3. Experimentación 47
+Ca0p.5ítulo 3. Experimentación 0.5 61
+0.0 0.0
+0.5 0.5
+1.0 1.0
+1.5 1.5
+Simple Umbral Correlación Correlación Local Simple Umbral Correlación Correlación Local
+(a) (b)
+CII CDISIM DSM
+2.0 21.000 100
+1.5 1.5
+50 50
+1.0 1.0
+0.5 0.5
+0 0
+0.0 0.0
+0.5 0.5
+50 50
+1.0 1.0
+1.5 11.500 100
+Simple Umbral Correlación Correlación Local SiSmimplpele UUmmbrbarlal CCororrerlealcaicóinón CCororrerlealcaicóinó nL oLcoaclal Simple Umbral Correlación Correlación Local
+(c) (d)
+TBCs TBTCBsCe TBCe
+3.0 Figura742
+.
+.5Resultadosdelaexperimentacio´nparatodaslasima´gene3s.0enMIAS:(a)CIIusandoTWD,(b)CIIusandoTWL,(c)
+DSMusandoTWDy(d)DSMusandoTWL
+2.5 2.0 2.5
+3
+2.0 2.0
+1.5
+2
+1.5 1.5
+1.0
+1.0 1.0
+1
+0.5
+0.5 0.5
+0
+0.0
+0.0 0.0
+0.5 10.5 0.5
+Simple Umbral Correlación Correlación Local SimSipmleple UmUbmrbarlal CoCrorerrlaeclaiócnión CoCrorerrlaeclaiócnió Lno Lcoaclal Simple Umbral Correlación Correlación Local
+D D
+100 100
+80 80
+60 60
+40 40
+20 20
+0 0
+Simple Umbral Correlación Correlación Local Simple Umbral Correlación Correlación Local
+Figura3.9:ResultadosdelosmétodosdeFimguordaifi3c.2a1c:ióRnesdueltcaodeofiscidenetleosswmaévteoldeotss de modificación de coeficientes wave-
+respecto a las medidas basadas en ROI’slets respecto a las medidas basadas en ROI’s, utilizando LWT en el modelo
+S–LIP
+WaveletsLogar´ıtmicas: UnaHerramientaEfectivaparaelProcesamientodeMamogramas 17
+[5] RangarajM.Rangayyan. BiomedicalImageAnalysis. [18] DavidL.DonohoandIainM.Johnstone. Adaptingto
+CRCPress,2004. UnknownSmoothnessviaWaveletShrinkage. Journal
+oftheAmericanStatisticalAssociation,90(432):1200,
+[6] Heng-DaCheng,XiaopengCai,XiaoweiChen,Liming
+December1995.
+Hu,andXuelingLou. Computer-aidedDetectionand
+ClassificationofMicrocalcificationsinMammograms: [19] NaruomiYasudaandYoshieKodera. DesignofaNoise-
+ASurvey. PatternRecognition,36(12):2967–2991,De- dependentShrinkageFunctioninWaveletShrinkageof
+cember2003. X-ray CT Image. International Journal of Computer
+Assisted Radiology and Surgery, 4(4):353–366, June
+[7] WilliamMarkMorrow,RamanBhalachandraParanja-
+2009.
+pe, Rangaraj M. Rangayyan, and Joseph Edward Leo
+Desautels. Region-based Contrast Enhancement of
+[20] MichelJourlinandCharlesPinoli. LogarithmicImage
+Mammograms. IEEETransactionsonMedicalImaging,
+Processing:TheMathematicalandPhysicalFramework
+11(3):392–406,1992.
+for the Representation and Processing of Transmitted
+Images. Advances in Imaging and Electron Physics,
+[8] FergusW.CampbellandJanusKulikowski. Orientatio-
+115:129–196,2001.
+nalSelectivityoftheHumanVisualSystem.TheJournal
+ofPhysiology,187(2):437,1966.
+[21] AlanV.Oppenheim. SuperpositioninaClassofNon–
+[9] TorstenN.Wiesel. ThePostnatalDevelopmentofthe linear Systems. Technical report, DTIC Document,
+VisualCortexandtheInfluenceofEnvironment. Bios- 1965.
+ciencereports,2(6):351–377,1982.
+[22] ThomasG.Stockham. ImageProcessingintheContext
+[10] MetinAkay. WaveletsinMedicalImages. InTimeFre- ofaVisualModel. ProceedingsoftheIEEE,60(7):828–
+quencyandWaveletsinBiomedicalSignalProcessing. 842,1972.
+IEEEPressSeriesinBiomedicalEngineering,1998.
+[23] Michel Jourlin and Jean-Charles Pinoli. A Model for
+[11] JianFanandAndrewF.Laine. ContrastEnhancement LogarithmicImageProcessing. JournalofMicroscopy,
+byMultiscaleandNon–linearOperators. Universityof 149(1):21–35,1988.
+Florida,1996.
+[24] VasilePaˇtras¸cu. Mode`leMathe´matiquepourTraitement
+[12] Robin N. Strickland and Hee Il Hahn. Wavelet LogarithmiquedesImages. PhDThesis,Universite´“Po-
+TransformsforDetectingMicrocalcificationsinMam- litehnica”deBucarest,2001.
+mograms. IEEE Transactions on Medical Imaging,
+15(2):218–229,1996. [25] Constantin Vertan, Alina Oprea, Corneliu Florea, and
+LauraFlorea. APseudo-logarithmicImageProcessing
+[13] JianLu,DennisM.HealyJr,andJohnB.Weaver. Con-
+FrameworkforEdgeDetection. InAdvancedConcepts
+trastEnhancementofMedicalImagesusingMultiscale
+forIntelligentVisionSystems,pages637–644.Springer,
+EdgeRepresentation. OpticalEngineering,33(7):2151–
+2008.
+2161,1994.
+[26] LaurentNavarro,GuangDeng,andGuyCourbebaisse.
+[14] AndrewF.LaineandShuwuSong. MultiscaleWavelet
+TheSymmetricLogarithmicImageProcessingModel.
+RepresentationsforMammographicFeatureAnalysis.
+DigitalSignalProcessing,23(5):1337–1343,2013.
+InSanDiego’92,pages306–316.InternationalSociety
+forOpticsandPhotonics,1992.
+[27] Philippe Gremillet, Michel Jourlin, and Jean-Charles
+Pinoli. LIP-model-based Three-dimensional Recons-
+[15] JelenaKovacˇevic´ andMartinVetterli. Non–separable
+tructionandVisualizationofHIV-infectedEntireCells.
+MultidimensionalPerfectReconstructionFilterBanks
+andWaveletBasesforRn. IEEETransactionsonInfor- JournalofMicroscopy,174(1):31–38,1994.
+mationTheory,38:533–555,1992.
+[28] GuangDeng,LaurenceCahill,andGordonTobin. The
+[16] AndrewF.Laine,JianFan,andWuhaiYang. Wavelets StudyofLogarithmicImageProcessingModelandits
+for Contrast Enhancement of Digital Mammography. ApplicationtoImageEnhancement. IEEETransactions
+IEEEEngineeringinMedicineandBiologyMagazine, onImageProcessing,4(4):506–512,1994.
+14(5):536–550,1995.
+[29] CorneliuFlorea. Non–linearImageRepresentationand
+[17] Iztok Koren, Andrew F. Laine, and Fred Taylor. Ima- Pixel-wiseProcessingforEnhancingImagesAcquired
+geFusionusingSteerableDyadicWaveletTransform. withDigitalCameras. University“Politehnica”ofBu-
+InProceedingsofInternationalConferenceonImage curest,FacultyofElectronicsTelecommunicationand
+Processing,volume3,pages232–235.IEEE,1995. InformationTechnology,2009.
+18 WaveletsLogar´ıtmicas: UnaHerramientaEfectivaparaelProcesamientodeMamogramas
+[30] Karen Panetta, Yicong Zhou, Sos Agaian, and Hong- ImageAnalysisSocietyDigitalMammogramDataba-
+weiJia. Non–linearUnsharpMaskingforMammogram se. InExerptaMedica.InternationalCongressSeries,
+Enhancement. IEEETransactionsonInformationTech- volume1069,pages375–378,1994.
+nologyinBiomedicine,15(6):918–928,November2011.
+[40] EricJones,TravisOliphant,andPearuPeterson. Scipy:
+[31] LaurentNavarro,GuyCourbebaisse,andMichelJourlin. OpenSourceScientificToolsforPython. 2014.
+Logarithmic Wavelets. In Advances in Imaging and
+[41] Arianna Mencattini, Marcello Salmeri, Roberto Loja-
+Electron Physics, volume 183, pages 41–98. Elsevier,
+cono,ManuelaFrigerio,andFedericaCaselli. Mammo-
+2014.
+graphicImagesEnhancementandDenoisingforBreast
+[32] NelsonMartins,CarlaPereira,andManuelFerreira. Di- Cancer Detection Using Dyadic Wavelet Processing.
+gital Mammograms Contrast Enhancement using Wa- IEEE Transactions on Instrumentation and Measure-
+velets—AComparativeStudy. InIEEEInternational ment,57(7):1422–1430,July2008.
+SymposiumonMedicalMeasurementsandApplications
+[42] SameerSinghandKeirBovis.AnEvaluationofContrast
+(MeMeA),pages1–6.IEEE,2014.
+Enhancement Techniques for Mammographic Breast
+[33] AndrewF.Laine,SergioSchuler,JianFan,andWalter Masses. IEEETransactionsonInformationTechnology
+Huda. MammographicFeatureEnhancementbyMultis- inBiomedicine,9(1):109–119,March2005.
+caleAnalysis. IEEETransactionsonMedicalImaging,
+[43] GeorgeSakellaropoulos,EleniCostaridou,andGeorge
+13(4):725–740,1994.
+Panayiotakis. AWavelet-basedSpatiallyAdaptiveMet-
+hodforMammographicContrastEnhancement. Physics
+[34] HaraStefanou,SofoklisKakouros,DionisisCavouras,
+inMedicineandBiology,48(6):787,2003.
+andManolisWallace. Wavelet-basedMammographic
+Enhancement.InProc.oftheFifthInt.Netw.Conf.(INC),
+[44] Guido van Rossum. Python Tutorial. Technical Re-
+2005.
+portCS-R9526,CentrumvoorWiskunde&Informatica
+(CWI),Amsterdam,May1995.
+[35] LulinChen,ChangW.Chen,andKevinJ.Parker. Adap-
+tiveFeatureEnhancementforMammographicImages
+[45] FilipWasilewski.AnalysisandClassificationofMedical
+withWaveletMultiresolutionAnalysis. JournalofElec-
+SignalsusingWaveletTransforms,2006.
+tronicImaging,6(4):467–478,1997.
+[46] Ste´fan van der Walt, S. Chris Colbert, and Gae¨l Varo-
+[36] VasilePaˇtras¸cuandVasileBuzuloiu. AMathematical quaux. The NumPy Array: A Structure for Efficient
+ModelforLogarithmicImageProcessing.The5thWorld NumericalComputation. ComputinginScience&Engi-
+Multi-ConferenceonSystemics,CyberneticsandInfor- neering,13(2):22–30,2011.
+matics(SCI),2001.
+[47] John D. Hunter. Matplotlib: A 2D Graphics Environ-
+[37] Laurent Navarro and Guy Courbebaisse. Symmetric ment. ComputinginScienceandEngineering,9(3):90–
+Logarithmic Image Processing Model: Application to 95,2007.
+LaplacianEdgeDetection. DigitalSignalProcessing,
+2013. [48] Ste´fan van der Walt, Johannes L. Scho¨nberger, Juan
+Nunez-Iglesias,Franc¸oisBoulogne,JoshuaD.Warner,
+[38] GuyCourbebaisse,FredericTrunde,andMichelJourlin. Neil Yager, Emmanuelle Gouillart, Tony Yu, and the
+WaveletTransformandLIPModel. ImageAnalysis& scikit-imagecontributors. scikit-image:ImageProces-
+Stereology,21(2):121–125,2002. singinPython. PeerJ,2:453,2014.
+[39] JohnSuckling, J. Parker,D. Dance,S. Astley, I.Hutt, [49] Gary R. Bradski. The OpenCV Library. Dr. Dobb’s
+C.Boggis,I.Ricketts,E.Stamatakis,N.Cerneaz,S.Kok, JournalofSoftwareTools,2000.
+P.Taylo,D.Betal,andJ.Savage. TheMammographic

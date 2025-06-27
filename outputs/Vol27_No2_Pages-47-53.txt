@@ -1,0 +1,331 @@
+Revista Ciencias Matemáticas
+Propiedades efectivas de materiales
+elásticos con fi bras multicapas
+Effective properties for multi-phase fi brous elastic composites.
+Yanely Zaldivar Gerpe (yanely@matcom.uh.cu), Raúl Guinovart Díaz (guino@matcom.uh.cu)
+Yoanh Espinosa Almeyda (yealmeya@matcom.uh.cu), Julián Bravo Castillero (jbravo@matcom.uh.cu)
+Reinaldo Rodríguez Ramos (reinaldo@matcom.uh.cu)
+Universidad de La Habana, Cuba
+Resumen Key Words: Asymptotic Homogenization Method, effective
+properties, fi brous composites, doubly periodic.
+Las expresiones analíticas de las propiedades axiales para un com-
+puesto donde los refuerzos son fi bras multilaminadas han sido ob-
+tenidas usando el método de homogeneización asintótica (MHA) y
+han sido alineadas determinando paralelogramos que constituyen 1. Introducción
+las celdas de periodicidad. Este trabajo es una extensión de traba-
+jos previos que han estudiado compuestos bifásicos con celda de Un material compuesto es la combinación de dos o más materia-
+periodicidad cuadradas o hexagonales, bajo condiciones de per- les con propiedades físicas diferentes, que se encuentran indisolu-
+fecta adhesión entre las fases y las constituyentes exhiben propie- blemente unidos formando un nuevo material. Uno de ellos, actúa
+dades elásticas transversalmente isotrópicas. Se resolvieron dos como matriz o aglutinante y los restantes constituyen las inclusio-
+problemas sobre la celda periódica usando funciones armónicas nes o refuerzos. Las propiedades físicas de este compuesto (propie-
+doblemente periódicas para obtener dichas propiedades efectivas. dades efectivas) dependerán de las propiedades, de los volúmenes
+Palabras clave: Método de homogeneización asintótica, coefi - de sus constituyentes y de la estructura geométrica de los mismos.
+cientes efectivos, compuesto fi broso, doble periodicidad. El estudio de los materiales compuestos fi brosos ha recibido
+mucha atención en la literatura científi ca, motivado fundamen-
+Abstract
+talmente por el amplio campo de aplicaciones de los mismos,
+Effective longitudinal shear moduli closed-form analytical ex- por ejemplo: en la industria aeronáutica para la construcción de
+pressions of n-phase fi brous periodic composites are obtained las estructuras de las naves, en la industria médica son utiliza-
+by means of the asymptotic homogenization method (AHM). dos en dispositivos para el procesamiento de imágenes médicas,
+The periodic cell is a parallelogram array of laminated circu- así como en muchos otros avances tecnológicos [1].
+lar cylinders. This work is an extension of previous reported La ventaja de estos es que se diseñan de manera que exhiban
+results, where two-phase composite with perfect contact were las propiedades necesarias para determinada aplicación, inclu-
+considered and the constituents exhibit transversely isotro- so en ocasiones, propiedades que ninguno de sus componentes
+pic properties. Two problems over the periodic cell are solved individualmente presenta [4].
+using doubly periodic harmonic functions in order to obtain the La utilización de métodos matemáticos para la determinación
+effective properties. de las propiedades globales o efectivas de los materiales com-
+— 47 —
+Sociedad Cubana de Matemática y Computación
+puestos es de gran importancia, pues permiten determinar algo- constituye un paralelogramo cuyos períodos principales ω, ω
+1 2
+ritmos con los cuales se predicen estas de manera teórica. son números complejos (fi gura 1). Denotemos por l el diámetro
+Las ecuaciones diferenciales de los problemas de contorno, de la celda periódica y por L el diámetro del compuesto, sea
+que modelan las condiciones de equilibrio de los medios hetero- ε = l/L un parámetro pequeño que caracteriza la densidad de
+géneos que estudiamos en el presente trabajo, poseen coefi cien- las inclusiones en la matriz. Siendo x = (x, x, x ) la variable
+1 2 3
+tes periódicos rápidamente oscilantes. El tratamiento numérico global, y = (x, x )/ε la variable defi nida sobre la celda periódica.
+1 2
+de tales problemas requiere de modelos computacionales que Las ecuaciones constitutivas de Navier para la elasticidad li-
+consumen mucho tiempo de cómputo. Una variante de solución neal que gobiernan esta situación están expresadas por la Ley
+para la estimación de las propiedades efectivas nos lo brindan de Hooke (1)
+los métodos de homogeneización. Mediante el uso de este mé-
+todo matemático el costo computacional es mucho más efi ciente
+y rápido.
+El MHA [2] [7] es una rigurosa teoría matemática para la
+investigación de las propiedades globales de medios periódicos
+y rápidamente oscilantes
+El objetivo de este trabajo es determinar las expresiones
+Fig. 1 Compuesto fi broso y sección transversal de la celda de perio-
+analíticas para los coefi cientes efectivos longitudinales de un
+dicidad
+compuesto elástico con fi bras cilíndricas multicapas en el que
+la celda es paralelogramo y las condiciones de contacto entre (1)
+las fi bras y la matriz es perfecta. Por tal motivo el trabajo se or- siendo C el tensor de rigidez, S el tensor de tensiones y e
+ijkl ij kl
+ganiza de la siguiente manera: se realiza el planteamiento del el tensor de deformación. Por otro lado se conoce que la rela-
+problema de contorno en estudio y se explican las ideas fun- ción entre el campo eléctrico y los desplazamientos eléctricos
+damentales del MHA a partir de las ecuaciones de la teoría de se expresa como:
+elasticidad. Seguidamente se plantean y resuelven los proble- (2)
+mas sobre la celda periódica y se determinan las expresiones
+donde .
+analíticas de los coefi cientes efectivos. Los resultados se com-
+Sustituyendo (2) en (1) y considerando el caso estático, en el
+paran con otros modelos reportados en la literatura.
+cual la ecuación de equilibrio satisface que σ + f = 0 siendo f
+ij,j i i
+funciones sufi cientemente suaves, que representan las fuerzas
+que actúan sobre el cuerpo, se obtiene el siguiente sistema de
+2. Desarrollo
+ecuaciones en derivadas parciales con coefi cientes periódicos
+rápidamente oscilantes:
+2.1. Planteamiento y solución del problema
+en (3)
+Consideremos un material compuesto fi broso elástico donde expresión que constituye el sistema de ecuaciones fundamen-
+los refuerzos son fi bras unidireccionales formadas por un nú-
+tales de la Teoría de la Elasticidad Lineal, donde u es la solu-
+cleo central y n-2 láminas cilíndricas concéntricas. Las fi bras
+ción del problema de contorno heterogéneo y Ω la región sobre
+laminadas están distribuidas periódicamente en la matriz. Su-
+la que está defi nido el sistema de ecuaciones. Un problema de
+pongamos que existe una adhesión perfecta entre cada medio
+contorno asociado a la Teoría de la Elasticidad consiste en re-
+y que las constituyentes son materiales homogéneos e isotró-
+solver (3) sujeto a las condiciones de Dirichlet sobre la frontera
+picos. Los ejes de simetría de las fi bras laminadas son parale-
+(4)
+los al eje x . La sección transversal de la celda de periodicidad
+3
+— 48 —
+Revista Ciencias Matemáticas
+Considerando la simetría y la positividad del tensor elástico so- 2.3 Solución de los problemas L
+pq
+bre la celda de periodicidad Y:
+Los problemas locales se descomponen en planos y antiplanos
+según el estado de deformación considerado. La solución de
+se concluye que el problema planteado en (3)-(4) tiene solución estos problemas es lo que permite determinar las componentes
+y es única [2] [9]. elásticas del tensor de rigidez efectivo.
+La solución de este sistema se obtiene haciendo uso del Mé- Consideremos un problema de deformación puramente lon-
+todo de Homogeneización Asintótica (MHA) [2]. gitudinal en los planos x x y x x bajo las tensiones tangencia-
+1 3 2 3
+les σ y σ , ambas diferentes de cero. Las tensiones normales
+13 23
+2.2 Método de Homogeneización Asintótica
+σ , σ y σ así como la tensión tangencial σ son asumidas
+11 22 33 12
+iguales a cero. Este estado de tensión-deformación correspon-
+La solución del problema (3) se halla mediante el siguiente de- de a la torsión del compuesto alrededor del eje x .
+3
+sarrollo asintótico a doble escala: Nuestro estudio se centra en los problemas antiplanos L ,
+13
+(5) L , los cuales se resolverán simultáneamente por su similitud
+23
+y se denotarán por L .
+donde las funciones u(i)(x,y) son 1-periódicas con relación a la a3
+El problema local L para cada una de las constituyentes del
+variable rápida y,y continuamente diferenciables en R3 × R2. a3
+compuesto se plantea de la siguiente manera:
+De manera análoga a lo reportado en [8], utilizando desa-
+rrollos asintóticos a doble escala, obtenemos el problema ho- (12)
+mogeneizado:
+Sujeto a las condiciones de continuidad de los desplazamientos
+(6) mecánicos y condiciones de salto de las seudo-tensiones:
+(13)
+donde los coefi cientes efectivos obedecen a la fórmula:
+(7) (14)
+~
+y las funciones locales L representan el vector de desplazamien- (15)
+to mecánico y son soluciones de los problemas locales L de-
+pq Teniendo en cuenta el problema planteado, la su solución se
+fi nidos por:
+puede encontrar representando las funciones armónicas y do-
+(8)
+blemente periódicas N, mediante los siguientes desarrollos en
+3
+(9) series de Laurent con coefi cientes complejos indeterminados:
+(10) (16)
+(11) considerando:
+La notación signifi ca el salto de la función (17)
+en el contorno Γ, indicando el supraíndice la fase en cuestión
+s
+y n es la componente del vector en la dirección normal a Γ y (18)
+j s
+s = 1, n - 1. Es importante destacar que el procedimiento de
+homogeneización ha sido descrito para cuando los coefi cientes (19)
+del sistema son infi nitamente diferenciables, pero puede ser ex-
+donde:
+tendido al caso discontinuo [2] y la única diferencia es que se
+deben añadir condiciones de contacto sobre las intercaras entre
+las componentes.
+— 49 —
+Sociedad Cubana de Matemática y Computación
+Entonces aplicando el Teorema de Green para regiones múl-
+tiplemente conexas [10] y haciendo . Las expresiones
+Siendo β = mω + nω con ω = 1 y ω = Reiθ los períodos de los coefi cientes efectivos resultan:
+mn 1 2 1 2
+principales de la celda de periodicidad. La notación signifi -
+ca que los subíndices son solo números enteros impares.
+Sustituyendo (12) en (9)-(10) se obtienen los siguientes (26)
+sistemas de ecuaciones con coefi cientes indeterminados a y
+k
+s = 2,n -2:
+(20)
+(21)
+(27)
+(22)
+(23)
+Las expresiones (26) y (27) constituyen las expresiones ana-
+líticas buscadas para los coefi cientes efectivos longitudinales
+(24)
+del compuesto. Para determinar los mismos es necesario resol-
+ver los sistemas de ecuaciones algebraicas (20)-(25) y hallar las
+(25) constantes Por la complejidad de los cálculos
+esto se resolverá computacionalmente y aquí solo se mostra-
+rán los resultados analíticos-numéricos obtenidos para un com-
+2.4 Coefi cientes efectivos
+puesto de 4 fases.
+Las propiedades efectivas longitudinales del compuesto (7) se 2.5 Expresiones analíticas de los sistemas
+pueden expresar teniendo en cuenta el operador promediación:
+Considerando los sistemas (20)-(25) para n = 4 se determinan
+las expresiones de resolviendo (22) y (25), se sustitu-
+siendo V la medida de la celda de periodicidad y , don-
+yen en (21) y (24) se obtienen se sustituyen en (20)
+de S es la región formada por una celda en forma de paralelo-
+1
+y (23) y cada una de estas da una expresión de c las cuales se
+gramo Ʃ con un hueco circular cuyo radio es R con contorno p
+1
+igualan y agrupando convenientemente se tiene:
+Γ y Ʃ que cumple , S son los anillos circulares limi-
+1 s
+(28)
+tados por los contornos Γ y Γ con radio R y S es el círculo
+s - 1 s s n
+limitado por Γ con radio R como se muestra en la fi gura donde
+n - 1 n - 1
+2 para el caso de 4 fases.
+Fig. 2 Sección transversal de la celda periódica.
+— 50 —
+Revista Ciencias Matemáticas
+fase intermedia se tomó V = 10-8. Se observa que las propie-
+2
+dades efectivas se corresponden con un material isotrópico,
+es decir, C = C y C = C = 0.
+1313 2323 2313 1323
+Tabla 1. Material bifásico elástico con celda cuadrada
+Ángulo de 90º V = 10-8
+2
+V C1313 C2313 C1323 C2323
+f
+0.4 1.80451 0 0 1.80451
+Si p = 1 y a = 1, 2 de (28) se tiene: 0.55 2.32562 0 0 2.32562
+0.7 3.17312 0 0 3.17312
+0.75 3.61967 0 0 3.61967
+Estas son las expresiones analíticas de los sistemas correspon- 0.78 3.97709 0 0 3.97709
+0.785 4.04785 0 0 4.04785
+dientes a los problemas locales L y L respectivamente, cuya
+13 23
+solución nos permite determinar los coefi cientes efectivos aso-
+2. Caso donde la celda es de períodos ω = 1 y ω = eiθ el com-
+ciados a cada problema local. 1 2
+puesto está formado de fi bras vacías, considerando dife-
+Luego sustituyendo en las expresiones (26) y (27) se tiene:
+rentes ángulos para las celdas, θ = 60º y θ = 90º. La tabla
+siguiente reproduce los mismos cálculos reportados en [6]
+para diferentes porcentajes de porosidad.
+Como parámetros de entrada se considera que la ma-
+triz tiene un coefi ciente elástico para la fi -
+bra y las láminas intermedias los coefi cientes elásticos son
+los volúmenes de las fases inter-
+3. Resultados y discusión medias se tomaron V = V = 10-8, por lo tanto la fi bra po-
+2 3
+rosa tiene una concentración próxima al volumen de la fi bra
+central V.
+Las expresiones analíticas obtenidas para los coefi cientes efecti- 4
+vos (26)-(27), reproducen como caso particular las expresiones
+Tabla 2. Material formado de fi bras vacías para diferentes porcien-
+análogas para materiales elásticos bifásicos, trifásicos y de 4 fa- tos de porosidad
+ses. A partir de dichas expresiones (26)-(27), se ha elaborado un V 0.1 0.2 0.3 0.4 0.5 0.6
+f
+programa en MATLAB, donde se pueden verifi car que los re-
+60° 24.5455 20 16.1533 12.8534 9.98427 7.45029
+sultados alcanzados satisfacen los casos límites reportados en
+90° 24.5453 19.9959 16.1274 12.7605 9.73963 6.90954
+la literatura, es decir, los casos bifásicos, trifásicos y de 4 fases,
+con celdas cuadradas, hexagonales y en forma de paralelogramo.
+3. La fi gura 3 muestra el comportamiento de la propiedad
+efectiva con la variación del volumen de frac-
+3.1 Resultados numéricos
+ción del núcleo para dos compuestos fi brosos que poseen
+una interfase entre la matriz y el refuerzo. Los materia-
+1. Caso donde la celda es un cuadrado de períodos ω = 1
+1 les considerados son de tres fases (fi bra/interfase/matriz)
+y ω = i, formado por dos fases. La tabla 1 reproduce los cál-
+2 y fueron modelados usando un esquema autoconsistente
+culos reportados [7]. Como parámetros de entrada se consi-
+generalizado (GSCS) reportado en el trabajo de Dasgupta
+deró , y como concentración de la
+y Bhandarkar [3].
+— 51 —
+Sociedad Cubana de Matemática y Computación
+Para validar nuestro modelo, hemos usado el esquema de cuatro fa- en cambio cuando este contraste aumenta, el compuesto es
+ses desarrollado. Se ha considerado que las propiedades de las dos lá- fuertemente anisótropo, es decir las propiedades axiales se
+minas intermedias son iguales, es decir diferencian mucho entre sí, en este caso ,
+y que la suma de los volúmenes de fracción de cada lámina inter- .
+media es igual al volumen de la interfase del medio trifásico repor- 6. En la fi gura 6 se muestran las propiedades efectivas en fun-
+tado en Dasgupta y Bhandarkar [3]. ción de las propiedades de una de las láminas intermedias
+, y la otra lámina es más débil
+que lo considerado en el ejemplo anterior. Tienen lugar aho-
+ra la situación recíproca, para valores bajos del contraste
+entre la el efecto de las láminas provoca que el
+compuesto es anisótropo y se cumple
+, en cambio cuando este contraste aumenta se obtiene
+.
+Fig. 1 Comportamiento de la mencionada propiedad efectiva
+4. Un debilitamiento de las propiedades de las láminas inter-
+medias debilita las propiedades efectivas con el incremento
+del volumen de fi bra. Esto se observa en la fi gura 4, donde
+del ejemplo anterior, solo se ha cambiado las propiedades de
+las láminas intermedias haciéndolas más débiles, es decir
+.
+5. En la Figura 3 se muestran las propiedades efectivas en fun-
+ción de las propiedades de una de las láminas intermedias
+, para la otra lámina . Para
+Fig. 5 Propiedades efectivas en función de una de las láminas intermedias.
+valores bajos del contraste entre la el efecto de
+las láminas es muy bajo y se cumple ,
+Fig. 4 Solo se cambiaron las propiedades de las láminas intermedias. Fig. 6 Otro caso de una lámina intermedia.
+— 52 —
+Revista Ciencias Matemáticas
+Referencias bibliográfi cas
+[1] ANDRIANOV, IGOR V., et al. (2005). Effective properties and
+micro-mechanical response of fi lamentary composite wires un-
+der longitudinal shear, Eur. J. Mech. A-Solids 24, pp. 195-206.
+[2] BAKHVALOV, N.S. AND PANASENKO, G.P. (1989). Homo-
+genization Averaging Processes in Periodic Media. Kluwer, Dor-
+drecht.
+[3] DASGUPTA, A., BHANDARKAR, S.M. (1992). A generalized
+selfconsistent Mori–Tanaka scheme for fi ber-composites with
+multiple interphases, Mech. Mater, pp.14, 67–82.
+[4] ESPINOSA, Y. (2010). Obtención de los Coefi cientes Efectivos
+para materiales compuestos fi brosos magneto electro elásticos
+con contacto imperfecto. Problema antiplano. Facultad de Mate-
+mática, Universidad de La Habana, Tesis Maestría.
+[5] GUINOVART, R. (2001). Modelación matemática de materiales
+compuestos fi brosos usando el método de homegeneización asin-
+tótica. Facultad de Matemática, Universidad de La Habana, Tesis
+Doctoral.
+[6] JIANG, C.P, et al. (2004). A rigorous analytical method for dou-
+bly periodic cylindrical inclusions under longitudinal shear and
+its application, Ed. Elsevier. pp. 225-237.
+[7] POBEDRIA, B.E. (1984). Mechanics of Composite Materials.
+Moscow State University Press, Moscow (in Russian).
+[8] RODRIGUEZ-RAMOS, R., SABINA, F. J., GUINOVART-DIAZ,
+R. AND BRAVO-CASTILLERO, J. (2001). Closed-form expres-
+sions for the effective coeffi cients of a fi ber-reinforced composi-
+te with transversely isotropic constituents-I. Elastic and square
+symmetry. Mech. Mat., 33, pp. 223-235.
+[9] SOKOLNIKOFF. (1956). Mathematical Theory of Elasticity. Ed.
+McGraw-Hill, United States. pp 86-89.
+[10] VALDÉS CASTRO, C. (2006). Análisis de funciones de varias
+variables. Ed. Félix Varela, Ciudad de La Habana.
+— 53 —

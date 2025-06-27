@@ -1,0 +1,351 @@
+CienciasMatemáticas,Vol.32,No.1,Pag.31-35, 2018
+Recibido09-2017
+Estratificacio´n e inclinacio´n en ciertas a´lgebras de
+tipo A equiorientada
+n
+Tilting Theory and Stratification in certain algebras
+of type A equioriented
+n
+Jose´ Armando Vivero Gonza´lez1, Jose´ Fidel Herna´ndez Adv´ıncula2
+Resumen Enelmarcodelestudiodelossistemasestratificantesylasa´lgebrascuasi-hereditariasesbien
+conocidoelteoremadelacorrespondencia,queasociaaunaestratificacio´nsumo´dulocaracter´ısticodeuna
+formaesencialmenteu´nica.Enestetrabajonosinteresamosporelproblemainverso,osea,sidadounmo´dulo
+inclinanteT existira´ unordendelossimplestalqueela´lgebraseacuasi-hereditariayT sumo´dulocaracter´ıstico.
+Estudiamosenparticularlasa´lgebrasA equiorientadasconrelacio´nrad2A =0,llegandoalaconclusio´nde
+n n
+queenestetipodea´lgebraslacorrespondenciaesbiun´ıvoca.
+Abstract Inthestudyofstratifiedsystemsandquasi-hereditaryalgebrasitiswellknownthattoeachstratifica-
+tionisassociatedanessentiallyuniquetiltingmodulecalledcharacteristicmodule. Inthepresentworkweare
+interestedintheinverseproblem,i.e. givenatiltingmoduleT,isitpossibletofindanorderingofthesimples
+suchthatthealgebrabecomesquasi-hereditaryandT isthecharacteristicmodule? Westudiedalgebrasof
+typeA equioriented,boundedbyrad2A =0,gettingtotheconclusionthatinthiscasethereisaone-to-one
+n n
+correspondence.
+PalabrasClave
+a´lgebracuasi-hereditaria—mo´duloinclinante—mo´dulocaracter´ıstico
+1DepartamentodeMatema´tica,UniversidadLaHabana,Cuba,jvivero@matcom.uh.cu
+2DepartamentodeMatema´tica,UniversidadLaHabana,Cuba,fidel@matcom.uh.cu
+Introduccio´n Enestetrabajonosalejamosdeesteenfoque,concentra´ndo-
+nosenlapropiedaddeuninclinantedesermo´dulocaracter´ısti-
+En las u´ltimas de´cadas la teor´ıa de representaciones de
+co. Es conocido de [11] que entre las a´lgebras hereditarias
+a´lgebrasasociativassehadesarrolladodemaneravertiginosa,
+lasu´nicasquecumplenquetodoinclinanteescaracter´ıstico
+susramificacionesyaplicacionesalcanzanamuchasramasde
+sonlasdetipoA equiorientada.Nospropusimosentonces
+n
+lamatema´tica,desdelatopolog´ıahastalateor´ıadenu´meros.
+estudiarlasa´lgebrasA equiorientadas,peroimponiendola
+n
+Sus interacciones con la f´ısica, en particular a trave´s de la
+relacio´nrad2A =0.Fueposiblemostrarqueparaestasa´lge-
+n
+teor´ıaderepresentacionesdea´lgebrasdeLie,hansidomuy
+brasexisteunabiyeccio´nentremo´dulosinclinantesba´sicos
+fruct´ıferas,siendountemadeinvestigacio´ndegranimpacto
+yo´rdenesdelossimplesparaloscualesescuasi-hereditaria,
+enlaactualidad.
+dandounarespuestaafirmativaalapreguntadesitodoincli-
+nanteescaracter´ıstico.
+Enestedesarrollohajugadounpapelcentrallallamada
+teor´ıadeinclinacio´n,principalmentedebidoalostrabajosde
+1. Mo´dulos Inclinantes Generalizados
+Brenner y Butler [13] por un lado y por el otro los aportes
+fundamentales de Happel y Ringel [3]. Esta teor´ıa ha sido Elestudiodelosmo´dulosinclinantes,conocidoenlalite-
+crucialparaentenderlacategor´ıademo´dulossobreciertos raturacomoteor´ıadeinclinacio´n,esta´encaminadoalacompa-
+tiposdea´lgebrascomosonlashereditarias,lasinclinadasy racio´nentrelascategor´ıasdemo´dulosfinitamentegenerados
+ma´srecientementelasa´lgebrasdeconglomerado. sobreunaciertak−a´lgebraAyela´lgebradeendomorfismos
+deunodesusmo´dulosinclinantes.Estateor´ıapuedepensarse
+Engenerallateor´ıadeinclinacio´ntratalacomparacio´n comounageneralizacio´ndelateor´ıadeMorita,mediantela
+entrelacategor´ıademo´dulossobreuna´lgebraAylacategor´ıa cualesposibleestablecerunaequivalenciaentrelascategor´ıas
+demo´dulossobreEndT,siendoT unA-mo´duloinclinante modAymodBdondeB=End(P)yP=⊕n P,siendoP un
+i=1 i i
+[2],[6]. representantedecadaisoclasedeproyectivosindescomponi-
+bles.Estemo´duloPllamadoprogeneradoreselmodelopara
+32 Estratificacio´neinclinacio´nenciertasa´lgebrasdetipoAnequiorientada
+definirlanocio´ndemo´duloinclinante,conlaqueesposible LuegodeaplicarelfuntorHom(−,S )seobtieneelcomplejo
+1
+demostrarunresultadoclaveenteor´ıaderepresentacioneslla-
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+madoTeoremadeInclinacio´nodeBrenner-Butler[6],[2],[5]. 0 H(S ,S ) H(P,S ) H(P,S ) H(S ,S ) 0,
+1 1 1 1 2 1 3 1
+Lanocio´ndemo´duloinclinantedelaqueacabamosde donde H(M,N)=Hom A (M,N). De la sucesio´n anterior se
+hablar ha sido generalizada en varias direcciones [7], [10]. infierequeExti(S ,S )=0,∀i>0.
+1 1
+Alolargodeestetrabajoseentiendepormo´duloinclinante
+(generalizado)T aunmo´duloquesatisfagalasiguiente Los dos mo´dulos que restan T y T no son inclinantes
+2 3
+puesExt2(S ,S )(cid:54)=0.Aligualqueparaelejemploanterior,
+1 3
+Definicio´n UnA−mo´duloT sediceinclinantesi tomamoslamismaresolucio´nproyectiva,peroaplicamosel
+funtorHom(−,S )paraobtenerelcomplejo
+(i) dp(T)=n. 3
+(ii) Exti(T,T)=0,parai≥1. 0 (cid:47)(cid:47) Hom(P,S ) (cid:47)(cid:47) Hom(P,S ) (cid:47)(cid:47) Hom(S ,S ) (cid:47)(cid:47) 0.
+1 3 2 3 3 3
+(iii) |T|=|A|.
+ComoHom(P,S )=0yHom(S ,S )∼ =kestasucesio´nno
+2 3 3 3
+Recordamosque|M|denotaelnu´merodesumandosdi- puedeserexactaeneltercerte´rmino,luegoExt2(S ,S )(cid:54)=0
+1 3
+rectosindescomponiblesdeM noisomorfosentres´ı.Enlo yportantoniT niT sonmo´dulosinclinantes.
+2 3
+quesiguevamosatrabajarcona´lgebrasdedimensio´nglobal Podemosconcluirqueparaestaa´lgebrahaysolamentetres
+finita,luegolacondicio´n(i)quedara´ ta´citamenteverificada. mo´dulosinclinantesba´sicos(sussumandosdirectosnoson
+Para la condicio´n (iii) basta tomar el nu´mero de sumandos isomorfosentreellos).
+directosigualalnu´merodesimplesnoisomorfos.Lau´nica
+condicio´nquetalvezsedificultaunpocoeslasegundaypara 2. Algebras Cuasi-Hereditarias
+analizarlausamosladefinicio´ndeExti(M,N),supropiedad
+deaditividadcomofuntorenambasvariablesyelhechode Comenzamosdandoladefinicio´nycomentaremosalgunas
+queExti(P,−)=0yExti(−,I)=0,dondePeIdenotanun nocionesba´sicassobrea´lgebrascuasi-hereditarias.Aunque
+mo´duloproyectivoeinyectivorespectivamente.Veamosun existen varias maneras equivalentes de definirlas y mucha
+ejemploqueadema´snosvaaservirparailustrarelresultado literaturasobreellasysusgeneralizaciones[1],[9],[12]nos
+final. conformaremos con una exposicio´n ba´sica y sucinta, pero
+completamentesuficienteparanuestrasnecesidades.
+Seaela´lgebraA equiorientadaylarelacio´nrad2A =0,
+3 3
+lacualserepresentamedianteelcarcaj SeaAuna´lgebradeartinyS 1 ,...,S n unordenprefijado
+delosmo´dulossimples.Consideremossuscubiertasproyec-
+1 α (cid:47)(cid:47) 2 β (cid:47)(cid:47) 3 conlarelacio´n αβ =0. tivasP 1 ,...,P n ysusenvolturasinyectivasI 1 ,...,I n .LLama-
+remos mo´dulo esta´ndar asociado a S y lo denotamos por
+i
+Losmo´dulosindescomponiblessonfa´cilesdedescribirysu ∆ i alma´ximococientedeP i cuyosfactoresdecomposicio´n
+carcajdeA-Rvienedadopor S j cumplenque j≤i.Sea∆={∆ 1 ,...,∆ n },denotamospor
+F(∆)alaclasecuyosobjetossonlosmo´dulosMqueposeen
+(cid:62)(cid:62)P
+2
+una filtacio´n esta´ndar, quiere decir que existe una cadena
+(cid:32)(cid:32) desubmo´dulos{0}=M 0 ⊂M 1 ⊂···⊂M n =Mtalquecada
+S 3 S 2 (cid:62)(cid:62)S 1 cocienteM i /M i−1 esisomorfoaalgu´n∆ i ,paratodoi=1,n.
+(cid:32)(cid:32)
+Ela´lgebraAsediceesta´ndarmenteestratificada(EE)si
+P
+1
+cadaproyectivoesta´contenidoenF(∆)yescuasi-hereditaria
+ComonopuedehaberdossumandosdirectosdeT quesean (CH)siadema´sparatodomo´duloesta´ndar∆ i cadafactorde
+losextremosdeunasucesio´ndeA-R,puesExt1(τ−1M,M) composicio´nS j ocurresolounavez.Unacondicio´nquecarac-
+no ser´ıa cero, los candidatos a ser mo´dulo inclinante son terizalasa´lgebrascuasi-hereditariasentrelasesta´ndarmente
+T =S ⊕P ⊕P; T =S ⊕P ⊕S ; T =S ⊕P ⊕S ; estratificadasesquesudimensio´nglobalesfinita.Comoyase
+1 3 2 1 2 3 2 1 3 3 1 1
+T =P ⊕S ⊕P y T =P ⊕P ⊕S . dijoantestrabajaremoscona´lgebrasquecumplenestau´ltima
+4 2 2 1 5 2 1 1
+Deelloshaydosquesoninclinantes:T queeseltrivial propiedad,porlotantoenloquesiguetodaslasa´lgebrasEE
+1
+(progenerador)yT puesesunmo´duloAPR.Otroinclinante sera´ncuasi-hereditarias.
+4
+esT yparaverestonotemosque,comoP yP sonproyec-
+5 1 2
+tivos e inyectivos y en virtud de la aditividad del funtor de Esprecisonoperderdevistaqueestadefinicio´ndepende
+extensio´n,bastaanalizarExti(S ,S ).Tomemosentoncesla delordendelossimples,porloqueesposiblequeunamis-
+1 1
+siguienteresolucio´nproyectivadeS ma a´lgebra sea EE para un orden y no lo sea para otro. Es
+1
+posibleinclusoquevarioso´rdenestenganasociadoelmismo
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+0 S P P S 0. conjuntodemo´dulosesta´ndaresyportantodefinenlamisma
+3 2 1 1
+Estratificacio´neinclinacio´nenciertasa´lgebrasdetipoAnequiorientada 33
+claseF(∆).Adosestratificacionesquecumplanestau´ltima 2.1 Mo´dulosCaracter´ısticos
+relacio´nselesllamara´ equivalentes. Acontinuacio´nveremosque´relacio´nexisteentrelasa´lge-
+brascuasi-hereditariasylosmo´dulosinclinantes.Elsiguiente
+Parailustrarestasdefinicionesretomemosela´lgebradela teorema[8]nossera´ degranutilidad.
+seccio´nanterior,cuyocarcajconrelacioneseselsiguiente
+Teorema1 Sea(A,(cid:22))una´lgebraEE.
+Entonces existe un mo´dulo inclinante T, u´nico sal-
+α (cid:47)(cid:47) β (cid:47)(cid:47)
+1 2 3, αβ =0. voisomorfismo,talqueaddT =F(∆)∩Y(∆),donde
+Y(∆)={Y ∈modA:Ext1(F(∆),Y)=0}.
+Enesteana´lisissueleserma´su´tilrepresentarlosmo´dulospor
+Estemo´duloT esllamadomo´dulocaracter´ısticoycumple
+sussucesionesdeLoewy[6]:
+propiedadesdeseablesquehacenquesejustifiquesunombre.
+Es oportuno sen˜alar que para dos estratificaciones equiva-
+1 2
+P 1 = 2 , P 2 = 3 , P 3 =3. lentes,elmo´dulocaracter´ısticoasociadoacadaunadifiere
+solamenteenelordendelossumandosdirectos.
+Estaesuna´lgebradeNakayama[5],luegocadamo´dulotiene
+Teorema2 Sea A una k-a´lgebra y (cid:22) un orden de los sim-
+unau´nicaseriedecomposicio´n,queesprecisamentelaserie
+plestalqueela´lgebraesEE.Entonceslassiguientes
+radical,portanto{0}⊂S ⊂P eslaseriedecomposicio´nde
+2 1 condicionessesatisfacen.
+P.Susfactoresdecomposicio´nsonS yS ysuscocientes
+1 1 2
+sonP 1 yS 1 .Conlanotacio´nusadapuedeversequeenelcaso (i) Paracadai∈[1,n]existeunasucesio´nexacta
+deP susfactoresdecomposicio´nsonS yS ysuscocientes
+2 2 3 (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+P 2 yS 2 . 0 ∆ i T i X i 0.
+dondeX ∈F({∆ }: j<i).
+Conestopodemoscomenzarachequearcadaunodelos i j
+seiso´rdenesdelossimplesparaverencua´lesela´lgebraes (ii) Elconjunto{T i }esta´formadopormo´dulosindes-
+EE: componiblesyelmo´dulocaracter´ısticoasociado
+a(A,(cid:22))esT =(cid:76)n T.
+i=1 i
+(1) Sea el orden {e ,e ,e }. Los mo´dulos esta´ndar son
+1 2 3 Retomemos el ejemplo del a´lgebra A con la relacio´n
+∆ =S ,∆ =S ,∆ =S .Delpa´rrafoanteriortenemos 3
+1 1 2 2 3 3 rad2A =0.Yasabemosquetienetresinclinantesycuatro
+queP ∈F(∆)parai=1,2,3.Luegoenesteordenel 3
+i o´rdenesparalosqueesEE,perodosdeellossonequivalen-
+a´gebraesEEyadema´sF(∆)=modA .
+3 tes,luegotienenasociadoelmismomo´dulocaracter´ıstico.De
+esta forma tenemos para esta a´lgebra una correspondencia
+(2) Sea el orden {e ,e ,e }. Los mo´dulos esta´ndar son
+1 3 2 biun´ıvocaentreo´rdenesparaloscualesesEE,salvoequiva-
+∆ =S ,∆ =S ,∆ =P.Conesteordenela´lgebra
+1 1 3 3 2 2 lencia,ymo´dulosinclinantesnoisomorfos.Podemosincluso
+noesEEporqueP ∈/F(∆).
+1 aplicarelteoremaanteriorysaberaque´ ordencorresponde
+que´ inclinante.
+(3) Sea el orden {e ,e ,e }. Los mo´dulos esta´ndar son
+2 1 3
+∆ 2 =S 2 ,∆ 1 =P 1 ,∆ 3 =S 3 .Conesteordenela´lgebra Para el orden (1) tenemos las siguientes sucesiones
+es EE pues cada proyectivo tiene una filtracio´n con exactas
+cocientesen∆.
+0→∆ =S →S →0,
+1 1 1
+(4) Sea el orden {e 2 ,e 3 ,e 1 }. Los mo´dulos esta´ndar son 0→∆ 2 =S 2 →P 1 →S 1 →0,
+∆ 2 =S 2 , ∆ 3 =S 3 , ∆ 1 =P 1 .En este orden tambie´n es 0→∆ 3 =S 3 →P 2 →S 2 →0,
+EE.
+Enlasegundasucesio´nS ∈F(∆ )yS ∈F(∆ ,∆ ).
+1 1 2 1 2
+(5) Sea el orden {e 3 ,e 1 ,e 2 }. Los mo´dulos esta´ndar son LuegoT 1 =S 1 ⊕P 1 ⊕P 2 eselmo´duloinclinanteasocia-
+∆ =S ,∆ =S ,∆ =P.Enestecasovuelveasuce- do.
+3 3 1 1 2 2
+derqueP ∈/F(∆),portantoela´lgebranoesEE.
+1 Ana´logamente para el orden (3) se obtiene el mo´du-
+loT =S ⊕P ⊕P yparael(4)tenemoselmo´dulo
+3 2 1 2
+(6) Sea el orden {e 3 ,e 2 ,e 1 }. Los mo´dulos esta´ndar son T =S ⊕P ⊕P.Esfa´cilverqueT ∼ =T ,locualse
+4 2 2 1 3 4
+∆ =S ,∆ =P,∆ =P.Otravezela´lgebraesEEy
+3 3 2 2 1 1 desprendedelhechodequeamboso´rdenessonequiva-
+F(∆)=projA .
+3 lentes.
+Hemosvistoquehay4o´rdenesparaloscualesela´lgebraes Enelcasode(6)puedecomprobarsequesumo´dulo
+EE,aunque(3)y(4)definenlosmismosmo´dulosesta´ndar, caracter´ısticoesT =S ⊕P ⊕P,queeselprogenera-
+6 3 2 1
+luegosonequivalentes. dor.
+34 Estratificacio´neinclinacio´nenciertasa´lgebrasdetipoAnequiorientada
+No siempre la correspondencia anterior es uno a uno. Por Proposicio´n1 SeaT=(cid:76)n T unmo´duloinclinanteba´sico,
+k=1 k
+ejemploela´lgebradeKronecker1⇒2tieneinfinitosincli- entoncesT tieneunu´nicosumandodirectosimple.
+nantes[5]ysolodoso´rdenesparalossimples.
+Otroejemplodequeestacorrespondenciapuedesermuyva- Demostracio´n SupongamosqueS i (cid:29)S j sonsumandosdirec-
+riadaesela´lgebradadapor1(cid:29)2conlarelacio´nrad2A=0, tosdeT.Sinpe´rdidadegeneralidadpodemosasumir
+lacualnoesesta´ndarmenteestratificadaenningu´nordeny que 1≤i< j≤n. Vamos a analizar que´ sucede con
+solotienealinclinantedadoporlasumadelosproyectivos Exti(S i ,S j )yparaellotomemoslaresolucio´nproyecti-
+indescomponibles. vadeS i :
+0→S →···→P →···→P →S →0
+Enlasiguienteseccio´nvamosaprofundizarunpocoma´s n j i i
+sobrelanaturalezadeestacorrespondenciaparaciertostipos
+yapliquemosHom(−,S )paraobtenerelcomplejo
+j
+dea´lgebras.
+0→H(S,S )→···→H(P,S )→···→H(S ,S )→0.
+i j j j n j
+3. A´lgebras de tipo A equiorientada con
+n
+la relacio´n rad2A =0 AlrededordeHom(P j ,S j )tenemoslosiguiente
+n
+En esta seccio´n vamos a investigar co´mo se comporta 0→Hom(P j ,S j )→0.
+lacorrespondenciaentreestratificacio´neinclinacio´nenlas
+ComoHom(P,S )∼ =k,elcomplejonopuedeserexac-
+a´lgebrasdadaspor j j
+toenesete´rmino,luegoExtj−i(S,S )(cid:54)=0yT noser´ıa
+1 (cid:47)(cid:47) 2 (cid:47)(cid:47) ··· (cid:47)(cid:47) n, rad2A n =0. inclinante. i j
+Antes de comenzar explicaremos por que´ estudiar esta
+Esteresultadoencombinacio´nconladescripcio´ndelos
+clasedea´lgebrasenparticular.Notemosprimeramentequees
+indescomponiblesnosdicequeestaa´lgebratieneexactamente
+una´lgebranohereditaria,loquepudieraconducirnosapensar
+nmo´dulosinclinantes,unoasociadoacadasimpleypodemos
+co´mo es la correspondencia en este u´ltimo caso. Esta´ de-
+escribirlosdelasiguienteforma.
+mostradoen[11]queentrelasa´lgebrashereditariasdetipo
+representacio´n finita las u´nicas que cumplen con la propie- T =S ⊕(⊕ P), i=1,...,n.
+i i j(cid:54)=n j
+dad de que cada inclinante es caracter´ıstico son las de tipo
+A equiorientada. En cualquier otra es posible construir un Nosproponemosahorainvestigarsiparacadainclinanteexiste
+n
+mo´duloinclinantequenotengasumandosdirectossimplesy unordentalqueela´lgebraescuasi-hereditaria.Porelteorema
+portantonoseacaracter´ıstico. 1 basta con probar que existen n o´rdenes para los cuales el
+a´lgebraesEE yquenoseanequivalentesdosados.Conside-
+Loprimeroqueharemossera´ estudiarlosmo´dulosindes- remoslossiguienteso´rdenes:
+componiblessobreunacualquieradeestasa´lgebras,afinde
+cuentassonlosbloquesconlosqueseconstruyenlosincli- (1) Sea el orden {e 1 ,e 2 ,...,e n }. Los mo´dulos esta´ndar
+nantes.Esposibleescribirlosproyectivosindescomponibles son∆ 1 =S 1 ,...,∆ n =S n yela´lgebraesEE.
+usandolassucesionesdeLoewy
+(2)Seaelorden{e ,e ,...,e ,e }.Losmo´dulosesta´ndar
+1 2 2 3 n 1
+P 1 = 2 ,P 2 = 3 ,...,P n =n son∆ 2 =S 2 ,...,∆ n =S n ,∆ 1 =P 1 ydenuevoesEE,puesse
+filtrantodoslosproyectivos.
+TodoslosproyectivosexceptoP soninyectivos,as´ıcomoS .
+n 1
+(···)
+Luegoestaa´lgebratiene2n−1indescomponiblesyelespacio
+vectorial de los homomorfismos entre dos cualesquiera de
+(k) Sea el orden {e ,e ,···,e ,e ,...,e }. Aqu´ı es
+ellosesbiencerooisomorfoalcuerpok.Paraestetipode k k+1 n k−1 1
+∆ =S ,∆ =S ,...,∆ =S ,∆ =P ...,∆ =P.
+a´lgebraselcarcajdeAuslanderReitentomalaforma k k k+1 k+1 n n k−1 k−1 1 1
+Todoslosproyectivossefiltran,luegoela´lgebraesEE.
+(···)
+(cid:60)(cid:60)
+P
+n−1
+(cid:63)(cid:63)P
+1
+(cid:36)(cid:36) (cid:31)(cid:31)
+(n)Seaelorden{e ,e ,...,e }.Losmo´dulosesta´ndar
+n n−1 1
+S
+n
+S
+n−1 (cid:58)(cid:58)
+(···) (cid:63)(cid:63)S
+2
+S
+1 son∆ =S ,...,∆ =P yela´lgebraesEE.
+(cid:36)(cid:36) (cid:34)(cid:34) n n 1 1
+P P
+n−2 2
+Estosno´rdenesparaloscualesela´lgebraesEE noson
+Unainspeccio´ncuidadosadeestecarcajnospermitedar- equivalentespuessitomamosdosdeellosqueseandiferentes,
+noscuentadequecadainclinantetendra´ entresussumandos digamos (i) y (j), tales que i< j se tiene que S es mo´du-
+i
+directosindescomponiblesalmenosunsimple.Podemosde lo estandar en (i) pero no en (j). Los razonamientos antes
+hechoirma´salla´ ydemostrarlosiguiente. desarrolladosconstituyenlapruebadelsiguienteenunciado.
+Estratificacio´neinclinacio´nenciertasa´lgebrasdetipoAnequiorientada 35
+Proposicio´n2 Paralasa´lgebrasdetipoA equiorientadacon [6] M. I. Platzeck M. Verdecchia I. Assem, J. A. Cappa.
+n
+larelacio´ndadaporrad2A =0,existeunacorrespon- Mo´dulosInclinantesyA´lgebrasInclinadas. Bah´ıaBlan-
+n
+denciabiun´ıvocaentremo´dulosinclinantesba´sicosy ca,Argentina,2008.
+estratificacionesnoequivalentesentres´ı.
+[7] H.KrauseL.A.Hu¨gel,D.Happel,editor. Handbookof
+Con esto damos respuesta al problema de encontrar la TiltingTheory. 2006.
+relacio´nentrelosconceptosdeinclinacio´nyestratificacio´n
+[8] I.ReitenM.Auslander. Applicationsofcontravariantly
+en los tipos de a´lgebras aqu´ı estudiadas. El teorema 2 y el
+finitesubcategories. InAdvancesinMathematics,num-
+ejemploquelesiguemuestranco´moencontrarexpl´ıcitamente
+ber86.1991.
+elmo´duloinclinanteasociadoacadaestratificacio´n.
+[9] M.L.Shaid. Sistemasestratificanteslineales. Master’s
+Referencias thesis,UNAM,2011.
+[1] J.F.Herna´ndezAdv´ıncula. SobreasA´lgebrasEstandar- [10] I.ReitenT.Adachi,O.Iyama. τ−TiltingTheory. ar-
+menteEstratificadas. PhDthesis,UniversidadedeSa˜o Xiv:1210.1036v4,2013.
+Paulo,2004.
+[11] I.Va´zquez. Relacio´nentreinclinacio´nyestratificacio´n
+[2] I.Assem. TiltingTheory-AnIntroduction,volume26. ena´lgebrashereditariasderepresentacio´nfinita. Mas-
+BanachCenterPublications,1990. ter’sthesis,UniversidaddeLaHabana,2010.
+[3] C.M.RingelD.Happel. TiltedAlgebras. Transactionsof [12] Changchang Xi. Standardly Stratified Algebras and
+theAmer.Math.Soc.,1982. Cellular Algebras. Cambridge Philosophical Society,
+2002.
+[4] A.J.FigueredoandP.S.A.Wolf. Assortativepairing
+andlifehistorystrategy. HumanNature,20:317–330, [13] S.BrenneryM.Butler.GeneralizationsoftheBernstein-
+2009. Gelfand-Ponomarevreflectionfunctors. Proc.ICRAII,
+1979.
+[5] A.Skowron´skiI.Assem,D.Simson. ElementsoftheRe-
+presentationTheoryofAssociativeAlgebras,volume1.
+LondonMathematicalSociety,2006.

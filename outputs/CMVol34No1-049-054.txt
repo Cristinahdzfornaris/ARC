@@ -1,0 +1,512 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.49-54
+Recibido06-2020,Aceptado07-2020
+Estimación de infecciones indocumentadas de
+Covid-19 en Cuba a través de un método híbrido
+mecano-estadístico
+Estimating undocumented Covid-19 infections in
+Cuba by means of a hybrid mechanistic-statistical
+approach
+Gabriel Gil1*, Alejandro Lage-Castellanos2
+Resumen Enelpresenttrabajo,adaptamoselmétodohíbridomecano-estadísticodelaRef.[1]paraestimar
+elnúmerototaldeinfeccionesdeCovid-19nodocumentadasenCuba.Esteesquemasebasaenlaestimación
+demáximaverosimilituddelosparámetrosdeunmodelotipoSIRparalapoblacióninfectada,suponiendoque
+elprocesodedetecciónseajustaaunensayodeBernoulli.Nuestrasestimacionesmuestranque(a)el60%
+delasinfeccionesfueronindocumentadas,(b)laepidemiarealdetrásdelosdatosalcanzóelacmediezdías
+antesdeloquesugierenlosreportes,y(c)elnúmeroreproductivoseanularápidamenteluegode80díasde
+epidemia.
+Abstract We adapt the hybrid mechanistic-statistical approach of Ref. [1] to estimate the total number of
+undocumentedCovid-19infectionsinCuba. Thisschemeisbasedonthemaximumlikelihoodestimationofa
+SIR-likemodelparametersfortheinfectedpopulation,assumingthatthedetectionprocessmatchesaBernoulli
+trial. Ourestimationsshowthat(a)60%oftheinfectionswereundocumented,(b)therealepidemicsbehindthe
+datapeakedtendaysbeforethereportssuggested,and(c)thereproductionnumberswiftlyvanishesafter80th
+epidemicdays.
+PalabrasClave
+Covid-19,Cuba,compartmentepidemiologicalmodels,Bayesianinferencemethods
+Keywords
+Covid-19,Cuba,modelosepidemiológicosdecompartimientos,métodosdeinferenciaBayesiana
+1DepartamentodeFísicaTeórica,InstitutodeCibernética,MatemáticayFísica(ICIMAF),LaHabana,Cuba,gabriel@icimaf.cu
+2DepartamentodeFísicaTeórica,FacultadeFísica,UniversidaddeLaHabana,LaHabana,Cuba,lage@fisica.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introduction (e.g.,thecaseofSARS-CoV-2),thefullinfectedpopulation
+canonlybeinferred.
+Covid-19crisishasputforwardtheneedforsimpleand Inparticular,estimationsoftotalCovid-19infections(in-
+yetrealisticepidemicmodeling. Thegoalistoprovidethe cludingundocumentedtrasmissionevents)arealreadyavail-
+authoritiesandthepublicwithaccuratepredictionstodevise able in the literature for France [1] and China [2], but are
+and schedule containment and organization policies before still unknown to many other countries. To the best of our
+anoutbreakpeaks. Tothiseffect, thedailynumberofnew knowledge,therearenocurrentestimatesoftotalCovid-19
+infections and a minimal description of the epidemic peak infectionsinCuba. Therefore,thispaperaimsatcontributing
+(theso-calledacme),intermsofthedateandnumberofactive suchanimportantpieceofinformationtothemodelingofthe
+infections,areamongthecrucialdata. Anotherquantityof pandemicsinCuba.
+concern, especially relevant to grasp the full extent of an Historically,epidemicmodelingisdominatedbymecha-
+epidemics –as well as to assess detection strategies– is the nisticapproaches,likeSIS,SIRandSEIR(wherelettersin
+totalnumberofactiveinfectionsperday. Duetothefactthat theacronymsstandsforsusceptible,exposed,infectedandre-
+thereisalwaysafractionofinfectionsthatisnotdetected,a coveredcompartmentsofthepopulation)[3]. Theadvantage
+fortioriwhenthepathogenmaybecarriedasymptomatically ofamechanisticmodelisthatitsetsuptheepidemicevolu-
+5E0stimacióndeinfeccionesindocumentadasdeCovid-19enCubaatravésdeunmétodohíbridomecano-estadístico
+tionfromreasonabletime-dependentrulesfortrasmissionand S(t),I(t)andR(t)arethesusceptible,infectedandrecovered
+recovery(themechanicsbehindtheepidemics,sotosay). Of- time-dependentpopulations,whichsumuptothesizeofthe
+ten,suchamechanicaldescriptionappliestothefullinfected full population N (i.e., S(t)+I(t)+R(t)=N), whereas α
+population. Astraightforward(brute-force)fittingofmecha- andβ aretheinfectionandrecoveryrates. Timet isgivenin
+nisticmodels(e.g.,thetypicalSIR)tojustthereporteddata days,hereafter. Thecumulativenumberofinfectionswithina
+maynotbethecorrectstrategytofollow,since,ononehand, timespanreads
+detectiondrawsfromstatisticalsamplingofthefullinfected
+population, and, ontheother, therearedetectedcaseswith
+T(t)=I(t)+R(t). (4)
+unknownsourceofcontagion(i.e.,unabletostemfromthein-
+teractionbetweentheinfectedandsusceptiblecompartments,
+At difference with Ref. [1], we take a reasonable sim-
+asmodeled).
+plification of the usual SIR model valid for a more or less
+There have been some efforts directed at reconciling a
+containedoutburstoranearlystageoftheepidemics[6]. In
+mechanisticapproachwiththeintrinsicstatisticalnatureof
+suchacase,T(t)(cid:28)N andS(t)≈N. Therefore,theinfected
+thereporteddata[4,5]. Inparticular,weareinspiredbythe
+populationreads
+hybridmechanistic-statistical(HMS)approachlaiddownin
+Ref.[1],whichwassuccesfulatmodelingCovid-19inFrance.
+TheHMSschemebyRoquesetal.appliesBayesianinfer- I(t)=I 0 exp{(R 0 −1)β (t−t 0 )}, (5)
+encetoestimateSIRparameters(and,hence,thetotalinfected
+population),assumingthatthedetectionprocessaccomodates
+whereR
+0
+=α/β isthebasicreproductionnumber,andI(t
+0
+)=
+I istheinitialnumberofinfections. FromEq.(5),wenote
+to a Bernoulli trial [1]. Since we are interested in limited 0
+thatanexponentialincreaseordecreaseofinfectiousevents
+outbreaks,wheregovernmentmeasuresareeffectiveatcon-
+takesplacedependingonwhetherR isgreaterorlesserthan
+taining the disease, we can choose a simplification of the 0
+theunity.
+generalSIRmodelthatconsiderstheinfectedcasesnegligible
+withrepecttothefullpopulation. Moreover,inthesamespirit Now,lettheinfectionratebetime-dependent. Insucha
+ofCabo-Cabo(fullymechanistic)modelingofCovid-19in case,weget
+Cuba[6],wesimulatetheeffectofthestateinterventionsby
+means of a heuristic time-dependence of the infection rate, (cid:26)(cid:90) t (cid:27)
+I(t)=I exp α(t(cid:48))dt(cid:48)−β (t−t ) , (6)
+dropping down the day the most strigent measures against 0 0
+t0
+spreadingwereimplemented. Wealsocorrectthestatistical
+partoftheHMSasformulatedinRef.[1],byconsideringthat insteadofEq.(5).Weassumeaheuristicshapeforsuchatime-
+onlythestillundocumentedportionoftheinfectedcasesare dependence, forexample, astepfunctiontakingaconstant
+sampledfortest. valueatthebeginning(α 0 >β,toallowforanoutbreak)and
+The outline of the paper is the following. Sec. 1 sum- droppingdowntoalowervalue(α ∞ <α 0 )atsomepointin
+marizesthemechanisticandthestatisticalsideofthehybrid time,t 1 . Foracountrysufferinganepidemics,wesetsuchan
+approach,emphasizingourammendmentstotheformulation inflectionpointtothedayborderswereclosedorastringency
+inRef.[1]. Sec.2describethevalidationschemeandcom- indexjumpsabruptly[8]. Inparticular,wechooseaFermi-
+putations. Sec.3tackletwoepidemicscenarios: asynthetic Dirac distribution as a smooth version of the step function,
+outbreakandthecaseofCovid-19inCuba. InSec.4,wepro- i.e.,
+videsomeconcludingremarks.IntheAppendix,wecomment
+onhowthesyntheticepidemics(usedforvalidationpurposes) ∆α
+α(t)= +α , (7)
+wasgenerated. 1+e(t−t1)/τ ∞
+1. Methods whereα
+0
+≡α(t
+0
+)=∆α/(1+e(t0−t1)/τ)+α
+∞
+,α
+1
+≡α(t
+1
+)=
+∆α+α , α ≡lim α(t) and τ is a smooth parameter
+∞ ∞ t→∞
+1.1 Mechanics: simplified SIR model with a heuris-
+modulatinghowfasttheinfectionratedropsdownfromα to
+0
+tictime-dependentinfectionrate
+α . FromEqs.(6)and(7),weget
+∞
+WestartfromthemostcustomarySusceptible+Infected
++Recovered(SIR)model,introducedbyKermackandMcK-
+endrick[7],i.e.,
+I(t)= I exp{(α −β)(t−t )}×
+0 1 0
+dS(t) = −α I(t)S(t) , (1)
+(cid:18)
+(1+exp{(t 0 −t 1 )/τ})
+(cid:19)∆ατ
+, (8)
+dt N (1+exp{(t−t 1 )/τ})
+dI(t) I(t)S(t)
+= α −βI(t), (2)
+Modelsrelyingonheuristictime-dependentinfectionrates
+dt N
+that swiftly vanish after lockdown and stringent measures
+dR(t)
+= βI(t). (3) fromthegovernmenthavebeenrecentlyexploredinRef.[6].
+dt
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.49-54
+EstimacióndeinfeccionesindocumentadasdeCovid-19enCubaatravésdeunmétodohíbridomecano-estadístico51
+1.2 Statistics: testing as a binomial process and 2. Validation and computational details
+maximum likelihood inference of SIR parame-
+Asanticipated,wewanttouseourmodeltoestimatethe
+ters
+number of total infected population over time from the re-
+Let us assume that the daily detection of new infected
+porteddata. Sincethemotivationfordevelopingsuchamodel
+cases δ is a Bernoulli process, as in Ref. [1]. Hence, the
+t
+ispreciselythefactthatthereareundocumentedinfections,
+randomvariableδ distributesbinomially,
+t
+wedonothaveanimmediatewayofvalidatingourresults.
+Roquesetal. [1]carriedoutanindirectvalidation,bycom-
+δ ∼Bin(n,p), (9)
+t t t
+paringactualdataoninfectedcaseswiththeexpectednumber
+wheren isthenumberoftrials(i.e.,thedailysizeofthetest
+t ofthecorresponding,binomiallydistributed,randomvariable
+sample)andp,theprobabilityofsuccessineachindependent
+t (actually,thecumulativeovertimeofsuchquantitieswasem-
+trial(forus, theprobabilityoffindinginfectedcasesinthe
+ployed). Here,weproposeaswelladirectvalidationscheme
+population). Subindex t is kept throughout for time series
+bymeansofanetworkepidemicmodel(NEM).Inanutshell,
+data.
+suchaNEMbuildsupfromanunconstrainedspreadanda
+In such a Bernoulliprocess, test outcomes are indepen-
+detection/quarantineprocessbasedonsymptomaticcasesand
+dentfromeachother. Forthattohappen,thesamplefortest
+traceabletrasmissionchainstheypointat(seetheAppendix
+wouldhavetobeselectedatrandomfromthefullpopulation.
+fordetails). Although,theNEMdeservesattentioninitsown
+However,moreeffectiveandrealistictestingstrategiesoften
+right,itsfullpresentationandanalysisisoutsidethescopeof
+departs from random sampling by focusing on trasmission
+thisarticleandwillbepublishedelsewhere. Inthispaper,it
+chainsand/orriskgroups. Tosimulatehigherprevalencein
+onlyprovidesasyntheticepidemicscenariowherethetotal
+test samples as compared to random ones, we assume that
+infectedpopulationisknownbyconstruction,therefore,set-
+susceptiblepopulationwillalwaysbeunder-sampled,i.e.,we
+tingabenchmarkforourhybridmodelestimation(introduced
+biastheprobabilityoffindingpositiveresults. InRef.[1],
+inearliersections).
+TheHMSmodelisimplementedinaWolframMathemat-
+I(t)
+p t = (10) ica11.3notebook(availableuponrequesttotheauthors). The
+I(t)+κS(t)
+maximumlikelihoodestimation(MLE)iscarriedoutthrough
+whereκ ∈(0,1). aNelder-Meadglobaloptimizationmethodwithamaximum
+AtoddswithEq.(10),weaccountforthefactthatthere of 103 iterations. Weimpose thenaturalconstraintson the
+is a fraction of the infected population that once tested is parameters(i.e.,∆α≥0,α ≥0,τ≥0,I >0andκ∈(0,1))
+∞ 0
+quarantinedandtheirretestsarenotcontemplatedinδ t . To togetherwithα 0 ≡∆α/(1+exp(t 0 −t 1 /τ))+α ∞ >1,toal-
+that aim, p t does not builds up from the total but from the lowforaninitialoutbreak. Asamatteroffact,wedonotmax-
+currentlyinfectedcasesthatareyetundocumented,i.e.,the imizethelikelihoodL itself(seeEq.(12))butln(L),which
+differencebetweenthefullinfectedpopulationandtheactive isasmootherfunctionoftheparameters.WesetN≈11×106,
+(positive to the test) cases just the day before the current approximatelytheCubanpopulation. Tomodeltheoutbreak
+tests,A t−1 . Again,wetakeS(t)≈N. Therefore,Eq.(10)is ofCovid-19inCuba,weset1/β =20days[9]andt 1 tothe
+replacedby 13th epidemic day, i.e., the day borders and schools were
+closedandstringencyindextookthelargestleap(25outofa
+I(t)−A
+p = t−1 . (11) maximumof100units)[10]. Covid-19dataforCubaistaken
+t
+I(t)−A +κN
+t−1 from[10,11]. FortheMLEinCuba,weuseonlythefirst80
+Thelikelihoodofdetectingdailyreportedcasesδ t given days,whichincludeanalmostcompleteepidemicpeak. Our
+aninfectedpopulationevolvingalàSIR(seeEq.(8))andas- SIRcannotcapturethetwo-peakprofileactuallyseeninthe
+sumingtestingoutcomescanbeaccommodatedintoaBernoulli number ofactivecases reportedfor Covid-19 inCuba (see
+processis[1] Fig. 2), so far as 110 epidemic days. The number of daily
+PCR tests for Covid-19 as reported by the Cuban Ministry
+(cid:18) (cid:19) ofHealthisatrickyfigureinmanysenses: forexample, it
+L(I 0 ,∆α,α ∞ ,τ,κ)=Π t t= f t0 n δ
+t
+t p t δt(1−p t )nt−δt . (12) is notclear whetherit includesor not(a) retestsof already
+detected cases and (b) tests for which the result might be
+Here,alltheparametersareencodedintop,inthecaseofSIR pending[12]. Nothavingamoreintuitivewayofestimating
+t
+parameters(I ,∆α,α andτ),throughtheinfectedpopulation thedailynumberoftests,wechooseaconstantvalueforthe
+0 ∞
+I(t)(seeEqs. (8)and(11)). Supposingparametersdistribute numberofdailytestsandsetittothegeometricmeanofthe
+uniformlywithinthesearcheddomain,themaximizationof reporteddailyCovid-19testsdatainCubainaperiodof110
+thelikelihoodL leadustotheSIRinfectedevolutionthat epidemicdays(i.e.,n ≈1500). Forthesyntheticepidemics
+t
+bestreproducethereporteddataondailynewcases(inthe (our validation case), we change abruptly the reproduction
+senseofhavingthelargestprobabilityofbeingthespecific number at the 43rd day (so, we can set t =43 days) and
+1
+dynamicsbehindthedata). Thebiasingparameterκ isalso choosearecoverytimeof1/β =7days. Thenumberoftests
+inferredbymaximizingthelikelihood. isthesameasfortheCovid-19-in-Cubascenario.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.49-54
+5E2stimacióndeinfeccionesindocumentadasdeCovid-19enCubaatravésdeunmétodohíbridomecano-estadístico
+3. Results
+3.1 Asyntheticepidemicscenario
+Figure1showsourresultsonHMSestimationsoftheex-
+tentofasimulatedepidemicoutburst,wherethetotalnumber
+ofactivecasesisknownbyconstruction. Remarkably,such
+estimationsareina goodagreementwiththeactualbench-
+markdataduringtheearlystagesoftheoutbreak. Thequality
+ofourestimationaftertheepidemicshaspeakedispoor,but
+notethattheyareatleastabletospotaccuratelythedateof
+the acme. Together with our HMS estimations, we plot a
+non-linearregressionmodelasappliedtothetotalnumberof
+activecases. BoththeHMSandtheregressionmodelshave
+the same functional dependence on time, given by Eq. (8),
+andtargetthesamequantity(i.e.,thetotalnumberofactive
+cases). The practical difference between the two is in the
+inputdata: whereasHMSbuildsupfromdataontheactive
+andnewlydetectedcasesperday,theotherdirectlyfitsthe
+usually unknown total number of active cases. We do not
+expectthatHMSapproachachievethesamedegreeofsuccess
+ofafit,sincetheunderlyingmethoddoesnottrytomakeI(t)
+conform to the total number of active cases, e.g., by mini-
+mizingtheirrelativedifferences. Atoddswitharegression,
+theHMSmaximizesthechancesofobtainingnewlydetected
+casesperdayoutofastatisticalsamplingofaproxyforyet
+undocumentedinfections(i.e.,I(t)−A ). Theadvantage
+t−1
+ofHMSisthatitisusefulinallrealisticsituationsinwhich
+thetotalnumberofactivecasesissimplynotavailabledueto
+undocumentedinfections.
+1800
+1600
+1400
+1200
+1000
+800 600
+400
+200
+0
+0 20 40 60 80 100 120
+sesac
+evitca
+fo rebmuN
+epidemics in Cuba. In Fig. 2, we show a comparison be-
+tweenactivecasesasobtainedfromofficialreportsandour
+estimates (which includes undocumented infections). The
+fullepidemiccurvepeakstendaysbeforethereportedone.
+Daybyday,reportedinfectionsrangesfrom4to49%ofthe
+total,withameanof28%,achievedatthefullacme. Remark-
+ably,thecumulativenumberofreportedinfectionswithinthe
+timespanof80dayswasabout40%ofthetotal(seeEq.(4)),
+andT/N=4.6×10−4. Thesearefingerprintsofgoodman-
+agement of Covid-19 medical crisis in Cuba (cf. Ref. [2]’s
+estimateof14%ofdocumentedinfectionsinChinabeforethe
+travelrestrictionson23January2020). Moreover,noticethat
+thefractionofdocumentedinfectionsincreaseovertime,from
+aninitialvalueof11%totheaforementioned40%,indicating
+arefinementinCubandetectionprocessduringtheepidemics.
+2500
+2000
+1500
+1000
+500
+0
+0 20 40 60 80 100 120
+Simulated epidemics
+reported
+total
+fit to total
+estimated total
+Time (days)
+Figure1. (coloronline)Totalnumberofactivecasesfora
+simulatedepidemics(fullcircles)andourHMSestimationof
+thesamequantity(solidredline). Wealsoshowafitof
+Eq.(8)tothetotalnumberofactivecases(dashedblueline).
+Asareference,weplotthereportednumberofactivecases
+(emptycircles),whichistheinputofourHMSestimation.
+3.2 Covid-19inCuba
+As seen in the last section, HMS works well at the epi-
+demic outburst, providing reasonable estimates of the total
+numberofcasesandthedateofthefullepidemiccurve(which
+neednottocoincidewiththepeakofthereporteddata). Thus
+validated,weproceedtoapplyHMStotherecentCovid-19
+sesac
+evitca
+fo
+rebmuN
+Covid-19 in Cuba
+reported
+estimated total
+Time (days)
+Figure2. (coloronline)NumberofactivecasesofCovid-19
+inCuba(blackdots),togetherwithourHMSestimationof
+thetotalnumberofactivecases(solidredline),including
+undocumentedinfections.
+InthecaseofCovid-19inCuba,wecanonlyappealtoan
+indirectvalidationofourHMSestimates. Fig.2showsthecu-
+m its u e la x t p iv e e ct n e u d m v b a e lu r e of w r i e th p i o n rt o e u d r in B f e e r c n ti o o u n l s li ,∑ pr t t o (cid:48)= c t e 0 s δ s t , (cid:48) , ∑ a t t l (cid:48) o = n t0 g n w t(cid:48) p it t h (cid:48) .
+Good agreement is generally obtained (mean and standard
+deviationofaround9and28cases,respectively),andnearly
+zerorelativedifferenceattheendoftheinterval(80days).
+Table1. Summaryoftheparametersobtainedforeach
+(0)
+modelingpresentedinthispaper. R =α /β isthe
+0 0
+reproductionnumberthefirstepidemicday,R
+(∞)
+=α /β is
+0 ∞
+itsasymptoticvalueandκ(cid:101) =κ×103.
+Epidemics I 0 R
+(
+0
+0)
+R
+(
+0
+∞)
+τ(days) κ(cid:101)
+NEMsimulated 7.81 1.92 0.69 0.86 3.9
+Covid-19inCuba 32.47 6.39 0.02 11.17 4.0
+Table1summarizestheparameterswegetforboth,the
+simulated epidemics and Covid-19 in Cuba. In the latter
+case,weemphasizethejumpinreproductionnumbertheday
+bordersandschoolswereclosed,from6.39atthebeginning
+tonearlyzerothe80thepidemicday(cf.[6]).
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.49-54
+EstimacióndeinfeccionesindocumentadasdeCovid-19enCubaatravésdeunmétodohíbridomecano-estadístico53
+2500
+2000
+1500
+1000
+500
+0
+0 20 40 60 80 100 120
+sesac
+detroper
+fo
+rebmun
+evitalumuC
+ulated by the meetings for the mathematical modeling of
+Covid-19 in Cuba
+Covid-19crisisinCuba,organizedbytheFacultyofMath-
+actual
+expected ematicsfromtheUniversityofHavana,incloseconnection
+withtheCubanMinistryofHealth(MINSAP).Inparticular,
+we thank N. Cabo-Bizet and A. Cabo Montes de Oca for
+sharing and discussing with us an early preprint with their
+findings,finallyincludedinthisRCNspecialnumberalong
+withtheourpaper. G.G.isalsogratefultoM.MonteroandD.
+S.Fontanella(ICIMAF,Havana,Cuba),forusefuldiscussions
+andcomments.
+Appendix: Network epidemic model with
+Time (days)
+Figure3. (coloronline)Cumulativenumberofreported quarantine
+casesofCovid-19inCuba(blackdots)alongwiththe
+expectednumberofthesamequantitybymeansofHMS We consider an stochastic branching process in which
+(solidredline). nodesareinfectedpeople,andconnectionsrepresentthetrans-
+mission of the disease. As we are interested in the case of
+controlledorsmallsizeepidemics,wewilldisregardthetotal
+4. Concluding remarks sizeofthepopulationthatwillbeeffectivelyconsideredas
+infinite.
+Weadaptedthehybridmechanistic-statisticalmethodde-
+Inoursimulation,wewillsequentiallygrowanepidemic
+velopedbyRoquesetal. [1],alreadysuccesfulatmodeling
+treeinwhichnodesareinanyofthefollowingstates:
+Covid-19 in France, to be able to make reasonable estima-
+tions of total Covid-19 infections in Cuba. Our theoretical E: exposedtothevirus,meaningthepersonhasthevirus
+contributionistwo-fold. Ononehand,wechoseaheuristic butisnotcapableoftransmittingit,
+modificationoftheclassicalSIRmodelthatassumeslimited
+outbreakstogetherwithaninfectionratechangingabruptly I s : infectiousandsymptomatic,meaningthepersoniscapa-
+whenstringentmeasurestakeplace(seealsoRef.[6]). Onthe bleoftransmittingthevirusandisalsoshowingsymp-
+otherhand,wecorrectedtheprobabilityenteringthebinomial tomsofthedisease,
+distributionofnewlydetectedcases,inordertoaccountfor
+I : infectiousandasymptomatic,whenthepersondonot
+thefactthatthedailyreportsdonotincluderetestoutcomes a
+showsymptomsbutstillcantransmitthevirus,
+ofalreadydetectedcases. Bothammendmentsturnouttobe
+essentialwhenmodelingCovid-19inCuba. R: when the person is no longer transmitting the virus
+Furthermore,weprovidedatestinggroundforthehybrid (eitherbecauseitrecoveredordied).
+mechanistic-statisticalestimations: thecaseofanetworkepi-
+demicsimulationwherethetotalnumberofactivecasesis Ontopofthesestates,nodescaneitherbequarantinedornot.
+knownbyconstruction. Thehybridmodelisvalidatedagainst Theinfectiousprocessiscontrolledbyasetofconstants:
+suchabenchmark,atleastintheearlystagesoftheoutburst
+R : istheexpectednumberofnewinfectionscausedbya
+beforetheepidemicspeaks. 0
+singleinfectedindividual. Thismeansthatinaverage,
+ApplyingthehybridmodeltoCovid-19inCubaallows
+everyinfectedpersonwillgenerateR newnodesinthe
+us to estimate the total number of active cases, including 0
+tree;
+undocumentedinfections. Theresultingnumberofundocu-
+mentedCovid-19infectionsinCubareaches60%,whichis α: isthefractionofinfectedpeoplethatwilldevelopsymp-
+considerablylessthantheestimateforChina(86%)beforethe toms;
+travelrestrictionswereimplemented[2],therefore,indicating
+agoodmanagementofthemedicalcrisisinCuba. β: isthefractionofcontactsthataretraceable,meaning
+thatifonenodeisdetectedtobeinfected,thenitcan
+pointtotheneighbors(parentorchildreninthetree)
+Acknowledgments
+thatareconnectedthroughtraceablecontacts;
+G.G.acknowledgessupportfromtheNationalProgramme
+r : istherateatwhichexposednodesturnintoinfectious;
+forBasicSciencesinCuba,theCubanMinistryofScience, E→I
+TechnologyandEnvironment(CITMA)andtheAbdusSalam
+r : istherateatwhichinfectiousandsymptomaticnodes
+S→R
+InternationalCentreforTheoreticalPhysics(ICTP)through
+recover;
+the grant NT09-OEA. A.L.C. acknowledges PHC Carlos J.
+Finlayfunds,fromtheEmbassyofFranceinCuba,forsup- r : istherateatwhichinfectiousandasymptomaticnodes
+A→R
+portingtheexchangewithfrenchresearchers. Wewerestim- recover;
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.49-54
+5E4stimacióndeinfeccionesindocumentadasdeCovid-19enCubaatravésdeunmétodohíbridomecano-estadístico
+c : istherateatwhichasymptomaticinfectiousnodegen- numberisnotreportedeitherbythehealthauthorities,and
+S
+erates new contacts each day. In order to keep the itisnaturaltoassumethatthenumberisaPoissonrandom
+meaningofR ,weshallhavec =R ×r ; variablewithnotparticularotherimplicationsintheprocess.
+0 S 0 S→R
+c : istherateatwhichasymptomaticinfectiousnodegen-
+A
+erates new contacts each day. For the same previous References
+reason,c =R ×r ;
+A 0 A→R [1] L. Roques, E. K. Klein, J. Papaïx, A. Sar, and
+r : istherateatwhichsymptomaticpeoplearedetectedby S. Soubeyrand. Using early data to estimate the ac-
+S→Q
+thequarantineprocessandmovedtoquarantine; tualinfectionfatalityratiofromCOVID-19inFrance.
+Biology,9:97,2020.
+r : istherateatwhichpeoplearereleasedfromthequar-
+Q→R
+antine,eitherbecausetheydiedorrecovered. [2] R. Li, S. Pei, B. Chen, Y. Song, T. Zhang, W. Yang,
+and J. Shaman. Substantial undocumented infection
+facilitatestherapiddisseminationofnovelcoronavirus
+Algorithm1StochasticdailySEIRQcascadeprocess.
+(SARS-CoV2). Science,368:489–493,2020.
+1: procedureONE-DAY-UPDATE(E,I s ,I a ,R,Qlistofnodes
+ineachstate) [3] S.Mandal, R.R.Sarkar, andS.Sinha. Mathematical
+2: forn∈Qdo modelsofmalaria-areview. MalariaJournal,10:202,
+3: ifnisnewinquarantinethen 2011.
+4: Add-contacts-to-Q(n) (cid:46)Contacttracing
+[4] C.Bretó,D.He,E.L.Ionides,andA.King. Timeseries
+5: Move-Q-to-R-with-prob(r Q→R ,n) analysisviamechanisticmodels. TheAnnalsofApplied
+6: forn∈E do Statistics,3(1):319–348,2009.
+7: Move-E-to-I-with-prob(r E→I ,n)
+8: forn∈I s do [5] M.Li,J.Dushoff,andB.M.Bolker. Fittingmechanis-
+9: Generate-offspring-with-rate(c s ,n) tic epidemic models to data: A comparison of simple
+10: Move-S-to-R-with-prob(r S→R ,n) MarkovchainMonteCarloapproaches.StatisticalMeth-
+11: Move-S-to-Q-with-prob(r S→Q ,n) odsinMedicalResearch,27(7):1956–1967,2018.
+12: forn∈I a do [6] N. Cabo-Bizet and A. Cabo Montes de Oca. Mode-
+13: Generate-offspring-with-rate(c a ,n) los SIR modificados para la evolución del COVID19.
+14: Move-S-to-R-with-prob(r A→R ,n) arXiv:2004.11352v1,2020. Alsopublishedinthecur-
+rentCovid-19specialnumberofRCN.
+Thewholesimulationisschematizedinalgorithm1.Func-
+tions Move-A-to-B-with-prob will remove the given node [7] W.O.KermackandA.G.McKendrick. AContribution
+fromlistAandputitonlistB,withagivenprobability. The totheMathematicalTheoryofEpidemics. Proceedings
+functionGenerate-offspring-with-ratewilladdnewnodesas oftheRoyalSocietyA,1927.
+childrenofthegivennode,someofwhichwillbetraceable
+somewhowon’t,andsomeofwhichwillbesymptomaticand [8] www.bsg.ox.ac.uk/covidtracker.
+some who won’t. All this new nodes are added also to the
+[9] F.Zhou,T.Yu,R.Du,G.Fan,Y.Liu,Z.Liu,J.Xiang,
+Exposedlist. ThefunctionAdd-contacts-to-Qwillfollowall
+Y.Wang,B.Song,andX.Guetal. Clinicalcourseand
+thetraceablecontactsofthenodenandputtheminquarantine
+riskfactorsformortalityofadultinpatientswithCOVID-
+(removingthemfromtheliststheywere).
+19inWuhan,China: aretrospectivecohortstudy. The
+Asimulationlikethiscanmimicmostoftheindicators
+Lancet,395:10229,2020.
+thatarebeingreportedbytheCubanMinistryofHealthinits
+dailybriefings. Thereportscorrespondtothecharacteristics
+[10] https://covid19cubadata.github.io.
+ofthenodesthatarequarantinedeachday:whethertheycome
+fromknowncontacts,whethertheyhavesymptomsornot. A [11] https://github.com/pomber/covid19.
+quantitythatisnotdirectlyincludedinthissimulationisthe
+amountofdeclaredcontactsthatwillbenegativetothevirus [12] https://ourworldindata.org/
+test, since we only deal with positive cases. However, this coronavirus-testing#cuba.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.49-54

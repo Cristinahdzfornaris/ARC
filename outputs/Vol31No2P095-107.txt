@@ -1,0 +1,1622 @@
+CienciasMatemáticas,Vol.31,No.2,Pag.95-107, 2017
+Recibido01-2017
+Parametrizacio´n B-spline de regiones planas con
+frontera irregular
+B-spline parametrization of planar regions with
+irregular boundary
+Isidro A. Abello´ Ugalde1,3,*, Victoria Herna´ndez Mederos2, Pablo Barrera Sa´nchez3, Guilmer F.
+Gonza´lez Flores3
+Resumen Elpresentetrabajoproponeunme´todoparaparametrizarunaregio´nplanaconfronterairregular
+pormediodeunmapeoB-splineproductotensorial.Elme´todopropuestoasumequelafronteradelaregio´n
+esta´ definidapor4curvasB-splines,queseconsideranlaimagenporelmapeodecadaunodelosladosdel
+cuadradounitario.Paraextenderelmapeoalinteriordeldominio,lospuntosdecontrolinterioresdelmapeo
+secalculancomolosve´rticesdeunamallaestructuradadecuadrila´teros.Asuvez,estosu´ltimosseobtienen
+minimizando un funcional que garantiza que la malla o´ptima sea convexa. En el trabajo se prueba que la
+convexidaddelamallagarantizalainyectividaddelmapeobilineal.Adema´sseobtieneunacondicio´nsuficiente
+deinyectividadparaelmapeobicuadra´tico.Finalmenteseincluyenresultadosexperimentalesquemuestran
+queesposibleparametrizarcone´xitodominiosconfronterairregularutilizandounmapeoB-splinebicuadra´tico.
+Abstract Inthispaperweproposeamethodforparametrizingplanarregionswithirregularboundaryusinga
+tensorproductB-splinemap. Itisassumedthattheboundaryoftheregionisdefinedby4B-splinecurves,which
+aretheimagesbythemapofthe4sidesoftheunitarysquare. Themapisextendedtotheinteriorofthedomain
+computingitsinteriorcontrolpointsastheverticesofastructuredquadrilateralmesh. Theverticesareobtained
+byminimizingafunctionalwhoseoptimumprovidesaconvexmesh. Weprovethattheconvexityofthemesh
+guaranteestheinjectivityofthebilineartensorproductB-splinemap. Moreover,asufficientinjectivitycondition
+forthebiquadraticmapisobtained. Numericalexperimentsshowthatbiquadraticmapscanbesuccessfully
+usedtoparametrizeregionswithirregularboundary.
+PalabrasClave
+mapeobicuadra´tico—malladecuadrila´teros—regio´ncerradaconfronterairregular—Isogeome´trico
+1CentrodeEstudiosparaelPerfeccionamientodelaEducacio´nSuperior,UniversidaddeLaHabana,Cuba,isidro@cepes.uh.cu
+2DepartamentodeMatema´tica,InstitutodeCiberne´ticaMatema´ticayF´ısica,LaHabana,Cuba,vicky@icimaf.cu
+3FacultaddeCiencias,UniversidadNacionalAuto´nomadeMe´xico,CiudaddeMe´xico,pablobarrera@ciencias.unam.mx,
+guilmerg@yahoo.com
+*AutorparaCorrespondencia
+Introduccio´n representarlaexactamente.
+Elprimerpasopararesolvernume´ricamenteecuaciones Paraenfrentarestasdificultades,Hughesetal.introducen
+diferencialesenderivadasparcialessobreundominiof´ısico en [16], [10] el llamado ana´lisis isogeome´trico (IgA). Este
+cerradoΩconsisteenrepresentarmatema´ticamentelafrontera me´todoempleafuncionesNURBS,noso´lopararepresentar
+∂ΩdeΩ.Cuandolageometr´ıadeΩescomplicada,lafron- ∂Ω,sinotambie´ncomolasfuncionesdeformaqueseusan
+terasedescribeusualmentepormediodefuncionesNURBS enFEMparacalcularlasolucio´naproximada.Uningrediente
+(NonUniformRationalB-splines).Sinembargo,siseaplica ba´sico del enfoque IgA es la parametrizacio´n del dominio
+elme´tododeelementosfinitos(FEM)cla´sicopararesolver f´ısicoΩ,esdecirlaconstruccio´ndeunmapeobiyectivoque
+elproblema,entonces∂Ωseaproximamedianteelementos transformeundominiodereferencia(usualmenteelcuadrado
+linealesatrozos.Estopuedeintroducirerroressignificativos unitario)enΩ.Estemapeonoseobtienedeformainmediata
+a menos que se utilice un nu´mero grande de elementos, lo apartirdelarepresentacio´nCADde∂Ωente´rminosdeuna
+cualasuvezelevaelcostocomputacional.ElenfoqueFEM ovariasfuncionesspline.Enotraspalabras,paraaplicarel
+isoparame´trico,basadoenelementosdeordensuperior,per- enfoqueIgAesnecesarioextenderlaparametrizacio´nde∂Ω
+miteobtenerunamejoraproximacio´nde∂Ω,peronollegaa alinteriordeΩ.Laparametrizacio´ndeldominioenIgAjuega
+96 Parametrizacio´nB-splinederegionesplanasconfronterairregular
+un papel similar a la generacio´n de mallas en FEM. Ma´s blemadeparametrizarundominioplanosepuedevercomo
+precisamente,aligualquelacalidaddelamallainfluyeenla uncasoparticulardelanterior.NguyenyJu¨ttlerintroducenen
+precisio´ndelasolucio´naproximadaobtenidamedianteFEM, [18]unme´todoparagenerarmapeosarmo´nicosqueconstade
+lacalidaddelaparametrizacio´ninfluyeenlaprecisio´ndela dospartes.Enlaprimeraconstruyenunmapeodelaregio´n
+solucio´ncalculadamedianteIgA[22],[23],[15]. Ωalespacioparame´trico[0,1]2,mientrasqueenlasegunda
+La parametrizacio´n de un dominio plano Ω utilizando obtienenunaaproximacio´nB-splinedelinversodelmapeo
+funcionesB-splineproductotensorialesuntemaactualdein- anterior.Enestecasolainyectividadtampocoesta´garantizada
+vestigacio´n[22],[23],[18],[13],[15],[19].Enesencia,elpro- enlapra´ctica.Xuetal.[23]logranlainyectividaddelmapeo
+blemaconsisteendeterminarlospuntosdecontrolinteriores B-splineproductotensorialenunprocesodeoptimizacio´ncon
+delmapeo,tratandodegarantizarlainyectividaddelmismo. restriccionescostoso,aunquesusregionesnosonmuycom-
+Usualmentelospuntosdecontrolseobtienenminimizando plicadas.En[15]Gravesenetal.proponenvariosme´todosde
+algu´nfuncionalquemideciertaspropiedadesgeome´tricasde parametrizacio´nutilizandoB-splinesproductotensorial.Estos
+lamalladecontrol.Silaregio´nΩessencillayelmapeoes me´todoscalculanlospuntosinterioresdelmapeominimizan-
+bilinealestatareanopresentagrandesdificultades.Encambio, dodiferentesfuncionales.Algunosdeestosfuncionalesson
+siΩesirregular,lacomplejidaddelosfuncionalesdeoptimi- linealesysencillos,comoelbasadoenelmodelodelmuelle,
+zacio´nysunaturalezanoconvexaproducenseriosretospara peronogarantizanlainyectividaddelmapeoresultante.Otros
+laconvergenciaaloso´ptimosdeseados,especialmentesino funcionalessoncostososyconducenaproblemasdeoptimiza-
+contamosconunaaproximacio´ninicialadecuada. cio´n,dondeesnecesarioimponerrestriccionesparagarantizar
+Con relacio´n a la inyectividad, se conocen condiciones lainyectividaddelmapeo.En[13]Falinietal.proponenuna
+suficientesquesonfa´cilesdechequearcuandoelmapeoes parametrizacio´n de la regio´n utilizando THB-splines. Si la
+bilineal.Enlaliteraturasereportantambie´nme´todoseficien- regio´nescomplejasedescomponecomomuestranXuetal.
+tes para la generacio´n de mallas de control que satisfacen en[24],utilizandounme´tododeesqueletonizacio´n.Unali-
+estascondicionessuficientes,inclusocuandoΩtienefrontera mitacio´ndeestate´cnicaeslape´rdidadecontinuidaddelas
+irregular[21],[7],[5],[6],[3].Paramapeosbicuadra´ticosode derivadaenlaszonasdeunio´ndelossubdominios.En[19]
+mayorordentambie´nsepuedenencontrarcondicionessufi- Nian y Chen proponen un me´todo de parametrizacio´n con
+cientesdeinyectividad[22],[23],[15].Estascondicionesse unafuncio´nsplineproductotensorial,quesecomportaapro-
+basanenelsignodeloscoeficientesdelJacobianodelmapeo, ximadamentecomounmapeodeTeichmu¨ller.Elca´lculode
+escritocomounafuncio´nB-splineproductotensorial.Enla lospuntosdecontrolinterioresdeestemapeorequieredos
+pra´ctica, tales condiciones no se cumplen casi nunca si la procesosdeoptimizacio´n.Elprimeroutilizaunfuncionalcon-
+regio´nesirregular. vexo,peronogarantizalainyectividaddelmapeo.Elsegundo
+funcionalesnoconvexoyempleacomocondicio´ninicialel
+Enestetrabajoseproponeunme´todoparaconstruirun
+resultado del primero. La convergencia de este me´todo no
+mapeoqueparametrizaunaregio´nplanaΩconfronterairregu-
+esta´garantizada,aunqueenregionesnomuycomplicadaslos
+lar.Esteme´todocalculaelmapeocomounB-splineproducto
+resultadossonbuenos.Entodoslosme´todosmencionadosla
+tensorial,asumiendoquelafronteradeΩesta´ definidapor4
+obtencio´ndeunamallainicialadecuadaesimportantepara
+curvasB-splines,queseconsideranlaimagendecadaunode
+alcanzarelo´ptimodeseado.
+losladosdelcuadradounitario.Elmapeoseextiendealinte-
+riordeΩ,calculandosuspuntosdecontrolinteriorescomo
+Contribucio´n
+losve´rticesdeunamallaestructuradadecuadrila´teros.Los
+La contribucio´n principal de este trabajo es un me´todo
+ve´rtices interiores de la malla se obtienen minimizando un
+para parametrizar una regio´n plana con frontera irregular.
+funcionalquegarantizaquelamallao´ptimaseaconvexa.La
+Elme´todopropuestoconstruyeunmapeoB-splineproducto
+convexidaddelamallagarantizalainyectividaddelmapeobi-
+tensorialycalculasuspuntosdecontrolinteriorescomolos
+lineal,peronobastaparaasegurarqueelmapeobicuadra´tico
+ve´rticesdeunamalladecuadrila´terosconvexos.Estogaranti-
+seainyectivo.Lacondicio´nsuficientedeinyectividadparael
+zalainyectividaddelmapeoenelcasobilineal.Losresultados
+casobicuadra´ticodependeadicionalmentedelaconvexidad
+experimentalesmuestranqueelmapeobicuadra´ticotambie´n
+decuadrila´terosquenoformanpartedelamalladecontrol.
+esinyectivo,au´ncuandonohaygarant´ıateo´rica.
+Losresultadosexperimentalesmuestranqueesposiblepara-
+metrizarcone´xitodominiosconfronterairregularutilizando Notacio´n
+unmapeoB-splinebicuadra´tico. Lospuntosyvectoresserepresentanennegrita.Denota-
+mospor[a |a |···|a ]lamatrizconcolumnasa ,a ,...,a .
+1 2 n 1 2 n
+Trabajosprevios SiA,B,Csontrespuntosenelplano,entonces(cid:52)(A,B,C)
+Unodelosproblemasma´santiguosenCAGDeslacons- denotaeltria´nguloconve´rticesA,ByC.
+truccio´ndeunasuperficiequetengacomofrontera4curvas
+prefijadas,[2],[9]. Farinetal. proponenen [14]un me´todo 1. Construccio´n de un mapeo B-spline
+para resolver este problema, que se basa en los parches de producto tensorial
+Coons,peronogarantizalainyectividaddelmapeo.Elpro-
+Parametrizacio´nB-splinederegionesplanasconfronterairregular 97
+1.1 Descripcio´ndelproblema matrizJacobianadex,
+EnestetrabajoseasumequeeldominioΩaparametri-
+(cid:18) (cid:19)
+x x
+zaresunaregio´ndelplanosimplementeconexa.Sesupone J =(x |x )= ξ η
+x ξ η y y
+adema´squelafronteradeΩesunacurvasuave(exceptoen4 ξ η
+puntos)quepuedetenercambiosfrecuentesdeconvexidad,
+es no singular enU. Esto significa que para construir una
+vea porejemplo lafigura 7. Enese sentidodecimos queΩ
+parametrizacio´nva´lidadeΩdebemosexigirqueelJacobiano1
+esunaregio´nconfronterairregular.Losejemplosnaturales
+dex
+sonlagos,embalses,bah´ıas,l´ıneascosteras,demarcaciones
+pol´ıticas,etc.
+detJ =|J |=x y − x y (3)
+Denotamosporx(ξ,η)elmapeoquequeremosconstruir x x ξ η η ξ
+entreelcuadradounitarioU={(ξ,η),0≤ξ ≤1,0≤η≤1} noseanuleenningu´npuntodeU.
+ylaregio´nf´ısicaΩ,osea,laparametrizacio´ndeΩ, Enestetrabajovamosaconsiderardosmapeosparticula-
+res:elmapeoB-splinebilineal,dondek=p=2,yelmapeo
+x:U −→Ω⊂R2 bicuadra´tico,dondek=p=3.
+(cid:20) (cid:21)
+x(ξ,η) (1)
+x(ξ,η)=
+y(ξ,η)
+1.2 MapeoB-splinebilineal
+ParaconstruirunmapeoB-splinebilinealx(ξ,η)connm
+Vamosaconstruirx(ξ,η)comounafuncio´nsplinepro- puntosdecontrolP , i=1,...,n, j=1,...,mdebemosesco-
+i,j
+ductotensorial,quetransformalosladosconsecutivosdeU gerpreviamentelassucesionesdenodostξ ={tξ,tξ,...,tξ }
+ensegmentosconsecutivosdelafronteradeΩ,previamente 1 2 n+2
+ytη ={tη,tη,...,tη },quedefinenlasbasesB2 (ξ), i=
+dividida en 4 partes. Un mapeo B-spline x(ξ,η) producto 1 2 m+2 i,tξ
+tensorialdeordenk×pseescribecomo[11]: 1,...,n y B2 j,tη (η), j =1,...,m de B-splines de orden 2 en
+las direcciones ξ y η respectivamente. En nuestro trabajo
+n m asumimosque
+x(ξ,η)=∑∑P Bk (ξ)Bp (η) (2)
+i,j i,tξ j,tη
+i=1j=1 i−1
+tξ = {0,ξ ,ξ ,...,ξ ,1} con ξ = , (4)
+1 2 n i
+n−1
+dondeBk (ξ),i=1,...,nsonlosB-splinesdeordenkparala
+i,tξ
+tη = {0,η ,η ,...,η ,1} con η =
+j−1
+, (5)
+sucesio´ndenodostξ ={tξ,tξ,...,tξ }contξ ≤tξ ≤,...,≤ 1 2 m j m−1
+1 2 n+k 1 2
+tξ ytξ =0,tξ =1ysimilarmenteBp (η), j=1,...,m
+s n o + n k los k B-splin n e + s 1 deorden pparalasuce j s ,t i η o´ndenodostη = Six(ξ,η)pertenecealespacioS 2,2 :=S 2,tξ ⊗S 2,tη delas
+funcionessplinebilinealesparalassucesionesdenodos(4)y
+{tη,tη,...,tη }contη ≤tη ≤,...,≤tη ytη =0,tη =
+1 2 m+p 1 2 m+p p m+1 (5)entoncespuedeescribirsecomo,
+1.
+Ennuestroproblema,losP , i=1,...,n, j=1,...,men n m
+i,j x(ξ,η)=∑∑P B2 (ξ)B2 (η) (6)
+(2)sonpuntosenelplano,llamadospuntosdecontrol.Una i,j i,tξ j,tη
+i=1j=1
+vezescogidosloso´rdenesk,pylassucesionesdenodostξ
+y tη, los puntos de control P i,j definen completamente el No´tesequelosnodosinteriores,tambie´nllamadospuntosde
+mapeox(ξ,η)yenlapra´cticaseconviertenenlasinco´gnitas ruptura,sonequidistantesylosnodosextremosesta´nrepeti-
+del problema. La malla P de cuadrila´teros que tiene como dos.Lafigura1muestraestabasedeB-splineslineales.
+ve´rticeslospuntosP ycomoaristaslossegmentosqueunen
+i,j
+cadaP conlospuntosP , P , P , P sellama Lema1. Elmapeobilineal(6)satisface,
+i,j i−1,j i,j−1 i+1,j i,j+1
+malladecontrol.No´tesequePesunamallaestructuradapues
+cadave´rticeinteriorseuneporaristasconlamismacantidad x(ξ i ,η j )=P i,j , i=1,...,n, j=1,...,m (7)
+deve´rtices.
+Adema´s,paratodo0≤α ≤1secumpleque,
+Elmapeox(ξ,η)esta´ compuestopor(n−k+1)×(m−
+p+1)parches.Suinyectividadpuedefallarglobalmenteo
+x(αξ +(1−α)ξ ,η )=αP +(1−α)P , (8)
+localmente.Elprimercasoocurrecuandoexistealmenosuna i i+1 j i,j i+1,j
+pareja de parches diferentes que se intersecan. Debido a la
+x(ξ
+i
+,αη
+j
++(1−α)η
+j+1
+)=αP
+i,j
++(1−α)P
+i,j+1
+(9)
+propiedaddelaenvolturaconvexadelosB-splines[11],es
+Antes de demostrar el Lema es importante sen˜alar que,
+fa´cilverquesilamalladecontrolnotieneautointersecciones,
+desdeelpuntodevistageome´trico,lasidentidades(7),(8)y
+entonceslosparchesdiferentesnoseintersecan.Asumiendo
+(9)significanqueelmapeox(ξ,η)transformalamallaenU
+quePnotieneautointersecciones,au´nesposiblequefallela
+conve´rtices(ξ,η ) i=1,...,n, j=1,...,menlamallade
+inyectividadlocal,esdecirquealgu´nparchedelmapeono i j
+controlP.
+seainyectivo.
+Unmapeox(ξ,η)eslocalmenteinyectivosiysolosila 1DeterminantedelamatrizJacobiana
+98 Parametrizacio´nB-splinederegionesplanasconfronterairregular
+Proposicio´n1. ElJacobianodelmapeobilineal(6)esuna
+1
+funcio´nB-splinebilineal.Ma´sau´npara(ξ,η)∈[ξ,ξ ]×
+0.9 i i+1
+[η ,η ], i=1,...,n−1, j=1,...m−1setieneque
+0.8 j j+1
+0.7
+0.6 ∑ i r + = 1 i ∑ s j = +1 j det[h i,s |v r,j ]B2 r (ξ)B2 s (η)
+detJ (ξ,η)= (14)
+x
+0.5 (n−1)(m−1)
+0.4
+donde
+0.3
+h :=(hx ,hy )t =P −P (15)
+0.2 i,s i,s i,s i+1,s i,s
+0.1 i=1,...,n−1, s=1,...,m
+0
+0 0.2 0.4 0.6 0.8 1 v :=(vx ,vy )t =P −P (16)
+r,j r,j r,j r,j+1 r,j
+Figura1.BasesdeB-splineslinealesconnodos
+r=1,...,n, j=1,...,m−1
+equidistantes.
+y De c m ua o n st d r o ac n io o ´n d . e Pa lu ra ga s r im a pl c i o fi n c f a u r s l i a o´n no , t o a m cio i ´ t n ir , e a m p o a s rti l r a d r e ef a e h r o e r n a - P i,j+2 h i,j+2 P i+1,j+2 h i+1,j+2 P i+2,j+2
+j+2 v v v
+c si i m a i a la l r o m s e n n o t d e o B s 2 j e ,t n η ( l η as ) b s a e se d s e , n e o s ta d r e a´ c c ir o , m B o 2 i,tξ B ( 2 j ξ ( ) η s ) e . r D a´ e B b 2 i i ( d ξ o ) a y l j+1 P i,j+ v 1 h i+1,j v P i+1,j+1 j+1 i, P j+ i 1 , v j+1 h i,j+1 i+1 v ,j+1 P i h +1 i+ ,j+ 1, 1 j+1 P i v +2 i+ ,j 2 + , 1 j+1
+soportecompactodelasfuncionesB-spline[11],sinosres- i,j h i+1,j i,j h i+1,j h i+2,j
+tringimosa(ξ,η)∈[ξ i ,ξ i+1 ]×[η j ,η j+1 ], i=1,...,n−1, j P i,j i,j P i+1,j j P i,j i,j P i+1,j i+1,j P i+2,j
+j=1,...,m−1,laexpresio´n(6),sereducea
+i i+1 i i+1 i+2
+Figura2. Puntosdecontroldelaimagende
+i+1j+1
+x(ξ,η)=∑∑P r,s B2 r (ξ)B2 s (η) (10) [ξ i ,ξ i+1 ]×[η j ,η j+1 ]porelmapeoB-splinex(ξ,η).Izq:4
+r=is=j puntosparaelmapeobilineal.Derecha:9puntosparael
+mapeobicuadra´tico.Vectores“verticales”(verdes)y
+Losnodosequidistantesgeneranlasbasesqueseobservan
+“horizontales”(magenta)queparticipanenlaexpresio´ndel
+en la figura 1. No´tese que si nos restringimos al intervalo
+Jacobianodex(ξ,η).
+[ξ,ξ ], i=1,...,n−1entonces
+i i+1
+ξ−ξ ξ−ξ
+B2(ξ)= i+1, B2 (ξ)= i , (11)
+i ξ i −ξ i+1 i+1 ξ i+1 −ξ i Demostracio´n. Para(ξ,η)∈[ξ i ,ξ i+1 ]×[η j ,η j+1 ],i=1,...,
+n−1, j=1,...,m−1,elmapeox(ξ,η)esta´ dadopor(10).
+Porlotanto
+Derivandodirectamenteenestaexpresio´nllegamosa,
+B2
+i
+(ξi )=1, B2
+i+1
+(ξi )=0, B2
+i
+(ξi+1 )=0, B2
+i+1
+(ξi+1 )=1 (12)
+i+1j+1 d
+Demanerasimilarsecumpleque x (ξ,η)=∑∑P B2 (η) B2 (ξ) (17)
+ξ r,s s,tη dξ r,tξ
+r=is=j
+B2
+j
+(ηj )=1, B2
+j+1
+(ηj )=0, B2
+j
+(ηj+1 )=0, B2
+j+1
+(ηj+1 )=1 (13)
+Teniendoencuenta(12)y(13),de(10)obtenemos(7).Fi- x (ξ,η)= i ∑ +1j ∑ +1 P B2 (ξ) d B2 (η) (18)
+nalmente,obse´rvesequesiw:=αξ +(1−α)ξ ,entonces η r,s r,tξ dη s,tη
+i i+1 r=is=j
+de(10)llegamosa
+Teniendoencuenta(11)yelhechodequelosnodosson
+i+1j+1 equidistantes,seobtiene
+x(w,η )=∑∑P B2(w)B2(η )
+j r,s r s j
+r=is=j d B2(ξ)| =− 1 =− 1 (19)
+dξ i [ξi;ξi+1] ξ −ξ n−1
+i+1 i
+Perode(11)resultaqueB2(w)=αyB2 (w)=1−α.Luego,
+i i+1
+d 1 1
+B2 (ξ)| = = (20)
+dξ i+1 [ξi;ξi+1] ξ −ξ n−1
+x(w,η ) = P αB2(η )+P (1−α)B2(η )+··· i+1 i
+j i,j j j i+1,j j j
+Luego,sustituyendo(19)en(17)y(20)en(18)llegamosa
++ P αB2 (η )+P (1−α)B2 (η )
+i,j+1 j+1 j i+1,j+1 j+1 j quepara(ξ,η)∈[ξ i ,ξ i+1 ]×[η j ,η j+1 ], i=1,...,n−1, j=
+1,...,m−1
+Teniendoencuenta(13)deestau´ltimaexpresio´nllegamos
+(8).Lademostracio´nde(9)essimilaryseomiteporbrevedad. x (ξ,η)= 1 (cid:2) h B2(η) + h B2 (η) (cid:3) (21)
+ξ n−1 i,j j i,j+1 j+1
+Parametrizacio´nB-splinederegionesplanasconfronterairregular 99
+x η (ξ,η)= m− 1 1 (cid:2) v i,j B2 i (ξ) + v i+1,j B2 i+1 (ξ) (cid:3) (22) P P i+1,j+1 P P i+1,j+1
+i,j+1 i,j+1
+Finalmente,sustituyendo(21)y(22)en(3)obtenemos(14).
+Enlafigura2vemossen˜aladoslosvectoresh yh
+i,j i,j+1
+(decolormagenta)ylosvectoresv yv (decolorverde), P P
+i,j i+1,j i,j P i,j P
+i+1,j i+1,j
+involucradosenlasexpresiones(21)y(22)delasderivadas
+Figura3. A´reasdelostria´ngulosrespetandolaorientacio´n.
+parcialesdelmapeox(ξ,η).
+Observacio´n
+LoscoeficientesdelosB-splineslinealesenlaexpre-
+sio´n(14)delJacobianosondeterminantesdematrices det (cid:2) h |v (cid:3) 2a´rea(t2)
+i,j+1 i,j ij
+=
+deorden2.Lascolumnasdecadaunadeestasmatrices (n−1)(m−1) (n−1)(m−1)
+sondiferencias“horizontales”y“verticales”depuntos
+decontrolconsecutivos(vea(15)y(16)ylafigura2). det (cid:2) h i,j |v i+1,j (cid:3) 2a´rea(t i 3 j )
+=
+Porlotanto,cadadeterminanteen(14)noesma´sque (n−1)(m−1) (n−1)(m−1)
+eldobledela´reasignadadeltria´ngulodefinidoporun
+det (cid:2) h |v (cid:3) 2a´rea(t4)
+vector“horizontal”yuno“vertical”,quetienenunve´rti- i,j+1 i+1,j = ij
+ce comu´n. Si las a´reas de todos los tria´ngulos tienen (n−1)(m−1) (n−1)(m−1)
+elmismosignoentoncesde(14)resultainmediatoque Pero por hipo´tesis P es una malla convexa. Por tanto,
+el Jacobiano no cambia de signo y en consecuencia las a´reas de los tria´ngulos t1,t2,t3 y t4 son positivas. En
+ij ij ij ij
+x(ξ,η)esinyectivo. consecuencia,teniendoencuentaquelosB-splinessonfun-
+cionespositivas,podemosconcluirquedetJ (ξ,η)>0pa-
+Definicio´n1. SeaPunamallade(n−1)(m−1)cuadrila´te- x
+ra todo (ξ,η)∈[ξ,ξ ]×[η ,η ], i=1,...,n−1, j=
+rosc ,i=1,...,n−1, j=1,...,m−1,dondec tieneve´rti-
+i i+1 j j+1
+ij ij 1,...m−1,locualgarantizalainyectividaddex(ξ,η).
+cesP ,P ,P yP ,i=1,...,n, j=1,...,m.De-
+i,j i+1,j i+1,j+1 i,j+1
+cimosquePesunamallaconvexasitodosloscuadrila´teros
+1.3 MapeoB-splinebicuadra´tico
+c sonconvexos.
+ij Demanerasimilaracomoprocedimosenelcasobilineal,
+laconstruccio´ndeunmapeox(ξ,η)B-splinebicuadra´tico
+Paraverificarenlapra´cticalaconvexidaddeunamalla
+con nm puntos de control P , i=1,...,n, j =1,...,m, re-
+se subdivide cada cuadrila´tero c en los cuatro tria´ngulos i,j
+ij
+quierequeprefijemospreviamentelassucesionesdenodos
+obtenidosalconsiderarlasdosdiagonalesdelcuadrila´tero:
+tξ ={tξ,tξ,...,tξ } ytη ={tη,tη,...,tη }, que definen
+t i 1 j =(cid:52)(P i,j , P i+1,j , P i+1,j+1 ), lasbase 1 sB 2 3 (ξ) n , +3 i=1,...,ny 1 B3 2 (η), m j + = 3 1,...,mdelos
+i,tξ j,tη
+t2 =(cid:52)(P , P , P ), B-splinesdeorden3enlasdireccionesξ yη respectivamente.
+ij i,j i+1,j+1 i,j+1
+Enestetrabajovamosaasumirque
+t3 =(cid:52)(P , P , P ),
+ij i,j i+1,j i,j+1 i−1
+tξ ={0,0,ξ ,ξ ,...,ξ ,1,1}conξ = , (23)
+t4 =(cid:52)(P , P , P ) 1 2 n−1 i n−2
+ij i+1,j i+1,j+1 i,j+1
+j−1
+Entodoslostria´ngulosconsideramoscomosentidopositivo tη ={0,0,η ,η ,...,η ,1,1}conη = , (24)
+1 2 m−1 j
+m−2
+elcontrarioalasmanecillasdelreloj,vealafigura3.Esfa´cil
+verquec esuncuadrila´teroesconvexosiyso´lositodoslos No´tesequelospuntosderupturanuevamentesonequidis-
+ij
+tria´ngulost1,t2,t3 yt4 tienea´reapositiva.Acontinuacio´n tantes,mientrasquelosnodosextremostienenmultiplicidad
+ij ij ij ij
+mostramos que la convexidad de la malla de control de un 3.Adema´s
+mapeobilinealgarantizasuinyectividad. ξ = tξ , i=1,...,n−1 (25)
+i i+2
+Teorema1. Condicio´nsuficientedeinyectividad η = tη , j=1,...,m−1 (26)
+j j+2
+Supongamos que la malla de control P del mapeo bilineal
+Lafigura4muestralabasede7deB-splinescuadra´ticos
+x(ξ,η)dadopor(6)esconvexa.Entoncesx(ξ,η)esinyecti-
+connodosuniformes.
+vo.
+Cadafuncio´ndelespacioS 3,3 :=S 3,tξ ⊗S 3,tη delasfun-
+Demostracio´n. De(14)resultaquepara(ξ,η)∈[ξ i ,ξ i+1 ]× cionessplinebicuadra´ticasparalassucesionesdenodos(23)y
+[η j ,η j+1 ], i=1,...,n−1, j=1,...m−1 el Jacobiano de (24)esta´compuestapor(n−2)(m−2)parchesbicuadra´ticos.
+x(ξ,η),detJ x (ξ,η)esunafuncio´nB-splinebilinealconcoe- Adema´s,six(ξ,η)∈S 3,3 entoncessepuedeescribircomo,
+ficientes
+det[h i,j |v i,j ] 2a´rea(t i 1 j ) x(ξ,η)=∑ n ∑ m P B3 (ξ)B3 (η) (27)
+= i,j i,tξ j,tη
+(n−1)(m−1) (n−1)(m−1) i=1j=1
+100 Parametrizacio´nB-splinederegionesplanasconfronterairregular
+fa´ciles de deducir como en el caso lineal, sin embargo es
+1
+conocido [11], que se pueden expresar como combinacio´n
+0.9
+linealdebaseslinealesconlamismasucesio´ndenodos(23),
+0.8
+0.7 dB3(ξ) (cid:32) B2(ξ) B2 (ξ) (cid:33)
+0.6 i = 2 i − i+1 (33)
+dξ tξ −tξ tξ −tξ
+0.5 i+2 i i+3 i+1
+0.4
+Paraelcasodenodosuniformes(23)estau´ltimaexpresio´n
+0.3
+tomalaforma,
+0.2
+0.1  −2(n−2)B2(ξ) i=1
+00 0.2 0.4 0.6 0.8 1 dB3(ξ)
+
+(n−2)(2B2 2
+2
+(ξ)−B2 3 (ξ)) i=2
+i = (n−2)(B2(ξ)−B2 (ξ)) 3(cid:54)i(cid:54)n−2 (34)
+F
+eq
+ig
+u
+u
+id
+r
+i
+a
+st
+4
+a
+.
+nt
+B
+es
+a
+.
+sedeB-splinescuadra´ticosconnodos dξ  (
+2
+n
+(n
+−
+−
+2)
+2
+(
+)
+B
+B
+i 2
+n
+2
+−
+(ξ
+1
+(
+)
+ξ)− i+ 2 1 B2
+n
+(ξ))
+i
+i
+=
+=
+n
+n−1
+n
+Unaexpresio´nsimilarseobtieneparalasderivadasdelos
+B-splinesB3(η), j=1,...,mconlasucesio´ndenodos(24).
+Lema2. Paraelmapeobicuadra´tico(27)secumpleque, j
+x(ξ ,η ) = P
+1 1 1,1
+x(ξ 1 ,η m−1 ) = P 1,m (28) 1 Bi 2 +1 Bi 2 +2
+x(ξ ,η ) = P
+n−1 1 n,1
+x(ξ ,η ) = P Bi 3 Bi 3 +1 Bi 3 +2
+n−1 m−1 n,m
+x(ξ,η ) = 1(P +P )
+i 1 2 i,1 i+1,1
+x(ξ,η ) = 1(P +P ) (29)
+i m−1 2 i,m i+1,m 0.5
+i=2,...,n−2
+x(ξ ,η ) =
+1(cid:0)
+P +P
+(cid:1)
+,
+x(ξ
+1
+,
+j
+η ) =
+2 1(cid:0)
+P
+1,j
++P
+1,j+1 (cid:1)
+, (30)
+n−1 j 2 n,j n,j+1
+j=2,...,m−2
+x(ξ,η ) = 1(cid:0) P +P +P +P (cid:1) 00 0.2 0.4 0.6 0.8 1
+i j 4 i,j i+1,j i,j+1 i+1,j+1 (31) ξi ξi+1
+i=2,...,n−2, j=2,...,m−2 Figura5. B-splinescuadra´ticosylinealesconnodos(23)
+quenoseanulanen[ξ,ξ ].
+i i+1
+Demostracio´n. Sea(ξ,η)∈[ξ,ξ ]×[η ,η ], i=2,...,
+i i+1 j j+1
+n−2, j=2,...,m−2.Entoncesteniendoencuentaquelos
+B-splines son funciones de soporte compacto [11], de (27)
+llegamosaque, Lema3. SeaU ij :=[ξ i ,ξ i+1 ]×[η j ,η j+1 ], i=1,...,n−2, j=
+1,...,m−2.Para∀(ξ,η)∈U ,lasderivadasparcialesdel
+ij
+i+2j+2 mapeobicuadra´tico(27)connodos(23)y(24)esta´ndadas
+x(ξ,η)=∑∑P B3(ξ)B3(η) (32)
+r,s r s por,
+r=is=j
+Por otro lado, a partir de la uniformidad de los puntos de
+i+1j+2
+x | =(n−2)∑∑γ h B2 (ξ)B3(η) (35)
+rupturayteniendoencuenta(25)y(26),sepuedecompro- ξ Ui,j r r,s r+1 s
+r=is=j
+bar que B3(ξ)=B3 (ξ)= 1, B3 (ξ)=0 mientras que
+i i i+1 i 2 i+2 i
+B3(η )=B3 (η )= 1,B3 (η )=0.Demanerasimilar,es i+2j+1
+j j j+1 j 2 j+2 j x | =(m−2)∑∑δ v B2 (η)B3(ξ) (36)
+fa´cilverificarqueB3
+i+1
+(ξ
+i+1
+)=B3
+i+2
+(ξ
+i+1
+)= 1
+2
+,B3
+i
+(ξ
+i+1
+)=0 η Ui,j
+r=is=j
+s r,s s+1 r
+yB3 (η )=B3 (η )= 1, B3(η )=0.Finalmen-
+j+1 j+1 j+2 j+1 2 j j+1 donde
+te,sustituyendoestasexpresionesen(32)seobtiene(31).El  2, r=1
+
+restodelasexpresiones(28)-(30)sedemuestrandemanera γ = 1, 2≤r≤n−2 (37)
+r
+similar.  2, r=n−1
+y
+Las funciones B-spline cuadra´ticas para la sucesio´n de
+
+2, s=1
+nodos(23)notienenlamismauniformidadquelaslineales 
+δ = 1, 2≤s≤m−2 (38)
+connodos(4).Enelcasocuadra´ticolasdosprimerasylas s
+ 2, s=m−1
+dos u´ltimas difieren de las restantes, que son iguales salvo
+dB3(ξ)
+traslaciones (ver figura 4). Las derivadas i no son tan Demostracio´n,veaelanexo.
+dξ
+Parametrizacio´nB-splinederegionesplanasconfronterairregular 101
+0=
+η
+η
+η
+m
+η
+1=
+j+
+-
+j
+1
+1
+ξ1 ξ
+xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx
+i
+xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx
+ξ
+xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx
+i+1 ξn-1=1 0=
+η
+η
+η
+m
+m
+1
+η
+=
+-
+-
+2
+2
+1
+ξ
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+1
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+ξ
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+2 ξ
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+n
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+-
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+2
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+ξ
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+n-1=1 0=
+η
+η
+η
+m
+m
+1
+η
+=
+-
+-
+2
+2
+1
+ξ
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+1
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ξ
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+2
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxx
+ξ
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+n
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+2
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ξ
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+n-1=1
+1
+O
+.
+b
+1
+L
+c
+s
+6
+i
+a
+a
+e
+d
+r
+e
+d
+v
+o
+x
+e
+a
+p
+t
+a
+e
+c
+r
+r
+e
+i
+u
+o
+m
+s
+n
+i
+n
+o
+i
+´
+d
+e
+n
+n
+e
+s
+a
+t
+(
+n
+e
+3
+t
+r
+9
+e
+m
+)
+s
+i
+i
+n
+c
+n
+a
+o
+v
+n
+r
+o
+r
+t
+l
+e
+e
+u
+s
+c
+e
+p
+r
+n
+a
+o
+p
+n
+3
+a
+d
+6
+r
+e
+t
+s
+n
+i
+u
+cu
+m
+a
+la
+a
+a´
+r
+n
+r
+.
+e
+d
+D
+a
+o
+s
+e
+s,
+d
+e
+c
+s
+e
+a
+e
+d
+t
+t
+a
+r
+o
+ia
+u
+´
+ta
+n
+n
+l
+g
+o
+,
+u
+s
+a
+o
+l
+s
+o
+l
+o
+o
+s
+-
+Figura6. Espaciodepara´metrosU divididoenlos definidosporlasdosdiagonalesdecadaunodelos4
+recta´ngulosU =[ξ,ξ ]×[η ,η ].Izquierda
+i,j i i+1 j j+1 cuadrila´terosdelamalladecontrolinvolucrados,vea
+U ,i=2,...,n−3, j=2,...,m−3esunrecta´ngulointerior.
+i,j lafigura2.Los20determinatesrestantesnocorrespon-
+Centro:U esunadelas4esquinasdeU.Derecha:U es
+i,j i,j denaningu´ncuadrila´terof´ısicodelamalladecontrol.
+unrecta´ngulodelafronteraquenoesesquina.
+Poreso,enelcasobicuadra´ticoesma´sdif´ıcildaruna
+interpretacio´ngeome´tricadelacondicio´nsuficientede
+inyectividad.
+Proposicio´n2. Para(ξ,η)∈[ξ,ξ ]×[η ,η ],i=1,...,
+i i+1 j j+1
+2. Lacondicio´nsuficiente(41)esmejorquelapropuesta
+n−2, j=1,...m−2,elJacobianodelmapeobicuadra´tico
+(27)esta´ dadopor, en[22],dondeseanalizantodoslosvectoresdefinidos
+porlasdiferencias“horizontales”ylasdiferencias“ver-
+detJ x (ξ,η) |J x (ξ,η)| ticales”depuntosdecontrolconsecutivos.Sinembar-
+= =
+(n−2)(m−2) (n−2)(m−2) go,(41)esau´nunacondicio´nsuficientemuyrestrictiva
+puesmuchosmapeosinyectivosnolacumplen.
+i+2j+2i+1 j+1
+=∑ ∑ ∑ ∑ αr(cid:48),s(cid:48)D r(cid:48),s,r,s(cid:48)B3
+r
+(ξ)B3
+s
+(η)B2
+r(cid:48)+1
+(ξ)B2
+s(cid:48)+1
+(η)
+3. Para obtener una condicio´n suficiente mejor hay que
+r=is=jr(cid:48)=is(cid:48)=j
+(39) tener en cuenta que el Jacobiano (39) del mapeo bi-
+cuadra´tico es una funcio´n spline bicu´bica [15], [23].
+Enconsecuencia,puedeescribirsecomocombinacio´n
+donde linealdelabasebicu´bica,formadaporsolo16funcio-
+nes.Exigiendoqueloscoeficientesdeestacombinacio´n
+ r(cid:48)\s(cid:48) 1 2,···,m−2 m−1 lineal no cambien de signo se obtiene una condicio´n
+
+1 4 2 4
+suficientedeinyectividadmenosrestrictivaque(41).
+α r(cid:48),s(cid:48) = (40)
+2,···,n−2 2 1 2
+
+n−1 4 2 4 2. Ca´lculo de los puntos de control
+(cid:104) (cid:105) En esta seccio´n describimos el procedimiento para cal-
+yD r(cid:48),s,r,s(cid:48) =det h r(cid:48),s |v r,s(cid:48) cularlospuntosdecontroldelmapeoB-splinebicuadra´tico
+queparametrizaΩ.Esteprocedimientoesdiferenteparalos
+Demostracio´n. Laexpresio´n(39)seobtienesustituyendoen
+puntosdecontroldelafronterayparalospuntosdecontrol
+(3)lafo´rmula(35)parax =(x ,y )t ylafo´rmula(36)para
+ξ ξ ξ interiores.
+x =(x ,y )t.Losdetallesseomitenporbrevedad.
+η η η
+2.1 Puntosdecontroldelafrontera
+Teorema2(Condicio´nsuficientedeinyectividad). Suponga-
+mosquelospuntosP i=1,...,n, j=1,...,mdelamalla
+ElmapeoB-splinebicuadra´ticox(ξ,η)debetransformar
+i,j
+decontroldelmapeobicuadra´tico(27)connodos(23)y(24) lafronterade∂U en∂Ω.EnestetrabajoseasumequeΩes
+satisfacen unaregio´nacotadadelplanocuyafronteraesta´descritapor4
+(cid:104) (cid:105) curvasB-splinecuadra´ticas.Ma´sprecisamente,suponemos
+det h r(cid:48),s |v r,s(cid:48) >0 (41) que se tienen 4 puntos distinguidos: Q,R,S y T en ∂Ω, de
+modo que e´sta queda dividida en 4 secciones: la “sur” con
+(cid:48)
+parar=i,i+1,i+2, r =i,i+1, i=1,...,n−2ys= j,j+
+extremosQ,R,la“norte”conextremosT,S,la“oeste”con
+(cid:48)
+1,j+2, s = j,j+1, j=1,...,m−2,dondeh yv esta´n
+i,s r,j extremosQ,Tyla“este”conextremosR,S,vealafigura7.
+dadospor(15)y(16)respectivamente.Entoncesx(ξ,η)es
+Denotamosporx(ξ),x (ξ)lascurvasdelafronteranorte
+inyectivo. t b
+ysurrespectivamente,dadaspor
+Demostracio´n. Para(ξ,η)∈[ξ,ξ ]×[η ,η ]con, i=
+i i+1 j j+1
+n n
+1,...,n−2, j=1,...m−2,elJacobianodelmapeobicuadra´ti- x(ξ)=∑HtB3(ξ), x (ξ)=∑HbB3(ξ) (42)
+t i i b i i
+co (27) esta´ dado por (39). Teniendo en cuenta que los B-
+i=1 i=1
+splines son funciones no negativas y que por hipo´tesis los
+determinantes(41)sonpositivos,de(39)podemosconcluir dondeB3(ξ), i=1,...,nsonlosB-splinescuadra´ticospara
+i
+quedetJ (ξ,η)>0.Portanto,x(ξ,η)esinyectivo. lasucesio´ndenodos(23).Demanerasimilar,denotamospor
+x
+102 Parametrizacio´nB-splinederegionesplanasconfronterairregular
+x(η),x (η)lascurvasdelafronteraoesteyesterespectiva- Luego,x(0)=Vl, x(1)=Vl , x (0)=Vr yx (1)=Vr.
+l r l 1 l m r 1 r m
+mente,dadaspor Esto significa que si queremos imponer que la curva x(η)
+l
+interpolelospuntosQ,Tyquelacurvax (η)interpolelos
+r
+x l (η)= ∑ m Vl j B3 j (η), x r (η)= ∑ m Vr j B3 j (η) (43) R pu y nt V os r R = ,S S e . ntoncesdebemostomarVl 1 =Q, Vl m =T, Vr 1 =
+j=1 j=1 m
+Nuestro pro´ximo objetivo es seleccionar los puntos de
+dondeB3(η), j=1,...,msonlosB-splinescuadra´ticospara controldelafronteradelmapeobicuadra´ticox(ξ,η)demodo
+j
+lasucesio´ndenodos(24). quelascurvasx t (ξ), x b (ξ), x l (η)yx r (η)seanlasima´genes
+porx(ξ,η)delosladosdelcuadradounitarioU.
+EnelsiguienteLemademostramosquesitomamoscomo
+70 puntosdecontroldelafronteradelmapeoB-splinebicuadra´ti-
+65 T S co (27) los puntos de control de las 4 curvas B-spline que
+60
+55 definen∂Ω,entoncesx(ξ,η)transforma∂U en∂Ω.
+50
+45 Lema 4. Sea x(ξ,η) el mapeo B-spline bicuadra´tico (27)
+3 4 5 0 Q R conpuntosdecontrol,
+30
+20 30 40 50 60 70 80 P i,1 = Hb i , P i,m =Ht i , i=1,...,n (48)
+P = Vl, P =Vr, j=1,...,m (49)
+1,j j n,j j
+46
+donde
+44
+42 Ht =T, Ht =S, Hb=Q, Hb=R
+1 n 1 n
+40
+38
+Vl =Q, Vl =T, Vr =R, Vr =S
+36 1 m 1 m
+34 36 38 40 42 44 46 48 50 Entonces
+x(ξ,0) = x (ξ), 0≤ξ ≤1 (50)
+70 b
+6 6 0 5 T S x(ξ,1) = x t (ξ), 0≤ξ ≤1 (51)
+55 x(0,η) = x(η), 0≤η ≤1 (52)
+l
+50
+45 x(1,η) = x (η), 0≤η ≤1 (53)
+r
+40 R
+35 Q Adema´s,
+30
+20 30 40 50 60 70 80
+x(0,0)=Q, x(1,0)=R, x(0,1)=T y x(1,1)=S.
+Figura7. MapadelLagoTiticaca,regio´nΩconfrontera
+irregular.Arriba:Splinecuadra´ticoquedescribelafrontera Demostracio´n. Evaluando(27)enη=0yteniendoencuenta
+deΩ,dondesehanescogido4puntos:Q,R,SyT.Centro: (46)obtenemos
+Zoomdeunsegmentodelspline(rojo)ysupol´ıgonode n m n
+control(negro).Abajo:regio´nΩ (cid:48) definidaporelpol´ıgonode x(ξ,0)=∑∑P i,j B3 i (ξ)B3 j (0)=∑P i,1 B3 i (ξ)
+controldelascurvasB-splinedelafrontera. i=1j=1 i=1
+Luego,de(48)ylaexpresio´nparax en(42)llegamosa
+b
+n
+No´tesequedebidoalarepeticio´ndelosnodosextremos x(ξ,0)=∑HbB3(ξ)=x (ξ)
+i i b
+entξ,secumpleque i=1
+Enparticular,paraξ =0yξ =1,deestau´ltimaexpresio´n
+B3(0)=1, B3(0)=0, i=2,...,n (44)
+1 i resultaquex(0,0)=x (0)=Q, x(1,0)=x (1)=R,conlo
+b b
+B3(1)=1, B3(1)=0, i=1,...,n−1 (45) cualquedaprobado(50)ylainterpolacio´ndelospuntosQ
+n i
+yR.Porotraparte,sievaluamos(27)enη =1,tenemosen
+Luego,x t (0)=Ht 1 , x t (1)=Ht n , x b (0)=Hb 1 yx b (1)=Hb n . cuenta(47)ylaexpresio´nparax t en(42)llegamosa,
+Enconsecuencia,paragarantizarquelacurvax(ξ)interpole
+t n
+lospuntosT,S,yquelacurvax b (ξ)interpolelospuntosQ,R, x(ξ,1)=∑Ht i B3 i (ξ)=x t (ξ)
+debemostomarHt 1 =T, Ht n =S, Hb 1 =QyHb n =R. i=1
+Similarmente,paralasucesio´ndenodostη tenemosque,
+Luego,paraξ =0yξ =1,secumplequex(0,1)=x(0)=
+t
+T, x(1,1)=x(1)=S,conlocualhemosprobado(51)yla
+B3(0)=1, B3(0)=0, j=2,...,m (46) t
+1 j interpolacio´ndelospuntosSyT.Lademostracio´nde(52)y
+B3(1)=1, B3(1)=0, j=1,...,m−1 (47) (53)essimilaryseomite.
+m j
+Parametrizacio´nB-splinederegionesplanasconfronterairregular 103
+2.2 Puntosdecontrolinteriores unamedidadelaproximidadauntria´ngulorecta´ngulo:
+Enestaseccio´ndescribimosmuybrevementeelme´todo
+queseempleaparacalcularlospuntosdecontrolinteriores
+o((cid:52)(A,B,C))=(B−C)t(A−C)
+delmapeoB-splinebicuadra´tico.
+(cid:48)
+SeaΩ laregio´ndelplanocuyafronteraeslapoligonal Ente´rminosdeestasmedidassedefinenlosfuncionalescla´si-
+definidaporlaunio´ndelospuntosdecontroldelascurvas cosdiscretos,
+x(ξ),x (ξ),x(η)yx (η).No´tesequesegu´nelLema4estos
+t b l r
+N
+sonlospuntosdecontroldelafronteradelmapeoB-spline F (G) = ∑α((cid:52) )2, funcionaldea´rea
+(cid:48) A q
+bicuadra´tico (27). En otras palabras, ∂Ω esta´ formada por
+q=1
+cuatropoligonales:la“sur”conve´rticesP ,i=1,...,n,la
+i,1 N
+“norte”conve´rticesP i,m ,i=1,...,n,la“oeste”conve´rtices F L (G) = ∑λ((cid:52) q ), funcionaldelongitud
+P 1,j , j =1,...,m y la “este” con ve´rtices P n,j , j =1,...,m. q=1
+Adema´s,debidoalapropiedaddevariacio´nreducidadelos N
+B-splines [11], se puede afirmar que si la frontera de Ω es F O (G) = ∑o((cid:52) q )2, funcionaldeortogonalidad
+(cid:48)
+irregularentoncesladeΩ tambie´nloes. q=1
+Lospuntosdecontrolinterioresdex(ξ,η),esdecirlos
+Adema´s,medianteunacombinacio´nconvexadeellosobtene-
+puntosP , i=2,...,n−1, j=2,...,m−1,secalculancomo
+ij
+moslosfuncionales,
+losve´rticesinterioresdeunamallaestructuradadecuadrila´te-
+(cid:48)
+rossobreΩ.Deestemodo,elproblemadeco´mocalcularlos
+funcionaldea´rea–ortogonalidad:
+puntosdecontrolinterioresdeunmapeoB-splinebicuadra´ti-
+N α((cid:52) )2 o((cid:52) )2
+coentreU yΩsereducealproblemadegenerarunamalla F (G)= ∑ q + q ,
+estructuradaGsobreΩ (cid:48) . AO 2 2
+q=1
+Laconstruccio´ndemallasestructuradasdecuadrila´teros funcionaldea´rea–longitud:
+sobre regiones irregulares ha sido tratada con mucho e´xito
+N
+en la literatura [3],[20],[21],[7],[5],[6]. Una parte de la di- F (G)= ∑[σα((cid:52) )2+(1−σ)λ((cid:52) )], 0<σ <1
+AL q q
+ficultad de este problema radica precisamente en la forma q=1
+delafrontera.Losme´todosma´sempleadospararesolverlo
+Todosestosfuncionalessonfuncionespositivasdelamalla.
+calculan los ve´rtices interiores de la malla G minimizando
+Nuestro objetivo es obtener mallas convexas sobre Ω(cid:48),
+unafuncio´nF quedependedelascoordenadasdelosve´rti-
+puescomoprobamosenelTeorema1estonosgarantizaal
+ces. Cuando la dimensio´n n×m de la malla es grande, el
+menos la inyectividad del mapeo bilineal. Para que la con-
+problemadeoptimizacio´nesdegranescala,puesF esuna
+dicio´n de convexidad sea estable nume´ricamente debe ser
+funcio´nde2(m−2)(n−2)variables.Estorequierecontarcon
+independiente de la escala. Por eso en [12] se introduce el
+unoptimizadoreficiente.
+conceptodeε-convexidad.
+LasfuncionesF aoptimizarmidenpropiedadesgeome´tri-
+casdelamallayseconstruyenapartirlos4tria´ngulosquese
+Definicio´n 2. Sea ε >0 y G una malla de n×m ve´rtices.
+obtienenaldividircadaceldadelamallaporsusdosdiagona-
+DecimosqueGesε-convexasiela´readetodoslostria´ngulos
+les,vealafigura3.No´tesequesiGtienenmve´rticesentonces
+de las celdas de G es mayor que ε·α(G), donde α(G)=
+m
+el
+o
+n
+d
+u´
+o
+m
+q
+e
+u
+r
+e
+o
+F
+de
+se
+to
+d
+ta
+e
+l
+fi
+d
+n
+e
+e
+t
+e
+r
+n
+ia´
+g
+n
+e
+g
+n
+u
+e
+l
+r
+o
+a
+s
+l
+e
+c
+s
+om
+N
+o
+=
+,
+4(m−1)(n−1),de
+N
+1 ∑N
+q=1
+α(∆
+q
+)eselpromediodelasa´reasorientadasdetodos
+lostria´ngulosdelamalla.
+N
+En[4]seintroduceunfuncionalma´ssofisticadoquegaran-
+F(G)= ∑ f((cid:52) ) (54)
+q
+tizalaε-convexidaddelamallao´ptima.Ma´sprecisamente,se
+q=1
+demuestraquesi f esunafuncio´nconvexaC2continua,estric-
+donde f((cid:52)) en (54) es una medida que solo depende de
+i tamentedecrecienteyacotadapordebajo,talque f(α)→0
+losve´rticesdeli-e´simotria´ngulo(cid:52).Parauntria´ngulocon
+i cuandoα →∞,entoncesparatodo0<ε ≤1existeω >0
+ve´rticesA,ByC,lasmagnitudesquema´sseutilizanson:
+suficientementegrande,talqueelm´ınimodelfuncional
+unamedidadelalongitud:
+N
+λ((cid:52)(A,B,C))=(cid:107)A−B(cid:107)2+(cid:107)C−B(cid:107)2 S
+ω,ε
+(G)= ∑ f(ωα((cid:52)
+q
+)−εα(G)) (55)
+q=1
+unamedidadela´rea:
+dentro del conjunto de mallas admisibles es una malla G
+α((cid:52)(A,B,C)) = (B−A)tJ (B−C) ε-convexa. Este resultado se ha empleado con e´xito en la
+2
+= 2a´rea((cid:52)(A,B,C)) pra´cticatomando f como
+(cid:18) (cid:19) (cid:26)
+0 1 1/α, α ≥1
+conJ = f(α)= (56)
+2 −1 0 (α−1)(α−2)+1, α <1
+104 Parametrizacio´nB-splinederegionesplanasconfronterairregular
+Las mallas ε-convexas obtenidas al minimizar S con f
+ω,ε
+dadapor(56)sereportanen[3],[7].En[3]sepruebatambie´n
+12
+quesicombinamoselfuncional(55)conotrofuncionalF(G)
+c
+diferenciableypositivo,definiendopara0<σ ≤1unnuevo 10
+funcional 8
+6
+F (G)=σS (G)+(1−σ)F(G) (57)
+σ ω,ε c
+4
+entonceselm´ınimode(57)sealcanzatambie´nparaunamalla
+2
+ε-convexa.Paraunadiscusio´ndetalladadeestefuncionaly
+lascombinacionesconlosfuncionalescla´sicosremitimosal 0
+lectora[3]. −2
+−5 0 5 10 15
+3. Experimentos nume´ricos
+Enestaseccio´nmostramosco´mofuncionaelme´todopro-
+12
+puesto para parametrizar regiones planas con frontera irre-
+gularutilizandounmapeoB-splinebicuadra´tico.Paracalcu- 10
+lar los puntos de control interiores del mapeo se utilizo´ el 8
+sistemaUNAMalla,disponiblegratuitamenteen[1].UNA-
+6
+Mallageneramallasdecuadrila´terosestructuradassobrere-
+4
+giones con frontera poligonal. Los ve´rtices de la malla se
+calculanminimizandoalgunodelosfuncionalesdescritosen 2
+[3],[20],[21],[7],[5],[6].Paraobtenerelm´ınimodelfuncional 0
+seempleaunme´tododeNewtontruncado[17],oelme´todo
+−2
+L-BFGS-B[8],[25].Estosme´todosconvergenmuyra´pidoa
+−5 0 5 10 15
+partirdecualquiermallainicial.
+EnestetrabajoUNAMallaseutilizaparaconstruiruna Figura8. Piezaderompecabeza.Arriba:Malladecontrolde
+malla de cuadrila´teros ε-convexa sobre la regio´n Ω (cid:48) . Los orden18×18delmapeoB-splinecuadra´tico.Abajo:Curvas
+(n−2)(m−2)puntosdecontrolinterioresdelmapeoB-spline isoparame´tricasdelmapeoB-splinecuadra´tico.
+bicuadra´tico(27)sonlosve´rticesdelamallao´ptimagenerada
+porUNAMalla.
+Lasfiguras8,9,10y11muestranarribalospuntosdecon-
+4. Conclusiones
+troldelmapeobicuadra´ticoyabajolascurvasisoparame´tricas.
+Entodosloscasoslospuntosdecontrolinterioresdelmapeo Laparametrizacio´ndeunaregio´nplanaesespecialmente
+seobtuvieronminimizandoelfuncional(57)conσ = 1,don- dif´ıcil cuando su frontera es muy irregular. La solucio´n de
+2
+deF eselfuncionaldea´rea-ortogonalidadF (G).Comose esteproblemaesimportanteenelcontextodelana´lisisiso-
+c AO
+observa,lasmallasdecontrolobtenidassiempresonconvexas geme´trico,dondelaparametrizacio´nseconstruyeusualmente
+ylascurvasisoparame´tricas,quesemuestranabajodecada utilizandofuncionesB-splineproductotensorial.Asumien-
+figura,sonsuaves. doquelafronterahasidoparametrizadamediante4curvas
+Conrelacio´nalainyectividaddelmapeo,sechequeo´ la B-splines,elretoprincipalconsisteencalcularlospuntosde
+condicio´nsuficiente(41)yseobservo´ queenningunodelos control interiores del mapeo. El me´todo propuesto en este
+ejemplossesatisface.Sinembargo,alevaluarelJacobianoen trabajocalculalospuntosdecontrolinteriorescomolosve´rti-
+108puntosequiespaciadosenelcuadrado[0,1]2(104puntos cesdeunamallaestructuradadecuadrila´teros.Asuvez,los
+encadadireccio´nξ yη)seobtuvieronlosvaloresm´ınimos ve´rtices de la malla se obtienen minimizando un funcional
+que muestra la tabla 1. Dada la suavidad del Jacobiano, lo quegarantizalaconvexidaddeloscuadrila´terosdelamalla
+anterior nos permite concluir que con alta probabilidad los o´ptima.Graciasaestapropiedad,elmapeobilinealcorrespon-
+mapeosbicuadra´ticosobtenidossoninyectivos. dienteesinyectivo.Enelcasobicuadra´ticolosexperimentos
+nume´ricosmuestranqueelmapeotambie´nesinyectivo,pero
+Regio´n mindetJ
+x nohaygarant´ıa.
+PiezaRompecabezas 2.57
+Respecto al futuro quedan muchos aspectos teo´ricos y
+Bah´ıadeLaHabana 1.96
+pra´cticosporanalizar.Entrelosteo´ricosvalelapenadestacar
+MapadeInglaterra 42.61
+laobtencio´ndeunacondicio´nsuficientedeinyectividadpara
+LagoTiticaca 11.38
+elmapeobicuadra´tico,queseamenosrestrictivaque(41).En
+Valoresm´ınimosdelJacobianodelmapeobicuadra´ticoen ese sentido tambie´n es importante tener una interpretacio´n
+unamuestrade108puntosequiespaciadosen[0,1]2. delacondicio´ndeinyectividadente´rminosdepropiedades
+geome´tricas de las celdas de la malla de control. Desde el
+Parametrizacio´nB-splinederegionesplanasconfronterairregular 105
+3.5
+120
+3
+100
+2.5
+80
+2
+60
+1.5
+40 1
+20 0.5
+0
+0
+−40 −20 0 20 40 60 80 100 120 −0.5 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5
+3.5
+120
+3
+100
+2.5
+80
+2
+60
+1.5
+40 1
+20 0.5
+0
+0
+−40 −20 0 20 40 60 80 100 120 −0.5 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5
+Figura9. MapadeInglaterra.Arriba:Malladecontrolorden Figura10. Bah´ıadeLaHabana.Arriba:Malladecontrol
+30×30delmapeoB-splinecuadra´tico.Abajo:Curvas orden35×35delmapeoB-splinecuadra´tico.Abajo:Curvas
+isoparame´tricasdelmapeoB-splinecuadra´tico. isoparame´tricasdelmapeoB-splinecuadra´tico.
+puntodevistapra´ctico,debemosprobarlaparametrizacio´n a) (ξ,η)esta´ enunrecta´ngulointeriorU coni=2,...,
+i,j
+propuestapararesolveralgunosproblemasdiferencialescla´si- n−3, j=2,...,m−3delespaciodepara´metrosU,vea
+cosenelcontextodelana´lisisisogeome´trico.Deestemodo lafigura6,izquierda.
+podr´ıamosvalorarelefectoquetienelaparametrizacio´nenla
+precisio´ndelasolucio´nnume´ricadelproblemadiferencial. b) (ξ,η)perteneceaunodelos4recta´ngulosdelases-
+quinas deU:U ,U ,U oU , vea la
+1,1 1,m−2 n−2,1 n−2,m−2
+Anexo: Demostracio´n del Lema 3 figura6,centro.
+Demostracio´n. Sea (ξ,η)∈U i=1,...,n−2, j=1,...,
+i,j c) (ξ,η) esta´ en algu´n recta´ngulo de la frontera que no
+m−2,entoncesderivandoen(32)obtenemos
+esningunadelasesquinasdeU.Aqu´ıtenemos4posi-
+bilidades(vealafigura6,derecha):(ξ,η)∈U , 2(cid:54)
+x ξ | Ui,j = ∂ ∂ ξ x = i r ∑ + = 2 is j ∑ = +2 j P r,s B3 s (η) d d ξ B3 r (ξ) (58) U i(cid:54) i,m− n 2 − , 3 2 , (cid:54) (ξ i , (cid:54) η) n ∈ − U 3 n y − ( 2 ξ ,j , ,η 2 )∈ (cid:54) U j 1 (cid:54) ,j , m 2 − (cid:54) 3 j , (cid:54) ( i ξ ,1 m ,η − ) 3 ∈ .
+∂x i+2j+2 d
+x | = =∑∑P B3(η)B3(ξ) (59)
+η Ui,j ∂η r,s dη s r Casoa)(ξ,η)∈U i,j i=2,...,n−3, j=2,...,m−3.Com-
+r=is=j
+binandolasexpresiones(58)y(33)observamosquelasbases
+B-spline de orden 2 involucradas en la derivada parcial en
+dondehemosomitidolareferenciaalosnodosenlanotacio´n
+la direccio´n ξ en elintervalo [ξ,ξ ], son B2(ξ), B2 (ξ),
+delasbases,esdecir,B3(ξ)denotaaB3 (ξ)yB3(η)denota i i+1 i i+1
+i i,tξ j B2 (ξ)yB2 (ξ).Sinembargo,enesteintervalolasu´nicas
+aB3 (η). i+2 i+3
+j,tη funciones no nulas son B2 (ξ) y B2 (ξ), vea la figura 5.
+Paraobtenerlasexpresionesfinalesdex yx debemos i+1 i+2
+ξ η Luego,utilizando(15),laexpresio´n(58)sereducea,
+tener en cuenta que d B3(ξ), dada por (34), esta´ definida
+dξ i
+porpedazosyquelomismoocurrepara d B3(η).Poresola j+2(cid:104) (cid:105)
+demostracio´nsedivideen3casos: dη j x ξ | Ui,j =(n−2)
+s
+∑
+=j
+hi,s B2 i+1 (ξ)+h i+1,s B2 i+2 (ξ) B3 s (η) (60)
+106 Parametrizacio´nB-splinederegionesplanasconfronterairregular
+(62)obtenemosfinalmente,
+70 3
+x | =(n−2)∑ (cid:2) 2h B2(ξ) + h B2(ξ) (cid:3) B3(η) (63)
+65 ξ U1,1 1,s 2 2,s 3 s
+s=1
+60
+55 Demanerasimilarpodemoscalcularx η yllegamosa,
+50
+3
+45 x | =(m−2)∑ (cid:2) 2v B2(η) + v B2(η) (cid:3) B3(ξ) (64)
+η U1,1 r,1 2 r,2 3 r
+40 r=1
+35 Lasexpresiones(63)y(64)coincidencon(35)y(36)respec-
+30 tivamente,puesγ =δ =2mientrasqueγ =δ =1.
+1 1 2 2
+20 30 40 50 60 70 Caso c) Se demuestra exclusivamente para la frontera
+inferior,correspondientealosrecta´ngulosU con2(cid:54)i(cid:54)
+i,1
+n−3.Paraelrestodelasfronteraslademostracio´nessimilar.
+70 Sien(58)hacemos j=1con2(cid:54)i(cid:54)n−3obtenemos,
+65
+3 d
+60 x | = ∑P B3(η) B3(ξ)+
+ξ Ui,1 i,s s dξ i
+55 s=1
+50 3 d
++ ∑P B3(η) B3 (ξ)+ (65)
+45 i+1,s s dξ i+1
+s=1
+40
+3 d
+35 + ∑P B3(η) B3 (ξ)
+i+2,s s dξ i+2
+30 s=1
+20 30 40 50 60 70 Sustituyendoen(65)lasexpresionespara d B3(ξ), r=i,i+
+dξ r
+Figura11. LagoTiticaca.Arriba:Malladecontrolorden 1,i+2 dadas por (34) y teniendo en cuenta que los u´nicos
+35×35delmapeoB-splinecuadra´tico.Abajo:Curvas B-splineslinealesnonulosen[ξ i ,ξ i+1 ]sonB2 i+1 (ξ)yB2 i+2 (ξ)
+isoparame´tricasdelmapeoB-splinecuadra´tico. obtenemos,
+3
+x | =(n−2)∑B3(η) (cid:2) B2 (ξ)(P −P )+
+Enladireccio´nη obtenemosunresultadosimilarapartirde ξ Ui,1 s i+1 i+1,s i,s
+s=1
+(59)y(16), +B2 (ξ)(P −P ) (cid:3) =
+i+2 i+2,s i+1,s
+x η | Ui,j =(m−2) i
+r
+∑ +
+=
+2
+i
+(cid:104) vr,j B2 j+1 (η)+v r,j+1 B2 j+2 (η) (cid:105) B3 r (ξ) (61) =(n−2)∑ 3 (cid:2) h
+i,s
+B2
+i+1
+(ξ)+h
+i+1,s
+B2
+i+2
+(ξ) (cid:3) B3
+s
+(η) (66)
+s=1
+No´tesequelasexpresiones(60)y(61)coincidencon(35)y
+Procediendodemanerasimilarparaladerivadarespecto
+(36)respectivamenteteniendoencuentaquetodoslosγ yδ
+r s
+aη llegamosa,
+involucradosenestau´ltimasexpresionesvalen1.
+Casob)Vamosaprobarlou´nicamenteparalaesquinainfe- i+2
+x | =(m−2)∑ (cid:2) 2v B2(η)+v B2(η) (cid:3) B3(ξ) (67)
+riorizquierdaquecorrespondealrecta´nguloU 1,1 =[ξ 1 ,ξ 2 ]× η Ui,1 r,1 2 r,2 3 r
+r=i
+[η ,η ].Paralasotrasesquinaslademostracio´nessimilar.
+1 2
+Tomandoi= j=1en(58)llegamosa, Obse´rveseque(66)y(67)sepuedenreescribircomo(35)y
+(36)respectivamente,puesγ =1, 2(cid:54)i(cid:54)n−2mientrasque
+i
+x | = ∑ 3 P B3(η) d B3(ξ)+ δ 1 =2,δ 2 =1.
+ξ U1,1 1,s s dξ 1
+s=1
+Agradecimientos
+3 d
++ ∑P B3(η) B3(ξ)+ (62)
+2,s s dξ 2 Losautoresagradecenlacortes´ıadeJ.Gravensen,quien
+s=1
+proporciono´ lapoligonaldelafronteradelafigura8.
+3 d
++ ∑P B3(η) B3(ξ)
+3,s s dξ 3
+s=1 Referencias
+Sustituyendo en esta u´ltima expresio´n d B3(ξ); r=1,2,3 [1] Unamalla: An automatic package for numerical grid
+dξ r
+por la fo´rmula (34) y teniendo en cuenta que los u´nicos B- generation:Disponibleen
+splines lineales no nulos en [ξ ,ξ ] son B2(ξ) y B2(ξ), de http://www.matematicas.unam.mx/unamalla.
+1 2 2 3
+Parametrizacio´nB-splinederegionesplanasconfronterairregular 107
+[2] R. Barnhill. Coons patches. Computers in Industry, In M. Floater et al, editor, Mathematical Methods for
+3:37–43,1982. CurvesandSurfaces,pages189–212.Springer,2014.
+[16] T. Hughes, J. Cottrell, and Y. Bazilevs. Isogeometric
+[3] P.Barrera,J.Corte´s,F.Dom´ınguez,G.F.Gonza´lez,and
+analysis:Cad,finiteelements,nurbs,exactgeometryand
+Tinoco G. Smoothness and convex area functionals-
+meshrefinement. Comput.MethodsAppl.Mech.Engrg,
+revisited. SIAMJ.Sci.Comput,32(4):1913–1928,2010.
+194:4135–4195,2005.
+[4] P. Barrera, F. Dom´ınguez, and G. F. Gonza´lez. Area
+functionalsforhighqualitygridgeneration. InProcee- [17] J.Lin,C.andJ.More´. Newton’smethodforlargebound-
+dingsofthe4th.InternationalCongressonNumerical constrainedoptimizationproblems. SIAMJournalon
+MethodsinEngineeringandAppliedSciences,2007. Optimization,9(4):1100–1127,1999.
+[5] P.Barrera,F.Dom´ınguez,G.F.Gonza´lez,andTinocoG.
+[18] T.NguyenandB.Ju¨ttler. Parameterizationofcontrac-
+Generatingqualitystructuredconvexgridsonirregular
+tible domains using sequences of harmonic maps. In
+regions. ElectronicTransactionsonNumericalAnalysis,
+Heidelberg,editor,CurvesandSurfaces,pages501–514,
+34:76–89,2009.
+Berlin,2012.Springer.
+[6] P.Barrera,G.F.Gonza´lez,andF.Dom´ınguez. Anew
+functionalforimprovingcellareadistribution.InProcee- [19] X.NianandF.Chen. Planardomainparameterization
+dingofVInternationalConferenceonComputational forisogeometricanalysisbasedonteichmu¨llermapping.
+MethodsforCoupledproblemsinScienceandEnginne- Comput.MethodsAppl.Mech.Engrg,311:41–55,2016.
+ring,Barcelona,Espan˜a,junio2013.Electro´nica.
+[20] J.G.TinocoandP.Barrera. Smoothandconvexgrid
+[7] P.Barrera,G.F.Gonza´lez,andF.J.Dom´ınguez. Robust
+generationovergeneralplaneregions. Mathematicsand
+discretegridgenerationonplaneirregularregions. Zh.
+ComputersinSimulation,46(2):87–102,1998.
+Vychisl.Mat.Mat.Fiz.,43:884–892,2003.
+[8] R.H.Byrd,P.Lu,andJ.Nocedal. Alimitedmemoryal- [21] J.G.TinocoandP.Barrera. Areacontrolingenerating
+gorithmforboundconstrainedoptimization. SIAMJour- smooth and convex grids over general plane regions.
+nalonScientificandStatisticalComputing,16(5):1190– Journal of Computational and Applied Mathematics,
+1208,1995. 103(1):19–32,1999.
+[9] SCoons. Surfacesforcomputeraideddesign. Technical
+[22] G.Xu,B.Mourrain,R.Duvigneau,andGalligoA. Op-
+report, MIT, Springfield, 1964. Available as AD 663
+timalanalysis-awareparameterizationofcomputational
+504 from the National Technical Information service,
+domaininisogeometricanalysis. InAdvancesinGeo-
+VA22161.
+metricModelingandProcessing,LectureNotesinCom-
+[10] J.A.Cottrell,T.J.Hughes,andY.Bazilevs. Isogeome- puterScience,pages236–254,Berlin,2010.Springer.
+tricanalysis:towardintegrationofCADandFEA. John
+Wiley&Sons,Ltd,2009. [23] G.Xu,B.Mourrain,R.Duvigneau,andGalligoA. Pa-
+rametrizationofcomputationaldomaininisogeometric
+[11] Carl de Boor. A practical guide to splines. Springer,
+analysis:methodsandcomparison. CompMethodsin
+NewYork,2001.
+AppliedMechanicsandEngineering,200:2021–2031,
+2011.
+[12] F.J.Dom´ınguez. Sobrelageneracio´nvariacionaldis-
+cretademallascasiortogonalesenelplano. PhDthesis,
+FacultaddeCiencias,UNAM,2005. [24] J.Xu,F.Chen,andJ.Deng. Two-dimensionaldomain
+decompositionbasedonskeletoncomputationforpara-
+[13] A.Falini,J.Speh,andB.Ju¨ttler. Planardomainpara- meterizationandisogeometricanalysis. CompMethods
+meterization with thb-splines. Comput. Aided Geom. inAppliedMechanicsandEngineering,284:541–555,
+Design,35:95–108,2015. 2015.
+[14] G.FarinandD.Hansford. Discretecoonspatches. Com-
+[25] C.Zhu,R.H.Byrd,andJ.Nocedal.L-bfgs-b:Algorithm
+put.AidedGeom.Design,16(7):691–700,1999.
+778: L-bfgs-b, fortran routines for large scale bound
+[15] A.Gravesen,J.andEvgrafov,D.M.Nguyen,andP.Nor- constrainedoptimization. ACMTransactionsonMathe-
+toft. Planar parametrization in isogeometric analysis. maticalSoftware,23(4):550–560,1997.

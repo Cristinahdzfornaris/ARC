@@ -1,0 +1,978 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.43-49
+Recibido(Received):27-04-2024,Revisado(Reviewed):22-05-2024
+Aceptado(Accepted):14-07-2024,Enlínea(Online):18-07-2024
+El problema de Riemann para el sistema de
+Lamé-Navier bidimensional
+The Riemann problem for the two-dimensional
+Lamé-Navier system
+Diego Esteban Gutierrez Valencia1 , Daniel Alfonso Santiesteban2 , Ricardo Abreu Blaya3*
+Resumen Este trabajo está dedicado a estudiar un sistema de ecuaciones de la Teoría de la Elasticidad
+Lineal:elsistemadeLamé-Navier.MedianteelAnálisisComplejo,estesistemasereescribeentérminosdel
+operadordeCauchy-Riemannysucomplejoconjugado.Conestareescrituraseobtieneunanuevafactorización
+delsistemaquepermiteencontrarsolucionesexplícitas.PosteriormenteseresuelveelproblemadeRiemann
+asociado a este sistema elástico. Finalmente, se definieron operadores integrales de tipo Teodorescu que
+posibilitanlageneralizacióndelosresultadoscuandoseconsiderandominiosconfronterafractal.
+PalabrasClave:operadordeCauchy-Riemann,operadordeTeodorescu,problemadeRiemann,sistemade
+Lamé-Navier.
+Abstract ThispaperisdevotedtothestudyofasystemofequationsoftheTheoryofLinearElasticity: the
+Lamé-Naviersystem. BymeansofComplexAnalysis,thissystemisrewrittenintermsoftheCauchy-Riemann
+operator and its complex conjugate. With this rewritten, a new factorization of the system is obtained, which
+allowsfindingexplicitsolutions. Subsequently,theRiemannproblemassociatedtothiselasticsystemissolved.
+Teodorescu-typeintegraloperatorsweredefinedthatallowthegeneralizationoftheresultsfordomainswith
+fractalboundary.
+Keywords: Cauchy-Riemannoperator,Teodorescuoperator,Riemannproblem,Lamé-Naviersystem.
+MathematicsSubjectClassification: 28A80,30E25,74B05.
+1FacultaddeMatemáticas,UniversidadAutónomadeGuerrero,Chilpancingo,Guerrero,México.Email:diegogutierrez@uagro.mx
+2FacultaddeMatemáticas,UniversidadAutónomadeGuerrero,Chilpancingo,Guerrero,México.Email:danielalfonso950105@gmail.com
+3FacultaddeMatemáticas,UniversidadAutónomadeGuerrero,Chilpancingo,Guerrero,México.Email:rabreublaya@yahoo.es
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.
+Citar como: Gutierrez Valencia, D.E, Alfonso Santiesteban, D., & Abreu Blaya, R. (2024). El problema
+de Riemann para el sistema de Lamé-Navier bidimensional. Ciencias Matemáticas, 36(Único), 43–50. DOI:
+https://doi.org/10.5281/zenodo.13916459.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9069.
+Introducción bresufrontera.Lassolucionesaesteproblemaseobtienen
+deecuacionesintegralesmediantelafórmuladeCauchy.En
+La Teoría de la Elasticidad Lineal es fundamental para ingenieríadematerialesseestudianloscompuestosdematriz
+el estudio de materiales elásticos lineales e isotrópicos su- metálicadelaluminio,loscualessonusadosparaeldesarrollo
+jetosadeformacionespequeñas.Unhechocaracterísticode dematerialesaeroespacialesyenlaindustriadeladefensa[5].
+esta teoría es que las ecuaciones que la rigen son ecuacio- Lasaplicacioneseningenieríaaeroespacialdelasmatrices
+nesdiferencialesparcialeslinealesyporconsiguienteelútil decomposicióndelmetalylacerámicasonmuynovedosas
+principiodesuperposiciónesaplicable.Unodelosprimeros [23].Losejemplosenlaprácticasoninnumerablesyademás
+investigadoresqueusóelAnálisisComplejoparalaformula- sehaconvertidoenunateoríaprimordialdentrodelaMecá-
+ciónmatemáticademuchosdelosproblemaselásticosfueel nicadelosMediosContinuos.Elcampodedesplazamiento
+georgianoNikolozMuskhelishvili.LasfórmulasdeKolosov- bidimensional (u,v) de los puntos de un sólido elástico li-
+Muskhelishvili[24]seutilizanenlaresolucióndelproblema nealeisotrópicoenpresenciadeunafuerzaexterna(X,Y)es
+deDirichletqueconsisteenencontrarelequilibrioelástico
+delcuerpodeformadosiseconocenlosdesplazamientosso-
+44 ElproblemadeRiemannparaelsistemadeLamé-Navierbidimensional
+descritoporelconocidosistemadeLamé-Navier: embargo,parasolucionarelproblemadelsaltocuandolacur-
+vaessuavefuenecesariatambiénunatransformadadetipo
+(cid:40)
+(λ+µ)∂θ +µ∆u+X =0, Cauchy.Elanálisisnuméricohechoen[14]puedeayudara
+∂x (1)
+(λ+µ)∂θ +µ∆v+Y =0, obteneralgunasanalogíasparafuturosresultadosennuestras
+∂y
+investigacionesdelproblemadeRiemann.
+donde µ >0 y λ >−2µ son constantes físicas conocidas Losaportesdenuestrotrabajoseenmarcanengeneralizar
+3
+como parámetros de Lamé. El símbolo ∆ denota al opera- lanaturalezadelasfronterasqueacotanlosdominiosdesde
+dor de Laplace en R2 y θ = ∂u+∂v es la divergencia del uncontornosuavehastaunairregularidadgeométricafractal
+∂x ∂y
+desplazamiento [24, p. 97]. El sistema fue introducido por enelsentidoded-sumabilidad.ElTeorema10sintetizalos
+GabrielLaméenelmétododeseparacióndevariablesparala resultadosprincipalesybrindacondicionesparalasolubilidad
+solucióndelaecuacióndeondaencoordenadaselípticasyse delproblemageneral(9),teniendoencuentalascaracterísticas
+debealaLeydeHooke[20].Estesistematienesuanálogo delcontornoyenespeciallaconsideracióndeparámetrosde
+m-dimensional y en la literatura también se usa el término Lamédedistintanaturalezaenlosdominiosinterioryexterior.
+deecuacióndeNavier-Cauchy.Remitimosallectoralostra-
+bajosmásrecientes:[4],[6]y[17].Productodelestudiode 1. Planteamiento del problema
+lasecuacionesdiferencialesencombinaciónconelAnálisis
+Complejo,surgeelproblemadeRiemann.Brevementeeste EstainvestigaciónpretendereescribirelsistemadeLamé-
+problemadefronterasebasaenhallarunafunciónatrozos Navier(1)asuformacomplejayhallarunasoluciónalpro-
+queseasolucióndeunaecuacióndiferencialdadayquesa- blemadeRiemannasociadoaestesistema.Acontinuaciónse
+tisfaga determinadas condiciones de frontera. El problema enunciaráelmismo:
+deRiemannesmuyutilizadoendinámicadefluidos,ondas DadoundominioΩ + confronteraΓ,encontrarunasolu-
+electromagnéticas,gasesyenlateoríadecolas[8,12,13,27]. ciónF delaecuaciónsiguiente:
+EsteproblemaesclásicodentrodelAnálisisComplejoyse (cid:18) (cid:19) (cid:18) (cid:19)
+µ+λ 3µ+λ
+remonta a la disertación doctoral del propio Bernhard Rie- ∂ ∂ F+ ∂ ∂ F =0, (2)
+z z z z
+2 2
+mannen1851.En[15]sedauntratamientoeficientedeeste
+problemaysehaconvertidoenreferenciaobligadaparatoda
+talquesesatisfaganlascondicionesdefrontera:
+investigación concerniente a este tema. El reciente trabajo
+deAbreu-Blayatratasobreestostiposdeproblemasparalas  F+(t)−G (t)F−(t)= f (t), t∈Γ,
+ 0 0
+funcionesqueanulanaloperador∆2:funcionesbiarmónicas ∂ F+(t)−G (t)∂ F−(t)= f (t), t∈Γ,
+z 1 z 1
+[3].Otrostrabajosenelámbitodesolucionesaecuaciones  ∂ F(∞)=0,F(z)=O(ln|z|)cuandoz→∞,
+z
+diferencialesdeordensuperiorson[21]y[18].Porotraparte, (3)
+elproblemadeRiemanncuandolafronteradeldominionoes dondelasfuncionesdadasG ,G , f , f pertenecenalaclase
+0 1 0 1
+rectificablehasidoestudiadoporvariosautoresentrelosque de funciones de HölderC(0,ν)(Γ) y G , G no tienen ceros
+0 1
+destacaBorisKats(consultar[9,10]). sobreΓ.
+Aquílosoperadores∂ y∂ representanrespectivamente
+z z
+Relevancia del estudio aloperadordeCauchy-Riemannysuconjugado.
+ElproblemadeRiemannjuntoalsistemadeLamé-Navier
+tienengranaplicabilidadhoyendía.Enlamedidaenquelos
+parámetrosdeLamé(µ,λ)seandediferentenaturalezaen
+el dominio interior y exterior entonces el problema resulta
+mucho más interesante. En el trabajo de [22] tal problema
+esestudiadoencorrespondenciaconundesacoplamientodel
+sistemacuasiestáticodetermoelasticidadconunproblemade
+Riemannenundominiosimplementeconexo.Eneseartículo
+losautoresseenfocanenelusodesistemas(λ,1)-bianalíticos
+sinhaberdiferenciassignificativasenlaaproximaciónalpro-
+blemainicial. Figura1.DominiointeriorΩ + acotadoporunafrontera
+Porotraparte,en[14]setratancompuestoselásticospe- suaveΓydominioexteriorΩ − .
+riódicosreforzadosconfibrasparalelasconfasestransversal-
+menteisotrópicasconsiderandouncontactoimperfecto.Aquí El problema que surge de las ecuaciones (2)-(3) posee
+setratauntipodeproblemadevalorenlafronteraelcuales casosespecíficosinteresantes.Porejemplo,en(3)sisetiene
+examinadodandosoluciónalosllamadosproblemas( L) C queG (t)≡G (t)≡1entoncesseobtieneelllamado«pro-
+λ3 0 1
+medianteelusodelmétododehomogenizaciónasintóticae blemadesalto»entérminosdeGakhov(1980).Otrotipode
+integraleselípticasdetipoCauchy.Existendiferenciassus- problema surge cuando el dominio Ω está acotado por una
+tancialesentreelmétodoutilizadoen[14]yelnuestro;sin fronterafractalqueparaefectosdeaplicabilidadestaríamás
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.43-49 GutierrezValencia,D.E,AlfonsoSantiesteban,D.,&AbreuBlaya,R.
+https://revistas.uh.cu/rcm/article/view/9069 https://doi.org/10.5281/zenodo.13916459
+ElproblemadeRiemannparaelsistemadeLamé-Navierbidimensional 45
+relacionadoalasformasirregularesdelosmaterialesenla SeaΓuncontornosuaveycerrado,seanGygdosfun-
+cotidianidad.LaFigura1muestraunarepresentacióndelos cionesquesatisfacenlacondicióndeHölderenΓtalqueG
+dominiosinteriorΩ yexteriorΩ ,loscualesestánacotados nosedesvaneceenΓyseaΩ (Ω )elinterior(exterior)de
++ − + −
+porunafronterasuave. Γ.HallarunafunciónΦanalíticaenΩ ∪Ω (incluyendoal
++ −
+Elobjetivogeneraldeestetrabajoesencontrarcondicio- puntoinfinitamentealejado∞∈Ω ),queadmiteextensiones
+−
+nesnecesariasysuficientesparalasolubilidaddelproblema continuasΦ+yΦ−hastaΓdelosdominiosinterioryexterior
+defrontera(2)-(3)yhallarlaolassolucionesenformaexplí- respectivamente,talquelacondicióndefrontera:
+cita.Entonces,losobjetivosespecíficosson:
+Φ+(t)−G(t)Φ−(t)=g(t),
+1. Estudiarelproblemadesaltorelacionadoa(2)-(3)cuan-
+doeldominioestáacotadoporunafronterasuave. se satisface para todo t ∈Γ. Reiterar que cuando G≡1 el
+problema anterior hace referencia al llamado problema del
+2. Generalizar el resultado del problema del salto para
+saltoparafuncionesanalíticascomouncasoparticular.Una
+undominioconfronterafractalsiguiendolasideasdel
+solucióncompletaalproblemaanteriorestádesarrolladaen
+trabajopreliminar[9]enrelaciónconlosproblemasde
+laliteratura[15].Esdemencionarqueelconceptodeíndice
+Riemannparafuncionesanalíticas.
+deGakhovjuegaunpapelimportanteenlasolucióndeeste
+3. Extenderlosresultadosdelproblemadelsaltoparael mismo:
+1
+problema(2)-(3)cuandoseconsideraG
+0
+(t)̸=1,obien ind(G):= [argG]
+Γ
+,
+2π
+G (t)̸=1,yahoraasumiendoundominioacotadopor
+1
+unacurvafractal. donde[.] Γ serefierealavariaciónalolargodeΓ.Esteíndice
+esunnúmeroenteroqueindicaelnúmerodeenrolladodela
+Dadalanaturalezadelproblema(2)-(3),sussoluciones
+curvaΓ.
+tienenunarepresentaciónintegralquesederivahaciendouso
+LasiguientedefiniciónsiguelasideaselaboradasenBory-
+delmétodopropuestoen[7].Paranuestroobjetivoesimpres-
+Reyes et al. (2017) donde se define la clase de funciones
+cindibleexaminarlossiguientesdostrabajossobreoperadores Lip(1+ν,Γ),(0<ν <1),comoelespaciodecolecciones:
+integralescuandoseconsiderancurvasnorectificables[1,11].
+f:={f ,f ,f },
+0 1 2
+2. Nociones preliminares y resultados
+de funciones uniformemente acotadas definidas en Γ y ta-
+auxiliares
+lesqueparat,τ ∈Γsetienenlassiguientescondicionesde
+Considerelafuncióndevalorescomplejos f =u+iven compatibilidad:
+la variable z=x+iy, y los operadores ∂ = 1(∂ +i∂ ) y
+z 2 ∂x ∂y
+∂ = 1(∂ −i∂ ).Despuésdealgunoscálculossetienepara
+z 2 ∂x ∂y |f (t)−f (τ)−(t−τ)f (τ)−(t−τ)f (τ)| ≤ c|t−τ|1+ν,
+elsistemadeecuaciones(1)losiguiente: 0 0 1 2
+|f (t)−f (τ)| ≤ c|t−τ|ν,
+1 1
+(λ+µ)(∂ x θ+i∂ y θ)+µ[∆u+i∆v] |f (t)−f (τ)| ≤ c|t−τ|ν,
+2 2
+=2(λ+µ)∂ θ+µ∆f = −X−iY.
+z
+conc>0.
+Esconocidoque4∂
+z
+∂
+z
+=∆.Porotraparteθ =∂
+z
+f+∂
+z
+f,lo
+Estaclasedefuncionesresuelveelproblemadeextender
+queimplicaque∂
+z
+θ =∂
+z
+∂
+z
+f+∂
+z
+∂
+z
+f.Asísellegadirectamen-
+unafuncióndefinidaenuncompactoatodoelespaciomedian-
+tealaformacomplejade(1):
+teunafuncióncontinuamentediferenciablehastaciertoorden.
+(cid:18) (cid:19) (cid:18) (cid:19) Elprimeroqueresolvióesteproblemafueelestadounidense
+λ+µ λ+3µ
+∂ z ∂ z f+ ∂ z ∂ z f =g(z), (4) HasslerWhitneymediantesu«Teoremadeextensión»[26].
+2 2
+Acontinuaciónseexponeunaversióncomplejadelmismo:
+donde g(z)=−1(X+iY). Para efectos de simplicidad de
+2 Teorema1(TeoremadeextensióndeWhitney) Sea
+notación,deahoraenadelanteα = λ+
+2
+µ yβ = λ+
+2
+3µ,así(1) f ∈Lip(1+ν,Γ).Entoncesexisteunafuncióncomplejade
+sereescribecomo: soportecompacto f˜∈C1,ν(C)quesatisface:
+α∂ z ∂ z f+β∂ z ∂ z f =g(z). (5) 1. f˜| Γ = f 0 , ∂ z f˜| Γ = f 1 , ∂ z f˜| Γ = f 2 ,
+Elladoizquierdoen(5)estádadoporeloperadordiferen- 2. f˜∈C∞(C\Γ),
+cialL ,quellamaremosoperadordeLamé-Navier:
+α,β
+3. |∂
+z
+j1∂
+z
+j2f˜|≤cdist(z,Γ)ν−1,para j
+1
++j
+2
+=2y
+L
+α,β
+[f]:=α∂
+z
+∂
+z
+f+β∂
+z
+∂
+z
+f. z∈C\Γ.
+El planteamiento del problema de Riemann dado por Laintervencióndelafractalidadenestetrabajotienecomo
+Gakhov(1980)escomosigue: objetivoelotorgamientodeaplicabilidadprácticaalestudiar
+GutierrezValencia,D.E,AlfonsoSantiesteban,D.,&AbreuBlaya,R. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.43-49
+https://doi.org/10.5281/zenodo.13916459 https://revistas.uh.cu/rcm/article/view/9069
+46 ElproblemadeRiemannparaelsistemadeLamé-Navierbidimensional
+superficiesacotadasporfronterasirregulares.Enestecamino, Demostración.Elhechodequelaecuación(8)satisfagael
+se considera la fractalidad en el sentido de d-sumabilidad operador L se deduce directamente de la definición del
+α,β
+siguiendo los aportes de [19]. Se dice que Γ es d-sumable operadortipoTeodorescuTL .Encuantoalaprimeracondi-
+Ω
+paraalgún1<d<2silaintegralimpropia: cióndecontornode(7),fácilmentesepuedecomprobarqueel
+operadorTL (cid:2)L (cid:0) f˜(z) (cid:1)(cid:3) noexperimentasaltocuandoz
+(cid:90) 1 Ω α,β
+N (τ)τd−1dτ, pasaporΓ.Porotrolado,paraexaminarlasegundacondición
+Γ
+0 decontornosehaceusodelTeorema6.1en[25].Seobtiene
+losiguiente:
+converge,dondeN (τ)serefierealnúmeromínimodebolas
+Γ
+d
+an
+e
+te
+ra
+ri
+d
+o
+i
+r
+o
+d
+τ
+efi
+n
+n
+e
+i
+c
+c
+e
+ió
+s
+n
+ar
+s
+ia
+e
+s
+m
+p
+a
+a
+n
+r
+i
+a
+fie
+c
+s
+u
+t
+b
+a
+r
+e
+ir
+n
+Γ
+e
+.
+ls
+L
+ig
+a
+u
+i
+i
+m
+en
+p
+t
+o
+e
+r
+r
+ta
+e
+n
+su
+c
+l
+i
+t
+a
+ad
+d
+o
+e
+e
+l
+n
+a
+∂ F(z) = χ (z)∂ f˜(z)+
+α∗(cid:90) L
+α,β
+(cid:0) f˜(ξ) (cid:1)
+dξ
+conexiónconladescomposicióndeWhitney: z Ω z π Ω ξ−z
+β∗(cid:90) L
+α,β
+(cid:0) f˜(ξ) (cid:1)
+Lema2([19]) SiΩesundominiodeJordandeR2ysufron- − dξ.
+teraΓesd-sumable,entonceslaexpresión ∑ |Q|d,llamada π Ω ξ−z
+Q∈W Comoν >d/2,L (cid:0) f˜(ξ) (cid:1) ∈Lp(Ω),con p>2,entonces:
+lad-sumadeladescomposicióndeWhitneyW deΩ,esfinita. α,β
+1(cid:90) L (cid:0) f˜(ξ) (cid:1)
+α,β
+dξ,
+3. Resultados principales π Ω ξ−z
+Tomandoenconsideraciónlosaporteshechosen[7]se representa una función continua en R2 que obviamente no
+defineelsiguienteoperadordetipoTeodorescu. experimentasaltoyportantolasegundacondiciónde(7)se
+satisface.
+Definición3 Seag∈C(Ω),eloperadordetipoTeodorescu
+Observación6 En el problema (7) (cuando Γ es suave) si
+sedefinecomo:
+se adicionan las condiciones de decaimiento en el infinito:
+TL [g](z)=
+1(cid:90) (cid:20)
+α∗
+ξ−z
+g(ξ)−β∗ln|ξ−z|2g(ξ)
+(cid:21)
+dξ,
+∂
+z
+F(∞)=0yF(z)=O(ln|z|),entoncessepuededemostrar
+Ω π Ω ξ−z quelaúnicasolución(salvounaconstante)estarádadapor
+(6) lasiguientetransformadadetipoCauchy:
+dondeα∗= α2− α β2 yβ∗= α2− β β2 . CL f(z)) = − αα∗(cid:90) f 0 (ξ) dξ− ββ∗(cid:90) f 0 (ξ) dξ
+Esteoperador(6)secomportacomoelinversoporladerecha Ω 2πi Γ ξ−z 2πi Γ ξ−z
+deloperadordeLamé-NavierL . α∗ (cid:90) ξ−z(cid:104) (cid:105)
+α,β + αf dξ+βf dξ
+1 1
+2πi Γξ−z
+Lema4 Sif∈Lip(1+ν,Γ),entonces∂ z j1∂ z j2f˜(z)∈Lp(Ω), β∗ (cid:90) (cid:104) (cid:105)
+j
+1
++j
+2
+=2para p=
+1
+2
+−
+−
+ν
+d. +
+2πi Γ
+ln|ξ−z|2 αf 1 dξ−βf 2 dξ .
+Considerando los aportespresentados en [16], ahora se
+Demostración.Lademostracióndeestelemasiguedeluso
+presentaránlassolucionesrelacionadasalproblemadeRie-
+delaterceracondicióndelteoremadeextensióndeWhitney
+mann general (2)-(3). Si se considera la función analítica
+yposteriormenteaplicarelLema2.
+Nótesequeparaν>d/2setienequep= 2−d >2,loque H(z)=α±∂ z F(z)+β±∂ z F(z),entonceselproblema(2)-(3)
+1−ν
+L s
+L
+i p g ( n Ω ifi
+(
+) c ,
+f˜
+a p
+).
+a q r
+A
+u a e
+c
+a b
+o
+lg a
+n
+ú j
+t
+o n
+in
+e
+u
+p s
+a
+t > a
+ci
+c
+ó
+2 o
+n
+. n C
+s
+d
+e
+l i a c
+p
+r i a ó
+re
+m n
+s
+e
+e
+s n e
+n
+t
+t
+d e
+a
+e
+r
+e
+á
+d s u t
+u
+o c
+n
+e e
+o
+s q
+d
+u e
+e
+e qu
+l
+∂
+o
+i z v
+s
+j1 a
+r
+∂ l
+e
+e z
+s
+j n 2
+u
+t f
+l
+e ˜
+t
+(
+a
+p z
+d
+) a
+o
+r ∈ a
+s
+se   puede
+F
+re
++
+e α
+(
+s
+t
+c ±
+)
+r
+−
+∂ ib z i ∂
+G
+r z F c
+(
+o
+t
++ m
+)F
+o β
+−
+: ±
+(
+∂
+t)
+z ∂
+=
+z F
+g
+=
+(t
+0
+)
+,
+,
+z∈Ω + ∪Ω − ,
+α,β 0 0
+principalesdeestainvestigación. H+(t)−G (t)H−(t)=g (t), t∈Γ,
+
+H(∞)=
+1
+0,F(z)=O(ln
+1
+|z|), si z→∞,
+Teorema5 Seanf∈Lip(1+ν,Γ)yΓuncontornocerrado (9)
+d-sumableconν>d.Elproblemadecontornodadopor:
+dondelasfuncionesG ,G ,g ,g pertenecenalaclasede
+2 0 1 0 1
+HölderC(0,ν)(Γ) y son tales que G , G no se anulan en Γ.
+ L F(z)=0, z∈Ω ∪Ω , 0 1
+ α,β + − También, el contorno cerrado Γ se asumirá d-sumable con
+F+(t)−F−(t)= f
+0
+(t), t∈Γ, (7)
+1<d<2.
+ [∂ F+](t)−[∂ F−](t)= f (t), t∈Γ,
+z z 1 Notequeestanuevareescrituradelproblema(2)-(3)no
+involucradirectamentealasderivadasparcialesdelafunción
+tieneporsolución:
+F,encambiosetieneunanuevafunciónH quepermitetratar
+F(z)=χ (z)f˜(z)−TL (cid:2)L (cid:0) f˜(z) (cid:1)(cid:3) , z∈Ω ∪Ω , (8) deformaindirectaelproblemaparaobtenersolucionesmás
+Ω Ω α,β + −
+explícitas.Enunprimermomento,considerandolosaportes
+dondeχ (z)denotaalafuncióncaracterísticadeldominio de[2]sedefinelaintegraldetipoCauchyqueayudaráenla
+Ω
+Ω. obtencióndelassolucionesdelproblema(9).
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.43-49 GutierrezValencia,D.E,AlfonsoSantiesteban,D.,&AbreuBlaya,R.
+https://revistas.uh.cu/rcm/article/view/9069 https://doi.org/10.5281/zenodo.13916459
+ElproblemadeRiemannparaelsistemadeLamé-Navierbidimensional 47
+Definición7 Sead∈(1,2)yseaΩundominioconfrontera quetambiéncumplelaprimeracondicióndecontornoen(9),
+Γd-sumable.Siν >d−1,laintegraldetipoCauchydela locualpermitemediantecálculosalgebraicosencontraruna
+funcióng∈C(0,ν)(Γ)estádefinidapor: relacióndirectaentrelasfuncionesϕ,ψ yH comosigue:
+(cid:90) ∂ g˜(ζ) ϕ′(z)=σH(z), z∈Ω + ∪Ω − , (14)
+(C∗g)(z)=g˜(z)χ (z)− ζ dζdη, ζ=ξ+iη, z∈C\Γ,
+Γ Ω ζ−z conσ = λ+µ = 1 .Integrandoen(14)seobtieneϕ en
+Ω λ+2µ 2(1−ρ)
+(10) términosdelafunciónH,lacualyaestácalculada.Teniendo
+donde χ es la función característica de Ω y g˜ denota la en cuenta las expresiones para ϕ y ϕ′ solo basta encontrar
+Ω
+extensióndeWhitneydeg. ψ, la cual es fácilmente deducida de la fórmula (13) y la
+primeracondicióndecontornoen(9).Efectivamente,setiene
+ObservequeporhipótesislafunciónH esanalítica,lo losiguiente:
+quesignificaque∂ H =0,yconlasegundacondiciónde
+z
+contorno de (9), se estaría trabajando con un problema de κ ϕ+(t)− t ϕ′(t) + − 1 ψ+(t)
+Riemann para funciones analíticas, cuya solución es bien
+2µ 2µ 2µ
+κ t
+conocidaenlaliteratura[15].Debidoalsiguienteproblema − G (t)ϕ−(t)+ G (t)ψ+(t)=g (t).
+paraH: 2µ 0 2µ 0 0
+ ∂ H =0, Despejandoψ seobtiene:
+ z
+H+(t)−G (t)H−(t)=g (t), t∈Γ, (11) µ+
+ H(∞)=0,
+1 1 ψ+(t)−
+µ−
+G
+0
+(t)ψ−(t)=g∗
+0
+(t), (15)
+sededuceentonceslasiguienteproposición: donde,
+P ín r d o i p ce os d ic e ió G n a 8 kh S o u v p κ ong e a s q n u o e n d e im ga H ti ( v Γ o ) , − en 1 to < nc µ es < la 2 2 ν − s − o d d lu .S ci i ó e n l g∗ 0 (t) := −2µ+g 0 (t)+κ+ϕ+(t)− κ− µ µ − + G 0 (t)ϕ−(t)
+1
+generaldelproblema(11)enlaclasedefuncionesC0,ν está µ+
+− ϕ′(t)++ ϕ′(t)−.
+dadapor: µ−
+H(z)=Ψ (z)+X (z)P (z), (12) Envirtudde(14)ybajolahipótesisdequeψ esunafun-
+1 1 κ1−1
+ciónanalíticasetienenuevamenteunproblemadeRiemann
+con, parafuncionesanalíticascuyasoluciónseráenunciadaenla
+siguienteproposición.
+(cid:40)
+X 1 (z)= X X 1 1 + − ( ( z z ) ) = =z e − (C κ ∗ Γ 1e ln ( [ C z− ∗ Γ κ l 1 n G [z 1 − ] κ ) 1 ( G z) 1])(z) z z ∈ ∈ Ω Ω + − , , P ín r d o i p ce os d ic e ió G n a 9 kh S o u v p a o s n o g c a ia q d u o e a di l m a H f ( u Γ n ) ci − ón 1 G < 0 µ es < κ 2 0 2 ∗ ν − − ≥ d d. 0 S , i e e n l -
+ (cid:104) (cid:105)  tonceslasolucióngeneraldelproblema(15)enlaclasede
+Ψ
+1
+(z)=X
+1
+(z)g˜
+1
+(z)X
+1
+−1(z)− (cid:90)
+Ω+
+∂ ζ g˜ 1
+ζ
+(ζ
+−
+)X
+z
+1 −1(ζ) dξdη, funcionesC0,ν
+ψ
+es
+(
+t
+z
+á
+)
+d
+=
+ad
+Ψ
+a
+2
+p
+(z
+o
+)
+r
++
+:
+X 2 (z)P κ∗−1 (z), (16)
+0
+donde P (z) es un polinomio arbitrario de grado κ − con,
+κ1−1 1
+1 Ψ
+co
+. 1
+m
+S ( i z
+o
+) κ .
+s
+1
+o
+S
+l
+i =
+u
+n
+c
+e 0
+i
+m
+ó
+e
+n
+b n a
+(
+t
+1
+o rg
+2
+n
+)
+o c , e
+si
+s si
+y
+l κ a
+s
+1
+o
+s
+l
+< o
+o
+lu 0
+s
+c
+i
+, i
+s
+e ó
+e
+n n t
+s
+o
+a
+e n s
+ti
+c
+s
+i e
+f
+d s
+a
+é
+c
+e n
+e
+s t
+n
+t i e c
+l
+a p
+a
+m r
+s
+o e
+c
+b n
+o
+l t e
+n
+e m
+d
+i
+i
+a g
+ci
+u t
+o
+i a e
+n
+l n
+e
+a e
+s
+ 
+X+(z)=e
+ C∗ Γ ln  z −κ0 ∗µ µ + −G0(t)    (z)
+, z∈Ω ,
+sigu
+A
+ie
+h
+n
+o
+t
+Ω
+e
+(cid:90) r + a
+s:
+s (cid:104) u ∂ p X ζ o 1 g + ˜ n 1 ( g (cid:105) ζ a ( ) ζ q ) u ζ e k u d n ξ a d s η ol = uc 0 ió , n k a = l p 1 r , o . b . l . e , m − a κ 1 ( . 9) viene
+X
+Ψ
+2
+2
+(
+(
+z
+z
+)
+)
+=
+=
+
+X 2 ( X z
+2
+2 ) −   (z g ) ∗ 0 ( = z) z X − 2 − κ 0 1 ∗ e (z
+ 
+)
+C
+−
+∗ Γ l
+(cid:90)
+n  
+Ω
+z
++
+−κ
+(cid:104)
+0 ∗
+∂
+µ µ
+ζ
+− +
+g
+G
+∗ 0
+0
+(cid:105)
+(
+ζ
+t)
+(
+ 
+ζ −
+ 
+)
+(
+X z
+z)
+2 − , 1(ζ) z d ∈ ξd Ω η
++
+−   , ,
+dadaporlafórmuladeKolosov-Muskhelishvili,esdecir, dondeP κ∗−1 (z)esunpolinomiocomplejoarbitrariodegrado
+κ∗−1 o 0 es idénticamente igual a 0 si κ∗ =0. Si κ∗ >0,
+κ z 1 0 0 0
+F(z)= ϕ(z)− ϕ′(z)− ψ(z), (13) entoncesesteproblematienesoluciónsiysolosisesatisfacen
+2µ 2µ 2µ
+lascondicionessiguientes:
+d ψ on so d n eκ fu = nci 3 λ o µ + n + e µ λ s = an 3 al − íti 4 c ρ as si e e n nd Ω o . ρ Lo el a r n a t d e i r o io d r e s P ig o n is ifi so c n a y qu ϕ e , (cid:90) (cid:104) ∂ ζ g∗ 0 (cid:105) (ζ) ζkdξdη =0, k=1,...,−κ∗.
+X+(ζ) 0
+(13) satisface no solo el sistema de Lamé-Navier (9), sino 2
+Ω+
+GutierrezValencia,D.E,AlfonsoSantiesteban,D.,&AbreuBlaya,R. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.43-49
+https://doi.org/10.5281/zenodo.13916459 https://revistas.uh.cu/rcm/article/view/9069
+48 ElproblemadeRiemannparaelsistemadeLamé-Navierbidimensional
+Finalmente,losresultadosobtenidossepuedenresumir Redacción:preparacióndelborradororiginal D.A.S.,
+enelsiguienteteorema: D.E.G.V
+Teorema10 Supongaquedim (Γ)−1<µ < 2ν−d.Laso- Redacción:revisiónyedición D.A.S.
+H 2−d
+luciónalproblemadeRiemann(9)tienelaforma:
+Referencias
+κ z 1
+F(z)= ϕ(z)− ϕ′(z)− ψ(z),
+2µ 2µ 2µ [1] Abreu-Blaya,R.,BoryReyes ,J.yKats ,B.A.:Inte-
+grationovernon-rectifiablecurvesandRiemannboun-
+dondeϕ,ϕ′yψ seobtienendelasProposiciones8y9. daryvalueproblems. JournalofMathematicalAnaly-
+sis and Applications, 380(1):177–187, 2011. Dispo-
+Conclusiones nible en https://doi.org/10.1016/j.jmaa.
+2011.02.068.
+LosmétodosdelAnálisisComplejosonbienconocidos
+eimportantesenlainvestigacióndeecuacionesenderivadas [2] Abreu Blaya, R., Bory Reyes , J., Moreno García ,
+parciales en el plano. En esta investigación se resolvió un T. y Peña Pérez , Y.: Analytic Riemann boundary va-
+problemadeRiemannasociadoalclásicosistemadeLamé- lue problem on h-summable closed curves. Applied
+Navier bidimensional. Usando transformadas de tipo Teo- MathematicsandComputation,227:593–600,2014.Dis-
+dorescusepudieronextenderlosresultadosparaelcasode ponibleenhttps://doi.org/10.1016/j.amc.
+considerardominiosconfronterad-sumable.Unaaplicación 2013.11.053.
+directadeesteproblemadefronteraradicaenlaconstrucción
+depolinomiosortogonalessolucionesalsistemaelásticocon [3] AbreuBlaya,R.:ARiemannjumpproblemforbiharmo-
+undeterminadopesodadoporlapropiacondicióndefrontera. nicfunctionsinfractaldomains. AnalysisandMathe-
+Además,elanálisisnuméricodeproblemasdeRiemannpro- maticalPhysics,11:1–13,2021. Disponibleenhttps:
+veeunefectivométodopararesolverecuacionesdiferenciales //doi.org/10.1007/s13324-020-00469-x.
+parcialesintegrables.Tambiénsonaplicablesenlaextracción
+[4] Alfonso Santiesteban, D., Abreu Blaya , R. y Árci-
+dedeterminadosvaloresasintóticosyelhechodeconsiderar
+ga Alejandre , M.P.: On a generalized Lamé-Navier
+dominiosfractalesaumentaestaaplicabilidadenproblemas
+system in R3. Mathematica Slovaca, 72(6):1527–
+variacionales, telecomunicaciones, conductores y aislantes,
+1540,2022. Disponibleenhttps://doi.org/10.
+caoseinclusoenlitografías.
+1515/ms-2022-0104.
+Suplementos [5] Arunachalam, R. y Pradeep Krishnan , K.: Com-
+pressiveresponseofaluminummetalmatrixcomposi-
+Eltrabajonocuentaconinformacióncomplementaria.
+tes. 2021. Disponible en https://doi.org/10.
+1016/b978-0-12-803581-8.11818-1.
+Agradecimientos
+[6] Barber, J.R. y Klarbring , A.: Solid mechanics and
+DiegoEstebanGutierrezValenciayDanielAlfonsoSan-
+itsapplications,2003. Disponibleenhttps://www.
+tiestebanagradecenlaBecaNacionalparaEstudiosdePos-
+springer.com/series/6557.
+gradodelConsejoNacionaldeHumanidades,CienciasyTec-
+nologías(CONAHCYT)(CVU:962613,1043969). [7] Begehr, H.: Integral representations in complex,
+hypercomplex and Clifford analysis. Integral
+Conflictos de interés transforms and Special functions, 13(3):223–241,
+2002. Disponible en https://doi.org/10.
+Sedeclaraquenoexistenconflictosdeinterés.
+1080/10652460213518.
+Contribución de autoría [8] Ben-Dor, G., Igra , O. y Elperin , T.: Handbook of
+shock waves, three volume set. Elsevier, 2000. Dis-
+Conceptualización D.E.G.V
+ponible en https://www.sciencedirect.
+Curacióndedatos D.E.G.V com/book/9780120864300/
+Administracióndelproyecto R.A.B. handbook-of-shock-waves.
+Investigación R.A.B.,D.A.S.,D.E.G.V
+[9] Boris Kats, A.: The Riemann problem on a closed
+Supervisión R.A.B. Jordan curve. Izvestiya Vysshikh Uchebnykh Zave-
+denii. Matematika, (4):68–80, 1983. Disponible en
+Metodología D.E.G.V
+https://www.mathnet.ru/php/archive.
+Validación R.A.B.
+phtml?wshow=paper&jrnid=ivm&paperid=
+Visualización D.E.G.V 6993&option_lang=eng.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.43-49 GutierrezValencia,D.E,AlfonsoSantiesteban,D.,&AbreuBlaya,R.
+https://revistas.uh.cu/rcm/article/view/9069 https://doi.org/10.5281/zenodo.13916459
+ElproblemadeRiemannparaelsistemadeLamé-Navierbidimensional 49
+[10] BorisKatz,D.yBorisKats ,A.:Non-rectifiableRie- [20] Lamé, G.: Mémoire sur les surfaces isothermes
+mannboundaryvalueproblemforbi-analyticfunctions. dans les corps solides homogenes en équilibre de
+ComplexVariablesandEllipticEquations,66(5):843– température. Editeur inconnu, 1837. Disponi-
+852, 2021. Disponible en https://doi.org/10. ble en http://www.numdam.org/item/JMPA_
+1080/17476933.2020.1751134. 1837_1_2__147_0.pdf.
+[11] Bory-Reyes,J.,DelaCruzToranzo ,L.yAbreuBlaya [21] Lin,F.:Riemann-Hilbert’smixedboundaryvaluepro-
+,R.:Singularintegraloperatorinvolvinghigherorder blem for bianalytic functions. En 2011 International
+Lipschitzclasses. MediterraneanJournalofMathema- ConferenceonMultimediaTechnology,páginas2330–
+tics, 14(2):38, 2017. Disponible en https://doi. 2331. IEEE, 2011. Disponible en https://doi.
+org/10.1007/s00009-017-0881-2. org/10.1109/ICMT.2011.6002370.
+[22] Lin, J., Xu , Y. y Li , H.: Decoupling of the qua-
+[12] Chen,G.Q.yWang ,D.:TheCauchyproblemforthe
+sistatic system of thermoelasticity with Riemann pro-
+Eulerequationsforcompressiblefluids.EnHandbookof
+blemsontheboundedsimplyconnecteddomain. Mathe-
+mathematicalfluiddynamics,volumen1,páginas421–
+maticalMethodsintheAppliedSciences,41(4):1377–
+543. Elsevier, 2002. Disponible en https://doi.
+1387,2018. Disponibleenhttps://doi.org/10.
+org/10.1016/S1874-5792(02)80012-X.
+1002/mma.4669.
+[13] Chorin,A.J.:Randomchoicemethodswithapplications
+[23] Lino Alves, F.J., Baptista , A.M. y Marques ,
+toreactinggasflow. Journalofcomputationalphysics, A.T.: Metal and ceramic matrix composites in ae-
+25(3):253–272,1977. Disponibleenhttps://doi. rospace engineering. En Advanced composite mate-
+org/10.1016/0021-9991(77)90101-2.
+rials for aerospace engineering, páginas 59–99. Else-
+vier, 2016. Disponible en https://doi.org/10.
+[14] Felipe-Sosa,R.,Otero ,J.A.ySolis ,F.J.:Asolution
+1016/B978-0-08-100037-3.00003-1.
+forantiplane-strainlocalproblemsusingellipticinte-
+grals of Cauchy type. Mathematical Methods in the [24] Muskhelishvili, N.I.: Some basic problems of the
+AppliedSciences,40(14):5177–5192,2017. Disponible mathematical theory of elasticity, volumen 15.
+enhttps://doi.org/10.1002/mma.4379. Noordhoff Groningen, 1953. Disponible en
+https://link.springer.com/book/10.
+[15] Gakhov, F. D.: Boundary value problems. 1007/978-94-017-3034-1.
+Courier Corporation, 1990. Disponible en
+https://books.google.com.mx/books/ [25] Vekua, I. N.: Generalized analytic fun-
+about/Boundary_Value_Problems.html? ctions. Elsevier, 2014. Disponible
+id=9G7sfwTDv8QC&redir_esc=y. en https://www.sciencedirect.
+com/book/9780080096933/
+[16] Gutierrez Valencia, D. E., Abreu Blaya , R., Árciga generalized-analytic-functions.
+Alejandre ,M.P.yPeñaPérez ,Y.:OntheRiemann
+[26] Whitney, H.: Analytic extensions of differen-
+probleminfractalelasticmedia. AnalysisandMathe-
+tiable functions defined in closed sets. Hass-
+maticalPhysics,13(1):3,2023. Disponibleenhttps:
+ler Whitney Collected Papers, páginas 228–
+//doi.org/10.1007/s13324-022-00764-9.
+254, 1992. Disponible en https://www.
+ams.org/journals/tran/1934-036-01/
+[17] Gutierrez Valencia, D. E., Abreu Blaya , R., Ár-
+S0002-9947-1934-1501735-3/
+ciga Alejandre , M.P. y Moreno García , A.:
+On the Plane Lamé–Navier System in Fractal Do-
+S0002-9947-1934-1501735-3.pdf.
+mains. ComplexAnalysisandOperatorTheory,15:1–
+[27] Zhao,Y.ySu ,X.:Computationalfluid-structureinter-
+15, 2021. Disponible en https://doi.org/10.
+action:Methods,models,andapplications. Academic
+1007/s11785-021-01088-5.
+Press,2018. Disponibleenhttps://doi.org/10.
+1016/C2017-0-00711-5.
+[18] Han, H., Liu , H. y Wang , Y.: Riemann boundary-
+valueproblemfordoubly-periodicbianalyticfunctions.
+BoundaryValueProblems,2018:1–20,2018. Disponi-
+bleenhttps://doi.org/10.1080/17476933.
+2019.1687690.
+[19] Harrison, J. y Norton , A.: The Gauss-Green theo-
+rem for fractal boundaries. Duke Mathematical
+Journal, 67(3), 1992. Disponible en 10.1215Es/ta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+SinDerivadas4.0Internacional”.
+S0012-7094-92-06724-X.
+GutierrezValencia,D.E,AlfonsoSantiesteban,D.,&AbreuBlaya,R. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.43-49
+https://doi.org/10.5281/zenodo.13916459 https://revistas.uh.cu/rcm/article/view/9069
+1

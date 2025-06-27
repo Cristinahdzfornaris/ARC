@@ -1,0 +1,519 @@
+Revista Ciencias Matemáticas
+La transformada wavelet continua,
+en la detección de altas concentraciones de vorticidad
+en la capa fronteriza de la atmósfera
+The continuous wavelet transform
+to detect high vorticity concentrations in the atmosphere border layer
+Maibys Sierra Lorenzo (maibys.lorenzo@insmet.cu) Mario Carnesoltas Calvo, Nivian Quintana, Instituto de Meteorología
+Ángela León Mecías, Departamento de Matemática Aplicada, Universidad de La Habana
+Resumen Abstract
+El presente trabajo está dedicado a la detección de altas concen- The present work is dedicated to the detection of high con-
+traciones de vorticidad presentes en el fl ujo turbulento de la capa centrations of vorticity present in the turbulent fl ow of the at-
+fronteriza de la atmósfera. Se propone la aplicación de la trans- mosphere border layer. The application of the one dimensional
+formada wavelet continua unidimensional para detectar las es- continuous wavelet transform to detect the scales where these
+calas en las que están presentes estas altas concentraciones de high concentrations of the vorticity are presented is proposed,
+la vorticidad, aprovechando la representación multirresolución taking advantage of the multiresolution representation genera-
+que generan las bases wavelets. Las altas concentraciones de ted by the wavelet basis. The high vorticity concentrations de-
+vorticidad defi nen un tipo de estructura coherente denominada fi ne a type of coherent structure called horizontal convective
+rollo convectivo horizontal, las cuales al interactuar con otros roll, those which in interaction with other atmospheric systems
+sistemas atmosféricos producen las tormentas locales severas, produce the severe local storms, causing considerable material
+causantes muchas veces de considerables daños materiales y damages and losses of human lives. To our knowledge in Cuba
+pérdidas de vidas humanas. En Cuba no se conocen antece- there are not antecedents in the study of the prediction of this
+dentes en el estudio de la predicción de este tipo de fenómeno type of meteorological phenomenon of small scale. To valida-
+meteorológico de pequeña escala. Para validar los resultados se te the results they were carried out comparisons with obser-
+realizaron comparaciones con observaciones de la nubosidad vations of the convective cloudiness obtained by the images
+convectiva obtenida por las imágenes de satélites meteorológi- of meteorological satellites and with the approximate calcu-
+cos y con los cálculos aproximados de diferentes parámetros de lations of different parameters of stability like the number of
+estabilidad, como son el número de Richardson, el fl ujo verti- Richardson, the vertical fl ow of heat and the longitude of Mo-
+cal de calor y la longitud de Monin-Obukhov. nin-Obukhov.
+Palabras clave: transformada wavelet continua, rollos con- Key words: continuous wavelet transform, horizontal con-
+vectivos horizontales, vorticidad. vective rolls, vorticity.
+— 27 —
+Sociedad Cubana de Matemática y Computación
+1. Introducción desde entonces se han realizado múltiples investigaciones en las
+que estas han sido la pieza clave, entre las que se destacan la apli-
+cación de la transformada wavelet continua de dos dimensiones
+En la historia de las matemáticas el análisis wavelet muestra
+al análisis de estructuras coherentes [11] y la utilización de bases
+diferentes orígenes, ver p.e. [1], [4], [5] y [16], por lo que el
+wavelet ortogonales adaptables para la simulación de vórtices co-
+término “wavelet” tiene un signifi cado muy amplio que puede
+herentes en un fl ujo turbulento de dos y tres dimensiones [6], [13].
+abarcar desde operadores integrales de tipo Calderón en el aná-
+En la presente contribución, para aplicar la TWC al cam-
+lisis armónico, hasta algoritmos de codifi cación de bandas en
+po de vorticidad, con el objetivo de detectar concentraciones
+el procesamiento de señales; o desde espacios coherentes en la
+de energía consecuentes con la presencia de RCH, fue nece-
+física cuántica, hasta el análisis con funciones spline en la teo-
+sario aproximar el campo de vorticidad mediante diferencias
+ría de aproximación; o desde transformadas multirresolución
+fi nitas y utilizar la hipótesis de Taylor [17] a partir de medi-
+en visión por computadoras, hasta aproximaciones multinivel
+ciones de velocidad, temperatura y presión. Para validar los
+en la solución numérica de problemas que involucran ecuacio-
+resultados se comparó con imágenes de satélite. Se calculó el
+nes diferenciales. Sin embargo, para los interesados en analizar
+número de Richardson, el fl ujo vertical de calor y la longitud
+señales, la transformada wavelet puede ser considerada como
+de Monin-Obukhov para contar con una descripción de las con-
+una herramienta matemática que permite la localización en el
+diciones térmicas determinadas por la fuerza de fl otabilidad y
+dominio tiempo-frecuencia (espacio-escala) con algoritmos rá-
+la fuerza inercial y de la inestabilidad existente en la zona de
+pidos y fáciles de implementar. Esta propiedad de localización
+estudio, las cuales son imprescindibles para la ocurrencia y el
+permite detectar cambios bruscos (singularidades) en el fenó-
+desarrollo de los RCH.
+meno que se está representando, y ha motivado la aplicación
+El trabajo se estructura en tres secciones, luego de la intro-
+del análisis wavelet en diferentes ramas de las ciencias.
+ducción; en la segunda sección se realiza una breve caracteri-
+Los rollos convectivos horizontales (RCH) son un tipo de
+zación de los fl ujos turbulentos y de los métodos empleados
+estructura coherente presente en el fl ujo turbulento atmosférico
+específi camente para el estudio de los fl ujos turbulentos en la
+[25]. La interacción de los RCH con otros sistemas atmosféri-
+atmósfera. En esta sección también se describen las magnitu-
+cos, por ejemplo el frente de brisa de mar, es una parte funda-
+des físicas que serán los datos de entrada en el problema que
+mental del mecanismo de convección profunda que interviene
+se debe resolver. En la sección 3 se introducen los elementos
+en la generación de nubosidad convectiva como tormentas lo-
+básicos de la transformada wavelet continua, se describe su
+cales severas (TLS), más detalles en [23], [25]. En Cuba no se
+aplicación en el caso unidimensional y se presentan algunos
+conocen antecedentes en el estudio de este tipo de fenómeno
+resultados numéricos que ilustran la validez de la aplicación.
+meteorológico, cuya ocurrencia en ciertas regiones provoca
+Finalmente se exponen las conclusiones.
+pérdidas materiales y de vidas humanas; de ahí la importan-
+cia de su predicción a tiempo. En el presente trabajo se aplica
+la transformada wavelet continua (TWC) unidimensional [1],
+2. Estructuras coherentes.
+para la detección de altas concentraciones de vorticidad en la
+Campo de vorticidad
+capa fronteriza de la atmósfera (CFA) en aquellas escalas don-
+de actúan los RCH. A pesar de que los RCH han sido estudia-
+2.1 Flujos turbulentos
+dos por numerosos investigadores, la novedad de este trabajo
+radica en la utilización de las propiedades de localización (en
+tiempo y escala) de las funciones wavelet para la detección de La descripción matemática de los fl uidos viene dada por las
+estos en la CFA. ecuaciones de Navier-Stokes, las cuales son deterministas, en el
+Las primeras aplicaciones de las funciones wavelet al análi- sentido de que dadas la posición y la velocidad de las partícu-
+sis de los fl ujos turbulentos fueron publicadas en [9], [10], [12] y las fl uidas en todas las escalas y en un instante , en principio
+— 28 —
+Revista Ciencias Matemáticas
+existe solución de las ecuaciones para cada t > t . Esto signifi ca 2.2 Vorticidad y velocidad
+0
+que la turbulencia pude ser modelada como un fenómeno deter-
+minista a pesar de lo irregular de sus movimientos. Sin embar- Los rollos convectivos horizontales (fi g. 1) se defi nen como pares
+go, producto de la no linealidad de dichas ecuaciones, causante de vórtices contrarrotatorios horizontales que ocurren frecuente-
+de las inestabilidades, cualquier perturbación de las condiciones mente en la capa fronteriza atmosférica y se deben a la circula-
+iniciales, por pequeña que sea, da lugar a una solución diferen- ción alrededor de un eje horizontal alineado aproximadamente a
+te. Es decir, que la imprecisión asociada a las pequeñas esca- lo largo del viento medio. Este fenómeno se asocia a la disposi-
+las y a las condiciones iniciales, amplifi cada por la no linealidad ción de las nubes aproximadamente paralelas a la dirección del
+de las ecuaciones, provoca que después de cierto tiempo el fl u- viento conocida como calles de nubes, ver fi gura 2.
+jo turbulento simulado difi era considerablemente del fl ujo real,
+provocando gran afectación para la computación numérica [14].
+Debido al comportamiento aleatorio de los fl ujos turbulentos,
+para tratar la turbulencia, en particular la turbulencia atmosféri-
+ca, se ha acudido a métodos estadísticos, el primero de los cuales
+fue propuesto por Reynolds en 1894 [20]; donde se propone la
+descomposición de las magnitudes fl uidas en dos partes: el valor
+medio y la fl uctuación . Otro de los métodos plantea cómo
+analizar el campo turbulento mediante sus funciones de correla-
+ción utilizando la Transformada de Fourier [24]; o el método de
+análisis de la turbulencia propuesto por Kolmogorov en [18], el
+Fig. 1 Rollos Convectivos Horizontales.
+cual estudia la forma en que las ecuaciones de Navier-Stokes en
+tres dimensiones distribuyen la energía a través de las diferentes
+escalas del fl ujo.
+Existen otras teorías, una de ellas propuesta en [19], la cual
+asume que toda la vorticidad está concentrada en un número
+fi nito de vórtices y que predice que los estados de alta energía
+pueden ser comparados con los estados de baja energía. Las es-
+tructuras coherentes son defi nidas como la condensación local
+del campo de vorticidad.
+Algunas de estas estructuras son los vórtices de Karman
+[21], los tubos de vorticidad o fi lamentos encontrados en fl ujos Fig. 2 Calles de Nubes [8]. Se observa un patrón lineal de nubes.
+estadísticamente homogéneos, las celdas de Rayleigh-Bénard Los vórtices van a ser los puntos donde hay mayor concentra-
+que se encuentran en la CFA, los rollos convectivos horizonta- ción de energía y la vorticidad es una medida de la rotación
+les, entre otros. Las teorías estadísticas antes mencionadas, son del fl uido en un punto y se puede determinar, en un sistema de
+incompatibles con la presencia de estas estructuras coherentes coordenadas rectangulares OXYZ con vectores básicos i, j, k, a
+en el fl ujo turbulento, debido a que no se basan en cada reali- partir del rotacional de la velocidad
+zación del fl ujo.
+Estas teorías tienen además el inconveniente de que no tie-
+nen en cuenta la producción de vórtices en las escalas pequeñas, donde u, v y w son las componentes del vector velocidad. De-
+así como tampoco consideran la interacción entre ellos y de es-
+bido a que los vórtices presentes en los RCH tienen su estira-
+tos con los vórtices de las escalas mayores.
+miento en la horizontal, la vorticidad que caracteriza a estas
+— 29 —
+Sociedad Cubana de Matemática y Computación
+estructuras va a estar dada fundamentalmente por las compo- que modela estadísticamente la componente Gaussiana del fl u-
+nentes horizontales, jo y realiza el cálculo determinista de la componente no Gaus-
+siana. La separación de estas componentes del fl ujo se basa en
+un algoritmo de extracción de los vórtices coherentes, aplican-
+do la transformada wavelet discreta (TWD) al campo de vorti-
+Para el cálculo de la vorticidad se cuenta con las mediciones de cidad. En este trabajo por los datos con que se cuenta se aplica
+la velocidad horizontal. Sin embargo, no se tienen mediciones la transformada wavelet continua unidimensional [1].
+de la velocidad vertical que es necesaria también para el cálcu-
+lo de la vorticidad. Para obtener una aproximación de se utilizó
+el método cinemático: 3. Aplicación de la transformada
+wavelet continua unidimensional
+donde w(p ) es la velocidad vertical en superfi cie, considerada
+0 El análisis con funciones wavelet tiene su antecedente en el
+cero en este caso, es la presión p es la presión inicial y la di-
+0 análisis de Fourier [3], del cual se conoce que, para funciones
+vergencia fue calculada utilizando aproximaciones centradas
+periódicas, permite obtener una representación de estas en tér-
+de diferencias fi nitas. Este modelo se deriva de la ecuación de
+mino de frecuencias, pero no es posible a partir de esta repre-
+continuidad.
+sentación determinar su momento de ocurrencia. De ahí que la
+Como se puede observar, para obtener la vorticidad es nece-
+transformada de Fourier sea una herramienta muy usada para
+saria la información espacial de las distintas variables meteoro-
+el análisis de señales estacionarias, es decir, cuando no hay va-
+lógicas utilizadas. En este estudio solo se contó con mediciones
+riación de frecuencia en el tiempo.
+tomadas en un punto fi jo por una torre de gradiente ubicada en
+Para una función continua f la transformada continua de
+los 21,43ºN (Norte) y 77,92ºW (Oeste) a 110 m sobre el nivel
+Fourier
+del mar, en el municipio de Camagüey, luego no se tiene infor-
+mación espacial, sino temporal. La torre tiene una altura total
+permite obtener el contenido de frecuencia para funciones no
+de 219 m sobre el terreno, y los instrumentos están fi jados a
+periódicas, sin embargo esta solo nos brinda información de la
+las alturas de 10 m, 30 m, 50 m, 100 m. Los datos de la veloci-
+componente de frecuencia f de que vibra con frecuencia ξ.
+dad, presión y temperatura disponibles fueron tomados cada 10
+La transformada de Fourier con ventanas o también llama-
+minutos a 10 m y 100 m de altura, durante marzo, abril, mayo,
+da transformada de Fourier corta en el tiempo (el intervalo de
+junio y julio de 2007. Para convertir las mediciones tempora-
+tiempo es subdividido en pequeños subintervalos de igual lon-
+les en espaciales se utilizó la hipótesis de Taylor [17], la cual
+gitud y en cada uno es analizada la transformada de Fourier)
+asume que la estructura que pasa sobre el sensor es estadística-
+introducida por Gabor [4], viene dada por
+mente estacionaria durante un plazo de tiempo t. La conversión
+_
+se lleva a cabo mediante la expresión x = ut, donde es la veloci-
+dad media tomada por el sensor cada 10 minutos.
+donde ϕ(t) es una función real llamada función ventana con ϕ(t),
+Las estructuras coherentes están caracterizadas por bajas
+y tϕ(t) de L2R y tal que . La transformada de
+presiones y son las responsables del comportamiento no Gaus-
+Gabor constituyó una propuesta para lograr un análisis tiem-
+siano del fl ujo turbulento [9]. Esto dio lugar al estudio de las
+po-frecuencia, sin embargo para captar la ocurrencia de altas
+mismas mediante la transformada wavelet continua para fl ujos
+frecuencias es necesaria aún mayor fl exibilidad, ya que estas
+de dos y tres dimensiones. De esta forma se realiza un mejor
+ocurren en intervalos de tiempo muy pequeños y a su vez se
+análisis del fl ujo turbulento y se introduce un método de simu-
+desea analizar las bajas frecuencias que suceden en períodos
+lación de vórtices coherentes como se puede ver en [6], [13],
+de tiempo más grandes.
+— 30 —
+Revista Ciencias Matemáticas
+En aras de lograr esta fl exibilidad aparece la transformada ventana si decrece lo sufi cientemente rápido de forma que las
+wavelet introducida por Grossman y Morlet en 1984 [16], la cual siguientes integrales puedan ser calculadas,
+puede detectar de forma automática los picos de frecuencia que
+ocurren en pequeños intervalos de tiempo así como las bajas
+donde t es el centro de h(t) y el radio Δ se defi ne como
+h h
+frecuencias que ocurren lentamente durante largos períodos de
+. En este caso produce una venta-
+tiempo. La aplicación de las funciones wavelet ha tenido un de-
+sarrollo acelerado en las últimas décadas en casi todas las ramas na de tiempo , donde t es el centro
+ψ
+de las ciencias, como se demuestra en [5], [7] y [15], entre otras. de la ventana y Δ es el radio, para más detalles consultar por
+ψ
+Las primeras aplicaciones de wavelet al análisis de los fl ujos ejemplo [1], [4], [5].
+turbulentos fueron publicadas por Farge y Rabreau en 1988 [10], Aplicando la identidad de Parseval se obtiene,
+quienes realizaron un estudio de las estructuras coherentes pre- (2)
+sentes en un fl ujo turbulento bidimensional. Posteriormente se
+que produce una ventana de frecuencia,
+han desarrollado aplicaciones a la modelación de estructuras
+coherentes en dos y tres dimensiones, por ejemplo [6], [13].
+con centro en .
+Al ser el parámetro de escala se observa que la ven-
+3.1 Transformada wavelet continua
+tana de tiempo se hace más pequeña para las altas frecuencias
+Una función real o compleja ψ(t) ! L2R, es considerada una
+(escalas pequeñas) y se agranda para las bajas frecuencias. Al
+función wavelet si cumple con la llamada condición de admi-
+mismo tiempo la ventana de frecuencia se agranda para altas fre-
+sibilidad,
+cuencias o lo que es lo mismo escalas pequeñas y se reduce para
+frecuencias bajas.
+(1)
+donde 3.2 Función wavelet
+de Morlet e Intermitencia
+es la transformada de Fourier de ψ(t), ver [1], [5]. Si ψ(t) es una
+función integrable entonces de (1) se tiene que
+Para el estudio de campos turbulentos se utiliza la transfor-
+mada wavelet continua con una familia de wavelets de valores
+o lo que es lo mismo , es decir, es una función con complejos, debido a que el módulo de los coefi cientes wavelets
+media cero sobre R. permiten el análisis de la evolución de la densidad de energía
+La familia de funciones wavelets ψ (t) se obtiene a partir de en tiempo (espacio) y escala.
+a,b
+la dilatación (contracción) y la traslación de la llamada wavelet En esta investigación fue utilizada como wavelet de análisis
+madre o wavelet de análisis, que es una función con las carac- la función de Morlet,
+terísticas mencionadas anteriormente, entonces
+donde ξ denota el centro del soporte de la wavelet en el espa-
+0
+cio de Fourier.
+para a,b ! R donde a es el parámetro de escala y b el paráme-
+A partir del análisis wavelet fue propuesta en [11], una me-
+tro de traslación. dida para caracterizar la actividad local de un campo escalar,
+La transformada wavelet continua de una función f es enton- denominada función de intermitencia I(a,t) que se defi ne como
+ces defi nida como la convolución de f con la familia de wavelets:
+donde los paréntesis esquinados denotan la media.
+donde la barra se refi ere a la conjugada, y es una fun- Esta función de intermitencia mide, para cada escala, la des-
+ción ventana. Una función cualquiera se defi ne como función viación local del campo que se estudia sobre el espectro medio
+— 31 —
+Sociedad Cubana de Matemática y Computación
+del mismo. Los resultados obtenidos con la aplicación de la
+expresión anterior, señalan que en presencia de estructuras co-
+herentes existe una fuerte intermitencia asociada y que la ener-
+gía se distribuye de forma heterogénea en las escalas pequeñas.
+En resumen para la localización de los rollos convectivos
+horizontales; primero es necesaria la conversión de los datos
+temporales a espaciales; luego se realiza el cálculo aproxima-
+do de la velocidad vertical seguido del cálculo de la vorticidad.
+Finalmente se aplica la transformada wavelet continua siendo
+f el campo de vorticidad y haciendo uso de la expresión (2)
+otros detalles en [21]. Aunque en toda la bibliografía consulta- Fig. 3 Espectro de energía: período poco lluvioso.
+da para la detección de estructuras coherentes, la variable uti-
+lizada siempre fue la vorticidad, en este estudio se aplica la
+TWC además a la velocidad vertical que es muy utilizada en la
+meteorología para el estudio de los RCH.
+3.3 Casos de estudio
+Para el análisis de los resultados se divide la muestra tomada en
+los meses que pertenecen al período poco lluvioso (marzo y abril)
+y los que pertenecen al período lluvioso (mayo, junio y julio). La
+necesidad de esta agrupación es debido a que la ocurrencia, or-
+ganización y tiempo de vida de los rollos convectivos horizonta- Fig. 4 Espectro de energía: período lluvioso.
+les presenta una marcada diferencia en cada período. El estudio resto de los días estudiados en este período. Según las imáge-
+se concentró en los días que presentaron condiciones favorables nes de satélite, el comienzo de la convección en forma lineal
+para la ocurrencia de RCH, según indicaban los parámetros de (bandas de nubes en forma lineal) se observó a las 09:02 h
+Richardson y la longitud de Monin-Obukhov. (14:02 UTC). Los rollos convectivos horizontales mantuvie-
+En el primer grupo de estudio se analizaron diez días del ron una buena organización durante toda la mañana como y
+mes de marzo y trece días de abril; en el segundo se estudiaron ya a las 12:02 h (17:02 UTC) comenzaron a desorganizarse
+seis días de mayo, seis de junio y siete de julio. transformándose en celdas abiertas. Sin embargo, a pesar de
+En las fi guras 3 y 4 para cada grupo, se refl eja el comporta- la debilitación, los rollos no se disiparon y se observaron ca-
+miento medio del espectro de energía calculado a partir de los lles de nubes hasta las 15:45 h (20:45 UTC).
+coefi cientes wavelet. Se puede observar como para ambos gru- En la fi gura 5 se muestran las señales de vorticidad (abajo) y
+pos, los mayores valores de los coefi cientes, que son indicado- velocidad vertical (arriba). En ambas se observan grandes varia-
+res de altas concentraciones de vorticidad, se concentran en las ciones en horas de la mañana en presencia de RCH, estas se man-
+escalas pequeñas, específi camente para a < 20. Esto coincide tienen durante todo el día con un aumento a partir del mediodía.
+con los resultados obtenidos por Farge [10], quienes localizaron La transformada wavelet continua para la señal de la veloci-
+las estructuras coherentes en las escalas pequeñas. dad vertical del día 15 se muestra en la fi gura 6, en ella los ma-
+yores valores de los coefi cientes de la wavelet se distribuyen en
+3.3.1 Período poco lluvioso todas las escalas con una ligera mayor concentración en las esca-
+A continuación se presentan los resultados obtenidos median- las pequeñas. El valor de los coefi cientes wavelet es el indicador
+te la TWC para el día 15 de abril, el cual es representativo del de cambios bruscos en la variable analizada, es decir, cuando la
+— 32 —
+Revista Ciencias Matemáticas
+los mayores valores de los coefi cientes en las escalas pequeñas
+(a < 20), lo cual indica que en estas escalas la vorticidad alcanzó
+valores altos y hubo mucha variación de la misma. Estas con-
+centraciones coinciden en tiempo con la ocurrencia de los rollos
+convectivos horizontales, aunque los valores más altos de los co-
+efi cientes comienzan a observarse desde las 06:00 h (11:00 UTC).
+Esto pudiera indicar la presencia de rollos, pero no es posible
+comprobarlo por la ausencia de imágenes de satélite en este ho-
+rario. Por otra parte a partir de las 09:00 h (14:00 UTC), donde si
+se cuenta con imágenes de satélite, se verifi ca una coincidencia
+entre lo observado en estas y la aparición de los primeros valo-
+res signifi cativos de los coefi cientes wavelet. El mismo patrón se
+mantiene durante toda la mañana y pierde intensidad después de
+Fig. 5 Campos de vorticidad y velocidad vertical.
+las 14:00 h (19:00 UTC), observándose valores altos en escalas
+más pequeñas a < 5, lo cual es una muestra del proceso disipa-
+tivo en el que se encontraban los rollos convectivos horizontales
+en ese horario.
+En la fi gura 7 (inferior) se observa además que la energía
+tiene un comportamiento homogéneo para las escalas grandes
+y heterogéneo en las escalas menores que 20, con valores de in-
+termitencia entre 10 y 15 en presencia de RCH. Este resultado
+coincide con los encontrados en [11].
+Fig. 6 Coefi cientes de la transformada wavelet continua de la señal
+de velocidad vertical.
+velocidad vertical tiene un comportamiento suave, los valores de
+los coefi cientes wavelet serán pequeños mientras que a grandes
+variaciones de la misma los coefi cientes tomarán valores altos.
+Lo observado en la fi gura 6 señala que la velocidad presenta va-
+riaciones en todas las escalas y aunque en presencia de RCH se
+espera una variación de w, esta amplia distribución impide defi -
+nir con claridad las escalas en las que actúan, pues la energía se
+encuentra dispersa, cuando debería concentrarse en las escalas
+donde se presentan las estructuras coherentes.
+En este caso el parámetro de intermitencia mostrará un
+comportamiento heterogéneo de la energía en todas las escalas.
+Estos resultados imposibilitan determinar la ocurrencia de los
+rollos en tiempo y escala.
+La transformada wavelet continua de la vorticidad que se
+Fig. 7 Coefi cientes de la transformada wavelet continua de la señal
+muestra en la fi gura 7 (superior), muestra una concentración de
+de vorticidad y valores de la Intermitencia.
+— 33 —
+Sociedad Cubana de Matemática y Computación
+3.3.2 Período lluvioso
+El día 4 de junio se hallaba en el occidente de nuestro país una
+vaguada debilitada que infl uyó con algunos nublados sobre el
+área de estudio seleccionada [2]. El patrón de calles de nubes se
+observó, aunque no muy bien defi nido, sobre el punto de medi-
+ción a las 09:45 h (14:45 UTC). El momento de mayor desarrollo
+y organización de los RCH se observó a las 10:15 h (15:15 UTC),
+ver Figura 8 y luego comenzaron a debilitarse perdiendo su iden-
+tidad, apareciendo el patrón celular, en este caso, celdas abiertas.
+Posteriormente a las 16:15 h (21:15 UTC) se dispara la convec-
+ción y se observan cumulonimbos sobre la zona de estudio.
+Las señales de velocidad vertical y vorticidad mostradas en la
+fi gura 9, superior e inferior respectivamente y el análisis wavelet
+realizado a la velocidad vertical se observa en la fi gura 10. En este
+último no se observan valores altos de los coefi cientes wavelets en
+Fig. 8 Imagen del satélite GOES-12: 4 de Junio 10:15 h (15:15 UTC).
+los horarios en que existían rollos en el área de estudio y por tanto
+no se pudieron determinar las escalas en las que estos fueron acti-
+vos. En la tarde, a las 17:00 h (22:00 UTC), se observó un proceso
+que prevaleció en todas las escalas coincidiendo con el momento
+en el que el área de estudio estaba cubierta por cumulonimbos.
+El análisis realizado para la vorticidad (fi gura 11) ofreció re-
+sultados favorables pues los RCH se detectaron claramente en
+las pequeñas escalas, coincidiendo con los momentos en que
+estos fueron observados en la imagen de satélite de la fi gura 9.
+Los valores más altos de los coefi cientes se observaron para
+las escalas menores que 20 desde las 09:30 h (14:30 UTC) con
+una mayor concentración a las 10:30 h (15:30 UTC), coincidien-
+do con el momento de mayor desarrollo de los rollos observado
+en la imagen de satélite dada en la fi gura 8. Fig. 9 Campos de vorticidad y velocidad vertical.
+En horas de la tarde la transformada wavelet continua de la
+señal de vorticidad según la fi gura 11 (superior) muestra el de-
+sarrollo de un sistema convectivo que no solamente actúa sobre
+las escalas pequeñas. Este fenómeno se observa a partir de las
+16:00 h (21:00 UTC) y coincide con el desarrollo de cumulo-
+nimbos observado en las imágenes de satélite.
+En cuanto a la densidad de la energía dada por la intermi-
+tencia 12 (inferior), esta exhibe su mayor valor I = 8, entre las
+10:00 h (15:00 UTC) y las 12:00 h (17:00 UTC), momento en
+que se observaron los rollos convectivos horizontales. Este re-
+sultado es consistente con lo obtenido en el período anterior,
+Fig. 10 Coefi cientes de la transformada wavelet continua de la señal
+aunque los valores fueron ligeramente menores.
+de velocidad vertical.
+— 34 —
+Revista Ciencias Matemáticas
+4. Conclusiones ción encontrada en la literatura consultada. En ambos períodos
+de estudio analizados los resultados son similares a pesar de
+las diferencias que los RCH presentan en cada caso. En este
+En la presente investigación se realizó una aplicación de la
+momento se trabaja en la extensión de la aplicación de la trans-
+transformada wavelet continua a las aproximaciones de la ve-
+formada wavelet continua al análisis de una señal de vorticidad
+locidad vertical del viento y al campo de vorticidad logrando
+bidimensional, lo cual permitiría no solo la localización de los
+una localización primaria de la presencia de rollos convectivos
+rollos sino también una caracterización espacial de los mismos.
+horizontales. La novedad de este trabajo radica en la utiliza-
+ción de las propiedades de localización en tiempo y escala de
+las funciones wavelet para la detección de los RCH en la capa
+fronteriza de la atmósfera. La ocurrencia de rollos convectivos Referencias bibliográfi cas
+horizontales está directamente relacionada con el desarrollo de
+tormentas locales severas; fenómeno meteorológico que ocurre
+[1] ANTOINE, J. P.; MURENZI, R.; VANDERGHEYNST, P.
+en determinadas zonas de nuestro país con cierta frecuencia y
+AND ALI, S. T. (2004): Two dimensional wavelets and their
+que ocasiona pérdidas materiales y de vidas humanas.
+relatives. Cambridge University Press.
+[2] BALLESTER, M. (2007): Resumen mensual de la situación si-
+nóptica (marzo-julio). Centro de Pronósticos del Instituto de
+Meteorología, Cuba, 13 pp. http: //www.insmet.cu.
+[3] BOGGESS, A.; NARCOWICH, F. J. (1999): A fi rst course in
+wavelets with Fourier Analysis. Prentice Hall .
+[4] CHUI, C. H. (1997): Wavelets: A mathematical tool for signal
+processing. SIAM.
+[5] DAUBECHIES, I. (1988): Ten Lectures on Wavelets. SIAM.
+[6] DOMINGUES, M. O.; BROEMSTRUP, I.; SCHNEIDER, K.;,
+FARGE, M. and KADOCH B (2007): Coherent vortex extrac-
+tion in 3D homogeneous isotropic turbulence using orthogonal
+wavelets. ESAIM proceedings, vol. 16, 164-180.
+Fig. 11 Coefi cientes de la transformada wavelet continua de la señal
+[7] DOMINGUES, M. O.; MENDES, O.; MENDES, A. (2004): On
+de vorticidad y valores de la Intermitencia.
+wavelet techniques in atmospheric sciences. Elsevier Science.
+Los resultados obtenidos muestran que la aplicación de la trans-
+[8] ETLING, D. AND BROWN, R. A. (1993): Roll vortices in the
+formada wavelet continua al campo de vorticidad permite una
+planetary boundary layer: A review. Bound.- Layer. Meteor. 65,
+mejor identifi cación de las escalas en las que actúan los rollos
+215-248.
+convectivos horizontales con respecto al campo de velocidad
+[9] FARGE, M. (1992): Wavelets transforms and their applications
+vertical. Los RCH fueron detectados en aquellas escalas en las
+to turbulence. Ann. Rev. Fluid Mech., 24:395-457.
+que el parámetro toma valores menores que 20 y el paráme-
+[10] FARGE, M.; RABREAU, G. (1988): Transformée en ondelettes
+tro de intermitencia muestra sus mayores valores. Se realizaron
+pour detecter et analyser les structures coherents dans les ecou-
+comparaciones con las observaciones de nubosidad convectiva
+lements turbulent bidimesionnels. C.R. Acad. Sci. Paris II 307,
+obtenida por las imágenes de satélites meteorológicos y con los
+1477.
+cálculos aproximados de diferentes parámetros de estabilidad
+[11] FARGE, M.; GUEZENNEC, Y.; HO, C. M.; MENEVEAU, C.
+como son el número de Richardson, el fl ujo vertical de calor y
+(1990): Continuous wavelet analysis of coherent structures. Pro-
+la longitud de Monin-Obukov, comprobando la validez de los
+ceedings of the Summer Program, Center for Turbulence Re-
+resultados. Además, se muestra coincidencia con la informa-
+search, NASA-Ames and Stanford Unversity,331-348.
+— 35 —
+Sociedad Cubana de Matemática y Computación
+[12] FARGE, M.; KEVLAHAN, N.; PERRIER, V. AND GOI-
+RAND, E. (1996): Wavelets and Turbulence. Proceedings of
+the IEEE Vol.84 No.4.
+[13] FARGE, M.; SCHNEIDER, K. AND KEVLAHAN, N. (1999):
+Non Gaussianity and Coherent Vortex Simulation for twodi-
+mensional turbulence using adaptative orthonormal wavelet
+basis. Phys. Fluids, 11(8), 2187-2201.
+[14] FERNÁNDEZ, R. (2001): Mecánica de Fluidos. Málaga. 621
+pp.
+[15] FISCHER, P.; TUNG, K. K. (2008): wavelets, a numerical tool
+for multiscale phenomena: from two dimensional turbulence to
+atmospheric data analysis. International Journal of Numerical
+Analysis and Modeling, Vol 5 pages 64-84.
+[16] GROSSMANN, A. AND MORLET, J. (1984): Decomposition
+of Hardy Functions into square integrable wavelets of constant
+shape. SIAM J. Math. Anal. 15, 723-736.
+[17] KAIMAL, J. C. AND FINNIGAN, J. J. (1994): Atmosphe-
+ric Boundary Layers Flow. Their Structure and Measurement.
+Oxford University Press. 281 pp.
+[18] KOLMOGOROV, A. N. (1941). The local structure of turbu-
+lence in incompressible viscous fl uid for very large Reynolds
+numbers, C. R. Acad. Sci. USSR, 30, 301-305.
+[19] ONSAGER, L. (1949). Statistical hydrodynamics, Suppl. Nuo-
+vo Cimento, suppl. 6, 279-287.
+[20] REYNOLDS, O. (1894). On the dynamical theory of incom-
+pressible viscous fl uids and the determination of the criterion,
+Phil. Trans. Roy. Soc. Lond.,186, 123-164.
+[21] ROSHKO, A. (1961). J. Fluid Mech., 10, 345.
+[22] SIERRA, M.; LEÓN, A. y CARNESOLTAS, M. (2009): Detec-
+tion of Convective Rolls using Continuous Wavelet Transform.
+8th Brazilian Conference on Dynamics, Control and Applica-
+tions. CD-ROM de DINCON09.
+[23] STULL, R. B. (1988): An Introduction to Boundary Layer Me-
+teorology. Kluwer Academic, 666 pp.
+[24] TAYLOR, G. I. (1935): Statistical theory of turbulence, Proc.
+Roy. Soc. Lond. A, 151, 421-478.
+[25] WECKWERTH, T. M.; WILSON, J. W.; WAKIMOTO, R. M.;
+CROOK, N. A. (1997): Horizontal convective rolls: Determining
+theenvironmental conditions supporting their existence and cha-
+racteristics. Mon. Wea. Rev., 125, 505-526.
+— 36 —

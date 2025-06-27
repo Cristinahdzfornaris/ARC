@@ -1,0 +1,721 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.113-122
+Recibido06-2020,Aceptado07-2020
+Una Aplicación del Delphi de Nube en la Percepción
+Subjetiva del Pico de la COVID-19
+A Cloud Delphi Application to the Subjective
+Perception of COVID-19 Peak
+Miguel Cruz Ramírez1*
+Resumen El método Delphi tiene su origen en el campo de la prospectiva, pero su uso se ha extendido a
+otros ámbitos durante los últimos años. Una de las mejoras para disminuir las deficiencias metodológicas y
+epistémicasdeestemétodo,implicalaconsideracióndemodelosdifusosenlapercepcióndelpanel,juntoa
+elementosdeincertidumbre/aleatoriedad.ElDelphideNubetratadeconciliarambosaspectos.Enelpresente
+trabajo,semuestraunaaplicacióndeesteenfoqueenlapercepciónsubjetivadeunpaneldeconformación
+heterogénea,acercadelposicionamientodelpicoenlaCOVID-19enCuba.Losresultadossecomparanconun
+modelodedistribucióngausianobimodal.
+Abstract TheDelphimethodhasitsorigininthefieldofforecasting,butitsusehasspreadtootherareasin
+recentyears. Oneoftheimprovementstoreducethemethodologicalandepistemicdeficienciesofthismethod
+involves the consideration of fuzzy models in the panel’s perception, together with elements of uncertainty
+randomness. The Cloud Delphi tries to reconcile both aspects. In the present work, an application of this
+approachisshowninthesubjectiveperceptionofapanelwithheterogeneousintegration,aboutthepositioning
+of the peak in the COVID-19 in Cuba. The results are compared with two-component gaussian mixture
+distribution.
+PalabrasClave
+COVID-19,DelphideNube,percepción,modelosgausianosmixtos,paqueteR
+Keywords
+COVID-19,CloudDelphi,perception,gaussianmixturedistribution,packageR
+1DepartamentodeMatemática,UniversidaddeHolguín,Cuba,mcruzr@uho.edu.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción teunarduotrabajoinvestigativoparacombatirlapandemia,
+bajoperspectivasdisímiles.Enparticular,numerososmodelos
+El31dediciembrede2019,laRepúblicaPopularChina matemáticosdecarácterlocaloglobalaparecierondesdelos
+informaalaOMS(OrganizaciónMundialdelaSalud)acer- mismosiniciosdeestaemergenciadesalud[3,4,5].Enla
+cadelaproliferacióndevarioscasosdeunapulmoníacon literaturaexisteunaampliavariedaddemodelosmatemáticos,
+etiologíadesconocida,detectadaenlaciudaddeWuhanenla dirigidos a explicar y predecir los fenómenos epidemioló-
+provinciadeHubei[1].Asolounmes,el31deenerode2020, gicos, en su mayoría de tipo determinista, aunque algunos
+yasealcanzaban9776infestadosenvariospaíses,con213 toman en consideración la naturaleza estocástica no lineal
+fallecidos,porlocuallaOMSdeclaróelbroteepidémicoco- de ciertos procesos subyacentes [6]. Por ejemplo, uno de
+mounaemergenciadesaludpúblicadecarácterinternacional losmodelosdeterministasmásempleadoeselmodeloSIR
+[2].LapandemiaescausadaporunnuevocoronavirusSARS- (Susceptible-Infectious-Recovered),desarrolladooriginalmen-
+CoV-2,conformealaterminologíaempleadaporelComité teporKermackyMcKendricken1927[7].Ladinámicade
+Internacional de Taxonomía de Virus. Luego de transcurrir estemodelo,seexpresapormediodeunsistemadeecuacio-
+sietemeses,elCentrodeCienciaeIngenieríadeSistemasde nesdiferencialesqueexplicalaevolucióndelaenfermedad
+laUniversidadJohnsHopkinsreportabalapropagaciónpor eneltiempo,conbaseenparámetrosrelevantes,talescomo
+214territorios,entrepaísesytierrasdeultramar,conmásde elnúmerobásicodereproducciónylatasaderecuperación.
+12.2millonesdecontagiados,mientrasquelacifraglobalde Engeneral,losmodelosnolinealesdecrecimientoculminan
+decesossuperabalas556milpersonas. con el ajuste de curvas, como el caso de la curva logística,
+log-logística, de crecimiento exponencial de Gompertz, de
+Lacomunidadcientíficamundialdesplegóinmediatamen-
+114 UnaAplicacióndelDelphideNubeenlaPercepciónSubjetivadelPicodelaCOVID-19
+Weibull,deBertalanffy,entreotrasmuchas[5,8,9,10]. motivo,hasidoobjetodeatencióneninvestigacionesrecientes
+EnCuba,elagentemicrobianodelaCOVID-19fuedetec- relacionadas con la COVID-19 [12, 13]. Para localizar el
+tadoporprimeravezel11demarzode2020.Noobstante,ya momentoenqueocurreunpico,esnecesarioelempleode
+elpaísveníaadoptandomedidasparaenfrentarlapandemia modelosmatemáticoseficientes.Enparticular,lamodelación
+comolaaprobacióndelPlanparalaPrevenciónyControldel delprocesodeinfeccióndelSARS-CoV-2haenfrentadono
+Coronavirus,el29deenero,porpartedelConsejodeMinis- pocasdificultadesaescalamundial[2].
+tros.Desdeelpuntodevistacientífico,secreóelGrupode Algunasproblemáticasestánrelacionadasconlafiabili-
+CienciaparaelenfrentamientoalaCOVID-19,elObservato- daddelainformación,otrasconelnúmerodeparámetrosy
+riodeSaludCOVID-19yunComitédeInnovación.Alinicio variablesexplicativas,einclusoconeldilemadeseleccionar
+dejunio,yasecontabacon460investigacionesrelacionadas el modelo matemático más adecuado. Una vez escogido el
+conlaenfermedadysusformasdepropagación[11]. modelo,suelenemplearsetécnicasdeanálisisnumérico,tales
+EnunartículopublicadoenlosAnalesdelaAcademia como el método de mínimos cuadrados, con el objetivo de
+deCienciasdeCuba,elpresidenteMiguelDíaz-Canelyel conseguirunajustedecurvasqueminimiceelerrorcuadrá-
+académicoJorgeNúñezJoverdestacaban:«elrelevantepapel tico[5].EnelcasodelaCOVID-19,sehanimplementado
+quehandesempeñadolacienciaylatecnologíanacionales, principalmentemodelosSIRclásicosantesmencionados,mo-
+orgánicamentevinculadasconlagestióngubernamental,todos delosbasadosenseriescronológicas,modelospredictivosa
+enfuncióndeofrecerunarespuestasocial,científica,política travésdeinternetconusodeBigData,ymodelosbasadosen
+y sanitaria capaz de enfrentar el desafío que la pandemia inteligenciaartificialyMachineLearning[8].
+ha planteado» [11]. Como parte de este esfuerzo conjunto, El presente análisis se desarrolla tomando en conside-
+ComunidadCientífica-Gobierno,lainvestigaciónmatemática ración el número de casos diarios reportados en el portal
+ocupóunimportantelugar. Covid19CubaData, transcurridos cerca de cuatro meses de
+Lasrepresentacionesestadísticasdelapandemiaganaron pandemia. Para el procesamiento de la información, se uti-
+laatencióndetodalapoblación,enfrascadaenelcumplimien- lizaelpaquetemixtools,dellenguajeestadísticoR[14].
+todeinnumerablesmedidasdeprecaución.Untemadiario Dichopaqueteestáequipadodeherramientasdesarrolladas
+demáximaaudienciatelevisiva,consistióenlainformación apartirdeinvestigacionesrecientes,lascualesflexibilizano
+delnúmerodefallecidos,eltotaldenuevoscasosconfirma- modificanelsupuestodenormalidad.
+dos,localizaciónporprovincias,entreotrosdatosemitidos Lacaracterísticafundamentalquedistingueamixtools
+oficialmenteporlaDirecciónNacionaldeEpidemiología,del de sus similares en R, consiste en el desarrollo de técnicas
+MinisteriodeSaludPública.Comopartedeesteproceso,al computacionalesparaelanálisisdemodelosmixtosfinitos,
+igualqueenotrospaíses,untemadeinterésconsistióenlade- cuyoscomponentessonregresionesyvectoresmultinomiales
+terminacióndel«pico»,ovalormáximodecontagiadosenel originadosdeladiscretizacióndedatosmultivariados,einclu-
+periododepandemia.Variosmodelosmatemáticosmostraron sodedistribucionesquecasinoseespecificanporcompleto
+laimportanciadeplantearmásdeunescenario,demaneraque [14]. En el presente estudio se adopta el supuesto de nor-
+seadoptaranmedidasprospectivasparareducirelcontagio malidad,porelloseimplementalafunciónnormalmixEM
+yacercarlaevoluciónalavariantemásfavorable,sinperder basada en el Algoritmo de Maximización de la Esperanza
+tampocolamiraenlanecesidaddeprepararseparaenfrentar (ExpectationMaximizationAlgorithm)[15],elcualsugiere
+lavariantemásdesventajosa. unadistribuciónbimodalD.
+El presente trabajo tiene como objetivo explorar la per- Si se denota por µ i y σ i (i∈{1,2}) los parámetros de
+cepciónsubjetivadelposicionamientodelpicodepandemia localizaciónydeescala,respectivamente,entoncesµ i sirve
+aspectoque,sibiencuentaconargumentosmatemáticosri- paraestimarlaabscisadecadapicoenladistribuciónbimodal
+gurosos, también puede enfocarse bajo una perspectiva de D,cuyafuncióndedensidadpuederepresentarsecomouna
+naturalezapsicosocial.Seguidamentesepresentanambosen- expresióndependientedesendasdistribucioneslatentesD 1 y
+foques. En el primero se explora el comportamiento de la D 2 [16]enfuncióndeltiempot:
+enfermedaddesdeelpuntodevistaestadístico,peronocon
+f(t|λ,µ ,σ ,µ ,σ )=λD (t|µ ,σ )+(1−λ)D (t|µ ,σ )
+finesdepronósticossinodelocalizacióndiacrónico-temporal. 1 1 2 2 1 1 1 2 2 2
+Enelsegundo,sepresentanlosresultadosdeunestudioDelp-
+Conlaimplementacióndelcomandosummary,seobtienen
+hi, y se comparan las evidencias empíricas de percepción
+los valores de la función normalmixEM, resumidos en la
+subjetivaconunmodelomatemáticoobjetivo.
+Tabla1para51iteraciones.
+Ellosignificaqueelpicomayortuvolugaralrededordel
+1. En busca de una localización objetiva trigésimosextodíadepandemia(µ 1 ≈36),osea,elmartes14
+deabril.Elsegundopicovendríaocurriendocercadeloctavo
+del pico de pandemia
+segundodía(µ ≈82),queeseldomingo31demayo.Ambos
+2
+La determinación del pico de pandemia cobra un valor picosteóricoscorresponden,respectivamentealasdistribu-
+especial,puesfacilitalaplanificaciónconunmejorempleo cionesD yD quesoncomponentessimplesgaussianasde
+1 2
+delosrecursoshumanos,materialesyfinancieros.Poreste ladistribuciónD.LaFigura1ilustraestosresultados.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.113-122
+UnaAplicacióndelDelphideNubeenlaPercepciónSubjetivadelPicodelaCOVID-19 115
+Tabla1.ParámetrosdeladistribuciónbimodalD
+Parámetro D D
+1 2
+λ 0.71824 0.28176
+i
+µ 35.65215 81.92520
+i
+σ 12.30496 18.89894
+i
+0 20 40 60 80 100 120
+030.0
+520.0
+020.0
+510.0
+010.0
+500.0
+000.0
+t (días)
+)t(f
+númeroprefijadoderondas,hastaelcálculodeestadígrafos
+relacionadosconelprocesamientodelainformación[17,18].
+Bajodenominacionesdiversas,talescomo«procesoDelp-
+hi»,«técnicaDelphi»,«ejercicioDelphi»,«estudioDelphi»,
+entreotras,estemétodohasidoempleadorecientementeen
+investigacionesrelacionadasconelenfrentamientoalapande-
+miadelaCOVID-19.Porejemplo,enlabúsquedadeconsenso
+acercadelarehabilitaciónpulmonarenpacientesquerebasan
+la etapa de cuidados intensivos (20 panelistas de 5 países)
+[20];oconsensoacercadequéprocedimientodeendoscopía
+gastrointestinaldeberíanseraplicadosdurantelapandemia,y
+cuálespodríanresultarsegurossinocasionarsecuelasposte-
+riores(14panelistas)[19].
+D1 Tambiénsereportaunainvestigacióndondeparticipan13
+institucionesde11paíseseuropeos,relacionadaconlarecopi-
+laciónexpeditadeinformaciónexperta,sobreguíasprácticas
+paratratarconcautelaalosniñosconcomplicacionesocasio-
+nadasporenfermedadesrenalescrónicas[21].Enestecaso,
+D elmétodoDelphinosoloresultaútilparalasistematización
+deinformaciónconrelativainmediatez,sinoquecompensael
+manejodedatoslimitadosyaquelosniñosrepresentanmenos
+del1%deloscasosreportados.
+D2 Porotrolado,unamplioestudiorealizadoporlaWSRI
+(WelshSurgicalResearchInitiative,339participantesde41
+países),encontróelevadosnivelesdeconsensoenrelacióna
+muchosaspectosrelacionadosconlosprotocolosdetratamien-
+todelaCOVID-19,peroidentificóvariasáreascontenciosas,
+lascualesrepresentanobjetivosdeinvestigaciónurgentepara
+Figura1.Evolucióndelapandemia(120días)
+delinearprácticasmássegurasenelsalóndeoperaciones[22].
+Conmásdemediosiglodehistoria,elmétodoDelphiha
+Comosueleocurrir,nocoincidenexactamentelosvalores experimentadounaampliadiversificaciónensuscaracterís-
+esperadosconlosobservados.Enelcasodelospicosreales, ticas y también en sus ámbitos de aplicación [23]. Entre la
+el máximo valor observado para el componente gaussiano modificacionesmásrecientesseencuentranlosenfoquesno
+D ocurre el 1ro de mayo, con 74 casos, mientras que el deterministas[24],comolasnumerosasvariantesdelDelphi
+1
+correspondienteaD tienelugarel5dejunio,con40casos. Fuzzyqueregistralaliteratura.
+2
+Apartirdeaquí,resultainteresanteexplorarcómosereflejan La principal dificultad del Delphi convencional reside
+estasevidenciasempíricasenlacogniciónhumana,afinde ensusescasasposibilidadesparacaptarlaambigüedadyla
+compararlapercepciónsubjetivaconlamodelaciónteórica. incertidumbre,poruncaminofrecuentementeindeterminista.
+Con base en su naturaleza prospectiva, el método Delphi Porejemplo,enlaevaluacióndeciertosítemsalossujetosse
+puedeallanarelcaminoparaemprenderestaexploración. lessolicita,comonorma,laseleccióndeetiquetaslingüísticas
+enlugardevaloresnuméricosconcretos.Luego,elsignificado
+de las etiquetas puede reflejarse de modo distinto en cada
+2. El método Delphi de Nube
+subjetividad,mientrasquelaescalaadoptadanosiemprees
+ElmétodoDelphitienesuorigenenlacorporaciónRand resultadodeunaestandarizaciónprevia[25].
+de los Estados Unidos, y es el resultado de varios estudios Nisiquieraelenfoquedifusoclásicoresuelvelosproble-
+orientadoshacialamejoradepronósticos,emitidosporunpa- mas epistémicos de aprehensión de la información fiable y
+neldeexpertos.Ensuversiónmásconvencional,estemétodo válida[26].Lasrespuestasdelossujetossuelenserdenatura-
+secaracterizaporcuatroaspectosdemarcatorios:elanonima- lezacrisp(rígida)ynofuzzy,mientrasqueelcorrespondiente
+todelpaneldeexpertos,laiteraciónenelprocesamientode actodeselecciónvieneacompañadodeciertaincertidumbre,
+datos (apoyado fundamentalmente en encuestas estructura- asociadaaldilemadelocalizarelvalormásprobabledentro
+das),laretroalimentacióncontrolada(feedback),ylarespues- de un continuum subjetivo. Existen numerosas alternativas
+ta estadística de grupo. Un grupo coordinador funge como quetratandepalearlafalenciadeloborrosocomoaleatorio,
+responsabledeelaborarloscuestionarios,circularlos,sinte- eldeterminismoimperanteenlaseleccióndelasfunciones
+tizarlainformaciónydevolverlaalpanel.Lascondiciones de pertenencia, e incluso de prescindir del supuesto lógico
+deparadasondisímilesyvandesdelaadopciónpreviadeun delterceroexcluido[26].Unadeestasalternativasesrelati-
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.113-122
+116 UnaAplicacióndelDelphideNubeenlaPercepciónSubjetivadelPicodelaCOVID-19
+vamenterecienteyconsisteenelModelodeNube,elcualse espesorexplicasugradodealeatoriedadydependedelahiper-
+definecomosigue[25,27]: entropía He, mientras que la amplitud expresa su grado de
+borrosidadydependelaentropíaEn.Aquíresultaprácticoel
+Definición1 DadounconceptocualitativoT,definidosobre
+empleodelaregla«3σ»,osea,bajounadistribuciónnormal,
+un universo de discursoU ={u}, sea x∈U una instancia
+si σ expresa la desviación típica y µ la media, entonces el
+aleatoria del concepto T y µ T (x)∈[0,1] el grado de certi- intervalo [µ−3σ, µ+3σ]⊂R comprende alrededor del
+dumbredexalolargodeT,elcualcorrespondeaunnúmero
+99.74%detodaladistribución.Lainterpretacióngráficade
+aleatorioconunatendenciaestable.Entonces,ladistribución
+unanubedepuntosserepresentaenlaFigura2,paraelcaso
+de x en el universo U puede definirse como una nube y x
+particularNCG(60, 2, .3, 2000).
+constituye«unagota»delanube.
+Se cumple que para todo x∈U, la aplicación µ (x) es
+T
+no inyectiva por su propia naturaleza. O sea, el grado de
+certezadexalolargodelconceptoT esunadistribuciónde probabilidad,enlugardeconstituirunvalorfijo.Estemodelo seapoyaentresconceptosbásicos: laexpectativa(Ex),consistenteenlaesperanzamate- mática de que las gotas de la nube pertenezcan a un conceptodeluniverso; laentropía(En),queexpresalamedidaborrosadeun concepto cualitativo, como ámbito de cobertura del universosubsumidoporelconcepto; ylahiper-entropía(He),queeselgradodeincertidum- bredelaentropía,yreflejaladispersióndelasgotasde lanube. Con base en estos tres parámetros, Li, Liu y Gan [27]
+desarrollanunalgoritmodenominadoNCG(NormalCloud 54 56 58 60 62 64 66
+Generator).Enefecto,siN eselnúmerodegotasdelanube,
+paraelcálculodelvalordelafunciónNCG(Ex, En, He, N),
+tienelugarelalgoritmodescritoenlaTabla2.
+Tabla2.AlgoritmoparaelModelodeNube
+Función:NCG(Ex, En, He, N)
+Entrada: Tres parámetros Ex, En, He, y el número de
+gotasN delanube.
+Salida:Ngotasdelanubeconsugradodeincertidumbre.
+Pasos:
+1. SegeneraunnúmeroaleatorioEn(cid:48)distribuidonor- i
+malmente,cuyaesperanzaesEnysuvarianzaHe2.
+2. Segeneraunnúmeroaleatoriox distribuidonormal-
+i
+mente,cuyaesperanzaesExysuvarianza(En(cid:48))2.
+i
+3. Secalculaelgradodeincertidumbre:
+−(ti−Ex)2
+y
+i
+=ϕ(t
+i
+)=e 2(En(cid:48) i)2
+4. Seobtienelai−ésimagotadrop(t,y)delanube.
+i i
+5. Serepiteelciclo1-4,hastagenerarlasN gotas.
+Desdeelpuntodevistagráfico,elposicionamientoideal
+del«ejedesimetría»delanubeindicasuexpectativaEx,el
+0.1 8.0 6.0 4.0 2.0 0.0
+t
+)t( f
+NCG(60, 2, .3, 2000)
+l l l l l ll l l l l l ll l lll l l l l l l l l ll lll l ll l l l l l l ll l l ll ll l l l l l l l l l l l l l l l l l l l l ll l l l l l l ll l l l l l l ll l l ll l l l l l l l ll l l l l l l l l l l l l l l l l l l E l l l l l l ll l l l l ll l l l l l l l ll l l l l l l l l l l l l l l l l l l n l l l l l l l lll l ll l l l l l l l ll l l l l l l l l l l l l l l l ll l l ll l l l ll l l l l l l l l l ll l l l ll l l l l l l l l l l l l l l l l ll l l l l l l l l ll ll l l l l l l l l H l l ll l l l l l l l l ll ll l ll l l l ll l l l l l l l l ll l l l l ll l l l l l l l l l l l l ll lll l ll l l l l l ll l l ll l l l l l l l l l l l l lll l l l e l l ll l l l l l l l l l l l l l l ll l l l l l l l l l l ll l ll l ll l l l l l l l l l l l l l l l l l l l ll ll l l ll l l l l l l l l l l l l l l l ll l l l l l l ll l l l l l l lll l l l l l l l l l l l l l l ll l l l l l l ll l l l l ll l l l l l l l ll lll l l l l l ll l l ll l l l l l l lll l l l l l lll l l l l l l l l l l l l l l l l l l l l l l l ll l ll l l lll l l lll ll l l l l l l llll l l l l l ll l l l l l llll l ll l l ll ll l l ll l ll l ll ll l l ll ll l l ll l l l l l l l l l l l l l lll l ll llll l l l l l l l l l l l l l ll l l l l lll lll l l l l l l l l ll lll ll l ll l ll l l l lll l l l l l l l ll lll ll l l l l ll lll l l l llllll l llllll l l ll l l ll l ll ll l l l lll lll ll l l lll ll l ll l l lll l llll l l l l lll l l ll l lll ll ll l lll l l lll l llll lllllll ll ll lll ll lll llll lllll ll l ll l llllllllllll lllllllllllllllllllll ll l lllllllllllllllll lllll l llllllllllll llllll l llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll llllllllllllll llllllllllllllllllll l lllllllll l lll E lllll l llllllll llllllll l ll lllllll l lllll ll llll lll l llll llll l l ll l ll l l l ll lllll ll ll l ll l lll l l ll ll llll ll l ll l llll ll l ll l l l l l x l l l lllll l l ll l ll l l l l l l l lllll l l ll l l l llll l ll l l l l l ll l ll lll l ll l llll l l l l l l l l ll l l l l l ll l llll l l l lll llll l l l lll l l ll l l l lll l l l l l l l ll l l l l l l l ll l l l l l l l ll l l l l l l ll l l l ll l l l l l l l l l l l l l l l lll l ll l ll l l l l ll l ll llll ll l l l ll l l l ll l l ll l l l l l l l l ll l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l ll ll lll l l l l l l l l l l l l ll l ll l ll l l l l l l l l l l l l ll ll l l l ll l l l l l l l l l l l l l lll l l l l l l l l l l l l l l l l l l l l lll l l l l ll l l l l l l l l l l ll l ll lll l l l l l l l l l l l l l ll l l l l l l l l l l l l l l ll l l l lll l l l l l l l l l l l l l ll l l l l l ll l l l l l l l l ll l l l l l l l l l l l l l l l l l l l l ll l l l l ll l l l l l l l l l l ll l l l l l l l l l l l l l l ll ll l l l l l l l l ll l l l l l l l l l l l ll l l l l l l l l l l l l l ll l l ll l l l l ll l l l l l l l l l l ll l l l l l l l l l l l l l ll l l l l l l l l lll l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l ll l ll l lll l l l l l l l l l l l ll lll lll lll l ll l ll l
+Figura2.ElModelodeNube
+Apartirdeestaidea,sedefineelconceptode«nubenor-
+mal»[27]:
+Definición2 Sit ∈U es la representación aleatoria de un
+conceptocualitativoA(cid:101)eneluniversodediscursoU,lacual
+satisfacequet∼N(Ex, En(cid:48)2),dondeEn(cid:48)∼N(En, He2),y
+−(ti−Ex)2
+ϕ
+A(cid:101)
+(t
+i
+)=e 2(En(cid:48) i)2 ,
+entonces la distribución det enU se denomina «nube nor-
+mal».
+Con el fin de definir el Delphi de Nube, Yang, Zeng, y
+Zhang[28]utilizanelconceptodenubenormal.Paraelcálcu-
+lodelosparámetroscorrespondientes,estosinvestigadores
+seapoyanenlaaplicacióndeencuestasdevalordeintervalo
+(interval-valuedsurveys).Enefecto,sienunítemdeunaen-
+cuestasesolicitaestimarelvalordeciertavariable,entonces
+sepuedenadoptarloscriteriossiguientes:
+Elvalormediodelintervalopuedeinterpretarsecomo
+laexpectativaEx.
+Laamplituddelintervalopuedereflejarunamedidade
+laentropíaEn.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.113-122
+UnaAplicacióndelDelphideNubeenlaPercepciónSubjetivadelPicodelaCOVID-19 117
+Lavariaciónentreintervalosproducidospordositera- Tabla3.AlgoritmoparaelDelphideNube
+cionessucesivas,puedereflejarelgradodeincertidum- Función:NCD(Ex, En, He, N)
+bremedidoporlahiper-entropíaHe.
+Entrada:TresparámetrosEx,En,He,yelnúmeroN de
+Yang,Zeng,yZhang[28]tambiénutilizanlasdefiniciones gotas de la nube, así como i segmentos [l (k) , u (k) ]⊂R,
+i i
+desumayproductodenubes,introducidasporLiyYi[25]y
+queconstituyenlasevaluacionesdelpaneldeiexpertos
+obtienenunanubesintéticaexplicativadelcomportamiento
+(1≤i≤n)enlarondak,deciertoaspectoconsignadoen
+globalA(cid:101)s (Ex
+s
+,En
+s
+,He
+s
+).Esteconstructoequiparalosgrados
+unaencuesta.
+deincidenciadelosjuiciosindividualesdelosexpertos,lo
+(k)
+cualnonecesariamenteesviableencualquiercontexto.En
+Salida:LanubesintéticaA(cid:101)wa ,correspondientealaronda
+k,basadaenlaponderaciónw decadajuicioexperto;y
+general,elpesodecadaopinióndependede: i
+lasi−ésimasparejasrespectivasdeíndicesdeestabilidad
+losresultadosdeevaluarlaexperticia,porintermedio ∆En (k) yconsistenciaUnc (k) ,despuésdelarondak.
+i i
+deíndicesdecompetenciaexperta,obiende
+Pasos:
+laconsistenciaylaestabilidaddeljuicioemitidoenuna
+1. Seiniciaelcontadordeiteración(k=1).
+sucesiónderondas.
+(k) (k) (k) (k)
+2. SeobtieneunanubeNCG (Ex ,En ,He ,N)
+i i i i
+Yang,Zeng,yZhang[28]establecenunmecanismode
+para la respuesta k−ésima del experto i−ésimo,
+ponderación,basadoenelsegundocriterio.Cadapesoindivi- (k) (k) (k) (k) (k)
+donde Ex = (u +l )/2, En = (u −
+dualsedeterminademodoinversamenteproporcionalauna i i i i i
+(k) (k)
+l )/6. En el caso de H , si k = 1 entonces
+sumadetrescomponentes:elvalormodularnormalizadode i i
+(1) (1)
+ladiferenciaentrelasexpectativasindividualycolectiva,la He =En /K, donde K es una constante pre-
+i i
+borrosidaddeljuicio,ylaincertidumbre.Así,apartirdelasn definida;ysik>1,entoncesHe (k) =[ma´x{u (k) −
+i i
+nubesA(cid:101)i (Ex i , En i , He i ),1≤i≤n,correspondientesacada u (k−1) ,0}+ma´x{l (k−1) −l (k) ,0}]/6].
+unodelosexpertos,seobtieneunanubepromedioponderada i i i
+A(cid:101)wa (Ex
+wa
+, En
+wa
+, He
+wa
+). 3. Se calculan los componentes w (
+i
+k)(cid:48) = [|Ex
+i
+(k) −
+Esteprocedimientoparaelcálculodelospesosnoesúni- Ex (k) |/Ex (k) +He (k) ]−1, los cuales se normali-
+s s i
+co,nitampocoesajenoacríticasmetodológicasyepistémicas. (k)
+zan por intermedio de los cocientes w =
+Porejemplo,laestabilidaddeljuicioexpertopuedeobedecer i
+(k)(cid:48) (k)(cid:48)
+aunpensamientorígidoeinflexible,enlugardeuncriterio w i /∑ 1≤i≤n w i , resultando un vector peso nor-
+firmeybasadoenargumentosplausibles.Sinembargo,dicho malizado.
+procedimientoesútilparaelpresentetrabajo,dondeelénfasis 4. Segenerainformaciónretroalimentada(feedback)
+noresideenlaexperticiadelpanelsinoenelestudiodesu por medio de dos procedimientos de agregación:
+percepción,contrastadaconlosmodelosmatemáticosantes (k)
+uno para determinar la nube sintética A(cid:101)s =
+mencionados.Ensíntesis,elalgoritmoquedefineunDelphi (k) (k) (k) (k)
+NCG (Ex , En , He , N), y otro para ex-
+s s s s
+deNubesepresentaenlaTabla3[28].
+(k)
+Enelsegundopasodelalgoritmo,nótesequelaecuación
+presar cada nube promedio ponderada A(cid:101)wa =
+(k) (k) (k) (k)
+deHe (k) intentacaptarenquémedidaeljuiciodelexpertoi NCG wa (Ex wa , En wa , He wa , N), donde N consti-
+i tuyeelnúmerosdegotas.
+permaneceestable,trasdositeracionessucesivask−1yk.Si
+larespuestak−ésimaproduceunintervaloqueessubconjunto 5. Se calcula una pareja de índices para controlar
+del(k−1)−ésimo,resultaqueHe (k) =0paraelexpertoi.En la estabilidad y consistencia del juicio experto:
+i
+todoslosrestantescasosseobtieneunvalormayorquecero. uno consiste en la diferencia normalizada entre
+Además,amayorincertidumbre/aleatoriedad,mayorserála entropías consecutivas (∆En), y el otro es el gra-
+hiper-entropía. dodeincertidumbrenormalizado(Unc).Seobtie-
+(k) (k−1)
+nen de la siguiente manera: ∆En =|En −
+i i
+3. Método En (k) |/En (k−1) , con ∆En (1) = En (1) , y Unc (k) =
+i i i i i
+(k) (k)
+La presente investigación no tiene el propósito de esta- He /En ,1≤i≤n.
+i i
+blecer mecanismos efectivos de pronóstico, a partir del co- (k)
+6. Se establece la condición de parada ∆En ≤δ
+nocimiento experto. Por el contrario, el objetivo se centra i
+(k)
+(prefijadodeantemano)yUnc =0.Encasode
+en el estudio de la percepción de un panel reducido y de i
+que un experto no cumpla dichas condiciones, el
+conformación heterogénea, acerca del posicionamiento del
+experimentadoradoptadecisionespuntuales.
+picoenlaCOVID-19enCuba.Participancincopanelistas,
+seleccionadosconbaseenlossiguientescriterios: 7. k←k+1,dandopasoalasiguienterondaDelphi.
+nivelculturaluniversitarioenáreasheterogéneas,sin familiarizaciónconlospartesactualizadosdelaCOVID-
+formaciónavanzadaenestadística, 19enCuba,emitidosporelMinisteriodeSaludPública,
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.113-122
+118 UnaAplicacióndelDelphideNubeenlaPercepciónSubjetivadelPicodelaCOVID-19
+disposiciónaparticiparenlainvestigación. prestacionesgráficasflexibles,ytambiénparaexportarlospa-
+rámetrosfundamentalesdelafunciónNCD(Ex, En, He, N),
+Elestudiosedesarrolladurantelosdosprimerosmeses
+antesdescritaenelalgoritmodelaTabla3.
+deevolucióndelapandemia,locualseenmarcadentrodel
+periododescritoporelmodeloD enlasinmediacionesdel
+1
+4. Resultados y discusión
+primerpico.Losintegrantesseleccionadosrecibentrescues-
+tionarios, contentivos de dos requerimientos: determinar la Despuésdecompletarlastresrondas,lasrespuestasemi-
+fecha máxima antes de la cual no podría ocurrir el pico de tidas por el panel aparecen en la Tabla 4, donde las fechas
+pandemia,asícomolafechamínimadespuésdelacualeste hansidosustituidasporlosnumeralescorrespondientesala
+notendríalugar.Esencialmente,larespuestadecadapanelista evolucióndiacrónicadelapandemia.Porejemplo,elintervalo
+noesmásquelademarcacióndeunperiodoperceptivode [30,35]significaelperiodocomprendidoentreel9yel14
+días,contentivodelpicodepandemia.Osea,elmejoraco- de abril, o sea, entre el trigésimo y el trigésimo quinto día
+tamientopercibidoenelmomentoderecibirelcuestionario respectivamente.
+correspondiente.Paraemitirsusrespuestas,losparticipantes
+norecibenelfeedbacktípicodeunDelphiconvencional,sino Tabla4.Respuestasdelpanelencadaronda
+lainformaciónactualizadadelospartesoficiales.
+Los cuestionarios se aplican con intermedio de 20 días Participante Ronda1 Ronda2 Ronda3
+aproximadamente.Lasfechasderealizaciónsonlassiguien- No1 [30,35] [37,39] [37,53]
+tes: martes 31 de marzo, lunes 20 de abril, y lunes 11 de No2 [25,39] [30,36] [25,45]
+mayo.Encadacaso,setomaenconsideraciónquelosrepor- No3 [40,50] [30,38] [35,55]
+tes oficiales actualizan la información hasta el día anterior. No4 [32,38] [33,40] [35,42]
+Lasrespuestasdeloscuestionariosserecibenenuntérmino No5 [50,60] [36,39] [38,52]
+detresdíasnaturales,porlavíadelcorreoelectrónico.
+Comopuedeapreciarse,enelpresenteestudioseentre-
+mezclan elementos que tipifican un Delphi de Nube, con
+Comopuedeapreciarse,laprimerarondaexpresaunaes-
+ciertasmodificaciones.Enefecto:
+pecie de pronóstico personal de lo que va a ocurrir. Todos
+los intervalos se ubican en días posteriores a la aplicación
+Seconservaelanonimatodelpanelparaeliminarefec-
+delprimerinstrumento.Elloindicaquelapercepciónesde
+tos negativos de intervenciones dominantes, pero se
+naturaleza«prospectiva»,enelsentidodeconfigurarunesce-
+flexibiliza el concepto de experto al considerar ape-
+nariofuturobasadoenelritmodecrecimiento,enlosmodelos
+nasunaformaciónestadísticamuyelemental.Elnivel
+divulgadospordiversosmediosdecomunicación,asícomola
+decompetenciacomprendedoscapacidadesmínimas:
+autovaloraciónpersonaldelacapacidaddelpaísparaenfren-
+comprenderlapreguntayemitirunarespuestarazona-
+tarlapandemia.Todaestainformaciónsereflejaenlaprimera
+ble.
+estimación.LaFigura3combinalasnubesindividualescon
+Se sustenta la iteración por intermedio de rondas de una nube promedio ponderada, tal como se describe en el
+encuestasestructuradas,peroelobjetodeanálisisno algoritmodescritoenlaTabla3.
+enfatizaelpronósticosinolapercepción. Las percepciones individuales son dispares y ubican el
+picoentreelprimerysegundomesdepandemia.Lospará-
+Semantienelaretroalimentacióncontrolada(feedback),
+metroscorrespondientesalanubesintéticasonEx=39.90,
+peroladevolucióndeinformaciónalpanelnosintetiza
+En=5.83, He=.25. A priori, el panel percibe el pico en
+laopinióncolectiva,sinoqueprovienedeinformación
+una posición intermedia entre el valor teórico y el obser-
+externaconsistenteenlaevoluciónrealdelaenferme-
+vado, constatados a posteriori. En este momento, las dife-
+dad.
+renciasnormalizadasdelasentropíasindividualescumplen
+(1)
+Se remarca la respuesta estadística de grupo, pero el .83≤∆En ≤2.33,mientrasquetodoslosgradosnormali-
+i
+procesamientodeestainformaciónponepordelanteel zadosdeincertidumbresatisfacenUn (1) =.17(1≤i≤5).
+i
+ModelodeNubeenlugardeestadígrafostradicionales. Larealizacióndelasegundarondaocurreenelcuadra-
+gésimo día, donde se percibía una especie de meseta con
+Lacondicióndeparadanobuscaconvergenciadecri-
+ligeratendenciaaldecrecimientodelnúmerodecasoscon-
+terios ni consenso colectivo, sino que se apoya en el
+firmados.Lapercepcióncolectivaretrasaahoraelpicohacia
+análisis de la consistencia y la estabilidad del juicio
+Ex=35.80,comosemuestranenlaFigura4.
+individual.Seprefijaelnúmeroderondasyseexamina
+Alexaminarlosparámetrosindividualesdeestabilidady
+elcomportamientodelosindicadoresmencionados.
+(2) (2)
+consistencia,setieneque.17≤∆En ≤.70,y.00≤Un ≤
+i i
+Paraelprocesamientodelainformaciónseutilizalafun- 4.67.Paraelcasodelanubepromedioponderada,laentropía
+ciónCloudDelphi[29]escritasobreR,lacualestádiseña- disminuye (En=1.67<5.83) y la hiperentropía aumenta
+daparagraficarnubesmúltiplesencadarondaDelphi,con (He=1.00>.25).Loprimeroindicamayorcoincidenciade
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.113-122
+UnaAplicacióndelDelphideNubeenlaPercepciónSubjetivadelPicodelaCOVID-19 119
+20 30 40 50 60 70
+0.1
+8.0
+6.0
+4.0
+2.0
+0.0
+t(días)
+)t(
+f
+№№ 2 1№ 4 № 3 № 5
+Nube Sintética
+20 30 40 50 60 70
+Figura3.ResultadosdelaprimerarondaDelphi
+criterios,perolosegundoreflejauncambioglobaldeopinión,
+eneltránsitodeunarondaaotra.
+Existendoselementosqueesnecesariopuntualizar.En
+primerlugar,lahiperentropíadelsegundopanelistacontrasta
+conelcomportamientorestante.Élsugierelasecuenciadein-
+tervalos[25,39]y[30,36],demaneraqueenlasegundaronda
+reafirmasuapreciacióninicialconunaacotaciónmásprecisa
+(2) (2)
+(∆En =.57,Unc =.00).Portalmotivo,elespesordela
+2 2
+nubecorrespondienteesmenorparaesteparticipante,como
+puedeobservarseenlaFigura4.Ensegundolugar,existeun
+mayorniveldecoincidenciaenlapercepcióncolectiva,refle-
+jadaenlasuperposicióndelconjuntodenubesindividuales.
+Lasevidenciassugierenqueelpaneltieneunapercepciónde
+naturaleza«asertiva»,unaespeciedeconvencimientodeque
+elpicodelapandemiavaquedandoatrás.
+Laúltimarondasedesarrollaenelsexagésimodía.Aun-
+queyaesapreciablelatendenciaaldecrecimiento,esteperio-
+docomprendeladisrupcióndel1rodemayo,dondeocurreel
+picorealde74casosdiagnosticadospositivosalaCOVID-19.
+LosresultadosobtenidossereflejanenlaFigura5.
+La nueva nube promedio ponderada posee parámetros
+Ex=41.70,En=5.00,He=1.87.Comopuedeobservarse,
+tantolaentropíacomolahiperentropíaaumentan.Ellosedebe
+aquelaspercepcionesindividualesretornanaunestadode
+mayordiscordancia,tantointer-sujetoscomointra-sujetos,lo
+cual refleja una especie de movilidad o desequilibrio en el
+pensamiento.Lapercepcióncolectivacambia,probablemente
+influidaporelvaloratípicoobservado.Encuatrodeloscinco
+casos, los participantes reconfiguran su estimación, poster-
+gandoprincipalmentelacotasuperior.Soloelcuartodeellos
+(3)
+muestraunapercepciónconmejorestabilidad(∆En =.00)
+4
+(3)
+y consistencia (Unc =.29). Los resultados de la Tabla 4
+4
+0.1
+8.0
+6.0
+4.0
+2.0
+0.0
+t(días)
+)t(
+f
+№№ 2 3№№№ 4 5 1
+Nube Sintética
+Figura4.ResultadosdelasegundarondaDelphi
+reflejanquelapercepcióndeesteindividuoexperimentalas
+menoresvariaciones,enelconjuntodelastresrondas.
+De forma general, en este tercer momento del estudio
+Delphi,puedeafirmarsequeelpaneladoptaunapercepción
+denaturalezapredominantemente«correctiva».Losvalores
+finalesdelosparámetrosaparecenresumidosenlaTabla5.
+5. Conclusiones
+ElmétodoDelphihaevolucionadohastaalcanzarniveles
+dedesarrollomuysuperiores,especialmenteenlorelacionado
+conelprocesamientoestadísticodelainformación.ElDelphi
+deNubeconstituyeunaidearelativamentereciente,encuya
+esenciaresidentresconceptosfundamentales:laexpectativa,
+la entropía, y la hiperentropía. Con el presente trabajo, se
+ilustranlaspotencialidadesdelDelphideNubeparalareali-
+zacióndeinvestigacionessobrepercepciónespacio-temporal,
+específicamenteenloreferidoalapercepcióndelpicodela
+pandemiaocasionadaporelSARS-CoV-2.
+Elestudioadoptaalgunasmodificacionesenlaestructu-
+radelmétodo,lascualesobedecenalénfasiscentradoenel
+cambioperceptivodelpanelparticipante.Inclusoelconcepto
+deexpertosemodifica,puesnoseaspiraaemitirpronósti-
+cosviables,sinoaanalizarcómolapercepcióncambiaenla
+medidaenqueevolucionalaenfermedad,duranteunperiodo
+de tiempo. Como resultado principal, puede afirmarse que
+existenevidenciasdiscretasdecambioymodificaciónpercep-
+tivarespectoalposicionamientodelpicodepandemia,enla
+medidaqueevolucionalaenfermedad.Estoscambiosestán
+condicionados,probablemente,porfenómenosrelativamente
+estables,talescomolaocurrenciade«mesetas»yelcambio
+sostenido en el ritmo de crecimiento o decrecimiento. Sin
+embargo,lapercepcióntambiénpuedeestarcondicionadapor
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.113-122
+120 UnaAplicacióndelDelphideNubeenlaPercepciónSubjetivadelPicodelaCOVID-19
+Tabla5.ParámetrosfinalesdelDelphideNube(k=3)
+Participantes
+Parámetro
+No1 No2 No3 No4 No5
+A(cid:101)wa
+Ex 45.00 35.00 45.00 38.50 45.00 41.70
+En 2.67 3.33 3.33 1.17 2.33 5.00
+He 2.33 1.67 2.83 0.33 2.17 1.87
+w .14 .14 .11 .45 .16 1.00
+∆En 7.08 2.33 1.51 .00 3.67 1.99
+Unc .88 .50 .85 .29 .93 1.93
+20 30 40 50 60 70
+0.1
+8.0
+6.0
+4.0
+2.0
+0.0
+t(días)
+)t(
+f
+№ 2№ 4 №№№ 135 específicas para su desarrollo, sino también a la capacidad
+Nube Sintética
+humanaparaenfrentarla.Estacapacidadesmuydifícildemo-
+delarconrecursosmatemáticos,especialmenteenescenarios
+relativamenteimprevisibles.Justoenestetipodecircunstan-
+cias,elmétodoDelphipuedeaportarinformaciónútil,para
+complementarlosmodelosobtenidosconlaimplementación
+deotrosmétodos.
+6. Agradecimientos
+Elautordeseaagradeceralpanelparticipanteenelpre-
+sente estudio, especialmente por su generosa y activa cola-
+boración durante la etapa de confinamiento a causa de la
+pandemia.
+Figura5.ResultadosdelatercerarondaDelphi
+eventualidadesinesperadasquemodificanelreflejosubjetivo
+delcomportamientodiacrónicoglobal.
+Otroaspectointeresanteconsisteenlaidentificaciónde
+trescomportamientosenelpanel,condicionadosporelritmo
+evolutivoysuscontingencias:lapercepción«prospectiva»,
+basadaenevidenciasdeconstruccióndefuturo;lapercepción
+«asertiva»,dondesemanifiestaunaespeciedeadaptaciónante
+evidenciasestables;ylapercepción«correctiva»,dondelos
+sujetosreconfiguransuparecer,motivadosporfluctuaciones
+imprevistas.
+Lamuestraempleadaessignificativamentelimitadayno
+permiterealizaranálisisestadísticosfiables,sinembargo,los
+resultadosayudanalaproyeccióndeinvestigacionesfuturas.
+Incluso,regresandoalosdesigniosfundacionalesdelméto-
+do, la selección de un panel de expertos con competencias
+centradasenelpronóstico,podríaaportarsugerenciasútiles
+acercadelposicionamientodelpicoobiendelaextensiónen
+eltiempodeunaenfermedadsimilar.
+Laevolucióndeunapandemiadeestanaturalezanosolo
+obedece a leyes naturales de propagación y a condiciones
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.113-122
+UnaAplicacióndelDelphideNubeenlaPercepciónSubjetivadelPicodelaCOVID-19 121
+Referencias [11] M. Díaz-Canel, y J. Núñez, Gestión guberna-
+mental y ciencia cubana en el enfrentamien-
+[1] J.T. Wu, K. Leung, y G.M. Leung, Nowcasting
+to a la COVID-19, Anales de la Academia
+and forecasting the potential domestic and interna-
+de Ciencias de Cuba 10(2) (2020), 199-208.
+tional spread of the 2019-nCoV outbreak originating
+http://www.revistaccuba.sld.cu/index.
+in Wuhan, China: a modelling study, Lancet 395
+php/revacc/article/view/881
+(2020), 689-697. https://doi.org/10.1016/
+S0140-6736(20)30260-9 [12] C. Tsallis, y U. Tirnakli, Predicting COVID-19
+peaks around the world, Frontiers in Physics
+[2] W.C.Roda,M.B.Varughese,D.Han,yM.Y.Li,Whyis 8 (2020), A217. https://doi.org/10.3389/
+itdifficulttoaccuratelypredicttheCOVID-19epidemic? fphy.2020.00217
+(preprint),InfectiousDiseaseModelling(2020).https:
+//doi.org/10.1016/j.idm.2020.03.001 [13] A.-P.Zahiri,S.RafieeNasab,yE.Roohi,Predictionof
+peakandterminationofnovelcoronavirusCOVID-19
+[3] C. Anastassopoulou, L. Russo, A. Tsakris, y C. epidemicinIran(preprint),medRxiv(2020).https://
+Siettos, Data-based analysis, modelling and forecas- doi.org/10.1101/2020.03.29.20046532
+ting of the COVID-19 outbreak, PLoS ONE 15(3)
+(2020),e0230405.https://doi.org/10.1371/ [14] T. Benaglia, D. Chauveau, D.R. Hunter, y D. Young,
+journal.pone.0230405 mixtools: An R package for analyzing finite mix-
+ture models, Journal of Statistical Software, 32(6)
+[4] T.-M.Chen,J.Rui,Q.-P.Wang,Z.-Y.Zhao,J.-A.Cui, (2009), 1-29. http://dx.doi.org/10.18637/
+y L. Yin, A mathematical model for simulating the jss.v032.i06
+phase-based transmissibility of a novel coronavirus,
+[15] C.B. Do, y S. Batzoglou, What is the expectation
+Infectious Diseases of Poverty 9(24) (2020). https:
+maximizationalgorithm?,NatureBiotechnology26(8)
+//doi.org/10.1186/s40249-020-00640-3
+(2008), 897-899. https://doi.org/10.1038/
+nbt1406
+[5] L. Jia, K. Li, Y. Jiang, X. Guo, y T. Zhao, Prediction
+andanalysisofcoronavirusdisease2019,arXiv(2020).
+[16] P.Schlattmann,MedicalApplicationsofFiniteMixtu-
+https://arxiv.org/abs/2003.05447
+re Models. Berlin: Springer (2009). https://doi.
+org/10.1007/978-3-540-68651-4
+[6] S. Galindo, M.A. Rodríguez, y J.L. Cervantes, Las
+matemáticas de las epidemias: caso México 2009 [17] M.Cruz,ElMétodoDelphienlasInvestigacionesEdu-
+y otros, CIENCIA ergo-sum 20(3) (2020), 238- cacionales.LaHabana:Academia,2009.
+246. https://cienciaergosum.uaemex.mx/
+article/view/7038 [18] J.Landeta,ElMétodoDelphi:UnaTécnicadePrevisión
+paralaIncertidumbre.Barcelona:Ariel,1999.
+[7] W.O. Kermack, y A.G. McKendrick Contributions
+[19] M.S.Sawhney,etal.,TriagingadvancedGIendoscopy
+to the Mathematical Theory of Epidemics, Pro-
+proceduresduringtheCOVID-19pandemic:consensus
+ceeding of the Royal Society of London 115A
+recommendations using the Delphi method, Gastroin-
+(1927), 700-721. https://doi.org/10.1016/
+testinalEndoscopy(2020).https://doi.org/10.
+S0092-8240(05)80040-0(reprinted)
+1016/j.gie.2020.05.014
+[8] J.F. Medina, M.E. Cortés, M. Cortés, A.C. Pé-
+[20] M.Vitacca,etal.,Italiansuggestionsforpulmonaryreha-
+rez, y M. Manzano, Estudio sobre modelos predic-
+bilitationinCOVID-19patientsrecoveringfromacute
+tivos para la COVID-19 en Cuba, Medisur 18(3)
+respiratoryfailure:resultsofaDelphiprocess,Monaldi
+(2020). http://www.medisur.sld.cu/index.
+ArchivesforChestDisease90(2)(2020),1444.https:
+php/medisur/article/view/4703
+//doi.org/10.4081/monaldi.2020.1444
+[9] M.A.Villalobos,Estimacióndepoblacióncontagiada [21] F. Eibensteiner, et al., Rapid response in the
+porCOVID-19usandoregresiónLogísticageneralizada COVID-19 pandemic: a Delphi study from the Eu-
+y heurísticas de optimización, arXiv (2020). https: ropean Pediatric Dialysis Working Group, Pediatric
+//arxiv.org/pdf/2004.01207 Nephrology(2020).https://doi.org/10.1007/
+s00467-020-04584-6
+[10] A.Ahmadi,Y.Fadai,M.Shirani,yF.Rahmani,Mode-
+lingandforecastingtrendofCOVID-19epidemicinIran [22] Welsh Surgical Research Initiative (WSRI) Collabo-
+(preprint),medRxiv(2020).https://doi.org/10. rative, Surgery during the COVID-19 pandemic: ope-
+1101/2020.03.17.20037671 rating room suggestions from an international Delphi
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.113-122
+122 UnaAplicacióndelDelphideNubeenlaPercepciónSubjetivadelPicodelaCOVID-19
+process,BritishJournalofSurgery,EarlyView(2020). tool, Notes on Intuitionistic Fuzzy Sets, 12(2) (2012),
+https://doi.org/10.1002/bjs.11747 37-50. http://ifigenia.org/images/0/06/
+NIFS-18-2-37-50.pdf
+[23] F.Hasson,yS.Keeney,EnhancingrigourintheDelphi
+technique research, Technological Forecasting & So-
+[27] D. Li, C. Liu, y W. Gan, A new cognitive model:
+cialChange78(9)(2011),1695-1704.https://doi.
+cloud model, International Journal of Intelligent Sys-
+org/10.1016/j.techfore.2011.04.005
+tems24(3)(2009),357-375.https://doi.org/10.
+[24] M.Cruz,yJ.A.Rúa,Surgimientoydesarrollodelmé- 1002/int.20340
+todo Delphi: una perspectiva cienciométrica, Biblios,
+71(2011),90-107.https://doi.org/10.5195/ [28] X.-J. Yang, L. Zeng, y R. Zhang, Cloud Delphi met-
+biblios.2018.470 hod.InternationalJournalofUncertainty,Fuzzinessand
+Knowledge-BasedSystems20(1)(2012),77-97.https:
+[25] D.Li,yD.Yi, ArtificialIntelligencewithUncertainty.
+//doi.org/10.1142/S0218488512500055
+BocaRaton,FL:Chapman&Hall/CRC,2008.https:
+//doi.org/10.1109/CIT.2004.1357163
+[29] M.Cruz,UnafunciónenRparaelmétodoDelphide
+[26] T.K. Roy, y A. Garai, Intuitionistic fuzzy Delphi Nube.Aplicacionesalpronósticoeducacional.Artículo
+method: more realistic and interactive forecasting enviadoalarevistaTecnologíaEducativa(2020).
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.113-122

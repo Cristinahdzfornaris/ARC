@@ -1,0 +1,550 @@
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+Recibido04-2021,Aceptado08-2021
+OpenLatinoMurciaClient: SIG Web con tecnologías
+abiertas
+OpenLatinoMurciaClient: Web GIS with open
+technologies
+Aracelys García Armenteros1*, Joanna Campbell Amos1, Vivian Plasencia Calaña2
+Resumen Enlasociedadactualresultamuyfrecuentequeorganizacionesopersonasaccedanainternet
+paraconsultarocrearmapasquecomunican,analizan,compartenyresuelvenproblemascomplejosalrededor
+del mundo. Un SIG Web es un sistema de información distribuida que comprende al menos un servidor
+y un cliente, donde el servidor es un servidor SIG (Sistema de Información Geográfica) y el cliente es un
+buscador web, aplicación de escritorio, o aplicación móvil. En el presente trabajo se desarrolla el SIG Web
+OpenLatinoMurciaClient (OLMC) empleando herramientas modernas y de código abierto, así como buenas
+prácticasdeprogramación.EnOLMCseincluyeyseadaptaelvisordemapasOpenLatinoViewyseutilizael
+servidordemapasOpenLatinoServer,seimplementaunmódulodeadministracióndeusuariosyseagregan
+nuevas herramientas al visor de mapas. El resultado que se presenta es un software funcional, robusto y
+extensiblequecumplecontodoslosrequerimientosexpuestosporelcliente.
+Abstract In today’s society, it is very common for organizations or people to access the internet to consult
+orcreatemapsthatcommunicate,analyze,shareandsolvecomplexproblemsaroundtheworld. AWebGIS
+is a distributed information system that comprises at least one server and one client, where the server is a
+GIS(GeographicInformationSystem)serverandtheclientisawebbrowser, desktopapplication, ormobile
+application. InthepresentworktheWebGISOpenLatinoMurciaClient(OLMC)isdevelopedusingmodernand
+opensourcetools,aswellasgoodprogrammingpractices. OLMCincludesandadaptstheOpenLatinoViewmap
+viewerandusestheOpenLatinoServermapserver. Theuseradministrationmoduleisalsoimplementedand
+newtoolsareaddedtothemapviewer. Theresultisafunctional,robustandextensiblesoftwarethatguarantees
+thespecificationsrequiredbytheclient.
+PalabrasClave
+SIGWeb,OpenLatinoView,OpenLatinoServer
+Keywords
+WebGIS,OpenLatinoView,OpenLatinoServer
+1DepartamentodeProgramacióneIngeniaríadesoftware,UniversidaddelaHabana,LaHabana,Cuba,aracelys@matcom.uh.cu,
+joanna@matcom.uh.cu
+2Trabajadorporcuentapropia,v.pcalana@gmail.com
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción UnSistemadeInformaciónGeográficaesunconjuntode
+herramientasqueintegrayrelacionadiversoscomponentes
+Losavancestecnológicosyelhechodequebuenaparte
+(usuarios, hardware, software y procesos) que permiten la
+delasactividadeshumanastenganuncomponentelocacional,
+organización,elalmacenamiento,lamanipulación,elanálisis
+provocanqueencasicualquierámbitosepuedanmejorarlos
+ylamodelacióndegrandescantidadesdedatosprocedentes
+procesosdesarrolladosañadiendoSistemasdeInformación
+delmundoreal.Dichosdatosestánvinculadosaunareferencia
+Geográfica(SIG).
+espacial,estofacilitalaincorporacióndeaspectossociales-
+LosSIGsonherramientasquenospermitentrabajarcon culturales, económicos y ambientales a los mismos con el
+basesdedatosyrealizaranálisismulticriterioparalatomade objetivodehacermáseficientelatomadedecisiones[1].
+decisiones.Tienenaplicaciónendiversoscamposcomoson
+urbanismo,gestióndepatrimoniocultural,redesdetensión ElSIGfuncionacomounabasededatosconinformación
+eléctrica,cableadotelefónico,gestiónderutasdetransporte, geográficaenlaquelosobjetos(provenientesdemapasdigi-
+edificaciónyobrasciviles,arquitecturayturismo. tales)queseencuentranalmacenadosenellaseasocianentre
+112 OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas
+síapartirdeunidentificadorcomún(estableceunageorefe- Grancantidaddeusuariossimultáneamente:General-
+rencia).Deestaforma,dadocualquierobjetoalmacenadoen mentecuandosetrabajaconunSIGesunsolousuario
+labasededatos,podemosconocersulocalizacióngeográfica a la vez, con la llegada de los SIG Web eso cambia,
+e,inversamente,dadaunalocalizacióngeográficapodemos puesmuchosusuariospuedentrabajarsimultáneamente
+conocertodoslosobjetosyatributosgeográficosasociadosa conlamismaherramienta.
+ella[2]. Noestálimitadoaunsistemaoperativoespecífico:Los
+LosSIGalmacenaninformaciónprocedentedelmundo SIGparafuncionar,dependendelsistemaoperativoque
+real como pueden ser, por ejemplo, la referida a carreteras, tengalacomputadoradondeseinstaleelsoftware.Los
+ríos, lagos, montañas, etc. Existen dos formas principales SIGWebnodependendelsistemaoperativoquetenga
+en las que se representan y se almacenan los datos antes eldispositivodesdeelcualsevaautilizarporqueson
+mencionados[3]: aplicaciones web, se puede acceder a ellos mediante
+navegadores web de Internet como: Google Chrome,
+rasteroderetícula. MozillaFirefox,Opera,SafarieInternetExplorer.
+vectorial.
+1. Motivación, justificación y formulación
+Con el uso frecuente de internet, la forma de distribuir
+lainformacióncambióysurgieronlosSIGWeb.Desdeese del problema
+momento,nosolosepodíaaccederalasfuncionalidadesde
+EnelmarcodelproyectoCadic-UHdesarrolladoporla
+unSIGdesdeunamismacomputadora,sinodesdecualquier
+CasadelSoftware,quepertenecealafacultaddeMatemática
+computadoraodispositivoconunnavegadorWebyaccesoa
+yComputacióndelaUniversidaddeLaHabana,segeneraron
+internet.
+una serie de requerimientos funcionales y de entorno muy
+SIGWebesuntipodesistemadeinformacióndistribuida
+específicosporpartedelosclientes,locualconstituyelamoti-
+quecomprendealmenosunservidoryuncliente,dondeel
+vaciónparalarealizacióndeestetrabajo.Losrequerimientos
+servidoresunservidorSIGyelclienteesunbuscadorweb,
+sonlossiguientes:
+aplicacióndeescritorio,oaplicaciónmóvil[4,5].
+UnSIGWebpuedeserusadoporvariosusuariosalavez. 1. Guardarlaimagendelmapaqueseestáobservandoen
+Esto permite que en una organización cada miembro no se esemomento.
+tengaqueinstalarelsoftwareensucomputadorapersonaly 2. Editarlaimagendelmapaqueseestáobservandoen
+todos puedan acceder al SIG simultáneamente mediante la esemomento.Permitirguardarlaeinsertarnuevasimá-
+Web.DoscomponentesfundamentalesenunSIGWebson: genes.
+3. Descargarendistintosformatosvectoriales(WKT,GeoJ-
+Visordemapas:Aplicaciónwebpensadaparalavisuali-
+SON)lasgeometríasqueesténseleccionadasmediante
+zaciónylaconsultadeinformacióngeográficahaciendo
+cercadosenelmapa.
+usodelosestándaresdelaOGC[6].
+4. Añadirgeometríasalmapa.Lasgeometríaspuedenser
+Servidordemapas(eninglésIMS:InternetMapSer-
+añadidasendistintosformatos.
+ver):Proveecartografíaatravésdelaredtantoenmodo
+5. Trabajarconlavisibilidaddelascapas.Lascapasse
+vectorialcomoconimágenes.Laespecificaciónestán-
+debenpodermostrar,esconderymodificarlaopacidad.
+darparaestosservidoreseslaOGCWMS(OpenGeos-
+6. Gestionarusuarios.Sepuedancrear,mostrar,actualizar
+patialConsortiumWebMapService)[7].
+y borrar usuarios. Además, los usuarios deben tener
+restriccionesdeaccesoalascapasyfuncionalidades
+ApesardeexistirvariasdiferenciasentrelosSIGylos
+delmapa.
+SIG Web, no se puede determinar que uno sea mejor que
+7. PermitirlaconexiónalafuentedeservicioWMS6.
+elotro,dependiendodelasnecesidadesdelusuariosedebe
+8. Cuandounelementoesseleccionadodebepodermos-
+elegircuálresultamásadecuada.Algunosaspectosquehacen
+trarselainformaciónquetieneasociada.
+diferenteunSIGWebdeunSIGson[4]:
+9. Herramientasquepermitanalusuariomedirdistancias
+UsuariosnonecesariamenteexpertosenSIG:LosSIG yáreas.Laslíneasosuperficiesdibujadasporelusuario
+requierendeusuariosexpertoseneltemamientrasque también deben incluirse en la edición del mapa, de
+un SIG Web busca tener una interfaz amigable y ser formaquesepuedautilizaresamismaherramientapara
+usadoporusuariosnoexpertosenSIG. remarcarunazonaoelemento.
+Alcanceglobal:LosSIGseinstalanenunacomputado- 10. Permitirdistintostiposdebúsquedassobreelmapa.
+rapersonalysolopuedeaccederunusuario,mientras 11. Permitir descargar en distintos formatos vectoriales
+que los SIGWeb están enla Weby pueden ser acce- (WKT,GeoJSON)lasgeometríasresultadodelasbús-
+didosporvariosusuariosatravésdediversosequipos quedasrealizadas.
+comocomputadoraspersonales,teléfonosmóviles,ta- 12. Usartecnologíasdecódigoabiertoydeampliouso.
+bletaselectrónicasycomputadoraspersonalesportáti- 13. Elsoftwaretienequesermultiplataforma.Debepoder
+les. funcionarenWindowsyLinux.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas 113
+Enlafaseinicialdelainvestigaciónseestudiaronvarios enlaactualidadexistenvariosSIGWeb,noseencontrónin-
+SIGWebqueseutilizanenlaactualidadconelobjetivode guno que tuviese implementados todos los requerimientos
+establecer semejanzasy diferenciasen susfuncionalidades solicitados, o fuera de código abierto y compatible con las
+respectoalosrequerimientossolicitadosporelcliente.Entre herramientasytecnologíasutilizadasenlaCasadelSoftware.
+los SIG Web analizados se encuentra OpenStreetMap [8],
+Fluvanna County, VA Geographic Information System [9], 1.1 Objetivos
+Abbotsford[10]yScotland’senvironment[11]. Para darle solución al problema planteado, el objetivo
+UnavezanalizadosestosSIGWebseidentificaronfun- generaldelpresentetrabajoesdesarrollarelSIGWebOpen-
+cionalidades queson iguales o semejantes alas requeridas, LatinoMurciaClient (OLMC), usando buenas prácticas de
+peroalgunosnosondecódigolibreopresentanproblemasde programación,quecumplacontodoslosrequerimientosplan-
+compatibilidad,porloquenoresultafactiblelautilizaciónde teados, sea extensible y tenga integrado el visor de mapas
+ningunodeellosysedeterminarealizarunSIGWebtomando OLVyelservidordemapasOLS.
+ideasparaeldiseñodelainterfazvisualencuantoa: Paragarantizarelcumplimientodelobjetivogeneralplan-
+teado,seproponealcanzar,paulatinamente,unconjuntode
+Laubicacióndelosbotonesdelasfuncionalidadesdel
+objetivosespecíficos.Sonlossiguientes:
+visordemapasdentrodelvisordemapas.
+MostrarenlaherramientaLayerSwitcherlascapasque 1. DiseñarunanuevaaplicaciónllamadaOpenLatinoMur-
+estánactivasylasqueno. ciaClientcontecnologíasqueseanmodernasydecódi-
+Laubicacióndelainformaciónpersonaldeunusuario goabierto.
+luegodeiniciarsesiónenlaesquinaderechasuperior
+2. Diseñareimplementarunaarquitecturaextensibleque
+delaaplicación.
+integreOLMCconelvisorOLVyelservidorOLS.
+En la Casa del Software se tiene el código fuente del
+3. ImplementarunmódulodeadministraciónenOLMC
+visordemapasOpenLatinoViewer(OLV)[12],desarrollado
+quepermitaadministrarusuarios.
+en este mismo grupo, que ya tiene implementado algunos
+requerimientosysepuedenobtenervariasfuncionalidadesque 4. ExtenderlaherramientaView-Focus-HighlightdeOLV,
+senecesitanampliandolasyaexistentes.Seposeeademásel parapermitirquesepuedandescargarlasgeometrías
+servidordemapasOpenLatinoServer(OLS)[23],igualmente resultantes en distintos tipos de formatos vectoriales
+desarrollado en este grupo, que puede ser utilizado como (WKT,GeoJSON).
+servidordemapasparaelSIGWebquesedesarrollará.
+5. Implementarlassiguientesnuevasherramientasenel
+Teniendoestoencuenta,losrequerimientosfuncionalesy
+visordemapas:
+deentornoquesedebenincorporarson:
+1. Guardarlaimagendelmapaqueseestáobservandoen SaveMapImage:Herramientaparadescargaruna
+esemomento. fotodelmapa.
+2. Editarlaimagendelmapaqueseestáobservandoen LayoutMaker:Herramientaparaeditarlafotodel
+esemomento.Permitirguardarlaeinsertarnuevasimá- mapa. Posibilita guardar la imagen que se está
+genes. editandoycargarnuevasimágenes.
+3. Descargarendistintosformatosvectoriales(WKT,GeoJ-
+DownloadGeometries:Herramientaparadescar-
+SON)lasgeometríasqueesténseleccionadasmediante
+garendistintosformatosgeometríasqueesténen
+cercadosenelmapa.
+eláreaseleccionada.
+4. Añadirgeometríasalmapa.Lasgeometríaspuedenser
+UploadGeometries: Herramienta para adicionar
+añadidasendistintosformatos.
+endistintosformatosymostrargeometríasenel
+5. Trabajarconlavisibilidaddelascapas.Lascapasse
+mapa.
+debenpodermostrar,esconderymodificarlaopacidad.
+6. Gestionarusuarios.Sepuedancrear,editar,actualizar LayerSwitcher:Herramientaquepermitetrabajar
+y borrar usuarios. Además, los usuarios deben tener conlavisibilidaddelascapasqueposeeelmapa.
+restriccionesdeaccesoalascapasyfuncionalidades
+delmapa. 2. Diseño de la aplicación OLMC
+7. Permitir descargar en distintos formatos vectoriales
+OpenLatinoMurciaClient(OMLC)eslapropuestadeeste
+(WKT,GeoJSON)lasgeometríasresultadodelasbús-
+trabajoparadarsoluciónalproblemaplanteadoanteriormen-
+quedasrealizadas.
+te.Acontinuaciónsepresentalaestructuradelaaplicación
+8. Manualquesirvaalosdesarrolladoresparapodercom-
+OLMCatravésdeunagráficaylasaccionesquepuedenrea-
+prenderlafuncionalidadyfacilitarelmantenimientoy
+lizarlosusuariosenlaaplicación.Ademásseexplicacómo
+posiblesmejorasposteriores.
+seintegraronelvisorOLVyelservidorOLSenlaaplicación
+Analizandoelcontextodelainvestigación,sepuedede- creada y se exponen las nuevas herramientas creadas en el
+finirelproblemaidentificadodelasiguienteforma:aunque visordemapas.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+114 OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas
+2.1 Funcionalidades 2.2 Arquitecturadesoftware
+Enlaaplicaciónexistendosroles:UsuarioRegistradoy Luegodeestudiarvariasarquitecturasdesoftware,seim-
+Admin. plementaCleanArchitecture(ArquitecturaLimpia,enidioma
+español)porquesenecesitaquelaaplicaciónseaextensible
+1. Un Usuario Registrado es un usuario que ha sido in- paraadicionarfuncionalidadesenelfuturo[13,14].Estaar-
+sertadoenlabasededatosdelsistemaparaquetenga quitectura permite mantener el código desacoplado lo que
+accesoalasfuncionalidadesdelaaplicación. facilitalaextensiónylaspruebasalsoftware.EnlaFigura2
+semuestralaArquitecturadesoftwareCleanArchitectureim-
+2. UnAdminesunadministradordelsistema.Tienepermi- plementadaenOLMC.Sepuedeobservarlaseparacióndelas
+sospararealizarlasoperacionesCrear,Leer,Actualizar capasyladependenciaqueexisteentreellas.Web.Api.Core
+yBorrardelosusuarios.Registrausuariosenelsistema. representaelcírculomásinternoyWeb.Api.App,elmásex-
+Estáregistradoenelsistemaypuedeaccederatodas terno,segúneldiagramaoficial.CumpleconlaRegladeDe-
+lasfuncionalidadesdelvisordemapas. pendenciadeCleanArchitecturepuesningunacapadepende
+deotraexternaaella.Poseetrescapas:
+UnWorkspace,comosunombreeninglésindica,esun
+espaciodetrabajo.Eseconceptoexisteenlaaplicaciónpara 1. Web.Api.Core:Eslacapabase.Notienedependencias
+cadaUsuarioRegistradoypermiteconfigurarlospermisos externas. Posee las entidades y la declaración de las
+deaccesoalascapasdelacartografíayfuncionalidadesdel interfaces.
+visor de mapas. Cada usuario del sistema tiene uno o más
+2. Web.Api.Infrastructure:DependedelacapaWeb.Api.Core.
+Workspacesasignados.
+Tienelaimplementacióndelasinterfacesquesedecla-
+UnUsuarioRegistrado,contodoslospermisosposibles
+raronenWeb.Api.Core.Además,poseeelSeed(clase
+permitidos,puedeaccederalasfuncionalidadesdelvisorde
+que inserta inicialmente datos específicos en la base
+mapasOLVquesemuestranenlaFigura1.Lasfuncionalida-
+dedatos),lasmigracionesyelcontextodelabasede
+des1,2,3,4,5,6y7yaexistíanenelvisordemapas[12].
+datos.
+Lafuncionalidadnúmero8semodificóparaserextendida;
+anteriormentesolosepermitíadescargarlosresultadosdeuna
+3. Web.Api.App:DependedelascapasWeb.Api.Infrastructure
+consultaenformatoCSVylaherramientanoeraextensible,
+y Web.Api.Core. Tiene el Sistema de Gestión de Ba-
+entonces,sediseñóeimplementóunaherramientaextensible
+sedeDatos(SGBD)utilizadoyloscontroladoresdel
+quepermitedescargarademásdeCSV,otrosformatoscomo
+servidordelaaplicación.
+WKT y GeoJSON. Las funcionalidades 9, 10, 11, 12 y 13
+se implementan para cumplir con los requerimientos de la
+aplicaciónplanteadosporelcliente.
+Figura2.ArquitecturadesoftwareCleanArchitecture
+implementadaenOLMC
+ParacumplirconCleanArchitecture,todaslasentidades
+delabasededatosdebenestarenWeb.Api.Coreyestacapa
+nodebereferenciaraningunalibreríanicapaexterna.Con
+Figura1.FuncionalidadesdelvisordemapasOLV
+lautilizacióndeAsp.NetCoreIdentityparacrearusuariosy
+roles,sedecideponerlasentidadesrelacionadasconAsp.Net
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas 115
+CoreIdentityenlasegundacapa,Web.Api.Infrastructure,re- quelalógicadenegociosseaindependientedeltipodedato
+ferenciando todo de Identity en esa capa. De esta forma se quecomprendelacapadeorigendedatos,enpocaspalabras
+incumpleelprincipiodeCleanArchitecturedequetodaslas un repositorio, media entre el dominio las capas de mapeo
+entidadesdelabasededatosdebenestarenlacapamásin- dedatos.ElpatrónUnidaddeTrabajo,eslaformacorrecta
+ternaysecumplequelacapamásinternaWeb.Api.Core,no deimplementacióndelpatrónRepositorio.Estecentralizalas
+referenciaaningunalibreríanicapaexterna.Comosepuede conexionesalabasededatosrealizandounseguimientode
+observarenlaFigura2seeligeestavarianteparamantenerel todoloquesucededuranteunatransaccióncuandoseusanlas
+principiodequelacapamásinternanodependedeninguna capasdedatosyrevertirálatransacciónsiCommit()noseha
+librería ni capa externa. Si se adiciona una nueva entidad, invocadooexistenincongruenciaslógicas[17].OLMCtiene
+elprogramadordebeconocerCleanArchitectureyentender lospatronesRepositorioyUnidaddeTrabajo[18,19,22].
+cómoestáimplementadaenelservidordeOLMC,laadicio-
+naráenlacapaWeb.Api.Coresinodependedeunalibrería 2.4 Modelodedatos
+externa. Paraalmacenarlosdatosnecesariosparaelcumplimiento
+delosrequerimientosdelcliente,esfundamentalelusodeuna
+2.3 Patrones basededatos.Serealizaeldiseñodelmodelodedatosparaq
+Modelo-Vista-Controlador(MVC)esunpatróndediseño labasededatosseaextensible.Lastablasquecontienenen
+usadoparadesacoplaruser-interface(vista),datos(modelo)y elnombreelprefijoAspNet,soncreadasporAsp.NetCore
+lalógicadelaaplicación(controlador).Estepatrónayudaa Identity.Comolaaplicacióndebeposeerusuariosypermitir
+lograrlaseparacióndepreocupaciones[15,16]. larestriccióndeestosadistintascapasyfuncionalidadesdel
+EnlaFigura3sepuedeobservarelfuncionamientodel visordemapas,segeneraronusandoIdentity,lastablasdela
+patrón MVC en la aplicación OLMC. Cuando un usuario basededatos:AspNetUseryAspNetRole.EnAspNetUserse
+realizaunpedidoocurrelosiguiente[22]: almacenatodalainformacióndelosusuariosyenAspNetRo-
+le,ladelosWorkspacesqueexistenenlaaplicación.Comose
+1. ElusuariorealizaunaacciónenlaUIdeOLMCyse
+puedeobservarenlaFigura4,unusuariopuedetenerceroo
+forma un pedido que según la acción que realizó, es
+másWorkspacesyunWorkspacepuedeformarpartedecero
+enviadohaciaelservidordeOLMCoeldemapasOLV.
+omásusuarios.LatablaAspNetUserdeIdentityseextendió.
+SeleagrególacolumnaisAdminparasabersiunusuarioes
+2. Elservidorrecibeelpedidoenuncontroladorqueorga-
+Administradordelaaplicaciónono.Losdatosalmacenados
+nizalainformaciónylaenvíaalmodelo.
+son de tipo bool. El campo isAdmin tiene valor True si el
+3. Elmodelo,resuelveelpedidoconlainformaciónque usuarioesAdminyFalsesinoloes.LatablaAspNetRole
+lellegódelcontroladoryenvíaalcontroladorlosdatos también fue extendida, se le adicionó la columna ServerId
+quesenecesitanparaqueelusuarioobtengalarespuesta paraguardarelIdqueposeeelWorkspacedeesafilaenla
+quedesea. basededatosdelservidorOLS.LatablaCredentialsecrea
+paraalmacenarlainformacióndelservidorOLS.Estatabla
+4. El controlador envía a la vista la información que le
+noserelacionaconningunaotra.Loscamposqueposeeson:
+llegódelmodelo.
+1. Id:Identificadordelservidor.
+5. Lavistamuestralarespuestaalpedidorealizadoporel
+usuario. 2. ServerName:Nombredelservidor.
+3. AccessToken:Tokendeaccesoalservidor.
+4. UpdateKey:Llavedeactualización.
+5. ServerUrl:Urlqueseutilizaparaaccederalservidor.
+3. Implementación de herramientas de
+OLMC
+Después de realizar un estudio sobre las tecnologías y
+herramientasaemplearparalaimplementacióndelSIGWeb
+Figura3.PatrónMVCenOLMC
+OLMC[22]sedeterminóutlizarC#comolenguajedeprogra-
+maciónenelservidor,ASP.NET2.2Coreeselframeworkde
+El patrón Repositorio consiste en separar la lógica que desarrollowebutilizadoyEntityFrameworkCore2.2esla
+recuperalosdatosylosasignaaunmodelodeentidaddela tecnologíautilizadaparaelaccesoalosdatosenelservidor.
+lógicadenegociosqueactúasobreelmodelo,estopermite Ellenguajedeprogramaciónutilizadoenlapartedelcliente
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+116 OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas
+esTypeScript3.7.5,paradesarrollarelfront-enddelaapli- 3.3 Implementación de la herramienta Download-
+caciónseutilizaelframeworkAngularensuversión9.0.2y GeometriesFormats
+OpenLayers4.6.0eslalibreríaqueseutilizaparamostrarel La herramienta DownloadGeometriesFormats es la en-
+mapaenlaaplicación.SeutilizócomoIntegratedDevelop- cargada de descargar geometrías en distintos formatos. El
+mentEnvironment(IDE)parasudesarrolloMicrosoftVisual resultadosiempreesunarchivozipquecontieneunfichero
+Studio2017CommunityEditionySQLServercomogestor (conextensióndelformatodegeometríaseleccionado)por
+debasededatos. cadacapaadescargarconlascorrespondientesgeometrías.
+Acontinuaciónseexplicandetallesdeimplementación ElformatodelasgeometríasguardadasenelservidorOLS
+paraentenderelfuncionamientodealgunasherramientasy esWKT.Todoslosformatosenlosquesequieradescargar
+cómoseextendieron.Paraobteneruncódigofácilderefac- lasgeometríasseconstruyenapartirdeWKTuotroforma-
+torizar y adaptar se siguen los principios SOLID [20, 21] todedescargaanteriormenteimplementado.Laherramien-
+delaprogramaciónorientadaaobjetos,loscualespermiten taDownloadGeometriesFormatssehaimplementadocomo
+quelosproyectosseanmáslegibles,mantenibles,robustosy unacomponenteindividual,deestaformapuedeserllamada
+escalablesenelfuturo. desdeotrasherramientasquequierandescargargeometrías.
+Dosherramientasquelautilizanson:DownloadGeometriesy
+3.1 Implementación de la herramienta LayerSwit- View-Focus-Highlight.
+cher
+ParaqueunacapadelmapaformepartedelLayerSwitcher, 3.3.1 HerramientaDownloadGeometries
+LaherramientaDownloadGeometrieseslaencargadade
+esnecesarioque,alconstruirselacapa,lapropiedadquese
+descargar en distintos formatos las geometrías de un área
+llamadisplayInLayerSwitcherestéentrue.Enlaconstrucción
+seleccionada.Elresultadoesunarchivozipquecontieneun
+delascapasdelmapaquesonpedidasalservidordemapas
+fichero(conextensióndelformatodegeometríaseleccionado)
+OLS cada capa imageLayer que se crea nueva no posee la
+por cada capa con las geometrías que se encuentran en el
+propiedaddisplayInLayerSwitcher,entoncessetomaelvalor
+área seleccionada. Esta área está dada siguiendo la forma
+pordefectodeestapropiedadqueestrue,portanto,esascapas
+decercadoqueexistíayaenelvisordemapasOLVconla
+semuestranenelLayerSwitcher.
+herramientadeconsultaSpatial-Query[12].Estaherramienta
+3.2 IntegracióndeOLMCconelservidorOLS llama a la herramienta DownloadGeometriesFormats para
+ElservidorOLStieneimplementadoelprotocolodesegu- descargarlasgeometrías.
+ridadJSONWebToken(JWT).Porestarazón,cadapedido
+3.3.2 ExtensióndelaherramientaView-Focus-Highlight
+queselehaceaOLS,debecumplirconunaestructuraespe-
+EnOLVexistíayaunaherramientallamadaView-Focus-
+cífica.Lospasosquesemencionanacontinuaciónsetienen
+Highlight. Es la encargada de la visualización de todas las
+queseguirpararealizarunpedidoalservidorOLS:
+consultas realizadas en el visor de mapas [12]. Esta se ha
+1. Pedir al servidor de OLMC el token para acceder a extendidoporqueanteriormentepermitíadescargarlasgeo-
+OLS. metríasresultadodelasconsultassolamenteenformatoCSV.
+Ahorapermitedescargarlasgeometríasendistintosformatos,
+2. Si el token no ha expirado realizar el pedido que se
+llamandoalaherramientaDownloadGeometriesFormats
+quiereysaltarselosrestantespasos.
+3.4 ImplementacióndelaherramientaUploadGeo-
+3. Sieltokenyaexpiró,pedirlallavedeactualizaciónque
+metries
+estáenelservidordeOLMC.
+UploadGeometrieseslaherramientaquepermiteadicio-
+4. Coneltokendeaccesoylallavedeactualización,man- nargeometríasendistintosformatosenelvisordemapas.En
+darelpedidoalservidorOLSparaactualizareltoken elvisordemapaslasgeometríassepintanconOpenLayers,
+deaccesoylallavedeactualización,parapoderacceder libreríaquesoportaciertosformatosparapintargeometríasy
+luegoalasdemásfuncionalidadesdeOLS.Esepedido sonlosúnicosquesepuedenusar.Sisequierepintargeome-
+devuelveunnuevotokendeaccesoyunanuevallave tríasenformatosqueOpenLayersnosoporta,entonceshabrá
+deactualización. quetransformaresasgeometríasaunformatosoportadopor
+OpenLayers y luego mandarlas a pintar. Las geometrías se
+5. Guardarlanuevallaveyelnuevotokendeactualización
+pintansiempresobreunanuevacapaqueesnombradaporel
+enlabasededatosdeOLMC.
+usuarioysemuestraenelLayerSwitcher.Enelcódigoesa
+nuevacapasellamavectorLayer.
+6. Conelnuevotokenrealizarelpedidoquesequiere.
+EnOLMCexisteunafunciónporlaquepasantodoslos 4. Validación del cumplimiento de los
+pedidos realizados al servidor de mapas. Cada vez que se
+objetivos
+quierarealizarunpedido,sellamaaesafunciónparanotener
+queimplementartodoslospasosanteriormentemencionados Para validar el correcto funcionamiento de la las herra-
+[22]. mientasimplementadasserealizaronpruebasdefuncionalidad
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas 117
+[22].LaspruebasserealizaronenunalaptopconProcesador deláreaparadescargarlasgeometríasdecadacapadelvisor
+IntelCorei7yMemoriaRAM4GB.Acontinuaciónsepre- demapas.Comprendeloqueestádentroysobreelcírculo
+sentanlosresultadosdelosprincipalesescenariosdeprueba pintado.Luego,seseleccionalaherramientaDownloadGeo-
+realizados. metriesdelvisordemapas,apareceunmodalparaponerel
+Laspruebasdefuncionalidadiniciaronconlossiguientes nombrequesequierequetengaelarchivozipenelquese
+elementos: guardaránlasgeometríasyelformatodelasmismascomose
+muestraenlaFigura9.
+Trescapasenelmapa:points.Sepintaenelmapade
+colorrojo.buildings.Sepintaenelmapadecolorverde.
+5. Conclusiones
+roads.Sepintaenelmapadecolornegro.
+Conlarealizacióndeestetrabajosepuedeconcluirquese
+3Workspaces:Workspace0:Tieneaccesoalastresca-
+cumplieronlosobjetivosplanteadosinicialmente.Secuenta
+pas del mapa. No tiene acceso a las funcionalidades
+conunsoftwarefuncional,robustoyextensiblequecumple
+Spatial-Query, Advanced-Query y DownloadGeome-
+contodoslosrequerimientosexpuestosporelcliente.Sehizo
+tries. Workspace1: Tiene acceso a las capas points y
+unestudiodelestadodelartedelosSIGWebysetomaron
+buildings.Tieneaccesoatodaslasfuncionalidadesdel
+ideasencuantoaldiseñodelainterfazvisual,específicamente
+mapa.WorkspaceAll:Tieneaccesoalastrescapas.Tie-
+laubicacióndelasfuncionalidadesdelvisordemapascon
+neaccesoatodaslasfuncionalidades.
+botonesdentrodelmismo,lasformadeactivarydesactivar
+capasenelLayerSwitcherconcheckboxylaubicacióndela
+2usuarioscreados:Email:adminolmc@gmail.com.Na-
+informaciónpersonaldelusuariocuandoiniciasesiónenla
+me:AdminOLMC.Workspaces:WorkspaceAll.Esad-
+esquinasuperiorderecha.LaimplementacióndeOLMCse
+mindelaaplicación.Email:user0@gmail.com.Name:
+realizó usando herramientas modernas y de código abierto,
+User0.Workspaces:Workspace0,Workspace1.Noes
+siguiendo la arquitectura de software Clean Architecture y
+Admindelaaplicación.
+patronesdediseñocomoMVCyRepositoryPatternconUnit
+Todaslasseñalizacionesenlasimágenesserealizaroncon of Work. En OLMC se incluyó y adaptó el visor de mapas
+elcoloranaranjado.LaFigura5muestralasfuncionalidades OLVyseutilizaelservidordemapasOLS.Seimplementóun
+delvisordemapasquesepuedenhabilitarodeshabilitar,se- módulodeadministracióndeusuarios.Seagregaronnuevas
+gúnelWorkspacequeseestéutilizando.Estassonlasúnicas herramientas al visor de mapas como son: SaveMapImage,
+quedependendelservidordemapas.Lasdemásfuncionalida- LayoutMaker, DownloadGeometries, UploadGeometries y
+dessiemprepuedenserusadassinimportarelWorkspace. LayerSwitcher.Algunosotroselementostambiénfueronagre-
+gadosalvisordemapasparafacilitarsuusocomo:Escaladel
+4.1 FuncionamientodelosWorkspaces,restricción mapa,LatitudyLongituddelmapayFullScreen.
+en las funcionalidades y capas en el visor de
+mapas 5.1 Líneasfuturasdeinvestigación
+LaFigura6muestraelusuarioUser0estáutilizandoel Aunquesecumplierontodoslosobjetivosplanteadosal
+WorkspaceWorkspace1.Elvisordemapasposeetodaslas iniciodeltrabajo,elsoftwareimplementadopuedemejorar-
+funcionalidadesytieneaccesoatodaslascapasexceptoroads, seysepuedenagregarnuevasfuncionalidades,porello,se
+demostrandoelcorrectofuncionamientodeliniciodesesión propone:
+delosusuariosylaherramientaLayerSwitcher.
+1. Extender la herramienta UploadGeometries y permi-
+4.2 HerramientasSaveMapImageyLayoutMaker tirañadirgeometríasalseleccionarunarchivoquese
+LaherramientaSaveMapImagedescargalaimagenque encuentre en la computadora personal y tenga en su
+semuestraenelvisordemapas,mientrasLayoutMakerse contenido,lasgeometrías.Permitirañadirgeometrías
+utilizaparaeditarlaimagenmostradaenelvisordemapas. arrastrandoelarchivoquecontienelasgeometríasenel
+EnlaFigura7semuestraelmodalalhacerclicizquierdoen visordemapas.
+laherramientaSaveMapImage.
+2. Implementarnuevosformatosdegeometríasparatra-
+EnlaFigura8sepuedeobservarelmodalquesemuestra
+bajarenelvisordemapas,tantoparadescargarcomo
+alseleccionarlaherramientaLayoutMaker.Desdeestaherra-
+paraañadir.Ejemplodenuevosformatospuedenser:
+mientaconlasdiversasprestacionesquetiene,sepuedeeditar
+Shapefile,TopoJSONyKML.
+lafotomostradaenelvisordemapasysepuedenguardarlos
+cambiosrealizados. 3. Implementarenelvisordemapasunaherramientapara
+laedicióndecapas.Estosepuedehacerconfacilidades
+4.3 Descargar geometrías y cargar geometrías en
+quebrindaOpenLayers.
+distintosformatosenelvisordemapas.
+ParamostrarelcorrectodelasherramientasDownload- 4. Implementarenelvisordemapasunaherramientapa-
+GeometriesFormatsyUploadGeometriesserealizaelcercado raimprimirmapasadistintasescalas(predefinidas)y
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+118 OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas
+distintostamañosdepapel.Añadirestaherramientaen [13] R.Martin.CleanArchitecture:ACraftsman’sGuideto
+LayoutMakertambién. SoftwareStructureandDesign.2017.Pearson.
+[14] Clean Coder Blog. URL:
+5. Añadirnuevostiposdebúsquedaenelvisordemapas.
+https://blog.cleancoder.com/uncle-bob/2012/08/13/the-
+clean-architecture.html. Web; accedid 2 Agosto
+6. Añadirenelvisordemapasunaherramientaparaver
+2020.
+elmapacondistintasescalas.
+[15] M.Fowler.PatternsofEnterpriseApplicationArchitec-
+Referencias
+ture.2002.AddisonWesley.
+[1] J.StarandJ.Estes.GeographicalInformationSystems:
+AnIntroduction.1990.
+[16] Microsoft. ASP.NET MVC Pattern | .NET. URL:
+https://dotnet.microsoft.com/apps/aspnet/mvc.Web;ac-
+[2] P.Bolstad.GISFundamentals:AfirsttextonGeographic
+cedido3Agosto2020.
+InformationSystems.2005.WhiteBearLake,MN:Ei-
+derPress(SecondEdition).
+[17] E. Barrios. Patrón Repositorio (Repository Pattern) y
+[3] C.D.Tomlin.Geographicinformationsystemsandcar- UnidaddeTrabajo(UnitOfWork)enASP.NETCore
+tographicmodeling.1990.PrenticeHall. WebApi 3.0. URL: https://dev.to/ebarrioscode/patron-
+repositorio-repository-pattern-y-unidad-de-trabajo-
+[4] ArcGIS. Acerca de SIG web. URL:
+unit-of-work-en-asp-net-core-webapi-3-0-5goj. Web;
+https://sig/AcercadeSIGweb/Documentación/ArcGISEnterprise.htm.
+accedido4Agosto2020.
+Web;accedido9Agosto2020.
+[5] P.Fu.GettingtoknowWebGIS.2018.EsriPress [18] Microsoft. Implement the infrastructure per-
+sistence layer with Entity Framework Co-
+[6] G. Andorrap. Visor de mapas. URL: re. URL: https://docs.microsoft.com/en-
+https://www.cartografia.ad/visor-de-mapas. Web; us/dotnet/architecture/microservices/microservice-
+accedido9Agosto2020. ddd-cqrs-patterns/infrastructure-persistence-layer-
+implementation-entity-framework-core-implement-
+[7] A.Díaz. Servidores & mdash; Panorama
+custom-repositories-with-entity-framework-core.Web;
+del SIG Libre. URL: https://panorama-sig-
+accedido4Agosto2020.
+libre.readthedocs.io/es/latest/servidores/.Web;accedido
+9Agosto2020.
+[19] S. Chauhan. Implementing Repository and Unit
+[8] OpenStreetMap. OpenStreetMap. URL: of Work Patterns with ASP.NET MVC. URL:
+https://www.openstreetmap.org/about. Web; acce- https://www.dotnettricks.com/learn/mvc/implementing-
+dido22Julio2020. repository-and-unit-of-work-patterns-with-mvc. Web;
+accedido10Agosto2020.
+[9] V.G.I.S.FluvannaCounty.FluvannaCounty,VA.URL:
+https://www.webgis.net/va/fluvanna/.Web;accedido23
+[20] S.Metz.SOLIDObject-OrientedDesign.2009.
+Julio2020.
+[10] abbotsford. abbotsford. URL: [21] G. Fernández. Los 5 principios SOLID. Los princi-
+https://maps.abbotsford.ca/Html5Viewer/. Web; pios SOLID explicados en detalle para el desarrollo
+accedido23Julio2020. de aplicaciones mantenibles y robustas. URL:
+https://medium.com/@ger86/los-5-principios-solid-
+[11] Scotland’senvironmentweb.S.e.web,Whoarewe?. 68d697984abd.Web;accedido410Agosto2020.
+URL:https://www.environment.gov.scot/about-us/who-
+are-we/.Web;accedido23Julio2020.
+[22] V.Plasencia.Diseñoeimplementacióndelaaplicación
+WebGISOpenLatinoMurciaClient.UniversidaddeLa
+[12] C.Medina.Adicióndeherramientasparalagestiónde
+Habana.FacultaddeMatemáticayComputación.2020.
+informacióngeográficaenelvisordemapasOpenLati-
+noViewer:GetFeatureInfo,SpatialQuery,Advanced
+Query, View Focus Highlight y Legend. Universidad [23] F.M.Cal.DesarrollodelanuevaversiónMultiplatafor-
+deLaHabana.FacultaddeMatemáticayComputación. ma de OpenLatinoServer. Universidad de La Habana.
+2019. FacultaddeMatemáticayComputación.2020.
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas 119
+Figura4.ModelodedatosOLMC CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+120 OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas
+Figura5.Funcionalidadesdelvisordemapas
+Figura6.User0usandoelWorkspace1
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas 121
+Figura7.ModalquesemuestraalhacerclicizquierdoenlaherramientaSaveMapImage
+Figura8.HerramientaLayoutMaker
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122
+122 OpenLatinoMurciaClient: SIGWebcontecnologíasabiertas
+Figura9.ModaldelaherramientaDownloadGeometries
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.111-122

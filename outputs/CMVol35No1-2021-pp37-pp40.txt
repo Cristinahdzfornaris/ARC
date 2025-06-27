@@ -1,0 +1,240 @@
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.37-40
+Recibido11-2020,Aceptado04-2021
+Criptoanálisis algebraico a cifrados en bloques
+ligeros
+Algebraic cryptanalysis of lightweight block ciphers
+Roberto Labrada Claro1, Miguel Angel Borges Trenard2*, Mijail Borges Quintana2
+Resumen ElcampodelaCriptografíaLigeraesrelativamentenuevo,suesenciaconsisteenlanecesidadde
+encontrarcompromisosentreligerezayseguridad.EnestetrabajorealizamosunestudiodeSIMONySIMECK,
+loscualessoncifradosenbloquesligeros,yaplicamosunataquealgebraicosobreestoscifrados.Comparamos
+nuestrosresultadosconlosobtenidosporotrosautores.
+Abstract The field of Lightweight Cryptography is relatively new, its essence consists in the need to find
+commitmentsbetweenlightnessandsecurity. InthisworkwepresentastudyofSIMONandSIMECK,whichare
+lightweightblockciphers,andweappliedanalgebraicattackontheseciphers. Wecompareourresultswith
+thoseobtainedbyotherauthors.
+PalabrasClave
+cifradosenbloquesligeros—criptoanálisisalgebraico—basedeGröbner—
+Keywords
+lightweightblockciphers—algebraiccryptanalyis—Gröbnerbasis
+1DireccióndeCriptografía,MinisteriodelInterior,SantiagodeCuba,Cuba,evilrobertolc@gmail.com.
+2DepartamentodeMatemática,UniversidaddeOriente,SantiagodeCuba,Cuba,borgestrenard2014@gmail.com,mijail@uo.edu.cu.
+*AutorparaCorrespondencia
+1. Introducción Siguiendolaanterioridea,lapresentaciónpúblicaen2013
+deltrabajodeespecialistasdelaAgenciadeSeguridadNacio-
+LaCriptografíaLigeraesrelativamentenueva,lamisma naldelosEstadosUnidos([3]),sobrelasFamiliasdeCifrados
+se centra en buscar un compromiso entre ligereza y seguri- en Bloques Ligeros SIMON y SPECK, tuvo impacto en la
+dad. Una interrogante que guía esta tendencia pudiese ser: comunidadcientíficacriptográfica,porlascaracterísticasmuy
+¿cómosepuedellegaraaltosnivelesdeseguridadutilizando buenas de los cifrados y también por el lugar y forma de
+pequeñaspotenciasdecálculo?Enañosrecienteshanrecibido procedenciadelosmismos.
+considerableatenciónlosdenominadosCifradosenBloques Aunqueloscifradosenbloquesligerosseimplementan
+Ligeros(CBL).Encomparaciónconloscifradostradiciona- sobredispositivosrestringidos,nosucedelomismoconlos
+les,losCBLtienendospropiedadesprincipales: criptoanálisis que a ellos se les realizan. Diversos estudios
+se han realizado sobre criptoanálisis a cifrados en bloques
+1)Lasaplicacionessobredispositivosrestringidosnorequie-
+ligeros, ver por ejemplo: [6], en que se realiza un ataque
+rencomoreglaelcifradodegrandesmasasdedatos,porello
+algebraico a cinco rondas del cifrador en bloques SIMON,
+losCBLnonecesitantenergrancapacidadparaelprocesa-
+[1],dondesemuestraquelaversiónmáspequeñadeSIMON
+miento.
+exhibeunmarcadoefectodiferencial.Enlamayoríadelos
+2)LosCBLsonusualmenteimplementadosaniveldehardwa- casos,lasobservacionespresentadasnollevanabiertamentea
+re,enparticularenplataformastalescomomicrocontroladores unataque,sinoqueproveendebasesparafuturosanálisisa
+de8bits. lasvariantesdecifradosespecificadas.
+Sehaceentoncesnecesariolaprogramación,comprensión
+Losdiseñadoresdecifradosligerostienenqueatenderlarela-
+yconocimientossobrevulnerabilidadesdeestetipodecifra-
+cióncosto-seguridad-desempeño.Paraloscifradosenbloques
+dosantelosataquesmásconocidos,tantodeformacompu-
+ligeroslalongituddelaclavedelcifradoeslaquegenerala
+tacional,comoensusfundamentosmatemáticos.Enesadi-
+relación costo-seguridad, la cantidad de rondas del cifrado
+recciónseencuentraelpropósitodelpresentetrabajo,elcual
+proveedelarelaciónseguridad-desempeñoylaarquitectura
+resumeunapartedelatesisdemaestría[4].
+dehardwareproveelarelacióncosto-desempeño.Usualmente,
+dosdeesastresrelacionespudiesenseroptimizadas,siendo
+muycomplejooptimizarlastresalmismotiempo.
+38 Criptoanálisisalgebraicoacifradosenbloquesligeros
+2. Desarrollo 2.2 Modelaciónalgebraicade5rondasdelSIMON
+En[2]seobtieneunarepresentacióndelastransformacio-
+2.1 FamiliadeCifradosenBloquesLigeros
+nesdelcifrado,comounsistemadeecuacionespolinómicas
+Comprenderelfuncionamientointernodeloscifradoses
+en varias variables, reducido a 5 rondas del SIMON32. In-
+elprimerpasoparaencontrardebilidadesofortalezasenellos,
+terpretando el algoritmo y reordenando las ecuaciones de
+requisitoindispensablealmomentodeofreceruncriteriode
+formatalquelasvariablesdesconocidasseencuentrenenel
+seguridadydecidirquécifradousarybajocuálescondiciones.
+miembroizquierdoysustituyendolavariabledesconocidax
+3
+Porloanterior,acontinuaciónsedescribenlasfuncionesde
+porelvalorconocidoC ,elsistemadeecuacionesquedaría
+R
+cifrado y descifrado de los algoritmos escogidos y algunas
+expresadocomosigue:
+de sus propiedades, así como se discute sobre paquetes de x ⊕k = f(P )⊕P , (2)
+0 1 L R
+cálculosparalaejecucióndeestoscifrados.
+x ⊕f(x )⊕k =P , (3)
+1 0 2 L
+2.1.1 FamiliaSIMON x 2 ⊕f(x 1 )⊕x 0 ⊕k 3 =0, (4)
+SIMON[3]esuncifradoliviano,diseñadoporlaAgencia f(x )⊕x ⊕k =C , (5)
+2 1 4 R
+deSeguridadNacionaldelosEstadosUnidos,publicadoenel
+x ⊕k = f(C )⊕C , (6)
+2 5 R L
+veranodel2013,puedeserimplementadotantoensoftware
+k ⊕k ⊕k ⊕(k ≫3)⊕(k ≫1)⊕(k ≫4)=D. (7)
+comoenhardwareyposeeunaltodesempeñoenunavariedad 5 1 2 4 2 4
+dedispositivos.Parasertanflexiblecomoposible,susdise- donde(P ,P )y(C ,C )sonlosladosizquierdoyderecho
+L R L R
+ñadorespresentaronalafamiliaSIMONde10algoritmos,la delostextosclarosycifradorespectivamente,k eslai-ésima
+i
+cualconsisteenunacombinacióndediferentestamañosde clavederonda,x eslaparteizquierdadelasalidadespués
+i−1
+bloquesyclaves. de la ronda i−1, y D es una constante conocida, que es la
+quepermitegenerarcadaclavek apartirdelassiguientes,
+i+m
+FuncióndeRonda segúnlasecuaciones(1).
+SIMONpertenecealafamiliadecifradosenbloquesdel Paraunparodosparesdetextoclaroycifrado,lacantidad
+tipo Feistel. El cifrado y descifrado se basan en las opera- de incógnitas supera a la cantidad de ecuaciones, a partir
+ciones XOR, AND y la rotación circular ≪ j (rotar j bits de 3 pares, se observa una tendencia a que el número de
+a la izquierda). Para cada ronda (r i ), el esquema de Feistel ecuacionesessuperioraldeincógnitas,queesjustoloquese
+operacondoslistasden-bits,unaizquierda(L i−1 )yotrade- recomienda,tantoparalaunicidaddelasolución,comopara
+recha(R i−1 ),creandoelestadoderondade2n-bits.Lamitad laposibilidadderesolverlo.Elsiguientepasoestransformar
+izquierdapasaatravésdeunafunciónencadaronda: las5ecuacionesvectorialesasusrespectivasrepresentaciones
+porcomponentes.
+f(L )=(L ≪1)&(L ≪8)⊕(L ≪2),
+i−1 i−1 i−1 i−1
+2.2.1 Ataque
+donde&denotalaoperaciónANDy⊕denotaaXOR.Luego, Para calcular la solución de los sistemas, se utilizó el
+f(L )sesumaalaotramitadR yalaclavederondaK paquetedebasesdeGröbnerqueposeeelsistemadecálculo
+i−1 i−1 i
+simbólicoMAPLE(Versión18).Todosloscálculosrealizados
+L i = f(L i−1 )⊕R i−1 ⊕K i , sellevaronacaboenuncomputadorconunprocesadorIntel
+Corei7-4790,a3.6GHz,con16GBdeRAM.Pararealizar
+paracrearlanuevaparteizquierdaL i ydefinirlanuevamitad los experimentos se tomó en cada intento una clave y los
+derechacomoR i =L i−1 . respectivostextosclarosdeformaaleatoria,realizándose100
+intentosporcadaexperimento,eltiemporesultantemostrado
+Generacióndelasclavesderonda
+en las Tablas denota el promedio de tiempo de los ataques.
+Lafuncióndegeneracióndelasclavesderondaessimilar
+LasopcionesenlacolumnaderesultadossonS(cuandose
+alafunciónderonda;utilizalasoperacionesXORylarota-
+obtuvo éxito, es decir, se obtuvo la clave) y N cuando no
+cióncircular,soloqueahoraeshacialaderecha,≫ j(rotar
+sepudoobtener,quelosrecursosdelcomputadornofueron
+jvecesaladerecha).Paraevitarpropiedadeslinealesysime-
+suficientespararealizarloscálculos.
+trías en las rotaciones circulares, se agrega a la generación
+Paracadaparencuestión,seobtuvieronlasecuaciones
+de las claves una sucesión de constantes de rondas z . Una
+j de ronda correspondientes. Luego de alcanzado el sistema
+constantectambiénsesumajuntoconz ,dondec=(2n−4).
+j polinómico, se creó el álgebra de polinomios junto con las
+Dependiendodelnúmerom=2,3,4,escogidoparalaentrada,
+ecuacionesdelcampo,paragarantizarquelassolucionesse
+lageneracióndelasclavesserá:k =
+i+m mantuviesenenelcampodetrabajoynoenalgunaextensión
+delmismo.Losresultadosselistanacontinuación(verpágina
+c⊕(z ) ⊕k(I⊕(≫1))(≫3)k ,sim=2,
+j i i i+1
+siguiente).
+c⊕(z ) ⊕k(I⊕(≫1))(≫3)k ,sim=3, (1)
+j i i i+2
+c⊕(z ) ⊕k(I⊕(≫1))(≫3)k ⊕k ,sim=4. 2.3 Modelaciónalgebraicade5rondasdelSIMECK
+j i i i+3 i+1
+La forma de proceder del cifrado SIMECK [7] es muy
+para0≤i<T−m,dondeT eselnúmeroderondas. parecidaaladeSIMONysepuedeapreciarsimilitudentre
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.37-40
+Criptoanálisisalgebraicoacifradosenbloquesligeros 39
+Tabla1.Resultadosdelcriptoanálisisalgebraicoal versiónreducidadelSIMON,utilizandounsoftwaredeltipo
+SIMON32/64. “SAT-solver”([5]).ElataquealSIMONen[2]serealizóenun
+Rondas,Pares,Tiempo(s) Resultado computadorconprocesadorIntelCorei72.70GHz,con16
+5,1,32752.425 N GBdeRAM,yfueimplementadoconelSAT-solverCrypto-
+5,2,1059.797 S MiniSat2.Ellosatacaron5y6rondasdelcifradologrando:
+5,3,2.687 S
+5rondasdelSIMON32/64,contresparesdetextoclaro
+6,3,13.000 S
+ysusrespectivostextoscifrados,eltiempodeejecución
+7,3,27290.922 N
+fuedeunpromediode3.75s,lograndoobtenerlaclave.
+7,4,24350.594 N
+7,5,31623.891 N 6rondasdelSIMON32/64,contresparesdetextoclaro
+7,6,1,94481172∗105 N y sus respectivos textos cifrados, el tiempo de ejecu-
+ciónfuedeunpromediode290.7s,lograndoobtenerla
+clave.
+lasprimitivasdeloscifradosSIMONySIMECK(porlimi-
+tacionesdeespacionosedetallaenestedocumento).Surge Paradospares,segúnafirmanlosautores,seobtenían
+entoncesdeformanaturallainterrogantesiguiente:dadalas sistemasquenoteníansoluciónúnica.
+pocasdiferenciasdelosalgoritmosyteniendoencuentael
+ataquealgebraicoyarealizadosobreelSIMON,¿elcifrado OtroobjetivoquenosllevóaexperimentarconelSIMON
+SIMECK ofrece mayor o menor resistencia que el cifrado vinodirectamentedelocomentadoenelpárrafoanterior,ya
+SIMON? quenossurgiólasiguienteinterrogante:entreelempleode
+Conelobjetivoderespondertalinterrogante,parahacerle SAT-solveroelcálculomedianteBasesdeGröbner,¿concual
+unataquealcifradoSIMECKypoderrealizarcomparacio- métododesolucióndesistemasdeecuacionespolinómicas
+nes,sedecidióprocederdelamismaformapararealizarel seobtienemejorresultado?Entalsentido,sepudoapreciar
+criptoanálisisalgebraico.Utilizandoelmismométodo,selo- quesemejoróeltiempodebúsquedadelaclavelogradoen
+gróobtenerunarepresentacióndelastransformacionesdel [2], lográndose incluso calcular la clave con sólo 2 pares,
+cifradocomounsistemadeecuacionespolinómicasenvarias locualnoseobtuvoen[2];engeneral,elresultadoconlas
+variables. basesdeGröbnerenMAPLEfuemejorqueconlossistemas
+SAT-solversutilizadosen[2].
+2.3.1 Ataque
+Paracadaparencuestión,seobtuvieronlasecuaciones 2.4.2 SIMECK
+de ronda correspondientes, luego de alcanzado el sistema El cifrado SIMECK es un derivado de los cifrados SI-
+polinómico, se creó el álgebra de polinomios junto con las MONySPECK([3]),elcualsegúnlosautores,“hatomado
+ecuacionesdelcampo,paragarantizarquelassolucionesse decadaunolomejorparaconstituiruncifradomásseguroy
+mantuviesenenelcampodetrabajoynoenalgunaextensión máseficiente”.Resultóentoncesinteresantevercómosecom-
+delmismo.LosresultadosselistanenlaTabla2. portabanamboscifradosbajoelmismoataque.Laconclusión
+queseobtuvofueque,paracadaexperimento,eltiempoque
+Tabla2.Resultadosdelcriptoanálisisalgebraicoal demoró calcular la clave del cifrado SIMECK se mantuvo
+SIMECK32/64. siempreporencimadeltiempoquedemoróhallarlaclavedel
+Rondas,Pares,Tiempo(s) Resultado SIMON,queeraloesperado.
+5,1,23949.844 N
+5,2,1606.359 S 3. Conclusiones
+5,3,2.903 S
+Losresultadosdescritosenestetrabajomuestranunes-
+6,3,17651.625 S
+tudiodeloscifradospertenecientesalaFamiliadeCifrados
+6,4,408.266 S
+enBloquesLigerosyunavaloraciónsobresuresistenciaal
+7,3,11697.141 N
+criptoanálisisalgebraico.Seestudiócondetalleelmodode
+7,4,15716.469 N
+operardelasfuncionesdecifradoydescifradodelosalgo-
+7,5,19288.454 N
+ritmosescogidos,asícomoalgunaspropiedadesqueposeen.
+7,6,33762.937 N
+Tambiénseprogramaronpaquetesdecálculoparaelcifradoy
+descifradodelosprincipalesmiembrosdeestasfamilias.
+Sehallólamodelaciónalgebraicadeimportantesopera-
+2.4 Resumenycontrastedelosataques cionesdecifradoyfueronprogramadasalgunastécnicaspara
+2.4.1 SIMON elcriptoanálisisalgebraico.Estastécnicasseaplicaronalos
+DesdelavistaaluzpúblicadelcifradoSIMON,varios cifradosSIMONySIMECK.
+artículoshanintentadoatacarlo,véaseporejemplo[2],donde Comoresultadodirectodelasexperimentaciones,sellegó
+serealizaunataquealgebraicoatextoclaroconocidodeuna alaconclusiónqueengeneral,elresultadoconlasbasesde
+CienciasMatemáticas,Vol.35,No.1,202,Pag.37-40
+40 Criptoanálisisalgebraicoacifradosenbloquesligeros
+Gröbner en MAPLE fue mejor que con los sistemas “SAT- [4] Claro,R.Labrada:CriptoanálisisAlgebraicoaCifrados
+solvers”,utilizadosen[2],loqueconstituyeunaalternativaal enBloquesLigeros. TesisenopciónaltítulodeMáster
+ataqueantesmencionado. enMatemática.UniversidaddeLaHabana,Cuba,2018.
+[5] Gomes,CarlaP,HenryKautz,AshishSabharwalyBart
+Referencias
+Selman:Satisfiabilitysolvers. FoundationsofArtificial
+[1] AlKhzaimi,HodayMartinMLauridsen:Cryptanalysis Intelligence,3:89–134,2008.
+oftheSIMONFamilyofBlockCiphers. IACRCryptology
+[6] M.A. Borges-Trenard, R. Labrada Claro: Ataque alge-
+ePrintArchive,2013:543,2013.
+braico a cinco rondas del cifrado en bloques SIMON.
+[2] Astrid,Berghult:Apracticalcomparisonbetweenalge- Congreso Internacional Compumat. La Habana, Cuba,
+braic and statistical attacks on the lightweight cipher 2017.
+SIMON,2016.
+[7] Yang,Gangqiang,BoZhu,ValentinSuder,MarkDAa-
+[3] Beaulieu, Ray, Stefan Treatman-Clark, Douglas Shors, gaardyGuangGong:Thesimeckfamilyoflightweight
+BryanWeeks,JasonSmithyLouisWingers:TheSIMON blockciphers. EnInternationalWorkshoponCryptograp-
+and SPECK lightweight block ciphers. En 2015 52nd hicHardwareandEmbeddedSystems,páginas307–329.
+ACM/EDAC/IEEEDesignAutomationConference(DAC), Springer,2015.
+páginas1–6.IEEE,2015.
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.37-40

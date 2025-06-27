@@ -1,0 +1,403 @@
+Sociedad Cubana de Matemática y Computación
+Algoritmo para el cálculo de la matriz inversa
+de una matriz en GF(p), p-primo
+Solution of a boundary problem Very Complex for hyperbolic equations: Case Zero Index
+Pablo Freyre, Nelson Díaz (pfreyre@matcom.uh.cu)
+Facultad de Matemática y Computación, Universidad de La Habana. Cuba
+Resumen polynomials associated with to matrix A. The algorithm is im-
+plemented on Mathematica language.
+En este trabajo se presenta un nuevo algoritmo que permite dada
+Key Words: Primitive polynomials, lineal equation sys-
+una matriz invertible, con sus elementos pertenecientes al cam-
+tems, invertible matrix.
+po de Galois GF(p), p–primo, obtener su inversa. El algoritmo
+transforma la matriz escrita en su forma clásica, en polinomios
+y elementos del campo GF(p), a partir de los cuales se calcula la
+inversa de la matriz. La ventaja de este algoritmo, con respecto 1. Introducción
+a otros algoritmos, es que permite resolver el sistema de ecua-
+ciones X = YA-1 con Y y A conocidos, donde A ! GLn(GF(p))1 En muchas aplicaciones prácticas se presenta la necesidad de re-
+y X, Y ! (GF(p))n, sin necesidad de calcular explícitamente la solver un sistema de ecuaciones lineales en un Campo de Galois
+matriz inversa, sino utilizando los polinomios asociados a la ma- GF(p), p-primo. Reviste por tanto interés práctico el desarrollo
+triz A. El algoritmo está implementado en lenguaje Mathematica. de algoritmos efi cientes para tales fi nes.
+Palabras clave: Polinomios primitivos, sistemas de ecua- El objetivo de este trabajo es exponer la implementación,
+ciones lineales, matriz inversa. en lenguaje Mathematica, de un nuevo algoritmo que permite
+dado una matriz invertible, con sus elementos pertenecientes
+Abstract
+al campo GF(p), obtener su inversa. El algoritmo resuelve el
+In this work we present a new algorithm that allows, given an sistema de ecuaciones Y = XA cuando se conoce Y y A, donde
+invertible matrix defi ned over GF(p), p-prime, obtain their in- A ! GL (GF(p)) y X , Y ! (GF(p))n, sin necesidad de calcular
+n
+verse. The algorithm transforms the matrix written in its classi- explícitamente la matriz inversa.
+cal form into polynomials and elements the fi eld GF(p), starting En el trabajo de Freyre P., Díaz N. y Morgado E. R. (2009)
+from which the inverse of the matrix is calculated. The advan- se presenta este algoritmo en pseudocódigo con su fundamen-
+tage of this algorithm is that it allows to solve equations sys- tación para el caso general en que las matrices se encuentran
+tem in the form X = YA-1, with known Y and A, where A ! defi nidas en un campo fi nito arbitrario. En Freyre P. y Díaz N.
+GLn (GF(p)) and Y, X ! (GF(p))n, with no need to calculate (2007) se muestra este algoritmo implementado en lenguaje
+explicitly the inverted matrix, but using instead the inverted Mathematica para el caso particular en que las matrices están
+defi nidas en el campo GF(2). Las operaciones que se deben
+1 GL(GF(p)) – Grupo Lineal General en GF(p).
+n
+— 64 —
+Revista Ciencias Matemáticas
+realizar en el algoritmo son el cálculo de la inversa de polino- coefi cientes de los polinomios defi nidos en el campo GF(p)
+mios y la multiplicación de polinomios módulos polinomios asociados a la matriz m.
+primitivos para polinomios defi nidos en el campo GF(p).
+Clear[Creavbc]
+En el presente trabajo se muestran varios ejemplos de cálcu-
+Creavbc[n_, i_, v _, vbc_, lpp_] :=
+lo de la matriz inversa de una matriz invertible A y posterior- Block[{x = 0, t, z, y = PadLeft[{}, n]},
+mente dada la matriz A y el vector Y se resuelve el sistema de z = lpp[[i]][Take[vbc[[i]], {i, n}]];
+t = lpp[[i]][Take[y, {i, n}]];
+ecuaciones X = YA-1. Los ejemplos se realizan para matrices
+If[TrueQ[z[[1]] != t[[1]]], t = lpp[[i]][Take[v,
+defi nidas en GF(p) con p = 2, 3, 5, y 7. {i, n}]]*(z^-1);
+If[TrueQ[t == 0], t = lpp[[i]][Take[y, {i,
+n}]]];
+x = lpp[[1]][Take[v, {1, i - 1}]] –
+lpp[[1]][Take[vbc[[i]], {1, i -
+2. Desarrollo
+1}]]*lpp[[1]][t[[1]][[{1}]]];
+];
+If[TrueQ[x == 0], x = lpp[[1]][PadLeft[{},
+Los algoritmos que a continuación se citan, se encuentran im- n]]];
+Return[Join[Take[x[[1]], {1, i - 1}],
+plementados en lenguaje Mathematica y en ambos casos tene-
+t[[1]]]];
+mos que: ]
+Clear[Fpolinomial]
+n Es el grado de la matriz. Fpolinomial[n_, m _, lpp_] :=
+lpp Es la lista de polinomios primitivos a utilizarse en el algo- Block[{vbc = {}, i, j, vec, y = PadLeft[{}, n]},
+For[j = 1, j <= n, j++,
+ritmo, que van en grado descendente desde n hasta 1. Los n
+i = 0; vec = m[[j]];
+polinomios primitivos seleccionados se calculan a priori y While[(i = i + 1) < j,
+vec = Creavbc[n, i, vec, vbc, lpp];
+no hay restricción en su selección. (ver Lidl R. y Niederreiter
+If[Take[vec, {i, n}] == Take[y, {i, n}],
+H. (1994) y Peterson W.W. y Weldon J. E. (1972)). Print[“Verifi que si la matriz es
+inversible.”]; Return[y]]
+];
+If[Take[vec, {i, n}] == Take[y, {i, n}],
+Print[“Verifi que si la matriz es inversi
+3. Algoritmo para el cálculo
+ble.“]; Return[y]];
+de la matriz inversa AppendTo[vbc, vec]
+];
+Return[vbc];
+]
+El algoritmo para el cálculo de la matriz inversa consta de dos
+pasos:
+4. Algoritmo para el cálculo
+• Algoritmo que expresa la matriz a través de polinomios y
+de la matriz inversa
+elementos del campo GF(p), p-primo.
+• Algoritmo para el cálculo de la matriz inversa.
+Programación del algoritmo:
+3.1 Algoritmo que expresa la matriz vbc Son los valores de los elementos del campo GF(p) y de los
+a través de polinomios y elementos de GF(p) coefi cientes de los polinomios defi nidos en el campo GF(p)
+asociados a la matriz anterior.
+m Es la matriz inversa.
+Programación del algoritmo:
+m Es la matriz a la que se le va a calcular su inversa.
+Clear[ILb]
+vbc Son los valores de los elementos del campo GF(p) y de los
+ILb[n_, i_, v _, vbc_, lpp_] :=
+— 65 —
+Sociedad Cubana de Matemática y Computación
+Block[{x, t, z}, algoritmos que se reportan en Menezes, Van Oorschot y Vars-
+t = lpp[[i]][Take[v, {i, n}]]*(lpp[[i]][Take[-
+ton (1996) para la multiplicación y cálculo de la inversa de po-
+vbc[[i]], {i, n}]]^-1);
+If[TrueQ[t == 0], t = lpp[[i]][PadLeft[{}, n linomios módulo polinomios primitivos defi nidos en el campo
++ 1 - i]]];
+GF(p), p-primo, con polinomios primitivos con un número mí-
+x = lpp[[1]][Take[v, {1, i - 1}]] –
+lpp[[1]][Take[vbc[[i]], {1, i - nimo de coefi cientes.
+1}]]*lpp[[1]][t[[1]][[{1}]]];
+If[TrueQ[x == 0], x = lpp[[1]][PadLeft[{},
+Ejemplos:
+n]]];
+Return[Join[Take[x[[1]], {1, i - 1}], t[[1]]]]; En los ejemplos que se exponen a continuación primero se
+]
+calcula la matriz inversa de la matriz m y posteriormente dada
+Clear[Invmatriz] la matriz m y el vector Y se resuelve el sistema de ecuaciones
+Invmatriz[n_, vbc_, lpp_] :=
+X = Ym-1 sin necesidad de calcular explícitamente la matriz
+Block[{m = {}, v = IdentityMatrix[n], i, j,
+vec}, inversa. Los polinomios primitivos utilizados en los ejemplos
+For[j = 1, j <= n, j++,
+fueron tomados de la tabla C.2 de Peterson W. W. y Weldon J.
+i = 0; vec = v[[j]];
+While[(i = i + 1) < n + 1,vec = ILb[n, i, E. (1972) para p = 2 y de la tabla F de Lidl R. y Niederreiter H.
+vec, vbc, lpp]];
+(1994) para p = 3, 5 y 7.
+AppendTo[m, vec]
+];
+Return[m]; Ejemplos:
+]
+1. Cálculo de la matriz inversa de la matriz m defi nida en
+GF(2) que se expresa a continuación:
+5. Algoritmo para resolver
+J N
+la ecuacion X = YA-1 conociendo K K K 0 1 1 0 0 1 1 0 0 1O O O
+K K0 1 1 1 0 1 1 0 1 1O O
+los valores de la matriz a y el vector Y K K K0 1 1 0 1 0 0 1 0 0 O O O
+K O
+K K0 0 1 1 0 1 1 1 1 1O O
+K O
+K K0 1 0 1 0 0 0 0 0 1O O
+Programación del algoritmo: K K O O
+K0 0 0 0 0 0 0 0 1 1O
+K O
+y Valor del vector Y. K K0 1 0 0 1 0 1 0 0 0 O O
+K O
+K O
+m Es la matriz A. K K 1 0 0 0 1 1 0 0 0 1O O
+K O
+K0 0 1 1 1 0 1 0 0 0O
+x Valor del vector X. K O
+K O
+1 1 0 1 0 0 0 0 0 1
+L P
+Clear[Resolver] Los polinomios primitivos son: 1 + x3 + x10; 1 + x4 + x9;
+Resolver[n_,m _,y _,lpp_]:=
+1 + x2 + x3 + x4 + x8; 1 + x3 + x7; 1 + x + x6; 1 + x2 + x5; 1 + x + x4;
+Block[{vbc, i, x},
+vbc=Fpolinomial[n,m,lpp]; 1 + x + x3; 1 + x + x2; 1 + x.
+If[TrueQ[vbc PadLeft[{},n]],Prin-
+t[«Verifi que si la matriz
+<<Algebra`FiniteFields`
+inversible.”];Return[vbc]];
+lpp = {GF[2,{1,0,0,1,0,0,0,0,0,0,1}],GF[2,{1,0,0,0,1,0,0,0,
+i=0;x=y;While[(i=i+1)<n+1,x=ILb[n,i,x,vbc,l-
+0,1}],GF[2,{1,0,1,1,1,0,0,0, 1}],GF[2,{1,0,0,
+pp]];
+1,0,0,0,1}],GF[2,{1,1,0,0,0,0,1}],GF[2,{1,0,1,
+Return[x];
+0,0,1}],GF[2,{1,1,0,0,1}],GF[2,{1,1,0,1}],
+]
+GF[2,{1,1,1}],GF[2,{1,1}]}
+m = {{0,1,1,0,0,1,1,0,0,1},{0,1,1,1,0,1,1,0,1,1},{0,1,1,0,
+En los algoritmos anteriores se han utilizado las funciones pro- 1,0,0,1,0,0},{0,0,1,1,0,1,1,1,1,1},{0,1,0,1,0,0,0,0,
+0,1},{0,0,0,0,0,0,0,0,1,1},{0,1,0,0,1,0,1,0,0,0},{1,
+pias del lenguaje Mathematica para el cálculo de la inversa de
+0,0,0,1,1,0,0,0,1},{0,0,1,1,1,0,1,0,0,0},{1,1,0,1,0,
+polinomios y la multiplicación de polinomios módulos poli- 0,0,0,0,1}}
+vbc = Fpolinomial[10,m,lpp];
+nomios primitivos, pero en una implementación específi ca se
+t = Invmatriz[10,vbc,lpp];
+puede aumentar la velocidad de procesamiento utilizando los MatrixForm[%]
+— 66 —
+Revista Ciencias Matemáticas
+J K K0 0 0 0 1 0 0 0 0 1 N O O y = {0,1,1,0,1}
+K O x = Resolver[5, m, y, lpp]
+K K K 1 1 0 0 1 1 0 0 0 0O O O x = {0,1,0,1,0}
+K K1 0 0 0 1 0 1 1 0 1O O
+K O
+K K0 1 0 0 0 1 0 1 1 1O O
+K O
+K K1 1 1 1 1 0 1 1 0 1O O
+K O
+K K0 1 1 1 0 0 1 1 1 1 O O 3. Cálculo de la matriz inversa
+K O
+K O
+K K 0 0 1 1 0 1 0 1 0 1O O de la matriz m defi nida en GF(3)
+K O
+K1 0 0 1 1 1 0 0 0 0O
+K K O O que se expresa a continuación
+K1 0 0 0 0 1 0 1 1 1O
+K O
+K O
+1 0 0 0 0 0 0 1 1 1
+L P
+J N
+K0 2 2 2 0 1 2 2 0 2 2O
+K O
+Resolución del sistema x = y m-1 utilizando el algoritmo # 2 y K K K0 2 1 1 1 1 2 2 0 1 0 O O O
+K O
+teniendo como datos de entrada: la matriz m expuesta al co- K K0 1 0 2 0 2 1 1 1 2 0O O
+K O
+mienzo del ejemplo y el vector y: K K0 2 0 0 0 0 1 0 0 1 1O O
+K O
+K K2 0 2 0 0 2 0 0 0 2 2O O
+K O
+K K1 1 2 2 2 1 2 1 0 1 0O O
+y = {1,0,1,1,1,0,0,1,1,1} K O
+K O
+x = Resolver[10, m, y, lpp] K K 1 1 0 0 1 0 2 1 0 0 0O O
+K O
+x = {1,0,1,0,0,1,0,1,1,0} K1 2 2 1 2 0 2 2 1 0 2O
+K O
+K O
+K0 1 0 0 2 1 0 2 0 0 1O
+K O
+K O
+K2 0 0 1 2 0 1 2 0 1 1O
+K
+K
+O
+O
+0 2 0 1 1 2 2 0 0 0 0
+L P
+2. Cálculo de la matriz inversa
+Los polinomios primitivos son:
+de la matriz m defi nida en GF(2)
+1 + x4 + x10 + x11; 2 + x7 + x9 + x10;
+que se expresa a continuación
+1 + x5 + x7 + x9; 2 + x5 + x8; 1 + x4 + x6 + x7; 2 + x5 + x6;
+1 + x2 + x4 + x5; 2 + x3 + x4; 1 + 2x2 + x3; 2 + x + x2; 1+x.
+J N
+K K0 0 1 0 0O O
+K O
+K K0 1 0 1 0O O
+K O <<Algebra`FiniteFields`
+K K1 1 0 0 0O O
+K O lpp = {GF[3,{1,0,0,0,1,0,0,0,0,0,1,1}],GF[3,{2,0,0,0,0,0,0,
+K K KK 0 0 1 1 1O O OO lpp = {GF[3,{1,0,1,1}],GF[3,{1,0,0,0,0,1,0,1,0,1}],GF[3,{2,
+L 1 0 1 1 1 P lpp = {GF[3,{0,0,0,0,1,0,0,1}],GF[3,{1,0,0,0,1,0,1,1}],
+lpp = {GF[3,{2,0,0,0,0,1,1}],GF[3,{1,0,1,0,1,1}],GF[3,{2,0,
+Los polinomios primitivos son: 1 + x2 + x5; 1 + x + x4; 1 + x +
+lpp = {0,1,1}],GF[3,{1,0,2,1}],GF[3,{2,1,1}],GF[3,{1,1}]}
++ x3; 1 + x + x2; 1+x. m = {{0,2,2,2,0,1,2,2,0,2,2},{0,2,1,1,1,1,2,2,0,1,0},{0,1,
+m = {{0,2,0,2,1,1,1,2,0},{0,2,0,0,0,0,1,0,0,1,1},{2,0,2,0,
+m = {{0,2,0,0,0,2,2},{1,1,2,2,2,1,2,1,0,1,0},{1,1,0,0,1,0,
+<<Algebra`FiniteFields`
+m = {{2,1,0,0,0},{1,2,2,1,2,0,2,2,1,0,2},{0,1,0,0,2,1,0,2,
+lpp = {GF[2,{1,0,1,0,0,1}],GF[2,{1,1,0,0,1}],GF[2,{1,1,
+m = {{0,0,1},{2,0,0,1,2,0,1,2,0,1,1},{0,2,0,1,1,2,2,0,0,0,
+0,1}],GF[2,{1,1,1}],GF[2,{1,1}]}
+m = {{0}}
+m = {{0,0,1,0,0},{0,1,0,1,0},{1,1,0,0,0},{0,0,1,1,1},{1,0,1,1,1}}
+vbc = Fpolinomial[11,m,lpp];
+vbc = Fpolinomial[5,m,lpp];
+t = Invmatriz[11,vbc,lpp];
+t = Invmatriz[5,vbc,lpp];
+MatrixForm[%]
+MatrixForm[%]
+J N
+JK
+K2 1 2 2 0 1 2 1 1 0 0
+NO
+O
+K K K 0 0 0 1 1O O O K K K0 2 1 0 1 2 1 2 2 1 1 O O O
+K K K K K1 0 0 0 1 0 1 0 1 0 O O O O O K K K K K K1 2 2 2 1 2 2 2 2 2 1 1 2 0 1 2 1 2 0 0 2 0 O O O O O O
+K O K O
+K K0 1 1 1 1O O K K0 1 0 2 0 1 1 0 2 2 1O O
+KK
+1 1 1 0 1
+OO K
+K K0 1 0 1 0 1 2 0 2 0 0
+O
+O O
+L P K O
+K K1 0 1 0 1 2 1 2 0 1 1O O
+K O
+Resolución del sistema x = y m-1 utilizando el algoritmo # 2 y K K2 2 1 0 0 1 1 2 1 1 2 O O
+K O
+K O
+teniendo como datos de entrada: la matriz m expuesta al co- K K 1 1 0 2 1 1 0 1 0 1 2O O
+K O
+K0 2 0 1 1 1 1 0 2 1 1O
+mienzo del ejemplo y el vector y: K K O O
+L2 0 0 0 2 2 2 0 0 2 2P
+— 67 —
+Sociedad Cubana de Matemática y Computación
+Resolución del sistema x = y m-1 utilizando el algoritmo # 2, con da- 5. Cálculo de la matriz inversa
+tos de entrada: la matriz m del comienzo del ejemplo y el vector y: de la matriz m defi nida en GF(7)
+que se expresa a continuación
+y = {2,1,2,1,2,0,0,1,0,0,0}
+x = Resolver[11, m, y, lpp]
+x = {2,2,1,1,1,1,0,2,1,0,1} J K K6 1 3 3 4 2 3 0 0 3 N O O
+K O
+K K2 2 3 1 5 1 3 1 6 6O O
+K O
+4. Cálculo de la matriz inversa K K K 2 2 4 2 5 5 1 6 4 0O O O
+K K2 1 1 5 1 6 2 3 4 6O O
+K O
+de la matriz m defi nida en GF(5) K K2 1 5 6 0 0 6 1 4 1O O
+K O
+que se expresa a continuación K K K 2 1 6 0 3 5 6 6 1 6O O O
+K O
+K0 4 3 2 2 6 6 3 1 2O
+K O
+K O
+K3 6 4 3 2 0 1 4 5 1O
+K O
+JK
+K K K K K 2 3 1 3 0 0 2 4 4 4 2 0 2 4 0 0 2 0
+NO
+O O O O O L
+K
+K K K 1 2 6 4 2 4 2 3 5 0 6 0 6 2 3 4 5 4 5 4
+O
+O O O P
+K K4 1 4 2 0 0 3 0 4O O
+K K K3 0 0 3 1 1 4 4 0 O O O Los polinomios primitivos son:
+K O
+K K1 1 0 1 1 1 0 3 3O O 3 + x8 + x9 + x10; 2 + x3 + x8 + x9; 3 + x7 + x8; 4 + x5 + x7;
+K O
+K K4 2 2 2 3 3 0 0 1O O
+K O 3 + x4 + x5 + x6; 4 + x4 + x5; 3 + x2 + x3 + x4; 2 + x + x2 + x3;
+K O
+K3 0 1 4 4 2 1 3 4O
+K O
+K K4 3 4 0 0 3 3 1 2 O O 3 + x + x2; 2+x.
+K O
+KK OO
+0 1 3 2 0 1 4 2 3
+L P
+Los polinomios primitivos son: <<Algebra`FiniteFields`
+lpp = {GF[7,{3,0,0,0,0,0,0,0,1,1,1}],GF[7,{2,0,0,1,0,0,0,0,
+3 + x6 + x7 + x9; 3 + x3 + x5 + x8; 2 + x6 + x7; 2 + x5 + x6;
+1,1}],GF[7,{3,0,0,0,0,0,0,1,1}],GF[7,{4,0,0,0,
+2 + x2 + x5; 3 + x + x3 + x4; 2 + x2 + x3; 2 + x + x2; 2+x. 0,1,0,1}],GF[7,{3,0,0,0,1,1,1}],GF[7,{4,0,0,0,
+1,1}],GF[7,{3,0,1,1,1}],GF[7,{2,1,1,1}],GF[7,{
+<<Algebra`FiniteFields` 3,1,1}],GF[7,{2,1}]}
+lpp = {GF[5,{3,0,0,0,0,0,1,1,0,1}],GF[5,{3,0,0,1,0,1,0,0, m = {{6,1,3,3,4,2,3,0,0,3},{2,2,3,1,5,1,3,1,6,6},{2,2,4,2,
+1}],GF[5,{2,0,0,0,0,0,1,1}],GF[5,{2,0,0,0,0,1, 5,5,1,6,4,0},{2,1,1,5,1,6,2,3,4,6},{2,1,5,6,0,0,6,1,
+1}],GF[5,{2,0,1,0,0,1}],GF[5,{3,1,0,1,1}], 4,1},{2,4,6,0,3,5,6,6,1,6},{0,4,3,2,2,6,6,3,1,2},{3,
+GF[5,{2,0,1,1}],GF[5,{2,1,1}],GF[5,{2,1}]} 6,4,3,2,0,1,4,5,1},{1,6,2,3,5,6,6,4,5,5},{2,4,4,2,0,
+m = {{3,1,0,4,4,0,4,0,2},{2,3,0,2,4,2,2,0,0},{4,1,4,2,0,0, 0,2,3,4,4}}
+3,0,4},{3,0,0,3,1,1,4,4,0},{1,1,0,1,1,1,0,3,3},{4,2, vbc = Fpolinomial[10,m,lpp];
+2,2,3,3,0,0,1},{3,0,1,4,4,2,1,3,4},{4,3,4,0,0,3,3,1, t = Invmatriz[10,vbc,lpp];
+2},{0,1,3,2,0,1,4,2,3}} MatrixForm[%]
+vbc = Fpolinomial[9,m,lpp]; J N
+K K4 4 1 4 3 0 2 4 4 0O O
+t = Invmatriz[9,vbc,lpp]; K O
+MatrixForm[%] K K K 1 5 2 1 1 4 6 5 2 0O O O
+JK K2 4 2 2 4 3 4 0 4 NO O K K K 0 3 3 4 1 1 2 0 3 4O O O
+K K K K K K 0 4 1 4 1 4 1 2 3 0 1 2 2 4 1 3 1 0 O O O O O O K K K K K 5 4 2 2 1 3 6 0 5 2 4 4 3 0 1 6 6 4 1 0 O O O O O
+K O K O
+K K K K K K K K 3 3 0 1 1 4 3 0 4 1 0 4 2 3 4 2 3 4 1 2 0 1 1 0 2 0 4 O O O O O O O O K K K K K K K 5 6 5 0 5 5 6 4 5 5 0 4 2 3 3 6 5 6 2 5 O O O O O O O
+K O K6 3 0 2 1 6 6 5 2 0O
+K K K K K K 3 4 3 3 1 3 1 4 2 0 1 1 0 0 1 3 4 4 O O O O O O K K K K K 3 6 3 2 0 1 5 3 4 4 O O O O O
+KK OO 5 1 5 1 6 3 5 3 3 5
+1 0 4 1 4 3 3 2 4 L P
+L P
+Resolución del sistema x = y m-1 utilizando el algoritmo # 2 y Resolución del sistema x = y m-1 utilizando el algoritmo # 2 y
+teniendo como datos de entrada: la matriz m expuesta al co- teniendo como datos de entrada: la matriz m expuesta al co-
+mienzo del ejemplo y el vector y: mienzo del ejemplo y el vector y:
+y = {5,6,5,6,5,2,2,4,3,1}
+y = {3,2,1,2,0,4,1,1,3}
+x = Resolver[10, m, y, lpp]
+x = Resolver[11, m, y, lpp]
+x = {3,2,5,5,4,6,6,1,1,1}
+x = {2,1,4,0,1,4,0,3,0}
+— 68 —
+Revista Ciencias Matemáticas
+Bibliografía
+FREYRE P., DÍAZ N Y MORGADO E. R. (2009). “Some algorithms
+related to matrices with entries in fi nite fi eld”. Journal of Discrete
+Mathematical Science and Cryptography. India.
+FREYRE P. Y DÍAZ N. (2007). “Nuevo Algoritmo para el Cálculo de
+la Matriz Inversa”. Revista Investigación Operacional. Vol. 28. No.
+2. 179-185. Habana.
+GOLOMB W. S. (1982). “Shift Register Secuences”. Aegean Park
+Press. California.
+MENEZES A., VAN OORSCHOT P. AND VARSTONE S. (1996).
+“Handbook of Applied Cryptography”. CRC. Press.
+LIDL R. Y NIEDERREITER H. (1994). “Introduction to Finite
+Fields and their Applications”. Cambridge University.
+PETERSON W.W. Y WELDON J. E. (1972). “Error-Correcting Co-
+des”. John Wiley and Sons, Inc. New York. 2ed.
+— 69 —

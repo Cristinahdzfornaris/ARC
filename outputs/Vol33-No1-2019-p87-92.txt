@@ -1,0 +1,1133 @@
+CienciasMatema´ticas,Vol.33,No.1,Pag.87-92,2019
+Construction of MDS matrices combining the Feistel
+and Lai-Massey schemes
+Ramses Rodr´ıguez Aulet1, Reynier A. de la Cruz Jime´nez1*
+Abstract InCryptographymaximumdistanceseparable(MDS)matricesareanimportantstructuralelementto
+providethediffusionpropertyintheblockciphers,streamciphersandhashfunctions. Todiscovernewkindof
+transformationsthatcangenerateaseriesofnewMDSmatriceswhichcouldbeusedinpracticeisnotatrivial
+task. Inthisarticleweproposenewmethodsforconstructingsuchmatricescombiningthewell-knownFeistel
+andLai-Masseystructures.
+Keywords
+Diffusion—Involutorymatrix—Almostinvolutorymatrix—MDSmatrix
+1InstitutodeCriptograf´ıa,UniversidaddeLaHabana,LaHabana,Cuba,djr.antonio537@gmail.com
+*AutorparaCorrespondencia
+Introduction binarymatriceswithahighdegreeofdiffusionbyexploiting
+thepropertiesoftheFeistelnetworkandin[19]itisshown
+In the work [4] Claude Shannon defines confusion and
+thatusingthegeneralFeistelnetworksitispossibletobuild
+diffusion as two properties necessary for the construction
+MDSmatricesonfinitefields,inthiscasetheauthorsdonot
+ofblockciphers; thesepropertiesarealsorequiredforcon-
+buildinvolutoryMDSmatrices. Theaimofthisarticleisto
+structionofhashfunctions. Onestrategytoobtainmaximum
+buildinvolutoryoralmostinvolutoryMDSmatricescombin-
+diffusion and avoid linear and differential attacks is to use
+ingLai-MasseyandFeistelschemes.
+globallinearmappingswithoptimaldiffusion,combinedwith
+Thisarticleisstructuredasfollows: InSection2wegive
+thelocalnonlinearmappings(S-Boxes)(see[9,10,11]). The
+thebasicdefinitionsandsomeresultsaboutMDSmatrices.
+lineartransformationschoosebydesignersshouldbeableto
+Some construcions which can generate MDS matrices are
+spreadtheinternaldependenciesasmuchaspossible. Hence,
+presentedinSection3. Weprovideanimplementationofa
+designerscommonlyusedoptimaldiffusionmatricescalled
+concretematrixinSection4. Acomparisonwiththestate-oh-
+MaximumDistanceSeparable(becausetheyarerelatedtoa
+the-artisperformedinSection5. Ourworkisconcludedin
+MaximumDistanceSeparablecode)matricestomaximisethe
+Section6.
+diffusionabilityofthediffusionlayer. Exampleoftheiruse
+canbefoundnoonlyinthedesignofblockcipherslikeAES,
+1. Preliminaries and Basic Definitions
+TwoFish,KHAZAD,Picaro,etc,butalsointheHashfunction
+PHOTON[15],Whirlpool,Grostl,andeveninstreamciphers Let be P=GF(2t)=GF(2)[x]/g(x) finite field with 2t
+(MUGI). elements,forsomeirreduciblepolynomialg(x)ofdegreet.
+From practical point of view, is not only desirable that ThevectorspaceofdimensionnoverPisdenotedbyPn. We
+anMDSmatrixcanbeimplementedefficientlybothinsoft- usethenotationP n,n fortheringofn×nmatricesoverfinite
+ware/hardwarebutalsowhenencryptionanddecryptionim- field P. Throughout the article, we shall use the following
+plementationsarerequiredandtheinverseoftheMDSmatrix operationsandnotations:
+willhavetobeimplementedaswell(exceptforFeisteland
+1 -theneutralelementofthemultiplicativegroupP∗;
+Lai-Masseystructures,wheretheinverseoftheinternalfunc-
+⊕ -additioninGF(2t);
+tionisnotrequiredfordecryption[2]). Forthisreasonitis
+w ((cid:126)a) -theHammingweightofavector(cid:126)a∈Pn;
+of a great significance that one can use exactly (or almost H
+ω(M) -thenumberof1’sinthematrixM;
+exactly) the same linear transformarion for encryption and
+Ψ−1 -theinversetransformationtosome
+decryption. Onestrategytoachievethisgoalisemployingin-
+invertiblemappingΨ;
+volutoryMDSmatricesandwecanfoundseveralcipherslike
+I -theidenticalmatrixofP .
+Anubis,Khazad,IcebergorPrincethatusingthisapproach n,n n,n
+O -thezeromatrixofP .
+havethesameimplementationforencryptionanddecryption. n,n n,n
+|A| -thedeterminantofthematrixofA∈P .
+n,n
+TheconstructionofMDSmatrices,isnotaneasyproblem
+tosolve. Thereareseveralwaysforconstructingsuchmatri-
+ces,forinstances: usingtheCauchyandHadamardmatrices Inwhatfollows,forthesakeofsimplicityweshallwritea
+[20]. In[1]itisshownthatitispossibletobuildinvolutive polynomialasitscoefficientvectorinterpretedasahexadeci-
+88 ConstructionofMDSmatricescombiningtheFeistelandLai-Masseyschemes
+malnumber,forexample,x8⊕x4⊕x3⊕x2⊕1correspondsto Definition7 LetbeA=(a ) anarbitrarymatrixoverP.
+ij n×n
+0x11D.Weextendthesamephilosophytomatricesoverfinite WesaythatAhasthealmostinvolutorypropertyif
+fieldP,i.e.,eachcoefficientofsuchmatrixwillbewritenin
+1. A−1(cid:54)=A;
+hexadecimalnotation.
+2. AllcoefficientsofAcanbefoundinA−1too.
+Definition1 Antransformationϕ :Pn→Pniscalledinvolu-
+tive,if∀α ∈Pnthefollowingequalityholdϕ(ϕ(α))=α.
+Forexample,letbeP=GF(24)/0x13and
+Clearly,ifϕ isaninvolutivetransformationthenforany M = (cid:0) 1 C (cid:1) ∈P .
+φ :Pn →Pn the transformation ϕˆ =φ◦ϕ◦φ−1 will be an 2×2 C E 2,2
+ivolutiontoo. ItcanbeeasycheckedthatM−1 = (cid:0) E C (cid:1) ∈P and
+2×2 C 1 2,2
+Definition2 Antransformationϕ :Pn→Pniscalledlinear thecoefficientsofM 2×2 arepresentinM 2 − × 1 2 too,sothisma-
+transformation,ifthefollowingrelationholds trixhasthealmostinvolutoryproperty. Otherexampleofa
+matrixhavingthealmostinvolutorypropertycanbefoundin
+∀,(cid:126)α, (cid:126) β ∈Pn,a ,a ∈P:ϕ(a (cid:126)α+a (cid:126) β)=a ϕ((cid:126)α)+a ϕ( (cid:126) β), thelinearlayeroftheblockcipherKuznyechikwhichcanbe
+1 2 1 2 1 2
+(1) expresedasapowerofthecompanionmatrixofthefollwow-
+ingpolynomialh(y)=y16⊕94y15⊕20y14⊕85y13⊕10y12⊕
+Itisshownin[7]thatthecompositionoflineartransfor- C2y11⊕C0y10⊕01y9⊕FBy8⊕01y7⊕C0y6⊕C2y5⊕10y4⊕
+mationsisagainalineartransformation. 85y3⊕20y2⊕94y⊕01overP=GF(28)/0x1C3.
+WecanseethatinvolutoryandalmostinvolutoryMDS
+Definition3 Let be(cid:126)α =(α ,...,α ) a basis of the vector
+1 n matricescanbeusefulwhenimplementingtheinverseofan
+spacePn. ThematrixA (ϕ)∈P definedasfollows
+(cid:126)α n,n SPNcipher,becausetheinverseofthesekindofmatricescan
+A (ϕ)=(ϕ(α )↓,...,ϕ(α )↓) (2) alsobeimplementedefficiently.
+(cid:126)α 1 (cid:126)α 1 (cid:126)α
+Proposition2 IfA∈P isaninvolutoryMDSmatrixand
+iscalledthematrixassociatedwiththelineartransformation n,n
+S∈P ispermutationmatrixthenthematrixASandSAare
+ϕ inthebasis(cid:126)α. n,n
+almostinvolutoryMDS.
+Definition4 Thebranchnumberρ ofmatrixA∈P isde-
+n,n
+Proof: LetbeAinvolutiveMDSmatrixandS permutation
+finedas
+matrix then S−1 is permutation matrix. Then we have that
+ρ(A)=min{w ((cid:126)a)+w ((cid:126)aA)}. (3)
+(cid:126)a(cid:54)=(cid:126)0 H H (AS)(S−1A)=A(SS−1)A=AA=I n,n andtakingintoaccount
+thatSpermutationmatrixweobtainthatASisanMDSmatrix
+Definition5 A matrix A ∈P n,n is called maximal distance whichhasthealmostinvolutoryproperty. (cid:3)
+separable(MDS)matrixifρ(A)=n+1.
+Definition8 Thecharacteristicpolynomialofalineartrans-
+Theorem1 MatrixAisanMDSmatrixifandonlyifevery formationofamatrixA∈P ,denotedbyχ (x),isdefined
+n,n A
+sub-matrixisnon-singular. asfollow
+χ (x)=|I x⊕A|. (4)
+A n,n
+Proposition1 [12]Any4×4matrixoverPwithallentries
+nonzeroisanMDSmatrixifandonlyifitisafullrankmatrix
+Inwork[5]theauthorsshowedthepossibilityofinvariant
+withtheinversematrixhavingallentriesnonzeroandallof
+attacksontheciphertypeXSL-network(Khazad,Kuznyechik)
+its4×4submatricesarefullrank. whereforanya∈Pandk∈N(x+a)k dividethecharacter-
+isticpolynomialofthelinealtransformation. Forthisreason
+For efficient implementation of an MDS matrix in soft-
+wewillstudythecharacteristicpolynomialofthosematrices
+ware,itisdesirabletohavemaximumnumberof1’sinthe
+generatebyourconstructions.
+matrix. In[13],authorsstudiedthispropertyandconstructed
+somematricesachievingthemaximumnumberof1’s. Here Definition9 The polynomial m (x) is called the minimal
+A
+werestatethedefinitionofthenumberofoccurrencesofone, polynomialofmatrixAifandonlyifm (A)=O ,andfor
+A n,n
+whichwewilluseinourconstructions. anyh∈P[x]suchthath(A)=O ,deg(m (x))≤deg(h(x)).
+n,n A
+Definition6 LetbeA=(a ) anarbitrarymatrixoverP.
+ij n×n Adirectconsequenceoftheabovedefinitionisthatalways
+ThenumberofoccurrencesofoneinAdenotedbyN (A)is (cid:12)
+1 m
+A
+(x)(cid:12)χ
+A
+(x).
+thethenumberof(i,j)pairssuchthata isequaltoone.
+ij
+Proposition3 ForanyinvolutivematrixAthefollowingrela-
+Itiswellknownfrom[13]thatforanyMDSmatrixA∈
+tionsholds:
+P wehaveN (A)=9andN (A)=16whenAisanMDS
+4,4 1 1
+matrixofP . 1. χ (x)=(x⊕1)n;
+6,6 A
+ConstructionofMDSmatricescombiningtheFeistelandLai-Masseyschemes 89
+2. m (x)=(x⊕1)2. 2. GlobalOptimization.ForamatrixM ∈GF(2) ,
+A t×n,t×n
+itisposibletoobtainanestimationofitscostinhard-
+Proof: Firstly we will determine the minimal polynomial
+warebyfindingagoodlinearstraight-lineprogramcor-
+linealoftheinvolutivetransformationϕ. Letbe respondingtoM withstate-of-the-artautomatictools
+basedoncertainSLP1 heuristic[3],andthismetricis
+α(cid:126) =(1,0,...,0),...,α(cid:126) =(0,0,...,0,1),
+1 n denotedasSLP(M).
+thecanonicalbasisofdimensionn. It’swellknown[7,propo-
+sition31,p. 321]that
+2. Constructing MDS matrices combining
+the Lai-Massey and Feistel
+m (x)=lcm(m (x),m (x),...,m (x)), (5) transformations
+ϕ α1,ϕ α2,ϕ αn,ϕ
+wherelcm(·)denotetheleastcommonmultiple. Nowtaking Letben=2tanevennumber,inwhatfollows(cid:126)x=(x(cid:126) 1 ||x(cid:126) 2 )
+intoaccountthatthelineartransformationϕ isaninvolution wherex(cid:126) 1 =(x 1 ,...,x t )andx(cid:126) 2 =(x t+1 ,...,x 2t ). ForanyL ∈
+wecanusethefollowingauxiliaryproposition P n,n usingthewell-knownLai-MasseyandFeistelschemes
+wedefinethefollowingtransformationasfollows;
+Proposition4 [7, p. 321]Letbe ϕ —anaribitrarylinear Lai-Massey-liketransformation:
+transformation of dimension n. Then for any nonzero vec-
+torγ thereexistanaturalnumberk=1,...,nsuchthatthe ϕ 1 ((cid:126)x)= (cid:0) x(cid:126) 1 ⊕L(x(cid:126) 1 ⊕x(cid:126) 2 ) (cid:1)(cid:13) (cid:13) (cid:0) x(cid:126) 2 ⊕L(x(cid:126) 1 ⊕x(cid:126) 2 ) (cid:1) . (10)
+followingvectors
+Feistel-liketransformation:
+γ,ϕ(γ),...,ϕk−1(γ) (6)
+ϕ
+2
+((cid:126)x)= (cid:0) x(cid:126)
+1
+⊕L(x(cid:126)
+2
+) (cid:1)(cid:13) (cid:13)x(cid:126)
+2
+. (11)
+arelinearlyindependentandϕk(γ)isalinearcombina-
+tionoftheprevioussystem. Inthiscaseif itisnotdifficulttoseethatthetransformationsgivenby
+relations(6)and(7)areinvolutions
+ϕk(γ)=γc ⊕ϕ(γ)c ⊕...⊕ϕk−1(γ)c , (7)
+0 1 k−1 Usingthematrixgivenbyrelation(2),canonicalbasisof
+P4
+then
+m (x)=xk⊕c xk−1⊕c x⊕c , (8)
+γ,ϕ k−1 1 0 (cid:126)α ={(1,0,0,0),(0,1,0,0),(0,0,1,0),(0,0,0,1)},
+4
+fromwhichitfollowsthatm (x)=(x⊕1)2 ∀i=1,...,n
+αi,ϕ
+andthepreviuostransformations,weconstructthefollowing
+andhencem (x)=(x⊕1)2.
+ϕ matricesofdimensionn×n,n=4,asfollows
+Nowweshalldeterminethecharacteristicpolynomial.We
+knowthat
+deg(χ A (x))=n. (9) ConstructionofMΦA
+n×n
+ForanymatrixAwehavethat(Ix⊕A)issimilartoK (Ix⊕ LetbeΦ A =ϕ 2 ◦ϕ 1 ◦ϕ 2 . Then
+A),whereK (Ix⊕A),isthecanonicalform(Ix⊕A). It’swell MΦA =A (Φ );
+4×4 α(cid:126) 4 A
+known[7,theorems10and12,p. 342-343]that
+K (Ix⊕A)=diag(1,...,1,u 1 (x),...,u s (x),(x⊕1)2), (cid:126)x l (cid:126)x r
+wheres∈N,u
+s
+(x) (cid:12) (cid:12)(x⊕1)2. So,usingthisfactandrelation L
+(10)weobtainthatu (x)=...=u (x)=x⊕1,henceχ (x)=
+1 s A
+(x⊕1)n. (cid:3)
+Everyn×nmatrixoverPcanbewrittenasan(tn)×(tn)
+matrix over GF(2). When considering a hardware imple- L
+mentation,itisnaturaltoconsideronlymatricesoverGF(2).
+Measurementsofimplementationcostswillthenonlyinvolve
+thenumberofbit-operations(XORs)needed. Itisaninterest-
+ingquestiontoevaluatetheefficiencyofagivenmatrix. The L
+followingmetricsareusefulforestimatingthehardwarecost
+ofalinearoperation.
+1. DirectXORCount.GivenamatrixM ∈GF(2) , (cid:126)y (cid:126)y
+thedirectXORcountDXC(M)ofM isω(M) t× − n,t× n n t. l r
+Fig. 1: StructureofΦ .
+Thismetriccorrespondstocountingthenumberofgates A
+usedinanaiveimplementationofthelinearmapping 1Notethatthisissofarthemostaccurateestimationthatispracticalfor
+M.
+32×32binarymatrices.
+90 ConstructionofMDSmatricescombiningtheFeistelandLai-Masseyschemes
+ConstructionofMΦB α (cid:54)= 0,
+n×n
+LetbeΦ =ϕ ◦ϕ ◦ϕ . Then α⊕1 (cid:54)= 0,
+B 1 2 1
+MΦB =A (Φ ); α2⊕α⊕1 (cid:54)= 0,
+4×4 α(cid:126) 4 B α3⊕α⊕1 (cid:54)= 0,
+α4⊕α3⊕1 (cid:54)= 0,
+(cid:126)x (cid:126)x
+l r thematrixMΦB isaninvolutoryMDSmatrixoverP.
+4×4
+(cid:18) (cid:19)
+1 1
+ForL = ∈P ,wehavethat
+a 1 2,2
+L
+ 
+1 a⊕1 a⊕1 a⊕1
+MΦB =   a2⊕a 1 a2⊕a a⊕1  (13)
+L 4×4  a a 1 a⊕1
+a2 a a2⊕a 1
+Hereagain,byusingthefactthatMΦB =(MΦB)−1we
+4×4 4×4
+L onlyneedtocheckincorrespondencewithproposition1that
+all minors of order 2 of MΦB are nonzero over P. These
+4×4
+minorsareonthefollowingset
+(cid:126)y (cid:126)y {1,a3,a,a⊕1,a2⊕1,a3⊕1,a3⊕a2,a2⊕a,a2⊕a⊕1,a3⊕
+l r
+a⊕1,a3⊕a2⊕1,a3⊕a,a2,a3⊕a2⊕a,a3⊕a2⊕a⊕1}
+Fig. 2: StructureofΦ .
+B whosefactorsare
+{1,a3,a,(a⊕1),(a⊕1)2,(a⊕1)·(a2⊕a⊕1),(a⊕1)·
+Let be n = 4 and f (x) = x2⊕x⊕1,f (x) = x3⊕x⊕
+1 2 a2,a·(a⊕1),(a2⊕a⊕1),(a3⊕a⊕1),(a3⊕a2⊕1),a·(a⊕
+1,f (x)=x3⊕x2⊕1,f (x)=x4⊕x3⊕1 —some polyno-
+3 4 1)2,a2,a·(a2⊕a⊕1),(a⊕1)3}
+mialsoverfieldP.
+Thereforeforanynonzeroa∈Psuchthat
+Proposition5 If there exist an element a∈P∗, a(cid:54)=1, for α (cid:54)= 0,
+which f(a)(cid:54)=0 where i=1,2,4 then the matrix MΦB of α⊕1 (cid:54)= 0,
+i 4×4
+(cid:18) a 1 (cid:19) α2⊕α⊕1 (cid:54)= 0,
+transformation Φ B with L = 1 a is an involutory α3⊕α⊕1 (cid:54)= 0,
+MDS. For the element a∈P∗ for which f(a)(cid:54)=0, where α3⊕α2⊕1 (cid:54)= 0,
+i
+(cid:18) (cid:19)
+1 1
+i=1,2,3,thematrixMΦB withL = isalsoan thematrixMΦB isaninvolutoryMDSmatrixoverP.
+4×4 a 1 4×4
+(cid:3)
+involutoryMDSmatrix.
+(cid:18) (cid:19)
+Proof: The matrix MΦB ∈P , for L = a 1 ∈P , Proposition6 If there exist an element a∈P∗, a(cid:54)=1 for
+n×n 4,4 1 a 2,2 which f(a)(cid:54)=0wherei=1,3thenthematrixMΦA oftrans-
+i 4×4
+hasthefollowingform (cid:18) (cid:19)
+a 1
+formation Φ with L = is an involutory MDS
+A 1 a
+a3⊕a2⊕a a2⊕1 a3⊕a a2⊕1 
+matrix.
+M 4 Φ × B 4 =    a2 a ⊕ 3 1 a3⊕ a a 2 2⊕a a3 a ⊕ 2 a ⊕ 2 1 ⊕a a a 2 3⊕ ⊕1 a    (12) (cid:18) a 1 (cid:19)
+a2 a3 a2⊕1 a3⊕a2⊕a Proof: The matrix MΦA ∈P , for L = ∈P ,
+n×n 4,4 1 a 2,2
+hasthefollowingform
+TakingintoaccountthatMΦB =(MΦB)−1weonlyneed
+4×4 4×4
+tocheckincorrespondencewithproposition1thatallminors  a2⊕a 1 a 1 
+o th f e o f r o d l e lo r w 2 i o n f g M se 4 t Φ × B 4 arenonzerooverP.Theseminorsareon M 4 Φ × A 4 =    a 1 3 a2 a ⊕ 2 a a2 1 ⊕a a 1    (14)
+{a2⊕1,a6⊕a4⊕a2⊕1,a4⊕a3⊕a2⊕a,a2,a3,a4,a6,a6⊕ a2 a3 1 a2⊕a
+1,a3⊕a,a4⊕a2,a6⊕a2⊕1,a6⊕a4,a6⊕a5⊕a4⊕a3⊕a2⊕
+1,a3⊕a2⊕a,a6⊕a5⊕a2} TakingintoaccountthatMΦA =(MΦA)−1weonlyneed
+4×4 4×4
+whosefactorsare tocheckaccordingwithproposition1thatallminorsofor-
+{(a⊕1)2,(a⊕1)6,a·(a⊕1)3,a2,a3,a4,a6,(a⊕1)2·(a2⊕ der2ofMΦA arenonzerooverP.Theseminorsareonthe
+4×4
+a⊕1)2,a·(a⊕1)2,a2·(a⊕1)2,(a3⊕a⊕1)2,(a⊕1)2·a4,(a⊕ followingset
+1)2·(a4⊕a3⊕1),a·(a2⊕a⊕1),a2·(a4⊕a3⊕1)} {1,a5⊕a4⊕a2,a,a2,a3,a4,a4⊕1,a2⊕a,a3⊕a2⊕1,a4⊕
+Thereforeforanynonzeroa∈Psuchthat a2⊕1,a6⊕a4,a2⊕1,a3⊕a2⊕a}
+ConstructionofMDSmatricescombiningtheFeistelandLai-Masseyschemes 91
+whosefactorsare Asitcanbeseenfromthecode, thenumberoffieldmulti-
+{1,a2·(a3⊕a2⊕1),a,a2,a3,a4,(a⊕1)4,a·(a⊕1),(a3⊕ plicationsisdecreasedupto6incomparisonwiththedirect
+a2⊕1),(a2⊕a⊕1)2,(a⊕1)2·a4,(a⊕1)2,a·(a2⊕a⊕1)} multiplicationof(cid:126)x∈P4byMΦA. Othermatricesgenerated
+4×4
+Thereforeforanynonzeroa∈Psuchthat byourmethodscanbeimplementedinasimilarway.
+α (cid:54)= 0, 3.2 Hardwareimplementation
+α⊕1 (cid:54)= 0, ThemultiplicationoperationbytheMDSmatrixgivenin
+α2⊕α⊕1 (cid:54)= 0, (15)hasthefollowingbinaryrepresentationoverGF(2)
+32,32
+.
+α3⊕α2⊕1 (cid:54)= 0,
+0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0
+t
+e
+M M M M M
+h
+r
+4Φ
+M M
+4 4 4 4 × Φ Φ Φ Φ × × × × B4 A A A B
+e
+4 4
+a
+4 4
+4 4 Φ Φ
+=
+× ×
+= = = =
+A B 4 4
+         
+= =
+t
+m
+M    
+0 0 8 0
+e
+I
+0 5 4 0 0 0 9 0 0 0 0 0 0 0 0 0 F 1 2 1
+a
+B A 1 6 3 6 6 1 4 8 1 6 2 2 3 1
+t 1 1 4 8 6 8 2
+1
+n
+r
+d
+i
+0 0 0 0 0 0 0 0 0 0 0 0
+x
+0 0 4 4 0 0 0 0
+a
+C 2 8 1 8 4 6 1 2 4 1 6
+4 1 6 4 8 3 1
+1 1 6 7 3 1 3 1 1
+M
+T
+t
+8 0 0 0 0 0 0 0 0
+9 1 1 1 2 1 2
+9 8 5 0 4 5 0 0 0 0 0 0
+b
+1 6 1 2 3 1 3 3 F F 6 6 3 6 4 1 6 2 1 3
+r
+4 9 4 1 1 1 9
+1
+a
+0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 0
+i
+y
+0 0 6 1 2 1 1 6 3 6
+   
+3 1 1 4 1 1 2 1 C C 1 3
+x
+   
+b
+     
+o
+l
+M
+(cid:18) (cid:18) (cid:18) (cid:18) (cid:18)
+e
+(cid:18) (cid:18)
+u
+0 8 0 5 0 0 0 0 0 0 E 1 4 6 2 1 2 6 1 1
+9 1 1 4 L
+r
+1
+0 0 0 0 0 0 0 0
+4 9 2 1
+0 0 1 4 1 2 1 2 2 1 1 4
+4
+s
+(cid:19) (cid:19)
+Φ
+(cid:19) (cid:19) (cid:19) (cid:19) (cid:19)
+×
+w
+c
+A
+G G G G G
+F G G
+F F F F F
+i
+4
+F F n
+( ( ( ( (
+o
+i ( (
+2 2 2 2 2
+e
+t 2 2
+8 8 8 8 8
+e 4 4
+) ) ) ) )
+) )
+/ / / / /
+i
+fi / /
+n
+0 0 0 0 0
+e 0 0
+x x x x x
+s
+l x x
+l
+1 1 1 1 1
+d 1 1
+1 1 1 1 1
+s
+3 3
+i
+P
+C C C C C
+a
+s
+t
+In
+r
+t
+n
+vo
+u
+Y N
+N N N N N
+l e u
+c
+o
+o o o o o
+s t
+i
+o
+c
+r
+n
+e
+y
+t
+r
+v
+A
+i
+l
+t
+m
+o
+o
+a
+os
+n
+t
+l
+Y
+Y Y Y Y Y
+i
+N in e
+e e e e e
+u
+o v s
+s s s s s
+n
+s
+olo
+t
+.
+to
+o
+p
+ry
+r
+r
+N
+y
+o
+1 7 7
+5 6 7 4 5
+(M)
+p
+M
+x x x x
+e
+4 4 4 4 ⊕ ⊕ ⊕ ⊕
+x4
+8 0 8
+r
+0
+⊕
+D
+A E B 3 x x x x
+6
+x
+t
+4 3 3 3 3
+x
+⊕ ⊕ ⊕
+3
+⊕ ⊕
+i
+χ x ⊕
+5 F 0
+S
+1
+M
+2
+4
+e
+5 C B A
+3
+2
+⊕
+x
+( x
+x x x x 2
+x 2
+2
+1
+2 2 2 ⊕
+)
+s
+⊕
+⊕ ⊕ ⊕ ⊕ 0
+m
+6
+0 8 0 8 1
+x
+E B 3 A x
+⊕
+x x x
+o
+⊕ ⊕ ⊕ ⊕
+1
+0 0 0 0
+a
+1 1 1 1
+f
+t
+χ
+r
+s
+M
+i
+(
+o
+x)
+x
+is
+m
+irr
+o
+e
+Y Y
+N N
+N N N
+d
+e e
+o o
+o o o
+e
+s s
+u
+v
+cibl
+e
+e
+m
+ov
+r
+er
+a
+P
+P
+t
+χ χ M M
+.
+r
+χ
+( ( x
+M
+x
+i
+) )
+(
+χ
+F
+=
+x
+=
+c
+M
+) a
+( (
+=
+(
+c
+x x x
+t
+2 2 )
+χ o
+e
+(
+⊕ ⊕
+x
+=
+M r 2 i (
+8 3
+z ⊕
+(
+x
+s
+7 1
+a
+x
+)
+x x
+2 t
+⊕
+= i
+⊕
+x
+⊕ − −
+o
+9
+⊕ ( n
+3 B 4
+x
+g
+2
+9
+) 0
+o ⊕
+) 2
+)
+) (
+f
+(
+(
+( x
+1
+x
+x
+x
+χ
+2
+e
+) 2
+2 ⊕
+4 M
+⊕
+⊕
+⊕ 9
+(
+8
+4
+B 3
+n
+x
+9
+x
+2 )
+)
+x 2 x
+⊕
+⊕ ⊕
+2
+-
+6
+)
+8 F 7) )
+M
+F
+3 Φ 2
+r
+A ×
+om
+32
+t
+=
+his
+ 1 1 0
+0
+0 0
+0
+1 0
+0
+0
+0 0 0 0 0 0 0
+1 0 0 0 0 0 0 1 0 0 0 0 0 re
+0 1 1
+0
+0 0
+0
+0 1
+0
+0
+0 0 0 0 0 0 0
+0 1 0 0 0 0 0 0 1 0 0 0 0 p
+0 0 1
+1
+0 0
+0
+0 0
+1
+0
+0 0 0 0 0 0 0
+0 0 1 0 0 0 0 0 0 1 0 0 0 r
+0 0 0
+1
+1 0
+0
+0 0
+0
+1
+0 0 0 0 0 0 0
+0 0 0 1 0 0 0 0 0 0 1 0 0 e
+0 0 0
+0
+1 1
+0
+0 0
+0
+0
+1 0 0 0 0 0 0
+0 0 0 0 1 0 0 0 0 0 0 1 0 se
+0 0 0
+0
+0 1
+1
+0 0
+0
+0
+0 1 0 0 1 1 0
+0 0 0 1 1 0 0 0 0 0 0 0 1
+(cid:3)
+n
+1 0 0
+0
+0 1
+0
+0 0
+0
+0
+0 0 1 0 1 0 1
+0 0 0 1 0 1 1 0 0 0 0 1 1 t
+1 1 0
+0
+0 0
+1
+0 0
+0
+0
+0 0 0 1 0 1 0
+1 0 0 0 1 1 0 1 0 0 0 1 0 at
+0 0 0
+0
+0 0
+0
+0 1
+1
+0
+0 0 0 0 0 0 1
+0 0 0 0 0 0 0 0 1 0 0 0 0 i
+1 0 0
+0
+0 0
+0
+0 0
+1
+1
+0 0 0 0 0 0 0
+1 0 0 0 0 0 0 0 0 1 0 0 0 on
+0 1 0
+0
+0 0
+0
+0 0
+0
+1
+1 0 0 0 0 0 0
+0 1 0 0 0 0 0 0 0 0 1 0 0
+0 0 1
+0
+0 0
+0
+0 0
+0
+0
+1 1 0 0 0 0 0
+0 0 1 0 0 0 0 0 0 0 0 1 0 w
+0 0 0
+1
+0 0
+0
+0 0
+0
+0
+0 1 1 0 0 0 0
+0 0 0 1 0 0 0 0 0 0 0 0 1 e
+0 0 0
+0
+1 0
+0
+0 0
+0
+0
+0 0 1 1 0 0 0
+0 0 0 0 1 1 1 0 0 0 0 1 1
+0 0 0
+0
+0 1
+0
+1 1
+0
+0
+0 0 1 0 1 1 0
+0 0 0 1 1 1 0 1 0 0 0 1 0 o
+0 0 0
+0
+0 0
+1
+0 1
+1
+0
+0 0 0 1 1 0 1
+0 0 0 1 0 0 1 0 1 0 0 0 1 bt
+1 0 0
+0
+0 0
+0
+1 0
+0
+0
+0 0 0 0 0 1 1
+0 0 0 0 0 1 0 0 0 0 0 0 0 a
+0 1 0
+0
+0 0
+0
+0 1
+0
+0
+0 0 0 0 0 0 1
+1 0 0 0 0 0 1 0 0 0 0 0 0 in
+0 0 1
+0
+0 0
+0
+0 0
+1
+0
+0 0 0 0 0 0 0
+1 1 0 0 0 0 0 1 0 0 0 0 0 t
+0 0 0
+1
+0 0
+0
+0 0
+0
+1
+0 0 0 0 0 0 0
+0 1 1 0 0 0 0 0 1 0 0 0 0 t
+0 0 0
+0
+1 0
+0
+0 0
+0
+0
+1 0 0 0 0 0 0
+0 0 1 1 0 0 0 0 0 1 0 0 0 h
+0 0 0
+0
+0 1
+0
+0 0
+0
+0
+0 1 0 0 0 0 0
+0 0 0 1 1 0 0 0 0 0 1 0 0 a
+0 0 0
+0
+0 0
+1
+0 0
+0
+0
+0 0 1 0 1 1 0
+0 0 0 1 0 0 0 0 0 0 0 1 0 t
+1 0 0
+0
+0 1
+1
+0 0
+0
+0
+0 0 0 1 0 1 1
+0 0 0 0 1 0 0 0 0 0 0 0 1 D
+0 0 0
+0
+0 0
+0
+0 1
+0
+0
+0 0 0 0 1 0 0
+0 0 0 0 0 0 1 1 0 0 0 0 0 X
+1 0 0
+0
+0 0
+0
+0 0
+1
+0
+0 0 0 0 0 1 0
+0 0 0 0 0 0 0 1 1 0 0 0 0 C
+0 1 0
+0
+0 0
+0
+0 0
+0
+1
+0 0 0 0 0 0 1
+0 0 0 0 0 0 0 0 1 1 0 0 0 (
+0 0 1
+0
+0 0
+0
+0 0
+0
+0
+1 0 0 0 0 0 0
+1 0 0 0 0 0 0 0 0 1 1 0 0 M
+0 0 0
+1
+0 0
+0
+0 0
+0
+0
+0 1 0 0 0 0 0
+0 1 0 0 0 0 0 0 0 0 1 1 0
+0 0 0
+0
+1 0
+0
+0 0
+0
+0
+0 0 1 0 0 0 0
+0 0 1 0 0 0 0 0 0 0 0 1 1
+0 0 0
+0
+0 1
+0
+0 0
+0
+0
+0 0 0 1 0 0 0
+0 0 0 1 0 1 1 0 0 0 0 1 0 Φ
+0 0 0
+0
+0 0
+1
+1 1
+0
+0
+0 0 1 1 0 0 0
+0 0 0 0 1 0 1 1 0 0 0 0 1 A
+
+(
+)
+16
+=
+)
+32×32
+166andusingalinearstraight-lineprogramcorrespondingto
+Table1:Propertiesofsomematricesgeneratedbyoursconstructions.
+MΦA withautomatictoolsproposedin[3]wehavefound
+32×32
+animplementationofMΦA (giveninTable2)whichrequire
+3. Implementation of concrete MΦA 32×32
+4×4 99bitwiseXORs.
+Inthissectionweprovidebothsoftware/hardwareimple-
+# Operation # Operation # Operation # Operation # Operation
+mentationsforthefollowingcandidatematrix 1 t0=x6⊕x14 21 t20=x7⊕t18 41 t40=x3⊕t21 61 t60=x15⊕y15 81 t80=t30⊕t38
+2 t1=x7⊕x23 22 t21=x4⊕x20 42 y5=t10⊕t40 62 y23=t47⊕t60 82 y2=t29⊕t80
+3 t2=x15⊕x31 23 t22=x10⊕x27 43 t42=t11⊕t25 63 t62=x15⊕t46 83 t82=x19⊕t78
+  4 t3=x5⊕x22 24 t23=x3⊕x28 44 y14=x31⊕t42 64 y22=t59⊕t62 84 y19=t80⊕t82
+06 01 02 01 5 t4=x13⊕x30 25 t24=x2⊕x19 45 t44=t6⊕y7 65 y22=t59⊕t62 85 t84=t6⊕t31
+6 t5=x5⊕x21 26 t25=x12⊕t10 46 y16=t20⊕t44 66 y25=t20⊕t64 86 y24=t60⊕t84
+M 4 Φ × A 4 =    0 0 1 8 0 0 6 4 0 0 1 6 0 0 2 1    ∈P 4,4 , (15) 1 7 8 9 0 t t t 6 t 7 8 9 = = = = x x x x 1 8 6 4 0 ⊕ ⊕ ⊕ ⊕ x x x x 1 2 3 7 5 3 1 2 2 2 3 7 8 9 0 t t y t 2 2 2 1 7 9 6 2 = = = = x x x t 1 2 1 1 1 1 8 ⊕ ⊕ ⊕ ⊕ x t t t 1 2 2 2 0 2 7 6 4 4 4 5 7 8 9 0 t t t 4 4 4 y 9 6 7 6 = = = = x x x t 1 3 1 8 1 0 4 ⊕ ⊕ ⊕ ⊕ t4 x t t 7 3 4 2 9 6 9 6 6 6 7 7 8 9 0 t t y 6 y 6 2 8 6 9 0 = = = = x t x t 3 1 1 2 7 9 7 9 ⊕ ⊕ ⊕ ⊕ t x t t 6 3 6 2 6 3 8 8 8 8 8 9 7 8 9 0 y y t t 1 8 8 1 8 6 8 = = = = t t t t 3 3 7 9 2 1 ⊕ ⊕ ⊕ ⊕ t t t t 3 3 8 8 0 1 8 6
+11 t10=x13⊕x29 31 t30=x17⊕x26 51 y21=t36⊕t49 71 t70=x21⊕t22 91 t90=x2⊕x18
+04 08 01 06 12 t11=x22⊕t0 32 t31=x16⊕t8 52 t51=x2⊕t27 72 y29=t23⊕t70 92 t91=t7⊕t32
+13 t12=t1⊕t2 33 t32=x9⊕x25 53 y3=t29⊕t51 73 t72=x25⊕y7 93 y10=t90⊕t91
+14 y7=t3⊕t12 34 t33=x1⊕t7 54 t53=x3⊕x10 74 y17=t17⊕t72 94 t93=x3⊕x11
+whereM 4 Φ × A 4 ∈P 4,4 ,P=GF(28)/0x11C. 1 1 1 5 6 7 t y y 1 1 8 5 5 = = = x x t 0 4 16 ⊕ ⊕ ⊕ t t 1 1 t 5 6 2 3 3 3 5 6 7 t t t 3 3 3 4 6 5 = = = x x x 1 2 9 9 0 ⊕ ⊕ ⊕ t x t 3 2 2 4 4 6 5 5 5 5 6 7 y y t5 1 3 5 1 1 = = = x t t 3 4 7 5 4 ⊕ ⊕ ⊕ y t t 1 5 5 4 3 5 7 7 7 5 6 7 t t y 7 7 2 4 6 7 = = = x x t 2 3 2 5 4 5 ⊕ ⊕ ⊕ t t t 3 7 3 3 4 7 9 9 9 5 6 7 y t t 9 1 9 6 3 4 = = = t x t 9 5 7 3 ⊕ ⊕ ⊕ t t t 5 4 9 7 2 4
+18 t17=x15⊕t15 38 t37=x24⊕t6 58 t57=x12⊕t23 78 y26=t38⊕t76 98 t97=t46⊕y13
+19 t18=x24⊕t8 39 t38=x18⊕t9 59 y4=t24⊕t57 79 t78=x27⊕t35 99 y30=t96⊕t97
+20 y0=x8⊕t18 40 t39=x4⊕t5 60 t59=y5⊕t42 80 y28=t36⊕t78
+Table2: AnimplementationofMΦA with99XORs.
+4×4
+3.1 Softwareimplementation
+Thefollowingcodedescribeawayforimplementingthe
+multiplicationbythematrixMΦA inCprogrammlanguage.
+4×4
+4. Comparing our MDS matrices with the
+#define Mult_2(x) ((x<<1)ˆ(x & 0x80 ? 0x1C : 0x00)
+) state-of-the-art
+uint32_t M(uint32_t x){ InTable3wecompareourmatriceswithothersbydiffer-
+uint8_t a = x, b = x>>8, c = x>>16, d = x>>24, entmethodsinthepublicliterature. Wecanseethatthethe
+e1, e2; implementationscostinhardwareofthelineartransformations
+d ˆ= Mult_2(b)ˆa;
+obtainedbyourapproachiscomparablewithstate-of-the-art.
+c ˆ= Mult_2(a)ˆb;
+e1 = Mult_2((dˆb))ˆ(aˆc); Moreover,wecanobtainatradeoffsbetweensoftwareand
+e2 = Mult_2((aˆc))ˆ(bˆd); hardware implementations for some matrices produced by
+d ˆ= e1; usingusingourtechniques.
+c ˆ= e2;
+b ˆ= e1;
+a ˆ= e2; 5. Conclusion and Future Work
+d ˆ= Mult_2(b)ˆa;
+Inthisworkwehavepresentedsomenewschemesbased
+c ˆ= Mult_2(a)ˆb;
+return ((((((uint32_t)d<<8)|c)<<8)|b)<<8)|a; onthewell-knownLai-MasseyandFeistelstructuresforcon-
+} structing MDS matrices of size n=2k,k=2. Combining
+92 ConstructionofMDSmatricescombiningtheFeistelandLai-Masseyschemes
+Matrix Involutory Almostinvolutory SLP [11] H.M.Heys,andS.E.Tavares,AvalancheCharacteristics
+M [21] (cid:55) (cid:55) 97 ofSubstitution-PermutationEncryptionNetworks.
+AES
+M [17] (cid:88) (cid:55) 84
+KLSW [12] Gupta,K.C.,Ray,I.G.:OnConstructionsofMDSMatri-
+M [23] (cid:88) (cid:88) 80
+SSCZL cesfromCompanionMatricesforLightweightCryptog-
+M [6] (cid:55) (cid:55) 78
+SG raphy.In: Cuzzocrea,A.,Kittl,C.,Simos,D.E.,Weippl,
+M [22] (cid:55) (cid:88) 83
+MM E., Xu, L. (eds.) CD-ARES Workshops 2013. LNCS,
+M [thiswork] (cid:88) (cid:88) 99
+A vol.8128,pp.29–43.Springer,Heidelberg(2013).
+Table3:Acomparisonwiththesate-of-the-art.
+[13] JunodP.andVaudenayS.: PerfectDiffusionPrimitives
+forBlockCiphersBuildingEfficientMDSMatrices,Se-
+thesestructuresweprovideinvolutoryandalmostinvolutory lectedAreasinCryptography2004: Waterloo,Canada,
+MDSmatriceswhichcanbeimplementedefficiently.Wehave August 9-10,2004. Revisited papers,LNCS. Springer-
+foundsomematriceshavingtheMDSpropertywhicharevery Verlag.JournalInformationSecurityPracticeandExpe-
+actractivefortheso-calledlightweightschemes. Inthefuture, rience,Springerpp552-563.2014.
+weaimtofurtheroptimisethesearchforconstructingMDS
+matricesofsize2k,k≥3usingouraproach. [14] JorgeN.andElcioA.ANewInvolutoryMDSMatrix
+fortheAES.InternationalJournalofNetworkSecurity,
+Vol.9,No.2,PP.109–116,2009
+References
+[1] Adnan B. Mustafa C. and Mehmet O. Feistel Like [15] JianG.,ThomasP.andAxelP.ThePHOTONFamilyof
+ConstructionofInvolutoryBinaryMatricesWithHigh LightweightHashFunctions.CryptologyePrintArchive,
+Branch Number. Cryptology ePrint Archive, Report Report2011/609.
+2016/751.
+[16] KishanC.G.,SumitK.P.andAyineediVenkateswarlu.
+[2] Alferyorov A. P. Zubov A. Y. Kuzmin A. S. Chery- OnthedirectconstructionofrecursiveMDSmatrices.
+omushkinA.V.Basicsofthecryptography.GeliosARV. Springer2016.
+2001.(InRussian)
+[17] Kranz H., Leander G., Stoffelen K., and Wiemer F.
+[3] BoyarJ.,MatthewsP.,PeraltaR.: Logicminimization Shorter Linear Straight-Line Programs for MDS Ma-
+techniqueswithapplicationstocryptology.J.Cryptol- trices.InFSE,volume2017,pages188-211.Springer,
+ogy,26(2):280–312,2013. 2017.
+[4] C.Shannon.Communicationtheoryofsecrecysystems.
+[18] Lidl, R., and Niederreiter, H. Finite Fields, vol. 20 of
+BellSystemTechnicalJournal,28(4),1949
+EncyclopediaofMathematics
+[5] Dmitry Burov, Boris, Pogorelov. The influence of lin-
+[19] MahdiS.andMohsenM.ConstructionofLightweight
+earmappingreducibilityonchoiceofroundconstants.
+MDS Matrices from Generalized Feistel Structures.
+CTCcrypt216
+CryptologyePrintArchive,Report2018/1072.
+[6] Duval S. and Leurent G.: MDS Matrices with
+[20] MahdiS.,MohammadD.,HamidM.andBehnazO.On
+LightweightCircuits.InFSE,volume2018,pages48-78.
+constructionofinvolutoryMDSmatricesfromVander-
+Springer,2018.
+mondeMatricesinGF(2q).Springer.PublishedNovem-
+[7] GlukhovM.M.,ElizarovV.P.,NechaevA.A.Algebra. ber2011.
+LAN.2015.595p.(InRussian)
+[21] NIST.AdvancedEncryptionStandard.FederalInforma-
+[8] HongX.,LinT.XuejiaL.Ontherecursiveconstruction tionProcessingStandard(FIPS)197,November2001.
+ofMDSmatricesforligtweightCryptography
+[22] Sajadieh M., and Mousavi M.: Construction of
+[9] H. M. Heys, and S. E. Tavares,The Design of Lightweight MDS Matrices from Generalized Feis-
+Substitution-PermutationNetworksResistatnttoDifer- tel Structures. Cryptology ePrint Archive, Report
+ential and Linear Cryptanalysis, Proceedings of 2nd 2018/1072.
+ACM Conference on Computer and Communications
+[23] Shun Li1, Siwei Sun1, Chaoyun Li Zihao Wei1 and
+Security,Fairfax,Virginia,pp.148-155,1994.
+Lei Hu1: Constructing Low-latency Involutory MDS
+[10] H.M.Heys,andS.E.Tavares,TheDesignofProductCi- MatriceswithLightweightCircuits.InFSE.Springer,
+phersResistatnttoDiferentialandLinearCrypt-analysis, 2019.
+JournalOfCryptography,Vol.9,No.1,pp.1-19,1996

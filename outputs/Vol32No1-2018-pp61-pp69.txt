@@ -1,0 +1,1102 @@
+CienciasMatemáticas,Vol.32,No.1,Pag.61-69, 2018
+Recibido03-2018
+Optimizacio´n del test LIL-de´bil para la evaluacio´n de
+PRGN
+Y. Matos1, C. M. Lego´n1,2, E. J. Madarro3
+Resumen
+Laevaluacio´ndealeatoriedadengeneradoresdenu´merospseudoaleatorios(PRGN)esdegranimportanciaen
+criptograf´ıa,existennumerosostestsdecomprobacio´ndealeatoriedad,muchosdeelloshansidodisen˜ados
+basados en leyes importantes de aleatoriedad como el Teorema Central del L´ımite y la Ley de los Grandes
+Nu´meros.RecientementefuepropuestoporWangunnovedosotestdetresvariantesparalaevaluacio´nde
+generadoresdenu´merospseudoaleatorios,basadoenlaLeydelLogaritmoIterado (LIL).Lasprobabilidades
+teo´ricasquedebencalcularseparaaplicareltestposeenunadependenciaentreellas,porlocualsedeben
+calcularsecuencialmente.Enestetrabajoseproponeunanuevaexpresio´n,ma´ssimplequelasexpresiones
+dadasporWangparaelca´lculodeestasprobabilidadesteo´ricas.Lanuevaexpresio´neliminaladependencia
+entre estas probabilidades y permite la optimizacio´n de las implementaciones del ca´lculo de las mismas
+utilizandolosalgoritmossecuencialyparalelosdadosaqu´ı,locualfacilitalarealizacio´ndeexperimentaciones
+ma´samplias.
+Palabrasclaves
+Evaluacio´ndePRGN—Testdealeatoriedad—Optimizacio´ndeltestLIL-de´bil
+Abstract
+Therandomnessevaluationinpseudorandomgeneratorsnumbers(PRGN)isofgreatimportanceincryptography,
+therearenumeroustestsofrandomnesstesting,manyofthemhavebeendesignedbasedonimportantlawsof
+randomnesssuchastheCentralLimitTheoremandtheLawofLargeNumbers.Recentlyanewthreevarianttest
+fortheevaluationofpseudorandomgeneratorsnumberwasproposedbyWangbasedontheIteratedLogarithm
+Law (LIL).Thetheoreticalprobabilitiesthatmustbecalculatedtoapplythetesthavearealizationofdependence
+betweenthemsotheymustbecalculatedsequentially.Inthispaperweproposeanewsimplerexpressionofthe
+expressionsgivenbyWangforthecalculationofthesetheoreticalprobabilities.Thenewexpressioneliminates
+thedependencebetweentheseprobabilitiesandallowstheoptimizationofcomputationalimplementationsusing
+thealgorithmssequentialandparallelgivenherewhichfacilitatestherealizationoflargerexperiments.
+Keywords
+PRGNevaluation—Randomnesstest—LIL-weaktestoptimization
+1UniversidaddelaHabana,FacultaddeMatema´ticayComputacio´n,InstitutodeCriptograf´ıa,LaHabana,Cuba
+2CUJAE,FacultaddeInforma´tica,LaHabana,Cuba[clegon@ceis.cujae.edu.cu]
+3UniversidadCentraldelasVillas,VillaClara,Cuba
+1. Introduccio´n mentedistribuida.Deaqu´ıquelosPRNGtienenunasalida
+perio´dicaydetermin´ıstica,porloqueesta´ claroapriorique
+Losnu´merosaleatoriossiemprehantenidounagranapli-
+ellos no producen variables aleatorias independientes en el
+cacio´n y utilidad en distintas ramas de la ciencia, como en
+sentido matema´tico y que ellos no pueden pasar todos los
+la estad´ıstica, la ciencia de la computacio´n, la modelacio´n,
+posibles tests estad´ısticos de uniformidad e independencia.
+lasimulacio´n,lacriptograf´ıayotrasaplicaciones[34].Los
+Peroalgunosdeellostienenper´ıodosdelongitudlargaylos
+nu´merosaleatoriospuedensergeneradosdesdeundispositivo
+fragmentosdesalidasdelongitudmenorqueelper´ıodopue-
+f´ısico,llamadogeneradordenu´merosaleatorios(RNG)yel
+denteneruncomportamientosimilaralaaleatoriedad,porlo
+mismopuedeporejemploutilizarruidote´rmicoproveniente
+cualseusaenocasioneselte´rminode“aleatoriedadlocal”,
+dediodoselectro´nicos,peroconma´sfrecuenciasongenera-
+estassalidaspuedenpresentaruncomportamientobastante
+dosdesdealgu´nprogramadecomputadorallamadogenerador
+buenoalaplicartestsestad´ısticosenuntiemporazonable.Sin
+denu´merospseudoaleatorios(PRNG),elcualdadounvalor
+embargo,numerososPRNGpopularesensoftwarecomercial,
+inicial llamado semilla produce una secuencia de nu´meros
+fallanmuchosdelostestssimples(ver[11,34]).
+determin´ısticosquedebentenerunadistribucio´nestad´ıstica
+correspondienteaunavariablealeatoriaindependienteeigual- Eldisen˜odeunPRNGesunatareadealtacomplejidad,
+OptimizacióndeltestLIL-débilparalaevaluacióndePRGN 62
+puessedebedegarantizarquesecumplanlasmayor´ıasde teoremasfundamentalesdel´ımitessobresucesionesbinarias
+laspropiedadesexigidasparaunasucesio´nverdaderamente aleatorias que son el Teorema Central del L´ımite y la Ley
+aleatoria.Estedisen˜oconstadedosfases,lafasedefunda- delLogaritmoIterado.NumerosostestsdelNISTSP800-22
+mentacio´nteo´ricaydisen˜oeimplementacio´ndelgeneradory cubrenelTeoremaCentraldelL´ımitemientrasqueninguno
+lafasedeevaluacio´nmediantelaaplicacio´ndediversostests de ellos tiene en cuenta la Ley del Logaritmo Iterado, ni
+deseguridad(ver[10,12]).Lafasedosesdegranimportancia tampocolasdelasotrasbater´ıasmencionadasanteriormente.
+paraladeteccio´ndeposiblesvulnerabilidadesenlaseguridad Actualmenteexisteunintere´senencontrarnuevosme´todos
+delossistemascriptogra´ficos,porejemploenalgunosart´ıcu- paracomprobarlaLeydelLogaritmoIteradoensucesiones
+los (ver [5, 28, 32]) muestran que se han incluido puertas aleatoriasyparaotrasaplicaciones,comosepuedeapreciar
+traserasenlosgeneradoresdenu´merospseudoaleatoriosin- en[1,2,8,24,27,37].
+cluyendolosdelNISTSP800-90Aparaconseguircapacidad Wangproponete´cnicasdepruebasestad´ısticasbasadas
+decriptoana´lisis,inclusoenl´ınea.Lostestsestad´ısticosson en LIL y pruebas de distancias estad´ısticas en generadores
+tambie´nrequeridosparaRNGbasados(parcialototalmente) pseudoaleatoriosparareducirelerrordeTipoIIpresenteen
+en dispositivos f´ısicos. Los RNG son usados para generar elpaquetedepruebasdelNISTSP800-22.Adema´srealiza
+llavesencriptosistemasyparaotrasaplicaciones([34]). tresdisen˜osdeltestLILparalaevaluacio´ndegeneradores
+Porunlargotiemposeestuvieronaplicandocomoesta´ndar denu´merospseudoaleatorios:de´bil,de´bilIIyfuerte,delos
+para PRNG los tests descritos en las ediciones del libro de
+cualessoloaplicalavariantede´bil(ver[18,33,34,35]).Enlas
+Knuth (ej. en [10]). Otros tests ma´s potentes hab´ıan sido evaluacionesdelosPRNGsetoman1000y10000sucesiones
+propuestosparadetectarregularidadesengeneradoreslineales
+de234bits(2GB)yseconformanconjuntosdesucesionesde
+por Marsaglia en 1985 y 1996 y por Marsaglia y Tsang en
+226a234bits,locualpodr´ıaserunalimitacio´n(desdeelpunto
+el 2002 (ver [19, 20, 21]). Algunos de estos tests y otros devistadedisponibilidadderecursos)parapoderaplicarla
+nuevosfueronestudiadosma´sextensivamenteporErdmann prueba.
+en1992,MarsagliayZamanen1993,Vattulainenen1995, Este art´ıculo, propone una forma ma´s simplificada que
+L‘Ecuyer y Simard en 1999, 2000, 2001, 2002, Rukhin en la dada por Wang en [33] para calcular las probabilidades
+2001(ver[6,22,31,13,14,15,17,25]).Porejemplolostests teo´ricas utilizadas en el test LIL-de´bil. Esta simplificacio´n
+cla´sicosdeKnuth[1997]ma´sotrospocosesta´ndisponibles permite mejores implementaciones del test en cuanto a efi-
+enSPRNG[23],ylamayor´ıadelosquesehanmencionados cienciayposibilidaddeparalelizacio´nporqueseobtuvouna
+hastaaqu´ıesta´ndisponiblesenTestU01(ver[16]).Unestado independenciaenelca´lculoestasprobabilidadeslocualresul-
+delartema´sactualizadodelostestsdealeatoriedadsepuede taventajosoparaimplementacionesma´seficientesdeltest.
+ver en [4], donde se expone el problema de mu´ltiples tests Esteart´ıculoseorganizacomosigue.Enlaseccio´n2se
+ypararevisarma´ssobreesteproblemaenlaactualidad,se
+describelaLeydelLogaritmoIteradoysedalaaproximacio´n
+puedeconsultar[29,30].
+normalparaS
+lil
+.EnlaSeccio´n3sepresentaeltestLLL-de´bil
+dadoporWangen[33]yalgunasconsideracionesdeimpor-
+Algunosdelospaquetesdepruebasestad´ısticasma´sco-
+tanciaas´ıcomolospasosparalaevaluacio´ndegeneradores
+nocidos en el dominio pu´blico son TestU01, el paquete de
+pseudoaleatoriosdadaporWang,dondeintervienenelca´lculo
+pruebasestad´ısticasimplementadoporNacionalInstituteof
+de las probabilidades teo´ricas y que ahora pueden ser cal-
+StandardandTechnologyNISTSP800-22([26])yDIEHARD,
+culadas con los resultados de este trabajo. En la seccio´n 4
+(ver[20,26]).Lalibrer´ıaTetsU01proveeunconjuntodeprue-
+sepresentandoscorolariosqueoptimizanelca´lculodelas
+basestad´ısticasparaPRNG,esflexible,lasimplementaciones
+probabilidadesteo´ricas,ytresalgoritmosparasuimplementa-
+soneficientesypuedetrabajarcontaman˜odemuestraslargas
+cio´nma´seficiente.Enlaseccio´n5seexponenlosresultados
+ytieneunampliorangodetestsparame´tricosmayorquecual-
+experimentalesasociadosalosmismos.Finalmenteenlasec-
+quierotralibrer´ıa.ElpaquetedelNISTSP80022contiene15
+cio´n6serealizanlasconclusionesconalgunoscomentariosy
+tests,orientadosantetodoparalaevaluacio´nycertificacio´n
+observaciones.
+deRNGyPRNGusadosenaplicacionescriptogra´ficas[26]
+yelmismoesampliamenteutilizado.DHIEHARDcontiene
+2. Ley del logaritmo iterado
+numerosostestsestad´ısticosperotieneinconvenientesylimi-
+taciones.Laseleccio´ndelostestsas´ıcomolospara´metros LaLeydelLogaritmoIterado,fueprimeramentedescu-
+deestos(taman˜odemuestras,etc.)sonfijadosenelpaque- biertaporKhintchine(ver[9])quedaunacotao´ptimasuperior
+te.Adema´slostaman˜osdemuestrasnosonmuylargosyel (cid:112) 2ln(ln(n)) para las fluctuaciones de un camino aleatorio.
+paquetecompletodetestscorreenunospocossegundosde Estaleyestambie´ndescritaporFelleren[7],yporWangen
+tiempodeCPUenunacomputadoraesta´ndardeescritorio.El [36]quemuestraquelaleydellogaritmoiteradotambie´nse
+resultadodeesto,esqueellosnosonmuyexigentesyelusua- mantienepara“sucesiones p-aleatorias”(aleatoriasentiempo
+riotienepocaflexibilidadpararealizarexperimentacionescon polinomial).
+cambiosdepara´metros[16]. LaLeydelLogaritmoIteradodescribelasescalasdefluc-
+Wangen[18,33,34]sen˜alaqueelNIST800-22nocubre tuaciones de S∗(ξ[0,···,n−1]). Para una cadena no vac´ıa
+algunasdelasimportantesleyesdealeatoriedad.Existendos δ ∈∑∗,sea
+OptimizacióndeltestLIL-débilparalaevaluacióndePRGN 63
+|δ|−1 2·S(δ)−|δ| Elcrecimientodelavelocidadparalaaproximacio´ndearriba
+S(δ)= ∑ δ[i]yS∗(δ)= (cid:112) esta´delimitadaporma´xk2/n2,k4/n3dondek=S(ξ|n)−n/2.
+|δ|
+i=0 Elsiguientelemaesu´tilparalainterpretacio´ndeS∗basa-
+dondeS(δ)denotaelnu´merodeunosenδ yS∗(δ)denotael doenresultadosdeaproximacionesente´rminosdeS lil .Esto
+(cid:112)
+nu´meroreducidodeunosenδ.S∗(δ)midelasdesviaciones es obtenido por el hecho de que 2ln(ln(n))·S
+lil
+(ξ|n)=
+S(δ)de |δ| enunidadesde 1(cid:112) |δ|. S∗(ξ|n).
+2 2
+LaLeydelosGrandesNu´merosestableceque,parauna
+Lema1 (Wang[33])Paracualquierδ ,δ ,setieneque
+sucesio´n aleatoria ξ, el l´ımite de S(ξ[0,···,n−1]) es 1, lo cual 1 2
+n 2
+secorrespondeconeltestdefrecuencia(Monobit)delNIST
+Prob[δ <S (ξ|n)<δ ]=
+SP800-22[26].Peronosedicenadaacercadeladesviacio´n 1 lil 2
+reducidaS∗(ξ[0,···,n−1]).Esintuitivamenteclaroquepara Prob[δ (cid:112) 2ln(ln(n))<S∗(ξ|n)<δ (cid:112) 2ln(ln(n))].
+1 2
+una sucesio´n pseudoaleatoria ξ, S∗(ξ[0,···,n−1]) podr´ıa
+tomarvaloresarbitrariosgrandes(apesardelalentitud).
+3. Descripcio´n del test LIL-de´bil
+Teorema2.1 (Wang[33])Paraunasecesio´nξ ∈∑∞,sea
+Elteorema2.1muestraqueunasucesio´npseudoaleatoria
+deber´ıasatisfacerlaleydellogaritmoiterado(LIL).En[33]
+2∑ n−1ξ[i]−n
+S (ξ|n)= i=0 , (1) seproponeelsiguientetest:
+lil (cid:112)
+2ln(ln(n)) TestLIL-de´bil.Seaα∈(0,0.25]yℵ⊂Nunsubconjun-
+todenu´merosnaturales,sedicequeunasucesio´nξ nopasael
+entoncessetieneque
+test(α,ℵ)-LILde´bilsi−1+α<S (ξ|n)<1−α,∀n∈ℵ.
+lil
+Por definicio´n, una sucesio´n ξ pasa el test (α,ℵ)-LIL
+l´ımsupS (ξ|n)=1y l´ım´ınfS (ξ|n)=−1,
+lil lil
+n→∞ n→∞ de´bilsiS esta´entre1−α o−1+α dealgunospuntosenℵ.
+lil
+Enlapra´ctica,esimportantehacerunaseleccio´napropiada
+paracadasucesio´n p-aleatoriaξ ∈∑∞.
+paraeltestdepuntosdelconjuntoℵycalcularlaprobabilidad
+paraqueunasucesio´nξ paseeltest(α,ℵ)-LILde´bil.Enesta
+2.1 Aproximacio´nnormalparaS
+lil seccio´nsepresentaelca´lculodelasprobabilidadesparaque
+Enestaseccio´nsedalaaproximacio´nnormaldelafun-
+una sucesio´n pase el test (α,ℵ)-LIL de´bil con la siguiente
+cio´nS (·)queseusara´enloadelante.ElteoremadeMoivre-
+lil seleccio´ndeℵ:
+Laplace da una aproximacio´n normal para la distribucio´n
+binomial,lacualestablecequeelnu´merode“e´xitos”denlan- ℵ ={20n },···,ℵ ={2tn },y(cid:83)ℵ
+0 1 t 1 i
+zamientosindependientesdeunamonedaconprobabilidadde
+1/2esaproximadamenteunadistribucio´nnormalconmedia dadosn yt.Espec´ıficamentesepodr´ıaconsiderarloscasos
+√ 1
+n/2ydesviacio´nesta´ndar n/2. parat=8yn =226.
+1
+Donde las probabilidades P de que una sucesio´n
+(α,ℵi)
+Definicio´n1 Lafuncio´ndedensidadnormalconmediaµ y aleatoria pasa el test (α,ℵ)−LIL de´bil viene dada por la
+i
+varianzaσ esdefinidacomo siguienteexpresio´nqueseobtieneapartirdelTeorema2.2y
+delLema1.
+1 −(δ−µ)2
+f(δ)= √ e 2σ2 (2)
+σ 2π
+(cid:112)
+Prob[|S (ξ|n)|≥θ](cid:39)2(1−Φ(θ 2ln(ln(n)))). (6)
+lil
+Paraµ=0yσ =1,setienealafuncio´ndedensidadnormal
+esta´ndar YparalasprobabilidadesP dequeunasucesio´naleatoria
+(α,ℵ)
+paseeltest(α,ℵ)-LILde´bilconℵcomolaunio´ndedosℵ,
+ϕ(δ)= √
+1 e−δ
+2
+2
+(3) sedaelsiguienteteorema:
+i
+2π
+Teorema3.1 (Wang[33])Para0<α<1fijoyt≥2,seaθ =
+suintegral
+1−α,ℵ={n,tn},ℵ ={n},ℵ ={tn}.Setieneque
+a b
+(cid:90) δ
+Φ= ϕ(λ)dλ (4) P (cid:39)P
+(α,ℵ) (α,ℵa)
+−∞
+√
+eslafuncio´ndedistribucio´nnormalesta´ndar.
++
+(cid:90)
+−
+θ
+θ √
+2
+2
+l
+l
+n
+n
+(
+(
+l
+l
+n
+n
+(
+(
+n
+n
+)
+)
+)
+)π
+1(cid:90)
+(cid:113)
+∞
+1 (θ √ 2tln(ln(tn))−λ)
+e−δ2+
+2
+λ2
+dδdλ (7)
+t−1
+Teorema2.2 (Wang[33])Paraδ ,δ fijos,setieneque
+1 2
+Alternativamentesetieneque:
+l´ımProb[δ ≤S∗(ξ|n)≤δ ]=Φ(δ )−Φ(δ ). (5)
+1 2 2 1
+n→∞ P
+(α,ℵ)
+(cid:39)P
+(α,ℵa)
++P
+(α,ℵb)
+OptimizacióndeltestLIL-débilparalaevaluacióndePRGN 64
+−
+(cid:90)
+θ
+∞
+√ 2ln(ln(n))π
+1(cid:90)
+(cid:113)
+∞
+t− 1 1 (θ √ 2tln(ln(tn))−λ)
+e−δ2+
+2
+λ2
+dδdλ (8)
+yladesviacio´ndela
+(cid:115)
+ra´ız-cuadra´ticamedia
+∑ (p2 +p2 )
+0≥i≥j≥t i,j,1 i,j,2
+RMSD =
+En[33]seproponeelteoremaanteriorparaelca´lculode wlil
+(t+1)(t+2)
+P ,sinembargo,noseda´ unalgoritmoparalaobtencio´n
+(α,ℵ)
+deestasprobabilidades. donde
+El siguiente algoritmo se deduce de la expresio´n 6 y el
+p+ =p+ −P+
+i,j,1 (α,ℵi∪ℵj) (α,ℵi∪ℵj)
+teorema3.1paraelco´mputodeP .
+(α,ℵ) y
+p+ =p− −P−
+i,j,2 (α,ℵi∪ℵj) (α,ℵi∪ℵj)
+Algoritmo1:Ca´lculodeP ,P .
+(α,ℵa) (α,ℵ)
+5. Criteriodedecisio´n:Mientrasma´spequen˜ossean∆
+Data:n,r,α. wlil
+yRMSD mejorsera´ elgenerador.
+Result:{P ,P }. wlil
+(α,ℵa) (α,ℵ)
+1 θ ←1−α;c 1 ←log 2 (n)−1;c 2 ←ln(2); 3.2 Algunasconsideracionesparalaevaluacio´napli-
+2 f 0 ←e−λ2/2/(2π)1/2; f 1 ←e−λ2/2−δ2/2; candoeltestLIL-de´bil
+3 for j←1,2,···,rdo La distribucio´n inducida por la funcio´n S lil define una
+4 η j ←c 1 +j; medidadeprobabilidadenlarectarealR.Seaℜ⊂Σnuncon-
+5 β j ←θ(2ln(c 2 η j ))1/2; juntodemsucesionesconprobabilidaddedefinicio´nesta´ndar,
+6 ρ (j−1) ←2−2Int(f 0 ,λ ←−∞··β j ); o sea que para cada sucesio´n δ 0 ∈ℜ, Prob[δ =δ 0 ]=1/m.
+7 forτ ←1,2,···,r−jdo
+Entoncescadaconjuntoℜ⊂Σn,induceunamedidadeproba-
+8 a j,τ ←
+bilidadµ
+n
+ℜenlarectaRdadapor
+(θ(2τ+1ln(c 2 (η j +τ)))1/2−λ)/(2τ−1)1/2; µℜ(I)=Prob[Slil(δ)∈I,δ ∈ℜ].
+9 f 2j,τ ←Int(f 1 ,λ ←a j,τ ··∞) n
+10 p j,τ ←ρ (j−1) +1/(π)Int(f 2j,τ ,λ ←−β j ··β j ); ParaU =Σn,sedenotaµ n U comolacorrespondientemedida
+11 P j ←[ρ (j−1) ,p j,τ ]; de probabilidad inducida por la distribucio´n uniforme. Por
+definicio´n,siℜeslacoleccio´ndetodaslassucesionesgenera-
+12 if j←rthen
+dasporungeneradorpseudoaleatorio,entoncesladiferencia
+13 P j ←[ρ (j−1) ]; entreµU yµℜn esdespreciable.
+n n
+14 return{P (α,ℵa) ,P (α,ℵ) }←P j ;
+cio´n
+P
+S
+o
+∗
+r
+(
+e
+ξ
+l
+|n
+te
+)
+o
+d
+r
+e
+em
+un
+a
+a
+2
+s
+.
+u
+2
+c
+,
+e
+l
+s
+a
+io´
+d
+n
+is
+ξ
+tri
+s
+b
+e
+u
+le
+c
+c
+i
+c
+o´
+i
+n
+on
+in
+ad
+d
+a
+uc
+u
+i
+n
+d
+i
+a
+fo
+p
+r
+o
+m
+r
+e
+l
+m
+a
+e
+f
+n
+u
+t
+n
+e
+-
+,
+puedeseraproximadaaladistribucio´nnormalconmedia0y
+varianza1.PorconsiguientelamedidaµU puedesercalculada
+n
+3.1 Evaluacio´ndePRGNmedianteeltestLIL-de´bil como
+Paraevaluarlacalidaddeungeneradordenu´merospseu-
+doaleatorioG,Wangen[33]proponelasiguientemetodolog´ıa, µU((−∞,δ))(cid:39)Φ(δ (cid:112) 2ln(ln(n))) (cid:90) δ φ(λ (cid:112) 2ln(ln(n))dλ.
+n
+primeramenteseseleccionaunasucesio´ndelongitudfijan, −∞
+unvalor0<α ≤0,1yrec´ıprocamentelossubconjuntosdis- Entonces para evaluar un generador pseudoaleatorio G,
+tintosℵ 0 ,···,ℵ t de{1,···,n}.Entoncesparaunaseleccio´n primeramenteseseleccionalaslongitudesdelassucesiones
+deconjuntosℵ i sepuedenrealizarlossiguientespasos. n 0 ,···,n t (Ej.,n 0 =226+t).Segundamenteseusaelgenerador
+G para generar el conjunto ℜ⊆Σnt de m sucesiones. Por
+1. SeaP ( + α,ℵ) =P ( − α,ℵ) = 1 2 P (α,ℵ) ,∀ℵ. u´ltimo se compara las distancias entre las dos medidas de
+probabilidadµRyµU paran=n ,···,n.
+n n 0 t
+2. UsarGparaconstruirelconjuntodem≥100secuen-
+UngeneradorGesconsiderado“bueno”,siparaunasufi-
+ciasbinariasdelongitudn.
+cientecantidaddesucesionesm(ej.,m1≥10000),ladistancia
+entreµℜyµU esdespreciable(oma´spequen˜aqueelvalores-
+3. Paracadaℵ,secalculalaprobabilidadp+ dequees- n n
+(α,ℵ) perado).Existenvariasdefinicionesdedistanciasestad´ısticas
+tosconjuntospasaneltestLIL-(α,ℵ)de´bilmediante
+i paramedidasdeprobabilidad,comolassiguientes.
+S ≥1−α (p− paras ≤−1+α ).
+lil (α,ℵ) lil Lavariacio´ntotaldedistancia
+4. Calcularelpromediodeladistanciadelaprobabilidad d(µℜ,µU)=sup |µℜ(A)−µU(A)|
+n n A⊆B n n
+absoluta
+1 t DistanciadeHellinger
+∆ lil= ∑P−1
+w t+1 (α,ℵi) (cid:118)
+i=0 1 (cid:117) (cid:117) (cid:18)(cid:113) (cid:113) (cid:19)2
+(cid:16) (cid:17) H(µℜ||µU)= √ (cid:116)∑ µℜ(A)− µU(A)
+|p+ −P+ |+|p− −P− | n n 2 n n
+(α,ℵi) (α,ℵi) (α,ℵi) (α,ℵ) A∈B
+OptimizacióndeltestLIL-débilparalaevaluacióndePRGN 65
+Desviacio´ndelara´ız-cuadra´tica-media
+(cid:115) (cid:32) (cid:112) √ (cid:33)
+∑ (µℜ(A)−µU(A))2 2θ tln(ln(tn))− 2λ
+RMSD(µℜ,µU)= A∈B n n erf √ dλ. (12)
+n n |B| 2 t−1
+dondeBesunaparticio´ndelarectarealRquesedefinecomo Alternativamentesetieneque:
+{(∞,1),[1,∞)}∪{0.05λ−1,0.05λ−0.95)}:0≤λ ≤39.
+esta E s n di l s a ta s n e c c i c a i s o´n en 5 la se ev p a re lu s a e c n i t o´ a n u d n e e g je e m ne p r l a o d d o e re a s p d l e ic n ac u´ i m o´n er d o e s ii)P (α,ℵ) (cid:39) 1 2 P (α,ℵa) +P (α,ℵb) −√ 1 2π (cid:90) θ ∞ √ 2ln(ln(n)) e−λ 2 2
+pseudoaleatorios.
+(cid:32) (cid:112) √ (cid:33)
+2θ tln(ln(tn))− 2λ
+4. Optimizacio´n de las probabilidades erf √ dλ. (13)
+2 t−1
+teo´ricas del Test LIL-de´bil
+En esta seccio´n se exponen los resultados obtenidos a Demostracio´n.
+partirdeunasimplificacio´ndelasprobabilidadesteo´ricasdel i)Apartirdelaexpresio´n7delTeorema3.1setieneque:
+testLIL-de´bil.
+ApartirdelosresultadosobtenidosporWang[33]enla
+(cid:90)
+(cid:113)
+∞
+√
+e−δ2+
+2
+λ2
+dδ =
+ecuacio´n6yelTeorema3.1sepuedenconformarlossiguien- 1 (θ 2tln(ln(tn))−λ)
+t−1
+tescorolariosparaelca´lculodelasprobabilidadesteo´ricas
+deltestLILde´bil: e−λ
+2
+2 (cid:90)
+(cid:113)
+∞
+√
+e−δ
+2
+2
+dδ =
+1 (θ 2tln(ln(tn))−λ)
+t−1
+Corolario1 Para 0<α<1 fijo, sea θ =1−α y ℵ a ={n}. √ (cid:32) (cid:32) (cid:112) √ (cid:33) (cid:33)
+Setieneque
+−
+2π e−λ
+2
+2
+erf
+2θ tln(
+√
+ln(tn))− 2λ
+−1 ,
+2 2 t−1
+(cid:16) (cid:112) (cid:17)
+P =Prob[|S (ξ|n)|≥θ](cid:39)erfc θ ln(ln(n)) (9) deaqu´ıque:
+(α,ℵa) lil
+√
+D
+Po
+e
+r
+m
+l
+o
+a
+st
+e
+r
+c
+a
+u
+c
+a
+io´
+c
+n
+io´
+.
+n dada en 6 tenemos la probabilidad re- π
+1(cid:90)
+−
+θ
+θ √
+2
+2
+l
+l
+n
+n
+(
+(
+l
+l
+n
+n
+(
+(
+n
+n
+)
+)
+)
+)
+(cid:90)
+(cid:113)
+∞
+1 (θ √ 2tln(ln(tn))−λ)
+e−δ2+
+2
+λ2
+dδdλ
+t−1
+presentadaente´rminosdeladistribucio´nnormalyahorase
+√
+G
+pr
+a
+o
+u
+c
+s
+e
+s
+d
+d
+e
+e
+a
+la
+re
+s
+p
+ig
+r
+u
+e
+i
+s
+e
+e
+n
+n
+t
+t
+e
+ar
+m
+la
+an
+e
+e
+n
+ra
+t
+.
+e´rmino de la funcio´n error de
+=−√
+1 (cid:90) θ
+√
+2ln(ln(n)) e−λ
+2
+2
+2π −θ 2ln(ln(n))
+Prob[|S (ξ|n)|≥θ](cid:39)2 (cid:16) 1−Φ (cid:16) θ (cid:112) 2ln(ln(n)) (cid:17)(cid:17) (cid:32) (cid:32) (cid:112) √ (cid:33) (cid:33)
+lil 2θ tln(ln(tn))− 2λ
+erf √ −1 dλ =
+√ 2 t−1
+=2(1−√
+1 (cid:90) θ 2ln(ln(n)) e−δ
+2
+2
+dδ) (10)
+donde, √
+1 (cid:90) 2 θ √ π 2l − n( ∞ ln(n)) e−δ
+2
+2
+dδ
+−√ 1
+2π
+(cid:90)
+−
+θ
+θ
+√ √ 2
+2
+l
+l
+n
+n
+(
+(
+l
+l
+n
+n
+(
+(
+n
+n
+)
+)
+)
+)
+e−λ 2 2 erf (cid:32) 2θ (cid:112) tln
+2
+( √ ln
+t
+(t
+−
+n)
+1
+)− √ 2λ (cid:33) dλ
+2π −∞
+√
+= 1 (1+erf(θ (cid:112) ln(ln(n)))) (11) +√ 1 (cid:90) θ √ 2ln(ln(n)) e−λ 2 2 dλ
+2 2π −θ 2ln(ln(n))
+Sustituyendoelresultadodelaexpresio´n11enla10ysimpli- donde,
+ficandoseobtieneque: √
+(cid:16) (cid:16) (cid:112) (cid:17)(cid:17) √
+1 (cid:90) θ
+√
+2ln(ln(n)) e−λ
+2
+2
+dλ =
+P (α,ℵa) (cid:39)2 1−Φ θ 2ln(ln(n)) = 2π −θ 2ln(ln(n))
+1−erf(θ (cid:112) ln(ln(n)))=erfc(θ (cid:112) ln(ln(n))).(cid:5) √
+√
+2 (cid:90) θ 2ln(ln(n)) e−λ
+2
+2
+dλ =erf
+(cid:16)
+θ
+(cid:112)
+ln(ln(n))
+(cid:17)
+,
+Corolario2 Para0<α<1fijoyt ≥2,seaθ =1−α,ℵ= 2π 0
+{n,tn}.Setieneque
+teniendoencuentaque
+√
+i)P (α,ℵ) (cid:39)1−√ 1 (cid:90) θ √ 2ln(ln(n)) e−λ 2 2 erf(δ)= √ 2 (cid:90) δ e−t2 dtyerfc(δ)= √ 2 (cid:90) ∞ e−t2 dt
+2π −θ 2ln(ln(n)) π 0 π δ
+OptimizacióndeltestLIL-débilparalaevaluacióndePRGN 66
+sonlasfuncioneserroryerrorcomplementariorespectivamen- Algoritmo2:Ca´lculodeP ,P .
+(α,ℵa) (α,ℵ)
+te.
+Data:n,r,α.
+Por consiguiente, sustituyendo este resultado y el de la
+Result:{P ,P }.
+expresio´n9en7,seobtiene12.(cid:5) (α,ℵa) (α,ℵ)
+1 θ ←1−α;c 1 ←log 2 (n)−1;c 2 ←ln(2); f 1 ←e(− 2 λ2 );
+ii)Demaneraana´logaapartirdelteorema3.1sepuedede- 2 for j←1,2,···,rdo
+mostrarlaexpresio´nalternativa13dadoque: 3 ε j ←c1+j;β j ←θ(2ln(c 2 ε j ))1/2;
+ρ ←erfc(β/21/2);
+−√
+1 (cid:90) ∞
+√
+e−λ
+2
+2
+4 fo
+(
+r
+j−
+τ
+1)
+←1,2,···
+j
+,r−jdo
+2π θ 2ln(ln(n)) 5 a j,τ ←1/2(2θ(2τln(c 2 (τ+ε j )))1/2−
+(cid:32) (cid:32) (cid:112) √ (cid:33) (cid:33) 21/2λ)/(2τ−1)1/2;
+2θ tln(ln(tn))− 2λ
+erf
+2
+√
+t−1
+−1 dλ = 6 f 2j,τ ←erf(a j,τ );
+7 p j,τ ←1−1/(2π)1/2Int(f 1 f 2j,τ ,λ←−β j ··β j );
+(cid:32) (cid:112) √ (cid:33)
+−√
+1 (cid:90) ∞
+√
+e−λ
+2
+2
+erf
+2θ tln(
+√
+ln(tn))− 2λ
+dλ
+8 P j ←[ρ (j−1) ,p j,τ ];
+2π θ 2ln(ln(n)) 2 t−1 9 if j←rthen
+10 P j ←[ρ (j−1) ];
++√
+1
+2π
+(cid:90)
+θ
+∞
+√ 2ln(ln(n))
+e−λ
+2
+2
+dλ 11 return{P (α,ℵa) ,P (α,ℵ) }←P j ;
+donde
+√ 1
+2π
+(cid:90)
+θ
+∞ √
+2ln(ln(n))
+e−λ 2 2 dλ Algoritmo3:Ca´lculodeP (α,ℵa) .
+Data:n,r,α.
+√ (cid:32)√ √ (cid:33)
+= √
+2 2π
+−
+2π
+erf
+(cid:16)
+θ
+(cid:112)
+ln(ln(n))
+(cid:17) Result:{P (α,ℵa) }.
+2 π 2 2 1 θ ←1−α;c 1 ←log 2 (n)−1;c 2 ←ln(2);
+2 for j←1,2,···,rdo
+simplificandoseobtieneque 3 ε j ←c1+j;β j ←θ(ln(c 2 ε j ))1/2;
+√
+1 (cid:90) ∞
+√
+e−λ
+2
+2
+dλ =
+1
+−
+1
+erf
+(cid:16)
+θ
+(cid:112)
+ln(ln(n))
+(cid:17) ρ (j−1) ←erfc(β j );
+2π θ 2ln(ln(n)) 2 2 4 return{P (α,ℵa) }←ρ (j−1) ;
+1 (cid:16) (cid:112) (cid:17)
+= erfc θ ln(ln(n))
+2 Algoritmo4:Ca´lculodeP (α,ℵ) .
+Conesteresultadoysustituyendoadecuadamenteseob- Data:n,r,α.
+tiene13.(cid:5) Result:{P }.
+(α,ℵ)
+depe C n o d m e o de s P e puede po a r pr c e o c n i s a i r gu la ie f n o´ te rm la u p la ro o b b a t b e i n li i d d a a d e P n 12 n s o e 1 θ ←1−α;c 1 ←log 2 (n)−1;c 2 ←ln(2); f 1 ←e(− 2 λ2 );
+(α,ℵa) (α,ℵ) 2 for j←1,2,···,rdo
+puedecalculardemaneraindependiente.
+Deestamanera,seproponeelAlgoritmo2ma´soptimiza- 3 ε j ←c1+j;β j ←θ(2ln(c 2 ε j ))1/2;
+4 forτ ←1,2,···,r−jdo
+doqueelAlgoritmo1,paraelca´lculosecuencialdeP y
+P ,ylosAlgoritmos3y4paralaimplementacio´np (α a , r ℵ al a e ) la 5 a j,τ ←1/2(2θ(2τln(c 2 (τ+ε j )))1/2−
+(α,ℵ) 21/2λ)/(2τ−1)1/2;
+delasmismas.
+r=
+L
+9
+a
+y
+T
+n
+ab
+=
+la
+2
+I
+26
+m
+··
+u
+·
+e
+2
+s
+3
+t
+4
+r
+,
+a
+a
+e
+l
+l
+ap
+ca
+l
+´
+i
+l
+c
+c
+a
+u
+r
+lo
+el
+d
+A
+e
+lg
+P (
+o
+α
+r
+,
+i
+ℵ
+tm
+a)
+o
+y
+2
+P
+o
+(α
+e
+,ℵ
+l
+)
+3
+c
+y
+on
+4
+6
+7 p
+f 2
+j,
+j,
+τ
+τ
+←
+←
+1
+e
+−
+rf(
+1
+a
+/
+j
+(
+,τ
+2
+)
+π
+;
+)1/2Int(f 1 f 2j,τ ,λ←−β j ··β j );
+implementadoenMaple,lascualescoincidenconlasdadas
+porWangen[33].
+8 return{P (α,ℵ) }←p j,τ ;
+5. Resultados experimentales
+Enestaseccio´nseexponenlosresultadosexperimentales P y P los Algoritmos 3 y 4 se pueden implemen-
+(α,ℵa) (α,ℵ)
+de la implementacio´n de los algoritmos propuestos para el tarparalelamentedisminuyendoeltiempodesusco´mputos,
+ca´lculodelasprobabilidadesteo´ricasdeltestLIL. comoseilustranlosresultadosenlaFigura1.
+Desdeelpuntodevistadeimplementacio´nelAlgoritmo Laprimerabarradelg´rafico,correspondientealAlgorit-
+2esdemayoreficienciarespectoalAlgoritmo1,yaprove- mo1indicaqueestedemorapocomenosde3segundospara
+chandolaindependenciaentreelca´lculodelasprobabilidades el co´mputo P y P con n=226···234, y el tiempo
+(α,ℵa) (α,ℵ)
+OptimizacióndeltestLIL-débilparalaevaluacióndePRGN 67
+vaaumentandocomomuestranlasdema´sbarrascuandose
+incrementaelvalordenhastan=240quedemorapocoma´s
+de8segundos,tomandocomovalorinicialn=226.Enelcaso
+del Algoritmo 2 para el ca´lculo secuencial, y el 3 y 4 para
+suimplementacio´nparalela,dadosaqu´ı,eltiempodeca´lculo
+disminuyeconsiderablementeacente´simasdesegundoscomo
+ilustra la Figura 1, con n=226···245. Por estos resultados
+esqueseplantealaposibilidaddepoderrealizarexperimen-
+tacionesma´sampliasenlaevaluacio´ndePRGNconeltest
+LIL.Tomarlosvaloresdistintosdensignificanelana´lisisde
+muestrasconestostaman˜osenunacorridadeltestLIL-de´bil.
+A continuacio´n se muestra mediante un ejemplo los re- Figura1.Comparacio´ndetiemposdelaimplementacio´nde
+sultadosdeevaluacio´nutilizandolametodolog´ıavistaenla losalgoritmos1,2,3y4.
+seccio´nanterior,aplicandoparalacomparacio´ndeltiempode
+co´mputolosalgoritmos1y2.Paralasexperimentacionesde
+evaluacio´nsetomo´ comomuestraunficherocifradoconel
+algoritmoAESenmodoCTR.Seanalizaron1000sucesiones
+binariasenelconjuntoℵ={212,···,220}.Segu´nlaFigura2
+podemosdecirquelasdistribucionesobservadasparalosdis-
+tintostaman˜osdemuestras(212...220)oscilanalrededorde
+lasdistribucionesteo´ricas.Paracadaunadeestasdistribucio-
+nesobservadassepuedeirchequeandoladistanciaestad´ıstica
+entreellayladistribucio´nteo´rica.Comosepuedeobservaren
+lafigurahayalgunospuntosopicosenelqueladistribucio´n
+observadaseseparadelateo´rica,comoporejemploladis-
+tribucio´n µAES−CTR representadaencolorrojoconn=213,
+n
+estaseparacio´nafectaelpromediodelate´cnicadedistancia Figura2.DistribucionesdeµU yµAES−CRT,con
+n n
+queseutilice,demanearaquemientrasmejorseaelpromedio n=212,···,220.
+de las distancias utilizadas, mejor sera´ el generador. Estas
+distanciasdelasdistribucionessepuedenanalizardemanera
+independienteodemaneraconjuntacomolorealizaeltest.
+Elvalordelpromediodeladistanciaobtenidoescomparado
+conunvalorte´oricoesperado,loquepermitedecidirsobreel
+comportamientodealeatoriedaddelgenerador,porejemplo,
+siesrecomendableparaaplicacionescriptogra´ficas.
+EncuantoalaFigura3serepresentanlasdistribuciones
+SAES−CTR de 100 sucesiones en el rango de 1000 a 10000
+lil
+bits, como se puede observar varias de estas sucesiones se
+expandenfueradelintervalo[-1,1]enelejevertical.Eltest
+LILde´bilseencargadecomprobarlaprobabilidaddequelas
+distribuciones de S caigan en los rangos 1−α y −1+α,
+lil Figura3.ResultadosdeltestLILparasucesionesgeneradas
+representadosenelgra´ficomediantelasl´ıneasrojasyverdes.
+porAES-CTR.
+Losresultadosalimplementarlosalgoritmosanalizados
+semuestranacontinuacio´n.
+α=0.1 ℵ0 (226) ℵ1 (227) ℵ2 (228) ℵ3 (229)
+ℵ0 (226) 0.03044 0.05085 0.05441 0.05540
+Alg. 1: ∆ w lil = 0,1824 y RMSD wlil = 0,00134, en un ℵ1 (227) 0.02938 0.04918 0.05263
+tiempodeejecucio´nde28.25segundos. ℵ2 (228) 0.02838 0.04762
+ℵ3 (229) 0.02746
+Alg. 2: ∆ lil = 0,1824 y RMSD = 0,00134, en un
+α=0.1 ℵ5 (231) ℵ6 (232) ℵ7 (233) ℵ8 (234)
+w wlil ℵ5 (231) 0.02580 0.04351 0.04660 0.04750
+tiempodeejecucio´nde19.75segundos. ℵ6 (232) 0.02505 0.04230 0.04531
+ℵ7 (233) 0.02434 0.04116
+LasexperimentacionesserealizaronenunaPCIntel(R) ℵ8 (234) 0.02367
+Core(TM)i3CPU:3.10GHzcon2GdeRAM. TablaI.ProbabilidadesdeltestLIL-de´bilconn=226···234.
+OptimizacióndeltestLIL-débilparalaevaluacióndePRGN 68
+6. Conclusiones [9] A.Khintchine.Ubereinensatzderwahrscheinlichkeits-
+rechnung.Fund.Math,6:p.9-20,1924.
+En este art´ıculo se reviso´ el disen˜o del test LIL-de´bil
+introducido en trabajos recientes para la evaluacio´n de la
+[10] D.E.Knuth.TheArtofComputerProgramming,Semi-
+calidad de generadores de nu´meros peseudoaleatorios. Se
+numericalAlgorithms.Vol.2,3rded.,Addison-Wesley,
+realizo´ unaoptimizacio´ndelasfo´rmulasdadasen[33]parael
+1998.
+ca´lculodelasprobabilidadesteo´ricas(P yP )para
+(α,ℵ) (α,ℵa)
+queunasucesio´npaseeltestsobrelaleydellogaritmoiterado [11] P.L‘ecuyer.Softwareforuniformrandomnumberge-
+ysepresentarondoscorolariosy3algoritmosparaelcomputo neration:Distinguishingthegoodandthebad.Procee-
+delasmismas. dingsoftheWinterSimulationConference.IEEEPress,
+La forma que se propone para el ca´lculo de estas pro- p.95-105,2001.
+babilidades permite una independencia entre ellas, lo cual
+facilitalaparalelizacio´ndelalgoritmoyporconsiguienteim- [12] P.L‘ecuyer.Randomnumbergeneration.Handbookof
+plementacionesma´seficientesdeltestLIL-de´bil.Estaforma ComputationalStatistics,J.E.Gentle,W.Haerdle,andY.
+de representacio´n en te´rminos de la funcio´n error, tambie´n Mori,Eds.Springer-Verlag,Berlin,Germany.p.35-70.
+podr´ıaserutilizadaenlosotrosdisen˜osdelostestLIL(disen˜o ChapterII.2,2004.
+deltestLILde´bil-IIydisen˜odeltestLIL-fuerte)conelobje-
+[13] P.L‘ecuyeryR.Simard.Bewareoflinearcongruential
+tivodefacilitarelca´lculodelasprobabilidadesteo´ricaspara
+generators with multipliers of the form a=±2q±2r.
+queunasucesio´npaseeltestydeestamanerapoderrealizar
+ACMTrans.Math.Soft.25,3,p.367-374,1999.
+experimentacionesyevaluacionesdePRGNma´sampliasy
+eficientes.
+[14] P.L‘ecuyeryR.Simard.Ontheperformanceofbirthday
+spacings tests for certain families of random number
+Referencias generators.Mathem.Comput.Simul.55,p.1-3,p.131-
+[1] E. Azmoodeh, G. Peccati y G. Poly. The law of ite- 137,2001.
+ratedlogarithmforsubordinatedGaussiansequences:
+[15] P. L‘ecuyer, R. Simard y S. Wegenkittl. Sparse serial
+uniformWassersteinbounds.ALEA,Lat.Am.Probab.
+testsofuniformityforrandomnumbergenerators.SIAM
+Math.Stat.13,659-686,2016.
+J.Scient.Comput.24,2,p.652-668,2002.
+[2] A.Balsubramani,A.Ramdas.Sequentialnonparametric
+testing with the law of the iterated logarithm. Procee- [16] P.L‘ecuyeryRichardSimard.ACLibraryforEmpirical
+Testing of Random Number Generators. ACM Trans.
+dingsoftheThirty-SecondConferenceonUncertainty
+Math.Softw.33,4,Article22,2007.
+inArtificialIntelligence.AUAIPress,p.42-51,2016.
+[3] E.BarkeryJ.Kelsey.NISTSP800-90A:Recommenda- [17] P.L‘ecuyeryR.Touzin.Fastcombinedmultiplerecursi-
+tionforRandomNumberGenerationUsingDeterminis- vegeneratorswithmultipliersoftheforma=±2q±2r.
+ticRandomBitGenerators.NIST,2012. ProceedingsoftheWinterSimulationConference.Fish-
+wick,Eds.IEEEPress,p.683-689,2000.
+[4] H.DemirhanyN.Bitirim.StatisticalTestingofCrypto-
+graphicRandomness.JournalofStatisticians:Statistics [18] P.Li,X.Yi,X.Liu,YuncaiWangyYongeeWang.Brow-
+andActuarialSciencesIDIA9,1,1-11,2016. nianmotionpropertiesofoptoelectronicrandombitge-
+neratorsbasedonlaserchaos.OPTICSEXPRESS,Vol.
+[5] Y.Dodis,C.Ganesh,A.Golovnev,A.JuelsyT.Risten-
+24,No.14,2016.
+part.AFormalTreatmentofBackdooredPseudorandom
+Generators. Advances in Cryptology-EUROCRYPT
+[19] G.Marsaglia.Acurrentviewofrandomnumbergene-
+2015.34thAnnualConferenceonthetheoryApplica-
+rators.ComputerScienceandStatistics,SixteenthSym-
+tions of Cryptographic techniques, Sofia, Bulgaria, p.
+posium on the Interface. Elsevier Science Publishers,
+102-128,2015.
+North-Holland,Amsterdam,TheNetherlands.p.3-10,
+[6] E. D. Erdmann. Empirical tests of binary keystreams. 1985.
+M.S.thesis,DepartmentofMathematics,RoyalHollo-
+[20] G.Marsaglia.DIEHARD:Abatteryoftestsofrandom-
+wayandBedfordNewCollege,UniversityofLondon,
+ness.http://stat.fsu.edu/geo/diehard.html,1996.
+1992.
+[7] W. Feller. Introduction to Probability Theory and Its [21] G.MarsagliayW.Tsang.Somedifficult-to-passtestsof
+Applications.vol.I,Wiely,Berlin,1968. randomness.J.Statist.Soft.7,3,p.1-9,2002.
+[8] K.G.Jamieson,M.Malloy,R.D.Nowak,S.Bubeck. [22] G. Marsaglia y A. Zaman. Monkey tests for random
+lil’ucb: An optimal exploration algorithm for multi- number generators. Comput. Math. Applic. 26, 9, p.
+armedbandits.COLT,vol.35,p.423-439,2014. 1-10,1993.
+OptimizacióndeltestLIL-débilparalaevaluacióndePRGN 69
+[23] M.MascagniyA.Srinivasan.Algorithm806:SPRNG: [36] Y. Wang. Resource bounded randomness and compu-
+Ascalablelibraryforpseudorandomnumbergeneration. tationalcomplexity.Theoret.Comput.Sci.,237:p.33-
+ACMTrans.Mathem.Soft.26,p.436-461,2000. 55,2000.
+[24] K.Miyabe,A.Takemura.Thelawoftheiteratedloga- [37] F.Yang,A.Ramdas,K.Jamieson,M.Wainwright.Afra-
+rithmingame-theoreticprobabilitywithquadraticand meworkforMulti-A(rmed)/B(andit)testingwithonline
+stronger hedges. Stochastic Process. Appl., 123(8), p. FDRcontrol.arXiv:1706.05378v1[stat.ML],2017.
+3132-3152,2013.
+[25] A.L.Rukhin.Testingrandomness:Asuiteofstatistical
+procedures. Theo. Probab. Applic. 45, 1, p. 111-132,
+2001.
+[26] A.L.Rukhin,J.Soto,J.Nechvatal,M.Smid,E.Barker,
+S.Leigh,M.Levenson,M.Vangel,D.Banks,A.Heckert,
+J.DrayyS.Vo.AStatisticalTestSuiteforRandomand
+PseudorandomNumberGeneratorsforCryptographic
+Applications.NISTSP800-22,2010.
+[27] T.Sasai, K.Miyabe, A. Takemura,. A game-theoretic
+proof of Erdos-Feller-Kolmogorov-Petrowsky law of
+the iterated logarithm for fair-coin tossing ar-
+Xiv:1408.1790v2,[math.PR],2014.
+[28] D.ShumowyN.Ferguson.Onthepossibilityofaback
+door in the NIST SP800-90 Dual Ec Prng. Proc. Cry-
+pto’07,2007.
+[29] Y.Song,G.Fellouris.Sequentialmultipletestingwithge-
+neralizederrorcontrol:anasymptoticoptimalitytheory.
+arXiv:1608.07014v1[math.ST],2016.
+[30] Y.Song,G.Fellouris.Asymptoticallyoptimal,sequential,
+multiple testing procedures with prior information on
+thenumberofsignals.ElectronicJournalofStatistics,
+ISSN:1935-7524,Vol.11,p.338-363,2017.
+[31] I.Vattulainen,T.Ala-NissilayK.Kankaala.Physical
+modelsastestsofrandomness.Physic.Rev.E52,3,p.
+3205-3213,1995.
+[32] U.V.VaziraniyV.V.Vazirani.Trapdoorpseudo-random
+numbergenerators,withapplicationstoprotocoldesign.
+FOCS.vol.83,p.23-30,1983.
+[33] Y.Wang.OntheDesignofLILTestfor(Pseudo)Ran-
+dom Generators and Some Experimental Result. ar-
+Xiv:1401.3307v1[cs.CR],2014.
+[34] Y.WangyT.Nicol.Onstatisticaldistancebasedtesting
+ofpseudorandomsequencesandexperimentswithPHP
+andDebianOpenSSL.Elsevier,ComputersandSecurity,
+53,p.44-64,2015.
+[35] Y. Wang. On Stochastic Secu-
+rity of Pseudorandom Sequences.
+http://webpages.uncc.edu/yonwang/papers/lilprfV2.pdf,
+2014.

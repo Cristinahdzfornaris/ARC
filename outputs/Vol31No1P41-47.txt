@@ -1,0 +1,403 @@
+CienciasMatemáticas,Vol.31,No.1,Pag.41-47, 2017
+Recibido09-2016
+Uso de Filtros Morfolo´gicos en Ima´genes de
+Mamograf´ıas
+Using Morphological Filters in Mammographic
+Images
+Ceyli M. Ricardo Gomar, Marta L. Baguer D´ıaz-Roman˜ach*, Jorge Del Risco Mart´ınez
+Resumen La deteccio´n temprana del ca´ncer de mama constituye uno de los principales objetivos de la
+medicinaactual.Elusodete´cnicasmatema´ticasenima´genesdemamograf´ıadigitalseesta´ convirtiendoenuna
+tendenciaqueofreceresultadosventajososeneldiagno´sticodeestaenfermedad.Enestetrabajosedefinenlas
+principalesoperacionesdelaMorfolog´ıaMatema´ticanecesariasparalaimplementacio´ndefiltros.Seexpone
+unaexperimentacio´nyevaluacio´ncuantitativadelosfiltrosmorfolo´gicosimplementadosusandounabasede
+datosreconocidadeima´genesdemamograf´ıas.
+Abstract Earlydetectionofbreastcancerisoneofthemaingoalsinmodernmedicine. Usingmathematical
+techniques in digital mammographic images is becoming a trend that provides advantageous results in the
+diagnosisofthisdisease. ThispaperdefinesthemainoperationsofMathematicalMorphologynecessaryforthe
+implementationoffilters. Experimentationandquantitativeassessmentofimplementedmorphologicalfiltersis
+exposedusingarecognizeddatabaseofmammographicimages.
+PalabrasClave
+ProcesamientodeIma´genesDigitales—Morfolog´ıaMatema´tica—FiltrosMorfolo´gicos
+1DepartamentodeMatema´ticaAplicada,FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba:
+cmricardo@grm.desoft.cu,mbaguer@matcom.uh.cu,jrgdelrisco@gmail.com
+*AutorparaCorrespondencia
+Introduccio´n mentesimplesyconservanlasprincipalescaracter´ısticasde
+formasdelosobjetos[11].Suaplicacio´neneltratamientode
+Elprocesamientodeima´genesdigitalesobtenidasapartir
+ima´genesdemamograf´ıashacedeestateor´ıaunaherramienta
+demamograf´ıasconstituyeunodelosprincipalesproblemas
+muyatractiva,porqueenlamismapodemosencontrarfiltros
+tratados en el campo de la medicina. Existen diversas he-
+paraelmejoramientodeima´genesyalgoritmosdesegmenta-
+rramientas computacionales para apoyar el diagno´stico del
+cio´nh´ıbridos1[2].
+ca´ncerdemama,muchasdeellasusanfiltrosyalgoritmosde
+Losfiltrosmorfolo´gicospuedenserconsideradosfiltros
+segmentacio´n.
+no lineales y en el caso del mejoramiento de ima´genes se
+En el a´rea de la Morfolog´ıa Matema´tica se pueden en-
+puedenclasificarsegu´n[2]enfiltrospara:supresio´nderuido,
+contrar ventajosas propuestas de filtros morfolo´gicos para
+mejoramientodelcontrasteyeliminacio´ndea´reassegu´nun
+la reduccio´n del ruido, suavizado y realce del contraste en
+criterioespec´ıfico.Enestetrabajoseestudiaunapropuesta
+ima´genes.Estosfiltrossoncomposicionesdelasoperaciones
+para la deteccio´n de microcalcificaciones en ima´genes de
+morfolo´gicasba´sicascomolaerosio´n,dilatacio´nyreconstruc-
+mamograf´ıasconunfiltromorfolo´gico.
+cionesgeode´sicas.
+Lasegmentacio´ndeima´genesparaladeteccio´ndemasas
+ydistorsionesdeformaenlasima´genesdemamograf´ıases
+1. Definiciones Preliminares unate´cnicamuyutilizadaenelcampodelProcesamientode
+Ima´genesMe´dicas[3].LaMorfolog´ıaMatema´ticaofrececo-
+Frecuentemente se utilizan las te´cnicas de Morfolog´ıa
+moherramientascla´sicasparalasegmentacio´nlastransforma-
+Matema´ticaenelProcesamientodeIma´genesMe´dicas.Sus dasdeWatershedyWaterfall.LaTransformadadeWatershed
+creadoresGeorgesMatheronyJeanSerralapensaroninicial-
+ofreceresultadosestablesparalasegmentacio´ndeima´genes
+menteparaima´genesbinarias,aunquema´stardefueutilizada
+coninclusio´ndel´ımitescontinuos[4].Unadesventajadeeste
+en ima´genes en escala de grises y actualmente tambie´n en
+algoritmoesquedependedemarcadoresop´ıxelesselecciona-
+ima´genesacolor.LaMorfolog´ıaMatema´ticasebasaengeo-
+metr´ıa y forma. Las operaciones morfolo´gicas son general- 1Seutilizanvariaste´cnicasdesegmentacio´n.
+42 UsodeFiltrosMorfolo´gicosenIma´genesdeMamograf´ıas
+dospreviamentepararealizarlasegmentacio´n.Unaalternativa hacerunaerosio´nseguidaporunadilatacio´n,aestaoperacio´n
+eselusodelaTransformadadeWaterfall,lacualbrindauna se le conoce como apertura. Por el contrario, si se desea
+segmentacio´njera´rquicapartiendodelasobresegmentacio´n suprimirpequen˜asregionesoscurasdelaimagenserealiza
+queprovocaWatershed[7]. unadilatacio´nseguidaporunaerosio´n,aestaoperacio´nsele
+Lasdefinicionesquesepresentanacontinuacio´nsonim- llamacierre.
+portantestantoparalacomprensio´ndelosalgoritmosmencio-
+Definicio´n1.3 La apertura de una imagen digital en esca-
+nadosanteriormente,as´ıcomoparaunaparteimportantede
+la de grises A=(cid:104)V,E,f(cid:105) por un elemento estructurante B
+losfiltrosmorfolo´gicosreportadosenlaliteratura.
+esta´ definidacomo:
+Enestainvestigacio´nseadopto´ lasiguientedefinicio´nde
+imagendigitalenescaladegrises[10]:
+A◦B=(A(cid:9)B)⊕B (3)
+Unaimagendigitalenescaladegrisespuededenotarse
+comoI=(cid:104)V,E,f(cid:105),f :V →NdondeV ⊂Z2 yE⊂Z2×Z2 Definicio´n1.4 Elcierredeunaimagendigitalenescalade
+define la conectividad de cada ve´rtice o p´ıxel p∈V en el grisesA=(cid:104)V,E,f(cid:105)porunelementoestructuranteBesta´ de-
+grafo.Lostiposdeconectividadma´sutilizadossonde4u8 finidocomo:
+vecinosporp´ıxel. A•B=(A⊕B)(cid:9)B (4)
+Sepuedeverunaimagendigitalenescaladegrisescomo
+En ocasiones las operaciones de apertura y cierre mor-
+un grafo con valores en los ve´rtices, donde al resultado de
+folo´gicasnosonsuficientesparaelprocesamientodeima´ge-
+evaluar f(p)seledenominavalordegris,altitudointensidad
+nesenescaladegrises.LastransformacionesTop-hats2son
+delp´ıxel p.
+operacionesmorfolo´gicasqueseusanparaextraerpequen˜os
+1.1 Operacionesmorfolo´gicas detallesdelasima´genes.
+Lasdosoperacionesmorfolo´gicasma´simportantessonla
+Definicio´n1.5 Las transformaciones Black top-hat (BTH)
+erosio´nyladilatacio´n.Sonoperacionesqueactu´anespacial-
+yWhitetop-hat(WTH)deunaimagendigitalenescalade
+mentesobrelaimagenusandounelementoestructurante[11],
+grises A=(cid:104)V,E,f(cid:105) por un elemento estructurante B esta´n
+haciendo que se realcen ciertos detalles y se pierdan otros.
+definidascomo:
+Lamayor´ıadelasotrasoperacionesmorfolo´gicaspuedenser
+definidasente´rminosdeestasdosoperacionesiniciales. BTH=(A•B)−A (5)
+WTH=A−(A◦B) (6)
+Definicio´n1.1 Laerosio´ndeunaimagendigitalenescala
+degrisesA=(cid:104)V,E,f(cid:105)porunelementoestructuranteBenel Estasoperacionessebasanenelprincipiodequeenoca-
+p´ıxelxesta´ definidacomo: sionesesma´sfa´cileliminarobjetosrelevantesdelaimageny
+procesarlosporseparado,queeliminardirectamentelosob-
+(cid:2) (cid:3)
+A(cid:9)B(x)= ε (f) (x)=m´ınf(x+b) (1)
+B jetosirrelevantesdelamisma[11].Muchasvecesseutilizan
+b∈B
+tambie´nparaelmejoramientodelcontrasteenima´genesen
+Al erosionar una imagen en escala de grises, se aplica escaladegrises.
+sucesivamenteelelementoestructuranteBsobrecadap´ıxel Todaslastransformacionesmorfolo´gicasexpuestashas-
+delaimagen,escogiendoelvalorm´ınimoentresusvecinosy ta el momento involucran una imagen con un elemento es-
+asigna´ndoleestenuevovaloralp´ıxelenlaimagenresultan- tructuranteespec´ıfico.Lasoperacionesgeode´sicassiguientes
+te.Comolosp´ıxelesma´soscurostienenmenorvalorenlas involucran dos ima´genes de entrada. Las transformaciones
+ima´genesenescaladegrises,entonceslaimagenresultante morfolo´gicas se aplican sobre la primera imagen (imagen
+delaerosio´nrealzalaspartesoscurasdelaimagenoriginal. marcador)ylaimagenresultanteesobligadaapermaneceren-
+cimaodebajodelasegundaimagen(imagenma´scara).Estas
+Definicio´n1.2 Ladilatacio´ndeunaimagendigitalenescala
+operacionessebasanenelconocimientodeformasuobjetos
+degrisesA=(cid:104)V,E,f(cid:105)porunelementoestructuranteBenel
+en la imagen de entrada, de esta forma se evita que dichos
+p´ıxelxesta´ definidacomo:
+objetospierdandetallesenlastransformacionesmorfolo´gicas
+(cid:2) (cid:3) arealizar[12].
+A⊕B(x)= δ (f) (x)=ma´xf(x+b) (2)
+B
+b∈B
+Definicio´n1.6 Seandosima´genesA=(cid:104)V,E,f(cid:105)y
+Ladilatacio´ndeunaimagenrealzalaspartesma´sclaras A(cid:48)=(cid:104)V,E,g(cid:105)talesque f :V →Nyg:V →Nesta´ndefinidas
+delamisma,alexpandirlosp´ıxelesconmayorintensidad.La sobre el mismo dominio, y cumplen que f ≥g. La erosio´n
+erosio´nyladilatacio´nsontransformacionesdualesrespecto geode´sicaelementaldeA(cid:48)sobreAconunelementoestructu-
+alcomplemento[11],cumplie´ndosequeε (fC)= (cid:2) δ (f) (cid:3)C . ranteB,sedefinecomo:
+B B
+Alprocesarunaimagen,casinoseutilizanlaerosio´no
+ε (1) (f)=(A(cid:48)(cid:9)B)∨A=ε (f)∨g (7)
+la dilatacio´n aisladas, comu´nmente se utilizan dilataciones g B
+seguidas por erosiones o viceversa [4]. Por ejemplo, para 2Enlabibliograf´ıanoseencontro´unadefinicio´nenespan˜olparaestas
+suprimirpequen˜asregionesbrillantesdelaimagensetiendea operaciones.
+UsodeFiltrosMorfolo´gicosenIma´genesdeMamograf´ıas 43
+Laerosio´ngeode´sica[11]detaman˜ondelaimagenA(cid:48)
+sobreAseobtieneevaluandonerosionesgeode´sicassucesivas (cid:40)
+(n) (1)(cid:2) (n−1) (cid:3) ((A◦B)•B) n=1
+ε g (f)=ε g ε g (f) .AlaimagenAselellamama´scara, altC(A,B,n)= (10)
+yaA(cid:48)marcador. altC(((A◦B)•B),B,n−1) n>1
+Alosoperadores∨y∧selesconocecomoma´ximopunto
+Estefiltroconstituyeunapropuestabasadaenelfullbuild
+a punto y m´ınimo punto a punto, respectivamente [11]. El
+alternatefilter,enelcualseempleanconceptoscomoelde
+primero determina la intensidad ma´xima para cada p´ıxel x,
+aperturaycierreporreconstruccio´n[1].
+evaluando f(x) y g(x), o sea (f ∨g)(x)=ma´x(f(x),g(x)),
+mientras el segundo determina la intensidad m´ınima como Definicio´n1.10 Seaunaimagendigitalenescaladegrises
+(f∧g)(x)=m´ın(f(x),g(x)). A=(cid:104)V,E,f(cid:105) y un elemento estructurante B, el filtro de ni-
+Enlapra´cticalasoperacionesgeode´sicasdefinidasante- velacio´n fuerte [1] utiliza las operaciones ba´sicas erosio´n
+riormenteseaplicansucesivamentehastaalcanzarunaesta- ydilatacio´n,as´ıcomolasreconstruccionesgeode´sicaspor
+bilidad [11], y constituyen la base de algunos de los filtros erosio´nydilatacio´nparahacerunsuavizadodelaimagen.
+quesepresentara´nma´sadelante.Aestasiteracionessucesivas Elfiltrosedefinecomo:
+selesconocecomoreconstruccionesgeode´sicas.Laestabili-
+dadenlasreconstruccionesgeode´sicassealcanzacuandose nivelacio´nFuerte(A,B)=Rε(cid:2) Rδ(f) (cid:3) (11)
+g h
+obtieneelmismoresultadoentreunaiteracio´nyotradeuna
+transformacio´ngeode´sicaenlasima´genes.
+Definicio´n1.7 SeaA=(cid:104)V,E,f(cid:105)laimagenmarcadoryA(cid:48)=
+(cid:104)V,E,g(cid:105)laimagenma´scara,con f ygdefinidasenelmismo
+dominio y f ≥g, la reconstruccio´n geode´sica por erosio´n
+seobtieneiterandoerosionesgeode´sicasenescaladegrises
+hastaalcanzarlaestabilidad,quedandodefinidacomo:
+Rε(f)= (cid:94)(cid:2) ε (n) (f) (cid:3) (8)
+g g
+n≥1 (a) (b)
+En [11] se definen la dilatacio´n geode´sica y la recons-
+truccio´n geode´sica por dilatacio´n Rδ(f) como operaciones
+g
+dualesdelaerosio´ngeode´sicaylareconstruccio´ngeode´sica
+porerosio´nrespectivamente.
+1.2 FiltrosMorfolo´gicos
+Conociendolasprincipalesoperacionesmorfolo´gicasse
+pueden crear filtros a partir de estas. Para consultar otras
+alternativasysususosseproponeelestudiode[9]. (c) (d)
+Losfiltrosdereduccio´nderuidoysuavizadodelaima- Figura1.Filtrosmorfolo´gicosdereduccio´nderuidoy
+genusanprincipalmentelasoperacionesdeaperturaycierre, suavizadodelaimagenconn=2
+otroma´scomplejousalasreconstruccionesgeode´sicas.Su
+objetivoprincipaleslaeliminacio´ndep´ıxelesnover´ıdicos EnlaFigura1(a)semuestralaimagenoriginalconpe-
+enlaimagen-esdecirquelainformacio´nqueofrecennoera quen˜asmicrocalcificaciones3 sen˜aladas.En(b)seobservael
+la real- y aplicar un ligero emborronamiento sobre la ima- resultado de aplicar el filtro alternado. Se pierden algunas
+genparaaproximarlainformacio´ndelosp´ıxelesquefueron zonas brillantes. El resultado de aplicar el filtro alternado
+eliminados. completosemuestraen(c),dondeseapreciamenoselem-
+borronadodelfiltroanterior,aunqueseconservanma´szonas
+Definicio´n1.8 Sea una imagen digital en escala de grises brillantes.Poru´ltimoen(d)semuestraelresultadodelfiltro
+A=(cid:104)V,E,f(cid:105)yunelementoestructuranteB,dondenrepre- denivelacio´nfuerte,enelcualnosepierdeningunadelasre-
+sentaeltaman˜odelaaperturayelcierre,elfiltroalternado gionesdestacadasenlaimagenoriginal,peroaparecenmenos
+[1]sedefinecomo: n´ıtidas.No´tesequeelobjetivofundamentaldeestosfiltroses
+eliminarruido,portanto,estaspequen˜asregionespuedenser
+alt(A,B)={(((A◦B)n)•B)n} (9)
+confundidascomotal.
+Enima´genesme´dicasseusanfiltrosderealcedelcontraste
+Definicio´n1.9 Sea una imagen digital en escala de grises
+para destacar zonas oscuras o claras que ofrezcan informa-
+A=(cid:104)V,E,f(cid:105)yunelementoestructuranteB,elfiltroalterna-
+cio´nimportanteparaelestudiodealgunaanomal´ıa.Seusan
+docompletosedefineatrave´sdelasiguientefuncio´nrecursi-
+va: 3Pequen˜asregionesbrillantesquepuedenserlesionespre-cancerosas.
+44 UsodeFiltrosMorfolo´gicosenIma´genesdeMamograf´ıas
+principalmente las operaciones de erosio´n, dilatacio´n y las Estefiltroseusapararealzarzonasclarasdetaman˜o2n
+transformadasTop-hats. entodaslasdireccionesposibles.EnlaFigura3semuestrael
+resultadodeaplicarelfiltro.
+Definicio´n1.11 Seaunaimagendigitalenescaladegrises
+A=(cid:104)V,E,f(cid:105)yunelementoestructuranteB,encadap´ıxelx
+elfiltrodecontraste[2]sedefinecomo:
+(cid:40)
+(A⊕B)[x] A[x]≥ (A⊕B)[x]+(A(cid:9)B)[x]
+cont(A,B)[x]= 2 (12)
+(A(cid:9)B)[x] e.o.c
+Definicio´n1.12 Seaunaimagendigitalenescaladegrises
+A=(cid:104)V,E,f(cid:105)yunelementoestructuranteB,elfiltrorealzador
+decontraste[1],sedefinecomo:
+(a) (b)
+realzadorCont(A,B)=[A+WTH(A)]–BTH(A) (13)
+(c)
+Figura3.Filtromorfolo´gicodetectorMic
+(a) (b) EnlaFigura3(a)semuestralaimagenoriginalqueposee
+variasregionesconmicrocalcificaciones.Enla(b)seobserva
+elresultadodeaplicarelfiltroparan=40.En(c)serealzala
+zonasen˜alada.
+2. Experimentacio´n y Resultados
+Paralaexperimentacio´nconlosfiltrosmorfolo´gicosdefi-
+nidosanteriormenteseutilizo´ unamuestradelabibliotecade
+ima´genesdemamograf´ıasMIAS5.Paramedirlaefectividad
+(c)
+delosfiltrosmorfolo´gicosdereduccio´nderuidoysuavizado
+Figura2.Filtrosmorfolo´gicosparaelrealcedelcontraste
+de la imagen se implementaron las medidas: error m´ınimo
+cuadra´tico(MSE6)yrelacio´nsen˜al/ruido(SNR7)[5].En[8]
+EnlaFigura2(a)semuestralaimagenoriginal,en(b)el sepresentanvariasmedidasparalaevaluacio´ndelrealzado
+resultadodeaplicarelfiltromorfolo´gicocontconn=1,yen
+del contraste, en esta experimentacio´n se usaron la EME y
+(c)elresultadodeaplicarelfiltrorealzadorContconn=5. AME8.Paralaexperimentacio´nconlosalgoritmosdesegmen-
+EnlaMorfolog´ıaMatema´ticasecuentaconfiltrospara
+tacio´nseestablecierondiferenciasentrelassegmentaciones
+ladeteccio´nderegionesespec´ıficasenunaimagen.Usando
+ofrecidasporlasima´genesoriginalesylasima´genesproce-
+lasreconstruccionesgeode´sicassepuedenencontrarregiones sadas inicialmente por los filtros nivelacio´nFuerte, altC y
+clarasuoscurasdentrodelasima´genes. realzadorCont.
+Definicio´n1.13 Seaunaimagendigitalenescaladegrises
+2.1 Evaluacio´n de los Filtros Morfolo´gicos de Re-
+A=(cid:104)V,E,f(cid:105)yunelementoestructuranteB,sepuededefinir
+duccio´ndeRuido
+elfiltrodetectordemicrocalcificacionescomo:
+Paraestablecerunacomparacio´nentreima´genesdema-
+mograf´ıasconruidoysinruidosetomo´ unamuestrade25
+detectorMic(A,B,n)= f−Rδ(f) (14)
+g ima´genes. Se les afecto´ un 20% de p´ıxeles con ruido sal y
+dondegeselresultadodeaplicarunaaperturasobrelaima- pimienta.Laotrapruebaserealizo´ agregandoruidogaussiano
+genoriginaldetaman˜on.Deigualformaestefiltroesta´ ba- 5MammographicImageAnalysisSocietyporsussiglaseningle´s.
+sadoenunavariante4 queempleaunconceptodeapertura 6Porsusiglaseningle´smeansquareerror.
+alternativo[1]. 7Porsusiglaseningle´ssignaltonoiseratio.
+8EnlaliteraturasehacereferenciaaEMEcomomeasureofenhancement
+4ConocidacomobuilSupWhiteTopHat. yaAMEcomoMichelsonlawmeasureofenhancement.
+UsodeFiltrosMorfolo´gicosenIma´genesdeMamograf´ıas 45
+conlospara´metros0paralamediay0.01paraladesviacio´n Enelcasodeima´genesconruidogaussiano(Figura6),
+esta´ndar. los filtros que presentan mejor comportamiento coinciden
+La medida MSE establece menor valor a las ima´genes con los del experimento anterior. Aunque se puede ver en
+conmejorcalidadobtenida,mientrasenSNRamayorvalor, las gra´ficas que su desempen˜o no es muy superior en los
+mayorcalidadtendra´laimagenprocesada[5].EnlaFigura4 resultados, en comparacio´n con el ruido de impulso. En la
+semuestraungra´ficoconlosresultadosobtenidos. Figura7seofreceunejemplovisualdelcomportamientode
+los filtros en una imagen de mamograf´ıa a la que se le ha
+agregadoruidogaussiano.
+Figura4.Evaluacio´ndefiltrosmorfolo´gicosenima´genes
+conruidosalypimienta
+Figura6.Evaluacio´ndefiltrosmorfolo´gicosenima´genes
+conruidogaussiano
+Paraima´genesconruidodeimpulso9,losfiltrosquepre-
+sentan mejor comportamiento son el nivelacio´nFuerte y el
+altC.EnlaFigura5seofreceunejemplovisualdelcomporta-
+2.2 Evaluacio´ndelosFiltrosMorfolo´gicosdeReal-
+mientodelosfiltrosenunaimagendemamograf´ıa,alaque
+cedelContraste
+selehaagregadoestetipoderuido.
+Una medida visual para la evaluacio´n de los filtros de
+realcedelcontrasteeslineprofile10[5].Inicialmentesetraza
+unarectasobrelaimagenoriginalyseconstruyeunsistema
+de coordenadas donde en el eje de las X se encuentran los
+p´ıxelesdelaimagenqueesta´nsobrelarectayenelejedelas
+Ysurespectivovalordeintensidad.Ana´logamenteserealiza
+el mismo procedimiento sobre la imagen resultante tras el
+realcedelcontraste.Lagra´ficacorrespondientealaimagen
+conelcontrastemejoradodebemostrarunaestructurasimilar
+aladelaimagenoriginal,aunquepuedennotarsecambios
+(a) (b) bruscosqueseobservara´ncomopicos.
+TrasaplicarelfiltrorealzadorContseconservalaestructu-
+radelaimagenoriginal,comosemuestraenlaFigura8,por
+tanto,estefiltrosepuedeconsiderarcomounabuenate´cnica
+paraelrealcedecontrasteenima´genesdemamograf´ıas.
+Las medidas EME y AME miden el mejoramiento del
+contraste en una imagen. Estas se aplican sobre la imagen
+originalyalresultadodelprocesamientodemejoramientodel
+contraste.EnEME,amayorvalormayoreselcontrastede
+laimagen,yenAME,amenorvalormayoreselcontraste
+(c) (d)
+[6].EnlaFigura9sepresentanlosvaloresobtenidosparauna
+Figura5.Imagenoriginal(a),imagenconruidosaly
+experimentacio´ncon25ima´genesdelabasededatosMIAS
+pimientaen(b),yresultadousandolosfiltrosaltCy
+usandoelfiltrorealzadorContconn=5.
+nivelacio´nFuerteen(c)y(d)
+10Seutilizaelte´rminoeningle´sporquenoseencontro´enningunabiblio-
+9Conocidocomoruidosaltandpepper. graf´ıareconocidaenespan˜ol.
+46 UsodeFiltrosMorfolo´gicosenIma´genesdeMamograf´ıas
+(a)
+Figura9.Evaluacio´ndelfiltromorfolo´gicorealzadorConten
+ima´genesdemamograf´ıas
+(b)
+Losresultadosobtenidosusandoestasdosevaluaciones
+demuestranlasventajasdelfiltrorealzadorContparaelrealce
+delcontrasteenima´genesdemamograf´ıas.Enlasima´genes
+resultantessepuedeapreciarunligerorealceenlospequen˜os
+objetos,comoenlasmicrocalcificacionesoenlasvenas.
+2.3 Desempen˜o del Filtro Morfolo´gico de Segmen-
+tacio´n
+(c) Lasdistintascaracter´ısticaspresentesenlasmamasdifi-
+Figura7.Imagenconruidogaussianoen(a).Resultados cultanelprocesodesegmentacio´nqueofrecelaMorfolog´ıa
+usandolosfiltrosaltCynivelacio´nFuerteen(b)y(c) Matema´tica.Losresultadospuedensermejoradosconelpre-
+procesamiento de las ima´genes con algunos de los filtros
+estudiados.
+ElfiltrodetectorMictienegranutilidadenladeteccio´n
+demicrocalcificaciones,puessen˜alalaszonasbrillantesde
+laimagenenunradiodetaman˜on.Lasmicrocalcificaciones
+aparecenenlasmamograf´ıascomozonasoregionespequen˜as
+yma´sclaras;laidentificacio´ndeestasregionesconstituyela
+principalfuncionalidaddeestefiltro.
+Aunqueelfiltronosiempreesexactoofrecemejoresresul-
+tadosenladeteccio´ndelasmicrocalcificacionesparaima´ge-
+nessinpre-procesar.Otrasestrategiasdesegmentacio´nestu-
+diadasnomuestrantanbuendesempen˜oenladeteccio´nde
+estetipodelesionesdemama.
+(a) (b)
+EnlaFigura10semuestraen(a)unaimagendemamo-
+graf´ıa, en (b) el resultado del filtro detectorMic y en (c) se
+realzalazonadeintere´smarcadaenlasima´genesanteriores.
+En(d)semuestralamismaimagentrasunpre-procesamiento
+confiltrorealzadorContusandon=10,en(e)elresultadode
+aplicarelfiltrodedeteccio´ndemicrocalcificacionesyen(f)
+serealzalazonadeintere´splanteada.
+No´tese que la diferencia entre las ima´genes (c) y (f) es
+(c) (d)
+bienvisible,en(c)serealzanma´smicrocalcificacionesque
+Figura8.Imagenoriginal(a),yunlineprofileen(c).
+en(f).
+Resultadodeaplicarelfiltromorfolo´gicorealzadorContcon
+Los filtros han devenido herramientas muy u´tiles en el
+n=20en(b),ysulineprofileen(d)conigualposicio´nqueen
+a´readeprocesamientodeima´genes.Suelenaplicarseindepen-
+(a)
+dientementeycombinadosconotrosalgoritmos.Estosedebe
+UsodeFiltrosMorfolo´gicosenIma´genesdeMamograf´ıas 47
+[4] Breckon,TobyyChrisSolomon:Fundamentalsofdigi-
+talimageprocessing:apracticalapproachwithexam-
+plesinMatlab. Wiley-Blackwell,2011.
+[5] Gonzalez,RafaelC.yRichardE.Woods:DigitalImage
+Processing. Pearson,3raedicio´n,2007.
+(a) (b) (c)
+[6] Ismail,NurHalilahBintiyChenSoongDer:AReview
+of Image Quality Assessment Algorithm to Overcome
+Problem of Unnatural Contrast Enhancement. Jour-
+nalofTheoreticalandAppliedInformationTechnology,
+83(3):415–422.
+(d) (e) (f) [7] Meyer,Fernand:Thewatershedconceptanditsusein
+Figura10.Filtromorfolo´gicodetectorMicconn=70en segmentation: a brief history. CoRR, abs/1202.0216,
+imagendemamograf´ıasinpre-procesamiento,yaplicandoel 2012. http://arxiv.org/abs/1202.0216.
+filtrorealzadorContinicialmente [8] Panetta,Karen,ZhouYicong,SosAgaianyJiaHongwei:
+NonlinearUnsharpMaskingforMammogramEnhance-
+ment. IEEETransactionsonInformationTechnologyin
+fundamentalmente a su amplio uso y sobre todo a su bajo
+Biomedicine,15(6):918–928,2011.
+costocomputacional,loquepermiteincluirlosenalgoritmos
+quecorrenentiemporeal.
+[9] Ricardo Gomar, Ceyli: Empleo de filtros de la Morfo-
+log´ıaMatema´ticaenima´genesdemamograf´ıas. Tesis
+Agradecimientos
+deDiplomaenopcio´nalT´ıtulodeLicenciadaenCiencia
+Estetrabajofuerealizadobajolaasesor´ıame´dicadelas delaComputacio´n,FacultaddeMatema´ticayCompu-
+doctorasMargaritaDeliaSerresMoretyMercedesValde´sTe- tacio´n,UniversidaddeLaHabana,Cuba,2015. Tesis
+jadadelHospitalManuelFajardodeLaHabana.Losautores ine´dita.
+agradeceneltrabajodelasdoctoras.
+[10] Roerdink,JosB.T.M.yArnoldMeijster:TheWatershed
+Transform:Definitions,AlgorithmsandParallelization
+Referencias
+Strategies. FundamentaInformaticae,41(1,2):187–228,
+[1] Beucher,NicolasySergeBeucher:MambaImageUser
+Abril2000.
+Manual.
+[11] Soille,Pierre:MorphologicalImageAnalysis:Principles
+[2] Bovik,AlanC.:TheEssentialGuidetoImageProces-
+andApplications. Springer,2daedicio´n,2004.
+sing. AcademicPress,2009.
+[3] Bozek, Jelena, Mario Mustra, Kresimir Delac y Mis- [12] Vincent,Luc:Morphologicalgrayscalereconstruction
+lavGrgic:Asurveyofimageprocessingalgorithmsin inimageanalysis:applicationsandefficientalgorithms.
+digital mammography. En Recent advances in multi- IEEETransactionsonImageProcessing,2(2):176–201,
+mediasignalprocessingandcommunications,pa´ginas 1993.
+631–657.Springer,2009.

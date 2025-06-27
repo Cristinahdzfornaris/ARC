@@ -1,0 +1,516 @@
+CienciasMatemáticas,Vol.31,No.1,Pag.67-73, 2017
+Recibido11-2016
+Sobre Introduccio´n al Ana´lisis Matema´tico de Mario
+O. Gonza´lez
+On Mario O. Gonza´lez’s Introduccio´n al Ana´lisis
+Matema´tico
+Luis Giraldo Gonza´lez Ricardo1
+Resumen Enelpresenteart´ıculo,tomamoscomopretextolos75an˜osdelapublicacio´ndeIntroduccio´nal
+Ana´lisisMatema´tico deMarioO.Gonza´lezparaestudiarsutrascendenciayelementosnotables.Adema´s,se
+comentanalgunascuestionesnovedosasdelabiograf´ıadelautorantesdelapublicacio´ndeeselibro.
+Abstract Inthisarticle,weusethe75thanniversaryofthepublicationofIntroduccio´nalAna´lisisMatema´tico
+byMarioO.Gonza´leztostudyitsimportance. Besides,wegivenewbiographicaldatafromhisauthorinthe
+previousyearstothepublicationofthebook.
+PalabrasClaves
+MarioO.Gonza´lez—matema´ticacubana—nu´merosreales
+1DepartamentodeMatema´tica,UniversidaddeLaHabana,LaHabana,Cuba,luis.gonzalez@matcom.uh.cu
+Introduccio´n losInstitutosdeSegundaEnsen˜anza.Sinduda,elma´sreco-
+nocidodesuspupilosfueMarioO.Gonza´lez(1913-1999),
+Laetapacolonialcubanafueadversaparaeldesarrollo
+quienseconvirtio´ enelmatema´ticocubanoma´sdestacadoa
+delaculturamatema´tica.Porunaparte,lamayor´ıadelapo-
+nivelinternacionalantesdeltriunforevolucionariode1959.
+blacio´ncubanaeraanalfabetaopose´ıaescasainstruccio´n;y
+PormuchotiempolostextosdeMarioO.Gonza´lezfueron
+porotra,lospocosqueten´ıanaccesoalaUniversidaddeLa
+utilizados en la ensen˜anza secundaria y preuniversitaria de
+Habana–u´nicadesutipoenelpa´ıs–,encontrabanqueelnivel
+Cuba–porloquesuinfluenciaenlaformacio´nmatema´tica
+delasasignaturasrelacionadasconlamatema´ticaeramuyba-
+de los cubanos trascendio´ su presencia en el pa´ıs– y entre
+jo.Enestesentidopuedeconsultarse[13].Conelnacimiento
+ellos,losma´sconocidossonComplementosdearitme´ticay
+delaRepu´blica,graciasalPlanVarona,semovieronnuevos a´lgebra, A´lgebra elemental moderna (con J. D. Mancill) y
+airesenlaeducacio´nsuperiorcubana.Apesardeello,lasi-
+Fundamentosdelateor´ıadefuncionesdevariablecompleja.
+tuacio´ndela(cid:40)(cid:40)reinadelasciencias(cid:41)(cid:41)nocambio´ endemas´ıa.
+MenosconocidoessuprimerlibroIntroduccio´nalana´lisis
+Baste sen˜alar que el catedra´tico de Ana´lisis de la Facultad
+matema´tico,publicadoenMatanzasen1940.Apocoma´sde
+deLetrasyCienciasdelaUniversidaddeLaHabana,elIng.
+75an˜osdesuprimera–yu´nica–edicio´n,lasituacio´ndela
+Jose´A.Villalo´n(1864-193?),ten´ıanumerosasdeficienciasen
+ensen˜anza de la matema´tica en Cuba, y en el mundo, pasa
+loqueasusconocimientosdeana´lisismatema´ticorespecta.
+pormomentosdif´ıciles.Estepequen˜otextopuedeservirde
+Fueelprofesordeorigencatala´nClaudioMimo´yCaba(1844-
+ejemploaprofesoresdediferentesnivelesdeco´moelrigory
+1929),quienaglutino´ asualrededoralosprimerosdoctores
+ladida´cticanotienenporque´ estarendesacuerdo.
+enCienciasF´ısico-Matema´ticasdelanacio´n[13].
+Enlaprimerapartedelart´ıculoserealizaunpequen˜oes-
+FueeliniciodelaactividaddocentedePabloMiquely tudiobiogra´ficodeMarioO.Gonza´lez,dondesecomentan
+Merino(1877-1944),enelcurso1912-13,loquemarco´ un algunosdatosnovedososobtenidosenelArchivoHisto´rico
+cambiocualitativoenlainstruccio´ndelana´lisisenlaUniver- Provincial de Matanzas y el Archivo Central de la Univer-
+sidaddeLaHabana,loqueesvisibleensulibroElementos sidaddeLaHabana.Enelrestosediscutenvariosaspectos
+dea´lgebrasuperior(1914).All´ı,setratanlosconceptosba´si- relacionadosconIntroduccio´nalana´lisismatema´tico.
+cosdelana´lisisdemaneradida´ctica,yconelnivelderigor
+t´ıpicodelasegundade´cadadelsigloXX,superiorenmuchos
+1. Nota biogra´fica (1913-40)
+sentidos a los otros textos empleados en la ensen˜anza del
+ca´lculo [15]. Gracias al arduo trabajo del profesor Miquel, Mario Octavio Jose´ de Jesu´s de la Caridad Gonza´lez
+laculturamatema´ticacubanafueenascensoconeltranscur- Rodr´ıguez, nacio´ en la ciudad de Matanzas en la madruga-
+so del siglo. Bajo su auspicio, se formaron muchos de los da(5:30AM)del14deseptiembrede1913.HijodeMario
+pedagogosquedieronprestigioloscursosdematema´ticaen Gonza´lezDarna,naturaldeCa´rdenas,ydeMargaritaEdel-
+68 SobreIntroduccio´nalAna´lisisMatema´ticodeMarioO.Gonza´lez
+miraRodr´ıguezLlorente,naturaldeMatanzas.Susabuelos tuvocerradohastadespue´sdelaca´ıdadelmachadato,sibien
+maternosysuabuelapaternaerantambie´nmatanceros,mien- estadecisio´nfuetomadaporelclaustrocomomedidaantela
+trasquesuabuelopaternoeraoriginariodeGijo´n,Asturias. convulsasituacio´npol´ıticaysocialqueseviv´ıaenelpa´ıs[2,
+Su padre fue profesor de la ca´tedra B (Ingle´s) del Instituto p.453].
+deSegundaEnsen˜anzadeMatanzas,yadema´sfungio´ como Por las razones anteriores, el primer curso de Mario O.
+DirectorInterinodelmismoenlade´cadadel30’.Susprime- Gonza´lezfueelcorrespondientealan˜oacade´micode1933-34,
+rosan˜oslosvivio´ enlaviviendasituadaenlacalleContreras iniciado el 14 de enero de 1934. En este, a las asignaturas
+nu´mero 146, y posteriormente su familia se traslado´ a una matriculadas en 1930 se an˜adieron las del segundo an˜o de
+casacondireccio´nMilane´s1101;ambassituadasamenosde
+CienciasF´ısicoMatema´ticas.Entotalfueron14materiaslas
+100mdelInstitutodeSegundaEnsen˜anzadeMatanzas. cursadas–salvoenDibujoNaturalyF´ısicaSuperior–,todas
+EnlosfondosdelArchivoHisto´ricoProvincial,secon- susnotasfuerondeSobresaliente;adema´s,enAna´lisisMa-
+servaelexpedienteacade´micodeMarioO.Gonza´lez,como tema´ticoIyII,Trigonometr´ıayGeometr´ıaobtuvoelPremio
+alumnodelInstitutodeSegundaEnsen˜anzadeMatanzas.En deOro.Ensuexpedienteconstaqueeneliniciodeestecur-
+este,sedeclaraquesematriculo´ parainiciarsusestudiosde sosesolicito´ lamatr´ıculaparaobtenerlost´ıtulosdeDoctor
+bachilleratoenelan˜olectivo1926-27;ylosculmino´ conla enCienciasF´ısicoMatema´ticas,F´ısicoQu´ımicas,Ciencias
+obtencio´ndelt´ıtulodebachilleren1930.ElprofesorManuel NaturaleseIngenieroElectricista.
+Labra(1900-82),unodelosma´sdestacadospedagogoscu-
+Enelsiguientean˜oacade´mico,lasasignaturasmatricula-
+banos de la primera mitad del siglo XX, fue su profesor de
+dascorrespondenensumayor´ıaalaspropiasdelterceran˜o
+Aritme´tica,enlaqueconsiguio´,medianteexamendeoposi-
+deestudiodelasCienciasF´ısico-Matema´ticas.Adema´s,se
+cio´nunodelospremios.MarioO.Gonza´leztuvoundesem-
+encuentranmateriasma´savanzadascomoComplementosde
+pen˜osobresalienteenlasasignaturasdematema´ticayf´ısica
+Ana´lisis Matema´tico (con Pablo Miquel) y Complementos
+(A´lgebra,Aritme´tica,Geometr´ıayTrigonometr´ıa,F´ısicaIy
+de Meca´nica Racional, que fueron de nueva incorporacio´n
+F´ısicaII),enlasqueobtuvolama´ximacalificacio´n,yadema´s,
+al programa de estudios; en ellas se ensen˜aron por vez pri-
+susrespectivospremios.
+mera de manera sistema´tica temas como series de Fourier,
+La culminacio´n de la ensen˜anza media y el comienzo ca´lculovectorialyecuacionesdiferenciales[13].Sindudas,
+desuetapauniversitaria,coincidieronconunadelasetapas estoscambiosfavorecieronsuformacio´ncient´ıficaycrearon
+ma´s convulsas de la historia nacional. Entre 1930 y 1933 unambientepropicioparaunsaltocualitativodeldesarrollo
+se produjo un amplio movimiento popular en contra de la matema´ticoenCuba.Tambie´ncurso´otrascomoAgrimensura,
+dictadura de Gerardo Machado, en la que los estudiantes Topograf´ıayGeolog´ıa,ma´salejadasdelperfilmatema´tico.
+–especialmentelosuniversitarios–,fueronparteactiva.Incluso
+El fin del machadato no significo´ el regreso de la esta-
+despue´sdelafugadeldictador,enagostode1933,laagitacio´n
+bilidad en la nacio´n, pues cuando parec´ıa que las medidas
+pol´ıticacontinuo´ reinandoenelpa´ıshastacomienzosdelan˜o
+delGobiernodelosCienD´ıasloencaminabanacumplir,al
+1937,cuandose(cid:40)(cid:40)estabilizo´(cid:41)(cid:41)duranteelgobiernodeFederico
+menos,unapartedelosreclamospopulares,fuederrocado
+LaredoBru. porelcoronelBatista.Ladictadura(cid:40)(cid:40)disimulada(cid:41)(cid:41)deBatista
+Lasituacio´npol´ıtico-socialdelanacio´ninfluyo´ notable-
+acarreo´ unanuevaoladeprotestas,enespecialporpartede
+mente en la formacio´n universitaria de Mario O. Gonza´lez.
+losestudiantesdelaUniversidaddeLaHabana.Poresarazo´n
+Su solicitud de ingreso a la Universidad de La Habana se
+fueocupadamilitarmenteapartirdemarzode1935,ycon
+efectuo´ el16deseptiembrede1930,conlafinalidaddeobte-
+ellocomenzo´ unper´ıodoenelcuallavidauniversitariafue
+nerlatitulacio´ndeDoctorenCienciasF´ısico-Matema´ticase
+sumamente irregular. Aunque el gobierno intento´ iniciar el
+IngenieroElectricista.Paraelan˜oacade´mico1930-31matri-
+curso 1936-37 en mayo de 1936, pero esto no sucedio´ de
+culo´ lasasignaturaspropiasdelprimeran˜odelaespecialidad
+maneraefectivahastamarzode1937[2,pp.491-493].
+enCienciasF´ısicoMatema´ticas,as´ıcomoQu´ımica(Inorga´ni-
+Porelmotivoanterior,lasnotasqueaparecenenelexpe-
+ca y Anal´ıtica) y F´ısica del segundo an˜o. En las materias
+diente de Mario O. Gonza´lez fueron reportadas en octubre
+seleccionadasestabaelAna´lisisMatema´ticoI,queconsist´ıa
+ynoviembrede1937.Entonces,parafinesdeesean˜o,tuvo
+enA´lgebraSuperior,peronotocabaningu´ntemadea´lgebra
+aprobadastodaslasasignaturascorrespondientesalplande
+abstracta.
+estudiosdeldoctoradoenCienciasF´ısico-Matema´ticas,yso-
+Eliniciodelcursoestabaprevistoparael3dediciembre
+lolefaltabanlosejerciciosdefindeestudioslosquenose
+de1930,peroelmovimientoestudiantilencontradeladic-
+efectuaronhastajuniode1938.
+taduradeGerardoMachadomantuvolasaulasuniversitarias
+Para obtener el t´ıtulo de doctor, adema´s de aprobar las
+vac´ıas [2, p. 431]. El dictador trato´ de disminuir el´ımpetu
+asignaturascorrespondientes,eranecesarioladiscusio´ndeun
+del estudiantado con el cierre de la Universidad de La Ha-
+temadeinvestigacio´n;unexamenpra´cticocondosproblemas
+bana, por decreto presidencial el 15 de diciembre de 1930,
+deMatema´ticayunodeF´ısica;yunabrevepresentacio´ncon
+queestuvovigentehastamayode1932cuandofuedeclarado
+untemadelcurr´ıculoescogidoporelestudiante.Eltribunal
+inconstitucional.Sinembargo,elrecintouniversitarioseman-
+formadoparaelejerciciodeMarioO.Gonza´leztuvocomo
+1Hoyend´ıalacasadeMilane´s110todav´ıaconservalafachadaoriginal. PresidenteaPabloMiquel,comoVoceroaEnriqueBadelly
+SobreIntroduccio´nalAna´lisisMatema´ticodeMarioO.Gonza´lez 69
+como Secretario a Rafael Fiterre, el que se reunio´ el 27 de delnu´meroirracional,quees(cid:40)(cid:40)ineludibleantecedentedela
+juniode1938,paraescucharsutesis(cid:40)(cid:40)Algunosnuevostipos teor´ıadelosl´ımites(cid:41)(cid:41).
+deecuacionesdiferencialesinvariantesenciertastransforma- Enelpro´logodeComplementosdearitme´ticaya´lgebra,
+cionesinfinitesimales(cid:41)(cid:41);ynuevamenteeld´ıasiguienteparael
+MarioO.Gonza´lezresalto´ nuevamentelanecesidaddelestu-
+examenpra´ctico,yevaluarunabreveconferenciasobreelcon- diodelateor´ıadelnu´meroirracional:(cid:40)(cid:40)Puedeconsiderarse
+ceptodederivada.Entodosloscasos,eltribunalevaluo´ con la teor´ıa de los l´ımites como la l´ınea fronteriza que separa
+lama´ximacalificacio´nlosejercicios,porloqueelt´ıtulode lamatema´ticaelementaldelasuperior.Peroestafronteraes
+DoctorenCiencias-F´ısicoMatema´ticasanombredeMarioO. paraalgunos,murallainsalvablequelesvedaeldominiodel
+Gonza´lezseexpidio´ enoctubrede1938. Ca´lculo infinitesimal y otras teor´ıas del Ana´lisis. Esta difi-
+Despue´sdegraduarse,impartio´ clasesdeAritme´ticaenel cultadprovieneanuestroentender,enelaspectoconceptual,
+InstitutodeSegundaEnsen˜anzadeMatanzasyeneldeLaHa- del desconocimiento o confusio´n en que se ha mantenido
+bana.En1939gano´ unabecaGuggenheim,yel23deagosto2 alosalumnossobreelimportant´ısimoconceptodenu´mero
+deesean˜opartio´ hacialosEstadosUnidos.All´ırealizo´ estu- irracional(cid:41)(cid:41)[7].
+diosdeposgradoenelMIT[13],yalprorrogarselabecapor
+Nuevamente,seexponelanecesidaddesortearconhabili-
+unan˜o,continuo´suformacio´nenlaUniversidaddePrinceton;
+dadpedago´gicalasdificultadesquepresentalaensen˜anzade
+porloquesuregresodefinitivoaCubanoocurrio´ hastabien
+losnu´merosirracionalesynoevadireltema.Laexposicio´n
+entradoelan˜o1941.
+de estas ideas en Complementos... es ma´s reducida que la
+Esenagostooseptiembrede1940quesepublica,porla
+hecha en Introduccio´n.... Desde el punto de vista pra´ctico
+EditorialBarani,sulibroIntroduccio´nalana´lisismatema´tico.
+haytambie´ndeficiencias,lasquesera´nnuevamenteexpuestas
+EnestemomentoesbecarioGuggenheim,porloquepodemos en [6]: (cid:40)(cid:40)en nuestra ensen˜anza se elude sistema´ticamente el
+conjeturarquelamayorpartedellibroestuvohechaantesde
+ca´lculoaproximadoylosme´todosdecomputacio´ngra´ficay
+su viaje a Estados Unidos. Uno de los elementos a favor
+meca´nica,ysecultivaelha´bitodelaprecisio´nindeterminada
+de esta suposicio´n es que uno de los textos ma´s citados en
+envezdeestudiarlosme´todosparaaveriguarencadacaso
+Introduccio´n... –Theory of functions of a real variable de
+laaproximacio´nnecesariaylosprocedimientosquepermitan
+E.W.Hobson–,seencuentraenlaBibliotecaCentraldela alcanzarla.(cid:41)(cid:41)
+UniversidaddeLaHabanadesde1937.Otrodesusreferentes
+Enlaspalabrasdelautoressencillonotarque,sobretodas
+fueElementosdeana´lisisalgebraicodeReyPastor,yenla
+lascosas,primaunincentivodida´cticoma´squeteo´rico.En
+Biblioteca Central se encontraban las ediciones de 1922 y
+el mismo sentido se destaca una separacio´n notable entre
+1939.Aunquenohayevidenciasdelmomentodeentradaa
+losestudioselementalesylossuperiores,loquedamuestra
+losfondosdelabiblioteca,esmuyprobableque,almenos,la
+de los problemas de la ensen˜anza cubana de la e´poca. Las
+edicio´nde1922seencontraraasualcance.
+opinionesdeMarioO.Gonza´lezsobrelasdeficienciasdela
+Sinembargo,hayunaseriedeelementosqueapuntanque
+matema´ticaqueseensen˜abaenelbachilleratonoprovienen
+la estancia en los Estados Unidos le dio la oportunidad de
+solo de su experiencia como alumno, sino tambie´n como
+redondearlasnotasalfinaldecadacap´ıtulo.Estaconjetura
+profesor. En 1933 se le abrio´ un expediente laboral en el
+sesostieneporquevariostextosmencionadosenlasnotasno
+Instituto de Matanzas, como profesor titular de la ca´tedra
+seencuentranahoraall´ı,yesmuyprobablequenuncahayan
+deAgricultura.Sinembargo,enelan˜oacade´mico1937-38
+pertenecidoalosfondosdelaBibliotecaCentral.Eselcaso
+recibio´laautorizacio´nparaimpartirAritme´tica,quiza´sgracias
+delatraduccio´ndeOscarZariskideWassindundwassollen
+aqueeneseentonceseldirectordelInstitutoeraelprofesor
+dieZahlen?oElementidiaritmeticaregionataedialgebra
+ManuelLabra.Enesepropiocursosirvio´ comodocentedela
+deAlfredoCapelli.
+mismamateriaenelInstitutoNo.1deLaHabana.
+En los programas de matema´tica vigentes alrededor de
+2. Razones para un libro
+1940paralosbachilleratos,hab´ıaampliapreponderanciade
+lostemasdegeometr´ıaplanaytrigonometr´ıa.Losaspectos
+El propio Mario O. Gonza´lez establece que el motivo
+aritme´ticossereduc´ıanalaspropiedadesba´sicasdepropor-
+fundamentalquelomovio´ aescribirIntroduccio´nalana´lisis
+matema´ticofuelaexistencia(cid:40)(cid:40)ennuestraensen˜anzamatema´ti- cionalidad,divisibilidaddenu´merosenteros,yalgunostemas
+dematema´ticafinanciera.As´ılodemuestraelcontenidode
+cadealgunasdiscontinuidadesentrelosestudiossecundarios
+ylosuniversitarios(cid:41)(cid:41)[6]. loslibrosdetextoutilizadosenelprimerper´ıodorepublicano
+[3],[4],[5],[10].
+Segu´ne´l,paralograrunacompletacomprensio´ndelana´li-
+sismatema´tico,senecesitadominarpreviamenteciertostemas Sin embargo, no debe dejar de buscarse motivaciones
+que no se abordan de forma correcta, o no se tratan en los dentrodelapropiaUniversidad.Apartirdelcursode1912-
+cursosdematema´ticaelemental.Entreestosdestacalateor´ıa 13enquePabloMiquelseconvirtio´ enprofesordeAna´lisis
+Matema´ticoenlaUniversidaddeLaHabana,elniveldelos
+2ComoconstaenunacartafirmadaporMarioO.Gonza´lezdirigidaal
+cursoscrecio´ tantoenrigorcomoenclaridad.Loanteriorse
+directordelInstitutodeSegundaEnsen˜anzadeMatanzas.Dichacartase
+puedeevidenciaratrave´sdeltextoba´sicoempleadoendichos
+encuentraenexpedientelaboraldeMarioO.Gonza´lezqueseconservaenel
+ArchivoHisto´ricoProvincialdeMatanzas.
+cursos:ElementosdeA´lgebraSuperior,delprofesorMiquel.
+70 SobreIntroduccio´nalAna´lisisMatema´ticodeMarioO.Gonza´lez
+La obra de Miquel constituye un hito de la cultura ma- nu´meroirracional.EstomuestraqueIntroduccio´n... consti-
+tema´tica cubana, pues en e´l se expon´ıan los elementos del tuye una obra que, a pesar de tratar un tema relativamente
+ca´lculodiferencialeintegralconmuchoma´srigorqueencual- ba´sicodelAna´lisis,exploraunazonapocotratadaenlae´poca:
+quierotrodocumentoelaboradooutilizadoenlaIsla.Adema´s, unacercamientodida´cticoalosnu´merosreales.Adema´sde
+parasumomentofueunlibroalmismoniveldeactualizacio´n exponerlateor´ıadenu´meroreal,MarioO.Gonza´lezespera
+desussimilareseuropeos[15].Sinembargo,eltextodeMi- quesubrevelibrosirvaalosprofesoresdenivelsecundario,
+quelten´ıaunadeficiencia:ladefinicio´ndenu´meroreal.Esta dadolainclusio´ndenumerososcomentarioshisto´ricos.De
+cuestio´nledificulto´ eltratamientoriguroso,porejemplo,del estaforma,lautilizacio´ndelahistoriacomorecursodida´ctico
+teoremadeBolzanosobrelosvaloresintermedios[15]. porlosprofesoresdematema´ticaenCubapuedeencontrarun
+EnIntroduccio´n... nosemencionademaneraexpl´ıcitael precedenteenlaobradeestaeminentefigura.
+textodePabloMiquel,nilaformaenquesetratabaeltema
+delosnu´merosrealesenlaUniversidaddeLaHabana.Sin
+3. Interioridades del texto
+embargo, creemos que el hecho de no existir un tratamien-
+torigurosodeestetemaeneltextoba´sicoparaelcursode El primero de los cap´ıtulos de Introduccio´n al Ana´lisis
+ca´lculodiferencialeintegral,constituyo´ unamotivacio´nfun- Matema´ticoesta´ dedicadoalosnu´merosnaturales.Esteco-
+damentalparaqueMarioO.Gonza´lezpublicarasupequen˜o mienza con un ep´ıgrafe de Fe´lix Klein: (cid:40)(cid:40)Las propiedades
+libro. En buena lid se pod´ıa utilizar algu´n t´ıtulo extranjero, ba´sicas de los nu´meros y las operaciones que con ellos se
+especialmente cuando Grundlagen der Analysis3(1929) de efectu´enpuedenreducirsealaspropiedadesgeneralesdelos
+EdmundLandau,sigueunguio´nsimilaraldeIntroduccio´n..., conjuntos y a las relaciones abstractas que entre ellos exis-
+yconstituyeunmodeloderigoraseguirpara,apartirdelos
+ten(cid:41)(cid:41).Haciendohonoraestaspalabras,17delas33secciones
+axiomasdelosnu´merosnaturales,construircadaunodelos esta´ndedicadasaestudiarpropiedadesba´sicasdelateor´ıade
+diferentesdominiosnume´ricos.Sinembargo,acausadesu conjuntosqueservira´nparadeducirlasreglasoperativasde
+rigorextremonofuebienacogido,niporlosestudiantes,ni losnu´merosnaturales.Enestesentido,laobradeMarioO.
+porelrestodelacomunidadmatema´tica.Poran˜osestelibro Gonza´lezesta´ claramenteinfluidaporlasideasdeDedekind
+haservidodeejemplodeco´moelrigorabsolutopuededan˜ar enWassindundwassollendieZahlen?.
+lamatema´tica. Comolibrodida´cticonoseconsideranlosaxiomasdela
+ElobjetivodeLandaufuedesarrollardeformacompleta- teor´ıadeconjuntos,porloquesedejaaunnivelintuitivo.Sin
+menterigurosacadasistemanume´ricoapartirdelosaxio- embargo,nosedapieaqueeltratamientona¨ıvede´lugaralas
+masdelosnu´merosnaturales.Siguiendounaideasimilaral
+antinomias,puessedejaclaroquenosepuede(cid:40)(cid:40)subordinar
+me´todogene´tico,construyeZ,Q,RyC.Sibieneneloriginal ladefinicio´ndeconjuntoaladesuselementosyviceversa(cid:41)(cid:41).
+enalema´nLandau(cid:40)(cid:40)tutea(cid:41)(cid:41)allectorparaintentarunacomuni- Esto muestra que Mario O. Gonza´lez no solo se encuentra
+cacio´nma´scercana,nolologra.Elmodoenqueesta´ escrito altantodelosproblemasdelosfundamentosdelateor´ıade
+es,(cid:40)(cid:40)dadalasencillezdelcontenido,deunestilodespiadada- conjuntos,sinoqueloscomprendeyexponeconclaridad.
+mentesimilarauntelegrama(cid:41)(cid:41),conelqueestimaque,luegode SonvarioslospuntosdecontactoquetieneIntroduccio´n...
+lascincoprimeraspa´ginas(cid:40)(cid:40)decontenidorealmenteabstrac- conWassind...,puesall´ıseutilizaelconceptodeconjunto
+to(cid:41)(cid:41)lalecturaessencilla.Talvez,lamejoropinio´nsobrelos simplementeinfinitoysedemuestraelprincipiodeinduccio´n
+Grundlagen... sedebeaJ.Stillwell:(cid:40)(cid:40)Enmiopinio´n,elpro- matema´tica.Perotambie´nexistendiferenciasnotables,pues
+blemadellibrodeLandaunoeselrigor(aunqueesexcesivo) MarioO.Gonza´lezdefineconjuntofinitoyutilizaelprincipio
+sinolaausenciadenotashisto´ricas,ejemplosycomentarios. debuenordenamientocomobasedesuteor´ıa.Estolepermite
+Adema´s,esta´ elhechodequeluegodeconstruirlosnu´meros simplificartodoelaparatajeteo´ricoqueDedekindintrodujo
+reales,e´lhaceabsolutamentenada4conellos.(cid:41)(cid:41)[14]. ensumonograf´ıade1888.
+En contraposicio´n, en el pro´logo de [6] aparece: (cid:40)(cid:40)Muy Para Mario O. Gonza´lez el nu´mero natural es primero
+lejosdenuestroa´nimoesta´ pretenderalcanzarelrigorabso- cardinal,adiferenciadeDedekindparaquienesantesordinal.
+luto,quenoconsentir´ıaunlibrodida´cticocomoeste.(cid:41)(cid:41)Este Sinembargo,prevalecelaabstraccio´nparadefinirelconcepto
+comentariomuestraqueMarioO.Gonza´lezesta´ dispuestoa de nu´mero natural: (cid:40)(cid:40)Nu´mero natural es, pues, el concepto
+sacrificar un poco de rigor con tal de hacer su obra asequi- abstractonacidoesponta´neamenteennuestraconcienciapara
+bleaunpu´blicoma´samplio.Esdecir,¿deque´ valeuntexto representarlosconjuntosquesoncoordinables5ydiferenciar-
+sumamente riguroso que no sea le´ıdo? Por ello se justifica
+losdelosnocoordinables.(cid:41)(cid:41)[6,p.14]
+plenamentelanecesidaddeprepararuntextoparaexplicarla Lasoperacionesaritme´ticasentrenu´merosnaturalessede-
+teor´ıadelnu´meroirracionalalosestudiantescubanos,intere- finenapartirdeoperacionesentreconjuntos.Lasumasedefi-
+sadosenampliarsusconocimientosmatema´ticos. neapartirdelaunio´n,ylamultiplicacio´napartirdelproducto
+Por otro lado, en [14] se afirma que luego del texto de cartesiano.Aqu´ıvalesen˜alarqueseutilizaelte´rminocompo-
+Landaumuypocoocasinadaseescribio´ sobrelateor´ıadel sicio´ndeconjuntosenvezdeproductocartesiano.Adema´s,
+esteme´todooscureceunpocoladefinicio´ndelasoperacio-
+3Fundamentosdeana´lisis
+4Resaltadodelautor. 5Le´aseequipotentes.
+SobreIntroduccio´nalAna´lisisMatema´ticodeMarioO.Gonza´lez 71
+nesaritme´ticasrespectoaDedekind,ysedebeaqueMario Noseledebedaraestaspalabrasunsentidopuramente
+O.Gonza´lezprescindedelaoperacio´nsucesorutilizadaen literal,puespudieracometerseelerrordemalinterpretarlas.
+Wassind... paradefinirlasuma,multiplicacio´nyelevacio´na Esclaroqueenestecasonoserefierealdesarrollodenuevas
+potenciasnaturales. teor´ıasapartirdelageneralizacio´ndeideasyconceptosya
+Comocolofo´ndelprimercap´ıtulo,apareceunaseccio´nde conocidos.Tambie´nesclaroque,sisesacandecontextoestas
+Notas,enlasqueseexponenvarioscomentarioshisto´ricos. palabras,laposicio´ndeMarioO.Gonza´lezestar´ıaenfranca
+Aqu´ısehaceunbreverecorridoporelconceptodenu´mero contradiccio´nconlaintroduccio´ndelosnu´meroscomplejos
+natural,enlaquesedestacaelpapeldeDedekindysuWas oloscuaterniones.
+sind..., la que considera como la ma´s aceptada. Tambie´n Eltercercap´ıtuloesta´ dedicadoalaintroduccio´ndelos
+expone los axiomas de Peano para N y los de Hilbert para nu´meros negativos, la que se realiza tanto a partir de con-
+R. Estas Notas muestran la amplia cultura matema´tica, el sideracionesaritme´ticascomopra´cticas.Desdeelpuntode
+especialintere´sporlahistoriadeestacienciaylosproblemas vistaaritme´ticolosnu´merosnegativossonnecesariosparadar
+desusfundamentos. sentidoalarestaentredosnu´meroracionalesarbitrarios.En
+Enelsegundocap´ıtulosetratanlosnu´merosracionales sentidopra´ctico,losnu´merosnegativosaparecenalconside-
+positivos,losque(cid:40)(cid:40)deacuerdoasuorigenhisto´ricoyteniendo rarsemagnitudesquepuedenmedirseendossentidos,como
+presenteatendiblesrazonesdeordendida´cticoseestablece eselcasodelarelacio´nentredeudoryacreedor.
+elconceptodenu´meroracionalapoya´ndonosenlateor´ıade Pero sin duda, el cap´ıtulo ma´s interesante es el cuarto,
+lamedida.Ellotieneotraventajayesquepermitefijarcon porqueeseldedicadoalestudiodelosnu´merosrealesque,
+precisio´n los conceptos de magnitud y cantidad, los cuales en esencia, es un leit motiv de Introduccio´n.... El cap´ıtulo
+entrenosotrossuelentratarsedemanerabastanteerro´neay se inicia con un ep´ıgrafe de J. Tannery: (cid:40)(cid:40)Yo he adoptado
+confundirsemuchasveces.(cid:41)(cid:41)[6,p.41]. la idea fundamental de Dedekind, que me parece ilumina
+Se puede comprobar aqu´ı como Mario O. Gonza´lez no profundamentelanaturalezadelnu´meroirracional.(cid:41)(cid:41).Conella
+separalaideaabstractadenu´merodesuorigenpra´ctico.Es seanunciaelcaminoqueseseguira´ paralaconstruccio´nde
+decir,nosedesligalamatema´ticadesusra´ıcesenlaactividad losnu´merosreales:lascortadurasdeDedekind.
+humana,pueselorigenhisto´ricodelosnu´merosracionales Laprimeraseccio´nesunpequen˜ocomentariohisto´ricoen
+positivosesta´ enlaaccio´ndemedir.Porellosehanutilizado elquesedemuestralainconmensurabilidaddeladiagonaldel
+para representar las cantidades de las ma´s diversas magni- cuadradodelado1,como(cid:40)(cid:40)descubrimiento(cid:41)(cid:41)delosnu´meros
+tudes, y entre estas u´ltimas, la ma´s sencilla es longitud; la irracionales. Seguidamente se muestra que para resolver el
+quetambie´nsehautilizadocomorepresentacio´n(cid:40)(cid:40)natural(cid:41)(cid:41) problemadelogaritmacio´nyelevacio´napotenciaracional,
+delosnu´merosracionales.Estasideaslepermitenintroducir senecesitanlosnu´merosirracionales.DeestaformaMario
+deformanaturalelca´lculoconnu´merosdecimalesaproxima- O.Gonza´lezmuestraquelaintroduccio´ndelosirracionales
+dos.Adema´s,nosesigueelme´todogene´ticoestrictamente, partedeunanecesidadpra´ctica.
+pueslosnu´merosracionalessedefinenapartirdeN,nose Deacuerdoalep´ıgrafequedainicioalcap´ıtulo,seescoge
+construyen. el me´todo de las cortaduras de Dedekind. Esta eleccio´n se
+Esenestecap´ıtulodonderesaltasobremaneraelhecho debeaquedelasvariasv´ıasparaconstruirR,lascortaduras
+dequeMarioO.Gonza´leznodesligaelconceptodenu´mero eslama´ssencilla.Sinembargo,elpuntode´bildelme´todode
+desuutilidadpra´ctica,ysobretododelaprofundasimbiosis Dedekindes loenrevesado queresultadefinir lasoperacio-
+existente entre el (cid:40)(cid:40)mundo matema´tico(cid:41)(cid:41) y el (cid:40)(cid:40)mundo real(cid:41)(cid:41). nesaritme´ticasfundamentales.Luego,porrazonesdida´cticas,
+Porejemplo,veamossucomentariorespectoalaposibilidad MarioO.Gonza´lezescogeotrocaminoparadefinirlasope-
+dedefinirdeotramaneralasoperacionesaritme´ticasentrelos raciones aritme´ticas en el conjunto de los nu´meros reales:
+nu´merosracionales: (cid:40)(cid:40)Al exponer las operaciones aritme´ticas nos apartamos del
+me´tododeDedekindporqueestimamosma´sclaroytambie´n
+desdeelpuntodevistapuramentelo´gicopodr´ıan
+ma´spra´cticoensen˜araejecutarlasutilizandolasexpresiones
+seradoptadasotrasdefinicionesque,presentando
+decimalesdelosnu´merosreales(cid:41)(cid:41)[6,p.81].Deestamanera
+esasimetr´ıaformal,dejaranasalvoelprincipio
+se comprueba que el objetivo de Mario O. Gonza´lez no es
+depermanenciadeHankel.Mas,sinduda,elol-
+prepararuntextoconlaconstruccio´ndelosnu´merosreales,
+vidoquetalesdefinicionessupondr´ıandelsigni-
+sinohacerlodeformadida´cticaysencilla.
+ficadoconcretodelosnu´meros,har´ıaperderala
+Esnecesarioresaltarlaprofundacomprensio´ndelasideas
+teor´ıaquesedesarrollasesobreellastodointere´s
+deDedekindquelograMarioO.Gonza´lez.Muestradeello
+cient´ıfico; con raras excepciones, las doctrinas
+esunbrevecomentarioqueapareceenelaca´pitededicadoal
+quesehanedificadodesden˜andoelcontactocon
+conceptodenu´meroreal:
+larealidadobjetiva,hantardadopocoenquedar
+anquilosadas.
+Algunosautoresconsideranlacortaduraens´ıco-
+Lasdefinicionesusualesnoresponden,pues,a moelnu´meroirracional,desuertequeparaellos
+unanecesidadlo´gicafatalmenteinevitable;s´ıa hablar de nu´mero irracional o de una cortadu-
+unaobligatoriedadpra´cticaimperativa.[6,p.59]. ra sin elemento de separacio´n en el campo de
+72 SobreIntroduccio´nalAna´lisisMatema´ticodeMarioO.Gonza´lez
+losnu´merosracionales,esexactamentelamisma Arzela´, P. Bachmann y A. Capelli, y adema´s se incluye un
+cosa.Unnu´meroirracionalnoser´ıa,pues,sino brevecomentariodelasideaspromovidasporKronecker.Es
+uns´ımboloconelcualserepresentar´ıanlasdos curiosoqueensubreve(cid:40)(cid:40)historiadelnu´meroreal(cid:41)(cid:41),MarioO.
+clasesdeunacortaduradeltipomencionado. Gonza´leznomencionaaHeine,-quiendiounaconstruccio´n
+delosnu´merosrealesen1872deformasimilaraCantor-;ni
+Aunqueestamaneradeverlacuestio´nseaperfec-
+laversio´naxioma´ticadeHilbert,aunqueesnecesariosen˜alar
+tamenteleg´ıtima,nosparece,sinembargo,ma´s
+queenelprimercap´ıtulodellibroaparecenlosaxiomasde
+de acuerdo con el pensamiento original de De-
+laaritme´ticadadosporesteu´ltimo.Enestasnotasalcap´ıtulo,
+dekind[...]considerarlacortadura(A,B)como
+sedestacandoselementosesencialesdelaobradeMarioO.
+representacio´ndeunenteabstracto(elnu´mero
+Gonza´lez,especialmenteporserIntroduccio´n... unaobrade
+irracional),creadoparaservirdeelementodese-
+juventud:suampliaculturamatema´ticaysuespecialintere´s
+paracio´ndelasdosclases,ynoinversamente.[6,
+porlahistoriadelaciencia.
+p.84]
+OtrodelosaspectossobresalientesdeIntroduccio´n... es
+EstodemuestraqueMarioO.Gonza´leznosecontentaconla su particular e´nfasis en el ca´lculo con nu´meros aproxima-
+reproduccio´ndelasideasdeDedekind,sinoquesepreocupa dos. ¿Por que´ se necesita tratar este tema? Segu´n Mario O.
+porcomprenderlasideasfundacionalesdesarrolladasporel Gonza´lezporque:(cid:40)(cid:40)noobstantesugranimportanciateo´rica
+matema´ticogermano. y pra´ctica, a pesar de lo extraordinariamente u´til que es al
+El basamento teo´rico escogido por Mario O. Gonza´lez matema´ticopuro,alf´ısico,alqu´ımico,alagrimensor,alin-
+parasimplificareltratamientodelasoperacionesaritme´ticas geniero,yengeneral,atodoslosquehacenaplicacio´ndela
+enReselconceptodeclasescontiguas6.Elorigendeeste cienciamatema´tica,elca´lculoconnu´merosaproximadosse
+me´todo se debe a Alfredo Capelli entre 1897 y 1903. Este havistohastaahoraexcluidosistema´ticamentedenuestros
+me´todoevitalautilizacio´ndetodosloselementosdelacor- programas oficiales.(cid:41)(cid:41) [6, p. 133]. Es decir, la necesidad es
+tadura,bastaconsiderarseunasucesio´nencadaclaseconla eminentementepra´ctica.Laotralecturaqueseledebehacer
+condicio´nqueladiferenciaentresuste´rminosseainfinitesi- essobrelasdeficienciasdelsistemaeducacionalcubanode
+mal.Luego,enellenguajedelassucesionesesmuchoma´s lae´poca.Enunpa´ısdondeunodelosobjetivosfundamenta-
+sencillolidiarconlasoperacionesaritme´ticas. lesdeensen˜armatema´ticasonsusaplicacionesyadema´s,en
+Lasoperacionesaritme´ticasdiscutidasporMarioO.Gon- unmomentodondenoexist´ıanau´nlasgrandesma´quinasde
+za´lezsonlasuma,resta,multiplicacio´n,divisio´n,radicacio´n, co´mputo,suseducandosnoten´ıandentrodesuprogramala
+potencia con exponente racional y real, y la logaritmacio´n. herramientaquelespermit´ıaobtenerlosresultadosnume´ricos
+EsteespectrodeoperacionesenRessuperioralestudiadoen necesarios.
+[8];sinembargo,noesunaportedesupersona,porqueya Los nu´meros complejos son introducidos de manera si-
+esta´ en[11]7. milaralaconstruccio´ndeHamilton.Lasdefinicionesdelas
+La seccio´n (cid:40)(cid:40)Algunas propiedades del conjunto de los operacionesaritme´ticasba´sicasenestedominiosondeduci-
+nu´merosreales(cid:41)(cid:41)esta´ dedicadaalestudiodepropiedadesme- dasapartirdelprincipiodepermanenciadelasleyesformales
+nosoperativasdeR.Enellaseenunciaydemuestracorrecta-
+de Hankel. Este me´todo posibilita la deduccio´n de las ope-
+menteelteoremadeDedekindreferenteaqueunacortadura raciones en C, a partir de sus similares reales. Adema´s, de
+enRdeterminaunu´niconu´meroreal,yviceversa.Adema´s,se ciertaformaseevitalaintroduccio´n(cid:40)(cid:40)axioma´tica(cid:41)(cid:41)delasope-
+introducelanocio´ndeconjuntonumerableysepruebalanu- racionesconnu´meroscomplejos,paraluegoverificarqueson
+merabilidaddelosnu´merosracionalesylanonumerabilidad compatiblesconlasdefinidasenR.
+delosrealescontenidosenel(0,1).
+Loqueresultaextran˜oeselmotivoporelcualnosedaun
+Enlasnotasalcap´ıtulo,secriticaelconceptodenu´me- ordenparaelsistemadelosnu´meroscomplejos:(cid:40)(cid:40)porqueen
+roirracionaldadoporAurelioBaldorenAritme´ticateo´rico estecampocarecendeimportancia(cid:41)(cid:41)afirmaMarioO.Gonza´lez
+pra´ctica,quepormuchotiempofueutilizadoenlasescuelas
+en[6,p.155].Unaexplicacio´nrazonableparaestoesevitar
+cubanasylatinoamericanas.Sinembargo,loma´sdestacable
+elana´lisisdelacompatibilidaddelasoperacionesaritme´ticas
+eselestudiohisto´ricodelconceptodenu´meroreal.Eneste
+conelorden.Enelestudiodelosnu´meroscomplejosquese
+bosquejosediscutendiferentesteor´ıasaparecidasenelsiglo
+realizaen[7]nohayningu´ncomentariosobrelanoexistencia
+XIXparaexplicarlanaturalezadelnu´meroreal,comolasma´s deordenenC.
+importantesdebidasaWeierstrass,CantoryDedekind;yotras
+Enelrestodelcap´ıtuloseestudianlaformabinomialyla
+menosconocidascomolasdeC.Me´ray.Tambie´nsetratan
+representacio´ngeome´tricadelosnu´meroscomplejos,as´ıco-
+otrasau´nmenosdivulgadas,comosonlasaportadasporC.
+molainterpretacio´ngeome´tricadelasumaylamultiplicacio´n.
+6Esnecesariosen˜alarqueMarioO.Gonza´lezdemuestrarigurosamente Seintroducelaformatrigonome´trica,lafo´rmuladeMoivrey
+queunacortaduradefinedosclasescontiguas,yquedosclasescontiguas laextraccio´ndera´ıces.Elcap´ıtulo–yporendeellibro–con
+defineunacortadura. elestudiodelaelevacio´ndeunnu´merocomplejoapotencias
+7Laedicio´nde1922deestetextoseencontrabaenlaBilbliotecaCentral
+noenteras,yladefinicio´ndellogaritmocomplejo.
+delaUniversidaddeLaHabana,porqueesmuyprobablequehayasido
+consultadoporMarioO.Gonza´lez. En las notas al cap´ıtulo se hace un breve recorrido por
+SobreIntroduccio´nalAna´lisisMatema´ticodeMarioO.Gonza´lez 73
+lahistoriadelosnu´meroscomplejos,ene´lseresaltaco´mo Referencias
+demoro´ suaceptacio´nporlacomunidadmatema´tica.Adema´s,
+[1] L.F.BatardMart´ınezandP.J.VillegasAguilar.Lascien-
+serealizaunapequen˜aintroduccio´naloscuaterniones.
+ciasexactasynaturalesenCuba. EditorialCient´ıfico-
+Te´cnica,LaHabana,2010.
+4. A modo de conclusio´n
+[2] R. de Armas et al. Historia de la Universidad de La
+LatrascendenciadeIntroduccio´nalAna´lisisMatema´tico Habana.1930-1978. EditorialdeCienciasSociales,La
+debebuscarseenvariossentidos,ynoporqueseaelprimer Habana,1984.
+textodeMarioO.Gonza´lez.Estelibroes,casiseguramente,
+[3] I. Fiterre Riveras. Matema´tica. Segundo curso. Geo-
+elprimeroimpresofueradeLaHabanaenlidiarcontemasde
+metr´ıa. EditorialSelecta,LaHabana,4edition,1949.
+matema´tica.Adema´s,abordaunasuntoque,aunqueelemental,
+no es nada sencillo, y lo hace con mucho didactismo. La
+[4] I.FiterreRiveras. Matema´tica.Tercercurso.Geometr´ıa
+introduccio´nrigurosadelosnu´merosrealesnuncahasidoun
+ynocionesdetrigonometr´ıa. EditorialSelecta,LaHa-
+aspectotrivialdelana´lisis,dadasuprofundarelacio´nconlos
+bana,5edition,1952.
+fundamentosdelamatema´tica.
+Quiza´s,fuetambie´nelprimertextocubanodematema´ti-
+[5] I.FiterreRiveras.Matema´tica.Cuartocurso.Geometr´ıa.
+caentrascenderma´salla´ delasfronterasnacionales.As´ılo
+EditorialSelecta,LaHabana,5edition,1955.
+demuestra el siguiente comentario de Rey Pastor sobre In-
+troduccio´n...:(cid:40)(cid:40)ensayodecr´ıtica,enalgunospuntosatinada, [6] M.O.Gonza´lez. Introduccio´nalana´lisismatema´tico.
+delasdiversasteor´ıasdelnu´mero(cid:41)(cid:41)[11,p.6].Estaopinio´n EditorialBarani,Matanzas,1940.
+evoluciono´,yensumonumentalobraAna´lisisMatema´tico
+TomoIcomentaquees(cid:40)(cid:40)unensayodecr´ıticadelasdiversas [7] M.O.Gonza´lez. Complementosdeana´lisisya´lgebra.
+teor´ıas del nu´mero. Con exposicio´n preferente de la teor´ıa EditorialSelecta,LaHabana,8edition,1952.
+cardinal,conteniendoencadapasoadecuadaresen˜ahisto´rica
+[8] E.Landau. Foundationsofanalysis. ChelseaPublishing
+y adema´s un cap´ıtulo sobre nu´meros aproximados de gran
+valordida´ctico(cid:41)(cid:41). Co.,NewYork,1966.
+No se realizaron otras ediciones porque casi todos los
+[9] A.MiyaresandJ.M.Escalona. Matema´ticasegundo
+contenidostratadospasaronaformarpartede[7].Porejem-
+curso.Geometr´ıa. EmpresaConsolidadadeArtesGra´fi-
+plo,elcontenidodelcap´ıtuloIdeIntroduccio´n... pasaronal
+cas,LaHabana,3edition,1962.
+cap´ıtuloIdeComplementos...;mientrasqueelestudiodelos
+nu´meros reales, el ca´lculo con nu´meros aproximados y los [10] A. Paz Sord´ıa. Matema´tica cuarto curso. Geometr´ıa.
+nu´meroscomplejos,seencuentranenloscap´ıtulosIIIyVIde CasaLorie´,LaHabana,1951.
+Complementos...,respectivamente.
+Porotrolado,eltextodeMarioO.Gonza´lezseinscribe [11] J.ReyPastor. Elementosdeana´lisisalgebraico. Soc.de
+enloquepuedeserllamadalatradicio´ncubanadetextosde Resp.Ltda.,BuenosAires,3edition,1948.
+ana´lisismatema´tico,inauguradaconElementosdea´lgebra
+superiordePabloMiquel,quienlacontinuo´ consusCursode [12] J. Rey Pastor et al. Ana´lisis matema´tico, volume 1.
+ca´lculodiferencial(1941)yCursodeca´lculointegral(1942). EditorialKapelusz,BuenosAires,8edition,1969.
+Adema´sdeiniciarotroaspectoimportantedelamatema´tica
+[13] C. Sa´nchez Ferna´ndez and C. Valde´s Castro. Emer-
+cubana:elintere´sporlahistoriadelamatema´ticaens´ı,ysu
+gencia de una cultura matema´tica en Cuba. Ciencias
+utilidadenlaensen˜anza.
+Matema´ticas,27(2):3–16,2013.
+————————————————
+[14] J.Stillwell. Therealnumbers. SpringerVerlag,Heidel-
+Fuentes documentales
+berg,2013.
+ArchivoCentraldelaUniversidaddeLaHabana:Ex-
+[15] C.Valde´sCastroandC.Sa´nchezFerna´ndez. Eltexto
+pedienteacade´micodeMarioO.Gonza´lezRodr´ıguez.
+Elementos de A´lgebra Superior de Pablo Miquel: un
+ArchivoHisto´ricoProvincialdeMatanzas:Expediente saltocualitativoenlainstruccio´nmatema´ticaenCuba.
+acade´micodeMarioO.Gonza´lezRodr´ıguez,Instituto CienciasMatema´ticas,20(1):54–66,2002.
+deSegundaEnsen˜anzadeMatanzas.

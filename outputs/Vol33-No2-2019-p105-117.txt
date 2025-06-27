@@ -1,0 +1,1107 @@
+CienciasMatemáticas,Vol.33,No.2,Pag.105-117, 2019
+Recibido02-2019, Aceptado 02-2019
+Tablas de Contingencia y Modelos Log-Lineales.
+Una Aplicacio´n en un Problema de Salud.
+Contingency Tables and Log-Linear Models. An
+Aplication in a Health Problem.
+Brenda Lambert Lamazares1, Vivian Sistachs Vega2
+Resumen Generalmentesueleobviarseeltrabajoconvariablescualitativasapesardequeactualmenteson
+estaslasquepredominanenlamayor´ıadelasinvestigaciones.Enelpresentetrabajoseestudiandosdelas
+herramientas estad´ısticas ma´s usadas en el ana´lisis de datos catego´ricos: las tablas de contingencia y los
+modeloslog-lineales.Seexponetambie´nunaaplicacio´ndeestosme´todoslacualconsisteenelana´lisisde
+diferentess´ıntomasycaracter´ısticasenpacientesquepresentanlaenfermedaddeS´ındromedeGuillain-Barre´.
+Medianteelana´lisisanterioresposibledetectarasociacionesentrelasvariablesloquefacilitaeldiagno´sticode
+dichaenfermedadycontribuyealestudiodelamisma.
+Abstract In general the work with qualitative variables is usually ignored although these are currently the
+variablesthatpredominateinmostoftheresearch. Inthisworkarestudiedtwoofthestatisticaltoolsmostused
+intheanalysisofcategoricaldata: thecontingencytablesandthelog-linearmodels. Anapplicationofthese
+methodsisalsoexposedwhichconsistsintheanalysisofdifferentsymptomsandcharacteristicsinpatients
+who have the disease of Guillain-Barre´’s Syndrome. Thanks to the previous analysis, it is possible to detect
+associationsbetweenthevariables,whichfacilitatesthediagnosisofsaiddiseaseandcontributestoitsstudy.
+PalabrasClave
+VariablesCatego´ricas—TablasdeContingencia—ModelosLog-Lineales—S´ındromedeGuillain-Barre´
+1DepartamentodeMatema´tica,InstitutodeCiberne´ticaMatema´ticayF´ısica,LaHabana,Cuba,brenda@icimaf.cu
+2DepartamentodeMatema´ticaAplicada,UniversidaddeLaHabana,LaHabana,Cuba,vivian@matcom.uh.cu
+Introduccio´n Anteestaslimitacionesseplanteanlosmodeloslog-lineales
+comounaalternativadeana´lisis.Elestudiodeestosmodelos
+Diariamenteelserhumanocategorizatodoloquelero-
+avanzo´ considerablementeenlosu´ltimoscuarentaan˜osdel
+dea,afectaoincluye,desdeaspectostangeneralescomola
+siglopasado[3].
+religio´noelpartidopol´ıticoalquepertenecenunciertogrupo
+depersonas,hastacuestionestanparticularescomolaropa
+queusaolacomidaqueingiere.Todasestaspropiedades,las Entre los estudios estad´ısticos que se realizan sobre va-
+cualessuelenadoptardiferentesvalores,recibenelnombrede riables catego´ricas empleando principalmente las tablas de
+variablescatego´ricas. contingenciaylosmodeloslog-linealessedestacanaquellos
+motivadospornecesidadesenela´readelasaludylamedicina.
+Paraestudiarlasrelacionesquepuedenexistirentrelas
+variablescatego´ricassuelenusarselastablasdecontingencia Losplanteamientosanterioresconstituyenlamotivacio´n
+multidimensionales acompan˜adas del ca´lculo de diferentes deestetrabajo,elcualtienecomoobjetivoprincipalelestudio
+medidas. No obstante, el estudio en tablas de contingencia delosme´todosyprocedimientosestad´ısticosquepuedenser
+presentaalgunaslimitaciones,entrelasqueseencuentran: aplicadosadatoscatego´ricos,principalmentedeaquellosque
+este´ninvolucradostantoconlastablasdecontingenciacomo
+Incapacidadparaprobarloscasosdeindependenciaya conlaformulacio´ndemodeloslog-lineales.Esdeintere´stam-
+seaconjuntaoparcialentrelasvariablescatego´ricasen bie´nutilizarlosme´todosestad´ısticosanteriorespararealizar
+elexperimento. unestudioretrospectivosobrepacientesquepresentaronlaen-
+Incapacidadpararealizarelana´lisissimulta´neodela fermedaddelS´ındromedeGuillain-Barre´conelfindebuscar
+asociacio´ndeparesdevariables. posiblesasociacionesentrediferentess´ıntomasycaracter´ısti-
+Desconocer la posibilidad de interacciones de tercer caspresentesenlospacientes.Loanteriorpermitira´ ofrecer
+ordenydeordenma´saltoentrelasvariables. pautasu´tilespararealizareldiagno´sticodedichaenfermedad
+106 TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud.
+yavanzarensuestudio. Seaπ =P(A,B )=n /Nlaprobabilidaddequeunele-
+ij i j ij
+mentoaleatoriamenteescogidopertenezcaalaceldaubicada
+Eltrabajoseencuentradivididoentresseccionesprinci- en la fila i y columna j. Al conjunto de todas las probabi-
+pales.Lasdosprimerasseccionesestara´ndedicadasalestudio lidades {π } se le denomina distribucio´n conjunta. Estas
+ij
+delateor´ıafundamentalqueinvolucraeltratamientoconta- satisfacenque∑ i p =1 ∑ q j=1 π ij =1.
+blasdecontingenciaylaformulacio´neinterpretacio´ndelos
+modeloslog-linealesrespectivamente.Enlaterceraseccio´nse Las distribuciones marginales son los totales por filas,
+mostrara´unaaplicacio´ndelateor´ıaestudiadaenunproblema {n }, y los totales por columnas, {n }, las cuales se ob-
+i+ +j
+desalud. tienensumandolasproporcionesn
+ij
+;osean
+i+
+=∑ q
+j=1
+n
+ij
+y
+n
++j
+=∑
+i
+p
+=1
+n
+ij
+. Se interpreta a n
+i+
+como el nu´mero de ve-
+1. Tablas de Contingencia cesqueaparecelamodalidadi-e´simadeAconindependen-
+ciadecualsealamodalidaddeByana´logamenteparan .
+Cuandosetrabajaconvariablescatego´ricaslosdatossue- +j
+Lasprobabilidadesmarginalessonentonces p =n /N y
+len organizarse en tablas de doble entrada, en las que cada i+ i+
+entradarepresentauncriteriodeclasificacio´n.Comoresultado
+p
++j
+=n
++j
+/N.Estassatisfacenque∑
+i
+p
+=1
+p
+i+
+=∑ q
+j=1
+p
++j
+=1.
+deestaclasificacio´n,lasfrecuenciasaparecenorganizadasen
+Apartirdeunatabladecontingenciaesposibleformar
+casillasquecontieneninformacio´nsobrelarelacio´nexistente
+tambie´notrotipodedistribucionesdenominadasdistribucio-
+entreamboscriterios.Aestastablasselesdenominatablas
+nescondicionadas,debidoaqueparasuobtencio´nespreciso
+decontingencia.
+definirpreviamenteunacondicio´n.Estacondicio´nhara´ refe-
+renciaalafijacio´napriorideunaovariasmodalidadesde
+Enestad´ıstica,lastablasdecontingencia,seempleanpa-
+unadelasvariablescualitativas,paraposteriormentecalcular
+raregistraryanalizarlarelacio´nentredosoma´svariables,
+ladistribucio´ndelaotravariablecualitativasujetaaesacon-
+habitualmentedenaturalezacualitativa,yaseannominalesu
+dicio´n.
+ordinales.
+Lastablasdecontingenciapuedenseguirtrestiposdife-
+Anoserqueseespecifiquelocontrario,enlosiguientese
+rentesdeesquemasmuestralesdependiendodeloselementos
+hara´ referenciaatablasdecontingenciadedosdimensiones
+quesemantenganfijososedejenvariaraleatoriamente.En
+porlasbondadesqueestasofrecenparaanalizardiferentes
+loquesiguesehara´ referenciaatablasdecontingenciacuyo
+conceptos.
+esquemamuestralesmultinomialdebidoaqueenelproblema
+1.1 DefinicionesyConceptosFundamentales queseanalizara´ eltaman˜odelamuestratomadaesfijoylas
+Sea una muestra compuesta por N individuos sobre los variablesanalizadastomanma´sdedosvalores[10].
+quesepretendeanalizarsimulta´neamentedosatributos.Se
+designaporA 1 ,...,A p yporB 1 ,...,B q laspyqmodalidadesde 1.2 Independencia y Asociacio´n de variables cuali-
+losatributosAyBrespectivamenteyporn ij ,dondei=1,...,p tativas
+y j=1,...,q,lacantidaddeindividuosquepresentanalavez Elgradoderelacio´nexistenteentredosvariablesnopue-
+lasmodalidadesA i yB j .Latabladecontingenciaquedescribe de ser establecido simplemente observando las frecuencias
+aestosN individuossera´ unatabladedobleentradacomola de una tabla de contingencia por lo que existen varios es-
+siguiente: tad´ısticos,tambie´nllamadosmedidasdescriptivas,loscua-
+lesexponenenformaestandarizadaydefa´cilcomprensio´n
+A\B B ... B ... B n
+1 j q i+
+lascaracter´ısticasdelconjuntodedatosquesedeseadescribir,
+A n ... n ... n n
+1 11 1j 1q 1+
+permitiendoas´ıunacomparacio´ncabaldedosoma´sgrupos
+. . . . . . .
+. . . . . . .
+. . . . . . . dedatos.
+A n ... n ... n n
+i i1 ij iq i+
+. . . . . . . . . . . . . . En el caso de variables cualitativas la falta de indepen-
+. . . . . . .
+denciasueledenominarseasociacio´nyelana´lisisdelgrado
+A n ... n ... n n
+p p1 pj pq p+ deasociacio´nentrelasvariablestienefuerteincidenciaenla
+n n ... n ... n n
++j +1 +j +q ++ estad´ısticadeatributos.
+Sedesignaporn yporn lostotalesmarginalesdela
+i+ +j
+muestraporfilayporcolumnasrespectivamente,adema´s,el Sedicequedosatributossonindependientescuandoen-
+taman˜ototaldelamuestrasedenotara´ indistintamenteporN tre ellos no existe ningu´n tipo de influencia mutua. Si dos
+on ++ ,puestoqueN=n ++ =∑ i p =1 ∑ q j=1 n ij atributos,AyB,sonindependientesestad´ısticamente,lafre-
+cuenciarelativaconjuntasera´igualalproductodelasfrecuen-
+Sedebetenerencuentaquecadaindividuopresentasolo cias marginales respectivas. Para que A y B sean indepen-
+unamodalidaddecadaatributo. dienteshabra´ decumplirsequen =(n n )/N paratodo
+ij i+ +j
+i,j.Enlapra´cticabastaconquelarelacio´nseverifiquepara
+TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud. 107
+(p−1)(q−1)valoresden ,yaqueentoncesseverificara´pa- esperarsifuesenindependientes.Segu´nqueesatendenciaa
+ij
+ratodoslosrestantes. coincidironoeste´ ma´somenosmarcadasetendra´ndistintos
+gradosdeasociacio´n.Paramedirlossehanideadodiversos
+Sisedesignaporm lafrecuenciaesperadaquecorres- procedimientosdenominadoscoeficientesdeasociacio´n.
+ij
+ponder´ıaenelcasodequeambosatributosfuesenindepen-
+dientes, o sea, m =(n n )/N, se define el Coeficiente Un coeficiente de asociacio´n que se encuentra en la li-
+ij i+ +j
+deContingenciaChi-CuadradodePearson,osimplemente teraturaconcernienteaestetemaeselcoeficientePhi[13],
+Chi-Cuadrado,comosigue: tambie´nllamadoCoeficientedeAsociacio´ndeMathews.Es-
+teseobtienedelassiguienteforma:
+p q (n −m )2
+χ2=∑∑ ij ij (1) (cid:115)
+i=1j=1
+m
+ij
+φ =
+χ2
+N
+ElCoeficientedeContingenciaChi-CuadradodePearson
+se utiliza para realizar un contraste formal para la hipo´te- dondeχ2serefierealvalordelestadisticoChi-Cuadrado.
+sisnuladeindependenciadelosatributosAyBfrenteala
+hipo´tesis alternativa que presupone la existencia de asocia- Enlastablascondosvariablesdicoto´micasφ tomavalo-
+cio´nentredichosatributos.Elcontrastesebasaenque,bajo resentre0y1,peroentablasconvariablesconma´sdedos
+lahipo´tesisnula,elestad´ısticoChi-Cuadradosedistribuye categor´ıasestecoeficientepuedetomarvaloresmayoresque1
+segu´nunaχ2con(p−1)(q−1)gradosdelibertad([2],[10]). yaqueχ2puedesermayorqueeltaman˜omuestral.Suvalor
+es0cuandoexisteunacarenciaabsolutadeasociacio´nentre
+Pararealizarelcontrastesehallaelvalorktalque,siendo lasvariables,osea,cuandosonindependientes;ysuvalorse
+αelniveldesignificacio´n,P(χ2 ≥k)=α.Sielvalor aproximaa1cuandoestasmuestranunatotalasociacio´nentre
+(p−1)(q−1)
+delestad´ısticoChi-Cuadradoparalosdatosdadosdelatabla s´ı.
+decontingenciaesmayorquekserechazalahipo´tesisnula
+deindependenciadelosatributosAyBalnivelfijadoα.En Otramedidaderelacio´nestad´ısticaeselCoeficienteVde
+casocontrarioseaceptalaindependencia[5]. Cramer[13],estesecalculaincluye´ndoleunaligeramodifi-
+cacio´nalamedidaanterior:
+Cuandoeltaman˜odelamuestraesmenorque40ocuando (cid:115)
+los individuos que muestran una combinacio´n de variables
+χ2
+V =
+posiblessonmenoresque5,secalculaenlugardelestad´ıstico min(p−1,q−1)N
+Chi-Cuadrado de Pearson el Estad´ıstico Exacto de Fisher
+Esteconstituyeunamedidasime´tricaparalaintensidad
+[10].Esteofrece,basa´ndoseenladistribucio´nhipergeome´tri-
+de la relacio´n entre dos o ma´s variables de la escala nomi-
+cayenlahipo´tesisdeindependencia,laprobabilidadexacta
+nalcuando,almenos,unadelasdosvariablestiene,como
+deobtenerlasfrecuenciadehechoobtenidasocualquierotra
+m´ınimo,dosvaloresposibles.Suvaloresindependientedel
+combinacio´nma´salejadadelahipo´tesisdeindependencia[2].
+taman˜odelamuestraysiempreseencontrara´entre0y1,don-
+Enelcasoenquelasdosvariablesobservadasseanindepen-
+deseobtendra´ comoresultadoelvalor1cuandoexistauna
+dienteslaprobabilidadF deobtenercualquierdisposicio´nde
+relacio´nperfectaentrelasvariablesyelvalor0cuandoestas
+lasn segu´nelEstad´ısticoExactodeFishervienedadapor:
+ij
+seanindependientes.Paraunvalordeesteestad´ısticomayoro
+(n +n )!(n +n )!(n +n )!(n +n )! igualque0.3sedira´queexisteunacorrelacio´nsignificativay
+F = 11 12 21 22 11 21 12 22
+n !n !n !n !N
+siesteesmayorque0.6estacorrelacio´nsera´clasificadacomo
+11 12 21 22
+relativamenteintensa.
+Adema´sdelosestad´ısticosanteriores,existetambie´nel
+estad´ısticoRazo´ndeVerosimilitudusualmenteutilizadopara Existentambie´nunaseriedemedidasdeasociacio´nuti-
+estudiarlarelacio´nentrevariablescatego´ricasenlosmodelos lizadas en los casos en que las variables catego´ricas sean
+log-lineales([2],[3]).Secalculadelaformasiguiente: ordinales.Estasutilizanlainformacio´nordinalquelasmedi-
+dasdisen˜adasparadatosnominalespasanporalto[8].
+p q (cid:18) n (cid:19)
+RV =2∑∑n log ij (2)
+ij
+i=1j=1 m ij Cuandosetrabajacondatosordinalestienesentidohablar
+deladireccio´ndelarelacio´n:unadireccio´npositivaindica
+Estetambie´nsedistribuyesegu´nunaχ2yseinterpretade quelosvaloresaltosdeunavariableseasocianconlosvalores
+igualformaqueelestad´ısticoChi-Cuadrado. altos de la otra variable y los valores bajos con los valores
+bajos; mientras que una direccio´n negativa indica que los
+Comoconceptocontrarioaldeindependenciasetieneel valoresaltosdeunavariableseasocianconlosvaloresbajos
+de asociacio´n. Se dice que A y B esta´n asociados cuando delaotrayviceversa.
+aparecenjuntosenmayornu´merodecasosqueelquecabr´ıa
+108 TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud.
+Muchasdelasmedidasdeasociacio´ndisen˜adasparaes- importarelnu´merodefilasydecolumnasdelatabla.Lainter-
+tudiar la relacio´n entre variables ordinales se basan en el pretacio´ndeambosestad´ısticosserealizadeformaide´ntica
+conceptodeinversio´nynoinversio´n1.Silosdosvaloresde alestad´ısticoγ discutidoanteriormente.
+uncasoenambasvariablessonmayores(menores)quelos
+dosvaloresdeotrocaso,sedicequeentreesoscasossedauna 1.3 Ana´lisisdelosResiduos
+noinversio´n.Sielvalordeuncasodelasvariablesesmayor Otrome´todoexistenteparadetectarlasfuentesdeasocia-
+queeldeotrocaso,yelvalordelsegundocasoesmayorque cio´nentrevariablescatego´ricaseselana´lisisdelosresiduos
+eldelprimero,sedicequesedaunainversio´n.Finalmente, en la tabla de contingencia. Se pueden distinguir tres tipos
+seplanteaquesedaun empatesidoscasostienenvalores diferentesderesiduos:losresiduosnotipificados,lostipifica-
+ide´nticosenunaoenlasdosvariables. dosylostipificadoscorregidos[8].
+No´tesequecuandopredominanlasnoinversiones,lare- Los residuos no tipificados son las diferencias existen-
+lacio´nespositivapuesconformeaumentan(disminuyen)los tes entre las frecuencias observadas (n ) y las frecuencias
+ij
+valoresdeunadelasvariables,aumentan(disminuyen)los esperadas(m )decadacasilla,osea:
+ij
+valoresdelaotra.Procediendoana´logamentesepuedeinferir
+quelarelacio´nesnegativacuandopredominanlasinversiones. r ij =n ij −m ij
+La medida Gamma de Goodman y Kruskall se basa en
+Sellamanresiduostipificadosalresultadodedividirel
+la relacio´n relativa que siguen los rangos de dos variables
+residuonotipificadoentrelara´ızcuadradadesucorrespon-
+catego´ricasexpresadosenescalaordinal,esdecir,hacerefe- dientefrecuenciaesperada,osea:
+renciaalainversio´nonoentrelosrangosdelosatributospara
+r n −m
+ij ij ij
+losindividuosobservados[13].Suvalorvienedefinidoporla r ij = √ = √
+m m
+expresio´n: ij ij
+n −n
+P Q
+γ = Su valor esperado vale 0, pero su desviacio´n t´ıpica es
+n +n
+P Q menorque1,loquehacequenopuedaninterpretarsecomo
+donden P eselnu´merodenoinversiones,esdecir,paresde puntuaciones Z. Sin embargo, sirven como indicadores del
+observacionesenquelosrangosdeambosfactoressiguenla gradoenquecadacasillacontribuyealvalordelestad´ıstico
+mismadireccio´nyn Q eselnu´merodeinversiones,esdecir, Chi-Cuadrado;dehecho,sumandoloscuadradosdelosva-
+paresdeobservacionesenquelosrangosdeambosfactores loresdelosresiduostipificadosseobtieneelvalordedicho
+siguendireccionesopuestas. estad´ıstico.
+Losvaloresdeγ oscilanente-1y1,alcanzandolosextre- Poru´ltimo,seconocecomoresiduostipificadoscorregi-
+moscuandosetienelaperfectaasociacio´nnegativaopositiva dosalcocienteentreelresiduotipificadodecadacasillaysu
+respectivamente.Sidosvariablessonindependientesseobtie- errort´ıpico,osea:
+neγ =0ysinoloson,laasociacio´nsera´tantomayorcuanto
+√
+ma´sseaproximeγ,envalorabsoluto,alaunidad. r ij (n ij −m ij )/ m ij
+r = = (3)
+(cid:98)ij (cid:112) (cid:113)
+V(r ij ) (cid:0) 1−ni+ (cid:1)(cid:0) 1− n+j(cid:1)
+Poru´ltimoseestudiara´nlosCoeficientesdeCorrelacio´n N N
+porRangosdeKendallτ yτ .Estasmedidassecalculande
+b c Lagranutilidaddeestosresiduosradicaenque,siasu-
+acuerdoalasfo´rmulassiguientes:
+mimosunadistribucio´nmultinomialyconN suficientemente
+n P −n Q 2t(n P −n Q ) grande,cadar (cid:98)ij esaproximadamentedistribuidocomouna
+τ = τ =
+b (cid:113) c N2(t−1) variablenormalesta´ndarporloquesonfa´cilmenteinterpre-
+(n +n +n )(n +n +n )
+P Q E(A) P Q E(B) tables: utilizando un nivel de confianza del 95%, se puede
+afirmarquelosresiduosmayoresque1.96indicancasillascon
+donden yn representanlosvaloresantessen˜alados,n
+P Q E(A) ma´scasosdelosquedeber´ıahabersilasvariablesestudia-
+yn hacenreferenciaalnu´merodeparesempatadosenla
+E(B) dasfueranindependientes;mientrasquelosresiduosmenores
+variableAoBrespectivamente,t serefierealm´ınimoentreel
+de-1.96correspondenacasillasconmenoscasosdelosque
+nu´merodefilasyelnu´merodecolumnasyN sera´ eltaman˜o
+cabr´ıaesperarbajolacondicio´ndeindependencia[14].
+delamuestra.
+Entablasdecontingenciaconvariablesnominales,una
+Losvaloresdeamboscoeficientesseencuentranentre-1
+vezquesehaestablecidoqueentredosvariablesexisteuna
+y1,peroτ alcanzalosvaloresextremossoloenlastablas
+b asociacio´n significativa y se ha cuantificado dicha asocia-
+decontingenciacuadradasdondeningunafrecuenciamargi-
+cio´n,losresiduostipificadoscorregidosconstituyenunade
+nalvale0mientrasqueτ tomavaloresenesteintervalosin
+c lasmejoresherramientasdisponibleparapoderinterpretarcon
+1Tambie´nconocidoscomodiscordanciayconcordanciarespectivamente. precisio´nelsignificadodelaasociacio´ndetectada.
+TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud. 109
+2. Modelos Log-Lineales Sisetomanlogaritmosenlasexpresionesanteriores,se
+llegaaque,enelcasodeindependencia
+Losproblemasqueresuelvenlastablasdecontingencia,
+siendo importantes, dejan sin respuesta cuestiones de gran log m =log N+log π +log π (6)
+ij i+ +j
+importanciacomoson:
+ycuandolaindependencianoexiste
+Laestimacio´ndelainfluenciaindividualquecadafactor
+ejercesobrelasfrecuencias,atrave´sdesusdiferentes log m =log N+log π +log π +log k (7)
+ij i+ +j ij
+niveles.
+Lacuantificacio´ndelainfluenciacorrespondienteala Lasexpresiones6y7constituyenunaprimeraformula-
+accio´nconjuntadevariosfactoressobrelamagnitudde cio´ndelosmodeloslogar´ıtmicolinealesparaelcasodedos
+lasfrecuenciasdelasceldasenelconjuntodelatabla, factores.
+enelcasoquelacontrastacio´ndelaindependenciano
+hayaconducidoarechazarlahipo´tesis. Aunquelosmodelosmultiplicativosiniciales(4y5)son,
+respectivamente,equivalentesalosmodeloslogar´ıtmicosadi-
+Estostemassontratadosenlosmodeloslog-lineales. tivos(6y7),resultama´srazonableutilizarlosu´ltimospues
+enestoselte´rminoquediscriminalaexistenciaonodein-
+2.1 ModeloLog-Linealparadosfactores dependenciaeslog k ,elcualtomaelvalorcerocuandose
+ij
+Secomenzara´elana´lisisteo´ricodelosmodeloslogar´ıtmi- esta´ enpresenciadeindependencia,valorma´sacordeconla
+coslinealesporaquellosquetienencomofinexplicarlaes- ideadeausenciadeasociacio´nquesepretenderepresentar,en
+tructura de tablas de dos dimensiones, debido a que estos vezdelvalorunidadqueseleasignabaalpara´metrok enel
+ij
+sonmuchoma´ssimples[5].Paraelestudiodemodelosque modelomultiplicativoinicialparaestemismocaso[14].
+incluyanunnu´meromayordefactoresserealizaunana´lisis
+ana´logo. 2.1.1 EfectosPrincipaleseInteracciones
+Teniendo en cuenta que la frecuencia esperada para la
+Losmodeloslogar´ıtmicoslinealessefundamentanenel casilla(i,j)esunafuncio´naditivadeunefectodefilai−e´simo
+principio de independencia de las variables aleatorias que ydeunefectodecolumna j−e´simoyefectuandounaserie
+lo componen. Para el caso de una tabla bidimensional, la detransformacioneselementalesconelobjetivodehacerma´s
+condicio´ndeindependenciasepuedetraducirenquelaproba- operativoelmodelogeneral,seobtieneunanuevaformulacio´n
+bilidaddequeunelementopresentesimulta´neamentecierta delmodelolog-linealdedosfactores:
+caracter´ısticasdeAydeBenlosnivelesi-e´simoy j-e´simo,
+log m =λ+λA+λB+λAB
+es igual al producto de la probabilidad de que presente la ij i j ij
+caracter´ıstica de A en el nivel i-e´simo y la de B en el nivel
+donde:
+j-e´simo.Basa´ndoseenloanteriorsepuedeentoncesexplicar
+elcomportamientoconjuntodelosdosfactoresatrave´sdelos 1 p q
+λ = ∑∑log m
+respectivoscomportamientosindividuales,osea: pq ij
+i=1j=1
+π =π π
+ij i+ +j 1 q 1 p q
+λA= ∑log m − ∑∑log m
+Porelcontrario,considerandolanoexistenciadeindepen- i q j=1 ij pq i=1j=1 ij
+denciaentrelosfactores,sepuedeexpresarparatodoiypara
+1 p 1 p q
+todo jlaprobabilidadconjuntacomo: λB= ∑log m − ∑∑log m
+j p ij pq ij
+i=1 i=1j=1
+π =π π k k >0
+ij i+ +j ij ij
+1 p 1 q
+d n o iv n e d l e i- k e´ i s j i c m o o ns d ti e t l u f y a e c l t a or c A ua y nt d ifi e c l a j c - i e´ o´ s n im d o el d e e f l ec fa to ct c o o r n B ju . n A to e d st e e l λ i A j B=log m ij − p i ∑ =1 log m ij − q j ∑ =1 log m ij
+efectoconjuntoseledara´ elnombredeinteraccio´ndeam- 1 p q
+basvariablesofactores. + ∑∑log m ij
+pq
+i=1j=1
+Ente´rminosdelasfrecuenciasesperadas,laindependen-
+Elsumandoλ representalamediageneraldeloslogarit-
+ciapuedeexpresarsecomo:
+mosdelas pqfrecuenciasestimadas.Estecuantificaelvalor
+queadoptar´ıanloslogaritmosdedichasfrecuenciassilosdos
+m =N π π (4)
+ij i+ +j factores,AyB,noejercieranningu´nefecto.ElsumandoλA
+i
+ylanoindependencia: midelainfluenciaquelafilai-e´simaejercesobreellogarit-
+modelnu´merodeelementosqueposeaneseniveldeA.De
+m =N π π k k >0 (5) maneraana´loga,elsumandoλBevalu´aelefectoqueelnivel
+ij i+ +j ij ij j
+110 TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud.
+j-e´simodelfactorBejercesobrelaaparicio´ndeelementosen Primeramenteve´ansealgunasdefinicionesimportantes:
+esenivel.
+Sellamamodelosaturadoaaquelqueincluyetodoslos
+Los para´metros λA y λB reciben el nombre de efectos efectosprincipaleseinteraccionesposiblesentrelasvariables.
+i j
+principalesodirectos.Losvalorespositivosdelosefectos Estecontieneensuformulacio´ntantospara´metrosindepen-
+directosindicanqueelnivelencuestio´nactu´afavoreciendola dientescomoceldastengalatabladecontingenciaalaquees
+presenciadeindividuosenesafilaocolumna;osea,quela aplicado.No´teseque,elmodelosaturado,reproduceexacta-
+aparicio´ndeindividuosenesaposicio´nesalta.Comoesde mentelasfrecuenciasobservadas.Sinoesta´ presentealguno
+esperar,losvaloresnegativosindicanlasituacio´ncontraria,o delospara´metrosenelmodelo,aesteseledenotara´ modelo
+sea,elnivelnofavorece,sinopenaliza,lapresenciadeindivi- nosaturado([2],[3]).
+duosenesenivel.
+Sellamamodelojera´rquicoaaquelmodelonosaturado
+No´tese que los para´metros λA y λB son las diferencias que es coherente en el sentido de que, si en el modelo fal-
+i j
+entrelamediadeladistribucio´nmarginaldeloslogaritmos ta un te´rmino, en este estara´n excluidos tambie´n todos los
+delasfrecuenciasesperadas,respectoalfactorBoArespec- para´metrosdeordensuperiorquecontenganlacombinacio´n
+tivamente,ylamediageneralλ.Estasdiferenciasdicenque desub´ındicesfijosdelquenoaparece[7].
+losefectosproducidosporlosdistintosnivelesdelfactorAo
+Bsemidenatrave´sdelasdesviacionesdelasmedidasmargi- Parailustrarlosconceptosdeindependenciayasociacio´n
+nalesdecadanivelrespectoalamediageneral,eliminando sehara´ usodelmodelosaturadodecuatrodimensiones:
+as´ıelefectogeneralqueexistir´ıasitodaslasceldastuvieran
+elmismonu´merodeelementos. log m ij =λ+λ i A+λ j B+λ k C+λ l D+λ i A j B+λ i A k C+λ i A l D
++λBC+λBD+λCD+λABC+λABD+λACD
+Sisesumanlos pte´rminosdeλAylosqte´rminosdeλB jk jl kl ijk ijl ikl
+i j +λBCD+λABCD
+seobtienequeambassumassonigualesa0.Loanteriortiene jkl ijkl
+comoconsecuenciaquelosefectosproducidosporlosniveles
+No´tesequeenestemodeloesta´npresentesunaseriede
+deunacaracter´ıstica,talycomohansidodefinidos,noson
+efectos que contribuyen a la tendencia de un elemento de
+independientesentres´ı.
+perteneceraunauotraceldadelatabla.Estosefectosson:
+losefectosprincipales(λA, λB, λC, λD),lasinteracciones
+Lospara´metrosλABrecibenelnombredeinteracciones i j k l
+ij deprimerorden(λAB, λAC, λAD, λBC, λBD, λCD),lasinter-
+yexpresanlacuantificacio´ndelaaccio´nconjuntadelnivel ij ik il jk jl kl
+i-e´simodelfactorAydelnivel j-e´simodelfactorB. accionesdesegundoorden(λABC,λABD, λACD, λBCD)ypor
+ijk ijl ikl jkl
+u´ltimo,lainteraccio´ndeordentres,queconstituyeelefecto
+Aligualquelosefectosprincipales,lasinteraccionesde conjuntodelascuatrocaracter´ısticas(λ i A jk B l CD).
+losnivelesdecadafactorverificanciertasrestricciones.Enel
+casoparticularqueseesta´ tratandolasrestriccionessonlas Sepuededecirqueloscuatrofactoressoncompletamen-
+siguientes: teindependientessilosontantosimulta´neamente,comodos
+adosytresatres;oseaque,para i,j,k yl,todaslasinter-
+p q acciones debera´n ser nulas. Esto conduce a que el modelo
+∑λAB=0 ∑λAB=0
+ij ij resultantesea:
+i=1 j=1
+logm =λ+λA+λB+λC+λD
+Cadaunadelasdossumasmarginalessonigualesa0,lo ij i j k l
+quesuponelaindependenciadelosefectosdelasinteraccio-
+Recurriendoalmodelodedimensio´ncuatroseplanteaque
+nes.
+elfactorAescompletamenteindependientedelosotrostres
+factorescuandotodaslasinteraccionesenlasqueapareceeste
+2.2 Independencia y Asociacio´n en Modelos Log- factorsonnulas,obtenie´ndoseelsiguientemodelo:
+Lineales
+Anteriormentesevio´ laformulacio´ndeunmodelolog- logm =λ+λB+λC+λD+λBC+λBD+λCD+λBCD
+ij j k l jk jl kl jkl
+linealcondosvariablescatego´ricasbajolahipo´tesisdeinde-
+pendenciaydenoindependencia.Estemodeloesfa´cilmente Partiendounavezma´sdelmodelosaturado,sepuededecir
+generalizableparacualquiernu´merodevariables.Debidoa quelosfactoresAyBpresentanindependenciacondicional
+laaplicacio´nqueseexpondra´ resultadeintere´spresentarel cuandosonindependientesentres´ıparacadaniveldelosdos
+modelolog-linealparacuatrovariablesyestudiarlaindepen- factoresrestantes,pudiendoestarambosfactoresasociados
+denciaoasociacio´nquepuedenexistirentresuscomponentes a su vez con un tercer factor, teniendo entonces el modelo
+[11],porloqueaestatareaselededicara´ estaseccio´n. resultantealsustituirque:λAB=λABC=λABD=λABCD=0
+ij ijk ijl ijkl
+TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud. 111
+Finalmente, se dira´ que el modelo presenta asociacio´n Enma´sdetalle,mostremoscomoelMe´tododeNewton-
+parcialentreloscuatrofactorescuandolasinteraccionesde Raphsonhallaelvalorβ(cid:98)dondelafuncio´nL(β)semaximiza.
+ordentressonnulassiendodiferentesde0todaslasinterac-
+cionesdeordendos. Seau(cid:48)=(∂L(β)/∂β ,∂L(β)/∂β ,...)yseaH lamatriz
+1 2
+hessianadelaverosimilitud,denotaremosporu(t)yH(t)las
+2.3 Estimacio´ndelospara´metrosenunModeloLog- evaluacionesenβ(t)delvectoruydelamatrizH respectiva-
+Lineal mente,dondeβ(t)representalat−e´simaaproximacio´ndeβ.
+Losestimadoresdelospara´metrosλ enlosmodeloslog-
+linealespuedenobtenerse,enocasiones,sustituyendolasfre- Enelpasot delprocesoiterativoseaproximaL(β)porsu
+cuenciasesperadasestimadasenlasecuacionesquedefinen desarrolloenSeriesdeTaylordeordendos,obtenie´ndose:
+dichospara´metros.Enelcasoenquenopuedanserobtenidas
+(cid:16) (cid:17) (cid:16) (cid:17)
+deformadirectaseusandiferentesme´todositerativos,delos L(β)≈L β(t) +u(t)(cid:48) β−β(t)
+cuales,expondremosdosacontinuacio´n.
++
+1(cid:16)
+β−β(t)(cid:48)
+(cid:17)
+H(t)
+(cid:16)
+β−β(t)
+(cid:17)
+2.3.1 Me´tododeAjusteIterativoProporcional 2
+Esteme´todotieneimportantespropiedadesentrelasque
+(cid:16) (cid:17)
+seencuentran[10]: yseresuelve∂L(β)/∂β ≈u(t)+H(t) β−β(t) =0enfun-
+Siempre converge al u´nico conjunto de estimaciones cio´ndeβ parahallarsupro´ximaaproximacio´n.Dichaaproxi-
+ma´ximoveros´ımil. macio´nsepuedeexpresarcomo:
+Puedeusarseunaregladeparadaqueasegureexactitud
+(cid:16) (cid:17)−1
+paracualquiergradodeseado. β(t+1)=β(t)− H(t) u(t)
+Deexistirestimacionesdirectas,elprocedimientopro-
+duceelestimadorexactoensolounciclo.
+asumiendoquelamatrizH(t)seanosingular.
+Cualquierconjuntodeevaluacionesinicialespuedeser
+escogidoconformealmodeloinicialfijado.
+El proceso continua iterando hasta que las variaciones
+Su procedimiento, para un modelo log-lineal de cuatro entre L(β(t)) y L(β(t+1)) son lo suficientemente pequen˜as.
+factores,puederesumirseenlossiguientespasos: Elestimadorma´ximoveros´ımildelospara´metrossera´ β(t)
+cuandot→∞;sinembargo,silafuncio´ntieneotroma´ximo
+(0)
+Paso1: m (cid:98)ijkl =1 ∀i,j,k,l. localenelcualsuderivadaseanulepuedenserseleccionadas
+comoaproximacionesfinalesvaloreserro´neos,radicaenesto
+Paso2: m (cid:98) ( i 4 jk r l +1) = m n (cid:98) i ( i j 4 j k k r + + ) m (cid:98) ( i 4 jk r l ) laimportanciadeunabuenaaproximacio´ninicial.
+Paso3: m
+(4r+2)
+=
+nij+l
+m
+(4r+1) Losca´lculosconelMe´tododeNewton-Raphsonsonma´s
+(cid:98)ijkl m(cid:98) (
+i
+4
+j+
+r+
+l
+1) (cid:98)ijkl complejosqueconelMe´tododeAjusteIterativoProporcional
+ya que es necesario invertir matrices en cada ciclo pero la
+Paso4: m (cid:98) ( i 4 jk r l +3) = m(cid:98) n (
+i+
+4 i+ r
+k
++ k
+l
+l 2) m (cid:98) ( i 4 jk r l +2) c
+a
+o
+u
+n
+n
+v
+a
+er
+g
+g
+a
+e
+m
+n
+a
+ci
+m
+a
+a´
+d
+s
+e
+a
+e
+m
+st
+p
+e
+li
+e
+a
+s
+d
+m
+e
+a´
+p
+s
+ro
+ra
+b
+´p
+le
+id
+m
+a
+a
+y
+s,
+e
+ra
+l
+z
+m
+o
+i
+n
+s
+e
+m
+s
+o
+po
+e
+r
+s
+l
+a
+a
+p
+s
+l
+c
+ic
+u
+a
+a
+b
+le
+le
+s
+Paso5: m
+(4(r+1))
+=
+n+jkl
+m
+(4r+3) eselme´todoqueapareceimplementadoenlamayor´ıadelos
+(cid:98)ijkl m(cid:98) (
++
+4r
+jk
++
+l
+3) (cid:98)ijkl softwaresmatema´ticosyestad´ısticos[10].
+Esteprocesoculminara´cuandoladiferenciama´ximaentre
+2.4 Seleccio´ndeunModeloLog-LinealAdecuado
+lasfrecuenciasobservadasyesperadasenlastablasmargina-
+Cuando trabajamos con un problema particular existen
+lescorrespondientesalosestad´ısticossuficientesseamenor
+variosmodeloslog-linealesquelodescriben,ejemplodeesto
+quealgu´nδ prefijado.
+sonelmodelosaturadoylosmodelosminimales.Elmodelo
+2.3.2 Me´tododeNewton-Raphson saturado,alincluirtodoslosposiblespara´metros,presentaun
+ElMe´tododeNewton-Raphsonesunprocedimientoge- ajusteperfectoanuestrosdatosperosuinterpretacio´nsuele
+neral para encontrar el ma´ximo de una funcio´n de varias ser muy compleja. Los modelos minimales, al contener el
+variables.Enelcasodelosmodeloslog-linealessemaximi- menornu´merodepara´metrospermitidos,suelentenerinter-
+zara´ la funcio´n de verosimilitud tratada como una funcio´n pretaciones muy sencillas pero generalmente no presentan
+delospara´metrosdelmodelo,osea,L(β).Esteme´todonos unbuenajuste.Surgeentonceslaproblema´ticadebuscarun
+proveedeunasecuenciadeaproximacionesdelospara´metros equilibrioentrelabondaddeajustedelmodeloyladificultad
+delmodelolascualesconvergenalma´ximolocaldelafuncio´n ensuinterpretacio´n.Paralasolucio´ndelaproblema´ticaplan-
+siempreque,tantolafuncio´ncomolaaproximacio´ninicialde teadaanteriormentesehanplanteadovariosme´todosentrelos
+lospara´metrosseanlosuficientementebuenas[2]. queseencuentranelMe´todoParticionadoyelMe´todoPaso
+aPaso.
+112 TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud.
+2.4.1 Me´todoParticionado Existenvariosestad´ısticosquecuantificanenquemedida
+Esteme´todoconstadelospasossiguientes[10]: seajustaadecuadamenteunmodeloconcretoalaestructurade
+unatabladecontingenciadada.Lasdosmedidasma´susuales
+1- Seconstruyeunajerarqu´ıademodelos.
+para esto son el estad´ıstico Chi-Cuadrado de Pearson y la
+2- Separticionaelestad´ısticoRazo´ndeVerosimilitud,tan-
+Razo´ndeVerosimilitudcuyasfo´rmulas(1y2)fueronplantea-
+toenelmodelogeneralcomoenlosmodelossucesivos,
+dasanteriormente.Paraelcasoenelqueseanalizancuatro
+siempre desde el modelo ma´s complejo hasta el ma´s
+variables,sepuedenextenderestasfo´rmulasdirectamentea
+simple.
+lassiguientes[5]:
+3- Seseleccionaelniveldesignificacio´ndeseado.
+4- Serealizanpruebasdebondaddeajustealascompo- (n −m )2 (cid:18)n (cid:19)
+nentesparticionadas,comenzandoconelmodeloma´s χ2=∑ ijkl ijkl RV =2∑n log ijkl
+ijkl
+m m
+complejo.Seagregalacomponentesobrelaqueseha ijkl ijkl ijkl ijkl
+realizadolaprueba.
+5- Serepiteelpasoanteriorhastaqueseasignificativala Ambos estad´ısticos distribuye segu´n una χ2 donde los
+diferenciaentremodelossucesivosolosealasumade gradosdelibertadesta´ndeterminadosporladiferenciaentre
+lascomponentesacumuladas elnu´merodeceldasdelatabladecontingenciaylacantidad
+depara´metrosdelmodelo.Losgradosdelibertaddisminuyen
+Esteprocedimientosuelepresentarseenformadetablay
+amedidaqueelmodelosevuelvema´scomplejo.
+dependedelajerarqu´ıademodelosseleccionada,enlaque
+grancantidaddemodelosnosonconsiderados,loquecons-
+Despue´sdecalcularlosestad´ısticosanterioresserealiza
+tituyeuninconvenienteentablasdealtasdimensiones.Otro
+unapruebadehipo´tesisdonde:
+inconvenientequepresentaesqueesunprocedimientomuy
+engorrosoderealizarmanualmenteporloqueesaconsejable H :Elmodeloseleccionadoseajustaalosdatos.
+0
+ensulugarprogramarlo. H :Elmodeloseleccionadonoseajustaalosdatos.
+a
+2.4.2 Me´todoPasoaPaso Apesardequelaspruebasanterioresproporcionanuna
+Esteprocedimientofuepropuestoen1971porGoodman idea global de co´mo los datos de la tabla de contingencia
+ymodificado6an˜osma´starde.Consisteenunprocedimiento procedendeunapoblacio´nqueobedecealmodelolog-lineal
+deseleccio´nascendenteyresultadegranutilidadentablasde seleccionado,estasnoinformanacercadelarelevanciapar-
+grandesdimensiones[10]. ticulareneseajustedelospara´metrosdelmodelo,nidelos
+casosextremosquepuedendarseencadaunadelasceldasde
+Esteme´todoconstadelospasossiguientes: clasificacio´ncruzada.Esporestoque,complementandoestas
+1- Seestableceunniveldesignificacio´n. pruebas,sedeberealizarunana´lisisbasadoenlosresiduos
+2- Seexaminalabondaddeajustedelosmodelosjera´rqui- delmodeloyensugradoconcretodesignificacio´nestad´ıstica
+coscomenzandoporlosmodelosquecontemplanhasta [7].
+losefectosdelaprimeravariable,posteriormentehasta
+losefectosdelasegundavariableyas´ısucesivamente Estos residuos se calculan siguiendo la fo´rmula 3 y se
+hasta el modelo saturado. En este paso nos detendre- interpretan al igual que se hacia en el ana´lisis en tablas de
+mos cuando encontremos un modelo que contemple contingencia.Ellos,enestenuevocontexto,muestranlaca-
+todos los efectos de d variables y que ajuste bajo las lidaddelajusteceldaacelda.Sedebetenerpresentequees
+condicionesimpuestas. posiblequeunaceldamuestrefaltadeajusteenunmodelo
+3- Al modelo que contempla los efectos de d−1 varia- bienajustado.
+bles y no ajusta a nuestros datos se le adicionara´n y
+sustraera´npara´metrosλ alniveld endependenciade Elusodelana´lisisresidualpermiteordenartantolosefec-
+sucontribucio´nindividualalajustedelmodelo. tosprincipalescomolasinteraccionesentrelasvariablesde
+4- Serepiteelpasoanteriorhastaquequenopuedanadi- acuerdo con su grado de significacio´n y su magnitud. Este
+cionarsenieliminarsepara´metrosλ delmodeloencues- ana´lisis posibilita tambie´n reducir el modelo cuando algu´n
+tio´n. para´metroseasignificativamenteiguala0,marcandoas´ıla
+pautadelmodelonosaturadoqueparezcama´sadecuado[11].
+2.5 InferenciaenModelosLog-Lineales
+Lafinalidadprincipaldelana´lisisdemodeloslog-lineales
+3. Aplicacio´n en un Problema de Salud
+esidentificarlasrelacionesma´ssignificativasqueseprodu-
+cenentrelasvariablesdeestudio,generalmentenumerosas Comoseplanteo´anteriormentesondisimileslasaplicacio-
+medidascalculadasconestefinsonaltamentedependientes nesenela´readelasaludylamedicinadete´cnicasestad´ısticas
+delmodeloencuestio´n,razo´nporlacualresultadegranim- y probabil´ısticas. Estas tienen diversos fines, entre ellos se
+portancialacorrectaseleccio´ndelmodelo. encuentranelestudiodeunaenfermedadparticularodesus
+s´ıntomas,elana´lisisdelareaccio´ndelospacientesanteun
+TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud. 113
+medicamentodeterminado,elesclarecimientodeciertospa- deseptiembredel2017enelInstitutodeNeurolog´ıayNeuro-
+tronesenelprogresodeunaenfermedadoladeteccio´ndel cirug´ıadondesebuscaronrelacionesendosgruposdecuatro
+tratamientoma´sapropiadoparaunadolenciabajociertasca- variablescadauno.
+racter´ısticas;todosellostributanenormementeamejorarla
+vidadelossereshumanosyalacomprensio´ndenumerosos Elprimergrupoestuvoconformadoporlascuatrovaria-
+trastornosbiolo´gicosquenosafectan.Enlapresenteseccio´n blescualitativasnominalessiguientes:
+mostraremoscomolateor´ıaestudiadapuedeseraplicadapara
+encontrarrelacionesentreloss´ıntomasdelaenfermedaddel
+Diag seg: Serefierealosme´todosqueseempleanparapoder
+S´ındromedeGuillain-Barre´ conelobjetivodeavanzarensu
+diagnosticarlaenfermedad.Tienetresposiblesvalores:
+estudioyfacilitarsudiagno´stico.
+NF(Nofuncional),LCR(L´ıquidocefalorraqu´ıdeo)y
+Ambos.
+3.1 S´ındromedeGuillain-Barre´
+S´ıntResp: Hacealusio´nalapresenciadetrastornosrespira-
+El S´ındrome de Guillain-Barre´ (SGB) es la neuropat´ıa
+toriosenelpaciente.Tienedosvaloresposibles:Siy
+aguda ma´s frecuente, de evolucio´n ma´s ra´pida y potencial-
+No.
+mentefatal[9].Sugravedadvar´ıadesdeunadebilidadligera
+Deb MInf: Hace referencia a la presencia de debilidad en
+enlosmiembrosinferioreshastalacuadriplej´ıafla´cidacon
+losmiembrosinferioresdelpaciente.Tienedosvalores
+para´lisisrespiratoriaytrastornosdisautono´micosgravesque
+posibles:SiyNo.
+puedenconduciralenfermoalamuerte.
+Deb MSup: Hacereferenciaalapresenciadedebilidaden
+losmiembrossuperioresdelpaciente.Tienedosvalores
+ElSGBsueleafectarapersonasdecualquieredadysexo
+posibles:SiyNo.
+condospicosdepresentacio´n:unoenlaetapaadultajoven
+(15-34an˜os)yotroenancianos(64-70an˜os).Estesepresen-
+taenpocasocasionesennin˜osmenoresdeunan˜odeedad Lasvariablescualitativasordinalessiguientesconforma-
+[1]. Este s´ındrome puede ser dif´ıcil de diagnosticar en sus ronelsegundogrupodeestudio:
+primeras semanas debido a que varios trastornos presentan
+s´ıntomas similares [12]. La enfermedad evoluciona en tres
+Per Prog: Serefierealaduracio´ndelper´ıododeprogresio´n
+fases,denominadas:fasedeprogresio´n,deestabilizacio´nyde
+delaenfermedadencadapaciente.Tienetresvalores
+regresio´n(oderecuperacio´n)lascualessuelencompletarse
+posibles:1(de0a7d´ıas),2(de8a21d´ıas)y3(ma´s
+enunperiodocuyaduracio´noscilade3a6meses[4].
+de22d´ıas)
+Per Estab: Serefierealaduracio´ndelper´ıododeestabili-
+La mortalidad estimada del SGB es variable y au´n con
+zacio´n de la enfermedad en cada paciente. Tiene los
+el advenimiento de una terapia efectiva sigue siendo de un
+mismostresvaloresposiblesquelavariableanterior.
+4%aun8%.Aproximadamente,un80%delaspersonasque
+Per Recup: Serefierealaduracio´ndelper´ıododerecupe-
+presentaron SGB se recuperan adecuadamente despue´s del
+racio´ndecadapaciente.Tienelosmismostresvalores
+tratamiento,sinembargo,lacalidaddevidadeestaspersonas
+posiblesquelaprimeravariabledeestegrupo.
+puedeversedan˜adaendiferentesa´reasmuchosan˜osdespue´s
+NESNI: Acro´nimo de Nueva Escala de Severidad para
+deliniciodelaenfermedad,indicandorecuperacio´nincomple-
+Neuropat´ıasInflamatorias.Hacereferenciaaunaes-
+taalargoplazoenaproximadamenteun10%delospacientes
+calaquemidelaintensidad,severidadyextensio´ndela
+[6].
+enfermedadenlospacientes.Tienetresvaloresposibles:
+1(Severo),2(Moderado)y3(Ligero).
+Apesardequeexistentratamientosquereducenlagrave-
+daddeloss´ıntomasyaceleranlarecuperacio´nenlamayor´ıa
+delospacientes,talescomolaplasmafe´resisyeltratamiento 3.3 ResultadosyDiscusio´n
+con altas dosis de inmunoglobulinas [15], no hay una cura
+Seconsidero´ oportunodividirelestudiorealizadoendos
+espec´ıficaparaestaenfermedad.Tambie´nsedesconocenme´to-
+ana´lisisindependientesloscualesrespondenacadaunode
+dosefectivosparasuprevencio´n.
+losgruposdevariablesantesmencionados.
+Portodoloanteriormenteplanteado,resultabeneficioso
+realizar un estudio con pacientes que presentaron esta en- 3.3.1 PrimerAna´lisis
+fermedad con el objetivo de analizar diferentes s´ıntomas y Realizandounatabladecontingenciaqueagrupealprimer
+caracter´ısticas de la misma en aras de detectar una posible grupodevariablesyasuscategor´ıasseobtienelasiguiente
+asociacio´nentreellos. tabladeorden4condimensio´n242(Cuadro1).
+3.2 Disen˜oMuestralyMetodolo´gico
+2Enlatablanoseincluyenlascombinacionesdevariablesquenoagrupen
+Serealizo´ unestudioretrospectivodelaenfermedaddel
+aningu´nindividuoconelobjetivodereducirlatablayhacerma´sfa´cilsu
+S´ındromedeGuillain-Barre´ en143pacientestratadosantes comprensio´n.
+114 TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud.
+Cuadro1.TabladeContingencia.PrimerAna´lisis primerapartedelapruebacontrastalahipo´tesisdequetodos
+DebSup losefectosdeunordenparticularosuperiorsonigualesa0;
+Diagseg S´ıntResp Si No lasegundaparte,contrastalahipo´tesisdequesolamentelos
+NF Si DebMInf Si 2 efectosdeundeterminadoordensonigualesa0.Paraambos
+No DebMInf Si 10 1
+casosserechazaranlasinteraccionesdeordenK paralasque
+LCR Si DebMInf Si 8
+los p-valoresasociadosalestad´ısticoChi-Cuadradoseanma-
+No DebMInf Si 55 10
+No 1 yoresalniveldesignificacio´n.Lasinteraccionesrechazadas
+Ambos Si DebMInf Si 3 nosonestad´ısticamentesignificativas.
+No DebMInf Si 45 6
+No 1
+Al realizar la prueba de las K-efectos con los datos es-
+tudiadosseobtuvoquelasinteraccionesdecuatroydetres
+Posteriormentesecalculanmedidasdeasociacio´nadecua-
+variablesnosonsignificativasmientrasqueladedosvariables
+dasentretodoslosparesposiblesdevariablesobtenie´ndose
+ylosefectosprincipaless´ıloson(Cuadro5).
+queelu´nicoparenelqueseevidenciabaunaclaraasociacio´n
+eraenelformadoporDeb MInfyDeb MSuppuesparaesta
+Cuadro5.PruebadelosK-efectos
+seobtuvounvalordelEstad´ısticoExactodeFisheriguala
+Razo´ndeVeros. Pearson
+0.017. Se considera importante tambie´n la relacio´n que se K gl Chi-Cuad. Sig. Chi-Cuad. Sig.
+estableceentrelasvariablesS´ıntRespyDeb MSup,puesal
+Efectosde 1 23 434.759 0.000 764.930 0.000
+calcular el estad´ıstico Razo´n de Verosimilitud para ellas se ordenK 2 18 14.875 0.671 21.047 0.277
+superiores 3 9 0.000 1.000 0.000 1.000
+obtiene3,932cuyo p-valores0,047(Cuadro2).
+4 2 0.000 1.000 0.000 1.000
+Efectosde 1 5 419.884 0.000 743.882 0.000
+Cuadro2.PruebasdeAsociacio´nParcial ordenK 2 9 14.875 0.094 21.047 0.012
+3 7 0.000 1.000 0.000 1.000
+Comb.Variables gl Valor Sig. Estad´ıstico 4 2 0.000 1.000 0.000 1.000
+Diagseg×DebMInf 2 0.254 0.881 Chi-Cuad.
+Diagseg×DebMSup 2 0.524 0.770 Chi-Cuad.
+Diagseg×S´ıntResp 2 1.756 0.416 Chi-Cuad. Elhechodequelosefectosdedeterminadasinteracciones
+DebMInf×DebMSup 1 0.017 —– Fisher o de los efectos principales sean distintos de 0 no implica
+DebMInf× S´ıntResp 1 0.387 0.534 RV
+DebMSup× S´ıntResp 1 3.932 0.047 RV que, en particular, cada uno de ellos lo sea; por lo que es
+aconsejablerealizarlapruebadeasociacio´nparcial.Enesta
+secontrastalahipo´tesisdequeunefectoenparticularesnulo
+Se comprueba, basa´ndose en los valores y la significa-
+ysemantendra´nenelmodeloaquellosefectoscuyo p-valor
+cio´ndelasmedidasdeasociacio´ncalculadas,queentrelas
+seamenorque0.05siempreycuandonoseentreencontra-
+variablesDeb MInfyDeb MSupexisteunacorrelacio´nsig-
+diccio´n con el modelo jera´rquico. La prueba de asociacio´n
+nificativa(Cuadro3).
+parcialcompruebalasignificacio´ndecadaefectoindividual,
+esdecir,sucontribucio´nalajustedelmodelo.No´tesequese
+Cuadro3.MedidasdeAsociacio´n.D MInf×D MSup
+vuelveaobtenerlainteraccio´nentrelasvariablesS´ıntRespy
+MedidasdeAsociacio´n Valor Sig.Aprox.
+Deb MSupcomouncasol´ımite(Cuadro6).
+Phi 0.304 0.000
+VdeCramer 0.304 0.000
+Cuadro6.AsociacionesParciales
+Otroindiciodeestaasociacio´nsonlosvaloresabsolutos
+Efecto gl Chi-CuadradoParcial Sig.
+muchomayoresde1.96delosresiduostipificadoscorregidos
+Diagseg×S´ıntResp×DebMInf 2 0.000 1.000
+de la tabla de contingencia perteneciente a estas variables
+Diagseg×S´ıntResp×DebMSup 2 0.000 1.000
+(Cuadro4). Diagseg×DebMInf×DebMSup 2 0.001 0.999
+S´ıntResp×DebMInf×DebMSup 1 0.000 1.000
+Diagseg×S´ıntResp 2 1.789 0.409
+Cuadro4.TabladeContingencia.D MInf×D MSup Diagseg×DebMInf 2 0.343 0.842
+S´ıntResp×DebMInf 1 0.000 1.000
+DebSup Diagseg×DebMSup 2 0.529 0.768
+Si No Total S´ıntResp×DebMSup 1 3.587 0.058
+DebMInf×DebMSup 1 7.804 0.005
+DebMInf Si Recuento 123 17 140
+Diagseg 2 49.048 0.000
+Res.Tip.Corr. 3.6 -3.6
+S´ıntResp 1 109.919 0.000
+No Recuento 0 2 2
+DebMInf 1 175.831 0.000
+Res.Tip.Corr. -3.6 3.6
+DebMSup 1 85.085 0.000
+Total Recuento 123 19 142
+Centra´ndose en la bu´squeda del modelo log-lineal que Para seleccionar el modelo ma´s adecuado se emplea el
+se ajuste a los datos, se realiza primeramente la prueba de Me´todoPasoaPaso,elcualpartedelmodelosaturadoyva
+losK-efectos.Esta,ensudobleversio´n,permitecomprobar eliminando los efectos no significativos empezando por el
+si los efectos de un determinado orden son iguales a 0. La de mayor orden detenie´ndose cuando no pueda eliminarse
+TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud. 115
+ningu´nefectoma´ssinperderpoderpredictivo. 3.3.2 SegundoAna´lisis
+Pararealizarelestudiodelsegundogrupodevariablesse
+Sellegaalaconclusio´ndequeelmodelofinalsegenera realizaprimeramentelatabladecontingenciaqueagrupea
+porlasinteraccionesdelavariableDeb MSupconS´ıntResp todaslasvariablesdeestudioyasuscategor´ıas,obtenie´ndose
+y con Deb MInf y por el efecto principal de la variable as´ıuntabladeorden4ydimensio´n81(Cuadro9)5.
+Diag seg. Para este modelo se analiza la tabla de frecuen-
+ciasobservadas,esperadasylosresiduales,as´ıcomotambie´n
+Cuadro9.TabladeContingencia.SegundoAna´lisis
+lasPruebasdeAjuste(Cuadro7)llegandoalaconclusio´nde
+PerEstab
+queesteesunbuenmodeloparaajustarlosdatos.
+NESNI PerRecup 0-7 8-22 +22
+Severo 0-7 PerProg 0-7 3
+Cuadro7.PruebasdeAjuste
+8-22 PerProg 0-7 2
+Valor gl Sig. 8-22 2 1
+Razo´ndeVerosimilitud 2.708 16 1.000 Moderado 0-7 PerProg 0-7 12
+Chi-CuadradodePearson 2.473 16 1.000 8-22 4 1
++22 3
+8-22 PerProg 0-7 10 1
+8-22 13 2
+Seobtieneas´ıqueelmodeloes: +22 2 1
++22 PerProg 0-7 4
+logm ijkl =λ+λ i A+λ j B+λ k C+λ l D+λ j B l D+λ k C l D (8) 8 + - 2 2 2 2 5 1 2
+dondeAserefierealavariableDiag seg,BaS´ıntResp,Ca Ligero 0-7 PerProg 0-7 6
+8-22 9 1
+Deb MInfyDaDeb MSup. +22 2 1
+8-22 PerProg 0-7 8
+8-22 11
+SepuedeverquelavariableDiag segpresentaindepen- +22 1
++22 PerProg 0-7 6 2
+denciacondicionalcontodaslasvariablesrestantes,as´ıcomo
+8-22 19 2 1
+tambie´nlapresentaelpardevariablesS´ıntRespyDeb MInf. +22 2
+Finalmentesecalculanlasestimacionesdelospara´metros
+Al analizar los valores de las pruebas basadas en el es-
+delmodelo,ysutransformacio´nenpuntuacionesZ(Cuadro
+tad´ısticoChi-CuadradodePearsonentodaslastablasdecon-
+8).Losvaloresabsolutosdelospara´metrosindicanlaintensi-
+tingenciaquesepuedencrearalcruzarsolodosdenuestras
+daddelaasociacio´n.34
+variables,seobtieneevidenciadeasociacio´nentrelavariable
+Per RecupconNESNIyconPer Prog(Cuadro10).
+Cuadro8.EstimacionesdelosPara´metros
+Para´metro Estimacio´n Z Sig. Cuadro10.PruebasdeAsociacio´nParcial
+Constante -0.255 -0.357 0.721 Comb.Variables gl Valor Sig. Estad´ıstico
+DebMInf=1×DebMSup=1 4.007 5.616 0.000
+DebMInf=1×DebMSup=2 2.140 2.863 0.004 NESNI×PerProg 4 5.781 0.216 RV
+DebMInf=2×DebMSup=1 -16.439 -0.011 0.991 NESNI×PerEstab 4 6.484 0.166 RV
+S´ıntResp=1×DebMSup=1 -2.136 -7.282 0.000 NESNI×PerRecup 4 10.667 0.030 RV
+S´ıntResp=1×DebMSup=2 -18.714 -0.012 0.991 PerProg×PerEstab 4 5.284 0.259 RV
+Diagseg=1 -1.442 -4.677 0.000 PerProg×PerRecup 4 9.718 0.043 RV
+Diagseg=2 0.297 1.667 0.096 PerEstab×PerRecup 4 8.005 0.091 RV
+Interpretandoelmodelolog-linealresultante(8)sepuede Alcalcularlasmedidasdeasociacio´nnominalesseobtuvo
+inferirquelospacientesesta´ncaracterizadosporunaelevada queenambasinteraccionesexist´ıaunaasociacio´nde´bilya
+presencia de debilidad en los miembros inferiores, la cual que a pesar de resultar estas significativas sus valores eran
+comu´nmenteseencuentraacompan˜adapordebilidadenlos menoresque2.8enamboscasos(Cuadros11y12).
+miembrossuperiores.Respectoaladebilidadenlosmiembros
+superioresylapresenciades´ıntomasdetrastornosrespirato-
+Cuadro11.MedidasdeAsociacio´n.Per Prog×Per Recup
+riosseinfierequeesraroquesepresentensimulta´neamente
+MedidasdeAsociacio´n Valor Sig.Aprox.
+en el mismo paciente. Finalmente, se puede afirmar que la
+Nominal Phi 0.261 0.045
+frecuenciamediaeneldiagno´sticosegurocuandosehacela
+VdeCramer 0.184 0.045
+prueba del l´ıquido cefalorraqu´ıdeo (LCR) es superior a las
+Ordinal Tau-bdeKendall 0.123 0.114
+otrascategor´ıas. Tau-cdeKendall 0.113 0.114
+Gamma 0.196 0.114
+3Para|Z|>1,96elefectoessignificativoal95%ypara|Z|>2,57loes
+al99%.
+4Enlatablanosemuestranlasestimacionesdelospara´metrosredundantes 5Lascasillascorrespondientesaciertascombinacionesdelasvariables
+puesestosnoaportannuevainformacio´n. fueroneliminadospuesellasnoconten´ıananingu´nindividuo
+116 TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud.
+Cuadro12.MedidasdeAsociacio´n.Per Recup×NESNI Cuadro16.AsociacionesParciales
+MedidasdeAsociacio´n Valor Sig.Aprox. Efecto gl Chi-CuadradoParcial Sig.
+Nominal Phi 0.270 0.034 PerProg×PerEstab×PerRecup 8 3.976 0.859
+VdeCramer 0.191 0.034 PerProg×PerEstab×NESNI 8 3.431 0.904
+PerProg×PerRecup×NESNI 8 6.554 0.585
+Ordinal Tau-bdeKendall 0.158 0.038 PerEstab×PerRecup×NESNI 8 4.204 0.838
+Tau-cdeKendall 0.145 0.038 PerProg×PerEstab 4 4.455 0.348
+Gamma 0.251 0.038 PerProg×PerRecup 4 7.223 0.125
+PerEstab×PerRecup 4 8.267 0.082
+PerProg×NESNI 4 4.264 0.371
+PerEstab×NESNI 4 7.833 0.098
+Respectoalasmedidasordinalescalculadas,soloresulta-
+PerRecup×NESNI 4 10.251 0.036
+ronsignificativasaquellasquerepresentanlainteraccio´nentre PerProg 2 50.600 0.000
+PerEstab 2 198.533 0.000
+las variables Per Recup y NESNI, las cuales tiene valores
+PerRecup 2 1.518 0.468
+absolutosdistantesde1,porloqueseratificalasuposicio´nde NESNI 2 54.410 0.000
+quelaasociacio´nentredichasvariablesesde´bil(Cuadro12).
+Basa´ndoseenlosresultadosanteriormenteexpuestosre-
+Sereafirmo´ laexistenciadeasociacio´nenestasdoscom-
+sulta lo´gico proponer un modelo log-lineal que incluya las
+binaciones de variables al analizar en sus tablas correspon-
+interaccionesdeordendosylosefectosprincipalesdecada
+dienteslosvaloresdelosresiduostipificadoscorregidosya
+variable.
+queexist´ıancasillasconvaloresabsolutosmayoresque1.96
+(Cuadros13y14).
+AlemplearelMe´todoPasoaPasosellego´ alaconclu-
+sio´ndequeelmodelofinalsegeneraporlasinteraccionesde
+Cuadro13.TabladeContingencia.Per Prog×Per Recup
+lavariablePer RecupconPer ProgyconNESNIyporel
+PerRecup efectoprincipaldelavariablePer Estab.
+0-7 8-22 +22 Total
+PerProg 0-7 Recuento 21 21 12 54
+Res.Tip.Corr. 1.9 0.2 -2.1 Despue´sderealizarlasPruebasdeAjuste(Cuadro17)y
+8-22 Recuento 15 29 32 76 de analizar la tabla de frecuencias observadas, esperadas y
+Res.Tip.Corr. -2.7 0.1 2.5
++22 Recuento 6 4 3 13 losresidualessepuedeconcluirqueelmodelopropuestose
+Res.Tip.Corr. 1.4 -0.5 -0.8 ajustaalosdatos.
+Total Recuento 42 54 47 143
+Cuadro17.PruebasdeAjuste
+Valor gl Sig.
+Cuadro14.TabladeContingencia.Per Recup×NESNI
+Razo´ndeVerosimilitud 43.901 64 0.974
+NESNI Chi-CuadradodePearson 54.740 64 0.789
+Sev. Mod. Lig. Total
+PerRecup 0-7 Recuento 3 20 19 42
+Res.Tip.Corr. -0.2 0.8 -0.7
+Finalmenteelmodelosera´:
+8-22 Recuento 5 29 20 54
+Res.Tip.Corr. 0.5 2.1 -2.3
++22 Recuento 3 12 32 47 logm =λ+λE+λF+λG+λH+λGH+λEG (9)
+Res.Tip.Corr. -0.4 -2.9 3.1 ijkl i j k l kl ik
+Total Recuento 11 61 71 143 dondeEserefierealavariablePer Prog,FaPer Estab,Ga
+Per RecupyHaNESNI.
+Enfoca´ndose en la bu´squeda del modelo log-lineal que
+SepuedeverquelavariablePer Estabpresentaindepen-
+seajustealosdatosdeestudio,serealizaronlaspruebasde
+denciacondicionalcontodaslasvariablesrestantes,as´ıcomo
+losK-efectos(Cuadro15)ylaspruebasdeasociacio´nparcial
+tambie´nlapresentaelpardevariablesPer ProgyNESNI.
+(Cuadro16).
+Paraconcluirsecalculanlasestimacionesdelospara´me-
+Cuadro15.PruebadelosK-efectos trosdelmodelo,ysutransformacio´nenpuntuacionesZ(Cua-
+Razo´ndeVeros. Pearson dro18).
+K gl Chi-Cuad. Sig. Chi-Cuad. Sig.
+Efectosde 1 80 369.467 0.000 557.678 0.000
+Interpretandoelmodelolog-linealresultante(9)sepuede
+ordenK 2 72 64.405 0.726 81.245 0.213
+superiores 3 48 19.380 1.000 18.750 1.000 inferirquelaenfermedaddelS´ındromedeGuillain-Barre´ ge-
+4 16 0.399 1.000 0.235 1.000
+neralmentesueleestabilizarseenmenosde7d´ıas,siendomuy
+Efectosde 1 8 305.062 0.000 476.433 0.000 raroquetardeenhacerlounper´ıodomayora22d´ıas.Respec-
+ordenK 2 24 45.025 0.006 62.495 0.000
+3 32 18.981 0.967 18.515 0.973 toalarelacio´nentreeltiempodeprogresio´ndelaenfermedad
+4 16 0.399 1.000 0.235 1.000 yderecuperacio´ndelenfermosepuedeplantearquenunca
+TablasdeContingenciayModelosLog-Lineales. UnaAplicacio´nenunProblemadeSalud. 117
+Cuadro18.EstimacionesdelosPara´metros [3] AgrestiA.CategoricalDataAnalysis.USA:JhonWiley
+Para´metro Estimacio´n Z Sig. &Sons,2013.
+Constante -3.150 -3.849 0.000
+PerRecup=1×NESNI=1 -1.561 -1.725 0.085 [4] Bolet´ınInformativosobreelS´ındromedeGuillain-Barre´.
+PerRecup=1×NESNI=2 0.336 0.458 0.647
+Organizacio´n Mundial de la Salud: Oficina Regional
+PerRecup=1×NESNI=3 0.284 0.387 0.698
+PerRecup=2×NESNI=1 -1.707 -1.940 0.052 paralasAme´ricas&Organizacio´nPanamericanadela
+PerRecup=2×NESNI=2 0.050 0.065 0.949
+Salud,2016.
+PerRecup=2×NESNI=3 -0.321 -0.406 0.685
+PerRecup=3×NESNI=1 -2.367 -3.920 0.000 [5] Christensen, R. Log-linear models. USA: Springer,
+PerRecup=3×NESNI=2 -0.981 -2.898 0.004
+1990.
+PerProg=1×PerRecup=1 1.253 2.706 0.007
+PerProg=1×PerRecup=2 1.658 3.040 0.002
+PerProg=1×PerRecup=3 1.386 2.148 0.032 [6] Diagno´stico y Tratamiento del S´ındrome de Guillain
+PerProg=2×PerRecup=1 0.916 1.897 0.058
+PerProg=2×PerRecup=2 1.981 3.714 0.000 Barre´ en el Segundo y Tercer nivel de Atencio´n. Ciu-
+PerProg=2×PerRecup=3 2.367 3.920 0.000 daddeMe´xico:InstitutoMexicanodelSeguroSocial,
+PerEstab=1 3.746 6.412 0.000
+2016. Recuperado el 16 de noviembre de 2017 de
+PerEstab=2 1.466 2.289 0.022
+http://imss.gob.mx/profesionales-salud/gpc
+[7] Dobson,A.Anintroductiontogeneralizedlinearmodels.
+sera´ menor el tiempo de recuperacio´n del paciente compa-
+USA:Chapman&Hall/CRC.pp156-172,2002.
+radoconeltiempodeprogresio´ndelaenfermedad,yaque
+mientrasma´slentoprogreseesta,ma´stiemponecesitara´ el
+[8] Fuente,Sdela.Ana´lisisdeVariablesCatego´ricas:Ta-
+pacientepararecuperarse.Finalmente,sepuedeafirmarque
+blasdeContingencia.FacultaddeCienciasEcono´micas
+los pacientes pertenecientes a las categor´ıas de “Severo” o
+yEmpresariales.UniversidadAuto´nomadeMadrid,No-
+“Moderado”delavariableNESNIsuelentenerunper´ıodode
+tasdeCurso.2011.
+recuperacio´ncuyaduracio´nnoexcedelos22d´ıas.
+[9] Lestayo,Z.yHernandez,JL.Ana´lisisdelcomportamien-
+Conclusiones todels´ındromedeGuillain-Barre´.Consensosydiscre-
+pancias.RevistaNeurolog´ıa,46(4),230-237,2008.
+Despue´sderealizadalainvestigacio´npresentadasepuede
+concluirqueeltrabajocontablasdecontingenciacomplemen-
+[10] Linares, G. Ana´lisis de datos multivariados. Me´xico:
+tadoconelplanteamientodeunmodelolog-linealapropiado
+EditorialBeneme´ritaUniversidadAuto´nomadePuebla.
+constituye un me´todo estad´ıstico eficaz para el tratamiento
+pp197-232,2016.
+de variables cualitativas y la bu´squeda de asociacio´n entre
+las mismas. Lo anterior propicia que dichos me´todos sean [11] McCullagh,P.yNelder,J.GeneralizedLinearModels.
+utilizadosenestudiospertenecientesaa´reasnorelacionadas London:Chapman&Hall.pp193-234,1989.
+directamente con las matema´ticas como lo es el a´rea de la
+salud. [12] Mendoza-Herna´ndez, D; Blancas, L. y Gutie´rrez, J.
+S´ındromedeGuillain-Barre´.RevistaAlergia,Asmae
+Agradecimientos Inmunolog´ıasPedia´tricas,19(2),56-63,2010.
+AlaDra.ZurinaLestayoOFarrildelInstitutodeNeuro- [13] Navarro,R.Introduccio´nalabioestad´ıstica.Ana´lisisde
+log´ıa,porfacilitarlainformacio´ndelosdatos. variablesbinariasMe´xico:McGraw-Hill,1988.
+Referencias [14] Pe´rezC.Te´cnicasdeAna´lisisMultivariantedeDatos.
+AplicacionesconSPSS.Madrid:PearsonEducationS.A,
+[1] Acosta,M;Can˜iza´,M;Romano,M.yMateo,E.S´ındro-
+2004.
+me de Guillain-Barre´ Revista de Posgrado de laVIa
+Ca´tedradeMedicina,168,2007.
+[15] Pe´rez,J.S´ındromedeGuillain-Barre´.Actualizacio´n.Re-
+[2] AgrestiA.AnIntroductiontoCategoricaldataAnalysis. vistaActaNeurolog´ıaColombia,22(2),201-208,2006.
+USA:JhonWiley&Sons,2007.

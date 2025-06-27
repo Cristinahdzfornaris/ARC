@@ -1,0 +1,344 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.36,No.Único,2022–2023,Págs.51-56
+Recibido(Received):22-04-2024,Revisado(Reviewed):02-05-2024
+Aceptado(Accepted):12-06-2024,Enlínea(Online):17-10-2024
+Evaluación de habilidades cognitivas de diversos
+modelos de lenguajes a gran escala
+Assessment of cognitive abilities of various large
+language models
+Kevin Talavera Díaz1 , Alberto Fernández Oliva2* , Suilán Estévez Velarde3
+Resumen Se presenta un análisis exhaustivo del concepto de inteligencia humana y su relación con el
+desarrollodelaInteligenciaArtificial,haciendounaconexiónentrelaevolucióndelamismaylaimitacióndelas
+capacidadescognitivashumanasmediantelaevaluacióndelosModelosdeLenguajesaGranEscala(LLM).
+LainvestigaciónseenfocaenlaimportanciadeevaluarlashabilidadescognitivasdelosLLM.Seidentificala
+faltadeconjuntosdedatos,suficientementevariados,parahacerestoylanecesidaddeunabasededatos,lo
+suficientemente exhaustiva para hacerlo con la calidad requerida. Por tanto, se ha diseñado un conjunto de
+datos que permite la evaluación de las capacidades cognitivas de diversos modelos de lenguaje, utilizando
+solamenteellenguajenatural.Losresultadosobtenidos,apartirdelaevaluacióndelashabilidadescognitivas
+sobreelconjuntodedatoscreado,proporcionanunavisiónmásdetalladaacercadelascarenciasyfortalezas
+de los LLM en lo que respecta a las habilidades evaluadas, así como cuál es el mejor modelo para explotar
+cadahabilidadindividualmenteyengeneral.
+PalabrasClave:habilidadescognitivas,procesamientodelenguajenatural,LLM.
+Abstract Anexhaustiveanalysisoftheconceptofintelligenceispresented. Humananditsrelationshipwith
+thedevelopmentofArtificialIntelligence,makingaconnectionbetweenitsevolutionandtheimitationofhuman
+cognitive abilities through the evaluation of Large Scale Language Models (LLM). The research focuses on
+theimportanceofassessingthecognitiveabilitiesofLLMs. Thelackofsufficientlyvarieddatasetstodothis
+is identified and the need of a database, exhaustive enough, to do so with the required quality. Therefore, a
+setofdatahasbeendesignedthatallowstheevaluationofthecognitiveabilitiesofvariouslanguagemodels,
+usingonlynaturallanguage. Theresultsobtained,fromtheevaluationofcognitiveabilitiesonthewholeofdata
+created,provideamoredetailedviewaboutthegapsandstrengthsofLLMswithregardtotheskillsassessed,
+aswellaswhichisthebestmodelforexploiteachskillindividuallyandingeneral.
+Keywords: cognitiveabilities,naturallanguageprocessing,LLM.
+MathematicsSubjectClassification: 68-11,68T30,68T37
+1DepartamentodeComputación,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.Email:ktalaveradiaz@gmail.com
+2DepartamentodeComputación,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.Email:afoliva55@gmail.com
+3DepartamentodeComputación,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.Email:sestevez@matcom.uh.cu
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.
+Citarcomo: TalaveraDíaz,K.,FernándezOliva,A.,&EstévezVelarde,S.(2024).Evaluacióndehabilidades
+cognitivas de diversos modelos de lenguajes a gran escala. Ciencias Matemáticas, 36(Único), 51–56. DOI:
+https://doi.org/10.5281/zenodo..Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9044.
+Introducción alentorno,resolverlosproblemasqueesteplanteaeincluso
+anticiparseaellosconéxito[15].
+Lainteligenciahumanaesunconceptocomplejoymul-
+tifacéticoquehasidodefinidodediversasmaneraspordife- Enunintentodeimitareinclusosuperarlainteligencia
+rentesteóricosalolargodelahistoria.Demanerageneral,es humana,lainteligenciaartificial[3]haevolucionadoalolar-
+entendidacomolacapacidadoconjuntodecapacidadesprin- go de las décadas. Esta evolución ha estado estrechamente
+cipalmentecognitivasquepermitenaloshumanosadaptarse vinculadaconnuestracomprensióndelainteligenciahumana
+52 Evaluacióndehabilidadescognitivasdediversosmodelosdelenguajesagranescala
+yhaseguidouncaminoquebuscaemularnuestrascapacida- Relevancia del estudio
+descognitivas.Enlaactualidad,unodelosmayoresavances
+Se construyó un conjunto de datos lo suficientemente
+delainteligenciaartificialeseldesarrollodelosModelosde
+abarcadorparaevaluarlashabilidadescognitivasdelosLLM
+lenguajesagranescala(LLM,porsussiglaseninglés).
+utilizandosolamentelenguajenatural.Paraelloserealizóun
+Los LLM son sistemas de aprendizaje automático [18]
+análisissobrelasdiversasteoríasdelainteligenciahumana,
+que han sido entrenados con grandes cantidades de texto,
+seleccionandoladeCattel-Horn-Carrollparatalespropósitos.
+pueden generar texto coherente y responder a consultas en
+Sobreellasesustentaelconjuntodehabilidadescognitivas
+lenguaje natural. Estos han sido sometidos a una serie de
+tomadasparalaconstruccióndelcorpus.Sepudoconstatar
+pruebasparaevaluarsuinteligenciaocapacidadparasimular
+quedichateoríaenglobaelrestodelashabilidadesdefinidas
+inteligenciahumana.Estaspruebasamenudoimplicantareas
+porlasdemásteoríasdelainteligencia.
+deprocesamientodelenguajenaturalcomolacomprensión
+Serealizaronunaseriedeexperimentosparaevaluarelde-
+delectura,latraducciónautomática,lageneracióndetexto,
+sempeñodediferentesLLMsobrelabasededatosconstruida.
+entre otras [2]. También han sido sometidos a pruebas de
+Losmodelosdelenguajeobtuvieronbuenosresultadosenlas
+razonamiento lógico, las cuales son muy desafiantes para
+habilidadesquesecorrespondenconlacomprensiónyconel
+los LLM porque requieren una comprensión profunda del
+usodelamemoriaalargoplazo.Noseobtuvieronresultados
+lenguaje y la capacidad de hacer inferencias basadas en el
+satisfactorios en las habilidades que requieren conocimien-
+contexto[13].
+tosespecíficosdeundominio,asícomodiversosnivelesde
+Laevaluacióndehabilidadescognitivas1 enLLMesde
+razonamiento.
+granimportancia,puescontribuyeagarantizarsurendimiento
+óptimo,imparcialidad,éticayutilidadenunagamaampliade
+1. Teorías de la Inteligencia
+aplicacionesporvariasrazonesdadasen[6]:
+Detodaslasteoríasdeinteligencia,unadelasmáscom-
+Mejoralaprecisiónycalidaddelmodelo:Permiteiden- pletaesladeCattell-Horn-Carroll(CHC)[9],lacualeslaque
+tificarlasfortalezasydebilidadesdelmodelodelengua- secomenzaráaanalizar,luegoseestudiaránotrasteoríasy
+je,loquefacilitalamejoradesuprecisiónycalidad.Al seobservarácomo,dealgunamanera,todasestáncontenidas
+comprendercómoelmodelorespondeadiferentesti- dentrodeesta.Luegoseanalizaráquéhabilidadesmidenlas
+posdepreguntasytareascognitivas,losdesarrolladores basesdedatosmásutilizadasysurelaciónconlashabilidades
+puedenrealizarajustesparaoptimizarsudesempeño. queserándefinidascomoresultadodelestudiodelasteorías
+delainteligencia,lasqueseránexplicadasycomparadasmás
+Identificacióndesesgos2yproblemaséticos:Estoeses- adelante.
+pecialmenteimportanteenaplicacionescomoloschat-
+botsyasistentesvirtuales,dondelosmodelospueden 1.1 CHC
+influirenlasdecisionesyopinionesdelosusuarios[8]. La teoría de las capacidades cognitivas CHC es una de
+Laevaluaciónayudaagarantizarquelosmodelossean lasteoríaspsicométricasmáscompletashastalafechayestá
+imparcialesyéticosensucomportamiento. respaldadaempíricamenteporlaestructuradelascapacida-
+descognitivas.Representadeformaintegradaalasobrasde
+Desarrollo de modelos interpretables: A medida que RaymondCattell,JohnHornyJohnCarroll[1,7,9,14].
+losmodelosdelenguajessevuelvenmáscomplejos,es Debidoaquecuentaconundiversocuerpodeapoyoem-
+importantecomprendercómolleganasusrespuestas píricoenlaliteraturadeinvestigación(porejemplo,criterios
+yquécaracterísticasestánutilizandoparatomardeci- dedesarrollo,neurocognitivosyderesultados),seutilizaam-
+siones. La evaluación puede ayudar a identificar qué pliamentecomobaseparaseleccionar,organizareinterpretar
+partesdelmodelosonmásrelevantesycómosepueden pruebasdeinteligenciayhabilidadescognitivas[5].
+interpretarsusresultados.
+2. Propuesta e Implementación
+Validación de la efectividad de los modelos: Permite
+Apartirdelestudiodelasteoríasdelasinteligenciamás
+comparar el rendimiento de diferentes modelos y es-
+importantesylashabilidadescognitivasqueestasdefinen,así
+tablecermétricasobjetivasparamedirsudesempeño.
+comolasbasesdedatosmásutilizadasparaevaluarestetipo
+Estoesespecialmenteimportanteenaplicacionescomo
+dehabilidadesenlosLLM,fueposiblelaconstruccióndeuna
+latraducciónautomática,dondelaprecisiónylafluidez
+basededatosquecomplementaralascarenciasexistentes.Es
+sonfundamentales.
+decir,sepudocrearunaqueagruparaelconjuntodehabilida-
+descognitivasestudiadas,recopilandopreguntasdediversas
+fuentes,entrelasqueseencuentran:testsdeinteligencia[12],
+1Aptitudesdelserhumanorelacionadosconelprocesamientodelainfor-
+trivias[11],laspropiasbasesdedatosestudiadas,entreotras.
+mación.
+2Distorsionesenlosdatosquepuedenllevararesultadosinjustosodiscri- Labasededatoscreadacuentaconunaseriedepregun-
+minatorios. tas,enlascualeslosLLMdeberánsercapacesde,dadoun
+CienciasMatemáticas,Vol.36,No.Único,2022–2023,Págs.51-56 TalaveraDíaz,K.,FernándezOliva,A.,EstévezVelarde,S.
+https://revistas.uh.cu/rcm/article/view/9044 https://doi.org/10.5281/zenodo.
+Evaluacióndehabilidadescognitivasdediversosmodelosdelenguajesagranescala 53
+enunciadoyunconjuntodeposiblessoluciones,seleccionar 2. Alto:60%-79%deprecisión.
+la(s) respuesta(s) correctas, escribir la solución en caso de
+3. Medio:40%-59%deprecisión.
+ser preguntas relacionadas con las matemáticas, responder,
+verdaderoofalsoapreguntasbooleanase,incluso,comple-
+4. Bajo:20%-39%deprecisión.
+tarespaciosenblanco[4].Estaspreguntasestánescritasen
+lenguajenaturalyseasocianconlassiguientes6habilidades 5. Muybajo:0%-19%deprecisión.
+primariasy10secundarias:
+Conocimientocuantitativo:álgebra,geometría,proba-
+bilidades,teoríadenúmeros.
+Conocimientogeneral:arteyliteratura,cienciaynatu-
+raleza,geografía,música.
+Conocimientoverbal:conocimientoléxico,desarrollo
+dellenguaje.
+Inteligenciafluida:inducción,razonamientogeneral.
+Lectura:comprensión.
+Procesamientovisual.
+LosLLMevaluadosenestetrabajofueron:ChatGPT3.5
+[10],Zephyr[17]yLlama2[16].
+Figura1.GPT:Comparaciónentreevaluaciónmanualy
+automática[GPT:Comparisonbetweenmanualand
+3. Experimentos automaticevaluation].
+Unavezaplicadoslosinstrumentosderecoleccióndelos
+resultados,seprocedióarealizareltratamientocorrespondien-
+teparaelanálisisdelosmismos.Losexperimentosrealizados
+fueronlossiguientes:
+1. Evaluar las respuestas dadas por los LLM utilizando
+expresionesregulares.
+2. Verificar manualmente las respuestas dadas por los
+LLM.
+3. Tomarunsujetodeexperimentoqueresolvieralasmis-
+maspreguntasqueresolvieronlosLLM.
+A continuación se muestran los resultados asociados a
+cadaunodelosexperimentos.
+4. Resultados Figura2.Llama2:Comparaciónentreevaluaciónmanualy
+automática[Llama2:Comparisonbetweenmanualand
+Enestasecciónsepresentanlosresultadosobtenidosde
+automaticevaluation].
+laevaluacióndelosLLMconrespectoalashabilidadescog-
+nitivas. Estos resultados mostrarán el rendimiento de cada
+modeloencadaunadeestashabilidadesutilizandolasiguien-
+temétrica: 5. Comparación de resultados
+A partir de los resultados obtenidos en cada uno de los
+Precision=100·(RespuestasCorrectas/TotalPreguntas).
+experimentosydeloquesemuestraenlaFigura5ylaTabla
+(1)
+1sepuedenrealizarlassiguientescomparaciones:
+Parafacilitarelprocesodeexposicióndelosresultados,
+TantoChatGPT,Llama2asícomoZephyr,adiferencia
+sehadivididoelrendimientodelosmodelosporhabilidaden
+delamuestrahumanacon85%,obtuvieronresultadosinade-
+cincocategorías:
+cuados en tareas referentes a la habilidad de conocimiento
+1. Muyalto:80%-100%deprecisión. cuantitativo.Ningunosuperóel20%deprecisión.ChatGPT
+TalaveraDíaz,K.,FernándezOliva,A.,EstévezVelarde,S. CienciasMatemáticas,Vol.36,No.Único,2022–2023,Págs.51-56
+https://doi.org/10.5281/zenodo. https://revistas.uh.cu/rcm/article/view/9044
+54 Evaluacióndehabilidadescognitivasdediversosmodelosdelenguajesagranescala
+Skills ChatGPT Llama2 Zephyr Human
+CuantitativeKnowledge 13 3.66 9.32 85.93
+GeneralKnowledge 97.5 61.5 81 37.31
+Reading 82 58 78 59.9
+FluidIntelligence 55.05 33.70 52.80 96.77
+VerbalKnowledge 57.57 54.54 51.51 96.77
+VisualProccessing 36.58 35.00 26.82 75
+Tabla1.Tablacomparativaderesultados[Comparativetableofresults].
+Figura5.ComparaciónderesultadosentrelosLLM
+[ComparisonofresultsbetweenLLMs].
+Figura3.Zephyr:Comparaciónentreevaluaciónmanualy
+automática[Zephyr:Comparisonbetweenmanualand
+fue el que obtuvo el mejor resultado, aproximadamente un
+automaticevaluation].
+13%,luegoZephyrconun9%yLlama2consóloun3%.
+Conrespectoalahabilidaddeconocimientoverbal,los
+tresmodelostuvieronunrendimientomedioentreel50%y
+60%.ChatGPTfuesuperioralresto,porunpequeñomargen,
+con57%.LesigueLlama2conun54%y,porúltimo,Zephyr
+con51%.Eneldesarrollodeestahabilidad,lamuestrahuma-
+nafuemuysuperiorconun96%.
+Enlaspreguntasrelacionadasalahabilidaddeprocesa-
+miento visual los tres modelos se encuentran con un rendi-
+mientobajo,entreel20%y40%.Sinembargo,elhumano
+obtuvoun80%.Enestecaso,ChatGPTyLlama2tuvieron
+prácticamente la misma precisión, 36% y 35% respectiva-
+mente.Zephyrtuvounaprecisióndel26%.
+Enelcasodelaspreguntasrelacionadasalahabilidadde
+conocimiento general, el comportamiento fue más variado.
+El rango de precisión varía en un 40% entre los diferentes
+modelos.ChatGPTobtuvouncasiperfecto97%,seguidode
+Zephyrconun81%,luego,yconbastantediferenciarespecto
+aChatGPT,seencuentraLlama2con61%deprecisión.Por
+último,elhumanoconsóloun37%.
+Figura4.HabilidadesprimariasHumano[Primaryskills Con respecto a las preguntas de inteligencia fluida, las
+Human]. precisionesoscilanentreun30%y60%.ChatGPTyZephyr
+estánbastanteparejoscon55%y52%,respectivamente.Este
+últimoobtuvoalrededordeun20%dediferenciaaLlama2,
+quealcanzóun33%deprecisión.Elanotadorhumanofue
+CienciasMatemáticas,Vol.36,No.Único,2022–2023,Págs.51-56 TalaveraDíaz,K.,FernándezOliva,A.,EstévezVelarde,S.
+https://revistas.uh.cu/rcm/article/view/9044 https://doi.org/10.5281/zenodo.
+Evaluacióndehabilidadescognitivasdediversosmodelosdelenguajesagranescala 55
+superioralosanterioresconun96%deprecisión. [3] DataScientest, 2023. https:
+Enelcasodelaspreguntasrelacionadasalahabilidadde //datascientest.com/es/
+lectura,ChatGPTyZephyrsecomportandemanerasimilar inteligencia-artificial-definicion.
+con82%y78%deprecisión,respectivamente.Conun20%
+[4] Excentos, 2023. https://documentation.
+menosqueZephyrseencuentraLlama2,conun58%.Por
+excentos.com/display/WORKBENCH/
+último, se encuentra el anotador humano con un 59% de
+Boolean+Question.
+precisión.
+[5] Flanagan, D.P., V.C. Alfonso, S.O. Ortiz, and A.M.
+6. Discusión general Dynda:IntegratingCognitiveAssessmentinSchoolNeu-
+ropsychologicalEvaluations.InBestPracticesinSchool
+LosmodelosChatGPT,Llama2yZephyrtuvieronunma- Neuropsychology:GuidelinesforEffectivePractice,As-
+yorrendimientoenlaspreguntasasociadasconlashabilidades sessment,andEvidence-BasedIntervention,pages101–
+deconocimientogeneralylectura,dadoqueestosmodelos 140.JohnWiley&Sons,Inc.,Hoboken,NJ,US,2012,
+estánenfocadosalastareasdegeneracióndetextoycompren- ISBN9780470422038.
+sión.Ladiferenciadeprecisiónentreellosprobablementeesté
+dadaenelvolumenylacalidaddelosdatosqueseutilizan [6] Hitch, 2023. https://
+hello.gethitch.ai/blog/
+paraentrenar.
+importancia-evaluar-habilidades-/
+Conrespectoalahabilidaddeconocimientocuantitativo,
+/cognitivas-candidatos/
+los tres modelos obtuvieron un resultado inadecuado. Esto
+#predice-el-rendimiento.
+puedeestardadoporlapropianaturalezaprobabilísticadelos
+modelosdelenguaje,locualincluyeunelementodeincerti-
+[7] Horn,J.L.andN.Blankson:Foundationsforbetterun-
+dumbreensusrespuestas.Paralosproblemasmatemáticos,
+derstandingofcognitiveabilities. InContemporaryIn-
+dondelaprecisiónylaexactitudsoncruciales,dependerde
+tellectualAssessment:Theories,Tests,andIssues,pages
+estosmodelosnoesloideal.
+41–68.TheGuilfordPress,NewYork,NY,US,2005,
+Las habilidades de inteligencia fluida y procesamiento
+ISBN1593851251.
+visual,requierenunciertonivelderazonamientológico,in-
+ductivoyabstracto,habilidadesenlasquelosmodelostienen [8] IBM, 2022. https://www.ibm.com/es-es/
+un pobre desempeño. Lo anterior viene dado porque estos topics/chatbots.
+modelosnoestánenfocadosaresolverestetipodeproblemas,
+comosecomentóenelprimerpunto. [9] McGrew,K.S.:TheCattell-Horn-Carrolltheoryofcog-
+Porúltimo,lahabilidaddeconocimientoverbal,aunque nitiveabilities:Past,present,andfuture. NewYork,NY:
+coincidemuchocongeneracióndetextoycomprensión,tam- GuilfordPress,2nded.,pp.136–182,2005.
+biénrequieredeunciertonivelderazonamiento,razónpor
+[10] OpenAI: ChatGPT (Mar 14 version) [Large langua-
+la cual tampoco se obtuvieron resultados satisfactorios en
+ge model], 2023. https://chat.openai.com/
+relaciónconesta.
+chat.
+Conrespectoalacomparaciónconelanotadorhumano,
+lashabilidadesenlasquemejordesempeñoposeenlosLLM [11] Pérez Porto, J. y A. Gardey, 2022. https://
+evaluados coinciden con las que peor desempeño posee el definicion.de/trivia/.
+humano y viceversa, y la razón de esto estÃ¡ dada por las
+razonesmencionadasanteriormenteenesteapartado. [12] Pérez Porto, J. y M. Merino, 2023. https://
+definicion.de/test-de-inteligencia/.
+Referencias [13] Roch,E.,2023. https://lovtechnology.com/
+que-es-llm-large-language-model-/
+[1] Alfonso,V.C.,D.P.Flanagan,andS.Radwan:Theim-
+/como-funcionan//-y-para-que-sirven/.
+pact of the Cattell-Horn-Carroll theory on test devel-
+opment and interpretation of cognitive and academic [14] Schneider, W.J. and K.S. McGrew: The Cattell-Horn-
+abilities. InContemporaryintellectualassessment:The- Carrollmodel ofintelligence. In Contemporary intel-
+ories, tests and issues, pages 185–202. The Guilford lectualassessment:Theories,tests,andissues,3rded.,
+Press,NewYork,NY,US,2005,ISBN1-59385-125-1. pages99–144.TheGuilfordPress,NewYork,NY,US,
+2012,ISBN978-1-60918-995-2.
+[2] AWS, 2023. https://aws.amazon.com/
+es/what-is/nlp/#:~:text=tareas% [15] Sternberg, R.J.: A theory of adaptive intelligence and
+20de%20NLP%3F-,%C2%BFQu%C3%A9%20es% its relation to general intelligence. Journal of In-
+20la%20NLP%3F,y%20comprender%20el% telligence, 7(4):23, 2019. https://doi.org/10.
+20lenguaje%20humano. 3390/jintelligence7040023.
+TalaveraDíaz,K.,FernándezOliva,A.,EstévezVelarde,S. CienciasMatemáticas,Vol.36,No.Único,2022–2023,Págs.51-56
+https://doi.org/10.5281/zenodo. https://revistas.uh.cu/rcm/article/view/9044
+56 Evaluacióndehabilidadescognitivasdediversosmodelosdelenguajesagranescala
+[16] Touvron,H.,L.Martin,K.Stone,P.Albert,A.Almahai- Metodología K.T.D.,A.F.O.
+ri, Y. Babaei, N. Bashlykov, S. Batra, P. Bhargava, S.
+Administracióndeproyecto K.T.D.,S.E.V.,A.F.O.
+Bhosale, D. Bikel, L. Blecher, C. Canton Ferrer, M.
+Chen,G.Cucurull,D.Esiobu,J.Fernandes,J.Fu,W.Fu, Recursos K.T.D.,S.E.V.,A.F.O.
+B.Fuller,C.Gao,V.Goswami,N.Goyal,A.Hartshorn, Supervisión K.T.D.,S.E.V.,A.F.O.
+S.Hosseini,R.Hou,H.Inan,M.Kardas,V.Kerkez,M.
+Validación K.T.D.,S.E.V.,A.F.O.
+Khabsa,I.Kloumann,A.Korenev,P.S.Koura,M.La-
+chaux,T.Lavril,J.Lee,D.Liskovich,Y.Lu,Y.Mao,X. Visualización K.T.D.,A.F.O.
+Martinet,T.Mihaylov,P.Mishra,I.Molybog,Y.Nie,A.
+Redacción:preparacióndelborradororiginal K.T.D.,
+Poulton,J.Reizenstein,R.Rungta,K.Saladi,A.Schel-
+A.F.O.
+ten,R.Silva,E.M.Smith,R.Subramanian,X.E.Tan,B.
+Redacción:revisiónyedición K.T.D.,A.F.O.
+Tang,R.Taylor,A.Williams,J.X.Kuan,P.Xu,Z.Yan,
+I.Zarov,Y.Zhang,A.Fan,M.Kambadur,S.Narang,A.
+Rodriguez,R.Stojnic,S.EdunovyT.Scialom:Llama2: Conflictos de interés
+OpenFoundationandFine-TunedChatModels. arXiv,
+Sedeclaraquenoexistenconflictosdeinterés.Losauto-
+2307.09288,2023.
+resdeclaranquenohubosubvencionesinvolucradaseneste
+[17] Tunstall, L., E. Beeching, N. Lambert, N. Rajani, K. trabajo.
+Rasul,Y.Belkada,S.Huang,L.vonWerra,C.Fourrier,
+N. Habib, N. Sarrazin, O. Sanseviero, A. M. Rush y Suplementos
+T.Wolf:Zephyr:DirectDistillationofLMAlignment.
+arXiv,2310.16944,2023. Esteartículonocontieneinformaciónsuplementaria.
+[18] Wiki, 2023. https://es.wikipedia.org/
+wiki/Aprendizaje_autom%C3%A1tico.
+Contribución de autoría
+Conceptualización K.T.D.,S.E.V.
+Curacióndedatos K.T.D.,S.E.V.
+AnálisisEfsotramaolbrKa.Te.sDt´a.,Sb.Ea.jVo.,uAn.aF.Oli.cencia Creative Commons “Atribuci´on-NoComercial-
+SinDerivadas 4.0 Internacional”.
+Investigación K.T.D.,S.E.V.,A.F.O.
+CienciasMatemáticas,Vol.36,No.Único,2022–2023,Págs.51-56 TalaveraDíaz,K.,FernándezOliva,A.,EstévezVelarde,S.
+https://revistas.uh.cu/rcm/article/view/9044 https://doi.org/10.5281/zenodo.
+1

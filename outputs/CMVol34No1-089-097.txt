@@ -1,0 +1,590 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.89-97
+Recibido06-2020,Aceptado07-2020
+Los Procesos de Ramificación y su Aplicación al
+Estudio de la Transmisión de la COVID-19 en Cuba
+Branching Processes and their Application to the
+Study of Transmission of COVID-19 in Cuba
+Marelys Crespo Navas1*, Pedro Pablo de la Cruz Cobas2, Ernesto Quevedo Caballero2, José E.
+Valdés Castro1
+Resumen ElpresentetrabajosededicaalestudiodelatransmisióndelaCovid-19enCuba,utilizandolos
+procesosderamificaciónparasumodelación.Estosprocesostienenespecialinterésenlaetapainicialdeuna
+epidemiaocuandoocurreunrebrote.EnelestudioseutilizaelprocesodeGalton-Watsonyunprocesode
+ramificación,elcualdenominamosEpi,semejantealprocesodeBellman-Harris,quemodelaelcomportamiento
+delaepidemia.
+Para realizar simulaciones del proceso Epi, se estimó el número medio de individuos contagiados por una
+personainfectada,cuyovalorempíricoeselllamadoíndicedereproducciónbásicoR enepidemiología,yel
+0
+tiempodegeneraciónseajustómedianteunadistribuciónGamma.
+Además,seilustranconejemplosresultadosasociadosalnúmeromediodeindividuosqueseinfectanenun
+instantedetiempoyelnúmeromediodeinfectadoshastaeseinstante,laprobabilidaddequelatransmisión
+seextingaosehayaextinguidoalcabodeuntiempo,eltiempohastaquelatrasmisiónseextingueconuna
+probabilidaddada,yeltiempomediohastasuextinciónylaprobabilidaddeextincióndelamisma.
+Abstract ThepresentworkisdedicatedtothestudyoftransmissionofCovid-19inCuba,usingthebranching
+processes for his modeling. These processes are of especial interest in the initial state of epidemic or when
+are-outbreakoccurs. TheGaltonWatsonprocessandabranchingprocess,whichwecallEpi,similartothe
+Bellman-Harrisprocess,areusedinthisstudytomodelthebehavioroftheepidemic.
+To carry out the simulations of the Epi process, the mean number of infected individuals by an infector was
+estimated,theempiricvalueofwhichistheso-calledbasicreproductionnumberR inepidemiology,andthe
+0
+generationtimewasadjustedbyaGammadistribution.
+Inaddition,weillustratewithexamplesresultsreferredtothemeannumberofindividualswhobecameinfected
+inaninstantoftimeandthemeannumberofinfecteduntilthatmoment,theprobabilitythattransmissionwillbe
+extinguishedorextinguishedafteratime,thetimeuntilthetransmissionisextinguishedwithagivenprobability,
+andthemeantimeuntilitsextinctionandtheprobabilityofitsextinction.
+PalabrasClave
+Covid-19,ProcesosdeRamificación,Simulación
+Keywords
+Covid-19,BranchingProcesses,Simulation
+1DepartamentodeMatemáticaAplicada,UniversidaddeLaHabana,LaHabana,Cuba,marelys@matcom.uh.cu,vcastro@matcom.uh.cu
+2UniversidaddeLaHabana,LaHabana,Cuba,ppablocruzcobas@gmail.com,ernestquevcab@gmail.com
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción Estosprocesosmodelanlaevolucióneneltiempodepro-
+cesosconestructurastipoárbol,lascualespuedenencontrarse
+endiversasáreasdelaciencia:dinámicadepoblación,física,
+Laideageneraldelosprocesosderamificacióneslasi-
+biología,computación.
+guiente.Enalgúninstantedetiemposeidentificaunconjunto
+deindividuosqueformanlageneración0.Estageneración Elprimerestudiosobreprocesosderamificaciónserealizó
+producedescendientes,cuyacolecciónformalageneración1. enelsigloXIX,yestuvovinculadoalproblemadelaextinción
+Losdescendientesdelageneración1constituyenlagenera- deapellidosenlasfamilias.Posteriormenteestemodelofue
+ción2,yasísucesivamente. nombrado proceso de Galton-Watson, en alusión a las dos
+90 LosProcesosdeRamificaciónysuAplicaciónalEstudiodelaTransmisióndelaCOVID-19enCuba
+personas que iniciaron su estudio. [6] fue el primer libro utilizadoseneldiseñodelasestrategiasdeprevencióndela
+dedicadoalosprocesosderamificación. misma.
+Nuestro interés en este tipo de procesos consiste en su EnlaSección1sedefineelprocesodeGalton-Watsonyse
+aplicaciónalosestudiossobreepidemias.Parecequeunode presentanalgunasfórmulasyejemplosqueilustransuuso.La
+losprimerostrabajosdedicadosalaaplicacióndelosprocesos Sección2sededicaalascotasyaproximacionesquepermiten
+deramificaciónenproblemasdeepidemiasfue[?]. realizarestimacionescuandonoseconoceporcompletolaley
+Losprocesosderamificacióntienenespecialinterésenlos dereproduccióndelavariableY.EnlaSección3sedescriben
+estudiossobreepidemiascuandolatransmisióndelaenferme- losdosprocesosentiempocontinuodeinterésenesteestudio.
+dadseencuentraenunaetapainicial(enlacuallasmedidas EnlaSección4sepresentanlosestimadoresdelparáme-
+deaislamientoycontrolaúnsondébiles),uocurreunrebrote, trom,ytambiéndeR yelíndiceefectivodereproducciónR.
+0 t
+verporejemplo,laSección9.3de[4]y[8]. EnlaSección5serealizansimulacionesparalacomparación
+En[1]y[10],serealizanestudiossobrelatransmisiónini- mediantegráficosdelosdosmodelosconsiderados,ypara
+cialdelaenfermedadCovid-19enChina,enloscuales,entre ilustrarelcomportamientodelnúmeromediodeindividuos
+otrosmodelos,seutilizanprocesosderamificación.[7]esotro infectados según la variación del parámetro m. La Sección
+trabajosobrelatransmisióninicialdelaenfermedadenChina, 6estádedicadaalavalidacióndelmodeloydelosprogra-
+dondesemodelamediantesimulaciónelcomportamientode masdesimulación.Enestasecciónseestimanelparámetro
+lamisma. m,yladistribucióndelostiemposdegeneraciónsegúnlos
+Enlosprocesosderamificaciónesesenciallaleyderepro- datosdeCubaydelaprovinciaLaHabana,ysecomparael
+ducción, p =P(Y =k),k≥0,delavariablealeatoriaY que resultadodelasimulaciónconlacurvarealcorrespondiente
+k
+representaelnúmerodeindividuosaloscualesdirectamente alacumuladodecasosenlaprovincia,enelperiodode30
+infectaunindividuoyainfectado. díasapartirdel16demarzo,fechaenlaqueseconfirmóel
+Comoentodoslosmodelosparaelestudiodeepidemias, primerpacienteenestaprovincia.
+unacaracterísticaesencialenelmodelodeGalton-Watsones Lasdefinicionesyfórmulasbásicasqueseutilizaránen
+elvalormediom=EY delavariableY,cuyovaloraproxima- laspróximasseccionessepuedenconsultaren[2],[5]y[6].
+doempíricoeselllamadoíndicedereproducciónbásicoR Cuandoesnecesariosecitantambiénotrasreferencias.
+0
+enepidemiología.
+El proceso de Galton-Watson describe la reproducción 1. Proceso de Galton-Watson
+deindividuosinfectadosatravésdegeneracionessucesivas.
+Asumiremos p >0.DenotemosporX lavariablealea-
+Cuandoserequireunadescripciónnoporgeneraciones,sino 0 n
+toriaquerepresentalapoblacióndeindividuosinfectadosco-
+eneltiempo,esnecesariotenerencuentaladistribuciónde
+rrespondientesalageneraciónn,n=0,1,....SeanY ,Y ....
+unavariablealeatoriaV querepresentaeltiempodegenera- 1 2
+variablesaleatoriasindependientesconigualdistribuciónque
+ción,esdecir,eltiempoquetranscurredesdequeunindividuo
+Y.Observeque
+esinfectadohastaqueesteinfectaaotro.Estodalugarapro-
+cesosderamificaciónentiempocontinuoquecontienenun
+X =Y +···+Y , n≥1,
+procesodeGalton-Watsoninmerso.Unprocesodeestetipo n 1 Xn−1
+eseldenominadoprocesodeBellman-Harris.
+siX >0.Elproceso{X },n≥0,sedenominaprocesode
+n−1 n
+Losprocesosaloscualeshemoshechoreferenciapermi-
+Galton-Watson.
+tenhacerestimacionessobrelossiguientesíndices:
+SupongamosqueX esnoaleatorio.Elnúmeromediode
+0
+infectadosdelageneraciónnsecalculaporlafórmula
+1. Númeromediodeindividuosqueseinfectaenunins-
+tantedadot,ynúmeromediodeinfectadoshastaese EX =X ·mn, n≥0.
+n 0
+instante.
+SeaZ eltotaldeinfectadoshastalageneraciónn,entonces,
+n
+2. P
+ex
+ro
+ti
+b
+n
+a
+g
+b
+u
+i
+i
+l
+d
+id
+o
+a
+a
+d
+l
+d
+c
+e
+ab
+q
+o
+ue
+d
+l
+e
+a
+u
+t
+n
+ra
+t
+n
+i
+s
+e
+m
+m
+i
+p
+s
+o
+ió
+d
+n
+a
+s
+d
+e
+o
+e
+.
+xtingaosehaya comoZ
+n
+=∑n
+i=0
+X
+i
+,setieneque
+n
+3. Tiempoalcabodelcuallatransmisiónpuedeextinguir- EZ =X ∑mi, n≥1.
+n 0
+se,conunaprobabilidaddada. i=0
+4. Tiempomediohastalaextinciónyprobabilidaddeex- Lasdosfórmulasanterioressondegraninteréspráctico,
+tincióndelatransmisión. puesaunqueserefierenanúmerosmediosdeinfectadosen
+unageneraciónyhastaunageneración,respectivamente,yno
+Ennuestroestudio,lospuntos2,3y4anterioresseexa- eneltiemporeal,muestranlamagnituddelaepidemiapara
+minanatravésdefórmulasconocidascorrespondientesalos unvalordadodem.
+modelosutilizados,yelpunto1pormediodelasimulación. Larelaciónaproximadaentreeltiemporealylasgenera-
+Además,usandolasimulaciónseexplorandiferentesescena- cioneseslasiguiente.Sea(0,t )elintervalodetiempoenel
+f
+riosdepropagacióndelaenfermedad,loscualespodríanser cualseexaminalatransmisióndelaenfermedad.Denotemos
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.89-97
+LosProcesosdeRamificaciónysuAplicaciónalEstudiodelaTransmisióndelaCOVID-19enCuba 91
+por v¯ el tiempo medio de generación. Entonces el número UnacaracterísticaimportantedelprocesodeGalton-Watson
+aproximadondegeneracionesenelintervalo(0,t )sepuede eselnúmerodelageneraciónT hastalaextincióndelaepi-
+f
+tomarcomoelnúmeroenteroqueredondeaelvalordet /v¯. demia,elcualsedefine
+f
+Ejemplo1 Seanv¯=5,X 0 =3yn=5.Comot f =v¯×n= T =´ınf{n≥1:X n =0}.
+5×5=25, entonces los valores de EX y EZ constituyen
+5 5
+valoresaproximadosdelnúmerodeinfectadosenelinstan- Otracaracterísticadegranimportanciaeslaprobabilidadde
+te t f =25 y al cabo de t f =25 días, respectivamente. Los extincióndelapoblacióndeinfectados.SeaQ n laprobabili-
+valores correspondientes se muestran en la Figura 1 para daddequelaepidemiaseextingaenlageneraciónnoantes,
+m∈[0,8;1,5]. esdecir,Q =P(X =0).Puededemostrarseque
+n n
+Q=l´ımQ .
+n
+n
+Comoesconocido,sim<1,entoncesET <∞yQ=1.
+Esdecir,enestecasoelnúmeromediodegeneracioneshasta
+laextincióndelaepidemiaesfinito,yestaseextinguecon
+probabilidad1.
+Supongamos que m<1, y sea N el total de individuos
+infectadoshastalaextincióndelaepidemia.SiX =1,enton-
+0
+ces,
+N=1+N +···+N ,
+1 Y
+dondeN ,N ....sonv.a.independientesconigualdistribu-
+1 2
+ciónqueN.Esdecir,elnúmerodeindividuosinfectadosen
+Figura1.Cantidadmediaaproximadadeindividuos
+totalesiguala1(elindividuooriginal)máslacantidaddein-
+infectadoseneldía25yhastaeldía25.
+dividuosinfectados,hastalaextinción,correspondienteacada
+unodelosdescendientesinmediatosdelindividuoinfectado
+Ejemplo2 SeanX 0 =3yt f =25.Paralosvaloresv¯=4,5; inicial(estossonY).Engeneral,sehallaque
+5,5y6,5,usandolafórmulan=t /v¯,seobtienenlosvalores
+f
+aproximadosn=6,5y4,respectivamente,loscualescorres- EN= X 0 . (1)
+pondenat =25días.Paraestetiemposeobtieneeltotal 1−m
+f
+aproximadodeindividuosinfectadosparam∈[0,8;1,5).Los
+Ejemplo3 Delafórmula(1)seobtienenlosvaloresdeEN
+resultadossemuestranenlaFigura2.
+paraX =3ym∈[0,7;1).Losresultadossemuestranenla
+0
+Figura3.
+Figura2.Cantidadmediaaproximadadeindividuos
+infectadoshastaeldía25.
+Figura3.Cantidadmediadeinfectadoshastalaextinciónde
+laepidemia.
+SeaV(Y)=σ2.LavarianzadeX secalculaporlafórmula
+n
+(ver[5],pag.20),
+Muchasvecesseasumecomodistribucióndelavariable
+mn(mn−1)
+V(X )=σ2X . Y ladistribucióndePoissonconparámetrom.Estasuposición
+n 0
+m(m−1)
+podríajustificarseintuitivamentedelasiguientemanera.Si
+Nótesequecuandom>1,elvalormedioEX ylavarian- elnúmerodeindividuosdeunapoblaciónesrelativamente
+n
+zaV(X )tienenuncrecimientoexponencialcomofuncióndel grande,entoncescadaindividuoinfectadopuedeinfectara
+n
+númerodegeneracionesn. cualquierotromiembrodelapoblaciónconunaprobabilidad
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.89-97
+92 LosProcesosdeRamificaciónysuAplicaciónalEstudiodelaTransmisióndelaCOVID-19enCuba
+pequeña,ydemaneraaproximadamenteindependiente.Lue-
+go,usandolaaproximacióndeladistribuciónbinomialala
+distribución de Poisson, en una etapa inicial, el número de
+infeccionesquecausacadaindividuoinfectadotieneaproxi-
+madamentedistribucióndePoisson.Laventajaenelusode
+estadistribuciónesquedependesolodelparámetrom.
+SeaX =1.Sim>1,laprobabilidaddeextinciónQesla
+0
+solucióndiferentede1delaecuación
+z=g(z), (2)
+dondeg(z),con0≤z≤1,eslafuncióngeneradoradeproba-
+bilidadescorrespondientealavariableY.Paralamayoríade
+lasdistribucionesdeY esnecesariohallarlasoluciónnumé-
+Figura5.Probabilidaddequelaepidemiaseextingadespués
+ricadelaecuación(2).Porejemplo,siY tienedistribución
+delageneraciónnonoseextinga.
+dePoissonconparámetrom,debehallarselasolucióndela
+ecuación
+z=e−m(1−z). (3)
+2. Cotas y aproximaciones
+NotequecuandoX =L,laprobabilidaddeextinciónde
+0
+la epidemia es igual a QL. Entonces, para m>1, el riesgo Laimportanciadelascotasconsisteenquepermitenes-
+rdeunbrotedegranmagnitudenunalocalidad,cuandose timarcaracterísticasdeinterés,estimandosoloalgunospará-
+importanLcasosalamisma,semideporlaprobabilidadde metrosdeladistribucióndeY,sinelconocimientocompleto
+noextinciónsinintervención([10],pag.4). deestadistribución.
+Sea m<1. Para el caso X =1 se tienen las siguientes
+r=1−QL. (4) 0
+acotacionesparaelnúmeromediodegeneracioneshastala
+Por otro lado, la probabilidad r n de que la epidemia se extinciónET ([12]y[11]).
+extingadespuésdelageneraciónnonoseextinga,secalcula
+(cid:18) (cid:19)
+porlafórmula 1 1 1−m
+≤ET ≤ ln , m(cid:54)=1−p .
+r n =1−QL n . (5) p 0 1−m−p 0 p 0 0
+LosvaloresdeQ secalculanusandolafórmula(2)de
+n
+Notequeenlasdesigualdadesanterioresbastaconestimar
+manerarecurrente
+my p .
+0
+Q =g(Q ), n≥0, (6)
+n+1 n
+dondeQ 0 =0. Ejemplo6 SeanX 0 =1, p 0 =0,2ym=0,9.Usandolade-
+sigualdadanterior,setieneque5≤ET ≤7.Estadesigualdad
+Ejemplo4 EnlaFigura4semuestranlosvaloresdelriesgo
+sugiereque,sieltiempomediodegeneraciónesiguala5,en-
+r como función de m, para L =1, 3 y 5, cuando Y tiene
+tonceselnúmeromedioaproximadodedíashastalaextinción
+distribucióndePoisson.
+podríaencontrarseenelintervalo[25,35].
+Sim<1,entonces([5],pag.116)
+1−X ·mn≤Q (cid:47)X (1−m)mn+1/σ2.
+0 n 0
+Conlaparteizquierdadelasdesigualdadesanterioresse
+puedeestimarlageneraciónnparalacuallaepidemia,conuna
+probabilidadγ dada,seextingue,resolviendolainecuación
+1−X ·mn≥γ,
+0
+esdecir,
+ln(1−γ)−ln(X )
+n≥ 0 . (7)
+Figura4.Riesgorcomofuncióndem. ln(m)
+Para m<1 la fórmula anterior expresa el riesgo de no
+Ejemplo5 EnlaFigura5semuestranlosvaloresder en realizarintervenciones,atravésdelnúmerodegeneraciones
+n
+funciónn,paraL=1,3y5,cuandoY tienedistribuciónde nconelcualseextinguiríalaepidemiaconunaprobabilidad
+Poissonconparámetrom=1,5. dadaγ.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.89-97
+LosProcesosdeRamificaciónysuAplicaciónalEstudiodelaTransmisióndelaCOVID-19enCuba 93
+Ejemplo7 SeanX =1,m=0,7yγ =0,95.Delafórmula Consideremosahoraquelostiemposdegeneraciónson
+0
+(7)sehallaquen≥8.Luegosieltiempomediodegenera- aquellosquetranscurrendesdequeunindividuoesinfectado
+ciónes5días,entoncesesteresultadosugiere,queconuna hastaqueesteinfectaaotro.Supondremosqueestostiempos
+probabilidad 0,95, el tiempo medio mínimo para extinguir- sonindependientesytienenigualdistribuciónqueunavariable
+selatransmisiónsinintervencionespodríasernomenorde aleatoria V, y también son independientes del número de
+40días.EnlaFigura6seobservangráficasparadistintos contagiadosporcadaindividuoinfectado,cuyadistribución
+valoresdeX ym∈[0,7;1). esigualaladeunavariablealeatoriaY.
+0
+Comoantes,seaX elnúmerodeinfectadosgeneradosen
+t
+elinstantet.LlamaremosprocesoEpi(Epi-deepidemia),al
+proceso{X},t≥0.
+t
+Tanto en el proceso de Bellman-Harris como en el pro-
+cesoEpi,esdegraninteréselproceso{Z},t≥0,dondeZ
+t t
+representaelnúmerodeinfectadoshastaelinstantet.
+4. R . Estimación de m
+t
+Enestasecciónasumiremosm>1.Recordemosqueel
+valorestimadodemesR .Elnúmeroefectivodereproduc-
+0
+ción,denotadoporR,eselnúmeromediodelosindividuos
+t
+queinfectacadaindividuoenelinstantet delatransmisión.
+Sielnúmerodelageneraciónnesgrande,intuitivamente
+Figura6.Tiempomedioaproximadoapartirdelcualla setiene
+epidemiaseextingueconprobabilidadγ =0,95. 1 Xn X
+m≈ ∑Y = n+1,
+i
+X X
+ni=1 n
+yunestimadordem,comoseseñalaen[3](Sepropusoen
+3. Proceso de Bellman-Harris
+[9])es
+X
+Consideremosvariablesaleatoriasconigualdistribución n
+m¯ = , n≥1,
+n
+que una variable aleatoria V, que representa el tiempo de X n−1
+generación, el cual se define como el tiempo transcurrido si X >0. Cuando X =0 se toma m¯ =1. Esta idea se
+n−1 n n
+desde que un individuo es infectado hasta que este infecta trasladaaltiemporeal.Siporejemplo,launidaddetiempoes
+a un grupo de individuos. El tamaño de este grupo tiene día,seexpresa
+distribuciónigualqueunavariablealeatoriaY.Supondremos X t
+R ≈ , t≥1.
+quelostiemposdegeneraciónylostamañosdelosgrupos t X
+t−1
+generadossontodasvariablesindependientes.
+conX >0,dondeX eselnúmerodeinfectadoscorrespon-
+t−1 t
+DenotemosporX elnúmerodeinfectadosgeneradosen
+t dientesalinstantet.
+elinstantet (nohastat).SellamaprocesodeBellman-Harris
+Intuitivamenteseobservaqueenlaprácticapuedesermás
+alproceso{X},t≥0.
+t útilutilizarunaventanadetiempo[t−k,t+k]pararealizar
+SeaM(t)=EX.SiV tienedistribuciónexponencial,en-
+t laestimación,
+tonceselprocesoX esunprocesodeMarkov,llamadoproce-
+t
+sodeGalton-Watsonentiempocontinuo.SeanEV =1/λ y 1 t+k X
+R ≈ ∑ i , 1≤k≤t. (9)
+EY =m.Puededemostrarse(ver[5]pag.61)quesiM(0)= t 2k+1 X
+i=t−k i−1
+EX =L,entonces
+0
+Elvalordeksedeterminaintuitivamentedeacuerdoala
+M(t)=Leλ(m−1)t, t≥0. (8) situaciónprácticaespecífica.Podríantomarse,porejemplo,
+k=1(3valores)ok=2(5valores).
+NóteseelcrecimientoexponencialdeM(t)cuandom>1.
+Conunaideasimilarsepuedenusartambiénlasventanas
+CuandolavariableV notienedistribuciónexponencial,
+(t−k,t] o [t,t+k). Si se trata de estimar el valor de R al
+paraelprocesoX soloseobtienenresultadosanalíticosen 0
+t iniciodelatransmisión,entoncesdebetomarseunaventana
+casosparticulares.Enaplicacionesprácticas,engeneral,es
+deltipo(t−k,t],k<t.
+necesarioelusodelasimulación.
+Según[3],elsiguienteestimadordemesmínimocuadrá-
+tico,máximoverosímilyconsistente,siladistribucióndeY
+ProcesoEpi
+perteneceaunasubclaseampliadelaclasededistribuciones
+El proceso que describiremos a continuación se ajusta
+exponenciales
+mejoralprocesodetransmisióndeinfeccionesenepidemias,
+y su comportamiento medio es muy similar al proceso de
+mˆ =
+∑n
+i=0
+X
+i =
+Z
+n , n≥1.
+Bellman-Harris. n ∑n
+i=1
+X
+i−1
+Z
+n−1
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.89-97
+94 LosProcesosdeRamificaciónysuAplicaciónalEstudiodelaTransmisióndelaCOVID-19enCuba
+Trasladandolaideaalcasodeltiemporeal,setiene,para
+laventana[t−k,t+k],
+R ≈ 1 t ∑ +k ∑i j=0 X j , 1≤k≤t. (10)
+t 2k+1
+i=t−k
+∑i
+j=1
+X
+j−1
+Enlaliteraturasepresentagranvariedaddeestimadores
+paraR .Enelpresenteestudio,utilizamoslasexpresiones(9)
+0
+y(10).
+5. Simulaciones
+LassimulacionesparalosprocesosdeBellman-Harrisy
+Epimuestranqueestosdosprocesossecomportanmuysimi-
+laresentérminosdesusmediasydesviacionesestándar.En Figura8.Cantidadmediadeindividuosinfectadoshastael
+laFigura7seobservaquelasmediasobtenidasparaambos instantet parav¯=5,28yX 0 =3.
+procesospormediodelasimulaciónsonparecidas.Lasimu-
+laciónserealizóusandoparaY unadistribucióndePoisson
+conparámetrom=1,45yparaV unadistribuciónGamma delnúmeromediodeinfectados,paradiferentesvaloresde
+conparámetrosdeformayescalaα =1,52yµ =3,47,res- X 0 ydem.
+pectivamente. EnlaFigura10semuestranlasgráficasdelasmediasdel
+número de infectados hasta el instantet =30 y una región
+deconfianzaal90%alrededordeestasmedias.Losvalores
+demquesetomaronsonpequeños,puestoqueparavalores
+mayores no es posible determinar una región de confianza
+aceptable,debidoaqueenestoscasoslavarianzadelproceso
+tienevaloresmuygrandes.
+6. Validación del modelo y de las
+simulaciones
+Comounaformadeverificarlacorrectaimplementación
+delprogramadesimulación,secomprobólacoincidenciade
+losvaloresmediosdelnúmerodeindividuosqueseinfectan
+Figura7.Cantidadmediadeindividuosinfectadosenel
+enuninstantet,halladospormediodelasimulación,conla
+instantet.
+fórmula(8).Estaverificaciónserealizóasumiendoquelos
+tiempos de generación tienen distribución exponencial, tal
+Adoptamos el proceso Epi como modelo de la transmi-
+comoesrequeridoparadeducir(8).
+sióndelaenfermedad,yporlotantoparalarealizaciónde
+lassimulaciones,puestoqueesteprocesoseajustamejoral
+6.1 Tiemposdegeneración
+comportamientorealdelaepidemia.Acontinuaciónseana-
+Debidoaladificultadparamedireltiempodegeneración,
+lizagráficamentecómoinfluyenlosparámetrosmyX enel
+0
+internacionalmenteesaceptadoque,comovaloraproximado
+desarrollodelatransmisión.Entodosloscasossegeneraron
+deeste,setomeladiferenciaentrelosinstantesdeiniciode
+1000trayectoriasdelproceso,dondeeltiempodegeneración
+síntomasdelindividuoqueinfectayelinfectado,esdecir,el
+V tienedistribuciónGammaconparámetrosdeformayescala
+intervalodeserie.
+α =1,52yµ =3,47,respectivamente.Conestosvaloresde
+losparámetros,eltiempomediodegeneraciónesv¯=5,28 EnlaFigura11semuestraunhistogramacorrespondiente
+días. a una muestra de 125 valores de tiempos de generación en
+El valor de m tiene una gran influencia en el comporta- Cuba.Lamediaydesviaciónestándarfueron5,28y4,28días,
+mientodelaepidemia.Asumiendoqueenelinstanteinicial respectivamente.
+hay3individuosinfectados,esdecir,X =3,enlaFigura8 Al realizar la prueba de la bondad de ajuste χ2 con la
+0
+seobservalacantidadmediadeindividuosinfectadoshastael hipótesisdeunadistribuciónGamma,seobtuvoun p-valor
+instantet,paradiferentesvaloresdem. iguala0,40aproximadamente.
+Otro valor que influye en el comportamiento de la epi- Lasestimacionesporelmétododelosmomentosdelos
+demiaeslacantidadinicialdeindividuosinfectados.Enla parámetrosdeformaydeescaladeladistribuciónGamma
+Figura9seilustraelcomportamientodelaepidemia,através sonµ =3,47yα =1,52,respectivamente.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.89-97
+LosProcesosdeRamificaciónysuAplicaciónalEstudiodelaTransmisióndelaCOVID-19enCuba 95
+(a) m=0,9 (a) m=0,5
+(b) m=1,5 (b) m=0,9
+(c) m=2 (c) m=1,1
+Figura9.Cantidadmediadeindividuosinfectadoshastael Figura10.Cantidadmediadeindividuosinfectadoshastael
+instantet parav¯=5,28. instantet parav¯=5,28,yregióndeconfianzaparael90%
+(±1.64·stdev).
+6.2 LaHabana
+LaHabanaeslaprovinciaconelmayornúmerodecasos 5,28días,respectivamente.Deestosvalores,porelmétodode
+positivosalaenfermedadCovid-19,porloqueesdeinterés losmomentos,sehallaronlasestimacionesdelosparámetros,
+validarelmodeloenlacapital. α =1,15 y µ =4,92. Al realizar la prueba de bondad de
+Paralaestimacióndelvalordemdurantelasdosprimeras ajusteχ2,noserechazaelajustealadistribuciónGammacon
+semanasdesdeeliniciodelatransmisión,utilizamoslosesti- p-valoriguala0,20.
+madores(9)y(10)conventanadetiempok=3,yseobtuvo EnlaFigura12seobservanlascurvascorrespondientesa
+elvaloraproximadom=1,42. lacantidadacumuladadeindividuosinfectadosenelinstante
+Deunamuestradelostiemposdegeneracióncontamaño t enLaHabana,yalacantidadmediadeinfectadosenese
+48,seobtuvoquelamediayladesviaciónestándarson5,67y instanteobtenidapormediodelasimulacióndelprocesoEpi.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.89-97
+96 LosProcesosdeRamificaciónysuAplicaciónalEstudiodelaTransmisióndelaCOVID-19enCuba
+Conclusiones
+LosEjemplos1-7delasSecciones1y2,ilustrancómo
+algunasfórmulasdelateoríadelosprocesosderamificación
+podríantenerutilidadenlasestimacionesdediferentesíndices
+sobreelcomportamientodelaepidemia.
+EnlaSección3seintrodujoelprocesoquedenominamos
+Epi, el cual consideramos que es el que mejor modela la
+epidemia,entrelosdosprocesospresentadosenesasección.
+Las distribuciones, Gamma, Weibull y Lognormal, son
+utilizadasenlosestudiosinternacionalescomomodelosde
+distribuciónparalostiemposdegeneración.Tantoparalosda-
+tosdeCuba,comodeLaHabana,fueladistribuciónGamma
+Figura11.Histogramadelostiemposdegeneraciónpara laquemejorseajustó.Porotraparte,asumimosladistribu-
+125datosenCuba. cióndePoissoncomoleydereproducción,sobrelabasede
+consideracionesteóricasylaexperienciainternacional.No
+obstante,esconvenienteanalizarelusodeotrasdistribucio-
+nes.
+Elinstanteinicialfueel16demarzo,fechadeconfirmación
+Paralarealizacióndelassimulacionesseimplementaron
+delprimerpacienteenlaprovincia.Segeneraron1000trayec-
+programasenellenguajePython.Lavalidacióndelmodelo
+toriasdelprocesoutilizandolosvaloresmencionadosdelas
+Epiydesuimplementaciónenellenguajedeprogramación,
+estimacionesdelosparámetros.
+realizadaconlosdatosdelaprovinciaLaHabana,indicaque
+elprogramapuedeserutilizadoenapoyoalatomadedeci-
+sionessobrelasmedidasatomar,anteunposiblereiniciode
+latransmisióndelaenfermedadenlasdiferentesprovincias.
+Agradecimientos
+AgradecemosaJosuéM.Corujoporlacolaboraciónbrin-
+dadaenlaprimeraetapadelarealizacióndeestetrabajo.
+Referencias
+[1] Abbott,S.:ThetransmissibilityofnovelCoronavirusin
+theearlystagesofthe2019-20outbreakinWuhan:Ex-
+ploringinitialpoint-sourceexposuresizesanddurations
+Figura12.Cantidaddeindividuosinfectadoshastael using scenario analysis [version 1]. Wellcome Open
+instantet enLaHabana. Research2020,5:17Lastupdated:11FEB2020.
+[2] Athreya,K.B.yP.Ney:BranchingProcesses. Springer-
+Verlag,1972.
+Paralasimulaciónseasumióqueenelinstanteinicialha-
+bían14individuosinfectados,queeslacantidaddeindividuos [3] Becker, N.: Estimation for Discrete Time Branching
+confirmadosconlaenfermedadquearribaronalaprovincia ProcesseswithApplicationtoEpidemics. Biometrics,
+enlosprimerosdíasdeiniciodelatransmisión. 33:515–522,September1977.
+Lacurvamediaobtenidamediantelasimulacióncorres-
+[4] Brauer, F. & Castillo-Chávez, C.: Mathematical Mo-
+ponde a una situación en la cual no se toman medidas de
+delsinPopulationBiologyandEpidemiology. Springer,
+contencióndelatransmisión,ypuestoquesehallóconuna
+2012.
+cantidad limitada de infectados iniciales, infraestima la si-
+tuaciónrealenquenosetomanestasmedidas.Noobstante, [5] Haccou,P.,P.JagersyV.A.Vatutin:BranchingProces-
+comoseobservaenlaFigura12,estacurvatienelatendencia ses. Cambridge,2007.
+asersuperioralacurvacorrespondientealnúmerototalde
+[6] Harris, T. H.: The theory of Branching Processes.
+infectadosreales,situaciónenlacualsíexistenmedidasde
+Springer-Verlag,Berlin,1963.
+contención,aunqueporotraparte,debeseñalarsequeenla
+curvarealposiblementenoseincluyenalgunoscasosasinto- [7] Imai,N.,Cori,I.A.,Dorigatti,M.Baguelin,C.A.Don-
+máticos. nelly,S.RileyyN.M.Ferguson:Report3:Transmissibi-
+lityof2019-nCoV. ImperialCollegeLondonCOVID-19
+ResponseTeam,25January2020.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.89-97
+LosProcesosdeRamificaciónysuAplicaciónalEstudiodelaTransmisióndelaCOVID-19enCuba 97
+[8] Jacob, C.: Branching Processes: Their Role in Epide- 2020. https://doi.org/10.1101/2020.02.
+miology. Int. J. Environ. Res. Public Health, 7:1186– 04.20020503.
+1204,2010. doi:10.3390/ijerph7031204.
+[11] Valdés,J.E.,YeraY.G.yL.Zuaznabar:Boundsforthe
+[9] Nagaev,A.V.:Onestimatingtheexpectednumberof ExpectedTimetoExtinctionandtheProbabilityofExtin-
+directdescendantsofaparticleinabranchingprocess. ctionintheGalton-WatsonProcess. Communicationsin
+TheoryofProbabilityanditsApplications,12:314–320, Statistics-TheoryandMethods,43:8:1698–1707,2014.
+1967.
+[12] Yu, J. y J. Pei: Extinction of Branching Processes in
+[10] P.,Boldog,TekeliT.,ViziZ.,DénesA.,BarthaF.A.y VaryingEnvironments. StatisticsandProbabilityLetters,
+Rost G.: Risk assessment of novel coronavirus 2019- 79:1872–1877,2009.
+nCoV outbreaks outside China. medRxiv preprint,
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.89-97

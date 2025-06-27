@@ -1,0 +1,509 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.37,No.1,2024,Pag.61-68
+Recibido(Received):06-05-2024,Revisado(Reviewed):29-07-2024
+Aceptado(Accepted):22-12-2024,Enlínea(Online):15-02-2025
+Extracción de conocimiento mediante traducción
+automatizada a Cypher con aprendizaje zero-shot
+Knowledge extraction through automated translation
+to Cypher with zero-shot learning
+Rolando Sánchez Ramos1*
+Resumen Estetrabajosecentraenabordarlacomplejidadinherentealaconsultadebasesdedatosenforma
+degrafo,comoNeo4J.Estasbasesdedatosamenudorequierenunconocimientoespecializadoenlenguajes
+deconsulta,loquelimitasuaccesibilidadaungruporeducidodeusuariosconhabilidadestécnicasavanzadas.
+Parasuperarestalimitación,proponemoslaaplicacióndelaprendizajeconceromuestrasdeentrenamiento
+(zero-shot),unenfoqueinnovadorenelprocesamientodellenguajenatural.Enestainvestigación,sellevaa
+cabounexperimentobasadoenelmodeloGPT-4paratraducirconsultasdelenguajenaturalacódigoCypher.
+LaevaluaciónserealizautilizandoelconjuntodedatosdeevaluaciónMetaQA,queabarcaunaampliavariedad
+deejemplosdeconsultas.Losresultadosobtenidosfuerondel76,53%,43,45%y31,03%paralostreslotesde
+evaluacióndelbenchmark utilizado,mejorandodeestaformaelmejorresultadodemodelosdelenguajeenla
+traduccióndelenguajenaturalacódigoCyphersobreMetaQAmedianteelaprendizajezero-shot.
+Palabras Clave: aprendizaje con cero muestras de entrenamiento, modelos de lenguajes a gran escala,
+inteligenciaartificial
+Abstract This work focuses on addressing the inherent complexity of querying graph databases, such as
+Neo4J.Thesedatabasesoftenrequirespecializedknowledgeinquerylanguages,limitingtheiraccessibilitytoa
+smallgroupofuserswithadvancedtechnicalskills. Toovercomethislimitation,weproposetheapplicationof
+zero-shotlearning,aninnovativeapproachinnaturallanguageprocessing. Inthisresearch,anexperimentis
+conductedbasedontheGPT-4modeltotranslatenaturallanguagequeriesintoCyphercode. Theevaluationis
+carriedoutusingtheMetaQAevaluationdataset,whichcoversawidevarietyofqueryexamples. Theresults
+obtained were 76,53 %, 43,45 %, and 31,03 % for the three evaluation lots of the benchmark used, thereby
+improvingthebestresultoflanguagemodelsintranslatingnaturallanguageintoCyphercodeusingzero-shot
+learning.
+Keywords: zero-shotlearning,largelanguagemodels,artificialintelligence
+MathematicsSubjectClassification: MSC68
+1DepartamentodeComputación,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.Email:rolsanchez@yandex.com
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Citar como: Sánchez Ramos, R. (2024). Extracción de conocimiento mediante traducción au-
+tomatizada a Cypher con aprendizaje zero-shot. Ciencias Matemáticas, 37(1), 61–68. DOI:
+https://doi.org/10.5281/zenodo.14876950.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9192.
+Introducción debasesdedatosdiseñadasparalaadministracióndelsaber.
+Estasbasesbrindanlosmediospararecolectar,organizary
+Enlaépocaactual,asistimosaunconstanteaumentoen
+recuperardigitalmenteunconjuntodeconocimientos,ideas,
+la producción de información en diversos formatos: visual,
+conceptosodatos[3].Laventajafundamentaldemantener
+auditivoytextual,queabarcatodoslosámbitosdelasociedad
+lainformacióndemaneraestructuradaradicaensufacilidad
+[13].
+paraserconsultada,ampliadaymodificada.
+Demaneraparticular,resultasumamenteintrigantelain- Debido a su utilidad y prevalencia, la recuperación de
+formacióngeneradaatravésdelingeniocreativoylainvesti- informaciónatravésdeconsultasenbasesdeconocimiento
+gaciónhumana.Estostiposdedatossealmacenandebidoa sehaconvertidoenunatareaesencial.
+surelevanciayalanecesidaddeaccederaellosenelfuturo, Es primordial que la información almacenada en bases
+pudiendooptarporunaorganizaciónestructuradaono. deconocimientoadopteunformatoadecuadoparapermitir
+Lasbasesdeconocimientoconstituyenuntipoparticular búsquedaságilesyprecisas.Entrelosformatosmáscomunes
+62 ExtraccióndeconocimientomediantetraducciónautomatizadaaCypherconaprendizajezero-shot
+seencuentranlosmodelosdeEntidad-Relaciónyelmodelo lenguajeobjetivoagenerar[11,5].
+Relacional.Apesardeserenfoquesmásantiguos,elmodelo UnproblemabastantecomúnconelusodeLLMsparala
+Relacional(BDR)siguesiendoelmásampliamenteutilizado resolucióndetareascomoresponderaconsultasdeconoci-
+enlaactualidad[10]. mientosinuncontextopreviosonlasalucinaciones[8],las
+Noobstante,enocasiones,lascaracterísticasespecíficas cualesprovocanque,conciertaprobabilidad,estosmodelos
+delproblemademandanunformatomásexpresivo,yeseneste produzcancomosalidaafirmacioneserróneassobrehechos,
+puntodondelasbasesdedatosorientadasagrafos(BDOG) personasoalgunareferenciaenelmundoreal,locualresulta
+[22]entranenjuego. uninconvenienteparasituacionesdondeserealicenconsultas
+LasBDOGhanganadoprogresivamentepopularidadco- enlenguajenaturalsobreundominioreducido,comoelrefe-
+mo una manera efectiva de almacenar información en los renteaunabasedeconocimientosobreuntemaespecífico.
+últimosaños.Estasbasestienenlacapacidaddemodelaruna Porlotanto,noessuficienteelusodesolamenteunLLMpara
+diversidaddesituacionesdelmundorealaltiempoqueman- responderadichaspreguntas,sinoquetambiénseríanecesario
+tienenunaltoniveldesimplicidadylegibilidadparalosseres queestoscuentendeantemanoconunainformaciónreferente
+humanos.LasBDOGpresentannumerosasventajasencom- aldominioespecíficosobreelcualsedeseaconsultar.
+paraciónconlasbasesdedatosrelacionales[22].Estoincluye En lo que respecta a la comprensión del lenguaje natu-
+unmejorrendimiento,permitiendoelmanejomásrápidoy ral y su uso en consultas a bases de conocimiento, existen
+eficazdegrandesvolúmenesdedatosrelacionados;flexibili- diversasvíasllevadasacaboyconresultadosdiversos,donde
+dad,yaquelateoríadegrafosenlaquesebasanlasBDOG sehacenanálisissintácticosysemánticossobrelaconsulta,
+permiteabordardiversosproblemasyencontrarsoluciones muchasvecesasistidospordiccionariosomapassobrelabase
+óptimas;yescalabilidad,yaquelasbasesdedatosorientadas deconocimientoencuestión.Seusanmodelosdeparáfrasis
+agrafospermitenunaescalabilidadeficazalfacilitarlaincor- comotécnicadeaumentodedatosyfinalmentetransformers
+poracióndenuevosnodosyrelacionesentreellos.Ejemplo oinclusoLLMsparallevardelaconsultayacuradaallen-
+deunsistemadegestióndeBDOGesNeo4J [16],através guaje de consulta formal o a un lenguaje intermedio capaz
+delcualesposibleconstruirinstanciasdeestetipodebasede deexpresaraestaaaltonivel,parafinalmenteserejecutada
+datoseinteractuarconlasmismasatravésdellenguajedepro- sobreunsistemadegestióndeinformación[6,4].
+gramaciónCypher[17],elcualposeeunasintaxisdeclarativa
+similaraSQL[21]. Problemática
+Por otro lado, el avance en la comprensión del lengua- Paraextraerinformaciónprocedentedeunabasedecono-
+je natural se ha visto potenciado con el surgimiento de los cimientobasadaenunaBDOGgeneralmente,esnecesarioel
+modelosdelenguajesagranescala(LLM,porsussiglasen usodeunlenguajedeconsultaformalquepuedaserejecutado
+inglés)[20]comoGPT-4[14]oLLaMA-2[7],loscualespre- sobreunsistemadegestióndeesta.Elenfoquemáscomún
+sentanunaseriedehabilidadesemergentescomoelaboración paragenerardichaconsultaformalapartirdeunaconsulta
+deresúmenesdetextos,generacióndecódigo,razonamiento enlenguajenaturalhumanosebasaenutilizarunmodelode
+lógico,entreotras[9]. aprendizajeautomáticoentrenadoparadichoproceso.
+Dichas herramientas constituyen modelos de Machine Sucedequeparaestatareaencuestión,esnecesarioela-
+Learningentrenadosconungranvolumendedatos,locual borar ejemplos entrenantes de calidad y luego, ejecutar un
+esposiblegraciasalnúmerodeparámetrosconlosqueestos procesodeentrenamiento,locualrepresentaunimportante
+sonconfigurados[20]. gastocomputacionalquepuedeseromitidoconelusodemo-
+Usualmente,paraelusodelosLLMsbastaconofrecerles delosyaentrenadosparadisímilestareasyconcapacidadde
+comodatodeentradauntexto[20],elcualdescribelatarea generarrespuestaapreguntasparalascualesnofuerondirec-
+que se espera que estos realicen. Además, son muchas las tamentepreparados.Esporestarazónquesehacenecesario
+técnicasexistentesparaelaborarunaentradadecalidad,esto elusodeunLLM,yaqueestosposeenhabilidadescomola
+conelobjetivodequelarespuestaporpartededichomodelo generacióndecódigosinnecesidaddeserreentrenadospara
+delenguageofrezcaresultadosalentadoresalrespecto,locual serutilizadosefectivamente[20],yconello,interactuarcon
+seconocecomopromptengineering[20]. unaBDOGparaextraerconocimiento.
+Una técnica bastante común es el aprendizaje con cero Porotrolado,debidoalproblemaquetienenlosLLMscon
+muestrasdeentrenamiento(zero-shotlearning,ZSL,porsus elfenómenodelasalucinaciones,sehacenecesarioencontrar
+siglaseningés)[15],lacualconsisteendescribirleaunLLM unavíadedarlecomoentradauncontextomínimodelsistema
+unprocedimientoarealizarsinofrecerdeantemanoejemplos aconsultar,paragenerarunaexpresiónenunlenguajeformal
+decómoresolverlo,comoporejemplo,entareasrelacionadas quepuedaajustarsecorrectamentealformatodelabasede
+con la generación de código, donde algunos de estos son conocimientoobjetivoyobtenerrespuestascorrectassobrela
+capacesdegeneraralgoritmosexpresadosenunlenguajede misma.
+programaciónformalapartirdeunasentenciaoconsultaen En ese sentido la interrogante científica que compete a
+lenguajenaturalsinrecibircomoentradadelusuarioalgunos estainvestigaciónes:¿QuétanefectivospuedenserlosLLMs
+ejemplosdecódigo,oespecificacionesdecómofuncionael paraextraerinformacióndebasesdeconocimientosapartir
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.61-68 SánchezRamosR.
+https://revistas.uh.cu/rcm/article/view/9192 https://doi.org/10.5281/zenodo.14876950
+ExtraccióndeconocimientomediantetraducciónautomatizadaaCypherconaprendizajezero-shot 63
+de una descripción de la estructura de esta y sin necesidad 1.1 LLMpararesolverText-to-Cypher
+deserentrenadocondatosespecíficosoposeerensuentrada Conelaugedelainteligenciaartificialyelaprendizaje
+ejemplosdecómorealizarlatareaallevaracabo? automático,latareadeconvertirtextoenlenguajenaturala
+Finalmente,paraabordardichainterrogantesetienecomo códigoenCypherhasidorecientementeabordadaatravésde
+hipótesisque,utilizandoenfoquesbasadosenelaprendizaje técnicasmodernas.Entrabajosmásrecientes,algunosinvesti-
+zero-shot con un LLM y teniendo como dato el esquema gadores[18,12]hanabogadoporformularestatareacomo
+deunabasedeconocimientoaconsultar,esposibleobtener undesafíodegeneración.Utilizandoloqueseconocecomo
+mejoresresultadosqueutilizandodirectamenteelLLMcon promptsoindicacionesP,esposibledirigiryguiaraungran
+laconsultaarealizarporelusuario. modelo de lenguaje M en esta labor. Este modelo, una vez
+entrenado,puedeestimarunadistribucióndeprobabilidadso-
+breposiblesconsultasCypherY.Deestaforma,elmodeloes
+Objetivos
+capazdegenerar,pasoapasoytokenportoken,unaconsulta
+Dadaslasideasanteriores,losobjetivosprincipalesdel
+apropiada.
+trabajo consisten en diseñar e implementar una estrategia
+LafórmulasubyacenteparagenerarlaconsultaY sees-
+experimental capaz de verificar la capacidad de los LLMs
+tructuracomo:
+paralaconsultaenlenguajenaturalabasesdeconocimiento
+estructuradasconindependenciadeldominio,paralocualse |Y|
+emplearáunenfoquebasadoenelaprendizajezero-shot. P (Y|P,S,Q)=∏P (Y|P,S,Q,Y <i).
+M M i
+i=1
+Relevancia del estudio Parasimplificar,Y <iserefierealfragmentoinicialopre-
+fijodelaconsultaCypherqueseestáconstruyendo.Mientras
+Esteestudioabordaunaproblemáticasignificativaenel
+queP (Yi|∗)denotalaprobabilidadcondicionalasociadacon
+campo de las bases de datos de grafos, particularmente, la M
+lageneracióndeli-ésimotoken,considerandofactorescomo
+complejidadylaaccesibilidadlimitadadeloslenguajesde
+elprefijoexistenteY <i,laindicaciónP,elesquemaSyla
+consultacomoCypherdeNeo4J.Apesardelapotenciade
+preguntaoriginalQ.
+estas bases de datos, su uso se ve restringido a individuos
+conconocimientostécnicosavanzados.Nuestrainvestigación
+Enfoquesconsiderados
+introduceelusodelaprendizajezero-shotenelprocesamiento
+EldesarrollodeunsistemaconunLLMparahacerinfe-
+dellenguajenaturalparatraducirconsultasenlenguajenatural
+renciasdezero-shotygenerarCypherimplicavariosenfoques
+acódigoCypher,facilitandoasísuaccesibilidadaunpúblico
+ydesafíos.
+másamplio.Losresultadosexperimentalesmuestranmejoras
+Primero, se exploraron modelos de código abierto. El
+significativasenlaprecisióndelastraducciones,locualno
+primermodeloprobadofueAlpaca Lora 7B[2].Sinem-
+soloavanzaenlatécnicadeprocesamientodelenguajenatu-
+bargo, la calidad de las inferencias no fue la adecuada. En
+ral,sinoquetambiéntieneelpotencialdedemocratizareluso
+algunoscasos,lasrespuestaseranCyphernocompilablecon
+debasesdedatosavanzadas,ampliandosuaplicabilidaden
+erroresdesintaxis.Enotroscasos,elmodelogenerabaotro
+diversasáreasacadémicasysectoresindustriales.Estacontri-
+lenguajedeconsultaquenoeraCypher,comoporejemplo
+buciónesespecialmenterelevanteenlaeradelainformación,
+SQL.
+dondelaeficienciaylaaccesibilidaddelatecnologíadebases
+Posteriormente,seprobóconGPT4All[1]yconVicuna
+dedatostienenunimpactodirectoenlacapacidaddegestión
+7B[19],obteniendoresultadossimilares.Estosmodelos,aun-
+yanálisisdegrandesvolúmenesdedatos.
+queútiles,noproporcionabanlaprecisiónylageneraciónde
+Cypherqueserequeríaparaelsistema.
+1. Propuesta de Solución
+2. Arquitectura general
+Dentrodelámbitodelasbasesdedatosylasconsultas
+quelasacceden,existeunatareaparticularmentecompleja: En el desarrollo de sistemas de bases de datos, la inter-
+traducirpreguntasformuladasenlenguajenaturalaunlengua- accióneficienteylagestióndeesquemassonfundamentales
+jedeconsultaestructuradocomoCypher.Dadaunapregunta paralamanipulaciónyelmantenimientodedatos.
+Q,formuladaenlenguajecotidiano,yunesquemadebasede Enestecontexto,sehadesarrolladounaarquitecturade
+datosS,elcualsecomponeapartirdeltuploN,A,R,donde softwarecompuestaporvarioscomponentesinterconectados
+encontramosmúltiplesnodosN(querepresentaninstanciasde diseñadosparainteractuarconunabasededatosdegrafos,
+unaentidadenlabasededatos),atributosA(tantoennodos con especial atención en Neo4J, un sistema de manejo de
+comoenrelaciones)yrelacionesentreparesdenodosR.La basesdedatosbasadoengrafos.
+problemáticasubyacenteenelprocesodeconvertirText-to- Uno de los componentes clave de esta arquitectura es
+CyphersecentraengenerarunaconsultaenlenguajeCypher elGraphContractor,unmódulodiseñadoparafacilitar
+Y queseaequivalenteyrespondaadecuadamentealapregunta lainteracciónconlabasededatos.Estecomponenteactúa
+inicialQrealizadaporunusuariohumano. como intermediario entre la aplicación y la base de datos,
+SánchezRamosR. CienciasMatemáticas,Vol.37,No.1,2024,Pag.61-68
+https://doi.org/10.5281/zenodo.14876950 https://revistas.uh.cu/rcm/article/view/9192
+64 ExtraccióndeconocimientomediantetraducciónautomatizadaaCypherconaprendizajezero-shot
+Figura1.Arquitecturayfuncionamientodelapropuestadesolución[Architectureandoperationoftheproposedsolution].
+manejando la lógica necesaria para establecer conexiones, porelmodelodelenguajeGPT-4,elDBSeedertrabajaen
+ejecutarconsultasymanejarlosresultados. conjunto con el GraphContractor para insertar nodos,
+LamodularidaddelGraphContractorpermitesure- atributosyrelacionesenlabasededatos.Estafuncionalidad
+utilización y fácil mantenimiento, además de proporcionar esespecialmentevaliosaenlasetapasdedesarrolloyprueba,
+unacapadeabstracciónquesimplificalasoperacionesdela dondeserequieredeunabasededatospobladaparavalidarel
+basededatosparalosdesarrolladores. diseñoylalógicadelaaplicación.Además,elDBSeederes-
+tádiseñadoparaoperardentrodeuncontenedordeDocker,lo
+Paralageneracióndeesquemasdelabasededatos,seha
+queofreceventajassignificativasentérminosdeportabilidad,
+creadoelSchemaMaker,unaherramientaautomatizadaque
+escalabilidadyaislamientodelentornodedesarrollo.
+seencargadeconstruirlosesquemasnecesariosparaNeo4J.
+Cadaunodeestoscomponentesrepresentauneslabónen
+Esta herramienta juega un rol crucial en la estructuración
+lacadenadeherramientasquepermitióinteractuarconlabase
+delabasededatos,yaquedefinelaorganizacióndenodos,
+dedatosdegrafosdemaneramásintuitivayautomatizada.La
+relaciones,propiedadesyrestricciones.
+integracióndemodelosavanzadascomoGPT-4enelproceso
+El SchemaMaker garantiza que la base de datos esté
+nosolomejoralaaccesibilidadparalosusuariosfinalessino
+correctamenteconfiguradaparacumplirconlosrequisitosdel
+que también, agiliza el ciclo de desarrollo, ofreciendo un
+dominioylasnecesidadesdelaaplicación,asegurandoasíla
+enfoquemodernoyeficienteenlagestióndebasesdedatos
+integridadycoherenciadelosdatos.
+degrafoscomoNeo4J.
+Enlainterfazentreellenguajenaturalylabasededatos,
+Paraunamejorcomprensióndelafigura1seañadieronun
+sehaintegradoelmodelodelenguajeGPT-4,utilizadocomo
+conjuntodeíncidesqueresaltanlasdistintasfasesporlasque
+una”cajanegra”paralatraduccióndeconsultasenlengua-
+pasaelsistemaimplementado.Acontinuaciónseenumerany
+jenaturalaCypher,ellenguajedeconsultaparaNeo4J.La
+explicanenquéconsistencadaunadeestasetapas:
+capacidad de GPT-4 para comprender y generar texto ha-
+ceposiblequelosusuariosrealicenconsultascomplejassin 1. Paso0:Esterepresentaelprocesomedianteelcualse
+necesidaddeconocerlasintaxisespecíficadeCypher.Para construye una instancia de una base de datos Neo4J
+mejorarlaprecisiónyrelevanciadelastraducciones,seha a partir de un conjunto de ficheros de texto. Esta ta-
+elaborado una plantilla de prompt que se nutre de la salida rea se puede llevar a cabo mediante el componente
+delSchemaMaker.Estaplantillaguíaalmodelodelengua- DBSeeder,elcualpuedeprogramarseconfuncionali-
+jeproporcionandocontextoyestructura,loquepermiteque dadesespecíficasdeacuerdoalformatodelosficheros
+GPT-4genereconsultasCyphermásprecisasyeficientes. inicialesylosdatosqueestoscontienen.Elcomponen-
+Finalmente,sehadesarrolladoelDBSeeder,uncompo- teDBSeederseapoyadelcomponentedenominado
+nenteencargadodepoblarlabasededatosdeNeo4Jcondatos GraphContractorinternamentepararealizarpeti-
+inicialesodeprueba.UtilizandoconsultasCyphergeneradas cionesalabasededatosconelobjetivodeaãdirnuevos
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.61-68 SánchezRamosR.
+https://revistas.uh.cu/rcm/article/view/9192 https://doi.org/10.5281/zenodo.14876950
+ExtraccióndeconocimientomediantetraducciónautomatizadaaCypherconaprendizajezero-shot 65
+registros de información, traduciendo la creación de memoriaRAMde16Gb,unaCPUAMDbasadaenlaarquitec-
+entidades, relaciones y atributos en instrucciones de turax86_64,con8núcleosyunavelocidadde2649.998MHz
+CypherejecutadassobreunabasededatosNeo4Jobje- yconunanchodebandade16Mb/sparalacomunicacióncon
+tivo. servicioscomolaAPIdeOpenAI.
+Elsistemadeevaluaciónfuedesarrolladosobreelbench-
+2. Paso1:Enestafase,elcomponenteKnowledgeBase
+markMetaQA[23],elcualconstituyeelprincipalconjunto
+extraelainformaciónreferentealasentidades,relacio-
+dedatosdeevaluaciónparalatareaText-to-Cyphervistaen
+nesyatributosdeunabasededatosNeo4J existente.
+lasección.Enestecasoseutilizólaversiónclásica,donde
+Paraello,haceusointernamentedeunainstanciadeun
+losparesdeevaluaciónconsistíanenunaconsultaenlenguaje
+GraphContractor.
+naturalconsucorrespondienterespuestaenlabasededatos.
+3. Paso2:Enestepaso,seutilizaelSchemaMaker,el
+3.1 Evaluaciónsobreelbenchmark MetaQA[23]
+cualrecibelainformacióndelabasededatosproceden-
+MetaQA [23] es un conjunto de datos diseñado para la
+tedelcomponenteKnowledgeBaseyproduceuna
+tareaderazonamientodemúltiplespasos(multi-hop)enres-
+descripción verbalizada y legible en lenguaje natural
+puestaapreguntas.Estácompuestoporentidades,relaciones
+sobrelaestructuradelainstanciadeNeo4Jobjetivo.
+ypreguntasenlenguajenaturalrelacionadasconpelículas.Ca-
+4. Paso3:Enestemomentodelprocesogeneral,sereci- danodoenelgrafodeconocimientosrepresentaunaentidad
+be una consulta descrita en lenguaje natural humano (comounapelícula,actorodirector),ylasaristasrepresentan
+sobreunasolicituddedatosdelabasededatosobjeti- relacionesentrelasentidades.Elconjuntodedatostambién
+vo.Luegoestaesutilizadajuntoconelesquemadela incluyepreguntasatresnivelesdecomplejidad(1-hop,2-hop
+basededatosobtenidodelSchemaMakerparacon- y3-hop),concadanivelrequiriendorazonamientosobreun
+formaruntextodeentradaalmodeloGPT-4conlas númerocrecientedearistasenlabasededatosenformade
+característicasmencionadas. grafosanalizada.EnlaTabla1semuestraunejemplodela
+distribucióndedichoconjuntodedatos.
+5. Paso4:Unavezobtenidoeltextodeentradapararea-
+lizarunainferenciaconelmodeloGPT-4,seprocede
+1-hop 2-hop 3-hop
+ahacerunaejecucióndeeste,produciendoasícomo
+Train 96,106 118,980 114,196
+salida un texto que representa un código en lenguaje
+Dev 9,992 14,872 14,274
+Cypher.
+Test 9,947 14,872 14,274
+6. Paso5:Enestaetapa,seutilizalasalidadelmodelo Tabla1.Distribucióndelosconjuntosdedatosdel
+GPT-4paraserejecutadasobrelabasededatosNeo4J benchmarkMetaQA[DistributionofbenchmarkMetaQA
+objetivomediantelaherramientaKnowledgeBase. datasets].
+7. Paso6:Finalmente,seobtienelarespuestaprocedente
+Enesteestudiosoloseutilizaránlosdatosreferentesalos
+delabasededatosNeo4Jconlainformaciónsolicitada. conjuntosdeevaluación(Test)paracadaunodelosgrupos
+Conloanteriormenteexplicadoseexponeunejemplo especificados,yaqueelmodeloempleadoesungranmodelo
+decasodeusodondesetienencomoentradasalsistema delenguajemediantelatécnicazero-shot,porloquenoes
+unainstanciadeunabasededatosNeo4Jyunaconsulta necesariohacerunprocesodeentrenamientoalmismopara
+en lenguaje humano para obtener como salida final realizarlatareaencuestión.
+elconjuntodedatosextraídosdedichabasededatos Lasprincipalesmétricasdeevaluaciónutilizadasfueron
+objetivo correspondientes a la solicitud textual dada elnúmerodeconsultasquealsertraducidasaCypheryser
+sobreestos. ejecutadasejecutadassobrelabasedeconocimientodaban
+unarespuestaidénticaalarespuestaobjetivo(correct),así
+comoelporciertodedichasconsultasacertadas(correct%)
+3. Análisis Experimental
+sobre el total de consulta (n), número de consultas compi-
+Enestecapítulosepresentanlosmarcosexperimentales ladasconéxitoysuporcientocorrespondiente(compiled
+utilizadosparaevaluarlaefectividaddelsistemapropuestopa- ycompiled%respectivamente),algunasrelacionadascon
+ralatraduccióndeunaconsultaenlenguajenaturalallenguaje los recursos consumidos para el experimento como el cos-
+deconsultaformalCypher.Cadaenfoqueutilizadoconsistió tomonetatrio(cost(USD))yeltiempodeejecucióndela
+enelusodeunconjuntodetuplasqueconteníanencomún evaluaciónensegundos(elapsed_seconds).
+unaconsultaenlenguajenaturaldeejemploatraducirhacia También,secalculóeficaciadelmodeloconrespectoa
+unsegundoelementocorrespondienteconunobjetivoamedir cadatipodeconsultaenelconjuntodeevaluaciónymedidas
+enlatraducción. clásicascomolaprecisión,elrecobradoylamedidaF1para
+Todoslosexperimentosfueronejecutadosenunservidor evaluarlacalidaddelaextraccióndeinformación.Lamétrica
+privado virtual (VPS) con sistema operativo Ubuntu-20.04, correct% fue la utilizada para comparar el resultado del
+SánchezRamosR. CienciasMatemáticas,Vol.37,No.1,2024,Pag.61-68
+https://doi.org/10.5281/zenodo.14876950 https://revistas.uh.cu/rcm/article/view/9192
+66 ExtraccióndeconocimientomediantetraducciónautomatizadaaCypherconaprendizajezero-shot
+modeloempleadosobreotrosresultadosenelestadodelarte enbasesdedatoscomoNeo4J.
+[1]. Además, implícitamente, al evaluar la efectividad del Sinembargo,elmodeloexhibelimitacionessignificativas
+modelosobrelasconsultasdelosconjuntosdeevaluaciónde almanejarconsultasmáscomplejas.Mientrasqueenconsul-
+1-hop,2-hopy3-hop,seevalúalaeficaciadelmodelosobre tassencillas(1-hop)laprecisiónesdel76,53%,enconsultas
+consultas que requieren de una, dos y hasta tres relaciones máscomplejas(2-hopy3-hop)estaprecisióndisminuyedrás-
+deconexiónrespectivamenteparaencontrarlarespuestaala ticamentea43,45%y31,03%,respectivamente.Estoindica
+consulta. queaunqueGPT-4eseficazentraduccionessimples,suren-
+Paralapreparacióndelconjuntodedatosseinsertaronlos dimientosevecomprometidoenescenariosqueinvolucran
+elementoscorrespondientesalabasedeconocimientosenuna múltiplesrelacionesentreentidades.
+instanciadeNeo4J conayudadelcomponenteDBSeeder Además,seidentificaronvariasáreascríticasnoabordadas
+vistoenlasección.Luegosetomaronlosconjuntosdeprueba enelestudio,comolaincapacidaddelmodeloparamanejar
+(Test)para1-hop,2-hopy3-hopyparacadapardeevaluación consultas anidadas y funciones de agregación. Esto limita
+seejecutóelprocedimientodescritoenellistado2. su utilidad en análisis de datos más complejos. La falta de
+unanálisismultidominiotambiénplanteapreguntassobrela
+3.2 Resultados capacidaddegeneralizacióndelmodelo,unfactoresencial
+Losresultadosobtenidosparacadamétricaanalizadapara paradeterminarsueficaciaendiferentescontextosybasesde
+cadaconjuntodeevaluaciónsemuestranenlasiguientefigura: datos.
+EnlaTabla2semuestranlosresultadosdeeficaciadel Otro aspecto a mejorar es el formato básico de las res-
+modeloGPT-4paratraducirconsultasaCyphertalquepue- puestasgeneradas,quenosatisfacenecesidadesdeanálisis
+danserutilizadasparaextraerinformacióndelabasededatos dedatosmásdetalladoyavanzado.Además,seseñalaque
+objetivo.Enestecaso,unaconsultageneradaporelsistema eltamañolimitadodelesquemadelabasededatosutiliza-
+utilizado fue considerada eficaz si al ejecutar el código de danopusoapruebalacapacidaddelmodeloparamanejar
+Cyphersobrelabasededatoscorrespondiente,dichoresulta- esquemas más grandes, una limitación importante para su
+docoincideconlosdatosderespuestaesperadosasociados aplicaciónpráctica.
+acadapardelosconjuntosdeevaluación.Paraaquellascon- Apesardeestosdesafíos,elsistemadetraducciónpro-
+sultascuyocódigodeCyphercorrespondienterequeríadela puestosuperaalmodeloGPT-3enlatraduccióndelenguaje
+presenciadeunarelacionespecíficaentredosentidadesen naturalaCypherenelbenchmarkMetaQA,aunquetodavía
+cuestiónsetuvounrelevanteresultadodel76,53%deacierto. noalcanzalosmejoresresultadosenlaextraccióndeconoci-
+Porotrolado,aquellasconsultasquerequeríandelagenera- mientousandoCypher.
+cióndeunaconsultacondosyhastatresrelacionestuvieron Graciasalasmedidasdeprecisión,recobradoymedida
+comoresultadosunosdiscretos43,45%y31,03%respectiva- F1 utilizadas para evaluar la capacidad del modelo para la
+mente,loquenosindicaladeficienciadeestemodelopara extraccióndeinformación,considerandolosverdaderosposi-
+responderexpresionesenlenguajenaturalcomplejasquere- tivos,falsospositivosyfalsosnegativos,demuestranque,a
+quieranaccederalainformacióndemásunarelaciónentre pesardenoobtenertodoslosresultadosesperadosenciertas
+dosentesdelabasededatosenformadegrafo. consultas,esimportanteentenderladistanciaentrelarespues-
+Esimportanteresaltardelosresultadosanterioreslaefec- tadadaylaesperada.
+tividaddelsistemaparagenerarconsultasdeCyphercompila- Finalmente, es evidente que la eficacia del modelo dis-
+bles,dondeparacadalotedeevaluaciónseobtuvieronvalores minuyeconelaumentodelacomplejidaddelasconsultas,
+sobreel92%,loqueconfirmaquesetuvoéxitoenlainmensa especialmenteenaquellasquerequierenlaprediccióncorrec-
+mayoríadelasvecesqueelmodelotratódetraducirlaconsul- tadelasdireccionesderelacionesentreunmayornúmerode
+tainicialenlenguajenaturalasolamenteuntextoconteniendo entidades.Esteestudiodejaclaroque,mientrasqueelusode
+uncódigodeCypher.Enloscasosdondedichosucesonofue unGranModelodeLenguajeconlatécnicadeaprendizaje
+posible,sedebióprincipalmenteaqueelmodelogeneróun zero-shotmuestraunaeficiencianotableenciertosaspectos,
+textoadicionaldescribiendolaconsulta,ofrecíamásdeuna aúnhayuncaminoconsiderableporrecorrerparamejorarsu
+consultaosimplementehabíaunerrorsintácticoenelcódigo. rendimientoenescenariosmáscomplejosyvariados.
+Conclusiones Recomendaciones
+DespuésdeaplicarGPT-4paralatraduccióndeconsul- Para futuros trabajos relacionados con la aplicación de
+tasallenguajeCyphermedianteaprendizajezero-shot,este grandesmodelosdelenguajesenlatraduccióndeconsultas
+estudiopresentaconclusionesrelevantestantoentérminosde enlenguajenaturalaCypher parainteractuarconunabase
+fortalezascomodedeficiencias.Destacalaeficienciadelmo- deconocimientos,sesugierenalgunasdireccionesclave.Es
+deloengenerarcódigoCyphercompilable,conundestacable crucialperfeccionarlacomprensióndeconsultascomplejas,
+92%deéxitoenlaspruebas,loquesubrayasucompetencia incluyendolasqueinvolucranmúltiplesrelacionesyfuncio-
+enlacreacióndeconsultassinerroressintácticososemánti- nesdeagregación,paramejorarlaprecisiónyversatilidaddel
+cos.Estaaltaprecisiónescrucialparasuaplicaciónpráctica modelo.Además,ampliarelesquemadelabasededatosy
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.61-68 SánchezRamosR.
+https://revistas.uh.cu/rcm/article/view/9192 https://doi.org/10.5281/zenodo.14876950
+ExtraccióndeconocimientomediantetraducciónautomatizadaaCypherconaprendizajezero-shot 67
+n compiled correct compiled% correct%
+hop1 9947 9386 7613 94.36 76.53
+hop2 14872 13733 6462 92.34 43.45
+hop3 14274 13221 4430 92.62 31.03
+Tabla2.ResultadosdeejecutarGPT-4enlosconjuntosdedatosdepruebadeMetaQAparahop1,hop2yhop3[Resultsof
+runningGPT-4ontheMetaQAtestdatasetsforhop1,hop2andhop3].
+Método 1-hop 2-hop 3-hop
+SOTA 97.50 98.80 94.80
+zero-shot 24.75 6.37 9.72
+zero-shot-cot 18.41 12.86 21.89
+zero-shot+graph 91.69 46.82 19.40
+zero-shot-cot+graph 86.16 47.36 19.29
+zero-shot+graph+change-order 95.20 40.48 20.17
+zero-shot-cot+graph+change-order 95.87 47.71 23.95
+zero-shotCypherGeneration 30.00 10.00 13.00
+GPT-4zero-shotCypherGeneration 76.53 43.45 31.03
+one-shotCypherGeneration 99.00 77.00 96.00
+Tabla3.ComparacióndelosresultadosdeotrosmodelosrespectoalbenchmarkMetaQA[Comparisonoftheresultsofother
+modelswithrespecttothebenchmarkMetaQA].
+realizarpruebasenmúltiplesdominiospodríaproporcionar demisinvestigaciones,independientementedelosintereses
+unaevaluaciónmásrobustadelacapacidaddegeneralización comercialesdelaempresafinanciadora.
+del modelo. Finalmente, se recomienda mejorar el análisis
+ymanejodelasestadísticasrelacionadasconlasrespuestas
+Referencias
+incorrectasparaafinarlaprecisióndelastraduccionesgenera-
+[1] AI,Nomic:GPT4All. https://nomic-ai.com/,
+das.
+2023. https://nomic-ai.com/, Accedido el:
+12/13/2023.
+Agradecimientos
+[2] Alpaca: Alpaca-Lora. https://alpaca.com/,
+QuisieraexpresarmisinceroagradecimientoaNataSquad
+2023. https://alpaca.com/, Accedido el:
+porsuinvaluableapoyoeneldesarrollodeesteproyecto.Su
+12/13/2023.
+contribuciónnosolofuefundamentalentérminosfinancieros,
+sinoquetambiénfacilitaronelaccesoarecursosdecómpu-
+[3] Archive,Web:Creacióndeunabasedeconocimiento.
+toesencialesquefueroncrucialesparalarealizacióndelos
+https://lc.cx/T9w20p, 2023. https://lc
+experimentos.Además,agradezcoespecialmenteporproveer
+.cx/T9w20p.
+unaclavedelaAPIdeOpenAI,locualmepermitiórealizar
+pruebas efectivas con el modelo GPT-4, enriqueciendo sig- [4] Bazaga, A., N. Gunwant y G. Micklem: Translating
+nificativamente los resultados de nuestra investigación. Su syntheticnaturallanguagetodatabasequerieswitha
+apoyohasidoesencialparaalcanzarlosobjetivosplanteados polyglotdeeplearningframework. ScientificReports,
+yavanzarenestecampodeestudio. 11:18462, 2021. https://doi.org/10.1038/
+s41598-021-98019-3.
+Suplementos
+[5] Bui,N.D.Q.,H.Le,Y.Wang,J.Li,A.D.Gotmarey
+Esteartículonocontieneinformaciónsuplementaria. S.C.H.Hoi:CodeTF:One-stopTransformerLibrary
+forState-of-the-artCodeLLM,2023. https://doi.
+org/10.48550/arXiv.2306.00029,Accedido
+Conflictos de interés
+el:05dediciembre,2023.
+DeclaroqueherecibidofinanciacióndeNataSquadparala
+realizacióndeestetrabajo.Estafinanciaciónincluyóelacceso [6] Deng,N.,Y.ChenyY.Zhang:RecentAdvancesinText-
+arecursosdecómputonecesariosyunaclavedelaAPI de to-SQL:ASurveyofWhatWeHaveandWhatWeExpect.
+OpenAIpararealizarpruebasconelmodeloGPT-4.Aunque EnProceedingsofthe29thInternationalConferenceon
+este apoyo ha sido esencial para el desarrollo y ejecución ComputationalLinguistics,páginas2166–2187,Online,
+del proyecto, he tomado todas las medidas necesarias para October2022. https://aclanthology.org/2
+asegurarquelosresultadospresentadosseanelreflejoobjetivo 022.coling-1.190.pdf, Presented at the 29th
+SánchezRamosR. CienciasMatemáticas,Vol.37,No.1,2024,Pag.61-68
+https://doi.org/10.5281/zenodo.14876950 https://revistas.uh.cu/rcm/article/view/9192
+68 ExtraccióndeconocimientomediantetraducciónautomatizadaaCypherconaprendizajezero-shot
+InternationalConferenceonComputationalLinguistics, [16] Site,Neo4JOfficial:Neo4JGraphDatabase:Themos-
+October12-17,2022. tedtrusteddatabaseforintelligentapplications. http
+s://neo4j.com/product/neo4j-graph-d
+[7] GenAI, Meta: Llama 2: Open Foundation and Fine-
+atabase/, 2023. https://neo4j.com/prod
+Tuned Chat Models. Informe técnico, Simons Foun-
+uct/neo4j-graph-database/.
+dation,memberinstitutions,2023. https://arxiv.
+org/abs/2307.09288.
+[17] Site, Neo4J Official: Query a Neo4J Database using
+[8] Huang,L.,W.Yu,W.Ma,W.Zhong,Z.Feng,H.Wang, Cypher. https://neo4j.com/docs/getti
+Q.Chen,W.Peng,X.Feng,B.QinyT.Liu:ASurvey ng-started/cypher-intro/, 2023. https:
+onHallucinationinLargeLanguageModels:Principles, //neo4j.com/docs/getting-started/cyp
+Taxonomy,Challenges,andOpenQuestions. arXivpre- her-intro/.
+printarXiv:2311.05232,2023. https://arxiv.or
+[18] Sun,R.,S.Ã.Arik,H.Nakhost,H.Dai,R.Sinha,P.Yin
+g/abs/2311.05232.
+yT.Pfister:SQL-PaLM:ImprovedLargeLanguageMo-
+[9] Humza,N.,U.K.Asad,Q.Shi,S.Muhammad,A.Saeed, delAdaptationforText-to-SQL. ArXiv,abs/2306.00739,
+U. Muhammad, A. Naveed, B. Nick y M. Ajmal: A 2023. https://arxiv.org/abs/2306.00739.
+Comprehensive Overview of Large Language Models.
+ArXiv, 2023. https://arxiv.org/pdf/2307 [19] Vicuna:Vicuna7b. https://vicuna.com/,2023.
+.06435.pdf. https://vicuna.com/,Accedidoel:12/13/2023.
+[10] insights,SAP:¿Quéesel¿modeladodedatos? https:
+[20] Wayne,X.Z.,Z.Kun,L.Junyi,T.Tianyi,W.Xiaolei,H.
+//www.sap.com/latinamerica/products/
+Yupeng,M.Yingqian,Z.Beichen,Z.Junjie,D.Zican,
+technology-platform/datasphere/wha
+D. Yifan, Y. Chen, C. Yushuo, C. Zhipeng, J. Jinhao,
+t-is-data-modeling.html, 2023. https:
+R.Ruiyang,L.Yifan,T.Xinyu,L.Zikang,L.Peiyu,N.
+//www.sap.com/latinamerica/products/
+Jian-Yun y W. Ji-Rong: A Survey of Large Language
+technology-platform/datasphere/wha
+Models. ArXiv,2023. https://arxiv.org/pdf/
+t-is-data-modeling.html.
+2307.06435.pdf.
+[11] Li,P.,T.Sun,Q.Tang,H.Yan,Y.Wu,X.HuangyX.
+[21] Website,IBMOfficial:Lenguajedeconsultaestructu-
+Qiu: Large Code Generation Models are Better Few-
+rada(SQL). https://n9.cl/lenguajeconsul
+ShotInformationExtractors. EnProceedingsofthe61st
+ta, 2023. https://n9.cl/lenguajeconsul
+AnnualMeetingoftheAssociationforComputational
+ta.
+Linguistics, volumen 1, páginas 15339–15353, Asso-
+ciationforComputationalLinguistics,2023. https:
+[22] Wikipedia: Graph database. https://n9.cl/n7
+//aclanthology.org/2023.acl-long.855.
+atf,2023. https://n9.cl/n7atf.
+pdf,Accedidoel:05dediciembre,2023.
+[12] Liu, A., X. Hu, L. Wen y P. S. Yu: A Comprehensi- [23] Yuyu,Z.,D.Hanjun,K.Zornitsa,J.S.AlexanderyS.
+ve Evaluation of Chat-GPTâs Zero-Shot Text-to-SQL Le:VariationalReasoningforQuestionAnsweringwith
+Capability. ArXiv, abs/2303.13547, 2023. https: Knowledge Graph. En Proceedings of the 31st AAAI
+//arxiv.org/abs/2303.13547. Conference on Artificial Intelligence, 2017. https:
+//arxiv.org/abs/1709.04071.
+[13] MAPFRE,Fundación:¿Cuántainformaciónsegeneray
+almacenaenelmundo? https://lc.cx/1pCjng,
+2023. https://lc.cx/1pCjng.
+[14] OpenAI:GPT-4TechnicalReport. Informetécnico,Si-
+monsFoundation,memberinstitutions,2023. https:
+//arxiv.org/abs/2303.08774.
+[15] Parkhi,O.M.,S.M.Ali,M.ElgammalyC.K.I.Wi-
+lliams:Zero-ShotLearning-AComprehensiveEvalua-
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+tionoftheGood,theBadandtheUgly. ArXiv,2017.
+SinDerivadas 4.0 Internacional”.
+https://arxiv.org/pdf/1707.00600.pdf.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.61-68 SánchezRamosR.
+https://revistas.uh.cu/rcm/article/view/9192 https://doi.org/10.5281/zenodo.14876950
+1

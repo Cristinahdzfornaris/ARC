@@ -1,0 +1,560 @@
+CienciasMatema´ticas,Vol.30,No.1,Pag.85-94,2016
+Recibido06-2016
+Resolucio´n con el Me´todo de Elementos Finitos del
+problema de cavidad con pared mo´vil.
+Finite Element solution of the lid-driven cavity
+problem
+Dayron Chang Dominguez1*, Jose´ Enrique Alvarez Iglesias2
+Resumen El problema “lid-driven cavity” (cavidad con tapa impulsada) es un problema de la f´ısica de los
+fluidosquesepuedeplantearcomounsistemadeecuacionesdeStokesparafluidosincompresibles.Estas
+ecuacionessonclasificadascomoel´ıpticas.Esconocidoqueelme´tododeelementosfinitosesbienutilizado
+paralaresolucio´ndeestetipodeecuaciones.Eneltrabajosededucira´ laformulacio´nde´bildeesteproblema,se
+mostrara´ subuenplanteamientoysepresentara´ elalgoritmodeUzawaparasuimplementacio´nenFreeFem++.
+Alfinalsepresentanresultadosobtenidos.
+Abstract The“lid-drivencavity” problemisafluidsphysicsproblemthatcanbemodelledwithStokesequation
+system for incompressible fluids. These equations are of the elliptic type and is well known that for those
+equationsthefiniteelementsmethodiswidelyusedtosolvethem. Inthispaperwededucetheweakformulation
+of the problem, we show the well-posedness of it and we give the implementation of the Uzawa algorithm in
+FreeFem++. Attheandwepresentsomeresults.
+PalabrasClave
+ElementosFinitos—EcuacionesDiferenciales—EcuacionesdeStokes—F´ısicadelosfluidos
+1CentrodeMeteorolog´ıaAgr´ıcola,InstitutodeMeteorolog´ıadeCuba,LaHabana,Cuba,dayron.chang@insmet.cu
+2DepartamentodeSoftware,SIMPRO,LaHabana,Cuba,ee2@mitsa.cu
+Introduction 0.1 Lid-DrivenCavitycomoproblemadeStokes
+Elproblema“lid-drivencavity”(cavidadcontapaimpul- ElsistemaestacionariodeStokesmodelaelflujodeun
+sada)esunproblemaderivadodelproblemacla´sicodeStokes fluidoincompresibleconpocavelocidad.SeaΩ,unconjunto
+parafluidosincompresiblesconciertascondicionesdefronte- abiertodeRd,eldominioqueocupaelfluidoyg D laadheren-
+raespec´ıfica[8][6][11][3].Setratadeunacavidadcuadrada ciaalasfronteras(Sig D =0implicaquelavelocidadescero
+llenadeunfluidoincompresibledeviscosidadµ,porloque enlafrontera)loqueimponecondicionesdefronterasdeDi-
+sepuededefinirenundominioΩ=]0,1[2 paraelcampode richlet.Bajolaaccio´ndeunafuerza f(x)∈Rd seconsideran
+velocidadyladistribucio´ndelapresio´nenlacavidad(Figura lavelocidadu(x)(vectorial)ylapresio´n p(x)(escalar)como
+1). lassolucionesdelproblemasdevaloresdefrontera:
+Lacavidadposeetresladosquesonparedesnoresbala-
+dizasconcomponentesdevelocidadu 1 =u 2 =0yelotroes  ∇p−µ∆u= f, Ω
+unatapaconu1=1,u
+2
+=0.Dentrodelacavidadsecrearun 
+flujoparecidoaunremolinoynoexistenfuerzasadicionales (P Stokes ) ∇·u=0, Ω (1)
+actuando.Elobjetivoescomputarelcampodevelocidadyla
+u=g
+D , ∂Ω
+distribucio´ndelapresio´nenlacavidad.
+En las siguientes secciones se planteara´ el sistema de
+donde µ >0eselpara´metrodeviscosidaddelfluido.Ala
+ecuacionesdeStokesparamodelarelproblema“lid-driven
+primeraecuacio´nde(1)selellamaecuacio´ndeconservacio´n
+cavity”. Luego se deduce su forma variacional llegando a
+de momentum y a la segunda ecuacio´n de conservacio´n de
+su formulacio´n de´bil. Se demuestra el buen planteamiento
+masaqueimponelacondicio´ndeincompresibilidadalfluido.
+delproblemadepuntodeensilladuraobtenidoyseaplicael
+me´tododeelementosfinitosmostrandoadema´selalgoritmo Elplanteamientodelproblema“lid-drivencavity”sedi-
+deUzawacomounaalternativaiterativa.Alfinalseexponen ferenciade(1)solamenteenquesesuprimelafuncio´n f yen
+losresultadosobtenidospormediodelaimplementacio´nen ladefinicio´ndelafuncio´ng deacuerdoalcomportamiento
+D
+elsoftwareFreeFem++. delosvaloresdelafrontera.
+86 Resolucio´nconelMe´tododeElementosFinitosdelproblemadecavidadconparedmo´vil.
+Figura2.Lagra´ficamuestraelvalorde(cid:107)∇u(cid:107)
+L2
+dondese
+aprecianlassingularidadesprovocadasporlanoregularidad
+delascondicionesdefrontera.
+osea,noexistefuncio´nu∈H1(Ω)talqueg seaeloperador
+Figura1.Lagra´ficamuestraelcampodevelocidadesy D
+traza(trace)sobrelafrontera.
+distribucio´ndelapresio´ncorrespondientealasolucio´ndel
+Portalmotivolasolucio´nresultantedelme´tododeele-
+problema“lid-drivencavity”corridaconFreeFem++[7].
+mentosfinitosconvergeavaloresquenopertenecenaH1(Ω)
+yelproblemaP noadmitesolucionesenH1(Ω)apesar
+LDC0
+SeanΩ=]0,1[2yΓ:=]0,1[×{0},entonces dequeelproblemadiscretoseencuentrabienplanteado.
+ 1.1 Formulacio´nvariacional
+∇p−µ∆u=0, Ω
+
+Laformulacio´nvariacionaltienecomoobjetivoobtener
+(P LDC0 ) ∇·u=0, Ω (2)
+otroplanteamientodelmismoproblemaquereduzcalasexi-
+u=g
+, ∂Ω
+D genciasdelplanteamientooriginal.Alaformulacio´ndelpro-
+blemaoriginalselellamaformulacio´nfuerteyalaformu-
+siendo
+lacio´nvariacionalselellamaformulacio´nde´bil.Enelcaso
+(cid:40) del problema de Stokes la formulacio´n variacional permite
+0, Six ∈ Γ,
+g (x)= (3) trabajar con funciones de clase C1 en vez de funciones de
+D
+1, Six ∈ ∂Ω\Γ. claseC2.
+Paratratarlascondicionesdefronteraen“lid-drivencavity”
+secambianlascondicionesdefronteradeDirichletporlas
+1. Ana´lisis del problema P
+LDC0
+condiciones de frontera mixtas de Robin. El problema se
+Elinconvenientequetieneelproblema“lid-drivencavity” puedereplantearcomo
+radicaenquelascondicionesdefronteraimpuestasnoson
+regulares.Precisamenteladefinicio´ndeg indicaqueenla
+D 
+coordenada(0,0)existaunadiscontinuidadporsaltodelvalor  ∇p−µ∆u=0, Ω
+0alvalor1aligualqueenlacoordenada(0,1)delvalor1a (P LDCe ) ∇·u=0, Ω (5)
+0.loscualessignificansingularidadesimportantes. −p →− n +∇u· →− n +1u= 1g , ∂Ω
+e e D
+Talessaltosprovocanqueelgradientedeutengauncom-
+portamiento singular de forma local (Figura 2). Por tanto diferencia´ndosedelproblema(3)enlaecuacio´nqueimpo-
+parapodersolucionarelproblemaP LDC0 esnecesariorealizar nelascondicionesdefronteradondeeesunnu´meropositivo
+untratamientonume´ricoalascondicionesdefronterapara pequen˜o.Delamismasepuedeapreciarcomo−pI+∇umo-
+manejarestassingularidadescorrectamente. delaelflujototalysiselemultiplicaporlanormal(−p →− n +
+Comoconsecuencia,lacondicio´ndefronteradeDirichlet ∇u· →− n)setieneelflujonormalenlafrontera.
+1
+g D nopertenecealespacioH2(∂Ω)luegonoexisteunafun- CuandoseimponencondicionesdefronteradeNeumann
+cio´nliftasociadaalascondicionesdefronteraquepertenez- solamente,seobligaalmodeloaquelavelocidaddelosflujos
+caaH1(Ω).SiR 0 sedefinecomoeloperadorlift entonces seaceroenlafronteramientrasqueimponercondicionesde
+(cid:64)u∈H1(Ω)talque
+Dirichletsolamente,prefijanlosvaloresdelcampodevelo-
+R u=g (4) cidadesenlafrontera.LascondicionesdeRobinsonmixtas
+0 D
+Resolucio´nconelMe´tododeElementosFinitosdelproblemadecavidadconparedmo´vil. 87
+precisamenteporquepormediodeellassepuedebalancear Laformade´bildelaecuacio´ndemomentumqueda
+losdostiposmencionadospormediodelpara´metro 1.
+→− e (cid:90) →− (cid:90)
+Hay que sen˜alar que el te´rmino −pn fue agregado de (v· n)p− (∇·v)p (11)
+maneraconveniente.Enefecto,cuandosederivalaformava- ∂Ω Ω
+→− (cid:90) (cid:90) →−
+riacionaldeP LDCe ,sinconsiderarelte´rmino−pn,seobtiene +µ ∇u:∇v− (∇u· n)v=0 (12)
+unte´rminointegraldefinidosobrelafronteraelcualnopuede Ω ∂Ω
+ser controlado impidiendo que el problema este´ bien plan- Laecuacio´ndeincompresibilidadesmultiplicadaporuna
+teado.Haciendoestaagregacio´nselogracancelarelreferido q∈Qeintegrada
+te´rminoyseobtieneunaformavariacionalbienplanteada. (cid:90)
+(∇·u)q=0 (13)
+Para obtener la formulacio´n de´bil de este problema se
+Ω
+multiplicalaecuacio´ndemomentumporunafuncio´nvque Encuantoalascondicionesdefrontera,estastambie´nson
+pertenece a un cierto espacio de prueba y la ecuacio´n de multiplicadasporlafuncio´ndepruebav∈V eintegradas:
+incompresibilidaddelfluidoporotrafuncio´ndepruebaqen
+otroespacio.Delacorrectaeleccio´ndeestosespaciosdepende
+(cid:90)
+→−
+(cid:90) 1(cid:90) 1(cid:90)
+− (p· n)v+ (∇u·n)v+ uv= g v (14)
+D
+quelaformulacio´nvariacionaleste´bienplanteada(queexista ∂Ω ∂Ω e ∂Ω e ∂Ω
+solucio´n u´nica (u,p) y esta dependa continuamente de los
+En la ecuacio´n de momentum se ten´ıa el inconveniente
+datosdelproblema). (cid:82) →−
+dequeelte´rmino (v· n)pnopod´ıasercontrolado.Gra-
+∂Ω →−
+cias a que se agrego´ el te´rmino −pn a las condiciones de
+1.2 Espaciosdefunciones
+frontera,luegodeobtenersuformavariacionalseobtuvoel
+Seguidamentesedefinenlosespaciosdefuncionessobre (cid:82) →−
+te´rmino− (p· n)velcualseanulaconeldelaecuacio´n
+losquesetrabajara´posteriormenteyalgunasdesuspropieda- ∂Ω
+demomentum.
+des.Losespaciosdefuncionesparalavelocidadylapresio´n
+Entoncessumando(11)-(12)con(14)seobtiene:
+sonlossiguientes:
+(cid:90) (cid:90) 1(cid:90) 1(cid:90)
+V = (cid:110) v∈H1(Ω):Ω∈Rd (cid:111) (6) µ ∇u:∇v− (∇·v)p+ e uv= e g D v (15)
+Ω Ω ∂Ω ∂Ω
+(cid:110) (cid:111) Luego de haber realizado el ana´lisis anterior se puede
+Q= q∈L2(Ω):Ω∈Rd (7)
+0 escribirlaformavariacionaldelproblemaP como
+LDCe
+EsescogidoelespacioH1paralafuncio´ndepruebavlocual Encontraru∈V y p∈Qtalque:
+ayudara´ ademostrarelbuenplanteamientodelproblema.  (cid:82) (cid:82)
+µ ∇u:∇v − (∇·v)p
+Para el caso de la presio´n p, esta se encuentra presente  Ω +1 Ω (cid:82) uv= 1(cid:82) g v ,v∈H1(Ω)
+en la ecuacio´n de momentum solo como ∇p. Esto tiene el  (cid:82) e (∇ ∂Ω ·u)q= e 0 ∂Ω D ,q∈L2(Ω)
+inconvenientedequesiacualquiersolucio´nobtenida psele Ω 0
+agregaunaconstanteentonceselresultadotambie´nsera´ una Tambie´nsepuedeplantearelproblemacomoformasli-
+solucio´nva´lidaporloquesepierdelaunicidad. nealesybilineales:
+Porestarazo´nselehaimpuestolarestriccio´ndevalorde Encontraru∈V y p∈Qtalque:
+mediacero(1/|Ω| (cid:82) p1=0)utilizandoelespacioL2(Ω)en
+Ω 0 (cid:26)
+vezdeL2(Ω)locualgarantizalaunicidaddelasolucio´n. µa(u,v)+b(v,p)+c(u,v)=l(g D ,v), ∀v∈V
+b(u,q)=0, ∀q∈Q
+1.3 Formade´bilparaelproblemaP
+LDCe  (cid:82)
+a(u,v)= ∇u·∇v
+Tomemos la ecuacio´n de momentum ∇p−µ∆u=0 y 
+b(u,q)=
+(cid:82)
+Ω
+(∇·u)q
+multiplica´ndolaporunafuncio´nv∈V seobtiene: Ω
+c(u,v)=
+1(cid:82)
+uv
+(cid:90) ∇p·v−µ (cid:90) ∆u·v=0 (8)  l(g D ,v)= e 1 e (cid:82) ∂ ∂ Ω Ω g D v
+Ω Ω
+Tambie´n se puede resumir en dos formas variacionales
+(cid:82)
+Paralaintegracio´nporpartesdelte´rmino ∆u·vseutilizo´ grandes:
+Ω
+lafo´rmuladeGreen. encontrar(u,p)∈V×Qtalque:
+(cid:90) (cid:90) (cid:90)
+→− (cid:8)
+∆u·v=− ∇u·∇v+ (∇u· n)v (9) B((u,p),(v,q))=F((g D ,v)),∀(v,p)∈V×Q
+Ω Ω ∂Ω
+donde∇u·∇v=∑d
+i=1
+∇u
+i
+·∇v
+i
+y →− n eselvectornormaluni- conlasformasbilineales
+(cid:82) (cid:26)
+tario.Paralaintegracio´nporpartesdelte´rmino ∇p·vse B((u,p),(v,q)) =µa(u,v)+b(v,p)+b(u,q)+c(u,v)
+Ω
+utilizo´ lafo´rmuladeStokes[1]quedando F((g ,v)) =l(g ,v)
+D D
+(cid:90) (cid:90) (cid:90)
+→− La pro´xima seccio´n presentara´ una demostracio´n del buen
+∇p·v=− (∇·v)p+ (p· n)v (10)
+Ω Ω ∂Ω planteamientodelaformulacio´ndelproblemaP LDCe .
+88 Resolucio´nconelMe´tododeElementosFinitosdelproblemadecavidadconparedmo´vil.
+2. Buen planteamiento del problema 1. (A(u,u)(cid:62)0yA(u,u)=0⇔u≡0).Sepuedeapreciar
+fa´cilmentequeA(u,u)= (cid:82) |∇u|2+1(cid:82) |u|2(cid:62)0.Si
+Ω e ∂Ω
+Estetipodeplanteamientoesllamadopuntodeensilladura
+A(u,u)=0entonces,dadoa(u,v)setienequeuesta´
+(saddlepointproblem).Normalmentenoesposibleemplear
+obligadoaserunaconstanteporelte´rmino∇uycomo
+elteoremadeLax-Milgram([9],lema7.3)deformageneral c(u,v)∈L2(∂Ω)seobtienequeuadema´stienequeser
+0
+parademostrarelbuenplanteamientodeeste.
+0.
+Estoesdebidoaquelaformabilinealb(v,p)nopuedeser
+coercivadebidoaquevy ppertenecenaespaciosdiferentes. 2. (A(u,v)=A(v,u)).Haciendousodelaspropiedadesde
+Este es un problema t´ıpico de los problemas de punto de laintegral:
+ensilladura.
+(cid:90) 1(cid:90)
+ApesardequeelteoremadeLax-Milgramnosepuede A(u,v)= ∇u·∇v+ uv
+aplicar para toda la fo´rmula, se puede aplicar a las formas Ω e ∂Ω
+a(u,v),c(u,v)yl(g ,v)cuyasvariablespertenecenalespacio
+(cid:90) 1(cid:90)
+D = ∇v·∇u+ vu
+V. Ω e ∂Ω
+=A(v,u)=A(v,u)
+Continuidaddelaformalineall(g ,v)
+D
+Teorema1 (DesigualdaddeloperadorTraza).SeaΩ⊂R2 3. (A(αu,v)=αA(u,v)).
+undominioconunafrontera∂Ωpoligonalsuaveopoligo-
+nal. Entonces existe una constanteC=C(Ω) tal que para (cid:90) 1(cid:90)
+A(αu,v)= α∇u·∇v+ αuv
+cualquierv∈V, e
+Ω ∂Ω
+(cid:90) α (cid:90)
+(cid:16) (cid:17)1/2
+=α ∇u·∇v+ uv
+(cid:107)v(cid:107) (cid:54)C (cid:107)v(cid:107)2 +(cid:107)∇v(cid:107)2 (16) Ω e ∂Ω
+L2(∂Ω) L2(Ω) L2(Ω) (cid:18) (cid:19)
+1
+=α a(u,v)+ c(u,v)
+e
+=αA(u,v)
+Primeramentesedemostrara´ quelaformalineall(g ,v)
+D
+escontinua,locualesposibledemostrarutilizandoladesigual-
+4. (A(u+v,z)=A(u,z)+A(v,z))
+daddeCauchy-Schwarz,luegoladesigualdaddeloperador
+Traza(Teorema1)yfinalmenteladesigualdaddePoincare´. (cid:90) 1(cid:90)
+A(u+v,z)= ∇(u+v)·∇z+ (u+v)z
+e
+l(g ,v) =l(g ,v) (17) Ω ∂Ω
+D L2(∂Ω) D L2(∂Ω) (cid:90) 1(cid:90)
+(cid:54)(cid:107)g D (cid:107) L2(∂Ω) (cid:107)v(cid:107) L2(∂Ω) (18) = Ω [∇u·∇z+∇v·∇z]+ e ∂Ω uz+vz
+(cid:16) (cid:17) (cid:20)(cid:90) 1(cid:90) (cid:21)
+(cid:54)C 1 (cid:107)g D (cid:107) L2(∂Ω) (cid:107)v(cid:107) L2(Ω) +(cid:107)∇v(cid:107) L2(Ω) = ∇u·∇z+ uz
+e
+Ω ∂Ω
+(19)
+(cid:20)(cid:90) 1(cid:90) (cid:21)
+(cid:54)C (cid:107)g (cid:107) (cid:107)∇v(cid:107) (20) + ∇v·∇z+ vz
+2 D L2(∂Ω) L2(Ω)
+Ω
+e
+∂Ω
+(cid:54)C 2 (cid:107)g D (cid:107) L2(∂Ω) (cid:107)v(cid:107) H1(Ω) (21) =A(u,z)+A(v,z)
+=C (cid:107)v(cid:107) (22)
+3 H1(Ω)
+EntonceselespacioV puedeserequipadoconelproducto
+ContinuidadycoercividaddelaformabilinealA(u,v) internoA(u,v)segu´nlaproposicio´n1.Comoconsecuencia
+deestosetienelanorma:
+Parademostrarlacontinuidadycoercividaddelasformas
+bilineales a(u,v) y c(u,v) se definio´ una nueva gran forma
+(cid:18)(cid:90) 1(cid:90) (cid:19)1/2
+bilineal (cid:107)v(cid:107) = |∇v|2+ |u|2 (24)
+V
+1 Ω e ∂Ω
+A(u,v)=a(u,v)+ c(u,v) (23)
+e
+Laeleccio´ndeestanormaesconvenienteparademostrar
+la cual es la suma de ambas. De hecho esta forma es un
+quelaformabilinealA(u,v)escontinuaycoerciva.
+productoescalarsobreH1(Ω).
+A(u,v)escontinuasiexisteλ >0talque
+Proposicio´n1 LaformabilinealA(u,v)esunproductoesca- |A(u,v)|(cid:54)λ (cid:107)u(cid:107) (cid:107)v(cid:107) ,∀u,v∈V (25)
+V V
+larsobreV.
+peroestaesprecisamentelaaplicacio´ndeladesigualdadde
+Demostracio´n1 Paratodox,y∈V yα∈Rlaformabilineal Cauchy-SchwarzaA(u,v)porloquesesatisfacelacondicio´n
+A(u,v):V×V →Rcumplecon: decontinuidad.
+Resolucio´nconelMe´tododeElementosFinitosdelproblemadecavidadconparedmo´vil. 89
+ParaqueA(u,v)seacoerciva(el´ıptica)tienequeexistir presentara´ elme´tododeelementosfinitosparaelproblema
+σ >0talque P usandoFreeFem++elcual,pormediodelme´todode
+LDC0
+laspenalizaciones,sera´capazdecomputarlasolucio´ndeeste
+A(u,u)(cid:62)σ (cid:107)u(cid:107)2 ,∀u∈V (26)
+V problemano-homoge´neo.
+precisamenteA(u,u)=(cid:107)u(cid:107)2 porloquelacondicio´ndecoer-
+V
+cividadsesatisfaceparaσ =1.
+Aplicacio´ndelteoremadeLax-Milgram 3. Aproximacio´n de elementos finitos
+SiendoV unespaciodeHilbertyhabiendodemostrado
+lacontinuidadycoercividaddelaformabilinealA(u,v)yla Con el objetivo de formular un me´todo nume´rico para
+continuidaddelaformalineall(g D ,v)entoncessecumplen P LDC0 vamos a considerarV h y Q h dos espacios de polino-
+las hipo´tesis del teorema de Lax-Milgram (teorema 2) por miosqueaproximanV yQ.Entoncespodemosconsiderarla
+medio del cual de demuestra la existencia y unicidad de la siguienteaproximacio´nde(1.3);
+solucio´nparaelcampodevelocidadesu. Encontraru ∈V y p ∈Q talque
+h h h h
+Teorema2 (Teorema de Lax-Milgram). Sea H un espacio
+deHilbert,a(.,.)unaformabilinealyl(.)unaformalineal µa(u ,v)+b(v,p )=0, ∀v∈V
+h h h (29)
+sobreH.Asumiendoquea(.,.)escontinuaycoerciva,yl(.) b(u ,q)=0, ∀q∈Q
+h h
+continua,entonceselproblemaabstracto
+Encontraru∈H talque
+a(u,v)=l(v), ∀v∈H (27) 3.1 Representacio´nmatricial
+Sitomamoslosconjuntosdefunciones{ϕ}ny{χ}mco-
+admiteunasolucio´nu´nica. i 1 i 1
+mobasesparaV yQ respectivamenteei=1,...,n;entonces
+h h
+podemosrepresentar
+Laformabilinealb(v,p)ylacondicio´nInf-Sup
+Comoyasehareferidoanteriormente,laformabilineal
+b(v,p)nopuedesercoercivaporloquenosepuedeaplicar n
+u = ∑ξ ϕ (30)
+elteoremadeLax-Milgramparademostrarsubuenplantea- h j j
+j=1
+miento.Portalmotivoesnecesariorecurriraotrorecursoma-
+m
+tema´tico,lacondicio´ndeBabus˘ka-BrezzioLadyshenskaya- p = ∑η χ (31)
+h j j
+Babus˘ka-Brezziconocidocomocondicio´nInf-Sup.
+j=1
+Estacondicio´nparanuestroproblemaseescribe:
+(cid:82) p(∇·v) Sustituyendoena(·,·):
+sup Ω (cid:62)β (cid:107)p(cid:107) , ∀p∈L2(Ω) (28)
+(cid:107)v(cid:107) L2 0
+v∈H1(Ω) H1
+(cid:90)
+La demostracio´n de esta condicio´n tiene un alto nivel a(u h ,v) = ∇u h (x)·∇v(x)dx (32)
+Ω
+te´cnicoporloqueesteart´ıculosolamentedara´ laideadela (cid:90)
+demostracio´nyreferenciasparaaquellosquenecesitenpro- = ∇u h (x)·∇ϕ i (x)dx (33)
+Ω
+fundizarenlosdetalles.Laideaesutilizarelsiguientelema (cid:32) (cid:33)
+c p o o m re o l b e a s s p e ac d i e o l e a n de e m lq o u s e tra e c s i t o a ´ m ns o u s s t t r i a tu b y a e ja n n d d o o el V e ≡ spa H ci 1 o (Ω H ) 0 1 . ( E Ω s ) - = (cid:90) Ω ∇ j ∑ = n 1 ξ j ϕ j (x) ·∇ϕ i (x)dx (34)
+te lema se deriva de uno ma´s general y ambos pueden ser n (cid:18)(cid:90) (cid:19)
+encontradosen[4]y[5]respectivamente. = ∑ξ ∇ϕ (x)·∇ϕ(x)dx (35)
+j j i
+DeestamanerasehamostradoqueelproblemaP se j=1 Ω
+LDCe
+encuentrabienplanteadoalutilizarcondicionesdefrontera n
+= ∑ξ a(ϕ ,ϕ) (36)
+deRobin.Precisamenteestaeslaformaenlaqueelsoftware j j i
+j=1
+FreeFem++enfrentacualquierproblemaquetengacondicio-
+nesdefronteradeDirichlet,seanproblemashomoge´neoso
+no-homoge´neos.Elsoftwareconsideraquetodoslosnodos Larepresentacio´nmatriciales:
+enlafronteranoesta´nprescritosyparaelcasoenqueu=g
+D
+(g ∈/H1/2(∂Ω))entoncesseconsideralacondicio´ndeRobin
+D a(u ,v)=Aξ (37)
+conunebienpequen˜ocomosehaexplicadoparaelproblema h
+quenosocupa.
+Este es el conocido me´todo de penalizaciones que imi- tal que A =a(ϕ,ϕ ) (i=1,...,n y j =1,...,n) y ξ un
+i,j i j
+ta las condiciones de Dirichlet. En el pro´ximo cap´ıtulo se vector con variables inco´gnitas de n×1. Si realizamos el
+90 Resolucio´nconelMe´tododeElementosFinitosdelproblemadecavidadconparedmo´vil.
+mismoana´lisisparab(v,p h ): Algorithm 1: Algoritmo de Uzawa para “lid-driven
+cavity”
+(cid:90)
+b(v,p h ) = ∇·v(x)p h (x)dx (38) 1 Inicializarξ(0)=ψ(0);
+Ω
+(cid:90) 2 Seleccionarunpara´metroderelajacio´nτ >0,yun
+= ∇·ϕ(x)p (x)dx (39)
+i h precondicionadorMparaelcomplementodeSchur
+Ω
+(cid:32) (cid:33) S=BA−1BT;
+(cid:90) m
+= ∇·ϕ i (x) ∑η j χ j (x) dx (40) 3 fork=1,2,...hastaqueconverjado
+Ω j=1 4 Solucionar:µAξ 1 (k) =BT 1 ψ(k−1);
+= ∑ m η j (cid:18)(cid:90) ∇·ϕ i (x)χ j (x)dx (cid:19) (41) 5 Solucionar:µAξ 2 (k) =BT 2 ψ(k−1);
+j=1 Ω 6 Solucionar:ψ(k)=ψ(k−1)+τM(B 1 ξ 1 (k) +B 2 ξ 2 (k) );
+m 7 end
+= ∑η b(ϕ,χ ) (42)
+j i j
+j=1
+Quedandolasiguienteexpresio´n 3.2 AlgoritmoiterativodeUzawa
+ElalgoritmodeUzawa[7][2]eselresultadodeaplicar
+b(v,p h )=Bη (43) lasformulas(52-54)comosemuestraenelalgoritmo1:
+dondeB =b(ϕ,χ )(i=1,...,ny j=1,...,n)yη esun
+ij i j
+4. Resultados
+vectorconvariablesinco´gnitasn×1.
+Sellevaronacabo8experimentosenloscualesseresuelve
+Sirealizamoselmismoana´lisisparab(u h ,q)conj=1,...,m: elproblema“lid-drivencavity”utilizandolaimplementacio´n
+matricialyladelalgoritmodeUzawaconM=Iyelme´todo
+(cid:90)
+b(u ,q) = ∇·u (x)q(x)dx (44) del gradiente conjugado para estimar los valores de τ. Se
+h h
+Ω probaronlasdiferentesaproximacionesdeelementosfinitos
+(cid:90)
+= ∇·u h (x)χ j (x)dx (45) usandoP 1 −P 0 ,P 1 −P 1 ,P 1 b−P 1 yP 2 −P 1 encadacaso.Las
+Ω pruebasquesemuestranenFigura3nosonaproximaciones
+(cid:32) (cid:33)
+(cid:90) n inf-supestablesporloqueelcampodevelocidades(gra´ficas
+= ∇· ∑ξϕ(x) χ (x)dx (46)
+i i j alaizquierda)obtenidonoesrepresentativodelacirculacio´n
+Ω i=1
+delfluidodentrodelacavidadyladistribucio´ndelapresio´n
+n (cid:18)(cid:90) (cid:19)
+= ∑ξ ∇·ϕ(x)χ (x)dx (47) (gra´ficasaladerecha)tampocoescorrecta.
+i i j
+i=1 Ω En cambio las que se muestran en Figura 4 si cumplen
+n lacondicio´ninf-supdeestabilidadporloques´ıseobtienen
+= ∑ξb(ϕ,χ ) (48)
+i i j buenasaproximacionesdelcampodevelocidades(gra´ficasa
+i=1
+laizquierda)delfluidodentrodelacavidadydeladistribucio´n
+Quedandolasiguienteexpresio´n: delapresio´n(gra´ficasaladerecha).
+Lasgra´ficascontenidasenlaFigura5sonobtenidasporla
+b(u ,q)=Bξ (49) aplicacio´ndelalgoritmodeUzawaynosonaproximaciones
+h
+inf-supestables porlo quelosresultados obtenidosparael
+dondeB ij =b(ϕ i ,χ j )(i=1,...,ny j=1,...,n)yξ unvector campo de velocidades (gra´ficas a la izquierda) del fluido y
+devariablesinco´gnitasn×1. la distribucio´n de la presio´n (Gra´ficas a la derecha) no son
+Elsistemaquedacompuestocomosigue: buenos.
+PorotrapartelasmostradasenFigura6silosonporloque
+µAξ+Bη =0 (50) danbuenosresultadosenelcampodevelocidades(gra´ficasa
+Bξ =0 (51) laizquierda)yenladistribucio´ndelapresio´n(Gra´ficasala
+derecha).
+sitenemosencuentaqueu =[u ,u ]esunafuncio´nvectorial,
+h 1 2
+debemosconsiderarlaresolucio´ndeu 1 yu 2 porseparado[10], 4.1 Implementacio´nenFreeFem++
+osea, FreeFem++esunambientededesarrollointegradoparala
+µAξ +BTη =0 (52) resolucio´nnume´ricadeecuacionesdiferencialesenderivadas
+1 1
+parciales para dos y tres dimensiones. Es una herramienta
+µAξ +BTη =0 (53)
+2 2 muyu´tilparaaplicarelme´tododeelementosfinitosycrear
+aplicacionescomplejasdeformarelativamentera´pida.
+B ξ +B ξ =0 (54)
+1 1 2 2
+Estesoftwareconstadeunavanzadogeneradorautoma´tico
+dondeξ =ξ +ξ yB=B +B . demallas.Contieneimplementacionesdealgoritmoseficien-
+1 2 1 2
+Resolucio´nconelMe´tododeElementosFinitosdelproblemadecavidadconparedmo´vil. 91
+Figura3.Enlasgra´ficassemuestralaresolucio´ndelproblema“lid-drivencavity”conunaimplementacio´nmatricialcla´sica,
+paraunamalladeelementoscuadradade16×16conlasaproximacionesP −P yP −P .
+1 0 1 1
+Figura4.Enlasgra´ficassemuestralaresolucio´ndelproblema“lid-drivencavity”conunaimplementacio´nmatricialcla´sica,
+paraunamalladeelementoscuadradade16×16conlasaproximacionesP b−P yP −P .
+1 1 2 1
+92 Resolucio´nconelMe´tododeElementosFinitosdelproblemadecavidadconparedmo´vil.
+Figura5.Enlasgra´ficassemuestralaresolucio´ndelproblema“lid-drivencavity”conlaimplementacio´ndelme´todoiterativo
+deUzawa,paraunamalladeelementoscuadradade16×16conlasaproximacionesP −P yP −P .
+1 0 1 1
+Figura6.Enlasgra´ficassemuestralaresolucio´ndelproblema“lid-drivencavity” conlaimplementacio´ndelme´todoiterativo
+deUzawa,paraunamalladeelementoscuadradade16×16conlasaproximacionesP b−P yP −P .
+1 1 2 1
+Resolucio´nconelMe´tododeElementosFinitosdelproblemadecavidadconparedmo´vil. 93
+tes como UMFPACK y SuperLU para problemas el´ıpticos. func real [ int ] divup( real [ int ] & pp)
+Parahiperbo´licosyparabo´licosutilizaalgoritmositerativos {
+predefinidosporelusuariousandoellenguajepropiodeFree- int verb=verbosity ;
+Fem++. verbosity=0;
+Lossiguientesco´digoscorrespondenalasdosimplemen- b[] = Bx’∗pp; b[] += bc1[] .∗bcx [];
+tacionesdelproblema“lid-drivencavity” presentadaseneste u1[] = Aˆ−1∗b[];
+trabajo.Ambasdesarrolladassobreestesoftwareutilizandoel b[] = By’∗pp; b[] += bc1[] .∗bcy [];
+lenguajeFreeFem++.Lasgra´ficasdelassalidasdeloscampos u2[] = Aˆ−1∗b[];
+develocidadesyladistribucio´ndelapresio´nsongeneradas ppp[] = Bx∗u1[];
+porlapropiaherramienta. ppp[] += By∗u2[];
+Co´digoFreeFem++correspondealasolucio´ndelproble- verbosity=verb;
+ma“lid-drivencavity” utilizandosuformamatricialcla´sica: return ppp[] ;
+};
+mesh Th=square (16 ,16);
+p=0;q=0;u1=0;v1=0;
+fespace Xh(Th,P2);
+fespace Mh(Th,P1);
+Xh u2,v2;
+LinearCG(divup ,p[] ,q[] ,eps=1.e−6,nbiter =300);
+Xh u1,v1;
+Mh p,q;
+divup(p[]);
+solve Stokes ([u1,u2,p] ,[v1,v2,q]) =
+plot ([u1,u2] ,wait=1,value=true ,ArrowSize=0.5);
+int2d(Th)((dx(u1)∗dx(v1)+ dy(u1)∗dy(v1)
+plot (p, wait=1,value=true , fill =1);
++ dx(u2)∗dx(v2)+ dy(u2)∗dy(v2))
++ p∗dx(v1)+ p∗dy(v2)
++ dx(u1)∗q+ dy(u2)∗q)
+5. Conclusiones
++ on(3,u1=1,u2=0)
++ on(1,2,4,u1=0,u2=0); Eneltrabajosepresentaunaformavariacionaldelproble-
+madeStokesparalamodelacio´ndefluidosincompresiblesla
+plot ([u1,u2] ,value=1,wait=2,ArrowSize=0.5);cualesasuvezunmodelof´ısico-matema´ticoparaelproblema
+plot (p, wait=1, fill =1,value=1); “lid-drivencavity”.Sededujolaformavariacionaldeestepro-
+blemaysemostro´ elbuenplanteamientodelmismo.Adema´s
+Co´digoFreeFem++correspondientealasolucio´ndelpro-
+se brindaron dos alternativas de implementacio´n usando el
+blema“lid-drivencavity” utilizandoelalgoritmodeUzawa:
+me´tododeelementosfinitosyelalgoritmodeUzawadonde
+mesh Th=square (16 ,16); seevidencio´ lanecesidaddequesusaproximacionescumplan
+fespace Xh(Th,P2) ,Mh(Th,P1); conlacondicio´ninf-supdeestabilidadparaobtenerresulta-
+Xh u1,u2,v1,v2; doscoherentes.Alfinalseexponensusco´digosFreeFem++
+Mh p,q,ppp; ysegraficanlassalidasdeambosme´todosparaelcampode
+velocidadesdelfluidodentrodelacavidadyladistribucio´n
+delapresio´n,paradiferentesaproximacionesdeelementos
+varf bx(u1,q) = int2d(Th)((dx(u1)∗q)); finitos.
+varf by(u1,q) = int2d(Th)((dy(u1)∗q));
+Agradecimientos
+varf a(u1,u2)= Agradecemos al profesor Se´bastien Martin (Universite´
+int2d(Th)(dx(u1)∗dx(u2) + dy(u1)∗dy(u2))ParisDescartes,LaboratoireMAP5CNRS-UMR8145)ya
++ on(1,2,4,u1=0) laprofesoraA´ngelaLeo´nMec´ıas(UniversidaddelaHabana,
++ on(3,u1=1) ; DepartamentodeMatema´ticaAplicada)porelapoyoquehan
+brindadocomoconsultoresdeestetrabajo.
+Xh bc1; bc1[] = a(0,Xh);
+Xh b;
+Referencias
+matrix A= a(Xh,Xh, solver=CG); [1] Gre´goireAllaire. NumericalAnalysisandOptimization.
+matrix Bx= bx(Xh,Mh); AnIntroductiontoMathematicalModellingandNume-
+matrix By= by(Xh,Mh); rical Simulation, chapter 3 Variational formulation of
+Xh bcx=1,bcy=0; elliptic problems, page 70. Oxford University Press,
+2007.
+94 Resolucio´nconelMe´tododeElementosFinitosdelproblemadecavidadconparedmo´vil.
+[2] C Bacuta. A unnified approach for uzawa algo- [8] M.Kawaguti. Numericalsolutionofthenavier-stokes
+rithms. SocietyforIndustrialandAppliedMathematics, equationsfortheflowinatwo-dimensionalcavity. Jour-
+44(6):2633–2649,2006. nal of the Physical Society of Japan, 16:2307–2315,
+1961.
+[3] A.S.BenjaminandV.E.Denny. Ontheconvergenceof
+numericalsolutionsfor2-ddlowsinacavityatlargere.
+JournalofComputationalPhysics,33:340–358,1979.
+[9] F.Larson,M.G.Bengzon. Thefiniteelementmethod:
+[4] Franck Boyer and Pierre Fabrie. Applied Mathemati-
+theory,implementationandapplications,chapter7,pa-
+cal Sciences, volume 183, chapter 4, pages 251–252.
+ges191–192. Springer,2013.
+Springer,2013.
+[5] FranckBoyerandPierreFabrie. AppliedMathematical
+Sciences, volume 183, chapter 4, page 245. Springer,
+[10] F.Larson,M.G.Bengzon.TextsinComputationalScien-
+2013.
+ceandEngineering,chapterFluidMechanics,page308.
+[6] O.R.Burggraf. Analyticalandnumericalstudiesofthe Springer,2013.
+structure of steady separated flows. Journal of Fluid
+Mechanics,24:113–151,1966.
+[7] F.Hecht. FreeFem++,chapter9,page251. Laboratoire [11] S.G. Rubin and P.K. Khosla. Polynomial interpola-
+Jacques-LouisLions,Universite´ PierreetMarieCurie, tion methods for viscous flow calculations. Journal
+Paris. ofComputationalPhysics,24:217–244,1977.

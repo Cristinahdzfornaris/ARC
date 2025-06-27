@@ -1,0 +1,1406 @@
+CienciasMatema´ticas,Vol.29,No.1,Pag.19-29,2015
+Recibido04-2015
+Algoritmo de corte y continuacio´n con ramificacio´n
+y acotacio´n para la solucio´n del problema
+cuadra´tico con restricciones de caja
+Cutting and continuation algorithm with branch and
+bound for the solution of quadratic problem with box
+constraints
+Ridelio Miranda Pe´rez1*, Sira Allende Alonso2, Boris Pe´rez Can˜edo1, Gemayqzel Bouza
+Allende2
+Resumen Sepresentaunalgoritmoh´ıbridoquecombinaunaestrategiaglobaldeoptimizacio´nconunme´todo
+de ramificacio´n y acotamiento basado en relajacio´n semidefinida positiva para el ca´lculo de una solucio´n
+ε-aproximadadelproblemacuadra´ticoconrestriccionesdecaja.Losexperimentosrealizadosdemuestranque
+el algoritmo propuesto disminuye el nu´mero de iteraciones necesarias, el nu´mero de nodos explorados y el
+tiempodeejecucio´nencomparacio´nconotrosme´todosdeoptimizacio´nglobalconcebidosparaesteproblema.
+Abstract We present a hybrid algorithm that combines a global strategy of optimization with a Branch and
+Bound method based on semi-defined positive relaxation for the calculation of an ε-aproximated solution of
+boundconstrainednonconvexquadraticprograms. Therealizedexperimentsprovethattheproposedalgorithm
+decreasesthenumberofnecessaryrepetitions,thenumberofexplorednodesandtimeofexecutionascompared
+withotherstandardglobaloptimizationmethodsforthisproblem.
+PalabrasClave
+nonconcavequadraticoptimization,nonconvexquadraticprogramming,parametricoptimization,branch-and-
+bound,positivesemidefiniterelaxation,semidefiniteprogramming
+1UniversidaddeCienfuegos,Cuba,rmiranda@ucf.edu.cu,bperez@ucf.edu.cu
+2UniversidaddelaHabana,Cuba,sira@matcom.uh.cu,gema@matcom.uh.cu
+*AutorparaCorrespondencia
+1. Introduccio´n vexos (Q semidefinida positiva) tienen solucio´n en tiempo
+polinomial [14]. El intere´s de este trabajo, sin embargo, se
+En este trabajo se estudia el problema de encontrar el
+centraenlosproblemas[QPB]noconvexos(Qindefinidao
+m´ınimoglobaldeunafuncio´ncuadra´ticaden-variablesaco-
+semidefinida negativa), en cuyo caso se tiene un problema
+tadasinferiorysuperiormente,conocidocomoelproblema
+queporsucomplejidadpertenecealaclasellamadaNP-Duro
+deprogramacio´ncuadra´ticaconrestriccionesdecaja.
+[17].
+1 Pararesolver[QPB]sehandisen˜adonumerososme´todosde
+[QPB] f =min{f(x)= xTQx+qTx | x∈B}
+minglob solucio´n,incluyendoproblemascuadra´ticosgeneralesnocon-
+2
+(1) vexos, los cuales segu´n su cara´cter se clasifican en locales
+B={x∈Rn| 0≤x≤e} (2) yglobales.Entreotros,secuentan,porejemplo:me´todode
+conjuntos activos de [7], algoritmos de punto interior [11],
+dondeQ∈Sndenotaunamatrizsime´tricadeordenn,elvector
+me´todosdeplanoscortantesyrelajacio´nlineal[27,18,20]y
+q∈Rnloscoeficienteslinealesdelafuncio´nobjetivo,y(e)el
+ma´srecientemente,adaptacionesdelme´tododeproyecciones
+vectorunitarioe=[1;1;...;1]∈Rn.Dadoquetodoproblema
+[6,22,23],me´todosderelajacio´nyacotamientoconrelaja-
+[QPB] en cajas ma´s generales (l ≤x≤u) puede reducirse,
+cio´nconvexa[26,4,3].
+conuncambiodevariables,aunproblemaequivalentecon
+Unenfoqueexploradopor[15]consisteenlaaplicacio´nsuce-
+0≤x≤1, en este trabajo so´lo nos referimos al problema
+sivadelaestrategiadeoptimizacio´nglobaldefinidaporlos
+esta´ndarenlacajaB.
+dospasosqueseenuncianacontinuacio´n:
+Resultabienconocidoquelosproblemascuadra´ticoscon-
+Algoritmodecorteycontinuacio´nconramificacio´nyacotacio´nparalasolucio´ndelproblemacuadra´ticocon
+20 restriccionesdecaja
+Paso-1: Partiendodeunasolucio´nfactiblex0∈Bcalcularun 2. Estrategia de corte y continuacio´n
+m´ınimolocalx∗de[QPB].
+Comoseplanteaenlaintroduccio´n,laproblema´ticafunda-
+Paso-2: Determinar una nueva solucio´n factible x∈B con mentalenlaaplicacio´ndelaestrategiadeoptimizacio´nglobal
+f(x)≤ f −ε,yregresaralpaso-1tomandox0=x( presentadarecideenlarealizacio´ndelpaso-2.Resultaeviden-
+minloc
+donde f = f(x∗),ε >0suficientementepequen˜o). tequeunasolucio´nfactibledelsiguienteproblemaauxiliar
+minloc
+es,asuvez,unasolucio´ndelsegundopasodelaestrategia.
+Comoresultadodelaaplicacio´ndeestaestrategiasegenera
+unasecesio´nmono´tonadecrecientedem´ınimoslocales{x∗} [QPA] min{F(x) | x∈S} (3)
+k
+cuyo l´ımite, de existir, resulta una solucio´n ε−aproximada (cid:26) (cid:12) (cid:27)
+paraelm´ınimoglobalde(1).Estoesque| fming f l m ob in − glo fm b inloc|≤ε. S=
+x∈Rn(cid:12)
+(cid:12) (cid:12)
+0
+1 2 x
+≤
+TQ
+x
+x
+≤
++
+1
+qTx+q 0 ≤0 (4)
+Alaexpresio´n|
+fminglob−fminloc|selellamaentonceserrorrela-
+dondeF(x)esunafuncio´nconvexa(preferentementelinealo
+fminglob
+tivodelaaproximacio´n. cuadra´tica),yq =ε−f(x∗).
+0
+Elpaso-1puederesolverseaplicandounme´tododebu´squeda No esdif´ıcil deobservar, que larestriccio´n 1xTQx+qTx+
+2
+local,comoporejemplo:Newton,Gradienteproyectado,etc. q ≤0 introduce un corte en la caja B que deja fuera de S
+0
+Sinembargo,larealizacio´ndelsegundopasoresultaunpro- almejorm´ınimolocalx∗calculado.Debidoalanoconvexi-
+blematandif´ıcilderesolvercomoelpropioproblema[QPB]. daddelafuncio´ncuadra´tica,[QPA]resultaunproblemade
+Enesemismotrabajoseproponeutilizarunme´tododeinmer- factibidadnoconvexo,queigualmentepertenecealaclase
+sio´nyalgoritmosdecontinuacio´nconsaltospararesolverlos deproblemasNP-Duros,tancomplejoderesolvercomoel
+problemasdeoptimizacio´nuni-parame´tricaas´ıconstruidos. propioproblemacuadra´ticooriginal.
+Laexperimentacio´nnume´ricarealizadapermitio´ identificar Pararesolverelmismo,en[15]sesugiereaplicarelme´todo
+ciertaslimitacionesqueinvalidanlaaplicacio´ndirectadeesta deinmersio´n[10]considerandoelproblemaparame´trico
+estrategia. Si en la ejecucio´n del segundo paso se combina
+(cid:26) F(x,w,t)= 1[x−x ]2+cTx+ (cid:27)
+elme´tododecorteycontinuacio´nconunprocedimientode [P (t)]:m´ın 2 0 (5)
+R 1[w−w ]2+dw
+ramificacio´n y acotacio´n basado en condiciones necesarias 2 0
+de optimalidad de primer orden y relajacio´n semidefinida
+Sujeto a:
+positiva,seobtieneunalgoritmoh´ıbridoqueresuelvelasdifi-
+G (x,w,t)=−x ≤0, j=1,...,n
+cultadesdetectadasalaestrategiaglobal. j j
+G (x)=x −1≤0, j=1,...,n
+Loscontenidosdeesteart´ıculohansidoorganizadosencinco n+j j
+G (x,w,t)=t(1xTQx+qTx−q )+(1−t)(w−w )≤0
+secciones.Enlasiguienteseccio´nsedescribenbrevementela 2n+1 2 0 0
+G (x,w,t)=−w≤0
+estrategiadecorteycontinuacio´ndadaen[15],ylaslimita- 2n+2
+0≤t≤1
+cionesfundamentalesqueellapresenta.Enlaseccio´n-3.1se
+resumenlosresultadosma´srelevantesasociadosalautiliza- donded∈R,yw ∈R .
+0 +
+cio´ndeme´todosderamificacio´nyacotacio´n.Enlaseccio´n-4 Observequeelpunto(x ,w )esunasolucio´ndelproblema
+0 0
+sepresentanlospormenoresdelalgoritmopropuesto.Deta- [P (t)]parat=0.Asimismo,six esunpuntointeriordela
+R 0
+llesdelaimplementacio´ncomputacionaldelalgoritmoylos caja(0<x <1),lau´nicarestriccio´nactivaenesepuntore-
+0
+resultadosdelaexperimentacio´nrealizada,sonpresentados sultaG (x,w,t).Deestaforma,partiendode(x ,w )para
+2n+1 0 0
+enlaseccio´n-5.Finalmente,enlasconclusiones,seproponen t=0,yutilizandounme´tododecontinuacio´nconsaltos[2,8]
+posiblesl´ıneasparacontinuarlainvestigacio´n. sedescribelacurvadepuntoscr´ıticosgeneralizados(pcg)del
+problema[P (t)].
+R
+1.1 Terminolog´ıaynotacio´n Se debe recordar que la utilizacio´n de los me´todos de con-
+Enestaseccio´nseintroducenalgunasdelasnotaciones tinuacio´n descansasobre la base delteorema de lafuncio´n
+que se usaran en el desarrollo del art´ıculo. Rn se refiere al impl´ıcita,queasuvezrequierelanosingularidaddelamatriz
+espacioEuclidianodedimensio´nn,R alosrealespositivos, Jacobianadelsistemadepuntoscr´ıticos
++
+yRn×nalconjuntodematricesrealesdenfilasyncolumnas.
+Con Sn se denota al conjunto de matrices sime´tricas reales
+D
+x,w
+F(x,w,t)+∑2
+j=
+n+
+1
+2µ
+j
+D
+x,w
+G
+j
+(x,w,t)=0
+den×n,yconSn aldelasmatricessemidefinidaspositivas. µ j D x,w G j (x,w,t)=0, j=1,...,n+2 (6)
++
+El producto interno de dos matrices A,B∈Rn×n se define µ j ≥0, j=1,...,n+2
+como A•B=trace(ATB)=∑n i=1 ∑n j=1 A ij xB ij . A(cid:23)0 indi- asociadoalproblemaparame´trico(5).
+ca que A∈S + n, y A(cid:22)0 lo contrario A∈/ S + n. Con la letra I Todoslospuntosqueresuelvenelsistema(6)paraloscuales
+sedesignara´ siempre ala matrizidentidad enla dimensio´n lamatrizJacobianaasociadaesnosingularselesllamapuntos
+correspondiente.u◦v)denotaelproductoHadamarddelos
+cr´ıticosnodegeneradosodetipo-1.Aquellassolucionespara
+vectoresu,v∈Rn,definidopor[u◦v] j =u j v j . lascualeslamatrizJacobianasehacesingularselesllama
+puntossingulares.Observequelasingularidaddelamatriz
+Jacobianapuedeocurrirsi:
+Algoritmodecorteycontinuacio´nconramificacio´nyacotacio´nparalasolucio´ndelproblemacuadra´ticocon
+restriccionesdecaja 21
+Elsistemadevectoresgradientesdelasrestricciones pararealizarunsaltoaotracomponenteconexa,ycon
+activasresultalinealmentedependiente(singularidades elloelalgoritmonoconsigueencontrarsolucionespara
+tipo-4o´ 5), valoresdet≥t.
+SeanulaexactamenteunmultiplicadordeLagrangede Apartirdeestosresultados,sepuedenidentificardosli-
+unarestriccio´nactiva(singularidadtipo-2),y/o mitacionesimportantesparalaaplicacio´ndelaestrategiade
+corteycontinuacio´n.(i)Cuandoseencuentraunasingulari-
+LamatrizHessianarestringidaalsubespaciotangente dadtipo4o´ 5,enlaquenosecumplelaMFCQ,nosepuede
+delproblemaessingular(singularidadtipo-3). identificarsielm´ınimolocalcalculadocorrespondeonocon
+el m´ınimo global del problema, y (ii) no se dispone de un
+En [13] los autores definen la clase F de problemas uni-
+criterioquepermitamedircuancercaolejosesta´ lasolucio´n
+parame´tricos,paraloscualessoloaparecenestoscuatrotipo
+actualdelm´ınimoglobalbuscado.
+desingularidades.
+Pararesolverestaslimitaciones,proponemosenlaseccio´n-4
+Enelcasoespec´ıficodelproblemaparame´trico(5)sepuede
+un algoritmo que combina la resolucio´n del problema pa-
+comprobarquelaaparicio´ndesingularidadestipo-4solopue-
+rame´tricoconunme´tododeramificacio´nyacotacio´nbasado
+deocurrircuandow=0yesta´nactivastodaslascomponentes
+enrelajacio´nsemidefindapositiva,temasobreelcualsedis-
+dexparalascualesQx+q(cid:54)=0.Deigualformalassingulari-
+cuteenlasiguienteseccio´n.
+dadestipo-5solopuedenocurrirenunpuntoextremodela
+cajaBconw=0y f(x)= f −ε+1−tw .
+minloc t 0
+Laexperimentacio´nnume´ricarealizadaporMirandapermi- 3. Me´todos de ramificacio´n y acotacio´n
+tio´ identificarqueelme´tododecontinuacio´nconsaltosfun-
+En sentido general, los me´todos de ramificacio´n y aco-
+cionaexitosamentesiempreycuandoestesemuevaporuna
+tacio´nconsistendetrescomponentesfundamentales:(1)el
+curvadepuntoscr´ıticosgeneralizadostipo-1,2y3,perono
+ca´lculodeunacotainferiorparalasolucio´no´ptimadelproble-
+siempreconsigueavanzarcuandosellegaaunasingularidad
+ma,(2)unaestrategiaparalaramificacio´n(particionamiento
+tipo4o´ 5.
+delaregio´nfactibleenvariossubconjuntos),y(3)laselec-
+Deestasuerte,cuandoconcluyeelprimerpasodelaestrate-
+cio´ndelsubproblemaonodoaresolverencadaiteracio´n.En
+gia,conladeterminacio´ndeunm´ınimolocalx∗de[QPB],y
+k lassubseccionesquesiguensediscutendiferentespropuestas
+seintentaresolverelproblemaauxiliar[QPA]queintroduce
+existentesparacadaunodeestosaspectos.
+elcorte f(x)≤ f(x∗)−ε (segundopaso),estepuedeconcluir
+k
+conlaocurrenciadeunadelassituacionessiguientes:
+3.1 Ca´lculo de una cota inferior para la solucio´n
+(I) Elme´tododecontinuacio´nconcluyeexitosamenteent=1 o´ptimadelproblema
+con una solucio´n x∈B que resuelve el corte f(x)≤ Enlafacedeacotacio´nlosprocedimientosderamifica-
+fk −ε.Enesecasoserepiteelpaso-1iniciandoel cio´nyacotacio´npersigueelca´lculodecotasinferiorespara
+minloc
+algoritmolocalenxparaobtenerunnuevom´ınimolocal elm´ınimoglobaldelproblemaapartirdelasolucio´ndeun
+x∗ de [QPB] con f(x∗ )< fk . Esta secuencia problema auxiliar relajado, ma´s sencillo de resolver que el
+k+1 k+1 minloc
+depasosserepiteiterativamentehastaqueelalgoritmo problemaoriginal.Unav´ıalo´gicaparaconstruirtalesproble-
+sedetengaporlaocurrenciadelasituacio´n(II). mas auxiliares relajados consiste en la convexificacio´n del
+problema,locualpuedelograrseatrave´sde:
+(II) El me´todo de continuacio´n se detiene en unt =t <1
+con la aparicio´n de una singularidad tipo 4 o´ 5, en
+la cual no se cumple la calificacio´n de restricciones 1. Laaproximacio´ndelafuncio´nobjetivoporunafuncio´n
+de Mangasarian-Fromovitz (MFCQ) y no es posible
+minoranteconvexag(x),[g(x)≤ f(x),∀xdelaregio´n
+encontrarsolucionesparavaloresdet≥t. factible],y/o
+2. Laaproximacio´ndelconjuntodeposiblessoluciones
+Asuvezlaaparicio´ndeunasituacio´ntipo(II)puedeocurrir
+delproblemaconunsobreconjuntoconvexo.
+porunodelossiguientesmotivos
+Paraelcasoespec´ıficodelproblema(1),lafuncio´nα-Minorante
+(II-A) La solucio´n alcanzada es el m´ınimo global del pro-
+blema.EnesecasoelconjuntofactibleSdelproblema
+de Adjiman-Floudas (α-MAF) [1] es un ejemplo concreto
+de relajacio´n tipo (1). Esta funcio´n se define segu´n g(x)=
+auxiliar [PA] resulta vacio, y por ende no es posible
+encontrar solucio´n del problema [P R (t)] para t=1. Es
+f(x)+∑n
+i=1
+αx
+i
+(x
+i
+−1).Noteque∑n
+i=1
+αx
+i
+(x
+i
+−1)≤0(con
+Hessiana∆=αI).Esevidentequeg(x)≤ f(x)sobrelaregio´n
+porelloqueelme´tododecontinuacio´nquedaatrapado
+enunasingularidadtipo4o´ 5paraunt=t<1
+factible,yparaα suficientementegrande,conQ+2∆∈S
++
+n,
+seobtienelaconvexidaddeg(x).
+(II-B) La solucio´n alcanzada no es el m´ınimo global del Porotraparte,unmododecaracterizarelconjuntodeposibles
+problema.Sinembargo,noesposibleencontrarmejores solucionesdelproblema[QPB]esdescribirlosposiblesm´ıni-
+m´ınimoslocalesporquenoexistedireccio´ndedescenso moslocalesmedianteelsistemadecondicionesnecesariasde
+Algoritmodecorteycontinuacio´nconramificacio´nyacotacio´nparalasolucio´ndelproblemacuadra´ticocon
+22 restriccionesdecaja
+primerordendeKarush-Kuhn-Tucker deinecuaciones(x ≤x, x ≤x ,x ≥x +x −1,x ≥0),
+ij i ij j ij i j ij
+paraobtenerun(PL)confuncio´nobjetivodefinidasegu´n(14)
+n
+∑Q x +q +y −z = 0, j=1,2,...,n (7) yconjuntofactible
+ji i j j j
+i=1  (cid:12) 
+y j (1− z x j x
+x
+j ) j
+j
+= =
+≤
+0
+1
+0 ,
+,
+, j
+j
+j =
+=
+= 1
+1
+1 ,
+,
+, 2
+2
+2 ,
+,
+, .
+.
+. .
+.
+.. .
+.
+, ,
+,
+n n
+n (1
+( ( 8 9
+0
+) )
+)
+B(cid:98)=   (x,X)∈Rn+(n×n) (cid:12) (cid:12) (cid:12) (cid:12) (cid:12) (cid:12)
+(cid:12)
+x x 0 i i j +
+1
+≤ ≤
+≤
+x x x j
+i
+j j ≤ , ,
+≤
+x i x x j i
+j
+i ≤ j j
+≤
++ ≤ 1
+n
+1 , x , i ,   (16)
+x ,y ,z ≥ 0, j=1,2,...,n (11)
+j j j Porotraparte,utilizandolanotacio´nmatricial,lasecuaciones
+(dondey,z∈RnsonlosmultiplicadoresdeLagrangerelativos x ij =x i x j , 1≤i≤ j≤npuedenescribirsecomoX =xxT,y
+conelloelproblema(14)puedereformularsecomo:
+alasrestricciones(x≤1)y(x≥0)respectivamente)
+Sepuedeprobarquesobreelconjuntodepuntos(x,y,z)∈R3n
+1
+que satisfacen las condiciones (7-11), se cumple 1xTQx+ min { Q•X+qTx| x∈B, X =xxT} (17)
+2 2
+qTx= 1(qTx−eTy).
+2 Dadoquelaecuacio´nX =xxT esequivalenteconrang(X)=1
+Deestaformaelproblema(1)esequivalentea
+(cid:18) 1 xT (cid:19)
+yX ∈S+,yestau´ltimacon ∈Sn,siseelimina
+1 n x X +
+[QPBKKT] min{ (qTx−eTy) |x∈B(cid:101)} (12)
+2 lacondicio´nderangoseobtienelarelajacio´nsemidefinida
+positivade[QPB]propuestaporShor[21]
+ (cid:12) 
+B(cid:101)=   (x,y,z)∈R3n (cid:12) (cid:12) (cid:12) (cid:12) (cid:12) y◦ 0 Q (1 ≤ x − + x x q ≤ ) + = 1 y , 0 − , y z , z z ◦ = ≥ x 0 = 0 , 0,   (13) min { 2 1 Q•X+qTx| x∈B, (cid:18) 1 x x X T (cid:19) (cid:23)0} (18)
+Noteque,conestatransformacio´nselogralinealizarlafun- Sesabe,sinembargo,quecuandoQ(cid:22)0lasolucio´no´ptima
+cio´nobjetivo,pero,debidoalasrestriccionesKKTdecomple- de(18)es−∞,locualocurreporquesetienenmuchosgrados
+mentariedad(y◦(1−x)=0,z◦x=0)setrasladaelproblema delibertadparaX.
+delanoconvexidadalnuevoconjuntofactibleB(cid:101).
+Parasalvaresteinconveniente[19]proponeintroducirlasres-
+Larelajacio´nma´snaturaldeB(cid:101)consisteensuprimirlascon- triccioneslinealesdiag(X)≤x(derivadasdex =xx ),con
+ij i j
+dicionesKKTdecomplementariedadyconelloobtenerun locualseobtieneunanuevarelajacio´nsemidefinidapositiva
+problemadeprogramacio´nlineal(PL)alquesereferira´enlo
+de(1).
+adelantecomo[RKKT].Sinembargo,dadoquelasvariables
+y,znoesta´nacotadas,nosepuedegarantizarlaexistenciade [RSDP
+0
+] min { 1 Q•X+qTx| (x,X)∈B(cid:98)0 } (19)
+unasolucio´nacotadaparadichoPL. 2
+rida
+O
+p
+t
+o
+ra
+r P
+fo
+a
+r
+d
+m
+be
+a
+rg
+de
+[1
+r
+6
+ef
+]
+o
+,
+r
+c
+m
+on
+u
+s
+la
+is
+r
+te
+d
+n
+e
+t
+l
+e
+p
+e
+r
+n
+ob
+li
+l
+n
+em
+ea
+a
+liz
+(1
+ar
+)
+l
+e
+a
+s
+s
+l
+c
+a
+o
+s
+m
+u
+p
+g
+o
+e
+-
+- B(cid:98)0 =  
+
+(x,X)∈Rn+n×n (cid:12) (cid:12) (cid:12) (cid:12)
+(cid:12) (cid:12)
+0≤x≤1
+d
+,
+ia
+(cid:18)
+g(X
+1 x
+)≤
+x X T
+x
+(cid:19) (cid:23)0,  
+
+nentes cuadra´ticas de f(x) por medio del cambio de varia-
+(20)
+bles x =xx , 1≤i≤ j ≤n. Dado que 1xTQx+qTx=
+ij i j 2 Una mejora significativa a la propuesta de Sherali fue
+2
+1∑n
+i=1
+∑n
+j=1
+Q
+ij
+x
+ij
++qTx,elproblema
+presentadarecientementeporBureryVandenbussche[4].En
+ella se combina [RSDP] con la la relajacio´n basada en las
+(cid:40) (cid:41) 0
+min 1 ∑ n ∑ n Q x +qTx | x∈B (14) condicionesnecesariasdeoptimalidadKKTdeprimerorden
+ij ij
+2 paraobtenerelsiguientemodelorelajado.
+i=1j=1
+(cid:26) (cid:27)
+(cid:26) (cid:12) (cid:27) 1
+B= x∈Rn+n(n 2 +1)(cid:12) (cid:12) 0≤x j ,x ij ≤1, x ij =x i x j , (15) [RSDP 1 ] min 2 Q•X+qTx| (x,y,z,X)∈B(cid:98)1 (21)
+(cid:12) 1≤i≤ j≤n
+ (cid:12) 
+e l
+B
+E
+o s
+n
+g
+e
+e r
+s
+e
+a q
+s
+i
+u
+t
+g
+l
+e
+a i
+u
+v
+c
+l
+a
+a i
+a
+l
+n l
+m
+s
+e e
+o
+n a
+e
+,
+l t
+n
+i e
+l
+z
+t
+a
+e
+a a
+r
+c
+n
+e
+i [
+o
+l
+o´ Q
+a
+n
+c
+j
+P
+a
+o
+d B
+c
+n
+e
+i
+]
+v
+o´
+. f
+e
+n
+(
+x
+C x
+l
+a
+i
+o )
+.
+n
+m p
+e
+e
+a
+o r
+l
+o e
+d
+n
+e
+la
+l
+e r
+c
+l e
+o
+g c
+n
+i a
+j
+o´
+u
+s n o
+n
+f
+t
+a
+o
+ac n
+f
+t t
+a
+i e b
+c
+r l
+t
+i e
+i
+o
+b
+r r
+l
+, e
+e
+s a
+r
+u q
+e
+l u t
+s
+a
+u
+´ı n
+l
+s
+t
+t e
+a
+e
+B(cid:98)1 =
+
+(x,y,z,X)∈R3n+n×n
+(cid:12) (cid:12) (cid:12)
+(cid:12)
+(cid:12)
+(cid:12) (cid:12)
+(cid:18) x
+Q
+∈
+x
+1
+x
++
+B,
+q
+x
++
+X
+d T i
+y
+a (cid:19)
+−
+g(
+(cid:23)
+X
+z=
+)
+0
+≤
+,
+0,
+x, 
+p
+g
+re
+r
+r
+l
+o
+a
+a
+n
+b
+ja
+a
+c
+c
+b
+a
+i
+l
+o
+n
+e
+n
+t
+m
+i
+e
+d
+e
+s
+a
+n
+p
+d
+t
+e
+e
+d
+rt
+l
+e
+e
+a
+n
+r
+e
+e
+e
+l
+p
+c
+e
+e
+o
+c
+n
+r
+c
+t
+i
+e
+l
+o´
+a
+s
+n
+s
+q
+l
+m
+u
+la
+e
+a´
+m
+s
+la
+a
+p
+d
+c
+o
+a
+o
+p
+s
+n
+u
+T
+t
+l
+i
+a
+e´
+e
+r
+c
+n
+,
+n
+e
+e
+i
+n
+c
+v
+.
+a
+id
+s
+A
+e
+d
+n
+e
+e
+c
+s
+R
+i
+t
+a
+a
+e
+d
+f
+c
+o
+o
+la
+r
+p
+m
+s
+o
+e
+u
+r
+d
+l
+l
+a
+e
+a
+-
+ (cid:12) (cid:12)
+(cid:12) (cid:12)
+(cid:12) (cid:12)
+y
+Q
+1
+,
+(
+z
+•
+q
+≥
+T
+X
+x
++
+0
+−
+,
+q
+e
+T
+T
+x
+y
+=
+)
+
+2
+cio´nyLinealizacio´n(RLT)deSherali[20],extensivamente (22)
+utilizadas con estos y otros fines. La misma consiste en re- Estemodeloposeecaracter´ısticamuyfavorablesparalaapli-
+lajarlascondicionescuadra´ticas(x =xx )porelconjunto cacio´ndeunprocedimientoderamificacio´nyacotacio´n,que
+ij i j
+Algoritmodecorteycontinuacio´nconramificacio´nyacotacio´nparalasolucio´ndelproblemacuadra´ticocon
+restriccionesdecaja 23
+contrarrestanladesventajaasociadaalainsercio´ndenuevas cionamientodelconjuntoqueseobtieneporlarelaja-
+variablesyrestriccionesenelmodelo cio´n de las condiciones KKT de complementariedad
+.Existenasimismovariacionesde[RSDP],comolapropuesta en(13).Segu´n(PKKT)sedebenseleccionarlasvaria-
+1
+porBureryChen[5],queincorporanalmodelocondiciones blesx,y,z correspondientesalamayorviolacio´nde
+i i i
+necesarias de segundo orden para conseguir una aproxima- lascondicionesKKTdecomplementariedad,yelparti-
+cio´n ma´s fina de (15). Segu´n su reporte, los experimentos cionamientoserealizaforzandoelcumplimientodela
+realizadosmuestranunareduccio´nenelnu´merodenodosex- misma.Observequeenestecasoseobtieneunparticio-
+plorados,peroacostadeunincrementosensibleeneltiempo namientotricoto´mico,dondeelprimersubconjuntose
+deresolucio´n. generainsertandolasrestriccionesx =0yz =0,enel
+i i
+Como se puede observar, en todos los casos estudiados la segundox =1yy =0,yenelterceroy =0yz =0.
+i i i i
+relajacio´nB(cid:98)delconjuntofactibleBy/olaobtencio´ndeuna
+RPH: RegladeParticionamientodeHansen.Unavezselec-
+funcio´nminoranteg(x)para f(x)esta´nestrechamenteligadas.
+cionada(segu´nloscriteriosprecedentes)lavariablex
+Entreellospuedeverificarlasiguienterelacio´n i
+sobrelacualserealizara´ elparticionamientodelcon-
+(cid:26) (cid:27) junto,laconstruccio´ndeestosserealizaatendiendoal
+min g(x)
+min g(x)≤ x∈B ≤min f(x) (23) teoremadeHansenet.al.,segu´nelcual:
+x∈B(cid:98) min f(x) x∈B
+x∈B(cid:98)
+(a) cuandoQ ii ≤0
+Laclavedele´xitoresideenelegirg(x)y/oB(cid:98)deformatalque (a.1)Definirelprimersubconjuntoinsertandolasres-
+unodelosproblemasmin
+x∈B(cid:98)
+g(x),min
+x∈B
+g(x)o´ min
+x∈B(cid:98)
+f(x) triccionesx
+i
+=0,y
+seama´sfa´cilderesolverqueelproblemaoriginalmin x∈B f(x). (a.2)enelsegundox i =1.
+(b) perocuandoQ ii >0,seprecisaunparticionamientodel
+3.2 Estrategiasderamificacio´n conjuntoentrespartes,donde
+Todaestrategiaderamificacio´npuedeservistacomola (b.1)elprimersubconjuntosedefineinsertandolacon-
+divisio´n de cierta parte de la regio´n factible por la adicio´n dicio´nx i =0,
+de nuevas restricciones, frecuentemente asignando valores (b.2)enelsegundoQ i x+q=0,y
+a las variables. Si el conjunto en cuestio´n se divide en dos, (b.3)eneltercerox i =1.
+a la ramificacio´n utilizada se le llama particionamiento di-
+Finalmente,paralaseleccio´ndelsubproblemaonodoaresol-
+coto´mico.Laramificacio´nrecursivadelproblemadefineun
+verencadaiteracio´n,lasreglasma´sutilizadasson:
+a´rbolestructurado,cuyosnodossecorrespondenprecisamente
+conlossubproblemasquesedefinenmanteniendolamisma ENMCI: ExplorarelNodoconMenorCotaInferior.Prioriza
+funcio´n objetivo sobre cada una de las subregiones en que laexploracio´ndelsubprobelmademenorcotainferior
+sedivideelconjuntofactible.Engeneral,todaestrategiade calculada,porserlaregio´ndondesesospechapuede
+particionamientodicoto´micopasanecesariamenteporestable- existir el menor valor de la funcio´n objetivo. Tiene
+cer:(a)que´ reglasutilizarparaladivisio´ndelconjuntoy(b) como ventaja que en cada nueva iteracio´n se pueden
+que´reglasaplicarparalaseleccio´ndelsubproblema(nodo)a eliminar todos los subproblemas para cuya cota infe-
+resolverencadaiteracio´n. rior f calculadaseamayoroigualquelamejorcota
+LB
+Entrelasreglasma´susadasparaelparticonamientodicoto´mi- superior f∗ encontrada(f ≥ f∗ ).
+UB LB UB
+cosecuentan:
+EHA: Exploracio´nHorizontaldelA´rbol.Consisteenresol-
+RPS: RegladeParticionamientoSimple.Seseleccionauna vertodoslossubproblemmasdeunmismonivelenel
+variable x i , que corresponde a la arista ma´s larga de a´rbol,antesdepasaraexplorarlosdelsiguientenivel.
+la caja, y se divide el conjunto en dos partes iguales Tienecomoinconvenienteelcrecimientoexponencial
+respectoalavariableseleccionada.Deestaforma,si delnu´merodesubproblemasencadanuevoniveldel
+l i ≤x i ≤u i ,losdosnuevossubconjuntossegeneran a´rbol.
+insertandoenunodeelloslarestriccio´nx ≤ li+ui,yen
+elotrox ≥ li+ui. i 2 EPA: Exploracio´nenProfundidaddelA´rbol.Setratadese-
+i 2 leccionarprimeroalnodoqueseencuentraenelnivel
+RPA: RegladeParticionamientoAvanzada.Seprocedede ma´sprofundodela´rbol.Enestecasoelnu´merodeno-
+formasimilaralaregla(RPS),peroaldefinirlosdos dospendientesderesolveresmenoroigualalnu´mero
+nuevossubconjuntos,severificasielvalordelavariable denivelesdela´rbolmultiplicadoporelma´ximonu´mero
+x seleccionadaesunpuntointeriordesuaristal <x∗< desubproblemasenquesedivideunnodo.
+i i i
+u.Deseras´ı,lasrestriccionesaintroducirenlosnuevos
+i
+subconjuntossonx ≤x∗yx ≥x∗respectivamente.En La seleccio´n combinada de los elementos presentados dan
+i i i i
+lugaradiferentesme´todosderamificacio´nyacotacio´n.As´ı,
+casocontrarioseprocedesegu´n(RPS).
+porejemplo,unodelosprimerosme´todosdeoptimizacio´n
+PKKT: ParticionamientobasadoenlascondicionesKKTde globalefectivoconocidopararesolver[QPB]fuedesarrollado
+complementariedad.Estareglaesta´ asociadaalparti- porHansenet.al.[12],yene´lsecombinanlaste´cnicasde
+Algoritmodecorteycontinuacio´nconramificacio´nyacotacio´nparalasolucio´ndelproblemacuadra´ticocon
+24 restriccionesdecaja
+padbergconlasRLTparalarelajacio´ndelaregio´nfactible,y Seguidamente, de entre la lista de nodos no explorados se
+lasreglasRPSyRPHparalaramificacio´ndelproblema. selecciona,segu´nelcriterioENMCI,alnodoconmenorcota
+Unprocedimientoderamificacio´nyacotacio´nmuyeficiente inferior.SobreelsubproblemaB seleccionadoseaplicanue-
+k
+eselpresentadoporBureryVandenbussche[4],queigual- vamenteelme´tododecorteycontinuacio´nparacalcularuna
+mentepartedeaplicarlaste´cnicasTRPcombinadasconla cotasuperior f (k) ,conlocualelnodoquedaexplorado.Enlo
+UB
+relajacio´nRSDP 1 paraelca´lculodelascotasinferiores,ypara adelanteserepitelamismarutinahastaquetodoslosnodos
+determinarlacotasuperiordecadasubproblema,utilizanun hayansidoexploradosy/oeliminados.
+procedimientodebu´squedalocal.Paraconformarlaestrate- Elpseudoco´digoquesigueacontinuacio´nresumeelfuncio-
+giaderamificacio´nutilizanlareglaPKKT(paralaseleccio´n namientolo´gicodelalgoritmo.
+delavariablesobrelacualserealizara´ elparticionamiento),
+combinadaconRPH(paralageneracio´ndelosnuevossub- Inicio: k=0,B=B,fijarx(k)∈B.
+conjuntos),yENMCI(paralaseleccio´ndelnodoaexplorar). ResolverproblemarelajadoRSDP 1 paracalcularcota
+(k)
+Dadoqueelnu´merodemultiplicadoresdeLagrangeesfinito, inferior f .
+LB
+elprocedimientoas´ıconstruidoconcluyeenunnu´merofinito
+Paso-1: Calcularm´ınimolocalx∗de(1)partiendodex(k)∈
+depasos,caracter´ısticaquelodistingueylohaceventajoso
+B.
+encomparacio´nconlospropuestosanteriormente.
+Hacer f (k) = f(x∗)y f∗ =min{f (j) ,j=0,...,k}
+UB UB UB
+Si| f U ∗ B −f L (k B ) |≤ε,FINdelprocedimiento,x∗ solucio´n
+f∗
+4. Algoritmo de corte y continuacio´n con UB
+ε-aproximada.
+Ramificacio´n y Acotacio´n
+Paso-2: Determinar una nueva solucio´n factible x∈B con
+Elalgoritmoqueseproponeenestetrabajopuedeverse f(x)≤ f∗ −ε.
+UB
+comounamejoradelaestrategiaglobaldecorteycontinua- Paraelloseproponelaejecucio´ndelospasos2.1a2.3
+cio´npresentadaenlaseccio´n-2.Enestesentidosemantienela
+ideadelarealizacio´ndeunpasodebu´squedaglobal(paso-1) Paso-2.1: Utilizarme´tododecontinuacio´npararesolverel
+seguidodeunpasoglobalizacio´n(paso-2),perodifieredeesta Problema[P R (t)]enlacajaB.Sisealcanzaunasolucio´n
+enformaenqueseejecutaelsegundopaso.
+x(k)para[P
+R
+(t=1)],ponerx(k)=x(k)yregresaralPaso-
+Elalgoritmoiniciaconlaestrategiadecorteycontinuacio´n, 1.
+quecomoseexplico´ enlaseccio´n-2concluyecuandopara Encasocontrarioseguiralpaso2.2
+ciertot<1elme´tododecontinuacio´nquedaatrapadoenuna
+Paso-2.2: ParticionarelconjuntoBsegu´nreglasdeparticio-
+singularidadtipo4o´ 5,reportandoa f∗ comolamejorcota
+UB namientoseleccionadas.
+superiorcalculadapara f .
+minglob SupongamosqueBcorrespondealasubcajaB dela
+Lanovedaddelalgoritmoconsisteencontinuarlabu´squeda, m
+particio´n,(m∈{1,...,k})
+ahora con el ca´lculo de una cota inferior f , a partir de la
+LB Como resultado de la particio´n se obtienen dos nue-
+solucio´ndelproblemarelajado[RSDP1].Deestaformase
+vassubcajas,indexadascomoB yB .Continuaral
+dicequeelnodoorigenhasidoresueltooexplorado. m k+1
+Paso-2.3.
+Disponerdeambascotaspermitedeterminarentonceselgap
+relativo=| f U ∗ B −fLB|quemideladiferenciaexistenteentreellas Paso-2.3: Resolver problema relajado segu´n RSDP en las
+f∗ 1
+UB (m)
+y que sera´ tomado en cuenta para reconocer cua´ndo se ha cajas B m y B k+1 para obtener cotas inferiores f LB y
+alcanzadounasolucio´ndelproblemasuficientementebuena. f (k+1) .Eliminardelabu´squedaaquellassubcajasB
+LB j
+En caso que el gab relativo sea inferior a cierta tolerancia donde f (j) ≥ f∗ .
+ε >0 prefijada (criterio de parada), el algoritmo concluye LB UB
+(j∗) (j)
+Determinar´ındice j∗con f =min{f ,j=1,...,k+
+reportando el mejor m´ınimo local calculado como una so- LB LB
+1}yseleccionarsubcajaB=B .
+lucio´n ε-aproximada de f . Observe que, a diferencia j∗
+minglob
+delaestrategiaglobal,elalgoritmopropuestodisponedeun Hacerk=k+1.Ponerx(k)=xj∗∈B j∗ ,yregresaralPaso-
+mecanismoparareconocercuandohaalcanzadolasolucio´n 1.
+o´ptima.
+Observe que cuando la regio´n factible se particiona, el
+Encasocontrario(gabrelativo>ε),sesigue(segu´nramifica-
+reiniciodelme´tododecorteycontinuacio´nsobrelasnuevas
+cio´nyacotacio´n)conelparticionamientodelacajaactualen
+subregionesfuncionacomounsaltoaunanuevacomponente
+dossubregionesB yB ma´spequen˜asydisjuntas.Aconti-
+1 2 conexa del conjunto original, y co ello el me´todo de conti-
+nuacio´nseresuelveelproblemarelajado[RSDP1]sobrecada
+nuacio´npuedeescapardelaregio´ndeatraccio´ndelassingu-
+unadelasnuevassubregiones,calculandoas´ıunacotainferior
+laridadesdondeestabaatrapado.Deestaformaelalgoritmo
+(k)
+f LB paracadaB k . resuelvelasegundalimitacio´nsen˜aladaalaestrategiaglobal.
+(k) (k)
+Siparaalgunadelascotas f calculadassecumple f > En relacio´n con el me´todo de ramificacio´n y acotacio´n de
+LB LB
+f∗ ,elproblemacorrespondienteaB quedaeliminado. Burer-Vandenbussche,elalgoritmoh´ıbridopermiteelca´lculo
+UB k
+Algoritmodecorteycontinuacio´nconramificacio´nyacotacio´nparalasolucio´ndelproblemacuadra´ticocon
+restriccionesdecaja 25
+deunamejorcotasuperiorquelosalgoritmosdebu´squeda 5. Ana´lisis de Resultados
+localempleadosen[4],provocandoconellolaintroduccio´n
+Enestaseccio´nsedescribenlasexperienciasextra´ıdasde
+de cortes ma´s profundos en el problema parame´trico y un
+laexperimentacio´ncomputacionalrealizadaconelfindeveri-
+nivel de comparacio´n ma´s exigente para la eliminacio´n de
+ficarsielalgoritmodecorteycontinuacio´nconramificacio´n
+nodos.
+yacotacio´nresuelvelaslimitacionessen˜aladasalaestrategia
+Unelementoimportanteadestacareslaintroduccio´ndeuna
+deoptimizacio´nglobal,ymedirlacalidaddelosresultados
+nuevareglaparalaseleccio´ndelavariableaparticionar.
+obtenidos.
+Laimplementacio´ndelalgoritmopropuestolaseccio´n4(que
+RPD: RegladeParticionamientobasadaenloselementosde
+en lo adelante se denotara´ por PAFO-SDP1), as´ı como de
+laDiagonaldeQ.Consisteenseleccionarlavariable
+laestrategiadeoptimizacio´nglobaldescritaenlaseccio´n2
+x (noseleccionadaantes)quecorrespondaalelemento
+i
+(denotadaporCUTandPAFO),ydelprocedimientoderami-
+Q demenorvalorenlamatrizQ.
+ii
+ficacio´nyacotacio´ndeBurer-Vandenbusschedelaseccio´n
+Laintroduccio´ndeestecriterioesta´ orientadaaeliminar,en 3(denotadaporSDP1-KKT)fuerontodasrealizadassobre
+primerlugar,alascomponentesdexquema´scontribuyena MATLABR2013a.Enlostresco´digosseincluyeelusode
+lanoconvexidaddelafuncio´nobjetivo(Q =
+∂2f(x)
+<0),de
+funcionespropiasdeMatlab,talescomoquadprog[24]que
+ii ∂x i 2 seutilizaparaelca´lculodelm´ınimolocalde[QPB],ylacom-
+forma tal que los nuevos nodos que se van a crear resulten
+binacio´ncvx.m-sdpt3.m[25,9]pararesolverlosproblemas
+ma´ssencillosderesolver.
+deprogramacio´nsemidefinidospositivosyrespectivamente.
+Otrosaspectosasen˜alarparalaimplementacio´ndelalgoritmo
+Todos los experimentos realizados fueron corridos en una
+son:
+computadorasVITconprocesadorcorei3a2.4Gy2GBde
+memoriaRAM.
+Utilizar la estrategia de corte y continuacio´n para el
+Para la ejecucio´n de los experimentos fueron tomados los
+ca´lculodelacotasuperiorencadasubproblemaaresol-
+90problemaspruebasrecibidos gracias alintercambioper-
+ver.
+sonalconSamuelBurer(1UniversityofIowa).Losmismos
+Paraelca´lculodelacotainferiorencadanododela´rbol, incluyen54lasinstanciaspropuestasen[26]quecontienepro-
+seresuelveunproblemadeprogramacio´nsemidefinida blemasdehasta60variables,yalosqueBurerrefierecomo
+positiva definido por la relajacio´n RSDP1 correspon- ba´sicos,y36ejemplosadicionalesquecontienenproblemas
+diente. entre70y100variablespropuestos[5,3]yreferidoscomo
+extendidosenlacitadacomunicacio´npersonalconBurer.
+Tomarcomopuntodepartidaparaelca´lculodelacota Aligualqueenlostrabajosreferidos,aqu´ıseidentificara´ ca-
+superior,alacomponentexdelasolucio´n(x*,X*,y*,z*) daproblemaporlatupla(N-D-S),dondeNesladimensio´n
+delproblemarelajadocorrespondiente. (nu´merodevariables)delproblema,Dladensidad(porciento
+deelementosdistintosdecero)delamatrizQ,ySlasemilla
+Realizarramificacio´nutilizandolareglaRPDparala
+utilizada en cada una de las re´plicas del experimento. Para
+seleccio´ndelavariableaparticionar,combinandolas
+cadacombinacio´ndeNyDselosautoresgenerantresre´pli-
+reglasPKKTyRPHparaladivisio´ndelconjuntofac-
+casdelmismotomandoS=1,2,3enelgeneradordenu´meros
+tibleylareglaENMCIparalaseleccio´ndelpro´ximo
+aleatorios(random)deMatlab.As´ıporejemplolanotacio´n
+nodoaexplorar.
+50-60-1indicaqueelproblematiene50variables,el60%de
+loselementosdelamatrizQsondiferentesde0,ylagenera-
+Comoest´ıpicoenlaprogramacio´ndelosme´todosde
+cio´nserealizaapartirdelasemilla1.
+ramificacio´nyacotacio´n,enestetrabajo,juntoconel
+Paraevaluarelcomportamientodelosalgoritmossetendra´n
+criteriodeparadabasadoenelgaprelativo,seestablece
+encuentalossiguientespara´metros:
+untiempol´ımitedeprocesamiento,transcurridoelcual,
+elalgoritmosedetiene,au´ncuandolamejorsolucio´n
+Nu´merototaldenodos(NODOS)generadosporelalgo-
+calculada no satisfaga la tolerancia prefijada. Por de-
+ritmo,queequivalealnu´merodeproblemasrelajados
+fecto se tomara´ una tolerancia del 1% del valor f∗
+UB tipo[RSDP 1 ]resueltos,
+(ε =0,01),yell´ımitedetiempoma´ximosefijara´ en
+40000CPUsegundos. Tiempototalempleadoporelalgoritmopararesolver
+losproblemas(TIEMPO),
+En base a la experiencia, y conociendo que a medi-
+daquelosconjuntosfactiblessehacenma´spequen˜os, Nu´merototaldeiteracionesejecutadas(TOTITER),
+disminuye la probabilidad de encontrar mejoras cal
+Iteracio´nenquesealcanzalasolucio´no´ptima(OPTI-
+m´ınimo local calculado en el paso-1, se establece el
+TER),
+para´metro (MAXPAFO) que controla la cantidad de
+iteracionesenqueseutilizaelme´tododecorteyconti- as´ıcomoelgaprelativo(GAPREL)paraaquellospro-
+nuacio´n(Paso-2.1). blemasenqueelalgoritmosedetieneporalcanzarel
+Algoritmodecorteycontinuacio´nconramificacio´nyacotacio´nparalasolucio´ndelproblemacuadra´ticocon
+26 restriccionesdecaja
+l´ımitedetiempoprefijado. limitacionessen˜aladasaCUTandPAFO.
+Otrosaspectosdeintere´saresaltarsobreelcomportamiento
+Laseccio´nseiniciaconexperimentospreliminarespara
+dealgoritmodisen˜adoson:
+determinar la magnitud del para´metro MAXPAFO para el
+algoritmoPAFO-SDP1.Apartirdelosresultadosobservados Relacio´nentreelnu´merodenodosgenerados(NODOS)
+en la figura-1(a), se puede fijar MAXPAFO= N, pues a la ylosnodosexplorados(TOTITER)
+5
+alturadeesaiteracio´n(exceptoparaelproblema100-75-1)ya La figura-2(a) muestra una relacio´n lineal muy bien
+elalgoritmohaalcanzadolasolucio´no´ptima.Eltotaldelas ajustada(R2=1)entreestasdosmagnitudes,cuyaecua-
+iteracionesrestantes(TOTITER-OPTITER)haderealizarse cio´n(NODOS=2(TOTITER)+0.9422)esunapruebade
+entoncesparaidentificarqueelmejorm´ınimolocalcalculado lafuerzaqueaportalabu´squedaunamejorcotasupe-
+secorrespondeconelm´ınimoglobaldelproblema. rioralcriteriodeeliminacio´nasumidoenelalgoritmo.
+Observeadema´squeladiferenciaentreTOTITER(ver
+Seguidamente,seanalizanlosresultadosalcanzadoscon figura-2(a))yOPTITER(verfigura-1(a))expresacos-
+laaplicacio´ndelaestrategiaglobalCUTandPAFOysecom- tocomputacionaltanelevadoquehayquepagarpara
+paranconlosdelalgoritmopropuestoconelfindeverificarsi identificarelo´ptimoglobal.
+PAFO-SDP1resuelvelaslimitacionessen˜aladasalprimero.
+Relacio´nentreeltiempototalempleadoporelalgorit-
+LuegosecomparanlosresultadosdePAFO-SDP1conlosal-
+mo(TIEMPO)yelnu´merodenodosgenerados(NO-
+canzadosporlaimplementacio´nrealizadadelprocedimiento
+DOS).
+deBurer-Vandenbussche(SDP1-KKT)yfinalmenteseestudia
+Deigualformaseevidenciaunarelacio´nlineal(TIEM-
+ladependenciaexistenteentrelospara´metrosentreellosycon
+PO=9.57(NODOS)-408)entreeltiempoqueempleael
+lascaracter´ısticasdelproblema.
+algoritmoparaalcanzarlasolucio´no´ptimayelnu´mero
+denodosgenerados,cuyaecuacio´nexplicaqueporcada
+5.1 Comparacio´ndeCUTandPAFOconPAFO-SDP1
+nodogeneradoelalgoritmoconsumeaproximadamente
+Comparandolasolucio´no´ptimacalculadaporlaestrategia
+10CPUsegundos(verfigura-2((b)).
+globalpura(CUTandPAFO)conlosvaloreso´ptimosreporta-
+dosenlacomunicacio´npersonaldeBurerconlosautoresde
+Relacio´nentreelnu´merodenodosgenerados(NODOS)
+estetrabajo,secomprobo´ queen74delos90problemasse
+yladensidaddelamatriz
+alcanzalasolucio´no´ptima,locualpuedeconsiderarsecomo
+Elestudiodeestarelacio´nsevecr´ıticamenteafectado
+unbuenresultado.Sinembargo,ycomoyasehaexpresado,
+porlanohomogeneidaddeladistribucio´ndelasdensi-
+CUTandPAFOcarecedeuncriterioparamedirlacalidadde
+dadesenrelacio´nconelnu´merodevariables(Labase
+lasolucio´nalcanzada,porloqueenningunodeloscasosse
+deproblemasseleccionadanotienelamismacantidad
+puedeasegurarquelasolucio´ncalculadaeselm´ınimoglobal
+denivelesdedensidadparatodoslosnivelesdelnu´me-
+de[QPB].Loanteriorquedaevidenciado,porejemplo,enel
+rodevariables).Comoseevidenciaenlafigura-2(c),
+casodelastresre´plicasdelproblemade20variablesydensi-
+elana´lisisdelos8problemas20-D-S,con8nivelesde
+dad100(20-100-SconS=1,2,3).Observeenlatabla-1que
+densidad30≤D≤100,nopermitedetectarunarela-
+enlosproblemas1y3sehaalcanzadolasolucio´no´ptimare-
+cio´nentreestasdosmagnitudes.Observequelosajustes
+portada(ErrorRelativo=0),peroenamboscasoslaestrategia ilustradostienentodosmuymalacalidad(R2<0.25).
+sedetiene(Salida)alencontrarunasingularidadtipo-4.Igual
+Paraelana´lisisdeestarelacio´nsenecesitanma´sexpe-
+ocurreconelproblema2,enelcualelm´ınimolocalcalculado
+rimentos.
+nosecorrespondeconlasolucio´no´ptimadelproblema(ver
+enlatabla-1ErrorRelativo(cid:54)=0,y f∗ < f∗ ). Relacio´nentreeltiempototalempleadoporelalgorit-
+minloc minglob
+Porotraparte,sepudocomprobarqueelalgoritmoh´ıbrido mo(TIEMPO)y,losnodosexplorados(TOTITER)
+(PAFOSDP1)alcanzalasolucio´no´ptimareportadaentodos Estarelacio´nsepuedededucirdelasdosprimerasre-
+los casos. So´lo en seis problemas (80-50-1, 100-50-(1 y 2) laciones estudiadas, lo cual se puede confirmar en la
+y100-75-(1,2y3)nosepuedeconfirmarelresultado,por figura-2(d).
+sobrepasar los 40 000 cpu segundos prefijados sin el nivel
+detoleranciaespecificado(1%)(fig-1(b)).Enestecaso,sin 5.2 Comparacio´nconotrosme´todos
+embargo,comoelalgoritmodisponeahoradeunaacotacio´n Para proveer alguna perspectiva sobre co´mo nuestro al-
+inferior f paraelvalorm´ınimoglobalsepuedecalcularel goritmosecomparaconte´cnicasglobalesesta´ndaresdeop-
+LB
+gap relativo, medida de calidad que no se dispone en CU- timizacio´npara[QPB],sepresentaunabrevecomparacio´n
+TandPAFO.Enlafigura-1(c)seobservaqueelgaprelativo conelprocedimientopropuestoporBureryVandenbussche
+correspondienteaestosseisproblemasessiempreinferiora [4],unodelosma´seficientesconocidosparalasolucio´ndel
+0.05(5%). problemacuadra´ticoconrestriccionesdecaja.Lascaracter´ısti-
+Tomandoencuentaestosresultadossepuedeinferirqueel casfundamentalesdeesteprocedimientohansidoclaramente
+algoritmodisen˜adocumplesatisfactoriamentelasexpectativas presentadasalfinaldelaseccio´n-3.2.Aunquelacomparacio´n
+paralasquefuedisen˜ado,resolviendoentodosloscasoslas serealizaaunaltonivel,sentimosqueresaltalasdiferencias
+Algoritmodecorteycontinuacio´nconramificacio´nyacotacio´nparalasolucio´ndelproblemacuadra´ticocon
+restriccionesdecaja 27
+Prob. N-D-S f∗ f∗ ErrorRelativo Salida
+minloc minglob
+1 20-100-1 -706.500 -706.500 0.000 ’GCPTyp-4’
+2 20-100-2 -851.058 -856.500 0.006 ’GCPTyp-4’
+3 20-100-3 -772.000 -772.000 0.000 ’GCPTyp-4’
+Tabla1.Resumendelassolucio´nalcanzadaporCUTandPAFOpara20-100-S.
+40
+30
+20
+10
+0
+0 20 40 60 80 100
+Problema
+RETITPO
+(a) Iteración óptima de PAFO−SDP1 (b)Comportamiento de PAFO−SDP1
+100
+80
+60
+40
+20
+0
+1 2
+En Tiempo Límite de Tiempo
+samelborP
+ed
+daditnaC
+0.05
+0.04
+0.03
+0.02
+0.01
+10 15 20 25 30 35 40
+ovitaler
+bag
+(c)Gab Relativo x 104 6
+4
+2
+0
+−2
+20 40 60 80 100
+Problemas extendidos Dimensión (N)
+)N(
+OPMEIT
+74
+6
+(d) Gráfica de Tiempo vs Dimensión
+Poly2 (R−square=0.67)
+Figura1.MedicionesdelcomportamientodelalgoritmoPAFO-SDP1
+t´ıpicasentrenuestrome´todoylosme´todosglobalesdeopti- yalalgoritmoPAFO-SDP1.Unalecturasimpledeestagra´fica
+mizacio´nma´sutilizadosenlosu´ltimostiempos. permitedetectarqueentodosloscasoselalgoritmodecorte
+Notetambie´nqueestamosajenosacualquierco´digosdeopti- ycontinuacio´nconramificacio´nyacotacio´nalcanzaunaso-
+mizacio´nglobaldisponiblepu´blicamente. lucio´nma´scercanaalo´ptimoglobalqueelprocedimientode
+La diferencia principal que existe entre estos dos enfoques Burer-Vandenbussche.
+resulta, la determinacio´n de una cota superior mejorada en
+elalgoritmoPAFO-SDP1.Elresultadodeestavariacio´nse Alavistadeestosresultadossepuedeconjeturarelalgo-
+muestra en la figura-3. La figura -3(a) muestra una gra´fica ritmodisen˜adomantieneuncomportamientomuybuenoen
+log-logdeelnu´merodenodosgeneradospornuestroalgo- comparacio´nconelprocedimientodeBurer-Vandenbussche.
+ritmocontralosgeneradosporSDP1-KKT.Enlafigurase
+puedeobservarquealmenosparalasolucio´ndelos90pro-
+blemaspruebasela´rbolgeneradopornuestroalgoritmotiene
+6. Conclusiones
+unnu´meroconsiderablementemenordenodosqueelgene-
+rado por SDP1-KKT. De igual forma, en la gra´fica log-log Losresultadoscomputacionalespresentadosenestetraba-
+(figura-3(b))quemuestraelnu´merodenodosexploradospor joevidencianlaclaraventajaqueposeeelalgoritmodisen˜ado
+PAFO-SDP1contralosexploradosporSDP1-KKT,seeviden- encomparacio´nconlaestrategiaglobaldecorteycontinua-
+ciaquepararesolverlosproblemaspruebas,nuestroalgoritmo cio´n. Asimismo se muestra el efecto positivo que produce
+precisademenositeraciones(=nu´merodenodosexplorados) laintroduccio´ndecortesma´sfuertesyelusodelareglade
+queelprocedimientoSDP1-KKT.Comoconsecuenciadirecta seleccio´nRPDenelprocedimientoderamificacio´nyacota-
+deestosresultados,enPAFO-SDP1selogratambie´nunasen- cio´n.Adicionalmentesesugierelaposibilidaddeestudiarel
+siblereduccio´ndeltiempototaldeprocesamientonecesario efectoqueproducenelcambiodedensidadydelnu´merode
+paraalcanzarlasolucio´no´ptima(verfigura-3(c)). valorespropiosnegativosenlamatrizQenellospara´metros
+quemidenelcomportamientodelalgoritmo.
+Otroaspectoacomparares,cua´nlejosdelasolucio´no´pti-
+Referencias
+maquedanambosalgoritmosenaquellosproblemasdonde
+sedetienenporalcanzarell´ımitedetiempoprefijado(40000 [1] ClaireS.AdjimanandChristodoulosA.Floudas. The
+CPUsegundos).Enlafigura-3(d)segraficanlascurvasco- αBBglobalaoptimizationalgoritmfornonconvexpro-
+rrespondientesalgaprelativodelprocedimientoSDP1-KKT blems:Anoverview,volume53ofNonconvexOptimi-
+Algoritmodecorteycontinuacio´nconramificacio´nyacotacio´nparalasolucio´ndelproblemacuadra´ticocon
+28 restriccionesdecaja
+6000
+4000
+2000
+0
+0 500 1000 1500 2000 2500 3000
+TOTITER
+SODON
+(a) Relación: Nodos vs Total de Iteraciones x 104
+10
+Lineal (R−square =1)
+5
+0
+−5
+0 1000 2000 3000 4000 5000 6000
+NODOS
+OPMEIT
+(b) Relación: Tiempo vs Nodos
+Lineal (R−square =0.96)
+600
+400
+200
+0
+20 40 60 80 100
+Densidad (D)
+SODON
+(c) Relación: Nodos vs Densidad N=40 x 104
+10
+Lineal (R−square=0.02)
+Poly2 (R−square=0.02) 5
+Spline (R−square=0.22)
+0
+−5
+0 500 1000 1500 2000 2500 3000
+TOTITER
+OPMEIT
+(d) Relación: Tiempo vs Total de Iteraciones
+Lineal (R−square=0.96)
+Figura2.MedicionesdelcomportamientodelalgoritmoPAFO-SDP1
+10000
+5000
+0
+0 2000 4000 6000 8000
+SDP1−KKT
+1PDS−OFAP
+(a) Número total de nodos generados
+4000
+3000
+2000
+1000
+0
+0 1000 2000 3000 4000
+SDP1−KKT
+1PDS−OFAP
+(b) Número total de nodos explorados
+x 104
+6
+4
+2
+0
+0 1 2 3 4 5 6
+SDP1−KKT x 104
+1PDS−OFAP
+(c) Tiempo total de procesamiento
+0.2
+0.15
+0.1
+0.05
+0
+0 5 10 15 20
+Problema
+ovitaler
+pag
+(d) gap relativo en problemas detenidos por tiempo
+PAFO−SDP1
+SDP1−KKT
+Figura3.Comparacio´ndelrendimientoentreSDP1-KKTyPAFO-SDP1
+zationandItsApplications,chapter8,pages155–186. [6] J.W.Chinneck. Theconstraintconsensusmethodforfin-
+KluwerAcademic,2001. dingapproximatelyfeasiblepointsinninlinearprograms.
+INFORMSJournalonComputing,16(3):255–265,2004.
+[2] E.L.AllgowerandK.Georg. NumericalContinuation
+Methods: An Introduction. Berlin, Heidelberg, New
+[7] T.F. Coleman and L.A. Hulbert. A direct active set
+York,1990.
+algorithmforlargesparsequadraticprogramswithsim-
+plebounds. MathematicalProgramming,(45):373–406,
+[3] SamuelBurerandJieqiuChen. Relaxingtheoptimality
+conditionsofboxQP. ComputationalOptimizationand 1989.
+Applications,48:653–673,2011.
+[8] W. Gomez, J. Guddat, H.Th. Jongen, J. Ruck-
+[4] Samuel Burer and Dieter Vandenbussche. A finite
+mann, and C.Solano. Curvas cr´ıticas y sal-
+branch-and-bound algorithm for nonconvex quadratic
+tos en optimizacio´n no lineal. On Line, 2000.
+programmingviasemidefiniterelaxations. Math.Pro-
+http://www.emis.de/monogrphs/curvas/index.html.
+gram.,113(Ser.A):259–282,2008.
+[5] JieqiuChen. Convexrelaxationsinnonconvexandap- [9] MC.GrantandSP.Boyd. TheCVXUsersGuide. CVX
+pliedoptimization.PhDthesis,UniversityofIowa,2010. Research,Inc.,2014.
+Algoritmodecorteycontinuacio´nconramificacio´nyacotacio´nparalasolucio´ndelproblemacuadra´ticocon
+restriccionesdecaja 29
+[10] J. Guddat, F. Guerra, D. Nowack, and J.J. Ruckmann. problems. JournalofGlobalOptimization,2:379–410,
+Onthecalculationoffeasiblepointofanonconvexset: 1992.
+pathfollowingandjumps. Optimization,2006.
+[20] H.D.SheraliandC.H.Tuncbilek.Areformulation-con-
+[11] P. Hansen and B. Joumard. Reduction of indefinite
+vexificationapproachforsolvingnonconvexquadratic
+quadratic programs to bilinear programs. Journal of
+programmingproblems.JournalofGlobalOptimization,
+GlobalOptimization,(2):41–62,1992.
+(7):101–112,1995.
+[12] P.Hansen,B.Joumard,M.Ruiz,andJ.Xiong. Global
+[21] N.Z. Shor. Quadratic optimization problems. Tekhni-
+minimizationofindefinitequadraticfunctionssubject
+cheskayaKibernetika,1:128–139,1987.
+to box constraints. Technical report, GERAD, Ecole
+PolytechniqueUniversiteMacGill,Montreal,Canada,
+[22] Laurence Smith, John Chinneck, and Victor Aitken.
+1991. TechnicalReport.
+ConstraintConsensusConcentrationforIdentifyingDis-
+[13] F.TwiltH.Th.Jongen,P.Jonker. Criticalsetsinparame- jointFeasibleRegionsinNonlinearPrograms. Optimi-
+tricoptimization.MathematicalProgramming,(34):333– zationMethodsandSoftware,00(00):1–30,2011.
+353,1986.
+[23] LaurenceSmith,JohnChinneck,andVictorAitken. Im-
+[14] M.K.Kozlov,S.P.Tarasov,andL.G.Khachiyan. Polyno- provedConstraintConsensusMethodsforSeekingFea-
+mialsolvabilityofconvexquadraticprogramming. Dokl. sibilityinNonlinearPrograms. ComputationalOptimi-
+Akad.NaukSSSR,248(5):10491051,1979. zationwithApplications,2012.
+[24] MatLabTeam. MatlabusersGuide. ThemathWorks,
+[15] R. Miranda. On the generic character of the problem
+Inc.,2013.
+pr(t). Optimization,2009.
+[16] M.Padberg. Thebooleanquadricpolytope:Somecha- [25] KC Toh, RH Tutuncu, and MJ Todd. Solving
+racteristics,facetsandrelatives. MathematicalProgram- semidefinite-quadratic-linearprogramsusingsdpt3.Mat-
+ming,45:139–172,1989. hematicalProgramming,SeriesB,(95):189–217,2003.
+[17] P.M.PardalosandS.A.Vavasis.Quadraticprogramming [26] Dieter Vandenbussche and George L Nemhauser. A
+with one negative eigenvalue is np-hard. Journal of branch-and-cutalgorithmfornonconvexquadraticpro-
+GlobalOptimization,(1):15–22,1991. gramswithboxconstraints. Math.Program.,102:559–
+575,2005.
+[18] H. D. Sherali and W. P Adams. A hierarchy of rela-
+xationsbetweenthecontinuousandconvexhullrepre-
+[27] Yasutoshi Yajima and Tetsuya Fujie. A Polyhedral
+sentationsforzero-oneprogrammingproblems. SIAM
+ApproachforNonconvexQuadraticProgrammingPro-
+JournalonDiscreteMathematics,3(3):411–430,1990.
+blemswithBoxConstraints. JournalofGlobalOptimi-
+[19] H.D.SheraliandAAlameddine. Anewreformulation- zation,13(2):151–170,1998.
+linearizationtechniqueforsolvingbilinearprogramming

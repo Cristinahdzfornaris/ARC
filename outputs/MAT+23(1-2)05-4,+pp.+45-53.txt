@@ -1,0 +1,712 @@
+REVISTA CIENCIAS MATEMÁTICAS Vol. 23 único, Nos. 2005-2006
+UNA VARIANTE DEL MÉTODO
+DE LINEALIZACIÓN LOCAL PARA LA INTEGRACIÓN
+DE ECUACIONES DIFERENCIALES ESTOCÁSTICAS
+CON RESPECTO A SEMIMARTINGALAS
+Luis A. Salomón Hernández1, Departamento de Matemática Aplicada, Universidad de la Habana,
+Facultad de Matemática y Computación
+Rolando J. Biscay Lirio2, Instituto de Cibernética, Matemática y Física (ICIMAF)
+RESUMEN
+El método de Linealización Local para la integración numérica (en sentido fuerte) de ecuaciones
+diferenciales estocásticas con ruido de Wiener es extendido al caso de ecuaciones diferenciales con
+respecto a semimartingalas. Se demuestra además la convergencia ucp (uniforme sobre compactos en
+probabilidad) de la solución aproximada a la solución exacta.
+Palabras clave: Semimartingalas, Linealización Local, Convergencia ucp.
+ABSTRACT
+The Local Linearization (LL) method for the integration (in the strong sense) of stochastic differential
+equations with Wiener noise is extended to equations driven by additive semimartingales. Furthermore,
+it is proved the convergence in ucp (uniform on compacts in probability) of the approximate solution to
+the exact one.
+1. INTRODUCCIÓN
+El método de Linealización Local (LL) para la solución numérica de ecuaciones diferenciales se basa en la
+solución explícita, mediante exponenciales matriciales, de ecuaciones lineales que localmente aproximan a
+la ecuación original.
+El método LL ha sido desarrollado para ecuaciones diferenciales ordinarias (Jiménez et al., 2002),
+ecuaciones diferenciales estocásticas de Ito (Ozaki, 1992; Biscay et al., 1996; Jiménez y Biscay, 2002;
+Jiménez y Carbonell, 2005) y ecuaciones diferenciales aleatorias (Carbonell et al., 2005). Resultados
+teóricos y de simulación han mostrado que este enfoque logra buenas propiedades dinámicas con bajo costo
+computacional, en comparación con los métodos implícitos de solución.
+Sin embargo, el método LL no ha sido aún formulado para el caso más general de ecuaciones
+diferenciales estocásticas con respecto a semimartingalas. Como es sabido, las semimartingalas incluyen no
+solo al movimiento Browniano sino también a los procesos de Poisson y los procesos de Lévy estables, y
+constituyen los procesos estocásticos más generales que se han considerado como integradores
+estocásticos (Protter, 1995). Para este tipo de ecuaciones el único enfoque numérico de solución que ha
+sido usado hasta el momento es el método de Euler. Esto es así tanto para soluciones en sentido fuerte
+(Protter, 1985; Karandikar, 1991; Kohatsu-Higa and Protter, 1991; Kurtz and Protter, P. 1991; Janicki et al.,
+1993.) como para soluciones en sentido débil (Janicki y Weron, 1995; Janicki et al., 1996; Protter y Talay,
+1997; Jacod y Protter, 1998; Jacod et al., 2005).
+El objetivo de este trabajo es extender el método LL a ecuaciones diferenciales estocásticas con respecto
+a semimartingalas en caso de ruido aditivo.
+El trabajo está organizado del modo siguiente. En la Sección 2 se compendian conceptos y resultados
+básicos sobre integración estocástica que serán usados posteriormente. En la Sección 3 se define una
+variante del método LL para ecuaciones diferenciales con respecto a semimartingalas de tipo ruido aditivo.
+Para la realización computacional del método, se supone que las integrales estocásticas con respecto a la
+semimartingala pueden simularse con la precisión deseada. El resultado teórico principal obtenido es el
+E-mail: 1salo@matcom.uh.cu
+2biscay@icmf.inf.cu
+45
+teorema de convergencia ucp (uniforme sobre compactos en probabilidad) de la aproximación LL, el cual se
+demuestra en la Sección 4. Se concluye con algunos comentarios finales la Sección 5.
+2. PRELIMINARES
+Por completitud, recordaremos aquí algunos conceptos y resultados básicos de la teoría general de
+procesos que usaremos a través de este trabajo. Para más información, ver e.g. Protter (1995).
+Una filtración (F) con las hipótesis usuales sobre un espacio de probabilidad completo (,F,P) es una
+t t0
+familia de -álgebras contenidas en F, creciente, continua por derecha y tal que F contiene todos los
+0
+conjuntos P-nulos de F. Un proceso X = (X) se dice adaptado si X es F medible para todo t  0.
+t t0 t t
+Un tiempo de parada T es una variable aleatoria no negativa tal que T  t pertenece a F para todo t  0.
+t
+Si X es un proceso y T un tiempo de parada, el proceso X parado en el tiempo T se define como XT =
+(X ) .
+tT t0
+Dada una sucesión finita de tiempos de parada 0  T  T  , diremos que H es un proceso
+1 n+1
+predecible simple si tiene la representación:
+H = H 1 (t) +
+t 0 0
+46
+n
+i
+1
+H 1i
+(T ,T
+i i 1
+
+( t ) , (t),
+para ciertas variables aleatorias H  . A la familia de los procesos predecibles simples se le denotará por S.
+i
+Un proceso se dice càdlàg (respectivamente, càglàd) si casi seguramente (c.s.) sus trayectorias son
+continuas por derecha (resp. por izquierda) y con límites por izquierda (resp. por derecha) finitos. Denotamos
+por L (resp. D) al espacio de los procesos adaptados y càdlàg (resp., càglàd). Dado un proceso X,
+denotaremos por X al proceso definido por el límite por izquierda de X en cada punto.
+-
+Un proceso X adaptado y real se dice una martingala con respecto a la filtración (F) si cumple:
+t t0
+i) E( H )  
+t
+ii) Si s  t entonces E(X / F ) = X c.s.
+t s s
+Un proceso càdlàg y adaptado X es una martingala local si existe una sucesión creciente de tiempos de
+parada T con lim T =  c.s. tales que, para cada n, X 1 t  0 es una familia de variables aleatorias
+n n n tTn Tn  0
+uniformemente integrable y es una martingala.
+Sea L0 el espacio de variables aleatorias finitas dotado de la topología definida por la convergencia en
+probabilidad. Dado un proceso X en D, definimos el operador JX(H):S  D mediante:
+J (H) = H X + X 0 0
+n
+i
+1
+H (i X T i 1  X T i ) .
+Diremos que un proceso (Hn) converge a un proceso H uniformemente sobre compactos en probabilidad
+n1
+(ucp) si para cada t > 0 se cumple que s0 us
+
+p
+t
+H ns  H
+s
+ converge a 0 en probabilidad.
+Denotaremos por S y D a los espacios S y D con la topología ucp. Existen dos definiciones
+ucp ucp
+equivalentes del concepto de semimartingala. Sea X un proceso càdlàg y adaptado. Entonces X es una
+semimartingala (en sentido clásico) si puede descomponerse en la forma X = X + M + A, donde M es una
+t 0 t t
+martingala local y A es un proceso creciente de variación acotada. Equivalentemente, X es una
+semimartingala si el operador J es una aplicación continua de S en D .
+X ucp ucp
+Sea X una semimartingala. El operador lineal continuo J de S en D tiene una extensión única a un
+X ucp ucp
+operador de L en D. Para H en L, a J (H) se le llama integral de H con respecto a X y se denota por
+X
+H  X =  H dX .
+s s
+Una semimartingala d-dimensional es un proceso con valores en el espacio euclideano d-dimensional tal
+que sus componentes son semimartingalas. Análogamente se extienden para procesos multidimensionales
+(vectoriales y matriciales) los espacios L y D, así como la integral estocástica.
+Sea f una función continua de   d en d, G una función continua   d en dm, Z una
++ + t
+semimartingala m-dimensional y X un vector aleatorio d-dimensional F -medible. Si f(t,x) y G(t,x) son
+0 0
+funciones de Lipschitz con respecto a x entonces existe una única semimartingala X que satisface la
+ecuación diferencial estocástica (EDE)
+X = X +
+t 0
+47
+t0
+f ( s , X
+s 
+) d s 
+t0
+G ( s , X
+s 
+) d Z s .
+Tal proceso X se dice una solución fuerte de esta ecuación. Aquí la primera integral se entiende en sentido
+de Riemann y la segunda en sentido de integral estocástica con respecto a una semimartingala Z. Además,
+X denota el límite por la izquierda del proceso X en el tiempo s. En la primera integral, X puede sustituirse
+s- s-
+por X pues es sabido que el conjunto de puntos de discontinuidad de una semimartingala es a lo sumo
+s
+numerable.
+En el presente trabajo trataremos con EDE de tipo ruido aditivo; es decir, de la forma:
+dX = f(t, X)dt + G(t)dZ,
+t t t
+con condición inicial X
+t0
+= X d, o equivalentemente,
+0
+t t
+X = X + f(s,X )dsG(s)dZ . (1)
+t 0 s s
+0 0
+Para uso posterior, enunciaremos a continuación una de las versiones usuales del lema de Gronwall.
+Lema 1 (Gronwall). Sea α(t) una función de + en - y supongamos que además se cumple que:
+(t)  c  k
+s0
+ ( u ) d u  ,
+para 0  s  t. Entonces (t)  c  ek t..
+3. EL MÉTODO DE LINEALIZACIÓN LOCAL
+Consideremos una ecuación diferencial estocástica de tipo ruido aditivo con respecto a una semimartingala
+m-dimensional Z, i.e. de la forma (1).
+Para su solución numérica, introduzcamos una sucesión de particiones de la recta numérica,
+0  TN   TN   (N = 1,2,…) formada por tiempos de parada TN tales que c.s.
+1 k n
+N
+T Nk
+N
+tiende a infinito y
+máx. ( T Nn
+ 1
+ T Nn ) tiende a cero cuando N crece. Para simplificar la notación, escribiremos eventualmente T
+n
+en lugar de TN.
+n
+Definiremos una aproximación Y = TN de X recursivamente sobre los sucesivos intervalos T ,T ,
+n n+1
+partiendo de Y = X . Supongamos para esto definida X para t  T . Entonces sobre el intervalo
+0 0 t n
+T ,T  consideremos la siguiente linealización de la ecuación (1)
+n n+1
+Y =
+t
+48
+Y
+t
+
+tT
+n
+f N ( Y )
+s 
+d s 
+tT
+n
+G ( s ) d Z
+s
+(2)
+donde
+fN(T) s- = f( s- , Y   s- ) +
+
+
+f
+f
+( s- , Y   s- ) (s -  s- )   s- )+
+
+
+f
+f
+( s- , Y   s- ) (Y s - - Y   s- ) .
+Como  = T para s en T ,T  la ecuación (2) es lineal en este intervalo, y por tanto tiene solución
+s- n n n+1
+explícita en función de exponenciales matriciales (ver, e.g., Protter, 1995). Específicamente:
+Y =
+t
+Y
+T n
+
+tT
+n
+e x p
+
+( t  T
+n
+)
+ f ( T
+n
+
+,
+y
+Y
+T
+n
+)  
+f ( T
+n
+, Y
+T n
+) 
+ f ( T
+n
+
+,
+y
+Y
+T
+n
+)
+( s  T
+n
+)
+
+d s  
+n
+,
+,t
+(3)
+donde
+
+n ,t
+
+tT
+n
+e x p
+
+( t  T
+n
+)
+ f ( T
+n
+
+,
+y
+Y
+T
+n
+) 
+G ( s ) d Z
+s
+.
+Nótese además que la aproximación así obtenida satisface la ecuación
+t t
+Y  X fN(Y) dsG(s)dZ , (4)
+t 0 s s
+0 0
+para todo t  0. La aproximación LL queda así definida por (3), o equivalentemente por (4). Su cálculo
+requiere de la simulación de la variable aleatoria  . Supondremos en lo que sigue que ello es factible desde
+n,t
+el punto de vista computacional (ver también comentarios en la Sección 5).
+4. CONVERGENCIA
+Para demostrar la convergencia ucp de la aproximación LL a la solución exacta supondremos que se
+satisfacen las siguientes condiciones:
+(H1) f  C1,1(  d, d) y G  C1(  d, dm).
++ +
+(H2) X es F medible.
+0 0
+(H3) Existe una constante K   tal que
+
+
+f
+f
+( t, x )  K, t   y x d.
++
+(H4) t   , existe una constante K = K (t )   tal que
+0 + 1 1 0
+
+
+f
+t
+( t, x ) 
+
+
+f
+t
+( t, y )  K
+1
+x  y ) , t  0, t  y x,y  d.
+0
+2f
+(H5) (t,x) es continua.
+x2
+Para facilitar la demostración de la convergencia utilizaremos el lema siguiente.
+Lema 2. Supóngase que se cumplen las condiciones (H1)-(H5). Entonces la aproximación LL YN (definida
+por (4)) cumple que existe una sucesión de tiempos de parada N tales que P - lim N=  uniforme con
+j j j
+respecto a N y YN  j para todo 0  t N.
+t j
+Demostración: Por simplicidad, escribase Y en lugar de YN.
+A partir de la ecuación (4) podemos asegurar que
+t t
+Y  Y  fN(Y) ds G(s)dZ (5)
+t 0 s s
+0 0
+Por definición de fN,
+49
+f N ( Y )
+s 
+ f ( 
+s 
+, Y  
+s 
+) 
+
+
+f
+y
+( 
+s 
+, Y  
+s 
+) s  
+s 
+
+
+
+f
+t
+( 
+s 
+, Y  
+s 
+) Y
+s
+ Y  
+s 
+.
+Usando las condiciones (H1) y (H3) podemos decir que:
+f( ,Y )  f( ,0  f( ,Y )f( ,0) c K Y ) ,
+s s s s s s 0 s
+con 0  s  t para un t fijo.
+0 0
+Utilizando un razonamiento similar, pero a partir de las condiciones (H1) y (H4), podemos asegurar que
+
+
+f
+y
+( 
+s 
+, Y  
+s 
+)  c
+1
+ K
+1
+Y  
+s 
+Y por (H3) se tiene además que
+f
+( ,Y ) K.
+y s s
+A partir de las desigualdades anteriores y a partir de un t  0, podemos asegurar que existen constantes
+0
+b , b y b tales que si definimos
+01 02 03
+
+t
+ s0
+
+us p
+t
+Y
+s
+, entonces
+
+t
+ X
+0
+
+t0
+( b
+0 1
+ b
+0 2
+s  
+s 
+ b
+0 3
+
+s
+) d s  
+t
+.
+Por lo que para ciertas constantes a y b se tiene que:
+0 0
+
+t
+ X
+0
+ a
+0
+ b
+0
+t0
+
+s
+d s   ,t (6)
+t
+donde   sup G(s)dZ .
+t z
+0st
+0
+Además,  es finito porque Y es una semimartingala. Y  es una variable aleatoria finita por ser
+t t t
+ t 
+ G(s)dZ  una semimartingala.
+ s 
+ 0  t0
+Luego (6) implica por el lema de Gronwall:
+50
+
+t
+ X
+0
+ a
+0
+ 
+t
+ ( X
+0
+ a
+0
+ 
+t
+) ( e b tb  1 )  0  t  t .
+0
+En particular  t   , podemos encontrar una cota que no dependa de la partición:
+0 +
+  X a  ( X a  )(eb o t o 1). (7)
+t 0 0 t 0 0 t
+0 0 0
+Definamos  Nj  in f  t : Y
+t
+ j  , para j =1,2,…, entonces se tiene que Y
+t
+ j  0  t   Nj y además
+ 0  t   Nj P (  Nj  t
+0
+)  P ( 
+t0
+ j) , donde P ( 
+t0
+ j) tiende a 0 cuando j tiende a infinito, de modo uniforme
+con respecto a la partición N; pues el miembro derecho de (7) es una variable aleatoria finita que no depende
+de la partición N. ٱ
+En estos momentos estamos en condiciones de enunciar el teorema de convergencia del método del LL.
+Teorema 1. Supóngase que se cumplen las condiciones (H1)-(H5). Entonces la aproximación LL TN (definida
+por (4)) tiende a la solución exacta X de la ecuación (1) cuando N  , en el sentido de convergencia ucp.
+Demostración:
+a) Sea
+X
+t
+ Y
+t
+
+t0
+f ( s , X
+s 
+)  f N ( Y )
+s 
+d s
+t t
+f(s,X )fN(Y) dsfN(X) fN(Y) ds.
+s s s s
+0 0
+Por tanto,
+X
+t
+ Y
+t
+
+t0
+f ( s , X
+s 
+)  f N ( X )
+s 
+d s 
+t0
+f N ( X )
+s 
+ f N ( X )
+s 
+d s .
+Si se define 
+t
+ s u p
+0 s   t
+X
+s
+ Y
+s
+, podemos rescribir la expresión anterior como sigue:
+t t
+   f(s,X )fN(X) ds fN(X) fN(Y) ds. (8)
+t s s s s
+0 0
+Sea ahora t  0 un tiempo arbitrario, y
+0
+
+0 j
+  Nj  t  , donde
+0 j
+
+j
+ in f  t : X
+t
+ j  y a  b denota el
+mínimo entre a y b. Como X es semimartingala entonces es localmente acotada, i.e.,
+X  j 0t  y lim  =  c.s.
+t j j j
+Para todo s   , utilizando la fórmula de los incrementos finitos, las condiciones (H3), (H4) y (H5), se
+0j
+puede afirmar que:
+fN(X) fN(Y) K X Y  K X Y K Y X 
+s s s s s s s s
+M X Y X X  K X Y s .
+0 s s s s 1 s s s
+A partir de esta desigualdad, de (8) y de la acotación
+51
+X
+t
+ j
+para 0  t   , podemos asegurar que 0j
+existe una constante  tal que t   , se cumple que:
+0j 0j
+t  0j
+
+t
+
+0j
+
+s
+ds  f(s,X
+s
+)fN(X)
+s
+ds .
+(9)
+0 0
+Denotemos
+R( ) = 0j
+
+00 j
+f ( s , X
+s 
+)  f N ( X )
+s 
+d s .
+Entonces por (9) y el lema de Gronwall se obtiene que
+  R( ) + R(( ) (e
+p0jt0
+– 1)
+0j 0j 0j
+b) Por otra parte, s   se cumple que
++
+f f
+f(s,X )fN(X) )  f(s,X )f( ,X ) ( ,X )(X X ) ( ,X )(s ) .
+s s s s s x s s s s x s s s
+Como X tiene límite por la izquierda, entonces, para cada partición N, X  
+s 
+tiende a X para cada s  
+s- +
+y   . Además  tiende a s para cada s   y   . Luego a partir de (H1), podemos decir que
+s- +
+f ( s , X
+s 
+)  f N ( X )
+s
+)  N  0 ,
+para cada s   y   .
++
+Además por ser X
+s 
+ j para todo 0    s  t , a partir de (H1) se obtiene que existe una constante M
+s- 0 0j
+tal que f ( s , X s  )  f N ( X ) s )  M 0 ,j 0  s   y   . 0j
+Entonces por el Teorema de la Convergencia Dominada de Lebesgue se cumple que: R( ) tiende a cero
+0j
+c.s. cuando la partición se hace más fina (N tiende a infinito). Luego podemos afirmar que limj 
+
+0 j
+ 0 casi
+seguramente cuando N tiende a infinito.
+c) Además r  0 se tiene que:
+P( r)P( r,  t )P( t ) P( r)P( t )
+t t  0 0j 0 t 0j 0
+0 0 0j 0j
+Por lo demostrado en c) podemos asegurar que para j, uniformemente con respecto a N, P ( 
+
+0 j
+ r) tiende
+a cero cuando r crece. Y por el hecho de que    c.s. cuando j aumenta entonces
+0j
+P ( 
+0 j
+ t ) tiende a
+0
+cero cuando j crece. Luego lim 0en probabilidad cuando N tiende a infinito, que es lo que se quería
+t
+j 0
+demostrar. ٱ
+5. CONCLUSIONES
+Hemos definido una generalización del método LL para el caso de ecuaciones diferenciales estocásticas
+en las que la integración es con respecto a semimartingalas. Estas ecuaciones tienen gran generalidad
+porque, como es sabido, las semimartingalas incluyen todos los procesos con respecto a los cuales (como
+diferenciales) se ha trabajado hasta el momento.
+No obstante deben destacarse algunas limitaciones del trabajo realizado.
+En primer lugar, nos hemos restringido a ecuaciones diferenciales con ruido de tipo aditivo. De otro modo
+no hubiéramos contado con expresiones explícitas para las ecuaciones lineales locales que sirven de base al
+enfoque LL.
+En segundo lugar, el cálculo de la aproximación LL propuesta requiere de la simulación de las variables
+aleatorias ξt =
+52
+t0
+G ( s ) d Z
+s
+. Ello puede realizarse de modo relativamente simple en casos; por ejemplo, cuando
+la semimartingala Z es un proceso de Lévy alfa-estable, en cuyo caso estas variables tienen distribuciones
+estables conocidas. Pero para semimartingalas más generales la simulación de tales variables puede
+resultar costosa o incluso impracticable.
+El desarrollo de otras variantes del método LL que superen estas limitaciones es objeto de trabajos en
+curso por los autores.
+REFERENCIAS
+BISCAY, R. J.; J.C. JIMÉNEZ; J. RIERA and VALDÉS, P. (1996). “Local linearization method for
+the numerical solution of stochastic differential equations”. Annals of the Institute of
+Statistical Mathematics, 48, 631-644.
+CARBONELL, F.; J.C. JIMÉNEZ; R.J. BISCAY and CRUZ, H. de la (2005): “The Local Linearization
+method for numerical integration of random differential equations”. BIT Numerical
+Mathematics, 45, 1-14.
+JACOD, J.; T.G. KURTZ; S. MELEARD and P. PROTTER (2005): “The approximate Euler method
+for Levy driven stochastic differential equations”. Ann. I. H. Poincaré-PR, 41, 523-558.
+JACOD, J., and P. PROTTER (1998): “Asymptotic error distributions for the Euler method for
+stochastic differential equations”. The Annals of Probability, 26, 267-307.
+JANICKI, A.; Z. MICHNA and A. WERON (1996): “Approximations of stochastic differential equations
+driven by alpha-stable Levy motion”. Applicationes Mathematicae, 24, 149-168.
+JANICKI, A.; K. PODGÓRSKI and A. WERON (1993): “Computer simulation of α-stable Ornstein-
+Uhlenbeck process”. In: Stochastic Processes. A Festschrift in Honour of Gopinath
+Kallianpur, 161-170. S Cambanis et al. (eds.) Springer-Verlag: Berlin.
+JANICKI, A. and A. WERON (1995): “Computer investigation of chaotic behaviour of stationary α-
+stable process”. Probability and Mathematical Statistics, 15, 385-395.
+JIMÉNEZ, J.C. and R.J. BISCAY (2002): “Approximation of continuous time stochastic processes by
+the local linearization revisited”. Stochastic Analysis and its Applications, 20, 105-121.
+JIMÉNEZ J.C.: C.M. MORA and R.J. BISCAY (2002): “Properties of a Local Linearization scheme
+for the numerical integration of ordinary differential equations”. Applied Mathematics and
+Computation, 126, 63-80.
+JIMÉNEZ, J.C. and F. CARBONELL (2005): “Rate of convergence of local linearization schemes for
+initial-value problems”. Applied Mathematics and Computation, 171, 1282-1295.
+KARANDIKAR, R.L. (1991): “An almost sure convergence of modified Euler-Peano approximation
+of solution to an SDE driven by semimartingales”. In: Séminaire de Probabilités XXV,
+113-120. J. Azema et al. (eds.). Springer Verlag: Berlin.
+KOHATSU-HIGA, A. and PROTTER, P. (1991): “The Euler scheme for SDE’s driven by
+semimartingales”. In: Stochastic Analysis on Infinite Dimensional Spaces, 141-151. H.
+H. Kuo (ed.). Longman Scientific and Technical: England.
+KURTZ, T. and P. PROTTER (1991): “Wonk Zakai corrections, random evolutions and simulation
+schemes for SDE’s”. In: Stochastic Analysis. Liber Amicorum for Moshe Zakai, 331-
+346. E. Mayer-Wolt et al. (eds.)
+OZAKI, T. (1992): “A bridge between nonlinear time series models and nonlinear stochastic dynamical
+systems: a local linearization approach”. Statistica Sinica, 2, 113-135.
+PROTTER, P. (1985): Approximations of solutions of stochastic differential equation driven by
+semimartingales”. The Annals of Probability, 13, 716-743.
+____________ (1995): Stochastic Differential Equations: Theory and Applications. John Wiley
+& Songs: New York.
+PROTTER, P. and D. TALAY (1997); “The Euler scheme for Levy driven stochastic differential
+equations”. The Annals of Probability, 25, 393-423.
+53

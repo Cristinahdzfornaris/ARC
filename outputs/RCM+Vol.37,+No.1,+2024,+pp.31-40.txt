@@ -1,0 +1,701 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.37,No.1,2024,Pag.31-40
+Recibido(Received):15-05-2024,Revisado(Reviewed):21-06-2024
+Aceptado(Accepted):15-07-2024,Enlínea(Online):30-12-2024
+Segmentación automática del hígado en imágenes de
+tomografía computarizada
+Automated liver segmentation on computed
+tomography images
+Lázaro Ramón Caraballo Rodríguez1 , Marlen Pérez Díaz2* , Rubén Orozco Morales3
+Resumen La segmentación automática de hígado facilita la detección de anomalías hepáticas a partir de
+imágenes de tomografía computarizada. La segmentación manual de estructuras y órganos no alcanza los
+nivelesdeprecisiónconlosquecuentanlosmodernossistemasautomáticos3D.Estainvestigaciónsebasa
+en encontrar una alternativa eficaz y eficiente para la realización de esta tarea en rutina clínica. El objetivo
+escomparartresmétodosdesegmentaciónautomáticadelhígado,apartirdeimágenesdetomografía.Los
+métodos comparados fueron k-means plus, campos aleatorios ocultos de Markov y red neuronal de mapas
+auto-organizados.Paralacomparaciónserealizóunanálisisestadísticoycomputacionaldelosresultadosdela
+segmentación.SeutilizaroncomométricasdecalidaddelasegmentaciónelcoeficientedeDice,ladistancia
+promediodesuperficiepromedioyladistanciasuperficialsimétricamáximaen20tomografíasabdominales.De
+lostresmétodosanalizados,secomprobóquetodoslograronunacorrectasegmentación,perok-meansplus
+consiguióunamejorprecisiónconmenostiempodecómputoymenortasadefallos.Seconcluyequek-means
+plus puedeseradecuadoparasuutilizaciónenlarutinaclínica.
+Palabras Clave: hígado, procesamiento digital de imágenes, segmentación, tomografía computarizada de
+abdomen.
+Abstract Automaticliversegmentationfacilitatesthedetectionofliverabnormalitiesfromcomputedtomography
+images. Manual segmentation of structures and organs does not reach the precision levels of modern 3D
+automaticsystems. Thisresearchisbasedonfindinganeffectiveandefficientalternativetoperformthistaskin
+clinicalroutine. Theobjectiveistocomparethreemethodsofautomaticliversegmentationfromtomography
+images. The methods compared were k-means plus, hidden Markov random fields and neural network of
+self-organizing maps. Statistical and computational analysis of the segmentation results was performed for
+comparison. Dicecoefficient,averageaveragesurfacedistanceandmaximumsymmetricsurfacedistancein20
+abdominaltomographiesscanswereusedassegmentationqualitymetrics. Ofthethreemethodsanalyzed,all
+werefoundtoachievecorrectsegmentation,butk-meansplusachievedbetteraccuracywithlesscomputation
+timeandlowerfailurerate. Itisconcludedthatk-meansplusmaybesuitableforuseinclinicalroutine.
+Keywords: liver,digitalimageprocessing,segmentation,abdomen’scomputedtomography.
+MathematicsSubjectClassification: 5804,68Q07,68Q09,6804,68N30.
+1DepartamentodeAutomática,FacultaddeIngenieríaEléctrica,UniversidadCentral“MartaAbreu”delasVillas,VillaClara,Cuba.Email:
+ramyduro@gmail.com.
+2DepartamentodeAutomática,FacultaddeIngenieríaEléctrica,UniversidadCentral“MartaAbreu”delasVillas,VillaClara,Cuba.Email:
+mperez@uclv.ed.cu,marlen20012001@gmail.com.
+3DepartamentodeAutomática,FacultaddeIngenieríaEléctrica,UniversidadCentral“MartaAbreu”delasVillas,VillaClara,Cuba.Email:
+rorozco@uclv.edu.cu.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Maquetadopor(Layoutby):LázaroDanielGonzálezMartínez,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,La
+Habana,Cuba.
+Citar como: Caraballo Rodríguez, L.R.; Pérez Díaz, M.;& Orozco Morales, R. (2024). Segmentación au-
+tomática del hígado en imágenes de tomografía computarizada. Ciencias Matemáticas, 37(1), 31–40. DOI:
+https://doi.org/10.5281/zenodo.14577046.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9343.
+Introducción entreotros.Lamayoríadeestosmétodoshansidodesarro-
+lladosypublicadosaniveldelaboratorio,porloqueaúnno
+Elprocesamientodigitaldeimágenescontinúasiendouna
+tienenimplementaciónclínica,ohanconducidoaunsoftware
+líneadeinvestigaciónabiertaenlaprácticadelaimagenología
+propietario.
+médica.Pesealamodernizaciónquesehaalcanzadoenla
+Enestesentido,paraelpresentetrabajoseescogierontres
+tecnologíadelatomografíacomputarizada(TC),queincluye
+enfoques de segmentación diferentes para ser comparados
+softwareparaprocesarlasimágenes,todavíasecontinúain-
+confinesdeimplementaciónenunafuturarutinaclínica:uno
+vestigandoenmétodosdemejoramientodelacalidaddela
+conunmétodomorfológico,otroconunmétodoestadísticoy,
+imagenparafacilitareldiagnósticomédico.Losmétodospara
+finalmente,unmétododeaprendizajedemáquinas.
+lasegmentacióndediferentesestructuras,órganosylesiones,
+Entodosloscasos,lasegmentaciónsubdividecadaima-
+sonpartedeesequehacer.
+genensuspartesconstituyentesuobjetos,conelfindeseparar
+Así, por ejemplo, la visualización completa del hígado,
+laspartesdeinterésdelrestodelaimagen.Porlotanto,el
+sehacemuycomplejaporsuubicación.Seencuentraenla
+nivelalquesellevaacaboestasubdivisióndependedelpro-
+partesuperiorderechadelacavidadabdominal,debajodel
+blemaaresolverydelmétodoencuestiónaaplicar.
+diafragmayporencimadelestómago,elriñónderechoylos
+Sedebeexpresarquelasegmentaciónautomáticaesuna
+intestinos.Alestarcercadetantoselementosesinevitablela
+delastareasmásdifícilesdelprocesamientodeimágenesy
+superposicióndeestructurassobrelasimágenesmédicas[27].
+raravezllegaaalcanzarunasoluciónperfecta,porloquese
+Debidoaesto,seacudealprocesamientodigitaldeimágenes
+debebuscarunmétodoalternativo,llamado“estándardorado”
+para auxiliar en la tarea de localización y segmentación de
+decomprobación(ground-truth),paralaverificacióndelos
+esteórgano.
+resultados.Pararealizarlascomparaciones,enesteestudiose
+Elobjetivodeestetrabajoesimplementarycomparartres
+utilizanmétricasdecalidaddelasegmentacióndelaimagen
+métodosmodernosdesegmentación3Ddelhígado,apartirde
+realconrespectoasumáscaradesegmentación.
+imágenesdeTC,parabuscarunaalternativaeficazyeficiente
+computacionalmenteparalatarea,quepuedautilizarleenla
+rutinaclínica,unavezqueseaincorporadaaunsoftwarelibre. Relevancia del estudio
+Losmétodosdesegmentacióndeestructurasyórganos
+LavisualizacióndelhígadoenunaTCescomplejaporla
+sonpartedelasmejorasprogresivasquesehanintroducido.
+ubicacióndelórganoylasuperposicióndeotrasestructuras.
+Enelcasoespecíficodelhígado,sonunapiezaclaveparala
+Debido a esta razón, se acude al procesamiento digital de
+detección de enfermedades hepáticas. Son también el paso
+imágenesparaauxiliarenlalocalizaciónyvisualizacióndesu
+inicialparaposiblestrasplantes,porlafacilidadquepresenta
+formaexactaylasposiblesanomalías.Sinembargo,noexiste
+estatécnicaparaladeterminacióndelvolumenhepático,tanto
+hastaelpresenteunmétododesegmentaciónqueresuelvael
+del donante como del receptor. También es crucial para la
+100%decasos.Losmétodosincluidosenlossoftwaredelos
+deteccióndetumoreshepáticosylaplanificaciónderadiote-
+tomógrafossonlimitados.Poresoesunproblemaabiertoa
+rapiainternaselectiva,asícomoparalareduccióndelriesgo
+lainvestigación.Enestetrabajosecomparantresmétodosde
+dedosisderadiaciónexcesivaoinsuficienteasuministraral
+origenmuydiversoparasuposibleimplementaciónenrutina
+pacienteenfermo.
+clínicaapartirdeprocesamientoenunacomputadora.
+Demanerageneral,noexisteunasoluciónglobaldeseg-
+mentación para todos los problemas que se plantean. Los
+métodosytécnicasdesegmentaciónabarcandesdelasmás 1. Materiales y métodos
+sencillas,basadasendiferenciasennivelesdegris,hastalas
+más complejas basadas en textura, imágenes vectoriales y 1.1 Descripcióndelosmétodos
+modelosdeformables. SeimplementarontresmétodosdesegmentaciónenMatlab
+Durantelasúltimasdécadas,sehanrealizadovariasin- 20paracompararlosencuantoaldesempeñoenlatareade
+vestigaciones sobre los métodos de segmentación hepática, segmentarelhígadoapartirdeimágenesdeTC.
+obteniéndosemétodosautomáticosysemiautomáticospara Elprimerofueelmétodomorfológicok-meansplus.Este
+segmentar el hígado como órgano y los tumores de hígado es un método de aprendizaje no supervisado que se utiliza
+[26, 18, 17, 7, 5]. La mayoría de estos estudios incorporan cuandosetienendatosnoetiquetados.Elobjetivoesencon-
+como información la ubicación espacial y la forma de este trargruposenlosvolúmenesdedatossegúnlasimilituden
+órgano.Además,seincluyenvariospasosdeprocesamiento suscaracterísticas.Elalgoritmodividelosobjetosenkgru-
+previoyposteriorparamejorarorefinarelresultado.Sepue- posmutuamenteexcluyentes.Lohacedetalmaneraquelos
+dencitarlosmétodosquesebasanenmodelosdeformables centrosdecadagrupopermanecenlomáscercaposiblede
+[13,31],atlasprobabilísticosycrecimientoporregiones[24], cadaobjeto,perolomáslejosposibledeloscentrosdeotros
+contornosactivos[14,6],redesneuronalesartificiales[28], grupos.
+queincluyenlasredesprofundasconvolucionales[19,10,20], Enelproblemadeinvestigaciónseentiendeporgrupos
+sistemas basados en reglas [4], mapeo no lineal aplicando oclasesalospíxelesquepertenezcanalaregióndeinterés
+MonteCarlo[21],aprendizajeycodificacióndispersa[29], delhígado,conrespectoalospíxelesquepertenezcanaórga-
+Segmentaciónautomáticadelhígadoenimágenesdetomografíacomputarizada 33
+nosaledaños.Cadagruposecaracterizaporsupuntocentral Elsegundométodofueeldecamposaleatoriosocultosde
+(centroide)[3]. Markovconmaximizacióndeexpectativas(HMRF-EM,por
+Antesdeaplicarelmétodo,cadaimagenfuepreprocesada. sussiglaseninglés)[22].Esteesunmétodoestadísticoque
+Paraesto,primeroserealizóunajustedesuintensidadcon utilizalasmedidasdeprobabilidadparamodelarsecuencias
+unatoleranciadesde0,8×10−6hasta0,9×104paraajustarel dedatosrepresentadosporvectoresdeobservación.
+contraste,yunvalordeσ delagaussianaiguala0,520,para Pararealizareletiquetadodepíxeles,elmodeloasignó
+suavizarlaimagenyatenuarelruido.Estoserealizómediante unaetiquetadelconjuntodeetiquetasLacadaestadoS.Así,
+pruebayerror,conelobjetivodemaximizarlosparámetros enladeteccióndelosbordesdelhígadosobreunaimagen,
+decalidaddelasegmentación. se asignó una etiqueta f dentro del conjunto L, para cada
+i
+Paralograrloanterior,seexpandióelrangodeintensida- estado, con i∈S, donde S está formado por los píxeles de
+deshastalosvaloresmáximosymínimosenformatode16 laimagendelhígado.Estemétodomodelalasinteracciones
+bitsmedianteelsiguientecódigodeMatlab: espaciales entre píxeles cercanos. Sea F =(f ,···,f ) una
+1 n
+familia de variables aleatorias definidas en S, donde cada
+Imin = double(Imin);
+variablealeatoriaF tomaunvalor f enL.Sedenominacampo
+Imin = Imin − min(Imin (:)); i i
+aleatorioalafamiliadevariablesaleatoriasF.
+Imin = Imin / max(Imin (:));
+Sedicequeestafamiliacumpleque:
+Imin = uint16(2^16*Imin);
+P(F=f)>0, (1)
+Paralareduccióndelruidoseutilizóunfiltrogaussiano
+(promediomóvilponderado),queasumeruidoblancogaus-
+P(Fi=fi|Fj=fj,j∈d,i̸=j)=P(Fi=fi|Fj=fj,j∈Ni).(2)
+sianoaditivo(AWGN,porsussiglaseninglés)mediantela En la ecuación (2), P(·) y P(·|·) son las funciones de
+funcióndeMatlabimgaussfilt,lacualasumepordefecto densidaddeprobabilidadconjuntaycondicional,respectiva-
+queeltamañodelfiltroes2*ceil(2*sigma)+1. mente.
+Sedecidióenestecasonoutilizarfiltrodemedianapor- Laesenciadelalgoritmodemaximizacióndeexpectativas
+que,aunquepreservalosbordesmejorqueelfiltrogaussiano, (EM,porsussiglaseninglés)esutilizarlosdatosobservados
+es más apropiado para ruido de impulso. Tampoco se utili- disponibles paraestimar los datos faltantesy luego utilizar
+zaronningunodelosdiversostiposdefiltrosmorfológicos esosdatosparaactualizarlosvaloresdelosparámetros.
+(alternantes, geodésicos, entre otros) por ser más costosos Enlapráctica,laimplementacióndeestemétodocomenzó
+computacionalmenteyporqueelruidoaatenuarnoresponde conladeclaraciónde14clasesogruposparasegmentarla
+aestructurasmorfológicas,comoeselcasodelasinterferen- imagen,mediantepruebayerror.Seutilizaron10iteraciones
+ciasolosartefactos. delalgoritmodemaximizacióndeexpectativasy6iteraciones
+Durante la etapa de lectura de la imagen se obtuvieron como parte de la auto-organización de grupos. Se declaró
+las imágenes de referencia DICOM, que se tomaron como tambiénunaσ gaussianade0,30yunelementoestructurante
+entradaalalgoritmo.Además,secreóunvolumen3D,con- deradiode11píxeles,pararealizarunsuavizadomorfológico,
+catenandotodosloscortesdeimágenes2Ddondeelhígado consemejantejustificaciónaladelmétodoanterior.Todos
+estuvovisible. estosparámetros seseleccionarondemanera experimental,
+Paralaimplementacióndelalgoritmok-meansplus,pri- loquebuscalograrunabuenacalidaddesegmentación.Se
+meramente,sedeclararon18clasesogrupos,enlasquese cargaronlasimágenesautilizar,asícomosureferenciamédica
+segmentaríalaimagenluegode6iteraciones,determinadas ysemontaronsobreelalgoritmo.
+tambiéndemaneraexperimental.Seutilizóunelementoes- Durante el preprocesamiento se realizó un ajuste de in-
+tructurantederadiode10píxelesparaunsuavizadomorfoló- tensidad,unensanchamientodecontrasteyunsuavizadode
+gico.Enelsiguientepasoseutilizólafunciónkmeans_plus intensidad,usandounfiltrogaussiano,afindeaprovecharen
+pararealizarlasegmentación.Elelementoestructurantese granmedidatodalainformacióndelaimagen,semejantea
+aplicó después de segmentar el hígado para eliminar irre- comoserealizóenelmétodoanterior.
+gularidadesensucontornomedianteuncierremorfológico Enlaetapadesegmentación,primeramente,serealizóun
+(imclose).Eltamañodelelementoestáencorrespondencia métododeltipok-meansparaagruparlasclases,realizando
+conlasdimensionesdelaimagen(512×512píxeles)ydelas operacionesmorfológicascomoencogimiento,erosión,dila-
+estructurasasuavizar. taciónyreconstruccióngeodésica(explicadasanteriormente).
+Seguidamente,comopartedelposprocesamiento,seapli- LuegoseaplicólafunciónHMRF_EMdeMatlabparalograrla
+caronungrupodeoperacionesmorfológicasdeencogimien- segmentacióndelaimagen,medianteelmétododelosmapas
+to,erosiónydilatación,estavezconelementoestructurante ocultosdeMarkov.Porúltimo,seaplicólaEMparautilizar
+de radio igual a 7 píxeles [1]. Estas operaciones se realiza- lasmejoresetiquetas.
+ron en el siguiente orden: dilatación (imdilate), recons- El tercer método es el mapa auto-organizado o red de
+trucción(imreconstruct),cierre(imclose)yllenado Kohonen (SOM, por sus siglas en inglés) [30]. Este es un
+(imfill). Todas estas, como operaciones binarias, contri- modeloderedneuronalconaprendizajenosupervisado.Este
+buyen a perfilar el contorno del hígado y a eliminar otras tipo de red se basa en el mapa topológico existente en la
+estructurasnodeseadas. cortezacerebral.Lasneuronastopológicamentecercanasentre
+CaraballoRodríguez,L.R.;PérezDíaz,M.;&OrozcoMorales,R. CienciasMatemáticas,Vol.37,No.1,2024,Pag.31-40
+https://doi.org/10.5281/zenodo.14577046 https://revistas.uh.cu/rcm/article/view/9343
+34 Segmentaciónautomáticadelhígadoenimágenesdetomografíacomputarizada
+sítiendenaproducirrespuestasalmismotipodeestímuloen ParalasegmentaciónseutilizólafunciónClustSom.Den-
+lacortezacerebral.Laformacióndeestemapapuedehacerse tro de esta función, primeramente se definió el mapa auto-
+porelmétodoestándaroeldelotes. organizado y se entrenó la red neuronal con el 80% de los
+Enelentrenamientoporelmétodoestándar,elproceso datos,paradespuéssegmentar.Seguidamenteenelposproce-
+comienza con la inicialización de los pesos sinápticos, me- samiento,serealizaronungrupodeoperacionesmorfológicas
+diantelaasignacióndevaloresaleatorios.Luegoserealizan deencogimiento,erosión,dilataciónyreconstrucción,para
+trespasosllamados:competitivo,cooperativoyadaptación mejorartodoelproceso,cuyadescripciónessemejanteala
+sináptica.Enelprimero,paracadavectordepatróndeentrada explicadaparak-meansplus.
+presentadoenelmapa,todaslasneuronascalculanvaloresde
+unafuncióndiscriminante.Laneuronaqueesmássimilaral 1.2 Imágenes
+vectordepatróndeentradaeslaganadora(unidaddemejor Para probar el desempeño de los métodos se utilizaron
+coincidencia,BMUeninglés). imágenes de la base de datos de TC abdominal (CHAOS_-
+Enelsegundopaso,laneuronaganadora(BMU)encuen- Train_Sets)ydeCHAOS(CombinedHealtyAbdominalOr-
+tralaubicaciónespacialenunvecindariotopológicodeneu-
+ganSegmentation),queseencuentradisponibleenlínea(ht
+ronas excitadas. Entonces, las neuronas de este vecindario
+tps://doi.org/10.5281/zenodo.3362844).Esta
+puedencooperar.Porúltimo,eneltercerpaso,lasneuronas es una base de datos anotada, que cuenta con las máscaras
+excitadaspuedanmodificarlosvaloresdelafuncióndiscri- desegmentaciónparapoderutilizarlascomoreferencia.Son
+minante,relacionadaconelvectordepatróndeentrada,pre- imágenesDICOManonimizadas.
+sentadomedianteelprocesodeajustesdepesos.Así,estared SeutilizaronlasTCde20pacientes,quecuentanconun
+neuronalobtieneunaauto-organizaciónenpatrones,apartir total de 2874 cortes 2D. Existe una gran variabilidad en la
+únicamentedelosdatosdeentrada,opropiedadesdelareali- cantidaddecortesutilizadosporcadapaciente,debidoala
+dad,loqueexpresalasrelacionesdevecindadyagrupamiento diversidadencuantoatamañoymorfologíadelhígado.El
+delosobjetosmedianteunaestructuratopológica. promediofuede90cortesporpaciente.Porestarazón,para
+aplicarcadamétodosedeterminómanualmenteelintervalo
+ElmétodoSOMsiguedosecuacionesbásicas:ladeencon-
+decortesdeTCdondeaparecíaelhígado,encadaTCdecada
+trarlaneuronaganadoradeterminadaporlamínimadistancia
+paciente.
+euclidianaalaentrada(3)ylaactualizacióndelaposiciónde
+Todaslasimágenesfuerondeterminadaseneláreasupe-
+lasneuronasdentrodelgrupo(4):
+rior del abdomen de los pacientes en la fase venosa portal,
+después de la inyección de un agente de contraste. En esta
+d =||x(t)−w (t)||, (3)
+ij ij
+fase,elparénquimahepáticoaumentaalmáximo,atravésdel
+w (t+1)=w (t)+α(t)[x(t)−w (t)],i∈N , (4)
+ij ij ij c suministrodesangreporlavenaportahepática.
+LosconjuntosdeimágenesDICOMde16bitsporpíxel
+donde x es la entrada, N es la vecindad de la neurona ga-
+c (bpp)presentaronunaresoluciónde512×512píxeles,con
+nadora, w es cualquier peso de nodo y d es la distancia
+ij ij unespesordecorteentre0,7-0,8mmyunadistanciaentre
+euclidiana.
+cortesde3a3,2mm.
+Sepuedenotarapartirde(4)queelprocesodeactualiza-
+En cada imagen se tuvo en cuenta que los valores de
+ciónesunavariacióndelaubicacióndelnodo,proporcional
+Hounsfieldfueransimilaresenórganoscercanosydiferentes
+aladistanciaeuclidianadelnodoalaentrada,multiplicada
+paraelmismotejidoporlaaccióndelosmediosdecontraste,
+porlasecuenciadeganancia,sielnodoseencuentradentro
+asícomolavariaciónsignificativaencuantoalaformaana-
+delavecindad.Sinoestádentrodelavecindad,suposición
+tómica.Conestoselementossepudohacerladelimitación
+permanecesinalteración.
+originaldelnúmerodeclasesnecesariaspormétodo,locual
+ParaimplementarestemétodoenMatlabsedeclararon
+seprobómediantepruebayerror.
+16clasesenlasquesevaasegmentarlaimagen,igualmen-
+tedemaneraexperimental,mediantepruebayerror.Parael 1.3 Evaluacióndelacalidaddelasegmentación
+suavizadodelaimagenseutilizósigma=0,15comoparte Para evaluarla calidadde lasegmentación yrealizar la
+delpreprocesamientodelaimagen.Sedeclaróunelemento comparación de los métodos se utilizaron el coeficiente de
+estructurantederadiode9píxelesparaoperacionesmorfoló- Dice,ladistanciapromediodesuperficiepromedio(ASSD,
+gicascomoelsuavizadoylaerosión,comoseexplicóenel porsussiglaseninglés)yladistanciasuperficialsimétricamá-
+primermétodo. xima(MSSD,porsussiglaseninglés),porcomparacióncon
+Luegosecomenzólaetapadelecturadeimágenes,donde lareferenciaquetraíalabasededatos[12].Lasecuaciones
+se construyó un volumen 3D a partir de cortes 2D con las deestasmétricassedescribenacontinuación.
+imágenesasegmentarysurespectivareferencia.Enelbloque ElcoeficientedeDicemidelasimilitudentredoselemen-
+depreprocesamientoserealizóelajustedeintensidad,luego tos, en este caso sería la imagen de referencia y la imagen
+unensanchamientodecontrasteconelfindeaprovecharmás segmentada:
+característicasdelaimagen,y,finalmente,unsuavizadode 2|V ∩V |
+Ref Seg
+Dice= , (5)
+intensidadconunfiltrogaussiano,talycomoyaseexplicó. |V |+|V |
+Ref Seq
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.31-40 CaraballoRodríguez,L.R.;PérezDíaz,M.;&OrozcoMorales,R.
+https://revistas.uh.cu/rcm/article/view/9343 https://doi.org/10.5281/zenodo.14577046
+Segmentaciónautomáticadelhígadoenimágenesdetomografíacomputarizada 35
+dondeV eselconjuntodevóxelesidentificadoscomopri-
+Ref
+merplanoenelvolumendereferenciayV eselconjunto
+Seg
+devóxelesdelprimerplanoenelvolumensegmentado.
+ElcoeficientedeDiceestáentre0y1.Unasegmentación
+perfectatieneelvalor1,mientrasqueunasegmentaciónsin
+intersecciónalgunadelosprimerosplanosdelareferencia
+conimagensegmentadaalcanzaelvalor0.
+LamétricaASSDcalculaladistanciaentrelosprimeros
+planos segmentados de dos volúmenes 3D, es decir, A y B.
+Paracalcularlasedeterminanlosvóxelesdebordedelasdos
+segmentaciones.Lasposicionesrelativasdelosvóxelesenla
+imagensetransformanencoordenadasreales(mm)mediante
+elusodeparámetrosenlasetiquetasDICOM.Paracadavóxel
+debordedelvolumenA,sedeterminaelvóxeldebordemás
+cercanoenelvolumenBysecalculaladistanciaentrelosdos.
+Despuésdeesto,secalculaelpromediodetodaslasdistancias.
+LadistanciadeunvóxelxaunconjuntodevóxelesAoBse
+definecomo:
+d(x,A)=m´ınd(x,y). (6)
+y∈A
+Figura1.Desempeñodelostresmétodos[Performanceof
+donded(x,y)esladistanciaeuclidianadelascoordenadasde
+thethreemethods].
+losvóxelesx;ydelespacioreal.
+Elpromediodetodaslasdistanciasalmacenadasdacomo
+resultadolamétricaASSD,quesedefinecomo: encasitodosloscasossesegmentólaregióndeseada.Incluso,
+cuando la imagen no tenía buena calidad, se apreció gran
+ASSD= ∑ x∈BSeg d(x,B Ref ) + ∑ d(y,B ), (7) similitudentrelasegmentaciónylamáscaradereferenciaen
+Seg
+|B Ref |+|B Seg | y∈BRef cuanto a forma, bordes y detalles, para todos los cortes de
+cadaimagen3D.
+dondeB Ref yB Seg sonlosconjuntosdevóxelesdebordede LasestadísticasdelosfallossedescribenenlaTabla1.
+lareferenciayelvolumensegmentado,respectivamente. Aunquelosmétodosnofallaronentodosloscortesdelvóxel
+Paraunasegmentaciónperfecta,laASSDalcanzaunvalor 3Ddecadapaciente,bastaquefalleensegmentaruncorte2D
+de 0 mm y aumenta en la medida en que la calidad de la paraquelasegmentacióndelvóxelsecuentecomofallida.Las
+segmentacióndisminuye. causasdelosfallossevinculanahígadosconunamorfología
+Finalmente,lamétricaMSSD(odistanciadeHausdorff) muycompleja,imágenesconbajocontrasteentreestructuras
+secalculacomoelmáximodetodaslasdistanciasdevóxeles aledañasyruido[27].EnlaFigura2semuestraunejemplo
+simétricosd(x,B Ref )yd(y,B Seg ).ElvalordeMSSDes0mm dondeseprodujounfalloenlostresmétodos.
+paraunasegmentaciónperfectayaumentaenlamedidaen
+quelacalidaddelasegmentacióndisminuye. Tabla1.Estadísticadescriptivadelosfallosdelostres
+métodosenunmismocortedeunmismopaciente
+1.4 Hardware [Descriptivestatisticsofthefailuresofthethreemethodsin
+Paralaimplementacióndelosmétodosseutilizócomo thesamesliceofthesamepatient].
+hardware una laptop HP- Pavilioncon las siguientes carac- Métodos Métricas(mediaydesviación±estándar)
+terísticas: CPU Intel® Core™ i5-8250U, 3.40 GHz, 6 MB (cantidaddefallos) Dice ASSD MSSD
+k-meansplus(3) 0,704±0,216 16,693±2,787 84,579±14,639
+cache, con 4 núcleos; tarjeta gráfica Intel® UHD Graphics HRMF-EM(5) 0,608±0,151 18,243±7,210 78,312±16,007
+620(Integrada)yRAM8GBDDR4-2133SDRAM(2,4GB). SOM(4) 0,317±0,094 29,433±12,907 86,843±15,139
+2. Resultados
+2.2 Análisisobjetivodecalidaddelasegmentación
+2.1 Resultadosvisualesyanálisisdefallos EnlaFigura3semuestracómosecomportóelcoeficiente
+EnlaFigura1seapreciaeldesempeñodelostresmétodos deDiceparacadamétodo.Seapreciaquehubounamayor
+paraunmismocorte2D(corte38)delaimagentomográfica fluctuación del coeficiente respecto a la referencia con el
+del paciente 1 de la BD. Por comparación con su máscara métodoSOM,seguidodelmétodoHMRF-EMy,porúltimo,
+dereferenciapuedevalorarsevisualmenteelresultadodela el k-means plus. Por tanto, este último fue más preciso al
+segmentaciónysusmétricasasociadasacadamétodo. detectarelcontornodelhígadoypresentarlamayorsimilitud
+Losresultadossepuedenconsiderarfavorablesconlostres delaimagensegmentadaconsumáscaradereferencia,según
+métodosparaelconjuntodeimágenesdeTCempleado,pues estamétrica[12].
+CaraballoRodríguez,L.R.;PérezDíaz,M.;&OrozcoMorales,R. CienciasMatemáticas,Vol.37,No.1,2024,Pag.31-40
+https://doi.org/10.5281/zenodo.14577046 https://revistas.uh.cu/rcm/article/view/9343
+36 Segmentaciónautomáticadelhígadoenimágenesdetomografíacomputarizada
+EnlaFigura4semuestralacalidaddelasegmentación
+paralostresmétodossegúnlamétricaASSD.Nuevamente,
+elmétodok-meansplussemuestramásestable(conmenor
+fluctuación) con respecto a la máscara de referencia. En el
+casodelHMRF-EMpresentaresultadosadmisibles,aunque
+seobservanvariospicosnodeseados.Encomparacióncon
+losmétodosanteriores,elSOMpresentómayorfluctuación.
+Figura4.ComportamientodelamétricaASSDparacada
+pacientepormétodo[BehavioroftheASSDmetricforeach
+Figura2.Desempeñofallidodelostresmétodosenun patientbymethod].
+mismocortedeunmismopaciente[Failedperformanceof
+thethreemethodsinthesamespecimenfromthesame EnlaTabla3semuestranlasmediasdelamétricaASSD
+patient]. paralostresmétodos.Estamétricaesmejormientrasmenor
+es su valor [12]. Por esta razón, tanto k-means plus como
+HRMF-EMseencuentranenelentornodelos6,5mm,siendo
+menoresyconmenordesviacióntípicaquelamétricapara
+SOM. Para los tres métodos hubo casos donde la métrica
+ASSD superó los 15 mm y que, por tanto, se consideraron
+fallidos.
+Tabla3.EstadísticadescriptivadelamétricaASSDparatodo
+elconjuntodepacientesconlosmétodosdesegmentación
+estudiados[DescriptivestatisticsoftheASSDmetricforthe
+entiresetofpatientswiththesegmentationmethodsstudied].
+Métodos Valor Valormáximo Media Desviación
+mínimo máximo típica
+k-meansplus 1,271 20,821 6,576 6,208
+HRMF-EM 1,59 26,089 6,517 6,537
+Figura3.ComportamientodelcoeficientedeDiceparacada
+SOM 1,527 42,825 9,375 10,926
+pacientepormétodo[BehavioroftheDicecoefficientfor
+eachpatientbymethod].
+EnlaFigura5yTabla4sepresentaelcomportamientode
+lacalidaddelasegmentaciónsegúnlaMSSD.TantoHMRF-
+EMcomok-meanspluspresentanunamediaenelrangode
+EnlaTabla2sepresentanlasmediasdelcoeficientede
+aceptadode0a60mm.MientrasqueSOMsuperaelintervalo
+Dice para las segmentaciones de imágenes de hígados de
+requerido.
+los 20 pacientes por cada método. El coeficiente es mejor,
+mientrasmáspróximoa1seencuentre[12].
+Tabla4.EstadísticadescriptivadelamétricaMSSDdel
+conjuntodepacientesporcadamétodo[Meanforeach
+Tabla2.EstadísticadescriptivadelcoeficientedeDiceenel
+methodofthepatientsetfortheMSSDmetric].
+conjuntodepacientesporcadamétodo[Descriptivestatistics
+Métodos Valor Valormáximo Media Desviación
+oftheDicecoefficientinthesetofpatientsforeachmethod].
+mínimo máximo típica
+Métodos Valor Valormáximo Media Desviación k-meansplus 15,213 148,777 59,726 36,916
+mínimo máximo típica HRMF-EM 18,608 138,074 56,601 35,947
+k-meansplus 0,639 0,960 0,870 0,090 SOM 16,025 143,770 64,420 43,842
+HRMF-EM 0,522 0,957 0,871 0,110
+SOM 0,279 0,956 0,825 0,170
+Los resultados obtenidos en el cálculo de la MSSD se
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.31-40 CaraballoRodríguez,L.R.;PérezDíaz,M.;&OrozcoMorales,R.
+https://revistas.uh.cu/rcm/article/view/9343 https://doi.org/10.5281/zenodo.14577046
+Segmentaciónautomáticadelhígadoenimágenesdetomografíacomputarizada 37
+pectoseconsideraunalimitacióndelapresenteinvestigación.
+En la actualidad, los software o equipos profesionales dan
+la posibilidad al especialista médico de sintonizar algunos
+parámetros.
+En este caso se trabajó solamente con imágenes de 20
+pacientes,parauntotalde2874cortes,lograndounaeficacia
+comparableamétodosenelestadodelartesinnecesidadde
+entrenamiento. Los presentes resultados aún no están con-
+cebidosparausocomercialnipúblico.Tansolobuscanuna
+alternativaeficazyeficienteapartirdecomparartresmétodos
+Figura5.ComportamientodelamétricaMSSDparacada
+desegmentaciónnosupervisada.Sinembargo,antelagran
+pacientepormétodo[DescriptivestatisticsoftheMSSD
+diversidaddeimágenesreales,estosresultadospuedentomar-
+metricforthesetofpatientsbyeachmethod].
+secomounasegmentacióninicial,quepuedautilizarseenel
+futurocomodatodeentradaaotrosmétodosconmayorpoder
+dediscriminación.
+interpretandemanerasimilaralamétricaASSD,dondelos
+valoresóptimossonlosmáspequeños.Porconsiguiente,se Comoposiblesoluciónseplanteaoptimizartodoslospa-
+puedeafirmarque,segúnestamétrica,elmétodoHMRF-EM rámetrosdecadamétodo,parasumejordesempeño,incluido
+presentó los mejores resultados para segmentar el hígado, elnúmerodeiteraciones.Esto,porsupuesto,requieredecon-
+seguidodek-meansplus. trolareltiempodecómputo,porquepararutinaclínicaestos
+dosfactoresdebentenerunabuenarelacióndecompromiso.
+2.3 Eficienciacomputacionaldelosmétodos Otralimitaciónserelacionaconelrelativopequeñotama-
+El método k-means plus tuvo un tiempo de ejecución ñodelamuestraempleada.Aunquesesegmentaronmásde
+ligeramente por debajo de los 14 minutos por paciente, pa- 2000cortes2Dpormétodo,pertenecenasolo20pacientes,
+ralasprestacionescomputacionalesutilizadas,mientrasque porloquepudieraesperarsequenohayunaaltavariabilidad
+HRMF-EMtardó15,33minutosySOM118,19minutos.Es decasosenlamuestra.Debenrealizarseenelfuturoimple-
+apreciablequeelmétodo k-meansplus fue1,11vecesmás mentacionesdetodoslosmétodosparavolúmenesdedatos
+velozqueHRMF-EMy8,7vecesmásrápidoqueSOM. muchomayores.
+Ladecisióndeescogerunmétodoeficazyeficientepara Porotraparte,alañadirlosmétodosenunsoftwarelibre
+unarutinaclínicadependedevariosfactorescomolacapa- para rutina clínica, se deben incluir todos los métodos que
+cidad de tener mayor o menor precisión, según el objetivo sean factibles en un tiempo de cómputo aceptable. De este
+médicoquesepersiguey,además,delascondicionesdepro- modo,antelafalladeuno,sepuedeprobarotroparabuscar
+cesamientodisponibles.Conunprocesadormásavanzadoy eficaciaenlatarea.Laimplementación,además,debehacerse
+laayudadeunamodernatarjetagráficasereduciríasignifica- en un software de código libre como, por ejemplo, Python.
+tivamenteeltiempodecómputodelostresmétodos,sintener Lapresenteimplementaciónconstituyeunejerciciodelabo-
+quesacrificarprecisión. ratoriorealizadoenMatlab,queesunsoftwarepropietario
+sujetoalicencia,porloquesuempleoenrutinaclínicanoes
+lomásrecomendable.Todalaprogramacióndelosmétodos
+3. Discusión general
+estudiadosenelpresentetrabajoserápróximamenterealizada
+Paraobtenerunabuenasegmentaciónesnecesariocontar enPythonparasuposibleinclusiónenunsoftwarelibre.
+conunabuenacalidaddelaimagenaanalizar,osea,queposea Esinteresantehacernotarqueelmétodoqueincorporó
+bajosnivelesderuido,altocontraste,altaresoluciónespacial, aprendizajedemáquinasfueeldepeordesempeñoymayor
+pocadistorsiónyquenocontengaartefactos[27].Lasimá- tiempo de cómputo. Este aspecto guarda relación, no solo
+genesprocesadaspresentanunaresoluciónespacialestándar conlosparámetrosdedesempeñomínimosestablecidospara
+de512×512píxelesa16bpp,sinlapresenciadeartefactos quecumplieramínimamenteconlatarea,quesealejandelos
+visibles.Encadamétodo,antesderealizarlasegmentación, óptimos,sinoconlasprestacionescomputacionalesutilizadas
+serealizóunsuavizadodelaimagenparadisminuirruidoy enCPU.Estemétodo,paralograrundesempeñocercanoa
+facilitartodoelprocedimientoposterior. k-meansplusyHMRF-EM,tardó8vecesmástiempo.Esde
+Enelcasodelasimágenesconcontrastemuybajoentre esperarque,deutilizarseunaGPUparasuejecución,pueda
+estructuras, esto influyó en el rendimiento de los métodos, incrementarsesutasadeaprendizajey,conello,sueficacia,
+puesenalgunoscasossesegmentaronestructurasnodeseadas parauntiempodecómputoqueseacompetitivoconlosotros
+juntoalhígado,comoelbazo,elcualpresentaunrangode dosmétodos.Haciaestametadeberándirigirselosesfuerzos
+valoresdeHounsfieldsimilaraldelhígado[27]. futuros.
+En los pacientes con una alta complejidad morfológica Apartirdelacomplejidaddelasegmentacióndelhígado,
+delórgano,comoelcasodondeelhígadoestabaparticionado, sehanrealizadomuchasinvestigacionescondistintosniveles
+losmétodos probadossolo segmentaron unaparte. Esteas- deéxito,sinembargo,problemascomolosapreciadosenla
+CaraballoRodríguez,L.R.;PérezDíaz,M.;&OrozcoMorales,R. CienciasMatemáticas,Vol.37,No.1,2024,Pag.31-40
+https://doi.org/10.5281/zenodo.14577046 https://revistas.uh.cu/rcm/article/view/9343
+38 Segmentaciónautomáticadelhígadoenimágenesdetomografíacomputarizada
+presenteinvestigación(imposibilidaddequeunmétodosea autores,como[25],planteanquelosresultadosdeestemétodo
+capazdesegmentarel100%deloscasos)soncomunesenesta puedenmejorarseutilizandoremuestreodearranque,locual
+áreadeinvestigación[26,18,17,7,5,13,31,24,14,6,28,19, acelerasudesempeñoyhacequedisminuyalatasadefallos.
+10,20,4,21,29,3].Porestarazónpuedeafirmarsequeaún En[8]seutilizóelmétodoSOM,quearrojóresultados
+nosehalogradounmétodoexitosoparatodosloscasos.Por satisfactoriosenvariosconjuntosdeprueba,perosiemprese
+eso,esútildisponerdevariosmétodosdesegmentaciónpara presentaronfallos.Estosugierequesuimplementaciónfutura
+cadatipodetarea,demodoqueantelafalladeunmétodo, enrutinaclínicaesaúnuncampoabiertoalainvestigación,
+otropuedaresolverlamisma. coincidiendo con lo que se plantea en el presente trabajo.
+Compararlosresultadosobtenidosconlaimplementación Trabajoscomo[23]muestran,sinembargo,resultadosmuy
+de otros autores es complejo, puesto que, al revisar los ar- alentadoresalprobarqueestemétodomejoranotablementeel
+tículos no se utiliza la misma base de datos ni las mismas reconocimientodelaslesioneshepáticasyabreelcaminopara
+métricas de evaluación de desempeño. Por ejemplo, en [9] lacuantificaciónprecisadelrealcedelcontraste,porloque
+sepresentaunmodelodeconvoluciónbasadoenunalgorit- valelapenacontinuareltrabajoparasuperfeccionamiento.
+moadaptativok-meansmodificado,paraobtenerunamejor Como continuación de este trabajo se prevé no solo la
+respuestaalasegmentacióndelmétodok-meanstradicional. programaciónenPythondelosmétodosysuincorporación
+Elartículopruebacómomejorarelmétodotradicional.Sin a un software, sino su refinamiento con la optimización de
+embargo,en[16]obtienenelexcelenteresultadode97,5% parámetros.Igualmente,sedebenestudiarotrosmétodosque
+deexactitudutilizandoelk-meanstradicionalparasegmentar acriteriodelacomunidadcientíficatambiénesténaportando
+yluegoclasificarlesionesenhígados.Mientrasqueen[11], buenosresultadosparalatareaplanteada.
+aplicank-meansconelauxiliodeunvectordecaracterísticas
+deentradaparadisminuirsutasadefallos.
+Conclusiones
+Amododecomparacióndelospresentesresultados,exis-
+Lostresmétodosestudiadoshanmostradopotencialpara
+te un trabajo de [15] donde toman la propia base de datos
+su implementación en la rutina clínica, principalmente, k-
+CHAOS,segmentanmanualmenteloshígadosdevariossub-
+meansplusyHMRF-EM,alcumplirlatareadesegmentar
+conjuntosde20TCabdominalesyevalúanlacalidaddela
+hígadosenimágenesdeTCconunaeficaciaaceptable.
+segmentaciónmanualutilizandolasmismasmétricasdelpre-
+En la investigación realizada, el método k-means plus
+senteartículo.LaTabla5muestralosvaloresdeDice,ASSD
+presentó el mejor desempeño desde el punto de vista de la
+yMSSDparadosdelossubconjuntosdelartículocitado,don-
+mayoríadelasmétricasobjetivasqueevalúanlacalidaddela
+deenlaterceracolumnasecolocanlosrelativosalmétodo
+segmentación,asícomomedianteanálisisvisualcomparativo
+k-meansplusdelpresentetrabajo.Noexistecertezaqueexista
+conrespectoalareferenciaconsideradacomoestándardorado
+correspondenciaentrecasosdelossubconjuntosAyBcon
+yporsumenornúmerodefallos.
+losdelpresentetrabajo.
+Elmétodok-meanspluspresentó,además,lamayorefi-
+ciencia computacional para las prestaciones utilizadas. El
+Tabla5.Comparaciónderesultadosdelasmétricasconla
+restodelosmétodostambiénpuedenseraplicados,noobs-
+segmentaciónmanualylaobtenidapork-meansplus
+tante,elmétodoSOMsoloresultaríaeficientesiseutilizan
+[Comparisonofmetricsresultswiththemanualsegmentation
+mejoresprestacionescomputacionales.
+andtheoneobtainedbyk-meansplus].
+Métrica SubconjuntoA SubconjuntoB Subconjunto
+segmentado segmentado segmentadomediante Suplementos
+manualmente manualmente k-meansplus
+Dice 0,979±0,013 0,982±0,011 0,870±0,090 Esteartículonocontieneinformaciónsuplementaria.
+ASSD 2,89±1,08 2,57±1,02 6,576±2,098
+MSSD 57,83±21,54 57,56±20,98 59,73±36,91
+Conflictos de interés
+Lasegmentaciónmanualrealizadaporexpertoshumanos Losautoresdeclaramosquenotenemosningúnconflicto
+siempreesmásexactayprecisaquelaobtenidaporunmétodo de interés en relación con este artículo. No hubo ninguna
+automático,peroparaefectosprácticosnoesfactibleporel subvenciónparaesteartículo.
+consumo de tiempo y cansancio físico que produce en el
+radiólogo o especialista ante grandes volúmenes de datos. Contribución de autoría
+Comosepuedeapreciar,losresultadosdelmétodok-means
+Conceptualización R.O.M.,M.P.D.
+plusseencuentranenelentornodelologradomanualmente
+porexpertoshumanosenlamismabasededatos. Curacióndedatos L.R.C.R.
+En[30]seaplicóelmétodoHMRF-EMyelautorsugiere
+Análisisformal L.R.C.R.
+que se utilice, principalmente, para refinar la salida de la
+Investigación L.R.C.R.,R.O.M.
+segmentación directa de algunos otros métodos como el k-
+means.Estaconclusióntambiénesrefrendadapor[2].Otros Metodología R.O.M.,L.R.C.R.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.31-40 CaraballoRodríguez,L.R.;PérezDíaz,M.;&OrozcoMorales,R.
+https://revistas.uh.cu/rcm/article/view/9343 https://doi.org/10.5281/zenodo.14577046
+Segmentaciónautomáticadelhígadoenimágenesdetomografíacomputarizada 39
+Administracióndeproyecto M.P.D. andadversarialdeepnetworks. ArtificialIntelligence
+inMedicine,117:102109,2021. https://doi.or
+Recursos M.P.D.
+g/10.1016/j.artmed.2021.102109.
+Software R.O.M.
+Supervisión M.P.D. [8] Cunha, A., C. Watanabe, and C. Carvalho: Medical
+image segmentation using the Kohonen neural net-
+Validación L.R.C.R.
+work. IEEELatinAmericaTransactions,17(02):297–
+Visualización L.R.C.R. 304, 2019. https://doi.org/10.1109/TLA.
+Redacción:preparacióndelborradororiginal M.P.D.
+2019.8863176.
+Redacción:revisiónyedición R.O.M. [9] Debelee, T.G., F. Schwenker, S. Rahimeto, and D.
+Yohannes: Evaluation of modified adaptive k-means
+Referencias segmentationalgorithm. ComputationalVisualMedia,
+5:347–361,2019. https://doi.org/10.1007/
+[1] Bachem,O.,M.Lucic,H.Hassani,andA.Krause:Fast
+s41095-019-0151-2.
+and provably good seedings for k-means. Advances
+in Neural Information Processing Systems, 29, 2016. [10] Dou,Q.,L.Yu,H.Chen,Y.Jin,X.Yang,J.Qin,and
+https://dl.acm.org/doi/pdf/10.5555/3
+P.A.Heng:3Ddeeplysupervisednetworkforautomated
+157096.3157103.
+segmentation of volumetric medical images. Medical
+ImageAnalysis,41:40–54,2017. https://doi.or
+[2] Bahendwar,Y.S.andG.R.Sinha:Segmentationofcom-
+g/10.1016/j.media.2017.05.001.
+putedtomographyimagesusingHMRF-EMalgorithm
+withK-meansClustering.ResearchandReviewsJournal
+[11] Foruzan,A.H.,Y.W.Chen,R.A.Zoroofi,A.Furukawa,
+ofComputationalBiology,4(3):14–17,2015. https:
+Y. Sato, M. Hori, and N. Tomiyama: Segmentation of
+//www.researchgate.net/profile/Profe
+liverinlow-contrastimagesusingk-meansclustering
+ssor-G-Sinha/publication/292502347_S
+andgeodesicactivecontouralgorithms. IEICETransac-
+egmentation_of_Computed_Tomography_I
+tionsonInformationandSystems,96(4):798–807,2013.
+mages_Using_HMRF-EM_Algorithm_with_K
+https://doi.org/10.1587/transinf.E96
+-Means_Clustering/links/56aefb1b08ae
+.D.798.
+43a3980eab07/Segmentation-of-Compute
+d-Tomography-Images-Using-HMRF-EM-A [12] Heimann, T., B. Van Ginneken, M.A. Styner, Y.
+lgorithm-with-K-Means-Clustering.pdf. Arzhaeva,V.Aurich,C.Bauer,andI.Wolf:Comparison
+andevaluationofmethodsforliversegmentationfrom
+[3] Bahmani, B., B. Moseley, A. Vattani, R. Kumar, and
+CTdatasets. IEEETransactionsonMedicalImaging,
+S. Vassilvitskii: Scalable k-means++. arXiv preprint
+28(8):1251–1265,2009. https://doi.org/10.3
+arXiv:1203.6402,2012. https://doi.org/10.4
+390/s24061752.
+8550/arXiv.1203.6402.
+[13] Jiménez, D., L. Fernández de Manuel, J. Pascau
+[4] Botella,J.S.:Estudioydesarrollodeunpreprocesoba-
+González-Garzón,J.M.Tellado,E.Ramón,D.Menén-
+sadoenladifusiónnolinealparalasegmentaciónen
+dezyM.J.LedesmaCarbayo:AlgoritmoLevel-Setpara
+imágenes. TesisdeDoctorado,UniversidadPolitécnica
+segmentaciónhepáticaenTACconrestriccionesdecur-
+deMadrid,2013. https://oa.upm.es/14616/
+vatura local. En Libro de actas del XXIX Congreso
+1/JAVIER_SANGUINO_BOTELLA.pdf.
+AnualdelaSociedadEspañoladeIngenieríaBiomédica
+[5] Chowdhary,C.L.,M.Mittal,K.P,P.A.Pattanaik,andZ. (CASEIB),páginas207–210,2011. http://www2.d
+Marszalek:Anefficientsegmentationandclassification ie.upm.es/im/papers/CASEIB2011.pdf.
+systeminmedicalimagesusingintuitionistpossibilistic
+[14] Kaur,A.,Y.Singh,N.Neeru,L.Kaur,andA.Singh:A
+fuzzyC-meanclusteringandfuzzySVMalgorithm. Sen-
+surveyondeeplearningapproachestomedicalimages
+sors,20(14):3903,2020. https://doi.org/10.3
+and a systematic look up into real-time object detec-
+390/s20143903.
+tion. ArchivesofComputationalMethodsinEngineer-
+[6] Chuah, T.K., J.H. Lim, and C.L. Poh: Group average ing,pages1–41,2021. https://doi.org/10.1
+difference: a termination criterion for active contour. 007/s11831-021-09649-9.
+JournalofDigitalImaging,25:279–293,2012. https:
+[15] Kavur,A.E.,N.S.Gezer,M.Baris¸,S.Aslan,P.H.Conze,
+//doi.org/10.1007/s10278-011-9405-y.
+V.Groza,andM.A.Selver:CHAOSchallenge-combined
+[7] Conze,P.H.,A.E.Kavur,E.Cornec-LeGall,N.S.Gezer, (CT-MR)healthyabdominalorgansegmentation. Medi-
+Y.LeMeur,M.A.Selver,andF.Rousseau:Abdominal calImageAnalysis,69:101950,2021. https://doi.
+multi-organsegmentationwithcascadedconvolutional org/10.1016/j.media.2020.101950.
+CaraballoRodríguez,L.R.;PérezDíaz,M.;&OrozcoMorales,R. CienciasMatemáticas,Vol.37,No.1,2024,Pag.31-40
+https://doi.org/10.5281/zenodo.14577046 https://revistas.uh.cu/rcm/article/view/9343
+40 Segmentaciónautomáticadelhígadoenimágenesdetomografíacomputarizada
+[16] Krishan,A.andD.Mittal:Effectivesegmentationand Computarizada. TesisdeDoctorado,UniversitatPoli-
+classificationoftumoronliverMRIandCTimagesusing tècnicadeValència,2020. http://hdl.handle.n
+multi-kernelK-meansclustering. BiomedicalEngineer- et/10251/148598.
+ing/BiomedizinischeTechnik,65(3):301–313,2020. ht
+[25] Saïd,T.B.,O.Azaiz,F.Chaieb,S.M’hiri,andF.Ghor-
+tps://doi.org/10.1515/bmt-2018-0175.
+bel: Segmentationof livertumor using HMRF-EMal-
+[17] Le,D.C.,K.Chinnasarn,J.Chansangrat,N.Keeratib- gorithm with Bootstrap resampling. In 2010 5th In-
+harat,andP.Horkaew:Semi-automaticliversegmenta- ternational Symposium On I/V Communications and
+tionbasedonprobabilisticmodelsandanatomicalcon- Mobile Network, pages 1–4. IEEE, 2010. https:
+straints. ScientificReports,11(1):6106,2021. https: //doi.org/10.1109/ISVC.2010.5656429.
+//doi.org/10.1038/s41598-021-85436-7.
+[26] Sengun,K.E.,Y.T.Cetin,M.S.Guzel,S.Can,andE.
+Bostanci:AutomaticliversegmentationfromCTimages
+[18] Li,Y.,Y.Q.Zhao,F.Zhang,M.Liao,L.L.Yu,B.F.Chen,
+using deep learning algorithms: a comparative study.
+andY.J.Wang:LiversegmentationfromabdominalCT
+arXiv preprint, arXiv:2101.09987, 2021. https://
+volumesbasedonlevelsetandsparseshapecomposi-
+doi.org/10.48550/arXiv.2101.09987.
+tion. ComputerMethodsandProgramsinBiomedicine,
+195:105533,2020. https://doi.org/10.1016/ [27] Suetens, P.: Fundamentals of medical imaging. Cam-
+j.cmpb.2020.105533. bridgeUniversityPress,2017. https://doi.org/
+10.1017/9781316671849.
+[19] Long,J.,E.Shelhamer,andT.Darrell:Fullyconvolu-
+tionalnetworksforsemanticsegmentation. InProceed- [28] Tang,F.:TheIntelligentMedicalImagingSystem:The
+ingsoftheIEEEConferenceonComputerVisionand useofcloudtechnologyandcomputer-aidedmethods.
+PatternRecognition,pages3431–3440,2015. https: InternationalJournalofRadiology&MedicalImaging,
+//doi.org/10.48550/arXiv.1411.4038. 3(120):1–1,2017. https://doi.org/10.15344
+/2456-446X/2017/120.
+[20] Lu,F.,F.Wu,P.Hu,Z.Peng,andD.Kong:Automatic
+[29] Tong, T., R. Wolz, Z. Wang, Q. Gao, K. Misawa, M.
+3D liver location and segmentation via convolutional
+Fujiwara, and D. Rueckert: Discriminative dictionary
+neuralnetworkandgraphcut. InternationalJournalof
+learningforabdominalmulti-organsegmentation. Med-
+ComputerAssistedRadiologyandSurgery,12:171–182,
+2017. https://doi.org/10.1007/s11548-0 icalImageAnalysis,23(1):92–104,2015. https://
+16-1467-3.
+doi.org/10.1016/j.media.2015.04.015.
+[30] Wang, Q.: HMRF-EM-image: implementation of
+[21] Lu,X.,J.Wu,X.Ren,B.Zhang,andY.Li:Thestudyand
+the hidden Markov random field model and its
+applicationoftheimprovedregiongrowingalgorithm
+expectation-maximization algorithm. arXiv preprint,
+forliversegmentation. Optik,125(9):2142–2147,2014.
+arXiv:1207.3510,2012. https://doi.org/10.4
+https://doi.org/10.1016/j.ijleo.2013
+8550/arXiv.1207.3510.
+.10.049.
+[31] Zhou, X., T. Kitagawa, K. Okuo, T. Hara, H. Fujita,
+[22] Mohamed, M.A. and P. Gader: Generalized hidden R.Yokoyama,andH.Hoshi:Constructionofaproba-
+Markovmodels.I.Theoreticalframeworks. IEEETrans- bilisticatlasforautomatedliversegmentationinnon-
+actionsonFuzzySystems,8(1):67–81,2000. https: contrast torso CT images. In International Congress
+//doi.org/10.1109/91.824772. Series,volume1281,pages1169–1174.Elsevier,May
+2005. https://doi.org/10.1016/j.ics.20
+[23] Paire,J.,V.Sauvage,A.Albouy-Kissi,V.L.Marcus,C.
+05.03.079.
+Marcus,andC.Hoeffel:FastCEUSimagesegmentation
+based on self organizing maps. In Medical Imaging
+2014:ImageProcessing,volume9034,pages261–266.
+SPIE,March2014. https://doi.org/10.1117/
+12.2043459.
+[24] PlaAlemany,S.:Desarrollodeunmétododesegmenta-
+ciónautomáticadelhígadoensussegmentosdeCoui-
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+naudylosvasoshepáticosmedianteunatlasprobabi-
+SinDerivadas 4.0 Internacional”.
+lísticoapartirdelanálisisdeimágenesdeTomografía
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.31-40 CaraballoRodríguez,L.R.;PérezDíaz,M.;&OrozcoMorales,R.
+https://revistas.uh.cu/rcm/article/view/9343 https://doi.org/10.5281/zenodo.14577046
+1

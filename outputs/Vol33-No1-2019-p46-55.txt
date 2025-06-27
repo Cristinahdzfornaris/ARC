@@ -1,0 +1,647 @@
+CienciasMatema´ticas,Vol.33,No.1,Pag.46-55,2019
+Algoritmos Heur´ısticos H´ıbridos para disen˜o de
+S-Caja
+Hybrids Heuristics Algorithms for S-box Design
+Antonio Bolufe´ Rohler, Dania Tamayo Vera, Rodnel Pen˜a Alvarado
+Resumen LasS-cajassonuncomponentefundamentaldentrodelosalgoritmosdeclavesime´trica.S-cajas
+conbuenaspropiedadescriptogra´ficasgarantizanlaseguridadantelosdiversoscriptoana´lisisexistentes.De
+especialintere´sresultanlaspropiedadesdeordendetransparenciayno-linealidad,quemidenlaresistencia
+anteelataquediferencialdepotenciayelcriptoana´lisislineal,respectivamente.Eldisen˜odeS-cajasconunalto
+valordeno-linealidadyunbajoordendetransparenciaesunproblemaNP-duro.Laaplicacio´ndealgoritmos
+metaheur´ısticosparaeldisen˜odeS-cajasdatadefinalesdelosan˜os90.Sinembargo,losenfoquesquese
+hanpresentadoalolargodetodosestosan˜ossonmuysimilaresypocossofisticadosdesdeelpuntodevista
+del disen˜o de las metaheur´ısticas. En esta tesis se presenta un nuevo enfoque para el disen˜o de S-cajas:
+la aplicacio´n de algoritmos heur´ısticos h´ıbridos y la utilizacio´n de te´cnicas de aprendizaje de ma´quina para
+encontrarelmejorpuntodetransicio´nentrelaste´cnicash´ıbridas.Losresultadosobtenidosenestatesisson
+comparablesconlosmejoresresultadosalcanzadosentrabajosprevios.
+Abstract TheS-boxesareafundamentalcomponentwithinthesymmetrickeyalgorithms. S-boxeswithgood
+cryptographicpropertiesguaranteesecuritybeforethevariousexistingcryptanalysis. Ofparticularinterestare
+thepropertiesoforderoftransparencyandnon-linearity,whichmeasureresistancetodifferentialpowerattack
+andlinearcryptanalysis,respectively. ThedesignofS-boxeswithahighnon-linearityvalueandaloworderof
+transparencyisaNP-hardproblem. TheapplicationofmetaheuristicalgorithmsforthedesignofS-boxesdates
+fromthelate90s. However,theapproachesthathavebeenpresentedoveralltheseyearsareverysimilarand
+not very sophisticated from the point of view of the design of the metaheuristics. This thesis presents a new
+approachtothedesignofS-boxes: theapplicationofhybridheuristicalgorithmsandtheuseofmachinelearning
+techniquestofindthebesttransitionpointbetweenhybridtechniques. Theresultsobtainedinthisthesisare
+comparablewiththebestresultsachievedinpreviousworks.
+PalabrasClave
+AlgoritmosHeur´ısticos,Metaheur´ıstico,Optimizacio´n,Criptograf´ıa,S-cajas,Criptoana´lisis.
+1InstitutodeCriptograf´ıa,universidaddelaHabana,LaHabana,Cuba,teresa.bernarda@matcom.uh.cu
+1InstitutodeCriptograf´ıa,universidaddelaHabana,LaHabana,Cuba,rodnel.pena@matcom.uh.c´
+1. Introduccio´n dal. Las funciones multi-modales se caracterizan por tener
+mu´ltiplescamposdeatraccio´n.uncampodeatraccio´nesuna
+Unaheur´ısticaesunalgoritmodeoptimizacio´nquega-
+regio´n del espacio de bu´squeda en cuyos puntos al seguir
+rantizaencontrarunasolucio´nbuenaenuntiemporazonable.
+el gradiente de la funcio´n se converge a un mismo o´ptimo
+Estosalgoritmossoncadavezma´sutilizadosalresolvercom-
+local.Enestetipodefuncioneselprocesodeoptimizacio´n
+plejos problemas de optimizacio´n. Muchas heur´ısticas son
+puedeserdivididoendosetapas:exploracio´nyexplotacio´n.
+espec´ıficas y dependientes del problema. un algoritmo me-
+Podemos definir exploracio´n como la etapa del proceso de
+taheur´ısticoesunmarcodetrabajoalgor´ıtmico,dealtonivele
+optimizacio´n encargada de detectar los mejores campos de
+independientedelproblema,queofreceunconjuntodeestra-
+atraccio´nylaexplotacio´ncomolaetapaenlacualseconverge
+tegiasoreglasgeneralesparadisen˜aralgoritmosheur´ısticos.
+alcorrespondienteo´ptimolocaldeloscamposseleccionados.
+Lasmetaheur´ısticaspermitencombatirdemaneraefectivaun
+L´ıderes y Seguidores (Leader and Followers) es una meta-
+problemainherentealosme´todosheur´ısticosyengenerala
+heur´ısticaqueseenfocaenevitarquesolucionesobtenidas
+muchosme´todosdebu´squeda:elestancamientoeno´ptimos
+medianteexplotacio´nseancomparadasconnuevassolucio-
+locales.Laaplicacio´ndeestosalgoritmosalaoptimizacio´n
+nesexploratorias.Paraelloseutilizandospoblaciones:una
+defuncionesmulti-modaleshasidoobjetodeestudioenlos
+poblacio´ndel´ıderes(leaders)quehaacumuladoexplotacio´n
+u´ltimostiempos.Lamotivacio´nvienedadaporquelamayor´ıa
+yquegu´ıalabu´squedayunasolucio´ndeseguidores(follo-
+delosproblemasdelavidarealtienenuncara´ctermultimo-
+AlgoritmosHeur´ısticosH´ıbridosparadisen˜odeS-Caja 47
+wers)encargadasdeexplorarnuevasregionesdelespacio.En linealidaddeunaS-cajareducelaefectividaddelosataques
+unalgoritmoh´ıbridolaelevadacapacidaddeexploracio´nde porcriptoana´lisislineal.Otradelaspropiedadesimportantes
+L´ıderesySeguidoressecombinaconalgoritmosdebu´squeda es el orden de transparencia. Mientras menor sea el orden
+localquepermiten,unavezconcluidalaexploracio´n,conver- detransparenciadeunaS-caja,mayoressuresistenciaante
+gerra´pidamentealoso´ptimoslocales.Enlae´pocaactualel ataquesDPA.unaS-cajaesunafuncio´nbooleanavectorialde
+intercambiodeinformacio´npormedioselectro´nicosesalgo nbitsdeentradaambitsdesalidaφ :Fn−→Fm
+2 2
+cotidiano.Paragarantizarlaseguridadyprivacidaddelosda-
+Definicio´n2.1(Funcio´nBooleana) Una funcio´n booleana
+tosexistendiversostiposdealgoritmosdeencriptacio´n,entre
+f(x):Fn−→F eslafuncio´nquelehacecorresponderan
+losquesedestacanporsufortalezalosalgoritmosdeclave 2 2
+bitsdeentradaunbitdesalida.
+sime´tricacomoelAdvancedEncryptionStandard(AES).Las
+S-cajas(ocajasdesubstitucio´n)constituyenuncomponente
+Definicio´n2.2(Funcio´nAf´ın) Una funcio´n booleana φ es
+principalenelprocedimientodecifrado,estasaportanlano-
+llamadafuncio´naf´ınsiesdelaforma
+linealidadylaconfusio´nnecesariasparaqueelalgoritmosea
+consideradoseguro.AunqueseconocenS-cajasconbuenas
+propiedadescriptogra´ficas,lautilizacio´ndemu´ltiplesS-cajas φ(x)=b x ⊕b x ⊕.....⊕b x ⊕c=b∗x⊕c (1)
+1 1 2 2 n n
+duranteelprocesodecifradoeslatransformacio´nma´susual
+Dondeb ,b ,....,b ,c∈F yb,x∈En.Sic=0entoncesφ
+dentrodelgrupodevariantespropuestasalalgoritmoAES 1 2 n 2 2
+esllamadafuncio´nlineal.
+[?].DebidoaestosehacenecesarioencontrarS-cajasconun
+conjuntodecriteriosquepermitangarantizarlaseguridadde
+Alconjuntodetodaslasfuncionesafinesseledenotapor
+lasmismasantelasdiversaste´cnicasdecriptoana´lisisexis-
+A yaldetodaslasfuncioneslinealesporL .
+n n
+tentes: el criptoana´lisis diferencial y lineal, el algebraico y
+elataquediferencialdepotencia,entreotros.Enlaliteratura Definicio´n2.3(PesodeHamming) ElpesodeHammingde
+esposibleencontrardiversostrabajosdondeseaplicanalgo- unafuncio´nbooleanaserefierealnu´merode1ensutabla
+ritmosheur´ısticosymetaheur´ısticosalaoptimizacio´ndelas veritativacorrespondientealasalidaysedenotaporHw(φ).
+propiedadesdelasS-cajas.JohnClark,unodelosprincipales
+investigadores del tema, expresa que hasta el momento se Hw(φ)=|f|= ∑ φ(x) (2)
+hanaplicado(meta)heur´ısticasmuysimplescomoRecocido x∈Fn
+2
+SimuladoyAlgoritmosGene´ticos,yplantealanecesidadde
+Definicio´n2.4(DistanciadeHamming) LadistanciadeHam-
+aplicaralgoritmosma´snovedososysofisticadosalproblema
+mingentredosfuncionesbooleanasesdefinidacomoelnu´me-
+encuestio´n.Tambie´nexpresaquelasfuncionesobjetivosutili-
+ro de posiciones diferentes entre sus tablas de verdad y se
+zadashansidodirectamentelasfuncionesdecostoasociadas
+expresacomo
+alaspropiedadesquesequieremejorar,yconsideraqueestas
+notienenporque´ sernecesariamentelasmejoresfunciones
+d(φ,ϕ)=Hw(T ⊕T ) (3)
+φ ϕ
+paraguiarunabu´squedaheur´ıstica.
+2. Marco Teo´rico Definicio´n2.5(FuncionesComponentes) Seaφ:Fn−→Fm,φ=
+2 2
+Enlaactualidadexistenvariostiposdealgoritmoscrip- (φ 1 ,...,φ m ),selellamanfuncionescomponentesofunciones
+togra´ficos:losdeclavesime´tricaylosdeclaveasime´trica.Es- coordenadasdeφ alasfuncionesbooleanasdenentradasφ i
+tainvestigacio´nseenmarcaenlacriptograf´ıadeclavesime´tri- ∀i∈1,2,....,mquecumplenqueφ i (x)=y i .
+ca,espec´ıficamenteenloscifradosenbloques.Quiza´selma´s
+Definicio´n2.6(FormaNormal) Se denomina forma alge-
+famoso de estos algoritmos sea el DES (Data Encryption
+braicanormal(FAN)delafuncio´nbinaria f(x)alaexpresio´n
+Standard)[?].Enlosan˜os90estehab´ıallegadoalfindesu
+deltipo:
+vidau´tilsiendosustituidoporelAES(AdvancedEncryption
+Standard).Suestructuraconstadecuatrotransformaciones n
+ba´sicas,lascajasdesustitucio´n(S-cajas)(SubBytes),lasma- φ(x 1 ,....x n )= ∑ ∑ a i1....ik x i1 ....x ik (4)
+trices MDS (MixColumns), el desplazamiento de las filas k=0i1....ik
+(ShiftRows)ylasumaXorconlassubclaves(AddRoundKey).
+Definicio´n2.7(GradoAlgebraicodeunaFuncio´nBooleana)
+LasS-cajasconstituyenuncomponenteimprescindibleenel
+Elgradoalgebraicodeunafuncio´nbooleanaφ sedefineco-
+disen˜odecifradosdebloques,estasaportanlano-linealidady
+moelgradodelpolinomio2.6queeslaformanormaldeφ.
+laconfusio´nparaqueelalgoritmoseaseguro.Debidoaesto
+Sedenotacomodeg(φ).
+sehacenecesarialadefinicio´ndeunconjuntodecriteriosque
+permitendeterminarlaseguridaddelasS-cajas:elcriptoana´li- Definicio´n2.8(GradoAlgebraico) Elgradoalgebraicode
+sisdiferencialylineal,elalgebraicoyelataquediferencialde φ,deg(φ)sedefinecomoelm´ınimodelosgradosalgebraicos
+potencia(DPA)[?][?],entreotros.Lanolinealidadesunade detodaslascombinacioneslinealesnonulasdelasfunciones
+laspropiedadesma´simportantes.Unelevadovalordelano componentesdeφ.
+48 AlgoritmosHeur´ısticosH´ıbridosparadisen˜odeS-Caja
+Definicio´n2.9(TransformadadeWalsh) SedenotaporW Definicio´n2.12(Funcio´nBent) Unafuncio´nbooleanaφ es
+φ
+alatransformadadeWalshdelafuncio´nφ,yesdefinidaco- llamadaunafuncio´nbentsimuestraelma´ximovalordeno
+mo: linealidadalcanzableysedefinencomo:
+W (w)= ∑ φˆ(x)Lˆ (x) (5) φ bent ⇔∀w∈F 2 n(cid:107)W φ (w)(cid:107)=2 n 2 (12)
+φ w
+x∈Fn 2.3 NP-Completo
+2
+Encontrar funciones booleanas y S-cajas que logren un
+donde φˆ(x) es la forma polar de la funcio´n booleana
+balanceadecuadoentrepropiedadesantago´nicasresultacom-
+φ :φˆ(x)=(−1)φ(x)Elvalorma´ximoabsolutodelatrans- plejoporelbalancequedebelograrseparanoexhibirvulne-
+formadadeWalshHadamarddeunafuncio´nφ esdenotado
+rabilidadesexplotables.Elespaciodelasfuncionesbooleanas
+por: esexponencialrespectoaltaman˜odeentradan:22n
+.Enaras
+dehacerlosalgoritmoscriptogra´ficosma´sresistentes,elta-
+W (φ)= max (cid:107)W (w)(cid:107) (6) man˜odelasfuncionesbooleanasesta´encontinuoincremento,
+MAX φ
+w∈F 2 n ycuandoncrece,elespaciodebu´squedacrecedeformaex-
+ponencial [?]. Clark demuestra en [?] que la obtencio´n de
+2.1 NoLinealidad funcionesbooleanasconbuenaspropiedadescriptogra´ficas,
+Definicio´n2.10(NoLinealidaddeunafuncio´nbooleana[?]) pertenece a la clase NP-Completo. Es por ello que una de
+Lanolinealidaddeunafuncio´nbooleanaφ denvariablesse las principales l´ıneas de investigacio´n en este campo ha si-
+definecomoelm´ınimodeladistanciadehamming2.4entre dolaaplicacio´ndemetaheur´ısticasparaencontrarfunciones
+estaycualquierfuncio´nlineal.Estaesdefinidacomo: booleanasyS-cajasconpropiedadesdeseables.
+1 2.4 AlgoritmosHeur´ısticosyMetaheur´ısticos
+NL = (2n−W (φ)) (7)
+φ 2 MAX Losalgoritmosdeoptimizacio´npuedenserdivididosen
+doscategor´ıas:algoritmosexactosyalgoritmosheur´ısticos.
+Definicio´n2.11(NolinealidaddeunaS-Cajas) Lanolinea- Losme´todosexactosesta´ndisen˜adosparaencontrarlasolu-
+lidaddeunaS-cajaeselm´ınimodelosvaloresdenolineali- cio´no´ptimaenuntiempofinito.LosproblemasNP-duros,este
+daddelasfuncionesbooleanasquelacomponen. ”tiempofinito”puedeaumentardemaneraexponencialrespec-
+toalnu´merodedimensiones.Losalgoritmosheur´ısticosno
+2.2 OrdendeTransparencia garantizanencontrarelo´ptimo,peropermitenencontrarsolu-
+cionesbuenasenun”tiemporazonable”.Muchasheur´ısticas
+Losataquesporconsumodepotencias(DPA)tienencomo
+sonespec´ıficasydependientesdelproblema.Porelcontrario,
+idearevelarlaclavedeundispositivocriptogra´ficopormedio
+unametaheur´ısticaesunmarcodetrabajoalgor´ıtmico,dealto
+delana´lisisdeconsumodepotenciamientraseldispositivo
+niveleindependientedelproblema.
+criptogra´ficocifraodescifradiferentesbloquesdedatos[?].
+El orden de transparencia es una propiedad de las S-cajas
+2.5 Exploracio´nyExplotacio´n
+que brinda resistencia ante los ataques DPA. El orden de
+Laoptimizacio´ndefuncionesmulti-modalesrequiereque
+transparenciadeunafuncio´nφ :Fn−→Fmdedefinecomo
+2 2 unametaheur´ısticaefectu´eexploracio´nyexplotacio´n.Laex-
+[?]:
+ploracio´nconsisteenencontrarlasregionesma´sprometedo-
+rasdelespaciodebu´squeda,laexplotacio´ndebegarantizar
+laconvergenciaalo´ptimo(local)dedicharegio´n.Thresheld
+Aux(B,a)= ∑ (−1)v∗BWD F(0,v) (8)
+a Convergence (TC) es una te´cnica disen˜ada para promover
+v∈F 2m
+unaexploracio´nnosesgadadelespaciodebu´squeda[?],de
+1
+T = ma´x{|m−2Hw(B)|− ∑ |Aux(B,a)|} manera que se facilite la deteccio´n de los mejores campos
+F B∈F 2 m (22n−2n) a∈F 2n deatraccio´nantesdeefectuarlaexplotacio´ndelosmismos
+(9) [?][?][?][?].Uncampodeatraccio´nesunaregio´ndeles-
+WD φ(0,v)=corr(φ,ϕ)= ∑ (−1)φ(x)+ϕ(x) (10) paciodebu´squedadesdecuyospuntoscualquieralgoritmo
+a
+debu´squedalocalconvergesiemprealmismoo´ptimolocal.
+x∈F 2n
+Laintegracio´ndeThresheldConvergencehapermitidome-
+φ(x)=vφ(x),ϕ(x)=vφ(x+a). (11)
+jorarlosresultadosdediversasmetaheur´ısticasaloptimizar
+funcionesmulti-modales.
+Teorema2.1 Seannymdosenterospositivos,elordende
+transparenciaT detodafuncio´nφ :Fn−→Fmsatisfacela
+φ 2 2 2.6 L´ıderesySeguidores(LeaderandFollowers)
+siguienterelacio´n:
+Definicio´n2.13(Calidaddeuncampodeatraccio´n) SeaC
+a
+0≤T φ ≤m uncampoatraccio´ndelafuncio´n f yx∗suo´ptimolocalco-
+Sitodafuncio´ncoordenadaφ esbentT φ =m,yT φ =0si rrespondiente,lacalidaddeC a sedefinecomolacalidadde
+ysolos´ıφ esunafuncio´naf´ın. suo´ptimolocal: f(x∗).
+AlgoritmosHeur´ısticosH´ıbridosparadisen˜odeS-Caja 49
+Definicio´n2.14(Comparacio´nsesgada) SeanC yC cam- Aprendizajenosupervisado:cuandosoloseconocen
+a1 a2
+pos de atraccio´n de la funcio´n f y x y x soluciones tales losdatos.
+1 2
+que x ∈C y x ∈C . Una comparacio´n sesgada ocurre
+1 a1 2 a2
+Esteart´ıculoseenfocaenlahibridacio´nutilizandote´cni-
+f(x 1 )f(x 2 )y f(x 1∗)f(x 2∗),dondex 1∗ yx 2∗ sonloso´ptimos
+casdeaprendizajesupervisado,usandote´cnicasdeclasifica-
+localesdeC yC ,respectivamente.
+a1 a2
+cio´n.Losclasificadoresexaminanlosatributosdeunainstan-
+cia dada para asignarla a una categor´ıa o clase predefinida.
+Lametaheur´ısticadeL´ıderesySeguidores(LaF,porsus
+La extraccio´n de conocimiento se puede efectuar antes de
+siglaseningle´s)hacee´nfasisenevitarcomparacionessesga-
+comenzarlabu´squeda,locualseconocecomoestrategiade
+das.Elrasgodistintivodeestametaheur´ısticaeselusodedos
+conocimientooff-line[?],odina´micamentedurantelabu´sque-
+poblaciones:unapoblacio´nde”l´ıderes”(Lp)quecontienelas
+da,queseconocecomoestrategiadeconocimientoon-line
+solucionesdelosmejorescamposdeatraccio´nylascuales
+[?].Elclasificadorsepuedeutilizarparamodificaruncompo-
+gu´ıanlabu´squeda,yunapoblacio´nde”seguidores”(Sp)enlas
+nentedelametaheur´ıstica,oparaajustarpara´metrosytomar
+cualesseefectu´ancomparacionesnosesgadas.Lapoblacio´n
+decisionesdurantelaejecucio´ndelalgoritmo[?].Enestain-
+del´ıderes,almacenalasmejoressolucionesencontrada,pero
+vestigacio´nsehara´usodeestrategiadeconocimientooff-line
+estasnosecomparanconlasnuevassoluciones.CuandoSp
+paralatomadedecisionesdurantelaejecucio´ndelalgoritmo.
+alcanza la media de la Lp, las dos poblaciones se mezclan
+medianteunaseleccio´nportorneoylosmejoresindividuos
+3.1 Hibridacio´nentreHeur´ısticas
+pasanaformarunanuevapoblacio´ndel´ıderes.Estopermite
+Lametaheur´ısticaL´ıderesySeguidoresesta´ compuesta
+a los seguidores convertirse en l´ıderes y que el proceso de
+pordosoperadores:eloperadordecruzamiento,quepermite
+bu´squedamejore.
+generarunanuevasolucio´napartirdeunseguidoryunl´ıder,
+y el operador de seleccio´n, que mezcla las poblaciones de
+Algorithm1:L´ıderesySeguidores(LaF)
+seguidoresydel´ıderesencadareinicio.ParaadaptarLaFa
+Entrada:maxEvals problemas combinatorios se reemplazo´ el operador de cru-
+L←Inicializaraleatoriamentelosl´ıderes
+zamiento continuo [?] por el operador de cruzamiento por
+S←Inicializaraleatoriamentelosseguidores
+orden(ordercrossover).Lahibridacio´nderealizo´ conlame-
+repeat
+taheur´ısticasimpleBu´squedaLocal.Estametaheur´ısticaen
+for i←1,ndo
+cadaiteracio´nestealgoritmoevalu´atodaslassolucionesveci-
+lider←EscogerunliderdeL
+naseiteraalamejordeellas,siempreycuandoseamejorque
+seguidor←EscogerunseguidordeS
+Xnueva←crearIndividuo(lider,seguidor) lasolucio´nactual.Elcriteriodevecindadqueseutilizo´ fue
+if f(Xnueva)< f(seguidor)then elintercambioentretodoslosparesdeelementosdistintos.
+seguidor←Xnueva Elcriteriopropuestosera´ igualalascombinacionesde2en
+end 256.Elalgoritmoh´ıbridopropuestoconstadedosfasesdis-
+end tintas:enlaprimerafasesellevaacabolaexploracio´nyen
+if mediana(f(S))<mediana(f(L))then lasegundafaseseexplotanlasmejoresregionesencontradas.
+L←mezclarPoblaciones(L,S) EnlaprimerafaseseejecutaLaF,teniendocomocondicio´n
+S←Inicializaraleatoriamentelosseguidores
+deparadaunnu´meroma´ximodeevaluacionesyseretornala
+end
+poblacio´ndel´ıderes.EnlasegundafaseseaplicaBu´squeda
+untilevals<maxEvals
+Localacadaunodelosl´ıderes(empezandoporlosmejores).
+Retornarlider
+b Acontinuacio´n,unseudoco´digodelh´ıbridoLaF-BL,donde
+σ eselpara´metroquecontrolaelpuntodetransicio´nentre
+t
+losprocesosdeexploracio´nyexplotacio´n.
+Seestablececomocondicio´ndeparadaunnu´meroma´xi-
+3. Hibridacio´n
+modeevaluacionesdelafuncio´nobjetivo.sefijantresmo-
+Elpropo´sitofundamentaldelahibridacio´nentredistintas mentosdistintosparahacerlatransicio´n:30%,50%y70%
+metaheur´ısticasconsisteencomplementarlasdebilidadesde delasevaluaciones(σ t =0,3,0,5y0,7).Loscorrespondien-
+un algoritmo con las fortalezas de otro. Combinar las me- tesh´ıbridossedenotara´nrespectivamentecomoLaF-BL-30,
+taheur´ısticasconte´cnicasdeaprendizajedema´quinascons- LaF-BL-50yLaF-BL-70.
+tituyeotraformademejorarlaeficienciaylaefectividadde
+losalgoritmosheur´ısticos.Elaprendizajedema´quinaesel 3.2 Resultados
+procesodeexplorargrandesvolu´menesdedatosparaextraer Serealizaunajustedepara´metrosparadeterminarelta-
+conocimiento[?]. man˜o o´ptimo de poblacio´n en LaF. En la literatura no se
+reportaeltaman˜oo´ptimodepoblacio´nparaproblemascombi-
+Aprendizajesupervisado:cuandosecuentaconinfor- natorios.Paraajustarestepara´metroserealizaron30corridas
+macio´nquepermiteclasificar/describirlosdatosobser- delalgoritmo.Lostaman˜osdepoblacio´n:100,200,300,400y
+vados. 500;sefijo´ 500.000comoelnu´meroma´ximodeevaluaciones
+50 AlgoritmosHeur´ısticosH´ıbridosparadisen˜odeS-Caja
+Algorithm2:AlgoritmoH´ıbrido(LaF-BL) Para solucionar esta deficiencia se recomienda optimi-
+zarlasS-cajasdesdeunaperspectivamulti-objetivo,esdecir,
+Entrada:maxEvals,pTransicion
+teniendo en cuenta simulta´neamente todas las propiedades.
+evalsLaF=maxEvals*pTransicion
+Laformama´ssencilladeoptimizarvariasfuncionesobjeti-
+evalsBL=maxEvals*(1-pTransicion)
+vossimulta´neamenteespondera´ndolasdentrodeunamisma
+L=LaF(evalsLaF)
+funcio´n. Este enfoque tiene como ventaja no modificar los
+foreachl´ıder∈Ldo
+algoritmosdeoptimizacio´n.Siendolafuncio´n:
+while evals<evalsBLdo
+BL(l´ıder,evalsBL)
+f =α∗OT−(1−α)∗NL (23)
+end comp
+end Dondeα ∈[0,1]esunpara´metroquedeterminaelpeso
+asignadoacadaunaenlafuncio´ncompuesta.Paraencontrar
+elvalordeα seutilizaron2enfoquesapartirdelasiguiente
+ecuacio´n:
+delafuncio´nobjetivo.Paraambaspropiedadeslosmejores
+resultados se tuvieron con un taman˜o de poblacio´n de 300.
+α∗OT =(1−α)∗NL (24)
+A continuacio´n, se presentan los resultados alcanzados por
+distintosalgoritmosparalaspropiedadesdeno-linealidadyel Enelprimerenfoquesetomacomovalorlamedianadetodas
+ordendetransparencia.Losalgoritmosdescritosensecciones lascorridasefectuadasportodoslosalgoritmosobtenie´ndose
+previas(LaF,BL,LaF-BL-30,LaF-BL-50yLaF-BL-70)se α=0.928.Enelsegundoseigualanlasvariacionesobserva-
+ejecutaronunalgoritmogene´ticoyunalgoritmoaleatorio.El das para cada propiedad entre el mejor y el peor resultado
+algoritmogene´ticoimplementadoutilizaunoperadoresta´ndar alcanzadoentodaslasejecuciones,llegandoas´ıaα=0.952.
+deseleccio´nportorneo.Operadordemutacio´nseutilizo´ el Alanalizarlosresultadoslosalgoritmosbu´squedaalea-
+intercambiodedoscomponentes,laprobabilidaddemutarse toria y LaF muestran un peor rendimiento. Los algoritmos
+fijo´ enp=0,8. h´ıbridos los que alcanzan los mejores resultados en ambas
+funciones.Confirmandolahipo´tesisdequecombinarlaex-
+3.3 Funcio´nObjetivoCompuesta ploracio´nnosesgadadeLaFconbu´squedalocalpuedeser
+Elordendetransparenciaylano-linealidadsonantago´ni- efectivoaloptimizarproblemascombinatorios.Esimportante
+cas [?] en el sentido de que al mejorar los valores de una sen˜alar que para cada funcio´n objetivo se alcanza el mejor
+empeoranlosdelaotra.Porello,elproblemadeoptimizarS- resultado con un h´ıbrido distinto. Tambie´n, al igual que en
+cajasconbuenaspropiedadescriptogra´ficasesinherentemente elordendetransparencia,elalgoritmogene´ticoalcanzamuy
+unproblemadeoptimizacio´nmulti-objetivo. buenosresultados.
+Definicio´n3.1(ProblemadeOptimizacio´nMulti-objetivo) 3.4 Discusio´n
+Unproblemadeoptimizacio´nsedicequeesmulti-objetivosi Lacombinacio´ndeambaspropiedadesenunasolafuncio´n
+seoptimizansimulta´neamentekcriteriosdedecisio´nsobre objetivoyunaseleccio´nadecuadadelpara´metrodepondera-
+unmismoespaciodebu´squeda. cio´npermitealosalgoritmosenfocarlabu´squedaenaquellas
+regiones del espacio donde se localizan S-cajas con el co-
+minf 1 (x 1 ,x 2 ,...,x n ) (13) rrespondientebalance.Losresultadosalcanzadosevidencian
+adema´squeajustandoα sepuedecontrolarlapreferenciapor
+minf (x ,x ,...,x ) (14)
+2 1 2 n unauotrapropiedad.Losmejoresresultadossealcanzaron
+. conlosalgoritmosh´ıbridos.Estosresultadossugierenqueun
+.
+. (15)
+adecuadobalanceentreunprocesoexpl´ıcitodeexploracio´n
+yotrodeexplotacio´npuedeserunaestrategiaefectivapara
+minf (x ,x ,...,x ) (16)
+k 1 2 n
+encontrarS-cajasdeutilidadparausocriptogra´fico.Hastael
+sujetoarestriccionesdeigualdadydesigualdad: momentosehaasignadoalpara´metrodetransicio´nlosvalo-
+resσ =0,3,0,5y0,7.Sinembargo,estosnotienenqueser
+t
+f (x ,x ,...,x )=0 (17)
+1 1 2 n necesariamentelosvaloreso´ptimosparaσ.
+t
+.
+.
+. (18) 4. Algoritmos h´ıbridos con aprendizaje
+f (x ,x ,...,x )=0 (19) de ma´quina
+s 1 2 n
+g (x ,x ,...,x )=0 (20) Lasheur´ısticash´ıbridaspropuestashastaahorautilizaban
+1 1 2 n
+unmomentofijoparaefectuarlatransicio´n.Elmotivodeesta
+.
+. . (21) decisio´n,muyfrecuenteeneldisen˜odealgoritmoh´ıbridos[?],
+esquedeterminarelmomentoadecuadodependedemu´ltiples
+g l (x 1 ,x 2 ,...,x n )=0 (22) factoresdif´ıcilesdemedir.Factoresquema´sinfluyenson:
+AlgoritmosHeur´ısticosH´ıbridosparadisen˜odeS-Caja 51
+Topolog´ıadelafuncio´nobjetivo:Determinarentiem- 24-28 M´ınimodelosseguidoresenlosu´ltimos5reinicios:
+podeejecucio´nlatopolog´ıaycua´ntaexploracio´n-explotacio´n m´ınimodelapoblacio´ndelosseguidoresantesdecada
+debeefectuarseparalamismaescomplejo,ma´sau´nsi unodelosu´ltimos5reinicios.
+setieneenconsideracio´nquelatopolog´ıapuedevariar
+29-33 Ma´ximodelosseguidoresenlosu´ltimos5reinicios:
+segu´nlaregio´ndelespaciodebu´squedaqueseexplora.
+ma´ximodelapoblacio´ndelosseguidoresantesdecada
+Proceso de optimizacio´n: Determinar en tiempo de unodelosu´ltimos5reinicios.
+ejecucio´n si se ha alcanzado el punto de transicio´n
+34-38 Nu´mero de evaluaciones entre los u´ltimos 5 reini-
+es extremadamente complejo pues noresulta compu-
+cios: nu´mero de evaluaciones de la funcio´n objetivo
+tacionalmentefactibleevaluardemaneraexpl´ıcitalos
+realizadasentrelosu´ltimos5reinicios.
+camposdeatraccio´nencontrados.Debidoalcara´cter
+estoca´sticodelprocesodeoptimizacio´nestepuntoideal
+39-43 Nu´mero de seguidores aceptados entre los u´ltimos
+nosealcanzasiempreenelmismomomento.
+5 reinicios: nu´mero de seguidores aceptados para la
+Tomarladecisio´ncorrecta,enunmomentodadodelpro- nuevapoblacio´ndel´ıderesdespue´sderealizarselase-
+cesodeoptimizacio´n,respectoasiefectuaronolatransicio´n leccio´nportorneoenlosu´ltimos5reinicios.
+esuncomplejoproblemadedecisio´n.Esteproblemapuede
+Seseleccionaronuntotalde43atributosparacaracteri-
+ser modelado como un problema de aprendizaje supervisa-
+zarunmomentodadodelprocesodeoptimizacio´n.Sehace
+do. El aprendizaje supervisado es una te´cnica para deducir
+especialhincapie´ enlosvaloresalcanzadosporlosl´ıderesy
+unafuncio´napartirdedatosdeentrenamiento.Ennuestro
+losseguidoresencorrelacio´nconlosreiniciosefectuados.Se
+casoseestar´ıaprediciendoelmomentoido´neoparahacerla
+hizousodedosalgoritmosdeclasificacio´n,NaiveBayesy
+transicio´n,porloquepuedesermodeladocomounproblema
+A´rbolesdeDecisio´n:
+de clasificacio´n binario. Los ejemplos entrenantes para un
+problemadeclasificacio´nbinariopuedenserrepresentados NaiveBayes:consisteenunclasificadorbayesianosim-
+porunvector.Loscomponentesx 1 ,x 2 ,...,x k constituyendatos plequeasumeindependenciaentrelascaracter´ısticas.
+ylacomponenteyrepresentalaclase.
+A´rbolesdeDecisio´n:losa´rbolesdedecisio´nsoncla-
+EjemplosEntrenantes:(x ,x ,...,x ,y) (25) sificadores que aproximan una funcio´n a partir de la
+1 2 k
+ejecucio´ndeunconjuntodepruebassobrelosvalores
+Paracadaejecucio´ndelprocesodeoptimizacio´nseestable-
+asociados a atributos predefinidos. Algunas ventajas
+cieronmomentosfijospararecopilarlosdatosyejecutarla
+delosa´rbolesdedecisio´nson:permiteninterpretarlas
+bu´squedalocal.Setomaronlossiguientespuntos:10%,20%,
+reglasutilizandoundiagramadea´rbol,esunmodelono
+30%,40%,50%,60%,70%,80%y90%delasevaluaciones.
+parame´tricoeincorporafa´cilmenteatributosnume´ricos
+Losatributosqueseutilizaronparacaracterizarelprocesode
+ynominales.Unadesventajaesquetiendenasobreajus-
+optimizacio´nfueron:
+tarsealosdatos.
+1 Nu´merodeevaluacionesrealizadas:cantidaddeeva-
+luacionesdelafuncio´nobjetivoqueharealizadoLaF. 4.1 Resultados
+Paraestimarlaprecisio´nalcanzadaporlosdosclasifica-
+2 Nu´merodeevaluacionesdisponibles:cantidaddeeva- doresserealizaron30corridasdevalidacio´ncruzadaconlos
+luacionesdelafuncio´nobjetivodisponibles. ejemplosentrenantesobtenidosanteriormente.Seefectuaron
+120ejecucionesdelprocedimiento.Setomo´ comoconjunto
+3 Nu´merodereiniciosrealizados:cantidaddereinicios
+deentrenamientoun60%delosejemplosycomoconjunto
+realizadosporLaF.
+de validacio´n el restante 40%, elegidos de forma aleatoria
+4-8 Medianadelosl´ıderesenlosu´ltimos5reinicios:me- respetandoladistribucio´ndelasclases.
+diana de la poblacio´n de los l´ıderes despue´s de cada
+unodelosu´ltimos5reinicios. Algoritmo µ σ
+Aleatorio 0,435 0,0288
+9-13 M´ınimodelosl´ıderesenlosu´ltimos5reinicios:m´ıni-
+modelapoblacio´ndelosl´ıderesdespue´sdecadauno NaiveBayes 0,694 0,0117
+delosu´ltimos5reinicios. A´rbolesdeDecisio´n 0,632 0,0121
+14-18 Ma´ximodelosl´ıderesenlosu´ltimos5reinicios:ma´xi-
+La tabla muestra los resultados alcanzados por los dos
+modelapoblacio´ndelosl´ıderesdespue´sdecadauno
+clasificadorespropuestosyunclasificadoraleatoriotomado
+delosu´ltimos5reinicios.
+comopuntodereferencia.Elvalorµ representalamediade
+19-23 Medianadelosseguidoresenlosu´ltimos5reinicios: laprecisio´nenlas30corridasyσ ladesviacio´nesta´ndar.
+medianadelapoblacio´ndelosseguidoresantesdecada Esposibleapreciarqueelcomportamientoidealocurre
+unodelosu´ltimos5reinicios. mejor en el caso de Naive Bayes. En el caso del A´rbol de
+52 AlgoritmosHeur´ısticosH´ıbridosparadisen˜odeS-Caja
+8: iff(Xnueva)<f(seguidor) then
+9: seguidor←Xnueva
+10: endif
+11: ifmedia(f(S))<media(f(L)) then
+12: L←mezclaPoblaciones(L,S)
+13: S←Iniciaraleatoriamentelosseguidores
+14: Atributos←RecopilarAtributos
+15: if Clasificador(Atributos)==1 then
+16: Transicio´n==True
+17: endif
+18: endif
+19: endwhile
+20: for lider∈Ldo
+21: while evals<maxEvalsdo
+22: BL(lider,maxEvals)
+23: endwhile
+24: endfor
+4.3 Resultados
+ParaevaluarlosalgoritmosH´ıbrido-NBeH´ıbrido-ADse
+efectuaron30ejecucionesindependientestomandocomocon-
+dicio´ndeparada500.000evaluacionesdelafuncio´nobjetivo.
+En ambas tablas que los h´ıbridos con el clasificador al-
+canzan resultados ligeramente mejores que el resto de los
+algoritmos.Ambosh´ıbridossonmuyestablesenlosresulta-
+dosyreportanunabajadesviacio´nesta´ndar,menorquelos
+restantes algoritmos h´ıbridos. El h´ıbrido con Naive Bayes
+reportaparaambasfuncionesmejormediaqueelh´ıbridocon
+a´rbolesdeDecisio´n,sinembargo,sepuedenotartambie´nque
+existeunagransimilitudenlosresultadosdeambosh´ıbridos.
+4.4 Discusio´n
+Enestecap´ıtulosepresentaunproblemadeclasificacio´n,
+Decisio´nlaconvergenciaesma´slentayestruncadaalfinalde
+elproblemadedeterminarelmomentoo´ptimoparalatransi-
+lagra´fica.Estopuededebersealainhabilidaddelmodelode
+cio´nentreLaFyBL.Luego,seentrenalosclasificadoresde
+generalizarbienlosdatosoquelacantidaddedatosdeentre-
+NaiveBayesya´rbolesdeDecisio´nparadarsolucio´n.Cada
+namientoseainsuficiente.Trabajosfuturosdebera´nenfocarse
+clasificadorpresentaevidenciadequeambosclasificadores
+enaumentarelnu´merodeejemplosentrenantesyprobarotros
+secomportandemaneradistinta.NaiveBayesseobservauna
+modelosdeclasificacio´n.
+mayorprecisio´nyunamayorconvergenciaenlascurvasde
+aprendizaje.Enlaclasificacio´napenassereflejaenlosresul-
+4.2 Hibridacio´n
+tadosdelosalgoritmosh´ıbridos.Losresultadosalcanzados
+Entrenado ya el clasificador este se integra dentro del
+durantelapresenteinvestigacio´nnosolohanpermitidoconfir-
+algoritmoh´ıbridoparadeterminarelmomentodetransicio´n.
+mardemanerapositivalashipo´tesisplanteadasrespectoala
+Denotaremosestosh´ıbridoscomoH´ıbrido-NBeH´ıbrido-AD
+hibridacio´ndeLaFenproblemascombinatorios,sinoquetam-
+segu´nelclasificadorqueusen.
+bie´nsoncompetitivosconlosmejoresresultadosreportados
+Algoritmo3:AlgoritmoH´ıbrido(H´ıbrido-NB) enlaliteratura.Unpuntodereferenciaenlaoptimizacio´nde
+propiedadescriptogra´ficasdeS-Cajaseslatesisdedoctorado
+Require: maxEvals,Clasificador deStepjanPicekculminadaen2015.Enesainvestigacio´nlas
+1: L←Inicializaraleatoriamentelosl´ıderes dosmejoresS-cajasquesereportandeNL100tienenunOT
+2: S←Inicializaraleatoriamentelosseguidores de7,53y7.52.NodistanmuchodelamejorS-cajareportada
+3: Transicio´n==False enestainvestigacio´nparaNL100yunvalordeOTde7,55.
+4: while evals<maxEvalsorTransicio´n==Falsedo EnelcasodeNL98lamejorS-cajareportadaporPicektiene
+5: lider←EscogerunliderdeL unOTde7,36,estevalorespeorquelamejorS-cajade98
+6: seguidor←EscogerunseguidordeS encontradaenlapresenteinvestigacio´nconOTdetansolo
+7: Xnueva←crearSoluci´on(lider,seguidor) 7,27.Lostrabajosfuturosdebera´nexplorarlaideadeiniciar
+AlgoritmosHeur´ısticosH´ıbridosparadisen˜odeS-Caja 53
+losalgoritmosdeesteart´ıculoenregionescercanasalaS-caja [7] JoanDaemenandVincentRijmen. ThedesignofRijn-
+delAES. dael:AES-theadvancedencryptionstandard. Springer
+Science&BusinessMedia,2013.
+5. Conclusiones
+[8] TalbiE. Metaheuristics:fromdesigntoimplementation.
+Lapresenteinvestigacio´nhatenidocomopropo´sitoaplicar
+JohnWiley&Sons,2009.
+novedososalgoritmosh´ıbridosalproblemadedisen˜arS-cajas
+[9] YasserGonzalez-FernandezandStephenChen. Leaders
+conbuenaspropiedadescriptogra´ficas.Estosalgoritmosfue-
+andfollowers—anewmetaheuristictoavoidthebiasof
+ronaplicadostantoalaspropiedadesdemaneraindependiente
+accumulatedinformation,2015.
+comoafuncionesobjetivoscompuestasquepermitenoptimi-
+zarma´sdeunapropiedadsimulta´neamenteyguiarelproceso [10] SylvainGuilley,PhilippeHoogvorst,andRenaudPaca-
+debu´squedahaciabuenasregionesdelespacio.Lanovedadde let. Differentialpoweranalysismodelandsomeresults.
+losalgoritmosh´ıbridossedebeatresaspectosfundamentales. InSmartCardResearchandAdvancedApplicationsVi,
+Primero,alaideadesepararexpl´ıcitamentelaexploracio´n pages127–142.Springer,2004.
+ylaexplotacio´n.Segundo,lautilizacio´ndelarecientemente
+propuestametaheur´ısticadeL´ıderesySeguidoresparallevar [11] HowardMHeys. Atutorialonlinearanddifferential
+acaboelprocesodeexploracio´n.Tercero,lautilizacio´nde cryptanalysis. Cryptologia,26(3):189–221,2002.
+te´cnicasdeaprendizajesupervisadoparadeterminarautoma´ti-
+camenteelmomentodetransitardeunprocesoaotro.Los [12] LaetitiaJourdan,ClarisseDhaenens,andEl-GhazaliTal-
+resultadosalcanzadossoncompetitivosconaquellosreporta- bi. Usingdataminingtechniquestohelpmetaheuristics:
+dosenlaliteratura. Ashortsurvey. InInternationalWorkshoponHybrid
+Metaheuristics,pages57–69.Springer,2006.
+Referencias
+[13] Paul Kocher, Joshua Jaffe, and Benjamin Jun. Dif-
+[1] HugoBarbalho,IsabelRosseti,SimoneLMartins,and
+ferential power analysis. In Advances in crypto-
+AlexandrePlastino. Ahybriddatamininggraspwith
+logy—CRYPTO’99,pages789–789.Springer,1999.
+path-relinking. Computers & Operations Research,
+40(12):3159–3173,2013. [14] Este´vez-Velarde-S.Bolufe´-Ro¨hlerA.-ChenS.yMont-
+gomery J. Piad-Morffis, A. Evolution strategies with
+[2] S. Bolufe´-Ro¨hler, A. y Chen. Minimum population
+thresheld convergence. In Evolutionary Computation
+search - a scalable metaheuristic for multi-modal pro-
+(CEC),2013IEEECongresson.IEEE,2015.
+blems. RevistaInvestigacio´nOperacional,36(1):85–95,
+2015.
+[15] AlexandrePlastino,RichardFuchshuber,SimonedeL
+[3] AntonioBolufe´-Ro¨hler,DaniaTamayo-Vera,andStep- Martins,AlexAFreitas,andSaidSalhi. Ahybriddata
+hen Chen. An laf-cmaes hybrid for optimization in miningmetaheuristicforthep-medianproblem. Statisti-
+multi-modal search spaces. In Evolutionary Compu- calAnalysisandDataMining,4(3):313–335,2011.
+tation(CEC),2017IEEECongresson.IEEE,2017.
+[16] EmmanuelProuff. Dpaattacksands-boxes.
+[4] J.Chen,S.yMontgomery. Particleswarmoptimization
+with thresheld convergence. In Evolutionary Compu- [17] Mark Read. Explicable boolean functions. Master’s
+tation(CEC),2013IEEECongresson,pages510–516. thesis,DepartmentofComputerScience,TheUniversity
+IEEE,2013. ofYork,2007.
+[5] Montgomery J. Bolufe´-Ro¨hler A. y Gonzalez-
+[18] DaniaTamayo-Vera,AntonioBolufe´-Ro¨hler,andStep-
+Fernandez Y. Chen, S. A review of thresheld
+hen Chen. Estimation multivariate normal algorithm
+convergence. GECONTEC: Revista Internacional de
+with thresheld convergence. In Evolutionary Compu-
+Gestio´ndelConocimientoylaTecnolog´ıa,2015.
+tation (CEC), 2016 IEEE Congress on, pages 3425–
+[6] JohnAndrewClark. MetaheuristicSearchasaCrypto- 3432.IEEE,2016.
+logicalTool. PhDthesis,UniversityofYork,2002.
+54 AlgoritmosHeur´ısticosH´ıbridosparadisen˜odeS-Caja
+Cuadro1.ResultadosparaelOrdendeTransparencia
+Algoritmo Media Desviacio´nEsta´ndar MejorValor PeorValor
+Bu´squedaLocal 7,63 0,02 7,59 7,67
+LaF−BL−30 7,61 0,03 7,55 7,66
+LaF−BL−50 7,63 0,02 7,59 7,66
+LaF−BL−70 7,67 0,01 7,64 7,70
+LaF 7,72 0,01 7,70 7,74
+AlgoritmoGene´tico 7,20 0,33 6,90 7,77
+Bu´squedaAleatoria 7,79 0,01 7,76 7,82
+Cuadro2.ResultadosparalaNoLinealidad
+Algoritmo Media Desviacio´nEsta´ndar MejorValor PeorValor
+Bu´squedaLocal 98,80 0,98 98 96
+LaF−BL−30 98,53 0,72 100 98
+LaF−BL−50 98,40 0,57 100 98
+LaF−BL−70 98,46 0,66 100 98
+LaF 98,33 0,39 100 98
+AlgoritmoGene´tico 98,13 0,20 100 98
+Bu´squedaAleatoria 93,47 1,71 96 90
+Cuadro3.Resultadosparalafuncio´ncompuesta(α =0.928)
+Algoritmo Media Desviacio´nEsta´ndar MejorValor PeorValor
+Bu´squedaLocal 7,54e−02 7,04e−03 6,05e−02 8,48e−02
+LaF−BL−30 −1,40e−01 2,60e−02 −1,79e−01 −1,16e−01
+LaF−BL−50 7,63e−02 3,61e−02 −4,35e−02 9,94e−02
+LaF−BL−70 9,12e−02 4,42e−02 −2,07e−02 1,16e−01
+LaF 1,53e−01 4,20e−03 1,44e−01 1,60e−01
+AlgoritmoGene´tico 6,23e−02 3,36e−02 −5,64e−0,2 8,48e−02
+Bu´squedaAleatoria 5,76e−01 1,85e−01 3,20e−01 7,72e−01
+Cuadro4.Resultadosparalafuncio´ncompuesta(α =0.952)
+Algoritmo Media Desviacio´nEsta´ndar MejorValor PeorValor
+Bu´squedaLocal 2,64 2,43e−02 2,59 2,69
+LaF−BL−30 2,42 2,33e−02 2,36 2,46
+LaF−BL−50 2,38 2,25e−02 2,32 2,48
+LaF−BL−70 2,62 2,26e−02 2,55 2,63
+LaF 2,69 3,34e−03 2,68 2,70
+AlgoritmoGene´tico 2,60 2,40e−02 2,53 2,62
+Bu´squedaAleatoria 2,93 6,64e−02 2,82 3,01
+Cuadro5.Resultadosparalafuncio´ncompuesta(α =0.928)
+Algoritmo Media Desviacio´nEsta´ndar MejorValor PeorValor
+LaF−BL−30 −1,40e−01 2,60e−02 −1,79e−01 −1,16e−01
+LaF−BL−50 7,63e−02 3,61e−02 −4,35e−02 9,94e−02
+LaF−BL−70 9,12e−02 4,42e−02 −2,07e−02 1,16e−01
+LaF 1,53e−01 4,20e−03 1,44e−01 1,60e−01
+H´ıbrido-NB −1,55e−01 4,01e−03 −1,60e−01 −1,49e−01
+H´ıbrido-AD −1,523−01 3,16e−03 −1,59e−01 −1,50e−01
+AlgoritmosHeur´ısticosH´ıbridosparadisen˜odeS-Caja 55
+Cuadro6.Resultadosparalafuncio´ncompuesta(α =0.928)
+Algoritmo Media Desviacio´nEsta´ndar MejorValor PeorValor
+LaF−BL−30 2,42 2,33e−02 2,36 2,46
+LaF−BL−50 2,38 2,25e−02 2,32 2,48
+LaF−BL−70 2,62 2,26e−02 2,55 2,63
+LaF 2,69 3,34e−03 2,68 2,70
+H´ıbrido-NB 2,29 3,36e−03 2,27 2,35
+H´ıbrido-AD 2,32 3,40e−03 2,27 2,36

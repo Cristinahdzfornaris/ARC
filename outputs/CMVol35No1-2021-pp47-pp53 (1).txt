@@ -1,0 +1,561 @@
+Ciencias Matemáticas, Vol. 35, No. 1, 2021,Pag.47-53
+Recibido 11-2020, Aceptado 04-2021
+Análisis y diseño de variantes del criptoanálisis a
+cifrados en bloques mediante el Algoritmo Genético
+Analysis and design of cryptanalysis variants to
+block ciphers through Genetic Algorithm
+Osmani Tito Corrioso1*, Miguel A. Borges Trenard2, Mijail Borges Quintana3
+Resumen EnlosúltimosañosescadavezmáscrecienteelusoqueselehadadoalAlgoritmoGenético(AG)
+enelcriptoanálisisacifradosenbloques.Noobstante,todavíaesnecesarioseguirprofundizandoensuestudio
+ylabúsquedademejoresprestaciones.Enesesentido,enestetrabajoserealizaelestudiodeciertasvariantes
+yparámetrosrelacionadosconelalgoritmo,como:lasfuncionesdeaptitud,elvalordek (quedeterminaun
+2
+balanceentrelacantidaddeclasesenquesedivideelespaciodelasclavesylacantidaddeelementosdecada
+unadeellas),yunametodologíadeataquedondeselograndesecharalgunasclases,reduciendoelnúmero
+totalqueseríanecesariorecorrer.LosexperimentosserealizanconloscifradosHTC,AES(3),AES(4)yAES(7).
+Abstract Inrecentyears,theusethathasbeengiventotheGeneticAlgorithm(GA)inthecryptanalysisof
+blockciphershasbeenincreasing. However,itisstillnecessarytocontinuedeepeningitsstudyandthesearch
+forbetterbenefits. Inthissense,inthisworkthestudyofcertainvariantsandparametersrelatedtothealgorithm
+is carried out, such as: fitness functions, the value of k (which determines a balance between the number
+2
+ofclassesintowhichthespaceofthekeysandthenumberofelementsofeachoneofthem),andanattack
+methodology where some classes are discarded, reducing the total number that would be necessary to go
+through. TheexperimentsarecarriedoutwiththeHTC,AES(3),AES(4)andAES(7)ciphers.
+PalabrasClave
+AlgoritmoGenético,grupocociente,criptoanálisis,AES(t)
+Keywords
+GeneticAlgorithm,quotientgroup,cryptanalysis,AES(t)
+1DepartamentodeMatemática,FacultaddeCienciasdelaEducación,UniversidaddeGuantánamo,Cuba,osmanitc@cug.co.cu
+2,3DepartamentodeMatemática,FacultaddeCienciasNaturalesyExactas,UniversidaddeOriente,Cuba,2mborges@uo.edu.cu,
+3mijail@uo.edu.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción dadountextoclaroT yelcorrespondientetextocifradoC,se
+estáinteresadoenencontrarlaclaveK.En[6],lafunciónde
+ElAlgoritmoGenético(AG)esunmétododeoptimiza-
+aptitudevalúaladiferenciabitabit(distanciadeHamming)
+ciónutilizadoenlosúltimosañosenlaCriptografíacondiver-
+entreCyeltextocifradodeT,usandouncandidatoparala
+sospropósitos,enparticularconelderealizarataquesavarios
+clave,mientrasque,porelcontrario,en[14]semideladistan-
+tiposdecifrados.Algunasdelasinvestigacionesrealizadasen
+ciadeHammingentreT yeldescifradodeltextocifradode
+estadirecciónsemencionanabajo.
+C.En[8]semuestraunataquesóloatextocifradoalSDES,
+En[14]losautorespresentanunacombinacióndelAlgorit-
+obteniendomejoresresultadosqueporfuerzabruta.Losau-
+moGenéticoconlaOptimizacióndeEnjambresdePartículas
+toresusanunafuncióndeaptitudqueesunacombinaciónde
+(otrométodoheurísticobasadoentécnicasevolutivas),llama-
+lafrecuenciarelativademonogramas,digramas,ytrigramas
+ronasumétodo“OptimizacióndeEnjambreGenético”ylo
+(paraunidiomaparticular).Comolalongituddeclaveesmuy
+aplicaronparaatacarelDES.Susresultadosexperimentales
+pequeña,pudieronusarestetipodefunción.[1]essimilara
+muestran que se obtienen mejores resultados aplicando su
+[8],seutilizaenesencialamismafuncióndeaptitud,pero
+métodocombinadoqueutilizandoambosmétodosporsepa-
+con diferentes parámetros, también es más detallado sobre
+rado.[6]proporcionaunaexploraciónpreliminardelusodel
+los experimentos y los comparan no sólo con respecto a la
+AGsobreuncifradodeltipoReddeSustituciónPermutación
+fuerzabruta,sinotambiénconlabúsquedaaleatoria.Paramás
+(SPNporsussiglaseninglés).Elpropósitodelaexploración
+detallessobreeláreadelcriptoanálisismedianteelAlgoritmo
+esdeterminarcómoencontrarclavesdébiles.Ambostrabajos
+Genéticover[7],[2]y[10].
+([14]y[6])usanunataqueatextoclaroconocido,esdecir,
+48 AnálisisydiseñodevariantesdelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético
+Aquí se sigue la idea de [4] y [11], y sus metodologías dondek ∈Z y0<k <k .DenotemosporNalnúcleode
+2 >0 2 1
+paradividirelespaciodelasclaves.Asícomoen[13],donde h,esdecir,
+seproponeunasoluciónalProblemaProbabilísticodePerte-
+nenciayalaeleccióndek 2 (verademás[12]),temasqueaquí N={x∈Z 2k1 |h(x)=0∈Z 2k2 }. (3)
+secompruebanexperimentalmente.
+Luego,porladefinicióndehsetienequeN estáformadopor
+En el trabajo, se estudian varios parámetros del cripto-
+análisisacifradosenbloquemedianteelAG.Secomprueba
+loselementosdeZ
+2k1
+quesonmúltiplosde2k2.Sesabeque
+Nesunsubgrupoinvariante(onormal),portanto,elprincipal
+elvalorquepodríatomark (quedeterminaunbalanceen-
+2 objetivoescalcularelgrupococientedeZ porN ydeesta
+tre la cantidad de clases en que se divide el espacio de las 2k1
+claves y la cantidad de elementos de cada una de ellas), y formaelespaciodelasclavesquedarádivididoen2k2 clases
+unametodologíadeataquedondeselograndesecharalgunas deequivalencia.
+clases,reduciendoelnúmerototalqueseríanecesariorecorrer.
+DenotemosporG
+K
+algrupococientedeZ
+2k1
+porN(G
+K
+=
+Teniendoencuentaesteúltimopunto,seproponeelusode
+Z
+2k1
+/N).PorelTeoremadeLagrange,setienequeo(G
+K
+)=
+otrasfuncionesdeaptitud. o(Z 2k1 )/o(N),peroo(G K )=o(Z 2k2 )=2k2,luego,
+Laestructuradeltrabajoescomosigue.Enlasección1se
+explicanlasdosmetodologíasdeparticióndelespaciodelas o(N)=o(Z 2k1 )/o(Z 2k2 )=2k1−k2. (4)
+clavesyelproblemadelapertenenciadelasclavesaclasesde
+Ahora se puede describir a N, teniendo en cuenta que sus
+equivalencia.Enla2sepresentanlosresultadosdelestudio
+elementossonlosmúltiplosde2k2.ParaellotomemosQ=
+de las funciones de aptitud (subsección 2.1) y del valor de
+{0,1,2,...,2k1−k2−1},entonces:
+k ylacantidaddeclasesdeequivalencia(subsección2.2).
+2
+Lasconclusionesenlasección3yporúltimolasreferencias
+N = <2k2 >= {x∈Z |∃q∈Q,x=q2k2}= (5)
+bibliográficas. 2k1
+= {0,2k2,2∗2k2,3∗2k2,...,(2k1−k2−1)∗2k2}.
+1. Preliminares
+Porotraparte,
+1.1 Metodologías de partición del espacio de las
+claves G K ={N,1+N,2+N,...,(2k2−2)+N,(2k2−1)+N}.
+Es c S o e n a oc F i k 2 d 1 o e q l u e e sp F a k 2 c 1 io tie d n e e l c a a s rd c i l n av al es 2k d 1 e y lo p n o g r i t t a u n d to k 1 ha ∈ y Z u > n 0 a . clas D es e d e a s d ta as fo p r o m r a N Z . 2 A k1 G qu K e s d e a l d e iv d i e d n id o o m e i n na un g a ru p p a o rt c ic o i c ó i n en d t e e 2 d k e 2
+correspondenciaunoaunoentreFk1 yelintervalo[0,2k1−1]. lasclaves.
+2
+Sisefijaunenterok 2 ,(1<k 2 ≤k 1 ),entonceselespaciode Sea,
+lasclavespuedeserrepresentadoporlosnúmeros,
+E:{0,1}m×{0,1}n→0,1n,m,n∈N,m≥n, (6)
+q2k2+r, (1)
+uncifradoenbloques,T untextoplano,K unaclaveyCel
+dondeq∈[0,2k1−k2−1]yr∈[0,2k2−1].Deestaformael
+correspondientetextocifrado,osea,C=E(K,T);sediceque
+espaciodelasclavesquedadivididoen2k1−k2 bloques(de-
+K(cid:48) es una clave consistente con E, T yC, siC=E(K(cid:48),T)
+terminados por el cociente en el algoritmo de la división
+(ver[4]).Laideaaquítambiénesrecorrer,delespaciototal,
+dividiendopor2k2)y,dentrodecadabloque,laclavecorres-
+los elementos que se encuentran en una clase, para luego
+pondienteestádeterminadaporsuposiciónenelbloque,la
+encontraruna(ovarias)clavesconsistentesenesaclase.Para
+cualestádadaporelrestor.Laideaprincipalessituarseen
+poderrecorrerloselementosdecadaclase,notarqueZ es
+un bloque (dado por q) y moverse dentro de dicho bloque 2k2
+isomorfoconG yelisomorfismohacecorresponderacada
+porloselementos(dadosporr)usandoelAG.Notarenesta K
+r∈Z suclasedeequivalenciar+N enG ,setieneque,
+metodologíaqueprimerosefijaqparaescogerunbloquey 2k2 K
+seleccionarunaclaseesfijarunelementor∈Z .Porotro
+luegorvaríaparapodermoverseporloselementosdelbloque, 2k2
+perolaclavecompletaenFk1
+seobtieneporlafórmula(1).
+lado, los elementos de N tienen la forma q2k2 (q∈Q), por
+2 tanto,loselementosdelaclaser+N tienenlaforma,
+HaremosreferenciaaestametodologíacomoBBM.Paramás
+detalledelaconexiónconelAGver[4]. q2k2+r,q∈Q. (7)
+Lasiguientemetodologíasebasaenladefiniciónycálculo
+delgrupococientedelasclavesG K cuyoobjetivoeshacer Luego, el problema de recorrer cada elemento de cada
+unaparticióndeFk1
+enclasesdeequivalencia.Esconocido clasedeequivalenciasereduceafijarprimerounelemento
+2
+que Fk1 como grupo aditivo, es isomorfo a Z . Sea h el deZ yluegorecorrercadaelementodelconjuntoQ,para
+2 2k1 2k2
+homomorfismodefinidodelmodosiguiente: buscarunaclaveconsistenteenG K mediante(7).Loselemen-
+tosdelconjuntoQtendránlongituddebloquek =k −k y
+h:Z 2k1 −→ Z 2k2 (2) cadaclasetendrá2kd elementos.Haremosrefe d rencia 1 ae 2 sta
+n −→ n(mod2k2), metodologíacomoTBB.Elproblemaenestasmetodologías
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 47-53
+AnálisisydiseñodevariantesdelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético 49
+eslaeleccióndek ,pueseselparámetroquedeterminala Estosresultados,enparticular,sugierenvariasformasde
+2
+cantidad de clases de equivalencia y por tanto, la cantidad elegir k en dependencia de los datos que se tengan, de la
+2
+deelementosdentrodeestas,ynohayunaformauniversal capacidaddecálculo,ydeloquesedeseehacer.Enparticular,
+de elegirlo. Si en G , k aumenta, las clases tienen menos unavíaesquesiseobtuvoconocimientodelosúltimosl bits
+K 2
+elementos,perohaymásclases,porelcontrario,sidisminu- delaclaveK,entoncessesabequelaclaseralaquepertenece
+ye,tambiénlohacenlacantidaddeclases,peroaumentanla K es el resultado de la conversión a decimal de ese bloque
+cantidaddeelementosdecadauna.Algosimilarocurreenla del bits,yelcálculodeG seharíaconk =l.Otraforma
+K 2
+primerametodología.Paramásdetallesver[4]y[11]. estáendependenciadelvalordew,dedondeseelegiríak de
+2
+talformaquen ≥1,yendependenciadelacapacidadde
+w
+1.2 Problema de la pertenencia de las claves a cla- cálculoytiempodisponible.Laideadeestetrabajoesestudiar
+sesdeequivalencia algunosparámetrosquepermitanirmejorandoloscriteriosde
+SeanMuntextoplano,K unaclave,yCeltextocifrado laeleccióndelosmismosenelmomentoderealizarpruebaso
+deMconK (conindependenciadelcifradoqueseuse).Sea atacarciertoscifradosmedianteelAGyenparticularusando
+ζ(n)∈G la clase de equivalencia de n∈Fk1 en G . Sea elPPP.
+K 2 K
+P (m) la probabilidad de que m∈Fk1 pertenezca a ζ(n)
+ζ(n) 2
+(notarquem∈ζ(n)⇔ζ(m)=ζ(n)).Entonces,elProblema 2. Estudio de parámetros
+Probabilístico de Pertenencia (PPP) es: Dado M y C (uno
+o varios pares), conC∈Fh, h∈Z , tal que, |Fh|≤|Fk1|. 2.1 Propuestadeotrasfuncionesdeaptitud
+2 >0 2 2
+CalcularP (K). Lajustificacióndeporquélanecesidaddebuscarotras
+ζ(C)
+funcionesdeaptitud,seprecisaráenlaúltimasección,enlo
+Teorema(Equivalenciadeclases). Dadok 1 ,k 2 ,h∈Z >0 ,C∈ referentealataquealcifradoHTCusandoelAGmedianteel
+Fh yK ∈Fk1 talque,|Fh|≤|Fk1|.Lastresafirmacionessi- PPP.Noobstante,laideaestáenelproblemadequemuchas
+2 2 2 2
+guientessonequivalentesenG K : veceselAGnoencuentralaclave,aunycuandolabuscaenla
+clasedondeellaseencuentra.Estotraeconsigoquetengaque
+a) ζ(C)=ζ(K).
+buscarenotra.Enestesentido,seríainteresanteestudiarotras
+b) C≡K≡r(mod2k2). funcionesdeaptitudqueseanmásefectivasensubúsqueda
+encadaclase.
+c) Lasúltimask 2 componentesdeCyK soniguales. SeanEuncifradoenbloquesconlongituddetextoplanoy
+cifradon,definidocomoen(6),T untextoplano,Kunaclave,
+Apartirdeesteteoremasetieneelsiguientecorolario, yC el correspondiente texto cifrado, tal que,C=E(K,T).
+SeanademásY ,lacorrespondienteconversiónadecimaldel
+d
+Corolario (Probabilidad de pertenencia). DadoC y k 2 , la bloquebinarioY,y,
+probabilidaddequeK pertenezcaalamismaclasedeCes
+iguala 1 .Osea, D:{0,1}m×{0,1}n→{0,1}n,
+2k2
+1 lafuncióndedescifradodeE,talque,T =D(K,C).Entonces,
+P (K)= . (8)
+ζ(C) 2k2 lafuncióndeaptitudconlaquesehaestadotrabajandoyque
+tomacomobaseladistanciadeHammingd ,parauncierto
+H
+individuoX delapoblaciónes,
+La aplicación de este corolario es útil cuando se tiene
+más de un texto cifrado en la práctica. En este caso, el re- n−d H (C,E(X,T))
+F (X)= ,
+1
+sultadomásinteresante,consecuenciadeloantesexpuesto, n
+eslosiguiente.Supongamosquesetienenwtextoscifrados,
+quemidelacercaníaentrelostextoscifradosCyeltextoque
+entonces,
+w seobtienedecifrarT conlaprobableclaveX (ver[3]).Una
+n =wP (K)= , (9)
+w ζ(C) 2k2 funciónparecidaaestaeslaquemidelacercaníaentrelos
+textosplanos,
+donde n es la cantidad teórica de textos cifrados de los w
+w
+inicialesacuyasclaseperteneceK paraunvalork previa-
+2 n−d (T,D(X,C))
+H
+mentefijado.Estoimplicaenparticularqueparaunataqueno F (X)= .
+2
+n
+hacefaltabuscarentodaslasclasesdeG paracadaunode
+K
+lostextoscifrados,sino,queeligiendounbuenvalorparak 2 , Otra función que sigue la idea de comparar los textos en
+bastaconbuscarenlamismaclasedeltextocifrado,yaque binario con d es la ponderación de F y F . Sean α,β ∈
+H 1 2
+delosw,según(9),esprobablequeenalmenosn w textosla [0,1]⊂R,talque,α+β =1,entonces,estafunciónquedaría
+claveseencuentreendichasn w clasescorrespondientes.Para definidadelasiguientemanera,
+estoesnecesarioqueporlomenosn ≥1,loqueimplicaque
+w
+w≥2k2.Paramásdetallesver[13]y[12]. F3(X)=αF1(X)+βF2(X).
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 47-53
+50 AnálisisydiseñodevariantesdelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético
+Es interesante notar que F consume más tiempo que cada Definición(Efectividaddefuncionesdeaptitud). Seandados
+3
+funciónporseparado,perolaideaestenermásefectividaden µ , µ ,µ ∈[0,1]⊂R,µ +µ +µ =1,t ,i=1,···,k,el
+1 2 3 1 2 3 Fi
+labúsquedadelaclave. tiempoquedemoraelAGenencontrarlaclaveconF,enun
+i
+Lasfuncionesdeaptitudqueenestepuntoseproponen, promediodeg Fi generaciones,y p Fi elporcientodeintentos
+están basadas en medir la cercanía de los textos planos y en los que el AG no encontró la clave con F i . Entonces, la
+cifrados pero en decimal. La primera función se define del efectividad,E Fi ,delafuncióndeaptitudF i conrespectoalas
+modosiguiente, demásk−1funcionesF j ,j(cid:54)=i,sedefinecomo,
+t g p
+F 4 (X)= 2n−1−| 2 C n d − − 1 E(X,T) d | . E Fi =1−(µ 1 ∑ k F t i Fγ +µ 2 ∑ k F g i Fγ +µ 3 ∑ k F p i Fγ )
+γ=1 γ=1 γ=1
+Notarquesilostextoscifradossoniguales,C =E(X,T) ,
+d d
+Unageneralizacióndeestadefiniciónparamásparámetros
+entonces,|C −E(X,T) |=0,loqueimplicaqueF (X)=1.
+d d 4
+serealizadeformaequivalente.Enlatabla1sepresentanlos
+Osea,sisoniguales,entonceslafuncióndeaptitudtomael
+resultadosdelacomparacióndelasdiferentesfuncionesde
+mayorvalor.Porelcontrario,lamayordiferenciaeslomás
+aptitud para la metodología BBM de partición del espacio,
+alejadoquepuedenestar,osea,C =2n−1,yE(X,T) =0,
+d d enestecaso,k=9.Setomóα =β =0,5,ycadaα =0,25.
+yportanto,F (X)=0. i
+4 ParacalcularE setomaronlosvaloresµ =0,33,µ =0,33
+LasiguienteesunaponderacióndelasfuncionesF yF , Fi 1 2
+1 4 yµ =0,34parat ,g y p respectivamente.Ordenandolas
+3 Fi Fi Fi
+F (X)=αF (X)+βF (X).
+5 1 4 Tabla1.Comparacióndelasfuncionesdeaptitud,conBBM
+Ambasfuncionestienenencomúnquemidenlacercaníaentre F i Tiempo Generaciones Fallos(%) E Fi
+lostextoscifrados.Estonoesunaambigüedad,yaque,por F 5.233 121.2 60 0.8731
+1
+ejemplo,siCyE(X,T)sediferencianendosbits,lafunción F 5.402 108.4 50 0.8870
+2
+F 1 siempretendráelmismovalorsinimportarquiénessean F 3 11.101 117.4 50 0.8584
+estosdosbits.Porelcontrario,noeslomismoenF 4 silos F 4 4.764 109.2 40 0.8995
+bitssonlosdosmásomenossignificativos,pueslosnúmeros F 9.451 109.8 30 0.8885
+5
+nosonlosmismosensuequivalenteendecimal. F 3.126 63.4 20 0.9433
+6
+Lasiguientefunciónmidelacercaníaendecimaldelos F 12.424 121.3 50 0.8511
+7
+textosplanos, F 7.054 77.1 10 0.9309
+8
+F 15.811 87.7 30 0.8682
+2n−1−|T −D(X,C) | 9
+d d
+F (X)= .
+6 2n−1
+F conrespectoalaefectividad,lasprimeras5seríanF ,F ,
+i 6 8
+FinalmentelasfuncionesF 7 ,F 8 yF 9 sedefinenconrespecto F 4 ,F 5 yF 2 .Esdenotarquedelastresprimerasqueusansolo
+alasanterioresdelasiguienteforma, ladistanciadeHamming,soloapareceF 2 .
+En el caso de la comparación de dichas funciones para
+F (X)=αF (X)+βF (X), la metodología TBB de partición del espacio de las claves
+7 2 6
+y búsqueda en G , los resultados de los experimentos se
+K
+F (X)=αF (X)+βF (X), presentanenlatabla2.Enestecaso,ordenandolasfunciones
+8 4 6
+F (X)=α F (X)+α F (X)+α F (X)+α F (X). Tabla2.Comparacióndelasfuncionesdeaptitud,conTBB
+9 1 1 2 2 3 4 4 6
+F Tiempo Generaciones Fallos(%) E
+4
+i Fi
+Donde α i ∈[0,1]⊂R,i∈{1,2,3,4}, y, ∑ α i =1. Con es- F 3.688 83.1 20 0.9278
+i=1 1
+to se garantiza que en general cada F j (X)∈[0,1]⊂R,j∈ F 2 5.353 109.1 60 0.8633
+{1,2,3,4,5,6,7,8,9}. F 3 11.403 122.9 40 0.8536
+Conelobjetivodecompararestasfuncionesserealizaron F 4 3.226 67.8 30 0.9240
+experimentosdeataquealcifradoAES(3)paralasdosmeto- F 5 7.147 83.4 10 0.9235
+dologíasdeparticióndelespaciodelasclaves.SeusóunaPC F 6 4.871 96.2 40 0.8939
+conprocesadorInter(R)Core(TM)i3-4160CPU@3.60GHz F 7 10.694 113.1 20 0.8840
+(4 CPUs), y 4GB de RAM. Para los resultados se midió el F 8 8.354 92 20 0.9029
+tiempomedioquetardaronenencontrarlaclave,elnúmero F 9 16.876 95.7 50 0.8270
+medio de generaciones en que se encontró, el porciento de
+fallos(enunacantidaddeataquesrealizados),yunparámetro porsuefectividad,las5primerasseríanF ,F ,F ,F yF .
+1 4 5 8 6
+llamado Efectividad, E , que hace una ponderación de los Nuevamenteapareceunasolafuncióndelastresprimeras,en
+Fi
+trescriteriosanteriores. estecaso,F ,ylasotrasrepiten.
+1
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 47-53
+AnálisisydiseñodevariantesdelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético 51
+2.2 AtaqueDirectoyporEliminacióndeClases y por tanto, disminuye la cantidad de elementos dentro de
+EnestasecciónsetrabajaráconlametodologíaTBB.Nos las mismas, loque hace que elAG termine másrápido. Es
+centramosenunavíaparalaeleccióndek ,elAtaqueDirecto, interesantenotarquelosfalloscomienzanaaparecerapartir
+2
+yterminamosconunametodologíadeataqueporeliminación dek =5,yvangradualmenteenaumentoamedidaquelo
+2
+de clases quepermite restringir, con cierta probabilidad,la hacek .Osea,aunquehayunrangoparaelegirde1a16,los
+2
+cantidaddeclasesarecorrer.Losexperimentosdeestasección mejoresvaloresestánhasta4ymáximo5,conrespectoalos
+serealizanconelcifradoHTC,unaReddeSustituciónPer- 100textoscifradosqueseestánusando.Estepuntocorrobora
+mutaciónde16bitsdelongituddebloque,paramásdetalles laideadesoluciónalproblemadelaeleccióndek .
+2
+ver[5]y[9]. Unadesventajaquepresentahacerelataquedeestama-
+Supongamosquesetienenwparesdetextosplanosysus nera, es que se recorren, por lo general, más clases de las
+correspondientestextoscifrados,yeslaúnicainformación quetienelapartición.Porejemplo,contodoyqueelijamos
+que se tiene para buscar la clave, de la cual se desconoce k =4,esdeesperarsecomopromedioquerecorra19clases
+2
+todo.Loprimeroeselegirk ,quecomoelataqueesenG , (paresdetextosplanosycifrados)hastaencontrarlaclave,
+2 K
+entoncesrepresentalacantidaddeclasesenlasquesedividirá segúnlatabla3.PeroG
+K
+solotendría2k2 =24=16clases,
+elgrupocociente.Sabemos,segúnelPPP,quehayunrango yseestánrecorriendomás.Loquesucedees,porunaparte,
+paraseleccionark ,cumpliendoconquen >1,según(9)y quehayvariostextoscifradosquepertenecenaunamisma
+2 w
+endependenciadelacapacidaddecálculoytiempo.Luego clasedondenoestálaclave,porloqueelAGrecorreráesa
+deelegirk ycalcularG sedebeelegirunaclaseparabuscar clasevariasveces;yporotrolado,queelAG,conlafunción
+2 K
+laclave,temaresueltosegúnPPP,conlocual,sebuscarála deaptitudqueseestáusando,F ,muchasvecesnoescapaz
+1
+clave en la misma clase a la que pertenece el texto cifrado deencontrarlaclavebuscandoenlaclasecorrecta,poreso
+correspondiente.Luego,soloquedaríairrecorriendocadauno siguebuscandoelsiguientetextocifradohastaencontrarla,y
+delosparestextoplanoytextocifradoybuscarlaclaveenla serepitenalgunasclases.
+mismaclasedeltextocifrado. Esaquídondesurgelanecesidaddebuscarotrasfunciones
+ParalosexperimentosseusóunaPCconprocesadorIn- deaptitudquehaganqueelAGseamásefectivoydisminuya
+ter(R)Core(TM)i5-3340CPU@3.10GHz(4CPUs)y4GB lacantidaddeclases.Aunqueesalgoquenobasta,sino,que
+deRAM.Partimosdew=100paresdetextos,portanto,se esnecesarioversilaformaderecorrerlostextoscifradosse
+puedeelegirunvalordek entre1y6(delos16posibles),ya puedemejorar.Estoseverámásadelante,enelAtaquepor
+2
+quesik =7,entonces,n =100/27=100/128<1,conlo EliminacióndeClases.
+2 w
+cualseríapocoprobableencontraruntextocifradoencuyacla-
+2.2.1 AtaqueporEliminacióndeClases
+seestélaclave.Perodelosvaloresde1a6,esteúltimoestáen
+Supongamosdadoswtextoscifradosyk ,detalformaque
+unasituaciónparecida,yaquen =100/26=100/64≈1,6. 2
+Encambio,parecehabermejore
+w
+sresultadosparalosvalores
+n
+w
+≥1,osea,w≥2k2.Setienen2k2 clasesdeequivalencia,
+yloswtextossepuedenagruparendichasclases.Parasaber
+de1a5.Estosecomprobóparalosvaloresdek de2a10,
+2
+laprobabilidaddequedelosw,w pertenezcanalaclaseX ,
+realizando el ataque buscando por cada uno de los w pares 1 1
+w alaX ,···,w alaX ,sepuedeutilizarlaDistribución
+hastaencontrarlaclave,loquehemosllamadoAtaqueDirec- 2 2 2k2 2k2
+Multinomial,
+to.Paracadaunodelosintentosencadavalordek ,ypara
+2
+valores diferente de este, los w pares de textos son diferen- P(X =w ,···,X =w )= w! pw1···p wk2,
+tescadavez.Losresultadossepuedenverenlatabla3.Es 1 1 k2 k2 w
+1
+!w
+2
+!···w
+2k2
+1 k2
+(10)
+Tabla3.AtaqueDirectoalHTCconw=100
+2k2
+k No.declases Tiempo Generac. Fallos(%) donde ∑ w i =w.
+2 i=1
+2 6.3 304.975 68.1 0 Todaslasclasestienenigualprobabilidad p= 1 deser
+2k2
+3 11.2 257.25 45.5 0 elegidas,portanto,(10)sereducea,
+4 19 130.158 9.1 0
+w!
+5 62.8 217.516 12.7 30 P(X 1 =w 1 ,···,X k2 =w k2 )=
+w !w !···w
+pw. (11)
+6 67.5 111.559 8.3 60 1 2 2k2
+7 56.9 44.559 3.1 30 LaesperanzamatemáticadeX es,E(X)=wp=w 1 ,que
+8 86.9 28.586 2.2 60 equivalean .Estoimplicaquelomásprobablealor 2 g k2 anizar
+w
+9 86.7 17.253 1.7 70 loswtextoscifradosenlas2k2 clases,esqueseesperequelas
+10 101 10.116 2 100 clasestenganenpromedion elementosyalrededordeeste
+w
+númeroestélamayorconcentración.Laprobabilidaddeque
+importanteseñalarquelafuncióndeaptitudqueseusófue hayanmuchosmáselementosencadaclase,omuypocos,va
+F .Enlatablasepuedeapreciarcómodisminuyeeltiempo disminuyendoamedidaquesealejadelamedian .Deser
+1 w
+amedidaqueaumentak ,locualesclarodebidoaquecon así,laclavedebeaparecermásfrecuentementesisebuscaen
+2
+el aumento de k
+2
+también aumentan la cantidad de clases, lasclasesquetienenunacantidaddeelementoscercanaanw.
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 47-53
+52 AnálisisydiseñodevariantesdelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético
+Paracomprobaresto,setomók =4,ysegeneraron19200 Se realizaron experimentos aplicando el AEC al HTC en
+2
+textoscifrados,agrupadosen200pruebasde96textoscada la misma PC Laptop para los resultados de la tabla 4 y los
+una. La idea es, en cada prueba, agrupar los 96 textos en datosquesehanestadotratando:w=100,k
+2
+=4,2k2 =16
+las24=16clasesyverificarcuántoselementostienelacla- clases,η =2yseeligióelintervalo[3,9],detalformaque,
+se a la que pertenece la clave. Se usó una PC Laptop con 2∗(9−3+1)=14<24=16.Seprobócondosfunciones
+procesador:Intel(R)Celeron(R)CPUN3050@1.60GHz(2 deaptitud,F ,laquesehaestadoutilizandoyF .Paracada
+1 5
+CPUs),∼1.6GHzy4GBdeRAM.Enestas200pruebas,los unadelasmismassehicieron40corridas,loquedauntotal
+resultados se muestran en la tabla 4. Las primera y tercera de8000paresdetextosplanosycifrados.Losresultadosse
+muestranenlatabla5.Notarcómosereduceenpromediola
+Tabla4.Vecesqueaparecelaclavealrededorden
+w
+No.Elem No.Aparic No.Elem No.Aparic Tabla5.AtaqueporEliminacióndeClasesalHTC
+F No.declases Tiempo Generac. Fallos(%)
+0 2 9 16 i
+1 3 10 5 F 8.83 114.26 18.999 40
+1
+2 8 11 4 F 10.4 193.59 12.44 15
+5
+3 21 12 5
+4 25 13 0
+cantidaddeclasesnecesariasparaencontrarlaclave.ConF
+1
+5 32 14 0
+prácticamentesolohizofaltarecorrerlamitaddelasclases
+6 25 15 0
+como promedio, 8.83 de 16, algo más necesitó F aunque
+5
+7 31 16+ 0
+con resultados bastante parecidos, 10.4 de 16. F tiene un
+1
+8 23 – –
+porcientodeaciertosdel60%,sinembargo,lafunciónF ,es
+5
+másefectiva,conun85%deaciertos.
+columnasindicanlacantidaddeelementosquetienelaclase,
+ylassegundaycuarta,lacantidaddevecesqueseencontraba
+3. Conclusiones
+laclave.Comosepuedeapreciar,lamayorcantidaddeclaves
+está concentrada alrededor del 6 (ya que n =96/16=6). Enelpresenteartículoseestudiaronvariosaspectosso-
+w
+Porejemplo,enelintervalodelasclasesquetienende3a brealgunosparámetrosdelAlgoritmoGenéticoyelataquea
+9elementos,seencuentran173claves,el86.5%delas200 cifradosenbloque.Sepropusieronvariasfuncionesdeapti-
+totales. tudconbuenosresultadosenlosexperimentosconrespecto
+Enestesentido,laideadelAtaqueporEliminacióndeCla- a las funciones que se estaban usando. Se propusieron dos
+sesesagruparloswtextoscifradosenclasesdeequivalencia, metodologíasdeataquequeunenelAGconelPPP:elAtaque
+luegoelegirunintervalo, DirectoyelAtaqueporEliminacióndeClases,esteúltimo
+conlaposibilidaddeobtenerresultadosaceptablessinrecorrer
+[a,b]⊂N,
+todaslasclasesnecesarias.
+donde a y b representan la cantidad de textos cifrados en Paratrabajosfuturosesinteresanteseguiravanzandoen
+lasclases,luegodeseragrupados,enunentornoden ,con elestudiodeciertosparámetrosycriteriosdeelecciónque
+w
+a≤n ≤b. De tal forma que la longitud del intervalo sea permitanmejorarlaefectividaddelosataquesusandoelAG
+w
+menorquelacantidaddeclasesalmenosunavez, yelPPP.
+η(b−a+1)<2k2,η ∈N (12)
+Referencias
+Con(12)segarantizaunacondicióndeeliminación,yaque
+[1] Adwan, Al, M. Al Shraideh y M.R.S. Al Saidat: A
+seestádandolaposibilidadderecorrerη veceslasb−a+1
+Genetic Algorithm Approach for Breaking of Simpli-
+clasescontenidasenelintervalo,sinaunllegaralas2k2 totales
+fied Data Encryption Standard. International Journal
+comocasoideal,ysepartedeesabaseaunquenosiempre
+of Security and Its Applications, 9(9):295–304, 2015.
+ocurriráasí.LasetapasdelAtaqueporEliminacióndeClases
+http://www.sersc.org/journals/IJSIA/vol9no92015/26.pdf.
+(AEC)sepodríanresumiren,
+[2] Baragada, SR. y P.S. Reddy: A Survey of Cry-
+I: Entrada:wparesdetextoplanoycifrados.
+ptanalytic Works Based on Genetic Algorithms.
+II.1: Elegirk ycalcularn . International Journal of Emerging Trends &
+2 w
+Technology in Computer Science (IJETTCS).
+II.2: Agruparloswparesenlas2k2 clasesdeequivalencia.
+ISSN 2278-6856, 2(5), September-October 2013.
+II.3: Elejirη y[a,b]satisfasciendo(12). http://www.ijettcs.org/Volume2Issue5/IJETTCS-2013-08...
+III: BuscarlaclaveconelAGenlasclasesqueenlaagru- [3] Borges-Trenard, M.A., M. Borges-Quintana, A.
+pacióntienenunacantidaddetextoscifradosdentrode Donatien-CharónyL.Monier-Columbié:Nuevafunción
+[a,b],repetirη vecessinoseencuentra. de aptitud en el criptoanálisis genético a cifrados en
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 47-53
+AnálisisydiseñodevariantesdelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético 53
+bloques. Congreso Internacional COMPUMAT. La [10] Khan,A.H.,A.H.LoneyF.A.Badroo:TheApplicability
+Habana,Cuba,2017. ofGeneticAlgorithminCryptanalysis:ASurvey. Inter-
+nationalJournalofComputerApplications,130(9),2015.
+[4] Borges-Trenard,M.A.,M.Borges-QuintanayL.Monier-
+http://www.ijcaonline.org/research/volume130/number9/...
+Columbié:Anapplicationofgeneticalgorithmtocry-
+ptanalysisofblockciphersbypartitioningthekeyspace.
+Journal of Discrete Mathematical Sciences & Crypto- [11] Tito, Osmani, Miguel A. Borges-Trenard y Mijail
+graphy,2019. DOI:10.1080/09720529.2019.1649028. Borges-Quintana:Ataquesacifradosenbloquesmedian-
+tebúsquedasengruposcocientesdelasclaves. Revista
+[5] Borges-Trenard,M.A.yL.Monier-Columbié:AES(t):
+CienciasMatemáticas,33(1),2019.
+UnaversiónparametrizadadelAES. CongresoInterna-
+cionalCOMPUMAT.LaHabana,Cuba,2015.
+[12] Tito, Osmani, Miguel A. Borges-Trenard y Mijail
+[6] Brown,J.A.,S.K.HoughtenyB.Ombuki-Berman:Ge- Borges-Quintana:Sobrelaparticióndelespaciodelas
+neticAlgorithmCryptanalysisofaSubstitutionPermu-
+claves.CienciaeInnovaciónTecnológica.EditorialAca-
+tation Network. IEEE Symposium on Computational
+démicaUniversitaria&OpuntiaBrava,VIII:401–409,
+IntelligenceinCyberSecurity,páginas115–121,2009.
+2019.
+[7] Delman, Bethany: Genetic algorithms in
+cryptography. Thesis. Rochester Institute [13] Tito, Osmani, Miguel A. Borges-Trenard y Mijail
+of Technology, RIT Scholar Works, 2004. Borges-Quintana: Sobre la pertenencia de las claves
+http://scholarworks.rit.edu/cgi/viewcontent.cgi?article=6... aclasesdeequivalenciaenG . XVICongresoInterna-
+K
+cionalCOMPUMAT,2019.
+[8] Garg, P., S. Varshney y M. Bhardwaj: Crypta-
+nalysis of Simplified Data Encryption Standard
+Using Genetic Algorithm. American Journal of [14] Vimalathithan,R.yM.L.Valarmathi:Cryptanalysisof
+Networks and Communications, 4(3):32–36, 2015. DESusingComputationalIntelligence. EuropeanJour-
+http://article.sciencepublishinggroup.com/pdf/10.11648.j... nalofScientificResearch,ISSN1450-216X,55(2):237–
+244,2011.
+[9] Howard,HeysM.:AtutorialonLinearandDifferential
+Cryptanalysis. Cryptologia,26(3):189–221,2002.
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 47-53

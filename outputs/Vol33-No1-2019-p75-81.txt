@@ -1,0 +1,401 @@
+CienciasMatema´ticas,Vol.33,No.1,Pag.75-81,2019
+Patrones en el orden de los clics y su influencia en
+la debilidad de las claves en la Te´cnica de
+Autenticacio´n Gra´fica Passpoints
+Clic Order patters and their influence on the
+weakness of the passwords in the Passpoints
+Graphic Authentication Technique
+Osviel Rodriguez Valde´s1*, Carlos M. Lego´n2, Raisa Socorro Llanes3
+Resumen Paragarantizarlaseguridadyprivacidaddeaccesoalossistemasdigitales,tradicionalmentese
+han utilizado las contrasen˜as alfanume´ricas. Los usuarios casi siempre ignoran las recomendaciones para
+conformar contrasen˜as seguras, las que emplean son sencillas y fa´ciles de predecir. Como alternativa, las
+contrasen˜as gra´ficas requieren que el usuario recuerde una imagen o partes de ella en vez de grupos de
+caracteresalfanume´ricos.Estasposeenespaciosdeclavesconsiderablesyayudanaqueelusuariorecuerde
+mejorsusecreto.Enesteart´ıculoseresumenlosprincipalestiposyestrategiasdeataquesdediccionarioa
+contrasen˜asgra´ficasyseprofundizaenlainfluenciadelospatronesdeclicslinealesenlaseguridaddelas
+claves.Existeevidenciaquedemuestraquesuexistenciaesindependientedelasima´genesdefondousadas
+enelprocesoderegistro-autenticacio´n.Adema´s,estospatronestienenungranimpactoenlafortalezadelas
+clavesyaquelosusuariostiendenaseguirpatronesdeflujoporlaformaenlaquenaturalmentepercibenlas
+ima´genes.
+Abstract Toguaranteethesecurityandprivacyofaccesstodigitalsystems,traditionalalphanumericpasswords
+havebeenused. Usersalmostalwaysignorerecommendationsforsafepasswords,thesearesimpleandeasy
+topredict. Asanalternative,graphicpasswordsrequiretheusertorememberanimageorpartsofitinsteadof
+groupsofalphanumericcharacters. Thesehaveconsiderablepasswordspacesandhelptheuserremembertheir
+secret. Inthisarticle,wesummarizethetypesandstrategiesofdictionaryattacksagainstgraphicpasswords
+and it delves into the influence of linear click patterns on password security. There is solid evidence that it’s
+existenceisindependentofthebackgroundimagesusedintheregistration-authenticationprocess. Inaddition,
+thesepatternshaveagreatimpactonthestrengthofthekeyssinceuserstendtofollowflowpatternsbytheway
+theynaturallyperceivetheimages.
+Graphical password, Authentication, Patrones de Clics Lineales, Ataque de semillas humanas, Con-
+trasen˜asde´biles,Espaciodeclave.
+Graphicalpassword,Authentication,LinearClickpatterns,Human-seededattack,Weakpasswords,Password
+space.
+1DepartamentodeProgramacio´nySistemasDigitales,UniversidaddelasCienciasInforma´ticas,LaHabana,Cuba,osviel@uci.cu
+2InstitutodeCriptogtaf´ıa,UniversidaddelaHabana,LaHabana,Cuba
+2UniversidadTecnolo´gicadelaHabanaJose´ A.Echeverr´ıa,LaHabana,Cuba
+*AutorparaCorrespondencia
+Introduction de una imagen o [VorsterandvanHeerden,2015]. El gran
+problemadeestasradicaenqueparapoderrecordarlascon
+LasContrasen˜asGra´ficas(CG)gananterrenosobrelastra-
+facilidadlosusuariosescogenlasquesonsencillasyconsig-
+dicionalesContrasen˜asAlfanume´ricas(CA)dadoquesebasan
+nificadopersonal;estasenconsecuenciasonfa´cilesdeatacar
+enlabiendocumentadaevidenciadequelashumanosposeen
+[ThorpeandvanOorschot,2007].
+mayorhabilidadpararecordarima´genesquepalabraspartede
+ellaenvezdeunapalabracompuestadecaracte´resalfanume´ri- DentrodelasTe´cnicasdeAutenticacio´nGra´ficas(TAG)
+cos.LasCAsonsiempreinseguras[IttiandKoch,2001,Valde´sethaal.r,e2c0ib1i8d]o.especialatencio´nelPassPoints[BhongandShahade,2013,
+Como alternativa, las CG requieren que el usuario recuer- Wiedenbecketal.,2005].ElPassPointsrequierequeelusua-
+PatronesenelordendelosclicsysuinfluenciaenladebilidaddelasclavesenlaTe´cnicadeAutenticacio´nGra´fica
+76 Passpoints
+rioseleccioneunconjuntodepuntos(cincoentotal)sobreuna estecapturalaformaenlaquelaspersonasobservanunaima-
+imagen [Blonder,1996]. Este es simple y efectivo, adema´s gendesdeloprofundohaciaarriba(Botton-up)[Ouerhanietal.,2004].
+soporta modificaciones que puedan personalizar sus imple- Laideaprincipaldeestapropuestaesquealgunasa´reasde
+mentacionesparacadaescenarioenparticular.Lasdesventajas una imagen, son “salientes” o de alguna manera resaltan
+principalesdelPassPointsradicanenlacalidaddelasima´ge- por lo que difieren del resto en su entorno. De esta mane-
+nesqueseutilizanenelprocesodeautenticacio´n1,laexisten- radadaunimagenelmodelodevuelvelaslocalizacionesy
+ciadepatronesporlaformaenlaqueelusuarioestablecesu el orden en que el ser humano de forma inconsciente y au-
+contrasen˜a(Clic-orderpatterns)yenelusodemecanismos toma´tica la observa. El proceso se compone de dos etapas.
+dediscretizacio´nqueintroducenvulnerabilidadespropiasde En la primera etapa se crea un mapa de “salientes” basa-
+sufuncionamiento[Valde´setal.,2018]. do en las caracter´ısiticas visuales. En la segunda etapa se
+Ataquesdediccionarioefectivossehanmaterializadopara usa una red neural “winner-take-all” con el objetivo de re-
+laTe´cnicadeAutenticacio´nGra´ficaPassPoints.Estosbuscan plicar la forma en la que el usuario observar´ıa la imagen.
+explotardoscaracter´ısticasenlaseleccio´ndelacontrasen˜a: Thorpeetal.en[ThorpeandvanOorschot,2007]desarrolla
+los puntos ma´s probables conocidos como HotSpots y los un ataqueautoma´tico dediccionario quese basaba soloen
+PatronesdeClicstambie´nconocidoscomoPatronesdeClics variaciones de la primera etapa donde utilizaba deteccio´n
+Lineales(PCL).LosHotSpotssonlospuntosdeunaimagen de esquinas para encontrar puntos referenciables; luego en
+ma´sprobablesaseleccionarporelusuario.Estossepueden [Salehi-Abarietal.,2008]sedescribecomoser´ıalasegunda
+pronosticarutilizandoTe´cnicasdeProcesamientodeIma´ge- etapadelproceso.
+nes(TPI)paradetectarbordes,esquinas,centroidesycambios La idea principal (primera etapa) de este me´todo sirve
+deintensidad.Lospatroneslinealesdeclics(PLC)sonlasrela- desoporteparalaste´cnicasdeana´lisisyprocesamientode
+cionesencuantoalorden,elsentido,espaciadoylaubicacio´n ima´genes.Estassebasanenladeteccio´ndeesquinasycen-
+delospuntosenlasCG[ComaniciuandMeer,2002].Ambas troidesas´ıcomolaaplicacio´ndeherramientasyalgoritmos
+caracter´ısticasconstituyendebilidadesdelascontraen˜asgra´fi- deinteligenciaartificialparadetectarobjetosenlasima´genes.
+casquecontribuyenaqueseanpredecibles[Zhuetal.,2013].
+Enesteart´ıculoseprofundizaenlaformadeseleccio´nde 2. Leyes de Gestalt
+lospuntosquehaceelusuarioapartirdelosmodelosdeaten-
+Esrazonablepensarquelosusuariosescogera´npuntosen
+cio´nyleyesdepercepcio´n,pararelacionarlosentresi.Estas
+forma de curvas que luzcan naturales a la forma en que se
+formasdeseleccio´ndecontrasen˜asimpactanenlaseguridad
+observalasima´genesyquedeestamanerapuedanrecordarlas
+puesto que son fa´cilmente explotadas por ataques que bus-
+fa´cilmente.Mientrasquealgunaspersonasencuentranma´s
+canPLCenlaubicacio´nyordendelospuntos(Click-order
+sencillorecordarpequen˜ospedazosdeinformacio´n,otrogru-
+pattern)enlaTe´cnicadeAutenticacio´nGra´ficaPasspoints.
+posignificativoprefieresinembargoescogerpuntosquepo-
+seenrelacio´nparcialototalentres´ı[vanOorschotandThorpe,2011,
+Me´todos VanOorschotetal.,2010]cumpliendoconlasdenominadas
+leyesdeGestalt.
+1. Modelos visuales de atencio´n EnAlema´nGestaltsignifica“forma”,losprincipiosdees-
+tateor´ıafueronpropuestosporMaxWertheimeren1912;pero
+LosModelosVisualesdeAtencio´n(MVA)estudianlafor-
+elconceptosurgio´inicialmenteenel1890enunart´ıculotitula-
+maenlaquelaspersonasobservanunaimagen.Seestimaque
+do“LascualidadesdeGestalt”[KingandWertheimer,2005].
+ungruposignificativodeusuariosescogelospuntossiguiendo
+Maxintrodujocincoleyesdeorganizacio´ndelapercepcio´n:
+estospatrones[Salehi-Abarietal.,2008].Deestamanerase
+puedenconstruirdiccionariosconlosgruposdepuntosma´s Leydelaproximidadocercan´ıa:Nuestrapercepcio´n
+probablesaseleccionarporelusuario. tiende a agrupar los objetos cercanos. En el anexo 1
+Los modelos computacionales de atencic¸o´n Botton-up, figura1(a)observamos3columnasdadalaseparacio´n
+sedefinennormalmenteporcaracter´ısticasdelasima´genes entrelosc´ırculos.
+digitalestalescomo:laintensidad,elcolorylaorientacio´n
+Leydelasimilitud:nuestravisio´ntiendeaagruparlos
+[Ittietal.,1998][12].Porotrapartelosmodeloscomputacio-
+objetossimilaresenforma.Enelanexo1figura1(b)
+nalesTop-down,puedenserdefinidosporentrenamiento.La
+vemoscuatrofilasdadalasimilituddecolores.
+dificultaddeestosu´ltimossebasaenquelatareaTop-down
+debeserpredefinida(ej.encontrarpersonasenunaimagen) Ley de continuidad: Los objetos que se encuentran
+enungrupodeima´genesqueseetiquetancona´reasquecon- siguiendounadireccio´ncontinuasonvisualmenteagru-
+tienenalossujetos[Salehi-Abarietal.,2008]. pados.Enelanexo1figura1(c)vemosdoslineasque
+NosenfocaremosenlapropuestadeItti[Ittietal.,1998, secortanenvesde4queseunenenelmedio.
+IttiandKoch,2001]yaqueexisteevidenciaemp´ıricadeque
+Leydecierre:Nuestravisio´ntiendeapercibiruntodo
+1Lasimagenespuedencontenerpuntosoa´reasma´satractivasparaqueel manteniendoelbalanceylaarmon´ıadelaestructura.
+usuariolasseleccionecomosuclave(HotSpots) Enelanexo1figura1(d)vemosuna“S”.
+PatronesenelordendelosclicsysuinfluenciaenladebilidaddelasclavesenlaTe´cnicadeAutenticacio´nGra´fica
+Passpoints 77
+Leydeldestinocomu´n:Nuestravisio´ntiendeaagru- y percepcio´n de los usuarios y tercero, combinacio´n de las
+parlosobjetosquesemuevenenlamismadireccio´n. te´cnicasanteriores.
+4. Estrategias de ataques basados en TPI
+LasTPI,aprovechandolascapacidadesdelascomputado-
+rasmodernas,permitenanalizarmilesdedatossimulta´nea-
+menteycruzarlesparaencontrarcoincidencias.Esteproce-
+dimientosutilizaaprofundidadinformacio´nrecopiladadel
+comportamientodelosusuariosyherramientasdigitalespa-
+raencontrar:salientes,bordes,esquinas,centroides,rostros
+humanosopartesdeellos,objetos,zonasdecoloresintensos,
+etc.Acontinuacio´nsedescribenalgunosdelosme´todosde
+ataquesma´sexitosos.
+4.1 Ataques de Semillas humanas (Human Seeded
+Attack)
+Enestetipodeataquesseutilizalainformacio´nrecopilada
+deungrupodeusuariosparapredecirlasclavesqueotrogrupo
+puedeescogersobreunaima´gen[vanOorschotandThorpe,2011].
+Utilizacomohipo´tesislaideadequelospuntosseleccionados
+porungrupoarbitrariodepersonasvaatenerunaltogrado
+decoincidenciaconlosqueseleccioneotrogrupodistintode
+Figura1.LeyesdeGestaltdelapercepcio´nvisual. personas.Deestamanerasepretendequelasclavesalmacena-
+dasdeungrupodeusuariospuedaserutilizadaparaestimar
+elcomportamientodeotrogrupoydeestaformaconstruirun
+3. Me´todos para construir diccionarios diccionario de ataque. En [ThorpeandvanOorschot,2007]
+de contrasen˜as gra´ficas aseguran que pueden pronosticar correctamente el 36% de
+las claves dentro de 231 conjeturas (o 12% dentro de 216
+Losataquesdediccionarioconsistenenintentarinferirel conjeturas)enelprimerintentoyel20%dentrode233con-
+valordeunacontrasen˜aprobandotodaslaspalabrasdeldic- jeturas en un segundo intento. Este me´todo en esencia de-
+cionario.Sediferenciandelosataquesdefuerzabrutapuesto pende de la composicio´n de las ima´genes; se resalta en la
+quelimitanlabu´squedaalascombinacionesma´sprobables. investigacio´n que para algunas ima´genes con composicio´n
+Losataquesdeestetipopuedenllegarasermuyefectivos; aleatoriaesma´sdif´ıcilefectuarunataqueexitosodadoque
+enunpequen˜oestudiodecasosen[Klein,1990]el25%de se necesitar´ıan mayores muestras iniciales. Como parte de
+14000 contrasen˜as fueron atacadas con solo 3 millones de esteestudioseanalizo´ adema´selefectodelosPLC(Sepro-
+entradasenundiccionariode21,5bits.Siguiendoelme´todo fundizara´ en ellos en la seccio´n siguiente) como forma de
+anterioren[VanOrschotandThorpe,2005]undiccionariode capturar la relacio´n entre los clics que conforman una cla-
+21,5bitspuedeseragotadoen0,22segundosporunprocesa- ve.En[vanOorschotandThorpe,2011]sedetermino´ queen
+dorPentium4a3,2GHz.ParalasCGestosengra´nmedida efectoestospatronesreduceneltaman˜odeldiccionariopue´s
+dependendelacomposicio´nparticulardelasima´genes,sien- muchosusuariosutilizanestaspredisposicionescomoreglas
+do para algunas muy alta la efectividad con que se logran nemote´cnicaspararecordarsusclaves.Porloquelate´cnica
+obtenerlascontrasen˜asyparaotroscasosmuybajo. originalsevuelvema´sprecisacuandosecruzanlosdatoscon
+Enlasinvestigacionesde[?,vanOorschotandThorpe,2011,losdiccionariosdePLC.
+Chiassonetal.,2009,Salehi-Abarietal.,2008]quefueronhe-
+chassobreelPassPointsmezclanTe´cnicasdeprocesamiento 4.2 Ataquesautoma´ticospuros(PurelyAutomated
+deima´genes(TPI)conprobabilidades,heur´ıstica,inteligencia Attacks)
+artificialypatronesdeseleccio´nencontrasen˜asgra´ficaspara En[ThorpeandvanOorschot,2007]tambie´nseinvestigo´un
+construirdiccionarios.Apartirdeestas,sepuedenidentifi- ataque automa´tico puro utilizando TPI. Este ataque creaba
+car entonces tres me´todos ba´sicos para la construccio´n de eldiccionariomodelandolasdecisionesdeunusuarioutili-
+diccionariosdecontrasen˜asgra´ficas:Primero,te´cnicasdepro- zandoungrupodeme´todosyherramientasdeprocesamiento
+cesamiento digital de ima´genes para detectar HotSpots (ej. deima´genes.Laideaesqueesteme´todosayudeapredecir
+bordes,centroides,esquinasyobjetosapartirdeheur´ıstica, los puntos cr´ıticos por medios automa´ticos, lo que lleva a
+probabilidades,inteligenciaartificialyredesneuronales),se- bu´squedas ma´s eficientes para ataques exhaustivos. Como
+gundo,deteccio´ndepatronesenlaformayordendeseleccio´n premisa,paraqueunpuntofueracandidatoaescogersepor
+delospuntossobrelaimagenapartirdelasleyesdeforma elusuarioestedeb´ıapoderseidentificarconpresicio´nyala
+PatronesenelordendelosclicsysuinfluenciaenladebilidaddelasclavesenlaTe´cnicadeAutenticacio´nGra´fica
+78 Passpoints
+vezserdistinguibledesuentorno.Paralograrestaspremisas yestaeraconstanteenmuchoscasoseindependiente
+seimplementaunavariacio´ndelMVAdeItti,Button-upyse delordenenquecadapuntoseseleciono´.
+combinaconelme´tododedeteccio´ndeesquinasdeHarris
+A´ngulosypendientes:MuchosdelosusuariosdePass-
+detalladoen[HarrisandStephens,1988].Ladeteccio´ndees-
+pointstiendenacrearlineasrectasconsuspuntos(Los
+quinasescogea´reasdeunaimagenquetienenvariacio´nde
+a´ngulosma´scomunesformadosentredossegmentos
+intensidadendireccio´nhorizontalyvertical.
+derectaesta´ncercanosa0grados).Ladistribucio´nde
+Comoresultadoseobtieneunalistadepuntoscandidatos
+laspendientesporelejexmuestraquelosusuariosfa-
+conlacua´lsepuedeefectuarunataquedediccionario.Con
+vorecenlaslineashorizontalesseguidasporsegmentos
+esteme´todoselograronobtenerel30%y29%delasclaves
+verticaleshaciaabajo(pendientesde270grados).
+para algunas ima´genes bien definidas, pero en otros casos
+los resultados esta´n por debajo del 2%. Esto implica que Formas:Enlainvestigacio´nidentificaron5figurasque
+para algunas ima´genes este tipo de ataques no es efectivo. sepuedenformarenelcasodelPasspointscon5puntos
+Tambie´nlosautoresdeterminanqueelme´todofuncionamejor sin importar la orientacio´n de la forma (En el anexo
+en ima´genes que el MVA devuelve resultados ma´s exactos 1 figura 2 se muestran algunos ejemplos gra´ficos de
+y decisiones ma´s definidas. En este me´todo no se tuvo en estasformas).Adema´senelanexo1figura3sepueden
+cuentaestrategiasnemote´cnicasperolosautoresreconocen apreciarelporcientodecontrasen˜asquecontienecada
+quepodr´ıasermejoradoutilizandolosPLC. unadeestasformas.
+• FormadeLinea:Lasumadelosvaloresabsolu-
+5. Ataques basados en deteccio´n de
+tos de los 3 a´ngulos es menor a 15 grados. El
+patrones
+26% de las claves de un estudio realizado en
+Los patrones son lineas rectas, curvas suaves, arcos o [Vorsteretal.,2016]cumplieronconestepatro´n.
+formas geome´tricas simples formadas por la seleccio´n del • FormadeW:Ela´ngulo1yel3tienenelmismo
+usuarioenunaCG.Laspersonasprefierenrecordarmenores signo(vanenlamismadireccio´n),ela´ngulo2en
+piezasdeinformacio´nvisual[LuckandVogel,1997]ytien- direccio´nopuesta.
+denaagruparinformacio´nparaayudaralamemorabilidad
+• Forma de Z: Dos de los a´ngulos tienen signos
+[Cowan.,2000]. Los ataques de este tipo toman ventaja de
+opuestos y el tercer a´ngulo tiene menos de 15
+lasdebilidadesenlafasedecreacio´ndelacontrasen˜apara
+grados(formaunalinearecta).
+creareldiccionario[Gaoetal.,2013].Lasdependenciasentre
+• FormadeV:Dosdelosa´ngulostienemenosde
+lospuntosqueelusuarioseleccionepuedenreducirdra´stica-
+15gradosyeltercerotienema´sde15grados.
+menteelespaciodeclaves[vanOorschotandThorpe,2011,
+Vorster,2014].Porloquecombinadosconotrasestrategias • Forma de C: Los tres a´ngulos tienen el mismo
+sonefectivospuestoquenodependendelacomposicio´nes- signo(vanenlamismadireccio´n)ylasumadel
+pec´ıficadelaimagenencuestio´n. valorabsolutodelos3esmayorde180grados.
+• Otros:Todoloquenocoincidaconlospatrones
+5.1 Patrones identificados en la forma y orden en
+anteriorestieneformadesconocida.
+queelusuarioescogelospuntos
+En la TAG Passpoints existen comportamientos de los
+usuariosmuyinteresantesdescritosen[Chiassonetal.,2009]
+que fundamentan la idea de que el usuario distribuye los
+puntosencomposicionesindependientesdelasima´genesde
+fondo.
+Distribucio´n de los puntos: Por ejemplo en el Pass-
+points,losusuariostiendenaseleccionarelprimerpun-
+to comenzando por la parte izquierda superior de la
+imagenyseleccionarlosdema´shastalaesquinainfe- Figura2.EjemplosdePLCparacadacategor´ıadeacuerdoa
+riorderechadelamisma.Porloqueexisteunaclara laforma.
+progresio´n de izquierda a derecha y de arriba hacia
+abajo.Inclusoesposibledeterminarque´ a´reasdeuna Tambie´nen[vanOorschotandThorpe,2011,VanOorschotetal.,2010,
+imagensonma´spropensasacontenerpuntosbasa´ndose Vorster,2014]seconsideranalgunosPLCquetienenpuntos
+solamenteenelordennume´ricoenqueseseleccionaron deencuentroconelestudioprevio.Estosserelacionanacon-
+sinningu´nconocimientosobrelaimagenencuestio´n. tinuacio´n:
+Longituddelossegmentos:Sedemostro´ queexist´ıa HOR:Puntosenlineahorizontal(deizquierdaadere-
+unaformaderelacionarlasdistanciasentrelospuntos chaoderechaaizquierda).
+PatronesenelordendelosclicsysuinfluenciaenladebilidaddelasclavesenlaTe´cnicadeAutenticacio´nGra´fica
+Passpoints 79
+VER:Puntosenlineavertical(dearribaaabajooabajo
+aarriba).
+DIAG:Puntosendireccio´nhorizontalyvertical,inclu-
+yelaslineasrectas.
+LOD(LocalizedOmni-Direction):Cada2puntoscon-
+secutivosdelos5queconformanlaclave,esta´nadis-
+tanciasconstantes.
+CWCCW: Puntos en sentido horario (a favor de las
+manecillas del reloj) o anti-horario (en contra de las
+manecillasdelreloj).sepuededefinircomosecuencias
+dealmenos3puntosconsecutivosquevanenlamis-
+madireccio´n(horariooanti-horario)ylasumadesus
+a´ngulosnoesmayorde360grados. Figura3.Porcientodelascontrasen˜asde
+[Chiassonetal.,2009]quecontienencadaunodeloscinco
+Cadaunadelasaproximacionesanteriorestienenencuen- patronesdeformas
+ta un error asociado (t ≥0) que relajar´ıa la forma de inter-
+pretacio´ndelpatro´n,puestoqueesmuydif´ıcilqueelusuario
+seleccioneporejemplo5puntosenlineaperfectamenterecta.
+ComosepuedeapreciarHOR,VERyDIAGesta´nincluidos
+en las interpretaciones de ‘Forma de linea’ que se hicieron
+enlainvestigacio´ndeChiassonetal.,CWCCWpuedeverse
+6. Resultados y Discusio´n
+comounaaproximacio´ndelas‘FormadeC’yLODcomola
+interpretacio´ndemantenerunaciertadistanciarelativaentre
+lalongituddelossegmentosimaginariosentrepuntos. Existenima´genesqueensucomposicio´nsonma´spropen-
+sasaposeerpatronesenelordenenqueelusuarioselecciona
+suspuntos.Lasima´genesquetienensignificado,flujoomovi-
+5.2 Resultadosenlaaplicacio´ndePLCenataques mientopuedenserunainfluenciamayorparaqueelusuario
+dediccionario siga estas lineas inducidas y escoja su secreto cumpliendo
+En[VanOorschotetal.,2010],serecuperaronconlaapli- estospatrones.
+cacio´ndeDIAGcont=9y233,02entradasdeldiccionarioen
+Enlafigura4sepuedeapreciarunclaroejemplodonde
+laimagendelapiscinayloscarrosrespectivamente(Anexo
+1figura4)el21,1%yel27,5%delascontrasen˜as.Sinem-
+seutilizan2ima´genes(unaparcamientodecarrosypiscina
+bargo para la aplicacio´n de DIAG cont =19 yt =28 con con personas). Las zonas rojas equivalen a datos (clusters)
+235,26entradasdeldiccionarioenlaimagendelapiscinaylos capturadosporTPIen[vanOorschotandThorpe,2011]para
+carrosrespectivamanteel48,2%y54,2%delascontrasen˜as. detectarHotSpots.Deformasuperpuesta,ejemplosdePLC;
+se puede apreciar que de igual manera las concentraciones
+Tambie´nconlaaplicacio´ndepatronesLINEcont=9y
+deHotSpotsrespondenaPLCluegodeaplicarlelasleyesde
+220,88entradasdediccionarioenlaimagendelapiscinaylos
+percepcio´n de Gestalt, los MVA y los PLC propuestos por
+carrosrespectivamenteel3,5%yel22%delascontrasen˜as.
+Chiassonetal.Esevidentequelaimagenconcarrosesma´s
+Para el mismo patro´n pero con t =19 y t =28 con 29,02
+propensaainducirPLCporladisposicio´ndelosobjetosque
+entradasdediccionarioenlaimagendelapiscinayloscarros
+ladelapiscina,peroambasloscontienen.
+respectivamenteel23,7%yel52,3%delascontrasen˜as.
+Losresultadosdelaaplicacio´ndelosdiccionariosLINE Aunque los PLC se pueden hallar solo analizando las
+yDIAGseoptimizaronen[VanOorschotetal.,2010]hasta formasydisposicionesdelospuntosqueconformanlacontra-
+7y10vecesrespectivamenteutilizandolavariantesdeestos sen˜a,laseleccio´ndeestosrespondeengranmedidaaobjetos
+algoritmoscont=19yt=18cruzadosconinformacio´ncon y caminos conectados sobre la imagen. Por lo que en un
+losMVAyTPI. gran por ciento de los casos no ser´ıa necesario aplicar TPI
+ParaelcasodeLOD,losresultadosdelosdiccionarios exhaustivasycostosascomputacionalmentepararealizarun
+generadoscondistanciasde20,40,60,80y100p´ıxelespara ataqueefectivodediccionario.Encualquiercasoserecomien-
+laimagendelapiscinaescomparablealdeDIAGcont=19y dadesarrollaryemplearte´cnicasqueeduquenalusuariopara
+t=28.LODcon100p´ıxeles,enestecasoconundiccionario disuadirlodeemplearenlacreacio´ndesuscontrasen˜asestos
+de235entradasobtuvoel47,4%delascontrasen˜as. patronescla´sicos.
+PatronesenelordendelosclicsysuinfluenciaenladebilidaddelasclavesenlaTe´cnicadeAutenticacio´nGra´fica
+80 Passpoints
+Evidenciasobtenidasdeestudiosanalizadosdemues-
+tranquelosataquesdediccionariosutilizandolosPCL
+de forma individual o con la informaco´n cruzada de
+TPI,sonataquesefectivosparalaTAGPasspoints.
+Lacalidaddelasima´genesencuantoasucomposicio´n
+esunfactordeterminanteenlaefectividaddelaTAG
+Passpointspuestoquenotodassonvulnerablesenigual
+Figura4.PresenciadePLCenlasmayoresconcentraciones
+medidaalosataquesdediccionario.
+deHotSpotsdetectadasen[vanOorschotandThorpe,2011].
+Una de las alternativas para aumentar la seguridad
+delsistemaPasspointspuedesereducaralusuarioin-
+Conclusiones
+forma´ndolequesuclaveesde´bilmostra´ndolevisual-
+Apartirdeloselementosantesplanteadossepuedecon- mentequecontienealgunodelosPLCcla´sicos.
+cluirque:
+Referencias
+LosusuariosdelaTAGPasspointsescogenclavessenci-
+llasdebidoaqueluegolastendra´nqueusarenentornos [BhongandShahade,2013] Bhong, V. and Shahade, V.
+pra´cticos. (2013). Authenticationusinggraphicalpasswords:effects
+oftoleranceandimagechoice. InternationalJournalfor
+Elusuarioprefierea´reasespec´ıficasdelaimagenque
+EngineeringApplicationsandTechnology,5:239–245.
+resalten por poseer “salientes”, picos, esquinas u ob-
+jetosdecoloresllamativosyestecomportamientoes [Blonder,1996] Blonder,G.E.(1996). Graphicalpassword.
+dependientedelaima´genydesucontenido. USPatent5,559,961.
+LasestrategiasdondeseutlizanTPIsondependientes [Chiassonetal.,2009] Chiasson,S.,Forget,A.,Biddle,R.,
+de la ima´gen que el usuario utilizo´ en el proceso de andvanOorschot,P.C.(2009). Userinterfacedesignaf-
+registro. fectssecurity:Patternsinclick-basedgraphicalpasswords.
+InternationalJournalofInformationSecurity,8(6):387.
+Elusuarioescogeenunporcientosignificativodelas
+vecesdeformainconscientelasecuenciadepuntosde [ComaniciuandMeer,2002] Comaniciu, D. and Meer, P.
+talformaqueestostienenrelacio´nentres´ıdemanera (2002). Mean shift: A robust approach toward feature
+parcialototal(sobretodoenentornospra´cticos),acorde spaceanalysis. IEEETransactionsonpatternanalysisand
+alaformaenquepercibeunescenarioparagarantizar machineintelligence,24(5):603–619.
+poderrecordarlo.Estaapreciacio´nesindependientede
+laima´genydesucontenidoysebasaenlasleyesde [Cowan.,2000] Cowan.,N.(2000). Themagicalnumber4
+GestaltyMVA. inshort-termmemory:Areconsiderationofmentalstorage
+capacity. BehavioralandBrainSciences,24:87185,.
+LosPatronesdeclicsaparecenenmuchasdelasima´ge-
+nesdelasinvestigacionesmencionadasyaseadeforma [Gaoetal.,2013] Gao,H.,Jia,W.,Ye,F.,andMa,L.(2013).
+individualocombinadosconotraste´cnicas.Estopuede A survey on the use of graphical passwords in security.
+seraprovechadoporlosatacantespuestoqueestasca- JSW,8(7):1678–1698.
+racter´ısticasnodependendelasima´genesutilizadasde
+fondo. [HarrisandStephens,1988] Harris, C. and Stephens, M.
+(1988). Acombinedcornerandedgedetector. Citeseer.
+MuchosdelosusuariosdePasspointsprefierenlasli-
+neas rectas donde los puntos este´n esparcidos por la [IttiandKoch,2001] Itti,L.andKoch,C.(2001). Compu-
+imagen comenzando de izquierda a derecha y ya sea tationalmodellingofvisualattention. Naturereviewsneu-
+completamente horizontal o en pendiente de arriba a roscience,2(3):194.
+abajo.
+[Ittietal.,1998] Itti,L.,Koch,C.,andNiebur,E.(1998). A
+ParaelPasspointslosataquesquebuscanPLCposeen model of saliency-based visual attention for rapid scene
+ventajasyaqueestospuedenestarinducidosporobjetos analysis.IEEETRANSACTIONSONPATTERNANALYSIS
+ycaminosconcretosdelasima´genesdefondo. ANDMACHINEINTELLIGENCE,20(11):1255.
+Los patrones DIAG, VER y HOR producen mejores [KingandWertheimer,2005] King, D. B. and Wertheimer,
+resultadoscuandoelmargendeerrorparaidentificarel M.(2005). MaxWertheimerandgestalttheory. Transac-
+patro´nesmayort=19yt=28. tionPublishers.
+PatronesenelordendelosclicsysuinfluenciaenladebilidaddelasclavesenlaTe´cnicadeAutenticacio´nGra´fica
+Passpoints 81
+[Klein,1990] Klein,D.(1990). Foilingthecracker:Asurvey [vanOorschotandThorpe,2011] van Oorschot, P. C. and
+of, and improvements to, password security. In In Pro- Thorpe, J. (2011). Exploiting predictability in click-
+ceedings of the 2nd USENIX Security Workshop., pages basedgraphicalpasswords. JournalofComputerSecurity,
+5–14. 19(4):669–702.
+[LuckandVogel,1997] Luck,S.J.andVogel,E.K.(1997). [VanOrschotandThorpe,2005] VanOrschot,P.andThorpe,
+Thecapacityofvisualworkingmemoryforfeaturesand J.(2005). OntheSecurityofGraphicalPasswordSchemes.
+conjunctions. Nature,390(6657):279.
+[VorsterandvanHeerden,2015] Vorster,J.andvanHeerden,
+[Ouerhanietal.,2004] Ouerhani,N.,VonWartburg,R.,Hu- R. (2015). Graphical passwords: A qualitative study of
+gli,H.,andMu¨ri,R.(2004). Empiricalvalidationofthe passwordpatterns. InTheProceedingsofthe10thInterna-
+saliency-basedmodelofvisualattention. ELCVIA:electro- tionalConferenceonCyberWarfareandSecurity(ICCWS
+niclettersoncomputervisionandimageanalysis,3(1):13– 2015),L.Armistead,Ed.AcademicConferencesLimited,
+24. pages375–383.
+[Salehi-Abarietal.,2008] Salehi-Abari,A.,Thorpe,J.,and [Vorster,2014] Vorster,J.S.(2014).AFrameworkfortheIm-
+vanOorschot,P.C.(2008). Onpurelyautomatedattacks plementationofGraphicalPasswords. PhDthesis,Master
+andclick-basedgraphicalpasswords. InComputerSecu- thesis,UniversityofLiverpool,122014.
+rityApplicationsConference,2008.ACSAC2008.Annual,
+[Vorsteretal.,2016] Vorster,J.S.,VanHeerden,R.P.,and
+pages111–120.IEEE.
+Irwin,B.(2016). Thepattern-richnessofgraphicalpass-
+[ThorpeandvanOorschot,2007] Thorpe, J. and van Oors- words. In Information Security for South Africa (ISSA),
+chot,P.C.(2007). Human-seededattacksandexploiting 2016,pages69–76.IEEE.
+hot-spots in graphical passwords. In USENIX Security [Wiedenbecketal.,2005] Wiedenbeck,S.,Waters,J.,Birget,
+Symposium,volume8,pages1–8. J.,Brodskiy,A.,andMemon.,N.(2005). Passpoints:De-
+signandlongitudinalevaluationofagraphicalpassword
+[Valde´setal.,2018] Valde´s,O.R.,Lego´n,C.M.,andLlanes, system.InternationalJournalofHuman-ComputerStudies,
+R. S. (2018). Seguridad y usabilidad de los esquemas Vol.63(1-2):102–127.
+y te´cnicas de autenticacio´n gra´fica. Revista Cubana de
+CienciasInforma´ticas,12:13–27. [Zhuetal.,2013] Zhu,B.B.,Wei,D.,Yang,M.,andYan,J.
+(2013). Securityimplicationsofpassworddiscretization
+[VanOorschotetal.,2010] Van Oorschot, P. C., Salehi- forclick-basedgraphicalpasswords. InProceedingsofthe
+Abari,A.,andThorpe,J.(2010). Purelyautomatedattacks 22ndinternationalconferenceonWorldWideWeb,pages
+onpasspoints-stylegraphicalpasswords. IEEETransac- 1581–1591.ACM.
+tionsonInformationForensicsandSecurity,5(3):393–405.

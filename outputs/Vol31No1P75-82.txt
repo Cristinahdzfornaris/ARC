@@ -1,0 +1,462 @@
+CienciasMatemáticas,Vol.31,No.1,Pag.75-82, 2017
+Recibido11-2016
+Ensen˜anza Del Ca´lculo Integral en el Inicio del Siglo
+XXI
+Teaching of Integral Calculus at the Beginning of the
+21st Century
+Moise´s Villena Mun˜oz1, Ricardo Sa´nchez Casanova2, Idania Urrutia Roman´ı3
+Resumen Enlascircunstanciasactuales,enlasquelastecnolog´ıasocupanunrolfundamentalenlavida
+econo´mica, social, cultural y productiva de las sociedades; se hace imprescindible trabajar en aras de su
+implicacio´nenladiversidaddea´mbitosdeformacio´nuniversitaria.
+El objetivo de esta investigacio´n es proponer una estrategia dida´ctica integradora para aumentar el nivel
+de asimilacio´n del Ca´lculo Integral mediado por las Tecnolog´ıas de la Informacio´n y las Comunicaciones
+(TIC).Lapropuestaesta´ basadaenlaintegracio´ndealumno-profesor-conocimiento-tecnolog´ıaytodosellos
+enmarcadosenelcontextosocial.Adema´sseproponeejemplosdeco´molograrestaintegracio´nefectivaen
+temasespec´ıficosdelCa´lculoIntegral.
+Abstract Inthecurrentcircunstances,inthosethatthetechnologiesoccupyafundamentallistintheeconomic,
+social, cultural and productive life of the societies; it becomes indispensable to work for the sake of their
+implicationinthediversityofenvironmentsofuniversityformation.
+The objective of this investigation is to propose a didactic integrative strategy the level of assimilation of the
+IntegralCalculationmediatedbytheTechnologiesoftheInformationandtheCommunications(TIC)toincrease.
+Theproposalisbasedonthestudent-professor-knowledge-technologyintegrationandallthemframedinthe
+socialcontext. Tootherhe/sheintendsexamplesofhowtoachievethiseffectiveintegrationinspecifictopicsof
+theIntegralCalculation.
+PalabrasClaves
+Estrategiadida´cticaintegradora—Niveldeasimilacio´n—Ca´lculoIntegral—Tecnolog´ıasdelaInformacio´ny
+lasComunicaciones.
+1DepartamentodeMatema´tica,UniversidadSantaMar´ıacampusGuayaquil,Ecuador,mvillenam@usm.edu.ec
+2FacultadMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba,ricardo.sanchez@matcom.uh.cu
+3FacultadMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba,idania@matcom.uh.cu
+Introduccio´n enelescenarioeducativopresente,altiempodequegeneran
+profundastransformacioneseinnovaciones,enocasionesdis-
+Unadelascaracter´ısticasdelaeducacio´neneliniciodel ruptivas,enlosmodosdegeneracio´n,acceso,reproduccio´n,
+sigloXXI,eselperfeccionamientodelateor´ıaylapra´ctica transmisio´nyacumulacio´ndeconocimiento”(ULEAM[14]).
+pedago´gica,apoyadasenlaaplicacio´ndelasTecnolog´ıasde Enlaactualidadelalumnonaceconlatecnolog´ıa,porloque
+laInformacio´nylaComunicacio´n(TIC).Dehecho,laUNES- necesitan un enfoque diferente del proceso de ensen˜anza -
+COenlaDeclaracio´nMundialsobrelaEducacio´nSuperior aprendizaje y es all´ı donde esta´ el desaf´ıo. “Las actitudes,
+paraelSigloXXI:Visio´nyAccio´n,aprobadoenlaConferen- perfiles,habilidades,modosyformasdecomunicacio´ndelas
+ciaMundialdelaEducacio´nSuperiorsen˜ala:“laEducacio´n nuevasgeneracionesdeestudiantesevolucionanra´pidamente,
+Superior,debehacerfrentealosretosquesuponenlasnuevas planteandonumerososretosalasuniversidades”(ULEAM
+oportunidadesqueabrenlastecnolog´ıasquemejoranlama- [14]).
+neradeproducir,organizar,difundir,controlarelsaberyde “Comoconsecuenciadeestoscambios,esimportanteprecisar
+accederalmismo”. lanecesidaddeinteriorizarqueelaprendizajebajoelempleo
+EnelIIIEncuentrodeRectoresdeUniversidades,realizadoen delasTIC,noesunaconsecuenciaautoma´ticaqueseproduce
+elan˜o2014enR´ıodeJaneiro,sedeclaro´losiguiente:“lastec- porelcontactodirectodelosestudiantesconlastecnolog´ıas.
+nolog´ıasdigitalesesta´nprovocandountrascendentalcambio Nosetrataportanto,deintroducirsimplementesuempleo
+76 Ensen˜anzaDelCa´lculoIntegralenelIniciodelSigloXXI
+en el a´mbito educativo; sino en esencia, de transformar el 1. DESARROLLO
+procesodeensen˜anza-aprendizaje,elaborandoadecuadases-
+Enesteu´ltimosiglodiversasteor´ıashanintentadoexpli-
+trategiasqueplanifiquen,dirijanyevalu´enlascondicionesen
+carco´moseaprende;sonteor´ıasquepresentanplanteamien-
+lascualesseproduceelaprendizaje”(Herrera[5])
+tosmuydiversos,peroentodasellasau´nesposibleencon-
+EncuantoalaMatema´ticaesunacienciaimportanteeimpres-
+traralgunasperspectivasclarificadorasdeestosprocesostan
+cindibleendeterminadastareas,permitemodelarsituaciones
+complejos y como consecuencia han sido sustentos de las
+quedanorigenalasolucio´ndeproblemasqueselespresentan
+intencionesdeaplicacio´ndelasTICenelprocesoensen˜anza-
+aprofesionales,comoIngenieros,Economistas,Administra-
+dores,entreotros.DehechoI´n˜iguezyVa´squez[6],plantean aprendizaje.
+Lasteor´ıasqueargumentanydanformaalModeloPedago´gi-
+que “los docentes deber´ıan utilizar la tecnolog´ıa con el fin
+coenqueseenmarcanuestrapropuesta,seconcentranenlos
+demejorarlasoportunidadesdeaprendizajedesusalumnos,
+principalesaportesdelaTeor´ıadelaPsicolog´ıaCognitivay
+seleccionandoocreandotareasmatema´ticasqueaprovechen
+Gene´tica,elConstructivismoSocialyRacionalyelaprendi-
+loquelatecnolog´ıapuedehacerbienyeficientemente”.
+zajedesarrolladorbasadoenelEnfoqueHisto´ricoCultural.
+El investigador Camacho [1], expreso´: Desde la de´cada de
+Elconductismoyanoaportaalcumplimientodeobjetivosen
+los80,existenenelmercadodiferentesprogramasquepoco
+modelosdondeserequierequeelestudianteseaelactorprin-
+a poco han ido incorpora´ndose en la ensen˜anza. Y que en
+cipaldesuaprendizaje.“Lapsicolog´ıacognoscitivaconsidera
+lade´cadadelosnoventa“aparecenalgunosprogramasma´s
+elaprendizajecomomodificacionessucesivasdelasestruc-
+espec´ıficos,conma´scapacidadestantosimbo´licascomogra´fi-
+turascognitivasquesoncausadelaconductadelhombre,a
+cas(Maple,Matema´tica,Matlab,Mathcad,Derive,etc.),que
+diferenciadelconductismoqueseorientaalcambiodirecto
+suusosehaidoextendiendoenlaensen˜anzadelCa´lculoo
+delaconducta”(Corral[2]).
+Ana´lisisMatema´tico”.
+Enlostiemposmodernos,dondetenemosalamanounagran
+Porloquerespectaaltrabajoacade´micoenelEcuador,por
+cantidad de informacio´n, no podemos conceptualizar al es-
+partedelprofesor,secentrama´senelcumplimientodelos
+tudiantecomounrepositoriodeestainformacio´n,ser´ıauna
+contenidosdelosprogramasconmediostradicionales.Aun-
+tareavana.Loquedebemoshaceresqueelestudiantedesa-
+que existe tecnolog´ıa moderna en las aulas, los profesores
+rrollehabilidadesparaapropiarsedelosconocimientos.Esto
+apenas hacen uso del proyector para sus clases. Entonces
+seconcretacuandoelestudiantepiensaoreflexionasobresus
+existeunconflictoquesepercibeenlosdocentesporqueno
+acciones;esdecir,llegaaunmeta-aprendizaje.
+poseensuficientepreparacio´ntecnolo´gicaparaaprovecharlas
+Elestudiantedebesercapazdeprocesarlainformacio´nuna
+TICentodosupotencial.
+Loanteriormentedescriptopermiteidentificarquelasitua- vezqueesrecibida.Paraestotienequeproducirseprocesos
+cio´n problema´tica que se presenta en la formacio´n de los cognitivos en el cerebro de los estudiantes que hagan que
+existaaprendizaje.
+estudiantesdelaasignaturaMatema´ticasIIdelacarreraAdmi-
+Enela´mbitodelaMatema´tica,estosevuelvetranscenden-
+nistracio´nenlaUniversidadSantaMar´ıaCampusGuayaquil
+taldebidoaqueesjustamenteenestaasignaturadondelos
+debeserenfocadaporlaslimitacionesenelordendida´ctico
+estudiantesnecesitandeprocesoscognitivosconmuchama´s
+quepresentanlosdocentesdeestaasignaturaenelusodelas
+esencia,quelespermitanresolverlosproblemas.Sielproce-
+Tecnolog´ıasdelaInformacio´nyComunicacio´n.
+Loanteriormenteexpresadopermitedevelarlacontradiccio´n
+sodeensen˜anza-aprendizajeesta´mediadofundamentalmente
+porlasTIC,sedebera´ lograrquelatecnolog´ıaseapercibida
+delapresenteinvestigacio´nquesedaentrelasdemandasde
+comounmedioqueaportaaestefin.Losprocesoscognitivos
+incorporar las TIC al proceso ensen˜anza-aprendizaje y las
+debengenerarseconelempleodelasTIC.
+exigenciasdelosobjetivosdelaasignaturaMatema´ticaIIen
+Esdetranscendentalimportanciaquenoseconceptualicelas
+el Ca´lculo Integral de la Universidad Santa Mar´ıa Campus
+herramientastecnolo´gicascomounfinsinoma´sbienhayque
+Guayaquil.
+lograrqueseanempleadascomounasolucio´nenlarealiza-
+Envirtuddeestoselementos,quesubyacenenlacontradic-
+cio´ndetareasextensas,laboriosasocomplejas,quehanhecho
+cio´nenlaquesebasalainvestigacio´n,seprecisaelsiguiente
+problemacient´ıfico:¿Co´mocontribuiraaumentarelnivelde quelosestudiantessedesmotivenyhastaqueabandonensu
+objetivo.
+asimilacio´ndelCa´lculoIntegralmediadoporlasTecnolog´ıas
+ElinvestigadorLlivina[7]ensusestudiosestablecequeden-
+de la Informacio´n y las Comunicaciones en el proceso de
+trodelasaproximacionescognitivistaspuedenubicarse,entre
+ensen˜anza-aprendizajedelaasignaturaMatema´ticaII,enla
+otros:Elconstructivismopiagetiano,elcognitivismodeBru-
+UniversidadSantaMar´ıaCampusGuayaquil.
+El objetivo de esta investigacio´n es elaborar una estrategia
+nerylaTeor´ıadelProcesamientodelaInformacio´n.
+Enloquerespectaalconstructivismopiagetiano,Manzano
+dida´cticaintegradoraparaaumentarelniveldeasimilacio´n
+[10]establecequelosprincipiosgenerales(anotamoslosprin-
+delCa´lculoIntegralmediadoporlasTecnolog´ıasdelaInfor-
+cipales)delpensamientodePiagetsobreelaprendizajeson:
+macio´n y las Comunicaciones en el proceso de ensen˜anza-
+1.Losobjetivospedago´gicosdeben,adema´sdeestarcentra-
+aprendizajedelaasignaturaMatema´ticaII,enlaUniversidad
+dosenelestudiante,partirdelasactividadesdelalumno.
+SantaMar´ıaCampusGuayaquil.
+2.Loscontenidos,noseconcibencomofines,sinocomoins-
+Ensen˜anzaDelCa´lculoIntegralenelIniciodelSigloXXI 77
+trumentosalserviciodeldesarrolloevolutivonatural. “Elaprendizajeesunprocesodiale´ctico.Dentrodeeseproce-
+3.Elprincipioba´sicodelametodolog´ıapiagetianaeslapri- sohaycuatrofactoresqueintervieneneneldesarrollodelas
+mac´ıadelme´tododedescubrimiento.4.Elaprendizajeesun estructurascognitivas:maduracio´n,experiencia,interaccio´n
+procesoconstructivointerno. socialyequilibrio”(Llivina[17]).Losautorescompartenesta
+5.Elaprendizajedependedelniveldedesarrollodelsujeto. precisio´n, para que los conocimientos puedan ser internali-
+6.Elaprendizajeesunprocesodereorganizacio´ncognitiva. zados es necesario que el aprendizaje tenga una apropiada
+7.Eneldesarrollodelaprendizajesonimportanteslosconflic- maduracio´ncognitiva,laexperienciahacequeresultema´ssa-
+toscognitivosocontradiccionescognitivas.(Manzano[10]) tisfactorioelaprendizajeyconlainteraccio´nsociallogramos
+Compartimosqueenelprocesodeensen˜anza-aprendizajese articularelmensajedelainformacio´n.
+debenestableceractividadesquehaganqueenelinteriordel Deacuerdoaestosprincipios,seconcluyequelateor´ıade
+estudianteexistaunacontradiccio´ncognitivaquecontribuya constructivismoyelenfoquehisto´rico–culturalplanteadose
+aldesarrollodesuserydeestamaneraseproduzcaelapren- complementanypuedenconjugarseparadarfundamentoa
+dizaje. unmodelopedago´gicoquefavorezcalaformacio´ndeloses-
+Esimportanteconsiderarlosaportesdelateor´ıadeJerome tudiantes.
+Bruner.PintoyGarc´ıa[11]mencionanqueBrunerdesarrollo´ “Elprofesorasumelasfuncionesdeorientador,gu´ıaofaci-
+su trabajo en el aprendizaje activo y en el aprendizaje por litadordelaprendizaje,yaqueapartirdelconocimientode
+descubrimiento.Queledagranimportanciaalaactividaddi- lascaracter´ısticaspsicolo´gicasdelindividuoencadaper´ıodo
+rectadelosestudiantessobrelarealidad.Estosinvestigadores deldesarrollo,debecrearlascondicioneso´ptimasparaque
+mencionan tambie´n que “Bruner y otros autores aportan el seproduzcaunainteraccio´nconstructivaentreelalumnoyel
+conceptodeandamiajeeducativo(instructionalscaffolding), objetodeconocimiento”(SanzyCorral[13]).Enunmode-
+enelsentidodelaeducacio´ncomosoportecognitivo,emo- loeducativo,pensamosque,debenotarselasfuncionesdel
+cional, etc., al proceso de aprendizaje del estudiante. Este profesor.Hayquetenerclaroqueelprofesorjama´svaaser
+conceptoaparecedetra´sdeldisen˜odeherramientasdeinter- sustituido,supresenciayma´sau´nsulabordebeserpercibida
+accio´n y de la provisio´n de recursos de aprendizaje en los comoinsustituible.
+modernossistemasdee-learning”. Eneldisen˜ometodolo´gicodelprocesodebeobservarseque
+Enunapropuestapedago´gicadebenestardeclaradasactivi- elalumnoconstruyesuconocimiento,peroestaconstruccio´n
+dadesquetengancomoobjetivoqueelestudiantevayades- podr´ıanecesitardealgunacolaboracio´n.“Elconstructivismo
+cubriendolosconceptospaulatinamenteparaqueexistauna socialdictaqueelconocimientoadema´sdeformarseapartir
+apropiacio´nrealdeellos.Estoesimportanteconsiderarloen delasrelacionesambiento-yo,eslasumadelfactorentorno
+todomodeloendondelatecnolog´ıacumplesupapelmediador. socialalaeducacio´n:Losnuevosconocimientosseformana
+Debera´ existirlainteraccio´nalumno-profesormediadoporla partirdelospropiosesquemasdelapersonaproductodesu
+ma´quina,paraquesede´elandamiajeeducativoquemenciona realidad,ysucomparacio´nconlosesquemasdelosdema´s
+Bruner. individuosquelorodean”(Manzano[10]).
+EncuantoalaTeor´ıadelProcesamientodelaInformacio´n, Aunqueestopareceestarencontraposicio´nconelconstruc-
+cuyoma´ximoexponenteesGagne´,rescatamosloquemen- tivismo de Piaget (Piaget reconoce so´lo una construccio´n
+cionaGimenoyPe´rez[4]:“Lascategor´ıasdelprocesamiento interna), los autores plantean que una propuesta basada en
+soncuatro:Atencio´n:recibe,seleccionayasimilalosest´ımu- ambas posiciones Constructivismo y el Enfoque Histo´rico
+los.Codificacio´n:Simbolizalosest´ımulossegu´nestructuras Culturalsera´pertinenteparalasolucio´ndelproblema,estoes
+mentalespropias(f´ısicas,sema´nticas,culturales).Almacena- elempleodelasTICenlaensen˜anzadelCa´lculoIntegral.
+miento:retienedeformaorganizadaloss´ımboloscodificados. Hayqueestarclaroqueenelprocesodeensen˜anza–apren-
+Recuperacio´n:usoposteriordelainformacio´norganizaday dizaje, se va formando la personalidaddel estudiante. Para
+codificada”. Lo´pez[8],eldesarrolloyformacio´ndelapersonalidadocurre
+Estateor´ıaesta´ relacionadaconlateor´ıacognitiva.LaTeor´ıa enelpropioprocesodeensen˜anzayeducacio´ncuyaconcep-
+delProcesamientodelaInformacio´nsurgecomorespuestaal cio´ndebetenerencuentalassiguientesconsideraciones:
+intentodesimularalcerebrocomounama´quinaquerecibe, •Laensen˜anza,laeducacio´nnohadebasarseeneldesarrollo
+codifica,almacenayrecuperainformacio´n.Peroestoenuna yaalcanzadoporelsujeto,sinoque,tenie´ndoloencuenta,se
+limitacio´n,“noconsideralosaspectosafectivosymotivacio- proyectahacialoqueelsujetodebelograrenelfuturo,como
+nalesqueintervienenenelprocesoaprendizaje”.(Gimenoy productodeesepropioproceso;esdecir,haciendorealidadlas
+Pe´rez[4]).Comotampococonsideraaspectosdeproduccio´n posibilidadesqueseexpresanenlallamadazonadeposible
+denuevosconocimientos. desarrollo.
+De una manera u otra en toda tarea de aprendizaje existen •Lasituacio´nsocialenquelaspersonasvivenysedesarrolla
+procesos cognitivos que se dan de manera natural, lo que constituyeelementoesencialenlaorganizacio´nydireccio´n
+debemoshaceresquelosest´ımulosseanlosuficientemente delprocesodeensen˜anzayeducacio´n.
+potentescomoparacomprometeraleducandoconsurespon- • La propia actividad, que el sujeto realiza en interaccio´n
+sabilidad. socialconungrupodepersonas,resultanelementosfunda-
+78 Ensen˜anzaDelCa´lculoIntegralenelIniciodelSigloXXI
+mentalesatenerenconsideracio´nenelprocesodeensen˜anza (Ferna´ndezyCebreiro[3]).
+yeducacio´n. “OtraposibilidadqueofrecenlasTIC,yquepermiteenrique-
+• En el proceso de interaccio´n y actividad en colaboracio´n cerelprocesodeensen˜anzadandounamayorparticipacio´nal
+conlosotrosocurreelprocesodeapropiacio´ndelosvalores alumnoensuprocesoformativo,sonlaspruebasdeautoeva-
+delaculturamaterialyespiritual. luacio´n.Elalumno,mediantelarealizacio´ndeestaspruebas
+•Silaculturarepresentaparacadasujetounmomentohisto´ri- tiene un mayor control sobre su aprendizaje y puede auto-
+co determinado, la formacio´n personal espec´ıfica respon- rregularlo”(Ferna´ndezyCebreiro[3]).Cuandoelestudiante
+de a las caracter´ısticas histo´rica y socialmente condiciona- conciba una necesidad de autoevaluacio´n estara´ dando un
+das.(Lo´pez[8]) pasolograrelmeta-aprendizajetantoansiadoenunproceso
+docente.
+1.1 LASTICCOMOMEDIOENELPROCESODEEN-
+SEN˜ANZAAPRENDIZAJEDELCA´LCULOINTE- 1.2 ESTRATEGIADIDA´CTICAINTEGRADORA
+GRAL. Nuestrapropuestadida´cticaconsisteenunaintegracio´n
+LasTIChanrevolucionadoelmundoentero,seobservan efectivadeprofesor-alumno-conocimiento-tecnolog´ıa,relacio-
+avancesextraordinariosentodaslasramasdelsaber.Eluso nadostodosconelcontextosocial,enelprocesodeensen˜anza
+delasTICenlaeducacio´npermitequelosprocesosdeen- aprendizajedelCa´lculoIntegral.
+sen˜anza-aprendizajeseveanfortalecidos.Sinembargouna LosinvestigadoresVerayFlanklyn[16]definenunesquema
+situacio´nquelasautoridadesdelaeducacio´ndebenconsiderar ba´sicopararepresentarelactoeducativo.Aesteesquemale
+esquepuedehaberunusonoconcientizadodelatecnolog´ıa. llamanPol´ıgonoDida´ctico.Loselementosprincipales(docen-
+Que se llegue a pensar que la tecnolog´ıa es la panacea del te,alumno,cultura,tecnolog´ıaylarealidadsocial)losubican
+problemadelaeducacio´n.Compartimosloquemencionan en los ve´rtices de un pol´ıgono y mencionan que existe un
+losinvestigadoresLupia´n˜ezyMoreno[9]: conjuntodeinterrelacionesquesepresentancuandodichos
+“Unargumentoqueseesgrimehabitualmenteencontradel factoresinteractu´anenunasituacio´nhipote´ticay/orealenel
+empleodetecnolog´ıaenlaensen˜anzadelasmatema´ticases actoeducativo.
+queseabandonayolvidaloquesehaceconpapelyla´piz,y En un principio se analizaban los modelos empleando un
+esovaenperjuiciodelacalidadenlaformacio´n.Creemos Tria´nguloDida´ctico,docente-alumno-conocimiento,perocon
+quehayqueentenderlainstrumentacio´ndelastecnolog´ıas los nuevos desaf´ıos es necesario ampliar el tria´ngulo a un
+informa´ticas en la ensen˜anza de las matema´ticas, como un pol´ıgono,mencionanVerayFlanklyn[16].Losconocimiento
+procesodeenriquecimiento,nocomosustitucio´n,tratandode seampl´ıanaculturamatema´ticayseincorporalatecnolog´ıa.
+mejorarcapacidadescognitivas,nodesustituirlas”. Estodaalugarqueseconsiderelasinterrelacionesylareali-
+Consideramosimportantetambie´nloquediceUrrutia[15] dadsocial.
+“el uso de la computadora no sustituye en modo alguno la Nuestra propuesta esta´ basada en el pol´ıgono dida´ctico de
+imparticio´ndelosaspectosteo´ricosys´ıpuedenservircomo VerayFlanklyn,elaporteconsisteenesquematizarplenamen-
+medioparaprofundizarelestudiodelosmismos”. telasrelacionesentreloscomponentespersonolo´gicosylos
+Puedeocurrirqueconelempleodelatecnolog´ıaseabando- nopersonolo´gicosdelprocesodeensen˜anza-aprendizajedel
+neactividadesdeldesarrollodeprocesoscognitivosquede Ca´lculoIntegraldelaasignaturaMatema´ticaIIdelaUSM
+tanbuenamanerahanfavorecidolaformacio´nacade´micadel campusGuayaquil.Planteamosqueelprocesodeensen˜anza-
+alumnoyma´saundelasmatema´ticas. aprendizajetienecuatrocomponentes:profesor,alumno,co-
+Los alumnos deben comprender que las herramientas tec- nocimiento(Ca´lculoIntegralenestecaso)ylatecnolog´ıa;y,
+nolo´gicasson“instrumentosqueofrecenrepresentacionesy todosenmarcadosenuncontextohisto´rico-social(fig.1)
+relacionesentreobjetosmatema´ticosconlasqueellospueden Elprofesordisponedelabaseepistemolo´gicadelCa´lculo
+interactuar,dandounanuevadimensio´nalaconstruccio´ndel Integral y de la tecnolog´ıa como medio. El profesor puede
+conocimientomatema´tico”(Lupia´n˜ezyMoreno[9]). impartirlaclaseconosinrecursotecnolo´gico.Siimpartela
+En todo el entorno educativo se debe concebir que “dado clasetradicionalmenteestara´ endesventajaconelavanceen
+el desarrollo cient´ıfico te´cnico de las Tecnolog´ıas de la In- laculturatecnolo´gicaqueposeenlosestudiantes.
+forma´tica y las Comunicaciones (TIC) es factible el logro Latecnolog´ıadebeactuarcomoobjetomotivadordelproceso
+deunaensen˜anzadesarrolladora”(Reyes,CabrerayEste´vez yaqu´ıesta´ eldesaf´ıodeldocente.Sudisen˜odebecaptarla
+[12]).Todoescuestio´ndedarleelsignificadoapropiado. atencio´ndelaspersonasinvolucradasenelproceso.Hacerde
+Se debera´ buscar el momento justo para usar la tecnolog´ıa. latecnolog´ıaunreactivomotivanteeselgrandesaf´ıoparael
+“Lassimulacionessonunbuenejemplodelautilizacio´ndela profesor.
+tecnolog´ıaparavalorarconmayorprecisio´nloqueunalumno Elalumnoatiendeycodificalainformacio´n,luegodeber´ıa
+puede hacer. En los escenarios reales que representa la si- planificarlasolucio´ndelproblema.Podra´recurrirasubagaje
+mulacio´n se exige al alumno que aplique las estrategias de deconocimientos,alentornosocial(puedeserasistidoporel
+resolucio´ndeproblemasylashabilidadespararesolverlos” profesoroporalgunodesuscompan˜eros)yalatecnolog´ıa
+Ensen˜anzaDelCa´lculoIntegralenelIniciodelSigloXXI 79
+Figura1.Interrelacio´ndecomponenteseducativos
+Fuente:Vera&Flanklyn
+Elaboracio´n:Losautores
+disponible. debidoaqueesunambientenotradicional.Adema´sdeque
+Elalumnodebesercapazderesolverlosejerciciosolospro- permiteautoevaluarsusnivelesdeentrada.Elalumnorecibe
+blemas, si es que existen ejercicios o problemas, debe ser supuntuacio´nyunaexplicacio´ndelasolucio´ndelosejerci-
+capazdealmacenarlainformacio´nyrecuperarlacuandosea cios.Paralaexplicacio´n,elsoftwaredalaopcio´ndeutilizar
+necesaria.Aqu´ıtambie´nentrar´ıalatecnolog´ıa.Habiendoes- recursosmultimedios.Unvideopuedeserempleadoparaesta
+trategiasderefuerzo(actividaddirecta)usandolatecnolog´ıa explicacio´nountextobiendetalladoenmuchasocasioneses
+habr´ıaunmejorniveldeasimilacio´ndelosconocimientos. suficiente.
+Veamosalgunosejemplos. Paraactividadesderefuerzorecomendamosutilizarelsoft-
+wareSYMBOLAB(https://es.symbolab.com/solver/indefinite-
+integral-calculator)queservira´ detutordelestudiante.Este
+softwareenunacalculadoraqueproporcionalasolucio´npaso
+Ejemplo1.Tema“IntegralIndefinida:Integracio´ndirec-
+apasodelosejercicios.
+ta”
+Paraanunciosdeactividades,sepuedeutilizarelcorreoelectro´ni-
+Vertiente1:ContenidoparaIntegracio´nDirecta.Losco-
+coolasredessocialescomoWhatsappoFacebook.
+nocimientospreviosquedeber´ıantenerlosestudiantesser´ıan
+Vertiente3: Profesor. El profesor presenta el tema en una
+temasalgebraicoscomoleydelosexponentes,operaciones
+sesio´npresencial,preferibleunaclasecolaborativaendonde
+confraccionesysimplificacio´ndeexpresionesengeneral.Los
+debelograrqueelestudianteconstruyaelconcepto.
+dema´saspectosaconsiderarser´ıanlasfo´rmulasypropiedades
+Aqu´ıseaprovechalaoportunidadparahacere´nfasisensitua-
+delasintegrales.
+cionesgenerales.Porejemplo,paralafo´rmula
+Vertiente2:Tecnolog´ıa.Softwarelibreparadiagnosticarlos
+conocimientospreviosdelosestudiantes.GoogleDrivepro-
+(cid:90) xn+1
+porciona una herramienta poderosa para hacer test online xndx= +C;n(cid:54)=−1 (1)
+autocorregibles (Fig. 2). Esto es motivante para el alumno, n+1
+80 Ensen˜anzaDelCa´lculoIntegralenelIniciodelSigloXXI
+logrageneralizaryconcluirque:
+(cid:90) (mx+b)n+1
+(mx+b)ndx= +C;n(cid:54)=−1 (4)
+m(n+1)
+Losrefuerzosonlinerealizadosporlosestudiantesdebenser
+concompromisoyresponsabilidad.
+Ejemplo2. Tema:“Ca´lculo de a´reas de regiones pla-
+nas”
+Vertiente1: Contenido. Los estudiantes deber´ıan tener co-
+nocimientossobregra´ficasdefuncionesendosdimensiones
+ydebenpoderidentificarregionesplanaslimitadasporcurvas
+encoordenadascartesianas.Elcontenidopropiodeltemaser´ıa
+ladefinicio´ndeIntegralDefinidaysuaplicacio´nenca´lculo
+dea´reasderegionesplanas.
+Figura2.TestonlineenGoogleDrive b
+(cid:90)
+Elaboracio´n:Losautores A= [f(x)−g(x)]dx (5)
+(https://goo.gl/forms/JtvqyGtetUmFd9De2)
+a
+Elestudiantedebesabercalcularantiderivadas(IntegralInde-
+considerarunafuncio´nu=f(x).Hacernotarquetenemos finida)
+Vertiente2:Tecnolog´ıa.Softwarelibreparadiagnosticarlos
+(cid:90) un+1 conocimientospreviosdelosestudiantes.ConGoogleDrive
+undu= +C;n(cid:54)=−1 (2) sepuedeelaborarunapruebadondesediagnostiqueconoci-
+u+1
+mientosdegra´ficasdefunciones.Eldiagno´sticodebesermuy
+conceptual,detalmaneraqueaunquelatecnolog´ıapermita
+Porejemplo,siu=mx+bentonces
+obtenergra´ficas,elestudiantepuedallegaraconclusionesso-
+breregionesplanasypuedaobtenerpuntosdeintersecciones
+(cid:90) (mx+b)n+1
+(mx+b)nd(mx+b)= +C;n(cid:54)=−1 (3) entrecurvas.
+n+1
+Existeunsinnu´merodegraficadoresdelibredescargaque
+pueden ser u´tiles: Maple, Winplot, Graph, Geogebra, entre
+Estageneralizacio´nlapuedelograrconayudadelgrupoo otros.RecomendamoselGraphdebidoaqueparagraficarno
+conayudadelprofesor.Sesugiererealizaruntallergrupalen serequieremanejodeprogramacio´nocomandosysepuede
+dondelosestudiantesresuelvenalgunosejerciciosconceptua- obtenervaloresdea´reasdealgunasregionesplanas.
+lesparairlograndoelandamiajequemencionaBruner. Tambie´nrecomendamosemplearelgraficadoronlineFOO-
+Elprofesordebeinduciraqueelestudiantepractiqueenel PLOT(https://es.symbolab.com/solver/indefinite-integral-calculator)
+softwareSYMBOLAB,conalgunosejerciciospropuestos.Se debidoaquenorequiereinstalarseenelComputadorypue-
+sugieredisen˜aruntestonlinedediagno´sticosobreintegracio´n denelaborarselasgra´ficasdemanerara´pidaydirectaigual
+directaparaobservarelprogresodelalumno.Luegorealizar queelGraph.
+unaevaluacio´npresencialparaconfirmacio´ndelniveldeasi- Paraanunciosdeactividades,sepuedeutilizarelcorreoelectro´ni-
+milacio´n. coolasredessocialescomoWhatsappoFacebook.
+Vertiente4:Alumno.Elalumnoalmomentodeldiagno´stico Vertiente3: Profesor. El profesor presenta el tema en una
+de los conocimientos previos reactiva su bagaje de conoci- sesio´npresencial,preferibleunaclasecolaborativaendonde
+mientos,enestecasoleydelosexponentesysimplificacio´n debehacerqueelestudianteconstruyaelconocimiento.Irdes-
+deexpresionesalgebraicasengeneral.Ysiexistedeficiencia, deela´reabajounacurvaubicadaenelprimercuadrantehasta
+eslaoportunidaddelograrelnivelrequeridodeentrada. quelogreplantearlaintegralcorrespondienteparacualquier
+En la sesio´n presencial, recibe la informacio´n (atiende), la regio´nplana.Aqu´ıpuedehacerusodelsoftwareGEOGEBRA
+codificaparalograrinteriorizarla.Aqu´ıdebedemostrarque (Fig.3).Dondeadema´sseaprovechaparareforzarelconcepto
+poseeunabuenapercepcio´ndesimbolog´ıamatema´tica.Esta deIntegralDefinida.
+informacio´ndebequedaralmacenadaensumemoriadelargo Entrabajocolaborativosedebelograrquelosestudiantes
+plazoparapoderrecuperarlacuandoseanecesario. encuentrena´reasderegionesenejerciciospropuestosporel
+Este almacenamiento y recuperacio´n es ma´s efectivo si el profesor.
+alumnodescubreelconocimiento.Enelcasodelejemplo,si Elprofesordebeinduciraqueelestudiantepractiqueenel
+Ensen˜anzaDelCa´lculoIntegralenelIniciodelSigloXXI 81
+Figura3.Interpretacio´ndela´readeunaregio´nplana Figura4.Ejemplodeunaregio´nplana
+Elaboracio´n:Losautores Elaboracio´n:Losautores
+software que ma´s se acomode. Se sugiere disen˜ar un test lograrunacomprensio´nplenadetemasabstractosqueantes
+onlinedediagno´sticosobreca´lculodea´reasparaobservarel eran dif´ıciles de ilustrar. Por supuesto, que no se crea que
+progresodelalumno.Luegounaevaluacio´npresencialpara los recursos tecnolo´gicos sean la panacea de la ensen˜anza,
+confirmacio´ndelniveldeasimilacio´n. todav´ıaserequierequeelalumnoaprendaapensaryestose
+Vertiente4:Alumno.Elalumnodebesercapazdeelaborar lodebelograrconclasespresencialesapoyadosconlasTIC.
+gra´ficas sin tecnolog´ıa y con tecnolog´ıa para verificar sus Lapresenciadelprofesornodebeserdiscutible.Sinembargo,
+resultadosynocontinuarenprocesosirrelevantes. elprofesordelsigloXXIdebeestarcapacitadoenelusode
+En la sesio´n presencial, recibe la informacio´n (atiende), la lasTICparahacerlosdisen˜oscorrespondientesylograrre-
+codifica para lograr almacenarla y recuperarla cuando sea sultadosma´sefectivos.
+necesario.Trabajacolaborativamente. El proceso de ensen˜anza aprendizaje es dina´mico, lograr
+Es importante que el estudiante pueda plantear integrales la integracio´n de estas cuatro vertientes alumno-profesor-
+definidaspararegionesgenerales(fig.4) conocimiento-tecnolog´ıaeseldesaf´ıodeld´ıaad´ıadelalabor
+Serequierequelosrefuerzosonlinepostclaserealizadospor docente.Lametodolog´ıapuedevariardeacuerdoaltematrata-
+elalumnoseanconcompromisoyresponsabilidad. do,perohaysituacionestradicionalesquenopuedencambiar.
+Elestudiantedebeestarencontinuaactividadacade´micacon-
+ceptualparaellogrodedesarrollodehabilidadesyllegara
+0 4
+(cid:90) (cid:90) unmeta-aprendizaje.
+A= [(x3−x2−6x)−6x]dx+ [6x−(x3−x2−6x)]dx (6)
+Estainvestigacio´nesunapartedeunama´sgrande.Loquese
+−3 0
+intentaaqu´ıesdejarformuladaunapropuestaque,deacuerdo
+aloobservado,losestudiantesmostraronentusiasmoconla
+Laexpresio´nanteriorrepresentaela´reasombreada.Utilizando
+nuevametodolog´ıa.SehizounapruebapilotoeneltemaIn-
+otrodelossoftwaresmencionadosanteriormente,elMaple
+tegralIndefinidadelcursoMatema´ticaII,segundosemestre
+18,sepuedecalcularelvalordela´rea:
+2015,delaUniversidadSantaMar´ıaCampusGuayaquil.Al
+realizar las pra´cticas online, los estudiantes mostraron una
+0 4 mayormotivacio´nydemostraronunmayoraprendizajedelas
+(cid:90) (cid:90) 937
+A= [(x3−x2−6x)−6x]dx+ [6x−(x3−x2−6)]dx= (7) te´cnicasdeintegracio´n.
+12
+−3 0 Estapropuestadeestrategiadida´cticaintegradorapuedeser
+validada con un cuasi-experimento para todo un curso de
+Ca´lculoIntegralentodounsemestreycorroborarlosresulta-
+dosobservadosapriori.
+2. CONCLUSIONES
+Referencias
+Enlaensen˜anzadelCa´lculoIntegral,ydelaMatema´tica
+en general, en el inicio del siglo XXI se deben emplear en [1] Camacho,M.(2005).Laensen˜anzayaprendizajedel
+todosupotenciallosrecursostecnolo´gicosdisponiblespara Ana´lisis Matema´tico haciendo uso de CAS (computer
+82 Ensen˜anzaDelCa´lculoIntegralenelIniciodelSigloXXI
+algebrasystem).Investigacio´nenEducacio´nMatema´tica rendimientodematema´ticadelosestudiantesdeoctavo
+IX,97-110. an˜odeeducacio´nba´sicadelcolegioTecnolo´gicoAndres
+F.Co´rdovadelaciudaddeQuitoenelan˜o2011-2012.
+[2] Corral, R. La Perspectiva Cognoscitiva. Facultad de
+ProyectoSocioeducativopresentadocomorequisitopar-
+Psicolog´ıa.LaHabana,Cuba.
+cialparaOptarporelGradodeLicenciaturaenCiencias
+delaEducacio´n,Mencio´nMatema´ticayF´ısica.Quito,
+[3] Ferna´ndez, M. C. y Cebreiro, B. (2003). Evaluacio´n
+Ecuador.
+delaensen˜anzaconTIC.Pixel-Bit,revistadeMediosy
+Educacio´n,65-72.
+[11] Pinto Molina, M. y Garc´ıa Marco, J. (2007). La en-
+[4] Gimeno,J.yPe´rez,A.(1993).Comprenderytransfor- sen˜anza-aprendizaje de las competencias gene´ricas en
+marlaensen˜anza.Morata.Madrid,53 elEspacioEuropeodeEducacio´nSuperior:elproyecto
+ALFINEES.Innovacio´ndocente,tecnolog´ıasdelainfor-
+[5] Herrera,K.(2007).Estrateg´ıaDida´cticaparalaelabo- macio´nylacomunicacio´neinvestigacio´neducativaen
+racio´nyaplicacio´ndeentornovirtualesdeaprendizaje laUniversidaddeZaragoza:caminandohaciaEuropa.
+enlaspra´cticasdelaboratoriodef´ısicaparalaeducacio´n UniversidaddeZaragoza,62-63.
+superior.Tesispresentadaenopcio´nalgradocient´ıfico [12] Reyes,R.A.,Cabrera,N.C.yEste´vez,O.G.(2006).La
+deDoctorenCienciasPedago´gicas.LaHabana,Cuba. evaluacio´ndelaprendizajeusandoactividadesdeMOOD-
+LE. 3rd International Conference on Multimedia and
+[6] In˜´ıguez,F.yVa´squez,G.(2011).Aplicacio´ndelasTIC
+InformationandCommunicationTechnologiesinEduca-
+comoherramientaenelprocesoensen˜anza-aprendizaje
+tion.Camagueay-Cuba.
+delaunidadfuncionesdevariablerealdelaasignatura
+deMatema´ticadelterceran˜obachilleratoespecializacio´n
+[13] Sanz,T.yCorral,R.(1995).JeanPiagetylapedagog´ıa
+informa´ticadelColegioCayetanoTarruelldelaciudad
+operatoria.Tendenciaspedago´gicascontempora´neas.[cd-
+deGuaya.Trabajodegradopresentadoenopcio´naobte-
+rom]CEPES.Departamentodepedagog´ıaypsicolog´ıa.
+nerelt´ıtulodeLicenciadoenCienciasdelaEducacio´n,
+LaHabana:Ed.UniversidaddelaHabana,73-78.
+mencio´nInforma´ticaEducativa.Bol´ıvar,Ecuador.
+[14] ULEAM,D.d.(2014).Compendiodelastendencias
+[7] Llivina,M.(1999).Unapropuestametodolo´gicapara
+actuales de la Educacio´n Superior. DEPARTAMENTO
+contribuir al desarrollo de la capacidad para resolver
+DEPLANEAMIENTO.UNIVERSIDADLAICA“ELOY
+problemas matema´ticos. Tesis en opcio´n al grado de
+ALFARODEMANAB´I”.Manta,Ecuador.
+DoctorenCienciasPedago´gicas.LaHabana,Cuba.
+[15] Urrutia,I.(2012).PropuestaDida´cticaparacontribuiral
+[8] Lo´pez,J.(2003).VigenciadelasideasdeL.S.Vigotsky.
+desarrollodecompetenciasafinesalperfildelprofesional
+InstitutoCentraldeCienciasPedago´gicas,Ministeriode
+de Licenciatura en Ciencia de la Computacio´n desde
+Educacio´n.Cuba
+el Ana´lisis Matema´tico. Tesis presentada en opcio´n al
+[9] Lupia´n˜ez, J. y Moreno, L. (2001). Tecnolog´ıa y Re- gradocient´ıficodeDoctorenCienciasPedago´gicas.la
+presentacionesSemio´ticasenelAprendizajedelasMa- Habana,Cuba.
+tema´ticas.Iniciacio´nalainvestigacio´nendida´cticade
+[16] Vera,M.yFlanklyn,M.(2005).Propuestadeunmo-
+lamatema´tica.Granada,Espan˜a,291
+delo dida´ctico para la elaboracio´n de un software edu-
+[10] Manzano,C.(2013).Propuestadelusodeestrategiasy cativoparalaensen˜anzadelca´lculointegral.ACCIO´N
+te´cnicasenlaevaluacio´ndelaprendizaje,paramejorarel PEDAGO´GICA,No14,50-57.

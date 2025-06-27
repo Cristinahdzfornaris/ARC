@@ -1,0 +1,681 @@
+CienciasMatemáticas,Vol.31,No.2,Pag.159-169, 2017
+Recibido03-2017
+Mallas adaptativas usando wavelet para diferencias
+finitas en modelos de prono´stico nume´rico del
+tiempo
+Adaptive mesh using wavelet for finite differences in
+weather forecasting models
+Maibys Sierra Lorenzo1*, Angela Leo´n Mec´ıas2, Angel Domingues Chovert3, Evelyn Elisa
+Mart´ınez Sabari4
+Resumen Se propone un algoritmo nume´rico para la solucio´n de sistemas de ecuaciones diferenciales
+parciales no lineales y dependientes del tiempo, basado en la discretizacio´n por diferencias finitas sobre
+mallasadaptativas.Lasmallasseconstruyencombinandounarepresentacio´nporbloquesylatransformada
+waveletdiscretaconbaseswaveletobtenidasmediantesubdivisio´ninterpolatoria.Comocriterioderefinamiento
+adaptativoydina´mico,seutilizalamagnituddeloscoeficienteswaveletenelprimerniveldedescomposicio´n
+de la transformada wavelet discreta. El algoritmo es implementado en FORTRAN 90, lo cual permite un
+manejodina´micodememoria,yesacopladoalmodelodeprono´sticonume´ricodeltiempoARPS(Advanced
+Regional Prediction System). Se demuestra mediante dos casos de estudio que el algoritmo propuesto es
+computacionalmente menos costoso y ma´s eficiente que el mo´dulo de refinamiento de mallas que viene
+acopladooriginalmentealmodeloARPS.
+Abstract We propose a numerical algorithm for the solution of nonlinear and time dependent systems of
+differentialequations,basedonfinitedifferenceschemesoveradaptivemeshes. Themeshesareconstructedby
+combiningablockrepresentationandthediscretewavelettransformwithwaveletbasesobtainedbyinterpolation
+subdivisionschemes. Themagnitudeofthewaveletcoefficientsinthefirstdecompositionlevelofthediscrete
+wavelettransformisusedasanadaptiveanddynamicrefinementcriterion. Thealgorithmisimplementedin
+FORTRAN90,whichallowsadynamicmemorymanagement,andiscoupledtothenumericalweatherforecast
+modelARPS(AdvanceRegionalPredictionSystem). Itisdemonstratedbytwostudycasesthattheproposed
+algorithm is computationally less expensive and more efficient than the mesh refinement module originally
+coupledtotheARPSmodel.
+PalabrasClave
+representacio´n por bloques adaptativa — resolucio´n adaptativa de Ecuaciones Diferenciales Parciales —
+prono´sticonume´ricodeltiempo
+1CentrodeF´ısicadelaAtmo´sfera,InstitutodeMeteorolog´ıa,Habana,Cuba,maibys.lorenzo@insmet.cu
+2DepartamentodeMatema´ticaAplicada,FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba,angela@matcom.uh.cu
+3InstitutoNacionaldePesquisasEspaciais,CentrodePrevisa˜odeTempoeEstudosClima´ticosCachoeiraPaulista,Sa˜oPaulo,Brasil,
+angel.chovert@cptec.inpe.br
+4ProgramadePosgradoenCienciasdelaTierra,UniversidadNacionalAuto´nomadeMe´xico,D.F.,Me´xico,evelyn.elisa@atmosfera.unam.mx
+*AutorparaCorrespondencia
+Introduccio´n parciales(EDPs)nolinealesydependientesdeltiempo.Para
+resolverestosmodelos,utilizandoporejemploelme´todode
+Lasolucio´nnume´ricaconpequen˜oserroresdeprecisio´n,y DiferenciasFinitas(DF),[31],lasregionesgeogra´ficasson
+eneltiemporequerido(muchasvecestiemporeal)delosmo- representadasmedianteunamalladepuntostridimensional;
+delosmatema´ticosparaelestudioyprediccio´ndefeno´menos dondelascoordenadas(x,y,z)decadapuntoseclasificanen:
+atmosfe´ricosyclima´ticos,esunatareaqueexigealgoritmos coordenadashorizontales(x,y),longitudylatitudrespectiva-
+ra´pidos y que brinden soluciones con elevados o´rdenes de menteyzesllamadalaverticalydescribealturasenlacapa
+aproximacio´n.Estoseconvierteenunreto,teniendoencuen- atmosfe´rica.Ladistanciahorizontalentrepuntosadyacentes
+taqueestosmodelosesta´ndadosporecuacionesdiferenciales es conocida como espaciamiento de la malla o resolucio´n.
+160 Mallasadaptativasusandowaveletparadiferenciasfinitasenmodelosdeprono´sticonume´ricodeltiempo
+Mientrasma´spequen˜oelespaciamiento(menorescala)ma- vativosyposteriormentefueronpresentadasextensionesen
+yorresolucio´n.Laresolucio´nesunaspectoquediferencialos [4,26].Dosenfoquesdeconstruccio´ndemallasadaptativas
+modelos de prono´stico del tiempo clima´tico ya que, mode- paraesquemasendiferenciasfinitas,quesefundamentanen
+losqueseusenparaestudiarypronosticar,porejemplolas losme´todosMRson:porsussiglaseningle´s,elSPR(Sparse
+turbulencias, que son feno´menos que ocurren en a´reas que PointRepresentation)[17]yelABR(AdaptiveBlockRepre-
+abarcanunradiodehasta20metrosconduracio´ndeminutos, sentation),[11,10].EnambosenfoqueselmodelodeEDPs
+debenserresueltossobremallasconmayorresolucio´nque seresuelvemodificandolosesquemasendiferenciasfinitas
+aquellosqueseutilicenparapronosticarlosfrentesdehuraca- tradicionalessobrelasmallasadaptativas.EnelSPRsecalcu-
+nesqueabarcana´reasentrelos200ylos2000Kmcond´ıas lalaTWDapartirdelospuntosdelamallayaquellospuntos
+deduracio´n.Sinembargoestosfeno´menosqueocurrenadife- cuyos coeficientes wavelet en la TWD excedan un umbral
+rentesescalasespacialesytemporalesnosepuedenestudiar prefijado,sonretenidos,mientrasqueelrestosedescarta;es
+demaneraaisladayaqueinteractu´anentreellos.Estanatu- decir se transita de una malla con mayor resolucio´n a una
+ralezamultiescalardelosprocesosatmosfe´ricos,loscuales conmenorresolucio´n.ElABRporsuparte,proponelades-
+adema´spresentanvariacionesbruscasenlasmagnitudesde composicio´ndelamallaenbloquesuniformes,cadaunode
+lasvariablesmeteorolo´gicasqueloscaracterizan,introduce loscualespuedetenerunnivelderefinamientodiferenteyse
+complejidadesadicionalesenlasolucio´nnume´ricadelosmo- utilizadeigualformalamagnituddeloscoeficienteswavelet
+delosmatema´ticos;particularmenteserequierenmallascon enlaTWDcomocriterioderefinamiento;enestecasoseva
+pasos de discretizacio´n pequen˜os. El aumento uniforme de deunamallademenorresolucio´naunademayorresolucio´n.
+ladensidaddepuntosenlasmallasdeDF,conduceaunin- En los modelos atmosfe´ricos los me´todos MR tambie´n
+crementoconsiderabledelcostocomputacional.Parasuperar hansidoprobados.Entrabajosdeaplicacio´nrecientes[14,19,
+estalimitacio´nsehandesarrolladoalternativasqueproponen 25],sedestacanlaspropiedadesdecompresio´nenlasmallas
+considerarlosesquemasendiferenciasfinitassobremallas obtenidas,as´ıcomolagananciaeneltiempodeco´mputo.
+adaptativas;refinadasso´loenregioneseintervalosdetiempo
+En[7]serealizaunacomparacio´ndetalladaentrelosme´to-
+requeridos.
+dosbasadosenAMRylosbasadosenMR,encuantoapreci-
+BergeryOligeren[2],introducenporprimeravezelre- sio´n,compresio´ndelamalla(reduccio´ndecantidaddepuntos
+finamientoadaptativodemallas(RAM),paralaintegracio´n respectoaunrefinamientouniforme),manejodelamemoria
+eficientedeecuacioneshiperbo´licas.ElRAMsebasaenel ytiempodeejecucio´n.Losresultadosmuestranunarelativa
+usodeunajerarqu´ıademallas,comenzandoconunamalla superioridaddelenfoqueMRconrespectoalAMR.
+gruesa, e insertando mallas ma´s finas solo en las regiones ElARPSesunmodelodeprono´sticonume´ricodeltiem-
+dondelasolucio´nexperimentavariacionesbruscas.Elcriterio po (MPNT) desarrollado por la Universidad de Oklahoma,
+utilizadoparaladeteccio´ndelasa´reasdeintere´seselerror [32, 33], utilizado en la modelacio´n de nubes y de tormen-
+detruncamientolocalenlaaproximacio´ndelasolucio´nba- taslocalesseverascomolostornados.Comolageneralidad
+sado en la extrapolacio´n de Richardson. En la modelacio´n de los MPNT, el ARPS tiene un nu´cleo llamado dina´mico
+nume´ricadeltiempo,esteme´todofueaplicadooriginalmente quecontienelosmodelosf´ısico-matema´ticosdeEDPsyun
+en[29,28].Resultadosma´srecientespuedenserconsultados nu´cleodondeserealizanlasllamadasparametrizaciones(se
+p.e.en[18,22,30].Sinembargo,conexcepcio´ndelmodelo aproximan efectos de procesos f´ısicos sobre los que no se
+OMEGA(OperationalMultiscaleEnvironmentmodelwith tiene mucha informacio´n, son muy complejos, o´ ocurren a
+Grid Adaptivity) [1], las estrategias adaptativas basadas en escalas muy pequen˜as que no pueden ser incluidos en los
+RAMnohansidoexitosasenestecontexto.Enlamayor´ıade modelosnume´ricos),[24].ElARPSconstadeunmo´dulolla-
+losmodelosdeprono´sticodeltiempo,elRAMhasidoaplica- madoARPSAGRI,dondelosmodelosdeEDPssonresueltos
+docomome´tododeanidamientodemallas,dondepa´rametros medianteladiscretizacio´npordiferenciasfinitas,espec´ıfica-
+como:lacantidaddemallas,ladimensio´ndelasmallas,el menteconelesquemadeLax-Wendroff,[31],sobremallas
+pasodediscretizacio´nespacialytemporal,sonelegidosfijos conrefinamientouniformeconstruidasmedianteinterpolacio´n
+apriori,[23,33]. confuncionesspline.Estemo´dulooriginalmentepresentauna
+Conlaformalizacio´ndelateor´ıawavelet[3,5,21]elcon- implementacio´nenFORTRAN77delrefinamientoadaptati-
+ceptomultiresolucio´nhasidoestudiadocomovariantepara vodemallasAMR[6,28],sinembargoenestecontextolas
+obteneradaptatividadenlageneracio´ndemallas,surgiendo mallasnocambianconeltiempoyelmanejodememoriaes
+as´ı una categor´ıa de me´todos llamados de multiresolucio´n esta´tico.Enuntrabajopreviodelosautores,[12],serealizo´
+(MR).Enestecontextoserealizaunniveldedescomposicio´n unamodificacio´nenelmo´duloARPSAGRIparaintroducir
+delalgoritmodelaTransformadaWaveletDiscreta(TWD), mallasadaptativaseneltiempo.
+aplicadoalosdatosrepresentadossobreunamallaymediante EnestetrabajoseproponeacoplaralmodeloARPSun
+unprocesodeumbralizacio´ndeloscoeficienteswaveletenla mo´duloparalasolucio´ndeEDPs,medianteesquemasendi-
+TWD,sedefineuncriterioparaelrefinamientodelamalla. ferenciasfinitassobremallasadaptativasenespacioytiempo,
+Lasestrategiasbasadasenmultiresolucio´nfuerondesarrolla- generadassegu´nlaestrategiaABR.Estenuevomo´dulopre-
+dosoriginalmenteporHartenen[16]paraesquemasconser- sentaporprimeravezelesquemaLax-Wendroffsobremallas
+Mallasadaptativasusandowaveletparadiferenciasfinitasenmodelosdeprono´sticonume´ricodeltiempo 161
+generadasconABR.Laimplementacio´nserealizaenFOR-
+TRAN90,locualpermiteunmanejodina´micodememoria,a
+diferenciadelARPSAGRIyalmismotiempopermiteaprove-
+charlaestructuracomputacionaldeesteu´ltimo.Esimportante
+destacarquelaestrategiaadaptativaderefinamientoporblo-
+ques ABR ha sido ampliamente estudiada en aplicaciones
+meteorolo´gicas desde el punto de vista acade´mico, ver por
+ejemplo el trabajo previo de los autores [20]. El resultado
+queaqu´ısepresentaconstituyelaprimeraaplicacio´nauna
+simulacio´ndeuncasorealenunsistemadeprono´sticodel
+tiempooperativo.
+Laestructuradeltrabajoescomosigue.Enlaseccio´n1se
+presentaelme´tododeconstruccio´ndemallasadaptativo,basa-
+doenlarepresentacio´nporbloquescombinadaconuncriterio
+deumbralizacio´ndeloscoeficienteswaveletdelatransfor-
+madawaveletdiscreta.Enlaseccio´n2sepresentaelmo´dulo
+Figura1.Rejillauniforme(izquierda)yRejillaadaptativa
+denominadoARPSABRqueincluyelaimplementacio´nde
+(derecha).
+esquemasendiferenciasfinitassobrelasmallasadaptativas.
+Seexplicanlospasosparalacorridadelmodelodeprono´stico
+nume´ricodeltiempoARPSconestenuevomo´duloacoplado.
+embargosisoloserequiererefinarendeterminadassubrejillas,
+Enlaseccio´n3,mediantedoscasosdeestudio,seevalu´ael
+estavariantenoeseficiente.
+desempen˜odelARPSABR.Lasconclusionesdeltrabajose
+Loma´seficienteesestableceralgunacondicio´nqueper-
+resumenenlacuartayu´ltimaseccio´n.
+mitadeterminarlasa´reasdo´ndeesnecesariorefinar.Unade
+las variantes ma´s utilizadas es la representacio´n adaptativa
+1. Generacio´n de mallas adaptativas porbloques,conocidaporsussiglaseningle´sABR(adapti-
+usando wavelet veblockrepresentation)[11,10].Estaconsisteendividiro
+particionarlarejillaoriginalensubrejillasobloquesdeigual
+En el contexto de los modelos de prono´stico nume´rico
+dimensio´n,loma´susualesdividirencuatrobloques.
+deltiempovamosaconsiderarlasolucio´ndelasEDPssobre
+mallasrectangulares(longitud-latitud),[24]. 1.1 Representacio´n por bloques de mallas adapta-
+UnamallabidimensionaluniformeRsedefinecomo
+tivas.
+SeaA unamallarectangularconnivelderefinamiento j,
+j
+R={µ =(k(cid:52) ,l(cid:52) ),0≤k≤N,0≤k≤M}, (1)
+x y sedefineBλ comobloquedeA delasiguienteforma
+j j
+donde N es la cantidad de puntos en x (longitud) y M la
+Bλ ={µ =λ+(k(cid:52)j,l(cid:52)j),0≤k≤Nj,0≤k≤Mj}, (3)
+cantidaddepuntoseny(latitud),(cid:52)xy(cid:52)yrepresentanelpaso j x y
+dediscretizacio´nencadadireccio´nrespectivamente;eneste
+tal que Bλ ⊂A , λ es el punto extremo izquierdo superior
+casoseconsideranconstantesfijas.EnlaFigura1(izquierda) j j
+apartirdelcualseiniciaelparticionamiento.Esteproceso
+semuestraunejemplodemallauniforme. sepuederepetirnuevamenteparaelbloqueBλ obtenie´ndose
+UnamallaadaptativaAesta´ compuestaporvariasmallas j
+cuatronuevosbloques,comoseobservaenlaFigura2,que
+uniformescondistintaresolucio´n;lospasos(cid:52)xy(cid:52)yvar´ıan
+utilizandoelrefinamientodia´dicoestar´ıanenelnivel j+1,
+segu´n el nivel de refinamiento que se denota por j; j =0
+denotalamallaconmenorresolucio´n(ma´sgruesa),deA,que Bλ →{BλNW,BλNE,BλSW,BλSE}. (4)
+j j+1 j+1 j+1 j+1
+sedenotaporA :
+0
+Larepresentacio´nporbloquespermitelautilizacio´ndeun
+A 0 ={µ =(k(cid:52)0 x ,l(cid:52)0 y ),0≤k≤N,0≤l≤M}. a´rbol cuaternario como estructura de datos. Siendo Bλ j un
+Aplicandounrefinamiento,esdecirtomando(cid:52)xy(cid:52)yma´s bloque padre en el nivel j, los bloques Bλ j+ NW 1 ,Bλ j+ NE 1 ,Bλ j+ SW 1 y
+pequen˜ossepuedeobtenerporejemplounamallacomola BλSE ser´ıan sus hijos y estar´ıan en el nivel j+1 del a´rbol
+j+1
+queaparecealaderechaenladerechaFigura1),dondesiA j (Figura3arriba).Ela´rbolcuaternario,partiendodelamalla
+eslarepresentacio´nma´sfinadeAsetiene original,seobtienetomandoBλ =A yluegodeejecutarel
+0 0
+procesoderefinamientodia´dicoyelparticionamiento jveces,
+A 0 ⊂A 1 ⊂...⊂A j =A; (2) se obtiene un a´rbol cuaternario con j+1 niveles, como se
+muestra en la Figura 3 (abajo) para j=2. Para obtener la
+Utilizandoestetipodemallasadaptativas,esposibleobte-
+mallaA bastaconunirtodoslosbloquesdelnivel j,
+j
+nerunamallama´sfina,peroigualmenteuniforme;elnu´mero
+dedatosaumentaenigualproporcio´nentodalamalla.Sin A =(cid:83) Bλ.
+j λ j
+162 Mallasadaptativasusandowaveletparadiferenciasfinitasenmodelosdeprono´sticonume´ricodeltiempo
+Figura4.A´rbolcuaternarioincompletode4niveles(arriba)
+yrejillaadaptativacorrespondiente(abajo).
+Figura2.Divisio´ndelbloqueBλ
+j
+encuatrobloquescon j+1
+Esta representacio´n permite que el criterio de refinamiento
+nivelesderefinamiento.
+queseutiliceseapliquedeformarecursivaparacadabloque,
+posibilitandoelrefinamientosoloenlasa´reasdeintere´s.En
+ese caso el a´rbol cuaternario puede tener bloques que no
+tenganhijoscomosemuestraenlaFigura4.
+Con la unio´n de los bloques de cada nivel del a´rbol se
+obtienelamallaadaptativaA,particionadaporbloquesycon
+refinamientovariableencadanivel,
+A= (cid:91)(cid:91) Bλ. (5)
+j
+j λ
+1.2 Refinamientoadaptativousandowavelet
+Enestetrabajoseutilizara´,lamagnituddeloscoeficientes
+waveletenlatransformadawaveletdiscreta(TWD)[3,21],
+comoindicadoresparadeterminarcua´lbloqueBλ delamalla
+j
+A =(cid:83) Bλ esnecesariosubdividir.Lasbaseswaveletsera´n
+j λ j
+generadasporelalgoritmodesubdivisio´ninterpolatoria(SI),
+[8,13,15].
+ConsideremosquesobrelamallarectangularA setiene
+j
+una matriz de datos que representan los valores nume´ricos
+uj(t ,x ,y),dondex =k∆ j ,y =l∆ j ,0<k<Nj,0<l<Mj
+0 k l k x l y
+, parat =0 correspondientes a las condiciones iniciales y
+0
+defronteradeunsistemadeEDPsenlamodelacio´ndeun
+determinadoprocesoatmosfe´rico.
+Paraunaresolucio´n jyparaunvalorfijodelalongitud
+x =const setieneunvectoruj(0,const,y),0<l<Mj que
+k l
+denotaremospor{sj}Mj
+.ElalgoritmodelaTWDpermite
+l l=0
+Figura3.Ramadela´rbolcuaternario(arriba)ya´rbol obtenerunadescomposicio´nennivelesconresolucio´nmenor
+cuaternariocompletode3niveles(abajo). o igual que j. Nosotros estamos interesados en realizar un
+solopasodeladescomposicio´n,
+2j−1 2j−1−1 2j−1−1
+∑ sj φ j(y)= ∑ sj−1 φ j−1(y)+ ∑ dj−1 ψ j−1(x),
+l l l l l k
+l=0 l=0 l=0
+(6)
+Mallasadaptativasusandowaveletparadiferenciasfinitasenmodelosdeprono´sticonume´ricodeltiempo 163
+dondesj ,sonloscoficientesdeaproximacio´n(contienenla cumple |d (i)j |<ε,C =0 (no se subdivide el bloque). En
+l k,l ε
+informacio´ndelosdatosencadanivel j),d l j sonloscoeficien- casocontrario,C ε =1(elbloqueessubdividido).
+teswaveleto´ coeficientesdedetalle(contienenladiferencia La generacio´n de la rejilla se inicia tomando Bλ =A ,
+0 0
+deinformacio´nentrelosniveles jy j−1),φ(y)esllamada particionandoBN
+0
+W segu´n(4)ycalculandoC
+ε
+.Losbloques
+funcio´ndeescalayψ(y)esllamadalawaveletmadre;φ j−1 conC ε =0 se an˜aden al a´rbol como hojas y para aquellos
+l
+y ψ j−1 son traslaciones enteras y dilataciones dia´dicas de conC ε =1serepiteelprocesohastaquetodosseanan˜adidos
+l comohojas.Ladimensio´nylacantidaddelosbloquesque
+dichasfunciones,respectivamente.Lacantidaddedatospor
+componen la malla inicial en la implementacio´n del ABR,
+filasyporcolumnassetomacomounapotenciaenterade2.
+var´ıasegu´nelprocesoamodelaryeldominiodelasolucio´n.
+Enestetrabajolafuncio´ndeescalaylabasewaveletson
+Comummenteseiniciaconmallasdedimensio´nNj=Mj=
+construidas mediante subdivisio´n interpolatoria y los coefi-
+16 and Nj =Mj =32, ver [11]. En [20], trabajo previo de
+cientessoncalculadossegu´nlosalgoritmosen[8,13],
+estecolectivodeautores,lacantidaddebloquesinicialsefijo´
+s l j−1=∑(cid:98)h i−2l s l j, e d n e 4 in , s c e o r n tar di e m l e A n B si R o´n e N n j u = n m 1 2 N od y el M o d j e = p 1 2 ro M n , o´s c t o ic n o el nu o m bj e e ´r ti i v c o o
+l
+dj−1=∑g sj
+(7)
+deltiempo,conunm´ınimodecambiosenelco´digofuente,
+l (cid:98)i−2l l aprovechandolaestructuradelmodeloparaelanidamientode
+l
+lasmallas.
+(cid:98)hyg
+(cid:98)
+secalculanconexpresionesquedependendelordendel Lasmallassevanajustandoespacialytemporalmentey
+polinomiodeinterpolacio´nqueseuseparalasubdivisio´n. losesquemasendiferenciasfinitassevanresolviendodesde
+AplicandolaTWDunidimensionalprimeroporfilas,se lasmallasma´sgruesashastalasma´sfinas,paracadainstante
+obtendra´ una matriz formada por los coeficientes
+sj−1,k= detiempo.Porunproblemadeespacioycomplejidaddelos
+k,l
+sistemasnosemuestranaqu´ılasmodificaciones.
+1,..N,l=1,..,M,d (1)j−1 ,k=1,..N;l=M+1,.,.M.Aplican-
+2 k,l 2
+dolaTWDalasnuevascolumnas,seobtieneunamatrizde
+coeficientes 2. Mo´dulo de refinamiento adaptativo de
+mallas para el ARPS
+N M
+sj−1,k=1,.. ,l=1,.., ,
+k,l 2 2 El ARPS [32, 33], es un modelo regional, se usa en un
+M
+(1)j−1 rangoespacialqueabarcadesdepocosmetroshastacientos
+d ,k=1,..N;l= +1,.,.M,
+k,l 2 dekilo´metros,deprono´sticonume´ricodeltiempo(MPNT)
+N M
+(2)j−1 tridimensional(3D).ComotodoslosMNTPesta´formadopor
+d ,k= +1,..N;l=1,.., , (8)
+k,l 2 2 unnu´cleodina´mico,dondeseresuelvenlosmodelosdeEDPs,
+N M
+(3)j−1 enestecaso,lasecuacionesdeNavier-Stokesquedescribenel
+d ,k= +1,..N;l= +1,..,M.
+k,l 2 2 flujoatmosfe´ricocomounfluidocompresibleytomaencuen-
+taungrannu´merodeprocesosmicrof´ısicosqueinteractu´an
+Estanuevamatriz,deigualdimensio´nquelaoriginal,esel
+conladina´micadelsistema.Aunquelosmodelosson(3D),se
+resultadodeaplicarunpasodelaTWDbidimensional.
+resuelvennume´ricamentemedianteelme´tododediferencias
+Esta representacio´n tiene como ventajas que no hay un
+finitassobremallasrectangulares;lasmagnitudesf´ısicascon
+aumentodelainformacio´nquesealmacenapuessj=sj−1+
+variacionesenladireccio´nverticalseparametrizan.ElARPS
+dj−1ylasen˜alensuma´saltaresolucio´npuedeserrecupera-
+originalmentetieneacopladounmo´dulodenominadoARPSA-
+dadeformaexacta,yaqueelprocesodetransformacio´nes
+GRI,quesebasaenunaimplementacio´nenFORTRAN77
+inversible.
+delaestructuradedatosdelate´cnicaRAM;desarrolladopor
+EnestecontextolaTWDsecalculaparacadabloqueBλ,
+j SkamarockyKlempen[28]yquesepresentamedianteuna
+(i)j−1
+yseobtienenloscoeficienteswaveletsd asociadosalos interfazllamada’refinamientoadaptativoderejillasgenerali-
+k,l
+puntos zado(AGRI)’.Ensuconcepcio´noriginal,refinaentiempoy
+espacioyposibilitalacreacio´ndevariasmallasdediferentes
+λ(1)jk.l =µ+(2k(cid:52)
+x
+j,(2l+1)(cid:52)
+y
+j)
+taman˜osyorientacio´nencadanivel.Sinembargo,noescapaz
+λ(2)jk.l =µ+((2k+1)(cid:52) x j,2l(cid:52) y j) deseleccionaradaptativamente,entiempodeejecucio´n,las
+λ(3)k.l =µ+((2k+1)(cid:52) x j,(2l+1)(cid:52) y j), a´reasdeintere´sarefinarytampocorealizalareestructuracio´n
+delosdistintosnivelesjera´rquicosderefinamiento.Presenta
+quecaracterizanladiferenciaentrelasmallasA /A .
+j j−1 adema´selinconveniente,dequenopermiteprocesarma´sde
+Parautilizarloscoeficienteswaveletscomoindicadores
+dosnivelesderefinamiento.Conelobjetivodean˜adirlafun-
+derefinamientosefijaunumbralε,ycomputacionalmentese
+cionalidadderefinamientoadaptativoentiempodeejecucio´n,
+defineunpara´metroquesellamara´ criterioderefinamiento
+autoresdeestetrabajo,implementaronelprocesodeseleccio´n
+C .DenotandoD(Bλ )comoelconjuntodeloscoeficientes
+ε j+1 adaptativaylareestructuracio´ndemallasen[12].
+wavelets; si para todos los coeficientes d (i)j ∈D(Bλ ), se Para esta investigacio´n se elaboro´ un mo´dulo en FOR-
+k,l j+1
+164 Mallasadaptativasusandowaveletparadiferenciasfinitasenmodelosdeprono´sticonume´ricodeltiempo
+TRAN 90, denominado ARPSABR, que permite el acopla- enrepresentacio´nporbloquesyumbralizacio´ndeloscoefi-
+mientoylaejecucio´ndeunalgoritmoderefinamientoadap- cienteswaveletdelaTWD,seconsiderandoscasosdeestudio.
+tativodemallasbidimensionales,mediantelarepresentacio´n Enambossedemuestraqueelalgoritmopropuestoesmenos
+porbloques.Estemo´duloesta´ adaptadoparaacoplarseala costosocomputacionalmente(encuantoatiempodecorrida,
+estructuradeintegracio´ndelmodeloARPS,enparticulardel ocupacio´nymanejodina´micodememoria)cuandosecompa-
+mo´duloAPRSAGRI. raconlaestrategiadesolucio´ndelmo´duloARPSAGRIque
+Para correr el ARPS con el ARPSABR, se an˜adio´ un implementalasolucio´ndelosesquemasendiferenciasfinitas
+bloquedepara´metrosenelficheroarps.input;vinculadosala sobre una mallas refinadas uniformemente. Para el primer
+configuracio´ndeintegracio´nadaptativa,asaber: casodeestudiolosvaloresiniciales(t=0)ylascondiciones
+defrontera(deDirichlet)paralosmodelosdeEDPsquese
+nwav Ordendelesquemadesubdivisio´ninterpolatoria resuelvenconelARPS,correspondenauntornadoocurrido
+thres Umbralderefinamiento. en Oklahoma, EU, en 1977; aqu´ı se incluyo´ forzosamente
+maxlev Nu´meroma´ximodenivelesderefinamiento. lapresenciadeunaperturbacio´nllamadaburbujaelipsoidal,
+cuya presencia es detectada a tra´ves de las variaciones de
+Enestemo´duloelmanejodelasmallas,condicionesde
+latemperaturapotencial;enelsegundocasolosdatospara
+fronteraytratamientodelosnivelesverticalesserealizaigual
+inicializarelARPSseobtienenentiemporeal,delasalida
+queenelARPSAGRI.Sinembargoparainterpolarenlugar
+nume´ricadelsistemadeprono´sticoWRF(WeatherResearch
+desplinesseusanlasmismasfuncioneswaveletsatrave´sde
+&Forecast)[9],paraund´ıaescogidoarbitrariamente.
+laSubdivisio´nInterpolatoriaycomocriterioderefinamiento,
+lamagnitudloscoeficienteswavelet,descritoanteriormente.
+3.1 Burbujaelipsoidal
+Esimportantedestacarqueestemo´dulo,alserimplemen-
+Lacorridaparalasolucio´ndelosmodelosseinicializa
+tadototalmenteenFORTRAN90,superalaslimitacionesde
+condatosobtenidosduranteeleventometeorolo´gicoconocido
+lamemoriaesta´ticaalasqueesta´ sujetoelARPSAGRI.Esto
+comolatormentadesuperceldatorna´dicaocurridael20de
+conllevaaqueelprocesodereestructuracio´ndelasmallas
+mayode1977enOklahoma,EstadosUnidos.Estecasode
+serealiza’encaliente’ynobasadoenreiniciosdecorridas.
+estudioesta´incorporadopordefectoenelmodeloARPSpara
+ElARPSABRpermiteelrefinamientoenvariosnivelesinclu-
+mostrarsusfuncionalidades.Seescogio´ latemperaturapoten-
+yendoma´sdeunarejillapornivel.Acontinuacio´nsepresenta
+cialθ comovariablemeteorolo´gicapararealizarelana´lisis.El
+elprocesodecorridadelARPSconelARPSABR.
+experimentoconsisteenrealizarsimulacionesnume´ricascon
+elARPSoriginal,dondeelrefinamientodelasmallassobre
+1. Inicializacio´n:Seinicializanlasvariablesdelsistema
+las que se resuelven los esquemas en diferencias finitas se
+deecuaciones.Seseleccionalavariablepatro´n(variable
+realizademanerauniformeycompararlasconsimulaciones
+alaqueseleaplicara´ elcriterioderefinamientopara
+realizadasconelARPSincorpora´ndoleelmo´duloARPSABR
+definirlaestructuradelamallainicialAλ,con j=0).
+j queseproponeenestetrabajo,dondeelrefinamientodeestas
+2. Descomposicio´ndelamallaenbloques. mallas se realiza de manera adaptativa. La comparacio´n se
+realizaente´rminosde:cantidaddenodosqueseincluyenen
+3. Ca´clulodeloscoeficienteswavelet:Paracadabloque
+elprocesoderefinamiento,utilizacio´nymanejodelamemo-
+BλjseaplicaunpasodelaTWD.
+riadealmacenamiento,tiempototaldeejecucio´nyadema´sse
+calculaelerrorenlaaproximacio´ndeθ.
+4. Aplicacio´ndelcriterioderefinamiento:Sechequea
+Eldominiosobreelquesetomanlosvaloresinicialesy
+paracadabloquelacondicio´nderefinamiento.Paralos
+las condiciones de fronteras para el modelo de EDPs, esta´
+nuevosbloquesrefinadosserepiteelalgoritmodesde
+representado por una malla de N =64×M=64×32 pun-
+el paso 2, hasta que se alcance el nivel ma´ximo de
+tos,conresolucio´nde1kmenlaescalahorizontaly500m
+refinamientoonoserequierarefinar.
+en la vertical. Las dimensiones de la malla en este contex-
+5. Integracio´nadaptativa:Lasolucio´ndelosesquemas to dependende la dimensio´n espacialen lamesoescala del
+enDiferenciasFinitasserealizacomenzandoenelme- feno´menoquesemodela.Lassimulacionesserealizaroncon
+nornivelderefinamientohastaelma´ximonivel. unaconfiguracio´ntridimensionalmuysencillaquenotuvoen
+cuentalosefectosdelaorograf´ıa,efectosdelaradiacio´n,uso
+6. Reajustedelamallaadaptativa:Lamallaadaptativa desuelo,fuerzadefriccio´nyfuerzadeCoriolis1.Seincluyo´
+serecorreconelobjetivoderetiraroan˜adirma´sbloques
+elesquemadeparametrizacio´ndelamicrof´ısicaparalafase
+(paso3).
+l´ıquida. Se uso´, para la turbulencia, la parametrizacio´n 1.5
+TKE (Turbulent Kinetic Energy) mezcla turbulenta, con el
+3. Resultados y Discusio´n nu´merodeturbulenciadePrandtliguala1,[24].
+Elcampoinicialdedatoseshomoge´neoenlaescalaho-
+Paraevaluareldesempen˜odelmo´duloARPSABR(aco-
+rizontal, con variaciones solo entre los niveles de la escala
+pladoalARPS),quecombinaelme´tododediferenciasfinitas
+conelalgoritmoadaptativoderefinamientodemallasbasado 1Para´metroquetieneencuentalosefectosdelarotacio´ndelaTierra
+Mallasadaptativasusandowaveletparadiferenciasfinitasenmodelosdeprono´sticonume´ricodeltiempo 165
+diferentespasostemporales,t=15,30,45,60minutos
+1 L
+err= ∑|θU−θA| (11)
+L p p
+p=1
+dondeLeslacantidadtotaldepuntosdelamalla,θU yθA
+p p
+denotan el valor de la temperatura potencial en el punto p,
+calculado sobre la malla con refinamiento uniforme U con
+elmenorpasoespacial(ARPSoriginal)ysobrelamallacon
+refinamientoadaptativoA,(ARPSABR),respectivamente.
+Setrabajo´ conunfactorderefinamientoespacialytempo-
+raliguala2,permitiendounsolonivelderefinamiento,porlo
+queenlaescalahorizontallaresolucio´nma´ximapermitidaes
+500m.Elpasotemporaldt paralarejillagruesafuedt=6s
+yparalaintegracio´ndelasondasacu´sticas,dt =1s.Como
+umbraldetruncamiento paraelrefinamientose tomo´ thres
+= 0.5, lo cual esta´ relacionado con el valor de err para la
+variablepatro´n;comoseobservatienenelmismoordende
+magnitud.
+Cuadro1.Comportamientodelerrorparadiferentesplazos
+detiempo.
+Figura5.Gra´ficodelatemperaturapotencialengrados
+Kelvin,quemuestralaburbujaelipsoidalinsertadaenla Plazodetiempo 1hora 45min 30min 15min
+inicializacio´ndelARPS. err 0.81 0.87 0.63 0.21
+Enrelacio´nconlacantidaddenodosutilizados,quein-
+vertical.Porestahomogeneidadenlosdatosenlaescalaho-
+fluyeenelespaciodememoriautilizado,enelcuadro2,se
+rizontalqueeslaqueestamosanalizandoyparadestacarla
+muestranlosvaloresobtenidosparaunahoradesimulacio´n,
+efectividaddeconstruirunamallaadaptativaconnuestrapro-
+realizandoadaptatividaddesdelamallainicial(t=0),pero
+puesta, se introduce una perturbacio´n inicial forzada, dada
+sinreestructuracio´nderejillaseneltiempo.
+porunaburbujaelipsoidal(deah´ıelnombreparaelcasode
+estudio),definidapor:
+Cuadro2.Datosobtenidosparasimulacionesconel
+ARPSABRyconlamallarefinadauniformenteconpaso
+∆Θ=Θ cos2( πβ ) (β ≤1). (9) espacialde500m,para1hdeprono´sticoy j max =1.
+0
+2
+No.nodos Almacenamiento
+Θ eslaamplituddelaperturbacio´nenelcentrodeldis-
+0 ma´ximo ntemp
+turbio,seselecciono´ unvaloriguala4K(gradosKelvin).β
+ARPSABR 7168x32 17569585 13559833
+esunradioadimensionaldadopor:
+Uniformefina 16384x32 57233129 40511123
+(cid:114)
+x−x y−y z−z
+β = ( c )2+( c )2+( c )2, (10)
+x y z Seobservaquelacantidaddenodosessignificativamente
+r r r
+ma´spequen˜a(9216nodosmenos)conrefinamientoadaptativo
+dondex ,y yz sonlascoordenadasdelcentrodelaburbuja;
+c c c (ARPSABR)queconrefinamientouniformeconpasoespacial
+x ,y yz representanelradioencadadireccio´n.Laburbuja
+r r r 500m. El nu´mero de nodos usados por esta u´ltima, es un
+fuecentradaenx =48km,y =16kmyz =1.5kmycomo
+c c c orden de magnitud mayor. En te´rminos de compresio´n, se
+radiosfueronelegidoslosvaloresx =10km,y =10km,z
+r r r alcanza un 56.25 %. El arreglo ntemp indica la dimensio´n
+=1.5km.
+delarregloprincipal(ocupacio´ndememoria)enelmomento
+En la Figura 5 se grafica la temperatura potencial y se enquefinalizalaejecucio´ndelmodelo.Seobservaqueen
+observanloscambiosenela´readondeseencuentrainsertada la variante adaptativa la ocupacio´n de memoria es menor.
+laburbujaelipsoidal. De hecho, el ma´ximo espacio consumido en memoria por
+ARPSABR durante la ejecucio´n, es menor que el total de
+3.1.1 Evaluacio´ndelARPSABR memoriautilizadaenlavarianteconrefinamientouniforme.
+En el cuadro 1 se muestra el comportamiento del error LaFigura6,muestralaestructurademallascreadapara
+promedio(denotadoporerr)enlaaproximacio´ndeθ,para estecasoconnivelderefinamientoma´ximo j=1,superpuesta
+166 Mallasadaptativasusandowaveletparadiferenciasfinitasenmodelosdeprono´sticonume´ricodeltiempo
+Figura7.Dominiode3kmderesolucio´n.
+SisPI.LasnuevasdimensionessonN=512×M=256×32,
+de manera que estas son potencias de 2 como requiere el
+ABR.Elrestodelospara´metrosconfigurablesdelWRFfue-
+ron dispuestos como en [27]. El paso temporal dt para la
+mallagruesaesdt=12s.Laconfiguracio´nestablecidapara
+elmo´duloARPSABRqueseproponeenestetrabajo,conto´
+con3nivelesderefinamientoyumbralderefinamientothres
+=0.0001;locualindicaquelaresolucio´nma´ximaalcanzable
+Figura6.Mallaadaptativacorrespondienteconelgra´ficoque (sifueranecesario),esde0.75kmyelpasotemporaldt de
+muestralaburbujaelipsoidalinsertadaenlainicializacio´ndel acuerdoconestaresolucio´nser´ıa3s.
+ARPS. Es importante sen˜alar que realizar una corrida con refi-
+namientodemallauniforme,conpasoespacialenlaescala
+horizontaldx=dy=0,75km,tendr´ıauncostocomputacional
+alcampodetemperaturapotencial.ElbloqueBλSE abarcala muyelevado;eltaman˜odelarejillaser´ıaN =2048×M=
+1
+regio´ndondeexisteuncambiobrusco,comosemuestraenel 1024×32,parauntotalde67108864nodos.Esporelloque
+gra´fico,enestaa´reaseproduceelrefinamiento. nosepresentaestasimulacio´n.Semuestranlosgra´ficospara
+Para comparar el tiempo total de ejecucio´n, se realiza lascorridasconlarejillauniformema´sgruesaylaadaptativa.
+un desgloce, en el tiempo que demora el refinamiento por La Figura 8 muestra el patro´n de comportamiento de
+las distintas v´ıas y el tiempo que consume el ca´lculo de la la componente horizontal del viento u(t,x,y), sobre el a´rea
+solucio´npordiferenciasfinitas.Enelcuadro3,seobservaque geogra´ficaenestudioparat=0.Laimagendelaizquierda,
+lasoperacionesrelacionadasconelrefinamientoadaptativo muestraelcomportamientodeu(0,x,y)sobrelamallainicial
+delasmallasnoincrementasignificativamenteeltiempototal para el ARPSABR, (ver Figura 9 ). Es importante sen˜alar
+deejecucio´n.Comopromedio,elABRconsumeel4%del queadiferenciadelexperimentoanteriordondelamallacon
+tiempototaldeejecucio´n.Adema´sseobservaque,paralos losvaloresinicialesnoesmodificada,enestecasoelproce-
+ca´lculossobrelamallarefinadauniformente,lostiemposde so de refinamiento comienza desde la propia malla inicial.
+ejecucio´n superan a la variante adaptativa en un orden de Laimagendeladerechamuestraelcomportamientoinicial
+magnitud. deu(t,x,y)sobrelamallaoriginal.Visualmenteelcompor-
+tamiento de u es similar en ambas ima´genes; las mayores
+3.2 Inicializacio´nconlosdatosdelmodeloWRF variaciones (que no son muy abruptas) se observan en las
+El objetivo de este experimento es validar el comporta- zonas sobre tierra, mientras que en el mar los valores son
+miento del mo´dulo ARPSABR en cuanto a compresio´n de ma´ssuaves.Estasuavidadenlosdatosinicialesindicaque
+losdatos,criterioderefinamiento,creacio´nyeliminacio´nde nosera´nnecesariosmuchosnivelesderefinamientoparauna
+mallas,operacionesderejillasycompresio´n. adecuadarepresentacio´ndelosprocesosenelmomentoin-
+Setomaroncomocondicionesinicialesydefronteras,para cial. No obstante, de acuerdo con el patro´n de u, se espera
+lacorridadelARPSABR,losdelasalidanume´ricadelWRF. mayorcantidaddenivelesderefinamientoenlosbloquesque
+La salida del WRF se corresponde con el dominio de 3km abarcanlaszonasterrestres.
+delSistemadeProno´sticoInmediato(SisPI).Eld´ıaescogido EnlaFigura9semuestralaestructuradelamallainicialy
+paralasimulacio´nfueel9deenerode2015,teniendocomo sesen˜alanlosnivelesderefinamientodealgunosbloques.El
+duracio´ndelprono´stico6horas.EnlaFigura7,semuestrael bloqueetiquetadoconnivel0(j=0),mantienelainformacio´n
+a´reageogra´ficaqueabarcaeldominiodesimulacio´n. talcomofuerecibidaenlainicializacio´n,osea,enestaa´rea
+Seescogio´ comovariablepatro´nlacomponentehorizon- noserealizarefinamientoyportantotiene3kmderesolucio´n.
+tal del viento. Se realizo´ un cambio en las dimensiones de Enestebloqueseencuentralamayorzonacubiertapormar.
+lamallaconrespectoalasdimesionesoriginalesusadasen Los bloques etiquedados con niveles j =1 y j=2 tienen
+Mallasadaptativasusandowaveletparadiferenciasfinitasenmodelosdeprono´sticonume´ricodeltiempo 167
+Cuadro3.Tiemposdeejecucio´nparadiferentesplazosdeprono´stico.Laresolucio´nma´ximaalcanzadaenlarejillafina
+uniformeylasimulacio´nconrefinamientoadaptativaesde500m.
+Plazodetiempo 1hora 45min 30min 15min
+ARPSABR 827s 23s 625s 19s 337s 15s 86s 7s
+arpsolver ABR arpsolver ABR arpsolver ABR arpsolver ABR
+850(∼14min)s 644(∼11min)s 352(∼6min)s 93(∼2min)s
+Uniformefina 4857(∼81min)s 3633(∼61min)s 2208(∼37min)s 981(∼16min)s
+resolucio´n1.5kmy0.75kmrespectivamente.Delosbloques atmosfe´ricossimulados.No´tesequesobrelaregio´n(alsurde
+representadossolo8alcanzanelnivelderefinamiento2,lo laIsladelaJuventud),secrearon8nuevosbloquesconnivel
+quesetraduceenunaresolucio´nde0.75km.Trescuartosdel derefinamiento j=2.Esprecisamenteenestaa´readondese
+dominionecesitaronalmenosunnivelma´sderefinamiento. observannuevascaracter´ısticasmeteorolo´gicas,quenoesta´n
+La cantidad de nodos total es 4751360. Esto representa el presentesenlasimulacio´nconpasosespacialesmayores.
+7.1%deltotaldenodosdelamallauniformema´sfina;olo
+queeslomismoseobtieneun91.9%decompresio´nenla
+inicializacio´ndelARPSutilizandoelARPSABR.
+Figura9.Estructuradelarejillaadaptativaparat=0.
+Laevolucio´neneltiempodeusemuestraenlaFigura
+10: en a) y c) resultante de la corrida del ARPSABR, b) y
+d)comoresultadodelacorridasobrelamallagruesa,para
+lostiempost=3600syt=7200srespectivamente.Durante
+esteper´ıodo,seobservaqueusufrefluctuacionesligeras.La
+solucio´n nume´rica empleando adaptatividad es consistente Figura11.Rejillaadaptativaparat=3600s(arriba)y
+con la solucio´n nume´rica cla´sica. En las ima´genes a) y c), t=7200s(abajo)desimulacio´n.
+fundamentalmente para t =7200s, se observa, al sur de la
+IsladelaJuventudsobreelmarCaribe,laaparicio´ndeuna
+circulacio´n con valores pequen˜os de la variable, que no se
+4. Conclusiones
+captaenlacorridaconlarejillagruesa.
+LaFigura11muestraloscambiosocurridosenlamalla Enestetrabajosedesarrollo´ unmo´dulo(ARPSABR)para
+adaptativa.Encorrespondenciaconelcomportamientodeu, lasolucio´ndelsistemadeecuacionesdeNavier-Stokesdel
+enlaprimerahora,elnu´merodebloques(16)conresolucio´n modelodeprono´sticonume´ricoARPS,medianteesquemasen
+de0.75kmseduplicaconrespectoalamallainicial.Enlas diferenciasfinitassobremallasconadaptatividadespacialy
+a´reasdondelaresolucio´ninicial(t=0)fuelacorrespondiente temporal;estrategiaquepuedeseraplicadaenotroscontextos.
+alasalidadelWRF(dx=dy=3km),fuenecesarioaplicardos Lasmallasadaptativasseconstruyeronutilizandounarepre-
+nivelesderefinamiento.Ente´rminosdecantidaddenodosse sentacio´nporbloquescombinadaconunaumbralizacio´nde
+obtuvountotalde7340032,representandoel10.9%deltotal loscoeficienteswaveletenlatransformadawaveletdiscreta
+denodosqueseobtendr´ıansisehubierarefinadodemanera conbaseswaveletinterpolatorias.Lavalidacio´ndeestapro-
+uniforme.Enlasegundahorasemantuvolaestructuradela puestaserealizo´ medianteelana´lisisdedoscasosdeestudio
+mallaconunacompresio´ndel89%conrespectoaltaman˜ode resueltosconelARPSconelnuevomo´duloARPSABR,lo
+lamallaqueresultar´ıadeunrefinamientouniforme.Durante cualhastadondeconocemos,serealizaporprimeravez.Se
+estashorasdesimulacio´nsecompruebaquelasmallassevan demostro´ queconsiderarlosesquemasendiferenciasfinitas
+reestructurandodeacuerdoconeldesarrollodelosprocesos sobremallasregulablesentiempoyespaciopermiteresolver
+168 Mallasadaptativasusandowaveletparadiferenciasfinitasenmodelosdeprono´sticonume´ricodeltiempo
+Figura8.Componentehorizontaldelvientouparat=0:sobrelamallaconrefinamientoadaptativo(izquierda)ysobrela
+mallagruesacondx=dy=3km(derecha).
+(a)
+(b)
+(c)
+(d)
+Figura10.Comportamientodeupara:t=3600s(a)sobrelarejillaadaptativay(b)sobrelarejillagruesauniforme;t=7200s
+(c)sobrelarejillaadaptativay(d)sobrelarejillagruesauniforme
+procesos atmosfe´ricos en escalas muy pequen˜as, as´ı como nalmultiscaleenvironmentmodelwithgridadaptivity
+analizarlainteraccio´nentrefeno´menosquetienenlugaradi- (omega). Mon.Wea.Rev,128:2044–2076,2000.
+ferentesescalas;aspectoqueesysiguesiendounretoparalos
+modelosclima´ticos.Sedemostro´ queARPSABR,consume [2] M.BergerandJ.Oliger. Adaptativemeshrefinement
+soloel4%deltiempodeejecucio´ntotal,lograndounacom- for hyperbolic partial differential equations. Journal
+presio´ndel89%deltaman˜odelamallasiestafuerarefinada ComputationalPhysics,53:484–512,1984.
+uniformemente,locualinfluyesensiblementeenlamemoria
+[3] Ch. Chui. Wavelets: A mathematical tool for signal
+dealmacenamiento.Comotrabajofuturosepreveeparalelizar
+processing. SIAM,1997.
+laestrategia,as´ıcomoestudiar,siconlaadaptatividad,existe
+pe´rdidadeprecisio´nenlasolucio´n.
+[4] A.Cohen,S.M.Kaber,S.Muller,andM.Postel. Fully
+adaptivemultiresolutionfinitevolumeschemesforcon-
+servationlaws. Math.Comp.,72:183–225,2003.
+Referencias
+[5] I.Daubechies. TenLecturesonWavelets. SIAM,1988.
+[1] D.P.Bacon,N.N.Ahmad,Z.Boybey,T.J.Dunn,M.S.
+Hall, P. C. S. Lee, R. A. Sarma, M.D. Turner, K. T. [6] L.Debreu,C.Vouland,andE.Blayo. Agrif:Adaptive
+Waight,S.H.Young,andJ.W.Zack. Adynamically gridrefinemtentinfortran. ComputerandGeociences,
+adapting weather and dispersion model: the operatio- 34:8–13,2008.
+Mallasadaptativasusandowaveletparadiferenciasfinitasenmodelosdeprono´sticonume´ricodeltiempo 169
+[7] R. Deiterding, M. O. Domingues, S. M. Gomes, and [20] E.E.Mart´ınez-SabariandM.Sierra-Lorenzo. Simula-
+K.Schneider. Comparisonofadaptivemultiresolution cio´ndeunvo´rticedevelocidadesbarotro´picasmediante
+andadaptivemeshrefinementappliedtosimulationsof unate´cnicaderefinamientoadaptativo. RevistaCubana
+thecompressibleeulerequations. SIAMJ.Math.Anal. Meteorolog´ıa,21:18–30,2015.
+J.Sci.Comput.,38:173–193,2016.
+[21] Y.Nievergelt. WaveletsMadeEasy. Birkhauser,1999.
+[8] G.DeslauriersandS.Dubuc. Symmetriciterativeinter-
+polationprocesses. Constr.Approx.,5:49–68,1989. [22] N.Nikiforakis. Meshgenerationandmeshadaptation
+forlargescaleearth-systemmodelling. Phil.Trans.R.
+[9] Mesoscale&MicroscaleMeteorologyDivision. ARW Soc.LondonA,367:4473–4481,2009.
+Version3ModelingSystemUser’sGuide.Complemen-
+tarytotheARWTechNote. NCAR:Boulder,Colorado, [23] P. Penven, G. Cambon, T. Tan, P. Marchesiello, and
+USA. L.Debreu. ROMS-AGRIFROMSTOOLSUser’sGuide.
+Institut de Recherche pour le Developpement (IRD),
+[10] M. O. Domingues. Ana´lise Wavelet na Simulac¸a˜o 2010.
+Nume´rica de Equac¸o˜es Diferenciais Parciais com
+Adaptabilidade Espacial. Universidade Estadual de [24] Sr.PielkeandA.Roger. Mesoscalemeteorologicalmo-
+Campinas-DepartamentodeMatema´ticaAplicada. PhD deling,volume98. Academicpress,2013.
+thesis,2001.
+[25] Sh.M.ReckingerandO.V.Vasilyev. Adaptivewavelet
+[11] M. O. Domingues, S. M. Gomes, and L. M. A. Diaz. collocationmethodontheshallowwatermodel. Journal
+Adaptivewaveletrepresentationanddifferentiationon ofComputationalPhysics,271:342–359,2014.
+block-structuredgrids. AppliedNumericalMathematics,
+[26] O.Roussel,K.Schneider,A.Tsigulin,andH.Bockhorn.
+47:421–437,2003.
+Aconservativefullyadaptivemultiresolutionalgorithm
+[12] A. Dom´ınguez-Chovert, M. Sierra-Lorenzo, and for parabolic pdes. J. Comput. Phys., 188:493–523,
+N.Quintana-Rodr´ıguez. Implementacio´ndelosproce- 2003.
+sosdeseleccio´nadaptativayreestructuracio´nderejillas
+[27] M. Sierra-Lorenzo, A. L. Ferrer-Herna´ndez,
+enelmodelodeprono´sticodeltiempoarps. Cienciasde
+R. Herna´ndez-Valde´s, Y. Gonza´lez-Mayor, R. C.
+laTierrayelEspacio,16:201–215,2015.
+Cruz-Rodr´ıguez, I. Borrajero-Montejo, and C. F.
+[13] D.L.Donoho. Interpolatingwavelettransform. Techni- Rodr´ıguez-Geno´. Sistemaautoma´ticodeprediccio´na
+calreport,DepartmentofStatistics,StanfordUniversity, mesoescaladecuatrociclosdiarios. Technicalreport,
+1992. InstitutodeMeteorolog´ıadeCuba,2015.
+[14] T.DubosandN.K.R.Kevlahan. Aconservativeadapti- [28] W.SkamarockandJ.B.Klemp. Adaptativegridrefine-
+vewaveletmethodfortheshallow-waterequationson mentfortwo-dimensionalandthree-dimensionalnonhy-
+staggeredgrids. QuarterlyJournaloftheRoyalMeteo- drostatic atmospheric flow. Monthly Weather Review,
+rologicalSociety,2013. 121:788–804,1993.
+[15] S.Dubuc. Interpolationthroughaniterativescheme. J. [29] W.Skamarock,J.Oliger,andR.Street. Adaptativegrid
+Math.Anal.andAppl.,114:185–204,1986. refinementfornumericalweatherprediction. Journal
+ComputationalPhysics,80:27–60,1989.
+[16] A.Harten. Multiresolutionalgorithmsforthenumerical
+solutionofhyperbolicconservationlaws. Communica- [30] A.St-Cyr,C.Jablonowski,J.M.Dennis,H.M.Tufo,
+tionsonPureandAppliedMathematics,48:1305–1342, andS.J.Thomas. Acomparisonoftwoshallow-water
+1995. modelswithnonconformingadaptivegrids. Mon.Weat-
+herRev.,136:1898–1922,2008.
+[17] M.Holmstro¨m. Waveletbasedmethodsfortimedepen-
+dentPDEs.UppsalaUniversity. PhDthesis,1997. [31] J.W.Thomas. NumericalPartialDifferentialEquations:
+FiniteDifferenceMethods. SpringerVerlag,1995.
+[18] C.Jablonowski,R.C.Oehmke,andQ.FStout. Block-
+structuredadaptivemeshesandreducedgridsforatmosp-
+[32] M.Xue,K.K.Droegemeier,andV.Wong.Theadvanced
+heric general circulation models. Phil. Trans. R. Soc.
+regionalpredictionsystem(arps):Amulti-scalenonhy-
+LondonA,367:4497–4522,2009.
+drostaticatmosphericsimulationandpredictionmodel.
+parti:Modeldynamicsandverification. Meteorol.At-
+[19] N.K.R.Kevlahan,T.Dubos,andM.Aechtner.Adaptive
+mos.Phys.,75:161–193,2000.
+wavelet simulation of global ocean dynamics using a
+newbrinkmanvolumepenalization. Geosci.ModelDev.,
+[33] M.Xue,K.K.Droegemeier,V.Wong,A.Shapiro,and
+8:3891–3909,2015.
+K.Brewster. ARPSVersion4.0user’sguide.,1995.

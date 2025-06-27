@@ -1,0 +1,510 @@
+REVISTA DE CIENCIAS MATEMÁTICAS Vol. 24, único, Nos. 2007- 2008
+SOCIALIZACIÓN DE LA INFORMACION Y EL CONOCIMIENTO
+EN LA WEB
+Rafael Oliva-Santos
+Facultad de Matemática y Computación. Universidad de La Habana
+RESUMEN.
+La información ha cobrado gran importancia como recurso que garantiza el progreso social y ha
+estado acompañada del desarrollo de plataformas tecnológicas-comunicativas que favorecen
+compartir y distribuir la la información. La Web es una gran fuente de información y ha sido punto
+determinante en la evolución de la sociedad de la información. La Web ha pasado por varias
+etapas de desarrollo (1.0, 1.5, 2.0 y Web Semántica) y en cada una de ellas hay aportes a favor de
+la socialización de la información y el conocimiento. Es muy importante reconocer y analizar como
+el desarrollo de la Web ha estado enfocado en socializar información y el conocimiento y esto
+favorece el desarrollo de la ciencia ya que gracias a un canal como la Web la sociedad está más
+informada.
+ABSTRACT:
+Information has gained great importance as a resource that ensures social progress and it has
+come along by the development of technology-communicative platforms that favor the distribution
+and sharing of information. The Web is a huge source of information and has been a decisive point
+in the evolution of the information society. It has undergone several stages of development (1.0, 1.5,
+2.0 and the Semantic Web) and each has its own contribution for the socialization of information
+and knowledge. It is very important to recognize and analyze how the development of the Web has
+been focused on socializing information and knowledge Science development has been favored,
+given that thanks to a channel such as the Web society is better informed.
+1 INTRODUCCIÓN
+El desarrollo de la Sociedad de la Información se evidencia en estos primeros años del siglo XXI
+mediante una trasformación continua de la sociedad, donde las tecnologías y los nuevos criterios en las
+ciencias continúan revolucionando las formas de concebirla. La información se convierte cada vez más
+en recurso clave en la actividad social [1]. La vida cotidiana de las personas está marcada por un intenso
+uso de recursos informativos y de conocimiento.
+La gran importancia que ha cobrado la información como recurso que garantiza el progreso social ha
+estado acompañada del desarrollo de plataformas tecnológicas-comunicativas que favorecen compartir y
+distribuir la información. La Web es una gran fuente de información y ha sido punto determinante en la
+evolución de la sociedad de la información. La Web ha pasado por varias etapas de desarrollo y en cada
+una de ellas hay aportes a favor de la socialización de la información. Es muy importante reconocer y
+analizar como el desarrollo de la Web ha estado enfocado en socializar información.
+Este trabajo se traza como objetivo principal: analizar el papel de la Web en la socialización de la
+información y el conocimiento. Para ello se realizará un análisis por cada etapa del desarrollo por la que
+ha transitado la Web. El principal aporte de este trabajo es un análisis del desarrollo de la Web desde la
+perspectiva de su aporte a la socialización de la información y el conocimiento.
+Como socialización se conoce el proceso a través del cual una persona adquiere, aprende y/o conoce
+valores y cultura de una sociedad. Guy Rocher define ampliamente la socialización como “el proceso por
+cuyo medio la persona humana aprende e interioriza, en el transcurso de su vida, los elementos socio-
+culturales de su medio ambiente, los integra a la estructura de su personalidad, bajo la influencia de
+experiencias y de agentes sociales significativos, y se adapta así al entorno social en cuyo seno debe
+vivir” [1].
+El resto del trabajo se estructura en 3 grandes secciones, dedicadas al estudio de cada etapa del
+desarrollo de la Web. La primera trata las eras iniciales de la Web: 1.0 y 1.5. La segunda presenta la
+Web 2.0 y su gran connotación social partiendo del desarrollo alcanzado en materia de tecnología y
+.
+Email: 1http://profesores.matcom.uh.uc/~roliva y roliva@matcom.uh.cu
+93
+software. La tercera versa sobre la Web Semántica que es el proyecto futuro más cercano del desarrollo
+de la Web. En cada sección se hace una valoración de cuanto ha aportado el desarrollo de la Web a la
+socialización de la información.
+2 ERAS INICIALES DE LA WEB
+En la Web se unen hipertexto, imágenes, sonidos y estructuras simbólicas para conformar una gran
+red de recursos informativos. La utilidad de la Web es indiscutible, pero las estrategias que se han usado
+para representar la información no propician una recuperación precisa y eficiente, por consiguiente el
+usuario cuando demanda una información particular obtiene como respuesta muchos registros de
+recursos de información que pueden o no contener lo que el busca.
+La Web nació alrededor de 1989 a partir de un proyecto del CERN, en el que Tim Berners-Lee
+construyó el prototipo que dio lugar al núcleo de lo que hoy es la World Wide Web. La intención original
+era hacer más fácil y rápido el compartir textos de investigación entre científicos y permitir al lector
+revisar las referencias de un artículo mientras lo fuera leyendo. Un sistema de hipertexto enlazaría todos
+los documentos entre sí para que el lector pudiera revisar las referencias de un artículo mientras lo fuera
+leyendo. El nombre original del prototipo fue "Enquire Within Upon Everything".
+La funcionalidad elemental de la Web se basa en tres estándares: El Localizador Uniforme de
+Recursos (URL [Uniform Resource Locator]), que especifica cómo a cada página de información se
+asocia una "dirección" única en donde encontrarla, permite organizar las páginas en una jerarquía; el
+Protocolo de Transferencia de Hipertexto (HTTP [HyperText Transfer Protocol]), que especifica cómo el
+navegador y el servidor intercambian información según un esquema de peticiones y respuestas, y el
+Lenguaje de Marcado de Hipertexto (HTML [HyperText Markup Language]), un método para estructurar
+la información en los documentos, así como sus enlaces.
+2.1 WEB 1.0
+La Web en sus inicios estaba constituida por páginas estáticas en formato HTML, a esta era de la
+Web se le conoce como Web 1.0. El objetivo de los desarrolladores era simplemente publicar
+información, romper la barrera de la inercia que impone lo nuevo y comenzar a explotar al máximo este
+modo de comunicación más rápido. Las tecnologías utilizadas en esta primera etapa principalmente
+fueron el lenguaje HTML y el protocolo HTTP.
+En esta etapa del desarrollo de la Web la socialización de la información era muy pobre ya que se
+contaba con pocas herramientas para la publicación de la información, aunque se observa un interés
+marcado por publicar información y que esta sea consumida por usuarios. En esta etapa el acceso a
+Internet no era tan popular como en la actualidad.
+2.2 WEB 1.5
+La Web creció rápidamente y conjuntamente con su crecimiento surgieron otras tecnologías que
+favorecen la evolución de la Web. Tecnologías como CGI, Java, JavaScript, ASP, JSP, PHP, Flash,
+J2EE, XML, entre otras dotan a la Web de un mayor dinamismo, mayor flexibilidad y la hacen más fácil
+de mantener.
+En la Web 1.5 las páginas eran más dinámicas, por ejemplo eran generadas y actualizadas desde
+bases de datos. Las aplicaciones Web eran más ricas gráficamente. Una de las principales metas para
+todos los desarrolladores Web era obtener más visitas de internautas. Es en esta era de la Web donde
+florecieron los sitios Web llamados “punto-com”.
+2.3 VALORACIÓN PARCIAL DE LAS PRIMERAS ERAS DE LA WEB
+Vale señalar que el objetivo inicial de la Web fue socializar información de un dominio particular entre
+un grupo de personas, es decir la Web surge precisamente para socializar información aunque esta
+socialización sea limitada. La importancia de la Web fue vista desde sus comienzos, por lo que su
+popularidad fue en aumento rápidamente, lo que facilitó que más personas tuvieran acceso a la
+información que en ella se compartía. La Web 1.0 por ser la primera etapa del desarrollo de la Web, fue
+una etapa en la que los desarrolladores de aplicaciones Web estaban deseosos de publicar sus
+aplicaciones, lo que no era tan fácil como en nuestros días.
+94
+En la Web 1.5 se avanza en la socialización de la información, ya que gracias al surgimiento y
+desarrollo de distintas tecnologías se puede compartir vía Web grandes volúmenes de información. La
+información compartida tiene un mejor formato y es mucho más atractiva al usuario final, ya que se
+diversifica los tipos de recursos informativos a compartir y se nota un gran avance en la creación de
+recursos gráficos. La Web 1.5 es una etapa en la que la importancia de este canal para compartir
+información ya era conocida, por lo que un gran número de tecnologías surgieron para favorecer,
+enriquecer gráficamente y facilitar publicar y compartir información en la Web. En esta etapa es
+tecnológicamente posible publicar información dinámicamente extraída de grandes volúmenes de datos.
+3 WEB 2.0
+Los cambios tecnológicos de fin de siglo como son el abaratamiento de los costos y el aumento de la
+capacidad de cómputo de los ordenadores imponían el surgimiento de una nueva era de la Web mucho
+más interactiva.
+Desde principios de siglo se observa un renacimiento en la Web. Las aplicaciones Web se diferencian
+cada vez menos de las aplicaciones de escritorio. Las aplicaciones Web actuales son mucho más
+interactivas y lo principal es que tienen como centro al usuario final y la generación de colaboración. La
+Web 2.0 es la conceptualización de la tendencia observada en el desarrollo de aplicaciones y que
+distingue las aplicaciones actuales de las aplicaciones Web tradicionales. La Web 2.0 está orientada a la
+interacción, encuentro y colaboración de los usuarios finales.
+La Web estaba en desarrollo conjuntamente con los modelos de negocio que evolucionaban. Dale
+Dougherty, pionero de la Web y vicepresidente de O'Reilly definió el concepto de Web 2.0 en el 2005. La
+Web 2.0 agrupa un conjunto de aplicaciones donde el usuario tiene el control y se caracterizan por estar
+basadas en la inteligencia colectiva y el uso de servicios interactivos en red. La infraestructura de la Web
+2.0 es compleja y está evolucionando constantemente, incluye el software de servidor, sindicación de
+contenidos, protocolos de mensajes, navegadores basados en estándares, y aplicaciones para clientes.
+Se considera que una Web pertenece a la Web 2.0 si es lo suficientemente “abierta” para permitir
+fácilmente la introducción y extracción de información por parte de los clientes finales. Así como deben
+existir mecanismos que posibiliten a los usuarios controlar su propia información.
+La Web 2.0 no es precisamente una tecnología, sino es una actitud, una “manera de hacer las cosas”
+que debemos tener presente los desarrolladores de aplicaciones Web para así contribuir a una Internet
+de mayor calidad. La Web 2.0 es la era de las aplicaciones Web a la que pertenecen aquellas que
+tengan como meta la participación y cooperación del cliente final, es decir tengan como centro al usuario.
+La Web 2.0 constituye la etapa de desarrollo de la Web en la que están muchas de las aplicaciones que
+utilizamos y a las que accedemos hoy día en Internet.
+La Web 2.0 es la etapa que ha logrado más participación de la sociedad en su creación y
+mantenimiento. Los distintos grupos sociales participan compartiendo y confeccionando recursos Web.
+Esta etapa de la Web 2.0 es sustentada por un basamento científico y técnico maduro. La alianza
+ciencia-técnica, que en este caso es clave para el desarrollo de la Web, favorece la libre expresión de la
+espiritualidad creadora del hombre, condición esencial para lograr la emancipación social [3]. La Web 2.0
+favorece la emancipación social
+Varias de las aplicaciones Web 2.0 utilizarán folcsonomías. Una folcsonomía es la categorización
+colaborativa a través de etiquetas simples de un espacio de nombres sin jerarquías ni relaciones de
+parentesco predeterminadas. Se utiliza en gran medida en entornos de software social. Las
+folcsonomías surgen a partir de la colaboración en la descripción de una misma información por parte de
+varios usuarios. La diferencia fundamental entre taxonomía y folcsonomía es el intercambio de opiniones
+que se da en la folcsonomía y no en la taxonomía. Folcsonomía de acuerdo con su formación
+etimológica (folc+taxo+nomía) significa "clasificación gestionada por el pueblo".
+3.1 TECNOLOGÍAS Y PRINCIPIOS
+Una de las características de la Web 2.0 es la estructuración de la información como una
+“conversación” y no como una “lectura”,y la separación entre forma y contenido, elementos que son
+facilitados por la utilización de tecnologías como: CSS (Cascading Style Sheets), XHTML (Extensible
+Hypertext Markup Language) válido semánticamente, Microformatos, Técnicas de desarrollo de Rich
+95
+Internet Application (RIA) (Ejemplo AJAX [Asynchronous JavaScript And XML]), Java Web Stara, XUL
+(XML-based User-interface Language) , sindicación y Agregación de datos en RSS (Really Simple
+Syndication)/ATOM , URLs sencillas y con significado, soporte para postear en un blog , JCC (JavaScript
+Client Communication) y APIs REST (Representational State Transfer) o XML (Extensible Markup
+Language) y algunos aspectos de redes sociales
+La sindicación de información en la Web utilizando para ello protocolos estandarizados es uno de los
+elementos más preciados de la Web 2.0. Entre los principales protocolos utilizados para sindicar están
+RSS, RDF(Resource Description Framework) y ATOM, todos con una raíz común el XML. Los protocolos
+específicos para redes sociales como FOAF (Friend Of A Friend) y XFN (XHTML Friends Network) dotan
+a los sitios de una mayor funcionalidad y una mayor capacidad de interacción con el usuario final.
+Otro elemento clave en la infraestructura de la Web 2.0 es la utilización de protocolos de mensajes.
+Los dos protocolos más usados son RESTful y SOAP. REST indica el tipo de invocación a un servicio
+Web donde el cliente transfiere el estado de todas las transacciones. SOAP depende del servidor para
+retener la información de estado. En ambos casos se accede a los servicios mediante una interfaz que
+puede estar personalizada. Existen interfaces estandarizadas para servicios específicos como es el caso
+de los relacionados con blogs.
+AJAX es uno de los elementos de la Web 2.0 que posibilitan la creación de RIA. AJAX es un
+importante y poderoso modelo de desarrollo de aplicaciones Web interactivas. Está integrado por tres
+tecnologías de programación con suficiente madurez y tiempo de uso entre los desarrolladores: HTML,
+XHTML y hojas de estilos en cascada CSS, Document Object Model (DOM) gestionado mediante
+lenguajes scripts que se ejecuten en el cliente como es el caso de JavaScript y JScript y XML es el
+formato que se utiliza generalmente en la transferencia de información y XSL estándar que se utiliza para
+transformar los documentos XML [4].
+El modelo AJAX posibilita actualizar el contenido de una página Web, de forma inmediata, sin tener
+que recargar la página completa. AJAX no requiere la instalación de plug-in, ni de capacidades muy
+específicas del navegador. AJAX promete un cambio en las aplicaciones Web. Hoy pueden
+implementarse funcionalidades solamente esperadas en una aplicación de escritorio gracias a este
+modelo de programación.
+3.2 ASPECTOS DE LA WEB 2.0 RELACIONADOS CON LA NAVEGACIÓN
+La Web 2.0 tiene un gran alcance que toca diversos aspectos relacionados con la navegación en
+Internet:
+Diseño
+El diseño de las páginas Web ha cambiado para un diseño mucho más rico, menos cargado,
+potenciando una mayor usabilidad, donde los servicios brindados son más fáciles de utilizar y donde el
+usuario vea lo que realmente tiene que ver. Cada vez se observan menos páginas cargadas
+gráficamente, con letras pequeñas, donde entre texto e imágenes no dejan lugar sin utilizar. Hay una
+tendencia clara hacia la utilización de textos con un tamaño de fuente mayor, pequeños efectos en tres
+dimensiones, colores muy suaves o neutros, iconos muy elaborados y amplios espacios sin utilizar.
+Estos cambios de diseño favorecen el acceso cada vez mayor de personas de avanzada edad con
+dificultades de visión.
+Objetivo
+La finalidad que persigue la Web 2.0 se diferencia de la que tenía la Web 1.0. La nueva era de la Web
+no sólo es escenario propicio para compartir información sino que también se convierte en plataforma
+que posibilita la publicación fácil de información y con ello una inserción mayor en la cotidianidad de las
+personas, es decir logra socializar más la información. Ya no es inusual que personas que no sean
+estudiantes universitarios naveguen por la red de redes buscando información muy específica. En la
+Web 2.0 el usuario final no sólo puede consumir la información que se comparte sino que puede
+colaborar con su información.
+Impacto Social
+Siendo la Web 2.0 una plataforma donde la colaboración es esencial el impacto social de la Web se
+extiende incalculablemente a través de la creación de nuevas redes sociales. La Web 2.0 favorece la
+96
+integración cada vez mayor de la sociedad con la red de redes, aporta una nueva visión de la sociedad
+de Internet. En esta nueva era todos podemos tener nuestro propio espacio en la Web y ser
+protagonistas de él. Esta etapa del desarrollo de la Web es clave en el desarrollo de la Sociedad de la
+Información.
+3.3 PRINCIPIOS DE LA WEB 2.0
+Tim O’Really define los siguientes principios como los pilares de la Web 2.0 [5]:
+La Web como plataforma
+Las aplicaciones Web de los últimos años dan una nueva dimensión a la Web. En la Web 2.0, gracias
+al ambiente colaborativo y descentralizado que existe, sucede que a medida que más se utilicen los
+servicios de una aplicación más atractiva se hará la misma. Aplicaciones como el popular sistema de
+intercambio de archivos BitTorrent son ejemplos de esta tendencia.
+Inteligencia colectiva
+En la Web clásica la información estaba difuminada entre toda la Internet mediante hipervínculos
+enlazados y directorios como Yahoo, que son accesibles principalmente gracias a los motores de
+búsquedas. La Web 2.0 nos presenta verdaderas fuentes de información como Wikipedia, Flickr, los
+Blogs y los protocolos para sindicar como el RSS. Se ha observado una tendencia a compartir la
+información de muchas maneras y de modo más estructurado.
+Los datos son el próximo “Intel Inside”.
+La comparación entre los datos y el nombrado slogan ¨Intel Inside¨ es una simpática forma de hacer
+notar la importancia que están tomando los datos precisamente a partir de toda la gama de servicios que
+se brindan en las aplicaciones Web 2.0. Los datos ya no pasan inadvertidos puesto que son la médula
+de servicios tan populares como los ofrecidos por los visualizadores de mapas de Google, Yahoo o
+Microsoft.
+Beta perpetuo.
+Debido al aumento de la interactividad de las aplicaciones Web y a su mayor incorporación a las
+actividades que antiguamente estaban destinadas solamente a aplicaciones de Escritorio, el software
+está cambiando su concepción, está dejando de ser un producto para transformase en un servicio. El
+uso de aplicaciones Web nos posibilita abstraernos de elementos como el número de versión de la
+aplicación, ya que debido a que el servicio es centralizado constantemente estaremos utilizando la
+versión más reciente. No es necesaria la instalación de “parches” ya que la corrección de errores es
+totalmente transparente al cliente final. Ejemplo de esta corriente son las aplicaciones de Google como:
+Gmail y Google Maps.
+Modelos livianos de programación
+La simplicidad es uno de los elementos claves en el desarrollo de aplicaciones y servicios Web 2.0.
+Cada vez es mayor la presencia en la Web de estándares sencillos, de carga liviana, como la sindicación
+vía RSS o la compatibilidad con XML. AJAX también en este sentido favorece obtener de manera simple
+funcionalidades antes logradas con sistemas de producción propietarios y complejos como Java o Flash.
+Software para múltiples dispositivos
+En la actualidad los desarrolladores de aplicaciones Web no pueden proyectar sus implementaciones
+a que se ejecuten solamente en ordenadores. Cada día es mayor la gama de dispositivos que son
+capaces de conectarse a la red, como: PDAs, televisores (WebTV), reproductores de música,
+automóviles e incluso otros de uso doméstico como refrigeradores o lavadoras. Las aplicaciones y
+servicios de la Web 2.0 deberían estar preparadas para funcionar correctamente independientemente del
+sistema o plataforma de donde se estén ejecutando.
+Experiencias de usuario enriquecidas
+En la Web 2.0 se logran aplicaciones más ricas en cuanto a dinamismo, rapidez e interactividad
+gracias a la utilización de un conjunto de tecnologías inherentes a los navegadores, como es el caso de
+AJAX. Cada día aparecen nuevas aplicaciones de calidad similar a Gmail y Google Maps, aplicaciones
+rápidas, compatibles con los navegadores más utilizados, que no requieren plug-in adicionales, flexibles
+y principalmente gratuitas.
+97
+3.4 APLICACIONES DE LA WEB 2.0
+En las aplicaciones Web 2.0 el usuario final decide como y que información recibe. Ejemplo de esto
+son las aplicaciones que permiten al usuario organizar la información a su gusto. Los sistemas de
+sindicación (Ejemplo: RSS) están ofreciendo una herramienta de traspaso de múltiple información muy
+eficaz. Dentro de las aplicaciones Web 2.0 más significativas encontramos: los blogs, las wikis,
+del.icio.us, Flickr y Google AdSense.
+Wiki, es una herramienta de edición abierta [6] orientada a la construcción colaborativa de contenidos.
+La característica principal de las Wikis es que cualquier usuario con mínimos conocimientos puede
+ingresar o editar información de manera simple, sin que sea necesaria la revisión del contenido, de esta
+forma se logran sitios colaborativos, con baja inversión en gestión y alta versatilidad en creación y
+actualización de contenidos.
+Las Wikis son utilizadas con distintos fines [7], por ejemplo como herramienta de auxilio al aprendizaje
+colaborativo, para construir bases de datos geográficas de libre acceso y distribución, para ayudar a la
+comunicación y documentación en proyectos de construcción de software, como espacio de construcción
+colectiva y preservación de conocimiento, como fuente de recursos de entretenimiento, entre otros. Este
+tipo de plataforma ha socializado la creación y el mantenimiento de contenidos, dado que se basan en la
+distribución de tareas, con una baja carga de actividades centralizadas o hechas por usuarios con
+privilegios.
+Una característica de estas plataformas es que cuentan con un sistema de control de versiones de
+páginas que le permite a partir del historial de cambios, volver a cualquier estado anterior de la página
+[7]. Esto posibilita que la plataforma pueda recuperarse rápidamente ante actos de vandalismo,
+publicidades no deseadas o problemas técnicos. Aunque el objetivo original era que cualquier usuario
+pueda publicar su aporte sin necesidad de revisión, un grupo de plataformas Wikis para combatir el
+vandalismo exigen la aprobación de los aportes antes de publicarse por usuarios de mayor jerarquía.
+Un blog, Weblog o cuaderno de bitácora, es un sitio Web que se actualiza periódicamente y almacena en
+orden cronológico información, generalmente textual de uno o varios autores. Normalmente en cada uno
+de los artículos los lectores pueden escribir sus comentarios y el autor darles respuesta, de esta forma
+se comparte la información en forma de diálogo. El objetivo o temática de cada blog es particular, los hay
+de tipo personal, periodístico, empresarial o corporativo, tecnológico, educativo, entre otros.
+del.icio.us es un servicio de gestión de marcadores sociales en Web. Posibilita agregar los marcadores
+que clásicamente se almacenaban como favoritos en los navegadores y categorizar estos enlaces con
+folcsonomías. Permite compartir los sitios Web almacenados con otros usuarios del sistema, así como
+determinar cuantos usuarios tienen un determinado enlace entre sus marcadores. Este sistema tiene una
+interfaz muy sencilla, un servicio de sindicación mediante RSS y una interfaz bastante amigable y simple
+usando HTML y un sistema de URL legible. Además posee una interfaz que facilita la interacción del
+mismo con otras aplicaciones.
+Flickr es un sitio Web con el objetivo de organizar de fotografías digitales. Flickr posibilita las
+búsquedas de imágenes por etiquetas, fecha y por licencias de Creative Commons. Ofrece servicio de
+sindicación mediante RSS y ATOM, así como una interfaz para la interacción con otras aplicaciones.
+Flickr utiliza AJAX en la etiquetación de texto y está basado en HTML y HTTP por lo que es usable en
+múltiples plataformas. Permite enviar por correo electrónico las imágenes. Este servicio es utilizado en
+gran medida por bloggers como depósito de fotos.
+Google AdSense es un sistema de publicidad ideado mediante el cual los Webmasters pueden activar
+textos e imágenes publicitarias en sus sitios Webs. Los anuncios están administrados por Google y
+generan ingresos a partir del impacto que tengan estos medidos en cantidad de clic en los usuarios que
+visitan el sitio. Los anuncios estarán en concordancia con el contenido de la Web, la situación geográfica
+y otros factores. Este sistema publicitario ha ganado popularidad entre los desarrolladores ya que los
+anuncios son menos importunos que los clásicos banners ya que están en concordancia con el
+contenido de la página.
+98
+3.5 VALORACIÓN PARCIAL DE LA WEB 2.0
+La Web 2.0 es claramente una etapa del desarrollo de la Web que logra una mayor socialización de la
+información que las etapas anteriores. En la Web 2.0 se rompen las barreras para la publicación de
+información en la Web por parte de personas no expertas. En la Web 2.0 todos tenemos la oportunidad
+de publicar y compartir información (textos, fotografías y videos) de forma sencilla.
+En la Web 2.0 se gana en accesibilidad lo que está dado por la facilidad con la que se puede dar a
+conocer una información, elemento que es aprovechado por los motores de búsquedas actuales. Toda la
+información que un usuario publique en la Web 2.0 le dará los derechos necesarios para exportar o
+recuperar la información que ha publicado. En esta etapa de la Web se alcanza radicalmente un mayor
+grado de socialización de la información
+En la Web 2.0 surgen un grupo de aplicaciones que se caracterizan por su claro objetivo social, la
+clave de todas estas nuevas aplicaciones es el usuario final y potenciar su colaboración. Las Wikis son
+un ejemplo clásico de aplicaciones de la Web 2.0, estas son vivas enciclopedias que están en constante
+cambio y evolución. Las Wikis favorecen la socialización de la información y se enmarca dentro del
+movimiento de Software Libre. Estas plataformas favorecen la socialización del conocimiento y la
+apertura a nuevas contribuciones.
+4 Web Semántica
+Muchos de los problemas actuales de la Web se solucionarían si Internet fuera una red de recursos
+que nos permitiera programar agentes que navegaran la infinitud de sitios pudiendo obtener la
+información que necesitamos sin tener que indicarle de donde obtenerla o que significado debe tener
+cada recurso. Esa Web, que aún se encuentra en una fase de desarrollo, es lo que se conoce como la
+Web Semántica. [8].
+Tim Berners-Lee define a esta etapa del desarrollo de la Web: “La Web Semántica es una extensión
+de la Web actual en la cual se dota a la información de significado bien definido para que tanto personas
+como ordenadores puedan trabajar cooperativamente” [9]. Es decir, utilizando la propia estructura
+tecnológica de la Web se pretende dotar a los recursos compartidos en ella de elementos de
+metainformación, de manera que esta primera facilite la comunicación “con sentido semántico” entre las
+máquinas que forman la red y, por lo tanto redunde en que las personas que la utilizan puedan obtener lo
+que desean con mayor rapidez y fiabilidad. El objetivo final de esta nueva Web es que se produzca un
+intercambio de información efectivo y eficiente.
+La Web semántica no es una red independiente de la actual, sino una ampliación; en la cual la
+información está dotada de significados bien definidos. La Web Semántica es una extensión de la Web
+actual en la que cualquier usuario podrá encontrar respuestas a sus preguntas de forma más rápida y
+sencilla debido a que la información esta mejor definida, representada y asociada con recursos que
+describen su semántica. Se pueden obtener soluciones a problemas habituales en la búsqueda de
+información gracias a la utilización de una infraestructura dotada de significado, mediante la cual, es
+posible compartir, procesar y transferir información y conocimiento de forma fácil.
+Actualmente la información presente en la Web se encuentra estructurada mediante lenguajes de
+etiquetado que únicamente describen la forma en que dicha información debe ser presentada al usuario
+por el navegador, pero no expresan nada sobre su significado, es decir, su semántica. La Web
+Semántica pretende que toda esta información sea fácilmente comprensible por los usuarios de
+información, y también por ordenadores y agentes inteligentes de softwares encargados de recuperarla.
+La Web Semántica estará diseñada estructuralmente de manera que se pueda inferir nuevo
+conocimiento del que ya está representado en ella.
+Dos conceptos claves para la Web Semántica son los de Metadatos y Ontologías
+Metadatos
+Un Metadato es un conjunto de información que identifica diferentes aspectos relacionados a grupos
+de datos o a datos específicos y permite conocer características de esos datos que los particularizan
+99
+dentro de un conjunto. Constituyen información sobre la forma y el contenido de los recursos
+informativos. La definición de Metadatos más conocida es: “Datos que describen datos”.
+Los metadatos constituyen información sobre la información misma. Los datos que conforman un
+metadato generalmente dan respuesta a las preguntas quién, qué, cuándo, cómo, dónde y porqué.
+Generalmente en el metadato se almacena información sobre las etapas de la existencia de los datos,
+así como elementos de su semántica. Los metadatos son una de las herramientas que más fuerza ha
+tomado en los últimos años destinados a apoyar la organización del caos existente en la Web. Su
+función en todo este proceso se puede enfocar desde dos puntos de vista, la del sistema y la del usuario.
+En la primera facilita la interoperabilidad y la posibilidad de compartir datos dentro de las diferentes
+herramientas de búsqueda, y en la segunda, permite la recuperación de la información, al suplir dos
+necesidades básicas de los usuarios, el acceso y la utilidad de la información.
+Ontologías
+Los metadatos solo van a estructurar los contenidos mientras que las ontologías permiten estructurar
+la semántica de un recurso. La principal motivación de las ontologías es que ellas van a permitir
+compartir y reutilizar bases de conocimiento de manera computacional.
+El término ontología tiene su origen en la filosofía y la epistemología y se define como la rama de la
+metafísica que estudia la naturaleza de la existencia. En materia de Computación una ontología es una
+entidad computacional que se crea como recurso artificial para la especificación y estructuración del
+conocimiento. Una ontología propone una jerarquía de conceptos basados en un vocabulario compartido
+y común a un dominio, lo que permite que se establezca como elemento fundamental para el
+entendimiento entre humanos y sistemas computacionales. Una ontología puede ser compartida y
+reutilizada por aplicaciones computacionales distintas, elemento suficiente para despertar gran interés en
+la comunidad científica durante los últimos años, principalmente en temas relacionados con la creación e
+integración de ontologías.
+En los últimos años se han definido varios conceptos para Ontología vinculados con la Inteligencia
+Artificial, las dos definiciones más difundidas son: “Una ontología es una especificación formal de una
+conceptualización compartida” [10] y “Una ontología es una fuerte estructura semántica que codifica
+reglas implícitas restringiendo la estructura de una porción de la realidad.” [11]
+El uso de ontologías proporciona una forma de representar y compartir conocimiento haciendo uso de
+un vocabulario común. Mediante esta representación permiten utilizar un formato de intercambio de este
+conocimiento, y a su vez brindan la posibilidad de ampliar, integrar otras ontologías o reutilizarlas en la
+aplicación de otros dominios. Las ontologías intentan limitar las posibles interpretaciones a un solo
+modelo mental.
+4.1 TECNOLOGÍAS
+En la Fig.1. se muestran las diferentes capas tecnológicas que componen la Web Semántica [12]:
+Fig. 1. Capas tecnológicas que componen la Web Semántica
+Unicode: Es una codificación del texto que permite utilizar los símbolos de diferentes idiomas sin
+observar caracteres extraños, lo que permite expresar información en cualquier idioma.
+100
+URI: Es el acrónimo de Uniform Resource Identifier (Identificador Uniforme de Recursos) y tiene como
+objetivo identificar un recurso Web.
+XML + NS + xmlschema: Esta capa agrupa las diferentes tecnologías que hacen posible que los
+agentes puedan entenderse entre ellos.
+RDF + rdfschema: Esta capa define el lenguaje universal con el cual podemos expresar diferentes ideas
+en la Web Semántica.
+Lógica: El razonamiento lógico permite determinar si los datos son correctos e inferir conclusiones a
+partir de ellos.
+Prueba: Las pruebas explican y verifican los pasos de los razonamientos lógicos.
+Confianza: Se refiere a técnicas que aseguran la identidad y fiabilidad de los datos y servicios.
+Lenguaje de Ontologías: Estos lenguajes nos permiten extender la funcionalidad de la Web Semántica,
+agregando nuevas clases y propiedades para describir los recursos. Permiten la creación de
+conceptualizaciones que definen el significado de un conjunto de conceptos para un determinado
+dominio.
+4.2 MIGRACIÓN DE LA WEB ACTUAL A LA WEB SEMÁNTICA
+La transición de la Web actual a la Web Semántica es importante que guarde una compatibilidad con
+la tecnología actual. La transición es vista principalmente desde en dos variantes [13]. La primera forma
+de transición consiste en conservar los documentos actuales, y crear las instancias asociadas anotando
+su correspondencia con los documentos. Esta variante es la más viable cuando se parte de un gran
+volumen información ya estructurado para la Web. La segunda variante es generar dinámicamente
+páginas Web a partir de las ontologías y sus instancias. Esta última variante puede resultar factible
+cuando los documentos antiguos ya se estaban generando automáticamente a partir de bases de datos.
+Teniendo en cuenta el volumen de información que ya forman parte de la Web, la transición de la Web
+actual a la Web semántica puede implicar un alto costo. Construir ontologías supone un esfuerzo que
+puede resultar tedioso cuando se agregan nuevos contenidos, pero directamente prohibitivo por lo que
+respecta a integrar los miles de gigabytes de contenidos antiguos. Las estrategias más viables combinan
+una parte de trabajo manual con la automatización del resto del proceso. Las técnicas para la
+automatización incluyen, entre otras, la migración de estructura de bases de datos a ontologías, el
+aprovechamiento de los metadatos y estándares de clasificación presentes en la Web, así como la
+extracción automática de metadatos a partir de texto y recursos multimedia.
+4.3 VALORACIÓN PARCIAL LA WEB SEMÁNTICA
+Actualmente la información presente en la Web se encuentra estructurada mediante lenguajes de
+etiquetado que únicamente describen la forma en que dicha información debe ser presentada al usuario
+por el navegador, pero no expresan nada sobre su significado, es decir, su semántica. La Web
+Semántica pretende que toda esta información sea fácilmente comprensible por los usuarios y por
+computadoras encargadas de recuperarla. El reto deberá ser el de llegar a codificar la semántica de la
+información compartida en el entorno Web mediante metadatos, taxonomías no excluyentes y lenguajes
+de ontologías.
+Representar formalmente la semántica de la información que se publica en la Web incidirá en la
+implementación de agentes inteligentes que puedan "entender" el significado de esta información, estos
+serán entonces los responsables de asistir a los usuarios en la recuperación de información que
+demandan. Así mismo, además de la semántica de los hipertextos, sonidos, imágenes u otros elementos
+representados, se pretende incorporar otro conocimiento utilizable por agentes inteligentes como es la
+confianza entre los usuarios de información, definida por una establecida credibilidad o fiabilidad, en la
+información obtenida e intercambiada.
+Se espera que los datos puedan ser “comprendidos automáticamente” y utilizados por agentes de
+software y ordenadores. La Web Semántica estará diseñada estructuralmente de manera que se pueda
+inferir nuevo conocimiento del que ya está representado en ella. Todo esto favorece la socialización de la
+información y el conocimiento ya que las herramientas y sistemas para recuperar la información en la
+Web serán mucho más útiles y eficaces y tendrán en cuenta la semántica de la información que se
+comparte.
+101
+5 CONCLUSIONES
+La Web surge con el objetivo de socializar información en un marco reducido. Con la popularización
+de la Web gracias a su importancia como medio de comunicación muy útil para compartir información
+ese marco inicial reducido fue ampliándose hasta abarcar prácticamente toda la humanidad. La Web no
+es solamente un fenómeno tecnológico, sino que es una producción cultural [14]. El desarrollo de la Web
+ha pasado por varias etapas bien marcadas. En cada una de ellas se observa un mayor grado de
+socialización de la Información que la etapa anterior.
+Una etapa del desarrollo de la Web muy importante en cuanto a la socialización de la Información es
+la Web 2.0. En esta etapa de la Web el hombre es el centro de toda la gestión y el objetivo principal es
+lograr la colaboración de los usuarios finales entre sí mediante la Web. Esta nueva generación de la Web
+requiere nuevos conceptos como: folcsonomías, bitácoras o blogs, sistemas de recomendación y
+entornos colaborativos de desarrollo; todos ellos refuerzan la ruptura de la asimetría que caracterizó la
+relación anterior entre usuarios y generadores de contenidos.
+Ante la continua evolución que sufre la Sociedad de la Información, a causa del acelerado desarrollo
+de las tecnologías y nuevos criterios en las ciencias, ha surgido un nuevo contexto para el desarrollo de
+la actividad informacional: La Web Semántica. La Web Semántica propone la inclusión de semántica en
+los recursos Web que se comparten de modo que se logre un intercambio y recuperación más eficiente.
+La concreción de este proyecto de etapa de desarrollo de la Web será muy importante para la
+socialización de la información y el conocimiento.
+El desarrollo de la Web favorece la socialización de la información y el conocimiento y con ello una
+sociedad más informada. La Web, a pesar que no cuenta con mecanismos de validación y acreditación
+de la información que en ella se comparte, consiste en un canal válido, rentable, rápido y popular de
+intercambio de información. La Web contribuye a la socialización de la información y esto favorece el
+desarrollo de la ciencia ya que si gracias a un canal como la Web la sociedad está más informada, los
+científicos a su vez tendrán más conocimientos a emplear en la creación de nuevos conocimientos. La
+ciencia es un fenómeno social que no puede desarrollarse al margen de la sociedad [15] y estará
+influenciada y guiada a satisfacer las necesidades de la nueva Sociedad de la Información.
+La Web se incluye dentro de los cambios tecnocientíficos que han caracterizado las últimas décadas
+de la historia de la humanidad. Tecnociencia y sociedad están unidos mediante un determinismo
+tecnológico que exige adaptarse a él [3], de igual forma la Web exige la participación cada vez mayor de
+la sociedad en su desarrollo y mantenimiento, así como la aceptación plena de la misma como canal
+eficaz de socialización de información y el conocimiento.
+REFERENCIAS
+1. Leal Labrada, O.: Web Semántica y Ontologías, desafíos para el Profesional de la Información
+en el siglo XXI (2006) Memoria del IX Congreso Internacional de Gestión de la Información INFO 2006
+2. Rocher, G.: Introducción a la Sociología General, Herder, Barcelona. (1985)
+3. Pimentel L.B.: Problemas Sociales de la Ciencia y la Tecnología, Editorial Felix Varela, La
+Habana (1994)
+4. James Garrett, J: “AJAX: A New Approach to Web Applications”(2005) Disponible en:
+http://www.adaptivepath.com/publications/essays/archives/000385.php 08-12-2006 09:00
+5. O’Really, Tim. “What Is Web 2.0. Design Patterns and Business Models for the Next Generation
+of Software”.(2005) Disponible en: http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-web-
+20.html 08/12/2006 9:00
+6. Augar, N., Raitman, R., & Zhou, W.: Teaching and learning online with wikis. Beyond the comfort
+zone: Memoria del 21st ASCILITE Conference. (ASCILITE 2004) (2004). pp. 95-104
+7. Bordignon, F.: Wikis: Hacía un modelo comunitario de preservación y socialización del
+conocimiento (2007) ISSN 1548-3436
+8. Nafria, I.: El futuro de Internet tiene nombre: la Web semántica. Disponible en :
+http://www.baquia.com/noticias 23/05/2001 08:00
+9. Berners-Lee, T.; Hendler, J.; Lassila, O.: The Semantic Web. Scientific American, (2001)
+Disponible en: http://www.scientificamerican.com 08-12-2006 09:00
+102
+10. Gruber, T.: A Translation Approach to Portable Ontology Specifications (Technical Report No.
+KSL 92-71). Stanford, CA: Knowledge Systems Laboratory, Stanford University. (1992)
+11. Guarino, N.: Formal Ontology and Information Systems. In N. Guarino (Ed.), Formal Ontology in
+Information Systems. Memorias de FOIS’98, Trento, Italia, 6-8 Junio 1998. Amsterdam, IOS Press,
+(1998) 3-15
+12. Barrero, A., Herrerías, R.:La Web Semántica y las Ontologías (2006) Universidad de Alcalá
+13. Castell, P.: La Web Semántica. (2005)
+14. Castell, M.: La dimensión cultural de Internet (2002). Disponible en:
+http://www.uoc.edu/culturaxxi/esp/articles/castells0502/castells0502.html 23/03/2007 08:00
+15. Kedrov, B.: La ciencia. Editorial Grijalbo, S.A., México (1968)
+103

@@ -1,0 +1,538 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.143-151
+Recibido06-2020,Aceptado07-2020
+Análisis de la epidemia de COVID-19 en Cuba por
+medio del seguimiento de los pacientes infectados y
+sus contactos
+Analysis of the COVID-19 epidemic in Cuba by
+monitoring infected patients and their contacts
+Mijail Borges Quintana1*, Eloy Rafael Oliveros Domínguez2
+Resumen En esta investigación se desarrollan algunas herramientas que trabajan con los datos que se
+recogenporelServiciodeSaluddeCubaenrelaciónalaEpidemiaocasionadaporlaCOVID-19.Losdatos
+que se utilizan son los relacionados con la información de los contactos de cada uno de los infectados. Se
+trabajaconlatasadedetecciónasumiendounvalorfijoyenbaseaelloseintroduceelcocientededetección
+yvariasfórmulasdemediciónparaevaluarelincrementoderiesgoenunmomentooetapadada.Seevalúa
+elcomportamientodelaepidemiaenCubaenlosprimeros96díasdeacuerdoalcocientededetección,así
+comolainterpretacióndelasfórmulasintroducidas.Semuestracomoéstasherramientasproveeninformación
+útilparalacomparacióndediferenteslocalidadesdelpaís.Almismotiempoelanálisisdeéstasherramientas
+constituyenunmediodeavisodeposibleincrementoderiesgoquepuedesignificarunincrementodenuevos
+casosinfectadosacortoplazo.
+Abstract Inthisresearch,sometoolsaredevelopedthatworkwiththedatacollectedbytheCubanHealth
+Service in relation to the Epidemic caused by COVID-19. The data used are those related to the contact
+informationofeachoftheinfected. Weworkwiththedetectionrateassumingafixedvalueandbasedonthis
+we introduce the detection quotient and various measurement formulas to evaluate the increase in risk at a
+givenmomentorstage. ThebehavioroftheepidemicinCubainthefirst96daysisevaluatedaccordingtothe
+detectionquotient,aswellastheinterpretationoftheformulasintroduced. Itisshownhowthesetoolsprovide
+usefulinformationforcomparingdifferentlocationsinthecountry. Atthesametime,theanalysisofthesetools
+constitutesameansofwarningofapossibleincreaseinriskthatmaymeananincreaseinnewinfectedcasesin
+theshortterm.
+PalabrasClave
+COVID-19enCuba,comparacióndelocalidades,medidasdecomparación
+Keywords
+COVID-19inCuba,localitycomparison,comparisonmeasures
+1DepartamentodeMatemática,FacultaddeCienciasNaturalesyExactas,UniversidaddeOriente,SantiagodeCuba,Cuba,
+mijail@uo.edu.cu.
+2DireccióndeInformatización,UniversidaddeOriente,SantiagodeCuba,Cuba,eoliveros@uo.edu.cu.
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción deaislamiento.ElsistemadesaluddeCubarealizaungran
+trabajoenladireccióndeladeteccióndenuevoscasosyel
+Teniendo en cuenta algunas ideas sobre todo revisadas
+seguimientodesuscontactos,unidoalprocesodeaislamiento
+en [4, 3] (en relación con los modelos SIR) se ha elabora-
+como apoyo a esta estrategia. Es por ello que este trabajo
+dounprocedimientoqueenunalocalidadqueasumimosya
+explota esas potencialidades disponibles en el contexto de
+aisladadetenercontactosconotras1,deacuerdoalnúmero
+nuestropaísparacrearalgunasherramientasquehaganuso
+de infectados, sus contactos y bajo el supuesto de una tasa
+deesaspotencialidadesyparticularidades.
+de detección fija de la enfermedad, permite evaluar la evo-
+lucióndelaepidemiaymedirlaefectividaddelasmedidas Unaventajaquepuedetenerestapropuestaesqueconstitu-
+1Porejemplounaprovinciadelpaís,quevienesiendoelescenarioideal, yeunaherramientaquepuedeaplicarseaúnenlosescenarios
+unmunicipiooinclusounazonaencuarentena dondenohaymuchoscasoseinformación.Essabidoquela
+144 AnálisisdelaCOVID-19enCubapormediodelseguimientodelospacientesinfectadosysuscontactos
+precisióndelosmétodoscontinuosmejoraenlamedidaque laenfermedadporsercontactodeuncasoconfirmadooun
+elcrecimientodelaepidemiaesmayorysedisponedemayor casoimportado.Enestecaso,esimportanteparaC(t)elmo-
+cantidad de información y evolución en el tiempo. Debido mento en que los casos son detectados con la enfermedad,
+aéstascaracterísticasdiscretasdelmodelopropuestoelaná- con respecto a la utilización y repercusión de este dato en
+lisispuedellevarsearegionesysubregionesdelalocalidad nuestro análisis esos datos se tienen en cuenta solo para el
+bajoinvestigación,locuálserámásdifícilparalosmodelos instantedetiempoenquecadacasoesdetectado.Enmuchas
+continuosenlamedidaquemásparticularsehagaelanálisis. ocasionesconeltiempoelsistemadesaludlograestablecerel
+Ademássepuedeutilizarencombinaciónconotrosmodelos vínculoepidemiológico,locualesimportanteparacompletar
+yherramientas. y profundizar el estudio sobre lo que se denomina la araña
+Unavezqueelsistemadesaluddetectacasospositivosa epidemiológica.Puedequeenalgúnmomentoutilicemosel
+laCOVID-19entoncesserealizaunbuentrabajodelevanta- términodecontactosparaloscasosacumuladosenC(t),recor-
+mientodeposiblescasospositivospormediodelestudiode dandoqueellosignificaenrealidadcontactoocasoimportado
+loscontactosycontactosdecontactosdecasosconfirmados. apartirdeldía24demarzo.
+Deahíqueenmuchasocasioneselmomentodemayorriesgo Esnecesariodestacarqueparaeldesarrollodeestetrabajo
+notienequecoincidirconelmomentodeunmayornúmero I(t)seutilizaráparaeltotaldecasospositivosenuntiempo
+decasos,debidoaqueéstospuedenestardadosproductodel t ynoparalosinfectadosenesetiempo,losllamadoscasos
+levantamiento de posibles susceptibles en el estudio epide- activos.
+miológicoqueserealiza.Sinembargo,elmayorriesgopuede Inicialmenteasumiremosk=0,2(porcadainfectadode-
+muchasvecesprecederaesosincrementosdecasos,dadopor tectadohay5,eldetectadomás4más),estevalorseestima
+unnúmerodecasosqueenelmomentodeserdetectadosnose que se encuentra en el intervalo (0,1,0,2) [2, 4]. Aunque
+conocelafuentedeinfecciónyporlotantonoseencontraban la fórmula la expondremos con el valor de k. Además las
+encentrosdeaislamiento.Muchasvecesendependenciade herramientasqueseutilizanparaevaluarlaevolucióndela
+lamagnituddeesassituacionessonlacausadelaaperturade epidemia son independientes del valor específico de k. Te-
+eventosdetransmisiónlocal. niendoencuentaqueelnúmerodecasospositivosdetectados
+Esporelloquebasadosenlatasadedeteccióncreamos hastaeldíatesdeI (t)entonceselnúmerodecasospositivos
+0
+unafórmulaquedenominamoscocientedetecciónyevalua- (I (t))eneldíat segúnlatasadedetecciónsería
+p
+moselcomportamientodelamismaenlasdiferentesprovin-
+1 1
+cias.Losresultadosobtenidossonconsistentesconelcompor- I (t)= I (t)−C(t)=I (t)+( −1)I (t)−C(t). (1)
+p 0 0 0
+k k
+tamientoyevolucióndelaepidemiaenelpaísymostramos
+variasformasenquesepuedenutilizarlasherramientasdesa- Laideadelafórmulaessencilla,seutilizaelfactorkpara
+rrolladas. predecirapartirdeloscasosobservadosloscasosreales,pero
+enesteconteosedescuentaloscasosquealserdetectadosya
+estánbajoelcontroldelsistemadesalud.
+1. Fórmula para el cociente de detección
+Esposiblereformularlaexpresiónanteriordeformatal
+La unidad de tiempo es 1 día. Para la metodología pro- que se obtenga cierta ley de formación recurrente, que ya
+puestasoloesnecesarioconocerparaundíadado,elnúmero tengaencuentalocalculadohastaeltiempot eincorporelo
+de casos positivos y el número de casos que son contactos nuevoparat+1.Deestaformaseobtendría
+de un caso previo. En este sentido asumiendo una razón k
+1
+(k<1)entrelosinfectadosdetectadosylosinfectadosreales, I p (t+1)=I p (t)+ (I 0 (t+1)−I 0 (t))−(C(t+1)−C(t)).
+k
+siguiendovaloresanalizadosen[2,4]seelaboraunafórmula (2)
+recurrentepredictivaparaelnúmerodeposiblescasospositi- Elúltimosumandodelafórmulaanteriorrepresentadel
+vosrealesenundíadadoI p (t),partiendodelconocimientodel totaldenuevoscasoslacantidadqueconstituyencontactos
+númerodecasosobservadosI 0 (t)yelconocimientodeC(t) decasosprevios(C(t+1)−C(t)).
+querepresentaloscasosquesoncontactosdecasosconfirma-
+dosocasosquesonimportados2 apartirdelestablecimiento Definición1(cocientededetección) El cociente de detec-
+ciónparaundíat enunalocalidadconunnúmerodecasos
+delperíododeaislamientoenCuba,apartirdeahoranosre-
+positivosI (t)ydeellosC(t)siendocontactosdeotroscasos
+feriremosaéstoscasossimplementecomocasosimportados. 0
+sedefinecomo
+UtilizamosI (t)paradenotarlaprediccióndelnúmeroreal
+p
+I (t)
+decasosinfectadosI(t). q(t)= 0 .
+I (t)
+Notequenoeslomismolaaccióndecontagiodeunpa- p
+cientedetectadoconlaenfermedadparaelcualseinvestiga
+Teniendo en cuenta que 0≤C(t)≤I (t), se tiene el si-
+0
+la fuente de contagio, a un paciente que se le ha detectado
+guienteresultadoqueacotalosvaloresdeq(t).
+2Apartirdelmomentoqueseestablecióelperíododeaislamientoen Lema2(Acotacióndelcocientededetección)
+Cuba,eldía24demarzo,día14delaepidemiaenCuba,todaslaspersonas
+queentranalpaíspasanunperíododeaislamientodurante14díasenlosque k
+k≤q(t)≤ .
+seleshacelapruebaparadetectarsisonpositivosalaCOVID-19. 1−k
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.143-151
+AnálisisdelaCOVID-19enCubapormediodelseguimientodelospacientesinfectadosysuscontactos 145
+DenotaremosporIˆ(t+1),alnúmerodecasosobserva- másdeevaluaciónsobrelaevolucióndelaepidemiaenuna
+0
+dos en el día t+1 (Iˆ(t+1)=I (t+1)−I (t)). De igual localidad.
+0 0 0
+forma,Cˆ(t+1)=C(t+1)−C(t).Notequeenundíalome-
+jor que puede pasar, con respecto al cociente de detección 2.1 Comportamiento del cociente de detección en
+esqueCˆ(t)=Iˆ(t)(todosloscasosnuevossoncontactoso eltiempo
+0
+importados),porotraparte,lapeorsituaciónvendríadadapor Gráfica de (t,q(t)): Para t =0 se inicializa q(0) en el
+Cˆ(t)=0. valormáximo k (verLema2).Cuandoq(t)alcanceunvalor
+1−k
+Eldescensodelcocientededetecciónq(t)indicalaposi- constanteporuntiempoprolongadopodráestarindicandoel
+bilidaddeunincrementodelnúmerodecasos,asumiendoque findelaepidemiasiestopermaneceeneltiempo;noobstante,
+elsistemadesaludtrabajaentodomomentoporencontrarla antes de eso, aunque la situación en cuanto a la amenaza
+mayorcantidadposibledecontagiadosconlaenfermedad.El de incremento de riesgo vaya mejorando (q(t) creciendo)
+siguienteresultadoesclarecemásestaafirmaciónymuestra puedaquemientrashayanuevoscasossemantengahaciendo
+ademáscomoeldescensodeq(t)esindependientedelvalor intervalosdecrecimientoydecrecimiento.
+dek. Cada vez que q(t) salga de la dinámica de crecimiento,
+indicarálanecesidaddecontrolarlasituaciónenunaregión
+Teorema3(Condiciónincrementaldeq(t)) Seaunaloca-
+determinadaasociadaaloscasospositivosquehanocasionado
+lidadconvaloresI (t),C(t)yq(t)enundíat.SeanIˆ(t+1)
+0 0 eldesajuste,probablementedebidoacasosdondeseinvestiga
+yCˆ(t+1)losvalorescorrespondientesaldíat+1.Entonces,
+lafuentedecontagio.
+lassiguientestrescondicionessonequivalentes.
+Realizamosunatransformacióndeq(t)enotrafunciónde
+1. q(t+1)≤q(t). t cuyascondicionesdemonotoníasonlasmismasqueq(t),
+conelobjetivoderepresentargráficamenteq(t)juntoconlos
+Iˆ(t+1)
+2. 0 ≤q(t). gráficosdeunalocalidadcorrespondientesalascasosdetecta-
+1Iˆ(t+1)−Cˆ(t+1)
+k 0 doscadadía.Estanuevafunciónadmitesernormalizadade
+formatalquesurangodevariacióncoincidaconeldelgráfico
+Cˆ(t+1) C(t)
+3. ≤ . deloscasosdiarios,locualpermitiríaanalizarelcontrastedel
+Iˆ 0 (t+1) I 0 (t) comportamientodeambassituacionesenunmismográfico.
+Demostración.Teniendoencuentaqueq(t)= I0(t) yque EnelLema2semostraronlosvaloresmáximosymini-
+I (t)+Iˆ(t+1) Ip(t) mosdeq(t).Sear(t)=q(t)−k,noteque0≤r(t)≤ 1 k − 2 k .Si
+q(t+1)= 0 0 ,entoncesq(t+1)≤ calculamoselvalormáximom deI (t)paraunalocalidad
+I (t)+1Iˆ(t+1)−Cˆ(t+1) 0 0
+p k 0 enelperíodoquesedeseagraficarentoncessepuedegraficar
+Iˆ(t+1)
+q(t) sí, y sólo sí, 0 ≤q(t). Con lo que asociadoaq(t)lafunción m0(1−k)r(t)lacualtendríaelmismo
+1Iˆ(t+1)−Cˆ(t+1) k2
+k 0 rangodevaloresqueI (t).
+quedademostradalaequivalenciaentre(1)y(2). 0
+I (t)
+Comoq(t)= 1I (t 0 )−C(t) entonces 2.2 Construccióndemedidasparalaevaluaciónen
+k 0 eltiempodeq(t)enunalocalidad
+Iˆ(t+1) Cˆ(t+1) C(t)
+0 ≤q(t)sí,ysólosi, ≤ .
+1 k Iˆ 0 (t+1)−Cˆ(t+1) Iˆ 0 (t+1) I 0 (t) Medidadelostriángulosdescendentes
+Conloquequedademostradalaequivalenciade(2)y(3). Estamedidatieneencuentasobreelperíodoevaluadoω=
+Observequedelaequivalenciade(1)y(3)enelteorema [t,t ](unintervalodetiempo),losdíasenqueq(t)desciende
+i f
+anteriorseobtienequelosdescensosoincrementosdeq(t) ylamagnitudenlaquedesciende.Debemosaclararquepara
+nodependendelvalorespecíficodek. compararlocalidadesestásdebenservaloradasenelmismo
+Analizando(3),enlamedidadequedelosnuevoscasos períododetiempo.Asumimosquelaunidaddetiempoesun
+detectadosseanmenoslosqueconstituyancontactosdecasos díayqueelperíodoevaluadosedivideenlost −t intervalos
+f i
+previosocasosimportados,serámayorlaposibilidaddeque detiempodeundíacorrespondientesalperíodo.
+eneltrabajodeinvestigaciónepidemiológicodelsistemade Seaenesteintervalolossubintervalosω =[t ,t ], j=
+j ji jf
+saludenlosdíassiguientesseencuentreunmayornúmerode 1,...,k dondeq(t)decrece.
+ω
+casospositivos.Eltiempoenelquetranscurraeseincremento
+dependerádelseguimientodeloscontactosdeloscasosde- kω 1
+m (ω)= ∑ (q(t )−q(t ))(t −t ).
+tectadosydelmomentoderealizacióndelostestsypuede 1 2 ji jf jf ji
+j=1
+serunfactorquevaríe,talycomosemuestraenunodelos
+análisisexperimentalesdelaSección3. La idea de esta medida consiste en cada vez que existe
+enelperíodoevaluadounintervalodedescensohayaelárea
+deltriángulocorrespondientealgráficode(t,q(t)),seríauna
+2. Análisis gráficos
+formademedireldescensoquetieneencuentalosdosfac-
+Lasherramientasprincipalesdeestametodologíasedes- tores,lacantidaddedíasenquedesciendeylamagnituddel
+cribenenestasecciónysetratadeproveerdeunmecanismo descenso.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.143-151
+146 AnálisisdelaCOVID-19enCubapormediodelseguimientodelospacientesinfectadosysuscontactos
+Pudieranconstruirsedosmedicionesquetuvieranencuen- Lasfigurascorrespondientesalosgráficosdelasprovin-
+tasololamagtituddedescensoolacantidaddedíasdedes- ciasdeSantiagodeCubayMayabequeyelmunicipioespecial
+censo.Lomásimportanteesinterpretarquenosdicecadauna Isla de la Juventud se muestran en la sección de anexos al
+delasmedidasyutilizarlasenconjunto. finaldeltrabajo.
+Unaespecializacióndelamedidam seríalamedidadel
+1
+mayortriángulodescendente. 3.1 Ordendelasprovinciassegúnlamedidam pa-
+2
+raq(t)
+1
+M (ω)=max{ (q(t )−q(t ))(t −t ), j=1,...,k }. Sedivideeltiempotranscurridoenperíodosde14días
+1
+2
+ji jf jf ji ω
+ysemuestraporcadaprovinciaelnúmerodedescensosque
+Medidadelosdíasdescendentes
+ocurrendeq(t)encadaperíodoyeltotaldedescensos(ver
+Figura1).Notecomoelordensegúnm muestraenprimer
+2
+kω lugaralastresprovinciasquehanpresentadomayorescom-
+m (ω)= ∑(t −t ).
+2 jf ji plicaciones con la epidemia, La Habana, Matanzas y Villa
+j=1
+Clara.MatanzasinclusoporencimadeVillaClara,apesar
+Unaespecializacióndeestapudieraserlamedidadela detenerunmayornúmerodecasos(219VillaClaray207
+mayorcantidaddedíasseguidosdeundescenso Matanzas[1]).Ellotienequeverconunamayorinestabilidad
+en su comportamiento en el caso de Matanzas, esto puede
+M (ω)=max{t −t , j=1,...,k }.
+2 jf ji ω apreciarse observando las Figuras 3 y 4. En el caso de La
+Habanaenlos96díasinicialesdelaepidemiaocurrieron29
+Medidadelasmagnitudesdescendentes
+decensosdeq(t),prácticamenteeldobledeMatanzascon15
+kω descensosqueeslaprovinciaquelesigue.
+m 3 (ω)= ∑(q(t ji )−q(t jf )). Porotraparte,enelladoopuesto,notecomoMayabeque
+j=1 ylaIsladelaJuventudocupanloslugares14y16respecti-
+Unaespecializacióndeestapudieraserlamedidadela vamente,sinembargoocupanloslugares10y11encuanto
+mayormagnituddescendente a cantidad de casos4. De los gráficos de ambas provincias
+(verFiguras5y6)sepuedeobservarlaestabilidaddelcom-
+M 3 (ω)=max{q(t ji )−q(t jf ), j=1,...,k ω }. portamientodelaepidemia,dehechoenlaIsladeJuventud
+ocurrelasituaciónideal,q(t)describeunarectahorizontal
+3. Evaluación del comportamiento de la correspondienteaunvalorconstantetodoeltiempo,locual
+sedebeaquetodosloscasosdelaIsladelaJuvedtudfueron
+epidemia en las provincias utilizando el
+contactosyestojuntoalasmedidasdeaislamientoycontrol
+cociente de detección (q(t))
+epidemiológicopermitieroneseresultado.
+Los datos del número de casos diarios, casos que son Analizandolasprovinciasdemayorriesgodurantelaevo-
+contactosenelmomentodeserdetectadosconlaCOVID-19 lucióndelaepidemiasegúnelordenm 2 ,LaHabana,Matanzas
+yloscasosimportadossontomadosde[1]. yVillaClara,sepuedeobservarlarelacióndelosperíodos
+Lasmedidasm ym consideramosquepuedendarma- demásdescensosdeq(t)conelincrementoenlacantidadde
+1 3
+yorinformaciónenlacomparacióndeperíodosdeunamisma casosenelmismoperíodooenelsiguiente.
+localidadqueencompararlocalidadesdiferentes.Noobstante
+3.1.1 LaHabana
+mostraremoscómoesposibleobtenerinformaciónapartirde
+EnlaTabla1,29-42(8)significaqueenelperíododel
+lainterpretacióncombinadadelasdiferentesmedidas.Lama-
+día29aldía42ocurrieron8descensosdeq(t).Porotraparte,
+yormedidadeinestabilidaddeunalocalidadladaelnúmero
+29-42:(333,239,6)-94significaqueenelperíododeldía29
+dedescensosqueocurranenella,locualseobtieneconm .
+2 al42,seconfirmaron333casos,deellos239soncontactos
+Elestudiodeestasecciónserealizatrabajandolasprovin-
+o importados y 6 son importados, habiendo 94 casos en el
+ciasdelpaísyelmunicipioespecialIsladelaJuventudcomo
+períododeloscualessedesconocíalafuentedeinfecciónen
+laslocalidades.Elperíodoevaluadoesdesdeeldía1dela
+elmomentodeserdiagnosticados.
+epidemia(11demarzo)hastaeldía96delaepidemia(14de
+ObserveenlaFigura2,elperíodo29-42antecedealpe-
+junio).
+ríododelmayorpicodecasos(día52)yocurreelsegundo
+La notación t -t significa el período desde el día t al
+1 2 1 pico(día42).Noteenlafiguracomoseapreciaeneseperíodo
+díat y se utilizará para denotar los descensos de q(t). Por
+2 undescensopronunciado5deq(t)enelcualseacumulan94
+otra parte, la notación (n,m,h) significa que en el período
+casosquenoerancontactosenelmomentodeserdetectados,
+quesereferenciahayncasospositivos,deellosmyahabían
+locualprovocalaocurrenciadelmayorpicodecasosenel
+sido registrados como contactos3 de casos confirmados en
+el momento de confirmarse como positivos y h son casos 448y42respectivamente[1].
+importados. 5Estopudieraapreciarseutilizandolasmedidasm 1 ym 3 paracompa-
+rarperíodosdeunamismalocalidadyevaluarperíodosdedescensosmás
+3Enestecasoseríancontactosocasosimportados. pronunciados.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.143-151
+AnálisisdelaCOVID-19enCubapormediodelseguimientodelospacientesinfectadosysuscontactos 147
+Figura1.Ordensegúnm
+2
+delasprovincias
+Tabla1.LaHabana:períodosdemayordescensodeq(t) Tabla2.Matanzas:períodosdemayordescensodeq(t)
+ordensegúnm Casos ordensegúnm Casos
+2 2
+29-42(8), 1-14:(17,1,0)-16 43-56(5), 29-42:(36,28,0)-8
+57-70(7), 29-42:(333,239,6)-94 29-42(4) 43-56:(49,38,0)-11
+1-14(5) 43-56:(339,292,1)-47 57-70:(55,50,0)-5
+57-70:(99,82,1)-17
+71-84:(182,167,1)-15
+3.1.3 VillaClara
+periodosiguiente(43-56),comoconsecuenciadelosriesgos
+Alperíodo43-56lesigueunpicode10casos(día57),
+acumulados, se incrementan los casos debido al trabajo de
+cercadeldescenso54-56(4,0,0).Observecomoelperíodo
+detección del sistema de salud a partir del incremento del
+del1-14antecedióaunperíododondeseincrementaronlos
+riesgoepidemiológico.Enelperíododelmayorpicohay47
+casos confirmados debido al trabajo epidemiológico, resul-
+casosquenosoncontactos,queparalacantidaddecasosde
+tando todos contactos de casos confirmados. O sea que el
+eseperiodo(339)esmenossignificativoquelos94quenolo
+período15-28esunperíodoestableencuantoalriesgoepide-
+sonelperíodoanterior.
+miológico,locualsepuedeevidenciarenelgráficodeVilla
+Clara(verFigura4)conelcrecimientodeq(t)eneseperíodo.
+3.1.2 Matanzas
+En el período 29-42, ocurre el mayor pico de casos el día
+Enlosperíodos29-42y43-56parecenestarlasmayores
+oscilaciones de q(t) (según se puede comprobar con m y
+1
+m ).Enéstosperíodosocurrenlamayorcantidaddepicos,38
+3 Tabla3.VillaClara:períodosdemayordescensodeq(t)
+(9,6,0),40(10,7,0),48(8,5,0)y50(10,8,0),yelmayor
+en 57-70. Un pico el día 66 con 19 casos donde todos son
+ordensegúnm Casos
+contactosdecasosprevios. 2
+43-56(4), 1-14:(5,0,0)-5,
+Notecomoenelperíododemayorcantidaddedescensos
+1-14(3), 15-28:(45,45,14)-0,
+ocurrenlamayorcantidaddecasosquenosoncontactos(11)
+29-42(2) 29-42:(125,116,0)-9,
+ycomoconsecuenciadeelloenelsiguienteperíodo57-70
+43-56:(20,14,0)-6
+se observa una mayor cantidad de casos confirmados (55),
+ocurriendoelmayorpicoeldía66.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.143-151
+148 AnálisisdelaCOVID-19enCubapormediodelseguimientodelospacientesinfectadosysuscontactos
+Figura2.Gráficodeq(t)deLaHabana
+37 (33,32,0), y este es antecedido por un descenso6 32-33
+(20,15,0),dondeseacumulan5casosquenosoncontactos.
+Notequedescontandoeldescensoinicialtípicodeq(t)asocia-
+doalosprimeroscasosdetectadoseneliniciodelaepidemia,
+eldescenso32-33eselmáspronunciado(segúnlasmedidas
+m ym ).
+1 3
+Figura4.Gráficodeq(t)deVillaClara
+EnelcasodeVillaClara,notecomoloslugaresqueocupa
+conm ym correspondenalamediabajaentrelas16locali-
+1 3
+dades.Elloquieredecirquelosdescensosproducidosnoson
+tanpronunciadoslocualestáasociadoconquelacantidadde
+Figura3.Gráficodeq(t)deMatanzas casosquenosoncontactossonmenosrelativoalacantidad
+decasosconfirmados.Note,enefecto,enlacondición3del
+Teorema3lainfluenciadeestehechosobrelosdescensosde
+q(t).
+3.2 Sobre la interpretación y análisis con las 3 me-
+didas ConrespectoaLaHabananoteelcambiodellugar1enm 1
+al10enm .Ellomanifiestalainfluenciaclavedelosperíodos
+VeamoselordenqueocupanLaHabana,MatanzasyVilla 3
+dedescensodemásdeundía7.Son29díasdedescenso(ver
+Claraconrespectoalas3medidas.
+6Inclusoelpropiodescenso29-30(10,9,0)seencuentrarelativamente 7Observequeenmenormedida,perosucedealgosimilarconVillaClara
+cerca. quebajadellugar10conm 1al13conm 3.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.143-151
+AnálisisdelaCOVID-19enCubapormediodelseguimientodelospacientesinfectadosysuscontactos 149
+Tabla4.Comparaciónconlas3medidas puedeobservarseenlosdetallesdelafigura(vertotaldeca-
+sos y contactos). Como una ejemplificación de este hecho,
+Provincias m 1 m 2 m 3 analicemoslostriángulosdemayordescenso(eliminandolos
+LaHabana 1 1 10 delinicio)deSantiagodeCuba,LaHabana,MatanzasyVilla
+Matanzas 4 2 3 Clara,yencadaunodeelloslacantidaddecasosycontactos
+VillaClara 9 3 13 asociados.Almismotiempovisualicecadatriánguloencada
+unodelosgráficos,enelcasodeVillaClarahemoscolocado
+dos triángulos de descenso de una medida muy similar, al
+igualquesehandesechadodostriángulosdedescensoque
+Tabla1)pero16triángulosdedescenso.Porloqueexisten ocurrenalinicio7-8y11-13.
+variostriángulosdedescensoconalmenos2días(3con3, Encadaunodeloscasosrecomendamosubicarseenel
+6con2).ObserveenlaFigura2comohayunperíodolargo gráficocorrespondienteconlostriángulosdedescenso,yob-
+33-45dondeocurrenvariosdescensos(7descensos:33-36, servelacantidaddecasosylosquenosoncontactosquetiene
+37-38,39-42,44-45)yqueelmayorpicodecasosocurreel asociadocadauno.Noteporejemploqueparaocasionarel
+día52(64,62,0). triángulodedescensodeLaHabana33-36,quemarcaundes-
+Matanzas, es la más estable con respecto al lugar que censopronunciadodeq(t),setienen100casosconfirmados
+ocupa en las 3 medidas. La diferencia entre m 1 y m 3 no es deloscuales41nosoncontactos.
+significativa porque a diferencia de La Habana solo tiene
+un período de descenso compuesto por más de un día (47-
+Tabla5.Segundostriángulosdemayordescensodeq(t)
+51). Este período de descenso corresponde al triángulo de
+Provincias descensos
+mayordescensoluegodeldescensoinicialdelcomienzode
+laepidemia.NoteenlaFigura3comosepercibeunperíodo LaHabana 33-36:(100,59,0)
+largocompuestoporvariosdescensosenlaetapa28-65con11 Matanzas 47-51:(27,20,0)
+descensos8(28-29,35-36,37-38,39-40,44-45,47-51,58-59, VillaClara 32-33:(20,15,0)
+64-65)queculminaundíaantesdelmayorpicodecasosdel 54-56:(4,0,0)
+día66(19,19,0).UnsituaciónmuysimilaraladeLaHabana, SantiagodeCuba 36-39:(8,4,0)
+aunqueestasecuenciadedescensosdeMatanzas(37días)es
+máslargaqueladeLaHabana(22días).
+Al comienzo de la epidemia casi todas las localidades Teniendoencuentalosanálisisrealizados,recomendamos
+hacenungrandescensocuandolosprimeroscasosresultan elusodem comoelmayormedidorparacompararlocalida-
+2
+nosercontactosdecasosconfirmados.Estoocurresalvoen desdiferentesconrespectoalcomportamientodeq(t)ysu
+la Isla de la Juventud y Mayabeque, donde al inicio todos significadoenrelaciónalaevolucióndelaepidemia.
+soncontactosdecasosconfirmados.Lasoscilacionespronun-
+ciadasdeq(t),eliminandoéstasqueocurrenalinicio,serán 3.3 Observaciones de los mayores picos de casos
+mayoresendependenciadelarelacióndelacantidaddecasos ylosdescensosdeq(t)
+que son contactos con respecto al total de casos (mientras Para esta sección se han escogido las 5 provincias de
+menosseanloscasosqueconstituyencontactosmáspronun- mayorcantidaddecasosconfirmadossegún[1],todasconmás
+ciadosseránlosdescensos). de90casos.Paracadaprovinciaanalizamoslosprincipales
+Enlamedidaqueseavanzaeneltiempodebidoalaacu- picosdecasosylaprecedenciadeperíodosdedescensosde
+mulacióndecasosenelcociente C(t) resultamenosprobable q(t).
+I0(t)
+queocurrandescensospronunciadosdeacuerdoconlasmedi-
+LaHabana
+dasm om (verlascondiciones2y3delTeorema3).Espor
+1 3 3picosdecasos:42(44,35,0),52(64,62,0),82(37,36,0).
+ello,quelasmedidasm ym resultanmásapropiadaspara
+1 3 Analicemosahoralosdescensospreviosmáscercanosaéstos
+compararlocalidadessiempreycuandoéstastenganunacan-
+picos
+tidadsimilardecasos(MatanzasyVillaClaraporejemplo).
+Noobstante,hemosmostradoenlosanálisisanterioresque Hay3descensosdeq(t)cercanosalprimerpico,33-
+siempreesposiblerealizarinterpretacionesdelosresultados 36 (100,59,0), 37-38 (38,29,0), 39-41 (68,45,0). En
+observadosconlasdiferentesmedidas. totalconlos3descensos(206,133,0).Elúltimodelos
+LaprovinciaSantiagodeCuba,ocupaellugar2conres- descensosa1díadelpico.Elrangodelos3descensos
+pectoalasmedidasm ym .PuedeobservarsedelaFigura7 alos6días.Notecomodespuésdeldía42semantiene
+1 3
+lasoscilacionespronunciasdeq(t)correspondientealapro- conpicosmásbajosporunosdías,peroseacumulóun
+vincia.Ellosedebeaquerelativoalacantidadtotaldecasos, buendescensopreviodeq(t)quepuedeinclusoinfluir
+envariosmomentossedetectaronunnúmerosignificativode sobreelsegundopicodecasosqueeselmásalto.
+casos que no eran contactos de casos confirmados, lo cual
+44-45(59,46,0),eneldía52ocurreelmayorpicode
+8Solo4descensosfueradeestaetapa. casosdelaHabana,veníarecuperándosedelasituación
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.143-151
+150 AnálisisdelaCOVID-19enCubapormediodelseguimientodelospacientesinfectadosysuscontactos
+anteriorocurridaconelpicoeldía42peroestenuevo noescontacto,noocurreundescensodeq(t)debidoa
+descensodeq(t)(44-45)puedehabercatalizadoelma- queessolouncasode20,noobstanteenelsegundo
+yorpicodecasosdeLaHabana.Tengaencuentaque díadeestepico,eldía30(8,7,0)siocurreundescenso
+la aparición de casos que no son contactos introduce deq(t).
+nuevascadenasdecontactosademásdelasqueyase
+les está dando seguimiento. El descenso a 7 días del 34-35(5,3,0),6díasantesdelpicodeldía41.
+pico.
+Holguín
+69-70(10,7,0),74-75(10,6,0),78-79(25,20,0),entotal
+3picosdecasos:30(10,10,0),33(17,16,0),39(12,12,0).
+entrelos3descensos(45,33,0).Elúltimodescensoesa
+3díasdelpicoyelrangodelostresdescensosalos13
+24-25(1,0,0),descenso5díasantesdelpicodeldía30.
+días,8díassicontamoslosdosúltimos.
+VillaClara 31-32(4,3,0),eldescenso1díaantesdelmayorpico,
+3picosdecasos:17(12,12,9),37(33,32,0),57(10,10,0). eldía33.Estepicoestábiencercadelpicoanteriordel
+día30yseencuentraa7díasdeldescenso24-25.Por
+7-8(2,0,0),11-13(3,0,0):(5casosyningunocontacto), loqueprevioalpicodecasosdeldía33hanocurrido
+previoalpicodeldía17,últimodescensoa4díasdel dosdescensosenlos7díasprevios.
+pico.
+33-34(18,16,0),eldescensoa5díasdelpicodeldía
+29-30 (10,9,0), 32-33 (20,15,0): 30 casos, de ellos 6
+39,puedeexistirvínculoconeldescensoanterior31-32
+nosoncontactos.Últimodelosdescensosa4díasdel
+a7días.
+picodeldía37.
+Hayunomáslejanoperoenelperíododelaenfermedad
+Conclusiones
+43-44 (11,10,0) relativo al día 57. Más cercanos los
+descensos51-52(2,1,0),54-56(4,0,0)con(6,1,0)en
+Eneltrabajoseintroduceelcocientededetecciónpara
+losdosperíodos.Elúltimodescensoa1díadelpico.
+evaluarelcomportamientodelaCOVID-19enunalocalidad
+en aislamiento. Este cociente de detección tiene en cuenta
+Matanzas
+doscosas,porunaparte,laconstantedelatasadedetección
+3picosdecasos:40(10,7,0),50(10,8,0),66(19,19,0).
+asociadaalaepidemiayporlaotraelvalorquetieneenel
+35-36(2,1,0),37-38(9,6,0),39-40(21,14,0).Eldescen- trabajo epidemiológico el seguimiento de los contactos de
+soocurreelmismodíadelpicoyelanteriordescenso casosconfirmadosconanterioridad.Detalmaneraqueelco-
+2díasantesdelpico. cientededeteccióncreceodecreceenlamedidadequedela
+cantidaddenuevoscasosconfirmadosobservadoscuántosre-
+47-51,con(14,10,0)hasta1díaantesdelpicodeldía
+sultensercontactosdecasosconfirmadospreviamente.Cada
+50,elpicoocurreenelperíododedescenso.
+casonuevoqueresultenosercontactodecasosconfirmados
+abreunanuevacadenadecontagiosyellopuedetraducirse
+58-59(3,1,0),64-65(13,11,0),seacumulan(16,12,0)
+enincrementosenlacantidaddecasosenlosdíassiguientes
+entrelosdosdescensos,1díaantesdelpicodeldía66.
+yenunincrementodelriesgoepidemiológico.
+Paralasfigurascorrespondientesalosgráficosdeq(t)de Con las herramientas de graficar el comportamiento de
+lasprovinciasdeCiegodeÁvilayHolguínverlasecciónde q(t)yelanálisisdelosintervalosdedescenso,hemospodido
+anexos. ilustrareneltrabajocomopuedeevaluarseelcomportamiento
+y evolución de la epidemia en las distintas provincias y en
+CiegodeÁvila
+el municipio especial de la Isla de la Juventud. Los princi-
+3picosdecasos:17(6,6,5),27(20,19,0)y30(8,7,0)con
+pales picos de casos confirmados han sido precedidos con
+(28,26,0),41(5,4,0).Enelsegundoporlacercaníadelosdías
+unospocosdíasdedescensosdelcocientededetección.Las
+consideramoslosdías27y30asociadosaunmismopico.
+provinciasquehantenidouncomportamientomáscomplica-
+doenlaevolucióndelaepidemiasonaquellasquemuestran
+12-14(2,0,0),3díasdelpico.
+unamayorcantidaddedescensosdelcocientededetección
+Elmismodescenso12-14,13díasdelmayorpicoel yquevienedadoporlamedidam introducida.Lasmedidas
+2
+día 27 (20,19,0), todos los casos del período 15-26 m y m pueden utilizarse con mayor precisión cuando las
+1 3
+(28,28,13) son contactos de casos confirmados o ca- localidades que se comparan tengan una cantidad de casos
+sosimportados.Quieredecirquehastaeldía26,nose similar,tambiénconstituyenunaformademedirlamagnitud
+introducennuevascadenasdecontagiosquelasquesur- delosdescensosenunalocalidadyanalizarlainfluenciade
+gencomoconsecuenciadelseguimientoaloocurrido lacantidaddecasosquenosoncontactosdeltotaldecasos
+previoaldía15.Eldía27apesardehaberuncasoque observadosenunperíododado.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.143-151
+AnálisisdelaCOVID-19enCubapormediodelseguimientodelospacientesinfectadosysuscontactos 151
+Referencias
+[1] SitioOficialdeCubaparalainformaciónsobrelaCOVID
+19, 2020. https://covid19cubadata.github.
+io/.
+[2] Substantial undocumented infection facilitates
+the rapid dissemination of novel coronavirus
+(SARS-CoV2). Li et al. Science, 2020. https:
+//science.sciencemag.org/content/
+early/2020/03/24/science.abb3221.
+[3] A.,Gray,GreenhalghD.,HuL.,MaoX.yPanJ.:Asto-
+chasticdifferentialequationSISepidemicModel. SIAM
+J.APPL.MATH.,71(3):876–902,2011.
+Figura7.Gráficodeq(t)deSantiagodeCuba
+[4] N., Cabo Bizet y Cabo Montes de Oca A.: Modelos
+SIRmodificadosparalaevolucióndelCOVID-19,2020.
+https://arxiv.org/abs/2004.11352.
+Anexos
+Figura8.Gráficodeq(t)deCiegodeÁvila
+Figura5.Gráficodeq(t)deMayabeque
+Figura6.Gráficodeq(t)delaIsladelaJuventud Figura9.Gráficodeq(t)deHolguín
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.143-151

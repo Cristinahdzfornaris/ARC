@@ -1,0 +1,389 @@
+CienciasMatema´ticas,Vol.29,No.2,Pag.127-130,2015
+Recibido09-2015
+Relacio´n entre el automorfismo de Frobenius y los
+n
+homomorfismos de inmersio´n del campo GF(p ) en
+m
+el campo GF(p )
+Relation between Frobenius automorphism and the
+n
+embedding homomorphisms from field GF(p ) in
+m
+field GF(p )
+Oristela Cue´llar Justiz1*, Eberto R. Morgado Morales1, Evaristo Madarro Capo´1, Guillermo Sosa
+Go´mez2
+Resumen Es bien conocido, que para todo campo de Galois GF(pm), siendo p un nu´mero primo y m un
+nu´meronatural,ytodonu´meronaturalnqueesdivisordem,existeunu´nicosubcampodelcampodeGalois
+GF(pm)queesisomorfoaGF(pn).Enunart´ıculoanteriorpublicadoenlaRevistaCienciasMatema´ticas[5]se
+obtuvieronlasdiferentesmanerasdedefinirunhomomorfismodeinmersio´nentreloscamposGF(pn)yGF(pm),
+cuandondivideam.Enesteart´ıculoveremoslarelacio´nexistenteentreelautomorfismodeFrobeniusylos
+homomorfismosdeinmersio´nyseenunciaydemuestraunteoremaqueestablecequeelnu´merodemaneras
+derealizarlainmersio´nesigualalordendelgrupoc´ıclicoAut(GF(pn)),deautomorfismosdelcampoGF(pn),
+elcualesdeordennyesgeneradoporelllamadoautomorfismodeFrobeniusF .Ilustraremoselresultado
+p
+anteriortomandocomoejemploloshomomorfismosdeinmersio´ndelcampoGF(8)enelcampoGF(64).
+Abstract ItiswellknownthatforeveryGaloisfieldGF(pm),where pisaprimenumber,misanaturalnumber
+andeverynaturalnumbern, whichisadivisorofm, thereexistsauniquesubfieldoftheGaloisfieldGF(pm)
+isomorphic to GF(pn). In a previous paper published in the journal Ciencias Matema´ticas [5], the different
+waysofdefiningtheembeddinghomomorphismsoftheGaloisfieldsGF(pn)intoGF(pm),wherendividesm.
+InthepresentpaperweexaminetherelationshipbetweentheFrobeniusAutomorphismandtheembedding
+homomorphisms. Wewillalsogivethestatementandtheproofofatheorem,whichstatethatthenumberof
+waysofperformingtheembeddingisequaltotheorderofthecyclicgroupAut(GF(pn))ofautomorphismsofthe
+fieldGF(pn),whichisofordernandisgeneratedbythesocalledFrobeniusAutomorphismF . Wewillillustrate
+p
+thisresulttakingasanexampletheembeddinghomomorphismsofthefieldsGF(8)inthefieldGF(64).
+PalabrasClave
+automorfismodeFrobenius,homomorfismosdeinmersio´n
+1UniversidadCentral“MartaAbreu”deLasVillas,SantaClara,Cuba,oristela@uclv.edu.cu
+2CentrodeInvestigacionesenMatema´tica(CIMAT),Guanajuato,Me´xico
+*AutorparaCorrespondencia
+1. Introduccio´n primopycadanu´meronaturalnexisteuncampofinitoconpn
+elementos,u´nicosalvoisomorfismos.Analizandoloshomo-
+Loscamposfinitos,tambie´nllamadoscamposdeGalois,
+morfismosentrecamposfinitosdediferentecardinalidad,se
+tienenmu´ltiplesaplicacionesendiferentesramasdelconoci-
+halogrado,sobrelabasedelaliteraturarevisada[3],disen˜ar
+mientoydelainvestigacio´ncient´ıfica:EnlaCombinatoria,
+algoritmosparaladeterminacio´ndelosnhomomorfismosde
+en la Teor´ıa de Los Nu´meros, la Geometr´ıa Algebraica, la
+inmersio´nqueexistenentreloscamposGF(pn)yGF(pm).
+Biolog´ıaMatema´tica,laTeor´ıadeGalois,enlaCriptograf´ıa.
+LoscamposGF(pn)yGF(pm)sonextensionesalgebrai-
+EnCriptograf´ıaloscamposfinitosseutilizanampliamente
+casdelcampoprimoGF(p),donde pesunnu´meroprimo,y
+enlaimplementacio´ndemuchosdelosco´digosconocidos,
+nymsonnu´merosnaturalestalesquenesundivisordem.
+as´ıcomoensudecodificacio´n.Esbiensabidoquetodocampo
+finitoK tienecardinalidad pn,donde pesunnu´meroprimoy Unhomomorfismodeinmersio´ndelcampoGF(pn)enel
+nunnu´meronatural[1],[2].Porotraparte,paracadanu´mero campoGF(pm)esunhomomorfismoinyectivoh:GF(pn)→
+Relacio´nentreelautomorfismodeFrobeniusyloshomomorfismosdeinmersio´ndelcampoGF(pn)enelcampo
+128 GF(pm)
+GF(pm)talqueh(a)=a,∀a∈GF(p).Siempreexistealme- Siα∈GF(pn)entoncesα →αp.
+nosunhomomorfismoinyectivoh:GF(pn)→GF(pm).Di- B (α)=αpj ,j=0,n´−1,
+pj
+chohomomorfismosumergealcampoGF(pn)enGF(pm),
+locualsignificaqueelsubcampodeGF(pm),imagendeh,
+esisomorfoaGF(pn). G (cid:48) =Aut (GF(pm))
+GF(p)
+En[5]seobtuvieronlasdiferentesmanerasdedefinirun = (cid:8) Aut F :GF(pm)→GF(pm) (cid:9) .
+homomorfismodeinmersio´n,delcampodeGaloisGF(pn)
+pj
+eneltambie´ncampodeGaloisGF(pm)siendopunnu´mero
+Siβ∈GF(pm)entoncesβ →βp.F (β)=βpj , j=0,m−1
+primo,mynnaturalesconndivisordem.
+pj
+,
+Sea K un campo finito de caracter´ıstica p. Llamamos (cid:48)
+ElgrupoGesgeneradoporelautomorfismodeFrobenius
+automorfismodeFrobeniusalafuncio´nF p :K→K definida F :GF(pm)→GF(pm)portantoF =(F )j.
+porF :x→xp .Estafuncio´nF esaditiva[1,2,4],yaque, p pj p
+p p Seanh yh amboshomomorfismosdeinmersio´n,tales
+c m u u a l l t e i s p q li u c i a e t r i a va q , u y e a s q e u a e n , x c , ua y l , e ( s x qu + ie y r ) a p q = ue x s p e + an yp x, [ y 1 , , ( 2 x ] y) y p e = s q k ue = h r pm (α −1 ) r = . βk s r yh s (α)=βks ,siendok r =rk 1 ,k S =sk 1 y
+xpyp.ComoelKerneldeF es,evidentemente,elidealtrivial 1 pn−1
+p Tomemosaunodeestosautomorfismosporejemplopara
+{0},F esunendomorfismoinyectivo.ComoelconjuntoK
+lo supo
+p
+nemos finito la funcio´n F es tambie´n sobreyectiva.
+un0<t<m−1yevaluemosF
+pt
+=(F
+p
+)t enβkr
+p
+Luego, es un automorfismo del campo K. Es fa´cil ver que,
+si K es el campo GF(pn), toda funcio´n de la forma (F )k, (cid:16) (cid:17) (cid:16) (cid:16) (cid:17)(cid:17)t (cid:16)(cid:16) (cid:17)p(cid:17)t
+para0≤k≤n−1,estambie´nunautomorfismo.Estoss
+p
+on
+F
+pt
+βkr = F
+p
+βkr = βkr
+l
+g
+o
+r
+s
+up
+u´
+o
+ni
+A
+co
+ut
+s
+(
+a
+G
+u
+F
+to
+(
+m
+pn
+o
+)
+r
+)
+fi
+,
+s
+d
+m
+e
+o
+to
+s
+d
+d
+o
+e
+s
+l
+l
+c
+o
+a
+s
+m
+a
+p
+u
+o
+to
+G
+m
+F
+or
+(
+fi
+p
+s
+n
+m
+),
+o
+p
+s
+o
+,
+r
+e
+l
+s
+o
+c
+q
+´ıc
+u
+l
+e
+ic
+e
+o
+l
+,
+F
+pt
+(cid:16)
+βkr
+(cid:17)
+=
+(cid:16)
+βkr
+(cid:17)pt
+=βkrpt
+deordennygeneradoporelautomorfismodeFrobeniusF .
+p Seak pt=rk pt=(rpt)k ,comor<pn−1yprimorelativo
+r 1 1
+con pn−1,elmcd(rpt,pn−1)=1,siconsideramosrpt =s,
+2. Relacio´n entre los grupos de entoncessk =k y
+1 s
+automorfismos de los campos GF(pn) y
+GF(pm)
+k pt =rk .pt = (cid:0) rpt(cid:1) k =sk =k
+r 1 1 1 s
+Consideremoslafuncio´n
+F
+pt
+(cid:16)
+βkr
+(cid:17)
+=
+(cid:16)
+βkr
+(cid:17)pt
+=βkrpt =βks
+Rest:Aut(GF(pm))→Aut(GF(pn))
+(cid:16) (cid:17) (cid:16) (cid:16) (cid:17)(cid:17)t
+F
+pt
+βkr = F
+p
+βkr =βks
+tal que: Ft →Bt , la cual asigna a cada automorfismo de
+p p
+GF(pm),expresadocomounapotenciadelautomorfismode HemosprobadoqueexisteunautomorfismoF pt =(F p )t ,del
+Frobenius F p de GF(pm), la correspondiente potencia del campo GF(pm) tal que F pt (cid:0) βkr (cid:1) =βks . Esto implica que
+automorfismodeFrobeniusB deGF(pn).Estonoesma´s
+p F pt ◦h r =h r ◦B pt =h s ,esdecir,que,dadosdoshomomorfis-
+que la restriccio´n del automorfismo Ft de GF(pm) al auto-
+p mosdeinmersio´n,unoseobtienedelotroporcomposicio´n
+morfismoBt delsubcampoGF(pn),vistocomosubcampo
+p conunautomorfismo.Esto,asuvez,significaqueelnu´mero
+deGF(pm).
+de homomorfismos de inmersio´n es igual al nu´mero n , de
+Esta funcio´n es, evidentemente, un epimorfismo, cuyo automorfismosdelcampoGF(pn).
+kerneleselsubgrupoformadoporlosFt cuyoexponentet es
+p
+mu´ltiploden,siendoelordendelkerneligualalnu´meroktal
+3. Homomorfismos de inmersio´n del
+quem=nk.
+campo GF(8) en GF(64)
+Estamos ahora en condiciones de enunciar y probar el
+siguienteteorema
+En[5]seanalizaronlosposibleshomomorfismosdein-
+mersio´ndelcampodeGaloisGF(8)enelcampoGF(64)
+Teorema1 Lacantidaddemanerasdesumergirelcampo
+deGaloisGF(pn)eneltambie´ncampodeGaloisGF(pm),
+siendonundivisordem,esigualalnu´meron,queeselorden h (α)=β9h (α)=β18h (α)=β27
+1 2 3
+delgrupodeautomorfismosdelcampoGF(pn).
+h (α)=β36h (α)=β45h (α)=β54
+4 5 6
+Demostracio´n.Sean
+Semostro´ queelcampodeGaloisGF(8)sesumergedetres
+G=Aut (GF(pn)) manerasdiferentesenelcampodeGaloisGF(8)
+GF(p)
+= (cid:8) Aut B pj :GF(pn)→GF(pn) (cid:9) . h (α)=β27,h (α)=β27,h (α)=β27
+3 5 6
+Relacio´nentreelautomorfismodeFrobeniusyloshomomorfismosdeinmersio´ndelcampoGF(pn)enelcampo
+GF(pm) 129
+     
+1 0 1 1 1 0 1 1 1
+ 0 1 1   0 0 0   0 1 0 
+     
+ 0 1 1   0 0 0   0 1 0 
+M(h 3 )=  0 1 0   ,M(h 5 )=  0 0 1   ,M(h 6 )=  0 0 1   .
+     
+ 0 0 1   0 1 1   0 1 1 
+0 0 0 0 0 0 0 0 0
+3.1 AutomorfismodeFrobeniusdelcampoGF(64)
+Es fa´cil notar que el automorfismo F de GF(64) es el
+2
+quetieneporMatriz:
+Veremosahoralarelacio´nqueexisteentrelosautomor-
+fismosdeFrobeniusylasdiferentesmanerasdesumergirun  1 0 0 1 0 0 
+campoenelotro.  0 0 0 1 0 0 
+ 
+ 0 1 0 0 1 0 
+M(F 2 )=  0 0 0 0 1 0   .
+ 
+ 0 0 1 0 0 1 
+0 0 0 0 0 1
+Tambie´nvemosque
+   
+1 0 0 1 1 0 1 0 1 1 1 1
+ 0 0 0 0 1 0   0 0 1 0 0 1 
+   
+M
+(cid:0) F2(cid:1)
+=
+
+
+0 0 1 1 0 1 
+,M
+(cid:0) F3(cid:1)
+=
+
+
+0 1 0 0 0 1 
+,
+2  0 0 1 0 0 1  2  0 1 0 0 1 1 
+   
+ 0 1 0 0 1 1   0 0 1 1 0 0 
+0 0 0 0 0 1 0 0 1 0 0 1
+   
+1 1 1 1 0 0 1 1 0 0 0 0
+ 0 1 0 0 1 1   0 0 1 1 0 0 
+   
+M (cid:0) F4(cid:1) =   0 0 0 1 0 1  ,M (cid:16) F5 (cid:17) =   0 0 0 0 1 1  ,
+2  0 0 1 1 0 0  2  0 1 0 0 0 0 
+   
+ 0 1 0 0 0 0   0 0 0 1 0 0 
+0 0 0 0 0 1 0 0 0 0 0 1
+y Esdecir,quelacomposicio´nconelautomorfismodeFrobe-
+(cid:16) (cid:17)
+M F 2 6 =I 6 , niusF 2 conviertecadahomomorfismodeinmersio´nenelotro,
+noexistiendootroshomomorfismodeinmersio´nsalvoh ,h ,
+3 5
+dondeI 6 eslamatrizidentidaddeorden6. h 6 .
+Multiplicandocadaunadeestasmatricesalaizquierdade En el caso analizado la cantidad de inmersiones posi-
+M(h 3 ),M(h 5 ),M(h 6 )vemosque,aplicandocadaunodelos bles coincide con el orden n, del grupo de automorfismos
+automorfismosdespue´sdeaplicadalafuncio´ndeinmersio´n, Aut(GF(8))delcampodepartida.
+h obtenemosque
+i
+3.2 ElautomorfismodeFrobeniusB deGF(8)
+2
+EsteautomorfismoeselquetieneporMatriz:
+F ◦h =h ,(F )2◦h =h ,(F )3◦h =h
+2 3 6 2 3 5 2 3 3  
+1 0 0
+(F 2 )4◦h 3 =h 6 ,(F 2 )5◦h 3 =h 5 ,(F 2 )6◦h 3 =h 3 M(B 2 )= 0 0 1 ,
+F ◦h =h ,(F )2◦h =h ,(F )3◦h =h 0 1 1
+2 5 3 2 5 6 2 5 5
+(F )4◦h =h ,(F )5◦h =h ,(F )6◦h =h lacualcumpleque
+2 5 3 2 5 6 2 5 5
+ 
+F ◦h =h ,(F )2◦h =h ,(F )3◦h =h 1 0 0
+(F )4 2 ◦h 6 =h 5 ,(F 2 )5◦h 6 =h 3 ,(F 2 )6◦h 6 =h 6 M (cid:0) B2 2 (cid:1) = 0 1 1 
+2 6 5 2 6 3 2 6 6 0 1 0
+Relacio´nentreelautomorfismodeFrobeniusyloshomomorfismosdeinmersio´ndelcampoGF(pn)enelcampo
+130 GF(pm)
+yM
+(cid:0) B3(cid:1)
+=I . deloshomomorfismosdecamposfinitosdeigualydiferente
+2 3
+Multiplicando la matriz M(B ) a la derecha de M(h ), cardinalidad.
+2 3
+M(h )yM(h )vemosque,aplicandolafuncio´ndeinmersio´n Se enuncio´ y demostro´ un teorema que establece que
+5 6
+h,despue´sdeaplicadoelautomorfismoB ,obtenemosque el nu´mero de maneras de realizar la inmersio´n del campo
+i 2
+GF(pn)eneltambie´ncampodeGaloisGF(pm)esigualal
+M(h )M(B )=M(h ) ordendelgrupoc´ıclicoAut(GF(pn)),deautomorfismosdel
+3 2 6
+M(h )M(B )=M(h ) campo GF(pn), el cual es de orden n y es generado por el
+5 2 3
+llamadoautomorfismodeFrobeniusF .
+M(h )M(B )=M(h ) p .
+6 2 5 Seilustro´ tomandocomoejemploloshomomorfismosde
+inmersio´ndelcampoGF(8)enelcampoGF(64),larelacio´n
+locualsignificaqueh ◦B =h ,h ◦B =h ,h ◦B =h .Es
+3 2 6 5 2 3 6 2 5 existente entre el automorfismo de Frobenius y las funcio-
+decir,queenestecasotambie´nocurrequelacomposicio´ncon
+nes de inmersio´n, mostra´ndose que la composicio´n con el
+elautomorfismodeFrobeniusconviertecadahomomorfismo
+automorfismodeFrobeniusconviertecadahomomorfismode
+deinmersio´nenelotroexistente,noexistiendoningu´notro
+inmersio´nenotroyaexistente.
+homomorfismodeinmersio´nsalvoh ,h ,h .
+3 5 6
+Hemos visto as´ı, que la cantidad de inmersiones posi-
+Referencias
+bles coincide con el orden, 3, del grupo de automorfismos
+Aut(GF(8))delcampodepartida. [1] Lidl,R.,Niederraiter,H.,KonechnyePolya.TomoIyII,
+Todoslosca´lculosrealizadosparaobtenerlosresultados Moscu´:Mir,1998.
+que se presentan en este art´ıculo fueron realizados con el
+Mathematica9.0yconelsoftwareBiGFSoPpatentadopor [2] Lidl, R., Niederraiter, H., Introduction to finite fields
+losautoresdeestetrabajo. andtheirapplications,CambridgeUniversityPress,New
+York,1994.
+4. Conclusiones [3] http://mathwiki.cs.ut.ee,[Consultado:abril10,2015].
+Este art´ıculo da continuidad a un art´ıculo anterior titu- [4] Fraleigh,JonhF.,AfirstCourseinAbstractAlgebra.Adis-
+lado ¨Inmersio´n de un campo de Galois GF(pn) en otro de sonWesleyPublishingCompany,1972.
+mayorcardinalidad”[5].Seanalizo´ larelacio´nexistenteen- [5] CuellarJustiz,O.,SosaGomez,G.,Inmersio´ndeuncam-
+tre el automorfismo de Frobenius y los homomorfismos de podeGaloisGF(pn)enotrodemayorcardinalidad.Re-
+inmersio´n.Losresultadosobtenidosenestosdostrabajosnos vistaCienciasMatematicasVol.27No.2,2013.
+hanpermitidodisen˜ardosalgoritmosparaladeterminacio´n

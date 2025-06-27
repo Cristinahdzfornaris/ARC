@@ -1,0 +1,829 @@
+CienciasMatema´ticas,Vol.29,No.2,Pag.115-125,2015
+Recibido09-2015
+Ana´lisis de modelos s´ısmicos mediante un me´todo
+de series
+Seismic model analysis by means of a series method
+A. Reyes1, J. A. Reyes2*, M. Corte´s-Molina2, F. Garc´ıa-Alonso2
+Resumen LarespuestadesdelaMeca´nicaEstructuralalosfeno´menoss´ısmicos,hacenecesariomejorarel
+ca´lculodelasestructurasas´ıcomosuana´lisis.Paraellolosme´todosespecialmentebasadosenelana´lisis
+esta´ticonolinealnecesitantenerunamayorprecisio´n.Elana´lisisnolinealsepuedeabordarmediantemodelos
+discretosocontinuos.Losmodelosdiscretosrepresentanlaestructuraatrave´sdeunnu´merofinitodegradosde
+libertad;enestecasolasecuacionesdemovimientosonecuacionesdiferencialesordinariasqueseresuelven
+por me´todos nume´ricos. En este trabajo se muestra una aplicacio´n del me´todo de series Φ-funciones para
+calcularlarespuestaanteunterremotodelasestructurasmodeladasmediantesistemasSDOF(SingleDegree
+OfFreedomsystem)y2DOF(TwoDegreeOfFreedomsystems).Adema´s,enelcasodeSDOF,elme´todose
+haaplicadotomandocomolafrecuenciaforzadalafrecuencianaturaldevibracio´n.Lasolucio´ndelosmodelos
+s´ısmicossehaobtenidomediantelageneracio´ndeunalgoritmonume´ricoysuimplementacio´ncomputacional.
+Elme´tododeseriesΦ-funcionesintegraosciladoresforzadosyesunaadaptacio´ndelosme´todosdeScheifele,
+con la ventaja de integrar, sin error de truncamiento, el problema perturbado con so´lo las dos primeras Φ-
+funciones.Elca´lculodecoeficientesdelaserieseefectu´aporrecurrenciasalgebraicassencillasenlasque
+seimplicalafuncio´ndeperturbacio´n.Elbuencomportamientoyprecisio´ndelme´tododeseriesΦ-funciones
+seilustracuandosecontrastaconotrosme´todosdeintegracio´nyaconocidoseimplementadosenMAPLE,
+compara´ndosetambie´nconlosme´todoscla´sicosdeIngenier´ıadeEstructuras.
+Abstract Theseismiceventshaveattractedinterestandtheneedtoimprovethestructuresandtheiranalysis
+tosustainthistypeofoscillation. Todothis,newmethodsespeciallythosebasedonstaticnon-linearanalysis
+needtohaveincreasedaccuracy. Thenon-linearanalysiscanbeapproachedbymeansofdiscreteorcontinuous
+models. The discrete models represent the structure through a finite number of degrees of freedom; in this
+casetheequationsofmotionareordinarydifferentialequationswhicharesolvedbynumericalmethods. This
+papershowsanapplicationoftheΦ-functionsseriesmethodtocalculatetheresponseofstructures,modeledas
+bothSDOF(SingleDegreeOfFreedomsystem)and2DOF(TwoDegreeOfFreedomsystems)systems,toan
+earthquake. Furthermore,inthecaseofSDOF,themethodhasbeenappliedtakingastheforcingfrequencythe
+naturalfrequencyofvibration. Thesolutionoftheseismicmodelshasbeenobtainedbythegenerationofthe
+numerical algorithm and its computational implementation. The Φ-functions series method integrates forced
+oscillatorsanditisanadaptationofScheifele’smethods,withtheadvantageofintegrating,withouttruncation
+error,theperturbedproblemwithjustthefirsttwoΦ-functions. Thecalculationofseriescoefficientsiseffectedby
+simplealgebraicrecurrencesinwhichtheperturbationfunctionistakespart. ThegoodprecisionofΦ-functions
+seriesmethodisillustratedwhencontrastedwithothermethodsofintegrationalreadyknownandimplemented
+inMAPLEandevenwithclassicmethodsofStructuralEngineering.
+PalabrasClave
+modelos´ısmico,ecuacionesdiferenciales,me´tododeseries
+1UniversidaddeAlicante,GrupodeInvestigacio´nModelizacio´nMatema´ticadeSistemas,Espan˜a
+2EscuelaPolite´cnicaSuperior,UniversidaddeAlicante,Espan˜a,jose.reyes@ua.es
+*AutorparaCorrespondencia
+1. Introduccio´n lainvestigacio´neneldisen˜odealgoritmosinforma´ticos.En
+dina´micaestructuralsehanutilizadoalgoritmosdeintegracio´n
+Elintere´senlamejoradelarespuestadeunaestructura paso a paso respecto al tiempo, eficaces y precisos, por su
+frenteaunterremoto,hadadolugaraunaumentosignificativo simplicidad en el ca´lculo de la solucio´n de los problemas
+enlosestudiosdelosca´lculosestructurales,enelcampode MDOF(Multi-DegreeOfFreedomsystems)[1,2,3,6,7,10,
+laconstruccio´nyengeneral,enlaingenier´ıacivil,motivando
+116 Ana´lisisdemodeloss´ısmicosmedianteunme´tododeseries
+22,23]. Elme´tododeseriesdeΦ-funcionestienelaventajadeser
+El estudio de los modelos discretos con so´lo un grado capazdeintegrarexactamentelasecuacionesdiferencialesdel
+de libertad, SDOF, es relevante debido a la relacio´n entre problemaperturbado.
+laspropiedadesdelaestructuraylaevolucio´ntemporaldel Paraintegrarnume´ricamentelosproblemasdevalorinicial
+movimientodelsuelo.Tambie´nmuchasecuacionesdelco´digo (PVI)(1)y(3)sedefineunoperadordiferenciallineal,D+B,
+deconstruccio´nsebasanenlarespuestadeunsistemaSDOF. dondeBesunamatrizapropiadaquepermitelaeliminacio´nde
+LasecuacionesquerigenmodelosSDOFsondelaforma: loste´rminosdelafuncio´ndelaperturbacio´n,transformando
+elsistemaenunsistemadeecuacionesdesegundoordenno
+mu¨(t)+cu˙(t)+ku(t)= f(t,u(t),u˙(t))
+perturbado.Estesistemaesintegrableexactamenteconso´lo
+u(0)=u =0 (1) lasdosprimerasΦ-funcionesdelme´tododeseries.
+0
+u˙(0)=u˙ =0 Para ilustrar la aplicacio´n del algoritmo se presenta el
+0
+ana´lisisdeunSDOFydeun2DOF.
+dondemeslamasa,ceselcoeficientedeamortiguacio´nyk Elerrorrelativodelassolucionesobtenidasmedianteel
+eselcoeficientederigidez,siendodeespecialintere´saquellos me´tododeseriesΦ-funcionessecomparaconlassoluciones
+cuyafuncio´ndeperturbacio´nesperio´dicayenparticularlas aportadasporotrosconocidosalgoritmoscomosonLSODE,
+armo´nicas,esdecir,cuandolafuncio´ndeperturbacio´nesdel Rosenbrock,Gear,Taylorseries,Newmarkβ-me´todoyWil-
+tipo sonθ-me´todo.
+2. Ideas Ba´sicas
+f(t,u(t),u˙(t))= f (cos(ω t)+isin(ω t)) (2)
+0 0 0
+ConsideremoselsiguientePVI:
+dondeω eslafrecuenciadelaexcitacio´n.
+0
+Laformulacio´ndeunaecuacio´ndeequilibriodina´mico x˙+Ax=εf(x(t),t), (4)
+para un sistema SDOF puede ser extendida a sistemas con
+x(0)=x , t∈[a,b]=I,
+mu´ltiplesgradosdelibertad,MDOF.Lasestructurast´ıpicasen 0
+laingenier´ıacivilsonsiempreesquematizadascomoMDOF, donde,x:R→Rm,A∈M(m,R)yf:Rm×R→Rm.
+porejemplolosedificiosdevariospisossonanalizadosme-
+Las componentes del campo vectorial de perturbacio´n
+dianteestossistemas.
+f(x(t),t)son f(x(t),t)coni=1...msiendoe´stecontinuoy
+i
+Parangradosdelibertad,laecuacio´n(1)seexpresama-
+conderivadascontinuashastaunciertoorden,satisfaciendo
+tricialmente:
+lascondicionesdeexistenciayunicidaddesoluciones.Aeste
+tipodesistemasselesdenominasistemaslinealesperturba-
+Mx¨(t)+Cx˙(t)+Kx(t)=−Ma(t)
+dos.
+x(0)=x =0 (3)
+0 Seasumequeg(t)=f(x(t),t)esanal´ıticaenIconrespec-
+x˙(0)=x˙ 0 =0 toat;paraqueestoseacierto,bastaconquefseaanal´ıtica
+ensusargumentos.UtilizandoeloperadordiferencialD,con
+dondeM,CyKsonlasmatricesdemasa,deamortiguacio´n
+respectoalavariablet,elPVI(4)puedeescribirsedelmodo
+yderigidez,respectivamente.
+siguiente:
+El vector columna a(t) contiene los valores de la ace-
+leracio´n y sus componentes representan el desplazamiento
+relativodecadaunodelosdiferentespuntosdelamasasobre
+(D+A)x=εg(t), (5)
+elsuelo.
+x(0)=x , t∈[0,T]=I,
+En muchos casos de ingenier´ıa de estructuras, so´lo se 0
+consideraelmovimientohorizontaldelsueloqueprovocael
+que tiene la misma solucio´n que el PVI (4), en I, siendo
+sismo.
+adema´sestau´nicasolucio´ndesarrollableenseriedepotencias.
+Enelpresentetrabajoseaplicaunme´tododeseriespara
+Aplicando el operador (D + B) al PVI (5), donde B∈
+laintegracio´nnume´ricadeestetipodeosciladoresysistemas,
+M(m,R),ynotandopor
+quebasasudesarrolloenlosme´todosdeScheifele[1,2,3,
+10,22,23]ysuponeunaextensio´ndelosme´todosbasadosen L =D2+(A+B)D+BA,
+2
+laseriedeTaylor.
+Para ello se define una familia de funciones reales con
+seobtieneunnuevoPVI:
+valoresenelanillodelasmatricesM(m,R),lasΦ-funciones.
+A partir de estas funciones se construye un algoritmo que
+permiteexpresarlasolucio´ndelsistemacomounaseriedeΦ- L (x)=(D+B)εg(t),
+2
+funciones.Loscoeficientesdeestaserieseobtienenatrave´s
+x(0)=x , (6)
+de relaciones de recurrencia que implican a la funcio´n de 0
+x˙(0)=−Ax +εg(0)=x˙ ,
+perturbacio´n. 0 0
+Ana´lisisdemodeloss´ısmicosmedianteunme´tododeseries 117
+consolucio´nexactax(t)quecoincideconlasolucio´ndelPVI 2.2 Me´tododeseriesdeΦ-funciones
+(4)y(5). Dadoquelasolucio´ndelPVI(4)puedeexpresarsecomo
+LaideadequellevaaconsiderarestePVIampliado,esla
+deeliminarlaperturbacio´nmedianteeloperador(D+B).
+x(t)= ∑
+∞ tk
+a ,
+k
+Dadoqueg(t)esanal´ıticaensusargumentos,sepuede k!
+k=0
+expresarcomo:
+sustituyendoestaserieen(4),unavezcalculadasunaaproxi-
+macio´nalasolucio´nx yasuderivadax˙ ,enelpuntot=nh,
+∞ g(n)(0) ∞ tn n n
+g(t)=f(x(t),t)= ∑ tn= ∑ c (7) laaproximacio´nalasolucio´nenelpuntot=(n+1)hes:
+n
+n! n!
+n=0 n=0
+con: m−2
+x =Φ (h)b +Φ (h)b + ∑ Φ (h)b (14)
+n+1 0 0 1 1 n+2 n+2
+n=0
+∞ tn
+L 2 (x)=ε ∑ (c n+1 +Bc n ), (8) donde
+n!
+n=1
+x(0)=x , x˙(0)=−Ax +εg(0)=x˙ .
+0 0 0
+a =x , a +Aa =εc , conk≥0,
+Lasolucio´ndelPVI(6)seobtienesumandounasolucio´n 0 n k+1 k k
+particulardelPVInoperturbadoconlascondicionesiniciales b 0 =a 0 , b 1 =a 1 , (15)
+nulasalasolucio´ngeneraldelPVIperturbadoconlascondi- b =a +(A+B)a +BAa , conk≥2,
+k k k−1 k−2
+cionesinicialesdadas.Laprimerasecalcularesolviendolos
+siguientesPVIparticulares: son las ecuaciones que definen el me´todo de integracio´n
+nume´rica basado en la serie Φ-funciones para sistemas li-
+nealesperturbados[5].
+tj
+X¨ +(A+B)X˙ +BAX = I , j=0,1,... (9)
+j j j m
+j!
+2.3 Experimentosnume´ricos
+X j (0)=0, X˙ j (0)=0, Elsiguienteproblemamuestraunaaplicacio´ndelme´todo
+dondeX esunafuncio´nrealconvaloresenelanilloM(m,R) deseriesdeΦ-funcionesaunproblemasimilaralplanteado
+j
+en[19],quetambie´naparecepropuestoen[5,11,15,18,20,
+delasmatricescuadradasdeordenm,siendoI y0losele-
+m
+21],entreotros.
+mentosunidadyneutrodelanillo,respectivamente.
+SeaelPVI:
+Lassolucionesde(9)sonlasllamadasΦ-funciones[5].
+2.1 LasΦ-funciones
+x¨(t)+4x(t)=10−2e2it, (16)
+Definicio´n1 Definamos
+x(0)=1,5, x˙(0)=1,4995i,
+Φ (t)=X (t) (10)
+j+2 j
+con j≥0, j∈R. cuyasolucio´nanal´ıticaes:
+Definicio´n2 SeanΦ (t)yΦ (t)respectivamente,lassolu-
+0 1
+(cid:16) t (cid:17)
+cionesdelossiguientesPVI:
+x(t)= sin(2t)+1,5cos(2t) + (17)
+400
+X¨(t)+(A+B)X˙(t)+BAX(t)=0,
+(cid:16) t (cid:17)
+i 0,751sin(2t)− cos(2t) .
+X(0)=I m , (11) 400
+X˙(0)=0,
+Elproblemapuedeserresuelto,biencomounasolaecua-
+cio´nenlaaritme´ticacomplejaocomounpardeecuaciones
+y
+desacopladas.
+X¨(t)+(A+B)X˙(t)+BAX(t)=0,
+Notandoporx(t)=u(t)+iv(t)ysustituyendoestaexpre-
+X(0)=0, (12) sio´nen(16),seobtieneelsiguientePVIdesegundoorden:
+X˙(0)=I ,
+m
+Teorema3 Lasolucio´ndelPVI(6),ente´rminosdeΦ-funciones, u¨(t)+4u(t)=10−2cos(2t), (18)
+es: v¨(t)+4v(t)=10−2sin(2t),
+u(0)=1,5, u˙(0)=0,
+x(t)= Φ (t)x +Φ (t)x˙ + (13) v(0)=0, v˙(0)=1,4995.
+0 0 1 0
+∞
+ε ∑Φ n (t)(c n−1 +Bc n−2 ). Definiendo las variables x 1 (t)=u(t), x 2 (t)=u˙(t), x 3 (t)=
+n=2 v(t)yx 4 (t)=v˙(t),elPVI(18)setransformaenunPVIlineal
+118 Ana´lisisdemodeloss´ısmicosmedianteunme´tododeseries
+deprimerorden,quesepuedeexpresarenformamatricialdel primerasΦ-funciones,medianteelalgoritmosiguiente:
+modosiguiente:
+a =x =b
+0 0 0
+ 0  a 1 =x˙ 0 =b 1
+x˙(t)+K 1
+x(t)=10−2
+ 
+cos
+0
+(2t)
+  , (19)
+desdek=
+x
+1
+k =
+has
+Φ
+ta
+0 (
+n
+h)
+c
+b
+al
+0
+c
++
+ula
+Φ
+r:
+1 (h)b 1
+(22)
+sin(2t)
+b =x
+0 k
+x(0)=(1,5,0,0,1,4995)T  
+0
+donde b 1 =−K 1 x k
++10−2
+ 
+cos(
+0
+2kh)
+  =x˙ k
+sin(2kh)
+x(t)=(x
+1
+(t),x
+2
+(t),x
+3
+(t),x
+4
+(t))T,
+EnlaFigura1secontrastaellogaritmodecimaldelmo´du-
+ 0 −1 0 0  lodelerrorrelativodelasolucio´nx(t),calculadamedianteel
+4 0 0 0  me´tododeseriesdeΦ-funcionescontaman˜odepasoh=0,9
+K 1 = 0 0 0 −1   . y40d´ıgitos,conotrosconocidosalgoritmosdeintegracio´n
+0 0 4 0 nume´rica,talescomoMgear[msteppart]con
+errorper=Float(1,−25),
+Setienenlosautovalores±2iylasolucio´nexacta:
+LSODEcontoleranciade10−30yGearcon
+ 2,5·10−3tsin(2t)+1,5cos(2t) 
+errorper=Float(1,−25).
+−1199sin(2t)+5·10−3tcos(2t)
+x(t)= 400 . (20)
+0,751sin(2t)−2,5·10−3tcos(2t)
+1,4995cos(2t)+5·10−3tsin(2t)
+Lamatrizqueeliminalafuncio´ndeperturbacio´nes
+ 
+0 0 0 0
+ 0 0 0 2 
+B= .
+ 0 0 0 0 
+0 −2 0 0
+Aplicando el operador (D+B) al sistema (19) se obtiene
+L (x)=0con:
+2
+L (x)=x¨(t)+C x˙(t)+K x(t) (21)
+2 2 2
+x(0)=(1,5,0,0,1,4995)T,
+Figura1.Logaritmodecimaldelmo´dulodelerrorrelativode
+x˙ 0 (0)=(0,−5,99,1,4995,0)T, lasolucio´nx(t).
+ydonde
+3. Aplicacio´n del me´todo de series de
+ 0 −1 0 0  Φ-funciones a un sistema SDOF
+C 2 =    4 0 0 0 0 0 − 2 1    , Laecuacio´ndeequilibriodina´micodeunSDOFes
+0 −2 4 0 mx¨(t)+cx˙(t)+kx(t)=F e (t)
+ 
+0 0 0 0 donde m es la masa del piso, c y k son los coeficientes de
+K 2 =    0 0 0 0 8 0 0 0    . a ex m te o r r n ti a gu [8 a ] c . io´nyrigidez,respectivamente.F e (t)eslafuerza
+−8 0 0 0
+La importancia del ana´lisis de un SDOF radica en que
+muestramejorlainterdependenciaentrelaestructuraysus
+Este sistema se integra exactamente, con tan so´lo las dos propiedadesyladuracio´ndeunterremoto.
+Ana´lisisdemodeloss´ısmicosmedianteunme´tododeseries 119
+Considerando que la estructura dada en la Figura 2 no ElPVI(25)puedeexpresarsematricialmentecomo:
+esta´ sujetaaningunafuerzaexterna,sinoalmovimientodel
+(cid:18) (cid:19)
+suelodebidoaunterremoto,lafuerzaela´sticadelascolumnas 0
+u˙(t)+Ku(t)=− , (26)
+seexpresamediantelaecuacio´n F0sin(ω0t)
+m
+u(0)=0,
+F =−k(y(t)−u (t)),
+s g
+donde
+donde y(t) y u (t) son los desplazamientos absolutos de la
+g
+masaydelsuelo,respectivamente.
+u(t)=(u (t),u (t))T,
+1 1
+(cid:18) (cid:19)
+0 −1
+K= .
+ω2 2ζω
+n n
+Seintroduceunanuevavariable
+F
+u =− 0 sin(ω t),
+3 0
+m
+para facilitar la eliminacio´n de la funcio´n de perturbacio´n
+delPVI(26),siguiendolaste´cnicasdeSteffensen[16,17],
+genera´ndoseelsiguientePVI:
+Figura2.SDOF(SingleDegreeOfFreedomsystem).  0 
+u˙(t)+K
+3
+u(t)=− F
+m
+0sin(ω
+0
+t) , (27)
+Laexpresio´nx(t)=y(t)−u g (t)eseldesplazamientore- F m 0ω 0 cos(ω 0 t)
+lativoentrelamasayelsuelo,porconsiguienteF =−kx(t).
+s u(0)=0
+Ana´logamente,lafuerzadeamortiguacio´nes
+donde
+F =−c(y˙(t)−u˙ (t))=−cx˙(t)
+d g
+u(t)=(u (t),u (t),u (t))T,
+ylafuerzaexternaescero. 1 2 3
+ 
+AplicandolasegundaleydeNewton, 0 −1 0
+K
+3
+=ω
+n
+2 2ζω
+n
+0.
+∑F =my¨(t) 0 0 0
+seobtienemx¨(t)+kx˙(t)+cx(t)=−mu¨ g (t).Enformaesta´ndar Paraeliminarlafuncio´ndeperturbacio´n,seaplicaa(27)
+eloperador(D+B),dondeBeslamatriz
+x¨(t)+2ζω x˙(t)+ω2x(t)=−u¨ (t), (23)
+n n g
+ 
+(cid:112) 0 0 0
+donde ω = k/mes la frecuencia natural no amortiguada
+n B=0 0 −1,
+delavibracio´nyζ =c/2mω eselcoeficientedeamortigua-
+n 0 ω2 0
+mientocr´ıtico. 0
+Simu¨ (t)esunafuncio´ndeperturbacio´narmo´nica,esto
+g obtenie´ndoseelPVIampliado,
+esmu¨ (t)=F sin(ω t),laecuacio´n(23)puedeexpresarse:
+g 0 0
+u¨(t)+C u˙(t)+K u(t)=0,
+F 4 4
+x¨(t)+2ζω x˙(t)+ω2x(t)=− 0 sin(ω t). (24)
+n n m 0 u(0)=0, (28)
+En el momento en el que ocurre el terremoto, es muy
+(cid:18)
+F
+(cid:19)T
+u˙(0)= 0,0,− 0 ω
+razonable asumir que la estructura esta´ en reposo, esto es m 0
+x(0)=0, x˙(0)=0 y t ∈[0,T]. Para aplicar el me´todo de
+seriesdeΦ-funciones,seefectu´aelcambiodevariable,u = donde
+1
+x, u =x˙,u˙ =x˙=u ,demaneraque
+2 1 2    
+0 −1 0 0 0 0
+C
+4
+=ω
+n
+2 2ζω
+n
+−1, K
+4
+= 0 0 0.
+u˙ 2 =x¨=−2ζω n x˙−ω n 2x− F m 0 sin(ω 0 t) (25) 0 ω 0 2 0 ω n 2ω 0 2 2ζω n ω 0 2 0
+=−2ζω u −ω2u − F 0 sin(ω t) queseintegraexactamenteconelalgoritmodeseriesdeΦ-
+n 2 n 1 m 0 funcionesdescritoen(14).
+120 Ana´lisisdemodeloss´ısmicosmedianteunme´tododeseries
+3.1 Ana´lisisdeunsistemaSDOF aesteproblema:
+Enestaseccio´nseabordaunproblemasimilaralpropuesto
+a =u =b
+en[8].Sehaseleccionadolossiguientesvaloresespec´ıficos 0 0 0
+paralasvariablesestructurales: a 1 =u˙ 0 =b 1
+desdek=1hastancalcular: (31)
+u =Φ (h)b +Φ (h)b
+k 0 0 1 1
+N·s2 k·s2
+m=579,3307 =1,5 b 0 =u k
+m in
+ 
+0
+ζ =5%
+b
+1
+=−K
+5
+u
+k
+− 10sin(1,5πkh) .
+3π rad
+ω = 15πcos(1,5πkh)
+n
+2 s
+F =66723,324N=15kip Losresultadosconseguidosmedianteelme´tododeseries
+0
+4 deΦ-funciones,secomparanconlosconocidosme´todos:
+T = s
+3
+LSODE, me´todo que calcula una solucio´n nume´rica
+utilizandoelLivermoreStiffOdeSolver.Resuelvepro-
+donde1in=0,0254my1kip=4448,2216N.
+blemasstiffynostiff.Utilizalosme´todosdeAdams
+Tomandolafrecuenciadelafuncio´ndeperturbacio´nigual
+(predictor-corrector)enelcasonostiff,ylaBackward
+alafrecuencianaturaldevibracio´ndelaestructura,esdecir:
+DifferentiationFormulae(BDF)enelcasostiff.
+3π rad Rosenbrock,me´todoqueobtieneunasolucio´nnume´rica
+ω =ω =
+0 n 2 s utilizandounalgoritmodeRunge-Kuttadeordentres-
+cuatroimpl´ıcito.
+elPVIqueseobtienees:
+Gear,calculaunasolucio´nnume´ricaatrave´sdelme´todo
+  deextrapolacio´nracionaldeBurlisch-Sto¨er.Elme´todo
+0
+u˙(t)+K 5 u(t)=− 1 1 5 0 π s c in os (cid:0) (cid:0) 3 2 π 3π t (cid:1) t (cid:1)  (29) a e l s c p a e n c z ia a lm un e a nt m e a e y n o l r a p re re so ci l s u i c o´ i n o´n y d e e fi e c c i u en ac c i i o a n d e e s c d a´ if l e c r u e l n o - ,
+2 cialesquerigenlossistemasstiff.
+u(0)=0
+Taylorseries,esteme´todoencuentraunasolucio´nnume´ri-
+caparalasecuacionesysistemasdiferenciales,usando
+donde
+unme´tododeseriesdeTaylor.Esteme´todosepuede
+ 0 −1 0 
+utilizarparasolucionesdealtaprecisio´n.
+K
+5
+=9π
+4
+2 3
+2
+π
+0
+0.
+0 0 0 Newmarkβ-me´todoesunme´tododeintegracio´nnume´ri-
+caparalaresolucio´ndeecuacionesdiferenciales.Este
+Aplicando el operador diferencial, (D+B) se llega al PVI me´todoseutilizageneralmenteenladina´micaestructu-
+ampliado: ralporquesehademostradoquetienenunaltogrado
+deestabilidadnume´rica.
+u¨(t)+C 6 u˙(t)+K 6 u(t)=0, Wilsonθ-me´todosuponequelaaceleracio´ndelsistema
+u(0)=0, (30) var´ıalinealmenteentredosinstantesdetiempo,desde
+u˙(t)=(0,0,−15π)T, t a t+θh, donde el valor de θ no tiene por que´ ser
+unnu´meroenteroyes,porlogeneral,superiora1.El
+me´todo es incondicionalmente estable para sistemas
+donde
+dina´micoslinealescuandoθ>1,37.Unvalordeθ que
+se utiliza a menudo para los sistemas dina´micos no
+ 
+0 −1 0
+linealesesθ =1,4.
+C =9π2 3π −1,
+6  4 20 
+0
+9π2
+0
+EnlaFigura3secontrastaellogaritmodecimaldelmo´du-
+4 lodelerrorrelativodelasolucio´nu(t),calculadamediante
+ 
+0 0 0
+elme´tododeseriesdeΦ-funcionescontanso´lolasdospri-
+K 6 = 0 0 0, meras,taman˜odepasoh=0.01y50d´ıgitos,frenteaotros
+81π4 27π3
+0 conocidosme´todosdeintegracio´nnume´rica,talescomoLSO-
+16 80
+DEcontol=10−25,Rosenbrockconabserr=10−30,Gear
+yqueesintegradoexactamenteporelalgoritmo(14),adaptado conerrorper=10−25yTaylorseriesconabserr=10−25.
+Ana´lisisdemodeloss´ısmicosmedianteunme´tododeseries 121
+Figura3.Logaritmodecimaldelmo´dulodelerrorrelativode
+Figura5.Logaritmodecimaldelmo´dulodelerrorrelativode
+lasolucio´nu(t)delSDOF.
+lasolucio´nu(t)deunSDOF.
+La Figura 4 muestra el gra´fico del logaritmo del valor
+tiposdefuerzasactu´anencadaunadelasmasasdelospisos,
+absolutodelerrorrelativodelasolucio´nx(t),obtenidocon
+la fuerza de rigidez, la fuerza de amortiguacio´n, la fuerza
+50d´ıgitos,calculadomediante(31),condosΦ-funcionesy
+externaylafuerzainercial[8].
+taman˜o de paso h=0,001, comparado con los me´todos de
+integracio´nnume´ricaNewmarkβ-me´todoconδ =1/2,α =
+1/4, h=0,001 y Wilson θ-me´todo con δ =1/2, α =1/6,
+θ =1,4,h=0,001.Seobtienenresultadosana´logosparala
+velocidadx˙(t).
+Figura6.2DOF(TwoDegreeOfFreedomsystem).
+Lasecuacionesdelmovimientoson:
+Mx¨(t)+Cx˙(t)+Kx(t)=F(t) (32)
+donde
+(cid:18) (cid:19) (cid:18) (cid:19)
+m 0 c +c −c
+M= 1 , C= 1 2 2 ,
+Figura4.Logaritmodecimaldelvalorabsolutodelerror 0 m −c c
+2 2 2
+relativodelasolucio´nx(t). (cid:18) (cid:19)
+k +k −k
+K= 1 2 2
+−k k
+LaFigura5muestraelbuencomportamientoyprecisio´n 2 2
+delme´tododeseriesdeΦ-funciones,contaman˜odepaso0.9
+sonmatricessime´tricasdemasas,deamortiguamientoyde
+y100d´ıgitos.
+rigidezrespectivamentey
+(cid:18) (cid:19) (cid:18) (cid:19)
+4. Aplicacio´n del me´todo de series de x(t)= x 1 (t) , F(t)= F 1 (t) .
+x (t) F (t)
+Φ-funciones a un sistema 2DOF 2 2
+EnlaFigura6semuestraelesquemadeunsistema2DOF Se supone que la estructura esta´ sometida a un sismo
+que se usa para el estudio de las fuerzas que actu´an sobre delcualso´loseconsideralatraslacio´nhorizontaldelsuelo.
+dicho sistema. De forma ana´loga al sistema SDOF, cuatro AplicandolasegundaleydeNewtonyteniendoencuentaque
+122 Ana´lisisdemodeloss´ısmicosmedianteunme´tododeseries
+lafuerzaexternaescero,lasecuacionesdelmovimientoen Enconsecuencia
+estecasoson:
+ 
+0
+m 1 y¨ 1 + k c 2 ( (y y ˙ 1 − − y y ˙ 2 ) ) + + c k 1 ( ( y y ˙ 1 − − u u ˙ g ) ) + =0, (33) u˙(t)+ (cid:18) M O − 2× 1K 2 M −I − 2 1 × C 2 (cid:19) u(t)=−    F0sin 0 (ω0t)    , (39)
+2 1 2 1 1 g  m1 
+m y¨ +c (y˙ −y˙ )+k (y −y )=0,
+F0sin(ω0t)
+2 2 2 2 1 2 2 1 m2
+u(0)=0
+dondeu yu˙ soneldesplazamientoabsolutodelsueloyla
+g g
+velocidadabsolutadelsuelorespectivamente.
+Siguiendolaste´cnicasdeSteffensen[16,17],seintroduce
+Sisedefinenlosdesplazamientosrelativosentrelasmasas
+lavariable
+yelsuelo,como
+F
+u =− 0 sin(ω t)
+5 m 0
+x (t)=y (t)−u (t) 1
+1 1 g
+x (t)=y (t)−u (t) conelfindefacilitarlaeliminacio´ndelafuncio´ndeperturba-
+2 2 g
+cio´ndePVI(39),obtenie´ndoseelnuevoPVI:
+(33)sepuedeexpresarcomo:
+ 
+O −I O
+2×2 2×2 2×1
+(cid:18) (cid:19)
+Mx¨(t)+Cx˙(t)+Kx(t)=−M
+1
+u¨ . (34)
+u˙(t)+M−1K M−1C O 2×1u(t)=
+1 g O O 0
+1×2 1×2
+SiM·(1,1)Tu¨ esunamatrizdefuerzasarmo´nicas,esto  0 
+g
+es:  0 
+M (cid:18) 1 (cid:19) u¨ = (cid:18) F 0 sin(ω 0 t) (cid:19) (35) −     F F 0 0 s s i i m n n ( ( 1 ω ω 0 0 t t ) )     , (40)
+1 g F 0 sin(ω 0 t)  F0ω c m o 2 s(ω t) 
+Laecuacio´n(34)seescribe:
+m1 0 0
+u(0)=0,
+(cid:18) (cid:19)
+F sin(ω t) peroahoraconu(t)=(u (t),...,u (t)).
+Mx¨(t)+Cx˙(t)+Kx(t)=− 0 0 . (36) 1 5
+F sin(ω t) DefiniendoBcomolamatrizsiguiente
+0 0
+Cuando el sismo comienza, es muy razonable suponer  O O O 
+2×2 2×2 2×1
+quelaestructuraeste´ enreposo,porlotanto,elPVIpuede B=O 2×2 O 2×2 Ω¯ 2×1 (41)
+escribirseenformanormalizada: O Ω O
+1×2 1×2 1×1
+(cid:32)F0sin(ω0t)(cid:33)
+con
+x¨(t)+M−1Cx˙(t)+M−1Kx(t)=− m1
+F0sin(ω0t)
+(cid:18) (cid:19)
+x(0)=0 m2 (37) Ω¯ 2×1 = − − m 1 1 ,
+m2
+x˙(0)=0 Ω = (cid:0) ω2 0 (cid:1) ,
+1×2 0
+Paraaplicarelme´tododeseriesdeΦ-funciones,seefectu´a yaplicandoa(40)eloperadordiferencial(D+B)paraelimi-
+elcambiodevariables narlafuncio´ndeperturbacio´n,sellegaelPVIampliado:
+x =u ,x˙ =u ,x¨ =u˙ ,  
+1 1 1 3 1 3 O −I O
+2×2 2×2 2×1
+x 2 =u 2 ,x˙ 2 =u 4 ,x¨ 2 =u˙ 4 . u¨(t)+M−1K M−1C O 2×1u˙(t)+
+O O 0
+1×2 1×2
+ElPVI(37)puedeexpresarse:
+ 
+O O O
+2×2 2×2 2×1
+u˙(t)+ (cid:18) O O 2 2 × × 2 2 M O − 2× 1C 2 (cid:19) u(t)+  Ω 1× O 2 2 M ×2 −1K Ω 1× O 2 2 M ×2 −1C O 2 0 ×1u(t)=0 (42)
+ 0  u(0)=0
+(cid:18) O −I (cid:19)  0  (cid:18) F ω (cid:19)T
+M− 2× 1K 2 O 2 2 × × 2 2 u(t)=−   F0si m n( 1 ω0t)    , (38) u˙(0)= 0,0,0,0,− m 0 1 0
+F0sin(ω0t)
+m2
+queseintegraexactamenteutilizandoelalgoritmodeseries
+u(0)=0.
+deΦ-funcionesdescritoen(14).
+Ana´lisisdemodeloss´ısmicosmedianteunme´tododeseries 123
+donde
+u(t)=u(t)=(u (t),u (t),u (t),u (t),u (t))T,
+1 2 3 4 5
+ 
+0 0 −1 0 0
+ 0 0 0 −1 0 
+C =   50π2 −25π2 π −π −1  
+9  9 9 4 12 
+−50π2 25π2 −π π −2
+ 9 3 6 3 
+0 0
+25π2
+0 0
+9
+ 0 0 0 0 0
+ 0 0 0 0 0
+ 
+Figura7.Esquemadedospisos.
+K
+9
+= 0 0 0 0 0
+ 
+0 0 0 0 0
+ 
+2
+(cid:0)5π(cid:1)4
+−
+(cid:0)5π(cid:1)4
+π
+(cid:0)5π(cid:1)2 −π(cid:0)5π(cid:1)2
+0
+3 3 6 3 6
+4.1 Ana´lisisdeunsistema2DOF
+que se integra exactamente mediante (14), adaptado a este
+Consideremos el esquema de dos pisos sometido a un problema.Seaplica
+feno´menos´ısmico[8],Figura7.
+a =u =b
+Sehanseleccionadolossiguientesvaloresespec´ıficospara 0 0 0
+lasvariablesestructurales,similaresalospropuestosen[8]: a 1 =u˙ 0 =b 1
+m=1,6k·s2/in,ζ =5%,F 0 =12kip,ω 0 =ω n =5π/3rad/s, desdek=1hastancalcular: (46)
+elPVIsepuedeescribir:
+u =Φ (h)b +Φ (h)b
+k 0 0 1 1
+b =u
+(cid:18)
+12sin
+(cid:0)5πt (cid:1)(cid:19) 0 k
+M 7 x¨(t)+C 7 x˙(t)+K 7 x(t)=− 12sin (cid:0)5 3 πt (cid:1) (43)  0 
+3  0 
+x(t)=0 b 1 =−K 8 u k −     1 1 4 5 5 s s i i n n (cid:0) (cid:0) 5 5 3 π π k k h h (cid:1) (cid:1)     ,
+donde 25 2 πcos (cid:0)3 5πkh (cid:1)
+4 3
+(cid:18) 3,2 0 (cid:19) donde
+M = ,
+7 0 1,6  
+0 0 −1 0 0
+(cid:18) 4π −4π(cid:19)  0 0 0 −1 0
+C 7 = − 5 4π 8π 15 , K =   50π2 −25π2 π −π 0  .
+15 15 8  9 9 4 12 
+(cid:32) 160π2 −80π2 (cid:33) 
+
+−5
+9
+0π2 25
+3
+π2 −
+6
+π π
+3
+0
+
+K 7 = −8 9 0π2 40π 9 2 . 0 0 25
+9
+π2 0 0
+9 3
+EnlaFigura8semuestraelgra´ficodellogaritmodecimal
+Efectuandoelcambiodevariablex 1 =u 1 , x˙ 1 =u 3 , x¨ 1 =u˙ 3 , del mo´dulo del error relativo de la solucio´n u(t), calculada
+yx 2 =u 2 , x˙ 2 =u 4 , x¨ 2 =u˙ 4 yaplicandoeloperador(D+B) medianteelme´tododeseriesdeΦ-funcionescontanso´lolas
+alnuevosistema,con dosprimeras,taman˜odepasoh=0.01y50d´ıgitos,frentea
+losme´todosdeintegracio´nnume´ricaLSODEcontol=10−25,
+Rosenbrockconabserr=10−30,Gearconerrorper=10−25
+ 
+0 0 0 0 0
+yTaylorseriesconabserr=10−25.
+0 0 0 0 0  LaFigura9muestraelgra´ficodellogaritmodelmo´dulo
+ 
+B=0 0 0 0 −1 (44)
+delerrorrelativodelasolucio´nx(t),obtenidocon50d´ıgitos,
+ 
+0 0 0 0 −2
+calculadomediante(46),condosΦ-funcionesytaman˜ode
+0 0 25
+9
+π2 0 0 pasoh=0,001,comparadoconlosme´todosdeintegracio´n
+nume´rica Newmark β-me´todo con δ =1/2, α =1/4, h=
+seobtieneelPVIampliado: 0,001 y Wilson θ-me´todo con δ =1/2, α =1/6, θ =1,4,
+h=0,001.Seobtienenresultadosana´logosparalavelocidad
+u¨(t)+C u˙(t)+K u(t)=0 (45) x˙(t).
+9 9
+EnlaFigura10seponedemanifiestoelbuencomporta-
+u(0)=0
+mientoyprecisio´ndelme´tododeseriesdeΦ-funciones,con
+u˙(0)=0
+taman˜odepaso0.9y100d´ıgitos.
+124 Ana´lisisdemodeloss´ısmicosmedianteunme´tododeseries
+Figura8.Logaritmodecimaldelmo´dulodelerrorrelativode
+Figura10.Logaritmodecimaldelmo´dulodelerrorrelativo
+lasolucio´nu(t)del2DOF.
+delasolucio´nu(t)deun2DOF.
+Referencias
+[1] ANDU´JARR,ROSETJ,KILARV.(2011).Interdiscipli-
+nayapproachtonumericalmethodsforstructuraldyna-
+mics.Worldappliedsciencesjournal;14(8):1246-53.
+[2] CHOPRAAK.(2007).Dynamicsofstructures:Theory
+and applications to earthquake engineering. 3rd ed.
+Prentice-Hall-UpperSaddleRiver-NJ.
+[3] CHUNGJ,HULBERT,GM.(1994).Afamilyofsingle-
+step Houbolt time integration algorithms for structural
+dynamics. Computer Methods Applied Mechanics and
+Engineering;118:1-11.
+Figura9.Logaritmodecimaldelmo´dulodelerrorrelativode [4] GARC´IA-ALONSO F, REYES JA, FERRA´NDIZ JM,
+laposicio´nx(t). VIGO-AGUIARJ.(2009).AccuratenumericalIntegra-
+tionofperturbedoscillatorySystemsintwofrequencies.
+TransactionsonMathematicalSoftwareTOMS;36(4):
+5. Conclusiones article21.
+Enelpresentetrabajosemuestraunaaplicacio´ndelme´to- [5] GARC´IA-ALONSOF,REYESJA.(2009).Anewmet-
+dodeseriesdeΦ-funcionesaunproblemaoscilatoriodeuna
+hod for exact integration of some perturbed stiff linear
+o´rbitacuasiperio´dicaenelplanocomplejo,as´ıcomoalana´li-
+systems of oscillatory type. Appl. Math.Comput.; 215:
+sisdelarespuestadedosestructuras,modeladasmedianteun
+2649-62.
+SDOFy2DOF,frenteaunterremoto.
+Elalgoritmointegraelproblemaperturbado,conlasdos [6] GHOLAMPOUR A, GHASSEMIEH M. (2011). New
+primerasΦ-funciones,sinerrordetruncamiento,despue´sde implicit method for analysis of problems in nonlinear
+sutransformacio´nenunproblemanoperturbadodesegun- structuraldynamics,Appliedandcomputationalmecha-
+doorden,mediantelaaplicacio´ndeunoperadordiferencial nics;5:15-20.
+adecuado.
+[7] GHOLAMPOUR A, GHASSEMIEH M. (2012). New
+Elme´todofuncionaconprecisio´ncontaman˜osdepaso
+practicalapproachtononlineardynamicanalysisofstruc-
+grandesypequen˜os.Laprecisio´nylaeficienciadelme´todode
+tures:RefinementofNewmark’sandWilson’sclassical
+seriesΦ-funcionessecontrastaconlosresultadosobtenidos
+methods. Practice periodical on structural design and
+porotrosintegradoresbienconocidos,talescomo:LSODE,
+construction;17:30-34.
+Rosenbrock,Gear,Taylorseries,Newmarkβ-me´todoyWil-
+sonθ-me´todo.
+[8] HARTGC,WONGK.(1999).Structuraldynamicsfor
+structuralengineers.JohnWiley&Sons,Inc.
+Ana´lisisdemodeloss´ısmicosmedianteunme´tododeseries 125
+[9] MART´INP,FERRA´NDIZJM.(1997).Multistepnume- [17] STEFFENSENJF.(1955b).Onthedifferentialequations
+rical methods based on Scheifele G-functions with ap- ofHillinthetheoryofthemotionofthemoonII.Acta
+plication to satellite dynamics. SIAM J. on Numerical Math.;95:25-37.
+Analysis;34:359-75.
+[18] STIEFELE,BETTISDG.(1969).StabilizationofCo-
+[10] NEWMARKNM.(1959).Amethodofcomputationfor wellsMethod.Numer.Math.;13:154-75.
+structural dynamics. ASCE Journal of the Engineering
+[19] STIEFELEL,SCHEIFELEG.(1971).LinearandRegu-
+MechanicsDivision,85,No.EM3.
+larCelestialMechanics.Berlin-Heldelberg-NewYork:
+[11] RAMOSJI.(2006).Piecewise-linearizedmethodsfor Springer.
+initial-valueproblemswithoscillatingsolutions.Applied
+[20] VANDEVYVERH.(2006).Two-stephybridmethods
+MathematicsandComputation;181:123-46.
+adaptedtothenumericalintegrationofperturbedoscilla-
+[12] REYESJA,GARC´IA-ALONSOF,FERRA´NDIZJM, tors.arXiv:math/0612637v1[math.NA].21.
+VIGO-AGUIAR J. (2007). Numeric multistep variable
+[21] VIGO-AGUIARJ,FERRA´NDIZJM.(1998).Ageneral
+methods for perturbed linear system integration. Appl.
+procedurefortheadaptationofmultistepalgorithmsto
+Math.Comput.;190:63-79.
+the integration of oscillatory problems. SIAM Journal
+[13] REYESJA,GARC´IA-ALONSOF.(2012).Computatio- NumericalAnalysis;35(4):1684-708.
+nalseriesandmultistepmethodstointegrateforcedand
+[22] WILSON EL. (1962). Dynamic response by step-by-
+dampedstiffoscillators.TheOpenAppliedMathematics
+stepmatrixanalysis,1-5October1962,Symposiumon
+Journal;6:9-22.
+the use of computers in civil engineering, Laboratorio
+[14] SCHEIFELE G. (1971). On numerical integration of NacionaldeEngenhariaCivil,Lisbon,Portugal.
+perturbedlinearoscillatingsystems.ZAMP;22:186-10.
+[23] WILSON EL, FARHOOMAND I, BATHE KJ.
+[15] SIMOS TE, VIGO-AGUIAR J. (2003).Exponentially (2007).Nonlineardynamicanalysisofcomplexstructu-
+fittedsympleticintegrator.Phys.Rev.E.;67:1-7. res,Earthquakeengineeringandstructuraldynamics;1:
+241-52.
+[16] STEFFENSENJF.(1955a).Onthedifferentialequations
+of Hill in the theory of the motion of the moon. Acta
+Math.;93:169-77.

@@ -1,0 +1,319 @@
+REVISTA DE CIENCIAS MATEMÁTICAS Vol. 24, único, Nos. 2007- 2008
+DETERMINACIÓN DE LAS CAUSAS DE LA DEGRADACIÓN DEL
+SUELO A TRAVÉS DEL ANÁLISIS DE CORRESPONDENCIAS
+SIMPLE Y DE REGRESIÓN LOGÍSTICA BINARIA.
+José Víctor Tamariz Flores1, Gladys Linares Fleites2, Jesús A. Ruiz Careaga2Jenaro Reyes M.2 y Otilio
+Acevedo S.3
+1. Postgrado de Ciencias Ambientales- ICUAP, 14 Sur 63 01, San Manuel, Puebla, Pue. C.P.72570
+2. Departamento de Investigación en Ciencias Agrícolas.Instituto de CienciasBenemérita Universidad
+Autónoma de Puebla
+3. Universidad Autónoma del Estado de Hidalgo
+RESUMEN
+Las relaciones entre el grado de erosión del suelo, su relieve, su profundidad y la pendiente que
+exhiben, son de gran importancia para realizar enfoques ambientalistas e incorporar conceptos de
+manejo y conservación de los suelos. En este trabajo se persigue como objetivo la aplicación del
+Análisis de Correspondencias Simples para determinar las causas de degradación del suelo a partir
+de algunas de las variables cualitativas que lo caracterizan y modelar el grado de erosión,
+categorizado en los niveles de bajo y alto, en función del relieve, la pendiente y la profundidad del
+suelo a través de la Regresión Logística Binaria. La confirmación de la existencia de relaciones
+entre estas características permitirá hacer una propuesta sustentable para el desarrollo de la
+Sierra Norte de Puebla, México.
+ABSTRACT
+The relations between soil erosion, its relief, depth and slope, are important aspects to consider in
+the study of soil conservation, from an environmental point of view. The aim of this work is to
+analyze the causes of soil degradation regarding some of its qualitative variables with Simple
+Correspondence Analysis and to model the erosion level in function of its relief, slope and deft using
+Binary Logistic Regression. The confirmation of these connections will make a sustainable offer for
+the development of Sierra Norte de Puebla, México.
+Palabras claves: análisis de correspondencias, erosión de suelo, regresión logística.
+INTRODUCCIÓN
+En el Departamento de Investigaciones en Ciencias Agrícolas del Instituto de Ciencias de la
+Benemérita Universidad Autónoma de Puebla se ha llevado a cabo un estudio de la Zonificación
+Agroecológica del Noroeste de la Sierra Norte de Puebla, México, logrando establecer zonas basadas en
+las variaciones del clima y estudiar las posibles causas de degradación del suelo. (Ruíz, et al, 2005).
+Como en todo estudio empírico el esclarecimiento de las relaciones existentes entre las características
+de estos suelos, requiere formas mixtas de análisis puramente exploratorios de datos y de análisis
+puramente confirmatorio. Cada uno de estos análisis tiene su propia significación, diferentes objetivos y
+debe realizarse e interpretarse por separado (Victor, et al, 1981).
+Con la información disponible se realizó inicialmente un estudio exploratorio a través del Análisis de
+Correspondencias (Linares, et al, 2006). El Análisis de Correspondencias es un método de Estadística
+Multivariada de reducción de dimensión de una tabla de datos cuyas variables están medidas en escala
+nominal. El hecho de que se manejen variables cualitativas confiere una característica distintiva a esta
+técnica y es que no se utilizan como datos las mediciones individuales, sino frecuencias de una tabla.
+Este análisis es de utilidad a los investigadores de las Ciencias del Suelo dado que permite esclarecer
+las relaciones entre las categorías de diversas características del suelo, muchas de las cuales son
+observaciones cualitativas. Si sólo se tiene dos variables cualitativas, cada una de las cuales puede
+presentar varias modalidades o categorías se utiliza el llamado Análisis de Correspondencia Simples
+(ACS).
+La modelación del grado de erosión de estos suelos en función del relieve, la pendiente y la
+profundidad, permite confirmar la hipótesis de la existencia de relaciones entre estas características,
+.
+Email: 1 jtamariz@siu.buap.mx
+42
+exploradas por el ACS. Estas relaciones son de gran importancia para realizar enfoques ambientalistas
+e incorporar conceptos de manejo y conservación de los suelos a fin de lograr una propuesta sustentable
+para el desarrollo de esta región de la Sierra Norte de Puebla. El grado de erosión fue categorizado en
+dos niveles (bajo y alto) por lo que se puede obtener una función de predicción a través de la Regresión
+Logística Binaria (RLB).
+En el desarrollo del trabajo se hace una caracterización de la zona de estudio y de la tabla de datos y,
+posteriormente, se exponen los estudios exploratorios y confirmatorios realizados con las técnicas de
+ACS y RLB. Finalmente, se arriban a conclusiones y se brindan algunas recomendaciones.
+Desarrollo
+La investigación fue desarrollada en la porción noroeste de la Sierra Norte de Puebla. El clima
+predominante es el templado húmedo con lluvias todo el año y la vegetación dominante es el bosque de
+pino-encino bajo condición secundaria. La superficie de cultivo representa el 55% del área total y el resto
+lo ocupan el uso pecuario, forestal y los asentamientos humanos. La densidad poblacional hasta el
+censo del año 2000 fue de 193 habitantes por km2 y el grado de marginación es considerado alto.
+(INEGI, 2000)
+Para determinar el grado de erosión de los suelos se realizó la prospección edafológica,
+estableciéndose puntos de muestreo para el posterior levantamiento de los mismos. La descripción de
+los perfiles y el entorno se llevó a cabo según la metodología propuesta por Ruiz et al en 1999.
+Después de seleccionar los perfiles más conservados, es decir, aquellos que habían sufrido en menor
+grado los efectos de la erosión y que eran representativos de la zona de estudio se tomaron como
+Perfiles Patrón y se compararon con cada perfil de los sitios descritos para identificar las perdidas
+sufridas por uno o varios horizontes del suelo. Subsecuentemente se pudo diagnosticar la erosión dentro
+de las siguientes categorías o grados:
+Nula: cuando no se aprecia diferencia con el perfil patrón.
+Leve: si al compararlo con el perfil patrón, el suelo ha perdido al menos el 25% de su espesor original en
+su horizonte A
+Moderada: cuando la perdida de suelo en el horizonte A es de 75% o más.
+Fuerte. Cuando el suelo ha perdido el horizonte A y al menos el 25% del horizonte B.
+Muy fuerte: cuando el horizonte B se ha perdido hasta en un 75% o más.
+Las pérdidas de suelo se determinaron con la Metodología Provisional para la Evaluación de la
+Degradación de los Suelos establecida por la FAO (1980)
+Los análisis estadísticos se realizaron a partir de una tabla de datos de dimensión 100 por 4,
+elaborándose las tablas de contingencias de interés.. Las variables con sus correspondientes
+categorías se relacionan a continuación:
+Grado de erosión (nada, leve, moderada, fuerte y muy fuerte).
+Relieve (llano, casi llano, ligeramente ondulado, medianamente ondulado, ondulado, fuertemente
+ondulado, alomado, montañoso).
+Pendiente ( menor de 5%, entre 5 y 10, de 10 a 20, de 20 a 30, de 30 a 40 y más de 40%)
+Profundidad del suelo (menos de 10 cm, de 10 a 20, de 20 a 40, de 40 a 60 y más de 60 cm).
+Cuando fue necesario se realizaron re-categorizaciones de las variables las que se exponen en las
+tablas respectivas. Los análisis estadísticos se realizaron con el sistema Minitab 15.
+43
+1. ANÁLISIS EXPLORATORIO A TRAVÉS DEL ANÁLISIS DE CORRESPONDENCIAS SIMPLES.
+(ACS).
+El Análisis de Correspondencias Simples está particularmente adaptado para tratar tablas de
+contingencias, representando los efectivos existentes en las múltiples categorías combinadas de dos
+variables cualitativas. Al cruzar en una tabla de contingencia el carácter I con modalidades desde i = 1
+hasta i = n (en filas), con el carácter J con modalidades desde j = 1 hasta j = p (en columnas) podemos
+representar el número de unidades estadísticas que pertenecen simultáneamente a la modalidad i del
+carácter I y a la modalidad j del carácter J mediante las frecuencias k (Linares, 2006) En las tablas, que
+ij
+se muestran a continuación, se dan las tablas de contongencias donde I estará representado por las
+variables relieve, pendiente y profundidad del suelo con sus respectivas modalidades o categorías,
+mientras que J estará representada por la variable grado de erosión con categorías j = 1, ...., 4., dado
+que los grados de erosión nula y leve fueron colapsados.
+Con el fin de estudiar las relaciones entre el conjunto de modalidades del carácter I (relieve,
+pendiente y profundidad del suelo) y las modalidades de carácter J (grado de erosión), se llevó a cabo un
+Análisis de Correspondencias Simples con estas parejas de variables cualitativas. Se utilizaron la
+distancia ji-cuadrado, el método de estandarización de centrar las filas y las columnas y el método de
+normalización simétrico donde para cada dimensión, las puntuaciones de las filas son la media
+ponderada de las puntuaciones de columna divididas por el valor propio coincidente y las puntuaciones
+de columna son las media ponderada de las puntuaciones de fila divididas por el valor propio
+coincidente. Finalmente, se hace la reducción a dos dimensiones, para obtener las representaciones
+gráficas respectivas.
+Para el estudio de la relación del grado de erosión con el relieve se obtienen la tabla 1 y el grafico 1.
+Una reducción a dos dimensiones, tiene una inercia de 0.5855, de la que 0.5483 corresponden a la
+primera dimensión y 0.0372 a la segunda dimensión. La primera dimensión y más importante señala
+oposición entre relieves llanos y montañosos.
+El gráfico 1 muestra la cercanía de los puntos que representan las categorías de ambas variables,
+evidenciándose que en relieve montañoso la erosión es muy fuerte, mientras que en los suelos llanos,
+ligeramente o medianamente ondulados la erosión es leve o moderada.
+Tabla 1. Tabla de Contingencia de Relieve y Grado de Erosión
+Grado de erosión Leve Moderada Fuerte Muy fuerte
+TOTAL
+Relieve
+Llano 19 9 0 0 28
+ondulado 4 17 20 4 45
+montañoso 0 5 16 6 27
+TOTAL 23 31 36 10 100
+44
+Gráfico 1. Representación en dos dimensiones del Relieve y el Grado de Erosión
+Symmetric Plot
+1,5
+1,0
+2
+nt 0,5 muy fuerte
+e montañoso
+n
+m p o fuerte lla l n e o ve
+o 0,0
+C onduladomoderada
+-0,5
+-1,0
+-1,0 -0,5 0,0 0,5 1,0 1,5
+Component 1
+Para el estudio del grado de erosión y la pendiente se obtienen la tabla 2 y el gráfico 2.. La primera
+dimensión tiene una inercia acumulada de 0.5596 y la segunda de 0.0781, luego la representación
+gráfica muestra un 94% de la variabilidad total. La primera dimensión señala la oposición entre
+pendientes bajas y altas. Puede apreciarse que los puntos que indican erosión leve o nula están muy
+cercanos a las pendientes bajas (menor de 10), mientras que, por ejemplo, los puntos erosión “muy
+fuerte” y pendiente “de 10 a 15” están muy cercanos. De la misma manera ocurre con los puntos que
+representan la erosión fuerte y la pendiente de 10 a 20.
+Cabe señalar que el territorio estudiado presenta zonas de relieve accidentado, con muchas zonas
+montañosas, alomadas y onduladas donde el uso del suelo debe ser de explotación forestal.
+Tabla No. 2 Tabla de Correspondencia entre Pendiente y Grado de erosión
+Grado de Erosión Leve Moderada Fuerte Muy fuerte
+TOTAL
+Relieve
+< 5 14 6 0 0 20
+De 5 a 10 8 5 3 0 16
+De 10 a 15 0 11 8 5 24
+De 15 a 20 1 8 19 2 30
+>20 0 1 6 3 10
+TOTAL 23 31 36 10 100
+45
+Gráfico 2. Representación en dos dimensiones de la Pendiente y el Grado de Erosión
+Symmetric Plot
+1,5
+1,0
+2
+n
+e
+t 0,5 fu1e5r tae 20
+n
+p o 5 a 10 leve
+m o 0,0 > 20 < 5
+C moderada
+10 a 15
+-0,5 muy fuerte
+-1,0
+-1,0 -0,5 0,0 0,5 1,0 1,5
+Component 1
+Siguiendo la metodología anterior, la tabla 3 y el gráfico 3 permiten analizar la relación entre el grado
+de erosión y la profundidad del suelo. La representación en dos dimensiones acumula el 100 % de
+inercia (0.2461 en la primera dimensión y 0.0159 en la segunda). Los puntos que representan los grados
+de erosión fuerte y muy fuerte están ubicados muy cercanamente al punto que representa profundidad
+del suelo menor a 20 cm.
+Tabla 3. Tabla de Contingencia de Profundidad y Grado de Erosión
+Grado de erosión Leve Moderada Fuerte Muy fuerte
+TOTAL
+Profundidad
+< 20 cm 5 17 29 9 60
+De 20 a 60 cm 16 11 7 1 35
+> 60 cm 2 3 0 0 5
+TOTAL 23 31 36 10 100
+46
+Tabla No. 3. Tabla de Correspondencia entre Profundidad del Suelo y
+Grado de Erosión.
+Symmetric Plot
+0,75
+0,50
+n
+2
+e t
+0,25
+fuerte 20 a 60 leve
+n
+o muy fuerte< 20
+p 0,00
+m
+o
+C moderada
+-0,25
+> 60
+-0,50
+-0,50 -0,25 0,00 0,25 0,50 0,75
+Component 1
+2. ANÁLISIS CONFIRMATORIO. REGRESIÓN LOGÍSTICA BINARIA (RLB)
+Consideraremos el caso en que la variable respuesta es el grado de erosión asumiendo sólo dos
+valores posibles: 1 (grado leve a moderado) y 0 (grado fuerte a muy fuerte).
+En general, cuando la variable respuesta es binaria, hay bastantes pruebas empíricas que indican que la
+forma de la función de respuesta deber no lineal. Una función monótonamente creciente (o decreciente),
+en forma de S (o de S invertida), es la que se acostumbra emplear. Esta función se llama función de
+respuesta logística y se puede lineal izar con facilidad a través de la transformación “logit”. (Montgomery
+et al, 2004).
+La tabla No. 4 brinda la información sobre la re-.categorización de los datos del grado de erosión.
+Las variables predictoras del modelo fueron los factores relieve, profundidad y pendiente con los niveles
+antes señalados.
+Tabla No. 4: Información sobre la Respuesta.
+Variable Valor Frecuencia
+Grado de erosion 1 54 (Evento)
+0 46
+Total 100
+La tabla No. 5 resume algunos de los resultados obtenidos. . Como es conocido la interpretación de
+los coeficientes estimados en la RLB depende de la función de enlace (en nuestro caso, logit), del evento
+de referencia y de los niveles de los factores de referencia. Como puede apreciarse en la tabla por los
+valores de los coeficientes estimados y de la razones “odds”, todos los factores considerados tienen
+efecto sobre la respuesta.
+El estadístico G = 137,989 con 8 grado de libertad muestra un valor de p empírico de 0.00, indicando
+que existe suficiente evidencia de que al menos uno de los coeficientes es diferente de cero. Obsérvese
+que, sin embargo, los valores de p empírico de las pruebas Z para cada coeficiente no permiten
+rechazar la hipótesis nula de que cada uno de los coeficientes es igual a cero, lo que pone de manifiesto
+problemas de multicolinealidad. Además de esta evidente contradicción entre las pruebas de hipótesis
+anteriores, obsérvese que los errores estándar de los coeficientes son valores muy elevados y, por
+tanto, el modelo (aunque confirma las relaciones entre el grado de erosión y las características de los
+47
+suelos utilizadas como predictores) debe ser utilizado con precaución si se deseara hacer predicciones
+del grado de erosión de estos suelos..
+Tabla No. 5. Regresión Logística Binaria para el grado de erosión versus el relieve, la profundidad y la
+pendiente.
+Predictor Coeficiente Error Estándar Z p Razón “Odds”
+Coeficiente
+Constante 21.2426 5477.85 0.00 0.997
+Relieve
+ondulado -39.7172 9630.78 -0.00 0.997 0.00
+montañoso -40.8727. 13877.1 -0.00 0.998 0.00
+Profundidad
+De 20-60 41.0708 5255.24 0.01 0.994 6.8680E+17
+>60 80.5910 11575.5 0.01 0.994 1.0005E+35
+Pendiente
+De 5 a 10 -1.89769 8660.31 -0.00 1.000 0.15
+De 10 a 15 -2.07523 11269.4 -0.00 1.000 0.13
+De 15 a 30 -2.15418. 11764.9 -0.00 1.000 0.12
+>30 -41.8346 1667.9 -0.00 0.998 0.00
+Las pruebas de bondad de ajuste por los métodos de Pearson, de la “deviance” y de Hosmer -
+Lemeshow, apuntan a que el ajuste es adecuado, ya que todos muestran un valor de p empírico igual a
+1, lo que hace aceptar la hipótesis nula de ajuste adecuado a los datos.
+Los resultados destacan las ideas intuitivas de que el grado de erosión cambia abruptamente,
+haciéndose muy fuerte cuando la pendiente es mayor de 30 cm. De igual forma se corrobora que en
+relieves ondulados y montañosos la erosión es muy fuerte con respecto a los suelos con relieve llano.
+También se confirma que con profundidades de 20 a 60 cm. y aún más con profundidades mayores de
+60 cm., el grado de erosión es leve o prácticamente nulo.
+CONCLUSIONES Y RECOMENDACIONES
+El Análisis de Correspondencias Simple, es una herramientas estadísticas de gran utilidad a los
+investigadores de la Ciencia del Suelo, dado que le permite plantear hipótesis de investigación que luego
+podrán ser corroboradas con otros análisis confirmatorios.
+Las representaciones gráficas que se obtuvieron con estas técnicas, contribuyen a esclarecer las
+causas que determinan la degradación del suelo en la zona Noroeste de la Sierra Norte de Puebla.
+El modelo de Regresión Logística obtenido corroboró que en los suelos de relieve montañoso y en
+pendientes de más de 30 cm., la degradación del suelo por erosión es muy fuerte por lo que es
+indispensable la aplicación integral de medidas encaminadas a la conservación de los suelos en la Sierra
+Norte de Puebla, para que ayuden a disminuir la degradación del recurso suelo, así como, a la
+recuperación paulatina de las áreas afectadas por la erosión
+El conocimiento de las relaciones entre estas características del suelo, es de gran importancia para
+realizar enfoques ambientalistas e incorporar conceptos de manejo y conservación de los suelos a fin de
+lograr una propuesta sustentable para el desarrollo de la región.
+REFERENCIAS BIBLIIOGRÁFICAS
+FAO (1980). Metodología provisional para la evaluación de la degradación de los
+suelos. Roma, Italia, 86 pp.
+INEGI (2000). Síntesis Geográfica del estado de puebla y Anexo Cartográfico. Libro
+electrónico del Instituto Nacional de Estadística, Geografía e Informática.
+México.
+Linares Fleites, G., Ruiz Careaga, J. y Tamariz Flores, J. V. (2004). “Aplicación del
+Análisis Factorial de Correspondencia para el estudio de la degradación de los
+48
+suelos”. En: Ciencias Ambientales. Temáticas para el Desarrollo. Volumen I.
+Ruiz Careaga J. y Castelán Vega, R. (eds). Dirección General de Fomento
+Editorial. Benemérita Universidad Autónoma de Puebla. México. pp 119-130.
+ISBN 968-863-782-3.
+Linares Fleites, G. (2006). Análisis de Datos Multivariados. Editorial Benemérita
+Universidad Autónoma de Puebla. Facultad de Computación. México. 277p
+ISBN 968 9182 15 3
+MINITAB Release 15 (2005). Statistical Software. Minitab. Inc.
+Montgomery, D. C., Peck, E. A. y Vining, G.G. (2004). Introducción al Análisis de
+Regresión Lineal. Compañía Editorial Continental. 3ra. Edición. México, D.F.
+588p ISBN 970-24-0327-8.
+Ruiz Careaga, J., Calderón, E. y Tamariz Flores, J. V. (1999). Manual para la
+descripción de perfiles de suelos y evaluación del entorno. Textos BUAP. Puebla,
+México, 65 pp.
+Ruiz Careaga, J., Riverol Rosquet, M., Tamariz Flores, J. V. y Castelán Vega, R.
+(2005). Zonificación Agroecológica de la Sierra Norte de Puebla. Dirección
+General de Fomento Editorial. Benemérita Universidad Autónoma de Puebla.
+México. 200p ISBN 968-863-846-3.
+Victor, N., Brossio, E, P. y Neumman, K. (1981). Conceptos de valoración para
+estudios empíricos. Reporte (traducido del alemán) del Departamento de
+Biomatemática de la Universidad de Gieben. Alemania.
+49

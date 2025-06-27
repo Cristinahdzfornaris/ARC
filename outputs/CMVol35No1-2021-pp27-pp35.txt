@@ -1,0 +1,518 @@
+Ciencias Matemáticas,Vol. 35, No. 1, 2021, Pag. 27-35
+Recibid o11-2020, Aceptado 04-2021
+Midiendo la legitimidad del usuario autenticado en
+sistemas de Autenticacio´n Gra´fica “Cued Recall”.
+Measuring the legitimacy of the authenticated user
+in systems of Graphic Authentication “Cued Recall”.
+Pedro Enrique Navarro Sosa1*, Carlos Miguel Lego´n Pe´rez1, Raisa Socorro Llanes2
+Resumen LaAutenticacio´nGra´ficaesuntemamuyactualsobrelaquesepublicannumerosasinvestigaciones.
+Recientemente se propuso un modelo probabil´ıstico para medir la autenticidad del usuario en sistemas de
+autenticacio´n gra´fica “Cued Recall” que emplean discretizacio´n centrada o robusta. Ese modelo aporta una
+me´tricaparamedirelgradodeautenticidaddelosusuarios(leg´ıtimosono)quelogranautenticarseenestetipo
+desistema,sinembargo,unalimitacio´ndelmodeloanterioresquesedesconoceladistribucio´ndelestad´ıgrafo
+propuesto.Enestetrabajoseobtieneladistribucio´nteo´ricadeeseestad´ıgrafo,mediantelaaplicacio´nde3test
+debondaddeajusteama´sde50distribucionesconocidas,Apartirdeestadistribucio´nsemodifica,mejoraen
+elmodeloanteriorelcriteriodeseleccio´ndelosumbralesempleadosparaevaluarelgradodeautenticidaddel
+usuario,locualcontribuyeamejorarsugeneralizacio´nyaplicacio´npra´ctica.Seconfirmaexperimentalmentela
+efectividaddelamodificacio´npropuesta.
+Abstract GraphicalAuthenticationisaverycurrenttopiconwhichnumerousinvestigationsarepublished. A
+probabilisticmodelwasrecentlyproposedtomeasureuserauthenticityin“CuedRecall”graphicalauthentication
+systems that employ focused or robust discretization. This model provides a metric to measure the degree
+ofauthenticityoftheusers(legitimateornot)whomanagetoauthenticateinthistypeofsystem,however, a
+limitationofthepreviousmodelisthatthedistributionoftheproposedstatisticianisunknown. Inthiswork,the
+theoreticaldistributionofthisstatisticianisobtainedbyapplying3goodness-of-fitteststomorethan50known
+distributions.Fromthisdistribution,theselectioncriteriaforthethresholdsusedaremodifiedandimprovedinthe
+previousmodel. toevaluatethedegreeofauthenticityoftheuser,whichcontributestoimproveitsgeneralization
+andpracticalapplication. Theeffectivenessoftheproposedmodificationisconfirmedexperimentally.
+PalabrasClave/Keywords
+Autenticacio´nGra´fica/GraphicalAutentication-ModeloProbabil´ıstico/ProbabilisticModel-CuedRecall
+1InstitutodeCriptograf´ıa,UniversidaddeLaHabana,LaHabana,Cuba,pedropepe3437@gmail.com,mgp@aguacate.edu.cu
+2FacultaddeIngenier´ıaInforma´tica,UniversidadTecnolo´gicadeLaHabana,LaHabana,Cuba,jgp@mamonzillo.edu.cu
+*AutorparaCorrespondencia
+Introduccio´n [2],segundo,lainformacio´nqueguardanenclarolosme´to-
+dosdediscretizacio´n[3]ytercero,laexistenciadepatrones
+LosSistemasdeAutenticacio´nGra´ficasonunaalternati-
+en las contrasen˜as escogidas por los usuarios (contrasen˜as
+vaviablealaautenticacio´nporcontrasen˜asalfanume´ricasy
+de´biles)[4][5].Recientementeen[6]sepropusounnuevo
+constituyenactualmenteuna´reaactivadeinvestigacio´n.En
+modeloprobabil´ısticoparamedirelgradodeautenticidadde
+losSistemasdeAutenticacio´nGra´ficadeltipo“CuedRecall”,
+losusuariosquesonautenticadosenlossistemasdeAuten-
+lacontrasen˜adelusuarioconsisteenkpuntosS queestese-
+i ticacio´nGra´fica“CuedRecall”,queempleandiscretizacio´n
+lecciona,enlafasederegistro,deunaovariasima´genes.Para
+centrada o la o´ptima. Lo denotaremos por modelo L. Este
+autenticarse,elusuariodebeescogerenelordencorrecto,k
+modeloconstruyeunestad´ıgrafoma´ximoveros´ımilbasadoen
+puntosQ quedebencoincidir(aproximadamente)conlosS.
+i i lasdistanciasd =d(S,Q)entrelospuntosS deregistroy
+i i i i
+Existenataquesdediccionariocontraestossistemasde
+lospuntosQ deautenticacio´n.ElmodeloLesaplicablesolo
+i
+Autenticacio´nGra´fica[1],quelogranautenticarseconcier-
+enestostiposdediscretizacio´n,puesunavezqueelusuario
+tasprobabilidadesdee´xito,quedependendelacalidaddel
+es autenticado, el centro de la regio´n de tolerancia de cada
+diccionarioconstruido.Apesardequenoexistenbasesde
+punto Q sera´ igual al punto S y a partir de ellos se puede
+i i
+datosdecontrasen˜asgra´ficas,estosdiccionariosseconstruyen
+calcularladistanciad.Noconocemosantecedentesdemode-
+i
+apartirdelainformacio´nobtenidaportresv´ıas,primerola
+losdeesetipoenAutenticacio´nGra´fica.Suventajaprincipal
+existenciadepuntosma´sprobablesenlaimagen(“hotspots”)
+28 MidiendolalegitimidaddelusuarioautenticadoensistemasdeAutenticacio´nGra´fica“CuedRecall”.
+esqueaportaunanuevamedidadelniveldeautenticidaddel seimponen4condiciones(axiomas),quedebecumpliruna
+usuarioautenticado,locualpodr´ıaserempleadoparadetectar distribucio´n de probabilidades P(d) dentro de la regio´n de
+i
+ataquesdediccionarioexitososcontraestetipodesistema,sin tolerancia RT para medir en cada distancia di, el grado de
+embargo,unalimitacio´ndelmodeloLesquesedesconoce autenticidaddeunusuario.
+ladistribucio´ndelestad´ıgrafopropuesto.Enestetrabajose
+Las condiciones 1 y 2 son las comunes a cualquier
+determino´ ladistribucio´nteo´ricadelestad´ıgrafopropuestoen
+modeloprobabil´ıstico,paragarantizarqueP(d)seauna
+elmodeloL,ysedemuestraexperimentalmentequesuapli- i
+distribucio´ndeprobabilidadessobretodoslospuntos
+cacio´npermiteescogerconmayorrigorteo´ricolosumbrales
+delaimagen.
+paramedirelniveldeautenticidaddelusuarioautenticado,
+Lascondiciones3y4sonespec´ıficasdeesteproble-
+reduciendo as´ı en la practica la probabilidad de error en la
+maysignificanqueunpequen˜ogrupodelasmenores
+clasificacio´ndelosusuarios.
+distanciasd =d(S,Q)entrelospuntosS deregistro
+i i i i
+ylospuntosQ deautenticacio´n,debentenerasignada
+i
+1. Preliminares
+muyaltaprobabilidad.Estascondicionessugierenuna
+1.1 Autenticacio´nGra´fica“CuedRecall”. forma para la distribucio´n buscada y a partir de esa
+Estos sistemas Autenticacio´n Gra´fica requieren que el sugerencia se propone una funcio´n que cumple estas
+usuariomemoriceunconjuntodepuntosena´reaspredetermi- condicionesparacadad i =d(S i ,Q i ).
+nadasdeunaimagenoconjuntosdeellas.Enlaideaoriginal
+A partir de la funcio´n propuesta para cada punto y asu-
+[7],elusuariodeb´ıamarcarconunmouseounlapiceroen
+miendoindependenciaentrelospuntosdelacontrasen˜a,se
+determinadospuntosdeunaimagen,silohac´ıadeformaco-
+proponeunestad´ıgrafodeverosimilitud:
+rrectaesteser´ıaaceptadoporelsistemadelocontrarioser´ıa
+rechazado.Losmismoscuentancon2fasesprincipales,fase
+deregistroyfasedeautenticacio´n.[8][9] max L (S )−L (Q)
+L (Q)=(
+S0∈Imxn 1 0 1
+)∗C (1)
+En la fase de registro, el usuario escoge k puntos, pe- 2 max L (S )−min L (S ) L
+ro el sistema por seguridad, no guarda en texto claro los k S0∈Im k xn 1 0 S0∈Im k xn 1 0
+puntos, ni sus regiones de tolerancia, lo que guarda es el Do´ndemax esladistanciadeSalpixeldelaimagen
+S0∈Imxn
+H reg a i s o h n ( e R s T d 1 , e . t . o . l , e R ra T n k c ) ia de RT la i d c e o t n e c rm at i e n n a a d c a i s o´n po o r rd la en co a n d t a ra d s e en˜ l a a . s k t m am a´s a l n˜ e o ja n n x o m de pi l x a e i l m es ag y e L n, ( m Q i ) n S e 0 s ∈ : Im k xn =0,I mxn eslaimagende
+1
+Enlafasedeautenticacio´n.Elusuarioesautenticadosiy
+solosielhashdelafasederegistrocoincideconelhashde k
+lafasedeautenticacio´n.Estoequivaleaquetodoslospuntos L 1 (Q)=∑logP(Q i ) (2)
+Q escogidosenlafasederegistropertenecenalaregio´nde i=1
+i
+toleranciadelospuntosescogidosenlafasederegistro. Dado un punto Q i , se calcula su distancia a S i y a par-
+Seesperaqueelusuarioleg´ıtimorecuerdeaproximada- tirdeella,secalculasuprobabilidadP(Q)=P(Q i =P i ))=
+menteelordenylaposicio´ndeloskpixelesS i queelescogio´ P(d(Q i ,S i )).Yestasu´ltimasprobabilidadessedefinenen[13]
+enlafasederegistro,peroesmuypocoprobablequelogre deformaquecumplanlascondiciones1-4anteriormentemen-
+recordardeformaexactalaposicio´ndecadapixel,poresta cionadas.PorpropiedadesdellogaritmoL 1 (Q)tomavalores
+razo´nlaimagensediscretizaysedefineunaregio´ndetole- negativos.Porrazonesdeimplementacio´n,paratrabajarcon
+ranciaRT alrededordecadapunto.Losprincipalesme´todos valoresenterospositivos,seseleccionaunaconstanteC L ∈N.
+dediscretizacio´nempleadosenestossistemasparadefinirla Laventajadeesteestad´ıgrafoesquelogradistinguirel
+regio´ndetoleranciaRT sonlaDiscretizacio´nRobusta[10],la niveldeautenticidaddelosusuariosyaautenticadosypuede
+Centrada[11]ylaO´ptima[12].Unadescripcio´ndetalladade aplicarsepararesolverunproblemadehipo´tesisdeltipo:
+ellasyunadiscusio´ndesuslimitacionespuedeverseen[3]. H 0 :Elusuarioautenticadoesleg´ıtimo.
+Comoseobserva,elcriterioesencialparaautenticarun H 1 :Elusuarioautenticadonoesleg´ıtimo.
+usuarioesquetodoslospuntosQidelafasedeautenticacio´n Suprincipallimitacio´nesquenoseconocesudistribucio´n
+este´ncercadesucorrespondientepuntoPiescogidoenlafase teo´ricayportantolaeleccio´ndelaregio´ncr´ıticadebehacerse
+deregistro. mediantesimulacio´n.
+Losgruposdecontrasen˜asG yG ,empleadosen[13]
+1 2
+1.2 ElModeloL tambie´nseempleara´nenestetrabajoyesta´ndefinidosdela
+En [13] se sen˜ala como una limitacio´n de los me´todos siguienteforma:
+de Autenticacio´n Gra´fica “Cued Recall”, que la distancia GrupoG :Estegruposimulaaunusuarioleg´ıtimo,que
+1
+d =d(S,Q)setieneencuentasoloparaautenticaronoal recuerdamuybiensucontrasen˜a.Lacontrasen˜aQ=(q ,...,q )
+i i i i 1 5
+usuario, pero no se tienen en cuenta sus diferencias dentro propuestaporelusuarioqueintentaautenticarseesta´formada
+delaregio´ndetoleranciaRT entrelosusuariosyaautentica- por 5 puntos dentro de la regio´n de tolerancia que adema´s
+dos.Partiendodelascaracter´ısticasdelprocesodeautentica- estara´n todos muy cercanos al punto correspondiente de la
+cio´nenlossistemasdeAutenticacio´nGra´fica“CuedRecall”, contrasen˜aS,enparticulard(Q,S)≤5.
+i i
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 27-35
+MidiendolalegitimidaddelusuarioautenticadoensistemasdeAutenticacio´nGra´fica“CuedRecall”. 29
+GrupoG 2 :Simulaaunusuarioleg´ıtimo,quenorecuerda 2.1.1 Disen˜odelexperimento1
+muybiensucontrasen˜a.Los5puntosQ=(q ,...,q )estara´n
+1 5
+Construccio´ndelamuestra.Seimplemento´unaversio´n
+dentrodelaregio´ndetoleranciaperolejosdelpuntocorres-
+ba´sicadeunsistemadeAutenticacio´nGra´fica“CuedRecall”.
+pondientedelacontrasen˜aS,aunadistancia5<d(Q,S)≤
+i i
+Conestesistemasegenero´ unamuestradeM=1000parejas
+10.
+decontrasen˜asgra´ficasdeltipo(faseregistro,faseautentica-
+cio´n),correspondientesaunusuarioleg´ıtimodelG .Acada
+1
+1.3 SoftwareEasyFit unadeellasseleaplico´ elmodeloLyseobtuvounamuestra
+EasyFit [14] es un programa que permite encontrar las deLvaloresdesuestad´ıgrafo.
+distribuciones estad´ısticas que mejor se ajustan a la serie
+Evaluacio´ndelamuestra. Aestamuestra deM=1000
+de datos introducida. El programa representa las leyes de
+valoresdelestad´ıgrafo,seleaplicoelsoftware“EasyFit”para
+densidad y de distribucio´n gra´ficamente, por lo que ya se
+obtenerlosgra´ficosylosP-valoresdelasdistribucioneseva-
+puedeobtenerunaestimacio´ndesuajustepormediosvisuales.
+luadasenestesoftwareparacadaunodelos3testdebondad
+Anal´ıticamente,proporcionalosresultadosobtenidosporlos
+deajusteKolmogorvSmirnov(KS),AndersonDarling(AD),y
+testdeajustesdeKolmogorov-Smirnov,Anderson-Darlingy
+Chi-Cuadrado(CH-C).
+Chicuadrado.
+Acontinuacio´nenelcuadro1senombranlas54distri-
+bucionesalascualeselsoftwareEasyFitmideelajustedela
+muestraestudiada:
+Primeraeleccio´n.Seseleccionaronlas20distribucio-
+HyperbolicSecant Beta Binomial nesconvaloresma´saltosdesusestad´ıgrafosKS.Se
+DiscreteUniform Burr Cauchy emplearon 5 niveles de significacio´n diferentes α ∈
+Chi-Squared Dagum Erlang (0,2,0,1,0,05,0,02,0,01)paracompararconlosP-valores
+ErrorFunction Error Gamma obtenidosymedirelajusteacadadistribucio´n.
+Exponential Frechet Bernoulli En una segunda seleccio´n, se escogieron las 6 mejo-
+Gen.ExtremeValue F Geometric res de esas 20 y esas 6 distribuciones se compara-
+Gen.Gamma GumbelMax GumbelMin ron segu´n el nu´mero de rechazos de la hipo´tesis de
+Gen.Logistic Nakagami Levy ajuste (entre todos los niveles de significacio´n α ∈
+Gen.Pareto JohnsonSB JohnsonSU (0,2,0,1,0,05,0,02,0,01)ylos3testKS,AD,CH-C)
+NegativeBinomial FatigueLife Laplace ysegu´nlamagnituddecrecientedesusP-valorespara
+Log-Pearson3(LP3) Logarithmic Logistic cadatest.Apartirdelosresultadosobtenidosseesco-
+PhasedBi-Exponential Lognormal Pert gio´,entreesas6,cualesladistribucio´nteo´ricaalacual
+PhasedBi-Weibull Log-Gamma Log-Logistic ajustamejorlamuestrade1000valoresdelestad´ıgrafo
+InverseGaussian Kumaraswamy Normal delmodeloL.
+Pareto2(Lomax) Pareto Poisson
+Hypergeometric Rayleigh Rice
+Student’st Triangular Uniform
+Reciprocal Wakeby Weibull
+2.1.2 Las20distribucionesteo´ricasconmejorajuste
+Cuadro1.Las54distribucionescontenidasen“EasyFit”
+Acontinuacio´n,enlafigura1semuestranlas20distribu-
+cionesteo´ricasalasquemejorajusto´ lamuestradeM=1000
+observacionesobtenidasapartirdelestad´ıgrafodelmodeloL,
+segu´neltestdeKolmogorvSmirnov,ordenadasporelvalor
+2. Resultados y Discusio´n
+desuestad´ıgrafo.Semuestra,adema´s,paracadaunadeellas
+el valor del estad´ıgrafo de los test de Anderson Darling y
+2.1 Estimacio´ndeladistribucio´ndelestad´ıgrafopro-
+Chi-Cuadrado,as´ıcomoelrangoquelescorrespondesegu´n
+puestoenelmodeloL
+eseestad´ıgrafo.
+En este ep´ıgrafe se aplicaron varios test de bondad de
+ajusteaunamuestradelestad´ıgrafopropuestoenelmodelo Discusio´n de los resultados. Las 20 distribuciones an-
+L,compara´ndolacondistribucionesteo´ricasconocidas,en- teriores, fueron escogidas por el test Kolmogorv Simrnov,
+contrandounadistribucio´nteo´ricaalacualesamuestraposee peroalevaluarsurangoporlostestAndersonDarlingyChi-
+ajusta.Esteresultadoconstituyeunaportenotablealmodelo cuadradoseobservaquesolo3deellasesta´nfueradelrango
+anterior,puespermitecalcularteo´ricamentelosp-valoreso 1-20segu´nesosdostest.Porlotanto,los3testcoincidenen
+umbrales empleados para evaluar el grado de autenticidad queestassonlasdistribucionesquema´sajustan.Apartirde
+delusuario,locualcontribuyeamejorarsugeneralizacio´ny esteana´lisisselimitara´elestudioalasdistribucionesdelas6
+aplicacio´npra´ctica. primerasfilas.
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 27-35
+30 MidiendolalegitimidaddelusuarioautenticadoensistemasdeAutenticacio´nGra´fica“CuedRecall”.
+Figura4.Ajustedelamuestraaladistribucio´n
+Kumaraswamy.
+Figura1.Las20distribucionesteo´ricasalascualesla
+muestramostro´ mayorajuste,entrelas54evaluadasen
+EasyFit.
+2.1.3 Comparacio´n del Histograma del estad´ıgrafo L en
+el G con las 6 distribuciones a las que mejor se
+1
+ajustalamuestra. Figura5.Ajustedelamuestraaladistribucio´nBeta.
+Figura2.Ajustedelamuestraaladistribucio´nGen.Extreme
+Value. Figura6.Ajustedelamuestraaladistribucio´nWeibull(3P).
+Figura3.Ajustedelamuestraaladistribucio´nJohnsonSB. Figura7.Ajustedelamuestraaladistribucio´nWeibull.
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 27-35
+MidiendolalegitimidaddelusuarioautenticadoensistemasdeAutenticacio´nGra´fica“CuedRecall”. 31
+Discusio´n de los resultados. El ana´lisis visual de los 6 Esas 4 primeras distribuciones, se pueden separar en 2
+histogramasmostradospreviamentesugierequelamuestra gruposatendiendoalamagnituddesusP-valoresenlostests
+presenta un buen ajuste a cada una de estas 6 distribucio- debondaddeajusteKSyCH-C.Elpeorgrupoesta´ formado
+nes.Parafacilitarlacomparacio´n,enlasiguientefigura8se por las distribuciones Weibull(3P) y Weibull(filas 3-4) con
+muestra el histograma comparado con las 6 distribuciones P-valorespordebajode0.7.Elmejorgrupoesta´formadopor
+simulta´neamente. lasdosprimerasdistribucionesJohnsonSByKumaraswamy,
+conP-valoresporencimade0.7,peroentreellasdosdestaca
+elajusteaJohnsonSB,conP-valoresigualesa0.74667para
+eltestKSy0.82337paraeltestAndersonDarling.
+Conclusio´ndelep´ıgrafe.Losresultadosalcanzadosper-
+miten concluir que, para los niveles de significacio´n α ∈
+(0,2,0,1,0,05,0,02,0,01),lamuestradevaloresdelestad´ıgra-
+fo propuesto en el modelo L se ajusta a una distribucio´n
+JohnsonSB.Lamuestradevaloresdelestad´ıgrafodelG se
+1
+ajustaaladistribucio´nJohnsonSBconestospara´metros:
+γ =−2,0746
+δ =2,0934
+Figura8.Las6distribuciones,entrelas20delaFigura1,a λ =1,0875E+7
+lascualeslamuestraseajustomejor. ξ =−1,9534E+6
+Sedenotara´ porL-JSBalestad´ıgrafodelmodeloL,des-
+Aunqueseobservanalgunasdiferenciasenelajusteenla
+pue´sdeaplicarlelatransformacio´nJSB.
+coladerechayenlapartesuperiordelhistograma,estasson
+insuficientesparadetectarvisualmentediferenciasenelnivel
+2.2 Aplicacio´n del estad´ıgrafo L-JSB para medir la
+deajuste,porlotanto,secontinuaralacomparacio´nusando
+autenticidaddelusuario
+losP-valoresobtenidosparalostestKSyCH-C.
+2.2.1 Distribucio´nJohnsonSB
+Sedicequeunamuestradedatosno-normalesdelavaria-
+2.1.4 Comparacio´n del grado de Ajuste de la muestra a
+bleXseajustaaladistribucio´nJohnsonSBsirealizandoalos
+las6distribucionesquemejorajustan
+El ajuste de la muestra a cada distribucio´n teo´rica se datosXlatransformacio´nJohnsonSBlosdatosZobtenidos
+evalu´a 15 veces, empleando los 5 niveles de significacio´n despue´sdelatrasformacio´nsiguenunadistribucio´nNormal
+α ∈(0,2;0,1;0,05;0,02;0,01) para cada test (KS, AD, CH- N(0,1).Latransformacio´ndependedevariospara´metros,que
+C). debenserestimadosapartirdelamuestra.
+Distribucio´n KS CH-C No.Rechazos
+Para´metros: γ;δ;λ;ξ donde(δ,λ)>0
+JohnsonSB 0,74667 0,82337 0/15
+Dominio: ξ ≤x≤ξ+λ
+Kumaraswamy 0,70488 0,73829 0/15
+Weibull3P 0,551 0,66147 0/15 Funcio´ndeDensidaddeProbabilidad:
+Weibull 0,42585 0,25596 0/15
+δ 1 z
+GenExtremeValue 0,85998 N/A 5/10 f(x)= exp(− (γ+δln( ))2) (3)
+(cid:112)
+Beta 0,57985 0,26093 3/15 λ 2πz(1−z) 2 1−z
+Cuadro2.Los12P-valoresasociadosalamuestra,para6
+Funcio´ndeDistribucio´nAcumulativa:
+distribucionesylos2testdebondaddeajusteKSyCH-C.
+z
+F(x)=φ(γ+δln( )) (4)
+Discusio´ndelosresultados.Las6distribucionesdelcua- 1−z
+dro2sepuedendividiren3grupos.Inicialmenteen2grupos
+donde
+atendiendoalnu´meroderechazosdelajuste(columna4).El x−ξ
+z≡ (5)
+peorgrupoesta´ formadoporlasdistribucionesGen.Extreme λ
+ValueyBetadelasdosu´ltimasfilas,paralascualesserechaza
+yφ eslaIntegraldeLaplace.
+el ajuste en al menos un test, con 3 o ma´s de los 5 valores
+de significacio´n prefijados (Anexo 1). Para las restantes 4 2.2.2 Disen˜odelExperimento2
+distribuciones (filas 1-4) Johnson SB, Kumaraswamy, Wei- Objetivo del experimento. Teniendo en cuenta que el
+bull(3P)yWeibullnoserechazaelajustedelamuestraalas G correspondeausuariosquepuedenconsiderarsedealta
+1
+distribucionesporningunodelos3test,paraningunodelos5 autenticidad(yaqueladistanciaentrelospuntosescogidos
+P-valoresprefijados.Porestarazo´n,sedescartanlas2u´ltimas enlasfasesderegistroyautenticacio´nsonmuypequen˜as),
+ysereduceelana´lisisaestas4primerasdistribuciones. elobjetivodelexperimentoescomprobarqueelestad´ıgrafo
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 27-35
+32 MidiendolalegitimidaddelusuarioautenticadoensistemasdeAutenticacio´nGra´fica“CuedRecall”.
+L-JSBobtenidomediantelatransformacio´nJSBdelep´ıgrafe
+anteriorescapazdereconocerconbajaprobabilidaddeerror
+alosusuariosdeestegrupo.
+Gruposdecontrasen˜as.Sedefinieron3gruposdeusua-
+rios.G ,G yG .LosgruposG yG sonlosmismosemplea-
+1 2 5 1 2
+dosen[13],perosedefinio´ unnuevogrupo,quesedenotara
+G .ElgrupoG esta´ formadoporcontrasen˜astalesquesus
+5 5
+5puntosesta´ndentrodelaregio´ndetolerancia,perofueron
+escogidosaleatoriamentedentrodeestaregio´n.Segeneraron
+entotal30000contrasen˜as,distribuidasentrelos3grupos
+(10000contrasen˜asencadagrupo).
+Estad´ıgrafo. Para las contrasen˜as de cada uno de los 3
+gruposanteriores,secalculo´ elestad´ıgrafoL-JSB,usandolos
+para´metrosJSBestimadosapartirdelamuestradelgrupoG ,
+1
+alosgruposresultanteslosdenotaremoscomoG ,G
+1−2 2−2
+y G 5−2 . Por la forma de definicio´n, la diferencia entre las Figura9.Regio´ncr´ıtica(coladerecha)paralamediadeuna
+contrasen˜asdeG 5 yG 1 debesermenorqueentreG 2 yG 1 y distribucio´nN(0,1)paraα =0,05
+seesperaqueelestad´ıgrafotransformadoL-JSB,reflejeese
+comportamiento.
+Hipo´tesis.Seanlashipo´tesis:
+H : ElusuarioesdelG .
+0 1
+H : ElusuarionoesdelG .
+1 1
+Paradecidir,conniveldesignificacio´nalfaprefijadosiuna
+contrasen˜acorrespondeonoaunusuariodelG ,seempleara´
+1
+elvalorestad´ıgrafoL-JSBasociadoaesacontrasen˜a.
+Transformacio´ndelasHipo´tesis.SeaX elvalorobser-
+vadodelestad´ıgrafodelmodeloL.Teniendoencuentaque
+si se aplica a X la transformacio´n de Johnson SB con los
+para´metrosdeG ,entoncesseobtieneelvalorZ talqueba-
+1 Figura10.Gra´ficodecajadelosvaloresdelestad´ıgrafo
+jo la hipo´tesis H , corresponde a una distribucio´n Normal
+0 transformadoL-JSB,delos3gruposG ,G yG
+N(0,1).Lashipo´tesisanterioresquedan: 1−2 2−2 5−2
+H 0 : ZDistribuyeN(0,1). 2.2.3 Resultadosydiscusio´ndelExperimento2
+Enlafigura10,semuestraelgra´ficodecaja-bigoteyen
+H : ZNoDistribuyeN(0,1). la figura 11 los histogramas de los valores del estad´ıgrafo
+1
+transformadoL-JSBencadaunodelos3gruposG ,G
+1−2 2−2
+yG .
+ParalosgruposG2,G5seespera(porsuformadedefi- 5−2
+Discusio´n de los resultados. En la figura 10 se aprecia
+nicio´n)quelamediaµ >0yquedaunapruebadehipo´tesis
+quelosvaloresdelamediasecomportanenordencrecien-
+deunacola(coladerecha)paralamediadeunadistribucio´n
+te:µ(G )=4,15818>µ(G )=2,83674>µ(G )=
+Normal.Lashipo´tesisquedar´ıan: 2−2 5−2 1−2
+−0,000049≈0,comoseesperaba.
+Porotraparte,enlafigura11seaprecialadistribucio´n
+H : µ =0.
+0 aproximadamente normal de los tres grupos, aunque en el
+grupo G se observa mayor simetr´ıa, mientas en G y
+2−2 5−2
+H : µ >0.
+1 G lacolaizquierdaesligeramentema´slargaquelacola
+1−2
+derecha.
+Criteriodedecisio´n.Seseleccionaraelniveldesignifi- MientrasloshistogramasdeG yG noseintercep-
+1−2 2−2
+cacio´n α =0,05 y la regio´n cr´ıtica usual de rechazo de H 0 tan, las colas derechas de G 1−2 e izquierda de G 5−2 si se
+paralapruebadehipo´tesisdelacoladerecha,paralamedia interceptan,estosugierequeparadistinguirentrelosgrupos
+deunadistribucio´nNormal,laquesemuestraenlafigura9. G y G el nu´mero de decisiones erro´neas sera´ mayor
+1−2 5−2
+Alternativamente,siP−valor(z)<α=0,05,serechaza queenelcasoG yG .
+1−2 2−2
+lahipo´tesisH . EnelgrupoG elmenorvalorobservadoes2,8quees
+0 2−2
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 27-35
+MidiendolalegitimidaddelusuarioautenticadoensistemasdeAutenticacio´nGra´fica“CuedRecall”. 33
+3. Conclusiones
+El estad´ıgrafo L propuesto en trabajos previos tiene la
+ventajademedirelniveldeautenticidaddelusuario,perola
+desventajadequesudistribucio´neradesconocidayparasu
+aplicacio´npra´cticaserequer´ıaencadacaso,fijarlosumbrales
+porsimulacio´n.
+Elaporteprincipaldeestetrabajoconsisteendeterminar
+ladistribucio´ndelestad´ıgrafoL.Sedemostro´ mediantelas
+pruebasdebondaddeajusteKolmogorovSmirnov,Anderson
+DarlingyChi-Cuadradoquelasmuestrasdeesteestad´ıgra-
+fo L se ajustan a la distribucio´n Johnson SB. Se aplico´ la
+transformacio´nJSByseconfirmo´ queelnuevoestad´ıgrafo
+obtenidoL-JSBcometepocoserroresaldistinguirunusuario
+Figura11.Histogramasdelosvaloresdelestad´ıgrafo muy leg´ıtimo, como los del grupo G , de otros usuarios
+1−2
+transformadoL-JSB,delos3gruposG 1−2 ,G 2−2 yG 5−2 menos leg´ıtimos, como los del grupo G 5−2 . Este resultado
+facilitalaaplicacio´npra´cticadelestad´ıgrafoLyconstituye
+unperfeccionamientodelmodeloqueledioorigen.
+mayor que el valor critico 1,645 fijado por lo cual se debe Comoproblemaabierto,seproponeinvestigarelcompor-
+rechazarentodosloscasossupertenenciaaG 1−2 .EnG 5−2 , tamientodelestad´ıgrafoL-JSBenmuestrasrealesdeusuarios
+hay una parte de las contrasen˜as tales que el valor de su leg´ıtimosytambie´nenmuestrasdeusuariosautenticadosme-
+estad´ıgrafocaeenlaregio´ndeaceptacio´ndeH 0 ,portanto,se dianteataquesdediccionarios,conelobjetivodecomparar
+cometeninevitablementeerroresdedecisio´n. susvaloresydecidirsiescapazdedetectarlaocurrenciade
+Paracuantificarlamagnituddeestoserroresseaplico´ el unataquedediccionarioautenticado.
+testalos3grupos.
+Aplicacio´ndeltestenlos3gruposG 1−2 ,G 2−2 yG 5−2 . Agradecimientos
+Losresultadosdelaaplicacio´ndeltestalos3gruposG ,
+1−2
+G yG ,enunamuestraden=10000contrasen˜asen SeagradecealInstitutodeCriptograf´ıayalafacultadde
+2−2 5−2
+cadagruposemuestranacontinuacio´nenloscuadros3y4: MATCOMdelaUniversidaddeLaHabana,porlaaprobacio´n
+ydesarrollodelProyecto“Autenticacio´nGra´fica”,dentrodel
+Decisio´n G G G cualsedesarrollo´ estainvestigacio´n.
+1−2 2−2 5−2
+NoRechazarH (z≤1,645) 9786 0 1469
+0
+RechazarH (z>1,645) 214 10000 8531 Referencias
+0
+Cuadro3.Nu´meroderechazosdeH
+0
+(pertenenciaalgrupo
+[1] O.V.Rodr´ıguez,C.M.Lego´n,andR.Ll.Socorro. Segu-
+G )enn=1000aplicacionesdeltestL-JSBencadauno
+1−2 ridadyusabilidaddelosesquemasyte´cnicasdeautenti-
+delos3grupos,conα =0,05. cacio´ngra´fica. RevistaCubanadeCienciasInforma´ti-
+cas,12:13–27,2018.
+[2] D. Comaniciu and P. Meer. Mean shift: A robust ap-
+G G G
+1−2 2−2 5−2
+proachtowardfeaturespaceanalysis.IEEETransactions
+NoRechazarH (z≤1,645) 0,9786 0 0,1469
+0
+onpatternanalysisandmachineintelligence,24(5):603–
+RechazarH (z>1,645) 0,0214 1 0,8531
+0
+619,2002.
+Cuadro4.Proporcio´nderechazosdeH
+0
+(pertenenciaal
+grupoG 1−2 )enn=1000aplicacionesdeltestL-JSBencada [3] E.B.Borrego,P.E.S.Navarro,andC.M.Lego´n.Debili-
+unodelos3grupos,conα =0,05. dadesdelosme´todosdediscretizacio´nparacontrasen˜as
+gra´ficas. IVSeminarioCient´ıficoNacionaldeCripto-
+Apartirdelcuadro4sepuedeestimarlaprobabilidadde graf´ıa.UniversidaddelaHabana.,2018.
+cometer un error de tipo I o II en este escenario cuando se
+[4] O. V. Rodr´ıguez, C. M. Lego´n, R. LL. Socorro, and
+empleaelestimadorL-JSB,puesP(cid:98)(RechazarG
+1−2
+/G
+1−2
+)=
+P.E.S.Navarro. Patronesenelordendelosclicsysu
+0,0214,mientrasqueparaloserroresdetipodossetieneque
+influenciaenladebilidaddelasclavesenlate´cnicade
+P(cid:98)(NoRechazarG
+1−2
+/G
+2−2
+)=0yP(cid:98)(NoRechazarG
+1−2
+/G
+5−2
+)=
+autenticaciongra´ficapasspoints.IVSeminarioCient´ıfico
+0,1469.Estoserroressonrazonableseilustranconclaridadla
+NacionaldeCriptograf´ıa,2018.
+ventajaaportadaporelestimadorL-JSBsobreelestimadorL,
+puesL-JSBpermitefijarelvalorcr´ıticoapartirdeladistri- [5] O.V.Rodr´ıguez. Algoritmoparaladeteccio´ndecontra-
+bucio´nnormalyelα prefijado,locualrepresentalamejora senasgra´ficasconpatro´ndesuavidadenlate´cnicade
+yaporteprincipaldeestetrabajoparamejorarelestad´ıgrafo autenticacio´ngra´ficapasspoints. Master’sthesis,Uni-
+delmodeloL. versidaddelaHabana,2019.
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 27-35
+34 MidiendolalegitimidaddelusuarioautenticadoensistemasdeAutenticacio´nGra´fica“CuedRecall”.
+[6] C. M. Lego´n, R. Ll. Socorro, P. E. S. Navarro, O. V. Anexos
+Rodr´ıguez, and E. B. Borrego. Nuevo modelo proba-
+AnexoNo.1:Bondaddeajustedelamuestradelestad´ıgra-
+bil´ısticoenautenticacio´ngra´fica.Ingenier´ıaElectro´nica,
+foLenelG conlas6distribucionesalasquemejorseajusta
+Automa´ticayComunicaciones,40(3):92–104,2019. 1
+lamuestra.
+[7] G.E.Blonder. Graphicalpassword,September241996.
+USPatent5,559,961.
+[8] J.P.BhootwalaandP.H.Bhathawala. Graphicalpass-
+word authentication - survey. Global Journal For Re-
+searchAnalysis,9(2),2020.
+[9] A.Rao. Cybersecurity-anewsecuredpasswordge-
+neration algorithm with graphical authentication and
+alphanumericpasswordsalongwithencryption. Mas-
+ter’sthesis,OldDominionUniversity,2019.
+[10] J-C.Birget,D.Hong,andN.Memon. Graphicalpass-
+wordsbasedonrobustdiscretization.IEEETransactions
+onInformationForensicsandSecurity,1(3):395–399,
+2006.
+[11] S.Chiasson,J.Srinivasan,R.Biddle,andP.C.vanOors-
+chot. Centereddiscretizationwithapplicationtographi-
+calpasswords. InUPSEC.Citeseer,2008.
+[12] K. Bicakci. Optimal discretization for high-entropy
+graphicalpasswords. In200823rdInternationalSympo-
+siumonComputerandInformationSciences,pages1–6.
+IEEE,2008. Figura12.Bondaddeajustedelamuestraconladistribucio´n
+JohnsonSB
+[13] C. M. Lego´n. Nuevo modelo probabil´ıstico en auten-
+ticacio´ngra´ficaparamedirlaautenticidaddelusuario.
+Master’sthesis,UniversidaddeLaHabana,2019.
+[14] Mathwave. Easyfit. urlhttp://www.mathwave.com/.
+Figura13.Bondaddeajustedelamuestraconladistribucio´n
+Kumaraswamy
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 27-35
+MidiendolalegitimidaddelusuarioautenticadoensistemasdeAutenticacio´nGra´fica“CuedRecall”. 35
+Figura16.Bondaddeajustedelamuestraconladistribucio´n
+GenExtremeValue
+Figura14.Bondaddeajustedelamuestraconladistribucio´n
+Weibull3P
+Figura15.Bondaddeajustedelamuestraconladistribucio´n Figura17.Bondaddeajustedelamuestraconladistribucio´n
+Weibull Beta
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 27-35

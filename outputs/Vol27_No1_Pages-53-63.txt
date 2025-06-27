@@ -1,0 +1,512 @@
+Revista Ciencias Matemáticas
+La emancipación conceptual de número real de la idea
+de magnitud: una mirada germánica
+The conceptual emancipation of real number from the idea of magnitude: a german perspective
+Luis Giraldo González Ricardo (luis.gonzalez@matcom.uh.cu)
+Carlos Sánchez Fernández (csanchez@matcom.uh.cu)
+Universidad de La Habana, Facultad de Matemática y Computación, La Habana, Cuba.
+Resumen números negativos y complejos, pues no satisfacían todas las
+En el presente artículo analizamos los aportes decisivos de reglas de la operatoria con magnitudes. Hasta bien entrado el
+tres miembros de la escuela alemana de matemática a la sepa- siglo XIX los conceptos de magnitud y de número se perdían
+ración del concepto de número de la idea física de magnitud, uno en el otro; en general el número era visto como una magni-
+durante la segunda mitad del siglo XIX. Además, analizamos tud, de esta forma la fundamentación del concepto número se
+la importancia de la aritmetización del análisis para la conse- encontraba, por ejemplo, en la noción del tiempo.
+cuente axiomatización de los números reales, proceso que es- En el presente trabajo pretendemos mostrar cómo en la obra
+tos tres matemáticos promovieron en las obras principales que de varios matemáticos de la escuela alemana se promueve la
+reseñamos. separación defi nitiva de los conceptos de número y de mag-
+nitud. Los matemáticos en cuestión son Leopold Kronecker
+Abstract (1823-1891), Richard Dedekind (1831-1916) y Georg Cantor
+In the present article we study the decisive contributions of (1845-1918).
+three members of the German mathematical school to the se- Durante la primera mitad del siglo XIX se desarrolló un im-
+paration of the concept of number from the physic concept of portante movimiento en búsqueda de un mayor rigor en el aná-
+magnitude, during the second half of the XIXth century. Besi- lisis, y en la matemática en general. Claros representantes de
+des we analyze the importance of the arithmetization of analy- este movimiento son A. L. Cauchy, B. Bolzano y N. H. Abel,
+sis to later axiomatization of real numbers, process that those por solo citar tres.
+three mathematicians promoted in the principal works we re- Los conceptos básicos del análisis fueron puestos en tela de
+view. juicio, así aparecieron defi niciones rigurosas de función conti-
+nua, derivada en un punto y límite; este último se convirtió en
+el más básico de los tres y sirvió como fundamento del cálculo
+1. Introducción infi nitesimal.
+Poco a poco emergieron nuevos problemas y con ellos nue-
+vos conceptos —como los de continuidad y convergencia
+Desde la Antigüedad las nociones de número y magnitud es-
+uniforme— no se hicieron esperar. Pero los problemas se origi-
+tuvieron íntimamente ligadas. Muestra de ello es la oposición
+naron no solo en las ramas superiores del análisis, también en
+por mucho tiempo de dar cabida dentro de la matemática a los
+— 53 —
+Sociedad Cubana de Matemática y Computación
+sus raíces se encontraron cuestiones signifi cativas que mere- ponenciación. Otro detalle importante sobre las concepciones
+cían revisión. Entre estas interrogantes esenciales, procurando matemáticas de Dedekind que ya se destacan en esta temprana
+una presentación rigurosa del concepto límite, apareció la ne- obra, es su noción de número, como ente creado por la mente
+cesidad de precisar el concepto número real. humana. Dedekind plantea que los números naturales permiten
+Es a partir de la segunda mitad del siglo XIX que comien- la realización de las operaciones de suma y de multiplicación
+zan a aparecer distintas aproximaciones a la conceptualización sin problema alguno; no sucede lo mismo cuando se quieren
+de los números reales. De esta forma es que los personajes de realizar las operaciones indirectas [indirekte] o inversas [um-
+nuestra historia aparecen en escena. gekehrte]: la resta y la división. La imposibilidad de realizar
+estas operaciones lleva a la creación de nuevos números donde
+sean válidas las operaciones indirectas: “Y este requerimiento
+2. Dedekind: el arquitecto de los números
+hace necesario crear una nueva clase de números, dado que con
+la sucesión original de los enteros positivos el requerimiento no
+Richard Dedekind nació en un pequeño pueblo del centro de se puede satisfacer.”[10, pág. 757].
+Alemania: Braunschweig, el mismo lugar que vio nacer en 1777 En la tesis de 1854 Dedekind considera el origen de los nú-
+a K. F. Gauss. Dedekind siguió los pasos de su predecesor y meros irracionales en la operación de potenciación con expo-
+estudió en la Universidad de Göttingen, y allí defendió su doc- nente racional, idea que es desechada en su madurez, luego de
+torado en 1852 bajo la supervisión del propio Gauss. Dos años que le preste más atención a la fundamentación de la aritmética
+después de obtener su doctorado, Dedekind presentó su tesis de los números reales. Esta disertación de Dedekind contiene
+de habilitación para poder enseñar en la universidad. El título varias de las ideas desarrolladas en su madurez sobre la funda-
+de la memoria es “Über die Einführung neuer Funktionen in mentación de la matemática: la importancia de las operaciones
+der Mathematik”1. Bien temprano se nota el particular interés realizadas sobre los elementos de cierto conjunto, por encima
+de Dedekind por las operaciones, por encima de los elementos de los elementos en sí; además muestra de forma temprana su
+mismos, preocupación que lo llevará a la visión abstracta de la concepción más profunda sobre la fi losofía de la matemática:
+matemática que logró en su madurez. la existencia de los entes matemáticos gracias a su creación por
+El objetivo principal de Dedekind en esta pequeña tesis es parte de la mente humana, en especial los números.
+dar un método general para deducir la forma en que se deben
+2.1 Los números irracionales
+extender las operaciones aritméticas de un dominio numérico
+más restringido a uno más general. Así lo describe el propio
+Dedekind: “Esta conferencia no es sobre la introducción de una La principal motivación de Dedekind para emprender una
+clase determinada de funciones dentro de la matemática (aun- construcción de los números irracionales, la encontró en la
+que se pudiera interpretar el título de esa forma); es más bien docencia. En 1858 tuvo que enseñar los rudimentos del Cál-
+sobre la forma en que, en el desarrollo progresivo de la ciencia, culo Diferencial. Preparando dicho curso se enfrentó a que
+nuevas funciones, o como se puede decir, nuevas operaciones la fundamentación de varios teoremas básicos del Cálculo se
+son añadidas a las anteriores”[10, pág. 755]. basaban en argumentos geométricos, los que no considera-
+Desde el punto de vista matemático e histórico, lo más inte- ba válidos: era pertinente lograr una demostración puramente
+resante es el análisis que hace Dedekind del origen de las dife- aritmética.
+rentes operaciones aritméticas. Considera que la más simple de En “Stetigkeit uns irrationale Zahlen”2 Dedekind parte del
+ellas es la de encontrar el sucesor de cierto número y esta repe- conocimiento del dominio numérico racional Q, y muestra que
+tida varias veces da lugar a la suma. Luego la repetición de la existe una “operación” que no puede realizarse en este domi-
+suma origina la multiplicación, y esta última da origen a la ex- nio: la operación de “cortar”. Nótese como el problema de la
+1 “Sobre la introducción de nuevas funciones en la matemática.” 2 “Continuidad y números irracionales”.
+— 54 —
+Revista Ciencias Matemáticas
+continuidad de Q no se deriva de la imposibilidad de realizar “Si todos los puntos de la línea recta se dividen en dos clases,
+una operación inversa, sino de una nueva. Pero la idea es seme- tal que todo elemento de la primera clase se encuentra a la iz-
+jante a lo establecido en su habilitación: se tiene una operación quierda de todo elemento de la segunda clase, entonces existe
+que no se puede realizar y es necesario aumentar el dominio un único punto que produce esta división de todos los puntos en
+numérico, de tal forma que sea posible dicha operación. dos clases, este corte de la recta en dos secciones”[11, pág. 11].
+Véase cómo Dedekind comienza su memoria de 1872: “Con- En la memoria Dedekind se sirve de las cortaduras para la
+sidero que la aritmética es una necesaria, o al menos natural, construcción de los números reales, y demostrar que cumplen
+consecuencia del más simple acto, el de contar, y contar no es el axioma de continuidad. Se debe hacer especial énfasis en que
+nada más que la creación sucesiva de la sucesión infi nita de los Dedekind no menciona en ningún momento que esté desarro-
+enteros positivos, en el cual cada individuo es defi nido por el llando una teoría para las magnitudes irracionales, sino núme-
+precedente, el simple acto de pasar de un elemento formado a ros, y tampoco aparece ninguna mención a la noción de tiempo.
+uno por formar. […] Mientras que la realización de estas dos
+operaciones3 es siempre posible, la realización de las operacio- 2.2 Los números naturales
+nes inversas ha sido en cada caso el motivo real de un nuevo
+acto creativo; entonces los números negativos y fraccionarios La memoria publicada por Dedekind en 1888: “Was sind und
+son creados por la mente humana; y con el conjunto de los nú- was sollen die Zahen?”5 trata sobre la construcción de los nú-
+meros racionales se ha obtenido un instrumento de gran perfec- meros naturales; para lograr su objetivo evita la utilización de
+ción” [11, pág. 4]. nociones geométricas o físicas; la metodología dedekindiana
+Con esta cita se descubre cómo Dedekind mantiene buena es, en esencia, teórico-conjuntista.
+parte de sus ideas presentes en 1854: del origen de los números En el mismo comienzo Dedekind deja clara la separación
+naturales hasta la construcción de Q permanece inalterable. Pero del concepto de número de las nociones de espacio y tiempo:
+desaparece la idea de la utilización de la potenciación con expo- “Considero el concepto de número completamente independien-
+nente no entero como origen de los números irracionales. Nótese te de las nociones o intuiciones de espacio y tiempo, porque lo
+también que en la fecha de publicación de esta monografía ya considero un resultado inmediato de las leyes del pensamien-
+Dedekind había dedicado varios años al estudio del problema de to. Mi respuesta a los problemas propuestos en el título de esta
+la factorización única en los enteros algebraicos de una extensión monografía es, brevemente: los números son una creación libre
+simple de Q, que le llevó a la defi nición de cuerpo; lo que le per- de la mente humana; ellos sirven como medio para aprehender
+mitió valorar mejor la importancia de estas operaciones básicas, más fácilmente las diferencias entre las cosas. Es solo a través
+que son características de un cuerpo.4 del proceso lógico de construir la ciencia de los números, y de
+Se vio antes en “Über die Einführung…” cómo Dedekind ve en esa forma adquirir el dominio numérico continuo, en que es-
+la necesidad de realizar nuevas operaciones la ampliación de los tamos preparados adecuadamente para investigar nuestras no-
+dominios numéricos. En “Stetigkeit…” no es ninguna de las opera- ciones de espacio y tiempo, poniéndolos en relación con este
+ciones comunes de la aritmética o el análisis, las que engendran los dominio numérico creado en nuestra mente” [12, pág. 31].
+números reales, sino una nueva, a la que llama cortadura. Dedekind Nótese cómo Dedekind libera el concepto de número de la
+demuestra que la operación de corte es compatible con los números noción de tiempo, o en sentido más general, de la de magni-
+racionales, sin embargo, Q no es cerrado para esta operación. En tud. Antes de las construcciones de la segunda mitad del siglo
+otras palabras, existen cortes no defi nidos por números racionales. XIX los números reales eran vistos como magnitudes, ejemplo
+La idea de cortadura le proporciona los medios para caracterizar a fehaciente de ello se encuentra en la obra de Cauchy. Es decir,
+continuidad de la línea recta, a la que le da validez de axioma: se utilizaron nociones físicas para explicar la continuidad de
+la recta real. Dedekind toma el camino inverso, los números
+3 “Adición y multiplicación”. NA.
+4 Para detalles de los trabajos de Dedekind sobre los números algebraicos
+se puede consultar [15]. 5 “¿Qué son y para qué sirven los números?“
+— 55 —
+Sociedad Cubana de Matemática y Computación
+reales sirven de modelo para las magnitudes físicas, dicho en tal tiene un límite defi nido b; y recalca que b es solo un sím-
+otras palabras, es un medio para facilitar la comprensión del bolo usado para destacar la naturaleza de la sucesión [5]. En el
+mundo físico. Además, mantiene su principio de 1854: los nú- conjunto B de todos los símbolos b, Cantor demuestra que cada
+meros constituyen una creación de la inteligencia humana, aun- elemento es el límite de la sucesión que lo defi ne. Luego de esto
+que aclaró en [11] que la aritmética era consecuencia natural del Cantor introduce un orden y las cuatro operaciones aritméticas.
+acto de contar. Para esto se basó en las propiedades de las sucesiones conver-
+La construcción de Dedekind de N está basada en ideas pro- gentes.7 Una vez hecho esto Cantor comienza a llamar a los ele-
+pias de la teoría de conjuntos: la existencia de un conjunto infi - mentos de B como números. Según la interpretación de Dauben
+nito destacado, con ciertas propiedades que pudiésemos llamar en [9] Cantor trata a los nuevos elementos de igual forma que a
+estructurales. Dedekind muestra en esta obra una mezcla ar- los números por conveniencia y simplifi cación, pues realmente
+moniosa entre las ideas propias de su madurez —utiliza apli- son solo sucesiones de Cauchy.
+caciones e ideas conjuntistas—, con las líneas fi jadas 30 años Un detalle interesante de la construcción de Cantor es que
+antes: defi nir la suma como la realización repetida de la opera- aún se mantiene cerca de la tradición, pues utiliza para los nue-
+ción sucesor. vos números el término Zahlgrösse que signifi ca magnitud nu-
+mérica, en vez de Zahl que signifi ca número.
+Aunque se tiene defi nido un nuevo dominio numérico,
+3. La mirada analítica de Cantor ¿será sufi ciente para completar a los racionales de forma con-
+tinua? Para esto Cantor relaciona a los nuevos números con
+La carrera matemática de Cantor comenzó siendo alumno de la recta. Una vez ubicado el origen es sencillo relacionar las
+Kronecker, y a su sombra obtuvo el doctorado en la Universi- longitudes racionales con el número respectivo en Q; si la
+dad de Berlín. Una vez que llegó a Halle, bajo los auspicios de longitud puede aproximarse por una sucesión de longitudes
+Eduard Heine (1821-1881), un discípulo de Dirichlet, se interesó racionales, tal sucesión es fundamental y defi ne un número
+por las rebeldes series trigonométricas. El estudio de la repre- b en B: “La distancia a determinar desde el punto b al pun-
+sentabilidad de funciones por series trigonométricas era en ese to O es igual a b, donde b es el número determinado por la
+momento una de las vedettes de la investigación matemática. La sucesión {an}” [9, pág. 40]. En el sentido contrario no es tan
+profundidad y belleza del tema conquistaron a Cantor. Las in- sencillo, pues Cantor no tiene forma de asegurar la existen-
+vestigaciones por él desarrolladas eran sobre la unicidad de la re- cia de un punto en la línea para cada número; por ello utiliza
+presentación de una función por serie trigonométrica, que era la la siguiente afi rmación por axioma: “[…] a cada número le
+extensión natural de un resultado previo de Heine. Cantor redujo corresponde un punto en la línea, cuya ordenada es igual al
+el problema al análisis de la representatividad de la función idén- número” [9, pág. 40].
+ticamente nula por una serie no nula divergente en cierto conjun- Aunque Cantor identifi ca los números reales recién creados
+to de puntos. En el desarrollo de su investigación Cantor necesitó con los puntos de la recta, expresa que la existencia de los pri-
+de la caracterización de los números reales. Su construcción apa- meros es independiente de la recta; de otra forma, la existencia
+reció en el artículo “Über die Ausdehnung eine Satzes aus der del número real es independiente de la geometría. Cantor pro-
+Theorie der trigonometrischen Reihen”6 [5] de 1872. sigue en el camino de separar la geometría del análisis, además
+Para su construcción de R Cantor utiliza las sucesiones de de independizar el concepto de número real del de magnitud.
+Cauchy, que tienen por característica esencial que no se nece- Para Cantor el número real es un punto, no una longitud, la que
+sita conocer el límite, para asegurar su “convergencia”. Cantor en esencia es una magnitud. A diferencia de Dedekind la sepa-
+utiliza esta propiedad para decir que cada sucesión fundamen- ración realizada por Cantor es menos evidente, pero igualmen-
+te signifi cativa.
+6 Sobre la extensión de un teorema de la teoría de las series
+trigonométricas. 7 Para más detalles sobre la construcción de Cantor se puede ver [8] y [9].
+— 56 —
+Revista Ciencias Matemáticas
+En el año 1883 apareció una de las obras principales en A continuación Cantor critica las concepciones anteriores de
+el quehacer matemático de Georg Cantor: “Grundlagen einer considerar el tiempo y el espacio modelos de continuidad, lo
+allgemeinen Mannigfaltigkeitslehre”.8 En ella aparecen los que considera no admisible. Lo anterior se debe a que la con-
+números transfi nitos, un detallado estudio del continuo y ade- tinuidad del tiempo está condicionada por la consideración del
+más una buena parte de sus concepciones fi losófi cas. En este continuo asumido de forma independiente al tiempo; luego no
+artículo Cantor considera a los números ordinales el origen de puede ser interpretado desde el punto de vista objetivo ni sub-
+los números naturales, ya que los últimos surgen del acto de jetivo: “[…] en mi opinión utilizar la intuición del tiempo para
+contar, o lo que es lo mismo, del acto de añadir unidades. Lue- discutir el concepto más general de continuo no es la forma
+go señala que los cardinales se obtienen como consecuencia correcta de proceder; el tiempo es en mi opinión una represen-
+del acto de contar, pues el número cardinal —Anzahl— de un tación” [6, pág. ]. Además: “Es también mi convicción de que
+conjunto es el número ordinal que se mantiene invariante tras con la forma de intuición del espacio, no se puede ni tan siquie-
+cualquier reordenación. ra comenzar a adquirir conocimiento del continuo” [6, pág. ].
+En los “Grundlagen...” Cantor realiza un recuento sobre En particular Cantor realiza su análisis en el espacio n-di-
+las teorías fundamentales de los números reales: la de Weiers- mensional Rn con la distancia euclidiana. Apoyado en las ideas
+trass, la de Dedekind y la propia. Cantor compara las tres topológicas para el estudio de los conjuntos de puntos de R
+construcciones poniendo sobre la mesa los pros y los contras —punto de acumulación, conjunto derivado— encontró que
+de cada una. En el artículo se considera a Weierstrass como una condición necesaria para la continuidad de un conjunto de
+el primero en evitar el error lógico de defi nir los números puntos era que este tiene que coincidir con su conjunto deri-
+irracionales por medio de límites de sucesiones con términos vado, lo que denominó perfecto.9 Rápidamente Cantor da un
+racionales Considera Cantor que la principal ventaja de las ejemplo de un conjunto perfecto que no es continuo: el conjun-
+cortaduras, por encima de las otras dos, es que a cada número to conocido hoy en día como conjunto de Cantor, que es no nu-
+real le corresponde una única cortadura, mientras que en las merable, perfecto, no contiene puntos interiores y claramente
+restantes un mismo número puede tener varias representacio- no es continuo. Para completar la caracterización del continuo
+nes. Además G. Cantor realiza una exposición sucinta y más Cantor considera que falta el concepto de conexidad:
+madura de su construcción de los números reales, en la que “Llamamos a T un conjunto conexo si, para cualesquiera dos
+se refi ere a los nuevos números recién creados como Zahl en puntos t y t’, y para cualquier número arbitrariamente peque-
+vez de Zahlgrösse. ño α existe siempre una cantidad fi nita de puntos t1, t2,…,tv
+Finalmente en la sección §10 Cantor realiza un análisis de- tal que las distancias tt1, t1t2,…tvt’ son todas menores que α”
+tallado del continuo. El análisis comienza con una nota histó- [6, pág. 906].
+rica sobre las diferentes concepciones del continuo, desde la A la luz de los métodos actuales la conexidad cantoriana es
+Antigüedad, pasando por el Medioevo, hasta su época. Can- bastante extraña, pues siguiendo a J. Ferreirós en [18], esta de-
+tor considera que se ha tratado el continuo al nivel de dogma fi nición de conexidad contempla a Q como un conjunto conexo;
+religioso, al ser considerado una intuición a priori, que inclu- realmente la idea de Cantor está más ligada a la densidad. Sin
+so en su tiempo, es mal visto cualquier intento de estudiar el embargo, muestra la utilidad de la topología en el camino a la
+continuo desde la matemática, utilizando la razón: “Cualquier caracterización del continuo.
+intento aritmético de determinación de este misterio —el del De esta forma Cantor caracterizó a los conjuntos continuos
+continuo— es visto como una invasión prohibida y es rechaza- como “conjuntos perfectos y conexos”, y en particular R satis-
+da con vigor. Mentes tímidas entonces se llevan la impresión de face esta defi nición; de la que se entiende que los números rea-
+que el continuo no es un problema de un concepto matemático les para Cantor son puntos, no longitudes. Finalmente Cantor
+lógico, sino más bien un dogma religioso” [6, pág 903]. concluye realizando una crítica a los enfoques de Bolzano y
+8 “Fundamentos de una teoría general de variedades”. 9 En terminología actual sería cerrado.
+— 57 —
+Sociedad Cubana de Matemática y Computación
+Dedekind. Del primero señala que en “Paradoxen der Unend- tenido mucho cuidado de expresar sus fenómenos y verdades
+lichen”10 solo resalta la característica que tienen los conjuntos en una forma lo más libre posible de conceptos fi losófi cos, y
+continuos de ser conexos; mientras que del segundo dice que en consecuentemente he comenzado el camino para basar toda la
+“Stetigkeit…” solo destacó la característica común a todos los matemática en la teoría de los números naturales, y creo que
+conjuntos continuos de ser cerrados. esto puede hacerse sin excepción. Admito que este punto es
+Sobre la crítica a Dedekind se puede decir que el objetivo solo mi creencia. Pero donde ha tenido éxito, veo el verdadero
+de su memoria de 1872, no era caracterizar la continuidad del progreso, incluso —o porque— es una regresión a los princi-
+espacio en general, sino de los números reales en particular. pios más simples, más aún porque prueba que los nuevos con-
+Mientras que Cantor, dado su interés particular en los proble- ceptos introducidos son al menos innecesarios. [...] Reconozco
+mas de numerabilidad, teoría de conjuntos de puntos y topolo- un verdadero valor científi co —en el campo de la matemática—
+gía, se centra en buscar una caracterización más apropiada a solo en verdades concretas, o para ponerlo más claro, solo en
+sus necesidades; por ello la caracterización de Cantor utiliza fórmulas matemáticas” [16, pág. 45].
+las propiedades métricas del espacio n-dimensional. Por otro Entre líneas se puede leer la forma en que Kronecker pre-
+lado Dedekind utiliza la estructura de orden de los números tende utilizar el concepto de número natural como fundamento
+racionales. de la matemática. La idea básica es aritmetizar la matemática
+Aunque con notables diferencias, las investigaciones de —pura—, pero no sobre la base de los números reales, sino en
+Cantor y Dedekind comparten el mismo principio básico: el el idioma más básico de los números naturales.
+continuo aritmético es cierto conjunto de puntos que satisfacen Kronecker publicó sus ideas en el artículo “Über den Zahl-
+cierta propiedad, en cada caso la caracterización de la continui- begriff”12 [21] de 1887. Este artículo y su ampliación posterior
+dad. Ahora, ¿es esta la única forma de considerar la continui- —también de 1887—, junto al curso del semestre de verano de
+dad de los números reales? 1891 ([22], [1]) son las únicas fuentes de la obra publicada de
+Kronecker, útiles para obtener información sobre sus posturas
+referentes a la aritmetización y el concepto número.
+4. Kronecker, una visión discordante En la introducción del “Zahlbegriff Kronecker” realiza una
+separación entre las principales disciplinas de la matemáti-
+Los escritos de Kronecker sobre los fundamentos de la ma- ca, que según él son: la geometría, la mecánica y la aritméti-
+temática no son abundantes, además de existir numerosas le- ca. Conjuntamente a esta división de la matemática Kronecker
+yendas sobre él dentro de la comunidad matemática.11 En el expone su objetivo: “Creo que nosotros tendremos éxito en
+referido artículo aparece la cita de una carta a Cantor de 1884, ‘aritmetizar’ todo el contenido de estas disciplinas,13 esto es,
+donde de modo general explica parte de sus ideas sobre la for- fundamentarlas solamente en el concepto número tomado en su
+ma de hacer matemática: sentido más estrecho, y entonces desechar las modifi caciones y
+“Porque tú tomaste mis cursos hace más de 20 años, y has extensiones de este concepto14, las cuales son ocasionadas por
+tenido contacto casi ininterrumpidamente conmigo desde en- las aplicaciones a la geometría y a la mecánica” [21, pág. 949].
+tonces, has escuchado mis posiciones lo sufi ciente como para Nótese cómo Kronecker considera a las cantidades irra-
+comprender mejor de lo que pudiera yo describir aquí, y que cionales fuera de los dominios de la aritmética. Kronecker
+—habiendo profundizado muy temprano en cuestiones fi losófi - estima que la noción de número irracional es propia de la
+cas bajo la tutela de Kummer— reconocí, al igual que Kummer geometría y la mecánica, no de la aritmética. En la separa-
+hizo, la inestabilidad de tales especulaciones y tomé refugio en ción que realiza Kronecker de las disciplinas matemáticas
+el paraíso de la matemática real. [...] en mi obra matemática he
+12 Sobre el concepto de número.
+13 “Áritmética, álgebra y análisis.” NA
+10 Paradojas del infi nito. 14 Me refi ero específi camente a la adición de las cantidades irracionales y
+11 En este punto se recomienda la lectura de [16]. las cantidades continuas. (Nota de Kronecker.)
+— 58 —
+Revista Ciencias Matemáticas
+fundamentales, la aritmética no es solo la rama de la matemá- se entienden por números. Grosso modo, Kronecker utiliza la
+tica que estudia las propiedades de los números, según Kro- biyección entre todos los conjuntos con la misma cantidad de
+necker: “La palabra aritmética no debe comprenderse en el elementos. El método es el siguiente, si se tiene una colección
+sentido restringido que es usual, sino incluyendo todas las de objetos el número cardinal que le corresponde, es el último
+disciplinas matemáticas, —con excepción de la geometría número ordinal utilizado para contar la cantidad de elementos
+y la mecánica— especialmente el álgebra y el análisis” [21, —Anzahl—. La idea de Kronecker se asemeja a la utilizada por
+pág. 949]. Esta es la diferencia principal con los otros aritme- Russell y Frege para defi nir el concepto de número; es necesa-
+tizadores alemanes: Dedekind, Cantor, Heine y Weierstrass; rio señalar que la principal diferencia es que para Kronecker los
+quienes consideraban a los números irracionales como ele- números ordinales ya están dados, mientras que Frege y Russell
+mentos propios e imprescindibles dentro del análisis. los están defi niendo a partir de conceptos lógicos. Es necesario
+Anteriormente se vio cómo Dedekind defi ne los números na- aclarar que Kronecker no defi ne al número cardinal n como la
+turales, a diferencia de Kronecker que comienza su estudio a clase de todos los conjuntos con n elementos, sino que utiliza a
+partir de ellos, más precisamente los números ordinales: “Los un representante de la clase, que en este caso es el número ordi-
+números ordinales constituyen de forma natural el punto de nal nmo. Además, utilizando lenguaje matemático actual- Kro-
+partida para el desarrollo del concepto número” [21, pág. 949]. necker demuestra que la operación de asignarle a cada conjunto
+Es en este contexto que surge la pregunta siguiente: ¿Por qué su correspondiente número cardinal está bien defi nida, es decir,
+los números ordinales como origen de sus estudios? Para esto que es independiente del orden de los elementos.
+hay que adentrarse un poco más en las concepciones de Kro- La defi nición de las operaciones directas básicas, la suma y
+necker sobre los fundamentos de la matemática. Donde más la multiplicación, es en esencia la misma que escogió Dedekind.
+detalles existen sobre las ideas de Kronecker es en los manus- En efecto, la suma es la repetición del acto de contar, y la mul-
+critos del curso de 1891, que lleva, precisamente, el título “Über tiplicación la repetición del acto de sumar.
+den Begriff der Zahlen in der Mathematik”15 [1]. La parte más interesante del trabajo de Kronecker está en el
+En el curso Kronecker establece cuatro principios fundamentales más corto de sus epígrafes: Cálculo con Variables. Su idea se
+sobre la forma de concebir la matemática [1, págs. 210,232-233] :1) basa en la introducción de indeterminadas, lo que le permitirá
+La disciplina matemática no admite sistematización; 2) La matemá- eliminar la noción de número irracional algebraico, incluso los
+tica debe ser tratada igual que las ciencias de la naturaleza, puesto números negativos.
+que sus objetos son tan reales como los de sus ciencias hermanas; 3) Por ejemplo, dice Kronecker que la igualdad 7 - 9 = 3 - 5 se
+Es necesario evitar la mezcla de una disciplina con la otra; 4) Utili- puede sustituir por la congruencia módulo
+zar en cada disciplina un método acorde a la materia que se estudia. (x + 1): 7 + 9x ≡ 3 + 5x mod (x + 1).
+Lo planteado por Kronecker no quiere decir que la matemática sea En este corto artículo Kronecker no cumple todos sus obje-
+una ciencia natural, sino que debe ser tratada como tal. Para Kro- tivos, pues no expone la forma en que se puede omitir la intro-
+necker la matemática es una ciencia pura, pero debe, al igual que las ducción de las irracionalidades algebraicas, y solo tratarlas a
+ciencias naturales, obtener las verdades inobjetables de la experien- partir de su respectivo polinomio irreducible. Tal labor la com-
+cia. El único elemento que la experiencia ha dado a la matemática es pletó en la ampliación publicada en el Journal de Crelle. La
+el acto de; contar, por ello los números ordinales son la única verdad ampliación se reduce a la sección Cálculo con variables, donde
+incuestionable de la matemática. Luego de este análisis cobra total Kronecker muestra la forma de extender a los números raciona-
+sentido la célebre cita que H. Weber atribuye a Kronecker: “Dios les y a los irracionales algebraicos el método utilizado con los
+hizo los números naturales y el resto es obra de los hombres”. números negativos.
+Con los números ordinales por punto de partida, Kronec- La primera adición que realiza Kronecker es la introducción
+ker defi ne los números cardinales, y estos últimos son los que de una forma de tratar a los números racionales como indeter-
+minadas [22, pág. 6]. Más adelante recalca que “De este modo
+15 “Sobre el concepto de número en la Matemática”.
+— 59 —
+Sociedad Cubana de Matemática y Computación
+la sucesión de fracciones racionales no se defi ne solamente, sada completamente sobre la posibilidad de aislarlas, por tanto,
+sino queda justifi cada también” [22, pág. 6]. De esta forma en la posibilidad de determinar un número, el cual designamos
+Kronecker incorpora a los números racionales a los dominios por s arriba.16 Si tal número s está determinado por la propie-
+de la aritmética, al interpretarlos como congruencias con in- dad de que los intervalos de longitud 1/s son sufi cientemen-
+determinadas sobre el conjunto de los números naturales. De te pequeños como para aislar las distintas raíces de la misma
+esta forma justifi ca el tratamiento de los racionales dentro de la ecuación, entonces mayor que y menor que se defi nirán sim-
+aritmética propiamente dicha. También se puede notar que no plemente a través de la sucesión de los intervalos de aislamien-
+es su único objetivo fundamentar la matemática en el concepto to. [...] La verdadera esencia del asunto, sin embargo, queda
+de número, sino trasladar los métodos propios de la aritmética, completamente clara cuando en la deducción anterior se evita
+congruencias, a otras ramas. la utilización de las fracciones y se hace uso exclusivo de los
+La otra extensión realizada por Kronecker es el tratamiento números naturales” [22].
+de las irracionalidades algebraicas, de forma similar a lo he- El procedimiento empleado por Kronecker es característico
+cho con los números negativos y los racionales. La extensión de su forma de hacer matemática. Kronecker logra encontrar
+provista por Kronecker es más trabajosa que en los casos ante- el s en N con las condiciones requeridas de forma constructiva
+riores, pues las expresiones que sirven para defi nir las irracio- y solamente utilizando los coefi cientes del polinomio p(x). Es
+nalidades algebraicas son de grado mayor al 2; además de que decir, Kronecker da un procedimiento para lograr aproxima-
+una ecuación irreducible no solo defi ne un número algebraico, ciones cada vez más precisas para los irracionales algebraicos,
+sino a sus conjugados también. El método seguido por Kronec- por medio de los coefi cientes de p(x), que pueden incluso con-
+ker para evitar la utilización de las irracionalidades algebraicas siderarse enteros.
+es mucho más complicado que para los casos anteriores. En Ni en la memoria original, ni en la versión aumentada, Kro-
+sus trabajos donde extiende los resultados de Kummer sobre la necker hace referencia a algún método que proporcionara un re-
+factorización única, Kronecker había evitado la introducción sultado similar para los irracionales trascendentes, lo que está
+de los números algebraicos, pero para ello solo necesitó el he- en consonancia con lo expuesto al inicio del artículo, donde
+cho de que un número algebraico α sea raíz de cierto polinomio considera al continuo ajeno a los dominios de la aritmética, rea-
+irreducible p(x) con coefi cientes en Q. En este caso necesita el lizando una interpretación exegética de este trabajo se puede
+valor de α, por eso es más complicada la solución. decir que para Kronecker la aritmetización consistía en funda-
+En lo siguiente veremos la idea general de lo realizado por mentar la matemática en los números naturales, sin llegar a la
+Kronecker. Consideremos p(x) un polinomio irreducible sobre obtención del continuo, del modo en que lo hicieron Dedekind
+Q, el objetivo de Kronecker es encontrar un número n en N, tal y Cantor.
+que le permita aislar las raíces reales de p(x) en intervalos de Finalmente, en el curso de 1891 Kronecker no hace refe-
+longitud 1/n. Se entiende por aislar las raíces que en cada inter- rencia alguna al tratamiento de los números algebraicos. Pero
+valo de longitud 1/n tal que en los extremos p(x) tome valores poniendo la situación en contexto es bastante lógico, puesto
+con signos distintos, haya solo una raíz; y de lo contrario, no que en 1888 publicó un extenso trabajo dedicado a exponer sus
+tenga raíz alguna. Por otro lado, los cálculos con el número α generalizaciones de los resultados obtenidos por Kummer. El
+se reducirán a cálculos con aproximaciones racionales, cada título de la obra es “Zur Theorie der allgemeinen complexen
+vez más precisas. Zahlen und der Modulsysteme.”17
+Compruébese con las palabras de Kronecker: “La llamada Por supuesto que en este momento vale preguntarse por qué
+existencia de las raíces irracionales de las ecuaciones algebrai- los números irracionales no son parte de la aritmética. La res-
+cas está fundamentada únicamente en la existencia de interva- puesta debe, nuevamente, buscarse en las tesis sobre los fun-
+los con la característica especifi cada; la legitimidad de calcular
+16 En la memoria de Kronecker.
+con las raíces individuales de una ecuación algebraica está ba- 17 “Sobre la teoría de los números complejos generales y de los sistemas de
+módulos.”
+— 60 —
+Revista Ciencias Matemáticas
+damentos esgrimidas por Kronecker en su curso de 1891. La anteriormente que Dedekind desde 1854 se preocupa por la ex-
+tercera tesis refi ere que es necesario, o mejor, imprescindible, pansión de los conceptos ya existentes, en particular la amplia-
+evitar la mezcla entre las diferentes disciplinas de la matemáti- ción del concepto de número. No es esta la única contradicción
+ca; y la cuarta refi ere que cada disciplina debe desarrollar sus de Kronecker con las otras posturas dentro de la aritmetización.
+propias herramientas. Dicho de otra forma, lo que es inherente Para Kronecker, las construcciones de Cantor y Dedekind de
+a la geometría debe permanecer en ella y no mezclarse con la los números reales carecían de sentido, puesto que ambas utili-
+aritmética. zaban conjuntos infi nitos de números racionales de una forma u
+El porqué Kronecker consideraba los números irracionales otra. La utilización por parte de Dedekind y Cantor del infi nito
+pertenecientes solo al campo de la geometría parece no estar actual para sus construcciones de los números reales no con-
+claro, pero se puede establecer una conjetura bastante plausible, cordaban con las ideas constructivistas de Kronecker, que entre
+y está relacionada con el origen de los números irracionales. otras cosas, no consideraba válido el infi nito actual.
+Los números irracionales, o mejor dicho, las magnitudes in- Se ha podido constatar que el proyecto de Kronecker esta-
+conmensurables se dieron a conocer por medio de la geometría ba dirigido a fundamentar la aritmética en bases más internas.
+helénica. En nuestra opinión esta es la razón que consideramos Kronecker toma por base el concepto de número ordinal, y con
+más acorde para explicar las ideas de Kronecker. Es consecuen- este construye su aritmética, evitando las generalizaciones del
+cia inmediata de sus tesis que el número irracional no podía ser concepto de número. Sin duda el proyecto de Kronecker con-
+parte de la aritmética. Luego surge una interrogante bastante tiene algunas lagunas, así es el caso de la fundamentación del
+obvia, y que Kronecker dejó sin responder: si el análisis es par- concepto de límite sin números irracionales en el análisis.
+te de la aritmética, entonces tampoco se puede aceptar la uti-
+lización de los números irracionales en la fundamentación del
+análisis, entonces, ¿cómo fundamentar el concepto de límite 5. Conclusiones
+sin los números irracionales? En el curso de 1891 solo arroja un
+poco de luz sobre las aplicaciones del análisis, en este caso solo
+La metodología y concepciones de Cantor, Kronecker y Dede-
+bastaría conocer aproximaciones racionales de cierta cantidad
+kind sobre la actividad matemática son divergentes en la mayo-
+irracional [1].
+ría de los casos. Pero no solo hay divergencias en los enfoques
+Igualmente es importante destacar que Kronecker habla de
+de estos tres matemáticos, también existen puntos de contac-
+cantidades irracionales, no de números irracionales. Este he-
+to. Las diferencias son más notables entre Cantor y Dedekind
+cho se debe a que, según Kronecker, los irracionales no son nú-
+por un lado, y Kronecker del otro. Los dos primeros adoptaron
+meros, pues este honor solo pertenece a los números naturales.
+una posición teórico-conjuntista, en su versión inicial y más
+Si se considera como concepto primario el de número natural,
+ingenua, mientras que Kronecker no aceptaba la utilización de
+que tiene su origen en el acto de contar; entonces, para incluir
+conjuntos arbitrarios.
+a los enteros y a los racionales dentro de los números, debemos
+Los métodos fi nitistas de Kronecker no permitían la utiliza-
+expandir el concepto primario de número. La ampliación del
+ción del infi nito real, como objeto matemático bien defi nido; en
+concepto se debe a que ni los “números” enteros ni los raciona-
+ese sentido Kronecker permaneció ligado a la idea del infi nito
+les sirven para contar. Claramente el objetivo de Kronecker, al
+potencial, más una forma de hablar que una herramienta mate-
+desarrollar herramientas para evitar el uso de los números ra-
+mática. Dedekind aceptó el infi nito en su quehacer matemáti-
+cionales, por ejemplo, es evitar la generalización del concepto
+co, tanto los números reales, los módulos y los ideales estaban
+de número, pues este debe permanecer inalterable. Esta afi rma-
+defi nidos por medio de conjuntos infi nitos de elementos que
+ción también es compartida por J. Boniface en [3].
+comparten cierta propiedad. Cantor no solo utilizó conjuntos
+Por supuesto que estas ideas lo ponen en desacuerdo con
+infi nitos para su caracterización de los números reales, sino
+otros aritmetizadores y el caso más claro es Dedekind. Se vio
+que dedicó gran parte de su vida a desentrañar los misterios de
+— 61 —
+Sociedad Cubana de Matemática y Computación
+la infi nitud. Sobre este apartado Kronecker escribió: “Las con- de los valores intermedios; 4) Principio de intervalos encajados;
+sideraciones anteriores me parecen opuestas a la introducción 5) Principio del supremo. Especialmente por las diferentes pro-
+de aquellos conceptos de Dedekind, digamos ‘módulo’, ‘ideal’, piedades estructurales que posee el conjunto de los números rea-
+etc., de modo similar (ellas son opuestas a) la introducción de les: es un cuerpo ordenado desde el punto de vista algebraico,
+varios conceptos con cuya ayuda en tiempos recientes y con además de arquimediano y “saturado” o completo en el sentido
+frecuencia se ha intentado [...] concebir y establecer los ‘irra- topológico asociado a la noción usual de distancia. Es relevante
+cionales’ en general” [9]. destacar que Dedekind en 1872 había revelado las propiedades
+Cantor y Dedekind creían que la actividad matemática era de orden de los números reales, puesto que las utiliza de forma
+puramente lógica, es decir, la matemática es una actividad in- fundamental en su construcción. El estudio del continuo por De-
+telectual; tal concepción se refl eja en la libertad de creación dekind es solo desde el punto de vista aritmético, mientras que
+que ambos matemáticos desarrollaron en su quehacer profesio- Cantor resalta la necesidad del estudio topológico.
+nal. Además, ya antes se señaló cómo Dedekind consideraba a Un punto en común entre estos tres matemáticos es su visión
+los números una creación de la mente humana; mientras que aritmetizadora de la matemática, cada uno desde su perspec-
+Cantor desarrolló toda una teoría sobre los números transfi ni- tiva, pero los tres percibieron a la aritmética como fuente de-
+tos, los que constituyeron una creación esotérica de su intelec- fi nitiva de rigor; por ello la fundamentación de la matemática
+to. Por el lado contrario, Kronecker veía a la matemática como debía buscarse en la aritmética. En ellos se establece un punto
+una ciencia basada en la experiencia, y por tanto, que se des- de infl exión en la caracterización del concepto de número, al
+cubre; luego la libertad de creación está limitada por lo que la separarlo de la naturaleza geométrica que había tenido hasta
+experiencia pueda aportar. Aunque ambos matemáticos se in- ese momento, con ellos —en gran medida— se deja de centrar
+teresaron por la caracterización de la continuidad, existen dife- el discurso sobre la noción de número en el concepto magnitud.
+rencias en sus enfoques y objetivos particulares: 1) Dedekind se Para comprender mejor lo que se ha expuesto en el párra-
+interesó por la caracterización de la continuidad con el objetivo fo anterior, se puede analizar la posición de A. L. Cauchy en
+de alcanzar una formulación precisa del concepto número real; su celebrado Cours d’Analyse19 de 1821. En los preliminares
+2) El interés de Cantor de identifi car las características esen- Cauchy aclara varios conceptos básicos para el desarrollo de su
+ciales del continuum era con la fi nalidad de probar la hipótesis texto, entre ellos aclara las diferencias entre número y cantidad:
+del continuo; 3) La mirada de Cantor al continuo fue típica de “Indicaremos qué ideas serán más apropiadas para adjuntarle a
+un analista, por lo que se centró en sus propiedades métricas y las palabras ‘número’ y ‘cantidad’. Tomaremos el signifi cado
+topológicas; 4) La aproximación seguida por Dedekind estuvo de ‘número’ en el sentido que es usado en aritmética, donde
+más infl uida por su tendencia “estructuralista”, por lo que su los números surgen de la medida absoluta de magnitudes, y
+interés se concentró en la relación de orden que se establece en- aplicaremos solamente el término cantidades reales positivas
+tre los números reales a partir de los racionales; y además cómo o negativas a los números precedidos por los signo + o -. Ade-
+se transmiten las operaciones aritméticas.18 más reconoceremos que estas magnitudes tienen el propósito
+Por otro lado, en la obra de Cantor se destaca la necesidad de expresar crecimiento o decrecimiento; entonces una magni-
+de estudiar el continuo desde el punto de vista topológico, no tud será representada por un número solo si queremos compa-
+solo desde la aritmética. Como bien se señala en [Sin92], no rarla con otra magnitud del mismo tipo tomada como unidad
+es evidente reconocer el lenguaje topológico en las propieda- [...]” [4, pág. 5].
+des utilizadas para caracterizar la continuidad de R, dígase: Para Cauchy los números son solo los reales positivos, mien-
+1) Propiedad de las cortaduras o axioma de Dedekind; 2) Con- tras que los reales negativos son cantidades, es decir, no son nú-
+vergencia de las sucesiones de Cauchy; 3) Teorema de Bolzano meros. La posición de Cauchy es muestra de la confusión entre
+número y magnitud de inicios del siglo XIX. El concepto de nú-
+18 Sobre las tendencias estructuralistas de Dedekind y su relación con el
+estudio del continuo aritmético se puede ver [LG14a] 19 Curso de Análisis.
+— 62 —
+Revista Ciencias Matemáticas
+mero en Cauchy no es lo sufi cientemente amplio, de modo que DAUBEN, J. W. (1990): “Georg Cantor. His mathematics and philosophy
+incluyese a los números negativos, lo que puede considerarse un of the infi nity” Princeton, New Jersey: Princeton University Press.
+DEDEKIND, R. (1854): ”On the introduction of new functions in ma-
+punto de contacto con Kronecker. Sin embargo, Cauchy consi-
+thematics”. En Ewald (1996), Cap. Julius Wilhelm Richard Dede-
+dera que el número surge de medir, por tanto, no considera a los
+kind (1831-1916).
+números naturales el punto de partida para el estudio de la arit-
+DEDEKIND, R. (1872): “Continuity and irrational numbers”. En Essays
+mética. Véase la diferencia con Cantor, Dedekind o Kronecker.
+in the theory of numbers. En Dedekind (1963), págs. 1-27.
+El hecho de independizar al concepto de número, de nocio- DEDEKIND, R. (1888): “The nature and meaning of numbers”. En
+nes ajenas a su naturaleza aritmética, como lo es el tiempo o la Dedekind (1963), págs. 31-115.
+longitud, constituye un momento determinante hacia la axio- DEDEKIND, R. (1932): Gesammelte Matematische Werke III. Ed. por
+R. Fricke, E. Nöther y O. Ore. Braunschweig, Alemania: Vieweg
+matización del concepto de número. Lo anterior signifi ca que
+and Son.
+la esencia del concepto comienza a mostrarse de forma pura, es
+DEDEKIND R. (1963): “Essays in the theory of numbers”. New York,
+decir, se desliga de nociones ajenas para obtener sus caracterís-
+USA: Dover Publications Inc..
+ticas esenciales, las que sirven de base a sus axiomas. Esta es
+DEDEKIND, R. (1996): “Theory of algebraic integers”. Trad. e introd.
+una fase posterior digna de otro estudio semejante, por ejemplo, Por J. Stillwell. Cambridge University Press.
+a través de la obra de fi guras germánicas del calibre de David EDWARDS, H. M. (1995): “Kronecker on the foundations of mathe-
+Hilbert y Hermann Weyl. matics”. En From Dedekind to Gödel. Essays in the development of
+the foundations of mathematics. Ed. por J. Hintikka. Kluwer Aca-
+demic Publishers, págs. 45-52.
+EWALD, W. B.,ED (1996): From Kant to Hilbert: a source book in
+Bibliografía
+the foundations of mathematics. 2 vols. Oxford, New York: Cla-
+rendon Press.
+BONIFACE, J. y N. SCHAPACHER (2001): “Sur le concept de nom- FERREIRÓS, J. (2007): Labyrinth of thought. A history of set theory
+bre dans la mathématique. Course inédit de Leopold Kronecker à and its role in modern mathematics. 2da edición. Berlín, Alemania:
+Berlin (1891)” Revue d’histoire des mathematiques 7, págs. 207- Birkhäuser.
+275. GONZÁLEZ RICARDO, L. G. y C. SÁNCHEZ FERNÁNDEZ
+BONIFACE, J. (2005): “Leopold Kronecker’s conceptions in the foun- (2014): “Richard Dedekind y la arquitectura del continuo aritmé-
+dations of mathematics”. Philosophia Scientiae (5), cahier special. tico”. En Revista Brasileira de História da Matemática. Aceptado
+BONIFACE, J. (2007): “The concept of number from Gauss to Kro- para publicación.
+necker”. En Shaping of arithmetic after C. F. Gauss’s Disquisitio- KRONECKER, L. (1887a): “On the concept of number”. En Ewald (1996),
+nes Arithmeticae. Ed. por Goldstein, Schapacher y Schwermer. Cap. Leopold Kronecker (1823-1891), pags. 947-955.
+Numbers as model objects of mathematics. Springer Verlag, págs. KRONECKER, L. (1887b): “On the concept of number” Trad. por E.
+315-342. T. Dean. URL: www.andrew.cmu.edu/user/edean/papers/kronec-
+BRADLEY, R. E. y C. E. SANDIFER (2009): Cauchy’s Cours d’Analy- ker$\_zahlbegriff.pdf. Visitado 20-05-2013.
+se. An annotated translation. Springer Verlag. SALANSKIS, J-M. (1992): “Le destin du modele de Cantor-Dede-
+CANTOR, G. (1872): “Uber die Ausdehnung eine Satzes aus der kind”. En “Le Labirynth du Continu”. Ed. Por H. Sinaceur y J-M.
+Theorie der trigonometrischen Reihen” Matematische Annalen 5, Salanskis. Paris, Francia: Springer Verlag, págs. 190-212.
+págs. 123-132. SÁNCHEZ FERNÁNDEZ, C. y L. G. GONZÁLEZ RICARDO
+CANTOR, G. (1883): “Foundations of a general theory of manifolds: a (2014): “Richard Dedekind: el arquitecto de los números”. Acepta-
+mathematic-philosophical investigation into the theory of infi nite”. do para publicación. Madrid, España: Ediciones Nivola.
+En Ewald (1996), Cap. Georg Cantor (1845-1918). SIEG, W. Y D. SCHLIMM (2005): “Dedekind’s analysis of number:
+CORRY, L. (1994): “La teoría de las magnitudes de Eudoxo interpre- systems and axioms”. Synthese 147, págs. 121-170.
+tada por Dedekind”. Mathesis 10.1. SINACEUR, H. (1992): “La construction algébrique du continu: cal-
+DAUBEN, J. W. (1970): “The trigonometric background to Georg cul, ordre, continuité”. En “Le Labirynth du Continu”. Ed. Por H.
+Cantor’s theory of sets” Archive for the History of Exact Sciences, Sinaceur y J-M. Salanskis. Paris, Francia: Springer Verlag, págs.
+págs. 181-216. 104-116.
+— 63 —

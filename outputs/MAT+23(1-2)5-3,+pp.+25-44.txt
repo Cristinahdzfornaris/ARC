@@ -1,0 +1,2673 @@
+REVISTA CIENCIAS MATEMÁTICAS Vol. 23 único, Nos. 2005-2006
+SOLUCIÓN DE UN PROBLEMA DE CONTORNO
+COMPLEJO PARA LAS ECUACIONES
+DE TIPO ELÍPTICO
+Lorgio F. Batard1 y Otilio B. Mederos2, Departamento de Matemática, Universidad Central de Las Villas,
+Santa Clara, Villa Clara, Cuba
+Andro Gonzáles3, Universidad de Ciego de Ávila, Ciego de Ávila, Cuba
+RESUMEN
+En este trabajo se plantea un problema elíptico con condiciones de contorno complejas que es
+reducido, mediante el operador de Fourier, a un problema de contorno de Riemann cuya solución es
+conocida. A partir de la solución del problema de Riemann se obtiene la solución en cuadraturas de dos
+casos particulares bastante generales del problema elíptico planteado.
+ABSTRACT
+In this paper an elliptic problem with complex boundary conditions has been transformed into a
+Riemann boundary problem of known solution by means of the Fourier operator. This allows the
+quadrature solutions of two widely generalized particular cases of the original problem.
+1. INTRODUCCIÓN
+En [1] y [2] se hace un estudio de las solubilidad del problema de contorno de Riemann para el semiplano
+en las clases
+25
+L 2  (R ) × L 2  (R ) si el coeficiente pertenece a la clase L 2  (R  1 ) , tiene índice finito y el término
+independiente pertenece a L(R).
+2
+En [3] se hace una descripción de una clase de problemas de la Física Matemática que se reducen a un
+problema de contorno de Riemann para el semiplano, mediante la transformación de Fourier. Se describe
+además en dicho artículo el método general de solución y se da un condición que permite determinar cuando el
+problema está correctamente planteado, en el sentido que su reducción al problema de Riemann sea factible.
+En este trabajo, a partir de los resultados antes descritos, se establecen condiciones fácilmente probables
+sobre los coeficientes de la ecuación y las condiciones de contorno de los problemas que se plantean en el
+primer epígrafe, que garantizan la solubilidad de los mismos.
+En el segundo epígrafe se ofrecen definiciones y se plantean resultados necesarios, que facilitan la lectura
+de los epígrafes siguientes. En el tercer epígrafe se hace el planteamiento del problema que se estudia.
+Utilizando la trasformada de Fourier, en el cuarto epígrafe se reduce el problema planteado en el epígrafe 2
+a un problema de Riemann en el semiplano.
+En el epígrafe quinto se determinan condiciones necesarias y suficientes sobre los coeficientes y el
+término independiente del problema para que satisfagan las condiciones correspondientes al problema de
+Riemann que aquí se estudia.
+En el epígrafe sexto se estudian dos casos particulares del problema planteado en el epígrafe 3, ambos
+con un alto nivel de generalidad, se concretan las condiciones para que se puedan aplicar los resultados del
+epígrafe 5 y se determina el índice del coeficiente. Finalmente en el epígrafe 7 se determina la solución
+del problema homogéneo en las clases de funciones requeridas, correspondientes a los casos estudiados
+en el epígrafe anterior.
+E-mail: 1logio@uclv.edu.cu
+2otilio@mfc.uclv.edu.cu
+3pfiandro@mfc.uclv.edu.cu
+2. DEFINICIONES Y RESULTADOS AUXILIARES
+Dada una función f : R  C si existe la integral
+F(x) =
+26
+1
+2 
+ 
+
+f ( t ) e ix td
+t
+g ( x ) 
+1
+2 
+ 
+
+G ( t ) e  ix td t
+
+,
+para algún x real, se denomina integral de Fourier de f(x) (integral de Fourier inversa de G(x)). Si se
+determina una clase de funciones f(t) (G(t)) para la cual existe F(x) (g(x)), entonces la función V(V−1) definida
+por
+f  V  F  V f  G  V 1  g  V  1 G 
+se denomina transformada de Fourier de f (transformada inversa de Fourier de G). En el trabajo se denota
+siempre con la misma letra minúscula y mayúscula a la función y su integral de Fourier respectivamente.
+Se indica por el símbolo   ( t )    el cambio de (t) cuando t recorre el eje de las abscisas según el sentido
+positivo; o sea:
+  ( t )    = (+) - (-).
+Se define el índice (ver 4) de una función compleja continua y que no se anula sobre el eje real,
+M(t) = m (t) + im (t), t  R, de la forma siguiente
+1 2
+1 1
+IndM(t) = argM(t) =
+2  2i
+ ln M ( t )   
+
+1
+= d
+2i
+
+ ln M ( t )  .
+Si M(t) no es diferenciable, pero es de variación acotada, la integral se entiende en el sentido de Stieltjes.
+Del teorema del resto logarítmico (Principio del Argumento) se tiene que si M es el valor de contorno de una
+función analítica en el semiplano superior (inferior), con la excepción quizás de un numero finito de polos en
+este semiplano, entonces se cumple la igualdad:
+IndM(t) = N − P (IndM(t) = P − N),
+donde IndM(t) denota el índice de M, y por N y P se indica el número de ceros y polos en el semiplano
+superior (inferior) respectivamente, contado cada cero y polo tantas veces como su orden de multiplicidad.
+En el trabajo se utilizan las siguientes notaciones: por F (D) se indica la clase de las funciones complejas
+con dominio D y por K a R ó C.
+Sea f : R  K, se dice que f satisface la condición de Hölder en R si existen las constantes A > 0 y ,
+0 <   1 tales que:
+a) x 1 , x 2  R se tiene
+| F(x ) − F(x ) |  A | x − x | 
+2 1 2 1
+b) x 1 , x 2  R , N > 0: sí | x 1 |, | x 2 | > N se tiene
+
+1 1
+| F(x ) − F(x ) |  A 
+2 1
+x x
+2 1
+La clase de funciones que satisfacen las condiciones a) y b) para un determinado  se denota por C
+
+27
+(R )
+de las condiciones anteriores lim
+x  
+F ( x )  b (constante) y F es continua y acotada en R. Además, si  > 1 se
+tiene f´(x) = 0  f(x) es constante.
+Se dice que f : R  K es continua, sobre R si existen, son finitas e iguales lim F(x)y lim F(x).
+x  x 
+La clase de estas funciones se denota por C (R ) . Por D A (R ) se denota la clase de de funciones f : R  R
+que cumple.
+i) f tiene derivadas acotadas sobre R,
+ii) lim
+x  
+F ( x )  l l
+Para 0 <  <  < 1 se cumple que:
+1 1
+D
+A
+(R )  C
+1
+(R )  C
+2
+(R )  C
+1
+(R )  C (R )
+Proposición: Para todo   (0, 1] la clase C
+
+(R ) con la suma de funciones, el producto de funciones y el
+producto por un escalar, es un algebra asociativa. Con una norma adecuada C
+
+(R ) se convierte en un
+álgebra de Banach.
+Decimos que f : R  R es el elemento de L 2 (R ) si  f  f ( x ) 2 d x es igual a un valor real finito. La clase de
+funciones de L 2 (R) que pertenece a una clase de funciones de Holder sobre R se denota por el símbolo {{0}},
+o sea:
+{{0}} = U (0,1] C R   L 2 (R).
+La intersección de C
+
+(R) y L
+2
+(R) se denota por L 2 (R ) ; luego {{0}} = U
+(0,1
+L 2 (R ) .
+Se tiene la propiedad siguiente:
+Proposición 3: La clase de funciones L(R) es un espacio de Banach con la norma.
+2
+
+= + ,
+2  2
+donde es cualquier norma definida sobre
+
+C
+
+(R ) .
+La clase de funciones cuya integral de Fourier pertenece a la L
+2
+(R) se denota por {0}
+
+. Sobre esta clase la
+función
+0 
+definida por f
+0 
+ V f
+
+2
+, es una norma que hace de {0} un espacio completo.
+
+La clase de las funciones f  L
+2
+(R) tales que f(x)  0 si x < 0 (x > 0) se denota por L
+2+
+(R) (L
+2−
+(R)).
+La clase de las funciones f  L
+2
+(R) prolongables analíticamente al semiplano superior (inferior) y tales que:
+
+ F(xiy) 2 dx< M para y > 0,
+
+ 
+  F(xiy) 2 dxM paray0  ,
+ 
+ 
+donde M es independiente de y se indica por
+28
+L 2 (R ) ( L 2 (R ) ) .
+Es conocido el siguiente teorema
+Teorema 4: Una condición necesaria y suficiente para que f pertenezca a L 2+ (R)(L 2− ( R )) es que su integral
+de Fourier F pertenezca a L
++2
+(R)(L
+−2
+(R)).
+Cuando hablamos de la norma de L 2 (R ) nos referimos a la heredada de L
+2
+(R).
+La clase de funciones f  {0} tales que f(x)  0 si x < 0 (x > 0) se denota por
+
+L 2
+
+(R ) L 2
+
+(R ) ) .
+La clase de funciones F  L 2 (R ) que son prolongables analíticamente al semiplano superior (inferior) y
+que satisface:
+
+ F(xiy) 2 dx< M para y > 0,
+
+  
+
+F ( x  iy )
+2
+d x  M p a r a y  0
+
+,
+donde M es independiente de y, se denota por L 2  (R ) ( L 2  (R ) ) .
+La clase de las funciones f que no se anulan sobre R y tales que f(±) = 1 y (f − 1)  L 2  (R ) ( L 2  (R ) ) se
+denota por L 2  (R  1 ) ( L 2  (R  1 ) ) .
+De la definición de las clases anteriores y del teorema no.4 se tiene trivialmente el teorema siguiente:
+Teorema 5: Una condición necesaria y suficiente para que f pertenezca a L 2
+
+(R ) ( L 2
+
+(R ) ) es que su integral
+de Fourier pertenezca a L 2  (R ) ( L 2  (R ) ) .
+3. PLANTEAMIENTO DEL PROBLEMA
+Dada la ecuación diferencial de tipo elíptico
+u (x, y) + u (x, y) + kμ(x, y) = g(x, y), k < 0, (1)
+xx y,y
+en la banda
+D = {(x, y)  R2 : 0 < y < 1}, (2)
+y las condiciones de contorno
+    
+00
+μ(x, 1−) + 
+10
+μ
+x
+(x, 1−) + 
+01
+μ
+y
+(x, 1−) = g
+10
+(x), x  R, (3)
+     μ(x, 0+) +  μx(x, 0+) +  μ (x, 0+) = g (x), x < 0, (4)
+00 10 01 y 11
+     μ(x, 0+) +  μ (x, 0+) +  μ (x, 0+) = g (x), x > 0, (5)
+00 10 x 01 y 12
+donde 
+ij
+, 
+ij
+, ij , i, j = 0,1 son números reales, g  L
+2
+(R) para todo y, 0 < y < 1, g
+10
+ L
+2
+(R), g
+11
+ L
+2
+(−, 0) y
+g  L (0, +); se desea encontrar condiciones sobre los elementos conocidos de (1), (3)-(5) para que la
+12 2
+ecuación (1) tenga solución única en la banda (2), que satisfaga las condiciones (3)-(5) y que pertenezca a la
+clase:
+S = {u  F (D): u xx  L 2 (R), u yy  L 2 (R), u  L 2 (R), 0 < y < 1}. (6)
+4. REDUCCIÓN AL PROBLEMA DE RIEMANN
+A continuación se aplica la técnica descrita en [3] para reducir el problema planteado en la sección (3) a un
+problema de Riemann para el semiplano.
+a) Aplicación de la transformada de Fourier a la ecuación (1)
+Realizando esta operación se obtiene la ecuación:
+d2U(x,y)
++ (k − x2)U(x, y) = G(x, y) (7)
+dy2
+b) Obtención de la solución de la ecuación diferencial (7)
+Las raíces de la ecuación característica,
+p2 + (k − x2) = 0,
+correspondiente a (7) son:
+Z (x) = −Z(x), (8)
+1
+Z (x) = Z(x), (9)
+2
+donde Z(x) =
+29
+x 2  k ; luego la solución general de (7) es:
+U(x, y) = C (x)e−Zy + C (x)eZy + V(x, y), (10)
+1 2
+donde Z = Z(x), V (x, y) es una solución particular de (7) y C (x), C (x) son funciones arbitrarias que se deben
+1 2
+determinar.
+c) Adaptación de las condiciones de contorno (4), (5) para la aplicación de la trasformada de Fourier
+Con ese objetivo se introducen las funciones f y f :
++ −
+f (x) =
++
+ f u n c ió n d e s c o n o c
+0
+id a d e L
+2
+( 0 ,   ) x
+x
+
+
+0
+0
+;
+.
+f(x) =
+-
+
+f u n c ió n d e s c o n
+0 ,
+o c id a d e L
+2
+(   , 0 )
+x
+x
+
+
+0
+0
+;
+.
+Estas funciones permiten escribir (4) y (5) en la forma
+     μ(x, 0+) +  μ (x, 0+) +  μ (x, 0+) =
+00 10 x 01 y
+g 1
+1
+( x ) + f (x), x < 0, (11)
++
+     μ(x, 0+) +  μ (x, 0+) +  μ (x, 0+) = g (x) + f(x), x > 0, (12)
+00 10 x 01 y 12 -
+donde
+g (x) x0;
+g 11− (x) =  11
+ 0, x0.
+g (x) =
+12+
+30
+ g
+1 2
+0
+( x
+,
+) , x
+x
+
+
+0
+0
+;
+.
+d) Aplicación de la trasformada de Fourier a las nuevas condiciones de contorno
+Realizando esta acción en (3), (11)y (12) se obtiene:
+[ − i x]U(x, 1−) +  00 10 01
+d
+d
+U
+y
+( x , 1  ) = G (x) (13) 10
+[ − i x]U(x, 0+) +  00 10 01
+d
+d
+U
+y ( x , 0  )  G 1 1 ( x ) + F+(x) (14)
+dU
+[ 00 − i 10 x]U(x, 0+) +  01 dy (x,0)G 1  2 (x) + F-(x) (15)
+De acuerdo a la definición de f y f las funciones F− y F+ se pueden considerar (ver [4]) como los valores
+− +
+límites de las funciones F−(z) y F+(z) analíticas en el semiplano inferior y superior respectivamente, que
+satisfacen las condiciones.
+ 
+
+F  ( x  iy )
+2
+d x < M, si y  0,
+
+2
+ F(xiy) dxM, si y > 0,
+
+respectivamente, donde M es el mismo para todas las y.
+e) Obtención de una ecuación funcional en la cual las únicas funciones desconocidas son F− y F+
+A partir de (11) se obtiene fácilmente
+dU dv
+dy
+zC
+1
+(x)ezy zC
+2
+(x)ezy 
+dy
+(x,y). (16)
+Sustituyendo (10) y (16) en (13), (14) y (15) y efectuando las operaciones necesarias se obtiene el
+sistema:
+B (x, z)C (x) + B (x, z)C (x) = H (x) (17)
+11 1 12 2 1
+B (x, z)C (x) + B (x, z)C (x) − F+(x) = (x) (18)
+21 1 22 2 H2
+B (x, z)C (x) + B (x, z)C (x) − F−(x) = H (x) (19)
+31 1 32 2 3
+donde:
+B (x, z) = e−z( − i x −  z) = e−zP (x, z)
+11 00 10 01 11
+B (x, z) = ez( − i x +  z) = ezP (x, z)
+12 00 10 01 12
+B (x, z) =  − i x −  z = P (x, z)
+21 00 10 01 21
+B (x, z) =  − i x +  z = P (x, z)
+22 00 10 01 22
+B (x, z) =  − i x −  z = P (x, z)
+31 00 10 01 31
+B (x, z) =  − i x +  z = P (x, z)
+32 00 10 01 32
+H (x) = G (x) − [ − ix ] V(x, 1−) -
+1 10 00 10 01
+31
+
+
+V
+y
+(x, 1+)
+H (x) = 2 G 1 1 ( x ) − [ − ix ] V(x, 0+) - 00 10 01
+
+
+V
+y
+(x, 0+)
+H (x) = 3 G 1 2 ( x ) − [ − ix ] V(x, 0+) - 00 10 01
+
+
+V
+y
+(x, 0+)
+Obsérvese que si V(x, j), xV(x, j) y
+
+
+V
+y
+(x, j), j = 0 ,1 pertenecen a L2 (R) entonces H 1 , H 2 y H 3 también
+pertenecen a L (R).
+Si imponemos condiciones para que:
+    (x,z) =
+B
+B
+1
+2
+1
+1
+(
+(
+x
+x
+,
+,
+z
+z
+)
+)
+B
+B
+1
+2
+2
+2
+(
+(
+x
+x
+,
+,
+z
+z
+)
+)
+
+
+1
+( x , z ) 
+B
+B
+( x
+1 1
+( x
+3 1
+, z
+, z
+)
+)
+B
+B
+1 2
+3 2
+( x
+( x
+, z
+, z
+)
+)
+
+, (20)
+sea distinto de cero, entonces como:
+B
+B
+B
+1
+2
+3
+1
+1
+1
+(
+(
+(
+x
+x
+x
+,
+,
+,
+z
+z
+z
+)
+)
+)
+B
+B
+B
+1
+2
+3
+2
+2
+2
+(
+(
+(
+x
+x
+x
+,
+,
+,
+z
+z
+z
+)
+)
+) 
+0
+0
+1
+ 
+1
+( x , z )
+ B
+B
+B
+1
+3
+1
+1
+1
+1
+(
+(
+(
+x
+x
+x
+,
+,
+,
+z
+z
+z
+)
+)
+)
+B
+B
+B
+1
+3
+3
+2
+2
+2
+(
+(
+(
+x
+x
+x
+,
+,
+,
+z
+z
+z
+)
+)
+)
+
+0
+1
+0
+ 
+1
+( x , z )
+
+.
+Se puede asegurar que el rango de las matrices
+B ( x , z ) 
+ B
+B
+B
+1
+2
+3
+1
+1
+1
+(
+(
+(
+x
+x
+x
+,
+,
+,
+z
+z
+z
+)
+)
+)
+B
+B
+B
+1
+2
+3
+2
+2
+2
+(
+(
+(
+x
+x
+x
+,
+,
+,
+z
+z
+z
+)
+)
+)
+
+0
+1
+0 
+0
+0
+1
+
+,
+y
+W ( x , z ) 
+ B
+B
+B
+1
+2
+3
+1
+1
+1
+(
+(
+(
+x
+x
+x
+,
+,
+,
+z
+z
+z
+)
+)
+)
+B
+B
+B
+1
+2
+3
+2
+2
+2
+(
+(
+(
+x
+x
+x
+,
+,
+,
+z
+z
+z
+)
+)
+)
+
+0
+1
+0 
+0
+0
+1
+H
+H
+H
+1
+2
+3
+(
+(
+(
+x
+x
+x
+)
+)
+)
+
+,
+es igual a tres y consecuentemente el sistema (17)-(19) puede reducirse a una ecuación con solo dos incógnitas.
+Para ello de las ecuaciones (17) y (18) se obtiene que:
+H (x) B (x,z)
+1 12
+H (x)F(x) B (x,z)
+3 22
+C (x, z) = (21)
+1
+(x,z)
+B (x,z) H (x)
+11 1
+B (x,z) H (x)F(x)
+21 2
+C (x, z) = (22)
+1
+(x,z)
+y sustituyendo (21) y (22) en (19) se obtiene la ecuación funcional:
+F+(x) = D(x)F−(x) +
+32
+
+
+2
+1
+(
+(
+x
+x
+, z
+, z
+)
+)
+H
+1
+( x )  H
+2
+( x ) 
+
+
+( x , z
+( x , z
+1
+)
+)
+H
+3
+( x ) (23)
+donde
+D(x) = D (x, x2k), z x2 k,
+1
+D (x,z) =
+1
+
+
+( x , z )
+( x , z )
+1
+=
+e
+e
+
+
+2
+2
+z
+z
+P
+P
+1
+1
+1
+1
+(
+(
+x
+x
+,
+,
+z
+z
+)P
+)P
+2
+3
+2
+2
+(
+(
+x
+x
+,
+,
+z
+z
+)
+)
+
+
+P
+P
+1
+1
+2
+2
+(
+(
+x
+x
+,
+,
+z
+z
+)P
+)P
+2
+3
+1
+1
+(
+(
+x
+x
+,
+,
+z
+z
+)
+)
+, (24)
+y
+B (x,z) B (x,z)
+ (x, z) = 21 22 .
+2
+B (x,z) B (x,z)
+31 32
+5. CONDICIONES DE SOLUBILIDAD DEL PROBLEMA DE RIEMANN
+CORRESPONDIENTE A LA ECUACIÓN (23)
+En este epígrafe se determinan condiciones necesarias y suficientes sobre los coeficientes de (1), (3)-(5),
+para que el coeficiente y el término independiente de (23) satisfagan las condiciones correspondientes al
+problema de Riemann estudiado en [2].
+De acuerdo a [2], para obtener la solución de (23) en la clase L 2  (R )L 2 (R ) ) , se requiere que D(x)
+pertenezca a la clase L 2 (R  1 ) y el término independiente pertenezca a L 2 (R )L
+2
+(R ) ) .
+Siendo L 2 (R  1 ) la clase de las funciones f que satisfacen las condiciones siguientes.
+(i) f no tiene ceros ni polos sobre R
+(ii) lim f(x)1
+x 
+(iii) (f − 1)  L 2 (R )
+5.1 Determinación de condiciones para que D(x) satisfaga la condición (i)
+Introduciendo las funciones:
+P(x, z) = P (x, z)P (x, z) = (Az2 + Bz + Cx2 + D) + ix(Ez + F),
+11 22
+Q(x, z) = P (x, z)P (x, z) = (Az2 − Bz + Cx2 + D) + ix(−Ez + F),
+12 21
+P (x, z) = P (x, z)P (x, z) = (A´z2 + B´z + C´x2 + D´) + ix(−E´z + F´),
+1 11 32
+Q (x, z) = P (x, z)P (x, z) = (A´z2 − B´z + C´x2 + D´) + ix(−E´z + F´),
+1 12 32
+donde
+A = -   , A ´ = -  , B =   −   , B´ =   −  
+01 01 01 01 01 00 00 01 01 00 00 01,
+C = -   , C´ = -  , D =   , D´ =   , E =   −   (25)
+10 10 10 10 00 00 00 00 10 01 01 10,
+E´ = -   -   , F = -  -  , F´ =   −   .
+10 01 01 10 00 10 10 00 00 10 10 00
+Resulta de (24) que
+D (x, z) =
+1
+33
+e
+e
+
+
+2
+2
+x
+x
+P
+P
+1
+(
+(
+x
+x
+,
+,
+z
+z
+)
+)
+
+
+Q
+Q
+(
+1
+x
+(
+,
+x
+z
+,
+)
+z )
+(26)
+Lema No.1. El conjunto de soluciones reales comunes a P(x, z) y Q(x, z)(P (x, z) y Q (x, z)) es:
+1 1
+a) {0}, si y sólo si B = 0 y Ak − D = 0 (B´ = 0 y A´k − D = 0).
+b)
+
+
+A
+A
+k 
+
+D
+C
+
+,
+AkD
+si y sólo si B = 0, E = 0, F = 0 y  0 (B´= 0, E´= 0, F´= 0 y
+AC
+A ´k
+A ´
+
+C 
+D
+´
+´
+ 0)
+Demostración La demostración se hará para P(x, z) y Q(x, z). Estas funciones se anulan simultáneamente
+si y sólo si:
+Az2 + Bz + Cz2 + D = 0 (27)
+Az2 − Bz + Cz2 + D = 0 (28)
+x(Ez + F) = 0 (29)
+x(−Ez + F) = 0 (30)
+Trivialmente se prueba que el sistema (27)-(30) tiene solución si y sólo si B = 0 es decir si y sólo si se
+reduce al sistema (29)-(31) donde por (31) se indica la ecuación:
+(A + c)x2 − (Ak − D) = 0 (31)
+El conjunto solución de la ecuación (31) es
+
+
+A
+A
+k 
+
+D
+C
+
+y como el sistema (29)-(30) tiene como única
+solución la trivial, queda obviamente demostrado el lema.
+Lema No. 2. Si se cumple una de las cuatro condiciones
+(i) B  0,
+(ii) B = 0, E  0 y Ak − D  0
+(iii) B = 0, F  0 y Ak − D  0
+(iv) B = 0, E = 0, F = 0 y
+A
+A
+k 
+
+D
+C
+ 0
+entonces la únicas raíces reales que puede tener
+e
+ 2 x 2  k
+R ( x )  S ( x )  0 (32)
+Son los elementos de S = {−x , 0, x }, donde
+1 1
+BFDEkAE BFDEkAE
+x = ,  0 (33)
+1
+E(AC) E(AC)
+si y sólo si:
+e2 a2k = ReS(x)ReR(x)ImS(x)ImR(x) x a (34)
+
+ReR(x)
+2
+
+
+ImR(x)
+2
+para a  S, donde:
+R(x) =
+34
+P ( x , x 2  k ) y S(x) = Q ( x , x 2  k ) .
+Demostración De acuerdo al Lema No. 1, para que R(x) y S(x) no tengan raíces reales comunes es
+necesario y suficiente que se cumpla una de las condiciones (i)-(iv). En este caso si x = a es una raíz real de
+la ecuación (32), entonces R(a)  0 y S(a)  0, y consecuentemente esta es equivalente a la ecuación:
+e  2 x 2  k = S
+R
+(
+(
+x
+x
+)
+)
+ R
+R
+e
+e
+S
+R
+(
+(
+x
+x
+)
+)
+
+
+iI
+iI
+m
+m
+S
+R
+(
+(
+x
+x
+)
+)
+=
+R e S
+R
+(
+e
+x )
+R
+R
+(
+e
+x )
+R
+2
+( x
+
+) 
+I
+I
+m
+m
+R
+S
+(
+(
+x
+x )
+)R
+I m
+( x
+R
+)
+(
+2
+x )
++ i
+I m S ( x
+R
+) R
+e
+e
+R
+R
+( x
+(
+)
+x )
+2
+
+
+R e
+I m
+S (
+R
+x
+(
+)
+x
+I m
+) 2
+R ( x )
+Luego como e
+ 2 x 2  k
+es una función real de variable real, la igualdad anterior se cumple si y sólo si:
+ImS(x)ReR(x) − ReS(x)ImR(x) = 0,
+o sea, si y sólo si:
+ 
+2x x2 k E(AC)x2 (BFEDkAE 0,
+El conjunto solución de esta ecuación viene dado por
+S = {−x , 0, x },
+1 1
+BFDEkAE BFDEkAE
+donde x = y  0.
+1
+E(AC) E(AC)
+Trivialmente a  S es una raíz real de (32) si y sólo si se cumple (34).
+Nota: Un lema similar se tiene para la ecuación e
+ 2 x 2  k
+R (x) − S (x) = 0 con solamente sustituir los
+1 1
+parámetros de R(x) y S(x) por los correspondientes de R (x) = P (x, x2 k y S (x) = Q (x, x2 k ).
+1 1 1 1
+Teorema no.1 La ecuación
+2 x2k   2 x2k  
+e R(x) - S(x) = 0 e R (x)S (x)0
+ 1 1 
+ 
+no tiene raíces reales si y sólo si se satisface una de las cuatro condiciones siguientes:
+a)  -    0 (   0)
+01 00 00 01 01 00
+b)   -   = 0,    0 y   k +   0
+01 00 00 01 10 10 01 01 00 0
+(  -   = 0,   -    0 y   k +   0)
+01 00 00 01 10 01 01 10 01 01 00 00
+c)  -   = 0,    0 y   k +   0
+01 00 00 01 00 00 01 01 00 0
+(  -   = 0,   +    0 y   k +   0)
+01 00 00 01 00 10 10 00 01 01 00 00
+d)  -   = 0,   -   = 0 y   +   = 0,
+01 00 00 01 10 01 01 10 10 00 10 00
+35
+( 
+0
+1
+1 0
+
+
+
+0
+1
+1 0
+0
+k1
+0 1
+
+) (
+
+
+0 0
+0 1
+
+0
+0
+1
+0
+
+1 0
+
+1 0
+)
+ 0
+   k  
+    0,     0y    0, 01 01 00 00 0
+ 01 00 00 01 10 01 01 10 00 10 10 00 
+ ( 01  10  10  01 )( 01  01  10  10 ) 
+O una de las tres condiciones siguientes
+e)
+B F 
+E
+D
+( A
+E
+
+
+C
+k
+)
+A E
+ 0
+ B ´F ´ 
+E ´
+D
+(
+´E
+A ´
+´
+
+
+C
+k A
+´ )
+´E ¨
+ 0
+
+f)
+B F 
+E
+D
+( A
+E
+
+
+C
+k
+)
+A E
+ 0
+ B ´F ´ 
+E ´
+D
+(
+´E
+A ´
+´
+
+
+C
+k A
+´ )
+´E ¨
+ 0
+
+e
+ 2 x 21  k
+
+ R e S ( x
+ R
+)
+e
+R
+S
+e
+(
+R
+x
+( s
+2 )
+) 
+
+I m
+ I m
+S
+R
+( x ) I m
+2 ( x )
+R ( x ) 
+x   x 1
+
+e
+ 2 x 21  k
+
+ R e S ( x
+1
+R
+)
+e
+R
+S
+e
+1
+R
+( x
+( s
+1
+ 2 )
+) 
+
+I m
+ I m
+S
+R
+( x ) I m
+1
+ 2 ( x )
+1
+R
+1
+( x ) 
+x   x 1
+
+donde x =
+1
+B F 
+E
+D
+( A
+E
+
+
+C
+k A
+)
+E 
+x 1 
+B ´F ´ 
+E
+D
+´ (
+´E
+A ´
+´
+
+
+C
+k A
+´ )
+´E ´ 
+g) e
+ 2 k
+
+R
+R
+e
+e
+S
+R
+(
+(
+0
+0
+)
+)
+
+e
+ 2 x  k
+
+R
+R
+e
+e
+S
+R
+1
+1
+(
+(
+0
+0
+)
+)
+
+5.2. Determinación de las condiciones para que D(x) satisfaga la condición (ii)
+Como
+lim
+x  
+D ( x )  lim
+x  
+P
+P
+2
+3
+1
+1
+(
+(
+x
+x
+,
+,
+z
+z
+)
+)
+ lim
+x  
+
+
+
+0 1
+0
+z
+1
+z
+
+
+i x 
+1 0
+i x 
+1 0
+
+
+
+0 0
+
+0 0
+Se tiene trivialmente en el siguiente teorema.
+Teorema no. 2. El límite del segundo miembro existe y es distinto de cero si y sólo si se cumple una de las
+dos condiciones siguientes
+a)  + i   0 y  + i  . En este caso el límite es
+01 10 01 100
+l =
+
+
+0 1
+0 1
+
+
+i
+i 
+1 0
+0 0
+.
+b)  + i  = 0 y  + i  = 0. En este caso el límite es
+01 10 01 10
+
+l = 00 .
+
+00
+si l  1, entonces multiplicando (23) por (1/l) y considerando las funciones:
+36
+F 1 
+1
+l
+F  , F 1  F  y D
+2
+
+1
+l
+D .
+se obtiene la ecuación funcional
+F 1 ( x )  D
+2
+( x ) F 1 
+1
+l
+ 
+
+2
+1
+(
+(
+x
+x
+, z
+, z
+)
+)
+H
+1
+ H
+2
+
+
+
+(
+(
+x
+x
+,
+,
+z
+z
+)
+)
+H
+3
+
+, (35)
+para la cual se cumple que
+lim
+x  
+D ( x )  1 .
+5.3. Determinación de condiciones para que se satisfaga la condición (iii)
+Teorema no.3 Si se cumple simultáneamente la condición a) y una de las condiciones b) o c) del teorema
+no.1, y una cualquiera de las condiciones a) y b) del teorema no.2; entonces (D(x) − 1)  L(R).
+2
+Demostración: Probemos primeramente que (D(x) − 1) pertenece a C
+
+(R ) . Como D
+A
+(R )  C
+
+(R ) basta
+probar que (D(x) − 1)  D
+A
+(R ) . Si se cumple cualquiera de las condiciones a) o b) del teorema no.2, se puede
+asegurar que lim
+x  
+D ( x )  l, y l  1. Si l  1 se considera (35), y se tiene entonces que siempre se puede
+plantear que lim
+x  
+D ( x )  l .
+Si se cumplen simultáneamente las condiciones a) y una de las condiciones b) ó c) del teorema no.1, es
+fácil verificar que [D(x) − 1]´ es una función acotada sobre R. No es difícil comprobar además que:
+Q´(x)Q (x)Q(x)Q(x)
+[D(x) − 1]´ =0 1 1 
+
+
+Q
+1
+(x)
+2
+
+luego (D(x) − 1)  D
+A
+(R).
+Por último, como lim D(x)l,los coeficientes de mayor grado de Q(x) y Q(x) son iguales y consecuentemente
+1
+x 
+D ( x )  1  0
+
+1
+x
+
+(36)
+en un vecindad del infinito; y como D(x) es derivable en R.
+Se tiene que
+
+ D(x)1 2 dx +
+
+Por tanto queda probado que D(x) − 1  L 2 (R ) .
+5.4. Determinación de las condiciones para que el término independiente de (23) sea elemento de L( R )
+2
+V
+Teorema no. 4. Si se cumple la hipótesis del teorema no.3 y, además, V(x, j), xV(x, j), (x,j), j0,1,
+y
+pertenecen a L
+2
+(R), entonces el término independiente de (23), pertenece a L
+2
+(R).
+Demostración: Tenemos que el término independiente de (23) tiene la forma:
+H(x) =
+37
+
+
+2
+1
+(
+(
+x
+x
+,
+,
+z
+z
+)
+)
+H
+1
+( z )  H
+2
+( x ) 
+
+
+( x , z
+( x , z
+1
+)
+)
+H
+3
+( x ) ,
+De acuerdo a las condiciones impuestas, es evidente que H
+1
+(x), H
+2
+(x) y H
+3
+(x) son elementos de L
+2
+(R), y
+
+
+2
+1
+(
+(
+x
+x
+,
+,
+z
+z
+)
+)
+,
+
+
+( x , z
+( x , z
+1
+)
+)
+son funciones acotadas sobre R.
+De aquí se implica obviamente que H(x)  L
+2
+(R).
+6. CÁLCULO DEL ÍNDICE DEL COEFICIENTE
+En este epígrafe se estudian dos casos particulares del coeficiente correspondiente a  =  = = 0
+01 01 01
+y  =  =  = 0. Se concretan las condiciones que se exigen en los teoremas 1, 2, 3 y 4 en cada caso y
+10 10 10
+se determina el índice del coeficiente.
+caso no.1 ( =  =  = 0)
+01 01 01
+La ecuación (23) toma en este caso la forma.
+F+(x) = D(x)F−(x) + H(x), (37)
+donde:
+D(x) =
+
+
+0
+0
+0
+0
+
+
+i
+i 
+0
+1
+0
+0
+x
+x
+,
+ i x
+H(x) = 00 10 G (x)G (x),
+12 11
+ i x
+00 10
+Lema no. 3. D(x) satisface la condición i) si y sólo si    0.
+00 00
+Demostración: Obvia. También son triviales las demostraciones de los lemas 4, 5 y 6 que se enuncian a
+continuación.
+Lema no. 4. Para que D(x) verifique la condición ii) es necesario y suficiente que se cumpla una de las
+condiciones siguientes
+1)  21
+0
+  21
+0
+ 0 y 
+0 0
+
+0 0
+ 0
+2)    0
+10 10
+y considerar en lugar de (37) la ecuación
+F 1 ( x )  F 1 ( x )  H
+1
+( x ) , (38)
+ 
+donde F(x) 00F,F(x)F y H (x)G  00 G (x), cuando se cumple la condición 1) y
+1 1 1 12 11
+ 
+00 00
+  ( i x)  ( i x)
+F(x) 10 F,D (x) 10 00 10 , F F yH (x) 10 00 10 G (x)G (x) (39)
+1 1 1 1 12 11
+  ( i x)  ( i x)
+10 10 00 10 10 00 10
+cuando se cumple la condición 2)
+Lema no. 5 si se cumplen las condiciones de los lemas 3 y 4, entonces D(x) cumple la condicion iii).
+Lema no. 6 si se cumplen las condiciones de los lemas 3 y 4, entonces H(x)  L
+2
+(R).
+Lema no. 7 si    0 y    0, el valor absoluto del índice de D (x) es menor o igual que 1 y se cumple
+00 00 10 10 1
+que
+a) Ind D = -1 si y sólo si sgn
+1
+38
+
+
+0
+1
+0
+0
+ 0 y Sgn
+
+
+0
+1
+0
+0
+ 0
+b) Ind D = 0 si y sólo si sgn
+1
+
+
+0
+1
+0
+0
+= Sgn
+
+
+0
+1
+0
+0
+ 
+c) ) Ind D = 1 si y sólo si sgn 00  0 y sgn 00  0
+1
+ 
+10 10
+Demostración: Trivial.
+caso no.2 ( =  =  = 0)
+10 10 10
+En este caso la expresión (24) toma la forma:
+D(x) =
+K
+K
+0
+1
+(
+(
+x
+x
+)
+)
+(40)
+donde:
+K i (x) = e 2 x 1 2k   Ai(x2 k)Bi x2 k Ci      Ai(x2 k)Bi x2 k Ci   , i0,1 (41)
+A = -   , B =   −   , C =   ,
+0 01 01 0 00 01 01 00 0 00 00
+A = -   , B =   −   , C =   ,
+1 01 01 1 00 01 01 00 1 00 00
+Lema no. 8. El índice de la función D(x) es cero si se cumplen las condiciones del teorema no.3.
+Demostración
+dln D(x) =
+K 0 ( x )K
+K
+1
+(
+0
+x
+(
+)
+x
+
+)K
+K
+1
+0(
+(
+x
+x
+)
+)K 1 ( x )
+,
+donde: K(x)K (x)K (x)K(x) = O(x2), K (x)K (x) = O(x4) en una vecindad del infinito. Además, como es
+0 1 0 1 0 1
+fácil verificar,K(x)K (x)K (x)K(x) es una función impar, y K (x)K (x) es una función par, que no se anula
+0 1 0 1 0 1
+sobre el eje real por el teorema no.3. Luego:
+
+1
+Ind D(x) = d(lnD(x))= 0.
+2i
+
+7. DETERMINACIÓN DE LA SOLUCIÓN DEL PROBLEMA (1)-(5) HOMOGÉNEO
+En este epígrafe se determina la solución en cuadraturas de problema 1)-5) homogéneo en la clase S,
+correspondiente a los casos 1) y 2) del epígrafe anterior cuando −1  Ind D(x)  0 y se prueba que en el caso
+de Ind D(x) = +1 el problema no está correctamente planteado.
+caso 1 ( =  =  = 0)
+01 01 01
+En este caso la expresión (23) toma la forma
+F+(x) =
+39
+
+
+0
+0
+0
+0
+
+
+i
+i
+1
+1
+0
+0
+x
+x
+F  ( x ) 
+
+
+0
+0
+0
+0
+
+
+i
+i
+1
+1
+0
+0
+x
+x
+G 1
+2
+( x )  G 1
+1
+( x ) (42)
+sustituyendo (21) y (22) en (10) y considerando las restricciones de este caso se tiene que:
+U(x,y) =
+
+0 0
+A
+
+( x
+i
+)
+1 0
+x
+G
+1 0
+( x ) 
+
+0 0
+B (
+
+x )
+i
+1 0
+x
+G 1
+1
+ F  ( x ) ) . (43)
+A(x) =
+e
+e
+
+
+2 x k y 
+2 x k 
+
+
+e
+e
+
+
+2 x k y 
+2 x k y 
+, (44)
+B(x) =
+e x 2 
+e
+k
+
+( 1 y )  
+2 x k 
+
+
+e
+e
+x
+x
+2
+2
+
+
+k
+k
+(1  y )
+. (45)
+Considérese la clase A de los coeficientes  ,  ,  y  que cumplen uno de los conjuntos de
+00 10 00 01
+condiciones siguientes:
+a1)    0,    0, sgn = sgn y sgn = sgn ,
+00 00 10 10 00 10 00 10
+a2)    0 y
+00 00
+ 21
+0
+  21
+0
+ 0,
+y la clase B de los mismos coeficientes que cumplen:
+b1)    0,    0, sgn  sgn , sgn  sgn y sgn
+00 00 10 10 00 10 00 10
+
+
+0
+1
+0
+0
+ s g n
+
+
+0
+1
+0
+0
+Teorema no. 5 si k < 0 y los coeficientes  00 ,  00 ,  10 y  10 pertenecen a la clase A o , entonces el problema
+1) -5) homogéneo tiene solución única u(x, y) en la clase (6) dada por:
+u(x, y) = V −U(x, y) (46)
+.
+donde U está determinada por las fórmulas (43), (44) y (45) y
+ 
+1  i x
+ 00 10 h (t)eixtdt, sisecumple la condición a ),
+1 1
+ 2  00 i 10 x
+ 0
+
+ 1 
+F+(x) =  00 h (t)eixtdt, sisecumple la condición a ),
+1 2
+ 2  00
+0
+ 
+ 1 h (t)eixtdt, sisecumple la condición b ),
+ 1 1
+2
+ 0
+(47)
+siendo
+h = V −H (48)
+1 1
+y H (x) =
+1
+40
+
+G
+G
+
+
+1
+2
+1
+2
+0 0
+0 0
+( x
+( x
+
+
+)
+)
+i
+i
+
+
+1
+1
+
+
+x
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+0
+G
+
+
+G
+1
+2
+i
+1 0
+i
+1 0
+ ( x
+1 1
+( x )
+x
+x
+)
+
+G
+G
+1
+1
+1
+1
+(
+(
+x
+x
+)
+)
+s
+s
+s
+i
+i
+i
+s
+s
+s
+e
+e
+e
+c
+c
+c
+u
+u
+u
+m
+m
+m
+p
+p
+p
+le
+le
+le
+la
+la
+la
+c
+c
+c
+o
+o
+o
+n
+n
+n
+d
+d
+d
+ic
+ic
+ic
+ió
+ió
+ió
+n
+n
+n
+a
+a
+b
+1
+2
+1
+)
+)
+)
+. (49)
+Demostración: Si los coeficientes  00 ,  00 ,  10 y 10 pertenecen a la clase A o bien a la clase B, entonces el
+problema (42) tiene solución única por ser el índice cero, que está dada por (47) y
+F-(x) =
+
+
+
+1
+2
+1
+2
+
+
+0
+h
+1
+ 
+
+0 0
+ 0 0
+(
+
+
+t ) e
+i
+i
+ix td
+x
+1 0
+x 1 0
+t,
+0
+
+h
+1
+( t ) e ix t d t,
+s
+s
+i
+i
+s
+s
+e
+e
+c
+c
+u
+u
+m
+m
+p
+p
+le
+le
+la
+la
+c
+c
+o
+o
+n
+n
+d
+d
+ic
+ic
+ió
+ió
+n
+n
+a
+b
+1
+1
+o
+)
+a
+2
+)
+(50)
+donde h
+1
+está dado por (48) y (49), además en (43) G
+10
+(x)  L
+2
+(R), G 1
+1
+( x )  L 2 (R ) y F  ( x )  L 2 (R ) . Luego de
+acuerdo a la definición de A(x) y B(x), U(x, y) y x2U(x, y) pertenecen a L
+2
+(R) para todo y, 0 < y < 1; por lo
+tanto u(x, y) pertenece a la clase (6).
+Teorema no. 6 Si    0,    0, sgn  sgn y sgn  sgn , entonces el problema 1) -5) tiene
+00 00 10 10 00 10 00 10
+solución u(x, y) que depende de una constante en la clase (6) dada por (46), (43)-(45) y:
+F+(x) =
+
+
+0
+0
+0
+0
+
+
+i
+i
+1
+1
+0
+0
+x
+x
+G 1
+2
+( x ) 
+
+0 0
+
+
+0 0i
+1 0
+x
+Demostración. Aplicando el teorema de prolongación analítica y el teorema generalizado de Liouville, de
+(42) se obtiene
+ i x  i x C
+F+(x) - 00 10 G (x) 00 10 F(x)G (x)
+12 11
+ i x  i x  i x
+00 10 00 10 00 10
+Luego, obtenemos F±(x) en las clases L 2 (R ) por las fórmulas
+F+(x) =
+
+
+0
+0
+0
+0
+
+
+i
+i
+1
+1
+0
+0
+x
+x
+G 1
+2
+( x ) 
+
+0 0
+C
+ i
+1 0
+x
+,
+ i x C
+F-(x) = 00 10 G (x) .
+11
+ i x  i x
+00 10 00 10
+Como A(x), x2A(x), B(x), x2B(x),
+
+0 0
+
+1
+i
+1 0
+x
+y
+
+0 0
+
+1
+i
+1 0
+x
+son funciones acotadas, y como G
+10
+ L
+2
+(R),
+G 1
+1
+ L 2 (R ) , G 1
+2
+ L 2 (R ) y
+
+0 0
+
+1
+i
+1 0
+x
+ L
+2
+(R) entonces, U(x, y) y x2U(x, y) pertenecen a L
+2
+(R) para todo y,
+0 < y < 1; por tanto, u(x, y) pertenece a la clase (6).
+Teorema no. 7 Si    0,    0, sgn = sgn y sgn = sgn , entonces el problema 1) -5) tiene
+00 00 10 10 00 10 00 10
+solución única u(x, y) en la clase (6), dada por (46)-(43)-(45) y
+
+1
+F+(x) = h (t)ixtdt;
+1
+2
+0
+donde h (t) se define por (48), (49)(caso de la condición b1); siempre que se cumpla la condición adicional
+1
+41
+ 
+
+
+1
+H
+0
+(
+t
+t )
+
+d
+
+t
+0 0
+i
+ 0 ; (51)
+Demostración: Haciendo
+F 1 ( x ) 
+
+
+0
+0
+0
+0
+
+
+ix
+ix
+
+
+1
+1
+0
+0
+F  ( x ) ,
+llegamos al problema de salto
+F+(x) − F 1 ( x ) = H (x),
+1
+donde
+H (x) =
+1
+
+
+0
+0
+0
+0
+
+
+i
+i
+1
+1
+0
+0
+x
+x
+G 1
+2
+( x )  G 1
+1
+( x ) ,
+Por tanto
+F+(x) =
+1
+2 
+ 0
+h
+1
+( t ) e ix td t ,
+F-(x) =
+1
+2 
+
+
+0
+0
+0
+0
+
+
+ix
+ix
+
+
+1
+1
+0
+0
+0
+
+h
+1
+( t ) e ix td t
+y h (x) se define por (48).
+1
+En este caso, como F−(z) tiene un polo de orden uno en el punto t −
+0
+
+
+0
+1
+0
+0
+i del semiplano inferior, para que
+el problema tenga solución se requiere que
+0
+
+h
+1
+( t ) e ix td t ,
+
+tenga un cero en - 00i de igual orden de multiplicidad. Por la relación entre las integrales de Cauchy y de
+
+10
+Fourier se tiene:
+ 0
+1 H (t) 1
+H(z)  1 dt h (t)eixtdt, (52)
+1 1
+2i tz 2
+ 
+
+para Imz < 0. Desarrollando la integral de la izquierda de (52) en series de potencias de (z + 00i), e
+
+10
+igualando a cero el coeficiente de grado cero del desarrollo, se elimina el polo de F−(z). De aquí se obtiene
+evidentemente la condición (51).
+Por un análisis similar al realizado en el teorema no.5, se comprueba fácilmente que u(x, y) pertenece a la
+clase (6).
+caso 2: ( =  =  = 0) En este caso la expresión (23) toma la forma
+10 10 10
+F+(x) =
+42
+
+
+( x
+( x
+1
+)
+)
+F−(x) + H(x), (53)
+donde:
+(x) = 
+0 1
+x 2  k 
+2
+( x )  
+0 1
+x 2  k 
+3
+( x )  
+0 0
+
+3
+( x )  
+0 0
+
+2
+( x ) ,
+ (x) = 1  0 1 x 2  k  2 ( x )   0 1 x 2  k  3 ( x )   0 0  3 ( x )   0 0  2 ( x ) ,
+H(x) = 
+
+( x
+( x
+1
+)
+)
+G 1
+2
+ G
+
+2
+1
+( x
+( x
+)
+)
+ 
+0 0
+
+4
+( x )  
+0 0
+
+5
+( x )  
+0 1
+x 2  k 
+4
+( x )  
+0 1
+x 2  k 
+5
+( x ) 
+- G
+
+ ( x 1 1(
+x
+1
+)
+)
+  0 0  3 ( x )   0 0 x 2  k  2 ( x )   0 1 x 2  k  3 ( x )  ,
+A 2 (x) =  00 e x2k  01 x2 ke x2k,
+A (x) = 3  0 0 e x 2  k   0 1 x 2  k e x 2  k ,
+A (x) = 4  0 0   1 1 x 2  k ,
+A (x) = 5  0 0   0 1 x 2  k ,
+Sustituyendo (21) y (22) en (10) y considerando las restricciones de este caso se tiene que.
+U(x, y) =  4 ( x )G 2 ( x )   2 ( x
+
+)G
+( x
+1) 1 ( x )   2 ( x )F  ( x ) e  x 2  k y
++  3 ( x )F  ( x )   5 ( x
+
+)G
+( x
+2) ( x )   3 ( x )G 1 1 ( x ) e  x 2  k y . (54)
+Considérese la clase C de los coeficientes  00 ,  00 ,  01 ,  01 que cumplen:
+a)   −    0 y una de las condiciones siguientes
+01 00 00 01
+b)    0
+01 01
+c)  20
+1
+  20
+1
+ 0
+Teorema no. 8: si k < 0 y los coeficientes 
+00
+, 
+00
+, 
+01
+, 
+01
+pertenecen a la clase C, entonces el problema 1) -
+5) homogéneo tiene solución única u(x, y) en la clase (6), dada por u(x, y) = V−1U(x, y), donde U(x, y) está
+dada por (54) y (ver [2]):
+F±(x) = X±(x)±(x). (55)
+siendo:
+X(x) = e(x), (56)
+(x) =
+43
+1
+2 
+ 0
+ ( t ) e ix td t, (57)
+-(x) = 
+1
+2 
+0
+
+ ( t ) e ix td t, (58)
+(t) = 
+1
+2 
+ 
+
+ln
+
+
+( x
+( x 1
+)
+)
+e  ix t d x , (59)
+(x) = 
+1
+2 
+ 0
+ ( t ) e ix td t, (60)
+(x) = 
+1
+2 
+0
+
+ ( t ) e ix td t, (61)
+(x) =
+H
+X
+(
+
+x
+(
+)
+x )
+(62)
+Demostración: Si 
+00
+, 
+00
+, 
+01
+, 
+01
+pertenecen a la clase C, entonces por los teoremas no.3 y no.4:
+D(x) − 1 =
+
+
+( x
+( x
+1
+)
+)
+ 1  L 2 (R ) y H(x) 4(x)  L 2 (R).
+Luego, como en este caso ind D(x) = 0, se tiene que el problema de Riemann (53) tiene una solución única
+dada por (55)-(62) (ver [1]) y F±(x)  L 2 (R ) .
+Se verifica fácilmente, además, que de acuerdo a las definiciones de capitulo (2):
+X±(x)  L 2 (R  1 ) ,
+±(x) L
+2
+(R),
+±(x)  L 2  (R ) ,
+Sólo falta probar que la solución se encuentra en la clase (6) deseada. Para ello expresamos (54) en la
+forma;
+ (x)e x2ky  (x)e x2ky  (x)e x2ky
+U(x, y) = 4 G (x) 2 G (x) 2 F(x)
+2 11
+(x) (x) (x)
+ (x)e x2ky  (x)e x2ky  (x)e x2ky
++ 3 F(x) 5 G (x) 3 G (x) (63)
+2 11
+(x) (x) (x)
+Como G
+2
+(x), G
+1
+
+1
+(x) y F+(x) son elementos de L
+2
+(R) sus coeficientes respectivos en (63) son funciones
+acotadas sobre R para todo y, 0 < y < 1, se tiene que U(x, y)  L 2 (R). Por un análisis similar es fácil
+comprobar que:
+X2U(x, y)  L
+2
+(R), (64)
+44
+d
+d y
+2
+2
+ U ( x , y )   L
+2
+(R ) (65)
+Luego, u(x, y) pertenece a la clase (6).
+8. CONCLUSIONES
+Los resultados alcanzados en el presente trabajo, permiten la solución de variados problemas de la física
+matemática que se reducen a un problema de tipo elíptico, a partir de la novedosa técnica de resolver un
+problema de Riemann de solución conocida.
+Lo importante del método utilizado es que la solución obtenida en cuadraturas, facilita su utilización por
+profesionales que no sean especialistas en los problemas de contorno de la teoría de funciones analíticas.
+REFERENCIAS
+[1] MEDEROS, O.B. y L.F. BATARD (1990): “El problema de Riemann con parámetro pequeño en
+el espacio L
+2
+(R)”, Revista de Ciencias Matemáticas 3.
+[2] BATARD, L.F. (1990): Las ecuaciones diferenciales y el problema de Riemann con parámetro
+pequeño. Tesis de doctorado.
+[3] MEDEROS, O.B. y L.F. BATARD (1990): “Reducción de una clase de problemas de contorno de
+ecuaciones diferenciales parciales con parámetro pequeño al problema de contorno de
+Riemann”, Revista Ciencias Matemáticas 2.
+[4] GAJOV, F.D. y Y.I. CHERSKI (1978): “Ecuaciones de tipo convolución”. Moscú. Ciencias.

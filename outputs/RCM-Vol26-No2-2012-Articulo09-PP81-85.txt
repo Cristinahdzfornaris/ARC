@@ -1,0 +1,166 @@
+SIMPLER: Desde el MERX hasta las Bases de Datos Relacionales
+Javier GuillotJiménez, Víctor Manuel MendiolaLau,Benny JonRobaina,
+DanielAlejandro Mesejo León, Omar Salas García,HaydéeGuillotJiménez
+UniversidaddeLa Habana, FacultaddeMatemática yComputación
+Resumen
+LasBasesdeDatos(BD),hoyendía,ocupanunlugardeterminanteencualquieráreadelquehacerhumano,
+comercial y tecnológico. El Modelo Entidad Relacionalidad Extendido (MERX) es un método de
+modelación conceptual de una BD que incorpora extensiones al Modelo Entidad-Relación original. El
+colectivodeBasesdeDatosdelaFacultaddeMatemáticayComputacióndelaUniversidaddeLaHabana
+no cuenta con ninguna solución informática que permita modelar una BD con los requerimientos del
+MERX, así como obtener un diseño correcto de la misma desde el punto de vista teórico. El presente
+trabajoseproponediseñareimplementarunaaplicaciónquepermitamodelarconceptualmenteunaBD,así
+como obtener un diseñológico dela misma,yque tribute a lacomprensiónporpartedelosestudiantesde
+loscontenidosimpartidosenlasasignaturasdeSistemasdeBasesdeDatos.
+Abstract
+Databases (DB), nowadays, are of decisive importance in any area of human endeavor, business and
+technology. Extended Entity-Relational Model (MERX) is a DB’s conceptual modeling method that
+incorporatesextensionstotheoriginalEntity-RelationshipModel.TheDBprofessor’sgroupoftheFaculty
+ofMathematicsandComputerScience,intheUniversityofHavana,doesnothaveanysolutionthatallows
+modeling a DB with all the requirements of MERX and allows to obtain a theoretical correct design of it.
+ThispaperintendstodesignandimplementanapplicationthatallowsDB’sconceptualmodellling,andget
+alogicaldesignofit,andallofthistributetotheunderstandingbystudentsofthecontenttaughtinSystem
+Databases’courses.
+PalabrasClave:BasesdeDatos,ModeloRelacional,Diagramas,DiseñoCorrecto
+Temas:Computación,BasesdeDatos,EnseñanzadelaComputación
+1. Introducción
+El Modelo Entidad-Relación [5], también conocido como DER (diagramas entidad-relación) es una
+herramienta de modelado para Bases de Datos (BD). La misma permite visualizar los objetos
+pertenecientesa laBDcomoentidades,lascualestienenatributosysevinculanmedianterelaciones.Este
+modeloes empleado para confeccionar un tipo de esquema conceptual de la BD y sus requerimientos. El
+ModeloEntidad-Relacionalidad Extendido(MERX)[2] incorpora extensiones a [5],este fue desarrollado
+dada la necesidad de reflejar acertadamente propiedades y restricciones que se encuentran en bases de
+datos complejas, esto se logra aplicando una metodología en la que se profundiza en los elementos
+principales de un modelo conceptual de datos utilizando la terminología del enfoque orientado a objetos
+[4].
+EldiseñodeunaBDnoconcluye consumodelaciónconceptual,aestepasolesiguenlamodelación
+lógica y la modelación física. Durante la fase de modelación lógica, a la BD se le aplican un conjunto de
+técnicas que permiten obtener un diseño correcto de la misma, este diseño luego puede ser utilizado para
+la implementación o implantación de la BD en un Sistema de Gestión de Bases de Datos (SGBD)
+específico.
+MERX
+Todos estos conceptos yprocesos sonestudiados enlas asignaturas de Sistemas de Bases de Datos I
+y II en la carrera de Ciencia de la Computación 9]; sin embargo, no todos los estudiantes adquieren las
+habilidades necesarias para representar la realidad que se intenta modelar y por ende, cometen errores en
+lasetapasdemodelaciónconceptualylógicadeunaBD.
+Actualmente existenuna docena de diversas herramientascomo Erwin[6],Aris[7] ydbForge Studio
+for MySQL [8], para representar diagramas conceptuales de una BD, pero ninguno de estos utiliza la
+notaciónpropuestapor[2]y[4],yqueeslaqueseenseñaenlaFacultaddeMatemáticayComputación.
+Todo lo anterior constituyen las motivaciones que impulsan el presente trabajo y lo que nos hace
+formular la siguiente pregunta científica: ¿Se puede instrumentar una solución informática que posibilite
+modelarconceptualmente una BD, así como obtenerun diseño correctode la misma, lacual permita que
+losestudiantesdeCienciadelaComputaciónadquieranlashabilidadesparaeldiseñocorrectodelasBD?
+Para darle solución a esta problemática se ha emprendido una investigación cuyo colectivo aglutina
+estudiantes que ya han recibido la asignatura y otros que la están recibiendo y cuyos objetivos son
+expuestosenelsiguienteepígrafe.
+2. Objetivos
+El objetivo generaldel presente trabajoes diseñar e implementar una aplicación que permita modelar
+conceptualmente una BD, así como obtener un diseño lógico de la misma, y quetribute a la comprensión
+porpartedelosestudiantesdeloscontenidosimpartidosenlasasignaturasdeSistemasdeBasesdeDatos.
+Paralograrelobjetivogeneralesnecesariotrazarlossiguientesobjetivosespecíficos:
+ Implementarunaherramientaquepermita:
+ModelarconceptualmenteunaBDutilizandoparaestolasintaxisdelModeloEntidad
+o
+RelacionalidadExtendido(MERX).
+ObtenereldiseñocorrectodeunaBD.
+o
+Facilitarsuusomedianteunainterfazamigable.
+o
+Interactuarconelusuario,detallandocadaunadelasaccionesquevanrealizando.
+o
+3. Diseñoe Implementación
+Conel propósitode independizar lalógica de la aplicación desarrollada de la presentacióno interfaz
+gráficadeusuario,sedeterminódividirelproyectoendosmódulos,elmotorgráficoyelmotorlógico.
+La lógica sigue el enfoque orientado a objetos, dada la estrecha relación de este paradigma de
+programación con el propio MERX, para esto se utilizó el lenguaje de programación C#. Se implementó
+el módulo , en el cual se diseñó una jerarquía de clases que hace corresponder cada concepto
+delMERXconunaclase/tipode C#.Es importante destacarque dichomódulose ha diseñadopara evitar
+errores conMceEpRtuXaLleosgiecn el esquema de la BD que se está modelando. Esto permitirá que los estudiantes
+reconozcan cuando intentan modelar alguna situación que es conceptualmente incorrecta. Para esto se
+realizanalgunastareascomo:
+• Se agregan y eliminan automáticamente llaves foráneas de conjuntos de entidades que
+participanenrelacionesdeherencia.
+• Se prohíbe la eliminación de interrelaciones cuando estas dan lugar a nuevos conceptos que
+interactúanconalgúnotroconjuntodeentidades,comoporejemplo,lasagregaciones.
+• Se restringe en las relaciones de herencia que un conjunto de entidades tenga 2 padres o que
+heredeporespecializaciónyporparticiónalavez.
+Asociadoal seencuentraotromódulo,el ,elcualpermiteobtener
+un diseño teóricamente correcto de una BD. Desde el punto de vista teórico, una base de datos relacional
+estácorrectamentMedEiRseXñLaodgaicsisecumplenlastrespropiedadMeEsRsiXg_uCieonrtreesc[t4D]eysi[g6n]:
+1. Todos los esquemas relacionales (abreviadamente, relaciones) de la descomposición están en
+unaformanormalaceptable:3FNosuperior.
+2
+MERX
+2. Se cumple la propiedad de join (unión natural o encuentro) sin pérdida de información: PLJ
+(PropertyofLosslessJoin).
+3. SecumplelaPropiedaddePreservacióndeDependenciasFuncionales:PPDF.
+Tomando el esquema conceptual de la BD modelada como información inicial que procesará el
+módulo ,sepodránaplicarcadaunodelospasosnecesariosparaobtenerundiseño
+correcto. Primeramente se determinarán las dependencias funcionales a partir del diseño conceptual y el
+usuario MpoEdRráX_iCncoorrrpeocrtaDreositgrans dependencias que no se representan en dicho diseño a continuación se
+aplicarán los algoritmos para obtener un cubrimiento mínimo del conjunto de las dependencias
+funcionales y una descomposición en 3FN que cumpla la PPDF, y luego se pasará a comprobar el
+cumplimientodelLemadeUllman.
+LemadeUllman:Seaunadescomposiciónen3FNparaelesquemarelacionalR(U,F)construida
+utilizando el algoritmo de 3FN y sea X una llave de R (U, F). Entonces  =   {X} es una
+descomposición de R (U, F) con todos sus esquemas relacionales en 3FN que cumple la propiedad
+de dependencias funcionales pero que, además cumple la propiedad de join sin perdida de
+información.
+El proceso de obtención de un diseño correcto se realizará de manera interactiva, siempre
+brindándole al usuarioinformación sobre, qué paso se acomete encada momento y cuáles van siendo las
+modificaciones realizadas al diseño original de la BD, logrando de esta forma que el estudiante adquiera
+las habilidades en el diseño de las BD y comprenda cómo funcionan en la práctica cada una de las
+operacionesaplicadas.
+La aplicación actual parte de una versión anterior [1], donde se actualizó el diseño gráfico de la
+herramienta a partir de la utilización la tecnología Windows Presentation Foundation (WPF) que forma
+parte de la plataforma .NET, la cual aporta a las aplicaciones una gran expresividad en cuanto a
+cuestionesgráficas(Fig.1).
+Las principales aportaciones a esta nueva versión están orientadas a permitir que el usuario pueda
+hacerpersistenteundiseñodeBDquehaya realizado, conelobjetivoderetomarloenotromomentopara
+suculminación,oparareutilizarloenotrodiseñomáscomplejoo,compartirloconel colectivodeestudio,
+contribuyendo a la colaboración científica y a un desarrollo más acelerado. El tamaño del fichero xml
+quesegeneraalguardar laaplicacióndependedelacantidaddeentidades,atributoseinterrelacionesque
+contenga el modelo, pero normalmente no sobrepasa 1MB. Otra opción a destacar es la posibilidad de
+exportar el modelo realizado a pdf, y puede ser visualizado por otra herramienta computacional sin
+necesidaddetenerinstaladalaaplicaciónSIMPLER.
+3
+MERX
+Figura1.Vistadelaaplicación.
+4. Conclusiones
+EneldesarrollodeSistemadeBasesdeDatosseconocequelaetapadediseñoconstituyeeleslabón
+fundamental para lograr un sistema que responda a la realidad que se desea modelar, por ende, es
+necesario que los estudiantes que cursan las asignaturas asociadas a esta temática logren habilidades en
+modelaciónlógica.
+Con la aplicación SIMPLER el estudiante posee en sus manos una herramienta que ayudará a
+modelar conceptualmente y diseñar correctamente una BD, sirviéndole como entrenador para lograr las
+habilidades necesarias y como apoyo en su posterior ejercicio de la profesión, al contar con una
+herramientaquefacilitelosdiseñosdeBD.
+En general los objetivos se han ido cumpliendo satisfactoriamente, la misma ha sido utilizada a
+manera experimental en un grupo de estudiantes de 2do. año de la especialidad, solo resta generalizar su
+usoenlosestudiantesdelaasignaturasSistemasdeBasesdeDatosIyIIpararecogerlosresultadosdesu
+manejo,aunqueconsideramosdeantemanoquesuutilizaciónresultaráenbeneficiodelosestudiantes.
+5. Recomendaciones
+Entrelasnuevasfuncionalidadesquesepudieranincluirenlaherramientaseencuentran:
+ Generación del código SQL necesario para la creación de la base de datos para un conjunto
+determinadodeSistemasdeGestióndeBasesdeDatos.
+ GenerarapartirdeunaBasedeDatoseldiseñodeunmodeloteóricamentecorrecto.
+4
+MERX
+Referencias
+[1] DanielA.MesejoyBennyJon.MERX:HerramientaparalarepresentacióndelModelo
+Relación\EntidadExtendido.JornadaCientíficaEstudiantil2010,FacultaddeMatemáticay
+Computación,UH,2010.
+[2]G.HansenyJ.Hansen.DiseñoyAdministracióndeBasesdeDatos.2da.Ed.,PretienceHall,1997.
+[3] J.D. Ullman. Principles of Database and Knowledge-Base Systems. Computer Science Press.EEUU,
+1990.
+[4] Lucina García Hernández y Martha Montes de Oca Richardson. Sistema de Bases de Datos:
+ModelaciónyDiseño.EditorialFélixVarela,LaHabana,2005.
+[5]PeterChen.TheEntity-RelationshipModel:TowardaUnifiedViewofData.ACMTransactionson
+DatabaseSystems,1(1),pp.9-36,1976.
+[6]http://en.wikipedia.org/wiki/CA_ERwin_Data_Modeler,consultadoel29deabrilde2010.
+[7]http://en.wikipedia.org/wiki/Architecture_of_Integrated_Information_Systems,consultadoel29de
+abrilde2010.
+[8]http://en.wikipedia.org/wiki/DbForge_Studio_for_MySQL,consultadoel29deabrilde2010.
+[9] Programa de la disciplina Sistemas de Bases de Datos e Información, Plan de estudio D de la carrera
+deCienciadelaComputación ftp://intranet/matcom.uh.cu/plandeestudio
+5

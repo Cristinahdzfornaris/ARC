@@ -1,0 +1,753 @@
+CienciasMatemáticas,Vol. 31,No. 1,Pag. 25-34, 2017
+Recibido09-2016
+Me´todos de optimizacio´n aplicados al problema de
+apilamiento de contenedores
+Optimization Methods applied to Container Stacking
+Problem
+Laidy De Armas Jacomino1*, Rafael Bello Pe´rez 2, Carlos Morell Pe´rez2
+Abstract Enlasterminalesdecontenedoresmar´ıtimassetomanadiariomu´ltiplesdecisionestalescomola
+planificacio´ndelaestibaenlosbuques,laasignacio´ndeatraquesygru´as,elapilamientodecontenedoresen
+laexplanadaopatio,etc. Elapilamientodecontenedoresesconsideradoporvariosautorescomounadelas
+decisionesma´simportantesquepuedeafectareldesarrolloeficientedelrestodelasactividadesyprocesos.
+Esteprocesoenunaterminalmar´ıtimadalugaralaocurrenciadedistintosproblemasdeoptimizacio´nconocidos
+comocarga,descargayrecolocacio´nopremarshallingdecontenedores. Estosproblemasdeoptimizacio´nhan
+sido resueltos por varios autores usando diversos me´todos matema´ticos conocidos tambie´n como me´todos
+exactos, entre ellos esta´n la programacio´n lineal, programacio´n lineal entera, programacio´n dina´mica, etc.
+Adema´sparasusolucio´nsehanusadome´todoscomputacionalesdeInteligenciaArtificialcomoprogramacio´n
+derestricciones,metaheur´ısticasyte´cnicasdeplanificacio´n. Lapresenterevisio´nbibliogra´ficaprecisamente
+hacee´nfasisenelana´lisisdelosme´todosdeoptimizacio´nempleadospararesolverestosproblemas. Atendiendo
+aestolostrabajosanalizadosseagruparonsegu´nelme´todomatema´ticoocomputacionalempleadoporlos
+autoresestudiados.
+Abstract Inthemaritimecontainerterminalstheyaretakendailymultipledecisionssuchasplanningstowage
+onships,allocationofberthsandcranes,stackingcontainersinthecourtyardorpatio,etc. Containerstackingis
+consideredbyseveralauthorsasoneofthemostimportantdecisionsthatcanaffecttheefficientdevelopmentof
+otheractivitiesandprocesses. Thisprocessinamarineterminalresultsintheoccurrenceofdifferentoptimization
+problemsknownasloading,unloadingandrelocationorpremarshallingcontainer. Theseoptimizationproblems
+havebeensolvedbyseveralauthorsusingdifferentmathematicalmethodsknownalsoasexactmethods,among
+themarelinearprogramming,integerlinearprogramming,dynamicprogramming,etc. Inadditiontoitssolution
+theyhavebeenusedcomputationalmethodsofArtificialIntelligenceasconstraintprogramming,metaheuristics
+and planning techniques. This literature review emphasizes precisely the analysis of the optimization meth-
+ods used to solve these problems. In response to this the studies analyzed were grouped according to the
+mathematicalorcomputationalmethodusedbytheauthorsstudied.
+PalabrasClave
+Apilamientodecontenedores—Me´todosdeoptimizacio´n—Me´todosexactos—Metaheurist´ıcas
+1FacultaddeCienciasInforma´ticas,UniversidaddeCiegodeA´vilaMa´ximoGo´mezBa´ez,CiegodeA´vila,Cuba.laidy@unica.cu
+2CentrodeEstudiosdeInforma´tica,UniversidadCentral”MartaAbreu”deLasVillas,Cuba.
+*AutorparaCorrespondencia
+Introduccio´n Elapilamientodecontenedores(delingle´sContainerStack-
+ingProblem)esconsideradocomounadelasdecisionesma´s
+En las Terminales de Contenedores Mar´ıtimas (TCM) se
+importantes debido a que causa mayores retrasos y cuellos
+tomanadiarioungrupodedecisionesimportantestalescomo
+debotellaenunaTCM.Estosedebe,entreotrasrazones,al
+[35]:
+arribodediferentesflujos1decontenedoresyalaocurrencia
+• Planificacio´ndelaestibadecontenedoresenlosbuques. de movimientos improductivos de las gru´as de patio. Los
+movimientosimproductivosdelasgru´asocurrencuandose
+• Asignacio´ndeatraquesydegru´asdemuelle.
+deseadescargaruncontenedor,elcualtieneasuvezvarios
+• Planificacio´ndeltransportedelmuelle.
+1Aqu´ısehacereferenciaalosprincipalesflujosdecontenedoresim-
+• Apilamientodecontenedores. portacio´n,exportacio´nytrasbordo.
+26 Me´todosdeoptimizacio´naplicadosalproblemadeapilamientodecontenedores
+contenedoresencimaquedebenserrecolocadosparaobten- Cuadro1. Te´rminosusadosparaPLen[20]
+erlo. Porellolosoperariosydirectivosaltomarlasdecisiones Z Valordelamedidaglobaldedesempen˜o
+deapilamientodebentenerpresentelosindicadoresdeeficien- x j Niveldelaactividad j(para j=1,2,...,n).
+ciaacumplirporlaterminaldeformaquesepuedaoptimizar c j IncrementoenZqueseobtienealaumentar
+el espacio de almacenamiento en el patio, se disminuya el unaunidadenelniveldelaactividad j.
+tiempodelosbuquesenelatraque,elgastodecombustible, b Cantidadderecursoidisponiblepara
+j
+eldeteriorodelasgru´as,etc. asignarsealasactividades(para
+Laoptimizacio´ndelprocesodeapilamientoesobjetodees- i=1,2,...,m).
+tudiodesdehacevariosan˜ospordistintosautoresdelcampo a Cantidaddelrecursoiconsumidoporcada
+ij
+acade´micodeconjuntoconpersonaldelasTCM.Seregistran unidaddelaactividad j.
+en la literatura varias soluciones usando diversos me´todos
+deoptimizacio´ntantoexactoscomoheur´ısticos. Estassolu-
+cionessonclasificadasatendiendoalasprincipalesdecisiones lemas de optimizacio´n. Entre estos problemas resueltos se
+deunpatiodecontenedores[11,12]. Otrassolucionesson encuentraelapilamientodecontenedoresenelpatiodeuna
+clasificadasdeacuerdoalagestio´ndelosrecursosfundamen- TCM.Enesteep´ıgrafeseanalizanvariostrabajosdondese
+talesaoptimizarenunpatiodecontenedores: lasgru´asde hacenusodeestosme´todosdeoptimizacio´nydete´cnicasde
+patio,elespaciodealmacenamientoylosveh´ıculosusados disen˜odealgoritmoscomoRamificacio´nyAcotamiento.
+paratransportaryapilarcontenedores[19]. Tambie´nexisten
+1.1 Programacio´nlineal
+estudiosdondeseanalizansolucionesatendiendoaproblemas
+LaPLesunodelosme´todosmatema´ticosampliamenteus-
+ma´sespec´ıficosdelpatiodecontenedorescomolosproble-
+ados en la IO en las empresas y otras instituciones desde
+masdeapilamientorelacionadosconlacarga,descargayla
+hace varios an˜os. Este me´todo “involucra la planeacio´n
+recolocacio´nopre-marshallingdecontenedores[8,16,33].
+de actividades para obtener un resultado o´ptimo; esto es,
+Elpresenteestudio,adiferenciadelosmencionadosanterior-
+el resultado que mejor alcance la meta especificada —de
+mente,hacee´nfasisenelana´lisisdelosme´todosdesolucio´n
+acuerdoconelmodelomatema´tico—entretodaslasalterna-
+de problemas que han sido usados por diferentes investi-
+tivas factibles. El adjetivo lineal se refiere a que todas las
+gadoresparalaoptimizacio´ndelosproblemasdeapilamiento
+funcionesmatema´ticasdelmodelodebenserlineales”[20].
+de contenedores en el patio de una TCM. La clasificacio´n
+Losautores,apartirdelaasuncio´ndequelaaplicacio´nma´s
+de lostrabajos analizados esta´ acordea la clasificacio´n del
+comu´ndeprogramacio´nlinealeslaasignacio´nderecursosa
+me´todoqueseempleaenelmismo. Dentrodelosme´todos
+ciertasactividades,definenunaterminolog´ıageneralparaeste
+deoptimizacio´nexactostratadosesta´n: laProgramacio´nLin-
+tipodeproblemaqueaparecereferidaenelcuadro1.
+eal(PL),Programacio´nLinealEntera(PLE),Programacio´n
+Apartirdeestaterminolog´ıaelmodeloplanteaelprob-
+Dina´mica(PD)ylosme´todoscomputacionalesdeInteligen-
+lema en te´rminos de tomar decisiones sobre los niveles de
+ciaArtificial(IA)talescomoMetaheur´ısticas,Programacio´n
+las actividades, por lo que x ,x ,...,x se llaman variables
+de Restricciones y Te´cnicas de Planificacio´n. Sobre estos 1 2 n
+dedecisio´n. Losvaloresdec , b ya (parai=1,2,...,m
+me´todosseexplicanalgunasdesusprincipalescaracter´ısticas, j i ij
+y j =1,2,...,n) son las constantes de entrada al modelo,
+especificando tambie´n para que´ tipo de problema de apil-
+tambie´nconocidascomopara´metrosdelmodelo. Enunprob-
+amiento se han usado. Por u´ltimo en las conclusiones se
+lemageneraldePLsedebenelegirvaloresdex ,x ,...,x
+presentanalgunastendenciassobresuusoapartirdelaliter- 1 2 n
+conelobjetivode
+aturaanalizada.
+MaximizaroMinimizarZ=c x +c x +...+c x
+1 1 2 2 n n
+1. Uso de me´todos de optimizacio´n Sujetaalasrestricciones
+exactos en el apilamiento de
+a x +a x +...+a x ≤b
+11 1 12 2 1n n 1
+contenedores
+a x +a x +...+a x ≤b
+Muchosdelosmodelosmatema´ticosdesarrolladosparafor- m1 1 m2 2 mn n m
+malizarelproblemadeapilamientodecontenedoreshansido XεR
+i
+resueltosusandome´todosmatema´ticosdeInvestigacio´nde
+Operaciones (IO) conocidos como me´todos exactos. Estos Elproblemadeasignacio´nesuntipoespecialdeproblema
+me´todosrealizanunabu´squedaexhaustivatratandodeidenti- dePLenelquelosasignadossonrecursosquesedestinana
+ficarlasolucio´no´ptimaglobalparaelproblema. Estetipode larealizacio´ndetareas[20]. Elproblemadeapilamientode
+bu´squedaenproblemaspequen˜osresultaunaestrategiaacept- contenedoressepuedevercomounproblemadeasignacio´n
+able. Sinembargo,enproblemascomolosquenormalmente decontenedoresaposicionesoslotdentrodelpatio. Eneste
+sucedenenlavidarealespra´cticamenteimposiblellevarlaa problemalosasignadossonloscontenedores,loscualessolo
+cabo[7]. puedenserubicadosenunaposicio´ndelasdisponiblesenel
+Losme´todosmatema´ticosexactos,principalmentedePL patio. Elobjetivoquegeneralmentesedeseaoptimizareneste
+ysusderivados,sehanempleadopararesolverdis´ımilesprob- casoesencontrarunaasignacio´ndecontenedoresaslots,de
+Me´todosdeoptimizacio´naplicadosalproblemadeapilamientodecontenedores 27
+formaqueseminimicenlosmovimientosimproductivosde MathematicayR2.Esteu´ltimosoftwarecuentacondiversos
+lasgru´ascuandoseandescargados. paquetesdisponiblesparalaoptimizacio´ndeprocesos,entre
+Elmodelomatema´ticodeunproblemadeasignacio´nusalas ellosseencuentrancplexAPIylinprog.
+variablesdedecisio´nbinarias(tomanvaloresentre0y1)para EnalgunosproblemasdePLelsupuestodedivisibilidad
+especificarsiunasignadoi(contenedor)deberealizarlatarea nosecumpleporquealgunasotodaslasvariablesdedecisio´n
+j(estarenunaposicio´n). Esdecirx ij es1siseasignaipara debenrestringirseavaloresenteros. Enestecasoalmodelo
+realizar la tarea j, en otro caso toma valor 0. La funcio´n a empleadoseleconocecomoPLE,elcualsediferenciadela
+optimizarsegu´nestemodeloquedadelaformasiguiente: PL solo en este aspecto pues las variables de decisio´n solo
+toman valores enteros. Por el contrario, si en un problema
+Z=∑n
+i=1
+∑n
+j=1
+c
+ij
+x
+ij PL solo es necesario que algunas variables toman valores
+enterosentonceselmodelosenombraProgramacio´nEntera
+Sujetaalasrestricciones:
+Mixta(PEM).Adema´sexistenproblemasdondelasvariables
+∑x
+ij
+=1parai=1,2,...,n de decisio´n solo pueden tomar valores booleanos, es decir,
+0 y 1 ovalores binarios. Aestos tipos de problemas se les
+∑x
+ij
+=1para j=1,2,...,n conocecomoProgramacio´nEnteraBinaria(PEB)o0-1de
+programacio´nentera.
+x ≥0paratodai,j
+ij En el art´ıculo cient´ıfico citado en [47] se presenta un
+modelomatema´ticoparadeterminarlasposicionesdealma-
+EnelproblemadeapilamientodecontenedoresZeselcosto
+cenamiento para los contenedores que arriban a un patio y
+totaldeasignarloscontenedoresalasposicionesdisponibles
+tambie´nparaaquelloscontenedoresquehansidorecolocados
+dentro del patio. El valor de c significa el costo de asig-
+ij
+deunapilahaciaotra.Estainvestigacio´nfueelprimermodelo
+nar un contenedor determinado a una posicio´n en funcio´n
+dePLexitosoparaestetipodeproblemaespec´ıfico,elcual
+delosmovimientosimproductivosquepudieraprovocartal
+esta´ orientado al flujo de exportacio´n. La funcio´n objetivo
+asignacio´n.
+de su trabajo busca minimizar el nu´mero de remociones o
+Enelproblemadeasignacio´ngeneralunodelossupuestos
+movimientos innecesarios de las gru´as de patio cuando se
+esquedebeexistirigualcantidaddeasignadosnquedetar-
+asignanposicionesaloscontenedoresdeexportacio´nquear-
+easn. Sinembargoenelapilamientodecontenedorespuede
+ribanalpatioyalosquesonrecolocados. Adema´sdefinen
+queestosecumplaopuedequeexistanma´sposicionesque
+variasrestriccionesquelimitanlascondicionesf´ısicasdelpa-
+contenedores. Enlosmodelosmatema´ticosestudiadossees-
+tio,condicionesdeestabilidaddelapilado,porejemplo,que
+pecificalacantidadma´ximadecontenedoresN ylacantidad
+c
+uncontenedornopuedaestarenelairesinoencimadeotroo
+ma´xima de posiciones en el patio N , estas cantidades son
+p
+sobreelsuelo,etc.
+generalmentepara´metrosdelmodelo.
+LaPLEseusapararesolverproblemasderecolocacio´n
+Lafuncio´naoptimizarparaasignarcontenedoresaposiciones
+o premarshalling de contenedores en los trabajos [32, 17].
+deformaqueseminimicenlosmovimientosimproductivos
+La primera investigacio´n de las antes mencionadas ha sido
+quedar´ıa:
+ampliamentereferenciadaenestecampoyhaservidodebase
+Z=∑ N i= c 1 ∑ N j= p 1 c ij x ij paraotrasinvestigacionessimilares. EnestaseusaPLEcon
+unproblemadeflujoderedconmu´ltiplesdemandasdeflujos
+Sujetaalasrestricciones: embebido (del ingle´s Multi-commodity flow problem). El
+principal objetivo que persigue es minimizar el nu´mero de
+∑ N j= p 1 x ij =1parai=1,2,...,N p movimientosinnecesariosdelasgru´asdepatio. Paradesarrol-
+larlasolucio´nusaronellenguajeC++combinadoconCPLEX
+∑ N i= c 1 x ij =1para j=1,2,...,N c 9.0yadema´sseauxiliarondelprocedimientoRamasyCotas
+(delingle´sBranchandBound(B&B)).
+x ≥0paratodai,j
+ij Deunaformasimilaraltrabajoreferenciadoen[32]se
+modelayresuelveestemismoproblemaen[17]. Lasolucio´n
+Laprimerate´cnicamatema´ticaampliamenteaceptadaenel
+ofrecidaenestetrabajosupero´ alaanteriormentemencionada
+mediodeIOfueelMe´todoSimplexdePL,desarrolladoen
+en tiempo computacional de ejecucio´n. Esto se debe entre
+1947porelmatema´ticonorteamericanoGeorgeB.Dantzig.
+otrosfactoresaqueelnu´merodevariablesyrestriccionesde
+Paralaimplementacio´ndeestate´cnicayotrasdePLsecuenta
+sumodeloesinferior.
+hoyconvarioslenguajesysistemasinforma´ticosqueagilizan
+Cuando se tiene un problema de optimizacio´n muchas
+laconceptualizacio´ndelmodelomatema´ticopuesenestetien-
+veces se necesitan optimizar varios objetivos de forma si-
+denacrecerconsiderablementeelnu´merodevariablesyre-
+stricciones. Unodeloslenguajesmatema´ticosusadosparala
+PLesMPL(delingle´sMathematicalProgrammingLanguage)
+2http://www-01.ibm.com/software/commerce/optimization/cplex-
+optimizer/http://www.gurobi.com/products/gurobi-optimizer
+yalgunosdelossistemasinforma´ticosqueseempleanpara
+http://www.lindo.com/
+programarenestelenguajeson: CPLEX,GUROBI,LINGO, http://www.wolfram.com/mathematica/http://cran.r-project.org/
+28 Me´todosdeoptimizacio´naplicadosalproblemadeapilamientodecontenedores
+multa´nea.Estosignificaquesenecesitaencontrarunasolucio´n dependendelaetapaydelestadodelsistemaencadaetapa.
+que tenga en cuenta todos los objetivos y no una solucio´n Lasetapassonsubproblemasenloscualespuededividirseel
+para cada uno de ellos, conocie´ndose como problemas de problemageneralaresolver. Losestadosseconsiderancomo
+optimizacio´nmultiobjetivos. Parasolucionarlosexistendos diferentessituacionesenquepuedeencontrarseelsistemao
+enfoquesfundamentales: sumaponderadadeobjetivosylos problemaenunaetapadeterminadaapartirdelcualseadopta
+basadosenlano-dominanciadelfrentedePareto[1]. unapol´ıticadedecisio´nespec´ıfica. Parapasardeunestado
+En el estudio citado en [48] se propone un modelo de aotrodecadaetapaseusanlasvariablesdedecisio´n. Otro
+PLEmultiobjetivoparadeterminarlasposicionesdealmace- de los elementos importantes de un problema de PD es la
+namientodeloscontenedoresdeimportacio´n. Enlafuncio´n ecuacio´n funcional o funcio´n recursiva para cada etapa, la
+multiobjetivopropuestasedebeminimizarunasumadetres cualdebeserevaluadaencadaunadeestas. Losproblemas
+funcionesparticularesquetienendiferentesfactoresdepeso. queresuelvelaPDpuedenserdetermin´ısticosoestoca´sticos.
+Laprimerafuncio´nmaximizalacirculacio´ndecontenedores Enelprimercasoesta´nlosproblemasenloscualesnoexiste
+entre el patio y la zona del muelle de la terminal. La se- incertidumbreoaleatoriedadencuantoalospara´metrosde
+gundaabarcalacargadetrabajodelasgru´asdepatio,lacual estos, por consiguiente no necesitan ser estimados pues se
+debeserminimizadaparaalcanzarlaeficienciayreducirlos conocen.
+tiemposimproductivosdelasmismas. Poru´ltimoconlater- En las investigaciones [30, 38] se utiliza este me´todo para
+cerasedeseaminimizarlosmovimientosinnecesariosdelas resolverelapilamientodecontenedores. Enlaprimeraseusa
+gru´ascuandoseasignaunabah´ıa3espec´ıficaaungrupode para determinar una posicio´n o´ptima para contenedores de
+contenedores. exportacio´nquearribanalpatio. Seproponeunmodelode
+LaPEMseusaen[12]pararealizarlaasignacio´ndeposi- optimizacio´nmulti-fasebajoincertidumbrepuesaloscontene-
+cionesdealmacenamientoaloscontenedoresdeexportacio´n doresnoselesconocensuspesosconsuficienteanterioridad,
+endosfases. Enestetrabajo[12]aligualqueenel[48],se estosdebenserestimadosprobabil´ısticamente.
+formulayresuelveunmodelomatema´ticomultiobjetivomedi- En la segunda investigacio´n se emplea este mismo me´todo
+anteelenfoquedesumaponderadadeobjetivosperocondos pararesolverotroproblemadeapilamiento,larecolocacio´n
+funciones. Seoptimizaladistanciaviajadaporequiposque decontenedoresopremarshalling[38]. Estetipoespec´ıfico
+transportanloscontenedoresentreelatraquedelpuertodela deproblemapornaturalezapuedeserdivididoenvariasfases
+terminalylaubicacio´nasignadaenelpatio. Seasumeque yestaspuedentenervariosestadosposiblesdondesecumplen
+ladistanciaviajadadependedelespaciodealmacenamiento las restricciones del problema. En este problema general-
+asignado a los contenedores de cada buque en la zona del menteseconoceelesquemainicialdeloscontenedoresenel
+patio. Elsegundote´rminodesufuncio´nmideeldesbalance patioyatrave´sdevariasrecolocacionessedeseallegaraotro
+enelnu´merodecontenedoresapiladosencadabah´ıadelpatio esquemafinalenelqueloscontenedoresconfechapro´xima
+porrazonesdeestabilidad. aserdescargadoseste´nencimaenelapilado. Estogeneral-
+mentesedebehacerconlamenorcantidaddemovimientoso
+1.2 Programacio´ndina´mica
+recolocacionesposiblesparanoafectarelrendimientodelas
+La PD (del ingle´s dynamic programming o multistage pro- gru´as,gastarcombustible,entreotrosaspectos.
+gramming) es otro de los me´todos matema´ticos que se usa
+pararesolverelapilamientodecontenedores. LaPDnoes
+ma´squeunprocedimientopararesolverproblemasdeopti- 2. Uso de me´todos computacionales de
+mizacio´ndividie´ndolososepara´ndolosensubproblemasma´s Inteligencia Artificial en el apilamiento de
+simples [7]. De esta forma resuelve el problema en fases, contenedores
+tratandocontodaslasopcionesenunafaseenparticularantes
+demoversealasiguiente. Elnombresederivadesupopulari- Losme´todosmatema´ticosanterioresusualmentegarantizan
+dadenresolverproblemasquerequierentomardecisionesen encontrarlasolucio´no´ptimaaunproblemadeoptimizacio´n.
+unasecuenciadeper´ıodosdetiempo. Fuedesarrolladaenla Sin embargo, cuando crece el nu´mero de variables y ecua-
+de´cadadel50´sporelmatema´ticonorteamericanoRichard cionesdelmodelosetornama´sdif´ıcilresolverloenuntiempo
+Bellman y por ello esta te´cnica basa su funcionamiento en computacionalaceptable. Porellocuandosedebetomaren
+elprincipiodeoptimalidaddeBellman. Esteprincipiodice cuenta el costo computacional y el tiempo de terminacio´n
+que“Unapol´ıticaeso´ptimasitodasubpol´ıticadelamisma de un estudio se usan te´cnicas heur´ısticas. Las te´cnicas
+es o´ptima para el problema residual correspondiente a la heur´ısticassonalgoritmosqueencuentransolucionesdebuena
+subpol´ıtica”[3]. calidadparaproblemascombinatorioscomplejosexplotando
+Unapol´ıticaesunodelosconceptosesencialesdeesteme´todo elconocimientodeldominiodeaplicacio´n,aunquenogaran-
+y no son ma´s que un conjunto de reglas de decisio´n que tizanencontrarlasolucio´no´ptimaglobal.
+Lasmetaheur´ısticasconstituyenuntipoespec´ıficodeme´todo
+3Consisteenungrupodepilasdecontenedores,lascualespuedenser
+heur´ıstico,te´rminoquefueusadoporprimeravezenelan˜o
+relacionadasapartirdelnu´merodebah´ıadondeesta´nubicadas.Lasbah´ıas
+1997porFredGlover[18]. Losalgoritmosmetaheur´ısticos
+pertenecenabloqueespec´ıficodelpatioycadabloquepuedetenervarias
+bah´ıasdecontenedores. son algoritmos de propo´sito general, que no dependen del
+Me´todosdeoptimizacio´naplicadosalproblemadeapilamientodecontenedores 29
+problema y que ofrecen buenos resultados, pero que nor-
+malmente no ofrecen la solucio´n o´ptima al igual que los
+heur´ısticos. Algunasmetaheur´ısticasconocidasson: Cuadro2. Referenciassobreheur´ısticasaplicadasal
+apilamientodecontenedores.
+• AlgoritmosGene´ticos(AG)(delingle´sGeneticAlgo-
+Clase1 [34,23,47,46]
+rithms(GA))creadaporelprofesorJohnHollanden
+1975[21]. Clase2 [28,31,40,10,14,26,25]
+• Algoritmos de Colonia de Hormigas (del ingle´s Ant Clase3 [32,16]
+ColonyOptimization(ACO))creadaporMarcosDorigo
+afinalesdelade´cadadelos90[13].
+• Optimizacio´n por Enjambre de Part´ıculas (del ingle´s En la primera clase se muestran varios estudios donde se
+ParticleSwarmOptimization(PSO))creadaporEber- usanheur´ısticasparadeterminarlaposicio´nespec´ıficadeun
+hartyKennedyen1995[29]. contenedordentrodeunnu´merosignificativamentegrande
+deposiblesposicionesquepudierantener. Nosoloseusan
+Para resolver el problema de apilamiento de contenedores
+paradeterminarlaposicio´ndeuncontenedorquearribapor
+seusanme´todosheur´ısticosespec´ıficosdeldominiodeapli-
+primeravezalpatioynecesitaunlugardondeubicarsesino
+cacio´n,as´ıcomolaadaptacio´ndealgunadelasmetaheur´ısticas
+tambie´nparaaquellosquehansidorecolocadosproductode
+mencionadasantesyotrasdesarrolladasposteriormente.
+una remocio´n. Estos autores demuestran que luego que un
+contenedoresrecolocadolaestrategiaquesesigadetermina
+2.1 Empleo de algoritmos heur´ısticos y de meta-
+engranmedidalosmovimientosimproductivosquesehara´n
+heur´ısticas
+enelfuturo.
+Elempleodelenfoqueheur´ısticoesunaalternativafactible
+Otrasheur´ısticasenlaclasedosseorientanaencontraruna
+y de gran valor hoy d´ıa para solucionar problemas de opti-
+secuencia m´ınima de movimientos a la hora de realizar la
+mizacio´n,especialmenteenelcasodelapilamientodecon-
+descargaolarecolocacio´ndecontenedores. Adiferenciade
+tenedoresdondetiendeacrecerelespaciodeposiblessolu-
+las heur´ısticas de la clase uno donde lo que interesaba era
+ciones. “Una te´cnica heur´ıstica es un me´todo que busca
+brindarunasolucio´nquedisminuyaelnu´merodemovimien-
+buenas soluciones (ej. Cercanas al o´ptimo) con un costo
+tos improductivos de las gru´as, estas otras buscan una se-
+computacionalrazonablesinsercapazdegarantizaroptimal-
+cuencia de pasos o movimientos o´ptima. Por u´ltimo, en la
+idad...”[39]. Losalgoritmosqueempleanheur´ısticasgen-
+clasetresseencuentranaquellasheur´ısticascuyoobjetivoes
+eralmentesonconstruidosapartirdedatoseinformacio´ndel
+minimizarlacantidadderemocionesparalograruntiempo
+dominiodeaplicacio´nyotroscomolasmetaheur´ısticassiguen
+computacionalmenorqueelquesealcanzaconotrosme´todos.
+procedimientosyaestablecidosajustandosuspara´metrosal
+Entre las metaheur´ısticas usadas para resolver problemas
+problemadeoptimizacio´nencuestio´n.
+de apilamiento de contenedores esta´n los AG. Los AG son
+Los algoritmos heur´ısticos han sido creados con diversos
+me´todosdebu´squedabasadosenlosprincipiosdelaseleccio´n
+propo´sitos para encontrar soluciones al problema de apil-
+naturalylagene´tica. Estosincluyenconceptoscomocromo-
+amiento de contenedores. Estas heur´ısticas han sido incor-
+somas,genes,poblacio´n,operadoresdecruce,mutacio´n,etc.
+poradas a las soluciones ofrecidas por varios autores inde-
+Enelcuadro3semuestranvariosdeestoste´rminosasociados
+pendientementedelme´tododeoptimizacio´nempleado. Las
+comu´nmentealosAGysussignificados.
+heur´ısticasencontradasenlaliteraturafueronagrupadasen
+tresclasesprincipalesatendiendoalobjetivoquepersiguen
+lasmismas. Acontinuacio´nsemencionanestasclasesyen Cuadro3. Te´rminosasociadosalosAG.
+elcuadro2sepresentanlasreferenciasbibliogra´ficasdelas Cromosoma Unasolucio´ncandidata.
+contribucionessobrecadaunadeellas. Gen Para´metrosovariablesdelproblema.
+Poblacio´n Grupodesolucionescandidatasdel
+1. Minimizarelnu´merodemovimientosimproductivos
+problema.
+de las gru´as cuando se asignan posiciones a los con-
+Fitness Gradodeaptitudocalidaddelcromosoma
+tenedores que arriban al patio y/o a los que han sido
+odelasolucio´n.
+recolocadosdeunaposicio´naotra.
+Seleccio´n Escogerindividuososolucionesbasadasen
+2. Encontrar una secuencia m´ınima de movimientos de sufitness.
+contenedorescuandosehaceladescargadeestosdeuna Cruzamiento Setomandospadres,seintercambian
+bah´ıaocuandoseresuelveelproblemaderecolocacio´n partesdeestosysegenerandoshijos.
+opremarshalling. Mutacio´n Seseleccionaunoovariosgenesdel
+cromosomademaneraaleatoriayse
+3. Minimizarremocionesomovimientosimproductivos
+modificansusvaloresporotrosdesu
+delasgru´asdepatioparalograruntiempocomputa-
+dominio.
+cionalmenordelasolucio´nofrecida.
+30 Me´todosdeoptimizacio´naplicadosalproblemadeapilamientodecontenedores
+Lostresu´ltimoselementosdelcuadro3constituyenlosop- nuevas soluciones y como operador de mutacio´n Stepping
+eradoresdebu´squedagene´ticosma´sdestacados. Eloperador Stone Mutation (SSM). A diferencia de trabajos similares
+deseleccio´noreproduccio´npermitecrearunconjuntointer- posteriores ellos emplean dos criterios de terminacio´n del
+mediodeindividuosapartirdelapoblacio´nactual. Apartir AG: el nu´mero ma´ximo de generaciones transcurridas y la
+delaseleccio´ndelosmejoresindividuosdelapoblacio´nse desviacio´nesta´ndardelvalordefitnessdeloscromosomasen
+aplicaeloperadordecruce,elcualpermitecombinarpares lageneracio´nactual.
+deindividuosparaformarsolucionesnuevasintercambiando Enlainvestigacio´n[4]secrealapoblacio´ninicialdeforma
+partesdeunpardecromosomas. Poru´ltimo,eloperadorde aleatoriaperorespetandolasrestriccionesdelmodelomatema´tico
+mutacio´nseusaparamodificarelvalordeunoovariosgenes delproblema. Eloperadordecruzamientoadoptadoconsistio´
+delcromosomaporotrosvaloresdeldominiodelgen. Este en escoger dos padres de la poblacio´n inicial mediante el
+operadorgeneradiversidadentrelapoblacio´nperonormal- me´tododeseleccio´ndelaruleta(delingle´sroulette-wheel)
+menteesusadoconmenosprobabilidadqueeldecrucecomo ydeformaaleatorialoscruzaronentrespuntos(pcrois-x,p
+sucedeenlavidareal.Existendistintostiposdeoperadoresde crois-y,pcrois-z)loscualesindicanlascoordenadasdondese
+cruceymutacio´nas´ıcomoformaspararealizarlaseleccio´n encuentrauncontenedorenelpatio.Elcriteriodeterminacio´n
+delosindividuosocromosomassegu´nlaformaderepresentar delalgoritmofuecuandolacalidaddelasolucio´nnomejo-
+elcromosoma,porejemplo,binario,real,discreto,etc. raraluegodeN iteraciones. Losresultadosdeestealgoritmo
+El proceso general de un AG se puede describir de la fueronverificadosevaluandolainfluenciadelnu´merodetipos
+formasiguiente: decontenedores,elcriteriodeterminacio´natrave´sdevarios
+Inicialmentesegeneranaleatoriamenteousandootrasv´ıas nu´merosdeiteracionesdiferentesyeltaman˜odelapoblacio´n
+solucionesocromosomasparaelproblemaqueseresuelve. usado. Estosusaronunaprobabilidaddecruzamientoiguala
+Luegoserealizanvariasiteracionesdelalgoritmo. Enestas [27]sinembargoequidistaronenlaprobabilidaddemutacio´n.
+se evalu´an las soluciones candidatas o cromosomas de la Lamayor´ıadelosautoresusaroncomome´tododeseleccio´n
+poblacio´nysecreaunapoblacio´nintermedia. Apartirdeesta de los individuos la ruleta. Por otro lado los criterios de
+poblacio´nintermediaserealizaelcruceydeformaocasional terminacio´ndelAGfuerongeneralmentecuandosealcanza
+mutaciones. Lacondicio´ndeparadapuedeserunnu´merode unnu´meroma´ximodegeneracionestranscurridasocuandola
+generacionesdeterminado,uncriteriobasadoenlacalidadde solucio´nnohamejoradoluegodeunnu´merodeterminadode
+lassoluciones,ouncriteriosobrelarazo´ndecambiodela generaciones.
+calidaddelassoluciones. Larepresentacio´ndelassolucionesocromosomasencada
+Deformagenerallosprincipalespara´metrosqueseespecifi- trabajo se realiza de forma diferente. En los problemas de
+cancuandoseadaptaunAGaldominiodeaplicacio´nson: cargadondesedeseaasignarunaposicio´nacadacontenedor
+quearribaalpatiouncromosomaserepresentacomoposi-
+• Taman˜odelapoblacio´n. Indicalacantidaddesolu-
+blesposicionesoslotsparaloscontenedores,querespetenlas
+cionesqueformanlapoblacio´n.
+restriccionesdelmodelo. Lasposicionessugierenalosoper-
+adoresdelpatiocoordenadasespec´ıficasenelpatio(x,y,z,b).
+• Nu´merodegeneraciones.Cantidaddeiteracionesque
+Lacoordenadabindicaelnu´merodelbloque,xlapila,yel
+realizara´ elalgoritmoparaalcanzarunasolucio´nsatis-
+nu´merodecontenedorenesapila,comenzandoacontardesde
+factoria.
+abajohaciaarribaenlapilayzlabah´ıadeesebloque.
+• Probabilidaddecruce. Valorentre0y1quepermite Para resolver el problema de apilamiento de contenedores
+determinarsiprocedeonoelcruce. Usualmentecomo tambie´nseusanotrasmetaheur´ısticastalescomo:
+lafrecuenciadecruceesaltaestedebeserunvaloralto.
+• ACO[37].
+• Probabilidaddemutacio´n. Valorentre0y1queper-
+mite determinar si procede o no la mutacio´n. Usual- • AlgoritmodeAbejas(delingle´sBeealgorithmoBA)
+mentecomolafrecuenciademutacio´nespequen˜aeste [36].
+debeserunvalorpequen˜o.
+• Me´todoCorridor(delingle´sCorridorMethodoCM)
+Lametaheur´ısticaAGhasidounadelasma´sempleadaspara [9,10].
+resolverelproblemadeapilamientodecontenedores,funda-
+mentalmentepararesolverelproblemadecarga. Enlostraba- 2.2 Otraste´cnicasdeIAusadas
+joscitadosen[5,4,24,45,37,27]sedemuestrasuaplicacio´n Paramodelaryoptimizarelapilamientodecontenedoresse
+adiversosproblemasrealesrelacionadosconelapilamiento empleantambie´nlastecnolog´ıasdeprogramacio´nderestric-
+de contenedores. Los autores del primer trabajo citado [5] cionesconocidascomoProblemasdeSatisfaccio´ndeRestric-
+fueronpionerosenaplicarestametaheur´ısticaalproblemade ciones(delingle´sConstraintSatisfactionProblemoCSPs)
+apilamientodecarga. Ellosproponenunprocedimientode ylaste´cnicasdeplanificacio´ndeInteligenciaArtificial(AI
+generacio´ndesolucionesaleatoriasparalapoblacio´ninicial. Planning). La resolucio´n de un CSPs consta de dos fases
+Usan un operador aritme´tico de cruzamiento para obtener diferentessegu´n[43]:
+Me´todosdeoptimizacio´naplicadosalproblemadeapilamientodecontenedores 31
+• Modelarelproblemacomounproblemadesatisfaccio´n terminalesmar´ıtimas. Enestesegundocasoeldominioyano
+derestricciones. ser´ıanlasprioridadesdeloscontenedoresaapilarsinoelidde
+loscontenedores. Lasvariablesporelcontrariosemantienen
+• Procesarelproblemadesatisfaccio´nderestricciones
+iguales.
+resultante.
+Lostrabajos[22,41]coincidenenquepresentanalacomu-
+nidadcient´ıficadeCSPselproblemadeapilamientoenan˜os
+Lamodelacio´ndelproblemasehacemedianteunasintaxis
+consecutivos,enelprimercasoeldecargayenelsegundoel
+de CSPs, es decir, mediante la definicio´n de las variables,
+depremarshalling. Enlosdostrabajossedejanvariostemas
+dominiosyrestriccionesdelCSPs. Unavezquesetieneel
+portratarenestal´ıneaparamejorarlosresultadosobtenidosa
+problemamodeladocomoCSPsexistendosmanerassegu´n
+partirdesuintegracio´nconotraste´cnicascomputacionales.
+lospropiosautoresdeprocesarlasrestriccionesusando:
+Adema´sesimportanteresaltarquelamodelacio´ndeunCSPs
+• Te´cnicasdeconsistencia. Setratadete´cnicasparala dependedelpatiodecontenedoresquesetrateporloquesiem-
+resolucio´ndeCSPsbasadasenlaeliminacio´ndevalores pre pueden existir otras variantes de modelar las variables,
+inconsistentesdelosdominiosdelasvariables. dominios y restricciones, as´ı como me´todos o heur´ısticas
+nuevasparaseleccionarlasvariablesyvalores.
+• Algoritmos de bu´squeda. Estos algoritmos se basan Laste´cnicasdeplanificacio´ndeIAsonotrasdelasformasen
+enlaexploracio´nsistema´ticadelespaciodesoluciones queseharesueltoelapilamientodecontenedoresatendiendo
+hastaencontrarunasolucio´noprobarquenoexistetal asusimilitudconelproblemadeplanificacio´ncla´sicoBlocks
+solucio´n. World.
+Laplanificacio´neselproblemadesintetizaruncursodeac-
+Unasolucio´nenestetipodeproblemaesunaasignacio´nde
+ciones que, cuando son ejecutadas, conducen a un agente
+valoresatodaslasvariablesdeformaquesesatisfagantodas
+desdeunestadoinicialhastaelestadoobjetivodeseado. La
+lasrestricciones.
+s´ıntesisdeplanesdeformaautoma´ticahasidounametade
+Estate´cnicacomputacionalesta´ estrechamenterelacionada
+investigacio´nimportanteenlaIAporma´sde30an˜os. Infor-
+con los me´todos heur´ısticos pues casi siempre se necesita
+malmente,unplanpuedeservistocomounaseriedeacciones
+saber el orden en el que se van a analizar las variables, as´ı
+queelagentedecidesobrelabasedesusmetasfinales,lain-
+comoelordenenelcualestassevanainstanciar.Otravariante
+formacio´nsobreelestadoactualdelambiente,yladina´mica
+paralacualsonusadaslaste´cnicasheur´ısticasenestosprob-
+deevolucio´ndeeseambiente[6].
+lemasesparalaordenacio´ndelasrestriccionesdelproblema.
+Unproblemacla´sicodeplanificacio´nserepresentamediante
+Porotroladolasmetaheur´ısticastambie´nsehandestacado
+ladefinicio´nde:
+paralabu´squedadesolucionescuandoelproblemaaresolver
+esdegranmagnitudyporlotantodegrancomplejidadcom- • Unconjuntoenumerabledeestados.
+putacional.
+• Unconjuntodeacciones.
+Lasinvestigacionesencontradasenlaliteraturaqueresuelven
+el problema de apilamiento mediante CSPs son citadas en • Unconjuntodeeventos.
+[22, 41]. En la primera se ofrece solucio´n al problema de
+cargaespec´ıficamenteyenlapostreraaldepremarshalling. • Unafuncio´ndetransicio´ndeestados.
+EnelprimerestudioseproveedeunmodelodeCSPsdonde
+Losplanificadorespuedenserespec´ıficosoindependientes
+lasvariablesdedecisio´nsonloscontenedoresquenecesitan
+deldominiodeaplicacio´n[15]. Enelcasodelosprimeros
+serapilados,lasubicacionesenlaspilasdelpatioconstituyen
+son disen˜ados para un problema en particular y no suelen
+eldominioovaloresposiblesatomarparaestasvariablesy
+trabajarbienenotrocontexto. Elplanificadorindependiente
+lasrestriccionesdelmodelodefinidascomorestriccionesdel
+deldominioporelcontrariotrabajaencualquierdominiode
+CSPspropiamente. Apartirdeestamodelacio´nlosautores
+planificacio´n pues no usa conocimiento espec´ıfico de este,
+disen˜aronunasolucio´nh´ıbridaentreCSPsyelalgoritmode
+sololasdefinicionesdelasaccionesba´sicas.
+aproximacio´ndelMejorAjuste(delingle´sBest-Fitapproxi-
+Ellenguajeparaformalizarloanterioresunasintaxisamplia-
+mation).
+menteaceptadaPDDL(delingle´sPlanningDomainDefinition
+Eneltrabajo[41]sedefinendostiposdevariablesatendiendo
+Language)[15]. Estelenguajehasidousadoenvariascom-
+alanaturalezadeltipodeproblemadeapilamientoqueellos
+petencias de planificadores las dos u´ltimas ICAPS 2011 e
+resuelven,recolocacio´nopremarshalling. Porellotieneuna
+ICAPS20144,se´ptimayoctavaedicio´nrespectivamente.
+variablequerepresentaelestadodeunabah´ıadecontenedores
+Apartirdelarevisio´nrealizadaseencontraronlostrabajos
+luegodequeserealizaunmovimientodeunaposicio´nhacia
+[44,42,2]dondeseempleanlaste´cnicasdeplanificacio´nde
+otrayotravariablebinariaqueindicasiuncontenedorhasido
+IAusandodiferenteslenguajesparamodelarelproblema. En
+movidoonoaunadeterminadaposicio´n. Eldominiodelas
+[44,42]sedefinenlostiposdeobjetosamanipular,eneste
+variablessonlasprioridadesdeloscontenedores. Proponen
+dominiolosobjetossonloscontenedoresylaspilasdonde
+adema´s una variante de modelacio´n de CSPs ma´s robusta
+dondesepreve´ incertidumbreenelarribodelosbuquesalas 4https://helios.hud.ac.uk/scommv/IPC-14/index.html
+32 Me´todosdeoptimizacio´naplicadosalproblemadeapilamientodecontenedores
+estospuedenestar. Lostiposdepredicadosparadescribireste (del ingle´s Stanford Research Institute Problem Solver) en
+dominiotambie´nseespecifican,donde?xy?y,sonpara´metros lugardePDDL.Estapropuestaseadaptamejoralascondi-
+delospredicados: cionesactualesdeCubaydelosCentrosdeCargayDescarga
+deContenedores(CCD)queestatieneenelinteriordelpa´ıs.
+• on ?x - container ?y - (either row container). Este
+predicado indica que el contenedor ?x esta´ sobre el
+contenedor?y,elcualtambie´npuedeestardirectamente
+Conclusiones
+sobreelsuelo.
+Apartirdelapresenteinvestigacio´nsecomprobo´quelosprob-
+• clear?x-(eitherrowcontainer). Estepredicadoindica
+lemasdeoptimizacio´ndeapilamientodecontenedoreshan
+que?x,elcualpuedeserunslotouncontenedor,esta´
+sidoresueltosatrave´sdeunvariadogrupodeme´todostanto
+vac´ıo,esdecir,nohaycontenedoresapiladossobreeste.
+matema´ticoscomocomputacionales.Losme´todosmatema´ticos
+• crane-empty. Indica que la gru´a de patio usada para exactosempleadosfuerongeneralmentelaPL,PLE,PEMy
+moverloscontenedoresnoesta´ moviendoningu´ncon- PD.Estosme´todoshansidousadosprincipalmentecuando
+tenedor. lacantidaddeinstanciasdelproblemaespequen˜aomediana,
+a diferencia de las metaheur´ısticas las cuales se han usado
+• holding ?x – container. Este predicado indica que la
+cuandoexistenproblemascombinatorioscomplejos. Deesta
+gru´aesta´ moviendoelcontenedor?x.
+formalosestudiosrealizadosconme´todosexactoshanservido
+Eneltrabajotambie´nsedefinenungrupodeaccionespara envariasocasionescomocomparacio´nocomobaseparala
+moveruncontenedordeunlugarhaciaotrodelpatio. Eneste aplicacio´ndeme´todosdeIA.
+casoseagregaelpara´metro?r: Dentro de los me´todos computacionales registrados en la
+literatura revisada se encontraron los heur´ısticos, las meta-
+• pick(?x-container?r-row). Conestaaccio´nlagru´a
+heur´ısticas, la programacio´n de restricciones y las te´cnicas
+tomaelcontenedor?xqueesta´ enelsuelodelapila?r.
+deplanificacio´n. Delasmetaheur´ısticasanalizadas,losAG
+• put(?x-container?r-row).Lagru´aponeelcontenedor hansidounodelosma´sempleadospararesolverestetipode
+?xenlapila?r. problema. Estofuecomprobadoapartirdelestudiodevarias
+solucionessobreelapilamientodecontenedoresimplementa-
+• unstack(?x?y-container?r-row). Lagru´adescarga
+dosconestametaheur´ıstica.
+elcontenedor?xqueesta´ encimadelcontenedor?y.
+Otra tendencia encontrada a partir del estudio es que exis-
+• stack (?x ?y - container ?r - row). La gru´a apila el tendiferenciasenlaaplicacio´ndemetaheur´ısticassobrelos
+contenedor?xqueesta´sosteniendo,sobreelcontenedor tiposdeproblemasdeapilamientocarga,descargaypremar-
+?yenlapila?r. shalling.EstoseevidenciaenquelosAGhansidoma´susados
+pararesolverproblemasdecargadondesedebeasignaruna
+Elestadoinicialespecificadoenestetrabajoconsisteenun
+ubicacio´nacadacontenedor,mientrasqueCMsolohasido
+esquema inicial de contenedores que han sido apilados en
+usadaenproblemasdedescarga. Estonosignificaenninguna
+el patio con anterioridad. De estos contenedores un grupo
+medidaquenopuedanserempleadaspararesolverproblemas
+sonseleccionadosparaserasignadosalasposicionesenel
+distintos.
+topedelaspilasodebajodeotroscontenedoresseleccionados.
+Estosehaceparacuandosedescarguenestoscontenedores En resumen se puede afirmar a partir del estudio que au´n
+losmovimientosimproductivosdelasgru´asseanm´ınimos,lo existen temas abiertos a explorar en cuanto al uso de estos
+cualconstituyelafuncio´naoptimizarenesteestudio. me´todosdeoptimizacio´nparaelapilamientodecontenedores.
+ElplanificadorqueproponenincluyeunEscaladordecolinas Estosefundamentaenquecadaproblemadeoptimizacio´nse
+reforzado(delingle´sEnforcedHill-Climbing)elcualpermite ajustaaunpatiodecontenedoresenlamayor´ıadeloscasos,
+encontrarsolucionesra´pidamente.Estapropuestaesmejorada altipodeequipamientoparamanipularloscontenedores,a
+con la inclusio´n de una funcio´n heur´ıstica dependiente del lasrestriccionesyobjetivosespec´ıficosdelmodelo,etc. Esto
+dominio de aplicacio´n en el trabajo [44]. Los resultados hacequecadamodelacio´nseadiferenteyrequieraportanto
+obtenidosconlaste´cnicasheur´ısticaspropiasdeldominiode quelasheur´ısticas,lasestrategiasdebu´squedaaempleary
+aplicacio´n enel planificadorsuperan a lasobtenidas por la otraste´cnicastambie´nnecesitenevaluarseparacadacontexto
+varianteindependientedeldominio. enparticular.
+Eneltrabajo[2]seusanlaste´cnicasdeplanificacio´ndeIA
+para optimizar las operaciones de carga y descarga de con-
+Agradecimientos
+tenedoresenunaterminalpequen˜a, operadaporgru´asma´s
+pequen˜asquelasusadasenelestudioanterior. Pararepresen-
+Aloscompan˜erosdelCentrodeCargayDescargadeContene-
+tarelproblemadeplanificacio´nseusaellenguajeSTRIPS5
+dores(CCD)deAlmacenesUniversalesSA.enVillaClara
+5STRIPSesungeneradordeplanesautomatizado.Estemismonombre porsucooperacio´nenlainvestigacio´n.
+fueutilizadoma´stardeparareferirseallenguajeformaldelasentradasde
+estegeneradordeplanes.
+Me´todosdeoptimizacio´naplicadosalproblemadeapilamientodecontenedores 33
+Referencias [13] Marco Dorigo, Gianni Di Caro, and Luca M. Gam-
+bardella. Ant Algorithms for Discrete Optimization.
+[1] Multi-ObjetiveOptimization. InEdmundK.Burkeand
+ArtificialLife,5(3):137–172,1999. 2
+GrahamKendall,editors,Searchmethodologies.Intro-
+ductorytutorialinoptimizationandDecisionSupport [14] ChristopherExpo´sitoIzquierdo,Bele´nMelia´nBatista,
+Techniques,pages274–316.Springer,2005. 1.1 andJ.MarcosMorenoVega. Unaheur´ısticaeficazpara
+problemasdepre-marshallingenunaterminalmar´ıtima
+[2] Galuzca Adam and Daniec Krysztof. Optimization
+decontenedores. 2012. 2
+ofRe-handlingandLoad/UnloadOperationsinSmall
+ContainerTerminalOperatedbyReachstackers. Latest [15] Malik Ghallab, Dana Nau, and Paolo Traverso. Auto-
+TrendsonSystems,2:616–621,2010. 2.2 mated Planning. Theory and Practice. Elsevier Inc.,
+2004. 2.2
+[3] PedroFe´lixAlvarezRivero. Programacio´nDina´mica.
+[16] Mohamed Gheith, Amr Eltawil, N. A. Harraz, and
+ENPES,1991. 1.2
+S.Mizuno. ContainerPre-marshallingProblem: ARe-
+[4] Imen Ayachi, Ryan Kammarti, M. Ksouri, and Pierre view and Solution Framework. In Proc. of the IEEE
+Borne. AGeneticalgorithmtosolvethecontainerstor- InternationalConferenceofIndustrialEngineeringand
+agespaceallocationproblem. pages1–4,2010. 2.1 EngineeringManagement,pages283–287,HongKong,
+2012. (document),2
+[5] Mohammad Bazzazi, Nikbakhsh Javadian, and Nima
+Safaei. Ageneticalgorithmtosolvethestoragespace [17] Mohamed Gheith, Amr Eltawil, N. A. Harraz, and
+allocationprobleminacontainerterminal. Computers S.Mizuno. AnIntegerProgrammingFormulationand
+&IndustrialEngineering,56:44–52,2009. 2.1 Solution for the Container Pre-marshalling Problem.
+pages2047–2056,Istanbul,Turkey,2014. 1.1
+[6] RafaelEstebanBelloPerez,ZoilaZenaidaGarciaVal-
+[18] Fred Glover. Tabu search and adaptive memory pro-
+divia, Maria Matilde Garcia Lorenzo, and Antonio
+gramming—advances,applicationsandchallenges. In
+Reynoso Lobato. Aplicaciones de la Inteligencia Ar-
+Interfacesincomputerscienceandoperationsresearch,
+tificial. Me´xico,secondedition,2002. 2.2
+pages1–75.SpringerUS,1997. 2
+[7] EdmundK.BurkeandGrahamKendall. Searchmethod-
+[19] LooHayLee,XinjiaJiang,LuZhen,andEkPengChew.
+ologies.IntroductorytutorialinoptimizationandDeci-
+A Review on Yard Management in Container Termi-
+sionSupportTechniques. Springer,2005. 1,1.2
+nals. IndustrialEngineering&ManagementSystems,
+12(4):289–305,2013. (document)
+[8] MarcoCaserta,SilviaSchwarze,andStefanVoss. Con-
+tainer Rehandling at Maritime Container Terminals. [20] FrederickS.HillierandGeraldJ.Lieberman. Introduc-
+In J. W. Bo¨se, editor, Handbook of Terminal Plan- tiontooperationsresearch. TheMcGraw-HillCompa-
+ning,pages247–269.SpringerScience+BusinessMedia, nies,Inc,ninthedition,2010. 1,1.1,1.1
+2011. (document)
+[21] JhonHolland. Adaptiveinnaturalandartificialsystems.
+[9] Marco Caserta and Stefan Voss. A Corridor Method- AnnArbor,Univ.MichiganPress,1975. 2
+BasedAlgorithmforthePre-marshallingProblem. In
+[22] Dong-liangHouandFang-rongChen. ConstraintSat-
+Giacobini,editor,WorkshopsonApplicationsofEvolu-
+isfaction Technology for Stacking Problem with Or-
+tionaryComputation,pages788–797.SpringerBerlin
+dered Constraints. Procedia Engineering, 29:3317–
+Heidelberg,2009. 2.1
+3321,2012. 2.2
+[10] Marco Caserta, Stefan Voss, and Moche Sniedovich.
+[23] KapHwanKimandGyu-PyoHong. Aheuristicrulefor
+Applying the corridor method to a blocks relocation
+relocatingblocks. Computers&OperationsResearch,
+problem. ORSpectrum,33(4):915–929,2011. 2,2.1
+33:940–954,2006. 2
+[11] ChuanyuChen,Wen-JingHsu,andShell-YingHuang. [24] Hyeonguk Jang, Ri Choe, and Kwang Ryel Ryu. De-
+SimulationandOptimizationofContainerYardOpera- riving a Robust Policy for Container Stacking Using
+tions:Asurvey.InProc.oftheInternationalConference a Noise-Tolerant Genetic Algorithm. In Proc. of the
+onPortandMaritimeRandDandTechnology,pages 2012 ACM Research in Applied Computation Sympo-
+23–29,2003. (document) sium,pages31–36,SanAntonio,TX,USA.,2012. 2.1
+[12] LuChenandZhiqiangLu. Thestoragelocationassign- [25] Bo Jin, Wenbin Zhu, and Andrew Lim. Solving the
+mentproblemforoutboundcontainersinamaritimeter- container relocation problem by an improved greedy
+minal. InternationalJournalofProductionEconomics, look-aheadheuristic. EuropeanJournalofOperational
+135(1):73–80,2012. (document),1.1 Research,240(3):837–847,2015. 2
+34 Me´todosdeoptimizacio´naplicadosalproblemadeapilamientodecontenedores
+[26] RakaJovanovic,MilanTuba,andStefanVoss. AMulti- onAdvancedLogisticsandTransport(ICALT),pages
+Heuristic Approach for Solving the Pre-Marshalling 247–252.IEEE,2014. 2.1
+Problem. 2015. 2
+[38] MatthiasPrandtstetter. ADynamicProgrammingBased
+[27] ShudingKangandWeiminWu. AGeneticAlgorithm Branch-And-Bound Algorithm for the Container Pre-
+toSolvetheContainersLocationAllocationProblemin MarshallingProblem. Technicalreport,AITAustrian
+RearStorageYard. InProc.oftheIEEE12thInterna- InstituteofTechnology,,2013. 1.2
+tionalConferenceonNetworking,SensingandControl,
+pages33–38,Taipei,Taiwan,2015. 2.1 [39] C. R. Reeves. Modern Heuristic Search Methods. In
+Modernheuristictechniques,pages1–25.Wiley,New
+[28] M.Kefi,O.Korbaa,K.Ghedira,andP.Yim. Heuristic York,1996. 2.1
+basedmodelforcontainerstackingproblem. InProc.of
+the19InternationalConferenceonProductionResearch, [40] RuiJorgeReiandJoaoPedroPedroso. Heuristicsearch
+volume7,2007. 2 forthestackingproblem. InternacionalTransactionsin
+OperationalResearch,19(3):379–395,2011. 2
+[29] JamesKennedyandRussellEberhart. ANewOptimizer
+Using Particle Swarm Theory. In Proc. of the Sixth [41] Andrea Rendl and Matthias Prandtstetter. Constraint
+InternationalSymposiumonMicroMachineandHuman ModelsfortheContainerPre-MarshalingProblem. In
+Science,1995. 2 Proc. of the ModRef 2013: The Twelfth International
+WorkshoponConstraintModellingandReformulation,
+[30] Kap Hwan Kim, Young Man Park, and Kwang-Ryul
+pages44–55,Uppsala,Sweden,2013. 2.2
+Ryu. Derivingdecisionrulestolocateexportcontainers
+in container yards. European Journal of Operational [42] Mario Rodriguez-Molins, Miguel A. Salido, and Fed-
+Research,124:89–101,2000. 1.2 ericoBarber. Intelligentplanningforallocatingcontain-
+ersinmaritimeterminals. ExpertSystemswithApplica-
+[31] YusinLeeandShih-LiangChao.Aneighborhoodsearch
+tions,39(1):978–989,2012. 2.2
+heuristicforpre-marshallingexportcontainers. Euro-
+peanJournalofOperationalResearch,196(2):468–475,
+[43] Miguel A. Salido and Federico Barber. Introduction
+2009. 2 toconstraintprogramming. RevistaIberoamericanade
+InteligenciaArtificial,(20):13–30,2003. 2.2
+[32] YusinLeeandNai-YunHsu. Anoptimizationmodelfor
+thecontainerpre-marshallingproblem. Computers&
+[44] MiguelA.Salido,OscarSapena,andFedericoBarber.
+OperationsResearch,34(11):3295–3313,2007. 1.1,2
+An Artificial Intelligence Planning tool for The Con-
+tainerStackingProblem. pages1–4,September2009.
+[33] Jana Lehnfeld and Sigrid Knust. Loading, unloading
+2.2
+andpremarshallingofstacksinstorageareas: Survey
+and classification. European Journal of Operational
+[45] PhatcharaSriphrabu,KanchanaSethanan,andBanchar
+Research,239(2):297–312,2014. (document)
+Arnonkijpanich. ASolutionoftheContainerStacking
+[34] Richard Linn, Jiyin Liu, Yat-wah Wan, and Katta G. ProblembyGeneticAlgorithm. IACSITInternational
+Murty. Adecisionsupportsystemforoperationsina Journal of Engineering and Technology, 5(1):45–49,
+containerterminal. DecisionSupportSystems,39:309– 2013. 2.1
+332,2005. 2
+[46] LixinTang, WeiJiang, JiyinLiu, andYunDong. Re-
+[35] PatrickJ.MMeersmansandRommertDekker. Opera- searchintocontainerreshufflingandstackingproblems
+tionResearchsupportscontainerhandling. Econometric incontainerterminalyards.IIETransactions,47(7):751–
+InstituteReportEI2001-22,EconometricInstitute,Eras- 766,2015. 2
+musUniversityRotterdam,2001. (document)
+[47] Yat-wahWan,JiyinLiu,andPei-ChunTsai.TheAssign-
+[36] Nde`ye Fatma Ndiaye, Adnan Yassine, and Ibrahima mentofStorageLocationstoContainersforaContainer
+Diarrassouba.HybridAlgorithmstoSolvetheContainer Stack. NavalResearchLogistics,56(8):700–713,2009.
+StackingProblematSeaport. JournalofMathematics, 1.1,2
+StatisticsandOperationsResearch(JMSOR),2(2):44–
+[48] XiaomingYang,NingZhao,ZhichengBian,JiaqiChai,
+56,2014. 2.1
+and Mi Chao. An Intelligent Storage Determining
+[37] Nde`ye Fatma Ndiaye, Adnan Yassine, and Ibrahima MethodforInboundContainersinContainerTerminals.
+Diarrassouba. AHybridAntColonyandGeneticAlgo- Journal of Coastal Research, 73(sp1):197–204, 2015.
+rithmtosolvetheContainerStackingProblematSeaport 1.1
+Terminal. InProc.ofthe2014InternationalConference

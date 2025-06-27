@@ -1,0 +1,462 @@
+Ciencias Matemáticas, Vol. 35, No. 1, 2021, Pag. 21-26
+Recibid o11-2020, Aceptado 04-2021
+Acerca del criptoanálisis a cifrados en
+bloques mediante el Algoritmo Genético
+On cryptanalysis of block ciphers by means of the
+Genetic algorithm
+Miguel A. Borges Trenard1, Mijail Borges Quintana2, Adrian Donatien Charón3*
+Resumen ConelpresentetrabajocontinuamosinvestigandoelefectodelAlgoritmoGenéticoenelataquea
+cifradosenbloques,basadoenunparticionamientodelespaciodeclaves.Secomparanlastécnicasempleadas
+conrespectoauntrabajopreliminarenestamismadirecciónysemuestranlosavancesobtenidosconesas
+técnicas.
+Abstract WiththepresentworkwecontinueinvestigatingtheeffectoftheGeneticAlgorithmintheattackon
+blockciphers,basedonapartitioningofthekeyspace. Thetechniquesusedarecomparedwithapreliminary
+workinthissamedirectionandtheadvancesobtainedwiththesetechniquesareshown.
+PalabrasClave
+criptoanálisis,cifradoenbloque,algoritmogenético
+Keywords
+Cryptanalyisis,Blockciphers,Geneticalgorithm
+1DepartamentodeEducaciónenMatemática,UniversidadAntonioNariño,Bogota,Colombia,miguelb@gmail.com
+2DepartamentodeMatemática,UniversidaddeOriente,SantiagodeCuba,Cuba,miajil@uo.edu.cu
+3DepartamentodeMatemática,UniversidaddeOriente,SantiagodeCuba,Cuba,adriand@uo.edu.cu
+*AutorparaCorrespondencia
+Introducción diagramasytrigramas(paraunidiomaenparticular).
+Comolalongituddelaclaveesmuypequeña,puedenuti-
+El algoritmo genético se ha utilizado en criptoanálisis.
+lizarestetipodefunción.[1]essimilara[6],seusalamisma
+Describamosbrevementealgunosavancesenesadirección:
+funcióndeaptitudenesenciaperocondiferentesparámetros,
+En[12],losautorespresentanunacombinacióndeAlgoritmo
+tambiénesmásdetalladoencuantoaexperimentosysecom-
+GenéticoconOptimizacióndeEnjambredePartículas(otro
+paranosoloconrespectoalafuerzabrutasinotambiénala
+métodoheurísticobasadoentécnicasevolutivas),llamarona
+búsquedaaleatoria.
+sumétodoOptimizacióndeEnjambreGenéticoyloaplicaron
+paraatacarelDES.Susresultadosexperimentaleslesmues- [10] discute el uso de AG para el criptoanálisis al DES
+tranqueseobtienenmejoresresultadosaplicandosumétodo conelfindemejorarelataquetantoparaelataquediferencial
+combinadoqueutilizandoambosmétodosporseparado.[5] comoparaellineal.[7]presentaunataqueaochorondasdel
+proporcionaunaexploraciónpreliminardelusodeAGenun DESparaobtenerlaclaveexacta.Sumétodoesunacombina-
+cifradodeReddePermutacióndeSustitución(SPN),elpro- cióndeAGconcriptoanálisisdiferencial.Losautoresdicen
+pósitodelaexploraciónesdeterminarcómoencontrarclaves queelrendimientodesuataqueesconsiderablementemásrá-
+débiles. pidoquelabúsquedaexhaustivayelcriptoanálisisdiferencial,
+además,elalgoritmosepuedeaplicaraunavariedaddesiste-
+Ambos artículos ([12] y [5]) utilizan un ataque a texto
+massimilaresaDES,enlugardelastécnicasdecriptoanálisis
+planoconocido,esdecir,dadountextoplanoT yelcorres-
+diferencialpurodisponibles.
+pondientetextocifradoC,elobjetivoesencontrarlaclaveK.
+En[12],lafuncióndeaptitudevalúaladiferenciabitabit(dis- [2]esunabrevedescripcióndeloquesehahechoenel
+tanciadeHamming)entreCyeltextocifradodeT utilizando campodelcriptoanálisismedianteelAGenlosúltimos15
+laclavecandidata,mientrasque,porelcontrario,en[5]mide años.[8]tambiénesunarevisióndelAGaplicadoalcripto-
+ladistanciadeHammingentreT yeltextodescifradodeCuti- análisisytambiénpresentaunestudiodelasbasesdedatos
+lizandolaclavebajoobservación.[6]muestraunataquesólo dondesepuedeencontrarestetema.
+atextocifradoalSDES,obteniendomejoresresultadosquela EllectornofamiliarizadoconelAGpuedeverunabreve
+fuerzabruta.Losautoresutilizanunafuncióndeaptitudque perosuficienteintroducciónen[3].Enesteartículosemuestra
+esunacombinacióndelafrecuenciarelativademonogramas, un ataque general para cifrados en bloques por medio del
+22 AcercadelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético
+AG.Esteesunataquedecajanegra,esdecir,elintrusono Algorithm1GeneticAlgorithm.
+necesitasabernadasobrelaestructuradelcifradodebloques.
+1: Initializepopulationwithrandomcandidatesolution:
+Eladversariosolonecesitateneraccesoalamaquinariade 2: whileterminationconditionisnotsatisfieddo
+cifradoydescifradodelcifradoenbloque,juntoconalmenos 3: Selectparents:
+unpardetextoplanoysucorrespondientetextocifrado,es 4: Combinepairsofparents:
+decir,esunataquedetextoplanoconocido. 5: Mutatetheresultingoffspring:
+6: Selectindividualsofthenextgeneration:
+Comoesconocido,elespaciodeclavesdeuncifradoen
+7: endwhile
+bloquesrealesmuygrande,paraevitarunataquedefuerza
+8: return Theindividualwithgreaterfitness.
+bruta,porlotanto,elAGtienequeenfrentarseconladificultad
+de buscar en este espacio y, aunque la búsqueda de AG es
+heurística, el tamaño del espacio de claves debe tenerse en
+durantegeneracionesconsecutivas.
+cuenta.En[4]serealizaunaparticióndelespaciodeclaves
+Portanto,paraaplicarelAGaunproblemaespecífico,uno
+enbaseaunaciertacongruenciaaritmética,demodoquese
+tiene quedefinir conprecisión (para elproblema dado) los
+puedaenfocarelataquesoloenalgunosdelossubconjuntos
+componentesyoperadoresdeestealgoritmo,asaber:cuáles
+de la partición, por lo tanto, de esta manera el conjunto de
+sonlosindividuos,cuántosindividuostieneunapoblación,
+clavesporinvestigaresmáspequeño.
+cómolosoperadoresdeeltrabajodeemparejamientoymuta-
+ción,cómomedirlaaptituddelosindividuos,cuálessonlos
+Laideadeutilizarlacongruenciaaritméticaenelcripto-
+criteriosdeselecciónparalosindividuosycuáleslacondición
+análisispareceinteresanteporquepermiteabordarproblemas
+determinación.
+complejosconherramientassencillas.Estatécnicatambién
+se utiliza en otros trabajos, por ejemplo, se aplica en [11], El último generalmente depende de los límites para el
+dondeelautordemuestraqueundeterminadoprotocolode valordeaptitudoelnúmerodegeneraciones.Lasección3.1
+intercambiodeclavespúblicassepuederomperconunataque especializa el AG para el problema que se estudia en este
+man-in-the-middle,quesebasaen(enprincipio)altrabajar artículo.
+concongruenciasaritméticas.
+1.2 FamiliadecifradoenBloqueAES(t)
+Enestetrabajoseperfeccionaelenfoqueutilizadoen[4]
+Enestasecciónpresentamosuncifradoquesedenomina
+conelobjetivodeincrementareltamañodelosconjuntosque
+AES(t),porqueesunafamiliadecifradoenbloquebastante
+integranlaparticiónydeesaformaampliarlabúsquedaenun
+similaralAES,elcifradodependedeunparámetrot enun
+espaciomayor.EnlaSección1,ellectorpuedeverunabreve
+sentidoqueseaclararámásadelante.Estafamiliafueintro-
+introducciónalAGyalcifradodebloquesqueelegimospara
+ducidaen[9].Acontinuación,damosunadescripcióndela
+losexperimentos.EnlaSección2,damoslasespecificaciones
+misma.
+delaAGparanuestroataque.LaSección3,estádedicadaa Sea el campo GF(2) de Galois con 2t elementos dados
+describirlosresultadosdenuestrométodosobreelcifradode
+porlospolinomiosdelasiguientetabla:
+bloquebajoataque.
+t (bits) m(x) blocklength keylength
+3 x3+x+1 48 48,72,96
+4 x4+x+1 64 64,96,128
+5 x5+x4+x3+ 80 80,120,160
+1. Preliminares +x2+1
+6 x6+x5+x3+ 96 96,144,192
+1.1 ElAlgoritmoGenético
++x2+1
+7 x7+x6+x5+ 112 112,168,224
+Suponemos que el lector está familiarizado con algún +x4+x3+
+conocimientobásicodelalgoritmogenético,porlotanto,esta +x2+1
+secciónserábreve,tratandodesermínimamenteautónoma. 8 x8+x4+x3+ 128 128,192,256
++x+1
+ElAGesunabúsquedaaleatoriaguiadaquetrabajacon
+poblacionesdeindividuosquesonsolucionesfactiblespara
+Enesatabla,tambiénsedescribelalongituddebloquey
+unproblemadado.Laevolucióndetalespoblacionessebasa
+clavedelosmiembrosdet,paracadavalordet,dondet es
+enmetáforasbiológicas,cuandoestánsujetasaoperadores
+lalongituddepalabracorrespondiente.Enparticular,AESes
+probabilísticos.
+AES(8).Todoslospolinomiosm(s)sonirreductiblessobre
+ElAGsimulalaevoluciónnatural,imitandoprocesosco- GF(2), como dijo el autor en [9], estos polinomios fueron
+molaselección,elapareamientoylamutación.Tambiénsi- elegidosalazar.Porotrolado,losrecuadrosSparacadatse
+mulalasupervivenciadelosmásaptosentrelosindividuos enumeranenelapéndicedeesedocumento.
+Ciencias Matemáticas, Vol. 35, No. 1, 2021,Pag.22-26
+AcercadelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético 23
+Las operaciones de ronda de AES(t) AddRoundKey, espacioclaveK tienecardinal2k1 yexisteunacorresponden-
+SubBytes,ShiftRowsyMixColumnssonenesencialasmis- cia uno a uno entre K y los números entero en el intervalo
+masqueenAES,peroenunaescalareducida.Enparticular, [0,2k1−1]. Si se fija un número entero k
+2
+,(1<k
+2
+≤k
+1
+),
+paraMixColumns,loscoeficientesdelasmatricesMDSson entonceselespacioclavepuedeserrepresentadoconlosnú-
+lost bitsmenossignificativosdeloscoeficientescorrespon- merosq·2k2+r,dondeq∈[0,2k1−k2−1]yr∈[0,2k2−1].
+dientesdelamatrizAESoriginal.Elmismoenfoqueseaplica
+alasconstantesutilizadasenlaprogramacióndeclaves.El
+númeroderondaseselmismoqueseutilizaenAES,incluso
+paradiferentestamañosdeclave.
+Deestaformaelespaciodelaclavesedivideenbloques
+2k1−k2 (determinados por los cocientes en el algoritmo de
+2. Algortimo Genético para el divisióndividiendopor2k2)y,dentrodecadabloque,laclave
+criptoanálisis de cifrados en bloque correspondiente se determina por su posición en el bloque,
+quevienedadaporelresidualr.
+2.1 Epecificacióndelalgoritmo
+Paraestasecciónseguimosesencialmente[4].
+SeaE:{0,1}m×{0,1}n→{0,1}nuncifradoenbloque,
+T texto claro, K es la clave y C el correspondiente texto
+cifrado,C=E(K,T).SedicequeK(cid:48)esunaclaveconsistente Se llama k 2 la longitud de la clave para movimiento o
+E,T yCsiC=E(K(cid:48),T).DenotemosconCons elconjunto longituddeclavegrupal.Entonceselpuntoclaveesmoverse
+E
+conelalgoritmogenéticosoloenunadelasparticiones(dada
+declavesconsistentesconE,T yC.Elproblemaqueseintenta
+q), que se denomina el bloque de la partición, pero para
+resolverenestetrabajoes:DadoE,T yC,calcularunaclave
+calcularlaaptitudcorrespondienteentodoelespacioreal,es
+enCons .
+E
+decir,moversealrededorderperoparacalcularidoneidadde
+Porlotanto,esteesunataqueatextoplanoconocido.Los
+lasclavesdadaporq·2k2+r.
+individuosdelaspoblacionessonclavesquesoncandidatas
+a ser claves consistentes. A continuación, proporcionamos
+aquí la especificación que establecemos de los parámetros
+generalesdeAGparaestecaso.
+Criterio de emparejamiento: selección de torneo con Sedefinenlassiguientesfuncionesparalaprogramación:
+tamañodetorneo2(cf.[3]). num:N×Z2 →Z talque
+≥0 ≥0
+Función de Aptitud: F(K)= E(K,T)∗C, donde B ∗B
+n 1 2
+sigificaelnúmeroigualdecompònentesentrelosbloquesB
+1
+andB .Enotraspalabras,B ∗B =n−d (B ,B ),donded
+2 1 2 H 1 2 H
+esladistanciadeHamming’s.Portanto,K esmasadaptado
+K siF(K )>F(K ).
+1 (k
+2
+,q,r)→q·2k2+r,dbybdsonlasfuncionesquecon-
+2 1 2
+viertendecimalabinarioyviceversa(usaremoslanotación
+Estafuncióntieneencuentalacorrelaciónentreeltexto
+bigendian,esdecir,elbitmássignificativoaparecealaiz-
+cifradoconocidoyeltexto cifradogeneradoporlasclaves
+quierdayvahaciaeldígitomenossignificativo,aladerecha),
+aleatorias.Estafuncióndeaptitudesutilizadaen[12].
+(a,b)generaunnúmeroenteroenelintervalo[a,b].Nodes-
+Eloperadordemutación:Intercambialosvaloresdelos
+cribiremoslasfuncionesmemberyinsertt,porquesucompor-
+bitsentrescomponenetesaleatoriascomomáximo,aplicando
+tamientoesobvio.Ahoraexplicaremospasoapasoaquellas
+repetidamenteeloperadordemutacióndeunpuntotresveces.
+partesdelalgoritmoquerequierenmoversedesdelapartición
+Eloperadordecruzamientoendospuntos:Elopera-
+dondeestamostrabajandoatodoelespaciodeclaves,para
+dordecruzamientoendospuntosseleccionaaleatoriamente
+podercalcularlaaptitudeneseespacio.
+doscomponentesdelospadresyluegointercambialosbits
+delosdospadresentreestospuntos,paraproducirdosnuevos
+hijos.
+2.2 Particióndelespaciodelaclave Comoveráellectorenelalgoritmo2,bloquesenR tie-
+1
+Elespaciodelaclaveesdemasiadograndeparaunabús- nenlongitudk todaslasoperacionesdelalgoritmogenético
+2
+quedaexhaustiva,tambiénpodríaserinclusoparaunaforma serealizanenbloquesdelongitudk (cruzamientoymuta-
+2
+de búsqueda heurística. Por lo tanto, podría ser interesan- ción),sinembargo,lacomparacióndeaptitudserealizaenel
+te dividir el espacio de claves en subconjuntos para que se espacioreal(longituddeclavek1).Porotrolado,conrespecto
+aplique el algoritmo genético cada vez en solo uno de los al Algoritmo3, recordamosque lafunción decruzamiento
+subconjuntos. devuelve dos descendientes, esta es la razón de los dos si.
+Paraello,en[4]seproponelasiguientemetodología:es Elcruzamientoserealizaconrespectoak2,mientrasquela
+bien sabido que si la longitud de la clave es k entonces el aptitudsecalculaconrespectoak1.
+1
+Ciencias Matemáticas, Vol. 35, No. 1, 2021,Pag.22-26
+24 AcercadelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético
+Algorithm2RP:PoblaciónAleatoria. Algorithm4Mutación
+Input:m(cantidaddeindividuosenlapoblación),k ,k ,q,F Input:M(poblaciónreal),P (probabilidaddemutación),n
+1 2 m
+(funciódeaptitud),esdecir,F esunafunciónque{0,1}k1 → (númerodemutaciones),
+[0,1].Esnecesarioque2k2 ≥m. k
+1
+,k
+2
+,q,F (funcióndeaptitud).
+Output:[R ,R ],dondeR esunapoblaciónderepresenta- Output: M actualizado con nuevos mutantes y su
+1 2 1
+cionesbinarias(delongitudk ),denúmerosenlapartición aptitud.
+1
+determinada por q, cuyos residuos módulo 2k2 se generan 1: S:=M[1];R 1 :=M[1];
+aleatoriamente, mientras que R 2 contiene la aptitud de los R 2 :=M[2];
+elementosdeR 1 . 2: fori=1,...,Cardinal(S)do
+1: i:=1;R 1 :=[];R 2 :=[]; 3: p:=mut(S[i],k 2 ,P m ,n);
+2: whilei≤mdo 4: ifnott(member(p,R 1 ))then
+3: r:=rand(0,2k2−1); 5: R 1 :=insertt(p,R 1 );
+4: c:=db(r); R 2 :=insertt(F(db(num(k 2 ,q,p))),R 2 );
+5: ifnott(member(c,R 1 ))then 6: endif
+6: R 1 :=insertt(c,R 1 ); 7: endfor
+R 2 :=insertt(F(db(num(k 2 ,q,r))),R 2 ); 8: return [R 1 ,R 2 ];
+7: i:=i+1;
+8: endif
+Respecto a las técnicas empleadas en el trabajo [4], se
+9: endwhile
+tienen las siguientes mejoras al algoritmo: en la búsqueda
+10: return [R 1 ,R 2 ];
+delapoblacióninicial,hayunafaseprimeraqueconsisteen
+buscarexhaustivamenteindividuosquetenganaptitudlomás
+altaposible,lafundamentaciónparaelloeslasiguiente:elAG
+esunalgoritmoheurísticodebúsquedaexhaustiva,esdecir,
+detodosmodostienesuporcientodefuerzabruta.Enesa
+Finalmente,enelAlgoritmo4,lafunciónmutmutacada
+primerafaseseaplicapurafuerzabruta,conelpropósitode
+elementoS[i]delapoblaciónS,estamutaciónserealizacomo
+levantar lo más posible las aptitudes de los individuos que
+yaseestablecióenlaSección2,1(cason=3).Observemos
+quelarepresentacióndecimaldeS[i]estáen[0,2k2−1].Siel formaránpartedelapoblacióninicial.Posteriormente,enla
+nuevapoblacióndelapróximaiteración,seordenanlosele-
+mutantepesnuevo,entoncessuaptitudasociadasecalcula
+mentosconrespectoasuactitudyunapequeñaporciónde
+pasandoadb(num(k2,q,p)).
+los individuos de la nueva población se toman de entre los
+quetienenmayoraptitud,elrestodelanuevapoblaciónse
+seleccionaporelMétododelosTorneos,locualyasehacia
+Algorithm3Cruzamiento en[4].Deesemodosegarantizaquelasaptitudesmáximas
+Input:M(poblaciónreal),S(listaconlosindividuosquese delasnuevaspoblacionesnuncadesciendan,semantengan
+vanacruzar),s(cantidaddeindividuosseleccionadoparacru- igualesosuperioresqueenlasgeneracionesanteriores.De
+zarse),k ,k ,q, pairing(funcióndecruzamiento),F (función laexperimentaciónrealizadaen[4],seevidencióque,sino
+1 2
+deaptitud). setieneencuentaestecriteriohelitistadeselección,sepue-
+Output: M actualizado con nuevos descendientes y su de caer en un comportamiento oscilatorio de aptitudes que
+aptitud. aumentan o disminuyen en cada iteración, o bien, se hace
+estacionario.
+1: R 1 :=M[1];R 2 :=M[2];
+2: fori=1,...,sdo
+3: for j=i+1,...,sdo 3. Experimentos
+4: p:=pairing(S[i],S[j],k 2 );
+TrabajamosconelcifradoAES(3)delongituddeclave
+5: ifnott(member(p[1],R 1 ))then
+k1=48.Setomauntamañodem=100paralapoblaciónen
+6: R 1 :=insertt(p[1],R 1 );
+cadaiteración.Comoprobabilidadesdecruzamientoymuta-
+R :=insertt(F(db(num(k ,q,p[1]))),R );
+2 2 2
+ciónsetomaronrespectivamente0.9y0.01.Fueutilizadala
+7: endif
+mismafuncióndeaptitudqueen[4].Tambiénfijamoscomo
+8: ifnott(member(p[2],R 1 ))then
+longituddeclavegrupalk2=24,superioralalongitud16
+9: R 1 :=insertt(p[2],R 1 );
+utilizadaen[4],porlotantoelespaciodeclavesposiblestiene
+R :=insertt(F(db(num(k ,q,p[2]))),R );
+2 2 2 cardinalsuperior(224).Noobstante,enlosexperimentosse
+10: endif
+tomósólounapequeñaporcióndeesapoblaciónpararecorrer.
+11: endfor
+Paralamayorcomprensióndelaaseveraciónanterior,escon-
+12: endfor
+venientedestacarqueelproductodelnúmerodeiteraciones
+13: return [R 1 ,R 2 ];
+ogeneraciones(g)porlacantidaddeindividuosquetienela
+Ciencias Matemáticas,Vol. 35, No. 1, 2021, Pag.21-26
+AcercadelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético 25
+poblaciónencadaiteración(m)esunacotasuperiorparala relativadesdelaposición25hastala48.Estolohicimospara
+cantidaddeelementosqueserecorreenunacorridacompleta versilasposicionesdemayorfrecuenciarelativacoinciden
+delAG.Portanto,sitomamosgcomolaparteenterade p2k2 , conladelaclave.
+m
+dondep=0,0004,porloqueelnúmerodegeneracionessería En la corrida 1 de las 8 que coinciden con la clave, 6
+67yestaremosmuestreando6700individuoscuantomás,de están dentro de la mayor frecuencia y ocupan las primeras
+los224posibles. posiciones: 1. (29) (0.76), 2. (48)(0.71), 3. (42) (0.71), 4.
+Serealizaronuntotalde8experimentosocorridas,cada (46)(0.66).
+experimento (clave y texto fijo) se repitió 10 veces. Luego frecuenciarelativamayor(frma):=0,76
+de cada experimento, se estimaron las componentes de la frecuenciarelativamenor(frme):=0,61
+claveutilizadamedianteunanálisisdefrecuenciarelativasim- Enlacorrida2,ademásdelas8componentesqueestán
+ple.Unmétodoalgosemejantefueyautilizadoen[12].El enlatablahayunacomponentemásquecoincideconlaclave
+experimentoserealizóconunacomputadoraconlassiguien- queesla29,confrecuenciarelativade(0.5),ningunadelas
+tescaracteristicas:Processor:Pentium(R)Dual-CoreCPUT componentesenestacorridaestándentrodelasquetienen
+4200@2.00GHz mayorfrecuenciarelativa.Unindicioquepuedeindicarque
+Lasiguientetablamuestralas8componentesquecoinci- estecasonoesconfiableelanálisisdepredecirlascomponen-
+denconlaclavequeposeenmayorfrecuenciarelativaencada tesdelaclavemediantelasquetienenmayorfrecuenciaesel
+corrida. hechodequelasaptitudesenesascorridassonmásbajas.
+Corridas Componente/Frecuencia Enlacorrida3haytrescomponentesmásquenoestán
+1 29(0,76),42(0,71),48(0,71),46(0,66) en la tabla que coinciden con la clave 34(0,52), 39(0,52),
+44(0,61),43(0,61),33(0,57),37(0,52) 44(0,52).Delas11quecoincidenconlaclave,8estándentro
+delasdemayorfrecuencia.Lastresprimerascomponentesde
+2 28(0,64),26(0,57),27(0,57),31(0,57) latablaenestacorridacoincidenconlasdemayorfrecuencia
+41(0,57),42(0,57),46(0,57),30(0,57) relativa.Enestacorridaseencontrólaclave.
+frecuenciarelativamayor(frma):=0,7
+3 46(0,70),30(0,70),27(0,70),48(0,64) frecuenciarelativamenor(frme):=0,58
+38(0,64),41(0,58),29(0,58),33(0,58)
+Enlacorrida4haytrescomponentesquenoestánenla
+tablaquecoincidenconlaclave36(0,54),40(0,54),42(0,58).
+4 30(0,7),47(0,66),43(0,66),46(0,62) Delas11componentesquecoincidenconclave,7estándentro
+31(0,62),27(0,62),28(0,62),44(0,58)
+delasdemayorfrecuenciayestánenlasposiciones30(6.),47
+(7.),43(8.)y46(9.).Aunquelasdemayorfrecuenciarelativa
+5 36(0,78),46(0,68),34(0,68),48(0,63) nocoincidanconlaclave,estánenlaposiciones33(0,75)y
+38(0,63),30(0,63),27(0,63),35(0,57) 41(0,75).Nuevamenteocurre,comoenlacorrida2,quelas
+aptitudesasociadasaestacorridasonmásbajas.
+6 48(0,70),45(0,70),39(0,70),46(0,60)
+frecuenciarelativamayor(frma):=0,7.
+44(0,60),42(0,60),37(0,60),27(0,60)
+frecuenciarelativamenor(frme):=0,62.
+Enlacorrida5hay7componentesquenoestánenlata-
+7 37(0,73),43(0,68),42(0,68),46(0,58)
+blaquecoincidenconlaclave31(0,52),32(0,52),39(0,52),
+29(0,58),27(0,58),34(0,57),33(0,57)
+41(0,52), 44(0,52), 45(0,52), 47(0,52). De las 15 compo-
+nentes que coinciden con la clave 7 están dentro de las de
+8 48(0,71),46(0,71),43(0,71),36(0,64)
+mayor frecuencia y están en las posiciones 4. (36), 5. (46),
+32(0,64),29(0,52),33(0,52),37(0,52)
+y6.(34).Aunquelasdemayorfrecuenciarelativanocoinci-
+Losresultadossepuedenresumirdelasiguientemanera: danconlaclaveestánenlasposiciones29(0,84)„25(0,84),
+En cada corrida se estimó una clave por el análisis de 40(0,78),nuevamentelasaptitudesenéstascorridassonmás
+frecuenciarelativasimple. bajas.
+Entodaslascorridasdesdelaposición1hastala24,las frecuenciarelativamayor(frma):=0,78
+componentescoinciden.Estoesdebidoalbloquedelaparti- frecuenciarelativamenor(frme):=0,63
+cióndelongitud24conelqueseestátrabajando,todoslos
+En la corrida 6 hay 6 componentes que no están en la
+elementosdelapoblaciónpertenecientesaestebloquetienen
+tablaquecoincidenconlaclave29(0,6),33(0,6),25(0,5),
+losmismosvaloresenlas24primerasposiciones.
+26(0,5),28(0,5),34(0,5).Delas14componentesquecoinci-
+Encadacorridadelasposiciones25ala48almenoshay
+denconlaclave10estándentrodelasdemayoresfrecuencias
+8quecoincidenconlasdelaclave.
+relativas,ycoincideconla1.(48)(0.70),enestacorridase
+encontrólaclave.
+Análisisdelascomponentesdemayorfrecuencia
+Encadaclaveestimadaporfrecuenciarelativa(kef)delas frecuenciarelativamayor(frma):=0,7
+corridasseeligieronlascomponentesconmayorfrecuencia frecuenciarelativamenor(frme):=0,6
+Ciencias Matemáticas, Vol. 35, No. 1, 2021,Pag.21-26
+26 AcercadelcriptoanálisisacifradosenbloquesmedianteelAlgoritmoGenético
+Enlacorrida7hay6componentesquenoestánenlata- bitsdelasposiblesclavestienenvaloresfijos;enestecaso,el
+blaquecoincidenconlaclave26(0,57),28(0,57),30(0,57), problemasepuedereduciralataquepropuestoporAGsobre
+36(0,52), 38(0,52), 45(0,52). De las 14 componentes que elrestodelasposicionesdesconocidas.
+coinciden con la clave 11 están dentro de las de mayores
+frecuenciasrelativasycoincideconla1.(37)(0.73).
+Referencias
+frecuenciarelativamayor(frma):=0,73
+frecuenciarelativamenor(frme):=0,57 [1] F.AlAdwan,M.AlShraideh,andM.R.AlSaidat:Age-
+neticalgorithmapproachforbreakingofsimplifieddata
+Enlacorrida8hay1componentequenoestaenlatabla
+que coincide con la clave 40(0,52). De las 9 componentes
+encryptionstandard.InternationalJournalofSecurity
+andItsApplications,2015.
+quecoincidenconlaclave5estándentrodelasdemayores
+frecuenciasycoincidenconla1.(48)(0.71),2.(46)(0.71),3.
+[2] S.BaragadaandP.S.Reddy:Asurveyofcryptanalytic
+(43)(0.68).
+worksbasedongeneticalgorithms.InternationalJournal
+frecuenciarelativamayor(frma):=0,71
+ofEmergingTrends&TechnologyinComputerScience
+frecuenciarelativamenor(frme):=0,64
+(IJETTCS),2013
+Enlaterceraysextacorridaseencontrólaclave.Enlas
+corridasdondeseencontrólaclavelasfrecuenciasrelativas [3] R.K.Bhattacharjya:Introductiontogeneticalgorithms.
+sonmásaltas. IITGuwahati,2012
+Entodaslascorridashayalmenosunacomponenteque
+estádentrodelasquetienenlasfrecuenciasrelativasmásaltas. [4] M.A.Borges-Trenard,M.Borges-Quintana,L.Monier-
+Entodaslascorridassalvoenlasegunda,lacomponente46 Columbié:Anapplicationofgeneticalgorithmtocry-
+serepite.Enlamayoríadelascorridasmientrasmásaltaes ptanalysisofblockciphersbypartitioningthekeyspace.
+lafrecuenciarelativadeesacomponentemayorprobabilidad Journal of Discrete Mathematical Sciences & Crypto-
+tienedecoincidirconladelaclave. graphy,2019.DOI:10.1080/09720529.2019.1649028.
+ElPromediodefrecuenciarelativamayoresde0,70875
+[5] J.A.Brown,S.Houghten,andB.Ombuki-Berman:Ge-
+ElPromediodefrecuenciarelativamenoresde0,60712
+neticalgorithmcryptanalysisofasubstitutionpermuta-
+tionnetwork.ComputationalIntelligenceinCyberSecu-
+4. Conclusiones rity,2009
+Lastécnicasintroducidasenestetrabajo,conrespectoal
+[6] P. Garg, S. Varshney, and M. Bhardwaj: Cryptanaly-
+métodoempleadoen[4],hanconducidoalincrementodelas
+sisofsimplifieddataencryptionstandardusinggenetic
+potencialidadesdelAGparaelataqueacifradosenbloques,
+algorithm.AmericanJournalofNetworksandCommu-
+porelmétododeparticionamientodelespaciodeclaves,te-
+nications,2015
+niendoencuentaqueseincrementalalongituddelespaciode
+búsquedayenvariascorridassepuedeobtenerlaclaveyen [7] H.M.H.Husein,B.I.Bayoumi,F.S.Holail,B.E.M.
+generalsedescribenvariosaspectospositivosobservadosen Hasan,andM.Z.A.El-Mageed:Ageneticalgorithm
+losexperimentosquepermiteobtenerinformaciónsobrela forcryptanalysisofdes-8.IJNetworkSecurity,2007
+clave.
+ComoeshabitualenlasaplicacionesdeAG,sepodrían [8] A.H.Khan,A.H.Lone,andF.A.Badroo:Theappli-
+obtener algunas mejoras de los resultados si se consideran cabilityofgeneticalgorithmincryptanalysis:Asurvey
+algunas variaciones en los parámetros, a saber, operadores InternationalJournalofComputerApplications,2015.
+de cruzamiento y mutación (junto con sus probabilidades),
+[9] J.NakaharaandD.SantanadeFreitas:DagstuhlSemi-
+númerodeindividuosenlapoblacióninicial,númerodege-
+narProceedings.SchlossDagstuhl-Leibniz-Zentrumfür
+neraciones,ysimilares.
+Informatik,2009.
+Unaobservaciónapartemerecelafuncióndeaptitud,po-
+dríaserinteresantecompararlosresultadosusandolafunción [10] T.Tadros,A.E.F.Hegazy,andA.Badr:Geneticalgo-
+definidaen[5],enlugardelaquehemosusado(queapareció rithm for des cryptanalysis genetic algorithm for des
+en[12]).Uninconvenientequetieneelmétodoesquecuanto cryptanalysis.Int.J.Comput.Sci.Netw.Secur,2010.
+menoresk2resultamayorelnúmerodeparticiones(2k1−k2
+bloques).Porotraparte,elincrementodek2significaampliar [11] M. R. Valluri: Cryptanalysis of Xinyu et al.’s NTRU-
+lalongituddelespaciodebúsqueda.Porloqueesnecesario latticebasedkeyexchangeprotocol.JournalofInforma-
+encontraruncompromisoentreamboscriterios.Estetrabajo tionandOptimizationSciences,2018.
+contribuyealaobtencióndemayorinformacióncuandose
+[12] R.VimalathithanandM.Valarmathi:Cryptanalysisof
+incrementak2quepermitarealizarbúsquedasposterioresre-
+simplified-des using computational intelligence. Tran-
+duciendonuevamenteelespaciodebúsquedahaciendousode
+sactionsonComputers,2011.
+lainformaciónobtenida.Esteataquepodríaserespecialmente
+adecuadoparaloscasosenlosqueseconsideraquealgunos
+Ciencias Matemáticas,Vol. 35, No. 1, 2021, Pag.21-26

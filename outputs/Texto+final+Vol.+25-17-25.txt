@@ -1,0 +1,609 @@
+REVISTA CIENCIAS MATEM`TICAS 17
+Un acercamiento a las nociones
+de competencias bÆsicas que la asignatura
+AnÆlisis MatemÆtico debe contribuir
+a desarrollar en los estudiantes
+de Ciencia de la Computaci(cid:243)n
+Idania Urrutia Roman(cid:237)1 / Virginia `lvarez SuÆrez2
+Facultad de MatemÆtica y Computaci(cid:243)n
+Universidad de La Habana
+RESUMEN: en nuestros d(cid:237)as se hace cada vez mÆs necesario que la formaci(cid:243)n acadØmica en las uni-
+versidades responda a las demandas de solucionar los problemas complejos que se presentan en
+la prÆctica profesional, es por ello que debemos entender que se necesitan hacer transformaciones
+esenciales en los programas de estudio, que permitan graduar profesionales preparados para en-
+frentar los retos que demanda el presente desarrollo cient(cid:237)(cid:222) co y tecnol(cid:243)gico. Con vistas a solucionar
+esta problemÆtica, en el contexto actual de las investigaciones didÆcticas y en el Æmbito europeo y
+latinoamericano, se han comenzado a elaborar y argumentar propuestas curriculares en tØrminos
+de competencias. El presente trabajo propone un acercamiento a la noci(cid:243)n de competencia, de(cid:222) ni-
+ciones, antecedentes, ademÆs de enunciar una competencia profesional, competencias generales del
+graduado de Licenciatura en Ciencia de la Computaci(cid:243)n, as(cid:237) como competencias bÆsicas que la dis-
+ciplina AnÆlisis MatemÆtico debe contribuir a desarrollar en los estudiantes de esta especialidad.
+Palabras claves: competencias, competencias cognitivas, TIC, anÆlisis MmatemÆtico.
+1. INTRODUCCI(cid:211)N pectivas de las universidades de cara al nuevo
+milenio. Su declaraci(cid:243)n (cid:222) nal titulada: La edu-
+En nuestros d(cid:237)as se hace cada vez mÆs ne-
+caci(cid:243)n superior en el siglo XXI: visi(cid:243)n y acci(cid:243)n,
+cesario que la formaci(cid:243)n acadØmica en las
+comenz(cid:243) con las siguientes palabras:
+universidades responda a las demandas de so-
+lucionar los problemas complejos que se pre- En los albores del nuevo siglo, se observa una
+sentan en la prÆctica profesional. Es por ello demanda de educaci(cid:243)n superior sin precedentes,
+acompaæada de una gran diversi(cid:222) caci(cid:243)n de la
+que debemos entender que se necesitan hacer
+misma, y una mayor toma de conciencia de la im-
+transformaciones esenciales en los programas
+portancia fundamental que este tipo de edu-
+de estudio para lograr graduar profesionales
+caci(cid:243)n reviste para el desarrollo sociocultural
+preparados para enfrentar los retos que deman-
+y econ(cid:243)mico y para la construcci(cid:243)n del futuro,
+da el actual desarrollo cient(cid:237)(cid:222) co y tecnol(cid:243)gico.
+de cara al cual las nuevas generaciones deberÆn
+En el mes de octubre de 1998 se celebr(cid:243) en estar preparadas con nuevas competencias y
+Par(cid:237)s la Conferencia Mundial sobre la Educaci(cid:243)n nuevos conocimientos e ideales. (CMES, 1998,
+Superior (CMES) convocada por la UNESCO, en p. 1, preÆmbulo).
+la cual se establecieron los nuevos retos y pers- Con el consenso de los participantes, en dicha
+conferencia se redactaron 17 art(cid:237)culos, los cua-
+1 idania@matcom.uh.cu les constituyen las l(cid:237)neas que deben seguir por
+2 virginia@matcom.uh.cu los gobiernos en funci(cid:243)n de promover un cambio
+18 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+radical en el entorno universitario, que centre en en Chomsky es [...] una capacidad ideal, que
+la adquisici(cid:243)n de conocimientos y competencias describe la potencialidad de una lengua(cid:148) (Puig,
+los mecanismos para el mejoramiento de la vida L. 2008). No es hasta unos aæos despuØs, en la
+y el desarrollo sostenido de la sociedad. dØcada del 70 del pasado siglo, que se comienza
+Mediante el Proyecto Tuning Europeo (TE), a utilizar con cierta frecuencia el enfoque por
+presentado en el verano del aæo 2000, se estable- competencias en las universidades.
+ci(cid:243) un total de 30 competencias genØricas y 17 En los inicios, el uso de las competencias
+competencias generales dentro de nueve Æreas de tambiØn estuvo asociado al sector empresarial y
+acci(cid:243)n, mientras que en el Proyecto Tuning AmØ- su entrada en el Æmbito de las ciencias sociales
+rica Latina (TAM), en 2005, se redact(cid:243) un total de se produjo de manera gradual y progresiva.
+27 competencias genØricas dentro de 11 Æreas de Debemos enfatizar que nos interesa el desarro-
+acci(cid:243)n, previa consulta a acadØmicos, estudian- llo de la noci(cid:243)n de competencia dentro del marco
+tes, graduados y empleadores. acadØmico, como un tØrmino que genera capa-
+A partir del anÆlisis de estas competencias cidades de actuaci(cid:243)n y de aprender a resolver
+se abrieron nuevas l(cid:237)neas de investigaci(cid:243)n en problemas que permitan preparar mejor a los
+las ciencias pedag(cid:243)gicas dirigidas fundamen- profesionales para la vida laboral, y no aquellas
+talmente al perfeccionamiento de los planes de acepciones que generan sentimientos de indi-
+estudio de la Educaci(cid:243)n Superior en correspon- vidualidad y de conductas ego(cid:237)stas; nos propo-
+dencia con las exigencias actuales. nemos enmarcar las nociones de competencias
+La Declaraci(cid:243)n de la Conferencia Regional dentro de un sentido Øtico de la conducta del
+de Educaci(cid:243)n Superior de AmØrica Latina y el profesional comprometido con su medio y con el
+Caribe, cuyos principios constituyen hoy orien- desenvolvimiento sobresaliente de su profesi(cid:243)n.
+taciones fundamentales en materia de autono- En este trabajo proponemos un acercamiento
+m(cid:237)a universitaria, cogobierno, acceso universal a la noci(cid:243)n de competencia, de(cid:222) niciones y ante-
+y compromiso con la sociedad, estableci(cid:243): cedentes, as(cid:237) como enunciar las competencias
+bÆsicas que la disciplina AnÆlisis MatemÆtico
+Es preciso hacer cambios profundos en las
+contribuye a desarrollar en los estudiantes de
+formas de acceder, construir, producir, tras-
+esta especialidad.
+mitir, distribuir y utilizar el conocimiento. Como
+ha sido planteado por la UNESCO en otras
+oportunidades, las instituciones de Educaci(cid:243)n 2. COMPETENCIAS COGNITIVAS:
+Superior, y, en particular, las universidades,
+ANTECEDENTES, DEFINICIONES
+tienen la responsabilidad de llevar a cabo la
+Y CLASIFICACIONES
+revoluci(cid:243)n del pensamiento, pues esta es
+fundamental para acompaæar el resto de las
+El enfoque por competencias se comenz(cid:243) a uti-
+transformaciones. (CRESALC, 2008, p. 5).
+lizar con cierta frecuencia en las universidades
+Para llevar adelante esta revoluci(cid:243)n del pen- en los aæos 1970, aunque sus or(cid:237)genes se re-
+samiento se necesita un cambio en la concep- montan a algunos aæos atrÆs, espec(cid:237)(cid:222) camente
+ci(cid:243)n de los planes de estudio desde su propia en el libro Aspects of the Theory of Syntax de
+elaboraci(cid:243)n hasta su puesta en prÆctica, y este Noam Chomsky, publicado en 1965.
+proceso implica rediseæar el papel del docente,
+Chomsky avanza al proponer una ling(cid:252)(cid:237)stica
+quien ademÆs de trasmitir conocimientos debe-
+del habla, distinguiendo en ella la competencia,
+r(cid:237)a (cid:147)ocuparse sobre todo, hoy en d(cid:237)a, de enseæar
+que es la capacidad que desde muy pequeæos
+a sus alumnos a aprender y a tomar iniciati- tienen los humanos de entender frases nuevas
+vas, y no a ser, œnicamente, pozos de ciencia(cid:148). y de producir mensajes nuevos, inØditos; y la
+(CMES, 1998, art(cid:237)culo 10). performance, la actuaci(cid:243)n, la realizaci(cid:243)n de esa
+capacidad, entendiendo y produciendo mensajes
+Para Puig (2008) y otros autores, el vocablo
+nuevos con una vieja lengua. (Mart(cid:237)n-Barbero.
+competencias aparece por primera vez en el
+J. 2003).
+contexto de las ciencias sociales en 1965, en
+los trabajos de Noam Chomsky (Aspects of the Para Chomsky (cid:147)la competencia es lo que
+Theory of Syntax). Segœn Puig (cid:147)la competencia explica y predice la conducta del sujeto ideal(cid:148)
+REVISTA CIENCIAS MATEM`TICAS 19
+(Puig, L. 2008) y propone describirla mediante listas dentro del marco acadØmico, quienes las
+la elaboraci(cid:243)n de una gramÆtica que Øl llam(cid:243) ge- consideran con(cid:222) guraciones psicol(cid:243)gicas com-
+nerativa. plejas, donde intervienen los diferentes saberes
+(saber ser, saber actuar y saber convivir), y que
+Al mismo tiempo que desde la ling(cid:252)(cid:237)stica el
+tienen determinada trascendencia en el sujeto y
+concepto de competencia entraba en el campo
+en su transformaci(cid:243)n como ser social.
+de la comunicaci(cid:243)n mediante el concepto de
+competencia comunicativa, en el mundo empre- En correspondencia con la primera vertien-
+sarial va a hacer carrera otro concepto de compe- te, emergen diferentes de(cid:222) niciones de expertos
+tencia, aquel que liga las destrezas del saber y de las instituciones dedicadas a la formaci(cid:243)n
+hacer con la capacidad empresarial de competir, y desarrollo de los recursos humanos en pa(cid:237)ses
+esto es, de ganarle a los otros competidores en
+como CanadÆ, Espaæa, Reino Unido, Alemania,
+la capacidad de producir rentabilidad. Mientras
+Argentina, Australia, MØxico, Chile y Brasil, en-
+que en el primer Æmbito, la competencia, se halla
+tre otros, que han adoptado de una u otra ma-
+asociada a la idea de destreza intelectual, y esta
+nera la formaci(cid:243)n por competencias; inclusive
+a la de innovaci(cid:243)n, y por tanto a la creatividad,
+se pueden citar las enunciadas por diferentes
+en el mundo de la reingenier(cid:237)a empresarial com-
+petencia habla de otra cosa: de las destrezas que organizaciones internacionales que han contri-
+generan rentabilidad y competitividad. (Mart(cid:237)n- buido a que este tipo de modelo se difunda:
+Barbero. J, 2003).
+CINTERFOR1/OIT: (cid:147)Un concepto generalmente
+La introducci(cid:243)n de las competencias en el aceptado la establece como una capacidad
+Æmbito de las ciencias sociales se produjo de efectiva para llevar a cabo exitosamente una
+manera gradual y progresiva. Dentro del cam- actividad laboral plenamente identi(cid:222) cada. La
+po de la psicolog(cid:237)a, emergieron vinculadas a la competencia laboral no es una probabilidad de
+Øxito en la ejecuci(cid:243)n del trabajo, es una capacidad
+bœsqueda de las cualidades que debe poseer el
+real y demostrada(cid:148). (CINTERFOR/OIT, 1996).
+sujeto para un desempeæo e(cid:222) ciente de su pro-
+fesi(cid:243)n. Autores como SÆnchez A. et. al. (2004) CONOCER2 (MØxico): (cid:147)Capacidad productiva de
+y GonzÆlez V. (2006) establecen su aparici(cid:243)n un individuo que se de(cid:222) ne y mide en tØrminos de
+en los trabajos del psic(cid:243)logo David Mc Clelland desempeæo en un determinado contexto laboral,
+y no solamente de conocimientos, habilidades,
+(1973), profesor de la Universidad de Harvard,
+destrezas y actitudes; estas son necesarias pero
+quien a travØs de la publicaci(cid:243)n de un art(cid:237)culo
+no su(cid:222) cientes por s(cid:237) mismas para un desempeæo
+titulado (cid:147)Testing for Competence Rather than
+efectivo″. (CONOCER, 1997).
+Intelligence(cid:148), de(cid:222) ni(cid:243) la competencia como (cid:147)la
+caracter(cid:237)stica esencial de la persona que es la INEM3: (cid:147)Las competencias profesionales de(cid:222) nen el
+ejercicio e(cid:222) caz de las capacidades que permiten
+causa de su rendimiento e(cid:222) ciente en el trabajo(cid:148).
+el desempeæo de una ocupaci(cid:243)n, respecto a los
+(SÆnchez A. et. al. 2004, p. 2).
+niveles requeridos en el empleo. Es algo mÆs que el
+En la bibliograf(cid:237)a se enumera una cantidad conocimiento tØcnico que hace referencia al saber
+considerable de trabajos relacionados con la de- y al saber-hacer. El concepto de competencia
+(cid:222) nici(cid:243)n, antecedentes y clasi(cid:222) caci(cid:243)n de las com- engloba no s(cid:243)lo las capacidades requeridas para
+petencias profesionales. Como regularidad su el ejercicio de una actividad profesional, sino
+estudio se conduce a partir de dos vertientes. tambiØn un conjunto de comportamientos, facultad
+de anÆlisis, toma de decisiones, transmisi(cid:243)n de
+La primera vertiente se identi(cid:222) ca con la con-
+informaci(cid:243)n, etc., considerados necesarios para
+ceptualizaci(cid:243)n de competencia laboral propia-
+el pleno desempeæo de la ocupaci(cid:243)n″. (INEM.
+mente dicha, en tØrminos de capacidad produc-
+Madrid, 1995)
+tiva, idoneidad para realizar una tarea, conjunto
+La Organizaci(cid:243)n Internacional del Trabajo
+identi(cid:222) cable y evaluable de conocimientos, acti-
+(OIT)4 expone que (cid:147)el tØrmino competencias abar-
+tudes, valores y habilidades relacionados con el
+ca los conocimientos, las aptitudes profesionales
+desempeæo adecuado y e(cid:222) ciente de la profesi(cid:243)n,
+teniendo en consideraci(cid:243)n el contexto y la cultu- 1 Centro Interamericano de Investigaci(cid:243)n y Documentaci(cid:243)n sobre
+Formaci(cid:243)n Profesional.
+ra del lugar de trabajo.
+2 Consejo de Normalizaci(cid:243)n y Certi(cid:222) caci(cid:243)n de Competencia Labo-
+En la otra vertiente se incluyen aquellas de- ral de MØxico.
+3 Instituto Nacional de Empleo, Madrid.
+(cid:222) niciones de competencias hechas por especia-
+4 Organizaci(cid:243)n Internacional del Trabajo.
+20 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+y los conocimientos tØcnicos especializados que expresi(cid:243)n concreta de los recursos que pone en
+se aplican y dominan en un contexto espec(cid:237)(cid:222) co″ juego el individuo cuando lleva a cabo una acti-
+(OIT a), s/f), y enuncia el concepto de competen- vidad, y que pone el Ønfasis en el uso o manejo
+cia profesional como (cid:147)la idoneidad para realizar que el sujeto debe hacer de lo que sabe, no del
+una tarea o desempeæar un puesto de trabajo e(cid:222) - conocimiento aislado, en condiciones en las que
+cazmente por poseer las cali(cid:222) caciones requeridas el desempeæo sea relevante(cid:148), (Malpica M. del C.,
+para ello″ (OIT inciso b, 1993). En este caso, los 1996).
+conceptos competencia y cali(cid:222) caci(cid:243)n, se asocian Esta de(cid:222) nici(cid:243)n apunta hacia lo que se pudie-
+fuertemente dado que la cali(cid:222) caci(cid:243)n se considera ra considerar el centro de acci(cid:243)n dentro de los
+una capacidad adquirida para realizar un trabajo nuevos planes curriculares y es el hecho de que
+o desempeæar un puesto de trabajo. Østos deben estar diseæados sobre la base de
+En la Resoluci(cid:243)n No 21/99 del Ministerio del brindar a los estudiantes herramientas y recur-
+Trabajo y Seguridad Social de Cuba, se define sos que los preparen para resolver problemas de
+como competencia laboral: su prÆctica laboral y no solo la impartici(cid:243)n de
+conocimientos aislados.
+[(cid:133)] conjunto de conocimientos te(cid:243)ricos, habili-
+Inmersos en la tarea de graduar profesiona-
+dades, destrezas y aptitudes que son aplicados
+por el trabajador en el desempeæo de su ocupaci(cid:243)n les capaces de resolver situaciones complejas en
+o cargo, en correspondencia con el principio el desempeæo de su trabajo y preparados sobre
+de idoneidad demostrada y los requerimientos la base de formaci(cid:243)n de valores Øticos debemos
+tØcnicos, productivos y de servicios, as(cid:237) como entender las competencias como:
+los de calidad, que se le exigen para el adecuado
+desenvolvimiento de sus funciones. (Citado por [(cid:133)] procesos complejos que las personas ponen
+Pino C. E., 2003, p. 39). en acci(cid:243)n-actuaci(cid:243)n-creaci(cid:243)n, para realizar activi-
+dades sistØmicas y resolver problemas laborales y
+Para ilustrar la segunda vertiente se han se-
+de la vida cotidiana, con el (cid:222) n de avanzar en la
+leccionado las siguientes de(cid:222) niciones de com- autorrealizaci(cid:243)n personal, vivir autØnticamente
+petencias: la vida y contribuir al bienestar humano, integrando
+El colectivo de autores mexicanos encabezado el saber hacer (aplicar procedimientos y estrategias)
+con el saber conocer (comprender el contexto) y el
+por Figueroa A. E. (2008), de(cid:222) ne competencias
+saber ser (tener iniciativa y motivaci(cid:243)n), teniendo
+(cid:147)como un conjunto dinÆmico de saberes (saber
+los requerimientos espec(cid:237)(cid:222) cos del contexto en
+aprender, saber hacer y saber ser y convivir) en
+continuo cambio, con autonom(cid:237)a intelectual,
+interacci(cid:243)n, que permiten a las personas rea-
+conciencia cr(cid:237)tica, creatividad y esp(cid:237)ritu de reto.
+lizar desempeæos id(cid:243)neos y que tienen un im-
+(Tob(cid:243)n S., 2002).
+pacto en su propia transformaci(cid:243)n personal o
+A partir de esta de(cid:222) nici(cid:243)n se puede enten-
+profesional y en la de su entorno(cid:148) (Figueroa A.
+der plenamente su signi(cid:222) cado separado de com-
+E., et. al., 2008).
+prensiones exclusivamente dentro de los temas
+Le Boterf las de(cid:222) ne como: (cid:147)una construcci(cid:243)n
+del mercado y la competitividad empresarial.
+a partir de una combinaci(cid:243)n de recursos (cono-
+Esta de(cid:222) nici(cid:243)n brinda ademÆs una interpreta-
+cimientos, saber hacer, cualidades o aptitudes,
+ci(cid:243)n que favorece la formaci(cid:243)n integral y de va-
+y recursos del ambiente (relaciones, documen-
+lores Øticos.
+tos, informaciones y otros) que son movilizados
+Para Vargas J. (2001), las competencias:
+para lograr un desempeæo(cid:148). (Le Boterf, 1998, p.
+23). Este autor seæala ademÆs que (cid:147)la compe- ● Son caracter(cid:237)sticas permanentes de las
+tencia es equivalente a saber actuar en forma personas.
+aut(cid:243)noma e incluye: saber escoger, tomar ini- ● Se ponen de mani(cid:222) esto cuando se ejecuta
+ciativas, arbitrar, correr riesgos, reaccionar ante una tarea o un trabajo.
+lo imprevisto, contrastar, tomar responsabilida-
+● EstÆn relacionadas con la ejecuci(cid:243)n exito-
+des y saber innovar″. (Citado por Colunga S. et.
+sa de una actividad.
+al., 2006).
+● Tienen una relaci(cid:243)n causal con el rendi-
+Otros expertos como Malpica M. del C. seæa-
+miento laboral, es decir, no estÆn asocia-
+lan que la educaci(cid:243)n por competencias es (cid:147)la
+das con el Øxito sino que se asume que
+REVISTA CIENCIAS MATEM`TICAS 21
+realmente lo causan. (saber), procedimental (saber hacer) y actitu-
+● Pueden ser generalizadas a mÆs de una dinal (ser). Son aprendizajes integradores que
+actividad. involucran la re(cid:223) exi(cid:243)n sobre el propio proceso
+de aprendizaje (metacognici(cid:243)n)(cid:148).
+● Combinan lo cognoscitivo, lo afectivo, lo
+(Pinto Cueto, Luisa, 1999, pp. 10 - 17).
+conductual.
+(Citado por GonzÆlez V. 2002. b), p. 3). (cid:147)una con(cid:222) guraci(cid:243)n psicol(cid:243)gica que integra
+diversos componentes cognitivos, metacogni-
+Entre los aspectos que caracterizan las dife-
+tivos, motivacionales y cualidades de perso-
+rentes de(cid:222) niciones de competencias, sobresalen
+nalidad en estrecha unidad funcional, autorre-
+aquellos relacionados con las cualidades que
+gulando el desempeæo real y e(cid:222) ciente en una
+deben formarse en los individuos para lograr el
+esfera espec(cid:237)(cid:222) ca de la actividad, en corres-
+Øxito en el ejercicio de la actividad profesional
+pondencia con el modelo de desempeæo de-
+en contextos diferenciados. Muchas de estas de-
+seable socialmente construido en un contexto
+(cid:222) niciones apuntan al desarrollo de acciones en-
+hist(cid:243)rico concreto(cid:148).
+caminadas a la superaci(cid:243)n personal y al empleo
+(Castellanos B.; Llivina M. J., FernÆndez, A.
+de todos los recursos disponibles para el creci-
+M. ,2003).
+miento individual y por ende ampliar las posibi-
+lidades de cada individuo de convertirse en un (cid:147)una con(cid:222) guraci(cid:243)n psicol(cid:243)gica compleja que
+ser social comprometido con su tiempo y capaz integra en su estructura y funcionamiento
+de asimilar los retos de un mundo en constante formaciones motivacionales, cognitivas y re-
+movimiento. cursos personol(cid:243)gicos que se mani(cid:222) estan en
+A continuaci(cid:243)n expondremos otras de(cid:222) nicio- la calidad de la actuaci(cid:243)n profesional del su-
+nes sobre competencias. jeto, y que garantizan un desempeæo profesio-
+nal responsable y e(cid:222) ciente(cid:148).
+De(cid:222) niciones:
+(GonzÆlez V. ,2002).
+(cid:147)en principio se puede a(cid:222) rmar que se trata de
+(cid:147)con(cid:222) guraciones psicol(cid:243)gicas que se constitu-
+construcciones complejas de saberes y formas
+yen en una unidad integradora, tanto de los
+de acci(cid:243)n que permiten responder inteligen-
+recursos personol(cid:243)gicos como de las caracte-
+temente en diversas situaciones y distintos
+r(cid:237)sticas esenciales de la actividad espec(cid:237)(cid:222) ca
+Æmbitos(cid:148).
+que realiza el sujeto, que se construyen y re-
+(Ministerio de Educaci(cid:243)n, Ciencia y Tecnolog(cid:237)a
+construyen en el proceso dialØctico de objeti-
+de la Naci(cid:243)n. Secretar(cid:237)a de Educaci(cid:243)n, 2002).
+vaci(cid:243)n de sus capacidades(cid:148).
+(cid:147)una caracter(cid:237)stica subyacente de un individuo (Dusœ R., 2004).
+que estÆ causalmente relacionada con un ren-
+(cid:147)el concepto de competencia se genera desde
+dimiento efectivo o superior en una situaci(cid:243)n o
+las capacidades cognitivas, afectivas, socioe-
+trabajo de(cid:222) nido en tØrminos de criterios(cid:148).
+mocionales y f(cid:237)sicas. Siendo el resultado del
+(Spencer, L.M. y Spencer, S.M., 1993)
+conjunto de conocimientos, destrezas y acti-
+(cid:147)la competencia se concibe como una com- tudes que ha de ser capaz de movilizar una
+pleja estructura de atributos necesarios para persona, de forma integrada, para actuar e(cid:222) -
+el desempeæo de situaciones espec(cid:237)(cid:222) cas. Es cazmente ante las demandas de un determi-
+una compleja combinaci(cid:243)n de atributos (co- nado contexto(cid:148).
+nocimiento, actitudes, valores y habilidades) (Perrenoud, P. 2004).
+y las tareas que se tienen que desempeæar en
+Existen diferentes tipolog(cid:237)as para clasi(cid:222) car
+determinadas situaciones(cid:148).
+las competencias en la literatura mundial. En el
+(Gonczi, A. Athanasau, J., 1996).
+texto Compilaci(cid:243)n y resumen, del Dr. Ram(cid:243)n S.
+(cid:147)la capacidad para actuar con e(cid:222) ciencia, e(cid:222) - Salas Perea, 2004, podemos encontrar.
+cacia y satisfacci(cid:243)n sobre algœn aspecto de la 1“ Clasi(cid:222) caci(cid:243)n:
+realidad personal, social, natural o simb(cid:243)lica.
+● TØcnicas (conocimientos y destrezas).
+Cada competencia es entendida como la inte-
+● Metodol(cid:243)gicas (transferencia de experiencias).
+graci(cid:243)n de tres tipos de saberes: conceptual
+22 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+● Sociales (comportamiento, valores).
+s(cid:237)ntesis del ser, saber y el hacer del profesio-
+● Participativas (grupal, organizacional). nal universitario al desempeæarse como tal
+en el Æmbito social, cultural y profesional.
+2“ Clasi(cid:222) caci(cid:243)n:
+● BÆsicas (disciplina, expresi(cid:243)n, gesti(cid:243)n, Competencias bÆsicas
+autoestudio, computaci(cid:243)n, etc.) Aquellas expresiones didÆcticas de las cua-
+lidades del profesional que se forman de la
+● Esenciales (comunicaci(cid:243)n, liderazgo, co-
+s(cid:237)ntesis del ser, saber y el hacer del profesio-
+operaci(cid:243)n, creatividad, etc.)
+nal universitario y que sustentan su desem-
+● Espec(cid:237)(cid:222) cas (campo disciplinario, esfera de
+peæo ante el objeto de la profesi(cid:243)n, estÆn en
+actuaci(cid:243)n).
+la base de las competencias profesionales.
+3“ Clasi(cid:222) caci(cid:243)n:
+(Fuentes H. et al., 2004, p. 48).
+● Centrales (vinculadas a todo el personal).
+Siguiendo las consideraciones del Plan de Es-
+● De gesti(cid:243)n (esenciales para todo el perso-
+tudios D de la Carrera Licenciatura en Ciencia de
+nal dirigente).
+la Computaci(cid:243)n y a partir de la caracterizaci(cid:243)n
+● TØcnicas (Ærea propia de su desempeæo). de la carrera, la labor del profesional, que incluye
+(Salas R., 2004). los problemas propios e interdisciplinarios y el
+En el documento de trabajo aportado sobre Modelo del profesional, nos proponemos enun-
+las competencias en el nuevo paradigma educa- ciar las competencias bÆsicas que la disciplina
+tivo europeo se establece una clasi(cid:222) caci(cid:243)n sobre AnÆlisis MatemÆtico debe contribuir a desarro-
+ellas que marcan la pauta de las habilidades que llar en los estudiantes de esta especialidad.
+debiera alcanzar los titulados, y que podr(cid:237)amos
+considerar como marco de referencia. 3. COMPETENCIAS B`SICAS
+QUE LA DISCIPLINA AN`LISIS
+Competencias bÆsicas
+MATEM`TICO DEBE CONTRIBUIR
+● Cognitivas.
+A DESARROLLAR EN LOS ESTUDIANTES
+● Motivacionales y valores.
+DE LICENCIATURA EN CIENCIA
+DE LA COMPUTACI(cid:211)N
+Competencias de intervenci(cid:243)n
+● Cognitivas. Recientemente se ha de(cid:222) nido la competencia
+● Sociales. matemÆtica como: (cid:147)una capacidad basada en
+el profundo conocimiento individual para tratar
+● Culturales.
+exitosamente con situaciones que representan
+Competencias espec(cid:237)(cid:222) cas un tipo particular de reto matemÆtico(cid:148). (Niss M.,
+Habilidad para realizar tareas concretas y 2011, p. 3).
+suelen tener un carÆcter instrumental. Las competencias matemÆticas se organizan
+de la siguiente manera:
+(Tudela, P., Bajo, M.T., Maldonado, A., Moreno, S., y
+Moya, M., 2003). Poseer y responder cuestiones dentro y por
+Por otra parte, en el texto Modelo Curricu- medio de las matemÆticas:
+lar con base en Competencias Profesionales se
+● Competencia de pensamiento matemÆtico.
+enuncian tres tipos de competencias:
+● Competencia de manipulaci(cid:243)n de problemas.
+Competencias profesionales
+● Competencia de modelaci(cid:243)n matemÆtica.
+Aquellas expresiones didÆcticas de las cua-
+● Competencia de razonamiento matemÆtico.
+lidades del profesional que se forman de la
+s(cid:237)ntesis del ser, el saber y el hacer del pro- Maestr(cid:237)a en el uso del lenguaje y de las herra-
+fesional universitario al desempeæarse en el mientas matemÆticas:
+objeto espec(cid:237)(cid:222) co de la profesi(cid:243)n. ● Competencia de representaci(cid:243)n.
+Competencias generales ● Competencia para el uso del simbolismo y
+Aquellas expresiones didÆcticas de las cua- formalismo.
+lidades del profesional que se forman de la ● Comunicaci(cid:243)n matemÆtica.
+REVISTA CIENCIAS MATEM`TICAS 23
+● Competencia para el uso de ayudas y Por todo lo anterior, se proponen las siguientes:
+herramientas matemÆticas. Competencias bÆsicas:
+(˝dem, p. 4 y 5).
+1. Abstracci(cid:243)n y desarrollo del pensamiento
+Para este trabajo, debemos precisar primera- l(cid:243)gico.
+mente los criterios a seguir para caracterizar las
+2. Resoluci(cid:243)n de problemas.
+competencias bÆsicas. Segœn algunos autores,
+3. Uso de las TIC.
+Østas se relacionan con determinados aspectos
+de la educaci(cid:243)n elemental como son: la discipli- 4. Comunicaci(cid:243)n oral y escrita.
+na en el trabajo, la facilidad de expresi(cid:243)n y de 5. Trabajo en colectivo.
+gesti(cid:243)n, autoestudio y el manejo correcto de las
+Para desarrollar en los estudiantes estas
+herramientas de computaci(cid:243)n. Aunque pueden
+competencias debemos desarrollar un sistema
+ser comunes para varias profesiones tambiØn se
+de habilidades que permita que el estudiante
+pueden particularizar. Tomando en considera-
+sea capaz de:
+ci(cid:243)n los diferentes puntos de vista que apare-
+1. De(cid:222) nir.
+cen en la bibliograf(cid:237)a consultada, es necesario
+2. Demostrar.
+seæalar que a nuestro juicio la frontera precisa
+entre lo bÆsico y lo general en muchos casos no 3. Identi(cid:222) car.
+estÆ bien delimitada y estÆ condicionada al con- 4. Interpretar.
+textos espec(cid:237)(cid:222) cos de la aplicabilidad del enfoque
+5. Recodi(cid:222) car.
+por competencias.
+6. Gra(cid:222) car.
+Atendiendo a:
+7. Algoritmizar.
+PRIMERO: proponemos desarrollar las compe-
+8. Calcular.
+tencias dentro de un contexto muy espec(cid:237)(cid:222) co
+9. Controlar.
+como es el proceso de enseæanza-aprendizaje
+del AnÆlisis MatemÆtico para estudiantes de Li- 10. Fundamentar.
+cenciatura en Ciencia de la Computaci(cid:243)n, por lo 11. Modelar.
+que esta propuesta conducirÆ a la elaboraci(cid:243)n
+12. Comparar.
+de modelos con cierto grado de complejidad y
+13. Resolver.
+deberÆ estar vinculada a la capacidad de actuar
+de acuerdo al pensamiento matemÆtico; 14. Aproximar.
+SEGUNDO: la asignatura se localiza dentro de 15. Optimizar.
+los primeros aæos de la carrera, por lo que forma Como consecuencia de este sistema de com-
+parte de la preparaci(cid:243)n bÆsica y elemental del petencias enunciado anteriormente se procede-
+estudiante de esta especialidad y rÆ a elaborar una propuesta de diseæo el Plan de
+TERCERO: se insertan espec(cid:237)(cid:222) camente dentro Estudios de la disciplina AnÆlisis MatemÆtico,
+del AnÆlisis MatemÆtico para estudiantes de Li- con el (cid:222) n de que este satisfaga los requerimien-
+cenciatura en Ciencia de la Computaci(cid:243)n, por lo tos que nos hemos formulado.
+que el desarrollo de competencias vinculadas al
+uso de la computaci(cid:243)n estimula la preparaci(cid:243)n 4. CONCLUSIONES
+dentro del per(cid:222) l propio de su profesi(cid:243)n;
+A partir del estudio realizado y la determinaci(cid:243)n
+Asumimos la siguiente de(cid:222) nici(cid:243)n de compe-
+de competencias bÆsicas que la asignatura AnÆ-
+tencias bÆsicas: las competencias bÆsicas son
+lisis MatemÆtico debe desarrollar en los estu-
+aquellas expresiones didÆcticas de las cualida-
+diantes de la carrera de Licenciatura en Ciencia
+des del sujeto, en que se sintetiza el ser, saber
+de la Computaci(cid:243)n, nos proponemos hacer Øn-
+y el hacer, as(cid:237) como el desarrollo de las capaci-
+fasis en las necesidades actuales de propiciar el
+dades y aptitudes del profesional universitario y
+cambio en la funciones del docente universitario
+que sustentan el desarrollo de las competencias
+y hacer modi(cid:222) caciones sustanciales en la ela-
+profesionales, siendo estas competencias comu-
+boraci(cid:243)n de los futuros programas de estudio,
+nes a diversos profesionales. (Fuente: H. et al.,
+lo que conllevarÆ a la formaci(cid:243)n de un nuevo
+2004, p. 48).
+24 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+profesional mejor preparado y capaz de afrontar 11. Fuentes H. (2001). Teor(cid:237)a Hol(cid:237)stica y su aplicaci(cid:243)n
+los actuales y futuros retos a los que inevitable- al diseæo por competencias ICFESCRES. Santa Fe
+mente se enfrentarÆ. de BogotÆ. Colombia
+12. Fuentes H. Clavijo G.( 2002). Curr(cid:237)culo y Evalua-
+ci(cid:243)n por Competencias, Universidad de Cundina-
+5. BIBLIOGRAF˝A marca. Colombia.
+13. Fuentes H. et al. (2004). Una concepci(cid:243)n curricular
+1. Aprendizaje por competencias: un modelo a de- basada en la formaci(cid:243)n de competencias. Mono-
+batir. Documento de trabajo de Concejo Educati- graf(cid:237)a Universidad de Oriente. Formato digital.
+vo de C y L. Publicado por Concejo | 7 de octubre 14. Gonczi, A. Athanasau, J. (1996). Instrumentaci(cid:243)n
+de 2007, http://www.concejoeducativo.org/arti- de la educaci(cid:243)n basada en competencias. Pers-
+cle.php?id_article=164 pectiva de la teor(cid:237)a y la prÆctica en Australia. Edi-
+2. Apuntes tomados de (cid:147)Seminario Internacional torial Limusa, 1996.
+Curr(cid:237)culo Universitario Basado en competen- 15. GonzÆlez, J., Wagenaar, R. y Beneitone, P. (2004).
+cias(cid:148). Informe (cid:222) nal. Barranquilla, Colombia 25 y Tuning America Latina: un proyecto de las uni-
+26 de julio de 2005 versidades. Revista Iberoamericana de Educa-
+3. Colunga S. Garc(cid:237)a J. Blanco C. (2006). Re(cid:223) exio- ci(cid:243)n, 35, 151-164. Consultado el 8 de febrero de
+nes acerca de la noci(cid:243)n de competencia. www.mo- 2009 en www.relint.deusto.es/TUNINGProject/
+nogra(cid:222) as.com spanish/doc_fase1/Tuning_Educational_1.pdf
+4. Blanco L. J. (s/f). Enseæanza de la MatemÆtica 16. GonzÆlez, J. y Wagenaar, R. (Eds.) (2003). Tuning
+basada en las competencias cognitivas. Notas Educational Structures in Europe. (Informe (cid:222) nal.
+tomadas de: Seminario Itinerario Educativo de Fase 1). Bilbao. Universidad de Deusto.
+la Licenciatura de MatemÆticas. Granada, (22- 17. Hopenhayn, Ma. (2003). Educaci(cid:243)n, comunicaci(cid:243)n
+24)/01/04 Competencias espec(cid:237)(cid:222) cas en la opci(cid:243)n y cultura en la sociedad de la informaci(cid:243)n: una
+educativa de la Licenciatura de MatemÆticas. perspectiva latinoamericana. Santiago de Chile.
+Competencias en la formaci(cid:243)n inicial de profeso- CEPAL.
+res de MatemÆticas 18. GonzÆlez M. (2008). Un acercamiento a la compe-
+5. Castellanos B.; Llivina M. J., FernÆndez, A. M. tencia social del profesional de la educaci(cid:243)n tØcni-
+(2003). La gesti(cid:243)n de la actividad de Ciencia e ca y profesional en Cuba. www.monogra(cid:222) as.com
+Innovaci(cid:243)n Tecnol(cid:243)gica y la competencia investi- 19. GonzÆlez V. (2002). La orientaci(cid:243)n profesional
+gativa del profesional de la educaci(cid:243)n. Curso 18. en la educaci(cid:243)n superior. Una alternativa te(cid:243)rico
+Pedagog(cid:237)a 2003. La Habana. metodol(cid:243)gica para la formaci(cid:243)n de profesionales
+6. CMES (1998). Declaraci(cid:243)n Mundial sobre la Edu- competentes. Ponencia. 3era Convenci(cid:243)n Inter-
+caci(cid:243)n Superior en el Siglo XXI: Visi(cid:243)n y Acci(cid:243)n. nacional de Educaci(cid:243)n Superior. Universidad
+9 de octubre de 1998. Conferencia Mundial so- 2002. Ciudad Habana. Cuba.
+bre la Educaci(cid:243)n Superior. Biblioteca Digital de 20. Las competencias bÆsicas en el curr(cid:237)culo o(cid:222) cial:
+la OEI. Consultado el 8 de marzo de 2010 en: ¿interØs, peligro... o irrelevancia? Documento de
+http://www.oei.es/consultaoei.htm trabajo de Concejo Educativo de C y L. Publicado
+7. CRESALC (2008). Conferencia Regional de Edu- por Concejo | 6 de noviembre de 2007 http://
+caci(cid:243)n Superior en AmØrica Latina y el Caribe. www.concejoeducativo.org/article.php?id_arti-
+6. Chomsky, N. (1965). Aspects of the Theory of cle=218
+Syntax. Cambridge, MA: MIT Press. 21. Le Boterf, G. (1998). La ingenier(cid:237)a de las compe-
+8. Dusœ R. (2004). Estrategia didÆctica para la for- tencias, D·organisation, n” 6, p. 23.
+maci(cid:243)n cient(cid:237)(cid:222) co-profesional del estudiante de 22. Levy-Leboyer, C. (1997). Gesti(cid:243)n de las competen-
+Psicolog(cid:237)a de la Universidad de Oriente. Tesis de cias. Barcelona. Ed. Gesti(cid:243)n 2000.
+Doctorado. Santiago de Cuba. 23. Malpica M. del C. (1996). El punto de vista peda-
+9. Figueroa Rubalcava, A. E., Gilio, M. C. y GutiØ- g(cid:243)gico en la formaci(cid:243)n por competencias. CONA-
+rrez, V. E. (2008). La funci(cid:243)n docente en la uni- LEP. MØxico.
+versidad. Revista Electr(cid:243)nica de Investigaci(cid:243)n 24. Mart(cid:237)n-Barbero J. (2003). Saberes hoy: disemi-
+Educativa, Especial. Consultado el 8 de febrero naciones, competencias y transversalidades. OEI
+de 2009, en http://redie.uabc.mx/NumEsp1/ Revista Iberoamericana de Educaci(cid:243)n - Nœmero
+contenido-(cid:222) gueroagiliogutierrez.html 32. Mayo-Agosto. ISSN: 1681-5653
+10. Fuentes, H. (2001). Proceso de Transformaci(cid:243)n 25. Martinet M. Raymond D., Gauthier C. (2004).
+Curricular. Modelo Curricular con Base en Compe- Formaci(cid:243)n de docentes. Orientaciones. Compe-
+tencias Profesionales. Libro editado por la Funda- tencias profesionales. ' Gouvernement du QuØ-
+ci(cid:243)n Escuela Superior Profesional INPAHU. bec. MinistŁre de l.(cid:201)ducation, 2004. 04-00008.
+REVISTA CIENCIAS MATEM`TICAS 25
+ISBN: 2-550-42519-7. DØp(cid:244)t lØgal. BibliothŁque 36. Rico, L. (2004). La evaluaci(cid:243)n de matemÆticas en
+nationale du QuØbec. el proyecto PISA. En Pajares, R. Sanz.
+26. Miguel de M. (2005). Modalidades de Enseæan- 37. Rico L. (2004). Re(cid:223) exiones sobre la formaci(cid:243)n ini-
+za centradas en el desarrollo de competencias. cial del profesor de MatemÆticas de secundaria.
+Diciembre 2005. Orientaciones para promover el Profesorado, revista de curr(cid:237)culum y formaci(cid:243)n
+cambio metodol(cid:243)gico en el EEES. https://www. del profesorado, 8 (1).
+upc.edu/rima/grupos/grapa-evaluacion-1/re- 38. Salas R., (2004). Conceptos bÆsicos de compe-
+cursos-1/bibliografia.../modalidades-de-ense- tencias. Repœblica de Cuba. Ministerio de Sa-
+nanza/view - 29k (cid:150) lud Pœblica. Escuela Nacional de salud Pœblica.
+27. Ministerio de Educaci(cid:243)n, Ciencia y Tecnolog(cid:237)a de la Repœblica de Cuba. Ministerio de Salud Pœblica.
+Naci(cid:243)n. Secretar(cid:237)a de Educaci(cid:243)n. `rea de Forma- Escuela Nacional de Salud Pœblica
+ci(cid:243)n docente. Formaci(cid:243)n y transferencia de saberes 39. Sobrado L. (1996). Formaci(cid:243)n y profesionaliza-
+y prÆcticas docentes para la inclusi(cid:243)n educativa y ci(cid:243)n de orientadores: modelos y procesos. Revista
+social. Competencias profesionales en la formaci(cid:243)n Electr(cid:243)nica de Investigaci(cid:243)n y Evaluaci(cid:243)n Educa-
+de docentes. Encuentro Nacional de Educaci(cid:243)n Su- tiva // 1996 // Volumen 2 // Nœmero 2_3 ISSN
+perior no universitaria. Agosto 15 y 16 del 2002. 1134-4032 // D.L. SE-1138-94
+28. Niss M. (2011). Competencies in mathematics 40. Spencer, L.M. y Spencer, S.M. (1993). Compe-
+education (cid:150) potentials and challenges. What(cid:146)s tence at Work. Models for Superior Performance.
+the point? What(cid:146)s new? What do we gain? What New York. John Wiley & Sons, Inc.
+are the pitfalls? XIII Conferencia Interamericana 41. T(cid:252)nnermann, B. C. (Ed.) (2008). La educaci(cid:243)n
+de Educaci(cid:243)n MatemÆtica. XIII CIAEM-IACME, superior en AmØrica Latina y el Caribe: diez aæos
+Recife, Brasil. despuØs de la Conferencia Mundial de 1998.
+29. Ortiz, A. (2001). Las Competencias Profesionales Cali, Colombia: Ponti(cid:222) cia Universidad Javeriana,
+del Ingeniero MecÆnico. Una alternativa de Dise- Instituto Internacional para la Educaci(cid:243)n Su-
+æo Curricular. Tesis en opci(cid:243)n al grado de Doctor perior en AmØrica Latina y el Caribe-UNESCO.
+en Ciencias Pedag(cid:243)gicas. Adoptada y proclamada por la Asamblea General
+30. Plan de Estudios D. Licenciatura en Ciencias de en su resoluci(cid:243)n 217 A (III) del 10 de diciembre
+la Computaci(cid:243)n. Documento base. 2008. de 1948. Consultado el 8 de febrero de 2009 en:
+31. Perrenoud, P. (2004). Diez nuevas competencias http://www.cres2008.org/common/docs/doc_
+para enseæar. Barcelona. Gra(cid:243). base/Libro%20Educacion%20Superior.pdf
+42. Tob(cid:243)n, S. (2002). Las competencias en el sistema
+32. Pinto L. (1999). Curr(cid:237)culo por competencias: ne-
+educativo: de la simplicidad a la complejidad. Co-
+cesidad de una nueva escuela. En Revista TAREA
+lombia.
+No. 43 (Marzo 1999, pp. 10 - 17) Lima. Editorial
+43. Tudela, P., Bajo, M.T., Maldonado, A., Moreno, S.,
+TAREA.
+y Moya, M. (2003). Las. Competencias en el Nuevo
+33. Puig, L. (2008). Sentido y elaboraci(cid:243)n del com-
+Paradigma Educativo para Europa. www.ugr.es/
+ponente de competencia de los modelos te(cid:243)ri-
+~ptutoriasmelilla/archivos/Accion%20tutorial.
+cos locales en la investigaci(cid:243)n de la enseæanza y
+pdf
+aprendizaje de contenidos matemÆticos espec(cid:237)(cid:222) -
+44. Zabalza, M. L. (2003). Competencias docentes del
+cos. PNA, 2(3), 87-107.
+profesorado universitario. Calidad y desarrollo
+34. Recio, T. y Rico. L. (2005) El Informe PISA 2003 y
+profesional. Madrid: Narcea.
+las matemÆticas. El Pa(cid:237)s 24.01.2005.
+45. Zabalza, M.A. (2004). Los cinco miuras de la
+35. Rico, L. (2000). Aproximaci(cid:243)n a un modelo de eva-
+convergencia europea. Cr(cid:243)nica Universitaria. En
+luaci(cid:243)n: el proyecto PISA. Madrid: Ministerio de
+http://www.universia.es/portada/actualidad/
+Educaci(cid:243)n, Cultura y Deporte.
+noticia.jsp?noticia=76168

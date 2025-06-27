@@ -1,0 +1,830 @@
+OriginalResearch/ArtículoOriginal CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35
+Received(Recibido):02-05-2024,Revised(Revisado):21-06-2024
+Accepted(Aceptado):04-07-2024,Online(Enlínea):18-07-2024
+Neural networks to remove specular reflections in
+colposcopic images
+Redes neuronales para eliminar reflejos especulares
+en imágenes colposcópicas
+Lauren Jimenez-Martin1 , Daniel Alejandro Valdés Pérez2 , Ana Margarita Solares
+Asteasuainzarra3 , Ludwig Leonard Méndez4 , Marta Lourdes Baguer Díaz-Romañach*5
+Abstract Colposcopic images of the cervix are crucial for cervical cancer early detection, but specular
+reflections(brightareas)intheseimagescanabstrusekeyportionsofthem,potentiallyleadingtomisdiagnosis.
+This paper proposes a neural network-based strategy to address this challenge. The strategy tackles the
+unknownnatureofgroundtruthforspecularregionsbytrainingthenetworktorestorehiddenanatomicaldetails
+incolposcopicimages. Specularreflectionsarefirstidentifiedandremoved,andthenthetrainednetworkfills
+in the missing information. The conducted experiments demonstrate successful specular reflection removal
+in most images while maintaining color distribution and content. A specialist in Cervix Pathology confirmed
+theimprovementvisibilityofanatomicalandphysiologicalelementsaftertheimageprocessing,validatingthe
+potentialofthisapproachforenhancedcervicalcancerdiagnosis.
+Keywords: cervicalcancer,colposcopicimage,specularreflection,inpainting,supervisedlearning.
+Resumen Las imágenes colposcópicas del cuello uterino son cruciales para la detección temprana de
+cáncer,perolosreflejosespecularesenestasimágenespuedenocultarporcionesclavesdeellas,yconducir
+a un diagnóstico erróneo. Este artículo propone una estrategia basada en redes neuronales para abordar
+este desafío. La estrategia aborda el desconocimiento de la "ground truth" de las regiones especulares,
+entrenandounaredpararestaurardetallesanatómicosocultosenlasimágenes.Paraello,primeroseidentifican
+yeliminanlosreflejosespeculares,yluegolaredentrenadacompletalainformaciónfaltante.Losexperimentos
+realizadosdemuestranlaeliminaciónexitosadelreflejoespecularenlamayoríadelasimágenes,manteniendo
+la distribución y el contenido del color. Un especialista en patología de cuello uterino confirmó una mejor
+visibilidaddeloselementosanatómicosdespuésdelprocesamiento,validandoelpotencialdeesteenfoque
+paramejorareldiagnósticodelcáncerdecuellouterino.
+PalabrasClave:cáncerdecuellouterino,imagencolposcópica,reflexiónespecular,aprendizajesupervisado.
+MathematicsSubjectClassification:68U10,68T99.
+1FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:l.jimenez@matcom.uh.cu,
+2FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:daniel.valdes@matcom.uh.cu
+3HospitalGinecobstétricoUniversitario“RamónGonzálezCoro”,LaHabana,Cuba.Email:msolares@infomed.sld.cu
+4FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:lleonart@matcom.uh.cu
+5FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:mbaguer@matcom.uh.cu
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor:NombredelEditordelaSección,Institución,País.(estecampolomodificaeleditor)
+Citation (Citar como): Jimenez-Martin, L., Valdés Pérez, D. A., Solares Asteasuainzarra, A. M., Leonard,
+Méndez,L.,&BaguerDíaz-Romañach,M.L.(2024).Neuralnetworkstoremovespecularreflectionsincolposco-
+picimages.CienciasMatemáticas,36(Único),21–34.DOI:https://doi.org/10.5281/zenodo.13916129.Available
+inhttps://revistas.uh.cu/rcm/article/view/9137.
+Introduction so reconstructing missing information by only considering
+neighboringpixelvalueisnotrealistic.Theysuggestapplying
+Cancer is a serious health problem due to its high inci-
+themulti-resolutioninpaintingtechniqueproposedin[20]to
+denceandmortalityratesintheworld. Inparticular,cervical
+restoretheSRsbyblockswithdifferentbrightnesslevelsand
+cancer is one of the most common that affects women and
+applyinghistogramequalizationtohomogenizeeachrestored
+isthefourthleadingcauseoffemalemortalityfromcancer
+blockandreducetheeffectofdividingtheSRsintoseveral
+worldwide[4]. Toincreasetheprobabilityofsuccessfultreat-
+blocks. ByconsideringthecolposcopicimagewithSRsas
+ment,earlydetectionofthediseaseisnecessary[19]. Before
+amatrixwithunknownentries,[6]proposesestimatingSR
+theappearanceofcervicalcancer,abnormalgrowthofsqua-
+regionsemployingNon-NegativeMatrixFactorization. How-
+mouscellsoccursinthecervicalepitheliumcalledcervical
+ever, the quality of the reconstruction strongly depends on
+intraepithelialneoplasia. Theseprecancerousandcancerous
+theinitialparametersofthealgorithm. Theauthorsof[22]
+cellscanbedetectedthroughacolposcopy,avisualinspec-
+proposed inpainting of SRs in colposcopic images with an
+tionofthecervixbyaclinicalexamination[15]. Thistestis
+exemplar-basedmethod.
+performedbyusingacolposcopethatcapturescolorimages
+Inrecentyears,therehasbeenanincreasingamountoflit-
+outside the cervix. Once regions suggestive of intraepithe-
+eratureonConvolutionalNeuralNetworks(CNNs)toperform
+liallesionorcervicalcancerhavebeenidentified,atargeted
+imageinpaintingtasks. CNNsareusedasafeatureextrac-
+biopsy is performed to confirm the diagnosis, which con-
+tionmethodthroughtheprocessofconvolution. Particularly
+tributestodevelopingtreatmentstrategiesincorrespondence
+inmedicalimagerestoration,theuseofneuralnetworksto
+withthesizeandlocationofthelesions.
+solveinpaintingproblemshasbeenincreasingduetothegood
+The cervix is a humid area and, when the light of the
+performancetheyhaveshownonimagesfromotherdomains.
+colposcopefallsonit,specularreflections(SRs)mayappear
+The authors of [1] chose to incorporate YOLOv3 with spa-
+intheimage. Specularreflectionsraisechallengingproblems
+tialpyramidpooling(YOLOv3-spp)forrobustdetectionand
+inmedicalimageanalysis,asitdegrades(partiallyorentirely)
+improvedinferencetimeforendoscopicartifacts,whichmay
+the information in the affected pixels [10], which can lead
+affectthephysician’svisualassessment,andproposetheuse
+tomisdiagnosis. Therefore,itisimperativetofindeffective
+of a Conditional Generative Adversarial Network (CGAN)
+methodsforeliminatingtheSRsandestimatingthemissing
+torestoretheaffectedareasintheimage. TheuseofCNN
+anatomicalregionunderthebrightzones. Onthisneed,the
+combinedwithadversarialtraining[7]hasproducedexcellent
+presentworkisfocused.
+resultsoninpaintingtasks,withperceptualsimilaritytothe
+Previousstudiesoncolposcopicimageprocessinghave
+originalimage. Theauthorsof[14]proposeanewarchitec-
+allowedthedetectionofSRregions[5,13,16]. Oncethese
+turebasedongenerativeadversarialnetworks,Reconstruction
+regionsareidentified, SRsremovalcanbetreatedasanin-
+Global-LocalGAN(Recon-GLGAN),formagneticresonance
+painting problem, which consists of filling in the missing
+imagereconstruction.However,despitethegoodperformance
+regionsbasedontheremainingimagedata[21]. Therestored
+ofthedeeplearningalgorithmsintheseinpaintingtasks,they
+region must be consistent with the cervix anatomy. Differ-
+havenotbeenappliedtospecularreflectionremovalincolpo-
+entapproacheshavebeentakentodealwithSRsremovalby
+scopicimages.
+inpainting methods in colposcopic images. The authors of
+In this paper, we present a new approach to eliminate
+[10]proposedfillingintheaffectedregionsbyinterpolating
+specularreflectionsbasedontraininganetworktolearnhow
+theRGB(Red,Green,Blue)colorcomponentsindividually
+to restore any hidden region of colposcopic images. Once
+fromthesurroundingregionsbasedonLaplace’sequationand
+theSRsareidentified,theyareremovedfromtheimage,and
+modifyingtheintensitycomponentoftheHSI(Hue,Satura-
+thepreviouslytrainednetworkisusedtofulfillthesedeleted
+tion,Intensity)colorspacetransformedimage. In[25],itwas
+areas. Weuseaconvolutionaldenoisingautoencodertrained
+assumedthatthehighlightsformedonthemoistsurfaceofthe
+forthecompletiontaskusingasmalldatabase,contrarytothe
+cervixareverysmallandthecolorunderneatheachhighlight
+beliefthat,foroptimalperformance,largetrainingdatasets
+isnearlyconstantandsimilartothecolorofthepixelsinthe
+areneededformodelsbasedondeeparchitectures.
+immediate surroundings. So, it was proposed to fill in the
+This article is organized as follows. The next section
+SRregionsbypropagatingthesurroundingcolorinformation.
+describestheneuralnetworkarchitectureselectedtoeliminate
+AfterthecolorvalueofthedetectedSRpixelsissettozero,an
+specular reflections in colposcopic images, and details the
+iterativeprocessreplaceseachpixelvalueinsidetheSRregion
+strategyfollowedforitstraining. Thefourthsectionpresents
+bythemeancolorofitsnon-zeroneighbors. Asimilaridea
+theexperimentalprocesscarriedoutaswellasaqualitative
+wasfollowedin[23],butthepixelsinsidetheSRregionwere
+andquantitativeanalysisoftheobtainedresults.
+replaced by the weighted color values of their neighboring
+pixelsbasedontheaveragegradientdirectionoftheSRre-
+gion. Allthesemethodsarebasedonthegradualpropagation Highlights
+ofcolorsfromedgestowardthespecularreflectioncenter,and
+theyprovidesatisfactoryresultswhenapplyingtosmallareas. Convolutionalneuralnetworksforspecularreflections
+In contrast, [13] argues that SR regions are typically large, removalandestimationofunobservedcervixportions.
+Neuralnetworkstoremovespecularreflectionsincolposcopicimages 23
+Supervisedlearningtoaproblemwithnogroundtruth Atheareaofthecervixfocusedwiththecolposcope
+previousknowledge.
+ItheimageofAcapturedbythecolposcope,i.e.,image
+Reformulation of the problem to restore any hidden withSRregions.
+regionofcolposcopicimages.
+I theidealimageshowingthecompletecontentofA,
+e
+Satisfactorymedicalassessmentofspecularreflection i.e.,imagewithouttheSRregions.
+removal,andanatomical-physiologicalcervixrestora-
+Target: FromimageI,obtainimageI usingsupervisedlearn-
+tion. e
+ing.
+Potentialtoimproveearlydetectionofcervicalcancer. Thesupervisedtrainingofaneuralnetworkdependson
+knowinginadvancethetrainingsetconsistingofN pairs(x,
+i
+y)ofinputsandoutputs,i=1,···,N. Adjustingthistothe
+1. Material and methods i
+problemtobesolved,thetrainingsetwouldhaveasinputx a
+i
+Thissectiondealswiththespecularreflectionsremoval colposcopicimageIandasoutput(groundtruth)y theimage
+i
+incolposcopicimagesusingdeeplearningtechniques. Fig- I .
+e
+ure1presentstwotypicalcolposcopicimagesfromdifferent However,thepresenceofSRsisaninherentcharacteris-
+patientsshowinglargedifferencesincolorandshapeofthe ticofcolposcopicimagesproducedbythereflectionofthe
+cervicesandthepresenceofscatteredbrightness(SRs). After colposcope light on the wet areas of the cervix. Since the
+considering the main limitation of the standard supervised areasandthehumiditylevelaredifferentforeachpatient,the
+learningforeliminatingSRsinacolposcopicimage,anew distributionofSRsintheimagesisheterogeneous(seeFigure
+strategyforapplyingasupervisedlearningalgorithmisintro- 1). Moreover,forapatient,theincidenceofthecolposcope
+duceddespitenotknowingthegroundtruthoftheproblemto light on an area A at different angles may result in images
+besolved. I with SRs located on different regions, but it would never
+resultinanimageIeshowingthecompletecontentofA,as
+seen in Figure 2. Therefore, for image I of the area A, the
+correspondinggroundtruthI isunknown. Forthisreason,
+e
+applyingsupervisedtrainingofaneuralnetworkdirectlyto
+solvethisproblemisnotfeasible.
+Figure1. Colposcopicimageswithspecularreflexionsfrom
+differentpatients[Imágenescolposcópicasconreflexiones
+especularesdediferentespacientes].
+1.1 Characterization and detection of specular re- Figure2. Colposcopicimageswithspecularreflexionsofthe
+flections samepatient[Imágenescolposcópicasconreflexiones
+Pixels belonging to regions with SRs are characterized especularesdelmismopaciente].
+by high intensity (Int) and low color saturation (Sat) [11].
+These characteristics allow a preliminary identification of
+suchregionsbyapplyingathresholdcriteriontotheseimage 1.3 Strategyforapplyingasupervisedlearningal-
+values[25]. Theauthorsof[16]studieddifferentapproaches gorithm
+to detect SR regions on Cuban colposcopic images. They Consideringtheabove-mentionedpeculiaritiesoftheprob-
+proposedanalgorithmbasedontheapplicationofthresholds lemtosolve,inthissection,theproblemofSRsremovalin
+tothemaximumintensityInt max oftheimageregardlessof colposcopicimagesusingsupervisedlearningisreformulated,
+color saturation. The pixels with intensity higher than the thearchitectureandtrainingofthenetworkdefined,andthe
+thresholdswereclassifiedasSR.Thisalgorithmwaschosen useofthenetworktosolvetheproblemdescribed.
+todetecttheSRregioninthiswork. Reformulationoftheproblemtosolve. Letusdenoted
+by:
+1.2 Peculiarities of the problem to be solved and
+feasibilityofsupervisedtraining Atheareaofthecervixfocusedwiththecolposcope
+Formulationoftheproblemtobesolved.Letusdenoted ItheimageofAcapturedbythecolposcope,i.e.,image
+by: withSRregions.
+Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35
+Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L. https://revistas.uh.cu/rcm/article/view/9137
+https://doi.org/10.5281/zenodo.13916129
+24 Neuralnetworkstoremovespecularreflectionsincolposcopicimages
+′ ′′
+I andI modificationsofimageI suchthatthereare Type Kernel Dilation Stride Filters
+′′
+hidden regions in the image I that are known in the convolution 5×5 1 1×1 32
+′
+imageI . convolution 3×3 1 2×2 64
+convolution 3×3 1 1×1 64
+Targets: convolution 3×3 1 2×2 128
+convolution 3×3 1 1×1 128
+1. Train a network for learning to complete the hidden
+convolution 3×3 1 1×1 128
+′′ ′
+contentinI bytryingtoobtainI .
+dilatedconvolution 3×3 2 1×1 128
+dilatedconvolution 3×3 4 1×1 128
+2. Usethetrainednetworktocompletetheregionswith
+dilatedconvolution 3×3 8 1×1 128
+SRsinacolposcopicimageD,whichsolvestheoriginal
+dilatedconvolution 3×3 16 1×1 128
+problem.
+convolution 3×3 1 1×1 128
+convolution 3×3 1 1×1 128
+Sincethenetworkistrainedtorestoreanyhiddenregion
+deconvolution 4×4 1 1/2×1/2 64
+ofcolposcopicimages,itisexpectedthatthenetworkwillbe
+convolution 3×3 1 1×1 64
+abletoreconstructanyunobservedanatomicalcervixportion
+deconvolution 4×4 1 1/2×1/2 32
+undertheSRregions. convolution 3×3 1 1×1 16
+′ ′′
+Imagepre-processing. ThemodifiedimagesI andI for output 3×3 1 1×1 3
+constructingthedatasetoftheabove-reformulatedproblem
+Table1. Architectureofthenetwork. Theactivationfunction
+areconstructedasfollows:
+ofeachlayerisaRectifiedLinearUnit(ReLU),exceptthe
+lastone. Thelastlayer(output)isaconvolutionallayerwith
+1. TheregionswithSRsareidentifiedbyusingthealgo-
+asigmoidfunctiontonormalizetheoutputtothe[0,1]range
+rithmof[16],asmentionedinSection1.1,andabinary
+[Arquitecturadelared. Lafuncióndeactivacióndecada
+m×nmaskM (realmask)wasassociatedwiththem.
+r capaesunaunidadlinealrectificada(ReLU),exceptola
+Theentry(i,j)oftherealmaskofacolposcopicimage
+última. Estaesunacapaconvolucionalconunafunción
+I isdefinedas:
+m×n sigmoideparanormalizarlasalidaalrango[0,1]].
+(cid:26)
+0 ifthepixelI hasSR
+[M ] = ij ,
+r ij 1 otherwise
+theglobalandlocalcontextdiscriminatorsareauxiliarynet-
+′ worksusedexclusivelyfortraining. Unlikeotherapproaches
+where i=1,···,m; j=1,···,n. The image I =I∗
+focusedonimagegeneration,theirmethoddoesnotgenerate
+M is constructed, where the symbol ∗ denotes the
+r
+imagesfromnoise.
+Hadamardproductfortwomatrices. SeeFigure3cen-
+To solve the reformulated problem specified in Section
+ter.
+1.3, we will use a network architecture based on the gener-
+2. FromtheregionswithoutSRsofI,regionsofinterest ative network architecture of [9]. This network follows an
+will be selected as hidden regions (HR), and a new encoder-decoderstructurethatinitiallydecreasestheimage
+m×nmaskM (hiddenmask)willbeassociatedwith resolution before its further processing, reducing memory
+h
+them. Thatis, usageandcomputationtime. Subsequently,thenetworkout-
+putisrestoredtotheoriginalresolutionusingdeconvolution
+(cid:26)
+0 ifthepixelI ∈HR
+[M ] = ij , layers(theoppositeprocessofaconvolutionfilter). Thereso-
+h ij 1 otherwise
+lutionisdecreasedtwiceusingconvolutionsofstride1/4of
+theoriginalsize,whichisimportanttogenerateanon-blurred
+′′ ′
+wherei=1,···,m; j=1,···,n. Then,I =I ∗M is
+h textureinthemissingregions[9]. Usingdilatedconvolutions
+constructed. SeeFigure3right.
+atlowerresolutions,themodelcaneffectivelyprocesslarger
+input image areas when computing each output pixel than
+3. Applyingsteps1and2onasetofNcolposcopicimages
+′′ ′ with standard convolutions [9]. The model also has batch
+I ,weconformthetuple(I ,I )forthedataset,where
+p p p
+normalizationlayersafterallconvolutionallayersexceptfor
+p=1,2,···,N.
+thelastone.
+1.3.1 Architectureoftheneuralnetwork Specifically,weusetheabove-describednetworkarchitec-
+Theauthorsof[9]proposeaGenerativeAdversarialNet- turewiththefollowingmodifications. Thenumberoffilters
+work (GAN) model that improves the results obtained by usedineachlayerisreducedbyhalftodecreasethenumberof
+[3, 8, 18] for solving image inpainting problems arisen in operationstobeperformedandthecomputationtime. Table
+different(non-medical)domainssuchasfacesandlandscapes. 1showsthefinalarchitectureofthenetwork. Insteadofan
+Themodelarchitectureby[9]comprisesthreenetworks: a RGBimagewithamaskrepresentingtheregiontobefilled,
+generator,aglobalcontextdiscriminator,andalocalcontext themodelinputisanRGBimagewithtwomasks. Thefirst
+discriminator. Thegenerativenetworkisfullyconvolutional maskidentifiestheblackpixelsoftheinputimagethatshould
+andisusedtofillinthemissingregionsoftheimage,while beretainedintheoutputimage. Thesecondmaskidentifies
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35 Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M.,
+https://revistas.uh.cu/rcm/article/view/9137 Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L.
+https://doi.org/10.5281/zenodo.13916129
+Neuralnetworkstoremovespecularreflectionsincolposcopicimages 25
+′ ′′ ′′
+Figure3. ExampleofthemodifiedimagesI andI ofI. TheblackregionsmarkedinsidetheredcirclesinI arethehidden
+′ ′′
+regions(HR)[EjemplodelasimágenesmodificadasI yI deI. Lasregionesnegrasmarcadasdentrodeloscírculosrojosen
+′′
+I sonlasregionesocultas(HR)].
+theblackpixelsoftheinputimagethatmustberestored. Both RGBimages,weusetheobjectivefunction:
+masksarebinaryarraysoftheimagesize,wherethepositions
+withvalue0willbethoserepresentingtheblackpixels,and1 1 ∑ m ∑ n ∑ 3 (h (I ′′ )−I ′ )2. (1)
+therestoftheimage. Itisintendedthat,fromthesepatterns, m×n×3 θ ijk ijk
+i=1j=1k=1
+the network learns which areas to copy and which ones to
+restore. Ageneralrepresentationofthismodelcanbeseenin 1.3.2 Imageselectionandhiddenregions
+Figure4. We use a colposcopic imaging database from the Uni-
+To restore hidden regions of a colposcopic image I the versityGynecobstetricHospital“DiezdeOctubre”andthe
+input image is I ′′ defined in Section 1.3. The first mask is UniversityGynecobstetricHospital“RamónGonzálezCoro”.
+the real M of I, and the second is the hidden M . On the Thisdatabasecontainsseveralimages(fromdifferentangles)
+r h
+otherhand,torestoreanatomicalcervixportionundertheSR ofeachpatient. Theimageswerepartitionedintothreesets,
+regionsinacolposcopicimage I, theinputimageisI ′ , the training,validation,andtestsothattheydidnotshareimages
+firstmaskiscomposedofamatrixfullof1,andthesecond of the same patient. This partition guarantees the indepen-
+maskistherealM ofIrepresentingthepixelstoberestored. dencebetweenthedataofthedifferentsets.
+r
+TheoptimizerusedintrainingistheAdadeltaalgorithm Frequently,colposcopicimagesmaycontainpartofthe
+[24],whichautomaticallysetsalearningrateforeachweight speculum1(seeFigure5)orareasoutsidethecervixthatare
+inthenetwork. Adadeltaoptimizationisastochasticgradient not subject to clinical studies. For delimiting the cervical
+descent method that is based on adaptive learning rate per areainthistypeofimage,severalsegmentationmethodshave
+dimensiontoaddresstwodrawbacks: beenproposed[10,12,2]. However,theyassumethattheSR
+regionshavebeenpreviouslyeliminated,soitisnotrealisticto
+1. Thecontinualdecayoflearningratesthroughouttrain- usetheminthisresearch. Sincehiddenregionsmustbeinside
+ing,implyinganincorrectupdateoftheweights. Inthe thegynecologicalinterestareas,theywereselectedmanually
+worstcase,thismaypreventtheneuralnetworkfrom byvisualinspection. Themanualselectionwascarriedout
+continuingitstraining[17]. withthehelpofaprogramthatdisplaystheimagesandallows
+selectingthehiddenpixels. Theprogramalsoautomatically
+2. Theneedforamanuallyselectedgloballearningrate generatesthehiddenmaskM correspondingtothepreviously
+h
+[24]. selectedHRs.
+Asmentionedabove,thebrightpixelsdonothaveafixed
+Thisalgorithmadaptslearningratesbasedonamovingwin-
+distribution and concentration in the images (see Figures 1
+dowofgradientupdates,ratherthanaccumulatingallprevious
+and2). Therefore,theshapeandconcentrationofthehidden
+gradients. Inthisway,Adadeltacontinuestolearnevenwhen
+regions were created heterogeneously. To ensure a varied
+manyupdateshavebeenmade.
+representationofdifferentfeaturesofthecervixduringthe
+The loss function used for training the network is the
+network training process, the pixels of the hidden regions
+MeanSquaredError(MSE):
+werechosenfromdistinctiveregionsofthecervixdisplayed
+intheimages(asthosewithlesions,bloodvessels,distinct
+||h (x)−y|| .
+θ 2 textures,andcleanareas)aswellasfromotherareasofthe
+imagesrandomlyselected.
+defined by the Euclidean norm ||·|| , the obtained output
+2
+h θ (x)ofthenetworkfortheinputx,andtheexpectedoutput 1Medicalinstrumentthatholdsopentheentranceorificesofdifferent
+y.Sinceinourcaseweintendtocomputethedistancebetween bodycavitiessuchasthevaginatoperformexaminations.
+Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35
+Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L. https://revistas.uh.cu/rcm/article/view/9137
+https://doi.org/10.5281/zenodo.13916129
+26 Neuralnetworkstoremovespecularreflectionsincolposcopicimages
+Figure4. Diagramofthenetworkarchitecture[Diagramadelaarquitecturadered].
+Figure5. Exampleofacolposcopicimagecontainingpartof
+thespeculum[Ejemplodeimagencolposcópicaquecontiene
+partedelespéculo].
+Figure6. R3networklearningcurves[Curvasde
+1.4 Implementationandcomputationalissues aprendizajedelaredR3].
+ThestrategyproposedinSection1.3wasimplementedin
+Python3.7withtheuseofthedeeplearningpackageKeras
+R3presentsthelowestvalidationerror,itwasselectedtore-
+ontopofthemachinelearningplatformTensorFlow. Inaddi-
+storethehiddenregions. Figure6showsR3learningcurves.
+tion,GoogleColaboratory(alsoknownasColab)wasusedto
+It can be appreciated that there is no overfitting as training
+acceleratethetrainingprocess. ThetypesofGPUsavailable
+andvalidationcurvesbehavesimilarly. Toevaluatetheperfor-
+inColaboftenincludeNvidiaK80s,T4s,P4s,andP100s,but
+manceoftheselectednetworkregardingtheothers,aseries
+theyvaryovertime.
+ofqualitativeandquantitativecomparisonsarecarriedout.
+Byvisualinspectionofthecolposcopicimagesrestored
+2. Experimentation, results and
+bythedifferentnetworks,certainqualitativedifferencescan
+discussion
+beobserved,forexample,inthecolortonality.Figure7shows
+When initial values of the weights of a neural network acomparisonoftherestoredimagesobtainedbythenetworks
+aretakenrandomly,twonetworkstrainedwiththesamedata withthelowestR3andhighestR9validationerrors(seeTable
+setandthesamenumberofepochsmayresultinnetworks 2).
+withdifferentfinalweights,thuswithdifferentgeneralization Thecolorofapixelinacolposcopicimagedependson
+errors. For this reason, 16 networks were trained with the thecombinationoftheintensitiesofitsthreechannels(RGB).
+architectureproposedinSection1.3.1,thesamedataset,and To analyze the restoration performed on each channel, the
+240epochs.Withthepurposeofrestoringhiddenregions,120 histogramsoftheirpixelintensitieswerecomparedindepen-
+imagesfromthecolposcopicimagedatabasewereselectedto dently. Figure8, toprow, showstheresultsobtainedwhen
+constructthetrainingset,20forthevalidationsetand22for restoringthesameimagewiththenetworksR3,R5,andR9
+thetestset. Allimageshave720×240pixels. Thelast22 (extremeandcentralvaluesofTable2). Intheremainingrows
+imageswerealsousedtocreatetherealtestsetforevaluating oftheFigure,histogramsofthepixelintensitiescorrespond-
+theperformanceofthetrainednetworktorestoreSRregions. ingtoexpectedoutputandobtainedoutputimagesforeach
+ThesesetswerearrangedinthewayexplainedinSection1.3. network,separatedbychannels,aresuperimposed. Itcanbe
+seen that there is a considerable variation in the estimated
+2.1 Performanceofthetrainednetworkstorestore pixelvaluesofeachchannelamongthethreenetworks. The
+hiddenregionsofcolposcopicimages distributionofintensitiesestimatedineachchannelbytheR3
+An identifier Rx was assigned to each neural network, networkistheclosesttotheexpecteddistribution. Byconsid-
+wherexisthenumberassociatedwiththenetwork. Table2 eringthewholetestsetofimages,thetesterrorsofthenet-
+shows,inincreasingorder,thevalidationerrorscorresponding worksR3,R5,andR9are0.0037±0.0007,0.0045±0.0008,
+toeachnetwork. Takingintoaccountthatthetrainednetwork and0.0058±0.0009,respectively,atthe95%ofsignificance
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35 Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M.,
+https://revistas.uh.cu/rcm/article/view/9137 Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L.
+https://doi.org/10.5281/zenodo.13916129
+Neuralnetworkstoremovespecularreflectionsincolposcopicimages 27
+ID R3 R14 R4 R2 R6 R10 R1 R7 R5 R12 R15 R11 R8 R0 R13 R9
+VE×10−3 4.12 4.34 4.41 4.52 4.59 4.60 4.66 4.68 4.76 4.96 5.16 5.37 5.44 5.46 5.50 5.77
+Table2. Listoftrainednetworks,identifiedbyanID,andtheircorrespondingvalidationerror(VE)[Listaderedesentrenadas,
+identificadasporunID,ysucorrespondienteerrordevalidación(VE)].
+Figure7. ComparisonoftherestoredimagesobtainedbythenetworksR9andR3withthehighestandlowestvalidationerror,
+respectively[ComparacióndelasimágenesrestauradasobtenidasporlasredesR9yR3conmayorymenorerrorde
+validación,respectivamente].
+Figure8. Resultobtainedaftercompletingacolposcopicimageusingthenetworkwithlowest(R3,left),medium(R5,center),
+andhighest(R9,right)validationerror. Thetoprowshowstheexpectedandrestoredoutputimagesforeachnetwork,whilethe
+remainingrowsshowthehistogramsofcolorintensitiesperchannelcorrespondingtotheexpectedoutputimage(inred,green,
+andblue)andobtainedbyeachnetwork(gray,yellow,brown)[Resultadoobtenidotrascompletarunaimagencolposcópica
+utilizandolaredconmenor(R3,izquierda),medio(R5,centro)ymayor(R9,derecha)errordevalidación. Lafilasuperior
+muestralasimágenesdesalidaesperadasyrestauradasparacadared,mientrasquelasfilasrestantesmuestranlos
+histogramasdeintensidadesdecolorporcanalcorrespondientesalaimagendesalidaesperada(enrojo,verdeyazul)y
+obtenidaporcadared(gris,amarillo,carmelita)].
+Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35
+Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L. https://revistas.uh.cu/rcm/article/view/9137
+https://doi.org/10.5281/zenodo.13916129
+28 Neuralnetworkstoremovespecularreflectionsincolposcopicimages
+level. Observethattheconfidenceintervals[0.0030,0.0044] Image/Errors ChannelRed ChannelGreen ChannelBlue
+and[0.0049,0.0067]fortheerrorofthenetworksR3andR9 Image1 208 186 210
+on the test set have null intercept, meaning that there is a Image2 225 198 229
+Image3 186 182 208
+significantdifferenceintheircapacityofgeneralization,i.e.,
+Image4 224 193 229
+ofrestorationofhiddenregionsofthecolposcopicimages.
+Image5 231 187 209
+Inwhatfollows,theperformanceofthetrainednetwork Image6 208 196 218
+Image7 194 237 208
+R3torestorethehiddenregionsinimagesofthetestsetis
+Image8 184 165 193
+analyzedindetail.
+Image9 188 173 199
+Image10 202 213 213
+Figure 9 shows fine details in the estimation of various Image11 186 175 192
+Image12 196 187 226
+distinctiveregionsofarestoredimage. Thetoprowpresents
+Image13 198 182 235
+the input image to the network (left), the expected output
+Image14 216 214 227
+of the network (center), and the output obtained from the Image15 192 210 211
+network(right). Theremainingrowsshowareasofinterest Image16 238 228 251
+withintheimagesasmentionedabove,emphasizingsomeof Image17 207 203 219
+Image18 203 200 214
+their characteristics. These areas are shown in the column
+Image19 199 192 196
+correspondingtotheirimage.Rows2,4,and5containhidden Image20 186 182 189
+regionsandtheirrespectiverestorations. Row3enhanceshow Image21 224 245 245
+thetissuefeaturesoutsidetheunknownregionsaremaintained Image22 190 198 206
+duringtherestoration. Average 203.8 197.0 214.8
+Minimum 184 165 189
+Figure10,toprow,presentsarestoredimagebythenet-
+Maximum 238 245 251
+workR3anditscorrespondingexpectedimage,whereastheir
+Table3. Maximumabsoluteerror(2)inthepixelsper
+histograms of the pixel intensity per channel are shown in
+channelofeachrestoredimageofthetestset,usingthe
+theremainingrows. Observethesuitablereproductionofthe
+networkR3withthelowestvalidationerror[Errorabsoluto
+expected intensities bythe network R3 for allthe intensity
+máximoenlospíxelesporcanaldecadaimagenrestaurada
+values higher than 0. Note also that there is a higher error
+delconjuntodeprueba,utilizandolaredR3conelmenor
+whenrestoringthepixelswithintensity0inthethreechan-
+errordevalidación].
+nelsoftheimages. Lookingindetailattheblackareasinthe
+expected output image (EO) and comparing them with the
+correspondingareasintherestoredoutputimage(RO),some themeansquareerror(1)doesnotprovideagoodmeasureof
+scatteredpixelscanbeseenaroundtheblackareasinEO,but thequalityoftherestoredimage.
+notinRO.Thisrevealsthatblackpixels(intensity0inthe Tofurtheranalyzetheexistinginaccuracyintheimage
+three channels) take color (intensities between 0 and 255), restoration,weusethesupremumnormtomeasurethedif-
+and vice versa, pixels with colors become black. This is a ferencebetweeneachchanneloftheexpectedandrestored
+predictedresultthatrevealscertainimpressionsofthenetwork outputimages. Thatis,fortheexpectedandrestoredoutput
+′ ′
+torestorethecolorofthepixelsintheabruptborderbetween images I and Ir, the error e k between the k-th channels I k
+theblackandthecoloredregions. However,asseenfromthe andIr k ,respectively,iscomputedas:
+images on the top row of the Figure, these inaccuracies do
+′
+notproducesomeappreciablevisualdistortionintherestored e k = max |I ijk −Ir ijk |. (2)
+i=1,...,m,j=1,...,n
+image.
+The range of these errors for each channel is presented in
+AsmentionedinSection1.3.1,thetrainednetworksuse
+Table3forthe22restoredimagesofthetestset. Thisreveals
+aslossfunctionthemeansquareerror(1),whichquantifies
+that,foreachimageinthetestsetrestoredbythenetworkR3,
+the average of the errors between the three channels of the
+thereisatleastonepixelwhoserestorationerrorisgreater
+obtainedimageandtheexpectedoutputimage. However,this
+than184,165,and189inthered,green,andbluechannels
+does not imply that the performed optimization minimizes
+respectively.
+the errors of each channel independently. Indeed, if there
+Inordertoknowhowfrequentlytheselargeerrorsinthe
+arepixelsinachannelwithaveryhigherrorandpixelsin
+restoredimagesappear,thedistributionoftheabsoluteerrors
+anotherchannelwithaverysmallerror,itmightresultinan
+average error for the three channels lower than that which
+′
+e =|I −Ir |. (3)
+would be obtained from a restored image where all pixels i,j,k ijk ijk
+of each channel have a similar error. In this context, it is ofeachpixel(i,j)ineachchannelk ofarestoredimageis
+importanttonotethat,forapixeloftheoutputobtainedfrom analyzed. Figure11plotsthehistogramoffrequencyofthese
+anetworkhavingonlyoneofthethreeRGBvaluescorrect errorsforeachchannelofarestoredimage. Itshowsthatthe
+andtheotherswithalargeerror,thepixel’scolorthatwould mostfrequenterrorvalueis0,andthehighestconcentration
+beappreciatedisdifferentfromtheexpectedone. Therefore, ofpointsisatthebeginningofthegraph.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35 Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M.,
+https://revistas.uh.cu/rcm/article/view/9137 Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L.
+https://doi.org/10.5281/zenodo.13916129
+Neuralnetworkstoremovespecularreflectionsincolposcopicimages 29
+Figure9. ResultobtainedafterrestoringacolposcopicimageusingthetrainednetworkR3withthelowestvalidationerror.
+Fromlefttoright,thetoprowshowstheinput,expectedoutput,andobtainedoutputimages,respectively. Theremainingrows
+showsomeareasofinterestoftheimageonthetopofthecolumn. Theaxesoftheseareasindicatetheirpositionwithinthe
+correspondingimage[ResultadoobtenidotrasrestaurarunaimagencolposcópicautilizandolaredentrenadaR3conelmenor
+errordevalidación. Deizquierdaaderecha,lafilasuperiormuestralasimágenesdeentrada,salidaesperadaysalida
+obtenida,respectivamente. Lasfilasrestantesmuestranalgunasáreasdeinterésdelaimagenenlapartesuperiordela
+columna. Losejesdeestasáreasindicansuposicióndentrodelaimagencorrespondiente].
+Sincethelargestabsoluteerroramongchannelsobtained 2.2 Performanceoftheselectednetworktorecon-
+fromcalculatingthesupremumnormwas251fortheimages structunobservedanatomicalcervixportionun-
+ofthetestset(seeTable3),therangeofpossibleerrorsamong dertheSRregions.
+pixelswasdividedintothreeintervals,from0to25,from25 OncethetrainednetworkR3wasselectedforhavingthe
+to50,andfrom50to251. Table4reportsthepercentageof lowestvalidationerror,andafterevaluatingitsefficiencyto
+pixelswithabsoluteerrorsintheseranges,foreachchannel, restorehiddenregionsofcolposcopicimages,itwasusedto
+inthe22restoredimagesofthetestset. Onaverage,foreach restore the cervix portion under the SR regions. Its perfor-
+channel,atleast95%ofthepixelsintheimagesrestoredby manceinthisproblemwasanalyzedbyaseriesofexperiments
+R3haveanabsoluteerrorlowerthan25. Thegreenchannel ontherealtestset.
+tends to be, on average, the channel with the highest per-
+Figure12shows, intheupperpart, theimageI andthe
+centageofpixelshavingerrorsgreaterthan25. Thisresult
+correspondingrestorationIrobtainedfromR3.Thelowerpart
+demonstrates the good performance of the network R3 for
+showsthehistogramofthecolorintensitiesofbothimages.
+restoringtheoriginalcolorsofthetestsetimages.
+Withcolorcyan,therealimageisrepresented,andwithred
+color,thenetwork’soutput. Thehistogramsillustratehowthe
+Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35
+Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L. https://revistas.uh.cu/rcm/article/view/9137
+https://doi.org/10.5281/zenodo.13916129
+30 Neuralnetworkstoremovespecularreflectionsincolposcopicimages
+Figure11. Histogramoffrequency,perchannel,ofabsolute
+Figure10. Resultobtainedafterrestoringacolposcopic errors(3)betweenthepixelintensitiesintheimagesofthe
+imageusingthenetworkwiththelowestvalidationerrorR3.
+firstrow. Topleft: expectedoutput;Topright: output
+Thetoprowshowstheexpectedoutputimageandobtained
+obtainedbythenetworkR3withthelowestvalidationerror
+outputimage. Theremainingrowsshowthehistogramsof
+[Histogramadefrecuencia,porcanal,deloserrores
+colorintensitiesperchannelcorrespondingtotheexpected
+absolutosentrelasintensidadesdelospíxelesenlas
+(red,greenandblue)andobtained(gray,yellow,brown)
+imágenesdelaprimerafila. Arribaalaizquierda: resultado
+outputimages[Resultadoobtenidotrasrestaurarunaimagen
+esperado;Arribaaladerecha: resultadoobtenidoporlared
+colposcópicautilizandolaredconelmenorerrorde
+R3conelmenorerrordevalidación].
+validaciónR3. Lafilasuperiormuestralaimagendesalida
+esperadaylaimagendesalidaobtenida. Lasfilasrestantes
+muestranloshistogramasdeintensidadesdecolorporcanal
+therealtestsetareshowninTable5. Clearly,in21ofthe22
+correspondientesalasimágenesdesalidaesperada(rojo,
+images,theSRsweresuccessfullyremoved. Itisimportantto
+verdeyazul)yobtenida(gris,amarillo,carmelita)].
+notethatthisisacriterionforremovingSRs,butnotforhow
+welltheanatomicalcontentunderthemwasestimated.
+Forevaluatingtherestorationofthemissinganatomical
+pixelswithhighintensityoftheoriginalimagedisappearin regions,theexpertcriterionofamedicalspecialistwascon-
+therestoredimage. Italsoshowsthatthedistributionofthe sidered. AfterexcludingthethreeimagesforwhichtheSRs
+remainingintensitiesisreproduced,observingthesimilarity detection algorithm mentioned in Section 1.1 does not cor-
+inbothhistograms. Thisbehaviorwasmaintainedinthe22 rectlyselecttheSRs(compromisingthequalityoftheimage
+analyzedimagesoftherealtestset. restorationasshowninFigure13),theexpertanalysisofthe
+Denote by Int I, Int ′ and Int r the maximum in- remainder19restoredimagesyieldsthefollowingconclusion:
+max max max
+tensitycorrespondingtotheoriginalimageI,tothemodified ”exceptfortheimageofFigure14,forwhichappearssome
+′ ′
+imageI ,andtotherestoredimageI obtainedbyR3. Int noise in the restored area, the brightness in the rest of the
+r max
+correspondstothehighestintensitythatthealgorithmmen- reconstructedimageswassatisfactorilyeliminated,allowing
+tionedinSection1.1doesnotclassifyasSRinthatimage. thephysiciantoobservethecharacteristicsoftheglandular
+Therefore,ifInt ′ >Int r,thenalltheSRsdetectedinI and squamous epithelia of the cervix. In such images, the
+max max
+doesnotappearinI ,anditcanbearguedthattheSRswere anatomicalelementsofthecervixsuchasglandularorifices
+r
+removed. These three values computed over the images in (eggs)orNabothiancystandphysiologicalcharacteristicsof
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35 Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M.,
+https://revistas.uh.cu/rcm/article/view/9137 Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L.
+https://doi.org/10.5281/zenodo.13916129
+Neuralnetworkstoremovespecularreflectionsincolposcopicimages 31
+Figure12. ResultofrestoringunobservedanatomicalcervixportionsundertheSRregionsusingthenetworkwiththelowest
+validationerrorR3. Toprow,left: realimagewithSRs;Toprow,right: restoredimagewithoutSRs;Bottomrow: histogramof
+intensitiesofbothimages[ResultadoderestaurarporcionesanatómicasnoobservadasdelcuellouterinobajolasregionesSR
+utilizandolaredconelmenorerrordevalidaciónR3. Filasuperior,izquierda: imagenrealconSRs;Filasuperior,derecha:
+imagenrestauradasinSRs;Filainferior: histogramadeintensidadesdeambasimágenes].
+Errorrange0-25 Errorrange25-50 Errorrange50-251 Intmax I Intmax ′ Intmax r Intmax ′>Intmax r
+Red Green Blue Red Green Blue Red Green Blue
+Image1 255.0 216.7 200.0 Yes
+Image1 95.6 96.1 95.9 1.8 1.7 1.7 2.5 2.0 2.3 Image2 255.0 216.7 206.3 Yes
+Image2 93.6 94.3 94.1 2.6 2.4 2.4 3.6 3.1 3.4
+Image3 255.0 216.7 189.0 Yes
+Image3 96.3 96.5 96.1 1.7 1.9 1.8 1.8 1.5 1.9
+Image4 255.0 216.3 205.3 Yes
+Image4 96.5 97.2 97.1 1.6 1.3 1.3 1.8 1.3 1.5
+Image5 96.8 97.4 97.3 1.4 1.3 1.2 1.6 1.2 1.4 Image5 255.0 216.0 208.7 Yes
+Image6 96.4 96.7 96.5 1.8 1.8 1.8 1.6 1.4 1.5 Image6 255.0 216.0 198.3 Yes
+Image7 96.5 93.9 95.5 2.3 4.7 3.4 1.0 1.2 1.0 Image7 255.0 216.0 207.0 Yes
+Image8 97.8 98.0 97.8 1.1 1.1 1.2 1.0 0.8 0.9 Image8 255.0 215.3 199.7 Yes
+Image9 96.6 97.0 96.8 1.7 1.7 1.7 1.6 1.2 1.4 Image9 255.0 216.0 196.0 Yes
+Image10 98.4 98.6 98.5 0.8 0.7 0.7 0.6 0.6 0.7 Image10 248.0 210.3 197.3 Yes
+Image11 98.3 98.3 98.3 0.6 0.7 0.7 0.9 0.8 0.9 Image11 253.0 213.3 186.0 Yes
+Image12 96.9 96.9 96.7 1.3 1.4 1.3 1.7 1.6 1.8
+Image12 255.0 216.7 202.7 Yes
+Image13 98.3 98.5 95.8 0.9 0.8 2.8 0.7 0.6 1.3
+Image13 255.0 216.7 197.7 Yes
+Image14 93.6 94.1 94.2 2.8 3.0 2.8 3.5 2.8 2.9
+Image14 255.0 216.3 204.0 Yes
+Image15 96.1 95.6 95.7 1.9 2.4 2.6 1.9 1.8 1.6
+Image16 87.9 85.3 90.3 8.0 10.5 6.4 4.0 4.1 3.2 Image15 255.0 216.3 192.7 Yes
+Image17 92.8 90.8 91.6 3.1 5.6 5.3 4.0 3.5 3.0 Image16 255.0 216.7 208.3 Yes
+Image18 97.1 97.2 97.2 1.2 1.3 1.2 1.4 1.4 1.5 Image17 254.0 215.7 198.3 Yes
+Image19 96.9 97.0 97.1 1.6 1.5 1.5 1.4 1.3 1.2 Image18 255.0 216.3 204.0 Yes
+Image20 96.7 96.6 96.8 1.5 1.7 1.6 1.6 1.6 1.5 Image19 255.0 216.7 197.0 Yes
+Image21 89.6 85.6 91.0 6.6 10.7 5.6 3.6 3.6 3.2 Image20 255.0 216.7 179.3 Yes
+Image22 97.2 97.2 97.0 1.4 1.5 1.4 1.2 1.2 1.5 Image21 255.0 216.7 209.7 Yes
+Average 95.7 95.4 95.8 2.2 2.7 2.3 2.0 1.8 1.8 Image22 239.7 203.7 212.0 No
+Minimum 87.9 85.3 90.3 0.6 0.7 0.7 0.6 0.6 0.7
+Table5. MaximumintensityvaluesoftheoriginalimageI,of
+Maximum 98.4 98.6 98.5 8.0 10.7 6.4 4.0 4.1 3.4
+′
+Median 96.6 96.8 96.6 1.6 1.7 1.7 1.6 1.4 1.5 theimageI resultingfromblackingoutthepixelsselectedby
+Table4. Percentageofpixelsperchannelwithinthespecified therealmask,andoftheimageI obtainedbythenetwork
+r
+absoluteerrorranges,foreachimageofthetestsetrestored R3. LastcolumnindicateswhentheSRswereremovedfrom
+bythenetworkR3[Porcentajedepíxelesporcanaldentrode theimages[Valoresmáximosdeintensidaddelaimagen
+losrangosdeerrorabsolutoespecificados,paracadaimagen originalI,delaimagenI ′ resultantedeoscurecerlospíxeles
+delconjuntodepruebarestauradaporlaredR3]. seleccionadosporlamáscarareal,ydelaimagenI
+r
+obtenidaporlaredR3. Laúltimacolumnaindicacuándose
+eliminaronlosSRdelasimágenes].
+thecervicalmucusarepreservedallowinganevaluationofits
+quality”. AnexampleisshowninFigure15.
+Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35
+Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L. https://revistas.uh.cu/rcm/article/view/9137
+https://doi.org/10.5281/zenodo.13916129
+32 Neuralnetworkstoremovespecularreflectionsincolposcopicimages
+Figure13. EffectoftheinaccurateSRsdetectionontheimagerestoration. Fromlefttoright: imageoftherealtestset,input
+imagewithdetectedSRregionsbiggerthanthetrueones,andrestoredimagebythenetworkR3withdistortionsincolorand
+structure[EfectodeladetecciónimprecisadeSRenlarestauracióndelaimagen. Deizquierdaaderecha: imagendel
+conjuntodepruebasreal,imagendeentradaconregionesSRdetectadasmayoresquelasverdaderas,eimagenrestauradapor
+laredR3condistorsionesencoloryestructura].
+Figure14. ExampleofundesirednoiseappearinginarestoredimagebyR3,indicatedinthecenteroftheredcircle[Ejemplo
+deruidonodeseadoqueapareceenunaimagenrestauradaporR3,indicadoenelcentrodelcírculorojo].
+Figure15. Exampleofrestoredimageevaluatedbythespecialistassatisfactory[Ejemplodeimagenrestauradaevaluadapor
+elespecialistacomosatisfactoria].
+Conclusions
+Inthepresentwork,aneuralnetwork-basedstrategyfor
+specularreflectioneliminationincolposcopicimageswaspro-
+posed to restore them successfully. A reformulation of the
+initialproblemwasdonetoperformsupervisedtrainingsince
+thegroundtruthcorrespondingtotheSRregionsisalways
+unknown. The proposed SRs elimination strategy includes
+theuseofanalgorithmforSRsidentificationincolposcopic
+images,thetrainingofasetofnetworkstorestoreanyhidden
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35 Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M.,
+https://revistas.uh.cu/rcm/article/view/9137 Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L.
+https://doi.org/10.5281/zenodo.13916129
+Neuralnetworkstoremovespecularreflectionsincolposcopicimages 33
+regionofcolposcopicimages,andtheuseofthenetworkwith [2] Bai, B., P.Z. Liu, Y.Z. Du, and Y.M. Luo: Automatic
+thelowervalidationerrortorestoreanyunobservedanatomi- segmentationofcervicalregionincolposcopicimages
+calcervixportionundertheSRregions. Adetailedqualitative using k-means. Australasian physical & engineering
+and quantitative analysis of the performance of the trained sciencesinmedicine,41(4):1077–1085,2018. https:
+networks shown their capability to restore different hidden //doi.org/10.1145/1531326.1531330.
+regions of the colposcopic images. The networks with the
+[3] Barnes,C.,E.Shechtman,A.Finkelstein,andD.B.Gold-
+lowest validation error restore, on average, the 95% of the
+man:PatchMatch: Arandomizedcorrespondencealgo-
+pixelsineachchanneloftheimageswithanerrorlowerthan
+rithmforstructuralimageediting. ACMTransactions
+25(ofapossiblemaximumof255).
+onGraphics,28(3):24,2009. https://doi.org/
+10.1145/1531326.1531330.
+Whenusingtheselectednetworktoreconstructthecervix
+portionundertheSRregions,thebrightnesswaseliminatedin [4] CienciasMédicas,BibliotecaMédicaNacionaldeCu-
+21ofthe22evaluatedimages,whereasthedistributionofthe ba Centro Nacional de Información de: Estadísticas
+colorintensitiesofeachchannelwasreproduced,beingsimilar Mundiales. Factográfico de Salud, 2020. http://
+totheexpected. Therestorationsofthemissinganatomical files.sld.cu/bmn/files/2019/12/facto
+regions under the SRs were evaluated by a medical expert grafico-de-salud-diciembre-2019.pdf.
+concluding that -qualitatively- the SRs were satisfactorily
+eliminatedandthegynecologicalelementsofinterestwere [5] Das,A.,A.Kar,andD.Bhattacharyya:Eliminationof
+conserved,whichfacilitatesthecorrectclinicalevaluationof specularreflectionandidentificationofroi:Thefirststep
+thepatients. inautomateddetectionofcervicalcancerusingdigital
+colposcopy. In2011IEEEInternationalConferenceon
+ImagingSystemsandTechniques,pages237–241.IEEE,
+Conflict of interest
+2011. https://doi.org/10.1109/IST.2011
+Theauthorsdeclarethattheyhavenoknowncompeting .5962218.
+financial interests or personal relationships that could have
+[6] Gómez-Gómez,D.:Eliminacióndezonasespeculares
+appearedtoinfluencetheworkreportedinthispaper.
+enimágenesdecolposcopíautilizandoFactorizaciones
+MatricialesNo-negativas. Tesisenopciónaltítulode
+Authorship contribution LicenciadoenCienciadelaComputación,Facultadde
+MatemáticayComputación,UniversidaddeLaHabana,
+Conceptualization L.J.M.,A.M.S.A.,L.L.M.,M.L.B.D.
+Cuba,2018.
+DataCuration A.M.S.A.,L.J.M.,M.L.B.D.
+[7] Goodfellow,I.,J.Pouget-Abadie,M.Mirza,B.Xu,D.
+Warde-Farley, S. Ozair, A. Courville, and Y. Bengio:
+Research L.J.M,D.A.V.P.,A.M.S.A.,L.J.M,M.L.B.D.
+Generativeadversarialnets. InAdvancesinNeuralIn-
+formationProcessingSystems,pages2672–2680,2014.
+Methodology L.J.M.,D.A.V.P.,L.L.M.
+https://proceedings.neurips.cc/paper
+Software L.J.M.,D.A.V.P. _files/paper/2014/hash/5ca3e9b122f61
+f8f06494c97b1afccf3-Abstract.html.
+Visualization L.J.M.
+[8] Huang, J.B., S.B. Kang, N. Ahuja, and J. Kopf: Im-
+Writing: preparationoforiginaldraft L.J.M. agecompletionusingplanarstructureguidance. ACM
+TransactionsonGraphics,33(4):1–10,2014. https:
+Writing: reviewandediting L.J.M.,D.A.V.P.,A.M.S.A., //doi.org/10.1145/2601097.2601205.
+L.L.M.,M.L.B.D.
+[9] Iizuka,S.,E.Simo-Serra,andH.Ishikawa:Globallyand
+locallyconsistentimagecompletion. ACMTransactions
+Supplementary information
+onGraphics,36(4):1–14,2017. https://doi.org/
+10.1145/3072959.3073659.
+Thispaperhasnosupplementaryinformation.
+[10] Lange,H.:Automaticglareremovalinreflectanceim-
+References ageryoftheuterinecervix. InMedicalImaging2005:
+Image Processing, volume 5747, pages 2183–2192.
+[1] Ali, S., F.Zhou, A.Bailey, B.Braden, J.East, X.Lu,
+International Society for Optics and Photonics, 2005.
+andJ.Rittscher:Adeeplearningframeworkforquality
+https://doi.org/10.1117/12.596012.
+assessmentandrestorationinvideoendoscopy. arXiv
+preprintarXiv:1904.07073,2019. https://doi.or [11] Lehmann,T.M.andC.Palm:Colorlinesearchforillu-
+g/10.1016/j.media.2020.101900. minantestimationinreal-worldscenes. Journalofthe
+Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35
+Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L. https://revistas.uh.cu/rcm/article/view/9137
+https://doi.org/10.5281/zenodo.13916129
+34 Neuralnetworkstoremovespecularreflectionsincolposcopicimages
+OpticalSocietyofAmericaA,18(11):2679–2691,2001. [20] Shih, T.K.andR.C.Chang:Digitalinpainting-survey
+https://doi.org/10.1364/JOSAA.18.002 andmultilayerimageinpaintingalgorithms. InThird
+679. International Conference on Information Technology
+and Applications (ICITA’05), volume 1, pages 15–24.
+[12] Li, W., J. Gu, D. Ferris, and A. Poirson: Automated
+IEEE,2005. https://doi.org/10.1109/ICIT
+image analysis of uterine cervical images. In Medi-
+A.2005.169.
+calImaging2007: Computer-AidedDiagnosis,volume
+6514,page65142P.InternationalSocietyforOpticsand
+[21] Siavelis,P.R.,N.Lamprinou,andE.Z.Psarakis:Anim-
+Photonics, 2007. https://doi.org/10.1117/
+provedgansemanticimageinpainting. InInternational
+12.708710.
+ConferenceonAdvancedConceptsforIntelligentVision
+Systems,pages443–454.Springer,2020. https://
+[13] Meslouhi, O., M. Kardouchi, H. Allali, T. Gadi, and
+Y.Benkaddour:Automaticdetectionandinpaintingof
+doi.org/10.1007/978-3-030-40605-9_38.
+specularreflectionsforcolposcopicimages. OpenCom-
+[22] Wang,X.,P.Li,D.Yongzhao,Y.Lv,andY.Chen:Detec-
+puter Science, 1(3):341–354, 2011. https://doi.
+tionandinpaintingofspecularreflectionincolposcopic
+org/10.2478/s13537-011-0020-2.
+imageswithexemplar-basedmethod. In2019IEEE13th
+[14] Murugesan,B.,S.V.Raghavan,K.Sarveswaran,K.Ram, InternationalConferenceonAnti-counterfeiting,Secu-
+andM.Sivaprakasam:Recon-GLGAN:AGlobal-Local rity,andIdentification(ASID),pages90–94.IEEE,2019.
+ContextBasedGenerativeAdversarialNetworkforMRI https://doi.org/10.1109/ICASID.2019.
+Reconstruction. InInternationalWorkshoponMachine 8925202.
+LearningforMedicalImageReconstruction,pages3–15.
+Springer,2019. https://doi.org/10.1007/97 [23] Xue, Z., S. Antani, L.R. Long, J. Jeronimo, and G.R.
+8-3-030-33843-5_1. Thoma:Comparativeperformanceanalysisofcervixroi
+extractionandspecularreflectionremovalalgorithms
+[15] Nazeer,S.andM.I.Shafi:Objectiveperspectiveincol-
+foruterinecerviximageanalysis. InMedicalImaging
+poscopy. BestPractice&ResearchClinicalObstetrics
+2007: Image Processing, volume 6512, page 65124I.
+&Gynaecology,25(5):631–640,2011. https://do
+International Society for Optics and Photonics, 2007.
+i.org/10.1016/j.bpobgyn.2011.04.008.
+https://doi.org/10.1117/12.709588.
+[16] Palmer San Pedro, A.: Eliminación de regiones espe-
+[24] Zeiler, M.D.: Adadelta: an adaptive learning rate
+cularesenimágenescolposcópicasdecuellodeútero.
+method.arXivpreprintarXiv:1212.5701,2012.https:
+TesisenopciónaltítulodeLicenciadoenCienciadela
+//arxiv.org/abs/1212.5701.
+Computación,FacultaddeMatemáticayComputación,
+UniversidaddeLaHabana,Cuba,2015.
+[25] Zimmerman-Moreno,G.andH.Greenspan:Automatic
+[17] Pascanu,R.,T.Mikolov,andY.Bengio:Onthedifficulty detectionofspecularreflectionsinuterinecerviximages.
+oftrainingrecurrentneuralnetworks. InInternational InMedicalImaging2006: ImageProcessing,volume
+Conference on Machine Learning, pages 1310–1318, 6144,page61446E.InternationalSocietyforOpticsand
+2013. https://proceedings.mlr.press/v2 Photonics, 2006. https://doi.org/10.1117/
+8/pascanu13.html. 12.653089.
+[18] Pathak,D.,P.Krahenbuhl,J.Donahue,T.Darrell,and
+A.A.Efros:Contextencoders: Featurelearningbyin-
+painting. In Proceedings of the IEEE Conference on
+ComputerVisionandPatternRecognition,pages2536–
+2544,2016. https://doi.org/10.1109/CVPR
+.2016.278.
+[19] Robles,S.C.:Introductiontothespecialissue: Timely
+detectionofcervicalcancer. BulletinofthePanAmer-
+ican Health Organization (PAHO); 30 (4), dec. 1996,
+1996. https://iris.paho.org/bitstream/
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+handle/10665.2/27360/ev30n4p285.pdf?
+SinDerivadas 4.0 Internacional”.
+sequence=1.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.21-35 Jimenez-Martin,L.,ValdésPérez,D.A.,SolaresAsteasuainzarra,A.M.,
+https://revistas.uh.cu/rcm/article/view/9137 Leonard,Méndez,L.,BaguerDíaz-Romañach,M.L.
+https://doi.org/10.5281/zenodo.13916129
+1

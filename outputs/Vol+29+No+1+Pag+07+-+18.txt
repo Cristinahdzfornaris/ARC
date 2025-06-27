@@ -1,0 +1,595 @@
+CienciasMatema´ticas,Vol.29,No.1,Pag.7-18,2015
+Recibido05-2015
+Ajuste de curvas y superficies por polinomios
+impl´ıcitos
+Curve and surface fitting by implicit polynomials
+Rube´n Interian Kovaliova1
+Resumen La bu´squeda de un polinomio impl´ıcito que aproxime cierto conjunto de observaciones X es el
+objetivodemuchasinvestigacionesenlosu´ltimosan˜os.Sinembargo,lagranmayor´ıadelosalgoritmosdeajuste
+existentespresuponenelconocimientodelgradodelpolinomioimpl´ıcitoquemejorrepresentaalospuntos.Este
+trabajoproponeunalgoritmocapazdedeterminarelgradodelpolinomionecesarioparalarepresentacio´ndel
+conjuntodedatos.Paraestefin,sedefineunanovedosamedidadedistanciaentreX yelpolinomioimpl´ıcito.El
+algoritmoplanteadosebasaenlaideadeirincrementandopaulatinamenteelgrado,mientrashayaunamejora
+enlasuavidaddelassoluciones.
+Abstract Finding an implicit polynomial that fits a set of observations X is the goal of many researches in
+recentyears. However,mostexistingalgorithmsassumetheknowledgeofthedegreeoftheimplicitpolynomial
+thatbestrepresentsthepoints. Thispaperproposesanalgorithmcapableoffindthedegreeofthepolynomial
+needed for the representation of the data set. To this end, a new distance measure between X and implicit
+polynomialisdefined. Theproposedalgorithmisbasedontheideaofgraduallyincreasingthedegree,while
+thereisanimprovementinthesmoothnessofthesolutions.
+PalabrasClave
+Ajuste—PolinomioImpl´ıcito—Estabilidad—Metaheur´ıstica
+1DepartamentodeMatema´tica,UniversidaddeHabana,Habana,Cuba,ruben@matcom.uh.cu
+Introduccio´n seanecesario:
+Elproblemaderepresentarmatema´ticamenteobjetosen Unarepresentacio´ncompactadelasuperficie
+dos(2D)y,especialmente,tres(3D)dimensionesapareceen Elmantenimientodeinvariantesalgebra´icasygeome´tri-
+unsinnu´merodesituacionespra´cticas,yesta´presenteendife- cas,talescomoa´reayvolumen,entreotras[24]
+rentescampos,talescomogra´ficosporcomputadorayvisio´n Unaformamuyra´pidadeclasificarlospuntosenex-
+porcomputadora. Entareas demodelacio´n,reconstruccio´n ternoeinternoalobjeto
+3D,reconocimiento,unabuenarepresentacio´ndeunobjeto Robustezalruidoyalaoclusio´n[28]
+observado,esfundamental.
+Lamentablemente,esusualquelosdatosprovenientesdel PolinomiosImpl´ıcitos
+mundorealseandiscretos,as´ıcomoincompletos.Losmode- Por una curva (en 2D) o superficie (en 3D) polinomial
+lossuelenobtenerseapartirdeima´genes,v´ıdeos,esca´neres impl´ıcitaseentiende,elconjuntodeceros(zeroset)oelnivel
+3D y otros dispositivos de captura. La naturaleza de estos cerodeunafuncio´npolinomial f.
+dispositivospermiteobtenerunacantidadfinitaydiscretade
+datosdelobjetoanalizado,comu´nmenteenformadepuntos.
+f (x,y,z)= ∑ a xiyjzk
+Labu´squedadeunmodeloque“mejor”seaproxime(ajuste) a ijk
+0≤i+j+k≤n
+aesteconjuntodeobservaciones(puntos)eselobjetivode
+muchasinvestigacionesenlosu´ltimosan˜os[29,5,16]. =(1xyzx2 ...)(a 000 a 100 a 010 a 001 a 200 ...)T
+Los polinomios impl´ıcitos (PI, o IP, por sus siglas en (cid:124) (cid:123)(cid:122) (cid:125)(cid:124) (cid:123)(cid:122) (cid:125)
+m(x)T a
+ingle´s)handemostradoserunpoderosoinstrumentoalahora
+=m(x)Ta
+de modelar objetos del mundo real frente a otros tipos de
+representacio´n,comolaexpl´ıcitaolaparame´trica[28],mos- Elvectorm(x)T sedenomina,vectordemonomios,ysolo
+trandounasorprendentevariedaddeformas(Figura1,“Las
+depende del punto (x,y,z); a es el vector de para´metros, o
+Cerezas”y“LaPera”1),as´ıcomobuenaspropiedadesdonde
+coeficientes,delpolinomio.
+1Ecuacio´nde“LaPera”:((x2+y2+0,2∗z2)2−(x2+y2))∗((x−0,55− Formalmente, una superficie polinomial impl´ıcita es el
+0,05∗(1,1∗z+1,75))2+y2+(1,1∗z+1,75)2−2,3)−0,5=0 conjuntodesolucionesdelaecuacio´n:
+8 Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos
+Figura1.Algunospolinomiosimpl´ıcitos.(a)“LaPera”,PIde6togrado(b)“LasCerezas”.Tomadode[18]
+1.1 Me´todosnolineales
+m(x)Ta=0 (1) Actualmentenoexisteunav´ıasimpleparahallarladistan-
+ciadeunpuntoaZ(f ).Paraencontrarladistanciademanera
+dondexeslainco´gnita.Elconjuntodesolucionesdela a
+precisa,serequiereelusodeme´todositerativos[27,11,15].
+ecuacio´n(1)sedenotara´ Z(f ).Ena´mboscasos-2Dy3D-
+a
+Losme´todosnolinealesfueronhisto´ricamentelosprime-
+usualmenteseutilizaelte´rminopolinomioimpl´ıcito.
+rosenaparecer[22,23].Laideaprincipaldeestosme´todos
+El objetivo principal de este art´ıculo es desarrollar un
+esreemplazarladistanciaexactadeunpuntoaunacurvao
+algoritmodeajustedepolinomiosimpl´ıcitospropiocapazde
+superficieimpl´ıcita,porsuaproximacio´ndeTaubindeprimer
+determinarelgradodelpolinomioautilizar.
+orden[25]:
+Estructuradeltrabajo
+|f(x)|
+Estetrabajoesta´ organizadodelasiguientemanera.En dist(x,Z(f ))≈
+a
+(cid:107)∇f(x)(cid:107)
+laseccio´n1,seexponenlosprincipalesme´todosdeajustede
+polinomiosimpl´ıcitos,linealesynolineales,presentesenla Sehanutilizadotambie´naproximacionesdeordensupe-
+literatura.Enlaseccio´n2,seintroduceunanovedosamedi- rior.
+dadedistanciaentreunconjuntodepuntosyunpolinomio Aestetipodedistanciausualmenteseleidentificacomo
+impl´ıcito.Enlaseccio´n3,seproponeunalgoritmodeajuste geome´trica,yaquehaceusodelainformacio´ncontenidaen
+queutiliceestamedidaparaencontrarpolinomiosimpl´ıcitos lasderivadasparcialesde f a .
+que tengan ciertas propiedades deseadas, sin conocimiento
+previodelgradoquedebetenerelpolinomioimpl´ıcito.En 1.2 Me´todoslineales
+laseccio´n4,seanalizanlosresultadosexperimentalesobte- Losme´todoslinealeshansidolosma´susadoseninves-
+nidos a partir de las propuestas realizadas en las secciones tigaciones[6]yaplicacionespra´cticas[30]porproveeruna
+anteriores. solucio´nquenorequiereelusodeme´todositerativosy,por
+tanto,serma´sra´pidosyeficientes.Entrelosalgoritmosma´s
+1. Me´todos de Ajuste de Polinomios conocidosseencuentran,elalgoritmolinealcla´sicoyelalgo-
+ritmo3L.
+Impl´ıcitos
+Losalgoritmoslinealesutilizanlallamadadistanciaalge-
+Deacuerdoacomosedefineladistanciadist(x,Z(f )) braica:
+i a
+entreunpuntox delespacio,yelnivelcerode f losme´todos
+i a
+deajusteseclasificanenlinealesynolineales. dist(x,Z(f ))≈ f (x)
+a a
+Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos 9
+Seasumeque,dadalacontinuidadde f ,enpuntoscer- 2.2 MedidadeSuavidad
+a
+canosaZ(f )),elvalorde f debesercercanoacero,yen Enalgunosdelosu´ltimostrabajossobreeltema[21,28,
+a a
+puntosma´salejados,debesermayor. 29,16],sehautilizadolaideadecontrolarenelprocesode
+Elproblemadeajusteseresuelveenestecasocomoun ajusteciertascaracter´ısticasgeome´tricasdelospolinomios
+sistemasobredeterminadoMa=b,dondeMesunamatrizen impl´ıcitos:lalongituddelgradientecercadelospuntos,la
+cuyasfilasesta´nlosvectoresdemonomiosdelospuntosdel direccio´ndelgradienteconrespectoalvectortangenteestima-
+conjuntoX (llamadamatrizdemonomios),yb(inicialmente) doenunpunto,etc.Conestosepersigueelobjetivodeevitar
+esunvectordeceros. losefectosdelsobreajuste,promoviendoaquellospolinomios
+Lasolucio´nm´ınimocuadra´ticadeestesistemasobredeter- quetenganpropiedadesdeseadas.
+minado[8]es: Porestasrazones,adema´sdelamedidadedistancia,se
+decidio´ utilizartambie´nunamedidade“suavidad”queesta-
+a=(MTM)−1MTb=M+b blezcauncriteriodeproximidadentreunconjuntodepuntosy
+unpolinomioimpl´ıcito.Esprecisonotarqueestamedidadebe
+dondeM+eslapseudoinversadeMoore-Penrose[3]. evaluarcualitativamenteaundeterminadopolinomioimpl´ıci-
+Sinembargo,losalgoritmoslinealessufrendeinestabili- tocomoaproximacio´nalconjuntodedatos.Elbeneficiode
+dad,yaqueapequen˜oscambiosenlasobservaciones,pueden estamedidadecalidadsereflejara´ enelsiguientehecho:en
+correspondersolucionestotalmentediferentes[6].Adema´s, elprocesodeajuste,soloseobtendra´npolinomiosimpl´ıcitos
+debidoaqueb=0,existeunasolucio´ntrivial,a=0,queen quecumplanciertaspropiedadestopolo´gicasdeseadas,como
+lapra´cticasedebeevitar.Porende,esteme´todolinealcla´sico secomprobara´ acontinuacio´n.
+esmejoradoporotrosalgoritmoslineales,comoelalgoritmo Primeramente, diremos que un polinomio impl´ıcito es
+3L[6].Seincrementalaestabilidaddelajuste,yelvectorbes suaveenunpuntox i conrespectoaunconjuntoX,si
+sustituidoporotrovectornonulo.
+∇f(x)
+i
+N ≈1
+i
+(cid:107)∇f(x)(cid:107)
+i
+2. Una Medida de Distancia a un
+Aqu´ı, N es un vector normal al punto x, normalizado.
+Polinomio Impl´ıcito i i
+Puedeobtenersedelosmodelosf´ısicosoestimarsedemanera
+Comosehab´ıaplanteadoenlaseccio´n1,paradesarrollar ra´pidaapartirdelconjuntodepuntosX,comoenelme´todode
+un buen algoritmo de ajuste, es necesario, en primer lugar, Sahin[17].Losvectores∇f(x i )yN i seconsiderandefinidos
+definirunafuncio´ndedistanciaapropiadadeunpuntoaun (comovectoresfilaocolumna)deformatalqueelproducto
+polinomioimpl´ıcito.Paraesto,primerosedefinira´ndosmedi- tengasentido.
+das(una,dedisimilitud,yotra,desuavidad)queponderara´n, Ahora,sedefinecomofuncio´ndesuavidaddeunpolino-
+respectivamente,la“separacio´n”yla“proximidad”deestos mioimpl´ıcitoconrespectoatodoelconjuntodepuntosXde
+puntosaZ(f ). cardinalidadN,delasiguientemanera:
+a
+1 N ∇f(x)
+2.1 MedidadeDisimilitud smooth(X,Z(f ))= ∑ i N (3)
+a i
+La medida de disimilitud que se utilizara´ debe evaluar N i=1 (cid:107)∇f(x i )(cid:107)
+cuantitativamenteladistanciarealqueexisteentreelPIylos
+Se hace notar que esta funcio´n toma valores entre -1 y
+puntos.Entrelasfuncionesdedistanciapresentesenlosestu-
+1,yaquetantoelvectorgradiente,comoelvectornormalal
+diosanalizados,seselecciono´ laaproximacio´ndeTaubinde
+puntox,esta´nnormalizados.
+i
+primerorden[25],queproveeunamanerara´pidadecalcular
+EnlaFigura2,seilustralaideaintuitivaqueesta´ detra´s
+unabuena(anal´ıticamentefundamentada)aproximacio´nala
+deestamedidadeproximidad.
+distanciaentreunpolinomioimpl´ıcitoyunpunto:
+Sielajustetienebuenacalidad,elvectorgradientenor-
+malizado
+∇f(xi)
+debe corresponderse, en la medida de lo
+dissim(x,Z(f a ))= (cid:107)∇
+|f
+f
+(
+(
+x
+x
+)
+)
+|
+(cid:107) posible,co
+(cid:107)
+n
+∇
+e
+f
+l
+(x
+v
+i)
+e
+(cid:107)
+ctornormalN i enelpuntox i .Siestoocurre
+contodoslospuntos,entonceselajustesera´ bueno.
+Porconsiguiente,paraevaluarladistanciaquehayentre
+unconjuntodepuntosXyunpolinomioimpl´ıcito,seusara´la 2.3 Estrategiadepenalizacio´n
+funcio´n: Lapreguntaqueseplanteaahora,es:¿Co´mocombinarlas
+nocionesdedisimilitudyproximidadqueexpusimosenlas
+1 N |f(x)| seccionesanteriores?
+dissim(X,Z(f ))= ∑ i (2)
+a N (cid:107)∇f(x)(cid:107) Laestrategiaqueseutilizo´ sebasaenlaideadepenalizar
+i=1 i
+lano-suavidaddelpolinomioimpl´ıcitoconrespectoalconjun-
+Llamaremosaestamedidafuncio´ndeseparacio´n(disimi- todepuntosX.Lano-suavidadconrespectoaXseentiende
+litud)entreunconjuntoXdeN puntosyZ(f ). como:1−smooth(X,Z(f )).
+a a
+10 Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos
+Figura3.Sobreajuste.Elpolinomioimpl´ıcitopasacercade
+Figura2.MedidadeSuavidad.
+todoslospuntosdelconjuntoX,peroelajusteesdemala
+calidad.Lamedidadesuavidadseencuentralejosdesuvalor
+ideal,launidad.
+Por tanto, la nueva funcio´n de distancia del proceso de
+ajustesera´:
+de observaciones. Este grado, que determina la dimensio´n
+delvectordecoeficientesdelpolinomio,debeestimarsedu-
+dist(X,Z(f ))=dissim(X,Z(f ))+δ(1−smooth(X,Z(f )))
+a a a
+rante el ajuste. Un algoritmo que lleve a cabo esta tarea se
+denominara´ AlgoritmodeAjusteAdaptativo.
+Enlaspro´ximassecciones,primerosedetallara´,co´mose
+1 N |f(x)| 1 N ∇f(x)
+dist(X,Z(f ))= ∑ i +δ(1− ∑ i N) realizara´elajusteconelgradodelpolinomiofijo,yluegoeste
+a i
+N i=1 (cid:107)∇f(x i )(cid:107) N i=1 (cid:107)∇f(x i )(cid:107) algoritmoseextendera´ alcasodeajusteconpolinomiosde
+gradosdiferentes.
+dist(X,Z(f ))= 1 ∑ N (cid:0) |f(x i )| +δ(1− ∇f(x i ) N) (cid:1) 3.1 Ajustedegradofijo
+a i
+N i=1 (cid:107)∇f(x i )(cid:107) (cid:107)∇f(x i )(cid:107) Para resolver el problema de ajuste del vector de coefi-
+(4) cientesdelpolinomioimpl´ıcito,sedebeencontrarelm´ınimo
+Aqu´ı,elpara´metroδ indica,cua´nfuerteeslapenalizacio´n. delafuncio´nobjetivoplanteadaenlaseccio´nanterior:
+Estamedidasera´tomadacomolafuncio´nobjetivoaminimizar
+enelalgoritmodeajuste:
+m´ın 1 ∑ N (cid:0) |f(x i )| +δ(1− ∇f(x i ) N) (cid:1)
+i
+m´ın 1 ∑ N (cid:0) |f(x i )| +δ(1− ∇f(x i ) N) (cid:1) (5) fa N i=1 (cid:107)∇f(x i )(cid:107) (cid:107)∇f(x i )(cid:107)
+i
+fa N i=1 (cid:107)∇f(x i )(cid:107) (cid:107)∇f(x i )(cid:107) Comosepuedeobservar,estafuncio´nesnoderivablepor
+lapresenciadelmo´duloenelnominador.
+Notemosqueesposiblequeelpolinomioimpl´ıcitopase Adema´s,sedebedestacarlanaturalezamultimodaldela
+por todos los puntos del conjunto X, pero que el valor de funcio´n objetivo propuesta, la cual puede tener numerosos
+lafuncio´nobjetivoseamayorquecero,comoporejemplo, m´ınimos locales. Esto resta utilidad al uso de los me´todos
+cuandoocurreelefectoconocidocomosobreajuste(Figura3). exactosenestetipodeproblemas,yaquee´stosconvergende
+Porconsiguiente,lafuncio´ndedistanciaaqu´ıdefinidadebe maneranaturalao´ptimoslocales.Esnecesariotenerme´todos
+serentendidaenunsentidoma´samplio,comoladistanciaa querealicenunamayorexploracio´ndelespaciodebu´squeda.
+unpolinomioimpl´ıcitoidealdesdeelpuntodevistadesus Porestasrazones,paraelprocesodeoptimizacio´n,sedeci-
+propiedadesgeome´tricas. dio´ utilizaralgoritmosmetaheur´ısticos,yentree´stos,aquellos
+Enlapro´ximaseccio´nveremos,que´ algoritmosseutili- que fueron disen˜ados espec´ıficamente para la solucio´n de
+zara´nenlabu´squedadeunvectordecoeficientesdelpolino- problemascuyodominioescontinuo.Siguiendoestoscrite-
+mioqueseajustemejoralconjuntodedatosoriginal. rios,enlaliteraturasereportan[9,19]dosmetaheur´ısticas
+quetienenestascaracter´ısticas:Optimizacio´nporEnjambres
+3. Un Algoritmo de Ajuste Adaptativo dePart´ıculasyEvolucio´nDiferencial,lascualesyahansido
+empleadaspreviamenteenproblemasdeajustedecurvas[13].
+Habiendodefinidoconvenientementelafuncio´nobjetivo
+quesevaaminimizarenelprocesodeajuste,sedebepasar 3.1.1 Optimizacio´nmediantelametaheur´ısticaEnjambre
+aconcretar,quealgoritmoseutilizara´ paraoptimizardicha dePart´ıculas
+funcio´nobjetivo. LaMetaheur´ısticaOptimizacio´nporEnjambresdePart´ıcu-
+Sedebetenerencuenta,quenoseconoceapriorielgra- las(PSO,porsussiglaseningles)utilizalaideademantener
+dodelpolinomioimpl´ıcitoquemejorrepresentealconjunto un grupo (enjambre) de N part´ıculas desplaza´ndose en un
+Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos 11
+espaciod-dimensional[9].Cadapart´ıcularepresentaunasolu- Gradodelpolinomio Dimensio´n,2D Dimensio´n,3D
+cio´nalproblema,ytieneunaposicio´nyunavelocidad,lacual 1 3 4
+representaladireccio´nytaman˜odepasodesudesplazamien- 2 6 10
+to.Cuandolaspart´ıculassemueven,reajustansuvelocidad. 4 15 35
+Lanuevavelocidaddependedelainformacio´nproporciona- 6 28 84
+da por el enjambre (de manera que la bu´squeda se dirija a 8 45 165
+regionesdelespacio,enlascualeslosvaloresdelafuncio´n 10 66 286
+objetivosonmejores),ydeunpara´metro χ,llamadofactor 12 91 455
+de restriccio´n, que permite acotar los valores de velocidad. 14 120 680
+Deestamanera,ele´xitodealgunaspart´ıculasinfluyeenel 16 153 969
+comportamientodeotras. Tabla1.Dimensio´ndelproblemaapartirdelgradodel
+Unpuntoafavordeestealgoritmoeselreducidonu´mero polinomio
+depara´metrosquetiene:χ,elfactorderestriccio´nyN,elta-
+man˜odelenjambre.Valelapenaaclarar,queexistenestudios
+querecomiendandarlealpara´metroχ elvalor0,729,como 3.2 AjusteAdaptativo
+valorrecomendadoparalamayor´ıadeaplicaciones[7]. Enestaseccio´nserespondelasiguientepregunta:¿Que´cri-
+teriosdebenseguirseparaencontrarelgradodeunpolinomio
+3.1.2 Optimizacio´nmediantelametaheur´ısticaEvolucio´n impl´ıcitoquemejorrepresenteaunciertoconjuntodeobser-
+Diferencial
+vaciones?Paraencontrarunarespuesta,primeroseanalizara´n
+LaMetaheur´ısticaEvolucio´nDiferencial(oDE,Differen-
+demaneraindependientevariosaspectosdeesteproblema.
+tialEvolution),esunalgoritmoevolutivo,quesepuedever
+comounavariantedelAlgoritmoGene´tico[19].Aligualque 3.2.1 Seleccio´ndelgradodeajustema´ximo
+cualquieralgoritmogene´tico,DEutilizaunapoblacio´ndeN Gradosdepolinomiosimpl´ıcitosquesedebenutilizar
+individuos,representadosporvectoresd-dimensionales.En enlapra´ctica
+esencia, el algoritmo genera nuevos individuos a partir de Enlosestudiosquehanabordadoelproblemadeajustede
+operacionesdesumaydiferenciadevectoresdelapoblacio´n polinomiosimpl´ıcitos,seobservaquelamayor´ıalosPIquese
+actual,locualesunnuevoyoriginaloperadordemutacio´n. hanutilizadoenexperimentosoejemplospra´cticoshansido
+Estametaheur´ısticaenlosu´ltimosan˜oshatenidomuchaacep-
+degradopar[6,17,10,28,29].
+tacio´nalhaberseaplicadoaunagranvariedaddeproblemas
+EneltrabajodeTaubin[26],encontramoslaexplicacio´n
+pra´cticos,yenespecialaproblemascontinuos[14].
+del por que de este hecho. Se demuestra que el nivel cero
+Adema´sdeltaman˜odepoblacio´nN,DEutilizadospara´me- deunpolinomioenma´sdeunavariabledegradoimpar es
+tros:F,ofactordeponderacio´n,permitemanejar,cuantose siemprenoacotado2.Porlotanto,solotienesentidoconside-
+amplificalavariacio´nobtenidaapartirdeladiferenciadevec- rarpolinomiosimpl´ıcitosdegradopar,loscualespueden(o
+tores;yCR,constantederecombinacio´n,lacualindica,que
+no)seracotados.Losconjuntosdeobservacionesrepresentan
+porcientodelascomponentesdelvectormutadosetomara´n siempreobjetosfinitos.As´ı,almenosenteor´ıa,segarantiza
+encuentaenlosposiblesvectoresdelapro´ximageneracio´n.
+laposibilidaddeeliminarlascurvasosuperficiesauxiliares
+Como se puede observar, los para´metros que tiene este quesegeneranduranteelajustedepolinomiosimpl´ıcitos.
+algoritmosonigualmenteescasos:F,CRyN,lacantidadde
+Porotrolado,enestosmismosestudios,losgradosdelos
+individuosenlapoblacio´n. PIma´sutilizadosenlapractica,var´ıanentre2(elipsoide)y
+10.Elusodelosgradossuperiores(12,14,16y18),esde
+3.1.3 Sembradodeelementosenelalgoritmometaheur´ısti-
+cara´cterexcepcional.Dehecho,elusodeestosgradoshace
+co
+quesepierdalaventajadetenerunarepresentacio´ncompacta
+Paraacelerarlaconvergenciadelalgoritmometaheur´ıstico,
+del objeto mediante el vector de coeficientes del PI (vea el
+as´ıcomoencauzarlabu´squedaligeramente,esrecomenda-
+Cuadro1).
+ble incluir en la poblacio´n inicial una pequen˜a cantidad de
+CantidaddepuntosenXyelgradodelpolinomio
+elementos,loscualessedenominansembrados,quetienen
+Elgradodelpolinomioimpl´ıcitoqueseseleccionaparael
+buenosvaloresdelafuncio´nobjetivo.Portanto,secreeque
+ajuste,determinalacantidaddecoeficientescuyosvaloresde-
+suinclusio´nesbeneficiosaparatodalapoblacio´n.
+benestimarseporelalgoritmo.Estacantidaddecoeficientes,
+Para este sembrado inicial se pueden incluir elementos
+esladimensio´ndelproblema.Larelacio´nentreelgradodel
+queseansolucionesdealgoritmosexa´ctos,comoelalgoritmo
+PIyladimensio´n,sepresentaenelCuadro1.
+deajustelinealcla´sicoyelalgoritmo3L,obtenerloscuales
+Enlapra´ctica,noesrecomendablequeladimensio´ndel
+noescostosocomputacionalmente.
+problema sea mayor que la cantidad de puntos en X. En el
+Si estos elementos resultaran buenos desde el punto de
+algoritmodeajustecla´sico,incluso,esrecomendabletener
+vistadelamedidadedistanciautilizada,elalgoritmopuede
+contribuiramejorarestassolucionesdesdeelpuntodevista 2Porejemplo,cualquierrectaenelplano,ounplanoenelespacio,son
+desuscaracter´ısticastopolo´gicas. polinomiosdeprimergrado,noacotados.
+12 Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos
+de 3 a 5 veces ma´s puntos, que la cantidad de coeficientes encadapunto.Elvalor0,01paraεrepresentaunacercamiento
+delpolinomio[6].Sinembargo,yaenelalgoritmo3L,esta en,aproximadamente,ungrado,entreestosvectores.
+condicio´nserelaja,hastaelpuntoderequerirunacantidad Las siguientes caracter´ısticas del Algoritmo de Ajuste
+depuntosligeramentesuperioralacantidaddecoeficientes. Adaptativopuedenserbeneficiosasparalasaplicaciones:
+Estaestrategia,delaquetambie´nharemosuso,establece,
+quenotienesentidoajustarunconjuntodeN puntosconun Permiteencontrarsinningu´nconocimientopreviodela
+polinomioimpl´ıcitodema´sdeN gradosdelibertad. complejidaddelconjuntodedatos,elgradodelpolino-
+mioimpl´ıcitoquesera´ necesarioparaunbuenajuste.
+3.2.2 Ana´lisis del comportamiento de la Medida de Sua- Introducelavariabilidadenlassoluciones,ofreciendo
+vidadalaumentarelgradodelPI
+unconjuntodee´stasalusuariofinal.Conestosesaca
+La clave para poder determinar el grado del polinomio provechodelanaturalezamultimodal3 delproblema
+impl´ıcitoquemejorrepresentalacomplejidaddelconjunto
+deajustedepolinomiosimpl´ıcitos,locualesunaclara
+dedatosdado,sepuedeencontrarenelcomportamientoque
+ventajafrenteaalgoritmosexactos.Enunentornoin-
+tiene la medida de suavidad, al aumentar dicho grado. La
+teractivo,elusuariopodr´ıateneropciones,encasode
+Figura4nosilustraestecomportamientoparadosalgoritmos
+noestarsatisfechoconla“mejor”solucio´n.
+deajustedescritosenlaseccio´n1,paradosjuegosdedatos.
+UtilizaymejoralacalidaddelosPIqueseobtuvieron
+Podemos observar que la medida de suavidad aumenta,
+como solucio´n de los algoritmos cla´sicos, lo cual se
+hastaalcanzarciertoma´ximo,yluegodesciendeporelefecto
+puedevercomounprocesodepostoptimizacio´n.Las
+del sobreajuste, o se mantiene constante con ligeras varia-
+metaheurs´ıstiaspuedengenerarnuevassolucionesque
+ciones.Paraotrosjuegosdedatos,lamedidaddesuavidad
+no esta´n relacionadas con las soluciones cla´sicas, si
+se comporta de manera similar, aunque puede alcanzar el
+e´stastienencaracter´ısticasgeome´tricasdeseadas.
+ma´ximofueradelrangodegradosanalizados(Figura4).
+Estehechonosllevaaconsiderarelcambiodelamedida
+4. Resultados Experimentales
+de suavidad con respecto al grado del polinomio impl´ıcito,
+comouncriteriodecercan´ıaalgradoo´ptimo,querepresente Antes de presentar los resultados experimentales debe-
+mejoraunconjuntodeobservaciones.Sielaumentoesdema- mosaclararvariascuestionesrelativasalaaplicacio´ndelos
+siadopequen˜oonegativo(hayunadisminucio´n),alcanzamos algoritmospresentadosenlapra´ctica.
+el“mejor”gradobuscado. Unaspectoquesedebetenerencuentaalaplicartodoslos
+algoritmosdeajuste,eslanecesidaddecentrarenelorigenel
+3.2.3 ResumendelAlgoritmodeAjusteAdaptativo
+conjuntodepuntosXquesevaautilizar.Adema´s,aXsele
+Teniendo en cuenta todo lo antes dicho, se propone el
+debeaplicarunescalado(porejemplo,dividiendolospuntos
+siguientealgoritmodeajuste:
+porsudistanciapromedioconelorigen).Elresultadodeestas
+operacionesesinvarianteantetransformacionesEuclidianas
+Algoritmo1AlgoritmodeAjusteAdaptativo
+enlosdatos[21].
+G←Gradoma´ximoqueseutilizara´ paraelconjuntode
+Estastransformacionesconsiguenevitarproblemasnume´ri-
+puntosdado
+cosenlosalgoritmosdeajuste.
+g←2
+En los experimentos se evaluara´n tanto la validez de la
+whileg<Gdo
+funcio´nobjetivopropuestaparaelproblemaencuestio´n,como
+best elements ←FixedDegree(g)
+g el rendimiento de los algoritmos de ajuste de grado fijo y
+if g > 2 and smooth(best elements ) −
+g variable. Estos algoritmos deben ser capaces de optimizar
+smooth(best elements )≤ε then
+g−1 la funcio´n objetivo, y adema´s dar como resultado curvas y
+return best elements
+g−1 superficies interpretables, geome´tricamente similares a los
+else
+objetosen2Dy3Dquesirvandemodelos.
+g←g+2
+endif
+4.1 Juegosdedatos
+endwhile
+Losmodelos3Dy2Dparaevaluarlavalidezdelosalgo-
+return best elements
+g ritmosexpuestosseseleccionarondelasiguientemanera.
+Comomodelos3D,setomaronnubesdepuntosdereposi-
+Lacondicio´ndeparadadeestealgoritmoeslanomejo- toriosconocidosampliamente,comoelStanford3DScanning
+ra de la medida de suavidad en un cierto ε con el aumento Repository[2],entreotros(Figura6).Enparticular,setomaron
+delgrado.Sehacenotarqueconε =0,estoequivaleauna losmodelos:
+disminucio´ndedichamedida.
+Unaventajadeutilizarlasuavidadenlacondicio´ndepa- Manzana
+radadelalgoritmo,esquetieneunainterpretacio´ngeome´trica PaticodeHule
+inmediata.Eselpromediodelosvaloresdeloscosenosdelos 3Unproblemamultimodalposeemuchoso´ptimoslocales,quepueden
+a´ngulosentreentrelosvectoresgradienteynormalestimado, tenervalorescercanosdelafuncio´nobjetivo.
+Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos 13
+Figura4.ComportamientodelaMedidadeSuavidadalaumentarelgradodelPIparalosjuegosdedatos(a)“Bota”,(b)
+“Caballo”(LargeGeometricModelsArchivedelGeorgiaInstituteofTechnology[1])
+delproblema[12].Comocondicio´ndeparadadeambasme-
+taheur´ısticas,seutilizo´ elarriboaunaciertacantidaddeite-
+raciones.Seutilizaron500iteracionesenlamayor´ıadelos
+casos,exceptoenlacomparacio´ndelasmetaheur´ısticas,don-
+deseutilizaron200iteracionesenelcaso3D.
+Enlametaheur´ısticaEnjambredePart´ıculas,setomo´ χ=
+Figura5.Juegosdedatos2Dutilizados.(a)Bota,(b)Avion, 0,729,comosesugiereen[7].
+(c)Mariposa. Enlametaheur´ısticaEvolucio´nDiferencial,seasumio´F=
+0,7(factordeponderacio´n),CR=0,9(constantederecombi-
+nacio´n),comoserecomiendaen[20].
+Elpara´metrodepenalizacio´nδ introducidoenlafuncio´n
+objetivo(5),seestimara´ enlapro´ximaseccio´n.
+Por u´ltimo, en el caso 3D se tomaron fracciones de las
+cantidadesdepuntosenlosmodelosoriginales,pueslascar-
+dinalidadesdeestosconjuntossonmuygrandes,llegandoa
+tener35947puntoseljuegodedatos“ElConejodeStanford”.
+Figura6.Juegosdedatos3Dutilizados.(a)Manzana,(b)
+Esto se debe a que los modelos empleados se utilizan con
+Paticodehule,(c)Conejo.
+frecuenciaeninvestigacionesenelcampodelosgra´ficospor
+computadora,dondelaprecisio´nlocalesfundamental.
+ElConejodeStanford(“StanfordBunny”)
+4.3 Ajustedelpara´metroδ
+Enelcasodelosmodelos2D,seescogieronfigurasplanas Elpara´metroδ introducidoenelalgoritmodeajuste,de-
+(Figura5)quehanaparecidoconfrecuenciaenlosdistintos terminacua´nfuerteeslapenalizacio´nportenerunvalorde-
+estudiosrelativosalospolinomiosimpl´ıcitos[29,21,6].La- masiadobajodelamedidadesuavidad.
+mentablemente, no existe consenso sobre juegos de datos Elajustedeestepara´metroesimprescindibleparaobtener
+“ideales”paraelajusteendosdimensiones,nirepositoriosque resultadosquepuedanserutilizadoseinterpretadoscorrec-
+loscontengan.Porotraparte,losjuegosdadatosen2Dson tamente,yaqueunvalordemasiadobajopuedeeliminarel
+fa´cilmenterecreablesporlosinvestigadoresenela´rea. necesario efecto de la penalizacio´n, y un valor demasiado
+altopuedehacerqueelpolinomioimpl´ıcitoquedelejosdel
+4.2 Para´metrosdelosalgoritmosutilizados conjuntooriginaldeobservaciones.
+Enlosexperimentosrealizados,seutilizaronlossiguientes Este hecho se ilustra en la Figura 7. Se puede observar
+para´metros. el comportamiento inestable del algoritmo para valores pe-
+Paralasmetaheur´ısticasDEyPSO,eltaman˜odelapo- quen˜osdeδ,as´ıcomoresultadospocoprecisosconrespecto
+blacio´n (o enjambre), se fijo´ en cuatro veces la dimensio´n alconjuntooriginaldepuntos,paravaloresdemasiadogran-
+14 Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos
+des.Tambie´nseobserva,queexisteunrangobastanteamplio postoptimizarsolucionesdelosalgoritmosdeajusteconoci-
+devalores“aceptables”deδ. dos(linealcla´sicoy3L),conelfindeobtenersolucionesde
+mejorcalidad.
+4.4 Ana´lisis del Ajuste de Objetos 2D y 3D por el Losexperimentosrealizadosconfirmanlavalidezdelen-
+AlgoritmoAdaptativo foqueexpuestoenjuegosdedatos2Dy3Descogidos,dado
+Acontinuacio´nsepresentara´nlosresultadosdelalgoritmo quelosajustesconseguidosporelalgoritmopropuestoson
+deajusteadaptativoparalosdistintosjuegosdedatos. interpretables.
+4.4.1 Ajustedecurvasen2D
+Referencias
+Seguidamentesemuestranlascorridasdelalgoritmoadap-
+tativoparalosjuegosdedatosen2D(Figuras8,9,10),com- [1] LargeGeometricModelsArchive. http://www.cc.
+parandolosresultadosconlosalgoritmos3LyLinealCla´sico. gatech.edu/projects/large_models/, con-
+Comoseobserva,elAlgoritmoAdaptativopuededeter- sultadoel2015-05-05.
+minardemanerarazonableelgradodelpolinomioimpl´ıcito
+[2] The Stanford 3D Scanning Repository.
+quesenecesitaparaobtenerunajuste“interpretable”.
+http://graphics.stanford.edu/data/
+4.4.2 Ajustedesuperficiesen3D 3Dscanrep/,consultadoel2015-05-05.
+Aligualqueen2D,serealizaroncorridasexperimentales
+[3] A.Ben-Israel. GeneralizedInverses:TheoryandAppli-
+delAlgoritmodeAjusteAdaptativo,paralosjuegosdedatos
+cations. Secondedition,2001.
+en3D.EnlasFiguras11,12,13semuestranlosajustesconse-
+guidos,as´ıcomolosresultadosobtenidosporlosalgoritmos
+[4] H. Ben-Yaacov. Recognition of 3d objects based on
+3LyLinealCla´sico,paralosmismosjuegosdedatos. implicitpolynomials. IrwinandJoanJacobsCenterfor
+Se debe sen˜alar que el algoritmo es capaz de represen- CommunicationandInformationTechnologies,2009.
+tar objetos complejos con polinomios impl´ıcitos de grado
+relativamentebajo(2,4,6,8). [5] M.Berger,J.Levine,L.GustavoNonato,G.Taubin,and
+Adema´s,seobservaqueelvalor0,01paraε aportabuenas C.T.Silva. Anend-to-endframeworkforevaluatingsur-
+solucionesenlamayor´ıadeloscasos. facereconstruction. ScientificComputingandImaging
+Institute,2011.
+5. Conclusiones
+[6] M.M.Blane. The3lalgorithmforfittingimplicitpoly-
+Lospolinomiosimpl´ıcitos(PI)nosonelesquemaderepre- nomialcurvesandsurfacestodata. IEEETransactions
+sentaio´ndemayorprecisio´n.Sinembargo,sonmuyatractivos onPatternAnalysisandMachineIntelligence,22:298–
+paraaplicacionesquerequieranregistrardemaneracompacta 313,March2000.
+datosdeuncomplejoobjetodelmundoreal,paraposterior-
+[7] R.EberhartandY.Shi. Comparinginertiaweightsand
+mentepoderrealizarunprocesodereconocimientodelmismo
+constrictionfactorsinparticleswarmoptimization. Pro-
+[4], o de otros objetos que se correspondan con el mismo
+ceedingsoftheCongressonEvolutionaryComputation,
+patro´n.Sonrobustosalruidoylaoclusio´nenlosdatos[28].
+1:84–88,2000.
+Conelobjetivodehallarunbuenpolinomioimpl´ıcitoque
+representeaunconjuntodepuntosdado,serealizaunproce- [8] G.Golub. MatrixComputations. TheJohnsHopkins
+sodeajuste,paraelcualenlaliteraturaconsultadaexisten UniversityPress,thirdedition,1996.
+dis´ımiles algoritmos. La gran mayor´ıa de estos algoritmos
+[9] J.KennedyandR.Eberhart. Particleswarmoptimiza-
+presuponeelconocimientodelgradodelPIquemejorrepre-
+tion. IEEE International Conference on Neural Net-
+sentaalospuntos.Estetrabajoplanteaunaalternativaaestos
+works,Proceedings,4,December1995.
+algoritmosdeajuste.
+En primer lugar, se define una funcio´n objetivo que se [10] Z.Landa. 2dobjectdescriptionandrecognitionbased
+utilizara´ duranteelajuste,yquesedistingueporincluiruna oncontourmatchingbyimplicitpolynomials. 2006.
+penalizacio´n de propiedades geome´tricas no deseadas (no-
+suavidad)enelPI. [11] V.MederosandJ.Estrada. Anewalgorithmtocompute
+Luego,seplanteaunalgoritmodeajusteheur´ıstico,elcual theeuclideandistancefromapointtoaconic. Investiga-
+escapazdedeterminarelgradodelpolinomionecesariopara cio´nOperacional,23,2002.
+larepresentacio´ndelconjuntodedatos.Elalgoritmosebasa
+[12] M.Pedersen. Goodparametersforparticleswarmopti-
+enlaideadeirincrementandopaulatinamenteelgradodelPI,
+mization. 2010.
+mientrashayaunamejoraenlasuavidaddelassoluciones.
+Esteme´todoesbeneficiosofrenteaotrosportresrazones: [13] M.J.Polo-Corpa. Curvefittingusingheuristicsandbio-
+permiteencontrarautoma´ticamenteelgradodelpolinomio, inspiredoptimizationalgorithmsforexperimentaldata
+puedeofrecerunconjuntodesolucionesencontextosdondese processinginchemistry. ChemometricsandIntelligent
+requieravariabilidad(alternativas)duranteelajuste,ypermite LaboratorySystems,96:34–42,2009.
+Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos 15
+Figura7.Juegodedatos“Bota”:ajustedelpara´metroδ.Grado4.Debajodecadaimagensemuestraelvalorδ utilizado.
+Figura8.Juegodedatos“Avio´n”:corridadelAlgoritmoAdaptativo:a)AjustedeGrado2,b)AjustedeGrado4(grado
+o´ptimo),c)AjustedeGrado6,d)Evolucio´ndelamedidadesuavidaddurantelacorrida,e)Ajuste3Ldegrado4,f)Ajuste
+LinealCla´sicodegrado4.
+16 Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos
+Figura9.Juegodedatos“Bota”:corridadelAlgoritmoAdaptativo:a)AjustedeGrado2,b)AjustedeGrado4,c)Ajustede
+Grado6(gradoo´ptimoparaε =0,01),d)AjustedeGrado8,e)Evolucio´ndelamedidadesuavidaddurantelacorrida,f)
+Ajuste3Ldegrado6,g)AjusteLinealCla´sicodegrado6.
+Figura10.Juegodedatos“Mariposa”:corridadelAlgoritmoAdaptativo:a)AjustedeGrado2,b)AjustedeGrado4(grado
+o´ptimoparaε =0,01),c)AjustedeGrado6,d)AjustedeGrado8(gradoo´ptimoparaε =0),e)AjustedeGrado10,f)
+Evolucio´ndelamedidadesuavidaddurantelacorrida,g)Ajuste3Ldegrado4,h)AjusteLinealCla´sicodegrado4,i)Ajuste
+3Ldegrado8,j)AjusteLinealCla´sicodegrado8.
+Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos 17
+Figura11.Juegodedatos“Manzana”:corridadelAlgoritmoAdaptativo:a)Nubedepuntosoriginal,b)AjustedeGrado2,c)
+AjustedeGrado4(gradoo´ptimo),d)AjustedeGrado6,e)Evolucio´ndelamedidadesuavidaddurantelacorrida,f)Ajuste
+LinealCla´sicodegrado4,g)Ajuste3Ldegrado4.
+Figura12.Juegodedatos“Paticodehule”:corridadelAlgoritmoAdaptativo:a)Nubedepuntosoriginal,b)AjustedeGrado
+2,c)AjustedeGrado4,d)AjustedeGrado6(gradoo´ptimo),e)AjustedeGrado8,f)Evolucio´ndelamedidadesuavidad
+durantelacorrida,g)AjusteLinealCla´sicodegrado6,h)Ajuste3Ldegrado6.
+18 Ajustedecurvasysuperficiesporpolinomiosimpl´ıcitos
+Figura13.Juegodedatos“Conejo”:corridadelAlgoritmoAdaptativo:a)Nubedepuntosoriginal,b)AjustedeGrado2,c)
+AjustedeGrado4,d)AjustedeGrado6(gradoo´ptimoparaε =0,01),e)AjustedeGrado8,f)Evolucio´ndelamedidade
+suavidaddurantelacorrida,g)AjusteLinealCla´sicodegrado6,h)Ajuste3Ldegrado6.
+[14] K.PriceandR.Storn. DifferentialEvolution-APracti- with applications to edge and range image segmenta-
+calApproachtoGlobalOptimization. Springer,2006. tion. PatternAnalysisandMachineIntelligence,IEEE,
+13:1115–1138,November1991.
+[15] M.Rouhani. Implicitpolynomialrepresentationthrough
+a fast fitting error estimation. IEEE Transactions on
+[24] G. Taubin. Object recognition based on moment (or
+ImageProcessing,April2012.
+algebraic)invariants.GeometricInvarianceinComputer
+Vision,pages375–397,1992.
+[16] M.Rouhani. Thericherrepresentationthebetterregis-
+tration. IEEE Transactions on Image Processing, 22,
+[25] G.Taubin. Distanceapproximationsforrasterizingim-
+December2013.
+plicit curves. ACM Transactions on Graphics, 13, Ja-
+[17] T.Sahin. Fittinggloballystabilizedalgebraicsurfacesto nuary1994.
+rangedata.IEEEInternationalConferenceonComputer
+Vision,2,2005. [26] G. Taubin. Parameterized families of polinomials for
+boundedalgebraiccurveandsurfacefitting. IEEETran-
+[18] P.Schenzel. Ontheinteractivevisualizationofimplicit
+sactionsonPatternAnalysisandMachineIntelligence,
+surfaces. Martin-LutherUniversityHallePress,Septem-
+16,March1994.
+ber2012.
+[27] G. Taubin and D. Cooper. Symbolic and Numerical
+[19] R. Storn and K. Price. Differential evolution - a sim-
+ComputationforArtificialIntelligence. AcademicPress,
+pleandefficientheuristicforglobaloptimizationover
+1992.
+continuousspaces. JournalofGlobalOptimization,11,
+1997.
+[28] B. Zheng. 2D Curve and 3D Surface Representation
+[20] E.Talbi. Metaheuristicsfromdesigntoimplementation. using Implicit Polynomial and its Applications. PhD
+JohnWiley&Sons,Inc.,2009. thesis,UniversityofTokyo,June2008.
+[21] T.Tasdizen. Improvingthestabilityofalgebraiccurves
+[29] B. Zheng. An adaptive and stable method for fitting
+forapplications. IEEETransactionsonImageProces-
+implicitpolynomialcurvesandsurfaces. IEEETransac-
+sing,9:405–416,March2000.
+tionsonPatternAnalysisandMachineIntelligence,32,
+2010.
+[22] G. Taubin. Nonplanar curve and surface estimation
+in3-space. InternationalConferenceonRoboticsand
+[30] B.Zheng. BreastMRimagefusionbydeformableim-
+Automation,Proceedings,IEEE,pages644–645,April
+plicitpolynomial(dip). IPSJTransactionsonComputer
+1988.
+[23] G.Taubin. Estimationofplanarcurves,surfaces,and VisionandApplications,5,July2013.
+nonplanar space curves defined by implicit equations

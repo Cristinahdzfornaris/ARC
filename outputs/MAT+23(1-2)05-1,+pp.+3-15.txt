@@ -1,0 +1,1243 @@
+REVISTA CIENCIAS MATEMÁTICAS Vol. 23 único, Nos. 2005-2006
+G-PRESENTACIONES DEL GRUPO SIMÉTRICO
+Juana E. Bermúdez Sosa1 y Miguel A. Borges Trenard2
+Departamento de Matemática, Facultad de Matemática y Computación, Universidad de Oriente
+RESUMEN
+Obtenemos una G-presentación del grupo simétrico, aplicando el Método de las bases de Gröbner.
+Comparamos la G-presentación obtenida con la presentación inicial (dada por Carmichel) y dos
+presentaciones completas dadas por Le Chenadec.
+ABSTRACT
+We obtain a G-presentation of the symmetric group, by applying the Gröbner bases Method. We
+compare the G-presentation obtained with the initial presentation (given by Carmichel) and two
+complete presentations (given by Le Chenadec).
+INTRODUCCIÓN
+Dividimos el trabajo en secciones. En la Sección I resumimos temas conocidos, necesarios para la
+presentación de los resultados. En la Sección II damos a conocer la G-presentación obtenida, con las
+demostraciones correspondientes. La Sección III se dedica a una comparación con otras presentaciones del
+grupo simétrico, la misma se realiza con respecto a los criterios siguientes: número de relaciones,
+requerimiento de memoria para su almacenamiento, regularidad de las expresiones, y longitud de las palabras.
+En las conclusiones destacamos los aspectos positivos y negativos de la G-presentación aquí reportada.
+I. PRELIMINARES
+Notaciones: X: = X ,...,X  alfabeto finito,
+1 n
+S: = X el monoide libre generado por X
+t, u, v, w elementos de S,
+i, j, k números naturales,
+K cuerpo conmutativo,
+KX K-álgebra libre sobre X,
+f, g, h elementos de KX es decir, polinomios,
+F, G subconjuntos de KX,
+I ideal bilateral de KX,
+I(F) ideal bilateral generada por F,
+α, β subconjuntos X  X ,
+ congruencia generada por α,
+P(α) conjunto de binomios del tipo t – t
+1 2
+donde (t – t )  
+1 2
+E-mail: 1juanae@csd.uo.edu.cu
+2mborges@mabt.uo.edu.cu
+3
+Utilizaremos el ordenamiento de términos  L sobre X dado en [Borges, 94], donde se brindan algunos
+elementos que muestran la utilidad del mismo.
+Definición 2.1: Dado un ordenamiento de términos < sobre X:
+i) Para f: =
+4
+m
+i
+1
+c si ,i donde c  K \ 0, y s s ,
+i 1 m
+• T (f): = s es el término máximo de f c. r. a <,
+< 1
+• LC (f): = c es el coeficiente principal de f c. r. a <,
+< 1
+• Rest (f): = f - LC (f)T (f): es el resto de f c. r. a <,
+< < <
+ii) El conjunto de términos máximos de F c. r. a < es T(F): = T (f): f  f \ 0.
+Definición 2.2: G  I \ 0 es una base de Gröbner de I si T(G) genera T(I).
+También se acostumbra a decir que G es una G-base.
+Definición 2.3: Una base de Gröbner G de I es reducida sí, para todo g  G:
+i) T(g) no es múltiplo de cualquier s  T(G) \ T(g),
+ii) LC(g) = 1.
+iii) Rest (g)  R(I).
+Definición 2.4: El par (X, ) es una G-presentación para X/ o para cualquier monoide canónicamente
+isomorfo a él, con respecto al ordenamiento de términos < sobre X, si
+P(B) = rGb(I()).
+Definición 2.5: f  KX \ 0 tiene una G-representación en términos de F, si se cumplen las condiciones:
+f =
+m
+i
+1
+c si gi ti ,i c  K \ 0, g  KX \ 0, s, t  X,
+i i i i
+T(f)  T(s)T(g)T(T), , para todo i = 1,...,m.
+i i i
+Teorema 1.6 (Caracterización de G-base):
+G es una G-base de I(F) si, y si sólo si:
+i) I(F) = I(G).
+ii) Todo f de SP(G) tiene una G-representación en términos del conjunto G.
+Las definiciones de SP(G) y otras necesarias para un mejor entendimiento de este trabajo pueden ser
+consultadas en [Borges, 92 , [Borges , 95], y [Mora , 86].
+II. OBTENCIÓN DE UNA G-PRESENTACIÓN DEL GRUPO SIMÉTRICO
+Sea el Grupo Simétrico de grado n (n > 2), denotado por n, con el sistema de relaciones de definición ,
+que denotaremos por P8:
+5
+S 2i  ( S Si
+i 1
+) 3  ( S Si
+i 1
+S Si )j 2 = 1
+i,j 1, n - 1, j  i, j  i + 1,
+donde A = S ,S , S = S  es un sistema generador del mismo.
+1 n-1 n 1
+Teorema 3.1: Sea I = I(P()), entonces:
+r G B (I) 
+ X
+X
+X
+X
+2 1 
+i
+X X
+j i
+X X
+k i
+X X
+k j
+, 
+
+j
+
+j
+
+i
+1 ,
+X
+X
+X
+i 
+Xi
+Xi
+Xi
+1
+Xj
+Xj
+Xj
+, n
+,i
+Xi
+Xi
+
+j 
+X
+k
+X
+k
+1 
+2 
+,i
+,j
+,
+,
+k
+k
+n
+
+
+1 
+3 
+3 
+,
+,
+,
+n
+n
+i 
+
+
+1
+1
+1 , j 
+, j  
+, j  
+ 1 
+2 
+2 
+,
+, k
+, k
+
+
+1
+1
+,
+,
+i
+i
+
+
+1 , 
+1 , 
+j
+j
+
+
+1
+1
+
+
+,
+.
+Demostración:
+Formemos los conjuntos F y G con las asignaciones siguientes:
+f(1) : X2 1, f(2) :(XX )3 1, 
+i i i i i1 
+F:  P()
+ f :(XX XX )2 1/i, j1, n1, ji, ji1 
+ij i i1 i j 
+G :  g
+i
+: X 2i  1 /i  1 , n  1  U
+ g
+ij
+: X Xj Xi
+j
+ X Xi Xj i j   2 , n  1  , i  1 , j  1  U
+ g(1): X XX XX XX X /k3, n1,  
+ ijk k i j i j i k i U
+ j2, k1, i1, j1 
+ g(2) : X X X XX XX X /k3, n1,  
+
+ijk k j i i j i k j
+
+ j2, k1, i1, j1 
+Utilizando el método de demostración desarrollado en la metodología utilizada en Borges, 94 y el
+ordenamiento  L, debemos probar que se cumplen las condiciones siguientes:
+1. I(F) = I(G)
+2. Todo S-polinomio de G tiene una G-representación en términos de G.
+Primera condición: 1a) F  I(G).
+Notemos que f(1)= g  G, i  1, n - 1.
+i i
+Para demostrar que los polinomios f(2) I(G), analicemos dos casos:
+i
+1ro. Para i  n - 2, tomemos los polinomios
+h :=
+1
+6
+(2 fi ) - XX Xg =
+i i+1 i i,i+1
+X Xi
+i 1
+X 2i X
+i
+- 1,
+h := h - XX g X X =XX2 X - 1,
+2 1 i i+1 i i+1 i i i1 i
+h := h - Xg X =
+3 2 i i+1 i
+X 2i
+1
+- 1 = g.
+i
+De los cuales se deduce que:
+(2 f1 ) = XX Xg + XX gX X + Xg X + g  I(G) .
+i i+1 i i,i+1 i i+1 i i+1 i i i+1 i i
+2do. Para el caso i = n - 1, asignemos:
+h :=
+1
+(2 fi ) - X X g X =
+n-1 1 1,n-1 1
+X
+n  1
+X 21 X
+n  1
+X 2i  1 ,
+h := h –
+2 1
+X
+n  1
+X 21 X
+n  1
+g
+1
+ X
+n  1
+X 21 X
+n  1
+- 1,
+h := h – X g X =
+3 2 n-1 1 n-1
+X 2n
+ 1
+- 1 = g ,
+n-1
+de los que obtenemos:
+(2 fn
+
+)1 = X X g X +
+n-1 1 1,n-1 1
+X
+n  1
+X 21 X
+n  1
+g
+1
++ X g X + g  I(G) .
+n-1 1 n-1 n-1
+Procederemos ahora a demostrar que los polinomios f  I(G).
+ij
+Debemos considerar dos posibilidades:
+1ra. Supongamos ahora que j  i +1 y tomemos los polinomios
+h := f – XX Xg XX =
+1 ij i i+1 i i,i+1,j i j
+X Xi
+i 1
+X 2i X
+i 1
+X Xi Xj 2i X
+j
+ 1 ,
+h := h –
+2 1
+X Xi
+i 1
+g Xi
+i 1
+X Xi Xj 21 X
+j
+ X Xi 2i
+1
+X Xi Xj 2i X
+j
+ 1 ,
+h := h –
+3 2
+X gi
+i 1
+X Xi Xj 2i X
+j
+ X 2i X Xj 2i X
+j
+ 1 ,
+h := h –
+4 3
+g Xi Xj 2i X
+j
+ X Xj 2i X
+j
+ 1 ,
+h := h – X gX  X2 1g.
+5 4 j i j j j
+De donde h = g + XgX  I(G) y por tanto h , h , h y
+4 j j i j 3 2 1
+f = g + XgX +
+ij j j i j
+g Xi Xj 2i X
+j
+ X gi
+i
+ X gi
+i 1
+X Xi Xj 2i X
+j
+ X Xi
+i 1
+g Xi
+i 1
+X Xi Xj 2i X
+j
+ X Xi
+i 1
+X gi
+i,i 1
+ I(G)
+2da. Si j  i, tomemos:
+h : = f -
+1 ij
+X gi (2 )
+j,i,i 1
+X Xi
+i 1
+X Xi
+j
+= XX XX X X2X XX 1,
+i j i j i1 i i1 i j
+h : = h -XX XX X gX XX = XX XX X gX XX  XX XX X(2)XX 1
+2 1 i j i j i1 i i1 i j i j i j i1 i i1 i j i j i j i1 i j
+h : = h - XX XXg XX  XX XX XX 1,
+3 2 i j i j i1 i j i j i j i j
+h : = h -
+4 3
+7
+- g X
+ji
+Xj Xi 
+j
+X Xj Xi 2j X Xi
+j
+ 1 ,
+h : = h -
+5 4
+X Xj gi Xj Xi 
+j
+X Xj 2i X
+j
+ 1 ,
+h : = h
+6 5
+ X gj Xi 
+j
+X 2j  1 = g .
+j
+Y sumándolos obtenemos que:
+f =
+ij
+X gi (2 )
+j,i,i 1
+X Xi
+i 1
+X Xi 
+j
+X Xi Xj Xi Xj
+i 1
+g Xi
+i 1
+X Xi
+j
+ g X
+ji
+Xj Xi
+j
+ XXXXjg XX + XXgXX + XgX + g  I(G).
+i j i i+1 i j j i j i j j i j j
+b) G  I(F).
+Construimos los polinomios auxiliares siguientes:
+p ij1 : =f X XX XX XX XX(1)= XX XXXX X – X  I(F),
+ij j i i1 i j i i1 i j i i+1 i j i i+1 i j
+p i2 : = X (2 fi
+i
+) (1 - fi ) X
+i 1
+X Xi
+i 1
+X Xi
+i 1
+= X XX XX – X  I(F),
+i+1 i i+1 i i+1 i
+p i3 : = X
+i 1
+p i2 - f (1 ) X
+1i 
+Xi
+i 1
+X Xi
+i 1
+ X Xi
+i 1
+X Xi
+i 1
+ X
+i 1
+X
+i
+ I(F),
+p i4 : = p i2 X
+i 1
+- X
+i 1
+X Xi
+i 1
+X (1 ) fi
+i 1  i 1
+ X
+i 1
+X Xi
+i 1
+X
+i
+ X Xi
+i 1
+ I(F),
+p i5 : = p ijX
+1 i
+- X Xi
+i 1
+X Xi Xj (1 fi
+i
+)  X Xi
+i 1
+X Xi Xj Xi
+i 1
+ X Xj
+i
+ I(F),
+p ij6 : p ijX
+1 i 1
+X Xi
+i 1
+- X Xi
+i 1
+X Xi Xj
+i 1
+p i3  X Xi
+i 1
+X Xi Xj Xi 2i
+1
+X
+i
+ X Xj
+i 1
+X Xi
+i 1
+ I(F),
+p ij7 : X Xi
+i 1
+X Xi Xj (1 ) fi
+i 1 
+X
+i
+ X Xi
+i 1
+X Xi (1 fj
+i
+)  p
+6
+ X Xj
+i 1
+X Xi
+i 1
+ X Xi
+i 1
+X Xi
+j
+ I(F),
+p ij8 : X Xi
+i 1
+X Xi Xj Xi
+i 1
+X fi
+ji
+ f X
+ij j 1
+X Xj Xi Xj
+j 1
+ X
+i 1
+X Xj Xi Xj
+i 1
+X Xj
+i
+ X Xi
+i 1
+X Xi Xj
+i 1
+X
+i
+ I(F),
+pij :pij pij  X X XX X X XX  I(F),
+9 8 1 j1 j i j i1 j i j
+p ij1
+0
+: f (2
+j
+) X Xj Xi Xj
+j 1
+X Xj
+i
+ X Xj
+j 1
+X Xj
+j 1
+f 
+ij
+X Xj
+j 1
+X Xj
+j 1
+ X Xj Xi Xj
+j 1
+X Xj
+i
+ I(F),
+p ij1
+1
+: X
+j 1
+p ij9 - f (1 )
+j 1 
+X Xj Xi Xj
+j 1
+X Xj
+i
+ X Xj Xi Xj
+j 1
+X Xj
+i
+ X
+j 1
+X
+j
+ I(F),
+p ij1
+2
+: X pj ij1
+1
+(1 - f1
+j
+) X Xi Xj
+j 1
+X Xj
+i
+ X Xi Xj
+j 1
+X Xj
+i
+ X Xj
+j 1
+X
+j
+ I(F),
+pij : Xpij f(1)X XX XX  X XX XX XX X  I(F),
+13 i 5 i i1 i j i i1 i1 i j i i1 i j i
+p ij1
+4
+: X pj ji1 - f (1j ) X
+j 1
+X Xj Xi Xj
+j 1
+X
+j
+ X
+j 1
+X Xj Xi Xj
+j 1
+X Xj
+j
+ X Xj
+i
+ I(F),
+pij :f(1) X XX X X X pij  X X X X XX X X  I(F),
+15 1j1 j i j j1 j j1 14 j1 j i j i j j1 j
+Caso a: Para demostrar que los polinomios
+X XX - XX X  I(F), 1  I  n – 1
+i+1 i i+1 i i+1 i
+tomemos los polinomios
+8
+a i1 : X pi i3 (1 - fi )X
+i 1
+X Xi
+i 1
+X Xi
+i 1
+ X
+i 1
+X Xi
+i 1
+ X Xi
+i 1
+X
+i
+ I(F), donde 1  i  n -1
+En particular, para i = n -1, se toma el polinomio
+a
+2
+: a n1 -1  X X X – X X X  I(F).
+n-1 1 n-1 1 n-1 1
+Caso b: Demostremos que los polinomios
+XXX – XX XXX  I(F), j  i +1.
+j i i+1 i i+1 i j i
+para esto, consideremos los polinomios
+b ij1 : X Xi
+i 1
+X Xi Xj (1 ) f - p
+i i 1 
+ij5 X
+i 1
+ X Xj Xi
+i 1
+ X Xi
+i 1
+X Xi Xj
+i
+ I(F).
+Caso c: Demostremos que los polinomios
+XX X – XX XXX  I(F), j  i +1.
+j i+1 i i i+1 i j i
+para lo cual tenemos los polinomios
+c ij1 : p ij7 X
+i 1
+- X Xj
+i 1
+X (1 ) f 
+i i 1 
+X Xj
+i 1
+X - X
+i
+Xi
+i 1
+X Xi Xj
+i 1
+ I(F).
+Para los casos siguientes introducimos a continuación la definición siguiente:
+Definición 3.1: Decimos que un polinomio g de G tal que TM (g) = XX X , n  m es de distancia derecha
+ r n m
+ = n - m. y es de distancia izquierda  = r - n. Cuando  = , simplemente decimos que g es de
+distancia 
+Podemos notar que a medida que n crece, en el conjunto G, aparecen polinomios de distancia mayor. Así,
+para n = 3, sólo aparece un polinomio de distancia 1; para n = 5, aparecen los polinomios:
+X X X – X X X , X X X – X X X de distancia 2 y 3 respectivamente, y X X X X X X X X de distancia
+4 2 4 2 4 2 4 1 4 1 4 1 4 1 3 1 3 1 4 1
+derecha 2 y distancia izquierda 3.
+Caso d: Demostremos que los polinomios g = XXX – XXX  I(F), i  j.
+ij j i j i j i
+Procederemos a la inducción sobre la distancia de este tipo de polinomios. Los polinomios de este tipo de
+distancia 1 pertenecen a I(F) por el caso a. Supondremos entonces que los polinomios de este tipo, de
+distancia , denotados por h , pertenecen a I(F); y demostremos que los polinomios de distancia  + 1
+
+pertenecen a I(F). Para lo cual suponiendo que
+hi : X - X X - XX X  I(F), 1  i  n – 2,
+ i i i i i i
+construimos los siguientes polinomios, para j =  + 1+ i: :
+d : =
+1
+X Xi
+i 1
+X Xi Xi Xj Xi
+i 1
+p ij'
+1
+p ijX
+1 i 1
+X Xi Xj Xi
+i 1
+X 
+i
+X Xj
+i 1
+X Xi Xj Xi
+i 1
+X
+i
+ X Xi
+i 1
+X Xi Xj Xi
+i 1
+X
+j
+ I(F),
+d : = d  XX XbijX  X X XX XX X - XX X2X XX XX  I(F),
+2 i i i1 i 1 j j i1 i j i i1 i i i1 1 i1 i j i j
+d : = d  XX f(1)X XX XX Xf(1)XX XX f(1)X XX  X X XX XX X X XX  I(F),
+3 4 i i1i i1 i j i j i i1 i j i j i j i j j i1 i j i i1 i j i j
+d : = d cijX XX X  XX XX X X XX X X XX  I(F),
+4 3 1 j i i1 i i i1 i j i1 j i i1 i j i j
+d : =
+5
+9
+X Xi
+i 1
+X hi i 1 X Xi
+i 1
+X
+i
+ d
+4
+ X Xj Xi
+j
+- X Xi
+i 1
+X Xi
+i 1
+X Xj
+i 1
+X Xi
+i 1
+X
+i
+ I(F),
+d : =
+6
+d
+5
+ p i3 X Xj
+i 1
+X Xi
+i 1
+X 
+i
+X Xj Xi
+j
+- X
+i 1
+X Xi Xj
+i 1
+X
+i
+ I(F),
+d : =
+7
+d
+6
+ X
+i 1
+X Xi pj i4  X Xj Xi
+j
+- X
+i 1
+X Xi Xj Xi
+i 1
+ I(F),
+d ij8 : d
+7
+ p ij1
+3
+ X Xj Xi
+j
+- X Xi Xj
+i
+ I(F).
+Al sustituir j =  + 1 +i en este último, llegamos a la conclusión siguiente:
+h i
+ 1
+ X
+  1 
+Xi Xi
+  1  i
+ X Xi
+  1 
+Xi
+i
+ I(F), 1  i  n -2.
+Y para i = n – 1, sólo es posible el polinomio de distancia 1, caso ya tratado (ver caso a).
+Demostrando así que los polinomios d ij8  g
+ij
+ I(F), para todo  = j – i.
+Para demostrar que los polinomios g (1 )
+ijk
+y g (2ijk ) pertenecen a I(F), es suficiente considerar los tipos de
+polinomios de distancia derecha  y los de distancia izquierda .
+Caso e: Demostremos que los polinomios X XX - XX XX X  I(F), k  i, 1    n -3, para cualquier
+k i i+ i i+ i k i
+distancia . Procederemos por inducción sobre. Para ello supondremos que los polinomios h de este tipo
+
+y distancia , pertenecen a I(F) y probaremos que los polinomios de este tipo y distancia  + 1 pertenecen
+también a I(F) .
+Supongamos h ik ,1 : = X XX - XX XX X  I(F) y construimos los polinomios siguientes con la condición
+k i i+ i i+ i k i
+j = i +  + 1:
+e := XX XX XX
+1 i i+1 i k i i+1
+p ij1 - p ik1 X XXXX X X X XXXX X - XX XX XX X  I(F),
+i+ i j i i+1 i = k i+1 i j i i+1 i i i+1 i k i i+1 j
+e := e -
+2 1
+c ik1 XXX X = XX XX X XXX X – XX XX XX X  I(F),
+j i i+1 i i i+1 i k i+1 j i i+1 i i i+1 i k i i+1 j
+e := e – XX Xhi1,k,1XX X = XX XX XX X X XX X - XX XX XX X  I(F),
+3 2 i i+1 i  i i+1 i i i+1 i i+1 j i+1 k i+1 i i+1 i i i+1 i k i i+1 j
+e := e – XX XX XX X
+4 3 i i+1 i i+1 j i+1 k
+p i4 = XX XX XX X XX - XX XX XX X  I(F),
+i i+1 i i+1 j i+1 k i i+1 i i+1 i k i i+1 j
+e := e – XX XX XX
+5 4 i i+1 i i+1 j i+1
+b ik1 = XX XX XX XX XX X - XX XX XX X  I(F),
+i i+1 i i+1 j i+1 i i+1 i k i i i+1 i k i i+1 j
+e := e – pi XX XX XX X = X XXX XX XX X - XX XX XX X  I(F),
+6 5 3 j i+1 i i+1 i k i i+1 i j i+1 i i+1 i k i i i+1 i k i i+1 j
+e := e – X XX
+7 6 i+1 i j
+p i4 X X = X XXXX X X - XX XX XX X  I(F),
+k i i+1 i j i i+1 k i i i+1 i k i i+1 j
+e := e –
+8 7
+p ij1
+3
+X X = XXXX X = XX XX XX X  I(F),
+k i i j i k i i i+1 i k i i+1 j
+e := - e X
+9 8 i
+p ik1
+3
+X =
+j
+X 2i X XX - XXXX X  I(F),
+k i j i j i k i
+eijk : = e -f(1)X XX = X XX - XXXX X  I(F),
+10 9 i k i j k i j i j i k i
+Al sustituir j =  + 1 +i en este último, llegamos a la conclusión siguiente:
+hik,1 = X XX -XX XX X  I(F). Demostrando así que los polinomios
+1 k i +1+i i +1+i i k i
+10
+e ijk
+1 0
+ g (1 )
+ijk
+I(F) para toda = j – 1.
+Caso f: Demostremos que los polinomios X XX - XXXX X I(F), X  I(F), j  1, 1    n -3.
+j+ j i i j i j+ j j
+Procederemos por inducción sobre la distancia : demostremos el resultado para  = 1.
+Tomemos y ij :
+1
+= p ij1
+5
+ p ij8 X X=X XX - XXXX X  I(F).
+j+1 j j+1 j i i j i j+1 j
+Y suponiendo que
+h ij,2
+
+: = X XX - XXXX X  I(F), j  i, para un cierto  probemos que X XX - XXXX X  I(F). Para ello
+j+ j i i j i j+ j j++1 j i i j i j++1 j
+consideremos el polinomio:
+w ijk
+1
+: = XX XX XX
+j j+1 j k j j+1
+p ji1 - p jk1 X XXXX X = X X XXXX X – XX XX XX X  I(F), j  i,
+j+1 j i j j+1 j k j+1 j i j j+1 j j j+1 j k j j+1 j
+a partir del cual, tomando k = j +  + 1, formamos los polinomios:
+w : = w + XX X
+2 1 j j+1 j
+p jk1
+3
+X = X X XXXX X -
+i k j+1 j i j j+1 j
+X 2j X XX  I(F),
+k j i
+w : = w +f(1)X XX = XX XXXX X - X XX  I(F),
+3 2 j k j i k j+1 j i j j+1 j k j i
+w : = w - cjk XXX X = XX XX X XXX X - X XX  I(F),
+4 3 1 i j j+1 j j j+1 j k j+1 i j j+1 j k j i
+w : = w - XX X
+5 4 j j+1 j
+h i,j
+
+1,2 XX X = XX XXX XX X XX X - X XX  I(F),
+j j+1 j j j+1 j i j+1 i k j+1 j j+1 j k j i
+w : = XX XXX XX
+6 j j+1 j i j+1 i k
+p j4 + w = X XX - XX XXX XX XX  I(F),
+5 k j j j j+1 j i j+1 i k j j+1
+w : = w + XX XXX Xbjk = XXX - XX XXX XXX XX X  I(F),
+7 6 j j+1 j i j+1 i 1 k j j j j+1 j i j+1 i j j+1 j k j
+w : = w -
+8 7
+p ji7 X XXX XX X = XXX – XXX XX XXX XX X  I(F),
+j+1 i j j+1 j k j k j j i j j+1 j j+1 i j j+1 j k j
+,
+w : = w - X
+9 8 i
+p j3 XXX XX X = XXX – XX XXXX XX X  I(F),
+i j j+1 j k j k j j i j+1 j i j j+1 j k j
+w : = w + X
+10 9 i
+p ji1
+3
+XX X =X XX = X XX – XXX
+j k j k j i k j j i j i
+X 2j X X  I(F),
+k j
+wijk := w + XXX
+11 10 i j i
+f (1j ) X X = XXX – XXXX X  I(F),
+k j k j j i j i k j
+Sustituyendo k = j +  + 1, hemos probado que el polinomio
+X XX – XXXX  I(F).
+j++1 j i i j i j++1
+Por tanto, para cualquier  comprendido entre 1 y n -2, es válido que los polinomios
+wijk g(2)  I(F) para toda  = k – j.
+11 ijk
+Queda probado así que I(F) = I(G).
+II. Demostremos ahora que todo S-polinomio de G tiene una G-representación en términos de G. En esta
+parte presentaremos como ejemplo la demostración de dos de los 32 tipos de S-polinomios que se
+obtienen al parear los polinomios de G:
+a) SP1  SP(g, g):
+ij
+SP1: = XXg - gX = XXXX - XX
+j i j ij j i j i j j i
+Tomemos h: = SP1 – Xg =
+i ij
+11
+X 2i XX – XX = gXX, y por tanto
+j i j i i j i
+SP1 = Xg + gXX
+i ij i j i
+tiene una G-representación en términos de G.
+b) SP3  SP(g,g(1))
+i ijk
+SP3: = ( g (1 )
+ijk
+) X
+j
+- X Xg XXXX XX -X X
+k i j = i j i k i j k i
+Tomemos h : = SP3 - XXX
+1 i j i
+g (1 )
+ijk
+= XX
+i j
+X 2i XXX X – X X
+j i k i k i
+h : = h - XXgXXX X = XX
+2 1 i j i j i k i i j
+X 2j XX X – X X
+i k i k i
+h = h - XXXX X =
+3 3 i j i k i
+X 2i X X – X X = gX X
+k i k i i k i
+Luego b) SP3 = XXX
+i j i
+g (1 )
+ijk
+) + XXgXXX XX + XgXX X + gX X, tiene una G-representación de G.
+i j i j i k j i i j i k i i k i
+La demostración de que los restantes S-Polinomios tienen una G -representación en términos de G se
+puede apreciar en [Bermúdez, 96]. Quedando así demostrado el teorema.
+Corolario 3.3
+G : =
+n
+S 2i = 1 i  1, n - 1U
+SSS = SSS  j  2, n - 1, i  1, j - 1U
+j i j i j i
+S SS - SSSS S  k  3, n - 1, j  2, k - 1, i  1, j - 1U
+k i j i j i k j
+S SS - SSSS S  k  3, n - 1, j  2, k - 1, i  1, j - 1
+k i j i j i k j
+El par GP: = (s, G ) es una G-presentación del grupo simétrico.
+n
+Comentario 3.4. Observemos que el conjunto de relaciones de la G-Presentación obtenida cumple la
+propiedad siguiente:
+Gn  G , para cada n > 2 (3.1)
+n+1
+III. COMPARACIONES CON OTRAS PRESENTACIONES DEL GRUPO SIMÉTRICO
+Procederemos ahora a comparar la G-presentación obtenida GP (ver corolario 3.3) con las presentaciones
+completas dadas en [Le Chenadec, 86], las cuales relacionamos a continuación:
+R1 R,1in
+ i i
+
+R2 1,1in
+ i
+ (P10)
+RR R R,ji1
+ i j j i
+
+RR R R R RR R , ji
+ i j j i i1 i i1 j
+donde las R son las transposiciones (i i+1) , y
+i
+12
+ T
+T
+T
+T
+T
+T
+1 ij
+T
+ij
+T
+ij
+T
+ij
+T
+ij
+T
+ij
+
+ij
+k l
+ik
+k j
+k j
+
+
+
+
+
+T
+ij
+1
+T
+T
+T
+T
+T
+k l
+T
+ik
+T
+k i
+T
+k i
+, i 
+ij
+, i
+jk
+, k
+ij
+, k
+k j
+k
+
+
+
+, i 1 
+k j 
+i j 
+i j 
+, j  1
+(P11)
+en la cual los nuevos generadores T son las transportaciones (i j) y el ordenamiento utilizado fue el
+ij
+lexicográfico. Esta comparación la realizaremos respecto al número de relaciones y al requerimiento de
+memoria para su almacenamiento. Para la determinación del número de relaciones de las presentaciones
+consideradas analizamos los valores que pueden tomarlos índices i, j, k y l en las relaciones; por ejemplo, en
+el caso de P11:
+En las relaciones de primer tipo, los valores de i dependen de los valores de j (i  i  j  n): luego, la
+cantidad de relaciones de este tipo es igual a
+n
+j
+2
+( j  1 ) 
+n ( n
+2
+ 1 )
+(4.1)
+Es claro que la cantidad de relaciones del segundo tipo coincide con la del primer tipo, pues solamente
+dependen de i y j y éstos tienen igual variación que en el caso anterior.
+En el tercer sistema de relaciones el análisis es algo más complicado:
+Para un par (k, l) fijo, i  k, i  1, j  1, 1  i  j -1, 2  j  n, pero entre j y k no existen restricciones, por lo
+que, para facilitar el cálculo del número de las T consideramos dos posibilidades:
+ij
+1ro: j  k
+2do: j  k
+En el primer caso la cantidad de T es:
+ij
+k
+j
+2
+( j  1 ) (4.2)
+y en el segundo caso la cantidad de T es:
+ij
+l1 n
+(j2)(j3) (4.3)
+jk1 jl1
+Sumando estas cantidades (4.2) y (4.3) obtenemos que para k y l fijos la cantidad total es:
+n2 5n4k8
+2
+Y sumando primero en k (1  k  1 – 1) y en j (2  j  n) después, llegamos al total de relaciones del tercer
+tipo:
+13
+n ( 3 n 3  1 6 n
+1
+2
+2
+ 2 7 n  1 4 )
+(4.4)
+La cantidad de relaciones de cuarto tipo se determina de las variaciones de i, j y k:
+1  i  k  j  n
+De las cuales tenemos:
+n  j1  n(n1)(n2)
+  (k1)  (4.5)
+  6
+j2k2 
+En cuanto a las relaciones del quinto y sexto tipos vemos que las variaciones de i, j y k son análogas a la
+anterior intercambiando sus posiciones, y por tanto sus cantidades coinciden con (4,5). Consiguientemente,
+al sumar el duplo de (4.1), (4.4) y el triplo de (4,5) obtenemos el total de relaciones de P11:
+n ( n  1 ) ( 3 n
+1
+2
+2
+ 7 n  1 4 )
+Las deducciones de la cantidad de relaciones de P10 y GP, así como las referidas al requerimiento de la
+memoria de las presentaciones estudiadas se desarrollan por un análisis similar al realizado para P11. Estos
+resultados se muestran en la tabla siguiente:
+Tabla I.
+Cantidad Requerimiento
+Presentación
+de Relaciones de memoria
+P8 (n – 1)2 (n – 1)(8n – 17)
+GP
+( n  1 ) ( 2 n 2
+6
+ 7 n  1 2 ) ( n  1 ) ( 8 n 2 
+3
+3 1 n  3 3 )
+P10 n2 – 2n + 2
+n 3  9 n 2 
+3
+3 7 n  1 3
+P11
+n ( n  1 ) ( 3 n
+1
+2
+2
+ 7 n  1 4 ) n(n1)(6n214n13)
+6
+Con los resultados de la Tabla I se deduce que la cantidad de relaciones de GP es menor que la de P10,
+para n  4, y que la de P11, para n arbitrario, y que GP requiere más capacidad de memoria que P10, pero
+mucho menos que P11.
+No obstante, esta dificultad de GP con relación a P10 es de menor valor al observar la regularidad de las
+expresiones y las longitudes de las palabras de GP, que no dependen del grado del grupo, como ocurre con
+P10.
+Mostraremos la comparación realizada entre las presentaciones señaladas para algunos valores
+particulares de n.
+Con respecto a la cantidad de relaciones:
+Tabla II.
+n GP P10 P11
+3 3 5 10
+4 8 10 34
+5 18 17 90
+6 35 26 200
+7 61 37 392
+Con respecto al requerimiento de memoria:
+Tabla III.
+n GP P10 P11
+3 8 12 25
+4 37 36 106
+5 104 68 310
+6 181 119 725
+7 290 188 1463
+Notemos la gran diferencia entre el número de relaciones de GP y el de P11, esta diferencia aumenta
+mucho más rápidamente en comparación con la diferencia entre GP y el de P10. Similarmente se aprecia en
+la Tabla III el gran requerimiento de memoria de P11, mayor que el de GP y que el de P10.
+CONCLUSIONES
+En este trabajo, obtuvimos una G-presentación del grupo simétrico que (por consecuencia) resuelve
+también el problemas de las palabras, al igual que las presentaciones completas dadas en Le-Chenadec,
+86 así como realizamos un análisis comparativo entre tres presentaciones del simétrico. Enfatizamos que
+GP satisface la condición de recurrencia (3.1) del comentario 3.4, análogamente a las presentaciones P10,
+P11.
+Se aprecia además la ventaja de la G-presentación obtenida (corolario 3.3) por la uniformidad de las
+relaciones para la expresión de una palabra en su forma canónica, por ser menor la longitud de las palabras
+que en P10 y menor la cantidad de relaciones que en P11. Con este resultado sobre las presentaciones GP,
+P10 y P11 podemos concluir que GP tiene ciertas ventajas sobre P10, éstas son:
+la regularidad de las relaciones, la longitud de las palabras es independiente de n,
+Y con respecto a P11:
+menor cantidad de relaciones, menor requerimiento de memoria.
+REFERENCIAS
+[Bermúdez, 96]: BERMÚDEZ S., J.E. (1996): G-Presentaciones del Grupo Simétrico de Grado n.
+Santiago de Cuba. Tesis de Maestría.
+14
+[Borges, 92]: BORGES T., M.A. (1992): Bases de Gröbner Asociadas con Monoides Finitamente
+Generados. Santiago de Cuba. Tesis de doctorado.
+[Borges, 94]: BORGES T., M.A. y M. BORGES Q. (1994): On a Metodology for obtaining Gröbner
+Bases Associated with Finitely Generated Monoids. Reporte 11, Facultad de Ciencias
+Naturales y Matemáticas. Departamento de Matemática. Universidad de Oriente.
+[Borges, 95]: BORGES, T., M.A. y M. ESTRADA (1995): Gröbner Bases and G-Presentations of
+Finitely Generated Monoids. Personal Comunication.
+[Cannon y otros, 73]: CANNON L., J.; A. DIMINO; G. HAVAS and J.M. WATSON (1973):
+Implementation and Analysis of the Todd –Coxeter Algorithm. Math. Comp. 27, p.463-490.
+[Carmichael, 56]: CARMICHAEL, R.D. (1956): Groups of Finite Order. Dover Publications. INC.
+USA.
+[Coxeter, Moser, 72]: COXETER W., H.S.M. and O.J. MOSER (1972): Generators and Relations for
+Discrete Groups. Springer-Verlag. New York.
+[Le Chenadec, 86]: LE CHENADEC, P. (1986) : “A Catalogue of Complete Group Presentations”,
+Journal of Symbolic Computation. 2, 363-381.
+[Mora, 86]: F. MORA (1986): “Gröbner Bases for Non-Commutative Polynomial Ring”, Proc. of
+AAECC –3 .L.N.C.S. 229, 353-362.
+[Mora, 88]: _________ (1987): Gröbner Bases and the Word Problem. Preprint. University of Genova.
+15

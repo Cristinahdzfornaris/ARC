@@ -1,0 +1,456 @@
+CienciasMatema´ticas,Vol.30,No.2,Pag.65-71,2016
+Recibido09-2016
+Aplicacio´n del Criterio BMA de seleccio´n de
+modelos bajo enfoque Bayesiano a un problema de
+Sensibilidad Ale´rgica Ocupacional en Panader´ıas de
+La Habana.
+Aplication of BMA Criteria of models selection under
+Bayesian approach to an allergic sensitivity
+occupational study on bakers of Havana.
+Marelys Crespo 1, Vivian Sistachs 1
+Resumen Laincertidumbreinherenteaunmodelo,generalmentenoesconsideradaalseleccionaryconstruir
+unmodeloestad´ıstico,loqueafectalainterpretacio´npredictivaysobreestimalasinferenciassobrecualquier
+resultado de intere´s. El Promedio Bayesiano de Modelos (BMA, por sus siglas en ingle´s “Bayesian Model
+Averaging”)esunaalternativaviablequeincorporalaincertidumbre.Elpresenteestudioilustralaaplicacio´naun
+problemadesaludpu´blica,relacionadoalasensibilidadale´rgicaocupacionalenpanader´ıasdeLaHabanapara
+determinarel“mejor”modeloenelcontextodelaregresio´nlog´ısticabinariautilizandolaestrategiadesarrollada
+en[1].Adema´s,semuestralaimplementacio´ndelaaplicacio´nenelsoftwareR.
+Abstract Theuncertaintyinherenttoamodel,generallyisnotconsideredontheselectionandconstruction
+momentofastatisticmodel,thistakesanimpactonthepredictiveinterpretationandoverestimatestheinferences
+onanyresultofinterest. TheBayesianModelAveraging(BMA)isaviablealternativethatincludesuncertainty.
+Thispaperillustratestheapplicationofapublichealthproblem: Theallergicsensitivityanoccupationalstudyon
+bakersofHavanatodeterminethe“best”modelandthefactorsthathaveaninfluenceonsuchmodel,usingthe
+strategydevelopedby[1]. WealsoshowtheimplementationonRsoftwareoftheBMAcriteria.
+PalabrasClave
+Regresio´nLog´ıstica—Seleccio´ndemodelos—BMA
+1FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,LaHabana,Cuba,m.crespo@matcom.uh.cu,vivian@matcom.uh.cu
+Introduccio´n viableparatratarlaincertidumbredeunaextensacantidadde
+modelos.
+Laincertidumbredeunmodelo,generalmente,noescon-
+siderada al seleccionar y construir un modelo estad´ıstico
+Elpromediobayesianodemodelos(BMA,porsussiglas
+adecuado.Losprocedimientosconvencionales,comunmen-
+eningle´s“BayesianModelAveraging”),esunaalternativaa
+teformulanyasumen-guiadosporunaseriedepruebasde
+laseleccio´nBayesianademodelosqueincorporalaincerti-
+significancia-unu´nicomodelocomoelcorrectopararealizar
+dumbredeunmodelo,alconsiderarunamezcladeunaamplia
+inferencias,sinembargo,ignorarlaincertidumbreinherentea
+variedaddemodelos,esunmecanismocoherenteparaeva-
+unmodeloafectasuinterpretacio´npredictivaysobreestima
+luar,dentrodeunmarcoprobabil´ıstico,laincertidumbrede
+lasinferenciassobrecualquierestad´ısticodeintere´s.
+unmodeloylarelacionadaasuspara´metros.
+Losme´todosBayesianos,alcuantificarlaincertidumbre Por otro lado, la regresio´n log´ıstica es una de las te´cni-
+inicial y posterior de un modelo, junto al desarrollo de los casestad´ısticasma´sconocidasyutilizadasparamodelaruna
+me´todosMCMC(MonteCarloMarkovChain)yalamejora variablederespuestacatego´ricaenfuncio´ndevariablesin-
+delosalgoritmoscomputacionalesparasuimplementacio´n, dependientes. Se aplica en campos tan distintos como epi-
+hanampliadoeintensificado,sustancialmente,sudesarrollo demiolog´ıa, ecolog´ıa, sociolog´ıa, medicina por mencionar
+y alcance, transforma´ndose ra´pidamente en una alternativa algunos.
+Aplicacio´ndelCriterioBMAdeseleccio´ndemodelosbajoenfoqueBayesianoaunproblemadeSensibilidad
+66 Ale´rgicaOcupacionalenPanader´ıasdeLaHabana.
+De ah´ı que 1−P(x) indicara´ la probabilidad de que Y
+Elpresenteestudiotienecomoobjetivoencontrarunmo- tomeelvalor0.
+delo de regresio´n log´ıstica bajo el enfoque Bayesiano utili-
+zandoelcriterioBMA,ysuimplementacio´nenelsoftware Al aplicar una transformacio´n logit a la ecuacio´n 1 es
+R,paradetectarelniveldeinfluenciadedeterminadosa´caros posiblelinealizarla,comosemuestraacontinuacio´n:
+quepuedanserdetonantesdeenfermedadesale´rgicasenlos
+panaderos. (cid:16) P(x) (cid:17) k
+logit(P(x))=ln =β +∑β x
+0 j j
+1−P(x)
+j=1
+Loscontenidosdeesteart´ıculohansidoorganizadosen
+tressecciones.Enlaprimeraseccio´nseexponenlosresultados 1.2 ModeloBayesianodeRegresio´nLog´ıstica
+delestudiodelaregresio´nlog´ısticabinaria,haciendoe´nfasis BajoelenfoqueBayesianohaytrescomponentesasocia-
+enelenfoqueBayesiano.Enlasegundaseccio´nsepresenta dasalaestimacio´ndelospara´metros:ladistribucio´napriori,
+elestudiodelcriterioBMA.Sediscutenlosaspectosatener lafuncio´ndeverosimilitudyladistribucio´naposteriori.Las
+encuentaparasuimplementacio´nysemuestralaestrategia cualesesta´nrelacionadasporelTeoremadeBayes:
+propuestaen[1]paraelsoftwareestad´ısticoR.Enlau´ltima
+seccio´n,sepresentalaaplicacio´nalproblemaenparticular, P(M
+i
+(cid:12) (cid:12)y)∝ f(y (cid:12) (cid:12)θ
+i
+)P(θ
+i
+)
+seresaltanlassalidasdelcriterioBMA,co´modeterminarel
+A continuacio´n se explican brevemente las tres compo-
+“mejor”modeloylaimportanciadecadaunadelasvariables
+nentes.
+incluidasendichomodelo.Tambie´n,semuestraquelaestra-
+tegia tiene muy buenos resultados a partir de su capacidad
+Funcio´ndeverosimilitud:
+predictiva. Finalmente, en las conclusiones se exponen los
+Dadalaprobabilidaddeunsuceso,laverosimilituddel
+resultadosfundamentalesobtenidos.
+i−e´simosujetoesBernoulli.
+n
+1. Regresio´n Log´ıstica Binaria L(y (cid:12) (cid:12)θ)=∏π
+i
+yi(1−π
+i
+)1−yi
+i=1
+Laregresio´nlog´ısticaesuntipodeana´lisisderegresio´n
+dondeπ =P(x)yθ =(β ,β ,...,β ).
+i i 0 1 k
+utilizadoparapredecirelresultadodeunavariablecatego´rica
+(unavariablequepuedeadoptarunnu´merolimitadodecate- Distribucio´napriori
+gor´ıas)enfuncio´ndelasvariablesindependientes.Esu´tilpara Se pueden utilizar dos tipos de distribuciones a priori:
+modelarlaprobabilidaddeuneventoocurriendocomofun- informativas y no informativas. Las distribuciones a priori
+cio´ndeotrosfactores.Enmuchasa´reasdelamedicinacomo informativasseutilizansiseconoceinformacio´npreviasobre
+SaludPu´blicaoMedicinaCl´ınica,seaplicanlosme´todosde el valor de los para´metros desconocidos. En otro caso, se
+laregresio´nlog´ıstica;particularmentelaRegresio´nLog´ıstica utilizanlasdistribucionesnoinformativas.
+Binariadebidoaquelavariablerespuestaesdico´tomica.
+Distribucio´naposteriori
+Ladistribucio´naposterioriseobtienemultiplicandola
+Elana´lisisderegresio´nlog´ısticaseenmarcaenelconjunto
+distribucio´naprioridelospara´metrosporlafuncio´ndevero-
+deModelosLinealesGeneralizados[9][11][8]ysuobjetivo
+similitud,
+esencontrarelmodeloconunmejorajusteyelmenornu´mero
+depara´metros[11][3].Eltratamientoquesedaenlaliteratura
+a Ba e y s e te si m an o o d . elo es desde dos puntos de vista: el cla´sico y el f(θ (cid:12) (cid:12)y) = ∏ n (cid:16) exp(β 0 +∑k j=1 β j x ij ) (cid:17)yi ·
+i=1
+1+exp(β
+0
++∑k
+j=1
+β
+j
+x
+ij
+)
+1.1 ModelodeRegresio´nLog´ıstica (cid:16) exp(β 0 +∑k j=1 β j x ij ) (cid:17)1−yi 1
+· 1− I(θ)2,
+Sea Y una variable respuesta o dependiente, que toma 1+exp(β
+0
++∑k
+j=1
+β
+j
+x
+ij
+)
+valores 1 o 0, lo que indica presencia o ausencia de la ca-
+racter´ısticaosucesodeintere´s,ykvariablesindependientes, dondeθ =(β ,β ,...,β )eI(θ)eslafuncio´ndeinforma-
+0 1 k
+X=(X ,...,X )t.ElmodelodelsucesoesY=P(x)+ε,don- cio´ndeFisher.
+1 k
+de ε es el te´rmino de error, P(x) es la probabilidad de que
+Y=1 para el valor observado x(x ,...,x )t de las variables 1.2.1 Estimacio´nBayesianadelospara´metros
+1 k
+Adiferenciadelenfoquecla´sicoqueestimalospara´metros
+independientes,ysumodeloderegresio´nlog´ısticaes:
+β delmodeloutilizandoelme´tododema´ximaverosimilitud,
+j
+(cid:12) enelenfoqueBayesianoestoscoeficientesseobtienendirec-
+P(x) = P(Y=1(cid:12)X=x)
+tamentedeladistribucio´ndeprobabilidadaposterioridelos
+exp(β
+0
++∑k
+j=1
+β
+j
+x
+j
+)
+para´metrosdesconocidos.
+= (1)
+1+exp(β
+0
++∑k
+j=1
+β
+j
+x
+j
+)
+Aplicacio´ndelCriterioBMAdeseleccio´ndemodelosbajoenfoqueBayesianoaunproblemadeSensibilidad
+Ale´rgicaOcupacionalenPanader´ıasdeLaHabana. 67
+Enmodelossimplespodr´ıaserfa´cilencontrarladistribu- corre el riesgo de ignorar la incertidumbre asociada al mo-
+cio´nmarginal,sinembargo,cuandoladimensio´nseincremen- delo [2], por lo que, se debe considerar todos los modelos
+ta,tambie´naumentaladificultaddelosca´lculos.Lalimitacio´n einferenciasquepudieranoriginar.Unasolucio´nalaselec-
+principalparalaimplementacio´ndelenfoqueBayesianoes cio´n Bayesiana de modelos que incorpora ma´s que ignorar
+precisamente,quelaobtencio´ndeladistribucio´naposterio- laincertidumbredeunmodelo,eslacombinacio´ndemodelos.
+riamenudorequieredelaintegracio´ndefuncionesdealta
+dimensio´n,porello,losme´todosMCMCproporcionanuna Esteenfoque,conocidocomoBMA[6][2][10],secentra
+solucio´nviable. en la distribucio´n de una cantidad de intere´s ∆ (una obser-
+vacio´nfuturadelmismoprocesoquegeneraelconjuntode
+1.3 Evaluacio´ndelajustedelmodelo datosy),ybajoelmodelocompletoparalosdatos,inducido
+Comoelobjetivodeseleccionarunmodeloes predecir porlasdistribucionesiniciales,sesiguequeladistribucio´n
+valoresdelavariablerespuesta,unaformacoherentedejuzgar predictivaBayesianade∆es:
+lacapacidaddeunmodeloesprecisamente,evaluarque´ tan
+bienpredicefuturasobservaciones.[10] k
+P(∆|y)=∑P(∆|y,M)P(M|y) (2)
+i i
+i=1
+Pararealizaresteana´lisis,seproponeparticionarelcon-
+junto de datos en dos subconjuntos, el primero se llamara´ dondeM eselmodeloi−e´simodelespaciodemodelosM,y
+i
+conjuntodeprueba,queseempleaparalamodelacio´nyel
+(cid:90)
+segundollamadoconjuntodevalidacio´n,queseutilizara´para
+P(∆|y,M)= P(∆|θ,M)P(θ|M)dθ
+i i i i i i
+evaluarlacapacidadpredictivadelmodelo.Laparticio´nes Θ
+implementadamedianteunsubmuestreoaleatorio.
+El desarrollo general para el BMA permitio´ un amplio
+trabajodelaincertidumbreenlaseleccio´ndemodelosem-
+Elerrordeclasificacio´nesunamedidamuyutilizadapara
+pleandolabu´squedadetermin´ısticayestoca´sticayelusode
+determinarlacapacidadpredictivaparadatosbinarios,esel
+FactoresdeBayesparalacomparacio´ndemodelos.
+porcentajederespuestasmalclasificadas.Laprobabilidadpre-
+dictivadelmodeloajustadosecalculayelgrupodevariables
+Sehandesarrolladovariosalgoritmoseficientesyaproxi-
+independientessepredicedeacuerdoalasiguienteregla.En
+macionesparalamezclademodelosbajoindependenciaen
+estecasoelpuntodecortees:c=0,5.
+lasvariables.Laideaprincipalesquecuandolasvariablesson
+
+1 si |y −πˆ|>0,5 independientes,elpromedioatrave´sdediferentesmodelos
+ i i
+r = 0,5 si |y −πˆ|=0,5 sesimplificademaneraconsiderableporquesepuedeobtener
+i i i
+ 0 si |y −πˆ|<0,5 lamuestraenelespaciodevariablesenlugardelespaciode
+i i
+modelos.
+1.4 Seleccio´nBayesianademodelos
+Enelenfoquebayesiano,aligualqueenelfrecuentista, 2.1 Implementacio´ndelBMA
+nosepuedeasegurarencontrarelmodeloverdadero,porlo Paralacorrectaaplicacio´ndelBMAsedebenprecisarlos
+queparaelegirel“mejor”modeloqueaproximalosdatos,es siguientesaspectosfundamentales:
+necesariotenerunme´tododeseleccio´n.
+Especificacio´ndedistribucionesaprioriparamodelos
+De ah´ı que se presenten dos problemas fundamentales: ypara´metros.
+labu´squedademodelosyloscriteriosparalaseleccio´nde
+Bu´squedademodelosenMapartirdelosdatos.
+modelos; ambos problemas se encuentran integrados en el
+PromedioBayesianodeModelos(BMA),elcualeliminalas
+Ca´lculodeprobabilidadesaposterioridelosmodelos.
+deficienciasinherentesenlaseleccio´ndemodelosdeterminis-
+tacombinandolainformacio´ndetodoslosmodelosenlugar 2.1.1 Especificacio´ndedistribuciones.
+deusarsolouno. LosmodelosBayesianosrequierenlaespecificacio´ndela
+distribucio´naprioriparalospara´metrosdelmodelo.Estas
+Por lo anterior, en el presente estudio se hace uso del puedenserinformativasonoinformativas.
+criterioBMAparalaseleccio´ndemodelos.
+Distribucionesinformativas
+2. Promedio Bayesiano de Modelos Las distribuciones a priori informativas representan el
+conocimiento sobre los para´metros. Se pueden construir u
+(BMA)
+obtenerdeestudiosemp´ıricospreviosodelconocimientodel
+EltrabajarconFactoresdeBayesimplica,laeleccio´nde investigadorexpertoenelproblemadeintere´s,estaspueden
+unmodelo(oposiblementevariosmodelos),sinembargo,si obtenersepormediodeestimacio´npuntualoporintervalosy
+el modelo elegido es solo uno de muchas posibilidades, se debenestarenformadedistribucio´n.
+Aplicacio´ndelCriterioBMAdeseleccio´ndemodelosbajoenfoqueBayesianoaunproblemadeSensibilidad
+68 Ale´rgicaOcupacionalenPanader´ıasdeLaHabana.
+Distribucionesnoinformativas 2.2.1 Implementacio´ndelBMAenR
+Enocasionesnosedisponedeinformacio´napriori,esta R es un lenguaje y entorno de programacio´n, cuya ca-
+carenciapodr´ıautilizarsesiseencontraraunadistribucio´nde racter´ıstica principal es que forma un entorno de ana´lisis
+probabilidadπ(θ)quenocontengainformacio´nacercadeθ, estad´ıstico para la manipulacio´n y el ana´lisis de datos, as´ı
+enelsentidodenofavorecerningu´nvalordeθ porencima comolacreacio´ndegra´ficos.Rpuedeconsiderarsecomootra
+detodosloslo´gicamenteposibles.Estetipodedistribuciones implementacio´ndellenguajedeprogramacio´nS-PLUS,con
+recibeelnombredenoinformativas. laparticularidaddequeesunsoftwareGNU,GeneralPublic
+License.
+En ocasiones ocurre que las distribuciones a posteriori
+resultantes son impropias o las distribuciones a priori no Elentornoincluyeuninte´rpretedellenguajeRypaquetes
+son invariantes bajo reparametrizacio´n. En [4] se propone paraaplicacionesestad´ısticasconcretas.Ellenguajeesorien-
+unaaproximacio´nenlaqueseevitaeltenerqueconsiderar tadoaobjetos,interpretadoaaltonivelytieneunasintaxis
+lainvarianza.Esteme´todo,llamadodeJeffreys,consisteen dirigidaalmanejodedatosestad´ısticos.Desdelapa´ginaofi-
+tomarunadensidadaprioriproporcionalalara´ızcuadrada cialdeR(www.r-project.org)esposibledescargarelarchivo
+deldeterminantedelamatrizdeinformacio´ndeFisher.La deinstalacio´nquepermiteunafa´cil,pra´cticaymuyra´pida
+distribucio´nresultanteesinvariantebajotransformacionesy puestaenmarchadelsoftware,yfuncionaenunaampliava-
+relativamentefa´cildecalcular. riedaddeplataformas.
+2.1.2 Bu´squedademodelosenMapartirdelosdatos Paralaimplementacio´ndelaseleccio´ndemodelosenel
+Labu´squedadebuenosmodelosestambie´nunapartein- paqueteestad´ısticoR,sehaceusodelalibrer´ıaBMA,esta
+tegraldelBMA,sinembargo,estonoesobvioenlaecuacio´n permite aplicar la seleccio´n a modelos lineales, a modelos
+(2),lacualsimplementepromediaelespaciodemodeloscom- linealesgeneralizadosyamodelosdesupervivencia,adema´s
+pleto.Sehacomprobadoquecuandolacantidaddemodelos incluyefuncionesquepermitenmostrarlosresultadosgra´fica-
+esgrandelaimplementacio´nnosiempredevuelveresultados mente.
+factibles.
+La funcio´n necesaria para la implementacio´n del BMA
+Paraimplementarlametodolog´ıadelBMAenunespacio amodelosderegresio´nlog´ısticaesbig.glmenlacualesne-
+reducidodemodelos,sebuscansololosmodelosquemejor cesariodefinirlafo´rmula(modelo),especificarlafamiliade
+seajustanalosdatos[7].Paraelloexistendosme´todos:la ladistribucio´ndelavariabledependienteYylabasedonde
+bu´squedadetermin´ısticaylabu´squedaestoca´sticaenelespa- esta´ncontenidoslosdatos.
+ciodemodelos.
+LaFigura1muestraeldiagramadelaimplementacio´ndel
+Losesquemasdebu´squedadetermin´ısticossugeridosenel BMA.
+BMAsonelme´tododelaVentanadeOccam[7]yelalgoritmo
+deleapsandbounds[12].
+2.2 Estrategia de Seleccio´n de Modelos en Regre-
+sio´nLog´ısticabajoEnfoqueBayesiano
+Para el estudio del BMA en el modelo de Regresio´n
+Log´ısticaaplicadoaproblemasdesaludsesiguelaestrategia
+desarrolladaen[1]:
+1. Fijarlaprobabilidadaprioriparalospara´metrosdel
+modelo.(Seutilizaunadistribucio´napriorinoinfor-
+mativadeJeffreys.)
+2. Fijarlaprobabilidadaprioriparalosmodelos.(Eneste
+casoseutilizaunadistribucio´nuniforme.)
+3. Definirelespaciodemodelos.(Enestecasoseutiliza
+unabu´squedadetermin´ıstica,particularmente,seem-
+pleaelalgoritmoleapsandbounds.)
+4. Realizarlaseleccio´ndemodelosusandoelBMA.
+LaestrategiafueimplementadaenRyseexplicaaconti-
+Figura1.Implementacio´ndelBMAenR
+nuacio´n.
+Aplicacio´ndelCriterioBMAdeseleccio´ndemodelosbajoenfoqueBayesianoaunproblemadeSensibilidad
+Ale´rgicaOcupacionalenPanader´ıasdeLaHabana. 69
+3. Sensibilidad Ale´rgica Ocupacional en comolaimportanciadecadavariable),elvaloresperadoyla
+panader´ıas de La Habana desviacio´nesta´ndaraposterioridecadacoeficiente.
+La actividad de los panaderos es una de las profesio-
+P! EV SD Mod1 Mod2
+nes ma´s vinculadas al desarrollo del asma ocupacional, re-
+Intercep 100 -1.4020 0.4410 -1.3730 -1.5759
+porta´ndoseunafuerteasociacio´nentrelaexposicio´nalpolvo edad 0.0 0.0 0.0 . .
+deharinayla sensibilizacio´nalosale´rgenos. EnCuba,ac- sexo 0.0 0.0 0.0 . .
+tualmentenoseconoceelriesgoalqueesta´nexpuestoslos tiexp 0.0 0.0 0.0 . .
+fuma 0.0 0.0 0.0 . .
+trabajadoresqueinteractu´anconlosa´carosdelalevadura,el
+soyap 0.0 0.0 0.0 . .
+trigoylasoyaenpolvo. trigo 0.0 0.0 0.0 . .
+lev 85.7 5.3889 492.9554 6.2892 .
+DP 0.0 0.0 0.0 . .
+Todoloanteriormotivo´ unestudioparadeterminarfacto-
+blomia 0.0 0.0 0.0 . .
+resderiesgoparalasaluddelospanaderosenLaHabana. DS 14.3 0.1163 0.3009 . 0.8123
+siro 0.0 0.0 0.0 . .
+farinae 100.0 0.9034 0.2126 0.9003 0.9218
+Porindicacio´ndelme´dicoespecialista,lasvariablesana-
+tyro 0.0 0.0 0.0 . .
+lizadassemuestranenelCuadro1,yaqueseconsideraque lepi 0.0 0.0 0.0 . .
+influyenenlasensibilidadale´rgica.
+nVar 2 2
+BIC -338.6085 -335.0299
+Lasvariablesquerepresentanlasensibilidadalasoyaen postprob 0.857 0.143
+polvo(soyap),altrigo(trigo)yalalevadura(lev)sonpropias
+delambientedelaspanader´ıas.Mientrasquelasrestantesva- Cuadro2.SalidadelBMA.
+riablesrelacionadasaa´caros(DP,blomia,DS,siro, farinae,
+tyroylepi)seencuentranpresenteenelmedioambienteen Lascolumnasrestantesrepresentanlosdosmodelosselec-
+general.Lavariablerespuestaessens,quetomavalor1en cionadosporelcriterioBMA,ordenadosdeformadecreciente
+presenciadelaalergiay0enausencia. deacuerdoasuprobabilidadaposteriori,porloqueel“me-
+jor”modeloeselqueaparecebajoelencabezado“Mod1”
+(modelo1).Tambie´nseobservacualessonlasvariablesque
+Variable Descripcio´n Tipodevariable esta´nincluidasyelvalordeloscoeficientesencadamodelo.
+edad Edad Nume´rica
+sexo Ge´nero(1-M,2-F) Dicoto´mica
+tiexp Tiempodeexposicio´n(an˜os) Nume´rica Lasu´ltimasfilasmuestranelnu´merodevariablesquecon-
+fuma Fuma(1-Si,2-No) Dicoto´mica tienecadamodelo(nVar),elvalordelCriteriodeInformacio´n
+soyap Sensibilidadalasoyaenpolvo Catego´rica
+Bayesiano(BIC)ylaprobabilidadaposterioridelmodelo
+trigo Sensibilidadaltrigo Catego´rica
+lev Sensibilidadalalevadura Catego´rica (postprob).
+DP Sensibilidadala´caroDP Catego´rica
+blomia Sensibilidadalablomia Catego´rica EnlaFigura2sepuedeapreciarlagra´ficadelasdistri-
+DS Sensibilidadala´caroDS Catego´rica
+buciones a posteriori de los coeficientes para las variables
+siro Sensibilidadalsiro Catego´rica
+farinae Sensibilidadalfarinae Catego´rica incluidasenelmodelo1,lascualestieneformadecampana,
+tyro Sensibilidadaltyrophagus Catego´rica loquerepresentaquetienenunaaltaprobabilidaddeinclusio´n
+lepi Sensibilidadallepidoglyphus Catego´rica
+enelmodeloideal.Enlosanexossemuestraelgra´ficodela
+sens Sensibilidadale´rgica(1-Si,0-No) Dicoto´mica
+probabilidaddeinclusio´ndelasvariablesrestantes.
+Cuadro1.Descripcio´ndelasvariables.
+Pararealizarelestudiosedividio´elconjuntototaldedatos
+endossubconjuntos,elconjuntodepruebaqueconten´ıa90
+observaciones(el75%deltotal),yunconjuntodevalidacio´n
+queconten´ıalas30observacionesrestantes,quefueronselec-
+cionadasmedianteunsubmuestreoaleatorio.
+Figura2.Probabilidaddeinclusio´ndelasvariablesdel
+Al aplicar el criterio BMA en el software estad´ıstico R modelo1.
+alconjuntodeprueba,seobtuvoelCuadro2,enelcualse
+muestranseiscolumnas.Laprimeraconelnombredelinter- En la Figura 3 se puede observar de manera gra´fica la
+cepto(te´rminoindependiente)ylasvariablesestudiadas;asu seleccio´ndemodelos.Elcolorazulindicaqueelsignodel
+derecha,lastrespro´ximascolumnas(P!,EVySD)indican para´metrodelasvariablesenlosmodelosanalizadosespo-
+respectivamente,laprobabilidadaposteriorienporcientode sitivo,enelcasodeaparecerelcolorrojoindicar´ıaunvalor
+cadavariabledeestarenelmodeloideal(sepuedeinterpretar negativo.Elanchodelascolumnasrepresentalaimportancia
+Aplicacio´ndelCriterioBMAdeseleccio´ndemodelosbajoenfoqueBayesianoaunproblemadeSensibilidad
+70 Ale´rgicaOcupacionalenPanader´ıasdeLaHabana.
+delosmodelos.Todoloanteriorserelacionaconloobtenido de los datos de validacio´n. Por lo que se determinaron dos
+enelCuadro2. factores de riesgo importantes para la sensibilidad ale´rgica
+delospanaderosenLaHabana:lapresenciadereactividad
+cuta´neaalosa´carolevadurayfarinae.
+Losresultadosdelestudioseobtuvieronmediantelaim-
+plementacio´nenelsoftwarelibreRdelaestrategiadesarro-
+lladaen[1]aplicadaalproblemaestudiado.
+Finalmente,sedesearesaltarelbuencomportamientodel
+criterio BMA para la seleccio´n de modelos en Regresio´n
+Log´ısticaBinariabajoelenfoqueBayesiano.
+Co´digo Fuente
+Figura3.Seleccio´ndemodelos.
+A continuacio´n se muestra el co´digo programado en el
+softwareRparalaaplicacio´ndelBMAalproblemaestudiado.
+Portodoloanterior,seselecciono´elmodelo1yaquetiene
+unaprobabilidadaposterioride0,857eincluyelasvariables library(MASS);
+lev y farinae que tienen una importancia del 85,7 y 100% library(splines);
+respectivamente.Deah´ıqueelmodeloquedeespecificadopor library(survival);
+lasiguienteecuacio´n3: library(leaps);
+library(BMA);
+datos<-read.table(‘datos.txt’,header=T)
+exp{β +β (lev)+β (farinae)}
+P(Y=1)= 0 1 2 , (3) y<-datos$sint
+1+exp{β +β (lev)+β (farinae)}
+0 1 2 x<-data.frame(datos[,-15])
+dondeβ =−1,373,β =6,2892yβ =0,9003. mod=bic.glm(x,y,glm.family=‘binomial’)
+0 1 2
+summary(mod)
+Sinembargo,apesardequeelmodeloseleccionadotiene plot(mod,mfrow=c(3,3))
+unaaltaprobabilidaddeserelideal,elespecialistaplantea imageplot.bma(mod)
+queestasnosonlasu´nicasvariablesimportantesparaestaren
+elmodelo;locualindicaquelaseleccio´ndemodelosusando Anexos
+elcriterioBMAnoesta´excentadequeelprocesodemedicio´n
+EnlaFigura4sepuedeapreciarlagra´ficadelasdistribu-
+olaformaenco´moseobtuvieronlosdatoseste´ relacionado
+cionesaposteriorideloscoeficientesparalasvariablesque
+conelresultadodedichaseleccio´n.
+nofueronselecionadasporelcriterioBMAparaelmodelo1.
+Conelobjetivodeanalizarlacalidaddelmodelo,primera-
+mentesecalculo´ elerrorcuadra´ticomedio(ECM=0,0566),
+elcualverificaquelosdatosdevalidacio´nten´ıanmuypoca
+desviacio´nrespectoalmodelo.
+Para evaluar su capacidad predictiva se analizo´ el por-
+ciento de datos bien clasificados a trave´s del conjunto de
+validacio´n.ElCuadro3muestraqueel93%fueronbiencla-
+sificadosporelmodelo,loqueesunapruebadequeelBMA
+devolvio´ excelentesresultados:
+Bienclasificados Malclasificados
+93.3% 6.7%
+Cuadro3.Clasificacio´ndelosdatosdevalidacio´n.
+Conclusiones
+AlaplicarelBMAenelcontextodelaRegresio´nLog´ıstica Figura4.Probabilidaddeinclusio´ndelasvariablesno
+bajoelenfoqueBayesiano,seobtuvounmodeloconprobabi- seleccionadas.
+lidadaposterioride0.86ycalidaddeclasificacio´ndel93%
+Aplicacio´ndelCriterioBMAdeseleccio´ndemodelosbajoenfoqueBayesianoaunproblemadeSensibilidad
+Ale´rgicaOcupacionalenPanader´ıasdeLaHabana. 71
+Referencias using Occams´ window. Journal of the American Sta-
+tisticalAssociation,1994.
+[1] D´ıaz, L., Seleccio´n de modelos en regresio´n log´ıstica
+binariabajoparadigmabayesiano.Tesisdedoctorado
+[8] Montgomery, D., Peck, E. y Vining, G. Introduccio´n
+UH,2016.
+alAna´lisisdeRegresio´nLineal.CECSA(3raedicio´n),
+[2] Draper,D.,Assessmentandpropagationofmodeluncer- 2006.
+tainty(withdiscusssion).JournaloftheRoyalStatistical
+Society,1995. [9] Nelder,J.A.yWedderburn,R.W.GeneralizedLinear
+Models.JournaloftheRoyalStatisticalSociety,1972.
+[3] Hosmer,D.W.,Lemeshow,S.ySturdivant,R.X.Ap-
+plied Logistic Regression. (3rd edition), John Wiley,
+[10] Raftery,A.E.,Madigan,D.yVolinsky,C.,Accounting
+2013.
+formodeluncertaintyinsurvivalanalysisimprovespre-
+[4] Jeffreys H, Theory of Probability, (3rd edition). Cam- dictiveperformance.Bayesianstatistics,1996.
+bridge,MA;NewYork:OxfordUniversityPress,1961.
+[11] Sistachs,V.Unestudiodelmodeloderegresio´nlog´ıstica
+[5] Kass,R.E.yRaftery,A.E.BayesFactors.Journalsof
+binariobajoelparadigmabayesiano.Tesisdedoctorado
+theAmericanStatisticalAssociation,1995.
+UH,2005.
+[6] Leamer,E.E.,SpecificationSearches.Wiley,NewYork,
+1978. [12] Volinsky, C., Madigan, D., Raftery, A. E. y Kronmal,
+R.A.,Bayesianmodelaveraginginproportionalhazard
+[7] Madigan,D.yRaftery,A.E.,ModelSelectionandac- models:assessingtheriskofastroke.AppliedStatistics,
+counting for model uncertainty in graphical models 1997.

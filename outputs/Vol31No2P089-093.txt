@@ -1,0 +1,386 @@
+CienciasMatemáticas,Vol.31,No.2,Pag.89-93, 2017
+Recibido07-2016
+Solución del problema elástico lineal en medios
+cilíndricos y esféricos transversalmente isotrópicos
+Solution of the linear elastic problem for
+transversely isotropic cylindrical and spherical
+medias
+David Guinovart Sanjuán*, Reinaldo Rodríguez Ramos, Raúl Guinovart Díaz, Julián Bravo
+Castillero, Ransés Alfonso Rodríguez.
+Resumen En este trabajo se estudia el problema elástico lineal en medios transversalmente isotrópicos
+cuandolageometríadeestosesdescritautilizandocoordenadascurvilíneas.Seobtienenlasexpresionesdelas
+ecuacionesdeequilibriodecompuestoscilídricosyesféricos.Cuandoelmedioeshomogéneo,lasecuaciones
+tienensoluciónanalítica,quepuedeserencontradausandoelmétododevariacióndeparámetros.Seobtienen
+lassolucionesdelosproblemasunidireccionalesparalascoordenadascilídricasyesféricas.
+Abstract Inthiswork,thelinearelasticproblemintransverselyisotropicmedias,whichgeometryisdescribed
+usingcurvilinearcoordinates,isstudied. Thegeneralexpressionoftheequilibriumequationsforcylindricaland
+sphericalstructuresisobtained. Whenthemediumishomogeneous,theproblemhasananalyticsolution,that
+canbefoundbytheparametersvariationmethod. Thesolutionoftheunidirectionalproblemsforthecylindrical
+andsphericalcoordinatesisobtained.
+PalabrasClave
+Elasticidad—Ecuacionesdiferenciales—Ecuacionesdeequilibrio
+DeapartamentodeMatemática,UniversidaddeLaHabana,davidgs@matcom.uh.cu,reinaldo@matcom.uh.cu,guino@matcom.uh.cu,
+jbravo@matcom.uh.cu,ralfonso@matcom.uh.cu
+*AutorparaCorrespondencia
+Introducción líndricasyesféricas.Eltrabajopresentaunametodologíapara
+determinarlasolucióndelproblemaelásticounidireccional
+Lahomogeneizaciónesunmétodomatemáticoútilpara
+paracompuestosencoordenadascurvilíneas.
+resolver problemas con condiciones de frontera en medios
+deestructuraperiódica,facilitandoademáselcálculodelas
+propiedadesefectivasdecompuestosconcontactoperfectoe
+imperfecto,[2,7,12,13].
+1. Problema elástico en coordenadas
+En[4]seilustranloscambiosdeanisotropíatrasaplicarel
+MétododeHomogeneizaciónAsintóticaencompuestoslami- curvilíneas
+nadosylasaplicacionesdelosmismos.Semuestra,además,
+ConsideremosunmediocurvilíneohomogéneoΩenel
+queparauncompuestolaminadodecomponentesisotrópicas,
+cual el tensor de tensiones σσσ y el de deformaciones εεε se
+laestructurahomogeneizadaexhibeuncomportamientotrans-
+relacionanporlaleydeHooke
+versalmenteisotrópico.Estaclasedesimetríasemanifiesta
+enungrannúmerodecompuestoslaminados,entrelosquese
+incluyenlostejidosblandos,[14,15].
+σσσ =C:εεε, (1)
+Enestetrabajosededuceelproblemadeequilibriopara
+compuestos cilíndricos y esféricos transversalmente isotró-
+picosentérminosdelabaseortormaldevectorestangentes, dondeCeseltensorelásticodelsólidoΩ,elcualesuntensor
+[2,3,6,9].Sedeterminanlasexpresionesdelosvectorestan- decuartoordenyquecumplelassiguientespropiedadesde
+gentescovariantesylossímbolosdeChristoffelasociadosa simetría
+dichossistemas.Seobtienelaexpresióngeneraldelasolución
+delproblemaelásticounidimensionalparalascoordenadasci- Cijkl =Cjikl =Cijlk=Cklij.
+90 Solucióndelproblemaelásticolinealenmedioscilíndricosyesféricostransversalmenteisotrópicos
+EnelcasoparticulardondeΩestransversalmenteisotrópico dondefdenotaelvectordelasfuerzasqueactúansobreΩ,u0
+eltensorelásticotienelaexpresión eseldesplazamientoenΣ yS0denotalatracciónenΣ .
+1 2
+Desarrollandolaexpresióndeladerivadacovariante,[4],
+ C1111 C1122 C1133 0 0 0  en el operador “div” de la ecuación (7), respecto a la base
+C1122 C2222 C2233 0 0 0  covariante{g}3 ,setieneque
+ C1133 C2233 C3333 0 0 0   i i=1
+C= 
+
+0 0 0 C2323 0 0  
+
+. (2) divσσσ =σ(cid:98) ij||
+j
+g
+i
+= (cid:16) σ(cid:98), i
+j
+j+σ(cid:98) kjΓi
+kj
++σ(cid:98) ikΓ
+k
+j
+j
+(cid:17) g
+i
+. (9)
+ 0 0 0 0 C1313 0 
+0 0 0 0 0 C1212 donde (·)|| j denota la derivada covariante respecto a la va-
+riable x y Γ j son los símbolos de Christoffel de segundo
+j kj
+Para describir la geometría del sólido se toma un siste-
+tipo
+m la a b d a e se co d o e r v d e e c n t a o d r a e s s c ta u n rv g i e lí n n t e e a s s ,{ (x g 1 i } ,x 3 i= 2 1 , , x 3 a ) so o c rt i o ad g o on s a a l l , s e i s st d e e m ci a r Γk ij = 1 2 gkl(g li,j +g lj,i −g ij,l ), (10)
+cumplequeeltensormétricotienelaforma
+donde[gkl]=[g ]−1.
+kl
+  Sustituyendolaecuación(6)en(9)setienelaexpresión
+g 0 0
+11 dedivσσσ respectoalabase{e }3 .
+[g
+ij
+]= 0 g
+22
+0 , (3) j j=1
+TomandoencuantalafórmuladeCauchyquerelaciona
+0 0 g
+33
+lasdeformacionesylosdesplazamientosenlaforma
+dondeg =g ·g ,[5].Casosparticularesdedichossistemas
+ij i j 1
+decoordenadasortogonalessonlascoordenadascilíndricas ε ij = (u i || j +u j || i ), (11)
+2
+(verFigura1)yesféricas(verFigura2).
+Dadoque{g}3 esunabaseparaR3secumple,entonces, se obtiene la expresión del tensor de deformaciónεεε en tér-
+i i=1
+que{g ⊗g }3 esunabaseparaelespacioLin3(R3)delas minos de los desplazamientos u, para la base de vectores
+i j i,j=1 ortonormales,{e }3 .
+aplicacioneslinealesdeR3ensímismo,donde“⊗”denota j j=1
+elproductodiádico.Deestaformasetienequeeltensorde
+tensionesσσσ sepuedeexpresarrespectoalabase{g ⊗g }3 2. Problema elástico en coordenadas
+i j i,j=1
+enlaforma cilíndricas
+σσσ =σ(cid:98) ijg
+i
+⊗g
+j
+, (4)
+Consideremos un estructura homogénea cilíndrica. La
+dondeσ(cid:98) ij sonlascomponentescontravariantesdeltensorde geometría de dicho sólido se describe por las coordenadas
+tensiones.Conelobjetivodeexpresareltensorσσσ respectoa cilídricas(θ,z,r),Figura1,[5],[11].Labasecovariantede
+unabaseortonormal,seconsideralabasedevectores{e i }3 i=1 vectores tangentes {g i }3 i=1 que describe la geometría de la
+donde estructuraestádadaporlasexpresiones
+1
+e i = √ g ii g i . g θ =(−rsinθ,rcosθ,0),
+g =(0,0,1), (12)
+Portanto,sustituyendoenlaecuación(4)llegamosalaexpre- z
+sión g r =(cosθ,sinθ,0).
+√ √
+σσσ = g
+ii
+g
+jj
+σ(cid:98) ije
+i
+⊗e
+j
+, (5)
+Portanto,eltensormétricoasociadoalsistemadecoordena-
+dedondesetieneque das(θ,z,r)tienelaforma
+σij= √ g
+ii
+√ g
+jj
+σ(cid:98) ij, (6)  r2 0 0 
+[g
+ij
+]=0 1 0, (13)
+son las componentes del tensorσσσ respecto a la base {e ⊗ 0 0 1
+i
+e }3 .
+j i,j=1 ylossímbolosdeChristoffeldesegundotipononulosasocia-
+dosaltensormétricopuedensercalculadosusandolaecua-
+1.1 Ecuacionesdeequilibrio ción(10)
+Estudiemos las ecuaciones de equilibrio de la teoría de 1
+Γ3 =−r, Γ1 =Γ1 = . (14)
+elasticidad sobre Ω acotado por su frontera ∂Ω=Σ 1 ∪Σ 2 , 11 13 31 r
+dondeΣ 1 ∩Σ 2 =0/.Elproblemaelásticotienelaexpresión Sustituyendolasecuaciones(6),(13)y(14)en(9)seob-
+tienenlassiguientesexpresionesparalascomponentesdela
+divσσσ+f=0, en Ω, (7)
+tensiónencoordenadascilíndricasrespectoalabaseortonor-
+mal{e}3
+ycondicionesdefronteradadaspor i i=1
+1 2σrθ
+u=u0, en Σ 1 , σσσn=S0 en Σ 2 , (8) σ , r r θ+ r σ , θ θ θ+σ , θ z z+ r +fθ =0, (15)
+Solucióndelproblemaelásticolinealenmedioscilíndricosyesféricostransversalmenteisotrópicos 91
+x
+3 e
+z e
+q
+e
+r
+e
+3
+e e x
+1 2 2
+q r
+x
+1
+Figura1.Coordenadascilíndricasyestructurahomogéneacilíndricatransversalmenteisotrópica.
+σrz+ 1 σθz+σzz+ σrz +fz=0, (16) Siseconsideraque fr≡0elproblema(24)tomalaforma
+,r r ,θ ,z z
+B
+1 σrr−σθθ u + u =0, (25)
+σrr+ σrθ+σrz+ +fr=0. (17) r,rr r r,r
+,r r ,θ ,z r
+Lasexpresiones(15)-(17)coincidenconlasreportadasen[8], dondeB=(C3333−C1133)/C3333.Laecuación(25)tieneso-
+[11]. lución
+Porotroladoeltensordedeformaciónεεε tienecomponen- u =α+βr1−B, (26)
+r
+tes
+dondeα,β sonnúmerosreales.
+1
+ε =u , ε = u , ε =u , (18)
+rr r,r θθ r θ,θ zz z,z
+3. Problema elástico en coordenadas
+(cid:18) (cid:19)
+1 1 1
+ε = u +u − u , (19) esféricas
+rθ 2 r r,θ θ,r r θ
+(cid:18) (cid:19) (cid:18) (cid:19) Consideremosunaestructurahomogéneaesférica.Lageo-
+1 1 1 1
+ε rz =
+2 r
+u r,z +u z,r , ε θz =
+2 r
+u z,θ +u θ,z , (20) metríadelmediosedescribeporelsistemadecoordenadas
+esféricas(θ,φ,r),comosemuestraenlaFigura2,[10],[11].
+respectoalabase{e i }3 i=1 . Labasecovariantedelosvectorestangentes{g}3 i=1 asociados
+alascoordenadasesféricas,tienenlaforma
+2.1 Solución del problema lineal elástico unidirec-
+cional
+Consideremosquelavariacióndelaspropiedadeselásti-
+g
+θ
+=(−rsinθsinϕ,rcosθsinϕ,0),
+casdeunaestructuracilíndricahomogénea,decoordenadas g =(rcosθcosϕ,rsinθcosϕ,−rsinϕ), (27)
+z
+(θ,z,r),ocurreenladireccióndelacoordenadaryeltensor g =(cosθsinϕ,sinθsinϕ,cosϕ).
+r
+dedesplazamientosesdelaforma
+Portanto,eltensormétricotienelaforma
+u=(0,0,u ),
+r
+ (rsinϕ)2 0 0 
+por tanto se tiene que la componente no nula del tensor de
+[g
+ij
+]= 0 r2 0, (28)
+deformaciónεεεparalascoordenadascilídricas,(18)-(20),tiene
+0 0 1
+laforma
+ε rr =u r,r . (21) ylossímbolosdeChristoffeldesegundotipo,(10),nonulos
+TomandoencuentalaleydeHooke(1)setieneque asociadosaltensormétricotienenlaforma
+σij=Cij33ε . (22) Γ3 =−r, Γ3 =−rsin2ϕ, Γ2 =−sinϕcosϕ,
+rr 22 11 11
+Γ2 =Γ2 =1/r, Γ1 =cotϕ. (29)
+Dadoquelaestructuraestransversalmenteisotrópica,(2),las 23 32 12
+componentesσij deltensordetensionessondistintasdecero
+Se tiene entonces que las componentes de la ecuación
+paraelcasodei= j.Portantosellegaaque
+deequilibriorespectoalabaseortonormal{e}3 parauna
+i i=1
+σθθ =C1133u , σzz=C2233u , σrr=C3333u . (23) estructuraesférica,sondelaforma
+r,r r,r r,r
+Sustituyendolaecuación (23)enelproblemadeequilibrio
+(15)-(17)seobtieneque
+C3333−C1133
+C3333u + u +fr=0. (24)
+r,rr r,r
+r
+92 Solucióndelproblemaelásticolinealenmedioscilíndricosyesféricostransversalmenteisotrópicos
+x e
+3 r
+e
+q
+f
+e
+f
+r
+e
+3
+e e x
+1 2 2
+q
+x
+1
+Figura2.Coordenadasesféricasyestructurahomogéneaesféricatransversalmenteisotrópica.
+1 1 1(cid:16) (cid:17)
+σrr+ σ rϕ+ σrθ+ 2σrr−σϕϕ−σθθ+σrϕcotϕ +fr=0 (30)
+,r r ,ϕ rsinϕ ,θ r
+1 1 1(cid:16)(cid:104) (cid:105) (cid:17)
+σrϕ+ σ ϕϕ+ σ ϕθ+ σϕϕ−σθθ cotϕ+3σrϕ +fϕ =0 (31)
+,r r ,ϕ rsinϕ ,θ r
+1 1 1(cid:16) (cid:17)
+σrθ+ σ ϕθ+ σθθ+ 2σϕθcotϕ+3σrθ +fθ =0 (32)
+,r r ,ϕ rsinϕ ,θ r
+Porotrolado,respectoalabase{e}3 ,eltensordedeformaciónεεε tienecomponentes
+i i=1
+1(cid:0) (cid:1) 1 (cid:0) (cid:1)
+ε =u , ε = u +u , ε = u sinϕ+u +u cosϕ , (33)
+rr r,r ϕϕ r r ϕ,ϕ θθ rsinϕ r θ,θ ϕ
+(cid:18) (cid:19) (cid:18) (cid:19)
+1 1 1 1 1
+ε = u +u − u , ε = u +u −cotϕu , (34)
+rϕ 2 r r,ϕ ϕ,r r ϕ θϕ 2r sinϕ ϕ,θ θ,ϕ θ
+(cid:18) (cid:19)
+1 1 1
+ε = u +u − u . (35)
+θr 2 rsinϕ r,θ θ,r r θ
+nulasdelatensiónσσσ tienenlaforma
+1 1
+σθθ =C1111 u +C1122 u +C1133u , (37)
+r r r,r
+r r
+3.1 Solución del problema lineal elástico unidirec- 1 1
+σϕϕ =C1122 u +C2222 u +C2233u , (38)
+cional r r r,r
+r r
+Consideremosquelavariacióndelaspropiedadesdeuna 1 1
+σrr=C1133 u +C2233 u +C3333u . (39)
+estructuraesférica,decoordenadas(θ,ϕ,r),ocurreenladi- r r r r r,r
+reccióndelacoordenadaryeltensordedesplazamientoes
+Paraunaestructuraesféricatransversalmenteisotrópica,las
+delaforma componentesσθθ,σϕϕ coinciden.Sisustituimoslasexpresio-
+nes(37)-(39)en(7)yconsideramosqueelvectorfesnulo,se
+u=(0,0,u ),
+r tienelasiguienteecuacióndiferencialparaeldesplazamiento
+u
+r
+portantosetienequelascomponentesnonulasdeltensorde
+2 2
+(cid:0) C1133−C1122−C1111(cid:1)
+deformaciónεεε es u + u + u =0, (40)
+r,rr r r,r r2C3333 r
+1 1 lacualtienecomosoluciónlaexpresión
+ε =u , ε = u , ε = u . (36)
+rr r,r ϕϕ r r θθ r r u
+r
+=αrz1+βrz2, (41)
+PorlaleydeHookeyconsiderandoqueeltensorCestrans- donde (cid:16) √ (cid:17)
+versalmenteisotrópico,(2),setienequelascomponentesno z 1,2 = −1± 1−8B /2
+Solucióndelproblemaelásticolinealenmedioscilíndricosyesféricostransversalmenteisotrópicos 93
+con [5] M.Itskov. TensorAlgebraandTensorAnalysisforEngi-
+B= (cid:0) C1133−C1122−C1111(cid:1) /C3333, neersWithApplicationstoContinuumMechanics.Sprin-
+ger,Berlin,Germany,2009.
+yα,β sonnúmerosreales.Paraelcasoparticulardeunmate-
+rialisotrópicolosvaloresdez son1y-2;esteresultadofue
+1,2 [6] X.Y.Li,H.J.Ding,andW.Q.Chen.Elasticitysolutions
+reportadoen[10].
+foratransverselyisotropicfunctionallygradedcircular
+plate subject to an axisymmetric transverse load qrk.
+Colcusiones
+InternationalJournalofSolidsandstructures,45:191–
+El objetivo principal del trabajo ha sido presentar una 210,2008.
+metodología para determinar las expresiones generales de [7] A.Lutoborski. Homogenizationoflinearelasticshells.
+las ecuaciones de equilibrio de la teoría de elasticidad y la JournalofElasticity,15:69–87,1985.
+solucióndelasmismas.
+Setomaroncomoejemplosestructurascilíndricasyesféri- [8] B. E. Pobedrya. Mechanics of Composite Materials.
+cas.Lagemotríadedichasestructurashomogéneasesdescrita MoscowStateUniversityPress,Moscow,Russia.,1984.
+por las coordenadas esféricas y cilíndricas; para las cuales
+[9] J.N.Reddy. Mechanicsoflaminatedcompositeplates
+se determinaron los vectores tangentes y el tensor métrico
+and shells. Theory and analysis. CRC Press, United
+asociadoalasmismas.
+StatesofAmerica,2004.
+Losresultadosobtenidostienengranaplicaciónenlainge-
+nieríaylabiomecánica.En[1,4,8]seilustralaimportancia
+[10] R.RizzoniandF.Lebon. Imperfectinterfacesasasym-
+queposeenlosmedioscurvilíneostransversalmenteisotrópi-
+ptoticmodelsofthincurvedelasticadhesiveinterphase.
+cosylanecesidadderesolverlosproblemasdelateoríade
+MechanicsResearchCommunications,51:39–50,2013.
+elasticidadsobredichasestructuras.
+Losresultadosaquípresentadospuedenserusadosenla
+[11] M. Sadd. Elasticity. Theory, applications and nume-
+modelacióndefenómenoscomolaaterosclerosisqueafecta
+rics. ElsevierButterworth-Heinemann,UnitedStatesof
+lasvasossanguíneosylahipertensiónintraocular,unadelas
+America,2005.
+principalescausasdelapérdidadelavisión.
+[12] G. C. Saha, A. L. Kalamkarov, and A. V. Georgiades.
+Referencias
+Effectiveelasticcharacteristicsofhoneycombsandwich
+[1] A. Alonso Fúster, D. Guinovart Sanjuán, R. Guino- compositeshellsmadeofgenerallyorthotropicmaterials.
+vartDíaz,R.RodríguezRamos,andJ.BravoCastillero. CompositesPart:A,38:1533–1546,2007.
+Promediacióndeestructurasregulares. RevistaCiencias
+Matemáticas,(26):58–64,2012. [13] D.Tsalis,G.Chatzigeorgiou,andN.Charalambakis.Ho-
+mogenizationofstructureswithgeneralizedperiodicity.
+[2] Y.Chen,K.R.Rajagopal,andL.Wheeler. Homogeni- CompositesPartB,(43(2012)):2495–2512,2012.
+zationandglobalresponsesofinhomogeneousspherical
+nonlinearelasticshells. JournalofElasticity,82:193– [14] J. A. Weiss, B. N. Maker, and S. Govindjee. Finite
+214,2006. elementimplementationofincompressible,transversely
+isotropichyperelasticity. Computermethodsinapplied
+[3] H. Ding,W. Chen,and Z. Liangchi. Solid mechanics
+mechanicsandengineering,135:107–128,1996.
+anditsapplications:Elasticityoftransverselyisotropic
+materials. Springer,TheNetherlands,2006.
+[15] Y.J.Yoon,G.Yang,andC.Cowin. Estimationofthe
+[4] D. Guinovart-Sanjuán, R. Rodríguez-Ramos, effective transversely isotropic elastic constants of a
+R. Guinovart-Díaz, J. Bravo-Castillero, F. J. Sabi- materialfromknownvaluesofthematerial’sorthotropic
+na,J.Merodio,F.Lebon,S.Dummont,andA.Conci. elasticconstants. BiomechanModelMechanobiol,1:83–
+Effective properties of regular elastic laminated shell 93,2002.
+composite. CompositesPartB,87:12–20,2016.

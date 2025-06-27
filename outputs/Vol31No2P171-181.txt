@@ -1,0 +1,648 @@
+CienciasMatemáticas,Vol.31,No.2,Pag.171-181,2017
+Recibido2-2017
+Segmentacio´n de la regio´n acetoblanca en
+colposcop´ıas del ce´rvix
+Acetowhite region segmentation in cervix
+colposcopies
+Sau´l Olivera Perdomo1, Marta L. Baguer D´ıaz-Roman˜ach1*, Damian Valde´s Santiago1, A´gueda
+Santana Mart´ınez2
+Resumen La colposcop´ıa es un procedimiento ginecolo´gico de diagno´stico del ca´ncer ce´rvico uterino. La
+regio´n acetoblanca es una zona del ce´rvix que adquiere o acentu´a coloracio´n blanca tras aplica´rsele una
+solucio´ndea´cidoace´tico.Estaregio´nesunindicadordelesio´nseverasobreesteepitelio.Enestainvestigacio´n
+seproponenestrategiasparapreprocesarlasima´genescolposco´picas,detectardeformaautoma´ticaela´rea
+cervicalysegmentarlaregio´nacetoblancacombinandoalgoritmosdeagrupamientoyMorfolog´ıaMatema´tica
+en el espacio de colores Lab. Se creo´ una base de ima´genes colposco´picas cubanas y se propusieron dos
+medidasdecalidadcuantitativasparaevaluarlaeficaciadelosalgoritmos.Enlaexperimentacio´nsecompararon
+cuatroalgoritmosdeagrupamientoyunme´todoquecombinaumbralizacio´nconoperacionesmorfolo´gicas.El
+agrupamientomedianteModelodeMezclasGaussianas,estimandopara´metrosconelalgoritmoEsperanza–
+Maximizacio´n y Mini–batch k−means, alcanzo´ en promedio una efectividad del 87% en la deteccio´n de la
+regio´nacetoblanca,validadaporlaevaluacio´ncualitativarealizadaporlaDra.A´guedaSantana.Losresultados
+reflejaronlaimportanciadelaeliminacio´nderegionesespecularespropiasdelasima´genesadquiridas.Adema´s,
+se propuso un algoritmo basado en agrupamiento para detectar diferentes niveles de blanco en una regio´n
+acetoblanca.Estaszonassuelenserunindicadordeca´ncerypuedenusarsecomomarcadoresdebiopsiaque
+confirmenonoeldiagno´stico.
+Abstract Colposcopy is a gynecological procedure for cervix cancer diagnosis. The acetowhite region is a
+cervixareathatacquireorincreaseitswhitecoloringaftertheapplicationofanaceticacidsolution. Thatregion
+isasignofaseverelesiononthatepithelium. Inthispaperweproposestrategiesforpreprocessingacquired
+images,detectingautomaticallycervicalareaandsegmentingacetowhiteregionusingclusteringalgorithmsand
+MathematicalMorphologywithinLab colorspace. WehavecreatedaCubancolposcopicimagedatasetand
+proposedtwoquantitativequalitymeasuresforevaluatingthealgorithmperformance. Intheexperimentationwe
+comparedfourclusteringalgorithmsandamethodbasedonthresholdingandmorphologicaloperations. The
+clusteringusingGaussianMixtureModelwithExpectation–MaximizationalgorithmandMini–batchk−means for
+parametersestimation,showedanefficiencyaverageof87%. Thisresultwasalsovalidatedbythephysician
+A´guedaSantana’squalitativeevaluation. Resultshighlightedtheimportanceofspecularreflection’sremovalthat
+appearinacquiredimages. Wepresentedalsoaclustering–basedalgorithmfordetectingdifferentwhitelevels
+withinanacetowhiteregion. Theseareascouldbeasignofcanceraswellasbiopsymarkerstoconfirmthe
+diagnosis.
+PalabrasClave
+Colposcop´ıadelce´rvix—Segmentacio´n—Regio´nacetoblanca—Agrupamiento—Morfolog´ıaMatema´tica
+1DepartamentodeMatema´ticaAplicada,FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba
+s.olivera@lab.matcom.uh.cu,mbaguer@matcom.uh.cu,dvs89cs@gmail.com
+2HospitalMaternode10deOctubre,LaHabana,Cuba,aguesam@infomed.sld.cu
+*AutorparaCorrespondencia
+Introduccio´n delosca´nceresginecolo´gicos[1].Segu´nGLOBOCAN1,en
+elmundoseproducenanualmentecercade500000nuevos
+Elca´ncerdecuellodeu´tero,ca´ncercervicalocarcinoma casosdeestetipodeca´ncerqueprovocalamuertedealrede-
+dece´rvixeselsegundotipodeca´ncerma´scomu´nenlasmu-
+jeresaescalamundialyconstituyeaproximadamenteel25% 1http://globocan.iarc.fr
+172 Segmentacio´ndelaregio´nacetoblancaencolposcop´ıasdelce´rvix
+dorde270000mujeres,deestasma´sdel80%ocurreenlos basadosenelusodelasima´genesantesydespue´sdeaplicarel
+pa´ısesenv´ıasdedesarrollo. a´cidoace´ticoyluegoseutilizanMa´quinasdeSoporteVecto-
+EnCubalamortalidadporestaafeccio´nhavenidoincre- rial,SVM(SupportVectorMachines,porsussiglaseningle´s)
+menta´ndoseenlosu´ltimostreintaan˜os.Sehapronosticado paraidentificarlasregionescervicalesano´malas.En[8]seusa
+quelasmuertescausadasporestaenfermedaddebenaumentar aprendizajesupervisadoparasegmentarlaregio´nacetoblanca.
+enun25%enlossiguientesdiezan˜os[2]. Lanodisponibilidaddeunabasedeima´genescolposco´picas
+El ca´ncer ce´rvico uterino aparece en los tejidos que se marcadaimpidio´ elusodeme´todosdelaprendizajesupervisa-
+encuentran en la parte baja del u´tero y se expande hacia el doylacomparacio´nconinvestigacionessemejantes.
+epitelioexocervical.Silaslesionesenestostejidossonde- En[9]seestablecenunaseriedepasosparaelana´lisisde
+tectadastempranamente,laprobabilidaddeunacuratotales lasima´genescolposco´picas.Primeramente,serealizaunpre-
+muyalta. procesamientoconelobjetivodeeliminarelbrilloocasionado
+El ´ındice de mortalidad por ca´ncer ce´rvico uterino se porlaluzynormalizarloscoloresylaluminosidadespacial
+redujodrama´ticamentedesdelaintroduccio´ndelapruebade delaimagen.Luegosehaceunana´lisisdelaanatom´ıacon
+Papanicolau[3].Sinembargo,esteexamennoesexactopues el objetivo de dividir la imagen colposco´pica en las regio-
+depende estrechamente de los lugares en que se toman las nes:ce´rvix,orificiocervicalexternoylacolumnar3 ycomo
+muestras.Estomotivo´ elusodelColposcopio2pararealizar unpasoadicionaltambie´nseextraentexturas.Finalmentese
+inspeccionesvisualessobreelu´tero. identificalaregio´nacetoblancamediantelacombinacio´nde
+Enlaactualidadsecomercializanloscolposcopiosdigita- lainformacio´nobtenidaenlospasosanterioresyaplicando
+lesconloscualessepuedentomarima´genesyvideosconun variostiposdeme´todosdeagrupamiento.
+mayorcontrasteydefinicio´n.Estohaposibilitadoelusode En[10]seutilizalaMorfolog´ıaMatema´ticaparadetectar
+programasinforma´ticoscomoherramientasdeasesoramien- laregio´nacetoblanca.Enprincipioseasumequelaimagende
+toparaeldiagno´sticodelosme´dicos.EnCuba,laempresa entradanopresentaregionesdebrilloysepasadirectamente
+TecnoSUMA (cid:114) se dedica al desarrollo de dispositivos tec- adetectarlaregio´ndeintere´s,ROI(RegionofInterest,por
+nolo´gicosdediagno´sticome´dicocomoelvideocolposcopio sussiglaseningle´s).Esteprocesoserealizamedianteeluso
+digitalSUMASCOPE. deunclasificadorquedistingueloscoloresdelce´rvix.Segui-
+Entrelosagentesdecontrastema´susadosencolposcop´ıa damenteseutilizaunalgoritmodesegmentacio´nbasadoenla
+esta´lasolucio´ndea´cidoace´ticoentreel3–5%,lacualresalta TransformadaWatershedquelocalizalosbordesdelce´rvix.A
+regiones sobre el epitelio exocervical que toman un color continuacio´n,semejoraelcontrastedelaimagen,seelimina
+blancuzco(regio´nacetoblanca). elruidoyserealzanlosbordes.Luego,usandounalgoritmo
+basadoenWatershedsedividelaROIensuperp´ıxelesypos-
+Laaparicio´ndeunaregio´nacetoblancaindicaqueenese
+teriormenteseagrupansegu´nelpromediodecolordecada
+epitelioexisteunincrementodelaactividadcelular,aunque
+uno.
+noseobservenvasosat´ıpicos.Rasgoscaracter´ısticosdeesta
+regio´npuedenserlaintensidaddelcolorblanco,latexturadel En[11]seasumequelaregio´ncervicalesta´libredebrillo
+epiteliosobredichazonaoeltipodeblanco(siesperladoo ysedetectansobreestaa´reatrestiposderegiones:laregio´n
+no).Estassoncaracter´ısticasquedebenserconsideradaspor escamosa, la columnar y la acetoblanca. Para lograrlo, se
+losespecialistasparaproporcionarundiagno´sticocl´ınico[4]. extraeporcadap´ıxeldelaimagenunrasgoquerepresentesu
+niveldetextura.Luegosemodelalaimagenrepresentadaen
+Enlaliteraturaexistennumerosasreferenciasasistemas
+elespaciodecoloresLabjuntoconelvectordecaracter´ısticas
+automa´ticosparaelapoyoaldiagno´stico,sinembargo,enla
+extra´ıdoanteriormentemedianteunamezcladetresfunciones
+revisio´nrealizadaseencontraronpocosart´ıculosdedicados
+gaussianas.Finalmente,cadap´ıxeldelaimagenesasociadoa
+especialmenteasegmentarlaregio´nacetoblanca.Espec´ıfica-
+lagaussianaquemejorlorepresente,dividiendoas´ıela´reaen
+menteparalasima´genescolposco´picasestanoesunatarea
+lastresregionesmencionadasconanterioridad.
+trivial ya que la luminosidad en las ima´genes no es unifor-
+me, pueden aparecer regiones especulares o de brillo y los Unavezestudiadalaliteraturadisponiblesobreeltema
+patrones de textura de las lesiones no muestran estructuras ytomandoenconsideracio´nlaspropiedadesdelasima´genes
+regulares.Otroaspectoquecomplejizaelproblemaesquelos colposco´picasquesetienen,sedividio´ lasegmentacio´ndela
+bordesdelaregio´nacetoblanca,enmuchosdeloscasos,no regio´nacetoblancaentrespasos:preprocesamientodelaima-
+formanestructurascerradasosondifusos. genparamejorarsucalidad,deteccio´ndelaregio´ncervical
+ysegmentacio´ndelaregio´nacetoblancadentrodelaregio´n
+En[5]y[6]seutilizaunclasificadorkvecinosma´scerca-
+cervical.Algunosautoresintroducenunoovariospasosinter-
+nos,k−NN (k−nearestneighbors,porsussiglaseningle´s)
+mediosdondeserestringelaROIcomoeselcasodeLietal.
+paradiferenciarlasima´genescolposco´picasnormalesdelas
+[9].
+quenoloson.En[7]seaplicanunaseriedeprocesamientos
+Paramejorarlacalidaddelaimagenseeliminaelruido
+2UnColposcopioesuntelescopiobinoculardeenfoquepro´ximoque
+permitealme´dicovercondetalleregionesano´malasdelcuellouterinoa 3Laregio´ncolumnareslaunio´ndelepiteliocil´ındricoconelepitelioes-
+trave´sdelavagina.ElprimerColposcopiocreadoen1925sedebeaHans camosoysesuelelocalizargeneralmenteacontinuacio´ndelorificiocervical
+Hinselman,me´dicoalema´n. externo.
+Segmentacio´ndelaregio´nacetoblancaencolposcop´ıasdelce´rvix 173
+medianteelusodelfiltrogaussianoyelfiltrodemediana[12] asociandocadainstanciadelosdatosalagaussianaqueme-
+yseproponenalgunosalgoritmosparamejorarlailuminacio´n. jor la represente. Los GMM se basan en la suposicio´n de
+Paradeterminarlasregionesdelce´rvixyacetoblancaseim- quecadagrupod−dimensionalenunconjuntodedatospue-
+plementarondosalgoritmos,unobasadoenagrupamientoy desermodeladocomounadistribucio´nnormalmultivariada
+elotrobasadoenUmbralizacio´nyMorfolog´ıaMatema´tica (gaussiana).Porconsiguiente,elconjuntodedatoscompleto
+(UMA),ambosasumenquelaregio´nacetoblancaseencuentra podra´ sermodeladocomounamezcladecadaunadeestas
+cercanaalcentro.Estoplanteaunproblemaadicional,puesto gaussianas. Para reducir la complejidad de las operaciones
+queenmuchasdelasima´genescolposco´picasaqu´ıutilizadas matema´ticas del modelo, se suele usar el logaritmo de la
+tal regio´n puede encontrarse en una esquina, a un lado, en verosimilitud para un conjunto de observaciones dado. La
+todalaimagen,oestarincompleta. estimacio´ndema´ximaverosimilitudnoesunatareatrivial,
+Laestructuradelart´ıculoeslasiguiente.Enlaseccio´n1se portanto,esnecesarialautilizacio´ndealgu´nme´todoparala
+exponenlosalgoritmosdeagrupamientoutilizados.Enlasec- determinacio´ndelconjuntoo´ptimodepara´metros[15].
+cio´n2sedescribelaetapadelpreprocesamientoqueincluye Unadelaseleccionesma´susualesparaobtenerestimacio-
+laeliminacio´ndelaregio´nespecularylacorreccio´nyelimi- nesdema´ximaverosimilitudparalospara´metrosdelamezcla
+nacio´ndelruido.Enlaseccio´n3seexponeco´mosedetecto´la eselalgoritmoEsperanza–Maximizacio´n(EM)[16,17].El
+ROI mediante agrupamiento y Morfolog´ıa Matema´tica. La algoritmoEMgeneraunasecuenciadeestimacionesdelcon-
+seccio´n4describeelusodelaMorfolog´ıaMatema´ticayel juntodepara´metrosalternandolospasosE(Esperanza)yM
+ModelodeMezclasGaussianasparaladeteccio´ndelaregio´n (Maximizacio´n)hastalograrlaconvergencia,generalmente
+acetoblanca.Laconstruccio´ndelabasededatoscolposco´pica, unl´ımitedeiteracionesarealizar.Lascuestionesrelativasa
+lasmedidasdeevaluacio´ncuantitativayelsoftwareutilizado laconvergenciadelme´todohansidoampliamenteestudiadas
+se describen en las secciones 5, 6 y 7 respectivamente. En [17,18].
+la seccio´n 8 se presentan y discuten los resultados y en la En el Paso E se asume una estimacio´n inicial de los
+seccio´n9sebrindanlasconclusionesdeestainvestigacio´n. para´metros en cuestio´n, por lo que esto supone una tarea
+adicionalyaqueele´xitodelalgoritmoEMdependeengran
+medidadelosvaloresinicialesdelconjuntodepara´metros.
+1. Me´todos de agrupamiento
+Lamayor´ıadelassolucionespropuestasincluyenestrategias
+comoporejemplolautilizacio´ndevariasinicializacionesalea-
+Losme´todosdeagrupamientodividenlosdatosensub-
+toriasylaseleccio´ndelaqueconcluyeconunmayorvalor
+conjuntosdetalmaneraquelasinstanciassimilaressonagru-
+deverosimilitud,olarealizacio´ndeunagrupamientoprevio
+padasmientrasqueinstanciasdiferentespertenecenagrupos
+conalgunodelosme´todosexistentesparaello[17,19].En
+distintos [13]. En esta investigacio´n se consideraron como
+esteart´ıculoseconsideraque,pordefecto,lospara´metrosde
+algoritmosdeagrupamientok−means,Mini–batchk−means,
+lamezclasonestimadosmedianteEMelcualusak−means
+ModelosdeMezclasGaussianasyModelodeMezclasGaus-
+parainicializar.AlGMMqueutilizaMini–batchk−meansen
+sianasporInferenciaBayesiana.
+EMseledenominara´ CustomGMM.
+k−meansparticionalosdatosenkgruposrepresentados
+UnModelodeMezclasGaussianasporInferenciaBaye-
+porsuscentros.Elcentrodecadagrupoescalculadocomoel
+siana,VBGMM(VariationBayesianGaussianMixtureModel,
+promediodetodaslasinstanciasquepertenecenadichogru-
+por sus siglas en ingle´s) es una variante del GMM que im-
+po.Elalgoritmocomienzaconunconjuntoinicialdecentros,
+plementaelalgoritmoInferenciaVariacionalparaestimarlos
+escogidosalazarodeacuerdoaalgunaheur´ıstica.Poritera-
+para´metrosdelmodelo.ElalgoritmoInferenciaVariacional
+cio´n,cadainstanciaesasignadaalcentroma´scercanosegu´n
+es una extensio´n del algoritmo EM y se basa en el mismo
+ladistanciaeuclidiana,yluegoloscentrossonrecalculados
+principio,esdecir,ambossonme´todositerativosyalternan
+[13].Comocondicionesdeparadadek−meanspuedenconsi-
+entre encontrar las probabilidades de cada instancia de ser
+derarseelnu´meroma´ximodeiteracionesoqueloscentrosno
+generadaporcadanu´cleoymaximizar.AdiferenciadeEM
+cambienentreunaiteracio´nylasiguiente.
+esteme´todoagregaregulacionesmediantelaintegracio´nde
+Mini–batch k−means es una variante del algoritmo k−
+informacio´ndeladistribucio´ndeprobabilidad[20].
+meansqueusasubconjuntosaleatoriosdelconjuntodedatos
+deentradaparacalcularloscentroides.Estossubconjuntos
+se denominan mini–batch y tienen la propiedad de poseer 2. Preprocesamiento de la imagen
+untaman˜ofijoqueseintroducecomopara´metro.Aunquesu
+colposco´pica
+convergencia es mucho ma´s ra´pida que la de k−means, la
+calidaddelosresultados,medidaporlasumadelasdistancias Lasima´genescolposco´picasutilizadasposeencaracter´ısti-
+de cada punto a su centroide ma´s cercano, no es tan buena caspeculiares.Dichasima´genespresentanregionesdebrillo
+comoladek−means[14]. o especulares debido a las caracter´ısticas hu´medas propias
+LosModelosdeMezclasGaussianas,GMM(Gaussian delostejidosdelcuellouterinoydelaaplicacio´ndelasdi-
+Mixture Models, por sus siglas en ingle´s) pueden ser utili- ferentes soluciones. Tambie´n poseen ruido y pueden tener
+zadosparalaimplementacio´ndeme´todosdeagrupamiento unamaladistribucio´ndelailuminacio´n.Adema´s,laimagen
+174 Segmentacio´ndelaregio´nacetoblancaencolposcop´ıasdelce´rvix
+colposco´pica puede mostrar otras partes de la vagina o del deteccio´ndelaregio´nacetoblanca.Acontinuacio´nsepropone
+espe´culodiferentesdelaregio´ndelce´rvix.Porestasrazones extraer la ROI dentro de la imagen colposco´pica y de esta
+sedecidio´ aplicarunpreprocesamientoconelobjetivodeau- formaeliminartodainformacio´nirrelevante.Enesteart´ıculo
+mentarlacalidaddelaimagencolposco´picaydeestaforma laROIseentiendecomolaregio´ncervicalpuessoloenesta
+mejorarelresultadodelosalgoritmosdesegmentacio´n. zonasepuedeencontraralgu´nepitelioacetoblanco.
+Tomandoenconsideracio´nquelosalgoritmosdesegmen- Porotraparte,elespaciodecoloresLabresumeensus
+tacio´nqueseproponenma´sadelantetrabajansoloconalgunos canales a y b toda informacio´n de color, donde a indica la
+canalesdelaimagenenelespaciodecoloresLab,procesamos transicio´ndelcolorrojoalverde,unaltovalordeasignifica
+cadacanalconsidera´ndolounaimagenenescaladegrises. uncolorrojizo delp´ıxel. Teniendoen cuentaquelaregio´n
+cervicalesunaregio´nrelativamenterosadaqueseencuentra
+2.1 Eliminacio´ndelaregio´nespecular localizadacercanaalcentrodelaimagen,entoncesser´ıaintui-
+Unaregio´nespecularesunazonabrillanteproductodel tivotomarloscanalesadelaimagenenLab,yd (distancia
+reflejodelaluzdelaca´maradelcolposcopio.Estasregiones de cada p´ıxel al centro) y utilizar algu´n me´todo de agrupa-
+afectanelresultadodelosalgoritmosdesegmentacio´npor mientoparaformardosgrupossobreelespacio(a,d).Estos
+loquesueliminacio´nesmuynecesaria.Paralaeliminacio´n dosconjuntosseformandemodoqueelgrupoconmayores
+delaregio´nespecularseutilizo´ lapropuestadePalmerque valores de a y menores valores de d represente a la regio´n
+implementatresalgoritmosparaobtenerlasma´scarasdelare- delce´rvix.Elcanald proveeinformacio´nespacialypermite
+gio´nespecularytresalgoritmosderestauracio´ndelosp´ıxeles laextraccio´nderegionescontinuasenelplanodelaimagen,
+[21].Seexperimento´ condiferentesvaloresdelospara´metros mientrasqueaessoloinformacio´ndelcolor.
+yseeligio´ lavariantequeobtuvomejoresresultadosvisuales. Enlaliteraturaconsultadaengeneralseproponenideas
+de este tipo [22, 23, 24, 25]. Lo u´nico que diferencia unas
+2.2 Correccio´ndelailuminacio´n ideasdeotraseselme´tododeagrupamientoqueutilizan.
+Una vez eliminada la regio´n especular se prosigue a la Elalgoritmopropuestoparaladeteccio´ndelaROIcon-
+correccio´n de la iluminacio´n. Dicha correccio´n consiste en viertelaimagencolposco´piaRGB4 alespacioLab,elimina
+tratardeaclararlosp´ıxelesma´soscurosdelaimagenydejar elruidoenelcanala,calculaladistanciad decadap´ıxelal
+los ma´s claros con su iluminacio´n. Una relajacio´n a lo an- centrodelaimagenyagrupalosp´ıxelesendosconglomera-
+teriorser´ıaefectuarunamayoraclaracio´nalosp´ıxelesma´s dossegu´nelvector(a,d).SeasumequelaROIesta´ formada
+oscuros y una menor aclaracio´n a los menos oscuros. Sea porlosp´ıxelesdelgrupoqueposeeelmenorpromediodela
+p un p´ıxel de I gris tal que I gris (p)=x y sea q otro p´ıxel de distanciad.
+I gris talqueI gris (q)=ydetalformaque p(cid:54)=qyx>y,sea Enlaexperimentacio´nsepudoapreciarqueelresultado
+xc,ycelcomplementodexydeyrespectivamente.Tomando
+delagrupamientopuedenoadherirsealosbordesdelaregio´n
+enconsideracio´nque0≤x,y≤255entoncesxc=255−xy
+del ce´rvix y de esta manera se excluyen partes que son de
+yc=255−y,portantosix>yentoncesyc>xc.Luego,six
+intere´s.Adema´s,puedenquedarpequen˜asregionesfuerade
+eslaintensidaddelp´ıxel pma´sclaroqueqdeintensidady, lama´scaraypequen˜oshuecosdentrodeesta.Estopuedeser
+entoncesunasolucio´npropuestaalproblemaencuestio´nser´ıa consecuenciadelruidoydelospequen˜oscambiosdecolor
+sumarleacadaintensidaddecadap´ıxelunafraccio´ndesu quepersistenenlaimagenau´ndespue´sdelaaplicacio´nde
+complemento,esdecir,xc·ρ donde0≤ρ≤0,5.Sepuedeob- los filtros morfolo´gicos. Para solucionar este problema se
+servarquesiρ=0nosemodificar´ıalaimagenyparaρ=0,5 considero´ an˜adir un para´metro w∈[0,1] para ponderar la
+se le sumar´ıa a cada p´ıxel la mitad de su complemento. Se distanciaenelagrupamientoyusaroperacionesmorfolo´gicas
+decidio´ nosumarma´sdelamitadyaquecuandoρ tiendea (Figura 1). Como paso final del algoritmo se aplican a la
+unoentoncesI gris tiendealaimagenenblancoyportantono ma´scaralasoperacionesmorfolo´gicaserosio´n,dilatacio´ny
+seobtienenbuenosresultados. cierreconelobjetivodeeliminarpequen˜asregiones,suavizar
+Paralaexperimentacio´nseproponeaplicartambie´neste losbordesyeliminarloshuecosenlama´scara.
+procedimientoenelespaciodecoloresLab. Tras el uso de las operaciones morfolo´gicas planteadas
+anteriormente, la ma´scara de la ROI esta´ ma´s ajustada al
+2.3 Eliminacio´ndelruido ce´rvix,perotodav´ıaexistenp´ıxelesruidosos.Porestemotivo
+Unavezeliminadalaregio´nespecularycorregidalailu- seproponeunalgoritmopararectificarla.
+minacio´nseprocedeaeliminarelruido.Alnoposeerinfor-
+ElalgoritmopropuestopararectificarlaROIasumeque
+macio´n alguna del tipo de ruido, se utilizaron los filtros de
+la regio´n cervical se encuentra localizada cerca del centro
+medianaygaussianoparasueliminacio´n[12].
+de la imagen. Adema´s, teniendo en cuenta que esta regio´n
+deber´ıa ocupar, alrededor o ma´s de la mitad de la imagen,
+3. Deteccio´n de la ROI entonces lo ma´s probable es que el centro de la imagen se
+encuentredentrodelama´scaradelaregio´ncervical[26,21].
+Laimagencolposco´picapuedeconteneradema´sdelcuello
+uterino,informacio´nirrelevantetalcomoelespe´culo,partes 4RGBporsussiglaseningle´ssignificaunaimagenacolordetrescanales
+delavagina,etc.Estainformacio´npuedeprovocarunamala rojo(R),verde(G)yazul(B).
+Segmentacio´ndelaregio´nacetoblancaencolposcop´ıasdelce´rvix 175
+(a) (b) (c)
+Figura1.Resultadosdeaumentarel para´metrowenladeteccio´nde laregio´ncervical:(a)w=0,06 ,(b)w=0,21y(c)w=0,5
+Por tanto, la idea del algoritmo es primeramen te rectific ar seloc ali zaaproxim ad amentecercanaalcentrodelaimagen.
+losbordesdelaROItomandodeestasolamentelospuntos La regio´n acetoblanca (objetivo a segmentar) es la que se
+queeste´nma´scercanosalcentro;paraestosetrazanrectas encuentrainmediatamentealrededordelaregio´ncolumnar,
+desdeelcentro delaimagenhaciaelbordedelamismayse estatieneunaaparienciablancuzcaodeunrosadopa´lidoy
+conservanlospuntosdedicharectaquecoincidanconpuntos es usualmente la regio´n ma´s brillosa. La regio´n restante es
+queseanbordesdelama´scaradelaROI.Luegosetomacomo laescamosalacualesdeunrojizoqueseencuentraentreel
+puntodelbordedelaROIsoloelqueesta´ amenordistancia colordelaregio´nacetoblancayeldelacolumnar.Basados
+euclidianadelcentro.Enlapra´ctica,nosetrazaunarectapor enestasobservaciones,seseleccionarontrescaracter´ısticas
+cadapuntodelbordedelaimagenyaqueestoesineficiente, paracaracterizarlaimagenasersegmentada.
+en lugar de hacer esto se decidio´ trazar una recta por cada Pararepresentarladiferenciadeintensidadessetomael
+intervalodepuntosenelsentidodelasmanecillasdelreloj. canaladelaimagenenelespaciodecoloresLab,ladiferencia
+Por ejemplo, se consideran intervalos de veinte puntos del derojosesrepresentadaporelcanalddeestemismoespacioy
+bordedelaimagen,yluegoseunecadaunoconsusucesor ladistanciaeuclidianadecadap´ıxelalcentrodelaimagen,d
+medianteunarecta.Elresultadodeaplicarloanterioresun esusadapararepresentarladiferenciaencuantoaorientacio´n
+bordecerradoqueensuinteriorcontienealaregio´ndelce´rvix. espacial.AligualqueenelprocedimientoparahallarlaROI,
+Enelsiguientepasoseobtienelama´scaraquerepresentael lamatrizd esmultiplicadaporunfactorwdonde0≤w≤1,
+interiordeestebordemediantelaTransformadaWatershed elcualindicaelpesodeladistancia.
+talcomoindicaDelRisco[27],obteniendodeestaformala Paradetectarlaregio´nacetoblancasetomalaimagencon
+ma´scaramostradaenlaFigura2. laregio´nespecularyaeliminada,seconviertealespaciode
+colorLab,seeliminaelruidoenloscanalesLyamedianteel
+algoritmoexplicadopreviamente,secomputanlosvaloresL,a
+4. Deteccio´n de la regio´n acetoblanca
+yd(distanciaalcentro)porcadap´ıxelquepertenezcaalaROI
+UnavezdefinidalaROIsepuedenaplicarsobreestalos yseaplicaalgunodelosme´todosdeagrupamientoplanteados
+diferentesalgoritmosparasegmentarlaregio´nacetoblanca. sobre el espacio tridimensional (L,a,d) con el objetivo de
+Paradetectaryanalizarlaregio´nacetoblancasetuvieronen formartresgrupos.Luego,elgrupoconmayoresvaloresde
+cuenta dos ideas presentadas en [28]. Una de ellas basada L se asume que es el que representa la regio´n acetoblanca.
+enagrupamientoylaotrabasadaenUMA.Ambaste´cnicas Finalmente,seaplicanlasoperacionesmorfolo´gicaserosio´n
+fueronadaptadasparalaidentificacio´ndevariasintensidades ydilatacio´n.
+deblancoenlapropiaregio´nacetoblanca(multideteccio´n).
+4.2 Te´cnica basada en Umbralizacio´n y Morfolog´ıa
+4.1 Te´cnicabasadaenagrupamiento Matema´tica
+Variossonlosart´ıculosqueusanGMMconelobjetivo Otradelaste´cnicasreportadaenlaliteraturaesta´motivada
+dedetectarlaregio´nacetoblanca[11,23,28].GMMpuede porlaformaenlaquelosme´dicosconexperienciadibujan
+serusadocomome´tododeagrupamiento.Bastaestimarlos elbordedelaregio´nacetoblanca[28].Esteme´todoconvierte
+para´metrosdema´ximaverosimilitudconEMparalamezcla la imagen representada en escala de grises en una imagen
+delaskgaussianasquerepresentara´nloskgruposenlosque binariamedianteelusodelumbraldeOtsu[29]seguidode
+sedeseadividirlosdatos. unasecuenciadeoperacionesmorfolo´gicasparafinalmente
+Lahipo´tesisenlacualsebasanlosart´ıculosmencionados obtenerlaregio´nacetoblanca.
+anteriormenteeslasiguiente.Unavezquelaregio´nespecular EsteprocedimientoasumequelaimagenI deentrada
+rgb
+eseliminada,as´ıcomotodainformacio´nirrelevante,laimagen notieneregionesdebrilloniinformacio´nirrelevante.Luego
+resultantequedaformadaportresregionespredominantes:el seprocedeasuconversio´naescaladegrisesdelasiguiente
+epiteliocolumnar,elepitelioescamosoylaregio´nacetoblanca. forma[28]:
+Laregio´ncolumnareslaqueseencuentrainmediatamente
+alrededordelorificiocervicalexterno,esdeuncolorrojizoy I (p)=0,3·Ir (p)+0,59·Ig (p)+0,21·Ib (p) (1)
+gris rgb rgb rgb
+176 Segmentacio´ndelaregio´nacetoblancaencolposcop´ıasdelce´rvix
+(a) (b) (c)
+Figura2.Fasesenladeteccio´ndelaROI:(a)ROIobtenidaporelalgoritmopropuesto,(b)ROIobtenidadespue´sdelproceso
+derectificacio´ny(c)Ma´scaradelaROIdefinitiva
+El umbral global se calcula usando el me´todo de Otsu NumPy1.7.1[31],SciPy0.13.0[32],Matplotlib1.3.1[33],
+[29] para tra nsf ormar la ima ge n en esc al a de g ri ses I a skimage0.9.3[34],sklearn0.14.1[35],OpenCV2.4.6.0[36]
+gris
+unaimagenbinaria.Elme´todoOtsuproduceunumbraltal yPyQt.
+quemaximizalaseparacio´nentrelasvarianzasinter–clases
+e in tr a– cl ases [2 9 ] y de e sta for ma b rin d a una id e a gen eral
+8. Resultados y discusio´n
+sob re lal oc ali za cio´nd e laregio´n acetob la nca. La s regi ones
+desc onect ad as de la r eg io´n c en tral son elim in adas us ando
+8. 1 Efectode l aeliminacio´n d e laregio´n es pecula r
+ero sio´n con unel em ent oe st ructur ante c uadr ad o de3× 3. Pos-
+enla deteccio´ n delare gio ´nac etoblan ca
+teriormenteelbordedelaregio´nacetoblancaessometidoa
+EnlaFigura3sepresentanalgunosresultadosdeaplicar
+unasecuenciadedilatacionesusandocuatroelementosestruc-
+elalgoritmodeagrupamientoparadetectarlaregio´naceto-
+turanteslinealesorientadosencuatrodiferentesa´ngulos,0,
+blanca a variasim a´ genesante sydespue´sdeeliminarlaregio´n
+45, 90 y 135 grados. Finalmente, con el objetivo de cerrar
+especular. Cuando no se elimina la regio´n especular no se
+losposibleshuecosdentrodelama´scara,seaplicasobreesta
+unaoperacio´ndecierreo bteniendodeestaformalaregio´n
+logra dete cta r cone fectiv id ad laregi o´nace tob lan ca.Estos e
+debeaquedicharegio´nesta´ formadaporp´ıxelesdealtain-
+acetoblancadefinitivaquedara´ elalgoritmocomoresultado.
+tensidaddegris,quedebieranformarlaregio´nacetoblanca
+enunaimagensinbrillo.
+5. Ima´genes colposco´picas utilizadas
+En este estudio se utilizaron 40 ima´genes de cuello de
+u´terotomadasapacientescubanas(debidamentecodificadas)
+porlaDra.A´guedaSantanaenelHospitalMaternode10de
+Octubre.
+Lasima´genesutilizadasnoaparecenclasificadasniano-
+tadasporloqueparaevaluarlosalgoritmoslaDra.Santana
+realizo´ lasanotacionesdelasregionescervicalyacetoblanca
+(groundtruth)conayudadeunsoftwareimplementadopara
+estefin.
+6. Medidas cuantitativas
+Se disen˜aron dos medidas de calidad, una para evaluar
+ladeteccio´ndelaregio´ncervicaloROIyotraparaladetec-
+( a) ( b)
+cio´ndelaregio´nacetoblanca.Laideageneralquesetuvoen
+Figura 3. Ef ectode la e limin ac io´n delare g io´ne sp ecular p a ra
+cuenta para el disen˜o de cada una de estas fue repartir 100
+ladeteccio´ndelaregio´nacetoblancamedianteCustomGMM:
+puntosdelasiguienteforma:50puntosparaevaluarsitodos
+(a)Resultadosineliminarlaregio´nespecular,(b)Resultado
+losp´ıxelesqueesta´ndentrodelaregio´ncorrespondientese
+desp ue´ sde elimin ar la regi o´n esp ecular
+incluyenenlagroundtruthylosotros50puntosenevaluar
+sinosedetectaronp´ıxelesfueradelaregio´nmarcadaporla
+EnlaFigura4sepresentanalgunosresultadosdeaplicarel
+especialista.
+algoritmobasadoenUMAavariasima´genesantesydespue´s
+d e elimi na rl aregio´n espec ular.El ex perim entoan ter iorno s
+7. Software
+perm it ec onclui rqueen i ma´ge nescon re g io´n espe cularex iste
+Losalgoritmosfueronimplementadosenellenguajede unaaltaprobabilidaddequelosalgoritmosparadetectarla
+programacio´nPython2.7.6[30].Seutilizaronlosmo´dulos regio´nacetoblancanofuncionencorrectamente.
+Segmentacio´ndelaregio´nacetoblancaencolposcop´ıasdelce´rvix 177
+( a ) (b) ( a ) ( b)
+Figura4 .E fe ctode la e limina ci o´n d elare gio ´nes p ecular pa r a Figura 6 .E fectod e la selec ci o´n d elareg io´ nce rv icalpa ra la
+ladete cci o´nd elareg i o´ nacet ob la ncam ed ianteU M A: (a) de tecci o´nde lareg io´ na cetobl an c amed ia nte U MA: (a )
+Resultadosineliminarlaregio´nespecular,(b)Resultado Resultadosobrelaimagenentera,(b)Resultadosobrela
+desp u e´sde elimi na rlareg io´ nespe cu la r regi o´n cerv icalel eg ida
+8.2 Importanciadelaseleccio´npreviadelaROI 8.3 Deteccio´n de la regio´n acetoblanca con distin-
+Un o de los p r i m eros pa s os e n la det e cc io´ n d e la re g io´ n to sme´to dos d eagr upami en t o
+aceto blanc a e slasele ccio´n de unaR OIade cu ada donde lo s A contin uacio´ nsee va lu´ala de te ccio´n laregio´n ac eto blan-
+alg oritm o sdebe ndet ec ta rlare gio´n ac et oblanca .Enla Fi gur a causand o distin tostip os de me´todo sd e ag rupamie nt o.Pa ra
+5s e pr e s e nt anl osre sult a d o sd el al go ritm ob asa do e n ag rup a - es tose aplico´ c adaalgo rit moauna m ism a ima gen,sob rel a
+mie nto donde s ede te ctao no p r ev i ame nte lare g io´nc e rvic a l. misma RO I.
+Com o s e pu ede a pr eci ar, en nin g u na d e las ima´g en es ante - Enla Figura7s epuedeobservarlapequen˜avariacio´nque
+rioresselogradetectarcorrectamentelaregio´nacetoblanca existedeunme´todoaotroenunamismaimagen.Estonos
+siesaplicadosobretodalaimagen.Sinembargo,cuandose permiteutilizarcomocriteriodeseleccio´neltiempoquese
+apl ic asol os ob relare gio´n cerv ica le nlam i smaim a gene ste demoracadaunoyenestecaso elquemenostiempotomo´fue
+obtienenm ejo res resul tados. CustomGMMelcualestimalospara´metrosdelmodeloGMM
+medianteelalgoritmoEMyusaMiniBatchk−meanspara
+inicializarlospara´metros.
+8.4 Multideteccio´ndelaregio´nacetoblanca
+Encolposcop´ıa,ladiferenciacio´nentredistintasintensi-
+dadesdeunamismaregio´nacetoblancaestambie´ndegran
+importancia.Porejemplo,laempresaDySIS5 comercializa
+suscolposcopios.Estesoftwaregrabaunvideodelproceso
+decambiodecolordelepiteliocervicaltraslaaplicacio´ndel
+a´cidoace´ticoydeestaformasebrindaunespectrodecolores
+queindicacua´leszonassetornaronma´sblancuzcas.
+Conelobjetivodeagruparlosp´ıxelesdentrodelaregio´n
+acetoblancaseimplementarondosvariantes:elagrupamiento
+conCustomGMMtomandounnu´merodeterminadodegru-
+(a) (b)
+posylaseparacio´nmedianteUMAenelespaciodecolores
+Figura5.Efectodelaseleccio´ndelaregio´ncervicalparala
+Lab.EnlaFigura8laescaladecolores(delvioletaalrojo)
+deteccio´ndelaregio´nacetoblancamedianteCustomGMM:
+constituyeunaescaladeintensidadesdegris.Porejemplo,en
+(a)Resultadosobretodalaimagen,(b)Resultadosobrela
+laFigura8aseobservaquelaregio´ncentraltieneuncolor
+regio´ncervicalelegida
+amarilloqueindicaqueesazonatienemayoresintensidades
+de gris que el resto, i.e. absorbio´ ma´s la solucio´n de a´cido
+EnlaFigura6sepresentaelmismoexperimentoprevio
+ace´ticoloquepuedeserunasen˜aldeca´ncerdecuellodeu´tero.
+peroestavezconelalgoritmobasadoenUMA.Nuevamente,
+Lamultideteccio´ndescritasugierealosespecialistaszonas
+los resultados no son buenos cuando se aplica a la imagen
+completa,perolaefectividaddeestamejorasustancialmente 5Parama´sinformacio´npuedeconsultarseelsitiooficialdelaempresa:
+cuandoserestringealaregio´ncervical. http://dysismedical.com
+178 Segmentacio´ndelaregio´nacetoblancaencolposcop´ıasdelce´rvix
+(a) ( b) (c) (d) (e)
+Figura7.R esultad o sd e ap licarlosalgoritmosdeagrupamientoparadetectarlaregio´nacetoblanca:(a)Custom GMM,(b)
+GMM ,(c)V BGMM ,(d)k−m eans y(e)Min iB atchk− m eans
+enlas qu e podr´ıa n r ealiz arseb iops i as . En la Figur a 9 a s e desglosan los va lo res de la medida
+de c alid ad p ara cada imagen y cada tarea de deteccio´n, al-
+canza´ndose valores mayores que 60 en la mayor´ıa de las
+i ma´geneslo cua lconsi der amo sfavora bl e.En laFigura9bse
+observaqueladeteccio´nporagrupamientoalcanzalamayor
+frecuenciaderesultadosconvaloresdelamedidamayores
+que 90(17)m ientras ques oloen ocho ima´gen esseobtuvoun
+valormayorque90enladeteccio´ndelaregio´ncervical.
+8 .6 Re sultadosde la evaluacio´ncu a lit ativa
+Conelfindeevaluarcualitativamentelosresultados,se
+( a ) ( b)
+Figura8. R esul tad os d ela detecci o´n m u ´ltiple enlar eg io´n
+desarrollo´ adema´sunsoftwareparalaevaluacio´nquepermi-
+tio´ alaDra.Santanaevaluarlacalidaddelaidentificacio´nde
+acetoblanca:(a)Formandocuatrogruposmediante
+Cu stomGMM,(b)FormandodosgruposconUMA
+laregio´nacetoblancadetectadaporlosalgoritmospropuestos.
+Enesaevaluacio´nseasigno´ unvalorentre0y100,siendoel
+valor100unasegmentacio´nmuybuenaoperfectayelvalor
+0unasegmentacio´nmuymala.
+8.5 Re su lt ad osd e lae valuacio´n cuantitativa
+EnlaFigura10semuestranlosresultadosdedichaeva-
+EnelCuadro1sepresentanlosresultadosdelaevaluacio´n
+luacio´n. Puede observarse que en la mayor´ıa de las ima´ge-
+cuantitativadelosalgoritmosparadetectarlaROIylaregio´n
+nes se logra detectar favorablemente la regio´n acetoblanca
+acetoblancasobrelas40ima´genes.Estosvaloresindicanuna
+alcanza´ndose90comovalorma´ximo.Unadelasima´genesre-
+altacoincidenciaentrelaregio´ndetectadaylamarcadapor
+cibio´evaluacio´n0paraelalgoritmodeagrupamientomientras
+laespecialista.Puedeobservarsequeladeteccio´ndelaROI
+queobtuvocalificacio´nsatisfactoriaconUMA(VerFigura
+presenta, en promedio, el valor ma´s bajo lo cual afecta la
+10a).LaFigura10bmuestrama´sclaramentelatendenciafavo-
+deteccio´n de la regio´n acetoblanca pues los algoritmos de
+rableenlascalificacionesdeambosalgoritmos.Sibienenel
+agrupamientoyUMArecibencomoentradalaregio´ncervical.
+intervalo[90,100]ambosalgoritmospresentaronuncompor-
+tamientosimiliar,enelintervalo[80,89]UMAmostro´ menos
+Deteccio´ndelaROI 84.5
+evaluaciones satisfactorias que el agrupamiento. Esto pue-
+Deteccio´nbasadaenagrupamiento 87.6
+deindicarunamayorsusceptibilidaddeUMArespectoala
+Deteccio´nbasadaenUMA 87.0
+deteccio´npreviadelaregio´ncervical.
+Cuadro1.Promediodelamedidadecalidadenladeteccio´n
+Segm entacio´n delaregio´nacetoblancaencolposcop´ıasdelce´rvix 179
+Resultados Individuales
+100
+Resultados individuales 90 Resultados por intervalo
+80
+120 3700
+100 25 6 50 0 24
+80 23 4 00 0 19
+17
+20
+60 20 15
+15
+10
+40 100
+8 8
+20 Detección acetoblanca basada en Agrupamien5to Detección acetoblanca basada en UMA
+5 3
+0 0 1 0 0 0 0
+G0ráfico 3. Resultados del Algoritmo 9 (basado en Agrupamiento) y el Algoritmo 10 (basado
+Detección acetoblanca basada en Agrupamiento Detección acetoblanca basada en Detección acetoblanca basada en Detección de ROI
+Detección acetoblanca basada en UMA Agrupamiento en UUMMAA).
+Detección de ROI [0, 40) [40, 60) [60, 80) [80, 90) [90, 100]
+Valores por intervalo:
+Figura9.Result ad osdela e valu acio´n cuan ti tat ivareal izadaparacadaalgoritmodedeteccio´nusado:(a)Calificacionespor
+La elaboración del Gráfico 4 pr esentado a co ntinuació n s e hiz o de form a análoga a la del
+imagen,(b)Cantidaddeima´genesencadaintervalodelamedidadecalidad
+G ráfico 2 pero esta vez sobre la evaluación cualitativa de los algoritmos 9 y 10.
+Resultados por intervalo
+Resultados Individuales 30
+100 25 24
+90
+80 20 17 17
+70
+60 15 12
+50
+10
+40
+2 3 0 0 5 1 2 3 0 2 2
+10 0
+0 Detección acetoblanca basada en Agrupamiento Detección acetoblanca basada en UMA
+Detección acetoblanca basada en Agrupamiento Detección acetoblanca basada en UMA < 40 40 -> 59 60 -> 79 80 - > 89 90 -> 100
+(a) (b)
+Gráfico 4. Resultados por intervalo de los algoritmos 9 y 10.
+Figura10.Resultadosdelaev alua cio´ncualitativarealizadaporlaDra.Santanaparacadaalgoritmodedeteccio´nusado:(a)
+Calificacionesporimagen,(b)Cantidaddeima´genesencadaintervalodecalificacio´n 80
+9. Conclusiones Comopartedelprocesodeevaluacio´ndelametodolog´ıa
+seobtuvieronlasgroundtruthparalamuestraexperimentaly
+Eneltrabajosepresentaunametodolog´ıaparasegmentar
+sepropusieronyutilizarondosmedidasdecalidadcuantitativa.
+laregio´nacetoblanca.Luegodeunarevisio´ndelaliteratura,
+Losresultadosdeestasmedidasalcanzaron,enpromedio,una
+sepudoconstatarqueelproblemahasidoabordadoenmuy
+efectividaddel87%enladeteccio´ndelaregio´nacetoblanca,
+pocasocasionesydemaneramuygeneral.Seconcluyo´ que
+validada por la evaluacio´n cualitativa realizada por la Dra.
+era necesario el mejoramiento de la imagen y la deteccio´n A´gueda Santana. El agrupamiento mediante el Modelo de
+delaregio´ncervialoROIcomopasospreviosaladeteccio´n
+MezclasGaussianasestimandopara´metrosconelalgoritmo
+delaregio´nacetoblanca.Tambie´nseconstato´ queelusode
+Esperanza–Maximizacio´nyMini–batchk−meansmostro´ los
+te´cnicasbasadasenme´todosdeagrupamientoconstituyeun
+mejoresresultados.
+factorcomu´n.Sepropusounalgoritmoparaladeteccio´ndela
+ROIydosp rocedi mie n tosparalasegmen tacio´n de l aregio´n
+acetoblanca.Estos me´to d osco m bina n lasd i ferenteste´cnicas
+Referencias
+estudiadasconsolucionespropias. [1] E.C.Cruz. ConductafrentealaNeoplasiaIntraepitelial
+Serealizo´ unaexperimentacio´nsobretodaslasima´genes Cervical(NIC). RevistaCubanaObstetriciayGineco-
+disponibles,secompararoncuatr oalgoritmosdeagrupamien- log´ıa,24(3):156–60,1998.
+to y un me´todo que combina umbralizacio´n con operacio-
+[2] Ministerio de Salud Pu´blica. Anuario Estad´ıstico de
+nesmorfolo´gicas.Losresultadosreflejaronlaimportanciade
+Salud2014,2015.
+laeliminacio´nderegionesespecularescaracter´ısticasdelas
+ima´genesadquiridas.
+[3] J. Qiang, J. Engel, and E. Craine. Classifying cervix
+Adema´s,sepropusounalgoritmobasadoenagrupamiento
+tissuepatternswithtextureanalysis.PatternRecognition,
+paradetectardiferentesnivelesdeintensidadesdegris(mul-
+33,2000.
+tideteccio´n)enlaregio´nacetoblanca.Estaszonassuelenser
+unindicadordeca´ncerypuedenusarsecomomarcadoresde [4] R.ReidandP.Scalzi. Animprovedcolposcopicindex
+biopsiaqueconfirmenonoeldiagno´stico. fordifferentiatingbenignpapillomaviralinfectionsfrom
+180 Segmentacio´ndelaregio´nacetoblancaencolposcop´ıasdelce´rvix
+high–gradecervicalintraepithelialneopalsia. Internatio- [18] L.XuandM.I.Jordan. Onconvergencepropertiesof
+nalJournalofGynecology&Obstetrics,24,1986. theemalgorithmforgaussianmixtures. Neuralcompu-
+tation,8(1):129–151,1996.
+[5] P.S.RamaPrabaandH.Ranganathan. Colourhistogram
+basedcolposcopycervicalimageclassification. InIn-
+[19] G.McLachlanandT.Krishnan. TheEMalgorithmand
+ternationalConferenceonAdvancesinComputerand
+extensions,volume382. JohnWiley&Sons,2007.
+InformationTechnology,2013.
+[20] D.M.BleiandM.I.Jordan. Variationalinferencefor
+[6] E. Rendon, A. D´ıaz, I. Abundez, and E. Gasca. Met-
+dirichletprocessmixtures. Bayesiananalysis,1(1):121–
+hodtoclassifycolposcopicimages. RecentResearches
+143,2006.
+CommunicationsComputers,2012.
+[7] M.Liang,G.Zheng,X.Huang,G.Milledge,andA.To- [21] A. Palmer. Eliminacio´n de regiones especulares en
+kuta. Identificationofabnormalcervicalregionsfrom ima´genes colposco´picas de cuello de u´tero. Tesis de
+colposcopy image sequences. Journal of WSCG, 20, Diploma,FacultaddeMatema´ticayComputacio´n,Uni-
+2013. versidaddeLaHabana,Cuba. 2015.
+[8] A.Alush,H.Greenspan,andJ.Goldberger. Lesionde- [22] H.Greenspan,S.Gordon,G.Zimmerman,S.Lotenberg,
+tectionandsegmentationinuterinecerviximagesusing J.Jeronimo,S.Antani,andR.Long. Automaticdetec-
+anarc–levelMRF. InIEEEInternationalSymposium tionofanatomicallandmarksinuterinecerviximages.
+on Biomedical Imaging: From Nano to Macro, pages IEEETransactionsonMedicalImaging,28(3):454–468,
+474–477.IEEE,2009. 2009.
+[9] W. Li, J. Gu, D. Ferris, and A. Poirson. Automated
+[23] S. Gordon, G. Zimmerman, R. Long, S. Antani, J. Je-
+imageanalysisofuterinecervicalimages. InMedical
+ronimo,andH.Greenspan. Contentanalysisofuterine
+Imaging,pages65142P–65142P.InternationalSociety
+cerviximages:Initialstepstowardscontentbasedinde-
+forOpticsandPhotonics,2007.
+xingandretrievalofcervigrams. InMedicalImaging.
+[10] H.Lange. Automaticdetectionofmulti–levelacetow- InternationalSocietyforOpticsandPhotonics,2006.
+hite regions in rgb color images of the uterine cervix.
+[24] G.Zimmerman,S.Gordon,andH.Greenspan. Auto-
+In Medical Imaging, pages 1004–1017. International
+maticlandmarkdetectioninuterinecerviximagesfor
+SocietyforOpticsandPhotonics,2005.
+indexinginacontent–retrievalsystem. In3rdIEEEIn-
+[11] S.Gordon,G.Zimmerman,andH.Greenspan. Image ternationalSymposiumonBiomedicalImaging:Nano
+segmentationofuterinecerviximagesforindexingin toMacro,pages1348–1351.IEEE,2006.
+pacs. In 17th IEEE Symposium on Computer-Based
+MedicalSystems,page298.IEEE,2004. [25] A.Das,A.Kar,andD.Bhattacharyya. Eliminationof
+specularreflectionandidentificationofROI:Thefirst
+[12] C. Ricardo. Empleo de filtros de la Morfolog´ıa Ma-
+stepinautomateddetectionofcervicalcancerusingdigi-
+tema´ticaenima´genesdemamograf´ıas.TesisdeDiploma,
+talcolposcopy. In2011IEEEInternationalConference
+FacultaddeMatema´ticayComputacio´n,Universidadde
+on Imaging Systems and Techniques, pages 237–241.
+LaHabana,Cuba. 2015.
+IEEE,2011.
+[13] O.MaimonandL.Rokach.DataMiningandKnowledge
+[26] B.B.Sa´nchez. Desarrollodeherramientasparaladetec-
+DiscoveryHandbook. Springer,2005.
+cio´nderegionesdeintere´sentermogramasdemamas.
+[14] D.Sculley. Web–scalek−meansclustering. InProcee- Tesis de Diploma, Facultad de Matema´tica y Compu-
+dings of the 19th International Conference on World tacio´n,UniversidaddeLaHabana,Cuba. 2015.
+WideWeb,Raleigh,NorthCarolina,USA,2010.ACM
+Press. [27] J.DelRisco. Transformadadewatershedydeteccio´n
+automa´ticademarcadores:unapropuestaparasegmen-
+[15] R.A.RednerandH.F.Walker. Mixturedensities,ma-
+tacio´ndeima´genes.TesisdeDiploma,FacultaddeMa-
+ximumlikelihoodandtheemalgorithm. SIAMreview,
+tema´tica y Computacio´n, Universidad de La Habana,
+26(2):195–239,1984.
+Cuba. 2013.
+[16] G.J.McLachlanandK.E.Basford. Mixturemodels:In-
+[28] Y.Srinivasan,S.Yang,B.Nutter,S.Mitra,B.Phillips,
+ferenceandapplicationstoclustering,volume84. Mar-
+and R. Long. Challenges in automated detection of
+celDekker,1988.
+cervicalintraepithelialneoplasia. InMedicalImaging,
+[17] G.McLachlanandD.Peel. Finitemixturemodels. John pages65140F–65140F.InternationalSocietyforOptics
+Wiley&Sons,2004. andPhotonics,2007.
+Segmentacio´ndelaregio´nacetoblancaencolposcop´ıasdelce´rvix 181
+[29] N.Otsu. Athresholdselectionmethodfromgray–level [34] S. van der Walt, J. L. Scho¨nberger, J. Nunez-Iglesias,
+histograms. IEEETransactionsonSystems,Man,and F.Boulogne,J.D.Warner,N.Yager,E.Gouillart,T.Yu,
+Cybernetics,9(1):62–66,1979. andThescikit-imagecontributors. scikit-image:Image
+ProcessinginPython. PeerJ,2:453,2014.
+[30] G.vanRossum. PythonTutorial. TechnicalReportCS-
+R9526,CentrumvoorWiskunde&Informatica(CWI), [35] F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel,
+Amsterdam,1995. B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer,
+R.Weiss,V.Dubourg,J.Vanderplas,A.Passos,D.Cour-
+[31] S.vanderWalt,S.C.Colbert,andG.Varoquaux. The
+napeau,M.Brucher,M.Perrot,andE.Duchesnay.Scikit-
+NumPy Array: A Structure for Efficient Numerical
+learn:MachineLearninginPython. JournalofMachine
+Computation. Computing in Science & Engineering,
+LearningResearch,12:2825–2830,2011.
+13(2):22–30,2011.
+[32] E. Jones, T. Oliphant, and P. Peterson. Scipy: Open [36] G.R.Bradski.TheOpenCVLibrary.Dr.Dobb’sJournal
+SourceScientificToolsforPython. 2014. ofSoftwareTools,2000.
+[33] J.D.Hunter. Matplotlib:A2DGraphicsEnvironment.
+Computing in Science and Engineering, 9(3):90–95,
+2007.

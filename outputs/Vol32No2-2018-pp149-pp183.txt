@@ -1,0 +1,366 @@
+CienciasMatemáticas,Vol.32,No.2,Pag.149-183, 2018
+Recibido02-2018
+Implementacio´n de un Esquema de Aproximacio´n
+para el Problema de Transferencia de Masas
+Mir´ıam G. Ba´ez-Herna´ndez1, M. Lorena Avendan˜o-Garrido 1, J. Rigoberto Gabriel-Argu¨elles1
+Resumen En este art´ıculo se presentan resultados nume´ricos de la implementacio´n de un esquema de
+aproximacio´n para problemas de programacio´n lineal infinita. En particular, este esquema es aplicado al
+ProblemadeTransferenciadeMasasdeMonge-Kantorovich.Seilustraelesquemaconejemplosenelintervalo
+[0,1],loscualestienensolucio´nexacta,locualpermitecompararlosresultadosdelesquema.
+Abstract
+PalabrasClave
+EsquemadeAproximacio´n—Programacio´nLineal—TransferenciadeMasas
+1FacultaddeMatema´ticas,UnivesidadVeracruzana,Me´xico,miriam.baez.hdez@gmail.com,maravendano@uv.mx,jgabriel@uv.mx
+Introduccio´n una tarea sencilla. Por ejemplo, la me´trica de Kantorovich
+esunproblemacomplicadoderesolver,envirtudqueesun
+En1781elmatema´ticofrance´sGaspardMongeplanteo´
+problemadeoptimizacio´nenespaciosdemedidas.Enlali-
+elproblemadetransferenciademasas,elcualconsisteenen-
+teraturaexistenalgoritmosdeaproximacio´nquesepueden
+contrarunplano´ptimodetransporteparamoverunmont´ıculo
+emplearparalame´tricadeKantorovich,comoen[9],dondese
+de tierra a un hoyo. Para ello, Monge dividio´ el mont´ıculo
+desarrollaunalgoritmonume´ricoparaaproximarelvalordel
+engranosdetierra,as´ıelproblemaseredujoaencontraruna
+ProblemadeTransferenciadeMasasenespacioscompactos.
+funcio´nqueproporcionaralaposicio´ndelgranitoenelhoyo.
+Diversosautoreshanestudiadoesquemasdeaproximacio´n
+Hoy,estoesconocidocomoelProblemadeMongeylafun-
+para el Problema de Transferencia de Masas, por ejemplo
+cio´ndetransferenciaseconocecomoacoplamientoo´ptimo
+Herna´ndez-LermayLasserreproponenen[16]unesquema
+[19].
+deaproximacio´ngeneralbasadoenproblemasdeprograma-
+Ma´starde,en1942elmatema´ticorusoLeonidV.Kanto-
+cio´nlinealinfinita,elcualsepuedeaplicaraunproblemade
+rovichestudio´ elProblemadeTranslocacio´ndeMasas[14],
+control de Markov, programacio´n semi-infinita y al proble-
+elcualconsisteenminimizareltrabajodetranslocacio´ndel
+madetransferenciademasas,entreotrosesquemasparael
+movimientodeunadistribucio´ndemasainicialaunadistri-
+ProblemadeTransferenciadeMasashansidoestudiadospor
+bucio´ndemasafinal.ParasuestudioKantorovichconsidero´
+BenamouyBrenier[6],Caffarelli[8],Benamou[5]yGuittet
+espaciosme´tricoscompactos,conjuntosdeBorelyunafun-
+[10].RecientementeporBocs[7]yMe´rigot[18].
+cio´ndecostononegativa.Posteriormente,en1948observo´
+quesienelProblemadeTranslocacio´nseconsiderabaala
+1. El Problema de Transferencia de
+funcio´n de costo como la distancia, este resultaba una ge-
+neralizacio´ndelProblemadeMonge[15],desdeentoncesa Masas de Monge-Kantorovich
+esteproblemaseconocecomoelProblemadeTransferencia SeanX yY dosespaciosme´tricoscompactos,conσ−a´lge-
+deMasasdeMonge-Kantorovich.E´steesunproblemamuy
+brasdeBorelB(X)yB(Y)respectivamente,consideremos
+conocido en diferentes a´reas como: Probabilidad, Ana´lisis adema´s una funcio´n medible definida en c:X ×Y →R,
+Funcional,Geometr´ıaDiferencial,Estad´ıstica,Econom´ıa,Sis- tomemos medidas de probabilidad ν en X y ν en Y, y
+1 2
+temaDina´micos,Computacio´n[20].Entrelasaplicaciones una medida de probabilidad µ en X ×Y, denotamos por
+ma´simportantesquetieneelProblemadeTransferenciade Π µ yΠ µ lasmarginalesoproyeccionesdeµ enX yY,
+1 2
+Masaspodemosmencionaralame´tricadeKantorovich[20],
+respectivamente. Entonces el problema de transferencia de
+enlosu´ltimosan˜oslame´tricasehaempleadopararegistrode
+masasMTesta´ definidopor
+ima´genes[11]ycontrolderadioterapiadeca´ncer[12].
+(cid:90)
+Lame´tricadeKantorovichtambie´nhasidoempleadapa-
+MT: Minimizar (cid:104)µ,c(cid:105):= cdµ, (1)
+racompararima´genes[13],aunaimagendigitalizadasele
+puedeasociarunafuncio´ndedistribucio´ndeprobabilidady
+sujetoa:
+estaasuvezunamedidadeprobabilidad.Porlotanto,para
+compararima´genesserequieredeuname´tricaprobabil´ıstica,
+Π µ =ν , Π µ =ν , µ ≥0. (2)
+sinembargo,calcularnume´ricamenteestame´tricanohasido 1 1 2 2
+150 Implementacio´ndeunEsquemadeAproximacio´nparaelProblemadeTransferenciadeMasas
+Consurespectivoproblemadual Ver[9]
+ConsideremosX =Y =[0,1],adema´s(X,Y)y(Z,W)
+(cid:90) (cid:90) dosparejasduales,talqueX =M([0,1]×[0,1]),Y =C([0,1]×
+MT∗: Maximizar f 1 dν 1 + f 2 dν 2 [0,1]),Z =(M([0,1])×M([0,1]))yW =(C([0,1])×C([0,1])),
+Y
+dondeM([0,1])eselespaciovectorialdelasmedidassigna-
+sujetoa:
+dasen[0,1],yC([0,1])eselespaciodefuncionescontinuas
+en[0,1].
+f (x)+f (y)≤c(x,y), (3) DenotamosM + ([0,1])elconopositivodefinidocomo
+1 2
+donde f 1 :X →Ry f 2 :Y →R. M + ([0,1]):={µ ∈M([0,1])|µ ≥0},
+Ver[16].
+Diremosqueµ esunasolucio´nfactibleparaelproblema y
+MTsisatisfacelasrestricciones(1),adema´ssedicequeel M 1 ([0,1]):={µ ∈M([0,1]) + |µ([0,1])=1},
+programaesconsistentesitienealmenosunasolucio´nfactible.
+lafamiliademedidasdeprobabilidad.
+El programa es soluble si existe una solucio´n factible que
+Como[0,1]esunespaciome´tricocompacto,X eseldual
+alcanzasuvaloro´ptimo.Enlaliteraturaunadelashipo´tesis
+topolo´gico de Y, as´ı M ([0,1]×[0,1]) es secuncialmente
+requeridasparaqueelproblemaseasolubleeslapresentado 1
+compactoenlatopolog´ıade´bilσ−(X,Y),locualimplica
+acontinuacio´n.
+que la Suposicio´n 1 se cumple. Adema´s, el espacio W =
+Suposicio´n1 (a) ElprogramaPesconsistente. C([0,1])×C([0,1])esseparable.
+(b) ElprogramaPtieneunasolucio´nfactiblex con Sea W ∞ un subconjunto denso numerable de Y, y sea
+0
+{W }unasucesio´ncrecientedeconjuntosfinitostalW ↑W .
+(cid:104)x ,c(cid:105)>0y,ma´sau´n,elconjunto k k ∞
+0
+Paracadak,consideremoslaagregacio´n
+X :={x∈X |(cid:104)x,c(cid:105)≤(cid:104)x ,c(cid:105)}
+0 + 0
+(cid:90)
+esde´bilmente,secuencialmentecompacto. MT(W ): Minimizar (cid:104)µ,c(cid:105):= cdµ,
+k
+Ver[16]. sujetoa:
+Decimosquenohayaberturadedualidad,sielvalordel
+(cid:104)(π µ,π µ)−(ν ,ν ),w (cid:105)=0 (4)
+1 2 1 2 k
+programaprimalyelvalordelprogramadualcoinciden.Al-
+gunosejemplos,dondesecumpleestacondicio´nsepueden ∀w k :=(wk i , wk j )∈W k , y µ ∈M + ([0,1]×[0,1].
+veren[1].
+Ahora,lasrestriccionesdeigualdadsera´nrelajadasade-
+Teorema1 SilaSuposicio´n1secumple,entonces sigualdades.Sea{ε k }unasucesio´ndenu´merospositivostal
+queε ↓0.Entoncesparacadak=1,2,...consideramosel
+k
+(a) Pesunprogramasoluble. siguienteproblemaenprogramacio´nlinealinfinita
+(b) Nohayaberturadedualidad.
+Ver[16]. MT(W ,ε ): Minimizar (cid:104)µ,c(cid:105),
+k k
+sujetoa:
+2. Esquema de Aproximacio´n
+|(cid:104)(π µ,π µ)−(ν ,ν ),w (cid:105)|≤ε (5)
+1 2 1 2 k k
+Elesquemamostradoacontinuacio´nesunaaplicacio´ndel ∀w ∈W , y µ ∈M ([0,1]×[0,1].
+k k +
+propuestoen[16],elcualconsistedetrespasos:elprimeronos
+asegurara´ queelprogramadeprogramacio´nlinealinfinitaes Finalmente,seaX∞unsubconjuntodensonumerablede
++
+soluble,despue´sseagreganrestriccionesfinitasalprogramay X + :=M([0,1]×[0,1]) + ,y{X n }unasucesio´ncrecientede
+serelajanlasrestricciones,finalmentesediscretizalavariable conjuntosfinitos,talqueX n ↑X + ∞.Consideremoselprograma
+deintere´s. enprogramacio´nlinealfinita
+Denotemoscomosp(E)alespaciogeneradoporelcon-
+juntoE,elcualesunsubconjuntodeunespaciovectorial,y
+coc(E)eselconoconvexogeneradoporE. MT :=MT(X n ,W k ,ε k ): Minimizar ∑n∗λ x (cid:104)µ,c(cid:105),
+Requerimoslosiguiente: x
+sujetoa:
+Suposicio´n2
+(cid:12)(cid:68)n∗ (cid:69)(cid:12)
+(cid:12) ∑(π µ,π µ)−(ν ,ν ),w (cid:12)≤ε (6)
+(a) X yY sonespaciosme´tricoscompactos. (cid:12) 1 2 1 2 k (cid:12) k
+x
+∀w ∈W , µ ∈M ([0,1]×[0,1] y n∗:=|X |.
+(b) Lafuncio´nc(x,y)escontinua. k k + n
+Implementacio´ndeunEsquemadeAproximacio´nparaelProblemadeTransferenciadeMasas 151
+Acontinuacio´nserealizara´ laimplementacio´ndelesque- Ejemplo1 Consideremoslafuncio´ndecostoc(a,b)=ab(a−
+ma.SeaX =Y =[0,1]conlatopolog´ıausual,yν ,ν =m b),enelProblemadeTransferenciadeMasas,quesabe-
+1 2
+lamediadeLebesque.Consideremoslassiguientesparejas 9
+mostienevaloro´ptimo− ≈−0,03515625ytiene
+duales(X,Y)y(Z,W). 256
+soporteenelconjunto
+Adema´s,consideremoslossiguientesconjuntos
+W
+k
+= (cid:110) (Bk
+i
+,Bk
+j
+) (cid:12) (cid:12)Bk
+i,j
+∈{Bk
+0
+,Bk
+1
+,...,Bk
+k
+} (cid:111) , Graph(g)={(t,g(t))|t∈[0,1]},
+con
+dondeBk i denotaunpolinomiodeBersteindegradok,elcual   1 4 +t if 0≤t< 3 4 ,
+satisface g(t)=
+(cid:18) k (cid:19) (cid:90) 1 1  1−t if 3 4 ≤t≤1,
+Bk(x)= xi(1−x)k−i y Bk(x)dx=
+i i 0 i k+1 yconsideramosεn= 1 √ .
+k 10n−2 k
+∞
+(cid:91)
+Luego,W := sp{W }esde´bilmentedensoenC([0,1])× Variamos el para´metro k desde 2 a 9, y para cada k
+∞ k
+k=1 movemos a n desde 4 a 9. De lo cual obtuvimos los
+C([0,1]),ylacardinalidaddelconjuntoW k es(k+1)2. siguientesresultados,loscualesindicanloserroresde
+Paracadan∈N,consideremoselsiguienteconjunto aproximacio´ndelesquemaalvaloro´ptimodelprogra-
+ma.
+(cid:8) (cid:9)
+X = δ (·) ,
+n (a,b) n=4 n=5
+k=2 0,017380600 0,0176040700
+demedidasdeDirac,paraayben
+k=3 0,011528550 0,0108222500
+(cid:26) j (cid:27) k=4 0,004827046 0,0026806390
+2n
+con j=0,...,2n , k=5 0,004427841 0,0020611890
+k=6 0,003936912 0,0019239340
+Entonces,X∞:=∪∞ coc(X )esde´bilmentedensoen k=7 0,002954513 0,0009981689
++ n=1 n
+X , y la cardinalidad del conjunto X es 22n. Entonces, el k=8 0,002777794 0,0009861557
++ n
+esquemadeaproximacio´nes k=9 0,002719209 0,0009109657
+n=6 n=7
+k=2 0,01890373000 0,019683010
+MT : Minimizar ∑ λ c , (7)
+(a,b) (a,b) k=3 0,01139729000 0,011758030
+(a,b)
+k=4 0,00247768000 0,002455755
+sujetoa:
+k=5 0,00186624500 0,001852651
+∑ λ (cid:104) Bk(a)+Bk(b) (cid:105) ≤ 2 +ε, (8) k=6 0,00183779700 0,001826349
+(a,b) i j k+1 k=7 0,00081778760 0,0008197949
+(a,b)
+(cid:104) (cid:105) 2
+k=8 0,00098615560 0,0008114302
+∑ λ (a,b) Bk i (b)+Bk j (b) ≥ k+1 +ε, (9) k=9 0,00069509160 0,0006775082
+(a,b)
+n=8 n=9
+donde c =c(a,b).
+(a,b)
+k=2 0,0200872300 0,0202909700
+Teorema2 SilaSuposicio´n1secumple,entoncesparacada k=3 0,0119523300 0,0120497000
+kexisten(k)talqueparacadan≥n(k),MT(X ,W ,ε) k=4 0,0024566440 0,0024564520
+n k
+essolubley k=5 0,0018515210 0,0018524900
+k=6 0,0018300650 0,0018318280
+minMT(W ,ε )≤minMT(X ,W ,ε )≤minMT+ε . k=7 0,0008302774 0,0008358459
+k k n k k k
+k=8 0,0008186530 0,0008224715
+k=9 0,0006760644 0,0006761160
+Ver[16].
+De los resultados obtenidos por el esquema, por ca-
+dafilasemuestraelmejorresultado,yporcadacon-
+3. Ejemplos Nume´ricos
+junto de datos se muestra el mejor resultado del es-
+Acontinuacio´nmostramosejemplosaloscualesleapli- quema, el cual se obtuvo en k=9 y n=8. Con un
+camoselesquema,estosfuerontomadosde[2],deloscuales errorde0,0006760644ycuyovalordeaproximacio´n
+seconoceelvaloro´ptimodelprograma. es−0,03583231.
+152 Implementacio´ndeunEsquemadeAproximacio´nparaelProblemadeTransferenciadeMasas
+n=7 n=8
+k=2 0,00001513965 0,0000037998070
+k=3 0,00001513964 0,0000037998060
+k=4 0,00001513962 0,0000037998065
+k=5 0,00001513961 0,0000038160170
+k=6 0,00001516782 0,0000038280000
+k=7 0,00001528733 0,0000038113430
+k=8 0,00001529179 0,0000038179810
+k=9 0,00001516529 0,0000038174210
+k=10 0,00001527237 0,0000038147230
+n=9 n=10
+k=2 0,0000009518125 0,0000002381858
+k=3 0,0000009518126 0,0000002384716
+k=4 0,0000009523129 0,0000002382365
+k=5 0,0000009530545 0,0000002384016
+k=6 0,0000009520117 0,0000002383636
+k=7 0,0000009528386 0,0000002383380
+k=8 0,0000009531212 0,0000002384158
+Figura1.Soportedelasolucio´no´ptimaaMT conk=9y
+k=9 0,0000009537839 0,0000002384849
+n=8.
+k=10 0,0000009540616 0,0000002384848
+Delosresultadosobtenidosporelesquema,porcada
+LaFigura1muestralagra´ficadelsoportesolucio´ny
+filasemuestraelmejorresultado,yporcadaconjunto
+lospuntosrojosmuestranelsoporteparalamedidade
+de datos se muestra el mejor resultado del esquema,
+aproximacio´nenelcason=8yk=9.
+el cual se obtuvo en k=10 y n=10. Con un error
+de0,0000002384848ycuyovalordeaproximacio´nes
+Ejemplo2 Consideremoslafuncio´ndecostoc(a,b)=(2b−
+a−1)2(2b−a)2,enelProblemadeTransferenciade
+0,0000002384848.
+Masas,sabemosquetienevaloro´ptimo0ysoporteen
+elconjunto
+Graph(h)={(t,h(t))|t∈[0,1]},
+conh:[0,1]×[0,1]talque
+ 1t si 0≤t≤1,
+ 2
+h(t)=
+ 1t+1 si 0≤t≤1,
+2 2
+1
+yconsideramosεn= √ .
+k 10(n−2) k
+Variamos el para´metro k desde 2 a 10, y para cada k
+movemosandesde4a10.Delocualobtuvimoslos
+siguientesresultados,loscualesindicanloserroresde
+aproximacio´ndelesquemaalvaloro´ptimodelprogra-
+ma.
+n=5 n=6
+k=2 0,0002363199 0,00006007883
+k=3 0,0002362977 0,00006007827 Figura2.Soportedelasolucio´no´ptimaaMT conk=10y
+k=4 0,0002362751 0,00006007770 n=10.
+k=5 0,0002362534 0,00006007715
+k=6 0,0002362328 0,00006007662
+LaFigura2muestralagra´ficadelsoportesolucio´ny
+k=7 0,0002362132 0,00006007975
+lospuntosrojosmuestranelsoporteparalamedidade
+k=8 0,0002361945 0,00006007689
+aproximacio´nenelcason=10yk=10.
+k=9 0,0002361778 0,00006007810
+k=10 0,0002361673 0,00006007816
+Implementacio´ndeunEsquemadeAproximacio´nparaelProblemadeTransferenciadeMasas 153
+4. Conclusiones alimitofstrictlyconvexcosts.JournaloftheAmerican
+MathematicalSociety15,pp.1-26.
+Laaplicacio´ndelesquemapropuestoen[16],alProblema
+deTransferenciadeMasasdeMonge-Kantorovicheseficien-
+[9] Gabriel J.R., Gonza´lez-Herna´ndez J. and Lo´pez-
+te,yeltiempocomputacionalescorto,perolosvaloresdelos
+Mart´ınezR.R.(2010):Numericalaproximationstothe
+para´metrosesta´nlimitadosporlacapacidaddelacomputado-
+masstransferproblemoncompactspaces.IMA.J.Nu-
+ra,yaqueelnu´merodevariablesesmuygrande,inclusosi
+mer.Anal.,30(4),pp.1121-1136.
+nyksonpequen˜os.Unacontinuacio´naesteesquemaser´ıa
+aplicar unameta-heur´ıstica conel fin de reducirel nu´mero
+[10] Guittet,K.(2003):Onthetime-continuousmasstrans-
+devariablesyas´ıaumentarlosvaloresdenykparaobtener
+port problem and its approximation by augmented la-
+unamejoraproximacio´n.Adema´sdeencontrarunordende
+grangiantechniques.SIAMJournalonNumericalAnaly-
+convergencia.
+sis41,pp.382-399.
+[11] HakerS.,ZhuL.andTannenbaumA.(2004):Optimal
+Referencias
+masstransportforregistrationandwarping.Int.J.Com-
+[1] Anderson,E.,NashP.(1987):Linearprogrammingin put.Vis.,63,pp.225-240.
+infinite-dimensionalspaces:theoryandapplications.Wi-
+ley,Chichester. [12] Hanin, L., Rachev, S.T. and Yakolev A.Y. (1993): On
+optimalcontrolofcancerradiotherapyfornonhomoge-
+[2] Anderson,E.,Philpott,A.(1984):Dualityandanalgo-
+neouscellpopulations.Adv.Appl.Prob.,25,pp.1-23.
+rithmforaclassofcontinuoustransportationproblems.
+MathematicsofOperationsResearch,9,222-231.
+[13] KaijsetT.(1998):ComputingtheKantorovichdistance
+[3] Avendan˜o-GarridoM.L.,GabrielJ.R.,Quintana-Torres forimages.Int.J.Comput.Vis.,9,pp.173-191.
+L.,andGonza´lez-Herna´ndezJ.(2017):AnApproxima-
+tionSchemefortheKantorovich-RubisteinProblemon [14] KantorovichL.V.(2006):Onthetranslocationofmasses.
+Compact Spaces. International Journal of Numerical J.Math.Sci.(N.Y.),133(4),pp.1383.
+MethodsandApplications,16,pp107-125.
+[15] Kantorovich L.V. (2006): On a problem of Monge. J.
+[4] Avendan˜o-GarridoM.L.,GabrielJ.R.,Quintana-Torres
+Math.Sci.(N.Y.),133(4),pp.1383.
+L.,andMezura-MontesE.(2016):Ametaheuristicfora
+numericalapproximationtothemasstransferproblem.
+[16] Herna´ndez-Lerma,O.,Lasserre,J.(1998):Approxima-
+Journal of Optimization Int. J. Appl. Math Computa.
+tionschemesforinfinitelinearprograms.SIAMJournal
+Sci.,26(4),pp.757-766.
+onOptimization8,pp.973-988.
+[5] Benamou, J.(2003): Numerical resolution of an unba-
+lancedmasstransportproblem.ESAIMMathematical [17] Levin,V.L.(1975):Onthemasstransferproblem.Soviet
+ModellingandNumericalAnalysis37,pp.851-868. Math.Dokl.16(5),pp.1349-1353.
+[6] Benamou,J.,Brenier,Y.:(2000):Acomputationalfluid [18] Me´rigot,Q.(2011):Amultiscaleapproachtooptimal
+mechanics solution to the Monge-Kantorovich mass transport. Computer Graphics Forum 30(5), pp.1583-
+transferproblem.NumerischeMathematik84,pp.375- 1592.
+393.
+[19] Monge,G.(1781):Me´moiresurlathe´oriedesde´blaiset
+[7] Bosc,D.(2010):Numericalapproximationofoptimal
+re´mblais.Me´m.Acad.Sci.,Paris.
+transportmaps.SSRN.
+[8] Caffarelli,L.,Feldman,M.,McCann,R.(2002):Cons- [20] Rachev,S.T.andRu¨schendorf,L.(1998):MassTrans-
+tructingoptimalmapsforMonge’stransportproblemas portationProblemsVol.1and2,Springer,NewYork.

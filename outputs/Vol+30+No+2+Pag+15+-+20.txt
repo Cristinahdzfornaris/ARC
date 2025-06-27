@@ -1,0 +1,558 @@
+CienciasMatema´ticas,Vol.30,No.2,Pag.15-20,2016
+Recibido06-2016
+Una solucio´n de la ecuacio´n no estacionaria de la
+conduccio´n del calor empleando Elementos Finitos
+con FreeFeem++.
+A solution to the unsteady heat equation using
+Finite Element Method with FreeFeem++.
+Yoan Quintana Herrera1, Luis Sorinas Morales1
+Abstract Inthisworktheunsteadyheatequationin2Dissolved. Initiallythetimederivativewasdiscretized
+usingafinitedifferencescheme. Thenthewell-posedconditionisprovedusingthevariationalformulation. For
+each time step the approximate solution is obtained by means of the Finite Element Method. The numerical
+computationisdonebyanimplementationinFreeFem++.
+Keywords
+UnsteadyHeatEquation,FiniteDifferenceMethod,FiniteElementTheory,FreeFem++software
+1FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,LaHabana,Cuba,yoanq81@gmail.com,maxblu33@gmail.com
+1. Introduction P1∗):
+∂u
+Theheatconductionproblemdescribesthetemperature −∇.(k∇u(t,x,y))= f(x,y),inΩ×(0,T) (1)
+distributioninagivendomainoveratimeinterval,usingthe ∂t
+u=g ,inΓ (2)
+thermalconductivityofthematerialandbyagivenheatsource. 1 D
+Thetemperaturefieldsareusedforinstancefortheevaluation ∂ n u=g 2 ,inΓ N (3)
+ofthethermalstresseswhichhaveanimportantroleinthe u(0,x,y)=u0(x,y),inΩ (4)
+mechanicalbehaviorofmanystructuralsystems,particularly,
+whereurepresentsthetemperaturefield,∇denotesdegra-
+forthosesubjectedtoseverenon-isothermalenvironments.
+dient operator, k is the thermal conductivity, f is the heat
+Theheatequationmodelcanbealsousedbymodeling
+source,(2)isaboundaryconditionofDirichlettypeand(3)
+diffusion processes in image analysis, in porous media, in
+isaboundaryconditionofNeumanntype,∂ denotestheex-
+n
+financial mathematics amoung others. In this work we are
+terior normal derivative, that is ∂ u=∇u·n where n is the
+n
+dealingwiththesolutionoftheunsteadyheatequation,star-
+unitnormalvectoronpointsofΓpointingalwaysoutwards.
+tingbyintroducingthephysicalproblem,afterthatthefinite
+Intheliterature(1)isthewell-knownunsteadyheatequation
+differencebackwardEulerdiscretizationschemeisusedto
+Inahomogeneousmediumkdoesnotdependontheposition
+discretize the time derivative. In Section 2 we find the va-
+inspace.Inourproblemwetakek=1forsimplicity.Then
+riational formulation for the semidiscretized equation. The
+equation(1)lookslike
+well-posed condition is also proved in this section. In Sec-
+tion3wepresentthefiniteelementapproximationproblem ∂u
+−∆u(t,x,y)= f(x,y),inΩ×(0,T), (5)
+applyingtheGalerkinapproach.Inthelastsectionweusethe ∂t
+softwareFreeFem++tocomputethesolutiontothisproblem.
+where∆denotesdeLaplaceoperator,∆:=
+∂2
++
+∂2
+.Itisas-
+IntheAppendixAtherequirednotationsandmathematical ∂x2 ∂y2
+resourcesareestablished. sumedthat f ∈L2(Ω),g 1 ∈H2 1 (Γ D ),g∈L2(Γ N ).Functional
+spacesaredefinedinappendix.Thisequationwillbeintegra-
+ted in time until a steady (equilibrium) solution is reached.
+1.1 Descriptionoftheproblem Ourtaskistosolveequation(5)withcondtions(2)-(4).
+LetΩ⊂R2 bearectangleΩ=[0,L ]×[0,L ].Itsboun-
+x y 1.2 Time discretization with backward Euler sche-
+daryisaclosedpolygonalcurveΓ,dividedintotwoparts(Γ ,
+D me
+Γ ),whichcoverthewholeΓanddonotoverlap.
+N Toobtainthevariationalformulation,wefirsteliminate
+Weconsidertheinitial-boundaryvalueproblem(Problem the temporal dependence. We choose the backward Euler
+Unasolucio´ndelaecuacio´nnoestacionariadelaconduccio´ndelcalorempleandoElementosFinitoscon
+16 FreeFeem++.
+(cid:90) (cid:90)
+finitedifferenceschemetoapproximatethetimederivativein u vdΩ+δ ∇u ·∇vdΩ (13)
+n+1 n n+1
+adiscretetimepoint(n+1).Weproceedasfollows:firstwe Ω Ω
+(cid:90) (cid:90) (cid:90)
+takeapartitionintime, = u vdΩ+ δ f vdΩ+δ (∂ u )vdΓ, (14)
+n n n+1 n n n+1
+Ω Ω Γ
+0=t <t <t <···<t <···
+0 1 2 n (cid:90) (cid:90)
+u vdΩ+δ ∇u ·∇vdΩ (15)
+n+1 n n+1
+where the time-step is δ n =t n+1 −t n . We denote by u n the Ω Ω
+(cid:90) (cid:90)
+aproximationofu(t ,x,y).Discretizingthederivativerespect
+n = u vdΩ+ δ f vdΩ (16)
+n n n+1
+tothetimeleadsustothefollowingapproximation: Ω Ω
+(cid:90) (cid:90)
++δ (∂ u )vdΓ +δ (∂ u )vdΓ . (17)
+∂u(t ,x,y) u −u u −u n n n+1 D n n n+1 N
+n+1 ≈ n+1 n = n+1 n . ΓD ΓN
+∂t t −t δ
+n+1 n n WehaveexpressedtheintegraloverΓasthesumofthe
+Correspondingly, we look at the heat equation in timet n+1 integralsoverthetwosub-boundaries,withtheDirichletand
+andimposethebackwardEulerapproximation: theNeumannboundaryconditions.Substitutingtheboundary
+condition,∂ u =g onΓ .
+u −u n n+1 2,n+1 N
+n+1 n
+−∆u = f . (6)
+n+1 n+1
+δ
+n (cid:90) (cid:90) (cid:90)
+u vdΩ+δ ∇u ·∇vdΩ= u vdΩ+
+n+1 n n+1 n
+withthecorrespondingboundaryconditions Ω Ω Ω
+(cid:90) (cid:90) (cid:90)
+u n+1 =g 1,n+1 ,inΓ D , (7) δ n f n+1 vdΩ+δ n (∂ n u n+1 )vdΓ D +δ n g 2,n+1 vdΓ N
+Ω ΓD ΓN
+∂ n u n+1 =g 2,n+1 ,inΓ N (8) Ifweimposev=0onΓ
+D
+,then
+(cid:90) (cid:90) (cid:90)
+where u vdΩ+δ ∇u ·∇vdΩ= u vdΩ+ (18)
+n+1 n n+1 n
+Ω Ω Ω
+f = f(·,t ):Ω→R (cid:90) (cid:90)
+n n δ f vdΩ+δ g vdΓ
+n n+1 n 2,n+1 N
+g =g (·,t ):Γ →R Ω ΓN
+1,n 1 n D
+We use (18) to convert original problem (P1) to weak
+g 2,n =g 2 (·,t n ):Γ N →R formulation(P2).
+Findu ∈H1(Ω)suchthat
+u(·,t )≈u :Ω→R n+1
+n n
+u =g onΓ
+n+1 1,n+1 D
+Itmeansthatforeachtimestepwehavetosolvefollowing
+Theequation(18)istrueforv∈V =H1 (Ω)
+equation 0 ΓD
+u n+1 −δ n ∆u n+1 =δ n f n+1 +u n . (9) where f ∈L2(Ω), g
+1
+∈H2 1 (Γ
+D
+), g∈L2(Γ
+N
+),(seetheappen-
+InordertoapplytheFiniteElementMethod(FEM)thevaria- dix).
+tionalformulationfor(6)hastobefound,whatwillbedone Note how the two boundary conditions appear in very
+inthenextsection. differentplacesofthisformulation:
+TheDirichletconditionisimposedapartfromthefor-
+2. Variational formulation mulationandinvolvesimposingithomogeneouslyto
+the test function v. It is called an essential boundary
+Inthissectionthefirstthingistogetthevariationalfor-
+condition.
+mulationfor(6)andthesecondoneistodemostratethatthis
+formulationiswellposed.Multiplyingthedifferentialequa- TheNeumannconditionappearsinsidetheformulation.
+tion(6)byanarbitrarytestfunctionv∈V (thespaceV will Itiscalledanaturalboundarycondition.
+0 0
+bespicifiedbelow)andintegratingoverΩ,wefind We have two spaces V =H1(Ω), V =H1 ; a bilinear
+0 ΓD
+(cid:90) u −u (cid:90) (cid:90) forma(.,.)givenby
+n+1 n
+vdΩ− ∆u vdΩ= f vdΩ. (10)
+n+1 n+1
+Ω δ n Ω Ω
+(cid:90) (cid:90)
+a(u,v)= u vdΩ+δ ∇u ·∇vdΩ,
+Consider Green’s Theorem applied to the second com- n+1 n n+1
+Ω Ω
+ponent on the left side of (10) and multiplying by δ , we
+n andalinearl(.)
+obtain:
+(cid:90) (cid:90) (cid:90)
+(cid:90) (cid:90) l(v)= u vdΩ+δ f vdΩ+δ g vdΓ .
+n n n+1 n 2,n+1 N
+(u n+1 −u n )vdΩ+δ n ∇u n+1 ·∇vdΩ (11) Ω Ω ΓN
+Ω Ω
+(cid:90) (cid:90) The problem admits then this simple form (P3). Find
+= δ n f n+1 vdΩ+δ n (∂ n u n+1 )vdΓ, (12) u n+1 ∈V suchthat
+Ω Γ
+Unasolucio´ndelaecuacio´nnoestacionariadelaconduccio´ndelcalorempleandoElementosFinitoscon
+FreeFeem++. 17
+u =g onΓ Then
+n+1 1,n+1 D
+a(u ,v)=l(v),∀v∈V
+n+1 0 |a(u,v)|≤||u|| ||v|| +δ ||u|| ||v||
+H1 H1 n H1 H1
+By the Trace Theorem 1 (see appendix), exists R 0 g∈ ≤(1+δ n )||u|| H1 ||v|| H1 ,
+H1(Ω) such that γ (R g)=g. If we define u=u −R g
+0 0 (cid:101) n+1 0
+andsubstituteina(·,·),thenweobtain: where(1+δ n )≥0,becauseδ n =∆t>0.
+2. Weneedtoprovethata(·,·)iscoercive.
+(cid:90) (cid:90)
+a(u,v)= (u+R g)vdΩ+δ (∇u+∇R g)·∇vdΩ (19)
+(cid:101) 0 n (cid:101) 0 (cid:90) (cid:90)
+Ω Ω a(u,u)= uudΩ+δ ∇u·∇udΩ
+(cid:90) (cid:90) n
+= uvdΩ+δ ∇u·∇vdΩ (20) Ω Ω
+(cid:101) n (cid:101)
+(cid:90) Ω (cid:90) Ω a(u,u)=||u||2 L2 +δ n ||∇u||2 L2 ,
++
+Ω
+R 0 gvdΩ+δ n
+Ω
+∇R 0 g·∇vdΩ (21) a(u,u)≥C (cid:0) ||u||2 L2 +||∇u||2 L2 (cid:1) , C=m´ın(1,δ n )
+=a(u,v)+a(R g,v) (22) a(u,u)≥C||u||2
+(cid:101) 0 H1
+FromproblemP3weobtainthefollowingproblemdenoted
+3. toprovethatl(·)−a(R g,·)isalinearcontinuousform.
+byP4. 0
+Findu∈V suchthat, Inpoint1wedemonstratethata(·,·)iscontinuous,then
+(cid:101) 0
+weonlyneedtoprovel(·)isacontinuousform:
+a(u,v)=l(v)−a(R g,v),∀v∈V
+(cid:101) 0 0
+(cid:12)(cid:90) (cid:90) (cid:90) (cid:12)
+(cid:12) (cid:12)
+arbi
+B
+tr
+u
+ar
+il
+y
+di
+s
+n
+h
+g
+ap
+a
+e
+l
+c
+if
+a
+t
+n
+in
+t
+g
+ur
+R
+n
+0
+o
+g
+ut
+of
+to
+a
+b
+b
+e
+o
+p
+u
+r
+n
+o
+d
+b
+a
+le
+ry
+ma
+fu
+ti
+n
+c
+c
+.
+t
+S
+io
+u
+n
+ch
+w
+t
+i
+a
+t
+s
+h
+k
+a
+i
+n
+s
+|l(v)|=(cid:12) (cid:12) Ω unvdΩ+δn Ω f n+1 vdΩ+δn ΓN g 2,n+1 vdΓN(cid:12) (cid:12)
+simplerinthecontextofanumericalapproximation,where (cid:12)(cid:90) (cid:12) (cid:12)(cid:90) (cid:12) (cid:12)(cid:90) (cid:12)
+(cid:12) (cid:12) (cid:12) (cid:12) (cid:12) (cid:12)
+one generally builds a lifting of an approximation of the g
+≤(cid:12)
+(cid:12) Ω
+unvdΩ(cid:12)
+(cid:12)
++δn(cid:12)
+(cid:12) Ω
+f
+n+1
+vdΩ(cid:12)
+(cid:12)
++δn(cid:12)
+(cid:12) ΓN
+g
+2,n+1
+vdΓN(cid:12)
+(cid:12)
+function.Inthepracticewedon’tconstructaliftingfunction,
+duetothetriangularinequality.
+weuseFreeFem++becauseitcomputethesolutionwithout
+Similarlytopoint1ofthissectionwehave
+defining the lifting function. In fact, it consider the Robin
+condition (cid:16) (cid:17)
+∇u·n+
+1
+u=
+1
+g
+|l(v)|≤ ||un||
+L2(Ω)
+||v||
+L2(Ω)
++δn||f
+n+1
+||
+L2(Ω)
+||v||
+L2(Ω)
++
+ε ε (cid:124) (cid:123)(cid:122) (cid:125)
+∗
+with a very small value for ε. When ε is very small, the (cid:16) (cid:17)
+correspondingsolutionisveryclosetothesolutionwithu=
+δn||g
+2,n+1
+||
+L2(ΓN)
+||v||
+L2(ΓN)
+g. In this case, when dealing with a Robin condition, the (cid:124) (cid:123)(cid:122) (cid:125)
+#
+functionalspaceis H1(Ω)andnotH1(Ω).Usingthistrick,
+0
+Freefem++isevenabletoimposeaDirichletconditionwhich
+Wehavethat
+1
+does not belong to H2(∂Ω), i.e. a Dirichlet condition g∈
+L2(∂Ω)wichdoesnothavealiftfunctionR
+0
+g∈H1(Ω).
+∗≤(||u n || H1 ||v|| H1 +δ n ||f n+1 || L2 ||v|| H1 )
+Weonlyusetheliftingfunctionfortheoreticalresults.
+andbytheTraceTheorem
+2.1 Well-poseddemonstration
+InordertoapplytheLax-Milgramtheoremtoproblem (cid:16) (cid:17)
+#≤ δ ||g || C||v|| .
+P4,weneed:
+n 2,n+1 L2(ΓN) H1
+1. toprovethata(·,·)isabilinearcontinuousform:
+Then
+(cid:12)(cid:90) (cid:90) (cid:12)
+|a(u,v)|= (cid:12) (cid:12) uvdΩ+δ n ∇u·∇vdΩ (cid:12) (cid:12), |l(v)|≤||un|| H1 ||v|| H1 +δn||f n+1 || L2 ||v|| H1 +
+(cid:12) Ω Ω (cid:12) Cδn||g
+2,n+1
+||
+L2(ΓN)
+||v||
+H1
+duetothetriangularinequalitywehavethat (cid:16) (cid:17)
+≤ ||un||
+H1
++δn||f
+n+1
+||
+L2
++Cδn||g
+2,n+1
+||
+L2(ΓN)
+||v||
+H1
+(cid:12)(cid:90) (cid:12) (cid:12) (cid:90) (cid:12)
+(cid:12) (cid:12) (cid:12) (cid:12)
+|a(u,v)|≤(cid:12) uvdΩ(cid:12)+(cid:12)δ
+n
+∇u·∇vdΩ(cid:12).
+(cid:16) (cid:17)
+(cid:12) Ω (cid:12) (cid:12) Ω (cid:12) where ||u || +δ ||f || +Cδ ||g || ≥
+n H1 n n+1 L2 n 2,n+1 L2(ΓN)
+ApplyingtheCauchy-Schwarzinequalityinthetermof 0,becauseδ n ≥0andC≥0.
+theweobtain
+Then appliyng the Lax-Milgram theorem we can say that
+|a(u,v)|≤||u|| ||v|| +δ ||∇u|| ||∇v|| . problemP4admitsauniquesolution.
+L2(Ω) L2(Ω) n L2(Ω) L2(Ω)
+Unasolucio´ndelaecuacio´nnoestacionariadelaconduccio´ndelcalorempleandoElementosFinitoscon
+18 FreeFeem++.
+3. Finite Element Approximation andmovetotheright-handsidewhatwealreadyknow(theDi-
+richletdata),weobtainalinearsystemwithasmanyequations
+InordertoappliedtheGalerkinmethodtothegivenvaria-
+asunknows,see[1].
+tionalformulation:
+Thesystencanbeeasilywrittenintermsofthestiffness
+Findu∈V suchthat
+(cid:101) 0 matrix
+(cid:90)
+W = ∇φ ·∇φ
+a(u,v)=l(v)−a(R g,v),∀v∈V (23) ij j i
+(cid:101) 0 0 Ω
+andthemassmatrix
+afinitedimensionspacesV0hastobechosen,suchthat,
+h (cid:90)
+M = φ ·φ,
+ij j i
+V0⊂V Ω
+h
+usingthevector
+andweobtainthefollowingdiscreteproblem: (cid:90) (cid:90)
+b = fφ + g φ, i∈Ind,
+(cid:40) i i 1 i
+Findu ∈V0suchthat Ω ΓN
+h h
+a(u ,v )=l(v ), ∀v ∈V0 toobtain
+h h h h h
+∑ (W +cM )u =b − ∑ (W +cM )g (x ), i∈Ind.
+ij ij j i ij ij 0 j
+InourcasewehaveV =H1 andusetheP1finiteelement j∈Ind j∈Dir
+ΓD
+method.
+Tofindthesolutionu wedefinethespaces 4. FreeFem++ Implementation
+h
+V ={u ∈V,u ∈P1} To solve numerically the unsteady heat equation, after
+h h |Ki
+discretizingintime,wehavetodothefollowingforeachtime
+and step::
+VΓD ={v ∈V |v =0, onΓ }.
+h h h h D 1. Tomeshthedomain(definetheborder+mesh).
+In the case of P1 finite elements, the nodes a are the 2. Towritethevariationalformulation(VF).
+i
+pointsx whichdefinethemesh. 3. Toshowtheresult.
+i
+Ifwedenoteφ theshapefunctionassociatedtothenode
+i 1. FreemFem++definebordercommands,wetakeA,B,C
+x.Thusthefunctionsφ aredefinedas
+i i forNeumannconditionsandDforDirichletcondition:
+φ(x)=δ , ∀i,j∈{0,...,N+1} borderA(t=0,1){x=t; y=0; label=1;};
+i i ij
+borderB(t=0,1){x=1; y=t; label=2;};
+WiththesefunctionsanelementofV canbewrittenas
+h
+borderC(t=0,1){x=1−t; y=1; label=3;};
+u h = ∑ u j φ j + ∑ u j φ j , u j =u h (x j ) borderD(t=0,1){x=0; y=1−t; label=4;};
+j∈Ind j∈Dir
+FreeFem++meshcommands:
+andanelementofVΓD isoftheform meshTh=buildmesh(A(nx)+B(ny)+C(nx)+
+h
+D(ny));
+v = ∑ v φ ,
+h j j
+j∈Ind 2. TowritetheVFweneed:
+wherewewillemploytwolists,DirandInd,tonumbersepa- - Todefinethefiniteelementspace.Forthisweuse
+ratelyDirichletandnon-Dirichlet(independent/free)nodes. fespaceVh(Th,P1);
+ThenwesubstitutethediscreteDirichletconditioninthe - Todefinetheproblemtobesolve
+expressionofu h solve heatstep(uh,vh)
+int2d(Th)(uh∗vh/dt+dx(uh)∗dx(vh)+
+u = ∑ u φ + ∑ g (x )φ .
+h j j 0 j j dy(uh)∗dy(vh))−
+j∈Ind j∈Dir
+int2d(Th)(u0∗vh/dt+f∗vh)+
+Finally, if we substitute this expression in the discrete boundary conditions;
+variationalequation
+wherewehavetosolveiterativelythisdiscreteequation.
+(cid:90) (cid:90) (cid:90) (cid:90)
+∇u ·∇φ +c u φ = fφ + g φ, Boundaryconditionsare:
+h i h i i 1 i
+Ω Ω Ω ΓN
+Dirichletcondition
+applyinglinearity, u=g:+on(BorderName,u=g)
+Neumanncondition
+∇u = ∑ u ∇φ + ∑ g (x )∇φ
+h j j 0 j j ∂ u=g:−int1d(Th)(g∗w)
+n
+j∈Ind j∈Dir
+Unasolucio´ndelaecuacio´nnoestacionariadelaconduccio´ndelcalorempleandoElementosFinitoscon
+FreeFeem++. 19
+[4] A.ErnandJ.L.Guermond. Theoryandpracticeoffinite
+elements. Springer,2004.
+[5] F.Hecht. FreeFem++. LaboratoireJacques-LouisLions,
+Universite´ PierreetMarieCurie,Paris,thirdedition.
+[6] S.Martin. Anintroductiontothefiniteelementmethod.
+January2016.
+Mathematics definitions and results
+1
+ThespaceH2(Ω)isdefinebelowintheTraceTheorem,
+(Theorem1).
+ThespaceL2(Ω)isdefineas:
+(cid:26) (cid:90) (cid:27)
+Figura1.FreeFem++mesh L2(Ω)= f :Ω→Rmedible/ |f|2dΩ<+∞ ,
+Ω
+withthenorm
+(cid:18)(cid:90) (cid:19)1/2
+||f|| = |f|2dΩ ,∀f ∈L2(Ω)
+L2
+Ω
+Green’sfirstidentity
+(cid:90) (cid:90) (cid:90)
+(∆u)vdΩ+ ∇u·∇vdΩ= (∂ u)vdΓ
+n
+Ω Ω Γ
+Theorem1 (Trace),
+LetΩbeanLipschitz-continuousboundedopensubsetof
+Rd.Themapping
+γ :C∞(cid:0) Ω (cid:1) →L2(∂Ω)
+0
+u(cid:44)→γ (u)=u|
+Figura2.AtimeiterationsolutionwithFreeFem++ 0 ∂Ω
+iscontinuouslyextendedtotheSobolevspaceH1(Ω).This
+operator,stilldenotedγ ,iscalledthetraceoperator.Besides,
+0
+Acknowledgments
+thetraceoperatorγ :H1(Ω)→L2(∂(Ω))isnotsur-
+0
+We like to thank those people who have made possible jectiveontoL2(∂(Ω));
+theculminationofthiscourse.ParticularlyProfessorsAnge-
+la Leo´n and Se´bastien Martin for their guidance, patience,
+theimageofH1(Ω)bythetraceoperatorisafractional
+1
+motivation,andimmenseknowledge. SobolevspacecalledH2(Ω)whichisanHilbertspace
+ifendowedwiththenorm
+Bibliography ||v|| = ´ınf ||u||
+1 H1(Ω)
+H2(Ω) u∈H1(Ω),γ0(u)=v
+[1] FranciscoJavierSayas. Agentleintroductiontothefinite
+elementmethod. Technicalreport,UniversityofDelawa- Asaconsequence,thereexistsabounded(orcontinuous)
+re,DepartmentofMathematicalSciences,2008. linear operator R
+0
+:H 1 2(Ω)→H1(Ω), called lift operator,
+whichsatisfies
+[2] A. Quarteroni. Numerical Models for Differential Pro-
+blems. Springer,2009. γ ◦R =Id
+0 0 ∂Ω
+[3] I.Danaila,P.Joly,S.M.KaberandM.Postel. AnIntro- Theorem2 (Lax-Milgram),[6]
+ductiontoScientificComputing.TwelveComputational Let be H an Hilbert space, a(·,·) a bilinear form on H
+ProjectsSolvedwithMATLAB. Springer,2007. andLalinearformonH.Weassumethat:
+Unasolucio´ndelaecuacio´nnoestacionariadelaconduccio´ndelcalorempleandoElementosFinitoscon
+20 FreeFeem++.
+1. a(·,·)iscontinuos: Problem(P)admitsauniquesolution.Moreover,
+∀u,v∈H, |a(u,v)|≤||a||||u|| ||v||
+H H
+2. a(·,·)iscoercive
+||L||
+||u|| ≤
+∃α >0,∀u∈H,a(u,v)≥α||u||2 H H α
+3. Liscontinuous:
+∀u∈H, |L(u)|≤||L||||u||
+H Ifaissymmetric,thenuistheuniqueminimizeronH ofthe
+functional
+Weconsidertheabstractproblem
+(cid:40)
+Findu∈Hsuchthat
+(P)
+1
+a(u,v)=L(v),∀v∈H
+J(v)= a(u,v)−L(v)
+2

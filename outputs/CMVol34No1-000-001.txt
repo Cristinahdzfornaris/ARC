@@ -1,0 +1,57 @@
+EDITORIAL
+Modelos Matemáticos en el análisis de la
+COVID-19
+Según el filósofo y matemático francés de los siglos XVI y XVII Rene Descartes,
+“La Matemática es la ciencia del orden y la medida, de bellas cadenas de
+razonamientos, todos sencillos y fáciles” y para el filósofo, matemático y escritor
+inglés de los siglos XIX y XX, Bertrand Russell, “Las matemáticas poseen no sólo
+la verdad, sino cierta belleza suprema". En definitiva, la matemática es la Ciencia
+por excelencia, pues a través de su lenguaje se pueden representar todos los
+fenómenos y procesos de cualquier esfera de la sociedad y la vida. Sus herramientas
+teóricas, técnicas y algoritmos permiten dar solución, al menos de forma aproximada
+a los modelos que simulan la dinámica de funcionamiento de dichos fenómenos y
+procesos.
+Modelar matemáticamente no es más que idealizar la realidad con el propósito de
+transcribirla con sus códigos y formalismos a relaciones, ecuaciones, variables,
+parámetros, proposiciones, para resolver sustanciales problemas económicos,
+industriales y sociales. En particular, la utilidad de la modelación matemática para
+describir la dinámica de transmisión de enfermedades y otros procesos de la
+Biología, la Medicina y en general, de las llamadas Ciencias de la Vida, ha dado
+lugar a una ciencia multidisciplinaria que muchos autores denominan Biomatemática
+con un desarrollo vertiginoso a partir de la segunda mitad del siglo XX con el auge
+de la computación y a la que pertenecen la Bioestadística, la Biometría y la
+Bioinformática, entre otras ciencias.
+En este marco, los modelos matemáticos aplicados a la Epidemiología han
+demostrado ser una útil herramienta para estudiar, analizar, simular y predecir el
+comportamiento de enfermedades contagiosas; brindando información y
+herramientas para el control de las mismas. En el caso de la pandemia de la Covid-
+19 producida por el virus SarsCov2, sin precedentes en la era moderna, desde los
+primeros casos reportados en la ciudad de Wuhan, China, la comunidad científica
+cubana se puso en función de aportar sus conocimientos para apoyar al Sistema de
+Salud Pública y al Gobierno de nuestro país para la contención y control de la misma.
+La presente edición de la Revista Ciencias Matemáticas de la Universidad de La
+Habana, auspiciada por la Sociedad Cubana de Matemática y Computación, compila
+los trabajos de muchos de los prestigiosos profesores e investigadores de nuestro país
+relacionados con sus estudios y resultados sobre esta terrible pandemia que azota al
+i
+Ciencias Matemáticas, Vol. 34, No. 1, 2020 Pag. i-ii
+EDITORIAL
+mundo y a Cuba. En varios de ellos participan estudiantes de las carreras de
+Licenciatura en Matemática y Licenciatura en Ciencias de la Computación que
+forman parte de los grupos científicos estudiantiles de nuestras instituciones.
+Los artículos que aquí se presentan emplean modelos epidemiológicos poblacionales
+definidos por ecuaciones diferenciales con percepción de riesgo y acciones de
+control, con manejo de poblaciones hospitalizadas y en cuarentena, con análisis
+espacial; modelos fenomenológicos, sistemas dinámicos, modelos de predicción
+mecano-estadística, con interacción virus-sistema inmune, con procesos de
+ramificación, con técnicas de aprendizaje automático, con uso de técnicas de redes,
+de inteligencia artificial, entre otros.
+Todos los resultados expuestos constituyeron un encomiable aporte para las
+autoridades de Salud y del Gobierno en el empeño por diseñar e implementar una
+estrategia que permitiera contener la expansión de la pandemia sin que colapsaran
+los servicios de salud, demostrando también el necesario vínculo entre la academia
+y la sociedad.
+Miriam Nicado García, Rectora de la Universidad de La Habana.
+Aymée Marrero Severo, Profesora de la Universidad de La Habana.
+ii
+Ciencias Matemáticas, Vol. 34, No. 1, 2020 Pag. i-ii

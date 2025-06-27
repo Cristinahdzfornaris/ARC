@@ -1,0 +1,517 @@
+CienciasMatemáticas,Vol.31,No.2,Pag.109-116, 2017
+Recibido03-2017
+Bu´squeda Local Iterada aplicada al VRP con
+Recogida y Entrega Mixta
+Iterated Local Search applied to VRP with Mixed
+Pickup and Delivery
+Alina Ferna´ndez Arias1*, Sira Allende Alonso1
+Resumen ElProblemadeEnrutamientodeVeh´ıculosconRecogidayEntregaMixta(VRPSPD)consisteen
+disen˜ar un conjunto disjunto de rutas tales que se logre la integracio´n o´ptima de los servicios de recogida y
+entregademercanc´ıaaunconjuntodeclientes.Cadaclientesrequiereso´lounodelosservicios.Esteproblema
+pertenecealaclaseNP-duro.Enestetrabajoseproponeunaestrategiabasadasenlametaheur´ısticaBu´squeda
+LocalIterada.Losresultadosobtenidossoncompetitivosconlosreportadosenlaliteratura.
+Abstract TheVehicleRoutingProblemwithMixedPickupandDeliveryconsistsinthedesignofadisjointroute
+set in which the demands of a given sets of clients are satisfied by optimally combining pickup and delivery
+services. Each client requires only one service. This is an NP-hard problem. In this work is it proposed in
+strategyinspiredintheIteratedLocalSearchmetaheuristic. Theobtainedresultsarecompetitivewithcurrent
+state-of-the-artsolutions.
+PalabrasClave
+enrutamientodeveh´ıculos—recogidayentregamixta—bu´squedalocaliterada
+1FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,LaHabana,Cuba,aly@matcom.uh.cu,sira@matcom.uh.cu
+*AutorparaCorrespondencia
+Introduccio´n uno-a-uno Cadaproductotieneunorigenyundestinodeter-
+minado.
+Elproblemadeenrutamientodeveh´ıculos(VRP)perte-
+Elproblemaqueseabordaenestetrabajoperteneceala
+neceala´readelaoptimizacio´ncombinatoria.Desdequefue
+claseuno-a-muchos-a-uno.Asuvez,dentrodeestegrupo
+presentadoen1959porDantzigyRamserharecibidomuch´ısi-
+puedenseestablecenvariascategor´ıas(Salhietal.[15]):
+maatencio´nporlacomunidadcient´ıficayempresarial,tanto
+porsucomplejidadcomoporsusmu´ltiplesaplicaciones.El CargasdeRetorno (VRPB).Losclientesseseparanendos
+VRP ha servido de punto de partida a un gran nu´mero de subconjuntos:losclientesdeentregaylosclientesde
+problemascuyoobjetivocentralesdisen˜arunsistemaderutas recogida.Encadarutasedebenatenderprimeroalos
+quepermitasatisfacerlasdemandasdeunconjuntodeclien- clientesdeentregayluegoalosderecogida.Siunclien-
+tes,considerandoadema´sotroselementoscomoladuracio´n terequiereambosserviciossetratacomodosclientes
+ma´xima de las rutas, horarios de atencio´n, flotas compues- independientes.Estarestriccio´nseconocecomoprece-
+tas por veh´ıculos con diferentes caracter´ısticas, demandas denciadeclientesyesta´ justificadaporqueenmuchos
+estoca´sticas, servicios de recogida y entrega de mercanc´ıa, casoselreacomododelacargadentrodelveh´ıculoes
+entreotrosaspectos. unprocesocomplejoy/oimpracticable[12].
+Losproblemasderecogidayentregatienecomoobjetivo RecogidayEntregaMixta (VRPMPD).Losclientesrequie-
+disen˜arunsistemaderutasparatransportarobjetosy/operso- renexclusivamenteunodelosdosservicios.Adiferen-
+nasentreunorigenyundestino.Berbegliaetal.[4]proponen ciadelcasoanterior,larecogidaylaentregapueden
+lasiguienteclasificacio´natendiendoalmovimientodebienes realizarsedeformaintercaladaenlaruta,esdecir,no
+y/opersonasentrelosor´ıgenesylosdestinos. seconsideralarestriccio´ndeprecedenciadeclientes.
+muchos-a-muchos Cada ve´rtice puede funcionar como un Enesteproblemasecentraelpresentetrabajo.
+origeny/oundestinoparacualquierproducto. RecogidayEntregaSimulta´nea (VRPSPD). Los clientes
+uno-a-muchos-a-uno Losproductosdestinadosalosclien- requieren ambos servicios y deben ser satisfechos si-
+tesinicialmenteseencuentraneneldepo´sitoylosque multa´neamente.
+se encuentran en los clientes deben transportarse de Sibienesciertoqueelproblemadelreacomododecarga
+regresoaldepo´sito. puedesercostosocuandoseatiendendeformasimulta´neao
+110 Bu´squedaLocalIteradaaplicadaalVRPconRecogidayEntregaMixta
+mixtalosserviciosderecogidayentregademercanc´ıa,esto describenunatransformacio´nalVRPMPDdelconjuntode
+es posible en muchos casos, en particular si el veh´ıculo ha pruebapropuestoporDethloff[6]paraelparaelproblema
+sidoespecialmentedisen˜adoparaestaactividad[15]. conrecogidayentregasimulta´nea.
+AdiferenciadeotrasvariantesdelVRP,elproblemacon Enestetrabajoseproponeunaestrategiadesolucio´nins-
+recogida y entrega mixta no ha sido muy abordado en la piradaenlametaheur´ısticaBu´squedaLocalIterada[10](ILS).
+literatura.Salhietal.[15]describenunalgoritmodeinsercio´n La ILS es una extensio´n de la bu´squeda local en la que se
+aplicado al problema con cargas de retornos, al mixto y al incluyenmecanismosderupturaquepermitanrecomenzarla
+simulta´neo. La idea general se basa en determinar para los bu´squedadesdeunpuntoqueconservepartedelaestructura
+clientes que au´n faltan por enrutar, si la mejor insercio´n es delo´ptimolocalpreviamenteobtenido.
+uno a uno, por parejas o por grupos. Para la validacio´n de Elrestodeestedocumentoseencuentraorganizadoco-
+sus algoritmos los autores proponen un conjunto de datos mo sigue: en 1 se describe formalmente el VRPMPD. La
+adaptado del problema con restricciones de capacidad. La estrategiapropuestasepresentaen2ylosresultadosobteni-
+cantidaddeclientesenlasinstanciasvar´ıade50a199. dosseanalizanen3.Finalmenteaparecenlasconclusionesy
+Dadalacomplejidadasociadaalaconstruccio´ndesolu- referenciasbibliogra´ficas.
+cionesfactiblesparaelVRPMPD,Nagyetal.[11]introducen
+unadivisio´nenelconceptodefactibilidad:lafactibilidadde´bil 1. Formalizacio´n del Problema con
+ylafactibilidadfuerte.Haciendousodeestasdosideasdesa- Recogida y Entrega Mixta
+rrollanunaestrategiaencuatrofasesqueconsisteenconstruir
+unasolucio´nde´bilfactible,mejorarlasinperderfactibilidad Elproblemadeenrutamientodeveh´ıculosconrecogida
+de´bil,transformarlaenunasolucio´nfuertefactiblequetam- yentregamixta(VRPMPD)consisteendisen˜arunsistema
+bie´nesmejoradasinperderlafactibilidadfuerte.Enlasfases derutasconelmenorcostoposiblequepermitansatisfacerla
+demejoraempleandiferentesestrategiasdevecindaddefor- demandadeunconjuntodeclientesenunu´nicavisita,garan-
+macombinada.Describenlaextensio´ndeesteprocedimiento tizandoquelamercanc´ıatransportadanoexcedalacapacidad
+alproblemaconmu´ltiplesdepo´sitos. delveh´ıculoenningu´npuntodelrecorrido.Lacaracter´ıstica
+Wassan et al. [16] estudia la relacio´n de este problema fundamentaldeesteproblemaesquecadaclienterequiereex-
+conelderecogidayentregasimulta´nea.Adema´s,paraelpro- clusivamenteunodelosdosservicios.ElVRPMPDpertenece
+blemamixto,proponenunaextensio´ndelabu´squedatabu´ en
+alaclaseNP-duro[6]ycuandolaflotaposeeunnu´mero
+laquedina´micamenteajustanlalongituddelalistatabu´ en
+limitadodeveh´ıculosencontrarunasolucio´nfactibletambie´n
+esNP-duro[3].
+dependenciadelafrecuenciaconqueserepitanlassolucio-
+nesdurantelaexploracio´ndelespaciodebu´squeda.Parala UnainstanciadelVRPMPDsecaracterizaporlossiguien-
+construccio´ndelassolucionesinicialesutilizanunenfoque tesdatos:
+geome´trico en el que se agrupan los clientes de acuerdo al Depo´sitocentral,denotadopor0
+a´nguloqueformaconeldepo´sito.
+ConjuntodeclientesI={1,...,n},I+=I∪{0}
+Paracadaclientei∈Iseconocelademandadeentrega
+En[9]Junetal.secombinaunaestrategiademejoraite-
+d olademandaderecogida p,segu´nserequiera.
+rativaconsiderandomu´ltiplesvecindadesconunmecanismo i i
+Costodeviajec entrecadapardeelementosi,j∈I+
+derupturainspiradoenlapropuestadeRopkeetal.[14],que ij
+Flotadeveh´ıculosK={1,...,m},cadaunodecapaci-
+sebasaenlaeliminacio´nyreinsercio´ndeclientesenlaso-
+dadQ
+lucio´n.Paralaconstruccio´ndelasolucio´ninicialutilizanun
+EnelVRPMPDlosrecorridoscomienzanyterminanen
+enfoquegeome´tricoqueconsisteenagruparlosclientesen
+el depo´sito central, donde se carga toda la mercanc´ıa para
+dependenciadelosa´ngulosqueseformanentrecadacliente
+entregar en los clientes y una vez finalizado el trayecto se
+yeldepo´sito.
+descarga toda la mercanc´ıa recogida. Cada veh´ıculo puede
+Ai et al. [1] y Goksal et al. [7] emplean del me´todo de
+realizaralosumounviaje.Unarutaesunasecuenciaordena-
+optimizacio´nporenjambredepart´ıculasparaesteproblema.
+dadeelementosdeI+asociadaaunveh´ıculoenespec´ıfico,se
+En [1] se propone una codificacio´n en nu´meros reales y se
+denotapor[R,k]=[(r =0,r ,...,r,r =0),k].Elcosto
+adaptanlasideasdePongchairerksetal.[13]deaprendizaje 0 1 l l+1
+de[R,k]eslasumadeloscostosdetodoslosarcospresentes
+social,esdecir,alactualizarlainformacio´ndecadapart´ıcula
+enR,sedenotaporC([R,k])
+se tienen en cuenta la mejor solucio´n encontrada hasta el
+Unasolucio´nesunconjuntoderutasdenotadopors=
+momento,lamejorsolucio´nenlavecindadyelvecinoma´s
+{[R ,k ],...,[R ,k ]}.Elcostodessecalculasegu´nlaex-
+cercano. 1 1 m m
+presio´n(1).
+En[7]secodificanlassolucionescomounapermutacio´n m
+de los clientes. Las nuevas posiciones de las part´ıculas se C(s)=∑C([R i ,k i ]) (1)
+obtienen aplicando operadores de mutacio´n y cruzamiento. i=1
+Incluyen una estrategia probabil´ıstica para la seleccio´n de La expresio´n (2) representa el objetivo del VRPMPD,
+unsubconjuntodesolucionesquesonmejoradasempleando dondeΘeselconjuntodetodaslassolucionesfactiblesdel
+unabu´squedaporentornosvariablesdescendentes.Adema´s problema.
+Bu´squedaLocalIteradaaplicadaalVRPconRecogidayEntregaMixta 111
+enlaestrategiapropuestaseincluyeenlafuncio´ndecostouna
+m´ınC(s) (2) penalizacio´nasociadaalanofactibilidaddelasrutasporexce-
+s∈Θ
+sodecarga.Enloadelante,elcostodeunasolucio´nsecalcula
+Entodasolucio´ns∈Θcadaclientesevisitaexactamente
+porlaexpresio´n(5),dondeQeslacapacidaddelveh´ıculo,
+unavezylacarganoexcedealacapacidaddelveh´ıculoque
+C([R,k]) el costo de la ruta (expresio´n (1)), L([R,k],j) la
+i i
+realizalarutaenningu´npuntodelrecorrido.
+carga encadapuntodelrecorrido(expresio´n(3)), P([R,k])
+lafuncio´ndepenalizacio´n(expresio´n(4))yµ unaconstante
+2. Estrategia de Solucio´n positiva.
+Enestetrabajoseproponeunaestrategiadesolucio´nins-
+pirada en la Bu´squeda Local Iterada (ILS) [10]. La ILS es j l
+unme´tododemejoraiterativacuyaideacentralconsisteen L([R,k],j) = ∑p ri + ∑ d ri ∀j=0,...,l+1 (3)
+reiniciarlabu´squedadesdeotropuntoquegaranticeunde- i=1 i=j+1
+terminadoniveldealeatoriedadconrelacio´nalo´ptimolocal l+1
+P([R,k]) = ∑ma´x{0,L([R,k],j)−Q} (4)
+previamenteencontrado.Lacalidaddelasolucio´nobtenida
+j=0
+dependetantodelacapacidaddemejoradelprocedimientode
+m
+bu´squedalocalempleadoas´ıcomodelapotenciadelme´todo C¯(s) = ∑C([R,k])+µP([R,k]) (5)
+i i i i
+derupturaparaencontrarunbuenpuntoderecomienzo.En
+i=1
+estetrabajosedefinencuatroestrategiasderuptura,dosins-
+piradasenelmodelodeRopkeetal.[14]ylasdosrestantes 2.1 Me´todosdeRuptura
+basadasencambiosenelentorno.Conelobjetivodediversi- Acontinuacio´nsedescribenlosme´todosderupturaem-
+ficarlabu´squeda,encadaiteracio´nseaplicanporseparado pleados.
+cadaunodelosme´todosderupturaalasolucio´nactual.Las Inversio´n SeaRunaruta.Dadosdospuntosaleatoriosi,j,
+solucionesobtenidassonmejorasempleandounaestrategia seinviertelasecuenciadeclientescomprendidosentre
+debu´squedalocalysecontinualabu´squedadesdeelpunto estospuntos.Esteme´todoseaplicaacadarutaconpro-
+conmenorevaluacio´ndelafuncio´nobjetivo. babilidad0.5.EnelVRPMPD,dadaslasfluctuaciones
+El Algoritmo 1 ilustra los principales pasos de este en- decarga,alinvertirunfragmentodelasrutassepudiera
+foque, donde s
+0
+representa la solucio´n inicial, s∗ la mejor mejorarlafactibilidad.E´steeselme´tododemenorren-
+solucio´nencontrada,LSelprocedimientodebu´squedalocal dimientoentretodoslospropuestospuesloscambios
+empleado,H elconjuntodeme´todosderupturayJelnu´mero solamenteafectanalasrutasporseparado.
+deiteracionestotales. Intercambioc´ıcliclo Sea s=[R ,R ,...,R ] una solucio´n.
+1 2 m
+Dado un entero z, se selecciona una secuencia de z
+Algoritmo1Bu´squedaLocalIteradaconRupturaMu´ltiple
+clientes de la R y se mueve hacia R , de R a R y
+1 2 2 3
+(MILS)
+as´ısucesivamente,terminandoconelmovimientode
+1: LS(s 0 )→s, s→s∗, j=1 R m aR 1 .Encadamovimientoelvalordezseescoge
+2: while j≤Jdo aleatoriamenteentre1y3.ElAlgoritmo2ilustralos
+3: forall Shk r ∈H do pasosprincipalesdeesteprocedimiento.Valeresaltar
+4: s¯ r =Shk r (s) queaunqueelIntercambioC´ıclicopudieraconsiderarse
+5: sˆ r =LS(s¯ r ) unafuncio´ndevecindad,noformapartedelasusadas
+6: endfor enestetrabajo.
+7: s=m´ın r∈{1,...,|H|} sˆ r RupturaAleatoria Seeliminanel20%delosclientesdela
+8: if smejorques∗then solucio´nyseinsertanenposicionesaleatorias.
+9:
+s→s∗
+Destruir-Reparar Seeliminarel20%delosclientesdela
+10: endif solucio´nyseinsertansecuencialmenteenlaposicio´n
+11: j= j+1 queseobtengaelmenorincrementoenlafuncio´nobje-
+12: endwhile tivo.
+13: return s∗ Lasdosestrategiasdeeliminacio´n-insercio´nesta´ninspi-
+radasenlapropuestadeRopkeetal.[14].En[14]para
+Valeresaltarquelospasosdel3al6correspondientesal lareinsercio´ndelosclientesseempleanmecanismos
+bloquederupturasonindependientesentres´ı,luegopudieran ma´ssofisticadosquerequierenunmayoresfuerzode
+implementarseenparaleloparaacelerareltiempodeco´mputo co´mputo.
+requeridoporelalgoritmo.
+Teniendoencuentaqueenestetrabajoseabordaunpro- 2.2 Bu´squedaLocal
+blemademinimizacio´n,sedicequeunasolucio´ns esmejor En este trabajo se emplea una Bu´squeda por Entornos
+1
+ques sielcostodes esmejorqueeldes .Atendiendoala Variables Descendentes (VND por sus siglas en ingle´s) [8]
+2 1 2
+complejidadasociadaalaobtencio´ndesolucionesfactibles, comome´tododebu´squedalocal.Apesardeserunaestrategia
+112 Bu´squedaLocalIteradaaplicadaalVRPconRecogidayEntregaMixta
+Algoritmo2IntercambioC´ıcliclo las reportadas en la literatura para este y otros problemas
+1: for i=1tomdo relacionados.
+2: Seleccionarzaleatoriamenteentre1y3 VecindadesIntra-Ruta
+3: Seleccionar aleatoriamente una secuencia l iz ∈R i de Lasvecindadesintra-ruta,comosunombreindica,consis-
+longitudz tenenpermutacionesdeclientesdentrodelamismaruta.
+4: R i =R i \{l iz } Mueve Mueveunclienter i ∈Rdeposicio´ni,hacialaposi-
+5: ifi<mthen cio´n j,i(cid:54)= j.
+6: R i+1 =R i+1 ∪{l iz } Intercambia Intercambialasposicionesdedosclientesr i ,r j
+7: else dentrodelamismarutaR.
+8: R 1 =R 1 ∪{l iz } 2Opt SeaR=[r 1 ,...,r i ,r i+1 ,...,r j ,r j+1 ,...,r l ]unarutadel
+9: endif VRPPD.Seeliminanlosarcos(r i ,r i+1 )y(r j ,r j+1 )yse
+10: endfor reconectanlosfragmentosresultantesadicionandolos
+11: return s arcos(r i ,r j )y(r i+1 ,r j+1 ).Estoimplicaqueseinvierte
+elsentidodelasecuenciadeclientesr →r .
+j i+1
+VecindadesInter-Ruta
+quetienema´sde20an˜osenlosu´ltimostiempossereportan Lasvecindadesinter-rutarealizanmovimientosqueinclu-
+numerososalgoritmosbasadosenesteprocedimiento.En[9] yenama´sdeunarutaalavez.
+sereportaunejemplodeaplicacio´ndeunavariantedeesta Mueve Mueve un cliente r
+i
+∈R
+1
+hacia la posicio´n j de la
+metaheur´ısticaalVRPMPD. rutaR .
+2
+VNDsebasaenelcambiosistema´ticodeentornosdentro 2Mueve Muevedosclientesconsecutivosr i ,r i+1 ∈R 1 hacia
+deunabu´squedalocal.Lospasosprincipalesseilustranenel lasposiciones j,j+1delarutaR 2 .
+Algoritmo3,dondeN ,v=1,...,V representaelconjuntode LadiferenciaentreMuevey2Mueveesqueenelpri-
+v
+vecindadesys lasolucio´ninicial. mercasosemueveunclienteyenelsegundounarco.
+0
+Intercambia Intercambiaunclienter ∈R conh ∈R .
+i 1 j 2
+Algoritmo3Bu´squedaporEntornosVariablesDescendientes 2-1Intercambia Intercambiadosclientesconsecutivosr i ,r i+1
+(VND) delarutaR 1 conh j ∈R 2 .
+1: v=1, s 0 →s 2-2Intercambia Intercambiadosclientesconsecutivosr i ,r i+1
+2: while v≤V do delarutaR 1 condosconsecutivosh j ,h j+1 ∈R 2 .
+3: Seleccionars¯∈N v (s) Al igual que ocurre con 2Mueve, las vecindades 2-
+4: if C¯(s¯)<C¯(s)then 1Intercambiay2-2Intercambiasonrelativasalmovi-
+5: s¯→s, v=1 mientodearcos.
+6: else Cruza SeanR 1 =[r 1 ,...,r i ,...,r l ]yR 2 =[h 1 ,...,h j ,...,h m ]
+7: v=v+1 dosrutasdelVRPSPD.Sedeterminandospuntosde
+8: endif cruzamiento:ideR 1 y jdeR 2 .SeuneelprincipiodeR 1
+9: endwhile
+conelfinaldeR
+2
+yviceversa,resultandolasrutasR¯
+1
+=
+10: return s [r 1 ,...,r i ,h j+1 ...,h m ]yR¯ 2 =[h 1 ,...,h j ,r i+1 ,...r l ].
+ComoR yR pertenecenalamismasolucio´nnoexis-
+1 2
+tenclientescomunesentreellas,porlocuallasrutasR¯
+1
+Enestetrabajoseemplearontrescriteriosparalaexplora-
+yR¯ notienenningu´npuntodesolapamiento.
+cio´ndelentorno:seaslasolucio´nactualyN lavecindadque 2
+seesta´ analizando,entonces,
+3. Resultados Nume´ricos
+PrimeraMejora (FIporsussiglaseningle´s)s eslaprime-
+f
+ramejorades∈N(s)sieslaprimerasolucio´nencon- Elalgoritmodesarrolladosevalido´ condosconjuntosde
+tradaenelentornoconmenorevaluacio´ndelafuncio´n pruebareportadosenlaliteratura:elconjuntodeSalhiyNagy
+objetivoques. [15]yelconjuntodeDethloff[6].
+MejoraGlobal (BIporsussiglaseningle´s)s eslamejora
+b
+globaldes∈N(s)siparatodasolucio´ns¯∈Nsecumple 3.1 ConjuntodeSalhiyNagy
+queC¯(s
+b
+)≤C¯(s¯).
+ElconjuntodeSalhiyNagy[15]esta´ compuestopor42
+MejoraAleatoria (RI por sus siglas en ingle´s) s r es una problemasqueconsideranentre50y199clientes.Losautores
+mejoraaleatoriades∈N(s)siC(s r )≤C(s). adaptaronlos14problemaspropuestosporChristofidesetal.
+LaPrimeraMejoraylaMejoraGlobalsoncriteriosde [5]paraelproblemadeenrutamientodeveh´ıculosconrestric-
+exploracio´nreportadosenlaliteraturaasociadosaestrategias cionesdecapacidadalVRPMPD.Manteniendoconstantes
+debu´squedalocalconuncara´cterdescendente[8].LaMejora lascoordenadasdelosclientesylosdetallesdelaflota,se
+Aleatoria es un criterio introducido en este trabajo con el dividio´ elconjuntodeclientesendosgrupos:unocondeman-
+objetivodeincluirelementosaleatoriosenlaVND. daderecogidayotrodeentrega.Sedisen˜arontresseriesde
+Lasfuncionesdevecindadutilizadasesta´ninspiradasen problemas.EnlaserieT cada10clientesunosemarco´ como
+Bu´squedaLocalIteradaaplicadaalVRPconRecogidayEntregaMixta 113
+derecogida,enlaserieQcada4yenlaserieH cada2.En Q W[16] A[1] J[9] G[7] MILS
+todos los casos la demanda de entrega o recogida segu´n el 1 498.00 490.00 489.74 489.74 489.74
+tipodecliente,seescogio´ igualalademandadelproblema 2 739.00 739.00 734.93 726.27 737.13
+original.Esteconjuntohasidoampliamenteutilizadoenla 3 766.00 768.00 754.57 747.15 747.15
+literaturaparalacomparacio´ndeestrategiasdesolucio´npara 4 944.00 938.00 915.24 913.63 922.02
+elVRPMPD. 5 1176.00 1174.00 1132.33 1129.37 1146.91
+6 558.00 557.00 555.43 489.74
+3.2 ConjuntodeDethloff 7 908.00 933.00 900.69 739.31
+ElconjuntodeDethloff[6]fueoriginalmentedisen˜ado 8 878.00 890.00 865.50 756.47
+paraelproblemaconrecogidayentregamixta.Constade40 9 1194.00 1214.00 1162.50 923.47
+instanciasde50clientescadaunaquerespondenadiferentes 10 1436.00 1509.00 1406.63 1152.11
+escenariosgeogra´ficos.EnlosproblemasSCAlosclientesse 11 1038.00 964.00 940.26 939.36 940.28
+encuentranuniformementedistribuidosenelplano[0,100]× 12 744.00 733.00 729.25 729.25 732.16
+[0,100],mientrasqueenCONlamitaddelosclientessedistri- 13 1574.00 1570.00 1544.37 942.47
+buyecomoenSCAyelrestoenelplano[100,200]×[100,200]. 14 824.00 825.00 821.75 730.99
+3 3 3 3
+ElescenarioCON secorrespondeconladistribucio´nurbana,
+Tabla2.ResultadosMILSSalhiyNagySerieQ
+dondeunagrancantidaddeclientesseconcentraenlanove-
+napartedela´rea.Setomacomocostodeviajeladistancia
+H W[16] A[1] J[9] G[7] MILS
+euclidianaentrecadapardeve´rtices.Enambosproblemasla
+demandadeentregaparacadacliented esta´ uniformemente 1 468.00 464.00 461.87 465.02 465.02
+i
+distribuidaenelintervalo[0,100].Dadaslascapacidadesde 2 667.00 668.00 660.82 661.39 663.37
+losveh´ıculos,entodoslosproblemaspropuestosporDethloff 3 730.00 701.00 718.81 700.94 701.70
+sedificultalaobtencio´ndesolucionesfactibles. 4 890.00 883.00 833.49 831.04 842.93
+5 1078.00 1044.00 1000.74 997.90 1000.06
+Wassanetal.[16]describenunaadaptacio´ndelconjunto
+6 555.00 557.00 555.43 465.07
+de Dethloff al problema mixto. Manteniendo la ubicacio´n
+7 902.00 943.00 900.12 662.63
+geogra´ficadelosclientesylosdetallesdelaflotadeveh´ıculos,
+8 877.00 899.00 865.50 711.64
+modificanlademandasegu´nlapropuestadeSalhiyNagy[15].
+9 1194.00 1207.00 1158.54 856.38
+Elvalordelademanda,recogidaoentregadependiendodel
+10 1436.00 1499.00 1397.37 1012.53
+servicioquerequieraelcliente,setomaigualalademandade
+11 880.00 830.00 819.44 818.05 818.80
+entregadelproblemaoriginal.Dandolugara120problemas
+12 646.00 635.00 629.98 629.02 629.57
+paraelVRPMPD(40porcadaserie).
+13 1574.00 1565.00 1539.79 824.60
+14 825.00 824.00 821.75 634.16
+3.3 Resultados
+Enlastablas1ala6seresumenlosmejoresresultados
+Tabla3.ResultadosMILSSalhiyNagySerieH
+obtenidosporlaBu´squedaLocalIteradaconRupturaMu´ltiple
+paraambosconjuntosdeprueba.
+Los resultados de Wassan et al. [16] y Ai et al. [1], co-
+T W[16] A[1] J[9] G[7] MILS rrespondientesalascolumnasWyAdelastablas1ala3
+1 520.00 520.00 520.06 520.06 520.06 esta´nredondeadosalvalorentero.Porestarazo´nsemarcaron
+2 789.00 810.00 878.67 782.77 789.24 tambie´ncomomejoressolucionesdelproblema1delaSerie
+3 808.00 827.00 800.83 798.07 803.13 T(tabla1)elrestodelosvaloresobtenidos,lasolucio´ndeAi
+4 1009.00 1014.00 996.42 990.39 993.21 etal.[1]delproblema1delaSerieQ(tabla2)ylasolucio´n
+5 1265.00 1297.00 1246.34 1233.52 1257.26 deAietal.[1]delproblema3delaSerieH(tabla3).
+6 560.00 555.00 555.43 520.06 EnelconjuntodeSalhiyNagyseevaluaron42problemas.
+7 907.00 942.00 903.05 793.13 En4seigualo´ elmejorresultadoreportadoenlaliteraturay
+8 867.00 904.00 865.54 804.43 en21semejoro´estrictamente.Enlos17restanteselpromedio
+9 1204.00 1206.00 1164.86 1000.82 deladiferenciaporcentualconrelacio´nalamejorsolucio´n
+10 1413.00 1501.00 1402.59 1264.96 reportadafueinferiora0.7.Comosepuedeobservarenlas
+11 1101.00 1026.00 990.00 998.86 998.86 tablas1ala3ningunodelosautoresconsultadosalcanzalas
+12 801.00 972.00 787.52 787.52 787.52 mejoressolucionesparatodaslasinstanciasdeesteconjunto.
+13 1575.00 1548.00 1544.37 1000.71 Enestesentidolosresultadosobtenidossoncompetitivoscon
+14 836.00 846.00 826.77 787.52 losdelaliteratura.
+EnelconjuntodeDethloffseevaluaron120problemas.
+Tabla1.ResultadosMILSSalhiyNagySerieT
+En65seigualo´ lamejorsolucio´nreportadaenlaliteraturay
+en18semejoro´estrictamente.Enlas37restanteselpromedio
+114 Bu´squedaLocalIteradaaplicadaalVRPconRecogidayEntregaMixta
+T W[16] G[7] A[2] MILS Q W[16] G[7] A[2] MILS
+SCA30 627.92 604.22 604.22 604.22 SCA30 608.70 591.84 591.84 591.84
+SCA31 662.68 657.99 657.99 657.99 SCA31 678.30 652.32 652.32 652.32
+SCA32 636.57 634.70 634.70 634.70 SCA32 635.45 622.10 622.10 622.10
+SCA33 684.85 651.86 651.86 651.86 SCA33 678.36 644.85 644.85 644.85
+SCA34 666.18 648.82 648.82 648.82 SCA34 667.71 642.04 642.04 642.04
+SCA35 647.49 619.31 619.31 619.31 SCA35 618.01 617.42 617.42 617.42
+SCA36 634.83 624.10 624.10 624.10 SCA36 628.20 601.28 601.28 599.90
+SCA37 647.23 631.41 631.41 631.41 SCA37 623.78 616.84 616.84 616.84
+SCA38 700.52 691.13 691.13 691.13 SCA38 690.50 676.85 676.85 676.85
+SCA39 650.50 642.86 642.86 642.86 SCA39 630.10 628.31 628.31 628.31
+SCA80 911.61 889.40 889.40 889.90 SCA80 804.92 804.93 804.93 813.98
+SCA81 947.00 947.01 947.01 952.51 SCA81 924.52 922.00 922.00 922.00
+SCA82 897.15 897.16 897.16 897.16 SCA82 830.43 830.44 830.44 827.94
+SCA83 922.95 922.96 922.96 922.96 SCA83 852.47 849.00 849.00 851.27
+SCA84 991.49 987.25 987.25 987.25 SCA84 909.57 906.29 906.29 906.29
+SCA85 957.44 957.44 957.44 957.44 SCA85 880.58 880.58 880.58 880.58
+SCA86 916.02 916.03 916.03 916.03 SCA86 820.87 804.21 804.21 804.21
+SCA87 931.48 931.48 931.48 931.48 SCA87 857.97 855.24 855.24 856.03
+SCA88 1005.01 1001.19 1001.19 1001.19 SCA88 927.09 927.10 927.10 927.10
+SCA89 951.14 938.75 938.75 938.75 SCA89 845.21 841.97 841.97 843.13
+CON30 617.79 901.85 901.85 601.85 CON30 622.66 595.54 595.54 595.54
+CON31 538.66 538.66 538.66 538.66 CON31 536.05 529.05 529.05 529.05
+CON32 498.98 498.15 498.15 498.15 CON32 499.40 493.09 493.09 493.09
+CON33 629.77 569.07 569.07 569.07 CON33 567.49 557.18 557.18 556.41
+CON34 603.95 572.52 572.52 572.52 CON34 580.89 571.57 571.57 571.57
+CON35 555.71 549.49 549.49 549.49 CON35 562.89 545.90 545.90 545.90
+CON36 494.11 489.54 489.54 489.54 CON36 486.89 482.69 482.69 482.71
+CON37 573.60 553.95 553.95 553.95 CON37 599.99 541.61 541.61 541.61
+CON38 514.78 509.16 509.16 509.16 CON38 508.61 492.14 492.14 492.14
+CON39 573.52 570.38 570.38 570.38 CON39 563.88 563.89 563.89 563.89
+CON80 809.60 802.83 802.83 802.83 CON80 755.44 754.50 754.50 755.44
+CON81 702.04 682.83 682.83 682.83 CON81 652.47 648.30 648.30 648.30
+CON82 655.97 653.29 653.29 653.48 CON82 596.33 595.64 595.64 597.09
+CON83 740.61 740.62 740.62 740.62 CON83 706.86 685.99 685.99 685.99
+CON84 726.06 720.59 720.59 724.92 CON84 705.37 705.37 705.37 705.37
+CON85 717.21 717.22 717.22 717.12 CON85 671.26 666.17 666.17 666.17
+CON86 651.39 644.75 644.75 644.75 CON86 585.43 584.72 584.72 587.07
+CON87 755.97 755.97 755.97 766.77 CON87 724.57 724.57 724.57 724.57
+CON88 733.04 714.17 714.17 714.17 CON88 652.76 648.54 648.54 648.54
+CON89 763.97 760.96 760.96 762.65 CON89 719.58 714.64 714.64 715.59
+Tabla4.ResultadosMILSDethloffSerieT Tabla5.ResultadosMILSDethloffSerieQ
+Bu´squedaLocalIteradaaplicadaalVRPconRecogidayEntregaMixta 115
+deladiferenciaporcentualconrelacio´nalamejorsolucio´n
+reportadafueinferiora0.6.Aligualqueocurreenelconjunto
+deSalhiyNagy,comosepuedeobservarenlastablas4ala6
+ningunodelosautoresconsultadosalcanzalamejorsolucio´n
+para todas las instancias del conjunto. En este sentido las
+solucionesobtenidassoncompetitivasconlomejorreportado
+H W[16] G[7] A[2] MILS enlaliteratura.
+SCA30 598.27 567.20 567.20 564.54
+SCA31 624.86 610.66 610.66 610.66 4. Conclusiones
+SCA32 611.78 584.52 584.52 584.52
+Enestetrabajosepresento´laestrategiadesolucio´nBu´sque-
+SCA33 650.03 608.15 608.15 609.79
+da Local Iterada con Ruptura Mu´ltiple (MILS) aplicada al
+SCA34 624.77 597.35 597.35 595.43
+ProblemadeEnrutamientodeVeh´ıculosconRecogidayEn-
+SCA35 602.57 585.09 585.09 585.66
+tregaMixta(VRPMPD).
+SCA36 605.00 574.25 574.25 574.25
+ElVRPMPDconsisteendisen˜arunsistemaderutasque
+SCA37 579.64 575.99 575.99 575.99
+permitan satisfacer las demandas de recogida o entrega de
+SCA38 676.44 635.84 635.84 647.52
+unconjuntodeclientes.Enesteproblemalosclientesrequie-
+SCA39 645.69 600.92 600.92 600.92
+renexclusivamenteunodelosdosserviciosquepuedenser
+SCA80 724.51 714.86 714.86 724.52
+atendidosdeformaintercaladaenlasrutas.
+SCA81 787.66 780.77 780.77 787.31
+LaMILSesunme´tododemejoraiterativa.Encadaite-
+SCA82 739.93 740.95 740.95 734.41
+racio´nseaplicanunconjuntodeprocedimientosderupturas
+SCA83 764.52 761.83 761.83 760.65
+a la solucio´n actual. Cada uno de los puntos obtenidos es
+SCA84 819.39 794.69 794.69 800.90
+mejoradoempleandounaBu´squedaporEntornosVariables
+SCA85 788.42 783.04 783.04 784.81
+Descendentes.Elprocesocontinu´aapartirdelasolucio´ncon
+SCA86 731.41 723.21 723.21 733.09
+mejorcosto.Teniendoencuentalacomplejidadasociadaala
+SCA87 735.98 725.79 725.79 734.69
+obtencio´ndesolucionesfactiblesparaelVRPMPDdebido
+SCA88 856.20 850.91 849.20 856.51
+a las fluctuaciones en la carga, en la estrategia disen˜ada se
+SCA89 803.18 771.96 771.96 768.16
+incluyeenlafuncio´nobjetivounapenalizacio´nasociadaala
+CON30 604.65 579.67 579.67 579.87
+nofactibilidaddelasrutasporexcesodecarga.
+CON31 537.88 513.46 513.46 513.46
+El algoritmo propuesto se valido´ con dos conjunto de
+CON32 502.23 482.74 482.74 484.60
+pruebareportadosenlaliteraturaparaesteproblema.Delos
+CON33 549.68 549.68 549.68 548.99
+162problemasanalizados,en69seigualo´ lamejorsolucio´n
+CON34 568.28 551.92 551.92 550.45
+de la literatura y en 39 se mejoro´ estrictamente. En los 54
+CON35 534.22 529.93 529.93 532.29
+restantes,elpromediodeladiferenciaporcentualconrelacio´n
+CON36 480.00 466.61 466.61 466.61
+alomejorreportadofueinferiora0.7.Ente´rminosdecalidad
+CON37 551.45 527.98 527.98 531.52
+desolucio´n,losresultadosobtenidossoncompetitivosconlo
+CON38 500.77 475.77 475.77 475.77
+mejorreportadoenlaliteratura.
+CON39 559.97 536.89 536.89 536.89
+CON80 716.41 697.34 697.34 687.70
+Agradecimientos
+CON81 611.86 610.23 610.23 606.91
+CON82 601.73 590.43 590.43 589.88 LasautorasquierenagradeceralGrupodeOptimizacio´n
+CON83 663.75 653.81 653.81 647.85 delaFacultaddeMatema´ticayComputacio´nporlacolabo-
+CON84 659.69 641.59 641.59 640.43 racio´neneldesarrollodeestetrabajo.AOscarLuisporsu
+CON85 623.46 608.59 608.59 607.52 ayudaeneldisen˜odelosalgoritmos,lavisualizacio´ndelos
+CON86 557.52 546.06 546.06 557.72 resultadosylaejecucio´ndelosexperimentos.
+CON87 682.53 652.70 652.70 667.05
+CON88 596.18 595.60 595.60 595.34
+Referencias
+CON89 631.23 624.03 624.03 627.93
+[1] JAiyVKachitvichyankul. Aparticleswarmoptimiza-
+Tabla6.ResultadosMILSDethloffSerieH tionforthevehicleroutingproblemwithsimultaneous
+pickup and delivery. Computers and Operations Re-
+search,36:1693–1702,2009.
+[2] MAvciySTopalogu. Anadaptivelocalsearchalgo-
+rithmforvehicleroutingproblemwithsimultaneousand
+mixedpickupsanddeliveries. ComputersandIndustrial
+Engineering,83:15–29,2015.
+116 Bu´squedaLocalIteradaaplicadaalVRPconRecogidayEntregaMixta
+[3] RBaldacci,MBatarra,yDVigo. Thevehiclerouting [10] HLourenc¸o,OMartin,yTStu¨tzle. HandbookofMe-
+problem:latestadvancesandnewchallenges,cap´ıtulo taheuristics, cap´ıtulo Iterated Local Search: Franme-
+Routingheterogeneousfleetofvehicles,pp3–28. Sprin- worksandApplications,pp362–397. Springer,second
+ger,2008. edition,2010.
+[4] GBerbeglia,J-FCordeau,yGLaporte. Dynamicpic- [11] GNagyySSalhi. Heuristicalgorithmforsingleand
+kup and delivery problems. Informe te´cnico, Canada multipledepotvehicleroutingproblemswithpickups
+ResearchChairinDistributionManagementandCanada and deliveries. European Journal of Operational Re-
+ResearchChairinLogisticandTransportation,2010. search,162:126–141,2005.
+[12] DPalhazi-Cuervo,PGoos,ySo¨rensenE. Aniteratedlo-
+[5] NChristofides,AMingozzi,yOToth. Combinatorial
+calsearchalgorithmforthevehicleroutingproblemwith
+Optimization,cap´ıtuloThevehicleroutingproblem,pp
+backhauls. EuropeanJournalofOperationalResearch,
+315–338. Wiley,1979.
+237(2):454–464,2014.
+[6] J. Dethloff. Vehicle routing and reverse logistics: the
+[13] P Pongchairerks y V Kachivichyanakul. A non-
+vehicleroutingproblemwithsimultaneousdeliveryand
+homogeneous particle swarm optimization with. En
+pick-up. ORSpektrum,23:79–96,2001.
+InternationalConferenceonSimulationandModeling,
+ppA5–02,2005.
+[7] F.PGoksal,IKaraoglan,yFAltiparmk. Ahybriddis-
+crete particle swarm optimization for vehicle routing [14] SRopkeyDPisinger. Aunifiedheuristicforlargeclass
+problemwithsimultaneouspickupanddelivery. Com- ofvehicleroutingproblemswithbackhauls. European
+putersandIndustrialEngineering,65:39–53,2013. JournalofOperationalResearch,171:750–775,2006.
+[8] PHansen,NMladenovic´,JBrimberg,yJMoreno-Pe´rez. [15] SSalhiyGNagy. Aclusterinsertionheuristicforthe
+HandbookofMetaheuristics,cap´ıtuloVariableNeigh- singleandmultipledepotvehicleroutingproblemwith
+borhood Search, pp 61–86. Springer, second edition, backhauling. TheJournaloftheOperationalResearch
+2010. Society,50(10):1034–1042,1999.
+[16] NWassan,GNagy,ySAhmandi. Aheuristicmethod
+[9] YJunyB-IKim. Newbestsolutionstovrpspdbench- forthevehicleroutingproblemwithmixeddeliverires
+markproblemsbyaperturbationbasedalgorithm. Ex- andpickups. JournalofScheduling,11:149–161,2008.
+pertSystemswithApplications,(39):5641–5648,2012.

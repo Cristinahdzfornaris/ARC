@@ -1,0 +1,570 @@
+CienciasMatema´ticas,Vol.29,No.2,Pag.99-105,2015
+Recibido06-2015
+Metodolog´ıa para asistir la toma de decisiones
+diagno´stica a partir del descubrimiento del
+conocimiento impl´ıcito en Historias Cl´ınicas
+Methodology for diagnostic decision making
+starting from knowledge discovery in clinical
+records
+Ivett E. Fuentes1*, Damny Magdaleno1, Mar´ıa M. Garc´ıa1
+Resumen Laproliferacio´ndeinformacio´ndisponibleenloscentroshospitalariosapartirdelusoextendido
+delashistoriascl´ınicasenformatoelectro´nico(HCE)esarrolladora.Disponerdeinformacio´nsistematizada,
+gestionarladeformaefectivayseguraesesencialparagarantizarmejorespra´cticasdesalud.Lagestio´nde
+informacio´ncl´ınicasevuelvecadavezma´scomplejaydesafiante;debidoaquelosrepositoriosdeHCEson
+heteroge´neos,grandes,diversosydina´micos;loquedificultacompartirlainformacio´nyreutilizarla.Sibienlos
+mediostecnolo´gicosactualesylasnecesidadesimpuestaspormodelosemergentesdegestio´ncl´ınicafavorecen
+el uso extendido de HCE; la llamada Sociedad de la Informacio´n esta´ siendo superada por la necesidad de
+nuevosme´todoscapacesdeprocesarestainformacio´ndeformaeficienteyeficaz.Enestetrabajoseanalizala
+importanciaquetieneelagrupamientodocumentalenlagestio´ndelconocimientodesdelainformacio´ncl´ınica.
+Sepresentaunametodolog´ıaparaelagrupamientodeHCEteniendoencuentalosdiferentesfactoresdela
+HC y los datos recogidos en cada uno de ellos a partir de la anamnesis o interrogatorio y el examen f´ısico;
+conelpropo´sitodeidentificarautoma´ticamentelarelacio´ndelospacientesatrave´sdesuss´ıntomasosignos.
+Seproponeunavarianteparaasistirlatomadedecisionesdiagno´sticadeunnuevopaciente,medianteuna
+clasificacio´n supervisada que utiliza la informacio´n relevante proporcionada por la metodolog´ıa presentada.
+Finalmentelainterpretacio´ndelosresultadosmuestralafactibilidaddelapropuesta.
+Abstract Theproliferationofavailableinformationinhospitalsthatresultfromthewidespreaduseofelectronic
+medical records (EMR) is overwhelming. Having systematized information, manage effectively and safely is
+essentialtoensurebetterhealthpractices. Inthispaper,it’sanalyzedtheimportanceofdocumentclustering
+inDocumentManagementinordertodiscoverhiddenknowledgeintheclinicalinformation. Itisproposeda
+methodologyforautomaticclusteringofEMRtakingintoaccountdifferentfactorsanddatacollectioninphysical
+examination. Itispresentedavariantfortoassistantthediagnosisdecisionmakingofanewpatient,bymeans
+of a supervised classification that it uses the relevant information provided by the presented methodology.
+InterpretationoftheresultsofEMRclusteringshowedthefeasibilityofisproposed.
+PalabrasClave
+Agrupamiento,descubrimientodeconocimiento,HCE,XML,clasificacio´n
+1UniversidadCentral”MartaAbreu”delasVillas,Cuba,ivett@uclv.cu,dmg@uclv.edu.cu,mmgarcia@uclv.edu.cu
+*AutorparaCorrespondencia
+1. Introduccio´n utilizacio´ndelaenormeriquezadedatoseinformacio´nque
+reside en los sistemas hospitalarios en entornos educativos
+NadieponeendudaelpapelquejueganlasnuevasTec-
+y de investigacio´n. Por otro lado, los usos de la HCE cada
+nolog´ıasdelaInformacio´nylasComunicaciones(TIC)en
+d´ıaimpactandemaneracrecienteyfavorableenlainvestiga-
+las organizaciones y esto se hace, lo´gicamente, extensible
+cio´ncl´ınica,enlainvestigacio´nfarmace´utica(d´ıgase:ensayos
+a la Gestio´n Documental (GD), que administra el flujo de
+cl´ınicos,fa´rmaco-epidemiolo´gicos)yenlasinvestigacionesde
+documentoseinformacio´nenlasinstitucionesdesaludim-
+saludpu´blica(d´ıgase:informeselectro´nicosdecasos,basesde
+puestoporelusocrecientedelashistoriascl´ınicasenformato
+datospoblacionales),entreotros[1].Comoconsecuencia,la
+electro´nico. Con ello, surgen nuevas oportunidades para la
+Metodolog´ıaparaasistirlatomadedecisionesdiagno´sticaapartirdeldescubrimientodelconocimientoimpl´ıcitoen
+100 HistoriasCl´ınicas
+creacio´nderepositoriosdeHCEyelvolumendeinformacio´n 2. Informacio´n clinica y agrupamiento
+generadadesdeestos,aumentacontinuayexponencialmente. documental
+Adoptarherramientasdesoportealatomadedecisionesen
+Cadad´ıama´sdatoselectro´nicossonpresentadosdebido
+la pra´ctica cl´ınica es necesario para brindar a los me´dicos
+a: el continuo crecimiento de informacio´n desde mu´ltiples
+mejorescondicionesdetrabajo,contribuiralejerciciodeuna
+esferas y la automatizacio´n de gran parte de los procesos
+medicinabasadaenpruebasyasegurarelusoproductivode
+de la sociedad. Esto se hace extensible a la gestio´n de la
+lainformacio´nalmacena[2,3].Enestesentido,aunquesehan
+informacio´ncl´ınica,debidoaquelamedicinaincorpora,cada
+desarrolladosistemasconelpropo´sitodelograrunara´pida
+vezenmayormedida,elsoportedelaevidenciacl´ınicaenlas
+yeficientemaneradecompartirinformacio´n,laheterogenei-
+decisionesdelapra´cticafacultativahabitual[1].
+daddeelladeterminaqueextraerconocimientorelevantese
+La Historia Cl´ınica (HC) es una fuente de datos funda-
+conviertaenunprocesocomplejoydesafiante[4,5].
+mentalyconstruyeeldocumentoprincipalenunsistemade
+La importancia de la estandarizacio´n y codificacio´n de
+informacio´n hospitalario (HIS). Es una herramienta ba´sica
+datos almacenados en la HCE es reconocido por varios in-
+paralainvestigacio´nbiome´dica,laformacio´ndeestudiantes
+vestigadores[1,4,6,7].Comoconsecuencia,larecopilacio´n
+ylaeducacio´nme´dicacontinuada.As´ıcomo,undocumento
+delainformacio´ncl´ınicadebeirmigrandohaciaelusocon-
+legal que surge del contacto entre el me´dico y el paciente,
+trolado de textos estructurados. En efecto, la propia distri-
+va´lido desde el punto de vista cl´ınico y legal debido a que
+bucio´ndeloselementosdelaHC,hacenposibleconcebirla
+englobainformacio´ndetipoasistencial,preventivoysocial.
+comoundocumentoXML,debidoalaestructurajera´rquica
+Estainformacio´nincluyedatoscl´ınicosrelacionadosconla
+yauto-descriptivaimpl´ıcitaencadaunodelosfactoresque
+situacio´ndelpaciente,datosdesusantecedentespersonales
+lacomponen.Dehecho,HealthLevelSeven(HL7)eselcon-
+y familiares, ha´bitos to´xicos y todo aquello vinculado con
+juntodeesta´ndaresinforma´ticosdesaludma´sdesarrolladoy
+susaludbiopsicosocial;elprocesoevolutivo,tratamientoy
+demayorcoberturainternacionalparadarsoportealaHCE
+recuperacio´n [7]. Es un documento donde el paciente deja
+[4].HL7facilitaelintercambioelectro´nicodeinformacio´n
+registradoyfirmadosureconocimientoparautilizarloenla
+cl´ınica,mediantelanotacio´nformaldemodeladoUMLyel
+toma de decisiones. Existen varios modelos atendiendo al
+metalenguajeXML[2].
+lugardondesegenera:cronolo´gicos,orientadaaproblemas
+XMLsehaconvertidoenelformatodeintercambiode
+desalud(POMR)yprotocolizada.Algunoscomponentesde
+datosesta´ndarentrelasaplicacionesWeb;debidoasuextensi-
+modeloscla´sicosdeHC,comolaorientadaaproblemas,han
+bilidadyestructuradefa´cilana´lisisyprocesamiento[2,8,9].
+sidoconsideradosespecialmenteadecuadosparalosusosdo-
+UndocumentoXMLesunaestructurajera´rquicadeinforma-
+centesycient´ıficosdelaHCE[6].Enestetrabajosepropone
+cio´nqueincorporaestructuraydatosenunamismaentidad.
+utilizarelmodelocronolo´gicoquesegeneraenloscentros
+Deestemodo,laestructuradeestosdocumentospuedeserex-
+hospitalarios.
+plotadapararealizarrecuperacio´ndedocumentosrelevantes
+IncorporarlasTICenelnu´cleodelaactividadsanitaria,
+[5].Aunqueexistenvariasformasdegestionarelconocimien-
+suponebrindarsoportealaHCE.As´ı,laHCdejadeserun
+to:lacategorizacio´n,laclasificacio´nyelagrupamiento;exclu-
+simpleregistrodelainformacio´ngenerada,paraformarparte
+sivamente,elagrupamientodedocumentosXMLnospermite
+deunHISintegrado.Noobstante,enelprocesodeconceptua-
+organizarlainformacio´n,delimitarlainformacio´nrelevante
+lizacio´nydeimplementacio´ndelasTICexistenproblemas
+y descubrir nuevo conocimiento a partir de la informacio´n
+que limitan el uso productivo de la informacio´n e impiden
+disponibleenunacoleccio´nobtenidacomoresultadodeun
+lograrsuimpactopositivoenlacalidaddelaatencio´ncl´ınica,
+procesoderecuperacio´ndeinformacio´n[3,10,11,12].Por
+enlamorbilidadyenlamortalidad,enlaintegracio´nefectiva
+talmotivo,enelpresentetrabajoseestudialaimportanciadel
+de la HCE y en el uso de las herramientas de aprendizaje
+agrupamientodocumentalysuinterpretacio´nenlagestio´ndel
+automa´ticodeinteligenciaartificial.Aestoselean˜ade,los
+conocimientoimpl´ıcitoenHCE.Laorganizacio´ndelart´ıculo
+problemasrespectoalacodificacio´n,lasnormasylosesta´nda-
+eslasiguiente:enlaseccio´n2seanalizanlaste´cnicaspara
+res[1,4].
+abordarelagrupamientodelainformacio´ncl´ınica.Enlasec-
+cio´n3seproponeunametodolog´ıaparaelagrupamientode
+2.1 Usos actuales de la HCE en Las investigacio-
+HCEenformatoXMLcombinandosucontenidoyestructura
+nes
+apartirdeladefinicio´ndelconceptodeUnidadEstructural
+Losregistrosinformatizadosdelserviciodeadmisio´nde
+(SU1),loqueposibilitaalme´dicounamejorpra´cticadesalud.
+loshospitalessonutilizadospararealizarinvestigacionescl´ıni-
+Enlaseccio´n4seplanteacomoasistirlatomadedecisiones
+casyepidemiolo´gicas,alnodisponerdeotrasfuentesdedatos
+diagno´sticaapartirdeunaclasificacio´nsupervisadaqueutili-
+bienestructuradosenlosservicioscl´ınicoscapazdeobtener
+zaelconocimientodescubierto.Enlaseccio´n5sepresentan
+conocimiento[4].Porloquealmacenaradecuadamenteesta
+lasconclusiones.
+informacio´n,hacerlaaccesibleyreutilizarlaenlaformama´s
+convenienteesunprocesotodav´ıaenpotencia[4,7].
+Enestesentido,inferira´reasquedebenserinterpretadas
+1Siglaseningle´s:StructuralUnit(SU) por los expertos de la medicina a partir de la informacio´n
+Metodolog´ıaparaasistirlatomadedecisionesdiagno´sticaapartirdeldescubrimientodelconocimientoimpl´ıcitoen
+HistoriasCl´ınicas 101
+disponible,garantizar´ıaelusoproductivodeinformacio´ncon- 3. Agrupamiento de HCE basado en una
+tenidaenlaHCE;conelpropo´sitoderealizarinvestigacio- metodologia para el agrupamiento de
+nescl´ınicasquepermitan:nuevassolucionesdiagno´sticasy
+documentos XML
+terape´uticas,valoracio´ndelusodetecnolog´ıadepunta,estu-
+diodelosresultadosenpacientes,efectividadyeficaciade Debido a que un documento XML contienen su infor-
+laatencio´nme´dica,identificacio´ndepoblacionesderiesgo, macio´nenformasemiestructurada,variostrabajoshansido
+desarrolloderegistrosyana´lisisdelaeficaciadeprocesos. propuestoteniendoencuentalastresvariantesdeabordarel
+Porloque,sehacenecesarioquelossistemasdeinformacio´n agrupamientodeXML[2,10,11]:losqueconsideransolo
+queutilizanlasinstitucionesdeprestacio´ndeserviciosdesa- el contenido [9, 13, 14], los que utilizan solo su estructura
+lud,implementenesta´ndaresinforma´ticosinternacionalmente [8,10,11,18,19,20]ylosquecombinanambasdimensiones
+reconocidos,comoHL7.Deah´ı,lanecesidaddemigrarde [22, 23, 24, 25]. La mayor´ıa de los enfoques existentes no
+maneracontroladahaciainformacio´ncl´ınicaalmacenadade combinansusdosdimensiones:estructuraycontenido,dado
+forma estructurada. En este trabajo se propone concebir la sugrancomplejidad;sinembargo,paraobtenermejoresresul-
+HCE como un documento XML, en el que existen impl´ıci- tadosenelagrupamientoesesencialutilizarambas[26].La
+tamenteseccionesqueresultama´snaturaltratarlacomoun tabla1muestraunresumendealgunosdelosalgoritmospara
+conjuntodepartesounaseriedesecciones(quepuedendi- elagrupamientodedocumentosXML.
+vidirseenvariassubseccionesyas´ısucesivamente).Conse- En esta seccio´n se propone un me´todo para el agrupa-
+cuentementeunconjuntodadodeHCEsecorrespondeconla mientodedocumentosXML,apartirdelanuevafuncio´nde
+coleccio´nD={D ,...,D },dondecadaD contieneasuvez similitud,OverallSimSUX[27],quefacilitacapturarelgrado
+1 m i
+unconjuntodeunidadesestructuralesSU ={SU ,...,SU }. desimilitudentrelosdocumentos.Lametodolog´ıageneral
+1 n
+As´ı,desapareceelconceptodedocumentocomounidadindi- paraelagrupamientodelainformacio´ncontenidaenHCE,
+visible[5].LasSU identificadassema´nticamenteenlaHCE combinandolasdimensiones:estructuraycontenido;conel
+cronolo´gicabasadoenelcriteriodeexpertossemuestranenla propo´sito de contribuir al descubrimiento de conocimiento
+figura1.Estaconcepcio´ngarantizalograrunarepresentacio´n cl´ınicorelevanteespresentada.Unavisio´ngra´ficadelesque-
+delconocimientoestandarizadaybrindarsoportealatoma madelmodelogeneralpresentadoenestetrabajosemuestra
+dedecisiones. enlafigura2.
+La relacio´n estructural existente entre los documentos
+XMLaportamejoresresultadosalagrupamientocuandoel
+2.2 EnfoqueparaagruparHCE contenido es utilizado en funcio´n de la relacio´n existente
+entrelasSU.Enestetrabajo,sepresentaunconjuntodeSU
+El agrupamiento documental concibe encontrar una es-
+identificadas en la HCE utilizando el criterio de expertos,
+tructuradegruposqueseajustealconjuntodedatos,logrando
+SU= {Datos Personales2, Antecedentes, S´ıntomas, Signos,
+homogeneidaddentrodelosgruposyheterogeneidadentre
+Incidencia, Prevalencia, Diagno´stico Diferencial, Pruebas,
+ellos,siendounaalternativaparadescribirautoma´ticamente
+Tratamiento,Recuperacio´n,Diagno´sticoFinal}.
+elsignificadocient´ıficoycl´ınicodelainformacio´nbiome´dica
+La construccio´n de la matriz de similitud basada en el
+desdegrandesvolu´menesdeinformacio´n.Espec´ıficamente,
+ca´lculodelamedidadesimilitudpropuestafacilitacapturarel
+unalgoritmodeagrupamientointentaencontrargruposnatu-
+gradodesimilitudentrelosdocumentos.Estafuncio´nanaliza
+ralesdedatos,basa´ndoseprincipalmenteenlasimilitudylas
+larelacio´nexistenteentrelosdocumentosdeHCE,tratando
+relacionesdelosobjetos,paraobtenerunadistribucio´ninterna
+simulta´neamentelosdocumentoscomounidadesindivisibles
+delconjuntodedatosmediantesuparticionamientoengrupos
+y cada coleccio´n de SU como colecciones independientes.
+[13,14].Cuandoelagrupamientosebasaenlasimilitudde
+La figura 2 muestra, como obtener la matriz de similitud
+losobjetos,sedeseaquelosobjetosquepertenecenalmismo
+OverallSimSUXapartirdeunacoleccio´ndedocumentosde
+grupo sean tan similares como se pueda y los objetos que
+HCE.
+pertenecenagruposdiferentesseantandis´ımilescomosea
+En el algoritmo 1 se detalla el procedimiento general
+posible[15,16,17].
+para la construccio´n de esta matriz, a partir de tres pasos
+EnestetrabajoseproponeunenfoqueparaagruparHCE
+fundamentales:
+alconcebirlacomoundocumentoXML.Elaprendizajeobte-
+nidopuedeserinterpretadoybrindarsoportealasacciones 1. Pre-procesamientodetodalacoleccio´n,identificando
+realizadasporlosexpertos,raravezexplicadas.Adema´s,al cadaunidadestructural.
+disponerdemu´ltiplesHCagrupadasporsignos,patolog´ıas
+2. Representacio´nTextualutilizandolaRepresentacio´nI
+os´ıntomas,incidenciayprevalencia,diagno´sticodiferencial,
+ylaRepresentacio´nII.
+pruebas y tratamientos efectuados; el profesional de la sa-
+ludpodr´ıaparticularizarexperienciasimpl´ıcitasenlasHCE
+3. ProcesodeAgrupamientoFinal.
+procesadas.
+2Basadoen{Sexo,Edad,LugardeNacimiento,LugardeResidencia,
+GrupoSangu´ıneo}
+Metodolog´ıaparaasistirlatomadedecisionesdiagno´sticaapartirdeldescubrimientodelconocimientoimpl´ıcitoen
+102 HistoriasCl´ınicas
+Figura1.UnidadesEstructuralessema´nticamenteidentificadasenlaHCEcronolo´gicautilizandocriteriodeexpertos.
+Tabla1.ResumendealgoritmosparaelagrupamientodedocumentosXML
+Agrupamientopor Autor Me´todo
+Kurganetal[21]
+SoloContenido UnavariantedeVSM
+Shen[13]
+Dalamagasetal[5]
+Flesca[10]
+SoloEstructura XMLcomoa´rbolparacalculardistanciatree-edit
+Lesniewska[11]
+Chawathe[18] UsodeEditGraph
+Costa[26] Enfoquejera´rquico
+SoloEstructura
+A¨ıtelhadj[20] Enfoquetwo-step
+Kutty[22] UsanClosed Frequent Sub-Trees
+Yang[23] VariantedeVSM
+EstructurayContenido TekliyChbeir[18] Usodelasimilitudsema´nticaydistanciatree-edit
+Pintoetal[19] UsodelalgoritmoK-Starenprocesorecursivo
+Pre-procesamiento La propuesta realizada en este traba- de cada te´rmino aumenta proporcionalmente al nu´mero de
+jo responde a la necesidad de desarrollar herramientas pa- vecesqueestete´rminoapareceeneldocumento(lafrecuen-
+ragestionarlainformacio´ncl´ınicaybrindarsoportealdes- cia), pero se compensa con la frecuencia del te´rmino en la
+cubrimientodeconocimiento.Conelpropo´sitodeestanda- coleccio´n.
+rizar los te´rminos con igual significado sema´ntico, el pre-
+procesamientodelosdatosincluyelaunificacio´ndelatermi-
+nolog´ıausadaporelpersonalme´dico.
+Representacio´nTextual Obtenerlasrepresentaciones,Re-
+presentacio´n I, usando las colecciones de HCE de las SU Representacio´nII EnestetrabajolaestructuradelaHCE
+tratadas como colecciones independientes; Representacio´n esadicionadaalana´lisis,porconsiguientelaRepresentacio´n-
+II,considerandolacoleccio´ncompleta;realizarlosagrupa- IIesunamodificacio´ndelaVSMcla´sica,dondelafrecuencia
+mientosdelascoleccionesasociadasacadaUSutilizandola es pesada teniendo en cuenta la importancia de la SU a la
+Representacio´nI. queperteneceelte´rminoanalizado,definidaenlaecuacio´n
+(1) para un te´rmino t y un documento d . Donde n es la
+i j
+Representacio´nI Lacoleccio´noriginaldedocumentoses cantidaddeSU ded j , fr ik eslafrecuenciadet i enlaSU k y
+dividida en k-colecciones. El concepto de k-coleccio´n [27] w eselpesodelaimportanciadelaSU eneldocumento
+k k
+reflejadelacorrespondenciaentrelacoleccio´nylaSU.Para d . El ca´lculo del peso de SU para cada documento d se
+j k j
+cadak-coleccio´nlaRepresentacio´nIseconstruyeutilizando realiza segu´n la ecuacio´n (2); donde L es la longitud de
+SU
+la VSM cla´sica. En particular, la construccio´n de esta ma- SU ,L eslalongituddeldocumentod y pot esunvalor
+k Doc j
+trizserealizautilizandolamedidaFrecuenciadelTe´rminoy dado.Deestamaneralaideaquedaformalizada.Aunque,si
+FrecuenciaInversadelDocumento(TF-IDF)[6].TF-IDFes existenelementosdelaHCEconmayorintere´sdiagno´stico
+unamedidaestad´ısticaquedeterminacua´nimportanteesun queotros,puedentratarsecomote´rminosborrososatendiendo
+te´rmino,usandoelvectorderepresentacio´n.Laimportancia aunconjuntodegradosdepertenenciafijadosporelexperto.
+Metodolog´ıaparaasistirlatomadedecisionesdiagno´sticaapartirdeldescubrimientodelconocimientoimpl´ıcitoen
+HistoriasCl´ınicas 103
+Figura2.Esquemaquemuestraelmodelogeneralpropuesto.
+Tabla2.Representacio´nIdondetf
+dj
+(t
+i
+)eslafrecuenciade
+aparicio´nabsolutadelte´rminot eneldocumentod .
+i j
+Algorithm1Construccio´ndelamatrizdesimilitudOverall-
+SimSUX Te´rmino Te´rmino ... Te´rmino
+1 2 m
+Input: CorpusDdedocumentosdeHCE HCE tf (t ) tf (t ) ... tf (t )
+1 d1 1 d1 2 d1 m
+Output: Grupos,calidaddelosgrupos,documentoma´sre- HCE tf (t ) tf (t ) ... tf (t )
+2 d2 1 d1 2 d2 m
+presentativoporgrupo ... ... ... ... ...
+1: Pre-procesamientos; /* ana´lisis le´xico, eliminacio´n de HCE tf (t ) tf (t ) ... tf (t )
+n dn 1 dn 2 dn m
+palabrasdeparada,segmentacio´n...*/
+2: Construirtodaslask-colecciones(corpusD);
+3: forallD k do
+4: Rep I←HacerRepresentacio´nI(DSU k )medianteTF- Seempleara´nlassiguientesecuaciones
+IDF;
+5: Matriz Sim←CalcularlamatrizdesimilitudRep I n
+tf (t)= ∑w fr , (1)
+usandolasimilitudCoseno; dj i k ik
+k=1
+6: G
+M
+r
+a
+u
+t
+p
+ri
+o
+z
+s
+S
+←
+im
+A
+;
+plicarme´tododeagrupamientoK-Stara
+w kj =
+(cid:18)
+e − L L D SU oc
+(cid:19)pot
+, (2)
+7: endfor
+m
+8: Rep II ← Hacer Representacio´n II corpus D completo ∑d
+ik
+d
+jk
+usandoecuacio´n(1)paracalcularlafrecuencia;/*Ver S (d,d )= k=1 , (3)
+Tabla2*/ coseno i j (cid:114) m m
+∑d2 ∑d2
+9: Matriz SimII ← Calcular la matriz de similitud para ik jk
+k=1 k=1
+10:
+R
+M la
+e
+a m
+p
+tr e
+I
+i d z
+I
+i
+u
+d O
+s
+a
+a
+S
+n
+O
+d
+i v m
+o
+er
+l
+←
+a
+al
+s
+lS
+i
+C
+m
+im a
+il
+l S
+i
+c
+t
+U u
+u
+l
+d
+X ar
+C
+te m
+o
+n
+s
+a i
+e
+e t
+n
+r n i
+o
+d z
+;
+o d e e n s c im ue i n li t t a ud to u d s o a s n l d o o s f(C,s g ,i,j)=
+∑m
+k=1
+(
+∑
+w
+m k k =
+λ
+1 k( w i, k j) +
++
+1
+s
+g(i,j)
+)
+. (4)
+agrupamientosparacadaDSU yMatriz SimII;
+k Agrupamiento de una k-coleccio´n A partir de la Repre-
+11: Obtener el agrupamiento final aplicando el me´todo de sentacio´nIseobtieneunamatrizdesimilitudquecomparados
+agrupamientoK-StaraMatriz O Sim;
+documentoutilizandolamedidacoseno;calculadasegu´nla
+ecuacio´n(3).Comoresultadoseobtieneparacadak-coleccio´n
+unagrupamientoindependienteaplicandoelalgoritmoK-Star
+Metodolog´ıaparaasistirlatomadedecisionesdiagno´sticaapartirdeldescubrimientodelconocimientoimpl´ıcitoen
+104 HistoriasCl´ınicas
+cla´sico[22]. Utilizando la metodolog´ıa propuesta y las SU de las HCE
+donde se concentran sus dudas, obtendr´ıa grupos de casos
+Ca´lculodelamatrizOverallSimSUX LasimilitudOverall-
+similaresqueconstituyenrecomendacionesrespectoaluso
+SimSUX,seespecificaformalmenteenlaecuacio´n(4).Esta
+correctodeuncomplementario,unplandetratamiento,entre
+se calcula teniendo en cuenta los resultados de los agrupa-
+otrasopciones.
+mientosdecadak-coleccio´nylamatrizdesimilitudbasada
+Los resultados obtenidos mediante el agrupamiento de
+enelca´lculodelamedidacosenoparalaRepresentacio´n-II.
+documentos de HCE pueden ser interpretados teniendo en
+OverallSimSUXconsideramcomolacantidaddeSUidentifi-
+cuentaelcriteriodeexpertos.Elusodereglasdeasociacio´n
+cadasenlosdocumentosdeHCE.Estafuncio´ndesimilitud
+permitira´ explicarlasrelacionesentreHCEdepacientesque
+es normalizada por la suma de los pesos de las m SU y el
+pertenecen a un mismo grupo. Los centroides o HCE ma´s
+ma´ximovalordesimilitudglobal(e.g.1).Porconsiguiente,
+relevantes de cada grupo permitira´ a los expertos estudiar
+suma´ximo(e.g.1)sealcanzacuandoeldocumentodeHCEi
+casossimilaresconevolucionesfavorables.Paraverificarlos
+yjpertenecenalmismogrupoentodoslosk-agrupamientos
+efectosdelametodolog´ıaencoleccionesdeHCE,sepropone
+(e.g.k=1)yelvalordels esma´ximo.
+g
+utilizarunamuestrade1.5millonesdeHCEdelarchivodel
+AgrupamientoFinal Paraelagrupamientofinalseaplicael serviciodeadmisio´ndelHospital.ArnaldoMilia´nCastro”.La
+algoritmoK-StaralamatrizdesimilitudOverallSimSUX. interpretacio´ndelosresultadosobtenidosporlametodolog´ıa
+debeevaluarseporexpertosloqueevidencialaviabilidadde
+3.1 Clasificacio´nSupervisadadeunnuevaHCE lametodolog´ıapropuestaparalagestio´ndelainformacio´n
+Acontinuacio´nseexponeunavarianteparaasistirlatoma cl´ınicayeldescubrimientodeconocimientoimpl´ıcitoenellas.
+dedecisionesdiagno´sticaantelallegadaunnuevopaciente.
+Laideanoesladedarundiagno´sticocompletoydefinitivo,
+4. Conclusiones
+sinoayudaralosexpertosarealizarelana´lisisdiferencialde
+posiblesenfermedadesapartirdelconocimientodescubierto Enestetrabajoseanalizo´laimportanciadelagrupamiento
+por la metodolog´ıa en colecciones de HCE representativas, documental para el descubrimiento de conocimiento desde
+conelpropo´sitodeconseguirundiagno´sticoo´ptimo.Lacla- lainformacio´ncl´ınica.Debidoalanecesidaddeobtenerco-
+sificacio´ndelanuevaHCEserealizaapartirdelca´lculode nocimiento relevante que garantice el uso productivo de la
+lasimilituddelnuevodocumentoconcadaunodelosd j ∈D, informacio´ncontenidaenHCE,seproponeunametodolog´ıa
+(D coleccio´n de HCE agrupada); se aplica el algoritmo de paraelagrupamientodeHCEconcebidascomodocumentos
+clasificacio´n supervisada KNN para k =7, con lo cual se XML, que combina sus dos dimensiones: estructura y con-
+tendra´loskejemplosma´scercanos.Estoscasosma´ssimilares tenido. Se muestra la funcio´n de similitud OverallSimSUX
+alcasoanalizadopermitira´nenfocarseenlaUSdiagno´stico entre las HCE tomando como ge´nesis la relacio´n entre sus
+yrealizarunana´lisiscompletodelpacienteysurelacio´ncon SU.Variasunidadesestructuralesseproponenparaasegurar
+lospacientesma´ssimilaresaesteynodescartarinformacio´n manejarunacoleccio´ndeHCEusandolametodolog´ıa.
+menorquepudieranescapardelana´lisishumano,resaltando
+lainformacio´nrelevantequeayudara´alespecialistaanopasar
+poraltoningu´ndetalleyllegaraundiagno´sticoo´ptimo. Referencias
+[1] EngelbrechtR.K4Health.KnowledgeforHealth.Integra-
+3.2 Interpretacio´ndelagrupamientodeHCE
+tingEHRandKnowledgeforbetterhealthcare.Status
+AgruparlasHCEatendiendoasuss´ıntomasosignosyno
+of the EoI and work items. EUROREC. Berlin. 13-14
+u´nicamenteteniendoencuentalosdiagno´sticosfinales,permi-
+December.
+tenalespecialistaestimarobjetivamenteelvalordiagno´stico
+deunapruebadeterminadasininterferirresultadosdeotras
+[2] Brau,B.,etal.,ExtensibleMarkupLanguage(XML)1.0.,
+pruebas.Esdecir,inferirunavistacoherentedelahistoriadel
+inW3CRecommendation.1998.
+paciente,deloquerealmentesehahecho,porque´ yque´ ha
+sucedido.Losantecedentespatolo´gicosfamiliaresypersona- [3] C.D.,M.,Raghan,P.&Schu¨tze,H.IntroductiontoInfor-
+lesylareaccio´nadversaantedeterminadosmedicamentosen mationRetrieval.2008CambridgeUniversityPress.
+casossimilares,permitir´ıaexplicarelporque´ delasacciones
+realizadasporelme´dicoparatrataraciertospacientes.Asu [4] Zwaanswijk, M., R. A. Verheij, F. J. Wiesman y R. D.
+vezantelapresenciadeunnuevocasosinundiagno´sticodefi- Friele.Benefitsandproblemsofelectronicinformation
+nitivo,encontrarpacientessimilaresae´l,permitir´ıaalme´dico exchange as perceived by health care professionals: an
+valorarsilosestudiosderevisio´nbasadosenpruebasaplica- interviewstudy.BMCHealthServicesResearch,11:256.
+dosaestospacientessimilares,ser´ıanfactiblesaplicarlosasu Doi:10.1186/1472-6963-11-256.(2011)
+actualpaciente[4].
+Porotraparte,elbeneficiodedisponerdepacientessimi- [5] Dalamagas, T., Cheng, T., Winkel, K.-J. & Sellis, T. A
+lares con iguales diagno´sticos finales, permitir´ıa a los estu- MethodologyforClusteringXMLDocumentsbyStructu-
+diantesenunmenortiempocompletarlaHCdeunpaciente. re.InformationSystems(2006).
+Metodolog´ıaparaasistirlatomadedecisionesdiagno´sticaapartirdeldescubrimientodelconocimientoimpl´ıcitoen
+HistoriasCl´ınicas 105
+[6] Dick R. S., Oteen E. B., Detmer D. E. (eds). The [19] Pinto, D., M. Tovar, and D. Vilarin˜o. BUAP: Perfor-
+computer-basedpatientrecord:Anessentialtechnology mance of K-Star at the INEX’09 Clustering Task. in
+forhealthcare.RevisedEditionWashington,D.C.:The INEX 2009 Workshop Pre-proceedings. 2009. Wood-
+Nacional Academy Press. 1997. Cap´ıtulo 2. p. 74-99. lands of Marburg, Ipswich, Queensland,Australia. doi:
+http://books.nap.edu/books/0309055326/html/R1.html. 10.1007/978-3-642-14556-8 43
+[20] Vries, C. et al. (2011). Overview of the INEX 2010
+[7] Ge´rvasJ.Lahistoriacl´ınicaelectro´nica:muchaspromesas
+XMLminingtrack:clusteringandclassificationofXML
+ypocoshechos.AtenPrimaria.2008;40(Supl1):13
+documents, in In Lecture Notes in Computer Science,
+Springer:Amsterdam.
+[8] Guerrini,G.,M.Mesiti,andI.Sanz,AnOverviewofSi-
+milarityMeasuresforClusteringXMLDocuments.2006.
+[21] Kurgan,L.,W.Swiercz,andK.J.Cios.Semanticmap-
+[9] Wilde,E.andR.J.Glushko,XMLfever.Comm.ACM,
+pingofxmltagsusinginductivemachinelearning.in11th
+2008.51(7):p.40-46.doi:10.1145/1364782.1364795
+InternationalConferenceonInformationandKnowledge
+Management.2002.Virginia,USA.
+[10] Wang,G.,etal.,RPEqueryprocessingandoptimization
+techniquesforXMLdatabases.J.Comput.Sci.Technol.,
+2004.19(2):p.224-237. [22] Shin,K.andS.Y.Han,Fastclusteringalgorithmforin-
+formationorganization.,inIn:Proc.oftheCICLingConfe-
+[11] Bertino, E. and E. Ferrari, XML and data integra-
+rence.2003,LectureNotesinComputerScience.Springer-
+tion. IEEE Internet Comput., 2001. 5(6): p. 75-76. doi:
+Verlag (2003). p. 619–622. doi: 10.1007/3-540-36456-
+10.1109/4236.968835
+0 69
+[12] Algergawy, A., et al., XML Data Clustering: An
+Overview, in ACM Computing Surveys. 2011. doi: [23] MacQueen,J.B.,Somemethodsforclassificationand
+10.1145/1978802.1978804 analysisofmultivariateobservations,inProc.5thBerke-
+leySymposiumonMathematicalStatisticsandProbabi-
+[13] Kruse,R.,C.Do¨ring,andM.-J.Lesor,Fundamentalsof
+lity.1967:Berkeley,UniversityofCalifornia.p.281-297.
+FuzzyClustering,inAdvancesinFuzzyClusteringand
+itsApplications,J.V.d.OliveiraandW.Pedrycz,Editors.
+[24] SimI.,GormanP.,GreenesR.A.,HaynesR.B.,Kaplan
+2007,JohnWileyandSons:EstSussex,England.p.3-27.
+B., Lehmann H., Tang P. C. Clinical decision support
+[14] Ji, T., X. Bao, and D. Yang, FXProj – A Fuzzy XML systemsforthepracticeofevidence-basedmedicine.J.
+DocumentsProjectedClusteringBasedonStructureand AmMedInformAssoc2001;8:527-34.
+Content.LNAI7120,2011:p.406-419.
+[15] Yousuke, W., K. Hidetaka, and Y. Haruo, Similarity [25] Xiong,H.,J.Wu,andJ.Chen.K-meansclusteringver-
+search for office XML documents based on style and susvalidationmeasures:adatadistributionperspective.in
+structuredata.InternationalJournalofWebInformation Proceedingsofthe12thACMSIGKDDinternationalcon-
+Systems.,2013.9(2):p.100-117.doi:10.1108/IJWIS-03- ferenceonKnowledgediscoveryanddatamining(KDD
+2013-0005 2006). 2006. Philadelphia, PA, USA: ACM Press. doi:
+10.1109/TSMCB.2008.2004559
+[16] Kaufman, L. and P.J. Rousseeuw, Finding groups in
+data:anintroductiontoclusteranalysis.WileySeriesin
+[26] Costa, G., et al., Hierarchical clustering of XML do-
+probabilityandmathematicalstatistics.1990:JohnWiley
+cuments focused on structural components. Data &
+andSons.
+Knowledge Engineering. , 2013. 84: p. 26-46. doi:
+[17] Mart´ın, C. 2007. Aprendizaje Automa´tico Y Miner´ıa 10.1016/j.datak.2012.12.002
+DeDatosConModelosGra´ficosProbababil´ısticos.DEA,
+UniversidadDeGranada. [27] Magdaleno,D.,I.E.Fuentes,andM.M.Garc´ıa,Cluste-
+ringXMLDocumentsusingStructureandContentBa-
+[18] Tekli, J.M. and R. Chbeir, A Novel XML Document
+sedinaProposalSimilarityFunction(OverallSimSUX).
+StructureComparisonFrameworkbased-onSubtreeCom-
+Computacio´nySistemas,2015.
+monalitiesandLabelSemantics.Elsevier,2011.11(2011).
+doi:10.1016/j.websem.2011.10.002

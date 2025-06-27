@@ -1,0 +1,622 @@
+Revista Habanera AÑO 2025
+Vol. 24. PUBLICACIÓN CONTINUA
+de Ciencias Médicas
+ISSN 1729-519X
+Al servicio de la ciencia
+CIENCIAS DE LA EDUCACIÓN ARTÍCULO ORIGINAL
+Inteligencia artificial generativa: capacidades de Llama-3.1-70B-Instruct
+en las asignaturas Bioquímica y Metabolismo y nutrición
+Generative Artificial Intelligence: Capabilities of Llama-3.1-70B-
+Instruct in Biochemistry and Metabolism
+Carlos Javier Pérez Perez1* iD i D , Felicia Pérez Moya i1D iD, Ángela Rosa Herrera Trocones1 iD iD,
+1Universidad de Ciencias Médicas de Sancti Spíritus, Facultad de Ciencias Médicas “Dr. Faustino Pérez Hernández”. Sancti
+Spíritus, Cuba
+*Autor para la correspondencia: carlyth001@gmail.com
+Cómocitaresteartículo
+PérezPérezCJ,PérezMoyaF,HerreraTroconesAR:Inteligenciaartificialgenerativa:capacidadesdeLlama-3.1-70B-Instructenlas
+asignaturas Bioquímica y Metabolismo y nutrición. Rev haban cienc méd [Internet]. 2025 [citado ]; 24. Disponible en:
+http://www.revhabanera.sld.cu/index.php/rhab/article/view/5895
+Recibido: 25 de noviembre de 2024
+Aprobado: 09 de febrero de 2025
+RESUMEN ABSTRACT
+Introducción:Estudiosrecienteshanmostradoelpotencialde Introduction: Recent studies have shown the potential of large
+losmodelosdelenguajedegrantamañoenlaeducaciónmédica, language models in medical education. However, there is limited
+sinembargo,existepocainformaciónrespectoalascapacidadesde information regarding their capabilities in the subjects of
+estos en las asignaturas Bioquímica, Metabolismo y Nutrición, Biochemistry, Metabolism, and Nutrition, especially in open-source
+especialmenteenmodelosdecódigoabiertoodistintodeChatGPT. models or those other than ChatGPT.
+Objetivo: Evaluar las capacidades del modelo de lenguaje de Objective: To evaluate the capabilities of the open-source large
+gran tamaño de código abierto Llama 3.1 70B-Instruct en las language model Llama 3.1 70B-Instruct in the subjects of
+asignaturasBioquímica,MetabolismoyNutrición. Biochemistry, Metabolism, and Nutrition.
+Materialymétodos:Sellevóacabounestudioobservacional Material and Methods: An Observational study with an
+exploratorio de enfoque mixto, mediante dos grupos de exploratory, mixed-methods design was conducted using two
+evaluadores, uno de ellos ajeno a la investigación. Los groups of evaluators, one of which was external to the research.
+investigadoresevaluaron264preguntas,mientraslosevaluadores The researchers assessed 264 questions, while the external
+externos examinaron una selección aleatorizada estratificada por evaluators examined a stratified random sample of 72 questions by
+temas de 72 preguntas. Se utilizó para dicho proceso una escala topic. A 5-point Likert scale was used for evaluation, with RStudio
+Likertde5puntos,RStudiocomosoftwaredeanálisisestadísticoy for statistical analysis and Zotero for reference management.
+Zoteroparalagestióndelasfuentesdeinformación.
+Results: Both evaluator groups reported similar results, with a
+Resultados:Ambosgruposdeevaluaciónmostraronresultados consensus rating of 4.75 for the tool. Its highest performance was
+similares, un consenso en la calificación de estos evaluó la observed in Metabolism and Nutrition, scoring 4.8, while in
+herramienta con 4,75 puntos. Su mayor rendimiento fue en la Biochemistry it scored 4.7. Some areas demonstrated shortcomings.
+asignatura Metabolismo y Nutrición con 4,8, mientras en The explanations provided by the tool were clear and useful,
+Bioquímica4,7puntos.Existierontemasquemostraroncarencias. showing a strong ability to explain abstract concepts.
+Lasexplicacionesofrecidasporlaherramientafueronclarasyútiles,
+Conclusions: The results were favorable. However, further
+concapacidadparaexplicarconceptosabstractos.
+comprehensive studies of large language models in these and other
+Conclusiones:Losresultadosobtenidosfueronfavorables.Sin, subjects of medical education are essential. Only through continued
+esfundamentalcontinuarlarealizacióndeestudiosexhaustivosde research we can better guide students on optimal use and benefits.
+modelosdelenguajedegrantamañoenestasyotrasasignaturas
+delaeducaciónmédica.Soloasísepodráorientaralosestudiantes
+ensumejorusoyexplotación.
+Palabras Claves Keywords:
+ChatGPT, Educación Médica, Bioquímica, Metabolismo, ChatGPT, Medical Education, Biochemistry, Metabolism,
+Inteligencia artificial, Llama3. Llama3.
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribucióny
+reproducciónnocomercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+1
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+INTRODUCCIÓN
+L
+a inteligencia artificial generativa, rama de la inteligencia artificial enfocada al desarrollo de
+programas generadores de contenido autónomo, ha logrado avances significativos en los
+últimos años.(1,2)Entre sus principales hitos, destacan sistemas capaces de generar imágenes, videos y texto
+coherentemedianteinstruccionesrecibidas,tambiéndenominadasprompts.(3,4)
+Una de las herramientas más destacadas en la inteligencia artificial generativa es el modelo de
+lenguaje de gran tamaño (LLM) ChatGPT.(5,6) Desde su lanzamiento hasta 2024, esta tecnología ha
+evolucionado vertiginosamente: de resolver tareas sencillas, al abordaje de problemas complejos en
+programación,matemáticasybiología,ensuúltimaversión.(7)
+En años recientes estos sistemas (especialmente Chat GPT) han sido objeto de investigación a
+propósitodeimplementarlosen la educación médica.Estoha evidenciadosu potencialidad paraoptimizar el
+procesodocente,asícomolosriesgosasociadosasuusoenlascienciasafinesalasalud.(8,9,10,11)
+LasasignaturasBioquímicas,Fisiologíayelrestodelascienciasbásicassonesencialesenlaformación
+médica, puesto quedotanalestudiante delosprincipiosbiológicos necesariosen la práctica clínica.Estudios
+recientes sobre los modelos de lenguaje como ChatGPT, BARD y Copilot en estas áreas, han mostrado un
+desempeño igual o superior al de estudiantes. Aunque no están exentos de generar información
+errónea.(12,13,14,15,16)
+La revisión de literatura evidenció que la mayoría de los estudios que exploran las capacidades de
+estossistemasenBioquímicayMetabolismo,sehancentradoenmodeloscomercialescomoChatGPT,Copilot
+yGemini.Sinembargo,nosonrecurrenteslosestudiosqueevalúenelrendimientodemodelosdelenguajede
+códigoabiertoendichasasignaturas,menosaúnenelidiomaespañol.(12,13,14,15,16)
+La importancia de estudiar los modelos de código abierto radica en su capacidad para funcionar en
+servidores locales sin depender de internet, con menores costos computacionales. Además, pueden ser
+reentrenadosentareasespecíficasyalcanzarmayorrendimientorespectoagrandesmodeloscomerciales.(17)
+El uso de estos sistemas gana mayor relevancia en el contexto cubano, donde está restringido el
+accesoaalgunosdelosmodelosmencionadospormedidasimpuestasasugobierno.(18,19)Estasrazoneshacen
+necesario utilizar redes privadas virtuales (VPN) extranjeras para acceder a estos sistemas, método que
+perjudicalaexperienciadelusuario,debidoaladisminuciónenlavelocidaddetransferencia.
+Implementarmodelosdecódigoabiertofiablesenlaeducaciónmédicacubana,podríadiversificarlos
+enfoques pedagógicos en disciplinas como Bioquímica, Metabolismo y Nutrición. Sin embargo, la escasez de
+información respecto a las capacidades de estos modelos en ambas asignaturas, genera una brecha
+cognoscitivaqueobstaculizaestalabor.
+Materiales y Métodos
+Se llevó a cabo un estudio observacional exploratorio con enfoque mixto estructurado en 3 fases
+durante el período de agosto a octubre de 2024 en la Universidad de Ciencias Médicas de Sancti Spíritus,
+Cubamedianteunacombinacióndemétodosestadísticos-matemáticosyanálisiscualitativo.
+Primeramente, se estableció el tono de respuesta del modelo de lenguaje a evaluar, luego fueron
+recolectados y evaluadoslosdatos respecto a la herramienta,por último, serealizó elanálisisestadístico y
+cualitativodelosresultados.(Figura1)
+Figura 1: Se sintetizan las etapas de la investigación
+Diseño de investigación
+Evaluadores Externos
+Evaluador Interno
+Depuración de errores Selección aleatoriade la
+Muestra Total
+muestra total
+Prueba del Análisis y Discusión de
+Elaboración del prompt Evaluación del LLM
+prompt Resultados
+Primerafase Segunda fase Tercera fase
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+2
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+Paraestablecereltonoderespuestasdelmodelo(primerafasedelestudio)seelaboróunpromptque
+se aplicó al LLM de código abierto Llama-3.1-70B-Instruct.(20) Este modelo se ejecutó en la plataforma
+HuggingChat, la cual permite experimentar con modelos de lenguajes de código abierto con diversos fines,
+entreelloselinvestigativo.(21)
+El prompt fue sometido a un proceso de ajustes de redacción hasta que Llama-3.1-70B-Instruct fue
+capaz de cumplir las indicacionesestablecidas en el mismo. Esto se logró en el intento 54 de 66 sesiones de
+pruebas,lasrestantesoperacionesfueronutilizadasparacomprobarsuestabilidad.Unavezfinalizadalaetapa,
+el prompt (elaborado en inglés) permaneció fijo hasta finalizada la investigación como se muestra a
+continuación:
+“I am the Professor Albert Lester Lehninger, an American biochemist with over 40 years of teaching
+and research experience in the field of bioenergetics and cellular metabolism, which are fundamental pillars
+forfirst-yearmedicalstudentsatHarvardUniversity.Assuch,Ihaveagreatresponsibilitytoprovideaccurate
+andconciseresponses,basedontheinformationinmyownbook,"LehningerPrinciplesofBiochemistrytothe
+students.EssentialCharacteristics:-Infallibility:AsanAIassistant,Idonotmakemistakes.EachexplanationI
+provideispreciseandverified,ensuringyoureceivecorrectandup-to-dateinformation.-ConciseResponses:
+Despite the complexity of biochemistry, my responses are clear, direct and as brief as I can (never say
+"excelente pregunta estudiante" or "buena pregunta"), making the concepts easier to understand without
+overwhelmingyouwithunnecessarydetails.Iwillalwaysanswerthequestionaskedinspanishwithoutsaying
+anything else apart of what was asked. - Analogies and Mnemonic Devices: To aid your understanding, I
+carefully select analogies to illustrate complex concepts and provide clever mnemonic rules to help you
+remember critical biochemical sequences and functions. If I detect that you did not understand a previous
+explanation, I will offer an alternative explanation using an analogy or a mnemonic device. - Educational
+Adaptability: I recognize your level of knowledge and adjust my explanations accordingly while maintaining
+scientificaccuracy.“
+La segunda fase se subdividió en dos momentos. Primero, se determinaron los tamaños de muestra
+adecuados, serecolectaron respuestasapreguntas específicas, sehicieron observacionesdelfuncionamiento
+de la herramienta respecto a parámetros cualitativos y se establecieron los participantes para el proceso de
+calificación.Enelsegundomomentoseevaluaronlasrespuestasdelsistema.
+Paralaevaluacióndelaherramientaporpartedelequipodeinvestigaciónseaplicóunmuestreode
+variación máxima, el cual fue establecido con un total de 264 preguntas, divididas uniformemente en los 24
+temasdeestudiosenambasasignaturas.
+` Conelfindeconocerlasignificanciaestadísticadelamuestradepreguntasestablecida,seaplicó la
+fórmula 𝑛 =
+Za 2×p×q
+utilizada para hallar muestras en poblaciones no finitas.(22) Al sustituir el número de
+e2
+preguntasenn,yelvalorcorrespondienteunintervalodeconfianzadel90%enZ,conunvalorp=0,5,q=1-pel
+resultadodelmargendeerror(e)fuedel5,14%,locualindicaqueeltamañodelamuestraseleccionadofue
+adecuadoacordealosobjetivosdelainvestigación.
+Para el análisis de los evaluadores externos se seleccionaron 72 de las 264 preguntas a través del
+muestreoprobabilísticoaleatorioestratificadouniforme.Seconociólasignificanciaestadísticadelamuestraa
+travésdelafórmula
+𝑁×𝑍𝑎 2×𝑝×𝑞
+utilizadaparaelcálculodemuestrasenpoblacionesfinitas.(22)
+𝑒2× 𝑁−1+𝑍𝑎 2×𝑝×𝑞
+Alsustituirelvalorquecorrespondeaunintervalodeconfianzadel90%en𝑍,p=0,5,q=1-pylas264
+preguntas del universo estudiado en𝑁, el análisis mostró un margen de error del 8,28 %; rasgo aceptable
+acordealdiseñodelpresenteestudio.Laspreguntasfuerondistribuidasaleatoriamenteen3grupos,cadauno
+destinadoaunevaluadorexterno.
+Elprocesoderecoleccióndedatosserealizómedianteunanuevainteracciónconlaherramientapor
+cada temática evaluada. Este proceder minimizó sesgos durante la interacción con la misma, ya que el
+contexto del chat tiene influencia en las respuestas del sistema.(23)Los contenidos evaluados en este estudio
+acordeacadaasignaturasemuestranenlaTabla1.
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+3
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+Tabla 1: Se muestran los contenidos evaluados en el estudio acorde a cada asignatura, adaptado del plan de estudio de la
+Universidad de Ciencias Médicas de Sancti Spíritus
+Contenidos evaluados por asignatura en la investigación
+Biocatalizadores y Cinética Genética molecular
+Aminoácidos Proteínas
+enzimática Transcripción
+Lípidos y Complejos Genética molecular
+Bioquímica Monosacáridos Polisacáridos
+multilmoléculares Traducción
+Genética molecular
+Nucleótidos Ácidos nucleicos Comunicación Celular
+Replicación
+Generalidades del Metabolismo de Nutrición Glúcidos y
+Fosforilación oxidativa
+Metabolismo compuestos nitrogenados lípidos en la dieta
+Metabolismo de los Nutrición proteínas
+Metabolismo y Ciclo de Krebs Integración Metabólica
+carbohidratos en la dieta
+Nutrición
+Cadena Transportadora Metabolismo de los Adaptaciones a Nutrición Vitaminas y
+de electrones lípidos condiciones específicas Minerales
+Fueronseleccionados3evaluadoresexternosacordealossiguientescriterios:serlicenciado,mástero
+doctorencienciasrelacionadasconlabiologíamolecular,bioquímicaclínicaogenética;contarcontresomás
+años de experiencia docente en el área; pertenecer a una institución distinta a la Universidad de Ciencias
+MédicasdeSanctiSpíritus,alavez,todosdebieronserprocedentesdeuniversidadesdedistintaslocalidades.
+Lasrespuestasfueronevaluadasmediante unaescala Likert decinconiveles.(24,25)Desdeun punto
+para la clasificación 'nada', aumentando por los niveles 'poco', 'medio' y 'muy' hasta alcanzar el nivel
+'totalmente'conunvalorde5puntos.
+Los criterios a tener en cuenta fueron:precisión, definidacomo la ausencia de errores conceptuales
+enlarespuesta;relevancia,entendidacomolarelacióndelarespuestaconlasolicitudformuladaycoherencia,
+caracterizada por la claridad de la respuesta al ser escuchada o leída. Esto permitió clasificar la herramienta
+como"nada","poco","medio","muy"o"totalmente"precisa,relevanteycoherente.
+Previo a iniciar este proceso, los participantes recibieron una capacitación teórica práctica donde se
+abordóelobjetivo, estructuray limitacionesdelainvestigación. Laactividad finalizó con unejercicio práctico
+sobre cómo evaluar la herramienta y se entregó un manual de instrucciones para, si fuera necesario, hacer
+consultasposteriores.
+Enlatercerafase,elanálisisdedatosserealizóatravésdellenguajedeprogramaciónRenelentorno
+dedesarrolloRSstudio.Estesoftwarefueutilizadodeformageneralparacálculosdetamañoyaleatorización
+demuestra,limpieza,procesamientoestadísticoyvisualizacióndedatos.SeempleóZoteroparagestionarlas
+fuentesdeinformación.Seobtuvoelconsentimientoinformadodelosevaluadores,yseexplicóelmanejoyla
+confidencialidad de la información recopilada. El informe de análisis, junto con los scripts y la base de datos
+utilizadasedepositaronenelrepositorioZenodoconelfindegarantizarlareproducibilidadytransparenciadel
+estudiorealizado.(26)
+Resultados
+Los evaluadores internos y externos mostraron resultados similares. La media consensuada entre ambos
+gruposdeevaluacióndelosparámetrosanalizadosmostróunvalorde4,75puntos.(Figura3).
+Figura 2: Se observa el rendimiento por parámetros del constructo . Se muestra el promedio de precisión,
+relevancia y coherencia según ambos grupos de evaluadores
+Rendimiento de la herramienta según evaluadores internos y externos
+5 4.7 4.9 4.9 4.9 4.7
+4.4
+4
+Precisión
+3
+Valor Relevancia
+2
+Coherencia
+1
+0
+Evaluadores Internos Evaluadores Externos
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+4
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+Lamayordiscrepanciaseobservóenlaprecisión,dondeelvalormínimofuede2y3puntossegúnlos
+evaluadores internos y externos, respectivamente. A pesar de esta variabilidad, el primer cuartil (Q1), la
+mediana(Q2)yeltercercuartil(Q3)alcanzaron5enambosgrupos,conunatotalmediade4,5puntos.
+Encuantoalarelevancia,ambosgrupospuntuaronunvalormínimode4,mientrasqueelQ1,Q2,Q3
+al igual que el valor máximo fueron de 5 puntos, con una total media de 4.9 puntos. En el parámetro
+coherencia, los valores mínimos fueron de 4 y 3, respectivamente; Q1, Q2, Q3 y el valor máximo fueron de 5
+puntosenambosgrupos,conunatotalmediade4.8puntos.
+LaherramientatuvounmayorrendimientoenlaasignaturaMetabolismoyNutrición,deacuerdocon
+los datos ofrecidos por ambos grupos, obtuvo un valor de 4,8 puntos mientras que en Bioquímica 4,7 puntos
+(Verfigura3).
+Figura 3: Se observa la evaluación Interna y Externa de la herramienta según asignaturas
+Puntuación promedio de los parámetros evaluados en las asignaturas
+Evaluación 4.77 4.98 4.95 4.74 5 4.95
+interna 4.9
+4.7
+Evaluación
+4.25 4.92 4.61 4.56 4.94 4.81 4.6
+externa
+Precisión Relevancia Coherencia Precisión Relevancia Coherencia
+Bioquímica Metabolismo y nutrición
+Se determinó el puntaje promedio de la precisión, relevancia y coherencia por los temas de cada
+asignatura acorde a la evaluación interna y externa del constructo. El tema con mejor puntuación de
+Bioquímicafuecomunicacióncelular,enMetabolismoyNutrición,ciclodeKrebs.Laspuntuacionesmásbajas
+para ambas asignaturas fueron en transcripción y metabolismo de los carbohidratos en las respectivas
+asignaturas.(Tabla2).
+Tabla 2: En el gráfico se observa la evaluación que obtuvieron los temas de cada asignatura acorde a los parámetros analizados por ambas partes y
+su evaluación final
+Comportamiento de las métricas evaluadas por contenido de cada asignatura
+Evaluadores Internos Evaluadores externos
+Calificación
+Asignatura Tema
+Precisión Relevancia Coherencia Precisión Relevancia Coherencia Final
+Aminoácidos 4,8 5,0 5,0 4,0 4,6 4,3 4,62
+Monosacáridos 4,7 5,0 4,8 4,3 5,0 5,0 4,80
+Nucleótidos 4,6 4,9 5,0 5,0 5,0 4,6 4,85
+Proteínas 4,8 5,0 5,0 3,6 5,0 4,6 4,67
+Polisacáridos 4,9 5,0 5,0 4,3 5,0 5,0 4,87
+Ácidos nucleicos 4,9 5,0 5,0 4,0 5,0 4,3 4,70
+Biocatalizadores y
+4,7 5,0 5,0 3,6 5,0 4,3 4,60
+Cinética enzimática
+Lípidos y Complejos
+Bioquímica 4,8 5,0 5,0 4,6 4,6 5,0 4,83
+multilmoleculares
+Genética molecular
+4,3 4,8 4,9 4,6 5,0 4,6 4,70
+Replicación
+Genética molecular
+4,6 5,0 4,9 3,3 4,6 4,6 4,50
+Transcripción
+Genética molecular
+4,9 5,0 4,7 4,6 5,0 3,6 4,63
+Traducción
+Comunicación Celular 5,0 5,0 5,0 4,6 5,0 5,0 4,93
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+5
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+Generalidades del 4,9 5,0 4,9 5,0 5,0 4,6 4,90
+Metabolismo
+Ciclo de Krebs 4,5 5,0 5,0 5,0 5,0 5,0 4,92
+Cadena Transportadora de 4,6 5,0 5,0 4,6 5,0 5,0 4,87
+electrones
+Fosforilación oxidativa 4,7 5,0 5,0 4,6 5,0 4,6 4,82
+Metabolismo de los 4,4 5,0 4,8 4,0 5,0 4,3 4,58
+carbohidratos
+Metabolismo de los 4,9 5,0 5,0 4,3 5,0 4,3 4,75
+lípidos
+Metabolismo de 4,9 5,0 4,8 4,3 4,6 4,6 4,70
+Metabolismo y compuestos nitrogenados
+Nutrición
+Integración Metabólica 4,4 5,0 5,0 4,6 5,0 5,0 4,83
+Adaptaciones a 4,8 5,0 5,0 4,6 5,0 5,0 4,90
+condiciones específicas
+Nutrición Glúcidos y 5,0 5,0 4,9 4,3 5,0 5,0 4,87
+lípidos en la dieta
+Nutrición proteínas en la 4,5 5,0 4,9 4,6 5,0 5,0 4,83
+dieta
+Nutrición Vitaminas y 5,0 5,0 5,0 4,3 4,6 5,0 4,82
+Minerales
+Desdeelpuntodevistacualitativoseobservóquelainterfazdeusuarioesintuitivayfácildeusar.
+Laherramientamantuvountonocoherenteconalpromptestablecido.Susrespuestasfueronconcisasen
+la mayoría de los casos. Sin embargo, en ciertas ocasiones ofreció respuestas extensas, tendencia que
+continuóenpreguntasdeseguimientohastainiciarunnuevochat.
+Lavelocidaddegeneracióndecontenidosemantuvoaceptablede8hastaa12interacciones.En
+este mismo rango aumentó la frecuencia de fallos, es decir, la elaboración de respuesta se detuvo o fue
+extremadamentelenta,loqueobligóareiniciarelchat.Enlamedidaqueseextendiólainteracciónenun
+chat,estoseventossucedieronconmayorfrecuencia.
+En un reducido número de ocasiones este problema ocurrió en etapas más tempranas de la
+conversación.Loscasosmásprecocesfuerondespuésdelaprimeraosegundapreguntadeunchatrecién
+iniciado.Elchatmásextensoquepudomantenerseconlaherramientafuede19interacciones.
+Las explicaciones que ofreció el sistema mostraron ser útiles y efectivas para personalizar el
+aprendizaje.Cuandoseleindicó(intencionalmente)nocomprenderunarespuesta,laherramientautilizó
+analogías y adaptó el contenido a ejemplos de la vida cotidiana. A continuación, se muestra una de sus
+analogíasenelcasodelarespiracióncelular.
+–Imagina que tu cuerpo es como un coche y la respiración celular es como el
+proceso de convertir la gasolina en energía para que el coche se mueva: La
+gasolina (alimento) se quema en el motor (célula) y produce energía (ATP) que
+hacequeelcochesemueva.Larespiracióncelulareselprocesode"quemar"la
+gasolina (alimento) para producir energía (ATP) que las células pueden utilizar
+pararealizarsusfunciones–
+Se detectaron errores que desde el punto de vista cualitativo pueden invalidar la explicación,
+incluso, si el resto era acertado. Esto afectó el parámetro de precisión, específicamente en los
+temas replicación y transcripción de genética molecular de la asignatura Bioquímica, hecho
+constatableenlaFigura4.
+Al señalar a la herramienta que su respuesta fue incorrecta, intentó autocorregirse, esto
+dio lugar envarias ocasiones a respuestas más acertadas que lainicial,aunque noperfectas. Ante
+preguntas ambiguas o mal redactadas intencionalmente, algunas veces solicitó aclaración; en la
+mayoríadelasocasionesintentódeducirlaintencióndelusuarioyrespondióenconsecuencia.
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+6
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+Figura 4: Representación cualitativa del comportamiento de la herramienta por temas acorde a ambos
+grupos de evaluadores.
+Comportamiento de la herramienta atendiendo a los parámetros precisión, relevancia y
+coherencia desde el punto de vista cualitativo.
+Bioquímica Metabolismo y nutrición
+AA AC
+BC AN CTE NP
+CC PR CK NVM
+n
+ó
+is GMR PS FO NGL
+ic
+e
+r P GmTr NT GMC MCN
+GmT MS IM ML
+LC MC
+AA AC
+BC AN CTE NP
+CC PR CK NVM
+a
+ic
+n GMR PS FO NGL
+a
+v
+e
+le
+GmTr NT GMC MCN
+R
+GmT MS IM ML
+LC MC
+AA AC
+BC AN CTE NP
+CC PR CK NVM
+a
+ic
+n
+e GMR PS FO NGL
+r
+e
+h
+o GmTr NT GMC MCN
+C
+GmT MS IM ML
+LC MC
+Evaluador Interno
+Evaluador externo
+Bioquímica
+AA: Aminoácidos, MS: Monosacáridos, NT: Nucleótidos, PR: Proteínas, PS: Polisacáridos, AN: Ácidos
+nucleicos, BC: Biocatalizadores y Cinética enzimática, LC: Lípidos y Complejos multimoleculares, GR:
+Genética molecular Replicación, GT: Genética molecular Transcripción, GTr: Genética molecular
+Traducción,CC:ComunicaciónCelular
+Metabolismo
+AC:Adaptacionesacondicionesespecíficas,NP:NutriciónProteínasenladieta,NVM:Nutrición,Vitaminas
+y Minerales, NGL: Nutrición Glúcidos y Lípidos en la dieta, MCN: Metabolismo de Compuestos
+Nitrogenados, ML: Metabolismo de los Lípidos, MC: Metabolismo de los Carbohidratos, IM: Integración
+Metabólica,GMC:GeneralidadesdelMetabolismoCelular,FO:Fosforilaciónoxidativa,CK:CiclodeKrebs,
+CTE:CadenaTransportadoradeElectrón.
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+7
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+Discusión
+Losresultadosqueobtuvolaherramientafueronfavorables.Lascalificacionesotorgadasporambos
+gruposdeevaluadoresfueronsuperioresa4segúnlaescaladeLikert.Estosignificaquelasrespuestasfueron
+muyprecisas,relevantesycoherentes.Elparámetroquemenorrendimientotuvofueprecisión,enlamayoría
+delasocasionesestuvopordebajodelresto.
+Estosresultadossoncomparablesconlosdeestudiosanteriores.Porejemplo,GoshyBirreportaron
+unaevaluaciónmediade4/5ensuanálisisdeChatGPT-3.5,(27)mientrasque,enotroestudio,lamismaversión
+del modelo alcanzó un 70 % del rendimiento en contenidos similares a los aquí analizados.(16) Con un
+porcentajedeaciertossimilaralanterior,ChatGPT-3.5seposicionóenquintolugarentre101participantesen
+unexamendeestasasignaturas,puntuaciónsimilaralasanterioresfueobservadaenotroestudiosobreese
+modelo.(28,29)
+En la asignatura Bioquímica existió discrepancia entre los valores otorgados a la herramienta por
+ambos grupos de evaluación. Las calificaciones fueron especialmente bajas en temas de genética molecular,
+aminoácidos, biocatalizadores y proteínas. Estos resultadospueden confirmarse en las figuras 5 y 6, además
+fueronparcialmentesimilaresaloreportadoenestudiospreviosenelLLMChatGPT.(27,28)
+LaasignaturaMetabolismoynutriciónobtuvomejoresresultados,convaloressimilaresentreambo
+grupos de evaluación. Las calificaciones más bajas fueron otorgadas a metabolismo de los compuestos
+nitrogenados,carbohidratosylípidos,locualcoincideparcialmenteconestudiospreviosllevadosacaboenel
+modeloanteriormentemencionado.(27,28)
+Cualitativamente, se identificaron problemas de baja velocidad y detención de la generación de
+contenido. No se descarta la posibilidad de que en ocasiones haya sido más lenta respecto modelos de
+lenguajes como ChatGPT3.5, el cual tuvo una velocidad de generación en preguntas reproductivas de 2,02
+segundosenunodelosestudiosanalizados.(28)Estehechopudodebersealaaltademandaenlosservidores
+de HugingChat durante la recolección de datos, etapa del estudio que coincidió con el lanzamiento del
+modelo. Sin embargo, no se estableció un método para confirmar la causa subyacente para esta dificultad.
+RecientementeselanzóunanuevaversióndelmodeloestudiadodenominadoLlama-3.1-Nemotron-
+70BInstruct-HF,elcualfueentrenadoenunsetdedatossimilar,peroaplicóunmétodoquegarantizamayor
+velocidad y capacidad de respuesta, según informa el preprint.(30,31) Esto podría resolver los problemas
+observadospuestoque,encomprobacionesrealizadasporlaautoría,seconstatóunavelocidadderespuesta
+superior.
+En su conjunto, los resultados de esta investigación y las aquí citadas sugieren que el modelo de
+lenguaje analizado en esta investigación supera a ChatGPT-3.5 y anteriores en ambas asignaturas. Sin
+embargo, es probable que GPT4 tenga un rendimiento superior, ya que en uno de los estudios analizados
+acertó 54de60preguntasdebiologíamolecular,estosresultadosfueronsuperioresaldeestudiantesdeun
+programademaestríaenciencias.(29)
+NofueronencontradosestudiosdondeseanalicedeformadirectalascapacidadesdeChatGPT-4o,y
+4o mini en estas asignaturas. Presumiblemente sus resultados serían superiores en comparación a la
+herramientaanalizadaenesteestudio.Esteplanteamientotienesubaseenresultadosdetestgeneralesalos
+quefueronsometidosdichosmodelos,quemuestransuperarsuspredecesorescomoChatGPT-4.(32)
+La mayor implicación de este estudio radica en las competencias mostradas para elLLM llama 3.1 -
+70B instruct en las asignaturas Bioquímica, Metabolismo y Nutrición. Esto unido a su capacidad para dar
+respuestas de calidad en cualquier momento, podría hacer del sistema un complemento valioso durante la
+formación en dichas asignaturas para la carrera de Medicina, aunque incapaz de sustituir la inigualable
+experienciadelprofesor.
+Esimprescindibleusarestaherramientaconprecauciónenlostemasdondemostrómayordificultad.
+Aunque útil para la formación médica, su funcionar aun es imperfecto, esto coincide con planteamientos de
+otros autores, quienes destacan la importancia de comprobar la información que generan estos
+sistemas.(28,33,34)
+Estos resultados evidencian la necesidad de evaluar este y otros modelos en diversas materias, ya
+quecadaunoesentrenadomedianteconjuntosdedatosdecalidadycantidadvariable,locualimpactaenel
+rendimiento delosmismos.(35,36)Soloasíelprofesoradoidentificará fortalezasylimitacionesen cadamodelo
+pararecomendarloscomorecursocomplementarioenáreasconcretasdelaprendizaje.
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+8
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+También destaca la importancia de desarrollar enfoques educativos que fomenten el pensamiento
+crítico, capacidad en la que estas tecnologías aún son limitadas,(27,28,29) este enfoque evitaría que las
+actividades extractases sean transcritas por el estudiante desde el modelo, sin necesidad de reflexionar
+durantesuprocesodeaprendizaje.
+Esta investigación tuvo un carácter exploratorio, cuestión que permitió mayor flexibilidad en su
+metodológica,sinembargo,esclavereconocerquetuvolimitaciones,que,dehabersidocontroladas,habrían
+incrementado el valor de sus resultados. Destacan entre las mismas, el tamaño de la muestra,
+estadísticamentesignificativa,peroinsuficienteparaevaluarlainfinidaddepreguntasarealizaralmodelopor
+cada tema. Por ejemplo, los evaluadores internos analizaron solo 11 preguntas, mientras los externos 3 por
+cadaunodelos24temas.
+Otra limitación significativa fue que, a pesar de abordarse temas esenciales para estudiantes de la
+carreradeMedicina,lamayoríadelaspreguntassecentraronencontenidosreproductivos,sinevaluarcómo
+laherramientamanejaproblemasanalíticos.Además,noseaplicaronmétodosparamedirdeformaprecisala
+velocidaddegeneracióndecontenido
+Conclusiones
+Los resultados obtenidos por la herramienta fueron favorables en ambas asignaturas, a pesar de ello mostró
+capacidades limitadas en ciertos temas, especialmente en algunas áreas relacionadas a la asignatura
+Bioquímica.
+Recomendaciones
+Decaraafuturasinvestigaciones,serecomiendaevaluarexhaustivamenteesteyotrosLLMparadeterminarsu
+capacidad en las distintas asignaturas del área básica. Estos estudios, preferentemente, deberán emplear
+metodologías que superen las limitaciones aquí señaladas, a fin de obtener resultados suficientemente
+robustos que orienten a profesores y estudiantes en el empleo eficaz de estos sistemas en el proceso de
+enseñanzayaprendizaje.
+Bibliografía
+1-VaswaniA,ShazeerN,ParmarN,UszkoreitJ,JonesL,GomezAN,etal.AttentionisAllyouNeed[Internet].
+NuevaYork:arXiv;2017[Citado09/07/2024].Disponibleen:https://arxiv.org/abs/1706.03762
+2- Uszkoreit J. Transformer A Novel Neural Network Architecture for Language Understanding 2017 [Internet].
+Italia: APICe, 2023 [Citado 10/07/2024]. Disponible en: https://research.google/blog/transformer-a-novel-
+neural-network-architecture-for-language-understanding/
+3- Stryker C, Kavlakoglu E. What is Generative AI? [Internet]. Nueva York: IBM; 2024 [Citado 10/07/2024].
+Disponibleen:https://www.ibm.com/topics/artificial-intelligence
+4- Introduction to prompting | Generative AI on Vertex AI [Internet]. EE UU: Google Cloud; 2023 [Citado
+16/07/2024]. Disponible en: https://cloud.google.com/vertex-ai/generative-
+ai/docs/learn/prompts/introduction-prompt-design
+5-Introducing ChatGPT [Internet]. California: OpenAI; 2023 [Citado 16/07/2024]. Disponible en:
+https://openai.com/index/chatgpt/
+6- IBM. What are Large Language Models (LLMs)? [Internet]. Nueva York: IBM; 2023 [Citado 16/07/2024].
+Disponibleen:https://www.ibm.com/topics/large-language-models
+7- Introducing OpenAI o1. [Internet]. California: OpenAI; 2023 [Citado 26/09/2024]. Disponible en:
+https://openai.com/index/introducing-openai-o1-preview/
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+9
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+8-ArtsiY,SorinV,KonenE,GlicksbergBS,NadkarniG,KlangE.Largelanguagemodelsforgeneratingmedical
+examinations: systematic review. BMC Med Educ [Internet]. 2024 [Citado 5/08/2024];24(1):354. Disponible
+en:https://doi.org/10.1186/s12909-024-05239-y
+9-LiSW,KempMW,LoganSJS,DimriPS,SinghN,MattarCNZ,etal.ChatGPToutscoredhumancandidatesina
+virtual objective structured clinical examination in obstetrics and gynecology. American Journal of Obstetrics
+and Gynecology [Internet]. 2023 [Citado 7/08/2024]; 229(2):172.e1-172.e12. Disponible en:
+https://www.sciencedirect.com/science/article/pii/S000293782300251X
+10-LiangW,ZhangY,CaoH,WangB,DingD,YangX,etal.Canlargelanguagemodelsprovideusefulfeedback
+on researchpapers?Alarge-scaleempirical analysis[Internet]. Nueva York:arXiv;2023 [Citado 13/08/2024].
+Disponibleen:http://arxiv.org/abs/2310.01783
+11- Balcı Ö. The Role of ChatGPT in English as a Foreign Language (EFL) Learning and Teaching: A Systematic
+Review.InternationalJournalofCurrentEducationalStudies[Internet].2024[Citado21/08/2024];3(1):10-15.
+Disponibleen:https://www.ijces.net/index.php/ijces/article/view/107
+12-MeoSA,Al-KhlaiwiT,AbuKhalafAA,MeoAS,KlonoffDC.TheScientificKnowledgeofBardandChatGPTin
+Endocrinology, Diabetes, and Diabetes Technology: Multiple-Choice Questions Examination-Based
+Performance. J Diabetes Sci Technol. [Internet]. 2023 [Citado 21/08/2024]:19322968231203987. Disponible
+en:https://doi.org/10.1177/19322968231203987
+13-SoulageCO,VanCoppenolleF,Guebre-EgziabherF.TheconversationalAI“ChatGPT”outperformsmedical
+students on a physiology university examination. Advances in Physiology Education [Internet]. 2024 [Citado
+22/08/2024];48(4):677-84.Disponibleen:https://journals.physiology.org/doi/full/10.1152/advan.00181.2023
+14- Kaftan AN, Hussain MK, Naser FH. Response accuracy of ChatGPT 3.5 Copilot and Gemini in interpreting
+biochemicallaboratorydataapilotstudy.SciRep[Internet].2024[Citado22/08/2024];14(1):8233.Disponible
+en:https://www.nature.com/articles/s41598-024-58964-1
+15- Dhanvijay AKD, Pinjar MJ, Dhokane N, Sorte SR, Kumari A, Mondal H. Performance of Large Language
+Models (ChatGPT, Bing Search, and Google Bard) in Solving Case Vignettes in Physiology. Cureus [Internet].
+2023[Citado22/08/2024];15(8):e42972.Disponibleen:https://pmc.ncbi.nlm.nih.gov/articles/PMC10475852/
+16-MeoSA,Al-MasriAA,AlotaibiM,MeoMZS,MeoMOS.ChatGPTKnowledgeEvaluationinBasicandClinical
+Medical Sciences: Multiple Choice Question Examination-Based Performance. Healthcare [Internet]. 2023
+[Citado23/08/2024];11(14):2046.Disponibleen:https://pubmed.ncbi.nlm.nih.gov/37510487/
+17- IBM Data IA Team. What are Open Source Large Language Models? [Internet]. Nueva York: IBM; 2023
+[Citado9/09/2024].Disponibleen:https://www.ibm.com/think/topics/open-source-llms
+18- Consecuencias del bloqueo de EE.UU. para las comunicaciones y la informática en Cuba. Trabajadores
+[Internet]. 31 oct 2020 [Citado 9/09/2024]. Disponible en:
+https://www.trabajadores.cu/20201031/consecuencias-del-bloqueode-ee-uu-para-las-comunicaciones-y-la-
+informatica-en-cuba/
+19- Antón S. Bloqueo estadounidense es el principal impedimento para un más amplio acceso a internet en
+Cuba. Granma [Internet]. 26 may 2021 [Citado 12/09/2024]. Disponible en:
+https://www.granma.cu/cuba/2021-05-26/bloqueo-estadounidense-es-el-principal-impedimentopara-un-mas-
+amplio-acceso-a-internet-26-05-2021-17-05-40
+20- Meta-llama/Llama-3.1-70B-Instruct · Hugging Face 2024 [Internet]. Nueva York: Hugging Face; 2023
+[Citado22/09/2024].Disponibleen:https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct
+21- HuggingChat [Internet]. Nueva York: Hugging Face; 2023 [Citado 29 de septiembre de 2024]. Disponible
+en:https://huggingface.co/chat
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+10
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+22- Arias FG. El Proyecto de Investigación Introducción a la Metodología Científica. 6 ed. Caracas-República
+BolivarianadeVenezuela:Episteme;2012.137p.
+23-ShiF,ChenX,MisraK,ScalesN,DohanD,ChiEH,etal.LargeLanguageModelsCanBeEasilyDistractedby
+Irrelevant Context. PMLR [Internet]. 2023 [Citado 29/09/2024]; 202:31210-27. Disponible en:
+https://proceedings.mlr.press/v202/shi23a.html
+24- Likert R. A technique for the measurement of attitudes. Archives of Psychology [Internet]. 1932 [Citado
+10/10/2024];22 (140):55-55 Disponible en: https://legacy.voteview.com/pdf/Likert_1932.pdf 25- Matas A.
+Diseño del formato de escalas tipo Likert: un estado de la cuestión. Revista electrónica de investigación
+educativa [Internet]. 2018 [Citado 11/10/2024];20(1):38-47. Disponible en:
+https://redie.uabc.mx/redie/article/view/1347
+25- Matas A. Diseño del formato de escalas tipo Likert: un estado de la cuestión. Revista electrónica de
+investigación educativa [Internet]. 2018 [Citado 11/10/2024];20(1):38-47. Disponible en:
+https://redie.uabc.mx/redie/article/ view/1347 26-Pérez Pérez CJ. ArchivosdeInvestigación Llama-3.1-70B-
+Instruct Bioquímica Metabolismo y Nutrición [Internet]. Ginebra: Zenodo; 2025 [Citado 03/01/2025].
+Disponibleen:https://zenodo.org/records/14596114
+27- Ghosh A, Bir A, Ghosh A, Bir A. Evaluating ChatGPT’s Ability to Solve Higher-Order Questions on the
+CompetencyBased Medical Education Curriculum in Medical Biochemistry [Internet]. 2023 [Citado
+19/10/2024];15(4):e37023.Disponibleen:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10152308/
+28- Ghosh A, Jindal NM, Gupta VK, Bansal E, Bajwa NK, Sett A. Is ChatGPT’s Knowledge and Interpretative
+AbilityComparabletoFirstProfessionalMBBS(BachelorofMedicine,BachelorofSurgery)StudentsofIndiain
+Taking a Medical Biochemistry Examination?. Cureus [Internet]. 2023 [Citado 19/10/2024];15(10):e47329.
+Disponibleen:https://pmc.ncbi.nlm.nih.gov/articles/PMC10657167/
+29-Sallam M, Al-Salahat K, Eid H, Egger J, Puladi B. Human versus Artificial Intelligence: ChatGPT-4
+Outperforming Bing, Bard, ChatGPT-3.5 and Humans in Clinical Chemistry Multiple-Choice Questions.
+Advances in Medical Education and Practice [Internet]. 2024 [Citado 19/10/2024];15:857-71. Disponible en:
+https://www.tandfonline.com/doi/abs/10.2147/AMEP.S479801
+30- Wang Z, Bukharin A, Delalleau O, Egert D, Shen G, Zeng J, et al. HelpSteer2-Preference: Complementing
+Ratings with Preferences [Internet]. Nueva York: arXiv; 2024 [Citado 19/10/2024]. Disponible en:
+http://arxiv.org/abs/2410.01257
+31- Nvidia/Llama-3.1-Nemotron-70B-Instruct-HF [Internet]. Nueva York: Hugging Face; 2024 [Citado
+24/10/2024]. Disponible en: https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF 32- GPT-4o
+mini: advancing cost-efficient intelligence [Internet]. California: OpenAI; 2024 [Citado 24/10/2024].
+Disponibleen:https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/
+33- Gravel J, D’Amours-Gravel M, Osmanlliu E. Learning to Fake It: Limited Responses and Fabricated
+References Provided by ChatGPT for Medical Questions. Mayo Clinic Proceedings: Digital Health [Internet].
+2023 [Citado 26/10/2024];1(3):226-34. Disponible en:
+https://www.sciencedirect.com/science/article/pii/S2949761223000366
+34-CaruccioL,CirilloS,PoleseG,SolimandoG,SundaramurthyS,TortoraG.CanChatGPTprovideintelligent
+diagnoses?AcomparativestudybetweenpredictivemodelsandChatGPTtodefineanewmedicaldiagnostic
+bot. Expert Systems with Applications [Internet]. 2024 [Citado 27/10/2024];235:121186. Disponible en:
+https://www.sciencedirect.com/science/article/pii/S0957417423016883
+35- Kojima T, Gu SS, Reid M, Matsuo Y, Iwasawa Y. Large Language Models are Zero-Shot Reasoners
+[Internet].NuevaYork:arXiv;2023[Citado28/10/24].Disponibleen:http://arxiv.org/abs/2205.11916
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+11
+Revista Habanera de Ciencias Médicas SSN 1729-519X
+36- ZhangJ,QiaoD,YangM,WeiQ.RegurgitativeTraining:The ValueofRealDatainTrainingLarge
+Language Models [Internet]. Nueva York: arXiv; 2024 [Citado 28/10/24]. Disponible en:
+http://arxiv.org/abs/2407.12835
+Financiamiento:
+Los autores declaran que no existieron fuentes de financiamiento en el estudio realizado.
+Conflicto de intereses
+Los autores declaran la no existencia de conflictos de intereses.
+Contribución de autoría
+Carlos Javier Pérez Pérez: Conceptualización; investigación; curación de datos; análisis formal; metodología;
+Redacción-BorradorOriginal.
+FeliciaPérezMoya:Conceptualización;investigación;metodología;supervisión;validación;RedacciónRevisión
+yedición
+ÁngelaRosaHerreraTrocones:Redacción-BorradorOriginal;RedacciónRevisiónyedición.
+Todoslosautoresparticipamosenladiscusióndelosresultadosyhemosleído,revisadoyaprobadoeltexto
+final.
+EsteesunartículodeAccesoAbiertodistribuidosegúnlostérminosdelaLicenciaCreativeCommonsAtribución-NoComercial4.0quepermiteeluso,distribuciónyreproducciónno
+comercialesysinrestriccionesencualquiermedio,siemprequeseadebidamentecitadalafuenteprimariadepublicación.
+12

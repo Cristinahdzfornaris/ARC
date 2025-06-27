@@ -1,0 +1,458 @@
+CienciasMatemáticas,Vol.33,No.2,2019,Pag.179-188
+Recibido07-2019,Aceptado09-2019
+Decoradores tipo Python para funciones en C#
+utilizando atributos y la API de Roslyn
+Python-like function Decorators in C# using
+Attributes and Roslyn API
+Antonio Alejo Combarro1, José Manuel Espinoza1, Ludwig Leonard Méndez1, Miguel Katrib
+Mora1
+Resumen Pythonsehaconvertidoenlosúltimosañosenunodeloslenguajesdeprogramaciónmáspopulares.
+CuandolacapacidaddePythonparainterceptarllamadasafunciónsecombinaconsudeclaratividad,através
+delosdecoradorespodemostenerunamaneraperfectadeinyectarfuncionalidadadicionalacódigoexistente.
+ImplementardecoradoresenlenguajesdetipadodinámicocomoPythonessencillo,peroparaloslenguajescon
+tipadoestáticocomoC#oJava,estetipodesustituciónseríaimposibleentiempodeejecución.Lostrabajos
+anteriores para proporcionar a estos lenguajes de esta funcionalidad se basaron en el uso de un enfoque
+de byte-code weaving. Este trabajo propone en su lugar utilizar un enfoque de source-code weaving en C#
+utilizando la API de su compilador actual (Roslyn). Siguiendo este enfoque, se presenta un algoritmo para
+tenerelefectodedecoracióntipoPythonparafuncionesenC#.Serealizaronexperimentosparacompararla
+eficienciadelapropuestaconrespectoaunaherramientacomercialobteniéndosebuenosresultados.
+Abstract Pythonhasbecomeinthepastyearsoneofthemostpopularprogramminglanguages. WhenPython
+capabilitytointerceptfunctioncallsiscombinedwiththefunctionalfeaturesthenthroughdecoratorswecan
+haveaseamlesswaytoinjectadditionalfunctionalitytoexistingcode. Implementingdecoratorsindynamictyped
+languageslikePythonisprettystraightforward,butunderthecompiledmodelofstatictypedlanguagelikeC#or
+Java,thiskindofsubstitutionwouldbeimpossibleatruntime. Previousworksonprovidingtheselanguagesofa
+decoratorfeaturewerebasedonusingabytecodeweavingapproach. Thispaperproposesinsteadtousea
+source-codeweavingapproachinC#byusingitscurrentcompiler(Roslyn)API.Followingthisapproach,an
+algorithm is presented to bring Python-like function decoration effect to C#. Experiments were conducted to
+comparetheproposalefficiencywithanstateartlibraryachievinggoodresults.
+PalabrasClave
+Metaprogramación,C#,Roslyn,Python,Decoradores
+Keywords
+Metaprogramming,C#,Roslyn,Python,Decorators
+1ProgrammingDepartment,HavanaUniversity,Havana,Cuba,aalejo@matcom.uh.cu,lleonart@matcom.uh.cu,mkm@matcom.uh.cu
+Introduction orators are one of these syntactic features. When Python
+capability to intercept function calls is combined with the
+Python has become in the past years one of the most functional features then through decorators we can have a
+popularprogramminglanguages. Usuallyitappearsinthetop seamless way to inject additional functionality to existing
+4ofmostpopularityrankingsregardingdifferentmetrics.This code.
+isbecausePythonisamajorlanguageinsomeofmostexciting
+It’simportanttoremarkthatthisshouldnotbeconfused
+technologiestoday. Pythonhaslibrariesformanyscienceand
+withthesocalledDecoratorDesignPatternoftheGangof
+cooltechnologiesareassuchasMachineLearning,Artificial
+Four[5].
+Intelligence(AI),BigData,andRobotics. AlsoPythonhas
+PythonDecoratordefinitionstands1:
+hisownMVCforwebdevelopment: Django.
+There’s been a number of complaints about the choice
+ItsdynamictypingcharacterallowsPythontosupportvery of the name ’decorator’ for this feature. The major one is
+important features for functional programming constructs, thatthenameisnotconsistentwithitsuseintheGoFbook
+multiple inheritance support and metaprogramming, com-
+binedwithgoodsyntacticandtonsofsyntacticsugar. Dec- 1https://www.python.org/dev/peps/pep-0318/
+180 DecoradorestipoPythonparafuncionesenC#utilizandoatributosylaAPIdeRoslyn
+[http://patterndigest.com/patterns/Decorator.html]. Thename SomeofFody’sextensionsarerelatedtoDecoratorimple-
+’decorator’probablyowesmoretoitsuseinthecompilerarea mentations4:
+–asyntaxtreeiswalkedandannotated.
+MethodBoundaryAspect: Allowstodecoratemethods
+Inpractice,adecoratorisanycallablePythonobjectthat
+and hook into method start, method end and method
+can be applied to a function, method or class definition. A
+exceptions(seePostSharpbelow).
+decorator receives the original object being defined and re-
+turns a modified one, which is then bound to the name in
+MethodDecorator: Decorate a method with specific
+thedefinition. AnexampleofaPython’sdecorationandits
+codes that will executed before and after the method
+equivalentcodecanbeseeninCode1.
+invocation.
+Code1. Python’sequivalentcodesapplyingageneric MethodTimer: Injectsmethodtimingcode.
+decorator,with(firstfoo)andwithout(secondfoo)the’@’
+decorationsymbol. AlthoughFodyreducesprogrammingeffortstocodeIL
+modifyingplugins,thedevelopershouldknowseveralCLR
+@decoratorname
+detailsandtheprocessingandproductionofILcodeinorder
+def foo( self ):
+toprogramanextension.
+pass
+Anotherpopularlibraryfor.NETisPostSharp5.Thistool
+isn’topen-sourceneitherfree,althoughithasalimitedfree
+def foo( self ):
+editionfortestingpurposes. PostSharpoffersmultiplesprod-
+pass
+uctstoimproveC#andVBdevelopmentprocess. Offeringan
+foo = decoratorname(foo)
+AOPframework,PostSharpalsoprovidessolutionstoreduce
+boilerplatecode,toimprovethreadingcodesecurity,among
+Implementingdecoratorsindynamictypedlanguageslike
+otherfeatures.
+Pythonisprettystraightforwardbecauseofitsinterpretative
+Python decorators and AOP are very related. AOP as
+behavior,Pythonusesdictionariestosolvenameresolution
+a programming technique, tries to provide mechanisms for
+atruntime. ThisisalsovalidforlanguageslikeTypeScript,
+factoringoutthosefragmentsofanapplicationthatarenot
+despiteitsstaticcharacteristics,becausethecodeistranspiled
+directlyrelatedtothecentralproblemdomain. Inthisway,
+to a dynamic language like JavaScript at the end [4]. But
+decorators could be seen as a way of implementing some
+underthecompiledmodelofstatictypedlanguagelikeC#or
+aspectbehaviorinPython.
+Java,thiskindofruntimesubstitutionwouldbeimpossibleat
+PostSharp’sAOPframeworkprovidesafunctionalityvery
+runtime.
+similartoDecorators, byaddinganaspecttoclasses, prop-
+Then,anydecoratorimplementationinastatictypedlan-
+erties or methods via Attributes. With those aspects it can
+guagehastofindaworkaroundtoavoidtheintrinsicruntime
+bepossibletoinjectcodewhichwellbeexecutedinseveral
+limitationsofstaticcompilers. Acommonwaytodothisand
+specificmoments,suchasconstructorcall,methodenter,exit
+toimplementsomeAOP(AspectOrientedProgramming)ap-
+orexceptionthrow,amongothers.
+proachesisbyusingcodeweavingtools,i.ebymodifyingthe
+PostSharpAOPframeworkworkssimilartoFodyusinga
+generatedintermediatecode(Java-bytecodeorC#-IL)before
+post-compilationapproachtomodifyIntermediateLanguage
+execution. Previous works based on this approach will be
+(IL)toincludeaspectbehaviors. [7]
+analyzedinthenextsection.
+DecoratorsorAspectsimplementationsonFodyorPost-
+SharpAOPframeworkrelyonbytecodeweavingmechanisms.
+ThiswasinpracticetheonlysolutiontoimplementAOPfea-
+1. Related Work
+turesinC#becausetheoriginalblackboxcharacteristicof
+One of the most complete bytecode weaving libraries the Visual C# compiler (csc.exe). Other, but unreasonable
+forthe.NETeco-systemisFody2. Thislibraryisfreeand approach,couldbetoreproduceanewcompilerextendingC#
+open-sourceandisbuiltoverMonoCecil3. Itoffersaplu- withtheaspectsfeatures.
+ginarchitectureinwhichdozensofthirdlibrarieshavebeen C#(badnamed)attributescouldbeconsideredanattempt
+coded. toachievesuchpurposes,butunfortunatelytheseattributes6
+Fody’s github page states: "Manipulating the IL of an have very limited built-in behavior at compiling time. By
+assemblyaspartofabuildrequiresasignificantamountof meansofattributesit’spossibletoinsertmetadata"documen-
+plumbingcode. Thisplumbingcodeinvolvesknowledgeof tation" in the generated IL code but to use this at runtime
+boththeMSBuildandVisualStudioAPIs. Fodyattemptsto requiresalotofplumbingviareflectionprogramming.
+eliminate that plumbing code through an extensible add-in
+4https://github.com/Fody/Home/blob/master/pages/
+model." addins.md
+5https://www.postsharp.net/
+2https://github.com/Fody/Fody 6WeconsiderthatMicrosoft’sdecisiontonamethisas"attribute"was
+3https://github.com/jbevain/cecil unfortunately
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-10
+DecoradorestipoPythonparafuncionesenC#utilizandoatributosylaAPIdeRoslyn 181
+Table1. Source-codeandbytecodeweavingtechniquescomparison
+SourceCodeWeavers BytecodeWeavers
+• Canaccessoutputsourcecode
+Crosslanguagesupportforlanguages
+Advantages • Codecanbeeasiertodebug •
+usingthesamebytecodeframework
+• PluginscouldbeaddedtotheIDE
+• Hardertodebug
+Disadvantages • Cannotachievecross-languagesupport • Havenotaneasywaytodevelopedtheruntimeinteraction
+• Hardertocodeadd-onsorplugins
+TheseweaknesscouldbeavoidednowwithRoslyn[6] isanAPIthatproducesILbytecodes.
+arrival and the new open-source approach for C# and VB Thenextsectionpresentsourproposalfordeclaringadec-
+compilers. Roslyn provides an API that could be accessed oratorfunctiononC#bymappingrequiredPythonfeatures.
+from C# code to interact with the compiler (details will be
+covered in next section). This facilitates the developing of
+3. C#’s decorator declaration
+source-codeweavingtools.
+Advantages and disadvantages of bytecode and source- ToachieveinC#suchdecorationeffectit’snecessary:
+codeweaversarepresentedinTable1.
+1. Functionsshouldbeconsideredfirstclasscitizen(passed
+asparametersandreturnedfrom-tootherfunctions).
+2. Roslyn API
+2. Tohavethecapabilityofdeclaringfunctioninsidean-
+UntilfirstRoslynCTP(CommunityTechnologyPreview)
+otherfunctionsandtousevariablesbeingdeclaredin
+release in 2011 the Microsoft’s C# compiler was a black
+enclosingfunctionscope.
+box[9]. ItwasanunmanagedC++executablewithoutany
+accessibleAPIandnotconsistentwithitsVB’stwin. This
+ThefirstrequirementissatisfiedbyC#’sDelegate,Action
+andotherlimitationsledC#developmentteamtorethinkand
+andFunctypes.Eachofthemhasitsadvantagesanddisadvan-
+redesignC#andVBcompilers,Roslynwastheresultofthis
+tagesforinputandoutputcontext. Delegateallowstocapture
+process. [8]
+any declared method regardless its signature, including its
+RoslynalsobroughtanAPItoaccesscompilers’analysis
+target instance. By other side, Action and Func provides a
+engines. Exposingparsetreesandtypes,expressionbinding,
+waytodeclareadecoratorwhichonlyappliesforaspecific
+andassemblyproductionthroughanAPIRoslynenableda
+kindoffunctionsdependingitssignature. So,inthecurrent
+worldofnewscenariosincludingREPL,toexecuteC#and
+proposaladecoratorfunctionscanreceiveanyoftheabove
+VB as scripting languages, and more. At the Build 2014
+Delegate,ActionorFuncastarget.
+conference in San Francisco April 2014, Microsoft made
+Neverthelessthereturntypeofthedecoratedfunctionwill
+the "Roslyn" project open-source [3]. Roslyn’s first RTM
+bealwaysoftypeFunc<object[],object>becausethisisthe
+(ReleasetoManufacturing)waswithVisualStudio2015[10].
+mostgeneralwaythatafunctioncouldbeadaptedtotheuser
+The.NETCompilerPlatformSDKexposestheC#and
+desireswithoutforcedcastswhenreturning.
+VisualBasiccompilers’codeanalysisbyprovidinganAPI
+ToaccomplishthesecondrequirementC#provideslamb-
+layerthatmirrorsatraditionalcompilerpipeline.
+das,delegatesandtherecentlyaddedlocalfunctions. These
+Eachphaseofthispipelineisaseparatecomponent. First,
+threeresourcescancapturevariablesbeingdefinedinouter
+theparsephasetokenizesandparsessourcetextintosyntax
+scopestobeusedlaterwhentheywillbeinvoked.
+thatfollowsthelanguagegrammar. Second,thedeclaration
+InTable2,itcanbeseentwoimplementationsofMemo-
+phaseanalyzessourceandimportedmetadatatoformnamed
+ize7decorator,thefirstonPythonandthesecondoneonC#.
+symbols. Next,thebindphasematchesidentifiersinthecode
+C#codeillustratesourproposaltodecoratorsdeclarationon
+tosymbols. Finally,theemitphaseemitsanassemblywith
+thislanguage.
+alltheinformationbuiltupbythecompiler.
+After proposing a methodology for declaring decorator
+Correspondingtoeachofthesephasesthe.NETCompiler
+function, the next step will be defining one to decorate an
+PlatformSDKexposesanobjectmodelallowingtheaccess
+arbitraryC#method. Nextsectionwillcoverthistopic.
+totheinformationofthephase(seeFigure1). Theparsing
+phase exposes a syntax tree, the declaration phase exposes
+7Addsthecapabilitytomemorizethereturnvalueoffunctionsgiventhe
+a hierarchical symbol table, the binding phase exposes the
+argumentsinordertoavoidrepeatedcalculationswhencalledagain. This
+resultofthecompiler’ssemanticanalysis,andtheemitphase behaviorisusuallydesiredforpurefunctions.
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-10
+182 DecoradorestipoPythonparafuncionesenC#utilizandoatributosylaAPIdeRoslyn
+Figure1. Roslyn’sCompilerpipeline,compilerAPIandLanguageserviceslayersmapping
+4. C# Attributes as Decoration Mark }
+Todoesn’tforcechangesintotheC#syntaxweusedC#’s
+This solve the syntactic side; the next section will ad-
+attributestosimulatethePython’s@decorationsyntax, as
+dresshowtoachievethedecorationbehaviorinastatictyped
+PostSharpandFodyalsousesattributesto"annotate"code.
+languagelikeC#.
+Unfortunately,C#attributeshasseveralrestrictions. For
+example,theyonlyacceptbuild-intypesorarrayofbuild-in
+5. Decoration effect by static method
+typesasconstructorarguments. Thisconstrainswillbepar-
+substitution
+tiallyaddressedinthepresentproposaltoprovideadeveloper
+friendlywaytodefinedecorators. Becauseitsinterpretativeexecution,Pythonachievedeco-
+InPythonanyfunctionreturningafunctionoracallable rationeffectchangingthemethoddefinitionatruntime. Such
+objectcanbeusedasdecoratorbecausethe@syntaxisinte- similarruntimemethoddefinitionsubstitutionforcompiled
+gratedinthelanguage. Butachievingsimilarexpressiveness languagelikeC#isanimpossibletask. Untilnowlibraries
+inC#withoutchangingthelanguagesyntaxisnotpossible. simulatedecorationdoingaheavyplumbingtaskofinjecting
+Inourapproachitwillbeusedamarkattribute(@Decorate) andeditingILcodeintheexeordllfilesbeforerunningthem.
+andtheC#nameof8 operator[1]becauseofitsIntellisense This work proposes a Python-like approach to C#, but
+analysis. AnexampleofafunctionFibonaccibeingdecorated instead of performing an error prune runtime method re-
+withastatic functionMemoizeplacedin aDecoratorClass definition to execute it make a static redefinition in a pre-
+classisshowninCode2. compilationstep. Thispre-compilationsubstitutionorsource
+codeweavingstepcanbedonethankstoRoslyn’scapabilities.
+Code2. DecoratingaFibonaccimethodwithMemoize Roslyn’s syntax trees are the fundamental and primary
+decorator
+structureusedforcompilation,codeanalysis,binding,refac-
+public class SomeClass toring,IDEfeatures,andcodegeneration.
+{ In order to provide thread-safe access syntax trees are
+... immutableobjects. Thentoproduceoursourcecodeweaving
+approachweneedtoproduceanewtree.
+[@Decorate(nameof(Class1 .Memoize))] Roslyn provides several ways to create and to obtain a
+public int Fib(int n){ modifiedversionofasyntaxtree: usingWith*andReplaceN-
+return n == 0 || n == 1 odemethods,byinstantiatingDocumentEditorclass9andby
+? 1 inheritingfromSyntaxRewriterclasses10.
+: Fib(n−1) + Fib(n−2);
+9https://docs.microsoft.com/en-us/dotnet/api/
+}
+microsoft.codeanalysis.editing.documenteditor?
+view=roslyn-dotnet
+8Theeffectofthenameofusedinthisexamplemeansthatachangeof 10https://github.com/dotnet/roslyn/wiki/
+thenameDecoratorClass.MemoizewillbereproducedinCode. Getting-Started-C%23-Syntax-Transformation
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-10
+DecoradorestipoPythonparafuncionesenC#utilizandoatributosylaAPIdeRoslyn 183
+Table2. MemoizedecoratorinPython(left)andC#proposal(right)
+Python C#
+static Func<object [] , object > Memoize(Delegate d)
+{
+var memory = new Dictionary <object [] ,
+def memoize(function ): object >(new ObjectArrayEqualityComparer ());
+memory = {}
+return (args) =>
+def decorated(∗args ): {
+if args in memory: object res ;
+return memory[args] if (memory.TryGetValue(args , out res ))
+else : {
+x = function(∗args) return res ;
+memory[args] = x }
+return x
+res = d.DynamicInvoke(args );
+return decorated memory[args] = res ;
+return res ;
+};
+}
+EachconcreteclassthatderivesfromSyntaxNodedefines return value of the decorator passed as parameter to
+With*methodswhichyoucanusetospecifychangestoits @Decorate. Then, assign to this variable the return
+child properties. Additionally, the ReplaceNode extension of calling the decorator method passing the original
+methodcanbeusedtoreplaceadescendentnodeinasubtree. methodselectedfromstep1asparameter.
+InstancingDocumentEditorisanotherwayto"modify"
+asyntaxtreethatworksbystackingchanges(nodeadding, 4. Finally,areturnexpressionwhichinvokesthedelegate
+removingorreplacement)tobeperformedinaspecifiedC# variableobtainedinstep3bypassingtheinputsparam-
+document. In order to register changes, the class provides eters as object array argument will be injected in the
+severalmethodslike: InsertBefore,InsertAfter,RemoveNode, originalemptymethodresultingfromstep2.
+ReplaceNode. Afteralldesiredtransformationsareregistered,
+the user must call GetChangedDocument to retrieve a new ApplyingtheabovealgorithmtoCode2willproducethe
+instanceofthedocumentwithchangesperformed. output shown in Code 3. In such code it can be seen that
+Due to nature of the transformations that must be done themethodcallwillexecutethespecialfield__decoratedFi-
+inordertoperformaPython-likedecorationwedecidedto bonacci__oftypeFuncwhichisinitializedwhentheprogram
+useaSyntaxRewriterapproach. SyntaxRewriterisbasedon beginsaspartofstaticclassconstructorexecution.Remember
+VisitorDesignPatternandcanbeusedtoapplyasetoftrans- that the value of this field is the decorated object returned
+formations to multiple types of SyntaxNode wherever they by the decorator @Decorate attribute applied to Fibonnaci
+appear in a syntax tree. It must be used by inheriting of it, method. Inthiswayallcallstothisfunctionwillbecaptured
+then overriding the target node type’s visitor methods and asinPythonandthememoizationlogicwillbeexecutedfor
+returningthenewtransformednode. TheC#’sclass,CSharp- eachofthosecalls.
+SyntaxRewriter,providesmorethan200visitormethods. Innextsectionitwillbeexposedsomeexperimentsper-
+Theproposed"decoration"algorithmbasedonstaticmethod formedinordertovalidatepresentalgorithmandtocompare
+definitionsubstitutionisdividedinthefollowingsteps: itsperformancewithotheralternatives.
+1. Findmethodsmarkedwiththe@Decorateattribute.
+6. Experimental results
+2. Given a method resulting of step 1, extract all code
+fromitandinjectthecodeinanewprivatemethodat To experiment it was used the memoize pattern. This
+thesameclass. patternisaverypowerfulcrosscuttingfeatureoraspect. It’s
+easy to implement via decorators in Python (Table 2 left),
+3. Giventheclassofthemethodresultingofstep1,add but it’s hard or impossible to implement in a general and
+astaticprivatevariablewhichtypeisthesameofthe factorizedwayinC#orotherstatictypedlanguage.
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-10
+184 DecoradorestipoPythonparafuncionesenC#utilizandoatributosylaAPIdeRoslyn
+Code3. ResultingcodeafterapplyingtheproposedalgorithmtopreviousFibonaccimethodusingMemoizedecorator
+public class SomeClass
+{
+...
+static Func<object [] , object> __decoratedFibonacci__=
+DecoratorClass .Memoize(newFunc<int , int >(Fibonacci_decorated_Memoize ));
+public static int Fibonacci(int n){
+return (int)__decoratedFibonacci__(new object []{n});
+}
+private int Fibonacci_decorated_Memoize(int n){
+return n == 0 || n == 1 ? 1 : Fibonacci(n−1) + Fibonacci(n−2);
+}
+}
+Aninefficientstraightforwardrecursiveimplementation For the experiments12, some Fody’s plugins 13 14 were
+ofFibonacciwasusedtotestallmemoizeimplementations. tested in order to implement a memoize variant using this
+ThisfunctionreceivesaintandreturnsaBigInteger[2](to librarywithoutsuccess. Thesepluginsdon’tallowtoreturna
+avoidintegeroperationsoverflowissuesinourtests). Several valuedirectlyfromthemethodcallinterceptorwithoutcalling
+memoizevariantswereimplementedtobeusedtoimprove thetargetfunctionfirst,whichisthemainMemoizepattern
+Fibonaccisuccessionandavoidrepeatedcalculations: objective. OlderFody’sversionshadaMethodCacheplugin
+thatiscurrentlynolongermaintained15anddoesn’tworkwith
+latestlibrary’sversions.
+1. PlainC#withboxing/unboxing: Usingaglobalstatic
+Dictionary<object[],object>tomemoize. Thisforces Testingexperiment1wasperformedcreatingaConsole
+todoboxingandunboxingandtheuseofthedictionary Application Project that calculates Fibonacci(n) for 2<=
+shouldhard-wiredasapartoftheFibonaccifunction n<=10000foreachvariantimplementation. Thememory
+body. waskeptwhileincrementingnandtheConsoleAppwasexe-
+cuted40timesinordertogetthemeantimeandthestandard
+deviationforeveryFibonnacci(n)calculus.
+2. Plain C# with Generic Specialization: The same as
+Figure2showstheresultsofrunningthepreviouslypre-
+(1)butusingastaticexternalDictionary<int,BigInte-
+sentedmemoizeimplementationsforExperiment1andTable
+ger>genericspecialization.
+3showsinExperiment1columnthemeanstandarddeviation
+foreachimplementationgiventheexperiment. Asillustrated,
+3. Decoratorwithboxing/unboxing: UsingaDictionary
+PostSharphastheheaviestinitializationstep. Toverifythat,it
+<object[],object>butweavingitintheFibonaccideco-
+wasdevelopedaminorExperiment2,inwhichtheinitializa-
+ratedfunction(theapproachproposedinthispaper).
+tionpartofeverymemoizemethodwasmeasured40times.
+Theresultsofthisexperimentconfirmthehypothesisandits
+4. DecoratorwithGenericSpecialization: Usingthevari-
+resultsareshowninExperiment2ofTable3.
+ant(3)butwithgenericspecialization,i.esubstituting
+Figure3illustratesmoreclearlytheExperiment1without
+theparameterswiththecorrespondingintandBigInte-
+takingintoaccounttheinitializationpart. Asthechartshows,
+ger.
+thispaper’sproposalalthoughithasaverylowinitialization
+time gets heavier in time than others with PostSharp’s im-
+5. PostSharpwithboxing/unboxing: PostSharpwithbox- plementation following it. The most interesting part of the
+ing/unboxing: BasedonPostsharp’sMethodIntercep- experimentsweretheperformancebehaviorofthePlainC#
+tionAspect class 11, it was implemented a memoize
+aspect(attribute). Animplementationalternativeavoid- 12AllexperimentswereruninanIntelCorei5-6500CPU@3.20GHz
+ingboxing/unboxingisn’tpossiblerightnowbecause with8GBofRAMinaVisualStudio15.8.2Releaseconfiguration.
+PostSharpalreadyperformsboxingoperationsforfunc- 13https://github.com/Fody/MethodDecorator
+14https://github.com/vescon/MethodBoundaryAspect.
+tion’sargumentsandreturnvalues.
+Fody
+15https://github.com/Fody/Home/blob/master/pages/
+11https://doc.postsharp.net/method-interception addins.md
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-10
+DecoradorestipoPythonparafuncionesenC#utilizandoatributosylaAPIdeRoslyn 185
+Table3. StandarddeviationaverageforExperiments1and3and,meanandstandarddeviationforExperiment2
+Experiment1 Experiment2 Experiment3
+StdDeviation Mean StdDeviation StdDeviation
+MemoizeMethod
+avg(ms) (ms) (ms) avg(ms)
+PLAINC#WITHBOXING/UNBOXING 1.173 0.3977 0.0854 0.6863
+PLAINC#WITHGENERICSPECIALIZATION 0.6753 1.3956 0.1925 0.3981
+DECORATORWITHBOXING/UNBOXING 1.4449 0.5808 0.0804 1.1795
+DECORATORWITHGENERICSPECIALIZATION 0.555 1.5338 0.1553 0.4087
+POSTSHARPWITHBOXING/UNBOXING 1.2 27.0082 1.2231 1.0354
+withGenericSpecializationandtheDecoratorwithGeneric mingcapabilitiesthatcouldbeachievedusingtheRoslynSyn-
+Specializationmethods. Although,itcouldbeexpectedaper- taxTreeAPIandinparticularCSharpSyntaxRewriterclass
+formanceboostwhenremovingboxing/unboxingoperations methods. It was illustrated in the experimental results sec-
+byusinggenericity,theimprovewasasoptimalastheoptimal tionthecompetitiveperformanceofprovidedimplementation
+hard-wiredsolutionimplemented. comparewithotherapproaches.
+AnadditionalExperiment3wasperformedinordertotest
+inotherslightlydifferentconditionsthebehaviorofthefive
+8. Future Work
+Memoizeimplementations. Itwasperformedasstatednext:
+similartoExperiment1,itwascreatedaConsoleApplication Thepresentedproposalservesasbasetofurtherimprove-
+that calculates Fibonacci(n) for 2<=n<=500 for every mentsandextensions. Onecouldbetoimplementmultiple
+memoizeimplementations. Inthiscase,thememorywasn’t decorator composition support. As experiments showed, it
+keptwhileincrementingnandtheConsoleAppwasexecuted could be a performance boost to implement a mechanism,
+40timestoo. Itwasremovedfromtheresultstheinitialtime similartowhatC#doesinruntimewithgenerictypesinstan-
+penaltyforeachmemoizemethod. Theresultscanbeseenin tiation,toreduceorremoveboxingandunboxingoperations
+Figure4. intheproposeddecorationalgorithm.
+ForExperiment3,similarresultstoExperiment1were AnotherusefulareaforafurtherworkistouseRoslynto
+obtained: MemoizeDecoratorwithboxing/unboxingpenalty producesomemetaprogrammingcapabilities. Forexample,
+getsheavierwhilenincreases,followedbyPostSharp’sMem- tointersectconstructor,methodcallsandpropertyaccesses,
+oize Aspect, and the Memoize Decorator without the box- also could to provide a mechanism to auto-generates some
+ing/unboxingoperationsgetsthesameperformanceasopti- membersinordertoreducemanualboilerplatecode.
+malmemoizehard-wiredmemorydecoratorwithspecialized
+genericdictionary.
+References
+7. Conclusions [1] Joseph Albahari and Ben Albahari. C# 7.0 in a Nut-
+shell: TheDefinitiveReference,chapter3,pages95–96.
+By doing Roslyn metaprogramming, in this work has
+O’ReillyMedia,2017.
+beenpresentedaproposaltoprovideadynamicPython-like
+decorator functionality to a static compiling language like [2] Joseph Albahari and Ben Albahari. C# 7.0 in a Nut-
+C#. Previousworksinthislinehavebeenfocusedonachieve shell: TheDefinitiveReference,chapter6,pages276–
+Decorationeffectbyusingbytecodeweavingtools. Instead,
+277. O’ReillyMedia,2017.
+thecurrentproposalpresentanapproachbasedonsourcecode
+weaving tools thanks to the Roslyn C# compiler API. This [3] Jason Bock. .NET Development Using the Compiler
+approachprovidesseveraladvantageslikethattheoutputcode API. Apress,2016.
+willbeavailabledirectlyinC#andthuseasiertounderstand
+andtodebug. [4] Steve Fenton. Pro TypeScript Application-Scale
+The solution is focused in declaring First Order Func- JavaScript Development, chapter 1, pages 76–81.
+tions in C# which receives either a Delegate, a Func or an Apress,Berkeley,CA,2ndedition,2018.
+ActiontypeparameterandreturnsaFunc<object[],object>
+asthedecoratedobject. InordertonotdisrupttheC#syntax [5] ErichGamma,RichardHelm,RalphJohnson,andJohn
+wasusedtheAttributeC#featuretoexpressthedecoration Vlissides. Design Patterns: Elements of Reusable
+attempt. Object-oriented Software. Addison-Wesley Longman
+Thisworkservesasanexampleofthegoodmetaprogram- PublishingCo.,Inc.,Boston,MA,USA,1995.
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-10
+186 DecoradorestipoPythonparafuncionesenC#utilizandoatributosylaAPIdeRoslyn
+[6] GitHub. dotnet/roslyn: The roslyn .net compiler pro- [9] Neil McAllister. Microsoft’s roslyn: Reinventing the
+videsc#andvisualbasiclanguageswithrichcodeanal- compilerasweknowit,2011.
+ysisapis.,2019.
+[10] Microsoft. What’snewinvisualstudio2015,2014.
+[7] JoeKunk. Aspect-orientedprogrammingwithpostsharp.
+[8] EricLippert. Hiringforroslyn,2010.
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-10
+DecoradorestipoPythonparafuncionesenC#utilizandoatributosylaAPIdeRoslyn 187
+Figure2. TimemeasuresobtainedbycallingFibonacci(n)incrementallywithdistinctMemoizeimplementations
+Figure3. SeveralC#’smemoizeimplementationsbehavioroncallingFibonacci(n)incrementallyminusinitializationtime
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-10
+188 DecoradorestipoPythonparafuncionesenC#utilizandoatributosylaAPIdeRoslyn
+Figure4. SeveralC#’smemoizeimplementationsbehavioroncallingFibonacci(n)incrementallyminusinitializationtimeand
+resettingthememorybeforeeveryFibonacci(n)call
+CienciasMatemáticas,Vol.XX,No.X,XXXX,Pag.1-10

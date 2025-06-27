@@ -1,0 +1,387 @@
+CienciasMatemáticas,Vol. 31,No. 2,Pag. 151-157, 2017
+Recibido10-2017
+Medidas para asegurar la calidad del etiquetado de
+los modelos de procesos de negocio en el sector de
+la salud
+Measures to ensure the quality of the labeling of
+business process models in the health sector
+Lisbet Herna´ndez Ca´rdenas1*, Frank Reyes Garc´ıa1,Isel Moreno Montes de Oca1,Abel
+Rodr´ıguez Morffi1
+Resumen Mejorarlaeficienciaenlosprocesosdenegociorepresentaunfocodeaccio´nparalosdirectivosde
+lasempresas. Laimplementacio´neimplantacio´ndelaGestio´nporProcesos,comoestrategiaparareuniry
+arraigarlacalidadylamejoracontinuaenlasinstitucionesdesalud,comounme´todoma´sdisipadoeinteractivo,
+permitira´ aumentarelgusto,bienestarysatisfaccio´ndelosprestadoresdeserviciodesalud,almismotiempo
+quesereducira´ lavariedadenelniveldecalidadenlosdiversosserviciosdesaludenelpa´ıs. BusinessProcess
+Management(BPM)seperfilacomounatendenciaparaaumentarlaeficienciadelnegocio,delosprocesosy
+generarlasventajascompetitivasqueexigeelmercadoyquenecesitaenlaactualidadlasentidadesdesalud
+paraofrecerunmejorserviciodecaraalcliente. UnodelosretosrelacionadosconlaGestio´ndeProcesosde
+Negocioserelacionaconlamejoradelacomprensio´ndelosmodelos. Esteaspectoesdeparticularimportancia
+debidoaqueelprincipalobjetivodelosmodelosessercomprendidosporloshumanos. Paralograrlo,varias
+medidas de calidad se han propuesto en la literatura, las cuales se relacionan con el taman˜o, la densidad,
+modularidad, conectividad, ciclicidad y concurrencia. En este trabajo se proponen un conjunto de medidas
+que permiten evaluar y asegurar la calidad del estilo de etiquetas de los modelos de procesos de negocios
+relacionadosconlasentidadesdelasalud.
+Abstract Improvingefficiencyofbusinessprocessesrepresentsafocusofactionforbusinessmanagers. The
+implementationofprocessmanagementasastrategytogatheranddeepenqualityandcontinuousimprovement
+inhealthinstitutions,asadissipatedandinteractivemethodwillincreasethetaste,well-beingandsatisfaction
+of provider’s service health, while the variety will be reduced by the level of quality in the various health
+servicesinthecountry. BusinessProcessManagement(BPM)isemergingasatrendtoincreasebusinessand
+processefficiency. Besides,itgeneratescompetitiveadvantagesthatthemarketdemandsandneedsatcurrent
+health entities to provide better service for the customer. One of the challenges related to business process
+managementistheimprovementofunderstandingofthemodels. Thisaspectisparticularlyimportantbecause
+themainobjectiveofthemodelsistobeunderstoodbyhumans. Toachievethis,severalqualitymeasureshave
+beenproposedintheliterature,whicharerelatedtothesize,density,modularity,connectivity,cyclicalityand
+concurrency.Thispaperpresentsasetofmeasurestoassessandensurethequalityoflabelingstyleofbusiness
+processmodelsrelatedtohealthentities.
+PalabrasClave
+BPMN—Medidas—Calidad
+1UniversidadCentral“MartaAbreu”deLasVillas,VillaClara,Cuba,lisbet@uclv.cu,frank26@uclv.cu,isel@uclv.edu.cu,arm@uclv.edu.cu
+*AutorparaCorrespondencia
+Introduccio´n ana´lisis, disen˜o, implementacio´nyunareadaptacio´ndelos
+procesos organizacionales. Por esta razo´n es relevante
+comunicar,entenderymanejareldominiodelainformacio´n
+El uso adecuado de las Tecnolog´ıas de Informacio´n y
+ylosprocesos,paracomprenderelfinyrealizarunacorrecta
+Comunicacio´n(TIC)hapasadoaserunelementoestrate´gico
+gestio´nderequerimientosbasadaenelentendimientodelas
+ente´rminosdecompetitividadparalasorganizacionesdentro
+actividadesdecualquierorganizacio´n.
+de un entorno de globalizacio´n. Esto implica acciones de
+152 Medidasparaasegurarlacalidaddeletiquetadodelosmodelosdeprocesosdenegocioenelsectordelasalud
+Muchasorganizacionessecentranenbuscarunaformade aplicacio´ndemedidasenlaetapadedisen˜opuedemejorarun
+orientar la gestio´n de sus procesos de negocio en la procesodenegocio,loquefacilitalacorreccio´ndeposibles
+actualidad. Estaideaseasumeporelconceptodegestio´nde errores.
+procesosdenegocio(BusinessProcessManagement;BPM) Para ello hoy en d´ıa existen varias medidas o me´tricas
+queconstituyeunaformaesencialdecontrolarygobernarlos paralamodelacio´ndeprocesosdenegocio. Estasmedidas
+procesos de negocio para cualquier organizacio´n con el esta´nrelacionadasconeltaman˜o,ladensidad,modularidad,
+objetivodemejorarsurendimientoempresarial. Esporesto conectividad,ciclicidadyconcurrencia[7]. Deigualformase
+que adoptar la gestio´n de procesos de negocio fuerza al puedemedirlacalidaddelestilodeetiquetasdelosmodelos
+negocioapensarsobree´lyaformalizarlocomprendiendolos deprocesosdenegocios,mediantemedidas. Esporestoque
+procesosactuales, loquehacevermejoraspotencialesque elpropo´sitodeestetrabajoesbrindarunconjuntodemedidas
+eliminanpasosoautomatizantareasmanuales[6]. ElSector que permiten evaluar y asegurar la calidad del estilo de
+de la Salud no escapa a esta tendencia, ya que debe etiquetas de los modelos de procesos de negocios
+desarrollar una funcio´n eficiente y efectivo servicio a la relacionadosconlasentidadesdelasalud.
+sociedad como tambie´n tener en cuenta que uno de los
+elementosnecesariosparaeldesarrolloefectivodeprogramas
+1. BPM en la salud
+de calidad es la satisfaccio´n del paciente en sus demandas,
+Lasentidadesdesaludrepresentanunimportantesectordela
+expectativasyaccesibilidadalosserviciosdesalud.
+econom´ıa. Sinembargo,algunasdeellasdesdean˜osatra´sse
+Cada vez ma´s, los ciudadanos, las organizaciones y las
+encuentran en un retraso tecnolo´gico que les hace perder
+empresas reclaman de las entidades de salud que la
+competitividad ante el mercado mundial. Muy pocas
+prestacio´n de sus servicios sean de calidad, la cr´ıtica de la
+enfrentaneldesaf´ıodebuscartecnolog´ıasquelasayudena
+gestio´ndelsectorsanitarioserefierealaineficienciadelas
+brindarunmejorserviciomarcadoporlacalidadparalograr
+grandesestructurasjera´rquicasdelaAdministracio´nalahora
+la satisfaccio´n de los usuarios, y otras, no saben co´mo
+de intentar adaptarse a un mundo en plena transformacio´n
+enfrentaresteproblema. Paralasempresasdelsectordela
+tecnolo´gicayecono´mica. Paraellosehaceimprescindible
+saludlatecnolog´ıasehaconvertidoenunaherramientaque
+introducirenlasOrganizacioneseInstitucionessistemasde
+puede ser un factor decisivo para brindar calidad y mejor
+calidadenlagestio´n,incorporarlametodolog´ıadelamejora
+serviciosalosusuarios.
+continua y adoptar aquellos principios de esa filosof´ıa de
+BPMreu´netodosestoselementosdelatecnolog´ıaenuna
+gestio´nde lacalidad, de acuerdoconsu especificidady de
+u´nicaplataformaquegestionaelciclodevidadeunproceso
+conformidadconelordenamientojur´ıdico. Porsuparte,la
+desde la definicio´n, despliegue, ejecucio´n, valoracio´n,
+poblacio´n mejorara´ su percepcio´n sobre la calidad de los
+modificacio´n y despliegue posterior. [14]. Un aspecto
+servicios de salud con informacio´n ver´ıdica, que permita
+esencialdeBPMesquelacapadeprocesosindependiente
+elevarlaconfianzadelapoblacio´nenelsistemadesalud.
+complementa las inversiones actuales (y futuras) en
+Para las organizaciones por lo general es importante aplicaciones, almacenes de contenidos y herramientas de
+descubrir,controlarymejorarsusprocesosparaaumentarsus integracio´n de datos. El actor trabajara´ desde su puesto de
+ingresostotales,lasatisfaccio´ndelcliente,oparaasegurarel trabajo, desde su celular o desde cualquier dispositivo
+cumplimiento normativo [4].Una parte esencial de este conectado a la Web indistintamente y BPM le proveera´ de
+concepto es la modelacio´n de los procesos y los aspectos todosloselementosparacompletarsutarea. Ladefinicio´nde
+relacionadosconsucalidad. Enl´ıneaconlaimportanciade los procesos de negocio es quien comanda el motor de
+modelosdeprocesosdealtacalidad,variosestudiosrecientes procesosparaqueBPMaccione.
+haninvestigadodiferentesfactoresqueinfluyenenlamisma, No´tesequenosehabladeaplicacionesodeestructuras
+comoporejemplo,co´mociertosatributosestructurales(como de informacio´n sino de procesos independientes: “un
+la densidad y la complejidad) de los modelos de procesos conjunto de actividades que deben llevarse a cabo en un
+afectansucalidad[11]. Variosesfuerzosdeinvestigacio´nse orden y por los correspondientes actores, en tiempos
+han dedicado a aquellos aspectos relacionados con la aceptables”. Sedebedefinir“que´ sedebehacer”,“quie´nlo
+comprensio´ndelosmodelosparaquelosmismoscumplan debe hacer”, “con que´ debe hacerlo” y que´ entiende la
+uno de sus principales objetivos, el respaldo de la organizacio´n por “tiempos aceptables”. La organizacio´n
+comunicacio´nentrehumanos. tendra´ lafacilidaddemodificarsusprocesosylacapacidad
+En los u´ltimos an˜os, los procesos de negocio han sido deimplementarloscambiosinmediatamente,“versionandoel
+evaluadosymedidosdesdediferentesperspectivas. Algunas proceso”.
+de las propuestas son adaptaciones de me´tricas o medidas Antelonombradoanteriormentelasentidadesdesalud
+utilizadas en ingenier´ıa del software, debido a la similitud buscan como pueden ejecutar de manera adecuada sus
+existenteentreelprocesosoftwareyelprocesodenegocio. estrategias,paralocualsurgenherramientascomolaGestio´n
+El disen˜o de medidas esta´ relacionado con las propiedades de Procesos de Negocio (BPM) y los lenguajes de
+esta´ticas de los procesos de negocio y se definen sobre el diagramacio´n de procesos como BPMN (Business Process
+modelo de procesos de negocio mientras se disen˜a. La ManagementNotation).
+Medidasparaasegurarlacalidaddeletiquetadodelosmodelosdeprocesosdenegocioenelsectordelasalud 153
+1.1 BPMN Se considera la comprensibilidad de los modelos de
+Dentrodelavariedaddelenguajespararepresentarprocesos procesos de negocio como uno de los principales
+de negocio, se pueden citar UML (acro´nimo de Unified determinantesparalaprobabilidaddelerror. Estosebasaen
+Modeling Language), IDEF3 (Integrated Definition for quelosmodelosdeprocesosdenegociosonconstruidospor
+Process Description Capture Method), EPC (Event-driven modeladores humanos y su plan esta´ sujeto a una
+ProcessChain),BPMNentreotros. Estetrabajosecentraen racionalidad de errores limitada [5]. Adema´s, la
+elusodeBPMNdebidoaqueelcrecienteintere´senBPMN comprensibilidaddeunmodeloporunapersonaesta´dadapor
+lo convierte en un importante esta´ndar respecto a la una diversidad de factores, los cuales influyen en el
+modelacio´ndeprocesosdentroyentrelasorganizaciones. entendimiento de dicho modelo por personas que en
+BPMNofreceunmododeconceptualizarlosprocesosde ocasiones no tienen un vasto conocimiento acerca del
+negocioenunarepresentacio´ngra´ficausandoconstrucciones proceso. Estosfactoresesta´nrelacionadosconlacomplejidad
+tales como eventos, compuertas, actividades, procesos, general (taman˜o y morfolog´ıa) y la representacio´n visual
+subprocesos, y dependencias de flujo de control [3, 1]. (disen˜ovisualyestilodeetiquetas).
+Adema´sesunmedioparadocumentar,modelaryanalizarlos Elmodeladodeprocesodenegocioesunaparteesencial
+cambiantes procesos de negocio en un modo estructurado, delagestio´ndeprocesosenlasgrandesempresas. Muchas
+lo´gicoysistema´tico[15]. deestascompan˜´ıasdisen˜anymantienencientosdemodelos
+LametaprimariadeBPMNessegu´n[19]“proporcionar paracapturarsusoperaciones[16]. Lacalidaddelosmodelos
+unanotacio´nfa´cilmentecomprensibleportodoslosusuarios de procesos ha sido enfocada desde diferentes a´ngulos,
+del negocio, desde los analistas, que son los que crean los incluyendo la verificacio´n, la probabilidad de error y la
+primerosbosquejosdelosprocesos;(...) losdesarrolladores comprensio´n,[12,7].
+te´cnicos, responsables de implementar la tecnolog´ıa que
+Para lograr una mayor calidad en cuanto a la
+caracterizara´ losprocesos;(...) y,finalmente,laspersonas
+representacio´nvisual,sedebetenerencuentaelestilodelas
+delnegocioquemonitorizara´nygestionara´nlosprocesos”.
+etiquetas y el disen˜o visual del modelo. El estilo de
+Por esta razo´n ha ganado gran popularidad a nivel
+etiquetado es un tema que ha sido investigado desde una
+organizacional.
+perspectiva u´til. T´ıpicamente una etiqueta trabaja sobre
+Estelenguajeesindependientedecualquiermetodolog´ıa
+elementos individuales del modelo y trata aspectos de
+de modelacio´n de procesos y su sintaxis esta´ basada en
+etiquetadoydeinformacio´nincluidaenloselementosdelos
+elementos gra´ficos. La notacio´n gra´fica que incluye el
+modelosdeprocesosBPMNparafacilitarlacomprensio´nde
+lenguaje para expresar procesos de negocio permite
+los mismos. Esta categor´ıa puede subdividirse en estilo de
+desarrollar modelos de variada complejidad y consta de
+etiquetadodeelementos,estilodeetiquetadodeactividades,
+cuatrocategor´ıasba´sicasdeelementos:
+etiquetadodeeventos,etiquetadodecompuertas,etiquetado
+• Objetosdeflujo(Flowobjects): eventos,actividadesy de flujo de secuencia, etiquetado de pools y uso de iconos.
+compuertas. Unaetiquetadeunaactividadcapturaunaaccio´nyunobjeto
+del negocio, tal que la accio´n es realizada, por ejemplo
+• Objetos de conexio´n (Connecting objects): flujo de “validardireccio´n”o“creacio´ndeorden”.
+secuencia,flujodemensaje,asociacio´n1.
+En los u´ltimos an˜os, los procesos de negocio han sido
+• Contenedores (Swimlanes): contenedor (Pool), evaluadosymedidosdesdediferentesperspectivas. Algunas
+compartimento(Lane). de las propuestas son adaptaciones de me´tricas o medidas
+utilizadas en ingenier´ıa del software, debido a la similitud
+• Artefactos (Artifacts): objetos de datos, grupos, existenteentreelprocesosoftwareyelprocesodenegocio.
+anotaciones. Losprincipalesobjetivosplanteadosparalamedicio´ndelos
+modelosdeprocesosdenegocioenestaspropuestashansido:
+2. Calidad de la modelacio´n de procesos ladefinicio´ndeme´tricasomedidasdecalidadqueayudena
+de negocio los disen˜adores a identificar problemas de calidad y
+oportunidadesderefactor´ıa,as´ıcomomedirlosefectosenla
+Segu´n [13] los objetivos de la modelacio´n de procesos de
+calidaddelmodelo[20],me´tricasparamedirlaprobabilidad
+negocioson: a)mejorarlacomprensio´ndeunasituacio´npara
+de error de los modelos [10], medidas para evaluar la
+quepuedacomunicarseentrelosinvolucradosdelnegocioyb)
+complejidadestructuraldelosprocesosdenegociodesdela
+usarelprocesocomounaherramientaparalograrlasmetasde
+perspectivadeflujosdecontrol[2],entreotros.
+unproyectodedesarrollodeprocesos. Paraellogrodeestos
+Varios autores han propuesto diversos trabajos
+objetivosesimportantequelosmodelosdenegocioseande
+relacionados con las medidas de calidad, dado que una
+altacalidad. Sinembargo,variosestudios[8,9]muestranque
+cuantificacio´n precisa de la calidad constituye un paso
+muchosmodelosdeprocesosdenegociocontienenerrores,
+importante para mejorar la misma en el proceso de
+comoporejemploerroressinta´cticos.
+modelacio´n[17]. Elusodelainformacio´nobtenidaapartir
+1Otambie´n“nodosdedecisio´n/unio´n” de estas medidas hace posible para las organizaciones
+154 Medidasparaasegurarlacalidaddeletiquetadodelosmodelosdeprocesosdenegocioenelsectordelasalud
+Tabla1. Medidasasosciadasaletiquetado
+Directriz Me´tricaasociadaomedidapropuesta
+Useetiquetasdeltipo S (G)=|EI|EI (G)= |EI| EI: cantidaddeetiquetasquenosiguenelestiloverbo-sustantivo.
+EI F ||F
+verbo-sustantivo F: nu´merodeactividadesdelgrafoGdelmodelodeproceso.
+Useetiquetascortas l Etiquetas (G)= |N 1 | ∑ e∈Etiquetas l(e)lˆ Etiquetas (G)=max{l(e)|e∈Etiquetas}N : nu´merode
+elementosdelgrafoGdelmodelodeproceso. l: cantidaddepalabrasdelasetiquetassin
+incluirart´ıculos,preposicionesniconjunciones. Etiquetas: conjuntodelasetiquetasenel
+modelo.
+Etiqueteloseventos, S (G)=|ESE|ESE (G)= |ESE ESE : nu´merodeeventossinetiquetarE: cantidadde
+ESE E |E|
+especialmentelosdetiempo eventosdelgrafoGdelmodelodeproceso.
+Etiquetelascompuertasde S (G)=|CSE|CSE (G)= |CSE CSE :nu´merodecompuertasdedivisio´ndetipoory
+CSE C |Sor|+|Sxor|
+divisio´nORyXOR xorsinetiquetar. S : nu´merodecompuertasdedivisio´ndetipoxordelgrafoGdelmodelode
+or
+proceso. S :nu´merodecompuertasdedivisio´ndetipoxordelgrafoGdelmodelodeproceso.
+xor
+Etiquetetodaslasactividades S (G)=|FSE FSE (G)= |FSE| FSE: nu´merodeactividadessinetiquetarF: nu´merode
+FSE F |F|
+actividadesdelgrafoGdelmodelodeproceso.
+Etiquetetodoslosflujosde S (G)=|SFSE|SFSE (G)= |SFSE| SFSE: nu´merodeflujosdesecuenciacon
+secuenciadesalidadelas S o F ri S g E enencompuertasded S ivisio´n ∑ d c e rSo t r i (cid:83) p S o xo o r d r o o ut( x C o ) rsinetiquetard : gradodesalidadelas
+out
+compuertasdedivisio´n compuertasdeestetipodelgrafoGdelmodelodeproceso.
+inclusivas(OR)yexclusivas
+(XOR)
+Reservelaspalabras S (G)=|ERI|ERI: nu´merodeactividadesyeventosetiquetadoscomoenviar/recibirqueno
+ERI
+Enviar/Recibirparaelementos sondeestetipo.
+deestetipo
+Especifiquelostiposde S (G)=|FST|FST (G)= |FST FST: nu´merodeactividadesalasquenoselesespecifica
+FST F |F|
+actividades eltipoF: nu´merodeactividadesdelgrafoGdelmodelodeproceso.
+Figura1. Procesodeatencio´naunpacienteenunaconsulta.
+aprenderdelpasadoconelobjetodemejorareldesempen˜oy 3. Caso de estudio
+lograrmejoresprediccionesconeltiempo[18]. Eldisen˜ode
+En esta seccio´n se presenta un modelo disen˜ado en la
+medidasesta´ relacionadoconlaspropiedadesesta´ticasdelos
+herramientademodelacio´nBonita,conelfindemostrarla
+procesosdenegocioysedefinensobreelmodelodeprocesos
+aplicabilidad de las medidas de calidad propuestas
+denegociomientrassedisen˜a. Laaplicacio´ndemedidasen
+anteriormente, relacionadas con el etiquetado. El modelo
+laetapadedisen˜opuedemejorarunprocesodenegocio,lo
+describeelprocesodeatencio´naunpacienteenunaconsulta.
+quefacilitalacorreccio´ndeposibleserrores.
+LaFigura1muestralamodelacio´ndeesteproceso,elcualse
+2.1 Medidas relacionadas con el estilo de construyo´ sintenerencuentalasmedidasdecalidad.
+etiquetado Para evaluar la calidad de este modelo en cuanto al
+En la Tabla 1 se presenta un conjunto de medidas etiquetado, se deben calcular cada una de las medidas
+relacionadasconeletiquetadoyconlainformacio´nincluida propuestasanteriormenteyluegovalorarlasestad´ısticasde
+enloselementosenlosmodelosdeprocesosBPMN.Estas cada una de ellas. La Tabla 2 a) muestra los resultados
+medidasesta´nasociadasaunconjuntodedirectrices, cuyo obtenidosal aplicarlas medidasalmodelo propuestoenla
+objetivoesaconsejaralosmodeladoresparalograrunamejor Figura1.
+calidaddelosmodelosdeprocesosdenegocios. Despue´sdeanalizarlosresultadosobtenidosalaplicarlas
+medidas, pudimos percatarnos que las directrices que
+Medidasparaasegurarlacalidaddeletiquetadodelosmodelosdeprocesosdenegocioenelsectordelasalud 155
+Tabla2. Resultadodeaplicarlasmedidasalprocesoa)Figura1,b)Figura2.
+Directriz a)Valordelasmedidas: Figura1 b)Valordelasmedidas: Figura2
+Useetiquetas S (G)=4EI (G)=0.8 S (G)=0EI (G)=0
+EI F EI F
+deltipoverbo-
+sustantivo
+Useetiquetas l¯ (G)=3.88lˆ (G)=6 l¯ (G)=2.3lˆ (G)=4
+Etiquetas Etiquetas Etiquetas Etiquetas
+cortas
+Etiquetelos S (G)=0ESE (G)=0 S (G)=0ESE (G)=0
+ESE E ESE E
+eventos,
+especialmente
+losdetiempo
+Etiquetelas S (G)=0CSE (G)=0 S (G)=0CSE (G)=0
+CSE E CSE E
+compuertasde
+divisio´nORy
+XOR
+Etiquetetodas S (G)=0FSE (G)=0 S (G)=0FSE (G)=0
+FSE F FSE F
+lasactividades
+Etiquetetodos S (G)=2SFSE (G)=1 S (G)=0SFSE (G)=0
+SFSE S SFSE S
+losflujosde
+secuenciade
+salidadelas
+compuertasde
+divisio´n
+inclusivas(OR)
+yexclusivas
+(XOR)
+Reservelas S (G)=0 S (G)=0
+ERI ERI
+palabras
+Enviar/Recibir
+paraelementos
+deestetipo
+Especifiquelos S (G)=5FST (G)=1 S (G)=0FST (G)=0
+FST F FST F
+tiposde
+actividades
+arrojaronmayordificultadfueron: diferenciassignificativasyportantopodemosconcluirqueal
+aplicarlasmedidasylasdirectricesasociadasalasmismas,
+• Useetiquetasdeltipoverbo-sustantivo.
+obtenemosunmejormodelodelprocesodenegocio.
+• Useetiquetascortas.
+• Etiquetetodoslosflujosdesecuenciadesalidadelas 4. Conclusiones
+compuertas de divisio´n inclusivas (OR) y exclusivas
+LassolucionesBPMpermitenalasentidadesdelsectorsalud
+(XOR).
+ser capaces de redefinir y automatizar sus procesos de
+• Especifiquelostiposdeactividades. negocio simplifica´ndolos, acortando su duracio´n y
+reduciendoelnu´merodeerrores. Estetrabajotratasobrela
+Portanto,teniendoencuentaestosconsejos,podemosobtener mejoradelacalidaddelosmodelosdeprocesosdenegocioy
+unanuevaversio´ndelmodelo,comosemuestraenlaFigura2. su importancia en el sector de la salud. Se proponen un
+Luegoalaplicarlasmedidasaestenuevomodelo,seobtienen conjuntodemedidasrelacionadasconelestilodeetiquetado
+losresultadosquesemuestranenlaTabla2b). de los modelos de procesos de negocios, las cuales esta´n
+Para comprobar los resultados obtenidos y determinar asociada a un conjunto de directrices, cuyo objetivo es
+silasdiferenciasencontradassonsignificativas,seaplico´ la aconsejaralosmodeladoresparalograrunamejorcalidadde
+pruebadelosrangosconsignodeWilcoxon.Paralasmedidas losmodelosdeprocesosdenegocios.
+Sig. Exactabilateral(p)obtuvounvalorde0.004porloque
+serechazalahipo´tesisfundamentaldeigualdad,luegoexisten
+156 Medidasparaasegurarlacalidaddeletiquetadodelosmodelosdeprocesosdenegocioenelsectordelasalud
+Figura2. Procesodeatencio´naunpacienteenunaconsulta(despue´sdeaplicarlasdirectrices).
+Referencias [10] JanMendling,GustafNeumann,andWilVanDerAalst.
+Understanding the occurrence of errors in process
+[1] Matthias Born, Jens Kirchner, and Jo¨rg P Mu¨ller.
+modelsbasedonmetrics. OntheMovetoMeaningful
+Context-drivenbusinessprocessmodeling. InThe1st
+InternetSystems2007: CoopIS,DOA,ODBASE,GADA,
+InternationalWorkshoponManagingDatawithMobile
+andIS,pages113–130,2007.
+Devices(MDMD2009),Milan,Italy,pages6–10,2009.
+[11] JanMendling,JanRecker,andHajoAReijers. Onthe
+[2] JorgeCardoso. Processcontrol-flowcomplexitymetric: usageoflabelsandiconsinbusinessprocessmodeling.
+Anempiricalvalidation. InServicesComputing,2006. InternationalJournalofInformationSystemModeling
+SCC’06.IEEEInternationalConferenceon,pages167– andDesign(IJISMD),1(2):40–58,2010.
+173.IEEE,2006.
+[12] JanMendling,HajoAReijers,andJorgeCardoso. What
+makesprocessmodelsunderstandable? InInternational
+[3] RemcoMDijkman,MarlonDumas,andChunOuyang.
+Conference on Business Process Management, pages
+Semantics and analysis of business process models
+48–63.Springer,2007.
+in bpmn. Information and Software technology,
+50(12):1281–1294,2008.
+[13] M Multama¨ki. Objective-driven planning of business
+processmodeling.DepartmentofIndustrialEngineering
+[4] Marlon Dumas, Marcello La Rosa, Jan Mendling,
+and Management, Helsinki University of Technology,
+HajoAReijers,etal. Fundamentalsofbusinessprocess
+2002.
+management,volume1. Springer,2013.
+[14] Jim Petrassi. How bpm impacts consulting services.
+[5] VolkerGruhnandRalfLaue. Complexitymetricsfor USA:BPTrends,2004.
+businessprocessmodels.In9thinternationalconference
+[15] JanCRecker,MartaIndulska,MichaelRosemann,and
+onbusinessinformationsystems(BIS2006),volume85,
+PeterGreen. Howgoodisbpmnreally? insightsfrom
+pages1–12,2006.
+theoryandpractice. 2006.
+[6] LauraHencheGrande. Introduccio´nalanotacio´nbpmn [16] Michael Rosemann. Potential pitfalls of process
+y su relacio´n con las estrategias del lenguaje maude. modeling: part a. Business Process Management
+2009. Journal,12(2):249–254,2006.
+[7] JanMendling. Metricsforprocessmodels: empirical [17] LauraSa´nchez-Gonza´lez,Fe´lixGarc´ıa,JanMendling,
+foundations of verification, error prediction, and Francisco Ruiz, and Mario Piattini. Prediction of
+guidelinesforcorrectness,volume6. SpringerScience business process model quality based on structural
+&BusinessMedia,2008. metrics. In International Conference on Conceptual
+Modeling,pages458–463.Springer,2010.
+[8] Jan Mendling. Empirical studies in process model
+[18] Laura Sa´nchez Gonza´lez, Fe´lix Garc´ıa Rubio,
+verification. In Transactions on petri nets and other
+FranciscoRuizGonza´lez,andMarioPiattiniVelthuis.
+models of concurrency II, pages 208–224. Springer,
+Measurementinbusinessprocesses:asystematicreview.
+2009.
+BusinessProcessManagementJournal,16(1):114–134,
+2010.
+[9] JanMendling,MichaelMoser,GustafNeumann,HMW
+Verbeek, Boudewijn F Van Dongen, and Wil MP [19] Mark von Rosing, Stephen White, Fred Cummins,
+van der Aalst. Faulty epcs in the sap reference and Henk de Man. Business process model and
+model. InInternationalConferenceonBusinessProcess notation—bpmn. The Complete Business Process
+Management,pages451–457.Springer,2006. Handbook,pages429–453,2015.
+Medidasparaasegurarlacalidaddeletiquetadodelosmodelosdeprocesosdenegocioenelsectordelasalud 157
+[20] Barbara Weber and Manfred Reichert. Refactoring 139.Springer,2008.
+process models in large process repositories. In
+AdvancedInformationSystemsEngineering,pages124–

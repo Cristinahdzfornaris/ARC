@@ -1,0 +1,355 @@
+GESPRO 11.05UN SISTEMAPARALADIRECCIÓN INTEGRADA DE PROYECTOS
+PARA LAGESTIÓNDE LAPRODUCCIÓN
+1Pedro Y.Piñero Pérez, 1Surayne Torres López, 1Manuel Vázquez Acosta, 1Henrik Pestano Pino,
+1Michaell GonzálezJorrín,1Marielis Izquierdo Matias, 1JoseA. LugoGarcía, 1Javier Menéndez;
+1Ernesto A. Mederos Franqueiro, 1Felix N. Abelardo, 1Ana D. Pérez, 1Pedro R. Piñero
+1Laboratorio deGestiónde Proyectos, DirecciónTécnica deProducción, Universidad de las
+Ciencias Informáticas, Carretera San Antonio Km 2½.Ciudad delaHabana, Cuba, CP:19370,
+Tel (53)(07) 8372408
+ppp@uci.cu,storres@uci.cu,manuelva@uci.cu,hpestano@uci.cu,michaell@uci.cu,
+mmatias@uci.cu,jalugo@uci.cu,jmenendez@uci.cu,eamederos@uci.cu,fnabelardo@uci.cu
+RESUMEN
+El objetivo del trabajo es presentar el paquete para la dirección integrada de proyectos
+(GESPRO). Este paquete está formado a partir de la integración de mas de 18 herramientas libres
+basadas se comercializa bajo licencia GPL. Este paquete incluye módulos que permiten entre
+otras funcionalidades: la gestión de portafolios de proyectos, la gestión de alcance, la gestión de
+tiempo, la gestión de riesgos, la gestión de comunicaciones, la gestión de la calidad, la gestión de
+recursos humanos, monitoreo y control de la plataforma, el control de versiones y la gestión
+documental. Es una plataforma extensible que incluye actualmente más de 40 reportes como
+apoyo al proceso de toma de decisiones en la gestión de proyectos y permite además la
+generación dinámica de nuevos reportes. Se ha aplicado con buenos resultados en la red de
+centros de la Universidad de las Ciencias Informáticas, que incluye 13 centros de desarrollo de
+software ubicados en la sede central de la UCI y cinco centros regionales. Actualmente es
+utilizado por más de 6000 usuarios que gestionan actividades de más de 150 proyectos entre los
+que se encuentran proyectos para la informatización nacional como para la exportación. Este
+sistema ha sido desarrollado utilizando los modelos de líneas de productos de software como
+modeloindustrial dedesarrollo.
+PALABRASCLAVE: GestióndeProyectos, DirecciónIntegrada, Gestióndecontenidos.
+ABSTRACT
+The paper presents the Project management system (GESPRO 11.05). This system consists on
+more than 18 tools that are combined to create a powerful tool for project management. The most
+of GESPRO applications’ are based on GPL license model. The GESPRO suite contains the
+following modules: project management, scope management, risk management, time
+management, human resource management, version control and document management. This is
+an extensible system that contains more than 60 reports for making decision in project
+management and permits to generate news reports dynamically. GESPRO have been applicated
+in the University of Informatics Science in the control of more than 150 projects for the Cuban
+industry and for other countries too. In fact the system has more than 6000 users in university the
+software production infrastructure. GEPSRO has been developing following a Software Product
+Lines model.
+KEYWORDS:Project management, Software Engineering Projects, Software Product Lines
+INTRODUCCIÓN
+La universidad de las Ciencias Informáticas (UCI) centro de estudio basado en el concepto de
+universidad productiva, tiene como objetivos lograr recursos humanos formados, desarrollo
+cubano porinformatizacióneingreso de divisas porexportación.
+En estesentido seplantearon las siguientes preguntas deinvestigación:
+ ¿Cómo lograr el desarrollo tecnológico de la UCI que garantice un aumento continuo de
+exportaciones?
+ ¿Cómo cumplir con los compromisos productivos desde el enfoque de la gestión de los
+proyectos ylas tecnologías quelo soportan?
+ ¿Cómo lograr apoyar desde la gestión de los proyectos y el desarrollo de tecnologías al
+trabajo político ideológico yel modelo deformación?
+Para lograr resolver la problemática se produce en la universidad una modificación de su plan de
+estudio y del modelo de producción simultáneamente potenciando la sinergia entre las áreas de
+producción,formación,investigaciónypostgrado.
+El centro de estas modificaciones vista desde la producción se enfoca en: la modificación del
+modelo de desarrollo tecnológico potenciando la productividad, reordenamiento de las fuerzas,
+incorporación de herramientas que informaticen la gestión de la información, el control y
+seguimiento. En este sentido se reconceptualiza la infraestructura productiva de la universidad y
+secrea unared de centros de produccióndelauniversidad.
+Teniendo en cuenta además el tamaño de la organización y el volumen de datos que se manejan
+se identifican como una necesidad el uso de herramientas informáticas que ayuden a la
+implantación del modelo de desarrollo tecnológico. Se pretende además que estas herramientas
+permitieran la ayuda a la toma de decisiones a diferentes niveles: nivel de persona, nivel de
+proyecto, nivel de centro de producción,nivel altagerencia UCI. [2]
+El presente trabajo presenta una de las herramientas fundamentales desarrolladas por la
+universidad para lograr este objetivo. Se presenta el paquete GESPRO v1.0 su estado actual de
+desarrollo e implantación. En la sección 2 se presenta la herramienta y algunos detalles de su
+arquitectura. En la sección 3 se discuten resultados de su aplicación en la universidad y en
+diferentes escenarios. Finalmente enla sección4se presentan las conclusiones del trabajo.
+DESARROLLO
+Como parte de las herramientas utilizadas para potenciar el control y seguimiento de los
+proyectos de la universidad y la implantación del nuevo modelo de desarrollo tecnológico se
+desarrolla por la Dirección Técnica de la Universidad de las Ciencias Informáticas el Paquete de
+Gestión de Proyectos GESPRO v1.0 (No Registro CENDA Cuba paquete GESPRO v1.0: 1540-
+2010.)[3]
+Estepaquete estáformado porcuatro grupos principales deherramientas (Ver Figura 1):
+ Herramientas para ladirecciónintegrada de proyectos.
+ Herramientas para lagestióndocumental yel control de versiones.
+ Herramientas para el monitoreo, la administraciónylarecuperaciónante fallos.
+ Herramientas para el trabajo colaborativo ylaayuda alatomade decisiones.
+Figura 1.Vista deprincipales módulos deGESPRO
+Módulos queconforman GESPRO yactivos quelos soportan
+Módulo Gestión de Portafolios de Proyectos: Permite la gestión de portafolios de proyectos.
+Plan de proyecto, la ejecución del plan de proyecto y en el control integrado de cambios [6].
+Incluye más de 60 tipos de reportes personalizados para la toma de decisiones, y facilidades para
+lageneracióndinámicadenuevos reportes a partir desolicitudes declientes
+Activos: Subsistema Redmine v 1.0, Subsistema UCI PATDSI Generador Reportes 1.6, UCI
+Plugin Reportes.
+Módulo Gestión de Tiempo: Permite la definición de las actividades, la secuencia de las
+actividades, estimación de la duración de las actividades, desarrollo del programa y control del
+programa.
+Activos:SubsistemaRedminev1.0
+Módulo de apoyo a la Gestión de la Calidad: Consiste en el apoyo en la planificación de la
+calidad, aseguramiento de lacalidad ycontrol decalidad.
+Activos:SubsistemaRedminev1.0
+Módulo Gestión de Alcance: Facilidades para la gestión del alcance del proyecto, la
+identificación de requisitos y la construcción de la estructura de desglose de trabajo. Se toman
+como basepara desarrollo futuro deeste módulo los elementos presentados en [9,10].
+Activos: Subsistema Redmine v 1.0, Subsistema UCI CAXTOR, Subsistema para la Gestión de
+Alcance.
+Módulo Gestión de Costos: La planificación de los recursos, estimación de los costos,
+preparaciónde presupuestos de costos ycontrol decostos.
+Activos:SubsistemaRedminev1.0,SubsistemaUCISIGE
+Módulo Gestión de los Recursos Humanos: Consiste en la planificación organizacional, la
+adquisicióndepersonal, laidentificacióndelas necesidades de desarrollo ylagestióndel equipo.
+Activos: Subsistema Redmine v 1.0, Subsistema UCI DCOM, UCI Plugin Asistencia, Módulo
+GestióndeAdquisiciones.
+Descripción: Gestión de los recursos materiales, la planificación de la adquisición hasta la
+asignaciónaproyectos
+Activos:SubsistemaRedminev1.0.
+Módulo Gestión de comunicaciones: Procesos requeridos para asegurar la generación,
+recopilación, diseminación, almacenamiento y disposición final de la información del proyecto.
+Facilita la planificación de las comunicaciones, distribución de la información, reporte del
+rendimiento, gestiónde acuerdos, gestiónde compromisos,foros, noticias, wiki.
+Activos: Subsistema Redmine v 1.0, Subsistema UCI PATDSI Generador Reportes 1.6,
+Subsistema ORION v1.0, UCI Plugin DT Lib v 1.0, UCI Plugin Redmine Side News v 1.0,
+Plugin RedmineezSidebarv1.0.
+Módulo Gestión de Riesgos: Procesos para la identificación, análisis y respuesta al riesgo del
+proyecto. Esta consiste en la planificación de la gestión de riesgos, identificación de los riesgos,
+análisis cualitativo de los riesgos, análisis cuantitativo de los riesgos, planificación de las
+respuestas alosriesgos, ymonitoreo ycontrol delos riesgos.
+Activos:SubsistemaRedmine, UCIPlugin GestiónRiesgos v1.0.3.
+Módulo Gestión Documental: Permite la gestión documental de la organización potenciando el
+usode flujos documentales yfacilidades para lagestióndelos documentos.
+Activos: Subsistema UCI Excriba base en Alfresco v3.2, UCI Gestión documental Plugin v UCI
+Plugin Components v1.0.
+Módulo Control de Versiones: Módulo de especial interés en los proyectos de desarrollo de
+software, permiteel control deversiones del código ypotencia el trabajo colaborativo.
+Activos:Subversion v1.4.5,GIT v1.0,UCIPlugin SVNEstadísticas.
+Módulo para las salvas de seguridad: Permite de forma integrada y controlada la salva de
+seguridad de los datos de la plataforma potenciando respaldo para: la gestión documental, para el
+control versiones ylasactividades del sistemade direcciónintegrada deproyectos.
+Activos:Subsistema Salvas deseguridad, Bacula Enterprise Edition2.6.1.
+Módulo de monitoreo y administración: Permite la administración centralizada de todos los
+recursos dispuestos en la red y que son explotados por la plataforma GESPRO, permite además
+el monitoreo permanente dela plataforma monitoreando más de 30variables porcada servidor.
+Activos:SubsistemaUCIMonitoreo basado en Munin,Virtual Center: VMware vSphere.
+Módulo de autenticación: Permite la autenticación centralizada para usuarios internos y
+externos, garantiza además el manejo de las conexiones y la navegación por el paquete de
+soluciones. AutenticacióncontraLDAP.
+Activos:Jasig CAS v3.3.1,LDAP, UCIPlugin ConexiónCAS (JASIC).
+Módulo deherramientas de apoyo al desarrollo: Incluye unpaquete de herramientas auxiliares
+para el desarrollo de los proyectos de desarrollo de software. Incluye herramientas para la
+protección del código abierto, y herramientas para el desarrollo de interfaces web basadas en
+extjs.
+Activos: Subsistema ODEC v1.0, Subsistema CAXTOR 1.0, PATDSI-Chart Server 1.0.3, UCI
+Plugin Links.
+Módulo de soporte a las comunicaciones: Incluye integración con herramientas para el envío y
+recepciónde mensajes, integracióncon servicios detelefonía móvil.
+Activos: Subsistema de integración con correo (experiencia probada en integración con el
+servidordecorreo ZIMBRA. SubsistemaIntegracióncon telefonía móvil(desarrollo).
+Módulo de gestión de incidencias para gestión de no conformidades: Incluye funcionalidades
+para la gestión de las propias incidencias de la plataforma facilitando su resolución como parte de
+unsistemade altadisponibilidad yrendimiento.Posibilitael soporte a3niveles.
+Activos:SubsistemaRedminev1.0.
+Módulo de ayuda: Incluye funcionalidades para la gestión de las propias incidencias de la
+plataforma facilitando su resolución como parte de un sistema de alta disponibilidad y
+rendimiento. Posibilitael soportea3niveles.
+Activos: Manual de usuarios de cada uno de los componentes COTS establecidos, Modelo de
+GestióndeProyectos yel Banco depreguntas yrespuestas para el soportealaaplicación.
+Trate deserconciso para quelas figuras ytablas sean de fácil lectura.
+Principiosdearquitectura establecidos para GESPRO
+ Potencia la comunicación basada en servicios y el desarrollo de extensiones a la
+plataforma como componentes COTS.
+ Se estructura la arquitectura en las siguientes siete capas: infraestructura, sistema,
+presentación,datos, seguridad, tecnologíae integración,
+ Se adoptan para el desarrollo y la integración entre los componentes COTS los siguientes
+estilosarquitectónicos:
+ Estilos de Llamada y Retorno: Model-View-Controller .(MVC) y arquitecturas basadas
+encomponentes
+ Estilos Peer-to-Peer: arquitecturas orientadas a servicios. (se establecen API para
+potenciarla conexiónorientada a servicios)
+ Estilos Centrados en Datos: arquitecturas de Pizarra o repositorio tomando en algunos
+casos labase de datospara el intercambio de informaciónentre aplicaciones.
+ Potencia el uso de herramientas que puedan ser legal y tecnológicamente dominadas y
+desarrolladas por la propia universidad potenciando la independencia tecnológica y la
+seguridad.
+Soporte GESPRO
+ElGESPROtienetres niveles desoporte:
+ Nivel 1: Provee el centro de soporte y soportado desde dos escenarios. Escenario apoyo
+telefónicoyel escenario desistemapara el reporte yel seguimiento deincidencias.
+ Nivel 2: Lo provee el grupo de asesoría técnica de la dirección técnica que además
+coordina cursos avanzados de gestión de proyectos y herramientas para la gestión de
+proyectos. Este grupo constituye la Entidad 4 de la Línea de Productos de Software
+establecida.
+ Nivel 3: Lo provee el equipo que desarrolla GESPRO quien constituye la entidad 1,
+encargada de la ingeniería del dominio y básicamente corrige las no conformidades en los
+activos desarrollados.
+En la Figura 1 se muestran datos del seguimiento a las no conformidades registradas del sistema
+GESPROen todos los escenarios deaplicación.
+Figura 2.Muestra del seguimiento alas noconformidades del sistema
+Se identifica que a pesar de sistema tener más de 6000 usuarios se registra un índice de no
+conformidades porusuario menor de0.05.Semantiene unsoporteadecuado del sistema.
+ANÁLISISDE RESULTADOS
+A partir de la conformación de la línea de productos de software para el desarrollo de GESPRO.
+Se desarrolló la primera versión del producto y se completan personalizaciones combinando
+diferentes activos. Esto aumenta la productividad del equipo de trabajo y las oportunidades de
+negocios conel uso del paqueteysu línea deproducción.
+Se presentan en esta sección los siguientes casos de aplicación de la herramienta y su modelo de
+desarrollobasado en líneas deproductos de software.
+Aplicación en la REDdeCentros deproduccióndelaUCI
+Se aplicó ajustado para dar soporte al modelo integrado de formación producción de la
+universidad. Se montó una granja de 5 servidores virtualizados y se montó sobre la misma un
+paquete GESPRO por cada uno de los 13 centros de la Red de centros de la UCI ubicados en la
+sede central. Se montó además en los 3 paquetes en centros regionales de la universidad ubicados
+en las tres regiones del país. Todos los centros antes mencionados vinculados directamente a
+facultades que imparten la especialidad de Ingeniería en Ciencias Informáticas. Todos los centros
+interconectados porred. Ver Tabla 1losindicadores en el caso de lared decentros.
+En este escenario se presenta GESPRO integrado con un cuadro de mando integral potenciando
+la tomade decisiones de la alta gerencia y la minería de datos. Se presenta el montaje del paquete
+para cada uno de los centros potenciando una alta disponibilidad para el sistema global de gestión
+deproyectos.
+Tabla 1Indicadores deaplicacióndeGESPRO yla LPS en laRed deCentros dela UCI
+Indicador Valor
+Producto desplegado GESPROv1.0
+Modelo teórico que soportalapersonalización PMI(PMbok)yel SEI(CMMI).
+Cantidad dedesarrolladores 10
+Tiempo en días para el desarrollo 45
+Cantidad deusuarios que lo han usado Más de6000
+Cantidad deproyectos Más de 200 incluidos proyectos con clientes
+yproyectos deinnovacióninternos
+Elementos positivos:
+ Se montó un sistema que garantiza una alta disponibilidad del sistema global por encima
+del 95%. Calculada apartir de[11].
+ Se logró estandarizar la herramienta de gestión de proyectos nacionales y de exportación
+que desarrolla la red de centros de la UCI facilitando la toma de decisiones y la agilidad
+enlas informaciones para ladirecciónintegrada de proyectos.
+ Se logró integrar a través de la herramienta los modelos de formación del profesional y la
+producción de la UCI básicamente el control y seguimiento de las tareas de proyectos
+constituyen las tareas de entrenamiento de los estudiantes que son evaluadas por tutores y
+contribuyendo además al establecimiento delos principios delacalidad total.
+ Se logró un cambio significativo en la organización del proceso de producción aunque se
+sigue trabajando en este sentido.
+Elementos queconstituyen oportunidades de mejora:
+ La disponibilidad de los paquetes que brindan servicios a cada uno de los centros se
+comportó por debajo de la disponibilidad global siendo en algunos casos alrededor del
+87%. Calculada a partir de [11]. Se realizaron mejoras y actualizaciones al paquete en
+función de elevar la misma. Se promueve la compra de equipamiento adicional para
+garantizarelevar a más de95% ladisponibilidad en cadaunode los centros.
+Aplicación en la empresa ALBET
+Se aplicó para dar soporte a las necesidades en el control de proyectos y la gestión documental de
+la Empresa ALBET SA, empresa comercializadora de los productos de la UCI. Esta empresa
+tiene varias sucursales fuera del país que constituyen parte de la misma. Ver Tabla 2 los
+indicadores en el caso delaEmpresa ALBET.
+Tabla 2Indicadores deaplicacióndeGESPRO yla LPS en laEmpresa ALBET
+Indicador Valor
+Producto desplegado GESPROPersonalizadopara ALBET
+Modelo teórico que soportalapersonalización PMI(PMbok)yel SEI(CMMI).
+Cantidad dedesarrolladores 3
+Tiempo en días para el desarrollo 10
+Cantidad deusuarios que lo han usado: 58
+Elementos positivos:
+ Se montó un sistema que apoya la informatización de la empresa y a un mayor nivel de
+control delos proyectos yel estado de laorganización.
+ Se logró un cambio significativo en la organización de la gestión documental y se
+continúa avanzado en laorganizacióndel proceso deproducción.
+ Se montó un sistema que garantiza una alta disponibilidad del sistema global por encima
+del 95%. Calculada apartir del método presentado en [11].
+Elementos queconstituyen oportunidades de mejora:
+ Se trabaja en el despliegue de la solución en las sucursales de la empresa y el
+establecimiento de vías seguras para la comunicación y la transmisión de las
+informaciones.
+Aplicación en el Laboratorio Industrial dePruebas
+El LIPS constituye el laboratorio industrial de prueba dónde se combinan la liberación de las
+soluciones informáticas de launiversidad con laformaciónde los estudiantes de launiversidad en
+el rol de revisor de la calidad. Los probadores pasan por el laboratorio y trabajan activamente con
+la herramienta durante la liberación de los productos. Ver Tabla 3 los indicadores en el caso del
+Laboratorio Industrial de Pruebas, la estructura y las necesidades de este laboratorio son
+diferentes delas del resto delas aplicaciones.
+Tabla 3:Indicadores deaplicación deGESPRO yla LPS en el LIPS
+Indicador Valor
+Producto desplegado GESPROPersonalizado para LIPS
+Cantidad dedesarrolladores delasoluciónpersonalizada 2
+Tiempo en días para el desarrollo 7
+Cantidad deusuarios que lo han usado: 1275
+Elementos positivos:
+ Se establece sistema que potencia el desarrollo de las pruebas de liberación de los
+productos dela universidad. Mejorando laautomatizacióndel proceso.
+ Se montó un sistema que garantiza una alta disponibilidad del sistema global por encima
+del 95%. Calculada apartir del método presentado en [11].
+Elementos queconstituyen oportunidades de mejora:
+ Se trabaja en el despliegue de nuevos reportes personalizados y en la capacitación de
+nivelavanzado en los usuarios administradores del sistema.
+Aplicación DireccióndeSupervisión yControl UCI
+La dirección de supervisión y control es una dirección de apoyo para el control interno utiliza el
+sistema para el control y seguimiento de sus actividades y en la organización de proyectos de
+auditoría a las diferentes áreas de la universidad. Ver Tabla 4 los indicadores de la aplicación de
+laLPS en el caso de estudio.
+Tabla 4: Indicadores de aplicación de GESPRO y la LPS en la Dirección de Supervisión y
+Control
+Indicador Valor
+Producto desplegado GESPRO Personalizado para
+Dirección de Supervisión y
+Control
+Modelo teórico que soportalapersonalización PMI(PMbok)
+Cantidad dedesarrolladores delasoluciónpersonalizada 2
+Tiempo en días para el desarrollo 4
+Cantidad deusuarios que lo han usado: 10
+Elementos positivos:
+ Se logra la personalización de la herramienta en un plazo corto y su aplicación en un
+escenario diferentedel inicialque sehabía concebido laaplicaciónGESPRO.
+Elementos queconstituyen oportunidades de mejora:
+ Se trabaja en el despliegue de nuevos reportes personalizados y en la capacitación de
+nivelavanzado en los usuarios administradores del sistema.
+Como conclusión el modelo de desarrollo utilizado en GESPRO fue adecuado se lograron
+personalizaciones de GESPRO para diferentes entornos disminuyéndose significativamente los
+recursos humanos yel tiempo depuestaa punto delas soluciones. Ver Figura 7
+Figura 3 Vista deladisminuciónen el tiempo yen losrecursos humanosen la instalaciónde
+GESPRO
+CONCLUSIONES
+Apartirdel análisis deresultados anteriormente presentado searriba a las siguientes conclusiones:
+ La inclusión de herramientas para la ayuda a la toma de decisiones en la gestión de
+proyectos ayuda significativamente al control y seguimiento de los proyectos y de los
+recursos materiales yhumanos asociados a los mismos.
+ En el proceso de selección de las herramientas para la gestión de proyectos es importante
+el análisis dela flexibilidad y laposibilidad de extensión delas mismas. Sedebe revisar la
+posibilidad de que sean ajustables a diferentes modelos de dirección integrada de
+proyectos ya modelosde calidad, concertificacióninternacional.
+ La herramienta propuesta es personalizable tomando diferentes modelos ha sido probada
+entomando como base modelopropuesto porel PMI(PMbok) ySEI(CMMI).
+ Elmodelo dedesarrollo propuesto, basado de línea de productos de software, y el montaje
+de la Línea de Productos de Software para el desarrollo de GESPRO (LPS GESPRO) ha
+sido exitoso permitiendo la personalización del paquete para diferentes escenarios en
+tiemposcortos ycon bajos niveles decostos asociados.
+ El sistema GESPRO está aplicado en los escenarios presentados con un número elevado
+de usuarios y proyectos en ejecución. Su aplicación ha sido exitosa y se continúa la
+extensiónydesarrollo delaherramienta.
+El producto GESPRO es comercializado bajo licencia GPL y el propio producto y los activos que
+lo componen son dominados completamente por la universidad de las Ciencias Informáticas
+potenciando la independencia tecnológica denuestro modelo deproducción.
+REFERENCIAS
+1. Schekkerman, J., Extended Enterprise Architecture Framework. Essentials Guide. Vol. 1.2006,
+NewYork: InstituteFor Enterprise Architecture Developments.
+2. Piñero, P., Modelo de producción de la Universidad de las Ciencias Informáticas. 2010,
+Universidad de las Ciencias Informáticas: Ciudad dela Habana.p.100.
+3. Piñero, P.Y., et al., Paquete de Herramientas para la Gestión de Proyectos, in Registro Centro
+Nacional de Registro de Autor, C.N.d.R.d. Autor, Editor. 2010: Cuba. p. 100. No Registro
+CENDACubapaquete GESPROv1.0: 1540-2010
+4. Clements, P.C. (2009) Software Product Lines: A New Paradigm for the New Century.
+Volume,
+5. Krueger. Introduction to Software Product Line. 2006 [cited; Available from:
+www.softwareproductlines.com.
+6. PMI, Guía de los Fundamentos de la Dirección de Proyectos. Vol. I. 2004, Newtown Square
+Pennsylvania: Project Management Institute.409.
+7. PMI, A Guide to Project Management Body of Knowledge (Draf) Vol. I. 2008: Project
+Management Institute. 409.
+8. Software Engineering Institute, S. Software Product Line. 2009 [cited; Available from:
+http://www.sei.cmu.edu/productlines/.
+9. Reubenstein, H. and R. Waters, The Requirements Apprentice: Automated Assistance for
+Requirements Acquisition.IEEE Trans. Softw. Eng, 1991.17:p.226-240.
+10. Rich, C. and R. Waters. Toward a Requirements Apprentice: On the Boundary between
+Informal and Formal Specifications. 1986 [cited; Available from:
+http://hdl.handle.net/1721.3/5516.
+11. Okinawa International Center, O. Project Management Specialist. 2010 [cited; Available
+from: www.jica.go.jp/english.

@@ -1,0 +1,1024 @@
+CienciasMatema´ticas,Vol.30,No.2,Pag.43-53,2016
+Recibido04-2016
+Generalizaciones de la integral definida hasta la
+integral de Riemann
+Generalizations of the definite integral until the
+Riemann integral
+Otilio B. Mederos Anoceto1, Rita A. Rolda´n Inguanzo2*
+Resumen Enestetrabajosedefineelconceptodegeneralizacio´ndeunfuncionalyseplanteanochotareas
+dida´cticas para llevar a cabo el proceso de generalizacio´n correspondiente. Se ejemplifican estas tareas en
+elprocesodegeneralizacio´ndelfuncionalintegraldefinidasobrelaclasedefuncionesescalonadasdefinidas
+sobreunintervalocerrado,alaclasedelasfuncionesregladas.
+Abstract Inthisworkisdefinedtheconceptofgeneralizationofafunctionalandraisedeightlearningtasksto
+carryouttheprocessofgeneralizationcorresponding. Itexemplifythesetasksintheprocessofgeneralizationof
+theintegralfunctionaldefinedontheclassofstepfunctionsdefinedoveraclosedinterval,totheclassofthe
+functionsweaklyregular.
+PalabrasClave
+Generalizacio´n—Integraldefinida—IntegraldeRiemann
+1FacultaddeCienciasF´ısico-Matema´ticas,UniversidadAuto´nomadeCoahuila,Me´xico,omederosa@gmail.com
+2FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba,rroldan@matcom.uh.cu
+*AutorparaCorrespondencia
+Introduction pectivamente, del concepto de que se trate, o simplemente
+porE cuandonohayadudasdecua´leselcontenido.Pueden
+Enesteart´ıculoconsideramosqueunconceptoesunmo-
+encontrarsediferentescoleccionesCdepropiedadesqueso´lo
+delomentalgeneralizadodedeterminadosrasgosopropieda-
+cumplen los elementos (objetos) de E, por lo que es usual
+desdeobjetos,orelacionesentreobjetos,agrupadosenuna
+indicarelcontenidoporlacoleccio´ndepropiedades{p}
+clase;as´ıcomodelosobjetosconesascaracter´ısticasagru- i i∈I
+quesehayaescogido,dondeIesunconjuntode´ındices.
+padosenotraclase.Sedenominanpropiedadesesencialesde
+Tantoenlamatema´ticadisciplinarcomoenlaescolarse
+unconceptoacaracter´ısticasdelosobjetosmodeladosenel
+pasa frecuentemente de un concepto con una extensio´n de-
+mismo,cadaunadelascualesesnecesariaytodasenconjun-
+terminada a otro con una extensio´n diferente, mediante las
+tosuficientesparadistinguirlosobjetosquecorrespondenal
+operacioneslo´gicasllamadasdefinicio´n,generalizacio´n,res-
+conceptodelosdema´s.
+triccio´nyclasificacio´n.Estascuatrooperacionesconceptuales
+Un conjunto de propiedades esenciales de los objetos
+tieneneldoblecara´cterdeprocesoyresultado.Lapalabrage-
+conocidos del concepto, que sea suficiente para distinguir
+neralizacio´naparececondiferentesacepcionesenlaliteratura
+losnuevosobjetosdelconcepto,constituyesucontenido.El
+psicopedago´gica;entreellaslassiguientes:
+contenidoesunfactorindispensabledetodoconcepto,porlo
+quenopuedeexistirunconceptocarentedecontenido,enel
+Lageneralizacio´ncomosubprocesodelprocesocomplejode
+queconsecuentementenoseconcibapropiedadalguna.
+formacio´nconceptual
+La extensio´n de un concepto es la clase (conjunto) de
+losobjetosquedichoconceptoabarca.Laextensio´nesuna Vygotski, (([17]), desde finales de la de´cada del veinte
+caracter´ısticalo´gicadelconceptotanindispensablecomosu delsiglopasadohastasumuerteen1938,trabajo´ enladeter-
+contenido.Consideramosqueunobjetodecualquierconcepto minacio´ndeunenfoquedelaestructura,lasfuncionesyel
+subordinadoalconceptodefuncio´nrealdevariablereales procesoformativodelageneralizacio´n,enparticulardelos
+una coleccio´n, que puede ser unitaria, de representaciones procesosdegeneralizacio´nqueintervienenenlaformacio´n
+equivalentesdeunafuncio´nquesatisfacenlaspropiedades deconceptos.
+delcontenidodelconceptosubordinado. En Mederos, Rolda´n y otros, ([12], p.74-78), se consi-
+Enestetrabajoseindicanlosconceptosporunpar(E,C), dera que el proceso de formacio´n conceptual por la v´ıa in-
+dondeporE yCsedenotanlaextensio´nyelcontenidores- ductivalointegranlossubprocesosdecomparacio´n,ana´lisis,
+44 GeneralizacionesdelaintegraldefinidahastalaintegraldeRiemann
+abstraccio´n, s´ıntesis y generalizacio´n. Los cuatro primeros Lageneralizacio´ndeconceptosyaformados
+subprocesospermitenagruparenunaclaselosrasgosesen-
+Existendiferentesv´ıasparageneralizarconceptosyafor-
+cialesparticulares.Elsubprocesodegeneralizacio´nconsiste
+mados,segu´nDavy´dov:
+enagruparenotraclaseatodoslosobjetosquecumplanlos
+rasgosesenciales.Obse´rvesequeestaclaseincluyenoso´lo “Enelproceso...detra´nsitodeunaextensio´nmenora
+alosobjetosparticularesanalizadosquecumplanlosrasgos otramayor,sesubstraedelconceptoespec´ıficodadoun
+esenciales;sinotambie´natodonuevoobjetoqueloscumpla. ciertonu´meroderasgosyseformaelconceptogene´rico,
+Para Kondakov la generalizacio´n en la formacio´n con- envirtuddelocualresultama´spobreelcontenidoqueel
+ceptual consta de dos subprocesos. El primero consiste en espec´ıfico.”([5],p.51).
+ladeterminacio´ndeunaclasedeatributosquecumplenlos
+Elprocesodeampliacio´ndelaextensio´ndelconceptode
+objetosdeciertaclase.Elsegundoeslaampliacio´ndelaclase
+partidamediantelaeliminacio´ndepropiedadesdesuconteni-
+deobjetosquecumplenlosatributos.
+do,hastaformarunconceptoconunaextensio´nma´sampliay
+“Generalizacio´nesundesgajementaldeciertosatributos uncontenidoma´sreducidorecibeelnombredeoperacio´nde
+comunespertenecientesatodaunaclasedeobjetosyel generalizacio´nporalgunosautorescomoChelpanov,([3],p.
+actodeformularunadeduccio´nextensivaacadaobjeto 17),Asmus,([1]),p.60),Gorski,([8],p.68).
+sueltodelaclasedada.”([9],p.457.)
+Lageneralizacio´nenlamatema´ticaescolarydisciplinar
+Strogo´vichconsideraquelageneralizacio´neselproceso
+mentalquevadesdeladeterminacio´ndeindiciosparticulares
+Dadounconceptoyaformado(E ,C )quesehadefinido
+1 1
+delosobjetos,hastaelencuentrodeindiciosquepertenecen
+apartirdelconcepto(E,C),enMederosyRolda´n([10],p.28)
+a grupos de objetos, sin aclarar las caracter´ısticas de estos
+sedefineelconcepto(F ,D )degeneralizacio´nde(E ,C )
+1 1 1 1
+grupos.
+subordinada a (E,C) mediante eliminacio´n de propiedades
+“Generalizaresefectuareltra´nsitomentaldesdelosindi-
+delcontenidoC ;yseproponentereasdida´cticasparaquelos
+1
+ciosaisladosysingularesdelosobjetoshastalosindicios
+estudiantesparticipenenelaprendizajedeestetipodegenera-
+pertenecientesagruposenterosdedichosobjetos”,([14],
+lizacio´n.Enestetrabajoseproponendosconjuntosdetareas
+p.82.)
+dida´cticas necesarias, a juicio de los autores, para que los
+Lageneralizacio´ncomosino´nimodeconcepto estudiantesparticipenenelaprendizajedelosconceptosde
+caracterizacio´nygeneralizacio´nconceptual,respectivamente.
+En la literatura psicopedago´gica es frecuente encontrar
+EnMederosyRolda´n([11])sedefineyaplicaelconcepto
+lautilizacio´ndelapalabrageneralizacio´ncomoequivalente
+decriteriodegeneralizacio´ndeunconceptoeliminandopro-
+alprocesodeformacio´nconceptual,ynocomounodesus
+piedadesdesucontenido,yseobtienen16generalizaciones
+subprocesos.Enestadireccio´nDavy´dovsen˜alalosiguiente:
+delconceptodeme´trica.
+“En la literatura psicolo´gico-dida´ctica y metodolo´gica
+esmuyfrecuentequelosprocesosdegeneralizacio´nse El cap´ıtulo VI del libro escrito por Mederos, Rolda´n y
+caractericencomolav´ıaprincipalformativadeconceptos otros([12])seconstruyenveintitre´sgeneralizacionesdelcon-
+...Elte´rminogeneralizacio´nseempleaamenudocomo ceptodederivadapuntualdeunafuncio´n f,subordinadasal
+sino´nimodeconcepto.”([5],p.14.) conceptodefuncio´nrealdeunavariablereal;tomandocomo
+criterio de generalizacio´n el debilitamiento sucesivo de las
+Del planteamientode Smirnov,que aparece a continua-
+exigenciassobrelaexistenciadell´ımitedelafuncio´ndefinida
+cio´n,podemosobservarlacoincidenciaentregeneralizacio´n
+por F(h)=[(f(c+h)− f(c)]/h, h(cid:54)=0, cuando h tiende a
+yformacio´ndelconcepto. c
+cero,odelascaracter´ısticastopolo´gicasdecconrespectoal
+“Al generalizar, revelamos lo comu´n en los objetos y
+dominiode f.
+feno´menosdelarealidadindividualizados”.“Destacan-
+dolocomu´n,elhombrelodesignaconlapalabra,vin- Enestetrabajonosocupamosdeestudiarlascaracter´ısti-
+cula´ndolo en los objetos y feno´menos dotados de ese
+casdelasgeneralizacionesdeunfuncionalmuyimportante
+indiciocomu´n.Elte´rminoa´rbolesta´ relacionadoconto- enelAna´lisisMatema´tico,laintegraldefinida.Paraellodefi-
+doslosa´rboles,cualesquieraqueseanlasfamiliasaque
+nimoslaintegraldefinidasobreelR-espaciovectorialdelas
+pertenezcan,ylaspeculiaridadesdistintivasdecadauna funcionesescalonadasyestudiamossuspropiedadesfunda-
+deellas,yaquetodosellosposeenciertosrasgoscomu- mentalesenlaseccio´n3.Elrestodelasseccionessededican
+nes...Lapalabraesunasen˜aldemuchosobjetosdistintos aanalizartresv´ıasdegeneralizacio´nqueconducenalainte-
+peroquetieneentres´ıalgocomu´n.”([13],p.242-43). graldeCauchy-Riemann.Lapresentacio´ndelosresultadosse
+organizademaneratalquefaciliteeldisen˜odeherramientas
+ParaClausslageneralizacio´neselprocesocuyoresultado
+paraelaprendizajesignificativoactivoymediado,ysecons-
+eselconcepto.
+truyedandosolucio´naunconjuntodetareasdida´cticasque
+“Generalizareselme´todoconayudadelcualagrupamos
+sepresentanenlaseccio´n3.
+enclaseslosobjetossueltos,sobrelabasedepropieda-
+des iguales inherentes a los mismos. Resultado de ese
+agrupamientoeselconcepto”.([4],p.59.)
+GeneralizacionesdelaintegraldefinidahastalaintegraldeRiemann 45
+1. Definiciones y resultados auxiliares Definicio´n3.Unafuncio´nreal f definidasobreunintervalo
+realfinitoI sellamade´bilmenteregularsiparacadaxdesu
+Definicio´n1.Sedenominaoperadorlinealatodaaplicacio´n
+dominioexistensusl´ımiteslaterales.
+lineal f deunespaciovectorialV enunespaciovectorialV .
+1 2
+CuandoV eselR-espaciovectorialdelosnu´merosrealesla La extensio´n R(I) del concepto de funcio´n de´bilmente
+2
+funcio´n f sedenominafuncional.
+regularesunR-espaciovectorialconlasoperacionesdeadi-
+cio´nymultiplicacio´nporunescalarqueheredadelconjuntoR.
+El concepto de ret´ıculo juega un papel importante para
+Si se considera, adema´s, la multiplicacio´n heredada de la
+el desarrollo y comprensio´n de las generalizaciones que se
+multiplicacio´ndeResuna´lgebraconmutativaunitaria.Las
+realizanenesteart´ıculo.
+funcionesde´bilmenteregularestambie´nrecibenelnombrede
+Definicio´n 2. Sea R un conjunto no vac´ıo, sobre el cual se funcionesregladasViloriayCa´rdenas(Ver(15),p.49).
+definendosoperacionesinternas∨y∧por SeaF elsubconjuntodeIencuyoselementos f tienedis-
+continuidaddesaltofinito.Deladefinicio´n3sededuceque f
+∨:R×R→R,(a,b)(cid:55)→a∨by∧:R×R→R,(a,b)(cid:55)→a∧b. so´lopuedetenerdiscontinuidadesdesaltofinitooevitables,
+porloqueR(I)=[C(I\F)∩∆ (F)]∪C(I),dondeporC(I),
+sf
+Sedicequelaterna(R,∨,∧)esunret´ıculosisecumplenlos C(I\F)y∆ (F)seindicanlasextensionesdelosconceptos
+sf
+axiomassiguientes: defuncio´nrealcontinuasobreI,continuasobreI\F ydis-
+continuadesaltofinitooevitablesobreF,respectivamente.
+r 1 ) Lasoperaciones∨y∧sonconmutativas. Enlafigura1semuestranlosmapasgra´ficosysimbo´licosde
+estasextensiones.
+r ) ParatodoadeRsecumplequea∨a=aya∧a=a.
+2
+r ) ParacualesquieraaybdeRsecumplenlasleyesde
+3
+absorcio´na∨(a∧b)=aya∧(a∨b)=a.
+Entodoret´ıculo(R,∨,∧)sedefineunarelacio´ndeorden
+parcial≤pora≤bsiyso´losia∨b=b.Lacoleccio´nF(A,R)
+detodaslasfuncionesrealesdefinidassobreunsubconjunto Figura1.Mapasdeextensiones
+AdeResunret´ıculoconlasoperaciones∨y∧definidaspor
+(f∨g)(x)=ma´x{f(x),g(x)}y(f∧g)(x)=m´ın{f(x),g(x)}.
+2. Sobre el aprendizaje significativo
+Acontinuacio´nsepresentandefinicionesyrelacionesentre
+Paraqueunestudianteintegreelconocimientonuevoque
+elementosdeestetipoderet´ıculos.
+selepresentaalosconocimientosquetieneensusestructuras
+mentales,debeestablecerconexionesentreestosdostiposde
+r ) Atodafuncio´n f deF(A,R)seasocianlasfunciones
+4 conocimientos.Surgeentonceslapregunta:
+nonegativas f+y f−elementosdeF(A,R)definidas
+porlasigualdades f+= f∨0y f−=(−f)∨0.Esas ¿Que´ se requiere para que el estudiante establezca las
+conexiones?
+funcionesseconocenrespectivamentecomoparteposi-
+tivaypartenegativade f. Paraestablecerlasconexionesserequiereactividadmental
+yparaqueseproduzcalaactividadmentalenelestudiante,
+r 5 ) Lasfunciones f,|f|, f+ y f− esta´nrelacionadaspor debe:
+lasigualdades f = f+−f−, |f|= f++f−,as´ıcomo
+f+= |f|+f , f−= |f|−f . Haceralgoconelconocimientonuevo,debemanipular-
+2 2
+loyconstruirconocimiento.
+r ) Se cumplen las relaciones f ∨g=−[(−f)∧(−g)] y
+6
+f∧g=−[(−f)∨(−g)]. Establecer interaccio´n entre lo que ya conoce y las
+interpretacionesdelosotros,(profesores,compan˜eros,
+r ) Esciertalarelacio´n f∨g= f+g+|f+g| ylarelacio´n etc.).
+7 2 2
+f∧g= f+g−|f+g| .
+2 2 Anteunasituacio´ndeaprendizajenuevo,cadaestudiante
+relaciona alguna idea que surge de sus estructuras menta-
+Deestaspropiedadesyrelacionessededucelaproposicio´n
+lesconlasituacio´ndeaprendizajedelconocimientonuevo.
+siguiente:
+Entonceselestudiantetratadeestablecerconexiones,compa-
+Proposicio´n1.Unespaciovectorialdefuncionesesunret´ıculo randosusteor´ıasconsusobservacionesbasadasenelconoci-
+siyso´losiescerradoconcualesquieradelasdosoperaciones mientonuevo.Silasobservacionesdelestudianterespectoala
+binarias f∨g, f∧gylastresoperacionesunarias|f|, f+ y situacio´ndeaprendizaje,nopuedenserexplicadasporelpro-
+f−. pioestudiante,entoncessusmodelosinternossonrechazados,
+46 GeneralizacionesdelaintegraldefinidahastalaintegraldeRiemann
+modificados,reemplazados,ampliadososo´lotemporalmente presentar distintos tipos de tareas dida´cticas relativas a la
+aceptados.Cuandoestoocurresedicequesehaproducido generalizacio´ndefuncionales,entreellaslassiguientes:
+aprendizajeactivo.
+Al aceptar que se produce actividad mental en el estu- 1. UtilizarestructurasdeV paraorganizarsuselementos.
+diantecuandoestableceinteraccionesentreloqueyaconoce
+2. EstablecerrelacionesentreelementosdeV ycoleccio-
+1
+ylasinterpretacionesdelosotros,seesta´ aceptandoqueel
+nesdeV.
+aprendizajeesunprocesosocialmentemediado.
+Si las interacciones entre lo que ya conoce el estudian- 3. Construirfuncionalesyoperadoresrelacionadoscong
+te y las interpretaciones de otros se materializan mediante cuyacomposicio´nseaunfuncionalh:V →R,donde
+1
+observacionesdelosotros,respectoalasituacio´ndeaprendi- V ⊂V .
+1
+zaje;ysiestasobservacionesnopuedenserexplicadasporel
+4. Probarqueh(x)=g(x)paratodox∈V.
+propioestudiante,entoncessumodelosinternostambie´nson
+rechazados, modificado, etc. El proceso de modificaciones
+5. DeterminarsubclasesinfinitasdeV .
+1
+delosmodelosmentalesparallegaraunacomprensio´ndela
+situacio´ndeaprendizajeyunanuevacomprensio´ndeloque 6. Determinarcaracterizacionesdelconceptocuyaexten-
+antessab´ıa,esloquesellamaaprendizajesignificativo. sio´nesV.
+ParaAusubelloma´simportantedetodoesteprocesoesla
+7. Construirotrasgeneralizacionesdeg.
+determinacio´ndeloqueelestudianteconoce.
+“Situviesequereducirtodalapsicolog´ıaeducativaaun 8. Dadasdosgeneralizacionesh yh degdeterminar;
+1 2
+soloprincipio,enunciar´ıae´ste:elfactorma´simportante
+queinfluyeenelaprendizajeesloqueelalumnoyasabe. 8.1. Siunaesgeneralizacio´ndelaotra.
+Aver´ıgu¨eseesto,yense´n˜eseconsecuentemente.”Ausubel 8.2. Sih =h .
+1 2
+yotros(ver[2],p.1)
+Paradisen˜aractividadesdeaprendizajeactivoymediado Elrestodelasseccionesseejemplificacomodarcumpli-
+significativosesnecesarioconstruirunaorganizacio´nsigni- mientoalastareasanteriores.
+ficativadelconocimientoquequeremosqueseaprenda.El
+propo´sitodeestetrabajoespresentarunaconstruccio´nsignifi- 4. Ret´ıculos de las particiones de un
+cativadelconocimientorelativaatresv´ıasdegeneralizacio´n intervalo cerrado
+a la integral de Cauchy-Riemann como funcional y como
+Definicio´n5.Sedenominaparticio´nde[a,b]atodasucesio´n
+resultadodemaneratalquefacilite;
+finitayestrictamentecreciente{x}n deelementosde[a,b]
+i i=0
+talquex =ayx =b;esdecir,que
+Eldisen˜odeherramientasdeaprendizajeactivoyme- 0 n
+diadosignificativasparalaadquisicio´ndeconocimien-
+a=x <x <...<x <x <...<x =b.
+tosrelativosatresv´ıasdegeneralizacio´nqueconducen 0 1 i i+1 n
+alaintegraldeCauchy-Riemann. SeanJ=[a,b]yΠ(J)laextensio´ndelconceptodeparticio´n
+de[a,b].Acadaelementoq={x ,x ,...,x }deΠ(J)seaso-
+Laconstruccio´ndeunaorganizacio´nsignificativadela 0 1 n
+ciaunnu´meropositivoλ(q),quedenominamosnormadeq
+generalizacio´ndelaintegraldeCauchy-Riemannala
+yqueesta´ definidoporlaigualdadλ(q)= ma´x∆x,donde
+integraldeLebesgue. i
+1≤i≤n
+∆x =x −x .
+i i i−1
+3. Tareas dida´cticas que facilitan la
+Para p,q∈Π(J) se definen las operaciones ∧ y ∨ por
+generalizacio´n de funcionales
+p∧q=p∩qy p∨q=p∪q.Resultasencillocomprobarque
+Comenzamosestaseccio´ndefiniendoelconceptodegene- laterna(Π(J),∨,∧)esunret´ıculo.Siseconsideraelconjunto
+ralizacio´ndeunfuncionalyposteriormenteseplanteanocho
+(cid:26) (cid:27)
+b−a
+tareasdida´cticasrelativasalageneralizacio´ndeunfuncional. Π (J)= q ={x}n ∈Π(J): ∆x = , i=1,n ,
+1 n i i=0 i n
+Definicio´n 4. Dado un funcional g:V →R se llama gene-
+ralizacio´ndegatodofuncionalh:V 1 →Rquecumplalas lasoperaciones∨y∧anteriormentedefinidasseexpresan,a
+propiedades: partirdelordendadoporlainclusio´ndeconjuntos,mediante
+lasigualdades
+p : V ⊂V
+1 1
+q ∧q = m´ın{q ∈Π (J): q ⊆q yq ⊆q },
+p : Paratodox∈V secumplequeh(x)=g(x). k m n 1 k n m n
+2
+q ∨q = ma´x{q ∈Π (J): q ⊇q yq ⊇q }.
+k m n 1 k n m n
+El proceso de construccio´n de h se denomina proceso
+de generalizacio´n y la operacio´n que asocia h a g recibe el Paralanormadelasparticionesdeesteconjuntosecumple
+nombredegeneralizacio´n.Enlamatema´ticaescolarsepueden queλ(q )= b−a.No´teseque,acausadelasimetr´ıadelos
+n n
+GeneralizacionesdelaintegraldefinidahastalaintegraldeRiemann 47
+elementos de Π (J), se tiene que q ⊆q si y so´lo si m es particio´nasociadaasysedenotaporq .Lasfuncionescarac-
+1 k m s
+mu´ltiplodek.Deellosededucequeq ∨q eslamenorde ter´ısticaspermitenrepresentaraloselementossdeE(J)enla
+k m
+lasparticionesq ∈Π (J)talquenesmu´ltiplodekydem, forma
+n 1
+mientrasqueq ∧q eslamayordelasparticionessime´tricas
+k m n
+q n ∈Π 1 (J)talquekymsonmu´ltiplosden;porlotantose s(x)=∑s i χ Ii (x), I 0 =[x 0 ,x 1 ]eI i =(x i−1 ,x i ], i=1:n.
+tieneque i=1
+SobreelconjuntoE(J)sedefinedemaneranaturallaadicio´n
+q ∧q =q y q ∨q =q .
+k m mcm{k,m} k m mcd{k,m}
+(+) y la multiplicacio´n (×) de funciones escalonadas; as´ı
+Es obvio que tambie´n la terna (Π (J),∨,∧) constituye un comoelproducto(·)deunescalarrealyunafuncio´nesca-
+1
+ret´ıculo.Enlafigura2sepresentaundiagramaconlasocho lonada. Se prueba sin dificultad que (E(J),+) es un grupo
+primerasparticionesdelret´ıculo(Π (J),∨,∧)ysusrelacio- conmutativo,(E(J),+,×)esuna´lgebraconmutativaunitaria
+1
+nes de inclusio´n estricta, las cuales son representadas por y(E(J),+,·)esunespaciovectorialreal.
+flechas.Enestediagramaseobservaquesecumple Atencio´nespecialmerecenlasoperacionesbinarias,ma´xi-
+moym´ınimo;yaquehacendeE(J)unret´ıculo.Seansyt
+q 4 ∨q 6 =q mcd{4,6} =q 2 yq 2 ∧q 3 =q mcm{2,3} =q 6 . doselementoscualesquieradeE(J)ysean p s y p t lasparti-
+cionesasociadasasyt respectivamente.Entoncessuma´ximo
+ysum´ınimodefinidos,demaneranaturalcomofuncionesreal
+sobre[a,b],por
+(s∨t)(x)=ma´x{s(x),t(x)}y(s∧t)(x)=m´ın{s(x),t(x)},
+sonfuncionesescalonadasquetienena p ∪p comoparticio´n
+s t
+asociada.Resultasencillocomprobarque(E(J),∨,∧)esun
+ret´ıculo. El conjunto E(J) se utiliza como el dominio del
+Figura2.Lasparticionesq
+i
+,i=1:8,ysusrelacionesde
+operadorgquesegeneralizaenestetrabajo.
+inclusio´n
+Pasamosaestablecerunarelacio´nentrelosret´ıculosdelas
+ternas(Π(J),∨,∧)y(E(J),∨,∧)quepermiteintegrarlosen
+Con esta seccio´n se da cumplimiento parcial a la tarea
+unasolaestructura.ConsiderandoqueS(N )eslaextensio´n
+dida´ctica 1. Para la integracio´n de conocimientos juega un n
+del concepto de sucesio´n real definidas sobre el conjunto
+papelesenciallarelacio´nentrelosret´ıculosdelasparticiones
+N =0,1,...,n,setieneS:Π(J)→E(J),queesunoperador
+y de las funciones escalonadas. En la seccio´n 5 dedicamos n
+multiformedefinidoparatodaparticio´nq∈Π(J),q={x}n ,
+especialatencio´nalret´ıculodelasfuncionesescalonadasysu i i=0
+por
+relacio´nconlosret´ıculosdelasparticiones,ydeestaforma (cid:40) (cid:41)
+n
+secompletaelcumplimientodelatarea1. S(q)= ∑sχ (x) .
+i Ii
+i=1 {si}n
+i=0
+∈S(Nn)
+5. Ret´ıculos de funciones escalonadas Esteoperadorescompatibleconlasoperacionesdelosdos
+Definicio´n6.DadounsubconjuntoAdeRsedenominafun- ret´ıculosyaquesecompruebafa´cilmenteque
+cio´n caracter´ıstica o indicadora de A a la funcio´n real χ
+A
+S(p∪q) = S(p)∨S(q)={s ∨s }
+definidasobreRporlaigualdad p q (sp,sq)∈S(p)×S(q)
+S(p∩q) = S(p)∧S(q)={s ∧s } .
+(cid:26)
+p q (sp,sq)∈S(p)×S(q)
+1 x∈A
+χ A (x)= 0 x∈R\A . Proposicio´n2.Unafuncio´nreal f definidasobreunintervalo
+realcerradoJ=[a,b],esreglada,siyso´losiesell´ımitede
+Definicio´n7.Sedicequeunafuncio´nreals:[a,b]→Res unasucesio´ndefuncionesescalonadas{e
+n
+} n∈N)queconverge
+escalonadasiexisteunaparticio´n{x}n de[a,b]talques: uniformementea f sobreJ.
+i i=0
+Elenunciadoylademostracio´ndeunaproposicio´nma´s
+Tieneunadiscontinuidaddesaltofinitooevitableen
+generalquelaproposicio´n2puedeverseenDieudonne´,(ver
+cadavalordex,i=1:n.
+i [6],p.143-144).
+Tomaencadasub-intervalo(x,x )unvalorconstante
+i i+1
+s. 6. Las funciones acotadas y su relacio´n
+i
+con ret´ıculos de funciones escalonadas
+La extensio´n del concepto de funcio´n escalonada real
+de Darboux
+sobreelintervaloJ=[a,b],sedenotaenestetrabajoporE(J).
+Segu´nladefinicio´n7acadafuncio´nescalonadascorresponde Enestaseccio´nsedacumplimientoaunatareadeltipo2.
+unayso´lounaparticio´n{x}n ,quesellamaenestetrabajo ParaelloconsideremosqueB(J)eslaextensio´ndelconcepto
+i i=0
+48 GeneralizacionesdelaintegraldefinidahastalaintegraldeRiemann
+defuncio´nrealacotadadefinidasobre[a,b].Seconsideran,pa- respectivamente.Elconjuntos (f)conlasoperaciones∨y∧
+1
+racada f ∈B(J),lascolecciones{S } y{s } queheredadeE(J)yquesatisfacenlasigualdades
+q,f q∈Π(J) q,f q∈Π(J)
+definidaspor
+s ∨s =s y s ∧s =s
+qm,f qn,f q
+mcd{m,n}
+,f qm,f qn,f q
+mcm{m,n}
+,f
+(cid:32) (cid:33)
+n
+S (x)=∑ supf(x) χ (x), (1) esunret´ıculo.
+q,f
+i=0 Ii
+Ii
+Larestriccio´ns 1,f deloperadors:Π(J)→E(J)alret´ıculo
+n (cid:18) (cid:19) (Π 1 (J),∨,∧)definidopors 1,f (q n )=s qn,f tomavaloresenel
+s q,f (x)=
+i
+∑
+=0
+´ın
+Ii
+ff(x) χ Ii (x). (2) ret´ıculo(s 1 (f),∨,∧)ycumplelasigualdades
+s (q ∨q )=s (q )=s =s ∨s ,
+dondeq={x}n ,I =[x ,x ]yI =(x ,x],i=1:n.Estas 1,f m n 1,f mcd{m,n} q mcd{m,n} ,f qm,f qn,f
+i i=0 0 0 1 i i−1 i s (q ∧q )=s (q )=s =s ∧s .
+funcionessedenominanfuncionesescalonadasdeDarbouxy 1,f m n 1,f mcm{m,n} q mcm{m,n} ,f qm,f qn,f
+satisfacenlaspropiedadessiguientes: Enlafigura3semuestranlosochoprimeroselementos
+deΠ (J),susrelacionesdeinclusio´nysusima´geness (q),
+1 1,f i
+1. ParatodoqdeΠ(J)setieneques q,f ≤ f ≤S q,f . i=1:8poreloperadors 1,f ,queseindicanpors i parafaci-
+litarlaconstruccio´ndeldiagramacorrespondiente,consus
+2. Siq yq sonelementoscualesquieradeΠ(J)talesque
+1 2 relacionesdeinclusio´n.
+q ⊂q ;entonces
+1 2
+2.1. s ≤s
+q1,f q2,f
+2.2. S ≤S
+q2,f q1,f
+3. Siq yq sonelementoscualesquieradeΠ(J),entonces
+1 2
+s ≤ f ≤S
+q1,f q2,f
+Setienenlosoperadores
+Figura3.Representacio´ndelasq
+i
+,i=1:8,susrelaciones
+S:B(J)→S(J) y s:B(J)→s(J), (3) deinclusio´nysusima´genespors 1,f
+donde
+Demaneraana´logasetienequeelconjuntoS (f)esun
+1
+S(J)={{S } : f ∈B(J)}
+q,f q∈Π(J) ret´ıculoconlasoperaciones∨y∧queheredadeE(J)yque
+s(J)={{s } : f ∈B(J)}, satisfacenlasigualdades
+q,f q∈Π(J)
+definidosporlasaplicaciones S qm,f ∨S qn,f =S q
+mcd{m,n}
+,f y S qm,f ∧S qn,f =S q
+mcm{m,n}
+,f .
+f (cid:55)→S(f)= (cid:8) S q,f (cid:9) q∈Π(J) y f (cid:55)→s(f)= (cid:8) s q,f (cid:9) q∈Π(J) Larestriccio´nS 1,f deloperadorS:Π(J)→E(J)alret´ıculo
+(Π (J),∨,∧)definidoporS (q )=S tomavaloresenel
+1 1,f n qn,f
+respectivamente. ret´ıculo(S 1 (f),∨,∧)ysatisfacelasigualdades
+Lasrelacionesqueseconstruyenacontinuacio´ntienenun
+S (q ∨q )=S (q )=S =S ∨S ,
+objetivodida´ctico,yaquefacilitanlaconstruccio´nporparte 1,f n m 1,f mcd{m,n} q mcd{m,n} ,f qn,f qm,f
+de los profesores de herramientas para que los estudiantes S 1,f (q n ∧q m )=S 1,f (q mcm{m,n} )=S q mcm{m,n} ,f =S qm,f ∧S qn,f .
+puedan formarse unaestructura mental significativa, delas
+Porlotanto,laterna(S (f),∨,∧)esunret´ıculoconlasope-
+particionesdeΠ (J)ydelassumasinferioresysuperioresde 1
+1
+raciones∨y∧heredadasdeE(J).Enlafigura4semuestran
+E (J)quecorrespondenacadaelemento f deB(J).Atodo f
+1
+losochoprimeroselementosdeΠ (J)consusrelacionesde
+deB(J)esta´nasociadaslascolecciones 1
+inclusio´nysusima´genesporeloperadorS ,queseindican
+1,f
+(cid:8) S (cid:9) y (cid:8) s (cid:9) , q ={x}n , porS i ,consusrelacionesdeinclusio´n.
+qn,f qn∈Π1(J) qn,f qn∈Π1(J) n i i=0
+definidasporlasexpresiones(1)y(2). 7. La integral definida de las funciones
+Setienenlosoperadoresmultiformes escalonadas
+Enestaseccio´nsedefineelfuncionalquevaaserobjeto
+S :B(J)→E (J)ys :B(J)→E (J)
+1 1 1 1
+degeneralizacio´nyseenuncianalgunasdesuspropiedades.
+definidosporlasaplicaciones
+Definicio´n 8. Dada una funcio´n escalonada cualquiera s de
+(cid:8) (cid:9) E(J)conrepresentacio´n
+f (cid:55)→S (f)= S y
+1 qn,f qn∈Π1(J)
+n
+f (cid:55)→s (f)= (cid:8) s (cid:9) , s(x)=∑s i χ Ii (x), I 0 =[x 0 ,x 1 ], I i =(x i−1 ,x i ], i=1:n
+1 qn,f qn∈Π1(J) i=1
+GeneralizacionesdelaintegraldefinidahastalaintegraldeRiemann 49
+Figura5.Representacio´ndelass
+i
+,i=1:8,susrelacionesde
+Figura4.Representacio´ndelasq i ,i=1:8,susrelaciones inclusio´nysusima´genespor (cid:82) a b
+deinclusio´nysusima´genesporS
+1,f
+Propiedad 4.
+(cid:82)b
+es un operador de (E (J),∨,∧) sobre
+a 1
+yparticio´nasociada p ={x}n ,sellamaintegraldefinida (B,∨,∧)querespetalasoperaciones∨y∧.
+de s desde a hasta b, s y se d i en i= ot 0 a por (cid:82)bs(x)dx, al nu´mero Los nu´meros A i , i∈N, corresponden a las a´reas de la
+∑n
+i=1
+s
+i
+(x
+i
+−x
+i−1
+).Porlotanto, a r
+p
+e
+r
+g
+es
+io
+en
+n
+t
+e
+a
+s
+ci
+l
+o
+i
+´
+m
+n
+i
+g
+ta
+ra´
+d
+fi
+a
+c
+s
+a
+p
+d
+o
+e
+r
+S
+[a
+.
+,
+E
+b]
+n
+,
+l
+l
+a
+as
+fi
+r
+g
+e
+u
+c
+r
+t
+a
+as
+6
+x
+se
+=
+pr
+a
+es
+y
+en
+x
+t
+=
+an
+b
+lo
+y
+s
+l
+o
+a
+ch
+re
+o
+-
+i
+(cid:90) b n primeroselementosdeE (J)consusrelacionesdeinclusio´n
+1
+s(x)dx=∑s(x −x ).
+i i i−1 ysusima´genesA consusrelacionesdedesigualdadporel
+a i=1
+operador
+(cid:82)b. i
+a
+La funcio´n de E(J) en R, que a cada s de E(J) le asocia
+su integral definida desde a hasta b se denomina funcional
+integraldesdeahastabysedenotapor
+(cid:82)b.Enconsecuencia
+a
+(cid:90) b (cid:90) b
+:(E(J)→R, s(cid:55)→ s(x)dx.
+a a
+El intervalo [a,b] se denomina intervalo de integracio´n.
+Delaunicidaddelassucesiones{x}n y{s}n setieneque
+estefuncionalesta´biendefinido.A
+i
+c
+i=
+on
+0
+tinua
+i
+ci
+i
+o´
+=
+n
+1
+seenuncian
+Figura6.Representacio´ndelasS
+i
+,i=1:8,susrelaciones
+sietepropiedadesdelfuncional (cid:82)b. deinclusio´nysusima´genespor (cid:82) a b
+a
+Propiedad1.
+(cid:82)besunatransformacio´nlinealdelR-espacio
+a Propiedad 5. (cid:82)b es invariante por traslaciones, lo que
+vectorial(E(J),+,·)enelespaciovectorial(R,+,·). a
+significaqueparatodonu´merorealcsecumplelaigualdad
+Propiedad2. (cid:82) a b esestrictamentecrecientede(E(J),<) (cid:82)bs(x)dx= (cid:82)b+cs(x−c)dx.
+en(R,<). a a+c
+Propiedad6.Sielintervalodeintegracio´n[a,b]semul-
+SeaAelconjunto
+tiplicaporunfactor µ (secontraecuando µ <1ysedilata
+(cid:26) (cid:90) b (cid:27) cuando µ >1), entonces el valor de la integral se reduce
+a i ∈R: a i = s i (x)dx, s i (x)=s 1,f (q i ), q i ∈Π 1 (J) . (aumenta)medianteelfactorµ,esdecir,
+a
+(cid:90) µb (cid:18) y (cid:19) (cid:90) b
+Esteconjuntoconlasoperacionesinternas∨,∧definidaspor s dy=µ s(x)dx.
+a m ∨a n =a mcd{m,n} ya m ∧a n =a mcm{m,n} esunret´ıculo. µa µ a
+Propiedad 3. (cid:82) a b es un operador de (E(J),∨,∧) sobre Propiedad 7. (cid:82)b es aditivo con respecto al intervalo de
+(A,∨,∧)querespetalasoperaciones∨y∧. a
+integracio´n; es decir, si se presenta la relacio´n a<c<b,
+Los nu´meros a i , i∈N, corresponden a las a´reas de la entonces (cid:82)bs(x)dx= (cid:82)cs(x)dx+ (cid:82)bs(x)dx.
+regioneslimitadaspor[a,b],lasrectasx=ayx=bylare- a a c
+Paratodafuncio´n f deB(J)loselementosdelascoleccio-
+presentacio´ngra´ficadeloss i .Enlafigura5sepresentanlos
+nes
+(cid:110) (cid:82)bS
+(x)dx
+(cid:111)
+y
+(cid:110) (cid:82)bs
+(x)dx
+(cid:111)
+sedenomi-
+ochoprimeroselementosdeE 1 (J)consusrelacionesdede- a q,f q∈Π(J) a q,f q∈Π(J)
+sigualdadysusima´genesa i consusrelacionesdedesigualdad nanintegralesdefinidasdesumasinferioresysuperioresde
+poreloperador
+(cid:82)b.
+Darbouxasociadasa f,respectivamente.
+a
+Sea As´ıresultanlosoperadores
+B= (cid:26) A = (cid:90) b S(x)dx: S(x)=S (q), q ∈Π (J)) (cid:27) I:S(J)→I(J) e i:S(J)→i(J),
+i i i 1,f i i 1
+a
+donde
+conlasoperacionesinternas∨,∧definidaspor (cid:26)(cid:26)(cid:90) b (cid:27) (cid:27)
+I(J)= S : f ∈B(J) e
+q,f
+a
+A ∨A =A y A ∧A =A
+m n mcd{m,n} m n mcm{m,n} (cid:26)(cid:26)(cid:90) b (cid:27) (cid:27)
+i(J)= s : f ∈B(J) ,
+quehacende(B,∨,∧)unret´ıculo. q,f
+a
+50 GeneralizacionesdelaintegraldefinidahastalaintegraldeRiemann
+definidospor definidospor
+(cid:26)(cid:90) b (cid:27) (cid:26)(cid:90) b (cid:27) (cid:26)(cid:90) b (cid:27) (cid:90) b
+(cid:8) S (cid:9) (cid:55)→ S y (cid:8) s (cid:9) (cid:55)→ s . S q,f (x)dx (cid:55)→I(f)= ´ınf S q,f (x)dx
+q,f a q,f q,f a q,f a q∈Π(J) q∈Π(J) a
+(cid:26)(cid:90) b (cid:27) (cid:90) b
+Sedemuestransindificultadlosdoscorolariosdelapro- s (x)dx (cid:55)→I(f)= sup s (x)dx
+q,f q,f
+posicio´n2queseenuncianacontinuacio´n. a q∈Π(J) q∈Π(J) a
+(cid:110) (cid:111) Componiendolosoperadores(3)−(4)seobtieneeldiagra-
+Corolario1.Lasucesio´n
+(cid:82)be
+(x)dx esdeCauchy.
+a n n∈N madelafigura7quesintetizalosprocesosdeformacio´nde
+losfuncionalesintegralsuperioreintegralinferiorparatodo
+Corolario2.Si{r n } n∈Ny{s n } n∈Nsonsucesionesdefuncio- elemento f deB(J).
+nesescalonadasqueconvergenuniformementea f,entonces Losfuncionales(´ınf)◦I◦Sy(sup)◦i◦sseindicanpor
+{r n −s n } n∈N convergeuniformementealafuncio´n0y,por I yI ,opor (cid:82)bdx( (cid:82)bdx)ysedenominanfuncionalintegral
+tanto,convergenaunmismovalorlassucesiones a a
+definidasuperioreinferior,respectivamente.
+(cid:26)(cid:90) b (cid:27) (cid:26)(cid:90) b (cid:27) Paracada f deB(J,R)elnu´meroI(f)(I(f))sedenomina
+r n (x)dx y s n (x)dx . integral superior (inferior) de f y se denota por (cid:82)b f(x)dx
+a n∈N a n∈N a
+(
+(cid:82)b
+f(x)dx).Paratodo f deB(J,R)secumpleque
+a
+8. Generalizaciones de la integral
+I(f)=(sup)◦i◦s≤(´ınf)◦I◦S=I(f). (5)
+definida a una coleccio´n de funciones
+Obse´rvesequelosoperadoresS,I,seisonmultiformes,y
+acotadas
+como´ınfysupsonuniformes(´ınf)◦I◦Sy(sup)◦i◦sson
+Cauchydefinio´ elconceptodeintegraldefinidaparalos funcionales.
+elementosdeC(J),J=[a,b].Posteriormenteextendio´ este Pasamosadefinirlosconceptosdefuncio´nintegrabley
+conceptoalacoleccio´nC(J\F)∩∆ sf (F). deintegraldeCauchy-Riemannutilizandolasima´genesde
+Segu´nDieudonne´ [6],Cauchydefinio´ laintegralparalas losfuncionalesintegralinferioreintegralsuperior.
+funcionesde´bilmenteregularesoregladasapartirdeconside-
+Definicio´n10.Sedicequeunelemento f deB(J)esintegrable
+raratalesfuncionescomol´ımitedesucesionesdefunciones
+Cauchy-RiemannsobreJsiyso´losisecumpleque
+escalonadas.Talformadedefinirlaintegraltienelaventaja
+desdeelpuntodevistadida´cticodequeelestudiantepuede I(f)=I(f). (6)
+visualizarmejorelprocesodereduccio´ndelproblemaacasos
+Laextensio´ndelconceptodefuncio´nintegrableCauchy-Rie-
+muysimplesparaluegoretornarelcasogeneralatrave´sdel
+mann sobre J se indica por I(J). La funcio´n de Dirichlet,
+l´ımite.
+definidapor f(x)=1six∈Qy f(x)=0six∈R\Q,esob-
+viamenteunafuncio´nacotada;peronoesintegrableCauchy-
+8.1 Laintegraldefinidautilizandointegralesinferio-
+Riemann.Consecuentemente,secumplequeI(J)⊂B(J).
+resysuperiores
+Enesteep´ıgrafegeneralizamoselconceptodeintegralde- Definicio´n11.Si f ∈I(J),sedenominaintegraldeCauchy-
+finidaaunasub-clasedelaextensio´ndelconceptodefuncio´n Riemannde f desdeahastabaunocualquieradelosnu´meros
+acotada,utilizandosumasinferioresysuperioresdeDarboux, I(f)yI(f)yseindicapor (cid:82) a b f(x)dx.
+conlocualdamoscumplimientoaunatareadeltipo3. De la definicio´n 11 se tiene el funcional (cid:82)b :I(J)→R
+a
+Lapropiedad3delasfuncionesescalonadasdeDarboux
+definidopor f (cid:55)→
+(cid:82)b
+f(x)dx.Estefuncionalsedenominatam-
+a
+que se enuncia en la seccio´n 5, nos permite asegurar todo
+bie´n integral de Cauchy-Riemann; por lo tanto; la integral
+(cid:110) (cid:111)
+elementodelacoleccio´ny (cid:82) a bs q,f (x)dx esunacota de Cauchy-Riemann tiene el doble cara´cter de funcional e
+q∈Π(J)
+(cid:110) (cid:111) imagen del funcional. De esta forma se da cumplimiento a
+inferior de coleccio´n
+(cid:82)bS
+(x)dx y que todo ele-
+a q,f unatareadeltipo3.
+q∈Π(J)
+mentodeestacoleccio´nesunacotasuperiordelaprimera Pasamosadarcumplimientoaunatareadeltipo4.
+coleccio´n. Proposicio´n3.Lasfuncionesescalonadass∈E(J)cumplen
+Definicio´n9.Sedenominaintegraldefinidainferior(superior) laigualdad(6)ysuintegraldefinidasatisfacelacadenade
+de f y se denota por I(f)(I(f)) al extremo superior (infe- igualdades
+(cid:110) (cid:111) (cid:18)(cid:110) (cid:111) (cid:19) (cid:90) b
+rior)de (cid:82)bs (x)dx (cid:82)bS (x)dx .Por s(x)dx=I(s)=I(s).
+a q,f a q,f
+q∈Π(J) q∈Π(J) a
+lotanto,I(f)= sup (cid:82)bs (x)dxeI(f)= ´ınf (cid:82)bS (x)dx. Demostracio´n.Seasunafuncio´nescalonadadefinidasobreJ
+a q,f a q,f
+q∈Π(J) q∈Π(J) conrepresentacio´n
+Consecuentemente,setienenlosoperadores
+n
+s(x)=∑sχ (x), I =[x ,x ] e I =(x ,x], i=1:n
+´ınf:I(J)→R y sup:i(J)→R, (4) i Ii 0 0 1 i i−1 i
+i=1
+GeneralizacionesdelaintegraldefinidahastalaintegraldeRiemann 51
+Figura7.Diagramadelprocesodeformacio´ndelconceptodelaintegraldefinida
+ysea p ={x}n laparticio´nasociadaas.Setieneque 8.2 Definicio´n de integral utilizando l´ımite de suce-
+s i i=0
+sionesdefuncionesescalonadas
+(cid:90) b n Sepresentaacontinuacio´notroprocedimientoparagene-
+s(x)dx=∑s(x −x ).
+i i i−1 ralizarelfuncionalintegraldefinidadefuncionesescalonadas,
+a i=1
+queconducealmismofuncionalconstruidoenelep´ıgrafe8.1.
+Siqesunaparticio´ncualquieradeΠ(J),formamoslanueva SeanS(N,E(J))yS⇒f (N,E(J)), f ∈R(J),lasextensio-
+particio´n p=q∪p ,lacualcontieneaqya p .Lossubinter- nesdelosconceptosdesucesio´ndefuncionesescalonadasy
+s s
+valosdeestanuevaparticio´nsepuedenagruparenbloquesa desucesio´ndefuncionesescalonadaconvergenteuniforme-
+partirdelossubintervalosdelaparticio´n p ,yencadauno mentea f,respectivamente.Porlotanto,
+s
+deesossub-intervalosde pel´ınfimo(supremo)delafuncio´n
+escalonadanosera´menor(mayor)queel´ınfimo(supremo)de
+S⇒f (N,E(J))={{e
+n
+} n∈N∈S(N,E(J))|e
+n
+⇒ f)}.
+lafuncio´nescalonadaenelcorrespondientesub-intervalode
+Considerandoque
+p .EntoncesenlassumasdeDarbouxs (s)yS (s)sepueden
+s p p
+reagruparlossumandossegu´nlaparticio´n p s y,factorizando S⇒(N,E(J))= (cid:8) S
+(
+⇒ f)(N,E(J)): f ∈R(J) (cid:9)
+loscorrespondientesm yM,seobtieneque
+i i
+setieneeloperadormultiforme,
+s (s)=s (s) y S (s)=S (s).
+p ps p ps
+S⇒:R(J)→S⇒(N,E(J)) (7)
+DeestamaneratodaslassumasdeDarbouxdeunafuncio´nes-
+calonadasereducenalassumasdeDarbouxcorrespondientes
+definidopor f (cid:55)→S⇒=S⇒(N,E(J)).
+Seaeloperador
+alaparticio´nasociadaalafuncio´n,yportanto,obviamente
+secumpleque
+(cid:90) b
+:S⇒(N,E(J))→S⇒ (N,R) (8)
+(cid:82)b
+I(s)= sup s (s)=s (s)yI(s)= ´ınf S (s)=S (s). a a
+p ps p ps
+q∈Π(J) q∈Π(J)
+dondeS⇒ (N,R)eselconjuntodelassucesionesdeinte-
+(cid:110)
+(cid:82)
+a
+bf
+(cid:111)
+P in e t r e o rv c a o l m o o de la p f s u , n e c n i t o´ o n nc e e sc s a c l o o i n n a c d i a de s n es m c i o y n M sta i n p t a e ra en to c d a o da v s a u lo b r - grales (cid:82) a be n (x)d (cid:110) x n∈N talesque{e n }∈S (cid:111) ⇒f (N,E(J))con
+dei.Demodoques (s)=S (s)yportantosecumplela S⇒ (N,E(J))= S⇒ (N,R): f ∈R(J) ,definidoporla
+ps ps (cid:82)
+a
+b (cid:82)
+a
+bf
+igua
+E
+ld
+n
+a
+c
+d
+o
+(
+n
+2
+s
+)
+e
+.
+cuenciaE(J)⊂I(J),loquenospermiteafi
+Q
+rm
+.e.
+a
+d
+r
+. relacio´nS⇒f (N,E(J))(cid:55)→S⇒
+(cid:82)
+a
+bf
+(N,R).
+OtrooperadornecesarioparadefinirlaintegraldeCauchy-
+laintegraldeCauchy-Riemannesunageneralizacio´ndela
+Riemannutilizandosucesionesdefuncionesescalonadases
+integraldefinidadefuncionesescalonadas.
+l´ım :S⇒ (N,R)→S(N,R) (9)
+n→∞ (cid:82) a b
+52 GeneralizacionesdelaintegraldefinidahastalaintegraldeRiemann
+definidoporS⇒ (cid:82) a bf (N,R)(cid:55)→ (cid:110) n l → ´ım ∞ (cid:82) a be n (x)dx (cid:111) {en}∈S⇒f(N,E(J)) . i= ∑ n 1 f(ξ i )∆x i sedenotaporσ(f,q,ξ)yseconocecomosuma
+Componiendolosoperadores(7)−(9)seobtieneeloperador deRiemannde f respectoalaparticio´nqyalasucesio´nde
+puntos ξ ={ξ}n . Si denotamos por ξ(q) a la coleccio´n
+(cid:18) (cid:90) b (cid:19) de todas las su i ce i= si 1 ones {ξ}n anteriormente descritas, se
+l´ım◦ ◦S⇒ :R(J)→S(N,R) (10) i i=1
+n→∞ a observa que existen tantas sumas del tipo σ(f,q,ξ) como
+elementostieneelconjunto (cid:83) ξ(q).
+definidopor
+q∈Π[a,b]
+Acontinuacio´nsedefineelconceptol´ımitedelacoleccio´n
+(cid:26) (cid:90) b (cid:27) σ(f,q,ξ)utilizandoelconceptodesucesio´nfundamentalde
+f (cid:55)→ l´ım e (x)dx .
+n
+n→∞ a {en}∈S⇒f(N,E(J)) particionesdeΠ(J)yutilizandoellenguajeε−δ.
+Definicio´n14.Sedicequeell´ımitedelassumasσ(f,q,ξ)
+Paradarcumplimientoatareasdeltipo5y6puedeverse cuandoλ →0eselnu´meroI,siparatodonu´merorealpo-
+Viloria y Ca´rdenas ([15] y [16]), donde se demuestran los sitivo ε existe un nu´mero real positivo δ tales que cuando
+resultadosrelativosalasfuncionesregladassiguientes: λ(q)<δ setiene|σ(f,q,ξ)−I|<ε,independientementede
+Proposicio´n3.Todafuncio´ndevariacio´nacotadasobre[a,b] lasucesio´n{ξ
+i
+}n
+i=1
+deξ(q)queseconsidere.
+esregladasobreesteintervalo. Definicio´n15.Sedicequeell´ımitedelassumasσ(f,q,ξ)
+Proposicio´n4.Unafuncio´n f :[a,b]→Resregladasi,yso´lo cuandoλ →0eselnu´meroI,siparatodasucesio´nfundamen-
+si,existeunasucesio´n{e n }deE(J)queconvergeuniforme- tal de particiones {q n } n∈N ∈Π(J) toda sucesio´n de sumas
+mentea f sobre[a,b]. {σ(f,q,ξ)} n∈N tiendeall´ımiteI independientementedela
+sucesio´n{ξ}n deξ(q)queseconsidere.
+Proposicio´n 5. El conjunto de puntos de discontinuidad de i i=1
+unafuncio´nreglada f :[a,b]→Resnumerable. Ell´ımiteIseindicapor
+Proposicio´n6.Todaaplicacio´ncontinuaomono´tonadeun I= l´ımσ(f,q,ξ)= l´ım f(ξ i )∆x i .
+λ→0 λ→0
+intervalorealJenunespaciodeBanachesreglada.(([6]),p.
+144). Proposicio´n7.Lasdefiniciones14y15sonequivalentes.
+Basa´ndonos en la proposicio´n 4 y teniendo en cuenta Demostracio´n. Probemos primeramente que si se satisface
+quelaimagendeloperador(10)paracada f deR(J)esuna la definicio´n 14, entonces se satisface la definicio´n 15. Si
+sucesio´nconstantedenu´merosreales,sedaladefinicio´nsi-
+{q
+n
+} n∈Nesunasucesio´nfundamentaldeΠ(J),entoncespa-
+guiente. ra todo nu´mero real positivo ε existe un nu´mero real posi-
+tivo K tal que cuando n > K se tiene que λ < δ siendo
+Definicio´n12.LaintegraldeCauchy-Riemanndesdeahastab n
+deunelemento f deR(J)esunocualquieradeloselementos
+λ
+n
+=λ({q
+n
+} n∈N).Porladefinicio´n15es|σ(f,q,ξ)−I|<ε.
+delasucesio´nconstante (cid:16) l´ım◦ (cid:82) a b◦S⇒ (cid:17) (f);osea,tomando Que P d a a s a e s m ´ı o p s ro a b p a r d o a b l a a r c p o o n r v c e o r n g t e r n a c p i o a s a ic I io´ d n e q { u σ e ( s f i ,q f , c ξ u ) m } n p ∈ le N. las
+n→∞
+unelementocualquiera{e
+n
+} n∈NdeS⇒f (N,E(J))sedefinela condicionesdeladefinicio´n15,tambie´ncumplelascondicio-
+integralde f mediantelaigualdad nesdeladefinicio´n14.Supongamosquesepuedeencontrar
+un nu´mero real positivo ε para el que no exista un nu´mero
+(cid:90) b (cid:90) b real positivo δ tal que cuando λ <δ se tenga la acotacio´n
+f(x)dx= l´ım e (x)dx.
+n
+a n→∞ a |σ(f,q,ξ)−I|<ε.Enesecasosepuedeafirmarqueexisten
+unasucesio´ninfinitesimal{δ n } n∈N denu´merosrealesposi-
+Esta es otra forma de definir el operador integral definida
+tivosyunasucesio´n{q n } n∈N deΠ(J)conλ n =λ({q n } n∈N)
+desdeahastab.
+talesque
+8.3 Definicio´ndeintegralutilizandootrotipodesu- λ n <δ n y |σ(f,q,ξ)−I|≥ε.
+masfinitas
+Peroestocontradiceladefinicio´n15,puesseconcluyeque
+En este ep´ıgrafe se da cumplimiento a tareas del tipo
+{q
+n
+} n∈Nesunasucesio´nfundamentaldeΠ(J)ylasucesio´n
+7 y 8 siguiendo procedimientos diferentes a los realizados
+correspondiente{σ(f,q,ξ)} n∈NnotiendeaI. Q.e.d.
+en los ep´ıgrafes 8.1 y 8.2; utilizando otra definicio´n usual
+Las sumas de Riemann de una funcio´n acotada f de
+delaintegraldefinida,quepresentamosacontinuacio´npara
+B(J,R)serelacionanobviamenteconlassumasdeDarboux
+funciones f deB(J).
+delamismafuncio´natrave´sdelasiguientepropiedad:
+Definicio´n13.Unasucesio´ndeparticiones{q n } n∈N∈Π(J), Paratodaparticio´nqdeΠ(J)ytodaseleccio´ndepuntos
+J=[a,b]sedenominafundamental(ver([7],p. 346)silas intermediosξ ={ξ}n deξ(q)secumpleques(q,f)≤
+i i=1
+sucesio´ndesusnormas{λ n } n∈Ntiendeacero. σ(f,q n ,)≤S(q,f).
+Acadaparticio´n{q
+n
+} n∈N∈Π(J)esta´ asociadalacolec- Esta propiedad permite establecer la siguiente proposicio´n,
+cio´n ξ(q) de todas las sucesiones nume´ricas ξ = {ξ}n cuyademostracio´nsepuedeencontrarencasicualquiertexto
+i i=1
+tales que x i−1)≤ξ ≤x, i=1:n. Toda suma del tipo deAna´lisisMatema´tico:
+( i i
+GeneralizacionesdelaintegraldefinidahastalaintegraldeRiemann 53
+Proposicio´n8.Unafuncio´nacotada f deB(J,R)esintegrable [4] Clauss,G.(1960).Introduccio´nalalo´gicaformal.IL.
+si y so´lo s´ı existe el l´ımite I de las l´ımite de las sumas de Moscu´.
+Riemann σ(f,q,ξ) si la norma de la particio´n λ →0. Tal
+l´ımiteesprecisamenteelvalordelaintegraldesdeahastab [5] Davy´dov, V. V. (1981). Tipos de generalizacio´n en la
+de f;esdecir, ensen˜anza.PuebloyEducacio´n.LaHabana.Cuba.
+(cid:90) b [6] Dieudonne´, J. (1966). Fundamentos de Ana´lisis Mo-
+f(x)dx= l´ımσ(f,q,ξ).
+a λ→0 derno.Reverte´.Espan˜a.
+[7] FikhtengolG.M.(1965).TheFundamentalsofMathe-
+Proposicio´n9.Unafuncio´nrealacotada f definidasobre[a,b]
+maticalAnalysis.Volumen1.PergamonPress.USA.
+cumplelaigualdad(6)siyso´losisatisfacelascondicionesde
+ladefinicio´n15.
+[8] Gorski,D.P.yTavants,P.V.yotros(s.f.).Lo´gica.Edi-
+Lavalidezdeestaproposicio´nsededucedirectamentede ciones Pedago´gicas. Imprenta Nacional de Cuba. La
+laequivalenciadelasdefiniciones14y15. Habana.Cuba.
+Resulta entonces evidente que esta nueva definicio´n de
+la integral es tambie´n una generalizacio´n de la integral de [9] Kondakov, N. I. (1954). Lo´gica. Ediciones AC de la
+funcionesescalonadas. URSS.Moscu´.
+9. Conclusiones [10] Mederos,O.B.yRolda´n,R.A.(2011).Generalizacio-
+nesycaracterizacionesdelconceptodeme´trica.Cien-
+Sedefineelconceptodegeneralizacio´ndeunfuncional ciasMatema´ticas.Vol.25.No.U´nico.An˜o2009-2011,
+ysepresentanochotareasdida´cticasquefacilitanelproceso
+26-38.
+de generalizacio´n hasta obtener un nuevo funcional que lo
+generaliza.
+[11] Mederos,O.B.yRolda´n,R.A.(2013).Generalizacio-
+Se aplican las tareas dida´cticas en el desarrollo de tres
+nesdelconceptodeme´trica.RevistaIberoamericanade
+procesosdegeneralizacio´ndelfuncionalintegraldefinidade
+Educacio´nMatema´tica.35,43-58.
+funcionesescalonadashastaobtenerunmismoresultadoel
+funcionalintegraldeRiemannsobrelacoleccio´ndefunciones [12] Mederos,O.B.,Rolda´n,R.A.yotros(2014).Algunas
+regladas.Estostresprocesosutilizanrespectivamenteintegra- formasdegeneralizacio´ndeconceptosenlamatema´ti-
+lesinferioresysuperiores,ell´ımitedefuncionesescalonadas cadisciplinaryescolar.PlazayValde´s,S.A.deC.V.
+yuntipodesumasfinitasdiferentesalquecorrespondealas Editores.Me´xico.
+funcionesescalonadas.
+Los procesos de generalizacio´n se presentan mediante [13] Smirnov,A.A.yotros.(1956).Psicolog´ıa.Librodetex-
+una organizacio´n significativa del conocimiento utilizando toparalosinstitutospedago´gicos.Uchpedguiz.Moscu´.
+lacomposicio´ndeoperadoresyfuncionales,quepuedeser
+utilizadaporlosdocentesparaquelosestudiantesparticipen [14] Strogo´vich,M.S.(1949).Lo´gica.Gospolitizdat.Moscu´.
+en su construccio´n y para la generalizacio´n del funcional
+integraldeRiemann. [15] Viloria,N.yCadenas,R.(2003).IntegraldeCauchy:
+Alternativa a la Integral de Riemann. Divulgaciones
+Referencias matema´ticas.Vol.11.No.1,49-53.
+[1] Asmus,V.F.(1947).Lo´gica.Gospolitizdat.Moscu´.
+[16] Viloria,N.yCadenas,R.(2007).IntegraldeCauchyy
+FuncionesRegladas.RevistaNotasdeMatema´tica.Vol.
+[2] Ausubel,D.P.,Novak,J.D.yHanesian,H.(2000).Psi-
+3(1),No.251,pp.45-71.
+colog´ıaEducativa.Unpuntodevistacognitivo.Editorial
+Trillas.Me´xico.Primerapa´gina.
+[17] Vygotskii,L.S.(1968).Pensamientoylenguaje.Teor´ıa
+[3] Chelpanov,G.I.(1946).ManualdeLo´gica.Gospolitiz- deldesarrolloculturaldelasfuncionesps´ıquicas.Insti-
+dat.Moscu´. tutodelLibro.LaHabana.Cuba.

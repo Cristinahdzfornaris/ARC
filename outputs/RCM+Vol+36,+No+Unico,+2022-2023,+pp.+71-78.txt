@@ -1,0 +1,491 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.71-78
+Recibido(Received):23-05-2024,Revisado(Reviewed):22-07-2024
+Aceptado(Accepted):16-10-2024,Enlínea(Online):21-10-2024
+Pirámides instrumentales en la enseñanza y
+aprendizaje del límite funcional
+Instrumental pyramids in the teaching and learning of
+the functional limit
+Adriana Díaz Cordero1* , Valentina Badía Albanés2
+Resumen Elusodemapasconceptualeshasidoefectivoenlaenseñanzayaprendizajedediversasramas
+delaciencia.EnelpresentetrabajosemuestralautilizacióndelaspirámidesinstrumentalesenlaMatemática,
+específicamenteenelestudiodellímitefuncional.Elconceptodelímitefuncionalesfundamentalenlaasignatura
+“Cálculo de una sola variable”, ya que el resto de los conceptos básicos, tales como la continuidad de una
+función en un punto, la derivada y la integral definida se apoyan en la definición local de límite, dado que el
+métododeestudiodeestaramadelaMatemáticaeselanálisisinfinitesimalydeahílaimportanciadequeel
+estudiantealcanceunaadecuadacomprensióndelreferidoconcepto.Lapropuestametodológicaestábasada
+específicamente en el uso de pirámides instrumentales, derivadas de los mapas conceptuales y consta de
+variasfases.Aquíseexponelorelacionadoalafasedediagnósticoydediseñodeestaspirámides.
+PalabrasClave:dificultadesdeaprendizaje,límitefuncional,pirámidesinstrumentales.
+Abstract The use of concept maps has been effective in the teaching and learning of various branches of
+science. This paper shows the use of instrumental pyramids in Mathematics, specifically in the study of the
+functionallimit. Theconceptoffunctionallimitisfundamentalinthesubject“Calculusofasinglevariable”,since
+the rest of the basic concepts, such as the continuity of a function at a point, the derivative and the definite
+integralaresupportedbythelocaldefinitionoflimit,sincethemethodofstudyofthisbranchofMathematicsis
+theinfinitesimalanalysisandhencetheimportanceforthestudenttoreachanadequateunderstandingofthe
+referredconcept. Themethodologicalproposalisspecificallybasedontheuseofinstrumentalpyramids,derived
+fromconceptmaps,andconsistsofseveralphases. Thefollowingisrelatedtothediagnosticanddesignphase
+ofthesepyramids.
+Keywords: learningdifficulties,functionallimit,instrumentalpyramids.
+MathematicsSubjectClassification: 97C70,97D40,97D70,97I40,97U99.
+1DepartamentodeMatemática,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+adriana.diaz@matcom.uh.cu
+2DepartamentodeMatemática,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+valia@matcom.uh.cu
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Citarcomo: DíazCordero,A.,BadíaAlbanés,V.(2024).Pirámidesinstrumentalesenlaenseñanzayaprendi-
+zajedellímitefuncional.CienciasMatemáticas,36(Único),71–78.DOI:https://doi.org/10.5281/zenodo.13968250.
+Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9454.
+Introducción tratamientoteóricoqueimplica,queesalgonovedosopara
+ellosyporlasexigenciascognitivasqueconlleva,entrelas
+La idea del uso de mapas conceptuales en el proceso queseencuentran:lanovedaddelsimbolismo,laoperación
+deenseñanza-aprendizajedelconceptolímitefuncionalsur- del“pasolímite”,eltrabajoconmagnitudesinfinitesimalese
+giórelacionadaconlasinquietudesdelaprimeraautoradel infinitamentegrandes,laresolucióndeindeterminaciones,la
+trabajo ante las dificultades que percibía en los estudiantes necesidaddeltránsitodeloalgebraicoalográfico,entreotras.
+paralacomprensióndeesteconcepto.Estasdificultadeses- Serequierequeelestudianteenpocotiempocomprendagran
+tánmotivadasporlacomplejidaddelpropioconcepto,porel cantidaddeconceptosteóricos,adquierahabilidadesparala
+72 Pirámidesinstrumentalesenlaenseñanzayaprendizajedellímitefuncional
+correctamanipulacióndeltrabajoalgebraicoylogrelasnece- delconceptodelímitefuncionalenlosestudiantesdeprimer
+sariasconexionesentrelosconceptosylasformasdetrabajo, añodeQuímicaenlaUniversidaddeLaHabanaconstade4
+todolocualhacequeelestudiantesesientaabrumadoyno etapas:1)eldiagnósticoparaconocerelcampoespecíficode
+puedaavanzar. actuacióndelapropuesta,2)eldiseñodelametodologíapara
+El presente trabajo contiene una propuesta metodológi- laenseñanzadelconceptodelímitefuncionalmediantepirá-
+ca que está basada específicamente en el uso de pirámides midesconceptualeseinstrumentales,3)laaplicacióndedicha
+conceptualeseinstrumentales,derivadasdelosmapasconcep- metodologíay4)laevaluacióndelapropuestametodológica.
+tuales.Comoesunainvestigaciónencurso,aquíseexponelo Previo a la concreción de la primera fase se realizó un
+relacionadoalafasedediagnóstico,enlacualseanalizarone estudioprofundodelasdificultadesylosobstáculosepiste-
+identificaronlasdificultadesquepresentanlosestudiantesde mológicos, lo que se expone sintéticamente en el próximo
+QuímicadelaUniversidaddeLaHabanaenlamanipulación apartado.Estasistematizaciónpermitiórealizarlacategori-
+delconceptodelímite,apartirdeobservacionesrealizadasen zacióndelasdificultadesquesepresentanenelestudiodel
+claseydeevaluacionessistemáticasyparcialesdelaasigna- límitefuncional,laquefueutilizadaparalaetapadeldiagnós-
+tura. tico,porloquetambiénsepresentaenunepígrafeaparte.
+Fueronsistematizadoslostiposdedificultadesqueapare-
+cencuandolosestudiantesseenfrentanalestudiodelconcepto
+1.1 Obstáculosepistemológicosydificultadesenla
+para, a partir de un análisis crítico, efectuar una mejora de
+comprensióndelconceptodelímite
+lascategorizacionesencontradas.Demodoquelacategoriza-
+LosobstáculosepistemológicosfuerondefinidosporBa-
+ciónpropuestafuetenidaencuentaenlaelaboracióndeuna
+chelardcomo“aquelconocimientopresentequeponetrabas
+detalladalistadeverificaciónamododeguíadeobservación.
+al acceso a un conocimiento nuevo” (citado por [2]). Este
+Losresultadossonevidenciadelasdificultadesconcep-
+autor también señaló que “la aparición de obstáculos tiene
+tualesdellímitedefuncionesdeunavariablerealymarcaron
+un carácter inevitable, son obstáculos que no tiene sentido
+elpuntodepartidaparadefinirlasaccionesallevaracabo
+investigarcómoevitarlos,sinoconocerlosparavencerlosy
+durantelafasedediseño,enlacualseproponenlasdiferentes
+desarrollarelsaber”(Bachelard(1938),citadopor[8]).
+pirámidesquepodríanserusadasdurantelaimparticióndela
+Cornu[4]ensutesisdoctoralseñalaalgunosobstáculos
+asignatura.
+epistemológicos que afrontan los estudiantes al estudiar el
+límitefuncional;elprimerorelacionadoconelsentidocomún
+Relevancia del estudio
+delapalabralímite,queinduceaconcepcionesrelacionadas
+Losconceptosdelímiteycontinuidaddefuncioneshan aunabarrerainsuperable,porloquelescrealadudadesiel
+sidoampliamenteestudiados,locualseexplicaporsucom- límitesealcanzaono;segundo,lanocióndelinfinito,lacual
+plejidad,tantoparaseraprendidos,comoparaserenseñados. induceunanuevamaneraderazonamiento;y,finalmente,los
+Esta investigación aporta al estudio de las dificultades en conceptosdecantidadesinfinitamentegrandeseinfinitamente
+el proceso de enseñanza-aprendizaje de tales conceptos, al pequeñas.BasándoseeneltrabajodeCornuyenelestudiode
+proponerunanuevacategorizaciónycaracterizacióndelas laevoluciónhistóricadelconceptodelímite,Sierpinska[8],p.
+dificultades,contextualizadasalosestudiantesdelacarrerade 37,proponeunaampliacióndeobstáculosepistemológicosre-
+Química,queseacompañadeunametodologíapararealizar lativosalconceptodellímitefuncional,entreloscualesestán
+estudiossimilaresenotrosámbitoseducativos. losligadosalanocióndefunción,elcualestámuypresente
+Enelámbitodelaprácticapedagógica,elusodepirámides enlosestudiantescubanosquenodominancorrectamenteel
+conceptualeseinstrumentales,acompañadodelametodología concepto de función, y el obstáculo del símbolo, relativo a
+parasudiseñoyutilización,constituyeunaherramientaque que la operación de límite fue simbolizada de una manera
+ayudaalaprendizajesignificativoenelestudioymanipulación quesubrayademasiadolasanalogíasconrespectoalÁlgebra,
+deconceptosdelAnálisisMatemático. esconde las diferencias y puede conducir a una pérdida de
+significación.
+1. Generalidades acerca de la propuesta Porotraparte,lasdificultadesenlacomprensióndelcon-
+ceptodelímitefuncionalsípodemosintentarevitarlas.Las
+metodológica
+investigacionesrelacionadasconestetemasonextensas,en
+Elconceptodepropuestametodológicaescontroversial. estetrabajosepresentaunresumendelasdificultadesencon-
+Paraestetrabajolasautorasasumencomopropuestameto- tradas.Tall[9],p.14serefierealasdificultadescognitivas
+dológicaaquel“sistemadeconocimientos,procedimientosy quepresentanlosestudiantesrespectoalconceptodelímite
+técnicas,que,condicionadospordeterminadosrequerimien- deunafunción:
+tos,permitenordenarmejorelpensamientoylosmodosde
+actuaciónpararesponderaunaproblemáticaydarrespuestaa Dificultadesincorporadasenellenguaje:términosco-
+determinadosobjetivospropuestosenunainvestigación”[6]. mo“límite”,“tiendea”,“tanpequeñocomosequiera”,
+Lapropuestametodológicaparaelusodelaspirámides tienenunpoderososignificadocoloquialqueentraen
+conceptualeseinstrumentalesenlaenseñanzayelaprendizaje conflictoconlosconceptosformales.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.71-78 DíazCordero,A.;BadíaAlbanés,V.
+https://revistas.uh.cu/rcm/article/view/9454 https://doi.org/10.5281/zenodo.13968250
+Pirámidesinstrumentalesenlaenseñanzayaprendizajedellímitefuncional 73
+Elprocesodelímitenoserealizaporsimplearitmética límiteslaterales,noidentificareltipodeindeterminaciónque
+oálgebra,surgeelconceptodeinfinitoytodosevuelve sepresenta,encasodeexistir,confundirunaindeterminación
+“rodeadodeunmisterio”. conunaformaindefinida,entreotras.
+Una dificultad de trabajo algebraico es aquella que se
+El proceso de encontrar “una variable cada vez más
+manifiestaporelestudianteenlarealizacióndeltrabajoal-
+pequeña”esmuycomúnmenteinterpretadocomo“una
+gebraico,encaminadoalaeliminaciónotransformaciónde
+cantidadvariablearbitrariamentepequeña”,quesugiere
+laindeterminaciónpresenteenelcálculodellímite.Elestu-
+implícitamenteconceptosinfinitesimales,inclusocuan-
+diantecometeerrores,talescomofactorizarincorrectamente,
+doestosnoseenseñanexplícitamente.
+simplificarexpresionesfraccionariasconsumasyrestassin
+extraerfactorcomúnpreviamente,nodominareltrabajoal-
+Laideade“obtenerunN arbitrariamentegrande”,su-
+gebraico relacionado con la factorización o simplificación
+giereimplícitamenteconcepcionesdenúmerosinfini-
+cuandolasexpresionescontienenraíces,asícomolarealiza-
+tos.
+cióndetransformacionesquenoconduzcanalaeliminación
+Losestudiantesamenudotienendificultadesacercade delaindeterminacióndada.
+siellímitepuedeserrealmentealcanzado. Unadificultaddeargumentaciónsemanifiestacuandoel
+estudianteesincapazdeexplicarcorrectamentelarealización
+Hayconfusiónsobrelacomprensióndelpasodelímite dedeterminadasaccionesodejustificarlaestrategiaseguida
+finitoalinfinito,esdecir,eninterpretar“loquesucede en la solución. Algunos ejemplos de esta dificultad son: la
+enelinfinito”. incomprensióndelporquésetieneunaindeterminación,no
+justificar el tipo de indeterminación presente, el desconoci-
+En las investigaciones de Hernández, Prada y Ramírez
+miento de qué tipo de manipulación algebraica transforma
+[5]sereportaquelosestudiantessuelentenerdificultadesal
+unaindeterminaciónenotra(porejemplo,hallardenominador
+comprenderlosconceptosabstractosdelímiteycontinuidad,
+común en la resta de dos fracciones transforma la indeter-
+que no se pueden visualizar de manera directa, tienden a minación ∞−∞ en ∞⧸∞), y la falta de argumentación al
+confundirellímitedeunafunciónconelvalordelafunciónen
+multiplicarporlaexpresiónconjugadaenunaindetermina-
+unpunto,comotambiénconfundenlosconceptosdelímitey
+ción∞−∞.
+continuidad,porqueasumenquelosdosrepresentanlamisma
+Una dificultad de formalismo simbólico se manifiesta
+idea.
+cuando el estudiante hace un uso inadecuado de la simbo-
+Enunainvestigaciónsimilar,QuesadayPadilla[7]encon-
+logíacorrespondienteallímiteylacontinuidad,comopuede
+traronquelosestudiantestienenproblemasparainterpretar
+ser:omitirelsímbolodelímitecuandoaúnnolohacalculado,
+yutilizarcorrectamentelossímbolosylanotaciónmatemáti-
+sinoquesolosehanrealizadotransformacionesalgebraicas;
+caqueseutilizanenladefiniciónformaldelímite.Además, escribir l´ım f(x)=c⧸∞=0osimilares,escribir l´ım= f(a)
+tienendificultadeseneltrabajoalgebraicoparaelcálculode x→a x→a
+paraindicarqueellímiteesigualalafunciónevaluadaenel
+límites.
+punto,omitirelpuntoenelcualsedeseahallarellímitede
+unafunciónyelusoincorrectooinexistentedelasimbología
+1.2 Categorizacióndelasdificultadesenelconcep-
+aceptadaparaloslímiteslaterales.
+todelímite
+Enlostrabajosrevisadosseencontróunacategorización
+hechaporQuesadayPadilla,lacualconstadetrescategorías 2. Diagnóstico de las dificultades de los
+dedificultades:conceptual,deargumentaciónyenelusode estudiantes
+simbología([7],p.5).Aunqueestacategorizaciónsirvióde
+2.1 Metodologíaparaeldiagnóstico
+puntodepartida,comoconsecuenciadelestudiobibliográfico,
+Serealizóunestudiodecarácterdescriptivoparalaex-
+lareflexiónyelanálisisrealizado,seproponenenestetrabajo
+ploracióndelestadoactualquepresentanlosestudiantesal
+cuatro categorías, pues se considera apropiado contabilizar
+enfrentarsealosconceptosdelímiteycontinuidaddefuncio-
+porseparadolasdificultadesrelacionadasconlamanipulación
+nesdevariablereal.Elobjetivodelestudioeselanálisisde
+algebraica,debidoalaimportanciaqueseleconcedeenlos
+lasdificultadespresentesenlosestudiantesdelaasignatura
+planesdeestudioenCubaal“saberhacer”.
+“Cálculodeunasolavariable”enlacarreradeQuímicade
+De modo que para profundizar en las dificultades que
+laUniversidaddeLaHabana,porlocualsedecidiórealizar
+enfrentanlosestudiantesenelconceptodelímite,estasque-
+unmuestreonoprobabilístico,específicamenteunmuestreo
+darondivididasencuatrocategorías:conceptual,detrabajo
+intencionalhomogéneo.Delamatrículadelaasignaturade
+algebraico,deargumentaciónydeformalismosimbólico.
+82estudiantes,sedecidiócontarparaelestudiocon55estu-
+Una dificultad conceptual es aquella que se manifiesta
+diantesquetuvieranlosmismosprofesores(laprofesorade
+debidoaldominioincorrectooinsuficienteporelestudiante
+conferenciasylaprimeraautoradeestainvestigacióncomo
+deladefinicióndelímiteycontinuidaddeunafunciónenun
+profesoradeclasepráctica).
+punto.Algunosejemplosdeestason:nodiferenciarparaqué
+tiposdefuncionesyencuálespuntosesnecesariohallarlos
+DíazCordero,A.;BadíaAlbanés,V. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.71-78
+https://doi.org/10.5281/zenodo.13968250 https://revistas.uh.cu/rcm/article/view/9454
+74 Pirámidesinstrumentalesenlaenseñanzayaprendizajedellímitefuncional
+Entrelosmétodosdeinvestigaciónempíricosusadosse listaconstituidapor16rubrosopreguntas,queseusaronpa-
+encuentra la observación de los modos de actuación de los racalificarlasrespuestasdelosestudiantesencadaexamen
+estudiantes en clases prácticas, que permitió obtener infor- aplicado. La lista de verificación permite tabular y evaluar
+maciónsobrelacantidaddeestudiantesquelleganconuna las respuestasde los estudiantes acada ejercicio delbanco
+preparaciónpreviaalaclaseylacalidaddeesapreparación, de ejercicios, con el objetivo de identificar las dificultades
+asícomolacantidaddeejerciciosquesoncapacesderesolver presentesenlacomprensiónylamanipulacióndelconcepto
+enclasesprácticasycuántaayudanecesitandelprofesor. límitefuncional.
+Tambiénseutilizóelanálisisdocumentaldelasrespuestas El criterio utilizado para analizar las respuestas de los
+alaspreguntasescritasydelexamenparcialrealizadoporlos estudiantesesestablecerlapresenciaoausenciadecadaru-
+estudiantes.Estosmétodos,unidosalosmétodosdecarácter bro de la lista de verificación, quedándonos con el número
+teórico,comoelanálisis-síntesis,elmétodohistórico-lógicoy decomportamientospresentesycalculandoasíelporcentaje
+laabstracciónpermitierondescribirlasrelacionesesenciales deestos.Antesdeusarlalistadeverificaciónparaidentifi-
+delobjetodeestudioparaproponerunacategorizacióndelas carlasdificultadespresentesenlosestudiantes,sevaloróla
+dificultadesquepresentanlosestudiantesalutilizarelconcep- confiabilidaddelinstrumentoensí,yparaelloseprocedióa
+todelímite,yenbasealamismaelaboraruninstrumentoque efectuaruntestdeconfiabilidaddelalistadeverificación.Por
+fueaplicadoduranteelprocesoinvestigativo. confiabilidadseentiende,laestabilidaddelosresultadosque
+expresenlosevaluadoresusandolalistadeverificación,loque
+presuponequelasrespuestasdadasnoseansignificativamente
+2.2 Descripcióndelinstrumento
+dependientesdelevaluador.
+Apartirdelascategoríasestablecidasseelaboróuninstru-
+Paralarealizacióndeltestdeconfiabilidad,seconvocaron
+mentoparalaidentificacióndelasdificultadesdelosestudian-
+a10profesoresqueimpartenohanimpartidoestostemasen
+tesdelacarreradeQuímicaenlacomprensiónymanipulación
+susrespectivosprogramasyselespidióevaluardeterminadas
+delosconceptosdelímiteycontinuidad.Elinstrumentoela-
+respuestas a preguntas del banco de ejercicios de algunos
+boradoconsisteenunbancodepreguntas(verelenlacede
+estudiantes, usando la lista de verificación. Para el test de
+lainformaciónsuplementaria)conejerciciosparecidosalos
+confiabilidad se usaron las preguntas 5 inciso a, 6 y 8 del
+presenteseneltextobásicodelaasignaturaoenotrasbiblio-
+bancodepreguntas.
+grafíascomplementarias,ejerciciosmodificadosoconcebidos
+quepermitenestablecerlapresenciaonodelasdificultades Posteriormenteseprocesaronlasevaluacionesdelospro-
+segúnlaclasificaciónrealizada.Esteinstrumentoesdinámi- fesoresdesdedospuntosdevista:cuantitativo,paracadacelda
+co,esdecir,quepuedeseractualizadoamedidaqueavanza decadaexamendeunestudianteycualitativo,paralagene-
+lainvestigación,osea,sepuedeincrementarlacantidadde ralidaddelalistadeverificación.Conelobjetivodecontar
+preguntas,modificarlaspreguntaspararevelarlasevidencias conuncriteriodeestabilidadenelanálisisdelosdatos,se
+delasdificultadesyerroresconmásclaridadyprecisión,o consideróqueunapreguntadelalistadeverificacióneses-
+ponernuevostiposdepreguntas. tablesiseobtieneun70%decoincidencia.Comoresultado
+setuvoque12preguntasdelalistatienenmásdel70%de
+Elinstrumentorealizadoconstadeunbancodeejercicios
+coincidencia,parauntotalde75%depreguntasestablesde
+dondeexistendistintostiposdepreguntas,lascualesseclasi-
+lalistadeverificación.Porloqueseconcluyóqueeltestde
+ficancomo:decálculodelímitescontrabajoalgebraico,de
+estabilidadresultófavorable.
+argumentación usando el significado conceptual del límite,
+de relación de límite y continuidad de una función de una Además,selespidióalosprofesoresqueopinarancon
+variablerealenunpunto,ydecambiosdecontextoparame- respectoalacorrespondenciadelalistadeverificacióncon
+dircómoelestudiantecambiadeloalgebraico-analíticoalo lacategorizaciónasumidayalaredaccióndelosrubrosde
+sintético-geométricoyviceversa. la lista. Los resultados fueron positivos y se usaron en el
+perfeccionamientodelalistadeverificación.
+Con el objetivo de verificar la validez del instrumento
+realizadoseconfeccionóunaencuestaqueseaplicóa22pro-
+fesoresdeMatemática,loscualescuentanconunpromediode 2.3 Resultadosydiscusióndeldiagnósticodelas
+30,7añosdeexperienciadocente.Anteelenunciado“elins- dificultades
+trumentodiseñadolograeldiagnósticodelasdificultades”,16 El instrumento se aplicó en el primer semestre del año
+profesoresestuvierontotalmenteconformes,paraun72,7%, 2023endosmomentosdelcursoyparadostiposdeevaluacio-
+mientrasqueningúnprofesorloencontróinadecuado.Porlo nesparcialesdiferentes.Unprimermomentofueunapregunta
+queseconcluyóqueelinstrumentoutilizadoesválidopara escritayunsegundomomentofuelapruebaparcial.
+diagnosticarlasdificultadespresentesenlosestudiantesde La pregunta escrita se realizó con el objetivo de obser-
+primersemestredelacarreradeQuímicadelaUniversidad var los métodos que usan los estudiantes para resolver las
+deLaHabana. indeterminaciones,mientraslapruebaparcial,dondehaymás
+Alconsiderarlosobjetivosdelaspreguntasqueconfor- preguntasrelacionadasalconceptodelímite,permitetener
+man el instrumento y la categorización de las dificultades mayorinformacióndeotrasrepresentacionessemióticasdel
+descrita, se diseñó una guía de observación basada en una concepto.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.71-78 DíazCordero,A.;BadíaAlbanés,V.
+https://revistas.uh.cu/rcm/article/view/9454 https://doi.org/10.5281/zenodo.13968250
+Pirámidesinstrumentalesenlaenseñanzayaprendizajedellímitefuncional 75
+Al procesar la lista de verificación observamos un am- crearenlosestudiantesunainterrelacióndeconceptoseins-
+plionúmerodeestudiantesenloscualesseevidenciaqueno trumentarelcálculoalgebraicodelímitesdefunciones,pues
+conocenelprocedimientopararesolverlosejercicios,especí- losestudiantesdebentomarconcienciadelaampliavariedad
+ficamente,enlaspreguntasdeanálisisdelacontinuidadde deposibilidadesymétodosderesoluciónparalasindetermi-
+unafunciónenunpunto,seprecisóquelaintentaronresol- naciones.Necesitamosenseñaruncontenidoyunaformade
+verel76%delosestudiantesysolamenteel7%laresuelve trabajototalmentenuevaparaelestudiante,porloquesurgela
+correctamente. pregunta:¿seráposibleenseñarelcálculodelímitefuncional
+El86%delosestudiantespresentanerroreseneltrabajo usandomapasconceptuales?
+algebraico y un 75% de los estudiantes ni siquiera saben Despuésdeunainvestigaciónbibliográficasedecidióque
+qué tipo de trabajo algebraico pueden realizar para seguir elrecursomásapropiadoparaloquesepretendelograresla
+resolviendoelejercicio.Además,un24%delosestudiantes pirámideconceptualeinstrumental.Enlainvestigaciónhecha
+cometeerroresdetiposimbólicoalrealizaralgúncálculode porBermúdezyRodríguez[1],seplanteaqueestaspirámides
+límite. “reflejanunaestructurajerárquicaestricta,además,nosólohan
+Un 87% de los estudiantes es capaz de identificar una deconstreñirsealarepresentacióndeestructurascognitivas,
+indeterminacióncuandoestánenpresenciadepreguntasde sinotambiénhandeconfigurarestructurasinstrumentales,en
+cálculodelímite,pero,solamenteel20%escapazdeiden- lasquelasubordinaciónyconcomitanciadeloselementosque
+tificarla en un ejercicio de análisis de continuidad. Lo cual seorganizanconstituyensupropiedadconspicua”.Porloque
+indicadosgraveserrores:unoesquelosestudiantesbuscanla permitendirigirelaprendizajemediantelaorganizaciónlógica
+indeterminacióndeformamecánicaenejerciciosdecálculo delosconceptos,determinando“unatrayectoriainalterable
+delímiteyelotro,quelosestudiantesconsideranelanálisis con respecto al criterio de clasificación fijado en el primer
+de continuidad como una simple evaluación y no como un niveldeanalogía”([1],p.18).
+procesoenelcualintervieneelconceptodelímitefuncional. Unapirámideconceptualvadirigidaalasistematización
+También es preocupante el hecho de que solamente el ycomprensióndelosaspectosteóricosdeuntema,alograr
+11% de los estudiantes logra relacionar el resultado de un unentendimientodelasrelacionesesencialesentreconceptos.
+límiteconelcomportamientográficodelafunciónalrededor Unapirámideinstrumentalvaencaminadaalaapropiaciónde
+del punto o en el infinito. Este dato demuestra que existen algoritmosdetrabajo,allogrodehabilidadesenlasolución
+lagunasenelentendimientodelosestudiantesconrespectoal deproblemasdediversaíndole.
+conceptodelímite.
+3.2 Metodologíaparaeldiseñoyutilizacióndelas
+Losresultadosevidencianquelosestudiantestienenerro-
+pirámides
+resdetipossimbólicos,algebraicos,deinterpretacióngeomé-
+Para la conformación de las pirámides conceptuales e
+trica,conceptualesy,sobretodo,quenotienenincorporados
+instrumentales primero se debe organizar la secuencia de
+algoritmoscorrectospararesolverejerciciosrelacionadoscon
+actividadesdeltema,deformatalqueestasecuenciaserefleje
+elanálisisdecontinuidaddefunciones.
+enlaorganizaciónjerárquicadelapirámide.
+Lasclasesdecorteteóricodebenseraprovechadaspara
+3. Diseño de las pirámides conceptuales e laconstrucción,enelaulayconlaparticipaciónactivadelos
+instrumentales estudiantes,delaspirámidesconceptuales,quebasadasenlas
+definicionesyconceptosdeltemaysusrelaciones,permitan
+3.1 Baseteóricadeldiseño
+alcanzarcadaramaydefinirelordenjerárquico.
+Losmapasconceptualesson“herramientasgráficaspara
+Mientras que durante el planteamiento, la resolución y
+organizaryrepresentarelconocimiento.Incluyenconceptosy
+discusióndelosejemplosqueserealizanenlasactividades
+relacionesentreconceptosindicadosporunalíneaconectiva
+prácticas,sevaconformandolapirámideinstrumental.Esta
+queenlazalosdosconceptos”[3].Losmapasconceptuales
+pirámidesedebeirconstruyendoenclaseconelestudiante.
+debentenerunaestructuraproposicional,“unmapaconcep-
+Sedebepresentarunejemplo,resolverlousandoelmétodo
+tual consiste de una representación gráfica de un conjunto
+adecuadodesoluciónyunavezquesecomprendequeelmé-
+de proposiciones sobre un tema”. Los mapas conceptuales
+todoesválido,incorporaresemétododetrabajoalapirámide,
+responden a una jerarquía, aunque puede no ser rígida, en
+quedebeestarenunaseccióndelapizarraoirseelaborando
+dependenciadelaPreguntadeEnfoque,sepuedenobtener
+enformatodigital.
+mapasconceptualesdeclarativos,explicativosocíclicos,pero
+Elestudiantedebeusarlapirámideinstrumentalparala
+siempremantienenunajerarquíanaturalentreconceptos[3].
+resolucióndelosejerciciosdelasclasesprácticasyelprofesor
+Losmapasconceptualespermitensistematizareinterrela- asílodebeorientar.Cuandounestudiantecometaunerror,el
+cionarlosconocimientosteóricosconelobjetivodeorganizar profesordebeseñalarlazonadelapirámidequenosiguióo
+elpensamiento,perosonusadosprincipalmenteparasistema- quesaltó,deformatalqueelpensamientodelestudiantese
+tizarcontenidopreviamentetratado.AlutilizarlosenMatemá- vayaorganizandosegúnlapirámideinstrumental.
+tica,yespecíficamenteparalaenseñanzadellímitefuncional,
+necesitamosmás,esnecesarioorganizarmétodosdetrabajo,
+DíazCordero,A.;BadíaAlbanés,V. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.71-78
+https://doi.org/10.5281/zenodo.13968250 https://revistas.uh.cu/rcm/article/view/9454
+76 Pirámidesinstrumentalesenlaenseñanzayaprendizajedellímitefuncional
+Conbaseenesateoríaylametodologíaparalaconstruc- Por ejemplo, para usar la pirámide instrumental que se
+cióndepirámidesexpuestasporBermúdezyRodríguez([1], presentaenlaFigura1,previamenteserealizaunaclaseexpli-
+p.19),seelaboraronpirámidesconceptualeseinstrumentales candoelconceptolímitefuncionalsegúnCauchyylarelación
+para la enseñanza del concepto de límite funcional de una entre el valor del límite y el comportamiento gráfico de la
+variablereal.Aquísepondrácomoejemplounadeellasyse funciónalrededordelpunto,tambiénsetocanlostemasde
+explicarásucontenidoyformadeutilizaciónenclase,donde continuidadydiscontinuidaddelasfuncionesylosejemplos
+sepodráapreciarlarelaciónentrelasecuenciadeactividades detiposdediscontinuidad,separandoasíelconceptodelímite,
+ylapirámideinstrumental. delcálculoalgebraicodeloslímites.
+ParalasecuenciadeactividadespropuestaenlaTabla1se
+3.3 Ejemplodepirámideinstrumental diseñalapirámideinstrumentalquesepresentaenlaFigura
+EnlaTabla1semuestralasecuenciadeactividadespro- 1, dedicada al cálculo algebraico del límite de una función
+puestaparalaenseñanzadeltemadelímitedefunciones. real de una variable y que trabaja específicamente sobre la
+organizacióndelosmétodosdetrabajo.
+Tabla1.Secuenciadeactividades.Tema:LímiteFuncional Como se observa en la Figura 1, en la pirámide se en-
+[SequenceofactivitiesfortheTopic:FunctionalLimit]. cuentra:resolucióndeindeterminaciones,formasindefinidas
+oconcluyentesquenoconstituyenunaindeterminación,teo-
+Act. Contenido remarelacionadoconlasfuncionesacotadas,ylaestructura
+C-4 Función.Conceptosafines.Funciónrealdeuna detrabajogeneralparaelcálculodelímite.
+variableindependiente.Representacióndefunciones. Nótese que la pirámide es cíclica en la sección de tra-
+Propiedadesdelasfuncionesbásicasyfunción bajoconlasformasindeterminadas,loquegarantizaqueel
+elemental.Funcionesdefinidasporsecciones. estudianteevalúesilatécnicaempleadafueefectivaparala
+Funcionesexponencialesdebaseeysuinversa.
+eliminacióndelasindeterminaciones.
+C-5 Límitedeunafunción(solamenteanálisisgráficoy
+Laimportanciadeestaevaluaciónvienedada,porejemplo,
+teórico)enunpunto(segúnCauchy-Weierstrass).
+para evitar que el estudiante utilice la Regla de L’Hôpital
+Límiteslaterales.Continuidaddeunafunciónenun
+cuandoyahaeliminadolaindeterminación.
+punto.Tiposdediscontinuidades.Asíntotasverticales.
+Losejemplosdebenseguirelordenpropuestoenlapirá-
+Límitesinfinitos,límitesalinfinito
+ylímitesenelinfinito.Asíntotasnoverticales. mide, para cada una de las formas de trabajo usuales en la
+CP-4 Ejercitaciónsobrefuncionesylímitesconanálisis eliminacióndelasindeterminaciones.Esimportanteescoger
+gráfico. bien los ejemplos a resolver en clase y la secuencia de los
+C-6 Cálculodelímites.Leyesdeloslímites.Formas mismos,demodoquesevayanintroduciendopaulatinamente
+indefinidasquenoconllevanaindeterminación losmétodosdetrabajo,quepermitanexplicarcadapasodel
+yformasindeterminadas.Teoremadelemparedado. trabajoalgebraicoyloqueselograalrealizardeterminadas
+Límitesfundamentales. transformaciones.Estaorganizaciónyconcientizacióndelos
+CP-5 Ejercitaciónsobrecálculodelímites. métodosparaelcálculodelímitesdefunciones,permitiráir
+CP-6 Ejercitaciónsobrecálculodelímitesy
+eliminandoloserroresusualesquelosestudiantescometen.
+cambiosdecontextos.
+Conclusiones
+Esposibledesarrollarpirámidesconceptualesparaelcon- Enestetrabajosedescribenlasdosprimerasfasesdeuna
+cepto de límite, para el análisis de la continuidad de una propuestametodológica,basadaenelusodemapasconcep-
+funciónenunpuntoolaclasificacióndelostiposdedisconti- tuales, para el estudio del límite funcional de funciones de
+nuidades,medianteelestudiodesucomportamientoalrededor unavariableenestudiantesdeLicenciaturaenQuímica.
+deunpunto. Seprofundizóenlosobstáculosepistemológicosyespecí-
+Enelcasoidealdequesepuedadesarrollarunaactividad ficamentelosvinculadosalconceptodelímitefuncional.Se
+prácticadelconceptodelímiteysurelaciónconelcomporta- realizóunaexposiciónexhaustivadelasdificultadesrelativas
+mientográficodelafunciónenunpunto,seproponerealizarla aesteconcepto.
+antesdelaclasededicadaalcálculoalgebraicodellímitefun- Sepropusounacategorizaciónpropia,condefinicionesy
+cional,esdecir,evitarlosmétodosanalíticosyenfocarseen algunasdesusmanifestaciones,queresultaapropiadaalos
+comportamientosgráficosyanálisiscualitativo.Deestaforma objetivosinvestigativosdeestetrabajo.
+el concepto se afianza mejor en el estudiante, pues este se Se diseñó una lista de verificación para medir las difi-
+trabaja de forma visual y se relaciona así con el contenido cultadesquepuedentenerlosestudiantes,quefuevalidada
+precedente que los estudiantes tienen, el cual es funciones medianteuntestdeconfiabilidadysediscutieronlosresulta-
+y representación de funciones. Esta manera de enseñar el dosobtenidosdelaaplicacióndelalistadeverificación.Se
+límite funcional trabaja sobre las dificultades conceptuales fundamentóelusodelaspirámidesconceptualeseinstrumen-
+quelosestudiantespresentanylosayudaatransitarentrelos talesyseilustróunejemplodeestaúltimaparasuusoenla
+contextosgráficosyanalíticos,yviceversa. enseñanzadelconceptodelímitefuncional.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.71-78 DíazCordero,A.;BadíaAlbanés,V.
+https://revistas.uh.cu/rcm/article/view/9454 https://doi.org/10.5281/zenodo.13968250
+Pirámidesinstrumentalesenlaenseñanzayaprendizajedellímitefuncional 77
+Figura1.Pirámideinstrumentalparaelcálculodelímite[Instrumentalpyramidforthecalculationoflimit].
+Suplementos Validación A.D.C.,V.B.A.
+Visualización A.D.C.
+Esteartículocontieneinformaciónsuplementariaen:ht
+tps://drive.google.com/drive/folders/1Ps Redacción:preparacióndelborradororiginal A.D.C.,
+D_0b53HToZDXpDPsDZJ3IGtvEQA2Q3. V.B.A.
+Redacción:revisiónyedición A.D.C.,V.B.A.
+Conflictos de interés
+Referencias
+Sedeclaraquenoexistenconflictosdeinterés.Losauto-
+resdeclaranquenohubosubvencionesinvolucradaseneste [1] Bermúdez,R.yM.Rodríguez:Pirámideconceptualcon-
+trabajo. tramapaconceptual:desdeloaltosepiensamáslejos.
+RevistaPedagogíaUniversitaria,XII:1–20,2007. http:
+//docplayer.es/24504765-Piramide-con
+Contribución de autoría
+ceptual-contra-mapa-conceptual-desde
+Conceptualización A.D.C.,V.B.A. -lo-alto-se-piensa-mas-lejos.html.
+Análisisformal A.D.C.,V.B.A.
+[2] Brousseau,G.:Lesobstaclesépistémologiquesetladi-
+Investigación A.D.C.,V.B.A. dactiquedesmathématiques.EnBednarz,N.yC.Garnier
+(editores):Constructiondessavoirs,ObstaclesetCon-
+Metodología A.D.C.,V.B.A.
+flits,páginas41–63.CIRADELeséditionsAgenced’Arc
+Administracióndeproyecto V.B.A.
+inc.,1989. https://hal.science/hal-00516
+Supervisión V.B.A. 581v1/file/Les_obstacles_epistemolog
+DíazCordero,A.;BadíaAlbanés,V. CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.71-78
+https://doi.org/10.5281/zenodo.13968250 https://revistas.uh.cu/rcm/article/view/9454
+78 Pirámidesinstrumentalesenlaenseñanzayaprendizajedellímitefuncional
+iques_et_la_didactique_des_mathemati en formación inicial. En Conferencia Interamericana
+ques89.pdf. de Educación Matemática, páginas 1–9. XV CIAEM-
+IACME,Mayo2019. https://conferencia.ci
+[3] Cañas, A. y J. Novak: Mapas conceptuales: qué son y
+aem-redumate.org/index.php/xvciaem/xv
+cómoelaborarlos,Agosto2008. https://reposito
+/paper/viewFile/453/332.
+ry.icesi.edu.co/biblioteca_digital/b
+itstream/10906/85728/1/canas_mapas_c [8] Sierpinska,A.:Obstaclesépistémologiquesrelatifsala
+onceptuales_2018.pdf. notiondelimite. RecherchesEnDidactiqueDesMathé-
+matiques, 6:5–67, 1985, ISSN0246-9367. https:
+[4] Cornu,B.:Apprentissagedelanotiondelimite:concep- //revue-rdm.com/1985/obstacles-epist
+tionsetobstacles,1983. http://pascal-francis
+emologiques/.
+.inist.fr/vibad/index.php?action=get
+RecordDetail&idt=9690985. [9] Tall, D: Students’ difficulties in calculus Plenary pre-
+sentation in Working Group 3, ICME, Quebec, August
+[5] Hernandez-Suarez,C.A.,R.Prada-NúñezyP.Ramírez-
+1992. Mathematics Education Research Centre, 1992.
+Leal:Obstáculosepistemológicossobrelosconceptosde http://homepages.warwick.ac.uk/staff/
+límiteycontinuidadencursosdecálculodiferencialen David.Tall/pdfs/dot1993k-calculus-wg3
+programasdeingeniería. RevistaPerspectivas,2:73–83, -icme.pdf.
+Julio 2017. https://revistas.ufps.edu.co
+/index.php/perspectivas/article/view
+/1316.
+[6] LópezFalcón,A.:Lostiposderesultadosdeinvestigación
+enlascienciasdelaeducación. RevistaConrado,17:53–
+61,Diciembre2021. https://conrado.ucf.edu.
+cu/index.php/conrado/article/view/21
+37.
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+[7] Quesada,C.yE.Padilla:Límitedefuncionesenunavaria-
+SinDerivadas 4.0 Internacional”.
+bleyprincipalesdificultadesconceptualesdeestudiantes
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.71-78 DíazCordero,A.;BadíaAlbanés,V.
+https://revistas.uh.cu/rcm/article/view/9454 https://doi.org/10.5281/zenodo.13968250
+1

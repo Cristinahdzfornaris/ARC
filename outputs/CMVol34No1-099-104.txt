@@ -1,0 +1,389 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.99-104
+Recibido06-2020,Aceptado07-2020
+Análisis espacial de la incidencia de COVID-19 en
+pequeñas áreas geográficas en Cuba
+Spatial analysis of COVID-19 incidence in small
+geographic areas in Cuba
+Patricia Lorenzo-Luaces1*, Antonio Torres-Reyes2, Paula Fonte3, Nancy Perez2, Lizet Sanchez1
+Resumen ElobjetivoprincipaldeestetrabajoesdescribirladistribucióngeográficadeincidenciadeCOVID-19
+enáreaspequeñasenCuba,asícomoidentificarregionesdealtoriesgo.SecalcularonlasRazonesdeIncidencia
+Estandarizadas(RIE)paralaincidenciadeCOVID-19paralas15provinciasylos168municipiosdelpaís.Para
+losmunicipiosseestimaronlosRiesgosRelativos(RR)suavizadosylasProbabilidadesaPosteriori(PP)usando
+unmodelobayesianocondicionalautorregresivo.Losdatosdeincidenciaypoblacionalesfueronsuministrados
+porelMinisteriodeSaludPúblicadeCubaylaOficinaNacionaldeEstadísticasrespectivamente.Losresultados
+obtenidos fueron mapeados para su mejor interpretación. Todos los métodos fueron implementados en R
+usandolaslibreríasmaptools,spdepyR2WinBUGS.UnaregióndealtoriesgofuelocalizadaenLaHabanay
+otras tres áreas de alto riesgo se identificaron en algunos territorios de Matanzas, Villa Clara and Ciego de
+Ávila.Laaplicacióndemodelosbayesianospermitiólainterpretacióndeladistribucióngeográficadeincidencia
+deCovid-19yladiferenciaciónderegionesdealtoybajoriesgo.Laclasificaciónobtenidafueutilizadapara
+la estratificación de acciones durante la epidemia y para la planificación del diseño muestral de la encuesta
+nacionaldeportadoresdelaCovid-19enCuba.
+Abstract ThemaingoalofthisreportistodescribethegeographicaldistributionofCOVID-19incidencein
+small geographical areas in Cuba and to identify possibly high risk regions. Standardized Incidence Ratios
+(SIRs)werecalculatedfortheincidenceofCOVID-19foreachofthe15provincesandthe168municipalitiesof
+thecountry. SmoothedvaluesoftheRelativeRiskandtheposteriorprobabilitieswereestimatedusingBayesian
+ConditionalAutoregressive(CAR)modelsformunicipalities. Incidenceandpopulationdatawereprovidedfor
+the Ministry of Public Health and the National Office of Statistics of Cuba respectively. The results obtained
+weremapped. AllmethodswereimplementedinRusingmaptools,spdepandR2WinBUGSlibraries. Ahigh
+risk region is located in Havana, the capital of the country and other three high risk areas were identified in
+someterritoriesofMatanzas,VillaClaraandCiegodeAvila. TheapplicationofBayesianmodelsallowedthe
+interpretationofthegeographicincidenceofCOVID-19andthedifferentiationofhighandlowrisksregions. It
+wasusefultodecision-makersfortheactionstratificationduringtheepidemicandforthesampledesignofa
+nationalsurveyinCuba.
+PalabrasClave
+Análisisespacial,modelosbayesianos,distribucióngeográfica,covid19
+Keywords
+Spatialanalysis,Bayesianmodels,geographicdistribution,covid19
+1DireccióndeEnsayosClínicos,CentrodeInmunologíaMolecular,LaHabana,Cuba,patricial@cim.sld.cu,lsanchez@cim.sld.cu
+2FacultaddeGeografía,UniversidaddeLaHabana,LaHabana,Cuba,antonio.torres@fq.uh.cu
+3FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba,paula.fonte@matcom.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción surápidaexpansión.Aprincipiosdefebrerodel2020yase
+reportabancasosentodaslasprovinciasdeChina.El30de
+Endiciembredel2019unanuevaenfermedadinfecciosa
+enerodel2020laOrganizaciónMundialdelaSalud(OMS)
+fuediagnosticadaenWuhancapitaldelaprovinciaHubeien
+ladeclaraunaemergenciasanitariadepreocupacióninterna-
+China,alacualseledenominóCovid-19,acrónimodecoro-
+cional,basándoseenelimpactoqueelviruspodríateneren
+navirusdesease2019[9].Desdeelcomienzodelaepidemia,
+paísessubdesarrolladosconmenosinfraestructurasanitaria.
+éstamostrótenermecanismosdepropagaciónquefavorecían
+100 AnálisisespacialdelaincidenciadeCOVID-19enpequeñasáreasgeográficasenCuba
+El11demarzofueronreportadoscasosporestaenfermedad entrelasestimacionesdelosriesgosrelativosyseobtieneun
+enmásdeciennaciones,porloquelaOMSreconociólaen- mapasuavizadoóalisadoquetieneunamejorinterpretación
+fermedadporCOVID-19comopandemia.Justoenesafecha, epidemiológica.
+enCubasereportaronlosprimerostrescasos.Laspersonas Muchosestudioshanrealizadorevisionesdelosenfoques
+quetuvieroncontactoconlostrescasosconfirmadosfueron bayesianosparamodelaryrepresentarenmapaslastasasde
+inmediatamenteaisladasmientraslasautoridadessanitarias enfermedadesintroduciendolaideadesimilitudesespaciales
+delpaísreforzaronlasaccionesdecontrolyvigilancia. entreáreasvecinas,utilizandoenfoquesbayesianosempíricos
+El 13 de marzo fueron suspendidos en todo el país los ycompletos[4],[7].Elpresentetrabajopresentaelanálisis
+eventosmasivosyespectáculosartísticos,locualconstituyó espacialrealizadoparaladeteccióndeáreasmásvulnerables
+laprimeramedidadecarácternacionaltomadaconelfinde ylaestratificaciónepidemiológicadelasaccionesduranteel
+disminuirlatasadecontagiodelCOVID-19.Aestasmedidas cursodelaepidemiadeCOVID-19enCuba.
+lesiguieron,entreotras,elcesedeactividadespresenciales
+enlasescuelas,lainterrupcióndeltransporteinterprovincial 1. Métodos
+yluegodeltransporteurbano.Cubaseunióalllamadointer-
+1.1 MétodoIndirectodeEstandarización.
+nacionalaldistanciamientosocialparaeliminarcadenasde
+LaRazóndeIncidenciaEstandarizada(RIE)enunárea
+transmisión.
+determinadasedefinecomoelcocienteentreelnúmerode
+Unadelasdireccionesdetrabajoquesepropusofuela
+casos observados en el área entre el número de casos espe-
+detección de zonas de riesgo de ocurrencia detransmisión
+radosenlamisma.Asuvez,elnúmerodecasosesperados
+local.Enlosestudiosdeincidenciadeenfermedadesenáreas
+esaquelquesetendríasilastasasporgrupodeedadenel
+geográficaspequeñassonampliamenteutilizadoslosmapas
+áreaencuestiónsecomportarancomolasdeunapoblación
+pararepresentarlastasasdeincidencia,yaquemuestrancon
+estándartomadacomodereferencia.
+una eficiencia única la distribución de un fenómeno en el
+Ennuestrocasohemostomadolapoblacióncubanadel
+espacio.Así,alilustrarladistribucióndeenfermedadesque
+2019(ONEI).
+cambian en cortos períodos de tiempo o varían de forma
+no aleatoria en el espacio, los mapas estimulan de manera ∑O
+ia
+inevitablelaformulacióndehipótesiscausales. O
+RIE= i = a (1)
+(cid:18) (cid:19)
+Las tasas crudas no deben ser usadas para comparar el E O
+i ∑ a n
+riesgoentreregiones,yaquelasregionespuedenvariarenta- n ia
+a a
+maño,densidadycomposiciónporalgunosfactoresderiesgo
+DondeO denotaelnúmerodecasosobservadosenla
+importantescomolaedad.Paracompararlastasasesnece- ia
+región i y grupo de edad a, n es el número de individuos
+sario estandarizarlas. La edad es un factor determinanteen ia
+en riesgo de la región i y grupo de edad a y Oa es la tasa
+el desarrollo delaCOVID-19 por lo que una diferencia de na
+específicadelgrupodeedadaenelquinquenio,entodaCuba
+estructuradeedadesentredospoblacionespuedeinfluirsig-
+ParaelcálculodelosintervalosdeconfianzaparalasRIE
+nificativamente en las tasas crudas. Es por esto que resulta
+seutilizaelmétodorecomendadoporUry(1985).
+importanteestandarizarlastasasconrespectoalaestructura
+deedadesdeunapoblaciónseleccionadacomoestándarpara
+(cid:104)(cid:16) (cid:112) (cid:17) (cid:16) (cid:112) (cid:17) (cid:105)
+podercompararlasmismas. O −Z O +1 /E; O −Z O +2 /E
+i i−α/2 i i i i−α/2 i i
+Sin embargo, las tasas pueden verse seriamente afecta- (2)
+das por el ruido originado por la variabilidad del número AunquelosRIEssoncomúnmenteutilizadosenmapas
+decasosdentrodecadaárea(variabilidadPoisson),siendo deenfermedades,ellostienenmuchasdesventajasenestudios
+particularmenteevidentecuandoseinvestiganenfermedades de enfermedades raras o en áreas pequeñas, haciendo muy
+relativamenterarasenáreaspequeñas.Enestasituación,las difícil la interpretación de los mapas de los RIEs o de los
+tasasmásextremassuelenaparecerenlasáreasdemenorpo- p-valoresymuchasveceserróneas[1].PosiblementelosRIEs
+blación,conloqueelprincipalinterésdelmapasecentraría másextremossonaquellosbasadossoloenpocoscasos.Por
+enlasáreascontasasmenosfiables. el contrario, los p-valores más extremos de las pruebas de
+Estainestabilidaddelastasasestandarizadas(sóloajus- hipótesisquecomparanlosRIEsconlaunidadpuedeserque
+tadasporedad),condicionadaporeltamañodelapoblación, sóloidentifiquenlasáreasdemayorpoblación.Paraenferme-
+y en consecuencia el bajo valor de los casos esperados, y dadesrarasyáreaspequeñas,comoelriesgodelosindividuos
+lapocainformaciónqueofrecenlosnivelesdesignificación esheterogéneodentrodecadaárea,lavariabilidaddelriesgo
+estadísticadelasáreas,hanmotivadoelusodeestimadores promediodeláreaexcedealesperadosegúnladistribución
+bayesianosdelriesgorelativoespecíficodecadaárea.[4][3] Poisson.LavariaciónextraPoissonpuedeserexplicadacon
+Deestamaneraseproporciona,paracadaárea,unaestima- la variabilidad del riesgo relativo dentro de cada área. Los
+cióndelriesgorelativoqueesunvalorintermedioentresutasa métodosbayesianospuedenserusadosparaesto,ofreciendo
+estandarizadabrutayloqueseinfieredelainformacióndada estimadoressuavizadosdelosriesgosrelativos,quepreser-
+por las otras áreas, con lo que se reducen las fluctuaciones vanaquellosbasadosenpoblacionesgrandesysuavizanlos
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.99-104
+AnálisisespacialdelaincidenciadeCOVID-19enpequeñasáreasgeográficasenCuba 101
+menosconfiables.Losestimadoresbayesianosdelosriesgos Paralaheterogeneidadcorrelacionadaseusaunadistribu-
+relativossonmuchomásfácilesdeinterpretar. cióninicialcondicionalautorregresivaquemuestralarelación
+entrelosriesgosdeáreasgeográficasadyacentes:
+1.2 Métodos Bayesianos de suavizamiento para el
+riesgorelativoenenfermedadesraras r
+i
+(i= j)∼Normal(m,v) (5)
+Elenfoquebayesianoconsisteenagregaralainformación r i i
+j
+deloseventosobservadosencadaárea,informaciónapriori
+delavariabilidaddelastasasdeincidenciaenelmapacomple-
+to.Elestimadodelriesgorelativoencadaáreaesunamezcla 1
+m = ∑ r (6)
+i j
+entreestosdostiposdeinformación(lainformaciónapriori n
+i j∈δi
+ylosdatosobservados).Losestimadoresbayesianossonsi-
+milaresalastasasestandarizadascuandosonbasadasenun
+dondeδ esconjuntodeáreasadyacentes,n númerode
+i i
+grannúmerodeeventos.Sinembargo,cuandoelnúmerode vecinosyv = vV
+eventosespequeñodominalainformaciónaprioridelmapa i ni
+Losparámetrosv yv controlanlavariabilidaddelos
+completo,esdecir,lastasasestandarizadasseaproximanala H V
+efectosespacialescorrelacionadosynocorrelacionados.De
+tasamediaglobal.Deestamanera,sereducenlasfluctuacio-
+esta forma los r son suavizados hacia un riesgo promedio
+nesenlosestimadosdelosriesgosrelativos,locualpermite i
+localenunconjuntodeáreasvecinas,convarianzainversa-
+unamejorinterpretaciónepidemiológica.Otraventajadelos
+menteproporcionalalnúmerodevecinos.Estemodeloasume
+métodosbayesianossobreelenfoquePoissontradicional,es
+unadependenciaespacialmuyfuerte[8].Losr tienenuna
+quepuedentenerencuentaladistribuciónespacialdelaen- i
+distribuciónmultivariadaimpropia,sumatrizdevarianzasy
+fermedad,esdecir,queáreasgeográficascercanastiendena
+covarianzasessingular.
+tener tasas de incidencia parecidas. Es necesario incluir en
+Elenfoquebayesianopermitecalcularlaprobabilidada
+lainformaciónaprioriladependenciageográficalocal.Con
+posteriori de que el riesgo relativo de cada área exceda (o
+estainformaciónaprioriunestimadorbayesianodelatasaen
+quede por debajo de) un nivel de frontera predeterminado.
+cadaáreatiendehacialamedialocal,teniendoencuentala
+Tomandoestafronteracomolaunidad,estasprobabilidadesa
+informacióndelasáreasvecinas[1].
+posterioripuedenserinterpretadascomolafuerzadeeviden-
+Lainferenciabayesianasobrelosriesgosrelativosseba-
+ciaestadísticaderiesgoelevadoencadamunicipio.Probabili-
+saenladistribuciónmarginalaposteriori(elproductodela
+dadesaltaspuedenserinterpretadascomoevidenciaderiesgo
+funcióndeverosimilituddelosriesgosrelativosdelosdatos
+elevado(obajo).[5]
+yunadistribuciónapriorider).Enotraspalabras,lavaria-
+ciónextra-Poissonseincorporaasumiendoquelosverdaderos
+riesgosrelativossiguenunadistribuciónestadísticaapriori
+1.4 Mapascartográficos
+común. Muchas distribuciones de probabilidad pueden ser
+Losmapasquepresentanladistribuciónespacialdeen-
+evaluadascomoposiblescandidatosdedistribucionesprevias:
+fermedadesproveenunarápidainformaciónvisualsobrela
+lognormal,Weibull,Gamma,etc
+variación de estas; sin embargo, muchas veces se cometen
+erroresensuinterpretación.Cuandoserealizaunmapade-
+1.3 ModeloCondicionalAutorregresivo(CAR)
+be determinarse muy cuidadosamente la escala, el número
+Elconocimientoaprioriindicaqueáreasgeográficascer-
+declasesderiesgoysuslímites.Estosdependendelrango
+canastiendenatenerriesgosrelativossimilares.Cuandose
+devariación,laprecisióndelosestimadosylanecesidadde
+usanmétodosbayesianos,esposibletenerencuentalospa-
+compararmúltiplesmapas.
+tronesespacialesdelaenfermedadutilizandoinformaciones
+Lacategorizaciónenclasespuedeserdependientedelos
+inicialesparalastasasquepermitanladependenciageográfi-
+datos,esdecir,quelaproporcióndeáreasdeciertocolorsea
+ca.
+expresadaentérminosdecuantiles.Sinembargo,unacate-
+Besagetal.[2]proponeunmodelodeefectosaleatorios
+gorizaciónindependientedelosdatospuedesermásútilen
+Poissonquepermitecorrelaciónespacialusandounagenerali-
+la identificación de zonas de alto o bajo riesgo. Para todos
+zacióndeladistribucióninicialCAR.Elmodeloesformulado
+losmapasdeRIEspresentadosenestetrabajoutilizamosran-
+delasiguienteforma:
+gosbasadoenunadivisiónuniformelogarítmicasimilarala
+sugeridaporKnorr-HeldyRaseren[6]ysubdivididaen5
+O ∼Poisson(ER) (3)
+i i i categoríasconunazonadeflexiónencentradaalrededordela
+Donde R =α+H +v, siendo α el riesgo relativo a nivel mediana.Lospuntosdecortessondetalladosenlaleyenda
+i i i
+global,H eslaheterogeneidadincorrelacionada(comoenel (vertabla2).
+i
+modelolog-normal)yv i eslaheterogeneidadcorrelacionada. TodoslosanálisisfueronimplementadosenR,usandolas
+LadistribucióndeH i es: libreríasmaptools,spdepyR2WinBUGS.
+H ∼Normal
+(cid:0) 0,V−1(cid:1)
+(4)
+i H
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.99-104
+102 AnálisisespacialdelaincidenciadeCOVID-19enpequeñasáreasgeográficasenCuba
+2. Resultados alcanzados en la
+estimación de riesgos de Covid-19 en
+Cuba
+Los RIEs y sus intervalos de confianza, resultan útiles
+paradeterminarlosriesgosdeincidenciadeCovid-19anivel
+provincial en Cuba. La tabla 1 muestra las razones de inci-
+denciaestandarizadateniendoencuentacomopoblaciónde
+referenciaelestimadoparael2019delapoblacióndeCuba
+porgruposdeedadesquinquenalesofrecidoporlaONEI.
+Tabla1.RazonesdeincidenciaestandarizadadeCOVID-19
+porProvincias;DatosdeCubadel11demarzoal21demayo
+2020.
+Provincia RIE IC(95%)
+LaHabana 2,48 (2,31;2,65)
+VillaClara 1,65 (1,42;1,89)
+CiegodeÁvila 1,30 (1,02;1,58)
+Matanzas 1,15 (0,94;1,35)
+SanctiSpíritus 0,92 (0,69;1,15)
+Mayabeque 0,79 (0,55;1,03)
+Holguín 0,57 (0,45;0,69)
+PinardelRío 0,55 (0,39;0,72)
+Artemisa 0,41 (0,26;0,56)
+Camagüey 0,39 (0,27;0,51)
+Cienfuegos 0,36 (0,20;0,52)
+SantiagodeCuba 0,30 (0,21;0,39)
+Guantánamo 0,22 (0,10;0,33)
+LasTunas 0,18 (0,08;0,28)
+Granma 0,09 (0,03;0,15)
+Figura1.Representacióngeográficadelosriesgosde
+Para la estimación del riesgo a nivel municipal, que re- Covid-19pormunicipiosenCuba.a)Razonesdeincidencia
+sultanáreaspequeñasyconaltacorrelaciónespacial,fueron estandarizadas(RIE).b)RiesgosrelativosdeCovid-19
+calculadosademásdelasRIEs,losriesgosrelativos(RR)obte- basadosenmodelocondicionalautorregresivo.c)
+nidosporelmétodobayesianodesuavizamientoylaprobabi- ProbabilidadesaposterioridequeRR>1.(Datosobtenidos
+lidadaposteriori(PP)deexcesoderiesgo.Losresultadosson hastael7demayode2020)
+presentadosenmapastemáticosparasuvisualización.Llama
+laatenciónqueelmayorriesgoseconcentraenlaregiónoc-
+cidentalycentrodelpaís.Latabla2presentalosmunicipios
+deestaenfermedadinfecciosaconaltatasadecontagio.Los
+conaltoriesgodetrasmisión(RR>1).Losriesgosrelativos
+riesgosrelativosestimadosapartirdelmismo,muestranme-
+obtenidosdelmodeloCARenlos168municipiosdeCubase
+nos variación que los RIEs, como es esperado después del
+encuentranentre0.03y9.18.Larepresentacióngeográficade
+suavizamientobayesiano.AunqueconlosRIEsnosepueden
+losriesgosentodoslosmunicipiosdeCubasepuedeobservar
+distinguirpatronesclarosdedistribucióndelriesgo,losma-
+enlafigura1.
+pas suavizados muestran áreas más homogéneas según sus
+riesgos.
+3. Discusión
+Alinformarymapearelriesgorelativosuavizadoylas
+Los análisis de riesgos pueden ser diferentes, según el probabilidadesderiesgoelevado,sepuedendetectaráreasde
+nivelregionalqueseanalice.LasRIEsnospermitenselec- riesgoelevadoreal.Unaregiónconriesgosmoderadamente
+cionaraLaHabana,VillaClarayCiegodeÁvilacomolas altosseobservaentodoslosmunicipiosdeLaHabana.Otras
+provinciasdemayorriesgo.Sinembargoanivelmunicipal treszonasdealtoriesgoseencuentranenlaszonasdeMatan-
+la interpretación de los RIEs resulta confusa por ser áreas zas,VillaClarayCiegodeÁvila.Estaszonaspuedenestar
+pequeñas.ElmodeloCARpermitelainclusióndeladepen- relacionadasconlasdemayoractividadturística,porloque
+denciaespacial,queesintuitivamenteimportanteenelcaso resultaronpuertasdeentradadelaenfermedadalpaís.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.99-104
+AnálisisespacialdelaincidenciadeCOVID-19enpequeñasáreasgeográficasenCuba 103
+LaseleccióndelosmunicipiosquetienenRR>1.2opro- deladistribucióngeográficadeincidenciadeCovid-19yla
+babilidadposteriordealmenos0.9dequeelriesgorelativo diferenciación de regiones de altos y bajos riesgos lo cual
+seasuperiora1,soncriteriosrazonablesparaclasificarmu- puedeincidirenlatomademedidasdeprevención.
+nicipiosconaltoriesgoenlosquesedebenreforzarmedidas ElusodelosmodelosCARpermitióincluirladependen-
+preventivaseintensificaracciones.Esteanálisispuedeserex- ciaespacialenlaestimacióndelosriesgosrelativos.
+tendido a la estimación de riesgos específicos por áreas de
+salud.
+Referencias
+Variosautoreshanpropuestomapearlaprobabilidadde
+que un riesgo relativo sea mayor que un umbral de interés [1] MollieA,Bayesianandempiricalbayesapproachesto
+específico[porejemplo,ClaytonyBernardinelli(1992)].En diseasemapping.indiseasemappingandriskassessment
+nuestrocaso,utilizamos1comoumbralparaelriesgorelativo. forpublichealth,Chichester,Wiley.
+Enlaseleccióndeáreasdealtoriesgo,comoencualquier
+regladedecisión,haydostiposdeerroresasociados:a)un [2] Mollie A Besag J, York J, Bayesian image restoration,
+resultadofalsopositivo,esdecir,declararqueunáreatiene withapplicationinspatialstatisticswithdiscussion.,Ann
+unriesgoelevadocuando,dehecho,sutasaverdaderasub- InstStatMath43(1991),1–59.
+yacenteesigualalnivelmedio(unerrortambiénconocido
+tradicionalmentecomoerrortipoIofaltadeespecificidad);y [3] DavidGClayton,Bayesianmethodsformappingdisea-
+b)resultadofalsonegativo,esdecir,declararunáreadebajo serisk.,GeographicalandEnvironmentalEpidemiology:
+riesgocuando,dehecho,sutasasubyacenteeselevada(un MethodsforSmallAreasStudies.(1992),205–220.
+errortambiéndenominadoerrordetipoIIofaltadesensibi-
+lidad).Enepidemiología,lasreglasdedecisiónseanalizan [4] Kaldor J Clayton D, Empirical bayes estimates of age-
+informandoestastasasdeerrorosuscantidadescomplemen- standardized relative risks foruse in disease mapping.,
+tariasquemidenlastasasdeéxitodelaregla. Biometrics43(1987),671–681.
+Losestudiosdesimulación[8]handemostradoquelos
+modelosdemapeodeenfermedadessonconservadores,enel [5] BestNJarupL,Editorialcommentongeographicaldif-
+sentidodequetienenbajasensibilidadparadetectaráreasde ferences in cancer incidence inthe belgianprovince of
+riesgoelevadoquetienensolounpequeñoexcesoderiesgo, limburgbybruntinxandcolleagues.,EurJofCancer39
+pero que, por el contrario, cualquier patrón identificado de (2003),1973â–1975.
+riesgoelevadoes,engeneral,específico.Consideramosesta
+cualidad conservadora como una característica positiva, ya [6] L.Knorr-HeldandG.Rasser,Bayesiandetectionofclus-
+quedeseamosevitarfalsasalarmasalinvestigarlavariación tersanddiscontinuitiesindiseasemaps.,Biometrics56
+espacialenelriesgodelaenfermedad.Sinembargo,espro- (2000),13–21.
+bable que se subestime considerablemente la magnitud del
+riesgoenalgúnáreaidentificadacomoelevada. [7] Stallard E Riggan WB Creason JP Pellom AC. Man-
+Laaplicacióndeestosmodelos,permiteapoyarlatoma tonKG,WoodburyMA,Empiricalbayesproceduresfor
+dedecisionestantoparaintensificarlasmedidas,comopara stabilizingmapsofu.s.cancermortalityrates.,Statistica-
+sudesescaladoenelmomentodefindelaepidemia,encada lAssociation84(1989),637–650.
+regiónporseparado.Laclasificaciónobtenidaenestetrabajo
+fueutilizadaenlaestratificacióndeaccionesdurantelaepide- [8] BestNElliottPRichardsonS,ThomsonA,Interpreting
+miayenlaplanificacióndeldiseñomuestraldelaencuesta posteriorrelativeriskestimatesindisease-mappingstu-
+nacionaldeportadoresdelaCovid-19enCuba. dies, Environ Health Perspectives 112 (2004), 1016 â–
+1025.
+Conclusiones
+[9] YuHuetal.W.Guan,Z.Ni,Clinicalcharacteristicsof
+Laaplicacióndemodelosbayesianosparalaestimaciónde coronavirusdisease2019inchina.,TheNewEnglandJ
+los riesgos relativos suavizados permitió la interpretación ofMedicine(2020).
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.99-104
+104 AnálisisespacialdelaincidenciadeCOVID-19enpequeñasáreasgeográficasenCuba
+Tabla2.ProvinciasymunicipiosconexcesoderiesgodeCOVID-19(RRsuavizadoporCAR>1.20oprobabilidadposteriorde
+riesgorelativosuavizadomayorquelaunidaddealmenos0.90);DatosdeCubadel11demarzoal21demayo.2020
+ProvinciasyMunicipios(Códigoenlosmapas) RIE(IC95%) RR(95%CI) PP(RR>1)
+PinardelRio
+Guane(11) 3.51(1.75-5.46) 3.28(1.95-4.97) 0.9999
+LaHabana*
+Cotorro(37) 7.89(6.25-9.62) 7.84(6.37-9.46) 0.9999
+CentroHabana(25) 4.79(3.8-5.82) 4.77(3.88-5.75) 0.9999
+Cerro(32) 3.93(2.99-4.91) 3.90(3.07-4.83) 0.9999
+Regla(27) 3.00(1.53-4.61) 2.95(1.8-4.38) 0.9999
+HabanadelEste(28) 2.9(2.22-3.62) 2.88(2.28-3.56) 0.9999
+SanmigueldelPadrón(30) 2.63(1.94-3.36) 2.62(2.01-3.3) 0.9999
+PlazadelaRevolución(24) 2.5(1.81-3.24) 2.49(1.89-3.18) 0.9999
+HabanaVieja(26) 2.46(1.52-3.49) 2.45(1.67-3.39) 0.9999
+Marianao(33) 2.31(1.61-3.06) 2.3(1.7-2.99) 0.9999
+DiezdeOctubre(31) 2.04(1.51-2.6) 2.03(1.57-2.56) 0.9999
+Guanabacoa(29) 1.94(1.26-2.67) 1.93(1.36-2.6) 0.9999
+Playa(23) 1.74(1.22-2.3) 1.74(1.29-2.26) 0.9999
+LaLisa(34) 1.45(0.91-2.05) 1.45(0.99-1.99) 0.9929
+Mayabeque
+MelenadelSur(46) 2.9(0.68-5.45) 2.75(1.25-4.83) 0.9963
+SanJosédelasLajas(39) 2.32(1.38-3.35) 2.28(1.51-3.21) 0.9999
+Batabanó(47) 1.46(0.05-3.11) 1.4(0.53-2.73) 0.8119
+Matanzas
+Limonar(56) 2.7(0.86-4.79) 2.52(1.25-4.25) 0.9973
+Cárdenas(50) 2.01(1.4-2.67) 1.99(1.47-2.59) 0.9999
+Matanzas(49)** 1.93(1.34-2.55) 1.91(1.4-2.48) 0.9999
+Villaclara
+SantaClara(70)** 3.2(2.61-3.82) 3.19(2.64-3.78) 0.9999
+Camajuani(66) 2.74(1.56-4.03) 2.66(1.72-3.82) 0.9999
+Cifuentes(71) 2.15(0.51-4.03) 1.99(0.91-3.52) 0.9757
+Caibarien(67) 1.3(0.24-2.53) 1.24(0.54-2.25) 0.7730
+Santispiritus
+Taguasco(85) 4.08(2.14-6.21) 3.9(2.4-5.75) 0.9999
+Cabaiguan(86) 2.98(1.81-4.25) 2.9(1.95-4.03) 0.9999
+CiegodeÁvila
+Majagua(97) 5.16(2.64-7.94) 4.83(2.91-7.24) 0.9999
+Venezuela(99) 4.09(1.83-6.6) 3.81(2.15-5.94) 0.9999
+Bolivia(93) 2.63(0.09-5.61) 2.29(0.81-4.56) 0.9612
+Morón(92) 2.06(1.11-3.11) 1.99(1.24-2.91) 0.9991
+Camagüey
+CarlosM.deCéspedes(101) 9.59(6.09-13.38) 9.18(6.31-12.56) 0.9999
+Florida(109) 1.48(0.66-2.4) 1.4(0.79-2.19) 0.9365
+Holguín
+FrankPais(133) 2.6(0.61-4.88) 2.17(0.93-3.95) 0.9785
+Banes(124) 1.76(0.93-2.69) 1.65(1.01-2.46) 0.9919
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.99-104

@@ -1,0 +1,748 @@
+CienciasMatema´ticas,Vol.29,No.2,Pag.75-85,2015
+Recibido06-2015
+Aplicacio´n del procedimiento para la seleccio´n del
+personal con base en la teor´ıa de los subconjuntos
+borrosos en el Hotel Vedado Saint-Johns
+Application of the procedure for selection of
+personnel, based on the theory of fuzzy subsets at
+Vedado Saint-Johns Hotel
+Lourdes Souto Anido1*, Irene Garc´ıa Rondo´n1
+Resumen LosRecursosHumanossonconsideradoshoyd´ıaelfactorfundamentaldelaactividadempresarial,
+al ser reconocidos como fuente generadora de ventajas competitivas. Constituyen un elemento estrate´gico
+paralasorganizaciones,deah´ılaimportanciaquetieneparalasmismascontarconaquellostrabajadoresque
+sean ido´neos. La seleccio´n del personal debe ser vista como un proceso clave en el e´xito de la Gestio´n de
+RecursosHumanos(GRRHH),pueseslaencargadadeidentificaralcandidatoquepasara´ aformarpartedela
+entidad.Latomadedecisionesenestetipodeprocesossueleestarcargadadesubjetividadylateor´ıadelos
+subconjuntosborrososemergecomounasolucio´nparaesteproblema,entantopermitelidiarconsituaciones
+deincertidumbre,subjetivaseinciertasydefineconmayorseguridadycalidadelperfildeseadoenelana´lisis
+delcargo,mostrandoalcandidatoido´neoparaocuparelpuesto.Elpresenteart´ıculoproponelaaplicacio´ndel
+procedimientodelaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososimplementadoen
+elHotelVedadoSaint-Johns.
+Abstract TheHumanResourcesmanagementhasevolvedandadaptedtothesocialandbusinessrealityof
+everyday. TheHumanFactorisappreciatedasanessentialcomponentforthequalityandcompetitivenessof
+the currententerprise. The process ofpersonnel selection hasthe responsibility ofidentifying the candidate
+bestsuitedtothepostandtheorganizationspecificneeds,anditmustbeassumedbytheenterprisesasakey
+processoftheHumanResourcesManagement. Therefore,theflurrymathematicisatoolthatallowsminimizing
+thesubjectivitywithintheselectionprocessesinordertochoosethebestcandidatefortheorganization. This
+paper applies a personnel selection procedure by based in fuzzy mathematics, in this particular case to be
+appliedintheHotelVedadoSaint-Johns.
+PalabrasClave
+Gestio´n de Recursos Humanos, Seleccio´n del Personal, Toma de Decisio´n, Incertidumbre, Teor´ıa de los
+SubconjuntosBorrosos
+1FacultaddeEconom´ıadelaUniversidaddeLaHabana,Cuba,lourdes@fec.uh.cu,irene@fec.uh.cu
+*AutorparaCorrespondencia
+1. Procedimiento para la Seleccio´n del expone el siguiente procedimiento con base en la teor´ıa de
+Personal con base en la teor´ıa de los lossubconjuntosborrosos.Estecuentacon4etapas,quecom-
+prendendesdelaelaboracio´ndelperfilidealdelpuestoyel
+subconjuntos borrosos
+reclutamientodeloscandidatoshastalaeleccio´ndelapersona
+ido´nea,talcomosepuedeapreciarenlafigura1.
+LaGestio´ndeRecursosHumanos(GRRHH)tienecomo
+unadesusprincipalesfuncioneslaseleccio´ndelpersonal,la Lasetapasdelprocedimientoseexplicanacontinuacio´n.
+cual se basa espec´ıficamente en la bu´squeda de candidatos
+ido´neos para ocupar un puesto de trabajo en determinada 1.1 Etapa1:Elaboracio´ndelperfilideal
+organizacio´n.
+Estaetapaesta´fuertementerelacionadaconlaGestio´npor
+Conelobjetivodedisminuirlasubjetividadquesepre- Competencias,permitiendoenfrentarlosnuevosdesaf´ıosque
+sente en el momento en que se lleve a cabo el proceso, se imponeelambientecompetitivo.Comoherramientaestrate´gi-
+Aplicacio´ndelprocedimientoparalaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososenel
+76 HotelVedadoSaint-Johns
+realizar esta seleccio´n se propone confeccionar un listado
+inicialdepersonasposiblesdecumplirlosrequisitosparaser
+consideradosexpertosenlamateria,previamenteconsultada
+suaprobacio´naparticipar.
+Conelfindedeterminarelniveldecompetenciadelos
+mismosseproyectalautilizacio´ndelcoeficientedecompe-
+tencia de los expertos (K), el cual se obtiene a partir de la
+medicio´ndedoscoeficientes:CoeficientedeConocimiento
+(Kc)yCoeficientedeArgumentacio´n(Ka).Parasuobtencio´n
+selespidealosexpertosqueevalu´ensuniveldeconocimiento
+acerca del tema en una escala creciente del 1 al 10, donde
+elvalorunosignificaqueelconsultadoconsideranoposeer
+competenciaalgunasobreeltemayelvalor10significaque
+consideraposeerundominioma´ximosobreelmismo.Con
+estapuntuacio´nseobtieneelcoeficientedeconocimientoa
+Figura1.EtapasdelprocesodeSeleccio´n[2]. trave´sdelasiguientefo´rmula:
+n
+Kc=
+10
+ca resulta indispensable en tanto estimula a las competen-
+ciasindividuales,permitiendodiferenciardentrodelcolectivo Dondeneselrangoseleccionadoporelexperto.
+laboral a los trabajadores indicados para lograr el o´ptimo Paralaobtencio´ndeKaselesindicaalosexpertosque
+desempen˜odelaorganizacio´n. valorensucapacidaddeargumentacio´n,teniendoencuenta
+Elperfilidealdelcandidatoquedebeocuparelpuestoes unconjuntodeaspectosquequedanrelacionadosenlatabla1.
+undocumentoactivoquetienecara´cterlegal,resultadodela Enlamismatabla1seexponenlosvaloresdecomparacio´n.
+actividad clave de GRRHH denominada Ana´lisis, disen˜o y Losvaloresreflejadosporcadaexpertosecontrastancon
+descripcio´ndepuestosdetrabajo.Contienerequisitosf´ısicos losvaloresdecomparacio´n.Siendo
+ydepersonalidad,as´ıcomolasresponsabilidadesacontraer
+4
+porelocupantedelpuesto;yconsideralascondicionesdetra- Ka=∑n
+i
+bajoylaculturaorganizacionaldelaempresa.Elperfiltoma 1
+comocentroladeterminacio´nrigurosadelascompetencias
+Donden eselvalorquecorrespondealafuentedeargumen-
+delcontenidodelpuestoocargo,respondiendoesencialmente i
+tacio´n
+a¿que´sehace?,¿co´mosehace?y¿paraque´lohace?,alavez
+Finalmente,elcoeficientedecompetenciaparacadaex-
+queexigelapreviaformacio´ndeexpertosquelovanaconfor-
+pertosera´:
+marenlagestio´nporcompetencias.Loidealser´ıaquecada
+K=0,5(Kc+Ka)
+candidatooaspirantealpuestoposeatodaslascualidadesa
+unnivelma´ximodeexigencia,peroestonosuelesersiempre Losrangosparaevaluarlosnivelesdecompetenciassonlos
+posible. siguientes:
+Elperfilidealdebecontenertambie´nelgradodeimportan-
+ciadecadacompetenciaenrelacio´nconelpuesto.Sesolicita K≥0,8,Coeficientedecompetenciaalto
+entonces el criterio de los expertos con el objetivo de que
+0,5≥K<0,8,Coeficientedecompetenciamedio.
+seanquienesindiquenelnivelo´ptimoquedeber´ıaposeerel
+candidatoidealatrave´sdelaaplicacio´ndelMe´todoFuzzy K<0,5,Coeficientedecompetenciabajo
+Delphi,atrave´sdelossiguientespasos:valuacio´ndelascua-
+lidadesdelpuestoporcadaexperto;hallarlosvaloresmedios Existenpuestosdetrabajosenelquealgunasdelascom-
+yladistanciadeHamming;Segundarondadevaluaciones; petenciasqueconformanelperfilidealposeenmayorimpor-
+determinacio´ndelcoeficientedeCompetencia(>0.6);cons- tancia de acuerdo a las particularidades del mismo, por lo
+truccio´ndelExperto´nparacadacualidad;determinacio´ndela queseproponeasignarunpesodiferenteacadaunadelas
+esperanzamatema´ticadecadaExperto´n[1]. caracter´ısticas. Estos pesos pueden tomar la forma de coe-
+Sedenominara´ Calconjuntodecualidadesquecompren- ficientesmultiplicadoresdentrodelintervalo[0,1],dondea
+dera´nelperfilideal,elcualquedarepresentadoenlasiguiente lacompetenciama´simprescindibleseleestablecera´ unpeso
+ecuacio´n: muyigualomuycercanoalaunidad.Estoscoeficientessera´n
+designadosporWi,i=1,2,...,n.Seestablecera´ntantasWi
+comocompetenciassetenganencuentaparalaeleccio´n.
+C={a,b,c,d,...n}
+Labibliograf´ıasugiereutilizarunaponderacio´nconvexa
+En este paso se toman dos decisiones de vital importancia paranosalirdelsegmento[0,1],locualseconsiguealdividir
+paraelproceso:que´ expertosseleccionaryacua´ntos.Para cadavalorporWi,i=1,2,...,nporsusuma,quedando:
+Aplicacio´ndelprocedimientoparalaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososenel
+HotelVedadoSaint-Johns 77
+Tabla1.Valoresdecomparacio´ndelasfuentesdeargumentacio´n[2].
+Fuentesdeargumentacio´n Alto Medio Bajo
+Experienciateo´rica 0.30 0.20 0.10
+Experienciapra´ctica 0.50 0.40 0.20
+Suconocimientodelestadodelproblema 0.15 0.15 0.15
+Suintuicio´n 0.05 0.05 0.05
+Acontinuacio´nsemuestraunejemplo
+Wn
+Vn= P ={(a/1),(b/,3),(c/,8),(d/0),
+∑Wi 1
+(e/,4),(f/,6),(g/,5),(h/,7)}
+Otrav´ıaparadeterminarelniveldeimportanciadelosdis´ımi-
+Enestarepresentacio´n,losnumeradoreshacenalusio´nalas
+lescriteriosesconformarunExperto´nimportancia.Elmismo
+competenciasqueconformanelperfildelpuestoylosdenomi-
+recogera´ la opinio´n de los expertos que posteriormente se
+nadorescorrespondenalniveldeimportanciaqueseleasigna
+sera´multiplicadaporelExperto´nqueresumaelperfilconcre-
+acadaatributo,usandounaescalaendecadariade0a1.
+todelcandidato.
+1.4 Etapa 4: Establecer el grado de acercamiento
+1.2 Etapa2:Reclutarpersonassusceptiblesdeocu- entreelperfilidealyelperfildecadapersona
+parelcargo Paradeterminarcua´leselcandidatoquedebecubrirel
+Luegodeserconformadoelperfildelpuestosepasaala puesto,sellevaacabounacomparacio´nentreelperfilideal
+segundafase,dondesereclutara´nlaspersonasinteresadasen delpuestoyelperfildecadaaspirante.Talcomparacio´nse
+ocuparelpuestoanalizadoenlaEtapa1. realizara´ utilizandoladistanciadeHammingrelativadeca-
+daaspiranteacadacaracter´ısticaocompetencia,paraluego
+Elreclutamientosepuederealizarporv´ıasinternasoex-
+construirunamatrizdedistancias.
+ternas.Ladecisio´ndeemplearuntipodereclutamientouotro
+DadosdossubconjuntosborrososA˜ yB˜ incluidosenun
+estara´endependenciadelosobjetivosquepersigalaempresa.
+mismoreferencialfinitoE,sellamadistanciadeHamming
+Utilizarfuentesinternassueledisminuirloscostesdelaaccio´n
+puesevitainvertirtiempoyrecursosenagenciaspublicitarias
+relativaentreA˜ yB˜ alnu´merorealδ(A˜,B˜)talque:
+u
+el
+o
+t
+t
+r
+r
+a
+a
+b
+s
+a
+h
+ja
+e
+d
+rr
+o
+a
+r
+m
+y
+i
+a
+en
+co
+ta
+n
+s
+o
+q
+c
+u
+e
+e
+la
+de
+e
+n
+nt
+a
+id
+c
+a
+o
+d
+n
+,
+o
+e
+c
+l
+e
+p
+r
+r
+l
+o
+a
+c
+c
+e
+o
+so
+nv
+d
+o
+e
+c
+s
+a
+o
+to
+c
+r
+i
+i
+a
+a
+l
+.
+iz
+C
+a
+o
+c
+m
+io´n
+o
+δ
+(cid:0) A˜,B˜(cid:1)
+=
+n
+1
+∑
+n
+|µ A˜ (X i )−µ B˜ (X i )|
+sera´ ma´s corto, en tanto ya conoce la dina´mica de trabajo. i=1
+Dichaaccio´npuedeservista,adema´s,comopartedeldesarro- SiendonelcardinaldelconjuntoE.Severificaque0≤δ
+(cid:0) A˜,B˜(cid:1)
+≤1.
+llodeformacio´ndecarreraalointernodelaempresa,como Halladaslasdistancias,sepuedeestablecerunordenentre
+unelementomotivador.Noobstante,seestar´ıalimitandola ellos:cuantomayorsealadistancia,menosadecuadoparael
+entradadeunCapitalHumanoquepodr´ıaestarma´spreparado puestoresultara´elcandidato.Acontinuacio´nseexponenuna
+yserportadordeideasinnovadoras. seriedesupuestosquedebensertomadosencuenta.
+1.4.1 Supuesto en el que se necesita ocupar un puesto
+1.3 Etapa 3: Establecer el perfil concreto de cada polivalente
+unodelosaspirantes Enlascondicionesenlasquesemuevelaempresacubana
+Unavezlanzadaslasconvocatorias,seprocedealacon- actualesva´lidopensarqueserequieracontratarcandidatos
+formacio´ndelperfilconcretodecadaunodelosaspirantes capacesdeocuparpuestospolivalentes,loscualessuelenele-
+queaplicaronalpuesto. var la productividad de la empresa y disminuir sus costos.
+Larecogidadeinformacio´nsobreloscandidatossehara´a Para ello, se obtiene la unio´n de los perfiles que definen a
+trave´s de las te´cnicas tradicionalmente utilizadas (ana´lisis losrespectivoscargos,esdecir,launio´ndelossubconjuntos
+de los curr´ıculums vitae, entrevistas y test) que ofrecera´n borrososquelosrepresentan.Dadosdossubconjuntosborro-
+los datos necesarios para confeccionar los perfiles de cada
+sosA˜ yB˜incluidosenunmismoreferencialfinito,sedefine
+aspirante. A˜ ∪B˜ comoelsiguientesubconjuntoborroso:
+A cada uno de los candidatos se le supone en posesio´n
+delascompetenciasrequeridasaunciertonivel.Losexper- A˜∪B˜={(x,µ(x))|x∈E ∧µ(x)=ma´x{µ (x),µ (x)}}
+A˜ B˜
+tosestablecera´n,conlametodolog´ıapropiadesucuerpode
+SiendoT˜ =T˜ ∪T˜ ∪T˜ ∪T˜
+conocimientos,elgradodecumplimientodecadacualidad 1 2 3 4
+requeridaparacadaunodelosaspirantesP ,P ,...,P;ob-
+1 2 n T˜ ={(a/1),(b/1),(c/5),(d/1),
+tenie´ndoseparacadapostulanteunsubconjuntoborrosode
+(e/1),(f/1),(g/1),(h/1)}
+C.
+Aplicacio´ndelprocedimientoparalaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososenel
+78 HotelVedadoSaint-Johns
+Por u´ltimo, se calcula la distancia de Hamming relativa de Director de Recursos Humanos, quien solicita a la oficina
+cadaaspirantealperfilpolivalenteT˜. deTUREMPLEOdelterritoriolaautorizacio´nderealizarla
+convocatoriaparacubrirlaplazavacante.
+1.4.2 Supuestodelcoeficientedeadecuacio´n.
+Conlaaprobacio´ndelaconvocatoriaseiniciaelproce-
+Siuncandidatonocumpleconlosrequisitosalosniveles
+so de reclutamiento, ya sea interno o externo. En el Hotel
+exigidosespenalizado,perosilossobrepasa,noconstituye
+se sigue un orden de prioridad, donde los primeros son los
+unacircunstanciadesfavorableaunquetampocoesloo´ptimo,
+trabajadoresdelainstitucio´n,ensegundolugarlosinterruptos
+puesconeltiempoeltrabajadorsepuedesentirdesmotivado.
+delasentidadesdelsector,lesiguenlostrabajadoresdeotras
+Paraestoscasossevaaconstruiruncoeficientedeade-
+entidadesdelSistemadelMinisteriodeTurismoenelterrito-
+cuacio´ndesdeelperfildecadapostulantePalperfilidealC,
+rioquesepresentenalaconvocatoriay,poru´ltimo,lareserva
+delasiguientemanera
+deTUREMPLEOdeacuerdoalosprocedimientosquedicha
+entidadestableceenlaResolucio´nNo.110/2007.
+µ (x)≥µ (x)→K (P˜→C˜)=1, En esta etapa resulta necesario que la convocatoria sea
+P˜ C˜ x
+transmitidaportodosloscanalesdecomunicacio´ndeforma
+µ P˜ (x)<µ C˜ (x)→K x (P˜→C˜)=1−µ P˜ (x)+µ C˜ (x). correctayclara,conelobjetivodequetodoslostrabajadores
+delhoteltenganlainformacio´ndelperfildelcargoas´ıcomo
+Ambas situaciones pueden ser representadas mediante una
+elper´ıodoenqueestara´ vigentelaconvocatoriaantesdeque
+u´nicaexpresio´n
+sehagapu´blicaalosotroscandidatos.
+K
+(cid:0) P˜→C˜(cid:1)
+=1∧(1−µ (x)+µ (x))
+Laetapadereclutamientoabarcaungrupodeacciones
+x P˜ C˜ fundamentales:recogidadedocumentacio´naloscandidatos,
+UnavezcalculadaslasdistanciasrelativasdeHammingde delacualelComite´ deExpertosseapoyaparatomarladeci-
+cadacandidatorespectoalperfilidealyteniendoencuanta sio´nma´scorrecta,yestudiopreviodelasdocumentaciones
+lossupuestosaplicablesacadacasodeestudio,seordenara´n dondeseprecisandatosgeneralesdeloscandidatos,alavez
+losmismosyseprocedera´ alaseleccio´ndeltrabajadorcuyo que se compara las certificaciones originales de los t´ıtulos
+perfildistemenosdelideal. presentadosysecompruebasihansidoverificadossegu´nel
+procedimientoderigor.
+El Director de Recursos Humanos es el encargado de
+2. Presentacio´n del Hotel Vedado
+comunicarlesaloscandidatosqueseencuentranenelproceso
+Saint-Johns y su proceso de seleccio´n
+deseleccio´n.Aquellosquenoseanseleccionadosdebenser
+del personal
+informados y su documentacio´n les sera´ devuelta para que
+puedanvolveraintegrarlabolsadetrabajodeTUREMPLEO.
+ElHotelVedadofuefundadoel21dediciembrede1952,
+seencuentrasituadoencalleONo.244entre23y25,Veda- ElJefeinmediatodeldepartamentodebera´ realizaruna
+do.PertenecealGrupoHoteleroGranCaribeS.A.yposee entrevistapreliminarparapoderobtenerinformacio´ndelcan-
+categor´ıa de tres estrellas plus, con variedad de servicios y didatoquenoquedareflejadaenlosdocumentosoatrave´s
+puntosdeventas.Sumisio´nes“Ofrecerservicioshoteleros delaste´cnicasaplicadas:suformadeexpresarse,susvalores,
+de alojamiento, gastronom´ıa y complementarios acordes a etc. Posteriormente se realizara´n te´cnicas de validacio´n de
+nuestracategor´ıa,capacesdeimpactaryproporcionarplena conocimientoste´cnicosydeidioma,as´ıcomolaconfirmacio´n
+satisfaccio´nalcliente,conunainstalacio´nmoderna,ce´ntrica de las competencias requeridas por el cargo. Para disponer
+ymuyvinculadaalahistoriaylaculturanacional,queensu deunamejorvaloracio´ndeloscandidatosdebenrealizarse
+desempen˜oenaltecelaidentidadcorporativadelGrupoHote- pruebas que confirmen sus habilidades —test psicolo´gico,
+leroGranCaribe”.Tienecomovisio´n“SerHoteldereferencia pruebasdeconocimientosodecapacidad,testdeaptitud,test
+enelprocesodeperfeccionamientoempresarial,enelsistema depersonalidad.
+decontrolinternoydelGrupoHoteleroGranCaribe,ensu El siguiente paso es comprobar la veracidad de toda la
+categor´ıa”. documentacio´npresentada,accio´nquellevaacaboelDirector
+Lainstitucio´ncuentaconunaplantillaaprobadade228 deRecursosHumanosoelJefeinmediato.Detratarsedeun
+trabajadores,lacualtienecubiertacasiensutotalidad,con candidatodefuenteexterna,sehara´solicitudalaentidadque
+untotalde227trabajadores.Deellos,213sonfijosy14son correspondaparalarevisio´ndelosdocumentosarchivados
+contratos.Debedestacarselapresenciade96mujeresensu en el expediente laboral y de cuadros. Se buscara´ informa-
+plantilla,locualrepresentaun43%deltotal. cio´nsobresuactitudycomportamientosociopol´ıticoenotros
+centrosdetrabajodondehayalaboradoyensuslugaresdere-
+2.1 LaSeleccio´ndelPersonalutilizadaregularmen- sidencia.Encasodereclutamientoseainterno,seanalizara´el
+teenelHotelVedadoSaint-Johns expedientelaboralylasrecomendacionesdeljefeinmediato
+Unavezdetectadalanecesidaddecubrirunavacantese superior.
+realiza el ana´lisis del perfil de competencias del puesto de Concluidalaetapaderecopilacio´ndelainformacio´n,el
+trabajo por parte del jefe inmediato conjuntamente con el DirectordelhotelsolicitaalComite´ deExpertossuana´lisis
+Aplicacio´ndelprocedimientoparalaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososenel
+HotelVedadoSaint-Johns 79
+conelfindeofrecerunarecomendacio´nrelativaalaincorpo- queoptaronporestecargoenelmomentoenqueestuvodis-
+racio´nonodelcandidatoalper´ıododeprueba.ElComite´ de ponibleysematerializaenlaaccio´nporpartedelComite´ de
+ExpertosserigeporelprincipiodeIdoneidadDemostrada, Expertosdelaempresa.Enestecaso,elComite´ estuvointe-
+quecomprendeelana´lisisintegraldelossiguientesrequisi- grado por un representante de la administracio´n, otro de la
+tosgenerales:realizacio´ndeltrabajoconeficiencia,calidad organizacio´nsindicalyempleadoselegidosenlaasamblea
+yproductividadrequerida;experienciayconocimientosde- generaldetrabajadores,parauntotalde7miembros.Sede-
+mostrados en el resultado concreto obtenido en el trabajo; signo´ a uno de los trabajadores como Coordinador, el cual
+cumplimientodelasnormasdeconductaydisciplinaestable- recibedeljefefacultadolasolicituddevaloracio´ndelaidonei-
+cidasenlaentidadlaboral,lasespec´ıficasdelospuestosde daddemostradayconvocalareunio´ndedichoComite´dentro
+trabajoylascaracter´ısticaspersonales;ycalificacio´nformal deloscincod´ıasha´bilesposterioresdehaberlarecibido.Como
+expresadaenloscertificadosdeestudiosot´ıtulosqueposea partedelprocesofuecalculadoelCoeficientedeCompetencia
+eltrabajador,encorrespondenciaconlosrequisitosexigidos detodoslosexpertos,talycomoseexplico´ conanterioridad,
+paraelcargoqueseaspireadesempen˜ar.Encasosexcepciona- obtenie´ndoselosresultadosquesemuestranenlafigura2
+lesenqueexistan2oma´strabajadoresido´neos,elComite´de
+Expertosutilizara´ loestablecidoenlaLey49delCo´digode 1
+Trabajo,quetomaencuentalaantigu¨edad.Aigualcalifica- 0.8
+0.6
+cio´nyantigu¨edad,tienema´sderechoeltrabajadordemayor 0.4
+0.2
+edad.Paraelcumplimientodelasfuncionesplanteadas,los 0
+expertostomara´ncomopremisaquecadaplazadebequedar
+o
+1
+o
+2
+o
+3
+o
+4
+o
+5
+o
+6
+o
+7
+o
+8
+ocupadaporeltrabajadorma´sido´neo,porlocualnopueden
+Expert Expert Expert Expert Expert Expert Expert Expert
+existirmanifestacionesdefavoritismoy/odediscriminacio´n
+Figura2.CoeficientedeCompetenciasdelComite´ de
+deningu´ntipo.
+Expertos.
+Esteprocesosolosehaceefectivoapartirdeladecisio´n
+exclusivadeldirectorgeneral,consideradoelu´nicofacultado
+En la figura 2 se aprecia que todos los miembros del
+parareconoceroretirarlacompetenciadelostrabajadores.
+Comite´ de Expertos poseen Coeficientes de Competencias
+ElComite´ deExpertossoloanalizayrecomiendasobrelos
+altos.
+candidatos.
+Ladireccio´ndelaadministracio´neslaencargadadesu-
+Como puede observarse, este proceso de Seleccio´n del
+ministraralosmiembrosdelacomisio´nlosexpedientesla-
+personalensutotalidadesta´cargadodesubjetividadymarca-
+borales, hojas resumen, registros, documentos y cualquier
+doporladiversidaddecriterios.Sehacenecesarioentonces
+informacio´nnecesariaparaquesepuedaemitirlasrecomen-
+la aplicacio´n de te´cnicas que tomen en consideracio´n estas
+daciones.
+caracter´ısticas.
+La teor´ıa de los subconjuntos borrosos, basada en una
+3.1 Etapa1:Elaboracio´ndelperfilideal
+lo´gicamultivaluada,eslaherramientaquepermiteconstruir
+El primer paso del procedimiento es la elaboracio´n del
+ydesarrollarmodelosdecomportamientoquesemanifiestan
+perfilidealdelpuesto,elcualfueelaboradoapartirdelque
+enlaseleccio´ndepersonalcomoprocesodecisivo,altiem- yaten´ıadescritoelHotel.SeidentificacomoCocineroB1y
+poquepermiteeliminarlassubjetividadesysituacionesde
+tienecomotareasprincipales:procesaryelaborardiferentes
+incertidumbrequecaracterizantalproceso.
+tiposdealimentos;prepararysupervisarlacondimentacio´n,
+elaboracio´nypresentacio´ndetodaclasedealimentosyplatos;
+acondicionarlosalimentoscocinadosparasupresentacio´n,
+3. Aplicacio´n del procedimiento
+trasladoyconservacio´n;despacharenoparalasa´reasdeser-
+propuesto en el Hotel Vedado
+vicioodeventasysegu´ncorresponda;organizaryordenarsu
+Saint-Johns
+puestodetrabajo;asesoraralpersonaldeinferiorcalificacio´n
+Elprocesodeseleccio´nquetuvolugarenelHotelVedado quelaboraenelturnodetrabajo;participarenlaelaboracio´n
+Saint-Johns ocurrio´ debido a la salida definitiva por jubila- deserviciosdemenu´ paraactividadessocialesyotrosquese
+cio´ndeltrabajadorqueocupabalaplaza.Elprocedimiento efectu´en;yrealizarysupervisarlasoperacionesdelcierrede
+aplicadoesunasimulacio´n. lacocina,turnooa´readetrabajo.
+ElpuestoqueseanalizaeseldeCocineroconcategor´ıaB. Se considera que el disen˜o del puesto es correcto; sin
+Dichaplazaresultafundamentalpuesdesuactividaddepende embargodichoperfilobviaalgunasdelascompetenciasemo-
+laelaboracio´ndelosplatoscontodaslascaracter´ısticasde cionalesnecesariasparadesempen˜arseenelpuesto,yaque
+primera clase que exigen las artes culinarias. E´ste puesto nosetrataso´lodesaberhacer,sinotambie´ndesaberestar.
+debeserocupadoporunprofesionaldelramoparalograrlas Losatributosqueconformanelpuestoseresumieronen
+exigenciasgustativasdelosdiferentestiposdecomensales, los9criterioscreados,loscualesconstituyenunas´ıntesisde
+conelfindealcanzarlaplenasatisfaccio´ndelcliente.
+1Resolucio´nNo.66/2009delMTSSCalificadorRamaldecargoste´cnicos,
+Elprocedimientotomacomoreferencialostrescandidatos deoperariosydeserviciosdelTurismo.
+Aplicacio´ndelprocedimientoparalaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososenel
+80 HotelVedadoSaint-Johns
+lascompetenciasestablecidasparaestecargo.Estosson: sergraduadodeNivelMedioSuperior;tenercursosdehabili-
+tacio´noentrenamientoenelpuestodetrabajo;ydemostrar
+1. Cursodehabilitacio´nparaelpuesto:Expresaelnivel enlapra´cticaelconocimientoidioma´ticorequerido.
+depreparacio´nte´cnicoprofesionalqueserequiere. Porlaplazaoptarontrescandidatos,todostrabajadoresdel
+propioHotel,porloqueselestomo´ comobasesuexpediente
+2. Experienciaenlaelaboracio´nyprocesamientodeali-
+laboral.ElJefedelDepartamentodeRecursosHumanosve-
+mentos:Nivelpra´cticodelosconocimientosacumula-
+rifico´ quecumplieranconlosrequerimientosba´sicos,traslo
+doseneltiemposobrelaactividad,conelobjetivode
+cualseprocedio´ acrearlesunexpedientecontodalainforma-
+obtenerunaaltacalidad.
+cio´nparaentregarlosalcomite´ deexpertos.
+3. ConocimientosdelasNormasdemanipulacio´n,higiene
+ypresentacio´ndelosalimentos:indispensableparael 3.3 Etapa 3: Establecer el perfil concreto de cada
+buendesenvolvimientoenelpuestoyrequisitoindis- unodelosaspirantes
+pensableparaelcumplimientodelasnormasISO9000 Unavezrecopiladalainformacio´ndeloscandidatos,se
+queavalanlacalidaddelhotel. procedio´ alaconfeccio´ndelperfilconcretodecadaunode
+estosempleandoelme´todoFuzzy-Delphi.
+4. ConocimientosdeIdioma:Eltipodeclientearelacio-
+Seaplico´ unaencuestaacompan˜adadelasresen˜asdecada
+narseesextranjero,porlotantoesprecisoeldominiode
+unodeloscandidatos,conelobjetivodeserevaluadosporel
+aspectosba´sicosdelaactividadculinariaenelidioma
+grupodeexpertosdeacuerdoalos9criteriosanteriormente
+de uso internacional, fundamentalmente ingle´s. Tam-
+mencionados. Para ello, se emplea una escala endecadaria
+bie´n pueden querer intercambiar los clientes con el
+(valoresdel1al10)paraquepuedanserpuntuadosconun
+cocinero ya sea para felicitarlo o para aclarar alguna
+valorm´ınimoyunoma´ximo.Siseconsiderapreciso,sepod´ıa
+duda.
+asignarunvalorexactoenelrango.
+Seprocedio´ ahallarelvalormediodecadacriteriopara
+5. Trabajoenequipo:Estecriterioesfundamentalyaque
+cadacandidatoenunaprimeravaloracio´n.Loscriteriosque
+debesaberorientarasussubordinadosyasuveztraba-
+sesiguieronylasvaloracionesmediasqueobtuvieronlostres
+jarconellosdeformasine´rgica.
+candidatos en valores m´ınimos y ma´ximos para la primera
+6. Habilidadesinterpersonalesycomunicativas:Lograque rondadelaencuestasemuestranenlatabla2.
+existaunbuenclimalaboralconsuscompan˜erosdetra- Conestevalormediodecadacandidatosepuedeapreciar
+bajo,contribuyendoaquerealicenmejorsusfunciones. la evaluacio´n media de todos los expertos, con la cual se
+calculaladistanciadeHamming.Dichaoperacio´ncomputa
+7. Organizado:Contribuyealmejorfuncionamientodel ladiferenciaentrelosextremosdelosintervalos,mostrando
+trabajadoryportantoasusresultados que´ tan alejada estuvo la evaluacio´n de cada experto con
+respectoalasmedias,enarasdequecadaexpertoanalicesu
+8. Confiable:SedebetenerplenaconfianzaenelCandi-
+posicio´nconrespectoalamedia,talycomosemuestraenla
+dato seleccionado, ya que es un puesto en el que se
+tabla3.
+podr´ıanpresentarilegalidadesfa´cilmente.
+Conestosresultadossepasaaunasegundarondadeeva-
+9. Creativo:Debetenerunaampliaimaginacio´neimprovi- luaciones.Enestesegundomomento,sedevuelvealosex-
+sacio´nparaconfeccionarplatosquepuedanimpresionar pertos la encuesta anterior, mostra´ndoles cua´n distantes es-
+alosclientes. tuvierondelamedia.Estepasootorgaalosevaluadoresla
+posibilidadderatificaromodificarsusposicionesenbuscade
+Todosloscriteriossonimportantesysepersigueelideal susevaluacionesfinales.
+dequeelcandidatoseleccionadocumplacontodosal100%, En el caso que se estudia, los resultados de la segunda
+quedando el perfil ideal de la siguiente forma [1; 1]. Sin encuesta no variaron respecto a la primera. Estos valores
+embargo,siemprehaycriteriosalosqueseleotorgamayor fueronutilizadosparaelca´lculodelExperto´n,elcualpermite
+grado de importancia, los cuales sera´n determinantes en la agregar las opiniones de los expertos para posteriormente
+seleccio´ndelcandidato. sintetizarlasenunau´nicaexpresio´n,atrave´sdelaesperanza
+matema´tica.Estevalorpermitira´ finalmentecomprobarcua´l
+3.2 Etapa2:Reclutarpersonassusceptiblesdeocu- candidatoeselma´sido´neoparaocuparelpuestodeCocinero
+parelcargo BenelHotelysiladecisio´ntomadaporlosexpertosdela
+Comoyafuedicho,lapol´ıticaquesigueelHotelesbrin- entidadfuelama´sacertada.
+darlesprioridadasustrabajadoresmedianteelreclutamiento En afa´n de ilustrar el procedimiento se tomaron como
+interno. ejemplo los ca´lculos correspondientes al primer criterio —
+Losrequisitosdeconocimientosolicitadosparaelpuesto Cursodehabilitacio´nparaelpuesto—,requisitofundamental
+—loscualessera´nnumeradosacontinuacio´n—fueronpubli- paraocuparlaplaza.Losresultadossemuestranenlatabla4.
+cadosenelmuraldeldepartamentodeRecursosHumanos: Inicialmenteseprocedio´ acalcularlasfrecuenciasdelas
+Aplicacio´ndelprocedimientoparalaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososenel
+HotelVedadoSaint-Johns 81
+Tabla2.Valormedioporcandidato.
+ValorMedio
+Candidato1 Candidato2 Candidato3
+Criterios Min Ma´x Criterios Min Ma´x Criterios Min Ma´x
+1 0,8 0,8625 1 0,875 0,9625 1 0,875 0,9625
+2 0,7625 0,9 2 0,825 0,9125 2 0,825 0,9125
+3 0,875 0,9625 3 0,8625 0,95 3 0,9 0,9625
+4 0,675 0,7625 4 0,7625 0,8375 4 0,7 0,775
+5 0,6375 0,725 5 0,6375 0,7375 5 0,6625 0,7375
+6 0,75 0,825 6 0,6375 0,7125 6 0,6875 0,7875
+7 0,6625 0,725 7 0,675 0,7375 7 0,725 0,7875
+8 0,625 0,6875 8 0,525 0,5875 8 0,6375 0,7125
+9 0,7375 0,7875 9 0,6375 0,7125 9 0,7625 0,8125
+evaluacionesacadacandidatoporseparado,lascualesindican Tabla9.Experto´nImportancia.
+cua´ntasvecesserepitio´ laevaluacio´ndelosexpertostanto Experto´nImportancia
+enelm´ınimocomoenelma´ximo.Lasumatotalmuestrala
+Criterio1 0,91 0,9875
+cantidaddeexpertosqueparticiparon,comoreflejalatabla5.
+Criterio2 0,925 0,975
+Apartirdelosresultadosobtenidosenlatabla5,seproce- Criterio3 0,8875 0,9375
+dio´ alca´lculodelasObservacionesNormalizadas,elcualse Criterio4 0,5875 0,675
+obtienemedianteladivisio´ndelvalordelafrecuenciadecada Criterio5 0,8375 0,95
+nu´meroentreeltotaldelosexpertos.Losresultadosaparecen Criterio6 0,6875 0,7875
+enlatabla6. Criterio7 0,7875 0,925
+Enesteu´ltimopasosehallara´ lafrecuenciaacumulada. Criterio8 0,8625 0,975
+Estetotalsecalculadeformainversa,partiendodesdelaeva- Criterio9 0,9 0,95
+luacio´n1hastalaevaluacio´n0deformaacumulativa.Todos
+losvaloresdelasfrecuenciasacumuladassesumanysedivi-
+denentre10,dandocomoresultadolaesperanzamatema´tica. Como se puede apreciar en la tabla 9, los criterios que
+Enlatabla7semuestranlasfrecuenciasacumuladasdelos calificaron con el rango ma´s alto fueron Curso de habilita-
+candidatos,as´ıcomolaesperanzamatema´ticaparacadaex- cio´nparaelpuesto,Experienciaenlaelaboracio´nyprocesa-
+tremo. mientodealimentosyCreativo.Estosresultadosdemuestran
+SeutilizaentonceslaEsperanzaMatema´ticaobtenidaen elaltoniveldecalificacio´nypra´cticaqueseexigeparaun
+cadacriterioparaconformarelExperto´n,dondequedarecogi- adecuadofuncionamientoenlaplazaencuestio´n.Loscrite-
+doelperfilconcretodelostrescandidatos.Losresultadosdel riosConocimientosdeIdiomasyHabilidadesinterpersonales
+Experto´nsemuestranenlatabla8. ycomunicativasarrojaronlosrangosma´sbajosodemenor
+Enlatablaquedanreflejadoslosvaloresma´ximosym´ıni- importancia.
+mosdecadacandidato,permitiendorealizarunacomparacio´n Posteriormente,seprocedio´ amultiplicarelExperto´nIm-
+a simple vista entre estos. De esta forma, resulta evidente portanciaconelExperto´ndelosCandidatos,enafa´ndeque
+queelcandidato3superaasuscompan˜erosencasitodoslos quederecogidoelniveldeimportanciadecadacriterioensus
+criterios.Solamenteelcandidato1obtienemayorevaluacio´n perfiles.Losresultadossemuestranenlatabla10.
+enelcriterioHabilidadesInterpersonalesycomunicativas.El Para estar seguros de cua´l candidato fue mejor en cada
+candidato2tienelosmismosvaloresqueelcandidato3en criteriodeunamanerama´sobjetiva,losdatosanterioresse
+losprimerosdoscriteriosylamayorpuntuacio´nenConoci- compararanconelperfilidealdelpuestoconunapuntuacio´n
+mientosdeidioma. de [1; 1]. Dicha comparacio´n se llevo´ a cabo a partir del
+ca´lculodelasdistanciasdeHammingparacadacriterio,de
+3.4 Etapa4:Seleccio´ndelCandidato formatalqueamenordistancia,ma´scercanoseencuentrael
+Para complementar la informacio´n, se asigno´ un nivel candidatodelidealcomosemuestraenlatabla11.
+designificacio´nacadaunodelosatributosporpartedelos Como se evidencia en la tabla 11, el candidato 3 tiene
+expertos para obtener el Experto´n Importancia, en aras de lamenordistanciaenlamayor´ıadelosatributos,menosen
+ordenarlosdeacuerdoasuimportanciaypodersopesarlasde- Habilidadesinterpersonalesycomunicativas.
+cisionesencasodequeexistamuchahomogeneidadentrelos Losresultadosanterioressepuedenapreciarmejorenla
+expertonesdeloscandidatos.Estosresultadossehallaronde figura3.
+lamismaformaenquesecalculo´ elExperto´nporcandidatos. LatrayectoriadelCandidato3fuelaquemenossealejo´del
+Quedanreflejadosenlatabla9 perfilideal,porloqueseaproximo´ ma´saceroensusenda.
+Aplicacio´ndelprocedimientoparalaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososenel
+82 HotelVedadoSaint-Johns
+Tabla3.DistanciadeHamming.
+Candidato1
+Experto1 Experto2 Experto3 Experto4 Experto5 Experto6 Experto7 Experto8
+0,11875 0,11875 0,23125 0,01875 0,06875 0,13125 0,06875 0,06875
+0,25625 0,14375 0,04375 0,04375 0,04375 0,05625 0,14375 0,05625
+0,03125 0,03125 0,04375 0,03125 0,03125 0,06875 0,03125 0,06875
+0,21875 0,13125 0,04375 0,06875 0,04375 0,06875 0,18125 0,08125
+0,08125 0,08125 0,06875 0,01875 0,06875 0,01875 0,03125 0,01875
+0,1375 0,0375 0,0875 0,1625 0,1125 0,0375 0,0375 0,0625
+0,05625 0,03125 0,19375 0,25625 0,10625 0,14375 0,04375 0,04375
+0,29375 0,04375 0,35625 0,29375 0,19375 0,30625 0,05625 0,10625
+0,1875 0,0625 0,1375 0,0625 0,1125 0,0875 0,0625 0,1125
+Candidato2
+Experto1 Experto2 Experto3 Experto4 Experto5 Experto6 Experto7 Experto8
+0,03125 0,03125 0,04375 0,03125 0,03125 0,06875 0,04375 0,05625
+0,11875 0,08125 0,06875 0,08125 0,08125 0,11875 0,04375 0,05625
+0,05625 0,04375 0,04375 0,04375 0,04375 0,05625 0,04375 0,05625
+0,15 0,05 0,1 0,0375 0,05 0,05 0,0375 0,0625
+0,2625 0,0625 0,5875 0,2625 0,2125 0,4375 0,1125 0,1125
+0,075 0,075 0,275 0,225 0,175 0,225 0,0375 0,075
+0,05625 0,03125 0,03125 0,09375 0,04375 0,04375 0,10625 0,06875
+0,09375 0,14375 0,35625 0,09375 0,09375 0,30625 0,14375 0,09375
+0,075 0,0375 0,275 0,125 0,075 0,225 0,075 0,125
+Candidato3
+Experto1 Experto2 Experto3 Experto4 Experto5 Experto6 Experto7 Experto8
+0,03125 0,03125 0,04375 0,06875 0,04375 0,03125 0,03125 0,05625
+0,08125 0,08125 0,16875 0,08125 0,04375 0,11875 0,01875 0,05625
+0,01875 0,01875 0,03125 0,01875 0,01875 0,03125 0,03125 0,01875
+0,1125 0,1125 0,2375 0,0625 0,0125 0,1875 0,0625 0,0625
+0,35 0,05 0,1 0,2 0,15 0,05 0,05 0,05
+0,0125 0,0125 0,2375 0,2125 0,2125 0,1875 0,0125 0,05
+0,40625 0,05625 0,04375 0,19375 0,14375 0,09375 0,05625 0,06875
+0,025 0,0375 0,175 0,125 0,075 0,125 0,075 0,0625
+0,0375 0,0875 0,1125 0,025 0,0875 0,1625 0,0875 0,075
+Tabla11.DistanciaHammingporcandidatoycriterios.
+Criterios Candidato1 Candidato2 Candidato3
+Criterio1 0,18586 0,12555 0,12555
+Criterio2 0,23297 0,17359 0,17359
+Criterio3 0,16055 0,17195 0,14945
+Criterio4 0,54438 0,49336 0,53281
+Criterio5 0,40055 0,38273 0,37227 Figura3.Distanciadecadacandidatorespectoalperfilideal.
+Criterio6 0,41734 0,50031 0,50891
+Criterio7 0,40383 0,39313 0,32313
+poneseplanteanunaseriedesupuestosquepermitencomple-
+Criterio8 0,39531 0,48719 0,37773
+mentarladecisio´ntomada,cuyaaplicacio´nnoprocedio´ para
+Criterio9 0,29406 0,37469 0,27094
+elpuestoobjetodeestudio.
+4. Comparacio´n entre el procedimiento
+Para este tipo de ana´lisis, mientras menor sea la distancia
+propuesto y el que aplica el Hotel Vedado
+mejor es el candidato. En este sentido, se hace evidente la
+ampliafacultadquepresentaeltercercandidatoanteelcargo, Saint-Johns
+porlocualquedaseleccionadoparaocuparlaplazavacante.
+Late´cnicautilizadademostro´ sucapacidaddeestablecer
+Esimportantedestacarqueenelprocedimientoquesepro- unresultadonume´ricoyalavezcualitativocapazdeofrecer
+Aplicacio´ndelprocedimientoparalaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososenel
+HotelVedadoSaint-Johns 83
+Tabla4.Cursodehabilitacio´nparaelpuesto(Evaluacio´ndelosexpertos).
+∼ Candidato1 Candidato2 Candidato3
+Expertos Min Ma´x Min Ma´x Min Ma´x
+Experto1 0,9 1 0,9 1 0,9 1
+Experto2 0,9 1 0,9 1 0,9 1
+Experto3 0,6 0,6 0,9 0,9 0,9 0,9
+Experto4 0,8 0,9 0,9 1 0,8 0,9
+Experto5 0,9 0,9 0,9 1 0,9 0,9
+Experto6 0,7 0,7 0,8 0,9 0,9 1
+Experto7 0,9 0,9 0,9 0,9 0,9 1
+Experto8 1 1 0,8 1 0,8 1
+Tabla5.FrecuenciasCriterio1.
+Candidato1 Candidato2 Candidato3
+Valor Min Ma´x Valor Min Ma´x Valor Min Ma´x
+0 0 0 0 0 0 0 0 0
+0.1 0 0 0.1 0 0 0.1 0 0
+0.2 0 0 0.2 0 0 0.2 0 0
+0.3 0 0 0.3 0 0 0.3 0 0
+0.4 0 0 0.4 0 0 0.4 0 0
+0.5 0 0 0.5 0 0 0.5 0 0
+0.6 1 1 0.6 0 0 0.6 0 0
+0.7 1 1 0.7 0 0 0.7 0 0
+0.8 1 0 0.8 2 0 0.8 2 0
+0.9 4 3 0.9 6 3 0.9 6 3
+1 1 3 1 0 5 1 0 5
+Suma 8 8 Suma 8 8 Suma 8 8
+criteriosma´sobjetivos.Lasimulacio´ndelprocesodeselec- Este me´todo aboga por que el Jefe inmediato o algu´n
+cio´nllevadoacaboenestainvestigacio´nenelComplejoHotel integrante del departamento de la vacante se integre al Co-
+Vedado-SaintJohnsconbaseenlateor´ıadelossubconjuntos mite´deExpertosdurantelaseleccio´n,conelobjetivodetener
+borrosos,arrojo´ resultadosdistintosalosdelprocedimiento elcriteriodeunespecialistadelaprofesio´nenconvocatoria.
+deseleccio´naplicadoporlosexpertosdelaentidad. La Teor´ıa de los Subconjuntos Borrosos aplicada en el
+Estonoquieredecirqueelprocesodeseleccio´naplicado Proceso de Seleccio´n del personal le brindara´ seguridad al
+nofueraelcorrecto.Enelmomentoqueserealizo´ seledio jefeinmediato,yaquelosana´lisisyresultadosobtenidospor
+unpesomayoralcriterioConfiableporencimadelcriterio losexpertossera´nexactos,conelpropo´sitodeelegiralmejor
+queten´ıaqueverconlashabilidadesycursosenelpuesto. candidatoparacumplirlasactividadesquerequiereelpuesto
+Esteaspectoelevo´ alcandidato1,yaqueaunquecontabacon detrabajo.
+menosausencias,tambie´neselquemenossehab´ıasuperado,
+porloquesecreaunacontradiccio´nalahoradeescoger.
+Referencias
+La aplicacio´n de este modelo propuesto en esta inves-
+tigacio´n contribuye a mejorar el proceso de seleccio´n del [1] Kaufmann,A.,&GilAluja,J.(1986).Introduccio´ndela
+Comite´ de Expertos de cualquier entidad. Adquiere mayor teor´ıadelossubconjuntosborrososalagestio´ndelas
+seriedadyformalismoalahoradeaplicarlo,yaquesecom- empresas.Espan˜a:EditorialMilladoiro.
+plementaconfundamentacionesmatema´ticas.Sepuededecir
+queesteprocedimientopermitemodificarymejorarelcrite- [2] SoutoAnido,L.(2013)Aplicacio´ndeHerramientasde
+riodelosexpertossinnecesidaddeotrascontradicciones,lo laTeor´ıadelosSubconjuntosBorrososalosProcesosde
+cualresultara´enunacuerdosinexistirinfluenciasdeterceras Seleccio´ndePersonal.
+personas.
+Aplicacio´ndelprocedimientoparalaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososenel
+84 HotelVedadoSaint-Johns
+Tabla6.ObservacionesNormalizadas.
+Candidato1 Candidato2 Candidato3
+Valor Min Ma´x Valor Min Ma´x Valor Min Ma´x
+0 0 0 0 0 0 0 0 0
+0.1 0 0 0.1 0 0 0.1 0 0
+0.2 0 0 0.2 0 0 0.2 0 0
+0.3 0 0 0.3 0 0 0.3 0 0
+0.4 0 0 0.4 0 0 0.4 0 0
+0.5 0 0 0.5 0 0 0.5 0 0
+0.6 0,125 0,125 0.6 0 0 0.6 0 0
+0.7 0,125 0,125 0.7 0 0 0.7 0 0
+0.8 0,125 0 0.8 0,25 0 0.8 0,25 0
+0.9 0,5 0,375 0.9 0,75 0,375 0.9 0,75 0,375
+1 0,125 0,375 1 0 0,625 1 0 0,625
+Suma 1 1 Suma 1 1 Suma 1 1
+Tabla7.FrecuenciasAcumuladas.
+Candidato1 Candidato2 Candidato3
+Valor Min Ma´x Valor Min Ma´x Valor Min Ma´x
+0 1 1 0 1 1 0 1 1
+0.1 1 1 0.1 1 1 0.1 1 1
+0.2 1 1 0.2 1 1 0.2 1 1
+0.3 1 1 0.3 1 1 0.3 1 1
+0.4 1 1 0.4 1 1 0.4 1 1
+0.5 1 1 0.5 1 1 0.5 1 1
+0.6 1 1 0.6 1 1 0.6 1 1
+0.7 0,875 0,875 0.7 1 1 0.7 1 1
+0.8 0,75 0,75 0.8 1 1 0.8 1 1
+0.9 0,625 0,75 0.9 0,75 1 0.9 0,75 1
+1 0,125 0,375 1 0 0,625 1 0 0,625
+Esp.Mat. 0,84 0,88 Esp.Mat. 0,88 0,96 Esp.Mat. 0,88 0,96
+Tabla8.ExpertonesparacadaCandidato.
+∼ Experto´nCandidato1 Experto´nCandidato2
+Criterios Min Ma´x Min Ma´x Min Ma´x
+1 0,84 0,88 0,88 0,96 0,88 0,96
+2 0,76 0,85 0,83 0,91 0,83 0,91
+3 0,88 0,96 0,86 0,95 0,9 0,96
+4 0,68 0,76 0,76 0,84 0,7 0,78
+5 0,64 0,7 0,64 0,74 0,66 0,74
+6 0,75 0,83 0,64 0,71 0,61 0,71
+7 0,66 0,73 0,68 0,74 0,75 0,83
+8 0,63 0,69 0,53 0,59 0,64 0,71
+9 0,74 0,79 0,64 0,71 0,76 0,81
+Aplicacio´ndelprocedimientoparalaseleccio´ndelpersonalconbaseenlateor´ıadelossubconjuntosborrososenel
+HotelVedadoSaint-Johns 85
+Tabla10.Multiplicacio´nExperto´nImportancia×Experto´ndelosCandidatos.
+∼ Candidato1 Candidato2 Candidato3
+Criterios Min Ma´x Min Ma´x Min Ma´x
+Criterio1 0.76421875 0.8640625 0.7984375 0.95046875 0.7984375 0.95046875
+Criterio2 0.7053125 0.82875 0.763125 0.8896875 0.763125 0.8896875
+Criterio3 0.7765625 0.90234375 0.76546875 0.890625 0.79875 0.90234375
+Criterio4 0.3965625 0.5146875 0.44796875 0.563125 0.41125 0.523125
+Criterio5 0.53390625 0.665 0.53390625 0.700625 0.55484375 0.700625
+Criterio6 0.515625 0.6496875 0.43828125 0.56109375 0.42109375 0.56109375
+Criterio7 0.52171875 0.670625 0.531625 0.6821875 0.590625 0.763125
+Criterio8 0.5390625 0.6703125 0.4528125 0.5728125 0.54984375 0.6946875
+Criterio9 0.66375 0.748125 0.57375 0.676875 0.68625 0.771875

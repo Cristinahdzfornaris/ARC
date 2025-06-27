@@ -1,0 +1,1115 @@
+CienciasMatemáticas,Vol.33,No.1,Pag.36-45,2019
+Criptoanálisis algebraico a cifrados en bloques
+Algebraic cryptanalyis to block ciphers
+Irene Martínez Ferrer1, Miguel Angel Borges Trenard2, Mijail Borges Quintana2*
+Resumen Elcriptoanálisisalgebraico(CA)esunatécnicadeataqueatomarenconsideraciónsobrediversos
+esquemasdecifrado.Elpresenteartículotratasobreestetipodeataque,cuandosellevaacaboespecíficamente
+sobreloscifradosenbloques.Paraello,seaplicaelMétododelasBasesdeGröbner,comounodelasmétodos
+utilizados en este criptoanálisis. Se profundiza en la metodología de trabajo del CA y también se diseñan
+herramientascomputacionalesqueestarándisponiblesparalacontinuacióndeestainvestigación.Además,se
+ilustranlastécnicasdelCAconunataqueauncifradoenbloquesparticular.
+Abstract Algebraiccryptanalyis(AC)isanattacktechniquetobetakenintoconsiderationoverdiversecipher
+schemes. Thepresentpaperdealswiththistypeofattack,whenitiscarriedoutspecificallyoverblockciphers.
+Inordertodoso,weapplytheGröbnerBasesMethod,asoneofthemethodsthatareusedinthiscryptanalysis.
+WegetdeepinthemethodologyofworkingofACandalsowedesigncomputationaltoolsthatwillbeavailable
+forthecontinuationofthisresearch. Moreover,weillustratethetecniquesofACwithanattacktoaparticular
+blockcipher.
+PalabrasClave
+criptoanálisisalgebraico—basedeGröbner—cifradosenbloques
+Keywords
+algebraiccryptanalyis—Gröbnerbasis—blockciphers
+1DireccióndeCriptografía,MinisteriodelInterior,SantiagodeCuba,Cuba,ire.mtz@gmx.es.
+2DepartamentodeMatemática,UniversidaddeOriente,SantiagodeCuba,Cuba,borgestrenard2014@gmail.com,mijail@uo.edu.cu.
+*AutorparaCorrespondencia
+Introducción lassolucionesdelossistemaspolinómicosqueseobtienen,y
+lacombinaciónconotrostiposdeataques.Elpresentetrabajo
+Breakingagoodciphershouldrequireasmuchworkas
+sebasaenlatesis[7].Sedescribeademásendetallescómo
+solvingasystemofsimultaneousequationsinalargenumber
+realizarunataquealgebraicoacifradosenbloques,resaltando
+ofunknownsofacomplextype1.
+dosmomentos,laescrituradeunsistemadeecuacionesque
+Despuésdeesasprecursoraspalabras,seconoceelcripto-
+describaelprocesodelcifradoencuestiónylaresoluciónde
+análisisalgebraico(CA)comoelprocesoderompercódigos
+dichosistema.LosexperimentossellevaronacaboenunaPC
+mediantelaresolucióndesistemasdeecuacionespolinómicos.
+conlassiguientescaracterísticas:
+Ensusinicios,elCAconsistióendospasosprincipales:el
+IntelCorei7-4790,a3.6GHz,con16GBdeRAM.
+primeroesmodelarelcifradoyalgunainformaciónadicio-
+La estructura del trabajo es como sigue: La Sección 1
+nalcomounsistemadeecuacionespolinómicas(usualmente
+discute sobre uno de los algoritmos más eficientes para el
+sobreF ),enelcuallosbitsdelaclaveseanincógnitas.El
+2 cálculodeBG(F5).Posteriormenteilustralospasosgenerales
+segundopaso,dadatalrepresentación,esdescubrirlaclave
+para realizar un CA (por vía directa o por encuentro en el
+secreta,locualdebeserequivalentearesolverelsistemade
+medio).LaSección2sededicaamostrarunacombinación
+ecuaciones.
+delataquealgebraicoconlabúsquedaexhaustiva.Luego,las
+Existendiversosmétodospararesolversistemasdeecua- conclusiones.
+cionespolinómicas,entreellospodemosmencionarelAlgo-
+ritmoXL,ElimLin,SAT-Solvers,elMétododelasBasesde 1. Criptoanálisis Algebraico
+Gröbner(BG)yotros.LautilizacióndelasBGenelCAno
+esuntemaacabado,setienenecesidaddeencontrarlasvías Laideageneraldelataquealgebraicoesconocida,perola
+máseficacesparautilizarelataquealgebraicoendiferentes presentacióndeunametodologíalosuficientementedetallada,
+direcciones,asaber,lamodelaciónadecuadadelosprocesos fundamentadayprácticaparallevaracaboestetipodeataque
+decifrado,descifrado,ygeneracióndeclaves;laobtenciónde noesuntemasencilloniresueltocompletamente,lapresenta-
+ciónquesehaceen[11]seacercabienaltratamientodeeste
+1ClaudeE.Shannon.CommunicationTheoryofSecrecySystems.InBell tópico.Elresumenquesepresentaenestasecciónutilizaesa
+SystemTechnicalJournal28,pages656-715,1949. referenciacomopuntodepartida,incorporandoenfoquesy
+Criptoanálisisalgebraicoacifradosenbloques 37
+ejemplosdesarrolladosenestainvestigación. Cabedestacarquenoseconsideraunalgoritmogeneradorde
+clavesderonda,esdecir,seconsideralamismaclavepara
+1.1 AlgoritmoF5enGAP cadaronda.Porcomodidad,denotaremosaestecifradopor
+ElAlgoritmoF5fuepresentadoporFaugèreen2002(ver TBC.
+[6]).Laversiónoriginalapareceencódigodeprogramación, Enestealgoritmo,SBoxheredalaideafundamentalde
+porloqueresultadifícilentenderlo.En[13]seinterpretaF5 la S-caja del AES (ver [12]). El procedimiento comienza
+como F5B (al estilo del Algoritmo de Buchberger), siendo por dividir un vector de estado w:=[w ,...,w ] en cuatro
+0 15
+estavariantemássencilladeentendereimplementar. bloquesdecuatrobitsconsecutivos(nibles).Entonces,cada
+nible es considerado como un elemento del campo F ∼ =
+16
+Algorithm1(AlgoritmoF5alestilodeBuchberger). F [x]/(x4+x+1).LaS-cajatomaestoselementosyretorna
+2
+Input: un conjunto de polinomos {f 1 ,f 2 ,...,f m } de K[X] y
+susinversosenF
+16
+(paraentradasdistintasdecero)y0∈F
+16
+unordenadmisible≺. sielnibledeentradaes[0,0,0,0].Elelementoobtenidose
+Output: Una BG del ideal (cid:104)f ,f ,...,f (cid:105) con respecto a representacomounnibleysereconstruyeunbloquede16
+1 2 m
+≺. bits.
+1: Begin Porsuparte,lacapadepermutaciónestárepresentadapor
+2: F i ←(e i ,f i )parai=1,2,...,m; laaccióndePermsobrelosvectoresdeestado.Elvalordel
+3: B←{F i |i=1,2,...,m};
+bitenlaposicióni,0≤i≤15,semuevealaposiciónPos(i),
+4: CP←{parcrítico[F i ,F j ]|1≤i< j≤m}; donde
+5: whileCPseanovacíodo (cid:26) 4·imod15, 0≤i≤14,
+6: cp←seleccionarunparcríticodeCP; Pos(i)= 15, i=15.
+7: CP←CP\{cp};
+8: ifcpnosatisfaceelCriteriodelSyzygynielCriterio Así,Perm(w)=[w ,...,w ].En[11]sesugierecómo
+Pos(1) Pos(15)
+deReescriturathen demostrarqueconesapermutaciónselograóptimadifusión,
+9: SP←els-polinomiodelparcríticodecp; en el sentido de que todo bit del texto cifrado depende de
+10: P←elresultadodelaF5-ReduccióndeSPporB, todoslosbitsdeltextoclaroydelaclave.
+SP⇒∗ P;
+B
+11: ifpartepolinomialdePnoes0, pol(P)(cid:54)=0,then Algorithm2:AlgoritmodelcifradoTBC.
+12: CP←CP∪{parcrítico[P,Q]|Q∈B}; Input:Untextoclaro pde16-bityunaclavekde16-bit.
+13: endif Output:Untextocifradocde16-bit.
+14: B←B∪P;
+15: endif 1: Begin
+16: endwhile 2: Realizar la adición con la clave inicial: w:= p⊕k =
+17: return {partepolinomialdeQ|Q∈B}; AdKey(p,k).
+3: for i=1,...,2 do
+4: RealizarlasubstituciónS-box:w:=SBox(w).
+En [9] se realizó un análisis comparativo en cuanto a
+5: RealizarlapermutaciónPerm:w:=Perm(w).
+lacantidaddes-polinomioscalculadosyeltiempototalde
+6: Adicionarlaclave:w:=AddKey(w,k)=w⊕k.
+cómputo(paraidealesasociadosconcódigoslinealeseideales
+7: endfor
+sobrecamposfinitos),loquepermitiócorroborarlaeficiencia
+8: Eltextocifradoesc:=w.
+deestealgoritmocomparadoconeldeBuchberger.Seimple-
+9: return c
+mentóademásunafunciónquecuentaelnúmerodeformas
+canónicasquedeterminaunidealhastaunalongituddada,en
+caso que el ideal sea finito dimensional permitiría calcular
+todaslasformascanónicas. 1.3 EcuacionesdelcifradoTBC
+EstaimplementacióndelAlgoritmoF5,juntoconotras Lasecuacionesseránescritascomponenteacomponente
+técnicasdecálculodebasesdeBG,puedenserutilizadasen delosbloquesde16bits,portanto,sonecuacionessobreF 2 .
+laexperimentaciónconelcriptoanálisisacifradosenbloques, Denotemos por p=[p 0 ,...,p 15 ] y c=[c 0 ,...,c 15 ] al texto
+comoenloscasosquesemuestranenlasseccionessiguientes. claro y texto cifrado respectivamente (los cuales aparecen
+comoparámetrosdelsistema),k=[k ,...,k ]elbloquede
+0 15
+1.2 CifradoenBloquesdeJuguete laclavedesconocida.Sean,porotraparte,x =[x ,...,x ],
+i i,0 i,15
+(ToyBlockCipher) i=0,1, el resultado de realizar la suma con la clave, y =
+i
+Presentaremos un sencillo cifrado en bloques iterativo, [y i,0 ,...,y i,15 ], i = 1,2, las salidas de las S-cajas,
+del tipo SPN, con texto claro y texto cifrado de 16 bits y yz i =[z i,0 ,...,z i,15 ],i=1,2,losresultadosdelacapadeper-
+dosrondas.Elmismoconsistedeunacapadesubstitución mutación.
+(S-caja),seguidaporunacapadepermutaciónylaadición Esahoraposibleescribirelprocesodecifradocomoel
+conlaclave.EnelAlgoritmo2sedescribesufuncionamiento. siguientesistema:
+CienciasMatemáticas,Vol.33,No.1,Pag.36-45,2019
+38 Criptoanálisisalgebraicoacifradosenbloques
+
+ x
+y
+0
+i
+=
+=
+S
+p
+B
++
+ox
+k
+(
+,
+x
+i−1
+),i=1,2,
+x
+k
+0
++
+:=
+p
+[k
+,
+1
+k
++
++
+p 1
+p
+,k
+,
+2
+k
++
++
+p 2
+p
+,k
+,
+3
+k
++p
++
+3 ,
+p
+k 4 +
+,k
+p 4
++
+,k 5
+p
++
+,
+p
+k
+5 ,k
++
+6 +
+p
+p 6
+,
+,
+z =Perm(y),i=1,2, 7 7 8 8 9 9 10 10 11 11 12 12
+i i
+ x
+c
+1
+=
+=
+z
+z 1
++
++
+k
+k
+.
+, k 13 +p 13 ,k 14 +p 14 ,k 15 +p 15 ,k 16 +p 16 ]
+2 Sedebeparticionarelvectorx0de16componentesen4nibles
+quehemosllamadon[1,i],i=1,...,4,paradenotarelniblei
+Elalgoritmoconstadetresfunciones,estasson:adición
+delaronda1.
+conlaclave,substitución(lacualsedescomponeenlaaplica-
+cióndecuatroS-cajasde4-bits),ylapermutación.Laadición n[1,1]:=[k[1]+p[1],k[2]+p[2],k[3]+p[3],k[4]+p[4]]:
+conlaclavepuedeserrepresentadademodotrivialypuede
+n[1,2]:=[k[5]+p[5],k[6]+p[6],k[7]+p[7],k[8]+p[8]]:
+ser escrita a nivel de bit, por ejemplo, en la adición con la
+claveinicial:x 0,j =p j +k j ,0≤ j≤15. n[1,3]:=[k[9]+p[9],k[10]+p[10],k[11]+p[11],k[12]+p[12]]:
+Con respecto a Perm se tiene que los bloques
+n[1,4]:=[k[13]+p[13],k[14]+p[14],k[15]+p[15],
+z =Perm(y), i=1,2,puedenserescritoscomo
+i i
+k[16]+p[16]]:
+z =y ,0≤ j≤15.
+i,j i,Pos(j)
+EnlaSección1.3sedemuestraquelaS-cajaquedatotalmente
+Una pregunta interesante es ¿cómo escribir ecuaciones modelada por el sistema de ecuaciones explícitas (1) y las
+sobreF 2 quedescribanalaS-caja?.Laclaveparalarespuesta relacionesdedefinicióndelcampoconrespectoalosa(cid:48) i s.
+estáenqueesposibleconcentrarseenescribirlasecuaciones Utilizandoelsistema(1)delaSección1.3,sepuedeex-
+sóloparaunaS-caja(yaqueSBoxestácompuestadecuatro presar cada nible de salida de la S-caja en función de las
+S-cajas iguales y paralelas que realizan operaciones sobre componentesdelnibledeentrada,esdecir,paraunniblearbi-
+F 16 ). trario[a 1 ,a 2 ,a 3 ,a 4 ],elnibleBdesalidadelaS-cajatienela
+Sean a=[a ,a ,a ,a ] los bits de entrada de la S-caja formasiguiente:
+0 1 2 3
+yb=[b ,b ,b ,b ]losbitsdesalida.Considerandolosdos
+0 1 2 3
+casos(a(cid:54)=0,a∈F
+16
+)y(a=0F
+16
+)seobtienenlasecuaciones B
+a[
+:
+1
+=
+]
+[a
++
+[1
+a
+]
+[
+*
+2
+a
+]
+[
++
+2]
+a
+*
+[
+a
+3
+[
+]
+3
++
+]+
+a[
+a
+4
+[
+]
+2
+,
+]
+a
+*
+[
+a
+1
+[
+]
+3
+*
+]
+a
+*
+[
+a
+2
+[
+]
+4
+*
+]
+a
++
+[4
+a
+]
+[1
++
+]*
+a[
+a
+1
+[3
+]*
+]
+a
++
+[2
+a
+]
+[2
++
+]*a[3]+
+explícitas:
+a[1]*a[3]+a[2]*a[3]+a[2]*a[4]+a[4],a[1]*a[3]*a[4]+
+b =a a a +a a a +a a +a a +a +a +a +a , (1)
+0 0 1 2 1 2 3 0 2 1 2 0 1 2 3 a[1]*a[2]+a[1]*a[3]+a[1]*a[4]+a[3]+a[4],
+b =a a a +a a +a a +a a +a a +a ,
+1 0 1 3 0 1 0 2 1 2 1 3 3 a[2]*a[3]*a[4]+a[1]*a[4]+a[2]*a[4]+a[3]*a[4]+a[2]+
+b =a a a +a a +a a +a a +a +a , a[3]+e[4]]:
+2 0 2 3 0 1 0 2 0 3 2 3
+b =a a a +a a +a a +a a +a +a +a .
+3 1 2 3 0 3 1 3 2 3 1 2 3
+Entonces,paraelnible
+AtaquealTBCporvíadirecta(haciaadelante)
+n[1,1]:=[k[1]+p[1],k[2]+p[2],k[3]+p[3],k[4]+p[4]],
+Seilustra,conelauxiliodelMAPLE18,elprocedimiento
+paraescribirunsistemadeecuacionesquemodelenelproceso
+elcorrespondientenibledesalidapuedeobtenersesustituyen-
+decifradodelTBCen2rondas.
+doenelsistemaBelvalordelascomponentesden[1,1],es
+G16:=GF(2,4,alpha4+alpha+1): decir:
+e:=G16:-ConvertIn(alpha): a[1]=n[1,1][1]=k[1]+p[1],a[2]=n[1,1][2]=k[2]+p[2],
+p:=[seq(p[i],i=1..16)]: a[3]=n[1,1][3]=k[3]+p[3],a[4]=n[1,1][4]=k[4]+p[4].
+c:=[seq(c[i],i=1..16)]: lascomponentesdeBtomaránlaformasiguiente:
+k:=[seq(k[i],i=1..16)]:
+b[1,1]:=[(k[1]+p[1])*(k[2]+p[2])*(k[3]+p[3])+(k[2]+p[2])
+*(k[3]+p[3])*(k[4]+p[4])+(k[1]+p[1])*(k[3]+p[3])+(k[2]+
+Ronda1:
+p[2])*(k[3]+p[3])+k[1]+p[1]+k[2]+p[2]+k[3]+p[3]+k[4]+
+Paralaprimerarondadecifradodebemosobtenerlasexpre-
+sionessiguientes(verSección1.3): p[4],(k[1]+p[1])*(k[2]+p[2])*(k[4]+p[4])+(k[1]+p[1])*
+(k[2]+p[2])+(k[1]+p[1])*(k[3]+p[3])+(k[2]+p[2])*(k[3]+
+
+x =p+k, p[3])+(k[2]+p[2])*(k[4]+p[4])+k[4]+p[4],
+
+y
+0
+1 =SBox(x 0 ), (k[1]+p[1])*(k[3]+p[3])*(k[4]+p[4])+(k[1]+p[1])*(k[2]+
+ z
+x
+1
+1
+=
+=
+P
+z 1
+er
++
+m
+k
+(
+.
+y 1 ), p
+k
+[
+[
+2
+3
+]
+]
+)
++
++
+p
+(
+[
+k
+3
+[
+]
+1
++
+]
+k
++
+[
+p
+4
+[
+]
+1
++
+]
+p
+)*
+[4
+(k
+],
+[3]+p[3])+(k[1]+p[1])*(k[4]+p[4])+
+(k[2]+p[2])*(k[3]+p[3])*(k[4]+p[4])+(k[1]+p[1])*(k[4]+
+Elprimerpasoesx =p+k,estoselograasí:
+0 p[4])+(k[2]+p[2])*(k[4]+p[4])+(k[3]+p[3])*(k[4]+p[4])+
+x0:=[seq(p[i],i=1..16)]+[seq(k[i],i=1..16)]; k[2]+p[2]+k[3]+p[3]+k[4]+p[4]]:
+CienciasMatemáticas,Vol.33,No.1,Pag.36-45,2019
+Criptoanálisisalgebraicoacifradosenbloques 39
+Del mismo modo se obtienen los nibles de salida para Comosóloson2rondas,yasetieneeltextocifradorepresen-
+n[1,2],n[1,3],n[1,4],porejemplo,elnibleb[1,2]seobtendrá tado en un sistema de ecuaciones que depende de las com-
+sustituyendolavariablea porlacomponenten[1,2][i],para ponentes del texto claro y la clave (por su extensión no lo
+i
+i=1...4.Porsuextensiónsolosemostróelnibleb[1,1]. escribimosaquí).Sielnúmeroderondasfuesemayor,sería
+necesariodeclararvariablesdeestadoporronda,queincre-
+Unavezobtenidoslos4niblesdesalida,debenconcatenarse,
+mentarían el número de incógnitas y por tanto harían más
+conformandoelvectorde16componentesqueserálaentrada
+complejoelprocedimientoanterior.Eltextocifradocesla
+delafuncióndepermutaciónz =Perm(y ).
+1 1 salidadelTBC:c:=x2:
+y1:=[op(b[1,1]),op(b[1,2]),op(b[1,3]),op(b[1,4])]: Veamos unejemploque muestracómo, dadounpar de
+textoclaroysucifradocorrespondiente,esposiblerecuperar
+z1:=Perm(y1):
+laclave,intentandoresolverelsistemaanterior.
+SeconcluyelaprimerarondarealizandoXORconlaclave:
+Ejemplo1 Sean
+x =z +k:x1:=AddKey(z1,[seq(k[i],i=1..16)]):
+1 1
+p1=[1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1],
+Ronda2:
+AlculminarlaRonda1,setieneelvectorx ,queeslaentrada
+1 c1=[0,1,1,1,0,1,1,1,0,0,1,1,1,1,1,0].
+delaS-cajaenlaRonda2.
+Elpróximopasoesconstruirlosvectoresqueresponden
+ConelrecursodelMAPLEydelaexpresióndelcifradoobte-
+alasoperacionesdelasegundarondadecifrado.Laprimera
+nidaanteriormente,veremoscómohallarlaclaveutilizada.A
+expresión que se debe obtener es la salida de SBox(x ), re-
+1 continuaciónsedefinenenMAPLE p1,c1yr.
+cordemos que funciona particionando en 4 nibles el vector
+x yluego,utilizandoelsistemaBescritoenlaRonda1,se p1:=[1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1]:
+1
+obtendránlos4niblesdesalida,posteriormentesecalculay
+2 r:=2:
+de16componentes,concatenandoestosnibles.
+c1:=[0,1,1,1,0,1,1,1,0,0,1,1,1,1,1,0]:
+
+ y
+z 2
+2
+=
+=
+P
+S
+e
+B
+r
+o
+m
+x
+(
+(
+y
+x
+2
+1
+)
+)
+,
+, S
+si
+u
+st
+b
+e
+s
+m
+tit
+a
+u
+t
+y
+s
+e
+ó
+n
+l
+d
+o
+o
+e
+l
+n
+os
+la
+v
+s
+a
+c
+l
+o
+o
+m
+re
+p
+s
+o
+d
+n
+e
+e
+l
+n
+t
+t
+e
+e
+x
+s
+t
+d
+o
+e
+c
+l
+l
+a
+ar
+c
+o
+la
+p
+v
+1
+e
+,
+,s
+s
+e
+e
+g
+o
+u
+b
+id
+ti
+a
+e
+m
+ne
+en
+u
+t
+n
+e
+ x
+c
+2
+=
+=
+x
+z
+2
+2
+.
++k, s
+k
+e
+i ,
+c
+i
+o
+=
+ns
+1
+t
+,
+r
+.
+u
+.
+y
+.
+e
+,1
+s
+6
+,
+:
+uniendo at las ecuaciones del campo, para
+t:=c:
+Particionandox ennibles:
+1
+forifrom1to16do
+n[2,1]:=[x1[1],x1[2],x1[3],x1[4]]:
+p[i]:=p1[i]:
+n[2,2]:=[x1[5],x1[6],x1[7],x1[8]]:
+od:
+n[2,3]:=[x1[9],x1[10],x1[11],x1[12]]:
+s:=[]:
+n[2,4]:=[x1[13],x1[14],x1[15],x1[16]]:
+forifrom1to16do
+Elpróximopasoesobtenery =SBox(x ),paraesto,debeha-
+2 1
+llarselasalidadelaS-cajaparan[2,1],n[2,2],n[2,3],n[2,4]. s:=[op(s),(t[i]-c1[i])mod2]:
+Ésto se logra de manera similar a como se procedió en la
+od:
+Ronda 1, la salida para cada uno de estos nibles puede ser
+expresadaenfuncióndelascomponentesdelnibledeentrada, s:=[op(s),seq(k[i]2+k[i],i=1..(16))]:
+comodescribeelsistema(1).SustituyendoenB:
+UtilizandoBasisdelpaqueteGroebnerdelMAPLE,secalcu-
+a[1]=n[2,1][1]=x1[1],a[2]=n[2,1][2]=x1[2], lalaBGdes,comoahorasemuestra.
+LosexperimentossellevaronacaboenunaPCconlas
+a[3]=n[2,1][3]=x1[3],a[4]=n[2,1][4]=x1[4],
+siguientescaracterísticas:IntelCorei7-4790,a3.6GHz,con
+seobtieneelnibleb[2,1]yluegoay =SBox(x ). 16GBdeRAM.
+2 1
+y2:=[op(b[2,1]),op(b[2,2]),op(b[2,3]),op(b[2,4])]: with(Groebner):
+Correspondeahoraaplicarlapermutaciónalvectory : infolevel[GroebnerBasis]:=2:
+2
+z2:=Perm(y2): t:=time();base:=Basis(r,plex(seq(k[i],i=1..16)),
+Finalizalasegundarondaconx =z +k: characteristic=2);t:=time()-t;
+2 2
+x2:=AddKey(z2,[seq(k[i],i=1..16)]): Conestasinstrucciones,seobtieneelsiguienteresultado:
+CienciasMatemáticas,Vol.33,No.1,Pag.36-45,2019
+40 Criptoanálisisalgebraicoacifradosenbloques
+base:=[k[16],k[15]2+k[15],k[14]+k[15],k[13]+1, decifradodeTBC.Paraesteejemplo,sehanobtenidoexpre-
+sionesalfinaldelas2rondasdecifrado,quedependendelas
+k[15]+k[12],1+k[15]+k[11],k[10]+k[15],k[9],
+componentesdeltextoclaroylaclave.Sir>2,repitiendoel
+k[15]+k[8],k[7],k[6],k[5],k[4]+1,k[15]+k[3], procedimientoanteriorsetrabajaríaconpolinomiosdemayor
+extensión, por lo que es común definir variables de estado
+k[15]+k[2]+1,k[1]+1]:
+porrondasyconstruirsistemasdeecuacionesdependiendode
+ApartirdelaBGantescalculadasehallalaclavek,utilizada estasvariablesintermedias.Dadounpardetextoclaro,texto
+para convertir el texto claro p 1 en el texto cifrado c 1 , en cifrado, fue posible recuperar la clave utilizando los recur-
+2 rondas de cifrado del TBC. Para hallar las soluciones en sosdelsistemaMAPLE,comprobandoesteresultadoconel
+k i ,i=1,...,16,esútillafunciónmsolveinternadelMAPLE. AlgoritmoToyCipherBlockEncryption(implementaciónen
+MAPLE18queserealizóenestetrabajoalAlgoritmo2).
+msolve(op(base),2);
+{k 1 =1,k 2 =0,k 3 =1,k 4 =1,k 5 =0,k 6 =0,k 7 =0, AtaquealTBCporvíadelencuentroenelmedio
+Paraelpardetextoclaro-textocifradodelasecciónante-
+k =1,k =0,k =1,k =0,k =1,k =1,k =1,
+8 9 10 11 12 13 14
+rior,trataremosdehallarlaclaveutilizadaporvíadelencuen-
+k 15 =1,k 16 =0}, troenelmedio.
+Recordemos cómo se aplica el encuentro en el medio:
+{k =1,k =1,k =0,k =1,k =0,k =0,k =0,
+1 2 3 4 5 6 7
+TeniendoencuentaquePerm−1=Permylatransformación
+k 8 =0,k 9 =0,k 10 =0,k 11 =1,k 12 =0,k 13 =1,k 14 =0, S-boxestambiéninversible(con0(cid:55)→0ySBox−1=SBox),
+k =0,k =0}. es posible entonces realizar las transformaciones inversas,
+15 16
+partiendodeltextocifradohastallegaraltextoclaro,obien,a
+Se han obtenido 2 claves consistentes, con las cuales pudo
+estadosintermedios(queesloquesebuscaenelataquepor
+habersidocifrado p :
+1 encuentroenelmedio).
+k =[1,0,1,1,0,0,0,1,0,1,0,1,1,1,1,0], El encuentro en el medio que mostraremos consiste en,
+1
+conocidos pyc,utilizarTBChastaobtenerz (alfinaldela
+1
+k =[1,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0].
+2 Ronda1),comodescribelasucesióndeoperacionessiguiente:
+Enestecaso,laclavequepreviamentehabiasidoutilizada
+x =p+k→y =Sbox(x )→z =Perm(y ). (2)
+paracifrarfuek . 0 1 0 1 1
+1
+TBC fue implementado en MAPLE 18, para cualquier
+Porotraparte,partiendodec,tambiénobtenerz ,comose
+valor de r, el mismo requiere de las funciones Sbox, Perm, 1
+muestraacontinuación:
+AddKey,éstasasuvezdependendeSboxNible,Pos,bdydb,
+todasescritasparaestetrabajo.
+z =c+k→y =Perm(z )→x =SBox(y )→
+2 2 2 1 2
+Con el auxilio de ToyCipherBlockEncryption se puede
+→z =x +k. (3)
+verificarsieltextoclaro p puedesercifradoutilizandolas 1 1
+1
+clavesk yk ydarlugarenamboscasosac.Paraelcorrec-
+1 2 Igualandolosvectoresconstruidosen(2)y(3),setieneun
+to funcionamiento de ToyCipherBlockEncryption debe ini-
+sistemadeecuacionesquesólodependedelaclave.Dicho
+cializarselahojadecálculodelMAPLE,luegodeestoyase
+sistema puede intentar resolverse (por ejemplo, utilizando
+estaráencondicionesdecifrar p comosigue:
+1 basesdeGröbner),yobtenerlaclaveutilizada.
+with(ListTools):
+Ejemplo2
+with(GroupTheory):
+k1:=[1,0,1,1,0,0,0,1,0,1,0,1,1,1,1,0]: EnlaSección1seconstruyólaexpresióndeltextocifradoen
+k2:=[1,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0]: términosdelascomponentesdelaclave,debemosrealizarese
+p1:=[1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1]: mismoprocedimientohastaobtenerz .UtilizandoMaple18
+1
+r:=2: conlasentradasdefinidasenlaSección1,setienelaexpresión
+c1:=ToyCipherBlockEncryption(p1,k1,[k1,k1],r); siguienteparaz .
+1
+c1:=[0,0,0,1,1,0,0,0,0,0,0,0,1,0,1,0] Corresponde entonces realizar el paso (2), eso se logra
+c2:=ToyCipherBlockEncryption(p1,k2,[k2,k2],r); conlasinstruccionessiguientes:
+c2:=[0,0,0,1,1,0,0,0,0,0,0,0,1,0,1,0]
+z2:=[seq(c[i],i=1..16)]+[seq(k[i],i=1..16)]:
+is(c1=c2);
+true y2:=Perm1(z2):
+Enefecto,eltextocifradode p 1 paralaclavek 1 (c 1 ),coincide n[2,1]:=[y2[1],y2[2],y2[3],y2[4]]:
+coneltextocifradode p paralaclavek (c ).
+1 2 2 n[2,2]:=[y2[5],y2[6],y2[7],y2[8]]:
+Sehadescritoconunejemplosencillolametodologíapara
+construirunsistemadeecuacionesquerepresentaelproceso n[2,3]:=[y2[9],y2[10],y2[11],y2[12]]:
+CienciasMatemáticas,Vol.33,No.1,Pag.36-45,2019
+Criptoanálisisalgebraicoacifradosenbloques 41
+n[2,4]:=[y2[13],y2[14],y2[15],y2[16]]: k,i=1,...,16.UtilizandoBasisdelpaqueteGroebner del
+i
+Maple,secalculalabasedeGröbnerdes,luegomsolvehalla
+Utilizandoelsistema(2.1)delaSección1.3,podemoshallar
+lassolucionesdelsistemaasociadoalabasedeGröbnerobte-
+x =SBox(y ),análogoalprocederdelaSección1.Sesubsti-
+1 2 nida,comosemuestraacontinuación.
+tuyea =n[2,1][i],i=1...4,paraelniblen[2,1]ydelmismo
+i
+modosetrabajaconelrestodelosnibles. r:=[op(s),seq(k[i]2+k[i],i=1..16)]:
+Osea,paraelniblen[2,1]:=[y2[1],y2[2],y2[3],y2[4]],el
+with(Groebner):
+correspondientenibledesalidapuedeobtenersesustituyendo
+enelsistemaBcomosigue: infolevel[GroebnerBasis]:=2:
+a[1]=n[2,1][1]=y2[1],a[2]=n[2,1][2]=y2[2], t:=time();base:=Basis(r,plex(seq(k[i],i=1..16)),
+a[3]=n[2,1][3]=y2[3],a[4]=n[2,1][4]=y2[4]. characteristic=2);t:=time()-t;
+Deestemodo,b[2,1](nibledesalidaparalaentradan[2,1] Seobtiene:
+alaS-caja),podemosescribirlocomosemuestraacontinua-
+base:=[k ,k +1,k2 +k ,k k +k ,k2 +k ,
+ción,notemosquetieneunaestructurasimplesimilaralos 16 15 14 14 13 14 13 13 13
+obtenidosalfinaldelaprimerarondadelTBC,conladife- 1+k 13 +k 14 +k 12 ,k 13 +k 14 +k 11 ,k 14 +k 10 ,k 9 ,k 8 +1,k 7 ,
+renciadequeenestecasoelpuntodepartidahasidoeltexto
+k +k +k ,1+k +k ,1+k +k +k ,k +1,
+13 14 6 13 5 13 14 4 3
+cifrado.
+1+k +k ,k +1]:
+14 2 1
+b[2,1]:=[k[1]*(k[5]+1)*k[9]+(k[5]+1)*k[9]*(k[13]+1)+
+Ahorabusquemoslassoluciones:
+k[1]*k[9]+(k[5]+1)*k[9]+k[1]+k[5]+k[9]+k[13],
+k[1]*(k[5]+1)*(k[13]+1)+k[1]*(k[5]+1)+k[1]*k[9]+(k[5]+ msolve(op(base),2);
+1)*k[9]+(k[5]+1)*(k[13]+1)+k[13]+1,k[1]*k[9]*(k[13]+
+{k =1,k =0,k =1,k =0,k =1,k =1,k =0,
+1 2 3 4 5 6 7
+1)+k[1]*(k[5]+1)+k[1]*k[9]+k[1]*(k[13]+1)+k[9]+
+k[13]+1,(k[5]+1)*k[9]*(k[13]+1)+k[1]*(k[13]+1)+ k 8 =1,k 9 =0,k 10 =1,k 11 =1,k 12 =0,k 13 =0,k 14 =1,
+(k[5]+1)*(k[13]+1)+k[9]*(k[13]+1)+k[5]+1+k[9]]:
+k =1,k =0},
+15 16
+Demanerasimilarresultanb[2,2],b[2,3]yb[2,4].Conca- {k =1,k =0,k =1,k =1,k =0,k =0,k =0,
+1 2 3 4 5 6 7
+tenandoestosnibles,seobtieneelvectorx .Luegosehace
+1 k =1,k =0,k =1,k =0,k =1,k =1,k =1,
+la suma XOR de x con la clave obteniendo así a z . Para 8 9 10 11 12 13 14
+1 1
+diferenciarlodelz construidoporTBClohemosdenotado k =1,k =0},
+1 15 16
+z .
+11 {k =1,k =1,k =1,k =1,k =1,k =0,k =0,
+1 2 3 4 5 6 7
+x1:=[op(b[2,1]),op(b[2,2]),op(b[2,3]),op(b[2,4])]:
+k =1,k =0,k =0,k =0,k =1,k =0,k =0,
+8 9 10 11 12 13 14
+z11:=x1+[seq(k[i],i=1..16)]mod2:
+k =1,k =0}.
+15 16
+Luego se substituyen los valores reales del texto claro y el
+PudoobservarsequeBasisdemorómenostiempoencalcular
+textocifradoenz yz (losmismosvaloresquelosdelejem-
+1 11 labasedeGröbnerparaelencuentroenelmedioqueporla
+plodelasecciónanterior),seigualanambasexpresionesyse
+víadirectautilizadaenlaSección1(sistemaquerepresenta
+obtieneunsistemadeecuacionesscuyasincógnitassonlas
+el proceso de cifrado completo en las 2 rondas de cifrado).
+componentesdelaclave.
+Ésto parece deberse a que en el encuentro en el medio se
+forifrom1to16do reducelacomplejidaddelospolinomiosqueintervienenenla
+modelación.Losresultadoscomparativosentreambostipos
+p[i]:=p1[i]:
+deataqueseresumenenlatablasiguiente.Paraelencuentro
+c[i]:=c1[i]:
+Tabla1.TiempoquedemoraBasis(sec)
+od:
+Basis víadirecta encuentroenelmedio
+s:=[]:
+totaltime: 13.297sec 1.297sec
+forifrom1to16do
+s:=[op(s),z1[i]-z11[i]mod2]:
+enelmedioseobtuvieronlassolucionessiguientes:
+od:
+k :=[1,0,1,0,1,1,0,1,0,1,1,0,0,1,1,0],
+smod2 1
+k =[1,0,1,1,0,0,0,1,0,1,0,1,1,1,1,0],
+EstesistemapuedeserresueltoporelMétododelasBases 2
+de Gröbner, añadiendo a s las ecuaciones del campo para k :=[1,1,1,1,1,0,0,1,0,0,0,1,0,0,1,0].
+3
+CienciasMatemáticas,Vol.33,No.1,Pag.36-45,2019
+42 Criptoanálisisalgebraicoacifradosenbloques
+Veamoscuálessonconsistentes,utilizandolaimplementación MAPLE(versión17),semuestracómopuedeserutilizado
+deTBC,ToyCipherBlockEncryption(verSección1): estealgoritmoenataquesalgebraicosacifradosenbloques
+y cómo obtener una modelación polinómica de un cifrado
+k1:=[1,0,1,0,1,1,0,1,0,1,1,0,0,1,1,0]:
+enbloquesdeltipoSPN,seilustraademáslaaplicacióndel
+c11:=ToyCipherBlockEncryption(p1,k1,k1,r); enfoquehíbridoconunataquealcifradoHTC.
+Acontinuaciónsedescribebrevementeelenfoquehíbrido.
+c11:=[1,1,1,1,1,0,0,0,1,0,1,1,1,1,1,0]
+is(c11=c1);
+EnfoqueHíbrido
+false
+DadouncampofinitoF,enteoríaesposibleencontrarlas
+soluciones racionales de un sistema polinómico, con coefi-
+k2:=[1,0,1,1,0,0,0,1,0,1,0,1,1,1,1,0]: cientesenF,mediantebúsquedaexhaustiva,locualrequiere
+c2:=ToyCipherBlockEncryption(p1,k2,k2,r); O(qn)operaciones,dondeqeselcardinaldeFyneselnú-
+merodevariables.Elenfoquehíbridocombinalabúsqueda
+c2:=[0,1,1,1,1,0,0,0,0,0,1,1,1,1,1,0]
+exhaustivaconelcálculodebasesdeGröbner,nocalculala
+is(c2=c1); base de Gröbner del sistema completo (que pudiese ser en
+muchoscasosdemasiadocostosooimposiblebajolascondi-
+true
+cionesdedesarrolloactuales),calculaqk basesdeGröbnerde
+k3:=[1,1,1,1,1,0,0,1,0,0,0,1,0,0,1,0]: subsistemasquesonobtenidosalfijarkvariables.Seintuye
+quelagananciaqueseobtiene,trabajandoensistemascon
+c3:=ToyCipherBlockEncryption(p1,k3,k3,r);
+menosvariables,pudiesesuperarlapérdidadebidoalrecorri-
+c3:=[1,1,1,1,1,1,0,0,1,1,1,1,1,0,1,0] doexhaustivoenlasvariablesfijadas.Elproblemaesescoger
+elmejorcompromiso,esdecir,seleccionarelvalordekque
+is(c3=c11);
+minimicelacomplejidaddelenfoquehíbrido.
+false En lo que sigue, si F ={f ,...,f }, denotaremos por
+1 m
+Losresultadosanterioresmuestranqueenelconjuntodeso-
+VF(F)alavariedaddeF sobreF,esdecir,
+lucionescalculadopormsolveseencuentralaclavequefue
+{(z ,...,z )∈Fn|∀f ∈F, f(z ,...,z )=0}.
+utilizadaparacifrar p(soluciónk ).Además,k yk ilustran 1 n 1 n
+2 1 3
+que utilizando el método del encuentro en el medio puede
+obtenerselaexpresióndelcifradoenunmismopuntointer-
+medioz ,peroéstonosignificaqueesequivalenteelsistema Algorithm3:EnfoqueHíbrido.
+1
+obtenido al realizar el procedimiento completo, ronda por Input:F,campofinito,F ={f ,...,f }⊂F[x ,...,x ],k∈
+1 m 1 n
+ronda,comosehizoenlaSección1.Loquesisegarantiza N.
+quelaclaveutilizadatienequeserunadelassolucionesdel Output:VF(F).
+sistema.Enelejemploporvíadirectahaciaadelantefueron 1: S:=0/;
+consistenteslas2clavesobtenidasalresolverelsistemaque 2: for(v 1 ,...,v k )∈Fk do
+seconstruyó,locualeradeesperarpuestoqueenesecasose 3: EncontrarelconjuntosoluciónS ⊂Fn−k delsistema
+aux
+modelócompletamenteelprocesodecifrado. f(v ,...,v ,x ,...,x )=0, f ∈F;
+1 k k+1 n
+4: S := S ∪ {(v 1 ,...,v k ,z k+1 ,...,z n )|(z k+1 ,...,z n ) ∈
+2. Ataque algebraico por enfoque híbrido S };
+aux
+a cifrados en bloques 5: endfor
+6: return S;
+Losataquesalgebraicosconducenasistemasdeecuacio-
+nespolinómicascongrannúmerodeecuacioneseincógnitas,
+Esconvenienteaclararquesefijanlaskprimerasvariables
+lo cual limita su aplicabilidad. En [3] se presenta un enfo-
+sólo para hacer más simple la escritura del algoritmo, ya
+que interesante y novedoso, para la resolución de sistemas
+queelmismosepuedeaplicarenesenciafijandocualquier
+polinómicossobrecamposfinitos,elcualsebasaenuncom-
+subconjuntodekdelasvariables.
+promisoentrelabúsquedaexhaustivaylastécnicasdebases
+En[5]secontinúaprofundizandoenelenfoquehíbrido
+de Gröbner. Los autores del mencionado artículo calculan
+presentadoen[3],dandoaconocerfórmulasasintóticasdel
+explícitamente la complejidad de este enfoque y muestran
+comportamientodeestemétodobajociertascondiciones.En
+algunasaplicacionesenlasqueestemétodopermitióromper
+[10] Se contruye en MAPLE 17 la función HybridSolving,
+desafíosdeseguridad,paraparámetrosconcretos,devarios
+pararealizarunataquealgebraicoporenfoquehíbrido.Lauti-
+esquemas criptográficos que se consideraban seguros. Ver
+lizacióndeHybridSolvingrequieredelospaquetesListTools
+también[4]y[5].
+yGroebnerdelMAPLE.
+En[10]sebrindaunaimplementaciónpráctica,delmétodo
+antes mencionado, en el sistema de álgebra computacional
+CienciasMatemáticas,Vol.33,No.1,Pag.36-45,2019
+Criptoanálisisalgebraicoacifradosenbloques 43
+Algorithm4:HybridSolving. en bloques de 16 bits, del tipo SPN, con longitud de clave
+Input:F (conjuntodepolinomios),X (listaconlasvariables), también de 16 bits. Tiene 4 S-cajas, de longitud binaria 4
+O (ordenamiento de términos), k (cantidad de variables (todasiguales),portanto,elbloquedeentradasedivideen
+fijadas), x ,x (límites entre los cuales se recorrerán los 4 nibles y cada nible se pasa por la S-caja de la posición
+1 2
+bloquesbinariosdelongitudk,x ,x ∈[0,2k−1]). correspondiente. HTC consiste de 4 rondas, las 3 primeras
+1 2
+Output:SolucionesdelsistemaF =0. son iguales y consisten de una suma con la clave del texto
+de salida de la ronda anterior (en la 1era ronda es la suma
+1: HybridSolving:=proc(F,X,O,k,x 1 ,x 2 ) de la clave con el texto claro), seguida de la aplicación de
+2: localn,i,b,Z,x,S:n:=nops(X):S:=[]: las S-cajas y de una transposición en las posiciones de los
+3: for ifromx 1 tox 2 do bitsdesalidadelasS-cajas.Finalmente,serealizaunacuarta
+4: b:=db(i,k): rondaquenollevatransposiciónperosiunasumafinalcon
+5: Z:=convert(convert(remove(x→member(x,[0,1 la clave de la ronda 4. Típicamente se ha considerado que
+]), todaslasclavesderondasonigualesalaclavequeintroduce
+modp(subs( seq(X[i]=b[i],i=1..k),F),2)),set inicialmenteelusuario.Paramásdetalles,puedeconsultarse
+),list): [8], no obstante En la Tabla 2 se presenta la S-caja que se
+6: Z:=Basis(Z,O(seq(X[i],i=k+1..n)),characte- utiliza(expresadaenhexadecimal).
+ristic=2): Deloanteriorsepuedeobtener,quesi[a,b,c,d]represen-
+7: if is(Z<>[1]) then taunnibledeentradaarbitrarioalaS-caja,entonces,elnible
+8: Z:=[msolve( op(Z),2)]: desalidavienedadoporlossiguientespolinomios:
+9: Z:=[seq( seq(X[i]=b[i],i=1..k),op(Z[i]),
+i=1..nops(Z))]: 1+a+abc+b+bcd+ab+bc+d,
+10: S:=[op(S),op(Z)]: 1+a+b+bd+acd+cd+ac,
+11: endif
+1+abc+bd+abd+cd+ab+ad+bc+ac+c+d,
+12: endfor
+a+bd+acd+ad+c. (4)
+13: return S:
+14: endproc:
+Tabla3.Notaciones
+X :=[x ,...,x ] bloquebinariodelongitud16
+ModelaciónpolinómicadelcifradoHTC 1 16
+P:=[p ,...,p ] textoclaro
+Unamodelaciónpolinómicadeuncifradoenbloqueses 1 16
+K:=[k ,...,k ] clave
+un conjunto de ecuaciones polinómicas que representa las 1 16
+C:=[c ,...,c ] cifradodePconlaclaveK
+operaciones que se realizan en el cifrado, estas ecuaciones 1 16
+medianteelHTC
+dependendelostextosclarosycifrados(consideradoscomo
+V[i]:=[v ,...,v ] salidadelaS-cajaenlaronda
+parámetros)ydelaclave(variableoincógnita).Lasecuacio- [i,1] [i,16]
+i,i∈[1,4]
+nesdebenreflejarlosdiversospasosdelcifrado,loscualesson
+U[j]:=[u ,...,u ] entradaalaronda j, j∈[2,4]
+típicamente(enelcasodelasSPN),laadiciónconlaclave, [j,1] [j,16]
+(despuésdesumarV[j−1]
+losmovimientosatravésdelasS-cajasytransposiciones,así
+conlaclave)
+comoelalgoritmodegeneracióndelasclaves.Tambiénes
+S(X) bloquebinarioresultantede
+usualintroducirvariablesquerepresentanlosresultadospor
+aplicarleaX
+rondas(variablesdeestado).
+lasustituciónporlasS-cajas
+UnaSPNseobtienemedianteunasucesióndeoperacio-
+T(X) bloquebinarioresultantede
+nesquesonutilizadasenvarioscifradosenbloques.Dadoel
+aplicarleaX latransposición
+textoclaroylaclave,aplicanunnúmerofijodeveces(llama-
+ensusbits
+dasrondas)variasoperacionesque,engeneral,consistende
+substitucionesSdelosbits(mediantelasllamadasS-cajas),
+permutacionesPdesusposiciones,asícomosumasconlas
+Entonces,asumiendoquePyCsonconocidos,lamode-
+denominadasclavesderondas(lascualestípicamenteseob-
+laciónpolinómicadelcifradoHTCvienedadaporlaunión
+tienen de la clave que introduce el usuario mediante algún
+delossiguientesconjuntosdeecuaciones:
+algoritmogeneradordeellas).Todaslasrondassoniguales,
+F :={k2+k =0,v2 +v =0,u2 +u =0|h∈
+salvoquizáslaprimeraolaúltima.Eldescifradoserealiza h h [i,h] [i,h] [j,h] [j,h]
+[1,16],i∈[1,4],j∈[2,4]},
+invirtiendo el proceso (S y P tienen que ser inversibles) y
+aplicandolasclavesderondaenordeninvertido.  
+S(P+K)=V[1], T(V[1])+K=U[2],
+En [10] se ilustra el método híbrido con la modelación
+
+S(U[2])=V[2], T(V[2])+K=U[3],
+
+H:= .
+queselerealizóalcifradoHTC,denominadoposteriormente S(U[3])=V[3], T(V[3])+K=U[4],
+enreferenciaasuautor(HeysToyCipher).HTCesuncifrado
+
+S(U[4])=V[4], V[4]+K=C
+
+CienciasMatemáticas,Vol.33,No.1,Pag.36-45,2019
+44 Criptoanálisisalgebraicoacifradosenbloques
+Tabla2.EntradasysalidasdelaS-caja
+Entrada 0 1 2 3 4 5 6 7 8 9 A B C D E F
+Salida E 4 D 1 2 F B 8 3 A 6 C 5 9 0 7
+F representalasecuacionesdelcampoyH lasdelcifrado. Tabla5.Tiempodecorridaalparticionarendoselespaciode
+F determina 16+4·16+3·16=128 ecuaciones binarias, los2k bloquesbinarios
+mientrasqueH dalugara128ecuacionesbinarias,paraun
+c Partición Tiempo(segundos)
+total de 256 ecuaciones con 128 incógnitas (la clave y las
+variablesdeestado).Demodogeneral,sisecifranmtextos 16 B 1 31.85
+clarosconlamismaclave,entoncesseformaráunsistemacon B 2 31.01
+16+m·(4·16+3·16)=16+m·112ecuacionesdelcampo 12 B 1 1.71
+ym·128ecuacionesdelcifrado,parauntotalde16+m·240 B 2 1.73
+ecuacionesy16+m·112incógnitas. 8 B 1 0.15
+Enlaliteraturapuedenencontrarseotrosejemplosdemo- B 2 0.12
+delaciónpolinómicadecifradosenbloques,ver,porejemplo, 4 B 1 0.03
+[11,1,2]. B 2 0.01
+ExperimentacióndeHybridSolvingparaelHTC
+La implementación del HybridSolving se realizó en la
+lodeclaradoaliniciodelasección,sobreelcompromisoentre
+versión17deMAPLE.Losexperimentossellevaronacabo
+lacantidaddevariablesquesefijeylacomplejidadycantidad
+enunaPCconlassiguientescaracterísticas:
+de sistemas de ecuaciones determinados por las variables
+IntelCorei7-4790,a3.6GHz,con16GBdeRAM.
+fijadas. En este caso, la solución de mejor compromiso se
+Acontinuaciónsemuestranvariastablasquerecogenlos
+alcanzajustoenelmedio.
+resultadosexperimentalesdelautilizacióndeHybridSolving
+UnamaneradesimplificareltrabajodelafunciónHybrid-
+paraelsistemadeecuacionesmodeladoapartirdelcifrado
+Solving es particionar el conjunto de bloques binarios que
+HTC.LaTabla4muestralostiemposdecorridaensegundos
+deberecorrerseyaplicarlafuncióndemodoindependiente
+yminutos(conaproximaciónhastalacentésima),alfijark=
+encadaunodelossubconjuntosdelapartición.Esteprocedi-
+16,12,8y4variablesdelaclaverespectivamente.Notemos
+mientoseajustabienparalautilizacióndelacomputaciónen
+que,enelcasodefijarlas16componentesdelaclave,noes
+paralelo.Elrecorridoseestablecióenlossiguientesintervalos
+posibleobtenerlosresultadosenbrevetiempo(alrededorde [0,2k−1] (subconjunto B ) y [2k−1+1,2k−1] (subconjunto
+1
+unahoracon40minutos).
+B ).
+2
+Lacolumna3delaTabla5,arrojaresultadosalentadores:
+Tabla4.Tiempodecorridaalrecorrertodoelespaciodelos
+alparticionarelconjunto,seevidenciaunadisminuciónen
+2k bloquesbinarios
+lostiemposdecorridaencadacaso.Porconstruccióndelos
+subconjuntosyejemploespecíficodeclave,lamismasiempre
+k 2k Tiempo(segundos) Tiempo(minutos)
+seencuentraenelmismosubconjuntodelapartición(B ),por
+16 65536 5982.42 99.70 1
+locual,eltiempoparaB esligeramentesuperioraltiempo
+1
+12 4096 680.41 11.34
+paraB ,salvoenelcasoenquesefijan12variables,poruna
+2
+8 256 279.89 4.66
+diferenciamuypequeña.
+4 16 1303.37 21.72
+3. Conclusiones
+Lascolumnas3y4delaTabla4muestranque,alfijar SelograunaimplementaciónenGAPdelAlgoritmoF5
+sólo 4 variables, independiente de que sólo se les halle la paraelcálculodebasesdeGröbner.Teniendoencuentaque
+solucióna16sistemas,laestructuradeestosesmáscompleja F5esunodelosmejoresalgoritmosparaelcálculodeBG
+queenelrestodelocasos,enloscualessefijan2,3y4veces fuenecesarioconsultarvariasreferencias,hastaencontrarun
+estacantidaddevariablesy,portanto,sedisminuyemásla enfoquenovedosoyunificadodelmismo.Seprofundizaenla
+cantidaddeincógnitasdelsistemainicial.Esdecir,fijando4 metodologíaparaelCA,basándoseenliteraturaactualsobre
+variablesenelsistemainicial,esmayorlacomplejidaddela eltemaeincorporandoenfoquesyejemplosdesarrolladosen
+resolucióndecadaunodelossistemasqueseobtienenquela estetrabajo.
+búsquedaexhaustiva. Se describe un ataque algebraico al cifrado en bloques
+Porotraparte,seobservaenestecasoqueen k seobtiene HTC,enelcualseutilizapartedelametodologíamencionada
+2
+elmejorresultado,locualseasociademanerainteresantecon enelpárrafoanterior,asícomoseadicionanotrastécnicasdel
+CienciasMatemáticas,Vol.33,No.1,Pag.36-45,2019
+Criptoanálisisalgebraicoacifradosenbloques 45
+CA. 37th International Symposium on Symbolic and Alge-
+Secontribuyeaesclarecerlametodologíaparalaobten- braicComputation,páginas67–74.ACM,2012.
+cióndelamodelaciónpolinómicadeloscifradosenbloques,
+[6] Faugère, Jean Charles: A new efficient algorithm for
+enparticulardelasredesdesubstituciónpermutación,yse
+computingGröbnerbaseswithoutreductiontozero(F
+exponeunaimplementaciónprácticadeunataqueporenfoque
+5). EnProceedingsofthe2002internationalsymposium
+híbrido,utilizandoelsistemaMAPLE,paraellofuenecesa-
+onSymbolicandalgebraiccomputation,páginas75–83.
+rioconstruirnuevasfuncionesenestesistema.Seobtienen
+ACM,2002.
+resultadosalentadores.Enelintentodeextenderlosacifrados
+demayorfortaleza,lautilizaciónpotencialdelacomputación
+[7] Ferrer, I. Martínez: Criptoanálisis algebraico a cifra-
+paralela resulta también promisoria. Este trabajo puede ser
+dosenbloques. TesisenopciónaltítulodeMásteren
+útilademáscomootrareferenciametodológicaparaelataque
+Matemática.UniversidaddeLaHabana,Cuba,2018.
+algebraico,conlaparticularidaddequeexplicatodoelpro-
+ceso,desdelamodelaciónteóricahastasuimplementación [8] Heys,HowardM:Atutorialonlinearanddifferential
+práctica. cryptanalysis. Cryptologia,26(3):189–221,2002.
+[9] M.Borges-Quintana,M.A.Borges-Trenard,I.Martínez
+Referencias
+Ferrer:AlgoritmoF5enGAP,útilherramientaparala
+[1] Albrecht,Martin:Algorithmicalgebraictechniquesand
+CCP. EnCongresoInternacionalCompumat2015.La
+theirapplicationtoblockciphercryptanalysis. Tesisde
+Habana,Cuba,2015.
+Doctorado,Citeseer,2010. [10] M.Borges-Quintana,M.A.Borges-Trenard,I.Martínez
+Ferrer:AtaqueAlgebraicoporEnfoqueHíbridoaCifra-
+[2] Bard,Gregory:Algebraiccryptanalysis. SpringerScien-
+dosenBloques. EnCongresoInternacionalCompumat
+ce&BusinessMedia,2009.
+2017.LaHabana,Cuba,2017.
+[3] Bettale,Luk,JeanCharlesFaugereyLudovicPerret:Hy-
+[11] Pellikaan,Ruud,XinWenWu,StanislavBulyginyRe-
+bridapproachforsolvingmultivariatesystemsoverfini-
+lindeJurrius:Codes,cryptologyandcurveswithcompu-
+tefields. JournalofMathematicalCryptology,3(3):177–
+teralgebra. CambridgeUniversityPress,2017.
+197,2009.
+[4] Bettale, Luk, Jean Charles Faugère y Ludovic Perret: [12] Pub,NISTFIPS:Announcingtheadvancedencryption
+Hybridapproach:atoolformultivariatecryptography. standard(AES). FederalInformationProcessingStan-
+EnProceedingsoftheECRYPTWorkshoponToolsfor dardsPublication,197:1–51,2001.
+Cryptanalysis,páginas15–23,2010.
+[13] Sun,YaoyDingkangWang:TheF5algorithminBuch-
+[5] Bettale, Luk, Jean Charles Faugère y Ludovic Perret: berger’sstyle. JournalofSystemsScienceandComple-
+Solvingpolynomialsystemsoverfinitefields:improved xity,24(6):1218–1231,2011.
+analysisofthehybridapproach. EnProceedingsofthe
+CienciasMatemáticas,Vol.33,No.1,Pag.36-45,2019

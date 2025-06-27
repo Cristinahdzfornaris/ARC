@@ -1,0 +1,775 @@
+CienciasMatema´ticas,Vol.33,No.1,Pag.18-27,2019
+Generacio´n de curvas el´ıpticas con buenas
+propiedades criptogra´ficas sobre campos primos
+Generation of elliptic curves with good
+cryptographic properties over prime fields
+Yessica Caridad Castan˜o Sainz1*, Claudia Espinosa Contreras 2, Huber Mart´ınez Rodr´ıguez3
+Resumen En este trabajo se presentan las funcionalidades del paquete implementado en SAGE,
+ECDP Generator,elcualpermitegenerarpara´metrosdedefinicio´ndecurvasel´ıpticasutilizandolosme´todos
+pseudoaleatorioypseudoaleatorioverificableparalasformasdeWeierstrass,EdwardsytorcidadeEdwardsy
+evaluarlaseguridaddediferentesjuegosdepara´metros.Paraelloseanalizaronlosrequisitosdeseguridad
+que una curva el´ıptica debe satisfacer para ser utilizada en sistemas criptogra´ficos teniendo en cuenta los
+requisitosadoptadosporlosdiferentesesta´ndaresylasdiscusionessobrelaestandarizacio´ndenuevascurvas
+el´ıpticas.Seanalizanrequisitoste´cnicosquepropicianimplementacioneseficientesyenelcasodelaformade
+Edwards(torcidadeEdwards)completitudenlasoperacionesdegrupo.Sepresentanalgoritmosparaverificar
+lascondicionesdeldiscriminanteyelnu´merodeclasesqueconstituyenlasrestriccionesma´scomplejas.
+Abstract Inthiswork,thefunctionalitiesofthepackageECDP Generator,whichisimplementedinSAGEare
+presented. ThispackageallowsthegenerationofsecureellipticcurvedomainparametersfortheWeierstrass,
+EdwardsandTwistedEdwardsmodels,usingthepseudo-randomandpseudo-randomverifiablemethods. Italso
+couldbeusedtoevaluatethesecurityofdifferentparametersetstobeusedincryptographicapplications. The
+securityrequirementsthatanellipticcurvemustsatisfytobeusedincryptographicsystemswereanalysedtaking
+intoaccountrequirementsadoptedbydifferentstandardsandrecentdiscussionsaboutthestandardizationof
+newellipticcurves. Technicalrequirementsareanalyzedallowingefficientimplementationsandcompletenessin
+thegroupoperationsinthecaseofEdwards(twistedEdwards)forms. Algorithmsarepresentedtoverifythe
+discriminantandclassnumberconditionswhichconstitutethemostcomplexones.
+PalabrasClave
+para´metrosdedefinicio´ndecurvasel´ıpticas—requisitosdeseguridad—requisitoste´cnicos
+1InstitutodeCriptograf´ıa,UniversidaddelaHabana,LaHabana,Cuba,yessica.castano@matcom.uh.cu
+2EmpresadeTecnolog´ıasparalaDefensa(XETID),cespinosa@xetid.cu
+3DepartamentodeMatema´tica,FacultaddeCienciasInforma´ticas,UniversidaddeCiegodeA´vila,Cuba,huber@unica.cu
+*AutorparaCorrespondencia
+Introduccio´n mente estandarizadas [2, 16, 3, 36, 3, 1, 18, 30, 32], varios
+fueron los grupos de trabajo que publicaron sus puntos de
+Laeleccio´napropiadadelospara´metrosdedominiode
+vista sobre las propiedades que deben satisfacer o no y el
+unacurvael´ıpticaesfundamentalenlaseguridaddeloscrip-
+procesoquedebeserusadoparagenerarlascurvasel´ıpticas.
+tosistemasdecurvasel´ıpticas.Ladesconfianzaenlospara´me-
+En[11,12,34,5,33,24]serecogenlasposiciones2 dedi-
+trosutilizadosdebidoaposiblesmanipulacionesatentacontra
+ferentes grupos de investigacio´n y requisitos de seguridad
+lapopularidaddeestoscriptosistemas.Lasentidadesencar-
+yrendimientoqueunacurvadebesatisfaceryen[7,12,5]
+gadas de proveer seguridad requieren de opciones para la
+nuevaspropuestasdecurvas.
+eleccio´ndecurvasel´ıpticassegurasocontarconunsistema
+LasdiscusionesenelgrupodeInvestigacio´nIETFCrypto
+quelasgenere.
+ForumResearchGroup(CFRG),traslapeticio´ndenuevas
+Traselaumentodeladesconfianza1enlascurvasprevia-
+curvasporelgrupodetrabajoIETFTLS,dieroncomoresul-
+1Segu´n[12],lanecesidaddecambiarlascurvasfueimpulsadaporlos tadoqueen[31]fueranestandarizadaslascurvasCurve25519
+documentosfiltradosdelaNSA,quesugierenlaexistenciadeunapuerta [7]yCurve448[26].
+traseraenelgeneradordebitsaleatoriosdeterministaDualEllipticCurve
+[39],aunqueyaloscripto´grafossospechabanestoporlomenosdesdeel2007 2Aqu´ısehacereferenciaalcriteriodelosdiferentesgruposdeinvesti-
+[21].Estasrevelacionesacelerarondesdeel2014unacontroversiasobresi gacio´nencuantoalarigidezdelprocesodegeneracio´nelconcensoentre
+lascurvasdelNISTdeb´ıansersustituidasporcurvasconunageneracio´n eficienciayseguridad,lasrequisitosdeseguridad,entreotrosaspectosquese
+verificabledeterminista. detallanencadaart´ıculo
+Generacio´ndecurvasel´ıpticasconbuenaspropiedadescriptogra´ficassobrecamposprimos 19
+Segu´nlosana´lisisqueserealizanen[33,24]latenden- sonutilizados.
+cia de los criterios de seleccio´n fue aumentar la eficiencia
+delosca´lculoshaciendoconcesionesquepodr´ıanponeren 2. Requisitos de seguridad
+riesgolaseguridaddelossistemasyconsideranquesedebe
+Acontinuacio´nseresumenlosrequisitosdeseguridadque
+seguirtantoparalageneracio´ndelnu´meroprimocomopara
+debencumplirlospara´metrosdedefinicio´ndecurvasel´ıpticas
+lageneracio´ndelascurvasunprocedimientopseudoaleatorio
+paraserutilizadosdeformaseguraencriptosistemasdecurvas
+verificable.
+el´ıpticas.Estosrequisitossonelresultadodelana´lisisdelos
+La seguridad de una curva el´ıptica para sistemas crip-
+requisitosdeseguridadverificadosalascurvasestandarizadas
+togra´ficossemidemediantelaverificacio´ndelcumplimiento
+ylosrequisitosquesetuvieronencuentaenlasdiscusiones
+derequisitosdeseguridadqueeliminanposiblescurvasde´bi-
+paralaestandarizacio´ndenuevascurvas.
+les.Losrequisitosdeseguridadcontemplanrestriccionespara
+Eleccio´ndelcampoprimobase
+evadirataquesalproblemadellogaritmodiscreto,yataques
+Elnu´meroprimonodebera´tenerformasespeciales.Entre
+relacionadosconlasimplementaciones,entrelosqueseen-
+lospara´metrosquedefinenunacurvael´ıpticaparaserutilizada
+cuentranataquesquesonelresultadodeutilizarinformacio´n
+enaplicacionescriptogra´ficas(pdce),seencuentraelcampo
+adicional(consumodetiempo,radiacioneselectromagne´ticas,
+sobreelcualsera´ consideradalacurva.Lacomunidadcrip-
+consumodeenerg´ıa,etc)paraobtenerinformacio´nsobrela
+togra´ficahaconsideradoprimospseudoaleatoriosyprimosde
+clave,conocidoscomoataquesdecanalcolateral.
+formaespecialqueaceleranlareduccio´nmodular.Segu´n[24]
+Laeleccio´ndelospara´metrosdelacurvatieneunaenorme
+apesardelatendenciaenlaseleccio´ndeprimosenformas
+influenciaenelrendimientodelsistemadecifradoresultante,
+especialesquepermitangarantizarca´lculosma´sra´pidos,es-
+esporelloqueentodaslaseleccionesdecurvassehacencon-
+taeleccio´ntambie´nhacelosprimosma´svulnerablesfrente
+cesionesquepermitanganareneficienciasinponerenriesgo
+a algunos ataques de canal colateral [22, 37, 6, 40, 41, 23].
+la seguridad de los sistemas criptogra´ficos que utilicen las
+Considerarprimosespecialestambie´nrequieredeimplemen-
+curvasel´ıpticasseleccionadas.Estasconcesionesseresumen
+tacionesespec´ıficasparaelprimoqueseeste´ considerando.
+comorequisitoste´cnicos.
+Verlosana´lisisquesehacendeestetemaen[24,34].
+Elobjetivodeestetrabajoespresentarlasfuncionalidadesdel
+Ausenciadesubgrupospequen˜os
+paqueteECDP Generator,elcualposibilitaqueunaentidad
+Sielcofactoresmayorqueunosepuedenrealizarataques
+proveedoradeseguridadpuedagenerarcurvassiempreque
+ensubgrupospequen˜os.Porejemplo:unatacantepuedeesco-
+sea necesario segu´n los escenarios que se deseen proteger.
+gerunpuntodemenorordenenelprotocoloDiffie-Hellman
+Adema´s pueden ser an˜adidas restricciones de seguridad en
+comosuclavepu´blicayobtenerinformacio´nsobrelaclave
+casodequeseencuentrennuevosgruposdecurvasde´biles.
+privada de otros, ver [19] y seccio´n Twist security en [11].
+Evitarqueseaefectivoesteataquepuederequerirunchequeo
+1. Modelos de curvas el´ıpticas adicionalounaoperacio´ndemultiplicacio´nadicional.
+Serequierequeelcofactorh=1paralascurvasenforma
+Sehanpropuestovariasrepresentacionesalternativasde
+deWeierstrass.
+curvasel´ıpticas,ver[9].
+LaspropuestasdecurvasdeEdwards(torcidadeEdwards)
+Sea E/F con p>3 un campo primo grande, hasta la
+p requierenutilizaruncofactormayorqueuno.Luegosede-
+fechahay esencialmentedos modelosque sonlos quema´s
+bera´verificarparaestasformasdecurvasquetengancofactor
+sehanpropuestoparaserutilizados:elmodelodeWeiers-
+cuatro.
+trass reducido: EW :y2 =x3+ax+b y el modelo Torcida
+a,b Seguridadfrenteaataquesporisomorfismos
+de Edwards: E a E ,d d :ax2+y2 =1+dx2y2, [8]. El modelo de Lacurvael´ıpticaE debesertalque#E(F p )(cid:54)=podefor-
+Montgomery:EM :By2=x3+Ax2+x,[35]tambie´nhasido ma equivalente no debe ser ano´mala. Una curva el´ıptica E
+A,B
+consideradoperosehadejadoaunladodespue´sdelaintro- definidasobreunacampoprimoF sediceano´maladecam-
+p
+duccio´ndelmodeloTorcidadeEdwards.En[8]sedemuestra poprimocuando#E(F )= p.EnestecasoelgrupoE(F )
+p p
+que el conjunto de las curvas de Montgomery sobre k, con es c´ıclico ya que tiene orden primo, por lo tanto E(F ) es
+p
+kuncampofinitodecaracter´ısticadiferentede2,esequivi- isomorfoalgrupoaditivoF+delosenterosmo´dulo pynos
+p
+valentealconjuntodelascurvastorcidasdeEdwardssobre encontramosenpresenciadeunatransferenciaaditiva.Luego
+k.Luegoestacorrespondenciapermiteutilizarlosbeneficios elProblemadelLogaritmoDiscretodeCurvasEl´ıpticas(PLD-
+deambasrepresentacionesendependenciadelentornodonde CE)puedeserresueltoeficientementeporloqueestascurvas
+seautilizadalacurva. el´ıpticasnodebenserutilizadasenprotocoloscriptogra´ficos.
+Enlasdiscusionessobrenuevascurvasparaserestanda- MedianteelconteodelospuntosenE(F )esfa´cildeterminar
+p
+rizadas el modelo de curva a utilizar ha sido ampliamente siunacurvael´ıpticaE sobreuncampoprimoF esano´mala
+p
+discutido.Lasdiscusionesen[33,24,12]evidencianquees (comprobandosi#E(F )=p).
+p
+importantecontarconcurvasenformadeEdwardsyenforma La curva el´ıptica E debera´ ser resistente ante los ata-
+deWeierstrassyaquecadamodelopresentacaracter´ısticas quesdeencrustamientoporemparejamientosdeWeiloTate.
+queloshacenapropiadosdependiendodelescenariodonde Unatransferenciamultiplicativaseaplicacuandon=#(cid:104)P(cid:105)
+20 Generacio´ndecurvasel´ıpticasconbuenaspropiedadescriptogra´ficassobrecamposprimos
+divide a pk−1, las cotas para k var´ıan de un esta´ndar a Comoconclusio´nsedebecontarconcurvasqueverifiquen
+otro,ver[4,15,17,32,11].Paraevitartransferenciasmul- laseguridaddelacurvatorcidacuadra´ticaycurvasqueno.
+tiplicativas se debera´ tener:(n−1)/(cid:96) < 100, donde (cid:96) = Las mismas debera´n ser usadas en correspondencia con el
+m´ın{k|ndividea pk−1} o de forma equivalente el orden escenario,verelana´lisissobrelosescenariosquesehaceen
+multiplicativode p mo´dn. [34].
+Restricciones sobre el discriminante y el nu´mero de Hagamosunana´lisisdelosrequisitosquesehanvenido
+clases discutiendoparalacurvaoriginal,ahoraaplicadosalacurva
+La curva el´ıptica E debera´ tener un nu´mero de clases torcidacuadra´tica.
+grande.Exigiremosaligualqueparaelesta´ndarBrainpool Lacurvatorcidacuadra´ticaE˜ deunacurvaenformadeEd-
+quesea>10000000ydebera´ tener|D |>2100. wardsEEd :x2+y2=1+dx2y2 odeunacurvaenformade
+K
+WeierstrassE :y2=x3+ax+bdebera´ tener#E(F )=n(cid:48)h(cid:48)
+Apesardequenohayataquesconocidospu´blicamente p
+conn(cid:48)>2160unnu´meroprimoyelm´ınimovalorparaelco-
+alPLDCEqueexploteunnu´merodeclasespequen˜o,enel
+factorh(cid:48);paraevitarataquesalPLDCEyataquesensubgrupos
+esta´ndardecurvasBrainpool[32]serequierequeelnu´mero
+pequen˜os.EnelcasodelascurvasenformadeWeierstrass
+declasesseamayorque10000000.Afirmanqueelart´ıculo
+h(cid:48)=1yparalascurvasenformadeEdwardsh(cid:48)=4cuando
+[27]puedeservistocomounargumentoparalacondicio´ndel
+p≡3 mo´d4yh(cid:48)=8cuando p≡1 mo´d4locualsesigue
+nu´merodeclases.Encasodeexistirunaelevacio´ndelacurva
+el´ıpticaE aunacurvaE(cid:48)talqueEnd(E)=End(E(cid:48))sobreel del hecho de que las curvas en forma de Edwards siempre
+tienenunpuntodeordencuatroydeque#E(F )+#E˜(F )=
+camponume´ricoL,elnu´merodeclasesconstituyeunacota p p
+inferiorparaelgradodelaextensio´nL/Q.Luegounataque 2p+2. Se debera´ verificar que no sea ano´mala y la seguri-
+deltipoCa´lculode´Indicesnoser´ıaviable. dadfrenteaunataqueporemparejamientosdeWeilyTate.
+Enelcasodelacondicio´ndeldiscriminanteyelnu´merode
+EnSafeCurves[11]serequiereque|D |sea>2100.Al
+K
+clasesnosetendra´ queverificarnuevamenteyaquelacurva
+igualquelarestriccio´ndeBrainpoolnosebasaenlaexistencia
+ylatorcidatienenelmismodiscriminantedemultiplicacio´n
+deunataquepra´cticosinoenquesicumplenestasrestriccio-
+compleja.
+nes pueden ser ma´s dif´ıciles de romper. Segu´n SafeCurves
+siseasumeciertalahipo´tesisgeneralizadadeRiemanneste
+requisito es ma´s fuerte que la restriccio´n sobre el nu´mero 3. Requisitos te´cnicos
+de clases que impone Brainpool. No obstante, debera´n ser
+A continuacio´n se presentan requisitos que pueden ser
+verificadasambasrestricciones.
+verificadosalospara´metrosdedefinicio´ndecurvasel´ıpticas
+Seguridaddelacurvatorcidacuadra´tica
+conelobjetivodeacelerarlasimplementacionessinponeren
+Enlasdiscusionesrecientessobrelaestandarizacio´nde
+riesgolaseguridaddeloscriptosistemas.
+nuevascurvassehaan˜adidocomorequisitolaseguridadde
+lacurvatorcidacuadra´tica,verseccio´n“Twistsecurity”en p≡3 mo´d4.Esterequisitopermiteunaformadecom-
+[11].Estaesunadelasrestriccionesma´scontroversialesya presio´ndepuntoseficiente:Unme´todoparalatrans-
+quehayquienesconsideranqueverificaresterequisitopuede misio´n de un punto P=(x,y) de la curva, es trans-
+llevaraataquesensubgruposdecurvasespeciales,verpor mitir solo la coordenada x y los bits menos signifi-
+ejemplo[20,34]. cativos de la coordenada y. Usando la ecuacio´n de
+Conelobjetivodeevitarataquesdecurvasnova´lidas,la la curva y el hecho de que si p≡3 mo´d4 entonces
+nocio´ndeseguridaddelacurvatorcidacuadra´ticafueintrodu- (y2) (p+1)/4 =y(p−1)/2·y mo´dp,queesobienyo−y
+cidaen[7]comome´todoparaevitarchequeosdepertenecia porelpequen˜oteoremadeFermat,elvalordeypuede
+depara´metrosaunacurva,enelcasoespecialenquesetra-
+sercalculadodeformaeficiente.
+bajasoloconlacoordenadax,correspondientealmodelode
+Montgomery,EM .EnelcasodelascurvasenformadeMont- LacurvaenformadeWeierstrassdebera´ serisomorfa
+A,B
+gomerylau´nicaposibilidadparaunataquedecurvanova´lida aunacurvacona≡−3 mo´dp.En[14]sedemuestra;
+eslacurvatorcidacuadra´tica.Siseutilizancurvasenforma queesposibleobtenerelvalordeseadoa≡−3 mo´dp
+deWeierstrass,estenoesunargumentova´lidoparaimponer paraunacurvael´ıpticaisogeniayrealizarlosca´lculos
+laseguridaddelacurvatorcidacuadra´ticayaquesiemprese enestacurvaenlugardeenlaoriginal.Deestaformase
+debenrealizarloschequeostrivialesparaestarsegurosdeque puedeutilizarlasventajasdeeficienciaenlaaritme´tica
+lospuntostransmitidosseencuentranenlacurvacorrecta.No quebrindaestaseleccio´npartiendodecurvasgenera-
+obstanteSafeCurvesdemandaquelacurvatorcidacuadra´ti- dasdeformapseudoaleatoria.Brainpoolutilizaestos
+cacumplaconlosrequisitosquegarantizanlaseguridaddel resultadosenelprocesodegeneracio´n.
+PLDCEparatodaslascurvas.Afirmanquelaseguridaddela Esterequisitoessatisfechoporunacurvatorcidacuadra´ti-
+curvatorcidacuadra´ticaesimportanteenprotocolosdecurvas ca E de la curva dada con un cuadrado en F . Si
+1 p
+el´ıpticasquehacenusotantodelacurvael´ıpticaoriginalcomo −3≡au4 mo´dp es soluble, entonces E y E :y2 =
+1
+desutorcidacuadra´tica,hacenreferenciaalosprotocolosen x3+a·u4·x+u6·b=x3−3x+u6b mo´dp son F -
+p
+[28,29,13]. isomorfasapartirdelisomorfismoφ :=(u2·x,u3·y).
+Generacio´ndecurvasel´ıpticasconbuenaspropiedadescriptogra´ficassobrecamposprimos 21
+Enparticular#E(F )=#E (F )y,au´nma´simportante ComoconsecuenciadelteoremadeHasse,paraelca-
+p 1 p
+EyE tienenlamismaestructurayporlotantoofrecen sodeWeierstrass,dondeseconsidera#(cid:104)P(cid:105)=#E(F )
+1 p
+elmismoniveldeseguridad.Setienequeproximada- primo,elcardinaldelsubgrupogeneradoporPpuede
+mente la mitad de las clases de isomorfismos de las sermayorquelacara´cter´ıstica pdelcampofinitoF ,
+p
+curvas el´ıpticas sobre F con p≡3 mo´d4 contiene enalgunoscasoslalongitudenbitsde#(cid:104)P(cid:105)=#E(F )
+p p
+unacurvacona≡−3 mo´dp. puedeexcederlalongitudenbitsde penunbit.
+EnelcasodelasformasdeEdwardsytorcidadeEd-
+ElcoeficientebenlaformadeWeierstrassnodebera´ser
+wardscomom´ınimosedebera´tener#(cid:104)P(cid:105)=#E(F )/4,
+un cuadrado mo´dulo p. Este requisito se incluye en p
+dedondesesigueutilizandoelteoremadeHasseque
+Brainpool[32]conelobjetivodeevitarambigu¨edades
+#(cid:104)P(cid:105)< pyportantolalongitudenbitsde#(cid:104)P(cid:105)siem-
+con la representacio´n del punto al infinito que se ha-
+presera´menorquelalongitudenbitsde p.Luegoeste
+ceenalgunasimplementaciones,adema´sargumentan
+requisitonoesnecesarioparaestasformas.
+que este requisito se puede ver como un requisito de
+seguridadanteelataquequesepresentaen[25].
+Debera´nserverificadoslosrequisitoste´cnicoslistadosenel
+AsumirqueE esunacurvael´ıpticaqueesbirracional- cuadro 1:
+menteequivalenteaalgunacurvatorcidadeEdwards
+E y hacer las adiciones de puntos en la curva E
+a,d a,d 4. Algoritmos para la generacio´n de
+puedeaumentarsignificativamentelaeficiencia.Seha
+para´metros
+considerado elegir curvas de Edwards representadas
+por la ecuacio´n E :±x2+y2 =1+dx2y2 con el
+±1,d Laaceptacio´ndelospara´metrosdedefinicio´ndecurvas
+findeganareneficienciaalfijarelvalordeaparala
+el´ıpticasdependeengranmedidadelprocedimientoparala
+forma torcida de Edwards en 1 o´ −1 cuando p≡3
+generacio´n.Comosemenciono´ enlaintroduccio´nesteproce-
+mo´d4o´ p≡1 mo´d4respectivamente.Enelrequisito
+sodebesertransparenteypermitirserverificadoporquienes
+te´cnico 1 se ha asumido que p≡3 mo´d4 luego en
+usara´nlascurvasgeneradas.Unprocedimientopseudoalea-
+nuestrocasoseestar´ıautilizandolascurvasdeEdwards
+torioverificablequepartadesemillasbienjustificadas(que
+EEd:x2+y2=1+dx2y2.LaformatorcidadeEdwards
+1,d puedensercifrasdeconsatntesmatema´ticascomunescomo
+abarca mayor cantidad de curvas para el caso p≡1
+π ye)permiteatercerasentidadesverificarelorigendelas
+mo´d4 al hacer cada curva en forma de Montgomery
+curvaspropuestasydescartarposiblesmanipulaciones.
+birracionalmenteequivalentesobreF aunacurvaen
+p Porotraparte,unalgoritmopseudoaleatorioevitalaelec-
+forma torcida de Edwards. Cuando p≡3 mo´d4 no
+cio´nyjustificacio´ndenuevassemillasydeigualformatiene
+es necesario ya que las curvas en forma de Edwards
+comosalidacurvasel´ıpticasquecumplenconlosrequisitos
+cubrentodaslascurvasenformadeMontgomery.La
+deseguridadyquepuedenserutilizadassintemorasermani-
+tablaenlapa´gina14de[8]resumeloscostosparala
+puladasporlapropiaentidadquelasgenera.
+leydelgrupoenambasformas.Delatablasesigueque
+ElpaqueteECDP Generatorimplementalosalgoritmospseu-
+laformatorcidadeEdwardspierde1Dencadasistema
+doaleatoriosverificablesypseudoaleatoriospropuestosyana-
+decoordenadasyparaambasoperacionesdegrupo.
+lizadosen[42].
+Cuandoseconsideraunme´todopseudoaleatorioopseu-
+doaleatorioverificableparagenerarloscoeficientesde
+lascurvas,estosgeneralmenteresultangrandes.Este 5. Algoritmos para verificar las
+hechounidoaque p≡3 mo´d4justificalaeleccio´nde condiciones del discriminante y del
+generarpara´metrosparalaformadeEdwards.
+nu´mero de clases
+En[10](dondea=1)yluegoen[8],fueprobadoque
+ElanillodeendomorfismosdeE,End(E),esisomorfoa
+sid noesuncuadradoenk,conkuncampodecarac- √
+unordenenuncampocuadra´ticoimaginarioK=Q( −D)
+ter´ıstica impar, y a es un cuadrado en k entonces las
+conD∈Nlibredecuadrados.
+fo´rmulasdelasoperacionesdegrupoparalascurvasen
+ElcampodeendomorfismosdelacurvaE eselcampoK
+formasdeEdwardsytorcidadeEdwardssoncompletas.
+generadoporsuendomorfimodeFrobeniusπ .Comoπ es
+LuegoparalaformatorcidadeEdwardselcoeficiente p p
+adebera´ seruncuadradoenF yd nodebera´ serun unara´ızdelaecuacio´nx2−tx+p,K esuncampocuadra´tico
+cuadradoenF
+p
+paragarantizarl p acompletituddelaley i
+0
+m
+.E
+ag
+s
+i
+t
+n
+e
+a
+e
+r
+s
+io
+e
+.
+l
+E
+d
+l
+i
+d
+sc
+is
+r
+c
+im
+rim
+in
+i
+a
+n
+n
+a
+t
+n
+e
+te
+de
+d
+l
+e
+o
+π
+rd
+p
+e
+e
+n
+se
+O
+lval
+=
+or
+Z
+D
+[π
+πp
+]
+=
+⊂
+t2
+K
+−
+.
+4p<
+delgrupo.EnelcasodelascurvasenformadeEdwards πp p
+EldiscriminantedeK eseldiscriminante(fundamental)
+(a=1)ysoloseaplicaalcoeficiented.
+D desuordenmaximalO .Esta´estrechamenterelacionado
+K K
+#E(F p )<pparalaformadeWeierstrass.Estarestric- con la parte libre de cuadrados de D π :D π =D K f π 2 p para
+cio´nseincluyeenBrainpoolparaevitarsobrecostoen f ∈Z,llamadoconductordelordenO ,yD oD /4es
+πp πp K K
+las implementaciones. Ver requisito te´cnico 5 de [1]. unenterolibredecuadrados.
+22 Generacio´ndecurvasel´ıpticasconbuenaspropiedadescriptogra´ficassobrecamposprimos
+Requisitos Descripcio´n
+1. p≡3 mo´d4
+2.Elcoeficienteaenlaecuacio´ndelacurvaparalaformadeWeiers- Lacurvadebera´ serisomorfaaunacurvacona≡
+trassdebera´ hacerlaecuacio´n−3≡au4 mo´dpsoluble. −3 mo´dpenelcasodelaformadeWeierstrass.
+3. El coeficiente b para la forma de Weierstrass no debera´ ser un Evitaambigu¨edadesconlarepresentacio´ndelpun-
+cuadradomo´dulo p. toalinfinitoquesehaceenalgunasimplementacio-
+nes.Puedeversecomounrequisitodeseguridad.
+4. En la forma de Edwards: El coeficiente d en la ecuacio´n de la Garantizacompletituddelaleydelgrupo.
+curvaEEd :x2+y2=1+dx2y2nodebera´ seruncuadradoenF .
+p
+5.EnlaformatorcidadeEdwards:ElcoeficienteaenEEd :ax2+ Garantizacompletituddelaleydelgrupo.
+y2=1+dx2y2 debera´ seruncuadradoenF yelcoeficiented no
+p
+debera´ seruncuadradoenF .
+p
+6.#E(F )<pparalaformadeWeierstrass. Evitasobrecostoenlasimplementaciones.
+p
+Cuadro1.RequisitosTe´cnicos.
+SepuedeescribirEnd(E)=Z+c O dondeZsonlos Paraverificarlacondicio´ndelnu´merodeclasesesnecesario
+E K
+enterosracionales,O eselanillodeenterosdekyc denota comprobar que el nu´mero de clases de O es mayor que
+K E K
+elconductor[O :End(E)]. 10000000.
+K
+El discriminante de End(E) es c2 ·D , donde D es Enlapra´cticadebidoalelevadocostocomputacionaldel
+E K K
+eldiscriminantedeO oequivalentemente:D =−D si ca´lculodelnu´merodeclasesparadiscriminantesgrandes,se
+K K
+−D≡1 mo´d4yD =−4D si−D≡2 mo´d4o´−D≡3 usalabiyeccio´nconelgrupodeclasesdeformascuadra´ticas
+K
+mo´d4 binariascondiscriminanteD K <0paraacotarelnu´merode
+Sea #E(F )= p+1+t, teniendo en cuenta que [O : clases en lugar de calcularlo. Esta idea fue utilizada en el
+p K
+Z[π ]]=[O :End(E)]·[End(E):Z[π ]]yD =t2−4·p, procesodegeneracio´ndelascurvasdeBrainpool.Basa´ndo-
+p K p π
+entoncesDpuedesercalculadocomolapartelibredecuadra- nos en esto, solo tenemos que hallar una forma cuadra´tica
+dosde reducidadediscriminantefundamentalD K ;yasetendr´ıaga-
+rantizadoqueseaprimitivayqueseadefinidapositiva,pues
+4·p−t2=−c2
+E
+·[End(E):Z(π
+p
+)]2·D
+K
+, D
+K
+=b2−4ac.Estosehacedemaneramuysencilla:sebusca
+unbtalqueq:=b2−D ≡0 mo´d4,luegosebuscanayc
+K
+donde π
+p
+denota el endomorfismo de Frobenius de E. Si talesqueac=q/4ylaformacuadra´ticaax2+bxy+cy2sea
+v=ma´x{a|a2dividea4·p−t2}entoncesD=(4·p−t2)/
+reducida.
+v2.
+Pudieraocurrirquelaprimeraformacuadra´ticaqueseconsi-
+derenogenereunsubgrupodeordenmayorque10000000,
+Deaqu´ısepuedeobtenerelvalordeldiscriminanteque au´n en el caso en que ciertamente el valor del nu´mero de
+permiteverificarlacondicio´nsobreeldiscriminanteimpuesta clasessilocumpla.Elvalordelacantidaddeformasaprobar
+enSafeCurves. puedesercambiadoendependenciadelacomplejidadquele
+agreguenalprogramaelordendelosdiscriminantes.
+Algoritmoparaverificarlacondicio´ndeldiscriminante Tenerencuentaquecuandoelgruponoesc´ıclicoesteme´todo
+nuncavaaretornarelvalordelnu´merodeclases.
+Entrada: Elprimo pquedefineelcampofinitoF yelcar-
+p Luegoencasodequeconlasformasquesepruebenoseobten-
+dinaldelcampon=#E(F ).
+p gaunordendelgrupoc´ıclicogeneradoporellas>10000000
+Salida: TRUE:sisecumplelarestriccio´n,FALSE:encaso
+nosepuedeconcluirdeformaabsolutaqueh <10000000.
+K
+dequefalle.
+Loqueseconcluyeesqueseincumplelacondicio´ndelnu´me-
+1: Haceru=n−p−1. rodeclasespornoencontrarunaformacuadra´ticareducida
+2: Hacerd←lapartelibredecuadradosenlafactorizacio´n
+cuyoordenfueramayorque10000000.
+de4p−u2.
+3: siMod(−d,4)=1entonces Algoritmoparaverificarlacondicio´ndelnu´merode
+4: D K =−d clases
+5: sino,si Mod(-d,4)=2orMod(-d,4)=3entonces
+6: D K =−4∗d Entrada: Elprimo pquedefineelcampofinitoF p ,elcardi-
+7: finsi naldelcampon=#E(F p ),elnu´merodeformascuadra´ti-
+8: si|D K |<2100+1entonces cas reducidas a chequear CotFormas y la cota para el
+9: retornarFALSEyparar. nu´merodeclasesCot Class Number.
+10: finsi Salida: TRUE:sisecumplelacondicio´n,FALSE:encaso
+11: devolver TRUE dequefalle.
+Generacio´ndecurvasel´ıpticasconbuenaspropiedadescriptogra´ficassobrecamposprimos 23
+1: Haceru=n−p−1.
+2: Hacerd←lapartelibredecuadradosenlafactorizacio´n Prime_Pseudorandom(L, filename)
+de4p−u2.
+3: siMod(−d,4)=1entonces ECDP_security_Verification(p, form, parameters,
+4: D K =−d security_requirements, filename)
+5: sino,si Mod(-d,4)=2orMod(-d,4)=3entonces
+6: D K =−4∗d ECDP_technical_Verification(p, form, parameters,
+7: finsi technical_requirements, filename)
+8: paraNumFormas=0hastaCotFormashacer
+9: Encontrarunaformacuadra´tica f (cid:54)=Idediscriminante ECDP_Point_Verification(p, form, parameters,
+D (dondeIeselelementoidentidad) P, filename)
+K
+10: NumFormas←NumFormas+1
+11: cardf ←0 ECDP_Generation(p, form, L, filename,
+12: t← f requirements, seedcurva=0)
+13: mientrast(cid:54)=Ihacer
+14: Hacert=t•f. Funcio´n:Prime Pseudorandom Verif(L,seedprime,fi-
+15: cardf ←cardf+1 lename):
+16: sicardf >Cot Class Numberentonces Esta funcio´n implementa el algoritmo pseudoaleatorio
+17: retornarTRUEyparar. verificableparalageneracio´ndenu´merosprimospropuesto
+18: finsi en[42],donde:
+19: finmientras L:longitudenbitsparalosdiferentesnivelesdeseguridad.
+20: finpara seedprime:semillaparalageneracio´ndelnu´meroprimoen
+21: devolver FALSE formahexadecimal.
+filename:especificaelarchivodondesera´guardadoelnu´mero
+primo.
+6. Codificacio´n en SAGE
+Funcio´n:Prime Pseudorandom(L,filename)
+Losalgoritmosfueroncodificadosusandoelsoftwarema- Esta funcio´n implementa el algoritmo pseudoaleatorio pro-
+tema´ticodeco´digoabiertoSAGEdandocomoresultadoel puestoen[42]paralageneracio´ndenu´merosprimos,donde
+paqueteECDP Generation. lospara´metrosdeentradaLyfilenamesedefinencomoenel
+Sedebeinstalarlaversio´n7.4deSAGEenadelanteyaqueen algoritmoanterior.
+estaseincorporalaversio´n2.8.0dePARI/GPqueincluyeel Funcio´nECDP security Verification(p,form,
+algoritmodeconteodepuntosSEAconposibilidaddeutilizar parameters,security requirements,filename)
+estrategiasdeabortotemprano(funcio´nellsea.cenPARI/GP) Estafuncio´npuedeserutilizadaparachequearlosrequi-
+. Se debera´n an˜adir los polinomios modulares del paquete sitosdeseguridaddeunacurvael´ıpticadadaE enformade
+seadata-big.tarparaelconteodelospuntosdelascurvasde Weierstrass,EdwardsotorcidadeEdwards.Sedebeteneren
+512bits.Elalgoritmopseudoaleatorioverificablenecesitade cuentaquelacurvaEEd:x2+y2=1+dx2y2enformadeEd-
+1,d
+lainclusio´ndelafuncio´ndehashSHA3yaqueSAGEnola wardseslacurvaEEd :ax2+y2=1+dx2y2conpara´metro
+tieneincorporada.Sepuededescargarlaimplementacio´nque T,a,d
+a=1.Lospara´metrosdeentradasedefinendelasiguiente
+hicierondeestasfuncionesBernsteinyLangedelapa´gina
+forma:
+https://bada55.cr.yp.toodeladireccio´nhttps: p:primoquedefineelcampobaseF .
+p
+//zenodo.org/record/34081#.WJOTTc-YphG.
+form:especificalaformadelacurvael´ıpticaquepuede
+Seconfecciono´ elpaqueteECDP Generationconlosal-
+ser:
+goritmos propuestos en [42] y para trabajar con las curvas
+deEdwards(torcidadeEdwards)seutilizaronlasclasesde ’Weierstrass’, ’Edwards’ o ’Twisted_Edwards’
+Python/SAGEpropuestasen[38].
+Para ser instalado se debe colocar el paquete en la carpeta parameters:especificalatupla(a,b)delospara´metros
+upstream,yseinstalautilizandounadelassiguientesl´ıneas quedefinenlaecuacio´nreducidadeWeierstrassEW o(a,d)
+a,b
+decomando: paraelcasodelaecuacio´nenformatorcidadeEdwardsETE
+a,d
+.ParaelcasodeunacurvaenformadeEdwardslatuplaser´ıa
+sage -f ECDP_Generator.spkg
+(1,d).
+security requirements:vectorcompuestoporlasrestric-
+sage -i ECDP_Generator.spkg
+cionesdeseguridadquesera´nverificadasalacurvael´ıpticay
+Seimplementaronvariasfuncionesyseofrecenparalainter- quesedebeconformarapartirdelasentradas:
+accio´nconelpaquetelassiguientesfuncionalidades:
+(’Cofactor’, number)
+Prime_Pseudorandom_Verif(L, seedprime, file(n’aCmlea)ss_Number’, CotFormas, CotClassNumber)
+24 Generacio´ndecurvasel´ıpticasconbuenaspropiedadescriptogra´ficassobrecamposprimos
+(’Weil_Tate’, cofactor) filename:especificaelarchivodondeseimprimira´nlos
+(’Discriminant’, cota) resultadosdelafuncio´n.
+(’Twist_Secure’, twist_security_ Funcio´nECDP Generation(p,form,L,filename,
+requirements) requirements,seedcurva=0)
+Esta funcio´n implementa los algoritmos propuestos en
+donde: [42] para las formas de Weierstrass y Edwards (torcida de
+(’Cofactor’,number):especificaquesequiereverificar Edwards).Permitegenerarcurvasel´ıpticasconcurvatorcida
+queelcofactortomeelvalornumber. cuadra´ticaseguraodeformaequivalentequecumpleconlos
+(’Class Number’, CotFormas, CotClassNumber): es- mismosrequisitosdeseguridadquelacurvaoriginal.Adema´s
+pecificaquesequiereverificarqueelnu´merodeclasesdel permitegenerarcurvasel´ıpticasparalascualeslaseguridadde
+anillodelosendomorfismosdelacurvael´ıpticaE esmayor lacurvatorcidacuadra´ticanoesunrequisito.Lospara´metros
+que el valor especificado en CotClassNumber. CotFormas, p,Lyformsedefinencomosehahechoanteriormentey:
+especificaelma´ximonu´merodeformascuadra´ticasalasque filename:especificaelarchivodondesera´nguardadoslos
+selescomprobara´ elorden,verseccio´n 5. pdceydatosdevalidacio´n.
+(’Weil Tate’,cofactor):especificaquesequiereverificar requirements: Vector que especifica los requisitos que
+lacondicio´ndeWeilyTate.Elvalor,cofactor,indicaelvalor debera´ncomprobarlospdcegenerados.Estosrequisitosco-
+htalque#E(F p )=n·h. rresponden a los pasos (9, 10 12, 13, 14, 15) y (16, 19, 20,
+(’Discriminant’,cota):especificaquesequiereverificar 21,22)delosalgoritmospseudoaleatoriosverificablespro-
+que el discriminante con multiplicacio´n compleja D sea puestosparalasformasdeWeierstrassyEdwards(torcidade
+K
+mayorqueelvalorespecificadoencota. Edwards)respectivamente,en[42]yalospasos(8,9,11,12,
+(’Twist Secure’,twist security requirements):especi- 13,14)y(14,17,18,19,20)delosalgoritmospseudoalea-
+fica que se quiere verificar la seguridad de la curva torcida toriospropuestosparalasformasdeWeierstrassyEdwards
+cuadra´tica,donde: (torcidadeEdwards)respectivamentedeigualformaen[42].
+twist security requirements: especifica los requisitos Sepuedeconformarapartirdelasentradas:
+deseguridadquesera´nverificadosalacurvatorcidacuadra´ti-
+caconformadoapartirdelasentradas (’Cofactor’, number)
+(’Class_Number’, CotFormas, CotClassNumber)
+(’Cofactor’, number) (’Weil_Tate’, cofactor)
+(’Class_Number’, CotFormas, CotClassNumber)(’Discriminant’, cota)
+(’Weil_Tate’, cofactor) (’Twist_Secure’, twist_security_requirements)
+(’Discriminant’, cota)
+segu´nseespecificaronparalafuncio´n:
+comoseespecificaronanteriormente. Funcio´nECDP security Verification(p,form,parameters,
+filename:especificaelarchivodondeseguardanlosre- security requirements,filename) ydelaentrada
+sultados.
+Funcio´nECDP technical Verification(p,form, ’req6’
+parameters,technical requirements,filename)
+Estafuncio´npuedeserutilizadaparachequearlosrequisi- queverificaelrequisitote´cnico6delcuadro 1.
+toste´cnicosdelcuadro 1aunacurvael´ıpticadadaEenforma seedcurva:especificaunasemillaparaelprocedimiento
+deWeierstrass,EdwardsotorcidadeEdwards.Lospara´me- pseudoaleatorio verificable. Por defecto toma el valor cero
+tros p, form y parameters se definen como anteriormente paraelcasopseudoaleatorio.
+y: Las siguientes composiciones del vector requirements
+technical requirements: vector compuesto por las res- verificanlospasos(9,1012,13,14,15)y(8,9,11,12,13,14)
+triccioneste´cnicasquesera´nverificadasalacurvael´ıpticay delosme´todospseudoaleatorioverificableypseudoaleatorio
+quesedebeconformarapartirdelasentradas:’req1’,’req2’, paralaformadeWeierstrasspropuestosen[42].
+’req3’,’req4’,’req5’,o’req6’,lascualesespecificanquese
+quiereverificarelrequisitote´cnico1,2,3,4,5o6enelcuadro requirements =[(’Cofactor’, 1), ’req6’,
+1respectivamente. (’Twist_Secure’, [(’Cofactor’, 1)]),
+Funcio´nECDP Point Verification(p,form,parameters, (’Weil_Tate’, 1),(’Twist_Secure’,
+P,filename) [(’Weil_Tate’, 1)]), (’Discriminant’,
+Esta funcio´n permite verificar la pertenencia del punto 2ˆ100), (’Class_Number’, 20, 10000000)]
+especificadoP,apartirdelatupla(xP,yP),compuestaporlas
+coordenadasxeydelpunto,respectivamente.Lospara´metros requirements =[(’Cofactor’, 1), ’req6’,
+p,formyparameterssedefinencomosehahechoparalas (’Weil_Tate’, 1), (’Discriminant’, 2ˆ100),
+funcionesanterioresy (’Class_Number’, 20, 10000000)]
+Generacio´ndecurvasel´ıpticasconbuenaspropiedadescriptogra´ficassobrecamposprimos 25
+Laprimeraopcio´ngeneracurvasconcurvatorcidacuadra´ti- Segeneraronunconjuntodecurvasel´ıpticasquepodra´n
+ca segura y en la segunda opcio´n la seguridad de la curva ser utilizadas en aplicaciones criptogra´ficas. La implemen-
+torcidacuadra´ticanoseconsideracomorequisito. tacio´ndealgoritmosqueexcluyencurvasde´bilesmediante
+Para el caso de las curvas en forma de Edwards (tor- laverificacio´ndelosrequisitosdeseguridad,permitegene-
+cida de Edwards), las siguientes composiciones del vector rarcurvasel´ıpticasconbuenaspropiedadescriptogra´ficasy
+requirementsverificanlospasos(16,19,20,21,22)y(14, contarconlacertezadequelospara´metrosnohansidoma-
+17, 18, 19, 20) de los me´todos pseudoaleatorio verificable nipuladosporterceros.Esteprocedimientopermitegenerar
+ypseudoaleatorioparalaformadeEdwards(torcidadeEd- pdcesiemprequeseconsiderenecesarioyan˜adiromodifi-
+wards)propuestosen[42]. car las restricciones de seguridad segu´n el ambiente donde
+seanutilizadoslospdceylasposiblesaparicionesdenuevos
+requirements =[(’Cofactor’, 4), ataques.
+(’Twist_Secure’, [(’Cofactor’, 4)]),
+(’Weil_Tate’, 4), (’Twist_Secure’, Referencias
+[(’Weil_Tate’, 4)]), (’Discriminant’,
+[1] ECCBrainpool.ECCBrainpoolStandardCurvesand
+2ˆ100),(’Class_Number’, 20, 10000000)]
+CurveGeneration,2005.
+requirements =[(’Cofactor’, 4),
+[2] AccreditedStandardsCommitteeX9.Americannatio-
+(’Weil_Tate’, 4), (’Discriminant’,
+nalstandardX9.63-2001. Publickeycryptographyfor
+2ˆ100), (’Class_Number’, 20, 10000000)]
+thefinancialservicesindustry:keyagreementandkey
+transportusingellipticcurvecryptography,2001.
+Laprimeraopcio´ngeneracurvasconcurvatorcidacuadra´ti-
+ca segura y en la segunda opcio´n la seguridad de la curva [3] Accredited Standards Committee X9.American natio-
+torcidacuadra´ticanoseconsideracomorequisito. nalstandardX9.62-1999. Publickeycryptographyfor
+thefinancialservicesindustry:theellipticcurvedigital
+signaturealgorithm(ECDSA). Technicalreport,1999.
+7. Conclusiones
+[4] ANSIANSI. X9.62:2005:Publickeycryptographyfor
+ElpaqueteECDP Generatorpermitegenerarcurvasel´ıpti-
+thefinancialservicesindustry. Theellipticcurvedigital
+cas,conbuenaspropiedadescriptogra´ficas,porlosme´todos
+signaturealgorithm(ECDSA),2005.
+pseudoaleatorioypseudoaleatorioverificableparalasformas
+deWeierstrass,EdwardsytorcidadeEdwards.Permiteverifi- [5] DiegoF.Aranha,PauloS.L.M.Barreto,C.C.F.Pe-
+carlosrequisitosdeseguridadquesediscutenenesteart´ıculo reira Geovandro, and Jefferson E. Ricardini. A note
+como resultado del ana´lisis de los requisitos exigidos a las onhigh-securitygeneral-purposeellipticcurves. IACR
+curvasestandarizadasyalasnuevaspropuestasdecurvas. CryptologyePrintArchive,2013:647,2013.
+Elana´lisisdelosrequisitosdeseguridadparalascurvas
+[6] Naomi Benger, Joop van de Pol, Nigel P. Smart, and
+candidatasposeeunelevadocostocomputacional.Losrequi-
+YuvalYarom..oohaah...justalittlebit”:Asmallamount
+sitos ma´s costosos son el ana´lisis de la inmunidad frente a
+of side channel can go a long way. In Cryptographic
+ataquesporemparejamientosdeWeilyTateylaverificacio´n
+HardwareandEmbeddedSystems-CHES2014-16th
+delascondicionesdeldiscriminanteyelnu´merodeclases.
+InternationalWorkshop,Busan,SouthKorea,September
+Ambosrequisitosrequierendelafactorizacio´ndenu´meros
+23-26,2014.Proceedings,pages75–92,2014.
+grandes,tareaquesehacebiendif´ıcilconlasimplementacio-
+nesdealgoritmosdefactorizacio´nimplementadosenSAGEy
+[7] DanielJ.Bernstein. Curve25519:Newdiffie-hellman
+enPARI-GP.Otroaspectoimportanteeselconsumodememo-
+speedrecords. InPublicKeyCryptography-PKC2006,
+riaporelprogramaSAGEduranteelprocesodegeneracio´n
+9th International Conference on Theory and Practice
+delascurvas.
+ofPublic-KeyCryptography,NewYork,NY,USA,April
+Lacondicio´ndelaseguridaddelacurvatorcidacuadra´ti-
+24-26,2006,Proceedings,pages207–228,2006.
+ca complejiza el proceso de generacio´n de curvas con bue-
+nas propiedades criptogra´ficas. Segu´n [24] la probabilidad [8] Daniel J. Bernstein, Peter Birkner, Marc Joye, Tanja
+de encontrar una curva el´ıptica segura y con torcida segu- Lange,andChristianePeters. Twistededwardscurves.
+raesta´ acotadainferiormentepor 0,5 ysuperiormentepor InProgressinCryptology-AFRICACRYPT2008,First
+log2p
+InternationalConferenceonCryptologyinAfrica,Ca-
+5 .Estaestimacio´nsignificaqueincluirlaseguridaddela
+log2p sablanca,Morocco,June11-14,2008.Proceedings[8],
+curvatorcidaescostosayaquetodosloschequeosnecesarios
+pages389–405.
+debera´nrealizarseenunnu´merodecurvasel´ıpticascuadra´tico
+enlogaritmode p,locualtieneefectoeneltiempodecorrida [9] DanielJ.BernsteinandTanjaLange. Explicit-formulas
+delosalgoritmosyenlanecesidadderecursosdememoria database. http://hyperelliptic.org/EFD/.
+RAM. Accessed:2017-03-16.
+26 Generacio´ndecurvasel´ıpticasconbuenaspropiedadescriptogra´ficassobrecamposprimos
+[10] Daniel J. Bernstein and Tanja Lange. Faster addition [23] BenoitFeix,Myle`neRoussellet,andAlexandreVene-
+anddoublingonellipticcurves. IACRCryptologyePrint lli. Side-ChannelAnalysisonBlindedRegularScalar
+Archive,2007:286,2007. Multiplications,pages3–20. SpringerInternationalPu-
+blishing,Cham,2014.
+[11] Daniel J. Bernstein and Tanja Lange. Safecurves:
+choosing safe curves for elliptic-curve cryptography. [24] Jean-PierreFlori,Je´roˆmePluˆt,Jean-Rene´Reinhard,and
+http://safecurves.cr.yp.to, 19 January 2014. accedido MartinEkera˚.DiversityandtransparencyforECC.IACR
+23deDiciembrede2016. CryptologyePrintArchive,2015:659,2015.
+[12] JoppeW.Bos,CraigCostello,PatrickLonga,andMi- [25] LouisGoubin. Arefinedpower-analysisattackonellip-
+chaelNaehrig.Selectingellipticcurvesforcryptography: tic curve cryptosystems. In International Workshop
+an efficiency and security analysis. J. Cryptographic onPublicKeyCryptography,pages199–211.Springer,
+Engineering,6(4):259–286,2016. 2003.
+[13] ColinBoyd,PaulMontague,andKhanhNguyen. Ellip- [26] MikeHamburg. Ed448-goldilocks,anewellipticcurve.
+tic curve based password authenticated key exchange IACRCryptologyePrintArchive,2015:625,2015.
+protocols. InInformationSecurityandPrivacy,pages
+[27] Ming-Deh A. Huang and Wayne Raskind. Signature
+487–501.Springer,2001.
+calculusanddiscretelogarithmproblems.InAlgorithmic
+[14] ’EricBrierandMarcJoye. FastPointMultiplicationon Number Theory, 7th International Symposium, ANTS-
+EllipticCurvesThroughIsogenies. InM.Fossorier,T. VII, Berlin, Germany, July 23-28, 2006, Proceedings,
+Høholdt,andA.Poli,Eds.,AppliedAlgebra,Algebraic pages558–572,2006.
+Algorithms and Error-Correcting Codes, vol. 2643 of
+LectureNotesinComputerScience,pp.43-50,Springer- [28] Burton S. Kaliski Jr. A pseudo-random bit generator
+Verlag,2003. basedonellipticlogarithms. InAdvancesinCryptology
+-CRYPTO’86,SantaBarbara,California,USA,1986,
+[15] CerticomResearch. SEC1:Ellipticcurvecryptography, Proceedings,volume263ofLectureNotesinComputer
+version1.0,2000. Science,pages84–103.Springer,1986.
+[16] CerticomResearch.SEC2:Recommendedellipticcurve [29] Burton Stephen Kaliski. Elliptic curves and crypto-
+domainparameters,version1.0,2000. graphy:Apseudorandombitgeneratorandothertools.
+PhDthesis,MassachusettsInstituteofTechnology,1988.
+[17] CerticomResearch. SEC1:Ellipticcurvecryptography,
+version2.0,2009. [30] Cameron F. Kerry, Acting Secretary, and Charles Ro-
+mineDirector. Fipspub186-4federalinformationpro-
+[18] Certicom Research. Standards for Efficient Crypto-
+cessingstandardspublicationdigitalsignaturestandard
+graphy2(SEC2):RecommendedEllipticCurveDomain
+(dss),2013.
+Parameters.Technicalreport,CerticomCorp,2010.
+[31] A.Langley,M.Hamburg,andS.Turner. EllipticCurves
+[19] Chae Hoon Lim and Pil Joong Lee. A key recovery
+forSecurity. RFC7748,RFCEditor,January2016.
+attackondiscretelogbasedschemesusingaprimeorder
+subgroup. InBurtonS.KaliskiJr.,editor,Advancesin
+[32] ManfredLochterandJohannesMerkle. EllipticCurve
+cryptologycrypto97,17thannualinternationalcrypto-
+Cryptography (CCE) Brainpool Standard Curves and
+logyconference,santabarbara,california,usa.,volume
+CurveGeneration. RFC5639(Informational),2010.
+1294ofLectureNotesinComputerScience,pages379–
+392.SpringerBerlin,Heidelberg,1997. [33] Manfred Lochter, Johannes Merkle, and Jo¨ne-Marc
+Schmidt. Requirements for Elliptic Curves for High-
+[20] CraigCostello,PatrickLonga,andMichaelNaehrig. A
+AssuranceApplications. TorstenSchu¨tze,2015.
+briefdiscussiononselectingnewellipticcurves. Tech-
+nicalreport,MicrosoftResearch,2014. [34] ManfredLochter,JohannesMerkle,Jo¨rn-MarcSchmidt,
+andTorstenSchu¨tze. Requirementsforstandardellip-
+[21] D. Shumow and N. Ferguson. On the possibility
+ticcurves. IACRCryptologyePrintArchive,2014:832,
+of a back door in the NIST SP800-90 dual ec prng.
+2014.
+http://rump2007.cr.yp.to/15-shumow.pdf,2007.
+[35] P. L. Montgomery. Speeding the Pollard and elliptic
+[22] WilliamDupuyandSe´bastienKunz-Jacques. Resistan-
+curvemethodsoffactorization. Mathematicsofcompu-
+ceofrandomizedprojectivecoordinatesagainstpower
+tation,48(177):243–264,1987.
+analysis. In Cryptographic Hardware and Embedded
+Systems-CHES2005,7thInternationalWorkshop,Edin- [36] NationalInstituteofStandardsandTechnology. FIPS
+burgh,UK,August29-September1,2005,Proceedings, 186-2. Digital Signature Standard. Technical report,
+pages1–14,2005. NIST,2000.
+Generacio´ndecurvasel´ıpticasconbuenaspropiedadescriptogra´ficassobrecamposprimos 27
+[37] Yasuyuki Sakai and Kouichi Sakurai. Simple Power TheCryptographer’sTrackattheRSAConference2015,
+AnalysisonFastModularReductionwithNISTRecom- San Francisco, CA, USA, April 20-24, 2015. Procee-
+mendedEllipticCurves,pages169–180.SpringerBerlin dings,pages3–21,2015.
+Heidelberg,Berlin,Heidelberg,2005.
+[41] Yasuyuki Sakai and Kouichi Sakurai. Simple power
+[38] StaleZerenerHaugnæss. OntheGenerationofStrong analysisonfastmodularreductionwithgeneralizedMer-
+EllipticCurves:ForCryptographicApplications. Mas- senne prime for elliptic curve cryptosystems. IEICE
+ter’sthesis,UniversityofOslo,2015. Transactions,89-A(1):231-237,2006.
+[39] The New York Times. Government announces
+[42] YessicaCaridadCastan˜oSainz. Generacio´ndecurvas
+steps to restore confidence on encryption standards.
+el´ıpticas con buenas propiedades criptogra´ficas sobre
+https://bits.blogs.nytimes.com/2013/09/10/government-
+camposfinitosprimos. Master’sthesis,Universidadde
+announces-steps-to-restore-confidence-on-encryption-
+laHabana,January2018.
+standards/? r=1,10September2013.
+[40] JoopvandePol,NigelP.Smart,andYuvalYarom. Just
+alittlebitmore. InTopicsinCryptology-CT-RSA2015,

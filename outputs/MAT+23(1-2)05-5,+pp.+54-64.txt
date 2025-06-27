@@ -1,0 +1,788 @@
+REVISTA CIENCIAS MATEMÁTICAS Vol. 23 único, Nos. 2005-2006
+LA FUNCIÓN DE VEROSIMILITUD SUAVIZADA
+EN MODELOS DE REGRESIÓN
+Lilian Muñiz Álvarez1, Facultad de Matemática y Computación, Universidad de La Habana
+Rolando J. Biscay Lirio2, Instituto de Cibernética, Matemática y Física (ICIMAF)
+RESUMEN
+En el presente trabajo se introduce una modificación de la función de verosimilitud, llamada
+verosimilitud suavizada. Esto se logra mediante una estimación por núcleo de la distribución empírica
+de los datos. Además, se estudia la aplicación de esta función en la estimación de modelos de
+regresión, y se brindan resultados teóricos acerca de la consistencia de los estimadores basados en
+ella. También se ilustra, a través de simulaciones, el comportamiento de esta función en la regresión
+polinomial.
+Palabras clave: función de verosimilitud suavizada, modelos de regresión, consistencia de estimadores.
+ABSTRACT
+In the present work a modification of the likelihood function is introduced. It is based on what we call the
+smoothed likelihood function, which is obtained by substituting a smoothed (kernel) estimate for the
+empirical measure into the standard likelihood function. Also, applications of the smoothed likelihood-
+based inference in regression models estimation are shown, and theoretical results about the
+consistency of the estimators based on this function are given. It is also shown, by means of
+simulations, the behavior of this function in polynomial regression models.
+1. INTRODUCCIÓN
+La función de verosimilitud, salvo una constante aditiva, es una versión empírica de la divergencia de
+Kullback-Leibler (KL); más precisamente, es la divergencia KL con respecto a la medida de probabilidad
+empírica de los datos. Esta función es un instrumento clave de la inferencia estadística para modelos
+paramétricos (ver e.g. Cox y Hinkley, 1974). Sobre su base se ha desarrollado la llamada inferencia basada
+en verosimilitud, que comprende las regiones de verosimilitud, los estimadores máximo verosímiles (que,
+como es sabido, son asintóticamente eficientes), las regiones de verosimilitud-confianza (que son
+asintóticamente de precisión óptima) y las dócimas de hipótesis basadas en cocientes de verosimilitud.
+Sin embargo, el enfoque basado en verosimilitud no es directamente aplicable a situaciones en las que no
+se conoce un modelo paramétrico regular para la distribución de los datos. Por ejemplo, cuando el modelo
+especificado consiste en una familia de distintos modelos paramétricos regulares. Esto incluye en particular
+el caso de modelos anidados de diferentes dimensiones. También este enfoque presenta serias limitaciones
+en modelos regulares en los que el número de parámetros es grande en comparación con la cantidad de
+datos disponibles (modelos “grandes”). Una de estas limitaciones es que no evita el llamado fenómeno de
+"sobreajuste" de parámetros.
+En tales situaciones se utilizan enfoques alternativos. En el caso de modelos que comprenden submodelos
+de varias dimensiones, usualmente se aplican primero técnicas de selección de modelos, y posteriormente
+se realiza la inferencia basada en verosimilitud para el modelo seleccionado. La selección suele hacerse
+mediante criterios informacionales (como AIC; ver Burbham(2002), y bibliografía citada allí) o criterios de
+remuestreo (ver Efron(1982)). En caso de un modelo regular de alta dimensión en comparación con el
+tamaño de muestra, frecuentemente se utiliza el enfoque de verosimilitud penalizada para la construcción de
+estimadores, lo cual incluye el uso de estimadores bayesianos MAP como en Carlin(1996). La penalización
+es típicamente ponderada mediante un hiper-parámetro no negativo, que suele seleccionarse mediante
+criterios de remuestreo o informacionales.
+Como consecuencia, en tales situaciones la función de verosimilitud no ofrece una base unificadora de la
+inferencia. La inferencia se desintegra en una fase de selección de modelos e hiper-parámetros y otra
+posterior fase de estimación y prueba de hipótesis (clásicas) dentro del modelo seleccionado, utilizando en la
+E-mail: 1lilian@matcom.uh.cu
+2biscay@icmf.inf.cu
+54
+fase de selección criterios distintos a la divergencia KL. Además, las penalizaciones son en la práctica
+especificadas por el investigador siguiendo criterios más o menos arbitrarios ajenos a dicha divergencia (e.g.,
+medidas de complejidad o suavidad del modelo).
+El objetivo de este trabajo es introducir una modificación de la función de verosimilitud (llamada
+verosimilitud suavizada, VS) tal que: i) no requiera de la especificación por el investigador de un término de
+penalización; ii) conserve la propiedad de ser una divergencia KL, y iii) pueda ser utilizada como base de la
+inferencia en modelos constituidos por conjuntos arbitrarios de distribuciones sin conducir a sobreajustes.
+Específicamente, la VS es definida como la divergencia KL con respecto a un suavizamiento (por núcleo) de
+la distribución empírica de los datos. De este modo contiene a la función de verosimilitud clásica como caso
+particular cuando la cantidad de suavizamiento es cero.
+Centraremos la atención del presente trabajo en la aplicación de la verosimilitud suavizada para la
+estimación de modelos de tipo regresión. En la Sección 2 definimos la VS en este contexto. En la Sección 3
+se brindan resultados teóricos acerca de la consistencia de los estimadores basados en ella. En la Sección 4
+se ilustra, a través de simulaciones, el comportamiento de la VS en la regresión polinomial. Finalmente, la
+Sección 5 contiene algunos problemas abiertos y generalizaciones, y también las conclusiones del trabajo.
+2. LA FUNCIÓN DE VEROSIMILITUD SUAVIZADA
+2.1. Formulación general
+Consideremos un problema de análisis de regresión entre una variable respuesta Y   y un vector de
+p
+variables predictoras X = (X ,…,X )   . Más específicamente, supongamos que se tienen datos
+1 p
+55
+ ( Y ,i x )
+i
+ni
+1
+, con xi = (x ,…,x ), que satisfacen la relación funcional:
+i1 ip
+Y = m(x) + , (1)
+i i i
+donde  son variables aleatorias iid. con distribuciones Gaussianas, E() = 0, V() = 2, y  es una función
+i i i
+p
+con dominio en  (llamada función de regresión). Supongamos además que los puntos de diseño x son
+i
+controlados, i.e., interesa estudiar el problema “condicionado” a la variable x. Obviamente,
+E(Y / x) = (x) y V(Y / x) = 2.
+i i i i i
+Existen diversos tipos de modelos para la función de regresión. Dos grandes clases son las siguientes.
+a) En un modelo de regresión paramétrico (clásico o regular) se supone que la función de regresión  tiene
+una expresión funcional especificada en dependencia de un número fijo y conocido q de parámetros
+reales desconocidos  = ( ,…, )  B  q. Se suponen además condiciones de suavidad convenientes
+1 q
+acerca de la dependencia de  con respecto a . Un ejemplo es la regresión polinomial con grado q
+conocido, donde los parámetros son los coeficientes del polinomio de regresión.
+b) En un modelo de regresión no paramétrico, sólo se supone que  pertenece a cierta clase infinito-
+dimensional M de funciones “suaves”, no indizada por un parámetro finito-dimensional. Por ejemplo,
+M puede ser la clase de las funciones con derivadas continuas hasta cierto orden sobre cierto dominio
+de p.
+En la práctica, a veces el modelo paramétrico considerado por el investigador no ajusta bien los datos, y se
+carece de suficiente información previa para proponer un único modelo paramétrico alternativo que sea
+adecuado. Entonces la modelación no paramétrica constituye una atrayente opción, y las técnicas de
+suavizamiento no paramétrico ofrecen una herramienta flexible para estudiar la función de regresión
+desconocida.
+Uno de los métodos de suavizamiento más simples es el de estimación por núcleos. En particular, el
+estimador de Nadaraya-Watson para la media (x) tiene la forma:
+n
+YK (xx )
+i  i
+ ~ (x) i1 , (2)
+ n
+K (xx )
+ i
+i1
+1
+donde K (u) = K(u/) y el núcleo K es una función real continua, acotada, simétrica alrededor del cero y cuya
+
+
+integral es uno. El parámetro no negativo  es llamado ancho del núcleo (Nadaraya (1964), Watson (1964)).
+El estimador
+56
+~
+
+( x ) no es insesgado para muestras finitas. Pero bajo condiciones de regularidad convenientes
+es consistente (de acuerdo a varias métricas) y tiene distribución asintótica Normal (ver Hardle (1994)).
+~
+Además, es sabido que  (x) no es muy sensible a la selección del núcleo K, sino sólo a la selección del
+
+ancho  que controla el grado de suavizamiento (menor para valores pequeños de ).
+De la estimación (2) para la media se obtiene el siguiente estimador no paramétrico  ~2 para la varianza 2:
+
+~ 2
+
+
+1
+n
+n
+i
+1
+( Y
+i
+ ~
+
+( x )i ) 2 . (3)
+Luego una estimación natural de la densidad condicional f(y/x) de Y dado x es f (y/x) =
+
+N ( ~
+
+( x ) , ~ 2 ) ( y ) ,
+donde N ( ~
+
+( x ) , ~ 2 ) ( y ) , denota la función de densidad Normal de media ~
+
+( x ) y varianza  ~2 evaluada en y.
+
+c) Una situación intermedia entre las (a) y (b) anteriores es cuando se supone que la función de regresión
+pertenece a un subconjunto especificado M de M que no es un modelo paramétrico. Por ejemplo, M
+0 0
+puede consistir en todos los polinomios de grados arbitrarios en la variable x. En este caso,  pertenece a
+un conjunto de funciones que no puede describirse mediante un parámetro de dimensión finita.
+Nuestro interés es extender el enfoque de verosimilitud de modo que sea aplicable no sólo a modelos
+paramétricos clásicos (a) sino también a los modelos de tipo (c) evitando el llamado fenómeno de
+sobreajuste. Para esto, a continuación definiremos, en el contexto de la regresión, lo que llamamos la función
+de VS (la Sección 5 discute su definición para modelos asociados a muestras iid).
+Definición: Sea B un conjunto arbitrario y sea un modelo de regresión (1), donde la función de regresión
+(x) =  (x) está indizada por un parámetro   B. Asociada a este modelo, la función de log-verosimilitud
+
+suavizada (VS) l (), con  = (, 2)   = B 
+
+ * , se define como:
+l (  ) 
+n
+i
+1
+ f ( y / x )i ln f ( y / x ;i  ) d y , (4)
+donde
+f ( y / x )i  N ( ~
+
+( x )i , ~ 2 ) ( y ) , (5)
+con  ~ (x) y  ~2 definidos por (2) y (3) respectivamente, f(y / x; ) = N( (x), 2)(y) y la integración es sobre
+  i  i
+todo .
+Salvo una constante aditiva, l es la divergencia KL de f(./x; ) con respecto a un suavizamiento f (./x )
+ i  i
+por núcleo de la distribución empírica de los datos. Nótese que ella contiene a la función de log-verosimilitud
+clásica
+n
+l() = lnf(Y /x;) (6)
+i i
+i1
+como caso particular cuando el ancho  tiende a cero. Nótese que el hecho de que el conjunto B sea
+arbitrario permite incluir modelos de regresión lineales y no lineales con números de parámetros fijos, y
+también familias de modelos de regresión lineales o no lineales con diferentes números de parámetros.
+Mediante la maximización con respecto a  de la función de log-verosimilitud (6) se obtiene, como es
+sabido, el estimador máximo verosímil
+57
+ˆ de . Maximizando la función de log-verosimilitud suavizada l
+
+definimos el estimador máximo verosímil suavizado ˆ
+
+de .
+La selección del ancho  es un paso crucial en los métodos no paramétricos de estimación. Un método de
+selección de  por validación cruzada que utiliza la forma de (x) igual a  (x) utilizada en la definición
+
+anterior es propuesto a continuación:
+ˆ  a r g m a x
+n
+i
+1
+ln f ( Y
+i
+/ x ;i ˆ (i)
+
+) , (7)
+donde
+ˆ (i)
+
+ ( ˆ (i),
+
+ˆ 2 (i) )  a r g m
+( ,  
+a2 x) 
+n
+j i
+ (i) f ( y / x )j ln f ( y / x ;j  ) d y . (8)
+Aquí (i) f ( y / x )j denota al estimador por núcleo (5) basado en la muestra sin el dato (Y, x). Luego este
+i i
+criterio de selección consiste en hallar  de modo que se maximice la log-verosimilitud de los datos en un
+sentido predictivo.
+En la siguiente sección se estudia el caso particular de la regresión lineal, que tiene la ventaja
+computacional de que en él se obtiene de forma explícita el estimador máximo verosímil suavizado de
+ =(, 2).
+2.2. Caso de la regresión lineal
+En la sección anterior la función de regresión  (x) podía ser una función cualquiera, tanto lineal como no
+
+lineal. En el caso de la regresión lineal, la variable respuesta Y depende de forma lineal del parámetro . Más
+específicamente, supongamos que se tienen datos  ( Y ,i x )
+i
+ni
+1
+que satisfacen la relación funcional:
+Y =  (x) + , (9)
+i  i i
+donde las variables aleatorias  son como en la sección anterior,  = ( ,…, )´, x = (x ,…,x )´ y
+i 1 p i i1 ip
+       = (x) =  x +  x +…+  x x =
+ i 1 i1 2 i2 p ip i
+x í . (10)
+La ecuación de regresión (9) que satisface (10) puede escribirse de forma matricial como Y = X + ,
+donde Y (Y ,…,Y )´, ( ,…,e )´ y X = (x), con i = 1,...,n y j = 1,...,p.
+1 p 1 n ij
+En este caso la función de log-verosimilitud suavizada l () con  = (, 2) según (4) es:
+
+n
+l () = f (y/x )lnf(y / x; )dy,
+  i i
+i1
+donde f (y/x) = N(
+~
+(x ),
+~2(y)f(y)
+como anteriormente y, a diferencia de la sección anterior,
+ i  i 
+f(y / x; ) = N(x,, 2)(y).
+i i
+Teniendo en cuenta que tanto f (y/x) como f(y/x; ) son densidades normales, el problema de maximización
+ j i
+(8) toma la forma:
+(i) argmax  ln 1  1   ~2(i)    ~(i)(x )x 2   ,
+ (,2)
+j1
+ 2 22    j j  
+por lo que se obtiene que
+58
+ˆ (i)
+
+ ( X (i)´ X (i) )  1 X (i)´ ~ (i)
+
+(11)
+y
+ˆ 2 (i) 
+n
+1
+ 1
+j
+1
+ ~ 2 (i)   ~ (i)
+
+( x )j  x j (i)
+
+ 2 
+.
+(12)
+Aquí X(i) denota la matriz X sin la fila i-ésima y los valores de ~ (i)
+
+y ~ 2 (i) son calculados sin usar el dato (Y,
+i
+x). De (11) y (12) se deduce que los estimadores máximos verosímiles suavizados
+i
+ˆ
+
+y  ~2 de  y 2
+
+respectivamente tienen la forma:
+ˆ
+
+= (X´X)-1X´ ~
+
+, (13)
+donde
+~
+
+ ( ~
+
+( x
+1
+) ,..., ~
+
+( x
+n
+) ) ´ y ~ 2 = 1
+n
+n i
+1
+ ~ 2   ~
+
+( x )i  x ˆ j
+
+ 2 
+
+.
+Un ejemplo de regresión lineal es el caso de la regresión polinomial. En la Sección 4 se estudiará el
+comportamiento de la VS en este contexto.
+3. CONSISTENCIA DEL ESTIMADOR MÁXIMO VEROSÍMIL SUAVIZADO
+La consistencia (según convergencia en probabilidad) del estimador máximo verosímil suavizado de  en
+el caso de la regresión lineal es consecuencia de la consistencia del estimador por núcleo de Nadaraya-
+Watson
+~
+
+( x ) , resultado este último que aparece por ejemplo en Hardle(1994). Este asegura que si:
+(C1) La verdadera función de regresión  es una función de Lipschitz.
+(C2) El conjunto X donde toma valores la variable x es compacto.
+(C3) Los errores  están acotados.
+i
+(C4) K(u)   1.
+Entonces se tiene que:
+sx u pX 
+~
+
+( x )   ( x )   
+p
+
+m a x
+
+ n 
+lo g n
+
+ 12
+, 
+ 
+.
+Por tanto si n
+n
+
+
+0 y
+ n 
+lo g n
+
+ 12
+n
+
+0 y entonces el resultado anterior implica que el estimador de
+Nadaraya-Watson
+~
+
+( x ) converge en probabilidad a la verdadera función de regresión (x), que en el caso
+de la regresión lineal es igual a m (x) = x´. Luego puede plantearse el siguiente teorema.
+
+Teorema: Sea un problema de regresión lineal como en (9) y (10). Supongamos además que se satisfacen
+las condiciones (C1)-(C4) y que se cumplen los siguientes supuestos:
+1
+ n  2
+(A1) 0 y   0 .
+ 
+n logn n
+2
+(A2) n(X´X)1X´ (1)..
+n
+
+Entonces el estimador máximo verosímil suavizado (13) de es consistente en probabilidad.
+Demostración:
+Utilizando la forma explícita del estimador máximo verosímil suavizado de
+59
+ˆ
+
+ ( X ´ X )  1 X ´ ~
+
+, y algunas
+propiedades de normas se tiene que:
+ˆ
+
+  2  ( X ´ X )  1 X ´ ~
+
+ ( X ´ X )  1 X ´ X  2
+ ( X ´ X )  1 X ´ ( ~
+
+ X  ) 2
+ ( X ´ X )  1 X ´ 2 ~
+
+ X  2
+ n ( X ´ X )  1 X ´ 2 1
+2
+~
+
+ X  2 .
+Según (A2),
+n ( X ´ X )  1 X ´
+2
+ n ( X ´ X )  1 X ´
+2
+  (1 ) .
+Además, teniendo en cuenta las condiciones (C1)-(C4) y la hipótesis (A1), el término
+1
+n
+~
+
+ X 
+2
+tiende
+a cero en probabilidad. En efecto,
+1
+n
+~
+
+ X B 2  1
+n
+n i
+1
+( ~
+
+( x )i  x i ) 2  1
+n
+n s ux
+
+pX ( ~
+
+( x )  x ´ ) 2  s ux
+
+pX ( ~
+
+( x )  x ´ ) 2
+n
+P
+
+0 .
+P
+Luego queda demostrado que ˆ   0, por lo que el estimador máximo verosímil suavizado
+
+n
+ˆ
+
+de 
+es consistente.
+4. ESTUDIO POR SIMULACIONES DEL COMPORTAMIENTO DE LA FUNCIÓN DE VS
+EN LA REGRESIÓN POLINOMIAL
+Consideremos una regresión polinomial entre una variable respuesta Y y una variable predictora escalar t.
+Sean n datos  ( Y ,i t )
+i
+ni
+1
+, se tiene la ecuación:
+Y =  (t) + , (14)
+i  i i
+donde  = ( ,  ,…, )´ y  (t) = +  t +
+0 1 p  i 0 1i
+
+2
+t 2i +…+ tp. De forma matricial la ecuación de regresión (14)
+p i
+puede escribirse como Y = X + , donde Y = (Y ,…,Y )´,  = ( ,…, )´ y X =
+1 n 1 n
+( t ji 1 ) , con i = 1,...,n y
+j = 1,...,p+1. O sea,  (t) =
+ i
+x i  , donde x = (1, t,
+i i
+t 2i ,... t pi ) ´  p+1 denota la i-ésima fila de la matriz X.
+Nos interesa la situación, frecuente en la práctica, en que los datos satisfacen un modelo del tipo (14) pero
+con un verdadero grado p = p desconocido por el investigador. Consideremos pues el modelo (14) con un
+0
+grado suficientemente grande p  p . Nótese que debido a que típicamente p se toma mucho mayor que p ,
+0 0
+el enfoque de verosimilitud clásica no es aplicable pues conduciría a sobreajuste de los parámetros.
+Para el estudio por simulaciones se tomaron n = 20 observaciones (Y, t), donde los n valores t de la
+i i i
+variable predictora escalar t son equidistantes en el intervalo 0, 1. La verdadera densidad se tomó como
+f(y/x;  ) = N(N(x0,2)(y),donde 0 = (1.6913, 8.4207, - 9.2430, 3.5334, 0, 0, 0)´ y 2 = 0.7. Notar que aquí
+i 0 i 0 0
+el verdadero grado es p = 3 mientras que el modelo se tomó con polinomios (“candidatos”) de grados hasta
+0
+p = 5.
+Para el estudio, se calcularon varias estimaciones de la verdadera función de regresión m . Estas son:
+0
+
+a) Las estimaciones por el método de los mínimos cuadrados de las funciones de regresión polinomiales de
+grados p = 0,1,…,5.
+b) El polinomio óptimo por el método de Validación Cruzada Generalizada (VCG), propuesto por Wahba
+(1977). Este consiste en tomar el grado óptimo como sigue:
+p =
+VCG
+60
+k
+a r g m
+0 ,1,2 
+in
+,...,5 
+1
+n
+Y
+(1 
+
+t
+H
+r H
+k
+k
+Y
+) 2
+2
+,
+donde H k  X k (X k X k )1X k denota la matriz “hat” calculada a partir de la matriz X k que contiene las
+primeras k+1 columnas de X. Se calculó entonces el estimador por mínimos cuadrados ˆ
+V C G
+de la
+función de regresión dada por el polinomio de grado p .
+VCG
+c) La estimación por núcleo ˆ
+ˆ
+
+ ~
+ˆ
+
+según (2) tomando  ˆ determinado según
+
+ˆ
+
+ a r g m in
+n
+i
+1
+
+Y
+i
+ ~ (i)
+
+( t )i
+2
+,
+donde ~ (i)  ( t )i denota que el estimador de Nadaraya-Watson (2) es hallado sin usar el dato (Y, t) y i i
+está evaluado en t. Esta estimación por validación cruzada del ancho del núcleo fue propuesta por
+i
+Clark (1980).
+d) La estimación por el método de verosimilitud suavizada: ˆ
+ˆ
+S
+ X ˆ
+
+S
+, donde según (7),
+ˆ
+S
+ a r g m in
+n
+i
+1
+ln f
+
+Y
+i
+ x ;i ˆ (i)
+
+2
+,
+ (i)
+
+ ( ˆ (i),
+
+ˆ 2 (i) ) es el vector de los estimadores por verosimilitud suavizada según (11)-(12) utilizando
+dimensión p = 5, y ˆ se calcula por (13) con  ˆ .
+ˆ S
+S
+e) La estimación por núcleo ˆ
+ˆ
+S
+ ~
+ˆ
+S
+según (2) tomando  ˆ como en (d).
+S
+f) La estimación ˆ
+ˆ ˆ 
+ X ˆ
+ˆ 
+, donde ˆ
+
+definido como en (c) y ˆ
+ˆ S
+se calcula por (13) con   ˆ
+
+.
+En todos los ajustes mencionados en (c)-(f) el estimador de Nadaraya-Watson (2) se halló tomando el
+núcleo gaussiano K(u) = N(0, 1)(u).
+Para ilustrar, las dos figuras siguientes muestran todos los ajustes en una muestra simulada. En la Figura 1
+se muestran los ajustes por el método de mínimos cuadrados de las distintas regresiones polinomiales.
+Se observa que los polinomios de grados 0 y 1 no tienen suficiente flexibilidad para aproximar la verdadera
+función de regresión 
+ 0
+, mientras que los polinomios de grados 3, 4 y 5 presentan demasiadas oscilaciones.
+El polinomio ajustado más próximo a  es el de grado 2, grado que es inferior al 3 del verdadero
+0
+polinomio. Esto está en concordancia con la común experiencia acerca de que, cuando la cantidad de datos
+es moderada, modelos “parsimoniosos”, i.e. con pocos parámetros, resultan más convenientes para el ajuste
+que modelos “grandes”.
+Figura 1. Ajustes por mínimos cuadrados (a) con
+61
+  
+ 0
+.
+En la Figura 2 se muestran los ajustes (b)-(f). Se observa que los mismos aproximan la verdadera media
+evitando el gran sesgo de los polinomios de grados 0 y 1 a la vez que la extrema variabilidad de los
+polinomios de alto grado 3, 4 y 5 cuando estos se ajustan por mínimos cuadrados.
+Figura 2. Ajustes (b): ˆ
+V C G
+, (c): ˆ , (d): ˆ ,, (e): ˆ y (f): ˆ , con   .
+ˆ  ˆ ˆ S ˆ S ˆ ˆ  0
+Para estudiar el comportamiento promedio de estos estimadores a través de réplicas se realizaron las
+siguientes simulaciones. Se generaron un número B = 300 de muestras independientes de tamaño n = 20;
+para cada una de estas réplicas se calcularon las estimaciones (a) - (f); y finalmente se calcularon los errores
+cuadráticos medios de cada uno de ellos con respecto a la verdadera media mediante
+ECM =
+62
+1
+B
+b B
+ 1
+1
+n
+n i
+1
+ ˆ b ( t )i  
+ 0
+( t )i  2 ,
+donde ˆ denota el estimador que corresponda de los mencionados en (a)-(f) obtenido en la b-ésima réplica.
+Análogamente, también se calcularon el sesgo y varianza de cada estimador. Como es sabido, el ECM se
+descompone como suma de la varianza y el cuadrado del sesgo (Sesgo2).
+Los resultados obtenidos para los estimadores por mínimos cuadrados de la función de regresión basados
+en polinomios de distintos grados se muestran en la Tabla I.
+Tabla I.
+p = 0 p = 1 p = 2 p = 3 p = 4 p = 5
+ECM 0.6729 0.1643 0.0858 0.1065 0.1309 0.1537
+Sesgo2 0.6462 0.1106 0.0059 0.0002 0.0002 0.0002
+Varianza 0.0267 0.0537 0.0799 0.1063 0.1307 0.1535
+Para los estimadores (b)-(f), los resultados obtenidos se presentan en la Tabla II.
+Tabla II.
+ˆ V C G ˆ ˆ
+
+ˆ ˆ ˆ
+S
+ˆ ˆ
+S
+ˆ ˆ ˆ
+
+ECM 0.1259 0.1379 0.1326 0.1333 0.1208
+Sesgo2 0.0015 0.0168 0.0565 0.0565 0.0165
+Varianza 0.1244 0.1211 0.0761 0.0768 0.1043
+El análisis de estas tablas revela los siguientes hechos que merecen destacarse:
+Los ajustes por mínimos cuadrados con polinomios de grados 2, 3 y 4 brindan los menores valores del
+error cuadrático medio. Pero estos tienen la desventaja de que en la práctica no se conoce el verdadero
+grado del polinomio.
+En general los estimadores ˆ , ˆ y
+VCG ˆ ˆ
+
+ˆ
+ˆ ˆ
+
+tienen un ECM comparable con el de los mejores
+polinomios (grados 2 al 4). Los estimadores ˆ y ˆ presentan peor ECM. Esto pudiera deberse a que los
+ˆ ˆ
+ S
+estimadores por núcleo no usan la información adicional de que la media es polinomial.
+De los estimadores (b)-(f), ˆ
+ˆ S
+y ˆ
+ˆ ˆ 
+son los que muestran mayor balance entre las componentes de
+sesgo y varianza de sus errores cuadráticos medios.
+Curiosamente, ˆ
+ˆ ˆ
+
+muestra el menor error cuadrático medio entre los estimadores (b)-(f), el cual resulta
+comparable con el de los dos mejores polinomios (grados 2 y 3). Nótese que tal estimador se obtiene
+simplemente sustituyendo en (13) a  por una estimación no paramétrica estándar del ancho del núcleo, ˆ .
+
+Debe advertirse que, teniendo en cuenta la cantidad limitada de simulaciones realizadas, las pequeñas
+diferencias observadas entre ˆ , ˆ y ˆ deben interpretarse cautelosamente.
+VCG ˆ ˆ ˆ ˆ
+ 
+5. CONCLUSIONES Y PROBLEMAS ABIERTOS
+Los resultados obtenidos en las secciones anteriores nos permiten concluir que:
+1. La función de VS introducida en este trabajo permite en problemas de regresión definir la verosimilitud
+sobre espacios de funciones de regresión mucho más generales que los modelos paramétricos clásicos,
+evitando no obstante el sobreajuste de la estimación basada en ella. Tales espacios pueden ser arbitrarios
+con la única condición de estar contenidos en el conjunto de las funciones de regresión estimables por
+núcleo. De este modo se incluyen modelos consistentes en familias de distintos modelos de regresión
+paramétricos, quizás de distintas dimensiones.
+2. A diferencia de la verosimilitud penalizada, la VS tiene una interpretación directa como divergencia KL y no
+requiere de la especificación de un término de penalización.
+3. En modelos de regresión lineales con número desconocido de variables predictoras, los estimadores
+basados en la VS son consistentes.
+4. Aplicada a modelos de regresión polinomiales, los resultados de simulaciones muestran que los
+estimadores basados en la VS son factibles y muestran un comportamiento comparable a los estimadores
+según enfoque VCG.
+No obstante, trabajos posteriores son necesarios para profundizar más sobre las propiedades asintóticas y
+no asintóticas de la estimación basada en la VS. Estudios con mayor número de simulaciones se requieren
+para arribar a conclusiones más precisas. Por otra parte, el criterio de ECM debe complementarse con otros
+criterios de calidad de la estimación, en especial el criterio de divergencia KL con respecto a la verdadera
+distribución de la muestra es de interés en este contexto. Además, si bien una notable ventaja potencial del
+enfoque de VS es en su posibilidad de tratar modelos complejos que comprendan submodelos paramétricos
+lineales y no lineales -situación para la cual el enfoque VCG no está diseñado-, la exploración del
+comportamiento práctico de la VS para tales situaciones está abierta a trabajos futuros.
+Por otra parte, la inferencia basada en la VS es susceptible de extenderse en varias direcciones.
+En particular, pudiera formularse para modelos de regresión heterocedásticos, descritos por funciones de
+regresión para la media y la varianza.
+También puede formularse el enfoque VS para el caso de datos iid de la manera siguiente. Sea dado un
+modelo estadístico (, f(.; ): ) consistente en un conjunto de funciones de densidad sobre un mismo
+espacio muestral  y espacio de parámetros  arbitrario, al cual pertenece la verdadera densidad f(.; ).
+Dadas observaciones iid x, con i = 1,...,n con densidad f(.;  ), puede definirse la función de log-verosimilitud
+i 
+suavizada como:
+l () =  f (z)ln f(z: )dz,
+ 
+donde f (.) es una estimación no paramétrica por núcleo de f(.;  ):
+ 
+1 n zx 
+f
+
+(z) = K i .
+n   
+i1
+Aquí el núcleo K es una función real continua, acotada, simétrica alrededor del cero y cuya integral es uno
+(ver e.g. Van der Vaart, 1998). El estimador máximo verosímil suavizado de  se definiría por maximización
+de l (). En esta situación, un criterio predictivo para la determinación de un valor
+
+63
+ˆ para el ancho  puede
+ser el siguiente:
+n
+ˆ argmaxlnf(x;ˆ(i)),
+i 
+ i1
+donde
+ˆ(i) argmaxf(i)(z)lnf(z;)dz,
+ 
+
+y ˆ(i) y
+
+64
+(i) f ( z ) son, respectivamente, la estimación máximo verosímil suavizada de  y la estimación por
+núcleo de f(.;  ) basadas en todos los datos menos x.
+0 i
+REFERENCIAS
+BURBHAM, K. P. and D.R. ANDERSON (2002): Model Selection and Multimodel Inference.
+Springer: N.Y.
+CARLIN, B.P. and T.A. LOUIS (1996): Bayes and empírical Bayes methods for data analysis.
+London: Chapman and Hall.
+CLARK, R. M. (1980): “Calibration, cross-validation and carbon 14 ii”. Journal of the Royal
+Statistical Society, Series A 143: 177-194.
+COX, D. R. and D.V. HINKLEY (1974): Theoretical Statistics. Chapman and Hall: London.
+EFRON, B. (1982): “The Jacknife, the Bootstrap and Other Resampling Plans”, Regional Conference
+Series in Applied Mathematics, 38. Philadelphia: SIAM.
+HARDLE, W. (1994): Applied Non-parametric Regression. Cambridge Univ. Press: Cambridge.
+NADARAYA, E. A. (1964): “On estimating regresión”. Theory Prob. Appl. 10: 186-190.
+VAN der VAART, A.W. (1998): Asymptotic Statistics. Cambridge Univ. Press: Cambridge.
+WAHBA, G. (1977): “Applications of statistics”, in P. Krishnaiah (ed.), A survey of some smoothing
+problems and the method of generalized cross-validation for solving them, North Holland,
+Amsterdam.
+WATSON, G. S. (1964): Smooth regression analysis, Sankhya, Series A 26: 359-372.

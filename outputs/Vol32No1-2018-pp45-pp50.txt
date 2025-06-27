@@ -1,0 +1,431 @@
+CienciasMatemáticas,Vol.32,No.1,2018,Pag.45-50
+Recibido11-2017
+´
+Permutaciones Aleatorias con Optima Difusio´n con
+una Mirada en Rijndael Dina´mico
+Random Diffusion Optimal Permutations with a Look
+in Dynamic Rijndael
+Adria´n Alfonso Pen˜ate1 and Pablo Freyre Arrozarena1*
+Resumen Elalgoritmocriptogra´ficoRijndaelhasufridoenlosu´ltimostiemposdis´ımilesmodificaciones.Uno
+delosprincipalescambiosqueseaprecianenlaliteraturapu´blicaeslasustitucio´ndesustransformaciones
+internas por funciones similares, de forma tal que las mismas dependan de la llave secreta. Siguiendo esta
+tendencia propondremos en este trabajo una algoritmo para generar de forma aleatoria permutaciones con
+o´ptimadifusio´n,deformatalquelasmismaspuedanutilizarseenellugardelatransformacio´nShiftRows.
+Abstract ThecryptographicalgorithmRijndaelhassufferedinthelasttimesmanymodifications. Oneofthe
+mainchangesthatareappreciatedinthepublicliteratureisthesubstitutionoftheirinternaltransformationsfor
+similar functions, in such way that the same ones depend on the secret key. Following this tendency we will
+proposeinthisworkonealgorithmtogeneratediffusionoptimalpermutationsinarandomway,suchthatthe
+sameonescanbeusedintheplaceofthetransformationShiftRows.
+PalabrasClave
+ShiftRows,Rijndael,Difusio´n
+Keywords
+ShiftRows,Rijndael,Diffusion
+1InstituteofCryptography,FacultyofMathematicandComputerScience,UniversityofHavana,Cuba.
+*pfreyre@matcom.uh.cu
+Introduction 1. The Aim of ShiftRows for Diffusion
+The cryptographic algorithm Rijndael was accepted as The algorithm Rijndael operates over 4N b bytes input
+theAES(AdvancedEncryptionStandard)in2001[8],since (N b =4,5,6,7,8)arrangedasamatrix,callingstate,with4
+itwassubmittedtotheAEScompetitionproposedbyNIST rowsandN b columns. Itisaiteratedcipherwithavariable
+(NationalInstituteofStandardsandTechnology). numberofrounds,inthewhichonesfourtransformationare
+appliedonthestatematrix. Wearetalkingabouttwoofthem
+Theirdesigners,thebelgiansJoanDaemenandVincent
+only,becausetheremainingtransformationsdonotprovide
+Rijmen,constructaverystrongcryptographicalgorithmwith
+diffusionatall[6].
+asimplealgebraicstructure. OneofthehitsofRijndaelisthe
+ThetransformationShiftRowsisappliedonthestatema-
+gooddiffusionpropertiesthatitpossesses[6]andoneofthe
+trix displacing every row cyclically to left certain quantity
+internaltransformationsthatallowstoreachthefulldiffusion
+N −dependentasisshowninthetable1.
+isSiftRows. b
+Inthesection1wewillcarryouttheanalysisofhowitis
+Row N =4 N =5 N =6 N =7 N =8
+obtainedthefulldiffusioninRijndaelandhowthetransfor- b b b b b
+mationShiftRowsactsinthisprocess. Insection2wewill 1 0 0 0 0 0
+leaveclearwhatistherealmathematicalfunctionbehindthe 2 1 1 1 1 1
+transformationShiftRowsandwhichhavebeenthemainin- 3 2 2 2 2 3
+tentsofmodifyingthesameone. Finallyinsection3wewill 4 3 3 3 4 4
+giveorconstructionforthiskindoftransformationexplaining Table1. RowsdisplacementinRijndael
+whichitistheimportanceofthesameone.
+Theadvisementsexposedastheresultofthisinvestigation ShiftRowsofferhighdispersionofthebytesinthestate
+canbeappliedinthedesignofadynamicvariantofRijndael matrix,inthesensethat,ineachcolumnofthestatematrix
+forapracticalpurpose,thistaskisourfutureworkproposition. afterShiftRowsallthebytesbelongtodifferentcolumnsof
+46 RandomDiffusionOptimalPermutationswithaLookinDynamicRijndael
+thestatematrixbeforeShiftRows. Forexample,ifN =4the 2.1 ObjectiveandRelatedWork
+b
+matrixoftheindexpositionofthebytesinthestatematrix The permutation Π, just as we previously show it, has
+aretransformedbyShiftRowsasfollowing. beendefinedin[6,Definition9.4.1]likeadiffusionoptimal
+permutation. A permutation Π is diffusion optimal if all
+elements in each column are distributed over all different
+1 5 9 13 1 5 9 13 columns under the action of Π, so, the search of diffusion
+2 6 10 14 6 10 14 2 optimal permutations is related to one specific rectangular
+(cid:55)−→
+3 7 11 15 11 15 3 7 matrixwithatleastasmanycolumnsasrows[6].
+4 8 12 16 16 4 8 12 Thisrelationshipisgivenbythebijectivefunctiont,we
+mean,ifB=Π(A)thenthematricest−1(A)andt−1(B)are
+ThetransformationMixColumnsisappliedonthestate relatedbymeansofΠ.Forexample,ifN b =4fromthematrix
+matrix post-multiplying every column of the same one for oftheindexpositionofthebytesinthestatematrixweare
+afixedMDSmatrix. MixColumnsofferlocalfulldiffusion, abletoseethepermutationΠoftheequation(1).
+in the sense that, in each column of the state matrix after
+MixColumns all the bits depends of every bit of the same
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+columnofthestatematrixbeforeMixColumns.
+1 6 11 16 5 10 15 4 9 14 3 8 13 2 7 12
+InthealgorithmRijndael,theroundtransformation
+AboutthereplacingofthepermutationΠtherearesome
+MixColumns(ShiftRows(state)) works in the public literature, most of them focused on a
+randomrowdisplacementforthetransformationShiftRows,
+provide full diffusion in 2 rounds if N =4 or 3 rounds if forgettingthedispersionpropertiesthatΠshouldoffer. Some
+b
+N =5,6,7,8,inthesensethat,thechangeofonesinglebitin attemptstochangeShiftRowsbyreplacingofthepermutation
+b
+thestatematrixreboundsinthechangeofthehalfofthebits Πarethefollowing[5,4,1,3].
+after2or3roundsifN =4orN (cid:54)=4respectively. Thisis ThefirstrealapproachtoreplaceΠinarandomwayis
+b b
+anothermeasureofthediffusioninablockcipheralgorithm, proposed in [2, 7]. In [2] is possible to construct diffusion
+similartothemeasuregivenbeforewhenwetalkaboutthe optimalpermutationsrelatedwithsquarematricesofanysize,
+aimofMixColumns. and[7]utilizesthesameideatoconstructdiffusionoptimal
+permutationsrelatedwith4×4squarematricesonly,likein
+theAESalgorithm. Inthenextsectionwewillseehowthis
+2. ShiftRows Like a Permutation constructworksandwewillgiveageneralizationofthesame
+oneforrectangularmatrices.
+As we show in the previous section, in the algorithm
+Ourcontribution: Weprovideasetofdiffusionoptimal
+Rijndaelthestatematrixistransformedbythetransformation
+permutationswithalookindynamicRijndael,insuchway
+ShiftRowsbymeansoftherule
+thatthesameonesmaybeusedtoreplacethepermutation
+Π of the equation (1). These permutations can have any
+RowiiscyclicallymovedC positiontoleft.
+i size desired, except a prime number, and our construction
+allowstochooseoneofthematrandom. Ontheotherhand,
+whereC isadifferentvalueN −dependentforeverydifferent
+i b weenunciateatheoremrelatedwiththeminimalnumberof
+row1≤i≤4. Ifweconsiderthebijectiveapplication
+roundsrequiredtoreachthefulldiffusion,andthenweshow
+howthisconstructionisbetterthanRijndael’sconstruction.
+t:M
+4×Nb
+(GF(28))−→GF(28)4×Nb
+suchthat 3. Generating a Random Diffusion
+Optimal Permutation
+t(state) =state
+4(j−1)+i i,j
+ItiswellknownthatonepermutationoflengthNactsover
+wereGF(28)istheFiniteGaloisFieldof256elementsand
+anyfiniteandorientatedsetofN elements,independentlyof
+M (GF(28))isthesetofallthematricesof4rowsandN
+4×Nb b itsnature,shufflingallthepositionsintodethesameone. In
+columns,itispossibletoseethat
+the following we assume that one permutation of length N
+actsoverthesetoftheindexpositionsI={1,2,...,N}.
+ShiftRows(state)=t−1(Π(t(state))) (1)
+Justasweciteabove,toconstructonediffusionoptimal
+permutation,N maybeacompositenumberknsuchthatkis
+whereΠisapermutationof4N
+b
+elementsdefinedforevery
+thenumberofelementsineverycolumnandn≥kisthenum-
+1≤i≤4andevery1≤ j≤N as
+b berofcolumnsoftheassociatedmatrix. Thepreviousfacts
+guidethesearchofarandomdiffusionoptimalpermutation
+Π[4(j−1)+i]=4(j−C i −1 modN b )+i Πthroughtheirassociatedmatrixt−1(Π(I)).
+RandomDiffusionOptimalPermutationswithaLookinDynamicRijndael 47
+3.1 OurConstructionintheSquareCase In[2]ispresentedonealgorithmfortherandomgenera-
+For to generate all the diffusion optimal permutations tionofallthediffusionoptimalpermutationsofthissize. In
+whenthereareasmanycolumnsasrows,wecanstartwith practicalway,weareabletoobtainrandomdiffusionoptimal
+thenextpropositionaboutthecardinal. permutationsifwechangethepositionsoftheelementsinside
+everycolumnofthematrix
+Proposition1 Foranyk≥2,theamountofdiffusionoptimal
+1 k+1 ··· (k−1)k+1
+permutationsoflengthk2andassociatedmatrixwithkrows
+2 k+2 ··· (k−1)k+2
+andkcolumnsis(k!)2k.
+t−1(I)= . .
+.
+. .
+.
+... . .
+.
+Demonstration1 LetI={1,2,...,k2}bethesetofthein- .
+.
+k k+k . (k−1)k+k
+dex positions, then we may analyze how the elements into
+everycolumnoft−1(I)shouldbedistributedovert−1(Π(I))
+througharandompermutationofkelements,transposethis
+inordertoΠbediffusionoptimal.
+matrix, and we change again the positions of the elements
+insideeverycolumnofthisnewmatrix.
+Column1: Inthefirstcolumnoft−1(I)therearekelements
+Forexample,ifthenextpermutationsofS areusedinthe
+4
+andeveryoneofthemshouldbedistributedinadiffer-
+respectiveorder
+entcolumnoft−1(Π(I)),sowehave
+τ =[1,4,3,2]
+1
+[k·k][k·(k−1)]···[k·1]
+τ =[2,1,4,3]
+2
+τ =[3,2,1,4]
+possibilitiesforthis,keepinginmindthatthesameones 3
+can be located in any position inside the respective τ 4 =[4,3,2,1]
+columnoft−1(Π(I)).
+τ =[1,2,3,4]
+5
+τ =[2,3,4,1]
+Column2: In the second column oft−1(I) there are k ele- 6
+mentsandeveryoneofthemshouldbedistributedina τ 7 =[3,4,1,2]
+differentcolumnoft−1(Π(I)),sowehave τ =[4,1,2,3]
+8
+[(k−1)·k][(k−1)·(k−1)]···[(k−1)·1] thematrixoftheindexpositionofthebytesinthestatematrix
+(forthecaseofRijndaelwithN =4)istransformedaccord-
+b
+possibilitiesforthis,keepinginmindthatthesameones ing to the previous idea until obtaining the same output of
+can be located in any position inside the respective ShiftRows,asisshowingnext.
+columnoft−1(Π(I)),butoneofthesepositionisbusy
+foroneelementofthefirstcolumnoft−1(I). 1 5 9 13
+2 6 10 14
+. 3 7 11 15
+.
+.
+4 8 12 16
+1 6 11 16
+Columnk: Inthek−thcolumnoft−1(I)therearekelements
+4 5 10 15
+andeveryoneofthemshouldbedistributedinadiffer-
+entcolumnoft−1(Π(I)),sowehave 3 8 9 14
+2 7 12 13
+[1·k][1·(k−1)]···[1·1] 1 4 3 2
+6 5 8 7
+possibilitiesforthis,keepinginmindthatthesameones 11 10 9 12
+can be located in any position inside the respective 16 15 14 13
+column of t−1(Π(I)), but k−1 of these position are
+1 5 9 13
+busyforoneelementofthepreviouscolumnsoft−1(I).
+6 10 14 2
+11 15 3 7
+Madethisanalysiswegetthecardinalofallthediffusion
+16 4 8 12
+optimalpermutations
+3.2 OurConstructionintheRectangularCase
+k k−1
+∏∏i(k−j) Tofindallthediffusionoptimalpermutationswhenthere
+aremorecolumnsthanrowsisaverydifficulttask. Wecan
+i=1j=0
+provethattheamountofallthediffusionoptimalpermutations
+andimprovingtheseproductstheproposednumberishold. (cid:4) whenthenumberofcolumnssurpassesinonethenumber
+48 RandomDiffusionOptimalPermutationswithaLookinDynamicRijndael
+of rows is (k+1)!(k!)2(k+1) with a similar thought of the Weshowhowtaking2nrandompermutationsofS we
+k
+demonstration1. areabletogeneratearandomdiffusionoptimalpermutation
+However,whenthenumberofcolumnssurpassesinmore ofsizekn. Forapracticalpurposethismethodisusedover
+thanonethenumberofrows,weareinfrontofaninteresting matrices,withoutcalculatingthediffusionoptimalpermuta-
+mathematicalproblem,notsolvedyet. Inthisworkweoffera tionsforanything,evensothealgorithmtogeneratethesame
+partialsolutionforthisproblem,butforourpracticalpurpose onesispresented.
+ofdiffusionthisisthebestsolutionthatanyonecanfind. In
+thenextsubsectionwewillarguethisaffirmation. Algorithm1:RandomgenerationofΠ.
+In this case we are applying the same construction of Input: Randompermutationsτ ,τ ,...,τ ∈S .
+1 2 2n k
+thesquarecase,butatransposematrixcan’tbeused. Intheir 1 begin
+placeweareconsideringanothermatrix,thewhichoneallows 2 for j=1···ndo
+toobtaindiffusionoptimalpermutations. Ourprocedureis 3 fori=1···kdo
+presentednext. 4 Π 1 [k(j−1)+i]=k(j−1)+τ j [i].
+5 Tr[k(j−1)+i]=n(i−1)+j.
+1. Changethepositionsoftheelementsinsideeverycol-
+6 Π 2 [k(j−1)+i]=k(j−1)+τ n+j [i].
+umnofthematrix
+7 endfor
+1 k+1 ··· (n−1)k+1 8 endfor
+2 k+2 ··· (n−1)k+2 9 for j=1···ndo
+t−1(I)= . .
+.
+. .
+.
+... . .
+.
+1
+1
+0
+1
+fori
+Π
+=
+[k
+1
+(j
+··
+−
+·k
+1)
+d
++
+o
+i]=Π 1 [Tr[Π 2 [k(j−1)+i]]].
+.
+k k+k . . (n−1)k+k 12 endfor
+13 endfor
+througharandompermutationofkelements. 14 end
+Output: RandomdiffusionoptimalpermutationΠ.
+2. Callt−1(Π (I))tothepreviousmatrixandform,start-
+1
+ingfromthesameone,anewmatrixt−1(Π (Tr(I)))in
+1
+the which one the elements oft−1(Π (I)) are placed
+1 3.3 TheAdvantagesofOurConstruction
+completingtherows.
+ItisclearthatthisconstructionisnotsofastasRijndael’s
+construction,whereonlydisplacementsareappliedfromone
+3. Changeagainthepositionsoftheelementsinsideevery
+column and call t−1(Π (Tr(Π (I)))) this last matrix, statematrixtoanother,evenso,thespeedisnotapriorityin
+1 2
+thenadiffusionoptimalpermutationΠ=Π oTroΠ ourapproach.
+2 1
+Thefirstadvantageofourconstructionistheamountof
+hasbeenobtained.
+variants generated by means of the algorithm 1. If we do
+Usingthismethodwecanbuilt(k!)2ndifferentdiffusion allthepossiblesrowdisplacements, toobtainthediffusion
+optimalpermutations,takenallthepossibleschoicesinS2n. optimaleveryoneofthisdisplacementsshouldbedifferent,
+k
+The prove of this result and at the same time the prove of and for this reason there are onlyVn variants. There is an
+k
+randomnessoftheproposedalgorithmisgivenbelow. obviousdifferencebetweenbothmethods,forexample,for
+diffusionoptimalpermutationsactinginmatricesof4rows
+Demonstration2 Letφ :S2n−→S bethefunctiondefined and 4 columns, our construction offer 248 variants in the
+k kn
+forallτ =(τ ,...,τ )asφ(τ)=Π whereτ isarandom meantimethatRijndael’sconstructionofferonly24variants.
+1 2n τ i
+permutationofS forall1≤i≤2nandΠ isonediffusion Thesecondadvantagethatwecanappreciateisthemini-
+k τ
+optimalpermutationgeneratedthroughthepreviousmethod malityofthefulldiffusion,inthesenseoftheminimalnumber
+byτ. Thenwemustseethatφ alreadydefinedisabijective ofroundsrequiredtoallowsthesameone. Thetheorem1will
+application. beenunciateforthisreason,butbeforeseeingthesameone
+LetusconsiderτandγtwoelementsofS2nsuchthatτ(cid:54)=γ, letusconsidersomeimportantaspects.
+k
+thenexistsatless1≤ j≤2nforthewhichoneτ [i](cid:54)=γ [i]
+j j 1. Let M (GF(28)) be the set of all the matrices with
+forsome1≤i≤k. Nowonlytwothingscanhappeninthe k×n
+krowsandncolumnswithentriesintheGaloisField
+waythatΠisformed.
+GF(28),asalwaysk≤n. ForsimilaritywithRijndael
+For 1≤ j≤n and 1≤i≤k the element k(j−1)+i is
+wewillbecallingstatetoanymatrixofthisset.
+locatedinadifferentcolumnofΠ withrespecttoΠ ,and
+τ γ
+thereforebotharedifferent. 2. KeepinmindatransformationslikeMixColumns,that
+On the other hand if τ =γ ,...,τ =γ happens, for operateindependentlyoverallthecolumnsofthestate
+1 1 n n
+n+1≤ j≤2n and 1≤i≤k the i−th element of the j−th providing local full diffusion. It can be reached by
+columnofΠ willbedifferentfromthei−thelementofthe multiplicationofoneMDSmatrixofsizek×k,andwe
+τ
+j−thcolumnofΠ ,andthereforebotharedifferent. (cid:4) willbecallingthistransformationθ.
+γ
+RandomDiffusionOptimalPermutationswithaLookinDynamicRijndael 49
+3. For each diffusion optimal permutation given in our constructanotherpermutationsTrforthewhichonesthedif-
+constructionwereplacethepermutationΠoftheequa- fusionoptimalisexpectedintheminimalroundsaspossible.
+tion(1),andwewillbecallingthistransformationπ. Theamountofallthispossibilitiesis
+(cid:106)n(cid:107)
+Theorem1 Theroundtransformationθ(π(state))provides (cid:18)
+n
+(cid:19)(cid:18)
+n−k
+(cid:19)(cid:18)
+n−2k
+(cid:19) (cid:18)n− k(cid:19)
+fulldiffusionin2roundifn=kori+1roundifki−1<n≤ki ··· k
+k k k k
+forsomei≥2.
+butforsimplicityinourdesignweareconsideringtheonly
+Demonstration3 Weanalyzethedependenceofonebyteof
+oneexposedabove.
+thestateξ ∈GF(28),withoutlossgeneralitywecanassume
+WecanshowinasimplewaythatRijndael’sconstruction
+thatbyteasthefirst,throughtheroundtransformationalready
+is not efficient for to obtain the full diffusion in a minimal
+defined.
+way using the round transformation θ(π(state)), we mean,
+Ifn=k,thenallthebytesinthefirstcolumnofthestate
+whenthepermutationΠoftheequation(1)isbuiltbymeans
+aftertheapplicationofθ atthefirstroundareξ−dependent.
+ofrowsdisplacementonthestate. Forthevaluesk=4and
+Inthesecondround,inthewaythatΠareconstructed,allthe
+n=N ofthealgorithmRijndaelthenumberofroundsuntil
+columnsofthestateaftertheapplicationofπ haveoneele- b
+reachthefulldiffusionarethesameforbothconstructions,but
+mentξ−dependent,andthen,whitthetransformationθ inthe
+ifk=4andn=10usingtheRijndael’sconstructionthefull
+secondroundalltheelementsofthestateareξ−dependent.
+diffusioninobtainedinaminimaltrailof4roundsforsome
+Whenki−1<n≤kiforsomei≥2theproveofthetheorem
+displacementandusingourconstructionthefulldiffusionin
+issimilar. Hown≤ki,andinthewaythatΠareconstructed,
+obtainedinaminimaltrailof3roundssincek<n<k2.
+thefollowingisexpected.
+Thisisanimportantpropertytokeepinmindifwewant
+Round1: Whenapplyingπ andthenθ alltheelementson to increase the input sizes of the algorithm Rijndael for a
+thefirstcolumnofthestateareξ−dependent. practicalpurpose. Aswesaidatthebeginningofthiswork,
+the design of a new dynamic variant of Rijndael with the
+Round2: Whenapplyingπ thefirstk columnsofthestate reachedresultsisafuturetask.
+haveatlessoneelementξ−dependent,thenafterthe
+applicationofθ alltheelementsonthefirstkcolumns
+ofthestateareξ−dependent. Conclusion
+ThecryptographicalgorithmRijndaelhassufferedsome
+Round3: Whenapplyingπ thefirstk2columnsofthestate
+transformations since it was accepted as the AES in 2001.
+haveatlessoneelementξ−dependent,thenafterthe
+Today,therearenotyetpracticalattacksontheRijndaelthat
+applicationofθ alltheelementsonthefirstk2columns
+canmakeitvulnerable,evenso,someinvestigatorshasmade
+ofthestateareξ−dependent.
+dynamictheirinternaltransformationstoincreasethecryp-
+. tographicstrengthofthesameone,hidingtherelationships
+.
+.
+betweentheplaintextandtheciphertext.
+Inthisworkweprovideaclassofrandomdiffusionop-
+Roundi+1: Whenapplyingπ allthecolumnsofthestate
+timal permutations with a look in dynamic Rijndael. The
+holdhaveatlessoneelementξ−dependent,thenafter
+transformationShiftRowsofferhighdispersionofthebytes
+the application of θ all the elements of the state are
+ξ−dependent. (cid:4) inthestatematrixbymeansofwowsdisplacementandcon-
+tributeswiththefulldiffusion,weshowanewconstruction
+assimpleasispossiblewherethedispersionisequallyob-
+Corollary1 Thenumberofroundsnecessarytoreachthefull
+tainedbutthefulldiffusionisreachedinaminimalnumber
+diffusionbytheroundtransformationθ(π(state))inminimal.
+ofrounds.
+Demonstration4 The minimality of the necessary rounds
+until obtain the complete ξ−dependency is obvious, since
+References
+foreverycolumnthatholdatlessoneelementξ−dependent
+in the next round there are k columns that hold at less one [1] AhmadZ.Al-WattarA.,MahmodR.andIzuraN. Anew
+element ξ−dependent. For another one diffusion optimal dna based approach of generating key-dependent shift
+permutationdonotgeneratedbythealgorithm1theabove rowstransformation. InternationalJournalofNetwork
+mentionedisobtainedinsameorbiggernumberofrounds. (cid:4) SecurityandItsApplications,Vol.7,No.1,2015.
+With this property, that for every column that hold at [2] A. Alfonso. Random generation of diffusion optimal
+lessoneelementξ−dependentinthenextroundtherearek permutation. ProceedingsoftheIIINationalScientific
+columnsthatholdatlessoneelementξ−dependent,wecan WorkshopofCryptography,InstituteofCryptographyof
+toconsideranothermatricest−1(Π (Tr(I)))andthereforeto theHavanaUniversity,2016.
+1
+CienciasMatema´ticas,Vol.XX,No.X,XXXX,Pag.1-6
+50 RandomDiffusionOptimalPermutationswithaLookinDynamicRijndael
+[3] Lauridsen M. Leander G. Beierle C., Jovanovic P. and [6] DaemenJ.andRijmenV. Thedesignofrijndael: Aes-
+Rechberger C. Analyzing permutations for aes-like ci- theadvancedencryptionstandard. Springer-Verlag,2002.
+phers: Understandingshiftrows. IACRCryptologyePrint
+[7] SpainM.andVariaM.Diversitywithintherijndaeldesign
+Archive,No.212,2015.
+principles for resistance to differential power analysis.
+[4] MohsenA.HusseinN.,MonemA.andYousefS. Abyte- Springer-Verlag,ProceedingsoftheCANS-2016,LNCS
+orientedmultikeysshiftrowsencryptionanddecryption 10052:pp.71–87,2016.
+cipherprocessesinmodifiedaes. InternationalJournal
+[8] FederalInformationProcessingStandards. Announcing
+ofScientificandEngineeringResearch,Vol.5,Issue4,
+theadvancedencryptionstandard. FIPSPublication197,
+2014.
+2001.
+[5] Khattab S. Ismail I., Galal-Edeen G. and Moustafa M.
+Performance examination of aes encryption algorithm
+withconstantanddynamicrotation.InternationalJournal
+ofReviewsinComputing,Vol.12,2012.

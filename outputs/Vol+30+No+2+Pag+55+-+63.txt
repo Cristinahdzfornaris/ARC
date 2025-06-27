@@ -1,0 +1,569 @@
+CienciasMatema´ticas,Vol.30,No.2,Pag.55-63,2016
+Recibido09-2016
+Estrategia dida´ctica para el razonamiento lo´gico
+matema´tico en los estudiantes de primer an˜o de la
+carrera meca´nica automotriz en la Universidad
+Te´cnica de Ambato
+Didactic strategy for the logical mathematical
+reasoning in the students of first year of the
+Automotive Mechanics career in the Technical
+University of Ambato
+Luis Efra´ın Velastegui Lo´pez1, Pablo Homero Velastegui Lo´pez1, Ricardo Sa´nchez Casanova2*
+Resumen EldesarrollodelahumanidadhacequeafinesdelsigloXXlosavancesdelaCienciaylaTe´cnica
+tengan alcances cada vez mayores, que son un reto para la educacio´n universitaria. La sociedad necesita
+profesionalesconunaaltapreparacio´nparalaconstruccio´ndelfuturo.Estoexigeunegresadoconlascualidades
+profesionalesparaenfrentarlosavancesdelconocimientohumano.Unodelosaspectosma´simportantesde
+laensen˜anzadelaMatema´ticaydondeexisteinsuficienciaenlosestudiantesesenelrazonamientolo´gico.
+Dentro de este contexto pedago´gico se enmarca la realizacio´n de esta investigacio´n, que aborda la falta de
+razonamientolo´gicomatema´ticoenlosestudiantes.Elobjetivoconsisteendisen˜arunaestrategiadida´ctica
+quefavorezcaelrazonamientolo´gicomatema´tico,enlosestudiantesdeprimeran˜odelacarreradeMeca´nica
+AutomotrizenlaUniversidadTe´cnicadeAmbatoEcuador.
+Abstract Thehumanity’sdevelopmentmakesthatattheendoftheXXcenturytheadvancesofscienceand
+technicareofbiggerreach. Thispossesachallengeforuniversityeducation. Thesocietyneedsprofessionals
+withhighpreparationfortheconstructionofthefuture. Thisdemandsagraduatewiththeprofessionalqualities
+neededtofacetheadvancesofthehumanknowledge. OneofthemostimportantaspectsintheMathematics
+teaching,whereinadequacyexistsinthestudents,isinthelogicalreasoning. Thisinvestigationisframedinside
+thispedagogiccontexttheandapproachesthelackoflogicalmathematicalreasoninginundergraduatestudents.
+Theobjectiveistodesignadidacticstrategythatfavorsthelogicalmathematicalreasoninginthestudentsof
+firstyearofthecareerofAutomotiveMechanicsintheTechnicalUniversityofAmbatoEcuador.
+PalabrasClave
+problema,motivacio´n,razonamientolo´gicomatema´ticoyestrategiadida´ctica
+1UniversidadTe´cnicadeAmbato,Ambato,Ecuador
+2FacultaddeMatema´ticayComputacio´n,UniversidaddeLaHabana,Cuba,ricardo.sanchez@matcom.uh.cu
+*AutorparaCorrespondencia
+Introduccio´n lidadeseducativas,puedecontribuirasatisfacerlasdemandas
+de preparacio´n del hombre para su insercio´n en el mundo
+Porloquerespectaalaeducacio´nselehaatribuidoun contempora´neo.
+papeldecisivoeneldesarrollodelasociedadyenparticularen
+Segu´nelinvestigadorAlekxandrov[2],laMatema´tica,en-
+laformacio´ndelserhumano,puesellapermitelatransmisio´n
+tendidaaqu´ıcomoelproductodeunaseriedee´pocashisto´ri-
+culturaldegeneracio´nengeneracio´n,as´ıcomolaformacio´n
+casyeltrabajodemuchasgeneraciones,tienecomoobjetoel
+devaloreshumanosquegaranticenlaadecuadaincorporacio´n
+estudiodelasformasyrelacionesrealesdelarealidad([2],
+dehombresymujeresalavidasocial.
+pag.84).Esteestudioserealiza,esencialmente,atrave´sdela
+EncuantoalaMatema´tica,porsuscaracter´ısticasyposibi- abstraccio´n,intentando,segu´nEngels[10],elaislamientode
+Estrategiadida´cticaparaelrazonamientolo´gicomatema´ticoenlosestudiantesdeprimeran˜odelacarrerameca´nica
+56 automotrizenlaUniversidadTe´cnicadeAmbato
+esasformasyrelacionesdesucontenido,locualesrealmente Ladificultadenlacomprensio´ndelproblema,engene-
+imposible y constituye la contradiccio´n fundamental de la raltienesuprincipalcausaenelinsuficientetrabajode
+matema´tica[10]. orientacio´nporpartedelprofesor.
+Incluso [2], expreso´ que esta concepcio´n de la Ciencia
+Matema´tica: Apartirdelana´lisisteo´ricoyemp´ıricorealizado,sedevela
+unacontradiccio´ninternaenelhechodequeelprofesorno
+Condiciona su ensen˜anza-aprendizaje ligada a
+esta´ preparadodida´cticamenteparaensen˜arresolverproble-
+laresolucio´ndeproblemas,aspectoconsiderado
+masylosestudiantesposeenbajodesarrollocognitivodelas
+esencialeneldesarrollodelasideasmatema´ticas.
+habilidades ba´sicas para la resolucio´n de problemas lo que
+Laresolucio´ndeproblemascaracterizaaunade
+influyeensurazonamientolo´gicomatema´tico.
+lasconductasma´sinteligentesdelhombreyque
+Porlacomplejidadqueentran˜aabordarestasituacio´n,se
+ma´sutilidadpra´cticatiene[2],pag.85.
+decidio´ comoproblemadeinvestigacio´n:¿Co´mocontribuir
+Los autores de esta investigacio´n consideran que en el adesarrollarelrazonamientolo´gicomatema´ticoenlosestu-
+a´mbito internacional la ensen˜anza de la resolucio´n de pro- diantesdeprimeran˜odelacarreradeMeca´nicaAutomotriz
+blemashadevenidocentrodeatencio´nentrelospsico´logos enlaUniversidadTe´cnicadeAmbatoEcuador?
+cognitivos, por cuanto existe una relacio´n directa entre la Con la intencio´n de aportar a la solucio´n del problema
+posibilidadquetengaunsujetoderesolvereficientementepro- deinvestigacio´nplanteado,esqueseproponecomoobjetivo
+blemasylacalidaddesurazonamientolo´gicomatema´tico. disen˜arunaestrategiadida´cticaquefavorezcaelrazonamiento
+En realidad el Ministerio de Educacio´n de Ecuador a lo´gico matema´tico, en los estudiantes de primer an˜o de la
+trave´sdesuslineamientosgeneralesparaelbachilleratoen carreradeMeca´nicaAutomotrizenlaUniversidadTe´cnica
+Matema´ticaSuperiorproponeque: deAmbatoEcuador.
+Losestudiantesrequierendesarrollarsuhabilidad
+matema´tica,obtenerconocimientosfundamenta- 1. La resolucio´n de problemas
+les y contar con destrezas que le servira´n para
+Desdesiempresehareconocidoladificultadquepresen-
+comprender anal´ıticamente el mundo y ser ca-
+tanlamayor´ıadelaspersonasantelaresolucio´ndeproblemas
+pacesderesolverproblemasquesurgira´nensu
+matema´ticos,deah´ılacreenciadequelaMatema´ticaesuna
+a´mbitoprofesionalypersonalyproponecomo
+disciplinadif´ıcilyqueso´lopocoslograntenere´xitoenella.
+ejeintegradordela´rea.Adquirirconceptosma-
+Sinembargo,laensen˜anzadelaresolucio´ndeproblemasno
+tema´ticosquedesarrollenelpensamientolo´gico
+hab´ıa estado anteriormente como ahora, en el centro de la
+matema´ticoycr´ıticopararesolverproblemasme-
+atencio´ndelosprofesoresecuatorianos.
+diantelaelaboracio´ndemodelos([9],pa´g.3).
+Enela´mbitoescolarloste´rminos“ejercicio”y“problema”
+EncuantoalacarreradeMeca´nicaAutomotrizlosestu- sonempleadosconsingularfrecuencia.Muchasvecesesteuso
+diantesdeprimeran˜otransitanporunprocesodecrecimiento, novaacompan˜adodeunaprecisio´nclara,comoobservaron
+decambiosdecomportamiento,queatraviesanalinteractuar Schoenfeldetal.Duranteunana´lisisdelosobjetivoscurri-
+consuscompan˜eros,profesoresylafamilia.Lautilizacio´ndel culares de la ensen˜anza de la Matema´tica en Iberoame´rica
+razonamientolo´gicomatema´ticoenejerciciosyproblemasha (Schoenfeldetal.1992).
+sidoestigmatizadapordeterminadogradodedificultadenel A pesar de esto, hoy d´ıa el concepto problema ha sido
+niveldeformacio´ndeestean˜oacade´mico. tratadoconsumaprofundidadenlaliteraturapedago´gicay
+La situacio´n problema´tica que se presenta es que en la psicolo´gicaColl[5],Charnay[6],Delgado[7],Antibi[4].
+actualidad los profesores de Matema´tica en la Universidad
+ParaelinvestigadorLabarrere[16],unproblemaes:
+Te´cnicadeAmbato,tienendificultadenbuscarv´ıasdida´cticas
+para mejorar el razonamiento lo´gico matema´tico de forma Determinadasituacio´nenlacualexistennexos,
+activaypra´ctica.Siendoatribuidoaunadida´cticaconductista relaciones,cualidadesdeyentrelosobjetosque
+queofreceunaunidadenlasformasdeensen˜anzasincalcular nosonaccesiblesdirectaoinmediatamenteala
+laheterogeneidaddelasformasdeaprendizaje. persona;osea,unasituacio´nenlacualhayalgo
+Apropo´sito,atrave´sdediversasv´ıasdeconstatacio´ndelo oculto para el sujeto, que e´ste se esfuerza por
+anteriormentecitado,entrelasqueseencuentran:encuestas, hallar(Labarrere,[16]pag.19).
+entrevistas,as´ıcomoresultadosobtenidosproductodereunio-
+nesmetodolo´gicasdentrodelapropiaUniversidadTe´cnica PorloquerespectaDelgado[8],identificatresconcepcio-
+deAmbato,sehanevidenciadoinsuficienciastalescomo: nesgeneralesquerepercutenenlaensen˜anzayenelapren-
+dizajedelaMatema´tica:laplato´nica,lainstrumentalylade
+Limitacionesenlosprofesoresparamotivaralosestu-
+resolucio´n de problemas. Los autores de esta investigacio´n
+diantesenlaresolucio´ndeproblemas.
+enfatizanenestau´ltima,porconsiderarlaMatema´ticacomo
+Inadecuadapreparacio´ndida´cticadelosprofesorespara unadisciplinadina´micaycambiante,lacualesta´enconstante
+trabajarconlosproblemas. desarrolloyreajusteantelasnuevassituacionesproble´micas.
+Estrategiadida´cticaparaelrazonamientolo´gicomatema´ticoenlosestudiantesdeprimeran˜odelacarrerameca´nica
+automotrizenlaUniversidadTe´cnicadeAmbato 57
+Figuras prominentes de la Matema´tica Educativa como teor´ıalosaspectosexternosinfluyentestambie´nenlaconducta
+Polya[17],Fridman[12]yScho¨enfeld[19]hansen˜aladoque motivada.
+elplanteodeproblemasesunaspectoimportante,dentrode Hacia la de´cada del 30 se intenta explicar la conducta
+laformacio´nmatema´ticadelosestudiantes. medianteargumentosdelaTeor´ıadelAprendizaje(enfoque
+ElinvestigadorLabarrere[16],expreso´ queestaimportan- conductista),perodeformareduccionista,puessebasanfun-
+ciaapunta,tantoa“laadquisicio´ndeconocimientosgenerali- damentalmente en la relacio´n est´ımulo-respuesta, simplifi-
+zadossobrelaMatema´ticacomoaldesarrollodelrazonamien- cando as´ı el objeto del conocimiento que abordan, lo que
+tolo´gico,losha´bitosyhabilidadesnecesariosparaeltrabajo limitaconocerotrosaspectosquesonfundamentalesenun
+independienteenestadisciplina”(Labarrere,[16]pag.44). procesoqueesta´estrechamenterelacionadoconelprocesode
+Consideramossegu´nloplanteadoanteriormente,quees- motivacio´n,procesoqueloestimulaydesarrolla.
+to no significa que se niegue el papel instrumental de esta Encuantoalpensamientopsicolo´gicocontempora´neoes
+ciencia,reflejadoeneldesarrollodehabilidadespararesolver revolucionado con la nueva concepcio´n de Vigotsky [20],
+problemasdelavidapra´ctica,parausara´gilmenteellenguaje sobrefuncionesps´ıquicassuperiores,enestrecharelacio´ncon
+simbo´lico,losprocedimientosyalgoritmos,yparadesarrollar elmediosociohisto´rico,lascualescambianenlosdistintos
+elrazonamientolo´gicomatema´tico. periodosdelahistoriadelasociedad.
+Estatransformacio´n,consideraVigotsky[20],eselresul-
+1.1 Lamotivacio´n tadodeunprocesodemediatizacio´n(objetos,instrumentos,
+Lamotivacio´nhasidodeintere´sparamuchosestudiosos signos,significados),enelqueunpapelrelevanteseleotorga
+desdelaantigu¨edad.Losprimerosintentosparaexplicarla alavivenciadelsujetoqueaprendeenunasituacio´nsocial
+naturalezadelamotivacio´nhumana,segu´ndatosaportados determinada,queimplicadesarrollo,enrelacio´nconlocual
+porFlores[11],procedendelospensadoresgriegos. elsujetointeriorizalasoperacionesqueusualmenterealiza
+Concretamente Epicuro (341-270 a.C) argumento´ una enunplanoexterno.Vigotsky[20]denomino´ ZonadeDesa-
+teor´ıa en la que defiende que los sujetos esta´n motivados rrolloPro´ximo“ladistanciaentreelnivelrealdedesarrolloy
+parabuscarelplaceryevitareldolor.So´crates(470-399a.C) elniveldedesarrollopotencial,bajolagu´ıadeladulto,oen
+porsuparte,trato´ deencontrarelporque´ delabu´squedade colaboracio´nconotrocompan˜eroma´scapaz”.
+lafelicidadenelhombre,mientrasqueAristo´teles(384-322
+Su generalidad teo´rico metodolo´gica genero´ un nuevo
+a.C) basado en la observacio´n de los hechos concluyo´ que enfoque,quelosautoresdeestainvestigacio´ntomamoscomo
+determinadasconductashumanasestabanrelacionadascon gu´ıaesencialennuestrotrabajo.ElenfoqueHisto´ricoCultural,
+lossentimientosdeafectoquedirigenelcomportamiento. elcualsustentaquelaensen˜anzaprecedealdesarrollo.
+Alrededorde1910,eltipodeteor´ıayconceptosexplica-
+tivos predominantes era de orientacio´n biolo´gica Gonza´lez
+1.2 Razonamientolo´gicomatema´tico
+[13], centraba su posicio´n solo en las bases orga´nicas que
+Unodelosaspectosesencialesdelaeducacio´nesformar
+permitenentenderyexplicarlasdistintasconductasmotiva-
+hombresymujerescreativas,capacesdevivirenunmundo
+das.Sedefiendelaideadequetodaconductaesba´sicamente
+cada vez ma´s competitivo en el cual a diario se presentan
+instintiva,concibiendoelinstintocomoreflejo(James[21]),
+problemasalosquehayquebuscarlamejoralternativade
+conceptoreduccionistareconsideradoporDougall,W(1871-
+solucio´n.Losprofesorestieneneldeberineludibledeentrenar
+1938),quienalegaqueestos,adema´s,esta´nconformadospor
+alosestudiantesdemaneraquedesarrollenhastaelma´ximo
+elementoscognitivosyafectivos.
+de sus posibilidades un pensamiento racional, verdadero y
+ElinvestigadorGonza´lez[14],expresoquelamotivacio´n:
+lo´gico.Lamatema´ticanecesitadeestetipodepensamientoy
+alaveztieneposibilidadesdecontribuirasudesarrollo.
+Eslacausadelcomportamiento,orazo´nporla
+Parapoderdesarrollarelrazonamientolo´gicomatema´tico
+queunorganismollevaacabounaactividadde-
+enlosestudiantesatrave´sdelaensen˜anzadelasMatema´ticas,
+terminada,oasuvezeslafuerzaqueimpulsaa
+esnecesariotenerencuentaunsistemadereglasyacciones
+conseguirunameta.Puedeserpositivacuando
+quefavoreceneldesarrollodeestetipodepensamiento.
+actuamos con placer y voluntad, pero negativa
+cuandoactuamossinvoluntadybajopresio´n. El investigador Scho¨enfeld [19], considera tres formas
+fundamentalesenlaestructuradelpensamiento:
+Herna´ndez [15], manifesto´ que la motivacio´n son “los Elconceptoeselreflejoenlaconcienciadelhombrede
+factores que ocasionan, canalizan y sustentan la conducta la esencia de los objetos o clases de objetos, de los nexos
+humanaenunsentidoparticularycomprometido”. esencialessometidosaleydelosfeno´menosdelarealidad
+Consideramos que el enfoque biologista se sustenta en objetiva.Unjuicioeselpensamientoenelqueseafirmao
+dosvertientesteo´ricasfundamentales:adaptacio´ndelhombre niegaalgoyelrazonamientoeslaformadepensamientome-
+al ambiente y reaccio´n del hombre ante el ambiente. Pero diantelacualsenuevosjuiciosapartirdeotrosyaconocidos
+ambas vertientes absolutizan el papel de lo orga´nico como (Scho¨enfeld[19]).
+aspectodecisivodelasconductashumanasyas´ılovaloran, Consideramosqueestepensamientocomienzaaformarse
+loquehacequequedecomoelementoimperceptibleenesta apartirdelasprimerasedades.Adema´sestasformaslo´gicas
+Estrategiadida´cticaparaelrazonamientolo´gicomatema´ticoenlosestudiantesdeprimeran˜odelacarrerameca´nica
+58 automotrizenlaUniversidadTe´cnicadeAmbato
+se utilizan dentro la rama de las matema´ticas para resolver Ladefinicio´nofrecidaporRon[18],particularizalasac-
+ejerciciosyproblemas,porlotantoestamoshablandodeun ciones a partir del proceder del profesor y del estudiante,
+razonamientolo´gicomatema´tico. adema´sdeaportarexpl´ıcitamentelascaracter´ısticasparapro-
+Acontinuacio´nofrecemosunsistemadeindicacionespara piciarunprocesodeensen˜anza-aprendizajedesarrollador,en
+contribuiraldesarrollodeunrazonamientolo´gicomatema´tico funcio´ndeldesarrollodelapersonalidaddelestudiante.
+enlosestudiantes: La estrategia dida´ctica que se propone tiene como fun-
+damentofiloso´ficolaconcepcio´ndiale´ctico-materialistadel
+Ded´ıqueletiempoyesfuerzosparaquelosestudiantes
+desarrollo,particularmentelateor´ıadelconocimientoydela
+lleguenadominarloscontenidosylashabilidadesal
+actividad,yaqueenelprocesodeensen˜anza-aprendizaje,para
+nivelqueseexigeelprogramaparasuan˜o.
+favorecereldesarrollodelrazonamientolo´gicomatema´tico,
+Utilizarconfrecuenciaenlasclaseslosproblemas,pa- esnecesarioqueelsujetoseaproximealarealidadmediante
+raelloelprofesordebeimbuirasusestudiantesenla laactividadapartirdesusexperiencias,vivencias,motivacio-
+motivacio´n de resolverlos, por tanto no solo propon- nes,conocimientoseintereses.
+ga problemas, sino estimule constantemente que los Comofundamentopsicolo´gico,elenfoquehisto´rico-cultural
+alumnosbusquenycreennuevosproblemas. planteadoporVigotsky[20]ysusconcepcionessobreapren-
+dizaje en las que se manifiesta que la educacio´n debe esti-
+Recurriraprocedimientoslo´gicosdelpensamientoaso- mularlaactividadmentaldelestudiante,tantoenloafectivo-
+ciadosarazonamientoscomo:inferenciasinmediatas, valorativocomoensucrecimientopersonal.
+deduccio´nporseparacio´n,refutacio´n,demostracio´ndi-
+Desdeelpuntodevistapedago´gico,sesustentaenlavi-
+recta,demostracio´nindirectaylaargumentacio´n.
+genciadelasideasdelapedagog´ıaecuatoriana,deloseduca-
+dorescubanoscomoJose´ delaLuzyCaballero(1800-1862),
+Planificaractividadesdocentedondeelestudianteadop-
+Jose´ Mart´ı(1853-1895)yEnriqueJose´ Varona(1849-1933),
+te una posicio´n activa en el aprendizaje, esto supone
+deesenciahumanista.
+insertarloenlaelaboracio´ndelainformacio´n,aportan-
+dosuscriteriosenelgrupo,plantea´ndoseinterrogantes Comofundamentodida´cticoseasumenlasconcepciones
+yargumentandosuspuntosdevista. delaDida´cticaGeneral,lasteor´ıasdesarrolladorassobreel
+aprendizajeylaMetodolog´ıadelaEnsen˜anzadelaMatema´ti-
+ca.
+2. Estrategia dida´ctica
+Enrealidadlaestrategiadida´cticaincluyeeltratamiento
+Las estrategias constituyen una de las formas que per- enlaresolucio´ndeproblemas,loquepropiciaunaperspectiva
+mitencontribuiralmejoramientodelprocesodeensen˜anza- siste´micaparaeltratamientometodolo´gicodeloscontenidos,
+aprendizaje. Las mu´ltiples definiciones y caracterizaciones apartirdelaactividaddelprofesorparaensen˜araresolver
+quesehanelaboradosobreellashanreflejadosurelacio´ncon problemas.Enunidadindisolubleconlaactividaddeloses-
+cualquieractividadquerequieraeldesarrollodeunalaborde tudiantesparaaprenderahacerlo,principiosdida´cticosque
+direccio´n. tienecomopropo´sitocontribuiraresolverlaslimitacionesde
+EnrealidadlainvestigadoraAddine[1],definelaestrate- losprofesoresylasdeficienciasdelosestudiantes.
+giacomo:“unconjuntodeta´cticasinterrelacionadasconforma Laestrategiadida´cticaseintegraalcurr´ıculoactuante,lo
+unaestrategia”yque“unata´cticaesunprocedimientoespec´ıfi- quepotencialasrelacionesentreloscomponentesdelproceso
+coqueseaplicaytributaatodoelproceso,alaestrategiaen de ensen˜anza- aprendizaje. En los objetivos de ensen˜anza,
+general”. sedeclaraquelosestudiantesdebensercapacesderesolver
+Ron[18]planteaqueunaestrategia: problemasensuentornonaturalysocial.
+Elcontenidoseconcretamedianteeltratamientodecon-
+Contiene un conjunto de acciones que se pla-
+ceptos,relacionesyprocedimientospararesolverproblemasa
+nifican con la misio´n de transformar el estado
+partirdelplanteamientodesituacionesdelavidaoqueexijan
+realdelprocesodeensen˜anza-aprendizajedeuna
+delaaplicacio´ndeconocimientos.
+asignatura,conrelacio´naunaproblema´tica,en
+Losme´todospropicianlabu´squedadeinformacio´nme-
+otroqueeseldeseado.Elconjuntodeacciones
+diante la realizacio´n de tareas que orientan y activan al es-
+esta´ dirigido tanto a la actuacio´n del profesor
+tudiante para la obtencio´n y fijacio´n del conocimiento, el
+en la ensen˜anza como a la del estudiante en el
+desarrollodehabilidadesylaformacio´ndevalores.
+aprendizaje.
+Lasformasorganizativasparaladireccio´ndelprocesode
+Losautoresdeestainvestigacio´nconsideranquelasdos ensen˜anza-aprendizajeseorientanhaciaellogrodeunade-
+definiciones,dentrodelcontextodida´ctico,aportanaspectos cuadoequilibrioentrelaactividaddelprofesor,elestudiante.
+fundamentalesquecaracterizanunaestrategiadida´ctica.La Eltrabajoendu´osyequiposconlafinalidaddepromoverla
+que ofrece Addine [1], destaca el cara´cter siste´mico de las comunicacio´nyfortalecerelintercambio.
+accioneseinvolucra,desdesudefinicio´n,atodosloscompo- Los medios (medios informa´ticos, la realidad social y
+nentesdelproceso. otros), sirven de soporte al proceso y se emplean como un
+Estrategiadida´cticaparaelrazonamientolo´gicomatema´ticoenlosestudiantesdeprimeran˜odelacarrerameca´nica
+automotrizenlaUniversidadTe´cnicadeAmbato 59
+sistema. La evaluacio´n permite conocer en que´ medida el partedelosprofesoresduranteydespue´sdelproceso
+estudiantecumplio´ losobjetivosdeaprendizajeenlaresolu- deaprendizaje.
+cio´ndeproblemas,suconcepcio´nseorientaenpotenciarla
+autoevaluacio´nylacoevaluacio´n. Lasaccionesgeneralesesta´nencaminadasa:
+2.1 Estrategia dida´ctica para el razonamiento lo´gi- Determinar las potencialidades y dificultades de los
+comatema´ticoenlosestudiantesdeprimeran˜o estudiantesenlaresolucio´ndeproblemas.
+delacarrerademeca´nicaautomotriz
+Planificarlaactividaddocentedelprofesorparalaeje-
+Laestrategiadida´cticatienecara´ctergeneralensucon-
+cucio´n del proceso de ensen˜anza- aprendizaje en la
+cepcio´n,loquepermitecontribuiralprocesodeensen˜anza-
+resolucio´ndeproblemas.
+aprendizaje en la resolucio´n de problemas en la asignatura
+Matema´tica,enlosestudiantesdeprimeran˜odelacarrerade Ejecutarelprocesodeensen˜anza-aprendizajeenlare-
+Meca´nicaAutomotriz. solucio´ndeproblemas.
+Laintegranlossiguientescomponentes:misio´n,objetivo
+general, principios dida´cticos, acciones generales dirigidas Controlar y evaluar el aprendizaje de los estudiantes
+alprocesodeensen˜anza-aprendizajeyaccionesespec´ıficasa duranteelprocesodeensen˜anza-aprendizajeenlare-
+realizarporelprofesoryporelestudiante,lasetapasparasu solucio´ndeproblemas.
+implementacio´nylasformasdeevaluacio´n.
+Lasaccionesarealizarporelprofesordurantelasfasesde
+resolucio´ndeproblemasseconcretandelasiguientemanera:
+1. Evidenciarrelacionessignificativasenelaprendizaje.
+2. Despertarmotivacionesintr´ınsecasyexpectativaspor
+elaprendizajeenlaresolucio´ndeproblemas.
+Lasdelestudiante:
+1. Establecerrelacionesentrelosconocimientosanteriores
+conlosqueadquiereyconlaexperienciacotidiana.
+2. Resolverejerciciosyproblemasconintere´sysatisfac-
+cio´npersonal.
+Figura1.Esquemadelaestrategiadida´ctica.
+Laestrategiadida´cticaesta´formadaporvariasetapasque
+seexponenacontinuacio´n.
+Laestrategiadida´cticaquesemuestraenlafigura1tiene
+2.2 Primeraetapadelaestrategiadida´ctica
+comomisio´ncontribuiralaformacio´ndelestudiantemediante
+Enestaetapaserealizaeldiagno´sticoinicialdelproceso
+accionesquefavorezcanelprocesodeensen˜anza-aprendizaje
+deensen˜anza-aprendizajeenlaresolucio´ndeproblemas.
+enelrazonamientolo´gicomatema´tico.Comoobjetivocon-
+Laetapadediagno´sticoinicialconstituyeelpuntodepar-
+tribuiralprocesodeensen˜anza-aprendizajeparafavorecerla
+tidadelaestrategiadida´cticaypresuponeladeterminacio´n
+capacidadderazonamientolo´gicomatema´ticoenlosestudian-
+delestadorealdelprocesodeensen˜anza-aprendizaje.Enesta
+tesdeprimeran˜odelacarreradeMeca´nicaAutomotrizenla
+se identifican las potencialidades y dificultades de los estu-
+UniversidadTe´cnicadeAmbatoEcuador.
+diantesenloscontenidosprecedentesas´ıcomosuestadode
+Losprincipiosdida´cticosqueseconsideranson:
+motivacio´n.
+Principio del cara´cter educativo de la ensen˜anza: se
+2.2.1 Accionesfundamentalesdelaprimeraetapa
+fundamenta en la ley del proceso de ensen˜anza que
+Las acciones fundamentales del profesor en esta etapa
+expresalaunidaddelainstruccio´nylaeducacio´n.
+son:
+Principiodelaactividadindependiente:losestudiantes
+tienenelderechoatrabajardentroyfueradelaulade 1. Analizaelprogramadelaasignaturaparadeterminar
+manera auto´noma. Los profesores deben brindar los los objetivos y contenidos a evaluar como parte del
+recursosparaquetrabajendemaneraactiva,creativa, diagno´sticoinicial.
+colectivaeindependiente.
+2. Elaborayaplicaralosestudianteseldiagno´sticoinicial
+Principiodeayudaseindicaciones:losestudiantesde- sobre el sistema de conocimientos y habilidades que
+ben recibir las respectivas ayudas e indicaciones por sonba´sicos.
+Estrategiadida´cticaparaelrazonamientolo´gicomatema´ticoenlosestudiantesdeprimeran˜odelacarrerameca´nica
+60 automotrizenlaUniversidadTe´cnicadeAmbato
+3. Valoralosresultadosindividualesycolectivosdeldiagno´sti-2.3.2 Consideracionesmetodolo´gicasparalasegundaeta-
+coinicialaplicado. pa
+Laetapatieneunaduracio´naproximadadetressemanas.
+4. Planificayorganizalossistemasdeayuda,demanera Laconcrecio´ndelasaccionesseinsertaenlapreparacio´ndel
+individualycolectiva,sobrelabasedelosresultados profesoryenlasactividadesmetodolo´gicasconelcolectivo
+deldiagno´sticoinicial. del primer an˜o. La preparacio´n se hara´ mediante el trabajo
+cooperativoyeldia´logo,parapropiciarlacohesio´neneltra-
+bajodelosprofesores,demodoquetodostenganoportunidad
+Lasaccionesdelestudianteenestaetapaesta´ndadaspor:
+deintercambiar,contrastaropinionesysustentarpuntosde
+vistaeideas.
+1. Participardeformaactivaenlarealizacio´ndeldiagno´sti-
+EsimportantequeseanalicelospasospropuestoporPol-
+coinicial.
+ya [17], para poder resolver un problema: “comprender el
+problema, concebir un plan, ejecutar el plan y examinar la
+2. Reflexionar de forma individual sobre los resultados
+solucio´nobtenida”.
+obtenidosdiagno´sticoinicial.
+Estecontenidoenelprogramaconstadedocehorasclases.
+Elsistemadeclasesesta´ distribuidodelaformasiguiente:la
+3. Participarenelana´lisiscolectivodelosresultadosdel
+sistematizacio´ndelosconocimientospreviosabarcadoshoras
+diagno´sticoinicialaplicados.
+clasesydependedelosresultadosdeldiagno´sticoinicial,el
+quecorrespondealaintroduccio´nyalaejercitacio´ndelos
+2.2.2 Consideracionesmetodolo´gicasparalaprimeraeta- nuevoscontenidossedesarrollaenochohorasclasesyelde
+pa
+aplicacio´ndelosconocimientossedesarrollara´ endoshoras
+La etapa tiene una duracio´n aproximadamente de dos
+clases.
+semanas,enestaserealizanlasaccionesparalapreparacio´n
+Sobrelatarea,entrelasdiversasfuentesconsultadas,se
+y realizacio´n del diagno´stico inicial. La preparacio´n puede asumio´ la definicio´n de A´lvarez de Zayas [3], que expresa
+realizarsedemaneraindividualycolectiva,enelhorariode
+que:“eslace´luladelprocesodocenteeducativo;enellahay
+lapreparacio´nmetodolo´gica.Elestudiodelprogramadebe
+unconocimientoaasimilar,unahabilidadadesarrollar,un
+propiciareldebateenelcolectivoloquepermiteidentificar
+valoraformar;porloquemedianteelcumplimientodelas
+losobjetivosycontenidosaevaluareneldiagno´sticoinicial.
+tareasdocenteselestudianteseinstruye,desarrollayeduca”.
+Consideramos que esta definicio´n revela el proceso de
+2.3 Segundaetapadelaestrategiadida´ctica asimilacio´ndelosconocimientos,eldesarrollodehabilidades,
+Duranteestaetapaserealizalaplanificacio´ndelproceso vinculaelcomponenteeducativoylaformacio´ndevalores
+deensen˜anza-aprendizajeenlaresolucio´ndeproblemas. quesedebelograrduranteelproceso.
+Laetapadeplanificacio´ndelprocesodeensen˜anza-aprendizaje Lascaracter´ısticasdelastareasdocentesqueseplanifi-
+tienecomofinalidadlaplaneacio´nparalaejecucio´ndelpro- quendebenrespondera:
+cesoyconsecuentementelapreparacio´ndelprofesorparasu
+ejecucio´n. Partirdeldiagno´sticoparasuperarlosnivelesrealesde
+desarrollodelestudiante,contareasdeniveldecom-
+plejidadcreciente,clararedaccio´neintencionalidaden
+2.3.1 Accionesfundamentalesdelasegundaetapa
+susexigencias.
+Las acciones fundamentales del profesor en la segunda
+etapason:
+Poseerestructuracio´nlo´gicaycoherenciaentresuspar-
+tes, manifestando unidad entre los componentes del
+1. Realiza,demaneraindividual,elana´lisismetodolo´gico
+proceso de ensen˜anza-aprendizaje, personal y perso-
+delaunidadenlaqueseinsertanloscontenidosconla
+nalizado, as´ı como la combinacio´n inteligente de los
+resolucio´ndeproblemas.
+aspectosinstructivos,educativosydesarrolladores.
+2. Dosificaelcontenidodeacuerdoconlossistemasde Presentaruncara´cterproble´micoquepromuevalaacti-
+clases, en funcio´n de los resultados del diagno´stico vacio´n,as´ıcomolautilizacio´nconscientedeprocedi-
+inicialyexigenciasdelprograma. mientosdirigidosalaautorreflexio´nyautorregulacio´n
+delaprendizaje
+3. Realizaydiscuteeltratamientometodolo´gicodeejer-
+ciciosyproblemasqueseproponenenlossistemasde 2.4 Terceraetapadelaestrategiadida´ctica
+tareas. Durantelaterceraetapaserealizalaejecucio´ndelproce-
+sodeensen˜anza-aprendizajeenlaresolucio´ndeproblemas.
+4. Planifica en que clase trabajara los pasos propuestos Tienecomocaracter´ısticaesenciallarealizacio´ndeacciones
+porPolya(1945),pararesolverproblemas. delprofesorydelestudianteduranteelprocesodeensen˜anza-
+Estrategiadida´cticaparaelrazonamientolo´gicomatema´ticoenlosestudiantesdeprimeran˜odelacarrerameca´nica
+automotrizenlaUniversidadTe´cnicadeAmbato 61
+aprendizaje en la resolucio´n de problema para favorecer el 1. Laempresaele´ctricadeGuayaquiltieneextendidauna
+razonamientolo´gicomatema´tico. l´ıneadetransmisio´ndealambredecobredeunpeso
+totalde2240kg.Instalaunasegundal´ıneade2400
+2.4.1 Accionesfundamentalesdelaterceraetapa mma´sextensacon12kgmenosdepesoporkm,por
+Lasaccionesfundamentalesdelprofesordurantelatercera locual,pudoinstalarunatotalidaddepesodealambre
+etapason: igualalqueempleo´ enlaprimerainstalacio´n.¿Calcula
+lalongitudtotaldel´ıneainstalada?
+1. Promoverelintere´senlosestudiantesporlosconteni-
+2. La seccio´n transversal de una pieza tiene forma de
+dosquesesistematizan,establecerlasrelacionesentre
+tria´nguloequila´teroconunaperforacio´ncircularenel
+estosylosqueseintroducira´ncomonuevos.
+centro.Elladodeltria´nguloesde6,0cmyelradiodel
+huecoeslamitaddeladistanciadelcentrodeltria´ngulo
+2. Identificarlarelacio´ndeloscontenidosquesesistema-
+allado.¿Calculaela´readelaseccio´ntransversal?
+tizanenlaclaseconlosyatratados.
+Durantelaclaseelprofesordebetenerencuentaquepara
+3. Determinarlasposiblesdificultadesquepuedenpresen-
+resolverunproblemaesnecesario:
+tarlosestudiantesenlasfasesalresolverproblema.
+Comprendereltextodelproblemaatrave´sdesulec-
+4. Promoverlabu´squedadediferentesalternativasdeso- turaanal´ıticaysureformulacio´nencasonecesario,de
+lucio´nenlosejerciciosyproblemas,conflexibilidaden mododepoderintroducirydeclararvariablesyhacer
+losprocesosdelpensamientoydestacalama´seficiente. latraduccio´ndellenguajecomu´nalalgebraico.
+Encontrar una v´ıa de solucio´n adecuada, a partir de
+5. Potenciar la reflexio´n ante soluciones incorrectas en
+establecerrelacionesentreloqueseconoceyloque
+ejerciciosyproblemas,paraquelosestudiantesdetec-
+sedesconoce,valorandolaposibilidaddeelaborarun
+tensusdeficiencias,busquenlascausaseidentifiquen
+modelolineal,unatablaounafiguraparamodelarla
+co´moseeliminaelerroryco´moevitarloensituaciones
+situacio´n.
+futuras.
+Resolverhaciendousodealgunasdelasv´ıasdesolu-
+Lasaccionesarealizarporelestudianteson: cio´nyencontrarlosvaloresdelasvariables.
+Realizarelcontrolvalorativodelprocesoderesolucio´n
+1. Establecerrelacionesentreloscontenidosquesesiste-
+ydesusresultadosteniendoencuentaeltextodelpro-
+matizanylosqueseintroducen,despertarelintere´spor
+blema(comprobacio´n),as´ıcomovalorarparaque´sirve
+suaprendizaje.
+estaexperienciaenpro´ximasocasiones.
+2. Establecerlarelacio´nentreloscontenidosanterioresy
+Darlasrespuestasquesecorrespondanconlasinterro-
+losquesetratanenlasclases.
+gantesdelproblema.
+3. Identificarlasposiblesdificultadesquepuedenpresen- 2.5 Cuartaetapadelaestrategiadida´ctica
+tarenlaresolucio´ndelosejerciciosyproblemas. Enestaetapaserealizaelcontrolyevaluacio´ndelproce-
+sodeensen˜anza-aprendizajeenlaresolucio´ndeproblemas.
+4. Buscar todas las v´ıas de solucio´n en los ejercicios y
+Laetapadecontrolyevaluacio´ndelprocesodeensen˜anza-
+problemas,conunpensamientoflexible,ydeterminar
+aprendizaje en la resolucio´n de problemas esta´ presente en
+lama´seficiente.
+lasetapasanterioresypresuponecomprobaryvalorarelcum-
+plimientodelosobjetivosdeensen˜anzaduranteelproceso.
+5. Identificaryexplicarloselementosesencialesquele
+Enestaestrategiadida´cticalarealizacio´ndelasactividades
+permitanobtenerlasolucio´nenelejerciciooproblema,
+evaluativastienecara´ctersistema´ticoydebeestimularenlos
+buscarlascausasdeloserrorescometidosytrazarmetas
+estudianteslaautoevaluacio´nylacoevaluacio´n.
+paraeliminarlos.
+2.5.1 Accionesfundamentalesdelacuartaetapa
+2.4.2 Consideracionesmetodolo´gicasparalaetapa Lasaccionesfundamentalesquerealizaelprofesorson:
+Las actividades que se desarrollan en las clases deben
+1. Controlayevalu´aeldesarrollodelprocesodeensen˜anza-
+evidenciarelordenamientoylaestructuracio´ndeloscono-
+aprendizajeenlaresolucio´ndeproblemaporlascuatros
+cimientos que se sistematizan. Las tareas que se proponen,
+fasespropuestadePolya[17].
+concretanlaintegracio´nentredisciplinas,larelacio´nconla
+pra´cticaylavida,vinculadasconlosinteresescognitivosy 2. Aplicate´cnicasoralesyescritasconcara´ctersistema´ti-
+conactividadescotidianasdondeparticipeelestudiante. codirigidasalacomprobacio´ndelosobjetivosevalua-
+Ejemplos: doseneldiagno´sticoinicial.
+Estrategiadida´cticaparaelrazonamientolo´gicomatema´ticoenlosestudiantesdeprimeran˜odelacarrerameca´nica
+62 automotrizenlaUniversidadTe´cnicadeAmbato
+3. Promuevequelosestudiantesdurantelasclasesauto- [5] Coll,C.(1993).Psicolog´ıayDida´cticas:unarelacio´n
+evalu´ensupropiaactuacio´n,susprogresosolimitacio- a debate, Revista Infancia y Aprendizaje (Journal for
+nes,suserroresodesaciertos,paratomarconcienciade the Study of Education and Development). No 62-63.
+ellosyerradicarlos. Madrid.Espan˜a.
+Lasaccionesarealizarporelestudianteson: [6] Charnay,R.(1994).AprenderpormediodelaResolu-
+cio´ndeProblemas,Dida´cticadelaMatema´tica.Aportes
+1. Participarenelprocesodeevaluacio´ndisen˜adoporel
+yreflexiones.EditorialPaido´s.
+profesordurantelaclaseymediantelarealizacio´nde
+actividadesevaluativas. [7] Delgado,J.R.(1994).“Unavariantedeorganizacio´ndel
+Ca´lculo Diferencial resolviendo problemas”. Trabajo
+2. Autoevalu´ar su propia actuacio´n y sus resultados en
+presentado al Primer Taller Internacional sobre la En-
+funcio´ndesusprogresosolimitaciones.
+sen˜anzadelaMatema´ticaparaIngenier´ıayArquitectura.
+3. Valorarlaactuacio´nyresultadosdelaprendizajedesus ISPJAE.CiudaddelaHabana.
+compan˜eros.
+[8] Delgado,J.R.(1997).“Retosdelaensen˜anzadelaMa-
+2.5.2 Consideracionesmetodolo´gicasparalaetapa tema´ticaenelumbraldelsigloXXI”.Ponenciapresenta-
+Laevaluacio´ndurantelaaplicacio´ndelaestrategiadida´cti- daparaelExamendeM´ınimodeCienciasSocialespor
+caseconcibecomoelprocesoquepermitecomprobaryvalo- laopcio´ndelGradodeDoctorenCienciasPedago´gicas.
+rarelcumplimientodelobjetivopropuestoyladireccio´ndela DepartamentodeCienciasSociales.ISPJAE.Ciudadde
+ensen˜anzayelaprendizaje,ensusmomentosdeorientacio´ny laHabana,Cuba.
+ejecucio´n.Tienecara´ctersistema´ticoypermitelavaloracio´n
+delasaccionesplanificadasencadaetapa. [9] Educacio´n(2013).LineamientoscurricularesMatema´ti-
+caSuperior.EditoraAndina,Quito–Ecuador.
+3. Conclusiones
+[10] Engels, F. (1962). Anti – Du¨hring. Me´xico: Editorial
+Elestudioteo´ricorealizadofacilito´ sistematizarlosfun- Grijalbo.
+damentos teo´rico-metodolo´gicos y corroborar que, aunque
+[11] Flores,C.(1994).Motivacio´n.Unaalternativaparael
+eltratamientodeloscontenidosydelametodolog´ıaparala
+e´xito.Caracas:FondoEditorial,UniversidadPedago´gica
+ensen˜anzadeMatema´ticaaparecenampliamenteabordados
+ExperimentalLibertador(FEDUPEL).
+pordiferentesautores,losaspectosrelacionadosconelrazo-
+namiento lo´gico matema´tico evidencian limitaciones en su
+[12] Fridman,L.M.(1977):Ana´lisislo´gico-psicolo´gicosde
+tratamiento.
+losproblemasdocentes.EditorialPedago´gica,Moscu´.
+Laestrategiadida´cticaelaboradaparaelprocesodeen-
+sen˜anza-aprendizajeenlaresolucio´ndeproblemasconcibio´ [13] Gonza´lez Collera, L. (2004). La motivacio´n hacia el
+accionesparalapreparacio´ndelprofesororientadasalareali- estudio.Suevaluacio´nydesarrollo.Tesisdedoctorado.
+zacio´ndeldiagno´stico,laplanificacio´ndelproceso,suejecu- ICCP,laHabana.Cuba.
+cio´nyelcontrol.Adema´stuvoenconsideracio´nlaactuacio´n
+[14] Gonza´lez,D.(1995):Teor´ıadelaMotivacio´nyPra´ctica
+del profesor en la ensen˜anza y la de los estudiantes en la
+Profesional.EditorialPuebloyEducacio´n.LaHabana.
+realizacio´ndelasaccionesparalaresolucio´ndeproblemas.
+[15] Herna´ndez,L.(2007).Utilizacio´ndeproblemasparala
+Referencias motivacio´nenlaensen˜anzadelamatema´tica.Tesisen
+opcio´nalt´ıtulodema´ster.InstitutoSuperiorPedago´gico
+[1] Addine, F. (1998). Dida´ctica y optimizacio´n del pro-
+SilverioBlancoNu´n˜ez.SanctiSp´ıritus.
+cesodeensen˜anza-aprendizaje.Soportedigital.LaHa-
+bana, Cuba: Instituto Pedago´gico Latinoamericano y
+[16] Labarrere,A.(1988).Lasolucio´nylaformulacio´nde
+Cariben˜o.
+problemas como forma de contribuir al desarrollo de
+[2] Alekxandrov,P.(1979).LaMatema´tica,sucontenido, habilidadesyalpensamientomatema´tico.Materialmi-
+me´todo y significado. Editorial Alianza Universitaria, meografiado.LaHabana.
+Madrid.
+[17] Polya,G.(1965). Co´moplantearyresolverproblemas.
+[3] A´lvarezdeZayas,C.M.(1999).Dida´ctica:Laescuela Trillas, Mexico. (Versio´n en espan˜ol de la obra How
+en la vida. 3era Edicio´n. La Habana, Cuba: Editorial tosolveitpublicadaporPrincetonUniversityPressen
+PuebloyEducacio´n. 1945)
+[4] Antibi,A.(1997).Dida´cticadelaMatema´tica.Me´todos [18] Ron,J.(2007).Unaestrategiadida´cticaparaelproceso
+de Resolucio´n de Problemas: L´ımites. Editado por la deensen˜anza-aprendizajedelaresolucio´ndeproblemas
+UniversidadAuto´nomadeGuerrero,Me´xico. enlasclasesdeMatema´ticaenlaEducacio´nSecundaria
+Estrategiadida´cticaparaelrazonamientolo´gicomatema´ticoenlosestudiantesdeprimeran˜odelacarrerameca´nica
+automotrizenlaUniversidadTe´cnicadeAmbato 63
+Ba´sica.Tesisenopcio´nalGradoCient´ıficodeDoctor [20] Vigotsky,L.S.(1978).Eldesarrollodelosprocesospsi-
+en Ciencias Pedago´gicas. La Habana, Cuba: Instituto colo´gicossuperiores.Barcelona,Espan˜a:EditorialCr´ıti-
+SuperiorPedago´gico“EnriqueJose´ Varona”. ca.
+[19] Scho¨enfeld,A.H.(1993):Resolucio´ndeproblemas.Ele-
+mentosparaunapropuestaenelaprendizajedelama-
+tema´tica.CuadernosdeInvestigacio´n,No.25,Me´xico, [21] James,W.(1890).ThePrinciplesofPsychology. Edito-
+D.F. rialUniversidaddeNavarra.

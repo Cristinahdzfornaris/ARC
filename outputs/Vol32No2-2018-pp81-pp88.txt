@@ -1,0 +1,542 @@
+CienciasMatemáticas,Vol.32,No.2,Pag.81-88, 2018
+Recibido02-2018
+Empleo de te´cnicas de regularizacio´n para la
+solucio´n del problema inverso unidimensional en la
+´
+Tomograf´ıa Optica Difusa
+Use of regularization technics for the solution of the
+one-dimensional Difusse Optical Tomography
+inverse problem
+Carmen Tejeda Toledo1*, Luis Orlando Castellanos Pe´rez2
+Resumen Los problemas inversos se han convertido en una herramienta de gran potencial dentro de las
+Matema´ticas. En la presente investigacio´n se abordara´n elementos relacionados con la teor´ıa general de
+los problemas inversos y su aplicabilidad a la tomograf´ıa o´ptica difusa. Se hara´ uso de la pseudoinversa de
+Moore-Penrosecomocasoparticulardeinversageneralizada.Sedescribira´nelementosrelacionadosconel
+me´tododedescomposicio´nenvaloressingularesdeunamatriz,lasolucio´ndesistemaslinealesenelsentidode
+m´ınimoscuadradosylateor´ıageneraldelaregularizacio´n,abordadaatrave´sdetresme´todosfundamentales:
+ladescomposicio´nenvaloressingularestruncada,laregularizacio´ndeTikhonovyelme´tododelasiteraciones
+deLandweber.Adema´sseformulara´ yresolvera´ elproblemainversounidimensionalenlatomograf´ıao´ptica
+difusaporlosme´todosyamencionados,realizandounacomparacio´nentreellosparaseleccionarelquebrinda
+mejorcomportamientoantediferentesvariacionesdelospara´metrosinvolucrados.
+Abstract Inverse problems have become a tool of great potential in Mathematics. In the current research,
+elementsrelatedtothegeneraltheoryofinverseproblemsandtheirapplicabilitytothediffuseopticaltomography
+areexposed. TheMoore-Penrosepseudoinverseasparticularcaseofgeneralizedinverseisalsopresented.
+Furthermore,elementsrelatedtothesingularvaluedecompositionofamatrix,thesolutionoflinearsystems
+inthesenseofleastsquare,andthegeneraltheoryofregularization,approachedthroughthreefundamental
+methods: thetruncatedsingularvaluedecomposition,theTikhonovsregularization,andtheLandwebersiterative
+method are described. The methods already mentioned are used to numerically solve the one dimensional
+versionoftheinverseproblemindiffuseopticaltomography,whichmodelisalsodescribedinthispaper,making
+acomparisonbetweenthemtoselecttheonethatprovidesbetterbehavioragainstdifferentvariationsofthe
+parametersinvolved.
+PalabrasClave
+pseudoinversa—tomograf´ıa—problemainverso—regularizacio´n
+1DepartamentodeLicenciaturaenMatema´tica,UniversidaddeHolgu´ın,Holgu´ın,Cuba,ctejedat@uho.edu.cu
+2DepartamentodeLicenciaturaenMatema´tica,UniversidaddeHolgu´ın,Holgu´ın,Cuba,locp@uho.edu.cu
+*AutorparaCorrespondencia
+Introduccio´n enfoque ma´s usadode este problemainversoresponde ala
+versio´ntridimensional,paralacualsehanplanteadovarios
+Latomograf´ıao´pticadifusaconstruyeima´genesapartir
+me´todos de regularizacio´n y modelos computacionales. La
+delcomportamientodeungrupodefotonesalatravesarun
+complejidadqueencierraestaversio´ntridimensionallahace
+cuerpoutilizandoluzcasiinfrarroja.Ofrecevariasventajas:
+inaccesibleparaunpa´ıssubdesarrolladocomoCubadonde
+esunamodalidaddeexamennoinvasiva,daposibilidadde
+todav´ıa no se ha estudiado esta te´cnica, hasta donde pudo
+serusadaparaexa´menesneonatales,elsistemadeobtencio´n
+conocerestainvestigacio´n,nisecuentaconlosrecursosmate-
+deima´genesesseguro,debajocosto,relativamentesimple
+rialesparaimplementarla;entoncesseimponelanecesidad
+y,enlamayor´ıadeloscasos,inclusotransportable;adema´s
+de desarrollar y resolver la versio´n unidimensional de este
+la obtencio´n de informaciones precisas sin causar dan˜os a
+problema inverso como base para comprender y poder lle-
+lospacientesesdegranvalorparaundiagno´sticocertero.El
+Empleodete´cnicasderegularizacio´nparalasolucio´ndelproblemainversounidimensionalenlaTomograf´ıaO´ptica
+82 Difusa
+var a la pra´ctica el problema tridimensional. Lo planteado 3. Condicio´nnormalizada:AA+∈Rmesautoadjunta,es
+anteriormente,generalasiguienteproblema´ticaexpresada
+decirAA+=(AA+)t
+en el hecho de que desde el punto de vista matema´tico, en
+4. Condicio´nnormalizadareversa:A+A∈Rnesautoad-
+laactualidad,todav´ıanohayunateor´ıatotalmentecompleta
+junta,esdecirA+A=(A+A)t
+quepermitaapoyarlasinvestigacionesme´dicasdedicadasa
+ladeteccio´ndelca´ncerdemaneranoinvasiva.Esporelloque
+2.1 Descomposicio´nenvaloressingulares
+estainvestigacio´nseproponecomoobjetivo:determinarcua´l
+Ladescomposicio´nenvaloressingulares(SVD)esuna
+me´tododeregularizacio´nlinealbrindamejorprecisio´npara
+importantefactorizacio´ndeunamatrizrectangularana´loga
+resolverelproblemainversounidimensionalenlatomograf´ıa
+a la diagonalizacio´n de matrices sime´tricas. Los siguientes
+o´pticadifusa..
+teoremas[1]garantizanlaSVDdecualquiermatrizAyuna
+expresio´nparasupseudoinversa.
+1. Problemas Inversos
+Teorema2.1 SeaA∈Rm×nyrang(A)=r=min{m,n}.En-
+Enlasu´ltimasdosde´cadaslosproblemasinversossehan
+toncesexistenmatricesunitariasU ∈RmyV ∈Rntalesque
+posicionado como una de las a´reas de mayor crecimiento
+en Matema´tica Aplicada. En [4] se define como problema A=USVt (1)
+inverso aquel que tiene el objetivo de determinar causas a
+trave´sdeefectosobservados.Lasteor´ıasf´ısicaspermitenha- donde S∈Rm×n es una matriz que tiene como r primeros
+cerpredicciones,esdecir,dadaunadescripcio´ncompletade elementosdeladiagonallosvaloressingularespositivosde
+un sistema f´ısico (modelo), se puede predecir el resultado Aytodoslosotroselementosigualesacero.
+dealgunasmediciones,e´steeselllamadoproblemadirecto.
+Elproblemainversoconsisteenutilizarelresultadorealde Teorema2.2 LapseudoinversadeMoore-PenroseA+∈Rn×m
+algunasmedidasparadeducirlosvaloresdelospara´metros deAesta´ dadapor
+que caracterizan el sistema. En general, se considera a los
+Problemas Inversos como rama de las Matema´ticas a ra´ız A+=VS+Ut (2)
+de la aparicio´n de los trabajos de Tikhonov [9], con la in-
+dondeS+eslapseudoinversadeS,cuyoselementossonlos
+troduccio´ndelosme´todosderegularizacio´nparaproblemas
+rec´ıprocosdelosvaloressingularesnonulosdeA,yU yV
+malplanteados:elargumentoba´sicoesquesusideaspermi-
+sonlasmatricesortogonalesqueresultandedescomponera
+tieronalacomunidadcient´ıficaromperconloqueahorase
+Aenvaloressingulares.
+consideraunprejuiciohisto´ricoyquetienesuorigenenun
+conceptoque,porotrolado,hahechoavanzargrandemente
+2.2 Solucio´n de sistemas lineales en el sentido de
+lasEcuacionesenDerivadasParciales:elconceptodeproble-
+m´ınimoscuadrados
+mabienpropuestoobienplanteado(well-posed).Hadamard
+Se parte del siguiente problema. Sean A∈Rm×n y y∈
+[5] afirmo´ que los problemas de intere´s f´ısico son aquellos
+Rm dados. Determinar x∈Rn tal que y=Ax. Cuando este
+quetienenunasolucio´nu´nicaquedependecontinuamentede
+problemanotienesolucio´nloquesehaceesrelajarelcon-
+losdatos,esdecir,esestableconrespectoatodaperturbacio´n
+ceptodesolucio´nconsiderandosolucionesaproximadas;en
+enlosdatos.Losproblemasquenosatisfacenalgunadeestas
+m´ınimoscuadradossetomaxˆ∈Rn quecumple(cid:107)Axˆ−y(cid:107)=
+condiciones,sedenominanmalplanteados(ill-posed).
+min x∈Rn(cid:107)Ax−y(cid:107)[1].
+2. Preliminares Matema´ticos. Inversa Teorema2.3 Sea A∈Rm×n, y∈Rm. El problema de mini-
+generalizada mizacio´n
+x
+(cid:98)
+=argmin x∈Rn(cid:107)Ax−y(cid:107)
+La inversa generalizada es una generalizacio´n de la no-
+cio´n de inversa de matrices la cual se aplica a matrices no
+tienelamismasolucio´nxˆ∈Rn quelaecuacio´nAtAxˆ=Aty.
+cuadradas,comocasoparticulardeinversageneralizadase
+Adema´sesu´nicasiysolosiN (AtA)={0}.
+encuentralapseudoinversadeMoore-Penrose[1],descubierta
+porEliakimHastingsMooreen1920yreinventadaporSir 3. Me´todos de regularizacio´n para la
+RogerPenroseen1955.
+solucio´n de problemas mal planteados
+Definicio´n2.1 PseudoinversadeMoore-Penrose.Seanmy
+El mal planteamiento de los problemas inversos es re-
+n∈N y seaA∈Rm×n. Unamatriz A+∈Rn×m se diceque
+sueltousandote´cnicasconocidascomoderegularizacio´nque
+eslapseudoinversadeMoore-PenrosedeAsisatisfacelas
+consistenenintroduciralgunaclasedeinformacio´napriori
+condicionessiguientes:
+acercadelasolucio´ndeseadaparaestabilizarelproblema.En
+1. Condicio´ngeneral:AA+A=A te´rminosmatema´ticos,suobjetivoconsisteenaproximarla
+solucio´nxdelaecuacio´ny=Ax,apartirdelconocimiento
+2. Condicio´nreflexiva:A+AA+=A+ del dato directo perturbado yδ con un nivel de error dado:
+Empleodete´cnicasderegularizacio´nparalasolucio´ndelproblemainversounidimensionalenlaTomograf´ıaO´ptica
+Difusa 83
+(cid:107)y−yδ(cid:107)≤δ.Lasdefinicionesylosteoremasquesebrindan 3.2 Regularizacio´ndeTikhonov
+acontinuacio´nreflejanlosaspectosesencialesdentrodela Esteme´todopuedeserintroducidodedosformas[6]:a
+teor´ıadelaregularizacio´n[6]. trave´sdeunproblemademinimizacio´nocomouncasoespe-
+cialdelTeorema3.1.ParaelprimercasoTikhonovsugirio´,
+Definicio´n3.1 Una estrategia de regularizacio´n es una fa- parasuperarelmalplanteamiento,transformarlaecuacio´n
+miliadematricesR α :Rm−→Rn,α ≥0,deformaque normal a una ecuacio´n de la forma (AtA+αI)x=Aty que
+tienelamismasolucio´nqueelproblemademinimizacio´n:
+l´ımR Ax=x,∀x∈Rn (3)
+α
+α→0 x =argmin (cid:8) (cid:107)Ax−y(cid:107)2+α(cid:107)x(cid:107)2(cid:9) , α >0.
+α
+El para´metro α es llamado para´metro de regularizacio´n y
+xα,δ =R yδ eslaaproximacio´ndelasolucio´nxdey=Ax.
+Tomandoencuentaquesetrabajacondatosperturbadosyδ,
+α
+sedefineelfuncionaldeTikhonovcomo:
+Teorema3.1 SeaA∈Rm×nunamatrizconsistemasingular
+J (xδ)=(cid:107)Axδ−yδ(cid:107)2+α(cid:107)xδ(cid:107)2,α =α(δ)>0. (5)
+(u,σ,v),yseaqunafuncio´n,q:(0,∞)×[σ ,σ ]−→R,tal α
+i i i r 1
+queparacadaα≥0existeunaconstanteC(α)deformaque: Adema´selvalor´ınfimodeestefuncionalxα,δ debesatisfacer:
+(cid:107)Axα,δ −yδ(cid:107)=δ. Una descripcio´n formal de esta te´cnica
+1. |q(α,σ)|≤C(α)σ,σ ∈[σ ,σ ]
+r 1 comounproblemademinimizacio´nsereflejaenelsiguiente
+teorema[6]:
+2. l´ım q(α,σ)=1,σ ∈[σ ,σ ]
+α→0 r 1
+EntonceslafamiliadematricesR ∈Rn×m,α >0,definidas Teorema3.4 Sea A∈Rm×n y α >0. Entonces para cada
+α y∈Rmexisteunu´nicoxα ∈Rntalque
+como
+r 1
+R α y:=∑ σ q(α,σ i )(y,u i )v i ,y∈Rm (4) J α (xα)= x m ∈R ´ın n J α (x)
+i=1 i
+Elminimizadorxα coincideconlasolucio´nu´nicadelaecua-
+describeunaestrategiaderegularizacio´ncon(cid:107)R (cid:107)≤C(α).
+α
+cio´nnormal
+La funcio´n q es llamada una funcio´n filtro regularizadora
+paraA.
+(cid:0) AtA+αI(cid:1) xα =Aty.
+Una descripcio´n formal de la regularizacio´n de Tikhonov
+Teorema3.2 Supongamosquelaprimerahipo´tesisdelteore-
+comocasoparticulardelTeorema3.1eslasiguiente[6]:
+ma3.1secumpleentonces,silasegundahipo´tesisdelteorema
+3.1sesustituyepor: Teorema3.5 SeaA∈Rm×nunamatrizdada.Entonces,para
+√ cadaα>0lamatrizAtA+αIesinversible.Ma´sau´n,lafami-
+1. ExisteC 1 >0talque|q(α,σ)−1|≤C 1 α ,∀α>0y liaR α :=(AtA+αI)−1At describeunaestrategiaderegula-
+σ √ 1
+adema´sx∈R(At)entonces(cid:107)R
+α
+Ax−x(cid:107)≤C
+1
+α(cid:107)z(cid:107) rizacio´ncon(cid:107)R
+α
+(cid:107)≤
+2
+√
+α
+.
+dondex=Atz.
+α Esimportantepreguntarseencualquierproblemaquese
+2. ExisteC 2 >0 tal que |q(α,σ)−1|≤C 2 σ2 , ∀α >0 deseeresolver¿co´moelegirelpara´metroderegularizacio´n
+yadema´sx∈R(AtA)entonces(cid:107)R Ax−x(cid:107)≤C α(cid:107)z(cid:107) α?Enestetrabajoseescogio´ elprincipiodediscrepanciade
+α 2
+dondex=AtAz. Morozov[6]comocriteriodeeleccio´ndedichopara´metro.
+Teorema3.6 SeaA∈Rm×nconrangocompletoporcolum-
+3.1 Descomposicio´n en valores singulares trunca-
+na.Seay=Ax,x∈Rn,y∈Rm,yδ ∈Rmy(cid:107)yδ−y(cid:107)≤δ(cid:107)yδ(cid:107).
+da
+Seaxα(δ),δ lasolucio´ndelme´tododeTikhonovquesatisface
+Ladescomposicio´nenvaloressingularestruncada(TSVD)
+(cid:107)Axα(δ),δ−yδ(cid:107)=δ,∀δ∈(0,δ ).Entonces:xα(δ),δ →xpara
+esunme´todoparamejorarelmalcondicionamientodelpro- 0
+δ →0,esdecir,elPrincipiodediscrepanciaesadmisible.
+blemareemplazandolosma´spequen˜osvaloressingularesno
+nulosdeAporceros[1].
+3.3 IteracionesdeLandweber
+Losalgoritmosparalaregularizacio´ndeTikhonovtien-
+Teorema3.3 SeaA∈Rm×nnonulacondescomposicio´nen
+den a destruir la estructura espec´ıfica de la matriz de los
+valoressingularesA=USVt dondeS ≥S ≥...≥S >0
+11 22 rr coeficientescuandoestatienegrandesdimensiones.En1951,
+yS =0∀i(cid:54)= j.Ladescomposicio´nenvaloressingulares
+ij Landweber [7] realizo´ la sugerencia de escribir para el sis-
+truncada(TSVD)deAeslamatriz
+temay=Axlaecuacio´nnormalAtAx=Atyenlaformade
+A =US Vt unaecuacio´ndepuntofijox=(I−λAtA)x+λAtyparaalgu´n
+(k) (k)
+λ >0,llamadopara´metroderelajacio´n.Elme´todoiterativo
+(cid:0) (cid:1)
+dondek∈{1,2,...,r−1}y S =S cuandoi<ky cla´sicodeLandweber[6]tieneelsiguientealgoritmo:
+(k) ii ii
+(cid:0) (cid:1)
+S =0enotrocaso.
+(k) ij x0=0;xk+1=xk−λAt(Axk−y)=(I−λAtA)xk+λAty (6)
+Empleodete´cnicasderegularizacio´nparalasolucio´ndelproblemainversounidimensionalenlaTomograf´ıaO´ptica
+84 Difusa
+dondek∈N,λ ∈R.Porinduccio´nconrespectoakseobtiene Como Φ decrece exponencialmente, se considera para
+quexk=R y,donde k≥0latransformadadeLaplace:
+k
+(cid:90) ∞
+R :=λ
+k
+∑
+−1
+(cid:0)I−λAtA (cid:1)i At,k=1,2,... Φ(x,k)=
+e−k2DtΦ(x,t)dt
+(10)
+k 0
+i=0
+quesatisfacelaecuacio´nsiguiente,dondeladependenciade
+Si(u j ,σ j ,v j )eselsistemasingulardeA,entoncesR k admite Φenksesuprimeparasimplificarnotacio´n:
+lasiguienterepresentacio´n:
+d2 1
+R y= ∑ r q(k,σ j ) (y,u )v (7) − dx2 Φ(x)+k2(1+η(x))Φ(x)= D δ(x−x 1 ) (11)
+k j j
+σ
+j=1 j dondekeselnu´merodeondadifusayη(x)eslaparteespa-
+cialmentevariantedelaabsorcio´n.Elproblemadirectocon-
+donde q(k,σ)=1−(1−λσ2)k es una funcio´n filtro que
+sisteendadaslasdistribucionesdefuentesemisorasdefotones
+1
+cumple las hipo´tesis del Teorema 3.2 para C(α)= √ , enlafronteradeldominioydadoelvalordelospara´metros
+2 α
+1
+o´pticosrelacionados,determinarelflujodefotonesresultante
+C 1 = ,C 2 =1. enlafrontera.Lasolucio´ndelproblemadirectoesta´dadapor
+2
+lasiguienteecuacio´nintegral
+Teorema3.7 SeaA∈Rm×nunamatrizdada,ysea0<λ <
+(cid:90)
+1 .EntonceslafamiliadematricesR ∈Rn×m,definidas Φ(x)=Φ i (x)−k2 G(x,y)Φ(y)η(y)dy (12)
+(cid:107)A(cid:107)2 k Ω
+por(7)describenunaestrategiaderegularizacio´nconpara´me-
+dondeG(x,y)esunafuncio´ndeGreendelaforma
+1 √
+troα = y(cid:107)R (cid:107)≤ kλ.
+k (cid:18) (cid:19)
+k 1 1−kl
+G(x,y)= e−k|x−y|+ ext e−k|x+y| (13)
+Laiteracio´ndeLandweberesunme´tododeregularizacio´n
+2Dk 1+kl
+ext
+linealsiemprequelaiteracio´neste´ truncadaenalgu´n´ındice
+yΦ (x)eselcampoincidentequesatisface(11)conη =0.
+finitok∗[6].Existendoscriteriosdeparadaparaladetermi- i
+Laecuacio´nintegral(12)puedeserlinealizadaconrespectoa
+nacio´n de k∗, uno a priori donde solo depende del nivel de
+η(x)reemplazandoΦenlapartederechaporΦ,lacuales
+ruidok∗=k∗(δ)yotroaposterioridondeadema´stambie´n i
+unaaproximacio´nprecisacuandoelsoportedeη (supp(η))y
+dependedelosdatosperturbadosk∗=k∗(δ,yδ).Enestetra-
+η sonpequen˜os.Siadema´sseintroduceeldatodedispersio´n
+bajoseempleaelcriterioaposterioridadoporelPrincipiode
+Φ =Φ −Φ,seobtiene:
+s i
+discrepanciadeMorozovquerealizalaiteracio´nsiempreque
+(cid:90)
+(cid:107)Axk,δ−yδ(cid:107)>ηδ secumplaconη >1. Φ (x ,x )=k2 G(x ,y)G(y,x )η(y)dy (14)
+s 1 2 1 2
+Ω
+4. Problema inverso en la Tomograf´ıa Aqu´ı Φ (x ,x ) es proporcional al cambio en la intensidad
+s 1 2
+O´ptica Difusa (DOT) debidoaunpuntofuenteenx 1 queesmedidoporundetector
+enx .Enlageometr´ıaderetrodispersio´n,lafuenteyeldetec-
+2
+Elobjetivodelaobtencio´ndeima´geneso´pticasusando toresta´nubicadosenelorigen(x =x =0);utilizandoesto,
+1 2
+luzdifusacasiinfrarroja,esobtenerinformacio´ncuantitativa juntoalaecuacio´n(13)yomitiendoconstantestotales,(14)
+acercadecambiosenlaspropiedadeso´pticasdentrodeltejido seconvierteenlasiguienteecuacio´nintegraldeFredholmde
+usandomedicionesdefrontera,esdecir,elobjetivofundamen- primeraespecie:
+taldelaDOTesba´sicamentereconstruirloscoeficientesde
+(cid:90) ∞
+absorcio´nydispersio´ndeunmediomacrosco´picoparamedi- Φ (k)= e−kxη(x)dx (15)
+s
+ciones en la frontera. El problema en cuestio´n parte de los 0
+siguienteselementos[2].SeaΩ={x:x≥0}.Ladensidadde Loquepermitereformularelproblemadirectocomo:dada
+energ´ıaΦobedecealaversio´nunidimensionaldelaecuacio´n laparteespacialmentevariantedelcoeficientedeabsorcio´n
+deladifusio´ndetime-dependence: η(x)yelnu´cleoK=e−kx,determinareldatodedispersio´n
+Φ (k).Entonceselproblemainversopuededefinirsecomo:
+∂ ∂2 s
+∂t Φ(x,t)=D ∂x2 Φ(x,t)−cµ a (x)Φ(x,t) (8) dado el nu´cleo K =e−kx y el dato de dispersio´n Φ s (k) de-
+terminar la parte espacialmente variante del coeficiente de
+dondex∈Ωyelcoeficientededifusio´nDsetomaconstante, absorcio´nη(x).Dichoproblemainversopodr´ıaversecomoel
+µ se denomina coeficiente de absorcio´n. La densidad de deinvertirlaTransformadadeLaplaceelcualesunproblema
+a
+energ´ıadebesatisfacerlascondicionesinicialydefrontera exponencialmalplanteadoysuresultadoesunaintegralde
+siguientes: grancomplejidad:
+d (cid:90) ∞ (cid:90) ∞ 1
+Φ(x,0)=δ(x−x 1 ) Φ(0,t)−l ext dt Φ(0,t)=0 (9) η(x)= 0 dk −∞ dsR( σ s )f s (x)g∗ s (k)Φ s (k) (16)
+Empleodete´cnicasderegularizacio´nparalasolucio´ndelproblemainversounidimensionalenlaTomograf´ıaO´ptica
+Difusa 85
+dondeelreguladorResintroducidoparacontrolarlacontribu- Φ
+s
+(k
+i
+)= (cid:82)
+0
+Le−kixη(x)dx≈
+cio´ndelosvaloressingularespequen˜os.
+h n−1
+[e−kix0η(x
+0
+)+2∑e−kixjη(x
+j
+)+e−kixnη(x
+n
+)] (20)
+Otrav´ıadesolucio´npudierasertomardichaintegraldesde 2
+j=1
+cerohastaunvalorfinitoL,esdecir,transformarelintervalo
+Si se expresa la sumatoria (19) en forma matricial, se
+de [0;∞) a un intervalo finito [0;L], lo cual es posible pues
+obtieneelsistemadeecuacioneslinealesy=Bx,donde
+solosenecesitaconsiderarquelasen˜alxdesaparecefuerade
+ 
+esteintervaloqueconstituyeelsoportededichavariable.Una Φ (k )
+s 1
+v´ıaeficientederesolveresteproblemainversomalplanteado  Φ s (k 2 ) 
+ser´ıadiscretizardichaecuacio´nintegralyluegoaplicarlos y=  . .  
+ . 
+diferentesme´todosabordadosenlaseccio´nanterior.
+Φ (k )
+s m
+4.1 Discretizacio´ndelaecuacio´nintegral
+Enestainvestigacio´nseutilizandosreglasdediscretiza-  e−k1x0 4e−k1x1 2e−k1x2 ··· e−k1xn 
+cio´ndeecuacionesintegrales:laregladeSimpsoncompuesta h e−k2x0 4e−k2x1 2e−k2x2 ··· e−k2xn 
+y ra l r a l t a ra m pe a z tr o i i z da d l e c l o o m s p c u o e e s fi t c a i . e L n a te p s ri y m a e s r ´ı a r s e e so e l m ve p r le e a l p p a r r o a b g le e m ne a - B= 3    . . . . . . . . . . . . . . .   
+e−kmx0 4e−kmx1 2e−kmx2 ···
+directo.Lasegundareglaseempleaparagenerarlamatrizde
+loscoeficientesyas´ıresolverelproblemainverso.Laregla  
+η(x )
+de Simpson compuesta y la regla Trapezoidal compuesta 0
+constituyen dos de las fo´rmulas de Newton-Cotes cerradas   η(x 1 )  
+paralaintegracio´nnume´rica,ambasconsistenendividirel   η( . x 2 )  
+intervalo[0,L]ennsubintervalosdelongitudh.Lashipo´tesis
+x=
+
+.
+.
+
+
+ 
+delaregladeSimpsonsonlassiguientes[3]:  η(x n−2 ) 
+ 
+b−a  η(x n−1 ) 
+Teorema4.1 Sea f ∈C4[a,b],npar,h= yx j =a+jh η(x n )
+n
+, j=0,1,...,n.Entoncesexisteµ ∈(a,b)talquelareglade
+Simpsoncompuestaparansubintervalospuedeserescrita
+Si se expresa la sumatoria (20) en forma matricial, se
+como:
+obtieneelsistemadeecuacioneslinealesy=Ax,dondexyy
+(cid:90) b f(x)dx= h [f(a)+2 n 2 ∑ −1 f(x )+ semantieneigualesperoelnu´cleoBcambiaysetransforma
+2j
+a 3 j=1 enlamatrizAdadaacontinuacio´n:
+n  e−k1x0 2e−k1x1 2e−k1x2 ··· e−k1xn 
+2 b−a
++4 j ∑ =1 f(x 2j−1 )+f(b)]− 180 h4fIV(µ) (17) A= h 2     e−k . . . 2x0 2e− . . . k2x1 2e− . . . k2x2 ·· . . . · e−k . . . 2xn    
+Utilizandolasmismashipo´tesisanterioresperocambiando e−kmx0 2e−kmx1 2e−kmx2 ··· e−kmxn
+elhechodequesoloesnecesarioque f ∈C2[a,b],laregla
+Seconcluyeque:yesunvectordeordenm×1,AyBson
+trapezoidalpuedeenunciarsecomo:
+matricesdeordenm×(n+1)yxesdeorden(n+1)×1,es
+(cid:90) b h n−1 va´lidoaclararquetambie´nsetendra´ encuentaelcasoenque
+f(x)dx= [f(a)+2∑(f(x j ))+f(b)]− m(cid:54)=n+1.
+a 2 j=1
+5. Principales resultados
+b−a
+− h2f(cid:48)(cid:48)(µ) (18)
+12 Comopartedeestetrabajoseelaboraronco´digosdepro-
+Lafuncio´nencuestio´nes f(x)=e−kixη(x),i=1,...,m, gramacio´nenelsoftwareMATLABdeambasreglasdedis-
+L cretizacio´nabordadasanteriormente,adema´sdelosco´digos
+h= yx = jhportantoaplicandoSimpson:
+j deladescomposicio´nenvaloressingularesdeunamatrizy
+n
+delostresme´todosderegularizacio´n,consusdistintosenfo-
+Φ s (k i )= (cid:82) 0 Le−kixη(x)dx≈ h 3 [e−kix0η(x 0 )+ ques.Posteriormenteseresuelveunproblematest[6],similar
+alproblemainversounidimensionalenlatomograf´ıao´ptica
+2
+n−1 n
+2 difusaquevienedadoporlasiguienteecuacio´nintegralde
++2 ∑ e−kix2jη(x
+2j
+)+4∑e−kix2j−1η(x
+2j−1
+)+e−kixnη(x
+n
+)]
+Fredholmdeprimeraespecie:
+j=1 j=1
+(19) (cid:90) 1
+Aplicandotrapezoidalcompuesta:
+(1+ts)etsx(s)ds=et, 0≤t≤1,
+0
+Empleodete´cnicasderegularizacio´nparalasolucio´ndelproblemainversounidimensionalenlaTomograf´ıaO´ptica
+86 Difusa
+la cual tiene solucio´n u´nica x(t) = 1. Con los resultados
+obtenidos se verifico´ que los me´todos implementados en
+MATLABsonva´lidospararesolverunproblemainversomal
+planteado.
+Pararesolverelproblemainversounidimensionalenlatomo-
+graf´ıao´pticadifusaseempleanlossiguientedatos:
+Ω={x∈R:0≤x≤9},seempleanlosvaloresrealesdelos
+para´metroso´pticosenlaslongitudesdeondaentre750nmy
+830nmreportadosen[8],0,02≤µ ≤0,08y4≤µ(cid:48)≤14,ex-
+a s
+presadosencm−1,elfactordeanisotrop´ıag=0,9,elnu´mero
+deondadifusa,expresadaencm,var´ıademododecreciente
+en el rango de 0,157079632679 a 0,04487989505128. Para
+obtenerelrangoenquevar´ıalaparteespacialmentevariante
+de la absorcio´n η(x) se elaboraron en MATLAB dos fun-
+cionesquemuestranelcomportamientodeloscoeficientesde
+absorcio´nydispersio´nreducido,secreo´ adema´sunprograma Figura1.Comparacio´nentresolucio´nexactayconruido
+principalqueseutilizara´paraelprocesamientodelosdatosy δ =0,5
+laobtencio´ndelosresultados.
+Enelmismoseutilizam=26yn=16paraladiscretizacio´n,
+sedeterminaelrangodevariacio´ndelasolucio´nexactaη(x)
+dada por un vector de orden 17×1, se genera la matriz B
+para resolver el problema directo por la regla de Simpson
+locualpermiteconocerlosdatos,esdecir,lapartederecha
+del sistema y, la cual es un vector de orden 26×1, se de-
+termina por la regla trapezoidal el nu´cleo A de la ecuacio´n
+integralpararesolverelproblemainverso,elcualesunama-
+trizmalcondicionadapuessunu´merodecondicionamiento
+κ(A)=2,1256·1017ysusvaloressingularestiendenacero,
+luegoesteproblemainversoesmalplanteadoyesnecesario
+aplicarme´todosderegularizacio´nparasuresolucio´n.Secon-
+sideraquelosdatosyelaboradosanteriormenteesta´nsujetosa
+ciertosruidos,loqueocurrefrecuentementedebidoaque,en
+general,estosdatosprovienendeladiscretizacio´ndeunafun-
+cio´ncontinuaoporque,comoeselcaso,esundatoobtenido
+Figura2.Comparacio´nentresolucio´nexactayconruido
+experimentalmenteyportantoesta´ sujetoaerroresdemedi-
+δ =0
+cio´nyaproximacio´n.Elvectorconruidosyδ segenero´ uti-
+lizandoelcomandodeMATLABrandatrave´sdelasiguiente
+expresio´n yδ =y+δ(−ones(size(y))+2rand(size(y))). Al
+unaoperacio´ncostosaenambossentidos.
+utilizarlasfuncionesimplementadasenMATLABenelpro-
+gramaprincipalsedeterminaelerrorentrelasolucio´nexacta Lasfiguras3,5,4y6reflejanelcomportamientodela
+y la solucio´n con ruidos, sin emplear regularizacio´n, y se solucio´n exacta y el de las soluciones regularizadas, para
+determinaron los errores para diferentes valores de δ. Las distintosnivelesderuido(δ =0,1yδ =0),obtenidaspara
+figuras1y2demuestranelresultadodecualquierintentopor Tikhonov,comoproblemademinimizacio´nyparaLandwe-
+resolverelsistemasinregularizacio´n.Serealizaron,paracada ber,conelnu´merodeiteracionesdadoapriori.Apartirde
+me´todo,tablasyfigurasconvaloresparaelerrorcuandohay ellassepuedenotarquelosvaloresobtenidosporLandwe-
+presentesdistintosnivelesderuidoδ ydiferentesvariaciones bersonmayoresquelosobtenidosporTikhonov,aunqueel
+delpara´metroderegularizacio´nα.Estopermitio´realizarcom- primeroesma´sestableconrespectoaperturbacionesdella-
+paracionesentreelme´tododeTikhonovensusdosvariantesy doderecho,inclusiveparaδ grandes.Paradarcumplimiento
+laTSVD,endondeseconcluyo´ queTikhonovcomoproblema alobjetivodeestainvestigacio´n,queesdeterminarcua´lde
+de minimizacio´n es el mejor de los tres, y al comparar las losme´todosabordadosbrindamejorprecisio´npararesolver
+diferentes variantes del me´todo iterativo de Landweber se el problema inverso unidimensional en la tomograf´ıa o´pti-
+concluyo´ quetantolaqueempleaelnu´merodeiteraciones ca difusa, se concluye que el me´todo de Tikhonov brinda
+a priori como la que emplea la funcio´n filtro son las ma´s unasolucio´naproximadama´sprecisaquelaobtenidaporel
+adecuadas,esva´lidoaclararquesuusodependedeladisponi- me´todoiterativodeLandweber.
+bilidaddememoriaydetiempopararealizarlaSVDquees
+Empleodete´cnicasderegularizacio´nparalasolucio´ndelproblemainversounidimensionalenlaTomograf´ıaO´ptica
+Difusa 87
+Figura3.ExactayTikhonovδ =0,1 Figura5.ExactayTikhonovδ =0
+Figura4.ExactayLandweberδ =0,1 Figura6.ExactayLandweberδ =0
+6. Conclusiones
+me´tododeTikhonoveselquebrindalasolucio´nma´s
+Losresultadosobtenidospermitenconcluirque: precisa.
+La implementacio´n se realizo´ sobre MATLAB, soft-
+Los fundamentos teo´ricos-metodolo´gicos estudiados
+warequeresulto´ efectivo,porsusatributos:exactitudy
+sobrelateor´ıageneraldelosproblemasinversosyla
+confiabilidad.
+teor´ıa general de la regularizacio´n, resultaron de vi-
+talimportanciaparauncorrectoana´lisisdelproblema
+inversounidimensionalenlatomograf´ıao´pticadifusa. Agradecimientos
+La SVD de una matriz constituye la base para la rea-
+lizacio´ndeunafamiliaimportantedeme´todosderegu- Losautoresdeseanagradeceratodaslaspersonasquede
+larizacio´nabordadoseneltrabajo. unmodouotrocontribuyeronalarealizacio´ndeestetrabajo,
+ElproblemainversounidimensionalenlaDOT esre- sinsudedicacio´nypacienciaestonohubierasidoposible.
+duciblealadiscretizacio´ndeunaecuacio´nintegralde
+Fredholmdeprimeraespecie,elcualesunproblema
+Referencias
+inversomalplanteado,obtenie´ndoseunsistemadeecua-
+cioneslinealesalcualresultaimprescindibleaplicarlos [1] JoaoCarlosAlvesBarata. NotasparaunCursodeF´ısica-
+me´todosderegularizacio´ndescritos. Matema´tica. DepartamentodeF´ısica-Matema´tica,USP,
+Lassimulacionesnume´ricasrealizadasdelosproble- SaoPaulo,Brasil,2016.
+masabordados,corroboranlasestimacionesteo´ricasy
+muestranqueelme´tododeLandweberbrindaestabi- [2] Simon R. Arridge and John C. Schotland. Optical
+lidadconrespectoadistintosnivelesderuidoyqueel tomography:forwardandinverseproblems. 2009.
+Empleodete´cnicasderegularizacio´nparalasolucio´ndelproblemainversounidimensionalenlaTomograf´ıaO´ptica
+88 Difusa
+[3] Ricahrd L. Burden and J. Douglas Faires. Numerical [7] L.Landweber.AniterationformulaforFredholmintegral
+Analisis. Brooks/Cole,CengageLearning,USA,2011. equationsofthefirstkind. Am.J.Math.,1951.
+[4] H.W.EnglandA.Neubauer. Regularizationofinverse [8] ElderRubensSilveiraRampazzoFilhoandMarceloIdel
+problems. Vasserman. Tomograf´ıaporO´pticaDifusa-Proto´tipode
+16canales. EscuelaPolite´cnicadelaUniversidaddeSao
+[5] J.Hadamard. LecturesontheCauchyProbleminLinear
+Paulo.DepartamentodeIngenier´ıaMeca´nica,2010.
+Partial Differential Equations. Yale University Press,
+NewYork,,1923. [9] A.N. Tikhonov. Solution of incorrectly formulated
+problemsandtheregularizationmethod. 1963.
+[6] Andreas Kirsch. An Introduction to the Mathematical
+TheoryofInverseProblems. SecondEdition,Springer,
+NewYork,,2011.

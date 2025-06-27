@@ -1,0 +1,659 @@
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.65-72
+Recibido10-2020,Aceptado07-2021
+Acerca del problema homoge´neo de Dirichlet para
+campos electromagne´ticos en dominios con
+fronteras fractales: caso quiral.
+On the Dirichlet’s homogeneous problem for
+electromagnetic fields in domains with fractal
+boundaries: chiral case.
+Luis Manuel A´vila Na´polez1, Rafael M. A´vila A´vila2*, Ricardo Abreu Blaya 3
+Resumen Losproblemasdecontornoparacamposelectromagne´ticos,apesardesuamplioestudioenel
+marco tradicional, han adquirido un renovado intere´s, especialmente cuando se investigan los medios con
+fronterasfractalesypropiedadesquirales.Teniendoencuentalaestructuravectorialcla´sicadelSistemade
+EcuacionesdeMaxwell,sereformulaelmismoparalosmediosreferidos,apartirdelosresultadosba´sicos
+del enfoque cuaternio´nico. Los objetivos esenciales consisten en enunciar, formular y resolver el problema
+homoge´neointeriordeDirichletparacamposelectromagne´ticosarmo´nicoseneltiempo,enelcasodedominios
+quirales con fronteras fractales as´ı como deducir las fo´rmulas expl´ıcitas para tales campos en te´rminos
+de las funciones vectoriales que lo caracterizan. Ello requirio´ la aplicacio´n de la teor´ıa de las funciones α-
+hiperholomorfasyelAna´lisisCuaternio´nicoencombinacio´nconelteoremadeextensio´nyladescomposicio´n
+deWhitney,elconceptoded-sumabilidadyresultadosyconceptosdelaGeometr´ıaFractal.
+Abstract Theboundaryvalueproblemsforelectromagneticfields,despiteitsextensivestudyinthetraditional
+framework,haveacquiredarenewedinterest,especiallywhenthemediawithfractalboundariesandquirality
+propertiesareinvestigated. TakingintoaccountthevectorclassicalstructureoftheMaxwellEquationsSystem,
+itisreformulatedforsuchmediafromthebasicresultsofthequaternionicapproach. Themainobjectivesareto
+state,formulateandsolvethehomogeneousinteriorDirichletproblemfortimeharmonicelectromagneticfields,
+inthecaseofquiralmediawithfractalboundariesaswellastodeductexplicitformulasforsuchfieldsinterms
+ofitscharacteristicvectorfunctions. Thisrequiredtheapplicationofthetheoryofα-hyperholomorficfunctions
+combinedwithextensiontheoremandWhitneydecomposition,theconceptofd-summabilityandresultsand
+conceptsoftheFractalGeometry.
+PalabrasClave
+Problemasdevaloresdefrontera,Ana´lisisCuaternio´nico,camposelectromagne´ticos,mediosquirales
+Keywords
+Bordervalueproblems,quaternionicanalysis,electromagneticfields,chiralmedia
+1DepartamentodeMatema´tica,UniversidaddeHolgu´ın,Holgu´ın,Cuba,lavilan@uho.edu.cu
+2DepartamentodeLicenciaturaenMatema´tica,UniversidaddeHolgu´ın,Holgu´ın,Cuba,*ravilaa@uho.edu.cu
+3FacultaddeMatema´tica,UniversidadAuto´nomadeGuerrero,Guerrero,Me´xico.
+*AutorparaCorrespondencia
+Introduccio´n lareconstruccio´ndedichoscamposapartirdeladistribucio´n
+arbitrariadelasfuentesenelespacioas´ıcomoalabu´squeda
+ElAna´lisisCuaternio´nico,ramaenlacualsehainvestiga-
+delasrepresentacionesintegrales.
+dointensamenteysobrelaqueexisteunaabundanteliteratura
+[1, 2, 3], ofrece me´todos eficientes y no tan cla´sicos para Elenfoquecuaternio´nicodelosreferidosproblemaspa-
+la solucio´n de distintos problemas asociados a la propaga- ra el caso de las ecuaciones de Maxwell y campos electro-
+cio´ndecamposelectromagne´ticosendiferentesmedios.Los magne´ticosarmo´nicoseneltiempoomonocroma´ticos,fue
+problemasdevaloresdefronteracomolorepresentaeldeDi- propuestoporK.Gu¨rlebeckyW.Spro¨ssig[1,2]considerando
+richlet,ocupanunlugardeintere´s.Losmismossevinculana superficiesdetipoLiapunov.M.Mitrea,R.TorresyG.We-
+Acercadelproblemahomoge´neodeDirichletparacamposelectromagne´ticosendominiosconfronterasfractales:
+66 casoquiral.
+llandlosinvestigaronusandolate´cnicadelpotencialdecapa 1. Materiales y Me´todos
+yconsiderandodominiosconfronterasdetipoLipschitz[4].
+Laresolucio´ndelproblemaqueseinvestigarequierede
+Sin embargo, V. Kravchenko y M. Shapiro trataron los
+losme´todost´ıpicosdelAna´lisisCuaternio´nico.Suaplicacio´n
+mismos, teniendo en cuenta superficies de Liapunov, pero
+consecuentetieneporbaseelaparatoconceptualdelA´lgebra
+apartirdelateor´ıadelasfuncionesα-hiperholomorfas[3].
+Cuaternio´nica[10,11,12].Apartirdeestosfudamentos,se
+Dichainvestigacio´nfueextendidaadominiosconsuperficies
+recurre a los resultados fundamentales de la teor´ıa de las
+delaclasema´sgeneraldeLipschitz,sintenerencuentael
+funcionesα-hiperholomorfasqueincluyencomoelemento
+caracterfractaldelasfronteras[5,6].
+esencial, la definicio´n y las propiedades de los operadores
+AbreuBlaya,A´vilaA´vilayBoryReyes,enunciaron,for-
+diferencialesas´ıcomolasfo´rmulasderepresentacio´nintegral.
+mularonyresolvieronproblemasdevaloresdefrontera,espe-
+Entala´mbito,seinvestigaelSistemadeEcuacionesde
+cialmenteelproblemahomoge´neodeDirichletparacampos
+Maxwell,reducie´ndoloconvenientementeaecuacionescua-
+monocroma´ticos,apartirdelv´ınculoentrelasteor´ıasdelos
+ternio´nicas para los operadores modificados de Dirac. No
+campos referidos y de las funciones α-hiperholomorfas y
+obstante,laconsideracio´ndelcara´cterfractaldelafrontera,
+losconceptosrelacionadosd-sumabilidadylaextensio´nde
+implicahacerusodelosme´todosdesarrolladosen[7,13,14].
+Whitneyenasociacio´nconelcara´cterfractaldelasfronteras
+Los mismos contemplan, adema´s de los citados, las contri-
+[7].Estosautoressugierenlaperspectivadeaplicacio´ndelos
+bucionesdedichosautores,quienesempleanelteoremade
+me´todos desarrollados en otras situaciones de gran intere´s
+extensio´nyladescomposicio´ndeWhitney,lad-sumabilidad
+teo´ricoypra´cticoperonohacenreferenciaexpl´ıcitaalusode
+as´ıcomoconceptosyresultadosdelaGeometr´ıaFractal.
+losmismosparaelcasodelosmedioscaracterizadosporsu
+Acontinuacio´nsesintetizanloselementosdelmarcoteo´ri-
+quiralidadenelcontextoelectromagne´tico.
+coconceptualaludido.Unadetalladaexposicio´ndelmismo,
+Lacomprensio´ndelaquiralidadente´rminosdepropieda-
+sepuedenencontrarenlaliteraturareferida.
+desdelosmediosmaterialesselogra,apartirdelfeno´meno
+de la polarizacio´n. Las ondas electromagne´ticas tienen un Definicio´n1.1 Productocuaternio´nico.Elproductodedos
+cara´ctertransversal,loquesignificaqueladireccio´ndeos- cuaterniones p y q constituye un nuevo cuaternio´n, que se
+cilacio´n del vector campo magne´tico es perpendicular a la puedeexpresardelasiguienteforma:
+direccio´nenqueoscilaelvectorcampoele´ctricoas´ıcomoa
+ladireccio´ndepropagacio´n. pq=p q −p·q+p q+pq +p×q (1)
+0 0 0 0
+Una onda plana al incidir en la frontera de separacio´n
+donde: p yq sedenominanparteescalar; pyqpartevecto-
+entredosmedios,sereflejayrefracta.Sielsegundoexhibe 0 0
+rialdeloscuaterniones pyqrespectivamente.
+quiralidad,segenerandosondasrefractadas.Unaesta´ polari-
+zadacircularmentealaizquierdaylaotraaladerecha.Las
+Sisuspartesescalaresseanulan,seobtieneelsiguientere-
+velocidadesdepropagacio´ndelasmismassondiferentesyen
+sultadotrascendentedesdeelpuntodevistaf´ısico,alincluir
+correspondencia,losnu´merosdeondassontambie´ndistintos.
+simulta´neamente, los dos productos del Ana´lisis Vectorial
+Elmedioquiralpuedecaracterizarseporunconjuntode
+cla´sico:
+relacionesconstitutivasgeneralizadas,enlascualesloscam-
+pq=pq=−p·q+p×q (2)
+posele´ctricoymagne´ticoaparecenacoplados.Laintensidad
+delacoplamientoesta´ dadaporciertamagnitudopara´metro Sean las funciones f y u continuamente diferenciables
+quiral,quedeterminalaspropiedadeselectromagne´ticas quetomanvaloresenela´lgebradeloscuaternionescomplejos
+Khmelnytskaya,KravchenkoyOviedo[8,9],apartirde H(C)ydependientesdetresvariables(x 1 ,x 2 ,x 3 ).Sobreeste
+la reestructuracio´n del Sistema de Ecuaciones de Maxwell conjuntosedefineeloperadoroperadordeDiracDenR3 u
+paralosmediosquiraleseneldominiodefrecuenciasyen operadordeMoisil-Teodorescu,queconstituyeunoperador
+te´rminosdedosecuacionescuaternio´nicasseparadas,enuncia- el´ıpticodeprimerorden.Laformadedichooperadoresla
+ron,formularonyresolvieronalgunosproblemasdevalores siguiente:
+defrontera.Noobstante,centraronsusana´lisissintransgredir
+las restricciones que impone considerar superficies de tipo 3 ∂
+D:= ∑e ∂ donde ∂ = (3)
+k k k
+Liapunov. k=1 ∂x k
+Teniendoencuentaloantesexpresado,algunosdelosob-
+Sisehaceactuareloperadorsobreunafuncio´ndelaclase
+jetivosfundamentalesdelainvestigacio´nconsistenen:enun-
+definida,elresultadoes:
+ciar,formularyresolverelproblemahomoge´neointeriorde
+Dirichletparacamposelectromagne´ticosmonocroma´ticosen
+Df =∇f −∇·f+∇×f (4)
+0
+dominiosquiralesconfronterasfractalesydeducirlasfo´rmu-
+lasexpl´ıcitasparatalescamposente´rminosdelasfunciones Lasolucio´nfundamentaldeesteoperadoresta´ dadapor:
+vectorialesquelocaracterizan.
+1 x 1 1
+K(x)=− = ∇ .
+4π |x|3 4π |x|
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.65-72
+Acercadelproblemahomoge´neodeDirichletparacamposelectromagne´ticosendominiosconfronterasfractales:
+casoquiral. 67
+Ello significa que DK(x)=δ(x), donde δ(x) es la funcio´n 1.1 SistemadeecuacionesdeMaxwellparamedios
+deltadeDirac. noquirales
+Las acciones a la izquierda y a la derecha del operador de Sistema de Ecuaciones de Maxwell en forma cuater-
+Diracsobreciertafuncio´ndelaclasereferida,noofrecenel nio´nicaparacamposarmo´nicos
+mismoresultadodebidoaquelapropiedaddeconmutatividad LasecuacionesdeMaxwellconstituyenexpresionesma-
+noesva´lidaenelcuasicampodeloscuaterniones.As´ı,sea tema´ticasdecuatroimportantesleyesf´ısicas:LeydeAmpere
+uunafuncio´ncuaternio´nicadeclaseC1.Elresultadodelas Maxwell;LeydeFaraday;LeydeGaussparaelmagnetismo
+accionesdeloperadorDsobreu,esrespectivamente: yLeydeGaussparalaElectricidad.Dichasleyesencuentran
+suconfirmacio´nyverificacio´nma´sfehacienteenlapra´ctica.
+3 3
+Elsistemadeecuacionesdiferencialesenderivadasparciales
+Du:= ∑ ∑∂ u e e =∇u −∇·u+∇×u
+k j k j 0
+de primer orden que las representan, en su forma vectorial
+j=0k=1
+ma´susual,es:
+3 3
+uD:= ∑ ∑∂ u e e =∇u −∇·u−∇×u ∂D
+k j j k 0 ∇×H= +j+j(e) (8a)
+j=0k=1 ∂t
+Otrooperadordeintere´seseldeHelmholtz∆+α2I enR3 ∂B
+∇×E=− (8b)
+(α∈C),quejuegaunpapeldegranimportancia.Elmismoes ∂t
+usualencontrarloendis´ımilesaplicacionesf´ısicascomolas ∇·H=0 (8c)
+asociadasconlapropagacio´ndeondasentuboscil´ındricos,las ∇·D=ρ (8d)
+oscilacionespropiasdeunendovibradordegeometr´ıasimilar
+ymuchasotras. donde:E(x,t):vectorintensidaddelcampoele´ctrico;H(x,t):
+LosoperadoresmodificadosdeDiraccuyasexpresiones vector intensidad del campo magne´tico; D(x,t): vector in-
+sonD α =(D+α)yD −α =(D−α),factorizanaloperador duccio´nele´ctrica;B(x,t):vectorinduccio´nmagne´tica; j(x,t):
+deHelmholtz: densidadvolume´tricadecorrientedeconduccio´n; j(e)(x,t):
+densidadvolume´tricadecorrientedebidaalaaccio´ndelas
+−(D+α)(D−α)=∆+α2. (5)
+fuerzaselectromotricesexteriores;ρ:densidadvolume´trica
+decarga.
+La siguiente funcio´n, constituye una solucio´n fundamental
+Elsistema(8)contienemagnitudesvariablesenelespacio
+paradichooperador:
+yeneltiempoyconformanlasecuacionesdelcampoelectro-
+eiα|x| magne´tico.E´stassonaplicablesenladescripcio´ndetodoslos
+ϑ(x)=−
+4π|x| feno´menosdenaturalezaele´ctricaymagne´tica.As´ı,lasleyes
+delascualessonexpresio´n,constituyenlosaxiomasparala
+Encambio,lassolucionesfundamentalesparalosoperadores construccio´ndelaElectrodina´micacomoteor´ıadeductiva.
+D α y D −α se obtienen respectivamente, mediante ca´lculos Encasodesituacionesparticularesesnecesarioteneren
+directos,alhaceractuarlosmismossobrelasolucio´nfunda- cuentalaspropiedadesdelosmedios.Elloesposibleapartir
+mentalanterior: delasecuacionesmaterialesorelacionesconstitutivas,queen
+casodemedioslineales,homoge´neoseiso´tropos(LHI)esta´n
+x x eiα|x|
+E (x)=−(D−α)ϑ(x)=(α+ −iα )(− ) dadas por las expresiones: D=εE, B=µH y j=σE. Si
+α |x|2 |x| 4π|x|
+losmediossonnohomoge´neos,elsistema(8)esequivalen-
+(6a)
+tealsistemaexpresadoenformaintegral,silasecuaciones
+x x eiα|x| se complementan con ciertas condiciones llamadas de con-
+E (x)=−(D+α)ϑ(x)=(−α+ −iα )(− )
+−α |x|2 |x| 4π|x| juncio´n.Estaslassatisfacenlascomponentestangencialesy
+(6b) normalesdeloscamposele´ctricoymagne´ticoenlafrontera
+deseparacio´n.
+Sean:eldominioΩ⊂R3;Γlasuperficiefronteradedicho Si no se consideran las corrientes debida a las fuerzas
+dominio y u, v funciones de clase C1(Ω). Los operadores electromotricesexternas,elsistema(8)setransformaen:
+integralestransformadasdeCauchyyTeodorescu,sedenotan
+∂D
+respectivamente por los s´ımbolosC α u(x) y T α D α u(x). Sus ∇×H= +j (9a)
+expresionesgeneralesson: ∂t
+∂B
+(cid:90) ∇×E=− (9b)
+C ϕ(x):=− E (y−x)n(y)ϕ(y)dS(y), x∈/Γ, ∂t
+α α
+∇·H=0 (9c)
+Γ
+∇·D=ρ (9d)
+(cid:90)
+T ϕ(x)= E (y−x)ϕ(y)dV(y) (7)
+α α
+Ω
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.65-72
+Acercadelproblemahomoge´neodeDirichletparacamposelectromagne´ticosendominiosconfronterasfractales:
+68 casoquiral.
+Sinohayfuentesdecargaycorrienteele´ctricas,entonces La sustitucio´n de las expresiones anteriores en (14a)-(14d)
+elsistemasesimplifica: conducealsistemadeecuacionesdeMaxwellparamedios
+quiralesycamposarmo´nicos:
+∂D
+∇×H= (10a)
+∂t ∇×H(x)=−iωε[E(x)+β∇×E(x)]+j(x) (16a)
+∂B
+∇×E(x)=iωµ[H(x)+β∇×H(x)] (16b)
+∇×E=− (10b)
+∂t
+∇·H=0 (16c)
+∇·H=0 (10c)
+ρ
+∇·E= (16d)
+∇·D=0 (10d)
+ε
+Lasecuaciones(9a)y(9d)soncompatibles,puessatisfacen Encasodeausenciadefuentes,elsistemaanteriorseconvierte
+laleydeconservacio´ndelacargaele´ctrica,expresadaenla en:
+ecuacio´ndecontinuidad.Estaseobtieneaplicandolaopera-
+∇×H(x)=−iωε[E(x)+β∇×E(x)] (17a)
+cio´ndivergenciaalaprimeraecuacio´n,accio´nqueanulael
+miembroizquierdoalconvertirloenunaidentidad,yteniendo ∇×E(x)=iωµ[H(x)+β∇×H(x)] (17b)
+encuentalaexpresio´n(9d)as´ıcomoelhechodequedicha ∇·H=0 (17c)
+operacio´nso´loincluyederivacio´nsobrevariablesespaciales.
+∇·E=0 (17d)
+Portanto,elaspectodetalecuacio´nes:
+La redefinicio´n de las funciones vectoriales E(x) −→
+∂ρ √ √ √
+∇·j+ =0 (11) − µE(x); H(x)−→ εH(x) y j(x)−→ εj(x), permite
+∂t
+reescribirlasexpresionesanteriores.Enparticular:
+Loscamposelectromagne´ticosarmo´nicoseneltiempo,se
+∇×H(x)=iα[E(x)+β∇×E(x)]+j(x) (18a)
+puedenexpresardelasiguienteforma:
+∇×E(x)=−iα[H(x)+β∇×H(x)] (18b)
+E(x,t)=E(x)e−iωt, H(x,t)=H(x)e−iωt
+D(x,t)=D(x)e−iωt, B(x,t)=B(x)e−iωt (12) Lamagnitudα constituyeelnu´merodeonda,vincul
+√
+adocon
+lafrecuenciaω ysuvelocidaddepropagacio´nv= εµ−1,
+√
+Considerandoquelasdensidadesdecargaydecorrientese mediantelaexpresio´nα =ω εµ.
+comportandeformasimilar,setiene: Lareformulacio´ndelsistemadeMaxwellenelcontextocua-
+ternio´nico, requiere definir las siguientes funciones bicua-
+j(x,t)= j(x)e−iωt, ρ(x,t)=ρ(x)e−iωt (13) terno´nicaspuramentevectoriales:
+ϕ(x)=E(x)−iH(x) (19a)
+LasmagnitudesE(x),H(x),D(x),B(x), j(x)yρ(x)solode-
+pendendelavariableespacialx=(x 1 ,x 2 ,x 3 ).Ladependencia ψ(x)=E(x)+iH(x) (19b)
+coneltiempoesta´ contenidaenelfactore−iωt.Sisesustitu-
+yenlasexpresiones(12)y(13)enelsistema(9)seobtiene Laaccio´ndeloperadordeMoisil-Teodorescusegu´nlaex-
+elsistemadeecuacionesdeMaxwellparadichoscamposy presio´n(4)sobrelaprimeradeellas(19a),ofreceelsiguiente
+mediosLHI: resultado:
+∇×H=−iωD+j=−iωεE+j (14a) Dϕ(x)=D[E(x)−iH(x)]=−∇·E(x)+∇×E(x)−i∇×H(x)
+(20)
+∇×E=iωB=iωµH (14b)
+Teniendoencuentalaredefinicio´noperacionaldelasfuncio-
+∇·H=0 (14c) nesvectorialesdelcampo,lareescrituradelaecuacio´nque
+ρ involucraaladivergenciadelcampoele´ctricoentaleste´rmi-
+∇·E= (14d)
+ε nos,lasexpresiones(18a)y(18b)yomitiendoladependencia
+conlavariableespacial(x),seobtiene:
+ρ
+Dϕ = √ [1−αβ]+αϕ+αβDϕ−ij (21)
+1.2 Sistema de Ecuaciones de Maxwell en forma ε µ
+cuaternio´nicaparamediosquirales
+LasrelacionesconstitutivasdeDrude-Born-Feodorovtie- Apartirdelarealizacio´ndealgunastransformacionesalge-
+nenlasiguienteforma: braicasenambosmiembrosdelaexpresio´nanterior,sededuce
+laecuacio´nquesatisfacelafuncio´nbicuaternio´nicaϕ:
+D(x)=ε[E(x)+β∇×E(x)] (15a)
+α i i α
+B(x)=µ[H(x)+β∇×H(x)] (15b) (D− )ϕ =− ∇·j− j (22)
+1−αβ α α 1−αβ
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.65-72
+Acercadelproblemahomoge´neodeDirichletparacamposelectromagne´ticosendominiosconfronterasfractales:
+casoquiral. 69
+Deformasimilarparalafuncio´nψ(x)setiene: Losteoremasanterioresofrecenlascondicionesnecesa-
+riasysuficientesparaqueelproblemahomoge´neodeDiri-
+Dψ(x)=D[E(x)+iH(x)]=−∇·E(x)+∇×E(x)+i∇×H(x) chlethomoge´neo(29),seasoluble.
+(23) Esnotablenuevamentelarelacio´nquedebensatisfacerla
+Un procedimiento ana´logo al empleado para obtener (22), dimensio´nme´tricasuperioryelexponentedeHo¨lder:ν > d.
+3
+conducealsiguienteresultado: Bajoelsupuestodequeseava´lidoelteorema1.1,lafuncio´n
+dadaporlaexpresio´ng˜−T D g˜nodependedelaeleccio´n
+α i i α α α
+(D+ )ψ =− ∇·j+ j (24) particulardeltipodeextensio´ndeWhitneyg˜.Elloposibili-
+1+αβ α α 1+αβ
+taestablecerfo´rmulasderepresentacio´ndetipoCauchyen
+Introduciendolasnotacionesα = α ,α = α ,λ = dominiosconfronterasfractalesparaciertasclasesdeecua-
+1 1−αβ 2 1+αβ 1
+cionesdeDirachomoge´neas[15,16].Esportalrazo´nqueel
+−i,λ =−iα yλ = iα as´ıcomolosoperadoresmodi-
+α 2 α 1 3 α 2 siguienteteoremaesdeimportanciapuesestablecelaforma
+ficadosdeDiracD+α =D yD+α =D ,lasexpre-
+1 −α1 2 α2 expl´ıcitadelasolucio´ndelproblemadeDirichletreferido.
+siones(22)y(24)resultan:
+Teorema1.3 SeaG∈C0,ν enΩ∪Γconν > d,unafuncio´n
+D ϕ =λ ∇·j+λ j (25) 3
+−α1 1 2 α-hiperholomorfa en Ω con la traza g sobre la frontera Γ.
+D α2 ψ =λ 1 ∇·j+λ 3 j (26) Portantoesva´lidalasiguientefo´rmula:
+Las ecuaciones (25) y (26) constituyen las expresiones del G(x)=g˜(x)−T α D α g˜(x), x∈Ω. (33)
+sistema de ecuaciones de Maxwell en forma cuaternio´nica
+Observacio´n1.1 Silafuncio´nGenelrecie´nformuladoteo-
+paralosmediosquiralesycamposmonocroma´ticos.Lasmag-
+remaseeligecomounafuncio´nqueadoptavaloresvectoria-
+nitudesα yα sonlosnu´merosdeondas,engeneraldistintos
+1 2 les,entonces(33)conduceaquelafuncio´ngsatisfaga:
+debido a que caracterizan la propagacio´n de las ondas con
+polarizacionescircularesopuestas.Losmismoscorresponden Sc(T D g˜(x))=0, x∈Ω. (34)
+α α
+a ondas que giran el plano de polarizacio´n a la derecha en
+uncasoyenotro,alaizquierda.Enausenciadefuentesel 2. Resultados
+sistemasetransformaen:
+2.1 ProblemainteriordeDirichlethomoge´neopara
+D ϕ =0 (27) losoperadoresD ,D
+−α1 −α1 α2
+D ψ =0 (28) Teniendoencuentalosresultadosdelosep´ıgrafes1.2y
+α2
+1.3,elproblemahomoge´neointeriordeDirichletenmedios
+quiralesconfronterasfractales,quedaenunciadoyformulado
+1.3 Teor´ıadelosproblemasdecontornoparacam-
+enlossiguienteste´rminos:
+poselectromagne´ticosendominiosconfronte-
+Problemahomoge´neointeriordeDirichlet:
+rasfractales:casonoquiral
+Determinar la funcio´n ϕ en el dominio Ω, de la clase
+Losresultadosdedeesteapartadoaparecenampliamente
+abordadosen[7,13,14].So´losesintetizanaqu´ılosquetienen
+C0,ν(Ω∪Γ)ycuyacondicio´ndefronteraesdelamismaclase
+queverdirectamenteconelproblemaobjetoderesolucio´n.
+C0,ν(Γ),demaneraque:
+(cid:40)
+T ci e o´ o n re G m ∈ a C 1. 0 1 ,ν( . Ω Se ∪ a Γ g ), ∈ q C ue 0, s ν e ( a Γ) ad y e ν ma > ´s d α 3 . -h S i i p e e x r i h s o te lo u m n o a rf f a un y - D − ϕ α1 (cid:12) (cid:12) ϕ = = e 0 − , i x h ∈Ω (35)
+Γ
+satisfagaelproblemadeDirichlethomoge´neo:
+Sean los campos E y H tales que satisfacen el sistema
+(cid:40)
+D G=0, x∈Ω (17a)-(17d).Losenunciadosdelosteoremas(1.1)y(1.2)se
+α
+(29) unificanyresultaelteoremaqueseofreceacontinuacio´n.El
+G| =g,
+Γ
+mismoestablecelascondicionesdesolubilidaddelproblema
+Entonces: homoge´neointeriordeDirichlet35paraeloperadorD −α1 y
+T D g˜| =0 (30) constituyeunodelosresultadosfundamentalesdelaaplica-
+α α Γ
+cio´ndelateor´ıadesarrolladaen[7,13,14],alosdominios
+Teorema1.2 Teoremarec´ıprocodel(1.1).Sisecumple: quiralesconfronterasfractales.
+T α D α g˜| Γ =0 (31) Teorema2.1 SeanlasfuncionesE (cid:12) (cid:12) Γ =e,H (cid:12) (cid:12) Γ =h:∈C0,ν(Γ);
+d
+seaadema´sν> .Sealafuncio´nϕ quesatisfaceelproblema
+Entoncesexisteunafuncio´nG∈C0,ν(cid:48) (Ω∪Γ)(ν(cid:48)<ν)que 3
+35
+satisfaceelproblemahomoge´neodeDirichlet:
+Lacondicio´nnecesariaysuficienteparaqueelproblema
+(cid:40) referidotengasolucio´nes:
+D G=0, x∈Ω
+α
+G| Γ =g, (32) T −α1 D −α1 (e˜−ih˜) (cid:12) (cid:12) Γ =0
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.65-72
+Acercadelproblemahomoge´neodeDirichletparacamposelectromagne´ticosendominiosconfronterasfractales:
+70 casoquiral.
+Lasolucio´nexpl´ıcitadelproblema(35)sedaenelsiguien- Demostracio´n:
+teteorema,queconstituyeunaparticularizacio´ndelteorema Las funciones ϕ(x)=E(x)−iH(x) y ψ(x)=E(x)+iH(x)
+(1.3). permiten reducir el sistema (17a)-(17d) al par de ecuacio-
+nes(27)-(28).Almismotiempo,lasfuncionesϕ(x)yψ(x)
+d
+Teorema2.2 Seaν> ylafuncio´nϕ ∈C0,ν(Ω(cid:83)Γ)talque cumplenconlosteoremas(2.1)y(2.3)respectivamente.Con-
+3
+satisfagaelproblema(35).Lasolucio´ndedichoproblema siderandoquelasfuncionesdelcamposonvectorialesyla
+esta´ dadaporlaexpresio´n: observacio´n(1.1),sededucenlasexpresiones(39)y(40)que
+eraloquequer´ıademostrarse.
+ϕ =e˜−ih˜−T −α1 D −α1 (e˜−ih˜) (36) Laafirmacio´nrec´ıprocasedemuestramedianteca´lculodirec-
+to.Esteconsisteenadicionarysustraerlasexpresionespara
+De forma similar son va´lidos los siguientes teoremas que
+ϕ(x)yψ(x),yobtenerlasexpresionessiguientes:
+incorporanlafuncio´nψ yeloperadorD .
+α2
+Teorema2.3 SeanlasfuncionesE (cid:12) (cid:12) =e,H (cid:12) (cid:12) =h:∈C0,ν(Γ);
+d Γ Γ 1 1
+seaadema´sν> .SeaelproblemainteriordeDirichletho- E= [ψ(x)+ϕ(x)]; H= [ψ(x)−ϕ(x)] (43)
+3 2 2i
+moge´neo:
+(cid:40)
+D ψ =0, x∈Ω
+α2 (cid:12) (37) Lascondicionessintetizadasenlaexpresio´n(39)sonnece-
+ψ(cid:12)
+Γ
+=e+ih
+sariasysuficientesparalasolubilidaddelosproblemas(35)
+La condicio´n necesaria y suficiente para que el problema y(37),segu´nestablecenlosteoremascorrespondientes.Por
+tengasolucio´nes: otrapartelassolucionesdedichosproblemassonestablecidas
+porlosteoremas(2.2)y(2.4).Sustituyendolasexpresiones
+T α2 D α2 (e˜+ih˜) (cid:12) (cid:12) Γ =0 (36)y(38)en(43),seobtienenlasfo´rmulas(41)y(42)que
+eraloquequer´ıademostrarse.
+d
+Teorema2.4 Seaν> ylafuncio´nψ∈C0,ν(Ω(cid:83)Γ)talque
+3 Expresiones vectoriales para los campos ele´ctrico y
+satisfagaelproblema(37).Lasolucio´ndedichoproblema
+magne´tico
+esta´ dadaporlaexpresio´n:
+Lasexpresionesvectorialesexpl´ıcitasdeloscampos(41)y
+ψ =e˜+ih˜−T D (e˜+ih˜) (38) (42)seobtienen,empleandolafo´rmuladerepresentacio´nin-
+α2 α2
+tegralquecorrespondealatransformadadeTeodorescucuya
+Los teoremas (2.1)-(2.4) constituyen los fundamentos que formageneralesta´ dadapor(7).Lasustitucio´ndeloperador
+permitenlareconstruccio´ndeloscamposmonocroma´ticos D en(7),delacondicio´ndefrontera(e˜−ih˜),yelca´lculo
+−α1
+y representa otro resultado esencial de la investigacio´n de apartirdelaexpresio´ngeneral(4)particularizadoparafun-
+losmediosnoquirales.Elmismosesintetizaenelsiguiente cionescuaterno´nicasconparteescalarnula(ladependencia
+teorema. de los valores de frontera e y h de los integrandos, con la
+variableyseomiten,enarasoptimizarelespacio),conducen
+Teorema2.5 (Reconstruccio´ndeloscamposelectromagne´ti-
+alassiguientesexpresiones:
+cos armo´nicos en ausencia de fuentes) Sean las funciones
+vectorialesdelcampoelectromagne´ticoE,H conlassiguien-
+tespropiedades:E,H∈C0,ν(Ω(cid:83)Γ),satisfacenlasecuacio- (cid:90)
+T D (e˜−ih˜)=− E (y−x)∇·e˜dV(y)
+nes de Maxwell (17a)-(17d) en el dominio Ω; sus valores −α1 −α1 −α1
+de frontera son tales que E (cid:12) (cid:12) =e, H (cid:12) (cid:12) =h: ∈C0,ν(Γ); sea Ω
+Γ Γ (cid:90) (cid:90)
+adema´sν> d .Entoncessecumpleque: + E −α1 (y−x)∇×e˜dV(y)+i E −α1 (y−x)∇·h˜dV(y)
+3
+Ω Ω
+T −α1 D −α1 (e˜−ih˜) (cid:12) (cid:12) Γ =T α2 D α2 (e˜+ih˜) (cid:12) (cid:12) Γ =0 (39) −i (cid:90) E −α1 (y−x)∇×e˜dV(y)−α 1 (cid:90) E −α1 (y−x)e˜dV(y)
+Sc(T D (e˜−ih˜))=Sc(T D (e˜+ih˜))=0, x∈Ω. Ω Ω
+−α1 −α1 α2 α2 (cid:90)
+(40) +iα E (y−x)h˜dV(y)
+1 −α1
+Rec´ıprocamente:elcumplimientodelascondiciones(39)y
+Ω
+(40)implicaquelasecuacionesdeMaxwell(17a)-(17d)ylas
+(44)
+(cid:12) (cid:12)
+condicionesdefronteraE(cid:12) =e,H(cid:12) =h,lassatisfacenlos
+Γ Γ
+siguientescampos:
+E=e− 1 T D (e˜−ih˜)− 1 T D (e˜+ih˜) (41) Lasustitucio´nencadaunadelasintegralesdelaexpresio´n
+2
+−α1 −α1
+2
+α2 α2
+correspondiente al nu´cleo (6b) o solucio´n fundamental del
+operadorE ,eldesarrollodelosproductoscuaternio´nicos
+H=h+ 2 1 i T −α1 D −α1 (e˜−ih˜)− 2 1 i T α2 D α2 (e˜+ih˜) (42) mediantee − le α m 1 pleodelafo´rmula(2)ylaagrupacio´ndelas
+CienciasMatemáticas,Vol.35,No.1,2021,Pag.65-72
+Acercadelproblemahomoge´neodeDirichletparacamposelectromagne´ticosendominiosconfronterasfractales:
+casoquiral. 71
+partesescalaryvectorial,ofrececomoresultado:
+Vec[T D (e˜+ih˜)]=
+α2 α2
+Sc[T −α1 D −α1 (e˜−ih˜)]=−α 1
+(cid:90)
+4
+e
+π
+iα
+|
+1
+x
+|x
+−
+−y
+y
+|
+|
+∇·(e˜−ih˜)dV(y)
+(cid:90) eiα
+4
+2|
+π
+x−y| [
+|x−
+1
+y|3
+−
+|x
+i
+−
+α 2
+y|2
+](y−x)∇·(e˜+ih˜)dV(y)
+Ω
+Ω
+− (cid:90) eiα1|x−y| [ 1 + iα 1 ](y−x)·∇×(e˜−ih˜)dV(y) −α 2 (cid:90) 4 e π iα | 2 x |x − −y y | | ∇×(e˜+ih˜)dV(y)
+4π |x−y|3 |x−y|2
+Ω
+Ω
+−α 1 (cid:90) eiα 4 1| π x−y| [ |x− 1 y|3 − |x i − α 1 y|2 ](y−x)·(e˜−ih˜)dV(y) −α 2 2 (cid:90) 4 e π iα | 2 x |x − −y y | | (e˜+ih˜)dV(y)+
+Ω
+Ω
+(45) (cid:90) eiα2|x−y| [− 1 + iα 2 ](y−x)×∇×(e˜+ih˜)dV(y)
+4π |x−y|3 |x−y|2
+Ω
+−α
+(cid:90) eiα2|x−y|
+[
+1
+−
+iα
+2 ](y−x)×(e˜+ih˜)dV(y)
+2 4π |x−y|3 |x−y|2
+Ω
+(48)
+Vec[T D (e˜−ih˜)]= LoscamposE yH sonfuncionescuaternio´nicaspuramente
+−α1 −α1
+vectorialesyportantosuspartesescalaressonnulas.As´ı,las
+(cid:90) eiα1|x−y|
+[
+1
+−
+iα
+1 ](y−x)∇·(e˜−ih˜)dV(y) expresionesparatalesfuncionespuedendeducisrsemediante
+4π |x−y|3 |x−y|2
+dosprocedimientos:mediantelabu´squedadecombinaciones
+Ω
+integralesenarasdeencontrarlaspartesvectorialesosimple-
+(cid:90) eiα1|x−y|
+−α ∇×(e˜−ih˜)dV(y) menteadoptandodirectamentelaspartesvectoriales(46),(48)
+1
+4π|x−y|
+ysustituirlasen:
+Ω
+(cid:90) eiα1|x−y| 1 1
+−α2 (e˜−ih˜)dV(y) E=e− Vec[T D (e˜−ih˜)]− Vec[T D (e˜+ih˜)]
+1 4π|x−y| 2 −α1 −α1 2 α2 α2
+Ω (49)
++ (cid:90) eiα1|x−y| [ 1 + iα 1 ](y−x)×∇×(e˜−ih˜)dV(y) H=h+ 2 1 i Vec[T −α1 D −α1 (e˜−ih˜)]− 2 1 i [T α2 D α2 (e˜+ih˜)]
+4π |x−y|3 |x−y|2
+(50)
+Ω
+Lasexpresionesqueresultandelasustitucio´nde(46)y(48)en
+−α
+(cid:90) eiα1|x−y|
+[−
+1
++
+iα
+1 ](y−x)×(e˜−ih˜)dV(y) (49)y(50),constituyenlaformaexpl´ıcitadelascomponentes
+1 4π |x−y|3 |x−y|2
+deloscamposelectromagne´ticosarmo´nicos,enausenciade
+Ω
+(46) fuentesyparamediosquiralesconfronterasfractales.
+3. Conclusiones
+Unprocedimientosimilaralempleado,permiteobtenerlas Losmediosquiralessediferencianporsunaturalezaf´ısica
+partesescalaresyvectorialesdeT α2 D α2 (e˜+ih˜),peroteniendo de los no quirales. Ello se expresa entre otros rasgos, por
+encuentalaexpresio´n(6a).Lasfo´rmulasresultantesson: el acoplamiento de los campos ele´ctrico y magne´tico que
+tienelugarenlosprimerosycuyaintensidaddeterminalas
+propiedadeselectromagne´ticas.
+Losproblemasdecontornoparatalesmediossediferen-
+cianconrespectoalosnoquiralesenelhechodeplantearse,
+(cid:90) eiα2|x−y| formularse y resolverse considerando dos nu´meros ondula-
+Sc[T D (e˜+ih˜)]=α ∇·(e˜+ih˜)dV(y)
+α2 α2 2 4π|x−y| torios(α 1 ,α 2 ),enlugardeuno,consecuenciadelfeno´meno
+Ω de la propagacio´n de dos ondas con distintas velocidades,
++
+(cid:90) eiα2|x−y|
+[
+1
+−
+iα
+2 ](y−x)·∇×(e˜+ih˜)dV(y)
+despue´s de la incidencia de una onda plana en la frontera
+4π |x−y|3 |x−y|2 queloseparadeotroenelqueesta´ ausentelapropiedadde
+Ω quiralidad.
++α
+(cid:90) eiα2|x−y|
+[
+1
+−
+iα
+2 ](y−x)·(e˜+ih˜)dV(y)
+Elproblemahomoge´neointeriordeDirichletendominios
+2 4π |x−y|3 |x−y|2 quiralesconfronterasfractalesyparacamposelectromagne´ti-
+Ω cosarmo´nicos,essoluble,noparavaloresarbitrariosdelex-
+(47)
+ponentedeHo¨lderquecaracterizalacondicio´ndefronteray
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.65-72
+Acercadelproblemahomoge´neodeDirichletparacamposelectromagne´ticosendominiosconfronterasfractales:
+72 casoquiral.
+lad-sumabilidaddelasfronterasquedelimitanlosdominios, well’sequationsinfractaldomains.Math.Meth.Appl.
+d Sci.,vol.38,393-402.
+sinocuandosecumplelacondicio´n:ν> .
+3
+Bajoelcumplimientodelascondicionesdesolubilidad [8] Khmelnytskaya Guerasimova, K. (2005). Solucio´n
+delproblemaobjetodeintere´sdelpresenteart´ıculo,sehan anal´ıtica y nume´rica de problemas con valores en la
+obtenidofo´rmulasexpl´ıcitasparalasfuncionesvectorialesque frontera para el campo electromagne´tico en medios
+caracterizanalcampoelectromagne´ticoendominiosquirales quirales.Tesisenopcio´nalgradodeDoctoraenComu-
+confronterasfractales. nicacio´nyElectro´nica.InstitutoPolite´cnicoNacional,
+Losresultadosdelateor´ıadelosproblemasdecontorno EscuelaSuperiordeIngenier´ıaMeca´nicayEle´ctrica,
+paracamposelectromagne´ticosendominiosnoquiralescon Me´xico,DF.
+fronterasfractales,sonaplicablesalosmediosma´sgenerales
+comolosquirales,consimilarescaracter´ısticasencuantoa [9] Khmelnytskaya, K.V. Kravchenko, V.V. Oviedo, H.
+lafractalidad.Elloconstituyeunamuestradelalcancedelos (2001).Quaternionicintegralrepresentationsforelec-
+me´todosdesarrolladosysusposibilidadesparalaformaliza- tromagneticfieldsinchiralmedia.Telecommunications
+cio´ndeunateor´ıaelectrodina´micafractal. andRadioEngineering56(2001),No.4&5,53-61.
+[10] Gu¨rlebeck,K.;Habetha, K.; Spro¨ssig, W. (2008) Ho-
+Referencias
+lomorphicFunctionsinthePlaneandn-dimensional
+[1] Gu¨rlebeck, K., Spro¨ssig, W. (1990). Quaternionic Space.Berlin:Birkha¨userVerlagAG.
+AnalysisandEllipticBoundaryValueProblems.Basel,
+[11] Ward, J.P. Quaternions and Cayley Number. (1997).
+Boston,Berlin:Birkha¨userVerlag.
+Algebraandapplications.Dordrecht,Boston,London:
+[2] Gu¨rlebeck,K.,Spro¨ssig,W.(1997).Quaternionicand KluwerAcademicPublisher.
+Clifford Calculus for Physicists and Engineers. Chi-
+[12] A´vila, A´vila, R.; Abreu Blaya, R.; Borys Reyes, J.
+chester, New York, Weinheim, Brisbane, Singapore,
+(2016).A´lgebracuaternio´nicayalgunasaplicaciones.
+Toronto:JohnWileyandSons.
+InstitutoPolite´cnicoNacional.Me´xico:DR,Sociedad
+[3] Kravchenko,V.V.,Shapiro,M.V.(1996).Boundaryva- Cooperativa,ISBN:978-607-8292-35-6.
+lueproblemsfortime-harmonicelectromagneticfields.
+[13] A´vila A´vila, R. (2016). Problemas de contorno para
+En:Integralrepresentationsforspatialmodelsofmat-
+camposelectromagne´ticosyfuncionespolimonoge´ni-
+hematicalphysics(138-146).HarlowEssex:Addison
+casendominiosconfronterasfractales.Tesisenopcio´n
+WesleyLongmanLimited.
+alt´ıtulodeDoctorenCienciasMatema´ticasporlaUni-
+[4] Mitrea, M., Torres, R.H., Welland, G.V. (1996). Re- versidaddeOriente.
+gularity and approximation results for the Maxwell
+problem on C1 and Lipschitz domains. En: J. Ryan [14] Abreu Blaya, R., A´vila A´vila, R., Bory Reyes, J.,
+Rodr´ıguez-Dagnino,R.M.(2015).Cauchyrepresenta-
+(ed.),CliffordAlgebrasinAnalysisandRelatedTopics
+tionformulasforMaxwellequationsin3-dimensional
+(297-308). Boca Raton, New York, London, Tokyo:
+domains with fractal boundaries. Bull. Braz. Math.
+CRCPres.
+Soc.,NewSeries,vol.46,no.4,681-700.
+[5] Kravchenko,V.V.(2003).Appliedquaternionicanaly-
+sis.ResearchandExpositioninMathematics,28.Lem- [15] AbreuBlaya,R.,BoryReyes,J.(2009).AMartinelli-
+go:HeldermannVerlag. Bochnerformulaonfractaldomains.Arch.Math.,vol.
+92,no.4,335-343.
+[6] McIntosh,A.,Mitrea,M.(1999).Cliffordalgebrasand
+Maxwell’sequationsinLipschitzdomains.Math.Meth. [16] Abreu Blaya, R., Bory Reyes, J., Brackx, F., De
+Appl.Sci.,vol.22,no.18,1599-1620. Schepper,H.,Sommen,F.(2010).AHermitianCauchy
+formula on a domain with fractal boundary. J. Math.
+[7] AbreuBlaya,R.;A´vilaA´vila,R.,BoryReyes,J.(2015). Anal.Appl.,vol.369,273–282.
+BoundaryvalueproblemsforDiracoperatorsandMax-
+CienciasMatemáticas,Vol.35,No.2,2021,Pag.65-72

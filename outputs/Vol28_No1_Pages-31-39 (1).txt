@@ -1,0 +1,461 @@
+Revista Ciencias Matemáticas
+Al (cid:976)in de cuentas, ¿qué es una recta?
+Daniela Bonilla Barraza (danielabonillab@gmail.com) Universidad de La Serena, Chile
+Marcela Parraguez González (marcela.parraguez@ucv.cl) Ponti(cid:980)icia Universidad Católica de Valparaíso, Chile
+Leonardo Solanilla Chavarro (leonsolc@ut.edu.co) Universidad del Tolima, Colombia
+Resumen closely related to the solution set to a linear Diophantine
+equation.
+En este artículo proponemos un par de de(cid:976)iniciones mé-
+Key words: Taxicab Geometry, straight line, conic sec-
+tricas de línea recta para la Geometría Discreta del Taxis-
+tions, topological dimension, linear Diophantine equa-
+ta. Esto quiere decir que no partimos de una de(cid:976)inición
+tions.
+algebraica para las rectas, sino que usamos únicamente
+la restricción de la métrica del taxista al plano discreto
+Z (cid:3400) Z. Con ello obtenemos rectas que se comportan bien
+1. Introducción
+bajo la acción del grupo de isometrías. Las de(cid:976)iniciones
+propuestas están ligadas al halo de un punto, un concep-
+La Educación Matemática se conecta a veces con las mate-
+to necesario que remedia la ausencia de una noción per-
+máticas a través de la senda de la modelación. En búsque-
+tinente de dimensión en esta geometría discreta. Entre
+da de una propuesta para la enseñanza de las secciones
+las rectas encontradas se distinguen algunas relaciona-
+cónicas a nivel secundario, hemos encontrado un modelo
+das con las soluciones de las ecuaciones diofánticas li-
+didáctico1 que constituye, por sí mismo, un objeto de es-
+neales.
+tudio para las matemáticas. La investigación primaria de
+Palabras clave: Geometría del Taxista, líneas rectas,
+Bonilla y Parraguez (2013), enmarcada en la teoría de los
+secciones cónicas, dimensión topológica, ecuaciones dio-
+modos de pensamiento de Sierpinska2 (2000), pretendía
+fánticas lineales.
+que los aprendices comprendieran la elipse como (cid:976)igura
+Abstract representada en el plano discreto (SG), como conjunto de
+pares ordenados que satisfacen una ecuación (AA) y como
+In this paper we propose a couple of metric de(cid:976)initions of
+lugar geométrico (AE). Para tal (cid:976)in se elaboró una propues-
+straight line for the Discrete Taxicab Geometry. In other
+ta didáctica de la elipse basada en la llamada Geometría
+words, we do not presuppose any algebraic property for
+the line; instead we use only the restriction of the taxicab
+1 Modelo diseñado a partir de una transposición didáctica, esto es, según
+metric to the discrete plane Z (cid:3400) Z. In this way, we get strai- Chevallard (1985, p. 39), «un contenido del saber sabio que haya sido
+designado como saber a enseñar sufre a partir de entonces un conjunto
+ght lines that behave well under the action of the isometry de transformaciones adaptativas que van a hacerlo apto para tomar
+lugar entre los objetos de enseñanza. El "trabajo" que un objeto de
+group. The proposed de(cid:976)initions depend on the notion of
+saber a enseñar hace para transformarlo en un objeto de enseñanza se
+halo, a way to remedy the lack of a proper notion of dimen- llama transposición didáctica».
+2 Sierpinska distingue 3 modos de pensar un concepto: sintético-
+sion for this discrete geometry. Some of the found lines are geométrico (SG), analítico-aritmético (AA) y analítico-estructural (AE).
+— 31 —
+Sociedad Cubana de Matemática y Computación
+del Taxista. No obstante, la adecuación de los contenidos relación con las soluciones de las ecuaciones diofánticas
+derivó en un objeto matemático distinto, aunque emparen- lineales. Finalmente, se delinean algunas conclusiones
+tado con el plano usual del taxista. Sorprendentemente, la sobre el procedimiento empleado para llegar a dichas
+di(cid:976)icultad principal para entender otras cónicas, como las de(cid:976)iniciones.
+parábolas, radicaba en que no se tenía una de(cid:976)inición pre-
+cisa de línea recta. Por esta razón, aquí nos dedicamos a ex-
+2. La Geometría Discreta
+plorar una noción pertinente para esta importante (cid:976)igura
+del Taxista (GDT)
+geométrica.
+Comúnmente atribuida a Minkowski3 en los albores del
+siglo (cid:285)(cid:285), la Geometría del Taxista se obtiene cambiando la En el intento mencionado de simpli(cid:976)icación didáctica, la GT
+distancia euclidiana entre dos puntos (x ,y ), (x , y ) del fue modi(cid:976)icada de tal suerte que los números reales R fueron
+1 1 2 2
+plano R2 por remplazados por los enteros Z. En concordancia, aquí enten-
+d((x ,y ), (x , y )) = | x - y | + | x - y | demos que la Geometría Discreta del Taxista, o GDT, es una
+1 1 2 2 1 1 2 2
+estructura matemática doble (algebraica y métrica) de(cid:976)inida
+El cambio de distancia o métrica introduce modi(cid:976)icaciones sobre el producto cartesiano Z2 = Z (cid:3400) Z. Al trabajar con los
+radicales. enteros en lugar de los reales, se espera simpli(cid:976)icar grande-
+Fue Menger (1952) quien usó por primera vez el expre- mente la situación para los aprendices. En particular, se evi-
+sivo sobrenombre “del taxista”, evocando la manera como ta la espinosa completitud de los números reales.
+un automóvil recorre las calles y avenidas de una ciudad. Los elementos de Z2 se llaman puntos, como es habitual
+El libro de Krause (1975) y algunos artículos aparecidos en en Geometría. La estructura algebraica en Z2 es aquella
+The Pi Mu Epsilon Journal al comienzo de la década de 1980 de módulo bilateral sobre el dominio entero Z. Es decir, la
+(Reynolds, 1980; Moser y Kramer, 1982; Iny, 1984), dieron suma se realiza en cada componente y un escalar entero
+renovado empuje a las investigaciones sobre esta geome- multiplica las dos componentes. Concretamente, si (x ,y ),
+1 1
+tría. No obstante, el verdadero despegue contemporáneo (x , y ) ∈ Z y z ∈ Z.
+2 2
+de la Geometría del Taxista comenzó en 1997 con los traba-
+jos de Rüstem Kaya en Turquía. Ente 1997 y 2010, Kaya fue (x , y ) + (x , y ) = (x + x , y + y ), z . (x , y ) = (zx , zy )
+1 1 2 2 1 2 1 2 1 1 1 1
+el autor más prolí(cid:976)ico en este campo.
+En la Sección 1 se introducen algunos ajustes a la Geo- Lo que marca la diferencia con la Geometría Euclidiana es
+metría del Taxista (GT), convenientes para la enseñan- la parte topológica de la estructura. Como el lector lo habrá
+za de las cónicas en la secundaria. Ellos se materializan entendido seguramente desde la Introducción, la distancia
+en la estructura que hemos llamado Geometría Discre- entre los puntos (x ,y ), (x , y ) ∈ Z2 es
+1 1 2 2
+ta del Taxista (GDT). La Sección 2 se dedica al estudio
+del grupo de isometrías de la GDT, el cual desempeña un d((x ,y ), (x , y )) = | x - x | + | y - y |.
+1 1 2 2 1 2 1 2
+papel protagónico en el resto del artículo. El centro de
+este artículo ocupa la Sección 3, en la cual se construye Con esta distancia o métrica, Z2 posee una estructura de
+una primera de(cid:976)inición conveniente de línea recta para espacio métrico diferente a la usual (asociada a la pitagó-
+la GDT. En la Sección 4 se generaliza esta primera de(cid:976)i- rica o raíz cuadrada de los cuadrados de las diferencias de
+nición. La extensión del concepto de recta permite abar- las coordenadas). La nueva métrica remeda la forma cómo
+car toda una nueva clase de rectas que guardan estrecha un taxi recorre una ciudad: solo puede recorrer tramos en
+dirección norte-sur o este-oeste (no puede pasar diagonal-
+3 Ciertamente, las ideas centrales detrás de la de(cid:976)inición contemporá-
+nea de espacio métrico ya están presentes en Minkowski (1910, Ers- mente a través de los edi(cid:976)icios).
+tes Kapitel, 1).
+— 32 —
+Revista Ciencias Matemáticas
+En breve, nuestra estructura se deja escribir como de(cid:976)inidas para cada (m,n) ∈ Z2. t es la translación
+0,0
+(Z2,+,.,d). El plano cartesiano discreto está equipado con la identidad.
+suma del grupo abeliano subyacente, el producto por esca- 2) Las isometrías ortogonales, es decir, las rotaciones y
+lares enteros y la métrica del taxista. las re(cid:976)lexiones.
+La mayor di(cid:976)icultad de la GDT o la GT, en comparación
+con la Geometría Euclidiana (GE), es la fragilidad de la com- a) Las rotaciones r : Z2 ⟶ Z2 alrededor del origen
+k
+patibilidad entre las estructuras algebraica y métrica. En son cuatro. Ellas corresponden a los ángulos de
+efecto, las (cid:976)iguras geométricas de la GE se pueden de(cid:976)inir 0,(cid:2024)/2,(cid:2024) y 3(cid:2024)/2. Mejor, r (x,y) es la rotación del pun-
+k
+métrica o algebraicamente y las dos de(cid:976)iniciones resultan to (x,y) alrededor del origen (0,0) en un ángulo de
+ser equivalentes. Esto no sucede con las geometrías del ta- k(cid:2024)/2, k = 0,1,2,3. r es la rotación identidad.
+0
+xista, al punto de que una de(cid:976)inición métrica produce, en b) La cuatro re(cid:976)lexiones r: Z2 ⟶ Z2 corresponden a
+L
+general, (cid:976)iguras distintas a aquellas de la de(cid:976)inición alge- cuatro rectas distinguidas: el eje horizontal o eje
+braica. Naturalmente, la situación didáctica cognitiva tam- de las x, el eje vertical o eje de las y, la diagonal y
+bién se complica puesto que la frontera entre los modos de = x y la diagonal y = -x. En concreto, r (x,y) = (x,-y),
+x
+pensamiento analítico-estructural (AE) y analítico-arit- r (x,y) = (-x,y), r (x,y) = (y,x) y r = (x,y) = (-y,-x).
+y y=x y -x
+mético (AA) para la recta se desvanece. A este asunto vol-
+veremos más adelante, cuando enfrentemos la noción de El subgrupo de isometrías formado por las re(cid:976)lexiones y las
+recta en la GDT. rotaciones es el grupo ortogonal de la GDT. Es fácil ver que
+toda isometría de Z2, con la métrica discreta del taxista, se
+puede escribir de manera única como la composición de un
+3. Grupo de isometrías de la GDT
+elemento de este grupo ortogonal con una translación. La
+demostración de estos resultados se puede realizar, mu-
+Este grupo de isometrías brinda un instrumento muy útil tatis mutandis, a partir de los resultados similares de Ko-
+para entender ciertos aspectos de la GDT y para obtener cayusufoğlu y Özdamar (1998) para la GT.
+nuevas (cid:976)iguras a partir de (cid:976)iguras ya conocidas. En verdad,
+la imagen de una (cid:976)igura geométrica (recta, en nuestro caso)
+4. Hacia una noción de recta
+bajo una de estas isometrías debe ser una (cid:976)igura del mismo
+tipo (recta, en este artículo).
+Las isometrías de la GDT son las aplicaciones i : Z2 ⟶ Z2 No hay una única noción de recta en la GDT, o la GT; la lite-
+que preservan las distancias. O sea, ratura conocida ofrece varias alternativas. A continuación,
+discutimos las de(cid:976)iniciones conocidas y proponemos una
+d(i(x ,y ), i(x , y )) = d((x ,y ), (x , y )) nueva, que se adapta mejor a las exigencias convenidas en
+1 1 2 2 1 1 2 2
+las dos secciones anteriores.
+para cualquier par de puntos (x ,y ), (x , y ) ∈ Z2. Nuestra
+1 1 2 2
+familiaridad con la GE nos hace olvidar que, en otras geo- Rectas euclidianas
+metrías, las isometrías son distintas. En el estudio de la GT a partir de un conjunto de axio-
+En efecto, el grupo de isometrías del plano Z (cid:3400) Z del mas, es habitual identi(cid:976)icar los puntos y las líneas rectas
+taxista consta de: con aquellos y aquellas de la GE4. De esta manera, se ob-
+tiene un sistema axiomático en el que se veri(cid:976)ican muchos
+1) Las translaciones t : Z2 ⟶ Z2,
+m,n
+t (x,y) = (x,y) + (m,n) = (x + m, y + n), 4 Esta hipótesis está justi(cid:976)icada, en parte, por la claridad del concepto
+m,n
+de bisectriz en la GT.
+— 33 —
+Sociedad Cubana de Matemática y Computación
+teoremas de la GE, pero se pierde la propiedad LAL (lado Rectas como partes de una bisectriz
+ángulo lado): Sin embargo, esta de(cid:976)inición no produce los conjuntos
+esperados en la GDT; la situación se complica inespera-
+Cuando dos lados y el ángulo incluido entre ellos de un damente. En verdad, un sencillo ejercicio muestra que las
+triángulo son congruentes con los dos lados correspon- “rectas” resultantes no son, en el caso discreto, las que es-
+dientes y el ángulo incluido entre ellos, de otro triángulo, peraríamos. La (cid:976)igura 1 ilustra el problema.
+los dos triángulos son congruentes.
+Por ello, se dice que la GT es una geometría no euclidiana.
+Un estudio de este sistema se puede consultar en Dawson
+(2007). Sin embargo, esta de(cid:976)inición es caprichosa porque
+presupone propiedades algebraicas de las rectas.
+Si nos apoyamos solo en la parte métrica de la estruc-
+tura, esta convención no es satisfactoria; más aún cuando
+queremos sacar provecho del grupo de isometrías. De otro
+lado, desde el punto de vista de la enseñanza, es útil mos-
+trar a los aprendices otras nociones de rectas que también,
+conducen a resultados válidos. Por todas estas razones, de-
+cidimos tomar una alternativa distinta a la de las rectas eu-
+Fig. 1 El conjunto de puntos verdes que equidistan de los puntos
+clidianas. azules P y P'.
+Rectas como bisectrices
+Una alternativa interesante surge del estudio de las cóni- Las complicaciones se pueden resolver de la manera si-
+cas en la GT, v. Reynolds (1980, p. 84). Si la diferencia de las guiente. Para cada (x,y) ∈ Z2, de(cid:976)inimos el halo de (x,y) como
+distancias de los puntos de una hipérbola a sus focos se hace el conjunto
+cero, deberíamos encontrar una recta. Bueno, así lo sugie-
+re nuestra experiencia con la GE. Así lo entendió Iny (1984, H(x,y) = {(x - 1, y - 1),(x, y - 1),(x + 1, y - 1),(x - 1,y),
+p. 645), al criticar la suposición algebraica de Moser y Kra- (x + 1,y),(x - 1,y + 1),(x,y + 1),(x + 1,y + 1)}
+mer (1982) porque «they do not attempt to justify their de(cid:980)i-
+nition of a line». Para solventar esta di(cid:976)icultad, Iny propone Con esto, dados dos puntos distintos (x ,y ),(x ,y ) ∈ Z2, una
+1 1 1 1
+de(cid:976)inir la recta como «the locus of points in a plane equidistant recta en la GDT es un subconjunto
+from two distinct points» (el lugar geométrico de los puntos
+equidistantes de dos puntos distintos dados). Este punto de L ⊂ M = {(x,y) ∈ Z (cid:3400) Z : d((x,y),(x ,y )) = d((x,y),(x ,y ))}
+1 1 2 2
+vista ha sido explotado por Phoebe Ho & Liu (1996): la rec-
+ta o bisectriz (también midset en inglés) del taxista corres- con la propiedad de que existe una aplicación inyectiva, o
+pondiente a los puntos, distintos, (x ,y ), (x ,y ) ∈ R2 es del parametrización, (cid:2009):Z2 ⟶ Z2, (cid:2009)(Z) = L, tal que (cid:2009)(z + 1) " H
+1 1 2 2
+conjunto ((cid:2009)(z)), pero (cid:2009)(z + 1) " H ((cid:2009)(z - 1)) para cada z ∈ Z.
+En breve, la última condición de la de(cid:976)inición anterior se
+M = {(x,y) ∈ R2 : d((x,y),(x ,y )) = d((x,y),(x ,y ))}, puede escribir como
+1 1 2 2
+donde d denota la métrica de la GT. (cid:2009)(z + 1) ∈ H((cid:2009)(z)) - (H((cid:2009)(z - 1)) ∩ H (cid:2009)(z)),
+— 34 —
+Revista Ciencias Matemáticas
+para cada z ∈ Z. De esta manera, se explica como avanza la enseñanza de las rectas en un primer curso sobre la
+la curva, a medida que los z ∈ Z crecen. Debido a las iso- GDT, basta considerar rectas de las tres clases siguien-
+metrías de la sección anterior, los casos presentados en las tes: 1. Rectas horizontales, verticales y oblicuas. 2. Rectas
+(cid:976)iguras 2a y 2b cubren una gran cantidad de las situaciones compuestas de dos partes, las cuales constan de in(cid:976)initos
+posibles. Los puntos verdes señalan las posiciones permiti- puntos en una oblicua e in(cid:976)initos puntos en una horizon-
+das (cid:2009)(z + 1); los rojos; las prohibidas; los negros, los puntos tal o vertical. 3. Rectas compuestas de tres partes, o sea,
+conocidos de la recta: (cid:2009) = (cid:2009)(z - 1) y (cid:2010) = (cid:2009)(z); y los azules P y constan de (cid:976)initos puntos en una oblicua y una parte in(cid:976)i-
+P’, los puntos que sirven para de(cid:976)inir la recta. nita horizontal o vertical; o al revés: tienen (cid:976)initos puntos
+en una recta horizontal o vertical e in(cid:976)initos puntos en su
+parte oblicua.
+La restricción a este subconjunto de rectas no compro-
+mete para nada los objetivos de la comprensión y la ense-
+ñanza; los mismos principios se pueden usar después para
+tratar clases más complejas de rectas. Las (cid:976)iguras 3a, 3b y
+3c ilustran tres de rectas de la GDT.
+Fig. 3a Recta de la primera clase.
+Fig. 2a Una forma del avance de una recta.
+Fig. 3b Recta de la segunda clase.
+Fig. 2b Otra forma del avance de una recta.
+Rectas sencillas
+Las rectas de esta geometría pueden, pues, adoptar
+formas muy complejas; nada evidentes para la intuición
+euclidiana. Así lo dejan ver simples ejercicios con la de(cid:976)i-
+nición anterior. A pesar de ello, dichas rectas constan de
+partes horizontales, verticales u oblicuas. Por eso, para Fig. 3c Recta de la tercera clase.
+— 35 —
+Sociedad Cubana de Matemática y Computación
+Representación algebraica Una 1-variedad topológica es un espacio de Hausdorff C
+Observemos que la descripción algebraica (correspon- con una base numerable tal que cada punto P ∈ C tiene un
+diente al modo de pensar AA) de las rectas puede hacerse entorno que es homeomorfo a un subconjunto abierto de Z.
+por tramos horizontales, verticales u oblicuos. Las rectas
+horizontales se pueden parametrizar por (cid:2009)(z) = (c,z), don- Este proceder es futil. En verdad, recordemos que la topolo-
+de c es una constante entera; las verticales por (cid:2009)(z) = (c,z); gía del orden sobre Z es la topología discreta. Como la topo-
+las oblicuas por (cid:2009)(z) = (z,z + c) o (cid:2010)(z) = (z,-z + d), para cons- logía métrica sobre Z2 también es la discreta, se tendría que
+tantes c,d ∈ Z. Por lo tanto, si denotamos respectivamente cualquier subconjunto de Z2 sería una 1-variedad topológi-
+las abscisas y ordenadas por x y y, la horizontales corres- ca. Esto, naturalmente, no es lo que queremos.
+ponden a y = c; las verticales, a x = c; y las oblicuas, a y = x ¿Cómo lograr, entonces, una noción diferenciadora de di-
++ d o y= d - x. mensión en Z2? Pues bien, la ayuda viene de la noción de
+Las rectas en las otras dos clases se parametrizan por halo. La construcción es como sigue. Escogidos dos puntos
+tramos según las expresiones del párrafo anterior. Así diferentes (x ,y ),(x ,y ) ∈ Z2, una recta en la GDT es un sub-
+1 1 2 2
+por ejemplo, la recta en la Figura 3b se puede describir conjunto de la bisectriz
+como
+a(z)=( ( ( z z , , - - 1 z) ) z z # $ - 0 12 L 1 M = {(x,y) ∈ Z (cid:3400) Z : d((x,y),(x 1 ,y 1 )) = d((x,y),(x 2 ,y 2 ))}
+De manera similar, la recta en la Figura 3c se explica por
+tal que existe una aplicación inyectiva (cid:2009):Z2 ⟶ Z2, (cid:2009)(Z) = L,
+] ] ]] Z (z,-1) z#-1 _b b bb tal que
+a(z)=]
+]
+[(z,-z) z=0 `b
+b
+.
+H((cid:2009)(z)) + L = {(cid:2009)(z - 1), (cid:2009)(z + 1)},
+]](1,-z) z$1 bb
+\ a
+No se debe olvidar que la imagen de una recta de la GDT,
+para cada z ∈ Z. Reiteramos que la condición de Hausdorff
+bajo una de las isometrías de la GDT, es, de nuevo, una recta
+y la de la base numerable son super(cid:976)luas en la topología (re-
+de la GDT. Se trata de un hecho evidente, ya que la de(cid:976)ini-
+lativa a la) discreta.
+ción de línea recta usa únicamente las propiedades métri-
+cas del espacio Z2.
+Halos generales
+El concepto de halo es susceptible de generalizarse con
+5. Las rectas como 1-variedades provecho para el estudio de las rectas. Dados n,m,p,q ∈ Z+,
+topológicas generalizadas podemos extender el signi(cid:976)icado de halo centrado en (x,y)
+∈ Z2 a
+Z] _b
+Esta manera de considerar las rectas corresponde al ] ]] (x-m,y-q),g,(x,y-q),g,(x+n,y-q),g,b bb
+modo de pensar AE. Desde la teoría de las subvariedades
+H
+n,m,p,q
+(x,y)=[]
+]
+(x-m,y),g,(x+n,y),g. `b
+b
+]]
+(x-m,y+p),g,(x,y+p),g,(x+n,y+p)
+bb
+de R2, el procedimiento de recurrir al halo y a un meca- \ a
+O sea, los halos que hemos usado hasta ahora son de la for-
+nismo de iteración para producir las rectas es exótico. Por
+ma H(x,y) = H (x,y).
+ello, conviene intentar una de(cid:976)inición diferente de recta 1,1,1,1
+La (cid:976)igura 4 puede ayudar a entender estos halos genera-
+para la GDT.
+lizados.
+Insu(cid:976)iciencia de la noción de variedad
+Rectas generales
+En un primer intento por adaptar la de(cid:976)inición usual de
+Con esta noción más amplia, podemos generalizar el
+variedad topológica al caso que nos ocupa, se podría pensar
+concepto de recta en la GDT por medio de la siguiente de-
+en algo así como, cf. Munkres (2000-1975, p. 225),
+— 36 —
+Revista Ciencias Matemáticas
+Fig. 4 H (0,0)
+1,2,1,3
+(cid:976)inición. Dados dos puntos distintos (x ,y ),(x ,y ) ∈ Z2 una Fig. 5 La recta x = -2y.
+1 1 2 2
+este caso, la ecuación diofántica lineal tiene in(cid:976)initas solu-
+recta en la GDT es un subconjunto
+ciones (cid:2009)(z) = (x(z),y(z)), con
+L 1 M = {(x,y) ∈ Z (cid:3400) Z : d((x,y),(x ,y )) = d((x,y),(x ,y ))}
+Z]
+] ]x(z)=x +a b kz
+_b
+b b
+1 1 2 2 ] 0 g b
+[] `b
+] a b
+con las siguientes características: ] ]y(z)=y 0 -` g jzb b
+\ a
+donde (x ,y ) es una solución particular de la ecuación, z ∈ Z
+0 0
+y g = MCD(a,b); cf. Jiménez, Gordillo y Rubiano (2004,
+1. Existe una aplicación inyectiva o parametrización
+p. 125). De esta manera, alrededor de cada punto de las rec-
+(cid:2009):Z2 ⟶ Z2 con (cid:2009)(Z) = L.
+tas correspondientes se tiene un halo H ((cid:2009)(z)) con
+2. Para cada z ∈ Z, existen n,m,p,q ∈ Z tales que n,m,p,q
+b a
+n=m= , p=q= - .
+g g
+H ((cid:2009)(z)) + L = {(cid:2009)(z - 1), (cid:2009)(z + 1)}.
+n,m,p,q Claro está, hay que tener el cuidado de excluir los puntos
+que no cumplan con la condición de equidistancia. Es decir,
+De nuevo, son muchas las posibilidades de recta que resul-
+si S es el conjunto solución de la ecuación diofántica y M es
+tan de esta de(cid:976)inición general. Los halos determinan “pen-
+una de las bisectrices de más arriba, la recta es L = S + M. En
+dientes locales” a la derecha y a la izquierda de cada punto
+el caso de la recta x + 2y = 0, este paso no es evidente porque
+de la línea recta. Cuando los halos son del tipo H (x,y), se
+1,1,1,1 S 1 M y así, L = S.
+obtienen las rectas de la Sección 3. Además de éstas, la nue-
+A manera de ejemplo, gra(cid:976)iquemos la recta solución de
+va de(cid:976)inición produce con(cid:976)iguraciones nuevas; en algunos
+6x + 9y = 21.
+casos muy interesantes y casi inesperadas.
+En primer lugar, MCD(6,9) = 3. Como 3 | 21, el conjunto
+solución no es vacío. Por ensayo y error, (x ,y ) = (-7,7), entre
+Ecuaciones diofánticas lineales 0 0
+otras posibilidades. De esta forma, x(z) = -7 + 3z y y(z) = 7 - 2z.
+La (cid:976)igura 5 presenta la recta x + 2y = 0, que se obtiene
+Los halos son de la forma H ((cid:2009)(z)). En la Figura 6 se es-
+con halos de la forma H ((cid:2009)(z)) alrededor de cada punto 3,3,2,2
+2,2,1,1 boza la recta solución. El punto rojo queda por fuera del
+(cid:2009)(z) = (-2z,z), z ∈ Z.
+conjunto M, de los puntos equidistantes a P,P'.
+Esta recta es un caso particular de las rectas que solucio-
+Sin embargo, al aplicar la translación t a la recta de la
+nan las ecuaciones diofánticas lineales -2,-1
+(cid:976)igura 6, obtenemos otra recta totalmente contenida en M.
+ax + by = c, a,b,c ∈ Z.
+No hay que olvidar que estas rectas diofánticas consti-
+tuyen solo una parte de las rectas generales de la GDT. Para
+Como es bien sabido, ellas tienen solución si y solo si MC-
+solucionar una ecuación de este tipo es útil, a menudo, ayu-
+D(a,b) | c (el máximo común divisor de a y b divide a c). En
+darse del grupo de isometrías de la GDT.
+— 37 —
+Sociedad Cubana de Matemática y Computación
+A propósito, ha sido sorprendente encontrar que la
+noción (aparente arbitraria) de halo se haya convertido
+en el ingrediente central para precisar una idea de di-
+mensión útil para la geometría estudiada. No se espera-
+ba tampoco, en un principio, que los halos permitieran
+interpretar las soluciones de las ecuaciones diofánticas
+lineales en dos variables como rectas de la Geometría
+Discreta del Taxista.
+El precio que hay que pagar por estos resultados es la
+Fig. 6 La recta 6x + 9y = 21. pérdida de muchos axiomas de la Geometría Euclidiana, a
+los cuales estamos acostumbrados. Entre otros, se pierden
+los axiomas de incidencia y de la paralela. El estudio del sis-
+6. Conclusiones
+tema axiomático resultante debe ser objeto de un estudio
+ulterior.
+En primer lugar, se debe resaltar que la de(cid:976)inición de parti- Por último y al (cid:976)in de cuentas, ¿qué es una recta? Después
+da, que es completamente métrica, produjo algunas rectas de la experiencia vivida con la GDT, nos atrevemos a decir
+con propiedades algebraicas interesantes. Nos referimos que una recta es una abstracción de la recta euclidiana y
+concretamente al éxito obtenido al descubrir que hay rec- una idealización de una 1-variedad topológica que, en lo po-
+tas métricas que son soluciones de ecuaciones diofánticas. sible, debe tender un puente entre la parte métrica y la par-
+De esta manera, se cierra en algo la brecha entre la parte te algebraica de la Geometría.
+algebraica y la parte métrica de esa estructura doble que
+hemos llamado Geometría Discreta del Taxista. A pesar de
+7. Agradecimientos
+esto, la compatibilidad entre estas dos partes está muy le-
+jos de ser la estrecha relación que se da en la Geometría Eu-
+clidiana. Este artículo ha sido (cid:976)inanciado parcialmente por la Facul-
+También es importante señalar que las nociones de rec- tad de Ciencias de la Universidad del Tolima (UT) en Iba-
+ta propuestas son lo su(cid:976)icientemente sencillas como para gué, Colombia. De manera especial, los autores agradecen
+poderse acomodar a las necesidades de la enseñanza. Cier- el aporte (cid:976)inanciero de la Ponti(cid:976)icia Universidad Católica de
+tamente, la de(cid:976)inición se puede transponer a los aprendices Valparaíso (PUCV), a través del Plan de Mejoramiento Ins-
+de una manera muy sencilla: titucional (PMI). Este plan busca aumentar la calidad del
+desempeño profesional en las aulas escolares de los profe-
+Una recta en la GDT es un conjunto in(cid:980)inito de puntos veci- sores formados en la PUCV (UCV1203). Está, además, apo-
+nos que equidistan de dos puntos distintos dados. Los puntos yado por el programa MECESUP, a través de la modalidad
+se llaman vecinos porque el halo de cada punto de la recta de Convenio de desempeño.
+contiene exactamente dos puntos, a saber: el predecesor y el
+sucesor de dicho punto. Los puntos de una recta están en co-
+rrespondencia biunívoca con los números enteros.
+Al escribir esta de(cid:976)inición por primera vez, teníamos en
+mente los halos H (x,y). Sin embargo, la de(cid:976)inición sigue
+1,1,1,1
+siendo válida para cualquier halo H (x,y).
+n,m,p,q
+— 38 —
+Revista Ciencias Matemáticas
+Bibliogra(cid:976)ía
+BONILLA, D. y PARRAGUEZ, M. (2013) La elipse desde la perspecti-
+va la teoría los modos de pensamiento. Alemania: Editorial aca-
+démica española.
+CHEVALLARD, Y. (1985) La transposition didactique; du savoir
+savant au savoir enseigné. Paris: La Pensée Sauvage.
+DAWSON, R. (February 2007) Crackpot Angle Bisectors! Mathema-
+tics Magazine. Washington, DC, Vol. 80, No. 1, pp. 59-64.
+INY, D. (Spring 1984) Taxicab Geometry: Another Look at Conic
+Sections. The Pi Mu Epsilon Journal. Worcester, Massachusetts,
+Vol. 7, No. 10, pp. 645-647.
+JIMÉNEZ, L. R.; GORDILLO, J. E. y RUBIANO, G. N. (2004) Teoría de
+números para principiantes. Bogotá, Universidad Nacional de
+Colombia, Facultad de Ciencias.
+KOCAYUSUFOĞLU, I. y ÖZDAMAR, E. (1998) Isometries of Taxicab
+Geometry. Commun. Fac. Sci. Univ. Ank. Series A1. Vol. 47, pp.
+73-83.
+KRAUSE, E. F. (1975) Taxicab Geometry: An Adventure in Non-Eucli-
+dean Geometry. New York, Dover Publications.
+MENGER, K. (1952) You Will Like Geometry. Guidebook of the Illi-
+nois Institute of Technology Geometry Exhibit. Chicago, Illi-
+nois, Museum of Science and Industry.
+MINKOWSKI, H. (1910) Geometrie der Zahlen. Leipzig und Berlin,
+Druck und Verlag von B. G. Teubner.
+MUNKRES, J. R. (2000-1975) Topology. Upper Saddle River, New
+Jersey, Prentice-Hall.
+MOSER, J. M. y KRAMER F. (Fall 1982) Lines and Parabolas in Ta-
+xicab Geometry. The Pi Mu Epsilon Journal. Worcester, Massa-
+chusetts, Vol. 7, No. 7, pp. 441-448.
+PHOEBE HO, Y. y LIU, Y. (Spring 1996) Parabolas in Taxicab Geo-
+metry.
+Missouri Journal of Mathematical Sciences. University of Central
+Missouri, Warrensburg, Vol. 8, No. 2.
+SIERPINSKA, A. (2000). On Some Aspects of Atudents’ Thinking in
+Linear Algebra. J.-L. Dorier (ed.), On the Teaching of Linear Al-
+gebra. Kluwer Academic Publishers, 209-246.
+REYNOLDS, B. E. (Spring 1980) Taxicab Geometry. The Pi Mu Epsi-
+lon Journal. Worcester, Massachusetts, Vol. 7, No. 2, pp. 77-88.
+— 39 —

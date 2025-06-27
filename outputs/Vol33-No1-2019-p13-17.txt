@@ -1,0 +1,393 @@
+CienciasMatema´ticas,Vol.33,No.1,Pag.13-17,2019
+Depo´sito y Recuperacio´n de Llaves, un Elemento a
+Considerar para la Infraestructura de Llave Pu´blica
+en Cuba
+Key Escrow and recovery, an aspect to take into
+account for the Public Key Infrastructure
+Teresa Bernarda Page´s Lo´pez*
+Resumen Secaracterizaelmecanismodedepo´sitoyrecobradodellaveenelmundo,teniendoencuentael
+estudioacade´micorealizadoporvariosautores.Seexponeunacaracterizacio´ndelaInfraestructuradeLlave
+Pu´blicaenCuba,desdeeldocumentolegalquelaponeenvigor.Seproponelainclusio´ndelmecanismode
+depo´sitoyrecobradodellaveenlaInfraestructuradeLlavePu´blicadeCuba.
+Abstract Wequalifythekeyescrowandkeyrecoverymechanismsintheworld,havinginbeadingtheacademic
+studyaccomplishedforseveralauthors. WeexposetheCuba’sPublicKeyInfrastructurecharacteristicssince
+law document. We propose inclussion key escrow and key recovery mechanisms in the Cuba’s Public Key
+Infrastructure.
+PalabrasClave
+InfraestructuradeLlavePu´blica(ILP),depo´sitodellaves,recobradodellaves.
+1InstitutodeCriptograf´ıa,UniversidaddelaHabana,LaHabana,Cuba,teresa.bernarda@matcom.uh.cu
+Introduccio´n ceaproximadamente20an˜os,prestigiososacade´micosenel
+a´readelaCriptograf´ıa,hanpublicadolosresultadosdesus
+investigacionessobreelpresentetema.Unestudiorelevante
+Dentrodelvariadoescenarioqueofrecenhoylasnuevas
+sobrekeyescrowesdadoporD.E.DenningandD.K.Brans-
+Tecnolog´ıasdelaInformacio´n(TI),sonpropuestosparalos
+taden[1,2,3].Otraaristadelana´lisisesta´ relacionadaconsu
+sistemasdeproteccio´ncriptogra´ficaunaseriederequisitos
+legalidadyestandarizacio´napartirdelreconocimientoque
+queacompan˜analcifradoyesta´nrelacionadosconeldepo´sito
+realizanlosprincipalesgruposdetrabajoacade´micosquelo
+ylarecuperacio´ndelasllaves,as´ıcomoporlaexistenciade
+asumenytienenencuentacomoelementonecesariodentro
+terceraspartesconfiablesquepermitenalasagenciasdelgo-
+deldesarrollotecnolo´gicoactual.[1,2,3].EnCuba,durante
+biernorealizarinterceptacionesocultasalascomunicaciones,
+an˜ossehatrabajadoporlainstauracio´ndeunaInfraestructura
+apartirdequetienenelaccesoalasllavesdecifradoqueestos
+deLlavePu´blica(ILP),aspectoquefueasumidoylegalizado
+lesproporcionan.Estasexigencias,reconocidasenlaliteratu-
+conlaResolucio´nNo.2de2016.Sinembargo,apesardeque
+raacade´micayespecializadacomokeyescrowykeyrecovery
+laestructuraorganizativadelasociedadysusleyeslafavore-
+sonaplicablesbajoelcumplimientodedis´ımilespropiedades
+cen,noseasumio´ comopartedelatecnolog´ıadesarrolladaen
+asociadasconposiblesriesgoste´cnicos,costosadicionalese
+laILPunsistemadedepo´sitoyrecobradodeclaves,quesin
+implicacionesqueacarreaelinstaurarestetipodesistemas.
+lugaradudasfavorecer´ıalodispuesto.Enelpresentetrabajo
+EsunmecanismoquebeneficiaalfortalecimientodelaSegu-
+sedaunapropuestadesolucio´n,organizativayte´cnicaque
+ridadNacionaldemuchospa´ıses.Suimplementacio´nyuso
+permitira´ establecerdemaneravoluntariaestosmecanismos
+esta´nasociadosadiferentesobjetivosynivelesdeusuarios,
+dentrodelasInfraestructuradeLlavePu´blicacorporativades-
+dentrodelosquesedestacacomoelma´spositivo:proteger
+plegadaenelsistemaempresarialoenlascooperativasque
+a la sociedad de individuos inescrupulosos que utilizan los
+hoy, se establecen en el trabajo por cuenta propia. Merece
+sistemasdecomunicacionesconintencionescriminalesyte-
+sen˜alar, adema´s, que este mecanismo resulta de mucha uti-
+rroristas. Sin dejar de mencionar otros relacionados con la
+lidad en instituciones del Estado que manejen informacio´n
+salvadedatoseinformacio´nimportantequesonvitalespa-
+sensible.
+raeldesarrollodecualquiernacio´n.Sinembargo,estetema
+tambie´ntienesuladodeabstencio´n,relacionadoconeltemor
+delosindividuosalaviolacio´ndesuprivacidad.Desdeha-
+14 Depo´sitoyRecuperacio´ndeLlaves,unElementoaConsiderarparalaInfraestructuradeLlavePu´blicaenCuba
+1. Algunas ideas sobre depo´sito y datoparadatocifrado,quepuedeserpartedelmeca-
+recuperacio´n de llaves en el mundo nismo de distribucio´n normal de llaves [1], [2]. Este
+componentecifraydescifradatoyejecutafunciones
+Eldepo´sitodellavesofreceunserviciovaliosoaindivi- querespaldanelprocesoderecobradodedato.
+duos,organizacionesyalasociedad.Alincorporareldepo´sito
+dellavesensupol´ıticacriptogra´fica,losgobiernosesta´nga- 2. Componentedepo´sitodellaves. Esoperadoporagen-
+rantizandolacustodiadelmaterialcriptogra´ficoylaseguridad tesresponsabilizadosconeldepo´sitodellaves,adminis-
+delainformacio´nylastecnolog´ıasquelacrean,mueveny traeldepo´sitooalmace´nyliberaousadatosrecobrados
+protegen. El programa de depo´sito de llaves propuesto por dellaves.Puedeserpartedeunsistemaadministrador
+losgobiernosesgeneralmentevoluntario,loquenogarantiza decertificadodigitaldellavepu´blicaodeunainfraes-
+queloscriminalesseleccionenaesteenlugardelcifradoque tructuraadministradoradellaveengeneral.Adema´s,es
+notienelasllavesresguardadas,algoquecontinu´asiendoun responsabledelalmacenamientodetodaslasllavesde
+problemapermanenteparalaseguridad,dadoquenoexisten recobradodedatosydelaasistenciadelcomponentere-
+redescompletamenteinaccesibles. cobradodedatosqueproporcionalosdatososervicios
+Lossistemasdecifradoconrecuperacio´ndellavespro- requeridos.
+porcionan formas de acceso a la informacio´n (texto claro)
+3. Componenterecobradodedato. Secomponeporlos
+independientementedelcanaldecifradoydescifradoquese
+algoritmos,protocolosyequipamientosnecesariosque
+emplee.Unsistemadecifradocondepo´sitodellaves(KeyEs-
+permitenobtenereltextoclarodesdeeltextocifrado,
+crow)esunsistemadecifradoconunacapacidaddedescifrar
+adema´sdelainformacio´nenelcamporecobradodeda-
+salvas,estopermiteapersonasautorizadas(oficinistasdeuna
+tos.Seactivasolamenteantelanecesidaddeejecutarun
+organizacio´n,funcionariosdelgobierno,usuariosengeneral)
+recobradodedatoespec´ıficoautorizado.Adema´s,apo-
+bajociertascondicionesestablecidas,descifrartextoscifrados
+yarecobrareltextoclarodesdeeldatocifradousando
+conlaayudadeinformacio´nsuministrada,porunaoma´spar-
+informacio´nsuministradaporelcomponentedepo´sito
+tesconfiablesencargadasdecustodiarlasllavesquerecobran
+dellaves,enelcamporecobradodedatos.
+datosespeciales.Lasllavesquerecobrandatossonlasque
+Estoscomponenteslo´gicosesta´ninterrelacionadosen-
+permitendeterminarlallavedecifre/descifredeldato,pero
+tres´ı,yeldisen˜odeunorepercutedecisivamenteenlos
+conellasnosecifra/descifradirectamenteeldato.Elte´rmino
+otros.
+depo´sitodellavesokeyescrowesusadoparareferirnosalas
+salvasdeestasllavesderecobradodedatos.Otroste´rminos
+Caracterizacio´n
+tambie´nusadossonarchivosdellaves,salvadellaves,sistema
+Eldesplieguedelasinfraestructurasdecifrado,basadasen
+derecobradodellavesyterceraspartesconfiables.
+recuperacio´ndellaves,requierecumplirexigenciasrigurosas
+deseguridadyconfianza,loqueconllevaalincrementodesu
+1.1 Necesidad
+costo[3].
+Lanecesidaddepodercontarconunsistemadedepo´sito
+Laadopcio´ndelcifradocondepo´sitoyrecuperacio´ndellaves
+yrecobradodellavespuedeestardadaporvariascausas,en
+debe ser eleccio´n de los gobiernos, entidades e individuos,
+primerlugar,porlanecesidaddecifrardatosconfidenciales,
+segu´nlainstaciaypermisio´ndelasleyesyregulacionesen
+yaseaenlosprocesosdealmacenamientoytransferenciade
+cadalugar,estoconllevaalaaplicacio´ndeesta´ndaresinterna-
+documentosdigitales,comoenelaseguramientodelcorreoy
+cionales,oalmenosdesolucionesdebidamentecertificadas
+elcomercioelectro´nico,enlaproteccio´ndedatosenpa´ginas
+encadanivel.ResultamuyconvenienteaprovecharlaInfra-
+weboenelusodeprotocolodeconexio´nderedessegurascon
+estructuradeLlavePu´blicacomotecnolog´ıaqueadopteeste
+estepropo´sito.Otracausadeestanecesidadesta´ relacionada
+mecanismo,loquete´cnicamenteesasequibleporsumodula-
+conelproblemaquepuedepresenta´rselealosindividuoscon
+ridad[5,6].
+susllaves,tipificadosporelextrv´ıooporlapresenciadellaves
+Lossistemasdecifradoconrecuperacio´ndellavesfuncionan
+corruptas.Tambie´npuedeestarmotivadaporproblemasquese
+dediversasmaneras.Existenpropuestasdedepo´sitodella-
+presentanenlasempresas,originadospordescuido,ausencia
+vesqueconf´ıanenelalmacenamientodellavesprivadaspor
+odescontentodesustrabajadoresoantelaimposibilidadde
+partedeinstitucionesdelEstadoy,ma´srecientemente,por
+aplicarlaleydeSeguridadNacional.
+entidadesprivadaselegidas.Otrossistemastienenagentesde
+depo´sitooagentesderecuperacio´ndellavesquemantienen
+1.2 Componentes y caracter´ısticas del cifrado con lacapacidadderecuperarlasllavesdeunasesio´ndecomuni-
+depo´sitoyrecuperacio´ndellaves cacionescifradasoarchivosalmacenados,enconcreto;estos
+1. Componenteseguridaddeusuario.Esteesundispo- sistemasrequierenque talesllavesdesesio´neste´ncifradas
+sitivodehardwareoprogramadesoftwarequepropor- conunallaveconocidaporunagentederecuperacio´nein-
+ciona capacidad de cifre y descifre de dato, aspecto cluidasconlosdatos.Algunossistemassonconcebidospara
+importantepararespaldarlafuncio´ndedepo´sitodella- distribuirlacapacidadderecuperarllavesentrevariosagentes,
+ves.Incluyetambie´nadjuntaruncamporecobradode apartirdeunsistemadesecretocompartido[4].
+Depo´sitoyRecuperacio´ndeLlaves,unElementoaConsiderarparalaInfraestructuradeLlavePu´blicaenCuba 15
+2. La Infraestructura de Llave Pu´blica en poseeunatopolog´ıajera´rquicaestrictaytienesubordinadaen
+Cuba elprimerniveltodaslasautoridadesdecertificacio´ndetodos
+losOACEsyprincipalesentidadesdelpa´ıs,estosignificaque
+EnCuba,actualmenterigelaResolucio´nNo.2de2016[8,
+seincluyenlasinfraestructurascr´ıticasytodoloquedetermi-
+9],queponeenvigorlaInfraestructuradeLlavePu´blica(ILP)
+naeldesarrollopol´ıtico,econo´micoysocialdeCuba,razo´n
+en intere´s de la proteccio´n criptogra´fica de la informacio´n
+importanteparatenerlainformacio´nconfidencialprotegida
+oficial,conanexodesureglamentoquedisponesufunciona-
+criptogra´ficamente.
+miento.
+Existeadema´sunanecesidadcondicionadaporlaseguridad
+Suimplantacio´nproporcionaelmarcodeaccio´nparaunam-
+delosdatosdeorganizacionesqueestablecenILPcorpora-
+plioconjuntodecomponentes,aplicaciones,pol´ıticasypra´cti-
+tivasdentrodesusorganismosyempresas.Finalmente,los
+casconlasqueseobtienenlascuatrofuncionesprincipales
+individuoscomoentessocialesexpresanlanecesidaddela
+deseguridad:confidencialidad,autentificacio´n,integridady
+privacidaddesusdatos,incluyendolospersonales,queesta´n
+norepudio.Sinembargo,noseconciertanadaacercadela
+recogidosenentidadesestatalescomopuedenser,entreotros,
+existenciademecanismos,funciones,serviciosofuncionarios
+los hospitales, los registros de identificacio´n y los centros
+relacionadosconeldepo´sitoyrecobradodelasclaves.
+laborales.
+Estonosignificaque,dealgu´nmodo,parapropo´sitosmuy
+Unasituacio´nadjudicableacualquieradeestasinstanciases
+espec´ıficosestaesunaexigenciadelapropiainfraestructura
+lanecesidaddelasalvadelasllavesydatosantelaocurrencia
+dellavepu´blica.Unejemplomuysencilloqueas´ıloilustra
+defeno´menosmeteorolo´gicos,accidentesoactosterroristas,
+eslanecesidaddepreservarduranteuntiemporelativamente
+entre otros. Es por ello que se aboga por tener ma´s de una
+largo,15o´ 10an˜os,lasllavesdelaAutoridadRa´ızydelas
+salvadescentralizadageogra´ficamente.
+autoridades de Certificacio´n Intermedias, que responden al
+Hoy,nuestrasociedadllamadaainformatizarse,necesitade
+primerniveljera´rquicodelatopolog´ıaestablecida,lascuales
+estosserviciosqueaportanunmecanismodeseguridaddentro
+requierenmecanismosmuycelososparaelresguardoseguro
+delaILP.
+desusllavesprivadas.
+EnelcasodeCuba,dadolasexigenciasdesusregulaciones
+2.2 Caracterizacio´n
+paralaCriptograf´ıa[7],laInfraestructuradeLlavePu´blica
+Elmecanismodedepo´sitoyrecobradodellavesdentrode
+sesuscribealaautorizacio´nysupervisio´ndelMinisteriodel
+lainfraestructuradellavepu´blicaestara´ caracterizadapor:
+Interiorloquedeterminaquecualquierpropuestadeusode
+algu´nmecanismodedepo´sitoyrecobradodellaves,porparte Alta exigencia de seguridad y confianza, lo que im-
+deotrosOrganismosoinstanciasdelaarquitecturanacional plicaaltaresponsabilidaddetodaslasautoridadesde
+existente,debeserconsultadoyaprobadopordichoOrganis- certificacio´nyfuncionariosdesignadosaestastareas,
+mo. identificadosconunalcanceampliodesusfunciones
+Esteesuntemabastantecomplicadodetratarporqueencierra yaplicacio´ndelaCriptograf´ıaenelusodealgoritmos
+muchasmiradasynosiemprelaaplicacio´norganizativadela criptogra´ficossime´tricosyasime´tricosqueutilizancer-
+tecnolog´ıatieneelmismoefectoparadiferentesplataformas tificadosdigitales.
+enlasquesedespliega.Sinembargo,enelcasoquenosocupa,
+UsodeBasesdeDatosenalmacenamientostecnolo´gi-
+seproyectaunamiradaqueproporcioneunasolucio´nparael
+camentesuperiores,capacesderealizareldepo´sitoy
+contextodelaILP,permitiendoorganizarlaseguridaddela
+recobradodellavesconprocesosdeverificacio´nyvali-
+mismaenunaredcorporativaeinstitucional.
+dacio´n.
+Enelcontextomundial,segu´nloestablecidoporlasnormas
+yesta´ndaresinternacionales[5,6],laconceptualizacio´nde
+Disen˜omodular,interoperableyescalablequefacilita
+la ILP no incluye el control del material criptogra´fico. Sin
+suinsercio´nconmenoscostos.
+embargo,enCubaelflujoproductivodeloscertificadosdi-
+gitales involucra la generacio´n, produccio´n, distribucio´n y Usodeprotocolos,algoritmosyequipamientoactuali-
+almacenamientodeloscriptomateriales[7],loquedetermina zado,conaltacapacidaddedescifre,recobradodellave
+quelaestructurayfuncionamientodelasACsvar´ıeconrela- ysalvadedatosyllaves.
+cio´nalasexistentesenotraspartesdelmundo,aspectoque
+favorecenuestrapropuestadeincluireldepo´sitoyrecobrado 2.3 PropuestadeModificacio´n
+dellavesennuestrainfraestructura,bajouncontrolestrictoy Deacuerdoaloexpuestoanteriormente,nuestrapropuesta
+conpersonalcalificadoycertificadoenestasfunciones. esta´ encaminadaarealizarunamodificacio´nenelfunciona-
+mientodelaILP,consistenteenadicionarelmecanismode
+2.1 Necesidad depo´sitoyrecobradodellaves,instaura´ndolocomounservi-
+Enelcasodenuestrapropuestadeincluirelmecanismo cioopcionaluobligatorio,endependenciadelaspol´ıticasque
+dedepo´sitoyrecobradodellaveslanecesidadesta´ dadaen seestablezcanencadaACyconformeasujerarqu´ıauobjeto
+primerlugar,aniveldelEstado,porunproblemadeSeguridad social.TeniendoencuentaloqueestablecelaResolucio´n2
+Nacional,porcuantolaILPesta´ administradacentralmente, de2016,enCubasereconocenenlaestructuraorganizativa
+16 Depo´sitoyRecuperacio´ndeLlaves,unElementoaConsiderarparalaInfraestructuradeLlavePu´blicaenCuba
+de la ILP las siguientes entidades prestadoras de servicios Elfuncionariodedepo´sitodebeestarsegurodequela
+criptogra´ficosdecertificacio´n: llave depositada es la correcta, al realizar el macheo
+conlallavepu´blicadelusuario.
+Una Autoridad Ra´ız consignada al Servicio Central
+CifradodelMinisteriodelInterior. Elfuncionariodedepo´sitoesresponsabledeguardar
+cifradalallaveprivadadelusuario.
+Prestadorescorporativos,encargadosderealizaractivi-
+El usuario y el funcionario de depo´sito/recobrado de
+dadesparaelempleodeloscertifcadosdigitalesporlos
+llavesnodebenconocerseentres´ı.
+suscriptoresenelmarcointernodeuno´rgano,OACEo
+entidaddelEstado.
+3. Protocolos criptogra´ficos utilizables
+Prestadorescomerciales,ba´sicamenteempresasoen- para realizar el depo´sito y recobrado de
+tidades especializadas que, en el marco de su objeto llaves
+social, esta´n en capacidad de realizar a favor de ter-
+El mecanismo de depo´sito y recobrado de llaves puede
+cerosactividadesdeesta´ındole,mediantelaventade
+ser implementado por software o hardware. Consiste en el
+certifcados digitales y cobros por dichos servicios a
+registro de la clave privada de un usuario en el depo´sito o
+suscriptores.
+almacen.
+Loquesetraduceenlaestructuraesta´ndardelaInfraestruc- Unadelaspremisasimportantesatenerencuentaenestos
+turadeClavePu´blica(PKI)enelmundo,como:Autoridad protocolosesquecadaparteeste´encondicionesdedeterminar
+Ra´ız,Autoridaddecertificacio´n(quesedenominaninterme- laidentidaddelrestodelosparticipantes,evitandoelacceso
+dias, entre la ra´ız y el usuario final) Autoridad de Registro deintrusos.Paraelloserequieredelsecretodelallaveyla
+(enocasionespuedenfusionarseconlasautoridadesdecertifi- identificacio´n de las partes con acceso, que solo es posible
+cacio´n)yUsuario,quepuedeser,porejemplo,unapersona garantizarconlaautenticacio´ndeusuariosydatosdeorigen,
+naturalojur´ıdica,unsoftwareounhardware. as´ıcomoconlaautenticacio´nyconfirmacio´ndelallave.So-
+Nuestrapropuestaconsisteenampliarlafuncionalidaddela breestosconceptosseconstruyelabasedelasrelacionesde
+ILPconlaintroduccio´ndelfuncionariodedepo´sitoyreco- confianzadelaILP.
+bradodellaves,enautoridadesdecertificacio´ndecualquier Unprotocolodeestablecimientodellaves,autenticadocon
+nivel. secreto compartido es definido utilizando el Algoritmo de
+Desdeestepuntodevistaelprocedimientoparalasolicitud Diffie-Hellman[4]condospasadas,paraevitarataquespasi-
+voluntariadeesteservicioser´ıa:elsuscriptor,enmodelocrea- vos.
+doparaestefin,solicitaesteservicio,elcualseanexaalde SeaA:Autoridaddecertificacio´n/registro.
+solicituddelcertificadodigitalyoperacionalmente,unavez Sea B: Funcionario responsable del depo´sito/recobrado de
+quesegenereelmaterialcriptogra´ficoparaelcertificadodigi- llave.
+talyseentreguelallaveprivada(enelformatoPKCS12)al Se establece una comunicacio´n entre las partes que van a
+suscriptor,elfuncionariodedepo´sitoyrecobradoenfuncio´n, compartirelsecretoatrave´sdeuncanalabierto,seaelcaso
+depositara´ lallaveprivadacifradaenlabasededatoscreada propuestorealizarelintercambioentreAyB.
+paraestefin,eneltiempoacordado. Resultado:CompartirconocimientodelallaveKporAyB
+Existeotraformadelservicioquerespondealaobligatorie- sinqueunoconozcalapartesecretadelotro.
+dad del mismo cuando los requerimientos de seguridad de
+Seseleccionaaleatoriamenteunnu´meroprimogrande
+la entidad as´ı lo requieran, en este caso es un servicio que pdelordendelos2048bitsyungeneradorα deZ∗ tal
+p
+sedasiempreyestara´ asociadoaentidadesdelEstadoque
+que2≤α ≤p−2,ysepublican.
+manejaninformacio´nsensibletanto,cient´ıfica,diploma´tica,
+econo´mica,militarcomodeotra´ındole. Aseleccionacomollaveprivadadelargaduracio´nun
+Lasllavesdepositadasestara´ncifradasporunallavedesesio´n enteroaleatorioa,talque1≤a≤p−2ycomputasu
+yelaccesoaellaparaelrecobradosehara´atrave´sdeunpro- correspondientellavepu´blicatambie´ndelargaduracio´n
+tocolocriptogra´ficodesecretocompartido,enelquedeben z A =αa(modp).
+interveniralmenosdospartes:
+Aseleccionaaleatoriamenteunvalorsecretox,talque
+1≤x≤p−2ycalculaαx(modp).
+Autoridaddecertificacio´n/registro.
+Bseleccionacomollaveprivadadelargaduracio´nun
+Funcionarioresponsabledeldepo´sito/recobrado.
+enteroaleatoriob,talque1≤b≤p−2ycomputasu
+correspondientellavepu´blicatambie´ndelargaduracio´n
+2.4 RequerimientosyFuncionalidad
+z =αb(modp).
+B
+Lallaveprivadadebesergeneradaporunproveedorde
+servicioscriptogra´ficosoelpropiousuarioatrave´sde Bseleccionaaleatoriamenteunvalorsecretoy,talque
+algu´nmo´dulocriptogra´ficoadquiridolegalmente. 1≤y≤p−2ycalculaαy(modp).
+Depo´sitoyRecuperacio´ndeLlaves,unElementoaConsiderarparalaInfraestructuradeLlavePu´blicaenCuba 17
+A→B:αx(modp),Bcalculaelvalordelallavecom- Conclusiones
+partidaK=(αx)bkymodp=α(bx+ay)
+A Conunsentidomoderadodelaseguridadsehacenecesa-
+riopodercontarconunmecanismodedepo´sitoyrecobrado
+B→A:αy(modp),Acalculaelvalordelallavecom-
+dellave,inclusoenelsolocumplimientodelosobjetivosma´s
+partidaK=(αy)akxmodp=α(ay+bx).
+B nobles,relacionadosconlaseguridaddelpa´ısylapreserva-
+cio´ndelordenquerequiereunasociedadinformatizada.
+Enesteprotocololaseguridaddescansaenlaseleccio´ndelos
+Enestetrabajosecaracterizayexplicaelfuncionamientode
+para´metroscriptogra´ficosquedebera´ncorresponderseconlos
+estemecanismoparauncontextoma´samplioysepropone
+requerimientoscriptogra´ficosexpuestosen[10,11].
+suadecuacio´nalentornocubano,aprovechandolacobertura
+EnelmarcodelaILPtambie´npodemosrealizareldepo´sito
+que ofrece la infraestructura de llave pu´blica, actualmente
+y recobrado de llaves usando certificados digitales con un
+desplegadaenelpa´ıs.
+algoritmoasime´trico.Porejemplo,enelcasodeusarelRSA,
+elprocedimientoser´ıa:
+A env´ıa a B un mensaje y B hace acuse de recibo con otro Referencias
+mensajefirmado.
+[1] Denning,D.E.andM.Smid(1994).Keyescrowingto-
+Resultado:Elprotocololograautenticacio´nmutuadeentidad
+day.IEEEComm.Magazine,32(9),58-68.
+ousuariofinalytransportedelallavesecretaconautentica-
+cio´ndellave. [2] Denning,D.E.,Branstad,D.K.:Ataxonomyofkeyes-
+Sea,P(y):denotaelresultadodeaplicarlallavepu´blicadex crowencryptionsystems.ACM,39(3),1996.
+x
+aldatoy.
+[3] Denning,D.E.(1996).Descriptionsofkeyescrowsys-
+S (y):denotaelresultadodeaplicarlallaveprivadadexal
+x
+tems.Comm.oftheACM,February26,1997.
+datoy.
+Cert es un certificado que vincula la parte x, a una llave
+x [4] Adleman, L. M. A Subexponencial Algorithm for the
+pu´blicaadecuadaparacifraryvalidarfirma.
+DiscreteLogarithmProblemwithApplicationstoCry-
+Disposicio´ndelSistema:Cadapartepuedeadquirirlallave
+ptography,Proc.20thIEEEFound.Comp.Sci.Symp.
+pu´blicadelaotraparteapriori.
+(1979),55-60.
+Sea:D =(r ,B,P (k ))eldatodeAcorrespondienteaun
+A A B 1
+valoraleatorior A ,generadoporA,unidentificadordeByla [5] NISTSP800-57RecommendationforKeyManagement,
+llavesecretak 1 tambie´ngeneradaporAycifradaconlallave Part1:General(Revised),March2007.
+pu´blicadeB.
+D =(r ,A,P (k ))eldatodeBcorrespondienteaunvalor [6] RFC 3647. Internet X.509 PKI Certificate Policy and
+B B A 2
+aleatorior generadoporB,unidentificadordeAylallave CertificationPracticesFramework.Nov.2003.
+B
+secretak tambie´ngeneradaporBycifradaconlallavepu´bli-
+2 [7] Decreto-LeyNo.199SobreSeguridadyProteccio´nIn-
+cadeA.
+formacio´nOficial.
+MensajesdelProtocolo:
+[8] Resolucio´nNo.2/2016,MININT,ISSN1682-7511,Ga-
+A → B:Cert ,D ,S (D ), (1)
+A A A A cetaOficialNo.24,Extraood.1/097/2016,Cuba.
+A ← B:Cert ,D ,S (D ) (2)
+B B B B
+[9] The Telecommunications Illustrated Dictionary. Pa´g.
+AyBestablecencomunicacio´nporuncanalinseguroutili- 552.J.K.Petersen,2daedicio´n.CRCPress2002.
+zandoesteprotocoloquelespermiteobtenerllavessecretas
+[10] Page´sL.T.yGarc´ıaG.A.,Generacio´ndePara´metros
+compartidasycifrarsuinformacio´nconlacertezadequeesas
+Criptogra´ficosdeClavePu´blicaSeguros.Bolet´ındela
+llavessondecadaunadelaspartesquedicenser.
+SCMC,vol.9,No.1,abril2011,pp.47-56SCMCISSN
+Deestaformacadaunadelaspartesinvolucradaseneldepo´si-
+1728-6042RNPS.2017.
+toyrecobradodellavespuedenrealizareldepo´sitodellaves
+siendo,cadauna,responsabledeunapartedelsecreto. [11] Page´s L. T., Requerimientos de los Para´metros Crip-
+En este protocolo la seguridad descansa en la seleccio´n de togra´ficosdelaInfraestructuradeLlavePu´blicaenCuba,
+lospara´metroscriptogra´ficosquedebera´ncorrespondersecon TesisdeDoctorado,mayo2012.
+losrequerimientoscriptogra´ficosexpuestosen[10,11].Este
+procesosoloescomprensibleenelcontextodeunprotocolo,
+dondedosoma´spartescompartenelsecretodelallavecrip-
+togra´ficaqueseusara´ pararecobrarlallavedepositada.En
+Referencias
+estecasolaspartesAyBdebenintervenirdeconjuntoeneste
+procesoparaqueseaefectivo.

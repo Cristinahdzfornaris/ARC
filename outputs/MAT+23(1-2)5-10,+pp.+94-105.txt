@@ -1,0 +1,778 @@
+REVISTA CIENCIAS MATEMÁTICAS Vol. 23 único, Nos. 2005-2006
+CONTRIBUCIONES ABELIANAS
+AL ANÁLISIS MATEMÁTICO
+Carlos Sánchez Fernández, Universidad de La Habana. Cuba
+Quiero consagrarme con todas mis fuerzas a aportar un poco más de claridad
+en la prodigiosa oscuridad que hoy se encuentra incontestable en el análisis.
+Abel, carta del 29 de marzo de 1826 al profesor Ch. Hansteen.
+RESUMEN
+La mayoría de los trabajos publicados sobre la vida y la obra de Niels Abel enfatiza su aporte a la teoría
+de las ecuaciones algebraicas. En este artículo, con el uso de la 2ª edición de las Oeuvres Complètes
+de Abel y otras fuentes originales y secundarias, tratamos de argumentar que su influencia también fue
+significativa en la formación del estilo de pensamiento predominante en el análisis matemático del siglo
+XIX.
+ABSTRACT
+Most of the publications dedicated to life and work of Niels Abel dwell on his contributions to the theory
+of algebraic equations. In the present work, through the examination of the second edition of Abel’s
+Oeuvres Complètes as well as other original and secondary sources, we argue that his influence was
+determinant in the development of the styles of thought prevalent in nineteenth-century’s mathematical
+analysis.
+El "Programa de Abel"
+Niels Henrik Abel (1802-1829) fue un matemático noruego de procedencia muy humilde, que nació en un
+momento en que Noruega vivía un período de gran carestía y dificultades económicas. Estudió matemáticas
+de forma autodidacta y en la universidad de Cristianía, la actual Oslo. Su probado talento en la resolución del
+problema de la quíntica, le ganó una beca de estudios por los principales centros científicos europeos (entre
+1825 y 1827). A su regreso a Noruega tuvo que trabajar dando clases privadas para ayudar a la familia que
+se encontraba en precaria situación económica. Estuvo muy enfermo de tuberculosis y, no obstante su corta
+vida, se ocupó intensamente por resolver difíciles problemas de la teoría de ecuaciones algebraicas, las
+funciones elípticas y los fundamentos de la teoría de series. Sus ideas sobre la insolubilidad de ecuaciones
+de grado igual o superior al quinto abrieron la vía para el estudio de las estructuras algebraicas y enseguida
+fueron bien valoradas por su originalidad. Pero en vida de Abel no fue debidamente reconocido su mérito en
+el desarrollo del Análisis Matemático y solo postmorten, en 1830 le fue otorgado el premio de la Academia de
+Ciencias de París por la creación, junto a Jacobi, de la teoría de funciones elípticas. (El lector interesado en
+la biografía de Abel puede consultar las referencias en la bibliografía al final: [Ore (1957), Sánchez-Noriega
+(2005) y Stubhaug (2000)])
+Para un lector con la formación matemática contemporánea, al conocer las Obras Completas de Niels
+Abel, podrá parecerle que nuestro héroe cosechó sus productos en tres campos desligados entre sí: la
+resolución por radicales de las ecuaciones algebraicas, la teoría de las funciones elípticas y la sumación de
+series infinitas. Realmente estos tres temas están íntimamente conectados. Tanto que algunos años
+después de la muerte de Abel, en 1858, el entonces joven matemático francés Charles Hermite, publicó una
+expresión de la solución de la quíntica a través de las funciones elípticas abelianas, enlazando
+magistralmente estos dos campos. Paralelamente, el prusiano Weierstrass, desarrollaría toda una teoría de
+representación en series infinitas para presentar armónicamente una teoría general con los resultados de
+Abel, Jacobi y otros, sobre las integrales hiperelípticas y sus inversas las funciones abelianas.
+Pero no pretendemos detenernos en la explicación de los logros de Hermite, Weierstrass y otros que como
+ellos, “heredaron” la obra de Abel y la unieron a la de Jacobi, para constituir una teoría amplia y efectiva de
+las funciones abelianas. Nuestro objetivo principal en este trabajo es señalar qué aspectos caracterizan el
+espíritu legado por Abel al análisis matemático.
+Si se estudia detenidamente toda la producción matemática de Abel, se observa una coherencia que
+reside más en el estilo que en los temas. El “Programa de Abel”, se puede comprender como la búsqueda
+del rigor en el análisis matemático a través del lenguaje claro y preciso del álgebra. ¿Pero podemos
+decir que este proyecto es original del talento del joven Abel?
+94
+A partir del siglo XVIII, el Análisis Matemático no es más que el estudio de las funciones, que no son otra
+cosa que la expresión analítica, abstracta, de las curvas y superficies de la geometría. Todos los cálculos
+con estas funciones se pretenden reducir a la manipulación de los polinomios algebraicos o en su defecto a
+los polinomios infinitos, las series de potencias. El mejor representante de esta voluntad de reducir el
+cálculo al álgebra, a través de las series de potencias, sería Leonhard Euler. Fue Euler el primero que
+postuló, en su obra cumbre de 1748 “Introducción al Análisis de los Infinitos”, que el análisis no era otra cosa
+que el estudio de las funciones y que las funciones elementales de interés para el análisis pueden ser
+algebraicas y trascendentes. "Divídanse las funciones en algebraicas y trascendentes; son aquellas las
+compuestas sólo mediante operaciones algebraicas, éstas en cambio las funciones en que están presentes
+operaciones trascendentes". [Euler, 1748, pág. 17] Según Euler, el mejor método para manipular y analizar
+las funciones trascendentes es representarlas en series de potencias, para él una especie de polinomios de
+grado infinito. "Comoquiera que las funciones fraccionarias e irracionales de z no estén contenidas en la
+forma entera A + Bz + Cz2 + Dz3 + &c. de suerte que el número de sus términos sea finito, se suelen buscar
+expresiones que se prolongan hasta infinito para exponer el valor de cualquier función quebrada o irracional.
+Y aun se ha de juzgar mejor entendida la naturaleza de las funciones trascendentes si se expresa mediante
+tales formas, por más que sean infinitas" [Euler, 1748, pags. 59-60]. La dificultad estriba en que este estudio
+por medio de las series exige la manipulación de una expresión analítica con una cantidad indefinida de
+términos, que no siempre posee las propiedades de los polinomios. Se necesitaba, por tanto, una definición
+rigurosa de suma de una serie infinita de funciones y la precisión de las propiedades de tales sumas infinitas.
+Realmente, esto no quedó claro en la extensa obra de Euler.
+Una de las primeras tentativas de darle al análisis matemático los fundamentos rigurosos para el cálculo
+con las series infinitas se debe a Lagrange. El proyecto de Lagrange se hace público en 1797, cuando
+aparece su “Théorie des fonctions analytiques”. Uno de los objetivos de esta memoria, que Abel va a
+encontrar en la bien abastecida biblioteca de la universidad de Cristianía, queda explícito en un pequeño
+artículo de carácter divulgativo que aparece un poco antes en el Journal de la Escuela Politécnica:
+"La teoría de funciones que me propongo exponer este año con mayores detalles que toda
+la Obra antes impresa, tiene por objeto hacer desaparecer las dificultades que se encuentran
+en los principios del Cálculo Diferencial y que detienen a todos los que comienzan a
+estudiarlo, lo consigo ligando inmediatamente este Cálculo al Álgebra, ciencia de la que ha
+estado separado hasta ahora" [Lagrange, 1797].
+Lagrange pretende demostrar lo que muchos antes de él, tales como Euler, asumían sin una prueba
+contundente: las funciones que intervienen en el análisis, las funciones analíticas, son en general localmente
+desarrollables en series de potencias.
+La voluntad lagrangiana de dar una teoría general basada en un principio simple, no hace más que poner
+en evidencia teórica las doctrinas de Euler quién con mayor audacia e imaginación utilizó las expresiones
+analíticas de las funciones. La influencia de la obra de Lagrange fue tal que, en adelante, muchos de los
+textos de cálculo hasta bien adentrado el siglo XX, aparecieron con el título de Análisis Algebraico (Sobre la
+influencia de estas ideas en los estados germanos recomendamos [Jahnke, 1993])
+Es conocido que las fuentes principales de saber matemático para el joven Niels fueron las obras de Euler
+y Lagrange. Es decir, desde muy joven -él siempre lo fue- Abel conocía del proyecto de unidad matemática a
+través de la algebrización y del uso de las series de potencias para algebrizar el cálculo.
+¿Pero estaba cumplido este proyecto? ¿Tenía la teoría de series el fundamento riguroso que con ellas se
+pretendía conseguir en todo el análisis? El trabajo de Lagrange coronó toda una época dorada para la
+sumación. Lagrange se preocupó por desterrar del análisis el uso de infinitesimales, incrementos
+evanescentes o fluxiones, pero con sus manejos algebraicos no aclararía el concepto convergencia en las
+representaciones analíticas, ni legalizaría las manipulaciones con las sumas infinitas como si fuesen sumas
+finitas.
+En una carta del 29 de marzo de 1826, desde Dresde, a su maestro y protector Christopher Hansteen,
+Abel se expresa de la forma siguiente:
+“La matemática pura en su sentido más estricto debe ser en el futuro el objeto exclusivo de
+mis estudios. Quiero consagrarme con todas mis fuerzas a aportar un poco más de claridad
+95
+a la prodigiosa oscuridad que se encuentra hoy incontestable en el análisis Carece hasta tal
+punto de plan y de sistema que es verdaderamente maravilloso que pueda ser estudiado por
+tanta gente y lo peor del caso es que nunca ha sido tratado rigurosamente. Sólo hay unas
+pocas proposiciones en el análisis superior, que se hayan demostrado de una manera
+lógicamente sostenible. En todas partes encuentra uno esta manera infortunada de concluir
+lo general partiendo de lo particular y es extremadamente asombroso que tal procedimiento,
+a pesar de todo, haya llevado a tan pocas de las así llamadas paradojas. Sería sumamente
+interesante ocuparse en investigar la razón... A mi criterio, esto se debe a que las funciones
+de las que hasta ahora se ha ocupado el análisis, pueden en su mayor parte, ser expresadas
+por medio de series de potencias. Pero si intervienen otras funciones, lo que a decir verdad
+no ocurre muy frecuentemente, entonces la cosa no marcha bien y de las conclusiones
+falsas se infieren un montón de proposiciones incorrectas que se encadenan. Yo he
+examinado varias, y estoy bastante contento por haberles dado claridad (a la mayor parte).
+[todos los subrayados de C.S.F.]
+Observen como se expresa madura y críticamente sobre el estado del análisis matemático en 1826...
+¡Y Abel aún no había cumplido los 24 años de edad cuando escribe esta carta!
+Exactamente son solo dos publicaciones de Abel las que aparecen en el "Journal de Crelle"
+sobre el tema de la convergencia y la sumación de series infinitas: “Investigación sobre la serie
+96
+1 
+m
+1
+x 
+m ( m
+1 
+
+2
+1 )
+x 2 
+m ( m 
+1 
+1
+2
+) (m
+3 
+ 2 )
+x 3   ” en el número 4 del primer volumen en 1826, y el segundo
+una “Nota sobre la memoria del Sr. L. Olivier que lleva por título Observaciones sobre las series infinitas y su
+convergencia”, que apareció en el número 1 del tercer volumen en 1828. Pero los editores de la 2da. edición
+de sus Obras Completas recopilaron varios manuscritos inéditos sobre el tema [Abel, 1881, pp. 197-205,
+Vol. 2] probablemente escritos en 1827 y que dan también luz sobre "el programa de Abel". Hagamos un
+sintético análisis del contenido esencial de estos artículos.
+La serie del binomio
+m m(m1) m(m1)(m2)
+La serie del binomio (1 + x)m = 1 + x x2  x3  para m no entero, aparece
+1 12 123
+en el margen de un ejemplar de la “Arithmetica Infinitorum” de Wallis, escrita por el joven Newton en 1665.
+Años más tarde, en una carta que Leibniz dirige al Secretario de la Royal Society de Londres, se interesa en
+qué saben los matemáticos ingleses sobre las series infinitas. Esta carta es respondida por Newton el 13 de
+junio de 1676, enunciando el teorema del binomio para exponente racional, pero sin explicar los orígenes de
+esta fórmula. Sea cual sea el origen y quién fue el primero que la publicó, lo cierto es que para la escuela
+británica ésta será un arma potente para “algebrizar” las funciones mecánicas, inexplicables o trascendentes,
+como indistintamente se les llamaba a las no algebraicas. En la casi totalidad de los textos de Cálculo del
+siglo XVIII será la herramienta principal para obtener los desarrollos en series de potencias necesarios.
+Hasta entonces no se presta atención a determinar para qué valores converge la susodicha serie. A
+comienzos del siglo XIX van a aparecer dos demostraciones de los valores de m para los cuales hay
+convergencia, una de Augustin Cauchy en su Análisis Algebraico [Cauchy, 1821] y otra en 1826 de Niels
+Abel en el “Journal de Crelle" vol. 1, nº4 [Abel, 1881, I, 219-250].
+En el libro de Cauchy se llama la atención sobre la importancia de la serie del binomio. La organización de
+los seis primeros capítulos está concebida con el objetivo principal de obtener el desarrollo de (1 + x)m para x
+y m reales. En el capítulo 6 de su Análisis Algebraico, Cauchy da sus definiciones sobre las series infinitas:
+convergencia, divergencia y suma; los criterios de convergencia, entre los que aparece el hoy llamado
+“criterio de Cauchy” sin una demostración rigurosa a causa de una presentación todavía confusa de los
+números reales. También encontramos el resultado falso de que la suma de una serie de funciones
+continuas es continua. Cauchy aplica la totalidad de los resultados precedentes al estudio de la serie del
+binomio.
+m m(m1) m(m1)(m2)
+Considera la función g(m) = 1 + x x2  x3  y muestra que:
+1 12 123
+ g(m) está definida para todo x  (-1, 1),
+ g es continua, utilizando el resultado falso del capítulo 6,
+ g verifica la ecuación funcional g(m(g(m´) = g(m + m´).. Por tanto:
+ g es una función exponencial g() = A y enseguida que:
+ g(m) = Am = g(1)m = (1 + x)m
+Queda así “probado” que la serie del binomio es válida para todo x  (-1, 1).
+Es Abel quien primero se atreve a señalar el error de Cauchy sobre la suma de una serie de funciones
+continuas. En una carta dirigida a su amigo Holmboe, en enero de 1826, Abel da como contraejemplo la
+serie convergente de funciones continuas
+sen2x sennx
+sen x - (1)n1 
+2 n
+x
+si x 0,)
+
+2
+
+que en [0, ] tiene como suma la función discontinua f(x) =  .
+
+0 si x 
+
+
+En la memoria sobre la serie del binomio aparecida en el “Journal de Crelle” en 1826, Abel indica
+que no se han examinado todos los casos donde esta serie es convergente y que el objetivo de esta
+memoria es tratar de llenar una laguna en la solución del problema siguiente: encontrar la suma de la serie
+1 +
+97
+m
+1
+x 
+m ( m
+1 
+
+2
+1 )
+x 2 
+m ( m 
+1
+1
+2 
+) (m
+3 
+ 2 )
+x 3   , para todos los valores reales o imaginarios de x y m para los
+cuales la serie es convergente.
+El camino que toma Abel es similar al de Cauchy, pero utiliza teoremas más precisos sobre las series,
+trabaja en el campo complejo y sobre todo da una definición de continuidad más adaptable al asunto:
+“una función f(x) será llamada continua en x entre las cotas x = a y x = b, si para un valor
+cualquiera de x comprendido entre esas dos cotas, la cantidad f(x – ), para los valores
+siempre decrecientes de , se aproxima indefinidamente al límite f(x)”
+Se trata aquí de la definición de continuidad de f en un punto x, lo que no era el caso en la definición de
+Cauchy, que trataba la continuidad en un intervalo (¡sin asomo, por supuesto, de la definición de continuidad
+uniforme!)
+Abel comienza por estudiar en detalle todos los casos para x y m números complejos donde la serie del
+binomio converge:
+i. para todo x tal que x  1 y cualquiera sea m,
+ii. para x  1, Re(x)  -1, Re(m)  -1,
+iii. para x  1, Re(x)  -1, Re(m)  - 0,
+y prueba que en todos los otros casos la serie del binomio diverge.
+Después denota (m) la suma de la serie, verifica la relación (m + m´) = (m) + (m´), y con las
+notaciones x = a + ib y m = k + ik´, (m) = p + iq, y tras cálculos muy detallados encuentra una expresión
+general de la serie del binomio en el caso complejo:
+1 +
+98
+m
+1
+x 
+m ( m
+1 
+
+2
+1 )
+x 2 
+m ( m 
+1
+1
+2 
+) (m
+3 
+ 2 )
+x 3  
+
+c o s
+
+k a r c t a n
+1
+b
+ a
+
+1
+2
+k ´ lo g ( (1  a ) 2  b 2 )
+
+ i s e n
+
+k a r c t a n
+1
+b
+ a
+
+1
+2
+k ´ lo g ( (1  a ) 2  b 2 )
+
+
+  (1  a ) 2  b 2 
+k
+2 e x p
+
+ k ´ a r c t a n
+1
+b
+ a
+
+La fórmula del binomio para m y x reales Abel la obtiene inmediatamente para los valores particulares
+b = 0 y k´ = 0. En tal caso, (m) = (1 + a)m = (1 + x)m.
+La serie del binomio (1 + x)m = 1 +
+m
+1
+x 
+m ( m
+1 
+
+2
+1 )
+x 2 
+m ( m 
+1
+1
+2 
+) (m
+3 
+ 2 )
+x 3   , para m no entero, ya está
+dispuesta rigurosamente para ser legítimamente la herramienta principal para obtener los desarrollos en
+series de potencias necesarios.
+En una carta a Holmboe de diciembre 1826 escribirá:
+“Me atrevo a decir que esta es la primera demostración rigurosa de la fórmula del binomio,
+en todos los casos posibles”.
+Tenía razón.
+La refutación a Olivier
+El otro artículo de Abel sobre series infinitas se motiva por un trabajo de Louis Olivier [Olivier, 1827] donde
+se enuncia el teorema siguiente:
+Si en una serie infinita encontramos que el producto de n por el n-ésimo término, o por el
+n-ésimo grupo de términos que conserva el mismo signo, es cero, para n = , podemos
+considerar precisamente esta situación como un indicador de que la serie es convergente, y
+recíprocamente la serie no es convergente si el producto na no es cero para n = .
+n
+Comienza Abel con la muestra de un contraejemplo:
+n
+
+ 2
+n
+1
+lo g n
+
+2
+1
+lo g 2
+
+3
+1
+lo g 3
+
+4
+1
+lo g 4
+
+n
+1
+lo g n
+ 
+serie que es divergente, no obstante ser na =
+n
+lo
+1
+g n
+infinitesimal, cuando n  . Para demostrar la
+divergencia de esta serie Abel busca una cota inferior para cada uno de sus términos. Para esto prueba
+primero la desigualdad:
+1
+log(log(1 + n))  log(log n) + , para todo n  1
+nlogn
+y suma término a término estas desigualdades para todos los valores de n  2. Al cancelar obtiene la
+expresión:
+1 1 1
+log(log(1 + n))  log(log 2) +   ,
+2log2 3 log3 nlogn
+ 1
+de donde, se desprende la divergencia de la serie  .
+nlogn
+n2
+Pero Abel no se detiene ahí y como en el caso de la refutación a Cauchy, siguiendo su espíritu creativo
+prueba:
+Si la serie a + a + a +…+ a + es divergente, entonces la serie
+0 1 2 n
+99
+a
+a
+1
+0
+
+a
+0
+a
+2
+a
+1
+
+a
+0
+
+a
+a
+3
+1
+ a
+3
+  
+a
+0
+
+a
+a
+n
+1
+ a
+n  1
+ 
+es también divergente.
+E inmediatamente, el resultado más general:
+Supongamos que (n) es una función de n tal que la serie a + a + a ++ a + … es convergente o
+0 1 2 n
+divergente de acuerdo a si (n)a es cero o no cuando n = . Entonces la serie
+n
+1 1 1 1
+   
+(1) (3) (3) (n)
+será divergente y la serie
+1 1 1
+ ...
+1
+(2)  1 1   1 1 1 
+(3)   (n)  ... 
+(1)    
+(1) (2) (1) (2) (n1)
+es convergente; puesto que en la primera tenemos (n)a = 1 y en la segunda (n)a = 0 para n = .
+n n
+Con este criterio general demostrado Abel retoma el caso de Olivier, que no es más que (n) = n:
+[...] las dos series en cuestión devienen
+1 
+1
+2
+
+1
+3
+  
+1
+n
+ 
+y
+2
+1
+ 1
+
+3
+
+1
+1
+
+1
+2
+
+
+4
+
+1 
+1
+1
+2
+
+1
+3
+
+ . . . 
+n
+
+1 
+1
+2
+
+1
+3
+1
+ . . . 
+n
+1
+ 1
+
+ . . .
+las cuales son ambas divergentes.
+La forma en que Abel refuta el teorema de Olivier es un ejemplo de su maestría para esclarecer los puntos
+todavía oscuros en el análisis matemático de su época. Agreguemos que aquí se puede observar la primera
+versión del hoy conocido criterio de convergencia de Abel-Dini, como aparece en [Knopp, 1944, pág.290]:
+
+Si d es una serie divergente arbitraria de términos positivos y
+n
+n1
+D = d + d +…+ d
+n 1 2 n
+es su suma parcial, entonces la serie
+  d
+a   n
+n D
+n1 n1 n
+converge cuando  1 y diverge cuando   1.
+En su refutación a Olivier, Abel utiliza un resultado similar al caso  = 1.
+Abel también dice que la última parte del teorema de Olivier es válida y aquí hay un error, salvo que Abel
+estuviera pensando en una serie de términos positivos monótonamente decrecientes a cero.
+El otro tema en el que se advierte la intención de Abel de hacer más riguroso y general el Análisis
+Matemático con un espíritu algebraico, es en el de las funciones elípticas. Abel pretendió construir toda una
+teoría de las funciones trascendentes que son inversas de las funciones integrales de las algebraicas. Hoy
+con justedad estas integrales son llamadas integrales abelianas y sus inversas funciones abelianas.
+La teoría general de las funciones elípticas
+El Grand Prix de Ciencias Matemáticas de la Academia de París en 1830 se le otorgó ex-aequo a Niels
+Abel (postmorten) y a Karl Jacobi, por sus contribuciones a la formación de la teoría de las funciones
+elípticas. Estos dos matemáticos eran muy diferentes entre sí, pero cuando en septiembre de 1827 ambos
+publicaron sus primeros trabajos sobre las nuevas funciones trascendentes, eran unos jóvenes inspirados de
+23 y 25 años de edad, que tenían varios intereses matemáticos comunes. Y en su lucha fabulosa por
+establecer una teoría de las funciones elípticas, forjaron una rivalidad y, a la vez, una complicidad, que la
+muerte no consiguió destruir.
+Hoy no quedan dudas de que los dos, independientemente, llegaron a formular las principales propiedades
+de las funciones elípticas. Pero, todavía muchos piensan que lograron simultáneamente sus resultados. En
+lo que sigue vamos a tratar de aclarar el efectivo aporte de Abel en la conformación de la teoría de las
+funciones elípticas e hiperelípticas o abelianas, como se les llama con justicia. Pero antes daremos unas
+breves anotaciones sobre los resultados anteriores que influyeron tanto en Abel como en Jacobi. (Para el
+que desee profundizar en la historia de las funciones elípticas y abelianas la mejor obra que conocemos es
+[Houzel, (1978)])
+Las funciones elípticas son las inversas de las integrales trascendentes definidas por
+100
+t0
+R  x , a
+0
+x 4  a
+1
+x 3  a
+2
+x 2  a
+3
+x  a
+4
+)  d x donde R(x,y) es una función racional de las dos variables y los
+coeficientes ai son tales que a0 ó a1 es diferente de cero y el polinomio subradical no tiene raíces dobles.
+Según los documentos conservados y hasta el momento conocidos, antes de Abel y Jacobi, sólo Gauss trató
+las funciones elípticas, sobre todo en un caso particular: el seno y el coseno lemniscáticos, funciones
+t
+dx
+inversas de las integrales lemniscáticas del tipo  , muy similares a las funciones circulares, que
+1x4
+0
+t
+dy
+pueden considerarse inversas de integrales del tipo (t) ,para -1  t  1. Estos trabajos de
+1y2
+0
+Gauss eran desconocidos tanto por Abel como por Jacobi.
+Aunque varios sabios del siglo XVIII se interesaron en las integrales elípticas, la obra que influye
+decisivamente en los jóvenes Abel y Jacobi es la de Euler y la de Legendre. Los resultados más importantes
+que encontró Euler se conocen como fórmulas de adición para las integrales elípticas.
+Las fórmulas de adición expresan algebraicamente el valor de la función de la suma de dos argumentos a
+través de los valores de esta misma función para cada uno de los sumandos, por ejemplo:
+Para la función exponencial: exp( + ) = exp()exp()
+sen()sen()cos()sen()cos()
+
+Para el seno circular: 
+ sen()sen() 1sen2()sen() 1sen2
+
+Leonhard Euler, además, generaliza a las integrales elípticas muchos de los resultados hallados
+anteriormente para el caso de la integral lemniscática y trató de extender sus resultados a casos de
+polinomios subradicandos de grado superior a cuatro, pero sus métodos no eran generalizables. Euler llamó
+la atención sobre la analogía entre las integrales elípticas y las integrales para las funciones trigonométricas
+inversas. Sin embargo, Euler en ningún momento trató con las inversas de aquellas funciones definidas por
+integrales elípticas.
+El siguiente paso hacia la sistematización de una teoría será dado por Legendre, quién motivado por los
+trabajos de Euler, se dedicará a forjar la obra definitiva sobre integrales elípticas.
+Los resultados de Legendre se expusieron de forma extensa y sistemática, en sus Ejercicios de cálculo
+integral en tres volúmenes (1811, 17 y 26) y en su obra principal, el Tratado de las funciones elípticas en 2
+gruesos volúmenes aparecidos en 1825 y 1826 respectivamente. Este tratado resume la obra de todos sus
+predecesores, enuncia una cantidad increíble de resultados originales y es presentada con un orden riguroso
+y didáctico. Sin embargo, Legendre no consiguió comprender lo necesario para dar el salto cualitativo
+correspondiente: la consideración de las funciones inversas de las funciones integrales.
+Los que ganarán el mérito de abrir una nueva línea de investigación con las funciones inversas de las
+integrales elípticas, serán los jóvenes Niels Abel y Carl Jacobi. Como mérito de Legendre debemos anotar
+que cuando conoció los trabajos de estos dos titanes, los elogió con mucha humildad y escribió tres
+suplementos de su Tratado de las Trascendentes Elípticas en los que describió con admiración las nuevas
+ideas.
+Además, tanto Abel como Jacobi se interesaron no sólo por establecer una teoría general de las funciones
+elípticas, sino también por extender esta teoría a integrales hiperelípticas, es decir aquellas donde el
+polinomio subradical es de grado mayor que 4. A estas integrales hiperelípticas y a sus funciones inversas,
+suele llamárseles hoy, integrales abelianas y funciones abelianas, a propuesta del mismo Jacobi, como justo
+homenaje a quién primero las estudió con profundidad.
+¿Pero cómo se conformó esta teoría? ¿Cuáles fueron los aportes principales de los dos jóvenes? ¿En qué
+momento lo hicieron? A contestar estas preguntas nos dedicaremos en lo que sigue.
+El duelo entre Abel y Jacobi
+Fue el matemático más prestigioso de Escandinavia, el Profesor Ferdinand Degen, entonces catedrático
+de matemáticas en la universidad de Copenhaguen, quien primero le recomendó a Abel estudiar las
+trascendentes elípticas en lugar de continuar con el estudio de la ecuación de quinto grado, asunto que
+Degen consideraba muy árido y poco estimulante. El mismo Degen le entregó un manuscrito con un teorema
+que había encontrado sobre la trasformación de las integrales elípticas. [Bjerknes, 1885]
+La primera referencia a resultados propios de Abel la tenemos dos años después, en una carta a Holmboe
+de agosto, 1823. En ella dice que con la ayuda de Degen ha encontrado un error en su pequeña memoria
+que trata sobre las funciones inversas a las trascendentes elípticas (memoria que no es publicada mientras
+vive Niels, pero se incluye en la segunda edición de sus Oeuvres Complètes [Abel, 1881]).
+Pasados otros dos años, precisamente en agosto de 1825, poco antes de partir para un viaje a Alemania y
+Francia, Abel le comunica a su maestro Hansteen que la parte principal de la teoría de las trascendentes
+elípticas esta preparada para su publicación.
+Durante el viaje, en abril de 1826, Abel le comunica a su amigo Holmboe que en su estancia de un mes, en
+la calma de Freiberg, en Sajonia, ha redactado una memoria con sus ideas sobre las funciones elípticas y
+espera publicarla en París.
+De nuevo volvemos a oír hablar de la Memoria en una carta a Holmboe del 24 de octubre de 1826, aquí
+dice que la ha entregado a M. Cauchy y que este desdeñosamente la ha mirado sin decir palabra. El 30 de
+octubre es presentada por Fourier en el Instituto de París la monografía de Abel con el título Memoria sobre
+una propiedad general de una clase muy amplia de funciones trascendentes, son casi 70 páginas de
+resultados, con sus respectivas demostraciones que tuvo un destino muy errante, y no logró publicarse hasta
+1841 (para una historia actualizada de las vicisitudes de esta memoria ver [Centina, 2002]).
+Como parece ser su punto de vista desde el comienzo de sus investigaciones originales, Abel pone énfasis
+en el caso más general de integrales que hoy se llaman integrales abelianas; éstas son las integrales de la
+101
+forma
+102
+ R ( x , y ) d x , , donde R es una función racional de dos variables (x, y) ligadas por una ecuación
+algebraica general
+(x, y) = yn + p (x)yn-1 +…+ p (x)y + p (x) = 0.
+1 n-1 n
+Abel logró establecer un teorema de adición que generaliza de manera natural el enunciado que había
+dado Euler para las integrales elípticas. A continuación exponemos la formulación que se puede leer en la
+Gran Memoria compuesta por Abel en 1826 para ser sometida a la Acad. de Ciencias de París [Abel, 1881,
+T. I. pp. 145-211]: Si se tienen varias funciones cuyas derivadas pueden ser raíces de una misma ecuación
+algebraica cuyos coeficientes son funciones racionales de una misma variable, se puede siempre expresar la
+suma de un número cualquiera de tales funciones por una función algebraica y logarítmica, con tal que se
+establezca entre las variables de las funciones un cierto número de relaciones algebraicas. Obsérvese como
+lo algebraico también aquí se entremezcla con lo analítico, la característica que estamos subrayando del
+espíritu de la obra de Abel.
+Notemos además que después de exponer los principios generales de la teoría, estudia el caso particular
+de las integrales hiperelípticas, llamadas por Jacobi abelianas, donde se tiene a(x, y) = y2 + P(x) y P(x) es un
+polinomio de grado arbitrario siempre mayor que 4 [Abel, 1881, T.1, pp. 444-456])
+La primera publicación de los logros de Abel, redactada después de la Memoria de París, y su obra más
+contundente sobre las funciones elípticas, son sus Recherches sur les fonctions elliptiques (Investigaciones
+sobre las funciones elípticas) que se publican en dos partes. En una carta a Holmboe de marzo de 1827,
+estando en Berlín, le dice que tiene terminada la 1ª Parte de más de 120 páginas y que la entregará a Crelle
+para su Journal. Al fin se la entrega redactada en mayo y aparece publicada en septiembre. Esta es la
+primera vez que encontramos publicado el principio de inversión, que aparentemente, y según nos dice su
+compatriota, el profesor Carl Bjerknes, Abel lo dominaba al menos desde 1823 [Bjerknes, 1885]. En esta
+primera memoria publicada están las propiedades fundamentales de las nuevas funciones trascendentes
+inversas de las integrales elípticas: la fórmula de adición, la doble periodicidad, la teoría de la multiplicación y
+la división y el desarrollo en series de potencias. [Journal für die reine und angewandte Mathematik T2, nº 2,
+septiembre 1827].
+Jacobi, por su parte, ha dado sus primeros pasos en la teoría de las trascendentes elípticas bastante más
+tarde, en marzo de 1827. Este tema será muy frecuentado por Jacobi, durante casi 20 años, hasta poco
+antes de su muerte en 1851. (Ver sus Obras Completas [Jacobi, 1881])
+Jacobi anuncia públicamente sus logros también en septiembre del 27, el mismo mes en que aparece la
+primera publicación de Abel, en unas Notas sobre las trascendentes elípticas en el “Journal de Schumacher”.
+Este primer trabajo de Jacobi debe haber llegado a Cristianía no antes de octubre o noviembre y el segundo,
+por las condiciones climáticas del invierno nórdico, no antes de abril del 28. Abel no sospechaba del duelo de
+ideas que se había iniciado entre él y Jacobi. Por consiguiente, no se sintió apremiado en la publicación de la
+segunda parte de sus Recherches... y no la envía a Crelle hasta el 12 de febrero de 1828.
+En abril del 28, ya Abel es consciente de la competencia con Jacobi en el tema de las funciones elípticas,
+por eso decide rápidamente enviar a Crelle todos sus resultados. Lo primero que hace, el 20 de abril, es
+enviar a Schumacher un importante trabajo que se titula Solución de un problema general concerniente a la
+transformación de las funciones elípticas, donde expone detalladamente sus métodos de transformación de
+funciones integrales y de sus inversas.
+La idea siguiente, desarrollada primeramente por Abel, fue definir las funciones elípticas para valores
+complejos. Para esto faltaban las fórmulas de adición similares a las encontradas por Euler para las
+integrales elípticas. Según [Bjerknes, 1885] Abel estaba en posesión de estas fórmulas a finales del 24 o
+como máximo en el 25 antes de su viaje por Europa y las presenta con demostraciones en su memoria de
+París, pero al no ser esta publicada no tenía valor en su duelo con Jacobi. Así que Abel necesitaba publicar
+las fórmulas de adición para las funciones inversas de las trascendentes elípticas.
+Pero Abel, desde su viaje a París, comienza a sentir los efectos de la tuberculosis, enfermedad que nunca
+sabrá que lo está consumiendo. Guarda reposo y en periodos intermitentes de mejoría trabaja
+obsesionadamente, como si supiera que no le queda mucho de vida. En tales condiciones envía a Crelle
+cuatro artículos más, que se publican entre septiembre y diciembre del 28 y otros tres que se publican entre
+febrero y abril del 29. El último de ellos, representa la ampliación de una parte de la memoria perdida en
+París.
+En la que sería su última morada, en Froland, ya bastante debilitado por su mortal enfermedad, logra hacer
+la redacción final y enviar a Crelle, exactamente el 6 de enero de 1829, la fórmula de adición debidamente
+demostrada y le dice:
+Me propongo desarrollar en otra ocasión las numerosas aplicaciones de este teorema,
+que mostrarán la naturaleza de estas funciones trascendentes.
+Este artículo se conoce como el testamento científico de Abel y se titula Demostración de una propiedad
+general de una cierta clase de funciones trascendentes.
+Pero Abel no ceja de batallar, continúa con un compendio de la teoría general de las funciones elípticas e
+hiperelípticas. No sabemos cuando lo culmina o si realmente fue su amigo Holmboe quién reunió sus notas,
+dándole una redacción final para que saliera publicado entre los números 3 y 4 del “Journal de Crelle”, es
+decir entre septiembre y diciembre del 29, varios meses después de la muerte de Abel. Son más de 100 pp.
+de resultados bajo el título de Resumen de una teoría de las funciones elípticas, que al decir del matemático
+francés Charles Hermite, le dejaría trabajo para todo un siglo a quienes gustaran del tema.
+Por su parte, Jacobi, aunque ya en el artículo de diciembre 1827 había publicado sus ideas sobre la
+consideración de las funciones elípticas como inversas de las integrales, no es hasta abril de 1829 que
+publica su obra clave Fundamenta nova functionum ellipticarum (Nuevos Fundamentos de las Funciones
+Elípticas) [Jacobi, 1881, T1, pp. 49-239] que se convirtió rápidamente en una referencia clásica sobre este
+tipo de funciones. Abel no lo pudo leer, porque apareció 5 meses después que entrara en la fase crítica de
+su tuberculosis y 6 semanas después de su muerte. Pero si hubiera podido leerlos seguro los hubiera
+valorado justamente, pues tenía una alta estima de la obra de Jacobi: “el único que ha sabido
+comprenderme”. Además, los Fundamenta... comienzan con un elogio a Abel, atribuyéndole con honestidad
+las fórmulas de adición y de multiplicación y remitiendo al lector a la obra Recherches... aparecida en el
+Journal de Crelle. Como un eco de las palabras pronunciadas por Legendre con relación a Abel, lo califica
+como “nostra laude majore”. Como se lee en [Bjerknes, 1885, pág. 205] "sin Abel los Fundamenta Nova no
+hubieran existido".
+Es cierto que muchos de los resultados de Abel fueron encontrados por Jacobi de manera independiente,
+aunque no simultánea, y ambos mantuvieron una fraternal competencia en la obtención de otras relaciones
+análogas a las conocidas para las funciones circulares. Pero la prematura muerte de Abel en 1829, le cedió
+el paso a Jacobi, quién pronto se hizo famoso por la maestría que mostraba en sus conferencias sobre
+Fig.II.4
+funciones elípticas. A favor de Jacobi digamos que siempre se mostró preocupado porque a Abel le
+otorgaran el mérito correspondiente y abrigó la esperanza de que la universidad de Berlín le concediera una
+plaza, pero cuando fue concedida ya era demasiado tarde.
+En una carta a Legendre del 14 de junio de 1829, Jacobi se refiere al compañero de ideas:
+Pocos días después del envío de mi última carta he conocido la triste noticia de la muerte de
+Abel. Nuestro gobierno le había llamado a Berlín, pero el llamado no lo ha encontrado entre
+los vivos. ¡Ha sido cruelmente frustrada la esperanza que yo había concebido de encontrarle
+en Berlín! Los vastos problemas que él se había propuesto, de establecer criterios
+necesarios y suficientes para que una ecuación algebraica cualquiera sea resoluble, para
+que una integral cualquiera pudiese ser expresada en cantidades finitas, su invención
+admirable de la propiedad general que engloba a todas las funciones que son integrales de
+funciones algebraicas, etc., etc. marcan un género de cuestiones muy originales y que nadie
+antes de él había osado imaginar. Él se ha ido ¡pero nos ha dejado un gran ejemplo!
+No tuvo que pasar mucho tiempo para que la magnificencia de la herencia matemática de Abel y Jacobi
+fuera no sólo elogiada, sino también depurada por muchos ilustres matemáticos. Hemos mencionado antes a
+Liouville y Hermite, en Francia, y en Alemania, a Riemann y Weierstrass.
+No cabe duda que Abel mostró con creces su capacidad para encontrar la esencia de las cuestiones y,
+abstrayéndose de todo lo superfluo, generalizar y forjar algo nuevo, más potente, y esto supo expresarlo de
+103
+la manera más precisa y concisa. Abel mostró su talento analítico sobre todo al concebir la teoría de las
+trascendentes hiperelípticas, hoy todavía llamadas abelianas. Jacobi supo encontrar la mejor manera de
+representar estas funciones, introduciendo las funciones theta y hallando nuevas propiedades y aplicaciones.
+Abel fue el arquitecto y Jacobi el constructor, ambos fueron necesarios para que la nueva obra fuera sólida y
+bella.
+CONCLUSIONES
+En nuestro estudio del legado de Niels Abel al Análisis Matemático hemos señalado algunas de sus
+influencias al estilo de pensamiento analítico dominante en el siglo XIX. En la época que le tocó vivir a Abel
+se produjo la transición de la matemática utilitaria y mecanicista del siglo XVIII, que daba prioridad a la
+resolución de problemas particulares, a la matemática abstracta y global, preocupada en fundamentar sus
+actos con teoremas de existencia y la construcción de teorías amplias y métodos efectivos que, al menos
+teóricamente, llevaran en sí las soluciones detalladas de una infinidad de problemas especiales.
+El paso de la sumación de las series infinitas a la investigación de la convergencia y la representación
+analítica de las funciones, es el cambio de estilo de pensamiento entre la época de Euler a la época de Abel
+y Cauchy. El cambio que se produce con Abel y Jacobi en el estudio de las funciones elípticas complejas en
+lugar de las integrales elípticas reales como lo hicieron Euler y Legendre, también es parte de esa
+transformación que se produce en el espíritu de las matemáticas del siglo XIX. En el primer caso se logra
+fundamentar rigurosamente la técnica principal de representación de funciones reales por series de
+potencias. Con el segundo aporte se consigue abrir las puertas del estudio general de las funciones
+complejas y llamar la atención sobre las peculiaridades que las diferencian de las funciones reales.
+Ambas líneas de trabajo ayudaron a conformar la nueva teoría de las funciones analíticas, como
+herramienta fundamental del análisis matemático tanto real como complejo. Los resultados obtenidos por
+Abel sobre las series de potencias y sobre las funciones trascendentes llamadas hoy funciones abelianas,
+serán esenciales en esta transformación que va a las raíces del análisis. El espíritu de la Matemática
+concebido en el siglo XIX, esta infundido por la brillante obra y el radicalismo del joven romántico nórdico.
+Abel sería como la estrella de la madrugada, anunciadora del alba.
+NOTA BENE: En el momento que hacíamos los últimas ajustes de redacción a este artículo, obtuvimos noticia del
+trabajo de Henrik Kragh Sorensen (2005) Exceptions and counterexamples: Understanding Abel's
+comment on Cauchy's Theorem. Historia Math. 32, 453-480, disponible online en www.sciencedirect.com
+donde se hace una enjundiosa exposición de las razones por las cuáles Niels Abel hizo la crítica a
+Cauchy señalando "una excepcion" a su teorema sobre la suma de series de funciones continuas. Varias
+de las ideas expuestas ahí coinciden con las nuestras, aunque se hayan concebido de forma
+independiente. Agradecemos al Dr. Jorge López, de la Universidad de Puerto Rico, por su valiosa
+información.
+REFERENCIAS
+ABEL, N. (1881): Oeuvres Complètes, (2 vols.) Segunda edición bajo la dirección de Peter Ludwig
+Sylow y Sophus Lie, Grondahl, Christianía.
+BJERKNES, C.A. (1885): Niels Henrik Abel. Tableau de sa vie et de son action scientifique.
+Bordeaux.
+CAUCHY, A.L. (1821): Cours d'Analyse de l'École Royale Polytechnique. Premier partie.
+Analyse algébrique. Editado en el 2000 por la Sociedad Andaluza de Educación
+Matemática "THALES", Sevilla. 576 pp.
+CENTINA, A. del (2002): “The Manuscript of Abel’s Parísian Memoir Found in its Enterity”. Hist.
+Math. 29, 65-69.
+EULER, L. (1748): “Introducción al análisis de los infinitos”. Ed. facsimilar del año 2000 con
+traducción anotada a cargo de A. J. Durán y F. J. Pérez de la Real Sociedad Matemática
+Española, Sevilla.
+FRASER, C.G. (1990): “Lagrange's analytical mathematics, origins and reception”. Stud. Hist. Phil.
+Sc. 21(2), 243-256.
+104
+HOUZEL, Ch. (1978): Fonctions Elliptiques et Intégrales Abéliennes en Abregé d’histoire des
+mathematiques 1700-1900. (ed. por Jean Dieudonné) Vol II, cap. VII, 1-113. Ed. Hermann,
+Paris.
+JACOBI, C.G.J. (1881-91): Gesammelte Werke (ed. por C. W. Borchardt y K. Weierstrass en 7
+Tomos).
+JAHNKE, H.N. (1993): “Algebraic Analysis in Germany, 1780-1840”. Historia Math. 20, 265-284.
+KLEIN, F. (1989): Lecciones sobre el desarrollo de la Matemática en el siglo XIX. Moscú (en
+ruso) 454 pp.
+LAGRANGE, J-L. (1797): ”Discours sur l'objet de la Théorie des Fonctions Analytiques”. Journal
+de l'École Polytechnique, VI, T2, 325-328.
+OLIVIER, L. (1827): ”Remarques sur les séries infinies et leur convergence”. Journal für die Reine
+und Angewandte Mathematik. 2(1), 31-44.
+ORE, O. (1957): Niels Henrik Abel. Mathematician Extraordinaire. University of Minnesota
+Press. 278 pp.
+PENSEVY, M. (1986): ”La serie du binome de Wallis a Abel”. Gaz. Math. Soc. Math. Fran. 31,
+133-157.
+SÁNCHEZ FERNÁNDEZ, C. y C. VALDÉS CASTRO (2004): “De los Bernoulli a los Bourbaki. Una
+historia del arte y la ciencia del cálculo”. Ed. Nivola. Madrid. 382 pp.
+SÁNCHEZ FERNÁNDEZ, C. y T. de J. NORIEGA SÁNCHEZ (2005): “Abel. El romántico nórdico”.
+Ed. Nivola. Madrid. 222 pp.
+STUBHAUG, A. (2000): N. H. Abel and his times. Called to soon by flames afar. Springer. New
+York. 580 pp.
+105

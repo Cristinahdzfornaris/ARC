@@ -1,0 +1,818 @@
+Sociedad Cubana de Matemática y Computación
+Solución de un problema
+de contorno de gran complejidad
+para ecuaciones de tipo hiperbólico:
+casos de índices positivos y negativos.
+Solution of a boundary problem VERY COMPLEX
+for hyperbolic equations: CASE positive and negative INDEX
+Dr. Lorgio F. Batard Martínez
+MSc. Yanelis Estrada Hernández
+Departamento de Matemática, Universidad Central Marta Abreu de Las Villas, Santa Clara, Villa Clara, Cuba
+Resumen Introducción
+En el presente trabajo se aborda un problema hiperbólico con
+condiciones de contorno de gran complejidad, que es reducido En el presente artículo se plantea el problema general, con-
+mediante el operador de Fourier, a un Problema de Contorno sistente en encontrar la solución a una ecuación en derivadas
+de Riemann con solución conocida. A partir de la solución del parciales de tipo hiperbólico con condiciones de fronteras muy
+Problema de Riemann se obtiene la solución en cuadraturas generales. La misma se buscará en una cierta clase de funcio-
+del problema hiperbólico inicialmente planteado para casos de nes de amplia aplicación práctica; damos un resumen de cómo
+índice distinto de cero, que son importantes en las aplicaciones. reducimos nuestro problema a un Problema de Contorno de
+Los casos de índice cero fueron ya resueltos en un artículo an- Riemann, cuya solución es conocida mediante la técnica de
+terior de los autores. Chersky [ver 3], ya visto en el artículo anterior de los autores;
+para ello usamos el operador de Fourier y fi nalmente encon-
+Abstract
+tramos una ecuación funcional que constituye un Problema de
+In this paper a hyperbolic problem with complex boundary Riemann. Luego recordamos las condiciones de solubilidad del
+conditions has been transformed into a Riemann boundary Problema de Riemann y los diferentes casos de índice a los cua-
+problem of known solution, by means of the Fourier operator. les llegamos en el artículo anterior.
+From the Riemann problem solution, is obtained the solution Por último se determina la solución del problema en cua-
+in quadratures of the initial hyperbolic problem in some cases draturas para los casos de índices positivos y negativos y se
+of nonzero index, which are important in the applications. The establecen condiciones para que el problema esté correctamen-
+cases of zero index have been already solved in a previous pa- te planteado, todo ello se recoge en una serie de teoremas que
+per of the authors. resumen los resultados.
+— 28 —
+Revista Ciencias Matemáticas
+1.1 Planteamiento del problema siendo
+de contorno general de tipo hiperbólico
+,
+En este epígrafe procederemos a realizar el planteamiento del
+problema de contorno general de tipo hiperbólico con condicio-
+donde
+nes de contorno complejas:
+Dada la ecuación diferencial parcial de tipo hiperbólico
+(1.1.1)
+en la banda
+(1.1.2)
+y las condiciones de contorno
+a u(x,1-)+a u (x,1-)+a u (x,1-)=g (x) (1.1.3)
+0 1 y 2 x 10
+b u(x,0+)+b u (x,0+)+b u (x,0+)=g (x),x10 (1.1.4)
+0 1 y 2 x 11
+c u(x,0+)+c u (x,0+)+c u (x,0+)=g (x),x20 (1.1.5)
+0 1 y 2 x 12
+Trabajándo algebraicamente obtenemos el siguiente problema
+donde a, b y c; i = 0,1,2; son números reales
+i i i
+de Riemann, visto en al artículo anterior de los autores
+g(x,y)!L 2x (R) , g 10 (x)!L 2x (R) , g 11 (x)!L 2x (-3,0) y (1.2.2)
+g (x)!L (0,+3)
+12 2x
+donde
+Se desea encontrar condiciones sobre los elementos conocidos
+de (1.1.1), (1.1.3) - (1.2.5) para que la ecuación (1.1.1) tenga so- , ,
+lución única en la región (1.2.2), que satisfagan las condiciones
+T (x)=
+P
+2
+(x) P
+3
+(x)
+, T (x)=
+e a0-x2P
+1
+(x) e- a0-x2P
+3
+(x)
+y
+(1.1.3)- (1.1.5) y que pertenezcan a la clase. 2 P
+2
+(x) P
+3
+(x) 1 P
+1
+(x) P
+3
+(x)
+S={u!F(D):u
+xx
+!L
+2x
+(R), P
+3
+(x)=c
+0
++c
+1
+a
+0
+-x2-ixy,
+(1.1.6)
+u yy (R)u!L 2x (R),01y1+1} P 3 (x)=c 0 -c 1 a 0 -x2-ixy 2
+siendo
+donde F(D) es la clase de funciones que están defi nidas sobre
+la banda infi nita D y L (R) es la clase L (R) con respecto a
+2x 2
+la variable x (ver [9])
+El problema está bien planteado porque el número de con-
+diciones de contorno (3) es igual al orden de la ecuación dife-
+rencial con respecto a y (2), por el número de regiones (1), más
+uno (ver [3]).
+La clase L (R) está defi nida en el artículo anterior (ver [9]).
+2 donde
+A = ab A = ac
+1 1 1 1 1
+B = -a b + ab B = -a c + ac
+0 1 1 0 1 0 1 1 0
+1.2 Solucion transformada
+C = -a b C = -a c
+2 2 1 2 2
+D = a b D = a c
+0 0 1 0 0
+Utilizando la técnica de Chersky obtenemos la solución trans- E = a b - ab E = a c - ac
+2 1 1 2 1 2 1 1 2
+formada F = -a b - a b F = -a c - a c
+0 2 2 2 1 0 2 2 0
+U(x,y)=C (x)e- (a0-x2)y+C (x)e (a0-x2)y+V(x,y) (1.2.1)
+1 2
+donde V(x,y) la solución particular de (1.2.1)
+— 29 —
+Sociedad Cubana de Matemática y Computación
+1.3 Condiciones Caso 3:
+de solubilidad del Problema
+(Solamente C ! 0, C1 ! 0, D ! 0, F ! 0 y A ! 0)
+de Riemann obtenido a partir 1
+Por lo que nuestro problema de contorno se reduce a:
+de un problema hiperbólico complejo.
+Dada la ecuación diferencial parcial de tipo hiperbólico
+Diferentes casos de índice. Solución
+del Problema de Riemann para los casos
+en la banda
+de índices positivos y negativos.
+y las condiciones de contorno
+En un artículo anterior de los autores se plantearon las condi-
+ciones necesarias y sufi cientes sobre los coefi cientes de (1.1.1),
+(1.1.3), (1.1.4) y (1.1.5), para que el coefi ciente y el término in-
+dependiente de (1.2.2) satisfagan las condiciones correspon-
+Además el coefi ciente del Problema de Riemann queda de la
+dientes al problema de Riemann, las cuales se recojen en los
+forma:
+siguientes teoremas:
+Teorema 1:
+Por lo tanto las raíces del numerador (denominador) serían:
+La expresión de D(x), no tiene ni ceros ni polos si se cumplen
+las condiciones:
+Tanto el numerador como el denominador de D(x) son polino-
+mios de segundo grado. La solución del Problema de Riemann
+Teorema 2: depende del índice del coefi ciente D(x) y para nuestro problema
+Si se cumplen las condiciones del Teorema 1, entonces solo tenemos los siguientes casos: casos de índice cero, casos de
+. índice positivos: uno y dos y casos de índice negativo: menos uno
+y menos dos, para todos estos casos .
+Teorema 3: a b c
+3-a) F=0(F =0)&- 0 = 0 = 0
+Si se cumplen las condiciones del Teorema 1 y Teorema 2 1 a 2 b 2 c 2
+entonces D(x)-1h!Lm 2x . 3-b) D=0(D 1 =0)&a 0 =0ob 0 =c 0 =0
+3-b.1) sgF!sgC
+Teorema 4: 3-b.2) sgF=sgC
+Si se cumplen las condiciones del Teorema 1 y suponiendo
+que , , y pertenezcan
+3-c)
+Rea > 0, Rea = -Reb, Rec > 0,
+a entonces se cumple que .
+Rec = -Red y Ima = Imb > 0, Imc = Imb > 0.
+Ellos condujeron a los diferentes casos de índices:
+sgC!sgD,sgF!sgC, 4DC 1
+1F(sgC1!sgD1,sgF1!sgC1, 4D1C1 1
+Casos de índice cero: 3-d)
+1F2, -F2-4D C 2F2),
+1 1 1 1 1
+Caso 1:
+a20,2,c20yd20
+(Solamente A ! 0 y A ! 0)
+1 sgC!sgD,sgF!sgC, 4DC 1F2, -F2-4DC 2
+Caso 2: 2F(sgC !sgD,sgF !sgC, 4D C 1
+1 1 1 1 1 1
+(Solamente A ! 0, A 1 ! 0, 3-e) 1F 1 2, -F 1 2-4D 1 C 1 2F 1 ),
+D ! 0 y D
+1
+! 0) a20,b10,c20yd10
+— 30 —
+Revista Ciencias Matemáticas
+sgC!sgD,sgF=sgC, 4DC 2 Casos que fueron resueltos en el artículo anterior de los auto-
+2F2(sgC !sgD,sgF =sgC, 4D C 2F2) res, titulado: “Solución de un problema de contorno de gran com-
+1 1 1 1 1 1 1
+3-f)
+Rea20,Rea=-Reb,Rec20,Rec=-Redy plejidad para ecuaciones de tipo hiperbólico: caso índice cero”.
+Ima=Imb10,Imc=Imb10
+1.3.1 Casos de índices positivos
+sgC!sgD,sgF=sgC, 4DC 1F2, -F2-4DC 2
+2F(sgC !sgD,sgF =sgC, 4D C 1 1.3.1.1 Casos de índice uno
+1 1 1 1 1 1
+3-g)
+1F2, -F2-4D C 1F2, -F2-4D C)2F) 1.3.1.1 a)
+1 1 1 1 1 1 1 1 1
+a20,b10,a=-b,c20yd10,c=-d sgC!sgD,sgF!sgC, 4DC 2
+sgC!sgD,sgF=sgC, 4DC 1 2F2(sgC !sgD,sgF !sgC -F2-4D C 2F)
+1 1 1 1 1 1 1 1
+1F2, -F2-4DC 1F(sgC !sgD,sgF = Rea>0,Rea=-Reb,Ima=Imb>0,c>0,d<0
+1 1 1
+3-h)
+=sgC, 4D C 1F2, -F2-4D C)
+1 1 1 1 1 1 1 Dos ceros complejos y un polo imaginario en el semiplano su-
+a20,b10,a=-b,c20yd10,c=-d
+perior y un polo imaginario en el semiplano inferior.
+sgC!sgD,sgF!sgC, 4DC 1
+1.3.1.1 b)
+1F2, -F2-4DC 2F(sgC !sgD,sgF !
+1 1 1 sgC!sgD,sgF!sgC, 4DC 2
+3-i)
+!sgC, 4D C 1F2, -F2-4D C 2F)
+1 1 1 1 1 1 1 1 2F2(sgC =sgD,sgF !sgC -F2-4D C 2F)
+a20,b10,a=-b,c20yd10,c=-d 1 1 1 1 1 1 1 1
+Rea>0,Rea=-Reb,Ima=Imb>0,c>0,d<0
+sgC=sgD,sgF=sgC, -F2-4DC 2 Dos ceros complejos y un polo imaginario en el semiplano su-
+3-j) 2F(sgC 1 =sgD 1 ,sgF 1 =sgC 1 , -F 1 2-4D 1 C 1 2F 1 ) perior y un polo imaginario en el semiplano inferior.
+a20,b10,a=-b,c20yd10,c=-d
+Por lo que el problema de Riemann queda de la siguiente
+manera:
+sgC=sgD,sgF!sgC, -F2-4DC 2
+3-k) 2F(sgC 1 =sgD 1 ,sgF 1 !sgC 1 , -F 1 2-4D 1 C 1 2F 1 ) F+(x)= ( ( x x - - c a i) ) ( ( x x - - d b i ) ) F-(x)-H 2 (x)+ ( ( x x - - c a i) ) ( ( x x - - d b i ) ) H 3 (x)
+a20,b10,a=-b,c20yd10,c=-d
+donde T (x)=0
+2
+sgC=sgD,sgF=sgC, -F2-4DC 1 Como estamos buscando funciones F+(x) y F-(x) prolonga-
+3-l) 1F(sgC 1 =sgD 1 ,sgF 1 =sgC 1 , -F 1 2-4D 1 C 1 1F 1 ) bles analíticas al semiplano superior e inferior obtenemos:
+a20,b10,a=-b,c20yd10,c=-d
+(x-di) (x-a) (x-di) (x-a)
+F+(x)= F-(x)- H (x)+
+(x-b) (x-ci) (x-b) 2 (x-ci)
+sgC=sgD,sgF=sgC, -F2-4DC 2
+llegamos al Problema de Salto:
+3-m) 2F(sgC =sgD,sgF =sgC, -F2-4D C 2F)
+1 1 1 1 1 1 1 1
+(x-di) (x-a)
+a20,b10,a=-b,c20yd10,c=-d (x-b) F+(x)= (x-ci) F-(x)+H 4 (x) (1.3.1)
+sgC=sgD,sgF!sgC, -F2-4DC 2 donde
+2F(sgC !sgD,sgF =sgC, 4D C 1 (x-di) (x-a)
+1 1 1 1 1 1 H (x)= H (x)+ H (x)
+3-n) 1F2 -F2-4D C 2F) 4 (x-b) 2 (x-ci) 3
+1 1 1 1 1
+a20,b10,a=-b,c20yd10,c=-d que es de L (R) si a < 0 y V(x,y),xV(x,0+),y dV(x,0+)
+2x 0 dy
+sgC!sgD,sgF!sgC, 4DC 2 pertenecen a L 2x (R). Luego aplicando el Operador Proyección
+3-o) 2F2(sgC 1 =sgD 1 ,sgF 1 !sgC 1 , -F 1 2-4D 1 C 1 1F 1 ) a H 4 (x) nos queda
+Rea20,Rea=-Reb,Ima-Imb20 H 4 (x)=}+(x)-}-(x) (10)
+sgC=sgD,sgF=sgC, -F -4DC 1 donde }!(x)=P!(H (x)), o sea }!(x)=(VoT!oV-1)H (x)
+1 4 4
+3-p) 1 a1 F2 0 ( , s b gC 1 1 ! 0y sg R D e 1 , a sg 2 F 1 0 = ,R sg e C c 1 , 2 4D 0, 1 C 1 2F 1 2) de donde }!(x)= 2 1 r # -3 +3 h 4 (t)eixtdt y
+1 #0
+Rec=-Red,Imc=Imd10 }-(x)= h (t)eixtdt , siendo
+2r -3 4
+— 31 —
+Sociedad Cubana de Matemática y Computación
+1
+#+3 Un cero imaginario puro en el semiplano superior y un cero
+h (t)= H (t)eixtdt (1.3.2)
+4 2r 4 imaginario puro y dos polos complejos en el semiplano inferior.
+-3
+1.3.1.1 d)
+Luego sustituyendo (1.3.2) en (1.3.1) nos queda:
+sgC=sgD,sgF=sgC, -F2-4DC 2
+(x-di) (x-a)
+(x-b) F+(x)-}+(x)= (x-ci) F-(x)-}-(x) 2F(sgC 1 !sgD 1 ,sgF 1 =sgC 1 , 4D 1 C 1 2F 1 2)
+a>0,b<0yRec=-Red,Imc=Imd<0
+Aplicando el Teorema de Prolongación Analítica y el Teorema
+Generalizado de Liouville tenemos Un cero imaginario puro en el semiplano superior y un cero
+(x-di) (x-a) c imaginario puro y dos polos complejos en el semiplano inferior.
+F+(x)-}+(x)= F-(x)-}-(x)= 1 , c
+(x-b) (x-ci) x-b 1 Por lo que el problema de Riemann queda de la siguiente
+es una constante arbitraria. manera:
+(x-ai)(x-bi) (x-ai)(x-bi)
+Luego F+(x)= F-(x)-H (x)+ H (x)
+(x-c)(x-d) 2 (x-c)(x-d) 3
+(x-di) c
+F+(x)-}+(x)= 1
+(x-b) x-b donde T (x)=0.
+2
+(x-b) c
+F+(x)= (x-di) }+(x)+ x- 1 b (1.3.3) Como estamos buscando funciones F+(x) y F-(x) prolonga-
+(x-b) c bles analíticas al semiplano superior e inferior obtenemos:
+F-(x)= }-(x)= 1
+(x-di) (x-a)(x-b) (x-c)(x-d) (x-c)(x-d)
+F+(x)=F-(x)- H (x)+H (x)
+(x-ai)(x-bi) (x-ai)(x-bi) 2 3
+Al tener F+(x) dado por la expresión (1.3.3) entonces U(x,y) que-
+llegamos al Problema de Salto:
+da determinado, siendo
+F+(x)= ( ( x x - - d b i ) ) 1 2 #+3 h 4 (t)eixtdt+ x- c 1 di (1.3.4) ( ( x x - - a c i ) ) ( ( x x - - d b ) i) F+(x)=F-(x)+H 5 (x)
+0
+donde
+y se puede enunciar el siguiente teorema:
+(x-c)(x-d)
+H (x)=- H (x)+H (x)
+5 (x-ai)(x-bi) 2 3
+Teorema 5:
+dV(x,0+) donde utilizando una teoría similar al caso anterior obtenemos:
+Si a < 0 y V(x,y),xV(x,0+),y pertenecen a
+0 dy
+(x-c)(x-d) c
+L 2x (R), entonces el problema (1.1.1)-(1.1.5) para estos casos (x-ai)(x-bi) F+(x)-}+(x)=F-(x)-}-(x)= (x- 1 ai)
+tiene solución única que depende de una constante arbitraria
+de donde
+c en la clase (1.1.6) y viene dada por las expresiones (1.2.1) y (x-ai)(x-bi) (x-bi)
+1 F+(x)= }+(x)+ c
+(1.3.4) (Demostración similar al Teorema 6 del caso parabóli- (x-c)(x-d) (x-c)(x-d) 1
+co, publicado en esta revista.) siendo
+Si la ecuación del problema original es homogénea, es decir, (x-ai)(x-bi) 1 #+3 (x-bi)
+F+(x)= h (t)eixtdt+ c
+si
+V(x,y)/0
+podemos enunciar el siguiente teorema:
+(x-c)(x-d) 2r 5 (x-c)(x-d) 1
+0
+Luego podemos enunciar teoremas similares a los Teorema 5 y
+Teorema 5´: Teorema 5´ con h y H en lugar de h y H.
+5 5 4 4
+Si a < 0, entonces el problema (1.1.1) – (1.1.5) para estos 1.3.1.1 e)
+0
+casos tiene solución única en la clase (1.1.6) dada por sgC!sgD,sgF!sgC, 4DC 1F2, -F2-4DC 1
+u(x,y)=V-1[U(x,y)]. 1F(sgC !sgD,sgF =sgC, 4D C 1F2, -F2-4DC 2F)
+1 1 1 1 1 1 1 1 1 1 1
+a>0,b>0yc>0,d<0
+1.3.1.1 c) Dos ceros y un polo imaginarios puros en el semiplano superior
+sgC=sgD,sgF!sgC, -F2-4DC 2
+y un polo en el semiplano inferior imaginario puro.
+2F(sgC !sgD,sgF =sgC, 4D C 2F2)
+1 1 1 1 1 1 1 Por lo que el problema de Riemann queda de la siguiente
+a>0,b<0yRec=-Red,Imc=Imd<0
+manera:
+— 32 —
+Revista Ciencias Matemáticas
+(x-ai)(x-bi) (x-ai)(x-bi) (x-ci)(x-di) (x-ci)(x-di)
+F+(x)= F-(x)-H (x)+ H (x) F+(x)=F-(x)- H (x)+H (x)
+(x-ci)(x-di) 2 (x-ci)(x-di) 3 (x-bi)(x-ai) (x-bi)(x-ai) 2 3
+donde T (x)=0. llegamos al Problema de Salto:
+2
+Como estamos buscando funciones F+(x) y F-(x) prolonga- (x-ci)(x-di)
+F+(x)=F-(x)+H (x)
+(x-bi)(x-ai) 7
+bles analíticas al semiplano superior e inferior obtenemos:
+(x-ai)(x-bi) (x-ai)(x-bi) donde
+F+(x)= (x-ci)(x-di) F-(x)-H 2 (x)+ (x-ci)(x-di) H 3 (x) H (x)=- (x-ci)(x-di) H (x)+H (x)y
+7 (x-bi)(x-ai) 2 3
+llegamos al Problema de Salto:
+(x-ai)(x-bi) (x-bi)
+F+(x)= }+(x)+ c
+(x-ai)(x-bi) (x-ci)(x-di) (x-ci)(x-di) 1
+F+(x)= F-(x)+H (x)
+(x-ci)(x-di) 6
+siendo
+donde H 6 (x)=-H 2 (x)+ ( ( x x - - a ci i ) ) ( ( x x - - d b i i ) ) H 3 (x) F+(x)= (x-ai)(x-bi) 1 #+3 h (t)eixtdt+ (x-bi)c 2
+(x-ci)(x-di) 2r 7 (x-ci)(x-di)
+0
+donde utilizando una teoría similar al caso anterior obtenemos:
+Luego podemos enunciar teoremas similares a los Teoremas 5
+(x-ai)(x-bi) c
+F+(x)-}+(x)+ F-(x)-}-(x)= 1
+(x-ci)(x-di) (x-di) y Teorema 5´ con h y H en lugar de h y H.
+7 7 4 4
+de donde
+c 1.3.1.2 Casos de índice dos
+F+(x)=}+(x)+ 1 y
+(x-di)
+1.3.1.2 a)
+(x-ci)(x-di) (x-ci)
+F-(x)= }-(x)+ c sgC!sgD,sgF!sgC, 4DC 2
+(x-ai)(x-bi) (x-ai)(x-bi) 1
+1
+#+3
+c
+2F2(sgC
+1
+!sgD
+1
+,sgF
+1
+=sgC
+1
+, 4D
+1
+C
+1
+2F
+1
+2)
+siendo F+(x)= h (t)eixtdt+ 1
+2r 6 (x-di) Rea>0,Rea=-Reb,Ima=Imb>0y
+0
+Luego podemos enunciar teoremas similares a los Teoremas 5 Rec=Red,Imc=Imd<0
+y Teorema 5´ con h y H en lugar de h y H. Dos ceros complejos en el semiplano superior y dos polos com-
+6 6 4 4
+1.3.1.1 f ) plejos en el semiplano inferior.
+sgC!sgD,sgF=sgC, 4DC 1F2, -F2-4DC 2
+1.3.1.2 b)
+2F(sgC 1 =sgD 1 ,sgF 1 =sgC 1 , -F 1 2-4D 1 C 1 1F 1 ) sgC!sgD,sgF!sgC, 4DC 2
+a>0,b<0yc<0yd<0 2F2(sgC =sgD,sgF =sgC, -F2-4D C 1F)
+1 1 1 1 1 1 1 1
+Un cero imaginario puro en el semiplano superior y un cero y Rea>0,Rea=-Reb,Ima=Imb>0yc<0,d>0
+dos polos imaginarios puros en el semiplano inferior. Dos ceros complejos en el semiplano superior y dos polos ima-
+1.3.1.1 g ) ginarios puros en el semiplano inferior.
+sgC=sgD,sgF=sgC, -F -4DC 2
+1
+2F(sgC 1 !sgD 1 ,sgF 1 =sgC 1 , 4D 1 C 1 1F 1 2 -F 1 2-4D 1 C 1 1F 1 ) 1.3.1.2 c)
+a>0,b<0,c<0yd<0 sgC!sgD,sgF!sgC, 4DC 1F2, -F -4DC 1
+1
+Un cero imaginario puro en el semiplano superior y un cero y 1F(sgC !sgD,sgF =sgC, 4D C 1F2, -F2-4D C 1F)
+1 1 1 1 1 1 1 1 1 1 1
+dos polos imaginarios puros en el semiplano inferior. a>0,b>0,c<0yd>0
+Por lo que el problema de Riemann queda de la siguiente Dos ceros en el semiplano superior imaginarios puros y dos po-
+manera: los en el semiplano inferior imaginarios puros.
+(x-ai)(x-bi) (x-ai)(x-bi)
+F+(x)= F-(x)-H (x)+ H (x)
+(x-ci)(x-di) 2 (x-ci)(x-di) 3
+1.3.1.2 d)
+donde T (x)=0. sgC=sgD,sgF!sgC, -F -4DC 1
+2 1
+Como estamos buscando funciones F+(x) y F-(x) prolonga- 1F(sgC !sgD,sgF =sgC, 4D C 1F2, -F2-4D C 1F)
+1 1 1 1 1 1 1 1 1 1 1
+bles analíticas al semiplano superior e inferior obtenemos: a>0,b>0,c<0yd>0
+— 33 —
+Sociedad Cubana de Matemática y Computación
+Dos ceros en el semiplano superior imaginarios puros y dos po- 1.3.2 Casos de índice negativos
+los en el semiplano inferior imaginarios puros. 1.3.2.1 Casos de índice menos uno
+El problema de Riemann para estos casos quedaría de la si-
+guiente manera:
+1.3.2.1 a)
+(x-a)2 (x-a)2 sgC!sgD,sgF=sgC, 4DC 1F2, -F-4DC 1
+F+(x)= F-(x)-H (x)+ H (x)
+(x-b)2 2 (x-b)2 3
+1F(sgC !sgD,sgF !sgC, 4DC 1F2, -F -4D C 2F2)
+1 1 1 1 1 1 1 1 1 1 1
+nos queda
+a<0,b<0,c>0yd<0
+(x-a)2
+F+(x)= (x-b)2 F+(x)=F-(x)+H 8 (x) Un polo imaginario puro en el semiplano superior, dos ceros y
+(x-b)2 (x-b)2 un polo imaginarios puros en el semiplano inferior.
+H (x)=- H (x)+ H (x)
+8 (x-a)2 2 (x-a)2 3
+1.3.2.1 b)
+Tomando la misma idea de demostración de los casos de índice sgC!sgD,sgF=sgC, 4DC 2
+uno pero ahora el orden del polo es dos, obtenemos: 2F2(sgC !sgD,sgF !sgC, 4DC 1F2, -F -4DC 2F2)
+1 1 1 1 1 1 1 1 1 1 1
+(x-a)2 Rea>0,Rea=-Reb,Imb<0yc>0,d<0
+F+(x)-}+(x)=F-(x)-}-(x)
+(x-b)2
+Un polo imaginario en el semiplano superior y dos ceros com-
+Aplicando el Teorema de Prolongación Analítica y el Teorema
+plejos y un polo imaginario en el semiplano inferior.
+Generalizado de Liouville tenemos
+En estos casos el problema de Riemann queda de la siguien-
+(x-a)2 c c x
+(x-b)2 F+(x)-}+(x)=F-(x)-}-(x)= x- 1 b + (x- 2 b)2 te manera:
+(x-a)(x-b) (x-a)(x-b)
+c 1 y c 2 son constantes arbitrarias. F+(x)= (x-c)(x-d) F-(x)-H 2 (x)+ (x-c)(x-d) H 3 (x)
+Luego nos queda
+(x-a)2 c c x
+F+(x)= (x-b)2 }+(x)+ x- 1 b + (x- 2 b)2 (1.3.5) (
+(
+x
+x
+-
+-
+d
+b)
+) F+(x)= (
+(
+x
+x
+-
+-
+a
+c)
+) F-(x)- (
+(
+x
+x
+-
+-
+d
+b)
+) H
+2
+(x)+ (
+(
+x
+x
+-
+-
+a
+c)
+) H
+3
+(x)
+Al tener dado por la expresión (1.3.5) entonces U(x,y) queda de-
+haciendo
+terminado por las expresiones (1.2.1) y (1.3.5) siendo (x-d) (x-a)
+F+(x)= F+(x),F-(x)= F-(x)y
+1 (x-b) 1 (x-c)
+(x-a)2 1 #+3 c c x
+F+(x)= h (t)eixtdt+ 1 + 2 (1.3.6) (x-d) (x-a)
+(x-b)2 2r 8 x-b (x-b)2 H (x)=- H (x)+ H (x)
+0 9 (x-b) 2 (x-c) 3
+se puede enunciar los siguientes teoremas:
+nos queda el Problema de Salto:
+F 1 +(x)-F 1 -(x)=H 9 (x) (1.3.7)
+Teorema 6:
+dV(x,0+) Podemos enunciar entonces el siguiente teorema:
+Si a < 0 y V(x,y),xV(x,0+),y pertenecen a
+0 dy
+L 2x (R) , entonces el problema (1.1.1) – (1.1.5) para el caso de
+Teorema 7:
+índice dos tiene solución única que depende de dos constante dV(x,0+)
+Si a < 0 y V(x,y),xV(x,0+),y pertenecen a
+0 dy
+arbitraria y en la clase (1.1.6) y viene dada por las expresiones
+L (R), entonces el problema (1.1.1) – (1.1.5) para estos casos
+2x
+(1.2.1) y (1.3.6).
+tiene solución única en la clase (1.1.6) dada por
+Para el caso homogéneo queda el siguiente teorema:
+u(x,y)=V-1[U(x,y)]. donde U(x,y) está dada por las fórmulas
+(1.2.1) y
+Teorema 6´:
+1 (x-b) #+3
+Si a < 0, entonces el problema (1.1.1) – (1.1.5) para los F+(x)= h (t)eixtdt (1.3.8)
+0 2r (x-d) 9
+casos de índices dos tiene solución única que depende de dos 0
+siendo h = V-1[H]; si se cumple la condición adicional
+constante arbitraria c y c en la clase (1.1.6) y viene dada por 9 9
+1 2
+u(x,y)=V-1[U(x,y)], donde U(x,y) se defi ne por las expresio- #+3 H x 9 - (x a ) dx=0 (1.3.9)
+nes (1.2.1) y (1.3.6). 0
+— 34 —
+Revista Ciencias Matemáticas
+La primera parte de la demostración es evidente por las téc- Dos polos imaginarios puros en el semiplano superior y un cero
+nicas de trabajo mostradas anteriormente, luego, solo nos ocu- imaginario puro en el semiplano superior y un cero imaginario
+paremos de la necesidad de la expresión (1.3.9). puro en el semiplano inferior.
+En efecto, como la solución del Problema de Riemann se ex- En estos casos el problema de Riemann queda de la siguien-
+presa por (1.3.8) y tenemos que te manera:
+F-(x)=- x x - - a c 2 1 r # -3 0 h 9 (t)eixtdt F+(x)= ( ( x x - - a c) ) ( ( x x - - d b ) ) F-(x)-H 2 (x)+ ( ( x x - - a c) ) ( ( x x - - d b ) ) H 3 (x)
+nos queda
+tiene un polo de orden uno en x = a, por lo tanto, se requie-
+(x-d) (x-a) (x-d) (x-a)
+re para que el problema de salto (1.3.7) tenga solución única, F+(x)= F-(x)- H (x)+ H (x)
+(x-b) (x-c) (x-b) 2 (x-c) 3
+#0
+que h (t)eixtdt tenga un cero de igual orden en dicho punto.
+9
+-3 haciendo
+Como por la relación entre las Integrales de tipo Cauchy y de (x-d) (x-a)
+F+(x)= F+(x),F-(x)= F-(x)y
+Fourier se tiene: 1 (x-b) 1 (x-c)
+(x-d) (x-a)
+1 H 9 (x) dx=- 1 #+3 h (t)eiztdt H 10 (x)=- (x-b) H 2 (x)+ (x-c) H 3 (x)
+2ri x-a 2r -3 9
+nos queda el Problema de Salto:
+si Imz < 0, entonces, desarrollando la primera de las integrales
+F 1 +(x)-F 1 -(x)=H 10 (x) (4)
+anteriores en serie de potencias de (z - a) e igualando a cero el
+Podemos enunciar entonces el siguiente teorema:
+coefi ciente del término de grado cero del desarrollo, se obtiene
+(1.3.9) con lo cual se elimina el polo de F-(x). En el caso homo-
+Teorema 8:
+géneo nos queda: dV(x,0+)
+Si a < 0 y V(x,y),xV(x,0+),y pertenecen a
+0 dy
+L 2x (R) , entonces el problema (1.1.1) – (1.1.5) para estos casos
+Teorema 7´:
+tiene solución única en la clase (1.1.6) dada por
+Si a < 0 entonces el problema (1.1.1) – (1.1.5) para estos ca-
+0 u(x,y)=V-1[U(x,y)]. Donde U(x,y) está dada por las fórmulas
+sos tiene solución única en la clase (1.1.6) dada por .
+(1.2.1) y
+u(x,y)=V-1[U(x,y)].
+1 (x-b) #+3
+1.3.2.1 c) F+(x)= 2r (x-d) h 10 (t)eixtdt (1.3.11)
+sgC!sgD,sgF=sgC, 4DC 1 0
+siendo ; si se cumple la condición adicional
+1F2, -F -4DC 2F(sgC !sgD,sgF !sgC, 4D C 2F2)
+1 1 1 1 1 1 1 1
+a>0,b<0yRec=-Red,Imc=Imd20
+#+3 H
+10
+(x)
+dx=0 (1.3.12)
+x-d
+-3
+Un cero imaginario puro y dos polos complejos en el semipla-
+La primera parte de la demostración es evidente por las técni-
+no superior y un cero en el semiplano inferior imaginario puro.
+cas de trabajo mostradas anteriormente, luego, solo nos ocupa-
+1.3.2.1 d)
+remos de la necesidad de la expresión (1.3.12).
+sgC!sgD,sgF!sgC, 4DC 1F2, -F2-4DC 2
+En efecto, como la solución del Problema de Riemann se ex-
+2F(sgC !sgD,sgF !sgC, 4DC 1F2, -F2-4D C 1F)
+1 1 1 1 1 1 1 1 1 1 1 presa por (1.3.11) y tenemos que
+a>0,b<0,c>0yd>0
+1 (x-b) #+3
+F+(x)= h (t)eixtdt
+Un cero y dos polos imaginarios puros en el semiplano superior 2r (x-d) 10
+0
+y y cero imaginario puro en el semiplano inferior. tiene un polo de orden uno en x = d, por lo tanto, se requiere,
+1.3.2.1 e) para que el problema de salto (1.3.10) tenga solución única, que
+sgC!sgD,sgF=sgC, 4DC 1F2, -F-4DC 2 #+3
+h (t)eixtdt tenga un cero de igual orden en dicho punto.
+10
+2F(sgC !sgD,sgF !sgC, 4DC 1F2, -F -4D C 1F2) 0
+1 1 1 1 1 1 1 1 1 1 1 Como por la relación entre las Integrales de tipo Cauchy y de
+a>0,b<0,c>0yd>0
+Fourier se tiene:
+— 35 —
+Sociedad Cubana de Matemática y Computación
+1 #+3 H
+10
+(x)
+dx=-
+1 #+3
+h (t)eiztdt
+1.3.2.2 e)
+2ri -3 x-d 2r 0 10
+si Im > z, entonces, desarrollando la primera de las integrales
+anteriores en serie de potencias de (z - e) e igualando a cero el
+coefi ciente del término de grado cero del desarrollo, se obtiene Dos polos en el semiplano superior imaginarios puros y dos ce-
+(1.3.12) con lo cual se elimina el polo de F+(x). ros en el semiplano inferior imaginarios puros.
+En el caso homogéneo nos queda: 1.3.2.2 f)
+Teorema 8´:
+Si a < 0 entonces el problema (1.1.1) – (1.1.4) para estos ca-
+0
+sos tiene solución única en la clase (1.1.6) dada por Dos ceros en el semiplano inferior imaginarios puros y dos po-
+u(x,y)=V-1[U(x,y)]. los en el semiplano superior imaginarios puros.
+En estos casos el problema de Riemann queda de la siguien-
+1.3.2.2 Casos de índice menos dos te manera:
+1.3.2.2 a) (x-a)(x-b) (x-a)(x-b)
+F+(x)= F-(x)-H (x)+ H (x)
+(x-c)(x-d) 2 (x-c)(x-d) 3
+sgC!sgD,sgF=sgC, 4DC 2
+2F2(sgC !sgD,sgF !sgC, 4D C 2F2) Nos queda:
+1 1 1 1 1 1 1
+Rea>0,Rea=-Reb,Ima=Imb10y (x-a)(x-b) (x-a)(x-b)
+F+(x)= F-(x)-H (x)+ H (x)
+Rec20,Rec=-Red,Imc=Imd>0 (x-c)(x-d) 2 (x-c)(x-d) 3
+Dos polos complejos en el semiplano superior y dos ceros com- donde haciendo
+F+(x)=F+(x)
+plejos en el semiplano inferior. 1
+(x-a)(x-b)
+1.3.2.2 b) F-(x)= F-(x)y
+1 (x-c)(x-d)
+sgC!sgD,sgF=sgC, 4DC 1F2, -F -4DC 1
+1 (x-a)(x-b)
+1F(sgC 1 !sgD 1 ,sgF 1 !sgC 1 , 4D 1 C 1 2F 1 2) H 11 (x)=-H 2 (x)+ (x-c)(x-d)
+a<0,b<0yRec>0,Rec=-Red,Imc=Imd20
+Nos queda un problema de salto de la forma:
+Dos polos complejos en el semiplano superior y dos ceros ima- F+(x)-F-(x)=H (x)
+1 1 11
+ginarios puros en el semiplano inferior. pero ahora al obtener la solución del problema se obtiene F-(x)
+1.3.2 2 c) con polos de orden uno en x = a y x = b.
+sgC!sgD,sgF=sgC, 4DC 1 Luego se puede enunciar un teorema similar al Teorema 8
+1F2(sgC
+1
+!sgD
+1
+,sgF
+1
+!sgC
+1
+, 4D
+1
+C
+1
+2F
+1
+2, -F
+1
+2-4D
+1
+C
+1
+)
+con las condiciones
+#+3 H
+10
+(x)
+dx=0 y
+#+3 H
+11
+(x)
+dx=0.
+x-a x-a
+Rea>0,Rea=-Reb,Ima=Imb<0yc>0,d>0 -3 -3
+Dos polos imaginarios en el semiplano superior y dos ceros Caso 1.3.2 a = b = b = c = c = 0 (solamente B
+1 0 2 0 2
+complejos en el semiplano inferior. ! 0 y E ! 0)
+1.3.2.2 d)
+sgC!sgD,sgF=sgC, 4DC 1
+1.3.2 a) Caso de índice cero
+1F2(sgC !sgD,sgF !sgC, 4D C 1F2)
+1 1 1 1 1 1 1
+B B B B
+a<0,b<0yc>0,d>0 >0y 1 >0o <0y 1 <0
+E E E E
+1 1
+Dos polos en el semiplano superior imaginarios puros y dos ce-
+Resuelto en el artículo anterior de los autores.
+ros en el semiplano inferior imaginarios puros.
+— 36 —
+Revista Ciencias Matemáticas
+1.3.2 b) Caso de índice uno Teorema 9:
+dV(x,0+)
+E B >0y E B 1 <0 Si a 0 < 0 y V(x,y),xV(x,0+),y dy pertenecen a
+1 L 2x (R) , entonces el problema (1.1.1) – (1.1.5) para este caso tie-
+El Problema de Riemann quedaría de la forma
+ne solución única que depende de una constante arbitraria c en
+1
+la clase (1.1.6) y viene dada por las expresiones (1.2.1) y (1.3.15).
+En el caso homogéneo nos queda:
+donde
+donde tenemos que si: Teorema 9´:
+Si a < 0 entonces el problema (1.1.1) – (1.1.5) para el este
+0
+caso tiene solución única en la clase (1.1.6) dada por
+u(x,y)=V-1[U(x,y)].
+nos queda el Problema de Salto (hay un polo en x - bi de F-(x) 1.3.2 c) Caso de índice menos uno
+o en x - ai de F+(x) si pasamos el coefi ciente del Problema de
+Riemann para el otro miembro:
+El Problema de Riemann quedaría de la forma
+Luego aplicando el Operador Proyección a H (x) nos queda
+12
+(1.3.13) donde
+donde donde tenemos que si:
+nos queda el Problema de Salto
+Luego nos queda:
+Teorema 10:
+dV(x,0+)
+Si a < 0 y V(x,y),xV(x,0+),y pertenecen a
+Aplicando el Teorema de Prolongación Analítica y el Teorema 0 dy
+L (R), entonces el problema (1.1.1) – (1.1.5) para este caso tie-
+Generalizado de Liouville tenemos 2x
+ne solución única en la clase (1.1.6) dada por
+u(x,y)=V-1[U(x,y)]. Donde U(x,y) está dada por las fórmulas
+c es una constante arbitraria. (1.2.1) y siendo h = V-1[H ];
+1 13 13
+Luego
+si se cumple la condición adicional
+(1.3.16)
+(1.3.14) Condiciones que ya han sido demostradas en las técnicas de
+trabajo mostradas anteriormente.
+En el caso homogéneo nos queda:
+Al tener F+(x) dado por la expresión (1.3.14) entonces U(x,y)
+Teorema 10’:
+queda determinado, siendo
+Si a < 0 entonces el problema (1.1.1) – (1.1.5) para este caso
+0
+(1.3.15) tiene solución única en la clase (1.1.6) dada por
+y se puede enunciar el siguiente teorema:
+u(x,y)=V-1[U(x,y)].
+— 37 —
+Sociedad Cubana de Matemática y Computación
+Conclusiones [10] 2012 LORGIO F. BATARD MARTÍNEZ, YANELIS ESTRADA
+HERNÁNDEZ. “Solución de un problema de contorno de gran
+A partir de las condiciones impuestas en cada caso estudiado,
+complejidad para ecuaciones en derivadas parciales de tipo para-
+hemos encontrado la solución en cuadraturas de un problema
+bólico: caso índices diferentes de cero”. Revista Ciencias Mate-
+hiperbólico con condiciones de contorno complejas, tanto para
+máticas. Aceptado para su publicación
+una ecuación homogénea como para una no homogénea. Es in- [11] R. A. ADAMS, Sobolev Spaces, Academic Press, 1976.
+teresante la técnica utilizada consistente en reducir el problema [12] S. AGMON, Lectures on Elliptic Boundary Value Problems, Van
+original a un Problema de Riemann, con el auxilio de la Trans- Nostrand, 1965.
+[13] J.P. AUBIN, Approximation of Elliptic Boundary Value Problems,
+formada de Fourier. Hemos limitado el estudio a casos de índice
+Wiley, 1972.
+distinto de cero, por haber sido abordado el caso de índice cero
+[14] H. BREZIS, Operateurs Maximaux Monotones, North-Holland
+en un artículo anterior de los autores.
+Math. Studies 5, 1973.
+Los resultados constituyen inobjetablemente un aporte teó-
+[15] F.E. BROWDER, Nonlinear Operators and Nonlinear Equations
+rico a la teoría de los Problemas de Contorno de las Ecuaciones of Evolution in Banach Spaces, Proc. Symp. Pure Math., 18, part
+Diferenciales Parciales, pues no existen técnicas analíticas en 2, Amer. Math. Soc., 1976.
+la actualidad, que aborden problemas de esta naturaleza donde [16] P. BUTZER AND H. BERENS, Semi-groups of Operators and
+Approximations, Springer, 1967.
+las condiciones de contorno difi eren en diferentes partes del eje.
+[17] A. CARASSO AND A. STONE (editors), Improperly Posed
+La solución obtenida mediante integrales de tipo Fourier
+Boundary Value Problems, Pitman, 1975.
+permite que los profesionales que utilizan modelos hiperbólicos
+puedan encontrar la solución con relativa facilidad con la ayuda
+de un paquete matemático adecuado, sin que sea necesario que
+posean un dominio profundo de la teoría antes expuesta.
+Bibliografía
+[1] MEDEROS, O. B. y BATARD, L. F. “El problema de Riemann
+con parámetro pequeño en el espacio ”. Revista Ciencias Mate-
+máticas No 3. 1990.
+[2] BATARD, L. F. “Las ecuaciones diferenciales y el Problema de
+Riemann con parámetro pequeño”. Tesis de Doctorado. 1990.
+[3] MEDEROS, O. B. y BATARD, L. F. “Reducción de una clase de
+problemas de contorno en ecuaciones en derivadas parciales con
+parámetro pequeño al Problema de Riemann”. Revista Ciencias
+Matemáticas No 3. 1990.
+[4] GAJOV, F.D. y CHERSKY, YU.I. “Ecuaciones de tipo Convolu-
+ción”. Moscú. Ciencia.1978.
+[5] TIJONOV. SAMARSKI. “Ecuaciones de la Física Matemática”
+[7] GAJOV, F.D. “Problemas de Contorno”
+[8] BUDAK, SAMARSKI. “Problemas de la Física Matemática”
+[9] 2012 LORGIO F. BATARD MARTÍNEZ, YANELIS ESTRADA
+HERNÁNDEZ. “Solución de un problema de contorno de gran
+complejidad para ecuaciones en derivadas parciales de tipo para-
+bólico: caso índice cero”. Revista Ciencias Matemáticas. Acepta-
+do para su publicación
+— 38 —

@@ -1,0 +1,306 @@
+CienciasMatemáticas,Vol. 32,No. 2,Pag. 131-134,2018
+Recibido02-2018
+Soluciones de onda viajera de un modelo continuo
+de transmisio´n de energ´ıa en medios no
+homoge´neos
+Traveling-wave solutions of a continuous model of
+energy transmission in non-homogeneous media
+Jorge E. Mac´ıas-D´ıaz
+Abstract Enestetrabajo,seinvestigara´ laexistenciadesolucionesdeunmodelcontinuodetransmisio´nde
+ondasenmediosnohomoge´neos. Unaextensio´ndelme´todocla´sicodeintegralesdirectas(tambie´nconocido
+como el me´todo de la ecuacio´n de prueba) sera´ empleada en este trabajo para derivar soluciones anal´ıticas
+delmodelobajoestudio. Todaslassolucionesqueseobtendra´nsonondasviajerasdescritasdeformaexacta.
+Abstract Inthiswork,weinvestigatetheexistenceofexactsolutionsofacontinuousmodelofwavetransmis-
+sion in nonhomogeneous media. An extension of the classical method of direct integrals (also known as the
+trialequationmethod)isusedinthisworkinordertoderivesomeanalyticalsolutionsofthemodelunderstudy.
+Allthesolutionsderivedinthisworkareactuallytravelingwavesthatarepresentedinexactform.
+Ecuacioneshiperbo´licasalineales—Coeficientestemporalmentevariables —Solucionesdeondavia-
+jera
+Nonlinear hyperbolicequations—Time-dependentcoefficients—Traveling-wavesolutions
+DepartamentodeMatema´ticasyF´ısica,UniversidadAuto´nomadeAguascalientes,Me´xico,jemacias@correo.uaa.mx
+Introduction of u with respect to t, t2 and x2, respectively, and a, b, c
+andd are usually fixedrealnumbers. Thislast requirement
+TheclassicalKlein–Gordonequationandits(continuousand
+physicallyimpliesthat the mediadescribed by those Klein–
+discrete)nonlineargeneralizationsaremodelsthatdescribea
+Gordonmodelsarehomogeneousinbothspaceandtime.
+widerangeofphenomenainmodernphysics. Amongmany
+otherrecentreports,equationsoftheKlein–Gordonandsine- Motivated by these facts, we will consider here an in-
+Gordontypeshavebeenemployedtoobtainavastfamilyof homogeneous generalization of the damped Klein–Gordon
+localizedsolutionsinexactform[1],tostudythebehaviorof equationinwhichthecoefficientsarefunctionsoftime. The
+a massive scalar field in a chargedrotatinghairy blackhole goalofthisworkistoproposeexpressionsfortraveling-wave
+[2],toexplorethedynamicsofgenuinecontinuumbreathers solutions of that model, as well as conditions on the (non-
+andtheconditionsunderwhichitpersistsinaPT-symmetric constant)coefficientsandthewavevelocitiesthatguarantee
+medium[3],asamodeltoconstructnon-equilibriumsteady theexistenceofsuchsolutions. Tothatend,wewillemploy
+states in arbitrary spatial dimensions under a local quench theextensionofthemethodofdirectintegrals(alsoknownas
+[4],asanexampleofadiscretemodelforwhichphase-shift thetrialequationmethod)proposedin[1]. Suchapproachis
+breatherscannotbesupported[5]andintheinvestigationof ageneralizationofthemethoddesignedbyW.-X.MaandB.
+thephenomenonofnonlinearsupratransmissioninnonlinear Fuchssteiner for partial differential equations with constant
+regimes[6]amongotherapplications[7,8]. coefficients[9]. It is importantto mentionthat differentap-
+MostoftheKlein–Gordonmodelsinvestigatedinthelit- proacheshave been employed in the literature to determine
+eratureconsiderthepresenceofconstantcoefficients.Indeed, traveling-wavesolutionsofnonlinearmodelsinphysics[10].
+mostoftherelevantmodelsareparticularcasesor(continu- However, the generalized trial equation technique is partic-
+ousordiscrete)extensionsofthenonlinearhyperbolicpartial ularly interesting in view of its simplicity and the fact that
+differentialequation variousfamiliesofsolutionsare fullycharacterizedthrough
+thevaluesofdiscriminantsystems(forinstance,see[11,12]
+u
+tt
++du
+t
+a2u
+xx
++bu+cu3=0, (1)
+andreferencestherein).
+−
+whereuisafunctionoftherealvariablesxandt.Meanwhile, Thisnoteissectionedasfollows.InSection1,wepresent
+the symbols u, u and u represent the partial derivatives thedampedKlein–Gordonequationwithtime-dependentco-
+t tt xx
+132 Solucionesdeondaviajeradeunmodelocontinuodetransmisio´ndeenerg´ıaenmediosnohomoge´neos
+efficientsthatmotivatesthiswork. Themethodofthedirect Asaconsequence,
+integralisusedthentodeterminetraveling-wavesolutionsof
+the model. The expressions of the constant parameters re- 1 m
+u¨= ∑kαuk 1. (9)
+quiredbythe directintegralmethodare derived,alongwith 2 k −
+k=1
+necessary conditions for the existence of the solutions. In
+Section 2, we considervariousparticularcases and, in each Substitutingtheformulas(5)–(7)aswellastheexpansion
+of them, we derivetraveling-wavesolutionsof the paramet- (8)intoourmodel,we obtainthe ordinarydifferentialequa-
+ric Klein-Gordonequation of interest. We will note in that tion
+sectionthatsomeofthetraveling-wavesolutionsthatwewill
+obtain are complex-valuedfunctions. Finally, we close this k
+workwithasectionofconcludingremarks. Θ(x,t)u˙+Λ(x,t)∑kα k uk − 1+b(t)u+c(t)u3=0, (10)
+k=1
+1. Klein–Gordon equation where
+In this work, we will use the symbol R+ to represent the
+Θ(x,t)=[k (t)+d(t)κ(t)]x+ω (t)+d(t)ω(t), (11)
+′′ ′ ′′ ′
+setofnonnegativerealnumbers,andwewillsupposethata,
+1
+b,candd arereal-valuedandRiemann-integrablefunctions Λ(x,t)= (κ(t)x+ω(t))2 a2(t)κ2(t) . (12)
+′ ′
+definedon R+. Throughoutwe will assume thatu isa non- 2 −
+negativerealfunctiononthevector(x,t) R R+withcon- (cid:2) (cid:3)
+Note that the left-hand side of (10) is a polynomial in the
+∈ ×
+tinuouspartialderivativesupto the secondorder,satisfying
+variables u and u˙ which must be equal to zero. Applying
+thepartialdifferentialequation
+he balancing principle, it follows that m=4. Moreover,as
+additionalconsequencesofthebalancingprincipleweobtain
+u +d(t)u a2(t)u +b(t)u+c(t)u3=0. (2)
+tt t − xx that
+NotethatthismodelisageneralizationoftheKlein–Gordon
+Θ(x,t)=0, (13)
+equation(1),whichconsidersnownon-constantcoefficients
+thatdependonthetemporalvariable. 2α 2 Λ(x,t)+b(t)=0, (14)
+Inthepresentwork,wewilluseanextensionofthemethod 4αΛ(x,t)+c(t)=0, (15)
+4
+ofdirectintegrals(ortrialequationmethod)proposedbyW.-
+X.MaandB.Fuchssteinerin[9]inordertoaccountforthe forevery(x,t) R R+. Notealsothatα =α =0must
+1 3
+presenceoftime-dependentcoefficients.Suchparametricap- besatisfied. ∈ ×
+proach has been used recently for simpler diffusive models
+Severalsimplificationsreadilyfollowfromtheselastiden-
+[1,13]. Followingtheapproachdescribedin[1],weassume
+tities. Indeed, the facts that both α and α are constants
+2 4
+the existence of traveling-wave solutions of the model (2)
+togetherwithEquations(14)and(15)implythatΛdepends
+whichtaketheform
+onlyonthetemporalvariable. ThisandtheexpressionofΛ
+yield that κ(t)=0. Equivalently, κ(t) must be equal to a
+u(x,t)=u(ξ), (3) ′
+constantκ R. Therefore both Θ and Λ are functions ex-
+∈
+clusivelyoft, andthe conditions(13)–(14)canberewritten
+where
+as
+ξ=ξ(x,t)=κ(t)x+ω(t), (4)
+forsuitablefunctionsκ,ω:R+
+→
+Rwithcontinuousderiva-
+ω ′′(t)+d(t)ω ′(t)=0, (16)
+tivesuptothesecondorder.
+b(t)
+Usingtheseassumptionsandthechainrule,thefollowing α 2 = κ2a2(t) (ω(t))2 , (17)
+identitiesreadilyfollow: − ′
+c(t)
+α = , (18)
+u =(κ(t)x+ω(t))u˙, (5) 4 2[κ2a2(t) (ω(t))2]
+t ′ ′ − ′
+u
+tt
+=(κ ′(t)x+ω ′(t))2u¨+(κ ′′(t)x+ω ′′(t))u˙, (6)
+foreacht R+. Observethatκmustbearealnumbersuch
+u xx =κ2(t)u¨. (7) ∈
+that the right-hand sides of the last two equations are con-
+Here,u˙representsthederivativeofu=u(ξ)withrespectto stants.
+ξ, andu¨ denotestherespectivesecondderivativeofu. Sup- Before we close this section, it is importantto note that
+pose that there exist a nonnegative integer m and real con- the solution (16) can be readily expressed in analytic form.
+stantsα foreachi=0,1,...,m,suchthat Moreover,constantfunctionsω(t)=ωsatisfythisequation.
+i
+Also, in the absence of the damping term the function ω
+m
+(u˙)2= ∑αuk. (8)
+adoptstheformω(t)=ω
+1
+t+ω
+2
+, whereω
+1
+andω
+2
+arereal
+k constants.
+k=0
+Solucionesdeondaviajeradeunmodelocontinuodetransmisio´ndeenerg´ıaenmediosnohomoge´neos 133
+2. Exact solutions andtheydonotprovidemeaningfulrealsolutionsof(2).How-
+ever,morerelevantsolutionsaregivenby(see[13])
+FollowingtheresultsinSection1,letm=4,letα =α =0,
+1 3
+andsupposethatα Randthattheexpressionsin(17)and
+0
+(18)areconstantrea ∈ lnumbers. Usingthechangeofvariable u= α 2 sech(√α 2 (ξ − ξ 0 )) . (27)
+u=v1/2andsomealgebraicsimplifications,Equation(8)be- ± r α 4 1 − √2tanh(√α 2 (ξ − ξ 0 ))!
+comes
+(v˙)2=4α 4 v3+4α 2 v2+4α 0 v. (19) Case5. ∆>0,b 0 =0,w> − b 1 ,α 2 <0andα 4 >0
+The following function is a solution of the damped Klein-
+Tosimplifythisexpressionweletw=(4α)1/3v.Expressing
+4 Gordonequation:
+the identity (19) in terms of w, separating variables in the
+resultingequationandintegratingbothsides,weobtain 1/2
+α 1 α
+u= | 2 | tan2 | 2 |(ξ ξ) 1 . (28)
+dw = (4α)1/3(ξ ξ), (20) ±s α 4 " 2 r 2 − 0 !− #
+4 0
+w(w2+b w+b ) ± −
+Z 1 0
+Again, it is easy to realize that this solution exists only for
+whereb p =4α(4α) 2/3 andb =4α(4α) 1/3,andξ is valuesofξforwhichtheterminthebracketsisanonnegative
+1 2 4 − 0 0 4 − 0
+anarbitraryrealnumber. number.
+Let F be the polynomial inside the radical in the inte-
+grand of the last equationas a functionof w. Note that the Case6. ∆>0,b =0,w> b ,α >0andα <0
+0 1 2 4
+−
+discriminantofF(w)isgivenby∆=b2 4b . Accordingly, In this case, we have the following exact solutions of (see
+1− 0
+various cases can be considered now depending on the dis- [13]):
+criminantandtheconstantsintheexpansion(8). Following
+theapproachusedin[1],wewillconsiderthosecasesnext. 2α
+u =
+2
+(1+cosh(2√α
+2
+(ξ ξ
+0
+))−
+1/2
+, (29)
+±s α
+4
+−
+Case1. ∆=0,w>0,α <0anda >0 | |
+2 4
+α
+Inthiscase,thefollowingfunctionsaresolutionsof(2): u = 2 sech(√α(ξ ξ)). (30)
+2 0
+± α −
+4
+r| |
+α α
+2 2
+u= ±s | 2α 4 |tanh r | 2 |(ξ − ξ 0 ) ! , (21) C In a a s fi e rs 7 t . s ∆ tag > e, 0 w ,b e 0 su 6 = pp 0 o a s n e d th α at < ∆> β 0 < ,b γ =0,α<β<γare
+0
+6
+realnumberswith oneof them equalto zero, the othersare
+u= | α 2 |coth | α 2 |(ξ ξ 0 ) . (22) solutionsofw2+b 1 +b 0 =0,andα<w<β. Underthese
+±s2α 4 r 2 − ! circumstances,
+1/2
+Case2. ∆=0,w>0,α
+2
+>0anda
+4
+>0
+u= 6 4α α+(β α)s
+2
+n 3 α/2√γ α(ξ ξ),m .
+4 4 9
+Undertheseconditions,thesolutionisgivenby ± − − −
+p (cid:20) (cid:16)p (3(cid:17)1 (cid:21) )
+α α Here,snrepresentstheJacobiellipticsinefunctionand
+2 2
+u= tan (ξ ξ) . (23)
+0
+± 2α 2 −
+r 4 (cid:18)r (cid:19) β α
+m2= − . (32)
+Case3. ∆=0,w>0andb =0 γ α
+1 −
+Inthiscase,thecorrespondingsolutionis
+Secondly,supposethat∆>0, b =0,α<β<γareasbe-
+0
+6
+√32 foreandw>γ. Thesolutionofthiscaseisprovidedbythe
+u= . (24) formula
+±√3α(ξ ξ)
+4 0
+−
+1/2
+Case4. ∆>0,b 0 =0,w> − b 1 ,α 2 >0andα 4 >0 u= 6 4α γ+βsn2 3 α 4 /2√γ − α(ξ − ξ 9 ),m ,
+Inthiscase,theintegrationsyieldthesolutions ± 4h cn2 (cid:16) 3pα/2√γ α(ξ ξ),m (cid:17)i
+4 9
+p − −
+u= α 2 1 tanh2 α 2 (ξ ξ 0 ) 1 1/2 , (25) wheremisdefinedasin (cid:16) C p ase6andcnrepresentsth (cid:17) eJac (3 o 3 b ) i
+± α 2 2 − −
+r 4(cid:20) (cid:18)r (cid:19) (cid:21) ellipticcosinefunction.
+1/2
+α 1 α
+u= 2 coth2 2 (ξ ξ) 1 . (26)
+0
+± r α 4(cid:20) 2 (cid:18)r 2 − (cid:19) − (cid:21) 3. Conclusions
+It is worth mentioning here that, unfortunately, these func- Inthisletter,weusedanextensionofthedirectintegralmethod
+tions take on values in the system of the complex numbers or trial equation method to determine exact solutions of a
+134 Solucionesdeondaviajeradeunmodelocontinuodetransmisio´ndeenerg´ıaenmediosnohomoge´neos
+damped Klein-Gordonequation with time-dependentcoeffi- [6] JEMac´ıas-D´ıazandAPuri. Anapplicationofnonlin-
+cients. Theextensionofthedirectintegralmethodusedhere ear supratransmissionto the propagationofbinarysig-
+is based on a paper by Liu [1], and it does not require for nalsinweaklydamped,mechanicalsystemsofcoupled
+the coefficientsof the trial equationto be constant. Instead, oscillators. PhysicsLettersA,366(4):447–450,2007.
+the approach followed here assumes that those coefficients
+are functions of the temporal variable. This technique is [7] Abdul-Majid Wazwaz and SA El-Tantawy. Gaussian
+applied to a partial differential equation with non-constant soliton solutions to a variety of nonlinear logarith-
+coefficients that generalizesthe well-known damped Klein– micSchro¨dingerequation. JournalofElectromagnetic
+Gordon model with nonlinear reaction. As a result of our WavesandApplications,30(14):1909–1917,2016.
+derivations,sometraveling-wavesolutionsofourmodelhave
+been calculated in exact form, and pertinent conditions on [8] AR Prasanna. On photon trajectories and electromag-
+thecoefficientsofthemodelandthewavevelocityareestab- neticsnearstronglygravitatingcosmicsources.Journal
+lishedinordertoguaranteetheexistenceofsuchsolutions. ofElectromagneticWavesandApplications,29(3):283–
+330,2015.
+References
+[9] Wen-Xiu Ma and Benno Fuchssteiner. Explicit and
+[1] Yang Liu. Exact solutions to nonlinear Schro¨dinger exact solutions to a Kolmogorov-Petrovskii-Piskunov
+equationwithvariablecoefficients. AppliedMathemat- equation.InternationalJournalofNon-LinearMechan-
+icsandComputation,217(12):5866–5869,2011. ics,31(3):329–338,1996.
+[10] Abdul-MajidWazwaz. Solitarywavessolutionsforex-
+[2] BPourhassan.TheKlein–Gordonequationofarotating
+tended forms of quantum Zakharov–Kuznetsov equa-
+chargedhairyblackholein(2+1)dimensions. Modern
+tions. PhysicaScripta,85(2):025006,2012.
+PhysicsLettersA,31(09):1650057,2016.
+[11] Cheng-Shi Liu. Applications of complete discrimina-
+[3] Nan Lu, Panayotis G Kevrekidis, and Jesu´s Cuevas-
+tionsystemforpolynomialforclassificationsoftravel-
+Maraver. PT-symmetric sine-Gordon breathers.
+ing wave solutions to nonlinear differential equations.
+Journal of Physics A: Mathematical and Theoretical,
+Computer Physics Communications, 181(2):317–324,
+47(45):455101,2014.
+2010.
+[4] Benjamin Doyon, Andrew Lucas, Koenraad Schalm,
+andMJBhaseen. Non-equilibriumsteadystatesinthe [12] Cheng-Shi Liu. A new trial equation method and its
+Klein–Gordontheory.JournalofPhysicsA:Mathemat- applications. Communications in Theoretical Physics,
+icalandTheoretical,48(9):095002,2015. 45(3):395,2006.
+[5] Vassilis Koukouloyannis. Non-existence of phase- [13] HouriaTrikiandAbdul-MajidWazwaz. Trialequation
+shift breathers in one-dimensional Klein–Gordon lat- methodforsolvingthegeneralizedFisherequationwith
+ticeswithnearest-neighborinteractions.PhysicsLetters variablecoefficients. PhysicsLettersA,380(13):1260–
+A,377(34):2022–2026,2013. 1262,2016.

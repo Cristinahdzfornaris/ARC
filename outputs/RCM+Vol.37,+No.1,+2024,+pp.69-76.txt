@@ -1,0 +1,443 @@
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.69-76
+ArtículoOriginal/OriginalResearch Recibido(Received):06-08-2024,Revisado(Revised):14-11-2024
+Aceptado(Accepted):03-01-2025,Enlínea(Online):18-03-2025
+Ecosistema de ciencia de datos para el análisis de largos
+supervivientes en cáncer
+Data science ecosystem for the analysis of long-term cancer
+survivors
+Jorge Luis Palomino Hernández1* , Patricia Lorenzo-Luaces Álvarez2 , Lizet Sánchez
+Valdés3
+Resumen La introducción de nuevas inmunoterapias ha incrementado la esperanza de vida en pacientes
+con cáncer, aunque la respuesta al tratamiento varía significativamente, observándose subpoblaciones con
+cortaylargasupervivencia.Estaheterogeneidadsubrayalanecesidaddeherramientasquepermitanidentificar
+y analizar estas diferencias en los estudios de supervivencia. Este trabajo tiene como objetivo presentar la
+implementacióndeunecosistemadecienciadedatosbasadoenRparaanalizarlaexistenciadesubpoblaciones
+de larga supervivencia en pacientes con cáncer. Se basa en una metodología que permite la identificación
+desubpoblacionesmediantepruebasdemultimodalidadyelajustedemodelosparamétricosdemezclade
+supervivencia.ElecosistemautilizadiversospaquetesdeR,comoRMarkdown,yseaplicaaunconjuntode
+1245pacientesconcáncerdepulmónavanzadotratadosconCIMAvaxEGFenensayosclínicosdelCentrode
+InmunologíaMolecular.Losresultadosdemuestranqueelecosistemaeseficazpararealizaranálisiscompletos,
+desdelacargadedatoshastalavisualizaciónderesultados.Seidentificarondossubpoblaciones:unaconcorta
+supervivencia(73%,medianade8,7meses)yotraconlargasupervivencia(27%,medianade20,9meses).
+Esto muestra la utilidad del enfoque para caracterizar la heterogeneidad en la respuesta al tratamiento. En
+conclusión,elecosistemadesarrolladoesunaherramientaversátil,reproducibleyabiertaparaelanálisisde
+supervivenciaencáncerdepulmónavanzado.Futurasinvestigacionespodríanextendersuaplicaciónaotros
+tiposdecáncereincorporarmetodologíasadicionalesparamejorarlacaracterizacióndesubpoblaciones.
+PalabrasClave:cáncer,cienciadedatos,largasupervivencia.
+Abstract The introduction of new immunotherapies has increased the life expectancy of cancer patients,
+although treatment response varies significantly, with subpopulations showing short and long survival. This
+heterogeneityunderscorestheneedfortoolsthatenabletheidentificationandanalysisofthesedifferencesin
+survivalstudies. ThisworkaimstopresenttheimplementationofanR-baseddatascienceecosystemtoanalyze
+theexistenceoflong-survivalsubpopulationsincancerpatients. Itisbasedonamethodologythatallowsthe
+identificationofsubpopulationsthroughmultimodalitytestsandthefittingofparametricsurvivalmixturemodels.
+TheecosystemutilizesvariousRpackages,asRMarkdown,andisappliedtoadatasetof1245advancedlung
+cancerpatientstreatedwithCIMAvaxEGFinclinicaltrialsattheCenterofMolecularImmunology. Theresults
+demonstratethattheecosystemiseffectiveforconductingcomprehensiveanalyses,fromdataloadingtoresult
+visualization. Two subpopulations were identified: one with short survival (73%, median of 8.7 months) and
+anotherwithlongsurvival(27%,medianof20.9months). Thisshowstheutilityoftheapproachforcharacterizing
+heterogeneityintreatmentresponse. Inconclusion,thedevelopedecosystemisaversatile,reproducible,and
+opentoolforsurvivalanalysisinadvancedlungcancer. Futureresearchcouldextenditsapplicationtoother
+cancertypesandincorporateadditionalmethodologiestoimprovethecharacterizationofsubpopulations.
+Keywords: cancer,datascience,long-termsurvival.
+MathematicsSubjectClassification: 92-04,62P10,62N01,62N02.
+1Direccióndeinvestigacionesclínicas,CentrodeInmunologíaMolecular,LaHabana,Cuba.Email:jorge@cim.sld.cu.
+2Direccióndeinvestigacionesclínicas,CentrodeInmunologíaMolecular,LaHabana,Cuba.Email:patricial@cim.sld.cu.
+3Direccióndeinvestigacionesclínicas,CentrodeInmunologíaMolecular,LaHabana,Cuba.Email:lsanchez@cim.sld.cu.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.
+Citarcomo: PalominoHernández,J.L.;Lorenzo-LuacesÁlvarez,P.;&SánchezValdés,L.(2024).Ecosistema
+decienciadedatosparaelanálisisdelargossupervivientesencáncer.CienciasMatemáticas,37(1),69–76.DOI:
+https://doi.org/10.5281/zenodo.15046727.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/10012.
+Introducción su aplicación sobre un conjunto de datos integrado de pa-
+cientesdecáncerdepulmónavanzadotratadosconlavacuna
+Elcáncerenestadioavanzadorepresentaunodelosmayo-
+CIMAVaxEGF[4],incluidosenensayosclínicospromovidos
+resdesafíosenlaoncologíamoderna,tantoporsucomplejidad
+porelCentrodeInmunologíaMolecular.
+biológicacomoporsuimpactoenlacalidaddevidadelos
+pacientes.Lospacientesdecánceravanzado,porlogeneral,
+tienenmenosoportunidadesdetratamientoyuntiempodesu- Relevancia del estudio
+pervivenciamáslimitado.Sinembargo,dentrodeestegrupo
+Lainvestigaciónsobreunecosistemadecienciadedatos
+existeunasubpoblacióndepacientesque,apesardesudiag-
+paraelanálisisdelargossupervivientesencáncerresultacru-
+nóstico,presentanunasupervivenciasignificativamentemás
+cialparamejorarlacomprensióndeestapoblaciónespecífica.
+largaquelamedia.Estoscasosofrecenunaventanaúnicapara
+Contarconunecosistemareproducibledeanálisisbasadoen
+comprenderlosfactoresquepuedeninfluirenlaprogresiónde
+unentornoabiertopermiterealizarmejoresymáseficientes
+laenfermedad.Elanálisisdeestassubpoblacionespuedecon-
+análisissobreestetipodepacientes.Esteecosistemapuede
+tribuiraldesarrollodeterapiasmásefectivasypersonalizadas,
+ser actualizado con nuevos métodos y paquetes de manera
+loquemejoraelpronósticodeotrospacientes.
+sencilla,loquepotencialaversatilidadyreutilizacióndelmis-
+Elgrupodeinvestigaciónalquepertenecenlosautores
+mo.Estaherramientaayudaráaidentificarpatronesyfactores
+ha adoptado una metodología que explora la presencia de
+quecontribuyenalasupervivenciaprolongada,facilitandola
+multimodalidadenlosdatosdesupervivenciayelajustede
+personalizacióndetratamientosypolíticasdesaludpública.
+unmodelodemezcladesupervivencia[15].
+Lamultimodalidadylosmodelosdemezcladesupervi-
+1. Materiales y métodos
+venciaofrecenenfoquescomplementarios.Porunaparte,las
+pruebasdemultimodalidadpermitenseñalarlaexistenciade
+1.1 Descripcióndelecosistemadecienciadedatos
+variospicosenladistribucióndelosdatos,loquepuedesuge-
+Enestasecciónsepresentaelecosistemadecienciade
+rirlapresenciadesubpoblacionescondiferentespatronesde
+datosimplementado.Sedescribecadaetapadeanálisisylas
+supervivencia[11].Mientrasquelosmodelosdemezclade
+herramientasutilizadasparaello.Esteecosistemaincluyela
+supervivencia,porotrolado,proporcionanunaherramienta
+preparacióndelosdatos,análisisdescriptivos,métodosparael
+estadísticaparadescomponerestosdatosensubpoblaciones
+análisisdemultimodalidad,elajustedemodelosdemezclade
+discretas,permitiendounanálisismásdetalladoypreciso[6].
+supervivenciaylavisualizacióndelosresultados.EnlaFigura
+Muchasdelasherramientasquecomúnmenteseutilizan
+1semuestraundiagramadelecosistemaimplementado.
+paraelanálisisestadísticoestánlimitadasaprocedimientos
+de análisis de supervivencia más básicos, que no tienen en 1.1.1 Preparacióndelosdatos
+cuentalapresenciadevariassubpoblaciones.Herramientas Lapreparacióndelosdatospuedeincluir,entreotrasta-
+de carácter comercial ampliamente utilizadas como el soft- reas,laintegracióndedistintosconjuntosdedatos,laselec-
+waredeIBMSPSSStatistics[10]noincluyenmétodospara cióndevariablesrelevantesparaelanálisisolacreaciónde
+elanálisisdemultimodalidad[9],nimodelosparamétricos nuevasvariables.Dentrodelasvariablesaseleccionarpara
+de mezcla de distribuciones de supervivencia. Este tipo de elanálisisseencuentranlasfechasenquefuediagnosticado
+herramientascomercialessonmásrestrictivasrespectoaotros elpacienteconcáncer,lafechadeinclusiónenelensayo(si
+entornosdecódigoabiertoylibresdecostoscomoR[7],ya seanalizanpacientesincluidoseninvestigacionesclínicas),la
+quenopermitenlaadicióndemaneralibredenuevasfuncio- últimafechaconocidadelpacienteosufechadefallecimiento.
+nalidades. Entrelasvariablesquesedebencrearestáeltiempode
+Porotrolado,losecosistemasdecódigoabiertoseencuen- supervivencia y el estado vital del paciente al momento de
+tranencontinuocrecimiento,congrancantidaddebibliotecas cierredelestudio,indicándosequeelpacientefalleció(estado
+queaportannuevosmétodosdeanálisis,graciasalagranred =1)oqueelpacientecontinuavivo,oseaqueestácensurada
+de usuarios y desarrolladores que tienen a nivel global [2]. laobservación(estado=0).
+Estossistemassonmuyversátiles,loquepermitealosana- Eltiempodesupervivenciasecalculatomandocomore-
+listasañadirlasfuncionalidadesnecesarias,segúneltipode ferencialafechadediagnósticoodeinclusiónenelestudio,
+análisisquenecesitenrealizar.Además,permitenrealizaren la última fecha en la que se tuvo información del paciente
+unmismoambientelasdistintasetapasdelprocesodeanálisis; y,encasodefallecimiento,lafechadeesteevento.Porotro
+desdelapreparacióndelosdatoshastalavisualizacióndelos lado,elestadovitaldelpacientepuededeterminarseapartir
+resultados.Porsunaturalezadecódigoabiertoestosentornos delafechadefallecimiento.Sinembargo,enalgunosestu-
+fomentanlacolaboración,reproducibilidadylatransparencia diosclínicos,estainformaciónyaseharecopiladoduranteel
+enlosprocesosdeanálisis. desarrollodelainvestigación.Entalescasos,noesnecesario
+Estetrabajosetrazacomoobjetivopresentarlaimplemen- volveradeterminarestavariable.
+tacióndeunecosistemadecienciadedatosbasadoenRpara Para la preparación de los datos se utiliza el paquete
+elanálisisdesupervivenciaenpresenciadesubpoblacionesde dplyr[21].Estepaqueteproporcionaunainterfazdepro-
+supervivenciacortaylargaenpacientesconcáncer,asícomo gramación para manipular y analizar datos en R, así como
+Ecosistemadecienciadedatosparaelanálisisdelargossupervivientesencáncer 71
+Figura1.Ecosistemadecienciadedatosutilizadoparaelanálisisdesubpoblacionesdelargasupervivencia[Datascience
+ecosystemusedforlong-termsurvivalsubpopulationanalysis].
+permiterealizaroperacionescomunesdetransformaciónde 1.1.3 Pruebademultimodalidad
+datosdeformaeficiente. Antes de aplicar el modelo paramétrico de mezcla de
+distribuciones de supervivencia, se evalúa la existencia de
+multimodalidadenlosdatos,loquejustificalaaplicacióndel
+1.1.2 Análisisdescriptivo modelo.Paraesteanálisisseaplicóelmétodopropuestopor
+Elanálisisdescriptivoconstituyeelprimerpasodeanálisis Silverman[17]yadaptadoporHallyYork[8].
+y tiene como objetivo proporcionar una visión general de Elobjetivoescomprobarsilaverdaderadistribuciónde
+los datos. En esta etapa se pueden visualizar, a través de unavariableenunapoblaciónesunimodalomultimodal.For-
+gráficos y tablas, elementos clave como la distribución por malmente, dada una muestra de una variable aleatoria con
+edades,género,yotrosfactoresdemográficosyclínicosque funcióndedensidad f (enestecasoeltiempodesuperviven-
+sonrelevantesparaelestudio. cia),denotandopor jelnúmerodemodosen f,lahipótesis
+quedebecomprobarsevienedadapor:
+Comopartedelanálisis descriptivo serealizangráficos
+dedensidaddeltiempodesupervivenciadelospacientesyel
+H : j≤k, H1: j>k, (1)
+0
+ajustedelascurvasdesupervivenciaporelmétododeKaplan-
+Meier [5]. Los gráficos de densidad ayudan a visualizar la
+dondekeselnúmerodecomponentesdelmodelodemezcla
+distribucióncompletadelconjuntodedatosanalizadoydetec-
+(oelnúmerodemodasdelosdatos).
+tarlapresenciademultimodalidaddemaneravisual.Porotra
+Esteanálisisserealizamedianteelpaquetesilverman-
+parte,elanálisisdeKaplan-Meierpermitevisualizarlapre-
+test[14].Estepaqueteverificaelnúmerodemodasenuna
+senciadeunamesetaalfinaldelacurva.Estopuedeindicar
+densidadempíricausandoelmétododeSilverman[17].Este
+laposibleexistenciadesubgruposdelargasupervivencia.
+paquete también presenta otras funcionalidades de interés
+Paraimplementarestaetapaseutilizanlossiguientespa- como la visualización de los resultados, la verificación de
+quetes: gtsummary [18] se usó para visualizar en forma multimodalidadparavariosparámetros,lavisualizaciónde
+de tabla las características del conjunto de datos analizado. múltiplesdensidadesparaunnúmerodeterminadodemodas
+ggplot[20]permiterealizardiferentestiposdegráficosy yelcálculodelanchodebandacrítico[14].
+puede ser utilizado para realizar el gráfico de densidad del La función silverman.plot permite visualizar los
+tiempodesupervivencia.Elpaquetesurvival[19]seutili- resultados de las pruebas de hipótesis implementadas, con-
+zópararealizarelajustedelascurvasdesupervivenciaporel siderando valores de k, desde k=1 hasta k=5. El primer
+métododeKaplan-Meier. valordekparaelcualserechazalahipótesiscoincideconel
+PalominoHernández,J.L.;Lorenzo-LuacesÁlvarez,P.;&SánchezValdés,L. CienciasMatemáticas,Vol.37,No.1,2024,Pag.69-76
+https://doi.org/10.5281/zenodo.15046727 https://revistas.uh.cu/rcm/article/view/10012
+72 Ecosistemadecienciadedatosparaelanálisisdelargossupervivientesencáncer
+númerodemodasdelosdatos. masculinos (64%), de piel blanca (71%) y con estadio IV
+(52%).Existenenelconjuntodedatos179pacientesvivos,
+1.1.4 Ajustedelmodelodemezcladesupervivencia
+paraun14%dedatoscensurados.
+Enestepasoseajustaunmodeloparamétricodemezcla
+de supervivencia al conjunto de datos con el propósito de
+Característica N(%)
+estimarlosparámetrosdelassubpoblaciones.Paraello,seuti-
+Edad(años) 65(58,72)[Mediana(RIC)]
+lizalafunciónweibullRMM_SEMdelpaquetemixtools
+Sexo
+[3]. Esta función asume la mezcla de subpoblaciones con
+Femenino 434(36%)
+distribuciónWeibull[12].Elresultadodelalgoritmoincluye
+Masculino 773(64%)
+estimacionesdelasproporcionesdemezclaydelosparáme-
+Desconocido 38
+trosdeescalayformadelasdistribucionesWeibull,asícomo
+ColordePiel
+laprobabilidadposteriordepertenenciaacadasubpoblación.
+Blanca 840(71%)
+Paraelusodeestealgoritmosefijaelnúmerodeiteraciones,
+Mestiza 192(16%)
+enestecasoseutilizaron10000iteraciones.
+Negra 153(13%)
+1.1.5 Estimacióndelamedianadesupervivencia Desconocido 60
+En la interpretación clínica de los resultados, más im- GrupoHistológico
+portante que los parámetros de las distribuciones resulta la Adenocarcinoma 429(34%)
+estimacióndelamedianadesupervivenciadecadasubpobla- CarcinomaEpidermoide 358(29%)
+ción. Las medianas del tiempo de supervivencia para cada Otro 458(37%)
+subpoblaciónsecalculautilizandolosparámetrosdeforma Estadio
+(β)yescala(λ)estimadosporelmodelodemezcladesuper- IIIB 596(48%)
+vivenciaapartirdelasiguientefórmula: IV 649(52%)
+ECOG
+1
+Mediana=λ·(ln(2))β . 0 355(29%)
+1 531(44%)
+1.1.6 Pertenenciaalassubpoblaciones 2 268(22%)
+Lapertenenciaacadasubpoblaciónsedeterminaapar- 3 63(5,2%)
+tir de las probabilidades a posteriori de pertenecer a cada 4 1(<0,1%)
+subpoblación que se obtienen del modelo de mezcla de su- Desconocido 27
+pervivencia.Finalmente,secalculaelporcentajedepacientes EstadodelPaciente
+quepertenecenacadasubpoblación. Fallecido 1066(86%)
+Para la implementación de todo este flujo de análisis y Vivo 179(14%)
+la presentación de los resultados se utilizó la herramienta
+Tabla1.Característicasdelapoblacióndeestudio(N=1245)
+RMarkdown[1].RMarkdownesunentornodetrabajoque
+[Characteristicsofthestudypopulation(N=1245)].
+facilitalacreacióndedocumentosquecombinansalidasgráfi-
+casydetextoconelcódigoquelasgenera.Deestamanerase
+Elgráficodedensidaddeltiempodesupervivenciacal-
+puederealizarelanálisisenunmismoentorno,documentarlo
+culadodesdelainclusiónalosensayosclínicoshastaelfa-
+yexportarestosresultadosenarchivosenformatohtml,pdfy
+llecimiento o el fin del estudio se presenta en la Figura 3.
+docx.Elanálisisrealizadopuedeejecutarsemásdeunavez
+Enestegráficosepuedeobservarlapresenciadeunprimer
+obteniendoelmismoresultado,siemprequenocambienlos
+picodedensidadaltoseguidodeotropicomáspequeñoal-
+datosfuentes[13,22](Figura2).
+rededordelmes24.Estopudieraindicarlapresenciadedos
+subpoblacionesenesteconjuntodedatos.
+1.2 Aplicaciónalosdatos
+EnelanálisisdeKaplan-Meiersedeterminóquelame-
+El ecosistema descrito para el análisis de subgrupos de
+dianadesupervivenciaglobaldelconjuntodepacientescon
+largasupervivenciaseaplicóaunconjuntodedatosintegrado
+cáncerdepulmónavanzadoesde11meses.Sepuedeobservar
+de pacientes incluidos en ensayos clínicos promovidos por
+en la Figura 4 la meseta larga y estable al final de la curva
+elCentrodeInmunologíaMolecular.Esteconjuntocontiene
+desupervivenciadelconjuntototaldedatosanalizadosque
+1245pacientesenestadioIIIBoIV,tratadosconlavacuna
+sugiere, consistentemente con lo observado en la curva de
+CIMAVaxEGF.Lospacienteshansidoincluidosenensayos
+densidad,lapresenciadepacientesconlargasupervivencia.
+clínicosentrelosaños2002y2022.
+Lapruebademultimodalidadmostrólaexistenciadedos
+modas, dado que k =2 es el primer valor para el cual el
+2. Resultados
+p−valor resulta por encima del nivel de significación 0,05
+Lasprincipalescaracterísticasdemográficasyclínicasde (Figura5).
+lospacientessepresentanenlaTabla1.Enestatablasepuede De esta manera quedó demostrada la bimodalidad del
+observarqueenelconjuntodedatospredominanpacientes conjuntodedatosanalizadoyseutilizóunmodelodemezcla
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.69-76 PalominoHernández,J.L.;Lorenzo-LuacesÁlvarez,P.;&SánchezValdés,L.
+https://revistas.uh.cu/rcm/article/view/10012 https://doi.org/10.5281/zenodo.15046727
+Ecosistemadecienciadedatosparaelanálisisdelargossupervivientesencáncer 73
+Figura2.VistadelaimplementaciónenRMarkdownparaelanálisisdesubgruposdelargasupervivencia[Viewofthe
+implementationinRMarkdownfortheanalysisoflong-termsurvivalsubgroups]
+diferenciadas:unaconcortasupervivencia(73%,medianade
+8,7meses)yotraconlargasupervivencia(27%,medianade
+20,9meses).Estoshallazgosconfirmanlautilidaddelenfoque
+propuestoparacaracterizarlaheterogeneidadenlarespuesta
+altratamiento,particularmenteenpacientestratadosconla
+vacunaCIMAvaxEGF.
+Laidentificacióndesubpoblacionescondiferentespatro-
+nesdesupervivenciaescrucialparaeldesarrollodeterapias
+personalizadas.Enestesentido,elecosistemaimplementado
+ofreceunaherramienta versátilyreproducibleque permite
+realizarunanálisiscompleto,desdelapreparacióndelosdatos
+hastalavisualizacióndelosresultados.
+Lametodologíapropuesta,basadaenpruebasdemultimo-
+Figura3.Gráficodedensidadrespectoaltiempode
+dalidadymodelosparamétricosdemezcladesupervivencia,
+sobrevida[Densitygraphversussurvivaltime].
+superalaslimitacionesdelasherramientascomercialestradi-
+cionales,comoIBMSPSS,quenoincluyenfuncionalidades
+paraestetipodeanálisisavanzado.Además,elusodeRMark-
+de2componentes.
+downfacilitalareproducibilidadytransparenciadelproceso
+MediantelafunciónweibullRMM_SEM,seobtuvieron
+analítico.
+losparámetrosdeladistribuciónWeibulldelassubpoblacio-
+Ladeteccióndeunasubpoblacióndelargasupervivencia
+nesysecalcularonlasmedianasdesupervivenciayproporcio-
+esconsistenteconestudiosprevios[16],quehanidentifica-
+nesdepertenenciaccomosedescribeenlassecciones1.1.5y
+do subgrupos de pacientes con respuestas excepcionales a
+1.1.6.EnlaTabla2semuestranestosresultados.
+inmunoterapias, lo que resalta la importancia de continuar
+Se estimó una mediana de supervivencia de 8,7 meses
+lainvestigaciónsobrelosfactoresbiológicosyclínicosque
+paralasubpoblacióndecortasupervivencia,loquerepresenta
+contribuyenaestavariabilidadenlasupervivencia.
+el73%delgrupototal,mientrasqueparalasubpoblaciónde
+Una de las principales fortalezas de este trabajo es la
+largasupervivenciaseestimóunamedianadesupervivencia
+integracióndemúltiplesherramientasdecódigoabiertoenun
+de20,9meses,loquerepresentael27%.
+únicoecosistema,loquepermiteunanálisisrobustoyflexible.
+Sinembargo,esimportantereconoceralgunaslimitacio-
+3. Discusión
+nes.Enprimerlugar,elestudiosecentróenunconjuntode
+Elpresenteestudioimplementóunecosistemadeciencia datosespecíficodepacientesconcáncerdepulmónavanzado
+de datos basado en R para el análisis de supervivencia en tratadosconCIMAvaxEGF,porloquelosresultadospodrían
+pacientesconcáncerdepulmónavanzado,identificandosub- no ser directamente extrapolables a otros tipos de cáncer o
+poblacionesconcortaylargasupervivencia.Losresultados tratamientos.
+demostraronlaexistenciadedossubpoblacionesclaramente Futuras investigaciones deberían explorar la aplicabili-
+PalominoHernández,J.L.;Lorenzo-LuacesÁlvarez,P.;&SánchezValdés,L. CienciasMatemáticas,Vol.37,No.1,2024,Pag.69-76
+https://doi.org/10.5281/zenodo.15046727 https://revistas.uh.cu/rcm/article/view/10012
+74 Ecosistemadecienciadedatosparaelanálisisdelargossupervivientesencáncer
+Figura4.Curvadesupervivenciadelconjuntototaldedatos[Survivalcurveofthetotaldataset].
+Subpoblacióndecortasupervivencia Subpoblacióndelargasupervivencia
+N λ β Mediana Pertenencia% N λ β Mediana Pertenencia%
+1 1 1 2 2 2
+907 0,58 1,88 8,7 73 338 0,41 1,18 20,9 27
+Tabla2.Parámetrosdelassubpoblacionesdesupervivencia[Parametersofsurvivalsubpopulations].
+de subpoblaciones con diferentes patrones de respuesta al
+tratamiento. Este enfoque no solo contribuye a una mejor
+comprensióndelaheterogeneidadenlasupervivencia,sino
+quetambiénsientalasbasesparaeldesarrollodeterapiasmás
+personalizadasyefectivas.Futurostrabajospodríanampliar
+la aplicación de este ecosistema a otros tipos de cáncer e
+incorporarnuevasmetodologíasparaunacaracterizaciónmás
+detalladadelassubpoblacionesidentificadas.
+Figura5.Resultadodelaspruebasdemultimodalidadde
+Suplementos
+Silvermanparadistintosposibleskvaloresdemodas[Result
+ofSilverman’smultimodalitytestsfordifferentvaluesofk
+Esteartículonocontieneinformaciónsuplementaria.
+modes].
+Conflictos de interés
+daddeesteenfoqueenotroscontextosoncológicos.Además, Sedeclaraquenoexistenconflictosdeinterés.Noexisten
+aunqueelmodelodemezcladeWeibullutilizadoesadecua- subvencionesinvolucradasenestetrabajo.
+do para capturar la heterogeneidad en los datos, podría ser
+beneficiosoincorporarotrosmodelosparamétricosonopara-
+Contribución de autoría
+métricosparamejorarlaprecisióndelasestimaciones.
+Conceptualización J.L.P.H.
+Curacióndedatos J.L.P.H.
+4. Conclusiones
+Análisisformal J.L.P.H.
+El ecosistema de ciencia de datos desarrollado en este
+Investigación P.L.L.A.,J.L.P.H.
+estudio representa una herramienta valiosa para el análisis
+desupervivenciaencáncer,loquepermitelaidentificación Metodología P.L.L.A.,L.S.V.,J.L.P.H.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.69-76 PalominoHernández,J.L.;Lorenzo-LuacesÁlvarez,P.;&SánchezValdés,L.
+https://revistas.uh.cu/rcm/article/view/10012 https://doi.org/10.5281/zenodo.15046727
+Ecosistemadecienciadedatosparaelanálisisdelargossupervivientesencáncer 75
+Administracióndeproyecto P.L.L.A.,L.S.V. [10] IBM:Ibmspssstatistics,2024. https://www.ibm.
+com/products/www.ibm.com/products/sp
+Software J.L.P.H.
+ss-statistics.
+Supervisión P.L.L.A.,L.S.V.
+[11] McLachlan, G.J. and D. Peel: Finite mixture models.
+Validación P.L.L.A.,J.L.P.H.
+JohnWileyandSons,2000. https://onlinelibr
+Visualización J.L.P.H. ary.wiley.com/doi/book/10.1002/04717
+21182.
+Redacción:preparacióndelborradororiginal J.L.P.H.
+Redacción:revisiónyedición P.L.L.A.,L.S.V.,J.L.P.H. [12] Mudholkar,G.S.,D.K.Srivastava,andG.D.Kollia:A
+generalizationoftheWeibulldistributionwithapplica-
+tion to the analysis of survival data. Journal of the
+Referencias
+AmericanStatisticalAssociation,91(436):1575–1583,
+[1] Allaire, J.J.: rmarkdown: Dynamic Documents for R, 1996.
+2024. https://cran.r-project.org/web/p
+ackages/rmarkdown/index.html. [13] Peikert,A.andA.M.Brandmaier:Areproducibledata
+analysis workflow with R Markdown, Git, Make, and
+[2] Bansal,A.andS.Srivastava:Toolsusedindataanalysis: Docker. Quantitative and Computational Methods in
+A comparative study. International Journal of Recent BehavioralSciences,pages1–27,2021. https://qc
+Research,5(1):15–18,2018. https://www.ijrra. mb.psychopen.eu/index.php/qcmb/artic
+net/Vol5issue1/IJRRA-05-01-04.pdf. le/view/3763.
+[3] Benaglia,T.,D.Chauveau,D.R.Hunter,andD.S.Young: [14] Preubner,J.:silvermantest:InvestigatetheNumberof
+mixtools:anRpackageforanalyzingmixturemodels. ModesusingKernelDensityEstimates. https://rd
+JournalofStatisticalSoftware,32:1–29,2010. https: rr.io/github/jenzopr/silvermantest/.
+//www.jstatsoft.org/article/view/v03
+[15] Sanchez,L.,P.Lorenzo-Luaces,C.Fonte,andA.Lage:
+2i06.
+Mixturesurvivalmodelsmethodology:anapplication
+tocancerimmunotherapyassessmentinclinicaltrials.
+[4] CECMED:CIMAvax(R)-EGF(Conjugadoquímicode
+arXivpreprint,2019. https://arxiv.org/abs/
+Factor de Crecimiento Epidérmico humano recombi-
+1911.09765.
+nante acoplado a la proteína recombinante rP64K).
+https://www.cecmed.cu/registro/rcp
+[16] Sanchez,L.,L.Muchene,P.Lorenzo-Luaces,C.Viada,
+/biologicos/cimavaxr-egf-conjugado-q
+P.C. Rodriguez, S. Alfonso, T. Crombet, E. Neninger,
+uimico-factor-crecimiento-epidermic
+Z.Shkedy,andA.Lage:Differentialeffectsoftwother-
+o-humano.
+apeutic cancer vaccines on short- and long-term sur-
+vivalpopulationsamongpatientswithadvancedlung
+[5] Dudley, W.N., R. Wickham, and N. Coombs: An in-
+cancer. Seminars in Oncology, 45(1):52–57, 2018,
+troduction to survival statistics: Kaplan-Meier analy-
+ISSN0093-7754. https://doi.org/10.105
+sis. JournaloftheAdvancedPractitionerinOncology,
+3/j.seminoncol.2018.04.005.
+7(1):91,2016.
+[17] Silverman,B.W.:Usingkerneldensityestimatestoin-
+[6] Farewell,V.T.:Theuseofmixturemodelsfortheanalysis
+vestigatemultimodality. JournaloftheRoyalStatistical
+ofsurvivaldatawithlong-termsurvivors. Biometrics,
+Society:SeriesB(Methodological),43(1):97–99,1981.
+pages1041–1046,1982. https://pubmed.ncbi.
+https://www.jstor.org/stable/2985156.
+nlm.nih.gov/7168793/.
+[18] Sjoberg,D.D.,K.Whiting,M.Curry,J.A.Lavery,and
+[7] Foundation,R:TheRProjectforStatisticalComputing, J.Larmarange:ReproducibleSummaryTableswiththe
+2025. https://www.r-project.org. gtsummaryPackage. TheRJournal,13:570–580,2021.
+https://doi.org/10.32614/RJ-2021-053.
+[8] Hall,P.andM.York:OnthecalibrationofSilverman’s
+testformultimodality. StatisticaSinica,pages515–536, [19] Therneau,T.M.andP.M.Grambsch:ModelingSurvival
+2001. https://www.jstor.org/stable/243 Data:ExtendingtheCoxModel. Springer,NewYork,
+06875. 2000, ISBN0-387-98784-3. https://link.spr
+inger.com/book/10.1007/978-1-4757-3
+[9] IBM:Ibmspssadvancedstatistics,2024. https://
+294-8.
+www.ibm.com/docs/es/spss-statistics/
+27.0.0?topic=edition-advanced-stati [20] Wickham, H.: ggplot2: Elegant Graphics for Da-
+stics. ta Analysis. Springer-Verlag New York, 2016,
+PalominoHernández,J.L.;Lorenzo-LuacesÁlvarez,P.;&SánchezValdés,L. CienciasMatemáticas,Vol.37,No.1,2024,Pag.69-76
+https://doi.org/10.5281/zenodo.15046727 https://revistas.uh.cu/rcm/article/view/10012
+76 Ecosistemadecienciadedatosparaelanálisisdelargossupervivientesencáncer
+ISBN978-3-319-24277-4. https://ggplot2.ti tps://bookdown.org/yihui/rmarkdown/.
+dyverse.org.
+[21] Wickham,H.,M.Averick,J.Bryan,W.Chang,L.D’A.
+McGowan, R. François, G. Grolemund, A. Hayes, L.
+Henry,andJ.Hester:WelcometotheTidyverse. Journal
+ofOpenSourceSoftware,4(43):1686,2019. https:
+//joss.theoj.org/papers/10.21105/jos
+s.01686.
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+[22] Xie,Y.,J.J.Allaire,andG.Grolemund:Rmarkdown:
+SinDerivadas 4.0 Internacional”.
+Thedefinitiveguide. ChapmanandHall/CRC,2018. ht
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.69-76 PalominoHernández,J.L.;Lorenzo-LuacesÁlvarez,P.;&SánchezValdés,L.
+https://revistas.uh.cu/rcm/article/view/10012 https://doi.org/10.5281/zenodo.15046727
+1

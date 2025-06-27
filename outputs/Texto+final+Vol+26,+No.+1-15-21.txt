@@ -1,0 +1,408 @@
+REVISTA CIENCIAS MATEM`TICAS 15
+Alternativas metodol(cid:243)gicas para favorecer
+el proceso de enseæanza aprendizaje
+de las asignaturas de la disciplina
+matemÆtica en las carreras de ingenier(cid:237)as
+Miguel Escalona Reyes* /Osvaldo Jesœs Rojas VelÆzquez*
+Universidad de Holgu(cid:237)n (cid:147)Oscar Lucero Moya(cid:148)
+RESUMEN. La enseæanza de la MatemÆtica se encuentra en un proceso de renovaci(cid:243)n de sus en-
+foques, que permitan al estudiante adquirir una concepci(cid:243)n cient(cid:237)(cid:222) ca del mundo, una cultura
+integral y un pensamiento matemÆtico de modo que pueda enfrentar los problemas cient(cid:237)(cid:222) cos,
+econ(cid:243)micos, sociales y tecnol(cid:243)gicos relacionados con su especialidad; y en consecuencia, lo prepare
+para enfrentar los retos del mundo actual. La importancia de la enseæanza de la MatemÆtica para
+la formaci(cid:243)n de los futuros profesionales es una prioridad a seguir en la Educaci(cid:243)n. Los contenidos
+bÆsicos de esta asignatura son indispensables para lograr un s(cid:243)lido aprendizaje y de gran aplica-
+ci(cid:243)n tanto en la vida cotidiana como en el desempeæo de su futura profesi(cid:243)n. El presente trabajo
+se centra en el proceso de enseæanza aprendizaje de la MatemÆtica en las carreras de ingenier(cid:237)as,
+en el mismo se valoran sus principales regularidades; y en consecuencia con ello, se proponen al-
+ternativas metodol(cid:243)gicas para el perfeccionamiento de dicho proceso en la Universidad de Holgu(cid:237)n
+(cid:147)Oscar Lucero Moya(cid:148).
+INTRODUCCI(cid:211)N Hasta el momento se han logrado avances
+signi(cid:222) cativos en su formaci(cid:243)n, no obstante lo
+La MatemÆtica, como parte del saber cient(cid:237)- estudiantes continœan presentando serias di(cid:222) -
+(cid:222) co, desempeæa un importante papel en los cultades en el aprendizaje de la MatemÆtica; lo
+cambios que tienen lugar en la ciencia actual; cual estÆ motivado, entre otros aspectos, a la
+lo cual se evidencia en la utilizaci(cid:243)n cada vez limitada integraci(cid:243)n de los contenidos de estas
+mayor de sus mØtodos por casi todas las cien- asignaturas y el poco aprovechamiento de las
+cias, como expresi(cid:243)n del proceso creciente de potencialidades de los recursos informÆticos en
+penetraci(cid:243)n de sus productos en las diferentes dicho proceso.
+ramas del conocimiento humano.
+Por lo que en este trabajo se realiza una bre-
+Las carreras de ingenier(cid:237)as son ejemplo de ve caracterizaci(cid:243)n de este proceso y se presentan
+lo anterior, por lo que se necesita de ingenieros alternativas donde se evidencian las relaciones
+con una s(cid:243)lida formaci(cid:243)n matemÆtica, acorde existentes entre los contenidos de las asignaturas
+con las necesidades que impone el desarrollo que conforman la disciplina MatemÆtica, as(cid:237) como
+econ(cid:243)mico del mundo moderno. Atendiendo a se aprovechen las potencialidades de los recursos
+estos avances y la necesidad de lograr una e(cid:222) - informÆticos para favorecer su proceso de ense-
+ciente formaci(cid:243)n de los actuales y futuros inge- æanza aprendizaje en las carreras de ingenier(cid:237)as.
+nieros, la Educaci(cid:243)n Superior se ha enfrascado
+en el perfeccionamiento y optimizaci(cid:243)n de dicho DESARROLLO
+proceso.
+En los œltimos aæos el pa(cid:237)s ha presentado, de
+* mescalonar@facinf.uho.edu.cu.cu forma general, problemas para garantizar los
+16 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+profesores de MatemÆtica para las Universida- utilizarlas para potenciar el PEA de estas
+des, y aunque desde hace mucho existe la ca- asignaturas.
+rrera de licenciatura en MatemÆtica, esta no ha
+Esta situaci(cid:243)n no es nueva, se evidencia ade-
+garantizado la formaci(cid:243)n de los profesionales
+mÆs, en los debates realizados en diferentes con-
+que necesita la sociedad; aspecto que ha ido en
+gresos, simposios, reuniones sobre el tema, en-
+detrimento debido al escaso nœmero de alum-
+tre los que se destacan:
+nos que estudian, y sobre todo, que se gradœan
+(cid:150) ICME (International Congress on Mathe-
+en dicha carrera en los œltimos aæos. No obs-
+matics Education),
+tante, estos profesionales presentan una buena
+preparaci(cid:243)n matemÆtica, pero necesitan de los (cid:150) Simposio Iberoamericano de Enseæanza de
+conocimientos bÆsicos de la DidÆctica de esta la MatemÆtica,
+disciplina para llevara a cabo con mayor Øxito (cid:150) RELME (Reuni(cid:243)n Latinoamericana de Ma-
+dicho proceso. temÆtica Educativa),
+Algo similar ocurre con los Ingenieros en el
+A los que se unen los diferentes eventos desa-
+plano didÆctico, aunque su formaci(cid:243)n matemÆ-
+rrollados en el pa(cid:237)s auspiciado por la Sociedad
+tica es mucho menor, ya que esta se restringe
+Cubana de MatemÆtica y Computaci(cid:243)n.
+solamente a los contenidos propios que nece-
+El tema de la enseæanza aprendizaje de la Ma-
+sita el ingeniero. Por su parte, los Licenciados
+temÆtica tambiØn es objeto de anÆlisis en dife-
+en Educaci(cid:243)n tienen una buena preparaci(cid:243)n di-
+rentes publicaciones, entre las que se destacan:
+dÆctica, pero no fueron formados para trabajar
+en la Educaci(cid:243)n Superior, por lo que necesitan (cid:150) Revista ZDM (Zentralblatt f(cid:252)r Didaktik der
+profundizar un poco mÆs en su formaci(cid:243)n ma- Mathematik,
+temÆtica; ademÆs, hace varios aæos que en las (cid:150) Revista Enseæanza de las Ciencias,
+UCP no se prepara un Licenciado en Educaci(cid:243)n
+(cid:150) Revista Iberoamericana de Educaci(cid:243)n, en-
+en la especialidad de MatemÆtica.
+tre otras;
+AdemÆs de esta situaci(cid:243)n, el estudio realiza-
+As(cid:237) como en diferentes pÆginas Web dedica-
+do del proceso de enseæanza de la MatemÆtica
+das al tema.
+en las carreras de Ingenier(cid:237)a; ha permitido reve-
+En los mismos se presentan diversas solucio-
+lar las regularidades siguientes:
+nes desde diversos enfoques y puntos de vistas;
+1. Insu(cid:222) ciente desarrollo interdisciplinario
+en nuestro caso, dichas alternativas van a estar
+de la MatemÆtica, entendido este como el
+enfocadas en los tres elementos considerados
+establecimiento de las relaciones entre los
+como los que provocan las mayores di(cid:222) culta-
+contenidos de las diferentes asignaturas
+des en el aprendizaje de las asignaturas de esta
+que conforman la disciplina; as(cid:237) como los
+disciplina por parte de los estudiantes en las
+de estos con el resto de las disciplinas que
+carreras de Ingenier(cid:237)a; en su conjunto, tiene el
+reciben los estudiantes en cada carrera. Lo
+prop(cid:243)sito fundamental de contribuir al perfec-
+cual proporciona visiones parcializadas del
+objeto o fen(cid:243)meno estudiado, ya que se pre- cionamiento de la DidÆctica de la MatemÆtica en
+sentan los contenidos dispersos, desinte- este nivel, as(cid:237) como a elevar la preparaci(cid:243)n de
+grados, que obstaculizan el aprendizaje y lo los docentes para hacer mÆs efectiva su labor.
+despojan de signi(cid:222) cado.
+2. Descontextualizaci(cid:243)n de los contenidos de Desarrollo interdisciplinario
+la disciplina con el objeto social y esferas de de la MatemÆtica
+actuaci(cid:243)n de cada profesi(cid:243)n, es decir, es in-
+su(cid:222) ciente el aprovechamiento de los proce- Kolmogorov, A. N. (1988) expres(cid:243) (cid:147)la MatemÆtica
+sos y fen(cid:243)menos objeto de estudio de cada es grande. Un individuo no puede estudiar todas
+una de estas carreras para desarrollar, a sus rami(cid:222) caciones. En este sentido la especiali-
+travØs de ellos, los contenidos de las dife- zaci(cid:243)n es inevitable. Pero a la vez, la MatemÆtica
+rentes asignaturas de la MatemÆtica. es una ciencia œnica. Nuevas y nuevas relacio-
+nes surgen entre sus ramas a veces de forma im-
+3. Desconocimiento de las potencialidades de
+prevista. Unos campos sirven de instrumento a
+las TIC, as(cid:237) como de las mejores formas de
+REVISTA CIENCIAS MATEM`TICAS 17
+otros. Por esto encerrar a los matemÆticos en l(cid:237)mi- tener una expresi(cid:243)n matemÆtica que exprese el
+tes estrechos ser(cid:237)a la muerte de nuestra ciencia(cid:148). comportamiento del fen(cid:243)meno. Lo cual permite
+En este planteamiento se evidencia clara- a su vez fortalecer el trabajo con los procedi-
+mente la importancia de revelar las relaciones mientos matemÆticos.
+existentes entre las diferentes asignaturas que AdemÆs, a partir de la aplicaci(cid:243)n de concep-
+conforman esta disciplina; pero ademÆs, esto tos, relaciones y procedimientos matemÆticos se
+no debe limitarse s(cid:243)lo a los contenidos pertene- podrÆn comprender mejor las nuevas propieda-
+cientes a la MatemÆtica sino que tambiØn debe des y relaciones de dichas asignaturas.
+extenderse a los de aquellas disciplinas que es- Una muestra de ello es la utilidad de algu-
+tÆn (cid:237)ntimamente ligadas a ella. nos conceptos matemÆticos como es el caso de
+Por relaciones entre contenidos se entiende funci(cid:243)n, l(cid:237)mite, derivada, entre otros; para la in-
+(Escalona M., 2007): los elementos del conoci- terpretaci(cid:243)n y explicaci(cid:243)n de fen(cid:243)menos de la
+miento, habilidades, hÆbitos, normas de conduc- naturaleza y la sociedad, que son estudiados en
+ta, sentimientos y valores comunes a cada una otras asignaturas.
+de las asignaturas del Ærea y que se pueden de- Un ejemplo de c(cid:243)mo se puede establecer
+sarrollar como transversales de estas. esta relaci(cid:243)n en asignaturas de la disciplina, es
+Conforme a lo anterior, es necesario funda- cuando se retoma el concepto funci(cid:243)n y las no-
+mentar las relaciones que se pueden establecer, taciones del trabajo con conjuntos trabajados
+ellas son: relaciones de coordinaci(cid:243)n, subordina- en MatemÆtica I, para introducir el concepto de
+ci(cid:243)n y complementaci(cid:243)n entre sus contenidos. Aplicaci(cid:243)n Lineal en `lgebra Lineal.
+Relaciones de coordinaci(cid:243)n: Se establecen en- Relaciones de complementaci(cid:243)n: Se estable-
+tre aquellos contenidos que se abordan en las cen entre aquellos contenidos de las diferentes
+asignaturas por separado, a los cuales se les asignaturas que se necesitan utilizar para com-
+puede dar igual tratamiento. prender o resolver una situaci(cid:243)n determinada
+Por ejemplo: El profesor debe saber quØ he- de la esfera de actuaci(cid:243)n de cada profesional.
+rramientas, notaciones y mØtodos matemÆticos AdemÆs, en la producci(cid:243)n de nuevos cono-
+utilizan las otras asignaturas y cuÆl es el trata- cimientos, cuando a partir los conocimientos
+miento que le dan; para cuando los utilice en matemÆticos existentes se llega a nuevos cono-
+clases trabaje de forma uniforme con respecto cimientos; o cuando para explicar determinado
+a los demÆs, o tambiØn pueda explicarle a los hecho o fen(cid:243)meno f(cid:237)sico se necesita de un nuevo
+otros profesores c(cid:243)mo se trabajan los mismos conocimiento matemÆtico.
+en la MatemÆtica. De forma que se logre una Por ejemplo: En la resoluci(cid:243)n de problemas
+visi(cid:243)n œnica de la realidad. de la profesi(cid:243)n o de la vida diaria, donde se ne-
+Las mediciones, dimensiones y magnitudes, el cesiten los conocimientos recibidos en las dife-
+trabajo algebraico, despeje en f(cid:243)rmulas y cÆlcu- rentes asignaturas para encontrar su soluci(cid:243)n.
+lo numØrico, entre otras son muestra de ello.
+TambiØn existe un grupo de habilidades que son
+Contextualizaci(cid:243)n de la enseæanza
+comunes y que se pueden desarrollar, entre ellas
+de la MatemÆtica
+estÆn: calcular observar, gra(cid:222) car, interpretar grÆ-
+(cid:222) cos, modelar, resolver problemas, entre otras. Muy estrechamente vinculado con el desarrollo
+Relaciones de subordinaci(cid:243)n: Se instauran interdisciplinario se encuentra este elemento, en
+cuando, para el desarrollo de los contenidos de lo referente a la œltima forma de relaci(cid:243)n explica-
+una asignatura, se utilizan contenidos ya traba- da; pues en este caso la esencia del mismo radi-
+jados tanto en esta como en otras asignaturas. ca en buscar aquellas situaciones, fen(cid:243)menos o
+procesos concernientes al contexto de actuaci(cid:243)n
+Se debe aprovechar estas relaciones para el
+de los futuros profesionales de estas carreras
+estudio de los fen(cid:243)menos y procesos relacio-
+para, de esta forma, desarrollar el PEA de la Ma-
+nados con las demÆs asignaturas a travØs del
+temÆtica aprovechando dichas situaciones.
+establecimiento de hip(cid:243)tesis matemÆticas que
+conlleven al estudio de modelos matemÆticos, En este caso se asume la posici(cid:243)n te(cid:243)rica del
+es decir, mediante la actividad experimental ob- investigador Ortigoza, C. (2006) cuando expresa:
+18 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+(cid:147)el aprendizaje contextual tiene lugar cuando el En este sentido deben destacarse los apor-
+alumno procesa la informaci(cid:243)n y los conocimien- tes de Torres (1997), el cual propone diferentes
+tos nuevos de tal manera que le da sentido en su formas de utilizaci(cid:243)n de las computadoras en el
+marco de referencia (su propio mundo interno de proceso de enseæanza aprendizaje de esta ma-
+memoria, experiencia y respuesta)(cid:148). teria, aunque su concepci(cid:243)n ha quedado des-
+Para este autor, la contextualizaci(cid:243)n del contextualizada debido al vertiginoso avance de
+aprendizaje se puede lograr aplicando las si- estas tecnolog(cid:237)as, en los œltimos aæos.
+guientes estrategias: Otro trabajo que trata el tema es el de Aguile-
+● Relaci(cid:243)n: proceso de aprendizaje realiza- ra y Valido (1998), quienes ofrecen alternativas
+do en el contexto de la experiencia de la para el uso de herramientas computacionales,
+vida. espec(cid:237)(cid:222) camente del Derive; sin embargo, estos
+autores le dan mÆs importancia a las caracte-
+● Experimentaci(cid:243)n: aprender a partir de la
+r(cid:237)sticas del sistema que a las formas de utilizar
+exploraci(cid:243)n, descubrimiento e invenci(cid:243)n.
+el mismo, y se pierde de esta manera el sentido
+● Aplicaci(cid:243)n: emplear el contenido y la infor-
+pedag(cid:243)gico.
+maci(cid:243)n en un contexto œtil.
+Villanueva (2005), considera la computado-
+● Cooperaci(cid:243)n: lograr compartir, interactuar
+ra como herramienta que estimula y soporta el
+y comunicarse.
+proceso de enseæanza aprendizaje en la resolu-
+● Transferencia: Consiste en aprender usan- ci(cid:243)n de problemas matemÆticos; no obstante,
+do el conocimiento que ya tiene el alumno no se profundiza en el tratamiento pedag(cid:243)gico
+en un nuevo contexto o una nueva situa- que se le debe dar a la misma para que puedan
+ci(cid:243)n; es decir, se construye por encima de obtenerse los resultados deseados.
+lo que el alumno ya sabe.
+L(cid:243)pez (2005), aborda el desarrollo de recur-
+Es de seæalar que dichas estrategias no pue- sos didÆcticos apoyados en las computadoras
+den cumplirse totalmente en el marco de las cla- como mediadores semi(cid:243)ticos en el proceso de
+ses, por lo que s(cid:243)lo se presentan algunos rasgos enseæanza aprendizaje de la MatemÆtica, es-
+de ellas, especialmente las de experimentaci(cid:243)n, pec(cid:237)(cid:222) camente para favorecer la visualizaci(cid:243)n
+aplicaci(cid:243)n y transferencia. Aqu(cid:237) lo importante matemÆtica tridimensional; aspecto novedoso
+es establecer las relaciones del contenido con en esta Ærea, aunque centrado en el contexto
+los diferentes contextos de actuaci(cid:243)n de los fu- mexicano.
+turos profesionales, principalmente a travØs de
+Como se puede apreciar, no existe consenso
+la creaci(cid:243)n y resoluci(cid:243)n de modelos relativos a
+alguno de c(cid:243)mo se deben utilizar estos recursos
+estas Æreas de la ciencia.
+para lograr efectividad en el proceso de ense-
+æanza aprendizaje; ademÆs, aun cuando estos
+Uso de las TICs recursos estÆn disponibles no existe una plani-
+(cid:222) caci(cid:243)n adecuada para su utilizaci(cid:243)n por parte
+Una clasi(cid:222) caci(cid:243)n para el empleo de las compu-
+de los profesores.
+tadoras en la enseæanza de la MatemÆtica ofrece
+TambiØn se utilizan dis(cid:237)miles categor(cid:237)as para
+Mej(cid:237)a (1994), planteando dos vertientes: el desa-
+referirse a los mismos, en la presente ponencia
+rrollo de software espec(cid:237)(cid:222) cos en sus diferentes
+se asume el tØrmino Recursos InformÆticos, en-
+denominaciones (Computer Assisted Instruc-
+tendido como (Escalona, 2007): el conjunto de
+tion, Computer Assisted Learning) y el de herra-
+software, que permitan procesar, manipular, al-
+mientas computacionales (Derive, Mathematic,
+macenar, transmitir, visualizar e interactuar con
+Maple). Es de destacar que dicho empleo no se
+diferentes informaciones relacionadas con con-
+debe quedar en el desarrollo de estos sistemas,
+tenidos de las asignaturas de una o diferentes
+es necesario extenderlo al tratamiento pedag(cid:243)gi-
+Æreas del conocimiento; as(cid:237) como al hardware
+co que se le dØ a los mismos, por los profesores;
+que los soporta.
+as(cid:237) como considerar la creaci(cid:243)n y uso de diver-
+Se considera que los recursos informÆticos a
+sos materiales en los nuevos formatos, como es
+utilizar no son los que marcarÆn la diferencia,
+el caso de los hipertextos, multimedias o pÆgi-
+sino las actividades plani(cid:222) cadas por el profesor
+nas web.
+REVISTA CIENCIAS MATEM`TICAS 19
+en su interrelaci(cid:243)n y que serÆn desarrolladas ci(cid:243)n de E en F. Se dice que f es una aplicaci(cid:243)n li-
+por los estudiantes en el proceso de enseæan- neal, si se cumple que: f(λ x +λ x ) = λ f(x )+λ f(x ),
+1 1 2 2 1 1 2 2
+za aprendizaje utilizando dichos recursos. Para para todo x , x de E y λ ,λ de ℜ.
+1 2 1 2
+ello se necesita considerar tres aspectos impor-
+tantes: la mediaci(cid:243)n pedag(cid:243)gica de estos recur-
+sos, la motivaci(cid:243)n para su utilizaci(cid:243)n y el papel
+que juegan dentro del sistema categorial de la
+DidÆctica.
+Ejempli(cid:222) caci(cid:243)n para el establecimiento
+de relaciones interdisciplinarias
+(Introducci(cid:243)n de un concepto)
+Fig. 2 Diagrama de (cid:223) echas para f
+Se puede partir de recordar el concepto de fun-
+* Lo relacionado con los casos particulares de
+ci(cid:243)n recibido en MatemÆtica I (Stewart, J., pÆg
+λ =1, λ =0 da la relaci(cid:243)n f(λ x) = λ f(x); para λ =1,
+12) Una funci(cid:243)n f es una regla que asigna a cada 1 2 1 1 1
+λ =1 da la relaci(cid:243)n f(x+y) = f(x) + f(y) y para λ =0,
+elemento x de un conjunto A exactamente un ele- 2 1
+λ = 0 da f(0) = 0 (teorema 1 pÆg 365) se puede
+mento, llamado f(x), de un conjunto B.
+2
+dar el mismo tratamiento del libro, al igual que
+las diferentes notaciones.
+Para el desarrollo del concepto se deben ana-
+lizar los ejemplos del libro, aunque en el ejemplo
+3 se puede profundizar y utilizar la condici(cid:243)n de
+linealidad:
+(λ f + λ g)· = (λ f)· + (λ g)· = λ f· + λ g·
+1 2 1 2 1 2
+(por propiedades de la derivada - MatemÆtica I)
+AdemÆs se puede ofrecer otros ejemplos como
+Fig. 1 Diagrama de (cid:223) echas para f.
+el caso de la aplicaci(cid:243)n de ℜ en ℜ que transfor-
+ma a x en sen(x). [sen (λ x + λ x )≠ λ sen(x ) + λ
+Recordar ademÆs la de(cid:222) nici(cid:243)n de funci(cid:243)n 1 1 2 2 1 1 2
+sen(x )] (MatemÆtica I)
+como correspondencia entre dos conjuntos, en 2
+*** Se puede aprovechar el tema para probar
+este caso conjuntos de nœmeros reales.
+si toda funci(cid:243)n lineal es tambiØn una aplicaci(cid:243)n
+Cuando una correspondencia es tal que a
+lineal.
+cada elemento del primer conjunto le corres-
+La misma estarÆ dada en f: ℜ → ℜ
+ponde uno y s(cid:243)lo uno del segundo conjunto, en-
+tonces se llama aplicaci(cid:243)n. (Encarta, 2008) x → mx + n
+¿QuØ pasar(cid:237)a si en vez de tener dos conjuntos De modo que se veri(cid:222) carÆ si f(λ a + λ b) = λ
+1 2 1
+A y B, se estableciera una aplicaci(cid:243)n entre 2 es- f(a) + λ f(b), donde
+2
+pacios vectoriales E y F?
+m(λ a + λ b) + n = λ (ma+n) + λ (mb+n)
+Se sabe que las combinaciones lineales λ x 1 2 1 2
+1 1
++ λ x y λ f(x ) + λ f(x ) pertenecen a E y F res- λ ma + λ mb+n = λ ma+λ n + λ mb + λ n
+2 2 1 1 2 2 1 2 1 1 2 2
+pectivamente, por ser espacios vectoriales (λ , λ
+1 2 n = n(λ + λ )
+nœmeros reales); el problema estar(cid:237)a en veri(cid:222) - 1 2
+car si para toda aplicaci(cid:243)n f, ¿se cumplirÆ que Esta relaci(cid:243)n solamente se cumplirÆ para n = 0;
+f(λ x +λ x ) = λ f(x ) + λ f(x )? Ver (cid:222) gura 2. de ah(cid:237) que las funciones lineales de la forma
+1 1 2 2 1 1 2 2
+Las aplicaciones que cumplen esta condici(cid:243)n f(x) = mx, son las œnicas que pueden considerar-
+son las aplicaciones lineales, y se de(cid:222) nen: se como aplicaciones lineales.
+(Varela, M.V. y otros, 1986, pÆg 364) Sean E ! Este tema se puede retomar en MatemÆti-
+y F dos espacios vectoriales reales y f una aplica- ca II para extender el concepto funci(cid:243)n de una
+20 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+variable real a funci(cid:243)n de varias variables reales, Curriculares de las Carreras de Ingenier(cid:237)a segœn
+a travØs de ejemplos de aplicaciones de ℜn en ℜ. el Modelo cubano(cid:148).
+Colectivo de autores (2006) (cid:148)Plan de Estudios D ca-
+rrera I. MecÆnica.(cid:148) Comisi(cid:243)n Nacional de Carre-
+CONCLUSIONES
+ra, MES, Cuba.
+Colectivo de autores (2007) (cid:147)Plan de Estudios D ca-
+La MatemÆtica desempeæa un importante papel
+rrera I. Industrial(cid:148). Comisi(cid:243)n Nacional de Carre-
+en los cambios que tienen lugar en la ciencia
+ra, MES, Cuba.
+actual, lo cual se evidencia en la creciente utili-
+Colectivo de autores (2007) (cid:147)Plan de Estudios D ca-
+zaci(cid:243)n de sus productos en las diferentes ramas
+rrera I. Civil(cid:148). Comisi(cid:243)n Nacional de Carrera,
+del conocimiento humano. MES, Cuba.
+La Educaci(cid:243)n Superior en Cuba tiene como Garc(cid:237)a, M. C. y otros (1994). Actividades que pro-
+pician un aprendizaje activo y consciente en la
+prioridad la calidad del proceso de formaci(cid:243)n de
+asignatura MatemÆtica. Material mimeogra(cid:222) ado.
+los futuros profesionales, lo cual se evidencia en
+ISPH. Cuba.
+el perfeccionamiento y optimizaci(cid:243)n de los pla-
+Garza, R. (1999) (cid:147)La enseæanza de las ciencias bÆsicas
+nes de estudio, no obstante los estudiantes de
+en la formaci(cid:243)n de ingenieros(cid:148). Universidad Aut(cid:243)-
+ingenier(cid:237)a continœan presentando serias di(cid:222) cul-
+noma de Nuevo Le(cid:243)n, MØxico Revista Ingenier(cid:237)as,
+tades en el aprendizaje de la matemÆtica.
+Septiembre (cid:150) Diciembre 1999, Vol. II, N(cid:176). 5.
+De las regularidades detectadas en el PEA de HernÆndez, H. (1989) (cid:147)El perfeccionamiento de la en-
+la MatemÆtica, se distinguen tres elementos fun- seæanza de la MatemÆtica en la Educaci(cid:243)n Su-
+damentales que afectan dicho proceso: pobre es- perior Cubana. Experiencia en `lgebra Lineal(cid:148),
+Tesis de Doctorado, MES.
+tablecimiento de relaciones interdisciplinarias,
+Llorens, J. L. (1995) (cid:147)Introducci(cid:243)n al DERIVE(cid:148). Uni-
+insu(cid:222) ciente contextualizaci(cid:243)n de sus contenidos
+versidad PolitØcnica de Valencia.
+y utilizaci(cid:243)n limitada de recursos informÆticos.
+Mateus Marciano, Joªo (2008) La enseæanza y el
+Las alternativas metodol(cid:243)gicas presentadas aprendizaje del Ælgebra: una concepci(cid:243)n didÆcti-
+tratan de suplir, de cierta forma, las insu(cid:222) - ca mediante sistemas informÆticos. Tesis docto-
+ciencias detectadas en el proceso de enseæanza ral. MES. Cuba.
+aprendizaje de la MatemÆtica para las carreras Ram(cid:237)rez, E. C. (2004) (cid:147)Recursos computacionales
+de ingenier(cid:237)a, ellas no constituyen una cami- para la enseæanza aprendizaje de la MatemÆtica
+en la educaci(cid:243)n superior(cid:148). Universidad Central
+sa de fuerza, ni se pretende sean de obligato-
+de Las Villas, Santa Clara, Cuba.
+rio cumplimiento por estos docentes; el objetivo
+Sancho, J (1995). Evaluaci(cid:243)n de soportes l(cid:243)gicos
+fundamental de las mismas es mostrarles algu-
+para la enseæanza: entre la necesidad y la rea-
+nas ideas que pueden seguir para lograr perfec-
+lidad. Rev. Educaci(cid:243)n y Tecnolog(cid:237)a #117. 41-47.
+cionar dicho proceso, ya que un concepto, re-
+Sep.- Oct. Rev. de la asociaci(cid:243)n de tØcnicas de
+laci(cid:243)n o procedimiento matemÆtico serÆ mejor
+InformÆtica. Espaæa.
+comprendido mientras mÆs numerosos y fuer- Segarra, Ll (1999). Juego y MatemÆtica. En Rev. Aula
+tes sean sus nexos con otros. de innovaciones educativas. No 78. Enero. MØxico.
+Stewart, J. (2006) (cid:147)CÆlculo con Trascendentes tem-
+pranas.(cid:148) 4ta. Edici(cid:243)n, Internacional Thomson,
+BIBLIOGRAF˝A
+Editorial FØlix Varela, La Habana.
+Swokwosky. E.(1989) (cid:147)CÆlculo con Geometr(cid:237)a Anal(cid:237)-
+`lvarez, V. (1994). Enseæanza de la MatemÆtica en
+tica(cid:148), Editorial Iberoamericana. 5ta Edici(cid:243)n.
+carreras no MatemÆticas. Rev. Educaci(cid:243)n Supe-
+rior. No 3. Rev. del centro de estudios por el per- Torres, P. (1996). DidÆcticas cubanas en la enseæan-
+feccionamiento de la Educaci(cid:243)n Superior de la za de la MatemÆtica. Colecci(cid:243)n PROMET, Edito-
+Universidad de la Habana. La Habana, Cuba. rial Academia, La Habana.
+Chaviano, R. y Santos, N. (cid:147)El papel de la Discipli- Varela, M. V. y otros. (2003) `lgebra Lineal. Editorial
+na MatemÆtica re(cid:223) ejado en las Teor(cid:237)as y Diseæos FØlix Varela. La Habana. Cuba.
+REVISTA CIENCIAS MATEM`TICAS 21
+ABSTRACT. The teaching of mathematics is in a renewal process approaches, which allow students
+to acquire scienti(cid:222) c world view, a comprehensive culture and mathematical thinking so that it can
+meet the scienti(cid:222) c, economic, social and related technology his specialty, and thus prepare him to
+face the challenges of today. The importance of the teaching of mathematics for the training of futu-
+re professionals is a priority to continue in education. The basic contents of the course is essential
+for a strong learning and of great application in everyday life and in the course of their future pro-
+fession. This work focuses on the process of learning of mathematics in engineering careers in the
+same assess its main regularities, and consequently to this, they propose alternative methodologies
+for the improvement of this process at the University of Holgu(cid:237)n (cid:147)Oscar Lucero Moya(cid:148).

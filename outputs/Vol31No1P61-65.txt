@@ -1,0 +1,390 @@
+CienciasMatemáticas,Vol.31,No.1,Pag.61-65, 2017
+Recibido02-2017
+Algoritmo Genético en el Criptoanálisis a Cifrados
+en Bloques
+Genetic Algorithm in Cryptanalysis of Block Ciphers
+Mijail Borges-Quintana1*, Miguel A. Borges-Trenard1, Adrian Donatien Charón1 .
+Resumen EsconocidoqueelAlgoritmoGenéticohasidoaplicadoalcriptoanálisisdecifradosenbloques.
+Aquíseproponeunaalternativaaestosataquesyunametodologíadetrabajo.
+Abstract ItisknownthattheGeneticAlgorithmhasbeenappliedtothecriptanalysisofblockciphers. Hereit
+isproposedanalternativetotheseattacksandamethodologyofwork.
+PalabrasClave
+Cifradosenbloques,criptoanálisis,algoritmogenético
+1DepartamentodeMatemática,FCNE,UniversidaddeOriente,Cuba.
+mijail@uo.edu.cu,mborges@uo.edu.cu,adriand@uo.edu.cu.
+*AutorparaCorrespondencia
+1. Introducción reporte proponemos una función de adaptación diferente a
+lautilizadaen[11]yfundamentamossuventaja.Ilustramos
+Protegerlainformaciónsensibleesunanecesidadinsosla-
+cómorealizarunataqueatextoclaroconocidoauncifrado
+yabledelasociedadmoderna.Deldesarrollodeherramientas
+enbloquesarbitrarioyejemplificamosconelcifradoHTC.
+matemáticasycomputacionalesparalograresepropósitose
+Eltrabajosecomponedelassiguientessecciones:Enla
+ocupandisciplinascientíficascomolaCriptografía,através
+Sección2sepresentalasespecificacionesdelAGparaelcaso
+delosdenominadosprotocoloscriptográficos.Loscifradosen
+bajoestudio(asumimosunlectorconocedordeloselementos
+bloquesconstituyenunadelasprimitivascriptográficasmás
+básicosdelosalgoritmosgenéticos).LaSección3ilustralo
+utilizadasenesosprotocolos.
+presentado en la Sección 2, con el criptoanálisis al cifrado
+ElAlgoritmoGenético(AG)sehautilizadoenelcripto- HTCypresentaunanuevafuncióndeaptitud.Finalmentelas
+análisisacifradosenbloques.Porejemplo,en[11]secombina conclusiones.
+elAGconotroalgoritmoevolutivo(OptimizacióndeEnjam-
+bresdePartículas),conelpropósitoderealizarunataque(a
+2. AG para el ataque a cifrados en
+textoclaroconocido)alconocidocifradoenbloquesDES.Al
+bloques binarios
+parecer,conunapoblaciónfijade1000individuos,realizando
+500ejecucionesencadaexperimento,yrepitiendo3vecesel
+2.1 AlgoritmoGenético
+algoritmo,losautoresdicenobtenerunasolución.En[5]se
+ParadescribirelAlgoritmoGenético,nosbasaremosen
+combinaelAGcontécnicasdelcriptoanálisisdiferencialpara
+elesquemaquesedescribeen[9]:
+atacarcifradosenbloquesconestructurassemejantesalasdel
+DES,enparticularloaplicanalDESyFEALcon8rondas. 1. Inicializarlasvariablesdelalgoritmo:
+Losautoresdeclaranqueelproblemadeutilizarungrannú- g(númeromáximodegeneracionesaconsiderar),
+merodepares“correctos"(detextoclaroconsucifrado)se M(tamañodelapoblación).
+puederesolvergenerandolosparescorrectosgenéticamente,
+obteniendounmétodomásrápidoqueeldiferencial.En[3] 2. GenerarunapoblacióninicialPconMindividuos.
+setratasobreelproblemadedeterminarsiuncifradodeter-
+3. CalcularlasaptitudesdelosindividuosenP.
+minadoproduceonosalidasaleatorias.Variasdelastécnicas
+de criptoanálisis se basan en el hecho de que los cifrados
+4. Paragiteracionesrealizarlosiguiente:
+bajoestudionoproducensalidasverdaderamentealeatorias.
+LosautoresabordaneseproblemautilizandoelAGyafirman a) SeleccionarparejasdeprogenitoresenP.
+obtener distinguidores para la no aleatoriedad más rápidos
+b) Parearlosprogenitoresseleccionados.
+queotrosreportadosantesenlaliteratura,aplicandoenpar-
+ticularelataquealaReddeFeisteldenominadaTEA(Tiny c) Paracadaparejagenerarunpardedescendientes,
+EncryptionAlgorithm),conmenosde3rondas.Enelpresente usandolafuncióndeapareamientoseleccionada.
+62 AlgoritmoGenéticoenelCriptoanálisisaCifradosenBloques
+d) Aplicarunamutuaciónacadaunodelosdescen- 3. Ataque al cifrado en bloques HTC
+dientes.
+3.1 AtaquealcifradoenbloqueHTC
+e) Calcularlasaptitudesdecadaunodelosdescen-
+En esta sección aplicaremos el método deataque expli-
+dientesysusmutaciones.
+cadoenlasecciónanterioralcifradoenbloquesHTC.Este
+f) Basadoenlasadecuacionesdelosprogenitores
+cifrado fue introducido en [6], sus parámetros son modera-
+ydescendientes,decidircuálserálanuevapobla-
+dos y el propósito de Heys al presentarlo fue el de ilustrar
+ciónP.
+cómo realizar los ataques lineal y diferencial a un cifrado
+5. Seleccionarelindividuodemejoraptituddelaúltima enbloques.Aquítambiénloutilizaremosconunpropósito
+generacióncomolamejorsolución. semejante,nuestroobjetivoesilustrarelmétododetrabajo
+ylafuncióndeadaptaciónqueproponemos,paraellonoes
+Unestudiobásicoperosuficienteparanuestrospropósitos
+necesarioutilizaruncifradoconmayorfortaleza,encierto
+delAGpuedelograrseen[4],[8],[10].
+sentidoespreferibleutilizarunocomoelHTC,defácilcom-
+2.2 Cifradorenbloquesbinario prensióneimplementación,demodoqueellectorinteresado
+Paraestecontexto,unbloquebinarioesunobjetodela puedaseguirconfacilidadloesencial.
+forma[x ,...,x ],dondex ∈{0,1},parai=1,...p.Sedice
+1 p i
+quelalongituddelbloquees p.Elconjuntodetodoslosblo- 3.2 DescripcióndelHTC
+quesbinariosdelongitud pserádenotadopor{0,1}p. HTCesuncifradorconlascaracterísticassiguientes:m=
+n=16.Serepiteunasucesióndepasosqueabajosedescriben
+Uncifradoenbloques(binario)esunaaplicaciónE:{0,1}m×
+(4veces),porellosedicequeesuncifradorconr=4rondas.
+{0,1}n→{0,1}ntalque,paracadaK∈{0,1}m,E(K,T)es
+Cadarondaconsistede:unasumaXorconlaclavederonda,
+una función inversible (función de cifrado en K). Los blo-
+unasubstitución,yunatransposición.Noobstante,laúltima
+ques T ∈{0,1}n se denominan textos claros, mientras que
+rondatieneciertasdiferencias.Enlasrondasintervienenlas
+C=E(K,T) es el texto cifrado de T correspondiente a la
+siguientespermutaciones:
+claveK.TambiénsedicequeKesconsistentecon(T,C),con
+respectoalcifradoE.LafuncióninversaD(K,C)eslacorres- Substitución:Eltextoqueseestácifrandosedivideen4sub-
+pondientefuncióndedescifrado.Elnúmeroneslalongitud bloquesde4bits.Cadasub-bloqueformaunaentradaparauna
+debloquedelcifradoymessulongituddeclave.Elespacio S-cajade4×4,esdecir,unaaplicaciónS:{0,1}4→{0,1}4
+delasclaves,{0,1}m,debeserlosuficientementegrandeco- (enestecasoserequierequeseabiyectiva).Surepresentación
+moparaqueelataqueporfuerzabrutanoseafactible. enelsistemahexadecimalvienedadaacontinuación:
+Laliteraturasobreloscifradosenbloquesesamplia,sugeri-
+0 1 2 3 4 5 6 7 8 9
+mosconsultar[1]. E 4 D 1 2 F B 8 3 A
+A B C D E F
+2.3 CaracterísticasdelAGparaelataqueacifrados
+6 C 5 9 0 7
+enbloques
+Poblaciones:subconjuntosdelespaciodeclaves. Secuentatambiénconunatransposicióndelos16bits.
+Métodoparaelcriptoanálisis:Eltipodeataquees“atexto
+claroconocido”,enelqueseconoceunpar(T,C)detexto 1 2 3 4 5 6 7 8 9 10
+1 5 9 13 2 6 10 14 3 7
+claroT ysucifradoCysebuscaK talqueE(K,T)=C,es
+decir,sebuscaunaclaveconsistente. 11 12 13 14 15 16
+11 15 4 8 12 16
+Función de aptitud (sugerida en [11]): Es una aplicación
+A de{0,1}men[0,1]definidapor
+1 Cadabloquedeentradaencadarondasesumaconlacorres-
+E(K,T)∗C pondienteclavederonda(son5clavesderonda,pertenecien-
+A (K)= ,
+1
+n
+tesa{0,1}16,unaopciónquesehautilizadoestomarlastodas
+iguales).
+dondeB ∗B representaelnúmerodecomponentesiguales
+1 2
+Utilizaremoslassiguientesnotaciones:
+entrelosbloquesB yB .Enotraspalabras,B ∗B =n−
+1 2 1 2
+SiX =[x ,x ,...,x ]∈{0,1}16,entonces,X[i,j],parai<
+d (B ,B ),donded esladistanciadeHamming. 1 2 16
+H 1 2 H
+j, denota el subloque de X formado por las componentes
+K esmásadaptadaqueK siA (K )>A (K ).Estafunción
+1 2 1 1 1 2
+x,x ,...,x . Como es usual, el operador ⊕ representa la
+tieneencuentalacorrelaciónentreeltextocifradoconocido i i+1 j
+sumaXor,enestecaso,lasumaenelgrupoaditivoZ16.
+ylostextoscifradosgeneradosporclavesaleatorias. 2
+OperadordeCruzamiento:Cruzamientoporunpunto(con-
+sultarreferenciascitadassobreelAG).
+OperadordeMutación:Consisteenhallarleelcomplemen-
+toadoscomponentesdelbloquesometidoamutación(selec-
+cionadasaleatoriamente).Ejemplo,unamutaciónde
+[0,1,1,1,0,1,0,0]pudieseser[0,0,1,1,0,1,0,1].
+AlgoritmoGenéticoenelCriptoanálisisaCifradosenBloques 63
+CifradoHTC: segundaeslaclavequeseobtienecomosoluciónylatercera
+essuaptitud.
+Entrada:M :=[m ,m ,...,m ](textoclaro),
+0 0,1 0,2 0,16
+gen:=proc(M,f,Par,mut,cru,P,T,C,k,g)
+K , K , K , K , K (claves).
+1 2 3 4 5
+localt,c,Q,i,j,P1,P2:t:=db(T,k):c:=db(C,k):
+Salida:C (cifradodeM ).
+0 0
+(1):Q:=genA1(M,P,k,f,t,c):
+M =[m ,m ,...,m ]=ρ (K ,M ),r=1,2,3,
+r r,1 r,2 r,16 r r r−1
+(2):foritogdo
+dondeρ sedefineentrespasos:
+r
+(3):P1:=apply(Par,M):
+M :=[m ,m ,...,m ]⊕[k ,k ,...,k ];
+r r−1,1 r−1,2 r−1,16 r,1 r,2 r,16 P1:=[seq([Q[P1[j][1]],Q[P1[j][2]]],j=1..nops(P1))]:
+M :=[S(M [1,4]),S(M [5,8]),S(M [9,12]),S(M [13,16])];
+r r r r r (4):P1:=Flatten([seq(apply(cru,P1[j][1][1],P1[j][2][1],
+M r :=[m r,τ(1) ,m r,τ(2) ,...,m r,τ(16) ]. k),j=1..nops(P1))],1):
+Últimaronda: (5):P2:=P1:
+(6):P1:=[seq([P1[j],A1(t,P1[j],c,f)],j=1..nops(P1))]:
+M :=[m ,m ,...,m ]⊕[k ,k ,...,k ];
+4 3,1 3,2 3,16 4,1 4,2 4,16
+(7):P2:=mu(P2,mut,k):
+M :=[S(M [1,4]),S(M [5,8]),S(M [9,12]),S(M [13,16])];
+4 4 4 4 4
+P2:=[seq([P2[j],A1(t,P2[j],c,f)],j=1..nops(P2))]:
+C :=M ⊕[k ,k ,...,k ].
+0 4 5,1 5,2 5,16
+(8):Q:=[seq(Q[j],j=1..nops(Q)),
+DescifradoHTC(ahoralaprimerarondaesladiferente):
+seq(P1[j],j=1..nops(P1)),seq(P2[j],j=1..nops(P2))]:
+Entrada:
+(9):Q:=convert(convert(Q,set),list):
+C 0 :=[c 0,1 ,c 0,2 ,...,c 0,16 ],K 5 ,K 4 ,K 3 ,K 2 ,K 1 (claves). (10):Q:=sort(Q,ord):Q:=[seq(Q[j],j=1..M)]:
+Salida:M 0 . (11):ifQ[1][2]=1thenreturn[i-1,Q[1][1],Q[1][2]]fi:
+C 1 :=C 0 ⊕[k 5,1 ,k 5,2 ,...,k 5,16 ]; (12):od:[i-1,Q[1][1],Q[1][2]]:endproc:
+C :=[S−1(C [1,4]),S−1(C [5,8]),S−1(C [9,12]), Comentarios:
+1 1 1 1
+S−1(C 1 [13,16])]; 1. AunqueelprogramaseexperimentóconelcifradoHTC,el
+C :=C ⊕[k ,k ,...,k ]; mismo puede ser en principio aplicado con cualquier otra
+1 1 4,1 4,2 4,16
+funcióndecifrado.
+C =[c ,c ,...,c ]:=ρ−1(K ,C ),
+r+1 r+1,1 r+1,2 r+1,16 r 4−r r
+2. Semejantesconsideracionessonválidasparalosargumentos
+r=1,2,3,dondeρ−1sedefinecomosigue:
+r Par,mut,ycru.
+C :=[c ,c ,...,c ];
+r+1 r,τ−1(1) r,τ−1(2) r,τ−1(16) 3. EnParseutilizólaformamáselementaldeseleccionarparejas
+C r+1 :=[S−1(C r+1 [1,4]),S−1(C r+1 [5,8]),S−1(C r+1 [9,12]), (laaleatoria,contodosloselementosconlamismaproba-
+S−1(C [13,16])]; bilidaddeserseleccionados)yparamutycruseutilizaron
+r+1
+respectivamenteelcruzamientoporunpuntoylamutación
+C :=C ⊕[k ,k ,...,k ].
+r+1 r+1 4−r,1 4−r,2 4−r,16 endoscomponentes.
+Finalmente,M =C .
+0 4 4. Siempreseutilizócomopoblacióninicialunageneradaalea-
+toriamenteporelprograma.
+3.3 Panorámica de la implementación del ataque
+Descripcióndelafuncióngen:
+enMaple
+Seelaboraronprogramasenelsistemadecálculosimbó- (1):LafuncióngenA1(quenosedetallaaquí),construyelapobla-
+licodenominadoMaple(Versión17),capacesdeejecutarel cióninicial(determinadaporelusuarioogeneradaaleatoriamente)y
+ataquepresentadoenestetrabajo.Aquísólodescribiremosla asignaacadaindividuosuaptitud.genA1dependedelafunciónA 1
+funciónprincipal(gen).AllectorfamiliarconMapleleserá (definidaenlaSección2.3).Engeneral,lafuncióngendependede
+másfácilentenderestasinstrucciones,noobstante,lasmismas A 1 (comopuedeobservarse),noobstante,lasmodificacionesqueha-
+puedensercomprendidasensuesenciaporunomenoscono- bríaqueintroducirparautilizarotrafuncióndeaptitudsonsencillas.
+cedor.PreferimosescribirelprogramaenMaple,enlugarde TyCseintroducenenformadecimal(parafacilitarlacomunicación
+seudocódigo,parailustrarlaspotencialidadesdeestesistema conelusuario),deahíquelafuncióndbtransformadedecimala
+enlarealizacióndeesteataque.Estamosendisposiciónde binariodelongitudk.
+aclararybrindarmásinformaciónallectorinteresadosobreel (2):Definicióndellazoenelnúmerodegeneraciones(iteraciones).
+programa,losexperimentos,ycualquierotroaspectoasociado
+(3):Seleccióndelasparejasparaelcruzamiento:LafunciónParque
+conestetrabajo.
+seutilizaformatodaslascombinacionesposiblesdeMelementos
+Entrada:M:tamañodelapoblación,f:cifrador, tomadosdosados.Esteconjuntodeparessirvecomoíndicespara
+Par:funcióndeseleccióndeparejas,mut:operadordemuta- construirlasparejasdeelementosdelapoblacióninicial,todoscon
+ción,cru:operadordecruzamiento,P:poblacióninicial, lamismaprobabilidaddeserseleccionados.Lafunciónapplyespri-
+T:textoclaro,C:textocifrado,k:longituddeclave,g:número mitivadeMaple,consisteenaplicarlafunciónquetienecomoprimer
+degeneraciones. argumentoalosobjetosqueaparecencomosiguientesargumentos.
+Salida:Unaternacuyaprimeracomponenteeslageneración TambiénesunaprimitivamuyutilizadadeMaplelafunciónseq,que
+enquesealcanzólasolución(individuodemayoraptitud),la formalasucesióndeelementosgeneradosporsuprimerargumento,
+64 AlgoritmoGenéticoenelCriptoanálisisaCifradosenBloques
+cuandoelconjuntodeíndicesvaríaenelrangoconsiderado. (tantascomoseaposible).Enelsegundopaso,puedequeenlugar
+(4):Obtencióndelosdescendientes.LafunciónFlattenesprimitiva de obtenerse los valores de las no fijadas se obtengan relaciones
+deMapleytieneelpropósitodehacerlineallaestructuraanidada simplificadasentreesascomponentesopuedellegarseaalgunacon-
+queseformaconlasinstruccionesindicadasenestepaso. tradicciónqueindiquequealgunasdelasfijadasdebenmodificarse
+(ver,porejemplo,[2]).Otroescenarioenelquesepresentalaal-
+(5-7):Mutacióndelosdescendientesyactualizacióndelasaptitudes,
+ternativadefijaralgunasdelascomponentesesenlosataquesde
+tantoenlosdescendientescomoensusmutantes.
+canalcolateral([7]),quesonaquellosenlosqueelintrusopuede
+(8):Unióndetodaslaspoblaciones:lainicial,ladelosdescendientes obtenerinformaciónadicionalsobrelosdatosdelcifradoqueseesté
+ysusmutaciones. ejecutando,utilizandoparaello(porejemplo)propiedadesfísicasde
+(9):Eliminacióndeloselementosredundantesenlapoblaciónobte- laimplementación.
+nidaenelpasoanterior.(Convierteunconjuntodeelementosenuna
+lista.) 3.5 Experimentos
+Realizamosdosgruposdeexperimentos,elGrupoIfueconla
+(10):Ordenamientodelapoblaciónactual(enordendescendiente
+funciónA yelGrupoIIconA .Fueroncomunesyfijosaambos
+de las aptitudes) y selección de los primeros M elementos de la 1 2
+gruposlossiguientesparámetros:textoclaro,clave,cantidaddeele-
+poblaciónordenada.LaprimitivadeMaplesortordenasuprimer
+mentosenlapoblación(20),funcióndeapareamientonatural(basada
+argumentosegúnelcriteriodeterminadoporsusegundoargumento.
+enselecciónaleatoriadeparejas,dondetodoslosindividuosdela
+(11):Criteriodeparada(intermedia)delprograma:sealcanzauna
+poblacióntienenlamismaprobabilidaddeserseleccionados),los
+solución(individuodeaptituduno)antesdellegaralnúmerototal
+operadoresdecruzamientoymutaciónfueronlosmencionadosenla
+degeneracionesposibles.
+Sección2.3,serealizóunaselecciónaleatoriadelapoblacióninicial,
+(12):Findellazoyfindelprograma. sellevaronacabo220iteraciones.Cadagrupodeexperimentosse
+repitió5veces.Acontinuaciónrelacionamosalgunasconclusiones
+3.4 Nuevafuncióndeaptitud derivadasdelasexperimentaciones.
+Conlafuncióndeaptitudutilizadaen[11],selograencontrar
+EnelGrupoI,lassolucionesobtenidas(K)enlas5repeticiones
+unaclaveconsistenteconelpar(T,C)conrespectoalcifradoE,pero
+delexperimentodieronlugaracifradosE(T,K)quetenían14com-
+ellonogarantizaqueseencuentrelaclaveexacta,esdecir,laclave
+ponentescomopromedioigualesalosdeC,mientrasquelasclaves
+querealmenteseutilizóparacifraraT yobtenerC,éstosedebea
+usadas eran iguales a la clave real sólo en 7 componentes como
+quedosclavesdiferentespudiesencifrarigualaltextoclaroT.La
+promedio.
+funcióndeaptitudA midesóloproximidadalcifradoC.Teniendo
+1
+EnelGrupoIIseobservóquelasaproximacionesalcifradoya
+encuentaloanterior,hemosconstruídounafuncióndeaptitudA ,
+2
+laclaverealsecomportarondemaneramáshomogéneayquela
+quetieneencuentatantolaproximidadaCcomolacercaníaala
+cantidad de componentes que se obtuvieron iguales con la clave
+claveutilizada.A seconstruyeapartirdeunafunciónauxiliarA ,
+2 0
+realdependiódelacantidaddecomponentesquesefijaroncomo
+lacualmidesolamenteproximidadentreclaves.
+conocidas(comoeradeesperar).Larelaciónentreelnúmerode
+Veamoslosdetalles:A dependedeunaclavevariableK,unaclave
+0
+componentesfijadasylamejoraproximaciónalasoluciónnoes
+constanteK yunalistauordenadadenúmeros(norepetidos)del
+1
+deltodolineal,perobastanteaceptable.Lasiguientetablailustralos
+conjunto{1,2,...,|K|}.Entonces,
+resultados,enlamisma,CIrepresentaelnúmerodecomponentes
+NCI(K,u,K ) fijadasdelaclavereal,CIIeselpromedio(enloscincoexperimen-
+A (K,u,K )= 1 ,
+0 1 |u| tos)decomponentesigualesconlaclaverealyCIIIconelcifrado.
+Noseincluyeenlatablalosvaloresparaloscasosenqueelnúmero
+dondeNCI(K,u,K )eselnúmerodecomponentesigualesentreKy decomponentesquesefijaesmayorque6porquedeesevaloren
+1
+K quesonindexadasporu. adelantesealcanzaqueCII=CIII=16.
+1
+Como puede verse, A no depende del cifrado, sólo mide la
+0
+CI CII CIII
+proximidadentreKyK enelsubconjuntodeíndicesdeterminado
+1
+1 7 14
+poru.Esdecir,¿cuáncercanaseencuentreunaclaveKaunaclave
+2 9 15
+buscadaenquesehanfijadocomoconocidoslosvaloresdealgunas
+3 8 14
+desuscomponentes?PartiendodeA yA construímosunafunción
+1 0
+quetieneencuentalasproximidadestantoalcifradocomoalaclave 4 8 14
+queseusó: 5 14 15
+Delatablaanteriorseobservaquefijandoentre2y5componentes,
+A 2 =
+αA
+0
++βA
+1,dondeα,β ∈R,α+β =1. ya se obtiene el 50% o más de las componentes de la clave real.
+2
+Porotraparte,sisefijan6componentesomás,osea,el38%de
+Enestetrabajotomamoscomopesosα=0,9,β =0,1.Esdecir,se las componentes de la clave real, ya se obtiene ésta. Es también
+leotorgómáspesoalaaproximaciónalaclavereal. interesantedestacarlacantidadtotaldeindividuosquesemuestrean
+Laideadefijaralgunosdelascomponentesdelaclaveincógnita parallegarabuenassoluciones.Paraelloobservemosqueencada
+hasidoutilizadaendiversastécnicasdecriptoanálisis.Porejemplo, iteraciónseleaplicaelcifradoa60individuos,contandolapoblación
+enladenominadaestrategiade“SuponeryDeterminar"(Guess-and- deinicio,losapareamientosylasmutaciones(suponiendoqueen
+Determine),lacualsepuededescribircomounarepeticióndedos esas operaciones no se repite ningún individuo) y se hacen 220
+pasos,hastaquetodaslascomponenteshansidodeterminadas:prime- repeticiones, quiere decir que se exploran 13200 llaves posibles
+rosesuponenconocidoslosvaloresdealgunasdelascomponentes cuantomás,deltotalde216 (262144),locualrepresentasóloun
+ysegundosedeterminanlosvaloresdelasrestantescomponentes 20%.
+AlgoritmoGenéticoenelCriptoanálisisaCifradosenBloques 65
+4. Conclusiones JournalofIntelligentControlandSystems.Vol.12,No.4,325-
+330,2007.
+1. Hemospresentadounapropuestadeespecificacióndelalgorit-
+mogenético(Sección2.1)paraelcriptoanálisisaloscifrados [4] E.D.Goodman.IntroductiontoGeneticAlgorithms.ATutorial.
+enbloquesbinarios(Sección2.3). WorldSummitonGeneticandEvolutionaryComputation.Shang-
+hai,China.2009.
+2. Losprogramaselaboradossonflexibles,alpermitirvariacio-
+http://www.egr.msu.edu/~goodman/
+nesenlosmétodosdeseleccióndeparejas,demutacióny
+GECSummitIntroToGA_Tutorial-goodman.pdf.
+cruzamiento,asícomoenelcifradoautilizar.
+[5] H.M.HasanHuseietal.AGeneticAlgorithmforCryptanalysis
+3. Conlafuncióndeaptitudintroducidaenestetrabajoselogra
+withApplicationtoDES-likeSystems.InternationalJournalof
+unacercamientomuchomayor,queelobtenidoentrabajos
+NetworkSecurity,Vol.8,No.2,pp.177-186,2009.
+anteriores,alaclaverealquefueutilizadaenlasesiónde
+cifrado. [6] H.M.Heys.ATutorialonLinearandDifferentialCryptanalysis.
+4. Consideramosqueesposibleobtenermejoresresultadosen Cryptologia,26(3):189-221,2002.
+los experimentos por diferentes vías, por ejemplo: modifi- [7] J.Kelsey,B.Schneier,D.Wagneretal.SideChannelCrypta-
+cando los métodos de selección de parejas y los tipos de nalysisofProductCiphers.JournalofComputerSecurity,V.8,N.
+cruzamientosymutaciones,aumentandotantoeltamañode 2-3,pp.141-158,2000.
+laspoblacionescomolacantidaddegeneraciones.También
+[8] M.Lozano,F.Herrera.SF1:ComputaciónEvolutivayAlgorit-
+sepuedenvalorarotrosposiblespesosenlafuncióndeaptitud
+mosBioinspirados.Sesión1.a:AlgoritmosGenéticosySistemas
+presentadaenestetrabajo.
+InteligentesdeEnjambre.MásterOficialdelaUniversidaddeGra-
+5. Finalmente,peronomenosimportante,debeexplorarselauti-
+nada.SoftComputingySistemasInteligentes.Curso2010-2011.
+lizacióndelmétodoencifradosenbloquesdemayorfortaleza
+http://150.214.190.154/docencia/sf1/SF1-1011-1a.pdf.
+criptográfica.
+[9] G.Patel.SeminarReportonGeneticAlgorithmforCryptanaly-
+sis.BirlaInstituteofTechnology&Science(BITS)Pilani,2008.
+Referencias http://csis.bits-pilani.ac.in/faculty/murali/netsec-09/seminar/
+refs/girishprep.pdf.
+[1] H.DelfsandH.Knebl.IntroductiontoCryptography.Principles
+andApplications.Springer-Verlag,SecondEdition,2007.
+[10] A.PérezSerrada.UnaIntroducciónalaComputaciónEvoluti-
+[2] M.Eichlseder,F.Mendel,T.Nadetal.LinearPropagationin va.1996.ftp://ftp.de.uu.net/pub/research/softcomp/EC/EA/
+EfficientGuess-and-DetermineAttacks.InternationalWorkshop papers/intro-spanish.ps.gz.
+onCodingandCryptography,Bergen(Norway).WCC2013.
+[11] R.VimalathithanandM.L.Valarmathi.CryptanalysisofDES
+http://www.selmer.uib.no/WCC2013/pdfs/Eichlseder.pdf.
+usingComputationalIntelligence.EuropeanJournalofScientific
+[3] A.Garrett,J.HamiltonandG.Dozier.AComparisonofGenetic Research,55(2):237-244,2011.
+AlgorithmTechniquesfortheCryptanalysisofTEA.International

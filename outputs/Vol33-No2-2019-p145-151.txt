@@ -1,0 +1,491 @@
+CienciasMatemáticas,Vol.33,No.2,Pag.145-151, 2019
+Recibido04-2019, Aceptado 09-2019
+Las Redes de Interconexio´n y La Teor´ıa de Gra´ficas
+Interconnection Networks and Graph Theory
+María de Luz Gasca Soto*
+Resumen El objetivo de este documento es dar un panorama general sobre co´mo la Teor´ıa de Gra´ficas
+resultaserunapoderosaherramientaparaelana´lisis,disen˜oy,engeneral,elestudiodeRedesdeInterconexo´n.
+Dado que hay una gran variedad de gra´ficas que sirven para representar una red de interconexio´n, so´lo se
+usara´ alHipercuboparailustrarelimpactodelaTeor´ıadeGra´ficasenlasredesdeinterconexio´nyviceversa.
+Abstract The purpose of this document is to give a general overview of how Graph Theory results be a
+powerfultoolforanalysis,designand,ingeneral,thestudyofInterconnectionNetworks. Alreadythatthereisa
+greatvarietyofgraphsthatservetorepresentaninterconnectionnetwork,onlytheHypercubewillbeusedto
+illustratetheimpactofGraphTheoryoninterconnectionnetworksandviceversa.
+PalabrasClave
+Computacio´nenParalelo,Teor´ıadeGra´ficas,RedesdeInterconexio´n,Hipercubo
+1DepartamentodeMatemáticas,UniversidadNacionalAutónomadeMéxico,México,luz.gasca@gmail.com,luzg@ciencias.unam.mx
+*AutorparaCorrespondencia
+Introduccio´n Cuandolagra´ficaasociadaalareddeinterconexio´nesuna
+Gra´ficadeCayley,moversesobrelagra´ficasubyacentesigni-
+Encienciasdelacomputacio´n,losmodelosdeco´mputo
+ficamanipularlosoperadoresdelgrupoasociadoalagra´fica
+sirvenparadescribirentidadesreales,llamadascomputado-
+deCayley.
+rasy,adema´s,seusancomoherramientasparapensarenel
+Dado que hay una gran variedad de gra´ficas que sirven
+problemayexpresaralgoritmos.
+pararepresentarunareddeinterconexio´n,so´lousare´elHiper-
+Losprimerosmodelosdecomputacio´nfueronlama´quina
+cuboparailustrarelimpactodelaTeor´ıadeGra´ficasenlas
+deTuringylasgrama´ticasformales.Modelosma´srecientes
+redesdeinterconexio´nyviceversa.
+son:ma´quinadeaccesoaleatorio(RAM),maquinaparalela
+de acceso aleatorio (PRAM), redes de interconexio´n, entre
+1. Computacio´n Paralela
+otros.
+Enunareddeinterconexio´n,cadaprocesadorcuentacon
+Existendiversostiposdecomputadorasenparalelo,var´ıan
+supropiaunidaddememoriayseconectaconotrosprocesa- de2a216procesadores,oma´s,loscualespuedenestarorga-
+doresmedianteenlacesdirectosentreellos;dosprocesadores
+nizadosdediversasmaneras,dehecho,noexisteunmodelo
+conectados,porunenlace,puedenintercambiardatosdefor- gene´ricoenlaarquitecturaenparaleloquepuedaadaptarsea
+masimulta´nea.
+todaslascomputadorasenparalelo.
+Laestructuramatema´ticaparamodelarunareddeinterco- Disen˜aralgoritmosenparalelo,analizarlosyprobarque
+nexio´nesunagra´ficanodirigidaG,dondecadaprocesadorP i son correctos es mucho ma´s dif´ıcil que hacerlo para algo-
+esunve´rticedeGysihayunenlaceentredosprocesadores, ritmos secuenciales, por lo que analizar, disen˜ar y estudiar
+P i yP j ,enlaredentoncesexistelaarista(P i ,P j ). algoritmosparalelosestodounreto.
+LaTeor´ıadeGra´ficasresultaserunapoderosaherramien- Loscriteriosma´simportantesparaevaluarunalgoritmo
+taparaelana´lisis,disen˜oy,engeneral,elestudiodeRedes paraleloson:tiempodeejecucio´n,nu´merodeprocesadores,
+deInterconexo´n.Diferentestiposderedesdeinterconexio´n nu´merototaldepasosrealizados,probabilidaddee´xitoyotras
+resultansergra´ficashamiltonianas,condiversosa´rbolesgene- te´cnicasusadasparamedirtalescriterios.Estoscriteriosylas
+radoresajenosporaristase,incluso,resultansergra´ficasde te´cnicasquelosinvolucran,as´ıcomolosresultadosdetales
+Cayley.Ente´rminosgenerales,seprocurausartodoslosatri- evaluacionesconstituyenelana´lisisdelalgoritmo.
+butos,propiedadesybondadesdelasgra´ficasparamanipular Eltiempodeejecucio´nodesempen˜ocomputacionaldeun
+yresolverproblemasasociadosconlasredesdeinterconexio´n. algoritmoparalelosedefinecomoeltiempo(cantidaddeope-
+Unadelasprincipalestareasdeunareddeinterconexio´n racioneselementales)queletomaaunalgoritmoresolverun
+estransportar(emitiryrecibir)datosentrelosprocesadores, problemaenunama´quinaparalela;dependetantodeltaman˜o
+demaneraeficiente.Estoselogranoso´loencontrandolaru- delejemplar(datosdeentrada),n=|E|,comodelnu´merode
+tama´scorta,sinotambie´necontrandoa´rbolesgeneradores. procesadores, p:T(n,p).
+146 LasRedesdeInterconexio´nyLaTeor´ıadeGra´ficas
+Losmodelosdeco´mputoenparalelodifierenenlaforma nodosdeunhipercuboconetiquetasbooleanas(decerosy
+comolosprocesadoressecomunicanysincronizan;losdos unos)delongitudd.Dosprocesadoresesta´nconectadossiy
+principales modelos son Memoria Compartida y Redes de so´losisusetiquetasdifierenensolamenteunbit.LaFigura2
+Interconexio´n. presenta tres hipercubos: Q ,Q ,Q , con una etiquetacio´n
+1 2 3
+Enelparadigmadememoriacompartidalosprocesadores parasusnodos.
+seconectanalamemoriasimpleycompartida;losprocesa- Elhipercubotieneunaestructurarecursiva.Podemosex-
+dores usan esta memoria para comunicarse. Cualquier par tenderuncubod−dimensionalauno(d+1)−dimensionalco-
+de procesadores que deseen intercambiar datos pueden ha- nectandoloscorrespondientesprocesadoresdedosd−cubos:
+cerlo v´ıa la memoria compartida. E´sta la manera ma´s facil unsub-cubotendra´ elbitma´ssignificativoiguala0yelotro
+demodelarlacomunicacio´n.Adema´scadaprocesador,tiene tendra´ elbitma´ssignificativoiguala1.
+unaunidaddeentradayunaunidaddesalidaparacomuni-
+carseconelmundoexterior.Todoprocesadortieneaccesoa
+cualquiervariable.
+Figura2.HipercubosQ
+1
+,Q
+2
+,Q
+3
+Paraund−cubo,ladistanciaentrecualesquieradosproce-
+sadoresP yP esigualalnu´merodebitsenlosquedifieren;
+i j
+estosignificaquepodemosirdelprocesadorP alP intercam-
+i j
+biandoaloma´sd bits,unoalavez.
+Elhipercuboproveeunaexcelenteconexio´n,yaqueexis-
+tendiferentesrutasentredosprocesadores;esdecir,podemos
+cambiarlosbitsapropiadamenteencualquierorden.
+2.1 PropiedadesdelHipercubo
+Figura1.Topolog´ıasba´sicas. Elhipercuboespopularporserunagra´ficaregular,tener
+undia´metropequen˜o,contarcondiversaseimportantespro-
+UnareddeIinterconexio´nsemodelaconunagra´fica,don- piedadescomogra´fica.Adema´sporsermuymanipulable;es
+de cada ve´rtice representa un procesador y existe arista si decir,muchosca´lculospuedenrealizarsedemanerara´piday
+dosprocesadoresesta´nconectados,f´ısicaolo´gicamente,ca- simple.Algunaspropiedadesdelhipercubofuerondadaspor
+daarista(i,j)representaunenlacedecomunicacio´ndedos SaadySchultz[13]yseresumenenelsiguienteresultado.
+v´ıasentrelosprocesadoresiy j;esdecir,dosprocesadores Teorema1. Todod−cubo,Q ,donded=logn; n=2d,tiene
+d
+conectadosporunenlacepuedenintercambiardatosdefor- lassiguientespropiedades:
+madirectaysimulta´nea.Losprocesadoressecomunicanpor (a)Notieneciclosdelongitudimpar; (b)sudia´metroesd;
+mensajes, v´ıa los enlaces. Cada procesador tiene su propia (c)Esunagra´ficad−conexa; (d)Esunagra´ficasime´tricapor
+memorialocalynohaymemoriacompartidadisponible;cada ve´rtices; (e)Hay(d!)·2d diferentesmanerasdeenumerar
+procesadortieneaccesoso´loasusvariables.Existenvarias sus ve´rtices; (f) La distancia entre cualesquiera dos nodos
+formasdeorganizarlosprocesadoresllamadastopolog´ıasoar- (procesadores) i y j es igual al nu´mero de bits en los que
+quitecturas.LaFigura1muestracuatroarquitecturasba´sicas: difieren;as´ı,ladistanciaesalmenosd.
+(a)arreglolineal;(b)anillo;(c)mallay(d)toro. Recordemosqueeldia´metroeslamayordelasdistancias,
+delasrutasma´scortasentredosnodosydeterminaelnu´mero
+de saltos que un mensaje podr´ıa realizar. Una gra´fica G es
+2. El Hipercubo
+sime´trica por ve´rtices si dados dos ve´rtices u,v, existe un
+Enestaseccio´nsepresentalareddeinterconexio´nHiper- automorfismoφ entrelosve´rticestalqueφ(u)=v.
+cubo,as´ıcomoalgunaspropiedadestopo´logicasdelamisma Setienelasiguientecaracterizacio´ndelhipercubo,[13]:
+y,adema´s,semuestraneilustranalgunosalgoritmosquesacan Teorema2. Unagra´ficaG=(V,A)esund−cubosiyso´lo
+provechodelaarquitectura. silassiguientescuatrocondicionessesatisfacen:
+Un hipercubo Q se define como: Q =K , si d =1 y (1)V tiene2nve´rtices;(2)Cadave´rticetienegradon;(3)G
+d d 2
+Q =Q ×K ,sid>1.Elhipercuboconsistedeuncon- esconexa; (4)CualquierpardenodosadyacentesAyBson
+d d−1 2
+junto de n=2d procesadores interconectados en un cubo talesquelosnodosadyacentesaAylosadyacentesaBesta´n
+booleanod−dimensional,llamadod−cubo.Etiquetamoslos relacionadosenunacorrespondenciaunoauno.
+LasRedesdeInterconexio´nyLaTeor´ıadeGra´ficas 147
+Porejemplo,eltoroT esunagra´ficaconexacon24nodos, pue´sdelasegundaiteracio´n,P :A(0)=16;P :A(1)=20y,
+4 0 1
+cadaverticetienegrado4ynoesdif´ıcilverquecumpleel finalmente,enlaterceraiteracio´n,P :A(0)=36.
+0
+punto(4)delTeorema2,porlotantoT esQ .LaFigura3
+4 4
+muestraaltoroT yalhipercuboQ .
+4 4
+Figura4.EjemplodelasumaenelhipercuboQ
+3
+.
+2.2.2 Enrutamiento(routing)enunhipercubo
+CadaprocesadorP,sobreelhipercubo,requieremandar
+i
+unmensajealprocesadorP ,elcualmantienelavariable
+σ(i)
+x .Todoslosmensajessonenviadosalmismotiempo.El
+σ(i)
+objetivoesdirigirlos(enrutarlos)todos,alavez,porelhiper-
+Figura3.EltoroT
+4
+esQ
+4 cubora´pidamente.Adema´s,cadaaristadelhipercubopuede
+trasmitirso´lounmensajeavez.
+La capacidad que tiene una red para funcionar a pesar
+Elproblemaconsisteenencontrarlasrutasma´scortas,entre
+de que alguno de sus componentes falle es conocida como
+fuentesydestinos,minimizandolosconflictosquepodr´ıansur-
+toleranciaafallasotoleranciaaerrores;elcualesunconcepto
+giraltratardeusarlamismarutaalmismotiempo.Adema´s,
+importanteenlasredesdeinterconexio´n.
+sidosmensajestratandeusarlamismarutaalmismotiempo
+LatoleranciaafallasdeunhipercuboQ esd−1,dado
+d unodeellosdebera´esperarenunbuffer;as´ıquetambie´n,hay
+queQ esunagra´ficad−conexa,sepuedeobservarquehay
+d queoptimizarlosrequerimientosdeespacioparaelbuffer.
+una estrecha relacio´n entre la conexidad y la tolerancia a Disen˜odelAlgoritmo.Lamejorrutadependedeunapermu-
+fallas.
+tacio´n particular de la etiqueta de los nodos. Sin embargo,
+generalmentenoesposibleanalizarlapermutacio´nparaen-
+2.2 OperacionesenelHipercubo contrarlamejorruta,yaqueesta´distribuidaentrelosprocesa-
+Acontinuacio´ndisen˜amosalgoritmossobreelHipercubo dores.Porlotanto,buscamosunesquemaquefuncionebien,
+s´ıncronoparacuatroproblemassimples:Ruteo,Sumaden enpromedio.
+elementos,Difusio´ndelaInformacio´nyMultiplicacio´nde Laclavedelaestrategiaesusaraleatoriedad.Elenruta-
+Matrices. mientoconstadedosfases.Enlaprimerafase,cadaproce-
+sador P env´ıa un mensaje a un procesador elegido aleato-
+i
+2.2.1 SumaenunHipercubo. riamente,bajounadistribucio´nuniforme,deentretodoslos
+Sea A un arreglo de taman˜o n=2d. Cada entrada A(i) procesadoreseindependientementedeldestino,digamosque
+se almacena en la memoria local de cada procesador P i , i, talprocesadordestinoesP σ(i) .Enlasegundafase,elmensaje
+0≤i<n.DeterminarlasumaSdelosnelementosdelarreglo seenv´ıaalolargodelarutama´scortaentreelprocesadorque
+A,sobreelHipercuboQ d ,yalmacenarlaenP 0 .ElHipercubo recibio´ elmensaje,P σ(i) ,yeldestinofinal.
+Q d ess´ıncronoconnprocesadores:P 0 ,P 1 ,...,P n−1 . Todoslosmensajessonenviadosdelamismamanera,as´ı
+Disen˜o del Algoritmo. El algoritmo directo consiste de d podemosconcentrarnosu´nicamenteenunmensaje,esdecir,
+iteraciones. En la primera iteracio´n calcula la suma de las del nodo i al j. Consideremos la representacio´n binaria de
+parejasdeelementosdeprocesadores,cuyos´ındicesdifieren i:b b ···b conposibleiniciodeceros,ylade j:c c ···c .
+1 2 d 1 2 d
+enelbitma´ssignificativo;almacenaesassumasenelsub-cubo Enlaprimerafase,elegimosaleatoriamenteunprocesador
+Q ,cuyosbitsma´ssignificativossean0.Enlassiguientes a,considerandolarepresentacio´nbinariadei,bitporbit,y
+(d−1)
+iteracionesprocededemanerasimilar,sobreelsubcubode decidiendoaleatoriamente,conprobabilidad1/2,silarutase
+unadimensio´nmenor,[9]. dirigealsiguientevecinoono.
+Consideremosahoraunejemploespec´ıficoconochoele- Si decidimos no enviar el mensaje, inmediatamente ha-
+mentos.SeaA=[6,1,5,4,3,7,2,8].Determinarlasumade cemos la siguiente eleccio´n, sin esperar la siguiente ronda.
+loselementosenA. Suponemosqueelca´lculolocalesmuchoma´sra´pidoqueel
+Solucio´n.Comon=8,lasumasera´ sobreelhipercuboQ . pasodelmensaje.Cuandohacemoslaseleccio´nconcerniente
+3
+Losdatosson:A(0)=6,A(1)=1,A(2)=5,A(3)=4,A(4)= alu´ltimobitlarutaaleatoriaquedaconstruida.Cadaeleccio´n
+3,A(5)=7,A(6)=2,A(7)=8.LaFigura4muestraco´mo serealizalocalmente.
+van efectua´ndose las sumas sobre el Hipercubo Q . Des- Comotodoslosprocesadoresenv´ıanmensajesalmismo
+3
+pue´s de la primera iteracio´n P contiene A(0)=6; P tiene tiempo,puedehaberma´sdeunmensajeesperandoaseren-
+0 1
+A(1)=8;P contieneA(2)=7;P contieneA(3)=12.Des- viadoatrave´sdelamismaruta,genera´ndoseconflictos.En
+2 3
+148 LasRedesdeInterconexio´nyLaTeor´ıadeGra´ficas
+estecaso,losmensajessonalmacenadosenunacola(buffer),
+enformaaleatoriasihayma´sdeuno,ysonenviadoscuando
+laaristaquedadisponible.Cadanu´merok,enunrangoapro-
+piado,tienelamismaprobabilidaddeserelegidocomoun
+destinoaleatorio.
+Elenrutamientodelprocesadora,aldestino jserealiza
+demaneradeterminista.Supongamosquelosprocesadoresa
+Figura6.Difusio´ndelaInformacio´nenQ
+3
+.
+y jdifierenent bits,con´ındicestalesquek <k <···<k.
+1 2 t
+Elmensajeesenviadoalcambiark ,luegok yas´ıdemanera
+1 2
+(P,P)y(P,P);yas´ısucesivamente,[9].
+sucesiva. 0 2 1 3
+EnlaFigura6seilustragra´ficamenteco´mosevadifun-
+Esteesquemadeenrutamientoessimpledeimplementar.
+diendolainformacio´n,iteracio´nporiteracio´nsobreQ .
+Lasrutasnonecesariamentesonlasma´scortas.Lalongitudde 3
+cadaruta,sinembargo,esaloma´s2d.Laprincipalpropiedad
+de estas rutas es que, con muy alta probabilidad, generan 2.3 EncajesoInmersiones
+pocosconflictos.As´ı,seesperaquelapermutacio´nsetermine En esta seccio´n, analizaremos el problema de mapear
+enO(d)pasos. otrastopolog´ıas(anillosymallas)enelhipercubo.Dadauna
+gra´ficaG=(V,A)con|V|≤2d,asignamoslosve´rticesdela
+gra´ficaalosnodosdelhipercubodemodoquetodove´rtice
+adyacenteenlagra´ficacorrespondaanodosadyacentesenel
+d−cubo.Existenprincipalmentedosrazonesporlascuales
+talesasignacionessonimportantes:(1)Algunosalgoritmos
+puedenserdesarrolladosparaotraarquitecturaparalacual
+funcionaperfectamente.Entoncessepodr´ıaaplicarelmismo
+Figura5.Enrutamientoenunhipercubo algoritmo con un poco de esfuerzo de programacio´n. Si la
+arquitecturaoriginalsepuedemapearenelhipercubo,e´ste
+Ilustramos con un ejemplo en Q
+3
+. Supongamos que el sera´ fa´cildelograr.(2)Unproblemadadopuedeteneruna
+procesador origen es i=000 y el destino es j=110. Con estructurabiendefinidaqueconduceaunpatro´nparticular
+probablidad1/2preguntamossienviamoselmensajea100, de comunicacio´n. El mapeo de la estructura puede resultar
+supongamos que la respuesta es no. Luego preguntamos si enunahorrosustancialeneltiempodecomunicacio´n.Sila
+cambiamoselsegundobit,esdecir,siseenv´ıaa010,seala mallaesta´ perfectamentemapeadaenelhipercubo,entonces
+respuestas´ı.Finalmente,preguntamossiseenv´ıahaciael011 so´lo se requiere comunicacio´n local entre los nodos del hi-
+yseas´ılarespuesta.Deestamanera,elprocesadoraleatorio percuboloqueresultaenahorrosimportantesentiemposde
+esela=011.LaFigura5(b),muestralarutaparcialobtenida, transferencia.
+sobre el hipercubo. Ahora tenemos: a=011 y j=110, la
+rutaqueda:a=001→111→111→110= j.LaFigura5(c), 2.3.1 Inmersio´nsobreanillosyarregloslineales
+presentalarutafinal. Dadounanillocon2n ve´rtices,consideremoselproble-
+madeasignarsusve´rticesenlosnodosdeunhipercubode
+2.2.3 Difusio´ndelaInformacio´n,Broadcasting. tal manera que se preserven las adyacencias entre los no-
+El objetivo es enviar un elemento X, almacenado en el dos.Otraformadeveresteproblemaesbuscandounciclo
+registroD(0)delprocesadorP 0 atodoslosotrosprocesadores delongitudN =2n quepaseporcadanodounayso´louna
+P i deunhipercuboQ p ,donde p=nd. vez,esdecir,buscamosunciclohamiltonianoenunhipercu-
+Un a´rbol generador proporciona la solucio´n a este pro- bo.Sinumeramoslosnodosdeunhipercubodemodoque
+blema. Hay que tener rutas alternas, por si falla un enlace, dos nodos vecinos difieren en uno y so´lo un bit, un circui-
+estoseconsigueconstruyendoa´rbolesgeneradoresajenospor to hamiltoniano simplemente representa una secuencia de
+aristas.Sitalesa´rbolessonpocoprofundosybalanceados,la nu´merosbinariosdenbitstalesquecualesquieradosnu´me-
+comunicacio´nsera´ ma´seficiente. rossucesivostienensolounbitdiferentedemodoquetodos
+Se tiene que un hipercubo Q posee d arboles genera- losnu´merosbinariosdenbitssera´nrepresentados.Lassuce-
+2d
+doresajenosporaristasyconlasaristassobrantesseforma sionesbinariasconestaspropiedadessonllamadasCo´digos
+unatrayectoriadelongitudd;parageneraresosd a´rbolesse Gray.Haydistintasformasenlascualesunco´digoGraypue-
+aprovechalaestructuradelared(hipercubo),[2]. desergeneradoperoelme´todoma´sconocidoeselCo´digo
+Disen˜odeunAlgoritmo.Laestrategiaessimple:Iniciamos GrayReflejado,seconstruyedelasiguientemanera:Comen-
+desdeladimensio´ndemenorordenhastalademayororden, zamosconlasucesio´ndelosdosnu´merosdeunbit,0y1;
+consecutivamente,end iteraciones.Durantelaprimeraitera- e´steesunco´digoGray1-bit.Paraconstruirunco´digoGray
+cio´n, P manda una copia de X a P usando el enlace entre 2-bittomamoslamismasucesio´neinsertamosun0enfren-
+0 1
+ellos, (P,P); durante la segunda iteracio´n, P y P env´ıan te de cada nu´mero, despue´s tomamos la sucesio´n en orden
+0 1 0 1
+copiasdeX aP yP,respectivamente,utilizandolosenlaces inversoeinsertamosun1enfrentedecadanu´mero.As´ı,ob-
+2 3
+LasRedesdeInterconexio´nyLaTeor´ıadeGra´ficas 149
+Figura7.MapeodeunAnillosobreelHipercubo Figura8.MapeodeunaMallasobreelHipercubo
+tenemoslassucesiones:G ={0,1},G ={00,01,11,10}y paraacomodarunve´rticedelamallapornodoeneln−cubo.
+1 2
+G ={000,001,011,010,110,111,101,100} Entenderemos por mapeo de la malla en el cubo a la
+3
+Demanerageneral,seaGRlasucesio´nobtenidaapartirde asignacio´ndeve´rticesdelamallaenlosnodosdeln−cubo,
+i
+G invirtiendoelordendelasentradasypor0G alasucesio´n detalmaneraquelapropiedaddepreservaradyacenciasse
+i i
+obtenidaalponerun0acadaelementodelasucesio´n.Ana´lo- conserve,esdecir,talquedosve´rticesvecinosenlamallason
+gamentepara1G.As´ı,elco´digoGraypuedesergeneradode asignadosanodosvecinoseneln−cubo.
+i
+manerarecursivapor:G ={0G ,1GR}. A continuacio´n se ejemplifica el proceso de inmersio´n.
+n+1 n n
+Los co´digos Gray nos permiten mapear anillos, cuyas Consideremosunamallabi-dimensionalyde8×4;esdecir,
+longitudessonpotenciasde2,enhipercubos.Supongamos tenemosd=2, p 1 =3,p 2 =2,n=p 1 +p 2 =5.Unnu´mero
+ahora que tenemos un anillo de longitud (cid:96) que queremos binarioAdecualquiernododel5-cubolopodemosseparar
+mapearenunhipercubo.Primero,observemosqueelmapeo en dos partes: sus primeros 3 bits y sus u´ltimos 2 bits, lo
+es posible so´lo cuando (cid:96) es par ya que de acuerdo con el cual escribimos de la siguiente forma: A=b 1 ,b 2 ,b 3 ,c 1 ,c 2
+Teorema1,unhipercubonoadmiteciclosdelongitudimpar. donde b i y c j son bits 0 o´ 1. Se desprende de la definicio´n
+Por lo tanto, suponemos que 4 ≤ (cid:96) ≤ 2n. El problema es deln−cuboquecuandolosdosu´ltimosbitssonfijos,los2p1
+encontrarunciclodelongitud(cid:96)eneln−cubo,donde(cid:96)espar. nodosresultantesformanunp 1 −cubo,conp 1 =3.Delmismo
+Seam=((cid:96)−2)/2ydenotamosporG (m)elCo´digo modo,cadavezquefijamoslosprimerostresbitsobtenemos
+n−1
+Gray(n−1)bitsqueconstadelosprimerosmelementosde un p 2 −cubo.Entonceselmapeoesclaro.Laeleccio´ndeun
+G .Entonces,uncicloquetienelapropiedaddeseadaesel co´digoGrayde3bitsparaladireccio´nX yunco´digoGray
+n−1
+siguiente:{0G n−1 (m),1G n−1 (m)R}. de2bitsparaladireccio´nY,elve´rtice(x i ,y j )delamallaes
+Cuando(cid:96)=2n,seobtieneuncasoparticulardelafo´rmula asignadoalnodob 1 ,b 2 ,b 3 ,c 1 ,c 2 dondeb 1 ,b 2 ,b 3 eselco´digo
+G n+1 ={0G n ,1GR n }.As´ı,podemosafirmarlosiguiente. Grayde3bitsparax i ,mientrasc 1 c 2 eselco´digoGrayde2
+Proposicio´n1.Unanillodelongitud(cid:96)puedesermapeadoen bitsparay j .
+eln−cubocuando(cid:96)espary4≤(cid:96)≤2n,[13]. El mapeo se ilustra en la Figura 8 donde se obtiene el
+Porejemplo,enFigura7elanillodedimensio´n8,genera- nu´merodenodobinariodecualquierve´rticedelamallame-
+doporelco´digoGray,esincrustadoenel3−cuboycumple diante la concatenacio´n de sus coordenadas binaria x y y.
+que4≤8≤23. Por ejemplo, el nodo A=00101 del 5−cubo, se mapea al
+Esfa´cilrealizarlainmersio´ndeunarreglolineal,enlugar ve´rtice(001,01)delamalla.Tambie´nseilustranlosnodos
+deunanillo,eneln−cubo.Essuficientemapearlosnodos B=00111yC=01010
+delarreglolinealP,P,...,P delongitudarbitrarial≤2n−1, As´ı,sillamamossucesio´nGrayacualquiersubsucesio´n
+0 1 l
+sucesivamente,enlosnodosg ,g ,...,g deln−cubo.Dadoun de un co´digo Gray, observamos que cualquier columna de
+0 1 l
+arreglolinealdelongitudarbitraria(cid:96),eln−cubodedimensio´n la malla forman una sucesio´n Gray y cualquier renglo´n de
+ma´s pequen˜a en el cual puede ser mapeado es el cubo de puntos de la malla forma una sucesio´n Gray. Entonces nos
+dimensio´nn=(cid:100)log ((cid:96)+1)(cid:101). referimosalosco´digoantesdefinidoscomo2D-co´digoGray.
+2
+Setieneelsiguienteresultado.
+2.3.2 Inmersio´ndeMallasenelHipercubo Teorema3. CualquiermallaM=m ×m ×···×m eneles-
+1 2 d
+La inmersio´n de mallas, de cualquier dimensio´n, en el paciod−dimensionalRd,dondem
+i
+=2pi puedesermapeada
+hipercuboesunadelaspropiedadesma´satractivasdelato- enunn−cubodonden=p +p +···+p .Lanumeracio´n
+1 2 d
+polog´ıadeln−cuboyesunadelasrazonesprincipalesporla de los ve´rtices en la malla es cualquier numeracio´n de tal
+cuallaarquitecturadelhipercuboesxitosa.Tambie´nusaCo´di- manera que su restriccio´n a cada i−e´sima variable es una
+gosGray.SeaM=m 1 ×m 2 ×···×m d unamallaenelespacio sucesio´nGray,[13].
+d−dimensionalRd,adema´spresuponemosqueeltaman˜ode
+lamallaencadadireccio´nesunapotenciade2;esdecir,para
+3. El Hipercubo Aumentado
+cadai,m
+i
+=2pi.Sean= p
+1
++p
+2
++···+p
+d
+yconsideremos
+elproblemademapearlosve´rticesdelamallaeneln−cubo, ElHipercuboaumentadoesunavariantedelHipercubo,
+detalmaneraqueseasigneunve´rticedelamallaaunnodo aQ seleagreganaristascomplemento;Estoes,losvertices
+n
+deln−cubo.Observemosquetenemoslosnodossuficientes conetiquetasxyxestara´nunidosporunaarista.Porejemplo,
+150 LasRedesdeInterconexio´nyLaTeor´ıadeGra´ficas
+Figura10.A´rbolesBinariosajenosporaristasdeAQ
+3
+Figura9.HipercuboaumentadoAQ
+3
+enQ esta´nlasaristas(000,111)y(001,110).
+3
+Sean≥1.ElcuboaumentadoAQ n dedimensio´nntiene Figura11.A´rbolesS 1 ,S 2 yR n deAQ 3
+2nve´rtices,cadave´rticeesunan−adadeelementosen{0,1}.
+Definimos AQ =K . Para n≥2,AQ se obtiene tomando
+1 2 n
+doscopiasdelcuboaumentadoAQ n−1 ,denotadasporAQ0 n−1 Teorema6. Seax,y∈V(AQ n )=V(AQ0 n−1 )(cid:5)V(AQ1 n−1 ).(1)
+y AQ1 n−1 , y agregando 2×2n−1 aristas entre las dos copias Six,y∈V(AQ0 n−1 ),existeunarutama´scortadexayenAQ n
+quedando: V(AQ0 ) = {0,a ,a ,...,a : a = 0 o a = 1} talquetodossusve´rticesesta´nenAQ0 yana´logamentepara
+n−1 2 3 n i i n−1
+yV(AQ1 )={1,b ,b ,...,b :b =0 o b =1}. Un ve´rti- AQ1 .(2)Seanx∈V(AQ0 )yy∈V(AQ1 ),entonces(2i)
+n−1 2 3 n i i n−1 n−1 n−1
+B c se e = c A u 1 m , = b p 2 0 l , e , b a 3 ( 2 1 , , . ) . a . a 3 , i b ,. = n . , ., d b a e i n , A , e Q d n e 1 n e − s A 1 t , Q e s 0 n i c − y a 1 s s , o o´ , e lo A st s B a´ ip e u a s n r i u a d n t o o a d a a a r i i u , s n 2 ta ≤ v d e´ i e r ≤ l ti h c n i e - , A e e x n Q i A s n t Q e co 1 n u − n n 1 a t , o ( e d x x o , c y s e ) s p − u to r s u v x ta . e´r ( m 2 ti i c a´ i e s ) s e c x o e i n r s ta t A e e Q u n 0 n n A − a Q 1 ( , x n e , x c y o c ) n e − p t r t o u o d ta o y. s m s a´ u s s c v o e´ r r t t a ic e e n s
+percubo, o´ (2) a =b, aqu´ı, AB es una arista complemen-
+i i
+to. La construccio´n recursiva de AQ
+n
+se representa como: 3.2.1 AlgoritmodeEnrutamientoparaAQn.
+AQ =AQ0 (cid:5)AQ1 ,[6]. Seusaelteoremaanteriorparaenviarunmensajedesdeun
+n n−1 n−1
+LaFigura9presentadosilustracionesdeAQ 3 . ve´rticeorigenSaundestinoD=(d 1 ,d 2 ,...,d n ),atrave´sdela
+(S,D)−rutama´scorta.Mientraselmensajeseenv´ıaalolargo
+delatrayectoria,unve´rticeactivoC=(c ,...,c )realizalas
+3.1 PropiedadesdelHipercuboAumentado 1 n
+trestareassiguientes:(1)Calcula[C⊕ D]=(c ⊕ d ,c ⊕
+ElhipercuboaumentadoAQ esunagra´ficasime´tricapor 2 1 2 1 2 2
+n
+d ,...,c ⊕ d ). (2) Busca en [C⊕ D] el menor ´ındice tal
+ve´rtices,es(2n−1)−regular,es(2n−1)−conexay,adema´s, 2 n 2 n 2
+quec ⊕ d =1.(3)Si(c ⊕ d =0)entoncescambiala
+esunagra´ficadeCayley. i 2 i i+1 2 i+1
+i−e´simaentradadeC,c pord;env´ıaelmensajealsiguiente
+Algunaspropiedades,dadasporChoudumySunitha[6], i i
+nodoactivoC(cid:48)=(d ,...,d,c ,...,c ).Si(c ⊕ d =1)
+delhipercuboaumentadoAQ seresumenenlossiguientes 1 i i+1 n i+1 2 i+1
+n entoncescambialai−e´simaentradadeC,c pord;env´ıael
+resultados i i
+mensajealsiguientenodoactivoC(cid:48)=(d ,...,d,c ,...,c ).
+1 i i+1 n
+Teorema4. SeaAQ unhipercuboaumentado.
+n Por ejemplo, un enrutamiento de 000000 a 101011 en
+(1) El dia´metro de AQ es (cid:100)n/2(cid:101), ∀n≥1; (2) Entre cuales-
+n AQ ,ser´ıa000000→100000→101000→101011
+quieradosve´rticesx,y∈V(AQ )existen2n−1trayectorias 6
+n
+internamentedisjuntasdexay,paran≥4.(3)Setieneque
+κ(AQ )=1, κ(AQ )=3, κ(AQ )=4 y κ(AQ )=2n−1,
+3.2.2 Difusio´ndelaInformacio´nparaAQn.
+1 2 3 n
+El algoritmo de difusio´n de la informacio´n para cubos
+paran≥4.
+aumentadosessimilaralalgoritmoparahipercubos.Como
+Teorema5. SeaAQ unhipercuboaumentado.
+n AQ esunagra´ficasime´tricaporve´rtices,bastadescribirel
+(1) Para toda n≥2, el hipercubo aumentado AQ contiene n
+n algoritmoconorigenenel0n=00···0,(nveces).
+un2k−cicloparacadak,2≤k≥2n−1;(2)Paran≥3,AQ
+n Elalgoritmoiniciaenviandoelmensajedesde0natodas
+contiene dos a´rboles binarios completos ajenos por aristas
+sobre2n−1ve´rticesycuyara´ızesta´ enOn.(3)Paran≥3, las aristas incidentes a e´l. Se etiquetan todos los nodos y
+aristascuyove´rticeiniciales0n.Despue´s,mientrasexistaun
+AQ contiene n−1 a´rboles generadores ajenos por aristas
+n ve´rticex=OkA, 2≤k<n,talquex =1eingrado1,en
+(S ,...,S )yconlasaristasrestantesseformauna´rbolR . k+1
+1 n−1 n
+paralelo,env´ıaelmensajedesdexatrave´sdelasaristasque
+SeilustraelTeorema5,conFigura10elinciso(2)ycon
+noesta´netiquetadasincidentesae´l,[6].
+laFigura11el(3).
+La Figura 12 ilustra el algoritmo. Este algoritmo toma
+(cid:100)n/2(cid:101)pasosparatrasmitirelmensajeatodoslosve´rticesal
+3.2 AlgoritmosparaelHipercuboAumentado
+mismotiempo.Encomparacio´nconelhipercuboelnu´mero
+Un algoritmo de enrutamiento para AQ utiliza la ruta
+n deve´rticesquerecibenelmensajealavezesmayor.
+ma´s corta entre cualquier para nodos. En particular, usa el
+siguienteresultado,[6].
+LasRedesdeInterconexio´nyLaTeor´ıadeGra´ficas 151
+[2] B. Barden, R. Libeskind-Hadas, J. Davis, and W. Wi-
+lliams. Ontheedge-disjointspanningtreesinhypercu-
+bes. InformationProcessingLetters,70:13–16,1999.
+[3] J. A. Bondy and U. S. R. Murty. Graph Theory with
+Applications. AmericanElsevier,NewYork,1976.
+[4] G.Chartrand. IntroductoryGraphTheory. DoverPubli-
+Figura12.Difusio´ndelaInformacio´nenAQ
+4
+.
+cation,1977.
+[5] O.R Chartrand, G. & Oellermann. Applied an Algo-
+4. Conclusiones
+rithmicGraphTheory. InternationalSeriesinPureand
+Duranteeldesarrollodeestedocumentorevisamospro- AppliedMathematics.McGraw-Hill,1993.
+piedadestopolo´gicasyalgor´ıtmicasdelHipercuboyalgunas
+[6] S.AChoudumandV.Sunitha. Augmentedcubes. Net-
+desusvariantesdelHipercubo.
+works,40:71–84,2002.
+Enredesdeinterconexio´n,lasimulacio´ndeunaarquitec-
+turaporotraesimportante.Elproblemadelasimulacio´nde
+[7] G.DeMarcoandU.Vaccaro. Broadcastinginhyper-
+unaredporotrasemodelacomounproblemadeinmersio´nen
+cubesandstargraphswithdynamicfaults. Information
+gra´ficas.Lasredesdeciclosotrayectoriassonadecuadaspara
+ProcessingLetters,66:321–326,1998.
+eldisen˜odealgoritmossencillosconbajoscostosdecomuni-
+cacio´n.Estoshanmotivadoaungrannu´merodeinvestigacio´n [8] L.H.HsuandCh.K.Lin. GraphTheoryandIntercon-
+enloscaminosociclosquesoninmersiblesenotrasredesde nectionNetworks. TaylorandFrancisGroup,2009.
+interconexio´n.
+SehaobservadoqueelHipercuboysusvariantestienen [9] J. JaJa. Introduction to parallel algorithms. Addison
+estructuras recursivas, y as´ı todas las pruebas proceden de Wesley,1992.
+resultadosconocidosyaplicandoinduccio´nsobreelordende
+[10] S.LakshmivarahanandS.K.Dhall. Ring,torusandhy-
+lagra´fica.Enelprocesodelasdemostraciones,paraprobar
+percubearchitectures/algorithmsforparallelcomputing.
+labasedeinduccio´nengra´ficascuyoordenespequen˜o,re-
+ParallelComputing,25:1877–1906,1999.
+gularmenteseutilizalaobservacio´noverificacio´ndirecta;en
+lahipo´tesisdeinduccio´neslaconstruccio´ndeuncaminoo
+[11] S.LatifiandA.El-Amaway. Onthefoldedhypercubes.
+deunciclorequeridoporalgunaspropiedadesestructurales
+IProc.ICCP,pages180–187,1989.
+delasgra´ficas.As´ı,algunosinvestigadores,consideranquela
+clavedeestudiarproblemasdeinmersio´ndeciclosytrayecto- [12] U.Manber. IntroductiontoAlgorithms.AcreativeAp-
+riastantoenelHipercubocomoensusvariantesy,engeneral, proach. AddisonWesley,1999.
+enotrasgra´ficas.
+AlgunasaportacionesimportantesdelaTeor´ıadeGra´ficas [13] Y. Saad and M.H. Schultz. Topological properties of
+alasRedesdeinterconexio´nson:(1)Eldisen˜odealgoritmos hypercubes. IEEE Trans. on Computer, 37:867–872,
+decomunicaciono´ptimos:Sisabemosqueeldia´metrodela 1988.
+gra´ficaespequen˜o,podemostomarventajadeello;deigual
+[14] S. Wagner and M. Wild. An decomposing the hyper-
+formasisabemosquesetienenestructurasajenasporaristas,
+cubeq intonisomorphicedge-disjointtrees. Discrete
+comoa´rbolesgeneradores,cicloshamiltonianosotrayectorias. n
+Mathematics,312:1819–1822,2012.
+(2) Alta Confiabilidad: las propiedades de la gra´fica garan-
+tizan el comportamiento de la red. (3) Rica estructura: Las [15] J. Werapun, S. Itakosum, and V. Boonjing. An effi-
+propiedadesdeinmersio´ngarantizanquesepuedemodificar cientparallelconstructionofoptimalindependentspan-
+levementeunalgoritmoalcambiardearquitectura.Lades- ningtreesonhypercubes. J.ParallelDistrib.Comput.,
+composicio´n de la gra´fica en a´rboles, trayectorias, ciclos y 72:1713–1724,2012.
+otrassubgra´ficasfacilitannoso´loeldisen˜odealgoritmossino
+tambie´nlademostracio´nyverificacio´ndepropiedades. [16] J.M.XuandM.J.Ma. Surveyonpathandcyclesem-
+beddinginsomenetworks. Front.Math.,40:217–252,
+2009.
+Referencias
+[1] B.W.ArdenandK.W.Tang.Representationandrouting [17] J.SYang,J.MChang,S.MTang,andY.L.Wang.Parallel
+ofcayleygraphs. Technicalreport,Dep.ofElectrical constructionofoptimalindependentspanningtreeson
+Engineering,UniverityofRochester,1989. EL-89-02. hypercubes. ParallelComputing,33:73–79,2007.

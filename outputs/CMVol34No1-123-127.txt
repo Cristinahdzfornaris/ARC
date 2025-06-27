@@ -1,0 +1,645 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.123-127
+Recibido06-2020,Aceptado07-2020
+Predicción a corto plazo del comportamiento de la
+COVID-19 en Cuba: Un análisis desde la perspectiva
+del Aprendizaje Automático.
+Short-term prediction of COVID-19 behavior in Cuba:
+An analysis from the perspective of Machine
+Learning.
+Héctor González1, Carlos Morell2, Yanet Rodríguez3*
+Resumen La COVID-19 es una enfermedad infecciosa que se propaga rápidamente por todo el mundo y
+que ha representado un reto importante para los sistemas sanitarios nacionales. Cuba también se ha visto
+afectada por esta pandemia y la capacidad de predecir el comportamiento a corto plazo de la cantidad de
+casosinfectadosacumuladosenundíaesunaherramientamuyútilquenecesitanlasautoridadessanitarias
+nacionales.Elpresentemanuscritoabordaelproblemadelapredicciónacortoplazodelavariabledeinterés
+mediante el uso de técnicas clásicas del Aprendizaje Automatizado. Para ello se propone un método para
+el pre-procesamiento de los datos originales que permita la creación de un conjunto de aprendizaje válido.
+Posteriormenteseseleccionayentrenaunmodelopredictivobasadoenlaregresiónlinealconpenalizaciónque
+permitehacerprediccionesacertadasyrobustasdelavariablebajoestudio.
+Abstract COVID-19isaninfectiousdiseasethatspreadsrapidlythroughouttheworldandhasrepresented
+amajorchallengefornationalhealthsystems. Cubahasalsobeenaffectedbythispandemicandtheability
+topredicttheshort-termbehaviorofthisdiseaseisaveryusefultoolthatthenationalhealthauthoritiesneed.
+Thismanuscriptaddressestheproblemofshort-termpredictionofthevariableofinterestthroughtheuseof
+classicalmachinelearningtechniques. Forthis,amethodisproposedforthepre-processingoftheoriginaldata
+thatallowsthecreationofavalidlearningset. Subsequently,apredictivemodelbasedonlinearregressionwith
+regularizationisselectedandtrainedtoallowaccurateandrobustpredictionsofthevariableunderstudy.
+1Facultad2,UniversidaddelasCienciasInformáticas,LaHabana,Cuba,hglez@uci.cu
+2CentrodeInvestigacionesdelainformática,UniversidadCentral"MartaAbreu"deLasVillas,VillaClara,Cuba,cmorellp@uclv.edu.cu
+3DepartamentodeCienciasdelacomputación,UniversidadCentralMartaAbreudeLasVillas,VillaClara,Cuba,yrsarabia@uclv.edu.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción Estetipodedatos,coleccionadodeformaperiódicadeuna
+variabledeinterés,seconocecomoserietemporalunivariada.
+Elpronósticodeaparicióndenuevoscasosacumuladosde Tradicionalmenteelpronósticoenseriesdetiemposerealiza
+infectadosdeCOVID-19cadadíaenelpaísesunelemento utilizandoherramientasestadísticasbienestablecidascomo
+clave en la toma de decisiones de las autoridades guberna- porejemplolosmodelosauto-regresivosdeBox-Jenkinsoel
+mentalesysanitarias.Estenúmerodependedevariosfactores, enfoquedeHolt-Wintersalsuavizadoexponencial[3,6].Sin
+lamayoríadeloscuálessonmuydifícilesdecuantificarde embargo,existeunmarcadointerésenlacomunidadcientífica
+formaprecisa.Entalsentido,estudiosrevelanquelaaparición porabordarestaproblemáticautilizandotécnicasdeApren-
+denuevoscasosestárelacionadaconlatasadetransmisión dizaje Automático. Esta disciplina, dedicada al estudio de
+delvirus,laduracióndelaenfermedad,lamovilidaddelas algoritmoscapacesdeaprenderuncomportamientoapartir
+personasylasmedidashigiénicasydeaislamientosocialque delasupervisiónqueaportanlosdatos,hatomadounauge
+ellas tomen [9, 16]. Excepto la duración de la enfermedad, impresionanteenlosúltimosañosyhacosechadoéxitosim-
+el resto de los factores resulta imposible cuantificarlos con pactantesencasitodaslasáreasdeaplicación[2,1,5,10,8].
+precisión.Esporelloqueenestetrabajoseintentaconstruir Enelcasoespecíficodelasseriestemporales,noexisteun
+unmodelopredictivoapartirdelosdatosdisponiblesdenue- consensoaundecuándoseríamejorunenfoqueuotro[7].
+voscasosaparecidoscadadía,desdeeliniciodelaepidemia.
+PredicciónacortoplazodelcomportamientodelaCOVID-19enCuba: Unanálisisdesdelaperspectivadel
+124 AprendizajeAutomático.
+Elpresentetrabajotienecomoobjetivolautilizaciónde Ademas,seutilizaronunafamiliadefuncionesconforma
+técnicasconvencionalesdelAprendizajeAutomáticoparael polinomial (En nuestro problema hasta de grado 5), expo-
+pronósticodenuevoscasosacumuladosdeinfectadosenun nencialespositivasynegativasyunafuncióntrigonométrica
+díadelCOVID-19,apartirdelcomportamientodelosdías senosoidalquepermitemodelarelruido.Finalmente,seusa
+anteriores. Entre las contribuciones del presente trabajo se unbancodem=8funcioneslascualesalseraplicadassobre
+propone: laventanadedatosnospermiteobtener p=m|t|descriptores.
+Cadavalordelaventanaaplicadoalafamiliadefunciones
+Realizarlatransformacióndelaseriededatosuniva-
+genera un conjunto de datos para cada día de estimación
+riadaenunconjuntodemuestrasdeaprendizaje.Los
+representadodelaforma:
+datosdisponiblesseenriquecenconlacreacióndenue-
+vosatributosquecapturenelposiblecomportamiento
+nolinealylarelacióntemporaldelavariabledeinterés. x ∈Rp={f (y )} (1)
+i j i−t j=1,...,m
+UtilizarunalgoritmodeRegresiónLinealconPenaliza- t=1,...,|t|
+ción(LASSO)[12,13,14]quepermiteconformarun
+modelopredictivopara:
+LuegodelasprimerasNobservacionesdelcomportamien-
+todelaaparicióndenuevoscasosdelvirus,sepuedeestimar
+• Obtenerprediccionesrápidasyconelevadapreci- laimportanciaw decadafunciónalseraplicadosobrecada
+i
+sión. elementodelaventanadetiempo.
+Paralatransformacióndelosdatosusaremosunmodelo
+• Seleccionar de manera automática las variables
+Box-Coxconelbancodefuncionesqueseespecificanenla
+explicativas.
+siguientetablalascualesfueronenunciadasconanterioridad:
+• Evitarelsobre-ajustedelmodeloparaelconjunto
+dedatosconquefueentrenado.
+Tabla1.FuncionesBox-Coxempleadasenelmodelo.
+f (x)=x f (x)=x2
+La validación de los resultados muestra que el modelo 1 2
+f (x)=x3 f (x)=x4
+propuestoobtienebuenosresultadosenlapredicciónacorto 3 4
+f (x)=x5 f (x)=1−e−αx
+plazodelosnuevoscasosacumuladosinfectadosdeCOVID- 5 6
+f (x)=eαx−1 f (x)=sin(βx)
+19enCuba.Tambiénsehancreadomodelossimilarespara 7 8
+lasprovinciasdeVillaClarayPinardelRíoconresultados
+satisfactorios. Losvaloresdelosparámetrosα yβ seránconsiderados
+encorrespondenciaconlaescalademedicióndelosdatos.
+Transformación de los datos
+Modelo autoregresivo con penalización
+LosdatosfueroncolectadosdesdeelserviciooficialCO-
+VID-19CUBADATAdisponibleen[4]1.Setomaroncomo tipo LASSO
+datosdereferenciaparaelestudioelcomportamientodela
+Variantedeestimaciónparaundía
+aparicióndenuevoscasosparaelpaís(data-cu),lasprovincias
+Paraexpresarelmodelodeestimación,emplearemosun
+VillaClara(data-vc)yPinardelRío(data-pr)porserrepre-
+enfoqueenelqueconsideraremostodoelconjuntodefuncio-
+sentativosdelosdiferentescomportamientosquehatenido
+nes{f (y )}ysusrespectivospesosasociadosw .Luego,
+la propagación del virus en el territorio. El registro de los j i−t jt
+esposiblemedianteunalgoritmodeaprendizajeobtenerun
+primeroscasosconfirmadosenelpaísdatandel11demarzo
+predictorquetomelaformadefinidaenlasiguienteexpresión:
+de2020conlocualelmuestreodeladatainiciaenesterango
+defecha.Finalmente,quedaronconformados3conjuntosde
+datosdeseriesdetiempounivariadasparaestudiarlosmo- |t| m
+delosdepronósticosenlapropagacióndelapandemia.Para yˆ =∑ ∑w f (y ); i=|t|,...,N (2)
+i jt j i−t
+elestudioseempleoelvaloracumuladodenuevoscasosy t=1j=1
+losvaloresdelavariablefueronnormalizandoamediaceroy
+Elmodelodeaprendizajeconsisteenaprenderlacombi-
+varianzauno.
+nación lineal, por medio de los pesos w , de las funciones
+Paralamodelacióndelproblemadeestimacióndelcom- jt
+debaseexpresadasenlatabla1.Enprincipioseasumeque
+portamientodenuevoscasospositivoenCubaseempleaun
+todas las funciones de base están presentes y por tanto, la
+modeloquetomaencuenta,demaneralocal,laapariciónde
+magnituddeestospesosenrelaciónconelrestodefinirála
+casospositivosenunintervalodetiempodedíasanteriores
+prevalenciadeestasfuncionesrespectoalasdemás.Unpunto
+quedenotaremosport.Deestemodolaestimacióndelaapari-
+quedistinguelapropuesta,eselusodeunregularizadortipo
+cióndenuevoscasosy dependerádecomosehacomportado
+i
+LASSO que permite anular aquellos pesos irrelevantes del
+losdíasanterioresy ,y ,...,y
+i−1 i−2 i−|t|
+modeloyporende,seleccionarelsubconjuntodefunciones
+1https://covid19cubadata.github.io/#cuba cuyacombinaciónlinealponderadaseajustealosdatosreales.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.123-127
+PredicciónacortoplazodelcomportamientodelaCOVID-19enCuba: Unanálisisdesdelaperspectivadel
+AprendizajeAutomático. 125
+Pararesolverelproblemasdeaprendizajesehautilizadoco- conunprocedimientode5-foldsCVinternoparaescogerel
+mofunciónobjetivoelerrormediocuadráticocombinadocon mejorvalordelparámetroλ.Seempleounaventana|t|=3
+lafunciónderegularización,comoseexpresaenlaecuación demodoqueelproblematienedimensión p=24.
+3.
+Estimaciones de los 5 mejores modelos dataset Cuba
+1600
+Real
+N (cid:32) |t| m (cid:33)2 |t| m 1400 E O s p t t i i m m a is d t o a
+w jt ∗=argmin ∑ y i −∑ ∑w jt f j (y i−t ) +λ ∑ ∑|w jt | 1200 Pesimista
+wjt i=|t| t=1j=1 t=1j=1 1000
+(3) sosac
+800
+En el modelo, el valor de λ controla el peso de la regulari- 600
+zación y por tanto el sobre ajuste del mismo. Esta función 400
+deregularizacióndiscriminaaquellosatributosirrelevantes 200
+del problema, o lo que es equivalente, permite seleccionar
+0
+5 10 15 20 25 30 35 40 45 50
+delbancodefuncionescox-box,alasquesecorrespondenal días
+modelounivariado.
+(a)ComportamientodelconjuntodedatosCuba
+Variantedeestimaciónparaqdías
+Estimaciones de los 5 mejores modelos dataset Villa Clara
+Paraformalizarelproblemadelaestimacióndemúltiples 200
+díasdemanerasecuencial,seempleaunesquemasimilaralos 180 Real
+Estimado
+códigosdecadenas,enunescenariodepredicciónconsalidas 160 O Pe p s ti i m m i i s s t t a a
+140
+múltiples[11].Paralaestimacióndelosqdíasseproponeun
+120
+d
+m
+ía
+o
+s
+de
+a
+l
+n
+o
+te
+d
+r
+e
+io
+p
+r
+r
+p
+e
+a
+d
+r
+i
+a
+cc
+o
+i
+b
+ó
+t
+n
+en
+q
+e
+u
+r
+e
+l
+t
+o
+o
+s
+m
+n
+e
+ue
+e
+v
+n
+o
+c
+s
+u
+v
+e
+a
+n
+l
+t
+o
+a
+re
+la
+s
+s
+d
+e
+e
+s
+l
+t
+a
+im
+se
+a
+r
+c
+i
+i
+e
+o
+,
+n
+c
+e
+o
+s
+m
+d
+o
+e sosac
+100
+80
+quedaexpresadoenelsegundoterminodelaexpresión4.Este
+60
+enfoquenomodificaelmodelodeaprendizajesinembargoel
+40
+deslizamientodelaventanahacequelasnuevasestimaciones 20
+formenpartedelasvariablespredictoras. 0
+5 10 15 20 25 30 35 40 45 50
+días
+|t|−l m l−1 m i=|t|,...,N (b)ComportamientodelconjuntodedatosVillaClara
+yˆ = ∑ ∑w f (y )+∑ ∑w f (yˆ);
+i+l jt j i−t tj j t l=1,...,q
+t=1 j=1 t=1j=1 Estimaciones de los 5 mejores modelos dataset Pinar del Río
+80
+(4)
+70 R Es e t a im l ado
+Optimista
+Enestemodeloelprimerdíaseestimaconlasvariables 60 Pesimista
+predictorasdefinidas,entantoparaelsegundodíasedesecha 50
+d
+el
+ía
+ú
+.
+lt
+E
+im
+st
+o
+e
+d
+p
+í
+r
+a
+o
+d
+ce
+e
+s
+l
+o
+av
+se
+en
+r
+t
+e
+a
+a
+n
+l
+a
+iz
+y
+a
+s
+d
+e
+e
+a
+f
+g
+o
+r
+r
+e
+m
+ga
+a
+l
+s
+a
+e
+e
+c
+s
+u
+ti
+e
+m
+nc
+ac
+ia
+ió
+l
+n
+m
+d
+ie
+e
+n
+lp
+tr
+r
+a
+im
+ss
+e
+e
+r sosac
+40
+30
+deseenestimarnuevosdías.Enlamedidaenquelaventana
+20
+devariabledeentradaseencuentreenelmismoordendelos
+díasaestimarlosresultadosalcanzadossedebenajustaral 10
+modelo,entantoelnúmerodedíasaumentelosresultados 0
+5 10 15 20 25 30 35 40 45 50
+esperadossealejarandelacurvareal. días
+(c)ComportamientodelconjuntodedatosPinardelRio
+Resultados y Discusión. Figura1.ModelosPronósticosobrelosconjuntosdedatos
+estudiadosparalavariantedeestimacióndeldíasiguiente.
+Seconstruyerontresconjuntosdedatosapartirdelain-
+formacióndenuevoscasosdeCOVID-19reportadosencuba
+durantelosprimeros49díasdelaenfermedad.Losúltimos Losresultadosdelasestimacionesylasdesviacionesde
+7díasfueronseparadosparaevaluarelmodelomientraslos loscasosfavorablesynofavorablessemuestranenlafigura
+restantesdíasseemplearonparaentrenarelmodelo.Elpunto 1,paracadaconjuntodedatosquesehaestudiado.Elmodelo
+departidaparaquelosmodelosdeaprendizajefuncionaran depronósticofavorableydesfavorableseconsideróenbase
+adecuadamentefueronlosprimeros30díasdelaenfermedad, a los resultados del valor medio y las desviaciones en las
+tiemposuficienteparaqueseminimicenelsesgoestadístico ejecucionesrealizadasenelproblemadeaprendizaje.Como
+que se introduce cuando hay pocos casos para entrenar el seapreciaenlascurvasqueesbozanelcomportamientoreal
+modelo.Serepitieron20corridas,enunaescalalogarítmica, y estimado de nuevos casos acumulados existe muy poca
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.123-127
+PredicciónacortoplazodelcomportamientodelaCOVID-19enCuba: Unanálisisdesdelaperspectivadel
+126 AprendizajeAutomático.
+variabilidadenlosresultados.Deigualmaneraelconocerrado (RMSE)paralosconjuntodedatosestudiados.Losresultados
+decasosfavorablesydesfavorabledamuestradelaestabilidad reportadosenlatablasehandivididoenresultadosparaen-
+en las ejecuciones de los modelos de aprendizaje. Se debe trenamiento,pruebaylaseriecompletaenlaestimacióndel
+notar que el uso de ventanas de tiempo permitió capturar siguientedía.Lavariabilidadmáximarelativaenlascurvas
+cambios bruscos como los que se aprecian en la provincia depronósticosobrelosconjuntosdedatosestudiadosenel
+VillaClaraentrelosdías35y40oenPinardelRíoentrelos modelo de 1 día y el del 5 día no supera el 9,4%. Este re-
+días44y47.Paralamayoríadelosvaloresdelasseries,el sultadoindicaunaestabilidadenelmodelodepropagación
+valorrealdecasosacumuladosseencuentraenelrangode de cadenas combinado con los mecanismos de aprendizaje
+las curvas que hemos denominado optimista y pesimista, a empleadosenesteestudio.
+excepcióndelosúltimosdíasdemuestreodelconjuntoPinar
+delRíodondehaocurridouncambiobruscodelaserieenel Estimaciones para los 5 días siguientes Cuba
+1600
+finaldelamisma.Lasestimacionesquesemuestrandelos
+Real
+primeros30días,secorrespondenconlasestimacionesdelos 1400 1 2 d d í í a a
+3 día
+propiosdatosdeentrenamientoevaluadosenelmodelo,de 1200 4 día
+5 día
+ahíqueenlatabla2seestablezcaunadiferenciaciónenlos
+1000
+resultados.
+Acontinuaciónseplanteanlasexpresionesobtenidasde
+sosac
+800
+cadamodelodeestimaciónasociadoacadaconjuntodedatos.
+600
+Enlosmismosprevalecelasfuncionesexponencialespositi-
+400
+vasocrecientes.Deigualmanera,seobservanelconjuntode
+funcionesseleccionadasluegodelaresolucióndelproblema 200
+deoptimización.Nosllamalaatenciónqueenelprocesode
+0
+aprendizajeprevalecensoloaquellasdependenciatemporales 5 10 15 20 25 30 35 40 45 50
+días
+(a)ComportamientodelconjuntodedatosCuba
+conelementosdeldíaanteriordelaserie.Estehecholoatri-
+buimosalaformadelaserietemporaldelostresconjuntos Estimaciones para los 5 días siguientes Villa Clara
+200
+estudiados,concambioscrecientesrelativamentesuaves,por
+180 Real
+loqueenpróximostrabajosdebemosseleccionarconjuntos 1 día
+dedatosquepresentenunanaturalezacambiantebruscamente 160 2 3 4 d d d í í í a a a
+140 5 día
+ycontrastarestehallazgoexperimental.Entalsentido,sies
+120
+importanteresaltarqueenelprocesodeconvergenciadelalgo-
+ritmodeoptimizaciónbasadoeneldescensoporcoordenada
+sosac
+100
+80
+enbloques[12][15],lasrelacionestemporalessonconsidera-
+dasentreunaiteraciónyotraenlainteracciónentrebloque 60
+devariables. 40
+20
+y
+t
+=525,55+479,07y
+t−1
++5,87y
+t
+3
+−1
++27644,18(eαyt−1−1)
+0
+5 10 15 20 25 30 35 40 45 50
+y
+t
+=72,31+68,8y
+t−1
++59,87(eαyt−1−1) días
+(b)ComportamientodelconjuntodedatosVillaClara
+y
+t
+=19,19+0,62y
+t
+5
+−1
++293,49(eαyt−1−1)
+Estimaciones para los 5 días siguientes Pinar del Río
+140
+Porotraparte,losmodelosdeestimaciónparaqdíasfue- Real
+1 día
+ronejecutadopara5días.Losresultadosobtenidosmuestran 120 2 día
+3 día
+muypocavariabilidadenlosmodelosdepronósticorespecto 100 4 5 d d í í a a
+alcomportamientoreal,comosemuestraenlafigura2.La
+v
+ú
+e
+n
+n
+ic
+ta
+o
+ja
+m
+f
+o
+u
+d
+n
+e
+d
+lo
+am
+de
+en
+a
+t
+p
+a
+r
+l
+e
+d
+n
+e
+di
+e
+z
+s
+a
+t
+j
+e
+e,
+en
+n
+f
+o
+o
+s
+q
+o
+u
+l
+e
+o
+e
+e
+s
+le
+q
+l
+u
+e
+e
+m
+o
+e
+b
+n
+t
+t
+i
+o
+en
+d
+e
+e
+,
+l
+c
+a
+o
+s
+n
+er
+u
+i
+n
+e
+sosac
+6
+8
+0
+0
+siguientesinolosq−1elementossucesivos.Elproblemaa
+40
+controlarenesteenfoqueeselsesgoestadísticoqueseintro-
+duceenelprocesodepropagación,dondeparaunvalordeq 20
+muygrandelascurvasdepronósticosealejandelcomporta-
+0
+mientoreal.Enlosresultadosalcanzadossobrelosconjuntos 5 10 15 20 25 30 35 40 45 50
+días
+dedatosestudiados,seevidenciauncomportamientoestable (c)ComportamientodelconjuntodedatosPinardelRio
+paraunvalordeq=5.Estaestabilidadenlaestimacióndelos Figura2.ModelosPronósticosobrelosconjuntosdedatos
+siguientesqdíasenlosconjuntosdedatosestudiadosqueda estudiadosparalavariantedeestimacióndelos5días
+evidenciadoenlasgráficasdelafigura2. siguientes.
+Latabla2resumelasmedidasdevariabilidaddeloserro-
+res cuadrático medio (RRMSE) así como el error relativo
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.123-127
+PredicciónacortoplazodelcomportamientodelaCOVID-19enCuba: Unanálisisdesdelaperspectivadel
+AprendizajeAutomático. 127
+Tabla2.Medidasdeerrorparalosconjuntosdedatos interventionsonCOVID-19in11Europeancountries.
+estudiados. 2020.
+RMSE RRMSE
+Dataset Train Test All Train Test All [6] Granger,CliveWJyPaulNewbold:Forecastingtrans-
+Cuba 26.13 17.68 24.95 0.51 0.27 5.37 formedseries. JournaloftheRoyalStatisticalSociety:
+VillaClara 6.41 7.03 6.51 0.48 1.09 0.36
+SeriesB(Methodological),38(2):189–203,1976.
+PinardelRío 1.21 11.76 4.87 2.03 1.26 1.65
+[7] Makridakis,Spyros,EvangelosSpiliotisyVassiliosAssi-
+makopoulos:TheM4Competition:100,000timeseries
+Conclusiones y Trabajo futuro and 61 forecasting methods. International Journal of
+Forecasting,36(1):54–74,2020.
+Losresultadosalcanzadosenlamodelacióndelcompor-
+tamientodeaparicióndenuevoscasosacumuladosdeinfec- [8] Papacharalampous, Georgia, Hristos Tyralis y Deme-
+tadosdeCOVID-19ennuestropaís,mediantelaaplicación trisKoutsoyiannis:Univariatetimeseriesforecastingof
+demétodosdeaprendizajeautomático,muestranresultados temperatureandprecipitationwithafocusonmachine
+relevantessobrelosconjuntosdedatosestudiados.Elusode learningalgorithms:Amultiple-casestudyfromGreece.
+mecanismosdepenalizacióntipoLASSOfavorecieronlase- Waterresourcesmanagement,32(15):5207–5239,2018.
+lecciónautomáticadelasfunciones,cuyacombinaciónlineal
+[9] Sanahuja,JoséAntonio:COVID-19:riesgo,pandemia
+ponderada,ajustanelcomportamientodelosvaloresreales.
+ycrisisdegobernanzaglobal. AnuarioCEIPAZ2019-
+Laintroduccióndemecanismosbasadosencódigosdecade-
+2020.Riesgosglobalesymultilateralismo:elimpacto
+nascombinadosconlosmodelosdeaprendizajespropuesto
+delaCOVID-19,páginas27–54,2020.
+obtienenresultadosestablesenlaestimaciónacortoplazo.
+Comocontinuidaddelapresenteinvestigaciónseconsiderala
+[10] Siami-Namini,SimayAkbarSiamiNamin:Forecasting
+extensióndelanálisisenproblemasunivariadosaconsiderar
+economicsandfinancialtimeseries:ARIMAvs.LSTM.
+el problema multivariado combinando diferentes variables
+arXivpreprintarXiv:1803.06386,2018.
+queesténrelacionadasconlapropagacióndelvirus.Deigual
+manerasesugierecontarconunamayorvariedaddeconjun- [11] Spyromitros-Xioufis,Eleftherios,GrigoriosTsoumakas,
+tosdeentrenamientosquepermitanestudiarelproblemade WilliamGrovesyIoannisVlahavas:Multi-targetregres-
+larelacióntemporaldelaserieunivariadaymultivariada. sionviainputspaceexpansion:treatingtargetsasinputs.
+MachineLearning,104(1):55–98,2016.
+Referencias
+[12] Tibshirani,Robert:Regressionshrinkageandselection
+[1] Benıtez-Pena, Sandra, Emilio Carrizosa, Vanesa Gue- viathelasso. JournaloftheRoyalStatisticalSociety:
+rrero y Marıa Dolores: Short-Term Predictions of the SeriesB(Methodological),58(1):267–288,1996.
+EvolutionofCOVID-19inAndalusia.AnEnsembleMet-
+[13] Tibshirani,Robert:Thelassomethodforvariableselec-
+hod. 2020.
+tionintheCoxmodel. Statisticsinmedicine,16(4):385–
+[2] Chakraborty,TanujityIndrajitGhosh:Real-timefore- 395,1997.
+castsandriskassessmentofnovelcoronavirus(COVID-
+[14] Tibshirani,Robert:Regressionshrinkageandselection
+19) cases: A data-driven analysis. arXiv preprint ar-
+via the lasso: a retrospective. Journal of the Royal
+Xiv:2004.09996,2020.
+StatisticalSociety:SeriesB(StatisticalMethodology),
+[3] Collins,Sean:PredictiontechniquesforBox–Coxregres- 73(3):273–282,2011.
+sionmodels. JournalofBusiness&EconomicStatistics,
+[15] Tseng,Paul:Convergenceofablockcoordinatedescent
+9(3):267–277,1991.
+methodfornondifferentiableminimization. Journalof
+[4] COVID-19, CUBA DATA: CUBA DATA COVID-19, optimizationtheoryandapplications,109(3):475–494,
+2020. https://covid19cubadata.github. 2001.
+io/#cuba,visitadoel2020-05-30.
+[16] (WHO),WorldHealthOrganizationycols.:Protocolo
+[5] Flaxman,Seth,SwapnilMishra,AxelGandy,HUnwin, deinvestigacióndelosprimeroscasosysuscontactos
+H Coupland, T Mellan, H Zhu, T Berah, J Eaton, P directos(FFX)delaenfermedadporCoronavirus2019
+PerezGuzmanycols.:Report13:Estimatingthenum- (COVID-19).
+berofinfectionsandtheimpactofnon-pharmaceutical
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.123-127

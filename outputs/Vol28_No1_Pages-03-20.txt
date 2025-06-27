@@ -1,0 +1,966 @@
+Revista Ciencias Matemáticas
+El cálculo como ciencia normal:
+en el centenario del primer texto
+cubano sobre el cálculo
+Concepción Valdés Castro y Carlos Sánchez Fernández
+Facultad de Matemática y Computación
+Universidad de La Habana, Cuba.
+Resumen 1. Introducción
+Se pret ende mostrar la aceptación progresiva de los con-
+ceptos y métodos principales del cálculo diferencial e in- En el presente trabajo, con el estudio de algunos de los tex-
+tegral y cómo se convierte en "ciencia normal", es decir, tos más signi(cid:976)icativos, hemos querido mostrar cómo los
+en una disciplina establecida y reconocida por la comuni- conceptos principales del nuevo cálculo, llamado de los di-
+dad cientí(cid:976)ica. Para este (cid:976)in nos valemos del análisis de los ferenciales por la escuela de Leibniz y de (cid:976)luxiones por los
+textos más distinguidos del siglo (cid:285)(cid:283)(cid:270)(cid:270)(cid:270), hasta llegar a los seguidores de Newton, se fueron convirtiendo en "ciencia
+utilizados en la École Polytechnique de París, textos que normal", es decir, en ciencia bien establecida y reconoci da
+sirvieron de paradigma en todo el siglo (cid:285)(cid:270)(cid:285) y principios por la comunidad cientí(cid:976)ica. El análisis de los libros de tex-
+del (cid:285)(cid:285). Concluimos con un análisis crítico del primer tex- to constituye una vía ineludible para seguir la evolución de
+to cubano que incluyó rudimentos del cálculo diferencial los conceptos matemáticos, no solo en las diferentes ma-
+e integral, Elementos de Álgebra Superior, escrito por Pablo neras de formularlos, sino en lo que resulta más importan-
+Miquel y Merino, cuya primera edición apareció hace un si- te, en la forma de su comprensión, que puede apreciarse
+glo, en 1914. en cómo ellos son aplicados, cuáles ejemplos se proponen y
+qué tipo de problemas se resuelven con su ayuda.
+Abstract
+Los textos surgen en el seno de cierta cultura matemáti-
+We intend to show the gradual acceptance of the main ca que los condiciona y van a re(cid:976)lejar aquellos conceptos y
+concepts and methods of differential and integral calcu- métodos que, o bien son compartidos por la mayoría de los
+lus and how it become normal science, that is, a discipline iniciados, o lo serán en un período de tiempo relativamente
+well established and recognized by the scienti(cid:976)ic communi- breve, cuando estos libros sean asimilados por una comu-
+ty. For this purpose we use the analysis of the most distin- nidad matemática y alcancen cierta difusión en el país de
+guished eighteenth-century texts, up to those used in the origen o en otras latitudes a través de las traducciones.
+École Polytechnique of Paris, texts that served of paradigm Para nuestro análisis hemos escogido los textos de Eu-
+throughout the nineteenth and early twentieth century’s. ler y aquellos que en nuestra opinión resultan más revela-
+We conclude with a critical analysis of the (cid:976)irst Cuban text dores, los escritos por Lagrange, Lacroix y Cauchy. Estos
+that included elements of the differential and integral cal- textos seleccionados se utilizaron en las primeras déca-
+culus, Elementos de Álgebra Superior written by Pablo Mi- das de la École Polytechnique de París y por mucho tiempo
+quel y Merino, whose (cid:976)irst edition appeared a century ago, sirvieron de paradigma de lo que resultaba conocimiento
+in 1914. primordial para las profesiones cientí(cid:976)icas y técnicas de
+mayor impacto social en los siglos (cid:285)(cid:283)(cid:270)(cid:270)(cid:270) y (cid:285)(cid:270)(cid:285).
+— 3 —
+Sociedad Cubana de Matemática y Computación
+Con la primera parte de este artículo pretendemos fa- tenía razón solo apareció en 1922 en los manuscritos de un
+cilitar la apreciación del valor histórico que tiene para la curso por él brindado y redactados por su sobrino Nicolaus
+educación matemática en Cuba la publicación del texto Ele- I Bernoulli.
+mentos de Álgebra Superior, del profesor de la Universidad
+de La Habana, Pablo Miquel y Merino. Precisamente hace-
+mos este análisis en el centenario del primer libro cubano
+que incluye elementos del cálculo diferencial e integral y
+como modesto aporte a su justo reconocimiento.
+2. Los textos
+de la infanci a del cálculo
+Será en 1696 que aparecerá publicado el primer libro desti-
+nado a la difusión del cálculo de Leibniz aplicado al estudio Guillaume François de L'Hôpital (1661-1704)
+de las curvas: Analyse des in(cid:980)iniment petits pour l’intelligence
+des lignes courbes. En la portada no aparece el nombre de su L’Hôpital comienza el libro con la de(cid:976)inición de "diferencial"
+autor, pero el mundillo matemático reconocía que era obra como «la parte in(cid:976)initamente pequeña en que una cantidad
+del marqués Guillaume François de l’Hôpital (1661-1704). variable aumenta o disminuye continuamente». Describe
+Pero, ¿cómo el marqués tomó posesión de este nuevo instru- la notación a utilizar y explica geométricamente la idea
+mento matemático? de diferencial. Enseguida asume dos suposiciones básicas
+Johann Bernoulli (1667-1748) era aún muy joven cuan- o postulados: que se puedan considerar como iguales dos
+do, conjuntamente con su hermano Jacob, ya dominaba el cantidades las cuales no di(cid:976)ieran entre sí más que por una
+Nuevo Cálculo de los diferenciales. Tenía solo 24 años cuan- cantidad in(cid:976)initamente pequeña y supone que una línea
+do viaja a París y conoce al marqués, quien, aunque era un curva puede ser considerada como el ensamblaje de una
+reconocido matemático francés, no sabía de esta nueva he- in(cid:976)inidad de segmentos de rectas in(cid:976)initamente pequeños.
+rramienta. Por esta razón propuso al joven Bernoulli que le L’Hôpital presenta su texto en forma de problemas de
+diera clases y se las proporcionara por escrito a cambio de carácter geométrico, los cuales resuelve con ayuda de los
+una remuneración generosa. Estas lecciones serán la base diferenciales, pero no se interesó en ningún momento por
+del libro de L’Hôpital. Sin embargo, la única referencia que la cuestión de la existencia de las cantidades in(cid:976)initesi-
+el marqués hace a su maestro la constituye el párrafo si- males. Estas siempre existen, pueden ser representadas
+guiente del prólogo del libro: «... reconozco estar en deuda geométricamente y se calcula con ellas siguiendo las reglas
+con los trabajos brillantes de los señores Bernoulli; sobre que se describen en el libro.
+todo con los del más joven quien es ahora profesor en Gro- Pero lo que cada alumno de cálculo relaciona con el nom-
+ninga. Me he servido sin cumplidos de sus descubrimien- bre de L’Hôpital es la regla para el cálculo de límites inde-
+tos y de los del señor Leibniz. Es por ello que consiento que terminados que lleva su nombre. Por cierto, esta famosa
+ellos reivindiquen todo lo que gusten; yo me conformo con fórmula no aparece en los manuscritos de Johann Bernoulli
+lo que tengan a bien dejarme.» encontrados en 1922; sin embargo, tanto la regla como los
+Naturalmente, en vida del marqués, Johann Bernoulli no ejemplos que L’Hôpital coloca en su libro fueron comuni-
+hizo ningún reclamo, pero después de su muerte reivindicó cados por Bernoulli al marqués en la correspondencia que
+para sí la autoría de este curso. La prueba de que Bernoulli mantuvieron y que fue conocida del público solo en 1955.
+— 4 —
+Revista Ciencias Matemáticas
+En Italia va a aparecer otro texto interesante, también para a = 1). Esta curva se conocía como la versiera, vocablo
+escrito en el espíritu de los diferenciales de Leibniz, pero derivado del latín y que signi(cid:976)ica “dar vueltas”. En la tra-
+esta vez por una mujer, María Gaetana Agnesi (1718-1799). ducción al inglés, esta palabra fue confundida con la pala-
+Se trata de Intituzioni Analitiche ad uso della gioventu italia- bra italiana avversiera que signi(cid:976)ica “esposa del diablo” y
+na, publicado en 1748 a través de una edición costeada pri- de esa forma pasó al castellano como “bruja”. Así se conoce
+vadamente por la propia Agnesi. como la bruja de Agnesi.
+1
+0.5
+-2 -1 1 2
+X
+Fig. 1
+En las Islas Británicas el estudio del cálculo no se realizaba
+de forma regular en las universidades, pero sí lo enseña-
+ban muchos maestros privados. Algunos de ellos sintieron
+María Gaetana Agnesi (1718-1799).
+la necesidad de escribir textos para complementar su ins-
+Este libro le produjo a su autora mucha fama. Es un texto trucción. Así surgen, en 1737, A New Treatise of Fluxions, de
+cuyo (cid:976)in es esclarecer los conceptos y provee de numerosos Thomas Simpson (1710-1761), publicado gracias a una sus-
+ejemplos cuidadosamente seleccionados con este (cid:976)in. Tiene cripción realizada por sus alumnos y A Treatise of Fluxions,
+una sección sobre máximos y mínimos, donde Agnesi pre- de Colin Maclaurin (1698-1746) publicado en 1742.
+senta numerosos problemas de tipo geométrico. El libro de Simpson se caracteriza por proponer al lector
+A diferencia de L’Hôpital, Agnesi expone también el cálculo numerosos problemas, muchos de ellos del estilo que es fa-
+integral al cual considera como el inverso del cálculo diferen- miliar a nuestros estudiantes. Por ejemplo, en la sección de-
+cial. Sin embargo, da una interpretación de la cantidad ydx dicada a los máximos y mínimos muestra cómo encontrar el
+como el área de un rectángulo in(cid:976)initesimal, lo que le permi- paralelogramo de área máxima inscrito en un triángulo y
+te calcular el área bajo una curva por este proceso inverso. también el cono de menor área super(cid:976)icial con un volumen
+Muestra que la curva cuyas ordenadas crecen geométrica- dado. Incluye, además, la solución de lo que posiblemente sea
+mente mientras que las abcisas lo hacen de forma aritméti- uno de los primeros problemas de búsqueda de extremos de
+ca debe satisfacer a la ecuación dx = a dy/y, la cual resuelve funciones de varias variables. Se trata de encontrar los valo-
+mediante un uso conveniente de las series in(cid:976)initas. Además res de x, y, z tales que la expresión (b3 - x3)(x2z - z3)(xy - y2) sea
+calcula el área bajo esta curva, mediante el cálculo de la in- máxima. Simpson utiliza un método equivalente a resolver el
+x
+# sistema de ecuaciones obtenido al igualar a cero las deriva-
+tegral impropia que hoy escribiríamos et/adt. Al igual que
+-3 das parciales. Vinculado a un problema de navegación, apare-
+todos los libros de la primera mitad del siglo (cid:285)(cid:283)(cid:270)(cid:270)(cid:270) no contie-
+ce, de forma embrionaria, la regla de diferenciación del seno.
+ne prácticamente nada sobre las funciones trigonométricas.
+El nombre de Simpson es asociado actualmente a la regla de
+Es interesante que el nombre de Agnesi está asociado
+integración numérica por medio de aproximaciones parabó-
+al ejemplo donde describe geométricamente la curva cuya
+licas. Esta regla no aparece en su libro de texto, sino en un
+a3
+ecuación, utilizando una notación actual, es y= y
+y2+a2 trabajo que publicó en 1743. Sin embargo, ella no es original
+que no es original de ella (en la Fig. 1 se muestra la curva
+de Simpson, sino que ya se conocía por autores del siglo (cid:285)(cid:283)(cid:270)(cid:270).
+— 5 —
+Sociedad Cubana de Matemática y Computación
+El otro texto británico que comentaremos también tiene lar calcula los volúmenes y áreas de sólidos de revolución.
+un autor de nombre familiar, Colin Maclaurin, esta vez rela- Es interesante observar que usa, en forma incipiente, la in-
+cionado con la fórmula del desarrollo de funciones en serie. tegración múltiple para el estudio de la atracción gravita-
+Esta fórmula va a aparecer en su texto A Treatise of Fluxions, cional de los elipsoides.
+que tenía el objetivo fundamental de defender la teoría de En relación con la serie que lleva su nombre, Maclaurin
+(cid:976)luxiones1 de Newton contra los numerosos ataques de que supone que y es representable como una serie en la varia-
+era objeto. Por esa razón, toda la primera parte del libro está ble z y supone que la (cid:976)luxión de z, zo es igual a uno
+dedicado a tratar de fundamentar, en forma geométrica, el
+y = A + Bz + Cz2 Dz3 + ...,
+cálculo newtoniano. Sin embargo, en la segunda parte su
+entonces hace z = 0 y obtiene que A es el valor de y cuando
+autor se propone desarrollar los algoritmos de cálculo y las
+z se anula y que denota por E. Toma la (cid:976)luxión de la serie y
+aplicaciones de la teoría. Este texto fue traducido al francés
+nuevamente hace z = 0, así obtiene que B es el valor de la
+en 1749 y difundido en el continente.
+(cid:976)luxión de y en z = 0 que denota por Eo . Continuando de esta
+forma obtiene
+y=E+Eoz+
+Epz2
++
+Epz3
++...,
+1#2 1#2#3
+donde los puntos sobre la letra E denotan los valores, en
+z = 0, de las (cid:976)luxiones de diferentes ordenes de y. Maclaurin
+a(cid:976)irma que este resultado fue descubierto por Taylor quien
+lo publicó en su Methodus Incrementorum, en 1715. Quizás
+se haya asociado el nombre de Maclaurin a esta serie debido
+al uso extenso que hace de ella. Entre los ejemplos que desa-
+rrolla, están las series para el seno y el coseno, de(cid:976)inidas en
+un círculo de radio a. También utiliza esta serie para expo-
+ner los criterios para la determinación de los extremos rela-
+tivos mediante el uso de las dos primeras derivadas: Cuando
+la primera (cid:976)luxión de la ordenada se anula, si a la vez la se-
+gunda (cid:976)luxión es positiva, la ordenada es un mínimo, pero es
+un máximo si la segunda (cid:976)luxión es negativa.
+3. Los textos básicos de Euler
+y su repercusión
+Colin MacLaurin (1698-1746)
+Entre otras cuestiones Maclaurin discute los puntos de ex- Los cuatro textos comentados en la sección anterior esta-
+tremos y de in(cid:976)lexión, encuentra tangentes y asíntotas a ban destinados a difundir las ideas básicas del análisis in-
+las curvas, determina curvaturas. Maclaurin calcula áreas (cid:976)initesimal entre un público cultivado, pero relativamente
+bajo las curvas, demostrando que la (cid:976)luxión del área es yxo amplio, por ello es que aparecen escritos en lengua verná-
+y después halla el (cid:976)luente de esta expresión. De forma simi- cula. Escritos en latín, y por tanto dirigidos a una elite ilus-
+trada, pero con una importancia enorme para el desarrollo
+de la matemática, aparecerán, en la segunda mitad del siglo
+1 La noción de (cid:976)luxión de una variable x es el equivalente new-
+toniano al diferencial de Leibniz y la notación utilizada con- (cid:285)(cid:283)(cid:270)(cid:270)(cid:270), los tres textos sobre análisis in(cid:976)initesimal escritos
+.
+sistía en colocar un punto sobre la variable: x.
+— 6 —
+Revista Ciencias Matemáticas
+y no en la forma explícita y = f(x). Todo parece indicar que el
+interés por estudiar la fórmula en sí misma, independiente
+de la curva asociada y de preferir la expresión explícita a la
+implícita aparece con la obra de Newton, quien en una car-
+ta a Leibniz señala: No podría, por supuesto, haber obtenido
+ninguno de estos resultados si antes no me hubiera abstraí-
+do de la consideración de las (cid:976)iguras y lo hubiera reducido
+todo sencillamente a la investigación de la ordenada.
+La denominación "función" fue usada por Leibniz, en
+1692, pero con ella solamente designaba ciertas cantida-
+des geométricas asociadas con una curva. Es Johann Ber-
+noulli quien, en 1718, le asocia a este concepto la idea de
+relación funcional que tenemos hoy, cuando escribe: se
+llama función de una magnitud variable a una cantidad,
+que se compone de cualquier forma de esta magnitud va-
+riable y de constantes. Sin embargo, Bernoulli no mencio-
+na qué entendía por cantidad. Euler, en su Introductio...,
+reproduce la de(cid:976)inición de Bernoulli, cambiando la pala-
+bra "cantidad" por la frase "expresión analítica". Pero, Eu-
+Leonhard Euler (1707-1783)
+ler en sus comentarios aclara el signi(cid:976)icado del término
+por Euler: Introductio in Analysin In(cid:980)initorum (1748), Insti- "expresión analítica", para ello enumera las operaciones
+tutiones Calculi Differentialis (1755), Institutiones Calculi In- por medio de las cuales una expresión analítica puede ser
+tegralis (tres tomos, 1768-1770). constituida: las operaciones algebraicas, algunas trascen-
+El primero es un libro concebido por su autor como de dentes, como las funciones exponencial y logarítmica y
+iniciación al cálculo, de modo que el lector pueda de forma otras que surgen como solución a ecuaciones diferencia-
+imperceptible adquirir la idea del in(cid:976)inito. Es en este tex- les. Como esta enumeración resulta algo ambigua, decla-
+to que Euler, de forma muy original, introduce la mayoría ra que la forma universal y más conveniente de expresar
+de las notaciones y terminologías familiares al lector mo- una función es mediante una serie de potencias, donde
+derno. En este libro Euler va a dar un paso decisivo en la las potencias de la variable pueden ser no solo las enteras
+constitución del análisis matemático como una rama autó- positivas sino números cualesquiera. Esta concepción de
+noma de la matemática. Va a identi(cid:976)icar a las funciones y no función, que podemos denominar de Bernoulli-Euler, fue
+a las curvas como el objeto fundamental del análisis. Todo aceptada por muchos otros matemáticos hasta Lagrange
+el análisis in(cid:976)initesimal gira alrededor de las magnitudes inclusive, quien la convirtió en el instrumento básico para
+variables y de sus funciones. la fundamentación del cálculo.
+Ya en la obra de Descartes y Fermat, para representar una Pero esta no fue la única forma en que Euler concibió las
+curva se hace uso de una fórmula, es decir, una expresión funciones. En el segundo volumen de la Introductio..., dedi-
+analítica. Sin embargo, para ellos lo fundamental es el estu- cado a la geometría, de(cid:976)ine una línea curva plana como co-
+dio de la curva y la fórmula es solo una medio de descripción, rrespondiente a cualquier función de x, así que estas líneas
+cómoda y útil, pero meramente auxiliar. Es interesante co- son representadas por funciones de x. Basada en esta idea
+mentar que, en general, consideraban las curvas dadas en realiza su clasi(cid:976)icación de las funciones en continuas y dis-
+forma implícita, mediante una ecuación entre las variables continuas o mixtas. En el sentido de Euler, continuidad sig-
+— 7 —
+Sociedad Cubana de Matemática y Computación
+ni(cid:976)icaba invariabilidad de la ley que determina la ecuación
+y discontinuidad un cambio en esta ley. Esta terminología Q
+euleriana, no usual para nosotros, fue usada hasta la época P
+de Bolzano y Cauchy, cuando la noción de función continua R
+A
+se le con(cid:976)iere el sentido actual.
+O
+En la Introductio..., Euler declara explícitamente que va a
+tratar con expresiones analíticas, donde las variables pue-
+den tomar valores cualesquiera incluso “imaginarios” y,
+aunque no da una de(cid:976)inición explícita de estos números, de-
+muestra gran maestría en el trabajo con ellos. En esta obra
+Euler clasi(cid:976)ica las funciones en dos tipos: algebraicas y tras-
+cendentes. A las primeras les adjudica el mismo signi(cid:976)icado Fig. 2
+que le damos actualmente. Dentro de las funciones trascen-
+dentes incluye tanto las funciones trigonométricas y aque-
+llas de(cid:976)inidas por exponenciales y logaritmos como también
+las dadas mediante integrales; sin embargo, dado el carácter
+elemental del texto, no trata estas últimas.
+La parte más atractiva de esta obra es el tratamiento siste-
+mático que realiza Euler de las funciones trascendentes ele-
+mentales, para las cuales introduce notaciones apropiadas,
+demuestra numerosas propiedades y elabora unas normas
+de trabajo con ellas muy cercanas a las que suelen encontrar-
+se en los textos actuales. Por ejemplo, de(cid:976)ine la función expo-
+nencial como una potencia donde el exponente es variable y
+a continuación de(cid:976)ine el logaritmo de y con base a como el va-
+lor z tal que az = y. De este modo, las propiedades básicas del
+logaritmo son obtenidas a partir de la exponencial.
+Hasta la aparición de esta obra de Euler, las magnitudes
+senos y cosenos eran longitudes de segmentos de líneas
+relacionadas con una circunferencia de radio dado R. Así
+el seno de A era el segmento QP, la mitad de la cuerda que
+subtiende el ángulo de magnitud 2A, y el coseno de A la lon-
+gitud de la perpendicular OQ, desde el centro de la circun- Differentialis va a ser una obra sobre análisis puro. No en-
+ferencia hasta esta cuerda (Figura 2). Así que con R = 1000, contramos alguna aplicación geométrica y ni tan siquiera
+sen 30° = 5000 y cos 30° = 8660,25. Euler considerará solo grá(cid:976)icos explicativos. Se observa un gran contraste con los
+el círculo de radio unidad, quedando de este modo comple- textos de análisis anteriores, donde abundan las conside-
+tamente determinadas las funciones trigonométricas ele- raciones geométricas. De esta manera comienza un lar-
+mentales. go recorrido hacia la independencia del análisis, hacia su
+No cabe la menor duda acerca de que Euler conocía muy transformación en una disciplina autónoma. Esta tradición
+bien y utilizaba las numerosas aplicaciones del cálculo di- la va a seguir Lagrange y a ella no escapa tampoco Cauchy.
+ferencial a la geometría, no obstante, Institutiones Calculi Para Euler el trabajo con los diferenciales no es más que
+— 8 —
+Revista Ciencias Matemáticas
+una extensión del método para operar con las diferencias in(cid:976)luyentes hasta el (cid:976)inal del siglo (cid:285)(cid:283)(cid:270)(cid:270)(cid:270), debido a la calidad
+(cid:976)initas, ya que los primeros aparecen cuando estas diferen- de sus explicaciones y la organización del material. Cum-
+cias, asumidas previamente como (cid:976)initas, se hacen in(cid:976)ini- plieron sus objetivos de propagar las nuevas ideas entre las
+tamente pequeñas. Por esta razón, en Institutiones Calculi capas sociales favorecidas con el acceso al conocimiento.
+Differentialis comienza con una exposición de las diferen- Pero al iniciarse un nuevo siglo, impulsado por las ideas
+cias (cid:976)initas y sus propiedades y después obtiene de forma de la revolución social burguesa en Francia y los adelan-
+original las fórmulas básicas del cálculo diferencial. Por tos económicos propiciados por la revolución industrial
+ejemplo, para y = ln x, Euler escribe: iniciada en Inglaterra, las necesidades comenzaron a cam-
+dy=ln^x+dxh-lnx=lna1+ dx k= biar. Con el ascenso al poder de la burguesía, clase entonces
+x
+mucho más numerosa que la aristocrática, se abrieron las
+dx dx2 dx3
+= - + -...
+x 2x2 3x3 puertas del saber a ciudadanos que mostraban su talento
+Entonces, despreciando los diferenciales de orden superior, como única riqueza. Este saber adquirió nuevos (cid:976)ines so-
+da inmediatamente la fórmula d(ln x) = dx/x. En este texto, ciales y se comenzaron a estudiar las ciencias técnicas con
+Euler discute los extremos de las funciones de dos varia- una fuerte base analítica. Aparecieron estudiosos interesa-
+bles. Encuentra la condición necesaria de anulación de las dos por la matemática como herramienta fundamental en
+primeras derivadas parciales, sin embargo, falla en su in- sus trabajos profesionales y, con ellos, la necesidad de nue-
+tento de encontrar una condición su(cid:976)iciente, pues a(cid:976)irma vos textos, que obedecieran a las nuevas exigencias tanto
+22V 22V
+que cuando las derivadas parciales y son ambas económicas como socioculturales.
+2x2 2y2
+positivas en un punto, entonces la función V tiene en ese
+punto un mínimo y si ambas son negativas, tiene un máxi-
+4. Los primeros textos
+mo. Proporciona varios ejemplos ilustrativos y, asombro-
+de l’École Polytechnique
+samente, incluye uno donde su criterio ofrece un resultado
+equivocado: la función V = x3 + y2 - 3xy + (3/2)x, que, según
+En la época que enseñaba en la École Polytechnique, Joseph
+su criterio, tiene en el punto (1/2, 3/4) un mínimo, lo cual
+Louis Lagrange (1736-1813) re(cid:976)lexionó profundamente so-
+es falso.
+bre los fundamentos del cálculo y publicó en 1797 la obra
+Al cálculo integral le dedica Euler la obra Institutiones Cal-
+Théorie des fonctions analytiques, resultado de estas medita-
+culi Integralis, que va a aparecer en tres tomos entre 1768 y
+ciones y de su experiencia como el primer profesor de aná-
+1770. En esta obra Euler de(cid:976)ine el objetivo del cálculo inte-
+lisis de la École Polytechnique. Estas inquietudes acerca de
+gral como el "método de encontrar ciertas cantidades varia-
+la fundamentación del cálculo habían sido objeto de preo-
+bles conocida una relación entre sus diferenciales". Así que,
+cupación por Lagrange desde los comienzos de su actividad
+como era usual en la época, lo considera el inverso del cálcu-
+matemática. Lagrange consideró los desarrollos en series el
+lo diferencial.
+fundamento del cálculo con el objetivo de evitar cualquier
+La primera parte está dedicada a exponer sistemática-
+referencia al movimiento, a los in(cid:976)initesimales, a cocientes
+mente los métodos de cálculo de primitivas de diversas cla-
+de cantidades evanescentes o a la idea de límite, su progra-
+ses de funciones. El resto del texto se dedica a la resolución
+ma era esencialmente de reducción al cálculo algebraico.
+de ecuaciones diferenciales. Al igual que los otros dos tex-
+En un discurso publicado en 1796 en el Journal de l’École
+tos, es un libro que versa sobre análisis puro, no contiene
+Polythecnique, Lagrange expone el objeto de la teoría que
+ni aplicaciones a la geometría ni de cualquier otro tipo, ni
+será el tema de su curso y que constituirá el contenido del
+siquiera aparece el cálculo de alguna integral de(cid:976)inida. A
+libro. Al igual que Euler y todos sus contemporáneos, La-
+pesar de que, con una perspectiva moderna, podríamos en-
+grange está plenamente convencido que toda función es
+contrar lagunas en estos textos, ellos fueron sumamente
+— 9 —
+Sociedad Cubana de Matemática y Computación
+susceptible de ser desarrollada en series de potencias, con nuevas funciones dependerán solo de la función primitiva
+la excepción, quizás, de algunos valores aislados de la va- de las cuales son derivadas y podemos llamarlas funciones
+riable. Comenta que, hasta ese momento, todos los métodos derivadas. En general, sea la función primitiva algebraica
+de exposición de los principios del cálculo diferencial siem- o no, siempre se puede desarrollar de la misma forma, y de
+pre han tenido por objetivo encontrar, en forma aislada, los esta manera hacer aparecer las funciones derivadas.»
+primeros términos del desarrollo de una función, desgaján- En este párrafo se ponen de mani(cid:976)iesto dos cuestio-
+dolos del resto de la serie, ya que la solución de todos los nes fundamentales: Lagrange utiliza como base del razo-
+problemas del cálculo diferencial dependen únicamente de namiento a las funciones algebraicas, para las cuales sus
+estos primeros términos y a(cid:976)irma que éste es prácticamen- ideas tienen lugar sin ningún tipo de discusión y a(cid:976)irma ro-
+te el único objetivo a cumplimentar con este cálculo. tundamente que cualquier función, algebraica o no, puede
+también desarrollarse en serie. En realidad Lagrange sien-
+te la necesidad de demostrar esta a(cid:976)irmación clave sobre la
+que se basa toda su teoría. Pero la demostración que pre-
+senta, como es natural esperar dado el desarrollo de la ma-
+temática en ese momento, no es satisfactoria.
+A pesar de las buenas intenciones y el prestigio de su au-
+tor, el programa de Lagrange no tuvo éxito. Esto se debió a
+que tenía una aplicabilidad limitada solo a una clase par-
+ticular de funciones que hoy, precisamente denominamos
+analíticas y sabemos que son demasiado pocas. Además, en
+Joseph Louis Lagrange (1736-1813)
+esencia, Lagrange utilizaba de forma implícita los mismos
+A continuación expone su idea fundamental de que el análisis conceptos que pretendía eliminar.
+se reduce a, dada una función, encontrar sus funciones de- Un prolí(cid:976)ico autor de libros de textos de matemática, en
+rivadas y recíprocamente, dada la función derivada encon- la no menos prolí(cid:976)ica etapa revolucionaria francesa, lo fue
+trar la primitiva. En este discurso introduce esos términos Silvestre François Lacroix (1765-1843), quien entre otros
+actualmente tan familiares a nosotros. Dice Lagrange: «[...] publicará el Traité du calcul différentiel et du calcul intégral,
+dada una función considerada como primitiva, se puede de- a partir de 1797.
+ducir, por reglas simples y uniformes, otras funciones que Esta obra, en tres volúmenes, tenía por objetivo dar un
+llamo derivadas; [...] Estas transformaciones responden a la compendio de los métodos del cálculo desarrollados desde
+diferenciación y a la integración; pero en la teoría de funcio- la época de Newton y Leibniz. Así, en cuanto al cálculo dife-
+nes, ellas no dependen más que de operaciones puramente al- rencial, su autor expone tanto el punto de vista de Lagrange
+gebraicas, fundadas sobre los principios simples del cálculo.» de los coe(cid:976)icientes diferenciales, como el de Euler del cocien-
+En su libro de texto, Lagrange explica detalladamente te de in(cid:976)initesimales o la forma embrionaria del límite de un
+cómo obtener las funciones derivadas: «Asignemos a la va- cociente incremental que había propuesto D’Alembert en la
+riable de una función un incremento, podemos, si la función Encyclopédie. Consideraba que de esta forma el lector poseía
+es algebraica, desarrollarla en potencias de esta cantidad, los elementos para juzgar por sí mismo. Esto es el re(cid:976)lejo de
+mediante las reglas familiares del álgebra. El primer térmi- la coexistencia en la práctica matemática de diferentes enfo-
+no del desarrollo será la función dada que se denominará ques sobre los conceptos de derivada y diferencial, y de la sen-
+función primitiva, los términos siguientes estarán forma- sación de insatisfacción que producía cada uno de ellos.
+dos de varias funciones de la misma variable multiplicados Más tarde, urgido por sus alumnos, Lacroix se vio en la
+por las sucesivas potencias de la cantidad arbitraria. Estas necesidad de publicar una versión reducida de este texto,
+— 10 —
+Revista Ciencias Matemáticas
+en un solo volumen, titulado Traité élémentaire du calcul di-
+fférentiel et du calcul intégral, que resultó muy popular, de
+modo que apareció en 9 ediciones entre 1802 y 1881, fue
+traducido al inglés en 1816 y al año siguiente al alemán. Es
+a través de esta traducción que “la nueva matemática” que
+se hacía en el continente penetró en las islas británicas.
+En este libro Lacroix opta por la noción de límite para
+basar su de(cid:976)inición de derivada y la noción de límite lo de-
+(cid:976)ine en el proceso de su utilización. Por ejemplo, cuando
+u = ax2 toma u = a(x + h)2, entonces comenta que el cociente
+1
+(u - u)/h = 2 ax + ha se compone de dos partes, una es 2ax
+1
+que no depende de h y la otra está afectada por h. Si conce-
+bimos que esta última cantidad disminuya, el resultado se
+aproxima sin cesar a 2ax, de manera que este es el límite del
+cociente, es decir, el valor hacia el cual tiende a medida que
+la cantidad h disminuye y al cual puede aproximarse tanto
+como se quiera.
+Lacroix muy tempranamente introduce la serie de Taylor
+de una función y tiene la opinión, al igual que Lagrange, de
+que todas las funciones pueden ser desarrolladas median-
+te series de potencias. Explica los métodos de encontrar
+extremos, incluidas las funciones de varias variables, y en
+particular, recti(cid:976)ica el error cometido por Euler, encontran- matemática se movía hacia su (cid:976)in. Esto se re(cid:976)leja claramen-
+do, para las funciones de dos variables, una condición su(cid:976)i- te en las siguientes líneas que Lagrange escribe a D’Alem-
+ciente correcta para que un punto sea de extremo: bert en 1781: «Me parece que la mina (de la matemática)
+22u 22u 2c 22u m 2 ya ha sido agotada, y al menos que alguien descubra una
+2x2 2y2 2x2y
+nueva veta será necesario antes o después abandonarla.
+El estándar de rigor lógico, formado en el análisis matemá-
+[…] y no es imposible que el lugar de la geometría en las
+tico en la segunda mitad del siglo (cid:285)(cid:283)(cid:270)(cid:270)(cid:270) se quedaba atrás
+academias sea ocupado un día en la forma como se ocupa la
+de las aplicaciones. El problema de la reconsideración críti-
+cátedra de árabe en las universidades.» Sin embargo, no to-
+ca del sistema de de(cid:976)iniciones y procedimientos lógicos en
+dos compartían esta visión pesimista y nuevas condiciones
+las demostraciones adquirió novedad singular. Por ello las
+propiciaron un interés reverdecido por mejorar las herra-
+investigaciones sobre la fundamentación del análisis ma-
+mientas de las ciencias matemáticas.
+temático ocuparon en la matemática del siglo (cid:285)(cid:270)(cid:285) un lugar
+Efectivamente, con la creación de las Grandes Écoles en
+importante. Las teorías que habían surgido en el análisis
+Francia aparece el concepto moderno de Universidad y la
+matemático durante el curso del siglo (cid:285)(cid:283)(cid:270)(cid:270)(cid:270) ya estaban ex-
+incorporación a las mismas de los cientí(cid:976)icos más presti-
+tensamente desarrolladas y las di(cid:976)icultades que quedaban
+giosos que hasta entonces se habían visto obligados a la
+por resolver eran de una complejidad extrema, por ejemplo
+reclusión en las academias y a realizar su trabajo cientí(cid:976)i-
+la búsqueda infructuosa de la primitiva de ciertas funcio-
+co bajo el mecenazgo de príncipes y soberanos. Esta nueva
+nes algebraicas. Es por esta razón que a (cid:976)ines de este siglo
+concepción de la universidad que llevaba consigo la exi-
+muchos compartían la convicción de que la investigación
+gencia de organizar rigurosamente los contenidos de cada
+— 11 —
+Sociedad Cubana de Matemática y Computación
+ciencia con propósitos didácticos va a condicionar en gran concibe como complementos al Resumé. Estos textos
+medida el desarrollo ulterior del análisis. fueron un modelo a seguir en el resto del siglo y aún po-
+En 1813 Augustin Louis Cauchy (1789-1857) comenzó demos notar su in(cid:976)luencia en la manera en que se con-
+a enseñar en la École Polytechnique y en 1821 publica el forman los cursos y textos actuales de esta disciplina
+Cours d’Analyse, donde introduce nuevos métodos de fun- matemática.
+damento del cálculo. Cauchy va a utilizar la noción de límite para dar coheren-
+Este texto será seguido, en 1823, por el Résumé des cia a las de(cid:976)iniciones de continuidad, derivada e integral de
+leçons sur le Calcul In(cid:980)initesimal. Posteriormente en una función así como la convergencia de una serie. Ahora
+1826 y 1828 publicará las dos partes de las Lecciones podemos apreciar lo importante que fue para la matemá-
+sobre las aplicaciones del cálculo in(cid:980)initesimal a la geo- tica el haber aislado este concepto, el cual estuvo presente
+metría, la primera parte dedicada a las aplicaciones del más o menos claramente en el espíritu de cada matemático
+cálculo diferencial y la segunda a las del integral y que desde el mismo origen del cálculo in(cid:976)initesimal.
+Cauchy de(cid:976)ine límite de una variable: «[...] cuando los
+valores atribuidos sucesivamente a una misma variable se
+aproximan inde(cid:976)inidamente a un valor (cid:976)ijo, de manera que
+terminan por diferir de él tan poco como se quiera, este úl-
+timo se llama límite de los otros.»
+Más adelante señala que «[...] cuando los valores numé-
+ricos sucesivos de una misma variable decrecen inde(cid:976)ini-
+damente de manera que sea menor que todo número dado,
+la variable se convierte en lo que se llama un in(cid:976)initesimal
+o una cantidad in(cid:976)initesimal. Una variable de esta especie
+tiene a cero por límite.»
+De este modo, abandona de(cid:976)initivamente el lenguaje
+misterioso y controvertido de los in(cid:976)initesimales que pa-
+san simplemente a ser variables de límite cero.
+La continuidad de una función la de(cid:976)ine totalmente dis-
+tinto a la forma euleriana. La aclaración completa de la di-
+ferencia entre ambas nociones de continuidad aparece en
+1844 cuando da el ejemplo de la función
+x,x$0
+y=' 1,
+-x,x10
+que con esta de(cid:976)inición resulta discontinua en el sentido de
+Augustin Louis Cauchy (1789-1857)
+Euler, pero que también puede ser dada por una sola expre-
+2 # 3 x2dt
+sión analítica y= r t2+x2 , y sería por tanto continua en
+0
+este mismo sentido. Así muestra Cauchy que la de(cid:976)inición
+dada por Euler resulta insostenible teóricamente.
+Para Cauchy una función f es continua entre dos valores
+a y b si en valor absoluto la diferencia f(x + a) - f(x) decrece
+inde(cid:976)inidamente con a. Notemos que Cauchy no de(cid:976)ine fun-
+ción continua en un punto, sino en un intervalo, posible-
+— 12 —
+Revista Ciencias Matemáticas
+mente sea esto lo que le lleva a confundir reiteradamente la
+f(x)=e-x2+e-(1/x)2 , cuya serie de Taylor en x = 0 no conver-
+continuidad con la continuidad uniforme.
+ge a la función f sino a su primer sumando e-x2. Sin embargo,
+Es interesante notar que Bernard Bolzano dio en 1817
+al (cid:976)inal de la publicación adiciona una nota señalando que
+una de(cid:976)inición de continuidad esencialmente idéntica a la
+ha encontrado una forma de realizar la demostración sin
+de Cauchy. El objetivo de Bolzano era demostrar rigurosa-
+necesidad del auxilio del cálculo integral. Se trata de la ge-
+mente la idea geométrica, que se tenía desde mucho antes,
+neralización del teorema del valor medio, hoy asociado en
+de que una función continua debe tomar todos los valores
+muchos textos al nombre de Cauchy.
+intermedios entre dos dados. También Bolzano de(cid:976)inió con-
+La concepción de integral como proceso inverso de la
+tinuidad en un intervalo, aunque su de(cid:976)inición era más pre-
+diferenciación, después de logros tan importantes como
+cisa que la de Cauchy. Como un lema fundamental, Bolzano
+el cálculo de primitivas de funciones racionales, de ciertas
+demuestra que todo conjunto acotado superiormente de
+clases de irracionales y funciones trascendentes, se encon-
+números reales tiene una cota superior mínima. Para ello
+tró con serias di(cid:976)icultades de tipo analítico. Incluso integra-
+hace uso del conocido como criterio de convergencia de #
+les de la forma f_x, R(x)idx, donde R es un polinomio
+Cauchy, para el cual da una prueba. Por supuesto, la prueba
+de tercer o cuarto grado y f una función racional no se lo-
+de Bolzano, al igual que la de Cauchy, era incompleta, pues
+graba integrar en forma exacta.
+ambos carecían de una construcción adecuada de los núme-
+Por otra parte, el análisis matemático había penetrado
+ros reales. En general los trabajos de Bolzano no circularon
+profundamente en la (cid:976)ísica, donde la variedad de tipos de
+ampliamente y no resulta clara la in(cid:976)luencia que pudo haber
+movimientos estudiados (principalmente los procesos on-
+ejercido en sus contemporáneos, incluido Cauchy.
+dulatorios y la difusión del calor) se había ampliado consi-
+En sus textos sobre cálculo diferencial e integral, Cauchy
+derablemente. El estudio de los problemas (cid:976)ísicos mostró
+aplica las nuevas ideas sobre límites a la de(cid:976)inición y estu-
+que las funciones concebidas hasta el momento, las analíti-
+dio de la derivada y la integral. De(cid:976)ine la función derivada
+cas, no eran su(cid:976)icientes, había que considerar procesos no
+en forma completamente contemporánea, como el límite del
+analíticos y, en ocasiones, incluso discontinuos. Una de las
+cociente incremental cuando el incremento de la variable
+formas idóneas de descripción de tales procesos resultó el
+independiente tiende a cero, siempre que este límite exista.
+desarrollo de funciones en series trigonométricas de Fou-
+Cauchy no encuentra nuevos resultados sobre la derivada,
+rier, cuyos coe(cid:976)icientes se calculaban mediante integrales.
+sin embargo, en la demostración de los resultados conocidos
+Así pasó a un primer plano la necesidad dar una de(cid:976)inición
+hace un uso amplio de su de(cid:976)inición y para ello necesita tras-
+de la integral de(cid:976)inida que fuera independiente del cálculo
+ladar al lenguaje de las desigualdades el concepto de límite.
+de unas primitivas di(cid:976)íciles o imposibles de hallar.
+Mientras que para Lagrange el desarrollo de funcio-
+Euler parece que fue el que en su forma más vívida expresó
+nes en serie de Taylor era el punto de partida, Cauchy lo
+la idea de la integración como inversión de la diferenciación,
+expone en el (cid:976)inal de su Resumé... En el prólogo advierte
+pero a la vez reconocía su limitación. Cuando no conseguía
+que se vio forzado a «enviar al cálculo integral la fórmula
+encontrar la primitiva de una función entonces expresaba:
+de Taylor, ya que esta fórmula puede ser admitida como
+«no nos queda otra cosa que tratar de encontrar para ella un
+general solo cuando la serie que ella encierra se reduce
+valor tan próximo como se quiera al verdadero.»
+a un número (cid:976)inito de términos y además es completada
+Precisamente la forma euleriana de aproximación es la
+por una integral de(cid:976)inida.» De esta manera, demuestra la
+que Cauchy va a convertir en la esencia del concepto de "in-
+fórmula con el resto en forma integral y además explicita
+tegral de(cid:976)inida". Cauchy considera una función continua
+que debe demostrarse que este resto tiende a cero para
+sobre el intervalo [x , X], subdivide este intervalo en n su-
+0
+poder considerar la representación de la función por una
+bintervalos por medio de los puntos x , x , ..., x = X. y a esta
+0 1 n
+serie in(cid:976)inita. Para ello propone el ejemplo de la función
+— 13 —
+Sociedad Cubana de Matemática y Computación
+/n
+subdivisión asocia la suma S= f^x h(x -x ). Entonces, nes continuas, aceptadas hasta entonces sin cuestionamien-
+i-1 i i-1
+de(cid:976)ine la integral # X f(x)dx com i=1 o el límite de las sumas an- to alguno. Weierstrass no publicará ningún texto basado en
+x0 sus lecciones, pero estas ejercerán una in(cid:976)luencia decisiva en
+teriores, cuando la mayor de las longitudes x - x tiende a
+i i - 1 matemáticos de varios países europeos. Así en 1878 el italia-
+cero. Para dar consistencia a esta de(cid:976)inición demuestra la
+no Ulises Dini (1845-1918) publica el texto Fondamenti per
+existencia y unicidad de este límite, y en esta demostración
+la teorica delle funzioni di variabili reali, donde se realiza la
+Cauchy inadvertidamente identi(cid:976)ica los conceptos de conti-
+construcción de los números reales a través del método de
+nuidad y continuidad uniforme de una función.
+las cortaduras de Dedekind y se demuestran rigurosamente
+Más adelante Cauchy da la noción de primitiva de una fun-
+por vez primera algunos de los teoremas básicos del cálcu-
+ción como la integral de(cid:976)inida con el límite superior variable.
+lo diferencial, en particular el importantísimo teorema del
+Con este enfoque va a subordinar, por vez primera, la noción
+valor medio introducido por Lagrange y demostrado hasta
+de integral inde(cid:976)inida a la de integral de(cid:976)inida, lo que consti-
+el momento con suposiciones implícitas por varios autores,
+tuye un momento crucial en el camino hacia la constitución
+entre ellos Cauchy. También cabe destacar la publicación en
+de la teoría moderna de la integración. Cauchy escribe en
+1884 del libro Calcolo differenziale e principii di calcolo inte-
+1823: «[...] me parece que esta manera de concebir la inte-
+grale, publicado por el italiano Angelo Genocchi (1817-1889),
+gral de(cid:976)inida debe ser adoptada preferentemente ya que es
+con una introducción crítica importante de Giuseppe Peano
+igualmente válida en todos los casos incluso cuando no poda-
+(1858-1932), referente a la forma que en los textos aparecían
+mos pasar de la función colocada bajo el signo de integral a la
+los teoremas básicos del cálculo.
+función primitiva. Además cuando se adopta, de esta manera
+Entre los textos criticados por Peano se encuentra la pri-
+puede fácilmente demostrarse que una integral tiene un va-
+mera edición del primer tomo del Cours d’analyse de l’Éco-
+lor (cid:976)inito único, cuando la función permanece continua entre
+le Polytechnique, de Camille Jordan (1838-1922), publicado
+los dos valores en los que se toma la integral.»
+en 1882. Quizás motivado por estas críticas, Jordan en el
+El nuevo cálculo, después de ser paulatinamente siste-
+tercer tomo, aparecido en 1887, incluye un suplemento de
+matizado en la obra de los ilustrados del siglo (cid:285)(cid:283)(cid:270)(cid:270)(cid:270), queda
+65 páginas donde agrega algunas propiedades y justi(cid:976)ica
+establecido y reconocido como ciencia normal en los tex-
+muchas otras juzgadas como inmediatas en el primer tomo.
+tos elaborados por Cauchy. Estos textos serán el paradigma
+En la segunda edición, publicada en 1893, reestructurará
+fundamental para los cursos de cálculo diferencial e inte-
+completamente su obra, logrando vencer las di(cid:976)icultades
+gral durante mucho tiempo, no solo en Francia, sino también
+inherentes a los fundamentos del análisis y realiza por vez
+en buena parte de Europa. Pero, estos libros, aun cuando
+primera de forma bastante completa una síntesis de todas
+no incluyeran grá(cid:976)icos y aplicaciones de índole geométrica,
+las ideas nuevas surgidas en la fundamentación del Cálcu-
+apelaban con frecuencia a la intuición geométrica, para jus-
+lo Diferencial e Integral. Esta segunda edición será alabada
+ti(cid:976)icar algunas a(cid:976)irmaciones básicas, especialmente aque-
+por todos los grandes matemáticos de (cid:976)ines del siglo (cid:285)(cid:270)(cid:285) y
+llas cuya demostración rigurosa dependía de la propiedad
+comienzos del (cid:285)(cid:285), Hadamard y Peano entre ellos y ejerce-
+de continuidad de los números reales.
+rá gran in(cid:976)luencia en la nueva generación de matemáticos
+En los cursos impartidos por el germano Karl Weierstrass
+(Gispert-Chambaz, 1980).
+(1815-1897) en la Universidad de Berlín, a partir de 1861,
+En realidad, muchos matemáticos de esta época, aunque
+surge una nueva concepción del rigor en la exposición de los
+conocían y dominaban la fundamentación que se le había
+conceptos fundamentales del cálculo, en particular incluirá
+construido al cálculo diferencial e integral, todavía no con-
+una tentativa de construcción de los números reales, la pri-
+sideraban necesaria su inclusión en los cursos y textos. Así, a
+mera de(cid:976)inición de continuidad utilizando el lenguaje épsi-
+excepción de las pocas obras mencionadas, la mayoría de los
+lon-delta y el uso de esos instrumentos para la demostración
+tratados de (cid:976)ines del siglo (cid:285)(cid:270)(cid:285) y principios del (cid:285)(cid:285), no constru-
+rigurosa de algunas de las propiedades básicas de las funcio-
+— 14 —
+Revista Ciencias Matemáticas
+yen los números reales, apelan al recurso de la demostración
+geométrica que en realidad no es más que una ilustración
+geométrica, la continuidad apenas se mencionaba, pues
+siempre se concebían funciones suaves, de(cid:976)inidas sobre bue-
+nos conjuntos. Las reglas de derivación eran meras fórmulas
+para aplicar mecánicamente, la integral se concebía funda-
+mentalmente como el proceso inverso a la derivación y, a tra-
+vés de comentarios intuitivos geométricos, se utilizaba para
+el cálculo de áreas y otras magnitudes geométricas o (cid:976)ísicas
+(Granville, W.A. 1911).
+Con los comentarios anteriores hemos pretendido dar una
+panorámica del proceso de aceptación de los principales con-
+ceptos que sirven para precisar ideas y fundamentar el uso
+de las herramientas del cálculo diferencial e integral. Los
+textos reseñados son los que hemos considerado más signi-
+(cid:976)icativos y no representan a la mayoría, sino a la vanguardia.
+Para culminar este trabajo queremos hacer unas observacio-
+nes críticas al texto de Cálculo usado en la Universidad de tor cubano, que desarrolla los conceptos básicos del cálculo
+La Habana en una gran parte del siglo (cid:285)(cid:285) y que es el primero diferencial e integral. Pero no es posible apreciar adecuada-
+escrito por un criollo nacido y formado completamente en mente el impacto de la labor del profesor Miquel en la eleva-
+Cuba. Además lo consideramos un merecido reconocimiento ción de la calidad de la enseñanza del cálculo en nuestro país
+al cumplirse un centenario de su publicación. sin tener alguna noción acerca del estado de la enseñanza del
+análisis matemático cuando el joven Pablo Miquel ingresa en
+la Universidad de La Habana (Sánchez,C.; Valdés, C. 2013).
+5. El primer texto cubano
+El plan de estudio para las carreras de Ingenieria Ci-
+de Cálculo
+vil, Arquitectura y Ciencias Físico-Matemáticas, matricu-
+ladas por el joven Pablo Miquel y Merino en 1904, incluía
+El texto Elementos de Algebra Superior, del profesor Pablo Mi- dos cursos anuales relacionados con el cálculo diferencial
+quel y Merino,2 publicado en 1914, es el primer libro de au- e integral: Álgebra Superior en el primer año y Cálculo Di-
+ferencial e Integral en segundo. El único libro que aparece
+2 Pablo Miquel y Merino (La Habana, 1887-1944). Al terminar sus recomendado para el curso de Álgebra Superior es Universi-
+estudios secundarios en 1903 viaja a España y matricula en la
+Universidad de Deusto, donde no consigue culminar el primer ty Algebra, de E. Olney, cuyo autor es profesor de la Univer-
+año por enfermedad. Al siguiente curso matricula en la Universi- sidad de Michigan y la edición encontrada en la Biblioteca
+dad de La Habana las carreras de Ingenieria Civil, Arquitectura
+Nacional es de 1884. La obra está dividida en tres partes, la
+y Ciencias Físico-Matemáticas. El título de Doctor en Ciencias
+Físico-Matemáticas lo obtiene en 1908, en 1910 el de Ingeniero primera y segunda son eminentemente elementales y están
+Civil y en 1912 el de Arquitecto. En el curso 1912-1913 comienza
+concebidas como un repaso de los temas de álgebra corres-
+su labor como docente, durante 30 años en la enseñanza del Aná-
+lisis Matemático, primero como catedrático auxiliar y desde 1921 pondientes a la enseñanza secundaria. En la tercera parte
+como Titular de la Cátedra A. Participa en el perfeccionamiento
+denominada Curso Avanzado de Algebra se introducen los
+de la enseñanza media como miembro de numerosas comisiones
+encargadas de la elaboración de programas y selección de profe- elementos de diferenciación, la fórmula de Taylor y el mé-
+sores y textos. Participa en la creación de la Sociedad Cubana de
+todo de los coe(cid:976)icientes indeterminados. Por la forma de ex-
+Ciencias Físicas y Matemáticas en 1942, siendo su primer presi-
+dente y director de la revista de la Sociedad desde la fundación posición de su contenido este libro no solo tiene dos siglos
+hasta su fallecimiento el 3 de abril de 1944.
+— 15 —
+Sociedad Cubana de Matemática y Computación
+de retraso, sino que la pretensión de hacerlo “comprensible” algunos de los conceptos básicos: «Se llama cantidad in(cid:976)ini-
+lo coloca en la posición de dar un conjunto de recetas para tamente pequeña o simplemente un in(cid:976)initamente pequeño
+operar con unos conceptos mal de(cid:976)inidos y carentes de un a una cantidad variable que puede aproximarse a cero tan-
+signi(cid:976)icado siquiera próximo al que de los mismos tenían to como se quiera, pero sin jamás anularse.»
+los matemáticos del siglo (cid:285)(cid:283)(cid:270)(cid:270). Veamos algunos ejemplos: Las funciones se clasi(cid:976)ican en dos tipos: cuando la relación de
+dependencia que existe entre dos cantidades variables sea
+• Diferencial de una función o variable es la diferencia en- susceptible de ser expresada por medio de los algoritmos de
+tre dos estados consecutivos de la función o variable. Es cálculo y cuando esto no es así. Añade que en el primer caso
+lo mismo que un in(cid:976)initesimal. la ley de dependencia recíproca se expresa por medio de una
+• Número real es un número el cual puede concebirse relación analítica y se llama una ecuación y de los ejemplos
+como yaciendo en alguna parte de la serie de números o propuestos se in(cid:976)iere que el segundo tipo se trata de las fun-
+cantidades entre -∞ e ∞ ambos inclusive. ciones empíricas dadas por una tabla de valores. Así que su
+• Una serie se dice convergente si los términos sucesivos de- concepción de función prácticamente se remite a la forma en
+crecen de acuerdo a una ley de modo que hace la suma (cid:976)i- que se valoraba esta idea a comienzos del siglo (cid:285)(cid:283)(cid:270)(cid:270)(cid:270).
+nita. De(cid:976)ine función continua como aquella tal que puede asig-
+narse a la variable o variables independientes valores tan
+El programa del segundo curso (ver Memoria Anuario cur- próximos que la diferencia entre los valores correspon-
+so 1902-1903) recomienda los textos: Cálculo Diferencial e dientes de la función sea menor que cualquier cantidad por
+Integral, de L. Gómez de Terán; Calculus, de E. Olney, y Cours pequeña que sea. Realiza una “demostración” de que toda
+d’Analyse de l’Ecole Polytecnique, de Ch. Sturm. función continua es derivable excepto a lo sumo en un núme-
+El libro de Sturm abarca aquellos temas del análisis ma- ro (cid:976)inito de puntos.
+temático que se estudiaban frecuentemente en las universi- De lo anterior se evidencia que, a pesar de la loable in-
+dades europeas a mediados del siglo (cid:285)(cid:270)(cid:285), incluyendo temas tención de presentar, en idioma castellano, una exposición
+ausentes en el programa, por ejemplo, trata con cierta ex- accesible del análisis in(cid:976)initesimal, en realidad lo que se
+tensión las ecuaciones en derivadas parciales y tiene un ca- propone es una exposición distorsionada por la compren-
+pítulo dedicado al cálculo de variaciones. La exposición de sión que el autor tiene del tema.
+los conceptos de diferenciación e integración está realizada Es interesante, además, analizar la forma en que el Catedrá-
+en el estilo de los textos de Cauchy para la Escuela Politéc- tico titular de Análisis Matemático, J. R. Villalón Sánchez, inter-
+nica descritos en el epígrafe anterior y aparecen cuestiones pretaba algunos de los conceptos antes comentados. Para ello
+tales como la demostración errada de que una serie con- contamos con el discurso de ingreso a la Academia de Cien-
+vergente de funciones puede integrarse término a término cias Médicas, Físicas y Naturales de La Habana, que realizó el
+(p 385). Esta demostración está realizada de forma seme- Ing. Villalón el 24 de abril de 1908 y que tituló Introducción
+jante a la que presenta Cauchy en su Resumé des Leçons don- al estudio del Cálculo In(cid:980)initesimal (Villalón Sánchez, 1908-09).
+nées a l’Ecole Royale Polytchnique (1823). He aquí su concepto de cantidades in(cid:976)initas e in(cid:976)initesimales:
+En la Biblioteca de la Universidad de La Habana encontra- «La potencia de nuestros sentidos y de nuestra imaginación li-
+mos el texto recomendado Lecciones de Cálculo In(cid:980)initesimal mitan prácticamente lo (cid:976)inito, y aquellas cantidades o magni-
+dictadas en la Escuela de Ingenieros de San Juan, República tudes que, por ser demasiado grandes o demasiado pequeñas,
+Argentina, de Leopoldo Gómez de Terán,3 editado en 1890. sobrepasan ese límite se llaman in(cid:976)initamente grandes o in(cid:976)i-
+Comentemos la forma en que son presentados en este texto nitamente pequeñas, o sea in(cid:976)initas o in(cid:976)initesimales.»
+Su concepción de una función continua es una amalgama
+3 El autor dedica este libro a José Echegaray, su profesor en la Es- de la de(cid:976)inición euleriana y la que la sustituyó en la prime-
+cuela de Ingenieros de Caminos, de Madrid.
+— 16 —
+Revista Ciencias Matemáticas
+ra mitad del siglo (cid:285)(cid:270)(cid:285) debida a Bolzano y Cauchy. En parti- La primera edición del texto Álgebra Superior (1914) co-
+cular señala que; «Una función continua tal como y = f(x) mienza con 4 capítulos dedicados a teoría combinatoria,
+está caracterizada por las siguientes condiciones que debe determinantes, análisis indeterminado y polinomios con
+cumplir: coe(cid:976)icientes indeterminados. En el Capítulo V se estudian
+los números complejos los cuales introduce en forma na-
+• Para cada valor (cid:976)inito de la variable independiente x co- tural: «[...] la sustracción, cuando el sustraendo era mayor
+rresponde un valor (cid:976)inito de la función. que el minuendo nos había obligado a ampliar la serie de los
+• A medida que x cambia gradualmente por variaciones in- números enteros añadiéndole los números negativos.
+(cid:976)initesimales, la función deberá cambiar gradualmente La inversa de la multiplicación, o sea la división obliga a
+por variaciones también in(cid:976)initesimales. introducir los números fraccionarios para poder explicar el
+• La ley simbolizada por el carácter de la función no debe caso en que el dividendo no es múltiplo del divisor.
+cambiar abruptamente.» El conjunto de los números enteros y fraccionarios positi-
+vos y negativos forman el conjunto de los números conmen-
+Para aclarar el signi(cid:976)icado de la tercera condición incluye el surables. La inversa de la elevación a potencias, que se llama
+grá(cid:976)ico de la Fig. 3 y expresa: «Si la función representara un extracción de raíces, en esta operación pueden ocurrir dos
+lugar geométrico tal como el de la Fig.1 de modo que BA fuera clases de imposibilidades, una proveniente de que los núme-
+una curva continua trazada según una ley determinada pero ros no todos tienen raíz exacta lo cual obliga a crear los in-
+que al llegar al punto A dicha ley cambiara de repente y a partir conmensurables y otra que consiste en que ninguna potencia
+de este punto aquella curva se convirtiera en una recta, enton- de grado par de un número real puede ser negativa y esto ha
+ces la tercera de las condiciones quedará incumplida y la fun- dado lugar a las expresiones imaginarias.»
+ción sería discontinua y A sería un punto de discontinuidad.» Miquel no aclara qué entiende por número real, se pue-
+de sobreentender del párrafo anterior que los considera
+la unión de los números conmensurables e inconmensu-
+rables. En este aspecto de la introducción de los números
+reales es en el cual radica la debilidad fundamental de la
+obra, problema que no resolverá totalmente en las edicio-
+A
+nes posteriores. Pero si tomamos en consideración que
+este texto se usaba en todas las carreras de ingeniería y
+de ciencias no resulta tan inadecuado tal enfoque.
+Por otra parte, el concepto función lo enuncia de una forma
+B completamente actual, y los comentarios aclaratorios que rea-
+liza demuestran que tiene una noción clara de lo que está escri-
+biendo. Así comenta: «El concepto de función no es en el fondo
+Fig. 3
+otra cosa que la correspondencia entre dos conjuntos; uno el
+Estos comentarios nos parecen su(cid:976)icientes para concluir de los valores de la variable, otro el de los valores de la función.
+que los textos de Análisis Matemático que se utilizaban, Para de(cid:976)inir una función particular, necesitamos dos cosas:
+además de tener al menos un siglo de atraso, en aras de una
+supuesta simpli(cid:976)icación presentaban la materia de forma 1. Designar el conjunto en que se mueve la variable, o
+distorsionada. Distorsión esta que va a ser magni(cid:976)icada por sea de(cid:976)inir el argumento.
+la ignorancia y falta de actualización matemática del Cate- 2. Dar la regla que permite, dado el valor de la variable
+drático Titular de la asignatura. obtener el de la función, o sea la regla operatoria.»
+— 17 —
+Sociedad Cubana de Matemática y Computación
+A continuación presenta varios ejemplos tanto de las ecotx+1
+y=
+ecotx-1
+que tienen una representación analítica, como de las que
+en el punto x = π, cuyos límites laterales (él los llama «valo-
+provienen de ejemplos de mediciones (cid:976)ísicas. En la tercera
+res indirectos») son diferentes en dicho punto.
+edición (1939)4 va a comentar que las relaciones analíticas
+En su estudio de las funciones continuas, enuncia y de-
+pueden venir dadas por más de una expresión e incluye el
+muestra el teorema de Bolzano de que una función conti-
+ejemplo de la función
+nua siempre alcanza todos los valores intermedios entre
+x,para0#x#r
+f(x)=' r-x,parar #x# 2 r 1 dos valores de la función dados. La demostración la realiza
+2
+mediante la subdivisión sucesiva del intervalo en n partes
+En el texto Miquel da una de(cid:976)inición clara y precisa de límite
+iguales de forma impecable, a excepción de la conclusión
+de una sucesión y propone varios ejemplos. En el primero, la
+1 1 1 “evidente” de que las sucesiones monótonas y acotadas son
+sucesión , ,..., ,..., analiza numéricamente el cumpli-
+2 22 2n siempre convergentes. Aquí tenemos una manifestación de
+miento de la de(cid:976)inición dando valores particulares a f. Otro
+la di(cid:976)icultad que se produce al no dar una de(cid:976)inición precisa
+ejemplo, que permite comprender cómo Miquel supera con
+y operativa, de número real. En la tercera edición enunciará
+éxito las concepciones erróneas de sus antecesores, es el de
+d nr sin demostración las otras propiedades clásicas de las fun-
+la sucesión x=b+ sen , sobre la cual escribe que x - b
+D e m o 2n 2
+ciones reales continuas en un intervalo compacto: la acota-
+“es alternativamente nula, positiva, nula, negativa, etc., pero
+ción y la uniformidad de la continuidad.
+dado un valor  para la diferencia |x - b| siempre es posible
+Presenta Miquel en su obra la de(cid:976)inición de derivada como
+encontrar un valor para n, pasado el cual esta diferencia es
+límite del cociente incremental y obtiene la representación
+menor que f por pequeño que sea.”
+clásica del incremento de la función como la suma de una par-
+La de(cid:976)inición de función continua en un punto la expre-
+te lineal (que de(cid:976)ine como el diferencial) y una parte in(cid:976)inite-
+sa en la forma actual, en el lenguaje - y ejempli(cid:976)ica con un
+simal. Demuestra la continuidad de toda función derivable y
+polinomio sencillo de segundo grado y con la función
+muestra con el ejemplo y = 1 + x1/5 que el recíproco no es cierto.
+En la primera edición, a pesar de que considera la deriva-
+da como concepto primario, cuando calcula las derivadas de
+funciones con cierto grado de complejidad utiliza fundamen-
+talmente el diferencial, esto le permite evadir el enunciado y
+demostración de las reglas de la derivada de la función com-
+puesta y de la inversa. Así por ejemplo obtiene d(sen x) = cos
+xdx, la que utiliza aun cuando x sea función de otra variable.
+Como puede apreciarse, en lo concerniente a los concep-
+tos de función, límite, continuidad y diferenciación el texto
+Elementos de Algebra Superior, de Miquel, es no solo muy su-
+perior a lo que se recomendaba hasta ese momento, sino que
+podemos considerarlo actualizado para la época de su pu-
+blicación, la segunda década del siglo (cid:285)(cid:285). Sin embargo consi-
+deramos que el aspecto del Análisis Matemático donde esta
+obra de Miquel es realmente sobresaliente es en su presenta-
+ción de las series, tanto numéricas como de potencias.
+Miquel clasi(cid:976)ica las series en convergentes, divergentes
+Copia de la primera edición del texto “Elementos de Álgebra Superior” (cid:980)ir-
+mada por su autor. a in(cid:976)inito y oscilantes. Enuncia, demuestra y da una inter-
+4 No se localizó un ejemplar de la segunda edición del libro. pretación geométrica de la condición necesaria y su(cid:976)icien-
+— 18 —
+Revista Ciencias Matemáticas
+te de Bolzano-Cauchy para la convergencia de una serie. no tiene porqué ser in(cid:976)initesimal. En la tercera edición aña-
+En esta parte aparece citado el in(cid:976)luyente libro de T. Bro- de el ejemplo de la serie de funciones continuas
+mwich, An Introduction to the Theory of In(cid:980)inites Series, pu- /3 2x2 1+2x2,six!0
+=' 1,
+^1+x2hn 0,six=0
+blicado en 1908, lo que evidencia su actualización en esta n=1
+temática. La demostración de la su(cid:976)iciencia la realiza por cuya suma es una función discontinua en el origen.
+reducción al absurdo: supone que diverge a in(cid:976)inito y lle- Semejante al caso de la continuidad, enuncia y demues-
+ga a una contradicción con la acotación de las sumas par- tra la posibilidad de derivar término a término una serie
+ciales, que es una consecuencia de la condición de Cauchy. de potencias y para poner en evidencia la necesidad de tal
+Después supone que oscila entre dos valores A y B, enton- demostración, exhibe el ejemplo de la serie convergente
+/ cosn2x
+ces toma dos subsucesiones de las sumas parciales una , que tiene la característica que la serie de sus
+n2
+convergente a A y la otra a B y con esto llega a una contra- derivadas es divergente.
+dicción. Por supuesto, en esta parte de la demostración se A continuación va a exponer las operaciones con series.
+encuentra nuevamente con la di(cid:976)icultad relativa a la for- Para ello introduce el concepto de convergencia absoluta y la
+malización del concepto de número real. En la tercera edi- relaciona con la convergencia usual. Entre otras propiedades
+ción resolverá este problema enunciando como un lema, demuestra de forma rigurosa la posibilidad de reordenación
+sin demostración, la propiedad de Bolzano-Weierstrass de una serie absolutamente convergente. La idea básica del
+acerca de la posibilidad de extracción de una subsucesión Teorema de Riemann, acerca de la posibilidad de reordenar
+convergente de una sucesión acotada5. una serie condicionalmente convergente (que denomina se-
+A continuación Miquel expone de forma prolija, muy di- mi-convergente) de forma tal que converja a cualquier valor
+dáctica y sumamente rigurosa los criterios clásicos de se- pre(cid:976)ijado o que diverja, lo ilustra encontrando un reordena-
+/3 n
+ries de términos positivos, el criterio de Leibniz para series miento de la serie ^-1h /n convergente a cero.
+n=1
+alternas y criterios para series con otros tipos de periodici- Finalmente dedica los capítulos (cid:285)(cid:283)(cid:270), (cid:285)(cid:283)(cid:270)(cid:270) y (cid:285)(cid:283)(cid:270)(cid:270)(cid:270) a los de-
+dad en el comportamiento del signo de sus términos. sarrollos en serie de Taylor y Maclaurin, realizando un aná-
+Un tema que aparece tratado en una forma elemental, lisis detallado del desarrollo de las funciones elementales, la
+pero sumamente rigurosa, es el de las propiedades de las convergencia a cero del resto y expone diferentes métodos
+funciones de(cid:976)inidas por series de potencias. Primero estu- de obtención de desarrollos de funciones elementales, así
+dia este tipo de series considerando la variable compleja, como aplicaciones de los desarrollos obtenidos para realizar
+de(cid:976)ine, como es habitual, los conceptos de círculo y radio cálculos aproximados. Para demostrar la fórmula de Taylor
+de convergencia y encuentra sus propiedades básicas. A enuncia y demuestra previamente el Teorema de Rolle y en
+continuación demuestra la continuidad y derivabilidad de ello confronta di(cid:976)icultades por no contar con la propiedad de
+la función suma de una serie de potencias en el interior de Weierstrass de acotación de una función continua en un in-
+su intervalo de convergencia realizando las acotaciones ne- tervalo compacto. Esta es una situación típica a (cid:976)inales del
+cesarias para el incremento de la función. En ningún mo- siglo (cid:285)(cid:270)(cid:285), incluso en textos europeos. Por ejemplo, re(cid:976)irién-
+mento introduce el concepto de convergencia uniforme, no dose al teorema del valor medio Gispert (Gispert-Chambaz,
+obstante es claro que lo conoce y lo evade en aras de la acce- 1980), escribe: «Todas las demostraciones que fueron dadas
+sibilidad de la exposición; así comenta que, aunque parezca hasta 1884 en los manuales, a excepción de la de Dini, son in-
+extraño, es necesario demostrar estos resultados ya que en completas o exigen hipótesis super(cid:976)luas sobre la derivada.»
+general la suma de cambios in(cid:976)initesimales en cada término En la primera edición de su texto, Miquel cita el libro de Jor-
+dan, pero como es costumbre en la época, no aclara la fecha
+5 Esta solución está próxima a la que asumen muchos de los textos de la edición. En la biblioteca hemos encontrado solo el tercer
+de Análisis Matemático, cuando realizan una presentación axio-
+tomo correspondiente a la primera edición (esta edición apa-
+mática de los números reales.
+— 19 —
+Sociedad Cubana de Matemática y Computación
+rece entre 1882-87). En este tercer tomo, Jordan realiza por dictadas en la Escuela de Ingenieros de San Juan, Librería de Ch.
+vez primera en un libro de texto francés, una serie de comen- Bousset, Paris.
+tarios relacionados con los fundamentos del Análisis y que se- GRANVILLE, W.A. (1911) Elements of the Differential and Integral
+rán las bases para la completa reelaboración que realizará en Calculus, Ginn and Company, Boston.
+su segunda edición de 1893. KATZ, V. J. (1998) A History of Mathematics: An Introduction. Har-
+Los restantes 12 capítulos del libro de Miquel están dedi- per Collins College Publishers. New York.
+cados a problemas algebraicos como el análisis del número L’HOSPITAL, G. F. MARQUÉS DE (1998) Análisis de los in(cid:980)initamen-
+de raíces de ecuaciones, la separación de las raíces reales te pequeños para el estudio de las líneas curvas. UNAM, Ciudad
+de una ecuación y a la exposición de diferentes métodos de de México.
+cálculo aproximado de estas raíces, en muchos de ellos se LACROIX, S.F. (1807) Traité Eléméntaire de Calcul Différentiel, Gau-
+auxilia de las herramientas del cálculo diferencial. thier Villars, Paris
+En un comentario bibliográ(cid:976)ico en el famoso texto enci- LAGRANGE, J.L. (1797) Théorie des fonctions analytiques, L’Impri-
+clopédico de Rey Pastor y otros, 1963, p. 599 se expresa: merie de la Republique, Paris.
+«De tipo clásico y elemental, desarrollada a partir de los MEMORIA ANUARIO de la Universidad de la Habana (1864-1939),
+conceptos de función, límite y derivada, está la extensa y Universdad de La Habana.
+correcta obra de P. Miquel, Elementos de Álgebra Superior.» MIQUEL Y MERINO, P. (1914) Elementos de Álgebra Superior, 1ª ed.
+Sin dudas el año 1914 marca un decisivo salto cualitativo Imprenta Moderna, Habana.
+crucial en la enseñanza del cálculo diferencial e integral en MIQUEL Y MERINO, P. (1939) Elementos de Álgebra Superior, 3ª ed.
+la Universidad de La Habana y consecuentemente en Cuba. Editorial Cultural, S.A. Habana.
+Este logro se vio acrecentado por las magistrales conferen- OLNEY, E. (1884) A University Algebra, New York.
+cias dictadas por el Profesor Miquel en sus más de 30 años REY PASTOR, J. Y OTROS (1963) Análisis Matemático t. 1, Ed. Kape-
+de labor docente, por la aparición en 1939 de la tercera edi- lusz, séptima edición, Buenos Aires.
+ción de su Elementos de Álgebra Superior y algo después por RIBNIKOV, K. A. (1987) Historia de las matemáticas. Ed. Mir. Moscú.
+la publicación de sus obras de madurez: Curso de Cálculo Di- SÁNCHEZ FERNÁNDEZ, C. (2000) La Matemática en la Universidad
+ferencial (1941) y Curso de Cálculo Integral (1942). de La Habana en un Entorno del 98. En: E. Ausejo & Mª C. Beltrán
+(eds.), La Enseñanza de las Ciencias: una perspectiva histórica.
+“Cuadernos de Historia de la Ciencia”. 11. Zaragoza, Seminario de
+Bibliogra(cid:976)ía
+Historia de la Ciencia y de la Técnica de Aragón, Universidad de
+Zaragoza, vol. 1, pp. 77-88.
+CAUCHY, A. (1821) Cours d’Analyse, L’imprimerie Royale, Paris SÁNCHEZ, C.; VALDÉS, C (2001) Los Bernoulli. Geómetras y Viaje-
+CAUCHY, A. (1823) Résumé des Leçons sur le Calcul In(cid:980)initésimal, ros. Nivola. Madrid.
+L’imprimerie Royale, Paris SÁNCHEZ, C.; VALDÉS, C. (2004) De los Bernoulli a los Bourbaki.
+EDWARDS, C. H. (1994) The historical development of the calculus. Una Historia del Arte y la Ciencia del Cálculo. Nivola. Madrid.
+Springer Verlag, New York. SÁNCHEZ, C.; VALDÉS, C (2013) Emergencia de una Cultura Mate-
+EULER, L. (1755) Institutiones Calculi Differentialis, Academiae Impe- mática en Cuba, Ciencias Matemáticas, vol. 27, No. 2.
+rialis Scientiarum Petropolitanae, San Petersburgo. STRUIK, D.(ed.) (1969) A Source Book in Mathematics. Harvard
+EULER, L. (2001) Introducción al análisis de los in(cid:980)initos. Edición Univ. Press. Cambridge.
+de Antonio J. Durán, THALES, Sevilla. VILLALÓN SÁNCHEZ, J.R. (1908-09) Introducción al estudio del
+GISPERT-CHAMBAZ, H. (1980) Camille Jordan et les fondaments de Cálculo In(cid:976)initesimal, Parte I y II, Revista de la Facultad de Le-
+l’Analyse, Publications Mathematiques d’Orsay, Paris tras y Ciencias vol. 7 no.1 y vol.9, no.3, Univ. de la Habana.
+GÓMEZ DE TERÁN, L. (1890) Lecciones de Cálculo In(cid:980)initesimal
+— 20 —

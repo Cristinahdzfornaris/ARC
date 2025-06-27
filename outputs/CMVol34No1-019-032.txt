@@ -1,0 +1,1087 @@
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+Recibido06-2020,Aceptado07-2020
+Modelos fenomenológicos aplicados al estudio de la
+COVID-19 en Cuba
+Phenomenological models applied to the study of
+COVID-19 in Cuba
+Jose Alejandro Mesejo-Chiong1*, Angela Mireya León-Mecías1
+Resumen El reciente brote epidémico de la COVID-19 en el planeta ha resultado en una seria amenaza
+al desarrollo de la especie humana. Por ello se impone estudiar con todos los medios a nuestro alcance la
+evolucióndeestaenfermedad.Enelpresentetrabajoseaplicanmodelosllamadosfenomenológicosalestudio
+delaCOVID-19enCuba.Comofuentededatossoloserequiereelreportediarioqueefectúanlasautoridades
+sanitariasdenuestropaísdesdeeliniciodelaepidemia.Sedemuestraquelosmodelosfenomenológicostienen
+granvalorpararealizarpronósticosquepuedenguiarlasintervencionesquelossistemasnacionalesdesalud
+realizanparacontenerlaexpansióndelaCOVID-19.
+Abstract The recent epidemic outbreak of COVID-19 on the planet has resulted in a serious threat to the
+developmentofthehumanspecies. Thatiswhyitisnecessarytostudy,withallthemeansatourdisposal,the
+evolution of this disease. In the present work we apply phenomenological models to the study of COVID-19
+inCuba. Onlythepublicdailyreport,madebythehealthauthoritiesofourcountrysincethebeginningofthe
+epidemic,isusedasdatasource. Itisshownthatphenomenologicalmodelshavegreatforecastingvalueand
+its prognoses can guide the interventions carry out by national health systems to contain the expansion of
+COVID-19.
+PalabrasClave
+COVID-19,Modelosfenomenológicos,Crecimientodeepidemias
+Keywords
+COVID-19,Phenomenologicalmodels,EpidemicGrowth
+1DepartamentodeMatemáticaAplicada,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba,
+mesejo@matcom.uh.cu,angela@matcom.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción ciadecreciente.Unpronósticoacertadodeestasmagnitudes
+permitelatomadedecisionescorrectas.
+ElrecientebroteepidémicodelaCOVID-19causadopor
+el virus SARS-CoV-2 demuestra que las epidemias siguen Lamodelaciónmatemáticadeepidemiasesuntemaenel
+representandounaseriaamenazaparalossereshumanos.A cualelnúmerodepublicacionesessumamenteamplio,vea
+pesardelconocimientoacumuladoenelestudiodelasenfer- [5],[11],[12],[15],[16],[27]y[29]porsolocitaralgunos
+medadesinfecciosasydelostratamientosmédicosactualesla delosmuchostextosexistentes.Numerososmodelosdetermi-
+COVID-19continuasuexpansiónmundialconungrannúme- nistasoestocásticosseempleanparasimulareldesarrollode
+rodemuertesysuevoluciónfuturaesaúnincierta.Porello unaepidemia.Sinembargo,elegirelmodeloadecuadonoes
+elestudiodeestaepidemiaportodaslasramasdelaciencia unatareafácilylaestimacióneficientedelosparámetrosde
+posiblesesdesumaimportancia. estemodelotampocoloes.Seprecisaunaevaluaciónracional
+entremuchosposiblescandidatos(vea[8]).Estasituaciónes
+Unodelosmayoresretosestáenpredecirtendenciasde
+particularmentecomplejacuandosetratadeunapandemiaco-
+comportamiento futuro para preparar los sistemas de salud
+molaCOVID-19cuyocomportamientopresentaaúnaspectos
+alenfrentamientoalaepidemia.Undatofundamentalesel
+desconocidosparalaciencia.
+númerodenuevosinfectadospordía,establecercotaspara
+estevaloresunaayudainvaluableparalapreparaciónyubi- Existendiferentescategoríasdemodelosmatemáticosem-
+cacióndelosrecursosmédicos.Apartirdeestedatosepuede pleadosenelestudiotempranodeepidemias[9].Losmodelos
+deducirladuracióndelbroteepidémicoyeldíaenquelaserie deterministas son aquellos que se expresan mediante ecua-
+temporaldenuevoscasoscomenzaráademostrarunatenden- ciones diferenciales ordinarias. A esta clase pertenecen los
+20 ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba
+clásicosybienestudiadosmodelosdecompartimentosSIS, datosdelaCOVID-19enCuba.
+SIR,SEIRysusnumerosasvariantes.Otraclaselaconstitu- En[4]seusanlasfuncioneslogísticaydeGompertzpara
+yenlosllamadosmodelosfenomenológicos.Estosmodelos analizarlaevolucióntemporaldelaCOVID-19endiferentes
+seempleanendiferentesfenómenoscomocrecimientodepo- países.Seproponeademásunageneralizaciónparalaleyde
+blaciones,tumores,economíayepidemias,cuandoseasume Gompertz.EnestetrabajoseconcluyequeenChinalasfuer-
+quelatasadecrecimientopuedeserrepresentadamediante tesmedidasderestriccióntomadasporelgobiernohicieron
+unaúnicaecuacióndiferencialordinaria.Entreestospodemos posiblequelapropagacióndelaenfermedadalcanzararápida-
+citar,elmodelodecrecimientoexponencial(deMalthus)[21], mentesupuntodesaturaciónyvaticinaronunnuevorebrote
+ellogístico[25],eldeRichards[18]yeldeGompertz[24], delaepidemiaenSingapur,apartirdelanálisisdelosdatos
+asícomosusvariantesgeneralizadas,entreotros.Estosson deesepaís.En[2]serealizaunanálisiscomparativoentreel
+modelossimplesquehacenénfasisenincorporarobservacio- modelodecrecimientologístico,elmodelodeGompertzy
+nesempíricasypermitenreproducircaracterísticasesenciales susrespectivasgeneralizaciones,usandodatosde37brotes
+delfenómenobajoestudio. dediferentesepidemias(ébola,colera,influenza,entreotras)
+DadalanovedaddelaCOVID-19,losdatosdisponibles endiferentesregionesdelmundo,conelresultadodequeel
+sobresuevoluciónsonaúnlimitados,sobretodosisecom- modelo logístico generalizado es superior para el ajuste de
+paraconepidemiascomolaGripeyotrasquellevandécadas datosalaevolucióntemporaldedichasepidemias.En[28]se
+azotandoalahumanidad.Losmecanismosdepropagacióny obtienencotassuperioreseinferioresparaelcomportamiento
+contagiodelaCOVID-19nosontotalmenteconocidos(vea delaCOVID-19aplicandocuatromodelosdecrecimiento:el
+[1])ylasmedidasdecontenciónaplicadasestánsiendoeva- logístico,ellogísticogeneralizado,eldecrecimientogenera-
+luadassobrebasesempíricas([3],[10],[17]).Porellopara lizadoyeldeRichardsgeneralizado,alajustarlosdatosde
+esteestudio,hemoselegidolosmodelosfenomenológicosno infectadosreportadosentreel10deeneroyel19demarzo
+linealessimplesmencionadosanteriormente.Elobjetivoes de2020endiferentesescenarios:todaChina,29provincias
+obtener una predicción rápida a corto y mediano plazo de deChinayalgunospaísesdeEuropafuertementeafectados
+la cantidad de casos acumulados posibles, ayudando así al porlaepidemia.
+planeamientodelasmedidasdecontenciónnecesarias.Este Enlapresentecontribuciónseexploranlosplanteamien-
+procedersehaempleadoconéxitoenotrasepidemias(vea[2], tosdelostrabajoscitadospreviamente,condatosdelnúmero
+[13],[14],[20],[26]y[31])yseaplicaalaactual,causada de casos detectados de la COVID-19 en Cuba. Nos propo-
+porelSARSCov2([6],[7],[19],[23],[28],[30]). nemostambiénexplorarelvalorpredictivodelosdiferentes
+modelosyestablecerunametodologíaquepermitahallarco-
+En [31] se analizan datos de la epidemia del ZIKA en
+tasdelaevolucióntemporaldelaCOVID-19.Eltrabajoestá
+2015-2016,en8estadosdeBrasil,mediantetresmodelos:el
+estructuradodelasiguienteforma:enlasecciónsiguientese
+logístico,eldeRichardsyeldeGompertz.Lostresmodelos
+presentanlosmodelosfenomenológicosqueseránempleados
+sepresentandependientesdetresparámetrosfundamentales:
+con sus respectivas soluciones, en la sección 2 se exponen
+elmayornúmerodecasosacumuladosposiblesK,latasade
+losresultadosobtenidosporelajustemediantemínimoscua-
+crecimiento γ y el punto de inflexión τ . En el trabajo se
+p
+drados no lineales, de cada uno de los modelos a datos de
+demuestraquelaobtencióndeprediccionesentiemporeal
+Cubayseseñalandetallesdeimplementaciónrelevantes,por
+confiablessobreladimensiónfinaldelaepidemiasonposibles
+últimoenlasección3sediscutenlosresultadosobtenidosy
+conestosmodelos.
+secomentanlasconclusionesmásrelevantes.
+En[30]serealizaunainvestigaciónsistemáticasobreel
+poderdepredicciónde8funcionesempíricas,4métodosde
+inferenciaestadística,y5modelosdinámicosampliamente 1. Modelos fenomenológicos empleados
+usadosenlaliteratura.Seutilizanlosdatospúblicosdelnú-
+Losmodelosfenomenológicos,comosehaseñalado,son
+merodecasosdelaCOVID-19ennueveprovinciasChinas
+especialmenteadecuadoscuandoexisteincertidumbresobre
+durantelaprimaverade2020.Enestetrabajosedestacala
+lascaracterísticasepidemiológicasdelaenfermedadinfeccio-
+importanciadetenerunbalanceadecuadoentrelacompleji-
+sabajoestudio[9].EstoesloqueocurreconlaCOVID-19por
+daddelmodelo,laprecisión,elsobreajuste,elsubajuste,la
+locualestosmodelosconstituyenunpuntodepartida,comple-
+robustezylasensibilidad.Seplanteaquelacurvasigmoidea
+mentarioalosmodelosdecompartimentos,parapronósticos
+típicadelacantidaddeinfectadosacumuladossepuedeajus-
+a corto plazo. También pueden servir para una estimación
+tarexitosamentemediantelasfuncioneslogística,deRichards
+temprana de la dimensión que puede alcanzar la epidemia
+ydeGompertz.Enestetrabajoseplanteaelpapelcrucialque
+a corto, mediano y largo plazo, aunque no son capaces de
+juegaparaelpronósticoelpuntodeinflexión;antesdelaocu-
+vaticinarbrotesconsecutivos.
+rrenciadelmismoningunodelosmodelosconsideradoslogró
+Losmodelosqueestudiaremosseplanteanmedianteun
+unapredicciónconfiable.Seplanteaademásquelafunción
+problemadevalorinicial(PVI)deltipo
+logísticasubestimaladimensiónfinaldelaepidemiaylafun-
+cióndeGompertzlasobrestimaentodosloscasosestudiados.
+dC
+Esestaunaafirmaciónquetrataremosdecomprobarconlos = f(C,p), C(0)=C 0 , (1)
+dt
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba 21
+dondeC(t) representa la cantidad de casos acumulados re- 1.3 ModelodeCrecimientoLogístico(MCL)
+portadoshastaelinstante(tiempo)t.Laecuacióndiferencial Elmodelodecrecimientologístico[25]estádadoporel
+ordinariaen(1)esautónomaylafunción f dependedeun PVI
+(cid:18) (cid:19)
+dC C
+vectordeparámetrosdelrespectivomodeloquesehadenota-
+=γC 1− , C(0)=C . (8)
+0
+doconp.Ladimensióndepcaracterizalacomplejidaddel dt K
+modelo. En(8)aparecenlatasadecrecimientoγ ylallamadacapaci-
+daddecargaK quedeterminaelmayornúmerodeindividuos
+1.1 ModelodeCrecimientoExponencial(MCE)
+quepodránsercontagiados.Lasoluciónanalíticade(8)es
+Enlafaseinicialdelaexpansióndeunaenfermedadin-
+fecciosaelnúmeroacumuladodenuevoscasosC(t),dondet K
+C(t)= ,
+tieneunidadesdetiempo,demuestrauncrecimientoexponen- 1+(K/C −1)exp(−γt)
+0
+cial.Estaobservaciónempíricaseexpresamedianteunatasa
+ysepuedeexpresarincluyendoelpuntodeinflexiónτ dela
+decrecimientoproporcionalalnúmerodeinfectados,asevera- p
+forma
+ciónqueesciertaenlaetapainicialdeunaepidemia,cuando K
+C(t)= , (9)
+aúnnosetomanmedidasquepermitanfrenarelcontagio.El
+1+exp(−γ(t−τ ))
+p
+modelofenomenológicomássimpleparaestasituación,que
+considerandoque
+enelcontextodecrecimientodepoblacionesseconocecomo
+deMalthus[21],estádadoporelPVI 1 (cid:18) K (cid:19)
+τ = ln −1 . (10)
+p
+dC γ C
+0
+=γC, C(0)=C , (2)
+0
+dt
+El punto de inflexión τ determina el momento en el cual
+p
+cuyasoluciónanalíticaes elnúmerodenuevosinfectadosdiariosempiezaadecrecer
+oanálogamente,elmomentoenelcualcomienzalafasede
+C(t)=C exp(γt). (3)
+0
+desaceleraciónenelcrecimientodelacantidaddeindividuos
+TenemosentoncesqueelMCEpresentacomoparámetros infectados acumulados. El vector de parámetros para este
+alatasadecrecimientoγ >0yalacantidadinicialdeindivi- modeloes
+duoscontagiadosC 0 >0.Dadoqueγ espositivaestemodelo p MCL =(γ,K,τ p ). (11)
+pronosticauncrecimientodelnúmerodeinfectadosquesolo
+estálimitadoporelnúmerototaldeindividuosexistentesen 1.4 ModelodeCrecimientoLogísticoGeneralizado
+lapoblación.Elvectordeparámetroses (MCLG)
+ElMCLG[8]estádadoporelPVI
+p =(γ,C ) (4)
+MCE 0
+dC
+yevidentementelacurvadadapor(3)nopresentapuntosde =γCµ(1−βC), C(0)=C , (12)
+0
+dt
+inflexión.
+dondedenuevoβ =K−1.ElMCLGgeneralizaelMCLal
+1.2 Modelo de Crecimiento Exponencial Generali- incluirunnuevoparámetroµ con0<µ <1,quecuantifica
+zado(MCEG)
+la desviación en el número acumulado de infectados de la
+Al igual que el MCE, el MCEG [26] es aplicable en la tendenciaexponencialinicialdelMCL.Siµ =1setieneel
+faseinicialdelaepidemia.EstárepresentadoporelPVI MCL y dado que µ <1, el crecimiento inicial presenta un
+dC comportamientosubexponencial.
+=γCµ, C(0)=C , (5)
+dt 0 No existe solución analítica para (12), por lo cual, se
+requieredemétodosnuméricosparahallarlasolución,dado
+donde0<µ<1caracterizaladesviacióndelMCEGrespecto
+unvectordeparámetros
+alMCE.Estetipodecrecimientosellamasubexponencial.
+Lasolucióngeneralde(5)es p =(β,γ,µ,C ) (13)
+MCLG 0
+C(t)= (cid:0) γ¯t+C¯ 0 (cid:1)1/µ¯ (6) específico.ElvalordeK seobtienenuevamenteapartirde
+K=β−1.
+donde
+Elpuntodeinflexiónτ enestemodelopuedesercalcula-
+p
+γ¯=γµ¯, µ¯ =1−µ, C¯ 0 =C 0 exp(−µC 0 ). dotambiénconmétodosnuméricos.Secumpleque
+Elvectordeparámetroses d2C =γCµ(cid:0) µC−1−β(µ+1) (cid:1)dC ,
+p = (cid:0) γ¯,µ¯,C¯ (cid:1) (7) dt2 dt
+MCEG 0
+porlocual,τ satisfacelaecuación
+yapartirdeestesepuedencalcularlosparámetrosqueapa- p
+recenen(5).Estemodelotambiénpronosticauncrecimiento µ
+C(τ )− =0. (14)
+ilimitadodelnúmerodeindividuosinfectados. p β(µ+1)
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+22 ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba
+Hallarunasoluciónde(14)conτ >0pormétodosnuméricos 1.7 ModelodeCrecimientodeGompertz(MCG)
+p
+essencillo.Observemosqueconp podemosdeterminar La llamada curva de Gompertz [31], expresada en una
+MCLG
+elvectordeparámetros
+desusvariantespory=Ke−ea−γt
+,fuepormuchosañossolo
+de interés para los actuarios. Sin embargo, posteriormente
+p¯ =(K,γ,τ ,C ).
+MCLG p 0 hasidousadaporvariosautorescomocurvadecrecimiento
+enfenómenosbiológicosyeconómicos,[2],[24].Elmodelo
+1.5 ModelodeCrecimientodeRichards(MCR)
+respondealPVI
+ELMCResunamodificaciónpropuestaporRichardsen
+1959(vea[18])almodelologístico,comoformasimplede dC (cid:18) K (cid:19)
+ajustardatosempíricosenestudiosbotánicos.Estádadopor =γCln , C(0)=C 0 , (21)
+dt C
+elPVI
+dC
+(cid:18) (cid:18)
+C
+(cid:19)α(cid:19) consoluciónanalítica
+=γC 1− , C(0)=C . (15)
+dt K 0 (cid:18) (cid:18) K (cid:19) (cid:19)
+C(t)=Kexp −ln exp(−γt) ,
+C
+Tienelasoluciónanalítica 0
+K que puede escribirse en término del punto de inflexión τ
+C(t)= (16) p
+(1+exp(−αγ(t−τ )))1/α. como
+p
+C(t)=Kexp(−exp(−γ(t−τ ))) (22)
+p
+Estacurvaenformadesigmoidetieneelpuntodeinflexión
+con
+1 (cid:18)C−α−K−α(cid:19) 1 (cid:18) (cid:18) K (cid:19)(cid:19)
+τ p = αγ ln 0 K−α , (17) τ p = γ ln ln C 0 .
+yelvectordeparámetroses Elvectordeparámetroses
+p
+MCR
+=(K,α,γ,τ
+p
+). (18) p
+MCG
+=(γ,K,τ
+p
+). (23)
+1.6 ModelodeCrecimientodeRichardsGeneraliza- Sea
+(cid:18) (cid:19)
+K
+do(MCRG) v(t)=ln =ln(K)−ln(C),
+ElMCRG[8]sedefinemedianteelPVI C
+entonces,dadoquedv/dt=−(dC/dt)/C,(21)setransforma
+dC
+=γCµ(1−βCα), C(0)=C , (19) en
+0
+dt dv
+=−γv, v(0)=ln(K)−ln(C ).
+conβ =K−α. dt 0
+EstemodelogeneralizaelMCL,elMCLGyelMCRal
+Seobtieneque
+incluirlosparámetros0<α <1y0<µ <1.Comoseseña-
+lóanteriormente,α permiteconsiderardiferentesperfilesde v(t)=(ln(K)−ln(C ))exp(−γt),
+0
+crecimientosubexponencialyµ mideladesviaciónqueexpe-
+rimentalasigmoidedescritaporlasoluciónC(t),respectoa porlocualunaformulaciónequivalentede(21)es
+lasimétricadelacurvalogísticasimple.Lasoluciónanalítica
+dC
+noexisteyporelloelPVI (19)seresuelvemediantemétodos =βCexp(−γt), C(0)=C , (24)
+0
+dt
+numéricos.
+Elpuntodeinflexiónτ tambiénsecalculamedianteun
+p conβ =γ(ln(K)−ln(C )).Lasoluciónanalíticade(24)es
+0
+métodonumérico.Observemosque
+(cid:18) (cid:19) (cid:18) (cid:19)
+β β
+d2C dC C(t)=C exp exp − exp(−γt) .
+=−γCµ−1((α+µ)βCα−µ) 0 γ γ
+dt2 dt
+Entoncesτ p essolucióndelaecuación 1.8 Modelo de Crecimiento de Gompertz Generali-
+zado(MCGG)
+(cid:18)
+µ
+(cid:19)1/α
+Tomandoencuentalaforma(24)delPVIparaelMCG
+C(τ )− =0.
+p
+(α+µ)β planteamoselPVIdelMCGG[2]como
+Elvectordeparámetroses
+dC
+=βCµexp(−γt),C(0)=C . (25)
+0
+p =(α,β,γ,µ,C ) (20) dt
+MCRG 0
+Lasoluciónanalíticade(25)es
+yestenospermitecalcularelvector
+p¯ =(α,K,γ,µ,τ ,C ). C(t)=C (cid:0) 1+β ¯(1−exp(−γt)) (cid:1)µ¯ (26)
+MCRG p 0 0
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba 23
+donde donde,deacuerdoa(9),
+1 β
+µ¯ = , β ¯ = .
+1−µ µ¯C 1/µ¯ γ F(t,p )= K .
+0 i MCL 1+exp(−γ(t−τ ))
+p
+Dadoqueγ >0tenemosque
+K= l´ımC(t)=C (cid:0) 1+β ¯(cid:1)µ¯ . Deacuerdoa(10)elparámetroτ p queapareceen(29)contie-
+t→∞ 0 neelvalordeC 0 .AunqueelvalordeC 0 delaseriedetiempo
+C es conocido (en el caso de Cuba C =3), es preferible
+Lasegundaderivadadelafunciónen(26)nospermitecalcular 0
+incluirsuvalorentrelosparámetrosaestimarmediante(29)
+que
+1
+(cid:18)
+1+β
+¯(cid:19) ylosproblemassimilaresparalosotrosmodelosempleados.
+τ p =− γ ln β ¯ µ¯ . (27) Lasoluciónde(29)ysimilaresproblemasobtenidospa-
+raelMCE,MCEG,MCLG,MCR,MCRG,MCGyMCGG
+Elvectordeparámetrosestádadopor seobtieneconlafunciónfitpertenecientealaCurveFit-
+p = (cid:0) β ¯,γ,µ¯,C¯ (cid:1) . (28) tingToolboxdeMatlab.Estafunciónpermiteunaestimación
+MCGG 0
+robustaalemplearelmétododemínimoscuadradosreiterati-
+1.9 Consideracionesparatodoslosmodelos vamenteponderados[22](iterativelyreweightedleast-squares,
+Los modelos presentados en la secciones precedentes, eninglés).Estaelecciónsefundamentaenquelosvaloresde
+exceptoelMCEyelMCEG,permitenestimardosparámetros laseriedetiempoC puedenestarsujetosaruidoypresentar
+deimportanciaquecaracterizanunaepidemia.Unodeellos valoresatípicos.Losmínimoscuadradosnolinealesclásicos
+es el número máximo posible K de casos acumulados, que suelenserafectadosporlapresenciadevaloresatípicosenlos
+permiteestimarcuangraveserálaexpansióndelaepidemia. datos.
+Elotroeselpuntodeinflexiónτ quepresentarálaseriede Paralaestimaciónrobustamediantelafunciónfitexis-
+p
+tiempodelnúmerodecasosacumulados.Estaseriedetiempo tendosvariantesqueseactivanalemplearlaopción’Robust’
+tienequesernodecrecienteyobligatoriamente,enunperíodo conunodelosvalores’Bisquare’o’LAR’.Enestetra-
+detiempoconsiderable,debepresentarunaasíntotahorizontal bajoseempleanambasparacompararresultadosyestablecer
+enunapoblaciónfinita. elmásapropiado.Paramásdetallessobrealfunciónfitvea
+Si, se permite que tanto α como µ tomen valor 1, el ladocumentacióndelaCurveFittingToolbox.
+MCRGcontienealMCL,MCLGyMCR.Noobstante,hemos Comosemencionóanteriormentelosdatospuedencon-
+decididopresentarlosporseparadoparaexponerlassolucio- tenerruidoyvaloresatípicos.Estonoesinusualyaquelos
+nesanalíticas(9)y(16)delMCLyelMCRrespectivamente. resultados de pruebas para detectar la COVID-19, como el
+Estassoluciones,juntoa(3)delMCE,(6)delMCEG,(22)del PCR,realizadosenundíapuedenserreportadosendíassi-
+MCGy(26)delMCGGsonlasqueseempleanenelajustede guientes.PorellolosvaloresdelaseriedetiempoC pueden
+datosalosrespectivosmodelos.Emplearsolucionesanalíticas presentarsaltosconsiderablesquenoestánrelacionadoscon
+enelajustededatos,espreferibleaemplearaquellasquese la evolución real de la epidemia y afectan la calidad de la
+obtienen mediante un método de integración numérica del
+estimacióndadapor(29).EstoindicaquelosvaloresenC
+PVIcorrespondiente.Estaúltimavarianteeslaúnicaposible puedenserconsideradosconciertaflexibilidad.Parademos-
+paraelMCRG. trarestaafirmaciónyreducirlaocurrenciadegrandessaltos
+enC hemosaplicadoelajusteaunaversiónsuavizadaC de
+2. Ajuste de los modelos a datos de Cuba losdatos.LosvaloresenC secalculanmediantemediamóvil
+conunlargode7días.Esdecir,elvalordeC¯ ∈C estádado
+i
+Conelobjetivodeevaluareldesempeñodelosmodelosen por
+elpronósticodelnúmeroacumuladodecasosconfirmadospa- C +···+C +···+C
+C¯ = i−3 i i+3 (30)
+ralaepidemiadeCOVID-19serealizanvariosexperimentos i 7
+numéricoscondatosdelbroteepidémicodeestaenfermedad.
+suprimiendolosvaloresalaizquierdadeC quetengansubín-
+i
+Losdatoshansidoobtenidosdelosreportesdiariossobreca-
+dicemenorque0yaquellosaladerechaconíndicemayorque
+sosconfirmadosemitidosporelMinisteriodeSaludPública n.EstavariantedesuavizadogarantizaqueC¯ =C yademás
+n n
+delaRepúblicadeCubadel11demarzode2020al11de
+conservalaspropiedadesfundamentalesdeldesarrollodela
+mayo2020.
+epidemia.Deaquíenadelante,llamaremosdatossuavizadosa
+El método de ajuste empleado será el clásico mínimos
+aquellosqueseobtienenaplicandoelprocedimientodemedia
+cuadradosnolineales(vea[8]).SeaC ={C =C(t)}
+i i i=0,...,n móvildescritoanteriormente.
+laseriedetiempodecasosconfirmadosacumuladosdonde
+t eseltiempoendías.Tomemoscomoejemploelajusteal
+2.1 Valorpredictivodelosmodelos
+MCL,entonceselvaloróptimodep =(γ,K,τ )sebusca
+MCL p Elobjetivodelpresentetrabajoesevaluarlacapacidadde
+comosoluciónde
+losmodelosfenomenológicospresentadosenlasecciónante-
+m´ın 1 ∑ n (C −F(t,p ))2, (29) riorparareproducirlaevolucióndelaepidemiadeCOVID-19
+i i MCL
+lb≤pMCL≤lu 2
+i=0
+enCubayademáspredecirdichaevolución.Paraellohemos
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+24 ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba
+Datos no Suavizados, Método LAR
+2500
+MCL
+MCLG
+2250 MCR
+MCRG
+MCG
+2000 MCGG
+Datos Cuba
+1750
+s
+o
+d
+a
+lu
+m1500
+u
+c
+A
+s
+o s1250
+a
+C
+e
+d
+o re 1000
+m
+ú
+N
+750
+500
+250
+0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 20-05 27-05 03-06 10-06 17-06 24-06 01-07
+Días
+Figura1.Resultadosobtenidosdelajustedetodoslosmodelosempleando61díasdedatosdecasosconfirmadosacumulados.
+LosresultadosseobtienenempleandoelmétodorobustoLAR.
+desarrollado una serie de experimentos que describimos a realizanparacadaunodelosochomodelosconcadaunade
+continuación: lasvariantesBisquareyLAR(mencionadasanteriormente)
+quepermitelafunciónfitpertenecientealaCurveFitting
+1. Tomar la totalidad de la serie de tiempo C de casos
+ToolboxdeMatlab.Unaformasencilladeevaluarlacalidad
+confirmados acumulados de la COVID-19 y realizar
+del ajuste está dada por el error cuadrático medio (RMSE
+el ajuste de parámetros de todos los modelos a estos en inglés), este error lo calcula fit por defecto. Se debe
+datos. El objetivo de este experimento radica en eva-
+mencionartambiénqueestafunciónhallalosintervalosde
+luar la capacidad de cada modelo para reproducir la
+confidencia al 95% para los parámetros estimados (vea la
+curvadecasosacumulados.Tambiénpermiteevaluar
+documentación).
+eldesarrollodelaCOVID-19alargoplazoyaquelos
+Enlafigura1seilustraelprimerexperimento,descrito
+modelosMCL,MCLG,MCR,MCRG,MCGyMCGG
+enelpunto1,condatosnosuavizadosyelempleodelmé-
+reportanunnúmeromáximodecasosposibles.Hastael
+todo robusto LAR. En dicha figura aparecen representados
+momentodelarealizacióndeesteexperimentolaserie
+losresultadosdelosmétodosMCL,MCLG,MCR,MCRG,
+detiempoC constabade61datoscorrespondientesa
+MCGyMCGG.LosresultadosdelMCEyelMCEGnoapa-
+losdíascomprendidosentreel11deMarzoyel11de
+recenenestaniotrasfigurasyaqueestosmodelospredicen
+Mayode2020.
+un crecimiento exponencial sostenido que a los 61 días de
+2. TomarunapartedelaseriedetiempoC yevaluarel epidemia en Cuba siempre sobrestima el número de casos
+considerablemente. Como se puede apreciar en la figura 1
+poderpredictivodecadamodelo.Paraesteexperimen-
+tohemostomadotodoslosdatosdeC comprendidos todoslosmodelosreproducenconbastanteexactitudelcom-
+portamientodelaepidemia.ElRMSEdelMCLesde25,88,
+desdesuiniciohasta3,4,5,6y7semanas.Esdecir,
+eldelMCLG11,93,eldelMCR12,56,eldelMCRG12,19,
+setomanlosprimeros21,28yasísucesivamentehasta
+eldelMCG16,14yeldelMCGG20,79.ElMCLyelMCGG
+49díasdedatos,serealizaelajustedeparámetrosde
+tienenlospeoresajustesunopordebajo(subestimando)yel
+cadamodeloaestosdatos.Unavezobtenidoslospará-
+otro sobrestimando el número de casos posibles. El mejor
+metrosseprediceconcadamodeloelcomportamiento
+ajuste se obtiene con el MCLG. De acuerdo a los métodos
+delaepidemiaalosdíasnoincluidosenelajusteyse
+MCL,MCLG,MCRyMCRGysegúnseobservaenlafigura
+comparaconlosdatosreales.
+1amediadosdeMayolaCOVID-19entraráenunafasede
+Losexperimentosdescritosenlospuntos1y2arriba,se estabilizacióndondeelincrementodiariodelnúmerodecasos
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba 25
+Datos no Suavizados, Método LAR
+80
+MCLG
+MCRG
+MCGG
+70
+Datos Cuba
+60
+s o50
+ira
+iD
+s
+o
+s
+a C40
+e
+d
+o
+re
+m
+ú N30
+20
+10
+0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 20-05 27-05 03-06 10-06 17-06 24-06 01-07
+Días
+Figura2.ResultadosobtenidosdelajustedelMCL,MCRyMCGempleando61díasdedatosdecasosconfirmados
+acumulados.LosresultadosseobtienenempleandoelmétodorobustoLARysemuestranenformadecasosdiariosreportados.
+confirmadosserápequeño.Elvalormáximoquepredicenel Lafigura3muestralosresultadosobtenidosporelMCL,
+MCLyelMCLGesde1867y1991casosrespectivamente elMCRyelMCGalempleardatossuavizadosyelmétodo
+ylospuntosdeinflexiónseubicanenlosdías35y36desde robustoLAR.Noexistendiferenciassignificativasconrespec-
+eliniciodelaepidemia.ElMCRyelMCRGarrojan2043 toalosresultadosmostradosenlafigura2.Soloqueenla
+y2015casosmáximosrespectivamenteyubicanlospuntos figura3semuestranlosdatosrealesdeCubaensuvariante
+de inflexión en los días 36 y 34. Por último el MCG y el suavizada. Esta forma de representación permite distinguir
+MCGGcalculan2188y2282casos,ubicandoamboselpunto mejorlatendenciadelaepidemia.Sepuedeobservarqueel
+deinflexiónalos34díasdesdeeliniciodelaepidemia. simplesuavizadodelosdatospermiterepresentarconclaridad
+En resumen, con los datos de 61 días de epidemia los el“pico”delaseriedetiempodelnúmerodecasosdiarios.
+modelospredicenunnúmeromáximodecasosentre1867y Volvemosaseñalarqueestaformademanejarlosdatosafecta
+2282conaltaprobabilidaddequelarealidadestéentrelos pocolasprediccionesalargoplazo,cuandoelajustededatos
+2015 y 2043 casos que calculan el MCRG y el MCR. Esta serealizacontranúmerodecasosconfirmadosacumulados.
+cotasealcanzarárápidamentedesdefinalesdeMayo.Todos Esnuestraimpresiónqueestamismasituacióndebeproducir-
+losmétodosubicanlaculminacióndelafasedecrecimiento sesiseempleandatossuavizadosenelajustedemodelosde
+exponencialsobrelos34a36díasdel11deMarzo,esdecir compartimentos.
+del14al15deAbrilde2020. LosajustesobtenidosmediantelosmétodosMCEyMCEG
+Lafigura2muestralosmismosresultadosdelafigura1 noaparecenengráficasdebidoaque,comosemencionó,tie-
+paralosmodelosMCL,MCRyMCG.Ladiferenciaradicaen nencrecimientoexponencialsostenido.Deserincluidosen
+quelosresultadossereproducencomocasosconfirmadospor gráficaselescalamientodelejedelasordenadasdificultaría
+díaquenoesmásqueelvalordeC −C conC,C ∈C. lavisibilidaddelosrestantesajustes.Noobstanteestosméto-
+i+1 i i i+1
+Como se aprecia en la figura 2 el MCL ubica el “pico” de dostienenlapropiedaddeidentificarconexactitudlafasede
+la epidemia en el 17 de Abril y concede a este el mayor crecimientoexponencialdeunaepidemia.Másaúnpermiten
+valor entre los 3 modelos presentados. El MCL pronostica constatarsilasmedidasdecontenciónyprevenciónquese
+tambiéneldescensomásrápidoenelnúmerodecasosdiarios. aplicansonexitosas.Losparámetrosparamedirestedesem-
+DeacuerdoalMCLdespuésdel11deMayoelnúmerode peñosonelγ delMCEyelµ¯ delMCEG,vealasecuaciones
+casosdiariosreportadosdebesermenorque10.Lasfechas (3)y(6)respectivamente.Amenorvalordeγ menortasade
+del MCR y MCG para este valor son el 17 y 24 de Mayo crecimientoexponencial,porelcontrarioamayorvalorde
+respectivamente. µ¯ menortasadecrecimientosubexponencial.Lastablas1y
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+26 ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba
+Datos Suavizados, Método LAR
+80
+MCLG
+MCRG
+MCGG
+70
+Datos Cuba (Suavizados)
+60
+s o50
+ira
+iD
+s
+o
+s
+a C40
+e
+d
+o
+re
+m
+ú N30
+20
+10
+0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 20-05 27-05 03-06 10-06 17-06 24-06 01-07
+Días
+Figura3.ResultadosobtenidosdelajustedelMCL,MCRyMCGempleando61díasdedatossuavizados.Losresultadosse
+obtienenempleandoelmétodorobustoLARysemuestranenformadecasosdiariosreportados.LosdatosdeCubaaparecen
+ensuvariantesuavizada.
+Tabla1.ValoresdelosparámetrosajustadosparaelMCE cierredeaeropuertos,restriccionesalmovimientourbanoe
+tomandodatosparcialesde3a7semanasytodoslosdatos interprovincial y obligatoriedad del empleo de mascarillas
+disponibles(últimafila). faciales.Enlastablas1y2sepresentanlosresultadoscon
+Bisquare LAR ambosmétodosrobustosBisquareyLAR.Elvalordelpará-
+Días γ C 0 γ C 0 metroC 0 enlatabla1dependedelnúmerodecasosmáximo
+quesepresentanenlosdatosanalizados.Aparentementeelva-
+21 0.22417 3.04889 0.19922 4.22322
+lordeC noinfluyeenlosajustesdelMCEG,yaqueentodos
+0
+28 0.13397 12.7045 0.14568 9.16943
+loscasos,exceptoenuno,estáenelvalormínimoquesele
+35 0.10897 22.3276 0.10706 24.2119
+exigealafunciónfitparaelajuste.Nuestrasuposición,que
+42 0.08409 42.8058 0.08786 38.206
+verificaremosentrabajosfuturos,esqueespreferibletomar
+49 0.06544 75.0492 0.07088 60.9974
+C =3(casodeCuba)enlafuncióndeajustedadapor(6).
+0
+61 0.04448 153.262 0.04678 139.79
+Tabla2.ValoresdelosparámetrosajustadosparaelMCEG
+tomandodatosparcialesde3a7semanasytodoslosdatos
+2permitenverificarestosvaloresparaelMCEyelMCEG disponibles(últimafila).
+respectivamente,siguiendolametodologíaexplicadaanterior-
+Bisquare LAR
+mentedetomarunapartedelosdatosexistentesyrealizarlos
+Días γ µ¯ C γ µ¯ C
+0 0
+ajustesdeparámetrosconestesubconjunto.
+21 0.0457 0.1222 1.05 0.1008 0.2048 1
+Comoseobservaenlatabla1,a3semanas(21días)de
+28 0.2043 0.3069 1 0.1775 0.2871 1
+epidemia,elvalordeγ erade0,22417yhaidodescendiendo
+35 0.2045 0.3065 1 0.2168 0.3145 1
+enCubahastamenosdesuquintaparteconel0,04448obte-
+42 0.2837 0.3536 1 0.2823 0.3536 1
+nidoa61díasdeepidemia.Tambiénseapreciaenlatabla2,
+49 0.5297 0.4432 1 0.4561 0.4227 1
+queelvalorde µ¯ asciendede0,1222a0,5797.Estorefleja
+61 1.3627 0.5797 1 1.1377 0.5531 1
+el éxito de las medidas de contención y prevención para la
+COVID-19aplicadasenCuba.Ellectorinteresadopodrácom-
+probarquetantoeldescensodeγ yelincrementodeµ¯ están Elestudiodelvalorpredicitivodelosmodelossemuestra
+temporalmenteenproporciónalasmedidasaplicadascomo enlasfiguras4ala8.Encadaunadeellassetomanvarias
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba 27
+Datos no Suavizados, Método Bisquare Datos no Suavizados, Método LAR
+2250 2250
+MCL
+2000 2000
+MCLG
+s o1750 MCR s o1750
+d MCRG d
+a a
+lu m1500 MCG lu m1500
+u c MCGG u c
+A s 1250 Datos Empleados A s 1250
+o o
+s a Datos Restantes s a
+C1000 C1000
+e e
+d d
+o re 750 o re 750
+m m
+ú N 500 ú N 500
+250 250
+0 0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05
+Días Días
+Datos Suavizados, Método Bisquare Datos Suavizados, Método LAR
+2250 2250
+2000 2000
+s o1750 s o1750
+d d
+a a
+lu
+m1500
+lu
+m1500
+u u
+c c
+A
+s
+1250 A
+s
+1250
+o o
+s s
+a a
+C1000 C1000
+e e
+d d
+o re 750 o re 750
+m m
+ú N 500 ú N 500
+250 250
+0 0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05
+Días Días
+Figura4.Resultadosobtenidosempleando3semanasdedatos(21puntosdedatos).
+semanasdedatos,apartirde3,deC yserealizaelajustede se acumula evidencia de la expansión de la COVID-19. Se
+parámetrosdecadamodeloaesosdatos.Tambiénsetoman debeseñalarque,elprocederadoptadocondatossuavizadosy
+lasmismascantidadesdedatosdelaseriesuavizadaC,vea empleandoelmétodoLARproduceunajustedondelosméto-
+(30),yserealizaelajusteconlosmétodosrobustosBisquarey dosMCGyMCGGpermitenpredecirelcursodelaepidemia
+LAR.Lasfiguraspresentanlosresultadosdeloscuatroajustes conbastanteexactitudhastaalmenosdossemanasymedia
+deparámetros. en el futuro. Sin embrago, los restantes métodos producen
+prediccionesamenosdeunasemana,quequedanpordebajo
+Enlafigura4sedemuestraquepocosdatosnopermiten
+delaevolucióndelaepidemia.
+unaestimaciónacertadaalargoomedianoplazodelcompor-
+tamientodelaepidemia.Elúnicométodocapazdeacercar En cuanto aumenta la cantidad de datos el conjunto de
+su evaluación a los datos reales es el MCGG que sobresti- trayectoriasquepredicenlosmodelosempiezaaacotarcon
+macuandoseempleanlosdatosoriginales(primerafilade mayor grado de exactitud el curso de la epidemia. Esto se
+la figura 3). Esta figura demuestra la ventaja de usar datos puedeobservarenlasfigurasdela5ala8.Enlafigura5los
+suavizadoscuandoelconjuntodedatosutilizadosespequeño modelosgeneralizadossobrestimanelcursodelaepidemia
+(21datosenestecaso).Estecomportamientosedebeaque yloscomuneslasubestiman.Sinembargo,elMCGconel
+losreportesdecasosconfirmadosdelaCOVID-19enpaíses métodoLARparadatosoriginalespresentaunresultadomuy
+yregionesdelplanetacomienzanconvariosdíasreportando1 bueno, que da un pronóstico que se extiende con exactitud
+omuypocoscasos,paracrecerapartirdelasegundaotercera porcasi4semanas.Enlafigura6elMCRpresentaunpobre
+semana.Nuestraexplicaciónesquelossistemasdesaludno desempeñosiseempleanlosdatosoriginales.Porelcontrario,
+comienzanunmuestreoampliodelapoblaciónhastaqueno cuando se suavizan los datos es el que mejores resultados
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+28 ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba
+Datos no Suavizados, Método Bisquare Datos no Suavizados, Método LAR
+2250 2250
+MCL
+2000 2000
+MCLG
+s o1750 MCR s o1750
+d MCRG d
+a a
+lu m1500 MCG lu m1500
+u c MCGG u c
+A s 1250 Datos Empleados A s 1250
+o o
+s a Datos Restantes s a
+C1000 C1000
+e e
+d d
+o re 750 o re 750
+m m
+ú N 500 ú N 500
+250 250
+0 0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05
+Días Días
+Datos Suavizados, Método Bisquare Datos Suavizados, Método LAR
+2250 2250
+2000 2000
+s o1750 s o1750
+d d
+a a
+lu
+m1500
+lu
+m1500
+u u
+c c
+A
+s
+1250 A
+s
+1250
+o o
+s s
+a a
+C1000 C1000
+e e
+d d
+o re 750 o re 750
+m m
+ú N 500 ú N 500
+250 250
+0 0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05
+Días Días
+Figura5.Resultadosobtenidosempleando4semanasdedatos(28puntosdedatos).
+demuestra. lafigura7esde8,75paradatosnosuavizadosconmétodo
+Enlasfiguras7y8losconjuntosdetrayectoriascontinúan Bisquare,de9,50paraestosmismosdatosymétodoLAR,de
+proporcionando cotas cada vez más cercanas a los valores 5,10paradatossuavizadosconmétodoBisquareyde4,85
+realesdecasosconfirmados,reportadosporelMINSAPen para estos datos y método LAR. Estos mismos valores de
+nuestropaís.Estoevidenciaqueamayordisponibilidadde RMSE del MCL para el ajuste mostrado en la figura 8 son
+datos,losmodelosproducencurvasqueseaproximancada 9,53,9,58,4,90y4,94respectivamente.
+vezmásalasrealeseincrementansuvalorpredictivo.Esdecir,
+cuando se toma un número de datos apreciable, en el caso
+3. Discusión y Conclusiones
+delaCOVID-19mayorde40puntosdedatos,losmodelos
+puedenpredecirconbastanteexactitudelcursodelaepidemia Comoseseñalaen[9],lospronósticosacortoplazoobte-
+enunplazodealmenosunasemana.Parahacermásconfiable nidosconlosmodelosfenomenológicosconstituyenunaguía
+estapredicción,sepuedetomarcomocotainferiorelvalorde paraeltipoeintensidaddelasintervencionesquelossistemas
+nuevoscasosqueproporcionaelMCLycomocotasuperior desaluddebantomarenelmanejodeunbroteepidémico.Un
+elqueproporcionaelMCGG. mejorentendimientodelascaracterísticasdeunaepidemia
+Lasfiguras7y8empiezanamostrarlaevidenciaplantea- solosepuedealcanzarmedianteelempleodediferentesmé-
+dapor[30]dequeelMCLsubestimayelMCGsobrestima todosdemodelaciónmatemática,condiferentesenfoquesy
+el curso de la epidemia. En estas figuras el MCLG apenas elempleodedatosfidedignossobrelaenfermedad.Porello,
+seapreciayaquesutrayectoriaprácticamentecoincidecon elestudiodelaCOVID-19debeserabordadocontodaslas
+la que describen los datos reales. El RMSE del MCLG en técnicasdemodelaciónmatemáticaposibles.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba 29
+Datos no Suavizados, Método Bisquare Datos no Suavizados, Método LAR
+2250 2250
+MCL
+2000 2000
+MCLG
+s o1750 MCR s o1750
+d MCRG d
+a a
+lu m1500 MCG lu m1500
+u c MCGG u c
+A s 1250 Datos Empleados A s 1250
+o o
+s a Datos Restantes s a
+C1000 C1000
+e e
+d d
+o re 750 o re 750
+m m
+ú N 500 ú N 500
+250 250
+0 0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05
+Días Días
+Datos Suavizados, Método Bisquare Datos Suavizados, Método LAR
+2250 2250
+2000 2000
+s o1750 s o1750
+d d
+a a
+lu
+m1500
+lu
+m1500
+u u
+c c
+A
+s
+1250 A
+s
+1250
+o o
+s s
+a a
+C1000 C1000
+e e
+d d
+o re 750 o re 750
+m m
+ú N 500 ú N 500
+250 250
+0 0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05
+Días Días
+Figura6.Resultadosobtenidosempleando5semanasdedatos(35puntosdedatos).
+Enestetrabajohemosdemostradoquelosmodelosfeno- 17deAbril.Elpuntodeinflexión,queadiferenciadel
+menológicosempleadospermitenunpronósticoacertadodela llamado“pico”delaepidemiapresentadoporlosme-
+evolucióndelaCOVID-19enCuba.Unaspectonovedosode diosdecomunicaciónenCuba,siposeeunadefinición
+lapresentecontribuciónconsisteenelempleodedatossuavi- matemáticabienestablecida,indicaquepocomásde
+zados.Enlostrabajosconsultadosnoencontramosreferencias unmesdespuesdeliniciodelaepidemiaseabandonó
+aesteaspectoquenoshaproporcionadoresultadossatisfacto- latendenciadecrecimientoexponencialenelcontagio.
+riosprincipalmentecuandosedisponedepocosdatossobre
+3. Losmodelosdemuestranquelasmedidasimplementa-
+laepidemia.
+dasporelgobiernoyMINSAPcubanosfueronefectivas
+Los principales resultados del estudio realizado en esta
+paracontrolarlaexpansióndelaCOVID-19.Enlasta-
+contribuciónsonlossiguientes:
+blas1y2seobservaclaramenteestatendenciadados
+1. La epidemia de COVID-19 en Cuba puede alcanzar, los valores de γ y µ¯ de los modelos MCE y MCEG
+enestaprimeraolaepidémica,unmáximode2282ca- respectivamente.
+sos.Estaafirmaciónesválidaapartirdelasmedidasde
+4. Emplear datos suavizados mediante media móvil en
+contenciónimplementadas.Elrelajamientodeestasme-
+lugardelosdatosoriginalesesmuyapropiadocuando
+didasdebesercontroladoparamantenerestepronóstico
+se dispone de pocos datos para realizar pronósticos
+válido.
+decomportamientodelaepidemiamediantemodelos
+2. Elpuntodeinflexiónenelcomportamientodelaepi- fenomenológicos.Estaafirmaciónpuedeserválidapara
+demia ocurrió entre los días comprendidos del 14 al otrostiposdemodeloscomolosdecompartimentosy
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+30 ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba
+Datos no Suavizados, Método Bisquare Datos no Suavizados, Método LAR
+2250 2250
+MCL
+2000 2000
+MCLG
+s o1750 MCR s o1750
+d MCRG d
+a a
+lu m1500 MCG lu m1500
+u c MCGG u c
+A s 1250 Datos Empleados A s 1250
+o o
+s a Datos Restantes s a
+C1000 C1000
+e e
+d d
+o re 750 o re 750
+m m
+ú N 500 ú N 500
+250 250
+0 0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05
+Días Días
+Datos Suavizados, Método Bisquare Datos Suavizados, Método LAR
+2250 2250
+2000 2000
+s o1750 s o1750
+d d
+a a
+lu
+m1500
+lu
+m1500
+u u
+c c
+A
+s
+1250 A
+s
+1250
+o o
+s s
+a a
+C1000 C1000
+e e
+d d
+o re 750 o re 750
+m m
+ú N 500 ú N 500
+250 250
+0 0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05
+Días Días
+Figura7.Resultadosobtenidosempleando6semanasdedatos(42puntosdedatos).
+recomendamossuverificación.Enelpresentetrabajo comprobarestaconjeturacondatosdelaCOVID-19
+seempleóconsistentementeunamediamóvila7días, entodoelplaneta.Engeneralpretendemosaplicarlas
+peroestevalorpuedeserobjetodeestudiosfuturos. experienciasalcanzadasconesteestudioenCubaatodo
+elplaneta.
+5. Enelajustededatossedebenemplearmétodosrobus-
+tos.DadoelempleodelafunciónfitdelaCurveFitting Entrabajosfuturosnosproponemosabordarlasinterro-
+ToolboxdeMatlab,soloseprobaronlosmétodosdeno- gantesplanteadasenlospuntos4,5y6anteriores,asícomo
+minadosBisquareyLAR.Existenotrosmétodosque aplicarmétodosdesuavizadodedatosenunmodelosimple
+funcionescomolanlinfitdelaStatisticsandMa- de compartimentos como el SIR o su variante SIOR. Tam-
+chineLearningToolboxdeMatlabponeadisposición biénnosproponemosexplorarcuestionesrelevantesqueno
+delosusuarios.Unaexperimentaciónmásampliaen hemosabordadoenelpresentetrabajocomolasensibilidad
+estesentidoesnecesaria. delosmodelosalosparámetrosyotrasvíasdecuantificarla
+incertidumbredelasprediccionesresultantes(vea[8]).
+6. Laafirmaciónplanteadaporlosautoresen[30]referen-
+teaqueelmodeloMCLsubestimaelcursorealdela
+Referencias
+epidemiaydequeelMCGporelcontrariolasobres-
+tima, es cierta para la COVID-19 en Cuba cuando el [1] Alberti,TommasoyDavideFaranda:Ontheuncertainty
+conjuntodedatostienemásde28valores.Conmenos ofreal-timepredictionsofepidemicgrowths:aCOVID-
+valores no se cumple esta afirmación. Un trabajo fu- 19 case study for China and Italy. arXiv preprint ar-
+turointeresante,quetambiénpretendemosabordar,es Xiv:2004.10060,páginas1–24,2020.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba 31
+Datos no Suavizados, Método Bisquare Datos no Suavizados, Método LAR
+2250 2250
+MCL
+2000 2000
+MCLG
+s o1750 MCR s o1750
+d MCRG d
+a a
+lu m1500 MCG lu m1500
+u c MCGG u c
+A s 1250 Datos Empleados A s 1250
+o o
+s a Datos Restantes s a
+C1000 C1000
+e e
+d d
+o re 750 o re 750
+m m
+ú N 500 ú N 500
+250 250
+0 0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05
+Días Días
+Datos Suavizados, Método Bisquare Datos Suavizados, Método LAR
+2250 2250
+2000 2000
+s o1750 s o1750
+d d
+a a
+lu
+m1500
+lu
+m1500
+u u
+c c
+A
+s
+1250 A
+s
+1250
+o o
+s s
+a a
+C1000 C1000
+e e
+d d
+o re 750 o re 750
+m m
+ú N 500 ú N 500
+250 250
+0 0
+11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05 11-03 18-03 25-03 01-04 08-04 15-04 22-04 29-04 06-05 13-05
+Días Días
+Figura8.Resultadosobtenidosempleando7semanasdedatos(49puntosdedatos).
+[2] Bürger, Raimund, Gerardo Chowell y Leidy Y. Lara- real-timesurveillanceandevaluationwithasecondderi-
+Díaz: Comparative analysis of phenomenological vativemodel.GlobalHealthResearchandPolicy,5(1):7,
+growthmodelsappliedtoepidemicoutbreaks. Mathe- 2020.
+maticalBiosciencesandEngineering,16(5):4250–4273,
+[7] Cherniha,RomanyVasyl’Davydovych:Amathematical
+2019.
+modelforthecoronavirusCOVID-19outbreak. arXiv
+[3] Casella, Francesco: Can the COVID-19 epidemic be preprintarXiv:2004.01487,páginas1–9,2020.
+managedonthebasisofdailydata? arXiv:2003.06967
+[8] Chowell,Gerardo:Fittingdynamicmodelstoepidemic
+[physics,q-bio],2020.
+outbreakswithquantifieduncertainty:Aprimerforpa-
+rameteruncertainty,identifiability,andforecasts. Infec-
+[4] Castorina,P.,A.IorioyD.Lanteri:DataanalysisonCo-
+tiousDiseaseModelling,2:379–398,2017.
+ronavirusspreadingbymacroscopicgrowthlaws. arXiv
+preprintarXiv:2003.00507,2020. [9] Chowell, Gerardo, Lisa Sattenspiel, Shweta Bansal y
+Cécile Viboud: Mathematical models to characterize
+[5] Chen,Dongmei,BernardMoulinyJianhongWu:Analy- earlyepidemicgrowth:AReview. PhysicsLifeReviews,
+zingandModelingSpatialandTemporalDynamicsof
+18:66–97,2016.
+InfectiousDiseases. Wiley,2015.
+[10] Dehkordi,AmirhoshangHoseinpour,MajidAlizadeh,
+[6] Chen,XinguangyBinYu:Firsttwomonthsofthe2019 PegahDerakhshan,PeymanBabazadehyArashJahan-
+Coronavirus Disease (COVID-19) epidemic in China: dideh:UnderstandingEpidemicDataandStatistics:A
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32
+32 ModelosfenomenológicosaplicadosalestudiodelaCOVID-19enCuba
+case study of COVID-19. arXiv:2003.06933 [q-bio], [22] Sigl,Juliane:Nonlinearresidualminimizationbyiterati-
+2020. arXiv:2003.06933. velyreweightedleastsquares. ComputationalOptimiza-
+tionandApplications,64(3):755–792,2016.
+[11] Diekmann,Odo,HansHeesterbeekyTomBritton:Mat-
+hematicalToolsforUnderstandingInfectiousDisease
+[23] Singer, H.M.: The COVID-19 pandemic: growth pat-
+Dynamics. PrincetonUniversityPress,2013.
+terns,powerlawscaling,andsaturation. arXivpreprint
+arXiv:2004.03859,páginas1–10,2020.
+[12] Foppa,IvoM.:AHistoricalIntroductiontoMathemati-
+[24] Tjørve,KathleenM.C.yEvenTjørve:TheuseofGom-
+calModelingofInfectiousDiseases.SeminalPapersin
+pertz models in growth analyses, and new Gompertz-
+Epidemiology. AcademicPres,2017.
+model approach: An addition to the Unified-Richards
+[13] Hsieh,YingHen:RichardsModel:ASimpleProcedure family. PublicLibraryodScienceONE(PLoSONE),
+forReal-timePredictionofOutbreakSeverity. EnMo- 12(6):1–17,2017.
+delling and Dynamics of Infectious Diseases, páginas
+216–236.WorldScientific,2009. [25] Verhulst, P.F.: A Note on the Law of Population
+Growth. EnMathematicalDemography,páginas333–
+[14] Hsieh,YingHen,DavidN.FismanyJianhongWu:On
+337.Springer-Verlag,1977.
+epidemicmodelinginrealtime:Anapplicationtothe
+2009 Novel A (H1N1) influenza outbreak in Canada.
+[26] Viboud,Cécile,LoneSimonsenyGerardoChowell:A
+BMCResearchNotes,3:283:1–8,2010.
+generalized-growthmodeltocharacterizetheearlyas-
+[15] Li,MichaelY.:AnIntroductiontoMathematicalMode- cendingphaseofinfectiousdiseaseoutbreaks. Epide-
+lingofInfectiousDiseases. Springer,2010. mics,15:27–37,2016.
+[16] Ma,StefanyYingcunXia:MathematicalUnderstanding [27] Vynnycky,EmiliayRichardWhite:AnIntroductionto
+ofInfectiousDiseaseDynamics. WorldScientific,2009. InfectiousDiseaseModelling. OxfordUniversityPress,
+2010.
+[17] Maier,BenjaminF.yDirkBrockmann:Effectivecon-
+tainmentexplainssub-exponentialgrowthinconfirmed
+[28] Wu,Ke,DidierDarcet,QianWangyDidierSornette:
+casesofrecentCOVID-19outbreakinMainlandChina.
+GeneralizedlogisticgrowthmodelingoftheCOVID-19
+arXiv:2002.07572[physics,q-bio],2020.
+outbreakin29provincesinChinaandintherestofthe
+[18] Richards,F.J.:AFlexibleGrowthFunctionforEmpirical world. preprint,InfectiousDiseases(exceptHIV/AIDS),
+Use. JournalofExperimentalBotany,10(29):290–300, 2020.
+1959.
+[29] Yan,PingyGerardoChowell:QuantitativeMethodsfor
+[19] Roosa,Kimberlyn,YiseulLee,RuiyanLuo,Alexander Investigating Infectious Disease Outbreaks. Springer,
+Kirpich,RichardRothenberg,JamesM.Hyman,Ping 2019.
+Yan y Gerardo Chowell: Short-term Forecasts of the
+COVID-19EpidemicinGuangdongandZhejiang,Chi-
+[30] Yang,Wuyue,DongyanZhang,LiangrongPeng,Chang-
+na:February13–23,2020.JournalofClinicalMedicine, jingZhuge,LiuHongyZhouPei-Yuan:Rationalevalua-
+9:596:1–9,2020. tionofvariousepidemicmodelsbasedontheCOVID-19
+dataofChina.arXivpreprintarXiv:2003.05666,páginas
+[20] Sebrango-Rodríguez, C.R., D.A. Martínez-Bello, L.
+1–18,2020.
+Sánchez-Valdés, P.J. Thilakarathne, E. del Fava, P.
+VanderStuyft,A.López-QuílezyZ.Shkedy:Real-time
+[31] Zhao,Shi,SalihuS.Musa,HaoFu,DaihaiHeyJing
+parameter estimation of Zika outbreaks using model
+Qin:Simpleframeworkforreal-timeforecastinadata-
+averaging. Epidemiol.Infect.,145:2313–2323,2017.
+limited situation: the Zika virus (ZIKV) outbreaks in
+[21] Seidl,I.yC.A.Tisdell:Carryingcapacityreconsidered: Brazil from 2015 to 2016 as an example. Parasites &
+FromMalthus’populationtheorytoculturalcarrying Vectors,12:1–13,2019.
+capacity. EcologicalEconomics,31(3):395–408,1999.
+CienciasMatemáticas,Vol.34,No.1,2020,Pag.19-32

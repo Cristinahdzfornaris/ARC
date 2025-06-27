@@ -1,0 +1,317 @@
+REVISTA DE CIENCIAS MATEMÁTICAS Vol. 24, único, Nos. 2007- 2008
+UNA RECOMENDACIÓN PARA LA DEMOSTRACIÓN DE LA
+INDEPENDENCIA DE LA MEDIA Y LA VARIANZA
+MUESTRALES.
+E. Menéndez1 -Dpto. Matemática Aplicada. Facultad de Matemática y Computación. Universidad
+de La Habana.Cuba,
+J. Villagómez2 y M. A. Herrera3 -Unidad Académica Facultad de Matemática. Sede Acapulco.
+Universidad Autónoma de Guerrero. México
+RESUMEN
+Con este trabajo se desea divulgar una demostración de la independencia entre la media y la
+varianza cuando son calculadas a partir de una muestra aleatoria de la distribución Normal. Esta
+demostración no necesita de una avanzada herramienta matemática que en la mayoría de los
+casos el estudiante no posee cuando se estudia este aspecto. Esta demostración está basada en
+el uso del álgebra matricial, en particular en las transformaciones ortogonales (Kalbfleisch, 1985).
+Otros resultados que se obtienen con este enfoque son las distribuciones de la media muestral,
+la varianza muestral y la de una combinación lineal de las variables aleatorias.
+Palabras claves: distribución t-Student; independencia; media muestral; varianza muestral;
+ABSTRACT
+With this work it is wanted to disclose a demonstration of the independence between the mean
+and the variance when they are calculated from a random sample of the Normal distribution. This
+demonstration does not need of an advanced mathematical tool that in most of the cases the
+student does not possess when this aspect is studied. This demonstration is based on the use of
+the matrix algebra, in particular the orthogonal transformations (Kalbfleisch, 1985). Other results
+that are obtained with this focus are the probability distributions of: the sample mean, the sample
+variance, and a lineal combination of the random variables.
+Keywords: independence; sample mean; sample variance; t-Student distribution
+1.- INTRODUCCIÓN.
+Sea X ,X ,,X un conjunto de n variables aleatorias independientes e idénticamente distribuidas
+1 2 n
+(IID) según la distribución Normal con media y varianza 2. Si se representa por Xy S2 la media y la
+varianza muestrales respectivamente, la función aleatoria
+X
+T (1.1)
+S
+n
+es ampliamente usada como “pivote” en la determinación de un intervalo de confianza para o como
+“estadístico de prueba” en una prueba de hipótesis sobre , en ambos casos con el supuesto de que la
+varianza 2 es desconocida.
+En cualquiera de los dos procesos de la inferencia estadística citados antes se utiliza el hecho de que
+la función aleatoria T definida en (1.1) posee una distribución t-Student con n-1 grados de libertad.
+[“Student” (W. S. Gosset), 1908], [Casella y Berger, 2002]. En aras de abreviar este hecho se utilizará la
+E-mail: 1ema@matcom.uh.cu
+2juanvillagomez2006@yahoo.com
+3 herrerapolo@hotmail.com
+77
+notación T t(n-1). Este resultado es considerado sin mucho más detalle en cursos elementales de
+Probabilidad y/o de Estadística para estudiantes universitarios. En cursos menos elementales se suele
+sistematizar el estudio de la distribución Normal y aquellas que de una manera más o menos directa se
+obtienen a partir de la distribución Normal, como son las distribuciones Chi-Cuadrado 2 y la t-
+Student. Incluso en una carrera de Matemática y alguna otra con un nivel matemático más elevado,
+donde se incluya el estudio más riguroso de la teoría de las Probabilidades y la Estadística, suele ocurrir
+que en el momento de abordarse este aspecto el estudiante no posea todas las herramientas
+matemáticas que permita el estudio más profundo de estas distribuciones de probabilidad; en particular
+la demostración de la independencia entre la media y la varianza muestrales, lo cual se necesita en la
+demostración de que la distribución de probabilidad de la función aleatoria T dada en (1.1) es la t-
+Student con n-1 grados de libertad.
+2.- LA DISTRIBUCIÓN T-STUDENT CON GRADOS DE LIBERTAD.
+Aún cuando se suele definir la distribución t-Student y todas las demás mediante la función de
+densidad correspondiente, para fines prácticos resulta más interesante destacar cómo se obtiene,
+cuando esto sea posible, cada distribución. En el caso de la distribución t-Student, la misma se puede
+obtener como la distribución del cociente de las variables aleatorias X e Y, siempre que éstas sean
+independientes y con distribuciones Normal estándar y Chi-Cuadrado con grados de libertad
+respectivamente, mediante la siguiente relación. [“Student” (W. S. Gosset), 1908]
+X
+. (2.1)
+Y
+Como quiera que la expresión (1.1) mediante transformaciones muy elementales puede escribirse
+como
+X
+X n
+T , (2.2)
+S 2
+1 n X X
+i
+n
+n 1
+i 1
+para la demostración de que T t(n-1) bastará demostrar a partir de (2.1) que el numerador de (2.2) se
+2
+n X X
+distribuye Normal estándar y que i 2 , siendo ambos términos independientes.
+n 1
+i 1
+Como se aprecia de lo expresado anteriormente, el establecimiento de cómo surge una distribución t-
+Student, requiere de otra distribución adicional a la Normal, siendo ésta la Chi-Cuadrado.
+Una variable con distribución Chi-Cuadrado con n grados de libertad se obtiene cuando se suman los
+cuadrados de n variables aleatorias IID según la Normal estándar. En resumen, Y 2 si
+n
+n
+Y Z2 , (2.3)
+i
+i 1
+donde Z ,Z ,Z son IID N (0,1). [Hogg y Tanis, 2006, pág. 282]
+1 2 n
+78
+3.- DEMOSTRACIÓN DE QUE LA FUNCIÓN ALEATORIA T POSEE UNA DISTRIBUCIÓN T-
+STUDENT.
+Dado que en la demostración que se pretende se utiliza el concepto de matriz ortogonal, es
+conveniente que se retome éste, así como algunas consecuencias que se derivan del mismo en caso de
+que se hayan estudiado con anterioridad en un curso de Álgebra Matricial. En caso contrario, éstos bien
+pudieran incluirse, dejándose como ejercicio la demostración de algunas de las consecuencias
+mencionadas antes. [Kurosh,1994]
+a) La matriz cuadra C de orden n es ortogonal si CC‟ =C‟C = I, donde I es la matriz identidad de
+orden n. De esta definición se obtiene inmediatamente que si C es ortogonal también lo es C‟. C‟
+denota la transpuesta de C.
+b) Si la matriz C es ortogonal, entonces su determinante es 1.
+La demostración de este resultado es muy sencilla.
+1 = det(I ) = det(C‟C) = det(C‟).det(C) = (det( C) )2, de lo cual det(C ) = ± 1
+c) El resultado que ahora se expone no posee una demostración tan sencilla como las anteriores,
+por lo que en caso de no conocerse por los estudiantes debe asumirse su cumplimiento. En
+primer lugar debe destacarse que un vector está normalizado cuando su longitud, distancia al
+origen o producto escalar por si mismo es la unidad. Sean q vectores ortonormales de tamaño n
+, digamos U , U ,...,U (1 q < n ), entonces existe una matriz ortogonal C cuyas primera q filas
+1 2 q
+son los vectores U , U ,...,U y por tanto la matriz ortogonal C‟ tiene a estos mismos vectores
+1 2 q
+como sus primeras q columnas. El método de ortogonalización de Gram-Schmidt permite realizar
+este proceso. [Kurosh,1994, Bru et al., 2004, Rao, 2002]
+d) Si Y es un vector de dimensión n y C una matriz ortogonal de tamaño n, entonces el producto
+escalar de Y por si misma es invariante por una transformación ortogonal de éste.
+La demostración consiste en definir U = CY. Entonces U‟U= Y‟C‟CY, pero como C es ortogonal
+C‟C = I y entonces U‟U = Y‟IY = Y‟Y.
+Este resultado también puede expresarse como que la suma de los cuadrados de los
+componentes de un vector es invariante por una transformación ortogonal de éste. Este
+enunciado tiene un significado más vinculado con las Probabilidades y la Estadística.
+e) Siempre que se produzca una transformación ortogonal de un vector, digamos U = CY, el
+Jacobiano de la transformación, entendido éste como del determinante de la matriz cuyos
+U
+elementos c están dados por i , para i,j = 1, 2,...,n, resulta ser el determinante de C, que
+i j
+Y
+j
+como ya se señaló en (b) es 1. Y por tanto J 1.
+Con estos resultados establecidos puede ahora pasarse a la presentación de la demostración del
+aspecto sustantivo de este trabajo, mismo que puede consultarse en Kalbfleisch (1985).
+TEOREMA 1. Si las variables aleatorias U , U ,...,U son IID N(0 , 1), entonces Z ,Z ,Z son
+1 2 n 1 2 n
+también IID N(0 , 1), donde Z = (Z ,Z ,Z )‟ = CU y C es una matriz ortogonal.
+1 2 n
+DEMOSTRACIÓN.
+Se basa en el hecho de que cuando se transforma una variable aleatoria continua, la densidad de la
+nueva variable aleatoria se obtiene mediante la densidad de la variable original evaluada en la nueva
+variable aleatoria multiplicada por el valor absoluto del Jacobiano de la transformación. En nuestro caso,
+f z ,,z f z ,,z J .
+Z 1 n U 1 n
+Por (b) se tiene que J 1 y además por (d) la suma de los cuadrados es invariante, entonces
+f z ,,z 2 n e 1 2 i n 1 z i 2 ,
+Z 1 n
+de lo que resulta que las Z ,Z ,Z son IID N(0, 1).
+1 2 n
+79
+TEOREMA 2. Sean U , U ,...,U son variables aleatorias IID N(0 , 1) y a ,...,a constantes tales que
+1 2 n 1 n
+2
+n n n n
+a2 1. Definamos Z a U y V U2 a U . Entonces Z y V son independientes
+i 1 i i i i i 1
+i 1 i 1 i 1 i 1
+con distribuciones N(0, 1) y 2 respectivamente.
+n 1
+DEMOSTRACIÓN.
+Por (c) se puede asumir que existe una matriz C ortogonal, cuya primera fila es a ,...,a , ya que
+1 n
+n n
+a2 1. Sea entonces Z = CU y por teorema 1, Z ,Z ,Z son IID N(0, 1). Luego Z a U
+i 1 2 n 1 i i
+i 1 i 1
+n n
+N(0, 1). Pero además, ya que U2 Z2 por (d) se tiene que
+i i
+i 1 i 1
+2
+n n n n
+V U2 a U U2 z2 Z2
+i i i i 1 i
+i 1 i 1 i 1 i 2
+y por (2.3) V 2 . Finalmente como Z ,Z ,Z son independientes V y Z también lo son. Y el
+n 1 1 2 n 1
+teorema queda demostrado.
+TEOREMA 3. Sean Y,,Y n variables aleatorias independientes con distribución de probabilidad
+1 n
+n
+N , 2 , para i = 1,2,...,n y a ,a ,,a constantes cualesquiera. Entonces a Y se distribuye
+i i 1 2 n i i
+i 1
+según una distribución Normal4.
+DEMOSTRACIÓN.
+Sea
+Y Y
+U i (3.1)
+i
+i
+la forma estándar de Y , de modo que por ser las Y „s independientes, también lo serán las
+i i
+U  N(0,1).
+i
+Por otro lado, aplicando las propiedades del valor esperado y de varianza se obtiene que
+n n n n
+E a Y a y Var a Y a2 2 2.
+i i i i i i i i
+i 1 i 1 i 1 i 1
+Por lo tanto,
+1 n n 1 n
+a Y a a Y (3.2)
+i i i i i i i
+i 1 i 1 i 1
+y por (3.1)
+U Y . (3.3).
+i i i i
+4 Es posible que este resultado ya el estudiante lo conozca. En este caso la demostración no
+tiene por qué incluirse.
+80
+Sustituyendo (3.3) en (3.2)
+1 n n 1 n n
+a Y a a Y a'U
+i i i i i i i i i
+i 1 i 1 i 1 i 1
+a n 2 n
+donde a' i i y a' 1. Pero por teorema 2, a'U N(0, 1). Nótese que la expresión (3.2)
+i i i i
+i 1 i 1
+n n
+de la cual ha surgido la variable a'U N(0, 1) es la estandarización de la variable a Y , por tanto
+i i i i
+i 1 i 1
+n n
+esta última posee una distribución de probabilidad Normal, con media a y varianza a2 2 2.
+i i i i
+i 1 i 1
+El teorema que a continuación se enuncia completa la propuesta de este trabajo.
+TEOREMA 4. Sean Y,Y ,,Y n variables aleatorias IID N , 2 , entonces
+1 2 n
+2 n Y Y 2
+Y N , , i 2
+n 2 n 1
+i 1
+y son independientes.
+DEMOSTRACIÓN.
+Definamos U Y / , de lo cual se obtiene que Y U . Esta última expresión permite
+i i i i
+expresar la media de Y como
+Y U (3.4)
+y la suma de cuadrados de las diferencias de cada Y respecto a su media adopta la forma
+i
+n n 2
+Y Y 2 2 U U . (3.5)
+i i
+i 1 i 1
+Por ser las U las variables Y estandarizadas, las primeras son también independientes al serlo las Y
+i i i
+1 n
+. Sean a a  a , de lo cual a2 1. Por teorema 2 se tiene que
+1 2 n i
+n
+i 1
+n n 1 1 n 1
+Z aU U U nU nU y
+1 i i n i n i n
+i 1 i 1 i 1
+n n n
+2
+V U2 Z2 U2 nU2 U U .
+i 1 i i
+i 1 i 1 i 1
+Por el propio teorema 2 se obtiene inmediatamente que Z ~ N(0,1), V ~ 2 y que además estos son
+1 n 1
+independientes.
+Sustituyendo U en (3.4) se obtiene que
+Z
+Y U 1 ,
+n
+81
+Y
+quedando demostrado que la media muestral depende de Z N 0,1 , siendo ésta la
+1
+n
+2
+expresión estandarizada de Y y por tanto la distribución de la media muestral es N , . Por otra
+n
+n
+2
+parte V U U y por (3.5)
+i
+i 1
+n 2 1 n 2
+V U U Y Y .
+i σ2 i
+i 1 i 1
+1 n 2
+De donde se obtiene que por ser Z independiente de V, también lo son Y y Y Y ,
+1 2 i
+i 1
+distribuyéndose este último con una distribución Chi-Cuadrado con n-1 grados de libertad. Finalmente el
+teorema está demostrado.
+CONCLUSIONES.
+Se ha logrado exponer la demostración de la independencia de la media y la varianza muestrales
+bajo el supuesto de una muestra aleatoria de la distribución Normal y las correspondientes distribuciones
+de la media y la varianza muestrales. La herramienta matemática fundamental que se consideró ha sido
+la de una transformación ortogonal. En este propio trabajo se muestra un resumen de los resultados
+fundamentales asociados con las matrices ortogonales. Para facilitar la demostración de la
+independencia de los estadísticos antes señalados, así como sus respectivas distribuciones, se utilizaron
+tres teoremas.
+BIBLIOGRAFÍA.
+1. Bru, R., Clement, J. J, Mas, J. y Urbano, A. (2004): Álgebra Lineal. 1ª reimpresión 2ª
+edición. Alfaomega Grupo Editor, S. A. de C. V. México.
+2. Casella, G. and Berger, R. (2002): Statistical Inference. 2nd edition. Duxbury. USA. Pág. 222.
+3. Hogg, R. V. and Tanis, E. A. (2006): probability and statistical Inference. 7th ed. Pearson
+prentice Hall. USA.
+4. Kalbfleisch, J. G. (1985): Probability and Statistical Inference: Probability, Vol. 1. Springer.
+USA.
+5. Kurosh, A. G. (1994): Curso de Álgebra Superior. 5a reimpresión. Editorial Limusa S.A. de
+C. V. Grupo Noriega Editores. México.
+6. Lang, S. (2004 ): Linear Álgebra. Springer. 3rd edition. USA.
+7. Rao, C. R. (2002): Linear Statistical Inference and Its Applications. 2nd edition. John Wiley.
+USA.
+8. “Student” (W. S. Gosset) (1908): The probable error of a mean. Biometrika 6, pág. 1-25.
+82

@@ -1,0 +1,85 @@
+Actualidad/RecentEvents CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.103–104
+Recibido(Received):19-04-2024,Revisado(Revised):21-06-2024
+Aceptado(Accepted):02-09-2024,Enlínea(Online):20-11-2024
+Taller Internacional sobre Álgebra Computacional en
+la Computación Científica (CASC), La Habana, 2023
+International Workshop on Computer Algebra in
+Scientific Computing (CASC), Havana, 2023
+Valentina Badía Albanés1*
+1DepartamentodeMatemática,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+valia@matcom.uh.cu
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadoymaquetadopor(Editedandlayoutby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLa
+Habana,Cuba.
+Citar como: Badía Albanés, V. (2024). Taller Internacional sobre Álgebra Computacional en la Compu-
+tación Científica (CASC), La Habana, 2023 [Actualidad]. Ciencias Matemáticas, 36(Único), 103-104. DOI:
+https://doi.org/10.5281/zenodo.14192441.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/10379.
+Las herramientas de la Computación Científica tienen incluye,entreotros:
+unpapelprimordialenCienciayTecnología.LosSistemas
+nuevosmétodosdecálculoexacto;
+AlgebraicosComputacionalesylosalgoritmossubyacentes
+paralaComputaciónSimbólicajueganunpapelcadavezmás algoritmossimbólicosysucomplejidad;
+importanteenlaComputaciónCientífica.
+razonamientoautomatizadoenálgebraygeome-
+LaseriedeTalleresInternacionalessobreÁlgebraCompu-
+tría;
+tacionalenlaComputaciónCientífica(CASC)comenzóen
+cálculoparalelosimbólico/simbólico-numérico;
+1998ydesdeentoncessehancelebradoanualmenteenuna
+sedediferenteparacadaedición.Unodelosprincipalesobjeti- métodossimbólicos/simbólico-numéricospara
+vosdelosCASCeslapresentaciónoportunayenprofundidad ecuacionesdiferenciales,algebraico-diferenciales
+delprogresoentodaslasdisciplinasprincipalesdelÁlgebra yendiferencias;
+Computacional. El segundo objetivo de los Talleres CASC métodos simbólicos/simbólicos-numéricos para
+esreunirtantoalosinvestigadoresenÁlgebraComputacio- ecuacionespolinómicasydesigualdades;
+nalTeórica,comoalosingenierosyotrosprofesionalesque
+la incorporación de tecnología de álgebra infor-
+aplicanlasherramientasdelÁlgebraComputacionalparala
+máticaendiferentesentornosdesoftwareyhard-
+resolucióndeproblemasenlaindustriayendiversasramas
+ware.
+delaComputaciónCientífica.
+Ensuediciónde2023,laXXVConferenciaCASCfue 2. TodaslasdemásáreasdelaComputaciónCientíficacon
+organizadaporlaSociedadCubanadeMatemáticayCompu- respectoasubeneficioousodemétodosysoftwarede
+taciónylaUniversidaddeLaHabana,bajoelpatrociniodel álgebracomputacional.Estoincluye,entreotros:
+CARGO Lab, con sede en Waterloo, Ontario, Canadá, que
+contribuyó al éxito del CASC 2023 realizado en la Univer- elusodeálgebracomputacionalencálculosapro-
+sidad de La Habana, desde el 28 de agosto hasta el 1 de ximados;
+septiembrede2023.Lainvitaciónaorganizarestacitasebasó métodosdeálgebracomputacionalenanálisisde
+enelreconocimientodelaexistenciaennuestropaísdevarios bigdata;
+gruposdeprofesoreseinvestigadoresqueaplicanconéxito
+métodosdeálgebracomputacionalparasimula-
+losmétodosysistemasdelÁlgebraComputacionalparala
+ciónymodelado.
+resolucióndediversastareasdocenteseinvestigativas.
+Lascontribucionespresentadascubrierondesdelainvesti- 3. Aplicacionesdeloanteriorenlascienciasnaturalesy
+gaciónfundamentalhastalaimplementacióndeaplicaciones. laingeniería.
+Lostópicosabarcaron:
+Losorganizadoresgeneralesdeleventofuerontrespres-
+1. Lateoríadelacomputaciónsimbólicaysuimplemen- tigiosos científicos: François Boulier, Universidad de Lille,
+taciónenSistemasAlgebraicosComputacionales.Esto Francia;IliasS.Kotsireas,WilfridLaurierUniversity,Canada
+104 TallerInternacionalsobreÁlgebraComputacionalenlaComputaciónCientífica(CASC),LaHabana,2023
+FotooficialdelosdelegadosaCASC2023enlaescalinatadelaUniversidaddeLaHabana.
+yTimurSadykov,PlekhanovRussianUniversity,Rusia.Al dimiento de algoritmos de búsqueda local para problemas
+encuentroacudieronentreacadémicosyestudiantes,37dele- K-SATengráficosaleatorios.K-SATesunodelosproblemas
+gadosde14países:Canadá,China,Alemania,Rusia,Japón, NP-completosmásestudiados.
+EstadosUnidos,Inglaterra,Austria,España,Francia,Brasil, CASC tiene una relación de larga data con la serie de
+ArabiaSaudita,IrányCuba. librosSpringerLectureNotesinComputerScience(LNCS)
+Lassesionesdeleventoincluyerondosconferenciasma- parapublicaractasdeconferencias.Veintiunodelostrabajos
+gistralesy36charlasdemuyaltonivel.Cincopresentaciones presentados,conresultadosdeinvestigaciónoriginales,fueron
+serealizarondemaneraremota. aceptadosparasupublicaciónenlaediciónespecialLNCS
+LaconferenciaplenariadictadaporelprofesorGeorgeLa- 2023.
+bahn,delaUniversidaddeWaterloo,Ontario,Canadá,versó En la Reunión de Trabajo que se celebra al finalizar la
+sobrelasformasnormalesdematricesenteras.Formasnorma- Conferenciasereconocióeléxitodelamismayelmagnífico
+lesparamatricesenteras,comolasdeHermiteySmith,tienen trabajorealizadoporelComitéOrganizadorLocal.
+unalargahistoriatantoentérminosdealgoritmosdecálculo, LaConferenciaCASC2024tendrálugarenRennes,Fran-
+comodeusoenaplicaciones.Enestacharla,sediscutieron ciadel2al6deseptiembre.Másdetallespuedenconsultarse
+unaseriedealgoritmos,incluyendodosenfoquesrecientes enhttps://www.casc-conference.org.
+paraelcálculorápidodelaformanormaldeSmithjuntocon
+un nuevo algoritmo para el cálculo de la forma normal de
+Hermite.
+LacharladelprofesorRobertoMEustlaet,obdrealaestU´anbiavjeorsuindaadlicencia Creative Commons “Atribuci´on-NoComercial-
+SinDerivadas4.0Internacional”.
+de La Habana, Cuba, estuvo dedicada al problema del ren-
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.103–104 BadíaAlbanés,V.
+https://revistas.uh.cu/rcm/article/view/10379 https://doi.org/10.5281/zenodo.14192441
+1

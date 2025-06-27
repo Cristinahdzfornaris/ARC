@@ -1,0 +1,851 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59
+Recibido(Received):23-06-2024,Revisado(Reviewed):17-07-2024
+Aceptado(Accepted):30-10-2024,Enlínea(Online):26-01-2025
+Introducción y solución del problema de los
+reducidos catalanes
+Introduction and solution of the problem of the
+reduced catalan
+Luis Enrique Fernández Machado1
+Resumen Elproblemadelosreducidoscatalanesconsisteenlaresolucióndeecuacionesencongruenciay
+enlamaximizacióndelcardinaldelconjuntodesolucionesdeestas.Parasolucionaresteproblemasedesarrolla
+un novedoso método demostrativo, que se denomina método Bézout-Euler de las potencias, el cual integra
+teoremasclásicosdelateoríadenúmeroscomoelteoremadeBézoutyelteoremadeEuler.Paralasolución
+delproblemadelosreducidoscatalanesseobtienendiversosteoremasquedemuestranlaspotencialidadesde
+esteprocederdemostrativoparaconocerlaexistenciaonodesolucionesdeunaecuaciónencongruencia,así
+comoparadeterminarelnúmerodeestas.
+PalabrasClave:cardinal,congruencia,ecuación,máximo,potencia.
+Abstract TheproblemofthereducedCatalansconsistsofsolvingequationsincongruenceandmaximizing
+thecardinalofthesetofsolutionsoftheseequations. Tosolvethisproblem,anoveldemonstrativemethodis
+developed,calledtheBézout-Eulermethodofpowers,whichintegratesclassicaltheoremsofnumbertheory
+suchasBézout’stheoremandEuler’stheorem. ForthesolutionoftheproblemofthereducedCatalans,several
+theoremsareobtainedthatdemonstratethepotentialofthisdemonstrativeproceduretoknowtheexistenceor
+notofsolutionsofanequationincongruence,aswellastodeterminethenumberofthese.
+Keywords: cardinal,congruence,equation,maximum,power.
+MathematicsSubjectClassification: 11,11A07,11A15,11D04.
+1DepartamentodeMatemática,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+luis.fernandez@matcom.uh.cu.
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Citarcomo: FernándezMachado,L.E.(2024).Introducciónysolucióndelproblemadelosreducidoscatalanes.
+CienciasMatemáticas,37(1),49–59.DOI:https://doi.org/10.5281/zenodo.14744243.Recuperadoapartirde
+https://revistas.uh.cu/rcm/article/view/9749.
+Introducción estainvestigación.Estageneralizacióndelejercicioolímpi-
+coantespresentadosedenominaproblemadelosreducidos
+El interés las ecuaciones en congruencias, conjuntos y
+catalanesysuenunciadoeselsiguiente:
+expresionesfuesuscitadoporelsiguienteproblema,propuesto
+Dadomunnúmeronaturalimparqueadmiteraícesprimiti-
+alosestudiantesdelEquipoNacionaldeMatemáticadeCuba
+vasyseana,b,cnúmerosnaturalesquecumplenlassiguientes
+paralasOlimpiadasInternacionales[1],yquefueextraídode
+condiciones:
+laOlimpiadaBalcánicadeMatemáticasde1999:
+Sea punnúmeroprimoimpartalque p≡2(mod3).Con- (a,ϕ(m))̸=(b,ϕ(m)).
+sidereelconjunto:
+Sea pelmayordivisorprimodeϕ(m),entonces
+S={y2−x3−1; x,y∈Z }. (1)
+p ϕ(m)
+≥ma´x{(a,ϕ(m)),(b,ϕ(m))}.
+ProbarqueelconjuntoStienealosumo pelementosdivisi- p
+blespor p.
+(c,m)∈{1,m}.
+Apartirdeesteproblemaseobtuvounageneralización
+significativa,cuyaresolucióneselobjetivofundamentalde Simnoesprimoym∤c,entoncesm´ın{a,b}≥log m.
+p
+50 Introducciónysolucióndelproblemadelosreducidoscatalanes
+Se desea determinar el valor máximo posible del car- m∈N,determinalacantidaddenúmerosprimosrelativos
+dinal del conjunto E ={(x,y)∈(Z ×Z ); xa−yb−c≡ conmmenoresquem.Sedenotaporϕ(m).
+m m
+0(modm)},asícomoylascondicionessuficientesynecesa-
+Definición3 Dadosr,n∈N,sedicequeresraízprimitiva
+riasparaquea,bycalcancenesemáximo.
+módulonsiysolosiord r=ϕ(n).
+Particularmente,resultarelevantelaintegracióndediver- n
+sas ideas demostrativas y resultados conocidos de la teoría Definición4 Seana,k,n∈N,aesrestodek-ésimapotencia
+elementaldenúmerosenlasolucióndeesteproblemagene- enmódulonsiysolosi∃x∈N; xk≡a(modn).
+ralizado.Estainterrelacióndediversosteoremasenunúnico
+Teorema5 Seam∈N,entoncesmadmiteraícesprimitivas
+procederdemostrativoenesteartículo,dacomoresultadoun
+siysolosim=2,4,pα,2pα dondeα ∈Ny pesunnúmero
+novedosométododedemostración,quesedenominamétodo
+primoimpar.
+Bézout-Eulerdelaspotencias,elcualconstituyeunaamplia
+generalizacióndelasideasdelmétodoBézout-Fermat[5]. Teorema6 Sean d, k, x números naturales y p un núme-
+El método Bézout-Euler de las potencias, que recorre ro primo tales que xd ≡ 1(mod pn) y ϕ(pn) ≡ 0(modd).
+transversalmentetodoestetrabajo,constituyeunapoderosa Entonces, existen exactamente d raíces incongruentes de
+herramientaparaabordarproblemasdeestetipoenOlimpia- xd ≡1(mod pn).
+dasdeMatemática[5],asícomoparasolucionarcasosparti-
+Teorema7 Sean a,m∈N tales que m admite raíces prim-
+cularesdelaconjeturadeCatalanylaecuacióndeCatalan-
+tivasy(a,m)=1.Entonces,aesrestodek-ésimapotencia
+Fermat,dondeseutilizalateoríaelementaldenúmeros,sin
+módulomsiysolosi:
+necesidadderecurriralostradicionalesprocedimientosbasa-
+dosencuerposciclotómicos[2,3,4]. ϕ(m)
+a d ≡1(modm), siendod=(k,ϕ(m)).
+Lacantidaddenúmerosnaturalesincongruentesquedejan
+Relevancia del estudio
+restoaenmódulomalserelevadosakesexactamented.
+Lasolucióndelproblemadelosreducidoscatalanesre-
+sultaunavanceimportanteparaabordarcasossignificativos Elteorema7sedenominadecaracterizacióndelosrestos
+deproblemasabiertoscomolaecuaciónCatalan-Fermatcon dek-ésimaspotenciasenmódulosqueadmitenraícesprimiti-
+herramientasdelateoríaelementaldenúmeros,sinnecesidad vas.
+derecurriratécnicasmásavanzadasdelateoríaalgebraicade
+Teorema8 Seanh,j∈Nyd=(h,j)entonces:
+números.También,elmétodoBézout-Eulerdelaspotencias,
+desarrolladopararesolverelproblemadeestainvestigación, ∃x,y∈N; hx=d+jy.
+constituyeunametodologíavaliosapararesolverecuaciones
+Elteorema8esunaexpresiónequivalentedelteoremade
+diofánticascongradovariabledeltipoxa+yb=c,dondelos
+Bézout.
+exponentesa,bsontambiénvariables.Además,estemétodo
+demostrativo,porserunaampliageneralizacióndelmétodo Teorema9 Para todos m,n∈N con (m,n)=1 se cumple
+Bézout-Fermat,esunapoderosaherramientaparalaresolu- que:
+ción de ejercicios de teoría de números de las Olimpiadas mϕ(n)≡1(modn).
+InternacionalesdeMatemática.
+EsteresultadoseconocecomoteoremadeEuler.
+1. Preliminares
+2. Desarrollo
+Paraabordarelproblemaplanteadoenestainvestigación
+Elanálisisfundamentaldeestainvestigaciónvadirigidoa
+se usan diversas definiciones, resultados y teoremas de la
+lasiguienteecuaciónencongruencia:
+teoríadenúmeros,quesepuedenconsultar,consusdemos-
+traciones, en [1, 6]. En esta sección se presentan aquellas xa−yb−c≡0(modm). (2)
+definicionesyteoremasimprescindiblesparacomprendereste
+Comomesunnúmeronaturalqueadmiteraícesprimitivas
+trabajo.
+yesimpar,porelteorema5sededucequem=pt,dondepun
+Definición1 Dadosa,m,n∈N,sedicequemeselordende númeroprimoimparyt∈N.Entonces,sepuedenotarquem
+amódulon,simeselmenornúmeronaturalparaelcualse esunnúmeroprimo(t=1)omnoesunnúmeroprimo,pero
+cumplequeam≡1(modn).Sedenotaporord a=m. síunapotenciadeprimo(t≥2).Paraabordarlaproblemática
+n
+deestainvestigaciónesnecesariodividirelanálisisparacada
+Definición2 LafuncióndeEuleresaquellaque,paracada unodeestosdoscasos.
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59 FernándezMachado,L.E.
+https://revistas.uh.cu/rcm/article/view/9749 https://doi.org/10.5281/zenodo.14744243
+Introducciónysolucióndelproblemadelosreducidoscatalanes 51
+2.1 Caso1:mnoprimo(t≥2) Subcaso 1.1.1: x≡0(mod p). Para este subcaso, se puede
+Paraestecasosepuedenotarque: notarque:
+ϕ(m)=pt−1(p−1). xa≡yb(modm)⇒y≡0(mod p). (5)
+Como(p−1)<p,susfactoresprimossonmenoresque Puedeobservarsequelamáximacantidaddemúltiplosde
+p,portanto,elmayordivisorprimodeϕ(m)es p.Entonces, msealcanzasisecumpleque:
+alaplicarlascondicionesdelproblemaplanteadosetieneque:
+x≡y≡0(mod p) ⇒xa≡yb(modm). (6)
+ϕ(m)
+=pt−2(p−1)≥ma´x{(a,ϕ(m)); (b,ϕ(m))}. (3)
+p Teorema10 La condición planteada en (6) se cumple si y
+solosim´ın{a,b}≥t.
+Elinterésdelainvestigaciónsecentraendeterminarel
+númeromáximodesoluciones(x,y)∈Z ×Z delaecuación
+m m Demostración.Sea,sinpérdidadegeneralidad,m´ın{a,b}=
+(2).Paraello,primeroseanalizaelcasoenquec≡0(modm),
+b.Entonces,setieneque:
+yelvalormáximodelcardinaldeE,asícomolascondiciones
+suficientesynecesariasparaquesealcanceelmáximopara
+a>bpues(a,ϕ(m))̸=(b,ϕ(m)).
+estecaso.
+Luego,bastaráprobarquec≡0(modm)esunacondición Suficiencia:Comoa>b≥t,setieneque:
+necesariaparaque|E|alcanceesevalor,queenelotrocaso
+((c,m)=1)elmáximovalorsiempreserámenoroigualque pa>pb≥pt.
+elmáximoparac≡0(modm).
+Portanto,
+2.1.1 Caso1.1:c≡0(modm) x≡y≡0(mod p),
+Paraestecaso,elproblemaequivaleadeterminarelvalor
+máximo que puede alcanzar el cardinal del conjunto E = ⇒xa≡yb(mod pt)⇒xa≡yb(modm), puesm=pt.
+{(x,y)∈(Z ×Z ); xa−yb≡0(modm)}ylaecuaciónen
+m m
+congruenciaaanalizarserá: Necesidad:Sisecumplelacondición(6),setieneque:
+xa≡yb(modm). (4) x=y=p≡0(mod p)⇒xa=pa≡yb=pb(mod pt),
+Hallarelmáximode|E|,enestecaso,equivaleahallar ⇒pa−pb=pb(pa−b−1)≡0(mod pt). (7)
+el número máximo de soluciones (x,y) de la ecuación (4),
+Comoa>bseobtieneque:
+y las condiciones suficientes y necesarias para alcanzarlo.
+Intuitivamente,elmáximosealcanzarásiselograqueparax∈
+(pa−b−1,pt)=(pa−b−1,p)=1.
+Z existalamayorcantidadposibledey∈Z quesatisfacen
+m m
+laecuación(4).
+Portanto,setieneque
+Entonces,bastaencontrarcondicionessuficientesynece-
+sariasparaalcanzarestemáximoideal.Nótesequesi(x,m)= pb(pa−b−1)≡0(mod pt),
+1, entonces debe ser (y,m)=1 para satisfacer (4). De mo-
+doanálogo,six≡0(mod p),losvaloresdey∈Z m paralos ⇔pb≡0(mod pt),
+cualessesatisface(4)cumplenquey≡0(mod p).
+Sepuedeobservarquelacantidadmáximadesoluciones ⇔m´ın{a,b}=b≥t.
+delaecuación(4)eslasumadelascantidadesmáximasde
+solucionesdeestaecuacióncuandox≡0(mod p)ycuando
+(x,m)=1. Entonces,bastahallarlacantidadmáximaparaestesub-
+Portanto,sepuedeabordarelproblemaalhallarlascondi- caso, teniendo como condición suficiente y necesaria que
+cionessuficientesynecesariasparaquesealcanceelmáximo min{a,b}≥t paraalcanzarlo.
+en cada caso. A partir de la unión de esas condiciones, se
+puedenobtenerlascondicionessuficientesynecesariaspara Teorema11 Lacantidadmáximadesolucionesdelaecua-
+quesealcanceelmáximototal.Porello,sedivideelanálisis ción(4)es p2(t−1)ylacondiciónsuficienteynecesariapara
+endossubcasos. alcanzardichacantidadesm´ın{a,b}≥t.
+FernándezMachado,L.E. CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59
+https://doi.org/10.5281/zenodo.14744243 https://revistas.uh.cu/rcm/article/view/9749
+52 Introducciónysolucióndelproblemadelosreducidoscatalanes
+Demostración.Lacondiciónnecesariaysuficientesedemos- Porlascondicionesdelproblema,sepuedegarantizarsin
+tróenelteorema10.Comosecumplelacondición(6)para pérdidadegeneralidadque:
+tenerelnúmeromáximodesoluciones,bastahallarlacanti-
+pt−2(p−1)≥d >d .
+daddex∈Z quesonmúltiplosde pyelevarlaalcuadrado. a b
+m
+Seam lacantidaddemúltiplosdepmenoresquem,entonces Seanh ,h ∈Ntalesque:
+p a b
+setieneque:
+ϕ(m)=d h =d h .
+a a b b
+m pt
+m =⌊ ⌋=⌊ ⌋=pt−1. Sepuedenotarque:
+p
+p p
+h >h , puesd >d .
+b a a b
+Entonces,lacantidadmáximaes:
+Teorema13 MaximizarelcardinaldeE′equivaleamaximi-
+m2 =(pt−1)2=p2(t−1). zarelnúmerodesolucionesdelaecuaciónencongruencia:
+p
+rk≡1(modm), dondek=(h ,h ). (10)
+a b
+Subcaso1.1.2:(x,m)=(y,m)=(y,p)=(x,p)=1. Demostración.ObtenerelvalormáximodelcardinaldeE′
+Ahoraserealizandostransformacionesqueseránútiles equivaleadeterminarelnúmeromáximoder∈Z quesatis-
+m
+para este subcaso y los posteriores. Por el algoritmo de la faceque:
+divisiónconresto[6]segarantizaque: xra ≡r(modm), (11)
+∃!q ,r ∈N; a=ϕ(m)q +r , ϕ(m)>r ≥0, (8) yrb ≡r(modm). (12)
+a a a a a
+Entonces,bastaprobarque:
+∃!q ,r ∈N; b=ϕ(m)q +r , ϕ(m)>r ≥0. (9)
+b b b b b
+xra ≡yrb ≡r(modm)⇔rk≡1(modm).
+Lema12 El problema de los reducidos catalanes en este
+• Suficiencia:Porelteorema7setienequelasecuacio-
+subcasoesequivalenteamaximizarelcardinaldelconjunto
+nes(11)y(12)secumplensiysolosi:
+E′={(x,y)∈(Z
+m
+×Z
+m
+); xra−yrb ≡0(modm)}.
+r ϕ d ( a m) =rha ≡1(modm), (13)
+Demostración.Sepuedenotarquelascondicionesdelpro-
+ϕ(m)
+blemadelosreducidoscatalanesnovaríanaltrabajarconr a r db =rhb ≡1(modm). (14)
+yr ,yaqueporlaspropiedadesdelmáximocomúndivisorse
+b Comok=(h ,h ),setieneque:
+a b
+tieneque:
+(a,ϕ(m))=(r a ,ϕ(m)), ∃c a ,c b ∈N; (c a ,c b )=1, h a =kc a , h b =kc b . (15)
+(b,ϕ(m))=(r b ,ϕ(m)). Entonces,seobtieneque:
+AlaplicarelTeoremadeEulersetieneque: rk≡1(modm)⇒rkca =rha ≡1ca ≡1(modm).
+xa=xϕ(m)qa+ra =(xϕ(m))qaxra ≡xra(modm), rk≡1(modm)⇒rkcb =rhb ≡1cb ≡1(modm).
+Por tanto, se tiene que rhb ≡rha ≡1(modm), lo que,
+yb=yϕ(m)qb+rb =(yϕ(m))qbyrb ≡yrb(modm).
+porelteorema7,implicaque:
+Portanto,seobtieneque:
+xra ≡yrb ≡r(modm).
+(xa−yb)≡(xra−yrb)(modm),
+• Necesidad:PorelteoremadeBézout:
+⇒|E′|=|E|. ∃z,w∈N; h z=k+h w.
+a b
+Porlaecuación(14)setieneque:
+Entonces,elproblemaenestesubcasoconsisteenmaximi-
+zarelcardinaldeE′ydeterminarlascondicionessuficientes (rhb)w≡1w≡1(modm).
+ynecesariasder ,r paraalcanzarlo.
+a b
+Entonces,apartirdelaecuación(13)setieneque:
+Sean:
+d
+a
+=(a,ϕ(m))=(r
+a
+,ϕ(m)), rhaz=rk+hbw=(rk)rhbw=(rk)(rhb)w
+d =(b,ϕ(m))=(r ,ϕ(m)). ≡rk≡1z≡1(modm).
+b b
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59 FernándezMachado,L.E.
+https://revistas.uh.cu/rcm/article/view/9749 https://doi.org/10.5281/zenodo.14744243
+Introducciónysolucióndelproblemadelosreducidoscatalanes 53
+⇒2p>d >p.
+1
+Entonces,pararesolverelproblemadelosreducidoscata-
+Comonoexistenmúltiplosde pmayoresque pymenores
+lanesparaestesubcasosedebedeterminarelnúmeromáximo
+que2psetieneque:
+desolucionesdelaecuación(10).
+Teorema14 ElvalormáximodelcardinaldelconjuntoE′
+(d
+1
+,p)=1,
+enestesubcasoes ϕ( 2 m p )2 ylacondiciónnecesariaysuficiente ⇒(d 1 ,pt−1)=1,
+paraalcanzarloes(ϕ(m),r )= ϕ(m).
+b 2p ⇒(p−1)≡0(modd ), yaqued esdivisordeϕ(m),
+1 1
+Demostración.Comokeselmáximocomúndivisordeh y
+a
+⇒(p−1)≥d >p, absurdo.
+h ,setieneque: 1
+b
+Por tanto, el valor máximo de d es ϕ(m) y el máximo
+ϕ(m)≡0(modk). b 2p
+valorde|E′|paraestesubcaso:
+De donde, por el teorema 2, el número de r ∈Z m tal (cid:18) ϕ(m) (cid:19) ϕ(m)2 p2t−3(p−1)2
+que(r,m)=1(oloqueeslomismo,elnúmerodeenteros ϕ(m) = = . (16)
+2p 2p 2
+incongruentesmódulom)quesatisfacenlaecuación(10)es
+k.Portanto,bastaríahallarelmáximovalordek=(h a ,h b ), Aplicandolascondicionesdelejercicioyelvalormáximo
+elcualesclaroqueesh a ,yaqueh b >h a .Entonces,setiene ded b demostrado,seobtieneque:
+que:
+∃n∈N; h b =h a n. d a = ϕ(m) eselmayorvalorquealcanzad a .
+p
+Portanto,aplicandolasecuaciones(13)y(14)seobtiene
+que: Entonces, bajo estas condiciones de máximo se puede
+notar:
+rha ≡1(modm)⇒rhb =(rha)n≡1(modm).
+ϕ(m)=d h =d h ,
+a a b b
+Sepuedeconcluirquetodorestoder
+a
+-ésimapotenciade ϕ(m) ϕ(m)
+ϕ(m)= h = h ,
+x∈Z m enmódulomtambiénloesder b -ésimapotenciaen p a 2p b
+módulomsik=h .Paracadavalordex∈Z quegeneraun
+a m ⇒h =2h .
+b a
+restorder -ésimapotencia,existensolucionesy∈Z dela
+a m
+ecuación(12).Elnúmerodesolucionesdelaecuación(12) Porlocual,lacondiciónd b =(ϕ(m),r b )= ϕ 2 (m p ) incluye
+queexisteporcadax∈Z ,esd porelteorema3.Entonces, lacondiciónsuficienteynecesariaparamaximizarelnúmero
+m b
+setienequeelvalormáximode|E′|es: desolucionesdelaecuación(10),queequivaleamaximizar
+elcardinaldelconjuntoE′.
+ϕ(m)d b . Comoparaalcanzarelvalormáximodelcardinaldelcon-
+Se demuestra por reducción al absurdo que
+ϕ(m)
+es el
+juntoE enelCaso1.1debenalcanzarselosvaloresmáximos
+2p paraelSubcaso1.1.1yparaelSubcaso1.1.2,entoncesde-
+mayorvalorquepuedealcanzard .
+b
+bencumplirsesimultáneamentelascondicionesnecesariasy
+Supongamosque:
+suficientesparaalcanzardichosvaloresencadasubcaso.Por
+ϕ(m) tanto,apartirdelteorema11yelteorema14seobtieneel
+d > .
+b
+2p siguienteteorema.
+Seconoceque:
+Teorema15 El valor máximo del cardinal del conjunto E
+ϕ(m)≡0(modd ). paraelCaso1.1es:
+b
+Sepuedenotarquelosdivisoresdeϕ(m)sondelaforma: ϕ(m)2 p2t−3(p2+1)
+p2(t−1)+ = . (17)
+2p 2
+ϕ(m)
+; ϕ(m)≡0(modd).
+d Lascondicionesnecesariasysuficientesparaalcanzardicho
+Entonces,aplicandolascondicionesdelejerciciosetiene máximoson:
+queexisteundivisord deϕ(m)talque:
+1 1. min{a,b}≥t.
+ϕ(m) ϕ(m) ϕ(m)
+p ≥d a >d b = d 1 > 2p , 2. (ϕ(m),b)=(ϕ(m),r b )= ϕ 2 (m p ) = pt−2( 2 p−1).
+FernándezMachado,L.E. CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59
+https://doi.org/10.5281/zenodo.14744243 https://revistas.uh.cu/rcm/article/view/9749
+54 Introducciónysolucióndelproblemadelosreducidoscatalanes
+Paraprobarqueestevalorde(17)eselmáximode|E|bajo der -ésimapotenciaen(modm),ycomo(x,p)=(x,m)=1
+b
+lascondicionesdel“Problemadelosreducidoscatalanes”, setienequeexistenϕ(m)valoresgeneradosporxra−c.Porel
+basta probar que si m no divide a c, el máximo valor que teorema3,porcadaunodeesosϕ(m)valoresdex(sisiempre
+puedealcanzar|E|esmenorlaexpresiónen(18).Además, generanr -ésimapotenciasenxra−c)existenexactamente
+b
+deello(yaporelcasoanteriorjuntoconc≡0(modm))se d ,y∈Z talesque:
+b m
+tendríanlascondicionesnecesariasysuficientesparaalcanzar
+(xra−c)≡yrb(modm).
+elmáximobuscado.
+Simnodivideac,entonces,porlacondicionesdelpro-
+Por tanto, la cantidad máxima de elementos en E tales
+blemadelosreducidoscatalanes,sonprimosrelativos.
+que (x,m)=(x,p)=1 que se puede alcanzar es ϕ(m)(d ).
+b
+Entonces,elmáximovalorquepuedealcanzar|E|es:
+2.1.2 Caso1.2:(c,m)=1
+En este caso se debe determinar el valor máximo que
+ϕ(m)(d )+pt−1d =ptd .
+b b b
+puedealcanzarelcardinaldelconjuntoqueseestáanalizando
+E={(x,y)∈(Z m ×Z m ); xa−yb−c≡0(modm)},siendoc Porlademostracióndesarrolladaenelteorema14seco-
+primorelativoconm.ComoestecasoespartedelCaso1mno noceque:
+esprimoy,porlascondicionesdelproblemadelosreducidos ϕ(m)
+≥d ,
+catalanes,setieneque 2p b
+(c,m)=1⇒m´ın{a,b}≥log p m=log p pt =t. ⇒
+ϕ(m)2
+≥ϕ(m)d b . (20)
+2p
+SedivideesteCaso1.2endossubcasos. Aplicandolascondicionesdelproblema,sepuedenotar
+Subcaso1.2.1:cnoesrestodea-ésimapotenciaenmod p. que:
+ϕ(m)
+pt−1>pt−2(p−1)= ≥d >d .
+Teorema16 ParaelSubcaso1.2.1elvalormáximoquepue- p a b
+dealcanzarelcardinaldeE es:
+⇒p2(t−1)>pt−1d . (21)
+b
+(ϕ(m)+pt−1)d
+b
+=ptd
+b
+. (18)
+Portanto,sumandolasdesigualdadesobtenidasen(20)y
+(21),seobtieneque:
+Además,secumpleque:
+ϕ(m)2
+ϕ(m)2 +p2(t−1)>(ϕ(m)+pt−1)d .
++p2(t−1)>(ϕ(m)+pt−1)d . (19) 2p b
+b
+2p
+Demostración.Comoa≥t,entonces:
+Subcaso1.2.2:cesrestodea-ésimapotenciaenmódulo p.
+x≡0(mod p)⇔xa≡0(mod pt). Teorema17 Seax∈Z talque:
+m
+Deellosededucequelamayorcantidaddeelementosen xa≡c(mod p).
+E cuando x≡0(mod p), se obtiene cuando −c es un resto
+der -ésimapotenciamodm,puesenotrocasonoexistirían Entonces,setieneque:
+b
+elementosdeE conx≡0(mod p).Seconocequelacantidad
+demúltiplosde penZ es pt−1 y,aplicandoelTeorema3,
+(x,y)∈E⇒xa≡c(modm).
+m
+sesabeque:
+Demostración.Sepuedenotarque:
+yb≡−c(modm),tieneexactamented b solucionesenZ m . [xa≡c(mod p)∧(x,y)∈E]⇒y≡0(mod p),
+Por tanto, la cantidad máxima de elementos de E con ⇒yb≡0(modm), puesb≥t,
+x≡0(mod p)es:
+pt−1d . ⇒xa≡c(modm), yaque(x,y)∈E.
+b
+Si (x,p)=(x,m)=1 y c no es resto de a-ésima poten-
+ciaenmod p,entonces(y,p)=(y,m)=1paraqueexistan
+Teorema18 ParaelSubcaso1.2.2elvalormáximoquepue-
+elementosenE con(x,m)=1.Como(x,m)=(y,m)=1,se
+dealcanzarelcardinaldeE es:
+puedetrabajarconr yr envezdeconayb.Luego,elmáxi-
+a b
+movalorde|E|seobtendríasicadavalordexra−cesunresto (ϕ(m)−d
+a
+)d
+b
++(d
+a
++d
+b
+)pt−1. (22)
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59 FernándezMachado,L.E.
+https://revistas.uh.cu/rcm/article/view/9749 https://doi.org/10.5281/zenodo.14744243
+Introducciónysolucióndelproblemadelosreducidoscatalanes 55
+Demostración.Porelteorema17,paraobtenerparesorde- Simplificandoalgebraicamente,seobtienequeladesigual-
+nados(x,y)∈E conxa≡c(mod p),sedebegarantizarquec dadexpresadaen(28),equivalea:
+searestodea-ésimapotenciaenmódulom.
+Porelteorema3,laecuaciónxa≡c(modm)tieneexac-
+pt−2(p−2)
+≥d . (29)
+b
+tamented solucionesenZ .Portanto,lacantidaddepares 2
+a m
+ordenados(x,y)∈E conxa≡c(modm),es: Ahoralademostraciónsedividentrescasos,dependiendo
+delprimoimpar pquedefineam.
+d pt−1. (23)
+a
+• p=3:Consimplescálculosutilizandolascondiciones
+Por la demostración del teorema 16, se conoce que la
+delproblema,secompruebaquesit=2,elvalormáxi-
+mayor cantidad de pares ordenados (x,y)∈E con (x,p)=
+mode|E|planteadoenelteorema18,esmenorqueel
+(x,m)=1es:
+máximoparaelCaso1.1.Porlocual,seconsiderat≥3.
+d pt−1. (24)
+b Entonces,setienequem=3t.Aplicandorazonamien-
+Faltamaximizarelnúmerodeparesordenados(x,y)∈E tosanálogosalosutilizadosparaprobarque ϕ(m) ≥d ,
+2p b
+con (x,p)=(x,m)=1 y xa ̸≡c(modm). Para esto, deben y teniendo en cuenta que en este caso se tiene como
+ser a y c tales que todos los valores de xa−c, con x bajo condiciónque ϕ(m) >d ,seobtieneque:
+2p b
+lascondicionesanteriores,seanrestosder -ésimaspotencias
+b
+enmod(m).Aplicando,elteorema3,seobtienequeexisten ϕ(m)
+=3t−2>d ⇒3t−3≥d .
+ϕ(m)−d valoresdex∈Z talque: 2p b b
+a m
+(x,m)=1, yxa̸≡c(modm). Perosepuedenotarque:
+Portanto,aplicandorazonamientosanálogosaloscasos pt−2(p−2) 3t−2
+= >3t−3≥d .
+anteriores,porelteorema3setienequeelmáximonúmero b
+2 2
+deparesordenadosdeE bajoestascondicioneses:
+Quedandodemostradaladesigualdadde(29)paraeste
+(ϕ(m)−d )d . (25)
+a b caso.
+Sumandolasexpresiones(23),(24)y(25)seobtieneque
+• p≡1(mod3):Comopesprimo,entoncesp≥7.Como
+elvalormáximoquepuedealcanzarelcardinaldeE es:
+p≡1(mod3),aplicandorazonamientosanálogosalos
+(ϕ(m)−d a )d b +(d a +d b )pt−1. utilizadosparaprobarque ϕ 2 (m p ) ≥d b ,seobtieneque:
+ϕ(m) ϕ(m) pt−2(p−1)
+>d ⇒ = ≥d .
+b b
+Para demostrar que el valor máximo del cardinal de E 2p 3p 3
+paraestesubcaso,planteadoenelteorema18,esmenorque
+elmáximoparaelCaso1.1sedemuestraelsiguientelema. Entonces,parademostrarladesigualdadplanteadaen
+(29)bastaríaprobarque:
+Lema19 Si ϕ(m) >d ,secumpleque:
+2p b
+pt−2(p−2) pt−2(p−1)
+ϕ(m)2 (cid:18) ϕ(m) (cid:19) 2 ≥ 3 .
+− d ≥(ϕ(m)−d )d . (26)
+a a b
+2p p
+⇔3(p−2)≥2(p−1).
+Demostración.Sepuedenotarque:
+⇔p≥4.
+ϕ(m)2 (cid:18) ϕ(m) (cid:19)
+− d ≥(ϕ(m)−d )d .
+a a b
+2p p Quedandoasídemostradaladesigualdad,pues p≥7.
+(cid:18) (cid:19) (cid:18) (cid:19)
+ϕ(m) ϕ(m)
+⇔ϕ(m) −d ≥d −d . (27) • p≡2(mod3):Como pesprimo,entonces p≥5.Sien-
+b a b
+2p p dod elmenordivisorde ϕ(m),sepuedenotarque:
+p
+Como se conoce que ϕ(m) ≥d , para demostrar la des-
+p a ϕ(m) ϕ(m) ϕ(m)
+igualdadplanteadaen(27),bastaprobarque: > > ≥d , yaque.
+b
+2p 3p dp
+(cid:18) (cid:19) (cid:18) (cid:19)
+ϕ(m) ϕ(m) ϕ(m)
+ϕ(m) −d ≥ −d . (28)
+2p b p p b d>3porser p≡2(mod3).
+FernándezMachado,L.E. CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59
+https://doi.org/10.5281/zenodo.14744243 https://revistas.uh.cu/rcm/article/view/9749
+56 Introducciónysolucióndelproblemadelosreducidoscatalanes
+Entonces, por la demostración realizada para el caso 2. ϕ(m) >d .
+2p b
+p≡1(mod3),seobtieneque:
+Comod esdivisordeϕ(m),paraestecasoseobtiene
+b
+que:
+pt−2(p−2) ϕ(m)
+≥ >d . ϕ(m)
+2 3p b ≥d b . (31)
+3p
+PorelLema19seconoceque:
+Portanto,haquedadodemostradaladesigualdad(29)
+paracadacasoposible,lacualesunacondiciónsufi- ϕ(m)2 (cid:18) ϕ(m) (cid:19)
+cienteparaquesecumpla(26)comoyasedemostró.
+− d
+a
+≥(ϕ(m)−d
+a
+)d
+b
+.
+2p p
+Portanto,parademostrarladesigualdadexpresadaen
+(30),bastaprobarque:
+Teorema20 Secumpleque:
+ϕ(m)
+d +p2(t−1)≥(d +d )pt−1. (32)
+ϕ(m)2 p a a b
++p2(t−1)>(ϕ(m)−d )d +(d +d )pt−1. (30)
+a b a b
+2p
+Simplificando,setieneque(32)secumplesiysolosi:
+Demostración.Teniendoencuentalaacotaciónded ,esta
+b pt ≥d +d p. (33)
+demostraciónsedivideendospartes. a b
+1. d = ϕ(m). Setieneque:
+b 2p
+ϕ(m)
+SeaS m talque: =pt−2(p−1)≥d ,
+a
+p
+(cid:18) (cid:19)(cid:18) (cid:19) (cid:18) (cid:19)
+ϕ(m) ϕ(m) ϕ(m) ϕ(m)
+S m = ϕ(m)− + + pt−1. ϕ(m) pt−2(p−1)
+p 2p p 2p = ≥d .
+b
+3p 3
+Seconocequed esundivisordeϕ(m)yquesecumple Entonces,parademostrar(33),bastaprobar:
+a
+que:
+pt−1(p−1)
+ϕ(m ϕ(m) pt≥pt−2(p−1)+ ,yestosecumplesiysolosi,
+≥d >d = . 3
+a b
+p 2p
+3p2≥(p−1)(p+3),
+Entonces,setieneque: (cid:18)
+1
+(cid:19)2
+5
+⇔ p− ≥− .
+ϕ(m) 2 4
+d =
+a
+p
+Entonces, se concluye que el máximo valor que puede
+Portanto,ladesigualdadplanteadaen(30)setranforma alcanzarelcardinaldelconjuntoE encualquiersubcasodel
+en: Caso1.2essiempremenorqueelvalormáximoquealcanza
+ϕ(m)2
++p2(t−1)≥S . en el Caso 1.1. Por lo cual, el problema de los reducidos
+m
+2p catalaneshaquedadoresueltocuandomnoesprimo.
+Reduciendoalgebraicamente,seobtieneque:
+Teorema21 El valor máximo del cardinal del conjunto E
+ϕ(m)2 paraelCaso1es:
++p2(t−1)≥S ,
+m
+2p ϕ(m)2 p2t−3(p2+1)
+p2(t−1)+ = . (34)
+2p 2
+⇔pt−3(p−1)2+2pt−1>3pt−2(p−1),
+Las condiciones necesarias y suficientes para alcanzar
+⇔(p−1)2+2p2>3p(p−1), dichomáximoson:
+⇔p+1>0.
+1. c≡0(modm).
+2. min{a,b}≥t.
+Quedandoasídemostradaladesigualdad(30)paraeste
+caso. 3. (ϕ(m),b)=(ϕ(m),r )= ϕ(m) = pt−2(p−1).
+b 2p 2
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59 FernándezMachado,L.E.
+https://revistas.uh.cu/rcm/article/view/9749 https://doi.org/10.5281/zenodo.14744243
+Introducciónysolucióndelproblemadelosreducidoscatalanes 57
+2.2 Caso2:mesprimo(t=1) Subcaso2.2.1:x≡0(modq).
+Elcasom=3sedejacomoejercicioallector.Paraelaná-
+lisisdelCaso2seutilizalamismanotaciónqueseintrodujo Teorema24 Si el número primo q dado satisfacela condi-
+enelCaso1,asícomonosedesarrollanlasdemostraciones ción de máximo (existe d que satisface (35)), entonces la
+queseanidénticasoanálogasalasrealizadasendichocaso. mayorcantidadde(x,y)∈E paraestesubcasoes:
+Seam=qy pelmayordivisorprimodeϕ(m).Comom
+ϕ(q)
+esprimosetieneque: . (38)
+d
+ϕ(m)=ϕ(q)=q−1. Lascondicionesnecesariasysuficientesparaalcanzareste
+valores:
+DeigualformaqueelCaso1,elCaso2sedivideendos
+casos,pueslosvaloresdemáximoparaelcardinaldeEvarían 1. −cesrestoder b -ésimapotenciamóduloq.
+dependiendodeltérminoindependientec.
+2. d =(ϕ(q),b)= ϕ(q) = q−1.
+b d d
+2.2.1 Caso2.1:c≡0(modq)
+Enotrocaso,elmáximovalores:
+Definición22 Sea q un número primo y p el mayor factor
+primodeϕ(q).Sedicequeqsatisfacelacondicióndemáximo ϕ(q)
+. (39)
+sielmenordivisor(d>p)deϕ(q)cumpleque: 2p
+2p>d. (35) Ylascondicionesnecesariasysuficientesparaalcanzarel
+máximoes:
+Aplicandorazonamientosanálogosalosdesarrolladosen
+3. −cesrestoder -ésimapotenciamóduloq.
+elCaso1.1,seobtienelasoluciónparaelCaso2.1. b
+4. d =(ϕ(q),b)= ϕ(q) = (q−1).
+Teorema23 Si el número primo q dado satisfacela condi- b 2p 2p
+cióndemáximoentonceselmayorvalorquepuedealcanzar
+Demostración.Sepuedenotarquesi(x,y)∈E enestesubca-
+elcardinaldeE es:
+so,entoncesxescero,yaquex∈Z .Para(x,y)∈E eneste
+q
+ϕ(q)2 subcaso,ydebeserprimorelativoconq,pues(c,q)=1.Por
++1; 2p>d>pydivisordeϕ(q). (36)
+d tanto,análogamentealasdemostracionesrealizadasprevia-
+mente,setrabajaconr enlugardeb.
+Lacondiciónnecesariaysuficienteparaalcanzarelmáximo b
+El número de (x,y) ∈ E para este subcaso es igual al
+enestecasoes:
+númerodesolucionesdelaecuaciónencongruencia:
+1. d =(ϕ(q),b)= ϕ(q) = q−1.
+b d d yrb ≡−c(modq). (40)
+Enotrocaso,elmáximovalordelcardinaldeE es:
+Paraquelaecuación(40)tengasolución−cdebeserresto
+ϕ(q)2
++1. (37) der b -ésimapotenciaenmóduloq.Porelteorema3,setiene
+2p
+queelnúmerodesolucionesdelaecuación(40)esd y,por
+b
+Ylacondiciónnecesariaysuficienteparaalcanzarelmáximo tanto,sedebemaximizarestevalor.Seconocequesielprimo
+es: dadoqcumplelacondicióndemáximoelmayorvalorded b
+es ϕ(q),siendod elmenordivisormayorque pdeϕ(q)que
+2. d b =(ϕ(q),b)= ϕ 2 ( p q) = (q 2 − p 1). satis d face (35). Por tanto, el número máximo de soluciones
+delaecuación(40)es
+ϕ(q),conlascondicionesnecesariasy
+d
+2.2.2 Caso2.2:(c,m)=1.
+suficientesdadasenelteorema.
+Sedemuestraqueelmáximovalorde|E|esmayoreneste
+Enelcasoqueelprimodadoqnosatisfacelacondición
+casoqueenelCaso2.1,asícomoseobtienenlascondiciones
+de máximo se demuestra análogamente que el máximo es
+necesariasysuficientesparaalcanzardichovalor,quedando ϕ(q),
+con las condiciones suficientes y necesarias análogas
+asíresueltoelproblemadelosreducidoscatalanescuandom
+2p
+paraestecasodelprimoq.
+esprimo.Paraello,sedivideendossubcasoselCaso2.2de
+Subcaso2.2.2:(x,q)=1.
+formaanálogaalorealizadoparaelCaso1.2.
+DelCaso1seconoceque:
+ϕ(q)
+=h .
+a
+d
+a
+FernándezMachado,L.E. CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59
+https://doi.org/10.5281/zenodo.14744243 https://revistas.uh.cu/rcm/article/view/9749
+58 Introducciónysolucióndelproblemadelosreducidoscatalanes
+Por tanto, por los teoremas 2 y 3, se tiene que el número dentrodelSubcaso2.2.2.Portanto,aplicandoelteorema3se
+derestosdiferentesder -ésimapotenciaesh ,yaqueesel obtienequelacantidaddeparesordenados(x,y)∈E conx
+a a
+númerodesolucionesdelaecuaciónencongruencia: quenosatisface(44),es:
+z ϕ d ( a q) =zha ≡1(modq). (41) (ϕ(q)−d a )d b .
+Entonces, sea R={r ,r ,...,r } el conjunto de todos los Entonces,elvalormáximode|E|paraesteprimercaso
+1 2 ha
+restosder -ésimapotencia. es:
+a
+(ϕ(q)−d )d +d .
+a b a
+Teorema25 El máximo valor del cardinal de E para este
+Sepuedenotarquesemaximizaparaestecasocond >1
+subcasoes: b
+yquesecumpleque:
+ϕ(q)2
+. (42) ϕ(q)d b >(ϕ(q)−d a )d b +d a . (45)
+d
+• cnoesrestoder -ésimapotenciaenmodq.
+a
+1. si q satisface la condición de máximo y d el menor
+Sepuedenotarqueelvalormáximode|E|enestesegun-
+divisormayorque p(2p>d>p):
+do caso se alcanza si para cada uno de los ϕ(q) valores de
+ϕ(q)2 x, se obtiene un resto de r b -ésima potencia en la expresión
+2p
+. (43) algebraicaxra−c.Portanto,utilizandolaspropiedadesdel
+orden [6] y el teorema 3, se obtiene que la condición 2 es
+2. siqnosatisfacelacondicióndemáximo. unacondiciónnecesariaparaalcanzarelmáximo.Además,
+aplicandoelteorema3seobtienequeelmáximode|E|será:
+Lascondicionesnecesariasysuficientesparaalcanzarel
+máximoson: ϕ(q)d .
+b
+1. cnoesrestoder -ésimapotenciaenmodq.
+a Portanto,apartirde(45)sepuedegarantizarqueelmá-
+ximode|E|paraelSubcaso2.2.2,sealcanzacuandocnoes
+2. h ≡0(modord (r−c)),∀r∈R.
+b q
+restoder -ésimapotenciaenmodq.Sóloquedamaximizar
+a
+3. d
+b
+= ϕ(
+d
+q) o d
+b
+= ϕ
+2
+(
+p
+q), dependiendo si q satisface la ϕ(q)d
+b
+,peroseconocequesumayorvalores:
+condicióndemáximo.
+ϕ(q)2
+Demostración. Para realizar la demostración se divide el . (46)
+d
+cálculodelvalormáximodelcardinaldeE endoscasos.
+• crestoder -ésimapotenciaenmodq.
+a 1. si q satisface la condición de máximo y d el menor
+Porelteorema3,setienequelasiguienteecuacióntiene divisormayorque p(2p>d>p),
+exactamented solucionesenZ :
+a q ϕ(q)2
+. (47)
+xra ≡c(modq). (44) 2p
+Sepuedenotarque(x,y)∈E conxquesatisface(44)siy 2. siqnosatisfacelacondicióndemáximo.
+solosi:
+yrb ≡0(modq),
+Sepuedenotarque:
+⇔y=0,puesy∈Z .
+q
+ϕ(q)2 ϕ(q) ϕ(q)2
+Portanto,setienend paresordenados(x,y)∈E conxque + > +1,
+a d d d
+satisface(44).
+Porotrolado,paramaximizarlacantidaddeparesordena-
+ϕ(q)2 ϕ(q) ϕ(q)2
++ > +1.
+dos(x,y)∈E conxquenosatisface(44),sedebegarantizar 2p 2p 2p
+quelaexpresiónxra−csólogenererestosder -ésimapoten- Entonces, uniendo los teoremas 24 y 25 se obtiene la
+b
+ciaenmodq.Sepuedenotarquelacantidaddevaloresde soluciónalproblemadelosreducidoscatalanesparaelCaso
+x∈Z quenosatisfacen(44)esϕ(q)−d ,yaquesetrabaja 2.
+q a
+CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59 FernándezMachado,L.E.
+https://revistas.uh.cu/rcm/article/view/9749 https://doi.org/10.5281/zenodo.14744243
+Introducciónysolucióndelproblemadelosreducidoscatalanes 59
+Teorema26 El valor máximo del cardinal del conjunto E Suplementos
+paraelCaso2es:
+Esteartículonocontieneinformaciónsuplementaria.
+ϕ(q)2 ϕ(q)
++ . (48) Conflictos de interés
+d d
+Sedeclaraquenoexistenconflictosdeinterés.
+1. si q satisface la condición de máximo y d el menor
+divisormayorque p(2p>d>p):
+Referencias
+ϕ(q)2 ϕ(q) ϕ(q)2
++ > +1. (49) [1] Andreescu, T., D. Andrica y Z. Feng: 104
+2p 2p 2p
+Number Theory Problems. Birkhäuser, 2006.
+https://link.springer.com/book/10.
+2. siqnosatisfacelacondicióndemáximo.
+1007/978-0-8176-4561-8.
+Lascondicionesnecesariasysuficientesparaalcanzarel
+máximoson: [2] Cuevas, J.: Conjetura de Catalan: Inkeri, Mihai-
+lescu y Wieferich. Tesis de Doctorado, 2023.
+• (c,q)=1.
+https://www.mat.uc.cl/~natalia.
+• −crestoder b -ésimapotenciamodq. garcia/catalan-mihailescu.pdf.
+• c∈/R.
+[3] Mihailescu,P.:AcyclotomicinvestigationoftheCatalan-
+• h ≡0(modord (r−c)),∀r∈R. Fermat Conjecture. Arxiv preprint, página 43, 2013.
+b q
+https://arxiv.org/abs/math/0702766.
+• d = ϕ(q) od = ϕ(q),dependiendodesiqsatisfacela
+b d b 2p
+condicióndemáximo.
+[4] Mihailescu, P.: Improved lower bounds for possible
+solutions in the Second Case of the Fermat Last
+3. Conclusiones Theorem and in the Catalan Equation. Journal
+Enesteartículoseresolvióelproblemadelosreducidos of Number Theory, 225:151–173, 2021. https:
+//www.sciencedirect.com/science/
+catalanes, tanto para m primo como para m no primo. Para
+lasoluciónsedesarrollóunmétododemostrativobasadoen
+article/abs/pii/S0022314X2100055X.
+la conexión de resultados de la teoría de números, especí-
+[5] Muniz,A.:ComoFermateBézoutpodemsalvarodia.
+ficamente, el teorema de Euler, el teorema de Bézout y la
+Eureka!,12:25–30,2001.
+caracterizacióndelosrestosdek-ésimaspotenciasenmódu-
+losqueadmitenraícesprimitivas.Portanto,conestemétodo
+[6] Roldán,R.:IntroducciónalaTeoríadeNúmeros. EDU-
+demostrativo,denominadométodoBézout-Eulerdelaspoten-
+NIV,2022.
+cias,segeneralizóelmétodoBézout-Fermat,locualpermitió
+resolverecuacionesencongruenciamáscomplejas,asícomo
+maximizarsucantidaddesolucionesincongruentes.
+Agradecimientos
+Amiesposaytodamifamiliaporsuapoyoyrespaldoen
+mipasiónporlaMatemática.AlaprofesoraDra.RitaRoldán
+porcontribuirconsusrevisionesaldesarrolloinicialdeesta
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+investigación.Alosprofesoresquedespertaronenmí,desde
+SinDerivadas 4.0 Internacional”.
+tempranaedad,lapasiónporlaTeoríadeNúmeros.
+FernándezMachado,L.E. CienciasMatemáticas,Vol.37,No.1,2024,Pag.49-59
+https://doi.org/10.5281/zenodo.14744243 https://revistas.uh.cu/rcm/article/view/9749
+1

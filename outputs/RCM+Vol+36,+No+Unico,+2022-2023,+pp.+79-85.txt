@@ -1,0 +1,354 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.79-85
+Recibido(Received):25-04-2024,Revisado(Reviewed):22-05-2024
+Aceptado(Accepted):15-10-2024,Enlínea(Online):14-11-2024
+Meta-aprendizaje para AutoML heterogéneo
+Meta-learning for heterogeneous AutoML
+Lia de la Concepción Zerquera Ferrer1 , Alberto Fernández Oliva*2 , Alejandro Piad Morffis3 ,
+Suilan Estévez Velarde4
+Resumen Elaprendizajedemáquinaautomatizado(AutoML)esunáreadelaInteligenciaArtificialenauge,
+aunque enfrenta varios desafíos. Este proceso puede ser lento e ineficiente computacionalmente. El meta-
+aprendizaje,queconsisteenaprenderdeexperienciaspasadasmediantealgoritmosaplicadosadiversostipos
+dedatos,puedemejorarAutoMLalidentificarlosmejoresalgoritmosparaproblemasespecíficos,acelerando
+así el proceso y mejorando los resultados. Esta investigación propone una estrategia de meta-aprendizaje
+para dominios genéricos de aprendizaje automático, capaz de abordar una variedad amplia de problemas
+mediantelaseleccióndecaracterísticasadecuadas.SeutilizaAutoGOALcomocomplementoparaAutoML,
+ya que ofrece soluciones efectivas en múltiples dominios y permite crear flujos de algoritmos que generan
+unabasedeconocimientosútilparaelmeta-aprendizaje.Elenfoquefacilitalaadquisicióndeconocimientoa
+partirdelaejecucióndedistintosproblemasenAutoGOALyevalúaelrendimientodelosflujosdealgoritmos
+correspondientes.Conestainformación,sedesarrollaunmodeloqueayudaadescartarflujosinadecuadospara
+futurosproblemas.Losresultadosexperimentalesindicanqueestaestrategiapuedereducirsignificativamente
+eltiempodeejecuciónenAutoGOAL,permitiendoidentificarrápidamenteflujoserróneos.
+PalabrasClave:aprendizajedemáquina,AutoML,meta-aprendizaje.
+Abstract Automatic machine learning (AutoML) is a field of Artificial Intelligence that has gained a lot of
+popularity recently, however, it still faces many challenges. It is time consuming and can be computationally
+inefficient. Meta-learning,theprocessoflearningfrompastexperiencesbyusinglearningalgorithmstolearn
+differenttypesofdata,cansupporttheAutoMLprocessfromthebestalgorithmstosolveaparticulartypeof
+problem,whichspeedsuptheprocessandachievesbetterresultsinthesameamountoftime. Inthisresearch,
+ameta-learningstrategyforgenericdomainsofmachinelearningisdesigned. Theapproachcanaddressa
+wide variety of automatic learning problems by selecting a set of characteristics to represent each problem.
+AutoGOALisusedasacomplementarysystemtoAutoML,duetoitsabilitytoprovideefficientsolutionsina
+widerangeofdomains. Itallowstheestablishmentofalgorithmflowsfromwhichaknowledgebaseisgenerated
+toperformmeta-learning. Thisapproachfacilitatestheacquisitionofknowledgefromtheexecutionofvarious
+machinelearningproblemsinAutoGOALandtheperformanceofthealgorithmflowstestedbyAutoGOALfor
+theseproblems. Withthisknowledge,amodelisdesignedtodiscardalgorithmflows,whoseapplicationisnot
+suitableforfutureautomaticlearningproblems. Experimentalevaluationshowsthatthemeta-learningstrategy
+canreducetheexecutiontimeofAutoGOAL,whichallowstoquicklydetecterroneousflows.
+Keywords: machinelearning,AutoML,meta-learning.
+MathematicsSubjectClassification: 68,68T05,68T30.
+1DepartamentodeComputación,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.Email:liazerqueraf@gmail.com.
+2DepartamentodeComputación,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.Email:afoliva55@gmail.com.
+3DepartamentodeComputación,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.Email:apiad@apiad.net.
+4DepartamentodeComputación,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.Email:sestevez@matcom.uh.cu.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.
+Citar como: Zerquera Ferrer, L.C., Fernández Oliva, A., Piad Morffis, A.,& Estévez Velarde, S.
+(2024). Meta-aprendizaje para AutoML heterogéneo. Ciencias Matemáticas, 36(Único), 79–85. DOI:
+https://doi.org/10.5281/zenodo.14164788.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9130.
+Introducción perimentaciónydesplieguedealgoritmosdeaprendizajeauto-
+mático.Unodelosprincipalesdesafíosdemuchossistemasde
+Elaprendizajedemáquinaautomatizado(AutoML)seha
+AutoMLessuincapacidadparaaprovecharlaexperienciaad-
+convertidoenuntemadetendenciaenelámbitodelaInteli-
+quiridaenlaresolucióndeproblemasalenfrentarseanuevas
+genciaArtificial(IA).AutoMLabarcaunconjuntodetécnicas
+tareas.[1].Paraintentarsolucionaresto,sehancomenzadoa
+paraautomatizaryfacilitarelprocesodeimplementación,ex-
+80 Meta-aprendizajeparaAutoMLheterogéneo
+utilizartécnicasdemeta-aprendizaje(meta-learning)conel laredundanciayeldesperdicioderecursos.
+objetivodequelasherramientasdeAutoMLseancapacesde
+encontrarbuenassolucionesanuevosproblemaspresentados,
+1. Propuesta y experimentación
+deformamásrápidaybasándoseenlaexperiencia.
+Elmeta-aprendizajehasidoaplicadocongranéxitoen Paraincorporarmeta-aprendizajeaAutoGOALselleva-
+varioscamposdelaIA,dondelosvolúmenesdedatoseran ronacabodosetapasprincipales:
+muygrandesysehacíanecesariobuscarunarelaciónentre
+Etapadeextraccióndelmeta-conocimiento:seutilizó
+ellos.Algunosdeestoscampossonlaróbotica[3],elapren-
+unconjuntodedatasetsheterogéneoycomoherramien-
+dizaje no supervisado [4] y la medicina inteligente [8]. En
+tacomplementariaAutoGOAL,dondesetuvoencuenta
+elcampodelAutoMLtambiénsesueletrabajarcongrandes
+sucapacidadparadarsoluciónaunaampliagamade
+datasetsygrandesespaciosdebúsqueda,razónporlacual
+problemas.
+pareceatractivoincorporarelmeta-aprendizajeenestaárea.
+De las herramientas más conocidas dentro del campo
+Etapadeaplicacióndelmeta-conocimientoalproceso
+de AutoML se encuentran Auto-Weka [11], Auto-Sklearn
+deoptimizacióndeAutoGOAL:unmodeloderegresión
+Hyperopt-Sklearn [5], TPOT [10], ML-Plan [7], H2O Au-
+lineal, entrenado con los datos extraídos en la etapa
+toML[6],AutoGluon[9]yAutoGOAL[2].Entreestas,Auto-
+anterior,permiteidentificarydescartarflujos“malos”
+Sklearneslaúnicaqueaplicatécnicasdemeta-aprendizaje,
+en el momento de hacer la evaluación, sin que esto
+aunquenosedescartaqueelrestodeellaslohaganenpróxi-
+impliqueanálisiscomputacionalescostosos.
+masversiones.Sinembargo,estaherramientausaunenfoque
+denominadowarm-starting,quehaobtenidobuenosresulta-
+1.1 Extraccióndelmeta-conocimiento
+doscuandolosdatosaprocesarestánenformatabular,locual
+Laadquisicióndelmeta-conocimientoserealizamediante
+imponeunarestricciónsignificativaparasuuso.
+la extracción de características de un conjunto de datasets,
+Porotrolado,lasherramientasdeAutoMLrequierenpro-
+mientrasquelaextraccióndeinformaciónserealizóconlos
+cesardatosdediferentenaturaleza,comoimágenesytextos.
+flujosdealgoritmosqueprobóAutoGOALendichosdatasets.
+Comoantecedentesaestainvestigación,enelgrupodeIAde
+Unflujodealgoritmos(pipeline)esunconjuntodealgoritmos
+laFacultaddeMatemáticayComputacióndelaUniversidad
+quesedebenejecutar,unoacontinuacióndeotro,pararesol-
+deLaHabana,secreóAutoGOAL[2],queesunaherramienta
+verunproblemarepresentadoenundeterminadodataset.De
+deAutoML,muyversátilencuantoalagranvariedaddetipos
+cadaflujo,seextraeelnombredecadaalgoritmojuntoconsus
+deproblemasquepuederesolveryaladiversidaddeformatos
+hiperparámetros,respetandoelordenenqueaparecenenel
+enlosqueescapazderecibirlosdatasets.
+mismo.Además,seextraelaevaluacióndelflujodeacuerdo
+AutoGOAL es una herramienta competitiva dentro del
+alamétricadeterminadaporelusuario.Enocasionessurgen
+campo del AutoML, ya que devuelve soluciones que brin-
+erroresalahoradeevaluarelflujo,enestecaso,sereporta
+dan buen rendimiento a los problemas que se le presentan.
+dichoerrorparaposteriormenteserguardadoyasociadoal
+Sinembargo,estásujetaamejorasencuantoaltiempoyel
+problemaejecutadojuntoadichoflujo(Figura1).
+consumoderecursosalahoradeencontrarsoluciones,pre-
+Para la extracción de meta-características se ejecutó en
+cisamente,esaesunadelasrazonesporlacualselequiere
+AutoGOALunconjuntode100datasetstabularesy100de
+integrarenfoquesdemeta-aprendizaje.Seconocequelatéc-
+imágenestomadosdeOpenML1y100datasetsdetextotoma-
+nicawarm-starting[12]tienecomodeficienciaquesolose
+dosdeHuggingFace2(Figura2).
+encargadeempezarlabúsquedadesolucionesaproblemas
+deaprendizajeautomáticoenunpuntoo“lugar”prometedor
+1.2 Aplicacióndelmeta-conocimiento
+yluegonovuelveaintervenirendichoprocesodebúsque-
+Unavezconstruidoelconjuntodedatos,lasmeta-caracte
+da.Porello,enelpresentetrabajoseutilizaráunenfoquede
+rísticasdelosdatasetsydelospipelinesejecutados,secons-
+meta-aprendizaje basado en características de los datasets,
+truyeunvectorcontodasellasparaadaptardichainformación
+queintervengaactivamenteenelprocesodeoptimizaciónde
+a un formato que pueda entender un algoritmo de machine
+AutoGOAL.
+learning. Para crear dicho vector se concatenan las meta-
+característicasdelosdatasetsconlavectorizacióndelare-
+Relevancia del estudio presentaciónenstringdelafunciónobjetivoydeunpipeline.
+Esta investigació constituye un paso para la mejora de Porúltimo,seconcatenaaloanteriorlaevaluacióndelafun-
+lasherramientasdeAutoML,locualescrucialtantotecno- ciónobjetivo,dedondeseobtieneunvectordondetodossus
+lógicacomoambientalmente.Seutilizaunenfoquedemeta- elementossonnuméricos.
+aprendizaje basado en características de los datasets, que Unavezquesetienentodoslosvectores,seseparanentres
+intervengaactivamenteenelprocesodeoptimizacióndeAu- conjuntossegúneltipodedataset(tabular,imágenesytexto).
+toGOAL.Alautomatizaryoptimizarlacreacióndemodelos
+1OpenMLesunaplataformaabiertaparacompartirconjuntosdedatos,
+deaprendizajeautomáticosereduceeltiempoylosrecursos
+algoritmosyexperimentos.
+necesarios.Además,alreutilizarexperienciasprevias,seevita 2https://huggingface.co/datasets.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.79-85 ZerqueraFerrer,L.C.,FernándezOliva,A.,PiadMorffis,A.,
+https://revistas.uh.cu/rcm/article/view/9130 &EstévezVelarde,S.
+https://doi.org/10.5281/zenodo.14164788
+Meta-aprendizajeparaAutoMLheterogéneo 81
+Figura1.Representacióndeldatasetydelpipelineenlabasededatos[Representationofthedatasetandthepipelineinthe
+database].
+Figura2.Extractordecaracterísticas[Featureextractor].
+Luegocadaunodeestosconjuntosseseparaendossubcon- unodeellos,endependenciadeltipodedatasetsobreelcual
+juntos,unodeentrenamientoyotrodeprueba.Finalmente,se estérepresentadoelproblema(Figura3).
+entrenaunmodelodemachinelearningconayudadeAuto- Elmodeloactivadodevuelveunnúmeroquerepresenta
+Gluon.Paraello,seleproporcionanadichaherramienta,de laprediccióndelrendimientodelpipeline.Sielrendimiento
+unoenuno,todoslosconjuntosdeentrenamientoquefueron deesteesmenorqueunumbraldeterminadoporelusuario
+determinados.Porcadaconjuntodeentrenamiento,seobtiene (el umbral por defecto es la mitad de la mejor evaluación
+unmodelodemachinelearning,queesevaluadoporelcon- encontradahastaelmomento),entoncesnopasaráalafasede
+juntodepruebacorrespondienteydeterminadoanteriormente. evaluacióny,ensulugar,seutilizalaprediccióndelmodelo
+Deestamaneraseobtienenlosmodelosdemachinelearning comosurendimientoreal.Sinembargo,sielrendimientodel
+parapredecirelrendimientodeunpipeline,dadoundataset pipelineesmayorqueelumbral,entonces,AutoGOALrealiza
+enformatabular,oenformadetexto. elprocesodeevaluaciónoriginal,sinmodificaciíonalguna,
+Losmodelosanteriormentemencionadossonincorpora- ysesgaelespaciodebúsquedasegúnlosresultadosdedicha
+dosalprocesodebúsquedadeAutoGOAL.Cadavezquela evaluación.
+herramientaencuentraunpipelineválidoparadarsolución
+alproblemaqueseestatratandoderesolverenesemomento,
+2. Experimentación
+lasmeta-característicasasociadasadichopipelineyalpro-
+blema,sonsuministradasalconjuntodemodelosquefueron En esta sección se evalúa el comportamiento de Auto-
+incorporadosalprocesoparaqueseactive,convenientemente, GOAL con la integración del meta-aprendizaje. Para ello,
+ZerqueraFerrer,L.C.,FernándezOliva,A.,PiadMorffis,A., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.79-85
+&EstévezVelarde,S. https://revistas.uh.cu/rcm/article/view/9130
+https://doi.org/10.5281/zenodo.14164788
+82 Meta-aprendizajeparaAutoMLheterogéneo
+Figura3.IncorporacióndelosmodelosIntegrationofthemodels.
+seexaminalaeficienciadedichaherramientahaciendouso aprendizaje que se comportan de manera eficiente ante un
+demeta-aprendizajeencomparaciónconAutoGOAL,sinsu problemadeaprendizajedemáquina.Siembargo,silacom-
+incorporación.SeejecutaronenAutoGOALcincodatasets paraciónsehaceteniendoencuentaeltiempodeejecución
+querepresentanproblemasdeaprendizajeautomáticoclásicos paradarsoluciónacadaproblema,enlosejemplosejecutados
+(porejemplo,Cars,CreditG,Abalone,Yeast,HAHA).Los seobservaqueAutoGOALconmeta-aprendizajeencuentra
+datasetsparaestosexperimentosfueronseleccionadospor- deformamásrápidamodelosqueresuelvandeformaeficiente
+queyahabíansidousadosenestudiospreviosconversiones problemasdeaprendizajedemáquina.
+anterioresdeAutoGOAL[2]. Para evaluar la capacidad de los modelos de aprendiza-
+Enlasfiguras4y5seobservaqueCars,CredictGyYeast, jeautomáticocreadosserealizaronvariosexperimentosque
+sinmeta-aprendizaje,obtienenelmejorrendimiento.Sinem- consistieron en guardar todos los flujos de algoritmos que
+bargo,conlaincorporacióndemeta-learningseconsigueque sondescartadosyevaluadosporlosmodelos.Seeliminaron
+todoslospipelinesevaluadosobtenganunaprecisiónporen- los pipelines que no se pudieron evaluar en tiempo de eje-
+cimadelumbral(mayorquelamitaddelamejorprecisión cuciónporcualquieradelosposiblesmotivos(porejemplo,
+obtenida). excedenelespacioenmemoria,eltiempodeejecuciónopor
+EnelcasodeAbalone(Figura5),adiferenciadeCarsy errorespropiosdeadaptacioneshechasporAutoGOALalos
+CredictG,AutoGOALconmeta-aprendizajeencuentraelflu- algoritmosdealgunasbibliotecas).
+jodealgoritmosquetienelamejorprecisión,encomparación Losexperimentosmuestranquelosmodelosdeaprendi-
+con todos los demás flujos que fueron evaluados con y sin zajeautomáticocreadostienenuncomportamientoeficiente.
+meta-aprendizaje. Entodoslosproblemasejecutadosseobtieneunaprecisión
+EnlaFigura6seobservaelcomportamientodeHAHA yunrecobradoporencimade0,90.Estosecorroboraconla
+conmeta-aprendizajeysinél.Sucomportamientoessimilar evaluacióndelamétricaF1enlaqueseapreciaqueexisteun
+aldeCars,yaqueelmeta-aprendizajenoconsigueevaluar balanceentreeltotaldepipelinesadecuadosylosdetectados
+ningúnpipelinepordebajodelumbral.Sinembargo,nologra comotalporelmodelo(Figura6).
+igualar ni mejorar la mejor precisión conseguida por Auto-
+GOALsinmeta-aprendizaje.
+Conclusiones
+2.1 Resultados Enestainvestigaciónsehacreadounanuevaestrategia
+LuegodeverelcomportamientodeAutoGOALconmeta- demeta-aprendizajequeseintegróaAutoGOAL,lacual,al
+aprendizajepuedesurgirleallectorlasiguienteinterrogante: considerarelconocimientoalcanzadoenejecucionesprevias
+¿existealgunadiferenciasignificativaencuantoaeficienciaen- deproblemasdeaprendizajeautomáticoenAutoGOAL,el
+treAutoGOALconmeta-aprendizajeysinmeta-aprendizaje? propioproblemadeaprendizajeautomáticoqueseanalizay
+Ambos enfoques son capaces de encontrar modelos de lospipelinesencontradosduranteelprocesodebúsqueda,des-
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.79-85 ZerqueraFerrer,L.C.,FernándezOliva,A.,PiadMorffis,A.,
+https://revistas.uh.cu/rcm/article/view/9130 &EstévezVelarde,S.
+https://doi.org/10.5281/zenodo.14164788
+Meta-aprendizajeparaAutoMLheterogéneo 83
+(a)Cars. (b)CredictG.
+Figura4.ResultadosdeejecutarCarsyCredictGenAutoGOAL,conysinmeta-aprendizaje[ResultsofrunningCarsand
+CredictGinAutoGOALwithandwithoutmeta-learning].
+cartapipelinesquenosonbuenos.Estaestrategiaseconcibe mejorespipelines.
+apartirdealgoritmoscomputacionalmenteviablesdeextrac-
+cióndemeta-característicasydelentrenamientodemodelos
+Recomendaciones
+deaprendizajedemáquina.
+Elenfoquedemeta-aprendizajepresentadoescapazde
+AutoGOALsedestacaporsucapacidadparagenerarsolu-
+abordarunagranvariedaddeproblemasdeaprendizajeau-
+cioneseficacesparaunagrancantidaddedominiosdeproble-
+tomático.Sinembargo,aúnseencuentraenunaetapadede-
+mas,perodichaherramientaaúnnocontabaconunsistemade
+sarrolloinicial,porloqueesnecesarioseguirmejorandosus
+meta-aprendizaje.Portanto,unodelosaportesdeestainvesti-
+capacidadesdeprecisiónalmomentodedescartarpipelines
+gaciónfuelaincorporacióndeunsistemademeta-aprendizaje
+malos.
+aAutoGOAL.Paraello,fuenecesariolaimplementaciónde
+ElconocimientoadquiridofueañadidoaAutoGOALenel
+unextractordemeta-características.Dichoextractorescapaz
+procesodebúsqueda.Sinembargo,existenotrosmomentosen
+deanalizarproblemasdedistintaconfiguración,osea,proble-
+quesepuedeañadirdichoconocimiento,porejemplo,dicho
+masdetexto,imágenesytabulares.Unaspectoadestacarde
+conocimientopuedeserutilizadoparainicializarelespacio
+dichoextractoresqueelusuariopuedeañadirnuevascarac-
+debúsquedayseguirunaestrategiadewarm-starting.Deesta
+terísticasparalarepresentaciónvectorialdeunproblemade
+manera,seleproporcionaacadanuevoproblemapresentado
+aprendizajeautomático.
+alsistemadeAutoML,unespaciodebúsquedadondeinicial-
+A partir del conocimiento obtenido con el extractor de
+mentelospesosdelasaristasdelgrafoqueconstituyedicho
+meta-características se entrenaron modelos de aprendizaje
+espaciodebúsquedaestarándadosporlaexperienciaprevia
+automático,locualpermitiódescartar,entiempodeejecución,
+acumulada,apartirdeproblemassimilaresalqueseanaliza.
+pipelinesinadecuados.Conestoselograreducireltiempode
+Enestainvestigaciónseentrenóunmodeloapartirdelos
+búsquedaquerequiereAutoGOALparaencontrarsoluciones
+datosparadescartarpipelinesinadecuados.Seríainteresante
+factiblesaproblemasdeaprendizajeautomático.
+queenfuturasinvestigacionesseentrenaraunmodelopara
+Laevaluaciónexperimentaldelapropuestaserealizóuti- predecirlospipelinesquenosonposiblesevaluar,segúnlos
+lizandounconjuntodeproblemasclásicosdeaprendizajeau- recursoscomputacionalesconlosqueseestáejecutando.
+tomático,tomadasdeinvestigacionespreviasdeAutoGOAL. Enestainvestigaciónsediseñaronysecrearonextractores
+Se tuvieron en cuenta los pipelines encontrados por Auto- de meta-características y modelos para problemas de texto
+GOAL,conysinlaincorporacióndemeta-aprendizaje.Esto ytabulares.Porloqueesnecesarioqueenfuturasinvestiga-
+sehizoconelobjetivodeverquéversiónencontrabapipeli- ciones se escale esta propuesta a otros dominios donde los
+nesconmejorrendimientoantedeterminadosproblemasde problemasesténrepresentadosendatasetsdeotrotipo.
+aprendizajeautomático.Seconstatóque,enlamayoríadelos
+problemasanalizados,AutoGOALconmeta-aprendizajeysin
+Suplementos
+meta-aprendizajelogranuncomportamientosimilar,aunque
+enalgunoscasos,AutoGOALconmeta-aprendizajeencuentra Esteartículonocontieneinformaciónsuplementaria.
+ZerqueraFerrer,L.C.,FernándezOliva,A.,PiadMorffis,A., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.79-85
+&EstévezVelarde,S. https://revistas.uh.cu/rcm/article/view/9130
+https://doi.org/10.5281/zenodo.14164788
+84 Meta-aprendizajeparaAutoMLheterogéneo
+(a)Abalone. (b)Yeast
+Figura5.ResultadosdeejecutarAbaloneyYeastenAutoGOAL,conysinmeta-aprendizaje[ResultsofrunningAbaloneand
+YeastinAutoGOAL,withandwithoutmeta-learning].
+Conflictos de interés
+Sedeclaraquenoexistenconflictosdeinterés.Nohubo
+subvencionesinvolucradasenestetrabajo.
+Contribución de autoría
+Conceptualización L.C.F.Z,S.E.V
+Curacióndedatos L.C.F.Z,S.E.V.,A.P.M.
+Análisisformal L.C.F.Z,A.F.O,S.E.V.,A.P.M.
+Investigación L.C.F.Z,A.F.O,S.E.V.,A.P.M.
+Metodología L.C.F.Z,A.F.O.
+Administracióndeproyecto L.C.F.Z,A.F.O.
+Recursos L.C.F.Z,A.F.O,S.E.V.
+Figura6.ResultadosdeejecutarHAHAconysin
+meta-aprendizaje[ResultsofrunningHAHAwithandwithout Software L.C.F.Z,S.E.V.
+meta-learning].
+Supervisión L.C.F.Z,A.F.O,A,P.M.
+Validación L.C.F.Z,A.F.O,S.E.V.,A.P.M.
+Visualización L.C.F.Z,A.F.O
+Redacción:preparacióndelborradororiginal L.C.F.Z,
+A.F.O.
+Redacción:revisiónyedición L.C.F.Z,A.F.O.
+Referencias
+[1] Drori, I., Y. Krishnamurthy, R. Rampin, R.
+de Paula Lourenco, J. Piazentin Ono, K. Cho,
+C. Silva, and J. Freire: Alphad3m: Machine
+learning pipeline synthesis, 2021. https:
+//arxiv.org/abs/2111.02508.
+[2] EstevanellValladares,E.L.:AutoGOAL,unsistemade
+Figura7.Rendimientodelmodelo[Modelperformance].
+Auto-ML Heterogéneo. Tesis en opción al grado de
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.79-85 ZerqueraFerrer,L.C.,FernándezOliva,A.,PiadMorffis,A.,
+https://revistas.uh.cu/rcm/article/view/9130 &EstévezVelarde,S.
+https://doi.org/10.5281/zenodo.14164788
+Meta-aprendizajeparaAutoMLheterogéneo 85
+LicenciadoenCienciadelaComputación,Facultadde [9] Nick,E.,J.Mueller,A.Shirkov,H.Zhang,P.Larroy,
+MatemáticayComputación,UniversidaddeLaHabana, M.Li,andA.Smola:AutoGluon-Tabular:Robustand
+2020. AccurateAutoMLforStructuredData. arXivpreprint
+arXiv:2003.06505, 2020. https://arxiv.org/
+[3] Finn,C.,T.Yu,ZhangT.,P.Abbeel,andS.Levine:One- abs/2003.06505.
+shotvisualimitationlearningviameta-learning,2017.
+[10] Olson,R.S.:TPOT:ATree-basedPipelineOptimization
+https://arxiv.org/abs/1709.04905.
+ToolforAutomatingMachineLearning. 2016. https:
+//link.springer.com/content/pdf/10.1
+[4] Garg,V.K.:SupervisingUnsupervisedLearning. 2018.
+https://proceedings.neurips.cc/paper 007/978-3-030-05318-5_8.pdf.
+/2018/file/72e6d3238361fe70f22fb0ac6
+[11] Thornton,C.:Auto-WEKA:combinedselectionandhy-
+24a7072-Paper.pdf.
+perparameteroptimizationofclassificationalgorithms.
+2013. https://dl.acm.org/doi/10.1145/2
+[5] Komer,Brent:Hyperopt-Sklearn:AutomaticHyperpa-
+487575.2487629.
+rameterConfigurationforScikit-Learn. 2013. https:
+//conference.scipy.org/proceedings/s [12] Truger, F., J. Barzen, M. Bechtold, M. Beisel, F. Ley-
+cipy2014/komer.html. mann,A.Mandl,andV.Yussupov:Warm-Startingand
+Quantum Computing: A Systematic Mapping Study.
+[6] LeDell,E.:H2OAutoML:ScalableAutomaticMachine ACM Computing Surveys, 56:1–31, 2023. https:
+Learning. 2020. https://api.semanticscho //api.semanticscholar.org/CorpusID:
+lar.org/CorpusID:221338558. 257482369.
+[7] Mohr,R.F.:ML-Plan:Automatedmachinelearningvia
+hierarchicalplanning. 2018. https://link.spr
+inger.com/content/pdf/10.1007/s10994
+-018-5735-z.pdf.
+[8] Nguyen,B.D.:Overcomingdatalimitationinmedical
+visualquestionanswering. 2019. https://link.s
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+pringer.com/chapter/10.1007/978-3-0
+SinDerivadas 4.0 Internacional”.
+30-32251-9_57.
+ZerqueraFerrer,L.C.,FernándezOliva,A.,PiadMorffis,A., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.79-85
+&EstévezVelarde,S. https://revistas.uh.cu/rcm/article/view/9130
+https://doi.org/10.5281/zenodo.14164788
+1

@@ -1,0 +1,1017 @@
+Revista Ciencias Matemáticas
+Promediación de un proceso
+conductivo sobre la estructura
+de tipo esqueleto bidimensional más simple
+Averaging a conductive process over the simplest two-dimensional framework
+Juan Manuel Regalado Gómez
+Julián Bravo Castillero
+Raúl Guinovart Díaz
+Reinaldo Rodríguez Ramos
+Universidad de La Habana, Facultad de Matemática y Computación
+Resumen 1. Introducción
+Se estudia un problema conductivo sobre la estructura de tipo
+esqueleto bidimensional más simple, se obtiene el problema ho- En numerosas ramas de la ciencia y la ingeniería se han adoptado
+mogeneizado, mediante un método basado en la promediación materiales heterogéneos que consisten en distintos volúmenes de
+de las ecuaciones diferenciales en derivadas parciales que descri- compuestos (homogéneos a un nivel mayor que el molecular) con
+ben tal proceso y el principio de división. La estructura de tipo diferentes propiedades, véase Panasenko (2007) [6]. Estos mate-
+esqueleto que se debe considerar resulta de la intersección de un riales compuestos están constituidos por al menos dos fases y son
+dominio con frontera sufi cientemente suave y una región rectan- fabricados para lograr mejores valores de las propiedades que
+gular que consiste en dos sistemas periódicos de “fi nas” franjas presentan sus componentes por separado. Se dice además, que po-
+que se extienden en la dirección de los ejes coordenados. Se seen estructura periódica, cuando están formados por elementos
+enuncia un teorema que garantiza la proximidad entre la solución recurrentes (células o celdas), cuyas dimensiones se asumen mu-
+del problema original y la solución del problema promediado, en cho menores que las dimensiones espaciales macroscópicas.
+la norma adecuada. Un caso particular de medio heterogéneo con estructura pe-
+riódica, lo constituyen las estructuras perforadas, donde el vacío
+Abstract es uno de los compuestos. Perforada signifi ca, desde el punto
+In order to study a conductive problem over the simples de vista matemático, que las ecuaciones no están defi nidas en
+two-dimensional framework, a method based on the averaging todo el interior del medio y que, por tanto, existen condiciones
+of the partial differential equations describing such processes de contorno en la frontera de los huecos (donde no se defi ne la
+and the splitting principle, is considered. The skeletal structure ecuación).
+is taken as the intersection of a domain with smooth boundary Los materiales compuestos, en general, pueden presentar un
+and the simplest two –dimensional rectangular framework, gran número de heterogeneidades y la caracterización de sus
+consisting of two periodic systems of “thin” strips stretched propiedades se puede llevar a cabo a escala local, pero resulta,
+in the coordinate direction. It is also stated a proved a theorem en la práctica, mucho más interesante dar con una caracteriza-
+on the closeness of the original problem to the averaged one, in ción global del compuesto. Digamos un comportamiento gene-
+the proper norm. ral (o efectivo), sin atender a las fl uctuaciones ocasionadas por
+sus heterogeneidades.
+— 45 —
+Sociedad Cubana de Matemática y Computación
+En este trabajo se considera un caso particular del proble- 2. Formulación de problema
+ma estacionario de la conducción del calor sobre una estructu-
+ra perforada bidimensional de tipo esqueleto. Tales estructuras
+Sea S una malla defi nida sobre un plano, cuyos nodos tienen
+f
+presentan grandes huecos y poca cantidad de material, concen- por coordenadas (k 1 f,k 2 f)=kf, donde k, k son números en-
+1 2
+trado en barras (franjas en el caso bidimensional).
+teros y f 1 un parámetro pequeño. La malla consiste en líneas
+Este tipo de estructura ha sido adoptada fundamentalmente rectas P1,P2 que pasan por los nodos y son paralelas a los
+k2 k1
+en la ingeniería civil —construcción de puentes, instalaciones ejes x y x respectivamente. Denótense por B1,B2 las franjas
+1 2 k2 k1
+industriales, viviendas, soportes para líneas de energía eléctri- formadas por puntos cuya distancia a P1 k2 y a P2 k1 respectiva-
+ca—, pero también cuenta con otras aplicaciones. Por ejemplo: mente, es menor que nf , donde n41 es el segundo paráme-
+para el estudio del movimiento de aguas subterráneas y el escu-
+tro pequeño.
+rrimiento de sustancias a través del suelo, se emplea como mode- A la unión de todas las franjas B k 1 2 ,B k 2 1 se le denomina es-
+lo geométrico un sistema capilar, el cual puede tratarse como una
+tructura rectangular periódica B:
+estructura de este tipo, véase Martinsson & Babuška (2007) [5].
+k'=3
+B= B1 ,B2
+Para estudiar el problema conductivo mencionado anterior- k2 k
+k=-3
+mente, en la estructura de tipo esqueleto bidimensional más
+B es un sistema de fi nas franjas que se extienden a lo largo de
+simple, se propone un método basado en la combinación de
+cada una de las direcciones de los ejes coordenados.
+técnicas de perturbación a escalas múltiples y de promediación
+Sea G un dominio con frontera 2G!C3 , la cual es indepen-
+de las ecuaciones diferenciales en derivadas parciales que des-
+diente de f y de n.
+criben ese proceso. Este trabajo se basa en un estudio de esos En el dominio B+G , considérese un campo térmico esta-
+métodos combinados, siguiendo en lo fundamental la exposi-
+cionario con condiciones de aislamiento en la frontera interior
+ción del Capítulo 8 de Bakhvalov & Panasenko (1989) [2] y en
+y temperatura constante en la frontera de G.
+lo adelante está estructurado de la siguiente manera: Pu/ 2 aA 2u k+f(x)=0, x!B+G (0.1)
+2x rm 2x
+r m
+2u
+La segunda sección está dedicada a la descripción geomé- 2v
+=0, x!2B+G (0.2)
+trica de la estructura y la formulación de las ecuaciones di- u=0, x!2G+B (0.3)
+ferenciales en derivadas parciales que describen el proceso En las ecuaciones anteriores x=(x 1 ,x 2 ) , los coefi cientes A
+rm
+conductivo con sus respectivas condiciones de contorno. En
+son constantes y la forma cuadr ática A h h es simétrica y
+rm r m
+la tercera sección se aplica el método de homogeneización defi nida positiva. El símbo lo 2/2v representa la derivación a
+asintótica en la búsqueda de una solución aproximada que lo largo del vector conormal: 2 /n A 2 donde n es el
+2v r rm 2x r
+dependerá del segundo parámetro pequeño (relacionado con m
+coseno del ángulo entre la normal exterior y el eje x.
+el espesor de las franjas). En la sección cuarta se construye r
+La resolución de (0.1)-(0.3) por métodos numéricos se difi -
+el problema promediado defi nitivo, basándose en el princi-
+culta enormemente para f41,n41 debido a que el tamaño del
+pio de división para la estructura en consideración. En la
+paso de la malla debe ser de un orden mucho menor que f, por
+quinta sección, para casos límite, como el caso isótropo, se
+lo tanto se propone una investigación asintótica del problema.
+ilustra la importancia de los resultados, comparando la so-
+lución original del problema, calculada a través de métodos
+numéricos, con la solución del problema promediado. La
+3. Método de homogeneización asintótica
+sección fi nal está dedicada a las conclusiones, a comentar
+posibles trabajos futuros y al conocido resultado sobre la
+investigación de la solución para el problema en la celda pe- Para n fi jo la estructura puede ser considerada como un medio
+riódica localizado en [2]. poroso periódico con período de la celda f, y por tanto tiene
+— 46 —
+Revista Ciencias Matemáticas
+Revista Ciencias Matemáticas
+sentido, para cada n, buscar la solución en la forma de una ex- Sustituyendo la expansión en la condición de frontera inte-
+p se a n n t s i i d ó o n , a p s a i r n a t ó c t a ic d a a e n n , t b é u rm sc i a n r o l s a d s e o lfu c s i o ó l n a m en e n la te f . orma de una ex- rior S y u s a t g it r u u y p e a n n d d o o l e a n e p x o p t a e n n s c ió ia n s e d n e l s a e c o o b n t d ie ic n i e ó : n de frontera inte-
+1 ( ( p - u u a pi i n ( (C C e s x x r o o i i , , ó ó n n y y n d ) )s s i i i a = =d d c s a é é i 0 0r s r n e e , , t c s s ó o 6 6e e t n i i i c l l r a $ $a a e e s 3 3 n p e e ) ) e x x t , c , é p p t r a a d d o m n n o o a s s i n n i i n l d d ó ó a o e e n n s s e d l l a a o o g e s s s s u i i f n n n c c t t d s o o ó ó o a e e t t l i i   v a c c m c c a a a i i r e e e ia d d n n n b t t e e t e e e l e s s . s s e e s s g g o o u u n n n n f f d d u u o o n n c c o o i i o o r r d d n n e e e e n n s s r 2 2 i 2 2u u o v v r ( ( 2 2 ) ) y + + 2 2 a B B g f f = = r : : u f f 2 2 2 p u u - - v a 1 1 y2 2 n 2 2 2 2 d + + u u v v o y y0 0 2 2 2 e + + u u v n x1 1 f f D D p 0 0 + + o : : te f f 2 2 2 2 n u u v v 2 2 c y y1 1 2 2 2 i + + a u u v s y0 0 2 2 2 2 d u u v v e x x0 0 D D s + + e o y b = t f x iene:
+1(-up i (exri,óyd+ic1a)s =coun i (rexs,py)ect6o ia= la1 s,e..g.,usn)d : a variable Luego se r 2 eq v yuiere 2 n v xlas sigu 2 i v eyntes relacy=iof xnes para las funciones
+( u u (2i) ( ( x x , , y y) + = 1) u = 0 (x u ,iy ( ) x, + y) fu 6 1 ( i x, = y) 1 + ,... e , 2 s u ) 2 :(x,y) (0.4) Lu 0 u , e ug 1 o y s eu 2 r : equieren las siguientes relaciones para las funciones
+u l l N N e d d a a s e e ( ó ó 2 s s p ) p f P P t t ( v v á e e e e x a a c a a n n s s , r r i e e r r d d y a a l i i ) e e a a q q c t t r r b b o o = o u u á á l l d d m e e e e d d u a a , , s s p e e 0 d d f f r r r ( n n u u á á o a a x p p d n d n b , . . i i y c c a a a d d ) i i r ó ó a a l l + q a a s s n n s s u f y y u u e c c u : ( ( l l o o x x e e 1 n n ( , , n n y y x s s t t ) ) , a a i i , , d d y s s c c e e ) o o y y r r + n n a a a a c c s s e p p i i i i 2 d d o o l l u i i e e n n c c 2 r r e e a a ( a a s s x n n n n , d d a a d d y o o n n o o ) t t l l e e i i a a n n r r i i d d r r o o e e e e r r g g p p e e l l e e s s a a , , n n d d d d u u e e e e ( ( 2 2 n n ) ) l l a a c c t t i i a a c c a a m m a a e e d d ( b b 0 n n e e i i . t t é n é n 4 r r n n e a e a ) : : : : u 2 2 2 2 2 2 2 2 2 2 2 2 0 u u v v , u u u u v v v v y y 0 0 u y y y 1 1 2 2 y y 1 + + + + ! ! y 2 2 B B 2 2 2 2 2 2 2 2 u = = u u u u v v v v 2 : x x x1 1 0 0 0 0 D D D D y y y ! ! ! 2 2 2 B B B = = = = 0 0 0 0 ( ( ( ( ( ( 0 0 0 0 0 0 . . . . . . 1 1 1 1 1 1 0 0 2 2 1 1 ) ) ) ) ) )
++ + e P P s u u f f f - - + + á 2 2 c 2 f f i 2 2 l y = = c ra a o 2 2 m A A 2 2 x x r p m r ra a r 2 o 2 2 A A x b u u r r m m m a k k r 2 22 2 + + q x xu u u m m f f e k k ( ( : x x + + ) ) f f - - 1 1 R T S S S S S S S S S R T S S S S S S S S S + + 2 22 2 x x 2 2 r r 2 2 y y a a r r A A a a r r A A m m r r 2 2 m m 2 2 y yu u 2 22 2 m m x xu u k k m m + + k k V X W W W W W W W W W V X W W W W W W W W W + + ( ( 0 0 . . 5 5 ) ) u u D D e c c n n s i i i i e e , , e e a a p s s i i a e ey e e = =d d c s s n n e e i t t t t o a a 0 0 r r c c e , e , m m d 2 o2 o e l l n n a a a a x . . t t n n f s s o o u e P e P y r r v v n r r! a a n n a a a a2 c r r o o B r r a a i s s i i o a a e e d d n l l b b e e a a h h e l l e a e a s N N e e s s o o x x a ) ) e e b b p i i u u u u s s t t r m m t t n n e e o e e n n a a p a a n n i i i n n c c f f d d a a a i i n n o o d a a m m o ( ( q q d d , i i b b u u l l e e d a a i i e e a a j j e o o s s d d d d o o e e e e e e e l l s l u l u t t t e e p p o s c s c r r u u r r i i s m m ó ó o o p p p n n b b u u i i r n n l l e e o e e g g a a s s m m b e e n n t t l o o n n e a a a a e e m s s d d r r e e l l a a c c a a a l l o o i i s s s i i n n n n z z a f f d d a a u u u c c e e d d o o x n n p p a a n n i c c e e l i i d d e e n n i o o a n n i i d d n n c c r e e e i i e e e e o o n n s s s l l - - - - ,
+l D D u e e c n n ra o o d t t 2 a a o y n n r e d d n o o l r p p a m o o e 2 r r x x L L p m ra a eb b u u sió / / n 2 2 a 2 2 na a tr r e c c ri A A or r rm m e2 22 2 sb b u u p
+m
+m o m m si b a a l l l e o o e p p s e e c r r r a a ib d d i o o r r r : l l i i n n e e a a l l i i n n v v o o - - e e e s x x p i i D s s a t t c e e e i o l u u a n n d a a a e p c c f l o o i u c n n n a d d c c i i i i c c o ó i i n n ó ó e n n r s e n n i a t e e p e c c r r e e o a s s p d a a i a r r a i i d d a a o e y y , t a d s s l u u e c   e o c c s n i i t e e o d n n s ic t t e e p ió r ( ( o n v v b e e s l r r e e A A m ob p p a t é é s i n n e a d d n u e i i x c c n e e i l l i 1 1 a a ) ) r f . . e o s r- ,
+lPuucr+adfo= enL lau e+xpfr-e1s6iLón uan+teLriour @e+s pfo-2sLibleu e+scfribir: ma D d e e l l a a a e p x l p ic a a n c s i i ó ó n n r a e s i i t n e t r ó a t d ic a a d d e e t a se l g c u o n n d d o ic o ió r n d e s n e ( o v b é t a ie se n e B n a l k a h f v o a r- -
+xx xy yx yy
+Pu+f=L u+f-16L u+L u@+f-2L u+f ma de la expansión asintótica de segundo orden (véase Bakhva-
+Sustituyendxxo (0.4) en (xy0.1) y ayxgrupando ysyegún las potencias de valov & Panasenko (1989) [2]):
+fS u
+s
+s
+e
+t i
+o
+tu
+b
+y
+ti
+e
+e
+n
+n
+d
+e
+o
+:
+(0.4) en (0.1) y agrupando según las potencias de v
+u
+a
+(2
+l
+)
+o
+(x
+v
+,
+&
+y)
+P
+=
+an
+v
+a
+(
+s
+x
+e
+)
+n
++
+ko
+f
+(
+N
+198
+(y
+9
+)
+) 2[2v]
+0
+)(:x )
++f2N (y)
+22v
+0
+(x)
+(0.13)
+fL f sue( 2o)b+tife=nef: -2L yy u 0 +f-16L yy u 1 +L xy u 0 +L yx u 0 @+L yy u2+ u(2)(x,y)=v 0 (x)+fN i1 (y) 2v2 0 x( i x 1 ) +f2N i1i2 (y) 222xv i10 2(xx i ) 2 (0.13)
++ L fL u(2 u )+ 1+ f L =f u - 0 2 + L yyf u +0 + f6f L -16 u L y+y u L1 + u L x+y u L0 + u L@ yx+ u 0f @ 2 + L L yuy u2+ así como los 0 llamado i s 1 prob 2 le x mi1 as locale i1i s 2 que 2 x di1e 2 t x eri2minan las
+xy xx xy 2 yx 2 xx 1 xx 2
++
+La
+L
+x e y
+u
+xp
+1+
+an
+L
+si x ó x
+u
+n
+0
+a
++
+si
+f
+n
++
+tó
+f
+ti
+6
+c
+L
+a xy d
+u
+e 2 b
++
+e
+L
+s y a x t
+u
+is 2 f
++
+ac
+L
+e x r x
+u
+l 1 a
+@ +
+co
+f
+n
+2
+d
+L
+ic xx i
+u
+ó 2 n de solu- f
+a
+u
+sí
+n c
+c
+i
+o
+o
+m
+ne
+o
+s
+l
+1
+o
+-
+s
+p e
+ll
+r
+a
+ió
+m
+d
+a
+ic
+d
+a
+o
+s
+s Np
+i
+r
+1
+,oNb
+i
+l
+1
+e
+i2
+m
+,
+a
+la
+s
+s
+l
+c
+o
+u
+c
+a
+a
+l
+l
+e
+e
+s
+s
+d
+q
+e
+u
+p
+e
+e n
+d
+d
+e
+e
+te
+n
+r
+s
+m
+o
+i
+l
+n
+am
+an
+e n
+la
+te
+s
+La expansión asintótica debe satisfacer la condición de solu-
+f
+d
+u
+e
+n ncio
+y
+n
+d
+e
+e
+s y1
+:
+-periódicas N
+i1
+,N
+i1i2
+, las cuales dependen solamente
+ción asintótica formal de la ecuación, por tanto, tiene sentido
+de ny de y:
+i c m ió p n o a n s e i r n l t a ó t a ic n a u l f a o c r i m ón a l d d e e l m la i e e m cu b a r c o i ó d n e , r e p c o h r o t a d n e t o la , t e i x e p n r e e s s i e ó n n t i a d n o - 1. En contrar N i1 como solución 1-periódica del problema:
+I i b t b t m e e g a a r r u s s p i i a t t o o o a a l r r n a . . e e n e S S x x r d i i i i o g g n n la i i a r r e e a m m c q q n e u u u b b r e e l a a o a r r s s c l g g e e o i o o a a ó s , , n O O t p p é ( d (a a r f f e m r r ) ) l a a . . i m n o o o b b ie s t t e e m d n n e b e e r r r o o r l l d a a d e e e e n r c c e f u u c - a a h 2 c c o , i i f ó ó d - n n e 1 y h h la o o f m m e 0 x o o s p e g g r e e o e n n b s e e i t ó i i i e z z n n a a a d d e n n a a - 1 L L 2 2 . 2 2 y v y v y y y y N NE ^ ^ n i i N N 1 1 c = = i i o 1 1 + + n 0 0t y y ra y y i i 1 1 h h r ! ! = = N B Bi 0 0 1 y y + +co y y Q Qm ! ! o 2 2 s B B o y y lución 1-periódica del problema ( ( ( ( 0 0 0 0 : . . . . 1 1 1 1 5 5 4 4 ) ) ) )
+Igualando a cero los términos de orden f-2, f-1 y f0 se obtienen El dominio B es la imagen de B por la variable y = x/f y
+las siguientes condiciones en el interior del medio: y
+El dominio B 1es la imag1en de B por la variable y = x/f y
+lLas usig=ui0entes condiciones en el interior del medio: (0.6) Q=&y!42 -y 1y 1 , i=1,20 es el cuadrado unida d
+yy 0 12 i 12
+LL yyyy uu 100 ==-00L xy u 0 -L yx u 0 ( ( 0 0 . . 6 7 ) ) Q cen = tr & a y do ! e 4 n 2 el - o2rig 1 en y ,i d 1 on2d , e i se = p 1 u , e 2 d 0 e e g s a r e a l n t c i u za a r d r l a a d e o x i u st n e i n d c a i d a
+LLyyyy uu12 ==--LLxxyy uu 10-- LL yyxxuu 00-f ( ( 0 0 . .7 8 ) ) centrado en el origen, donde se puede garantizar la existencia
+L Lyoys u 2té = rm - i L noxys u d1 - e o L rydxe u n0 - f1 f y f2 involucran la discrepancia. (0.8) y unicidad salvo una constante arbitraria de la solución en la
+Los términos de orden f1 y f2 involucran la discrepancia.
+y
+cl a
+u
+s
+n
+e
+i c
+d
+i
+e
+d a
+la
+d
+s
+s
+f
+a
+u
+lv
+n
+o
+c io
+u
+n
+n
+e
+a
+s
+c
+1
+o
+-
+n
+p
+s
+e
+t
+r
+a
+i
+n
+ó
+t
+d
+e
+i c
+a
+a
+r
+s
+b i
+d
+t
+e
+ra Wri
+2
+a1^ Bd
+y
+e+ Qlah solu
+(
+c
+v
+ió
+e r
+n
+A
+en
+p é
+l
+n
+a
+-
+De manera análoga con (0.5), haciendo la misma consideración clase de las funcion es 1-periódicas de W 2 1^B y +Qh (ve r Apén-
+dice 1).
+De manera análoga con (0.5), haciendo la misma consideración
+de independencia entre las variable s y aplicando regla de la
+dice 1).
+2. La función N , debe buscarse como solución 1-periódica
+d ca e d i e n n d a e , p s e e n d ve e r n i c  i c a a e p n a tr r e a l l a a s c o v n ar d i i a c b ió le n s d y e a f p ro li n c t a e n r d a o i n r t e e g r l i a o r d l e a l s a i- i1i2
+2. La función N , debe buscarse como solución 1-periódica
+cadena, se veri ca para la condición de frontera interior la si- del problema:i1i2
+guiente igualdad:
+del problema: 2N (y)
+= = g 2 22 2u v v 2 2 ie u u 2 2 v v n x x ( ( t x x e + + , , y y i f f g ) ) - - u = = 1 1 a 2 2 l 2 2 n n d v vu ur r a y y A A d r r : m m 2 22 2 x xu u m m + + f f - - 1 1 n n r r A A r r m m 2 22 2 y yu u m m = = ( ( 0 0 . . 9 9 ) ) n n L L r r y y y y c c N N A A i i r r 1 1 m m i i 2 2 ( ( = = y y ) ) h h 2 2 i i 1 1 2 2 i i N N2 2 y y - - i i m m 1 1 i i 2 2 2 2 + + A A i i 1 1 A A m m r r ( ( i i 1 1 y y ( ( ) ) y y ) ) 2 N N N 2 2 i i i i y y 2 2 1 1 m m ( m m y = = ) 0 0 - - , , A A y y i i 1 1 i i ! ! 2 2 ( ( y y 2 2 ) ) B B , , y y y y ! ! B B y y + + Q Q ( ( ( ( 0 0 0 0 . . . . 1 1 1 1 7 6 7 6 ) ) ) )
+— 47 —
+— 47 —
+Sociedad Cubana de Matemática y Computación
+donde h es una constante determinada por la condición necesa- 2
+ria y sufi i 1 c i2 iente de existencia de la solución en la clase de las fun- 2v y ^N i j 1 +y i1 h=0, y!2B y 1 (0.22)
+ciones 1-periódicas para el problema anterior (ver Apéndice 1): donde las funciones N i j 1 son 1-periódicas en y j (j=1,2) .
+1 2N (y) By+Q
+h = A i2 +A (y) (0.18)
+i1i2 mes(B
+y
++Q) imm(y) 2y
+m
+i1i2 Observación 4.1
+No es difícil comprobar que la solución de (0.21)-(0.22) vie-
+La función v
+0
+(x), q ue depende solamente de x y de n, es solu-
+ne dada por:
+ción del problema promediado:
+-y, i !j,
+hii 2x 22 2 v 0 x +f(x)=0, x!G (0.19) N i j 1 =) -A i1 i - 1 1 i1 A i1i1 i 1 1 =j. (0.23)
+i1 i2
+v =0 (0.20)
+0 2G
+4.1.2 Principio de división
+el cual se obtiene de aplicar la condición necesaria y sufi cien-
+para la estructura bidimensional
+te antes mencionada, para el problema auxiliar asociado a la
+Sea K el operador defi nido a continuación:
+ecuaci ón (0.8).
+La solución del problema promediado (0.19)-(0.20) satisfa- Kv /-bt 22v 0 =mes(B +Q)f(x)
+0 i1i2 2x
+i1
+2x
+i2
+y
+ce formalmente la condición (0.1) y la condición (0.3) con una
+donde
+precisión O(f) y la condición con una precisión de O(f2). Véase
+bt = # cA 2N i2 +A mdy
+Bakhvavalov & Panasenko (1989) [2], pp. 135-137. i1i2 i1m 2y
+m
+i1i2
+By+Q
+Nótese que, según las consideraciones hechas hasta el mo-
+La función N es la solución del probl ema sobre la celda perió-
+mento, el carácter rápidamente oscilante del problema original
+i2
+dica (0.14)-(0.15). Denótese por L la parte principal del opera-
+no ha sido eliminado, pues el problema promediado (0.19)-(0.20) 0
+dor K cuando n"0. .
+se ha obtenido para n fi jo y existe por tanto dependencia respec-
+El operador promediado a lo largo de la franja Bi es el ope-
+y
+to al segundo parámetro pequeño.
+rador:
+Ki=-bt 22 , i=1,2 (0.24)
+i1i2 2x
+i1
+2x
+i1
+donde
+4. Principio de división
+y problema promediado bt i1i2 = # cA i1m 2 2 N y
+m
+i j 2 +A i1i2 mdy, (0.25)
+Byi+Q
+bti =2 2 A =2nd d ^A -A -A-1-A h, (0.26)
+i1i2 i1i i2i ii i1i i2i ii ii ii ii
+Se hace necesario determinar cómo se comporta la solución de
+La función Ni es solución de (0.21)-(0.22) (problema local so-
+i2
+(0.19)-(0.20) a medida que ntoma valores “muy pequeños”. En
+bre cualquiera de lats franjas). Se denota por Lti a la parte prin-
+esta sección se enuncia un resultado que determina qué ocurre 0
+cipal de Ki (operador promediado a lo largo de la franja Bi )
+y
+con el operador promediado (operador asociado al problema
+cuando n"0.
+promediado) cuando n . 0.
+Teorema 4.1
+4.1.1 Problemas locales
+Principio de División para el Operador Promediado
+sobre cada una de las franjas y coefi cientes efectivos
+La parte principal del operador promediado cuando n"0.
+Primeramente se necesitan defi nir los problemas locales so-
+es igual a la suma de los operadores promediados a lo largo de
+bre cada una de las franjas
+las franjas Bi :
+B1="y!42: y 1n,,B2="y!42: y 1n, y
+y 2 y 1
+Lt =Lt1+Lt2
+de manera independiente: 0 0 0
+L Nj=0, y!B1 (0.21)
+yy i1 y
+— 48 —
+Revista Ciencias Matemáticas
+Las relaciones (0.24), (0.25) y (0.26) implican que (no hay suma modelo para el problema considerado, tienen el siguiente com-
+por i). Por lo tanto: portamiento global isótropo:
+/2 22 A 11 =A 22 =2nf
+L = A
+0 ii 2x2
+i=1 i
+Este principio proporciona una forma de calcular la parte prin-
+cipal del operador promediado cuando el segundo parámetro
+pequeño tiende a cero y por tanto permite construir un proble-
+ma promediado sobre todo el dominio G (independiente de f y
+de n).
+Revista Ciencias Matemáticas
+Teorema 4.2
+Sea u(x) una solución de los problemas (0.1)-(0.3) y sea v (x)
+0 Fig. 1 Dependencia lineal de los coe cientes efectivos respecto a n.
+Las relaciounneas s(0o.l2u4c)i,ó (n0 .d2e5l) p yr o(0b.l2e6m)a i:mplican que (no hay suma modelo para el problema considerado, tienen el siguiente com-
+por i). Por l 2 o taanAto: 2vu 0k+ 2 aA 2vu 0k=f(x)=0, x!G p(0o.r2t7a)miento global isótropo:
+2x 11 2x 2x 22 2x
+L 0 = /2 A ii vu 20 2 x2 2 1 G2 =0 1 2 2 A (0 11 .2 = 8) A 22 =2n O f bservación 5.2. Este comportamiento lineal, respecto al
+i=1 don i de: espesor de las franjas, que predice la fórmula anterior, también
+Este principio pr(oApo-rcAionAa- 1uAna) forma d(eA ca-lcAulaAr -l1aA pa)rte prin- ha sido reportado para propiedades elásticas de modelos tridi-
+A = 11 12 22 21 ,A = 22 21 11 12 (0.29)
+11 2 22 2
+cipal del operador promediado cuando el segundo parámetro mensionales piezoeléctricos. Ver  guras 9 y 10 de Kalamkarov
+Entonces se ti ene lo siguiente:
+pequeño tiende a cero y por tanto permite construir un proble- et al. (2009) [4].
+1
+ma promediaMdo s u o - br v e u 0 toL2d(Bo+ Ge)l = do O m ( in f io + G n ( ) i , ndependiente de f y (0.30) La ecuación promediada para este problema es:
+de n). donde M=mes(G+B)=O(n) es el área de l dominio B+G . -2nATv 0 =4nf
+El resultado anterior, así como su demostración se pueden El problema de Poisson determinado por la ecuación anterior
+Teoremean c4o.2ntrar Bakhvalov & Panasenko (1989) [2], pp. 262-272 y en sobre el disco unidad D="x 1 ,x 2 !42:x2+y210, , con la
+Sea u(x) C uionraa nsoesluccui ó&n Pdaeu lloisn p[3ro],b plepm. 3a7s- (400.1.)-(0.3) y sea v 0 (x) Fig. 1 Depe c n o d n en d c ic ia ió l n in e d a e l d fr e o l n o t s e c r o a e d  e ci e D n i te ri s c e h f l e e c t t : i v v o 0 s = re 0 s , pe x c ! to 2 a D n. , es un pro-
+una solución del problema: blema correcto. Ver Antuña (2012) [1], pp. 317-321.
+2 aA 2vu 0k+ 2 aA 2vu 0k=f(x)=0, x!G (0.27) Para f ≡ 1 y A = 2 el problema promediado sobre el disco
+2x 11 2x 2x 22 2x
+1 1 2 2
+Observuanciidónad 5, .t2ie. nEes ltae scigomuipenotreta smoliuecnitóon l ainneaalílt, icreas epxeacctota :al
+vu =0 5. Aplicaciones (0.28)
+0 2G
+donde: del método para casos límite
+espesor de
+v
+la
+(
+s
+x )
+fr
+=
+an(ja1s-, qxu
+1
+2e- pxre
+2
+2)dice la fórmula anterior, también
+(A -A A-1A ) (A -A A-1A ) ha sido repo 0 rtado para p 4 ropiedades elásticas de modelos tridi-
+A = 11 12 22 21 ,A = 22 21 11 12 (0.29)
+11 2 22 2 donde x = (x, x).
+mensionales piezoeléct1rico1s. Ver  guras 9 y 10 de Kalamkarov
+Entonces sPea tria e neel lcoa ssoig iusóietnrotep:o A rm =d rm A,(A20), (0.1)-(0.3) puede ser A continuación se compara la cercanía de la solución exacta del
+et al. (2009) [4].
+1
+M
+u-viun
+0
+te
+L2
+r
+(B
+p
++
+r
+G
+e
+)
+t=adOo (cofm+o nel )p,roblema de difusión de u(0n.a3 0s)ustancia
+L
+e
+a
+n
+ecua
+p
+c
+r
+i
+o
+ó
+b
+n
+l e
+p
+m
+ro
+a
+m
+h
+e
+o
+d
+m
+ia
+o
+d
+g
+a
+e n
+p
+e
+a
+i
+r
+z
+a
+a
+e
+d
+s
+o
+t e
+c o
+p
+n
+ro
+l
+b
+a
+l e
+so
+m
+lu
+a
+c
+e
+ió
+s:
+n del problema original,
+donde M= un m a e r s o ( c G a + co B n )  = su O ra ( s n l ) le e n s a s e l d á e r e a a g u d a e , l d d o o n m de in A io e B s + el G coe .  cie - nt 2 e n d A eT v 0 =ca4lcnuflada aproximadamente para algunos valores de f y de n,
+difusión de la sustancia en el agua. En este caso la estructura bi- mediante el método de los elementos  nitos, dividiendo el domi-
+El resultado anterior, así como su demostración se pueden El problema de Poisson determinado por la ecuación anterior
+encontrar B
+di
+a
+m
+k
+e
+h
+n
+v
+s
+a
+i
+l
+o
+o
+n
+v
+a
+&
+l B
+P
+,
+a
+m
+n
+o
+a
+d
+s
+e
+e
+l
+n
+a
+k
+u
+o
+n
+( 1
+si
+9
+s
+8
+te
+9
+m
+) [
+a
+2
+r
+]
+e
+,
+c
+p
+t
+p
+a
+.
+n
+2
+g
+6
+u
+2
+la
+-2
+r
+7
+d
+2
+e
+y
+g r
+e
+i
+n
+et as c
+s
+o
+o
+n
+b
+a
+r
+m
+e
+-
+el d
+n
+is
+io
+c o
+e n
+u
+m
+ni
+i
+d
+le
+a
+s
+d
+d eD tr=iá"nxg
+1
+u,xlo
+2
+s! (d4e 22:x 525+2 yh2a1sta0 9, 1
+,
+8 2
+c o
+tr
+n
+iá n
+la
+g ulos).
+Cioranescu p l & itu P d a 2 u n li f n , [ l 3 l ] e , n p a p s . d 3 e 7 a - g 4 u 0. a. condición de frontera de Dsiruipchulet-: vv 0 0=, 0(,fx/!12,AD=, 2es) un pro-
+Observación 5.1. Este modelo no es una aproximación muy
+blema correcto. Ver Antuña (2012) [1], pp. 317-321.
+f = 0.5 f = 0.25 f = 0.125
+precisa, pues el sistema de grietas de una roca es una estructura
+Para f ≡ 1 yn
+=
+A
+0
+=
+.2 5
+2 el proble
+0
+m
+.10
+a
+4 9
+promediado
+0 .1
+s
+1
+o
+8
+b
+0
+re el disco
+0 .1164
+mucho más irregular.
+5. Aplicaciones unidad, tiene nla = s i 0 g . u 12 ie 5 nte soluci0ó.1n9 a01nalítica exa0c.1t1a6:9 0.0895
+Teniendo en cuenta el teorema 4.2 y multiplicando toda la
+(1-xn2 =- 0x.02)625 0.1909 0.1206 0.0664
+del método para casos límite v (x)= 1 2
+ecuación por n, los coe cientes efectivos, según este si0mple 4
+donde x = (x, x).
+1 1
+A =d A,(A20),
+Para el caso isótropo rm rm (0.1)-(0.3) puede ser A continuación se compara la cercanía de la solución exacta del
+— 49 —
+interpretado como el problema de difusión de una sustancia en problema homogeneizado con la solución del problema original,
+una roca con  suras llenas de agua, donde A es el coe ciente de calculada aproximadamente para algunos valores de f y de n,
+difusión de la sustancia en el agua. En este caso la estructura bi- mediante el método de los elementos  nitos, dividiendo el domi-
+dimensional B, modela un sistema rectangular de grietas con am- nio en miles de triángulos (de 2 552 hasta 9 182 triángulos).
+plitud 2nf, llenas de agua. sup u-v0 , (f/1,A=2)
+Observación 5.1. Este modelo no es una aproximación muy
+f = 0.5 f = 0.25 f = 0.125
+precisa, pues el sistema de grietas de una roca es una estructura
+n = 0.25 0.1049 0.1180 0.1164
+mucho más irregular.
+n = 0.125 0.1901 0.1169 0.0895
+Teniendo en cuenta el teorema 4.2 y multiplicando toda la
+n = 0.0625 0.1909 0.1206 0.0664
+ecuación por n, los coe cientes efectivos, según este simple
+— 49 —
+Sociedad Cubana de Matemática y Computación
+El hecho de que para f = 0.5, el supremo de la diferencia entre la donde v es la solución para el caso isótropo v y la solución
+I0 A0
+solución del problema homogeneizado y la solución numérica de (5.1)-(5.2).
+del problema original crezca a medida que n se hace menor, se
+debe al hecho de que la frontera circular no llega a ser cubier-
+ta de manera perfecta por el medio periódico que se investiga. 6. Conclusiones
+El carácter rápidamente oscilante del problema estudiado en este
+artículo difi culta encontrar tanto su solución exacta como una so-
+lución aproximada mediante métodos numéricos. En este sentido
+se ha obtenido, combinando del MHA, empleado en la construc-
+ción de una solución aproximada dependiente del segundo pará-
+metro pequeño, y el principio de división para justifi car el operador
+promediado propuesto cuando n tiende a cero, un problema equi-
+valente defi nido sobre un medio homogéneo, cuya resolución nu-
+Figura 2 Condiciones de frontera para f = 0.5. mérica es mucho más fácil y para el cual se tiene un estimado de
+la proximidad entre su solución y la solución del problema inicial.
+En este sentido mediante ejemplos numéricos sencillos y casos lí-
+5.0.1 Medio anisótropo con A = A
+11 22 mites se ilustró la importancia que tienen los resultados.
+Para el caso en que los coefi cientes A y A son distintos de
+12 21 Una continuación natural de este trabajo la constituye el es-
+cero, pero los coefi cientes en la diagonal de la matriz son igua-
+tudio de otras estructuras de tipo esqueleto, bidimensionales y
+les (A = A = A), los coefi cientes efectivos serán iguales (pues
+11 22 tridimensionales. Dígase por ejemplo, estructuras donde algu-
+además la matriz se asume simétrica) y se podrán calcular me-
+na de las barras (franjas en el caso bidimensional) se extiende
+diante la fórmula:
+en una dirección no coordenada. Resulta de gran interés exten-
+A =A =2nA(1-v2),
+11 22
+der estos resultados al estudio de otras propiedades (elásticas,
+donde v=A A=A A
+12 21
+eléctricas y piezo-eléctricas).
+Debido al carácter defi nido positivo de la matriz A se tiene
+rm
+que 01v211 . La expresión anterior permite observar que
+Apéndice
+cuando A rmr!m 4A los coefi cientes efectivos para este proble-
+ma, tienen un comportamiento muy cercano a los del caso isó-
+En el presente acápite se recoge el conocido resultado sobre la
+tropo.
+investigación de la solución para el problema en la celda perió-
+El problema homogeneizado en este caso, considerando a
+dica tratado en el trabajo y localizado en [2].
+la estructura limitada por el disco unidad como anteriormente,
+tiene la forma:
+-2nA(1-v2)Tv =4nf, x!D (0.31) A1: Teorema de existencia
+0
+y unicidad para el problema sobre la celda
+v =0, x!2D (0.32)
+0
+La solución exacta de l problema anterior viene dada por: Sea
+Q="y4s 01y
+i
+11, i=1,...,s,
+. Consideremos un
+(1-x2-x2) conjunto A que consiste en un número fi nito de dominios den-
+v (x)= 1 2
+0 4(1-v2) tro de Q y que se extienden completamente a todo de manera
+No es difícil verifi car que la diferencia entre esta solución y 1-periódica. Denotemos por A la unión de todos los conjun-
+la solución del problema homogeneizado para el caso isótropo tos así obtenidos. Asumiremos que ^A es una variedad infi -
+está acotada, es o(v2), cuando v"0 . nitamente diferenciable y el dominio
+4s
+es conexo. Sea T el
+A s
+— 50 —
+Revista Ciencias Matemáticas
+v2 A#^ v Ah2+ s/s a2v k2 A
+toro que se obtiene a partir de Q al identifi car los hiperplanos 2 2y
+k=1 k
+{yi = 0} y {yi = 0} (i = 1, ..., s). Por A entenderemos el conjunto implica la siguiente desigualdad para una función vectorial
+en T, que corresponde al conjunto A1Q , y n i (y) son los co- u(y)!W1aT s k :
+s 2 A
+senos directores del vector de la normal a ^A en y. u2 A#^ v Ah2+ s/s a2u , 2uk A (0.36)
+2 2y 2y
+k=1 k k
+de (0.36) se tiene, para cualquier función vectorial
+Teorema
+Para cualquier función vectorial u(y)!W1( T s) tal que se u(y)!HaT s k+W1aT s k , el estimado:
+2 A A 2 A
+tenga la siguiente desigualdad:
+s/s 2u 2
+aA ij (y) 2 2 y u j , 2 2 y u i k A$C a 2 2 y u i , 2 2 y u i k A ,C20 (0.33) u 2 L2 a A Tsl # 2 k=1 2y k L2 a A Tsl (0.37)
+el sistema 2 2 y uaA ij (y) 2 2 y u ,k=f0(y)+ 2 2 y f k (y) con las condi- Debido a las desigualdades (0.33) y (0.37) y a la acotación de
+i j k A (y), la expresión
+ij
+2u 2u
+ciones de frontera 2v /A ij 2y j n i (y)=f i (y)n i (y) tiene una so- 6u,{@ = cAij(y) 2u , 2{ m A ,
+1 2y 2y
+j i
+lución generalizada si y solo si:
+determina un producto escalar sobre HaT s k+W1aT s k ,
+f(y) A=0 (0.34) A 2 A
+0
+siendo la norma { = 6u,{@ equivalent e a la norma de
+1 1
+Esta solución queda determinada salvo un vector constante ar-
+W1aT s k:
+bitrario: 2 A
+u(y)=u 0 (y)+c, { W2 1a A Tsl =d { 2 L2 a A Tsl + / k= s 1 2 2 y { k 2 L2 a A Tsl n 1 2
+donde u (y) es una solución del sis tema anterior con promedio
+0 Entonces la identidad integral puede rescribirse de la siguiente
+cero.
+forma:
+/s 2{ A
+6u,{@ =- ^f,{hA+ cf, m (0.38)
+Demostración 1 0 k 2y
+k=1 k
+Necesidad. Tómese {(y)={ r ,r=1,2,...,n, donde Dado f !L aT s k , el miembro derecho en determina un fun-
+k 2 A
+{ r =(d 1r ,d 2r ,...,d nr )T . La solución generalizada cional lineal acotado sobre HaT s k+W1aT s k en {. Por el teo-
+A 2 A
+u(y)!W
+2
+1a
+A
+T s k satisface la identidad integral:
+rema de Representación de Riesz, existe un único elem ento
+- cA ij (y) 2 2 y u , 2 2{ y m A = ^f 0 (y),{hA- cf k (y), 2 2 y { m A (0.35) u!Ha A T s k+W 2 1a A T s k que satisface y consecuentemente la
+para toda j func i ión {(y)!W1aT s k , en pa k rticular para identidad integral para toda función {(y)!Ha A T s k+W 2 1a A T s k .
+2 A
+Sea ahora f0(y) A=0 . La identidad (0.35) es válida para
+{(y) = {, r = 1,2,...,n, de donde se obtiene que la r-ésima
+component r e de f 0 (y) A es cero. De la arbitrariedad de r, se toda función {(y)!W 2 1a A T s k . Representando { como
+tiene (0.34). {=W+ { A , donde por tanto W A=0 , se tiene que:
+2{ A
+^f,{hA- cf, m = ^f,WhA+ ^f, { AhA+
+0 1 2y 0 0
+Sufi ciencia i
+Sea HaT s k=&u!L aT s k: u(y) A=00 + cf 1 , 2 2 W y m A = ^f 0 ,WhA- cf 1 , 2 2 W y m =
+A 2 A i i
+Existe un único elemento u!Ha A T s k+W 2 1a A T s k que satisface =- cA ij (y) 2 2 y u j , 2 2 W y i m A =- cA ij (y) 2 2 y u j , 2 2{ y i m A
+la identidad integral para toda función Por tanto u satisface (0.35) cualquiera sea {(y)!W1aT s k .
+2 A
+{(y)!Ha A T s k+W 2 1a A T s k . De suponer que existen u 1 ,u 2 !W 2 1a A T s k , cuya diferencia
+En efecto: la desigualdad de Poincaré, véase Ladyzhenskaya
+u - u no es un vector constante, el vector
+1 2
+(1973) [7], para una función escalar v(y)!W1aT s k
+2 A
+— 51 —
+Sociedad Cubana de Matemática y Computación
+v=u -u - u -u A_0 satisface (0.38) para f = f =0 y
+1 2 1 2 0 k
+cualquier función {(y)!HaT s k+W1aT s k . Luego [v,v] = 0,
+A 2 A 1
+v ≡ 0 lo cual es una contradicción y por tanto queda probado
+el teorema.
+Observación
+En particular la desigualdad se satisface para los coefi cien-
+tes de una ecuación elíptica, dado que en este caso la forma
+cuadrática A (y)hh es defi nida positiva.
+rm r m
+Referencias bibliográfi cas
+[1] ANTUÑA, J. M., Métodos Matemáticos de la Física, La Habana,
+Cuba, 2012.
+[2] BAKHVALOV N. S., PANASENKO G. P. Homogenization: Ave-
+raging Processes in Periodic Media. Mechanics and Mathematics
+Faculty, Moscow, 1989.
+[3] CIORANESCU D., PAULIN J. Homogenization of Reticulated
+Structures. Applied Mathematical Science Vol. 136, Springer, Bar-
+celona.
+[4] KALAMKAROV, A. L., HASSAN, E. M., GEORGIADES, A. V.,
+SAVI, M. A. Asymptotic Homogenization Model for 3D Grid-Rein-
+forced Composite Structures With Generally Orthotropic Reinfor-
+cementes. Composites Structures, 89, pp. 186-196, 2009.
+[5] MARTINSSON, P. G., BABUŠKA, IVO. Homogenization of ma-
+terials with periodic truss or frame micro-structure. Mathemati-
+cal Models and Methods in Applied Sciences, pp. 805-832, Vol. 17,
+No.05, 2007 (doi: 10.1142/S021820250700211X)).
+[6] PANASENKO, G. P., Homogenization for Periodic Media: From
+Microscale to Macroscale. Physics of Atomic Nuclei, ISSN 1063-
+7788, Vol. 71, No. 4, pp. 681-694, 2007.
+— 52 —

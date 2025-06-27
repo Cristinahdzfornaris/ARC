@@ -1,0 +1,527 @@
+CienciasMatemáticas,Vol.32,No.2,Pag.141-147, 2018
+Recibido02-2018
+Algoritmo Optimizado para la Interpolacio´n Espacial
+del Krigeado Ordinario
+Optimized Algorithm for Spatial Interpolation of
+Ordinary Kriging
+Milenis Ferna´ndez D´ıaz1*, Jose´ Quint´ın Cuador Gil2, Ce´sar Ra´ul Garc´ıa Jacas3
+Resumen Losme´todosdeinterpolacio´nespacialproporcionanherramientasparalaestimacio´ndevaloresen
+localizacionesnomuestreadasutilizandolasobservacionescercanas.Lainterpolacio´ndeKrigeadoOrdinario
+esunodelosme´todosgeoestad´ısticosma´sfrecuentementeusadosparalarealizacio´ndeana´lisisespaciales.
+Su objetivo consiste en encontrar el Mejor Estimador Lineal Insesgado a partir de los datos disponibles, los
+cualesgeneralmentesoninsuficientesdebidoalcostodesuobtencio´n.Secaracterizaporcostosasoperaciones
+dea´lgebralinealquerepercutenenaltostiemposdeejecucio´n,fundamentalmentelaresolucio´ndegrandes
+sistemasdeecuacioneslineales.Lareduccio´ndeltiempodeejecucio´ndeaplicacionesdeinterpolacio´nespacial
+puedeserunobjetivodealtaprioridad,porejemplo,ensistemasquesoportanlatomadedecisionesra´pidas.
+Con el objetivo de disminuir los tiempos asociados a la interpolacio´n espacial del Krigeado Ordinario, se
+propusounalgoritmobasadoenelusodete´cnicasdeprogramacio´nparalela,as´ıcomome´todosoptimizadosde
+bu´squedaespacial;quepermitaresolverlosproblemasquesatisfacenlossupuestosmatema´ticosapropiados
+entiemposrazonables,fundamentalmenteenelcampodelasGeociencias.Estealgoritmofueimplementado
+usandoC++11comolenguajedeprogramacio´n,OpenMP4.8.2comobibliotecadeprogramacio´nparalelaen
+memoriacompartida,yAtlasCLapackcomobibliotecadealgebralinealoptimizadaparalosca´lculosmatriciales.
+Elalgoritmopropuestopermiteunamayorrapidezenlainterpolacio´nespacialdeKrigeadoOrdinario,logrando
+unmejoraprovechamientodelosrecursosdeco´mputoinstalados.
+Abstract Spatialinterpolationmethodsprovidetoolsforestimatingvaluesatunsampledlocationsusingnearby
+observations. Ordinary Kriging interpolation is one of the most frequently used geostatistical methods for
+performing spatial analysis. Its objective is find the Best Linear Unbiased Estimator from the data available,
+which generally are insufficient because of the cost of obtaining it. It was characterized by expensive linear
+algebraoperationsaffectinghighruntimesfundamentallysolvelargesystemsoflinearequations. Reductingthe
+runtimeofspatialinterpolationapplicationscanbeahighprioritytarget,forexample,insystemsthatsupport
+quick decisions. In order to reduce the time associated to spatial interpolation of Ordinary Kriging, it was
+proposedanalgorithmbasedontheuseofparallelprogrammingtechniquesandoptimizedsearchmethods;
+for resolving problems meeting the appropriate mathematical assumptions at reasonable time, mainly in the
+field of Geosciences. This algorithm was implemented using C++11 programming language, OpenMP 4.8.2
+aslibraryofsharedmemoryparallelprogramming,andAtlasCLAPACKaslinearalgebralibraryoptimizedfor
+matrixcalculations. TheproposedalgorithmallowsfasterinthespatialinterpolationofOrdinaryKriging,making
+betteruseofcomputingresourcesinstalled.
+PalabrasClave
+geoestad´ıstica—interpolacio´nespacial—KrigeadoOrdinario—programacio´nparalela
+1CentrodeGeoinforma´ticaySen˜alesDigitales,UniversidaddelasCienciasInforma´ticas,LaHabana,Cuba,mfdiaz@uci.cu
+2DepartamentodeF´ısica,UniversidaddePinardelR´ıo,PinardelR´ıo,Cuba,cuador@upr.edu.cu
+3CentrodeEstudiosdeMatema´ticaComputacional,UniversidaddelasCienciasInforma´ticas,LaHabana,Cuba,crjacas@uci.cu
+*AutorparaCorrespondencia
+Introduccio´n tesdebidoalcostodesuobtencio´n.Sebasaenelprincipiode
+quelasvariablesespacialesdeunadeterminadapoblacio´nse
+Lainterpolacio´nespacialdeKrigeadotienecomoobjetivo encuentrancorrelacionadasenelespacio;esdecirquemien-
+encontrarelMejorEstimadorLinealInsesgadoapartirdelos trasma´scercanoseste´ndospuntossobrelasuperficieterrestre,
+datosdisponibles[3],loscualesgeneralmentesoninsuficien-
+142 AlgoritmoOptimizadoparalaInterpolacio´nEspacialdelKrigeadoOrdinario
+menorsera´ lavariacio´ndelosatributosmedidos[4].Seapo- z∗ eselvalorestimado
+k
+yaenvariogramascomofuncionesestad´ısticasqueexpresan z(x)sonlosvaloresdelasensayos
+i
+lascaracter´ısticasdevariabilidadycorrelacio´nespacialdel λ sonlospesosdeKrigeado
+i
+feno´menoqueseestudiaapartirdepuntosmuestreados. neselnu´merodeobservacionesdisponibles.
+ElKrigeadoconstituyeunme´tododeinterpolacio´nespa-
+cialmuyutilizadoenlaconstruccio´ndesuperficiesycuerpos ElKrigeadoatribuyeunpesoλ alaleydecadamuestra
+i
+tridimensionalesapartirdenubesirregularesdepuntos,enla z(x),dondelospesosaltoscorrespondenalasmuestrascerca-
+i
+estimacio´ndevariablesaleatoriasenpuntosnomuestreados, nasylospesosde´bilesalasalejadas.Laponderacio´ndepende
+as´ıcomoenotrasaplicacionesdelageoestad´ıstica.Especial- delmodeloajustadoalospuntosmedidos,ladistanciaala
+menteenela´readelasGeociencias,esampliamenteutilizado ubicacio´ndelaprediccio´n,ylasrelacionesespacialesentre
+enlaestimacio´nderecursosyreservasmineralesu´tiles,con- los valores medidos alrededor de la ubicacio´n de la predic-
+siderandoelniveldeprecisio´nyconfiabilidadquecaracteriza cio´n.Estospesossecalculanconsiderandolascaracter´ısticas
+susresultadosenestimacioneslocales.Precisamente,esenel geome´tricasdelproblema,demaneraque[1]:
+campodelaMiner´ıa,dondeseoriginaelKrigeadodemanos
+delingenieroenminasDanieKrige,alexplotarlacorrelacio´n 1. λ 1 +λ 2 +...+λ n =1segaranticelacondicio´ndeuni-
+espacialparahacerprediccionesenlaevaluacio´ndereservas versalidad(esdecirlasumatoriadelospesosdebeser
+delasminasdeoroenSuda´frica[5];ygraciasalaformula- unitaria)
+cio´nmatema´ticadeGeorgeMatheronenlaEscueladeMinas 2. σ E2 =var[z∗ k −z k ] la varianza del error cometido sea
+dePar´ıs. m´ınima.
+Lacomplejidaddelosca´lculosmatema´ticosutilizadosen
+Estos elementos conducen a un problema de minimiza-
+lainterpolacio´ndeKrigeado,fundamentalmentelaresolucio´n
+cio´n con restricciones que se resuelve utilizando la te´cnica
+degrandessistemasdeecuaciones,tieneunaltocostocompu-
+denominadamultiplicadoresdeLagrange.Esteme´todoinvo-
+tacionalconfirmadoporvariosautores:[7,8,11,12,13].Se
+lucra la inco´gnita auxiliar llamada para´metro de Lagrange
+planteaqueelalgoritmoporcadapuntodeintere´stieneuna
+(µ)yconsisteenigualaracerolasderivadasparcialesdela
+complejidad cu´bica, lo que conduce a una complejidad de
+O(MN3),siendoN elnu´merodeobservacionesdisponibles nuevafuncio´n.AlrealizarlasN+1derivacionesseobtieneun
+sistemadeN+1ecuacioneslinealesconN+1inco´gnitas.Los
+yM elnu´merodepuntosainterpolar[13].CuandoM≈N,
+lacomplejidadcomputacionalpuedeconsiderarseO(N4)lo valores de los pesos asociados a cada uno de los puntos se
+calculanmediantelaresolucio´ndeestesistemadeecuaciones
+cualnoesfavorablesisetrabajacongrandesvolu´menesde
+(Ecuacio´n2)[1].
+datos.
+1. Me´todos (cid:26) ∑n
+j=1
+λ
+j
+γ(u
+i
+−u
+j
+)+µ =γ(u−u
+i
+) i=1...n
+(2)
+1.1 Formulacio´nmatema´ticadelkrigeadoordinario
+∑n
+j=1
+λ
+j
+=1
+ElproblemadelKrigeadoOrdinarioconsisteenestimar
+Elsistemadeecuacionestambie´npuedeserexpresadoen
+elvalorenelsitiodesconocido,expresadomatema´ticamen-
+formamatricialenfuncio´ndelacovarianza(Ecuacio´n3).Los
+temediantelacombinacio´nlinealponderadadelosvalores
+te´rminosdelmiembroizquierdodelsistemadeecuacionesse
+muestreados. A trave´s del Krigeado Ordinario se puede es-
+determinanmedianteelca´lculodelascovarianzasdecadapar
+timartantoelvalordesconocidodeunpuntocomoelvalor
+deensayos.Porotraparte,elmiembroderechosedetermina
+promedio de un bloque, conocidos respectivamente como
+mediante la covarianza entre el punto o bloque y cada uno
+KrigeadopuntualyKrigeadodebloques.Laestimacio´nse
+delosensayos.Seobservalaspropiedadessime´tricasdela
+calculamediantelaEcuacio´n1:
+matriz que conforma el miembro izquierdo del sistema de
+ecuaciones lineales. El aprovechamiento de esta propiedad
+z∗ =λ z(x )+λ z(x )+...+λ z(x ) (1)
+k 1 1 2 2 n n permitira´ reducirlostiemposdeconstruccio´ndeestamatriz.
+donde:
+    
+γ(u −u ) ··· γ(u −u ) 1 λ γ(u −u)
+1 1 1 n 1 n
+
+
+. .
+.
+... . .
+.
+. .
+.
+
+
+
+
+. .
+.
+
+=
+
+
+. .
+.
+
+ (3)
+    
+ γ(u n −u 1 ) ··· γ(u n −u n ) 1  λ n   γ(u n −u) 
+1 1 1 0 µ 1
+AlgoritmoOptimizadoparalaInterpolacio´nEspacialdelKrigeadoOrdinario 143
+Unadelascaracter´ısticasma´simportantesdelKrigeado consisteenpredecirelvalordelpuntooelvalorpromediodel
+Ordinarioesqueproporcionalavarianzadelerrordeestima- bloque,segu´nseaelcaso;yporu´ltimocalcularlavarianza
+cio´n,lacualdependedelmodelodevariogramaobtenidoy delerrordeestimacio´n.Esteconjuntodepasosserepitepara
+delaslocalizacionesdelosdatosoriginales[2].Lavarianza cadaunodelospuntosobloquesaestimar.
+delerrorpuedecalcularsemediantelaEcuacio´n4: ElalgoritmodeKrigeadorequierecomoentradas:
+n A={a ···a }cona ={x,y,z,v}ensayosopuntos
+σ2 =∑λγ(u −u)−σ2−µ (4) 1 n i i i i i
+KO i i medidos(representadosporsuscoordenadasespaciales
+i=1
+yelvalordelatributomedido).
+M={b ,b ,···,b }modelodebloquescaracterizado
+1.2 Descripcio´ndelKrigeadoOrdinario 1 2 n
+porlaExpresio´n5(lascoordenadasdelorigen,dimen-
+ElprocesodeKrigeadoinvolucra4pasosfundamentales:
+sionesdelmodelo,dimensionesdelosbloques,nivel
+bu´squedadelosensayosenlavecindaddefinida,conelfin
+dediscretizacio´ndelosbloques);dondecadabloque
+delimitarelnu´merodedatosautilizarenlainterpolacio´ny
+contieneb={(i,j,k),(x ,y ,z ),(a ,a ,···,a )}(su
+evitareltrabajocongrandessistemasdeecuacioneslineales; c c c 1 2 n
+localizacio´nespacial,lascoordenadasdelcentroidey
+elca´lculodelospesosasociadosalosensayos,consideradala
+elconjuntodeensayos).
+operacio´nma´scostosacomputacionalmente;elpro´ximopaso
+(cid:8) (cid:9)
+p= (x ,y ,z ),(nb ∗nb ∗nb ),(lb ∗lb ∗lb ),(db ∗db ∗db ) (5)
+0 0 0 i j k i j k i j k
+(cid:8) (cid:9)
+S= (R ,R ,R ),(α,β,θ),(r ,r ,···,r ) vecindad datosapropiada,enestecasoconsiderandocomoestructura
+x y z 1 2 n
+de estimacio´n delimitada por el elipsoide con radios dedatoselpropiomodelodebloques.
+R ,R ,R ,losa´ngulosα,β,θ queindicanlarotacio´n Paralaindexacio´n,porcadaposicio´n(i,j,k)delmodelo
+x y z
+delelipsoideencadaunodelosejes,teniendocomo debloquesseguardaunalistaconlosensayospertenecientes
+restricciones:elnu´merom´ınimo(r )yma´ximodedatos alaceldaobloque.Paradeterminarlasceldasenlascualesse
+1
+(r ),as´ıcomoelnu´meroma´ximodedatosporoctante encuentranlosensayos,setransformanlascoordenadasdelos
+2
+(r ); representada por la Ecuacio´n 6: donde x ,y ,z ensayosalespaciodecoordenadasdelos´ındicesdelmodelo,
+n 0 0 0
+constituyenlascoordenadasdelorigendelcentroide,y teniendo en cuenta el origen (x ,y ,z ) y las dimensiones
+0 0 0
+a,b,closradiosencadaunodelosejes. (nb,nb ,nb )delosbloques(Ecuacio´n7):
+i j k
+(x−x )2 (y−y )2 (z−z )2 (x−x ) (y−y ) (z−z )
+0 + 0 + 0 =1 (6) x = 0 ;y = 0 ;z = 0 ; (7)
+a2 b2 c2 i nb j nb k nb
+i j k
+γ(h)={nst,c ,(c γ (h)···c γ (h))}variogramaque Luegoseobtienenlaslocalizacionesespaciales(i,j,k)de
+0 1 1 n n
+expresalascaracter´ısticasdevariabilidadycorrelacio´n losensayosredondeandopordefectolascoordenadastransfor-
+espacialdelfeno´menoqueseestudiaapartirdepuntos madas: i= floor(x), j= floor(y ) y k= floor(z ). Des-
+i j k
+muestreados,siendonst lacantidaddeestructurasque pue´sseverificaquelaslocalizacionesespacialesobtenidas
+conformanelvariogramaencadaunadelasdireccio- este´ndentrodelrangode´ındicesdelmodelodebloques,cum-
+nes, c el valor de pepita, c las mesetas, y γ (h) las plie´ndosequeo≤i≤nb,o≤ j≤nb yo≤k≤nb .Unavez
+0 i i i j k
+estructurasdevariogramas. indexadoslosensayos,parabuscarunensayoenelmodelo
+debloquessimplementesecalculael´ındicedelocalizacio´n
+Elalgoritmogeneracomosalidas:
+espacialdelpunto,siendon lacantidaddecolumnasdelmo-
+x
+M={b 1 ,b 2 ,···,b n }modeloderecursos,esdecir,los delo,n y lacantidaddefilasyxyzlascoordenadasespaciales
+puntosobloquesestimados. delpuntoencuestio´n(Ecuacio´n8):
+1.3 Indexacio´nybu´squedaespacialporrangos loc=zn x n y +yn x +x (8)
+Conelobjetivodeoptimizarelalgoritmo,evitandolarea-
+lizacio´ndebu´squedasinnecesarias,seproponelabu´squeda 1.4 Te´cnicas,herramientasytecnolog´ıas
+porrangos.Labu´squedaporrangos,esencialmenteconsiste El disen˜o del algoritmo se baso´ en los siguientes prin-
+en buscar los objetos geome´tricos que contiene una deter- cipios: particio´n (descomposicio´n de la computacio´n de ta-
+minada regio´n del espacio de objetos geome´tricos [10]. La reas),comunicacio´n(coordinacio´nenlaejecucio´ndetareas),
+eficienciadelasbu´squedasporrangossesustentaenlaprevia aglomeracio´n(combinacio´ndelosresultadosdelastareas)y
+indexacio´ndelosobjetosgeome´tricosenunaestructurade mapeo(asignacio´ndetareasalosprocesadores);descritasen
+144 AlgoritmoOptimizadoparalaInterpolacio´nEspacialdelKrigeadoOrdinario
+[6],[9].Secentro´ fundamentalmenteenlaparticio´nyasigna-
+cio´n.Eneldisen˜odelalgoritmonosepresentaronsecciones
+cr´ıticas,porloquenosehacencopiasdelalistadepuntosa
+interpolar;todoslosprocesospuedenleeryescribirenesta Algorithm 1 Pseudoco´digo del algoritmo de Krigeado
+listasinquesegenerenconflictosdememoria. Ordinario(modelodebloques)
+El algoritmo de Krigeado Ordinario fue implementado
+Require: A,M,S,γ(h)
+usando C++11 como lenguaje de programacio´n. Para los
+Ensure: M
+ca´lculosmatricialesseutilizo´ labibliotecadea´lgebralineal
+1: discretizar(M)
+Atlas CLapack, caracterizada por ser ra´pida. Esta bibliote-
+2: indexar(A,M)
+capermitio´ simplificarelca´lculodeoperacionesmatriciales
+3: numbloques=M.cantidad
+como la resolucio´n de sistemas de ecuaciones lineales y la
+4: {EtapaI}
+multiplicacio´ndematrices.
+5: fori=0:numbloquesdo
+Laste´cnicasdeprogramacio´nparalelaydistribuidahan
+6: b=M.at(i)
+demostradoserunaalternativaviableparalasolucio´nra´pida
+7: b.vecinos=buscar(b.centroide,A,M,S)
+de este tipo de problemas computacionales. En la presente
+8: endfor
+investigacio´nseaplicaronte´cnicasdeprogramacio´nparalela
+9: {EtapaII}
+en memoria compartida a trave´s de la biblioteca OpenMP
+10: ordenar(M)
+4.8.2.
+11: {EtapaIII}
+LabibliotecaOpenMPsebasaenelmodelofork-joinpara
+12: fori=0:numbloquesdo
+obtener el paralelismo a trave´s de mu´ltiples hilos. Aprove-
+13: b=modelo.at(i)
+chandolaindependenciadelosdatosdeentradaseaplicala
+14: interpolar(b,A,M,S,γ(h))
+descomposicio´ndeldominioparaladivisio´ndelosdatosentre
+15: endfor
+losprocesadores.Estate´cnicadedescomposicio´nconsisteen
+determinarlaparticio´napropiadadelosdatos,yluegotrabajar
+enlosco´mputosasociados.
+2. Resultados y discusio´n
+2.1 Aceleracio´nmedianteOpenMP
+Elalgoritmopropuestoparalainterpolacio´ndeKrigea- Algorithm 2 Pseudoco´digo del algoritmo de Krigeado
+doOrdinarioconstade3etapasdeprocesamientoparaleloa Ordinario(unbloque)
+trave´sdelmodelofork-join(Figura1).Estemodeloplantea
+Require: b,A,M,S,γ(h)
+ladivisio´ndelhilomaestroenhilosesclavosqueseejecutan
+Ensure: M
+concurrentemente,distribuye´ndoselastareassobreestoshilos.
+1: numvecinos=b.vecinos.cantidad
+Loshilosaccedenalamismamemoria,aunqueesposibleges-
+2: ifnumvecinos>=S.cantidadMinimaDeDatosthen
+tionarestosaccesosgenerandoespaciosdememoriaprivada.
+3: matLM=construirMatrizIzquierda(b,A,γ(h))
+Acontinuacio´nsedescribenlasetapasdeprocesamiento,y
+4: matRM=construirMatrizDerecha(b,A,γ(h))
+semodelaelalgoritmodeKrigeadoOrdinarioenformade
+5: matR=resolverSEL(LM,RM)
+pseudoco´digo(Algoritmos1y2).
+6: valor=0
+EtapaI.Serealizalaindexacio´nespacialdelospun- 7: error=0
+tosenelmodelodebloquesybu´squedadevecinosa 8: varianza=calcularVarianzaBloque(b,A,γ(h))
+utilizarencadaunadelasinterpolaciones.Losbloques 9: µ =R[numvecinos]
+sondistribuidosentrozosdeaproximadamenteigual 10: fori=0:numvecinosdo
+taman˜o entre los procesadores antes de que las itera- 11: valor+=b.vecinos.at(i).valor
+cionesseanejecutadasmedianteasignacionesesta´ticas 12: error+=R[i]∗RM[i]
+(shedulestatic);todaslasiteracionessonrepartidasde 13: endfor
+formacontinuaantesdeserejecutadas. 14: b.valor=valor
+EtapaII.Serealizaelordenamientodelosbloquesa 15: b.error=varianza−error−µ
+estimarenfuncio´ndelacantidaddevecinosautilizar. 16: else
+Elmodelodebloquesunavezma´sesparticionadoen 17: b.valor=NE {noestimado}
+tantas partes iguales como nu´mero de procesadores; 18: b.error=NE {noestimado}
+luegoestaspartessonordenadassimulta´neamente.Una 19: endif
+vezqueconcluyeelprocesodeordenamiento,semez-
+clan los resultados arrojados por cada procesador en
+tantasiteracionescomoseannecesarias.
+AlgoritmoOptimizadoparalaInterpolacio´nEspacialdelKrigeadoOrdinario 145
+EtapaIII.Serealizalainterpolacio´n.Losbloquesse Cuadro1.Medicionesdelostiemposdeejecucio´ndel
+distribuyen nuevamente entre los procesadores, pero algoritmoparaleloparaunprocesador(ms).
+estavezdeformadina´mica(sheduledynamic),esdecir Corrida t(n ) t(n ) t(n )
+1 2 3
+lasiteracionessonasignadasdeformacontinuaasoli-
+1 1150 6687 21023
+cituddelosprocesadores,hastaqueseacaben.Enesta
+2 1144 6820 20955
+etapasecalculanlospesosylosvaloresasociadosalos
+3 1152 6756 20832
+puntosainterpolacio´n.
+4 1176 6884 20799
+5 1171 6803 20884
+6 1162 6809 20863
+7 1155 6829 20918
+8 *1215 6789 20841
+9 1175 6700 20914
+10 1150 6811 20985
+Mediana 1158.50 6806.00 20899.00
+Figura1.Utilizacio´ndelmodelofork-joinparalograrel Cuartilmenor 1150 6756 20841
+paralelismodedatosenelalgoritmo. Cuartilmayor 1175 6820 20955
+Rangointercuartil 25 64 114
+L´ımiteinferior 1112.5 6660 20670
+L´ımitesuperior 1212.5 6916 21126
+2.2 Experimentosyresultados Promedio 1159.44 6788.8 20901.4
+Tiempodeejecucio´n 1159 6789 20901
+Se realizo´ la evaluacio´n experimental del algoritmo va-
+riandoeltaman˜odeentrada(n)yelnu´merodeprocesadores
+(p),atendiendoaltiempodeejecucio´n,lagananciadeveloci-
+dad(SpeedUp)ylaeficiencia(E).Seentiendeportiempode
+ejecucio´ncomoeltiempoquetranscurredesdeelcomienzo
+de la ejecucio´n del programa en el sistema paralelo, hasta
+queelu´ltimoprocesadorculminesuejecucio´n.Alaganan-
+·104
+cia de velocidad tambie´n se le conoce como aceleracio´n, y
+consisteenlarelacio´nentreeltiempodeejecucio´nsobreun 20,901
+procesadorsecuencialyeltiempodeejecucio´nsobremu´lti- 2
+plesprocesadores.Poreficienciaseentiendeelporcentajede
+tiempoempleadoenprocesoefectivo;esteindicadormideel
+1,5
+gradodeutilizacio´ndeunsistemamultiprocesador. 12,108 12,861
+Los experimentos se ejecutaron en una estacio´n de tra-
+1
+bajoAcerAspire5755conprocesadorIntel(R)Core(TM)
+6,789
+i5-2430(compuestapor2nu´cleosf´ısicosy2virtualespara
+5,124
+untotalde4procesadores),conunafrecuenciade2.40GHz, 0,5 3,844
+4GBdememoriainstaladaysistemaoperativoUbuntu14.04 1,159
+925 677
+(32bits).ElprocesodeKrigeadoserealizo´ deformapuntual
+0
+considerandoloscentroidesdelosbloquescomolanubede
+puntosaestimar.Serealizaron10corridasencadaexperimen-
+p=1 p=2 p=4
+to,descarta´ndoselosdatosat´ıpicosatrave´sdelme´tododelos
+cuartiles.
+Seutilizaron3juegosdedatosgeneradosaleatoriamente
+variandoelnu´merodeensayos.Losjuegosdedatosestaban
+compuestospor1000bloquesy1000ensayos(n ),1000blo-
+1
+quesy2000ensayos(n ),1000bloquesy3000ensayos(n ),
+2 3
+respectivamente.Seutilizo´unmodelodevariogramalinealde
+1comovalordepepita,y10comovalordelapendiente.Seuti-
+lizo´ unavecindadesfe´ricade5metrosderadio.LosCuadros
+1,2y3contienenlosresultadosdelosexperimentosrealiza-
+dosusando1,2y4procesadoresrespectivamente,as´ıcomo
+la descripcio´n de dichos resultados a partir de estad´ıgrafos
+comolamediana,cuartilmenorymayoryelpromedio.
+)sm(no´icucejeedopmeiT
+Gra´fica1.Medicionesdelostiemposdeejecucio´n
+n n n
+1 2 3
+Los datos arrojados por la evaluacio´n experimental del
+algoritmoevidencianunadisminucio´ndelostiemposreque-
+ridosenlainterpolacio´ndeKrigeadoOrdinario(Gra´fica1).
+La mayor ganancia de velocidad (1.77) se obtuvo para un
+taman˜odeentradadem=1000(bloques)yn=2000(ensayos),
+dondeselogro´ disminuireltiempodeejecucio´nde6789msa
+3844msalutilizar4procesadores.Lagananciadevelocidad
+incrementaalaumentareltaman˜odeentradaatendiendoasu
+valoro´ptimocuandoseutilizan2procesadores(Gra´fica2).
+146 AlgoritmoOptimizadoparalaInterpolacio´nEspacialdelKrigeadoOrdinario
+Cuadro2.Medicionesdelostiemposdeejecucio´ndel
+algoritmoparalelopara2procesadores(ms).
+Corrida t(n ) t(n ) t(n )
+1 2 3
+1 721 4053 12094
+2 1190 4227 *12799
+3 786 4033 12064
+4 760 4081 12093
+5 1136 4700 4700
+6 1176 6193 12039
+7 757 6404 12158
+8 1189 4020 12135
+9 766 7085 12144
+10 772 6445 12155
+Mediana 779.00 4463.50 12114.50
+Cuartilmenor 760 4053 12087
+Cuartilmayor 1176 6404 12155
+Rangointercuartil 416 2351 68
+L´ımiteinferior 136 526.5 11985
+L´ımitesuperior 1800 9930.5 12257
+Promedio 925.3 5124.1 12107.66
+Tiempodeejecucio´n 925 5124 12108
+Gananciadevelocidad 1.25 1.33 1.73
+Eficiencia 62.5 66.5 86.5
+1,8
+1,6
+1,4
+1,2
+n n n
+1 2 3
+)pS(dadicolevedaicnanaG
+Cuadro3.Medicionesdelostiemposdeejecucio´ndel
+algoritmoparalelopara4procesadores(ms).
+Corrida t(n ) t(n ) t(n )
+1 2 3
+1 694 3781 12379
+2 *757 3894 12379
+3 706 3834 12437
+4 672 3878 12352
+5 683 3793 13196
+6 685 3985 13042
+7 662 3821 13434
+8 664 3796 12494
+9 674 3796 13188
+10 657 3860 13708
+Mediana 678.50 3827.50 12768.00
+Cuartilmenor 664 3796 12379
+Cuartilmayor 694 3878 13196
+Rangointercuartil 30 82 817
+L´ımiteinferior 619 3673 11153.5
+L´ımitesuperior 739 4001 14421.5
+Promedio 677.44 3843.8 12860.9
+Tiempodeejecucio´n 677 3844 12861
+Gananciadevelocidad 1.71 1.77 1.63
+Eficiencia 42.75 44.25 40.75
+80
+Gra´fica2.Gananciadevelocidaddelalgoritmo.
+60
+40
+n n n
+1 2 3
+p=2 p=4
+Porotrolado,losvaloresdeeficienciaindicanunaprove-
+chamientodel62.5%al86.54%delascapacidadesdepro-
+cesamientoalutilizar2procesadores,yunaprovechamiento
+cercanoalamitadalutilizar4procesadores.Seevidenciaun
+notableincrementodelaeficienciaalaumentarlostaman˜os
+deentradaconelusode2procesadores(Gra´fica3).
+)E(aicneicfiE
+Gra´fica3.Eficienciadelalgoritmo(%).
+p=2 p=4
+Seobservaunadisminucio´ndelagananciadevelocidad
+ylaeficienciaalutilizar4procesadoresparauntaman˜ode
+entradade1000bloquesy3000ensayos,locualesta´ influen-
+ciadoporelprocesamientodeordenamientodelosdatosen
+buscadeequilibrarlacargaentrelosprocesadores.Sibien
+elordenamientopormezclafueimplementadodeformapa-
+ralela, a medida que se incrementan las iteraciones se van
+desechandoprocesadoresalmezclarlosresultadosparciales.
+Estosevaacentuandoenlamedidaqueaumentanlostaman˜os
+deentradayelnu´merodeprocesadores.
+2.3 Conclusiones
+Lacomplejidaddelosca´lculosmatema´ticosutilizados
+enlainterpolacio´ndeKrigeadoOrdinario,fundamental-
+AlgoritmoOptimizadoparalaInterpolacio´nEspacialdelKrigeadoOrdinario 147
+mentelaresolucio´ndegrandessistemasdeecuaciones, [3] M.Chica. Ana´lisisGeoestad´ısticoenelEstudiodela
+repercute en altos tiempos de ejecucio´n que retardan Explotacio´ndeRecursosMinerales. PhDthesis,Univer-
+losprocesosdeestimacio´n. sidaddeGranada,1997.
+Elcara´cterindependientedelosdatosutilizadosenel
+procesodeKrigeadoOrdinariofavorecelautilizacio´n [4] J. Deraisme and Ch. De Fouquet. The geostatistical
+delparalelismoaniveldedatoscomounaalternativa approachforreserves. MinigMagazine,1996.
+eficienteparadisminuirlostiemposderespuestaaso-
+[5] M.A.D´ıaz. Geoestad´ısticaAplicada. 2002.
+ciados.
+Laste´cnicasdeprogramacio´nparalelaenmemoriacom-
+[6] I. Foster. Designing and Building Parallel Programs.
+partidafacilitanlaexplotacio´ndelparalelismodedatos
+ISBN:0201575949.AddisonWesley,1995.
+a trave´s del uso de bucles iterativos para la distribu-
+cio´ndetareasalosprocesadores,propiciandounmejor [7] K.E.KerryandK.A.Hawick. Kriginginterpolationon
+aprovechamientodelascapacidadesdeco´mputo. high-performacecomputers. Technicalreport,Depart-
+Lasubdivisio´ndelosbloquesendiferentesprocesado- ment of Computer Science, Universidad de Adelaide,
+resesmuyu´tilcuandosetrabajacongrandescantidades 1998.
+dedatos,perosinoselograunadistribucio´nequitativa
+elaprovechamientodelosprocesadoresnosera´o´ptimo. [8] C.D.Lloyd. Localmodelsforspatialsanalysis. ISBN
+Losme´todosdebu´squedaespacialporrangossustenta- 9780415316811.FirstEditionCRCPress,2006.
+dosenlaindexacio´nespacialdelosobjetosgeome´tricos [9] R. M. Naiouf. Procesamiento paralelo. Balance de
+contribuyenadisminuirlostiemposderespuestaenel cargadina´micoenalgortimosdesorting. PhDthesis,
+procesodeKrigeado,alevitarbu´squedasinnecesarias. UniversidadNacionaldeLaPlata,2004.
+Lareduccio´ndelostiemposasociadosalainterpolacio´n
+[10] E.OlindaandG.Herna´ndez.Unenfoquepropuestopara
+deKrigeadoOrdinariosoportara´ latomadedecisiones
+lasbu´squedasporrangos. Technicalreport,Proyectode
+ra´pidas,porejemplo:durantelaevaluacio´ndelafactibi-
+laUPM,2002.
+lidaddelosproyectos,as´ıcomolaplanificacio´nminera
+deestosencondicionesderentabilidadecono´mica.
+[11] A.Pesquer,Ll.;Corte´sandX.Pons. Parallelordinary
+kriginginterpolationincorporatingautomaticvariogram
+Agradecimientos
+fitting. Computers and Geosciences, pages 464–473,
+2011.
+Seagradecelacolaboracio´ndelespecialistaJose´Ariasde
+laOficinaNacionaldeRecursosMinerales(ONRM).
+[12] D. Sullivan and D. Unwin. Geographic Information
+Analysis. JohnWiley-SonsHoboken,2002.
+Referencias
+[13] R.Vasan,B.;DuraiswamiandR.Murtugudde. Efficient
+[1] M.A.Alfaro. Estimacio´nderecursosmineros. 2007.
+krigingforreal-timespatio-temporalinterpolation. In
+[2] M.ArmstrongandJ.Carignan. Ge´ostatistiqueLine´aire, 20th Conference on Probability and Statistics in the
+Application au Domaine Minier. E´cole de Mines de AtmosphericSciences,2010.
+Paris,1997.

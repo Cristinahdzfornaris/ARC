@@ -1,0 +1,406 @@
+REVISTA CIENCIAS MATEM`TICAS 65
+AnÆlisis envolvente de datos en la construcci(cid:243)n
+de indicadores sintØticos: una aplicaci(cid:243)n
+al turismo de naturaleza en Cuba
+V(cid:237)ctor E. PØrez Le(cid:243)n1 / Rafael E. Caballero FernÆndez2
+/ Flor Mar(cid:237)a Guerrero Casas3 / FÆtima PØrez Garc(cid:237)a2
+RESUMEN. En el presente trabajo se propone una nueva metodolog(cid:237)a para la creaci(cid:243)n de indicado-
+res sintØticos de sostenibilidad, que constituye un aporte a las ya existentes. La propuesta incluye
+el empleo del AnÆlisis Envolvente de Datos (DEA), de modo que los resultados obtenidos sean de
+fÆcil comprensi(cid:243)n por el usuario (cid:222) nal y se solucionen aspectos seæalados como objeci(cid:243)n a los ac-
+tuales mØtodos de agregaci(cid:243)n existentes, como son la determinaci(cid:243)n de los pesos, la aplicaci(cid:243)n de
+un procedimiento de normalizaci(cid:243)n, y la agregaci(cid:243)n en s(cid:237). La propuesta se aplica en las zonas que
+representan la oferta de turismo de naturaleza de Cuba.
+Palabras clave: AnÆlisis Envolvente de Datos (DEA), indicadores sintØticos, sostenibilidad, turis-
+mo de naturaleza.
+1. INTRODUCCI(cid:211)N des receptoras, el objetivo del presente trabajo
+consiste en desarrollar una nueva metodolog(cid:237)a
+La garant(cid:237)a de la sostenibilidad constituye un
+para construir indicadores sintØticos de soste-
+requisito indispensable para el desarrollo del
+nibilidad. El mismo se lleva a cabo en las zo-
+turismo, en especial, el turismo de naturaleza.
+nas donde se desarrolla el turismo de natura-
+En ese sentido, el empleo de indicadores resulta
+leza en la Repœblica de Cuba. La metodolog(cid:237)a
+bene(cid:222) cioso, por lo que muchos organismos in-
+propuesta comprende el empleo del AnÆlisis de
+ternacionales (OMT, 2004; OECD, 2003; World
+Componentes Principales (ACP) y la distancia
+Bank, 1997; U.N., 1998) e investigadores (D(cid:237)az y
+a una situaci(cid:243)n de referencia para la creaci(cid:243)n
+Norman, 2006; Sancho et al., 2007; PØrez et al.,
+de indicadores sintØticos para cada una de las
+2009; Singh et al, 2009; Blancas et al., 2010),
+dimensiones del concepto avaluado; posterior-
+han contribuido al desarrollo de estas herra-
+mente, se propone el AnÆlisis Envolvente de Da-
+mientas, que proporcionan informaci(cid:243)n œtil
+tos (DEA) para confeccionar una medida global
+para la prevenci(cid:243)n de problemas econ(cid:243)micos,
+de sostenibilidad.
+sociales o ambientales, y sirven ademÆs para
+Para cumplir con el objetivo planteado el estu-
+formular estrategias y comunicar ideas (Lundin,
+dio se ha estructurado de la siguiente forma. En
+2003; Singh et al., 2009).
+el ep(cid:237)grafe siguiente se de(cid:222) nirÆn las zonas con
+Dada la utilidad de los indicadores para me-
+potencialidades para el desarrollo del turismo
+dir la sostenibilidad, y las ventajas del turismo
+de naturaleza en Cuba. En el apartado tercero
+para elevar el nivel de vida de las comunida-
+se determinarÆ el sistema de indicadores para
+medir la sostenibilidad del turismo en estas zo-
+nas. Seguidamente se expondrÆ la metodolog(cid:237)a
+1 Departamento de MatemÆticas, Universidad de Pinar del R(cid:237)o,
+propuesta para el cÆlculo de los indicadores sin-
+vp_leon@mat.upr.edu.cu
+2 Departamento de Econom(cid:237)a Aplicada (MatemÆticas), Universidad tØticos de sostenibilidad y se presentan los re-
+de MÆlaga, Espaæa, rafael.caballero@uma.es y f_perez@uma.es. sultados obtenidos. Por œltimo, se exponen las
+3 `rea de MØtodos Cuantitativos e Historia Econ(cid:243)mica, Universi-
+principales conclusiones extra(cid:237)das al respecto.
+dad Pablo de Olavide, Espaæa, fguecas@upo.es
+66 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+2. ZONAS DE DESARROLLO DEL TURISMO De este modo, se obtuvo un listado (cid:222) nal de 39
+DE NATURALEZA EN CUBA indicadores divididos en: 11 indicadores socia-
+les, 14 indicadores econ(cid:243)micos y 14 indicadores
+Como resultado del trabajo realizado por parte patrimoniales. Dentro de los indicadores socia-
+del Grupo de Trabajo de Turismo de Naturaleza, les examinamos informaci(cid:243)n respecto al mejo-
+se identi(cid:222) caron 15 zonas que resultan de inte- ramiento en las condiciones de vida de la comu-
+rØs para la realizaci(cid:243)n de un estudio de sosteni- nidad como resultado de la actividad tur(cid:237)stica,
+bilidad de las cuales, tres, estÆn incluidas en la la capacidad de carga social de los destinos, los
+Zona de Turismo Sustentable del Caribe. cambios en la ocupaci(cid:243)n tradicional o modi(cid:222) ca-
+Durante la selecci(cid:243)n se tuvieron en cuenta ciones en el comportamiento, que sean motivo
+las zonas en las cuales existen instalaciones ho- de insatisfacci(cid:243)n por parte de los residentes y
+teleras que ofrecen servicios de alojamiento al de los visitantes, la capacidad del turismo como
+turismo internacional, con la intenci(cid:243)n de obte- generador de puestos de trabajo, la percepci(cid:243)n
+ner datos acerca de los turistas d(cid:237)as y los por- de seguridad o peligro de las distintas zonas as(cid:237)
+centajes de ocupaci(cid:243)n en dichas instalaciones. como la calidad de los servicios pœblicos.
+Asimismo, en las zonas que abarcan mÆs de un Con respecto a los indicadores econ(cid:243)micos,
+municipio, se tomaron como representativos de analizamos informaci(cid:243)n acerca del nivel de sa-
+estas aquellos que de igual forma tuvieran ins- tisfacci(cid:243)n de los turistas, el grado de estacionali-
+talaciones de alojamiento reglado. Una vez de(cid:222) - dad del turismo, la gama de servicios tur(cid:237)sticos
+nidas, se pasa a relatar el modo en que se ob- que se ofrecen, el diseæo de la infraestructura y
+tuvieron los indicadores mediante los cuales se la accesibilidad, los bene(cid:222) cios econ(cid:243)micos deri-
+medirÆ la sostenibilidad de las mismas. vados del turismo, y el porcentaje de ejecuci(cid:243)n
+y cumplimiento del plan de ordenamiento terri-
+3. INDICADORES SELECCIONADOS torial del municipio, representativo del nivel de
+PARA MEDIR LA SOSTENIBILIDAD desarrollo deseado para cada territorio, a partir
+de sus condiciones naturales, su infraestructu-
+A partir de varios estudios y tomando como base ra tØcnica, la actividad econ(cid:243)mico-productiva y
+el Manual de Procedimientos para Entrenadores los sistemas de asentamientos humanos.
+en Turismo Sustentable propuesto por D(cid:237)az y
+Por œltimo, la dimensi(cid:243)n patrimonial incluye
+Norman (2006) y la Gu(cid:237)a PrÆctica de Indicado-
+datos sobre consumo energØtico, consumo de
+res de Desarrollo Sostenible para los Destinos
+agua y seguridad de su suministro, generaci(cid:243)n y
+Tur(cid:237)sticos, OMT (2004), durante la realizaci(cid:243)n
+reducci(cid:243)n de residuos, nivel de limpieza, intensi-
+del Taller sobre Indicadores de Turismo Sosteni-
+dad de uso de los recursos, as(cid:237) como los impac-
+ble para el destino Viæales, celebrado del 3 al 5
+tos del turismo a nivel ambiental y cultural.
+de Junio de 2008 en el municipio Viæales, Pinar
+Se utilizaron 23 indicadores objetivos y 16
+del R(cid:237)o, se consult(cid:243) a un grupo de especialistas
+subjetivos. Los objetivos son los provenientes
+con el objetivo de que seleccionaran los indica-
+de fuentes de datos estad(cid:237)sticos, como o(cid:222) cinas
+dores que consideraban importantes para reali-
+de estad(cid:237)sticas, balance anual de los diferentes
+zar un estudio de sostenibilidad en las zonas de
+establecimientos y entidades, informes de datos
+desarrollo del turismo de naturaleza, de acuer-
+de las empresas, etc. En cambio, los indicadores
+do a sus conocimientos sobre el tema. Para este
+subjetivos son los que encuadran las percepcio-
+proceso de selecci(cid:243)n se tuvieron en cuenta los
+nes de los implicados en el turismo, ya sea los
+siguientes criterios:
+pobladores de la localidad donde tiene lugar la
+● Disponibilidad de datos en las distintas
+actividad tur(cid:237)stica o los turistas que la visitan.
+fuentes para calcular el indicador.
+● Posibilidad de establecer una compara- 4. METODOLOG˝A PARA CALCULAR
+ci(cid:243)n entre las zonas seleccionadas.
+INDICADORES SINT(cid:201)TICOS
+● Intensidad con que el indicador mide el DE SOSTENIBILIDAD
+aspecto por el cual se escogi(cid:243) aportando
+diferencias entre las zonas que serÆn com- Para calcular los indicadores sintØticos para
+paradas. cada dimensi(cid:243)n del concepto evaluado, se opt(cid:243)
+REVISTA CIENCIAS MATEM`TICAS 67
+por el indicador de Distancia por Componentes donde:
+Principales (DCP) (Lozano et al., 2009; Blancas X : Valor de los indicadores dimensionales obte-
+ij
+et al., 2010); luego, a partir de los indicadores nidos para la i-Øsima unida evaluada.
+dimensionales obtenidos, se propone la aplica-
+wi: Conjunto de pesos que garantiza la mÆxima
+ci(cid:243)n de DEA (AnÆlisis Envolvente de Datos); esto j
+e(cid:222) ciencia de la i-Øsima unidad evaluada.
+es, el (cid:147)enfoque bene(cid:222) cio de la duda(cid:148) (Storrie y
+X : Valor de los indicadores dimensionales para
+Bjurek, 1999; 2000; Cherchye, 2001; Cherchye kj
+las restantes k-Øsimas unidades.
+y Kuosamen 2002; Cherchye et al., 2006, 2007),
+que fue originalmente propuesto para evaluar el La funci(cid:243)n objetivo revela la interpretaci(cid:243)n
+rendimiento macroecon(cid:243)mico (Melyn y Moesen, del bene(cid:222) cio de la duda de la metodolog(cid:237)a: el
+1991). De modo que se obtiene para cada zona problema escoge el conjunto de pesos wi que
+j
+el indicador sintØtico AnÆlisis Envolvente de maximiza el valor del indicador sintØtico para la
+Datos despuØs de Distancia por Componentes i-Øsima unidad. Como resultado, el mayor valor
+Principales (DEACP). del peso relativo se le otorga a los indicadores
+para los cuales la unidad tiene un mejor com-
+En este enfoque, el indicador sintØtico se
+portamiento (en tØrminos relativos) cuando se
+de(cid:222) ne como el ratio entre el la suma pondera-
+compara con el resto de las unidades evaluadas.
+da de los outputs (indicadores del tipo cuÆnto
+De modo que para la mejor situaci(cid:243)n, el valor
+mÆs mejor) correspondientes a una unidad y la
+de la medida sintØtica serÆ uno, lo que indica
+suma ponderada de los inputs (indicadores del
+que la unidad tiene un rendimiento igual a su
+tipo cuÆnto menos, mejor). El objetivo es deter-
+unidad de referencia, mientras que tomarÆ valor
+minar, para cada unidad, el conjunto de pesos
+cero el caso que represente la situaci(cid:243)n menos
+o ponderaciones que le proporciona la mÆxima
+deseada 0 ≤ IS ≤ 1.
+e(cid:222) ciencia, representada por el ratio output vir- i
+tual/input virtual. Los pesos no se conocen a priori, y la œnica
+restricci(cid:243)n sobre estos en el planteamiento es
+Como todos los indicadores dimensionales son
+que tienen que ser no negativos (condici(cid:243)n de no
+positivos, representan los diferentes outputs, y
+negatividad), lo que implica que el valor del (cid:237)ndi-
+se asigna un input con valor uno a cada unidad,
+ce sintØtico es una funci(cid:243)n no decreciente de los
+de modo que el valor del indicador sintØtico se
+indicadores iniciales. Para garantizar una in-
+corresponde con el del output virtual. Este mo-
+terpretaci(cid:243)n intuitiva del indicador sintØtico, se
+delo es equivalente al original modelo DEA-CCR
+impone que ninguna unidad del conjunto puede
+orientado al input con rendimientos constantes
+obtener un valor mayor que uno con el mismo
+a escala, presentado por Charnes et al. (1978),
+conjunto de pesos (restricci(cid:243)n de normalizaci(cid:243)n)
+tal como seæala Despotis (2005), donde el valor
+(Cherchye, 2001; Cherchye y Kuosamen 2002;
+del indicador sintØtico se obtiene de la soluci(cid:243)n
+Cherchye et al., 2006).
+del siguiente problema de Programaci(cid:243)n Lineal,
+por separado, para cada una de las unidades: Esta metodolog(cid:237)a tiene como ventaja que el
+valor del indicador sintØtico serÆ sensible a las
+necesidades de los implicados, pues pondera con
+mayor valor aquellos indicadores para los que la
+unidad obtiene una mejor posici(cid:243)n con respecto
+al resto de unidades evaluadas. Esto se debe a
+la determinaci(cid:243)n end(cid:243)gena de los pesos, lo cual
+constituye a su vez otra ventaja, al no tener que
+(cid:222) jarlos a priori; ademÆs, las ponderaciones se
+hallan de forma tal que las obtenidas para cada
+(restricci(cid:243)n de normalizaci(cid:243)n)
+unidad bajo evaluaci(cid:243)n le proporcionen el valor
+mÆximo posible para el indicador sintØtico.
+(restricci(cid:243)n sobre los ouotputs virtuales) De este modo, queda evidenciado el carÆcter
+(cid:223) exible de este procedimiento al no exigir que to-
+das las unidades le concedan igual importancia
+(condici(cid:243)n de no negatividad) a cada indicador (Mart(cid:237)nez et al., 2005; Murias
+68 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+et al., 2006). AdemÆs, se puede prescindir del 5. RESULTADOS
+procedimiento de normalizaci(cid:243)n, y se evidencia
+Los resultados aparecen en la siguiente tabla
+que DEA respeta las caracter(cid:237)sticas individuales
+(Tabla 1), donde aparece Baconao como la mÆs
+de las unidades y sus particulares sistemas de
+sostenible del conjunto de unidades evaluadas.
+valores.
+Su valor de e(cid:222) ciencia se reparte casi de forma
+La metodolog(cid:237)a propuesta tiene como ventaja
+equitativa entre las tres dimensiones, pero so-
+el hecho de que no es preciso realizar nueva-
+bresale la econ(cid:243)mica, a pesar de ser aquella en
+mente la selecci(cid:243)n de indicadores; ademÆs, al
+la cual no ocupa la primera posici(cid:243)n con el in-
+aplicarse sobre los indicadores dimensionales
+dicador sintØtico DCP. Por ello, el Øxito de la e(cid:222) -
+se garantiza el empleo de toda la informaci(cid:243)n
+ciencia se debe a que resulta la unidad de ma-
+contenida en el conjunto inicial de indicadores.
+yor output virtual desde el punto de vista social
+Por otra parte, no es necesario normalizar los
+y patrimonial con respecto al resto de las unida-
+indicadores, y se garantiza una mayor compren-
+des evaluadas, dimensiones para las que apare-
+si(cid:243)n por parte del usuario (cid:222) nal, pues el valor
+ce como la mÆs sostenible segœn el DCP.
+obtenido se descompone y los valores de los
+Como se puede apreciar, todas las zonas, ex-
+outputs virtuales indican la in(cid:223) uencia de cada
+cepto dos, tienen mayores valores en sus outputs
+una de las dimensiones en la medida sintØtica
+virtuales que los exigidos en la formulaci(cid:243)n del
+obtenida, lo cual, a su vez, le imprime mayor
+problema. Lo sucedido con estas es motivo de
+riqueza en el anÆlisis.
+la mala posici(cid:243)n que obtuvieron de acuerdo al
+La restricci(cid:243)n sobre los outputs virtuales ga-
+valor del DCP para estas dimensiones: patrimo-
+rantiza que cada dimensi(cid:243)n estØ incluida en el
+nial (Topes de Collantes) y, social y econ(cid:243)mica
+valor del indicador sintØtico. Para ello, se pro-
+(Guajimico). El resto de las unidades evaluadas
+gram(cid:243) que cada una aportara, como m(cid:237)nimo, un
+presenta un valor mayor que el exigido a los
+valor de ω = 0,2 al valor global.
+outputs virtuales en todas las dimensiones.
+Tabla 1 Indicador sintØtico global DEACP
+Output Output Output
+Indicador
+Ranking Observaci(cid:243)n Virtual: Virtual: Virtual:
+Global
+Social Econ(cid:243)mico Patrimonial
+1 Baconao 1 0,30565 0,36182 0,33253
+2 P. N. Alejandro de Humboldt 0,91691 0,27336 0,37500 0,26855
+3 CiØnaga de Zapata 0,86505 0,30173 0,29385 0,26947
+4 P. N. Guanahacabibes 0,85057 0,24502 0,29885 0,30670
+5 Topes de Collantes 0,83431 0,22537 0,40894 0,2
+6 Mayar(cid:237) 0,82145 0,27484 0,23792 0,30869
+7 P. N. Caguanes 0,81572 0,30091 0,24506 0,26976
+8 P. N. Desembarco del Granma 0,81057 0,24370 0,25923 0,30764
+9 Marea del Portillo 0,80733 0,23625 0,27225 0,29883
+10 Hanabanilla 0,79711 0,25406 0,25990 0,28315
+11 Alturas de Banao 0,79648 0,28072 0,26410 0,25167
+12 P. N. Viæales 0,76673 0,27486 0,27060 0,22127
+13 Soroa-Las Terrazas 0,76154 0,26180 0,26944 0,23030
+14 San Diego de los Baæos 0,72926 0,21461 0,22676 0,28789
+15 Guajimico 0,69305 0,2 0,2 0,29305
+Fuente: Elaboraci(cid:243)n propia.
+REVISTA CIENCIAS MATEM`TICAS 69
+En base a ello, se pueden agrupar las zonas Las unidades que componen el segundo gru-
+en tres grupos, de acuerdo al valor del output po se valen, para la construcci(cid:243)n del indicador
+virtual, de forma que se pueden organizar de sintØtico, primeramente de la dimensi(cid:243)n econ(cid:243)-
+acuerdo con la dimensi(cid:243)n en que cada unidad mica, luego de la social y por œltimo la patri-
+considera que tiene mejor comportamiento. Para monial. Mientras que el orden de importancia
+ello se emplea el grÆ(cid:222) co 1, donde se aprecia que de las que componen el tercer grupo, de forma
+el 27 % de las zonas le atribuye mayor impor- decreciente es: patrimonial, econ(cid:243)mico y social.
+tancia a la dimensi(cid:243)n social, el mismo porcenta-
+je a la dimensi(cid:243)n econ(cid:243)mica y el 46 % se apoya
+6. CONCLUSIONES
+mayormente en la dimensi(cid:243)n patrimonial.
+Por otra parte el grÆ(cid:222) co 2 muestra el compor- Como parte del estudio realizado se ha logrado
+tamiento promedio de los valores de los outputs obtener una base de datos conformada por indi-
+virtuales, donde se puede hacer una aproxima- cadores obtenidos como resultado de una con-
+ci(cid:243)n a la composici(cid:243)n del indicador global de sulta a especialistas ente los cuales aparecen
+sostenibilidad para las unidades que se agru- indicadores provenientes de fuentes estad(cid:237)sti-
+pan en los diferentes clusters. En ese sentido cas de informaci(cid:243)n e indicadores de percepci(cid:243)n
+se puede mencionar que las que conforman el obtenidos por la aplicaci(cid:243)n de encuestas, tanto
+primer grupo; esto es, las que le atribuyen ma- a los residentes locales como a los visitantes.
+yor importancia a la dimensi(cid:243)n social, como Se han obtenidos nuevas metodolog(cid:237)as para
+promedio le otorgan mÆs importancia al aspecto la creaci(cid:243)n de indicadores sintØticos de soste-
+econ(cid:243)mico que al patrimonial. nibilidad de forma que se pueda agregar la in-
+formaci(cid:243)n disponible en el conjunto inicial de
+indicadores sin tener que recurrir a un segundo
+proceso de selecci(cid:243)n de los indicadores para in-
+cluirlos en la medida sintØtica global de soste-
+nibilidad.
+El empleo de DEA en la construcci(cid:243)n de in-
+dicadores sintØticos proporciona claridad en el
+proceso de cÆlculo, facilidad para comprender
+los resultados obtenidos y proporciona mayor
+Fuente: Elaboraci(cid:243)n propia. posibilidad de anÆlisis. Entre sus principales
+GrÆ(cid:222) co 1 distribuci(cid:243)n de las zonas de acuerdo a los ventajas aparecen: los pesos se determinan de
+outputs virtuales. forma interna; no se precisa tomar decisiones
+adicionales (Al menos a grandes rasgos, pues en
+este caso, la nueva restricci(cid:243)n impuesta al pro-
+cedimiento de cÆlculo se dio por la (cid:223) exibilidad
+del procedimiento para determinar los pesos, y
+no requiere por parte del analista o el usua-
+rio un amplio conocimiento del proceso de cÆl-
+culo); tiene una gran facilidad para interpretar
+los resultados, pues permite desagregar el ISG
+en las diferentes dimensiones y determinar en
+aporte de cada una al valor global, de modo que
+se identi(cid:222) quen las dimensiones que constituyen
+las fortalezas y debilidades para cada unidad
+analizada, y la implicaci(cid:243)n con el usuario (cid:222) nal
+es casi nula.
+De forma general, el empleo de los indica-
+dores propuestos permiti(cid:243) realizar un anÆlisis
+Fuente: Elaboraci(cid:243)n propia.
+comparativo de las diferentes zonas de desarro-
+GrÆ(cid:222) co 2 Media de los outputs por cluster DEACP. llo del turismo de naturaleza en Cuba en cuanto
+70 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+al nivel de sostenibilidad, pudiendo establecer de indicadores sintØticos. Una aplicaci(cid:243)n a las
+un ranking u ordenaci(cid:243)n de las mismas. provincias espaæolas(cid:148). Estudios de Econom(cid:237)a
+Aplicada, Vol. 23, pp 753-771.
+Melyn W. y Moesen W.W. (1991), (cid:147)Towards a syn-
+7. REFERENCIAS
+thetic indicator of macroeconomic performance:
+unequal weighting when limited information is
+Blancas, F. J.; Gonzalez, M.; Lozano, M. y PØrez, F.
+available(cid:148), Public Economic Research Paper 17,
+(2010), (cid:147)The assessment of sustainable tourism:
+CES, KU Leuven.
+Application to Spanish coastal destinations(cid:148).
+Murias, P.; Mart(cid:237)nez, F. y de Miguel, C. (2006), (cid:147)An
+Ecological Indicators, Vol. 10, pp. 484(cid:150)492.
+economic wellbeing index for the Spanish provin-
+Charnes, A..; W. Cooper, y E. Rhodes. (1978), (cid:147)Mea-
+ces: a data envelopment analysis approach(cid:148). So-
+suring the Ef(cid:222) ciency of Decision Making Units(cid:148).
+cial Indicators Research, Vol. 77, pp 395-417.
+European Journal of Operational Research, Vol.
+OECD. (2003), (cid:147)Quality Framework and Guidelines
+2, pp 429-444.
+for OECD Statistical Activities(cid:148), www.oecd.org/
+Cherchye, L. (2001), (cid:147)Using data envelopment analy-
+statistics.
+sis to asses macroeconomic policy performance(cid:148).
+Organizaci(cid:243)n Mundial del Turismo (OMT) (2004),
+Applied Economics, Vol. 33, pp 407-416.
+(cid:147)Indicadores de sostenibilidad para los destinos
+Cherchye, L. y Kuosmanen, T. (2002), (cid:147)Benchmar-
+tur(cid:237)sticos. Gu(cid:237)a prÆctica(cid:148), Edn. Madrid, Espaæa.
+king sustainable development: a synthetic meta-
+PØrez, V. E.; Blancas, F. J.; GonzÆlez, M.; Guerre-
+index approach. Econ WPA Working Papers.
+Cherchye, L.; Moesen, W.; Rogge, N. y Van Puyen- ro, F. M.; Lozano, M.; PØrez, F. y Caballero, R.
+broeck, T. (2007), (cid:147)An introduction to bene(cid:222) t of (2009), (cid:147)Evaluaci(cid:243)n de la sostenibilidad del turis-
+the doubt composite indicators(cid:148). Social Indica- mo rural mediante indicadores sintØticos(cid:148). Inves-
+tors Research Vol.1, No.82, pp 111-145. tigaci(cid:243)n Operacional, Vol. 30, No.1, pp 40-51.
+Cherchye, L.; Moesen, W.; Rogge, N. y Van Puyen- Sancho, A.; Garc(cid:237)a, G. y Rozo, E. (2007), (cid:147)Comparati-
+broeck, T. (2006), (cid:147)Creating Composite Indicators va de indicadores se sostenibilidad para destinos
+with DEA Analysis: The case of the Technology desarrollados, en desarrollo y con poblaciones
+Achievement Index(cid:148). Joint Research Centre, Eu- vulnerables(cid:148). Annals of Tourism Research en Es-
+ropean Commission, Italy. paæol, Vol. 9, No.1, pp 150-177.
+Despotis, D. K. (2005), (cid:147)A reassessment of the hu- Singh, R. K.; Murty, H. R.; Gupta, S. K. y Dikshit,
+man development index via data envelopment A. K. (2009), (cid:147)An overview of sustainability as-
+analysis(cid:148). Journal of the Operational Research sessment methodologies(cid:148). Ecological Indicators,
+Society, Vol. 56, pp 969-980. Vol.9, pp 189-212.
+D(cid:237)az, G.; Norman, A. (2006), (cid:147)Manual de procedi- Storrie, D. y Bjurek, H. Benchmarking European la-
+mientos para entrenadores en turismo sustenta- bour market performance with ef(cid:222) ciency frontier
+ble(cid:148). AEC. http://www.acs-aec.org/Tourism/. technique. Discusion Paper FS I 00-2011, 1999.
+Lozano, M.; PØrez, V. E. y Blancas, F.J. (2009), (cid:147)In- Storrie, D. y Bjurek, H. (2000), (cid:147)Benchmarking the
+dicadores sintØticos de sostenibilidad tur(cid:237)stica basic performance indicators using ef(cid:222) ciency
+para destinos rurales: El caso andaluz(cid:148). Innova- frontier techniques(cid:148), Report presented in the Eu-
+ci(cid:243)n, Creatividad y Nuevos Modelos de Gesti(cid:243)n, ropean Commission, DG employment and social
+pp 487-509. affairs.
+Lundin, U. (2003), (cid:147)Indicators for Measuring the Sus- U.N. (1998), (cid:147)Indicators of Sustainable Development(cid:148),
+tainability of Urban Water Systems-a Life Cycle www.un.org/esa/sustdev/indi6.htm.
+Approach(cid:148), PhD Thesis, Department of Environ- World Bank. (1997), (cid:147)Expanding the measure of
+mental Systems Analysis, Chalmers University of wealth. Indicators of environmentally sustaina-
+Technology, Go¤ teborg, Sweden. ble development(cid:148), Environment Department, The
+Mart(cid:237)nez, F.; Dom(cid:237)nguez, M. y Murias, P. (2005), (cid:147)El World Bank, Washington D.C. http://www-esd.
+anÆlisis envolvente de datos en la construcci(cid:243)n worldbank.org.
+ABSTRACT. In the present research we propose a new methodology to build sustainability synthetic
+indicators that constitutes a contribution to those existent. The proposal includes the use of Data
+Envelopment Analysis (DEA) to guarantee a better comprehension of the results to the (cid:222) nal user, and
+permits to solve some aspects that constitute key objections to the actual aggregations methods such
+as the weighting process, the application of a normalization procedure and the aggregation in fact. The
+application takes place in the destinations that represents the nature based tourism offer in Cuba.
+Key words: Data Envelopment Analysis (DEA), synthetic indicators, sustainability, nature based
+tourism.

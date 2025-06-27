@@ -1,0 +1,263 @@
+CienciasMatema´ticas,Vol.29,No.1,Pag.69-73,2015
+Recibido05-2015
+Empleo del sistema algebraico computacional
+SymPy en el proceso de aprendizaje del ca´lculo
+infinitesimal (diferenciacio´n)
+Use of the computer algebra system SymPy in the
+learning process of infinitesimal calculus
+(differentiation)
+Carlos Segura Vidal1*, Ricardo Abreu Blaya1, Julio Cruz Cruz1
+Resumen Elca´lculoinfinitesimalconstituyeunaramaimportantedelana´lisismatema´ticoydentrodelmismo
+el ca´lculo diferencial. En el presente trabajo se propone profundizar en el estudio del concepto de derivada
+ylaresolucio´ndeproblemasmediantelautilizacio´ndelCASSymPy,brindandoas´ıunnuevocriterioparala
+comprensio´ndesucontenidoysuaplicacio´n.Conestosefacilitannumerososca´lculosqueadmitenplantear
+problemas ma´s complejos y ma´s cercanos a la realidad, propiciando as´ı mayor vinculacio´n con la pra´ctica.
+SymPysepuedeutilizardemanerainteractivacomolosCASalosqueseesta´ acostumbradoytambie´nse
+puedeintegrarconelco´digoPythoncomounabibliotecama´s.
+Abstract Thecalculusisanimportantbranchofmathematicalanalysisandwithinthedifferentialcalculus. In
+thepresentworkaimstodeepenthestudyoftheconceptofderivativeandproblemsolvingusingCAS:Sympy,
+providing and a new approach to understanding its content and application. With this many calculations are
+provided that allow problematic more complex and closer to reality, thus promoting greater link with practice.
+SympycanbeusedinteractivelyastheCAStowhichitisbeingusedandcanbeintegratedthePythoncodeas
+alibrary.
+PalabrasClave
+Ca´lculodiferencial,SymPy,CAS,resolucio´ndeproblemas,generacio´ndegra´ficos
+1DepartamentodeLicenciaturaenMatema´tica,UniversidaddeHolgu´ın,Cuba,csegurav@facinf.uho.edu.cu,rabreu@facinf.uho.edu.cu,
+jcruzc@facinf.uho.edu.cu
+*AutorparaCorrespondencia
+1. Introduccio´n histo´rica, que posee lenguaje propio y una estructura con-
+ceptual complejaen sucontenido por loque entran˜a serias
+Las Matema´ticas constituyen la puerta y la llave de las
+dificultadesensuensen˜anzaysuaprendizajealolargodela
+ciencias; estas ocupan un lugar primordial en el avance de
+historia.(DeGuzma´n,[1]).
+laculturadecadasociedad.Ayudanamodelardis´ımilespro-
+Sudesarrollohahechoposibleelgranavancecient´ıficoy
+blema´ticasdelarealidad,potencianeldesarrollodelpensa-
+tecnolo´gicoconelquesecuentaennuestrosd´ıas,yaqueen
+mientohaciendoestemuchoma´sabstracto,lo´gico,anal´ıtico
+granmedidaestosresultadosdependendirectaoindirectamen-
+ydeductivo.Au´nnoexisteunaramadelasmatema´ticaspor
+tedeestaciencia,talessuimportanciaqueesladisciplina
+muyabstractaquesea,queenalgu´nmomento,quenopueda
+ba´sicadecualquiercurr´ıculo.
+aplicarsealosfeno´menosdelmundo.
+Lasociedaddehoynopodr´ıafuncionarsinmatema´ticas. La Dida´ctica de la Matema´tica abarca desde el ana´lisis
+Pra´cticamente todo lo que actualmente nos parece natural, del conocimiento matema´tico como objeto de ensen˜anza y
+desdelatelevisio´nhastalostele´fonosmo´viles,desdelosgran- aprendizaje,hastalosmarcosteo´ricosymetodolo´gicosque
+des aviones de pasajeros hasta los sistemas de navegacio´n permiteninterpretar,predeciryactuarsobrelosfeno´menos
+porsate´liteenlosautomo´viles,desdelosprogramasdelos deensen˜anzayaprendizajedelasmatema´ticas,pasandopor
+treneshastalosesca´neresme´dicos,sebasaenideasyme´todos losconocimientosprofesionalesnecesariosparatransmitiry
+matema´ticos(Stewart,[4]) valorardichosfeno´menos(Rico,SierrayCastro,[3]).
+La Matema´tica es el resultado de una larga evolucio´n Enlaensen˜anzayaprendizajedelaMatema´ticaeldesarro-
+EmpleodelsistemaalgebraicocomputacionalSymPyenelprocesodeaprendizajedelca´lculoinfinitesimal
+70 (diferenciacio´n)
+llodelasTecnolog´ıasdelaInformacio´nylasComunicaciones co´moesta´cambiandox:latasadecambiode f(x)conrespec-
+(TIC)adquierenunpapelprimordial.Parasuestudiosecuenta toax.Desdeelpuntodevistageome´trico,latasadecambioes
+condiferenteslenguajesdeprogramacio´n(Logo,HyperCard), lapendientealatangentealagra´ficade f enelvalorx.Puede
+softwareeducativos(objetosvirtualesdeaprendizaje,simula- aproximarseencontrandolapendientealasecante:unal´ınea
+dores,enciclopedias,multimedias),lossistemasalgebraicos quecortaalagra´ficade f endospuntospro´ximos,correspon-
+computacionales(CASdelingle´scomputeralgebrasystem) dientesaxyx+h,respectivamente,dondehespequen˜o.La
+entrelosquesedestacanGAP,Maxima,SingularparaelA´lge- pendientedelasecantees
+bra,entreotros,todosellosposibilitansuempleoenfuncio´n
+deldesarrollodelaMatema´ticaysuensen˜anza. f(x+h)−f(x)
+.
+LosCASsoncapacesderealizaroperacionessimbo´licas; h
+SymPyesunabibliotecaescritaenPython,entresusprincipa-
+Supongamosahoraquehsehacemuypequen˜o.Entoncesla
+lesfuncionesseencuentran:elmanejodenu´merosenterosde
+secanteseaproximaalatangentealagra´ficaenx.Demodo
+precisio´narbitrariaydenu´merosracionales;simplificacio´n
+que, en cierto sentido, la pendiente requerida - la derivada
+ba´sica; expansio´n; sustitucio´n ba´sica, manejo de funciones
+de f en x - es el l´ımite de esta expresio´n cuando h se hace
+sobreelcuerpodeloscomplejos;divisibilidadyfactorizacio´n
+arbitrariamentepequen˜o.
+de polinomios; resolucio´n de ecuaciones algebraicas, dife-
+renciales y sistemas; operaciones con matrices simbo´licas;
+l´ımites;derivacio´n;integracio´nygeneracio´ndegra´ficos2Dy
+3Dapartirdeconjuntodedatos.
+Elca´lculoinfinitesimalconstituyeunaramaimportante
+delana´lisismatema´ticoydentrodelmismoelca´lculodife-
+rencial. Consiste en el estudio del cambio de las variables
+dependientescuandocambianlasvariablesindependientesde
+lasfuncionesocamposobjetosdelana´lisis.Elprincipalobje-
+todeestudioenelca´lculodiferencialesladerivada(Edwards,
+HostetleryLarson,[2]).
+2. Surgimiento del concepto
+Unodelosavancesma´simportanteenlahistoriadelas
+matema´ticasfueelca´lculoinfinitesimal.Fueinventadoalre-
+dedorde1680porIsaacNewtonyGottfriedLeibnizdeforma
+independiente. Leibniz lo publico´ primero, pero Newton -
+incitadoporamigosultrapatriotas-reclamo´ laprioridady
+describio´ aLeibnizcomounplagiario(Stewart,[4]).
+Figura1.Interpretacio´ngra´fica.
+2.1 Ca´lculoinfinitesimal
+¿Que´eselca´lculoinfinitesimal?Losme´todosdeNewton
+Formalmente,laderivadadeunafuncio´n f enunnu´mero
+y Leibniz son ma´s fa´ciles de entender si presentamos pre-
+x,denotadacon f(cid:48)(x),es
+viamentelasideasprincipales.Elca´lculoinfinitesimalesla
+matema´ticadelastasasdecambioinstanta´neas:¿conque´ ra-
+f(x+h)−f(x)
+pidezesta´ cambiandounamagnitudconcretaenestepreciso l´ım (1)
+instante?Elca´lculoinfinitesimaltienedosramasprincipales. h→0 h
+Elca´lculodiferencialproporcioname´todosparacalculartasas
+siestel´ımiteexiste.
+decambio,ytienemuchasaplicacionesgeome´tricas,enparti-
+cularencontrartangentesacurvas.Elca´lculointegralhacelo Reglasdederivacio´n Enlapra´cticasetornar´ıatediososi
+contrario:dadalatasedecambiodeunamagnitud,determina siempre se tuviera que calcular la derivada de una funcio´n
+lapropiamagnitud.Lasaplicacionesgeome´tricasdelca´lculo aplicandoladefinicio´n,demodotal,queparaello,sedesa-
+integralincluyenlosca´lculosdea´reasyvolu´menes(Stewart, rrollanlasreglasparahallarlasderivadassintenerqueusar
+[4]). directamentedichadefinicio´n.Estasreglaspermitencalcular
+conrelativafacilidadlasderivadasdepolinomios,funciones
+2.1.1 Diferenciacio´n racionales,algebraicas,exponencialesylogar´ıtmicas,trigo-
+Laprimeraideaclavedelca´lculoinfinitesimalesladife- nome´tricas,ytrigonome´tricasinversas.Estasreglasseutilizan
+renciacio´n,queobtieneladerivadadeunafuncio´n.Laderi- paralaresolucio´ndeproblemasenqueintervienenrazones
+vadaeslatasaalaqueesta´ cambiando f(x),comparadacon decambio,ylaaproximacio´ndefunciones.
+EmpleodelsistemaalgebraicocomputacionalSymPyenelprocesodeaprendizajedelca´lculoinfinitesimal
+(diferenciacio´n) 71
+2.1.2 Aplicacionesdeladerivacio´n >>> x*exp
+Algunasdelasaplicacionesma´simportantesdelca´lculo >>> x*(x-2*x*y)
+diferencialsonlosproblemasdeoptimizacio´n,enloscuales >>> from sympy import expand, factor
+sepidelamanerao´ptimadehaceralgo,porejemplo,¿Cua´les >>> expanded expr = expand(x*expr)
+laformadeunalataqueminimicesuscostodefabricacio´n?, >>> expanded expr
+¿Cua´leslaaceleracio´nma´ximadeuntrasbordadorespacial?, x**2 - 2*x*y
+¿Que´a´ngulodebenformarlosvasossangu´ıneosalramificarse, >>> factor(expanded expr)
+demodoqueseminimicelaenerg´ıaconsumidaporelcorazo´n x*(x - 2*y)
+albombearlasangre?Estosprimerosproblemassereducena
+encontrarlosvaloresma´ximoom´ınimodeunafuncio´n.
+Parateneraccesoatodoslosme´todosdelabibliotecay
+Numerosasaplicacionesdelca´lculodependendelacapaci-
+no tener la necesidad de ir importa´ndolos de uno en uno o
+dadparadeducirhechosreferentesalafuncio´n f apartirdela
+porgruposytambie´nparainiciarlaimpresio´nencaracteres
+informacio´nconcernientedesusderivadas.Como f(cid:48)(x)repre-
+Unicodesepuedehacerconlassiguientesinstrucciones:
+sentalapendientedelacurvay= f(x)enelpunto(x,f(x)),
+nosdicecua´lesladireccio´nenqueavanzalacurvaencada
+punto.Resultaentoncesrazonableesperarqueloquesesepa >>> from sympy import *
+de f(cid:48)(x)ayudara´ asaberma´sde f(x).(Stewart,[5]). >>> init printing(use unicode=True)
+Paralaresolucio´ndecualquieradeestosproblemasdela
+vidarealtenemosencomu´n:elca´lculodeladerivada,yen
+ellotambie´npudieraserconcernienteelco´mputoparaencon- 3.2 Ca´lculo de l´ımites, derivadas y gra´fico de fun-
+trarloscerosdelafuncio´nobtenida,evaluarlaenalgu´npunto, ciones
+laelaboracio´ndesugra´ficoentreotrasoperaciones.Eluso Paraobtenerell´ımitedeunaexpresio´nsehacepormedio
+delatecnolog´ıaessignificativapuesayudaalacomprensio´n delme´todolimit,SymPypuedeobtenerell´ımitedecasicual-
+deestosimportantesconceptos;elalumnodebeconocercon quierfuncio´ndeunaovariasvariablesporladerechaoporla
+profundidad el contenido, los sistemas algebraicos compu- izquierdaparaelloutilizaelalgoritmodeGruntz.
+tacionalesleayudara´naencontrarlosresultadosdeunaforma
+Lasintaxisdelimiteslimit(func,x,x ,dir=”+”),calcula
+ma´seficienteyra´pida. 0
+ell´ımitedelafuncio´nfunccuandofunc(x)tiendeax ,porla
+0
+derecha(seobtienepordefectox→x )oporlaizquierda
+0+
+3. Ca´lculo simbo´lico dir=”-” (x→x ); x del mismo modo puede ser infinito
+0− 0
+(−∞,∞).
+SymPyesta´ escritoenPythonlenguajedeprogramacio´n
+demuyaltonivel,porlocualalutilizarsecomounalibrer´ıa
+sepuedenimplementaralgoritmosempleandolasfunciona-
+>>> from sympy import *
+lidadesde ca´lculosimbo´lico quebrinda; alestar escritoen
+>>> x=symbols(‘‘x’’)
+dicholenguajeesfa´cildeentenderydemodificar;sepuede
+>>> func=(3*x**2-x-2)/(5*x**2+4*x+1)
+establecerconotraslibrer´ıascomoSciPy,NumPy,todasin-
+>>> limit(func, x, oo)
+cluidasenelIDEPython(x,y).Seasumequeellectorconoce
+3/5
+aspectosba´sicosdellenguaje.
+>>> func2=(sqrt(x**2+9)-3)/x**2
+>>>limit(func2,x,0)
+3.1 PrimerospasosenSymPy
+1/6
+Loprimeroesan˜adirlabibliotecaparaimportartodaslas
+>>> limit(sin(x)/x, x, 0)
+funcionalidades y operar con ellas a trave´s de la siguiente
+1
+sintaxis:
+>>> import sympy A continuacio´n se muestra un ejemplo del ca´lculo de
+>>> sympy.sqrt(8) la derivada de la funcio´n f(x)=x2−8x+9 utilizando (1)
+2*sqrt(2) tomadodeStewart[5].
+Sisequieredeclararlaexpresio´nsimbo´licaparatrabajar
+conlaexpresio´nmatema´ticax−2y >>> from sympy import *
+>>> def func(x) :
+>>> from sympy import symbols return x**2-8*x+9
+>>> x,y = symbols(’’x y’’) >>> limit((func(x+h)-func(x))/h, h, 0)
+>>> exp = x-2*y 2*x - 8
+EnSymPylasexpresionessepuedenfactorizaroexpandir
+indistintamentesegu´ncomosevayanautilizar,porejemplo: Laderivadadeunaexpresio´nexpsecalculautilizandoel
+EmpleodelsistemaalgebraicocomputacionalSymPyenelprocesodeaprendizajedelca´lculoinfinitesimal
+72 (diferenciacio´n)
+me´tododiff,acontinuacio´nunejemplo: Se han brindado algunas de las funcionalidades para el
+l´ımite,laderivacio´nygra´ficadefunciones.Parama´sinforma-
+3
+f(x)=x5(4−x) (2) cio´nconsultarelmanualdeSymPy(Team,2014).
+f(cid:48)(x)= 5 3 x − 5 2 (4−x)+x 3 5(−1) elgr C a´ o´ fi d c i o go de do f n ( d x) e y se f c (cid:48)( a x lc ) u : laladerivadade f(x)ysemuestra
+3(4−x)−5x
+=
+5x2/5 from sympy import *
+12−8x def main():
+= x=symbols(x)
+5x2/5
+exp = x**Rational(3,5)*(4-x)
+>>> from sympy import * print(\n\n Expression:)
+>>> init printing(use unicode=True) pprint(exp, use unicode=False)
+>>> exp = x**Rational(3,5)*(4-x) print(\n\n Diff:)
+>>> diff(exp,x) pprint(diff(exp,x), use unicode=False)
+−x5 3 + 1 (−3x+12) print(\n\n Factor:)
+2
+>>> df 5x f 5 = diff(exp,x) dff=factor(diff(exp,x))
+>>> factor(dff) pprint(dff, use unicode=False)
+−(8x−12) print(\n\n Graphic Represetation: )
+2
+5x5 plot((exp,(x,-5,8)),(dff,(x,-10,10)))
+if name == main :
+Enelejemplosepuedever,primeroparadeclararunnu´me-
+main()
+roracional,seutilizaelme´todoRational(n,d);endiff(exp,
+x,[n])elsegundopara´metroeslavariableconrespectoala
+quesevaaderivaryaqueSymPytrabajatambie´nderivadas
+convariasvariables,ynesopcionalpordefectoeslaprimera
+derivadasiseespec´ıficacalculaladerivadan-e´sima,sepuede
+utilizarfactor(exp)paraobtenerlaexpresio´nma´ssimplificada.
+Paragraficarfuncionesseutilizaelme´todoplot(exp,(x,
+r1,r2))dondeexpeslafuncio´n,xeselrangodelavariable
+libre,r1yr2elintervalo.
+Figura3.Gra´ficasdelafuncio´n2ydesuderivada.
+Enmuchasocasionesesimportanteevaluarelresultadode
+unaexpresio´n,porejemplocalcular f(cid:48)(2).Paraelloseutiliza
+lafuncio´nevalf.Siendffesta´ laderivadade f(cid:48)(x), f(cid:48)(2)se
+calculadelasiguienteforma:
+>>> dff.evalf(subs = {x : 2})
+Figura2.Gra´ficadelafuncio´n2.
+>>> -0.606286626604159
+>>> from sympy import * 4. Conclusiones
+>>> exp = x**Rational(3,5)*(4-x)
+>>> plot(exp,(x,-1,5)) Elpresentetrabajoprocuracontribuiralaensen˜anzayal
+aprendizajedelca´lculodiferencial,encarrerascomoLicencia-
+Otra forma de usarse es plot es para representar varias turaenMatema´ticayenalgunasingenier´ıasqueaplicanestos
+funciones con rangos espec´ıficos cada una plot((expr1, r), contenidosaltributaraalgunasdelasnecesidadesexistentes
+(expr2,r),....(exprN,rN)). endichoproceso.Conlautilizacio´ndeSymPyelestudiante
+EmpleodelsistemaalgebraicocomputacionalSymPyenelprocesodeaprendizajedelca´lculoinfinitesimal
+(diferenciacio´n) 73
+puedeconstruirsupropioconocimientoatrave´sdelaexperi- [2] Edwards,B.,Hostetler,R.,&Larson,R.(2003).Calculus
+mentacio´nalavezquesepermiteelprocesodemodelacio´n ofaSingleVariable:EarlyTranscendentalFunctions(3a
+matema´ticadeloscontenidosenproblemasrealesutilizando edicio´n).
+laresolucio´ndeproblemas.
+[3] Rico,L.,Sierra,M.,&Castro,E.(2000).Dida´cticadela
+Se logra adema´s el enriquecimiento de conceptos ma-
+Matema´tica.Fundamentosdida´cticosdelasa´reascurri-
+tema´ticosmedianteaproximacionesgra´ficasyalgebraicasde
+culares.Madrid:S´ıntesis.
+losconceptosylosproblemas.Lavisualizacio´npermiteadqui-
+rirlacapacidaddeestablecerrelacionesgra´ficasyalgebraicas [4] Stewart, I. (2008). Historia de las Matema´ticas en los
+entrelosdiferentesconceptos. u´ltimos10.000an˜os.Barcelona:Cr´ıtica.
+[5] Stewart,J.(2002).Ca´lculocontrascendentestempranas,
+Referencias 4a.edicio´n.Me´xico:InternationalThomsonEditores.
+[1] DeGuzma´n,M.(1993).Ensen˜anzadelascienciasyla [6] Team, S. D. (2014). SymPy Documentation. Release
+Matema´tica.TendenciaseInnovaciones.OEI(Organiza- 0.7.6.
+cio´ndeEstadosIberoamericanosparalaEducacio´n,la
+CienciaylaCultura).EditorialPopular.

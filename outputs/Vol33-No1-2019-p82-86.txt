@@ -1,0 +1,353 @@
+CienciasMatemáticas,Vol.33,No.1,Pag.82-86,2019
+Evaluación de los criptosistemas McEliece y
+Niederreiter como candidatos post-cuánticos
+Evaluation of McEliece and Niederreiter
+cryptosystems as post-quantum candidates
+Ernesto Dominguez Fiallo1*, Frank E. Acosta Fonseca1, Luis R. Piñeiro Díaz1
+Resumen Enelpresentetrabajoseanalizanloscriptosistemasbasadosencódigoscorrectoresdeerrores
+McElieceyNiederreiter,asícomosusvariantes.Mostramostambiénlosprincipalesataquesquehanllevado
+a la evolución de los parámetros y la utilización de uno u otro código. También revisamos los parámetros
+recomendadosenlaliteraturaparaunafortalezadeloscriptosistemascontraataquescúanticosyclásicos.
+Abstract InthepresentpaperweanalizeMcElieceandNiederreitererror-correctingcode-basedcryptosystems
+and their variants. Also we show the main attacks which brought to them to new parameters and to the use
+of diferents codes. We review as well the recommended parameters in literature for a strongness of the
+cryptosystemsagainstquantumandclassicattacks.
+PalabrasClave
+McEliece,Niederreiter,criptografíapost-cuántica,criptoanálisis
+Keywords
+McEliece,Niederreiter,post-quantumcryptography,cryptanalysis
+1InstitutodeCriptografía,UniversidaddeLaHabana,LaHabana,Cuba,edominguezfiallo@nauta.cu,frankorazonero@nauta.cu,
+lrp@matcom.uh.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción liece,sehaintentadocambiarelcódigosobreelquesubyace
+elesquema,sinembargo,enlaprácticaestohasidofunesto
+Recientemente se han producido grandes avances en la
+puessehanencontradoataquesdenominadosestructurales,
+construccióndelosordenadorescuánticos[9].En1994,Pe-
+los cuales han criptoanalizado casi todas las variantes pro-
+terShor[24]mostróunalgoritmocuánticodecomplejidad
+puestasexceptolaversiónoriginal(aunquemodificandolos
+polinomialqueresuelveelproblemadefactorizarenterosy
+parámetrosoriginales)yotrasvariantesrecientes.Esteesque-
+elproblemadellogaritmodiscretoenungrupoabeliano.Por
+ma se encuentra actualmente bajo fuerte análisis con el fin
+tanto,losesquemasasimétricosbasadosenlosproblemasde
+deeliminarsusdeficienciasypoderutilizarlocomoestándar
+factorizar enteros y del logaritmo discreto en general y en
+resistentealosataquesenordenadorescuánticos.
+particularencurvaselípticas,quedancompletamentevulnera-
+bles.Conelfinderemediartalsituación,elNIST,apropuesta
+1. Preliminares
+delaNSA,inicióunprocesodebúsquedayestandarización
+deunesquemaasimétricoparaencriptación,firmadigitale Estasecciónfueconfeccionadatomandocomoreferencia
+intercambiodellaves,resistentealosataquesenordenadores [16],[13],[12],[2]y[26].
+cuánticos. Este proceso comenzó en enero de 2016 y debe
+Definición1 SeaFuncampofinito.Uncódigolineal[n,k],al
+finalizarentreel2021y2023[9].
+cualdenotaremosporC,esunsubespaciolinealk−dimensional
+Dentrodelosesquemasasimétricospropuestosaanalizar
+deFn.
+como posibles esquemas post cuánticos, se encuentran el
+criptosistemaMcEliece[21]ysuvarianteNiederreiter[22], Definición2 Parauncódigolineal[n,k]C sobreF,sumatriz
+los cuales se basan en Códigos Correctores de Errores. La generadoraGesunamatrizk×nsobreFcuyasfilasforman
+seguridaddeambosradicaenlacomplejidadcomputacional unabasedeC.
+deresolverelProblemaGeneraldeDecodificaciónenCampos
+Definición3 SeaC uncódigolineal[n,k]sobreF.Unama-
+FinitoselcualfueprobadoNP-completo[3].Estosesquemas
+trizdechequeodeparidadH deC esunamatriz(n−k)×n
+tienencomoprincipaldesventajaquelostamañosdellaveson
+sobreFtalque∀c∈Fn
+muygrandes.
+ConelobjetivodereducirlostamañosdellaveenelMcE- c∈C ⇐⇒cHT =0.
+EvaluacióndeloscriptosistemasMcElieceyNiederreitercomocandidatospost-cuánticos 83
+Definición4 La distancia mínima de C es la mínima dis- Algoritmo1:CriptosistemadellavepúblicaMcEliece
+tancia (distancia Hamming) de cualesquiera dos palabras
+códigosdeC: Generacióndellaves
+1. EscogeruncódigolinealC [n,k,d]sobreF con
+2
+d=
+c1,c2∈
+m
+C
+´ı
+:
+n
+c1(cid:54)=c2
+d(c 1 ,c 2 ). uneficientealgoritmodedecodificaciónD
+quepuedacorregirt errores.
+Si C es un código lineal [n,k] con una distancia mínima d 2. CalcularunamatrizgeneradoraGdek×npara
+entoncesdecimosqueC esuncódigolineal[n,k,d]. C.
+3. GenerarunamatrizaleatorianosingularSde
+Definición5 SeaC uncódigolineal[n,k,d]sobreFconuna
+k×k.
+matrizgeneradoraG.DecimosqueC puedecorregirterrores,
+siexisteunalgoritmodedecodificaciónD :Fn→C talque 4. GenerarunamatrizaleatoriadepermutaciónPde
+∀u∈Fky∀e∈Fn:wt(e)≤t,lapalabray=uG+esiempre n×n.
+sedecodificacomoD(y)=u. 5. CalcularlamatrizG(cid:48)=SGP.
+Lallavepúblicaes(G(cid:48),t)ylallaveprivadaes
+Laseguridaddeloscriptosistemasestudiadosenestetrabajo
+(S,G,P,D).
+estábasadaenelsiguienteproblema.
+Problema. El problema general de decodificación (en Cifrado
+camposfinitos)paracódigoslinealesesdefinidodelasiguien-
+teforma: 1. Representarelmensajecomounacadenabinaria
+m∈{0,1}k.
+SeaC uncódigolineal[n,k]sobreFyy∈Fn.
+2. Escogerunvectoraleatorio
+e∈{0,1}n:wt(e)=t.
+Encontrarx∈C donded(x,y)sealamínima.
+3. Calcularc=mG(cid:48)+e.
+1.1 CriptosistemaMcEliece Descifrado
+DosañosdespuésdeltrabajodeDiffie-Hellmande1976
+1. CalcularcP−1=(mS)G+eP−1.
+NewdirectionsinCryptographyapareceelcriptosistemade
+llavepúblicapropuestoporRobertMcEliece[21].Aunque 2. AplicarelalgoritmodedecodificaciónD ala
+eltrabajooriginalfuebasadoenelcódigobinariodeGoppa, palabracódigocP−1paraobtenerc’=mS.
+puede ser utilizado cualquier subclase de la familia de los 3. Calcularm=c’S−1.
+códigosalternantes.
+Estecriptosistemaharesistidoelcriptoanálisishastanues-
+tros días. Aunque es bastante eficiente en el cifrado y des-
+cifradoharecibidopocaatencióndebidoasuenormellave Deacuerdoaladefinicióndematrizdechequeodeparidad
+públicayporlaexpansióndelmensajeenunfactorden/k. las palabras códigos de C son exactamente aquellas cuyo
+Paralosparámetrosoriginaleslallavepúblicatieneunpoco síndromeesiguala0.Seany 1 ,y 2 ∈Fn.Entonces
+másde219bits(64KB)yelmensajeseexpandeenunfactor
+y −y ∈C ⇐⇒(y −y )HT =0⇐⇒y HT =y HT.
+decasieldoble(≈1,95).Estecriptosistemaseencuentraen 1 2 1 2 1 2
+elAlgoritmo1. Elhechodequey −y seaunapalabracódigodeC si
+1 2
+ysolosilossíndromesdey yy sonigualeseslabasepara
+1 2
+1.2 CriptosistemaNiederreiter implementareficientementeladecodificacióndelapalabra
+código más cercana, el cual es llamado decodificación de
+UnadelasvariantesmásconocidasdelcriptosistemaMcE-
+síndrome.
+liece es el Niederreiter, que fue propuesto por el científico
+austríacoH.Niederreiter[22]en1986.Selellamavariante Definición7 Dadaunapalabracódigoy∈Fnunalgoritmo
+dualdelMcEliecedadoqueutilizalamatrizdechequeode dedecodificacióndesíndromeD encuentraunapalabrade
+paridadenvezdelamatrizgeneradora.Paraentendermejor mínimopesoe∈Fn:
+estecriptosistema,veremosalgunasdefiniciones.
+yHT =eHT.
+Definición6 SeaC uncódigolineal[n,k,d]sobreFyseaH ElcriptosistemaNiederreiterespresentadoenelAlgorit-
+sumatrizdechequeodeparidad.Elsíndromedeunapalabra mo2.
+y∈Fnlodefiniremoscomo
+ElNiederreiteroriginalutilizabacódigosgeneralizados
+Reed-Solomon,peroestecriptosistemacuandoemplealoscó-
+s=yHT.
+digosbinariosdeGoppafuedemostrado[3]quesuseguridad
+CienciasMatemáticas,Vol.33,No.1,Pag.82-86,2019
+84 EvaluacióndeloscriptosistemasMcElieceyNiederreitercomocandidatospost-cuánticos
+Algoritmo2:CriptosistemadellavepúblicaNiederrei- 2.1 Ataquesporfuerzabruta
+ter YaenelprimertrabajodeR.McEliece[21]fueronrepor-
+tadosdosataquesbásicosporfuerzabrutaalaseguridaddel
+Generacióndellaves
+sistema:elprimeroconsisteentratarderecuperarGapartirde
+1. EscogeruncódigolinealC [n,k,d]sobreF conG(cid:48)conelfindeutilizarelalgoritmodePatterson[23](ruptura
+2
+uneficientealgoritmodedecodificaciónde totaldelcriptosistema),elsegundotratadeintentarrecuperar
+síndromesD quepuedacorregirt errores. mapartirdecsinconocerG(deduccioneslocales).Como
+reportaR.McEliece,elprimerataqueparecedesesperanzador
+2. CalcularunamatrizdechequeodeparidadH de
+si n yt son lo suficientemente grandes. El segundo ataque
+(n−k)×nparaC.
+está estrictamente relacionado con el problema de la deco-
+3. GenerarunamatrizaleatorianosingularSde dificación de un código lineal desconocido, con longitud n
+(n−k)×(n−k). ydimensiónk,enpresenciadet errores.E.R.Berlekampy
+4. GenerarunamatrizaleatoriadepermutaciónPdeotrosautoresdemuestranen[3]queelproblemageneralde
+n×n. decodificacióndeloscódigoslinealesesNP-completo;por
+lo tanto, si los parámetros del código son elegidos lo sufi-
+5. CalcularlamatrizH(cid:48)=SHP.
+cientementegrandes,estesegundoataquedefuerzabrutaes
+Lallavepúblicaes(H(cid:48),t)ylallaveprivadaes tambiéninviable.Basadoenestosargumentos,podemosdecir
+(S,H,P,D). que,cualquierenfoquedefuerzabrutacontraelcriptosistema
+McElieceesdemasiadocomplejoparateneréxito.
+Cifrado
+2.2 AtaquesclásicosdeDecodificacióndelConjun-
+1. Representarelmensajecomounacadenabinaria
+todeInformación
+m∈{0,1}k:wt(m≤t).
+Unconjuntodeinformaciónparaunbloquedecódigoli-
+2. Calcularc=mH(cid:48). nealdadosedefinecomounconjuntodevaloresl∈{1,...,n},
+demaneraquedospalabrascódigodifierenenalmenosuna
+Descifrado
+deesasposiciones.Unconjuntodel índicesesunconjunto
+1. CalcularS−1cT =HPmT. deinformaciónsiysólosilascolumnascorrespondientesa
+lamatrizgeneradoradelcódigoGsonlinealmenteindepen-
+2. Aplicarelalgoritmodedecodificaciónde
+dientes.Losalgoritmosdedecodificaciónqueusanconjuntos
+síndromesD alsíndromeHPmT paraobtener
+deinformaciónsonconocidoscomoalgoritmosdedecodifica-
+PmT.
+cióndeconjuntosdeinformación(InformationSetDecoding,
+3. CalcularmT =P−1PmT. ISD).
+Un primer ataque ISD al McEliece fue mencionado en
+[21].ParalosparámetrosoriginalesdelMcElieceesteataque
+requeriría280,4operacionesbinarias(WF).En[19]sepropone
+eraequivalentealadelMcEliece,igualmentehaciendouso utilizarunprocedimientodeterminístico,cuyoWFmínimoes
+deloscódigosdeGoppa. de273,4paraelcason=1024yt=37.Enlaúltimamejorade
+estealgoritmo,[18],fuepropuestounasoluciónparareducir
+2. Criptoanálisis de los criptosistemas sucomplejidad,obteniendoasíunWF=259paraelMcEliece
+McEliece y Niederreiter original.
+Luegodesuprimerapropuesta,ungrannúmerodeartícu- 2.3 Ataques modernos de Decodificación del Con-
+losaparecieronenlaliteraturareportandoposiblesataquesal juntodeInformación
+criptosistemaMcElieceyasusvariantes.Apesardelosvarios Una clase más reciente y eficiente de algoritmos ISD
+intentosdeataques,elcriptosistemaMcElieceseconsiderano utilizalaparadojadelcumpleañosparabuscarpalabrascódigo
+roto,enelsentidodequeningúnalgoritmocapazderealizar debajopesoenuncódigolineal.Unalgoritmoprobabilístico
+unarupturatotal(dondeelatacantededucelallavesecreta) propuestoporJ.Leon[20]estáenfocadoenencontrarpalabras
+entiempopolinomialhasidopresentadohastaahora. códigosdepocopesoencódigoslinealesgrandesutilizando
+A continuación se muestra un resumen de los ataques paraellolamatrizgeneradorapública.Porotraparte,J.Stern
+contra los criptosistemas McEliece y Niederreiter. Para los [27]realizaunavariantedeestealgoritmohaciendousodela
+ataquesalgorítmicosseestimanademáselfactordetrabajo matrizdechequeodeparidad.Paralosparámetrosoriginales
+(workfactor,WF),quenoesmásqueelnúmeropromediode delMcEliecesuWFmínimoesaproximadamente264.
+operacioneselementales(binarias)necesariaspararealizarun ElalgoritmodeJ.Sternhasidoestudiadoymejoradoen
+ataqueexitoso.Elniveldeseguridaddeunsistemaesdefinido ([7],[5],[6]).Específicamenteen[6]sesugiereelusodelos
+como el mínimo WF alcanzado por cualquier ataque en su códigosdeGoppaconn=2048,k=1608,t=40paralograr
+contra. unWFenelordende2100.
+CienciasMatemáticas,Vol.33,No.1,Pag.82-86,2019
+EvaluacióndeloscriptosistemasMcElieceyNiederreitercomocandidatospost-cuánticos 85
+2.4 DistinguidordecódigosGoppaconaltatasa códigosQC-MDPC,aúnbajoevaluación,n=216+6; k=
+UnadelaspremisasdelaseguridaddelMcElieceesque 215+3;d=274, t=264.
+sumatrizgeneradorapúblicaseaindistinguibledeotra(matriz
+generadora)deuncódigolinealaleatorio.Esporestoquela Conclusiones
+única vía para que un atacante decodifique el texto cifrado
+ElMcElieceysuvarianteNiederreitersongrandescan-
+atravésde lallavepúblicaes utilizaralgoritmosgenéricos
+didatosparareemplazaralosalgoritmosexplotadoshoyen
+dedecodificacióndecódigosaleatorios,comolosalgoritmos
+día(RSA,Diffie-Hellman,etc.).Comopruebadeello,eneste
+ISD.En[14]semuestraqueestaindistinguibilidadesfalsa,
+trabajo hemos resumido el estado actual de estos criptosis-
+almenosparaalgunosparámetrosdelcódigo,yqueexisteun
+temas, desde la teoría en la que se basan hasta los ataques
+métodoparadistinguiruncódigoGoppadeuncódigolineal
+quehanllevadoaunarevisióndelosparámetrosutilizados.
+aleatorio.Estedistinguidorsoloesaplicablecuandolatasadel
+Hemosexpuestotambiénlosparámetrosrecomendadosporla
+códigoescercanaa1.Elmismonorepresentaunaamenaza
+literatura,loscuales,aunquetodavíaestánbajoestudio,son
+paralamayoríadeloscriptosistemasMcElieceutilizadosen
+previstosparaunalargaduración.Esperamosqueestetrabajo
+laliteratura,perosiafectaotrosqueutilizancódigosGoppa
+tributeaotrasinvestigacionesenestaáreaypuedallevarala
+conaltatasacomoelesquemadefirmaCFS[10].
+implementacióndeestoscriptosistemasparasuevaluaciónen
+2.5 Ataques de mensajes reenviados y mensajes lossistemasmásutilizadoscomoOpenVPN,IPSec,etc.,así
+relacionados tambiéncomoenlacreacióndecertificadosyfirmasdigitales.
+ElMcElieceoriginalesinsegurocontraataquesadaptivos
+detextoscifradosescogidos(IND-CCA2)[29].Sinembargo, Referencias
+laseguridadIND-CCA2puedeserrestauradaaplicandouna
+[1] Avanzi,Roberto,SimonHoerder,DanPageyMichael
+adecuadaconversióndelcriptosistema[17].Enesteúltimo
+Tunstall:Side-channelattacksontheMcElieceandNie-
+trabajoseestablecetambiénqueestaconversióninsideposi-
+derreiterpublic-keycryptosystems. JournalofCrypto-
+tivamenteeneltamañodelallavepública,puesalllevarla
+graphicEngineering,1(4):271–281,2011.
+mismaaformaestándarosistemática,sereducesutamañode
+k×nak×(n−k)bits.Porotraparte,elNiederreiterpermite [2] Baldi, Marco: QC-LDPC code-based cryptography.
+utilizar matrices públicas en la forma estándar incluso sin SpringerScience&Business,2014.
+ningunaconversión.
+[3] Berlekamp, Elwyn, Robert McEliece y Henk Van Til-
+2.6 Otrosataques borg: On the inherent intractability of certain coding
+Dentro de los ataques de canal colateral (side-channel problems(Corresp.). IEEETransactionsonInformation
+attacks) encontramos un ataque por sincronización (timing Theory,24(3):384–386,1978.
+attack)[28]contraelalgoritmodedecodificaciónalgebraica
+[4] Bernstein,DanielJ,TungChouyPeterSchwabe:Mc-
+dePatterson[23],elcualutilizaladependenciaentreelgrado
+Bits:fastconstant-timecode-basedcryptography. EnIn-
+delpolinomiolocalizadordeerroresyelvectordeerror.Este
+ternationalWorkshoponCryptographicHardwareand
+ataquepuedefuncionarinclusosisehaceusodeunaconver-
+EmbeddedSystems,páginas250–272.Springer,2013.
+sión IND-CCA2 y ha sido mejorado significativamente en
+[25]y[1].Otrasreferenciasaotrosataquesdecanalcolateral [5] Canteaut,AnneyFlorentChabaud:Anewalgorithmfor
+puedenserencontradosen(SPA[15],DPA[8]). findingminimum-weightwordsinalinearcode:appli-
+cationtoMcEliece’scryptosystemandtonarrow-sense
+3. Parámetros recomendados para BCHcodesoflength511. IEEETransactionsonInfor-
+McEliece y Niederreiter mationTheory,44(1):367–378,1998.
+[6] Canteaut, Anne y Nicolas Sendrier: Cryptanalysis of
+Como hemos visto, una buena selección de parámetros
+theoriginalMcEliececryptosystem. EnInternational
+definelafortalezadelcriptosistemaestudiado.Adíadehoy
+ConferenceontheTheoryandApplicationofCryptology
+losparámetrosrecomendadosporlaliteraturaparaloscódigos
+and Information Security, páginas 187–199. Springer,
+Goppa,tantoparaelMcEliececomoparaelNiederreiter,son
+parauncódigo[n,k,t]=[6960,5413,119].Estosparámetros 1998.
+fueron propuestos por D. Bernstein y otros autores en [4]
+[7] Chabaud,Florent:Onthesecurityofsomecryptosystems
+y ratificados por el proyecto europeo PQCRYPTO en [11].
+basedonerror-correctingcodes. EnWorkshoponthe
+Paraestosvaloresselogra2240,4 bitsdeseguridadclásicay
+TheoryandApplicationofofCryptographicTechniques,
+2153,1deseguridadpostcuántica[30].Enesteúltimotrabajose
+páginas131–139.Springer,1994.
+disminuyenestosparámetros[n,k,t]=[5542,4242,100]con
+elobjetivodeobtener2128,0 bitsdeseguridadpostcuántica, [8] Chen, Cong, Thomas Eisenbarth, Ingo Von Maurich
+mientrasquealcanza2198,7deseguridadclásica.Porotraparte yRainerSteinwandt:Differentialpoweranalysisofa
+PQCRYPTOrecomiendalossiguientesparámetrosparalos McEliececryptosystem. EnInternationalConferenceon
+CienciasMatemáticas,Vol.33,No.1,Pag.82-86,2019
+86 EvaluacióndeloscriptosistemasMcElieceyNiederreitercomocandidatospost-cuánticos
+Applied Cryptography and Network Security, páginas [19] Lee,PilJoongyErnestFBrickell:Anobservationon
+538–556.Springer,2015. thesecurityofMcElieceâspublic-keycryptosystem. En
+WorkshopontheTheoryandApplicationofofCrypto-
+[9] Chen,Lily,LilyChen,StephenJordan,YiKaiLiu,Dus-
+graphicTechniques,páginas275–280.Springer,1988.
+tinMoody,RenePeralta,RayPerlneryDanielSmith-
+[20] Leon,JeffreyS:Aprobabilisticalgorithmforcomputing
+Tone:Reportonpost-quantumcryptography. USDe-
+minimumweightsoflargeerror-correctingcodes. IEEE
+partmentofCommerce,NationalInstituteofStandards
+TransactionsonInformationTheory,34(5):1354–1359,
+andTechnology,2016.
+1988.
+[10] Courtois, Nicolas T, Matthieu Finiasz y Nicolas Sen-
+[21] Mceliece,RobertJ:Apublic-keycryptosystembasedon
+drier:HowtoachieveaMcEliece-baseddigitalsignatu-
+algebraic. CodingThv,4244:114–116,1978.
+rescheme. EnInternationalConferenceontheTheory
+andApplicationofCryptologyandInformationSecurity,
+[22] Niederreiter,Harald:Knapsack-typecryptosystemsand
+páginas157–174.Springer,2001.
+algebraiccodingtheory. Prob.ControlandInf.Theory,
+[11] Daniel,Augot,BLejlaycols.:Initialrecommendations 15(2):159–166,1986.
+oflong-termsecurepost-quantumsystems. PQCRYPTO.
+[23] Patterson, Nicholas: The algebraic decoding of Gop-
+EU.Horizon,2020,2015.
+pa codes. IEEE Transactions on Information Theory,
+[12] Eisenbarth, Thomas, Tim Güneysu, Stefan Heyse y 21(2):203–207,1975.
+Christof Paar: MicroEliece: McEliece for embedded
+devices. En Cryptographic Hardware and Embedded [24] Shor, Peter W: Polynomial-time algorithms for prime
+Systems-CHES2009,páginas49–64.Springer,2009. factorizationanddiscretelogarithmsonaquantumcom-
+puter. SIAMreview,41(2):303–332,1999.
+[13] Engelbert,Daniela,RaphaelOverbeckyArthurSchmidt:
+A summary of McEliece-type cryptosystems and their [25] Shoufan,Abdulhadi,FalkoStrenzke,HGregorMolter
+security. Journal of Mathematical Cryptology JMC, y Marc Stöttinger: A timing attack against Patterson
+1(2):151–199,2007. algorithmintheMcEliecePKC.EnInternationalConfe-
+renceonInformationSecurityandCryptology,páginas
+[14] Faugere,JeanCharles,ValérieGauthier-Umana,Ayoub
+161–175.Springer,2009.
+Otmani,LudovicPerretyJeanPierreTillich:Adistin-
+guisher for high-rate McEliece cryptosystems. IEEE [26] Siim,Sander:StudyofMcEliececryptosystem. 2015.
+TransactionsonInformationTheory,59(10):6830–6844,
+2013. [27] Stern,Jacques:Amethodforfindingcodewordsofsmall
+weight. EnInternationalColloquiumonCodingTheory
+[15] Heyse,Stefan,AmirMoradiyChristofPaar:Practical
+andApplications,páginas106–113.Springer,1988.
+poweranalysisattacksonsoftwareimplementationsof
+McEliece. EnInternationalWorkshoponPost-Quantum [28] Strenzke,Falko,ErikTews,HGregorMolter,Raphael
+Cryptography,páginas108–125.Springer,2010. Overbeck y Abdulhadi Shoufan: Side channels in the
+McEliece PKC. En International Workshop on Post-
+[16] Jochemsz, Ellen: Goppa Codes & the McEliece Cry-
+Quantum Cryptography, páginas 216–229. Springer,
+ptosystem. Doktorarbeit,UniversiteitvanAmsterdam,
+2008.
+2002.
+[17] Kobara, Kazukuni y Hideki Imai: Semantically secu- [29] Sun,HungMin:FurthercryptanalysisoftheMcEliece
+reMcEliecepublic-keycryptosystems-conversionsfor public-keycryptosystem. IEEEcommunicationsletters,
+McEliecePKC. EnInternationalWorkshoponPublic 4(1):18–19,2000.
+KeyCryptography,páginas19–35.Springer,2001.
+[30] Vries,SHS:Achieving128-bitsecurityagainstquantum
+[18] Kruk,EvgeniiAvramovich:Decodingcomplexitybound attacksinOpenVPN. TesisdeLicenciatura,University
+forlinearblockcodes. ProblemyPeredachiInformatsii, ofTwente,2016.
+25(3):103–107,1989.
+CienciasMatemáticas,Vol.33,No.1,Pag.82-86,2019

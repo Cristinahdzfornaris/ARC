@@ -1,0 +1,1304 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98
+Recibido(Received):30-04-2024,Revisado(Reviewed):21-06-2024
+Aceptado(Accepted):23-10-2024,Enlínea(Online):19-11-2024
+Estudio matemático de la diabetes en gestantes y no
+gestantes
+Mathematical study of diabetes in pregnant and
+non-pregnant
+Jorly Alberto Pérez Pérez1* , Sandy Sánchez Domínguez2 , Adolfo Arsenio Fernández
+García3 , Tahiry Gómez Hernández4 , Leticia Cristina Bequer Mendoza5
+Resumen Seanalizanvariosmodelosmatemáticos(complejosylineales)paraobservarlainteracciónentre
+lainsulinaylaglucosapresenteenlaspersonasenfermasono,loqueincluyeelcasogestante.Paraello,se
+realizaundesglosedelflujodeglucosaeinsulinayseanalizanvarioscompartimentos.Sepresentanejemplos
+dondeelmodeloseaplicaaratasWistar comounpasoesencialparalavalidaciónyutilizacióndelmismoenla
+prácticaclínica.
+PalabrasClave:ajustedecurvas,diabetesmellitus,modeloslineales,pronósticodeconcentraciones.
+Abstract Differentmathematicalmodels(complexandlinear)areanalyzedtoobservetheinteractionbetween
+insulinandglucoseindiseasedandnon-diseasedindividuals,includingthepregnantcase. Forthispurpose,a
+breakdownoftheglucoseandinsulinflowisperformedandseveralcompartmentsareanalyzed. Examplesare
+presentedwherethemodelisappliedtoWistarratsasanessentialstepforthevalidationanduseofthemodel
+inclinicalpractice.
+Keywords: curvefitting,diabetesmellitus,linearmodels,concentrationforecasting.
+MathematicsSubjectClassification: 92-10,34C60,34D20,65Z05.
+1DepartamentodeMatemática,UniversidadCentralMartaAbreudelasVillas,VillaClara,Cuba.Email:jorlyalbertoperezperez@gmail.com
+2DepartamentodeMatemática,EscuelaIterarmasGeneralJoséMaceoGrajales,SantiagodeCuba,Cuba.Email:sandys1978@gmail.com
+3DepartamentodeMatemática,UniversidaddeOriente,SantiagodeCuba,Cuba.Email:adolfof@uo.edu.cu
+4UnidaddeInvestigacionesBiomédicas,UniversidaddeCienciasMédicasdeVillaClara,VillaClara,Cuba.Email:tahirygh@infomed.sld.cu
+5UnidaddeInvestigacionesBiomédicas,UniversidaddeCienciasMédicasdeVillaClara,VillaClara,Cuba.Email:leticiacbm@infomed.sld.cu
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,Cuba.
+Citar como: Pérez Pérez, J.A., Sánchez Domínguez, S., Fernández García, A.A., Gómez Hernández,
+T.,& Bequer Mendoza, L.C. (2024). Estudio matemático de la diabetes en gestantes y no gestantes. Cien-
+ciasMatemáticas,36(Único),87–98.DOI:https://doi.org/10.5281/zenodo.14187591.Recuperadoapartirde
+https://revistas.uh.cu/rcm/article/view/9075.
+Introducción páncreasnoproducesuficienteinsulinaocuandoelcuerpo
+nopuedeutilizardeformaeficazlainsulinaqueproduce.La
+Ladiabetesmellitusesunadelasenfermedadesquemás
+insulinaesunahormonaqueregulalaglucemiaensangre.Por
+afectaalaspersonasanivelmundialsuperandolos422millo-
+otrolado,lahiperglucemia,oaumentodelniveldeglucemia
+nesdecasossegúnlasestadísticasdelaOrganizaciónMundial
+ensangre,esunefectocomúndeladiabetesnocontrolada
+de la Salud [30]. Esta es una de las enfermedades que más
+y,coneltiempo,conduceadañosgravesenmuchosdelos
+problemasdesalud(complicaciones)traeconsigo,puesdismi-
+sistemas del cuerpo, especialmente los nervios y los vasos
+nuyelaesperanzadevida.En2019fuelanovenacausamás
+sanguíneos[30].
+importantedemuerte,1,5millonesdefallecimientosfuerona
+consecuenciadeladiabetes[4].Laenfermedadpuedecausar Porotroladolainsulinaesproducidaporelpáncreas,una
+ceguera,insuficienciarenal,infartodelmiocardio,accidente glándula lobulada color rosa grisáceo, con una longitud de
+cerebrovascularyamputacionesdemiembrosinferiores[26]. 12a15cm,queseextiendeensentidotransversalsobrela
+Es una enfermedad crónica que se produce cuando el paredabdominalposterior,desdeelduodenohastaelbrazo,
+88 Estudiomatemáticodeladiabetesengestantesynogestantes
+pordetrásdelestómago[31].Elpáncreaspropicialaexpo- epinefrina, cortisol y la hormona de crecimiento. Durante
+siciónamenosproteínasextrañasycontienetejidoexocrino el período perioperatorio deben estar presentes cantidades
+conformadoporcélulasacinaresproductorasdeenzimasdi- adecuadasdeinsulinaparaprevenirladescompensaciónme-
+gestivas.Tambiénpresentauntejidoendocrinocompuestopor tabólica[8].
+lascélulasdelosislotesdeLangerhans[8]. Enocasioneslosnivelesdeglucosadisminuyenmásde
+Lainsulinatienelamisióndeintervenirenelmetabolismo lonormal,locualsedenominahipoglicemia.Estasedefine
+de los carbohidratos, lípidos y proteínas, así como facilitar comounaconcentracióndeglucemiaplasmáticalosuficiente-
+quelaglucosaquecirculaenlasangrepenetreenlascélulas mentebajaparaproducirsignososíntomascompatiblescon
+yseaaprovechadacomoenergía.Lainsulinaesunaproteína alteracióndelafuncióncerebral[16].
+quecontiene51aminoácidosdispuestosendoscadenas(Ay Engeneral,seempiezanasentirlasmanifestacionesfísi-
+B)unidasporpuentesdisulfuro;existendiferenciasdeespecie casdefaltadeglucosacuandoelniveldeglucemiaes≤50
+enlosaminoácidosdeambascadenas[21].Cuandoseingie- mg/dl, que es cuando empiezan los síntomas o “señales de
+renalimentosquecontienencarbohidratos,seactivanunos alerta”paralasalud[10].Cuandolosvaloresdeglucosaen
+sensoresyelpáncreasempiezaaproducirinsulina,quelibera sangreseencuentranelevadosseproduceunahiperglucemia,
+directamentealasangre.Lainsulinaesunahormonaasociada queesindolora,deinstauraciónprogresivaymuchasveces
+con la abundancia de energía, ya que almacena energía so- pasainadvertida[35].
+brantedelexcesodelaalimentacióndealimentosenergéticos,
+enparticular,deexcesodecarbohidratosyproteínas[13]. Relevancia del estudio
+Esta hormona circula en sangre como monómero libre
+LaUnidaddeInvestigacionesBiomédicasdelaUniver-
+y su volumen de distribución se aproxima al del volumen
+sidad de Ciencias Médicas de Villa Clara colabora con el
+extracelular. Su vida media en plasma es de 5 a 8 minutos.
+proyectodematemáticaaplicadaalabiologíaunproblemade
+Casi todos los tipos de células responden a la insulina, sin
+manejodedatos.Demanerageneral,sedeseaidentificarel
+embargo,elhígado,losmúsculosyeltejidoadipososonlos
+comportamientorealencadainstantedetiempoyladistribu-
+mássensiblesalahormona[14].
+ciónquetienelaglucosaenelorganismo,ademásdeconocer
+Porotraparte,laglucosaesunaaldohexosaqueconstituye el punto donde la glucosa es máxima, todo esto a partir de
+laprincipalfuentedeenergíaparalacélula.Eslaúnicafuente pruebasrealizadasenellaboratorioderatasWistar.Espor
+deenergíaparaelsistemanervioso.Debemantenerseaunas ello,queapartirdeunaidentificacióndelosparámetrosse
+concentracionesrelativamenteconstantesenlasangre.Los logranlassimulacionessobrelosdatosrecolectadosporlos
+tejidosquedisponendeenzimasparalasíntesisdelaglucosa especialistasenellaboratorio,loqueofreceunasoluciónalos
+sonelhígadoylosriñones[29].Todalaglucosaingeridacon problemasplanteadosydarespuestaalosobjetivos.Apartir
+losalimentosdeladietaesconsumidapararealizartrabajo deestosresultadossepuedentomardecisionesclínicaspara
+molecularoesalmacenada.Dehecho,lascantidadescircu- continuarconlasinvestigaciones.
+lantesdeglucosaenlasangreestánestrictamentereguladas Elesquemacompartimentalparalosmodelosdecinética
+por la demanda y oferta de energía metabólica, y represen- enelcuerpohumanoesutilizadoconfrecuencia.Porejemplo,
+tanlascantidadesmínimamenterequeridasparasostenerla el modelo de Sorensen es uno de los más completos pues
+actividadmetabólicadelcerebro,queesunodelosmayores tieneencuentalacantidaddeecuacionesqueintervienenen
+consumidoresdeglucosa[17]. el mismo, sin embargo, no considera el desarrollo del feto
+Eselhígadoelencargadodelmantenimientodelosnive- enembarazadas[32].Laaplicacióndeestemodeloimplica
+les de glucosa sanguínea. Además, detecta las necesidades unacomplejidadcomputacionalmuyalta.Porotrolado,enla
+deglucosadelorganismoyproporcionaglucosaparaladi- revisiónbibliográficarealizadasehallóquelosinvestigadores
+gestiónoseencargadeobtenerglucosapordegradacióndel para realizar simulaciones proporcionan los parámetros de
+glucógeno,laformaenlacuallaglucosasealmacenaenel formaempírica,peronoprovenientesdedatosrecolectadosen
+hígado.Encasosdeayunoprolongado,cuandolaglucosano pruebasdelaboratorio,comoserealizóenestainvestigación.
+essuministradaporladietaylasreservasdeglucógenosehan
+agotado,elhígadoseencargadesintetizarglucosaapartirde 1. Enfermedad de Diabetes
+aminoácidosuotrasmoléculas,enunprocesodenominado
+Delosestudiosseconocenhastaelmomentoqueexisten
+gluconeogénesis[3].Paraentrardentrodelascélulasyser
+trestiposprincipalesdediabetes:
+utilizadacomoenergía,laglucosanecesitalamediacióndela
+insulina,dadoqueestaestimulalacaptaciónyutilizaciónde Diabetesmellitustipo1 Consisteenlaproducciónmuyde-
+glucosapormúsculosytejidoadiposo,suprimelaproducción ficiente de insulina. Se suele desarrollar a una edad
+hepática de glucosa por glucogenolisis y neoglucogénesis, temprana,sobretodoenniñosyjóvenes,ysussínto-
+previene el desarrollo de cetosis y el catabolismo proteico masseconocencomolas3P:polidipsia(excesivased),
+[28]. poliuria(excesivasganasdeorinar)ypolifagia(ham-
+Elcontrolglucémicosemantieneporunbalanceentrein- bre constante) [38]. Su característica distintiva es la
+sulinayhormonascontrarregulatoriastalescomoelglucagón, destrucción autoinmune de la célula β generada por
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98 PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A.,
+https://revistas.uh.cu/rcm/article/view/9075 GómezHernández,T.,&BequerMendoza,L.C.
+https://doi.org/10.5281/zenodo.14187591
+Estudiomatemáticodeladiabetesengestantesynogestantes 89
+el páncreas, lo cual ocasiona deficiencia absoluta de problemasdesalud.Además,incrementaelriesgodequeel
+insulinaytendenciaalacetoacidosis[25]. bebétengamalformacionescongénitas.Esmayorelriesgode
+perderalbebéporunabortoespontáneo,esdecir,perderal
+Diabetesmellitustipo2 Secaracterizaporelusopocoefi-
+bebéantesde20semanasoporfetomuertoretenido[7].
+cazdelainsulinaporpartedelorganismo,debidoprin-
+Porotrolado,enlasembarazadascondiabetesaumenta
+cipalmenteaquesucalidadespeor.Lascausasdela
+laprobabilidaddecontraerpreeclampsia,queesunaafección
+diabetestipo2sonelsobrepeso,elsedentarismo(muy
+enlaquesetienepresiónarterialaltayexcesodeproteínasen
+pocaactividadfísica)yunadietadesequilibradayrica
+laorinadurantelasegundamitaddelembarazo.Estaafección
+enazúcaresygrasas.Deahíquetienemayorprevalen-
+puedecausarproblemasgravesparalaembarazadayparael
+ciaenpersonasconunaedadavanzada[33].
+bebéquepuedenserpotencialmentemortales.Laúnicacura
+Diabetesmellitusgestacional Consiste principalmente en paralapreeclampsiaeselparto[27].
+hiperglucemiasquesedanenalgunasmujeresembara-
+zadas[38]. 1.2 Deteccióndeladiabetes
+Existenotrostiposespecíficosdediabetesmenoscomunes Los niveles que se manejan de glucemia para pruebas
+[25]. aleatoriasdiariasproporcionanlosrangosdondeexistemenos
+omáspeligrosidad.Estosestándeterminadosenmedidasde:
+1.1 Diabetesenembarazadas hiperglicemianivel2>250mg/dl,hiperglicemianivel1de
+Loscambiosdurantelagestaciónseproducenentodoslos 181a250mg/dl,normal70a180mg/dl,hipoglucemianivel
+nivelesenlamadre,dondeocurrencambioscardiovasculares, 1 54 mg/dl a 69 mg/dl e hipoglucemia nivel 2 <54 mg/dl.
+respiratorios y metabólicos en respuesta a la necesidad de Sisetomaranencuentalashorasdeldíaquepresentanlos
+mantenerunadecuadoequilibrioentrelamadreyelfeto,lo rangosprincipalesseobtienenlosvaloresdelaTabla1.Cada
+cualgarantizarásuadecuadodesarrollo.Enelcontextodel incremento de un 5% en el rango de (70-180% mg/dl) es
+metabolismodelaglucosa,estasadaptacionesocurrenpara clínicamentebeneficioso.
+asegurarunaderivacióncorrectadelaglucosaparapromover
+eldesarrollofetal,mientrassemantieneunanutriciónmaterna Tabla1.Promediodedesglosediariodelosrangospara
+adecuada[34]. personasdiabéticas,según[9][Averagedailybreakdownof
+Elpáncreasendocrinofetalesindependientedelamadre. diabeticranges,accordingto[9]].
+Antelahiperglucemiadelasmadresdiabéticaselfetotieneun Rangosdeglucosa %delaslecturas(Horas/días)
+aumentodeproduccióninsulínica(inclusohipertrofiadelos 70-180mg/dl Cercadel70%(16h48min)
+islotesdeLangerhans),loquejustificaríalasmacrosomíasy <70mg/dl <4%(58min)
+lascrisishipoglucémicasdelosreciénnacidosdeestasmadres <54mg/dl <1%(14min)
+diabéticas. La producción de glucagón es, por el contrario, >180mg/dl <25%(6h)
+menor[19]. >250mg/dl <5%(1h12min)
+Elequilibrioenlaregulacióndelaglucosaesfundamen-
+talparalasaludmaterno-fetaldurantetodoslostrimestresde
+gestación.Primeramente,duranteelembarazolosnivelesde La prueba oral de tolerancia a la glucosa es uno de los
+glucosaensangreenayunasdisminuyen.Estosedebeparcial- diagnósticos más certeros para la verificación de diabetes,
+mentealosefectosdediluciónamedidaqueseincrementael ademásdeserlabasedelmodeloestudiado.Elmismopuede
+volumendesangredelamadreyestossemantienenconstan- seraplicadoparaexámenesdeglucosaendiferentesintervalos
+tesenelsegundotrimestreysereducenaúnmásduranteel de tiempo. Es decir, los datos pueden ser tomados cada 30
+tercertrimestredeembarazo[36]. minutosocadahora,asícomo3horasdespuésdelayunode
+El aumento de la utilización de glucosa por parte de la 8horasyhabersuministradounasobrecargadehidratosde
+unidadfetoplacentariaduranteelembarazo,loqueelimina carbono(azúcarparaestecaso)deunos75gal20%enagua
+laglucosadelacirculaciónmaterna,tambiéncontribuyeala (Tabla2)[22].
+disminucióndelosnivelesdeglicemiaenayuna.Duranteeste
+períododeaumentodelautilizacióndeglucosa,lasensibi- Tabla2.Valoresmáximosdeglucemiasdespuésdela
+lidadalainsulinamaternadisminuye.Paracompensarestos sobrecargapara3horassegún[9][Maximumvaluesof
+cambios,tantolagluconeogénesishepáticamaternacomolos glycemiaafteroverloadfor3hours,acoordingto[9]].
+nivelesdeácidosgrasosaumentan[34]. Tiempo(min) Valormáx.(glucemiaenplasma)Basal
+Paralapersonadiabéticaelembarazorepresentaunriesgo
+(enayunas) 105mg/dl
+extremadamentedelicado,tantoparaellacomoparaelfeto
+60min 190mg/dl
+enformación.Aumentalaprobabilidaddequeelbebétenga
+120min 165mg/dl
+problemas,comonacerenformaprematura,tenerexcesode
+180min 145mg/dl
+peso,tenerproblemasrespiratoriosotenerunnivelbajode
+glucosaensangreinmediatamentedespuésdenacer,uotros
+PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98
+GómezHernández,T.,&BequerMendoza,L.C. https://revistas.uh.cu/rcm/article/view/9075
+https://doi.org/10.5281/zenodo.14187591
+90 Estudiomatemáticodeladiabetesengestantesynogestantes
+2. Modelos matemáticos
+La literatura científica sobre modelos matemáticos que
+sonutilizadosendiabetologíaesamplia,loquepermitecom-
+prenderladinámicadelaglucosaydelainsulina,asícomola
+relaciónentrelasvariablesqueintervienenenelprocesoysu
+interacción.Estosmodelosmatemáticospuedenserlinealeso
+nolineales.Acontinuaciónseexponenlospasosnecesarios
+parallegaraproponerelmodeloylosdatosqueintervienen
+enelprocesoparavalidardichomodelomatemático.
+Los sistemas biológicos dinámicos en la naturaleza fre-
+cuentementesonnolineales,losmodelosdeordeninferior
+no pueden describir adecuadamente el proceso real y, por Figura1.Esquemadedoscompartimentossegún[1]
+tanto,podríancontenertantosnivelesinaceptablesdeerror [Diagramoftwocompartmentsaccordingto[1]].
+enelmodeladocomodesajustessignificativosenelproceso
+delmodelado[2].Losmodelosnolinealestienendiferentes
+Otrosmodelosusadosporsugeneralidadyfacilidadde
+nivelesdecomplejidad.Losmodeloscomplejosseesfuerzan
+trabajosonlosmodelosmono-compartimentales.Estosrepre-
+poragruparlosconocimientosgeneralesdelaregulaciónme-
+sentanalorganismocomouncuboountanquededistribución
+tabólica,esdecir,unmodelonolinealdeordensuperior,con
+homogénea,presuponequelasconcentracionesplasmáticas
+ungrannúmerodeparámetros[18].
+deunfármacosonfielreflejodelasconcentracionesenotros
+Generalmente, estos modelos pueden ser representados
+fluidosotejidos,yquelaeliminacióndelfármacoesdirec-
+medianteelsistemadeecuacionesdiferenciales:
+tamente proporcional a los niveles de dicho fármaco en el
+
+ y′ 1 = f 1 (y 1 ,...y n ) organismo (cinética de primer orden). Puede representarse
+... . (1) gráficamente como un tanque donde la velocidad a la que
+y′
+= f (y ,...y )
+drenaelaguaensuinterioresproporcionalalacantidadde
+n n 1 n
+aguaquecontiene[11].
+Estemodelopretendeayudaradecidirquénuevasmedi-
+das,variablesoquéparámetrosdebenajustarseparalograr 2.1 Modelosmatemáticosparalaprediccióndela
+un resultado o estado concreto del sistema modelado [37]. insulina-glucosaensangre
+Paradefinirlasecuacionesquerigenelsistemaexistenvarias A continuación se exponen cuatro modelos para la pre-
+metodologías. Una de las técnicas con un gran número de diccióndelainsulina-glucosaensangre.ElmodelodeBolie
+aplicacionesenlafarmacocinéticaeslamodelaciónmediante esuni-compartimentalqueilustralarelaciónmatemáticaen-
+compartimentos[20]. tre la cinética de la glucosa y de la insulina en el plasma
+Estosmodelossebasanendividirelsistemaencomparti- sanguíneo.Sebasaenlaretroalimentaciónentrelaglucosa
+mentosqueinteraccionanentreellosmedianteelintercambio einsulina,quefuepreviamentedefinida,dondeserealizan
+delasdistintassustancias.Estetipodeanálisisesmuyutiliza- suposicionesapropiadasconelfindedeterminarcuálescoefi-
+doparaelestudiodeltransportedentrodelcuerpohumanode cientesdesensibilidadfisiológicadominalascaracterísticas
+hormonas,productosquímicos,radionucleidos,entreotros.El matemáticasdelascurvasdetoleranciadelaglucosaylainsu-
+intercambiodesustanciasentrelosdiferentescompartimentos linanormales.Estoscoeficientesseencuentranapartirdeda-
+secalculautilizandomodelosbiocinéticos.Dichosmodelos tosexperimentalesqueseaproximanaloscriteriosconocidos
+sebasanen: deamortiguamientocríticodelateoríadelservomecanismo
+[6].
+1. Asimilarelorganismohumanoaunconjuntodecom-
+Ackermanpropusounmodelodetoleranciayutilización
+partimentosdiscretos.
+delaglucosaoralyotroparalainfusióndeinsulinaintrave-
+2. Cuantificarlasfuncionestemporalesquepermitenca- nosa.Elmismoesunasimplificacióndelsistemadecontrol
+racterizarlosprocesosbiológicosdetransferenciade fisiológico, pues se deriva de una simplificación de un dia-
+actividadentredoscompartimentos. gramageneraldecorrelaciónentrelasfuncionesfisiológicas
+conocidas que realiza el organismo para regular la glucosa
+3. Caracterizarlatransferenciadeactividadenelconjunto
+einsulinaensangre.Lasecuacionespropuestassebasanen
+decompartimentosmedianteunsistemadeecuaciones
+ecuacioneslinealescondoscanalesderuidosJyK:
+diferenciales,cuyaresoluciónpermitiráconocerlaevo-
+lución temporal de la actividad del radionucleido en dg
+cadacompartimento[1].
+
+dt
+=m
+1
+g−m
+2
+h+J(t)
+, (2)
+dh
+Unesquemacondoscompartimentosenelqueseplan-  =m g−m h+K(t)
+3 4
+dt
+teaevaluareltránsitodeunadeterminadasustanciaconuna
+incorporaciónrepresentadamuestralaFigura1. dondem,i=1,2,3,4sonconstantespositivasylasfunciones
+i
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98 PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A.,
+https://revistas.uh.cu/rcm/article/view/9075 GómezHernández,T.,&BequerMendoza,L.C.
+https://doi.org/10.5281/zenodo.14187591
+Estudiomatemáticodeladiabetesengestantesynogestantes 91
+JyK representanelgradodeglucosaeinsulinaexternaque revelanunmodelopulsátildedescargadelahormona,con
+influyeenelcambio[12]. ráfagassecretoraspequeñasaproximadamentecada10min
+OtromodelopropuestoeseldeBergmandondeexisten superpuestasaoscilacionesdemayoramplitudde80a150
+principalmente dos casos: la respuesta pancreática y la re- min[15].
+sistenciaalainsulina.Lacontribucióndelaliberaciónyla Apartirdelanálisisbiológicoserealizaelesquemadela
+acción de la insulina fue medida al interpretar la dinámica Figura2,queidentificaelflujodemoléculas,tantodeinsulina
+delaglucosaplasmáticaylainsulinaduranteunapruebade como glucosa, una vez realizada la ingesta después de un
+toleranciaalaglucosaporlavíaintravenosa[5]. ayunomayoralasochohoras.Enestafiguraseexponeque
+Finalmente,Sorensenpropusounmodelofisiológicodel unavezrealizadalaingestiónpasaintestinoydeestesepasa
+metabolismodelaglucosaenpacientescondiabetestipo1, alasangre.Lavelocidaddetransferenciadeglucosahacia
+donde se usó la técnica de compartimientos para represen- lasangresedeterminamedianteunafunciónquedependede
+tarlosprincipalesórganosdelcuerpohumanoinvolucrados qué tipo de organismo se estudie. Una vez en la sangre, se
+enladinámicadelaglucosaeinsulina.Elresultadofueun mezclaconlaglucosaexistenteproductoalaglucogenólisis
+modelomatemáticonolinealformadoporunsistemade19 producidaporelhígado.Pasadoelumbraldeglucosa,permite
+ecuacionesdiferencialesordinariasdeprimerorden,dividido que el páncreas pase de producir glucagón a insulina y la
+entressubsistemasquerepresentanladinámicadelaglucosa, misma comience a mezclarse con la sangre. La insulina es
+lainsulinayelglucagónrespectivamente[32]. elconectorconlacélulapararealizartantoelmetabolismo
+comoelalmacenamientodeglucosa.Lainsulinaesdegradada
+3. Modelo compartimental propuesto por el hígado mientras que parte de la glucosa que no fue
+usada también es degradada por el riñón. El esquema fue
+De manera general, considerar que G=G(t)−G∗; I = propuesto atendiendo a las necesidades de la investigación
+I(t)−I∗donde,G(t)eI(t)sonlasconcentracionesdeglucosa
+segúnlosdatosquefueronrecolectadosparapoderdeterminar
+einsulinaendeterminadosinstantesdetiempoyG∗eI∗son
+losparámetros.
+losvaloresdondeseestabilizalaglucosaeinsulinadespués Enestecasosedesarrollaprimeramentelaecuaciónque
+dehaberrealizadoelayuno[24].Entonces,sepuedeanalizar determinalacantidaddemoléculaogramosparalaglucosa
+elsistemaparalasvariablesG(t)−G∗;I(t)−I∗,asícuando
+ensangre:
+(G,I)→(0,0)entonces(G(t),I(t))→(G∗,I∗).
+
+no e
+L
+s
+o
+tá
+s
+n
+m
+a
+o
+m
+de
+p
+l
+l
+o
+ia
+s
+d
+m
+os
+at
+h
+em
+ac
+á
+i
+t
+a
+ic
+l
+o
+a
+s,
+m
+e
+á
+n
+x
+l
+i
+a
+m
+m
+a
+a
+e
+y
+x
+o
+p
+r
+r
+ía
+es
+d
+ió
+e
+n
+la
+d
+s
+e
+o
+l
+c
+s
+a
+i
+s
+s
+i
+t
+o
+e
+n
+m
+es
+a
+,  dG
+dt
+pl =−G
+t
+(G
+pl
+,I
+pl
+,k
+1
+)−G
+h
+(G
+pl
+,I
+pl
+,k
+2
+)−
+real,puesestossonadaptacionesalmediodondeserealizan −G r (G pl ,k 3 )+R a (t,k 4 ) . (3)
+variasconsideracionesquesimplificanlasecuacionesrelacio- G(t)= G p
+nadas.Empleandiferentesparámetrosquemuchasvecesnoes V
+necesariomedirlos,puesnoaportanuncambioconsiderable
+De aquí se realiza el mismo procedimiento que se hizo
+yavecesnosecuentacontodaslascondicionespararealizar
+paraobtenerlaecuación(3)conlainclusióndelconsumode
+lasmedicionesrespectivas.Esentoncesquesetratadeencon-
+glucosaporpartedelfeto:
+trarunresultadolomásrealposibleoquedealgunaforma
+ayude en la toma de decisiones. Para realizar la propuesta  dG
+deecuacionesquesimulenelcomportamientodelainsulina 
+dt
+pl =−G t (G pl ,I pl ,k 1 )−G h (G pl ,I pl ,k 2 )−
+glucosa,esnecesariorealizarunanálisisdelflujomolecular. −G (G ,k )−G (G ,k )+R (t,k ) , (4)
+r pl 3 f pl 5 a 4
+y
+Pa
+r
+r
+e
+a
+g
+e
+u
+l
+l
+l
+a
+o
+c
+,
+i
+p
+ó
+r
+n
+im
+de
+er
+g
+o
+lu
+se
+co
+e
+s
+x
+a
+p
+m
+on
+e
+e
+d
+n
+ia
+e
+n
+l
+t
+m
+e
+e
+la
+ca
+in
+ni
+s
+s
+u
+m
+li
+o
+na
+d
+.
+etransportación G(t)= G
+p
+V
+3.1 Desglosedecompartimentos dondeparaambasecuacionesG ,R (t,k ),G(G ,I ,k ),
+pl a 4 t pl pl 1
+Lafosforilacióndelaglucosaporglucocinasaeselpaso G (G ,I ,k ),G (G ,k ),G (G ,k ),G,k ,k ,k ,k ,k
+h pl pl 2 r pl 3 f pl 5 1 2 3 4 5
+limitantedelavelocidadquecontrolalasecrecióndeinsulina yV representan:lacantidaddeglucosaenplasma,latasade
+reguladaporglucosa.Elmetabolismoulteriordelaglucosa aparición de glucosa en sangre, la cantidad de glucosa que
+porlavíadelaglucólisisgeneratrifosfatodeadenosina(ATP, pasaalostejidosparasumetabolizaciónyalmacenamiento,
+porsussiglaseninglés),queinhibelaactividaddeunconduc- lacantidaddeglucosaquepasaaseralmacenadaalhígado
+todeK+sensibleaATP.Estecanalconsisteendosproteínas pararealizarposteriormentelaglucogenólisis,lacantidadde
+separadas:unaeselreceptordeciertoshipoglucemiantesora- glucosaquesedegeneraenlosriñones,lacantidaddeglucosa
+lesyelotroesunaproteínadeconductodeK+rectificadora quepasaaserpartedelmetabolismodelfeto,laconcentración
+haciaelinterior.LainhibicióndeesteconductodeK+induce deglucosaquehayenlasangre,elcoeficientecinéticoconel
+ladespolarizacióndelamembranadelacélulabeta,loque cuallaglucosaesmetabolizadayalmacenadaenlostejidos,el
+abreconductosdecalciodependientesdevoltaje(conentrada coeficientecinéticoconelcuallaglucosaesalmacenadaenel
+consecuente de calcio en la célula) y estimula la secreción hígado,elcoeficientecinéticodelaglucosaalserdegradada
+de insulina. Las características de la secreción de insulina por los riñones, el coeficiente para la tasa de aparición de
+PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98
+GómezHernández,T.,&BequerMendoza,L.C. https://revistas.uh.cu/rcm/article/view/9075
+https://doi.org/10.5281/zenodo.14187591
+92 Estudiomatemáticodeladiabetesengestantesynogestantes
+Figura2.Simplificacióndelflujodeinsulinaglucosaparanogestantes[Simplificationofinsulinglucoseflowfornon-pregnant
+women].
+glucosa en sangre, el coeficiente cinético de la glucosa al feto. De antemano, según la biología del proceso expuesta,
+pasar al feto de la madre y el volumen de sangre que tiene sesabequeelmodeloesestableyconvergeaunasolución
+cadaorganismo,respectivamente. estacionaria.
+Entodosloscasosanterioressepresentaelconsumode
+glucosacomounafunción,pueslamismadependedeltipo 3.2 Modelomono-compartimental
+demodeloconelcualsequieratrabajar.Estepuedesertanto Paraelanálisismono-compartimental,seexpondráelmo-
+lineal como no lineal, en dependencia del comportamiento delopropuestoporvariostrabajosquesehandesarrolladoen
+quepuedetenerelorganismo.Esporelloqueserealizaun la Universidad de Oriente con respecto al estudio del com-
+análisisacadaunadelasecuacionesporseparadopararealizar portamiento de insulina-glucosa mediante el desarrollo de
+lapropuestaconcretadelmodelo.Laecuaciónquedetermina ecuacionesdiferenciales[24].Talmodeloespropuestopor
+la insulina en sangre para ambos procesos está dada por la el Dr.C. Antonio Iván Ruiz Chaveco, donde se gestiona la
+ecuación: dinámicainsulina-glucosaenelcasodeunindividuosanoy
+deunindividuodiabético[23].
+
+dI
+ pl =I (G )−I (I ,G ,j ) Elmodeloengeneralesdescritoporelsiguientesistema
+dt p pl h pl pl 1 , (5) deecuaciones:
+I=I
+pl
+V
+dG
+ =aG−bI+G
+p
+g,h,t
+dondeI pl ,I p (G pl ),I h (I pl ,G pl ,j 1 ),Iy j 1 representan:lainsu- dt , (6)
+dI
+lina en plasma sanguíneo, la insulina que se produce en el  =eG−fI+H (g,h,t)
+p
+páncreasypasaalasangre,lainsulinadegradadaporelhíga- dt
+do,laconcentracióndeinsulinaquehayensangreyrecorre dondeG g,h,t yH (g,h,t)representanlatasaexternadeva-
+p p
+todo el cuerpo y el coeficiente de velocidad con el cual es riacióndelaconcentracióndelaglucosaeinsulinaensangre,
+degradadolainsulinarespectivamente. ellasrepresentanperturbacionesenelsistemaydependerán
+Quedaentoncescondicionarcadaunadelasecuaciones deimprovistosmomentáneos(unalimentoounestadoemo-
+de consumo de glucosa. Estas se desarrollan de acuerdo a cionalcualquiera),ademásdelasaluddelindividuo(sieso
+la fisiología del desarrollo de cada uno de los órganos y el nodiabético)[23].
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98 PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A.,
+https://revistas.uh.cu/rcm/article/view/9075 GómezHernández,T.,&BequerMendoza,L.C.
+https://doi.org/10.5281/zenodo.14187591
+Estudiomatemáticodeladiabetesengestantesynogestantes 93
+Figura3.Simplificacióndelflujodeinsulinaglucosaparanogestantes[Simplificationofinsulin-glucoseflowfornon-pregnant
+women].
+Uncasoparticularseríacuandoexisteunaperturbación 3.3 Tasadeaparicióndelaglucosa
+externaalaglucosaquenodependedelainsulinaylaglucosa ParalaecuacióndelatasadeaparicióndeglucosaR (t,k )
+a 4
+existente: sedeliberaquelamismatieneunavelocidadconstantedeen-
+(cid:40) tradaalasangre,nocambiaelpatrón,yaqueseingiereuna
+x˙ =ax −bx −cx2−dx x
+1 1 2 1 1 2 , (7) cantidaddeterminadaenuninstantedetiempotanrápidoque
+x˙ 2 =ex 1 −fx 2 +gx 1 x 2 pasaaserirrelevanteyserealizaelprocesodeingestión.Esto
+ocurreasíhastaqueacabacontodalaglucosaingerida.Para
+dG dI
+dondex˙ = ,yx˙ = ,ademáslosparámetrosa,b,c,d, laexpansiónenlasangre,comoseestáanalizandoelcom-
+1 2
+dt dt partimentosanguíneodeformageneral,seproponequesea
+e, f ygrepresentanelcoeficientedevariacióndelaglucosa
+lamismaentradaencadainstantedetiempo.Locualocurre
+proporcionalasupropiaconcentración,elcoeficientedeva-
+para todas las ecuaciones, tanto de entrada como de salida.
+riacióndelaglucosa,queesproporcionalalaconcentración
+Portanto,laecuaciónsedeterminacomo:
+deinsulina;elcoeficientedereaccióndelaglucosa,propor-
+cionalasupropiaconcentración;elcoeficientedereacción  C
+e la nt in re su la lin g a l , u p co ro s p a o y rc l i a on in a s l u a li l n a a c , o e n l c c e o n e tr fi a c c i i e ó n n te de de gl v u a c r o ia sa c ; ió e n lc d o e - R a (t,k 4 )= k 4 , 0≤t≤ k 4 , (9)
+0, e.o.c
+eficientedevariacióndelainsulinaproporcionalasupropia
+concentración1,yelcoeficientedereacciónentrelaglucosay
+dondeCeslacantidaddeglucosaingeridayk eslatasade
+4
+lainsulina,respectivamente[24].
+ingestión,quetienecomofunciónacumulativadelacantidad
+Otrocasoparticularestádadocuandoexisteunapertur-
+deglucosa:
+baciónexternaalaglucosaquenodependedelainsulinay (cid:90) t
+laglucosaexistente,seríaprácticamentelamismaecuación, CR a (t,k 4 )= R a (t,k 4 ). (10)
+0
+peroconlainclusióndelaperturbación:
+(cid:40) 3.4 Glucosaconsumidaporlostejidos
+x˙ =ax −bx −cx2−dx x +I(t)
+1 1 2 1 1 2 . (8) Enlasecuaciones(9)y(10)seconsideracomoleyque
+x˙
+2
+=ex
+1
+−fx
+2
++gx
+1
+x
+2 losmodelossonlinealesrespectoalaglucosaquepasaaser
+1Estecasotomaencuentasoloelmetabolismodelcuerpo. metabolizada, almacena y degenerada. Esto fue propuesto
+PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98
+GómezHernández,T.,&BequerMendoza,L.C. https://revistas.uh.cu/rcm/article/view/9075
+https://doi.org/10.5281/zenodo.14187591
+94 Estudiomatemáticodeladiabetesengestantesynogestantes
+comoalternativaparavarioscompartimentos,perocuandose Paraanalizarlainteraccióndelainsulina-glucosaquesepro-
+analizalaglucosaqueseconsumeporcadacompartimento duceenelfetoseretomalaecuaciónparaelcasodequeno
+aisladoelmodeloenestecasoesmono-compartimentalpor seagestante,peroesteyaseríaenelcompartimentosanguí-
+loquecambiaasermáscomplejodeestaformasepropone neo fetal y la tasa de aparición de glucosa está dada por la
+laecuaciónparaelconsumodeglucosaporlostejidosdela ecuacióndeconsumodelaglucosaporelfeto.Además,la
+forma: tasadeaparicióndeinsulinaesindependientealacantidadde
+insulinaplasmáticadelamadre.
+dG(t)
+t =k G +k G2 −k G I −k I , (11)
+dt 11 pl 12 pl 13 pl pl 14 pl 3.8 Insulinadegeneradaporelhígado
+Estecasoseanalizamedianteunmodelonolineal,donde
+dondek =(k ,k ,k ,k ).
+1 11 12 13 14
+j =(j ,j ) es el coeficiente general de degradación de
+Loscoeficientesk yk determinanlaglucosaquepasa 2 21 22
+11 12
+insulina:
+a los tejidos, mientras k es el coeficiente de consumo de
+13
+glucosa,lacualsemultiplicaporcantidaddeinsulina,pues
+dI (t)
+h
+dependedeestaparapasaralacélula;yk 14 eselcoeficiente dt =−j 11 I pl +j 12 I pl G pl +j 13 G pl . (15)
+derelaciónlainsulinaqueseusacomoconectordelostejidos.
+3.9 Insulinaproducidaporelpáncreas
+3.5 Glucosaalmacenadaenelhígado
+Laglucosaquesealmacenaenelhígadosedesempeñade (cid:40)
+dI p (t) S(t), G pl >A
+lamismaformaquelaquesealmacenaenlostejidos,porlo = , (16)
+dt 0, e.o.c
+tanto,seanalizaconunaecuaciónparecidaa(11)dondese
+diferenciaenloscoeficientes:
+dondeS(t)eslatasadesecrecióndelainsulinaporpartedel
+páncreasyAeselumbraldeaparicióndeinsulina.
+dG (t)
+d h t =k 21 G pl +k 22 G2 pl −k 23 G pl I pl −k 24 I pl , (12) Laecuacióngeneralparaelmodeloestádadaporlossis-
+temasdeecuaciones(17)y(18)paranogestanteygestante.
+Loscoeficientesk yk determinanlaglucosaquepasa Estaexpresaquelasumatoriadelascinéticasquesedesempe-
+21 22
+a los tejidos, k es el coeficiente de consumo de glucosa ñanporseparadoenelmodeloesigualalasecuacionespara
+23
+dondemultiplicaalacantidaddeinsulinapuesdependede unsolocompartimiento:
+estaparapasaralacélulayk eselcoeficientederelaciónla
+24
+insulinaqueseusacomoconectordelostejidos.
+dG
+3.6 Glucosaexcretadaporlosriñones
+
+dt
+=
++ R
+−
+a
+G
+(t
+c
+,
+t
+(
+k
+G
+4 )
+,I,k
+1
+)−G
+ch
+(G,I,k
+2
+)−G
+cr
+(G,k
+3
+)+
+.
+bién
+L
+s
+a
+e
+c
+p
+a
+u
+n
+e
+ti
+d
+d
+e
+ad
+to
+d
+m
+e
+a
+g
+r
+l
+c
+u
+o
+c
+m
+os
+o
+a
+u
+q
+n
+ue
+c
+s
+o
+e
+m
+d
+p
+e
+o
+g
+r
+e
+ta
+n
+m
+er
+i
+a
+e
+e
+n
+n
+to
+lo
+li
+s
+n
+r
+e
+i
+a
+ñ
+l
+o
+r
+n
+e
+e
+s
+s
+pe
+ta
+c
+m
+to
+- 
+dI
+=I
+cp
+(I
+V
+,G,j
+1
+)−I
+ch
+(I,G,j
+2
+)
+alaconcentracióndeglucosaqueexisteencadaintervalode dt
+(17)
+tiempo,tomandoencuentaqueelfuncionamientocomienza dG
+superado
+G
+u
+r (
+n
+G
+u
+,
+m
+k 3
+b
+)
+r
+=
+al.
+(cid:40)
+D
+k
+0
+e
+3
+,
+a
+(G
+hí
+p
+l
+−
+ae
+k
+c
+3
+u
+1
+a
+),
+ción:
+G
+G
+p
+p
+<
+≥
+k
+k
+3
+3
+1
+1 , (13)
+
+
+d
+d
+I
+t
+=
+=
+I
+−
+c
+−
+p
+G
+(
+G
+I
+c
+c
+,
+t
+f
+G
+(
+(
+G
+G
+,j
+,
+,
+1
+I
+k
+)
+,
+5
+k
+−
+)
+1
++
+)
+I
+c
+−
+h
+R
+(
+G
+I
+a
+,
+(
+c
+V
+G
+t
+h
+,
+(
+,
+k
+G
+4
+j
+2
+)
+,
+)
+I,k
+2
+)−G
+cr
+(G,k
+3
+)−
+.
+dt
+dondek eselcoeficientequedeterminalacantidaddeglu- (18)
+3
+cosa que pasa a ser secretada, en cambio k representa el El subíndice c en la ecuación indica que se trabaja con la
+31
+parámetrodelumbralelcualseactivalasecrecióndeglucosa. concentraciónporvolumendesangreparacadaunodelos
+casos.Sisetieneencuentacadaunodeloscompartimentos
+3.7 Glucosaconsumidaporelfeto lasecuaciones(16)y(17)pasanatenerlaforma:
+Enestecaso,seanalizalaecuaciónenelcompartimento
+s
+la
+an
+g
+g
+l
+u
+u
+í
+c
+n
+o
+e
+s
+o
+a,
+de
+al
+la
+p
+m
+as
+a
+a
+d
+r
+re
+a
+,
+l
+y
+a
+a
+c
+q
+o
+u
+n
+e
+c
+c
+e
+o
+n
+m
+tr
+o
+ac
+s
+i
+e
+ón
+ex
+s
+p
+a
+li
+n
+c
+g
+a
+u
+a
+í
+n
+n
+t
+e
+e
+a
+rio
+d
+r
+e
+m
+l
+e
+fe
+n
+t
+t
+o
+e
+,
+,   d
+d
+G
+t
+=K
+1
+G+k
+2
+G2−k
+3
+GI−k
+4
+I+G
+cr
+(G,k
+3
+)+ R a (
+V
+t,k 4 )
+,
+interactúaconinsulinaqueseproduceenelmismo,nocon  dI =−J I+J IG+J I (G)
+1 2 3 cp
+laproducidaporlamadre.Esdecir,laglucosaquepasaaser dt
+(19)
+partedelmetabolismofetalnodependedelaconcentración
+donde:
+deinsulinadelagestante:
+K =k +k oencasodegestanteK =k +k +k .
+1 11 21 1 11 21 51
+dG d f t (t) =k 51 G p +k 52 G2 p . (14) K K 2 3 = = k k 1 1 2 3 + +k k 2 2 2 3 o yK en 4 c = as k o 14 d + eg k e 2 s 4 t . a A nt d e e K m 2 ás = , k 12 +k 22 +k 52 .
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98 PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A.,
+https://revistas.uh.cu/rcm/article/view/9075 GómezHernández,T.,&BequerMendoza,L.C.
+https://doi.org/10.5281/zenodo.14187591
+Estudiomatemáticodeladiabetesengestantesynogestantes 95
+LaFigura4muestraeldesarrollodelapruebadeglucosa
+ K
+3
+(G− k 31 ), G≥ k 31 provocadacuandolasmismasrealizanunconsumoinicialde
+G (G,k )= V V , (20) 2gramosdeglucosa.
+cr 3 k
+0, G< 31
+V
+paralainsulinaJ = j ,J = j yJ = j .
+1 11 2 12 3 13
+4. Simulaciones
+Paradesarrollarelmodelodevarioscompartimentoses
+necesarioprimeroconoceralgunosdatosparapoderrealizar
+lasprediccionespertinentes.Seconocequeparalaspruebas
+enellaboratorioseaplicóunacantidadde2gramosporcada
+kgdepesocorporaldelarata,queequivaleenpromedio0,50
+Figura4.Simulaciónderatasdiabéticasnogestante
+gramosaplicadoacadarata,yaqueestastienenunamedia
+considerandolaabsorcióndeglucosapara2gramos
+de250gramos(50mg).Además,elvolumensanguíneodela
+[Simulationofnon-pregnantdiabeticratsconsidering
+rataseestimaqueseade60mlporcadakg,osea15,ml(1,5
+glucoseabsorptionfor2grams].
+dl).Estosignificaqueserealizalaingestiónde33,33mgpor
+cadadlsanguíneodelarata.
+Enelcasodelasprediccionesqueserealizanparacuando
+Esválidoaclararqueparadesglosarlosejemplossecon-
+seconsumediferentesconcentracionesdeglucosalosejem-
+sideraalainsulinacomopartedelmetabolismodelcuerpo,
+plossondesarrolladoatravésdelsoftwareWolframMathe-
+sin causar perturbación ninguna para así no complejizar el
+maticaversión11,elmismomuestralasdiferentescurvasa
+modeloyobtenerunresultadodeseable.Enestecasoelmo-
+medidaqueaumentaelniveldeconsumo.LaFigura5muestra
+delocambiaconlautilizacióndelaecuación(7),dondese
+dosdelosejemplosqueseexponen.Seapreciaelcambiodela
+consideralaperturbaciónporlaingestióndealimentos.Esta
+curvaylalejaníadelamismaalospuntosdelasmediciones
+funciónasuvezseconsideraconstante.
+delaspruebasbiológicasparalos2gramos.
+Porotrolado,seconocequeexisteunadependenciaentre
+losparámetros,pueselnúmerodeecuacionesesmenorque
+5. Conclusiones
+lacantidaddeparámetros.Estosedebealafaltadepruebas
+clínicas que corrigen valores como la insulina. De ello se ComorespuestaalasproblemáticasplanteadasporLabo-
+implicaque,alagregarotroparámetro,enestecasolapertur- ratoriodeEstudiosBiomédicodelaUnivesidaddeCiencias
+baciónconstante,estepuedequedarenlibertaddeserelegido MédicasdeVillaClaraenlosestudiosdediabetesenemba-
+avoluntadatendiendoalosestudiosyresultadosclínicos.La razadasdondeserealizanpruebasaratasWistarseobtiene
+duracióndelaabsorcióndealimentosdelasratasWistares unanálisisbiofísicodelacinéticadelainsulinaylaglucosa
+aproximadamente5horas,esenesteintervalodetiempoen ensangre.Seidentificaloscompartimentosqueintervienen
+elcualseenfocaelmodeloyaquepasadoeste,comienzaotro en el proceso y las ecuaciones de intercambio sobre estos
+procesobiológicoconocidoporglucogénesis. compartimentos;lacurvadelcomportamientorealdelacual
+Elprimerejemploutilizalaecuacióncuandolarataesno sepuedeextraervariosparámetrosparatomardecisionesclí-
+gestante,ademásseconsideraqueelparámetroes0,quees nicasligadaalaenfermedad;unapredicciónencasodequese
+elumbraldondeelriñóncomienzaarealizarlaexpresiónde aumenteladosisdeingestióndeglucosayasívercomoesto
+glucosa(100,porserelvalorestableyrealizarloscambios puedeafectaralindividuoclínicamente.Estosresultadosde
+de variables definidos en la sección 3). De la ecuación del análisisdelosdatossonunpasoyunaayudaparacontinuar
+desglosedelacinéticainterna(7)ylaecuacióndelanálisis losestudiosclínicosdelaenfermedad.
+mono-compartimental con perturbación constante (8) y las
+consideracionesqueseplanteanenesteepígrafe,seobtiene: Agradecimientos
+a=−(k +k +k ),b=k +k ,c=k +k ,
+11 21 3 14 24 12 22
+Losautoresquierenagradecerelsoportetécnicobrindado
+d=k +k ,e= j , f = j yg= j .
+13 21 3 11 13
+porelpersonaldelaunidaddeinvestigacionesbiomédicasde
+Delaecuación(19)seobtienequeparalaaproximaciónal
+laUniversidaddeCienciasMédicasdeVillaClara.
+modelolinealseríasolonecesariolaestimacióndelosvalores
+paraa,b,ey f.Unejemplopuedesercuandok =k =k y
+11 21 3
+Suplementos
+a b
+k =k .Comoconsecuenciaseobtienek =− ,k = .
+14 24 11 14
+3 2 Esteartículonocontieneinformaciónsuplementaria.
+Delaspruebasqueserealizanseobtienequea=11,22,b=
+−65,17,e=−2,66y f =15,24.Entonces,loscoeficientes
+Conflictos de interés
+delacinéticadeloscompartimentosestándadospork =
+11
+k =k =−3,74yk =k =32,58. Sedeclaraquenoexistenconflictosdeinterés.
+21 3 14 24
+PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98
+GómezHernández,T.,&BequerMendoza,L.C. https://revistas.uh.cu/rcm/article/view/9075
+https://doi.org/10.5281/zenodo.14187591
+96 Estudiomatemáticodeladiabetesengestantesynogestantes
+Figura5.Comparaciónentrecomportamientorealypredicciónparaunaabsorcióndeglucosamayorde2gramos
+[Comparisonbetweenactualbehaviorandpredictionforglucoseabsorptiongreaterthan2grams].
+Contribución de autoría [4] Association,AmericanDiabetes:2.classificationand
+diagnosis of diabetes: Standards of medical care in
+Conceptualización J.A.P.P.
+diabetes-2020. DiabetesCare,43(Supplement1):S14–
+Curacióndedatos T.G.H.,L.C.B.M. S31,December2019,ISSN0149-5992. https://do
+i.org/10.2337/dc20-S002.
+Análisisformal J.A.P.P.
+AdquisicióndeFinanciamiento T.G.H.,L.C.B.M. [5] Bergmann,R.N.:Physiologicevaluationoffactorscon-
+trolling glucose tolerance in man. The Journal of
+Investigación T.G.H.,L.C.B.M.
+Clinical Investation, 68:1456–1467, 1981. https:
+Metodología S.S.D.,A.A.F.G. //www.jci.org/articles/view/110398
+/files/pdf.
+Administracióndeproyecto J.A.P.P.
+Recursos T.G.H.,L.C.B.M. [6] Bolie,V.W.:Coefficientsofnormalbloodglucoseregu-
+lation. JournalofAppliedPhysiology,16(5):783–788,
+Software J.A.P.P.,S.S.D.
+1961. https://citeseerx.ist.psu.edu/do
+Supervisión S.S.D. cument?repid=rep1&type=pdf&doi=c94bb
+e98dee10672a70e130d489dbd68b34d1074.
+Validación J.A.P.P.,T.G.H.,L.C.B.M.
+[7] Cannizzaro, C.M. y M.A. Paladino: Fisiología y fi-
+Visualización J.A.P.P.
+siopatología de la adaptación neonatal. Anestesia
+Redacción:preparacióndelborradororiginal J.A.P.P. Analgesia Reanimación, 24(2):59–74, 2011. http:
+//www.scielo.edu.uy/pdf/aar/v24n2/v2
+Redacción:revisiónyedición S.S.D.,A.A.F.G.
+4n2a04.pdf.
+Referencias [8] Céspedes, C., M. A. Otálora, S.C. Alfonso y C. Gra-
+nados:Guíaparaelmanejoinicialdelacetaacidosis
+[1] Alberola, S.C., S.G. Bermell y S.M. Alsina: Modelos
+diabéticaenniñosyadolescentes. UniversitasMédica,
+compartimentalesparaelcálculodedosisinterna. Mo-
+44(2),2003. https://www.academia.edu/833
+delling in Science Education and Learning, 6:19–31,
+3424/Guía_para_el_manejo_inicial_de
+2013. https://doi.org/10.4995/msel.201
+_la_cetoacidosis_diabética_en_ni~nos
+3.1977.
+_y_adolescentes.
+[2] Amelkin, V.: Ecuaciones diferenciales aplicadas a la [9] Colling, C., S.J. Atlas, and D.J. Wexler: Application
+práctica. Mir,1990. https://www.academia.e of2021AmericanDiabetesAssociationglycemictreat-
+du/34985380/Ecuaciones_Diferenciales
+ment clinical practice recommendations in primary
+_en_la_práctica_V_V_Amelkin. care. DiabetesCare,44(6):1443–1446,2021. https:
+//doi.org/10.2337%2Fdc21-0013.
+[3] Angosto,M.C.yA.L.Villarejo:Fisiologíadelaparato
+digestivo. MonografíasdelaRealAcademiaNacional [10] Davis, S.N. and G. Lastra-Gonzalez: Diabetes y bajo
+de Farmacia, 2014. https://www.academia.e niveldeglucosa(hipoglicemia). TheJournalofClinical
+du/download/60907869/sistema_digesti Endocrinology&Metabolism,93(8):E1–E1,2008. ht
+vo20191015-128792-16d7v8t.pdf. tps://doi.org/10.1210/jcem.93.8.9992.
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98 PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A.,
+https://revistas.uh.cu/rcm/article/view/9075 GómezHernández,T.,&BequerMendoza,L.C.
+https://doi.org/10.5281/zenodo.14187591
+Estudiomatemáticodeladiabetesengestantesynogestantes 97
+[11] Díaz,J.R.,V.N.ZuazoyE.Fernández-Sánchez:Varian- [19] Ramírez, J.: Fisiología fetal, 2002. https://www.
+tedecálculodeinfusióndemidazolamenlaTIVAma- uv.es/jvramire/apuntes/passats/obste
+nual. RevistaCubanadeAnestesiologíayReanimación, tricia/TEMA%20O-01%20(2002).pdf.
+12(3):198–209,2013. https://www.medigraphi
+c.com/pdfs/revcubanerea/rca-2013/rc [20] Reutemann,S.H.yE.A.Formentini:AnálisisFarmaco-
+a133d.pdf. cinéticoyAdministraciónExtravascular;ErroresComu-
+nesenelCálculoylaInterpretacióndelosParámetros
+[12] Gatewood,L.C.,E.Ackerman,J.W.Rosevear,andG.D. Farmacocinéticos. FAVESecciónCienciasVeterinarias,
+Molnar:Modelingbloodglucosedynamics. Behavioral 2(2):147–160,feb.2005. https://doi.org/10.1
+Science,15(1):72–87,1970. http://jmahaffy.s 4409/favecv.v2i2.1397.
+dsu.edu/courses/f17/math636/beamer/G
+[21] Reyes Olivares, J.A. y A. Plancarte Arellano: Bases
+atewood_et_al-1970-Behavioral_Scienc
+moleculares de las acciones de la insulina. Revista
+e.pdf.
+deEducaciónBioquímica,27(1):9–18,2008. https:
+[13] HaroBonilla,J.P.:Diseñoysimulacióndeunpaciente //www.medigraphic.com/pdfs/revedubio
+virtual con diabetes tipo 1 a partir de un modelo de /reb-2008/reb081c.pdf.
+glucosa–insulina para la simulación de un páncreas
+[22] ReyesSanamé,F.A.,M.L.PérezÁlvarez,E.AlfonsoFi-
+artificial. TrabajodeTitulaciónprevioalaObtención
+gueredo,M.RamírezEstupiñanyY.JiménezRizo:Tra-
+del Título de Ingeniero en Ingeniería “Electrónica y
+tamientoactualdeladiabetesmellitustipo2. Correo
+Control”,EscuelaPolitécnicaNacional,Quito,Ecuador,
+CientíficoMédico,20(1):98–121,2016. http://sc
+2020. https://bibdigital.epn.edu.ec/ha
+ielo.sld.cu/scielo.php?script=sci_ar
+ndle/15000/20923.
+ttext&pid=S1560-43812016000100009.
+[14] Hernández Espinoza, R. y M.E. Ocharán-Hernández:
+[23] Rodríguez, D., M. Lacort, R. Ferreira, S. Sánchez, F.
+Farmacocinéticadelainsulinainhalable:ADME(ab-
+Chagas,Z.Ribeiro,andIvan.Ruiz:Modelofdynamic
+sorción,distribución,metabolismoyexcreción). Revis-
+insulin-glucose in diabetic. European Journal of En-
+ta del Hospital Juárez de México, 80(1):54–58, 2013.
+gineeringandTechnologyResearch,4(3):10–14,2019.
+https://www.medigraphic.com/pdfs/jua
+https://doi.org/10.24018/ejeng.2019.
+rez/ju-2013/ju131i.pdf.
+4.3.1150.
+[15] Kasper, D.L., E. Braunwald, A.S. Fauci, S.L. Hauser,
+[24] Rodríguez,D.S.:Estudiocualitativodeunmodeloque
+D.L. Longo y J.L. Jameson: Harrison: principios de
+simula mediante Ecuaciones Diferenciales la dinámi-
+medicinainterna. McGraw-Hill,2006. https://di
+cainsulina-glucosaenelcasoparticulardeldiabético.
+alnet.unirioja.es/servlet/libro?codi
+TesisdeDoctorado,UniversidaddeOriente,Cuba,2018.
+go=828623.
+[25] Rojas-Morales, T., E. Rubio, N. Viera, A. Morón-
+[16] Leiva-Gea,I.,R.P.Chacón,A.B.JiménezAriza,M.Lo-
+Medina y L. Meza: Caracteristicas clinicas y micros-
+ro Mora, L. Tapia-Ceballos, J. Jiménez-Hinojosa, A.
+copicas de Candida albicans en pacientes con diabe-
+Perea Gómez y J.P. Siguero López: Impacto en hipo-
+tes tipo 1. MedULA, 22(1):6–11, 2013. https:
+glucemiagraveycostessanitariosdelusodelsistema
+//dialnet.unirioja.es/servlet/arti
+FreeStyleenpoblaciónpediátricacondiabetesmellitus
+culo?codigo=4769262.
+tipo1.Endocrinología,DiabetesyNutrición,69(8):561–
+565,2022. https://doi.org/10.1016/j.en [26] Román-González,A.,A.Cardona,J.GutiérrezyA.Pala-
+dinu.2021.10.010. cio:Manejodepacientesdiabéticoshospitalizados. Re-
+vistadelaFacultaddeMedicina,66(3):385–392,2018.
+[17] Martínez, C.O.: Sobre la homeostasis de la glucosa.
+https://doi.org/10.15446/revfacmed.v
+RevistaCubanadeAlimentaciónyNutrición,30(2):7,
+66n3.61890.
+2022. http://www.revalnutricion.sld.c
+u/index.php/rcan/article/viewFile/12 [27] RuilovaCabrera,J.D.,M.P.PontonPereira,R.B.Armi-
+00/1667. jos Ollague y M.M. Ventura Ponce: Factores de ries-
+godepreeclampsia. Reciamuc,3(2):1012–1032,2019.
+[18] MilesPinto,H.A.:Simulacióndinámicadelaglucosa https://doi.org/10.26820/reciamuc/3.
+einsulinaenpacientescondiabetesinsulinodependien- (2).abril.2019.1012-1032.
+tes. TesisdegradoenIngenieríaMecatrónica,Facultad
+deIngeniería,UniversidadAutónomadeBucaramanga, [28] Ruiz,D.,G.Rubin,C.BiasoniyR.Alegre:Reganancia
+UNAB,Colombia,2010. http://hdl.handle.n depesotrascirugíabariátricaenpacientesdiabéticos
+et/20.500.12749/1558. enunhospitaluniversitariodeArgentina. Revistadela
+PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A., CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98
+GómezHernández,T.,&BequerMendoza,L.C. https://revistas.uh.cu/rcm/article/view/9075
+https://doi.org/10.5281/zenodo.14187591
+98 Estudiomatemáticodeladiabetesengestantesynogestantes
+FacultaddeCienciasMédicasdeCórdoba,77(4):223– R.D. Nájera Montes: Diabetes gestacional: fisiopato-
+228,2020. https://doi.org/10.31053/1853. logía, diagnóstico, tratamiento y nuevas perspectivas.
+0605.v77.n4.28131. ArchivosVenezolanosdeFarmacologíayTerapéutica,
+37(3):218–226,2018. https://www.redalyc.or
+[29] Sáez,P.O.yF.Gómez-Peralta:GlucosayHbA1cenel g/journal/559/55963208008/html/.
+laboratorioycomopoint-of-caretestingendiferentes
+entornosclínicos. SociedadEspañoladeDiabetes,2019, [35] TrilloMillaruelo,J.M.:Manejodelahiperglucemiain-
+ISBN978-84-89975-57-6. https://www.sediab ducida por fármacos. FMC: Formación Médica Con-
+etes.org/wp-content/uploads/Monogra tinuada en Atención Primaria, 23(4):227–230, 2016.
+fia-POCT-def-290319.pdf. https://10.1016/j.fmc.2015.10.003.
+[30] Salud, Organización Mundial de la: Informe mundial [36] TumbacoBuele,J.M.:Obesidadcomofactordesenca-
+sobreladiabetes,2021. https://iris.who.int denante de diabetes gestacional. Tesis de Doctorado,
+/bitstream/handle/10665/254649/97892 UniversidaddeGuayaquil.FacultaddeCienciasMédi-
+43565255-spa.pdf. cas.CarreradeObstetricia,2020. http://dx.doi
+.org/10.23857/dc.v7i1.1860.
+[31] Sánchez-Valle,V.yN.Méndez-Sánchez:Estrésoxidati-
+[37] VidalLedoDíaz,M.,R.Ginovart,W.BaldoquínRodrí-
+vo,antioxidantesyenfermedad. MédicaSur,20(3):161–
+guez,N.C.ValdiviaOnegayW.MoralesLezca:Modelos
+168, 2018. https://www.medigraphic.com/
+matemáticosparaelcontrolepidemiológico. Educación
+pdfs/medsur/ms-2013/ms133e.pdf.
+MédicaSuperior,34(2),2020. http://scielo.s
+[32] Sorensen, J.T.: A physiologic model of glucose ld.cu/scielo.php?script=sci_arttext&
+metabolisminmananditsusetodesignandassessim- pid=S0864-21412020000200026.
+provedinsulintherapiesfordiabetes. PhDthesis,Mas-
+[38] Zavala Mendoza, F.J.: Identificación y control de un
+sachusettsInstituteofTechnology,1985. https://
+sistema glucosa-insulina para pacientes con diabetes
+dspace.mit.edu/bitstream/handle/1721
+tipo1. TesisdeMaestría,UniversidadMichoacanade
+.1/15234/13180776-MIT.pdf?sequence=2.
+SanNicolásdeHidalgo,2017. https://dep.fie.
+[33] Tarín Roldán, S.: Modelo y control automático de la umich.mx/~fornelas/data/uploads/t_m
+glucosaensangreenpacientesconDiabetesMellitus _2017_febe.pdf.
+tipo1(DM1).GradoenIngenieríaElectrónica,Robótica
+yMecatrónica,EscuelaTécnicaSuperiordeIngeniería,
+UniversidaddeSevilla,España,2021. https://id
+us.us.es/bitstream/handle/11441/1252
+23/TFG-3478-TARIN%20ROLDAN.pdf?sequ
+ence=1.
+[34] Torres Rodas, W.P., A.E. Juez Mawyin, J.L. Gonzá-
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+lez Gómez, C.V. Barzola Rodríguez, D.G. Vélez Se-
+SinDerivadas 4.0 Internacional”.
+rrano, D.A. Torres Rodríguez, R.E. Pazmiño López y
+CienciasMatemáticas,Vol.36,No.Único,2022-2023,Pag.87-98 PérezPérez,J.A.,SánchezDomínguez,S.,FernándezGarcía,A.A.,
+https://revistas.uh.cu/rcm/article/view/9075 GómezHernández,T.,&BequerMendoza,L.C.
+https://doi.org/10.5281/zenodo.14187591
+1

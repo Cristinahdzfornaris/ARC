@@ -1,0 +1,646 @@
+CienciasMatemáticas,Vol.35,No.2,2021, Pag. 73-79
+Recibido11-2020 ,Aceptad o09-2021
+´
+Algebras triangulares l-hereditarias de tipo de
+representacio´n manso
+Triangular l-hereditary algebras of tame
+representation
+MSc. Beatriz Pe´rez Lo´pez1, Dr.C. Jose´ Fidel Herna´ndez Adv´ıncula2*
+Resumen En este trabajo se realiza un estudio de las a´lgebras localmente hereditarias a trave´s de sus
+relaciones con los posets y sus a´lgebras de incidencia con el fin de reescribir a detalle la demostracio´n del
+teoremaqueestablececondicionesparaqueela´lgebral-hereditariaT (Λ)seadetiporepresentacio´nmanso.
+2
+Abstract In this work we study locally hereditary algebras through their relations with the posets and their
+incidentalgebrasinordertorewriteindetailtheproofofthetheoremthatestablishesconditionsforthelocally
+hereditaryalgebraT (Λ)tobeofthetamerepresentationtype.
+2
+PalabrasClave
+A´lgebrasdeincidencia—a´lgebral-hereditaria—tipoderepresentacio´n
+1DepartamentodeMatema´tica-F´ısica,Universidad”Jose´ Mart´ı”deSanctiSp´ıritus,SanctiSp´ıritus,Cuba,beatrizpl@uniss.edu.cu
+2DepartamentodeMatema´tica,UniversidaddeLaHabana,LaHabana,Cuba,fidel@matcom.uh.cu
+*AutorparaCorrespondencia
+Introduccio´n OseaKIesela´lgebrageneradaportodoslasmatricese ij
+coni(cid:22) j,conlasiguienterelacio´n:
+Apartirdeldesarrollodelateor´ıaderepresentacionesdea´lge-
+brassurgieronnuevosme´todosyherramientasparaclasificar (cid:26) 0 si j(cid:54)=r
+e e =
+lasa´lgebrasdeacuerdoalacantidaddeobjetosindescompo- ij rq e enotrocaso
+iq
+niblesdeestas;siendolasrepresentacionesdelosconjuntos
+parcialmenteordenados(posets),problemasmatricialesalgu- Senotaqueelconjuntoformadoporlasmatrices{e j } j∈I es
+nasdelasma´sutilizadas,as´ıcomolosme´todosdiagrama´ticos unconjuntocompletodeidempotenteprimitivoortogonales
+quesonesencialesparasuestudioycomprensio´n. deKI[4].
+Definicio´n 1.2. Sea el poset finito (I,(cid:22)) se llama poset I-
+Elobjetivodeesteart´ıculoesmostraruncasoparticularde extendido (coextendido) y se denota por I∗ =I∪{∗} (I =
+0/
+lasa´lgebraslocalmentehereditariasqueconstituyena´lgebras
+{0/}∪I)aunaextensio´ndeI porunelementomaximal(mini-
+deincidenciadealgu´nposetycuyaextensio´nporsimisma
+mal)∗=n+1(0/ =0).
+poseetipoderepresentacio´nmanso,apoya´ndonosenlosme´to-
+dosdiagrama´ticosyparalocualsedara´nalgunosaspectos Deigualformaela´lgebradeincidenciadelposetextendido
+importantesdelademostracio´ndelteoremaprincipal. KI∗ se define como una suba´lgebra de M n+1 (K) tal que se
+puedeescribirdelaforma
+1. A´lgebras de incidencia de un conjunto  K K K ... K K 
+1 2 1 3 1 n 1 n+1
+parcialmente ordenado.  0 K 2 K 3 ... 2 K n 2 K n+1 
+ 
+ 0 0 K ... 3 K n 3 K n+1 
+c
+S
+i
+e
+o´
+a
+n
+K
+de
+u
+o
+n
+r
+c
+d
+u
+e
+e
+n
+r
+(cid:22)
+po
+.
+eI={1,...,n}unposetfinito,conlarela- KI∗=  
+ 0 0 0
+... . .
+.
+. .
+.
+ 
+
+ 
+ . . . . . . 
+Definicio´n 1.1. Sea el poset I, se denomina K-a´lgebra de  . . . ... n K n n K n+1 
+0 0 0 ... 0 K
+incidenciadeI,KI,alasubalgebradeM (K)generadapor n+1 n+1
+n
+las matrices unitarias e ij ∈M n (K) tal que i(cid:22) j. Se puede donde i K j =K sii(cid:22) jenIy i K j =0enotrocaso.
+describircomo
+Ana´logamente se describe el a´lgebra de incidencia del po-
+KI={A=[a ij ]∈M n (K) : a ij =0 si i(cid:14) j}. setextendidoKI comounasuba´lgebradeM (K).
+0/ n+1
+74 A´lgebrastriangularesl-hereditariasdetipoderepresentacio´nmanso
+Seaelmo´duloX=(X;ϕ ) .ElradicaldeXeselsubmo´du-
+i j,i i(cid:22)j
+Ela´lgebraKI∗puedeserexpresadaenformatriangularcomo loJ(X)=XJ(KI∗)quepuedeserdescritotambie´ncomo
+KI∗= (cid:18) T M TK (cid:19) J(X)= (cid:0) X i ,ϕ j,i (cid:1) i(cid:22)j
+0 K
+DondeT =KIesela´lgebradeincidenciadelposetI y
+dondeX
+j
+=∑
+i≺j
+Im(ϕ
+j,i
+).Mientrasque
+(cid:0) (cid:1)
+ K  top(X)=X/J(X)= X j /X j ;0
+.
+
+M TK =   . .   n Comotodomo´duloposeecubiertaproyectiva,sepuededes-
+K
+
+cribirestadelaforma
+esconsideradocomounT−K-bimo´dulo.
+P(X)=Pr1⊕Pr2⊕...⊕P rn+1
+1 2 n+1
+(cid:0) (cid:1)
+1.1 Descripcio´n de los mo´dulos sobre a´lgebras de donde cada r j =dim X j /X j K . En particular se tiene que
+(cid:16) (cid:17)
+incidencias. P S(j) ∼ =P.
+j
+Sedenotara´porMod(KI∗)alacategor´ıadetodolosmo´dulos
+derechossobreKI∗ ypormod(KI∗)alasubcategor´ıaplena
+UtilizandoelfuntorcontravarianteD=Hom(−,K),elcua´l
+formadaportodoslosmo´dulosdeKI∗ quesonfinitamente proporciona una dualidad entra las categor´ıas mod(KI∗) y
+generados,aestosu´ltimosedirigira´ nuestraatencio´n. mod(KI∗op),setienequelosmo´dulosinyectivosindescom-
+poniblesdeKI∗sondelaforma
+Ela´lgebraKI∗esdedimensio´nfinitasobreK [12],[4].
+(cid:16) (cid:17)
+Definicio´n1.3. Unmo´duloX demod(KI∗)puedeseridenti- E(j)= E i (j) ;ϕ j,i
+i≺j
+ficadoporelsistema
+(j) (j)
+donde E =K para i(cid:22) j, E =0 si no y ϕ =id para
+X =(X;ϕ ) , i i j,i
+i j,i i(cid:22)j(cid:22)∗ i≺ jy0deotraforma.
+dondeX esunespaciodedimensio´nfinitaaladerechasobre
+i 1.2 A´lgebraslocalmentehereditariasya´lgebrasde
+Kyϕ :X →X parai(cid:22) jsonaplicacioneslinealestalque
+j,i i j incidencia.
+ϕ =idparatodo j∈I∗yϕ .ϕ =ϕ paras≺i≺ j.
+j,j j,i i,s j,s Definicio´n1.4(A´lgebrasl-hereditarias.). SeaΛunaK-a´lge-
+CadaX =Xe yϕ (xe)=xee =xe =xe e parai≺ j. bra,sedicequeΛeslocalmentehereditaria(l-hereditaria)
+j j j,i i i j,i ji j,i j
+CualquierKI∗-homomorfismo f entreX eY esta´definidopor sicumplequetodomorfismononuloentreproyectivosindes-
+elsistema componibleesunmonomorfismo.
+f =(f)=(f ,...,f ,f )
+i 1 n ∗
+Algunascaracterizacionesdelasa´lgebraslocalmenteheredi-
+deaplicacioneslineales f :X →Y ysatisfacelacondicio´n
+i i i tariasdeterminansusprincipalescaracter´ısticassemuestrana
+(cid:48)
+deconmutatividadϕ f = f ϕ paratodo1≺ j≺t≺n+1
+t,j j t t,j continuacio´nysusdemostracionesaparecenen[11],[2].
+dondecada f (xe )= f(xe ).
+j j j
+Proposicio´n 1.1. Λ es un a´lgebra l-hereditaria si y solo si
+Cadamo´duloproyectivoindescomponibleesisomorfoaalgu´n todosubmo´dulolocaldeunproyectivoinescindibleesproyec-
+mo´dulodelaformaP j =e j KI∗paraalgu´n j∈KI∗;endonde tivo.
+P =P =e KI∗,[12].Deigualmanerapodemosidentifi-
+n+1 ∗ ∗
+caralosmo´dulosP delaformadelpar(Y,ϕ )dondeY =K Proposicio´n1.2. SiΛesuna´lgebral-hereditariaentonces
+j i ti i
+si j(cid:22)iyes0deotramanera,ϕ :Y →Y eslaidentidadpara R noposeerelacionescero.
+ti i t
+j(cid:22)i≺t(cid:22)n+1yes0encasocontrario.Portantoelmo´dulo
+Conelsiguientelema,queseencuentraen[12],seobserva
+puedeserdescritocomo
+larelacio´nentrelasa´lgebrasdeincidenciadeunposetylas
+P = (cid:0) 0,...,0,K,K ,...,K ;ϕ (cid:1) a´lgebrasl-hereditarias.
+j j,j+1 j,n+1 t,i i≺t
+Lema1.1. a) Las a´lgebras KI, KI∗ y KI son localmente
+Losmo´dulossimplessepuedendescribirdelaforma 0/
+hereditaria.
+(cid:16) (cid:17)
+S(j)= S i (j) ;0 i∈I∗ , j∈I∗ b) P ∗ =P n+1 eselu´nicosimpleproyectivo(salvoisomorfis-
+mo)deKI∗yelsoc(P)=P paratodo j∈I.Elmo´du-
+j ∗
+dondeS (
+j
+j) =K yS
+i
+(j) =0parai(cid:54)= j. l
+c
+o
+on
+E K
+M
+I∗(
+=
+P ∗
+M
+)es
+=
+iso
+K
+m
+p
+o
+a
+r
+r
+fo
+a
+a
+to
+l
+d
+I
+a
+-
+i
+e
+∈
+sp
+I
+ac
+.
+ioM=(M 0 ;M i ) i∈I
+0 i
+Ciencias Matemáticas, Vol. 35, No. 2, 2021, Pag. 73-79
+A´lgebrastriangularesl-hereditariasdetipoderepresentacio´nmanso 75
+2. Extensio´n por un punto. Enotraspalabras,ela´lgebraesdetipoderepresentacio´nfini-
+tasitieneunacantidadfinitademo´dulosindescomponibles,
+SeaAunaK-a´lgebradedimensio´nfinita,ba´sicayconexay
+salvoisomorfismos.
+seaMunA-mo´duloalaizquierda,consideradotambie´ncomo
+unA-K-bimo´dulo.
+Si el a´lgebra es tipo de representacio´n infinito entonces se
+puedediferenciarendosclasesdistintas:
+Definicio´n2.1. SellamaextensionporunpuntodeAenM Definicio´n 3.2. Sea Λ una K-a´lgebra de dimensio´n finita,
+ala´lgebramatricialdefinidapor sedicequeΛesdetipoderepresentacio´nsalvajesiexiste
+MunΛ-K(cid:104)x,y(cid:105)-bimo´dulolibreyfinitamentegeneradosobre
+(cid:18) (cid:19)
+A M
+Λ= :=A[M] K(cid:104)x,y(cid:105),talqueelfuntor:
+0 K
+F =M⊗ (−):modK(cid:104)x,y(cid:105)→modΛ
+LosidempotentesdeΛsonlaunidaddeA,1 ,formadaporlos K(cid:104)x,y(cid:105)
+A
+idempotentesdeA, e 1 ,e 2 ,...,e n ,yunnuevoidempotenteal conservaindescomponiblesyreflejaclasesdeisomorfismos.
+quesedenotara´ pore n+1 .Loscualesdefinenlasinmersiones EnesecasosedicequeMrealizaelsalvajismodeΛ.
+demodK ymodAenmodΛ[8].
+Estadefinicio´nincluyelaclasificacio´ndemo´dulosdedimen-
+Deigualformasepuedehablardecoextensio´nporunpunto sio´nfinitaindescomponiblesenelproblemamatricialcla´sico
+(cid:18) K M (cid:19) de reducir a la forma cano´nica, pares de matrices que sean
+definidopor[M]A:= elcualeseldualdeloante-
+0 A simulta´neamenteconjugadas.
+rior[9].
+Definicio´n 3.3. Sea Λ una K-a´lgebra de dimensio´n finita,
+El carcaj de A[M] contiene al carcaj asociado A como un se dice que Λ es de tipo de representacio´n mansa si para
+unsubcarcajplenoyexisteunve´rticeadicional,llamadove´rti- todonaturald existenN ,...,N deΛ-K[x]-bimo´dulostales
+1 n
+cedeextensio´ndeA[M]ysiempreenunfuente.Deforma quesiMesunmo´duloindescomponibledeΛdedimensio´n
+ana´loga,elcarcajdelacoextensio´ncontienealcarcajasocia- d, entonces existe un mo´dulo simple S de forma que M es
+doaAconunve´rticeadicionalquesiempreespozo. sumandodirectodelmo´duloN ⊗ Sparaalgu´n j=1,...,n.
+j
+K[x]
+Un ejemplo de extensio´n por un punto es el a´lgebra de in- Alconjuntodelos{N } seledenominafamiliaparame-
+j j=1,n
+cidencia del poset I∗ =I∪{∗}, donde I es un poset de n trizadadedimensio´nd.
+elementos;puescomosedefinio´ enlaseccio´n2.1delcap´ıtu-
+Ladisyuncio´nentreestastresclasesesta´ dadaporelsi-
+(cid:18) (cid:19)
+KI M
+lo 2, esta se puede escribir como KI∗ = donde guienteteoremaexpuestoporY.Drozden[3].
+0 K
+ 
+
+K
+K
+ T
+m
+e
+e
+o
+n
+r
+t
+e
+e
+m
+ce
+a
+r
+3
+ra
+.1
+d
+.
+o
+T
+e
+o
+s
+d
+d
+a
+e
+a´
+t
+l
+i
+g
+p
+e
+o
+b
+d
+ra
+e
+Λ
+rep
+so
+re
+b
+s
+r
+e
+e
+n
+u
+ta
+n
+c
+c
+i
+u
+o´
+e
+n
+rp
+fi
+o
+ni
+K
+ta,
+a
+d
+lg
+e
+e
+t
+b
+ip
+ra
+o
+ic
+d
+a
+e
+-
+M= . n.OseaKI∗eslaextensio´ndela´lgebraKI por
+. representacio´nmansoodetipoderepresentacio´nsalvajey
+
+K
+.
+estostipossonmutuamenteexcluyentes.
+unpuntoma´ximo.Dualmenteunacoextensio´nser´ıaela´lgebra
+Enlasa´lgebrasdetipoderepresentacio´nfinitaymanso,so-
+KI ,coextensio´ndeKIporunpuntom´ınimo.
+0/ bresalenlosresultadosobtenidosporP.Gabriel[5]yNazarova
+[10]enlaclasificacio´ndeestas,apartirdeciertoscarcajes.
+3. Tipos de representaciones de a´lgebras. Resultadoqueseenunciaenlossiguientesteoremas:
+Lateor´ıaderepresentaciones,comoyaseabordo´anteriormen- Teorema3.2. UncarcajfinitoQesdetipoderepresentacio´n
+te,seenfocaenclasificarlasa´lgebrasdeacuerdoalacantidad finitasiysolosiQeslaunio´ndisjuntadelosdiagramasde
+demo´dulosindescomponiblesqueposee,esporelloqueen Dynkin:A ,D ,E ,E yE .
+n n 6 7 8
+estaseccio´nsebrindara´naspectosesencialespararealizaresta
+clasificacio´n, haciendo e´nfasis en aquellas que son de tipo Teorema3.3. SeaQuncarcajorientadosinciclosyseaK
+manso. uncampoalgebraicamentecerrado.Entoncesela´lgebraKQ
+esdetipoderepresentacio´nmansosiysolosiQesunode
+Definicio´n 3.1. Se dice que un a´lgebra Λ es de tipo de re- lossiguientesdiagramasextendidosdeDynkin
+presentacio´n finito, si la categor´ıa de los mo´dulos sobre el A˜ :
+n •
+a´lgebramodΛtieneunacantidadfinitadeelementos,tales
+quetodomo´duloindescomponibledeΛesisomorfoaalgunos
+deestoselementos.EncasocontrariosedicequeΛesdetipo • ... •
+derepresentacio´ninfinito.
+Ciencias Matemáticas, Vol. 35, No. 2, 2021, Pag. 73-79
+76 A´lgebrastriangularesl-hereditariasdetipoderepresentacio´nmanso
+D˜ : Teorema4.1(TeoremaPrincipal). SeaΛela´lgebradeinci-
+n • •
+denciadeunposetfinitoconcarcajQ.EntoncesT (Λ)esde
+2
+tipoderepresentacio´nmansosiysolosiQesdelaforma:
+• • • ... • • •
+E˜ : i) (cid:63)(cid:63)•
+6 •
+(cid:31)(cid:31)
+(cid:63)(cid:63)
+• •
+•
+(cid:31)(cid:31)
+•
+• • • • •
+o el diagrama no orientado del carcaj tiene una de estas
+E˜ : formas:
+7 •
+ii) D :
+4 •
+• • • • • • •
+• •
+E˜ :
+8
+•
+iii) A :
+5 • • • • •
+Nuevamentesetomaque significacualquierade
+• •
+donde • (cid:47)(cid:47) • s (cid:111)(cid:111) ignifica cualquiera de estas dos relacio- estasdosrelaciones • (cid:47)(cid:47) • o • (cid:111)(cid:111) • .
+nes o .
+• • • • Demostracio´n. Como mod Λ es una subcategor´ıa de mod
+T (Λ)siΛesdetipoderepresentacio´nsalvajeentoncesT (Λ)
+2 2
+4. A´lgebras T (A). tambie´nloes;porlotantoseanalizara´nloscasosdondeΛno
+2
+seadetipoderepresentacio´nsalvaje,osea,loscasosdonde
+Setrabajara´ enestaseccio´nconlasa´lgebrastriangularessu- Λ sea de tipo de representacio´n finito y manso y para esto
+(cid:18) (cid:19)
+Λ Λ bastaanalizaraquellascuyocarcajasociadosecorresponda
+perioresdeltipo .Lasquesedenotara´nporT (Λ)
+0 Λ 2 alosdiagramasdeDinkyn:A ,D ,E ,E ,E paraelcaso
+n n 6 7 8
+siguiendolanotacio´ndefinidaen[1],[6]. finito y a los Euclidianos: A˜ , D˜ , E˜ , E˜ y E˜ para el caso
+n n 6 7 8
+de las mansas, recogidos en las proposiciones (3.2) y (3.3)
+Algunostrabajosserefierenalostiposderepresentacionesde respectivamente.
+dichasa´lgebrasdeltipoT (A)comoen[1]y[8].
+n
+SeasumequeT (Λ)esdetipoderepresentacio´nmanso.
+2
+Apartirdeme´todosdiagrama´ticossepuedetambie´nconstruir
+dichaa´lgebracomosemuestraacontinuacio´n[7]. Seanalizara´primeramentelosD conn≥4.Supongamosque
+n
+QcontieneaD yadema´sesuncarcajdeltipoD orientado
+4 5
+Definicio´n4.1. SeaΛela´lgebraasociadaalcarcajQfinito, (D∗)delasiguienteforma
+5
+sin ciclos y sean Q el conjunto de n ve´rtices de Q y Q
+0 1
+el conjunto de flechas de Q. Se define el carcaj T 2 (Q) que (cid:63)(cid:63) •
+posee2nve´rticestalque(T (Q)) =Q ∪Q(cid:48) ={1,...,n}∪
+2 0 0 0
+{1(cid:48),...,n(cid:48)} y cuyo conjunto de flechas es (T (Q)) =Q ∪
+2 1 1 (cid:47)(cid:47) (cid:47)(cid:47)
+Q(cid:48) 1 ∪{i→i(cid:48):i∈Q 0 }. • • •
+Elsiguientelemamuestralarelacio´nentreambasconstruc- (cid:31)(cid:31)
+ciones. •
+EntoncesalconstruirelcarcajT
+(cid:0) D∗(cid:1)
+estecontieneaunsub-
+Lema4.1. SeaΛela´lgebradeincidenciadeunposetconcar- 2 5
+carcajdelaforma
+cajQentoncesela´lgebraT (Λ)esela´lgebradeincidencia
+2
+delposetconcarcajT (Q).
+2 (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+• • • •
+PorlotantosiΛesl-hereditariaentoncesT (Λ)tambie´nlo
+2 β
+es.Lademostracio´ndeestelemasepuedeencontraren[7]. (cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15) (cid:31)(cid:31)
+(cid:47)(cid:47) (cid:47)(cid:47)
+• • • •
+Ciencias Matemáticas, Vol. 35, No. 2, 2021, Pag. 73-79
+A´lgebrastriangularesl-hereditariasdetipoderepresentacio´nmanso 77
+(cid:47)(cid:47)
+Lacategor´ıaderepresentacionesdeestesubcaracajcontodas • • •
+lasrelacionesdeconmutatividadposeeunasubcategor´ıaC
+cuandoβ =id.Porsuparte,lacategor´ıaC esisomorfaala (cid:47)(cid:47) (cid:31)(cid:31) (cid:15)(cid:15) (cid:47)(cid:47) (cid:15)(cid:15)
+• • •
+categor´ıaderepresentacionesdelcarcaj
+lacualcontieneunD˜ yportantoT (Q)esmanso.Elresto
+5 2
+delasorientacionessoncarcajesduales.PorlotantoQ=D .
+•(cid:79)(cid:79) 4
+SiQ=D˜ ,delaforma
+4
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+• • • • •
+•
+(cid:15)(cid:15)
+•
+• • •
+queesdetipoderepresentacio´nsalvaje.PorlotantoT
+(cid:0) D∗(cid:1)
+2 5
+estambie´ndetipoderepresentacio´nsalvaje,locualcontradi-
+celahipo´tesisyQnopuedeserdeltipoD∗.Ana´logamente •
+sepruebaqueparacualquierotraorientacio´ 5 ndeD∗ 5 ,T 2 (cid:0) D∗ 5 (cid:1) secompruebamuyfacilmentequeT (cid:0) D˜ (cid:1) noesdetipomanso
+esdetipoderepresentacio´nsalvaje,locualindicaqueQno 2 4
+puescontieneunsubcarcajdetipoderepresentacio´nsalvaje.
+puedeserD .
+5
+Por otra parte, suponiendo que Q es un carcaj del tipo A˜ ,
+ComoD esunsubcarcajdeD yD˜ paran≥5,E ,E ,E , n
+5 n n 6 7 8 condosve´rticesfuentesdelaforma
+E˜ ,E˜ yE˜ entoncesessuficienteparaafirmarquesiQesde
+6 7 8
+algunadeesasformasentoncesT (Q)esdetiposalvaje.
+2 •(cid:79)(cid:79) ... •(cid:79)(cid:79)
+Queda por comprobar que Q=D , asumiendo que Q es el
+4
+carcajorientadoD∗delaforma: (cid:47)(cid:47) (cid:111)(cid:111)
+4 • ... •
+EntoncesT (Q)contieneaunsubcarcajQ(cid:48)detipoderepre-
+2
+•
+sentacio´nsalvajedelaforma
+(cid:15)(cid:15)
+(cid:47)(cid:47) (cid:111)(cid:111)
+• • • •(cid:79)(cid:79) ... •(cid:79)(cid:79)
+EntonceselcarcajT (D∗)esunaextensio´nporunpuntode
+2 4 (cid:47)(cid:47) (cid:111)(cid:111) (cid:47)(cid:47)
+uncaracajdetipoE˜ yporlotantomanso. • ... • •
+6
+PorlotantoQesdetipoderepresentacio´nsalvaje.
+SiQfueraelsiguientecarcaj
+SisesuponequeQesdeltipoA˜ conrelacio´ndeconmutati-
+n
+• vidadtalqueesdelaforma
+(cid:47)(cid:47) (cid:15)(cid:15) (cid:47)(cid:47) •(cid:79)(cid:79) ... (cid:47)(cid:47) •(cid:79)(cid:79)
+• • •
+EntonceselcaracajT (Q)esdelaforma (cid:47)(cid:47) (cid:47)(cid:47)
+2 • ... •
+Entoncesparan≥5sepuedeencontrarunsubcarcajenT (Q)
+2
+queesdetipoderepresentacio´nsalvaje.LuegoQnopuede
+serA˜
+n
+Seanalizara´ acontinuacio´nquecuandoQeslinealoseaun
+A . En [7] los autores prueban que T (Q) es de tipo de re-
+n 2
+presentacio´nfinitosiQ=A paran≤4,porlotantosolose
+n
+examinara´ A paran≥5.
+n
+que constituye una doble extensio´n del a´lgebra asociada al
+carcaj SiseconsideraqueQtienelaformadelcarcajA∗orientado
+6
+Ciencias Matemáticas, Vol. 35, No. 2, 2021, Pag. 73-79
+78 A´lgebrastriangularesl-hereditariasdetipoderepresentacio´nmanso
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) Sepuedeverqueela´lgebraresultanteesunacoextensio´nde
+• • • • • • top(Y),lacua´lresultaseruna´lgebradeltipoE˜
+7
+EntoncesT (A∗)tienelaforma: (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+2 6 • • • •
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+• • • • • • (cid:47)(cid:47) (cid:15)(cid:15) (cid:47)(cid:47) (cid:15)(cid:15) (cid:47)(cid:47) (cid:15)(cid:15)
+• • • •
+γ
+(cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15)
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+ycomotalesdetipoderepresentacio´nmanso.Paracualquier
+• • • • • •
+otraorientacio´ndeA∗,T (A∗)tambie´nesproductodeexten-
+Teniendoencuentalasubcategor´ıaD derepresentacionestal sionesdea´lgebrasde 5 ltip 2 oE˜ 5 oE˜ .
+6 7
+que γ =id, se tiene que esta es isomorfa a la categor´ıa de
+representacionesdelcarcaj
+Finalmente,sisesuponequeQesdelaforma
+(cid:47)(cid:47) (cid:47)(cid:47)
+• • • (cid:63)(cid:63)
+•
+(cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15)
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:31)(cid:31)
+• • • • • • (cid:63)(cid:63)
+• •
+(cid:15)(cid:15) (cid:15)(cid:15)
+(cid:47)(cid:47) (cid:31)(cid:31)
+• •
+•
+Yestecontienelacategor´ıaderepresentacionesdelcarcaj:
+entonceselcarcajT (Q)tienelaforma
+2
+• •(cid:79)(cid:79)
+(cid:15)(cid:15)
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+• • • • • •
+ElcualesdetiposalvajeyportantoT (A∗)esdetiposalvaje.
+2 6
+DebidoaqueA estaincluidoenA paran≥6entoncespara
+6 n
+esosvaloresden,T (A )esdetiposalvaje.
+2 n
+queresultaserunaextensio´nycoextensio´ndelmo´dulo
+SisuponemosqueQeselgrafoorientadoA∗delaforma:
+5
+(cid:47)(cid:47) (cid:111)(cid:111)
+X = K K K
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+• • • • •
+(cid:15)(cid:15) (cid:15)(cid:15)
+(cid:111)(cid:111) (cid:47)(cid:47)
+EntoncesT 2 (Q)tienelaforma K K K
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) queesdetipomanso(cid:3)
+• • • • •
+(cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15) Lasiguienteproposicio´nmuestralaexistenciadealgu´nposet
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+• • • • • para el cual el a´lgebra T (Λ) es de tipo de representacio´n
+2
+manso
+SeaΛela´lgebraasociadaaQentoncesT (Λ)esunaexten-
+2
+sio´nporunpuntodeuna´lgebralocalmentehereditariacuyo Proposicio´n 4.1. Sea Λ un a´lgebra ba´sica localmente he-
+carcajesdelaforma reditariatalqueT (Λ)esdetipoderepresentacio´nmanso,
+2
+entoncesΛesela´lgebradeincidenciadealgu´nposet.
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+• • • •
+Referencias
+(cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15)
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+• • • • • [1] MAuslanderandI.Reiten.Ontherepresentationtypeof
+triangularmatrixrings. JournalofLondonMathematics
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) Society,2(12):371–382,1976.
+ConinyectivoY = K K K K .
+[2] CCibilis,FLarrio´n,andL.Salmeron. Me´todosDiagra-
+(cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15) (cid:15)(cid:15)
+maticosdelaTeor´ıadeRepresentaciones. Universidad
+(cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47) (cid:47)(cid:47)
+K K K K K
+Auto´nomadeMe´xico,1981.
+Ciencias Matemáticas, Vol. 35, No. 2, 2021, Pag. 73-79
+A´lgebrastriangularesl-hereditariasdetipoderepresentacio´nmanso 79
+[3] JDrozd. Tameandwildmatrixproblems. SpringerL. [8] H.Merklen. Representacionesdeconjuntosordenados
+M.N,1980. yaplicaciones. 1997.
+[9] B.Montero. Descripcio´ndelacategor´ıadelosmo´dulos
+[4] G.DrozdowskiandD.Simson. Remarksonposetsof
+prinyectivossobreela´lgebradematricestria´ngulares,
+finiterepresentationtype. PreprintToru´n,pages1–23,
+2016.
+1978.
+[10] L.A.NazarovaandA.V.Rojter. Categoricalmatrixpro-
+[5] PGabrielandR.V.Roiter.AlgebraVIII.Representations blemsandthebrauer-thrallconjecture. Math.Sem.Gies-
+ofFiniteDimensionalAlgebras. Springer-Verlag,1992. sen,115,1975.
+[11] B.Pe´rez-Lopez. Me´todosdiagrama´ticosenteor´ıadere-
+[6] Z.Leszczyn´ski. l-hereditarytriangularmatrixalgebras
+presentaciones.a´lgebraslocalmentehereditarias.,2014.
+of tame type. Archiv der Mathematik, 54(1):25–31,
+1990.
+[12] D.Simson. LinearRepresentationsofPartiallyOrdered
+SetsandVectorSpaceCategories. GordonandBreanch
+[7] Z. Leszczyn´ski and D. Simson. On triangular matrix SciencePublishers,1992.
+ringsoffiniterepresentationtype. JournalofLondon
+MathematicsSociety,20(2):396–402,1979.
+Ciencias Matemáticas, Vol. 35, No. 2, 2021, Pag. 73-79

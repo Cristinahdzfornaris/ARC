@@ -1,0 +1,318 @@
+CienciasMatemáticas,Vol.31,No.1,Pag.19-23, 2017
+Recibido09-2016
+Un esquema alternativo para diferencias finitas
+generalizadas.
+An alternative scheme for generalized finite
+differences.
+A. Gaona-Arias1, F. J. Dom´ınguez-Mota*1, G. Sa´nchez-Ye´pez1, J. G. Tinoco-Ruiz1,2, M. L.
+Ruiz-Zavala1
+Resumen Enestetrabajosepresentaunesquemaparadiferenciasfinitassobremallasestructuradas,que
+fuedisen˜adoenbasealaanalog´ıaentrelascondicionessobreloscoeficientesdelesquemarequeridosporla
+condicio´ndeconsistenciayladefinicio´ndelconjuntofactiblegeome´tricoenprogramacio´nlineal;secomparasu
+desempen˜ocontraunesquemadetipoheur´ısticoestudiadoenlaliteratura,y,finalmente,semuestraquepuede
+produciraproximacionesnume´ricasdesegundoordenenregionesmuyirregularesenunaformamuysencilla.
+Abstract Inthispaperaschemeforfinitedifferencesoverstructuredgrids,whichwasdesignedbasedonthe
+analogybetweentheconditionsrequiredforconsistencyoverthecoefficientsoftheschemeandthedefinitionof
+ageometricfeasiblesetatlinearprogramming,ispresented;itsperformanceiscomparedagainstthatofan
+heuristicschemestudiedintheliteratureand,finally,itisshownthatasecondordernumericalaproximationsin
+irregularregionsisproducedinaneasyway.
+PalabrasClave
+Diferencias Finitas Generalizadas — Programacio´n Lineal — Mallas irregulares — Mallas estructuradas —
+EcuacionesEl´ıpticas
+1FacultaddeCienciasF´ısicoMatema´ticas,UniversidadMichoacanadeSanNicola´sdeHidalgo,Morelia,Me´xico,agaona@fismat.umich.mx,
+dmota@umich.mx,gsanchez@fismat.umich.mx,jtinoco@umich.mx,mlruiz@fismat.umich.mx.
+2UniversidadAbiertayaDistanciadeMe´xico,CiudaddeMe´xico,Me´xico,jose.tinoco@unadm.mx
+*AutorparaCorrespondencia
+1. Diferencias finitas entredosnodosconsecutivosdelamisma.
+Expresionessimilarespuedenobtenerseparaelcasorec-
+1.1 Regionesregulares
+tangular2D;porejemplo,para(cid:52)utenemos
+Elme´tododelasdiferenciasfinitashasidoampliamen-
+teutilizadodurantemuchotiempoendiversasaplicaciones
+debido a su sencillez conceptual y, de hecho, sigue siendo u +u +u +u −4u
+((cid:52)u) = i,j+1 i,j−1 i−1,j i+1,j i,j +O(h2)
+laalternativama´susadaenlainvestigacio´nyenlaindustria. ij h2
+Sinembargo,lamayorpartedelasimplementacionesdelos (3)
+esquemascla´sicossehandesarrolladopararegionesrectan- conhnuevamenteeltaman˜odepasoyu i,j elvaloraproximado
+gularesorectangularesporbloques,loquelimitasuusoen deuenelnodoi,jdelamalla.
+problemasf´ısicosdondelageometr´ıadeldominioesirregular. Al discretizar dicho operador sobre todo el dominio se
+Las diferencias finitas se pueden obtener formalmente obtieneunamatrizdecoeficientesK dadapor
+deldesarrolloenseriedeTaylor.Unejemplocla´sicoymuy
+ 
+T −I ... 0
+utilizadoeslaaproximacio´ndeprimerordendelafuncio´n
+dadapor K=   −I T −I ... 0  ,
+ ... 
+u(x+h)=u(x)+u(cid:48)(x)h+O(h2) (1) 0 0... −I T
+dedondeobtenemosquelaaproximacio´nalaprimeraderiva- donde
+ 
+daes 4 −1 ... 0
+u(x+h)−u(x)
+u(cid:48)(x)≈ , (2)  −1 4 −1 ... 0 
+h T =  ...   ;
+dondeheseltaman˜odepasodelamalla;estoes,ladistancia 0 0... −1 4
+20 Unesquemaalternativoparadiferenciasfinitasgeneralizadas.
+siguienteforma1
+8
+[Au +Bu +Cu +Du +Eu +Fu] −∑Γu(p)
+xx xy yy x y p0 i i
+i=0
+=
+Ω 8
+(F(p )−∑Γ)u(p )+
+0 i 0
+i=0
+8
+(D(p )−∑Γ∆x)u (p )+
+0 i i x 0
+i=1
+Figura1.ConjuntoconexoΩ
+8
+(E(p )−∑Γ∆y)u (p )+
+0 i i y 0
+i=1
+K esunamatrizdefinidapositivaconeigenvaloresconocidos 8 Γ(∆x)2
+y,enfuncio´ndeestosu´ltimos,esposibleescribircotasu´tiles (A(p 0 )−∑ i i )u xx (p 0 )+
+2
+paralanormadelainversa,locualpermiteprobarlaconver- i=1
+genciadelme´todo.Enlasiguienteseccio´nsemuestracomo 8
+(B(p )−∑Γ∆x∆y)u (p )+
+extenderestasexpresionesamallaslo´gicamenterectangulares 0 i i i xy 0
+i=1
+paraelcasoderegionesnoregularesafindepoderemplear
+8 Γ(∆y)2
+diferenciasfinitasenlasmismas. (C(p )−∑ i i )u (p )+
+0 yy 0
+2
+i=1
+1.2 Regionesirregulares O(ma´x{∆x,∆y})3
+i i
+Enmallaspararegionesirregulares,cuandoloscoeficien-
+tes del esquema en diferencias se seleccionan de tal forma Laexpresio´nanteriormuestraquesatisfacerlacondicio´n
+quesesatisfacelacondicio´ndeconsistencia,elme´todode deconsistenciadefinedemaneranaturalelsiguientesistema
+diferenciasfinitasesunaopcio´nintuitivayeficientepararesol- deecuacionesparaloscoeficientesΓ i
+vernume´ricamenteecuacionesel´ıpticasconcondicionesde
+ 
+DirichletyNeumannalafrontera.Paramostrarco´moobtener  1 1 ... 1  Γ 0  F(p ) 
+e d l ic o h p o e s ra c d L o o e u r fi = l c i i n e A e n u a t x l e x s d + , e c B s o e u n g x s u y id n + e d r C o e u m o y r o y d s + en e D lp u r x o + bl E em u y a + de F a u p , roxim (4 a ) r        0 0 0 0 0 ∆ ∆ ( ∆ ( ∆ ∆ x y x x y 1 1 1 1 ∆ ) ) y 2 2 1 . . . . . . . . . . . . . . . ∆ ∆ ( ∆ ( ∆ ∆ x y x x y 8 8 8 8 ∆ ) ) y 2 2 8                 Γ Γ . . . 1 2          =        D E 2 B 2C A ( ( ( p ( ( p p p 0 p 0 0 0 ) ) 0 ) ) )        .
+1 8 Γ 0
+donde A,B,C,D,E y F son funciones continuas en un do- 8
+(7)
+miniosimplementeconexoΩ,undominiocuyafronteraes
+Observemosqueenelsistema(7)hay6ecuacionesy9
+aproximadaporunapoligonal,comosemuestraenlaFigura1.
+inco´gnitas,loquenosdasuficientesgradosdelibertadpara
+calcularloscoeficientesΓ.Dadasuestructura,esconveniente
+UnavezgeneradaunamallaparaΩ[10],sepuedeobte- i
+considerarelsistemadelasu´ltimas5ecuaciones
+nerunesquemadediferenciasfinitasenregionesirregulares
+considerando un conjunto finito de nodos p 0 ,p 1 ,...,p q de  ∆x ... ∆x   Γ 1   D(p ) 
+Γ la 0 , m Γ a 1 l , l . a .. p ,Γ ar q a ,d lo e s m c o u d a o le q s u n e ec se es s i a ta ti m sf o a s ga encontrarcoeficientes     ∆ (∆ y x 1 1 1 )2 . . . . . . ∆ (∆ y x 8 8 8 )2          Γ . . 2      =     E 2A ( ( p p 0 0 ) 0 )     ,
+∑ q Γ i u(p i )≈[Au xx +Bu xy +Cu yy +Du x +Eu y +Fu] p0 (5)  ∆ (∆ x y 1 1 ∆ ) y 2 1 . . . . . . ∆ (∆ x y 8 8 ∆ ) y 2 8   . Γ    B 2C (p ( 0 p ) 0 ) 
+i=0 8
+(8)
+Lacondicio´ndeconsistenciarequierequecuandop i →p 0 pueslaprimeraecuacio´nindicaqueΓ 0 essimplemente
+secumpla
+8
+Γ =F(p )−∑Γ. (9)
+0 0 i
+i=1
+q
+∑Γu(p)−[Au +Bu +Cu +Du +Eu +Fu] →0.
+i i xx xy yy x y p0 Elsistema(8)tampocoesderangocompletoporloque
+i=0
+puederesolversedevariasformas[2]-[9];particularmenteen
+(6)
+EstadiferenciasepuedeexpandirenseriedeTaylorhasta 1Estos8puntossonlosvecinosdep 0enunasubmallaestructuradade
+segundoordenlacual,usando8puntosalrededorde p 0 dela 3x3,comolamostradaenlaFigura2.
+Unesquemaalternativoparadiferenciasfinitasgeneralizadas. 21
+P
+0
+Figura3.Mallalo´gicamenterectangular,de41puntospor
+Figura2.Este´ncilde8puntos
+lado,delabah´ıadelaHabana
+[8] se presento´ una implementacio´n de tipo heur´ıstico que, dondedx,dysonlostaman˜osdepasoenlasdireccionesde
+aunqueenalgunoscasosdisminuyeligeramenteelordende x, y; y Factor es un nu´mero que se ajusto´ en las diferentes
+laaproximacio´n,funcionademaneraeficienteyrobustaen
+pruebasparaaumentareldia´metrodelconjuntofactible.
+regionescongeometr´ıasmuyirregulares.Enestetrabajo,se
+Enlasmallasgeneradassecalculo´ laaproximacio´nala
+aprovechalasimilituddelsistemadeecuaciones(8)conla
+solucio´ndelaecuacio´ndePoissontomandolafuncio´nfuente
+definicio´ngeome´tricadeunconjuntofactibleenunproblema
+comolaexpresio´n
+deprogramacio´nlineal;paraelcual,comoenelcasodeuna
+faseIdelme´todosimplex[1,11],debemosproponerunafun- f(x,y)=10e2(x+y),
+cio´nobjetivoauxiliar.
+detalformaquelacondicio´ndeDirichletenlafronteraesta
+Observemosquedebemoscontarconsuficientesgradosde dadapor
+libertadparaelegirloscoeficientesΓ
+i
+,yaquecarecemosdela g(x,y)=2e2(x+y).
+simetr´ıalocalquetenemosenelcasorectangular;noobstante,
+Laspruebasserealizaronenunacomputadoraporta´tilPro-
+elproblemaesfactiblesiincluimosunnu´meroadecuadode
+BookHPconprocesadori5,con4GBdeRAMyunsistema
+nodosenlaaproximacio´n.
+operativoWindows7de64bits;utilizandoMATLAB(cid:13)c2012a.
+Calculamoselerrorlocaldetruncamiento(6)paracom-
+2. Resultados y Discusio´n
+pararlosresultadosobtenidosconelme´todopropuesto,em-
+pleando la fase I de programacio´n lineal, contra el me´todo
+Paraprobareldesempen˜odelme´todopropuestoserealizo´
+heur´ıstico,elcualseimplemento´empleandopseudoinversade
+lacomparacio´ncontraelme´todoheur´ısticoimplementadoen
+Moore-Penrose;lacomparacio´nsemuestragra´ficamenteen
+[8].Ambosseaplicaronaunamallalo´gicamenterectangular,
+elCuadro1;paradiferentesvaloresdeFactor,sepresentan
+querepresentalabah´ıadelaHabanacon41puntosporlado,
+loslogaritmosdeloserrorescuadra´ticoscontraelnu´merode
+lacualsemuestraenlaFigura3;fuegeneradautilizandoel
+nodointeriordelamalla.
+softwareUNAMalla[10],minimizandoelfuncionaldea´rea
+Enlosresultadossepuedeobservarque,independiente-
+adaptiva-longitud.Unavezgeneradalamalla,loscoeficien-
+mente del valor Factor dado, el error local de truncamien-
+tessecalcularonlocalmenteenunestencildefinidoenuna
+totieneuncomportamientosimilarenordenaldelme´todo
+submatrizde3x3,paracadanodointerior(verFigura2).
+heur´ıstico,y,apesardeserunaaproximacio´ndemenororden
+Esmuyimportanteobservarque,dadoquetienevarios
+en algunos casos, en el 99,78% de los nodos interiores, el
+gradosdelibertad,elsistema(8)defineunconjuntofactible
+ca´lculodeloscoeficientessehizoenmenosde6iteraciones.
+noacotado,porloqueesnecesarioproponercotassuperiores
+Esto muestra que el algor´ıtmo propuesto es una alternativa
+e inferiores para los coeficientes Γ; dada la simetr´ıa de la
+i
+computacionalmentemuyecono´micaalme´todoheur´ıstico.
+sumaenlaexpresio´n(5),enlaspruebasseutilizo´ lafuncio´n
+objetivo
+8 Agradecimientos
+∑Γ (10)
+i
+i=0 Los autores desean agradecer a la Coordinacio´n de In-
+vestigacio´nCient´ıficadelaUniversidadMichoacanadeSan
+conlacota
+Nicola´s de Hidalgo (CIC-UMSNH) por su apoyo a trave´s
+Factor delproyectoCIC9.16,as´ıcomoalInstitutodeCiberne´tica,
+,
+(min(|dx|,|dy|))2 Matema´ticasyF´ısica(ICIMAF)porsuatinadacombinacio´n
+22 Unesquemaalternativoparadiferenciasfinitasgeneralizadas.
+(a)
+105
+100
+10−5
+10−10
+10−15
+0 200 400 600 800 1000 1200 1400 1600
+Número de nodos interiores
+ocitárdauc
+rorre
+led
+omtíragoL
+Factor = 25
+Pseudoinversa Prog. Lineal
+(b)
+105
+100
+10−5
+10−10
+10−15
+0 200 400 600 800 1000 1200 1400 1600
+Número de nodo interior
+ocitárdauc
+rorre
+led
+omtíragoL
+Factor = 50
+Pseudoinversa
+Prog. Lineal
+(c)
+10−8
+10−9
+10−10
+10−11
+10−12
+10−13
+10−14
+10−15
+0 200 400 600 800 1000 1200 1400 1600 Número de nodo interior
+ocitárdauc
+rorre
+led
+omtíragoL
+Factor = 100
+Pseudoinversa
+Prog. Lineal
+(d)
+10−7
+10−8
+10−9
+10−10
+10−11
+10−12
+10−13
+10−14
+10−15
+0 200 400 600 800 1000 1200 1400 1600
+Número de nodo interior
+ocitárdauc
+rorre
+led
+omtíragoL
+entrelacienciaylacalidezdelpueblocubano;tambie´nalDr.
+HumbertoMadridporsussiempreatinadoscomentarios.
+Referencias
+[1] MokhtarS.Bazaraa,JohnJ.Jarvis,andHanifD.Sherali.
+LinearProgrammingandNetworksFlows. Wiley,2010.
+[2] F. Dom´ınguez-M., P. Ferna´ndez-Valdez, S. Mendoza-
+Armenta,J.Tinoco-R.,andG.Tinoco-G. Numericalso-
+lutionofdifferentialequationsinirregularplaneregions
+usingqualitystructuredconvexgrids.Int.J.ofModeling,
+Simulation,andScientificComputing,4,2013.
+[3] F. Dom´ınguez-M., F. Guille´n-Reyes, E. Ruiz-D´ıaz,
+J.Tinoco-R.,G.Tinoco-G.,andA.Valencia-Ram´ırez.
+An application of generalized differences to unsteady
+heatproblemssubjecttomixedboundaryconditionss.
+PANACM2015-1stPan-AmericanCongressonCompu-
+tationalMechanics,inconjunctionwiththe11thArgen-
+tineCongressonComputationalMechanics,MECOM
+2015,pages1077–1082,2015.
+[4] F.Dom´ınguez-M.,S.Mendoza-Armenta,J.Tinoco-R.,
+andG.Tinoco-G. Finitedifferenceschemessatisfying
+anoptimalityconditionfortheunsteadyheatequation.
+MathematicsandComputersinSimulation,106:76–83,
+2014.
+[5] F. Dom´ınguez-M., E. Ruiz-D´ıaz, J. Tinoco-R.,
+G. Tinoco-G., and A. Valencia. Generalized finite
+differences on structured convex grids for irregular
+planardomains. 11thWorldCongressonComputational
+Mechanics, WCCM 2014, 5th European Conference
+on Computational Mechanics, ECCM 2014 and
+6th European Conference on Computational Fluid
+Factor = 200 Dynamics,ECFD2014,pages5547–5558,2014.
+Pseudoinversa
+Prog. Lineal
+[6] F.Dom´ınguez-M.,J.Tinoco-R.,andS.Mendoza. Finite
+differenceschemessatisfayinganoptimalitycondition.
+MASCOT10,2011.
+[7] F.Dom´ınguez-M.,J.Tinoco-R.,G.Tinoco-G.,P.Michel-
+F.,andE.Ruiz-D. Amodifiedlax-wendroffschemefor
+Cuadro1.Tablaslogar´ıtmicasdeloserrorescontenidos,con
+irregular2Dspaceregions. MASCOT12Proceedings,
+referenciaalosdiferentesFactores.(a)Factor=25,(b)Factor
+2012.
+=50,(c)Factor=100,(d)Factor=200
+[8] F.J.Dom´ınguez-Mota,P.M.Ferna´ndez-Valdez,E.Ruiz-
+D´ıaz, J. G. Tinoco-Guerrero, and J. G. Tinoco-Ruiz.
+Anheuristicfinitedifferenceschemeonirregularplane
+regions. Applied Mathematical Sciences, 8:671–683,
+2014.
+[9] G. Tinoco-Guerrero, F. J. Dom´ınguez-Mota, J. G.
+Tinoco-Ruiz,andE.Ruiz-D´ıaz. Animplicitmodified
+lax-wendroff scheme for irregular 2D space regions.
+MASCOT13Proceedings,2013.
+Unesquemaalternativoparadiferenciasfinitasgeneralizadas. 23
+[10] UNAMalla. Anautomaticpackagefornumericalgrid [11] RobertJ.Vandervei. LinearProgramming:Foundations
+generation,2015. andExtentions. PrincetonUniversity,2001.

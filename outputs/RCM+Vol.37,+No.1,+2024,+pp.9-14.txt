@@ -1,0 +1,389 @@
+ArtículoOriginal/OriginalResearch CienciasMatemáticas,Vol.37,No.1,2024,Pág.9-14
+Recibido(Received):26-05-2024,Revisado(Reviewed):27-06-2024
+Aceptado(Accepted):11-07-2024,Enlínea(Online):04-12-2024
+Mirada contextual a los asistentes matemáticos
+desde el triángulo didáctico de Chevallard
+Contextual view of mathematical assistants from the
+didactic triangle of Chevallard
+Lissette María Pedroso Carracedo*1 , Tania Diez Fumero2 , Abelardo López Domínguez3
+Resumen Losingenierosdurantesuprocesodeformacióndebentenerenconsideraciónlasrepresentaciones
+técnicas y científicas en términos matemáticos, para reflejar los rasgos cuantitativos y cualitativos de los
+fenómenosdelcontextoingenierilmediantelastecnologíasy,enespecial,deasistentesmatemáticos.Eluso
+deestosexigedelconocimientodecontenidosmatemáticosydeunaadecuadapreparacióndeeducandosy
+educadorespararesolverdisímilesproblemasintrayextramatemáticos.Elpresentetrabajotienecomoobjetivo
+exponerunanálisissobreuncontextoeducacionalfavorableparalaformaciónydesarrollodelahabilidad“usar
+asistentesmatemáticos”apartirderelacionesdidácticasdeclaradasenestudiosrealizadosporelmatemático
+francés Yves Chevallard. La ejecución planificada de las acciones propuestas realizada por educandos y
+educadorespermitiráobtenermejoresresultadosduranteelempleodeasistentesmatemáticos,comopartedel
+procesodeenseñanzayaprendizajedelaMatemáticaSuperior.
+Palabras Clave: asistentes matemáticos, didáctica, enseñanza de la matemática, tecnología, triángulo de
+Chevallard.
+Abstract Engineers during their training process must take into consideration the technical and scientific
+representationsinmathematicalterms,toreflectthequantitativeandqualitativefeaturesofthephenomenaof
+theengineeringcontextbymeansoftechnologiesand,especially,mathematicalassistants. Theuseofthese
+requirestheknowledgeofmathematicalcontentsandanadequatepreparationofstudentsandeducatorsto
+solvedissimilarintraandextra-mathematicalproblems. Theaimofthispaperistopresentananalysisofan
+educationalcontextfavorabletotheformationanddevelopmentoftheabilityto“usemathematicalassistants”
+based on didactic relations stated in studies carried out by the French mathematician Yves Chevallard. The
+plannedexecutionoftheproposedactionscarriedoutbystudentsandeducatorswillallowtoobtainbetterresults
+duringtheuseofmathematicalassistants,aspartoftheteachingandlearningprocessofHigherMathematics.
+Keywords: mathematicalassistants,didactics,mathematicalteaching,technology,Chevallardtriangle.
+MathematicsSubjectClassification: 97D40,97D50,97C70.
+1DepartamentoMatemática,InstitutoTécnicoMilitar“JoséMartí”,LaHabana,Cuba.Email:lissettepc@nauta.cu.
+2DepartamentoMatemática,InstitutoTécnicoMilitar“JoséMartí”,LaHabana,Cuba.Email:taniadiez2010@gmail.com.
+3CentrodeEstudiosparaelPerfeccionamientodelaEducaciónSuperior,UniversidaddeLaHabana,LaHabana,Cuba.Email:
+alopezdom@gmail.com.
+*AutorparaCorrespondencia(CorrespondingAuthor)
+Editadopor(Editedby):DamianValdésSantiago,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,LaHabana,Cuba.
+Maquetadopor(Layoutby):LázaroDanielGonzálezMartínez,FacultaddeMatemáticayComputación,UniversidaddeLaHabana,La
+Habana,Cuba.
+Citarcomo: PedrosoCarracedo,L.M.,DiezFumero,T.,&LópezDomínguez,A.(2024).Miradacontextuala
+losasistentesmatemáticosdesdeeltriángulodidácticodeChevallard.CienciasMatemáticas,37(1),9–14.DOI:
+https://doi.org/10.5281/zenodo.14278047.Recuperadoapartirdehttps://revistas.uh.cu/rcm/article/view/9478.
+Introducción específicodelaformacióndeingenieros,actualmentesehan
+modificadolosretosydesafíosdelasuniversidades,yaqueel
+Los recursos informáticos han llegado a ser uno de los
+desarrollotecnológicohafomentadounaexigenciamásenel
+pilares básicos de la sociedad moderna y se debe formar a
+procesodeenseñanza-aprendizaje.Surgelanecesidaddeque
+la nueva generación de acuerdo a esta realidad. En el caso
+10 MiradacontextualalosasistentesmatemáticosdesdeeltriángulodidácticodeChevallard
+losfuturosingenierospuedan,apartirdelusodelatecnología, algebraicoynumérico).Enestesentido,[8]y[9]loconside-
+recolectar,grabar,organizar,analizardatosypoderutilizar ransoftwareselaboradosparaelprocesamientoytrabajocon
+de forma dinámica y conveniente herramientas capaces de expresionesmatemáticas.
+dibujar,calcularygraficar. Deacuerdoalabúsquedabibliográficarealizadaconel
+Laaparicióndelascomputadoras,comopartedeldesarro- objetivodeprofundizarsobrelosAM,seconsideraquelos
+llotecnológico,provocóqueestasfueranutilizadasprimera- mismosconstituyen,además,unaherramientadetrabajopara
+menteparabuscarinformaciónsobreuntemadeterminadoo laMatemática.Muchosdeestosfacilitanlaresolucióndepro-
+pararedactartextosdeunaformamáscómodayconmejorvi- blemasmatemáticosquesepresentanenlasinvestigaciones
+sibilidad.Posteriormente,sefueronperfeccionandoencuanto científicas o en trabajos relacionados con la técnica. Aquí
+asistemasoperativosylacreacióndesoftware.Cuandose es donde radica la importancia del uso de los AM para las
+incorporancomopartedelprocesodeenseñanzayaprendizaje carrerasdeingeniería.
+delaMatemática,susprimerosusosestuvierondestinadosa Esimportantetenerencuentaquelautilizacióndeestos
+larealizacióndeoperacionesengorrosasdecálculo.Lonove- mediosdebehacersedeformaplanificadaynoespontánea,
+dosoconsistíaenlarapidezconquelacomputadoraefectuaba de lo contrario, el proceso pudiera revertirse en contra del
+dichasoperaciones,locualprodujounampliodesarrollo,por docente.
+ejemplo,delcálculonumérico. Según [4] y [14], en la Universidad Francisco de Paula
+Enestesentido,seletributaalacomputadoraunvalorpe- SantanderyenlaUniversidadTécnicadePereira,ambasde
+dagógicocuandoestaesutilizadaparaacompañarypromover Colombia, se realizan estudios que tienen en cuenta la dis-
+elaprendizaje,apartirdelaprovechamientodecadaunadelas ponibilidadderecursos(humanos,tecnológicos,materiales
+herramientasquebrinda.Elvalorpedagógicoqueseleconfie- existentes)parallevaracabotransformacionescurriculares.
+realacomputadora,ydemanerageneralalatecnología,debe Lascarrerasdeingenieríadeestasinstitucionescuentancon
+iracompañadodeunaplanificaciónyorganizaciónadecuadas educadoresquerealizanactividadesoproyectosdondeinte-
+paralograrlosresultadosdeseados.Deahílaimportanciadel granelusodemedioselectrónicoscomolacomputadorayla
+papel que desempeñan educandos y educadores durante su calculadora,asícomolosAM.
+empleoconfinesdocentes. EnMéxicosehainiciadounprocesodeconstrucciónde
+propuestaseducativasentrelasquedestacanlasdelÁreade
+EducaciónSuperiordelDepartamentodeMatemáticaEdu-
+Relevancia del estudio
+cativadelCentrodeInvestigaciónyEstudiosAvanzadosdel
+Los procesos de informatización de la sociedad que se InstitutoPolitécnicoNacional(CINVESTAV),elcualesun
+llevanacaboenlaactualidadenlasdistintasuniversidades organismodescentralizadodeinteréspúblicodedicadoala
+exigen de una adecuada planificación por parte de los do- difusión,enseñanzaydesarrollodeinvestigacionescientíficas
+centes.Lasinstitucioneseducativasnosiemprecuentancon enMéxico.Tambiénsedestacanlasinvestigacionesde[13]
+aquellasorientacionesque,desdeelpuntodevistametodoló- y[2]delInstitutoTecnológicoydeEstudiosSuperioresde
+gico,planificanlosrolesquedebendesempeñareducandosy Monterrey.
+educadoresalinteractuarconloscomponentesdeladidáctica. Otrosautores[10]realizanpropuestasenelcampodela
+Enestesentido,lasrelacionessistémicasquedebenestable- didácticaqueapuntanalaintegracióndelasTecnologíasde
+cerseconlossaberesquesederivandelusodelatecnología laInformaciónylasComunicaciones(TIC)enlaeducación
+y, en particular, de los asistentes matemáticos, son válidas matemática.
+paratodalacomunidadacadémica.Enelpresentetrabajose Al tomar en consideración los elementos anteriormen-
+muestranalgunasalternativasmetodológicasqueposibilitarán teplanteados,enelcasodelaenseñanzadelaMatemática
+establecerdichasrelaciones. seconsiderantecnologías,lascalculadorasgráficasosuper-
+calculadorasylossoftwaresmatemáticosencomputadoras
+personales,dondeseobservandosvertientesfundamentales
+1. Desarrollo
+enlosprogramasparaestadisciplina[3]:
+Las investigaciones en torno a las herramientas compu-
+tacionales, sus potencialidades y el uso de la computadora 1. La elaboración y uso de programas con fines especí-
+comoobjetodeestudio,herramientadetrabajoymediode ficos de enseñanza-aprendizaje, que pueden adoptar
+enseñanza,aumentancadadíamás. diferentes formas (tutoriales, entrenadores, juegos o
+LaenseñanzadelaMatemáticaconelusodelacompu- simuladores),endependenciadelosobjetivospropues-
+tadorasematerializaconlaaparicióndediversasalternativas tos.
+yenfoques.Puedenmencionarseelusodelosasistentesma-
+2. El uso de sistemas de herramientas computacionales
+temáticos (AM), los cuales surgieron a finales de los años
+queautomatizanprocesosmatemáticoscomplejos,pero
+setentayque,según[15],sonconsideradoscomosistemas
+quenosistematizanenfoquesdidácticos.
+generalesdecálculosimbólicoquepropicianposibilidades
+deinteractividad,carácterdinámico,almacenamientodein- En el caso particular de la integración de los AM en el
+formación y múltiples sistemas de representación (gráfico, ProcesoDocenteEducativo(PDE),seponeenevidenciaque
+CienciasMatemáticas,Vol.37,No.1,2024,Pág.9-14 PedrosoCarracedo,L.M.,DiezFumero,T.,&LópezDomínguez,A.
+https://revistas.uh.cu/rcm/article/view/9478 https://doi.org/10.5281/zenodo.14278047
+MiradacontextualalosasistentesmatemáticosdesdeeltriángulodidácticodeChevallard 11
+hasidoobjetodeestudiodevariosinvestigadores[11,16,7], Enestesentido,eleducadordebeenseñaraleducandoa
+quereconocencomonovedosalaintegracióndelasTICyde usarasistentesmatemáticos,mientrasqueeleducandodebe
+AMcomoDerive,Geogebra,Cabrigeometry,Mathematica, aprenderausarasistentesmatemáticosapartirdelasorienta-
+Mathcad,Statistica,MapleySPSS. doresbrindadasporeleducador.Estasrelacionessonbidirec-
+ElusodeunAMlebrindalaposibilidadaleducandode cionalespueseleducandotambiénenseñaasuscompañeros
+intercambiarconlaMatemáticadeunaformamásdirecta,lo menos aventajados. Es en este momento donde la zona de
+quepropicialainvestigación,lamotivaciónyeldescubrimien- desarrollopróximosegenera,apartirdelainteracciónentre
+toalrededordeloscontenidosmatemáticosqueseimparten eleducandooeleducador,queyadominaelusodeasisten-
+sobreundeterminadotema. tes matemáticos, y aquel educando que está en proceso de
+Enestesentido,Chevallard[5]planteaque“uncontenido adquirirdichahabilidad.
+o saber designado como saber a enseñar, sufre a partir de En este orden de ideas, la formación y desarrollo de la
+entonces un conjunto de transformaciones adaptativas que habilidad“usarasistentesmatemáticos”selogramediantela
+vanahacerloaptoparaocuparunlugarentrelosobjetosde articulacióndelascuatroaccionesquelaconforman(concep-
+enseñanza”.DeacuerdoconTorres[12],latransposicióndi- tualizar,traducir,operarysolucionar),duranteeldesarrollo
+dácticasurgeespecíficamentedelasexperienciaspedagógicas delostemasdeladisciplinaMatemáticaSuperior.Paracada
+ydidácticasenlasclasesdeMatemáticas,hastaextendersey acciónsedefineunsistemadeoperacionesquesedescribena
+abarcardiversoscamposdelconocimientocientífico. continuación:
+Esto significa que, si se van a impartir clases donde se
+Acción1:Conceptualizar
+usen asistentes matemáticos, estos deben formar parte del
+procesodeenseñanzadesdeladeclaracióndelosobjetivos IdentificaralAMcapazderesolverelproblema.
+y contenidos específicos y no específicos de la disciplina
+Definirlosconceptos,teoremas,leyesyalgoritmosma-
+MatemáticaSuperior.
+temáticosquepermitenresolverelproblema.
+Enconcordanciaconestateoríaeneltratamientometo-
+Compararreglas,algoritmosyconceptosparaunase-
+dológico y didáctico del uso de los asistentes matemáticos
+lección de AM que permite resolver el problema de
+enelprocesodocenteeducativodelaMatemáticaSuperior,
+maneraapropiada.
+seproponeenelpresentetrabajounacontextualizacióndela
+misma,apartirdeladescripcióndelosrolescorrespondientes Comprobarteoremasyleyesdeunaformalógicame-
+alossaberes,loseducandosyloseducadores. dianteelAM.
+Enestainvestigaciónlossaberesvienenidentificadoscon
+Acción2:Traducir
+los contenidos específicos y no específicos de la disciplina
+MatemáticaSuperior.Seasumenenestetrabajolasideasde Interpretar los conceptos necesarios para resolver el
+Ambra[1]alinterpretarelcontenidoespecíficocomoloscon- problema a partir de conexiones establecidas con el
+ceptos,leyes,teorías,procedimientosymétodosprivativosde AM.
+unacienciaodisciplinaenparticular,enfuncióndelconoci-
+Modelarestrategiasdesolucióndelproblemaapartir
+mientodidácticodelcontenido.Deigualformaseconsidera
+delasposibilidadesquebrindaelAM.
+alcontenidonoespecíficocomoaquellashabilidadeslógicas,
+Recodificarmodelosmatemáticosapartirdelconoci-
+habilidadesdecaráctergeneral,procedimientosalgorítmicos,
+mientoymanejodelossímbolosutilizadosporelAM
+heurísticos,habilidadesdeestudioyvaloresadesarrollarco-
+pararesolverelproblema.
+molahonestidad,laindependenciayelcompañerismo.La
+habilidad“usarasistentesmatemáticos”definidaporPedroso Revisarenla“Ayuda”delAMlosdistintoscomandosy
+[9],sobresaleenestesentidocomounomásdelossaberes. funcionesdeprogramación,laformadeintroducirlos
+Por otro lado, D’Amore y Fandiño [6] expresan que el datos e inicializar las variables, las características de
+triángulo de Chevallard se interpreta mediante sus lados y precisiónytipodelasrespuestas,asícomolabúsqueda
+vértices.Lascondicionesqueposibilitanunadecuadousode detutorialesquecontribuyanaresolverelproblema.
+losasistentesmatemáticossecorrespondenconlosrolesque
+Acción3:Operar
+desempeñanlosvértices(educandos,educadoresysaberes).
+Realizarrepresentacionesgráficasvinculadasalproble-
+Enelprocesodeinterpretacióndelosladosdeltriángulo
+mamedianteelAM.
+didácticodeChevallard,desdeelusodeasistentesmatemá-
+ticos, cada lado evidencia relaciones entre dos vértices. El Algoritmizar el modelo matemático para resolver el
+ladoSaber-Educandoseidentificaconelverbo“aprender”. problemadeformalógicayordenada.
+EnelcasodeladoSaber-Educadorseevidenciasurelación
+AproximarresultadosconelAMdeacuerdoalanatu-
+conelverbo“enseñar”.Launidadcognitivo-afectiva,quese
+ralezaylalógicadelproblema.
+estableceduranteelprocesodeenseñanzayaprendizajedela
+Matemática,seponedemanifiestoapartirdelasrelaciones Optimizarlasestrategiasotécnicasvinculadasalpro-
+establecidasporelladoEducador-Educando. blemaparaseleccionarlamásapropiada.
+PedrosoCarracedo,L.M.,DiezFumero,T.,&LópezDomínguez,A. CienciasMatemáticas,Vol.37,No.1,2024,Pág.9-14
+https://doi.org/10.5281/zenodo.14278047 https://revistas.uh.cu/rcm/article/view/9478
+12 MiradacontextualalosasistentesmatemáticosdesdeeltriángulodidácticodeChevallard
+Calcular mediante el algoritmo programado y la uti- convierteensujetodelprocesosinoelprograma.Igualmente
+lizacióndelasfuncionesycomandosdelpropioAM se debe analizar si tiene lógica el procedimiento obtenido
+necesariospararesolverelproblema. conelAM,yaquesepuedencometererroresdecontenidoo
+erroresalahoradeintroducirlosdatosuoperadorespropios
+Acción4:Solucionar
+dellenguajedeprogramaciónqueexigeelmismo.
+Aplicarlosconceptosmatemáticosasituacionesnuevas
+Sucedeconfrecuenciaqueoperacionesdecálculosenci-
+ytomardecisionesdeacuerdoacriteriosválidos.
+llasquepuedenrealizarsedeformamental,eleducandolas
+Conjeturarmedianteinferenciasygeneralizacionesque realizaapartirdelasistentematemático,locualtraeconsigo
+permitencomunicarlosresultadosobtenidosconelAM ciertogradodedependenciadelmismo.
+deformaclaraylógica. Losasistentesmatemáticosdebenemplearseenladidácti-
+cadelamatemáticadeunamaneraresponsableporpartede
+Controlarlaveracidaddelosresultadosobtenidoscon
+educandosyeducadores.Unavíaparacumplircondichospro-
+procedimientosdeensayoyerror.
+pósitoseslarevisióndeloscontenidos,mediosyformasde
+EneltriángulodidácticodeChevallardcadavérticeactúa evaluaciónconasistentesmatemáticos,enfuncióndelosob-
+comounpolodereferencia.ElvérticeSaberrepresentaelpolo jetivospropuestosencadaunadelasactividadesplanificadas
+ontológicooepistemológico.Lossaberesquesederivandel comopartedelPDE.
+usoadecuadodeasistentesmatemáticosposibilitanalgunos Teniendoencuentalasanteriorescondicionantes,elvér-
+aspectostalescomo: ticeEducandorepresentaelpologenéticoopsicológico.A
+tal efecto, para tributar al uso adecuado de asistentes, los
+Unacapacidadgráficaquepermitealeducandoelme- educandospuedenconsiderarloscriteriossiguientes:
+jorentendimientodemuchosconceptos,asícomouna
+mejorvisualizacióndefigurasdelplanoydelespacio Comprender el contenido matemático necesario para
+queseanrelevantesentemasafinesalageometría,en usar el asistente matemático sin concentrarse en las
+una primera instancia, y posteriormente a cuestiones accionesqueejecutaelprograma.
+representativasdelasespecialidadesdeingeniería.
+Interpretarelresultadoobtenidoporelasistenteyno
+Lainterpretacióndelamodelaciónmatemáticacorres-
+confiarciegamenteenelmismo.
+pondientealproblemaquesedesearesolver.
+Elcarácterinteractivoquepermiteunaretroalimenta-
+Mantenerlasdestrezasbásicasdelcálculomatemático.
+cióninmediataporpartedeleducando,loquepropicia
+eldescubrimientoylarectificacióndeloserroresque En el caso del vértice Educador, se parte de que este
+puedancometersealrealizarunejerciciodeformain- representa el polo funcional o pedagógico. En este sentido
+mediata. loseducadoresduranteelPDEdelaasignaturaMatemática
+Unamejoradquisicióndeloscontenidosmatemáticos Superiordeben:
+impartidosantesdeutilizarelAM,apartirdelasorien-
+tacionesdadasporeleducadoralolargodelaclasey Planificaractividadesdocentesconasistentesmatemá-
+delascuestionesorganizativasplanificadasconanterio- ticosencaminadasalaformacióndehábitosdeinde-
+ridad. pendencia,creatividad,decisión,autocontrol,cultura
+Elfortalecimientodeltrabajoenequipoylasrelaciones general,perseverancia,colectivismo,espíritucríticoy
+interdisciplinariasmedianteejerciciosqueesténvincu- autocríticoenloseducandos.
+lados a las especialidades de ingeniería y a la propia
+Contribuir a la formación de la personalidad de los
+realidad.
+educandosyaldesarrollodesupensamientológico.
+Obviarlapreocupacióndeobtenernúmeroselevados
+enlosprocedimientosdecálculo.
+Establecerunequilibrioentreelusodeasistentesma-
+Lasposibilidadesdeinterpretación,ejercitaciónyfor-
+temáticos,laformacióndeconceptosmatemáticos,la
+maciónadecuadadeconceptosmatemáticos.
+modelaciónmatemáticaylainterpretacióndelosresul-
+tadosobtenidosalhacerusodeestos.
+SeconsideraqueindependientementedequelosAMse
+caracterizanportenerunamismafilosofíadetrabajo,aquella
+Dedicar tiempo no sólo a la parte del cálculo que le
+personaquelosutilicedebesercapazdeanalizareinterpretar
+interesarealizaraleducando,sinotambiénalrazona-
+suformadeprocederantedeterminadassituacioneseidenti-
+mientoeinterpretacióndelproblemaydesusolución.
+ficarquéhaceycómolohaceparapoderutilizarlodeforma
+satisfactoria. Estimularyorientarelaprendizaje.
+Algunasvecesocurrequeelasistentebrindaunresultado
+yeleducandoconocecómollegaraeseresultadomedianteel Crearambienteseducativosdondeeleducandoseaca-
+asistente,perodesconoceelsignificadoylainterpretacióndel paz de aprender a utilizar el AM, aprender sobre el
+valorobtenido.Deestaforma,noeslaMatemáticaquiense propioasistenteyaprenderconelasistente.
+CienciasMatemáticas,Vol.37,No.1,2024,Pág.9-14 PedrosoCarracedo,L.M.,DiezFumero,T.,&LópezDomínguez,A.
+https://revistas.uh.cu/rcm/article/view/9478 https://doi.org/10.5281/zenodo.14278047
+MiradacontextualalosasistentesmatemáticosdesdeeltriángulodidácticodeChevallard 13
+Dominarlasaccionesyoperacionesqueconformanla Visualización L.P.C.
+habilidadusarAM.
+Redacción:preparacióndelborradororiginal L.P.C.,
+T.D.F.,A.L.D.
+Entender las relaciones sistémicas que se establecen
+entrelostemasdeladisciplinaMatemáticaSuperiory Redacción:revisiónyedición L.P.C.,T.D.F.,A.L.D.
+habilidadusarAMeidentificarotrasnuevasquepueden
+existir. Referencias
+Trabajarenuncambiodementalidadencuantoaluso [1] Ambra, I.: La sensibilidad ética y el conocimiento di-
+delatecnología,sustentadoeneltrabajometodológi- dácticodelcontenidodelosprofesoresdecienciasex-
+co, cursos de superación y trabajo extraclase con los perimentales. RevistaTecné,EpistemeyDidaxis:TED,
+educandos. páginas199–218,2021. https://scielo.org.c
+o9/scielo.php?pid=S0121.
+Laposibilidaddeorientaraeducadoresyeducandosdu-
+ranteelusodeasistentesmatemáticosenelprocesodeense- [2] Aquino,M.:ImplementacióndelasTICcomorecurso
+ñanzayaprendizajedelaMatemáticaSuperior,apartirdelos didácticoeneláreadematemáticas.Tesispresentadaen
+estudiosdeChevallard[5],constituyenunaguíametodológica opciónalgradocientíficodeMásterenTecnologíaEdu-
+enlascondicionesactualesdeldesarrollotecnológicoenel cativa, Instituto Tecnológico de Monterrey, Paraguay,
+nivelsuperior. 2023. https://hdl.handle.net/11285/659
+762.
+Conclusiones [3] Benito,J.:Unapropuestametodológicaparalautiliza-
+cióndelastecnologíasdelainformaciónylascomu-
+Eltrabajopresentadopermitevisualizarelprocesodocen-
+nicacionesenelprocesodeenseñanza-aprendizajede
+te educativo de la Matemática Superior con el uso de asis-
+lasfuncionesmatemáticas. Tesispresentadaenopción
+tentesmatemáticos,desdelaposicióndeltriángulodidáctico
+algradocientíficodeDoctorenCienciasPedagógicas,
+deChevallard.Bajoestaspremisas,elprocesodetransposi-
+UniversidaddeCienciasPedagógicas“EnriqueJoséVa-
+cióndidácticaenlaenseñanzadelaMatemáticaSuperior,a
+rona”,2003.
+partirdeaccionesyoperacionesqueseejecutanalusarasis-
+tentes matemáticos, puede ser una alternativa para que los
+[4] Castrillón, Y.: Calidad de la virtualidad en el pro-
+contenidosseanmejorasimiladosporloseducandos.
+grama de ingeniería mecánica –Universidad Francis-
+Los diseños curriculares, las adecuaciones de las insti-
+co de Paula Santander COVID 19. Revista Cono-
+tuciones,lasnecesidadessocialesydeactualizacióndelos
+cimiento, investigación, educación CIE, 2(15), 2022.
+procesosdeformacióndeingenierosconasistentesmatemáti-
+http://ojs.unipamplona.edu.co/index
+cosconstituyenlasbasesparalograrunaadecuadarelación
+.php/cie/article/view/1501.
+bidireccionalentrelosvérticesdeltriángulodidácticodeChe-
+vallard. [5] Chevallard, Y.: Enseñar matemáticas en la sociedad
+de mañana: alegato a favor de un contraparadigma.
+JournalofResearchinMathematicsEducation,2(2):161–
+Suplementos
+182,2013. http://www.hipatiapress.com.
+Esteartículonocontieneinformaciónsuplementaria.
+[6] D’Amore, B. y M.I. Fandiño Pinilla: Historia del de-
+sarrollodelaDidácticadelaMatemática.Unestudio
+Conflictos de interés
+realizadoconlosmediosteóricosdelaEOS. Revista
+Sedeclaraquenoexistenconflictosdeinterés. Paradigma,XLI:130–150,2020. https://revist
+aparadigma.com.br/index.php/paradigm
+a/article/view/870.
+Contribución de autoría
+Conceptualización L.P.C.,T.D.F.,A.L.D. [7] HernándezHechavarría,C.M.,E.ArteagaValdésyJ.L.
+delSolMartínez:Utilizacióndelosmaterialesdidác-
+Curacióndedatos L.P.C.,T.D.F.
+ticos digitales con el Geogebra en la enseñanza de
+Análisisformal L.P.C.,T.D.F.,A.L.D. la matemática. Revista Conrado, 17(79):7–14, 2021.
+http://scielo.sld.cu/scielo.php?scr
+Investigación L.P.C.,T.D.F.,A.L.D.
+ipt=sci_arttext&pid=S1990-864420210
+Metodología L.P.C.,T.D.F.,A.L.D.
+00200007.
+Administracióndeproyecto L.P.C.,T.D.F.,A.L.D.
+[8] MoralesOlivera,Y.yR.BlancoSánchez:Análisisdel
+Recursos L.P.C.,A.L.D.
+uso de software para la enseñanza de la Matemática
+Supervisión L.P.C.,T.D.F.,A.L.D. enlascarrerasdeingeniería. Transformación.Revista
+PedrosoCarracedo,L.M.,DiezFumero,T.,&LópezDomínguez,A. CienciasMatemáticas,Vol.37,No.1,2024,Pág.9-14
+https://doi.org/10.5281/zenodo.14278047 https://revistas.uh.cu/rcm/article/view/9478
+14 MiradacontextualalosasistentesmatemáticosdesdeeltriángulodidácticodeChevallard
+ElectrónicaCientíficoPedagógica,15(3):367–382,2019. ro: una propuesta metodológica. Revista de Docen-
+http://scielo.sld.cu/scielo.php?scr ciaUniversitaria,11(NúmeroExtra1):397–424,2013.
+ipt=sci_arttext&pid=S2077-295520190 https://dialnet.unirioja.es/descarga
+00300367&lng=es&tlng=es. /articulo/4522470.pdf.
+[9] Pedroso, L.: Estructuración sistémica de los conteni- [14] Uzuriaga-López,V.L.yD.P.MejíaRojas:Análisisdel
+dosdelamatemáticaeningenieríaparaperfeccionar impactodelasestrategiasimplementadasparaayudar
+laintegracióndelosasistentesmatemáticos. Tesisde amejorarelaprendizajedeMatemáticasparalosestu-
+Doctorado, Academia de las FAR “General Máximo diantesqueingresanalprimersemestredecarrerasde
+Gómez”, 2022. Tesis presentada en opción al grado ingeniería. RevistaScientiaeTécnica,24(4):643–651,
+científicodeDoctorenCienciasPedagógicas. 2019. https://www.redalyc.org/journal/
+849/84961238014/html.
+[10] Revelo-Rosero,J.,E.VinicioLozanoyP.BastidasRo-
+mo:Lacompetenciadigitaldocenteysuimpactoenel [15] ValdésPlaceres,J.M.,R.MeléndezRuizyM.PáezPa-
+procesodeenseñanzayaprendizajedelamatemática. redes:Asistentesmatemáticoseinterdisciplinariedad:
+particularidadesenlacarreradeIngenieríaInformáti-
+Revista Multidisciplinaria de Investigación Espirales,
+3(28):156–175,2019. http://doi.org/10.318 ca. RevistaHorizontePedagógico,10(3):20–28,2021.
+76/er.v3i28.630. https://horizontepedagogico.cu/index
+.php/hop/article/view/203.
+[11] Salgado Friol, A.H., M. Ibáñez Fernández, S.M. Ri-
+[16] Zayas-Batista, R., M. Escalona-Reyes, R. Estupiñán
+gual Delgado,R. RamírezVale,G. Padrón Monzóny
+GonzálezyR.CedeñoIntriago:Elprocesodeenseñanza
+E. López Escalona: Estrategia metodológica para el
+aprendizajedelosconceptosdelamatemáticasuperior
+cálculodiferencialeintegraldelacarrera“Sistemasde
+enlascarrerasdeingeniería. RevistaTransdisciplinaria
+Informaciónensalud”. RevistaCubanadeInformática
+deEstudiosSocialesyTecnológicos,3(1):37–46,2023.
+Médica,12(1):108–115,2020. http://scielo.s
+https://revista.excedinter.com/index
+ld.cu/scielo.php?script=sci_arttext&
+.php/rtest/article/view/62.
+pid=S1684-18592020000100108.
+[12] TorresDíaz,G.A.,L.M.MoraHiguera,J.C.PernettCa-
+rrillo y S.P. Ibáñez Reyes: Transposición Didáctica:
+Estrategia para el desarrollo de competencias en la
+formaciónacadémicadelingeniero. RevistaFilosofía,
+38(99):531–545,2021. https://doi.org/10.5
+281/zenodo.5670074.
+Esta obra est´a bajo una licencia Creative Commons “Atribuci´on-NoComercial-
+[13] TrejoTrejo,E.,P.CamarenaGallardoyN.TrejoTre-
+SinDerivadas 4.0 Internacional”.
+jo: Las matemáticas en la formación de un ingenie-
+CienciasMatemáticas,Vol.37,No.1,2024,Pág.9-14 PedrosoCarracedo,L.M.,DiezFumero,T.,&LópezDomínguez,A.
+https://revistas.uh.cu/rcm/article/view/9478 https://doi.org/10.5281/zenodo.14278047
+1

@@ -1,0 +1,322 @@
+DISEÑO YUTILIZACIÓNDE UN SISTEMAINFORMÁTICOPARA ELCONTROL
+DE PORTADORES ENERGÉTICOS
+Autores: SissiPérez Del Pino (Adiestrado)
+Lourdes Tarifa Lozano (Profesor Titular)
+Universidad deMatanzas ¨Camilo Cienfuegos¨(UMCC)
+E-mail:sissi.perez@umcc.cu lourdes.tarifa@umcc.cu
+Resumen
+En la actualidad, debidoa los enormes cambios sufridos en los últimos años, con la incorporación
+de tecnologías informáticas en las más disímiles esferas de la vida, las empresas requieren de la
+implementación de sistemas de información que colaboren con los procesos de gestiones
+empresariales, con el fin de ofrecer mejoras en la toma de decisiones gerenciales. No distante de
+esta realidad se encuentra la Empresa de Proyectos de Arquitectura e Ingeniería (EMPAI) de
+Matanzas, la que solicitó a la Universidad de Matanzas “Camilo Cienfuegos”, el estudio y diseño
+de un Sistema Informático para el Control de los Portadores Energéticos, el que se presenta en
+este trabajo como resultado de la investigación realizada, en la que participaron estudiantes y
+profesores. Esta aplicación tiene como objetivo establecer un mejor control sobre el consumo de
+los combustibles (diesel y gasolina), a partir de las diferentes operaciones realizadas con las
+tarjetas magnéticas y equipos de transporte con que cuenta la entidad. Los datos y reportes de
+salidas se pueden utilizar para la toma de decisiones y planificación de esta actividad en función
+de los intereses de la dirección. Para su descripción y construcción fue utilizada la metodología
+ágil de desarrollo de software Programación Extrema (XP), el ambiente de programación
+ASP.NET con el lenguaje C# y gestor de base de datos SQL Server Express. Se efectuaron las
+pruebas funcionales para comprobar el cumplimiento de los requisitos del cliente y se analizaron
+losresultados obtenidos.
+Abstract.
+Nowadays due to the of the big changes undergone the last years, with the incorporation of
+informatics technologies in the most diverse spheres of the life, the companies need to implement
+information systems that collaborate with the business management process to provide
+improvements in management decisions. Not far from this reality is the Architecture and
+Engineering Projects Enterprise (EMPAI) of Matanzas, which the one that asked, to the
+University of Matanzas "Camilo Cienfuegos", the study and design of an Information System for
+the Control of energy carriers, with is presented in this project as a result of the investigation, in
+which students and teachers participated. This application has as objective to establish a better
+control over the consumption of fuels (diesel and gasoline) from the different operations
+performed with the magnetic cards and transport equipment the entity. The data and output
+reports can be used for decision making and planning of this activity of taking into account the
+interests of the management. For its description and construction was used the Agile Software
+Development Extreme Programming (XP), the ASP.NET programming environment with the C #
+language and database manager SQL Server Express. Functional tests were performed to verify
+compliance withcustomer requirements and the resultswere analyzed.
+1
+Introducción
+En la sociedad cubana el crecimiento y la evolución de las Tecnologías de la Información y las
+Comunicaciones (TIC) ha permitido que muchos organismos tengan en cuenta sus ventajas para
+su propio desarrollo.
+La información es un fenómeno que proporciona significado o sentido a las cosas, e indica
+mediante códigos y conjuntos de datos los modelos del pensamiento humano. En sentido general,
+la información es un conjunto organizado de datos procesados, que constituyen un mensaje sobre
+un determinado fenómeno, por lo que la información es importante dentro de un proceso de
+gestiónpara tomarlas decisiones necesarias.
+En particular, la gestión de portadores energéticos o administración de portadores energéticos, es
+un subsistema de la gestión empresarial, que abarca las actividades de administración y
+aseguramiento de estos portadores. (Lapido Rodríguez, M, J.P.M.Y.y.A.E.B.N. s/a). Dentro de
+estas actividades, la principal es la toma de decisiones a partir de los análisis de las
+comparaciones realizadas entre diferentes períodos, para saber como se comporta la empresa en
+cuanto al consumo energético ylaacciones omedidas en correspondencia con los resultados.
+Para lograr la eficiencia energética en una empresa no es sólo que exista un plan de ahorro de
+energía, sino contar con un sistemade gestiónenergética que garantice el mejoramiento continuo.
+(Monteagudo Yanes, OGGR., 2005).
+La Empresa de Proyectos de Arquitectura e Ingeniería de Matanzas (EMPAI), líder y de
+referencia nacional en el sector de la construcción, no se encuentra ajena a la realidad del mundo
+actual. A través de los años ha estado muy vinculada a la aplicación de las Tecnologías de la
+Información en su gestión diaria. Cuenta con varios sistemas de gestión para controlar la
+información de los procesos diarios en bases de datos relacionales fundamentalmente en
+Microsoft SQL Server 2000. Con el fin de incrementar su excelencia se han propuesto una serie
+de objetivos estratégicos entre los que se encuentra garantizar una política energética. Dentro de
+las actividades que se realizan para mantener actualizados los ejercicios de planificación
+estratégica, está presente garantizar una adecuada planificación, control y toma de decisiones
+relacionadas con losportadores energéticos quese utilizan.
+Para lograr esto es necesario, un sistema encargado de automatizar la información primaria
+correspondiente con los distintos portadores energéticos: combustibles (Diesel y Gasolina),
+electricidad, gas licuado y los lubricantes utilizados en esta empresa, lo que fue solicitado a la
+Universidad deMatanzas “Camilo Cienfuegos”(UMCC).
+El combustible es un eslabón importante en el desarrollo del mundo actual, en Cuba ninguna
+institución escapa de esta afirmación. Tener una herramienta para la debida planificación,
+distribución y control del combustible debe ser considerado como una prioridad de altísimo nivel.
+A pesar de todos los avances de la informática en la empresa, los estudiantes en su proceso de
+investigación valoraron que el proceso de control y toma de decisiones sobre los combustibles
+con frecuenciase afectapor lassiguientes dificultades:
+ Presencia de datoserróneos debido aerrores en laentrada dedatos.
+ Los datos del proceso de control de combustibles no se encuentran en un sistema informático,
+loque provoca contratiempos cuando senecesita integrarestos datos.
+ La poca flexibilidad que presentan los reportes de las aplicaciones existentes de control de
+combustiblesnologra satisfacertodas lasnecesidades de informaciónde los directivos.
+Esto provoca que las necesidades de información, sobre el control de combustibles de los
+directivos para la toma de decisiones, no siempre se logra satisfacer, ya que a veces no se dispone
+a tiempo de la información requerida, y muchas veces deben dedicarse con mayor intensidad a la
+2
+obtenciónde ésta, que al análisis de lamisma. Estas dificultades inciden de manera negativa en la
+eficienciayeficacia de laentidad.
+Por lo que se valoró que las dificultades estaban centradas en la no existencia de un sistema
+informático que controle los combustibles para contribuir al mejoramiento de los procesos de
+planificación,control ytomadedecisiones delaEMPAI deMatanzas.
+El aporte fundamental se centró en unificar el proceso de gestión del combustible, ya que en una
+misma aplicación se pueden tener registrados todos los movimientos realizados en las tarjetas de
+combustible, lo que permite por los datos que se ingresan facilitar la contabilización en este
+sentido. Esta aplicación brinda un valioso apoyo al proceso de planificar, controlar y tomar
+decisiones, especialmente para los trabajadores que permanecen vinculados a la contabilidad en
+laEMPAI, incluyendo alos directivos. Su condiciónde aplicaciónWeb posibilitael acceso desde
+cualquierestaciónde trabajo.
+Desarrollo
+La investigación en la EMPAI determinó que el proceso de control de los combustibles que se
+lleva a cabo en la EMPAI de Matanzas, no se encuentra apoyado por un sistema informático, las
+operaciones se registran manualmente y en hojas de cálculos de Microsoft Excel, por lo que al no
+encontrarse toda la información en una base de datos, cuando pasan diferentes períodos se vuelve
+muy difícil el acceso a ella, lo que influye negativamente en el momento de necesitar alguna
+consulta específica. No existe entonces un control que permita analizar en cada período el
+cumplimiento del plan, cómo ahorrar combustible, cuáles fueron las áreas más consumidoras,
+para determinar causas y buscar soluciones a los problemas. Al comunicar estos resultados a la
+empresa, a pesar de la existencia de sistemas relacionados con este proceso, la empresa decidió
+desarrollar una aplicación personalizada, de acuerdo a sus intereses, que capture la información
+necesaria para ser almacenada en una base de datos, y con esto lograr el acceso rápido a la misma
+permitiendo registrar todas las operaciones que les hace falta en el proceso de contabilización y
+generar reportes de salidas con formatos específicos y datos imprescindibles para realizar
+consultas deinterés yasí contribuirala tomadedecisiones.
+Se estudió de forma crítica cómo se ejecutaban esos procesos en la empresa, las causas que
+originan lasituaciónexistenteysus consecuencias.
+Después del análisis de los procesos que se ejecutan, se llega a la conclusión de que existen
+elementos que afectan el flujo de trabajo, y uno de ellos lo constituye la falta de automatización
+para gestionar el combustible y almacenar toda la información necesaria en una base de datos,
+para que exista un acceso rápido a la misma y esto imposibilite realizar consultas de interés para
+latomadedecisiones.
+Se estudiaron propuestas de sistemas que se utilizan para este objetivo en Cuba y a nivel mundial
+yel análisis comparativoarrojóque existen:
+ Sistema llamado “SITRAS 3” (Sistema Automatizado global e integrado para la Actividad de
+Transporte), encargado del control de laactividad detransporte. (Valdés, E.,2004). Está diseñado
+paralas empresas queseencuentran en perfeccionamiento empresarial.
+ Celador S2C es una aplicación de escritorio desarrollada por la empresa DESOFT de la
+Ciudad de La Habana, destinada al control del consumo de combustible por tarjeta magnética en
+la empresa cubana. A partir de las informaciones primarias que se registran, se pueden obtener
+datos estadísticos de gran utilidad para saber el gasto de combustible de la entidad y puede
+llevarse el control del gasto porunidades decosto, centros decosto yvehículos.
+El análisis de ellos, llevó a determinar las razones por la que los directivos de la empresa objeto
+de estudio deseaba un sistema propio. Así se pudo determinar que lo que marca la diferencia es
+3
+que estos sistemas no satisfacen las necesidades de los directivos de esta entidad, porque no están
+personalizados para la EMPAI. Estas herramientas no contienen los datos necesarios para emitir
+los informes que tienen características particulares en cuanto a la información económica y
+formato, no se registran todas las operaciones que les hace falta para el proceso de
+contabilización y la toma de decisiones. Además, esta empresa necesitaba una aplicación Web
+para que pueda ser consultada desde cualquier estación de trabajo. Como interés de la EMPAI el
+sistemadebe efectuarse en ASP.NET ysu basede datos enSQL Server.
+Era necesario entonces un sistema de control que se ajustará a las necesidades de la empresa y
+tipo deactividad que desee controlar. Así,una pequeña empresa necesitade unsistema de control
+distinto al de una empresa grande. Por lo que analizando lo anterior se llega a la conclusión de
+quenodebe existirunsistemadecontrol igual para todas lasempresas.
+Por la falta de un sistema automatizado que cumpla con las expectativas de la empresa, se decide
+implementar este primer módulo relacionado con el control de los combustibles el cual forma
+partedel Sistemade Controlde Portadores Energéticos(SISCOPE) que sepretende desarrollar.
+El sistema SISCOPE tiene como principal objetivo ayudar a la planificación, control y toma de
+decisiones de los diferentes portadores energéticos utilizados actualmente en la EMPAI de
+Matanzas, como uno de los portadores más importantes para esta empresa se encuentra el
+combustible utilizado por los vehículos de la entidad. En esta investigación se lleva a cabo el
+desarrollo de un primer módulo relacionado con este portador, que tiene entre sus funciones
+analizar su consumo, la compra a partir de los movimientos registrados de compra y consumo en
+la tarjetas de combustibles y de los registros de los kilómetros mensuales recorridos por cada
+vehículo que están reflejados en sus hojas de rutas. Este módulo se encarga además de generar
+reportes de gran relevancia para la gerencia de la empresa, con el fin de ser consultados por el
+personal interesado de la entidad y por los directivos para mejorar el proceso de analizar
+económicamente el comportamiento del combustible actualmente y en los diferentes períodos
+trascurridos.
+Para el diseño y construcción del software se conformó un equipo de trabajo integrado por el jefe
+del proyecto y cliente, y los programadores y encargados de las pruebas, con las siguientes
+características:
+ El cliente forma parte del equipo, revisa lo planificado en cada encuentro y acuerda los plazos
+deentrega para lasoluciónde cada historiadeusuario.
+ Se trabajan cuarenta horas semanales, cumpliendo el principio de que horas extras no aumenta
+la productividad sino que desmotiva al equipo, ya que así se evita el cansancio de los
+programadores ycon esto menos probabilidades deintroducir errores.
+ Se adopta un diseño simple, existiendo un patrón para el estilo de programación, recordando
+que el diseño adecuado es aquel que: supera con éxito todas las pruebas, refleja claramente la
+intención de los programadores y tiene el menor número posible de clases y métodos.
+Evitando complicaciones en caso de que otra persona desee consultar el código fuente o los
+mismosdesarrolladores después de algúntiempo.(Romero, L.D.J.,(s/a).)
+ Se trabaja desarrollando pequeñas versiones funcionales que se incrementan poco a poco, ante
+losfallos ocambios seproduce lareprogramacióndel código, sin variar su funcionalidad.
+ El desarrollo es guiado a través de pruebas las que definen el alcance del proyecto trabajando
+para aumentar el nivel de conformidad del cliente, contribuyendo a que se detecten errores
+quelos programadores pudieran pasar poralto.
+En el anexo 1, se muestra la primera propuesta de interfaz de usuario presentada al cliente. Esta
+puede sufrir trasformaciones durante el período de pruebas funcionales y de aceptación por parte
+4
+de los usuarios finales. Este prototipo es aceptado por el cliente, ya que presenta el logo de la
+empresa, una imagen que refleja los portadores energéticos, además están bien distribuidas las
+opciones e informaciones básicas, se sugieren futuras modificaciones con la introducción de
+nuevas funcionalidades.
+La planificación de las iteraciones fue realizada a partir de entrevistas con el cliente. Mayormente
+en las reuniones de entrega de iteraciones se planificaba la iteración posterior. En el anexo 2, se
+muestra el plan de iteraciones inicial. Las iteraciones se planificaron de forma tal que no
+excedieran de tres semanas cada una. Se observa la cantidad de iteraciones planificadas (9), las
+historias deusoquesevan adesarrollar en cada iteraciónyel esfuerzo estimado porcada una.
+Cuando se realiza la planificación del proyecto es difícil tener en cuenta todos los detalles desde
+el inicio, por lo que en consecuencia ocurrieron modificaciones al respecto. La limitada
+experiencia del equipo de trabajo en la planificación de proyectos y los contratiempos aparecidos
+durante su desarrollo incidió en la planificación de las iteraciones iniciales y por consiguiente en
+el plan delas entregas inicialmenteajustado con el cliente.
+Surge la necesidad de reconfigurar la base de datos en algunas ocasiones, producto a un análisis
+inicial erróneo de las necesidades, lo que lleva a las variaciones convenientes en el código de las
+historias. Esto demuestra que no es posible una planificación inicial de entregas inalterable, ya
+que es natural que en el transcurso del proceso de desarrollo de la aplicación, esta sufra
+variaciones que provocarían la eliminación de algunas historias de usuarios y hasta la inclusión
+de otras que no se tomaron en cuenta desde un principio. A partir de esto queda aclarado que el
+cliente es de gran importancia durante todo el proceso para lograr el éxito del proyecto, ya que a
+través de la comunicación continua se soluciona rápidamente cualquier duda relacionada con los
+requisitos. Estos elementos fueron esenciales en la formación del futuro profesional al poder
+constatar en la práctica que las tecnologías necesitan para su correcta utilización de que las partes
+participantes en el proyecto, y la conformación de un equipo multidisciplinar, estén
+armoniosamente integradas. De igual manera pudieron percatarse del valor delacomunicaciónen
+los procesos de toma de decisiones y en general en todos los procesos sustantivos de cualquier
+entidad.
+Así queda conformado este módulo que permite la captura de los datos de la información
+primaria referente al proceso de control del combustible, brindándole al usuario los reportes de
+salidas necesarios, en el formato deseado, influyendo esto positivamente en los demás procesos
+delaempresa.
+Como parte del proceso se procedió a comprobar la compatibilidad con cada configuración de los
+diferentes navegadores, lo que forma parte del enfoque de las pruebas que se aplican a los
+sistemas basados en Web, y se realiza con el fin de detectar errores asociados con cada una de las
+configuraciones posibles.
+Esta aplicación no está al margen de lo expuesto anteriormente por lo que se utilizó la
+herramienta “IETester v0.4.2”. Después de probar el sistema en las diferentes versiones de
+Internet Explorer 5, 6, 7 y 8 se llega a la conclusión de que la aplicación es estándar, no
+ocurrieron cambios significativos para las distintas configuraciones. Esto también se comprobó
+para las distintas versiones de Mozilla Firefox, y para este último se instalaron complementos
+encargados de medir el tiempo de respuesta, la carga de las imágenes, el tamaño de los ficheros y
+de optimizar la aplicación. Para la optimización se utilizó “page-speed”, extensión para Firefox
+que comprime los ficheros de imágenes y css proporcionando una versión más comprimida, lo
+que reduce el tiempo de carga de la página. Para medir el rendimiento se utilizó el complemento
+“yslow”, que muestra sugerencias para mejorar la calidad de la aplicación como eliminar
+5
+elementos en las hojas de estilos que no se utilizan. Cuando se aplicaron estos complementos se
+notaron diferencias considerables:
+ Al no tener instalado el componente yslow era muy difícil saber la razón de la demora con
+detalles, luego se pudo comprobar cuanto era el peso de las imágenes y demás ficheros de la
+aplicación, además se tomó en cuenta eliminar los elementos en las hojas de estilos que no
+eran utilizados.
+ Antes de aplicar el page-speed el tiempo de carga del sistema era de alrededor de 5segundos o
+más, despuésdeaplicado, este tiempo mejoróacasi 2segundos.
+Con el objetivo de profundizar en el tema abordado durante la investigación y de validar el
+sistema implementado, fue necesario consultar el criterio de varios especialistas de la EMPAI,
+esto se realizó a partir de la presentación en el Fórum de Ciencia y Técnica de la empresa, en el
+que se seleccionó este sistema para presentarlo en el Fórum de Ciencia y Técnica Municipal por
+su importancia para la empresa en cuanto al efecto económico y capacidad energética. Entre las
+opiniones se destacaron, las funcionalidades del sistema, que anteriormente resultaban difíciles
+influyendo en la toma de decisiones. Fue considerado uno de los trabajos presentados que tiene
+relevancia y posibilidades de que con la implementación del control de todos los portadores
+energéticos, laempresa logre unamayor eficiencia.
+Después de desarrollar todo un proceso de pruebas se lograron resultados satisfactorios, pues tras
+la detección de diferentes errores, obtenidos fundamentalmente con las pruebas funcionales, se
+solucionaron varios problemas que impedían el cumplimiento de los requisitos fundamentales del
+sistema en cuestión. Las primeras pruebas fueron planeadas y ejecutadas en módulos individuales
+del programa y a medida que fueron avanzando se desplazaron a módulos integrados, hasta que
+finalmente llegaron al sistema completo y se logró obtener un software cuyas funciones se
+encuentra en correspondencia con las especificaciones acordadas y que además cumple con los
+requerimientos de rendimiento. Se obtuvo un sistema que permite controlar el combustible, de
+forma tal que son registradas todas las operaciones asociadas al proceso de compra y consumo de
+combustible, logrando así una mejor manipulación y control con las informaciones para facilitar
+la contabilización de este portador energético. Además se generan reportes de distribución del
+combustible, compras efectuadas, consumos registrados, entre otros que son de interés específico
+para esta empresa, ya que contribuyen a ofrecer la información necesaria para los análisis
+económicosquese realizan en losdiferentes períodos.
+Dada la importancia del control de combustible en esta empresa, la utilización de este primer
+módulo del SISCOPE como herramienta para llevar a cabo este proceso, facilita y automatiza la
+labor del personal encargado de la distribución y planificación de este portador energético. A
+partir de la información manejada se generan reportes de gran interés para la toma de decisiones,
+permitiendo queel trabajo resulte más cómodoycon mayorcalidad.
+En el anexo 3 se muestra una de las pantallas del software que permite la selección del portador
+combustible, en el anexo 4 puede observarse una pantalla a través de la cual se seleccionan de los
+reportes de salida del sistema, y os movimientos realizados en un período determinado. En el
+anexo 5aparece unformulario para los registros de movimientosen tarjetas.
+Conclusiones
+Unavez desarrollado el presente trabajo se arriba alo siguiente:
+ El análisisde losantecedentes yel flujoactual de losprocesos relacionados conel control
+de los portadores energéticos, permitió adquirir la información necesaria para dar
+soluciónala problemáticaplanteada.
+6
+ A partir de la aplicación de las etapas de la metodología de desarrollo de software XP
+para la elaboración de la aplicación se logró una comunicación directa y amplia con el
+cliente y buena respuesta ante los cambios sin importar la etapa del ciclo de vida del
+proyecto, lo queacerca al estudiante asu futura profesión.
+ Se diseñó la interfaz del Sistema Informático para el Control de los Portadores
+Energéticos (SISCOPE) y fue implementado de su primer módulo para el control del
+combustibles (Diesel y Gasolina) facilitando un mejor manejo de la información
+relacionada con este proceso.
+ El desarrollo de las pruebas funcionales, la compatibilidad entre los navegadores y los
+resultados obtenidos permitieron verificar y demostrar el correcto funcionamiento de este
+módulo.
+ Con el desarrollo de este módulo se facilita y automatiza la labor del personal encargado
+deladistribuciónyplanificaciónde esteportador energético.
+Bibliografía
+1. Carballo Garrido Miguel A., H.R.J.L., 2010. Misión, Visión y Objetivos estratégicos del
+2010al 2012.Matanzas.
+2. Carballo, G.M.A., 2010.Procedimiento sobrecombustible portarjetamagnéticacontables, in
+Manual deContabilidad. Matanzas. p.9.DESOFT, Celador S2C:Ciudad deLa Habana.
+3. Lapido Rodríguez, M, J.P.M.Y.y.A.E.B.N. s/a. La gestión energética y la competitividad
+empresarial. Volumen I
+4. Marker, G. La importancia de los sistemas de información en la empresa. [disponible en:
+http://www.informatica-hoy.com.ar/informatica-tecnologia-empresas/La-importancia-de-los-
+sistemas-de-informacion-en-la-empresa.php. Consultado en febrero del 2010
+5. Monteagudo Yanes, OGGR. (2005) herramientas para la gestión energética empresarial.
+Scientiaet Technica AñoXI Volumen, 6.
+6. Pérez Del Pino,S., SISCOPE: 2010.Módulopara el Control deCombustible. Matanzas.
+7. Romero, L.D.J.,(s/a). Una IntroducciónalaProgramaciónExtrema.
+8. Valdés, E., 2004. Sistema Automatizado Global e Integrado para la Actividad de Transporte
+(SITRAS 3).
+9. Villalonga, R.G., 2009.El cuadro tiene quesaber administrar. Girón,2009: p.8.
+10.www.monografias.com/trabajos11/.../prico.shtml. Concepto, importancia y principios del
+control. Consultado el 10deenero del 2010.
+Anexo 1.Interfaz inicial del software.
+7
+Figura 1: Interfaz inicial
+Anexo 2.Plan deIteraciones iniciales
+Figura 2: Plan deIteraciones inicial
+8
+Anexo 3.Seleccióndel portadorcombustible
+Página inicialde entrada al portador energético
+Anexo4.Seleccióndelos reportes desalidadel sistema
+Reportes
+9
+Reportes delos movimientos realizadosen unperíododeterminado.
+Anexo5.Formulario deregistros demovimientos en tarjetas
+Movimientoen unatarjeta
+10

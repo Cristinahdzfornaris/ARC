@@ -1,0 +1,418 @@
+CienciasMatema´ticas,Vol.30,No.2,Pag.73-78,2016
+Recibido11-2016
+Asignacio´n de proyectos a estudiantes utilizando un
+operador FOWA de ma´xima entrop´ıa y el Me´todo
+Hu´ngaro
+Assigning projects to students using a maximal
+entropy FOWA operator and the Hungarian Method
+Greneter Cordoves Delgado1*, Boris Pe´rez Can˜edo2, Eduardo R. Concepcio´n Morales1
+Resumen Enesteart´ıculosepresentaunmodelomatema´ticoparalaasignacio´ndeproyectosaestudiantes.
+Los estudiantes son evaluados en las caracter´ısticas de los proyectos utilizando una escala lingu¨´ıstica. La
+sema´nticadeloste´rminosdelaescalautilizadaesexpresadamediantenu´merosborrosostriangularesdefinidos
+sobre el intervalo [0,1]. Se utiliza un operador FOWA de ma´xima entrop´ıa para agregar las evaluaciones y
+determinarunamedidadecalificacio´ndelosestudiantesparalaejecucio´ndelosproyectos.Elmodelomaximiza
+lacalificacio´ntotalsujetoalasrestriccionesdelproblemacla´sicodeasignacio´nlinealyesresueltoutilizandoel
+Me´todoHu´ngaro.
+Abstract Thispaperpresentsamathematicalmodelfortheassignmentofprojectstostudents. Thestudents
+are evaluated in the characteristics of the projects using a linguistic scale. The semantics of the terms in
+thescaleisexpressedbymeansoftriangularfuzzynumbersontheinterval[0,1]. AmaximalentropyFOWA
+operatorisusedtoaggregatetheevaluationsandthusdetermineameasureofthestudents’qualificationforthe
+executionoftheprojects. Themodelmaximizesthetotalqualificationsubjecttotheconstraintsoftheclassic
+linearassignmentproblemanditissolvedusingtheHungarianMethod.
+PalabrasClave
+Asignacio´ndeproyectos—nu´meroborroso—operadorFOWA—me´todohu´ngaro
+1DepartamentodeInforma´tica,UniversidaddeCienfuegos,Cienfuegos,Cuba,gcordoves@ucf.edu.cu,econcep@ucf.edu.cu
+2DepartamentodeMatema´tica,UniversidaddeCienfuegos,Cienfuegos,Cuba,bpcanedo@ucf.edu.cu
+*AutorparaCorrespondencia
+Introduccio´n Un criterio de asignacio´n, desde el punto de vista produc-
+tivo,esasignaracadaestudianteelproyectoparaelcualeste´
+Laasignacio´ndeproyectosaestudiantesescomu´nenlas
+mejorcalificado.Otrocriterio,desdeunpuntodevistadocen-
+universidades,sinembargo,lascondicionesycriteriospueden
+te,esasignaracadaestudianteelproyectoparaelcualeste´
+diferirampliamente.Segu´nestascondicionesycriteriosexis-
+menoscalificado,conelobjetivodepotenciara´reasdecono-
+tendiferentesmodelosyme´todosdesolucio´n.Enesteart´ıculo
+cimientodondepresentema´sdificultades.Laasignacio´ncon
+setomacomoestudiodecasolaasignacio´ndeproyectosde
+estecriteriodebeconsiderarquelacomplejidaddelproyecto
+tesisaestudiantesdelacarreraIngenier´ıaInforma´ticadela
+tienequeestaralalcancedelasposibilidadesdelestudiante
+UniversidaddeCienfuegos.Esconocidoelconjuntodecarac-
+quelovaejecutar.
+ter´ısticasdelosproyectosdisponibles.Estascaracter´ısticas
+esta´nencorrespondenciaconelplandeestudiodelacarrera,
+Considerandoquelasevaluacionessonexpresadascualitativa-
+porejemplo,conhabilidades,objetivosycontenidosdelas
+menteseutilizaunenfoquelingu¨´ısticoborroso.Esteenfoque
+asignaturas.Losestudiantessonevaluadoscualitativamente
+es una te´cnica aproximada basada en la teor´ıa de los con-
+enlascaracter´ısticasquepresentanlosproyectos.Elresultado
+juntosborrosos[?][?],quepermiterepresentarlosaspectos
+deestasevaluacionesaportaunamedidadecalificacio´noapti-
+cualitativosdelosproblemasmediantevariableslingu¨´ısticas
+tudqueposeenlosestudiantesparalaejecucio´ndeproyectos
+cuyosvaloresnosonnu´merossinote´rminoslingu¨´ısticos[?].
+quepresentenlascaracter´ısticasevaluadas.Unproyectoes
+Porejemplo,paradescribircualitativamentelaalturadelas
+asignadoaunu´nicoestudianteyaunestudianteleesasignado
+personaspuedenutilizarseloste´rminoslingu¨´ısticosbaja,me-
+unu´nicoproyecto.
+diayalta.Lateor´ıadelosconjuntosborrosospermitetratar
+74 Asignacio´ndeproyectosaestudiantesutilizandounoperadorFOWAdema´ximaentrop´ıayelMe´todoHu´ngaro
+adecuadamente la imprecisio´n inherente de conceptos que o´ptimadesdeelpuntodevistaproductivo.
+involucranelrazonamientohumanoyellenguajenatural[?].
+Una forma de generar los valores posibles de una variable El resto del art´ıculo se organiza como sigue: La seccio´n 1
+lingu¨´ıstica consiste en definir un conjunto de te´rminos con presentadefinicionesba´sicasdelateor´ıadelosnu´merosbo-
+cardinalidadimpar,generalmente5,7o´ 9,dondeelte´rmino rrososylosoperadoresFOWA;enlaseccio´n2sepresentael
+centralrepresentaunavaloracio´ndeaproximadamente0.5y modelomatema´ticodelproblemadeasignacio´ndeproyectos;
+elrestosedistribuyesime´tricamenteaambosladosdelmis- enlaseccio´n3seresuelveelcasoplanteadoyenlaseccio´n4
+mo.Lasema´nticadeestoste´rminosescomu´nmenteexpresada sepresentanlasconclusioneseideasparatrabajosposteriores.
+mediantenu´merosborrosostriangularesotrapezoidalesdefi-
+nidosenelintervalo[0,1][?,?,?].
+1. Preliminares
+La calificacio´n de un estudiante para ejecutar un proyecto
+Definicio´n1.[?]Lafuncio´ncaracter´ısticaµ deunconjunto
+dependedelasevaluacionesqueharecibidoelestudianteen A
+cla´sicoA⊆X asignaelvalor0o´ 1acadaelementodeX.Esta
+lascaracter´ısticasdelproyecto.Unprocesodeagregacio´nde
+funcio´n puede ser generalizada a una funcio´n µ de modo
+lainformacio´n[?]permitereducirelconjuntodeevaluaciones A(cid:101)
+queelvalorasignadoacadaelementodelconjuntouniverso
+dadasenlasdiferentescaracter´ısticasquepresentaelproyecto
+X pertenezca al intervalo [0,1], esto es, µ :X →[0,1]. El
+aunaevaluacio´nrepresentativadeesteconjunto,quemida A(cid:101)
+valorasignadoindicaelgradodepertenenciadelelementoal
+la calificacio´n del estudiante para la ejecucio´n del proyec-
+conjuntoA.Lafuncio´n µ sellamafuncio´ndepertenencia
+to. Para la agregacio´n pueden utilizarse operadores Media A(cid:101)
+(cid:8) (cid:9)
+PonderadaOrdenada(OWA,OrderedWeightedAveraging) yelconjuntoA(cid:101)= (x,µ (x)):x∈X definidopor µ para
+A(cid:101) A(cid:101)
+[?].LosoperadoresOWAhansidoextendidosparatratarcon cadax∈X esllamadoconjuntoborroso.
+informacio´nenuncontextolingu¨´ıstico[?].Considerandoel
+enfoque lingu¨´ıstico borroso, la calificacio´n de un estudian- Definicio´n2.[?]UnconjuntoborrosoA(cid:101)definidosobreelcon-
+teparaejecutarunproyectopuedeobtenerseagregandolos juntouniversodelosnu´merosrealesIResunnu´meroborroso
+nu´merosborrososqueexpresanlasema´nticaasociadadelos sisufuncio´ndepertenenciaposeelassiguientescaracter´ısti-
+te´rminoslingu¨´ısticos.Paralaagregacio´ndenu´merosborro- cas:
+sossedefineen[?]eloperadorMediaPonderadaOrdenada
+µ :IR→[0,1]escontinua.
+Borrosa(FOWA,FuzzyOrderedWeightedAveraging),que A(cid:101)
+utilizaaritme´ticaborrosa[?].Elresultadodelaagregacio´n µ (x)=0paratodox∈(−∞,a]∪[d,+∞)
+A(cid:101)
+es un nu´mero borroso entre el m´ınimo y el ma´ximo de los
+valoresagregados. µ A(cid:101) isestrictamentecrecienteen[a,b]yestrictamente
+decrecienteen[c,d].
+Elproblemadeasignacio´ndeproyectosesuntipoespecial
+µ (x)=1paratodox∈[b,c],dondea≤b≤c≤d.
+de problema de asignacio´n lineal. Se busca una asignacio´n A(cid:101)
+factiblequemaximicelacalificacio´ntotal.Enelcasodeuna Hacer b=c y utilizar funciones lineales en los intervalos
+matrizdecalificacionesconelementosreales,unalgoritmo resultantesconducealasiguientedefinicio´n:
+disen˜adoespecialmentepararesolverestetipodeproblema
+es el Me´todo Hu´ngaro [?]. En este art´ıculo, la calificacio´n Definicio´n3. Unnu´meroborrosoA(cid:101)=(a,b,c)esunnu´mero
+escalculadamedianteunoperadorFOWA,porlotanto,los borrosotriangularsisufuncio´ndepertenenciaesta´ dadapor:
+elementosdelamatrizdecalificacionesenlafuncio´nobjetivo
+son nu´meros borrosos. Se trata de un problema de progra-  b x− − a a a≤x≤b
+macio´nlinealborrosa(PLB).Variasmetodolog´ıashansido µ (x)= c−x b≤x≤c (1)
+A(cid:101) c−b
+propuestaspararesolvermodelosdePLB[?,?,?,?,?,?,?].  0 enotrocaso
+Sesiguelametodolog´ıautilizadaen[?]paralasolucio´nde
+problemasdeasignacio´nlinealconmatrizdecalificaciones Definicio´n 4. 2 [?] Sean A(cid:101)1 =(a,b,c) y A(cid:101)2 =(e,f,g) dos
+borrosa.Lametodolog´ıaconsiste,esencialmente,endefusifi- nu´meros borrosos triangulares, las operaciones de adicio´n,
+carloselementosdelamatrizdecalificacionescalculandosu sustraccio´nymultiplicacio´nporunescalarnonegativosobre
+rango1,loquepermiteexpresarlafuncio´nobjetivoente´rmi- A(cid:101)1 yA(cid:101)2 esta´ndefinidasrespectivamentepor:
+nosdeunanuevamatrizconelementosreales.
+A(cid:101)1 +A(cid:101)2 =(a+e,b+f,c+g) (2)
+Elobjetivodeesteart´ıculoesmodelarmatema´ticamenteel
+A(cid:101)1 −A(cid:101)2 =(a−g,b−f,c−e) (3)
+estudiodecasoyresolverloutilizandolateor´ıadelosoperado-
+resFOWAyelMe´todoHu´ngaro,paraobtenerunaasignacio´n w×A(cid:101)1 =(w·a,w·b,w·c) w∈IR
+≥0
+(4)
+1Entie´ndaserangoenelsentidodelafo´rmula(5)ynoenelsentidousual
+delnu´merodefilasocolumnaslinealmenteindependientesdeunamatriz. 2Ladefinicio´nhasidoadaptadadelareferenciadada.
+Asignacio´ndeproyectosaestudiantesutilizandounoperadorFOWAdema´ximaentrop´ıayelMe´todoHu´ngaro 75
+Definicio´n5.2[?]SeaA(cid:101)=(a,b,c)unnu´meroborrosotrian- Laentrop´ıadeW:
+gular, se definen: Rango (R), Moda (M) y Divergencia (D)
+n
+por: H(W)=−∑w ln(w) (12)
+i i
+(a+2b+c)
+i=1
+R(A(cid:101))= (5)
+4
+Laentrop´ıamidehastaque´ gradoW tomaencuentatodala
+M(A(cid:101))=b (6) informacio´nenelprocesodeagregacio´n.
+D(A(cid:101))=c−a (7) Enesteart´ıculo,W seobtienemedianteelme´tododelama´xi-
+maentrop´ıa[?]conlasolucio´nanal´ıticadeFulle´ryMajlender
+[?].Esteenfoquesebasaenlasolucio´ndelproblemadeopti-
+Definicio´n6.2[?]SeanA(cid:101)=(a,b,c)yB(cid:101)=(d,e,f)dosnu´me-
+mizacio´nsiguiente:
+rosborrosostriangulares;lossiguientespasoscomparanA(cid:101)y
+B(cid:101): Maximizar H(W) (13)
+s.a: orness(W)=α α ∈[0,1] (14)
+Paso1:CalcularR(A(cid:101))yR(B(cid:101)):
+Casoa:SiR(A(cid:101))>R(B(cid:101))entoncesA(cid:101)(cid:31)B(cid:101)
+∑n
+i=1
+w
+i
+=1 (15)
+w ∈[0,1] (16)
+Casob:SiR(A(cid:101))<R(B(cid:101))entoncesA(cid:101)≺B(cid:101) i
+Casoc:SiR(A(cid:101))=R(B(cid:101))hacerPaso2. Lasolucio´nanal´ıticadeesteproblema,obtenidaen[?],esta´
+Paso2:CalcularM(A(cid:101))yM(B(cid:101)): dadapor:
+Casoa:SiM(A(cid:101))>M(B(cid:101))entoncesA(cid:101)(cid:31)B(cid:101)
+i−1 n−i
+Casob:SiM(A(cid:101))<M(B(cid:101))entoncesA(cid:101)≺B(cid:101) lnw i = lnw n + lnw 1 (17)
+n−1 n−1
+Casoc:SiM(A(cid:101))=M(B(cid:101))hacerPaso3.
+(cid:113)
+Paso3:CalcularD(A(cid:101))yD(B(cid:101)): w = n−1 wn−iwi−1 (18)
+i 1 n
+Casoa:SiD(A(cid:101))>D(B(cid:101))entoncesA(cid:101)(cid:31)B(cid:101)
+((n−1)α−n)w +1
+Casob:SiD(A(cid:101))<D(B(cid:101))entoncesA(cid:101)≺B(cid:101) w
+n
+= 1 (19)
+(n−1)α+1−nw
+Casoc:SiD(A(cid:101))=D(B(cid:101))entoncesA(cid:101)=B(cid:101) 1
+w [(n−1)α+1−nw ]n=
+Definicio´n 7. 2 [?] Sea A={a ,a ,...,a } un conjunto de 1 1
+1 2 n
+nu´merosborrososaagregar,entonceseloperadorFOWA,F, ((n−1)α)n−1[((n−1)α−n)w +1] (20)
+1
+esdefinidopor:
+F(A)=W×BT (8)
+Definicio´n8.SeaA={a ,a ,...,a }unconjuntodenu´me-
+1 2 n
+dondeB=[b
+1
+,b
+2
+,...,b
+n
+]esunvectorasociadoaA,talque rosborrososaagregar,α elgradodeoptimismodeldecisor,
+b esel j-e´simoma´sgrandedelosnu´merosborrososa.W = entonceseloperadorFOWAdema´ximaentrop´ıa,H ,esdefi-
+j i α
+[w ,w ,...,w ]esunvectordepesos,talque: nidopor:
+1 2 n
+H (A)=W×BT (21)
+α
+w∈[0,1] (9)
+i
+dondeB=[b ,b ,...,b ]esunvectorasociadoaA,talqueb
+1 2 n j
+n esel j-e´simoma´sgrandedelosnu´merosborrososa i yW es
+∑w i =1 (10) lasolucio´ndelproblemadefinidopor(13),(14),(15)y(16).
+i=1
+Paraelordenamientodenu´merosborrosossehanpropuesto 2. Modelo matema´tico del problema de
+variosme´todos[?,?,?,?].Enesteart´ıculoseutilizaelme´to- asignacio´n de proyectos
+dodefinidoen6.
+El vector de pesos W modela los criterios de decisio´n. El SeaS={1,...,n;n≥2}unconjuntodeestudiantes,P=
+criteriooptimista,max{a},seobtieneconW =[1,0,...,0]; {1,...,n;n≥2}unconjuntodeproyectosyC={1,...,u}un
+i
+elpesimista,min{a i },conW =[0,0,...,1]yeldeLaplace, conjuntodecaracter´ısticas.SedenotaC j ⊆Ccon |C j |≥1al
+1
+n
+∑n
+i=1
+a
+i
+,conW =[1
+n
+,
+n
+1,...,1
+n
+]. conjunto de caracter´ısticas presentes en el proyecto j. Los
+estudiantessonevaluadosenlascaracter´ısticasutilizandola
+Dosmedidasdefinidasen[?]paracaracterizarW son: escalalingu¨´ısticaT={Mal(M),Regular(R),Bien(B),Muy
+bien(MB),Excelente(E)}.Lasema´nticadeestoste´rminos
+ElgradodeoptimismodeW: lingu¨´ısticosesexpresadamediantelosnu´merosborrososdel
+cuadro1.e eslarepresentacio´nborrosadelte´rminolingu¨´ısti-
+ik
+1 n codeT utilizadoparaevaluarelestudiantei∈Senlacarac-
+orness(W)= ∑(n−i)w (11)
+n−1 i ter´ısticak∈C.Lacalificacio´ndelestudianteiparaejecutarel
+i=1
+76 Asignacio´ndeproyectosaestudiantesutilizandounoperadorFOWAdema´ximaentrop´ıayelMe´todoHu´ngaro
+Cuadro1.Nu´merosborrosostriangularesasociadosalos requiere:
+te´rminoslingu¨´ısticosdeT
+Te´rmino Nu´meroborrosotriangular IW:Eldisen˜odeinterfaceswebcumpliendoconlosesta´nda-
+resdedisen˜oparatalpropo´sito.
+M (0,0,0.25)
+IE: Disen˜o de interfaces de escritorio cumpliendo con los
+R (0,0.25,0.5)
+esta´ndaresdedisen˜oparatalpropo´sito.
+B (0.25,0.5,0.75)
+LJ,LP,PHP:Laaplicacio´ncompletaoalgunadesuspartes
+MB (0.5,0.75,1)
+seacodificadaenestoslenguajesdeprogramacio´n.
+E (0.75,1,1)
+BD:Eldisen˜oy/outilizacio´ndebasesdedatos.
+RP:Desarrollodeserviciosylaimplementacio´ny/outiliza-
+cio´ndeprotocolosdered.
+proyecto jsedenota(cid:101)b
+ij
+yseobtienemediante(22)agregando
+AE:Procesamientoestad´ısticodedatos.
+e soloparalascaracter´ısticaspresentesenelproyecto j.En
+ik IA:Utilizacio´ndemodelosmatema´ticos,algoritmoscla´sicos
+consecuenciaseobtienelamatrizdecalificacionesB(cid:101)=[(cid:101)b
+ij
+]
+deoptimizacio´ny/ometa-heur´ısticasote´cnicasdeclasifica-
+cuyoscoeficientessonnu´merosborrosostriangulares.
+cio´n.
+(cid:101)b
+ij
+=H
+α
+({e
+ik
+:k∈C
+j
+}) (22)
+Elcuadro2muestralascaracter´ısticasquepresentanlospro-
+Unaasignacio´nfactibleesaquelladondeacadaestudiante yectos, donde 1 indica presencia. El cuadro 3 muestra las
+leesasignadounu´nicoproyectoyacadaproyectounu´nico evaluacionesquerecibenlosestudiantesenestascaracter´ısti-
+estudiante.Sebuscaunaasignacio´nfactiblequemaximicela casutilizandolaescalalingu¨´ısticaT={Mal(M),Regular(R),
+calificacio´ntotal.Laformulacio´ndeprogramacio´nmatema´ti- Bien (B), Muy bien (MB), Excelente (E)}. Las calificacio-
+caparaesteproblemaesta´ dadapor: nesdelosestudiantesparaejecutarlosproyectosseobtienen
+mediante(22)conα =0.6.Sesigueelprocedimientodeso-
+Maximizar ∑ i∈S ∑ j∈P(cid:101)b ij ×X ij (23) lucio´n descrito en la seccio´n 2; la matriz de calificaciones
+s.a: ∑ j∈P X ij =1 ∀i∈S (24) defusificadasemuestraenelcuadro5,laasignacio´no´ptima
+obtenida,convalordelafuncio´nobjetivo13.26,semuestra
+∑ i∈S X ij =1 ∀j∈P (25) enelcuadro4.
+X ∈{0,1} ∀i∈S, ∀j∈P (26)
+ij
+Cuadro2.Caracter´ısticaspresentesenlosproyectos
+dondeX ={1,sialestudianteiseleasignaelproyecto j;0,
+ij Caracter´ısticas
+enotrocaso}.
+IW IE LJ LP PHP BD RP AE IA
+Con(24)segarantizaqueacadaestudianteseaasignadoexac-
+tamenteunproyectoycon(25)queunproyectoseaasignado
+P1 1 1 1 1
+soloaunestudiante.
+P2 1 1 1 1
+P3 1 1 1 1
+La solucio´n se obtiene en dos pasos. Inicialmente se defu- P4 1 1 1 1
+sificanloselementosdeB(cid:101)calculandosurangomediante(5) P5 1 1 1 1
+paraobtenerlamatrizB=[b ij ]cuyoselementospertenecena P6 1 1 1 1
+IR ≥0 .Estopermiteescribirlafuncio´nobjetivoente´rminosde P7 1 1 1
+B.Posteriormenteseresuelveelproblemadefinidopor(24),
+P8 1 1 1 1
+(25),(26)y(27)utilizandoelMe´todoHu´ngaro[?].
+P9 1 1 1 1 1
+B=R(B(cid:101))
+P10 1 1 1
+P11 1 1 1 1
+Maximizar ∑∑b
+ij
+·X
+ij
+(27) P12 1 1 1
+i∈Sj∈P P13 1 1 1
+P14 1 1 1 1
+3. Estudio de caso P15 1 1 1 1 1 1
+Sepresentaunproblemadeasignacio´ndeproyectoscon P16 1 1 1
+17estudiantesy17proyectoscorrespondientealcurso2015- P17 1 1 1
+2016. El conjunto de caracter´ısticas esC = {Interfaz Web
+(IW),InterfazdeEscritorio(IE),LenguajeJava(LJ),Lengua-
+jePython(LP),LenguajePHP(PHP),BasesdeDatos(BD),
+4. Conclusiones y trabajo futuro
+RedesyProtocolos(RP),Ana´lisisEstad´ıstico(AE),Te´cnicas
+de Inteligencia Artificial, Programacio´n Matema´tica (IA)}. La metodolog´ıa utilizada para resolver el problema de
+Lapresenciadeestascaracter´ısticasimplicaqueelproyecto asignacio´ndeproyectosgarantizaqueelcriteriodedecisio´n
+Asignacio´ndeproyectosaestudiantesutilizandounoperadorFOWAdema´ximaentrop´ıayelMe´todoHu´ngaro 77
+Cuadro3.Evaluacionesdelosestudiantes paraejecutarlos.
+Caracter´ısticas
+IW IE LJ LP PHP BD RP AE IA Un trabajo posterior analizara´ la posibilidad de resolver el
+problemadeasignacio´ndeproyectossindefusificarlamatriz
+E1 R B E B R B B B R
+decalificaciones.Enestesentido,debeextenderseelMe´to-
+E2 MB B MB MB B B R B B
+doHu´ngaroparaqueopereconnu´merosborrosos.En[?]se
+E3 R R MB M R MB M MB E
+proponeunaversio´nborrosadelMe´todoHu´ngaro;sinembar-
+E4 E E E M E MB M R R
+go,elresultadodelejemplotratadoen[?]puedeobtenerse
+E5 E E E R E MB M E E
+mediante la metodolog´ıa adoptada en el presente art´ıculo;
+E6 E B E B E MB M B R
+adema´s,lacomparacio´nen[?]delresultadodeesteejemplo
+E7 B E B B B B MB B B conelobtenidoen[?]esincorrectaporunerrorde[?]enel
+E8 MB MB E R E E M MB MB ca´lculo del rango de uno de los nu´meros borrosos. En con-
+E9 B MB E E B MB E B MB secuencia,laconclusio´nalaquesearribo´ en[?,p.34],en
+E10 MB B MB E B MB E B B cuantoalasuperioridaddelme´todopropuesto,esfalsa,ypor
+E11 B B B B B B B B R ambosme´todosseobtieneelmismoresultadoalmenospara
+E12 R E B B R B B MB B elejemplopresentado.Tantoen[?]comoen[?]seutilizasolo
+elcriteriodelrangoparalacomparacio´ndenu´merosborrosos.
+E13 R R B M R R B B R
+Laventajafundamentaldelenfoquecompletamenteborroso
+E14 E B E B E MB M B R
+esquepermitelautilizacio´ndelaaritme´ticaborrosaypodr´ıa
+E15 MB MB E M E E R MB MB
+incorporarelprocedimientodecomparacio´ndenu´merosbo-
+E16 E B B M E MB R R R
+rrosos,descritoenladefinicio´n6,enlospasosdelMe´todo
+E17 E B E B E MB M B R
+Hu´ngaro.Elresultadoser´ıaunaasignacio´no´ptimaquetoma
+encuenta,adema´sdelrango,lamodayladivergenciadelos
+Cuadro4.Asignacio´no´ptima nu´merosborrososenlamatrizdecalificaciones.Sesupone
+E1 E2 E3 E4 E5 E6 E7 E8 E9 E10 E11 quedeestamaneraseobtendr´ıaunme´todocompetitivo.
+P4 P14 P1 P10 P15 P13 P17 P8 P7 P16 P5
+E12 E13 E14 E15 E16 E17
+P6 P9 P2 P11 P12 P3
+seaempleadodeformao´ptima.Elmodelopresentadopuede
+generalizarseparaconsiderarelgradodecomplejidaddelas
+caracter´ısticaspresentesenlosproyectos,loque,enuntrabajo
+posterior,permitir´ıaresolversituacionescomolasiguiente:
+Debe decidirse, entre dos estudiantes, cua´l es el ma´s cali-
+ficado para ejecutar un proyecto con las caracter´ısticasC ,
+1
+C yC .ElestudianteE hasidoevaluadodeE,EyMBen
+2 3 1
+lascaracter´ısticasrespectivamenteyelestudianteE hasido
+2
+evaluadodeE,MByEenlascaracter´ısticasrespectivamente.
+Conlaformulacio´nactualambostienenlamismacalificacio´n
+porqueseagregaelmismoconjuntodeevaluaciones.Sinem-
+bargo,siseconocequelascaracter´ısticasC yC tienenun
+1 2
+gradodecomplejidadelevadoyC ungradodecomplejidad
+3
+bajo, entonces E es el ma´s calificado para ejecutar el pro-
+1
+yecto.Debedefinirseformalmenteunconjuntodete´rminos
+lingu¨´ısticosysusema´nticaasociadapararepresentarlacom-
+plejidaddelascaracter´ısticas.
+Elmodelopresentadomaximizalacalificacio´ntotal.Desdeel
+puntodevistadocente,puedepensarsequeminimizarlacalifi-
+cacio´ntotalpermitepotenciareldesarrollodelosestudiantes
+enlascaracter´ısticasdondepresentanmayoresdificultades.
+Enestecasoesnecesarioqueelcriterioempleadoconsidere
+larelacio´nexistenteentrelacomplejidaddelascaracter´ısticas
+delosproyectosylasposibilidadesquetienenlosestudiantes
+78 Asignacio´ndeproyectosaestudiantesutilizandounoperadorFOWAdema´ximaentrop´ıayelMe´todoHu´ngaro
+Anexos
+Cuadro5.Matrizdecalificacionesdefusificada
+0,610 0,557 0,405 0,652 0,405 0,610 0,500 0,405 0,429 0,360 0,405 0,360 0,360 0,610 0,552 0,500 0,500
+0,587 0,655 0,587 0,587 0,587 0,587 0,550 0,587 0,540 0,610 0,587 0,610 0,610 0,655 0,614 0,550 0,610
+0,815 0,560 0,560 0,666 0,560 0,732 0,364 0,560 0,488 0,469 0,560 0,469 0,469 0,666 0,683 0,364 0,424
+0,625 0,906 0,783 0,783 0,783 0,676 0,364 0,783 0,682 0,893 0,783 0,893 0,893 0,783 0,755 0,364 0,668
+0,906 0,906 0,906 0,906 0,906 0,938 0,424 0,906 0,796 0,893 0,906 0,893 0,893 0,906 0,918 0,424 0,713
+0,678 0,906 0,824 0,720 0,824 0,610 0,505 0,824 0,721 0,893 0,824 0,893 0,893 0,824 0,716 0,505 0,610
+0,500 0,500 0,500 0,652 0,500 0,652 0,610 0,500 0,572 0,500 0,500 0,500 0,500 0,500 0,608 0,610 0,692
+0,866 0,906 0,866 0,866 0,866 0,815 0,507 0,866 0,760 0,893 0,866 0,893 0,893 0,866 0,835 0,507 0,713
+0,773 0,720 0,587 0,773 0,587 0,773 0,893 0,587 0,685 0,610 0,587 0,610 0,610 0,720 0,740 0,893 0,832
+0,655 0,708 0,655 0,655 0,655 0,587 0,893 0,655 0,733 0,690 0,655 0,690 0,690 0,708 0,657 0,893 0,773
+0,458 0,500 0,500 0,500 0,500 0,458 0,500 0,500 0,500 0,500 0,500 0,500 0,500 0,500 0,474 0,500 0,500
+0,587 0,405 0,492 0,720 0,492 0,720 0,500 0,492 0,501 0,360 0,492 0,360 0,360 0,545 0,634 0,500 0,692
+0,405 0,337 0,337 0,405 0,337 0,405 0,315 0,337 0,381 0,250 0,337 0,250 0,250 0,405 0,364 0,315 0,205
+0,678 0,906 0,824 0,720 0,824 0,610 0,505 0,824 0,721 0,893 0,824 0,893 0,893 0,824 0,716 0,505 0,610
+0,866 0,906 0,866 0,866 0,866 0,815 0,507 0,866 0,784 0,893 0,866 0,893 0,893 0,866 0,835 0,507 0,668
+0,492 0,824 0,783 0,545 0,783 0,405 0,424 0,783 0,706 0,893 0,783 0,893 0,893 0,678 0,603 0,424 0,505
+0,678 0,906 0,824 0,720 0,824 0,610 0,505 0,824 0,721 0,893 0,824 0,893 0,893 0,824 0,716 0,505 0,610

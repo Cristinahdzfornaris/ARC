@@ -1,0 +1,386 @@
+REVISTA DE CIENCIAS MATEMÁTICAS Vol. 24, único, Nos. 2007- 2008
+UNA METODOLOGÍA PARA LA INTERPRETACIÓN
+CUANTITATIVA DE LA CINEMÁTICA DEL CICLO DE MARCHA.
+Cacoq Junot1, Carlos Díaz Novo2, Larisa Zamora Matamoros3
+Universidad de Oriente1-3, Centro de Biofísica Medica2, Cuba
+RESUMEN
+La locomoción de los seres humanos incluye secuencias complejas de movimientos, que
+difícilmente se captan y comprenden sin herramientas específicas. El problema se complica aún
+más cuando existen alteraciones de los movimientos. El entendimiento claro de las desviaciones de
+los patrones normales de marcha es crucial para poder brindar un tratamiento adecuado.
+En el trabajo se presenta el diseño e implementación de una metodología para la interpretación
+cuantitativa de la cinemática del ciclo de marcha. Dicha metodología contempla el análisis de los
+desplazamientos articulares, en el plano Sagital, de las tres articulaciones fundamentales enroladas
+en la locomoción humana, la cadera, la rodilla y el tobillo, a partir de registros de marchas
+obtenidos en pacientes sanos y enfermos.
+Las técnicas empleadas para el análisis de los datos fueron: el Método de los Mínimos Cuadrados,
+para la estimación de parámetros y el acondicionamiento de los vectores de datos, la técnica
+Bootstrap, para la construcción de Bandas Confidenciales y de Predicción, y el Método de los
+Trapecios, para la determinación de un índice de disfunción, el cual sirve para evaluar el grado de
+normalidad de la marcha en el paciente.
+La metodología permite, partiendo del cálculo del índice de disfunción, diferenciar los pacientes
+enfermos de los sanos. Dicha metodología posee un 84% de cobertura, de un supuesto de 90%
+reportado en la literatura.
+Palabra claves: Bootstrap, Banda de Predicción, Banda Confidencial, Cinemática, Ciclo de
+marcha.
+INTRODUCCIÓN
+La marcha bípeda es uno de los movimientos principales del ser humano que ha determinado su
+predominio como especie, la misma ha sido tema de observación y estudio durante muchos años. Es una
+compleja interacción de fuerzas activas y pasivas que actúan sobre las articulaciones y los segmentos
+corporales de los seres vivos.
+Los trabajos iniciados por E. J. Marey y E. Muybrigde en 1873 establecieron el punto de partida para los
+estudios cinemáticas. El desarrollo científico de este campo influyó en los estudios realizados por Saunders
+(1953), Sutherland (1988), Perry (1992) y otros, quienes realizan una descripción cualitativa del movimiento,
+sin la utilización de datos numéricos, con el consiguiente inconveniente del alto grado de subjetividad. El ojo
+humano capta imágenes que se mueven a una velocidad de 1/6 de segundo, por lo tanto, los eventos que
+suceden en el ciclo de la marcha a mayor velocidad no pueden ser registrados por el examinador, debido a
+que muchas actividades suceden simultáneamente en diferentes articulaciones y el sistema visual sólo logra
+percibir un evento al mismo tiempo. Aún si el examen se repitiese varias veces se pueden escapar muchas
+anormalidades. Por otra parte, las compensaciones que el paciente realiza para solucionar problemas
+primarios pueden estar disimuladas durante la inspección visual del especialista, dando lugar a la aplicación
+de tratamientos incorrectos.
+Por las razones antes expuestas surge la necesidad de realizar estudios cuantitativos de la marcha. Los
+trastornos neurofisiológicos, junto a otras patologías, son fuentes de serias disfunciones motoras del cuerpo
+humano que traen como resultado una disminución considerable de la eficiencia metabólica durante la
+realización de los movimientos. Estas disfunciones son evaluadas a través de la observación instrumentada
+.
+Email: 1cacovich10@yahoo.es
+2cdiaznovo@yahoo.es
+3larisa@csd.uo.edu.cu
+32
+(videografía) de las actividades físicas diarias como la marcha, sentarse-pararse, acostarse, comer, entre
+otras.
+El presente trabajo se centra en el estudio biomecánico cuantitativo de la marcha patológica, para ser
+utilizado de forma indirecta en el tratamiento de enfermedades neurológicas. Se propone una metodología
+para la interpretación cuantitativa de la cinemática del ciclo de marcha, que permite clasificar la marcha de
+un paciente en normal o patológica, la cual contempla el análisis de los desplazamientos de tres
+articulaciones: la cadera, la rodilla y el tobillo, partiendo de los registros del desplazamiento angular de
+dichas articulaciones, obtenidos en pacientes sanos y enfermos.
+DESARROLLO
+1. OBTENCIÓN DE LOS REGISTROS
+Los registros del desplazamiento angular de las articulaciones objeto de estudio en pacientes sanos y
+enfermos (Ver Fig. 1), se obtienen en un laboratorio de marcha equipado con un sistema de videografía
+compuesto por tres cámaras de video digital, modelo Zr 95 de la firma Canon, equipadas con un lente de
+25mm. Las cámaras de video son conectas a una computadora mediante el protocolo de comunicación IEEE
+1394.
+Fig 1 Registros de patrones normales de los rangos articulares del
+desplazamiento en la cadera, la rodilla y el tobillo.
+El pre-procesamiento, cálculo y filtrado de los desplazamientos articulares del tobillo, la rodilla y la cadera
+en el plano Sagital, fueron obtenidos con la aplicación del software Hu-m-an de HMA Technology Inc [1] (Ver
+Fig. 2). Se trabajó con la frecuencia de cuadros correspondiente a la norma utilizada (30c/s) y una razón de
+obturación de (1/500)s. Para la recolección de los registros cinemáticos, a los sujetos les fueron fijados al
+cuerpo, con la ayuda de cintas de Velcro, marcadores esféricos de 2cm de diámetro, recubiertos con
+material reflexivo Scotchlite TM 8910 gris plata.
+33
+Fig. 2: Salida del software Hu –m - an
+El análisis de los movimientos de la locomoción se basa en el estudio de registros continuos de
+parámetros y debido a la variabilidad inter e intra individuos, los mismos requieren ser homogenizados en
+cuanto a su dimensión. Adicionalmente, los métodos estadísticos para el procesamiento e interpretación de
+las observaciones puntuales de las variables discretas resultan inadecuados y poco consistentes para la
+evaluación de estos registros.
+Por lo expresado anteriormente, resulta necesario no solamente estimar una función que mejor se ajuste
+a la descripción del fenómeno estudiado, mediante la aplicación del Método de los Mínimos Cuadrados, sino
+que también se requieren determinar bandas confidenciales y/o de predicción, para lo cual se emplea el
+método Bootstrap.
+El ajuste y determinación de las bandas confidenciales y/o de predicción le permitirán al especialista
+arribar a conclusiones basadas únicamente en una valoración visual de las mismas, por lo que resulta
+imprescindible extraer de estas bandas índices normalizados entre individuos sanos y patológicos, que
+permitan, objetivamente, evaluar el grado de disfunción que presenta el paciente, para lo cual se emplea,
+como herramienta matemática, el método de los trapecios.
+2. MODELIZACIÓN DE LA MARCHA Y ESTIMACIÓN DE LOS PARÁMETROS
+Como la marcha es una actividad periódica, puede ser modelada mediante la serie de Fourier [2] con 6
+armónicos:
+6
+f t cos j2 t sin j2 t ,0 t 1 (1)
+0 j j
+j 1
+En la practica se registran los valores de la función fen varios instantes de tiempos, los cuales
+i
+dentaremos por t , i 0,...,M 1, siendo M la cantidad de puntos observados dentro de un ciclo de
+i M
+marcha1. Según la variabilidad y el tipo de instrumento utilizado obtendremos registros, para una misma
+persona, de tamaños diferentes.
+En forma matricial (1) puede escribirse como:
+1 Un ciclo de marcha comienza cuando el un pie contacta con el suelo y termina con el siguiente contacto
+con el suelo del mismo pie.
+34
+f(t) l(t)W
+donde:
+W , ,..., , ,..., T
+0 1 6 1 6
+l(t) 1,cos 2 t,...,cos12 t,sen 2 t,...,sen12 t .
+En (1) los coeficientes de Fourier son desconocidos y para su estimación se emplea el método de los
+Mínimos Cuadrados, a partir de n registros observados en n pacientes.
+Denotáremos al vector de los parámetros estimados en el paciente k-ésimo por:
+W ˆ ˆ ,ˆ ,...,ˆ ,ˆ ,...,ˆ T (2)
+k k0 k1 k6 k1 k6
+Una vez obtenidas las estimaciones de los parámetros se pasa al acondicionamiento estadístico de los
+registros, resolviendo el problema de dimensiones diferentes, llevándolos todos a una dimensión común, que
+denotaremos por T. Para realizar este acondicionamiento se aplica el método de los Mínimos Cuadrados,
+mediante el cual se obtiene una estimación de los parámetros de la serie (1) y luego por extrapolación se
+lleva el registro de datos de cada paciente a una dimensión fijada por el investigador.
+3. CONSTRUCCIÓN DE LAS BANDAS CONFIDENCIALES Y DE PREDICCIÓN
+En un sujeto podemos encontrar que existe cierta variabilidad en sus registros (variabilidad inter-sujeto),
+la cual puede estar determinada por su propia patología, por variaciones naturales y por la propia edad. Pero
+también se observa una variabilidad con respecto a otros individuos (variabilidad intra-sujeto), que puede
+deberse al método de recolección de los registros, al medio o por el instrumento de medición empleado.
+Los datos analizados en un estudio de la marcha consisten de curvas continuas de datos expresadas
+como una función del porciento del ciclo de marcha , por lo que necesitan ser manejados usando métodos
+diferentes a los tradicionalmente empleados para datos que consisten de una simple observación. Los
+métodos estadísticos apropiados para el análisis de datos numéricos puntuales, como la construcción de
+intervalos confidenciales, son inadecuados cuando se aplican a curvas continuas de datos de marcha. Para
+estas curvas, el análogo de los intervalos confidenciales son las bandas de predicción, las cuales contienen,
+con una probabilidad prefijada, una nueva curva extraída de la misma población que las curvas
+muestreadas. Las bandas de predicción se pueden usar para clasificar nuevos sujetos como pertenecientes
+o no a la misma población de la cual las curvas muestreadas fueron extraídas.
+Un método muy usual para construir las bandas de predicción es aplicar la teoría de Gauss a los datos
+univariados obtenidos en cada porciento del ciclo de marcha y determinar un intervalo de predicción para los
+datos en cada posición ploteada. En este análisis, el conjunto de los intervalos de predicción separados
+punto por punto es usado como banda de predicción. Las bandas confidenciales son obtenidas de una forma
+similar. Este método de análisis ignora el hecho de que varios puntos están siendo considerados
+simultáneamente cuando una curva entera es investigada. Si se desean analizar pocos puntos del ciclo de
+marcha, la corrección de Bonferroni [8] puede ser aplicada a los intervalos punto a punto obtenidos, para
+dar la cobertura de la banda resultante. Desafortunadamente esta corrección amplia los límites de los
+intervalos a medida que el número de puntos, en los cuales se desea construir simultáneamente los
+intervalos de predicción, se incrementa. Con datos que abarcan el ciclo completo de la marcha, al menos
+100 puntos, lo límites determinados por el método de Bonferroni resultan en una evaluación
+extremadamente conservativa.
+La metodología Bootstrap es una técnica intensiva computacionalmente, empleada para construir
+bandas que proporcionen la cobertura deseada, basándose en curvas continúas como las que se presentan
+en los estudios de la marcha. En [5] se pueden encontrar detalles de esta metodología.
+Partiendo de la información suministrada por los n registros, se determina una estimación de la
+verdadera curva poblacional, esto es,
+35
+ˆ
+f(t) l(t)W, (3)
+donde :
+1 n
+ˆ
+W W
+n k
+k 1
+con una variabilidad estimada caracterizada a través de la desviación estándar,
+ˆ l(t)ˆ l(t)T (4)
+fˆ t W
+1 n
+siendo: ˆ (W ˆ W)(W ˆ W)T la matriz de varianzas y covarianzas del vector aleatorio W ˆ
+W n k k
+k 1
+ˆ
+que toma valores W .
+k
+ˆ
+Para construir las bandas basta determinar el percentil de la distribución de f t , con lo que
+obtendríamos:
+ˆ ˆ
+f(t) percentil * ˆ f(t) f(t) 1- percentil * ˆ ,
+2 fˆt 2 fˆt
+ˆ
+encontrándose la dificultad de no conocer la distribución que sigue f(t). Para resolver este problema se
+emplea la metodología Bootstrap [8].
+3.1 CONSTRUCCIÓN DE LA BANDA CONFIDENCIAL
+Para la construcción de esta banda se necesita determinar el valor de C tal que:
+c
+ˆ
+|f(t) f(t)|
+P Max C 1 (5)
+t ˆ c
+fˆ t
+Lo cual significa que la probabilidad de que la función real que describe la marcha caiga en el intervalo
+ˆ
+f(t) C *ˆ (t)es igual a 1 .
+c fˆ
+A continuación se describen los pasos a seguir para determinar C :
+c
+1. Se generan B muestras Boostrap, que para el caso analizado dará como resultado B
+matrices de ordenes [n x T], n curvas, cada una de longitud T.
+2. Para cada muestra generada se calcula f ˆb y ˆb , según las expresiones (3) y (4), con
+fˆ
+b 1,...,B.
+3. Se calcula:
+|f
+ˆb(t)
+f
+ˆ
+(t)|
+Rb max
+t ˆ
+fˆb(t)
+y se estima la distribución empírica de Rb,
+36
+1 B |f ˆb(t) f ˆ (t)|
+ˆ
+F I max C (6)
+Rb B t ˆ c
+b 1 fˆb(t)
+Ordenando de forma ascendente los valores que puede tomar Rb, esto es, R 1 R 2 ... R B se
+obtiene:
+# Rb R(l) l
+ˆ
+F ,
+Rb B B
+l
+por lo tanto C R(l) con 1 , a partir de lo cual se obtiene que:
+c B
+l B(1 ) 1.
+3.2 CONSTRUCCIÓN DE LA BANDA DE PREDICCIÓN
+Dada una nueva curva, que denotaremos por f t , perteneciente a la familia de curvas descrita por (1)
+n 1
+y un nivel de confiabilidad del 1 *100%, se debe elegir una constanteC tal que:
+p
+ˆ ˆ
+|f (t) f(t)|
+P max n 1 C 1 (7)
+t ˆ p
+fˆ t
+ˆ
+con lo cual se obtendría que f t C *ˆ (t) es una banda de predicción de tamaño 1 para la nueva
+p fˆ
+curva.
+Para calcular C se aplica el mismo procedimiento empleado en la construcción de la banda
+p
+confidencial, con pequeños ajustes, esto es, se calcula:
+|f
+ˆ
+(t) f
+ˆb(t)|
+Rb max k con k 1,...,n y b 1,...,B,
+k t ˆb
+fˆb(t)
+y se estima la distribución empírica de
+Rb
+,
+k
+1 B 1 n |f ˆ (t) f ˆb(t)|
+F ˆ I max k C
+Rb k B n t ˆb p
+b 1 k 1 fˆb(t)
+Ordenando los valores
+Rb n,B
+de menor a mayor, esto es,
+k k 1,b 1
+R1 R2 ... RnxB , (8)
+se obtiene que:
+# Rb R(l) l
+F ˆ k
+Rb k nB nB
+37
+luego: C Rl , siendo l nB 1 1.
+p
+4. CONSTRUCCIÓN DEL ÍNDICE DE DISFUNCIÓN
+Una vez determinadas las bandas de predicción y confidenciales, surge la necesidad de disponer de un
+índice que permita evaluar el grado de disfunción que presenta el paciente. En el trabajo se propone
+considerar el siguiente índice de disfunción:
+ÁreaI
+I (9)
+ÁreaII
+donde:
+Área I: representa el área de la zona de intersección entre la banda confidencial de un paciente y la
+banda de predicción de pacientes sanos (banda patrón o control).
+Área II: área que representa la banda confidencial del paciente.
+Fig 3 Banda confidencial de un paciente y banda de predicción normal.
+Para calcular el área de la zona de intersección, se aplica el siguiente procedimiento:
+ Denotemos por
+Ycs y Yci los valores de las funciones f ˆ (t) C *ˆ (curva superior de la banda confidencial del
+t j t j c fˆ t
+paciente analizado) y f ˆ (t) C * ˆ (curva inferior de la banda confidencial del paciente analizado) y por
+c fˆ t
+Yps y Ypi los valores de las funciones f ˆ (t) C * ˆ (curva superior de la banda de predicción) y
+t j t j p fˆ t
+f ˆ (t) C * ˆ (curva inferior de la banda de predicción), evaluadas todas en los instantes de tiempo t ,
+p fˆ t i
+con i 0, 1,...,T 1.
+ Se analiza la primera observación de la curva superior de la banda confidencial, esto es
+Ycs
+, si
+t
+1
+este valor cae dentro de la banda de predicción, es decir, si
+Ypi Ycs Yps
+) se almacena el
+t t t
+1 1 1
+valor
+Ycs
+, en caso contrario se escoge el valor
+Ypi
+o
+Yps
+, más próximo a
+Ycs
+.
+t t t t
+1 1 1 1
+ Ese procedimiento se repite para el ciclo completo (i=1,…,T-1) y para las dos curvas que definen
+la banda confidencial.
+ Una vez culminado este proceso se dispondrá de dos conjuntos de puntos. Se aplica entonces el
+método de los trapecios para determinar el área bajo la curva determinada por estos conjuntos de
+puntos, considerando el intervalo de integración dividido en T partes iguales, mediante los puntos
+38
+1
+t ,t ,...,t , espaciados a una distancia h . Calculadas las áreas determinadas por los
+1 2 T 1 T
+dos conjuntos de puntos, mediante sustracción conveniente de las mismas, se determina el valor
+de ÁreaI.
+ El ÁreaII es el área bajo la curva, considerando los conjuntos de puntos Yci T y Ycs T
+t t
+j j 1 j j 1
+utilizando el método de los trapezios.
+5. IMPLEMENTACIÓN Y VALIDACIÓN DE LA METODOLOGÍA
+La metodología descrita ha sido implementada en MatLab 7.0. En la figura 4 se muestra un ejemplo de
+salida de la misma. Para la determinación de la banda confidencial y de predicción se trabajó con una
+probabilidad de cobertura de 0,90.
+Fig. 4 Ejemplo de salida del sistema.
+En las figuras 5 y 6 se muestran ejemplos del cálculo del índice de disfunción a través del software.
+Fig. 5: Ejemplo del cálculo del índice de disfunción de un paciente sano.
+39
+Fig. 6: Ejemplo del cálculo del índice de disfunción de un paciente patológico.
+Para la validación de las bandas de predicción obtenidas se empleó el método de validación cruzada,
+obteniéndose un 84% de cobertura.
+CONCLUSIONES
+En el trabajo se presenta una metodología para la interpretación cuantitativa de los desplazamientos
+angulares correspondientes a los movimientos intra-articulares que se originan durante un ciclo de marcha,
+la misma permite confeccionar bandas de predicciones para clasificar la marcha de un paciente en normal o
+patológica, confeccionar bandas confidenciales, para estudiar la variabilidad presente en una serie de
+registros de un paciente. Por último se presenta un índice de disfunción que permite evaluar el grado de
+disfunción que presenta el paciente. Dicha metodología ha sido implementada como una herramienta
+computacional en MatLab 7.0.
+RFERENCIAS
+[1] Álvarez, M. B., (2004), Matemática Numérica, Vol. 1. Editorial Felix Valera.
+[2] Begg, R., Wytch, R., Major, R. (1989), Instrumentation used in clinical gait studies: a review. J. Med.
+Eng. Technol, No. 5:13-290.
+[3] Cacoq, J. (2005), Un sistema para el análisis de la marcha humana. Trabajo de investigación del
+tercer año de la carrera, Departamento de Matemática, Facultad de Matemática y Computación,
+Universidad de Oriente.
+[4] Cacoq, J. (2007), Diseño e implementación de una metodología para la interpretación de la
+cinematica del ciclo de marcha. Trabajo de Diploma, Departamento de Matemática, Facultad de
+Matemática y Computación, Universidad de Oriente.
+[5] Carol, L. O., Malouin, F. M., Dumas, F., Tardif, D. (1995), Gait velocity as in outcome measurement
+of locomotor recovery after Stroke pp 355-364.
+[6] Craik, l. R., Otis, l. C. (1995), Gait Analysis Theory and Applications of Gait. 1ra edición Mosby, pp.
+376-387.
+[7] Gil, F. J., (2003), Aplicación del método bootstrap al contraste de hipótesis en la investigación
+educativa, Revista de Educación, No. 336, 2003, pp. 251-
+265.www.revistaeducacion.mec.es/re336/re336_14.pdf.
+[8] Lenhoff, M. W. and et., (1999), Bootstrap prediction and confidence bands: a superior statistical
+method for analysis of gait data, Gait and Posture, No. 9, 1999, pp. 10-17.
+http://citeseer.ist.psu.edu/444024.html.
+[9] Página Web del software Hu-m-an, http://www.hma-tech.com/page01a.htm, visitada en mayo de
+2001.
+[10] Página Web del software Vicon, www.carrsq.qut.edu.au/documents/publication_045.pdf Vicon,
+visitado abril, 2007.
+[11] Página Web del software Moven, www.moven.com, visitado abril, 2007.
+[12] Página Web del software Kodac, www.carrsq.qut.edu.au/documents/publication_045.pdf Kodac,
+visitado abril, 2007.
+40
+[13] Politis, D. N., (1998), Computer-Intensive Methods in Statiscal Analysis, IEEE Signal Processing
+Magazine, pp. 39-55.ieeexplore.ieee.org/xpls/abs_all.jsp?tp=&arnumber=647042.
+[14] Richards, J., G. (1999), The measurement of human motion: A comparison of commercially available
+systems. Human Movement Science, No. 18, pp. 589-602.
+[15] Tingle, M. et al. (2002), An index to quantify normality of gait in young children, Gait and Posture, No.
+16, 2002, pp. 149-158.
+[16] Vaughan C. L, Davis, B. L, Oconnor, J. C. (1992), Dynamic of Human gait. Human kinetics publisher,
+Champing, Illinois.
+[17] Tom Chau , Scott young, Sue. Redekop (2005),Managing variability in the summary and
+comparison of gait data.Journal of Neuroengineering and Rehabilitacion.
+41

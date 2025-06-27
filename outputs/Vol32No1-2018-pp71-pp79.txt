@@ -1,0 +1,667 @@
+CienciasMatemáticas,Vol.32,No.1,Pag.71-79,2018
+Recibido04-2018
+Algoritmo esteganogra´fico pseudo-asime´trico
+basado en una tabla de cuantificacio´n no esta´ndar
+Pseudo-asymmetric stganographic algorithm based
+upon a quantization table non-standard
+A. Figueroa-Romero1, A. Soria-Lorente2
+Resumen En este art´ıculo, se propone un novedoso me´todo esteganogra´fico basado en la comprensio´n
+JPEG. El algoritmo esteganogra´fico propuesto inserta la informacio´n secreta en algunos coeficientes loca-
+lizados en el a´rea de las medias frecuencias de la imagen original (RGB), utilizando una nueva matriz de
+cuantificacio´ndistintaalaesta´ndar.Porotrolado,elme´todopropuestoutilizaunaclavepu´blicayotraprivada,
+ambas de 128 bits, las cuales generan dos secuencias binarias que deciden respectivamente en que´ bloque
+yque´ posicio´nseocultara´ elmensajesecretoencriptadomedianteelalgoritmocriptogra´ficoAES.Finalmente,
+presentamosunana´lisisexperimentalparalavalidacio´ndelme´todopropuesto.
+Abstract In this article, a novel steganographic method based on the compression JPEG is proposed. The
+steganographicalgorithmproposedembeddedthesecretinformationinsomecoefficientslocatedinthemiddle-
+frequencyareaofthecoverimage(RGB),usinganewquantizationmatrixdifferenttothestandard. Inaddition,
+the proposed method uses a public key and another private, both of 128 bits, which generate two binary se-
+quences that indicate respectively in what block and what position the secret messageencrypted by the cryp-
+tographicalgorithmAESwillbeembedded. Finally,wepresentaexperimentalanalysisforthevalidationofthe
+proposedmethod.
+PalabrasClaves
+Estaganograf´ıa—Pseudo-asime´trico—Matrizcuantizacio´n
+1DepartamentodeMatema´tica,UniversidaddelaHabana,CiudadHabana,Cuba,jpp@aguacate.edu.cu,mgp@aguacate.edu.cu
+2FacultaddeCienciasTe´cnicas,UniversidaddeGranma,Cuba,asorial@udg.co.cu,asorial1983@gmail.com
+*A.Soria-Lorente
+Introduction tipodedatosdentrodeinformacio´nconsideradacomova´lida.
+Adema´s,lamismapermiteburlarlavigilanciaelectro´nicaen
+Alolargodelahistoriahansidoempleadosdiversosme-
+elInternet,osimplementequeterceraspersonasnotenganac-
+dios y me´todos para garantizar la seguridad de la informa-
+cesoainformacio´nnoautorizada[29].Laesteganograf´ıauti-
+cio´n y al mismo tiempohan sido creadosun sin nu´merode
+liza mediosdigitales, tales como archivos de texto [12, 27],
+te´cnicasyprocedimientosparavulnerarlosmediosdesegu-
+audio [10, 13, 14, 17], imagen [20, 3, 4, 8, 16, 23] y video
+ridadyconellorevelarlainformacio´nobjetodeproteccio´n.
+[6,30],quesonutilizadoscomoelarchivodetransportepa-
+De modo que reviste especial trascendencia trabajar con el
+ra ocultar la informacio´n, a este medio se le conoce como
+propo´sitodelograr,cadad´ıaconmayoreficiencia,laimple-
+contenedorocubierta.
+mentacio´n de me´todos y procedimientos que garanticen la
+proteccio´nyseguridaddelainformacio´n,loscualessedesa- Entrelaste´cnicasma´susadasenlaesteganograf´ıaseen-
+rrollan en el campo de la criptograf´ıa y la esteganograf´ıay cuentran las correspondientes al dominio espacial [15, 29,
+jueganunpapelsignificativoenlasociedadactual. 28]. La aplicacio´n de la esteganograf´ıa en el dominio espa-
+cial, radica en que los algoritmosson utilizadosen la mani-
+La criptograf´ıa es la ciencia de proteger y custodiar la
+pulacio´n de los p´ıxeles y en la insercio´n de la informacio´n
+informacio´ndigitaldeformaseguramediantete´cnicasdeci-
+secreta en los bits menos significativos o bien de mayor re-
+frado,su objetivonoes ocultar la existencia de un mensaje,
+dundancia[29,28].
+sinoma´sbienocultarsusignificado,unprocesoquesecono-
+cecomocodificacio´n.Laventajadeestaesquesielenemigo Otradelaste´cnicasdentrodelaesteganograf´ıatieneque
+interceptaunmensajecifrado,e´steesilegible[26,29,28]. verconeldominiodelafrecuencia[2,21,25,26,32],lacual
+Por otro lado, la esteganograf´ıa constituye un conjunto esta´ vinculadaaloscambiosdelasaltasybajasfrecuencias
+de te´cnicaslascualespermitenocultaro camuflarcualquier de la imagen, de forma tal, que las altas frecuencias como
+72 Algoritmoesteganogra´ficopseudo-asime´tricobasadoenunatabladecuantificacio´nnoesta´ndar
+losbordes,lasl´ıneasyciertostiposderuidossonutilizados n 2 rondas esta´ndar y una ronda final. Las transformacio-
+−
+para ocultarinformacio´n[26, 27].Dentrode esta te´cnica se nesba´sicassonAddRoundKey,SubByte,ShiftRows,MixCo-
+utilizantransformadastalescomoladeFourier[11],latrans- lumnsyKeySchedule.Porcierto,lafortalezadelAESradica
+formada discreta de los cosenos [26, 32] y la de wavelets enlosprocedimientosdesusfuncionesyenlalongituddesus
+[6,7,19,22]. claves.
+Elintere´sconcretodeunsistemaesteganogra´ficodepen- En este trabajo denotaremos por L a la longitud de la
+dera´ de tres caracter´ısticas:capacidad(cantidadde informa- secuenciabinariadelmensajesecreto
+cio´nquepuedeserocultada),seguridad/invisibilidad(proba-
+M = m 0,1 :1 i L .
+i
+bilidad de deteccio´n por un estegoanalista) y robustez (can- { ∈{ } ≤ ≤ }
+tidad de alteraciones dan˜inas que el medio puede soportar Porotrolado,denotaremosporD y
+antes de que se pierda la informacio´n oculta). Este u´ltimo A = a 0,1 :1 ℓ T
+ℓ
+puedeverse afectadoya que en las mayor´ıasde las redes,a { ∈{ } ≤ ≤ }
+los medios digitales que se transmiten por ella, se le reali- lassecuenciasbinariasquedeterminanlosbloquesdebytes
+zantransformacionesconelobjetivodereducirsutaman˜oy ylasposicionesdondeloselementosdelasecuenciabinaria
+ganar en velocidad de transmisio´n, provocando con esto la delmensajesecretosera´ninsertados,respectivamente.
+pe´rdidadeinformacio´n.
+1.1 Generacio´ndelcaminodeinsercio´n
+Estehechoesbienconocidoporlacomunidadinternacio-
+Denotemos por X la cantidad de bit iguales a 1 de la
+nal,deaqu´ıque,muchospa´ısestienencomopol´ıtica,realizar secuenciabinariaX. | Aq | u´ı,lassecuenciasbinariasA yD,se
+transformacionesa los mediosdigitalesque se transmiten a
+determinandelsiguientemodo:
+trave´sdesusredes,nosoloparaganarenvelocidad,sinopara
+de algunamanerarestringireluso dela Esteganograf´ıa.En- Solicitarunaclavepu´blicade128bits,generadaporel
+tre los me´todosma´susadosse encuentranla compresio´nde emisoroextra´ıdadeunabasededatos.
+ima´genes,archivosyotrosdatos.
+Aplicar la operacio´n 0 0=1 1=0 and 0 1=
+Unadelaste´cnicasma´sutilizadasparacomprimirima´ge- ⊕ ⊕ ⊕
+1 0=1 entre la clave pu´blica y la correspondiente
+nes es la te´cnica de compresio´n JPEG (Joint Photographic ⊕
+claveprivadade128bitsnotransmitida,paragenerar
+ExpertsGroup),elcualconstituyeunodelosesta´ndaresco- unanuevasecuenciaS de128bits.
+nocidosyma´sutilizadosparalacompresio´ndeima´genescon
+perdida [23, 24, 33]; es decir, la imagen descomprimidano ApartirdeS,generarmedianteelalgoritmopropues-
+esexactamentelamismaqueaquellaconlaqueseempezo´. toen[26],lasecuenciaA con A =L ycard(A)=
+Enestetrabajosepresentaunalgoritmoesteganogra´fico
+T. | |
+basado fundamentalmenteen la comprensio´nJPEG. Elmis- D = (P S)= d 0,1 :r 1 ,
+i r
+moapartirdeunaclavepu´blicayunaprivada,ocultalainfor- ⊕ { ∈{ } ≥ }
+1 i n
+macio´nsecretaenalgunoscoeficienteslocalizadosenela´rea ≤[≤
+dondeA =P P ... P ... P ,siendo
+de las medias frecuencias de la imagen original, utilizando 1 2 i n
+|| || || || ||
+unanuevamatrizdecuantificacio´ndiferentealaesta´ndar.En P = pi 0,1 :1 j 64 , 1 i n,
+i j∈{ } ≤ ≤ ≤ ≤
+laSeccio´n1sedescribeelalgoritmopropuesto,mientrasque
+conn=T (cid:8)/64. (cid:9)
+enlaSeccio´n2sepresentaelana´lisisexperimentalrealizado.
+1.2 Regladereemplazamiento
+1. Algoritmo esteganogra´fico propuesto DenotemosporR(x,β)lafuncio´nquereemplazaelLSB
+dex Nporelcorrespondientebitβdelasecuenciabinaria
+∈
+Elme´todopropuestoutilizaelalgoritmocriptogra´ficosi- delmensajesecreto.Paraβ=0lareglaR(x,0)vienedefinida
+me´trico AES, con el objetivo de fortalecer la seguridad de mediante
+la informacio´nsecreta.ElalgoritmoAEStambie´nconocido
+x 1, sixesimpar,
+como Rijndael fue disen˜ado por los belgas Joan Daemen y R(x,0)= − (1)
+Vincent Rijmen y fue el ganador del concurso lanzado por
+(x, sixespar.
+el NIST en 1997 debido a que presento´ la mejor combina-
+Demaneraana´loga,paraβ=1definimosR(x,1)como
+cio´ndeseguridad,velocidad,eficiencia,sencillezyflexibili-
+dad[1].Supublicacio´noficialsepresentobajoelnombrede x, sixesimpar,
+R(x,1)= (2)
+FIPSPUB197enelan˜o2001.Seutilizaactualmenteenins- (x+1, sixespar.
+titucionesbancarias,gubernamentales,decomunicacionese
+industriaprivadaentreotras. Lareglaparalaoperacio´ninversaR − 1 vienedadamediante
+Esuncifradordebloquesdetaman˜ofijode128bitsque lasiguientefuncio´ndeextraccio´ndefinidacomo
+puede utilizar llaves de (128, 192 o´ 256 bits) realizando n
+0, siyespar,
+rondasdependiendodelallave(10,12o´ 14rondas)respecti- x=R − 1(y)= (3)
+vamente.Elprocesodecifradocomprendeunarondainicial,
+(1, siyesimpar.
+Algoritmoesteganogra´ficopseudo-asime´tricobasadoenunatabladecuantificacio´nnoesta´ndar 73
+1.3 Procesodecuantificacio´n Divide C en 3MN/64 bloques (Bk) disjuntos de 8
+×
+Enestetrabajo,semodificalatablacuantificacio´nesta´ndar, 8 bytes y luego procesa cada uno de ellos de manera
+conocidacomomatrizdeLohscheller independiente.
+16 11 10 16 24 40 51 61
+12 12 14 19 26 58 60 55
+  Resta128acadabloquedebytesparacentrarlosvalo-
+14 13 16 24 40 57 69 56
+resentre-128y127.
+14 17 22 29 51 87 80 62
+  (4)
+18 22 37 56 68 109 103 77
+ 
+24 35 55 64 81 104 113 92
+  Aplicalatransformadadiscretadecoseno(DCT),aca-
+49 64 78 87 103 121 120 101
+  dabloquedebytesdelaimagen,conloqueseobtiene
+72 92 95 98 112 100 103 99
+  undominiodelafrecuencia(matrizdeloscoeficientes
+ 
+conelpropo´sitodeincrementarlacalidaddelaestego-imagen. DCT).
+Enelprocesodecuantificacio´n,cadabloquede8 8by-
+te seleccionadopor la secuencia binaria D es cuantifi × cando
+usandola matrizdecuantificacio´nQα conunfactordecali- Cuantifica los coeficientes DCT mediante los valores
+dadα,dadamediante de la matriz o tabla de cuantificacio´n ya preestableci-
+da (4)-(5). Esto es, cada coeficiente DCT del bloque
+16 11 10 16 σα σα 51 61
+5 6 debytes,esdivididoporlacorrespondienteconstante
+12 12 14 σα σα 58 60 55
+ 14 13 σα σ 4 α 4 7 0 57 69 56  delamatrizdecuantificacio´nyluegoseredondeaasu
+3 8 nu´meroenteroma´s cercano,ve´ase (6). Este es el pro-
+14 σα σα 29 51 87 80 62
+ 2 9  (5) ceso donde se produce la pe´rdida de informacio´n de
+σα σα 37 56 68 109 103 77
+ 1 10  manerairreversible.
+σα 35 55 64 81 104 113 92
+ 11 
+49 64 78 87 103 121 120 101
+ 
+72 92 95 98 112 100 103 99
+  Conelpropo´sitodeaprovecharelpatro´nordenadode
+  componentesde frecuencia,el algoritmoreordenalos
+donde
+coeficientes cuantificados a un vector νk = νk:1
+σα=χ(α)(18,17,16,19,24,40,26,24,22,22,24), i 64 delongitud64,siguiendounrecorrid { oe i nZ ≤ ig
+≤ }
+Zag,paralograrunmejorordenamientodelascompo-
+100 α
+siendoχ(α)= − ,cuando50<α<100. nentesdefrecuencia,ve´aselaFigura1.Deestemodo,
+50
+seobtieneunvectorenelcual,elprimercoeficientees
+As´ı los coeficiente DCT cuantificados Θk son calcula-
+u,v el coeficiente DC o de frecuencia cero y el resto son
+dosmediante
+loscoeficientesAC,divididosentrespartes,losdeba-
+Bk ja,mediayaltasfrecuencias,respectivamente.
+Θk =round u,v , 0 u,v 7. (6)
+u,v Qα u,v! ≤ ≤
+Selecciona el correspondiente bloque de coeficientes
+1.4 Procesodeinsercio´nyextraccio´n
+cuantificadossiempreycuandoelcorrespondienteele-
+Enestetrabajolainformacio´nsecretaesocultadadentro
+mentodelasecuenciabinariaD esiguala1.
+delaimagencubiertamedienteelprocedimientodescritoen
+Algoritmo1.
+Entrada:Mensajesecreto,imagencubiertaCdetaman˜oM
+× Insertalosbitssecretosm enlosLSBsdelas10prime-
+N,claveprivada,clavepu´blica,factordecalidadα. i
+ras componentes de media frecuencia de los bloques
+Salida:Estego-imagenS.
+debytesseleccionados,siempreycuandoelcorrespon-
+Procedimiento:Enelalgoritmopropuestoseasumequetan-
+dienteelementodelasecuenciabinariaA esiguala1
+to el emisor como el receptor poseen el mismo sistema de
+ydichascomponentesseandistintasde 1,0y1.
+clavesprivadas,lascualesnosedebentransmitirporlosca- −
+nalesinsegurosdecomunicacio´n.Elemisorgeneralaestego-
+imagensiguiendolossiguientespasos:
+Para finalizar comprime los coeficientes reordenados
+ConvierteCdelespaciodecolorRGBalYUVmedian- usandolacodificacio´nentro´pica(Huffmancoding,Run-
+te: Lengthcoding,yDPCM[18]).
+Y 0.299 0.587 0.114 R
+U = 0.147 0.289 0.436 G . (7) Porbrevedaddenotemosσ(x)=√2 1parax=0yσ(x)=1
+  − −   −
+V 0.615 0.515 0.100 B
+encasocontrario.
+− −
+    
+74 Algoritmoesteganogra´ficopseudo-asime´tricobasadoenunatabladecuantificacio´nnoesta´ndar
+Algorithm1Algoritmoesteganogra´fico
+⊲ConvertirCdelmodeloRGBalYUVdeacuerdoa(7);
+⊲ParticionarC=B1 B2 Bk ,conk K ;
+⊲Substraer128acad
+||
+aby
+||
+t
+·
+e
+·
+d
+·|
+e
+| Bk|
+;
+|··· ∈
+fork K do
+∈
+⊲Calcularpara0 u,v 7:
+≤ ≤
+B
+u
+k
+,v
+=4
+−
+1σ(u)σ(v) ∑ Bk
+i,j
+0 i,j 7
+≤ ≤
+πu(2i+1) πv(2j+1)
+cos cos ;
+× 16 16
+(cid:18) (cid:19) (cid:18) (cid:19)
+Figura1.EscaneoenZigZag endfor
+i=ℓ=r=0;
+• fork K do
+⊲Θ ∈k Bk :Cuantificar Bk deacuerdoa(6);
+← u,v
+⊲νk Θk:Aplicarelescaneoenzigzag,Figura1;
+r=m ← od(r,card(D))+1; (cid:0) (cid:1)
+ifd =1then
+r
+for j=10,...,20do
+ℓ=mod(ℓ,T)+1;
+ifa =1then
+ℓ
+ifmode=EMBEDDINGthen
+ifνk / 1,0,1 then
+j ∈{− }
+i=i+1;
+ifνk<0then
+j
+ν¯k R(νk ,m): Aplicar la regla de
+j ←− | j| i
+remplazamientodeacuerdoa(1)–(2);
+else
+ν¯k R(νk,m);
+j ← j i
+endif
+endif
+⊳Aplicarla codificacio´nentro´pica(Huffman
+coding, Run-Length coding, y DPCM), para
+comprimircadavectorν¯k;
+⊳GenerarelarchivoJPEGS;
+else
+ifνk / 1,0,1 then
+j ∈{− }
+⊳ Aplicar la codificacio´n entro´pica en sen-
+tidoinverso(Huffmancoding,Run-Length
+coding,yDPCM),paradescomprimircada
+vectorcomprimidoν¯k;
+s =R 1(νk ):
+i − | j|
+Aplicarlaregladeextraccio´n(3)
+endif
+endif
+endif
+endfor
+endif
+endfor
+2. Resultados experimentales
+Enestecap´ıtulosepresentanlosresultadosexperimenta-
+lesdelalgoritmopropuesto.Elmismofueimplementadoen
+Algoritmoesteganogra´ficopseudo-asime´tricobasadoenunatabladecuantificacio´nnoesta´ndar 75
+Matlab.Seutilizaron4ima´genesdiferentes,detaman˜o784 donde
+×
+512pixeles,conunfactordecalidadigualparaqF=67.Las MSE=(3MN)− 1 ∑(C(γ) S(γ))2.
+−
+ima´genesoriginalesysucorrespondienteestego-imagenson γ Γ
+∈
+mostradasen la Figura 2. Para realizar los experimentofue-
+Adema´s,elconjunto´ındiceγ=(γ,γ,γ) se suma sobreel
+rontomadasalaazar100paresclavesde128bitscadauna. 1 2 3
+conjuntodebytescomo
+Se probo´ el algoritmo propuesto insertando en cada una de
+las 4 ima´genes un mensaje de taman˜o 20616 bits. Adema´s,
+Γ= 1,...,M 1,...,N 1,2,3 ,
+se realizo´ una comparacio´n intercambiando las matrices de { }×{ }×{ }
+cuantificacio´n(4)y(5),respectivamente.
+yC,S 0,1,...,255 .
+∈{ }
+Elprimerexperimento,arrojo´queelalgoritmopropuesto
+produce estego-ima´genes de muy buena calidad, donde los
+valores de PSNR esta´n en correspondencia con los valores
+heur´ısticosde PSNR (30para 50 db) encontradosen la lite-
+ratura [9], vea´se las Figuras 3–4. Adema´s, estos resultados
+muestran que se logra un menor grado de distorsio´n al uti-
+lizar la matriz de cuantificacio´n modificada en lugar de la
+esta´ndar,alcanza´ndosemayorniveldeimperceptibilidadpa-
+ralasima´genesLennayAir-plane.
+55.2
+55.1
+55
+54.9
+54.8
+54.7
+54.6
+54.5
+54.4
+0 20 40 60 80 100
+Claves
+Figura2.Lasima´genesantesydespuesdelainsercio´ndel
+mensajesecreto.Laprimeracolumnacontienelasima´genes
+cubiertasmientrasquelasegundalasestego-ima´genes
+3. Prueba de imperceptibilidad
+Unamedidadedistorsio´neslaconocidaPSNR(Relacio´n
+Sen˜al a Ruido Pico) en el esteganograma con respecto a la
+imagen original. El PSNR es muy comu´n en el proceso de
+una imagen, su utilidad reside en dar una relacio´n del gra-
+do de supresio´n de ruido entre la imagen original y el este-
+ganograma,proveyendode esta manerauna medidade cali-
+dad[28].ElPSNResta´dadoenunidadesllamadasdecibelios
+(dB)yseescribedelasiguienteforma[27,28,29]
+2562
+PSNR=10log ,
+10 MSE
+!
+RNSP
+Air-plane
+Leaves
+Lenna
+Peppers
+Figura3.ValoresdePSNRcorrespondientesalatablade
+cuantificacio´nmodificada
+50.6
+50.5
+50.4
+50.3
+50.2
+50.1
+50
+0 20 40 60 80 100
+Claves
+RNSP
+Air-plane
+Leaves
+Lenna
+Peppers
+Figura4.ValoresdePSNRcorrespondientesalatablade
+cuantificacio´nesta´ndar
+76 Algoritmoesteganogra´ficopseudo-asime´tricobasadoenunatabladecuantificacio´nnoesta´ndar
+4. Medida de Calidad de Imagen
+Entre las medidas de calidad de la imagen basadas en
+la diferencia de distorsio´n se incluye la Diferencia Absolu-
+ta(AD)[31]representadamediante:
+AD=(3MN)− 1 ∑ C(γ) S(γ) .
+| − |
+γ Γ ∈
+Para esta me´trica, mientras ma´s cercano el valor es a cero,
+mayorsera´lacalidaddelaestego-imagen;esdecir,disminu-
+yeladistorsio´nglobaldelamismaconrespectoalaimagen
+cubierta.
+El segundo experimento mostro´ que los valores de AD
+soncercanosacero,porconsiguiente,entrelasima´genescu-
+biertas y las estego-ima´genes no existen diferencias signifi-
+cativas. Cabe sen˜alar, que los mejores resultados fueron al-
+canzados a partir de la matriz de cuantificacio´n modificada,
+comosepuedeobservarenlasFiguras5–6.
+0.033
+0.0325
+0.032
+0.0315
+0.031
+0.0305
+0.03
+0.0295
+0 20 40 60 80 100
+Claves
+atulosbA
+aicnerefiD
+Air-plane
+Leaves
+Lenna
+Peppers
+Figura5.ValoresdeADcorrespondientesalatablade
+cuantificacio´nmodificada
+0.056
+0.055
+0.054
+0.053
+0.052
+0.051
+0.05 0 20 40 60 80 100
+Claves
+atulosbA
+aicnerefiD
+5. Ana´lisis de Histograma
+En el tercer experimento fue usada la imagen Peppers.
+En la Figura 8, se muestran los histogramas para el bloque
+rojodelaimagenanalizada.Uname´tricadedistorsio´nesla
+SimilituddelHistograma(HS),lacualescalculadamediante
+HS= ∑ f (l) f (l) ,
+C S | − | 0 l 255
+≤≤
+donde f (l)eslafrecuenciarelativadell-e´simoniveldegris
+C
+delaimagen,ve´ase[31].Estamedidaesta´ vinculadaconlas
+diferencias entre cada par histograma. La Figura 7 muestra
+que los valores de HS esta´n pro´ximosa cero, lo cual se co-
+rrespondealosvalorescalculadosenelejemploanterior.
+x 10-3
+6
+5.8
+5.6
+5.4
+5.2
+5
+4.8
+4.6
+4.4
+4.2
+4
+0 20 40 60 80 100
+Claves
+Air-plane
+Leaves
+Lenna
+Peppers
+Figura6.ValoresdeADcorrespondientesalatablade
+cuantificacio´nesta´ndar
+amargotsiH
+led
+dulimiS
+Leaves
+Lenna
+Peppers
+Figura7.ValoresdeHScorrespondientesalatablade
+cuantificacio´nmodificada
+6. Prueba de Seguridad
+La seguridad de un sistema esteganogra´ficoes evaluada
+trasexaminarladistribucio´ndelacubiertaydelesteganogra-
+ma. Cachin [5], propusouna medida que cuantifica la segu-
+ridad del sistema esteganogra´fico llamada ε-seguro, la cual
+vienedadamediantelaexpresio´n
+P
+RE(P P)=∑P log C ε, C S C
+|| (cid:12) P S(cid:12) ≤
+(cid:12) (cid:12)
+dondeP yP representanladistr(cid:12)ibucio´n(cid:12)deloshistogramas C S (cid:12) (cid:12)
+dela cubiertay delesteganogramarespectivamente.La u´lti-
+maexpresio´nrepresentalaentrop´ıarelativaentrelasdospro-
+babilidades de distribucio´n P y P . Hay que destacar que
+C S
+unsistemaesteganogra´ficosellamaperfectamentesegurosi
+ER(P P )=0,sinembargo,conformeaumentalacantidad
+C S
+|| deinformacio´nqueseoculta,aumentaalmismotiempolaro-
+bustez,porlocualestaentrop´ıatambie´naumenta,deforma
+talque,laseguridaddeunsistemaesteganogra´ficoesmedida
+atrave´sdeunvalorε,paracualquiertipodeimagen[5].
+Enelcuartoexperimentoseobservaquelosvaloresdeen-
+trop´ıarelativase aproximana cero,locualevidenciaqueel
+Algoritmoesteganogra´ficopseudo-asime´tricobasadoenunatabladecuantificacio´nnoesta´ndar 77
+sistema esteganogra´ficoobtenido a partir del algoritmo pro-
+puestoessuficientementeseguro,verFigura9.
+x 10-3
+6
+5.8
+5.6
+5.4
+5.2
+5
+4.8
+4.6
+15000 4.4
+4.2
+4
+0 20 40 60 80 100
+Claves
+10000
+5000
+0
+0 50 100 150 200 250
+15000
+10000
+5000
+0
+0 50 100 150 200 250
+Figura8.ElhistogramadeimagenPeppersantesydespue´s
+deinsertadoelmensajesecreto.
+avitaleR
+a(cid:237)portnE
+Leaves
+Lenna
+Peppers
+Figura9.ValoresdelaREcorrespondientesalatablade
+cuantificacio´nmodificada
+7. Conclusiones
+En este art´ıculo, se ha presentado un algoritmo estega-
+nogra´fico que utiliza una matriz de cuantificacio´n distinta
+a la esta´ndar as´ı como dos claves, una pu´blica y otra priva-
+da,lascualescontribuyenalocalizarlaspartesdelaimagen
+dondesera´ninsertadosloselementosdelasecuenciabinaria
+delmensajesecreto.Deacuerdoconelana´lisisexperimental
+realizado, quedo´ demostrado que no existen anomal´ıas de-
+tectables a simple vista, en la estego-imagencon relacio´n a
+laimagencubierta.Adema´s,losvaloresconseguidosparala
+entrop´ıarelativa,ponendemanifiestoqueelsistema estega-
+nogra´fico obtenidoa partir del algoritmo propuesto, es sufi-
+cientementeseguro.
+Acknowledgments
+Los autores expresan sus ma´s sinceros agradecimientos
+alproyectoClaveMat,financiadoporlaunio´nEuropea,
+www.clavemat.comy a la Universidadde Granmadonde el
+art´ıculofueescrito.
+Referencias
+[1] Specification for the advanced encryption standard
+(aes) federal information processing standards (fips)
+publication 197 http://csrc.nist.gov/encryption/aes/frn-
+fips197.pdf. November,2001.
+[2] M.Amin,H.Abdullkader,H.Ibrahem1,andA.Sakr.A
+steganographicmethodbasedondctandnewquantiza-
+tiontechnique. InternationaljournalofNetworkSecu-
+rity,16:265–260,2014.
+[3] D. Bandyopadhyay, K. Dasgupta, J. K. Mandal, and
+P.Dutta. Anovelsecureimagesteganographymethod
+78 Algoritmoesteganogra´ficopseudo-asime´tricobasadoenunatabladecuantificacio´nnoesta´ndar
+based on chaos theory in spatial domain. Internatio- [16] X.Liao,Q.Wena,andJ.Zhang. Asteganographicmet-
+nalJournalofSecurity,PrivacyandTrustManagement hodfordigitalimageswithfour-pixeldifferencingand
+(IJSPTM),3(1):11–22,2014. modified lsb substitution. J. Vis. Commun. Image R.,
+22:1–8,2011.
+[4] D. Biswasa, S. Biswasb, A. Majumdera, D. Sarkara,
+D.Sinhaa,andA.Chowdhurya. Digitalimagestegano-
+[17] B.Linu,J.Jais,B.Parameshachari,C.Muruganantham,
+graphyusingditheringtechnique.ProcediaTechnology,
+and M. Divakara. Steganographicmethod for data hi-
+4:251–255,2012.
+ding in audio signals with lsb and dct. International
+[5] C.Cachin.Aninformation-theoreticmodelforstegano-
+Journal of Computer Science and Mobile Computing,
+graphy. 1525:306–318,1998. 2:54–62,2013.
+[6] B.Carvajal-Ga´mez,M.Acevedo,andJ.Lo´pez-Bonilla. [18] S. Mansi and H. Vijay. Current status and key issues
+Te´cnicaesteganogra´ficaparaocultarunvideodentrode in image steganography:A survey. Computer Science
+otro utilizandola transformadawaveletdiscreta. Jour- Review,http://dx.doi.org/10.1016/j.cosrev.2014.09.001,
+nalofVectorialRelativity,2(4):54–61,2009. 2014.
+[7] B. Carvajal-Ga´mez, F. Gallegos-Funes, and J. Lo´pez-
+[19] J. Mazumder and K. Hemachandran. A high capa-
+Bonilla. Esteganograf´ıapara ima´genes rgb: Factor de
+cityandsecuredcolorimagesteganographictechnique
+escalamiento. JournalofVectorialRelativity, 4(3):66–
+using discrete wavelet transformation. International
+77,2009.
+Journalof Computer Science and InformationTechno-
+[8] C. Chang, X. Lin, andC. Tseng. Reversiblehidingin logies,4(4):583–589,2013.
+dct-basedcompressedimages. Inform.Sci.,177:2768–
+[20] A.Nag,S.Biswas,D.Sarkar,andP.P.Sarkar. Anovel
+2786,2007.
+techniqueforimagesteganographybasedonblock-dct
+[9] I.Coskun,F.Akar,andO.Cetin. Anewdigitalimage and huffmanencoding. InternationalJournalof Com-
+steganography algorithm based on visible wavelength. puter Science and Information Technology, 2(3):103–
+Turk.J.Elec.Eng.&Comp.Sci.,21:548–564,2013. 112,2010.
+[10] S.Geetha,N.Ishwarya,andN.Kamaraj. Evolvingde-
+[21] H. Noda, M. Niimi, and E. Kawaguchi. High-
+cisiontreerulebasedsystemforaudiostegoanomalies
+performancejpegsteganographyusingquantizationin-
+detection based on hausdorffdistance statistics. Infor-
+dex modulation in dct domain. Pattern Recognition,
+mationSciences,180:2540–2559,2010.
+27:455–461,2006.
+[11] S.Kalaivanan,V.Ananth,andT.Manikandan.Asurvey
+ondigitalimagesteganography. InternationalJournal [22] I.Orea-Flores,M.Acevedo,andJ.Lo´pez-Bonilla. Wa-
+ofEmergingTrends&TechnologyinComputerScience, velet and discrete transform for inserting information
+4(1):30–33,2015. intobmpimages. AnziamJour,48(1):23–35,2006.
+[12] G.KumarandA.Rana. Datahidingtechniquesindigi- [23] S.Sachdeva,A.Sharma,andV.Gill. Colourimageste-
+tal multimedia. International Journal of Engineering ganographyusingmodifiedjpegquantizationtechnique.
+Science Invention Research and Development, I:333– InternationalJournalofLatestResearchinScienceand
+337,2015. Technology,1:1–5,2012.
+[13] S. Kumar,B. Barnali,andG.Banik. Lsbmodification
+[24] S.Sachdeva,A.Sharma,andGillV. Colourimageste-
+and phase encodingtechnique of audio steganography
+ganographyusingmodifiedjpegquantizationtechnique.
+revisited. InternationalJournalofAdvancedResearch
+InternationalJournalofLatestResearchinScienceand
+inComputerandCommunicationEngineering,1(4):1–
+Technology,1:1–5,2012.
+4,2012.
+[25] T. Shahana. A secure dct image steganographybased
+[14] S. Kumar,B. Barnali,andG.Banik. Lsbmodification
+on public-key cryptography. International Journal of
+and phase encodingtechnique of audio steganography
+Computer Trends and Technology(IJCTT), 4(7):2038–
+revisited. InternationalJournalofAdvancedResearch
+2043,2013.
+inComputerandCommunicationEngineering,1(4):1–
+4,2012.
+[26] A. Soria-Lorente and S. Berres. A secure stegano-
+[15] X.Liao,Q.Wen,andJ.Zhang. Asteganographicmet- graphic algorithm based on frequency domain for the
+hodfordigitalimageswithfour-pixeldifferencingand transmission of hidden information. Security and
+modifiedlsbsubstitution. JournalofVisualCommuni- Communication Networks, 2017, Article ID 5397082,
+cationandImageRepresentation,22:1–8,2011. https://doi.org/10.1155/2017/5397082:1–14,2017.
+Algoritmoesteganogra´ficopseudo-asime´tricobasadoenunatabladecuantificacio´nnoesta´ndar 79
+[27] A. Soria-Lorente, R. Cumbrera-Gonza´lez, and
+Y. A Fonseca-Reyna. Steganographic algorithm of
+private key on the domain of the cosine discrete
+transform. Revista Cubana de Ciencias Informa´ticas,
+10(2):116–131,2016.
+[28] A.Soria-Lorente,R.Manuel-Sa´nchez,andA.Ram´ırez-
+Aberasturis. Steganographic algorithm of private key.
+Revistadeinvestigacio´n,G.I.EPensamientoMatema´ti-
+co,3(2):59–72,2013.
+[29] A. Soria-Lorente, R. Mec´ıas, A. A. Pe´rez, and
+D. Rodr´ıguez. Pseudo-asymmetricsteganographalgo-
+rithmy. Lect.Mat.,35(2):183–196,2014.
+[30] J.Steffy,G.Yogaraj,andK.Rajalakshmi.Lsbapproach
+for video steganographyto embed images. Internatio-
+naljournalofComputerScienceandInformationTech-
+nologies,5:319–322,2014.
+[31] K. Thung, R. Paramesran, and C. L. Lim. Content-
+based image quality metric using similarity measure
+of moment vectors. Pattern Recognition, 45(6):2193–
+2204,2012.
+[32] C. Velasco, J. Lo´pez, M. Miyatake, and H. Pe´rez. Es-
+teganograf´ıa en una imagen digital en el dominio dct.
+Cient´ıfica,11:169–176,2007.
+[33] L.Yu,Y.Zhao,R.Ni,andZ.Zhu.M1steganographyin
+jpeg images using genetic algorithm. Soft Computing,
+13(4):393–400,2009.

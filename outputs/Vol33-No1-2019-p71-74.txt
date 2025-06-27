@@ -1,0 +1,437 @@
+CienciasMatemáticas,Vol.33,No.1,Pag.71-74,2019
+Ataques a cifrados en bloques mediante búsquedas
+en grupos cocientes de las claves
+Attacks to block ciphers by searching in quotient
+groups of the keys
+Osmani Tito Corrioso1*, Miguel A. Borges Trenard2, Mijail Borges Quintana3
+Resumen ElAlgoritmoGenético(AG)hasidoaplicadoenlosúltimosañosconelpropósitoderealizarataques
+a los cifrados en bloques. Buscar la clave en todo el espacio de las claves puede llegar a ser imposible en
+la práctica, en este sentido, el principal objetivo de este trabajo es realizar una partición del espacio de las
+clavesenclasesdeequivalencia,usandoTeoríadeGrupos,yasíconcentrarelataquesobreestasclases.Los
+resultadosseaplicanauncriptoanálisisalcifradoAES(t).
+Abstract TheGeneticAlgorithm(GA)hasbeenappliedinthelastyearswiththepurposeofmakingattackson
+blockciphers. Searchingforthekeyinthewholekeyspacecanbeimpossibleinpractice,inthissense,themain
+objectiveofthisworkistomakeapartitionofthekeyspaceinequivalenceclasses,byusingGroupTheory,and
+thustoconcentratetheattackontheseclasses. ResultsareappliedtoacryptanalysisonthecipherAES(t).
+PalabrasClave
+AlgoritmoGenético,grupocociente,criptoanálisis,AES(t)
+Keywords
+GeneticAlgorithm,quotientgroup,cryptanalysis,AES(t)
+1DepartamentodeMatemática,FacultaddeCienciasdelaEducación,UniversidaddeGuantánamo,Cuba,osmanitc@cug.co.cu
+2,3DepartamentodeMatemática,FacultaddeCienciasNaturalesyExactas,UniversidaddeOriente,Cuba,2mborges@uo.edu.cu,
+3mijail@uo.edu.cu
+*AutorparaCorrespondencia,CorrespondingAuthor
+Introducción ronasumétodo“OptimizacióndeEnjambreGenético”ylo
+aplicaronparaatacarelDES.Susresultadosexperimentales
+ElAlgoritmoGenético(AG)esunmétododeoptimiza-
+muestran que se obtienen mejores resultados aplicando su
+ciónutilizadoenlosúltimosañosenlaCriptografíacondiver-
+métodocombinadoqueutilizandoambosmétodosporsepa-
+sospropósitos,enparticularconelderealizarataquesavarios
+rado.[7]proporcionaunaexploraciónpreliminardelusodel
+tiposdecifrados.Algunasdelasinvestigacionesrealizadasen
+AGsobreuncifradodeltipoReddeSustituciónPermutación
+estadirecciónsemencionanabajo.
+(SPNporsussiglaseninglés).Elpropósitodelaexploración
+En[2]sedescribeunmétodoparadescifrarmensajescon
+esdeterminarcómoencontrarclavesdébiles.Ambostrabajos
+máquinasderotorutilizandoelAGparabuscarenelespacio
+([14]y[7])usanunataqueatextoclaroconocido,esdecir,
+delasclaves.Elautordescribeunafuncióndeaptitudbasada
+dadountextoclaroT yelcorrespondientetextocifradoC,se
+enlapruebaphi.En[12]elautorpruebaelAGconuncifrado
+estáinteresadoenencontrarlaclaveK.En[7],lafunciónde
+desustituciónmono-alfabéticaconresultadosaceptables.Los
+aptitudevalúaladiferenciabitabit(distanciadeHamming)
+experimentosfueronrealizadosconunamuestrade4claves
+entreCyeltextocifradodeT,usandouncandidatoparala
+ydiferentesvariantesdelosoperadoresdemutaciónycruza-
+clave,mientrasque,porelcontrario,en[14]semideladistan-
+miento.Losresultadosdeesteartículomuestranquehaciendo
+ciadeHammingentreT yeldescifradodeltextocifradode
+unaselecciónaleatoriadelosindividuosyelcruzamientopor
+C.En[10]semuestraunataquesóloatextocifradoalSDES,
+un punto, el algoritmo es más rápido que con otras combi-
+obteniendomejoresresultadosqueporfuerzabruta.Losau-
+naciones(comoselecciónportorneos).[9]describeunAG
+toresusanunafuncióndeaptitudqueesunacombinaciónde
+llamadoDUREHA,conelobjetivodeautomatizarelataque
+lafrecuenciarelativademonogramas,digramas,ytrigramas
+acifradosclásicosydeestaformaahorrartiempoyrecursos
+(paraunidiomaparticular).Comolalongituddeclaveesmuy
+disponiblesenelcriptoanálisis.
+pequeña,pudieronusarestetipodefunción.[1]essimilara
+En[14]losautorespresentanunacombinacióndelAlgorit-
+[10],seutilizaenesencialamismafuncióndeaptitud,pero
+moGenéticoconlaOptimizacióndeEnjambresdePartículas
+condiferentesparámetros,tambiénesmásdetalladosobrelos
+(otrométodoheurísticobasadoentécnicasevolutivas),llama-
+72 Ataquesacifradosenbloquesmediantebúsquedasengruposcocientesdelasclaves
+experimentosyloscomparannosóloconrespectoporfuerza pero,
+bruta,sinotambiénconlabúsquedaaleatoria. o(G
+K
+)=o(Z
+2k2
+)=2k2
+En[4]seproponeunanuevafuncióndeaptitudquecom-
+luego,
+paranosololacercaníaentrelostextoscifrados,sinotambién
+o(N)=o(Z )/o(Z )=2k1−k2
+entrelaclaveinicialyalgunosbitsdelasposiblesclaves.Por 2k1 2k2
+otraparte,en[5]seproponeunprocedimientoparaparticionar Ahora se puede describir a N, teniendo en cuenta que
+elespaciodelasclavesbasándose,enciertosentido,enuna sus elementos son los múltiplos de 2k2. Para ello tomemos
+ciertacongruenciaaritmética,dividiendoelespacioeninter- Q={0,1,2,...,2k1−k2−1},entonces:
+valosparaluegoorientarelataqueenunodeestosintervalos.
+LosautoresadaptanelAGconestepropósitoyrealizanun N = <2k2 >= {x∈Z 2k1 |∃q∈Q,x=q2k2}=
+ataquealcifradoAES(t). = {0,2k2,2∗2k2,3∗2k2,...,(2k1−k2−1)∗2k2}.
+Unadescripcióndeloquesehahechoenlosúltimosaños
+eneláreadelcriptoanálisismedianteelAlgoritmoGenético Porotraparte,
+sepuedeconsultaren[8],[3]y[11].
+Enestetrabajosesiguelaideade[5],dedividirelespacio
+G
+K
+={N,1+N,2+N,...,(2k2−2)+N,(2k2−1)+N}
+de las claves. En este caso se propone realizar la partición
+usando Teoría de Grupos. El propósito es particionar el es-
+DeestaformaZ
+2k1
+quedadivididoenunaparticiónde2k2
+clasesdadasporN.G sedenominarágrupococientedelas
+paciodelasclavesenclasesdeequivalenciascontenidasen K
+claves.Semejantea[5],conG tambiénsebuscarecorrer,del
+ciertogrupococienteycentrarlabúsquedadeclavesconsis- K
+espaciototal,loselementosqueseencuentranenunapartición,
+tentesenestasclases.Elprocedimientoylosexperimentos
+paraluegoencontraruna,ovarias,clavesconsistentesenesas
+realizadossecomparanconlosobtenidosen[5].
+particiones(enestecasosonclasesdeequivalencia).Elgrupo
+cocientedelasclaveslebrindapropiedadesalgebraicasala
+1. Desarrollo partición,locualpermitequeluegosepuedaseguirtrabajando
+enella.
+1.1 Particionandoelespaciodelasclaves
+Enestasecciónsedescribeelprocedimientopararealizar
+1.1.2 Elproblemaderecorrercadaelementodecadacla-
+laparticiónycalcularelgrupococientedelasclaves,asícomo sedeequivalencia
+lametodologíaparamoverseporcadaelementodecadaclase Teniendo en cuenta que Z es isomorfo con G y el
+2k2 K
+deequivalencia. isomorfismohacecorresponderacadar∈Z suclasede
+2k2
+SeaFk1 elespaciodelasclavesdelongitudk ∈Z .Es equivalenciar+N enG ,setieneque,seleccionarunaclase
+2 1 >0 K
+conocidoque,comogrupoaditivo,esisomorfoaZ .Seah esfijarunelementor∈Z .Porotrolado,loselementosde
+2k1 2k2
+elhomomorfismodefinidodelmodosiguiente: N tienenlaformaq2k2 (q∈Q),portanto,loselementosdela
+claser+N tienenlaforma
+h:Z −→ Z (1)
+2k1 2k2
+n −→ n(mod2k2), q2k2+r,q∈Q. (2)
+dondek ∈Z y0<k <k .DenotemosporNalnúcleode Luego,elproblemaderecorrercadaelementodecadaclasede
+2 >0 2 1 equivalenciasereduceafijarprimerounelementodeZ y
+h,esdecir, 2k2
+luegorecorrercadaelementodelconjuntoQ,parabuscaruna
+N={x∈Z |h(x)=0∈Z }. claveconsistenteenG K mediante(2).Loselementosdelcon-
+2k1 2k2
+juntoQtendránlongituddebloquek =k −k ycadaclase
+d 1 2
+Luego,porladefinicióndehsetienequeN estáformadopor tendrá2kd elementos(comoseexplicóantes).Lametodología
+loselementosdeZ
+2k1
+quesonmúltiplosde2k2.Sesabeque propuestaen[5]sebasaenlaparticióndelespaciodellaves
+Nesunsubgrupoinvariante(onormal),portanto,elprincipal enintervalosdeiguallongitud.Lamismapartedelhechode
+o
+fo
+b
+r
+j
+m
+et
+a
+iv
+e
+o
+l
+e
+e
+s
+sp
+c
+a
+a
+c
+lc
+io
+ul
+d
+ar
+e
+e
+la
+l
+s
+gr
+c
+u
+la
+p
+v
+o
+e
+c
+s
+o
+q
+c
+u
+ie
+e
+n
+d
+t
+a
+e
+rá
+de
+di
+Z
+vi
+2
+d
+k1
+id
+p
+o
+o
+e
+r
+n
+N
+2
+y
+k2
+d
+c
+e
+la
+e
+s
+s
+e
+ta
+s
+q
+ci
+u
+a
+e
+u
+F
+n
+2
+o
+k1
+a
+ti
+u
+e
+n
+n
+o
+e
+e
+c
+n
+ar
+t
+d
+re
+in
+F
+a
+2
+l
+k
+2
+1
+k
+y
+1 y
+el
+p
+i
+o
+n
+r
+te
+ta
+rv
+n
+a
+to
+lo
+h
+e
+a
+n
+y
+t
+u
+er
+n
+o
+a
+[
+c
+0
+o
+,
+r
+2
+r
+k
+e
+1
+sp
+−
+o
+1
+n
+]
+d
+.
+e
+S
+n
+i
+-
+deequivalencia. sefijaunenterok 2 ,(1<k 2 ≤k 1 ),entonceselespaciodelas
+clavespuedeserrepresentadoporlosnúmeros,
+1.1.1 Calculandoelgrupococientedelasclaves
+DenotemosporG algrupococientedeZ porN,osea, q2k2+r (3)
+K 2k1
+G =Z /N dondeq∈[0,2k1−k2−1]yr∈[0,2k2−1].Deestaformael
+K 2k1
+espacioquedadivididoen2k1−k2 bloques(determinadospor
+PorelTeoremadeLagrange,setieneque, el algoritmo de la división dividiendo por 2k2) y, dentro de
+cadabloque,laclavecorrespondienteestádeterminadapor
+o(G )=o(Z )/o(N) su posición dada por el resto r. Dado un valor para k y la
+K 2k1 2
+CienciasMatemáticas,Vol.33,No.1,Pag.71-74,2019
+Ataquesacifradosenbloquesmediantebúsquedasengruposcocientesdelasclaves 73
+correspondientepartición,laideaclaveesmoverseconelAG 3. Eltiempopromedioenqueseencontrólaclavefuede
+únicamentedentrodeunbloque(dadoporq)enlapartición, 1227.6segundos(aproximadamente20.46minutos)y
+yluegorecorrerloselementosrendichobloque.Porloque, enloscasosenquenoseencontrólaclave,elprograma
+las operaciones de mutación y cruzamiento se hacen a los terminóenunpromediode28.5minutos,osea,estees
+elementosrdeformacerradaencadabloque,perolafunción eltiempoquesetardóenrecorrerlas655generaciones.
+deaptitudselecalculaalaclavequelecorrespondearenel
+espaciocompletomediante(3).Deformaanálogaseaplicael
+AGenG ,sustiyendoenestetrabajoelpapelderen[5]por 3. Conclusiones
+K
+q.
+Elcálculodelgrupococientedelasclavesabrelacantidad
+deposibilidadesymanerasderealizarlaparticiónylabúsque-
+2. Experimentación y resultados dadeclavesconsistentesmedianteelAG.Enestesentido,no
+setratadeunaalternativamejorquelopropuestoen[5],sino,
+Los experimentos se realizaron con el cifrado AES(t), deunaalternativamás.Sinembargo,estaparticiónpermite
+para t =3. AES(t) es una versión paramétrica del cifrado seguirtrabajandoenellaconlaaplicacióndeotrastécnicas
+AES,enparticularAES(8)=AES.UnadescripcióndeAES(t) delÁlgebraAbstractaenfuturostrabajos.Losresultadosdel
+puedeconsultarseen[6].Pararealizarelataqueaestecifrado ataque al AES(3) con el Algoritmo Genético son bastante
+seutilizóelcriptoanálisismedianteelAG.Unaexplicación parecidosenambosartículos.Porelmomentosemantieneel
+detalladadelfuncionamientodelAGysuimplementaciónse problemadeelegirelmejorvalorparak yportantoparak :
+2 d
+puedeverenlostrabajos[13],[4]y[5]. unvaloróptimoentrelacantidaddeclasesylacantidadde
+Esbastantesemejanteloexpuestoaquíyloquesepropone elementosdecadaclase.
+en[5],esdecir: Sepuedeutilizarlaecuación(2)pararesumirlasdiferen-
+ciasentrelametodologíapropuestaen[5]yladeestetrabajo.
+Setomalamismacantidaddeparámetrosdeentrada:
+Enamboscasosconsisteenmantenerelfuncionamientodel
+k ,q,yr.
+2 AGsobreunsubconjuntodelespaciodeclavesenlugardel
+espaciocompleto.Enelcasode[5]elsubconjuntoestáasocia-
+Lafórmula(2)siguesiendolamisma.
+doalaclasedeterminadaporlafórmulaen(2)delasclaves
+quecorrespondenaunmismocociente(q),notequeéstere-
+Encontraste:
+presenta un subconjunto de claves consecutivas dentro del
+En[5],qindicalaparticiónyrrecorrecadaelemento espaciocompleto.Porotraparte,lametodologíaexpuestaen
+de esa partición. En este trabajo es al contrario de lo estetrabajoconsisteentrabajarconelsubconjuntodadopor
+anterior, se fija r (que indica la partición o clase de lasclavesasociadasenlafórmulaen(2)conelmismoresto
+equivalenciaenestecaso)yqvaría. (r).Enestecasoelsubconjuntoseencuentraesparcidoalo
+largodelconjuntodeclaves.
+En[5],lalongituddebloqueparaelmovimientoesk 2 , Resulta de interés continuar comparando los enfoques
+mientrasqueaquíesk d =k 1 −k 2 . de[5]yelpresentadoaquí,entalsentido,esrecomendable
+destacarelsiguientehecho(implícitoenlasconsideraciones
+Por lo anterior, para la implementación del AG me- anteriores):En[5],mientrasmayoreslalongituddeclavek ,
+2
+diantebúsquedasenlasparticionesdeG K ,esposible elespacioarecorrerencadaparticiónessuperior,porloque
+utilizarlosmismoscódigosutilizadosen[5];sóloes habránmenosparticiones.Enelpresentetrabajo,amayork ,
+2
+necesariointercambiarlasfuncionesderyq,asícomo menoreselespacioarecorrerencadaclasedeequivalencia,
+sustituirk 2 pork d . perohabránmásclases.
+Se usó una computadora con procesador Intel(R) Core
+(TM)i3-4170CPU@3.70GHz(4CPUs)∼3.7GHz,ylaver- Referencias
+sión17deMaple.Lalongituddeclaveesk =48,lalongitud
+1
+[1] Adwan, Al, M. Al Shraideh y M.R.S. Al Saidat: A
+de clave para el movimiento es k =32 y k =16 (o sea,
+d 2
+son 232 clases de equivalencia). Las probabilidades para el Genetic Algorithm Approach for Breaking of Simpli-
+fied Data Encryption Standard. International Journal
+cruzamientoylamutaciónson0.6y0.2respectivamente.El
+of Security and Its Applications, 9(9):295–304, 2015.
+númerodegeneracioneses655ylapoblaciónseinicializacon
+http://www.sersc.org/journals/IJSIA/vol9no92015/26.pdf.
+100individuoselegidosdeformaaleatoria.Elexperimentose
+repitió20vecesylosresultadosobtenidossonlossiguientes:
+[2] Bagnall, A. J.: The applications of Genetic Al-
+1. Seencontrólaclaveenun65%deloscasos. gorithms in Cryptanalysis. Thesis submitted for
+the degree of Master of Science, School of Infor-
+2. Sellegóalasoluciónenunpromediode427genera- mation Systems, University of East Anglia, 1996.
+ciones. http://www2.cmp.uea.ac.uk/ajb/Download/MSc_thesis.pdf.
+CienciasMatemáticas,Vol.33,No.1,Pag.71-74,2019
+74 Ataquesacifradosenbloquesmediantebúsquedasengruposcocientesdelasclaves
+[3] Baragada, SR. y P.S. Reddy: A Survey of Cry- [9] Dureha,AnukritiyArashdeepKaur:AGenericGenetic
+ptanalytic Works Based on Genetic Algorithms. AlgorithmtoAutomateanAttackonClassicalCiphers.
+International Journal of Emerging Trends & InternationalJournalofComputerApplications(0975-
+Technology in Computer Science (IJETTCS). 8887),64(12),2013.
+ISSN 2278-6856, 2(5), September-October 2013.
+http://www.ijettcs.org/Volume2Issue5/IJETTCS-2013-08... [10] Garg, P., S. Varshney y M. Bhardwaj: Crypta-
+nalysis of Simplified Data Encryption Standard
+[4] Borges-Trenard, M.A., M. Borges-Quintana, A.
+Using Genetic Algorithm. American Journal of
+Donatien-CharónyL.Monier-Columbié:Nuevafunción
+Networks and Communications, 4(3):32–36, 2015.
+de aptitud en el criptoanálisis genético a cifrados en
+http://article.sciencepublishinggroup.com/pdf/10.11648.j...
+bloques. Congreso Internacional COMPUMAT. La
+Habana,Cuba,2017.
+[11] Khan,A.H.,A.H.LoneyF.A.Badroo:TheApplicability
+[5] Borges-Trenard,M.A.,M.Borges-QuintanayL.Monier- ofGeneticAlgorithminCryptanalysis:ASurvey. Inter-
+Columbié:Anapplicationofgeneticalgorithmtocry- nationalJournalofComputerApplications,130(9),2015.
+ptanalysisofblockciphersbypartitioningthekeyspace. http://www.ijcaonline.org/research/volume130/number9/...
+MathematicsDepartment,FacultyofExactandNatural
+Sciences,UniversityofOriente,SantiagodeCuba,Cuba,
+[12] N, P. Shreeraj: Application of Genetic Algorithm
+2018. EnviadoaJ.DiscreteMathematicalSciencesand
+in Cryptanalysis of Mono-alphabetic Substitu-
+Criptografy.
+tion Cipher. International Journal of Trend in
+Scientific Research and Development, 1(4), 2017.
+[6] Borges-Trenard,M.A.yL.Monier-Columbié:AES(t):
+UnaversiónparametrizadadelAES. CongresoInterna-
+http://www.ijtsrd.com/papers/ijtsrd2191.pdf.
+[13] Trenard,M.A.Borges,M.BorgesQuintanayA.Dona-
+cionalCOMPUMAT.LaHabana,Cuba,2015.
+tienCharón:AlgoritmoGenéticoencifradoresmoder-
+[7] Brown,J.A.,S.K.HoughtenyB.Ombuki-Berman:Ge- nos. CongresoInternacionalCOMPUMAT.LaHabana,
+neticAlgorithmCryptanalysisofaSubstitutionPermu- Cuba,2015.
+tation Network. IEEE Symposium on Computational
+IntelligenceinCyberSecurity,páginas115–121,2009.
+[14] Vimalathithan,R.yM.L.Valarmathi:Cryptanalysisof
+DESusingComputationalIntelligence. EuropeanJour-
+[8] Delman, Bethany: Genetic algorithms in
+nalofScientificResearch,ISSN1450-216X,55(2):237–
+cryptography. Thesis. Rochester Institute
+244,2011.
+of Technology, RIT Scholar Works, 2004.
+http://scholarworks.rit.edu/cgi/viewcontent.cgi?article=6...
+CienciasMatemáticas,Vol.33,No.1,Pag.71-74,2019

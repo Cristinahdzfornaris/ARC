@@ -1,0 +1,797 @@
+REVISTA CIENCIAS MATEM`TICAS 73
+Polinomios multiortogonales clÆsicos
+en la recta real
+MSc. Walter Carballosa Torres
+(Universidad de las Ciencias InformÆticas, Cuba)
+/Dr. Luis R. Piæeiro D(cid:237)az
+(Universidad de La Habana, Cuba)
+RESUMEN: un estudio de las propiedades algebraicas de los Polinomios Multiortogonales ClÆsicos
+(PMOC) en la recta real es realizado a travØs del cÆlculo computacional de los PMOC. La relaci(cid:243)n con
+la aproximaci(cid:243)n simultÆnea (aproximantes de Hermite-PadØ). Los PMOC son generados por diferen-
+tes mØtodos, utilizando la de(cid:222) nici(cid:243)n del problema de la aproximaci(cid:243)n simultÆnea y considerando
+otras propiedades algebraicas. Algunas propiedades algebraicas de los PMOC son conjeturadas as(cid:237)
+como otras propiedades extendidas de los Polinomios Ortogonales ordinarios son mostradas por la
+simulaci(cid:243)n computacional.
+1. INTRODUCCI(cid:211)N tentar extender los resultados de los polinomios
+ortogonales ordinarios a los multiortogonales,
+En la actualidad se ha incrementado el in-
+acompaæado de su cÆlculo computacional es la
+terØs por el estudio de los polinomios mul-
+intenci(cid:243)n del presente trabajo. La instrumenta-
+tiortogonales, motivados por el desarrollo de la
+ci(cid:243)n computacional de los resultados se hizo en
+aproximaci(cid:243)n racional simultÆnea de funcio-
+el software Mathematica. Este programa, junto
+nes y el v(cid:237)nculo existente entre ambas teor(cid:237)as.
+con los realizados en [2-5] resulta de utilidad
+Constituyendo los polinomios ortogonales y los
+como apoyo para el trabajo investigativo y didÆc-
+aproximantes de PadØ un Ærea de investigaci(cid:243)n
+tico de los integrantes del Grupo de Teor(cid:237)a de
+fundamental, por sus v(cid:237)nculos y aplicaciones
+Aproximaci(cid:243)n de la Facultad de MatemÆtica y
+en diferentes ramas de la matemÆtica como la
+Computaci(cid:243)n de la Universidad de La Habana.
+teor(cid:237)a de los nœmeros, el problema de momen-
+tos, la prolongaci(cid:243)n anal(cid:237)tica, los problemas de
+2. APROXIMANTES DE HERMITE-PAD(cid:201)
+interpolaci(cid:243)n, la teor(cid:237)a espectral de operadores
+y otras.
+2.1. Aproximaci(cid:243)n simultÆnea
+Las ideas iniciales de la teor(cid:237)a de aproxima-
+ci(cid:243)n se encuentran en los trabajos de Chebyshev
+Sea f = (f , f ,..., f) un conjunto de funciones
+y Markov. La construcci(cid:243)n de los aproximan- 1 2 r
+anal(cid:237)ticas en una vecindad del in(cid:222) nito, que po-
+tes racionales simultÆneos fue introducida por
+see un desarrollo formal en serie de potencias
+Hermite en 1873 durante la demostraci(cid:243)n de la
+de la forma
+trascendencia del nœmero de Euler [1], por lo
+que se le conoce con el nombre de aproximantes c
+f(z) ≈ ∑ n,i , c ∈ C con i = 1,2,..., r. (1)
+de Hermite-PadØ (H-P). Los polinomios ortogo- i zn+1 n,i
+n≥0
+nales ordinarios cumplen excelentes resultados
+y propiedades algebraicas que permiten desa- Una manera de extender el problema de la
+rrollar una amplia teor(cid:237)a. aproximaci(cid:243)n racional de una funci(cid:243)n.
+Realizar un estudio de las propiedades alge- PROBLEMA 2.1. Dado un conjunto de funciones
+braicas de los polinomios multiortogonales e in- anal(cid:237)ticas en una vecindad del in(cid:222) nito f , f ,..., f
+1 2 r
+74 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+y el multi-(cid:237)ndice . Buscar un polinomio no nulo
+(4)
+Q de grado no mayor que⏐n⏐, y polinomios
+n
+P ,...,P , tales que para cada j (j=1,2,...r)
+(n,1) (n,r)
+Este problema siempre tiene soluci(cid:243)n, se
+1 reduce a resolver un sistema de ecuaciones li-
+Q (z) f (z)−P (z) = 0 ( ) (2)
+n j (n,j) znj +1 neales homogØneo de⏐n⏐−1 ecuaciones (por
+cada coe(cid:222) ciente desde 1/z hasta z/z⏐n⏐−1 del
+Este problema siempre tiene soluci(cid:243)n, se re-
+miembro izquierdo que se quieren anular) y
+duce a resolver un sistema de ecuaciones linea-
+⏐n⏐inc(cid:243)gnitas (los coe(cid:222) cientes de los A ). De
+les homogØneo de⏐n⏐ecuaciones (por cada coe(cid:222) - n,j
+este sistema se determinan los polinomios A y
+ciente desde 1/z hasta 1/znj de los desarrollos de
+se obtiene el polinomio B .
+n,j
+los miembros izquierdos que se quieren anular) n
+y⏐n⏐+1 inc(cid:243)gnitas (los coe(cid:222) cientes de Q y en
+DEFINICI(cid:211)N 2.1.3: (Aproximantes de Hermite-
+n PadØ de tipo I) Sea (A ,...,A , B ) una solu-
+cada ecuaci(cid:243)n se obtienen los polinomios P . (n,1) (n,r) n
+(n,j) ci(cid:243)n del problema 2.2, se llaman aproximantes
+De esta manera se pueden de(cid:222) nir los aproxi-
+de Hermite-PadØ de tipo I de multi-(cid:237)ndice n en
+mantes de Hermite-PadØ de tipo II.
+el punto z = ∞ a las combinaciones lineales (con
+DEFINICI(cid:211)N 2.1.1 (Aproximantes de Hermite- coe(cid:222) cientes polinomiales) de las r funciones del
+PadØ de tipo II) Sea (Q , P ,..., P ) una solu- problema planteado con la intenci(cid:243)n de aproxi-
+n (n,1) (n,r)
+ci(cid:243)n del problema 2.1, se llaman aproximantes marlas por un polinomio, o sea
+de Hermite-PadØ de tipo II de multi-(cid:237)ndice en el
+r
+punto z = ∞ a un r-vector π =(π ,...,π ) de fac-
+n (n,1) (n,r) ∑ A (z) f(z) ≈ B (z) . (5)
+ciones racionales de la forma n,j j n
+j=1
+DEFINICI(cid:211)N 2.1.4: El multi-(cid:237)ndice n se llama
+, 1 (3) normal para el problema 2.2, si en cualquier so-
+luci(cid:243)n del mismo (A ,...,A , B ) el polinomio
+(n,1) (n,r) n
+A (z) tiene grado n,j − 1.
+El problema relativo a la existencia de los
+n,j
+aproximantes de Hermite-PadØ de tipo II (solu- El problema relativo a la existencia de los
+ci(cid:243)n del problema 2.1) estÆ resuelto. Sin embar- aproximantes de Hermite-PadØ de tipo I, estÆ
+go en general las fracciones {π (z)}r no quedan resuelto. Pero se necesitan nuevas condiciones
+(n,i) i=1
+de(cid:222) nidas de modo œnico dados los multi-(cid:237)ndices para veri(cid:222) car la unicidad.
+y las r funciones anal(cid:237)ticas en el in(cid:222) nito, por lo
+que resulta œtil establecer condiciones su(cid:222) cien- 2.2. Ortogonalidad
+tes para la unicidad de la soluci(cid:243)n.
+Los polinomios multiortogonales de tipo I y tipo II
+DEFINICI(cid:211)N 2.1.2: El multi-(cid:237)ndice (Q , P ,..., estÆn directamente relacionados con los aproxi-
+n (n,1)
+P ) se llama normal para el problema 2.1, si en mantes de Hermite-PadØ de tipo I y tipo II, aso-
+(n,r)
+cualquier soluci(cid:243)n del mismo Q (z), el polinomio ciados a r funciones de Markov2. Resulta intere-
+n
+tiene grado⏐n⏐. sante mostrar las condiciones de ortogonalidad
+Si n es un (cid:237)ndice normal, entonces el proble- que satisfacen cada uno de los polinomios mul-
+ma de la unicidad de los aproximantes de Her- tiortogonales, no sin antes recordar que se traba-
+mite-PadØ estÆ resuelto. Otra manera de exten- jarÆ con r medidas de Lebesgue μ ,..., μ todas so-
+1 r
+der el problema es la siguiente bre el eje real con soporte respectivo en E ,(cid:133), E3
+1 r
+o directamente con r funciones de peso w ,(cid:133),w
+PROBLEMA 2.2: Dado un conjunto de funciones 1 r
+asociadas a las medidas antes mencionadas.
+anal(cid:237)ticas en una vecindad del f , f ,..., f in(cid:222) nito
+1 2 r
+y el multi-(cid:237)ndice n, buscar un r-vector A ,..., DEFINICI(cid:211)N 2.2.1: (Polinomio multiortogonal de
+n,1
+A ) de poplinomios A de grado no mayor que tipo I) El r-vector (A ,..., A ) es el polinomio
+n,r n,j n,1 n,r
+n -1 y un polinomio B tales que: multiortogonal de tipo I asociado a las funciones
+j n
+2 Las funciones de Markov son casos particulares de las funciones
+1 De forma anÆloga los aproximantes de Hermite-PadØ se pueden que satisfacen 1.
+de(cid:222) nir tambiØn para r funciones con desarrollo formal en series 3 Los casos posibles de E, son subconjuntos cerrado del eje real y estÆ
+i
+de potencias de z en una vecindad del cero. formado por una cantidad in(cid:222) nita de puntos (sup p(μ)⊂ E⊂ R).
+i
+REVISTA CIENCIAS MATEM`TICAS 75
+de peso w ,...,w para el multi-(cid:237)ndice n, si cada donde los valores a (0≤i ≤ n −1 con j =1,...,r)
+1 r j,i j
+uno de los A tiene grado menor que n y se sa- son las inc(cid:243)gnitas.
+n, j j
+tisface la condici(cid:243)n de ortogonalidad
+Entonces, de las condiciones de ortogonali-
+dad (6) se tiene
+(6)
+DEFINICI(cid:211)N 2.2.2: (Polinomio multiortogonal de
+tipo II) P es el polinomio multiortogonal de tipo
+n
+II asociado a las funciones de peso w ,(cid:133), w para (11)
+1 r
+el multi-(cid:237)ndice n, si tiene grado⏐n⏐y satisface
+las condiciones de ortogonalidad que se transforma en
+(12)
+(7)
+De las condiciones de ortogonalidad (6) y (7)
+Esto proporciona una manera de calcular los
+y las de(cid:222) niciones (2.1.1) y (2.1.3) para las r fun-
+polinomios multiortogonales de tipo I para (cid:237)ndices
+ciones de Markov asociadas a las medidas de los
+normales, salvo una constante multiplicativa.
+polinomios multiortogonales, se obtiene la equi-
+Una vez determinado el r-vector A (x),...,A (x),
+valencia entre la determinaci(cid:243)n de los polinomios 1 r
+se puede determinar B (x) a partir de (5) deter-
+multiortogonales y de los aproximantes de Hermi- n
+minado por la expresi(cid:243)n
+te-PadØ tanto de tipo I como de tipo II, ver [6-9].
+Los polinomios multiortogonales de segundo
+gØnero de tipo I, vienen dados por
+(13)
+(8)
+De modo similar, sea Q(x) el polinomio multior-
+togonal de tipo II e (cid:237)ndice n, que tiene la forma
+Los polinomios multiortogonales de segundo
+gØnero de tipo II, vienen dados por
+(9)
+donde los valores b (0≤i ≤⏐n⏐) son las inc(cid:243)gnitas.
+i
+2.3. ¿C(cid:243)mo generarlos?
+De las condiciones de ortogonalidad (7) se tiene
+Una vez de(cid:222) nida la ortogonalidad para los poli-
+nomios multiortogonales se pueden construir los
+polinomios asociados a medidas dadas, partiendo (14)
+de la existencia y convergencia de los momentos.
+DEFINICI(cid:211)N 2.3.1: La expresi(cid:243)n del momento
+k-Øsimo asociado a la medida μ, se denota c . que se transforma en
+r k,i
+(10)
+(15)
+Sea A (x),..., A (x) el r-vector polinomio mutior-
+1 r
+togonal de tipo I e (cid:237)ndice n, que tiene la forma
+Esto proporciona una manera de calcular los
+polinomios multiortogonales de tipo II para (cid:237)ndices
+normales, salvo una constante multiplicativa que
+se omite al trabajar con la familia de los m(cid:243)nicos.
+76 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Una vez determinado Q (x), se pueden obte- TEOREMA 2.4.1: (F(cid:243)rmula de recurrencia) Sea
+n
+ner los P (x) a partir de (2) determinados por la {p (x)}∞ la familia de polinomios multiortonor-
+n,i n n=0
+expresi(cid:243)n males de tipo II m(cid:243)nicos asociado a las medidas
+de Lebesgue μ ,..., μ de (cid:237)ndices regulares en un
+1 r
+sistema dØbilmente perfecto. Entonces
+(16)
+La existencia de los polinomios multiortogo-
+nales de ambos tipos estÆ demostrada. La unici- con la condici(cid:243)n inicial P (x) =1 y P (x) =0 para
+0 -k
+dad de los mismos salvo constantes multiplica- k =1, 2,...,r.
+tivas solo puede ser garantizada por condiciones La demostraci(cid:243)n de este teorema es bastante
+adicionales sobre sus r funciones de pesos. sencilla y se puede ver en [3].
+Algunas de estas condiciones se garantizan TEOREMA 2.4.2: Sea {(q (x),...,q (x))}∞ la fa-
+(n,i) n,i n=0
+para sistemas Angelesco y para sistemas Alge- milia de r-vectores polinomios multiortonorma-
+braicos de Chebyshev o AT-sistemas. les de tipo I asociado a las medidas de Lebesgue
+μ ,..., μ de (cid:237)ndices regulares en un sistema dØ-
+1 r
+2.4. F(cid:243)rmula de recurrencia bilmente perfecto. Entonces
+El trabajo con multi-(cid:237)ndices de manera general
+en el estudio de los polinomios multiortogonales
+(17)
+se hace bastante engorroso. Para la obtenci(cid:243)n
+de mejores y c(cid:243)modos resultados, se trabaja con partiendo de la de(cid:222) nici(cid:243)n de los coe(cid:222) cientes a
+i, j
+multi-(cid:237)ndices regulares. en el teorema (2.4.1).
+DEFINICI(cid:211)N 2.4.1: Se dice que un multi-(cid:237)ndi- Una demostraci(cid:243)n de este teorema se puede
+ce n=(n ,...,n) es un (cid:237)ndice regular si es tal que ver en [10]. Para la demostraci(cid:243)n el autor prue-
+1 r
+para 1≤ i < j ≤ r entonces 0 ≤ n−n ≤ 1.4 ba primero el siguiente lema.
+i j
+Esta de(cid:222) nici(cid:243)n nos permite asociar a todo n ∈ N Lema: Sea {(cid:149),(cid:149)}: R(X)×R(X)→R una forma bili-
+un œnico multi-(cid:237)ndice m tal que n=⏐m⏐. neal, se denota {xi, xj} =a ,
+i,j
+DEFINICI(cid:211)N 2.4.2: El sistema de funciones
+(f ,...,f) se dice dØbilmente perfecto si todos los
+1 r
+(cid:237)ndices regulares son normales.
+En lo sucesivo asumiremos que los (cid:237)ndices
+que se van a tratar son regulares y por tanto se
+adopta la notaci(cid:243)n sub(cid:237)ndice n (P ) para deno-
+n
+tar al multi-(cid:237)ndice m→ que satisface ⏐m⏐= n y se
+denotarÆ por n a la i-Øsima componente de di- y se supone que H ≠ 0 para todo n natural,
+i n
+cho multi-(cid:237)ndice m. AdemÆs se supondrÆ que se entonces existen las secuencias de polinomios
+trabaja en un sistema dØbilmente perfecto, con {p (x)}∞ , {q (x)}∞ , tal que gr(p ) = gr(q ) = n,
+n n=0 m m=0 n n
+polinomios multiortogonales de tipo II m(cid:243)nicos donde los p , son m(cid:243)nicos y ademÆs
+n
+en (cid:237)ndices regulares.
+{p ,q } = δ n,m ∈ N
+Al expresar zQ (z) como combinaci(cid:243)n lineal de n m n,m
+n
+los n+2 primeros tØrminos de una sucesi(cid:243)n de
+Y ademÆs del lema, el autor se apoya en la
+polinomios multiortogonales de tipo II ( ),
+siguiente forma bilineal
+se obtiene una relaci(cid:243)n de recurrencia a r+2 tØr-
+minos.
+(18)
+4 Estos (cid:237)ndices regulares tienen la forma
+REVISTA CIENCIAS MATEM`TICAS 77
+Esta forma bilineal estÆ bien de(cid:222) nida debido Polinomios multiortogonales
+a la existencia y unicidad de la descomposici(cid:243)n de Jacobi-Piæeiro
+planteada.
+Los polinomios de Jacobi-Piæeiro estÆn asocia-
+Por esta descomposici(cid:243)n de los polinomios se
+dos a un AT-sistema para los pesos de Jacobi
+puede abusar de la nomenclatura y llamar a los
+con diferentes singularidades en cero y en uno.
+polinomios
+Estos fueron estudiados inicialmente por L. R.
+Piæeiro en [11] cuando α = 0. El caso general
+0
+aparece en [9]. Sean α >−1 y α ,..., α reales tales
+0 1 r
+que α −α ∉ Ζ cuando i ≠ j. Los polinomios de
+polinomios multiortogonales de tipo I y para i j
+Jacobi-Piæeiro P (α0 , α1 , α2 ) satisfacen la condici(cid:243)n
+diferenciar, se harÆ referencia a (q ,...,q ) por n
+n,1 n,r de ortogonalidad
+la expresi(cid:243)n (cid:147)r-vector multiortogonal de tipo I(cid:148).
+Con el resultado del teorema anterior se ob-
+tiene que los Q satisfacen una relaci(cid:243)n de recu-
+n
+rrencia a r + 2 tØrminos (20)
+Usando la integraci(cid:243)n por parte en las condi-
+(19)
+ciones de ortogonalidad (20), se obtiene la f(cid:243)r-
+mula de Rodr(cid:237)guez
+Luego de estos resultados de relaciones de re-
+currencia entre las familias de polinomios mul-
+tiortogonales de tipo I y tipo II, se pueden lle-
+gar a obtener una mejor v(cid:237)a para su generaci(cid:243)n
+computacional y as(cid:237) no recurrir al tradicional
+mØtodo de obtenci(cid:243)n consistente en resolver el
+sistema de ecuaciones lineales que satisfacen
+sus coe(cid:222) cientes, proceso poco e(cid:222) ciente en tiem- Realizando cÆlculos computacionales y tra-
+po y ejecuci(cid:243)n. bajo algebraico se obtienen las formas expl(cid:237)citas
+de los coe(cid:222) cientes de los polinomios multiorto-
+gonales de Jacobi-Piæeiro de tipo II, apoyados
+3. POLINOMIOS MULTIORTOGONALES
+en la f(cid:243)rmula de Rodr(cid:237)guez, y con ellos se tienen
+CL`SICOS
+las expresiones de los coe(cid:222) cientes en la relaci(cid:243)n
+La garant(cid:237)a de la normalidad de los (cid:237)ndices re- de recurrencia que se puede ver en [6].
+gulares estÆ dada para AT-sistemas y sistemas
+Angelesco (ver [3]). Se introducen algunas fami-
+lias de polinomios multiortogonales llamados
+clÆsicos para los que se mostrarÆn algunas pro-
+piedades.
+3.1. Algunos PMOC para AT-sistemas
+Las familias planteadas en AT-sistemas serÆn cua-
+tro, las cuales estÆn conectadas por el esquema
+Jacobi-Piæeiro P (α −a)
+rt 0
+Laguerre I(L (α)) Laguerre I(L(α 0 ,t))
+rt n
+Laguerre I(H (c))
+n
+78 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+siendo a (α0 , α1 , α2 ) los coe(cid:222) cientes que permiten
+n,j
+generar los polinomios multiortogonales de Ja-
+cobi-Piæeiro mediante sus f(cid:243)rmulas de recu-
+rrencia respectivas.
+Polinomios multiortogonales
+de Laguerre
+TambiØn para AT-sistemas se extienden hasta
+los polinomios multiortogonales de Laguerre
+pero de dos maneras distintas. Ambas mane-
+ras estÆn soportadas en el [0, ∞) pero asocia-
+das a diferentes funciones de peso. Las prime-
+ras familias estÆn asociadas a las funciones
+de peso {x αi e-x}r con α >−1 y α −α ∉ Z. Las
+i=1 i i j
+segundas familias estÆn asociadas a las fun-
+ciones de peso {x αi e-cix}r con α >−1 y c >0,
+i=1 0 i
+c ≠ c para i ≠ j.
+i j
+Polinomios multiortogonales
+de Laguerre I
+Los primeros polinomios multiortogonales de
+Laguerre fueron considerados por Sorokin en
+[12, 13]. Los polinomios multiortogonales de La-
+guerre I para r=2 (L (α1 , α2 )) satisfacen la condici(cid:243)n
+n
+de ortogonalidad
+(21)
+REVISTA CIENCIAS MATEM`TICAS 79
+Partiendo de las condiciones de ortogonalidad
+(21), se obtiene una f(cid:243)rmula de Rodr(cid:237)guez
+(23)
+De modo similar a los de Laguerre I, se obtie-
+ne una f(cid:243)rmula de Rodrigues
+Estas familias de polinomios, por su propia
+relaci(cid:243)n de ortogonalidad y la de(cid:222) nici(cid:243)n de sus
+funciones de peso, permiten que se puedan ob-
+tener por el paso al l(cid:237)mite a partir de los de Ja- Por su propia relaci(cid:243)n de ortogonalidad y la
+cobi-Piæeiro. Para el caso particular r = 2 queda de(cid:222) nici(cid:243)n de sus funciones de peso, estas fa-
+de la siguiente manera milias de polinomios permiten que se puedan
+obtener por el paso al l(cid:237)mite a partir de los de
+Jacobi-Piæeiro. Para el caso particular r = 2 que-
+(22)
+da de la siguiente manera
+Esta relaci(cid:243)n por el paso al l(cid:237)mite permite (24)
+calcular los coe(cid:222) cientes a(α 1 ,α 2 ), a(α 1 ,α,2 )a(α 1 , α 2 ) de las
+n,o n,1 n,2
+relaciones de recurrencia (16), (17) y (19) para la
+Esta relaci(cid:243)n permite calcular los coe(cid:222) cien-
+familia en cuesti(cid:243)n
+tes aα 0 , c 1 , c 2aα 0 , c 1 , c 2 aα 0 , c 1 , c 2 de las relaciones de
+n,0 n,1 n,2
+recurrencia (16), (17) y (19) para la familia
+Los resultados de los cÆlculos se muestran a
+continuaci(cid:243)n
+Los resultados de los cÆlculos se muestran a
+continuaci(cid:243)n
+Estos resultados permitirÆn generar los poli-
+nomios multiortogonales de Laguerre I median-
+te sus f(cid:243)rmulas de recurrencia respectivas.
+Polinomios multiortogonales
+de Laguerre II
+Los segundos polinomios multiortogonales de
+Laguerre fueron estudiados en [9]. Los polino-
+Estos resultados permitirÆn generar los poli-
+mios multiortogonales de Laguerre II para r = 2
+nomios multiortogonales de Laguerre II median-
+(L(α n 0 , c 1 , c 2 )) satisfacen la condici(cid:243)n de ortogonalidad te sus f(cid:243)rmulas de recurrencia respectivas.
+80 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Polinomios multiortogonales 3.2. Algunos PMOC para sistemas
+de Hermite Angelesco
+Los denominados polinomios multiortogonales de De modo anÆlogo a los planteados en AT-siste-
+Hermite Hc , estÆn soportados sobre todo el eje real mas, las familias planteadas en sistemas Ange-
+n
+(−∞,+∞) para cuando sus funciones de peso lesco serÆn tres, las cuales estar(cid:237)an conectadas
+asociadas vienen dadas por {W =e− x 2+ c x }r para como se muestra a continuaci(cid:243)n.
+j
+i j=1
+diferentes reales c.
+j
+Sistemas-Angelesco
+Los polinomios multiortogonales de Hermite
+para r = 2 (Hc 1 , c 2 ) satisfacen la condici(cid:243)n de or-
+togonalidad
+n Jacobi-Angelesco P(α , β , γ ) (x; a))
+rt
+(25)
+Jacobi-Laguerre Laguerre-Hermite
+(L(α, β ) ) (L(β) (x))
+n n
+De manera similar por su propia relaci(cid:243)n de
+ortogonalidad y la de(cid:222) nici(cid:243)n de sus funciones
+En general los polinomios multiortogonales para
+de peso, estas familias de polinomios permiten
+sistemas Angelesco se estudian s(cid:243)lo para r = 2,
+que se puedan obtener por el paso al l(cid:237)mite a
+hecho asumido en el presente trabajo.
+partir de los de Jacobi-Piæeiro. Para el caso par-
+ticular r = 2 queda de la siguiente manera
+Polinomios multiortogonales
+de Jacobi-Angelesco
+Los polinomios de Jacobi-Angelesco estÆn aso-
+(26) ciados a un sistema Angelesco que tienen como
+funci(cid:243)n de peso una extendida del peso de Ja-
+Esta relaci(cid:243)n por el paso al l(cid:237)mite permite cal- cobi, particularmente W =⏐h(x)⏐con h(x) =
+cular los coe(cid:222) cientes a(c 1 , c 2 ) a(c 1 , c 2 ) a(c 1 , c 2 ) de las (x-a)α xβ (1-x)γ para α, β, γ > i −1 y w , w soporta-
+n,0 n,1 n,2 1 2
+relaciones de recurrencia (16), (17) y (19) para la das respectivamente en [a, 0] (a < 0) y [0,1].
+familia de Hermite
+Estos polinomios multiortogonales P (α, β, γ) (x; a)
+n
+fueron estudiados a profundidad en [14, 15],
+donde P (α, β, γ) (x; a) satisface la condici(cid:243)n de orto-
+n
+gonalidad
+(27)
+Los resultados de los cÆlculos se muestran a
+continuaci(cid:243)n
+Usando las condiciones de ortogonalidad (27),
+se obtiene una f(cid:243)rmula de Rodrigues
+Estos resultados permitirÆn generar los poli-
+nomios multiortogonales de Hermite de tipo I y
+de tipo II mediante sus f(cid:243)rmulas de recurrencia
+respectivas.
+REVISTA CIENCIAS MATEM`TICAS 81
+Realizando un trabajo algebraico auxiliado de Sea
+cÆlculos computacionales se obtienen las formas
+expl(cid:237)citas de los coe(cid:222) cientes de los polinomios
+(28)
+multiortogonales de Jacobi-Angelesco de tipo II,
+apoyados en la f(cid:243)rmula de tipo Rodrigues, y con
+ellos se tienen las expresiones de los coe(cid:222) cien-
+tes en la relaci(cid:243)n de recurrencia (16) (ver [6]). entonces los coe(cid:222) cientes tienen la forma
+82 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+Polinomios multiortogonales te que relaciona los polinomios multiortogonales
+de Jacobi-Laguerre de Jacobi-Laguerre con los de Jacobi-Angelesco
+y con ellos se tienen de modo mÆs factible las
+Los polinomios de Jacobi-Laguerre estÆn aso- expresiones de los coe(cid:222) cientes en la relaci(cid:243)n de
+ciados a un sistema Angelesco que tienen como recurrencia (16) que se puede ver en [6].
+funci(cid:243)n de peso W =⏐h(x)⏐con h(x) = (x-a)α xβ e-x
+i Relaci(cid:243)n por el paso al l(cid:237)mite
+donde w , w estÆn soportadas respectivamente
+1 2
+en [a, 0] (a < 0) y [0,+∞].
+Estos polinomios multiortogonales L (α, β) (x; a) (30)
+n
+fueron considerados en [16], donde L (α, β) (x; a)
+n
+satisface la condici(cid:243)n de ortogonalidad Esta relaci(cid:243)n a su vez induce un resultado
+similar para los coe(cid:222) cientes {a(α, β) }2 .
+n, i i=0
+(29)
+AnÆlogamente, de las condiciones de ortogo-
+Las expresiones expl(cid:237)citas de los coe(cid:222) cientes
+nalidad (29), se obtiene una f(cid:243)rmula de Rodri-
+se muestran a continuaci(cid:243)n. Sea
+gues
+(31)
+entonces los coe(cid:222) cientes tienen la forma
+Realizando un trabajo algebraico auxiliado
+de cÆlculos computacionales se obtienen las
+formas expl(cid:237)citas de los coe(cid:222) cientes de los po-
+linomios multiortogonales de Jacobi-Angelesco
+de tipo II, apoyados en la f(cid:243)rmula de Rodrigues.
+Pero es mÆs conveniente emplear el paso al l(cid:237)mi-
+REVISTA CIENCIAS MATEM`TICAS 83
+Polinomios multiortogonales 4. IMPLEMENTACI(cid:211)N COMPUTACIONAL
+de Laguerre-Hermite
+4.1. Software Mathematica
+Los polinomios de Laguerre-Hermite estÆn aso-
+ciados a un sistema Angelesco que tienen como
+Mathematica es un software con prop(cid:243)sitos mate-
+funci(cid:243)n de pesoW =⏐h(x)⏐con h(x) = xβ e−x 2don-
+i mÆticos que tiene las siguientes caracter(cid:237)sticas
+de w , w estÆn soportadas respectivamente en
+1 2 ● Constituye una poderosa calculadora sim-
+(−∞, 0], [0,+∞).
+b(cid:243)lica y numØrica.
+Estos polinomios multiortogonales H (β) (x) fue-
+n ● Posee grandes posibilidades grÆ(cid:222) cas.
+ron considerados en [12], donde H (β) (x) satisface
+n
+la condici(cid:243)n de ortogonalidad ● Incorpora un lenguaje de programaci(cid:243)n.
+● Permite desarrollar tareas complejas e
+ilustrar grÆ(cid:222) camente los resultados.
+(32)
+Se ha seleccionado el Mathematica para el de-
+sarrollo de este trabajo, fundamentalmente por
+Para este caso tambiØn se cuenta con una re- sus posibilidades en cuanto a la programaci(cid:243)n
+laci(cid:243)n por el paso al l(cid:237)mite que relaciona los po- y al trabajo simb(cid:243)lico que con Øl se puede reali-
+linomios multiortogonales de Laguerre-Hermite zar, permitiendo la soluci(cid:243)n exacta de sistemas de
+con los de Jacobi-Angelesco y con ellos se tie- ecuaciones lineales, el cÆlculo de determinantes,
+nen de modo mÆs factible las expresiones de los integraci(cid:243)n, uso de funciones recurrentes, etcØtera.
+coe(cid:222) cientes en la relaci(cid:243)n de recurrencia (16) Los resultados de este trabajo fueron imple-
+como se puede ver en [6]. mentados en formas de funciones y procedi-
+Relaci(cid:243)n por el paso al l(cid:237)mite mientos que posibilitan generar los polinomios
+de las familias de los polinomios multiortogona-
+(33)
+les clÆsicos de tipo I y tipo II y sus aproximantes
+de Hermite-PadØ, gra(cid:222) cÆndolos e ilustrando al-
+Esta relaci(cid:243)n a su vez induce una expresi(cid:243)n
+gunas de sus propiedades.
+para los coe(cid:222) cientes {a(β)}2
+n, i i=0
+4.2. Ejemplos
+Usando el software Mathematica se verÆ una se-
+rie de ejemplos para mostrar algunas propieda-
+des que cumplen los polinomios multiortogona-
+les clÆsicos en el eje real. AdemÆs se ha podido
+Las expresiones expl(cid:237)citas de los coe(cid:222) cientes
+conjeturar el cumplimiento de otras propieda-
+se muestran a continuaci(cid:243)n. Sea
+des algebraicas de los mismos, gracias al cÆlculo
+computacional de los polinomios de estas fami-
+(34) lias, as(cid:237) como reiteradas corridas y gra(cid:222) cacio-
+nes de los mismos.
+entonces los coe(cid:222) cientes tienen la forma
+Todos los ejemplos a presentar en el presente
+trabajo estÆn desarrollados para (cid:237)ndices regu-
+lares con r = 2 y varios valores de n que se es-
+peci(cid:222) can en cada caso. Utilizando la notaci(cid:243)n
+general de los polinomios multiortogonales em-
+pleada:
+84 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+P : polinomio multiortogonal de tipo II e (cid:237)ndice n. Los ceros de los polinomios multiortogonales
+n
+Q : polinomio multiortogonal de tipo I e (cid:237)ndice n. de tipo I y de las componentes de los r-vectores
+n
+multiortogonales de tipo I no son todos reales.
+q : componente i-Øsima de vector Multiortogonal
+n,i Ver grÆ(cid:222) cas 2.2, 2.3, 2.4, 2.5.
+de tipo I e (cid:237)ndice (n, i).
+Los ceros de los polinomios multiortogonales
+H :polinomio multiortogonal de segundo GØnero
+n,i consecutivos de tipo II se intercalan. Ver grÆ(cid:222) -
+de (cid:237)ndice (n, i).
+ca 2.1.
+Las (cid:222) guras asociadas a las familias de poli-
+Se conjetura que los ceros de los polinomios
+nomios multiortogonales particulares seguirÆn
+de tipo II y de segundo gØnero se intercalan. Ver
+el mismo prop(cid:243)sito.
+grÆ(cid:222) cas 2.6, 2.7.
+EJEMPLO 4.2.1: Ilustrar las propiedades de los
+Se conjetura que los ceros de los polinomios
+ceros de los polinomios multiortogonales que se
+consecutivos de segundo gØnero se intercalan.
+enumeran a continuaci(cid:243)n:
+Ver grÆ(cid:222) cas 2.8, 2.9.
+a) Localizaci(cid:243)n de los ceros.
+b) Intercalaci(cid:243)n de los ceros (Entre dos ceros del
+Ejemplos de polinomios
+polinomio de grado n+1 hay un cero del poli-
+multiortogonales de Hermite
+nomio de grado n)
+Los ejemplos visualizados estÆn desarrollados
+Ejemplos de polinomios para la familia paramØtrica con valores c = 2 y
+1
+multiortogonales de Laguerre I c = −2.
+2
+Los ceros de los polinomios multiortogonales
+Los ejemplos visualizados estÆn desarrollados
+de tipo II se encuentran en el eje real y son todos
+para la familia paramØtrica con valores α =1 y
+simples. Ver grÆ(cid:222) cas 3.1, 3.6, 3.7 (p. 87).
+1
+α = 2.5.
+2 Los ceros de los polinomios multiortogonales
+Los ceros de los polinomios multiortogonales
+de tipo I no son todos reales, pero los ceros de
+de tipo II se encuentran en el eje real y son todos
+las componentes de los r-vectores multiortogo-
+simples. Ver grÆ(cid:222) cas 1.1, 1.6, 1.7 (p. 85).
+nales de tipo I son todos reales y se encuentran
+Los ceros de los polinomios multiortogonales en semiplanos diferentes. Ver grÆ(cid:222) cas 3.2, 3.3,
+de tipo I y de las componentes de los r-vectores 3.4, 3.5.
+multiortogonales de tipo I no son todos reales.
+Los ceros de los polinomios multiortogonales
+Ver grÆ(cid:222) cas 1.2, 1.3, 1.4, 1.5.
+consecutivos de tipo II se intercalan. Ver grÆ(cid:222) -
+Los ceros de los polinomios multiortogona- ca 3.1.
+les consecutivos de tipo II no se intercalan. Ver
+Se conjetura que los ceros de los polinomios
+grÆ(cid:222) ca 1.1.
+de tipo II y de segundo gØnero se intercalan. Ver
+Los ceros de los polinomios de tipo II y de grÆ(cid:222) cas 3.6, 3.7.
+segundo gØnero no se intercalan. Ver grÆ(cid:222) cas
+Se conjetura que los ceros de los polinomios
+1.6, 1.7.
+consecutivos de segundo gØnero se intercalan.
+Se conjetura que los ceros de los polinomios Ver grÆ(cid:222) cas 3.8, 3.9.
+consecutivos de segundo gØnero se intercalan.
+Ver grÆ(cid:222) cas 1.8, 1.9 (p. 86). Ejemplos de polinomios multiortogonales
+de Jacobi-Laguerre
+Ejemplos de polinomios
+multiortogonales de Laguerre II Los ejemplos visualizados estÆn desarrollados
+para la familia paramØtrica con valores a = −1,
+Los ejemplos visualizados estÆn desarrollados α= 0 y β = 1.5.
+para la familia paramØtrica con valores α =0 y Los ceros de los polinomios multiortogonales
+0
+c = 1 y c = −1.
+de tipo II se encuentran en el eje real y son todos
+1 2
+Los ceros de los polinomios multiortogonales simples. Ver grÆ(cid:222) cas 4.1, 4.6, 4.7 (p. 88).
+de tipo II se encuentran en el eje real y son todos Los ceros de los polinomios multiortogonales
+simples. Ver grÆ(cid:222) cas 2.1, 2.6, 2.7. de tipo I y de las componentes de los r-vectores
+REVISTA CIENCIAS MATEM`TICAS 85
+multiortogonales de tipo I no son todos reales. Los ceros de los polinomios multiortogonales
+Ver grÆ(cid:222) cas 4.2, 4.3, 4.4, 4.5. de tipo I no son todos reales, pero los ceros de
+Los ceros de los polinomios multiortogonales con- las componentes de los r-vectores multiortogo-
+secutivos de tipo II se intercalan. Ver grÆ(cid:222) ca 4.1. nales de tipo I son todos reales y se encuentran
+en semiplanos diferentes. Ver grÆ(cid:222) cas 5.2, 5.3,
+Los polinomios de tipo II y de segundo gØnero
+5.4, 5.5.
+no se intercalan. Ver grÆ(cid:222) cas 4.6, 4.7.
+Los ceros de los polinomios multiortogonales
+Se conjetura que los ceros de los polinomios
+consecutivos de tipo II se intercalan. Ver grÆ(cid:222) -
+consecutivos de segundo gØnero se intercalan.
+ca 5.1.
+Ver grÆ(cid:222) cas 4.8, 4.9.
+Los ceros de los polinomios de tipo II y de
+segundo gØnero no se intercalan. Ver grÆ(cid:222) cas
+Ejemplos de polinomios multiortogonales
+5.6, 5.7.
+de Laguerre-Hermite
+Se conjetura que los ceros de los polinomios
+Los ejemplos visualizados estÆn desarrollados consecutivos de segundo gØnero se intercalan.
+para la familia paramØtrica con valor β = 0 . Ver grÆ(cid:222) cas 5.8, 5.9.
+0
+Los ceros de los polinomios multiortogonales
+de tipo II se encuentran en el eje real y son todos
+simples. Ver grÆ(cid:222) cas 5.1, 5.6, 5.7.
+86 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+En las (cid:222) guras aparecen representados: Fig. 1.5. Polinomios q ( ) y q ( )
+7, 1 7, 2
+Fig. 1.1. Polinomios P ( ) y P ( ) Fig. 1.6. Polinomios H ( ) y P ( )
+4 5 4,1 4
+Fig. 1.2. Polinomios Q ( ), Q ( ) y Q ( ) Fig. 1.7. Polinomios H ( ) y P ( )
+3 4 5 5,2 5
+Fig. 1.3. Ceros de q ( • ) Fig. 1.8. Polinomios H ( ) y H ( )
+10, 2 4,1 5,1
+Fig. 1.4. Ceros de q ( • ) Fig. 1.9. Polinomios H ( ) y H ( )
+10, 1 5,2 6,2
+REVISTA CIENCIAS MATEM`TICAS 87
+En las (cid:222) guras aparecen representados: Fig. 2.5. Polinomios q ( ) y q ( )
+7, 1 7, 2
+Fig. 2.6. Polinomios H ( ) y P ( )
+Fig. 2.1. Polinomios P ( ) y P ( )
+4,1 4
+4 5 Fig. 2.7. Polinomios H ( ) y P ( )
+Fig. 2.2. Polinomios Q ( ), Q ( ) y Q ( )
+5,2 5
+3 4 5 Fig. 2.8. Polinomios H ( ) y H ( )
+Fig. 2.3. Ceros de q ( • ) 4,1 5,1
+10, 1 Fig. 2.9. Polinomios H ( ) y H ( )
+Fig. 2.4. Ceros de q ( • ) 5,2 6,2
+10, 2
+88 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+En las (cid:222) guras aparecen representados:
+Fig. 3.5. Polinomios q ( ) y q ( )
+7, 1 7, 2
+Fig. 3.1. Polinomios P ( ) y P ( ) Fig. 3.6. Polinomios H ( ) y P ( )
+4 3 4,1 4
+Fig. 3.2. Polinomios Q ( ), Q ( ) y Q ( ) Fig. 3.7. Polinomios H ( ) y P ( )
+3 4 5 5,2 5
+Fig. 3.3. Ceros de q ( • ) Fig. 3.8. Polinomios H ( ) y H ( )
+8, 2 4,1 5,1
+Fig. 3.4. Ceros de q ( • ) Fig. 3.9. Polinomios H ( ) y H ( )
+8, 1 5,2 6,2
+REVISTA CIENCIAS MATEM`TICAS 89
+En las (cid:222) guras aparecen representados: Fig. 4.5. Polinomios q ( ) y q ( )
+7, 1 7, 2
+Fig. 4.6. Polinomios H ( ) y P ( )
+Fig. 4.1. Polinomios P ( ) y P ( )
+4,1 4
+4 5 Fig. 4.7. Polinomios H ( ) y P ( )
+Fig. 4.2. Polinomios Q ( ), Q ( ) y Q ( )
+5,2 5
+3 4 5 Fig. 4.8. Polinomios H ( ) y H ( )
+Fig. 4.3. Ceros de q ( • ) 4,1 5,1
+10, 1 Fig. 4.9. Polinomios H ( ) y H ( )
+Fig. 4.4. Ceros de q ( • ) 5,2 6,2
+10, 2
+90 SOCIEDAD CUBANA DE MATEM`TICA Y COMPUTACI(cid:211)N
+En las (cid:222) guras aparecen representados: Fig. 5.5. Polinomios q ( ) y q ( )
+7, 1 7, 2
+Fig. 5.6. Polinomios H ( ) y P ( )
+Fig. 5.1. Polinomios P ( ) y P ( )
+4,1 4
+4 5 Fig. 5.7. Polinomios H ( ) y P ( )
+Fig. 5.2. Polinomios Q ( ), Q ( ) y Q ( )
+5,2 5
+3 4 5 Fig. 5.8. Polinomios H ( ) y H ( )
+Fig. 5.3. Ceros de q ( • ) 4,1 5,1
+10, 2 Fig. 5.9. Polinomios H ( ) y H ( )
+Fig. 5.4. Ceros de q ( • ) 5,2 6,2
+10, 1
+REVISTA CIENCIAS MATEM`TICAS 91
+4. CONCLUSIONES 4. Fundora, A., Aproximantes simultÆneos de Her-
+mite-PadØ para dos funciones de Markov, in
+A modo de extensi(cid:243)n de los polinomios ortogona- Facultad de MatemÆtica y Computaci(cid:243)n, Dpto.
+les se plantean los conceptos fundamentales y Teor(cid:237)a de Funciones. 1998, Universidad de la Ha-
+los resultados mÆs importantes para el desarro- bana: Habana, Cuba.
+llo de los polinomios multiortogonales clÆsicos de 5. Urrutia, I., Instrumentaci(cid:243)n computacional de
+los resultados relativos a polinomios ortogona-
+tipo I y Tipo II, as(cid:237) como la aproximaci(cid:243)n racional
+les in Facultad de MatemÆtica y Computaci(cid:243)n.
+simultÆnea con sus aproximantes y su modo de
+1997, Universidad de la Habana: Hbaana, Cuba.
+obtenci(cid:243)n, resultando un complemento acepta-
+6. Assche, W.V., Some classical multiortogonal po-
+ble para la incursi(cid:243)n en los polinomios ortogona-
+lynomials. J. Comput. Appl. Math., 2000. 127.
+les y la aproximaci(cid:243)n racional simultÆnea.
+7. Assche, W.V., Multiple orthogonal polynomials
+Con ayuda del Software Mathematica 5.0 for classical weights. Trans. Amer. Math. Soc.,
+se realiz(cid:243) un anÆlisis grÆ(cid:222) co de los polinomios 2003. 355: p. 3887-3914.
+multiortogonales clÆsicos en la recta real que 8. Nikishin, E.M., On simultaneous PadØ approxi-
+mants. In Math USSR, 1982. 41: p. 409-426.
+permiti(cid:243) conjeturar propiedades de los polino-
+9. Nikishin, E.M., Rational aproximations and or-
+mios multiortogonales clÆsicos en el eje real que
+thogonality. 1991: Providence RI.
+parecen ciertas. Constituye una novedad impor-
+10. Santiago, L., Aproximaci(cid:243)n racional in(cid:222) nita, in
+tante la instrumentaci(cid:243)n computacional de los
+Facultad de MatemÆtica y Computaci(cid:243)n. 2002,
+resultados seæalados. Los procedimientos y fun-
+Universidad de la Habana: Habana, Cuba.
+ciones elaboradas forman un asistente grÆ(cid:222) co 11. Piæeiro, L.R., Sobre los aproximantes de Hermi-
+fundamental para el estudio de cualquiera de te-PadØ para una clase de funciones de Markov.
+las familias estudiadas de polinomios multiorto- Vestnik Mosk. Univ., 1987. Ser I No. 2: p. 67-70.
+gonales, as(cid:237) como apoyo a la docencia e ilustra- 12. Sorokin, V.N., Generalization of classical ortho-
+ci(cid:243)n de resultados posteriores. gonal polynomial and convergence of simulta-
+neous PadØ approximants. Trudy Sem. petrovsk,
+1986. 11: p. 125-165.
+5. REFERENCIAS 13. Sorokin, V.N., On simultaneous PadØ approxi-
+mants for function. 1990.
+1. Hermite, C., Sur la fonction exponentielle.
+14. Kalyagin, K.A., On a class of polynomials de(cid:222) ned
+Oeuvres. III: p. 150-181.
+by two orthogonality relations. In Math. USSR
+2. Carballosa, W., Polinomios Multiortogonales de Her-
+Sb, 1981. 38: p. 562-580.
+mite, in Facultad de MatemÆtica y Computaci(cid:243)n.
+15. Kalyagin, K.A., On classical system of polyno-
+2002, Universidad de la Habana: Habana, Cuba.
+mials of simultaneous orthogonality. J. Comput.
+3. Carballosa, W., Polinomios Multiortogonales ClÆ-
+Appl. Math., 1996. 67: p. 207-217.
+sicos, in Facultad de MatemÆtica y Computaci(cid:243)n,
+16. Sorokin, V.N., Simultaneous PadØ approximants
+Dpto. Teor(cid:237)a de Funciones. 2007, Universidad de
+for (cid:222) nite intervals. Izv. Vyssh.. Uchebn. Zaved.
+la Habana: Habana, Cuba.
+Mat., 1984. 8: p. 45-52.
+ABSTRACT: In this work a study about Multiple Orthogonal Polynomials (MOP) is done. The relation
+with the simultaneous rational approximation (Hermite-PadØ~Rs approximates) is also considered.
+For do so, these families of MOP are generated through different methods, by using the de(cid:222) nition
+of the simultaneous approximation problem and by considering algebraic properties. Some conjec-
+tures on algebraic properties of MOP as well as extensions of properties algebraic of the ordinary
+orthogonal.

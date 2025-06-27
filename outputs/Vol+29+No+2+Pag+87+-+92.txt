@@ -1,0 +1,361 @@
+CienciasMatema´ticas,Vol.29,No.2,Pag.87-92,2015
+Recibido03-2015
+Ana´lisis de un algoritmo multiclasificador
+incremental con diferentes clasificadores bases
+Analysis of incremental ensemble algorithm with
+different basic classifiers
+Alberto Verdecia Cabrera1*, David La O Naranjo2, Ramo´n Osmany Ram´ırez Tase´1, Agust´ın
+Alejandro Ortiz D´ıaz1, Isvani Fr´ıas Blanco1
+Resumen Los algoritmos de clasificacio´n que se adaptan a los cambios de conceptos en la miner´ıa de
+flujosdedatossonactualmentemuyimportantesparamuchasaplicacionescomo:bioinforma´tica,medicina,
+educacio´n,econom´ıayfinanzas,industriaymedioambiente.Porotrolado,losalgoritmosmulticlasificadoresse
+hanmostradoparticularmenteeficienteseneltrabajosobreespaciodedatosgrandesycomplejos.Elsiguiente
+trabajotienecomopropo´sitoanalizarelcomportamientodeunnuevoalgoritmomulticlasificadorincremental,
+queseadaptaaloscambiosdeconceptos,utilizandodiferentesclasificadoresbasesnoincrementalespara
+procesardatossinte´ticosdiscretosgeneradosbajoelconceptoLED.Estealgoritmo,presentadoporprimeravez
+enelcongresoInforma´tica2013,esta´ basadoenlafamiliaMultiCIDIMdesarrolladaporinvestigadoresdela
+UniversidaddeMa´laga.SeutilizaelentornodetrabajoMOA(MassiveOnlineAnalysis)paraimplementarel
+algoritmo,generarlosdatossinte´ticosyrealizarlosexperimentos.
+Abstract Classificationalgorithmsthatadapttochangingconceptsindatastreamsminingarecurrentlyvery
+importantformanyapplicationssuchasbioinformatics,medicine,education,economicsandfinance,industry
+and environment. Furthermore, incremental ensemble algorithms have proven particularly efficient at work
+onlargeandcomplexdataspaces. Thefollowingpaperaimstoanalyzethebehaviorofaanewincremental
+ensemble algorithm, which adapts to changes in concepts, using different not incremental base classifiers
+to process discrete synthetic data generated under the LED concept. This algorithm, first introduced at the
+Informa´tica2013Congress,isbasedontheMultiCIDIMfamilydevelopedbyresearchersattheUniversityof
+Ma´laga. TheMOA(MassiveOnlineAnalysis)workenvironmentisusedtoimplementthealgorithm,togenerate
+syntheticdataandtoconductexperiments.
+PalabrasClave
+Aprendizajeincremental,flujosdedatos,cambiodeconcepto,clasificadoresmu´ltiples
+1UniversidaddeGranma,Cuba,averdeciac@udg.co.cu,rtase@udg.co.cu,aortizd@udg.co.cu,ifriasb@grm.uci.cu
+2IMNi,Niquero,Cuba,dlnaranjo@niquero.capgrm.co.cu
+*AutorparaCorrespondencia
+1. Introduccio´n organizacioneseinstitucionessebasaneninformacio´nsobre
+experienciaspasadasextra´ıdasdefuentesmuydiversasporlo
+queelverdaderovalordelosdatosradicaenlaposibilidadde
+Enlasu´ltimasde´cadas,elalmacenamiento,organizacio´n
+extraerdeellosinformacio´nu´tilparalatomadedecisiones
+yrecuperacio´ndelainformacio´nsehaautomatizadogracias
+o la exploracio´n y comprensio´n de los feno´menos que le
+a los sistemas de bases de datos, pero la ubicuidad de la
+dieron lugar [1]. Debido a tal crecimiento y variedad de la
+informacio´nenformatoelectro´nicohaempezadoaserpatente
+informacio´n se hace necesario e importante el ana´lisis de
+a finales de siglo XX con la irrupcio´n de Internet. Como
+datosenramascomo:Bioinforma´tica,medicina,educacio´n,
+resultado de este tremendo crecimiento, los datos en bruto,
+econom´ıayfinanzas,industria,medioambiente,entreotras.
+sehanconvertidoenunavastafuentedeinformacio´n.Gran
+Ma´simportanteau´nesadema´sdelconocimientoquepuede
+parte de esta informacio´n es histo´rica, es decir, representa
+inferirse y la capacidad de poder usarlo, tener un conjunto
+transaccionesosituacionesquesehanproducido.Apartede
+de reglas que a partir de los antecedentes, comportamiento
+su funcio´n de ”memoria”, la informacio´n histo´rica es u´til
+yotrascaracter´ısticasdelosdatosnospermitanpredecirsu
+para explicar el pasado, entender el presente y predecir la
+comportamientofuturo[2].
+informacio´nfutura.Lamayor´ıadelasdecisionesdeempresas,
+88 Ana´lisisdeunalgoritmomulticlasificadorincrementalcondiferentesclasificadoresbases
+Para el ana´lisis de grandes cantidades de datos normal- 1.1 Antecedentes.Trabajosrelacionados
+menteseusante´cnicasdeMiner´ıadeDatos(DataMining) LosalgoritmosMultiCIDIM-DSyMultiCIDIM-DS-CFC
+que no es ma´s que la bu´squeda de patrones e importantes [6]esta´nbasadosenmodificacioneshechasalconocidoalgo-
+regularidadesenbasesdedatosdegranvolumen[3].Lacla- ritmoSEA(StreamingEnsembleAlgorithm)[7],comoson:
+sificacio´n es una de las tareas ma´s importante dentro de la utilizarcomoclasificadorbaseaCIDIM,cambiarlaformade
+Miner´ıadeDatos.Enella,cadainstancia(oregistrodelabase entradaysalidadelosclasificadoreseintroducirelcontrol
+dedatos)perteneceaunaclase,lacualseindicamedianteel porfiltroscorrectores,enlau´ltimaversio´n.
+valordeunatributoquellamamoslaclasedelainstancia.Este Losart´ıculosdeKolteryMaloof[8]y[9]destacanalgunas
+atributopuedetomardiferentesvaloresdiscretos,cadaunode deficienciasquepuedenpresentarlosalgoritmosbasadosen
+loscualescorrespondeaunaclase.Elrestodelosatributosde elalgoritmoSEApararesponderyadaptarseeficientementea
+lainstancia(losrelevantesalaclase)seutilizanparapredecir loscambiosdeconceptos:
+la clase. El objetivo es predecir el atributo clase en nuevos
+registrosenlosquesedesconocee´ste. Losclasificadores,miembrosdelmulticlasificador,de-
+jandeaprenderunavezquesoncreados.
+Un flujo de datos es una secuencia muy grande, poten-
+cialmente infinita, de pares (x,y) que se van adquiriendo a Elme´tododeremplazarclasificadoresnoponderados
+lolargo deltiempo,dondex representalosatributosdelos suelenoconvergermuyra´pidoalahoradeadaptarsea
+datosdeentradaeysuclasecorrespondiente,aestospares unnuevoconcepto.
+suelellama´rselosinstanciasoexperiencias.Estasexperiencias
+procedendeentornosdina´micosynosetienenpreviamente Elalgoritmotrabajadividendolosdatosenbloquespor
+almacenadas,loqueobligaaprocesarlassecuencialmente,de loquenosepuedeadaptaralaprendizajeincremental
+formaincremental. yaquecuandounanuevainstanciallegae´stenopuede
+tomaraccio´ninmediata.
+Unodelosproblemasfundamentalesdelaprendizajein-
+crementalsedebeaquelafuncio´nobjetivopuededepender
+Resumiendo, SEA y los algoritmos MultiCIDIM-DS y
+delcontexto,elcualnoesrecogidomediantelosatributosde
+MultiCIDIM-DS-CFC,porsermodificacionesae´ste,carecen
+losdatosdeentrada.Comoconsecuencia,cambiosocurridos
+delahabilidaddeadaptarseacambiosra´pidosyabruptosy
+enelcontextopuedeninducirvariacionesenlafuncio´nobjeti-
+bajanmuchosuprecisio´ndeprediccio´nglobalcuandoseen-
+vo,dandolugaraloqueseconocecomocambiodeconcepto
+frentanacadenasdedatosconpocasinstanciaseneltiempo.
+(conceptdrift)[4].
+Debidoaestasdeficienciassepropusounnuevoalgoritmo,
+Esdif´ıcilenlaactualidadencontrarunclasificadoreficien- basadoenMultiCIDIM-DSconlassiguientescaracter´ısticas:
+tepararesolvercadasituacio´nplanteada.Sehacomprobado
+eninvestigacionesanterioresqueciertaspartesdelespaciode Utilizavotacio´nponderada.Dalaposibilidaddecono-
+datos son mejor modeladas por un me´todo de clasificacio´n ceryajustar,atrave´sdelospesosdecadaclasificador
+y otra parte del espacio, por un clasificador diferente. Esto base,laconfianzaquesetieneenestosencadainstante
+haoriginadoqueutilizarunacombinacio´ndeclasificadores detiempo.
+(Multiclasificacio´n)seaunabuenaalternativa.Variosme´todos
+Lospesosdelosclasificadoresbasessonpenalizadossi
+paracreacio´ndecombinacionesdeclasificadoresyahansido
+hayfallosysonbonificadossihayacierto.Estopermite
+propuestos,aunque,noexisteunaclaraformadesabercua´l
+que cada clasificador pueda permanecer ma´s tiempo
+me´tododeensambleesmejorqueotro,ocuandoemplearun
+dentro del multiclasificador si su comportamiento es
+determinadome´todoocuandootrodiferente.
+estable,favoreciendoeltratamientodeconceptosrecu-
+Elobjetivodeestetrabajoesanalizarelcomportamiento
+rrentes.
+deunnuevoalgoritmomulticlasificadorincremental,quese
+adaptaaloscambiosdeconceptos,utilizandodiferentesclasi- Utiliza un umbral para eliminar de forma ra´pida los
+ficadoresbasesnoincrementalesparaprocesardatossinte´ticos clasificadoresbasesineficientes,favoreciendolaadap-
+discretosgeneradosbajoelconceptoLED1. tacio´naloscambiosdeconceptos[5].
+Este algoritmo, fue desarrollado en la Universidad de
+Granma con la asesor´ıa de un grupo de trabajo de la Uni- 2. Metodolog´ıa computacional
+versidad de Ma´laga y el apoyo de investigadores de otras
+universidadescubanas.Elmismofuepublicadoysometidoa 2.1 Entornodetrabajoutilizado
+debateenLaSegundaConferenciaInternacionaldeCiencia Elalgoritmomulticlasificadorfueprogramadoenellen-
+delaComputacio´neInforma´ticadelCongresoInforma´tica guajeJava,sobreelentonodedesarrolloNetbeansIDE7.0.1.
+2013desarrolladoenCuba[5]. Fueimplementadoencompatibilidadybajolasexigenciasde
+MOA(MassiveOnlineAnalysis)[10]unodelosma´scom-
+pletosentornosdetrabajosparaminer´ıadedatosqueesta´ re-
+lacionadoconelproyectoWEKA(WaikatoEnvironmentfor
+1LightEmittingDiode,diodoemisordeluz KnowledgeAnalysis)[11].MOAincluyeunacoleccio´nde
+Ana´lisisdeunalgoritmomulticlasificadorincrementalcondiferentesclasificadoresbases 89
+algoritmosparaelaprendizajeautoma´tico(Clasificacio´n,re- 2.3 Caracter´ısticas de los clasificadores bases uti-
+gresio´nyagrupamiento)paratrabajarsobreflujosdedatosen lizados
+losqueesta´npresentescambiosdeconcepto.Adema´sincluye CIDIM (Control de Induccio´n por Divisio´n Muestral).
+herramientasparaevaluarlosalgoritmosygenerardatosde EstealgoritmofuepropuestoporRamos,MoralesyVillalba
+formaartificial,incluyendolaposibilidaddesimularcambios [12],[13],investigadordelaUniversidaddeMa´laga.
+deconceptos. Suscaracter´ısticasprincipalesson:
+2.2 Algoritmogeneraldelmulticlasificadorincremen- Atributoscatego´ricos.
+tal
+Trabajasobreflujosdedatosyseadaptaaloscambiosde Elevadaprecisio´n,generaa´rbolesdetaman˜oreducido.
+conceptos.
+n∈N∗:Nu´merodeexperiencias(potencialmenteinfinito). Divisio´ndelconjuntodeentrenamiento,laagrupacio´n
+m∈N∗:Nu´merodeclasificadoresbases. devaloresconsecutivosyuncontrollocalparadetener
+(cid:110)→ (cid:111)1 lainduccio´n.
+DS= x,y :DS:Flujodedatosdeentrada.Estructura-
+n
+dosen(cid:126)x:Vectordeatributos;y:Clase. Unahojaseexpandeso´losiseproduceunamejoraen
+E ={cb,w}1 :E:Multiclasificador.Compuestoporcb: laprecisio´ncalculadasobreelsubconjuntodecontrol
+m
+Clasificadorbase;w:pesoasociadoalclasificador. (CLS).
+Λ,λ:Valoresdelasclasespredichas:globalylocal.
+θ:Umbralutilizadoparaeliminarclasificadoresbasesdel Terminacuandonohayma´satributosparaexpandir.
+multiclasificador.
+ne:nu´merodeexperienciasdeunbloque. 2.3.1 AlgoritmoJ48
+Laversio´nutilizadadeestealgoritmoeslaimplementada
+Bloqexp:vectordebloquesdeexperiencias.
+enelentornadetrabajoWEKA[11]delconocidoalgoritmo
+C4.5,desarrolladoporQuinlanen1993[14],comounaexten-
+Algorithm1Algoritmogeneral
+sio´n(mejora)delalgoritmoID3queelmismodesarrolloen
+1: Construirelprimerbloquedeexperiencias,Bloqexp; 1986[15].
+2: Crearelmulticlasificadorconelm´ınimonu´merodeclasi- Lascaracter´ısticasprincipalesdelalgoritmoC4.5son:
+ficadores,E;
+3: Bloqexp←0;
+Forma parte de la familia de los TDIDT (Top Down
+4: fori=ne+1tondo
+InductionDecisionTrees).
+5: Bloqexp.add(DS i );
+6: ifimodne=0then
+Permitetrabajarconvalorescontinuosparalosatribu-
+7: NewClassifier.build(Bloqexp);
+tos.
+8: AgregarnuevoclasificadoraE;
+9: ActualizarE;
+Losa´rbolessonpocofrondosos.
+10: for j=1tomdo
+11: ifE j .w<θ then Utiliza el me´todo ”divide y vencera´s”para generar el
+12: E j .delete; a´rboldedecisio´ninicial.
+13: endif
+14: endfor
+EsRecursivo.
+15: Bloqexp←0;
+16: endif
+2.3.2 NaiveBayes
+17: ∧=classify(E,(cid:126)x i )
+NaiveBayesesunalgoritmodeclasificacio´nmuycono-
+18: if∧=y i then
+cido por su simplicidad y bajo costo computacional. Para
+19: ActualizarE;
+laexperimentacio´n,enestetrabajo,seutilizalaversio´nno
+20: for j=1tomdo
+incrementaldeestealgoritmoimplementadaenWEKA[11].
+21: ifE j .w<θ then
+LasRedesBayesianas(BN)representanlasdependencias
+22: E j .delete;
+queexistenentrelosatributosatrave´sdeunadistribucio´nde
+23: endif
+probabilidadcondicionalenungrafodirigidonoc´ıclico[16].
+24: endfor
+ElclasificadorNaiveBayes(NB)esuncasoespecialde
+25: endif
+unaredbayesiana,enelqueseasumequelosatributosson
+26: endfor
+condicionalmenteindependientesdadounatributoclase[17].
+Esteclasificadoresmuyeficienteenciertosdominios,debido
+aqueesmuyrobustoanteatributosirrelevantes.
+90 Ana´lisisdeunalgoritmomulticlasificadorincrementalcondiferentesclasificadoresbases
+2.3.3 AlgoritmoNBTree Enelana´lisisdelosdatos,delsegundoexperimento,pue-
+Laversio´ndelalgoritmoNBTreeutilizadaenestetrabajo deapreciarsequelosmejoresporcientosdeclasificacio´nse
+eslaimplementadaenelentornodetrabajoWEKA[11]. obtienenconlosclasificadoresbasesCIDIM(LEDal10%y
+NBTreeesunalgoritmocreadocomounasolucio´nh´ıbri- al15%deruido)yNBTree(LEDal5%deruido).
+da,debidoaquelaeficienciadelalgoritmoNaiveBayesno Parailustrarelporque´ delcambioenlosresultados,se
+alcanzaelmismorendimientodelosa´rbolesdedecisio´ncuan- incluyenacontinuacio´nlosgra´ficosparaelsegundoexperi-
+doelsetdedatosesmuygrande.ElalgoritmoNBTreeintenta mento.
+utilizar las ventajas de los clasificadores, a´rbol de decisio´n Se debe de resaltar, que en la figura 1, los resultados
+paralasegmentacio´nyNaiveBayesparalaacumulacio´nde con los clasificadores bases Naive Bayes y NBTree fueron
+laevidencia.Enestealgoritmo,ela´rboldedecisio´nsegmenta ide´nticosporloqueenlafiguraunosolapaalotro.
+los datos, y cada segmento de datos, representado por una
+hoja,esdescritoporunclasificadorNaiveBayes[18].
+2.4 Caracter´ısticasdelconjuntodedatosutilizado
+El objetivo es tratar de predecir el d´ıgito mostrado por
+una pantalla-LED de siete segmentos, donde cada atributo
+tiene un x (10% es el ma´s utilizado) por ciento posible de
+cambio.Elgeneradorutilizadoproduceparalosexperimentos
+24 atributos binarios, de los cuales 17 son irrelevantes. El
+cambiodeconceptoessimuladoatrave´sdelintercambiode
+atributosrelevantes.Losdatosutilizadosenlosexperimentos
+songeneradosutilizandolasfuncionalidadesdelentornode
+trabajoMOA[10].
+3. Resultados y discusio´n
+3.1 Experimento 1. Ana´lisis sobre un mismo con-
+Figura1.LEDcon5%deruido.Puntodecambiode
+cepto
+conceptoapartirdelaexperiencia5000.
+Enelprimerexperimentoseutilizan10000experiencias
+generadasbajoelconceptoLED.Noexistencambiosdecon-
+ceptosenlosdatos.Seutilizantresconjuntosdedatos,lostres
+bajoelconceptoLED,perovariandoelnivelderuidoen5%,
+10% y 15%. Se prueba el multiclasificador con los cuatro
+clasificadoresbases,unoalavez,sobreelmismoconjuntode
+datos.Paracadaconjuntodedatosyparacadaclasificadorba-
+seserealizan10pruebasdelascualessetomaelpromediodel
+losporcientosdelasexperienciascorrectamenteclasificadas.
+Enelana´lisisdelosdatos,delprimerexperimento,puede
+apreciarse que los mejores por cientos de clasificacio´n se
+obtienenconlosclasificadoresbasesNBTree(LEDal5%y
+al15%deruido)yNaiveBayes(LEDal10%deruido).
+3.2 Experimento2.Ana´lisisagregandounpuntode
+cambiodeconceptoenlosdatos
+En el segundo experimento tambie´n se utilizan 10 000
+experienciasgeneradasbajoelconceptoLED.Igualmentese
+utilizantresconjuntosdedatosLEDvariandoelnivelderuido Figura2.LEDcon10%deruido.Puntodecambiode
+en5%,10%y15%.Comodiferencia,paraesteexperimento, conceptoapartirdelaexperiencia5000.
+enlostresconjuntosdedatosseinsertaunpuntodecambiode
+conceptoapartirdelaexperiencia5000.Seutilizalamisma Sepuedeverclaramente,enlostresgra´ficos,quelosre-
+baseLEDperovariandolosatributosrelevantes. sultadosdeCIDIMalrededordelpuntodecambiosonmucho
+Nuevamente,sepruebaelmulticlasificadorconloscuatro mejoresqueelrestodelosclasificadores.Esdecir,laca´ıda
+clasificadoresbases,unoalavez,sobreelmismoconjunto delporcientodeaciertoapartirdelpuntocr´ıticoesmucho
+dedatos.Paracadaconjuntodedatosyparacadaclasificador menor.Porloquepodr´ıaafirmarsequeCIDIMsecomporta,
+baseserealizan10pruebasdelascualessetomaelpromedio enelexperimento,muchomejorfrentealcambiodeconcepto
+dellosporcientosdeexperienciascorrectamenteclasificadas. queelrestodelosclasificadoresbases.
+Ana´lisisdeunalgoritmomulticlasificadorincrementalcondiferentesclasificadoresbases 91
+Tabla1.Promediosdelosporcientodeexperienciascorrectamenteclasificadas.BaseLEDsincambiodeconcepto.
+Bases/Clasificador CIDIM NB J48 NBTree
+LED-5 85,79% 87,12% 85,97% 87,14%
+LED-10 72,74% 73,66% 73,13% 73,29%
+LED-15 61,37% 62,26% 61,26% 62,3%
+Tabla2.Promediosdelosporcientodeexperienciascorrectamenteclasificadas.ConceptoLEDconcambiodeconceptoa
+partirdelaexperiencia5000.
+Bases/Clasificador CIDIM NB J48 NBTree
+LED-5 81,4% 82,14% 81,31% 82,14%
+LED-10 70,6% 69,49% 69,8% 69,41%
+LED-15 60,77% 58,37% 57,62% 59,06%
+lostiemposdeejecucio´ndelNBTreefueronmuchoma´saltos
+quelostiemposdelrestodelosclasificadoresbasesenambos
+experimentos.
+Porotrolado,losresultados(encuantoalporcientode
+experienciascorrectamenteclasificadas)delclasificadorbase
+CIDIMmejoraronmuchoenelsegundoexperimento;estose
+debio´ asubajaca´ıdadeprecisio´nenlosalrededoresdelpunto
+de cambio, las cuales no pudieron mantener el resto de los
+clasificadoresbases.
+Esimportanteresaltar,quetodosestosresultadosfueron
+obtenidos frente a datos generados sinte´ticamente bajo el
+conceptoLED,elcualesunconceptocomplejodeclasificar
+aunquetodossusatributosseandiscretos.
+Referencias
+Figura3.LEDcon15%deruido.Puntodecambiode
+[1] Ruiz,R.Heur´ısticasdeseleccio´ndeatributosparadatos
+conceptoapartirdelaexperiencia5000.
+degrandimensionalidad.DepartamentodeLenguajesy
+Sistemas Informa´ticos. Sevilla, Universidad de Sevilla,
+En la tabla 3 se ilustran los promedios de tiempo que 2006.
+demoraelalgoritmo,concadaclasificadorbase,enprocesar
+[2] Caballero,Y.Aplicacio´ndelaTeor´ıadelosConjuntos
+los datos. Se debe de resaltar que con el clasificador base
+AproximadosenelPreprocesamientodelosConjuntosde
+NBTreeeltiempodeprocesamientodelosdatosesmucho
+EntrenamientoparaAlgoritmosdeAprendizajeAutoma-
+mayor que con el restos de los clasificadores bases. Esto
+tizado.Tesisdedoctorado,UniversidadCentral”Marta
+podr´ıatraerproblemasconbasesdedatosmuchoma´sgrandes
+Abreu”delaVillas,2007.
+(enelordendelosmillones).
+[3] Michalsky,R.andG.Tecuci.MachineLearning:AMul-
+4. Conclusiones tistrategyApproach.EE.UU,MorganKauffinan,1994.
+En general, el algoritmo multiclasificador obtuvo bue-
+[4] Wang,H.;WeiF.;PhilipY.;JiaweiH.MiningConcept-
+nosresultados,enambosexperimentos,concadaunodelos
+DriftingDataStreamsUsingEnsembleClassifiers.In9th
+clasificadoresbasesseleccionados,frenteacadaunodelos
+ACMSIGKDDInternationalConferenceonKnowledge
+conjuntosdedatosestudiados.
+DiscoveryandDataMining.Washington,DC,2003.
+ConlosalgoritmosNBtreeyNaiveBayes,utilizadosco-
+moclasificadoresbases,seobtuvieronmuybuenosresultados [5] Ort´ız,A.Propuestadealgortimomulticlasificadorpara
+(encuantoalporcientodeexperienciascorrectamenteclasifi- minarflujosdedatosyadaptarseacambiosdeconcep-
+cadas)enelprimerexperimento,esdecir,frenteaconjuntos to.SegundaConferenciaInternacionaldeCienciadela
+dedatosdondenoexistencambiosdeconceptos.Sinembargo Computacio´neInforma´tica.CongresoInforma´tica2013.
+92 Ana´lisisdeunalgoritmomulticlasificadorincrementalcondiferentesclasificadoresbases
+Tabla3.Promediodeltiempo(ensegundos),quedemoraenprocesarlosdatosconcadaclasificadorbase.
+Bases/Clasificador CIDIM NB J48 NBTree
+Tiempo(experimento1) 2 3 1 49
+Tiempo(experimento2) 3 4 2 55
+[6] Del Campo, J. Nuevos Enfoques en el Aprendizaje In- Methods.EnProceedingsoftheInternationalConference
+cremental. Tesis de doctorado. Universidad de Ma´laga, onArtificialIntelligence(ICAI-2000),2000.
+Espan˜a,2007.
+[13] Ramos-Jime´nezG.NuevosDesarrollosenAprendizaje
+[7] Street,W.andK.YongSeog.AStreamingEnsembleAl-
+Inductivo.TesisDoctoral,UniversidaddeMa´laga,Espan˜a.
+gorithm(SEA)forLarge-ScaleClassification.In7thInter-
+2001.
+nationalConferenceonKnowledgeDiscoveryandData
+Mining.NewYorkCity,NY.2001. [14] Quinlan, J. R. C4.5: Programs for Machine Learning,
+MorganKaufmann,1993.
+[8] Kolter,J.yM.Maloof.DynamicWeightedMajority:A
+New Ensemble Method for Tracking Concept Drift. in
+[15] Quinlan,J.R.Inductionofdecisiontrees.MachineLear-
+3rdInternationalIEEEConferenceonDataMining.Mel-
+ning1:81-106,1986.
+bourne,FL,2003.
+[16] Sahami, M. Learning Limited Dependence Bayesian
+[9] Yue,S.MiningConceptDriftsfromDataStreamsBased
+Classifiers. 2th International Conference on Knowled-
+on Multiclassifiers. In Beijing Municipal Key Labora-
+geDiscoveryinDatabases(KDD96),MenloPark,CA,
+toryofMultimediaandIntelligentSoftwareTechnology.
+AAAIPress.1996.
+Beijing,China.2007.
+[10] BifetA.andR.Gavalda.Learningfromtime-changing [17] Singh,M.andG.M.Provan.EfficientLearningofSe-
+datawithadaptivewindowing.SIAMInternationalCon- lectiveBayesianNetworkClassifier.InternationalConfe-
+ferenceonDataMining,MOA.2007. renceonMachineLearning.Philadelphia,PA.,Compu-
+terandInformationScienceDepartment,Universityof
+[11] Hall,M.;E.Frank,G.Holmes,B.Pfahringer,P.Reute-
+Pennsylvania.1995.
+mann, and I. H. Witten. The weka data mining softwa-
+[18] Kohavi,R.Scalinguptheaccuracyofnaive-Bayesclas-
+re:anupdate.SIGKDDExplorationsNewsletter,Weka.
+sifiers:adecisiontreehybrid.ProcedingsoftheSecond
+ISSN1931-0145.2009.
+InternationalConferenceonKnowledgeDiscoveryand
+[12] Ramos-Jime´nez G., Morales-Bueno R. y A. Villalba- DataMining(KDD96),Portland,OR.,AAAIPress,1996.
+Soria.CIDIM.ControlofInductionbySampleDivision

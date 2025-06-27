@@ -1,0 +1,872 @@
+CienciasMatemáticas,Vol.31,No.1,Pag.49-60, 2017
+Recibido08-2016
+Estudio comparativo sobre ensambles de
+clasificadores en flujos de datos no estacionarios
+Comparative study on classifiers ensembles in
+non-stationary data streams
+Alberto Verdecia Cabrera1,3*, Isvani Fr´ıas Blanco2, Agust´ın Ort´ız D´ıaz1, Yanet Rodr´ıguez
+Sarabia3, Antonio Mustelier Hechavarr´ıa1
+Resumen Muchas fuentes generan datos continuamente (conocidos como flujos de datos), por lo que es
+imposiblealmacenarestosgrandesvolu´menesdedatosyesnecesarioprocesarlosentiemporeal.Debidoa
+queestosdatossonadquiridosalolargodeltiempoyaladina´micademuchassituacionesreales,ladistribucio´n
+deprobabilidades(conceptoobjetivo)querigelosdatospuedecambiareneltiempo,unproblemacomu´nmente
+denominadocambiodeconcepto.Existenvariosalgoritmosparamanipularcambiosdeconcepto,yentreellos
+seencuentranlosensamblesdeclasificadoresincrementalesylosensamblesdeclasificadoresbasadosen
+bloquesdeinstancias.Enlaliteraturarevisadanoexistenart´ıculosparacompararestosdosenfoques.Porlo
+que,enestetrabajoserealizaunestudiocomparativosobreestosdosenfoques.
+Abstract Manysourcescontinuouslygeneratedata,knownasdatastream,creatinglargevolumesofdata. Itis
+necessarytoprocesstheminrealtimebutitisimpossibletostorethem. Becausethesedataarecollectedover
+timeandinthedynamicsofmanyrealsituations,thetargetfunctionofthedatacanchangeovertime,aproblem
+commonly called concept drift. There are several algorithms to deal with concept drift, such as incremental
+ensemblesandblock-basedensembles. Inthereviewedliteraturetherearenoarticlesoncomparisonofthese
+twoapproaches. Therefore,inthisworkwecarryoutacomparativestudybetweensuchapproaches.
+PalabrasClave
+Flujosdedatos—ensamblesdeclasificadores—cambiodeconcepto
+1Departamentodeinforma´tica,Universidadde,Granma,Cuba,averdeciac@udg.co.cu,aortizd@udg.co.cu,tonym@udg.co.cu
+2InstitutodeCieˆnciasMatema´ticasedeComputac¸a˜o,UniversidadedeSa˜oPaulo,Brazil,ifriasb@hotmail.com
+3CentrodeEstudiosdeInforma´tica,UniversidadCentral”MartaAbreu”deLasVillas,VillaClara,Cuba,yrsarabia@uclv.edu.cu
+*AutorparaCorrespondencia
+1. Introduccio´n (basura)esotroejemplo:lossitiosopersonasqueseencargan
+deenviarcorreonodeseadosdisfrazansuscorreosparatratar
+Enlaactualidadmu´ltiplessistemasgenerangrancantidad
+de evadir los filtros, por lo que los filtros anti-spam deben
+deinformacio´n,lacualconstituyeunafuenteimportantede
+estaractualizadosparaidentificarexitosamentelosspamen
+conocimiento[27].Enmuchassituacioneseltaman˜odelos
+eltiempo.
+datos generados por sensores, telefon´ıa y muchos otros, es
+potencialmenteinfinitodebidoasuconstantegeneracio´n.Por En la literatura se han utilizado muchos algoritmos co-
+loqueparaprocesarlosserequierente´cnicasdeminer´ıade momodelosbaseparamanipularcambiosdeconcepto.En-
+flujosdedatos.Entareasdeclasificacio´n,unflujodedatos tre estos se pueden encontrar sistemas basados en reglas
+se define como una secuencia muy grande ( potencialmen- [42,46,47],a´rbolesdedecisio´n[30,31,43,23],Na¨ıveBa-
+te infinita ) de pares que se van adquiriendo a lo largo del yes[2,1,25],ma´quinasdevectoresdesoporte[33,32],re-
+tiempo. Estos pares, llamados instancias o ejemplos, esta´n des neuronales artificiales [34] y razonamiento basado en
+compuestos por un conjunto de atributos y una etiqueta de casos[15,26].Tambie´nsehanpropuestoalgoritmosparala
+clase.Unodelosproblemasfundamentalescuandoseaprende deteccio´n de cambios de concepto tales como los gra´ficos
+apartirdeflujosdedatosnoestacionarios,obtenidosenel de control (control charts) [4], DDM (Drift Detection Met-
+tiempo desde diferentes fuentes, es el cambio de concepto. hod)[28],EDDM(EarlyDriftDetectionMethod)[3],ECDD
+Porejemplo,talescambiospuedenocurrirdebidoalcambio (EWMAforConceptDriftDetection),ADWIN(AdaptiveWin-
+deinteresespersonales,preferenciasderopas,nuevasprefe- dows)[6]yHDDM(HoeffdingDriftDetectionMethod)[22].
+rencias,consumodeenerg´ıa,etc.Elfiltradodecorreosspam Haciendousodelosdiferentesmodelosbasesylosdetectores
+50 Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios
+decambiosdeconceptosehandesarrolladovariosalgoritmos sercaracterizadoporladistribucio´ndeprobabilidadconjunta
+(cid:16)−→ (cid:17) −→
+basadosenensamblesdeclasificadoresparaelaprendizajea P X,Y dondeX representalosatributosyY eslaclase.
+partirdeflujosdedatosnoestacionarios.Gamayotros[28]
+Portantouncambioenladistribucio´ndelproblema(tambie´n
+distinguendoscategor´ıasdondesepuedenubicarlasestra-
+conocidocomocontexto[28]implicauncambiodeconcepto.
+tegias para enfrentar el problema del cambio de concepto:
+Enlaliteraturaexistenmu´ltiplesclasificacionesparade-
+estrategiasenlascualeselaprendizajeseadaptaeninterva-
+terminarlanaturalezadelcambiodeconcepto.Consideremos
+los de tiempo regulares sin considerar la ocurrencia de un
+queuncambiodeconceptoinvolucradosconceptosdiferen-
+cambiodeconcepto;yestrategiasenlascualessedetectapri-
+tes:elconceptoinicial(C )yelconceptofinal(C ).Unade
+I F
+meroelcambiodeconceptoyluegoelaprendizajeseadapta
+lasclasificacionesma´simportantesserefierealaextensio´ndel
+alcambio.Losprimerosme´todosdeensamblesusualmente
+cambio(tambie´nllamadatasadecambio).Dependiendode
+utilizaban la primera estrategia para manipular cambio de
+cuandiferentessonC yC ,sepuededecirquequeelcambio
+I F
+concepto,estossoloinclu´ıanlosmecanismosba´sicosparael
+estotaloparcial.Uncambiototalimplicaqueladistribucio´n
+aprendizaje:actualizarlosclasificadoresexistentes,eliminar
+deC yC nocompartennada,porloqueestecambiousual-
+I F
+losclasificadoresdebajorendimiento,einsertarclasificado-
+mente se simula con conjuntos de datos artificiales porque
+res.Aunqueestosmecanismospermitenadaptarsealcambio
+esdif´ıcilobservarloenconjuntosdedatosreales.Portanto
+sinnecesidaddedetectarestedeformaexpl´ıcita,laadaptacio´n
+cuando se aprende de conjuntos de datos reales el cambio
+alcambiogeneralmenteeslenta.Enlosu´ltimosan˜ossehan
+sueleserparcial.Deacuerdoconlavelocidaddelcambio,hay
+propuestovariosme´todosdeensamblequeincluyenmecanis-
+untiempo(t )paracambiardeC yC ,porloquecuan-
+mosdedeteccio´ndecambiosexpl´ıcita(segundaestrategia), cambio I F
+dot =0elcambioesabruptooqueesgradualcuando
+manipulandoloscambiosdeconceptodeformama´seficiente. cambio
+t >0.Cuandoelnuevocambioqueocurrira´ alfinalizar
+Sinembargo,enlaliteraturalosensamblesnoseclasifican cambio
+elcambioactualC haocurridopreviamentesedicequeeste
+F
+porlaformadeactualizarlosclasificadoresbases,niexisten
+cambioesrecurrente.
+estudiosexperimentalesdondesecomparanestosdostipos
+de ensambles. Por lo que, en este art´ıculo se propone una
+nuevaclasificacio´ndelosensamblesquesebasaenlaforma 3. Clasificadores individuales
+en que actualizan los clasificadores bases. De acuerdo con
+Enestaseccio´nsepresentanvariosdelosmodelosindivu-
+estaclasificacio´n,sepuedenclasificarenensamblesbasados
+dualesdeaprendizajequesonutilizadosparaclasificacio´nde
+enbloquesdeinstanciasyensamblesincrementales.Adema´s
+flujosdedatosnoestacionarios.
+serealizaunestudioexperimentaldondesecomparanestos
+enfoques frente a cambios de conceptos estables, abruptos
+3.1 Redesneuronalesartificiales
+ygraduales.Elrestodeesteart´ıculoesta´ estructuradodela
+Las redes neuronales artificiales han sido exitosamente
+siguientemanera:primeramenteenlaseccio´n2sedefinefor-
+utilizadasenlaminer´ıadedatos.Enlasaplicacionestradicio-
+malmenteelcambiodeconcepto.Enlaseccio´n3sepresentan
+nalesdeminer´ıadedatoslasredesneuronalessonentrenadas
+algunos modelos individuales capaces de aprender a partir
+utilizandounconjuntodeentrenamientofijo.Sinembargo,la
+deflujosdedatosnoestacionarios.Luegoenlaseccio´n4se
+mayor´ıadelosmodelosderedesneuronalesrequierenvarias
+realizaunarevisio´ndelosprincipalesalgoritmosdeensam-
+pasadassobreelconjuntodeentrenamientoparaajustarlos
+blesdeclasificadorespropuestosenlaliteratura.Enlaseccio´n
+pesosdelasneuronas,usualmenteseutilizaelalgoritmoback-
+5serealizaunestudioexperimentalparacompararlosdos
+propagation.Sinembargoenlaminer´ıadeflujosdedatoslos
+enfoquesestudiadosenesteart´ıculo.Finalmenteenlaseccio´n
+ejemplossonvistosunasolavezporelmodeloyesnecesario
+6sepresentanlasconclusionesdeestetrabajo.
+manteneracostadoelcostocomputacionalparaparaactuali-
+zarlospesosdelasneuronasconunasolapasadasobrelos
+2. Cambio de concepto
+datos.Unejemploparaadaptarunaredparaaprenderapartir
+Dentrodelaprendizajeincrementaloaprendizajeenl´ınea deflujosdatosesutilizarunmecanismodeolvido,esdecir
+[47]elproblemadeclasificacio´nsedefinegeneralmentepor cuandolarednoseentrenaconlosmismosdatosmu´ltiples
+unasecuencia(posiblementeinfinita)deejemplos(tambie´n veces,estaseajustara´ dina´micamentealosdatosquesevan
+conocidoscomoinstancias)oexperienciasS=e ,e ,...,e... obteniendoeneltiempo,portantopuedenreaccionardefor-
+1 2 i
+queseobtieneneneltiempo,normalmenteunaalavezyno manaturalalcambiodeconcepto.Unodelossistemasma´s
+necesariamente dependientes del tiempo. Cada ejemplo de conocidoscapazdemanipularcambioesFRANN(Floating
+→− →−
+entrenamientoe =(x,y)esta´ formadoporunvector x y RoughApproximationinNeuralNetwork)[34].
+i i
+unvalordiscretoy,llamadoetiquetaytomadodeunconjunto
+i
+Y denominadoclase.Cadavector →− x ∈ − X → tienelasmismas 3.2 Na¨ıveBayes
+dimensionesyacadadimensio´nselellamaatributo. Este modelo se basa en el teorema de Bayes y calcula
+Seconsideraconceptocomoelte´rminoqueserefierea la probabilidad condicional de cada una de las clases para
+lafuncio´ndedistribucio´ndeprobabilidaddelproblemaen cada ejemplo nuevo de entrenamiento asumiendo que los
+unpuntodeterminadoeneltiempo[36].Esteconceptopuede atributossonindependientesdadalaclase.ElalgoritmoNa¨ıve
+Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios 51
+Bayesaprendeeficientementeapartirdeflujosdedatosno Utilizando esta cota, Domingos y Hulten propusieron
+estacionariosconcomplejidadcomputacionalconstante. VFDT (Very Fast Decision Tree) [31]. VFDT induce incre-
+Deacuerdoconloplanteadoenlaseccio´n2cadaejemplo mentalmenteuna´rboldedecisio´napartirdeunflujodedatos,
+→− →−
+deentrenamientoe =(x,y)esta´formadoporunvector x y sinlanecesidaddealmacenarejemplosdeentrenamientodes-
+i i
+unvalordiscretoy,llamadoetiquetaytomadodeunconjunto pue´s de haber sido utilizados para actualizar el a´rbol. Este
+i
+Y denominadoclase.elclasificadorNa¨ıveBayessebasaen algoritmoessimilaralosalgoritmoscla´sicosdeinduccio´nde
+encontrarlaclasema´sprobablequedescribaaeseejemplo. a´rbolesdedecisio´n,solodifiereenlaseleccio´ndelatributo
+Laclasema´sprobablesera´ laquecumpla: paradividir.Enlugardeseleccionarelmejoratributodespue´s
+devertodoslosejemplos,VFDTutilizalacotadeHoeffding
+y
+p
+=argmax yi∈YP(y
+i
+| →− x) (1) paradeterminarcua´ntasinstanciasdebensermuestreadasan-
+tesdepoderelegir,conprobabilidad1−δ,que´ atributodebe
+esdecirdadalaprobabilidaddelosatributosquedescriben serusadoparalaexpansio´ndecadanodo.
+elejemploe,e´stepertenezcaalaclasey.Porelteoremade
+i i
+Bayes:
+4. Ensambles de clasificadores
+→−
+P(x |y)P(y) Los algoritmos basados en ensambles de clasificadores
+i i
+y p =argmax yi∈Y P( →− x) (2) combinanlaprediccio´ndelosclasificadoresbasesysepueden
+clasificar por la forma en que actualizan sus clasificadores
+→− bases.Laprimeraclasificacio´nesta´dadaporlautilizacio´nde
+y
+p
+=argmax yi∈YP(x |y
+i
+)P(y
+i
+) (3)
+bloquesdeinstancias.Losensamblesbasadosenbloquesde
+SepuedeestimarP(y)contandolasvecesqueaparecey instanciasdividenelflujodedatosenpequen˜osbloquesde
+i i
+enelconjuntodeentrenamientoydividie´ndoloporelnu´mero igualtaman˜oyentrenanclasificadoresconcadaunodeestos
+totaldeejemplosqueformanesteconjunto.Paraestimarel bloques.Laadaptacio´naloscambiosdeconceptodeestosen-
+→−
+te´rminoP(x |y)sedeberecorrertodoelconjuntodeentre- samblesgeneralmenteeslentaporquetienenqueesperaraque
+i
+namiento,loquerequiereunaltocostocomputacional.Na¨ıve selleneelbloqueparaactualizarlosclasificadoresbases.La
+Bayessimplificaelproblemaasumiendoquelosatributosson segundaclasificacio´ndelosensamblesesporlaactualizacio´n
+independientesdadalaclase.As´ılaprobabilidaddequeun delosclasificadoresdeformaincremental.Estosme´todosuti-
+→−
+ejemplonoetiquetado x pertenezcaalaclasey esta´ dada lizancomoclasificadoresbasesclasificadoresincrementales,
+i
+por: esdeciractualizanlosmodelosenlamedidaqueseobtienen
+lasinstancias.Enlassecciones4.1y4.2sedescribenvarios
+P( →− x |y)=∏P(x |y) (4) algoritmosdentrodeestasdosclasificaciones.
+i j i
+j
+4.1 Ensamblesbasadosenbloquesdeinstancias
+Laestimacio´ndelospara´metrosdelmodelo(porejemplo,
+→− Los ensambles de clasificadores basados en bloques de
+P(y)yP(x))sepuedenaproximarconfrecuenciasrelativas
+i instanciasdividenelflujodedatosenpequen˜osbloquesde
+del conjunto de entrenamiento. Estas son las estimaciones
+igualtaman˜oparacrearclasificadoresconcadaunodeestos
+de ma´xima verosimilitud de las probabilidades. Las proba-
+bloques.
+bilidadesdelasclasessepuedencalcularasumiendoclases
+Unodelosprimerosalgoritmosdeensambleparaelpro-
+equiprobables.Paraestimarlasprobabilidadesdecadaunode
+cesamientodeflujosdedatosfueSEA(StreamingEnsemble
+losatributosgeneralmenteseutilizanladistribucio´ndebino-
+Algorithm)[44].SEAcrealosclasificadoresbasesapartirde
+mialparaatributosdiscretosyladistribucio´nnormalcuando
+pequen˜ossubconjuntosdelosdatos,le´ıdossecuencialmente
+setrataconatributoscontinuos.
+en bloques de un taman˜o fijo. El algoritmo cuenta con un
+l´ımitema´ximodeclasificadoresqueactu´acomomecanismo
+3.3 A´rbolesdedecisio´n
+deadaptacio´n.Alseralcanzadoestel´ımitema´ximoobligaal
+La construccio´n de a´rboles de decisio´n ha sido amplia-
+algoritmoasustituirclasificadoresbasesanterioressiguiendo
+menteestudiadaenlacomunidaddelaprendizajeautoma´tico.
+ciertocriterioderemplazo.Paracombinarlasprediccionesde
+Enlaminer´ıadeflujosdedatos,ladesigualdaddeprobabilida-
+losclasificadoresbaseutilizavotacio´npormayor´ıanoponde-
+desdeHoeffding[18,22,23],deChernoff[18,23]hansido
+radaycomoclasificadorbaseutilizaelalgoritmoC4.5.SEA
+herramientaspoderosasparalainduccio´nenl´ıneadea´rboles
+presentaproblemasparaadaptarsealoscambiosdeconceptos
+dedecisio´n.LacotaHoeffdingindicaqueconprobabilidad
+abruptos;enestosresultadosinfluyeelmecanismodevota-
+1−δ, la media real de una variable aleatoria con rango R
+cio´nutilizadoyaquelosclasificadoresdejandeaprenderuna
+nodifieredelamediaestimadadespue´sdenobservaciones
+vezquesoncreados.
+independientesporma´sde:
+BajoelmismoesquemadeentrenamientoqueSEA,Wang
+yotros[45]propusieronelme´todoAWE(AccuracyWeighted
+(cid:115)
+R2ln
+(cid:0)1(cid:1)
+Ensemble).AWEcombinalasrespuestasdelosclasificado-
+ε = δ (5)
+2n resbaseatrave´sdelavotacio´npormayor´ıaponderada.La
+52 Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios
+ponderacio´ndelosclasificadoresbasesesta´ enfuncio´ndela vacio´ndeclasificadoresylainsercio´n,desernecesaria,de
+precisio´nobtenidaporlosmismos,alutilizarcomoinstancias nuevosclasificadoresactualizadosgarantizaunara´pidaadap-
+depruebalaspropiasinstanciasdelbloquedeentrenamiento tacio´n,sobretodosiexistenconceptosrecurrentes.
+actual.AligualqueSEA,surendimientofrenteacambiosde La mayor´ıa de los ensambles que actualizan los clasi-
+conceptosgradualesesaceptable,peroestonoocurreas´ıcuan- ficadores base mediante bloques presentan problemas para
+doloscambiossonabruptos.Esosedebefundamentalmente adaptarsealoscambiosdeconceptoabruptos,estosedebe
+aqueAWEesperaalpro´ximobloquedeentrenamientopara a que no tienen mecanismos expl´ıcitos para detectar cam-
+actualizarlospesosdelosclasificadoresbases. biosygeneralmenteesperanaquesecompleteunbloquede
+BWE (Batch Weighted Ensemble algorithm) [17] tam- instanciasparaactualizarlosclasificadoresbase.
+bie´ndivideelconjuntodeentrenamientoenbloquedeigual Enelalgoritmo1semuestraelesquemageneralsegui-
+taman˜oyutilizaelvotomayoritarioponderadoparacombi- do por los ensambles de clasificadores basados en bloques
+narlasalidadelosclasificadoresbases.Adiferenciadelos deinstancias.Elalgoritmorecibecomopara´metros,elflujo
+me´todosanteriores,esteincorporaundetectordecambiosal dedatos,lacantidaddeclasificadoresbasesyeltaman˜odel
+algoritmo,BDDM(BatchDriftDetectionMethod),yutiliza bloquedeinstancias.Despue´ssellenaelbloqueconlasins-
+unmodeloderegresio´nparaestimarcambiosdeconcepto.El tanciasdeentrenamientoycuandoelbloqueesta´completose
+detectordecambiosseutilizaba´sicamenteparadeterminar realizandeterminadasaccionespara,crearnuevosclasificado-
+cunadocrearunnuevoclasificadorbasedebidoaloscambios res,actualizarlosclasificadores,etc.Adema´sestosalgoritmos
+deconceptoosielconceptopermaneceestableelensamble debenestardisponiblesparapredecirentodomomento.
+novar´ıa.Laideafundamentaldeestapropuestaescombinar
+lacapacidaddelosensamblesparaadaptarsealoscambios Algoritmo1:Ensamblesbasadosenbloquesdeinstan-
+gradualesconeldetectordecambiosparamanipularcambios cias
+abruptos.
+Entrada:
+OtrapropuestabasadaenbloquesdeinstanciasesAUE flujodedatos,cantidadMdeclasificadores
+(AccuracyUpdatedEnsemble)[11].AUEmantieneuncon- bases,taman˜oN delbloquedeinstancias
+junto de clasificadores ponderados y predice la etiqueta de
+Salida :
+clasedelosejemplosquevanllegando,mediantelaagrega-
+clasepredichaporelensamble
+cio´ndelasprediccionesdelosclasificadoresbasesutilizando
+unaregladevotacio´nponderada.Cadavezquesecompleta 1 Bloque:bloquedeinstanciasparacrearclasificadores
+elbloquedeinstanciasdeentrenamiento,secreaunnuevo 2 foreachinstanciadeentrenamientodo
+clasificadorbaseparasustituiralpeorclasificadordelensam- 3 ifBloquenoesta´ llenothen
+ble.Despue´sdeeliminarelpeorclasificadorelrestodelos 4 Bloque+=nuevainstancia
+clasificadoresseactualizaconelnuevobloquedeinstancias 5 elseifBloqueesta´ llenothen
+ysuspesossonactualizadosdeacuerdoconsuprecisio´n.Si- 6 realizaraccionescomo,crearnuevoclasificador,
+milaraAUElomismosautorespropusieronOAUE(Online actualizarclasificadores,calcularpesos,etc.
+AccuracyUpdatedEnsemble)[12].Enestapropuestaloscla- 7 VacciarelBloque
+sificadoresbasessonentrenadosdemaneraincrementalylos
+pesosdecadaclasificadorbasesedeterminandeacuerdoa 8 returnentodomomentolaclasepredichaporel
+ensamble
+suprecisio´nestimada.OAUEmantieneelusodebloquesde
+instanciasparacadavezquesecompleteelbloquecrearun
+nuevoclasificadorysustituirelpeorclasificadordelensamble.
+Unapropuestama´srecienteesFAE(FastAdaptingEn- 4.2 Ensamblesincrementales
+semble)[38],unensambledisen˜adoparaadaptarsedeforma Losensamblesincrementalesutilizancomoclasificadores
+ra´pidaaloscambiosdeconcepto,tantoabruptoscomogradua- basesalgoritmosincrementales,esdecirsevanactualizando
+les,yespecializadoeneltratamientodeconceptosrecurrentes. enlamedidaenlaqueseobtienenlosdatos.
+Esta propuesta cuenta con una coleccio´n de clasificadores Bagging[10]yBoosting[21]sondosdelosalgoritmos
+querepresentanavariosdelosconceptosanalizados;como ma´s conocidos para entrenar clasificadores bases. Bagging
+diferencia,enestecasolosclasificadoresesta´norganizadosen aplicamuestreoconremplazamientoalconjuntodedatosori-
+activoseinactivossegu´nsucomportamientofrentealosdatos ginalparacrearM conjuntosdeentrenamientosdelmismo
+actuales.FAEesunmulticlasificadorquetomasudecisio´n taman˜oqueeloriginalycreaMclasificadoresbaseconestos
+globalapartirdelasdecisionesparcialesdelosclasificado- conjuntosdeentrenamiento.Estosclasificadoressoncreados
+resactivos;mientrasqueconservaungrupodeclasificadores utilizandoelmismoalgoritmodeaprendizaje.Paraquelos
+inactivoscomoalmace´ndeantiguosconceptos,loscualesle clasificadoresbasesainducirconunmismoalgoritmocum-
+favoreceneneltratamientodeconceptosrecurrentes.Estos planelrequisitodeserdiferentes,setienequegarantizarque
+clasificadoresinactivossonactivadosdeformamuyra´pida lossubconjuntosdeentrenamientogeneradosseantambie´n
+sireapareceelconceptoalcualellosrepresentan.Lareacti- diferentes.Estosegarantizautilizandoalgoritmosdeinduc-
+Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios 53
+cio´nqueseanmuysensiblesapequen˜asvariacionesendicho se denominan ensambles viejos de baja y alta diversidad y
+conjunto,porejemplo,algunosalgoritmosdeinduccio´nde semantienenporquesegu´nlosautores,estogarantizamejor
+a´rbolesdedecisio´n.Estacaracter´ısticadeinestabilidadesla explotacio´ndeladiversidad,elusodelainformacio´napren-
+quedanombrealosalgoritmosconocidoscomo“aprendices dida de viejos conceptos, y la robustez ante falsas alarmas.
+de´biles”yseveacentuadacuandoelsubconjuntodeentre- Loscuatroensamblessemantienenmientrassecumplandos
+namientotieneuntaman˜olimitado.Enbaggingsecombinan condicionesespec´ıficasquechequeanlasituacio´ndecambio,
+lasprediccionesdelosclasificadoresindividualesutilizando delocontrario,utilizandounmecanismodecombinacio´nse
+votacio´nmayoritaria:seeligelaclasequehayasidoseleccio- pasaatrabajarcondosensamblesnuevamente.
+nadaporelmayornu´merodeclasificadoresquecomponenel
+OtroalgoritmodeensambleincrementalesFASE(Fast
+ensamble. AdaptiveStackingofEnsembles)[25].FASEutilizaunmeta-
+Elme´todoboosting[21]asignapesosalasinstanciasde clasificadorparacombinarlasalidadelosclasificadoresbases.
+entrenamientoenelconjuntodeentrenamiento.Elobjetivo El esquema de FASE es aplicado a la versio´n en l´ınea del
+delme´todoboostingesinducirunmodeloqueminimicela algoritmobagging[40]yutilizaHDDM(HoeffdingDriftDe-
+sumadelospesosdelasexperienciasquenoseclasifiquen tectionMethod)[22]comodetectordecambiosdeconceptoy
+correctamente.Enunprincipio,lospesosdelasdiferentesex- estimadordeerror.Cuandosedetectaunacambio,seelimina
+perienciastendra´nelmismovaloryloserroressera´nigualde elpeorclasificadordelensambleyseagregaunonuevo.FASE
+importantes.Peroencadaiteracio´n,lospesosdelasexperien- esta´compuestoporclasificadoresadaptativosenlosdosnive-
+ciasquehansidoincorrectamenteclasificadasseaumentara´n les(ambosclasificadoreselbaseyelmetasonadaptativos).
+paradarlesma´simportancia.Deestaforma,encadaiteracio´n CadaclasificadoradaptativousaHDDM,quemonitorizasu
+seledama´simportanciaalasexperienciasquenohansido tasadeerrorconelobjetivodeemitirtressen˜alesdiferentes
+clasificadascorrectamenteenpasosanteriores.Enestemo- decambioduranteelprocesodeaprendizaje.HDDMemite
+delo,lacombinacio´ndelosclasificadoresba´sicosnoestan lasen˜alen-controlcuandoelconceptoactualpermanecees-
+simplecomoconbagging.Ahorasetieneencuentaelerror table,alertacuandoesprobablequeseaproximeuncambio,
+estimadodecadamodeloparacalcularlaclasedelaobserva- y fuera-de-control cuando se detecta el cambio. En FASE,
+cio´nqueseesta´ intentandopredecir.Sumandolospesosde cada clasificador adaptativo usa un solo clasificador en los
+losmodelosqueeligenlamismaclase,seseleccionaaquella conceptosestables.Cuandoelniveldealertaesalcanzado,el
+queacumulemayorvalor. clasificadoradaptativoentrenaunclasificadoralternativoque
+Oza y Rusell [40] propusieron versiones incrementales reemplazaalprincipalsidespue´sdelniveldealertaocurreun
+delosalgoritmosBaggingyBoosting,peroestaspropuestas cambio.Losclasificadoresadaptativospuedendeestaforma
+notienenmecanismosparaadaptarsealoscambiosdecon- teneralosumodosclasificadores(elclasificadorprincipal
+cepto. As´ı, su adaptacio´n al cambio depende del algoritmo y el alternativo), las predicciones de estos clasificadores es
+declasificacio´nutilizadoparagenerarlosclasificadoresba- combinadamedianteelvotoponderado.
+ses. Para manipular cambios de concepto, Bifet y otros [9] Enelalgoritmo2semuestraelesquemageneralseguido
+propusieronunnuevoalgoritmobasadoenBaggingllamado por los ensambles de clasificadores incrementales. El algo-
+OzaBagAdwin.Laideadeestavarianteesagregaralaversio´n ritmo solo recibe como para´metros, el flujo de datos y la
+incrementaldelalgoritmoBaggingeldetectordecambiosde cantidad de clasificadores bases. Luego actualiza cada uno
+conceptoADWIN(AdaptiveWindowing)[6].Elmecanismo delosclasificadoresbasesconcadaunadelasinstanciasde
+deadaptacio´nutilizadosebasaenlasustitucio´ndelpeorde entrenamiento.
+losclasificadores,cuandoseestimauncambio,porunnuevo
+clasificadorba´sicocreadoma´srecientemente.
+Algoritmo2:Ensamblesincrementales
+El algoritmo Boosting tambie´n ha sido explorado en la
+Entrada:
+miner´ıa de flujos de datos [39], pero el algoritmo mantie-
+flujodedatos,cantidadMdeclasificadores
+nevaloresdeprecisio´nma´sbajosqueelBaggingpropuesto
+por Bifet y otros [9]. Otro ensamble basado en Bagging es Salida :
+DDD(DiversityforDealingwithDrifts)[37],elcualescapaz clasepredichaporelensamble
+demantenerunaaltadiversidaddeclasificadoresbasesyde
+1 foreachinstanciadeentrenamientodo
+adaptarsealoscambiosdeconceptos.DDDmantienevarios
+2 aculizarlosclasificadoresbasesconcadainstancia
+ensamblescondiferentesnivelesdediversidad.Sienlosdatos
+deentrenamiento
+nosedetectalapresenciadecambiosdeconceptos,elsistema
+estara´ compuesto por dos ensambles, uno con baja diversi- 3 returnentodomomentolaclasepredichaporel
+ensamble
+dadyotroconaltadiversidadperosoloelensambleconbaja
+diversidadesutilizadoparapredecir.Cuandosedetectaun
+cambiodeconceptoseconstruyendosnuevosensambles,uno
+conbajadiversidadyotroconaltadiversidad.Losensambles
+debajayaltadiversidaddespue´sdeladeteccio´ndelcambio
+54 Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios
+Tabla1.Clasificacio´ndelosalgoritmossegu´nlaformade Tabla2.Principalescaracter´ısticasdelosgeneradoresde
+actualizarlosclasificadoresbases flujosdedatosutilizados.
+Actualizacio´ndelosclasificadores
+Algoritmo
+Bloque Incremental
+FASE x
+LeveragingBag x Generador
+OzaBagAdwin x
+AUE x
+AWE x
+OAUE x
+5. Estudio experimental
+En el estudio experimental descrito en esta seccio´n se
+evalu´anlosalgoritmosfrenteaconjuntosdedatosartificiales
+yreales.Losalgoritmosalgoritmossonevaluadossobrelos
+diferentestiposdecambios(abruptosygraduales).
+TodoslosexperimentosfueronejecutadosenMOA[7],
+una herramienta para evaluar los algoritmos que aprenden
+apartirdeflujosdedatos.MOAproveeunagrancoleccio´n
+deherramientasdeevaluacio´n,variosalgoritmos,ymuchos
+me´todosparagenerarflujosdedatosartificialesconlaposibi-
+lidaddeincluircambiosdeconcepto.
+Lasmedidaderendimientoutilizadaparaevaluarlosalgo-
+ritmofuelaprecisio´n.Estamedidasecalculo´ enl´ıneaconel
+objetivodemedircomoevolucionaelprocesodeaprendizaje
+eneltiempo.
+Enesteart´ıculoseutilizo´ paraevaluarlosalgoritmosel
+enfoquetest-then-train,tambie´nconocidocomoprequential
+(predictivesequencial)quesederivadelerrorpredictivose-
+cuencial[16].Esteenfoqueconsisteba´sicamenteencalcular
+las medidas de intere´s (usualmente la precisio´n) para cada
+instancianueva(etapadeprueba)ydespue´sutilizarelejem-
+ploparaseguirconelentrenamientodelalgoritmo(etapade
+entrenamiento)[31].Porlotanto,encadaejemplonuevo,el
+clasificadorprimeroseprobo´ yluegoseentreno´.Duranteel
+procesodeaprendizaje,laprecisio´nsecalculo´ conrespecto
+aunaventanadeslizantedetaman˜o100[7].Laprecisio´nde
+losclasificadoressecalculo´ cada100ejemplosprocesados
+por medio de la fraccio´n entre el nu´mero de los ejemplos
+bienclasificadosenestaventanadeslizanteyeltaman˜odela
+ventana.
+5.1 Algoritmosutilizados
+Enesteestudioexperimentalseconfiguraronlosalgorit-
+mosFASE[25],LeveragingBag[8],OzaBagAdwin[9],AUE
+[11],OAUE[12],AWE[45]consuspara´metrospordefecto
+enMOA.
+Entodoslosalgoritmosseutilizo´ comoclasificadorbase
+Na¨ıveBayes,elcualesunodelosclasificadoresma´sutilizado
+paraelaprendizajeapartirdeflujosdedatosnoestacionarios
+[14,13,35,41,20]. EnlaTabla1seclasificanlosalgoritmos
+seleccionadossegu´nlaformaenqueactualizansusclasifica-
+doresbases.
+selanimoN socire´muN
+sesalC
+SEA(4funcionesobjetivo) 3 2
+Funcionesdebaseradial 50 10
+(RBF)
+Waveform(WAVE) 40 3
+Hyperplane(HYP) 10 2
+LED(10%deruido) 24 10
+STAGGER(STA) 3 2
+AGRAWAL(AGR,10 6 3 2
+funcionesobjetivo)
+5.2 Experimentos con conjuntos de datos artificia-
+les
+Losconjuntosdedatosartificialesutilizadosparalaexpe-
+rimentacio´nesta´ndisponiblesenMOAyesta´ndisen˜adospara
+simularcambiosdeconceptoporloquehansidoampliamente
+utilizadosenlaliteratura[22,25,23,24,12,11,9,5,8].En
+laTabla2sepresentanlasprincipalescaracter´ısticasdelos
+conjuntosdedatosseleccionados.Porloquedeestaforma,
+los generadores seleccionados para los experimentos inclu-
+yenruido,atributosirrelevantes(LED)ydiferentestiposde
+funcionesobjetivo(SEA,AGRySTA).Enestaseccio´npri-
+meramenteseestudio´ laestabilidaddelosalgoritmosfrente
+aconceptosestables.Despue´sparamostrarlaestabilidadde
+los algoritmos frente a cambios de conceptos (abruptos y
+graduales).
+5.2.1 Experimentosconconceptosestables
+Enconceptosestables,losalgoritmosfueronentrenados
+con1,000,000deejemplos,yseutilizo´ elenfoquetest-then-
+trainparaevaluarsurendimiento.LaTabla3muestraelrendi-
+mientodelosalgoritmosencuantoaprecisio´n.Adema´sen
+laTabla3secuentalacantidaddevecesquecadaalgoritmo
+gana(G),pierde(P)yempata(E)contraelresto.Comose
+puedeobservarelalgoritmoFASEeselquema´svecesgana.
+Paracomprobardiferenciassignificativasentrelosalgo-
+ritmosserealizaronpruebasestad´ısticassiguiendolameto-
+dolog´ıapropuestaporDemsˇar[19],Garc´ıayotros[29]para
+compararvariosclasificadoressobrevariosconjuntosdedatos.
+EnlaFigura1asemuestralacomparacio´nentrelosalgorit-
+mos, como se puede apreciar los algoritmos incrementales
+(FASE,LeveragingBag,OzaBagAdwin)obtienenmejoresre-
+sultadosquelosalgoritmosqueutilizanbloquesdeinstancias
+(AWE,OAUE,AUE).Enconceptosestableslargos,teo´rica-
+mentenoesnecesarioeliminarclasificadoresoactualizarel
+pesodelasinstanciasdeentrenamiento.Losalgoritmosin-
+crementalesestudiadosutilizanmecanismosdedeteccio´nde
+cambios para estimar la tasa de error de los clasificadores
+basesysoloeliminanclasificadorescuandoseestimancam-
+biosdeconcepto,porloqueenconceptosestableslaTabla
+Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios 55
+Paraevaluarelrendimientodelosalgoritmos,laprecisio´nse
+calculo´ cada100ejemplosdeentrenamiento.Laprecisio´nfue
+2 3 4 5 6 calculadaatrave´sde100ejemplosdepruebadiferentesen
+cadapasodeprueba(cada100ejemplosdeentrenamiento).
+LasTablas4y5resumenelrendimientodelosalgoritmos
+FASE AWE
+LeveragingBag OAUE ente´rminosdepromedio(x)ydesviacio´nesta´ndar(s)parala
+OzaBagAdwin AUE
+precisio´n.Lasdiferenciassignificativasdeestasmedidascon
+respectoalosrestantesalgoritmosesta´nmostradasennegritas
+(a)Comparacio´ndelosalgoritmosfrenteaconceptosestables paralaprecisio´n.Adema´slasFiguras1by1cmuestranlos
+rankingspromediodelosalgoritmosfrenteacambiosabrup-
+tosygradualesrespectivamente.Comosepuedeobservarno
+existendiferenciassignificativasentrelosdosenfoques.Por
+ejemploencambiosabruptoslosalgoritmosAWEyOAUE
+1 2 3 4 5
+obtienenbuenosresultados,aunqueelmejorresultadoloobtie-
+neelalgoritmoFASE,elcualmanipulacambiosdeconcepto
+FASE LeveragingBag
+AWE AUE encadaunodelosclasificadoresbases.Adicionalmenteen
+OAUE OzaBagAdwin laFigura2semuestranlascurvasdeaprendizajedelosalgo-
+ritmosestudiadosfrenteacambiosabruptos.Enlasfiguras
+(b)Comparacio´nentretodoslosalgoritmosfrenteacambiosdeconcepto sepuedeobservarquelosalgoritmosdeensamblebasados
+abruptos enbloquesdeinstanciassecomportandemanerasimilar,es
+deciralrededordelpuntodecambiosuprecisio´nsedeteriora
+peroserecuperanra´pidamente.Enelcasodelosalgoritmos
+deensambleincrementales(LeveragingBagyOzaBagAdwin)
+2 3 4 5 se demoran ma´s en adaptarse a los cambios. Esto se debe
+principalmenteaqueestosalgoritmosnomanipulancambios
+enlosclasificadoresbases.
+FASE OzaBagAdwin
+AWE OAUE
+LeveragingBag AUE
+5.3 Experimentoscondatosreales
+Enmuchosescenariosrealessehadetectadolapresencia
+(c)Comparacio´ndelosalgoritmosfrenteacambiosgraduales
+decambiosdecambiosdeconcepto.Enestosescenariosnose
+Figura1.Comparacio´nentretodoslosalgoritmossobre
+sabequetiposdecambiosesta´npresentesporloqueesimpor-
+datosartificialesutilizandoeltestdeFriedmanyel
+tanterealizarexperimentoscondatosdedistintosescenarios.
+procedimientodeBergmannHommelparaelana´lisispost
+Enesteexperimentoseevalu´anlosme´todosprocesandolos
+hoc.Losalgoritmosqueesta´nconectados(p-value=0.10)no
+ejemplosensuordentemporal.Alallegadadecadanuevo
+existendiferenciassignificativas.Todoslosalgoritmos
+ejemplodeentrenamiento,alclasificadorprimeroselerea-
+utilizanNa¨ıveBayescomoclasificadorbase.
+liza una prueba eliminado la etiqueta de clase del ejemplo,
+luego el aprendizaje continu´a normalmente con el ejemplo
+3muestraqueestosalgoritmossonrobustosalruidoyafal- original.Laprecisio´nescalculadaconrespectoaunaventana
+sasdetecciones.Porelcontrariolosalgoritmosqueutilizan deslizantedetaman˜ofijoiguala100.LaTabla6muestralas
+bloques de instancias cada vez que se completa un bloque caracter´ısticasprincipalesdelosconjuntosdedatosrealesse-
+siempreeliminanelpeorclasificador,porloquealnoocurrir leccionadosparaesteexperimento.Paralaprecisio´n,laTabla
+cambiosdeconceptoseproduceperdidadeinformacio´nal 7muestraelpromedioyladesviacio´nesta´ndardelafraccio´n
+eliminarclasificadoresbases. entre el nu´mero de ejemplos bien clasificados y el total de
+ejemploscada100ejemplosprocesados.LaFigura3muestra
+5.2.2 Cambiosabruptosygraduales la comparacio´n estad´ıstica entre los algoritmos estudiados.
+En esta seccio´n lo algoritmos fueron ejecutados frente ComosepuedeobservarelalgoritmoFASEtambie´ntieneun
+conceptosquecambianrepetidamentedeacuerdoconlaTa- buenrendimientofrenteaconjuntosdedatosreales.Porlo
+bla2,considerandovariasfuncionesobjetivosparasimular queelme´todoutilizadoporFASEparamanipularcambiosde
+cambiosabruptosygraduales.Parasimularcambiosgradua- conceptoseseficientetantoparadatosartificialescomopara
+lesseutilizo´ lafuncio´nsigmoideimplementadaenMOA[7], datos reales. En la Figura 3 se muestra claramente que los
+incrementandolaprobabilidadqueacadainstantedetiempo algoritmosFASE,LeveragingBagyOzaBagAdwinobtienen
+losnuevosejemplospertenezcanalnuevoconcepto.Enlas mejoresresultadosquelosalgoritmosAUE,AWEyOAUE.
+Tablas se generaron 25,000 ejemplos por concepto estable, Enestecasoelusodemecanismosdedeteccio´ndecambios
+10cambiosdeconcepto,encambiosgraduales(Tabla5)se expl´ıcitosylaactualizacio´nincrementaldelosclasificadores
+configuro´ el per´ıodo de transicio´n entre conceptos a 5,000. basesesma´seficientequelosmecanismosdeadaptacio´nde
+56 Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios
+Tabla3.RendimientodelosalgoritmosfrenteaconceptosestablesutilizandocomoclasificadorbaseNa¨ıveBayes
+LeveragingBag OzaBagAdwin AUE AWE OAUE
+Algoritmo Promedio
+G P E G P E G P E G P E G P E
+FASE 11 9 0 13 7 0 19 1 0 14 6 0 18 2 0 82,47
+LeveragingBag 8 12 0 20 0 0 13 7 0 20 0 0 82,34
+OzaBagAdwin 19 1 0 13 7 0 18 2 0 82,33
+AUE 9 10 1 5 14 1 82,04
+AWE 10 9 1 82,28
+OAUE 82,08
+Tabla4.Rendimientodelosalgoritmossobrecambiosabruptos.Loscambiosocurrencada25000
+ejemplosdeentrenamiento.Segeneraron10cambios.
+Algoritmo Medida AGR HYP LED RBF SEA STA WAVE Promedio
+x 84,37 93,16 73,56 71,97 87,80 99,93 80,56 84,48
+FASE
+s 12,14 2,53 2,64 1,56 1,54 0,37 1,29 -
+x 82,98 85,45 70,16 72,00 87,69 87,10 80,49 80,84
+LeveragingBag
+s 13,29 13,87 8,86 1,48 1,56 19,18 1,28 -
+x 80,57 85,41 71,34 71,98 87,04 87,28 80,48 80,59
+OzaBagAdwin
+s 17,28 15,59 6,46 1,50 2,03 18,98 1,30 -
+x 82,69 91,89 70,96 72,05 87,43 97,83 80,42 83,32
+AUE
+s 13,88 7,09 10,31 1,90 3,37 8,40 2,83 -
+x 83,50 92,02 72,27 72,55 87,14 98,88 81,32 83,95
+AWE
+s 12,65 6,34 6,87 1,98 3,47 5,21 2,88 -
+x 82,87 91,85 71,27 72,00 87,53 97,88 80,43 83,40
+OAUE
+s 13,75 7,27 9,63 1,90 3,33 8,27 2,83 -
+Tabla5.Rendimientodelosalgoritmossobrecambiosgraduales.Loscambiosocurrencada25000
+ejemplosdeentrenamientocon5000ejemplosenelper´ıododetransicio´nentreconceptosconsecutivos.
+Segeneraron10cambios.
+Algoritmo Medida AGR HYP LED RBF SEA STA WAVE Promedio
+FASE x 81,70 90,53 70,96 71,99 87,20 96,28 80,55 82,74
+s 12,67 6,19 6,73 1,55 1,89 8,29 1,30 -
+LeveragingBag x 81,74 90,18 71,10 71,99 86,86 96,05 80,47 82,63
+s 12,68 6,30 6,69 1,51 2,05 8,80 1,29 -
+OzaBagAdwin x 81,73 90,14 71,20 71,99 86,72 95,92 80,48 82,60
+s 12,81 6,37 6,47 1,51 2,06 9,08 1,31 -
+AUE x 81,50 89,68 70,14 72,07 87,30 95,56 80,42 82,38
+s 13,17 7,74 9,00 1,90 3,33 9,82 2,78 -
+AWE x 81,89 89,90 69,69 72,39 86,90 96,07 81,31 82,59
+s 12,77 6,71 9,51 1,94 3,42 8,74 2,82 -
+OAUE x 81,64 89,73 70,29 72,05 87,36 95,64 80,42 82,45
+s 13,09 7,68 8,81 1,89 3,32 9,73 2,78 -
+Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios 57
+100 %
+90 %
+80 %
+70 %
+60 %
+50 %
+40 %
+30 %
+0 50 k 100 k 150 k 200 k 250 k 300 k
+sodacifisalc
+neib
+ed
+%
+100 %
+90 %
+80 %
+70 %
+60 %
+50 %
+40 %
+30 %
+20 %
+10 %
+0 50 k 100 k 150 k 200 k 250 k 300 k
+Ejemplos procesados
+FASE OzaBagAdwin OAUE
+LeveragingBag AUE AWE
+(a)Precisio´ndelosalgoritmos(generadorAGR)sobrecambiosabruptos.
+sodacifisalc
+neib
+ed
+%
+Ejemplos procesados
+FASE OzaBagAdwin OAUE
+LeveragingBag AUE AWE
+(b)Precisio´ndelosalgoritmos(generadorHYP)sobrecambiosabruptos.
+80 %
+70 %
+60 %
+50 %
+40 %
+30 %
+20 %
+10 %
+0 %
+0 50 k 100 k 150 k 200 k 250 k 300 k
+sodacifisalc
+neib
+ed
+%
+100 %
+90 %
+80 %
+70 %
+60 %
+50 %
+40 %
+30 %
+20 %
+10 %
+0 50 k 100 k 150 k 200 k 250 k 300 k
+Ejemplos procesados
+FASE OzaBagAdwin OAUE
+LeveragingBag AUE AWE
+(c)Precisio´ndelosalgoritmos(generadorLED)sobrecambiosabruptos.
+sodacifisalc
+neib
+ed
+%
+Ejemplos procesados
+FASE OzaBagAdwin OAUE
+LeveragingBag AUE AWE
+(d)Precisio´ndelosalgoritmos(generadorSTA)sobrecambiosabruptos.
+Figure2. Precisio´ndelosalgoritmossobrevariosgeneradores.
+58 Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios
+Tabla6.Principalescaracter´ısticasdelosdatasetsreales
+seleccionados
+Dataset
+omino´rcA solpmejE lanimoN ocire´muN
+sodidrepserolaV
+sesalC
+losdatosma´srecientes.Noocurreas´ıconlosensamblesque
+utilizanbloqueyaquevaneliminadoclasificadorescadavez
+quesecompletaunnuevobloquedeinstancias.
+En los experimentos con cambios de concepto ambos
+enfoquesobtienenbuenosresultados,peronosepuedeafirmar
+queconlosconjuntosdedatosutilizadosunenfoqueesmejor
+queotro.Sinembargofrenteaconjuntosdedatosrealeslos
+ensamblesincrementalesobtienenmejoresresultados,esdecir
+Electricity ELE 45.312 1 7 s´ı 2
+sonma´sestablesantesituacionesdondeloscambiospueden
+ForestCover COV 581.012 44 10 no 7
+sertantoabruptoscomograduales.
+KDDCup10% KDD 494.021 7 34 no 2
+Nursery NUR 12.960 8 0 no 5
+Spamcorpus2 SA1 9.325 500 0 no 2 Referencias
+Spam2 SA2 4.601 1 57 no 2
+[1] StephenBachandMarkMaloof. Abayesianapproach
+Usenet1 USE1 1.500 100 0 no 2
+to concept drift. In Advances in Neural Information
+Usenet2 USE2 1.500 100 0 no 2
+ProcessingSystems,pages127–135,2010. 1
+Connect-4 CON 67.557 21 0 no 3
+EEGEyeState EYE 14.980 0 14 no 2
+[2] StephenHBach,MarcusMaloof,andothers.Pairedlear-
+PokerHand POK 1.000.000 0 11 no 10
+nersforconceptdrift. InDataMining,2008.ICDM’08.
+Bankmarketing BAN 41.188 9 7 no 2
+EighthIEEEInternationalConferenceon,pages23–32.
+IEEE,2008. 1
+[3] ManuelBaena-Garcia,JosedelCampo-Avila,RaulFi-
+dalgo,AlbertBifet,RicardGavalda,andRafaelMorales-
+1 2 3 4 5 6
+Bueno. Earlydriftdetectionmethod. 2006. 1
+FASE OAUE [4] Miche`leBassevilleandIgorV.Nikiforov. Detectionof
+LeveragingBag AUE
+AbruptChanges:TheoryandApplication. Prentice-Hall,
+OzaBagAdwin AWE
+Inc.,UpperSaddleRiver,NJ,USA,1993. 1
+Figura3.Comparacio´nentretodoslosalgoritmossobre [5] AlbertBifet,EibeFrank,GeoffreyHolmes,andBern-
+datosrealesutilizandoeltestdeFriedmanyelprocedimiento hardPfahringer. AccurateEnsemblesforDataStreams:
+deBergmannHommelparaelana´lisisposthoc.Los CombiningRestrictedHoeffdingTreesusingStacking.
+algoritmosqueesta´nconectados(p-value=0.10)noexisten InACML,pages225–240,2010. 5.2
+diferenciassignificativas.TodoslosalgoritmosutilizanNa¨ıve
+Bayescomoclasificadorbase. [6] AlbertBifetandRicardGavalda. Learningfromtime-
+changing data with adaptive windowing. In In SIAM
+InternationalConferenceonDataMining,2007. 1,4.2
+losensamblesqueutilizanbloquesdeinstancias.
+[7] AlbertBifet,GeoffHolmes,RichardKirkby,andBern-
+hard Pfahringer. Moa: Massive online analysis. The
+6. Conclusiones JournalofMachineLearningResearch,11:1601–1604,
+2010. 5,5.2.2
+Lageneracio´nconstantedegrandescantidadesdedatosen
+eltiempoyelcambiodeconceptosondosdelosproblemas
+[8] AlbertBifet,GeoffHolmes,andBernhardPfahringer.
+ma´scomplejosenlaminer´ıadeflujosdedatos.Enestetrabajo
+Leveragingbaggingforevolvingdatastreams. InMa-
+sepresentarondosenfoquesparasolucionarestetipodepro-
+chinelearningandknowledgediscoveryindatabases,
+blemas.Estosenfoquessonlosensamblesincrementalesylos
+pages135–150.Springer,2010. 5.1,5.2
+ensamblesbasadosenbloquesdeinstancias.Losensambles
+incrementalesutilizanclasificadoresbasesincremenatalesde [9] Albert Bifet, Geoff Holmes, Bernhard Pfahringer, Ri-
+manera que siempre esta´n actualizados con respecto a los chardKirkby,andRicardGavalda. Newensemblemet-
+datosma´srecientes.Mientrasquelosensamblesqueutilizan hodsforevolvingdatastreams. InProceedingsofthe
+bloquesvandividiendoelflujodedatosenbloquesdedatos 15thACMSIGKDDinternationalconferenceonKnow-
+deigualtaman˜oyactualizanlosclasificadoresbasesconcada ledgediscoveryanddatamining,pages139–148.ACM,
+unodeestosbloques.Enelestudioexperimentalrealizadose 2009. 4.2,5.1,5.2
+demostro´ quelosensamblesincrementalesobtienenmejores
+resultadosfrentea conceptosestablesdebidoa queloscla- [10] LeoBreiman. Baggingpredictors. Machinelearning,
+sificadoresbasessiempreesta´nactualizadosconrespectoa 24(2):123–140,1996. 4.2
+Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios 59
+Tabla7.Rendimientodelosalgoritmosenconjuntosdedatosreales.
+Algoritmo Medida BAN CONE COV ELE EYE KDD NUR POK SA1 SA2 USE1 USE2
+FASE x 89,54 74,58 88,16 85,25 99,05 99,83 93,30 76,56 99,77 92,03 76,93 74,00
+s 10,90 13,18 7,46 6,40 2,58 1,03 5,68 9,56 1,45 6,35 10,65 11,25
+LeveragingBag x 89,94 75,07 83,20 78,84 90,61 99,62 91,19 73,08 97,64 91,67 65,67 73,27
+s 11,17 13,72 11,92 11,97 17,88 3,14 8,13 12,58 5,75 10,08 20,78 10,40
+OzaBagAdwin x 89,79 74,87 83,07 78,91 90,91 99,66 90,30 73,48 98,00 90,53 64,07 72,33
+s 11,39 13,99 11,96 12,13 18,26 2,88 9,27 12,35 5,19 10,84 20,50 11,38
+AUE x 88,30 69,09 80,09 74,96 57,15 21,48 80,52 62,39 58,79 74,96 61,20 64,33
+s 14,85 18,15 14,72 15,40 42,02 40,38 19,54 21,27 46,22 32,50 22,82 6,12
+AWE x 85,35 64,33 80,15 71,94 57,78 21,25 79,24 58,20 59,72 74,54 60,60 61,67
+s 19,10 19,62 15,17 16,79 41,35 40,26 17,59 22,20 47,32 32,32 22,29 8,59
+OAUE x 88,50 72,96 80,86 76,98 63,87 22,99 87,25 68,50 75,30 81,96 63,67 70,80
+s 15,09 15,51 13,93 13,86 40,58 41,56 14,95 16,03 38,36 27,57 18,63 7,68
+[11] D.BrzezinskiandJ.Stefanowski. ReactingtoDifferent [21] Yoav Freund and Robert E. Schapire. A Short Intro-
+TypesofConceptDrift:TheAccuracyUpdatedEnsem- ductiontoBoosting. InInProceedingsoftheSixteenth
+bleAlgorithm. IEEETransactionsonNeuralNetworks InternationalJointConferenceonArtificialIntelligence,
+andLearningSystems,25(1):81–94,January2014. 4.1, pages1401–1406.MorganKaufmann,1999. 4.2
+5.1,5.2
+[22] Isvani Frias-Blanco, Jose del Campo-Avila, Gonzalo
+[12] DariuszBrzezinskiandJerzyStefanowski. Combining Ramos-Jimenez,RafaelMorales-Bueno,AgustinOrtiz-
+block-basedandonlinemethodsinlearningensembles Diaz, and Yaile Caballero-Mota. Online and Non-
+fromconceptdriftingdatastreams. InformationScien- ParametricDriftDetectionMethodsBasedonHoeffding
+ces,265:50–67,2014. 4.1,5.1,5.2 Bounds. IEEE Transactions on Knowledge and Data
+Engineering,27(3):810–823,March2015. 1,3.3,4.2,
+[13] BojanCestnik.Estimatingprobabilities:acrucialtaskin 5.2
+machinelearning. InECAI,volume90,pages147–149,
+1990. 5.1 [23] Isvani Fr´ıas-Blanco, Jose´ del Campo-A´vila, Gonza-
+lo Ramos-Jime´nez, Andre CPLF Carvalho, Agust´ın
+[14] PeterClarkandTimNiblett. TheCN2inductionalgo- Ortiz-D´ıaz, and Rafael Morales-Bueno. Online adap-
+rithm. Machinelearning,3(4):261–283,1989. 5.1 tivedecisiontreesbasedonconcentrationinequalities.
+Knowledge-BasedSystems,104:179–194,2016. 1,3.3,
+[15] PadraigCunningham,NiamhNowlan,SarahJaneDe-
+5.2
+lany,andMadsHaahr. Acase-basedapproachtospam
+filtering that can track concept drift. In The ICCBR, [24] Isvani Fr´ıas Blanco, Jose´ del Campo A´vila, Gonzalo
+volume3,pages03–2003,2003. 1 Ramos Jime´nez, Rafael Morales Bueno, Agust´ın Or-
+tizD´ıaz,andYaile´ CaballeroMota. Aprendiendocon
+[16] A. P. Dawid. Present Position and Potential Develop-
+deteccio´ndecambioonline. Computacio´nySistemas,
+ments: Some Personal Views: Statistical Theory: The
+18(1):169–183,2014. 5.2
+PrequentialApproach. JournaloftheRoyalStatistical
+Society.SeriesA(General),147(2):278–292,1984. 5 [25] IsvaniFr´ıas-Blanco,AlbertoVerdecia-Cabrera,Agust´ın
+Ortiz-D´ıaz, and Andre Carvalho. Fast adaptive stac-
+[17] MagdalenaDeckert. Batchweightedensembleformi-
+kingofensembles. InProceedingsofthe31stAnnual
+ningdatastreamswithconceptdrift. InFoundationsof
+ACMSymposiumonAppliedComputing,pages929–934.
+IntelligentSystems,pages290–299.Springer,2011. 4.1
+ACM,2016. 1,4.2,5.1,5.2
+[18] Jose´DelCampoA´vila. Nuevosenfoquesenaprendizaje [26] KeinosukeFukunagaandRaymondRHayes.Estimation
+incremental. 2007. 3.3 ofclassifierperformance. PatternAnalysisandMachine
+Intelligence,IEEETransactionson,11(10):1087–1101,
+[19] JanezDemsˇar. Statisticalcomparisonsofclassifiersover
+1989. 1
+multiple data sets. The Journal of Machine Learning
+Research,7:1–30,2006. 5.2.1 [27] Joao Gama. Knowledge discovery from data streams.
+CRCPress,2010. 1
+[20] PedroDomingosandMichaelPazzani.Ontheoptimality
+of the simple Bayesian classifier under zero-one loss. [28] JoaoGama,PedroMedas,GladysCastillo,andPedro
+Machinelearning,29(2-3):103–130,1997. 5.1 Rodrigues. Learningwithdriftdetection. InAdvances
+60 Estudiocomparativosobreensamblesdeclasificadoresenflujosdedatosnoestacionarios
+inartificialintelligence,pages286–295.Springer,2004. Morales-Bueno. FastAdaptingEnsemble:ANewAlgo-
+1,2 rithmforMiningDataStreamswithConceptDrift. The
+ScientificWorldJournal,2014. 4.1
+[29] Salvador Garc´ıa, Francisco Herrera, and John Shawe-
+taylor. An extension on —statistical comparisons of [39] NikunjC.Oza. Onlinebaggingandboosting. InSys-
+classifiersovermultipledatasets(cid:107)forallpairwisecom- tems, man and cybernetics, 2005 IEEE international
+parisons. JournalofMachineLearningResearch,pages conferenceon,volume3,pages2340–2345.IEEE,2005.
+2677–2694. 5.2.1 4.2
+[40] NikunjC.OzaandStuartRussell. OnlineBaggingand
+[30] Michael Bonnell Harries, Claude Sammut, and Kim Boosting. In Tommi Jaakkola and Thomas Richard-
+Horn. Extracting hidden context. Machine learning, son,editors,EighthInternationalWorkshoponArtificial
+32(2):101–126,1998. 1 Intelligence and Statistics, pages 105–112, Key West,
+Florida.USA,January2001.MorganKaufmann. 4.2
+[31] Geoff Hulten, Laurie Spencer, and Pedro Domingos.
+Miningtime-changingdatastreams. InProceedingsof
+[41] MichaelJPazzani. SearchingfordependenciesinBaye-
+theseventhACMSIGKDDinternationalconferenceon
+sianclassifiers. InLearningfromData,pages239–248.
+Knowledgediscoveryanddatamining,pages97–106.
+Springer,1996. 5.1
+ACM,2001. 1,3.3,5
+[42] JeffreyCSchlimmerandDouglasFisher. Acasestudy
+[32] Ralf Klinkenberg. Learning drifting concepts: Exam-
+ofincrementalconceptinduction. InAAAI,pages496–
+ple selection vs. example weighting. Intelligent Data
+501,1986. 1
+Analysis,8(3):281–300,2004. 1
+[43] KennethOStanley. Learningconceptdriftwithacom-
+[33] Ralf Klinkenberg and Thorsten Joachims. Detecting
+mitteeofdecisiontrees. Informetecnico:UT-AI-TR-03-
+ConceptDriftwithSupportVectorMachines. InICML,
+302,DepartmentofComputerSciences,Universityof
+pages487–494,2000. 1
+TexasatAustin,USA,2003. 1
+[34] MiroslavKubatandGerhardWidmer. Adaptingtodrift
+[44] W.NickStreetandYongSeogKim.AStreamingEnsem-
+in continuous domains. In European Conference on
+bleAlgorithm(SEA)forLarge-scaleClassification. In
+MachineLearning,pages307–310.Springer,1995. 1,
+ProceedingsoftheSeventhACMSIGKDDInternational
+3.1
+ConferenceonKnowledgeDiscoveryandDataMining,
+[35] Pat Langley, Wayne Iba, and Kevin Thompson. An KDD’01,pages377–382,NewYork,NY,USA,2001.
+analysis of Bayesian classifiers. In Aaai, volume 90, ACM. 4.1
+pages223–228,1992. 5.1
+[45] HaixunWang,WeiFan,PhilipS.Yu,andJiaweiHan.
+[36] Leandro L Minku, Allan P White, and Xin Yao. The Mining concept-drifting data streams using ensemble
+impactofdiversityononlineensemblelearninginthe classifiers. InProceedingsoftheninthACMSIGKDD
+presenceofconceptdrift. KnowledgeandDataEngi- internationalconferenceonKnowledgediscoveryand
+neering, IEEE Transactions on, 22(5):730–742, 2010. datamining,pages226–235.ACM,2003. 4.1,5.1
+2
+[46] GerhardWidmerandMiroslavKubat.Effectivelearning
+[37] LeandroL.MinkuandXinYao. DDD:Anewensemble indynamicenvironmentsbyexplicitcontexttracking.In
+approachfordealingwithconceptdrift. Knowledgeand Machinelearning:ECML-93,pages227–243.Springer,
+Data Engineering, IEEE Transactions on, 24(4):619– 1993. 1
+633,2012. 4.2
+[47] GerhardWidmerandMiroslavKubat. Learninginthe
+[38] Agustin Ortiz Diaz, Jose del Campo-Avila, Gonzalo presenceofconceptdriftandhiddencontexts. Machine
+Ramos-Jimenez, Isvani Frias Blanco, Yaile Caballe- learning,23(1):69–101,1996. 1,2
+ro Mota, Antonio Mustelier Hechavarria, and Rafael

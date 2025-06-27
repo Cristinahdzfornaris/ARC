@@ -1,0 +1,504 @@
+CienciasMatema´ticas,Vol.29,No.2,Pag.107-114,2015
+Recibido06-2015
+Recuperacio´n de informacio´n para art´ıculos
+cient´ıficos soportada en el agrupamiento de
+documentos XML
+Information retrieval on scientific documents based
+on XML documents clustering
+Damny Magdaleno1*, Ivett E. Fuentes1, Michel Cabezas2, Mar´ıa M. Garc´ıa1
+Resumen Cada d´ıa ma´s datos electro´nicos en formato semiestructurado espec´ıficamente en XML se en-
+cuentrandisponiblesenelWorldWideWeb,intranetscorporativas,yotrosmediosdecomunicacio´n.Debido
+a que la informacio´n por si sola tiene pocas ventajas, gestionar el conocimiento a partir de ella es esencial
+paradarmejorescondicionesdetrabajoalosinvestigadoreseincrementarsuproductividadcient´ıfica.Enel
+laboratoriodeInteligenciaArtificialsehanobtenidosvariossistemasquepermitenmanipularlainformacio´n,
+como:SATEX,GARLuceneyLucXML,esteu´ltimodatratamientodeformaespec´ıficaalosdocumentosXML
+aunque no garantiza gestionar los documentos desde un repositorio en la red. A su vez en el Centro de
+Estudios de Informa´tica existen un gran nu´mero de art´ıculos cient´ıficos de variados temas. En este trabajo
+seimplemento´ unaherramientaWebquehautilizadolaste´cnicasderecuperacio´ninteligentesoportadaen
+unalgoritmodeagrupamientodedocumentosXMLqueexplotalasventajasdeestosdocumentosutilizando
+el contenido y la estructura existente en ellos. La evaluacio´n del sistema a trave´s de los casos de estudios
+definidoscorroboralavalidezdelaimplementacio´nrealizada.
+Abstract Theproliferationofavailableinformationinhospitalsthatresultfromthewidespreaduseofelectronic
+medical records (EMR) is overwhelming. Having systematized information, manage effectively and safely is
+essentialtoensurebetterhealthpractices. Inthispaper,it’sanalyzedtheimportanceofdocumentclustering
+inDocumentManagementinordertodiscoverhiddenknowledgeintheclinicalinformation. Itisproposeda
+methodologyforautomaticclusteringofEMRtakingintoaccountdifferentfactorsanddatacollectioninphysical
+examination. Itispresentedavariantfortoassistantthediagnosisdecisionmakingofanewpatient,bymeans
+of a supervised classification that it uses the relevant information provided by the presented methodology.
+InterpretationoftheresultsofEMRclusteringshowedthefeasibilityofisproposed.
+PalabrasClave
+Recuperacio´ndeInformacio´n,Agrupamiento,XML
+1UniversidadCentral”MartaAbreu”delasVillas,Cuba,dmg@uclv.edu.cu,ivett@uclv.cu,mmgarcia@uclv.edu.cu
+2XETIC,LaHabana,Cuba,michelc@uclv.cu
+*AutorparaCorrespondencia
+1. Introduccio´n menorenprocesarlainformacio´nrequerida,locualconsti-
+tuyelamotivacio´nprincipaldeestetrabajo.Elconocimiento
+Lacreacio´nydiseminacio´ndeinformacio´nenelWorld
+sepuedegestionardediversasformasyhacerlorequierede
+WideWeb,intranetscorporativas,yotrosmediosdecomuni-
+la integracio´n de varias a´reas del saber: descubrimiento de
+cacio´nessoportadaporunnu´merocrecientedeherramientas,
+conocimientoenbasesdedatos,miner´ıadedatosydetextos.
+sinembargo,mientraslacantidaddeinformacio´ndisponible
+Espec´ıficamenteestau´ltimaintegralarecuperacio´nyextrac-
+esta´ continuamente creciendo, la habilidad de procesarla y
+cio´ndeinformacio´n,elana´lisisdetextos,elresumen,lacate-
+asimilarlanopresentaelmismoritmodecrecimiento.Estehe-
+gorizacio´n,laclasificacio´n,elagrupamiento,lavisualizacio´n,
+chohacequelagestio´ndeinformacio´ncient´ıficaseacadavez
+latecnolog´ıadebasesdedatos,elaprendizajeautoma´ticoy
+ma´scompleja,alserlascoleccionestextualesheteroge´neas,
+laminer´ıadedatos(AggarwalandZhai,2012).
+grandesydina´micas.Vencerestosdesaf´ıosesesencialpara
+proporcionaraloscient´ıficosmejorescondicionesdetrabajo Particularmente, la Recuperacio´n de Informacio´n (RI)
+queasegurenunamayorproductividadeinviertanuntiempo abarca el conjunto de acciones, me´todos y procedimientos
+108 Recuperacio´ndeinformacio´nparaart´ıculoscient´ıficossoportadaenelagrupamientodedocumentosXML
+para la representacio´n, almacenamiento, organizacio´n y re- cual,constituyeunnuevodesaf´ıo,yaquelamayor´ıadelos
+cuperacio´n de la informacio´n; su objetivo fundamental es enfoquesexistentesnoutilizanestasdosdimensionesdadasu
+obtenerlosdocumentosordenadosenfuncio´ndelgradodere- grancomplejidad(TienT.,[29]).
+levancia1,pararesponderalasnecesidadesdelusuario(Man-
+Unaprimeravariantemuysencilladecombinarcontenido
+ning et al., [23]). Un Sistema de RI (SRI) es un programa
+yestructuraesmezclarenunarepresentacio´nEspacioVecto-
+que implementa un modelo de RI, posee tres componentes
+rial(VectorSpaceModel;VSM)(Saltonetal.,[25])elconte-
+principales: la base de datos documental, el subsistema de
+nidoylasetiquetasdeldocumentoyaplicarunalgoritmode
+consultasyelmecanismoderecuperacio´n(Croftetal.,[11]).
+agrupamientoconocido.Otrostrabajosrealizanextensiones
+Porsuparte,elagrupamientopermiteorganizarlainfor-
+alarepresentacio´nVSM,llamadasC-VSMySLVM(Dou-
+macio´nobtenidaydescubrirnuevoconocimientoapartirdel
+cetandAhonenMyka,[14]).En(TekliandChbeir,[28])fue
+resultadodeunprocesoderecuperacio´ndeinformacio´n(Man-
+propuestounmarcoparatrabajarconsimilitudesporestruc-
+ningetal.,[23]).Elagrupamientoesunatareadelaprendizaje
+turayporsema´ntica.Estemarcoconsistedecuatromo´dulos
+nosupervisadoquetienecomoobjetivodescomponerelcon-
+principales para descubrir las estructuras comunes a trave´s
+juntodedatos,deformatalquelosobjetosquepertenecen
+delossuba´rboles,identificandolossuba´rbolesconparecidos
+almismogruposeantansimilarescomoseaposibleylosob-
+sema´nticos,aqu´ıutilizanloscostosbasadosenlasoperaciones
+jetosquepertenecenagruposdiferentesseantandisimilares deladistanciatree-edit(ChenandZhang,[7])paraelca´lculo
+comoseaposible.Elana´lisisdegruposesunaherramienta
+deladistanciabasadaenesteenfoque.En(Pintoetal.,[24])
+paradescubrirunaestructurapreviamenteocultaenlosdatos,
+utilizaronte´cnicasnosupervisadasconlaintencio´ndeagrupar
+asumiendo que existe un agrupamiento natural o cierto en
+documentosdeunacoleccio´ndegrantaman˜o.Esteenfoque
+ellos.Sinembargo,laasignacio´ndelosobjetosalasclasesy
+utilizaunalgoritmodeagrupamientoiterativoenunproceso
+ladescripcio´ndeesasclasessondesconocidas(Kruseetal.,
+deagrupamientorecursivosobresubconjuntosdelacoleccio´n
+[18]).
+completa.En(Fuentes,[15])seproponeunamodelogeneral
+Lainformacio´nqueapareceenlawebesvariadasiendo para la aplicacio´n del agrupamiento de documentos XML,
+actualmenteladeformatosemiestructuradolama´sutilizada combinandolaestructurayelcontenido,tomandoelresultado
+(Algergawy et al., 2011). Ejemplos de estos formatos son deunprocesoderecuperacio´ndeinformacio´n(Buettcheret
+AIML,WSDLyXML.Losdocumentosescritosenformato al.,[5],Chowdhury,[8]).Lassalidassongruposhomoge´neos
+XML(ExtensibleMarkupLanguage),elcualesunmetalen- de documentos afines, el resumen de cada documento, los
+guajedesarrolladoporW3C2tienenunaestructurajera´rquica
+documentosma´srepresentativosdecadagrupoylacalidad
+autodescriptivadeinformacio´n,formadapora´tomos,elemen- delagrupamiento;garantizandoelcontrolparalaevaluacio´n
+toscompuestosyatributos.Sonextensibles,conestructura delosresultados.OverallSimSUXlogracapturarlasimilitud
+defa´cilana´lisisyprocesamiento,loquelehapermitidocon- entreunaparejadedocumentos,teniendoencuentalarela-
+vertirseenelformatoesta´ndardeintercambiodedatosentre cio´nexistenteentrelasseccionesdeestoscomocolecciones
+las aplicaciones Web (Dalamagas et al., [12]). Este hecho independientes,asuveztratalosdocumentoscomountodo.
+hasidomotivoparaexplotarlaestructuradeestosdocumen-
+EnelCentrodeEstudiosdeInforma´tica(CEI)delaUni-
+tosenelprocesoderecuperacio´ndedocumentosrelevantes
+versidadCentral“MartaAbreu”delasVillas(UCLV)sehan
+(Watanabe et al., [30]). Por tanto, al enfrentarse a este tipo
+propuestolossistemasparalagestio´ndelainformacio´nyel
+de colecciones los SRI se enfrentan a nuevos desaf´ıos, en-
+conocimiento(SATEX(Arcoetal.,[3]),GARLucene(Arco
+treestos:losusuariosenocasionesrequierenqueelsistema
+etal.,[2]))queimplementanelesquemapropuestopor(Arco,
+devuelva como resultado de sus bu´squedas partes de docu-
+[1])paralaconfeccio´ndesistemasgestoresdeinformacio´n
+mentos y no documentos completos como es usual en los
+endominiostextuales.Losmismosbrindanampliasventajas
+SRIcla´sicos;paraleloaesteproblemaapareceelproblemade
+paralagestio´ndelainformacio´nydelconocimiento,perono
+cua´lpartedeldocumentoindexar.Porotrapartecuandolos
+incorporanunalgoritmodeagrupamientocapazdeexplorar
+algoritmosdeagrupamientoseenfrentanadocumentosXML,
+laestructuradedocumentosXML.Porsuparte,elsistema
+seclasificanprincipalmenteentresgrupos:losquesecentran
+LucXML(Magdalenoetal.,[21])implementaelmodelopro-
+solo en el contenido de los documentos (Algergawy et al.,
+puestoen(Magdalenoetal.,[22])y(Fuentes,[15]),porlo
+2011),realizandounana´lisissolamentele´xico,oincluyendo
+quepermiteeltratamientodelosdocumentosXMLapartir
+elementossinta´cticososema´nticosenelestudio;existenotros
+deunalgoritmodeagrupamientoqueutilizasuestructuray
+trabajosquesoloutilizanlaestructuradelosdocumentospara
+contenido,sinembargo,elmismonogarantizagestionarlos
+realizarelagrupamiento(Watanabeetal.,[30],Costaetal.,
+documentos desde un repositorio en la red. Adema´s, en el
+[10]), considerando que esta juega un papel importante en
+CentrodeEstudiosdeInforma´ticaexisteungrannu´merode
+el agrupamiento para ciertas aplicaciones espec´ıficas y los
+art´ıculoscient´ıficosdevariadostemas.Semantieneeldesaf´ıo
+quecombinanambascomponentes:estructuraycontenido;lo
+de dar a los cient´ıficos mejores condiciones en su trabajo
+investigativo, de ah´ı que el objetivo general de este trabajo
+1Serefierealarelevanciacomounamedidadelgradodecorrespondencia
+es implementar un esquema de recuperacio´n inteligente de
+deldocumentoalaconsultarealizadaalsistema.
+2http://www.w3c.org informacio´n soportado en el agrupamiento de documentos
+Recuperacio´ndeinformacio´nparaart´ıculoscient´ıficossoportadaenelagrupamientodedocumentosXML 109
+XMLdeart´ıculoscient´ıficosmedianteunaherramientaWeb. Controller: Se utiliza para controlar la interconexio´n
+entreelclienteyelservidor,lasllamadasalosme´to-
+2. Materiales y me´todos o Metodolog´ıa dosutilizadosenelservidorylasrespuestasdeesteal
+computacional cliente.
+El proceso completo de Recuperacio´n de Informacio´n RisadXML: Encargada de iniciar la aplicacio´n, es la
+consistira´ en: primeraclasequeseejecuta.
+Obtener mediante la indexacio´n de una coleccio´n de RisadXMLService:DefinelosserviciosdeLlamadaa
+documentos,elconjuntodete´rminosasociadosacada ProcedimientosRemotos(RPC)utilizadosenlaaplica-
+documento. cio´n.
+Obtener, la representacio´n textual de la coleccio´n en RisadXMLServiceAsync:Estainterfazesutilizadapara
+formadepalabrasclavesote´rminosdeindexacio´n. lainterconexio´nentreelclienteyelservidorenlasRPC
+utilizadasenlaejecucio´ndelaaplicacio´n.
+Compararcadaunodelosdocumentosindexadoscon
+laconsultarealizada,obteniendoenalgunoscasosel ResultRecord:Defineco´mosevanamostrarlosresul-
+gradoconelqueeldocumentosatisfacealaconsulta, tadosdelabu´squeda.
+aquellosquelasatisfagancompletamente.
+Enlaimplementacio´nseutilizo´ GWT3,frameworkcrea-
+Presentar al usuario la salida del proceso de bu´sque- do por Google que permite crear aplicaciones AJAX4 en el
+da que permite evaluar la salida y comprobar que es lenguajedeprogramacio´nJavaquesoncompiladasposterior-
+satisfactoriaparasunecesidaddeinformacio´n. menteporGWTenco´digoJavaScriptejecutableoptimizado
+quefuncionaautoma´ticamenteenlosprincipalesnavegadores.
+Parareducireltiempoquelosusuariosasimilanelresul-
+tadodelarecuperacio´n,serequierequelasalidadelsistema
+2.3 Servidor
+tengaalgu´nniveldeorganizacio´n,conestefin,enestetrabajo
+2.3.1 Mo´dulo 1: Creacio´n de ´ındices y recuperacio´n del
+serealizaunagrupamientodelacoleccio´nrecuperada.
+corpusdedocumentosXML
+Elprocedimientogeneralqueimplementaestaherramien- EnelprocesodeRI,laindexacio´nylabu´squedasonpasos
+tacuentadetresmo´dulosprincipales.Enlasiguienteseccio´n claves.Paraestasoperacionesseutilizo´ Lucene5,biblioteca
+se exponen estos tres mo´dulos, la puesta en pra´ctica de al- implementadaenJava,deco´digoabierto.Permitefa´cilmente
+gunosdelosprincipiosdelaRImencionados,as´ıcomolas la integracio´n con cualquier aplicacio´n (Artiles, [4]) por lo
+herramientasutilizadasparalaelaboracio´ndelsistemaimple- quehasidointegradaalasfuncionesdebu´squedasdemuchas
+mentado. aplicacioneswebydeescritorio;teniendocomofactorclave
+suaparentesimplicidad,puesrealmentecuentaconcomplejos
+2.1 Implementacio´ndeRISADXML
+algoritmosqueimplementante´cnicasdeRIdeu´ltimagene-
+EnlaFigura1semuestraundiagramaquecontienelos
+racio´n (Chriss A. and Zitting, [9]). Adema´s, para utilizarla
+tres mo´dulos principales que se implementaron en el siste-
+noesnecesariounconocimientoprofundoacercadeco´mose
+ma para la Recuperacio´n de Informacio´n Soportado en el
+indexayrecuperainformacio´n.
+Agrupamiento de Documentos XML (RISADXML); estos
+son: (1) Creacio´n de ´ındices y recuperacio´n del corpus de Indexacio´n Lucene crea de forma interna un´ındice com-
+documentosXML,(2)Representacio´ndelacoleccio´ny(3) puestodedocumentos;paracadaunodeestosdocumentos,
+AgrupamientoGeneralapartirdelamatrizdesimilitudbasada defineunconjuntodecamposconeltexto.Unaherramien-
+enelca´lculodelafuncio´nOverallSimSUX.Paralaimplemen- tautilizadaenestetrabajo,quefacilitalaconfeccio´ndelos
+tacio´nseutilizo´ unaarquitecturacliente/servidor;atrave´sdel campos,eselAPIJdom6,especializadaenlamanipulacio´n
+clienteWebselograelaccesoalospaquetesimplementados de documentos en formatos XML. Esta biblioteca permite
+enlapartedelservidor,destaca´ndoseelprocesoderecupera- identificar de forma natural los elementos existentes en un
+cio´ndelainformacio´nyelagrupamientodelosdocumentos documentoXML(Hatcheretal.,[16]).Espec´ıficamenteen
+recuperados. estetrabajoesmuyu´tilparaidentificarlasseccionesdelos
+A continuacio´n se mencionan las clases fundamentales documentosaagrupar,(denominadasenestetrabajoUnida-
+contenidasenlapartecliente,seguidodelaexplicacio´ndel desEstructurales,UE)porejemplo,enunart´ıculocient´ıfico:
+funcionamientodelosmo´dulosimplementadosenlapartedel resumen, introduccio´n, materiales y me´todos, entre otros y
+servidor. as´ıpoderextraerexactamenteeltextocontenidoenunaUE
+espec´ıfica.
+2.2 Cliente
+3http://code.google.com/webtoolkit/
+MainLayoutyWinConfiguration:Clasesvisualesdonde
+4http://ajax.asp.net/
+esta´ntodosloscomponentesquelesonmostradosalos 5http://lucene.apache.org/
+usuarios. 6http://www.jdom.org/
+110 Recuperacio´ndeinformacio´nparaart´ıculoscient´ıficossoportadaenelagrupamientodedocumentosXML
+Figura1.Mo´dulosdelsistemaRISADXML
+Otrodelosmotivosporlosqueseescogio´ Luceneesque procesa.LaRepresentacio´nIIutilizalamismaestructuraque
+para la creacio´n de los ´ındices de te´rminos, trabaja con la laRepresentacio´nI,peroencadaceldaalmacenalafrecuencia
+representacio´nVSM,queesutilizadaenelmodeloimplemen- pesadaporlaUEdondeseencuentraelte´rmino.Elca´lculo
+tadopararealizarlasrepresentacionesdelosdocumentosa delafrecuenciapesadaas´ıcomolaformadecalcularelpeso
+agrupar.Paraelpreprocesamientodelacoleccio´nseutilizaron delasUEseobservanenlasecuaciones1y2(Magdalenoet
+variasclases,entreestas:StandardAnalyzer,especializadaen al.,[20]);donde,tfijeslafrecuenciapesadadelte´rminoien
+normalizar los tokens extra´ıdos; LowerCaseFilter, convier- eldocumentoj,wkjeselpesodelaunidadestructuralkenjy
+telostokensaminu´sculasyStopFilter eliminapalabrasde frecuenciaikeslafrecuenciadeaparicio´ndeienk.
+parada(Lewis,[19]).Adicionalmente,Analyzerobtienelas
+n
+ra´ıcesdelaspalabrasmedianteheur´ısticas,ytratarlasinoni-
+tf = ∑(w ×frecuencia ) (1)
+ij kj ik
+miaypolisemia.LaFigura2muestralasclasesencargadas
+k=1
+delprocesodeindexacio´n. (cid:18) (cid:16)−LSU (cid:17)(cid:19)pot
+w
+kj
+= e LDoc (2)
+Recuperacio´n El proceso de bu´squeda se realiza a partir
+del´ındiceconstruido.Paraelloseutilizaronlasclases:search
+yqueryParserdelabibliotecaLucene. 2.3.3 Mo´dulo3:AgrupamientoGeneralapartirdelama-
+Elprocedimientogeneralempleadoparalarecuperacio´n trizdesimilitudbasadaenelca´lculodelafuncio´n
+consistio´ en obtener la consulta indicada por el usuario y OverallSimSUX
+realizarlabu´squedasobreel´ındiceapartirdelasclasesIndex- Paracadarepresentacio´nresultantesecalculalamatrizde
+Searcher,QueryParseryQuery;demaneraquelosresultados similitudutilizandocomomedidalasimilitudcoseno,ecua-
+cio´n3.Posteriormentesegeneraunagrupamientoparacada
+obtenidosporlaconsultasonalmacenadosenunobjetodela
+claseHits.
+Representacio´nIapartirdelasimilitudasociada.
+LaclaseIndexSearcheresusadaparalabu´squedadedocu-
+mentosenun´ındice,proveeunagrancantidaddeme´todosde S =
+∑m
+k=1
+(o
+ik
+o
+jk
+)
+(3)
+bu´squeda,entrelosutilizadosseencuentraSpecificTerm.La
+coseno(Oi,Oj ) (cid:113)
+∑m o2 ∑m o2
+k=1 ik k=1 jk
+claseQueryParserdeLuceneincluyeme´todosparalamanipu-
+lacio´ndeexpresionesregulares;instanciadasuministra´ndole Paraelagrupamientofinalsecalculalamatrizdesimilitud
+elnombredelcamposobreelqueserealizara´labu´squedayun globalutilizandolamedidadesimilitudOverallSimSUX,ver
+analizador,usadoparaprocesarlascondicionesdebu´squedas ecuacio´n 4, esta se obtiene a partir del resultado del agru-
+impuestas.Estaclasecontieneelme´todoparsequenecesita pamiento realizado a cada Representacio´n I y la matriz de
+unaconsultaquecontendra´ laexpresio´naprocesar similitudcosenoasociadaalaRepresentacio´nII.Finalmente
+se realiza el agrupamiento general, utilizando la matriz de
+2.3.2 Mo´dulo2:Representacio´ndelacoleccio´n
+similitudconfeccionadaconOverallSimSUX.
+ElmodeloescogidoparaagruparlosdocumentosXML
+realizadostiposderepresentaciones:Representacio´nI aso-
+S (i,j)=
+∑n
+k=1
+(w
+k
+λ
+k
+(i,j))+S
+g
+(i,j)
+(4)
+ciadaacadaUEyRepresentacio´nII queseobtienedetoda OSSUX ∑n
+k=1
+(w
+k
+)+1
+la coleccio´n. Espec´ıficamente, para la Representacio´n I se
+construyelamatrizVSMcla´sica,quecontieneensusfilasel Para realizar cada agrupamiento se utilizo´ el algoritmo de
+´ındicedecadate´rminoobtenidoylosdocumentosdelaco- agrupamientoK-Star(ShinandHan,[26]).Comoresultado
+leccio´nensuscolumnas,lasceldasrepresentanlafrecuencia se obtiene una particio´n de la coleccio´n inicial en grupos
+deaparicio´ndecadate´rminoenlaUEdeldocumentoquese homoge´neosdedocumentos.
+Recuperacio´ndeinformacio´nparaart´ıculoscient´ıficossoportadaenelagrupamientodedocumentosXML 111
+Figura2.Disen˜odeclasesrelacionadasconelprocesodeindexado.
+3. Resultados y discusio´n 1GbdememoriaRAM.
+Enesteep´ıgrafesepresentaelprocesodeverificacio´ndel SistemaoperativoWindowsXPosuperior,Linux.
+sistema.Unadescripcio´ndelosrequerimientosm´ınimospara
+LaFigura3muestralapa´ginaprincipaldelsistemades-
+suusoyfinalmenteunadescripcio´naniveldeusuarioconel
+pue´sderealizarunarecuperacio´n;dondeesposibletambie´n
+propo´sitodeexplicarco´moutilizarlo.
+observarlasfuncionalidadesquebrinda:
+3.1 Requerimientosdehardware
+1. Cajadetextoparapoderescribirlaconsulta.
+Parasufuncionamiento,elsistemadebeencontrarseins-
+taladoenunservidordeaplicaciones,comoApacheTomcat; 2. Boto´npararealizarunaconsultaybrindarelresultado
+debecontarconunhardwarederespaldo,losrequerimientos delarecuperacio´nen4.
+m´ınimosysoftwareseespecificanacontinuacio´n:
+3. Boto´nparaconfiguraralgunasopcionesdelsistemaco-
+Partedelcliente
+mo:Seleccionarunrepositoriolocaloremotoyescoger
+ProcesadorIntelPentiumIV/1.5GHz. lasUnidadesEstructuralesquedebetenerencuentael
+recuperador.
+512MbdememoriaRAM.
+4. A´rea con el resultado de la recuperacio´n, para cada
+SistemaoperativoWindowsXPosuperior,Linux. archivorecuperadosemuestra:nombre,direccio´n,un
+fragmentodelresumenyelgrupoalquepertenece.
+Conexio´nmedianteredalservidordeaplicaciones.
+Entre los tipos de consulta que se pueden formular en
+PuedeusarsecomonavegadorwebFirefoxuOpera,se
+RISADXMLseencuentran:
+recomiendaFirefoxinstalandoelplugindeMacromedia
+FlashPlayer10.
+Palabras.
+Parteservidor Frases,ejemplo:”XMLclustering”
+ProcesadorIntelPentiumIV/1.5GHz. Apoyadaporcomodinesdetextos:
+112 Recuperacio´ndeinformacio´nparaart´ıculoscient´ıficossoportadaenelagrupamientodedocumentosXML
+Figura3.Ventanaprincipalconelresultadofinaldeunarecuperacio´n.
+• ¿”,significauncara´cterenfraseopalabrainclu- Elprimercasodeestudioesta´ conformadoapartirde
+yendoelcara´ctervac´ıo.Ejemplo:”te?t”devuelve archivosprovenientesdelsitioICT7,paralarecupera-
+losart´ıculosquecontienen”text.o”test”. cio´ndeinformacio´nyextraccio´ndeconocimientoque
+solicitanestosusuarios.
+• ”*”,significavarioscaracteresenunafraseopa-
+labra.Ejemplo:”test*”devuelvelosart´ıculosque
+Elsegundocasodeestudioconstituyeunarecopilacio´n
+contienen”tests.o”tester”
+dedocumentosdelrepositorioIDE-Alliance,interna-
+cionalmente utilizados para evaluar el agrupamiento.
+Usodeoperadoresbooleanos: ProporcionadosporlaUniversidaddeGranada,Espan˜a.
+• .OR”,buscalosdocumentosquetienenunafrase Eltercercasodeestudioconstituyeunaseleccio´nalea-
+toriadedocumentosdelacoleccio´ndelaWikipedia,pu-
+olaotra.
+blicadoscadaan˜oporlaINiciativaparalaEvaluacio´n
+• .AND”,buscalosdocumentosquetienenambas delarecuperacio´ndedocumentosXML(INEX)8.Esta
+frases.
+coleccio´nesreferenciadaentrabajosparaevaluaralgo-
+• -”busca los documentos que tienen la frase que ritmosenela´readelaminer´ıadetextosaplicadosalos
+sigueals´ımboloypuedancontenerlaotrafrase. documentosXML(DenoyeryGallinari,[13],Campos
+Ejemplo:+c¸lusteringXML” etal.,[6]).Estacoleccio´ntieneelproblemaquelostex-
+toscontienenmuchainformacio´nnou´tilyelformato
+• ”NOT”,Buscanlosdocumentosquenocontienen
+enquesepresentanesmuydif´ıcildepreprocesar.
+lafrasequesigueals´ımbolo.Ejemplo:”structural
+clustering”NOTc¸ontentclustering”.Esteopera-
+Atendiendoalaclasificacio´ndelasmedidasparalaeva-
+dor no puede ser usado cuando solo existe un
+luacio´ndelagrupamiento(KaufmanandRousseeuw,[17]),
+te´rmino.Ejemplo:NOT”structuralclustering”
+enestainvestigacio´nseselecciono´ lamedidaexterna:Ove-
+• ”,Buscanlosdocumentosqueestrictamenteno rallF-measure,OFM(Steinbachetal.,[27])paraelestudio
+contienenlafrasequesigueals´ımbolo. comparativoqueserealizaentreelprocesamientorealizado
+en(Fuentes,[15])ylosvaloresobtenidosporRISADXML
+conlos15corpusconformadosapartirdelostrescasosde
+3.2 Evaluacio´ndelaherramienta
+Parachequearlavalidezdelosresultadosobtenidospor 7ftp://ict.cei.uclv.edu.cu
+elsistemasehanutilizadotrescasosdeestudio: 8InitiativefortheEvaluationofXMLRetrieval
+Recuperacio´ndeinformacio´nparaart´ıculoscient´ıficossoportadaenelagrupamientodedocumentosXML 113
+estudiodescritosanteriormente.OFMutilizaloscriteriosde Tabla2.ResultadosdeaplicarWilcoxonalosvaloresdela
+RI:Precisio´n(Pr)ycubrimiento9(Re). Tabla1.
+3.3 Disen˜odelexperimento OFM RISADXML-OFM LucXML
+El experimento consistio´ en verificar co´mo se compor- N MeanRank SumofRanks
+ta globalmente RISADXML con respecto a su predecesor NegativeRanks 1a 4 4
+LucXML,ambosimplementanelmodelodeagrupamiento PositiveRanks 6b 2.75 11
+mencionadoanteriormenteparadocumentosXML.EnlaTa- Ties 10c
+bla1sepuedeobservarquesoloencincocasos(cuatroafavor Total 15
+delsistemapropuestoenestetrabajo)losagrupamientosno a.OFM RISADXML<OFM LucXML
+secomportarondeformasimilar,segu´nlamedidaOFM. b.OFM RISADXML>OFM LucXML
+c.OFM RISADXML=OFM LucXML
+Tabla1.ValoresdelamedidaOverallF-Measure,calculada
+alosagrupamientosobtenidosporlosdossistemas.
+Tabla3.ResultadosdeaplicarWilcoxonalosvaloresdela
+Corpus OFMLucXML OFMRISADXML
+Tabla1.
+1 0.852 0.902
+2 0.782 0.782 OFM RISADXML-OFM LucXMLb
+3 0.837 0.851
+Z -0.9438a
+4 0.72 0.72
+Asymp.Sig.(2-tailed) 0.3452
+5 0.79 0.79
+a.Basedonnegativeranks.
+6 0.582 0.582
+b.WilcoxonSignedRanksTest.
+7 0.881 0.881
+8 0.886 0.886
+9 0.856 0.856
+10 0.9134 0.874
+Referencias
+11 0.947 0.947
+12 0.977 0.977 [1] ARCO,L.2009.Agrupamientobasadoenlaintermedia-
+13 0.966 0.97 cio´ndiferencialysuvaloracio´nutilizandolateor´ıadelos
+14 0.828 0.828 conjuntosaproximados.DoctoradoenCienciasTe´cnicas,
+15 0.908 0.911 UniversidadCentral”MartaAbreu”deLasVillas.
+[2] ARCO, L., ART´ILES, M. & BELLO, R. 2008a. Siste-
+maparalaGestio´ndeArt´ıculoscient´ıficosRecuperados
+Para demostrar lo anterior, se empleo´ la prueba no pa-
+usandoLucene(GARLucene).Cubapatentapplication.
+rame´tricadeWilcoxon(Wilcoxon,[31])conlosvaloresdela
+Tabla1.EnlasTablas2y3sepuedeobservarquenoexisten
+[3] ARCO,L.,MAGDALENO,D.&BELLO,R.E.2008b.
+diferenciassignificativas,puesenestapruebaestad´ısticasi
+Sistemaparaelagrupamientoyevaluacio´ndecoleccio-
+lasignificacio´nesmayorque0.05,noserechazalahipo´tesis
+nestextuales(SATEX).Cubapatentapplication.
+dequenoexistendiferenciassignificativasentrelosparesde
+muestrascomparadas. [4] ARTILES, M. 2011. Herramientas de Miner´ıa de Tex-
+toseInteligenciaArtificialaplicadasalagestio´ndela
+4. Conclusiones informacio´ncient´ıfico-te´cnica.Ma´sterenCienciadela
+Computacio´n,UniversidadCentral”MartaAbreu”deLas
+Elsistemaimplementadorecupera(auxilia´ndosedelAPI
+Villas.
+Lucene)losdocumentosenformatoXML,correspondientes
+aart´ıculoscient´ıficosprovenientesdeunservidorremotoo
+[5] BUETTCHER,S.,CLARKE,C.L.A.&CORMACK,
+deunrepositoriolocal;facilitandoeltrabajodeinvestigacio´n
+G. V. 2010. Information Retrieval: Implementing and
+deloscient´ıficos.Larecuperacio´nsigueelagrupamientopara
+EvaluatingSearchEngines,MITPress.
+tratarelcontenidoylaestructuradedocumentosutilizandola
+metodolog´ıabasadaenOverallSimSUX,lacualresultavalida [6] CAMPOS,L.M.D.,FERNA´NDEZ-LUNA,J.M.&J.F.
+comparadaconsupredecesorLucXML.Paratrabajosfuturos HUETE,A.E.R.2009.Probabilisticmethodsforlink-
+sepretendeextenderelsistemaaotrostiposdedocumentos. basedclassificationatINEX’08.ProceedingsofInitiative
+fortheEvaluationofXMLRetrieval,5631,453–459.
+9Enestedocumentoseutilizacubrimientocomotraduccio´ndelamedida
+recall.Adicionalmente,seutilizaelte´rminocubrimientoparanombraruna
+[7] CHEN,S.&ZHANG,K.2012.Animprovedalgorithm
+formadeladivisio´ndelosobjetosdespue´sdeunagrupamientoduroycon
+solapamiento. fortreeeditdistancewithapplicationsforRNAsecondary
+114 Recuperacio´ndeinformacio´nparaart´ıculoscient´ıficossoportadaenelagrupamientodedocumentosXML
+structure comparison. Combinatorial Optimization, 27, [21] MAGDALENO,D.,FUENTES,I.E.&GARC´IA,M.M.
+778-797. 2013.Sistemaparaelagrupamientodeart´ıculoscient´ıfi-
+cos en formato XML usando Lucene (LucXML). Cuba
+[8] CHOWDHURY,G.2010.IntroductiontoModernInfor-
+patentapplication.
+mationRetrieval,ThirdEdition,FacetPublishing.
+[22] MAGDALENO,D.,FUENTES,I.E.&GARC´IA,M.
+[9] CHRISS,A.,M.&ZITTING,J.L.2012.TikainAction, M..ClusteringXMLDocumentsusingStructureandCon-
+20BaldwinRoadPOBox261ShelterIsland,NY11964, tentBasedinaProposalSimilarityFunction(OverallSim-
+ManningPublicationsCo. SUX).Computacio´nySistemas,2015,19(1).
+[10] COSTA,G.,DFDSFDF,G.,GFDGDFG,F.,GDFGDF, [23] MANNING,C.D.,RAGHAN,P.&SCHU¨TZE,H.2008.
+G. G. G., FDGDFG, D. & DF, D. G. G. Hierarchical
+IntroductiontoInformationRetrieval,CambridgeUniver-
+clusteringofXMLdocumentsfocusedonstructuralcom-
+sityPress.
+ponents.Data&KnowledgeEngineering,2013.26-46.
+[11] CROFT,W.B.,METZLER,D.&STROHMAN,T.2010. [24] PINTO,D.,TOVAR,M.&VILARIN˜O,D.BUAP:Per-
+SearchEnginesInformationRetrievalinPracticePearson formanceofK-StarattheINEX’09ClusteringTask.In:
+Education. GEVA, S., KAMPS, J. & TROTMAN, A., eds. INEX
+2009 Workshop Pre-proceedings, 2009 Woodlands of
+[12] DALAMAGAS,T.,CHENG,T.,WINKEL,K.-J.&SE-
+Marburg,Ipswich,Queensland,Australia.391-398.
+LLIS,T.2006.AMethodologyforClusteringXMLDo-
+cumentsbyStructure.InformationSystems.
+[25] SALTON,G.,WONG,A.&YANG,C.S.1975.Avector
+[13] DENOYER,L.&GALLINARI,P.2009.Overviewof spacemodelforautomatictextretrieval.Communications
+theinex2008xmlminingtrack.InAdvancesinFocused oftheACM,18,613-620.
+Retrieval.ProceedingsofInitiativefortheEvaluationof
+XMLRetrieval,5631,401–411. [26] SHIN,K.&HAN,S.Y.2003.Fastclusteringalgorithm
+for information organization. In:Proc. of the CICLing
+[14] DOUCET,A.&AHONENMYKA,H.2002.Naiveclus-
+Conference.LectureNotesinComputerScience.Springer-
+teringofalargeXMLdocumentcollection.INEX,84-89.
+Verlag(2003).
+[15] FUENTES,I.E.2013.Nuevomodelodeagrupamiento
+paradocumentosXMLutilizandoestructuraycontenido. [27] STEINBACH,M.,KARYPIS,G.&KUMAR,V.Acom-
+LicenciaturaenCienciadelaComputacio´nTesisdegrado, parisonofdocumentclusteringtechniques.Proceedings
+UniversidadCentral”MartaAbreu”deLasVillas. of 6th ACM SIGKDD World Text Mining Conference,
+2000Boston.ACMPress,1-20.
+[16] HATCHER, E., GOSPODNETIC, O. & MCCAND-
+LESS,M.2009.LuceneinAction.
+[28] TEKLI,J.M.&CHBEIR,R.2011.ANovelXMLDocu-
+[17] KAUFMAN,L.&ROUSSEEUW,P.J.1990.Finding mentStructureComparisonFrameworkbased-onSubtree
+groupsindata:anintroductiontoclusteranalysis,John CommonalitiesandLabelSemantics.Elsevier,11.
+WileyandSons.
+[29] TIEN T., R. N. 2007. Evaluating the Performance of
+[18] KRUSE,R.,DO¨RING,C.&LESOR,M.-J.2007.Fun-
+XMLDocumentClusteringbyStructureonly.5thInter-
+damentalsofFuzzyClustering.In:OLIVEIRA,J.V.D.
+nationalWorkshopoftheInitiativefortheEvaluationof
+& PEDRYCZ, W. (eds.) Advances in Fuzzy Clustering
+XMLRetrieval.
+and its Applications. Est Sussex, England: John Wiley
+andSons.
+[30] WATANABE, Y., KAMIGAITO, H. & YOKOTA, H.
+[19] LEWIS, D. D. 1992. Representation and learning in 2013.SimilaritysearchforofficeXMLdocumentsbased
+informationretrieval.PhD.thesis,UniversityofMassa- onstyleandstructuredata.InternationalJournalofWeb
+chasetts. InformationSystems,9,7.
+[20] MAGDALENO,D.,FUENTES,I.E.,ARCO,L.,ARTI-
+[31] WILCOXON,F.1945.Individualcomparisonsbyran-
+LES,M.,FERNANDEZ,J.M.&HUETE,J.2011.New
+kingmethods.BiometricsBulletin,1,80-83.
+TextualRepresentationusingStructureandContents.Re-
+searchinComputingScience,54,117-130.

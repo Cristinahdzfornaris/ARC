@@ -1,0 +1,477 @@
+CienciasMatemáticas,Vol.30,No.2,Pag.79-86, 2016
+Recibido10-2016
+Ana´lisis morfolo´gico de muestras de HUVEC
+empleando funciones basadas en geometr´ıa integral
+Morphological analysis of HUVEC samples with
+integral geometry based functions
+Miriela Escobedo Nicot1*, Silena Herold Garc´ıa1, Ligia Ferreira Gomez2, Camila Machado3,
+Elisaˆngela Monteiro Pereira4, Wilkie Delgado Font1
+Resumen Elana´lisismorfolo´gicodeestructurasenima´genesdigitalesdemuestrasbiolo´gicasrevistegran
+intere´sparaelmundocient´ıfico.Enlaramadelamedicinapuedeofrecerresultadosmuyu´tilesenelestudio
+dediversasenfermedadesocondicionesenelserhumano,as´ıcomoenlavaloracio´ndelosposiblesefectos
+de diferentes tipos de intervenciones como agentes farmacolo´gicos. En este trabajo nos centramos en la
+posibilidaddeobtenerunaclasificacio´nmorfolo´gicaeficienteenima´genesdeculturasinvitro bidimensionales
+dece´lulasendotelialesdevenasdecordo´numbilicalhumano(HUVEC)bajolainfluenciadelaβ -glicoprote´ına
+2
+I(β GPI)paraestudiodelaangioge´nesis.Semuestranlosexcelentesresultadosobtenidosenlaclasificacio´n
+2
+supervisadadece´lulasencirculares,deformadaselongadas(elongadas)odeformadaspocoelongadas(otras
+deformaciones),empleandofuncionesbasadasengeometr´ıaintegralparaelana´lisismorfolo´gico.Losbordes
+celularessedetectaronempleandome´todosdecontornosactivosyseutilizo´ elme´todok-NNparaclasificacio´n
+conunprocesodevalidacio´ncruzadade5×1paraestimacio´ndelerror.Lasmuestrasfueronpreparadaspor
+especialistas,queadema´sdeterminaronlostiposdece´lulasdecadaclase.
+Abstract Morphological analysis of structures in digital images of biological samples is of great interest to
+the scientific world. In the branch of medicine can provide useful results in the study of various diseases or
+conditionsinhumans,aswellastheassessmentofthepossibleeffectsofdifferenttypesofinterventionssuch
+as pharmacological agents. In this paper we focus on the possibility of obtaining an efficient morphological
+classificationinimagesofinvitro two-dimensionalendothelialcellsofveinsofumbilicalcord(HUVEC)under
+the influence of β - glycoprotein I (β GPI) for studying angiogenesis. The excellent results obtained in the
+2 2
+supervisedclassificationofcellsincircular,deformedelongated(elongated)anddeformedslightlyelongated
+(other deformations), using integral geometry-based for morphological analysis are shown. Cell edges were
+detectedusingmethodsofactivecontoursandk-NNclassificationmethodwitha5×1cross-validationprocess
+forerrorestimationwasrealized. Sampleswerepreparedbypersonnelwhoaredeterminedcelltypesforeach
+class.
+PalabrasClave
+Clasificacio´ndeformas—Geometr´ıaintegral—Angioge´nesis—HUVEC
+1DepartamentodeComputacio´n,UniversidaddeOriente,SantiagodeCuba,Cuba.miri@uo.edu.cu,silena@uo.edu.cu,wilkie@uo.edu.cu
+2DepartamentodeAna´lisisCl´ınicosyToxicolo´gicos,UniversidaddeSa˜oPaulo,Sa˜oPaulo,Brasil.lfgomes@usp.br
+3DepartamentodeFisiopatologiaExperimental,FaculdadedeMedicina,UniversidadedeSa˜oPaulo,Sa˜oPaulo,Brasil.
+camilamachado@usp.br
+4DepartamentodeAna´lisesCl´ınicaseToxicolo´gicas,FaculdadedeCieˆnciasFarmaceˆuticas,UniversidadeFederaldeAlfenas,MinasGerais,
+Brasil.elimonteirop@gmail.com
+*AutorparaCorrespondencia
+Introduccio´n cio´ndenuevosvasoscapilares(brotos),laformacio´ndelazos
+(anastomosis)ycrucialmenteelestablecimientodelflujode
+Unodelosprocesosmedianteelcualseoriginanlosvasos sangreatrave´sdelanuevaredvascular[1].Paraelestudio
+sangu´ıneos es la angioge´nesis. Este es una secuencia bien delaangioge´nesisylaanti-angioge´nesisexistendiferentes
+orquestada de eventos que involucran la migracio´n y proli- modelosexperimentalesregistradosenlaliteraturacient´ıfica,
+feracio´ndece´lulasendoteliales,ladegradacio´nselectivade losmismossegu´nsucomplejidadpuedenclasificarseenen-
+componentes de los tejidos de la pared vascular, la forma- sayosinvitrooinvivo[2].Enparticularlasinvestigaciones
+80 Ana´lisismorfolo´gicodemuestrasdeHUVECempleandofuncionesbasadasengeometr´ıaintegral
+de la angioge´nesis in vitro, han sido desarrolladas a partir yelongadas.Apartirdelas48horasdeincubacio´n,elana´lisis
+dece´lulasendotelialesaisladascultivadasdeformamicroo queserealizapermitesoloelestudiodelasestructurascon
+macrovascular[3].Endoteliosdediversosor´ıgeneshansido formasdetuboscapilares,porelloso´loseusaenestecaso
+empleados:ce´lulasendotelialesmicrovascularesde´rmicashu- cuan elongada es la estructura, adema´s de la longitud y el
+manas(HDMECporsussiglaseningle´s),ce´lulasendoteliales taman˜odelamisma.
+ao´rticashumanas(HAECporsussiglaseningle´s)yquiza´s Realizarelana´lisisdedeformacionescelularesenmues-
+lasma´susadas,lasce´lulasendotelialesdevenasdecordo´n tras2Dapartirdelas24horasdeincubacio´npermitesugerir
+umbilicalhumano(HUVECporsussiglaseningle´s),quehan elcomportamientoprecozdelasce´lulasanteelest´ımuloal
+sidocultivadascone´xitodesde1973[4]. cualesta´nsiendoexpuestas,porelloresultadeintere´senvez
+Los ensayos in vitro posibilitan el estudio a partir de dehacerunadiferenciacio´nquedividasolamenteelconjunto
+ima´genes de microscop´ıa, de los procesos de migracio´n y ence´lulascircularesyelongadas,realizarunadiferenciacio´n
+proliferacio´ndece´lulasendotelialesyorganizacio´nbidimen- queexpresediferentesnivelesdedeformacio´nyquepuedaser
+sionalotridimensionaldeestructurascapilares,locualpermi- correlacionadaconlosprocesosdemigracio´nyproliferacio´n
+teenmuchoscasosidentificarelconjuntodeposiblesefectos celular,ylaconsiguienteaparicio´ndelosfenotipostipystalk.
+deuntipodeintervencio´n(prote´ınas,ce´lulas,agentesfarma- Existenestudioseneritrocitosutilizandofuncionesdes-
+colo´gicos)odeloseventosmolecularesy/ocelularesenla criptorasdecontornosquerealizanunadiferenciacio´nsimilar,
+angioge´nesis.Enlosu´ltimosan˜ossehanrealizadodiversos osea,apartirdevariasclases.En[19]seempleaporprimera
+estudiosdirigidosalaautomatizacio´ndelacaracterizacio´n vezenelana´lisismorfolo´gicolafuncio´nsoportegeneralizada
+y/o cuantificacio´n de estos procesos involucrados en la an- definidaen[20]yseproponenalgunasvariantesdelamisma
+gioge´nesisapartirdeculturasdece´lulasendotelialesinvitro comodescriptoresdecontornos.Estafuncio´nsebasaenla
+([5],[6],[7],[8],[9]). conocidafuncio´nsoporte,frecuentementeempleadaparades-
+Otrosestudiossehancentradoenutilizarelana´lisismor- cribirfigurasconvexas,peroqueenelcasodelasfigurasno
+folo´gicodece´lulasendotelialesinvitrodebidoalasdiferentes convexascoincideconlaenvolturaconvexadelconjunto,por
+morfolog´ıasqueaparecenenestasculturasyquepuedenser loquenoescapazdediscriminarendeterminadoscasosde
+correlacionadas con la aparicio´n de los fenotipos celulares noconvexidad.Lafuncio´nsoportegeneralizadaresuelveeste
+tip y stalk. Las ce´lulas tipo tip se caracterizan por su com- problemayofreceexcelentesresultadosenlaclasificacio´nde
+portamientomigratorioydefinen,atrave´sdelasalteraciones figurasnoconvexasengeneralsegu´nsuforma.En[21]seuti-
+delmicroambiente,cua´lsera´larutadelcrecimientodelbroto lizaestafuncio´nyalgunasdelasvariantespropuestasen[19]
+vascular [10]. La morfolog´ıa de este tipo de ce´lulas puede paraobtenerrepresentacionesmatricialesdecaracter´ısticas
+asociarseconformaselongadas.Porotrapartelasce´lulastipo delcontornodeeritrocitosenmuestrasdesangreperife´rica,
+stalksonaltamenteproliferativas,garantizandolaestabilidad que permiten obtener nuevos descriptores de forma. Se in-
+ylaformacio´ndellumenvascularendesarrollo[11].Lamor- troduceadema´sunanuevafuncio´nderivadadeunresultado
+folog´ıa de este tipo de ce´lulas puede asociarse con formas cla´sicodegeometr´ıaintegral,lafo´rmuladeCrofton.
+circulares. Enestetrabajoteniendoencuentaquelosresultadosob-
+Enelana´lisismorfolo´gicocuantitativodeestructurasen tenidos en [21] en la aplicacio´n de funciones descriptoras
+ima´genesdigitalesparaestudiodelaangioge´nesisesfunda- de contornos basadas en la geometr´ıa integral para la cla-
+mentalelprocesodeextraccio´ndecaracter´ısticasdeintere´s sificacio´n supervisada de eritrocitos en muestras de sangre
+enelbordeanalizadoparaelposteriorempleodealgoritmos perife´ricafueronexcelentesyadema´slasemejanzaencuan-
+de cuantificacio´n o de clasificacio´n adecuados. En [12] los to a los tipos morfolo´gicos entre eritrocitos y HUVEC, se
+autoresdeterminanelanchoyen([13],[14])lalongitudyel proponerealizarelana´lisismorfolo´gicoparadiferenciacio´n
+taman˜odeestructurasconformadetuboscapilares;en[15] celularenHUVECentrestipos:ce´lulascirculares,ce´lulas
+se propone una metodolog´ıa que a partir del uso de te´cni- deformadaselongadas(elongadas)yce´lulasdeformadaspoco
+cas de morfolog´ıa matema´tica, realiza la cuantificacio´n de alargadas(otrasdeformaciones),empleandolosdescriptores
+estructurasconformadetuboscapilares,unodelospara´me- quemostraronmejordesempen˜oenelestudiodeeritrocitos.
+tros analizados es la forma de las estructuras; en [16] se Se decidio´ usar tres clases en la clasificacio´n celular para
+utiliza el ana´lisis morfolo´gico, espec´ıficamente la relacio´n correlacionar los resultados con la aparicio´n de los fenoti-
+Eje /Eje ,paraelestudiodelasinteraccionesce´lu- poscelularestipostalk,paralocualesdeintere´ssepararen
+menor mayor
+lastumorales/ce´lulasendoteliales;en[17]seusaelana´lisisde las ce´lulas elongadas las que tengan mayor o menor grado
+formadelasHUVEC(enelsentidodeelongadasocirculares deelongacio´n,locualpermitehacerunadiferenciacio´nma´s
+usandoelcoeficientedecircularidad),bajovariascombina- efectiva.
+cionesdetensio´ndecizallamientoypresio´nhidrosta´ticaen Seempleo´ adema´slatransformadadeFourierparaestu-
+microflu´ıdos. diarlosdescriptoresobtenidosyreducirladimensionalidad
+Enestostrabajos,cuandosehaceelana´lisiscelularhasta delosmismos.Paraobtenerloscontornosdeintere´senes-
+las24horasdeincubacio´n,seestudianlasalteracionesmor- tetrabajoseemplearonme´todosdeevolucio´ndecontornos,
+folo´gicashaciendounadiferenciacio´nendosclases:circulares denominadoslevelsets.Serealizo´ unprocesodevalidacio´n
+Ana´lisismorfolo´gicodemuestrasdeHUVECempleandofuncionesbasadasengeometr´ıaintegral 81
+cruzadade5×1paraestimacio´ndelerror. activosegeneraapartirdelaideadeadaptardina´micamente
+contornososuperficiesbajolainfluenciadefuerzasexternas
+einternas,siguiendopropiedadesf´ısicascomolaelasticidad,
+1. Me´todos
+suavidad,durezayotras.Laevolucio´nespacialdelcontorno
+1.1 Preparacio´ndelasmuestras activo de una curva inicializada depende de la imagen y/o
+Los estudios fueron conducidos con subfracciones del delaparametrizacio´ndelacurva.Ladina´micadelcontorno
+procesodepurificacio´nquesonricasenmono´merosdeβ GPI activosedetienecuandoe´stealcanzalosl´ımitesdelobjetoy
+2
+purificada,obtenidasporelucio´ndelacolumnadeHeparina lacurvacorrespondeaunacurvadeenerg´ıam´ınima.
+Sefarosadespue´sdefiltracio´npormembranasdeacetatode Dentrodelafamiliadeloscontornosactivos,espec´ıfica-
+celulosa, con poros de dia´metro 0,22 µm para eliminar la menteseutilizaronloscontornosactivosgeome´tricos.Estos
+contaminacio´nbacterianaydilucio´nenmediodeculturasin esta´n basados en la teor´ıa de la evolucio´n de la curva por
+suero.Lasce´lulasendotelialesenlaconcentracio´nde2×104 sucurvaturamediayfueronpropuestosporOsherySethian
+ce´lulas/ml,fueroncolocadasenmediodecultivoRPMI16401 en [23]. En esta familia de contornos activos, la dina´mica
+suplementadoconsuerofetalbovinoa10%enplacasde24 de la curva depende de su curvatura media y de la imagen.
+pozos,sobrecubreobjetosdevidriocon13mmdedia´metro, Loscontornosactivosgeome´tricossesolucionanutilizando
+previamenteesterilizadosenautoclave.Encadapozoconlas elme´todolevelset,elcualesunapoderosaherramientapara
+muestras,fueadicionadounaconcentracio´niguala30µg/ml estudiarelmovimientodeinterfacesconociendounmodelo
+delaprote´ına.Laincubacio´nfueinterrumpidaalas24hy delavelocidadnormaldelainterfaz.Laaplicacio´ndeeste
+48 h, para la observacio´n del efecto de la prote´ına sobre el me´todoesefectivadebidoaquerespondebienfrenteacon-
+crecimientoyladiferenciacio´ncelular.Lasce´lulasadheridas diciones de ruido debido a su principio de funcionamiento.
+aloscubreobjetosdevidriofueronten˜idasconunamezcla EnlaFigura1,semuestranlosresultadosdelasegmentacio´n
+deHematoxilinayAzuldeMetilenoutilizadaenlaboratorios paralosdiferentestiposdedeformacionesvaloradas.
+deHematolog´ıa(May-Grunwald-Giemsa),paraunresultado
+depatro´nsuaveconbuenatransparenciacitoplasma´tica.
+1.2 Capturadelasima´genes
+Fueronobtenidasima´genesdedistintoscamposde8mues-
+trasdeHUVECenensayos2D,apartirdeunaca´maraPoint
+Grey(GS3-U3-1455M)conobjetivodeaumentode3,2×.En
+laetapadeestandarizacio´nfueronobtenidastambie´nima´ge-
+(a) (b) (c)
+nesconunobjetivode10×,peroseopto´porutilizarlasima´ge-
+Figura1.(a)Ce´lulacircular,(b)ce´luladeformadaalargaday
+nesconaumentomenorycampoma´samplio.Lasima´genes
+(c)ce´luladeformadapocoalargada.
+obtenidassonde1384×1036.Paracadala´mina,queincluyen
+trespozosdecultivo,fueroncapturadasentre17y22ima´ge-
+nesdecampossecuencialessobreundia´metrodeterminado
+1.4 Descriptoresmorfolo´gicos
+enlamuestra.Estamanerademanipulacio´ndelasmuestras
+permitio´ estandarizarelprocedimientodecapturaparatodo Enestaseccio´nseexplicara´nlasfuncionesempleadasen
+elconjuntodemuestrasyverificarladistribucio´ndece´lulas estainvestigacio´nparacaracterizarloscontornos:lafuncio´n
+sobrelala´mina. soportegeneralizada,unavariantedelamismadenominada
+Un especialista selecciono´ las ce´lulas a ser usadas, de- soportegeneralizadaintegradaponderadayeldescriptorde
+terminandocua´lesdelasce´lulaspresentesenlasima´genes
+Crofton.Enlosucesivo,Ddenotaundominiocompactoen
+R2deper´ımetroLya´reaF.
+obtenidassoncirculares,deformadasalargadas(elongadas)y
+deformadaspocoalargadas(otrasdeformaciones).Estasce´lu-
+1.4.1 Funcio´nSoporteGeneralizadaenR2
+lasfueronaisladasdeformamanualenima´genesindividuales
+Entrelasfuncionesempleadasparaobtenerpropiedades
+de 114×114 p´ıxeles, con el objetivo de aplicar algoritmos
+cuantitativasreferentesaunadeterminadaformaoconjunto
+declasificacio´nsupervisada.Entotalfueronobtenidas300
+plano se encuentra la funcio´n soporte [24], que aunque ha
+ima´genesindividuales,100paracadaclasedefinida.
+sidodefinidaparaconjuntosplanosengeneral,realmentees
+empleadafrecuentementeparadescribirconjuntosconvexos
+1.3 Segmentacio´n
+debidoaquesondeterminadosdeformau´nicaporlarepresen-
+La segmentacio´n de las ima´genes se realizo´ a partir de
+tacio´ndelafuncio´nsoportequelescorresponda[25].Enel
+me´todosbasadosenlaevolucio´ndecontornos.Loscontornos
+casodelosconjuntosnoconvexoslafuncio´nsoportecoincide
+activosomodelosdeformables,comotambie´nselesconoce
+conlafuncio´nsoportedelaenvolturaconvexadelconjunto,
+enlaliteratura,fueronpropuestosconefectividadporprimera
+porloqueexistendistintosconjuntosnoconvexosquetienen
+vez por Kass y Terzopoulos [22]. El concepto de contorno
+lamismafuncio´nsoporte.Unadefinicio´nalternativadelafun-
+1MediodecultivoRoswellParkMemorialInstitute. cio´nsoporteparaconjuntosnoconvexoseslafuncio´nsoporte
+82 Ana´lisismorfolo´gicodemuestrasdeHUVECempleandofuncionesbasadasengeometr´ıaintegral
+generalizada,introducidaen[20],yqueeslaqueempleamos enque´ direccioneselsegmentooconjuntodesegmentosde
+enestetrabajoparadescribirformasnoconvexas. longitudσ esta´ncontenidosenlafigura,ysieselcasonos
+SeaDundominiocompactoenR2deper´ımetroLya´reaF. dice la distancia a la que se encuentran ubicados desde el
+Seaσ lalongituddelainterseccio´nD∩L2,dondeL2denota origendecoordenadasfijado,queenestetrabajoseesta´ to-
+1 1
+unal´ıneaenelplanoR2.SiL2∩∂D(cid:54)=0/ yL2∩intD=0/,sea mando siempre como el centroide o centro de masa de la
+1 1
+σ =0.Denotamosporσ (φ)elma´ximodelalongitudde figuraanalizada.
+M
+L2∩intD cuando φ es fijo; y para l ≥0 y 0≤φ <2π, se
+1
+define: 1.4.2 Funcio´n Soporte Generalizada Integrada Pondera-
+da
+Estafuncio´nesunavariantedelaanterioryfuepropues-
+r(l,φ)=m´ın{l,σ (φ)} (1)
+M
+ta en [26]. So´lo depende de un para´metro, el a´ngulo φ, al
+igualquelafuncio´nsoporte,peroadiferenciadeestalogra
+Definicio´n1 Para σ ≥0, 0≤φ ≤2π, la funcio´n soporte
+discriminar entre un conjunto y su envoltura convexa. Una
+generalizadadeDsedefinecomo:
+posibilidadpudieraser:
+(cid:40)
+p(σ,φ)=
+sup
+L 1 2
+{p:Length(L
+1
+2∩intD)≥σ}, 0≤σ≤σM (φ)
+Q(0,φ)=
+(cid:90) σM(φ)
+p(σ,φ)dσ. (4)
+0, σ>σM (φ) 0
+(2)
+dondelal´ıneaL2 secaracterizaporlaexpresio´nxcosφ+ Peroenlugardeestoesma´sapropiadoconsiderarunaversio´n
+1
+ponderadadeQ(0,φ)queplantealosiguiente:
+ysinφ−p=0.
+Enestecaso p(0,φ)eslafuncio´nsoporteconocida.En Definicio´n2 DadoundominioplanocompactoDy0≤φ <
+talcasosiDesconvexotenemos: 2π,definimoslafuncio´nsoportegeneralizadaintegradapon-
+deradacomo
+(cid:90) 2π
+p(0,φ)dφ =L (3) σ
+M
+(φ) σ
+M
+(φ)(cid:90) σM(φ)
+0 W(φ)= Q(0,φ)= p(σ,φ)dσ. (5)
+σ M σ M 0
+LaDefinicio´n1seilustraenlaFigura2,dondeseobserva
+que existen algunos valores de φ para los que la funcio´n DadoqueQ(0)= (cid:82)2πQ(0,φ)dφ esunamedidaque,enel
+0
+soportegeneralizadadeesteconjuntonovaacoincidircon casoconvexo,coincideconπF,distintosconjuntoscompactos
+ladesuenvolturaconvexaparacasitodoslosvaloresdeσ, pueden tener la misma funcio´n Q(0,φ). Sin embargo esta
+loquehaceposiblequeestafuncio´nlogrediscriminarentre
+funcio´n soporte generalizada integrada ponderada permite
+conjuntosnoconvexosconlamismaenvolturaconvexa.
+diferenciarestoscasosalconsiderardentrodelafuncio´nun
+valorquerepresentaalacantidaddevaloresdeσ existentes
+paracadaa´nguloφ.
+1.4.3 DescriptordeCrofton
+En[21]seintroduceunnuevodescriptorbasadoenprin-
+cipiosdegeometr´ıaintegral[20,27].ConsiderandoL2 una
+1
+l´ıneaenelplanodeterminadapor:
+xcosφ+ysinφ−p=0,
+lafuncio´nsoportedeDsedefinecomo:
+p(φ)=sup {p : L2∩D(cid:54)=0/}. (6)
+L2 1
+1
+Figura2.Funcio´nsoportegeneralizada. Dadaunal´ıneaL 1 2,seaσ(φ,p)lalongituddelaintersec-
+cio´nD∩L2.Consideremoslaintegral:
+1
+Lafuncio´nsoportegeneralizadaesmuybuenadescriptora
+(cid:90) p(φ)
+paraconjuntoscompactosdadoquetienedosargumentos:φ c(φ)= σ(φ,p)dp. (7)
+(a´nguloquedefineladireccio´nperpendicularalal´ıneaL2) 0
+1
+yσ (longituddelacuerdadeterminadaporL2∩intD).Una ElprincipiodeCavalieriparaelcasodedosdimensiones
+1
+vez que el primer argumento, φ, se fija, la funcio´n soporte [28]planteaquec(φ)+c(φ+π)=F,paracadaφ ∈[0,2π).
+generalizadacomofuncio´ndesusegundoargumentoσ ofre- De aqu´ı podemos derivar una nueva funcio´n para describir
+ceinformacio´nacercadelanchodelafiguraalolargodela formas,tomandounvalorpequen˜oρ ≥0quesefija,detal
+direccio´n perpendicular a φ. Si se fija σ, p(σ,φ) nos dice formaqueρ ≤p(φ),∀φ ∈[0,2π),entonces:
+Ana´lisismorfolo´gicodemuestrasdeHUVECempleandofuncionesbasadasengeometr´ıaintegral 83
+Definicio´n3 Dadoρ,eldescriptordeCroftonesta´ definido 2. Resultados y discusio´n
+como:
+2.1 Descripcio´ndelosexperimentosrealizados
+(cid:90) ρ
+Paralosobjetosdecadaclaseseselecciono´ elorigenco-
+c (φ)= σ(φ,p)dp. (8)
+ρ
+0 mo su centro de masa y fueron aplicados los descriptores
+Paraunaimagendigitalc (φ)esaproximadoporsumas: explicadosanteriormente.Fueronusadasaproximacionesdis-
+ρ
+cretasparacadafuncio´n(VerEcuacio´n9),∆l=1y∆φ =1.El
+n
+nu´merodecoeficientesdeFourierusadofue5paratodaslas
+c (φ)≈∆ρ∑σ(φ,i∆ρ), (9)
+ρ funciones,deformatalqueelvectorobtenidoparatodoslos
+i=0
+casoses5-dimensional.Paralafuncio´n p(σ,φ)lacantidad
+donde∆ρ =ρ/n,(verFigura3).
+devaloresdeσ detectadosporlafuncio´nnoeselmismopara
+todaslasclasesydependeencadacasodeltaman˜odelare-
+gio´nexaminada.Enesteestudio,losvaloresdeσ detectados
+paralasce´lulasvaloradas,var´ıande8a65,yparalafuncio´n
+p(σ,φ)elnu´merodevaloresdeσ consideradosfueN=8,
+dandoalugaraunvectorcaracter´ısticode5×8=40.
+Despue´sdeobtenidoslosdiferentesvectorescaracter´ısti-
+cos,paratodosloscasosseuso´ elalgoritmodeclasificacio´n
+supervisadak-NN([29],[30]).Fueronconsideradosdosveci-
+nosycomome´tricadedistancialadistanciaEucl´ıdea.Para
+validareldesempen˜odelaclasificacio´n,fuerealizadounpro-
+ceso validacio´n cruzada de 5×1 para estimacio´n del error
+Figura3.DescriptordeCrofton:c
+ρ
+(φ)representaela´rea
+[31].Elconjuntodeima´genesfueparticionadoen5subcon-
+sombreadadeDparaφ =0yφ =3π/4,respectivamente.
+juntos y fueron realizadas 5 rondas de validacio´n cruzada.
+Encadaronda,4subconjuntosfueronusadoscomodatosde
+1.4.4 TransformadadeFourier entrenamientoyelotrosubconjuntofueusadocomodatode
+Muchasfuncionesparadescripcio´ndeformasdependen validacio´n.Losresultadosdelavalidacio´nfueronpromedia-
+en gran medida del taman˜o de la forma o del punto inicial dos.
+consideradoenelcontorno.Paraevitarestadependenciase Paratodaslasclasesfueronobtenidoslosvaloressesen-
+empleancaracter´ısticasasociadasalaformaperoindependien- sibilidad,precisio´nyespecificidad,medidasdecalidadque
+tesdelpuntodeinicioodeltaman˜o,comolasqueaportala sonextra´ıdasapartirdelamatrizdeconfusio´n[32].Lasen-
+aproximacio´ndelafuncio´nderepresentacio´ndelcontornopor sibilidad(TruePositiveRate(TPR)porsussiglaseningle´s)
+seriesdeFourier[24],quehemosutilizadoenestecasopara eslaproporcio´ndeobjetosqueesta´nclasificadosdentrode
+garantizarestosobjetivosyademasreducirdimensionalidad laclaseC,deentretodoslosobjetosquerealmentesonde
+i
+delosdescriptoresobtenidos. laclaseC.Laprecisio´n(P)eslaproporcio´ndeobjetosque
+i
+Si f(φ) es una funcio´n perio´dica que es integrable en realmentetienenclaseC deentretodoslosobjetosquesehan
+i
+[0,2π]yquedescribeelcontornodeunconjuntoplanoDse clasificadodentrodelaclaseC.Yporu´ltimo,laespecificidad
+i
+tiene: (True Negative Rate (TNR) por sus siglas en ingle´s) es la
+proporcio´ndeobjetosquehansidoclasificadosdentrodelas
+a p
+f(φ)≈ 0 +∑(a k cos(kφ)+b k sin(kφ)) (10) otrasclasesdiferentesalaclaseC i yquenopertenecenala
+2 k=0 claseC i .
+paraunvalordadonatural p≥0.
+2.2 Resultadosobtenidos
+Apartirdelasconocidascaracter´ısticasdelatransforma-
+(cid:113) LosresultadosmostradosenlasTablas1,2y3muestran
+da de Fourier los coeficientes A k = a2 k +b2 k , k=1,...,p queelempleodeestosdescriptoresenlaclasificacio´nmor-
+son invariantes al punto de inicio escogido, es decir, a las folo´gica de las ce´lulas es efectivo. Se utilizo´ la notacio´n C
+rotaciones de D. Por otro lado el coeficiente a es conside- parareferirnosalasce´lulascirculares,DEparalasdeforma-
+0
+radounpara´metrodetaman˜o,porloquelosvaloresA /a , das elongadas y DPE para las deformadas poco elongadas.
+k 0
+k=1,...,ppuedenserempleadoscomopara´metrosinvarian- Entodosloscasosseobtieneun92%desensibilidadoma´s
+tesaescalaparadescribirlaforma. enlaclasificacio´n,convaloresdeprecisio´nyespecificidad
+Lasfunciones(5)y(7)sonfuncionesunidimensionales, cercanosigualmenteaestevalor,locualquieredecirqueen
+enestoscasosesusadalaaproximacio´ndeFourier1D.Para generallosdescriptoressoncapacesdediscriminarcorrecta-
+lafuncio´nsoportegeneralizada(2)seconsidero´ unconjunto mentelostiposdece´lulasdefinidos.Laclasequemejorse
+devaloresfijosdeσ:0,∆l,2∆l,...,n∆lyluegoseaplico´ la logradiferenciareslacircular,locualeselcomportamiento
+aproximacio´ndeFourier1Dalafuncio´np(σ,φ),comouna adecuadodebidoaqueeslaclaseconobjetosmejordiferen-
+funcio´ndeφ paracadaσ. ciablesdelrestodelosotrosobjetosenlasdosclasesrestantes,
+84 Ana´lisismorfolo´gicodemuestrasdeHUVECempleandofuncionesbasadasengeometr´ıaintegral
+quetienenformarelativamenteelongadaentodosloscasos. emplearseparalacuantificacio´ndefeno´menosenima´genes
+Enningu´ncasoseclasifico´ unace´lulacircularcomounade- delcampocompletodeobservacio´n,comolaaparicio´ndelos
+formada elongada y viceversa. En el caso espec´ıfico de la fenotiposcelularestipystalk,queusualmentesonestudiados
+clasededeformadaspocoelongadas,quetieneobjetoscon enculturas3Dapartirde48horasdeincubacio´n,locualper-
+mayorvariacio´ndelaforma,laclasificacio´nmuestraresul- mitequesesimplifiquelacuantificacio´nysereduzcaelcosto
+tadosma´sdiscretos,consensibilidadesde86%entodoslos delana´lisisdelarespuestadeproliferacio´nasociadaaefectos
+casos,debidoaqueestosobjetosalsertambie´nrelativamente desustanciasanti-angioge´nicassobrelasce´lulasendoteliales.
+elongadosenvarioscasosseclasificancomopertenecientes
+aesaclase.Noobstantelaprecisio´nylaespecificidaddela
+clasepermanecenaltas,locualquieredecirquelasfunciones,
+Agradecimientos
+apesardequeencomparacio´nconlaclasecircular,definen
+menosobjetoscomopertenecientesalaclase,losquedefinen AlprofesorDurvaneiAugustoMaria,delInstitutoButan-
+sonrealmentepertenecientesalamisma. tan,porlasce´lulasendotelialesutilizadasenestetrabajo.A
+los profesores Dr. C. Mikiya Muramatsu y Dr. C. Adriano
+Cuadro1.Resultadosobtenidosconlafuncio´n p(σ,φ).
+Alencar,porcederelmicroscopioylasinstalacionesutiliza-
+C DE DPE TPR P TNR
+dasparalasmedidasyalDr.C.DiogoSogaporelmontaje
+C 99 0 1 99.00 98.02 88.50
+de la instalacio´n usada para la captura de las ima´genes, to-
+DE 0 91 9 91.00 88.35 92.50
+dospertenecientesalInstitutodeF´ısicadelaUniversidadde
+DPE 2 12 86 86.00 89.58 95.00
+Sa˜oPaulo,Brasil.Estetrabajoesta´ soportadoporlasagen-
+Totales 92.00 91.98 92.00
+ciasdeinvestigacio´nbrasilen˜asCAPES,FAPESPyCNPqa
+trave´sdesuproyectoPDJ402601/2015-7,laUniversidadde
+Sa˜oPauloylaUniversidadFluminense,ambasdeBrasilyla
+Cuadro2.Resultadosobtenidosconlafuncio´nW(φ).
+UniversidaddeOriente,Cuba.
+C DE DPE TPR P TNR
+C 99 0 1 99.00 99.00 88.50
+DE 0 88 12 88.00 89.80 94.00 Referencias
+DPE 1 10 86 89.00 87.25 93.50
+[1] S.R.McDougall,A.R.Anderson,andM.A.Chaplain,
+Totales 92.00 92.05 92.00
+“Mathematicalmodellingofdynamicadaptivetumour-
+inducedangiogenesis:clinicalimplicationsandtherapeu-
+tictargetingstrategies,”Journaloftheoreticalbiology,
+Cuadro3.Resultadosobtenidosconlafuncio´nC
+p
+(φ).
+vol.241,no.3,pp.564–589,2006.
+C DE DPE TPR P TNR
+C 97 0 3 97.00 96.04 90.50 [2] R.Auerbach,W.Auerbach,andI.Polakowski,“Assays
+DE 0 94 6 94.00 91.26 92.00 forangiogenesis:areview,”Pharmacology&therapeu-
+DPE 4 9 87 87.00 90.63 95.50 tics,vol.51,no.1,pp.1–11,1991.
+Totales 92.67 92.64 92.67
+[3] M.Bahramsoltani,J.Plendl,P.Janczyk,P.Custodis,and
+S.Kaessmeyer,“Quantitationofangiogenesisandanti-
+angiogenesisinvivo,exvivoandinvitro–anoverview,”
+3. Conclusiones
+Altex,vol.26,no.2,p.95,2009.
+Enestetrabajoserealizo´unestudiodeldesempen˜odetres
+funcionesdescriptorasdecontornosbasadasengeometr´ıain- [4] E. A. Jaffe, R. L. Nachman, C. G. Becker, and C. R.
+tegralenlaclasificacio´nmorfolo´gicadeHUVECentrestipos: Minick, “Culture of human endothelial cells derived
+ce´lulascirculares,ce´lulasdeformadaselongadas(elongadas)y fromumbilicalveins.identificationbymorphologicand
+ce´lulasdeformadaspocoalargadas(otrasdeformaciones).Los immunologiccriteria,”JournalofClinicalInvestigation,
+resultadosobtenidosempleandolosdescriptorespropuestos vol.52,no.11,p.2745,1973.
+mostraronquesepuedeobtenerunaclasificacio´nmorfolo´gica
+deestasce´lulasconun92%desensibilidadoma´s,mantenien- [5] D.Guidolin,G.Albertin,andD.Ribatti,“Exploringin
+doadema´sbuenosresultadosencuantoaprecisio´nyespecifi- vitroangiogenesisbyimageanalysisandmathematical
+cidaddelaclasificacio´n.EldescriptordeCroftonmostro´ los modeling,” Microscopy: science, technology, applica-
+mejores resultados, con un 92.67%, lo que se corresponde tionsandeducation,vol.2,pp.876–884,2010.
+conlopropuestoenbibliograf´ıasobrelasuperioridaddela
+descripcio´ndeestafuncio´n. [6] C.P.Khoo,K.Micklem,andS.M.Watt,“Acomparison
+Realizarunana´lisismorfolo´gicodeformaautomatizada ofmethodsforquantifyingangiogenesisinthematrigel
+comoelpropuestoenestetrabajo,resultadegranimportan- assay in vitro,” Tissue Engineering Part C: Methods,
+cia para el estudio de la angioge´nesis, debido a que puede vol.17,no.9,pp.895–906,2011.
+Ana´lisismorfolo´gicodemuestrasdeHUVECempleandofuncionesbasadasengeometr´ıaintegral 85
+[7] M.-L.Boizeau,P.Fons,L.Cousseins,J.Desjobert,D.Si- [17] M.-C.Liu,H.-C.Shih,J.-G.Wu,T.-W.Weng,C.-Y.Wu,
+brac, C. Michaux, A.-L. Nestor, B. Gautret, K. Neil, J.-C.Lu,andY.-C.Tung,“Electrofluidicpressuresensor
+C.Herbert,etal.,“Automatedimageanalysisofinvitro embedded microfluidic device: a study of endothelial
+angiogenesisassay,”Journaloflaboratoryautomation, cellsunderhydrostaticpressureandshearstresscombi-
+p.2211068213495204,2013. nations,”LabonaChip,vol.13,no.9,pp.1743–1753,
+2013.
+[8] I.Valavanis,T.Goudas,M.Michailidou,I.Maglogian-
+nis,H.Loutrari,andA.Chatziioannou,“Anovelimage [18] D.ZhangandG.Lu,“Reviewofshaperepresentation
+analysismethodologyfortheevaluationofangiogene- anddescriptiontechniques,”Patternrecognition,vol.37,
+sis in matrigel assays and screening of angiogenesis- no.1,pp.1–19,2004.
+modulatingcompounds,”inIFIPInternationalConfe-
+renceonArtificialIntelligenceApplicationsandInnova- [19] X.Gual-Arnau,S.Herold-Garc´ıa,andA.Simo´,“Shape
+tions,pp.61–71,Springer,2015. descriptionfromgeneralizedsupportfunctions,”Pattern
+RecognitionLetters,vol.34,pp.619–626,2013.
+[9] C. Balsat, S. Blacher, N. Singolle, F. Kridelka, and
+A. Noe¨l, “Image analysis characterization of the [20] R.Delin,TopicsinIntegralGeometry. WorldScientific,
+lymph/angiogenesisinexperimentalmodelsandclinical Singapore,1994.
+studies,”ActaStereologica,2015.
+[21] X.Gual-Arnau,S.Herold-Garc´ıa,andA.Simo´,“Eryth-
+[10] L.-K. Phng and H. Gerhardt, “Angiogenesis: a team rocyte shape classification using integral-geometry-
+effortcoordinatedbynotch,”Developmentalcell,vol.16, basedmethods,”Medical&biologicalengineering&
+no.2,pp.196–208,2009. computing,vol.53,no.7,pp.623–633,2015.
+[11] E.Dejana,E.Tournier-Lasserve,andB.M.Weinstein, [22] M.Kass,A.Witkin,andD.Terzopoulos,“Snakes:Acti-
+“Thecontrolofvascularintegritybyendothelialcelljun- vecontourmodels,”Internationaljournalofcomputer
+ctions:molecularbasisandpathologicalimplications,” vision,vol.1,no.4,pp.321–331,1988.
+Developmentalcell,vol.16,no.2,pp.209–221,2009.
+[23] S. Osher and J. A. Sethian, “Fronts propagating
+[12] E. Montanez, R. P. Casaroli-Marano, S. Vilaro, and with curvature-dependent speed: algorithms based on
+R.Pagan,“Comparativestudyoftubeassemblyinthree- hamilton-jacobiformulations,”Journalofcomputatio-
+dimensionalcollagenmatrixandonmatrigelcoats,”An- nalphysics,vol.79,no.1,pp.12–49,1988.
+giogenesis,vol.5,no.3,pp.167–172,2002.
+[24] L.A.StoyanandH.Stoyan,Fractals,RandomShapes
+[13] A.Niemisto,V.Dunmire,O.Yli-Harja,W.Zhang,and andPointFields. JohnWileyandSons,1995.
+I.Shmulevich,“Robustquantificationofinvitroangio-
+genesisthroughimageanalysis,”IEEEtransactionson [25] V. Kindratenko, “On using functions to describe the
+medicalimaging,vol.24,no.4,pp.549–553,2005. shapes,”J.Math.ImagingVision,vol.18,pp.225–245,
+2003.
+[14] A. F. Santos, A. B. Zaltsman, R. C. Martin, A. Kuz-
+min, Y. Alexandrov, E. P. Roquemore, R. A. Jessop, [26] X.Gual-Arnau,S.Herold-Garc´ıa,andA.Simo´,“Shape
+M.G.M.v.Erck,andJ.H.Verheijen,“Angiogenesis: descriptionfromgeneralizedsupportfunctions,”Pattern
+animprovedinvitrobiologicalsystemandautomated RecognitionLetters,vol.34,no.6,pp.619–626,2013.
+image-basedworkflowtoaididentificationandcharac-
+terizationofangiogenesisandangiogenicmodulators,” [27] L.Santalo´,IntegralGeometryandGeometricProbabi-
+Assayanddrugdevelopmenttechnologies,vol.6,no.5, lity. Addison-Wesley,1976.
+pp.693–710,2008.
+[28] H.Gundersen,E.Jensen,K.Kieu,andJ.Nielsen,“The
+[15] J.AnguloandS.Matou,“Applicationofmathematical efficiencyofsystematicsamplinginstereologyreconsi-
+morphologytothequantificationofinvitroendothelial dered,”JournalofMicroscopy,vol.193,pp.199–211,
+cellorganizationintotubular-likestructures,”Cellular 1999.
+andMolecularBiology,vol.53,no.2,pp.22–35,2007.
+[29] T.CoverandP.Hart,“Nearestneighborpatternclassifi-
+[16] R. Chotard-Ghodsnia, O. Haddad, A. Leyrat, A. Dro- cation,”IEEETrans.Inform.Theory,vol.13,pp.21–27,
+chon, C. Verdier, and A. Duperray, “Morphological 1967.
+analysisoftumorcell/endothelialcellinteractionsun-
+dershearflow,”Journalofbiomechanics,vol.40,no.2, [30] M.NixonandA.Aguado,FeatureExtractionandImage
+pp.335–344,2007. Processing. AcademicPress,2008.
+86 Ana´lisismorfolo´gicodemuestrasdeHUVECempleandofuncionesbasadasengeometr´ıaintegral
+[31] F.FerriandE.Vidal,Comparisonofseveraleditingand [32] S. V. Stehman, “Selecting and interpreting measures
+condensingtechniquesforcolourimagesegmentation ofthematicclassificationaccuracy,”RemoteSensingof
+andobjectlocation.InPatternRecognitionandImage Environment,vol.62,no.1,pp.77–89,1997.
+Analysis, Series in Machine Perception and Artificial
+Intelligence. WorldScientific,1992.

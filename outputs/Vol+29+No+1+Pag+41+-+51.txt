@@ -1,0 +1,1056 @@
+CienciasMatema´ticas,Vol.29,No.1,Pag.41-51,2015
+Recibido03-2015
+Contando infinidades - El ”nu´mero” de puntos malla
+en conos convexos
+Counting infinities - The ”number” of lattice points
+on convex cones
+Li Guo1, Sylvie Paycha2*, Bin Zhang3
+Resumen Este es un tratado informal no dirigido a expertos – basado en una versio´n ma´s elaborada y
+extensacite{GPZ5}as´ıcomoentrabajospreviosdelosautorescite{GPZ1,GPZ2,GPZ3,GPZ4}–decomo
+me´todosdelaf´ısicapuedenserempleadospara”contar”unnu´meroinfinitodepuntos.Comenzaremosconel
+casocla´sicodelconteodepuntosenterosenelejerealnonegativoylafo´rmulacla´sicadeEuler-Maclaurin.
+Despue´sprocederemosalconteodepuntosmallaenconosproductodondesepuedenapreciar,enunarreglo
+relativamentesimple,losrolesdelacoalgebraydelafactorizacio´nalgebraicadeBirkhoff.Terminaremoscon
+unanotaacercadelageneralizacio´naconosconvexos.
+Abstract Thisisaveryinformalaccountaddressedtonon-experts–basedonamoreelaborateandextended
+version[10]aswellasonpreviousworkbytheauthors[6,7,8,9]–onhowmethodsborrowedfromphysics
+canbeusedto”count”aninfinitenumberofpoints. Webeginwiththeclassicalcaseofcountingintegerpoints
+onthenon-negativerealaxisandtheclassicalEuler-Maclaurinformula. Wethenproceedtocountinglattice
+pointsonproductconeswheretherolesplayedbythecoalgebraandthealgebraicBirkhofffactorizationcanbe
+appreciatedinarelativelysimplesetting. Weendthepresentationwithanoteonthegeneralizationtoconvex
+cones.
+PalabrasClave
+cones,coalgebra,renormalization,Birkhoffdecomposition,Euler-Maclaurinformula,meromorphicfunctions
+1DepartmentofMathematicsandComputerScience,RutgersUniversity,liguo@rutgers.edu
+2InstituteofMathematics,UniversityofPotsdam,paycha@math.uni-potsdam.de
+3YangtzeCenterofMathematics,DepartmentofMathematics,SichuanUniversity,zhangbin@scu.edu.cn
+*AutorparaCorrespondencia
+1. Introduction The”number.ofnon-negativeintegerscanbederivedusingan
+approximationS(ε)=∑∞ e−εn byanexponentialsum.Its
+n=0
+C¸ounting”lattice points on cones which might a priori
+analyticextension(denotedbythesamesymbolS)presents
+seemlikeaveryspecificissue,actuallybringstogetheri)re- a simple pole at ε =0 with residue 1 so that S(ε)= 1 +
+normalizationmethodsa`laConnesandKreimer[4]borrowed ε
+S (ε)whereS isholomorphicatzero.Coincidentally,the
++ +
+fromquantumfieldtheoryintheformofalgebraicBirkhoff ”polar part”1 equals the integral I(ε)= (cid:82)∞e−εxdx leading
+factorization,ii)theEuler-Maclaurinformulaonconesand ε 0
+totheEuler-MaclaurinformulaS=I+µ whichrelatesthe
+henceonpolytopes[2]usedtostudythegeometryoftoric sum and the integral of the map x(cid:55)→e−εx by means of the
+varieties,iii)numbertheorywiththeconicalzetavalues(in-
+interpolatorµ =S .Usingtheterminologyborrowedfrom
++
+troducedin[7])thatgeneralizemultiplezetavalues[13,17], physicists,werefertothedecompositionS(ε)= 1+S (ε)
+andwhichariseinourcontextastheTaylorcoefficientsof ε +
+into a ”polar part”1 and a holomorphic part S (ε) as the
+theinterpolatorintheEuler-Maclaurinformula.Wehopethat ε +
+minimalsubtractionschemeappliedtoS.Forthisparticular
+this very informal presentation which does not claim to be
+function,itcoincideswiththeEuler-Maclaurinformulaand
+neitherexhaustivenornewsinceitreliesonpreviousworkby
+wehaveS (0)=µ(0)=ζ(0)+1= 1.
+theauthors,willactasanincentiveforthelayreadertoget + 2
+furtheracquaintedwithrenormalizationmethods.Itisbased The coincidence in the case of the discrete exponential
+onamoreextendedversion[10]. sum,betweentheminimalsubtractionschemeandtheEuler-
+Withtheaiminmindofc¸ounting”latticepointsonrational Maclaurinformula,carriesouttohigherdimensions.
+polyhedralconvexcones,westartfromtheonedimensional We indeed proceed to c¸ounting”the lattice points Zk of a
+≥0
+cone R with lattice points given by the positive integers. (closed)productconeRk ofdimensionk∈N.Oneexpects
++ ≥0
+42 Contandoinfinidades-El”nu´mero”depuntosmallaenconosconvexos
+the ”number.of points of Zk to be the k-th power of the Wehave
+≥0
+”number.ofpointsofZ andthisisindeedthecaseprovided
+≥0
+ε ε
+onec¸ountscarefully”.Bythiswemeanthatoneshouldnot Td(ε)= = =
+naivelyevaluatethe”holomorphicpart.ofthek-thpowerSk(ε) eε−1 ε+ε2 +o(ε2)
+2
+atzerooftheexponentialsumbutinsteadtakethek-thpower 1 ε
+S + k(0)oftheholomorphicpartS + evaluatedatzero,whichisa 1+ε +o(ε)
+=1−
+2
++o(ε)
+2
+straightforwardprocedureintherathertrivialcaseofproduct
+cones.
+soB =1;B =−1.Since ε +ε = ε e
+ε 2+e−ε
+2 isaneven
+Webrieflydiscussageneralalgebraicconstructionwhich 0 1 2 eε−1 2 2 e ε 2−e−ε 2
+derives Sk from Sk, known as the algebraic Birkhoff fac- function,B 2k+1 =0foranypositiveintegerk.
++
+torization that can be viewed as a generalization to higher Consequently,foranypositiveintegerK wehave
+dimensions of the minimal subtraction scheme mentioned
+ε K B
+above.Itreliesonacoproducton(product)conesbuiltfrom Td(ε)=1− +∑ 2k ε2k+o(ε2K) (4)
+acomplementmapwhichseparatesafaceoftheconefrom 2 (2k)!
+k=1
+the remaining faces. When applied to the multivariable ex-
+ponential sum S(cid:101)k :(ε
+1
+,···,ε
+k
+)(cid:55)→∏k
+i=1
+S(ε
+i
+) on the product and
+cone Rk , the general algebraic Birkhoff factorization on
+≥0 Td(−ε) 1 1 K B
+coalgebrasgives(ε
+1
+,···,ε
+k
+)(cid:55)→∏k
+i=1
+S
++
+(ε
+i
+)astherenormali- S(ε)=
+ε
+=
+ε
++
+2
++∑
+(2k
+2k
+)!
+ε2k−1+o(ε2K). (5)
+zedholomorphic”partofthemapS(cid:101)k .ThisalgebraicBirkhoff k=1
+factorization can also be interpreted as an Euler-Maclaurin
+2.2 Theone-dimensionalEuler-Maclaurinformula
+formulaforitfactorizesthesumasa(convolution)productof
+Asaconsequenceofformula(5),thediscretesumS(ε):=
+integralsandinterpolatorsonproductcones,thusgeneralizing
+∑∞ e−εk= 1 forpositiveε relatestotheintegral
+tohigherdimensionalconestheequivalenceobservedinone k=0 1−e−ε
+dimensionoftheEulerMaclaurinformulawiththeminimal
+(cid:90) ∞ 1
+subtractionscheme. I(ε):= e−εxdx= (6)
+0 ε
+2. Counting integers bymeansoftheinterpolator
+Wewanttocountthenon-negativeintegerpointsi.e.to
+1
+evaluatetheill-definedsum”1+1+···+1+···=∑∞ n0.and µ(ε):=S(ε)−I(ε)=S(ε)− =
+n=0 ε
+moregenerallythenobetterdefinedsum∑∞ nk foranynon-
+n=0 1 K B
+negativeintegerk. +∑ 2k ε2k−1+o(ε2K) forallK∈N,
+2 (2k)!
+k=1
+2.1 Approximatedsumsoverintegers
+We first approximate these ill-defined sums; there are which is holomorphic at ε =0. This interpolation formula
+variouswaystodoso1.Herewefocusontheheat-kernel betweenthesumandtheintegral
+type regularization which approximates the summand by
+S(ε)=I(ε)+µ(ε) (7)
+anexponentialexpression.Forpositiveε weset
+∞ isaspecialinstanceoftheEuler-Maclaurinformulaforwhich
+S(ε):= ∑e−εn. (1)
+wereferthereaderto[12].
+n=0
+LetS k (ε):=∑∞ n=0 nke−εn=(−1)k∂ k S(ε). 2.3 Evaluatingmeromorphicfunctionsatpoles
+ThesumS(ε)= 1− 1 e−ε canbeexpressedintermsofthe Let Mer 0 (C) be the set of germs of meromorphic fun-
+Toddfunction
+ε
+ctionswithasimplepoleatzero2.LetHol
+0
+(C)bethesetof
+Td(ε):= (2) germsofholomorphicfunctionsatzero.
+eε−1
+as If f inMer 0 (C)reads f(z)=∑∞ i=−1 a i zi,wesetRes 0 (f):=
+Td(−ε) a ,calledthecomplexresidueof f atzero.
+S(ε)= . −1
+ε Theprojectionmap
+TheToddfunctionistheexponentialgeneratingfunctionfor
+theBernoullinumbersthatcorrespondtotheTaylorcoeffi- π + :Mer 0 (C) → Hol 0 (C)
+(cid:18) (cid:19)
+cients. Res (f)
+∞ εn f (cid:55)→ z(cid:55)→ f(z)− 0
+Td(ε)= ∑B . (3) z
+n
+n!
+n=0
+2i.e.equivalenceclassesofmeromorphicfunctionsdefinedonaneighbor-
+1We referthe reader to [15] for a more detailed description of these hoodofzerofortheequivalencerelation f∼gif f andgcoincideonsome
+variousregularizationmethods. openneighborhoodofzero.
+Contandoinfinidades-El”nu´mero”depuntosmallaenconosconvexos 43
+for f ∈Mer (C)correspondstowhatphysicistscallamini- 3.2 Separablemeromorphicfunctions
+0
+malsubtractionscheme.Whereasπ
++
+(f)correspondstothe Thelinearmapevr
+0
+eg:Mer
+0
+(C)→Cextendsmultiplica-
+holomorphicpartof f,π − (f):=(1−π + )(f)correspondsto tivelytothesubspaceMer sep (C∞)ofMer 0 (C∞)spannedby
+the“polarpart”of f. separablefunctions3:
+Withthenotationofthepreviousparagraph,wehave
+(cid:40) (cid:12) (cid:41)
+(cid:12)
+S + :=π + ◦S(ε)=µ(ε); S − :=π − ◦S(ε)=I(ε). (8) f =∏f i (cid:12) (cid:12) I⊆Nfinite, f i ∈Mer 0 (Ce i )
+i∈I (cid:12)
+ThustheEuler-Maclaurinformula(7)amountstotheminimal
+by
+subtractionschemeappliedtoS:
+(cid:32) (cid:33)
+evren ∏f :=∏evreg(f). (11)
+S=S + +S − =µ+I. (9) (cid:126)0 i 0 i
+i∈I i∈I
+3.3 Theexponentialsummationandintegrationmap
+Combiningtheevaluationmapatzeroev : f (cid:55)→ f(0)onholo-
+0
+onproductcones
+morphicgermsatzerowiththemapπ providesaregularized
++
+evaluatoratzeroonMer (C).Themap Thesummationmap(1)andtheintegrationmap(6),which
+0
+lieinthelinearspaceMer (C)ofmeromorphicgermsinone
+0
+evreg:Mer (C) → C complex variable with a simple pole at zero, induce linear
+0 0 maps on the linear space RP(R∞) spanned by P(R∞) as
+f (cid:55)→ ev ◦π (f), (10)
+0 +
+follows
+isalinearformthatextendstheordinaryevaluationmapev
+definedonthespaceHol (C). 0 S :RP(R∞)−→Mer sep (C∞), (cid:104)e I (cid:105)(cid:55)→∏S(ε i )
+0
+i∈I
+Example1 Wehave
+and
+1
+evreg(S)=µ(0)= =1+B . I :RP(R∞)−→Mer (C∞), (cid:104)e (cid:105)(cid:55)→∏I(ε).
+0 2 1 sep I i
+i∈I
+Thisprovidesonewayofevaluatingthenumberofnonne-
+gative integer points, which we found is equal to 1, a non 3.4 Evaluatingseparablemeromorphicfunctionsat
+2
+poles
+integernumber!Sincethenumberofpositiveintegersisone
+unitsmaller,itis−1,anegativenonintegernumber! Inordertoc¸ount”thenumberoflatticepoints
+2
+(cid:32) (cid:33)
+3. Counting lattice points on product ” ∑ (cid:126)n (cid:126)0 ”
+cones (cid:126)n∈∑i∈I Z ≥0ei
+Given a positive integer k, we now want to c¸ount”the in the product cone (cid:104)e (cid:105) we want to evaluate S ((cid:104)e (cid:105)) at
+I I
+number” (cid:16) ∑ (cid:126)n∈Zk (cid:126)n (cid:126)0 (cid:17) ”oflatticepoints(cid:126)n∈Zk ≥0 inthepro- (ε i1 ,···,ε ik )=(cid:126)0.SinceS ((cid:104)e I (cid:105))∈Mer sep (C∞)afirstguess
+≥0 istoassignthevalue
+duct cone Rk , where for(cid:126)n=(n ,···,n )∈Zk and(cid:126)r =
+≥0 1 k ≥0
+( b r e 1 , th ·· e · a , l r g k e ) b ∈ ra Z o k ≥ f 0 p w ro e du h c av t e co s n et e (cid:126) s n . (cid:126)r=nr 1 1···nr k k.Wefirstdescri- S (cid:126)0 ren:=ev (cid:126) r 0 en◦S, (12)
+where evren is defined in (11). Let us now describe the un-
+(cid:126)0
+3.1 Productcones derlyingalgebraicframework,whichmightseemsomewhat
+Let B n =(e 1 ,···,e n ) be the canonical basis of Rn and artificialintherathertrivialproductconesituation.However,
+P(Rn)bethesetofproductcones
+ontheonehandeveninthissimplesituationitisusefulto
+controlthe”polarpart”whichoneneedstoextractinorderto
+(cid:104)e I (cid:105):=∑R ≥0 e i , I⊆[n]:={1,···,n}, definethefinitepart,ontheotherhanditoffersagoodtoy
+i∈I modeltomotivateotherwiserelativelysophisticatedtechni-
+viewed as subsets of Rn. Extending this basis to a basis queswhichcanbegeneralizedbeyondproductcones,namely
+B =(e ,···,e ) of Rn+1, a product cone in Rn can togeneralconvexcones[8].
+n+1 1 n+1
+be viewed as a product cone in Rn+1. We define the set of
+productconesinR∞
+3 Mersep(C∞) is isomorphic to the filtered vector space F :=
+l
+−
+´ı
+→
+m(Mer1
+0
+(C))n by assigning f 1⊗···⊗ fn to f 1(ε1)···fn(en). But the
+P(R∞)={(cid:104)e I (cid:105)|I⊂Nfinite} with(cid:104)e 0/ (cid:105):={0}.
+m
+f(
+a
+ε
+p
+1)
+d
+f
+o
+(ε
+e
+2
+s
+)
+n
+(cid:54)=
+ot
+f
+r
+(
+e
+ε
+s
+1
+p
+)2
+e
+.
+ct the tensor product. For example, f⊗f(ε1,εe)=
+44 Contandoinfinidades-El”nu´mero”depuntosmallaenconosconvexos
+3.5 Acomplementmaponproductcones 1. Compatibilitywiththepartialorder: Thereisaone-
+Let us first recall the properties of the set complement to-one correspondence between the set of faces ofC
+map. containing a given face F and the set of faces of the
+Let P f (E) be the set of finite subsets of a given set E coneF C ;foranyfaceH ofF C ,thereisauniqueface
+equippedwiththeinclusion⊆whichdefinesapartialorder G
+GofCcontainingF suchthatH=F .
+compatiblewiththefiltrationofP (E)bythecardinalinthe
+f
+sensethatJ⊆Iimplies|J|≤|I|.ForI∈P f (E)let 2. Transitivity: F C = (cid:16) F(cid:48) F (cid:17)F(cid:48)C ifF(cid:48)⊂F.
+s(I):={J∈P (E)|J⊆I}
+f
+3. Compatibility with the filtration by the dimension:
+bethesetofsubsetsofI. (cid:16) C (cid:17)
+For any face F ofC we have dim(F)+dim F =
+ThesetcomplementmapassignstoanyI⊆E amap
+dim(C).
+(cid:123) :s(I) −→ s(I)
+I
+There is an alternative description of this complement
+mapwhichisgeneralizabletogeneralconvexcones,thosenot
+J (cid:55)−→ I\J:=I∩J.
+necessarily obtained as product cones. For this we observe
+ThecomplementI\Jsatisfiesthefollowingproperties: thatforafaceF =F J =(cid:104)e J (cid:105)ofaproductconeC=(cid:104)e I (cid:105),we
+have
+1. Compatibilitywiththepartialorder:LetI,J∈P f (E) F C =F =π (C), (14)
+be such that J ⊆ I. Then for any H ∈ P (E) with
+I\J F⊥
+f
+H ⊆I\J there exists unique K ∈P (E);J ⊆K ⊆I where F⊥ denotes the orthogonal space of the linear space
+f
+suchthatH=I\K. spanned by the cone F in the linear space (cid:104)C(cid:105) spanned by
+C, and π is the orthogonal projection from (cid:104)C(cid:105) onto F⊥.
+2. Transitivity:LetI,J,K∈P (E)besuchthatK⊆J⊆ F⊥
+f Here the orthogonal projection is taken with respect to the
+I.Then canonicalEuclideanproductonR∞.Eq.(14)followsfromthe
+(I\K)\(J\K)=I\J
+factthatπ (e)is0fori∈Jande fori∈/J.
+F⊥ i i
+3. Compatibility with the filtration: Let I,J ∈P (E)
+f
+3.6 Algebraic Birkhoff factorization on product co-
+besuchthatJ⊆I.Then
+nes
+card(J)+card(I\J)=card(I), Foreachi≥1,thealgebraA i :=Mer 0 (Cε i )isnaturally
+isomorphictoA :=Mer (C)asthealgebraofLaurentseries.
+0
+wherecardstandsforthecardinality. Followingtheminimalsubtractionschemewehaveadirect
+sum A =A ⊕A of two subalgebras A :=π (A).
+ThesetcomplementmaponZ ≥0 inducesacomplement Thema i psS i, : + R(cid:104)e(cid:105) i, − − →Mer (Cε)definedin i,± Eq.(?? ± )spl i it
+i i 0 i
+mapontheproductcones.Letusfirstintroducesomenota- accordingly S = S +S into a sum of maps S :
+i i,+ i,− i,±
+tions.FacesoftheproductconeC:=(cid:104)e I (cid:105)areoftheform R(cid:104)e(cid:105)−→A .
+i i,±
+Wenextconsiderseparablefunctionsinseveralvariables.
+F :=(cid:104)e (cid:105)
+J J FordisjointsubsetsI,J⊆N,define
+withJ⊂I,eachofthemdefiningaconewithfacesF J(cid:48) where (cid:32) (cid:33)(cid:32) (cid:33)
+J(cid:48)⊂J.TheconeCthereforehas2|I|faces,asmanyassubsets
+A := ∏A ∏A .
+ofI.ThesetF(C)offacesoftheconeCisequippedwitha I,+,J,− i,+ j,−
+i∈I j∈J
+partialorder
+AlsodenoteA =A ifJ=0/.Thenwehave
+I,+,J,− I,+
+F(cid:48)⊂F ifandonlyifF(cid:48)isafaceofF(cid:48)
+A :=∏A =⊕ A .
+orequivalently,F
+J(cid:48)
+⊂F
+J
+ifandonlyifJ(cid:48)⊂J.ForF(cid:48)=F
+J(cid:48)
+⊂
+I
+i∈I
+i I1(cid:116)I2=I I1,+,I2,−
+F
+F =F
+J
+weconsiderthecomplementsetF(cid:48) :=F J\J(cid:48),which
+again defines an element of F(C) and hence a cone. We Furtherdenote
+definethecomplementmap
+A :=∏A , A :=∏A
+I,+ i,+ I,− J,+,I\J,−
+F(C) −→ F(C) i∈I J(cid:40)I
+F (cid:55)−→ F C =F , (13) and
+J J I\J
+A :=l´ımA , A :=l´ımA .
+∞ I ∞,± I,±
+whichisaninvolution.Asaconsequenceofthepropertiesof −→ −→
+thesetcomplementmap,itenjoysthefollowingproperties. Thuswehave
+LetF ∈F(C). A =A ⊕A .
+∞ ∞,+ ∞,−
+Contandoinfinidades-El”nu´mero”depuntosmallaenconosconvexos 45
+A isasubalgebrabutnotA .Forexample,A A ThefactthatthealgebraicBirkhofffactorization(15)and
+∞,+ ∞,− 1,+ 2,−
+andA areinA ,buttheirproductisnot. theEuler-Maclaurinformula(16)coincideforproductcones
+1,− ∞,−
+We want to generalize to product cones what we saw is a consequence of Eq. (9) which shows how, in the one
+in the previous section, namely the fatct that the splitting dimensional case, the minimal subtraction scheme and the
+S=S +S oftheexponentialsumcorrespondstotheEuler- Euler-Maclaurinformulacoincidefortheexponentialsum.
++ −
+MaclaurinformulaS=µ+Iwithµ =S . The renormalized discrete sum in Eq. (12), which can be
++
+Soweneedtogeneralizetheminimalsubtractionsche- rewrittenas
+meandtheEuler-Maclaurinformulatoproductcones.Inthe
+productconeframework,theminimalsubtractionschemege- S (cid:126)0 reg=ev (cid:126)0 ◦S + =ev (cid:126)0 ◦µ,
+neralizestoanelementaryformofthemoregeneralalgebraic
+Birkhofffactorizationoncoalgebraswhichweshalldescribe isobtainedfromevaluatingatzerotherenormalized“holo-
+inthenextsection. morphicpart”S oftheexponentialsumderivedfromtheal-
++
+gebraicBirkhofffactorization(see(15))orequivalentlyfrom
+Proposition2 GivenaproductconeC=(cid:104)e I (cid:105)inP(R∞)the evaluating at zero the renormalized interpolator µ derived
+map S (C) extends to a meromorphic map in Mer sep (C∞) fromtheEuler-Maclaurinformula (see(16)).
+withsimplepolesontheintersectionsofhyperplanes∩ {ε =
+j∈J j We have gone a long way around to recover our first
+0}correspondingtofacesF =(cid:104)e (cid:105),J⊆I oftheconeC.It
+J I guess(12).ThisapproachusingBirkhoff-Hopffactorization,
+decomposesas
+even if somewhat artificial in the case of product cones, is
+nevertheless useful for it can be generalized to all rational
+S (C) = ∑ S (F C )S (F) (15)
++ − polyhedral convex (lattice) cones [8] a case which will be
+F∈F(C)
+brieflydiscussedattheendofthepaper.
+= ∑ µ(F C )I(F), (16)
+F∈F(C)
+4. From complement maps to coproducts
+where(15)isknownasalgebraicBirkhofffactorization,(16)
+We now set up an algebraic framework to derive an al-
+isknownasEuler-MaclaurinformulaandforafaceF=(cid:104)e (cid:105)
+K
+gebraicBirkhofffactorizationfromacomplementmapina
+C
+oftheconeC,F =F isthe“complementface”definedin
+I\K moregeneralsetupthanthespecificexampleofproductcones
+thepreviousparagraphandwherewehaveset
+whichservedasatoymodelintheprevioussection.
+S(F)=S ((cid:104)e (cid:105)):=∏S((cid:104)e(cid:105)), S (F)=
+K i ±
+4.1 Posets
+i∈K
+S ((cid:104)e (cid:105)):=∏S . Let(P,≤)beaposet,i.e.asetP togetherwithapartial
+± K i,±
+order≤.Wedonotassumethattheposetisfinite.
+i∈K
+TheposetisfilteredifP =(cid:83)∞ P withP ⊂P .
+n=0 n n n+1
+ThedegreeofA∈P denotedby|A|isthesmallestintegern
+Remark3 Eq.(15)whicharisesfromtheone-dimensional suchthatA∈P .Thepartialorder≤iscompatiblewiththe
+n
+minimalsubstractionschemecanbeviewedasahigherdimen- filtrationifA≤Bimplies|A|≤|B|.
+sionalminimalsubtractionschemeandEq.(16)asahigher We call a filtered poset P connected if P has a least
+dimensionalEuler-Maclaurinformula.Whenk=1theyyield element1,calledthebottomofP,andwehaveP ={1}.
+0
+back the one dimensional minimal subtraction scheme and
+theEuler-MaclaurinformulaappliedtoS(ε). Example4 ForagivensetX(finiteorinfinite),thesetP (X)
+f
+offinitesubsetsofX equippedwiththeinclusionrelationis
+Proof.LetC=(cid:104)e (cid:105)forsomefinitesubsetIinN.Wehave
+I aposet(P (X),⊆)filteredbythecardinal.Itisconnected
+f
+S (C) = ∏S ((cid:104)e(cid:105)) (aproductofsums) since 0/ is the only subset of cardinal 0 and 0/ ⊆A for any
+i i
+i∈I A∈P f (X).
+= ∏(S +S )((cid:104)e(cid:105)) (asumofproducts)
+i,+ i,− i
+i∈I Example5 Thisexamplecanberegardedasaspecialcaseof
+(cid:32) (cid:33) (cid:32) (cid:33) thepreviousexamplebutitspertinenceforconvexconesjusti-
+= ∑ ∏ S
+j,+
+((cid:104)e
+j
+(cid:105)) ∏S
+j,−
+((cid:104)e
+j
+(cid:105)) fiesthatwetreatitseparately.ThesetP(R∞)=∪∞
+n=0
+P(Rn)
+J⊂I j∈I\J j∈J ofclosedproductconesdescribedintheprevioussectionis
+= ∑ S (F C )S (F) filteredbythedimensionandpartiallyorderedbythepartial
++ −
+F∈F(C) order on the index sets. Equivalently, F ≤C if the product
+coneF isafaceoftheproductconeC.P(R∞)isconnected
+= ∑ µ(F C )I(F).
+sincethezerocone{0}istheonlyconeofdimension0and
+F∈F(C)
+{0}≤CforanyC∈P(R∞)as0isavertexofanyproduct
+cone.
+46 Contandoinfinidades-El”nu´mero”depuntosmallaenconosconvexos
+4.2 Complementmapsonposets 4.3 Acomplementmapongeneralconvexcones
+Definition6 Let(P,≤)beaposetsuchthatforanyE∈P Wenowgeneralizethecomplementmapbuiltonproduct
+cones to general convex cones by means of an orthogonal
+s(E):={A∈P|A≤E} (17) projection.
+LetF(C)bethesetofallfacesofaconvexconeC⊆Rk.
+is a finite set. A complement map on P assigns to any
+Weborrowthefollowingconceptfrom[2](seealso[8])which
+elementE∈P amap
+wereferthereadertoforfurtherdetails.Thetransversecone
+toF ∈F(C)is
+(cid:123) :s(E) −→ P
+E
+A (cid:55)−→ E\A t(C,F):=(C+lin(F))/lin(F), (18)
+satisfyingthefollowingproperties (where lin stands for the linear span) which we identify to
+the cone in C(R∞) defined by the projection π (C) ofC
+1. Compatibilitywiththepartialorder:LetA,CinP F⊥
+onto the orthogonal complement4 lin(F)⊥ in lin(C) for the
+besuchthatA≤C.Then
+canonicalscalarproductonR∞.
+s(C\A)={B\A|A≤B≤C}.
+Example9 ThetransverseconetoafaceF =(cid:104)e (cid:105)ofapro-
+J
+duct cone (cid:104)e (cid:105) is the cone (cid:104)e (cid:105), which corresponds to the
+I I\J
+transverseconet((cid:104)e (cid:105),(cid:104)e (cid:105)).
+I J
+2. Transitivity:LetA,B,CinP besuchthatA≤B≤C
+.Then Example10 ThetransverseconetothefaceF =(cid:104)e +e (cid:105)
+1 2
+(C\A)\(B\A)=C\B. intheconeC=(cid:104)e 1 ,e 1 +e 2 (cid:105)istheconet(C,F)=(cid:104)e 1 −e 2 (cid:105).
+Notethatt(C,F)isnotafaceofC.
+Thesubsequentlemmafollowsfromthefactthattheortho-
+3. Compatibilitywiththefiltration:Assumethatthepo-
+set is filtered: P =∪ n∈N P n . Then the complement gonal complement on subspaces fulfills the properties of a
+complementmap.
+mapiscompatiblewiththefiltrationinthesensethat
+Lemma11 Themap
+A≤C=⇒|C\A|=|C|−|A|.
+F(C) −→ C(R∞)
+F (cid:55)−→ t(C,F)
+4. Compatibilitywiththebottom:Assumethattheposet
+isconnectedandletP 0 ={1}.Then which to a face F of a coneC assigns the transverse cone
+t(C,F),isacomplementmap.Moreprecisely,itenjoysthe
+C\1=C forallC∈P.
+followingproperties.
+1. Compatibilitywiththepartialorder: Thesetoffa-
+cesoftheconet(C,F)equals
+Condition(d)isobviouslysatisfiedbypreviousexamplesof
+complementmaps.
+{t(G,F)|GafaceofCcontainingF}
+Example7 LetE beaset.ForX ∈P (E),thecomplement
+f .
+setmap:
+2. Transitivity: t(C,F)=t(t(C,F(cid:48)),t(F,F(cid:48))) if F(cid:48) is a
+P (X) −→ P (X)
+f f faceofF.
+Y (cid:55)−→ X\Y :=X∩Y
+3. Compatibilitywiththedimensionfiltration: dim(C)=
+definesacomplementmapcompatiblewiththefiltrationby dim(F)+dim(t(C,F))foranyfaceF ofC.
+thedimension.
+4. Compatibilitywiththebottom:C isconnectedsince
+Example8 Aswesawintheprevioussection,thesetcom- C isreducedto1:={0}andforanyconeCwehave
+0
+plementmaponZ ≥0 inducesacomplementmaponproduct t(C,{0})=C.
+coneswhichwerecallhereforconvenience.Givenaproduct
+cone(cid:104)e (cid:105)andasubsetJ⊆I,themap(cid:104)e (cid:105)(cid:55)−→(cid:104)e (cid:105)defines 4Ourapproach,liketheoneofBerlineandVergnein[2],actuallyrequires
+I J I\J
+acomplementmaponP(R∞)compatiblewiththefiltration achoicearationallatticewhichconsistsofapairbuiltfromaconeanda
+rationallatticeinthelinearspacespannedbythecone.Wereferthereaderto
+bythedimensionofthecone.
+[8]foradetaileddescription.
+Contandoinfinidades-El”nu´mero”depuntosmallaenconosconvexos 47
+4.4 Coproductsderivedfromcomplementmaps Thecoalgebraiscocommutativeifτ◦∆=∆whereτ :C ⊗
+Looselyspeaking,coalgebrasareobjectsdualtoalgebras. C →C ⊗C istheflipc ⊗c (cid:55)−→c ⊗c .Thistranslatesto
+1 2 2 1
+Moreprecisely,algebrasaredualtocoalgebrasbutthecon- thefollowingcommutativediagram:
+verseonlyholdsinfinitedimensions(seee.g.[3]).
+C
+Definition12 A (counital) coalgebra is a linear space C
+∆ ∆
+(hereoverR)equippedwithtwolinearmaps:
+(cid:124)(cid:124) (cid:34)(cid:34)
+C ⊗C τ (cid:47)(cid:47)C ⊗C
+1. a comultiplication ∆:C →C ⊗C written in Sweed-
+ler’snotation[16]
+andtheequation
+∆c=∑c ⊗c , ∑c (1) ⊗c (2) =∑c (2) ⊗c (1) .
+(1) (2)
+(c) (c)
+(c)
+whichiscoassociative ThecoalgebraC iscoaugmentedifthereisamorphismof
+coalgebrasu:R→C inwhichcasewehaveε◦u=IRandwe
+(I⊗∆)⊗∆=(∆⊗I)⊗∆. set1
+C
+:=u(1R)where1RistheunitinR.IfC iscoaugmented,
+thenC iscanonicallyisomorphictoKerε⊕R1C.Thekernel
+Thecoassociativityof∆translatestothefollowingcom-
+KerεisoftendenotedbyC soC =C⊕R1C.LetC =R1C⊕
+mutativediagram
+C beacoaugmentedcoalgebra.Thecoradicalfiltrationon
+C ∆ (cid:47)(cid:47)C ⊗C
+C isdefinedasfollows:DefineF
+0
+C :=R1C,andforr∈N,
+weset
+∆ (cid:15)(cid:15) (cid:15)(cid:15) I⊗∆ F r C :=R1⊕{x∈C|∆ n x=0 ∀n>r}.
+C ⊗C ∆⊗I (cid:47)(cid:47)C ⊗C ⊗C
+n
+Herewehaveset∆x=∆x−(1 ⊗x+x⊗1 )and∆ isthe
+C C
+andcanbeexpressedinthefollowingcompactnotation: n-th iteration. A coalgebra C is said to be conilpotent (or
+sometimesconnectedintheliterature)ifitiscoaugmented
+  andifthefiltrationisexhaustive,thatisC =∪ r∈N F r C.
+∑c
+(1)
+⊗ ∑ (c
+(21)
+)⊗(c
+(22)
+)=
+Coproductstypicallyarosefromcomplementmaps.
+(c) (c )
+(2)
+ 
+Proposition13 Let a poset (P,≤) be such that for any E
+∑ ∑ (c (11) )⊗(c (12) )⊗c (2) . in P the set s(E) defined as in Eq. (17) is finite and let it
+(c) (c (1) ) beequippedwithacomplementmap,whichassignstoany
+elementE∈P amap
+WithSweedler’snotation[16],boththeseexpressions
+read (cid:123) :s(E)−→P
+E
+∑c ⊗c ⊗c .
+(1) (2) (3)
+(c) A(cid:55)−→E\A.
+2. acounit ε:C →Rsatisfyingthecounitarityproperty Thenthemap
+∆:P −→ P⊗P
+(IC ⊗ε)◦∆=(ε⊗IC)◦∆=IC, (19)
+E (cid:55)−→ ∑ E\A⊗A,
+withtheidentificationC⊗R(cid:39)C (cid:39)R⊗C.Thistrans- A∈s(E)
+latestothefollowingcommutativediagram:
+extends linearly to a coassociative coproduct on the space
+C ⊗C (cid:111)(cid:111) ∆ C ∆ (cid:47)(cid:47)C ⊗C KP
+If
+f
+t
+r
+h
+e
+e
+el
+p
+y
+o
+g
+se
+e
+t
+ne
+is
+ra
+fi
+t
+l
+e
+te
+d
+re
+o
+d
+ve
+P
+ra
+=
+fie
+∪
+ld
+n∈
+K
+N P
+by
+n
+P
+an
+.
+dthecomplement
+mapiscompatiblewiththefiltrationthensoisthecoproduct,
+ε⊗IC ε IC⊗ε
+R⊗ (cid:15)(cid:15) C ∼= (cid:47)(cid:47)C (cid:15)(cid:15) (cid:111)(cid:111) ∼= C ⊗ (cid:15)(cid:15) R thatis,ifCisinP n ,then∆Cisin p+ ∑ q=n P p ⊗P q .
+Let ε :P →K be zero outside P where it takes the
+0
+valueoneandletusdenoteitslinearextensiontoKP bythe
+Thefactthatε isacounitcanbeexpressedbymeansof
+samesymbol.IfmoreovertheposetP isconnected,thenthe
+thefollowingformula
+linearspace(KP,∆,ε)isacounitalconnectedcoalgebra.
+c=∑ε(c (1) )c (2) =∑c (1) ε(c (2) ). Proof.Thecoassociativityandthecounitarityeasilyfollow
+(c) (c) fromthepropertiesofthecomplementmap.
+48 Contandoinfinidades-El”nu´mero”depuntosmallaenconosconvexos
+Example14 The vector space RP (E) spanned by finite Proposition18 LetC beaconnectedaugmentedcoalgebra
+f
+subsetsofafinitesetE definesaconilpotentcoalgebra. andA analgebra.Theset
+G(C,A):={φ ∈L(C,A), φ(1C)=1A}
+Example15 The free algebra RC(R∞) spanned by closed
+convex cones pointed at zero in R∞ defines a conilpotent endowed with the convolution product is a group with unit
+coalgebra. e:=εC ◦uA andinverse
+∞
+φ∗(−1)(x):= ∑(e−φ)∗k(x) (21)
+5. Algebraic Birkhoff factorization on a
+k=0
+conilpotent coalgebra iswelldefinedasafinitesum.
+Wegiveageneralization([8])ofthealgebraicBirkhoff Example19 BacktoExample17,wecanrewritetherenor-
+factorizationusedforrenormalizationpurposesinquantum malizedholomorphicpart(20)ofSas
+fieldtheory(see[4,14])insofarasweweakentheassum-
+S =S ∗S∗(−1) =S ∗I∗(−1).
+ptionsonthesourcespacewhichisnotanymoreassumedto + −
+beaHopfalgebrabutonlyacoalgebra,aswellasonthetarget
+5.2 AlgebraicBirkhofffactorization
+algebrawhichisnotanymorerequiredtodecomposeintotwo
+Wequotethefollowingresultwhichcanbeprovedasin
+subalgebras.Wefirstdefinetheconvolutionproductandgive
+[8,Theorem3.2]ignoringthedifferentialstructurediscussed
+itsmainproperties.
+there.
+Theorem20 LetC =(cid:76) C(n)beaconnectedcoalgebra
+5.1 Theconvolutionproduct n≥0
+andletA beaunitaryalgebra.LetA =A ⊕A bealinear
+R.W
+L
+e
+et
+q
+(
+u
+A
+ot
+,
+e
+m
+th
+A
+e
+,
+f
+1
+o
+A
+llo
+)
+w
+b
+i
+e
+n
+a
+g
+n
+re
+(u
+su
+n
+l
+i
+t
+ta
+f
+l
+r
+)
+o
+c
+m
+om
+[1
+m
+4,
+u
+P
+ta
+r
+t
+o
+iv
+p
+e
+os
+a
+i
+l
+t
+g
+io
+e
+n
+br
+I
+a
+I.
+o
+3
+v
+.1
+e
+]
+r
+.
+decompositionsuchthat1A ∈A
+1
+andlet 1 Pbe 2 theinduced
+projectionontoA paralleltoA .
+1 2
+Givenφ ∈G(C,A),wedefinetwomapsϕ ∈G(C,A),i=
+i
+Proposition16 Let (C,∆C,εC) be a (counital) coalgebra
+1,2definedbythefollowingrecursiveformulaeonkerε:
+overR. (cid:32) (cid:33)
+ϕ (x) = −P ϕ(x)+∑ϕ (x(cid:48))ϕ(x(cid:48)(cid:48)) , (22)
+1 1
+1. TheconvolutionproductonL(C,A)definedas (x)
+(cid:32) (cid:33)
+φ∗ψ =mA ◦(φ⊗ψ)◦∆C ϕ 2 (x) = (id A −P) ϕ(x)+∑ϕ 1 (x(cid:48))ϕ(x(cid:48)(cid:48)) , (23)
+(x)
+isassociative.InSweedler’snotationitreads: where,followingSweedler’snotation,wehaveset∆x=∑x(cid:48)⊗
+x(cid:48)(cid:48).
+φ∗ψ(x)=∑φ(x )ψ(x ).
+(1) (2)
+(x)
+1. Wehaveϕ
+i
+(kerε)⊆A
+i
+andhenceϕ
+i
+:C →K1A +A
+i
+.
+Moreover,thefollowingfactorizationholds
+∗(−1)
+ϕ =ϕ ∗ϕ . (24)
+1 2
+2. e:=uA ◦εC isaunitfortheconvolutionproducton
+L(C,A).
+2. ϕ,i=1,2,aretheuniquemapsinG(C,A)suchthat
+i
+Example17 Theconvolutionproductoftwomapsφ andψ ϕ(kerε)⊆A fori=1,2,andsatisfyingEqn.(24).
+i i
+inL (P(R∞),A)onaproductconeC=(cid:104)e (cid:105)derivedfrom
+I
+thecomplementmapdescribedinExample8reads 3. IfmoreoverA 1 isasubalgebraofA thenφ 1 ∗(−1) lies
+inG(C,A ).
+1
+φ∗ψ((cid:104)e (cid:105))= ∑φ (cid:0) (cid:104)e (cid:105) (cid:1) ψ((cid:104)e (cid:105))= ∑ φ(F C )ψ(F)
+I I\J J
+J⊂I F∈F(C) 6. Algebraic Birkhoff factorization on
+cones
+withthenotationofEq.(14).
+SettingA =Mer (C∞),thenEqs.(15)and(16)seenas The algebraic Birkhoff factorization can be carried out
+sep
+identitiesofmapsonproductconesread fromexponentialsumsonproductconestoexponentialsums
+on general convex polyhedral cones using the complement
+S =S + ∗S − =µ∗I. (20) mapdescribedinLemma11builtfromthetransversecone
+toaface[8],whichgeneralizestheorthogonalcomplement
+Wereferto[14,PropositionII.3.1.]fortehsubsequentasser- usedinthecaseofproductcones.Wefirstneedacoproduct
+tion. oncones.
+Contandoinfinidades-El”nu´mero”depuntosmallaenconosconvexos 49
+6.1 Fromthetransverseconetoacoproductonco- Whereas exponential sums on product cones take their
+nes valuesonproductsofmeromorphicfunctionsinonevariable,
+Hereweconsiderbothclosedconvex(polyhedral)cones exponentialsumsongeneralconvexconestaketheirvalues
+inRk inthelargerspaceofmeromorphicmapswithsimplelinear
+polessupportedbythefacesofthecone.
+(cid:104)v ,···,v (cid:105):=R{v ,···,v }=R v +···+R v ,
+1 n 1 n ≥0 1 ≥0 n
+6.3 Meromorphicfunctionswithlinearpoles
+wherev ∈Rk,i=1,···,ndefinedpreviouslyandopencones
+i InordertoimplementaBirkhoff-Hopffactorisationon
+defined in a similar manner replacing R by R . Product
+≥0 + thesummationmap,weneedtodefineaprojectionπ onto
++
+cones (cid:104)e,i∈I(cid:105) with I ⊂{1,···,k} and {e |i∈{1,···,k}}
+i i theholomorphicpartofameromorphicfunctionwithlinear
+the canonical basis of Rk are convex cones. We shall fo-
+poles,whichwedoheresomewhatinformally.Aprecisedefi-
+cushereonChencones(cid:104)e ,e +e ,···,e +···+e (cid:105)with
+i1 i1 i2 i1 in nitioncanbefoundin[9]whereweshowthatameromorphic
+{i 1 ,···,i n }⊂{1,....,k},whichareclosedconvexconesas function f = h on Ck with linear poles L,i=1,···,n
+wellastheiropencounterparts. L1···Ln i
+givenbylinearformsandhaholomorphicfunctionatzero,
+Boththecomplementmapdefinedbymeansofthetrans-
+uniquelydecomposesas
+verse map in Lemma 11 and the corresponding coproduct
+defined in Proposition 13 (see also Example 15) are com- n (cid:32) h((cid:126)(cid:96)) (cid:33)
+patible with subdivisions in a suitable sense. Recall that a f =∑ (cid:126) i L(cid:126)si i +φ i ((cid:126)(cid:96) i ,(cid:126)L i ) , (25)
+subdivisionofaconeC isaset{C ,···,C }ofconessuch i=1 i
+1 r
+that
+with |(cid:126)s|>0 and where(cid:126)L =(L ,···,L ), {L ,···,L }
+i i i1 imi i1 imi
+(i) C=∪r i=1 C i , isalinearindependentsubsetof{L 1 ,···,L n },extendedtoa
+basis{(cid:126)L,(cid:126)(cid:96)}ofCk,with(cid:126)(cid:96) =((cid:96) ,···(cid:96) ),L ,(cid:96) ortho-
+(ii) C ,···,C havethesamedimensionasCand
+i i i i(mi+1) ik ij im
+1 r gonalforthecanonicalinnerproductonCk andh((cid:126)(cid:96))holo-
+i i
+(iii) C ,···,C intersectalongtheirfaces,i.e.,C ∩C isa morphic (reduced to a constant when k=1). Then we call
+1 r i j
+n
+faceofbothC andC .
+i j f + :=π + (f)= ∑ φ i , which is a germ of holomorphic fun-
+i=1
+Example21 Theproductcone(cid:104)e 1 ,e 2 (cid:105)canbesubdividedinto ctionintheindependentvariables(cid:126)(cid:96) i and(cid:126)L i ,theholomorphic
+twoChencones(cid:104)e 1 ,e 1 +e 2 (cid:105)and(cid:104)e 1 +e 2 ,e 2 (cid:105). part of f and f − :=(1−π + )(f)= i= ∑ n 1 h (cid:126) i L ( (cid:126) i s (cid:126)(cid:96) i i) the polar part
+6.2 Theintegerationandsummationmapsongene- of f.
+ralconvexcones In order to discuss examples, it is convenient to set the
+Toasimplicialconvex(closed)coneC⊂Zk,namelyone followingnotation.GivenklinearformsL
+1
+,···,L
+k
+,weset
+whose generators are linearly independent, one can assign
+an exponential sum and an exponential integral which can
+eL1 eL1+L2 eL1+L2+···+Lk
+informallybedescribedasfollows [L ,···,L ]:= ··· .
+1 k 1−eL1 1−eL1+L2 1−eL1+L2+···+Lk
+(26)
+Sc(C)((cid:126)ε):= ∑ e(cid:104)(cid:126)n,(cid:126)ε(cid:105); So(C)((cid:126)ε):=
+So,forany(closed)ChenconeC =(cid:104)e ,e +e ,···,e +···+
+k 1 1 2 1
+(cid:126)n∈C∩Zk e (cid:105)(heree ,...,e isthecanonicalbasisofRk),wehave
+k 1 k
+∑ e(cid:104)(cid:126)n,(cid:126)ε(cid:105); I(C)((cid:126)ε)=
+(cid:126)n∈Co∩Zk So(C k )(ε 1 ,ε 2 ,···,ε k )=[ε 1 ,ε 2 ,···,ε k ].
+(cid:90)
+e(cid:104)(cid:126)x,(cid:126)ε(cid:105)d(cid:126)x. Example23 1. Takek=1.Let f(ε)= eε = 1 =
+C 1−eε e−ε−1
+−Td(−ε) onC.ThenbyEq.(5)wehave
+HereCo istheopenconegivenbytheinteriorofCandε is −ε
+takenin
+1 1 K B 1
+(cid:40) (cid:12) (cid:41) f(ε)=− − −∑ 2k ε2k−1+o(ε2K)=− +φ(ε),
+k (cid:12) ε 2 (2k)! ε
+Cˇ−:= (cid:126)ε :=∑εe∗(cid:12)(cid:104)(cid:126)x,(cid:126)ε(cid:105)<0forall(cid:126)x∈C , k=1
+k i i (cid:12) (27)
+i=1 (cid:12)
+with
+where{e∗|i∈{1,...,k}}isthedualcanonicalbasisand(cid:104)(cid:126)x,(cid:126)ε(cid:105)
+thenatur i alpairingRk⊗ (cid:0)Rk(cid:1)∗ →R. φ(ε):=− 1 −∑ K B 2k ε2k−1+o(ε2K)=
+2 (2k)!
+k=1
+Remark22 Apreciseformulationwouldrequireintroducing
+1 1 1
+a lattice attached to the cone, so considering lattice cones − − ε+ ε3+··· (28)
+2 12 720
+instead of mere cones (see [8]). This then extends to any
+convexconesbyadditivityonsubdivisions. holomorphicatzerosoπ (f)=φ(ε).
++
+50 Contandoinfinidades-El”nu´mero”depuntosmallaenconosconvexos
+2. Letk=2andlet f(ε)=[ε ,ε +ε ].ApplyingEq.(27) Acknowledgements
+1 1 2
+wewrite
+Thesecondauthorthankstheorganizersofthemeeting
+ (cid:16) (cid:17) 
+− 1 +φ(ε ) · ”XVIIIInternationalWorkshoponWavelets,DifferentialEqua-
+π + ([ε 1 ,ε 2 ])=π + (cid:16)
+ε1 1
+(cid:17)  tionsandAnalysis”heldattheUniversityofHavana,Feburary
+−
+ε1+
+1
+ε2
++φ(ε
+1
++ε
+2
+)
+23-27,2015wheresheheldfourlecturesbasedontheexten-
+(cid:32) (cid:33) dedversion[10]ofthesenotes.
+−φ(ε1+ε2)− φ(ε1)+
+=π
++
+ε1 ε1+ε2
+φ(ε )φ(ε +ε )
+1 1 2
+Referencias
+φ(ε +ε )−φ(ε )
+=− 1 2 2 − [1] A. Barvinok, Integer Points in Polyhedra Zu-
+ε
+1 rich Lectures in Advanced Mathematics, EMS
+φ(ε )−φ
+(cid:0)ε1−ε2 (cid:1)
+1 2 + Lecturenotes,2008.
+ε +ε
+1 2
+[2] N.BerlineandM.Vergne,Euler-Maclaurinfor-
+φ(ε )φ(ε +ε ).
+1 1 2
+mulaforpolytopes,Mosc.Math.J.7(2007)355-
+So,justasintheone-dimensionalcase,ameromorphicmap 386.
+function with linear poles also decomposes as a sum of a
+[3] P. Cartier, A primer on Hopf algebras, IHES
+holomorphicpartandapolarpart.Weshalldenotebyπ the
++ /M/06/40(2006)
+correspondingprojectionontotheholomorphicpart.
+[4] A. Connes and D. Kreimer, Hopf algebras, re-
+6.4 AlgebraicBirkhofffactorizationfordiscretesums normalisation and Noncommutative Geometry,
+ongeneralconvexcones Comm.Math.Phys.199(1988)203-242.
+Consequently,onecanimplementanalgebraicBirkhoff
+factorization [8] on the coalgebra of convex polyhedral co- [5] L. Foissy, Alge`bres de Hopf combinatoires
+nes. 5 Just as the algebraic Birkhoff factorization gave rise http://loic.foissy.free.fr/pageperso/cours3.pdf
+toanEuler-Maclaurinformulaonproductcones,whenthe
+[6] L.Guo,S.PaychaandB.Zhang,Renormalisation
+innerproductusedtodefinedthecoproductonconescoinci-
+byBirkhofffactorisationandbygeneralizedeva-
+deswiththeinnerproductusedtodecomposethespaceof
+luators;astudycase,inNoncommutativeGeo-
+meromorphicgerms,thealgebraicBirkhofffactorizationof
+metry,ArithmeticandRelatedTopics,(Ed.A.
+the exponential sum on a convex (lattice) cone yields back
+Connes,K.Consani)JohnHopkinsUniv.Pressp.
+BerlineandVergne’slocalEuler-Maclaurinformula[2].To
+183-211(2011).
+provethisidentificationwhichiseasytoseeonsmoothcones,
+wesubdivideageneralconvexconeintosimplicialonesand [7] L. Guo, S. Paycha and B. Zhang, Conical zeta
+usethecompatibilityofS − inthefactorizationprocedurewith valuesandtheirdoublesubdivisionrelations,Adv.
+subdivisions.Thiscompatibilityisshownbymeansofarather inMath.252(2014)343-381.
+involvedcombinatorialproof.
+The“holomorphicpart.oftheexponentialdiscretesumon [8] L. Guo, S. Paycha and B. Zhang, Renormalisa-
+theonedimensionalcone[0,+∞[generatesrenormalizedzeta tionandtheEuler-Maclaurinformulaoncones,
+values at non-positive integers as coefficients of its Taylor arXiv:1306.3420.
+expansionatzero,afactthatwehaveleftoutinthesenotes.
+[9] L.Guo,S.PaychaandB.Zhang,Decompositions
+Similarly,onecanshow[8]thatthe”holomorphicpart.ofthe
+andresiduesformeromorphicfunctionswithli-
+exponentialdiscretesumsongeneralconvexpolyhedralcones
+nearpolesinthelightofEuler-Maclaurinformu-
+obtainedfromanalgebraicBirkhofffactorization,generates
+laeoncones,arXiv:1501.00426.
+whatwecallrenormalizedconicalzetavaluesatnon-positive
+integers which arise as coefficients of its Taylor expansion
+[10] L. Guo, S. Paycha and B. Zhang, Counting an
+at zero. It turns out that the ”holomorphic part.of the expo-
+infinite number of points: a testing ground for
+nentialsumsSc(C)andSo(C)onaconeCderivedfromthe
+renormalizationmethods.
+algebraicBirkhofffactorizationactuallycoincideswiththe
+projectionπ (Sc(C))andπ (So(C)),whentheinnerproduct [11] L.GuoandB.Zhang,Renormalisationofmulti-
++ +
+used to defined the coproduct on cones coincides with the plezetavaluesJ.Algebra319(2008)3770-3809.
+innerproductusedtodecomposethespaceofmeromorphic
+[12] G. Hardy, Divergent series, Oxford University
+germsrespectively,ontotheirholomorphicpartwhenseenas
+Press,1967.
+meromorphicfunctionswithlinearpoles.
+5We actually carry out the algebraic Birkhoff factorization on lattice [13] M.E.Hoffman,Multipleharmonicseries,Pacific
+cones. J.Math.152(1992),275-290.
+Contandoinfinidades-El”nu´mero”depuntosmallaenconosconvexos 51
+[14] D. Manchon, Hopf algebras, from basics to ap- [16] M.E.Sweedler,Hopfalgebras,Benjamin,New
+plications to renormalisation, Comptes-rendus York(1969).
+desRencontresmathe´matiquesdeGlanon2001
+[17] D.Zagier,Valuesofzetafunctionsandtheirappli-
+(2003) and Hopf algebras in renormalisation,
+cations,FirstEuropeanCongressofMathematics,
+Handbookofalgebra,Vol.5(M.Hazewinkeled.)
+Vol.II(Paris,1992),Progr.Math.120,497-512,
+(2008).
+Birkhuser,Basel,1994.
+[15] S.Paycha,Regularisedintegrals,sumsandtra-
+ces,Amer.Math.Soc.LectureNotes592012.
