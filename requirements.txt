@@ -1,0 +1,8 @@
+streamlit
+pandas
+networkx
+matplotlib
+plotly
+spacy
+PyMuPDF
+fireworks-ai
